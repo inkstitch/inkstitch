@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-03 01:09+0000\n"
-"PO-Revision-Date: 2024-05-03 01:10\n"
+"PO-Revision-Date: 2024-05-04 01:07\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2979,7 +2979,7 @@ msgstr "Zum Sortieren bitte mindestens zwei Elemente auswählen."
 
 #: lib/extensions/satin_multicolor.py:41
 msgid "Ink/Stitch Multicolor Satin"
-msgstr ""
+msgstr "Ink/Stitch - Mehrfarbige Satinsäulen"
 
 #: lib/extensions/select_elements.py:103
 msgid "Could not detect python path. Please insert python path manually as described in the help tab of the select elements dialog."
@@ -3394,84 +3394,84 @@ msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen 
 
 #: lib/gui/satin_multicolor/colorize.py:26
 msgid "General Settings"
-msgstr ""
+msgstr "Allgemeine Einstellungen"
 
 #: lib/gui/satin_multicolor/colorize.py:29
 msgid "Equidistant colors"
-msgstr ""
+msgstr "Gleichmäßige Abstände"
 
 #: lib/gui/satin_multicolor/colorize.py:30
 msgid "Whether colors should be equidistant or have varying widths."
-msgstr ""
+msgstr "Legt fest, ob Farben äquidistant sein sollen oder unterschiedliche Breiten haben."
 
 #: lib/gui/satin_multicolor/colorize.py:35
 msgid "Monochrome color width"
-msgstr ""
+msgstr "Monochrome Farbbreite"
 
 #: lib/gui/satin_multicolor/colorize.py:36
 msgid "Adapt color width here when equidistance is enabled."
-msgstr ""
+msgstr "Farbbreite hier anpassen, wenn gleiche Abstände aktiviert sind."
 
 #: lib/gui/satin_multicolor/colorize.py:41
 msgid "Overflow left"
-msgstr ""
+msgstr "Überlauf rechts"
 
 #: lib/gui/satin_multicolor/colorize.py:46
 msgid "Overflow right"
-msgstr ""
+msgstr "Überlauf links"
 
 #: lib/gui/satin_multicolor/colorize.py:51
 msgid "Pull compensation (mm)"
-msgstr ""
+msgstr "Zugausgleich (mm)"
 
 #: lib/gui/satin_multicolor/colorize.py:62
 msgid "Keep original satin"
-msgstr ""
+msgstr "Originalsäule behalten"
 
 #: lib/gui/satin_multicolor/colorize.py:71
 msgid "Overflow excluded"
-msgstr ""
+msgstr "Überfluss nicht eingerechnet"
 
 #: lib/gui/satin_multicolor/colorize.py:124
 msgid "Click to move color up."
-msgstr ""
+msgstr "Farbe nach oben schieben."
 
 #: lib/gui/satin_multicolor/colorize.py:128
 msgid "Select color"
-msgstr ""
+msgstr "Farbe auswählen"
 
 #: lib/gui/satin_multicolor/colorize.py:133
 msgid "Monochrome width. Can be changed individually when equidistance is disabled."
-msgstr ""
+msgstr "Monochrome Breite. Kann hier individuell eingestellt werden, wenn gleiche Abstände deaktiviert sind."
 
 #: lib/gui/satin_multicolor/colorize.py:138
 msgid "Margin right (bicolor section). Can be changed individually when equidistance is disabled."
-msgstr ""
+msgstr "Abstand rechts (zweifarbiger Abschnitt). Kann hier individuell eingestellt werden, wenn gleiche Abstände deaktiviert sind."
 
 #: lib/gui/satin_multicolor/colorize.py:142
 msgid "Remove color"
-msgstr ""
+msgstr "Farbe entfernen"
 
 #: lib/gui/satin_multicolor/colorize.py:253
 msgid "Total width: {width}%"
-msgstr ""
+msgstr "Gesamtbreite: {width}%"
 
 #: lib/gui/satin_multicolor/help_panel.py:19
 msgid "This extension simulates a multicolor satin by creating colored copies of the selected satin(s)."
-msgstr ""
+msgstr "Diese Erweiterung simuliert eine mehrfarbige Satinsäule, indem sie farbige Kopien der ausgewählten Säule(n) erstellt."
 
 #: lib/gui/satin_multicolor/help_panel.py:33
 #: lib/gui/satin_multicolor/help_panel.py:34
 msgid "https://inkstitch.org/docs/satin-tools/#multicolor-satin"
-msgstr ""
+msgstr "https://inkstitch.org/de/docs/satin-tools/#mehrfarbige-satinsäule"
 
 #: lib/gui/satin_multicolor/main_panel.py:48
 msgid "Colorize"
-msgstr ""
+msgstr "Farben"
 
 #: lib/gui/satin_multicolor/main_panel.py:145
 msgid "Multicolor Satin Group"
-msgstr ""
+msgstr "Mehrfarbige Satinsäule"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
@@ -5737,19 +5737,19 @@ msgstr "https://inkstitch.org/de/docs/stroke-tools/#sprungstich-zu-geradstich"
 
 #: inx/inkstitch_jump_to_trim.inx:3
 msgid "Jump Stitch to Trim Command"
-msgstr ""
+msgstr "Sprungstich zu Fadenschnitt-Befehl"
 
 #: inx/inkstitch_jump_to_trim.inx:23
 msgid "Use command symbol"
-msgstr ""
+msgstr "Visuelle Befehle verwenden"
 
 #: inx/inkstitch_jump_to_trim.inx:26
 msgid "This extension inserts trim commands to avoid jump stitches."
-msgstr ""
+msgstr "Diese Erweiterung fügt Fadenschnitt-Befehle ein, um Sprungstiche zu vermeiden."
 
 #: inx/inkstitch_jump_to_trim.inx:28
 msgid "https://inkstitch.org/docs/commands/#jump-to-trim"
-msgstr ""
+msgstr "https://inkstitch.org/de/docs/commands/#sprungstich-zu-fadenschnitt-befehl"
 
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -6404,7 +6404,7 @@ msgstr "Objekte in Auswahlreihenfolge sortieren"
 
 #: inx/inkstitch_satin_multicolor.inx:3
 msgid "Multicolor Satin"
-msgstr ""
+msgstr "Mehrfarbige Satinsäule"
 
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
@@ -6437,7 +6437,7 @@ msgstr "Auto-Geradstich Verbindung"
 
 #: inx/inkstitch_select_elements.inx:19
 msgid "Auto-Satin Underpath"
-msgstr ""
+msgstr "Auto-Satin Verbindung"
 
 #: inx/inkstitch_select_elements.inx:22
 msgid "Ripples"
