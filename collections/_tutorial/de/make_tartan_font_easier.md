@@ -1,56 +1,48 @@
 ---
 permalink: /de/tutorials/make_tartan_font_easier/
-title: "Using a single tartan on several letters and have much fewer thread changes"
-language: en
+title: "Farbwechsel bei Tartan-Schriften reduzieren"
+language: de
 last_modified_at: 2024-04-23
-excerpt: "Making tartan font more user friendly"
+excerpt: "So machst du deine Tartan-Schrift nutzerfreundlicher"
 image: "/assets/images/tutorials/tutorial-preview-images/make_tartan_font_easier.jpg"
 tutorial-type:
-  - Sample File
+  - Beispieldatei
 stitch-type:
-  - "Tartan Fill"
-  - "Linear Gradient Fill"
+  - "Tartanfüllung"
+  - "Lineare Farbverlaufsfüllung"
 techniques:
 tool:
-  - "Fill"
+  - "Füllung"
 field-of-use:
 user-level:
 ---
-![Brodée](/assets/images/tutorials/tutorial-preview-images/make_tartan_font_easier.jpg)
+![Gestickte Beispieldatei](/assets/images/tutorials/tutorial-preview-images/make_tartan_font_easier.jpg)
 
-Tartan fonts yield very colorful results, but to get them one must change threads very often.
-It is very easy to get a slightly less colorfl result (with a single tartan on all letters) with muchh fewer thread
-changes.
+Tartan-Schriften sind sehr farbenfroh, das heißt aber auch, dass es sehr viele Farbwechsel gibt.
+Es ist sehr einfach die Farbwechsel zu reduzieren, wenn man das Tartanmuster für alle Buchstaben vereinheitlicht.
 
+Schreibt man beispielsweise "PRIMAVERA" mit der Schrift `Emilio 20 Tartan`, erhält man folgendes Ergebnis:
 
-For instance, writing PRIMAVERA with Emilio 20 Tartan yields : 
+![Emilio 20 Tartan mit vielen Farbwechseln](/assets/images/tutorials/make_tartan_font_easier/en_too_many_color_changes.jpg)
 
-![Trop de sauts de fils ](/assets/images/tutorials/make_tartan_font_easier/en_too_many_color_changes.jpg)
-
-But if instead one uses a single tartan for all letters
+Nutzt man aber stattdessen nur ein einziges Tartanmuster für alle Buchstaben, kann die Schrift deutlich einfacher gestickt werden:
 
 ![Brodée](/assets/images/tutorials/make_tartan_font_easier/primavera.jpg)
 
-one get a very easier stitchout
-
 ![Brodée](/assets/images/tutorials/make_tartan_font_easier/en_only_a_few_color_changes.jpg)
 
-Much fewer color changes. But some long jumps in between letters. This method is best used with a machine that cuts thread.
+Im Bild sieht man die reduzierten Farbwechsel. Da es zwischen den Buchstaben nun lange Sprungstiche gibt, lohnt es sich hierfür eine Maschine mit Fadenschnitt-Funktion zu nutzen.
 
-Checking "Cut after" in the tartan fill parameters windows (not tartan extension, but params) will then do the trick.
+Hierfür die Option "Fadenschnitt" in den Parametern (nicht in der Tartan-Erweiterung) aktivieren.
 
-It is quite easy:
-* Use Emilio 20 Tartan font
-* Select all Tartan Fill (this are all the red fills, you may select one and then use Inkscape > Edition > Select Same >Fill Colo
-* Inkscape > Parh > Combine
-* Move the resulting shape so that it is embroidered first.
-* Ink/Stitch > Tools : Fill  > [Tartan](/docs/fill-tools/#tartan) and chose your own settings.
+## So wird es gemacht
 
-You may also use a different fill on the combined shape, in particular a
-[linear gradient fill](/docs/stitches/linear-gradient-fill)
+* Nutze eine Tartan-Schrift (beispielsweise Emilio 20 Tartan)
+* Wähle alle Füllelemente aus (rot). Wähle eine aus, klicke dann auf `Inkscape > Bearbeiten > Das Gleiche auswählen > Füllfarbe`
+* `Inkscape > Pfad > Kombinieren`
+* Lege den Pfad in der Stickreihenfolge nach vorne, so dass er zuerst gestickt wird
+* Öffne `Ink/Stitch > Werkzeuge: Füllung > [Tartan]((/de/docs/fill-tools/#tartan) und wähle deine eigenen Einstellungen
 
-![Brodée](/assets/images/tutorials/make_tartan_font_easier/herbst.jpg)
+Es ist auch möglich andere Füllmethoden zu verwenden. Ein besonders interessantes Ergebnis für Füllschriftarten liefert beispielsweise eine [lineare Farbverlaufsfüllung](/de/docs/stitches/linear-gradient-fill/).
 
-
-
-
+![Gesticktes Beispiel einer Schrift mit Farbverlaufsfüllung](/assets/images/tutorials/make_tartan_font_easier/herbst.jpg)

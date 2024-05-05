@@ -1,27 +1,22 @@
 ---
 permalink: /tutorials/zigzag-meander-fill/
-title: "Use meander fill to mimic fur"
+title: "Fellimitation mit Mäanderfüllung"
 language: de
 last_modified_at: 2024-05-02
-excerpt: "Cat's body is a meander fill with zigzag activated."
+excerpt: "Der Katzenkörper ist eine Meanderfüllung mit Zick-Zack-Stich"
 image: "/assets/images/tutorials/tutorial-preview-images/grumpycat.png"
 tutorial-type:
-  - Sample File
+  - Beispieldatei
 stitch-type:
-  - "Meander Fill"
-techniques:
-field-of-use:
-user-level:
+  - "Mäanderfüllung"
 ---
 
-## Fur imitation
+## Fellimitation
 
 ![Preview](/assets/images/tutorials/tutorial-preview-images/grumpycat.png)
 
-Cat's body is a meander fill with zigzag activated.
+Der Katzenkörper ist eine Meanderfüllung mit Zick-Zack-Stich
 
 ![SVG](assets/images/tutorials/zigzag-meander-fill/grumpycat.svg)
 
-
-
-[Télécharger](/assets/images/tutorials/samples/grumpycat.svg){: download="grumpycat.svg" }
+[Download SVG](/assets/images/tutorials/samples/grumpycat.svg){: download="grumpycat.svg" }

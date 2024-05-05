@@ -78,36 +78,35 @@ This extension generates the tartan stripes and applies them to the document eit
 
 This extension unlinks clones (optionally recursive) and applies fill angle transformations
 
-
 ## Extension Updates
 
-### Cleanup document
+### [Cleanup document](/docs/troubleshoot/#cleanup-document)
 
 `Troubleshoot > Cleanup document`
 
 * add option to delete empty groups and layers ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
 * add test run option to display names of the elements that will be removed with the current settings ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
 
-### Density map
+### [Density map](/docs/visualize/#density-map)
 
 `Visualize and Export > Density Map`
 
 * add indicator size option ([#2544](https://github.com/inkstitch/inkstitch/issues/2544))
 * add ignore layer command ([#2522](https://github.com/inkstitch/inkstitch/issues/2522))
 
-### Fill to Stroke
+### [Fill to Stroke](/docs/stroke-tools/#fill-to-stroke)
 
 `Tools: Stroke > Fill to Stroke`
 
 * add one centerline group for each selected fill or replace existing fill if it results in only one path ([#2675](https://github.com/inkstitch/inkstitch/issues/2675#issuecomment-1882919122))
 
-### Force lock stitches
+### [Force lock stitches](/docs/font-tools/#force-lock-stitches)
 
 `Font Management > Force lock stitches`
 
 * Add "Restrict to Satin" option ([#2773](https://github.com/inkstitch/inkstitch/pull/2773))
 
-### Jump to Stroke
+### [Jump to Stroke](/docs/stroke-tools/#jump-to-stroke)
 
 `Tools: Stroke > Jump to Stroke`
 
@@ -119,29 +118,29 @@ This extension unlinks clones (optionally recursive) and applies fill angle tran
     * Merge new strokes with previous/next stroke
     * Merge subpaths ([#2750](https://github.com/inkstitch/inkstitch/pull/2750))
 
-### Lettering
+### [Lettering](/docs/lettering/)
 
 `Lettering`
 
 * Add glyph filter ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
 
-### Preferences
+### [Preferences](/docs/preferences/)
 
 `Preferences`
 
 * electron -> wxpython ([#2479](https://github.com/inkstitch/inkstitch/issues/2479))
 
-### Print PDF
+### [Print PDF](/docs/print-pdf/)
 
 * Move print pdf back to webbrowser ([#2849](https://github.com/inkstitch/inkstitch/issues/2849))
 
-### Remove embroidery settings
+### [Remove embroidery settings](/docs/troubleshoot/#remove-embroidery-settings)
 
 `Troubleshoot > Remove embroidery settings`
 
 * add option to remove only specific commands ([#2494](https://github.com/inkstitch/inkstitch/issues/2494))
 
-### Select embroidery elements
+### [Select embroidery elements](/docs/edit/#select-embroidery-elements)
 
 `Edit > Select embroidery elements`
 
@@ -150,21 +149,20 @@ This extension unlinks clones (optionally recursive) and applies fill angle tran
 * Option to select auto-satin underpathing ([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
 * Options to select new stitch types
 
-### Stitch Plan Preview
+### [Stitch Plan Preview](/docs/visualize/#stitch-plan-preview)
 
 `Visualize and Export > Stitch Plan Preview`
 
 * Add option to keep/overwrite previous stitch plan ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
 * Add realistic render methods (png, vector) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
 
-### Troubleshoot
+### [Troubleshoot](/docs/troubleshoot/)
 
 `Troubleshoot > Troubleshoot`
 
 * Add warning for satins with two rails and two rungs (possible detection conflict) ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
 * Add no rung warning ([#2791](https://github.com/inkstitch/inkstitch/pull/2791))
 * Add warning for elements with stroke and fill color ([#2761](https://github.com/inkstitch/inkstitch/pull/2761))
-
 
 ## Fonts
 
@@ -222,7 +220,6 @@ All fonts have been reworked to be more stable when transformed.
  [#2476](https://github.com/inkstitch/inkstitch/pull/2476)
  [#2682](https://github.com/inkstitch/inkstitch/pull/2682)
 
-
 ## Palettes
 
 ### New Palettes
@@ -243,6 +240,12 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 * Simulator has a changable background color and can show/hide jumps ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
 
 ## Stitch types
+
+### Clones
+
+* Improved angle detection for fill clones ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
+* Add ability to render clones of groups ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
+* Improved style detection (([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
 
 ### Fill Stitch - family
 
@@ -271,13 +274,6 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 * Zig-Zag: a new stitch type for the satin stitch type family ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![Zigzag Stitch](/assets/images/docs/en/compare-satin-zigzag.png)
 
-### Clones
-
-* Improved angle detection for fill clones ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
-* Add ability to render clones of groups ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
-* Improved style detection (([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
-
-
 ## Export
 
 ### Zip-Export
@@ -302,7 +298,6 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 * [#2715](https://github.com/inkstitch/inkstitch/issues/2715) Multiversion support
 * [#2655](https://github.com/inkstitch/inkstitch/issues/2655) In Ink/Stitch preferences set cache size to 0 to disable caching
 * [#2653](https://github.com/inkstitch/inkstitch/issues/2653) [#2720](https://github.com/inkstitch/inkstitch/issues/2720) Updated debug and profiling procedures
-
 
 ## Bug Fixes
 
