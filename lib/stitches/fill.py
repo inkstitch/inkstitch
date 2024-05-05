@@ -12,6 +12,7 @@ from ..svg import PIXELS_PER_MM
 from ..utils import Point as InkstitchPoint
 from ..utils import cache
 from ..utils.threading import check_stop_flag
+from .running_stitch import split_segment_random_phase
 
 
 def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, reverse, staggers, skip_last):
@@ -51,46 +52,50 @@ def adjust_stagger(stitch, angle, row_spacing, max_stitch_length, staggers):
     return stitch - offset * east(angle)
 
 
-def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last=False):
-    # We want our stitches to look like this:
-    #
-    # ---*-----------*-----------
-    # ------*-----------*--------
-    # ---------*-----------*-----
-    # ------------*-----------*--
-    # ---*-----------*-----------
-    #
-    # Each successive row of stitches will be staggered, with
-    # num_staggers rows before the pattern repeats.  A value of
-    # 4 gives a nice fill while hiding the needle holes.  The
-    # first row is offset 0%, the second 25%, the third 50%, and
-    # the fourth 75%.
-    #
-    # Actually, instead of just starting at an offset of 0, we
-    # can calculate a row's offset relative to the origin.  This
-    # way if we have two abutting fill regions, they'll perfectly
-    # tile with each other.  That's important because we often get
-    # abutting fill regions from pull_runs().
-
+def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last, enable_random, random_sigma, random_seed):
     beg = Stitch(*beg, tags=('fill_row_start',))
-    end = Stitch(*end, tags=('fill_row_end',))
-
-    row_direction = (end - beg).unit()
-    segment_length = (end - beg).length()
-
+    end = Stitch(*end, tags=('fill_row_start',))
     stitches.append(beg)
 
-    first_stitch = adjust_stagger(beg, angle, row_spacing, max_stitch_length, staggers)
+    if enable_random:
+        stitches += split_segment_random_phase(beg, end, max_stitch_length, random_sigma, random_seed)
+    else:
+        # We want our stitches to look like this:
+        #
+        # ---*-----------*-----------
+        # ------*-----------*--------
+        # ---------*-----------*-----
+        # ------------*-----------*--
+        # ---*-----------*-----------
+        #
+        # Each successive row of stitches will be staggered, with
+        # num_staggers rows before the pattern repeats.  A value of
+        # 4 gives a nice fill while hiding the needle holes.  The
+        # first row is offset 0%, the second 25%, the third 50%, and
+        # the fourth 75%.
+        #
+        # Actually, instead of just starting at an offset of 0, we
+        # can calculate a row's offset relative to the origin.  This
+        # way if we have two abutting fill regions, they'll perfectly
+        # tile with each other.  That's important because we often get
+        # abutting fill regions from pull_runs().
 
-    # we might have chosen our first stitch just outside this row, so move back in
-    if (first_stitch - beg) * row_direction < 0:
-        first_stitch += row_direction * max_stitch_length
+        row_direction = (end - beg).unit()
+        segment_length = (end - beg).length()
 
-    offset = (first_stitch - beg).length()
+        stitches.append(beg)
 
-    while offset < segment_length:
-        stitches.append(Stitch(beg + offset * row_direction, tags=('fill_row',)))
-        offset += max_stitch_length
+        first_stitch = adjust_stagger(beg, angle, row_spacing, max_stitch_length, staggers)
+
+        # we might have chosen our first stitch just outside this row, so move back in
+        if (first_stitch - beg) * row_direction < 0:
+            first_stitch += row_direction * max_stitch_length
+
+        offset = (first_stitch - beg).length()
+
+        while offset < segment_length:
+            stitches.append(Stitch(beg + offset * row_direction, tags=('fill_row',)))
+            offset += max_stitch_length
 
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:
         stitches.append(end)
@@ -189,7 +194,7 @@ def section_to_stitches(group_of_segments, angle, row_spacing, max_stitch_length
         if (swap):
             (beg, end) = (end, beg)
 
-        stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last)
+        stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last, False, 0.0, "")
 
         swap = not swap
 

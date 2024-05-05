@@ -372,10 +372,11 @@ class SatinColumn(EmbroideryElement):
         unit='mm',
         group=_('Contour Underlay'),
         type='float',
+        default=0.2,
     )
     def contour_underlay_stitch_tolerance(self):
-        tolerance = self.get_float_param("contour_underlay_stitch_tolerance_mm", self.contour_underlay_stitch_length)
-        return max(tolerance, 0.01)
+        tolerance = self.get_float_param("contour_underlay_stitch_tolerance_mm", 0.2)
+        return max(tolerance, 0.01 * PIXELS_PER_MM)  # sanity check to prevent crash from excessively-small values
 
     @property
     @param('contour_underlay_inset_mm',
@@ -428,11 +429,12 @@ class SatinColumn(EmbroideryElement):
         ),
         unit='mm',
         group=_('Center-Walk Underlay'),
-        type='float'
+        type='float',
+        default=0.2
     )
     def center_walk_underlay_stitch_tolerance(self):
-        tolerance = self.get_float_param("center_walk_underlay_stitch_tolerance_mm", self.contour_underlay_stitch_length)
-        return max(tolerance, 0.01)
+        tolerance = self.get_float_param("center_walk_underlay_stitch_tolerance_mm", 0.2)
+        return max(tolerance, 0.01 * PIXELS_PER_MM)
 
     @property
     @param('center_walk_underlay_repeats',
@@ -1171,12 +1173,12 @@ class SatinColumn(EmbroideryElement):
             self.contour_underlay_stitch_tolerance,
             -self.contour_underlay_inset_px, -self.contour_underlay_inset_percent/100)
 
-        first_side = running_stitch.running_stitch(
+        first_side = running_stitch.even_running_stitch(
             [points[0] for points in pairs],
             self.contour_underlay_stitch_length,
             self.contour_underlay_stitch_tolerance
         )
-        second_side = running_stitch.running_stitch(
+        second_side = running_stitch.even_running_stitch(
             [points[1] for points in pairs],
             self.contour_underlay_stitch_length,
             self.contour_underlay_stitch_tolerance
@@ -1209,7 +1211,7 @@ class SatinColumn(EmbroideryElement):
             (0, 0), inset_prop)
 
         points = [points[0] for points in pairs]
-        stitches = running_stitch.running_stitch(points, self.center_walk_underlay_stitch_length, self.center_walk_underlay_stitch_tolerance)
+        stitches = running_stitch.even_running_stitch(points, self.center_walk_underlay_stitch_length, self.center_walk_underlay_stitch_tolerance)
 
         for i in range(self.center_walk_underlay_repeats - 1):
             if i % 2 == 0:

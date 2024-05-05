@@ -18,6 +18,10 @@ from ..utils.threading import check_stop_flag
 """ Utility functions to produce running stitches. """
 
 
+def lerp(a, b, t: float) -> float:
+    return (1 - t) * a + t * b
+
+
 def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
     if segments <= 1:
         return []
@@ -216,8 +220,6 @@ def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: float, to
     last = points[0]
     stitches = []
     while i is not None and i < len(points):
-        check_stop_flag()
-
         d = last.distance(points[i]) + distLeft[i]
         if d == 0:
             return stitches
@@ -227,6 +229,35 @@ def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: float, to
         i = newidx
         if stitch is not None:
             stitches.append(stitch)
+            last = stitch
+    return stitches
+
+
+def stitch_curve_randomly(points: typing.Sequence[Point], stitch_length: float, tolerance: float, stitch_length_sigma: float, random_seed: str):
+    min_stitch_length = max(0, stitch_length * (1 - stitch_length_sigma))
+    max_stitch_length = stitch_length * (1 + stitch_length_sigma)
+    # Will split a straight line into stitches of random length within the range.
+    # Attempts to randomize phase so that the distribution of outputs does not depend on direction.
+    # Includes end point but not start point.
+    if len(points) < 2:
+        return []
+
+    i = 1
+    last = points[0]
+    last_shortened = 0.0
+    stitches = []
+    rand_iter = iter(prng.iter_uniform_floats(random_seed))
+    while i is not None and i < len(points):
+        r = next(rand_iter)
+        # If the last stitch was shortened due to tolerance (or this is the first stitch),
+        # reduce the lower length limit to randomize the phase. This prevents moiré and asymmetry.
+        stitch_len = lerp(last_shortened, 1.0, r) * lerp(min_stitch_length, max_stitch_length, r)
+
+        stitch, newidx = take_stitch(last, points, i, stitch_len, tolerance)
+        i = newidx
+        if stitch is not None:
+            stitches.append(stitch)
+            last_shortened = min(last.distance(stitch) / stitch_len, 1.0)
             last = stitch
     return stitches
 
@@ -265,15 +296,42 @@ def path_to_curves(points: typing.List[Point], min_len: float):
     return curves
 
 
-def running_stitch(points, stitch_length, tolerance):
-    # Turn a continuous path into a running stitch.
+def even_running_stitch(points, stitch_length, tolerance):
+    # Turn a continuous path into a running stitch with as close to even stitch length as possible
+    # (including the first and last segments), keeping it within the tolerance of the path.
+    # This should not be used for stitching tightly-spaced parallel curves
+    # as it tends to produce ugly moiré effects in those situations.
+    # In these situations, random_running_stitch sould be used even if the maximum stitch length range is a single value.
     if not points:
         return
     stitches = [points[0]]
     for curve in path_to_curves(points, 2 * tolerance):
-        # segments longer than twice the tollerance will usually be forced by it, so set that as the minimum for corner detection
+        # segments longer than twice the tolerance will usually be forced by it, so set that as the minimum for corner detection
+        check_stop_flag()
         stitches.extend(stitch_curve_evenly(curve, stitch_length, tolerance))
     return stitches
+
+
+def random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma, random_seed):
+    # Turn a continuous path into a running stitch with randomized phase and stitch length,
+    # keeping it within the tolerance of the path.
+    # This is suitable for tightly-spaced parallel curves.
+    if not points:
+        return
+    stitches = [points[0]]
+    for i, curve in enumerate(path_to_curves(points, 2 * tolerance)):
+        # segments longer than twice the tolerance will usually be forced by it, so set that as the minimum for corner detection
+        check_stop_flag()
+        stitches.extend(stitch_curve_randomly(curve, stitch_length, tolerance, stitch_length_sigma, prng.join_args(random_seed, i)))
+    return stitches
+
+
+def running_stitch(points, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed):
+    # running stitch with a choice of algorithm
+    if is_random:
+        return random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma, random_seed)
+    else:
+        return even_running_stitch(points, stitch_length, tolerance)
 
 
 def bean_stitch(stitches, repeats, tags_to_ignore=None):

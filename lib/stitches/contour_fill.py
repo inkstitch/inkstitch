@@ -409,7 +409,10 @@ def _find_path_inner_to_outer(tree, node, offset, starting_point, avoid_self_cro
     return LineString(result_coords)
 
 
-def inner_to_outer(tree, polygon, offset, stitch_length, tolerance, smoothness, starting_point, avoid_self_crossing):
+def inner_to_outer(tree, polygon, offset,
+                   stitch_length, tolerance, smoothness,
+                   starting_point, avoid_self_crossing,
+                   enable_random, random_sigma, random_seed):
     """Fill a shape with spirals, from innermost to outermost."""
 
     stitch_path = _find_path_inner_to_outer(tree, 'root', offset, starting_point, avoid_self_crossing)
@@ -419,7 +422,7 @@ def inner_to_outer(tree, polygon, offset, stitch_length, tolerance, smoothness, 
         smoothed = smooth_path(points, smoothness)
         points = clamp_path_to_polygon(smoothed, polygon)
 
-    stitches = running_stitch(points, stitch_length, tolerance)
+    stitches = running_stitch(points, stitch_length, tolerance, enable_random, random_sigma, random_seed)
 
     return stitches
 
@@ -515,24 +518,24 @@ def _check_and_prepare_tree_for_valid_spiral(tree):
     return process_node('root')
 
 
-def single_spiral(tree, stitch_length, tolerance, starting_point):
+def single_spiral(tree, stitch_length, tolerance, starting_point, enable_random, random_sigma, random_seed):
     """Fill a shape with a single spiral going from outside to center."""
-    return _spiral_fill(tree, stitch_length, tolerance, starting_point, _make_spiral)
+    return _spiral_fill(tree, stitch_length, tolerance, starting_point, enable_random, random_sigma, random_seed, _make_spiral)
 
 
-def double_spiral(tree, stitch_length, tolerance, starting_point):
+def double_spiral(tree, stitch_length, tolerance, starting_point, enable_random, random_sigma, random_seed):
     """Fill a shape with a double spiral going from outside to center and back to outside. """
-    return _spiral_fill(tree, stitch_length, tolerance, starting_point, _make_fermat_spiral)
+    return _spiral_fill(tree, stitch_length, tolerance, starting_point, enable_random, random_sigma, random_seed, _make_fermat_spiral)
 
 
-def _spiral_fill(tree, stitch_length, tolerance, close_point, spiral_maker):
+def _spiral_fill(tree, stitch_length, tolerance, close_point, enable_random, random_sigma, random_seed, spiral_maker):
     starting_point = close_point.coords[0]
 
     rings = _get_spiral_rings(tree)
     path = spiral_maker(rings, stitch_length, starting_point)
     path = [Stitch(*stitch) for stitch in path]
 
-    return running_stitch(path, stitch_length, tolerance)
+    return running_stitch(path, stitch_length, tolerance, enable_random, random_sigma, random_seed)
 
 
 def _get_spiral_rings(tree):

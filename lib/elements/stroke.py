@@ -13,8 +13,7 @@ from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches.ripple_stitch import ripple_stitch
-from ..stitches.running_stitch import (bean_stitch, running_stitch,
-                                       zigzag_stitch)
+from ..stitches.running_stitch import (bean_stitch, running_stitch, zigzag_stitch)
 from ..svg import get_node_transform, parse_length_with_units
 from ..svg.clip import get_clip_path
 from ..threads import ThreadColor
@@ -131,6 +130,30 @@ class Stroke(EmbroideryElement):
         return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
 
     @property
+    @param('enable_random_stitches',
+           _('Randomize stitches'),
+           tooltip=_('Randomize stitch length and phase instead of dividing evenly or staggering. '
+                     'This is recommended for closely-spaced curved fills to avoid Moiré artefacts.'),
+           type='boolean',
+           select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch')],
+           default=False,
+           sort_index=5)
+    def enable_random_stitches(self):
+        return self.get_boolean_param('enable_random_stitches', False)
+
+    @property
+    @param('random_stitch_length_jitter_percent',
+           _('Random stitch length jitter'),
+           tooltip=_('Amount to vary the length of each stitch by when randomizing.'),
+           unit='± %',
+           type='float',
+           select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch')],
+           default=10,
+           sort_index=6)
+    def random_stitch_length_jitter(self):
+        return max(self.get_float_param("random_stitch_length_jitter_percent", 10), 0.0) / 100
+
+    @property
     @param('max_stitch_length_mm',
            _('Max stitch length'),
            tooltip=_('Split stitches longer than this.'),
@@ -203,10 +226,11 @@ class Stroke(EmbroideryElement):
            _('Stagger lines this many times before repeating'),
            tooltip=_('Length of the cycle by which successive stitch lines are staggered. '
                      'Fractional values are allowed and can have less visible diagonals than integer values. '
+                     'A value of 0 (default) disables staggering and instead stitches evenly.'
                      'For linear ripples only.'),
            type='int',
            select_items=[('stroke_method', 'ripple_stitch')],
-           default=1,
+           default=0,
            sort_index=9)
     def staggers(self):
         return self.get_float_param("staggers", 1)
@@ -368,6 +392,24 @@ class Stroke(EmbroideryElement):
         return self.get_int_param('join_style', 0)
 
     @property
+    @param('random_seed',
+           _('Random seed'),
+           tooltip=_('Use a specific seed for randomized attributes. Uses the element ID if empty.'),
+           select_items=[('stroke_method', 'running_stitch'),
+                         ('stroke_method', 'ripple_stitch')],
+           type='random_seed',
+           default='',
+           sort_index=100)
+    @cache
+    def random_seed(self) -> str:
+        seed = self.get_param('random_seed', '')
+        if not seed:
+            seed = self.node.get_id() or ''
+            # TODO(#1696): When inplementing grouped clones, join this with the IDs of any shadow roots,
+            # letting each instance without a specified seed get a different default.
+        return seed
+
+    @property
     @cache
     def is_closed(self):
         # returns true if the outline of a single line stroke is a closed shape
@@ -443,13 +485,14 @@ class Stroke(EmbroideryElement):
         # `self.zigzag_spacing` is the length for a zig and a zag
         # together (a V shape).  Start with running stitch at half
         # that length:
-        stitch_group = self.running_stitch(path, zigzag_spacing / 2.0, self.running_stitch_tolerance)
+        stitch_group = self.running_stitch(path, zigzag_spacing / 2.0, self.running_stitch_tolerance, False, 0, "")
         stitch_group.stitches = zigzag_stitch(stitch_group.stitches, zigzag_spacing, stroke_width, pull_compensation)
 
         return stitch_group
 
-    def running_stitch(self, path, stitch_length, tolerance):
-        stitches = running_stitch(path, stitch_length, tolerance)
+    def running_stitch(self, path, stitch_length, tolerance, enable_random, random_sigma, random_seed):
+        # running stitch with repeats
+        stitches = running_stitch(path, stitch_length, tolerance, enable_random, random_sigma, random_seed)
 
         repeated_stitches = []
         # go back and forth along the path as specified by self.repeats
@@ -529,7 +572,8 @@ class Stroke(EmbroideryElement):
                     stitch_group = self.simple_satin(path, self.zigzag_spacing, self.stroke_width, self.pull_compensation)
                 # running stitch
                 else:
-                    stitch_group = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance)
+                    stitch_group = self.running_stitch(path, self.running_stitch_length, self.running_stitch_tolerance,
+                                                       self.enable_random_stitches, self.random_stitch_length_jitter, self.random_seed)
                     # bean stitch
                     if any(self.bean_stitch_repeats):
                         stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)

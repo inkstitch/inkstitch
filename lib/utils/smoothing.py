@@ -2,7 +2,7 @@ import numpy as np
 from scipy.interpolate import splprep, splev
 
 from .geometry import Point, coordinate_list_to_point_list
-from ..stitches.running_stitch import running_stitch
+from ..stitches.running_stitch import even_running_stitch
 
 
 def _remove_duplicate_coordinates(coords_array):
@@ -48,7 +48,7 @@ def smooth_path(path, smoothness=1.0):
     #
     # Fortunately, we can convert the path to segments that are mostly the same
     # length by using the running stitch algorithm.
-    path = running_stitch(coordinate_list_to_point_list(path), 5 * smoothness, smoothness / 2)
+    path = even_running_stitch(coordinate_list_to_point_list(path), 5 * smoothness, smoothness / 2)
 
     # splprep blows up on duplicated consecutive points with "Invalid inputs"
     coords = _remove_duplicate_coordinates(np.array(path))

@@ -15,6 +15,7 @@ from shapely import segmentize
 from shapely.ops import snap
 from shapely.strtree import STRtree
 
+
 from ..debug import debug
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
@@ -25,8 +26,9 @@ from ..utils.geometry import (ensure_multi_line_string,
                               line_string_to_point_list)
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
+from ..utils.prng import join_args
 from .fill import intersect_region_with_grating, stitch_row
-from .running_stitch import running_stitch
+from .running_stitch import even_running_stitch
 
 
 class NoGratingsError(Exception):
@@ -77,7 +79,10 @@ def auto_fill(shape,
               skip_last,
               starting_point,
               ending_point=None,
-              underpath=True):
+              underpath=True,
+              enable_random=False,
+              random_sigma=0.0,
+              random_seed=""):
     rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
     if not rows:
         # Small shapes may not intersect with the grating at all.
@@ -102,7 +107,7 @@ def auto_fill(shape,
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
     result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                              staggers, skip_last, underpath)
+                              staggers, skip_last, underpath, enable_random, random_sigma, random_seed)
 
     return result
 
@@ -335,7 +340,7 @@ def fallback(shape, running_stitch_length, running_stitch_tolerance):
     boundary = ensure_multi_line_string(shape.boundary)
     outline = boundary.geoms[0]
 
-    return running_stitch(line_string_to_point_list(outline), running_stitch_length, running_stitch_tolerance)
+    return even_running_stitch(line_string_to_point_list(outline), running_stitch_length, running_stitch_tolerance)
 
 
 @debug.time
@@ -694,7 +699,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
     if len(path) > 1:
         path = clamp_path_to_polygon(path, shape)
 
-    points = running_stitch(path, running_stitch_length, running_stitch_tolerance)
+    points = even_running_stitch(path, running_stitch_length, running_stitch_tolerance)
     stitches = [Stitch(point) for point in points]
 
     for stitch in stitches:
@@ -718,7 +723,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
 
 @debug.time
 def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length,
-                     running_stitch_tolerance, staggers, skip_last, underpath):
+                     running_stitch_tolerance, staggers, skip_last, underpath, enable_random, random_sigma, random_seed):
     path = collapse_sequential_outline_edges(path, fill_stitch_graph)
 
     stitches = []
@@ -727,9 +732,10 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_sp
     if not path[0].is_segment():
         stitches.append(Stitch(*path[0].nodes[0]))
 
-    for edge in path:
+    for i, edge in enumerate(path):
         if edge.is_segment():
-            stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last)
+            stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last,
+                       enable_random, random_sigma, join_args(random_seed, i))
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
             stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath))
