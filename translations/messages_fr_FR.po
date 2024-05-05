@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-03 01:09+0000\n"
-"PO-Revision-Date: 2024-05-04 01:07\n"
+"PO-Revision-Date: 2024-05-05 01:15\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1383,7 +1383,7 @@ msgstr "Il y a, dans le document, un objet invalide sans information de géomét
 
 #: lib/elements/empty_d_object.py:16
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
-msgstr "Exécutez Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document..."
+msgstr "* Exécutez Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document..."
 
 #: lib/elements/fill_stitch.py:36
 msgid "Small Fill"
@@ -1447,7 +1447,7 @@ msgstr "Cet objet possède plusieurs lignes-guide, mais seule la première sera 
 
 #: lib/elements/fill_stitch.py:76 lib/elements/stroke.py:31
 msgid "* Remove all guide lines, except for one."
-msgstr "* Supprimer toutes les lignes-guide, sauf une."
+msgstr "* Supprimez toutes les lignes-guide, sauf une."
 
 #: lib/elements/fill_stitch.py:81
 msgid "Unconnected"
@@ -1480,11 +1480,11 @@ msgstr "L'élément a à la fois une couleur de fond et une couleur de contour. 
 
 #: lib/elements/fill_stitch.py:103
 msgid "* Duplicate the element. Remove stroke color from the first and fill color from the second."
-msgstr "* Dupliquer l'élément. Supprimer la couleur de contour pour l'un et la couleur de fond pour l'autre."
+msgstr "* Dupliquez l'élément. Supprimez la couleur de contour pour l'un et la couleur de fond pour l'autre."
 
 #: lib/elements/fill_stitch.py:104
 msgid "* Adapt the shape of the second element to compensate for push and pull fabric distortion."
-msgstr "* Adapter la forme du second élément pour compenser les distorsions du tissu."
+msgstr "* Adaptez la forme du second élément pour compenser les distorsions du tissu."
 
 #: lib/elements/fill_stitch.py:109
 msgid "No linear gradient color"
@@ -1500,7 +1500,7 @@ msgstr "Ouvrez le dialogue Fond et Contour."
 
 #: lib/elements/fill_stitch.py:113
 msgid "* Set a linear gradient as a fill and adapt colors to your liking."
-msgstr "Choisissez un fond en dégradé linéaire et adaptez les couleurs selon vos souhaits."
+msgstr "* Choisissez un fond en dégradé linéaire et adaptez les couleurs selon vos souhaits."
 
 #: lib/elements/fill_stitch.py:118
 msgid "No stripes to render"
@@ -1942,7 +1942,7 @@ msgstr "* Faites Chemin > Objet en chemin."
 
 #: lib/elements/polyline.py:25
 msgid "* Optional: Run the Params extension and check the \"manual stitch\" box."
-msgstr "* Optionnel : Exécutez l'extension Paramètres et cochez la boite \"points manuels\"."
+msgstr "* Optionnel : exécutez l'extension Paramètres et cochez la boite \"points manuels\"."
 
 #: lib/elements/polyline.py:45
 msgid "Manual stitch along path"
@@ -2011,7 +2011,7 @@ msgstr "Les traverses contrôlent la direction des points des colonnes satin. Il
 #: lib/elements/satin_column.py:65 lib/elements/satin_column.py:74
 #: lib/elements/satin_column.py:85
 msgid "* With the selected object press \"P\" to activate the pencil tool."
-msgstr "*L'objet étant sélectionné appuyez sur \"P\" pour activer l'outil crayon."
+msgstr "* L'objet étant sélectionné, appuyez sur \"P\" pour activer l'outil crayon."
 
 #: lib/elements/satin_column.py:66 lib/elements/satin_column.py:75
 msgid "* Hold \"Shift\" while drawing a rung."
@@ -2043,7 +2043,7 @@ msgstr "Les traverses de direction contrôlent la direction des points dans les 
 
 #: lib/elements/satin_column.py:86
 msgid "* Hold \"Shift\" while drawing the rung."
-msgstr "*Maintenir la touche \"Majuscule\" enfoncée en traçant la traverse de direction."
+msgstr "* Maintenir la touche \"Majuscule\" enfoncée en traçant la traverse de direction."
 
 #: lib/elements/satin_column.py:91 lib/elements/satin_column.py:101
 #: inx/inkstitch_select_elements.inx:32
@@ -2333,7 +2333,7 @@ msgstr "Cet élément est rendu comme point droit alors qu'il a un paramétrage 
 
 #: lib/elements/stroke.py:39
 msgid "* Convert to stroke: select the element and open the parameter dialog. Enable running stitch along path."
-msgstr "* Convertir en trait : sélectionnez l'élément et ouvrez la boîte de dialogue des paramètres. Activer point droit le long des chemins."
+msgstr "* Convertir en trait : sélectionnez l'élément et ouvrez la boîte de dialogue des paramètres. Activez le point droit le long des chemins."
 
 #: lib/elements/stroke.py:40
 msgid "* Use as satin column: add an other rail and optionally rungs."
