@@ -1,7 +1,7 @@
 ---
 title: "Guided Fill"
 permalink: /docs/stitches/guided-fill/
-last_modified_at: 2023-04-18
+last_modified_at: 2024-05-06
 toc: true
 ---
 ## What it is
@@ -70,8 +70,8 @@ Allow lock stitches                ||Enables lock stitches in only desired posit
 Force lock stitches                |☑ |Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
 Tack stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
 Lock stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
-Stop After                         |☑ |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 Trim After                         |☑ |Trim the thread after sewing this object.
+Stop After                         |☑ |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 {: .params-table }
 
 ## Underlay
