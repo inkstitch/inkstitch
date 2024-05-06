@@ -1,7 +1,7 @@
 ---
 title: "Running Stitch"
 permalink: /docs/stitches/running-stitch/
-last_modified_at: 2024-04-27
+last_modified_at: 2024-05-06
 toc: true
 ---
 ## What it is
@@ -32,6 +32,9 @@ Repeats                       |◦ Defines how many times to run down and back a
 Bean stitch number of repeats |◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/)<br />◦ Backtrack each stitch this many times.<br />◦ A value of 1 would triple each stitch (forward, back, forward).<br />◦ A value of 2 would quintuple each stitch, etc.
 Running stitch length         |Length of stitches
 Running stitch tolerance      |All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
+Randomize stitches  |☑  |Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts.
+Random stitch length jitter | |Amount to vary the length of each stitch by when randomizing.
+Random Seed| |Rolling the dice or setting a new value will change the random stitches
 Minimum stitch length         |Overwrites global minimum stitch length setting. Shorter stitches than that will be removed.
 Minimum  jump stitch  length  |Overwrites global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
 Allow lock stitches           |Enables lock stitches in only desired positions
