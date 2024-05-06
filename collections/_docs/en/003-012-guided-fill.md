@@ -56,17 +56,22 @@ Guided Fill Strategy               |![Guided Fill Strategies](/assets/images/doc
 Expand                             ||Expand the shape before fill stitching, to compensate for gaps between shapes.
 Maximum fill stitch length         ||The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
 Spacing between rows               ||Distance between rows of stitches
+Stagger rows this many times before repeating|![Stagger example](/assets/images/docs/params-fill-stagger.png) |Stitches are staggered so that neighboring rows of stitches don't all fall in the same column (which would create a distracting valley effect). Setting this dictates the length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values.
+Skip last stitch in each row       |![Skip example](/assets/images/docs/params-fill-skip_stitches.png) |The last stitch in each row is quite close to the first stitch in the next row. Skipping it decreases stitch count and density.
+Underpath                          |![Unterpath example](/assets/images/docs/params-fill-underpathing.png)|Must be enabled to let running stitches travel inside shape instead of around the border when moving from section to section
 Running stitch length              ||Length of stitches used when moving from section to section
 Running Stitch tolerance           |![Tolerance Sample](/assets/images/docs/contourfilltolerance.svg) |All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded.
-Skip last stitch in each row       ||The last stitch in each row is quite close to the first stitch in the next row. Skipping it decreases stitch count and density.
-Stagger this many times before repeating|![Stagger example](/assets/images/docs/params-fill-stagger.png) |Stitches are staggered so that neighboring rows of stitches don't all fall in the same column (which would create a distracting valley effect). Setting this dictates the length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values.
-Underpath                          ||Must be enabled to let running stitches travel inside shape instead of around the border when moving from section to section
+Randomize stitches  |☑  |Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts.
+Random stitch length jitter | |Amount to vary the length of each stitch by when randomizing.
+Minimum stitch length         ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
+Minimum  jump stitch  length             ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
 Allow lock stitches                ||Enables lock stitches in only desired positions
-Force lock stitches                ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch preferences.
+Force lock stitches                |☑ |Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
 Tack stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
 Lock stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
-Trim After                         ||Trim the thread after sewing this object.
-Stop After                         ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+Stop After                         |☑ |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+Trim After                         |☑ |Trim the thread after sewing this object.
+{: .params-table }
 
 ## Underlay
 
