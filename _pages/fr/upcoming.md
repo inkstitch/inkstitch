@@ -28,6 +28,12 @@ Cette extension informe sur divers paramètres des éléments de point sélectio
 
 ![Informations sur l'élément](/assets/images/docs/en/element_info.png)
 
+### [Test de police](/fr/docs/font-tools/#font-sampling)
+
+Font Management > Font Sampling ([#2858](https://github.com/inkstitch/inkstitch/issues/2858))
+
+This extension creates a list of all letters in a font. It helps font creators to test the outcome of a new font.
+
 ### [Générer des échantillons de test à partir de la sélection](/fr/docs/edit/#generate-test-swatches-from-selection)
 
 `Édition > Générer des échantillons de test à partir de la sélection` ([#2528](https://github.com/inkstitch/inkstitch/issues/2528))
