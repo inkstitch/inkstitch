@@ -224,7 +224,7 @@ class EmbroideryElement(object):
            tooltip=_('Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.'),
            type='float',
            default=None,
-           sort_index=48)
+           sort_index=200)
     @cache
     def min_stitch_length(self):
         return self.get_float_param("min_stitch_length_mm")
@@ -235,7 +235,7 @@ class EmbroideryElement(object):
            tooltip=_('Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.'),
            type='float',
            default=None,
-           sort_index=49)
+           sort_index=201)
     @cache
     def min_jump_stitch_length(self):
         return self.get_float_param("min_jump_stitch_length_mm")
@@ -250,7 +250,7 @@ class EmbroideryElement(object):
            # L10N options to allow lock stitch before and after objects
            options=[_("Both"), _("Before"), _("After"), _("Neither")],
            default=0,
-           sort_index=50)
+           sort_index=202)
     @cache
     def ties(self):
         return self.get_int_param("ties", 0)
@@ -263,7 +263,7 @@ class EmbroideryElement(object):
                      'minimum jump stitch length value in the Ink/Stitch preferences.'),
            type='boolean',
            default=False,
-           sort_index=51)
+           sort_index=203)
     @cache
     def force_lock_stitches(self):
         return self.get_boolean_param('force_lock_stitches', False)
@@ -275,7 +275,7 @@ class EmbroideryElement(object):
            type='combo',
            default='half_stitch',
            options=LOCK_DEFAULTS['start'],
-           sort_index=52)
+           sort_index=204)
     def lock_start(self):
         return self.get_param('lock_start', "half_stitch")
 
@@ -286,7 +286,7 @@ class EmbroideryElement(object):
            type="string",
            default="",
            select_items=[('lock_start', 'custom')],
-           sort_index=53)
+           sort_index=205)
     def lock_custom_start(self):
         return self.get_param('lock_custom_start', '')
 
@@ -298,7 +298,7 @@ class EmbroideryElement(object):
            unit="mm",
            default=0.7,
            select_items=[('lock_start', lock.id) for lock in LOCK_DEFAULTS['start'] if isinstance(lock, (AbsoluteLock, CustomLock))],
-           sort_index=54)
+           sort_index=206)
     def lock_start_scale_mm(self):
         return self.get_float_param('lock_start_scale_mm', 0.7)
 
@@ -310,7 +310,7 @@ class EmbroideryElement(object):
            unit="%",
            default=100,
            select_items=[('lock_start', lock.id) for lock in LOCK_DEFAULTS['start'] if isinstance(lock, (SVGLock, CustomLock))],
-           sort_index=54)
+           sort_index=207)
     def lock_start_scale_percent(self):
         return self.get_float_param('lock_start_scale_percent', 100)
 
@@ -321,7 +321,7 @@ class EmbroideryElement(object):
            type='combo',
            default='half_stitch',
            options=LOCK_DEFAULTS['end'],
-           sort_index=55)
+           sort_index=208)
     def lock_end(self):
         return self.get_param('lock_end', "half_stitch")
 
@@ -332,7 +332,7 @@ class EmbroideryElement(object):
            type="string",
            default="",
            select_items=[('lock_end', 'custom')],
-           sort_index=56)
+           sort_index=209)
     def lock_custom_end(self):
         return self.get_param('lock_custom_end', '')
 
@@ -344,7 +344,7 @@ class EmbroideryElement(object):
            unit="mm",
            default=0.7,
            select_items=[('lock_end', lock.id) for lock in LOCK_DEFAULTS['end'] if isinstance(lock, (AbsoluteLock, CustomLock))],
-           sort_index=57)
+           sort_index=210)
     def lock_end_scale_mm(self):
         return self.get_float_param('lock_end_scale_mm', 0.7)
 
@@ -356,7 +356,7 @@ class EmbroideryElement(object):
            unit="%",
            default=100,
            select_items=[('lock_end', lock.id) for lock in LOCK_DEFAULTS['end'] if isinstance(lock, (SVGLock, CustomLock))],
-           sort_index=57)
+           sort_index=211)
     @cache
     def lock_end_scale_percent(self):
         return self.get_float_param('lock_end_scale_percent', 100)
@@ -367,7 +367,7 @@ class EmbroideryElement(object):
            tooltip=_('Add a TRIM command after stitching this object.'),
            type='boolean',
            default=False,
-           sort_index=60)
+           sort_index=212)
     def trim_after(self):
         return self.get_boolean_param('trim_after', False)
 
@@ -377,7 +377,7 @@ class EmbroideryElement(object):
            tooltip=_('Add a STOP command after stitching this object.'),
            type='boolean',
            default=False,
-           sort_index=60)
+           sort_index=213)
     def stop_after(self):
         return self.get_boolean_param('stop_after', False)
 

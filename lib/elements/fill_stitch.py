@@ -545,8 +545,8 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('zigzag_width_mm',
-           _('Zigzag width'),
-           tooltip=_('Width of the zigzag line.'),
+           _('Zig-zag width'),
+           tooltip=_('Width of the zig-zag line.'),
            unit='mm',
            type='float',
            select_items=[('fill_method', 'meander_fill')],
