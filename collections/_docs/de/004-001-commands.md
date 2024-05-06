@@ -9,12 +9,11 @@ Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber 
 Nicht jede Maschine kann diese zusätzliche Informationen umsetzen und verstehen. In diesem Fall wird ein Befehl einfach ignoriert.
 {: .notice--warning }
 
-# Jump Stitch to Trim Command
+# Sprungstich zu Fadenschnitt-Befehl
 
-`Commands > Jump Stitch to Trim Command` 
+`Befehle > Sprungstich zu Fadenschnitt-Befehl` 
 
-Inserts trim commands to avoid jump stitches
-
+Fügt Fadenschnitt-Befehle ein um Sprungstiche zu vermeiden
 
 ## Dokumentbefehle hinzufügen ...
 

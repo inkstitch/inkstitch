@@ -9,16 +9,17 @@ Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem
 Ein Blick in das [Schriften für Ink/Stitch erstellen Tutorial](/de/tutorials/font-creation) lohnt sich auf jeden Fall, wenn du neue Schriften erstellen willst.
 {: .notice--info }
 
-## Font Sampling
+## Zeichentabelle
 
-This extension creates a list of all letters in a font. It helps font creators to test the outcome of a new font.
+Diese Erweiterung generiert eine Liste aller Zeichen einer Schrift.
+So können Schriftautoren schnell und einfach das Stickergebnis einer neuen Schrift prüfen.
 
-Options are :
+### Optionen
 
-* Font : the one you want to use
-* Stitch direction :  default is left to right
-* Scale : in percent
-* Max line width : line breaks will  be chosen accordingly
+* Schrift: die Schrift die ausgegeben werden soll
+* Stickrichtung: Links nach rechts in der Standardeinstellung
+* Skalieren: in Prozent
+* Maximale Zeilenlänge: fügt Zeilenumbrüche entsprechend des gewählten Wertes ein
 
 ## Vernähstiche erzwingen
 

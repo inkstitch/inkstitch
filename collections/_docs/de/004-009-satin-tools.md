@@ -36,25 +36,26 @@ Dieses Werkzeug ersetzt deine Satinsäulen mit einem Set von neuen Satinsäulen 
 
 * Solltest du es bevorzugen die vorher gesetzte Objekt-Reihenfolge beizubehalten (das könnte der Fall sein, wenn sich die Satinsäulen überschneiden), benutze die Option **Preserve order of Satin Columns**.
 
-### Multicolor Satin 
+### Mehrfarbige Satinsäule
 
-`Tools: Satin: Multicolor Satin` ([#2863](https://github.com/inkstitch/inkstitch/issues/2863))
+`Werkzeuge: Satin > Mehrfarbige Satinsäule`
 
-This extension creates copies of selected satins to mimic a multicolor satin
+Diese Erweiterung generiert Kopien der ausgewählten Satinsäule um einen mehrfarbigen Effekt zu erzeugen
 
 ![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
 
-* Select one  or more  satin column
-* `Tools: Satin: Multicolor Satin`
-* In the colorize tab you may :
-  -choose  if the colors  are equidistant or not.  If unchecked  you are  able to independantly chose each color width **AND** add a width for  color sharing.
-  - add a left overflow  (percent)
-  - add a  right overflow (percent)
-  - add more colors
+### Funktionsweise
 
+* Wähle eine oder mehrere Satinsäulen
+* Öffne `Werkzeuge: Satin > Mehrfarbige Satinsäule`
+* In `Farben`:
+  - Wähle ob die Farben gleiche Breiten und Abstände haben sollen oder nicht
+    (ist die Option deaktiviert, kann für jede Farbe sowohl die Breite der reinen Farbe als auch die Breite des darauf folgenden zweifarbigen Bereichs  festgelegt werden).
+  - Überlauf rechts (Prozent)
+  - Überlauf links (Prozent)
+  - Füge Farben hinzu
  
-If you want to  understand how this extension works,  [read this](/de/tutorials/multicolor_satin.md).
-
+Für nähere Infos über die Funktionsweise dieser Erweiterung gibt es im [Tutorial für mehrfarbige Satinsäulen](/de/tutorials/multicolor_satin.md).
 
 ## Linie zu Satin
 

@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-05-05
+last_modified_at: 2024-05-03
 sidebar:
   nav: pages
 toc: true
@@ -253,6 +253,7 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 
 ### Fill Stitch - family
 
+* Randomize stitch length option ([#2830](https://github.com/inkstitch/inkstitch/issues/2830))
 * Smooth underpath ([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
 * Prevent fill stitch from going outside the shape ([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
 * [Linear gradient fill](/docs/stitches/linear-gradient-fill/): a new stitch type to stitch gradients ([#2587](https://github.com/inkstitch/inkstitch/issues/2587))
@@ -265,6 +266,10 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 * [Tartan Fill](/docs/stitches/tartan-fill): a new stitch type to mimic tartan patterns ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
 
   [![Tartan pattern](/assets/images/docs/tartan-fill.jpg)](/assets/images/docs/tartan-fill.svg)
+
+### Running stitch - family
+
+* Randomize stitch length option ([#2830](https://github.com/inkstitch/inkstitch/issues/2830))
 
 ### Satin column - family
 
