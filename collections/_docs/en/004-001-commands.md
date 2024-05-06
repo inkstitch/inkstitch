@@ -1,13 +1,20 @@
 ---
 title: "Visual Commands"
 permalink: /docs/commands/
-last_modified_at: 2023-12-31
+last_modified_at: 2024-05-04
 toc: true
 ---
 Visual commands can be used to specify additional information on how to embroider your design. They can be used e.g. to tell the machine to trim the thread after finishing a specific embroidery element or when to pause and where to stop, so you can add a fabric layer to your appliqué design more conventiently.
 
 Not every embroidery machine will be able to read and process the information given by some of these commands. If this is not working for you, read your machines manual to verify your machines capabilities.
 {: .notice--warning }
+
+# Jump Stitch to Trim Command
+
+`Commands > Jump Stitch to Trim Command` 
+
+Inserts trim commands to avoid jump stitches
+
 
 ## Add Commands ...
 
