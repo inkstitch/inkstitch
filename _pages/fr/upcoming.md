@@ -42,6 +42,22 @@ Cette extension permet de tester facilement différentes valeurs des paramètres
 
 ![Exemples d'échantillons de test](/assets/images/docs/test_swatches.png)
 
+### [Saut en Coupe](/fr/docs/commands/#jump-to-trim)
+
+`Commandes > Saut en Coupe` ([#2864](https://github.com/inkstitch/inkstitch/issues/2864))
+
+Cette extension insère des commandes de coupe à la place des sauts.
+
+### [Multicolor Satin](/fr/docs/satin-tools/#multicolor-satin)
+
+`Outils: Satin>Satin Multicolore`  ([#2863](https://github.com/inkstitch/inkstitch/issues/2863))
+
+
+Cette extension crée des copies des satins  sélectionnés pour imiter une colone satin multicolore.
+
+![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
+
+
 ### [Contour](/fr/docs/stroke-tools/#outline)
 
 `Outils : Trait> Contour` ([#2529](https://github.com/inkstitch/inkstitch/issues/2529))
