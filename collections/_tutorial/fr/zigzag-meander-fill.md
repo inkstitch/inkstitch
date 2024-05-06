@@ -17,6 +17,7 @@ user-level:
 ## Simulation de fourrure
 
 ![Preview](/assets/images/docs/zigzagmeander_grumpycat.jpg)
+
 Le corps du chat est un remplissage en méandre avec le point de zigzag activé
 
 
