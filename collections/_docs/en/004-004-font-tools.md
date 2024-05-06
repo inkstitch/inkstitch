@@ -18,7 +18,7 @@ Options are :
 
 * Font : the one you want to use
 * Stitch direction :  default is left to right
-* Scale : in person
+* Scale : in percent
 * Max line width : line breaks will  be chosen accordingly
 
   
