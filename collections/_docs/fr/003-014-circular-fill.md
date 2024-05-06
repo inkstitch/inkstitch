@@ -1,7 +1,7 @@
 ---
 title: "Remplissage circulaire"
 permalink: /fr/docs/stitches/circular-fill/
-last_modified_at: 2023-05-01
+last_modified_at: 2024-05-07
 toc: true
 ---
 ## De quoi s'agit-il ?
@@ -43,6 +43,9 @@ Lancez `Extensions > Ink/Stitch  > Paramètres` pour choisir vos réglages.
 |Tolérance du point droit|![Exemple de tolerance](/assets/images/docs/contourfilltolerance.svg) |Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible (en haut sur le dessin) signifie que les points seront plus rapprochés. Une tolérance plus élevée (en bas) signifie que les angles vifs peuvent être arrondis.|
 |Longueur minimum du point||Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.|
 |Longueur minimum de saut||Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.|
+|Rendre aléatoire                      |☑ |Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré.|
+|Mouvement aléatoire de la longueur du point                    ||Pourcentage maximum de variation de la longueur du point appliqué si la longueur est rendue aléatoire.|
+|Graine Aléatoire                   ||Rouler le dé ou entrer une valeur modifie les points aléatoires|
 |Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
 |Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
 |Point d'arrêt initial       ||Sélectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
