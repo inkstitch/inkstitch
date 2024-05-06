@@ -1,7 +1,7 @@
 ---
 title: "Kurvenfüllung"
 permalink: /de/docs/stitches/guided-fill/
-last_modified_at: 2023-04-19
+last_modified_at: 2023-05-07
 toc: true
 ---
 ## Beschreibung
