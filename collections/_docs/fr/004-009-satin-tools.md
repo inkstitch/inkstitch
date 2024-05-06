@@ -88,6 +88,8 @@ Cette extension crée des copies des satins  sélectionnés pour imiter une colo
   - Ajouter un  dépassement à gauche  (en pourcentage)
   - Ajouter un dépassement à droite (en pourcentage)
   - Ajouter des couleurs
+ 
+  Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin.md), si vous souhaitez comprendre comment cette extension fonctionne.
 
 
 ## Scinder une colonne Satin
