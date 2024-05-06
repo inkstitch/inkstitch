@@ -204,7 +204,7 @@ Visualise et Exporter > Export pdf
 
 *  Cherry for  Kaalleen a été modifiée pour inclure un léger remplissage.
   
-Toutes les fontes ont été retravaillées pour être plus stable si déformées.
+Toutes les fontes ont été retravaillées pour être plus stables si déformées.
  [#2807](https://github.com/inkstitch/inkstitch/pull/2807)
  [#2803](https://github.com/inkstitch/inkstitch/pull/2803)
  [#2802](https://github.com/inkstitch/inkstitch/pull/2802)
