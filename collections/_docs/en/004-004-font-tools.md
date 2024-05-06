@@ -1,7 +1,7 @@
 ---
 title: "Font Tools"
 permalink: /docs/font-tools/
-last_modified_at: 2024-03-13
+last_modified_at: 2024-05-05
 toc: true
 ---
 A collection of tools suitable for font creators or those who want to add additional fonts to the Ink/Stitch [lettering tool](/docs/lettering).
@@ -9,6 +9,19 @@ A collection of tools suitable for font creators or those who want to add additi
 Read the [Ink/Stitch font creation tutorial](/tutorials/font-creation) for in-depth instrustions.
 {: .notice--info }
 
+
+## Font Sampling
+
+This extension creates a list of all letters in a font. It helps font creators to test the outcome of a new font.
+
+Options are :
+
+* Font : the one you want to use
+* Stitch direction :  default is left to right
+* Scale : in person
+* Max line width : line breaks will  be chosen accordingly
+
+  
 ## Force lock stitches
 
 Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work.
