@@ -9,10 +9,11 @@ Un ensemble d'outils adaptés aux créateurs de polices ou à ceux qui souhaiten
 Lisez le [Tutoriel de création de police pour Ink/Stitch](/fr/tutorials/font-creation) pour des instructions approfondies.
 {: .notice--info }
 
-## Test de fonte {#font-sampling}
+## Test de police {#font-sampling}
 
 Cette extension crée un calque qui contient toutes les lettres d'une fonte. Elle aide les créateurs de fontes à tester leurs nouvelles fonte.
 
+Lancer  `Extensions > Ink/Stitch > Gestion des polices  > Test de police...`
 Options  :
 
 * Fonte : choisir la fonte à utiliser
