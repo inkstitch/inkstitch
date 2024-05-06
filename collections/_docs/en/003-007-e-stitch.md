@@ -22,10 +22,10 @@ Prepare your path exactly as you would with a [Satin Column](/docs/stitches/sati
 {: .notice--info }
 
 ## Params
+
 Settings||Description
 ---|---|---
 Custom satin column   | ☑ |Must be enabled for these settings to take effect.
-
 Method                | |Chose `E-Stitch`
 Short stitch inset    | ![Short Stitch example](/assets/images/docs/params-satin-short_stitch_inset.png) | Stitches in areas with high density will be inset by this amount (%)
 Short stitch distance | ![Short Stitch example](/assets/images/docs/params-satin-short_stitch_distance.png) | Inset stitches if the distance between stitches is smaller than this (mm).
@@ -33,7 +33,6 @@ Zig-Zag spacing       |![Zig-zag spacing example](/assets/images/docs/params-sat
 Pull compensation percentage |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an aysmmetric effect.
 Pull compensation     |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Satin stitches [pull the fabric together](/tutorials/push-pull-compensation/), resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect.
 Reverse rails         |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) | Enabling this may help if your satin renders very strangely. <br />Options are :<br /> ◦ Automatic, the default value aims to detect and fix the problem <br />◦ Don't reverse , disable automatic detection <br />◦ Reverse first rail <br />◦ Reverse second rail <br />◦ Reverse both rails
-
 Swap rails            |☑ | Swaps the first and the second rails of a satin column. Affecting which side the thread finishes on as well as any other sided property.
 Minimum stitch length         ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
 Minimum  jump stitch  length             ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches
