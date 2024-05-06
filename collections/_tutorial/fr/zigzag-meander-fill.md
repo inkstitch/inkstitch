@@ -4,7 +4,7 @@ title: "Utilisation du remplissage en méandre pour simuler de la fourrure"
 language: fr
 last_modified_at: 2024-05-04
 excerpt: "Le corps du chat est un remplissage en méandre avec le point de zigzag activé"
-image: "/assets/images/tutorials/tutorial-preview-images/grumpycat.png"
+image: "/assets/images/docs/zigzagmeander_grumpycat.jpg"
 tutorial-type:
   - Sample File
 stitch-type:
@@ -16,8 +16,7 @@ user-level:
 
 ## Simulation de fourrure
 
-![Preview](/assets/images/tutorials/tutorial-preview-images/grumpycat.png)
-
+![Preview](/assets/images/docs/zigzagmeander_grumpycat.jpg)
 Le corps du chat est un remplissage en méandre avec le point de zigzag activé
 
 
