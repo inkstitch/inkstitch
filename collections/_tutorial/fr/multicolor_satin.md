@@ -1,7 +1,7 @@
 ---
 title: Satin Multicolore
 permalink: /fr/tutorials/multicolor_satin/
-last_modified_at: 2024-04-18
+last_modified_at: 2024-05-05
 language: fr
 excerpt: "Simuler des colonnes satin multicolore"
 image: "assets/images/tutorials/multicolor_satin/snake.jpg"
@@ -17,6 +17,10 @@ toc : true
 # Simuler une colonne satin multicolore.
 On parle ici de simulation, car il ne s'agit pas d'une seule colonne satin  multicolore, mais d'un effet similaire obtenu en 
 utilisant plusieurs  copies superposées d'une même colonne satin, simplement en utilisant des paramètres aléatoires différents.
+
+{% include upcoming_release.html %} 
+Ceci est devenu une des [extensions d'Ink/Stitch](/fr/docs/satin-tools/#multicolor-satin)
+
 
 ## Commençons par le bicolore
 Revenons sur les paramètres "aléatoires" des colonnes satin.
