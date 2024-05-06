@@ -17,6 +17,10 @@ toc : true
 
 Wir sprechen hier von einer Simulation, da es sich nicht um eine einzelne mehrfarbige Satinsäule handelt, sondern um einen ähnlichen Effekt, der durch die Verwendung mehrerer übereinanderliegender Kopien derselben Satinsäule mit unterschiedlichen Parametereinstellungen erzielt wird.
 
+{% include upcoming_release.html %} 
+This is now an [Ink/Stitch extension](/docs/satin-tools/#multicolor-satin)
+
+
 ## Beginnen wir mit einer zweifarbigen Satinsäule
 
 Kommen wir zurück zu den „zufälligen“ Parametern der Satinsäulen.
