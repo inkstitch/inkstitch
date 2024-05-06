@@ -8,7 +8,7 @@ Les commandes visuelles peuvent être utilisées pour spécifier des information
 
 Toutes les machines à broder ne sont pas capable de comprendre ces commandes. Si ça ne fonctionne pas bien pour vous, lisez le manuel de vos machines pour vérifier leur capacités.{: .notice--warning }
 
-## Saut en Coupe{#jump-to-trim}
+## Saut en Coupe {#jump-to-trim}
 
 Cette extension insère des commandes de coupe à la place des sauts.
 
