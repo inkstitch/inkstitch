@@ -9,6 +9,13 @@ Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber 
 Nicht jede Maschine kann diese zusätzliche Informationen umsetzen und verstehen. In diesem Fall wird ein Befehl einfach ignoriert.
 {: .notice--warning }
 
+# Jump Stitch to Trim Command
+
+`Commands > Jump Stitch to Trim Command` 
+
+Inserts trim commands to avoid jump stitches
+
+
 ## Dokumentbefehle hinzufügen ...
 
 Diese Befehle wirken sich auf das gesamte Motiv aus.
