@@ -1,7 +1,7 @@
 ---
 title: Multicolor Satin
 permalink: /tutorials/multicolor_satin/
-last_modified_at: 2024-04-17
+last_modified_at: 2024-05-04
 language: en
 excerpt: "Simulating multicolor satin collumns"
 image: "assets/images/tutorials/multicolor_satin/snake.jpg"
@@ -18,6 +18,9 @@ toc : true
 
 We are talking simulation here, because it is not a single multicolored satin column, but a similar effect obtained by
 using several superimposed copies of the same satin column, simply using different parameters settings.
+
+{% include upcoming_release.html %} 
+This is now an [Ink/Stitch extension](/docs/satin-tools/#multicolor-satin)
 
 ## Let's start with a bicolor satin
 Let's come back to the "random" parameters of the satin columns.
