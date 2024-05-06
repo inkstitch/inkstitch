@@ -1,7 +1,7 @@
 ---
 title: "Circular Fill"
 permalink: /docs/stitches/circular-fill/
-last_modified_at: 2023-04-30
+last_modified_at: 2024-05-06
 toc: true
 ---
 ## What it is
@@ -51,8 +51,8 @@ Tack stitch                        ||Chose your [favorite style](/docs/stitches/
 Scale Tack stitch    ||
 Lock stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
 Scale Lock stitch    ||
-Stop After                         |☑ |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 Trim After                         |☑ |Trim the thread after sewing this object.
+Stop After                         |☑ |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 {: .params-table }
 
 ## Underlay
