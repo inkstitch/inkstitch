@@ -100,7 +100,7 @@ This extension creates copies of selected satins to mimic a multicolor satin
   - add more colors
 
  
-If you want to  understand how this extension works,  [read this](/fr/tutorials/multicolor_satin.md).
+If you want to  understand how this extension works,  [read this](/tutorials/multicolor_satin.md).
 
 ## Cut Satin Column
 
