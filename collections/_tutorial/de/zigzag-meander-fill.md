@@ -4,7 +4,7 @@ title: "Fellimitation mit Mäanderfüllung"
 language: de
 last_modified_at: 2024-05-02
 excerpt: "Der Katzenkörper ist eine Meanderfüllung mit Zick-Zack-Stich"
-image: "/assets/images/tutorials/tutorial-preview-images/grumpycat.png"
+image: "/assets/images/docs/zigzagmeander_grumpycat.jpg"
 tutorial-type:
   - Beispieldatei
 stitch-type:
@@ -13,7 +13,7 @@ stitch-type:
 
 ## Fellimitation
 
-![Preview](/assets/images/tutorials/tutorial-preview-images/grumpycat.png)
+![Preview](/assets/images/docs/zigzagmeander_grumpycat.jpg)
 
 Der Katzenkörper ist eine Meanderfüllung mit Zick-Zack-Stich
 
