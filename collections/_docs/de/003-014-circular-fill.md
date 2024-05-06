@@ -1,7 +1,7 @@
 ---
 title: "Spiralfüllung"
 permalink: /de/docs/stitches/circular-fill/
-last_modified_at: 2023-05-01
+last_modified_at: 2024-05-07
 toc: true
 ---
 ## Beschreibung
@@ -39,9 +39,16 @@ Einstellung          ||Beschreibung
 Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein
 Füllmethode          | Spiralfüllung|Für diesen Stichtyp bitte Spiralfüllung auswählen
 Erweitern            |![Expand example](/assets/images/docs/params-fill-expand.png)  |Erweitert die Ursprungsform. Diese Option kann genutzt werden um Lücken zwischen angrenzenden Objekten zu verringern. Negative Werte verkleinern die Form.
+Reihenabstand                   |![Spacing example](/assets/images/docs/params-fill-spacing_between_rows.png) | Abstand zwischen den Stichreihen.
+Reihenabstand (Ende)            |![End row spacing example](/assets/images/docs/params-fill-end_row_spacing.png) | Erhöht oder verringert den Reihenabstand zum Ende hin.
+Verbindungsstiche innerhalb des Objektes|![Skip example](/assets/images/docs/params-fill-underpathing.png)| Muss aktiviert sein, um Geradstiche zum Verbinden der Abschnitte innerhalb des Objekts verlaufen zu lassen, anstatt sie am Rand entlang zu führen.
 Stichlänge           ||Definiert die maximale Stichlänge. Minimale Stichlänge bitte über die Geradstich-Toleranz festlegen.
 Geradstich-Toleranz  ||Alle Stiche müssen innerhalb dieser Distanz vom Ursprungspfad liegen. Ein geringerer Toleranzwert bedeutet, dass Stiche enger zusammenliegen. Ein höherer Wert kann zu abgerundeten Ecken führen.
-Verbindungsstiche innerhalb des Objektes|![Skip example](/assets/images/docs/params-fill-underpathing.png)| Muss aktiviert sein, um Geradstiche zum Verbinden der Abschnitte innerhalb des Objekts verlaufen zu lassen, anstatt sie am Rand entlang zu führen.
+Zufällige Stiche |☑  |Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
+Zufallsabweichung von der Stichlänge| |Maximale randomisierte Abweichung der Stichabstände in Prozent.
+Zuffalszahl| |Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer.
+Minimale Stichlänge                   | Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
+Minimale Länge für Sprungstiche       | Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
 Vernähen erlauben    || Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen   || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
 Anstecher            ||Wähle die [Anstecher](/docs/stitches/lock-stitches) Variante (Anfang).
