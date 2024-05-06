@@ -9,6 +9,17 @@ Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem
 Ein Blick in das [Schriften für Ink/Stitch erstellen Tutorial](/de/tutorials/font-creation) lohnt sich auf jeden Fall, wenn du neue Schriften erstellen willst.
 {: .notice--info }
 
+## Font Sampling
+
+This extension creates a list of all letters in a font. It helps font creators to test the outcome of a new font.
+
+Options are :
+
+* Font : the one you want to use
+* Stitch direction :  default is left to right
+* Scale : in percent
+* Max line width : line breaks will  be chosen accordingly
+
 ## Vernähstiche erzwingen
 
 Bei kleinen Schriften kann es schnell passieren, dass sich der Faden löst, wenn Sprungstiche nach der Fertigstellung geschnitten werden.
