@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-05-03
+last_modified_at: 2024-05-05
 sidebar:
   nav: pages
 toc: true
@@ -30,7 +30,7 @@ This extension informs about various parameters of selected stitch elements.
 
 ![Element info](/assets/images/docs/en/element_info.png)
 
-### Font Sampling
+### [Font Sampling](/docs/font-tools/#font-sampling)
 
 `Font Management > Font Sampling` ([#2858](https://github.com/inkstitch/inkstitch/issues/2858))
 
@@ -44,13 +44,13 @@ This extension allows to easily test different values for embroidery parameters 
 
 ![Example test swatches](/assets/images/docs/test_swatches.png)
 
-### Jump Stitch to Trim Command
+### [Jump Stitch to Trim Command]((/docs/commands/#jump-to-trim)
 
 `Commands > Jump Stitch to Trim Command` ([#2864](https://github.com/inkstitch/inkstitch/issues/2864))
 
 Inserts trim commands to avoid jump stitches
 
-### Multicolor Satin
+### [Multicolor Satin](/docs/satin-tools/#multicolor-satin)
 
 `Tools: Satin: Multicolor Satin` ([#2863](https://github.com/inkstitch/inkstitch/issues/2863))
 
