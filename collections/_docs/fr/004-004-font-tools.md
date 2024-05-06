@@ -1,13 +1,25 @@
 ---
 title: "Outils de police"
 permalink: /fr/docs/font-tools/
-last_modified_at: 2024-04-29
+last_modified_at: 2024-05-05
 toc: true
 ---
 Un ensemble d'outils adaptés aux créateurs de polices ou à ceux qui souhaitent ajouter des polices supplémentaires dans [l'outil de lettrage](/docs/lettering) d'Ink/Stitch.
 
 Lisez le [Tutoriel de création de police pour Ink/Stitch](/fr/tutorials/font-creation) pour des instructions approfondies.
 {: .notice--info }
+
+## Test de fonte {#font-sampling}
+
+Cette extension crée un calque qui contient toutes les lettres d'une fonte. Elle aide les créateurs de fontes à tester leurs nouvelles fonte.
+
+Options  :
+
+* Fonte : choisir la fonte à utiliser
+* Direction du texte :  par défaut de gauche à droite
+* Échelle:  en pourcentage
+* largeur du texte: des sauts de lignes seront ajoutés pour ne  pas dépasser cette largeur;
+
 
 ## Forcer des points d'arrêt {#force-lock-stitches}
 
