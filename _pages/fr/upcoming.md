@@ -169,12 +169,19 @@ Visualise et Exporter > Export pdf
 ## [Fontes](/fr/fonts/font-library)
 
 ### Nouvelles polices
+
+* [Cats](/fonts/cats) ([#2860](https://github.com/inkstitch/inkstitch/pull/2860))
+
+  ![Cats preview](/assets/images/fonts/cats.jpg)
 * [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
 
   ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
 * [Chicken Scratch](/font/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
   ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
+* [Emilio 20 Tartan](fonts/emilio-20/#emilio-20-tartan) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
+
+  ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
 * [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
 
   ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
@@ -184,6 +191,7 @@ Visualise et Exporter > Export pdf
 * [Violin Serif](/fonts/violin_serif/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
   ![Violin Serif preview](/assets/images/fonts/violin_serif.jpg)
+
 
 ### Mises à jour de fontes
 
