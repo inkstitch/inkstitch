@@ -36,6 +36,26 @@ Dieses Werkzeug ersetzt deine Satinsäulen mit einem Set von neuen Satinsäulen 
 
 * Solltest du es bevorzugen die vorher gesetzte Objekt-Reihenfolge beizubehalten (das könnte der Fall sein, wenn sich die Satinsäulen überschneiden), benutze die Option **Preserve order of Satin Columns**.
 
+### Multicolor Satin 
+
+`Tools: Satin: Multicolor Satin` ([#2863](https://github.com/inkstitch/inkstitch/issues/2863))
+
+This extension creates copies of selected satins to mimic a multicolor satin
+
+![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
+
+* Select one  or more  satin column
+* `Tools: Satin: Multicolor Satin`
+* In the colorize tab you may :
+  -choose  if the colors  are equidistant or not.  If unchecked  you are  able to independantly chose each color width **AND** add a width for  color sharing.
+  - add a left overflow  (percent)
+  - add a  right overflow (percent)
+  - add more colors
+
+ 
+If you want to  understand how this extension works,  [read this](/de/tutorials/multicolor_satin.md).
+
+
 ## Linie zu Satin
 
 Diese Erweiterung konvertiert einen einfachen Pfad in eine Satinsäulen. Dabei wird die Linienbreite übernommen. Nach der Konvertierung wirst du zwei "Holme" und (möglicherweise) viele Sprossen (wie bei einer Leiter). Wieviele Sprossen es gibt hängt ganz von der Form der Linie ab.
