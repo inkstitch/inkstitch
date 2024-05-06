@@ -23,7 +23,7 @@ Prepare your path exactly as you would with a [Satin Column](/docs/stitches/sati
 
 ## Params
 Settings||Description
----|---|--
+---|---|---
 Custom satin column   | ☑ |Must be enabled for these settings to take effect.
 Method                | |Chose `E-Stitch`
 Short stitch inset    | ![Short Stitch example](/assets/images/docs/params-satin-short_stitch_inset.png) | Stitches in areas with high density will be inset by this amount (%)
