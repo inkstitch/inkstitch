@@ -4,8 +4,8 @@
  "description": "Emilio 20 Tartan uses tartan fill for a colorful font approximatively 40 mm high. The font can be scaled down to 65% and up to 150%.",
   "keywords": [
         "display",
-        "applique",
-        "serif"
+        "serif",
+        "multicolor"
     ],
     "leading": 200,
     "auto_satin": false,
