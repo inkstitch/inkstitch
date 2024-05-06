@@ -1,7 +1,7 @@
 ---
 title: "Remplissage Tartan"
 permalink: /fr/docs/stitches/tartan-fill/
-last_modified_at: 2024-04-10
+last_modified_at: 2024-05-07
 toc: true
 ---
 {% include upcoming_release.html %}
