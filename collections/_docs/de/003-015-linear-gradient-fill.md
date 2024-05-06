@@ -1,7 +1,7 @@
 ---
 title: "Lineare Farbverlaufsfüllung"
 permalink: /de/docs/stitches/linear-gradient-fill/
-last_modified_at: 2024-03-13
+last_modified_at: 2024-05-07
 toc: true
 ---
  {% include upcoming_release.html %}
@@ -37,11 +37,12 @@ Erweitern                       |![Expand example](/assets/images/docs/params-fi
 Maximale Füll-Stichlänge        |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) | Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden.
 Reihenabstand                   |![Spacing example](/assets/images/docs/params-fill-spacing_between_rows.png) | Abstand zwischen den Stichreihen.
 Reihenanzahl bis sich das Muster wiederholt |![Stagger example](/assets/images/docs/params-fill-stagger.png) | Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfernt sind, bevor sie in die gleiche Position münden.  Fractional values are allowed and can have less visible diagonals than integer values.
-Verbindungsstiche innerhalb des Objektes|![Skip example](/assets/images/docs/params-fill-underpathing.png)| Muss aktiviert sein, um Geradstiche zum Verbinden der Abschnitte innerhalb des Objekts verlaufen zu lassen, anstatt sie am Rand entlang zu führen.
 Letzten Stich in jeder Reihe überspringen | Der letzte Stich in jeder Reihe ist dem darauffolgenden Stich sehr nah. Ihn zu überspringen verringert die Stichanzahl und Dichte.
-Am Endpunkt enden               | ☑ |Ist diese Option deaktivert, gibt der Endpunkt nur eine generelle Stickrichtung an. Bei aktivierter Option endet der letzte Farbabschnitt genau an diesem Punnkt.
-Geradstichlänge                 |![Running stitch length example](/assets/images/docs/params-fill-running_stitch_length.png) | Stichlänge für Geradstiche beim Übergang von Abschnitt zu Abschnitt.
+Endposition erzwingen              | ☑ |Ist diese Option deaktivert, gibt der Endpunkt nur eine generelle Stickrichtung an. Bei aktivierter Option endet der letzte Farbabschnitt genau an diesem Punnkt.
+Stichlänge                 |![Running stitch length example](/assets/images/docs/params-fill-running_stitch_length.png) | Stichlänge für Geradstiche beim Übergang von Abschnitt zu Abschnitt.
 Geradstich-Toleranz             ||Alle Stiche müssen innerhalb dieses Abstandes zum Pfad befinden. Ein niedrigerer Toleranzwert führt zu kürzeren Stichen. Ein höherer Wert könnte Ecken abrunden. Dezimalzahlen führen ggf. zu weniger deutlichen Diagonalen als Ganzzahlen.
+Minimale Stichlänge                   | Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
+Minimale Länge für Sprungstiche       | Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche
 Vernähen erlauben               || Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen              || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
 Anstecher                       || Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
