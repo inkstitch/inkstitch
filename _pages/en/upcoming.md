@@ -44,7 +44,7 @@ This extension allows to easily test different values for embroidery parameters 
 
 ![Example test swatches](/assets/images/docs/test_swatches.png)
 
-### [Jump Stitch to Trim Command]((/docs/commands/#jump-to-trim)
+### [Jump Stitch to Trim Command](/docs/commands/#jump-to-trim)
 
 `Commands > Jump Stitch to Trim Command` ([#2864](https://github.com/inkstitch/inkstitch/issues/2864))
 
