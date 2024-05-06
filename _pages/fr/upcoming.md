@@ -48,7 +48,7 @@ Cette extension permet de tester facilement différentes valeurs des paramètres
 
 Cette extension insère des commandes de coupe à la place des sauts.
 
-### [Multicolor Satin](/fr/docs/satin-tools/#multicolor-satin)
+### [Satin Multicolore](/fr/docs/satin-tools/#multicolor-satin)
 
 `Outils: Satin>Satin Multicolore`  ([#2863](https://github.com/inkstitch/inkstitch/issues/2863))
 
@@ -199,7 +199,11 @@ Visualise et Exporter > Export pdf
   
   Les exceptions sont April en Fleur, Apex Lake, les Cherry's, les Emilio , Fold Inkstitch, Infinipicto, Namskout and Sortefax qui ne contiennent  que des glyphes sans diacritiques
 * Ũ à  été ajouté  dans TT directors
+  
+![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
 
+*  Cherry for  Kaalleen a été modifiée pour inclure un léger remplissage.
+  
 Toutes les fontes ont été retravaillées pour être plus stable si déformées.
  [#2807](https://github.com/inkstitch/inkstitch/pull/2807)
  [#2803](https://github.com/inkstitch/inkstitch/pull/2803)
