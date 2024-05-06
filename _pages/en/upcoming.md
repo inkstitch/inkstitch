@@ -198,7 +198,7 @@ This extension unlinks clones (optionally recursive) and applies fill angle tran
 
 ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
 
-*  Cherry for  Kaalleen a été modifiée pour inclure un léger remplissage.
+*  Cherry for  Kaalleen has  been  modified  to include a light blue  fill.
 
 All fonts have been reworked to be more stable when transformed.
 
