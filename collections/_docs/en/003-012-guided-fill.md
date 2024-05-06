@@ -63,6 +63,7 @@ Running stitch length              ||Length of stitches used when moving from se
 Running Stitch tolerance           |![Tolerance Sample](/assets/images/docs/contourfilltolerance.svg) |All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded.
 Randomize stitches  |☑  |Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts.
 Random stitch length jitter | |Amount to vary the length of each stitch by when randomizing.
+Random Seed| |Rolling the dice or setting a new value will change the random stitches
 Minimum stitch length         ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
 Minimum  jump stitch  length             ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
 Allow lock stitches                ||Enables lock stitches in only desired positions
