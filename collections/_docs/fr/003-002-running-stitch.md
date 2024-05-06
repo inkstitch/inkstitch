@@ -33,9 +33,9 @@ Répétitions                         |Définir combien de fois aller et revenir
 Nombre de répétitions du point triple |Active le [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />
 Longueur du point droit           |Longueur des points 
 Tolerance du point droit          |Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts. Une tolerance haute entraine un arrondissement des angles aigus.
-Rendre aléatoire                      |☑ |Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré.
-Mouvement aléatoire de la longueur du point                    ||Pourcentage maximum de variation de la longueur du point appliqué si la longueur est rendue aléatoire.
-Graine Aléatoire                   ||Rouler le dé ou entrer une valeur modifie les points aléatoires
+Rendre aléatoire                    |Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré.
+Mouvement aléatoire de la longueur du point                    |Pourcentage maximum de variation de la longueur du point appliqué si la longueur est rendue aléatoire.
+Graine Aléatoire                   |Rouler le dé ou entrer une valeur modifie les points aléatoires
 Longueur minimum de point|Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.
 Longueur minimum de saut|Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.
 Autoriser des points d'arrêts     |Ajoute un point d'arrêt à la ou les positions choisies
