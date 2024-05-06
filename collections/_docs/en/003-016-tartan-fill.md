@@ -33,6 +33,7 @@ Automatically routed fill stitching| ☑ |Must be enabled for these settings to 
 Fill method          |Tartan Fill|Tartan Fill must be selected.
 Expand               |![Expand example](/assets/images/docs/params-fill-expand.png)  |Expand the shape before stitching, to compensate for gaps between shapes.
 Angle of lines of stitches|| Relative to the tartan stripe direction.
+Maximum fill stitch length         |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) |The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
 Spacing between rows               |![Spacing example](/assets/images/docs/params-fill-spacing_between_rows.png) |Distance between rows of stitches
 Stagger rows this many times before repeating|![Stagger example](/assets/images/docs/params-fill-stagger.png) |Stitches are staggered so that neighboring rows of stitches don't all fall in the same column (which would create a distracting valley effect). Setting this dictates the length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values.
 Running stitch length||Length of stitches around the outline of the fill region used when moving from section to section. 
