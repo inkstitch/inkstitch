@@ -39,12 +39,18 @@ Skip last stitch in each row  ||The last stitch in each row is quite close to th
 Stop at ending point  | ☑ |If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot.
 Running stitch length||For circular fill this is the overall stitch length.
 Running stitch tolerance||All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
-Allow lock stitches  ||Enables lock stitches in only desired positions
-Force lock stitches  ||Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
-Tack stitch          ||Select [tack stitch](/docs/stitches/lock-stitches) type (start).
-Lock stitch          ||Select [lock stitch](/docs/stitches/lock-stitches) type (end).
-Stop After           ||Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
-Trim After           ||Trim the thread after sewing this object.
+Minimum stitch length         ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
+Minimum  jump stitch  length             ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches
+Allow lock stitches                ||Enables lock stitches in only desired positions
+Force lock stitches                |☑ |Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
+Tack stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
+Scale Tack stitch    ||
+Lock stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
+Scale Lock stitch    ||
+Trim After                         |☑ |Trim the thread after sewing this object.
+Stop After                         |☑ |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+
+{: .params-table }
 
 ## Underlay
 
