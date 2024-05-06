@@ -1,7 +1,7 @@
 ---
 title: "Meander Fill"
 permalink: /docs/stitches/meander-fill/
-last_modified_at: 2023-04-30
+last_modified_at: 2024-05-06
 toc: true
 ---
 ## What it is
