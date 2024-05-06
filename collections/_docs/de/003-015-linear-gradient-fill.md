@@ -41,8 +41,8 @@ Letzten Stich in jeder Reihe überspringen | Der letzte Stich in jeder Reihe ist
 Endposition erzwingen              | ☑ |Ist diese Option deaktivert, gibt der Endpunkt nur eine generelle Stickrichtung an. Bei aktivierter Option endet der letzte Farbabschnitt genau an diesem Punnkt.
 Stichlänge                 |![Running stitch length example](/assets/images/docs/params-fill-running_stitch_length.png) | Stichlänge für Geradstiche beim Übergang von Abschnitt zu Abschnitt.
 Geradstich-Toleranz             ||Alle Stiche müssen innerhalb dieses Abstandes zum Pfad befinden. Ein niedrigerer Toleranzwert führt zu kürzeren Stichen. Ein höherer Wert könnte Ecken abrunden. Dezimalzahlen führen ggf. zu weniger deutlichen Diagonalen als Ganzzahlen.
-Minimale Stichlänge                   | Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
-Minimale Länge für Sprungstiche       | Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche
+Minimale Stichlänge                    | | Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
+Minimale Länge für Sprungstiche         || Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche
 Vernähen erlauben               || Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen              || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
 Anstecher                       || Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
