@@ -1,7 +1,7 @@
 ---
 title: "Linear Gradient Fill"
 permalink: /docs/stitches/linear-gradient-fill/
-last_modified_at: 2024-03-11
+last_modified_at: 2024-05-06
 toc: true
 ---
  {% include upcoming_release.html %}
