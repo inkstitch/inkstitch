@@ -184,7 +184,7 @@ class FontSampleFrame(wx.Frame):
             width += width_to_add
 
         # render text and close
-        font.render_text(text, self.layer)
+        font.render_text(text, self.layer, variant=self.direction, back_and_forth=False)
         self.GetTopLevelParent().Close()
 
     def cancel(self, event):
