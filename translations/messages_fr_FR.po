@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-06 01:08+0000\n"
-"PO-Revision-Date: 2024-05-06 01:08\n"
+"POT-Creation-Date: 2024-05-07 01:07+0000\n"
+"PO-Revision-Date: 2024-05-07 01:08\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-06 01:08+0000\n"
+"POT-Creation-Date: 2024-05-07 01:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1401,7 +1401,7 @@ msgstr "Compensation d'étirement - élargir"
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr "Le paramètre élargir pour le remplissage de cet objet ne peut pas être appliqué. Ink/Stitch va l'ignorer et utiliser la taille originale."
 
-#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:643
+#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:650
 msgid "Inset"
 msgstr "Décalage"
 
@@ -1724,11 +1724,11 @@ msgstr "Décaler les rangées autant de fois avant de répéter"
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr "Longueur du cycle de décalage des rangées. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières."
 
-#: lib/elements/fill_stitch.py:373 lib/elements/fill_stitch.py:655
+#: lib/elements/fill_stitch.py:373 lib/elements/fill_stitch.py:662
 msgid "Skip last stitch in each row"
 msgstr "Sauter le dernier point dans chaque rangée"
 
-#: lib/elements/fill_stitch.py:374 lib/elements/fill_stitch.py:656
+#: lib/elements/fill_stitch.py:374 lib/elements/fill_stitch.py:663
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "Le dernier point dans chaque rangée est très proche du premier point dans la rangée suivante. Le sauter diminue le nombre de points et la densité."
 
@@ -1756,11 +1756,11 @@ msgstr "Terminer à la position de fin"
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
 msgstr "Si cette option est désactivée, la position de fin ne sera utilisée que pour définir une direction générale de broderie. Si elle est activée, la dernière section terminera à l'endroit défini."
 
-#: lib/elements/fill_stitch.py:427 lib/elements/fill_stitch.py:667
+#: lib/elements/fill_stitch.py:427 lib/elements/fill_stitch.py:674
 msgid "Underpath"
 msgstr "Chemin de dessous"
 
-#: lib/elements/fill_stitch.py:428 lib/elements/fill_stitch.py:668
+#: lib/elements/fill_stitch.py:428 lib/elements/fill_stitch.py:675
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Les points qui relient les sections à l'intérieur de l'objet. Les points des chemins de dessous évitent d'aller dans la même direction que ceux de dessus pour ne pas être visibles. Cela leur donne une apparence déchiquetée."
 
@@ -1780,123 +1780,123 @@ msgstr "Tolérance du point droit"
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Détermine la force avec laquelle Ink/Stitch essaie d'éviter de broder en dehors de la forme. Une valeur basse rend moins susceptible de broder en dehors de la forme, mais nécessite plus de points."
 
-#: lib/elements/fill_stitch.py:470 lib/elements/stroke.py:134
+#: lib/elements/fill_stitch.py:477 lib/elements/stroke.py:134
 msgid "Randomize stitches"
-msgstr ""
+msgstr "Rendre aléatoire"
 
-#: lib/elements/fill_stitch.py:471 lib/elements/stroke.py:135
+#: lib/elements/fill_stitch.py:478 lib/elements/stroke.py:135
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
-msgstr ""
+msgstr "Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré."
 
-#: lib/elements/fill_stitch.py:485 lib/elements/stroke.py:146
+#: lib/elements/fill_stitch.py:492 lib/elements/stroke.py:146
 msgid "Random stitch length jitter"
-msgstr ""
+msgstr "Mouvement aléatoire de la longueur du point"
 
-#: lib/elements/fill_stitch.py:486 lib/elements/stroke.py:147
+#: lib/elements/fill_stitch.py:493 lib/elements/stroke.py:147
 msgid "Amount to vary the length of each stitch by when randomizing."
-msgstr ""
+msgstr "Pourcentage maximum de variation de la longueur du point appliqué si la longueur est rendue aléatoire."
 
-#: lib/elements/fill_stitch.py:500 lib/elements/satin_column.py:441
+#: lib/elements/fill_stitch.py:507 lib/elements/satin_column.py:441
 #: lib/elements/stroke.py:82
 msgid "Repeats"
 msgstr "Répétitions"
 
-#: lib/elements/fill_stitch.py:501 lib/elements/stroke.py:83
+#: lib/elements/fill_stitch.py:508 lib/elements/stroke.py:83
 msgid "Defines how many times to run down and back along the path."
 msgstr "Définit combien de fois broder en avant et en arrière le long du chemin."
 
-#: lib/elements/fill_stitch.py:512 lib/elements/stroke.py:94
+#: lib/elements/fill_stitch.py:519 lib/elements/stroke.py:94
 msgid "Bean stitch number of repeats"
 msgstr "Nombre de répétitions pour le point multiple (bean stitch)"
 
-#: lib/elements/fill_stitch.py:513 lib/elements/stroke.py:95
+#: lib/elements/fill_stitch.py:520 lib/elements/stroke.py:95
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr "Repasse sur chaque point le nombre de fois indiqué. Une valeur de 1 triplera chaque point (avant, arrière, avant).\n"
 "Une valeur de 2 permettra de quintupler chaque point, etc.\n\n"
 "Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace."
 
-#: lib/elements/fill_stitch.py:528 lib/elements/satin_column.py:238
+#: lib/elements/fill_stitch.py:535 lib/elements/satin_column.py:238
 #: lib/elements/stroke.py:172
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
 
-#: lib/elements/fill_stitch.py:529 lib/elements/stroke.py:173
+#: lib/elements/fill_stitch.py:536 lib/elements/stroke.py:173
 msgid "Length of stitches in zig-zag mode."
 msgstr "Longueur de points en mode zig-zag."
 
-#: lib/elements/fill_stitch.py:541
-msgid "Zigzag width"
-msgstr "Largeur du zigzag"
+#: lib/elements/fill_stitch.py:548
+msgid "Zig-zag width"
+msgstr ""
 
-#: lib/elements/fill_stitch.py:542
-msgid "Width of the zigzag line."
-msgstr "Largeur du zigzag."
+#: lib/elements/fill_stitch.py:549
+msgid "Width of the zig-zag line."
+msgstr ""
 
-#: lib/elements/fill_stitch.py:555 lib/gui/tartan/embroidery_panel.py:42
+#: lib/elements/fill_stitch.py:562 lib/gui/tartan/embroidery_panel.py:42
 msgid "Rows per tartan thread"
 msgstr "Nombre de rangées par fil du tartan"
 
-#: lib/elements/fill_stitch.py:556 lib/gui/tartan/embroidery_panel.py:44
+#: lib/elements/fill_stitch.py:563 lib/gui/tartan/embroidery_panel.py:44
 msgid "Consecutive rows of the same color"
 msgstr "Nombre de rangées consécutives de la même couleur"
 
-#: lib/elements/fill_stitch.py:567
+#: lib/elements/fill_stitch.py:574
 msgid "Herringbone width"
 msgstr "Largeur de chevron"
 
-#: lib/elements/fill_stitch.py:568
+#: lib/elements/fill_stitch.py:575
 msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr "Défini la largeur d'un motif de chevrons. Utiliser 0 pour des bandes normales."
 
-#: lib/elements/fill_stitch.py:589 lib/elements/fill_stitch.py:598
-#: lib/elements/fill_stitch.py:625 lib/elements/fill_stitch.py:636
-#: lib/elements/fill_stitch.py:646 lib/elements/fill_stitch.py:658
-#: lib/elements/fill_stitch.py:671
+#: lib/elements/fill_stitch.py:596 lib/elements/fill_stitch.py:605
+#: lib/elements/fill_stitch.py:632 lib/elements/fill_stitch.py:643
+#: lib/elements/fill_stitch.py:653 lib/elements/fill_stitch.py:665
+#: lib/elements/fill_stitch.py:678
 msgid "Fill Underlay"
 msgstr "Sous-couche de remplissage"
 
-#: lib/elements/fill_stitch.py:589 lib/gui/tartan/embroidery_panel.py:55
+#: lib/elements/fill_stitch.py:596 lib/gui/tartan/embroidery_panel.py:55
 #: inx/inkstitch_select_elements.inx:37 inx/inkstitch_select_elements.inx:65
 #: inx/inkstitch_select_elements.inx:67
 msgid "Underlay"
 msgstr "Sous-couche"
 
-#: lib/elements/fill_stitch.py:595
+#: lib/elements/fill_stitch.py:602
 msgid "Fill angle"
 msgstr "Angle de remplissage"
 
-#: lib/elements/fill_stitch.py:596
+#: lib/elements/fill_stitch.py:603
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr "Par défaut : angle de remplissage + 90 degrés. Pour obtenir plusieurs sous-couches, insérer une liste de valeurs séparée par des espaces."
 
-#: lib/elements/fill_stitch.py:622 lib/gui/tartan/embroidery_panel.py:77
+#: lib/elements/fill_stitch.py:629 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
 msgstr "Espacement entre rangées de points"
 
-#: lib/elements/fill_stitch.py:623
+#: lib/elements/fill_stitch.py:630
 msgid "default: 3x fill row spacing"
 msgstr "défaut: 3x espacement entre les rangées"
 
-#: lib/elements/fill_stitch.py:633 lib/elements/stroke.py:158
+#: lib/elements/fill_stitch.py:640 lib/elements/stroke.py:158
 #: lib/extensions/element_info.py:125 lib/extensions/element_info.py:181
 msgid "Max stitch length"
 msgstr "Longueur de point maximale"
 
-#: lib/elements/fill_stitch.py:634
+#: lib/elements/fill_stitch.py:641
 msgid "default: equal to fill max stitch length"
 msgstr "défaut : égal à longueur max des points de remplissage"
 
-#: lib/elements/fill_stitch.py:644
+#: lib/elements/fill_stitch.py:651
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Rétrécit la forme avant de faire la sous-couche, pour empêcher que la sous-couche se montre en dehors du remplissage."
 
-#: lib/elements/fill_stitch.py:679 lib/elements/satin_column.py:522
+#: lib/elements/fill_stitch.py:686 lib/elements/satin_column.py:522
 #: lib/elements/stroke.py:396 lib/gui/satin_multicolor/colorize.py:56
 msgid "Random seed"
 msgstr "Graine aléatoire"
 
-#: lib/elements/fill_stitch.py:680 lib/elements/satin_column.py:523
+#: lib/elements/fill_stitch.py:687 lib/elements/satin_column.py:523
 #: lib/elements/stroke.py:397
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément."
@@ -2418,7 +2418,7 @@ msgstr "Décaler les lignes ce nombre de fois avant de répéter"
 
 #: lib/elements/stroke.py:227
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. A value of 0 (default) disables staggering and instead stitches evenly.For linear ripples only."
-msgstr ""
+msgstr "Longueur du cycle de décalage des lignes successives. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières. La valeur par défaut (0) désactive le décalage. Ne concerne que les ondulations linéaires."
 
 #: lib/elements/stroke.py:240
 msgid "Skip first lines"
@@ -3436,7 +3436,7 @@ msgstr "Débordement à gauche"
 
 #: lib/gui/satin_multicolor/colorize.py:46
 msgid "Overflow right"
-msgstr "Débordement à droite\n"
+msgstr "Débordement à droite"
 
 #: lib/gui/satin_multicolor/colorize.py:51
 msgid "Pull compensation (mm)"
@@ -5756,7 +5756,7 @@ msgstr "https://inkstitch.org/fr/docs/stroke-tools/#jump-to-stroke"
 
 #: inx/inkstitch_jump_to_trim.inx:3
 msgid "Jump Stitch to Trim Command"
-msgstr "Commande Saut en Coupe"
+msgstr "Saut en Coupe"
 
 #: inx/inkstitch_jump_to_trim.inx:23
 msgid "Use command symbol"
