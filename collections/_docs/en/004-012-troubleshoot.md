@@ -47,7 +47,7 @@ The extensions will remove embroidery settings from your entire design or from s
 * Remove params
 * Remove commands
   {% include upcoming_release.html %}
-  (all/none/specific ommand only)
+  (all/none/specific command only)
 * Remove print settings from SVG metadata
 
 ![Stickeinstellungen entfernen - GUI](/assets/images/docs/en/remove-embroidery-settings.png)
