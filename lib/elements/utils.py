@@ -5,30 +5,24 @@
 
 from ..commands import is_command
 from ..marker import has_marker
-from ..svg.tags import (EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_PATH_TAG,
-                        SVG_POLYGON_TAG, SVG_POLYLINE_TAG, SVG_TEXT_TAG)
+from ..svg.tags import EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_PATH_TAG, SVG_TEXT_TAG
 from .clone import Clone, is_clone
 from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
 from .fill_stitch import FillStitch
 from .image import ImageObject
 from .marker import MarkerObject
-from .polyline import Polyline
 from .satin_column import SatinColumn
 from .stroke import Stroke
 from .text import TextObject
 
 
 def node_to_elements(node, clone_to_element=False):  # noqa: C901
-    if node.tag == SVG_POLYLINE_TAG:
-        return [Polyline(node)]
-
-    elif is_clone(node) and not clone_to_element:
+    if is_clone(node) and not clone_to_element:
         # clone_to_element: get an actual embroiderable element once a clone has been defined as a clone
         return [Clone(node)]
 
-    elif ((node.tag == SVG_PATH_TAG and not node.get('d', None)) or
-          (node.tag in [SVG_POLYLINE_TAG, SVG_POLYGON_TAG] and not node.get('points', None))):
+    elif node.tag in EMBROIDERABLE_TAGS and not node.get_path():
         return [EmptyDObject(node)]
 
     elif has_marker(node):

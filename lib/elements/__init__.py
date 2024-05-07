@@ -8,7 +8,6 @@ from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
 from .fill_stitch import FillStitch
 from .image import ImageObject
-from .polyline import Polyline
 from .satin_column import SatinColumn
 from .stroke import Stroke
 from .text import TextObject

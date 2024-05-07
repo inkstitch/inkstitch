@@ -6,7 +6,7 @@ from .metadata import InkStitchMetadata
 from .svg import PIXELS_PER_MM
 from .svg.tags import EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS
 
-INKSTITCH_SVG_VERSION = 1
+INKSTITCH_SVG_VERSION = 2
 
 
 def update_inkstitch_document(svg, selection=None):
@@ -67,6 +67,13 @@ def update_legacy_params(element, file_version, inkstitch_svg_version):
 def _update_to(version, element):
     if version == 1:
         _update_to_one(element)
+    elif version == 2:
+        _update_to_two(element)
+
+
+def _update_to_two(element):
+    if element.node.TAG == "polyline" and element.node.style("stroke") is not None:
+        element.set_param('stroke_method', 'manual_stitch')
 
 
 def _update_to_one(element):  # noqa: C901
