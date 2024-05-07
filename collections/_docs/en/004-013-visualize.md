@@ -36,13 +36,23 @@ Run `Extensions > Ink/Stitch > Visualize and Export > Stitch Plan Preview...`.
 Instead of applying the stitch plan, you can also use the `Live preview` option. Then you don't need to undo your changes afterwards. If you apply the stitch plan, you will have the ability to inspect it and adapt your design as you wish. Use the Undo Stitch Plan extension to remove it afterwards.
 
 You have the following display options:
-* **Move stitch plan beside the canvas** Displays the preview on the right side of the canvas. If not enabled, the stitch plan will be placed on top of your design. In that case you may want to update your design visibility to eather hidden or lower opacity.
-* **Display layer visibility** defines the visibility of the original design layer.
+
+
+* **Design layer visibility** defines the visibility of the original design layer.
   * **unchanged** leave it as is
   * **hidden** hide the original design
   * **lower opacity** display original design with lower opacity
+
+* **Render Mode**
+  * **Simple** 
+  * **Realistic** 
+  * **Realistic High Quality** 
+  * **Realistic vector (slow)** 
+
+* **Move stitch plan beside the canvas** Displays the preview on the right side of the canvas. If not enabled, the stitch plan will be placed on top of your design. In that case you may want to update your design visibility to eather hidden or lower opacity.
 * **Needle points** displays needle points if enabled
 * **Lock** make stitch plan insensitive to mouse interactions (makes it easier to work on the actual design while the stitch plan is active)
+* **Display command symbols**
 {% include upcoming_release.html %}
 * **Overide last stitch plan** if checked the new stitch plan will replace the previous one, uncheck if you wish to keep the previous stitch plan
 
@@ -79,7 +89,8 @@ This will display red, yellow and green dots on top of your elements so you can 
 * Indicator size
 
   Define the size of the dots in document units
-  {% include upcoming_release.html %}
+
+{% include upcoming_release.html %}
 
 ## Display stacking order
 
