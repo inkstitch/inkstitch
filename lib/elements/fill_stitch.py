@@ -479,7 +479,7 @@ class FillStitch(EmbroideryElement):
            sort_index=44)
     def enable_random_stitches(self):
         return self.get_boolean_param('enable_random_stitches', False)
-    
+
     @property
     @param('random_stitch_length_jitter_percent',
            _('Random stitch length jitter'),

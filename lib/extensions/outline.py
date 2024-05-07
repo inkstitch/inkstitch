@@ -37,15 +37,10 @@ class Outline(InkstitchExtension):
         for element in self.svg.selection:
             self.element_to_outline(element)
 
-    def element_to_outline(self, element):
-        if element.tag_name == 'g':
-            for element in element.iterdescendants(SVG_PATH_TAG):
-                self.element_to_outline(element)
-            return
-
+    def get_outline(self, element):
         d = ''
         transform = element.composed_transform()
-        path = element.get_path().transform(transform).break_apart()
+        path = Path(element.get_path()).transform(transform).break_apart()
         for subpath in path:
             points = subpath.end_points
             shape = LineString(points).buffer(self.shape_buffer)
@@ -62,8 +57,25 @@ class Outline(InkstitchExtension):
 
             for geom in outline.geoms:
                 d += str(Path(geom.exterior.coords).transform(-transform))
+        return d
+
+    def element_to_outline(self, element):
+        if element.tag_name == 'g':
+            for element in element.iterdescendants(SVG_PATH_TAG):
+                self.element_to_outline(element)
+            return
+        elif element.tag_name != 'path':
+            element_id = element.label or element.get_id()
+            errormsg(_(f"{element_id} is not a path element. "
+                       "This extension is designed to generate an outline of an embroidery pattern."))
+            return
+
+        d = self.get_outline(element)
+        if not d:
+            errormsg(_("Could not generate path from element with the given settings."))
+
         if self.options.keep_original:
-            element.duplicate()
-            element.set('d', d)
+            new_element = element.duplicate()
+            new_element.set('d', d)
         else:
             element.set('d', d)
