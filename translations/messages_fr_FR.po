@@ -3436,7 +3436,7 @@ msgstr "Débordement à gauche"
 
 #: lib/gui/satin_multicolor/colorize.py:46
 msgid "Overflow right"
-msgstr "Débordement à droite\n"
+msgstr "Débordement à droite"
 
 #: lib/gui/satin_multicolor/colorize.py:51
 msgid "Pull compensation (mm)"
