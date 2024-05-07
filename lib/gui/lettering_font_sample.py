@@ -141,8 +141,10 @@ class FontSampleFrame(wx.Frame):
 
         # parameters
         line_width = self.max_line_width.GetValue()
+        direction = self.direction.GetValue()
+
         font._load_variants()
-        font_variant = font.variants[self.direction.GetValue()]
+        font_variant = font.variants[direction]
 
         # setup lines of text
         text = ''
@@ -184,7 +186,7 @@ class FontSampleFrame(wx.Frame):
             width += width_to_add
 
         # render text and close
-        font.render_text(text, self.layer, variant=self.direction, back_and_forth=False)
+        font.render_text(text, self.layer, variant=direction, back_and_forth=False)
         self.GetTopLevelParent().Close()
 
     def cancel(self, event):
