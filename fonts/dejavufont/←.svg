@@ -22,11 +22,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="9.1410167"
-     inkscape:cx="11.103798"
-     inkscape:cy="37.413781"
+     inkscape:zoom="7.8397307"
+     inkscape:cx="16.518425"
+     inkscape:cy="63.650146"
      inkscape:document-units="mm"
-     inkscape:current-layer="g13780"
+     inkscape:current-layer="layer5"
      showgrid="true"
      inkscape:window-width="1778"
      inkscape:window-height="1041"
@@ -5206,11 +5206,12 @@
        inkstitch:center_walk_underlay_stitch_length_mm="2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
     <path
-       d="M 9.68529,1.13073 6.09132,1.11738 6.03283,0.00654162 9.68528,1.13073 6.05829,-0.00397838"
+       d="M 6.09132,1.11738 6.03283,0.00654162"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.0"
        inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path4" />
+       id="path4"
+       sodipodi:nodetypes="cc" />
     <path
        inkstitch:fill_underlay="False"
        inkstitch:satin_column="True"
@@ -6844,11 +6845,12 @@
        inkstitch:center_walk_underlay_stitch_length_mm="2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
     <path
-       d="M 5.9578,3.23014 3.42218,3.21674 3.36368,2.1059 5.95779,3.23014 3.38915,2.09538"
+       d="M 3.42218,3.21674 3.36368,2.1059"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.0"
        inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path6" />
+       id="path6"
+       sodipodi:nodetypes="cc" />
     <path
        inkstitch:fill_underlay="False"
        inkstitch:center_walk_underlay="True"
@@ -7910,11 +7912,12 @@
        inkstitch:center_walk_underlay_stitch_length_mm="2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
     <path
-       d="M 6.84504,3.3412 5.49282,3.3374 4.30942,3.32785 4.25092,2.21701 6.84503,3.3412 4.27639,2.20649"
+       d="M 5.49282,3.3374 4.30942,3.32785 4.3521671,2.250759"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.0"
        inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path9" />
+       id="path9"
+       sodipodi:nodetypes="ccc" />
     <path
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
@@ -8702,11 +8705,12 @@
        inkstitch:center_walk_underlay_stitch_length_mm="2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
     <path
-       d="M 3.93278,3.37904 2.64315,3.37569 1.39715,3.365636 1.33865,2.254796 3.93278,3.37904 1.36412,2.24428"
+       d="M 2.64315,3.37569 1.39715,3.365636 1.33865,2.254796"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.0"
        inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path11" />
+       id="path11"
+       sodipodi:nodetypes="ccc" />
     <path
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
@@ -8832,12 +8836,6 @@
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:center_walk_underlay_stitch_length_mm="2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
-    <path
-       d="M 2.89964,5.39091 2.71111,7.78273"
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
-       inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path192" />
     <path
        inkstitch:fill_underlay="False"
        inkstitch:center_walk_underlay="True"
@@ -9739,7 +9737,7 @@
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path5042-9-08-1"
-       d="M 6.87623,3.35272 4.34061,3.33932 4.28211,2.22848"
+       d="M 4.34061,3.33932 4.28211,2.22848"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.4, 0.1;stroke-dashoffset:0;stroke-opacity:1"
        sodipodi:nodetypes="cc"
        inkstitch:running_stitch_length_mm="2.0"
@@ -9762,12 +9760,13 @@
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path29518-5-19-1-1"
-       d="M 4.08359,4.76285 3.82304,7.95549 C 1.78011,11.8948 1.9504,14.9692 3.58699,18.0805 l 2.52038,1.1862"
+       d="M 3.82304,7.95549 C 1.78011,11.8948 1.9504,14.9692 3.58699,18.0805 l 2.52038,1.1862"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.4, 0.1;stroke-dashoffset:0;stroke-opacity:1"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2.0"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       sodipodi:nodetypes="ccc" />
     <path
        id="path16104-0-3"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -9846,12 +9845,6 @@
        inkstitch:running_stitch_length_mm="2.0"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
-    <path
-       d="M 3.25752,5.69077 3.70965,8.21936"
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
-       inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path209" />
     <path
        inkstitch:ties="3"
        id="path29652-1-4-7-2"
@@ -11063,11 +11056,12 @@
        inkstitch:center_walk_underlay_stitch_length_mm="2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
     <path
-       d="M 6.87034,3.36664 5.58189,3.34591 4.33539,3.33586 4.27689,2.22502 6.87033,3.36664 4.30236,2.2145"
+       d="M 5.58189,3.34591 4.33539,3.33586"
        style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.0"
        inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path13" />
+       id="path13"
+       sodipodi:nodetypes="cc" />
     <path
        inkstitch:ties="2"
        inkstitch:force_lock_stitches="True"
@@ -11519,7 +11513,7 @@
   </g>
   <g
      id="g13780"
-     style="display:inline"
+     style="display:none"
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-w">
     <path
