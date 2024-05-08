@@ -72,7 +72,8 @@ class Outline(InkstitchExtension):
 
         d = self.get_outline(element)
         if not d:
-            errormsg(_("Could not generate path from element with the given settings."))
+            errormsg(_(f"Could not generate path from element {element_id} with the given settings."))
+            return
 
         if self.options.keep_original:
             new_element = element.duplicate()
