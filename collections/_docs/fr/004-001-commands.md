@@ -76,7 +76,7 @@ N'utiliser qu'un point de départ et qu'un point d'arrivée par agencement autom
 
 ### ![stop-symbol](/assets/images/docs/visual-commands-stop.jpg) Stop (pause machine) après avoir brodé cet objet
 
-Les machines à broder commerciales qui ont plusieurs aiguilles passent normalement d’une couleur à l’autre sans pause e. Parfois, vous *voulez* une pause (par exemple pour couper le tissu appliqué), donc "STOP après" ajoute un changement de couleur supplémentaire qui peut être affecté à une instruction d'arrêt spéciale à l'aide de l'interface utilisateur de la machine (par exemple C00 sur les machines Barudan). Les utilisations courantes de cette méthode sont l’application de mousse , l'appliquer du tissu appliqué et / ou même vouloir ralentir la machine à un certain endroit pour certains types de broderie sans avoir à surveiller la machine.
+Les machines à broder commerciales qui ont plusieurs aiguilles passent normalement d’une couleur à l’autre sans pause. Parfois, vous *voulez* une pause (par exemple pour couper le tissu appliqué), donc "STOP après" ajoute un changement de couleur supplémentaire qui peut être affecté à une instruction d'arrêt spéciale à l'aide de l'interface utilisateur de la machine (par exemple C00 sur les machines Barudan). Les utilisations courantes de cette méthode sont l’application de mousse , l'appliquer du tissu appliqué et / ou même vouloir ralentir la machine à un certain endroit pour certains types de broderie sans avoir à surveiller la machine.
 
 ### ![trim-symbol](/assets/images/docs/visual-commands-trim.jpg) Couper le fil après avoir brodé cet objet
 
