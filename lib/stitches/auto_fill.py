@@ -80,6 +80,7 @@ def auto_fill(shape,
               starting_point,
               ending_point=None,
               underpath=True,
+              gap_fill_rows=0,
               enable_random=False,
               random_sigma=0.0,
               random_seed=""):
@@ -105,12 +106,19 @@ def auto_fill(shape,
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
 
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
-    path = fill_gaps(path, 2)
+    path = fill_gaps(path, round_to_multiple_of_2(gap_fill_rows))
     result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
                               staggers, skip_last, underpath, enable_random, random_sigma, random_seed)
 
     return result
+
+
+def round_to_multiple_of_2(number):
+    if number % 2 == 1:
+        return number + 1
+    else:
+        return number
 
 
 def which_outline(shape, coords):
@@ -662,6 +670,9 @@ def fill_gaps(path, num_rows):
     row offset by the row spacing 2, 4, 6, or more times, always an even number
     so that we end up near the same spot.
     """
+
+    if num_rows <= 0:
+        return path
 
     # Problem: our algorithm in find_stitch_path() sometimes (often) adds
     # unnecessary loops of travel stitching.  We'll need to eliminate these for
