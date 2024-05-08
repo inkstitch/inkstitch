@@ -643,7 +643,30 @@ def pick_edge(edges):
 
 
 def fill_gaps(path, num_rows):
-    path = remove_simple_loops(path)
+    """Fill gaps between sections caused by fabric distortion.
+
+    If we stitch some rows back and forth, then travel and stitch another
+    section, and finally go back to continue on from the first section, there
+    can be a gap. This is most noticeable on stretchy fabrics or with poor
+    stabilization.
+
+    In this function we'll detect cases where gaps may appear and stitch a few
+    extra rows in the gap.
+
+    We'll detect gaps by finding cases where our stitch path does some
+    back-and-forth rows of fill stitch and then travels.  It looks like this:
+
+    segment, outline, segment, outline, segment, outline, *outline, outline
+
+    The asterisk indicates where we started to travel.  We'll repeat the last
+    row offset by the row spacing 2, 4, 6, or more times, always an even number
+    so that we end up near the same spot.
+    """
+
+    # Problem: our algorithm in find_stitch_path() sometimes (often) adds
+    # unnecessary loops of travel stitching.  We'll need to eliminate these for
+    # the gap detection to work.
+    path = remove_loops(path)
 
     if len(path) < 3:
         return path
@@ -659,30 +682,80 @@ def fill_gaps(path, num_rows):
             if edge.is_outline() and last_edge.is_outline():
                 # we hit the end of a section of alternating segment-outline-segment-outline
                 if rows_in_section > 3:
-                    # do the gap fill thing
-                    new_path.extend(new_path[-4:-1])
+                    # The path has already started traveling on to the new
+                    # section, so save it and add it back on after.
+                    next_edge = new_path.pop()
+                    fill_gap(new_path, num_rows)
+                    new_path.append(next_edge)
+
                 rows_in_section = 0
         last_edge = edge
         new_path.append(edge)
 
-    # need to not do it right at the end, too
-
     return new_path
 
 
-def remove_simple_loops(path):
+def remove_loops(path):
     if len(path) < 2:
         return path
 
     new_path = []
 
+    # seen_nodes tracks the nodes we've visited and the index _after_ that node.
+    # If we see that node again, we'll use the index to delete the intervening
+    # section of the path.
+    seen_nodes = {}
+
     for edge in path:
-        if new_path and edge[1] == new_path[-1][0]:
-            new_path.pop()
+        if edge.is_segment():
+            new_path.append(edge)
+            continue
+
+        start, end = edge
+        if end in seen_nodes:
+            del new_path[seen_nodes[end]:]
+            seen_nodes.clear()
+            continue
         else:
             new_path.append(edge)
+            seen_nodes[end] = len(new_path)
 
     return new_path
+
+
+def fill_gap(path, num_rows):
+    """Fill a gap by repeating the last row."""
+
+    original_end = path[-1][1]
+    last_row = (InkstitchPoint.from_tuple(path[-1][0]), InkstitchPoint.from_tuple(path[-1][1]))
+    penultimate_row = (InkstitchPoint.from_tuple(path[-3][0]), InkstitchPoint.from_tuple(path[-3][1]))
+    last_row_direction = (last_row[1] - last_row[0]).unit()
+
+    offset_direction = last_row_direction.rotate_left()
+    if (last_row[1] - penultimate_row[0]) * offset_direction < 0:
+        offset_direction *= -1
+    spacing = (last_row[1] - penultimate_row[0]) * offset_direction
+    offset = offset_direction * spacing
+
+    for i in range(num_rows):
+        # calculate the next row, which looks like the last row, but backward and offset
+        end, start = last_row
+        start += offset
+        end += offset
+
+        # Get from the last row to this row.  Note that we're calling this a segment to
+        # avoid the underpath algorithm trying to turn this into travel stitch.
+        path.append(PathEdge((last_row[1].as_tuple(), start.as_tuple()), 'segment'))
+
+        # Add this extra row.
+        path.append(PathEdge((start.as_tuple(), end.as_tuple()), 'segment'))
+
+        last_row = (start, end)
+
+    # go back to where we started
+    path.append(PathEdge((last_row[1].as_tuple(), original_end), 'segment'))
+
+    return path
 
 
 def collapse_sequential_outline_edges(path, graph):
@@ -780,7 +853,10 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_sp
         if edge.is_segment():
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last,
                        enable_random, random_sigma, join_args(random_seed, i))
-            travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
+
+            # note: gap fill segments won't be in the graph
+            if fill_stitch_graph.has_edge(edge[0], edge[1], key='segment'):
+                travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
             stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath))
 
