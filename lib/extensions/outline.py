@@ -66,13 +66,13 @@ class Outline(InkstitchExtension):
             return
         elif element.tag_name != 'path':
             element_id = element.label or element.get_id()
-            errormsg(_(f"{element_id} is not a path element. "
-                       "This extension is designed to generate an outline of an embroidery pattern."))
+            errormsg(_("{element_id} is not a path element. "
+                       "This extension is designed to generate an outline of an embroidery pattern.").format(element_id=element_id))
             return
 
         d = self.get_outline(element)
         if not d:
-            errormsg(_(f"Could not generate path from element {element_id} with the given settings."))
+            errormsg(_("Could not generate path from element {element_id} with the given settings.").format(element_id=element_id))
             return
 
         if self.options.keep_original:
