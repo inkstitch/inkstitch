@@ -75,7 +75,7 @@ Dans ce cas, une mise à jour manuelle peut être effectués sur ces éléments
 * Sélectionnez les éléments à mettre à jour:
 * Lancez `Extensions > Ink/Stitch > Résolution de problèmes > Mettre à jour le svg d'Ink/Stitch`
 
-Remarque : Cette opération est inutile si n'importe quelle fonnction Ink/Stitch a été préalablement exécutée dans le fichier d'origine des éléments. Il suffit par exemple de selectionner n'importe quoi dans l'ancien fichier, d'ouvrir le dialogue de paramètrage et de cliquer 'Appliquer et Fermer ' sans rien changer pour que l'ancien fichier soit mis à jour. 
+Remarque : Cette opération est inutile si n'importe quelle fonction Ink/Stitch a été préalablement exécutée dans le fichier d'origine des éléments. Il suffit par exemple de selectionner n'importe quoi dans l'ancien fichier, d'ouvrir le dialogue de paramètrage et de cliquer 'Appliquer et Fermer ' sans rien changer pour que l'ancien fichier soit mis à jour. 
 {: .notice--info }
 
 
