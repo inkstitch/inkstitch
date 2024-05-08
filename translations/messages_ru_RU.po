@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-07 01:07+0000\n"
-"PO-Revision-Date: 2024-05-07 01:08\n"
+"POT-Creation-Date: 2024-05-08 00:56+0000\n"
+"PO-Revision-Date: 2024-05-08 00:57\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-07 01:07+0000\n"
+"POT-Creation-Date: 2024-05-08 00:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1228,8 +1228,8 @@ msgstr "* Выберите клон"
 msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
 msgstr ""
 
-#: lib/elements/clone.py:43 inx/inkstitch_select_elements.inx:75
-#: inx/inkstitch_select_elements.inx:76
+#: lib/elements/clone.py:43 inx/inkstitch_select_elements.inx:74
+#: inx/inkstitch_select_elements.inx:75
 msgid "Clone"
 msgstr "Клон"
 
@@ -1553,32 +1553,32 @@ msgstr "Автоматически рассчитанная вышивка за�
 msgid "Auto Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:153 inx/inkstitch_select_elements.inx:57
+#: lib/elements/fill_stitch.py:153 inx/inkstitch_select_elements.inx:56
 msgid "Circular Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:154 inx/inkstitch_select_elements.inx:58
+#: lib/elements/fill_stitch.py:154 inx/inkstitch_select_elements.inx:57
 msgid "Contour Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:155 inx/inkstitch_select_elements.inx:59
+#: lib/elements/fill_stitch.py:155 inx/inkstitch_select_elements.inx:58
 msgid "Guided Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:60
+#: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:59
 msgid "Linear Gradient Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:61
+#: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:60
 msgid "Meander Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:158 inx/inkstitch_select_elements.inx:62
+#: lib/elements/fill_stitch.py:158 inx/inkstitch_select_elements.inx:61
 msgid "Tartan Fill"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:159 lib/gui/tartan/embroidery_panel.py:202
-#: inx/inkstitch_select_elements.inx:63
+#: inx/inkstitch_select_elements.inx:62
 msgid "Legacy Fill"
 msgstr ""
 
@@ -1854,8 +1854,8 @@ msgid "Fill Underlay"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:596 lib/gui/tartan/embroidery_panel.py:55
-#: inx/inkstitch_select_elements.inx:37 inx/inkstitch_select_elements.inx:65
-#: inx/inkstitch_select_elements.inx:67
+#: inx/inkstitch_select_elements.inx:36 inx/inkstitch_select_elements.inx:64
+#: inx/inkstitch_select_elements.inx:66
 msgid "Underlay"
 msgstr "Предварительная прострочка"
 
@@ -1937,30 +1937,6 @@ msgstr "* Перейдите на вкладку Стиль обводки"
 #: lib/elements/marker.py:21
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
 msgstr "* В разделе \"Маркеры\" выберите первый(пустой) вариант в первом выпадающем списке."
-
-#: lib/elements/polyline.py:18
-msgid "Polyline Object"
-msgstr "Объект полилиния"
-
-#: lib/elements/polyline.py:19
-msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
-msgstr "Этот объект имеет тип SVG PolyLine. Ink/Stitch  может работать с такими формами, но вы не можете редактировать их в Inkscape. Конвертируйте объект в контур, чтобы можно было его изменять."
-
-#: lib/elements/polyline.py:23
-msgid "* Select this object."
-msgstr "* Выберите этот объект."
-
-#: lib/elements/polyline.py:24
-msgid "* Do Path > Object to Path."
-msgstr "* Выполните Контур > Оконтурить объект."
-
-#: lib/elements/polyline.py:25
-msgid "* Optional: Run the Params extension and check the \"manual stitch\" box."
-msgstr "* Не обязательно: Запустите Параметры и выберите флажок \"ручная строчка\"."
-
-#: lib/elements/polyline.py:45
-msgid "Manual stitch along path"
-msgstr "Ручная строчка вдоль линии"
 
 #: lib/elements/satin_column.py:31 lib/elements/stroke.py:35
 msgid "Too few subpaths"
@@ -2060,7 +2036,7 @@ msgid "* Hold \"Shift\" while drawing the rung."
 msgstr "* Удерживая клавишу Shift нарисуйте поперечину."
 
 #: lib/elements/satin_column.py:91 lib/elements/satin_column.py:101
-#: inx/inkstitch_select_elements.inx:32
+#: inx/inkstitch_select_elements.inx:31
 msgid "Satin Column"
 msgstr "Сатиновая Колонна"
 
@@ -2991,7 +2967,7 @@ msgstr ""
 msgid "Ink/Stitch Multicolor Satin"
 msgstr ""
 
-#: lib/extensions/select_elements.py:103
+#: lib/extensions/select_elements.py:102
 msgid "Could not detect python path. Please insert python path manually as described in the help tab of the select elements dialog."
 msgstr ""
 
@@ -3056,7 +3032,7 @@ msgstr "Описание"
 #: lib/extensions/troubleshoot.py:111 lib/extensions/troubleshoot.py:157
 #: inx/inkstitch_cleanup.inx:23 inx/inkstitch_element_info.inx:10
 #: inx/inkstitch_remove_embroidery_settings.inx:155
-#: inx/inkstitch_select_elements.inx:89 inx/inkstitch_troubleshoot.inx:12
+#: inx/inkstitch_select_elements.inx:88 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_update_svg.inx:10
 msgid "Troubleshoot"
 msgstr "Решение проблем"
@@ -3101,7 +3077,7 @@ msgstr "Возможно, что один объект содержит боле
 msgid "Please select one or more clones to unlink."
 msgstr ""
 
-#: lib/extensions/update_svg.py:23
+#: lib/extensions/update_svg.py:26
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr ""
 
@@ -3161,7 +3137,7 @@ msgstr ""
 #: inx/inkstitch_jump_to_trim.inx:25 inx/inkstitch_lettering_along_path.inx:17
 #: inx/inkstitch_palette_to_text.inx:19
 #: inx/inkstitch_remove_embroidery_settings.inx:142
-#: inx/inkstitch_select_elements.inx:81
+#: inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
 #: inx/inkstitch_zigzag_line_to_satin.inx:18
 msgid "Help"
@@ -3310,7 +3286,7 @@ msgstr ""
 msgid "https://inkstitch.org/docs/font-tools/#font-sampling"
 msgstr ""
 
-#: lib/gui/lettering_font_sample.py:152
+#: lib/gui/lettering_font_sample.py:154
 #, python-format
 msgid "The glyphlist for this font seems to be outdated.\n\n"
 "Please update the glyph list for %s:\n"
@@ -4942,7 +4918,7 @@ msgid "Duplicate Params"
 msgstr "Дублировать параметры"
 
 #: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
-#: inx/inkstitch_select_elements.inx:104
+#: inx/inkstitch_select_elements.inx:103
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
 #: inx/inkstitch_unlink_clone.inx:11
@@ -6425,8 +6401,8 @@ msgstr ""
 msgid "Select only specific running stitches"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:38
-#: inx/inkstitch_select_elements.inx:46 inx/inkstitch_select_elements.inx:66
+#: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:37
+#: inx/inkstitch_select_elements.inx:45 inx/inkstitch_select_elements.inx:65
 msgid "No restriction"
 msgstr ""
 
@@ -6446,104 +6422,100 @@ msgstr ""
 msgid "Ripples"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:25
-msgid "Polyline"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:31
+#: inx/inkstitch_select_elements.inx:30
 msgid "Satin"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:33
+#: inx/inkstitch_select_elements.inx:32
 msgid "E-Stitch"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:34
+#: inx/inkstitch_select_elements.inx:33
 msgid "S-Stitch"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:35
+#: inx/inkstitch_select_elements.inx:34
 msgid "Zig-Zag"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:37
+#: inx/inkstitch_select_elements.inx:36
 msgid "Only select satins with this underlay type"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:39
+#: inx/inkstitch_select_elements.inx:38
 msgid "No underlay"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:40
+#: inx/inkstitch_select_elements.inx:39
 msgid "Centerwalk"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:41
+#: inx/inkstitch_select_elements.inx:40
 msgid "Contour"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:42
+#: inx/inkstitch_select_elements.inx:41
 #: inx/inkstitch_zigzag_line_to_satin.inx:12
 msgid "Zigzag"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:45
+#: inx/inkstitch_select_elements.inx:44
 msgid "Rung count"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:45
+#: inx/inkstitch_select_elements.inx:44
 msgid "Only select satins with this rung count"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:47
+#: inx/inkstitch_select_elements.inx:46
 msgid "No Rungs"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:48
+#: inx/inkstitch_select_elements.inx:47
 msgid "Two Rungs"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:55 inx/inkstitch_select_elements.inx:56
+#: inx/inkstitch_select_elements.inx:54 inx/inkstitch_select_elements.inx:55
 msgid "Fill"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:65
+#: inx/inkstitch_select_elements.inx:64
 msgid "Only select fills with this underlay"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:68
+#: inx/inkstitch_select_elements.inx:67
 msgid "No Underlay"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:82
+#: inx/inkstitch_select_elements.inx:81
 msgid "Select embroidery objects"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:84
+#: inx/inkstitch_select_elements.inx:83
 msgid "Selects specific embroidery elements by stitch type."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:85
+#: inx/inkstitch_select_elements.inx:84
 msgid "If there is already an active selection, non matching elements will be deselected."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:91
+#: inx/inkstitch_select_elements.inx:90
 msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:93
+#: inx/inkstitch_select_elements.inx:92
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:94
+#: inx/inkstitch_select_elements.inx:93
 msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:95
+#: inx/inkstitch_select_elements.inx:94
 msgid "* macOS: doesn't work, sorry"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:96
+#: inx/inkstitch_select_elements.inx:95
 msgid "Python Path"
 msgstr ""
 
