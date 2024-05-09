@@ -31,7 +31,7 @@ class CodePanel(wx.Panel):
 
         code_sizer.Add(tt_unit_sizer, 0, wx.ALL, 10)
 
-        load_button = wx.Button(self, label="Apply Code")
+        load_button = wx.Button(self, label=_("Apply Code"))
         load_button.Bind(wx.EVT_BUTTON, self._load_palette_code)
         load_palette_sizer.Add(load_button, 0, wx.ALL, 10)
 
