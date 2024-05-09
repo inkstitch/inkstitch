@@ -720,6 +720,7 @@ def remove_loops(path):
     for edge in path:
         if edge.is_segment():
             new_path.append(edge)
+            seen_nodes.clear()
             continue
 
         start, end = edge
