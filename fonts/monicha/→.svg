@@ -28,13 +28,13 @@
      inkscape:window-height="800"
      id="namedview461"
      showgrid="true"
-     inkscape:zoom="0.83107516"
-     inkscape:cx="43.919012"
-     inkscape:cy="85.431503"
+     inkscape:zoom="11.955185"
+     inkscape:cx="23.211685"
+     inkscape:cy="11.041234"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g960-1"
+     inkscape:current-layer="g11"
      inkscape:document-units="px"
      inkscape:document-rotation="0"
      showguides="true"
@@ -98,7 +98,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
    id="collapse_len_mm2865">2.0</inkstitch:collapse_len_mm>
 <inkstitch:min_stitch_len_mm
    id="min_stitch_len_mm7887">0.5</inkstitch:min_stitch_len_mm>
-<inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
+<inkstitch:inkstitch_svg_version>2</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs457">
@@ -4645,16 +4645,8 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="M 37.0013,38.9707 48.64,38.066"
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2"
-       inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path157"
-       inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
-    <path
        id="path45706"
-       d="m 32.317073,45.93496 19.308943,-0.406505 m -2.613201,-7.5244 C 47.600768,57.111797 35.639127,71.969943 29.051518,88.002591 M 37,40 C 31.18858,56.616184 24.771841,72.636052 18.417621,88.059551"
+       d="M 32.3171,45.935 51.626,45.5285 M 37,40 C 31.1886,56.6162 24.7718,72.6361 18.4176,88.0596 M 49.0128,38.0041 C 47.6008,57.1118 35.6391,71.9699 29.0515,88.0026"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -4669,14 +4661,15 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="m 18.0397,88.0616 5.131,1.3693 c -1.49052,6.97832 -2.98103,13.9566 -4.47154,20.935 -7.24932,1.62602 -14.4986,3.25203 -21.748,4.87805 L -7.78997,114.24"
+       d="m 29,88 -5.8293,1.4309 c -1.49052,6.97832 -2.98103,13.9566 -4.47154,20.935 -7.24932,1.62602 -14.4986,3.25203 -21.748,4.87805 L -7.78997,114.24"
        id="path45698"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_tolerance_mm="0.2"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       sodipodi:nodetypes="ccccc" />
     <path
        id="path45710"
        d="m 3.6585366,106.30081 0.8130081,14.63415 M -8.022716,114.53772 c 6.4844193,6.94636 15.1612107,2.27965 22.269831,0.58491 m -20.8715615,-2.37398 c 5.99150993,-2.36258 14.5258522,-4.1366 20.8067065,-6.17472 0,0 -2.470822,0.76241 0,0"
@@ -11082,16 +11075,8 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="M 36.9995,40.378 48.64,38.066"
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2"
-       inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path211"
-       inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
-    <path
        id="path45706-7"
-       d="m 32.317073,45.93496 19.308943,-0.406505 m -2.613201,-7.5244 C 47.018363,57.169078 35.688745,71.849187 29.051518,88.002591 M 37,40 C 31.348869,56.254276 24.355237,73.600937 18.417621,88.059551"
+       d="M 32.3171,45.935 51.626,45.5285 M 37,40 C 31.3489,56.2543 24.3552,73.6009 18.4176,88.0596 M 49.0128,38.0041 C 47.0184,57.1691 35.6887,71.8492 29.0515,88.0026"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -11106,14 +11091,15 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="m 18.0397,88.0616 5.131,1.3693 c -1.49052,6.97832 -2.98103,13.9566 -4.47154,20.935 -7.24932,1.62602 -14.4986,3.25203 -21.748,4.87805 L -7.78997,114.24"
+       d="m 29,89 -5.8293,0.4309 c -1.49052,6.97832 -2.98103,13.9566 -4.47154,20.935 -7.24932,1.62602 -14.4986,3.25203 -21.748,4.87805 L -7.78997,114.24"
        id="path45698-7"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_tolerance_mm="0.2"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       sodipodi:nodetypes="ccccc" />
     <path
        id="path45710-6"
        d="m 3.6585366,106.30081 0.8130081,14.63415 M -8.022716,114.53772 c 6.4844174,6.94637 15.1612115,2.27965 22.269831,0.58491 m -20.8715615,-2.37398 c 5.99150993,-0.43814 15.4140533,-3.6925 20.8067065,-6.17472 0,0 -2.470822,0.76241 0,0"
@@ -11508,16 +11494,8 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="M 37.1336,40.3556 48.64,38.066"
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2"
-       inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path215"
-       inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
-    <path
        id="path45706-5"
-       d="m 32.317073,45.93496 19.308943,-0.406505 m -2.613201,-7.5244 C 47.600768,57.111797 35.639127,71.969943 29.051518,88.002591 M 37,40 C 31.18858,56.616184 24.771841,72.636052 18.417621,88.059551"
+       d="M 32.3171,45.935 51.626,45.5285 M 37,40 C 31.1886,56.6162 24.7718,72.6361 18.4176,88.0596 M 49.0128,38.0041 C 47.6008,57.1118 35.6391,71.9699 29.0515,88.0026"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -11532,9 +11510,9 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="m 18.0397,88.0616 5.131,1.3693 c -1.49052,6.97832 -2.98103,13.9566 -4.47154,20.935 -7.24932,1.62602 -14.4986,3.25203 -21.748,4.87805 L -7.78997,114.24"
+       d="m 29,88 -6,3 c -1.49052,6.97832 -2.81033,12.3875 -4.30084,19.3659 -7.24932,1.62602 -14.4986,3.25203 -21.748,4.87805 L -7.78997,114.24"
        id="path45698-9"
-       sodipodi:nodetypes="ccc"
+       sodipodi:nodetypes="ccccc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
@@ -11765,16 +11743,8 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="M 36.9995,40.378 48.64,38.066"
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2"
-       inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path219"
-       inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
-    <path
        id="path45706-9"
-       d="m 32.317073,45.93496 19.308943,-0.406505 m -2.613201,-7.5244 C 47.600768,57.111797 35.639127,71.969943 29.051518,88.002591 M 37,40 C 31.18858,56.616184 24.771841,72.636052 18.417621,88.059551"
+       d="M 32.3171,45.935 51.626,45.5285 M 37,40 C 31.1886,56.6162 24.7718,72.6361 18.4176,88.0596 M 49.0128,38.0041 C 47.6008,57.1118 35.6391,71.9699 29.0515,88.0026"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:center_walk_underlay="False"
@@ -11789,14 +11759,15 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="m 18.0397,88.0616 5.131,1.3693 c -1.49052,6.97832 -2.98103,13.9566 -4.47154,20.935 -7.24932,1.62602 -14.4986,3.25203 -21.748,4.87805 L -7.78997,114.24"
+       d="m 28,89 -4.8293,0.4309 c -1.49052,6.97832 -2.98103,13.9566 -4.47154,20.935 -7.24932,1.62602 -14.4986,3.25203 -21.748,4.87805 L -7.78997,114.24"
        id="path45698-8"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_tolerance_mm="0.2"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       sodipodi:nodetypes="ccccc" />
     <path
        id="path45710-1"
        d="m 3.6585366,106.30081 0.8130081,14.63415 M -8.022716,114.53772 c 4.8013129,10.10934 14.8765574,2.40899 22.269831,0.58491 m -20.8715615,-2.37398 c 5.99150993,-0.43814 15.4140533,-3.6925 20.8067065,-6.17472 0,0 -2.470822,0.76241 0,0"
@@ -18124,14 +18095,15 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g1564">
     <path
-       d="M 0.820699,89.8456 C 4.9638,80.9804 9.1069,72.1152 13.25,63.25 L 16,57 c 0.291667,-4.375 0.583333,-8.75 0.875,-13.125 l 0.24,-3.0349"
+       d="M 0.820699,89.8456 13.25,63.25 M 16,57 l 0.875,-13.125 0.24,-3.0349"
        id="path8160-8-4"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_tolerance_mm="0.2"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       sodipodi:nodetypes="ccccc" />
     <path
        id="path2-9-5-8-5"
        d="M 16.737497,40.858334 C 14.941202,41.838558 10.400845,49.501418 16,57 M 18.637503,40.766666 C 21.767594,42.843218 20.428631,46.276407 20,49 m -9.625,1.25 13.044004,-8.834874"
@@ -18173,9 +18145,9 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="M 20.169,48.6619 13.25,63.25 c -1.70833,0.458333 -3.41667,0.916667 -5.125,1.375 l 6.8107,-4.3956"
+       d="m 13.25,63.25 -5.125,1.375 6.8107,-4.3956"
        id="path13257-4-4-8-4"
-       sodipodi:nodetypes="cc"
+       sodipodi:nodetypes="ccc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
@@ -18258,14 +18230,15 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
-       d="m 12.3138,60.106 8.4504,1.6338 C 19.1762,59.4932 17.5881,57.2466 16,55 l 4.7642,-3.735 c 0.291667,-4.375 0.583333,-8.75 0.875,-13.125 l 0.24,-3.0349"
+       d="m 12.3138,60.106 8.4504,1.6338 C 19.1762,59.4932 17.5881,57.2466 16,55 m 4.7642,-3.735 0.875,-13.125 0.24,-3.0349"
        id="path22039"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_tolerance_mm="0.2"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       sodipodi:nodetypes="cccccc" />
     <path
        id="path2-92-2"
        d="M 21.501725,35.123334 C 19.70543,36.103558 15.165073,43.766418 20.764228,51.265 m 2.637503,-16.233334 c 3.130091,2.076552 1.791128,5.509741 1.362497,8.233334 m -9.625,1.25 13.044004,-8.834874"
@@ -18307,9 +18280,9 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="m 24.9333,42.9269 -4.1691,8.3381 v 0 l -4.3954,3.8175"
+       d="m 24.9333,42.9269 -4.1691,8.3381 v 0"
        id="path13257-0-9"
-       sodipodi:nodetypes="cc"
+       sodipodi:nodetypes="ccc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
@@ -20542,14 +20515,15 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
      style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g1652">
     <path
-       d="M 0.820699,89.8456 C 4.9638,80.9804 9.1069,72.1152 13.25,63.25 L 16,57 c 0.291667,-4.375 0.583333,-8.75 0.875,-13.125 l 0.24,-3.0349"
+       d="M 0.820699,89.8456 13.25,63.25 M 16,57 l 0.875,-13.125 0.24,-3.0349"
        id="path8160"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_tolerance_mm="0.2"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       sodipodi:nodetypes="ccccc" />
     <path
        id="path2-9-5"
        d="M 16.737497,40.858334 C 14.941202,41.838558 10.400845,49.501418 16,57 M 18.637503,40.766666 C 21.767594,42.843218 20.428631,46.276407 20,49 m -9.625,1.25 13.044004,-8.834874"
@@ -20591,9 +20565,9 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="M 20.169,48.6619 13.25,63.25 c -1.70833,0.458333 -3.41667,0.916667 -5.125,1.375 l 2.2194,-6.4694"
+       d="m 13.25,63.25 -5.125,1.375 2.2194,-6.4694"
        id="path13257-4-4"
-       sodipodi:nodetypes="cc"
+       sodipodi:nodetypes="ccc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
@@ -20671,14 +20645,15 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
-       d="M 12.3992,60.0915 16.25,64.25 c 2,-1.70833 4,-3.41667 6,-5.125 l -2.0626,-6.273 c 0.291667,-4.375 0.583333,-8.75 0.875,-13.125 l 0.24,-3.0349"
+       d="M 12.3992,60.0915 16.25,64.25 c 2,-1.70833 4,-3.41667 6,-5.125 m -2.0626,-6.273 0.875,-13.125 0.24,-3.0349"
        id="path8164"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_tolerance_mm="0.2"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       sodipodi:nodetypes="cccccc" />
     <path
        id="path2-9"
        d="m 20.92486,36.7103 c -1.796295,0.980224 -6.336652,8.643084 -0.737497,16.141666 m 2.637503,-16.233334 c 3.130091,2.076552 1.791128,5.509741 1.362497,8.233334 m -9.625,1.25 13.044004,-8.834874"
@@ -20720,9 +20695,9 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="M 24.3564,44.5139 22.25,59.125 c -1.03652,2.02807 -1.92444,4.12851 -2.75,6.25 L 16.3688,55.0825"
+       d="m 22.25,59.125 c -1.03652,2.02807 -1.92444,4.12851 -2.75,6.25 L 16.3688,55.0825"
        id="path13257-4"
-       sodipodi:nodetypes="cc"
+       sodipodi:nodetypes="ccc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
@@ -22115,14 +22090,15 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        inkstitch:pull_compensation_mm="0.1"
        inkstitch:zigzag_underlay_inset_mm="0.1" />
     <path
-       d="M 12.3138,60.106 20.25,59.25 c 2.1073,-3.8949 3.3833,-7.9936 3.1639,-12.4592 0.1537,-2.3052 0.3074,-4.6105 0.4611,-6.9158 l 0.24,-3.0349"
+       d="M 12.3138,60.106 20.25,59.25 m 3.1639,-12.4592 c 0.1537,-2.3052 0.3074,-4.6105 0.4611,-6.9158 l 0.24,-3.0349"
        id="path13253"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_tolerance_mm="0.2"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       sodipodi:nodetypes="ccccc" />
     <path
        id="path3"
        d="M 23.737497,36.858334 C 21.941202,37.838558 17.400845,45.501418 23,53 M 25.637503,36.766666 C 28.767594,38.843218 27.428631,42.276407 27,45 m -9.625,1.25 13.044004,-8.834874"
@@ -22164,9 +22140,9 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
        style="display:inline;stroke-width:0.25"
        inkstitch:zigzag_spacing_mm="0.3" />
     <path
-       d="M 27.169,44.6619 23,53 c -0.916667,2.08333 -1.83333,4.16667 -2.75,6.25 l -3.8812,-4.1675"
+       d="M 27.169,44.6619 23,53 m -2.75,6.25 -3.8812,-4.1675"
        id="path13257"
-       sodipodi:nodetypes="cc"
+       sodipodi:nodetypes="cccc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5"
@@ -22767,7 +22743,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ß"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g11">
     <path
        d="M -1.31096,99.6189 C 8.93165,74.8994 19.1743,50.18 29.4169,25.4606 l -4.6351,-5.1985"
@@ -22917,7 +22893,7 @@ Created by FontForge 20201107 at Mon Mar 14 18:50:17 2022
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-b"
-     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g960-1">
     <path
        d="M 2.5,84.5 C 9.58333,69.1667 16.6667,53.8333 23.75,38.5 l -0.616,-5.3648"
