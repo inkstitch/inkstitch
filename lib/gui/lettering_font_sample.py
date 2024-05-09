@@ -157,9 +157,15 @@ class FontSampleFrame(wx.Frame):
             "Extensions > Ink/Stitch > Font Management > Update Glyphlist"
             % font.marked_custom_font_name
         )
-        if len(font.available_glyphs) != len(font_variant.glyphs):
+
+        self.duplicate_warning(font)
+
+        # font variant glyph list length falls short if a single quote sign is available
+        # let's add it in the length comparison
+        if len(set(font.available_glyphs)) != len(font_variant.glyphs):
             errormsg(update_glyphlist_warning)
             printed_warning = True
+
         for glyph in font.available_glyphs:
             glyph_obj = font_variant[glyph]
             if glyph_obj is None:
@@ -188,6 +194,14 @@ class FontSampleFrame(wx.Frame):
         # render text and close
         font.render_text(text, self.layer, variant=direction, back_and_forth=False)
         self.GetTopLevelParent().Close()
+
+    def duplicate_warning(self, font):
+        # warn about duplicated glyphs
+        if len(set(font.available_glyphs)) != len(font.available_glyphs):
+            duplicated_glyphs = " ".join(
+                [glyph for glyph in set(font.available_glyphs) if font.available_glyphs.count(glyph) > 1]
+            )
+            errormsg(_("Found duplicated glyphs in font file: {duplicated_glyphs}").format(duplicated_glyphs=duplicated_glyphs))
 
     def cancel(self, event):
         self.GetTopLevelParent().Close()
