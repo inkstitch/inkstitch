@@ -32,15 +32,15 @@ Wiederholungen                        | ◦ Legt fest, wie oft der Pfad durchlau
 Bean stitch Anzahl der Wiederholungen | ◦ Jeden Stich vervielfachen.<br/>◦ Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 würde jeden Stich fünffach ausführen, usw.<br/>◦ Gilt nur für den Geradstich.
 Stichlänge                            | Länge der Stiche
 Geradstich Toleranz                   | Alle Stiche müssen innerhalb dieser Distanz zum Pfad liegen. Eine niedrigere Toleranz verkürzt die Stiche. Eine höhere Toleranz kann scharfe Ecken abrunden.
-Zufällige Stiche |Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
-Zufallsabweichung von der Stichläng|Maximale randomisierte Abweichung der Stichabstände in Prozent.
-Zuffalszahl|Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer.
+Zufällige Stiche                      | Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
+Zufallsabweichung von der Stichläng   | Maximale randomisierte Abweichung der Stichabstände in Prozent.
+Zuffalszahl                           | Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer.
 Minimale Stichlänge                   | Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
 Minimale Länge für Sprungstiche       | Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
 Vernähen erlauben                     | Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen                    | Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
-Anstecher                             |Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
-Verstecher                            |Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
+Anstecher                             | Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
+Verstecher                            | Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
 Fadenschnitt                          | Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                                 | Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 

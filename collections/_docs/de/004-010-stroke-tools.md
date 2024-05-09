@@ -1,7 +1,7 @@
 ---
 title: "Werkzeuge: Linie"
 permalink: /de/docs/stroke-tools/
-last_modified_at: 2024-03-13
+last_modified_at: 2024-05-09
 toc: true
 ---
 ## Automatisch geführter Geradstich
@@ -24,10 +24,19 @@ Tipp: Standardmäßig wird die Stelle als Startpunkt ausgewählt, die am weitest
 - Aktiviere **Reihenfolge der Geradstiche beibehalten** wenn die ursprüngliche Reihenfolge beibehalten werden soll.
 - Aktiviere **Schneide Faden bei Sprungstichen** um Fadenschnitt-Befehle zu den Objekten inzuzufügen auf die sonst ein Sprungstich folgen würde.
 
-## Außenkontur {#outline}
-{% include upcoming_release.html %}
-This extension helps reconstruct an original  object when one only has  the  stitch file, but  not the svg design file. Select one (or several) stitch object (usually from a fill), and this extension will try to find the outline. Best way to use it is to allow live preview and change the ratio via the scroll bar to find the best ratio value for the given object.
+## Außenkontur
 
+{% include upcoming_release.html %}
+
+Diese Erweiterung hilft die Originalform aus einer Stickdatei wiederherzustellen.
+
+### Funktionsweise
+
+* Wähle ein oder mehrere Objekte
+* Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Außenkontur`
+* Aktiviere die Vorschau um das Ergebnis auf der Bildfläche zu sehen
+* Passe die Parameter an, bis das Ergebnis zufriedenstellend ist
+* Klicke auf `Andwenden`
 
 ## Satin zu Geradstich
 

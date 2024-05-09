@@ -97,6 +97,12 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 * ajout d'une option pour la taille des marqueurs ([#2544](https://github.com/inkstitch/inkstitch/issues/2544))
 * ajout d'une commande "Ignorer le calque" afin de le rendre non brodable([#2522](https://github.com/inkstitch/inkstitch/issues/2522))
 
+### [Convertion Trait en Satin](/fr/docs/satin-tools/#convert-line-to-satin)
+
+Évite le découpage en plusieurs parties ([#2418](https://github.com/inkstitch/inkstitch/issues/2418))
+
+![Converted square](/assets/images/docs/convert-to-satin-update.png)
+
 ### [Remplissage en Trait](/fr/docs/stroke-tools/#fill-to-stroke)
 
 `Outils : Trait > Remplissage en Trait`
@@ -261,8 +267,6 @@ Toutes les fontes ont été retravaillées pour être plus stables si déformée
 * Ajout de l'option "Décalés" pour le découpage des points ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![Staggered split stitch example](/assets/images/docs/split-satin-detail.png)
 * Ajout du paramètre tolérance aux sous couches satin ([#2814](https://github.com/inkstitch/inkstitch/issues/2431))
-* Convertion Trait en Satin  : évite le découpage en plusieurs parties ([#2418](https://github.com/inkstitch/inkstitch/issues/2418))
-  ![Converted square](/assets/images/docs/convert-to-satin-update.png)
 *  S-Stitch: un nouveau style de points pour cette famille ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![S-Stitch](/assets/images/docs/s-stitch-detail.png)
 * Zig-Zag: un nouveau style de points pour cette famille ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
@@ -285,10 +289,6 @@ Toutes les fontes ont été retravaillées pour être plus stables si déformée
 
 *  Les formats de fichiers Ink/Stitch sont maintenant aussi utilisables dans le dialogue d'export d'Inkscape ([#2489](https://github.com/inkstitch/inkstitch/issues/2489))
 
-### Couleur des fils
-
-* Enregistrement des noms des fils dans les fichiers de broderie ([#2777](https://github.com/inkstitch/inkstitch/issues/2777))
-
 ## Installation
 
 * Windows est maintenant disponible en version 32 et 64 bits([#2413](https://github.com/inkstitch/inkstitch/issues/2413))
@@ -302,6 +302,7 @@ Toutes les fontes ont été retravaillées pour être plus stables si déformée
 ## Corrections de bug
 * [#2819](https://github.com/inkstitch/inkstitch/issues/2819) Corrige l'extension nettoyage
 * [#2818](https://github.com/inkstitch/inkstitch/issues/2818) Supprime l'erreur empty d 
+* [#2777](https://github.com/inkstitch/inkstitch/issues/2777) Enregistrement des noms des fils dans les fichiers de broderie
 * [#2754](https://github.com/inkstitch/inkstitch/issues/2754)  Corrige Lettrage le long d'un chemin lorsque les glyphes comportent des sous-groupes ou  des commandes de coupe.
 * [#2683](https://github.com/inkstitch/inkstitch/issues/2683) Sélectionner des éléments de broderie : message d'erreur  lorsque le chemin python ne peut pas être trouvé.
 * [#2675](https://github.com/inkstitch/inkstitch/issues/2675) Corrige le message d'erreur de "Remplissage en Trait"  en présence  de très  petis  remplissages

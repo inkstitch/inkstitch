@@ -59,13 +59,13 @@ Reihenabstand                               || Abstand zwischen den Reihen
 Reihenanzahl bis sich das Muster wiederholt | ![Stagger example](/assets/images/docs/params-fill-stagger.png) | Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfernt sind, bevor sie in die gleiche Position münden.   Dezimalzahlen führen ggf. zu weniger deutlichen Diagonalen als Ganzzahlen.
 Letzten Stich in jeder Reihe überspringen   || Der letzte Stich in jeder Reihe ist dem darauffolgenden Stich sehr nah. Ihn zu überspringen verringert die Stichanzahl und Dichte.
 Verbindungsstiche innerhalb des Objektes    || Verbindungsstiche werden innerhalb des Objektes versteckt (aktiv) oder am äußeren Rand entlang gestickt (inaktiv
-Stichlänge (zwischen den Abschnitten)  || Länge der Stiche zwischen den Füllstich-Sektionen (Verbindungsstiche)
+Stichlänge (zwischen den Abschnitten)       || Länge der Stiche zwischen den Füllstich-Sektionen (Verbindungsstiche)
 Geradstich-Toleranz                         || Alle Stiche müssen innerhalb dieses Abstandes zum Pfad befinden. Ein niedrigerer Toleranzwert führt zu kürzeren Stichen. Ein höherer Wert könnte Ecken abrunden.
-Zufällige Stiche |☑  |Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
-Zufallsabweichung von der Stichlänge| |Maximale randomisierte Abweichung der Stichabstände in Prozent.
-Zuffalszahl| |Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer.
-Minimale Stichlänge                     || Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
-Minimale Länge für Sprungstiche        | | Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
+Zufällige Stiche                            |☑|Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
+Zufallsabweichung von der Stichlänge        ||Maximale randomisierte Abweichung der Stichabstände in Prozent.
+Zuffalszahl                                 ||Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer.
+Minimale Stichlänge                         || Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
+Minimale Länge für Sprungstiche             || Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
 Vernähen erlauben                           || Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen                          || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
 Anstecher                                   ||Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).

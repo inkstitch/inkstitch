@@ -1,18 +1,19 @@
 ---
 title: "Garnfarben-Verwaltung"
 permalink: /de/docs/thread-color/
-last_modified_at: 2024-03-13
+last_modified_at: 2024-05-09
 toc: true
 ---
-### Apply Palette
+### Farbpalette anwenden
 
 {% include upcoming_release.html %}
 
-This extension applies nearest colors from a specified thread palette on a design. This will also be recognized by the Ink/Stitch embroidery file and pdf output.
+Diese Erweiterung wendet die ähnlichsten Farben einer gewählten Farbpalette auf das geöffnete Design an.
+Die Farben werden entsprechend in die Stickdatei gespeichert und in der PDF-Ausgabedatei angezeigt.
 
-* Run `Extensions > Ink/Stitch > Thread Color Management > Apply Palette`
-* Select the color palette you wish to apply
-* Click on Apply
+* Öffne `Erweiterung > Ink/Stitch > Garnfarben Verwaltung > Farbpalette anwenden`
+* Wähle eine Farbpalette
+* Klicke auf `Anwenden`
 
 ## Garnfarben-Liste anwenden
 
@@ -35,17 +36,6 @@ Willst du eine andere Garnliste aus einer Textdatei (txt) importieren, wähle di
 ### Exportieren
 
 Garnlisten können nur über eine ZIP-Datei exportiert werden ([batch export](/de/docs/import-export/#batch-export))
-
-
-## Farbpalette anwenden
-
-{% include upcoming_release.html %}
-
-Diese Erweiterung wendet die ähnlichsten Farben aus einer ausgewählten Farbpalette auf das Design an.
-
-Beim PDF-Export wird die Farbpalette entsprechend übernommen.
-
-Die Erweiterung befindet sich unter `Erweiterungen > Ink/Stitch > Farbpalette anwenden`
 
 ## Farbpalette erstellen
 
@@ -78,6 +68,7 @@ Ink/Stitch enthält viele Farbpaletten der üblichen Garnhersteller. Diese könn
 Das erlaubt dir dein Design mit den richtigen Farben zu planen. Die Farben werden in die PDF-Ausgabe übernommen und auch in der Stickdatei abgespeichert, sofern dein Stickformat dies unterstützt.
 
 **Installation**
+
 * Gehe zu `Erweiterungen -> Ink/Stitch -> Garnfarben Verwaltung > Installiere Erweiterungen für Inkscape`
 * Wähle "Installieren"
 * Starte Inkscape neu

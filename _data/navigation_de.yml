@@ -122,7 +122,7 @@ docs:
       url: /de/docs/fill-tools/
     - title: "Werkzeuge: Satin"
       url: /de/docs/satin-tools/
-    - title: "Werkzeuge: Laufstich"
+    - title: "Werkzeuge: Linie"
       url: /de/docs/stroke-tools/
     - title: "Garnfarben-Verwaltung"
       url: /de/docs/thread-color/
@@ -142,7 +142,7 @@ docs:
       url: /de/docs/threadlist/
   - title: Tips
     children:
-      - title: "Fonts"
+      - title: "Schriften"
         url: /de/docs/fonts/
       - title: Inkscape Tips
         url: /de/docs/inkscape-tips/

@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-05-03
+last_modified_at: 2024-05-09
 sidebar:
   nav: pages
 toc: true
@@ -60,7 +60,7 @@ This extension creates copies of selected satins to mimic a multicolor satin
 
 ### [Outline](/docs/stroke-tools/#outline)
 
-`Stroke tools > Outline` ([#2529](https://github.com/inkstitch/inkstitch/issues/2529))
+`Stroke tools > Outline` ([#2529](https://github.com/inkstitch/inkstitch/issues/2529), [#2881](https://github.com/inkstitch/inkstitch/issues/2881))
 
 This extension helps reconstruct an original object from a stitch file.
 
@@ -86,6 +86,14 @@ This extension unlinks clones (optionally recursive) and applies fill angle tran
 
 * add option to delete empty groups and layers ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
 * add test run option to display names of the elements that will be removed with the current settings ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
+
+### [Convert line to Satin](/docs/satin-tools/#convert-line-to-satin)
+
+`Tools: Satin > Conert to Satin`
+
+Do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/issues/2418))
+
+![Converted square](/assets/images/docs/convert-to-satin-update.png)
 
 ### [Density map](/docs/visualize/#density-map)
 
@@ -276,12 +284,17 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 * Add stagger option for split stitches ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![Staggered split stitch example](/assets/images/docs/split-satin-detail.png)
 * Add stitch tolerance to satin underlays ([#2814](https://github.com/inkstitch/inkstitch/issues/2431))
-* Convert line to satin: do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/issues/2418))
-  ![Converted square](/assets/images/docs/convert-to-satin-update.png)
 * S-Stitch: a new stitch type for the satin stitch type family ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![S-Stitch](/assets/images/docs/s-stitch-detail.png)
 * Zig-Zag: a new stitch type for the satin stitch type family ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![Zigzag Stitch](/assets/images/docs/en/compare-satin-zigzag.png)
+
+### Polylines
+
+Polylines have been registered as a special stitch type (in fact manual stitchting) in previous Ink/Stitch versions.
+They will now be recognized as normal path objects and will render by default as either running stitches (when they have a stroke color)
+or as auto fill (when they have a fill color). Existing files with any Ink/Stitch parameters applied will automatically convert polylines
+to manual stitches and keep previous behavior. [#2866](https://github.com/inkstitch/inkstitch/issues/2866)
 
 ## Export
 
@@ -293,10 +306,6 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 ### Inkscape export dialog
 
 * Ink/Stitch file formats are also available from the Inkscape export dialog ([#2489](https://github.com/inkstitch/inkstitch/issues/2489))
-
-### Thread color
-
-* Save thread names into embroidery files ([#2777](https://github.com/inkstitch/inkstitch/issues/2777))
 
 ## Install
 
@@ -310,8 +319,11 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 
 ## Bug Fixes
 
+* [#2836](https://github.com/inkstitch/inkstitch/issues/2836) Fixes None value param display when multiple elements are selected
+* [#2853](https://github.com/inkstitch/inkstitch/issues/2853) Fix an issue with font kerning
 * [#2819](https://github.com/inkstitch/inkstitch/issues/2819) Fix cleanup extension
 * [#2818](https://github.com/inkstitch/inkstitch/issues/2818) Remove empty d error
+* [#2777](https://github.com/inkstitch/inkstitch/issues/2777) Save thread names into embroidery files
 * [#2754](https://github.com/inkstitch/inkstitch/issues/2754) Fix lettering along path when glyphs have subgroups or trims
 * [#2683](https://github.com/inkstitch/inkstitch/issues/2683) Select embroidery elements: output error message when python path cannot be found
 * [#2675](https://github.com/inkstitch/inkstitch/issues/2675) Fix error message on fill to stroke if small fill artifacts are present

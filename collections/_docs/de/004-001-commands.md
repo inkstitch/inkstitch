@@ -9,7 +9,9 @@ Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber 
 Nicht jede Maschine kann diese zusätzliche Informationen umsetzen und verstehen. In diesem Fall wird ein Befehl einfach ignoriert.
 {: .notice--warning }
 
-# Sprungstich zu Fadenschnitt-Befehl
+## Sprungstich zu Fadenschnitt-Befehl
+
+{% include upcoming_release.html %}
 
 `Befehle > Sprungstich zu Fadenschnitt-Befehl` 
 
@@ -64,7 +66,7 @@ Definiert den Zielpunkt für einen Ripplestich-Bereich oder eine Spiralfüllung.
 
 ### ![trim symbol](/assets/images/docs/visual-commands-trim.jpg) Faden trennen
 
-“Faden trennen” tells the embroidery machine to cut the thread after the assigned object has been stitched. Not all home machines support the trim function within a color block. Mainly used to prevent long jump stitched between embroidery objects and to avoid post embroidery trimming by the operator.
+“Faden trennen” befiehlt der Maschine den Faden zu trennen nachdem dieses Objekt gestickt wurde. Nicht alle Maschinen unterstützen die Fadenschnitt-Funktion ohne Farbwechsel. Dieser Befehlt wird hauptsächlich ddazu verwendet um Sprungstiche (und somit manuelles Fadenschneiden) zwischen Objekten zu vermeiden.
 
 ### ![stop symbol](/assets/images/docs/visual-commands-stop.jpg) Stopp
 

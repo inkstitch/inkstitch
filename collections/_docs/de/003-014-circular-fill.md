@@ -39,8 +39,8 @@ Einstellung          ||Beschreibung
 Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein
 Füllmethode          | Spiralfüllung|Für diesen Stichtyp bitte Spiralfüllung auswählen
 Erweitern            |![Expand example](/assets/images/docs/params-fill-expand.png)  |Erweitert die Ursprungsform. Diese Option kann genutzt werden um Lücken zwischen angrenzenden Objekten zu verringern. Negative Werte verkleinern die Form.
-Reihenabstand                   |![Spacing example](/assets/images/docs/params-fill-spacing_between_rows.png) | Abstand zwischen den Stichreihen.
-Reihenabstand (Ende)            |![End row spacing example](/assets/images/docs/params-fill-end_row_spacing.png) | Erhöht oder verringert den Reihenabstand zum Ende hin.
+Reihenabstand        |![Spacing example](/assets/images/docs/params-fill-spacing_between_rows.png) | Abstand zwischen den Stichreihen.
+Reihenabstand (Ende) |![End row spacing example](/assets/images/docs/params-fill-end_row_spacing.png) | Erhöht oder verringert den Reihenabstand zum Ende hin.
 Verbindungsstiche innerhalb des Objektes|![Skip example](/assets/images/docs/params-fill-underpathing.png)| Muss aktiviert sein, um Geradstiche zum Verbinden der Abschnitte innerhalb des Objekts verlaufen zu lassen, anstatt sie am Rand entlang zu führen.
 Stichlänge           ||Definiert die maximale Stichlänge. Minimale Stichlänge bitte über die Geradstich-Toleranz festlegen.
 Geradstich-Toleranz  ||Alle Stiche müssen innerhalb dieser Distanz vom Ursprungspfad liegen. Ein geringerer Toleranzwert bedeutet, dass Stiche enger zusammenliegen. Ein höherer Wert kann zu abgerundeten Ecken führen.

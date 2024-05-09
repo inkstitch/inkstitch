@@ -1,246 +1,360 @@
 ---
-title: "Neuerungen und Fehlerbehebungen Ink/Stitch v3.0.0"
-permalink: /de/upcoming/
-last_modified_at: 2023-05-11
+title: "Neue Funktionen, Aktualisierungen und Fehlerbehebungen für die nächste Ink/Stitch verison (3.1.0)"
+permalink: /upcoming/
+last_modified_at: 2024-05-09
 sidebar:
   nav: pages
 toc: true
 ---
-## Allgemein
+## Neue Erweiterungen
 
-Ink/Stitch speichert bereits erstellte Stichpläne im Cacheund wird dadurch schneller.
+### [Farbpalette anwenden](/de/docs/thread-color/#farbpalette-anwenden)
 
-## Neue Schriften
+`Garnfarben Verwaltung > Farbpalette anwenden` ([#2738](https://github.com/inkstitch/inkstitch/pull/2738))
 
-* [Abril En Fleur AGS](/de/fonts/abril/)
+Diese Erweiterung wendet die ähnlichsten Farben einer gewählten Farbpalette auf das geöffnete Design an.
+Die Farben werden entsprechend in die Stickdatei gespeichert und in der PDF-Ausgabedatei angezeigt.
 
-  ![Abril En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)
-* [Apex Simple AGS](/de/fonts/apex-lake/)
+### [Stickreihenfolge anzeigen](/de/docs/visualize/#stickreihenfolge-anzeigen)
 
-  ![Apex Simple AGS](/assets/images/fonts/apex_simple_AGS.jpg)
-* [AGS Γαραμου Garamond](/de/fonts/AGS_greek_garamond/)
+`Visualisieren und Exportieren > Stickreihenfolge anzeigen` ([#2656](https://github.com/inkstitch/inkstitch/issues/2656))
 
-  ![AGS Γαραμου Garamond](/assets/images/fonts/garamond.png)
-* [Emilio 20 simple](/de/fonts/emilio-20/)
+Diese Erweiterung fügt nummerierte Beschriftungen für ausgewählte Elemente in das Dokument ein, um die Stichreihenfolge zu visualisieren.
 
-  ![Emilio 20 simple](/assets/images/fonts/emilio_simple.png)
-* [Emilio 20 bold](/de/fonts/emilio-20/)
+![Stickreihenfolge anzeigen](/assets/images/docs/stacking_order.png)
 
-  ![Emilio 20 bold](/assets/images/fonts/emilio_20_bold.png)
-* [Emilio 20 Applique](/de/fonts/emilio-20/)
+### [Element info](/de/docs/troubleshoot/#element-info)
 
-  ![Emilio 20 Applique](/assets/images/fonts/emilio_20_applique.png)
+`Fehlerbehebung > Element Info` ([#2544](https://github.com/inkstitch/inkstitch/issues/2544))
 
-* Die Schrift `Grand Hotel` wurde in `Auberge` umbenannt
+Diese Erweiterung sammelt Informationen über verschiedene Parameter für eine Auswahl von Stickobjekten.
 
-* Andere Schriftarten wurden verbesseret
+![Element info](/assets/images/docs/en/element_info.png)
 
-## Elemente / Sticharten
+### [Zeichentabelle](/de/docs/font-tools/#zeichentabelle)
 
-### Neue Sticharten
+`Schriftverwaltung > Zeichentabelle` ([#2858](https://github.com/inkstitch/inkstitch/issues/2858))
 
-#### Mäanderfüllung
+Diese Erweiterung generiert eine Liste aller Zeichen einer Schrift. So können Schriftautoren schnell und einfach das Stickergebnis einer neuen Schrift prüfen.
 
-[Meander fill](/de/docs/stitches/meander-fill) hat seinen Ursprung in Quilt-Techniken. Für das Maschinensticken ergibt sich ein schöner gemusterter Effekt. Große Bereiche können mit relativ wenigen Stichen befüllt werden.
+### [Testmuster aus Auswahl erstellen](/de/docs/edit/#testmuster-aus-auswahl-erstellen)
 
-![Meander Fill](/assets/images/tutorials/tutorial-preview-images/meandering_writing.jpg)
+`Bearbeiten > Testmuster aus Auswahl erstellen` ([#2528](https://github.com/inkstitch/inkstitch/issues/2528))
 
-#### Spiralfüllung
+Mit dieser Erweiterung können ganz eifnach verschiedene Stickparameter ausprobiert und getestet werden.
 
-Eine [Spiralfüllung](/de/docs/stitches/circular-fill) füllt eine Form mit einer gestickten Spirale. Der Mittelpunkt der Spirale liegt im Mittelpunkt des Elements. Eine Zielposition kann definiert werden um den Spiralmittelpunkt zu verschieben.
+![Example test swatches](/assets/images/docs/test_swatches.png)
 
-![Circular Fill](/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg)
+### [Sprungstich zu Fadenschnittbefehl](/de/docs/commands/#sprungstich-zu-fadenschnitt-befehl)
 
-### Neue Parameter
+`Befehle > Sprungstich zu Fadenschnittbefehl` ([#2864](https://github.com/inkstitch/inkstitch/issues/2864))
 
-#### Fadenschnitt und Stopp-Befehle
+Fügt Fadenschnitt-Befehle in das Dokument ein um Sprungstiche zu vermeiden.
 
-  * Es ist nicht mehr nötig für diese Art von Befehlen Symbole zu verwenden, sie können direkt über den Parameter-Dialog aktiviert werden
-  * [Befehle skalieren](/docs/commands/#scale-command-symbols): scales marker symbols as well (guide line & pattern symbols)
+### [Mehrfarbige Satinsäule](/de/docs/satin-tools/#mehrfarbige-satinsäule)
 
-#### An- und Versticher (Stiche zum Vernähen)
+`Werkzeuge: Satin: Mehrfarbige Satinsäule` ([#2863](https://github.com/inkstitch/inkstitch/issues/2863))
 
-  * Wähle aus einer Liste verschiedener An- und Verstecher
-  * Skaliere Vernähstiche
-  * Definiere eigene Vernähstiche
+Diese Erweiterung generiert Kopien der ausgewählten Satinsäule um einen mehrfarbigen Effekt zu erzeugen
+
+![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
+
+### [Außenkontur](/docs/stroke-tools/#ausenkontur)
+
+`Werkzeuge: Linie > Außenkontur` ([#2529](https://github.com/inkstitch/inkstitch/issues/2529), [#2881](https://github.com/inkstitch/inkstitch/issues/2881))
+
+Diese Erweiterung hilft die Originalform aus einer Stickdatei wiederherzustellen.
+
+![Stickpfad zu Außenkontur](/assets/images/docs/outline.png)
+
+### [Tartan](/de/docs/fill-tools/#tartan)
+
+`Werkzeuge: Füllung > Tartan` ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
+
+Diese Erweiterung ist der Editor für Tartan-Muster. Tartanmuster können als Stichart oder als einzelne SVG-Elemente ausgegeben werden.
+
+### [Klonverbindung auftrennen](/docs/edit/#klonverbindung-auftrennen)
+
+`Bearbeiten > Klonverbindung auftrennen ...`
+
+Diese Erweiterung trennt Klonverbindungen auf (optional rekursiv) und wendet Transformationen und den Füllwinkel an.
+
+## Aktualisierte Erweiterungen
+
+### [Dokument bereinigen](/docs/troubleshoot/#dokument-bereinigen)
+
+`Fehlerbehebung > Dokument bereinigen`
+
+* Neue Option um leere Gruppen und Ebenen zu entfernen ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
+* Testdurchlauf um lediglich die Namen der zu entfernenden Elemente anzuzeigen ([#2552](https://github.com/inkstitch/inkstitch/issues/2552))
+
+### [Linie zu Satinsäule](/de/docs/satin-tools/#linie-zu-satin)
+
+`Werkzeuge: Satin > Linie zu Satinsäule`
+
+Gibt jetzt eine Zusammenhänge Satinsäule aus ([#2418](https://github.com/inkstitch/inkstitch/issues/2418))
+
+![Converted square](/assets/images/docs/convert-to-satin-update.png)
+
+### [Dichte Indikator](/de/docs/visualize/#dichte-indikator)
+
+`Visualisieren und Exportieren > Dichte Indikator`
+
+* Option für die Größe der Darstellung der Dichte-Punkte ([#2544](https://github.com/inkstitch/inkstitch/issues/2544))
+* fügt ein Ebene ignorieren Befehl ein um ein ungewolltes Rendern zu verhindern ([#2522](https://github.com/inkstitch/inkstitch/issues/2522))
+
+### [Füllung zu Mittellinie](/de/docs/stroke-tools/##füllung-zu-mittellinie)
+
+`Werkzeuge: Linie > Füllung zu Mittellinie`
+
+* Fügt eine Mittellinien-Gruppe für jede ausgewählte Füllfläche hinzu oder ersetzt die Füllfläche wenn das Ergebnis nur einen Pfad umfasst ([#2675](https://github.com/inkstitch/inkstitch/issues/2675#issuecomment-1882919122))
+
+### [Vernähen erzwingen](/de/docs/font-tools/#vernähstiche-erzwingen)
+
+`Schriftverwaltung > Vernähen erzwingen`
+
+* Option um die Funktion auf Satinsäulen zu beschränken ([#2773](https://github.com/inkstitch/inkstitch/pull/2773))
+
+### [Sprungstich zu Geradstich](/de/docs/stroke-tools/#sprungstich-zu-geradstich)
+
+`Werkzeuge: Linie > Sprungstich zu Geradstich`
+
+* Neue Optionen ([#2733](https://github.com/inkstitch/inkstitch/pull/2733))
+    * Minimale Länge
+    * Maximale Länge
+    * Verbinde nur innerhalb der Gruppe oder Ebene
+    * Füge keine Verbindung nach Fadenschnitt- oder Stopp Befehlenen oder erzwunenen Vernähstichen ein
+    * Vereine neue Linien mit bereits vorhanden Linien
+    * Verbinde Unterpfade ([#2750](https://github.com/inkstitch/inkstitch/pull/2750))
+
+### [Text](/de/docs/lettering/)
+
+`Text`
+
+* Filter nach vorhandenen Schriftzeichen ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
+
+### [Einstellungen](/de/docs/preferences/)
+
+`Einstellungen`
+
+* electron -> wxpython ([#2479](https://github.com/inkstitch/inkstitch/issues/2479))
+
+### [PDF-Export](/de/docs/print-pdf/)
+
+* Der PDF-Export ist zurück in den Browser gewandert ([#2849](https://github.com/inkstitch/inkstitch/issues/2849))
+
+### [Stickeinstellungen entfernen](/de/docs/troubleshoot/#stickeinstellungen-entfernen)
+
+`Fehlerbehebung > Stickeinstellungen entfernen`
+
+* Option um nicht alle sondern nur bestimmte Befehle zu entfernen ([#2494](https://github.com/inkstitch/inkstitch/issues/2494))
+
+### [Stickelemente auswählen](/de/docs/edit/#stickelemente-auswählen)
+
+`Bearbeiten > Stickelemente auswählen`
+
+* Option um nur Satinsäulen mit keinen oder genau zwei Richtungsvektoren auszuwählen ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
+* Option um nach Mehrfachgeradstich Wiederholungsmuster auszuwählen ([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
+* Option nach Verbindungslinien für automatisch geführte Satinsäulen / automatisch geführten Laufstichen auszuwählen ([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
+* Options to select new stitch types
+
+### [Stichplanvorschau](/de/docs/visualize/#stich-plan-vorschau)
+
+`Visualisieren und Exportieren > Stitchplan Vorschau`
+
+* Option den vorherigen Stichplan zu überschreiben / zu behalten ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
+* Realistische Rendermodi (PNG oder Vektor) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
+
+### [Fehlerbehebung](/de/docs/troubleshoot/)
+
+`Fehlerbehebung > Fehlerbehebung an Objekten`
+
+* Warnung für Satinsäulen mit zwei Richtungsvektoren (mögliche Fehlerquelle) ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
+* Warnung für Satinsäulen ohne Richtungsvektoren ([#2791](https://github.com/inkstitch/inkstitch/pull/2791))
+* Warnung für Elemente mit Kontur- und Füllfarbe ([#2761](https://github.com/inkstitch/inkstitch/pull/2761))
+
+## Schriften
+
+### Neue Schriftarten
+
+* [Cats](/de/fonts/cats) ([#2860](https://github.com/inkstitch/inkstitch/pull/2860))
+
+  ![Cats preview](/assets/images/fonts/cats.jpg)
+* [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
+
+  ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
+* [Chicken Scratch](/de/font/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+
+  ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
+* [Emilio 20 Tartan](/defonts/emilio-20/#emilio-20-tartan) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
+
+  ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
+* [Millimarif-bold20](/de/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
+
+  ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
+* [Roaring twenties KOR](/de/fonts/roaring_twenties_KOR/)([#2856](https://github.com/inkstitch/inkstitch/issues/2856))
+
+  ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
+* [Violin Serif](/de/fonts/violin_serif/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+
+  ![Violin Serif preview](/assets/images/fonts/violin_serif.jpg)
+
+### Schrift-Aktualisierungen
+
+* Die meisten Schriften haben jetzt die folgenden Schriftzeichen: éèêëÉÈÊËÜÄÖäöüß
+  Ausnahmen sind: April en Fleur, Apex Lake, Cherry fonts, Emilio fonts, Fold Inkstitch, Infinipicto, Namskout und Sortefax
+
+* Cherry for Kaalleen hat jetzt einen hellblauen Hintergrund
+
+  ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
+
+Alle Schriften wurden überarbeitet und sind stabiler bei Transformationen
+
+ [#2871](https://github.com/inkstitch/inkstitch/pull/2871)
+ [#2868](https://github.com/inkstitch/inkstitch/pull/2868)
+ [#2857](https://github.com/inkstitch/inkstitch/pull/2857)
+ [#2850](https://github.com/inkstitch/inkstitch/pull/2850)
+ [#2833](https://github.com/inkstitch/inkstitch/pull/2833)
+ [#2812](https://github.com/inkstitch/inkstitch/pull/2812)
+ [#2807](https://github.com/inkstitch/inkstitch/pull/2807)
+ [#2803](https://github.com/inkstitch/inkstitch/pull/2803)
+ [#2802](https://github.com/inkstitch/inkstitch/pull/2802)
+ [#2793](https://github.com/inkstitch/inkstitch/pull/2793)
+ [#2784](https://github.com/inkstitch/inkstitch/pull/2784)
+ [#2769](https://github.com/inkstitch/inkstitch/pull/2769)
+ [#2762](https://github.com/inkstitch/inkstitch/pull/2762)
+ [#2749](https://github.com/inkstitch/inkstitch/pull/2749)
+ [#2744](https://github.com/inkstitch/inkstitch/pull/2744)
+ [#2742](https://github.com/inkstitch/inkstitch/pull/2742)
+ [#2714](https://github.com/inkstitch/inkstitch/pull/2714)
+ [#2607](https://github.com/inkstitch/inkstitch/pull/2607)
+ [#2579](https://github.com/inkstitch/inkstitch/pull/2579)
+ [#2476](https://github.com/inkstitch/inkstitch/pull/2476)
+ [#2682](https://github.com/inkstitch/inkstitch/pull/2682)
+
+## Farbpaletten
+
+### Neue Farbpaletten
+* Simthread glow in the dark / 15 Farben ([#2752](https://github.com/inkstitch/inkstitch/pull/2752))
+* Simthread 63 Brother Colours Polyester ([#2752](https://github.com/inkstitch/inkstitch/pull/2752))
+
+## Parameter
+
+* Verbesserte Fehlermeldungen ([#2437](https://github.com/inkstitch/inkstitch/issues/2437))
+* Objektbasierte minimale Stichlänge und minimale Sprungstichlänge ([#2792](https://github.com/inkstitch/inkstitch/issues/2792))
+
+## Simulator
+
+Der "alleinstehende Simulator" wurde durch den verbesserten Parameter-Simulator ersetzt.
+
+Die realistische Vorschau befindet sich jetzt in der Stichplan Vorschau.
+
+* Verbesserter Simulator ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
+* Simulator kann an die Einstellungsfenster angeheftet und gelöst werden([#2557](https://github.com/inkstitch/inkstitch/issues/2557))
+* Die Hintergrundfarbe kann im Simulator angepasst werden ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
+* Sprungstiche können angezeigt/versteckt werden ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
+
+## Sticharten
 
 ### Klone
 
-  * Fix: Positionierung
-  * Fix: automatische Berechnung der Füllwinkel
+* Erkennung der Füllstichwinkel verbessert ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
+* Rekursive Klone können direkt ausgegeben werden ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
+* Verbesserte Farberkennung (([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
 
-    ![Clone fill angle](/assets/images/docs/clone_fill_angle.png)
+### Füllstich-Familie
 
-### Mehrfachgeradstich
+* Option für randomisierte Stichlänge ([#2830](https://github.com/inkstitch/inkstitch/issues/2830))
+* Gebogene Verbindunglinien ([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
+* Füllstiche verlaufen nicht mehr so häufig außerhalb der Außenkontur ([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
+* [Lineare Farbverlaufsfüllung](/de/docs/stitches/linear-gradient-fill/): eine neue Stichart für Farbverläufe ([#2587](https://github.com/inkstitch/inkstitch/issues/2587))
 
-  * Unterstütze die Eingabe von [Wiederholungsmustern](/de/docs/stitches/bean-stitch/#parameter) (1 0: ☰-☰-☰-)
+  [![Linear gradient fill](/assets/images/docs/linear-gradient.jpg)](/assets/images/docs/linear-gradient.svg)
+* Mäanderfüllung: Option für Zickzackstiche ([#2699](https://github.com/inkstitch/inkstitch/pull/2699))
 
-    ![Bean pattern](/assets/images/docs/bean_pattern.jpg)
+  [![Zigzag-Meander Grumpy-Cat](/assets/images/docs/zigzagmeander_grumpycat.jpg)](/assets/images/docs/zigzagmeander_grumpycat.svg)
 
-### Manuelle Stichpositionierung
+* [Tartanfüllung](/de/docs/stitches/tartan-fill): eine neue Stichart um Tartan-Webmuster zu imitieren ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
 
-  * Vernähstiche können über die Option `Vernähen erzwingen` aktiviert werden
-  * Einstellung für maximale Stichlänge
+  [![Tartan pattern](/assets/images/docs/tartan-fill.jpg)](/assets/images/docs/tartan-fill.svg)
 
-### Füllstich
+### Geradstich-Familie
 
-  * [Reihenanzahl bis sich das Muster wiederholt](/de/docs/stitches/fill-stitch/#parameter) erlaub nun auch Dezimalzahlen
-  * [Reihenabstand (Ende)](/de/docs/stitches/fill-stitch/#parameter) ist nicht mehr versteckt, sondern über die Parametereinstellungen nutzbar (nützlich für Farbverläufe)
-  * Werte für mehrere Unterlagen über den [Unterlagen Winkel](/de/docs/stitches/fill-stitch/#unterlage) werden jetzt nicht mehr durch ein Komma, sondern durch ein Leerzeichen getrennt
+* Option für randomisierte Stichlängen ([#2830](https://github.com/inkstitch/inkstitch/issues/2830))
 
-  * Fix: 'LineString' object has no attribute 'geoms'
-  * Fix: 'Point' object has no attribute 'geoms'
-  * Fix: ZeroDivisionError in intersect_region_with_grating
-  * Fix: ZoneClose segments can not be changed into curves.
-  * Fix: incorrect stagger in guided fill
+### Satinsäulen-Familie
 
-### Satinsäule / E-Stich
+* Stichversatz-Option für geteilte Stiche ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
 
-  * [Optionen für Randomisierung](/de/docs/stitches/satin-column/#satin-top-layer): Stichlänge, Stichabstände, Länge/Anzahl der Teilungsstiche
+  ![Staggered split stitch example](/assets/images/docs/split-satin-detail.png)
+* Toleranzwert für Satinsäulen-Unterlagen ([#2814](https://github.com/inkstitch/inkstitch/issues/2431))
 
-    ![Bee](/assets/images/docs/random_satin.jpg)
+* S-Stich: eine neue Stichart aus der Satinsäulen-Familie ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
 
-  * [Zugkomensation](/docs/stitches/satin-column/#satin-top-layer)
+  ![S-Stitch](/assets/images/docs/s-stitch-detail.png)
+* Zick-Zack: eine neue Stichart aus der Satinsäulen-Familie ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
 
-    Asymmetrische Zugkompensation möglich durch die Eingabe zweier durch ein Leerzeichen getrennte Werte (mm, %)
+  ![Zigzag Stitch](/assets/images/docs/en/compare-satin-zigzag.png)
 
-  * Option [Konturlinien umkehren]((/docs/stitches/satin-column/#satinsäule)) direkt aus dem Parameterdialog
+### Polylines
 
-  * Fix: keine Fehlermeldung wenn eine Satinsäulen Füllung und Kontur hat
+Polylinien wurden bisher mit einem eigenen Tab in den Parametern belegt und quasi als manueller Stichart gehandelt.
+In der nun kommenden Version werden sie als normale Pfade behandelt und in der Standardeinstellung als Geradstich (Konturfarbe) oder Automatische Füllung (Füllfarbe) ausgegeben.
+Bestehende Designs mit Ink/Stitch Parametern werden automatisch aktualisert um manuelle Stiche beizubehalten [#2866](https://github.com/inkstitch/inkstitch/issues/2866)
 
-### Linie
+## Export
 
-  * Parameter sind jetzt flexibler. Gestrichelte Linien sind nicht mehr nötig.
-    Es kann direkt in dem Parameterdialog zwischen den Sticharten gewechselt werden
-  * Konsistentere Stichlänge
-  * `svg:line` Elemente werden als normale Pfadelemente erkannt.
+### Zip-Export
 
-### Zickzack-Stich
+* Eingabefeld für nutzerdefinierte Dateinamen innerhalb der Zip-Datei ([#2426](https://github.com/inkstitch/inkstitch/issues/2426))
+* Option für Panel-Export ([#2349](https://github.com/inkstitch/inkstitch/issues/2349))
 
-  * Zugkompensation hinzugefügt
+### Inkscape Export-Dialog
 
-### Ripple Stitch
+* Ink/Stitch-Dateiformate sind jetzt auch über den Export-Dialog erreichbar ([#2489](https://github.com/inkstitch/inkstitch/issues/2489))
 
-[Parameter](/de/docs/stitches/ripple-stitch/#parameter):
-* Reihenanzahl bis sich das Muster wiederholt: Stiche werden besser platziert
-* Minimaler Reihenabstand: konsistentere Dichte auch nach Skalierung eines Ripplestich-Elements (überschreibt den Wert für die Linienanzahl)
+## Installation
 
-## Erweiterungen
+* Windows ist jetzt als 32 bit und 64 bit Version verfügbar ([#2413](https://github.com/inkstitch/inkstitch/issues/2413))
 
-### Neu: Farbverlauf in Blöcke aufteilen
+## Entwickler Funktionen
 
-Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrere einfarbige Blöcke auf und setzt den zuvor bestimmten Wert für Reihenabstand Ende.
+* [#2715](https://github.com/inkstitch/inkstitch/issues/2715) Multiversion support
+* [#2655](https://github.com/inkstitch/inkstitch/issues/2655) In Ink/Stitch preferences set cache size to 0 to disable caching
+* [#2653](https://github.com/inkstitch/inkstitch/issues/2653) [#2720](https://github.com/inkstitch/inkstitch/issues/2720) Updated debug and profiling procedures
 
-![Gradient](/assets/images/docs/color_blocks.png)
+## Bug Fixes
 
-Erweiterungen > Ink/Stitch > Tools: Füllung > [Convert to gradient blocks](/de/docs/fill-tools/#farbverlauf-in-blöcke-aufteilen)
-
-### Neu: Text entlang Pfad
-
-Platziert einen Text aus dem Text-Modul auf einen Pfad ohne die Schriftzeichen zu deformieren
-
-![Lettering along path](/assets/images/docs/lettering_along_path.png)
-
-Erweiterungen > Ink/Stitch > [Text entlang Pfad](/de/docs/lettering/#schrift-entlang-pfad)
-
-### Neu: Sprungstich zu Geradstich
-
-Generiert eine Verbindungs-Linie zwischen aufeinanderfolgenden Elementen
-
-![Jump to Stroke](/assets/images/docs/jump_to_stroke.png)
-
-*1: Original 2: Sprungstich zu Geradstich 3: Manuelle Anpassung des Pfadverlaufs*
-
-Erweiterungen > Ink/Stitch > Werkzeuge: Stroke > [Sprungstich zu Geradstich](/de/docs/stroke-tools/#sprungstich-zu-geradstich)
-
-### Neu: Füllung zu Mittellinie
-
-Generiert die Mittellinie eines Füllobjekts
-
-![Fill to Stroke](/assets/images/docs/fill_to_stroke.png)
-
-Erweiterungen > Ink/Stitch > Werkzeuge: Stroke > [Füllung zu Mittellinie](/de/docs/stroke-tools/#füllung-zu-mittellinie)
-
-### Neu: Linie zu Pfadeffekt-Satin
-
-Konvertiert eine Linie in einen Pfadeffekt der als Satinsäule genutzt und einfach angepasst werden kann
-
-![LPE Satins](/assets/images/docs/lpe_patterns.png)
-
-Erweiterungen > Ink/Stitch > Werkzeuge: Satin: [Linie zu Pfadeffekt-Satin](/docs/satin-tools/#linie-zu-pfadeffekt-satin)
-
-### Neu: Zickzack-Linie zu Satin
-
-Konvertiert eine Zickzack-Linie in eine Satinsäule
-
-![Zigzag to Satin](/assets/images/docs/zigzag-line-to-satin.png)
-
-Erweiterungen > Ink/Stitch > Werkzeuge: Satin > [Zickzack-Line zu Satin](/docs/satin-tools/#zickzack-linie-zu-satin)
-
-### Neu: Ink/Stitch SVG aktualisieren
-
-Ink/Stitch aktualisiert alte Designdateien automatisch. Bitte verwende diese Funktion nur, wenn du weißt, was du tust.
-
-Erweiterungen > ink/Stitch > Fehlerbehebung > [Ink/Stitch SVG aktualisieren](/docs/troubleshoot/#inkstitch-svg-aktualisieren)
-
-### Neu: Stickelemente auswählen
-
-Wählt Elemente nach Stichart aus (funktioniert nicht für macOS)
-
-Erweiterungen > Ink/Stitch > Bearbeiten > [Stickelemente auswählen...](/de/docs/edit/#stickelemente-auswählen)
-
-### Automatisch geführter Geradstich
-
-  * Fix: Behalte Toleranz-Einstellungen für Verbindungsstiche bei
-
-### Linie zu Satinsäule
-
-  * Fix: kein Abbruch bei Auswahl verschiedener Sticharten
-  * Fix macOS: gleichseitige Konturlinien-Richtung
-
-### Cutwork
-
-  * Speichere Nadelinformation in .inf Dateien, so dass Bernina/Bernette Maschinen die [richtige Nadelnummern anzeigen](/de/docs/cutwork/#cutwork-mit-berninabernette) können
-  * Fix: Breche die Umwandlung nicht ab, wenn das Element ebenfalls eine Füllung hat
-
-### Text
-
-  * Füge einen [Filter für Schriftgrößen](/de/docs/lettering/#optionen) hinzu
-  * Aktiviere Optionen für das [Einfügen von Fadenschnitt-Befehlen](/de/docs/lettering/#optionen) für alle Schriften
-  * Einzelne Schriften können in mehrere Dateien aufgeteilt werden. In diesem Fall erhält der Ordnernamen den Stickrichtungspfeil.
-    So können verschiedene Autoren gleichzeitig an der gleichen Schrift arbeiten oder verhindern, dass die Datei aufgrund der Größe zu langsam wird.
-
-  * Fix: Ignoriert ungültige Schriftzeichen 
-  * Fix: verhindere Fehlermeldung von automatisch geführten Satinsäulen für Füllstiche (nicht vollständig digitalisierte Schriften können direkt genutzt werden)
-
-### Parameter Simulator
-
-  * Lädt schneller nach Parameter-Änderungen
-  * Beachtet jetzt die Einstellung für die minimale Stichlänge
-
-### Einstellungen
-
-  * Standardwerte für neue SVG-Dateien können für die minimale Stichlänge und minimale Sprungstichlänge gesetzt werden
-  * Lege die Größe des Cache-Speichers für Stichpläne fest
-
-### PDF-Export
-  * Neue Ansicht: Vollseitige Designansicht
-  * Vorauswahl des PDF-Formats beim Speichern
-
-### Simulator
-
-  * Nutzt Hintergrundfarbe von Inkscape
-  * Füge Skalierungsoptionen hinzu
-
-### Stichplan
-
-  * Füge Option hinzu um den [Stichplan für Mausinteraktionen zu blockieren](/de/docs/visualize/#stich-plan-vorschau)
-
-### Fehlerbehebung
-
-  * Füge Skalierungsoptionen hinzu
-
-## Stickformate
-
-  * Füge den Namen der Stickdatei in die Header-Information einiger Stickformate ein
-  * Behebt ein Problem mit Stopp-Befehlen bezüglich der Farbanzahl
+* [#2836](https://github.com/inkstitch/inkstitch/issues/2836) Fixes None value param display when multiple elements are selected
+* [#2853](https://github.com/inkstitch/inkstitch/issues/2853) Fix an issue with font kerning
+* [#2819](https://github.com/inkstitch/inkstitch/issues/2819) Fix cleanup extension
+* [#2818](https://github.com/inkstitch/inkstitch/issues/2818) Remove empty d error
+* [#2777](https://github.com/inkstitch/inkstitch/issues/2777) Save thread names into embroidery files
+* [#2754](https://github.com/inkstitch/inkstitch/issues/2754) Fix lettering along path when glyphs have subgroups or trims
+* [#2683](https://github.com/inkstitch/inkstitch/issues/2683) Select embroidery elements: output error message when python path cannot be found
+* [#2675](https://github.com/inkstitch/inkstitch/issues/2675) Fix error message on fill to stroke if small fill artifacts are present
+* [#2674](https://github.com/inkstitch/inkstitch/issues/2674) Zip: fix error message when no file format is selected
+* [#2644](https://github.com/inkstitch/inkstitch/issues/2644) Letters to font: escape labels to allow import of filenames with quotes
+* [#2657](https://github.com/inkstitch/inkstitch/issues/2657) Troubleshoot satin: point on rail and not the center of the element
+* [#2643](https://github.com/inkstitch/inkstitch/issues/2643) Fix some networkx errors for fill stitches
+* [#2603](https://github.com/inkstitch/inkstitch/issues/2603) fix polyline shape 
+* [#2637](https://github.com/inkstitch/inkstitch/issues/2637) Add shape property to clone
+* [#2638](https://github.com/inkstitch/inkstitch/issues/2638) Troubleshoot: remove old layer before creating a new one to avoid transform (and other) issues
+* [#2647](https://github.com/inkstitch/inkstitch/issues/2647) Ignore multipoints in intersect regions with gratings
+* [#2635](https://github.com/inkstitch/inkstitch/issues/2635) [#2645](https://github.com/inkstitch/inkstitch/issues/2645) Fix some networkx no path errors
+* [#2624](https://github.com/inkstitch/inkstitch/issues/2624) Replace jumps by running stitches in large satin columns
+* [#2578](https://github.com/inkstitch/inkstitch/issues/2578) Auto-route Satin: handle sided properties correctly
+* [#2566](https://github.com/inkstitch/inkstitch/issues/2566) Update depcrecated inx file descriptions, so they are translatable now
+* [#2550](https://github.com/inkstitch/inkstitch/issues/2550) Lettering: error on empty layer in font file
+* [#2527](https://github.com/inkstitch/inkstitch/issues/2527) Stitch plan: multiply sequence error
+* [#2502](https://github.com/inkstitch/inkstitch/issues/2502) Gradient Blocks: Unit fix
+* [#2499](https://github.com/inkstitch/inkstitch/issues/2499) LPE Satin: width of "normal" straight pattern wasn't correct
+* [#2491](https://github.com/inkstitch/inkstitch/issues/2491) Toggle commands: fix if first command in invisible group/layer
+* [#2468](https://github.com/inkstitch/inkstitch/issues/2468) Zigzag to satin: do not ignore elements in a group
+* [#2467](https://github.com/inkstitch/inkstitch/issues/2467) Render context-stroke and context-fill as black
+* [#2461](https://github.com/inkstitch/inkstitch/issues/2461) Letters to font: fix guide line insertion
+* [#2460](https://github.com/inkstitch/inkstitch/issues/2460) Satin Column: obey reversed rails when synthesizing rungs
+* [#2458](https://github.com/inkstitch/inkstitch/issues/2458) Density Map: add ignore layer command
+* [#2434](https://github.com/inkstitch/inkstitch/issues/2434) Ignore commands with "empty-d-connectors"
+* [#2404](https://github.com/inkstitch/inkstitch/issues/2404) Render satins with only one subpath as running stitch
+* [#2403](https://github.com/inkstitch/inkstitch/issues/2403) ignore small contour fill with single or double spiral

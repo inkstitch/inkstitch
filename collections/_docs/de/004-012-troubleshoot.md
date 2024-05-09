@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Objects"
 permalink: /de/docs/troubleshoot/
-last_modified_at: 2024-02-11
+last_modified_at: 2024-05-09
 toc: true
 ---
 ## Fehlerbehebung
@@ -9,6 +9,7 @@ toc: true
 Ink/Stitch kann verwirrend sein. Besonders für Anfänger. Aber auch, wenn du Ink/Stitch schon länger benutzt, erhälst du immer wieder Fehlermeldungen, die besagen, dass etwas schiefgelaufen ist und ein Objekt aus irgendeinem Grund nicht funktioniert.
 
 Ink/Stitch hat ein Hilfsmittel diese Fehler verständlicher zu machen. Es zeigt die genaue Position wo das Problem liegt und erklärt wie man es lösen kann. Auch für problematische Objekte, die keine Fehlermeldung verursachen, können Warnhinweise angezeigt werden.
+
 
 ## Funktionsweise
 
@@ -21,6 +22,7 @@ Entweder erhälst du eine nun Nachricht, dass kein Fehler gefunden wurde oder es
 
 **Tipp:** Es ist möglich, dass ein Objekt mehrere Fehler enthält. Objekte mit Füllstich zeigen aber in der Regel nur den zuerst aufgetretenen Fehler an. Nutze das Troubleshoot-Werkzeug erneut, wenn du weitere Fehlermeldungen erhälst.
 {: .notice--info }
+
 
 ## Element Info
 {% include upcoming_release.html %}
@@ -51,17 +53,19 @@ Die Erweiterung entfernt alle Stickparameter aus dem gesamten Dokument oder von 
 
 ![Stickeinstellungen entfernen - GUI](/assets/images/docs/en/remove-embroidery-settings.png)
 
+
 ## Dokument bereinigen
 
 Manchmal entstehen während der Arbeit an SVG-Dateien sehr kleine Objekte, die gar nicht gewünscht sind (z.B. beim Bitmap-Tracing). Ink/Stitch bietet eine Funktion an, diese winzigen Objekte zu entfernen. So wird verhindert, dass sie Fehler in der Ausgabe produzieren.
 
 * Öffne `Erweiterungen > Ink/Stitch > Fehlerbehebung > Dokument bereinigen...`
 * Wähle welche Objekttypen behandlet werden sollen und definiere den Schwellwert
-* Anwenden
+* `Anwenden`
 
 {% include upcoming_release.html %}
-* You may also  choose  to additionnaly delete empty groups or layers 
-* Check test run option to display names of the elements that will be removed with the current settings without actually removing anything
+
+* Leere Gruppen oder Ebenen können optional entfernt werden
+* Bei aktiviertem Testdurchlauf werden lediglich die Namen der Elemente die entfernt werden würden angezeigt ohne sie zu entfernen
 
 
 ## Ink/Stitch SVG aktualisieren
@@ -76,5 +80,5 @@ In diesem Fall kann ein manuelles Update für einzelne Elemente durchgeführt we
 * Wähle die Elemente aus, die aktualisiert werden sollen.
 * Führe die Funktion unter `Erweiterungen > Ink/Stitch > Fehlerbehebung > Ink/Stitch SVG aktualisieren` aus
 
-Tipp: Diese Operation wird überflüssig, wenn auch in der Quelldatei der zu kopierenden Design-Elemente zuvor eine Ink/Stitch-Funktion ausgeführt wurde. Wähle hierzu einfach ein Element in der alten Datei aus, öffne die Parameter und klicke ohne Änderungen vorzunehmen aud `Anwenden und Schließen`.
+**Tipp**: Diese Operation wird überflüssig, wenn auch in der Quelldatei der zu kopierenden Design-Elemente zuvor eine Ink/Stitch-Funktion ausgeführt wurde. Wähle hierzu einfach ein Element in der alten Datei aus, öffne die Parameter und klicke ohne Änderungen vorzunehmen aud `Anwenden und Schließen`.
 {: .notice--info }

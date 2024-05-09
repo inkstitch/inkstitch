@@ -1,7 +1,7 @@
 ---
 title: Füllstich Werkzeuge
 permalink: /de/docs/fill-tools/
-last_modified_at: 2023-05-11
+last_modified_at: 2024-05-09
 toc: true
 ---
 ## Füllstich-Objekte zerlegen
@@ -42,66 +42,71 @@ Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrer
 
 {% include upcoming_release.html %}
 
-The Stripe Editor can be found in `Extensions > Ink/Stitch > Tools: Fill > Tartan`
+Der Farbeditor ist unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Tartan` zu finden.
 
-### Customize
+### Muster anpassen
 
-#### Positioning
+#### Position
 
-The pattern can be rotated, scaled (%) and translated (mm) as a whole
+Das Muster kann als Ganzes rotiert, skaliert (%) und verschoben (mm) werden.
 
-#### Pattern Settings
+#### Muster Einstellungen
 
-* Symmetry: Patterns can be reflected or repeated.
-  * A reflected pattern will reverse the stripes every second time (without repeated the pivot point). This means a pattern with three colors (green, black, yellow) will be rendered as follows:
-  green, black, yellow, black, green, black, yellow, ...
-  * A repeating sett will simply repeat the whole pattern over and over again: green black yellow, green, black, yellow, green, ...
+* Symmetrie: Muster können gespiegelt (symmetrisch) oder wiederholt (asymmetrisch) werden.
+  * Ein gespiegeltes Muster kehrt die Farbreihenfolge in jeder zweiten Iteration um (ohne den äußeren Streifen, den Drehpunkt, zu wiederholen)
+    Dies würde ein Muster mit drei Farben (grün, schwarz, gelb) wie folgt ausgeben: grün, schwarz, gelb, schwarz, grün, schwarz, gelb, ...
+  * Ein wiederholtes Muster wird das gesamte Muster einfach immer wieder wiederholen: grün, schwarz, gelb, grün, schwarz, gelb, grün, ...
+* Gleiche Farbkombination für Kette und Schuss
+  * Ist diese Funktion deaktiviert, können für Kette und Schuss jeweils unterschiedliche Farben festgelegt werden
+  * Ist diese Funktion deaktiviert, folgen Kette und Schuss der gleichen Farbkombination
 
-* Equal threadcount for warp and weft
-  * if disabled you can define different color setts for warp and weft
-  * if enabled warp and weft are the same
+#### Streifen
 
-#### Stripes
+* Farben können über die Schaltfläche `Hinzufügen` hinzugefügt werden
+* Hinter jedem Farbstreifen befindet sich ein `X` mit dem Farben gelöscht werden können
+* 
 
 * Add colors with the `Add` button
 * Remove colors by clicking on `X` behind a stripe
-* Alter stripe positions by click and drag `⁝` (use with care)
-* Enable, disable stripe rendering with the checkbox (☑)
-* When equal threadcount is disabled: warp defines the vertical lines, weft defines the horizontal lines
-* Click on the colored field to select an other color
-* When you want to change a color in multiple stripes at once, enable `Link colors` and equal colors will update simultanously
+* Die Streifenpositionen kann durch Klicken und Ziehen auf der Schaltfläche `⁝` geändert werden (mit Vorsicht verwenden).
+* Soll eine Farbe nur als Platzhalter dienen, kann die Ausgabe als Stickpfad über das Kontrollkästchen deaktiviert werden (☑)
+* Soll Kette und Schuss nicht gleich sein, so werden die Farben für die Kettfäden vertikal und für Schussfäden horiztonal ausgegeben
+* Über das Farbfeld kann die Farbe des jeweiligen Streifens geändert werden
+* Gleiche Farben können gleichzeitig geändert werden, wenn das Kontrollkästchen `Farben verlinken` aktiviert ist
 
-### Palette Code
+### Palettencode
 
-The Ink/Stitch code is what will be saved into the svg, but can also be edited directly.
+Der Ink/Stitch Code ist die Information die in die SVG-Datei eingespeichert wird. Hierüber können alle Parameter des Tartanmusters direkt angepasst werden.
 
-A palette code looks for example like this: `(#000000)/5.0 (#FFFFFF)/?5.0`.
+Ein Palettencode sieht beispielsweise so aus: `(#000000)/5.0 (#FFFFFF)/?5.0`. 
 
-* Stripes are separated by spaces
-* Each color is encapsulated in round brackets `(#000000)`
-* A slash (`/`) indicates a symmetrical/reflective order, whereas three points at the start and end of the code (`...`) represent a asymmetrical/repeating sett `...(#000000)5.0 (#FFFFFF)?5.0...`.
-* A pipe (`|`) is a separator for warp and weft and should only be used if they differ in threadcount
+* Streifen sind durch Leerzeichen getrennt
+* Jede Farbdefinition ist in runde Klammern eingeschlossen `(#000000)`
+* Ein Schrägstrich (`/`) definiert das Muster als symmetrisch (gespiegelt), während drei Punkte (`...`) ein sich wiederholendes (asymmetrisches) Muster repräsentieren `...(#000000)5.0 (#FFFFFF)?5.0...`.
+* Ein senkrechter Strich (`|`) trennt Kette von Schuss und wird nur dann eingesetzt wenn diese nicht gleich sind.
 
-**Info**: The [Scottish Register of Tartans](https://www.tartanregister.gov.uk/) has a huge collection of registered tartan patterns. Ink/Stitch is capable to use their code which they send out per mail and convert it into the Ink/Stitch color code. Please respect their particular license regulations. Make sure to define the width of one tartan thread before you click on `Apply Code`.<br><br>Here's an example code you can try out: `...B24 W4 B24 R2 K24 G24 W2...` ([source](https://www.tartanregister.gov.uk/threadcount))
+**Hinweis**: Das [Scottish Register of Tartans](https://www.tartanregister.gov.uk/) hatte eine große Sammlung and registrierten Tartan-Mustern. Ink/Stitch ist fähig den Code den man sich per Mail zuschicken lassen kann in Ink/Stitch Palettencode umzusetzen. Bitte beachtet dabei die entsprechenden Lizenz-Regulierungen. 
+
+The [Scottish Register of Tartans](https://www.tartanregister.gov.uk/) has a huge collection of registered tartan patterns. Ink/Stitch is capable to use their code which they send out per mail and convert it into the Ink/Stitch color code. Please respect their particular license regulations. Definiere die Breite eines Tartanfadens, bevor du auf „Code anwenden“ klickst.<br><br>Hier ist ein Beispiel zum Ausprobieren: `...B24 W4 B24 R2 K24 G24 W2...` ([Quelle](https://www.tartanregister.gov.uk/threadcount))
 {: .notice--info}
 
-### Embroidery Settings
+### Stickeinstellungen
 
-In the embroidery settings you can decide if you want to render the tartan as a single embroidery element or if you want to receive multiple svg elements which you can edit and transform afterwards to your liking.
+In den Stickeinstellungen kann festgelegt werden, ob das Tartanmuster als ein einziges Stickelement ausgegeben werden soll oder ob es in SVG-Elemente umgewandelt wird, die im Anschluss einzelnd bearbeitet werden können.
 
-#### Embroidery Element
+#### Füllstich-Element
 
-Rendering a tartan as a embroidery element will result in a uniform look with optimal stitch placement. You can set various parameters which can also be refined in the params dialog.
+Tartan als Stickelement führt zu einem einheitlichen Erscheinungsbild mit optimaler Stichplatzierung. Es können verschiedene Parameter eingestellt werden, die im Anschluss im Parameterdialog verfeinert werden können.
 
-Please refer to the params listed on the [tartan fill page](/docs/stitches/tartan-fill/).
+Die Parameter sind auf der Seite für die [Tartanfüllung](/de/docs/stitches/tartan-fill/) genauer beschrieben.
 
-The only param that will only show up here is the `Minimum stripe width for fills`. Stripes smaller than this value will be rendered a running stitch/bean stitch on top of the fill stripes.
+Der einzige Parameter der nur über dieses Menu eingestellt werden kann ist `Minimale Streifenbreite für Füllstich`. Streifen die schmaler sind als dieser Wert werden als Geradstich ausgegeben.
 
-#### SVG Elements
+#### SVG Elemente
 
-* Define a stitch type (Legacy Fill or AutoFill) and choose your prefered stitch settings. Stripes smaller than the `Minimum stripe width for fills` value will turn into strokes (running stitches). Elements can be edited on canvas after clicking on `Apply`.
+* Definiere die Stichart (veraltete Füllung oder Füllstich) und setzte die Parameter den persönlichen Vorlieben entsprechend. Streifen die schmaler sind als `Minimale Streifenbreite für Füllstich` werden als Geradstich ausgegeben. Die einzelnen Elemente können nach einem Klick auf `Anwenden` in Inkscape bearbeitet werden.
 
-**Info**: For AutoFill the final routing will be better than shown in the simulator. Hit `Apply` can run the stitch plan to see the final result.
+**Hinweis**: Für Füllstich-Elemente wird der Stickpfad nach dem Anwenden etwas optimiert und nicht so viele Sprungstiche enthalten wie in der Tartan-Simulation. Trotzdem können Anpassungen nötig sein.
 {: .notice--info}
 
 ## Tutorials zu Füllwerkzeugen

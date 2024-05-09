@@ -31,11 +31,13 @@ Par défaut, l'extension choisira de commencer par le noeud le plus à gauche et
 ![Fill to outline](/assets/images/docs/outline.png)
 
 Cette extensionn aide à reconstruire l'objet original à partir du fichier de points lorsqu'on ne dispose plus du fichier svg de départ. Sélectionner un ou plusieurs chemins de points (en general un remplissage) et cette extension va essayer de trouver leur contour.
+
 ### Usage
 
 - Sélectioner  les éléments que vous souhaitez convertir
 - Exécutez `Extensions > Ink/Stitch > Outils: Trait > Contour...`
-- Cochez  "live preview"  et utilises la scroll bar pour modifier le ratio et trouver la meilleure valeur pour le chemin choisi.
+- Cochez  "live preview" to see the actual result
+- Adjust settings until you are happy with the outcome
 - Cliquez "Appliquer"
 
 ## Satin en Trait {jump-to-stroke}

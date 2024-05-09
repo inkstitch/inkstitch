@@ -1,7 +1,7 @@
 ---
 title: "Tools: Stroke"
 permalink: /docs/stroke-tools/
-last_modified_at: 2024-03-11
+last_modified_at: 2024-05-09
 toc: true
 ---
 ## Autoroute Running Stitch
@@ -27,9 +27,17 @@ Tip: By default, it will choose the left-most extreme node as the starting point
 
 {% include upcoming_release.html %}
 
-This extension helps reconstruct an original  object when one only has  the  stitch file, but  not the svg design file. Select one (or several) stitch object (usually from a fill), and this extension will try to find the outline.
+This extension helps reconstruct an original  object when one only has  the  stitch file, but  not the svg design file.
 
-![Fill to outline](/assets/images/docs/outline.png)
+### Usage
+
+- Select one or more objects
+- Run `Extensions > Ink/Stitch > Werkzeuge: Linie > Außenkontur`
+- Activate Live preview to see the actual result
+- Adjust settings until you are happy with the outcome
+- Click on `Apply`
+
+![Stitchpath to outline](/assets/images/docs/outline.png)
 
 ### Usage
 
