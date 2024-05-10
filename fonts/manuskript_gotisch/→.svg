@@ -27,13 +27,13 @@
      inkscape:window-height="800"
      id="namedview247"
      showgrid="true"
-     inkscape:zoom="0.95034367"
-     inkscape:cx="62.608929"
-     inkscape:cy="77.866568"
+     inkscape:zoom="4.1726027"
+     inkscape:cx="46.373934"
+     inkscape:cy="148.82797"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g1483"
+     inkscape:current-layer="g34"
      inkscape:document-rotation="0"
      inkscape:snap-grids="false"
      inkscape:snap-global="false"
@@ -3694,7 +3694,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-È"
-     style="display:none"
+     style="display:inline"
      id="g34">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
@@ -3742,14 +3742,6 @@ GPL (General Public License) with font-exception and OFL (Open Font License
        style="display:inline"
        transform="matrix(-1,0,0,1,107.923,0)">
       <path
-         d="M 53.923,36 55.4685,23.3603"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.0"
-         inkstitch:running_stitch_tolerance_mm="0.2"
-         id="path211"
-         inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
-      <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:0.999999;stroke-dasharray:0.499999, 0.499999"
          d="M 55.468488,23.360327 59.712653,12.259845"
          id="path24"
@@ -3782,14 +3774,6 @@ GPL (General Public License) with font-exception and OFL (Open Font License
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:zigzag_underlay_inset_mm="0." />
     </g>
-    <path
-       d="M 52.1231,23.7113 54,36"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
-       inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path219"
-       inkstitch:min_stitch_length_mm="0.5"
-       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0"
        d="m 54,36 -4e-5,72"
@@ -18458,7 +18442,7 @@ GPL (General Public License) with font-exception and OFL (Open Font License
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-l"
-     style="display:inline"
+     style="display:none"
      id="g1483">
     <path
        id="autosatinrun5-0"

@@ -23,13 +23,13 @@
      inkscape:window-width="1347"
      inkscape:window-height="800"
      id="namedview5275"
-     inkscape:zoom="1.9701874"
-     inkscape:cx="26.139645"
-     inkscape:cy="93.899695"
+     inkscape:zoom="4.325177"
+     inkscape:cx="26.010496"
+     inkscape:cy="93.86899"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g9325"
+     inkscape:current-layer="g9089"
      inkscape:document-rotation="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -4211,7 +4211,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ê"
-     style="display:none"
+     style="display:inline"
      id="g9089">
     <path
        d="M 3.6817182,79.968188 C 1.8480884,67.509862 10.77571,53.052089 24.089966,52.530813 c 6.631562,-0.522296 9.922172,8.039772 6.39297,13.020251 -3.592277,6.310916 -11.086304,7.960384 -17.262063,10.613907 l -1.009456,0.902172 -1.010992,0.900451"
@@ -4331,13 +4331,6 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:center_walk_underlay="True"
        inkstitch:center_walk_underlay_stitch_length_mm="1.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
-    <path
-       d="M 39.9204,39.7509 29.9738,51.4827"
-       style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="1.2"
-       inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path70"
-       inkstitch:min_stitch_length_mm="0.3" />
     <path
        id="autosatin137"
        style="display:inline;fill:none;stroke:#4e2990"
@@ -4590,13 +4583,6 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:center_walk_underlay_stitch_length_mm="1.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
     <path
-       d="M -6.23328,40.333 1.95268,51.157"
-       style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="1.2"
-       inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path71"
-       inkstitch:min_stitch_length_mm="0.3" />
-    <path
        id="autosatin144"
        style="display:inline;fill:none;stroke:#4e2990"
        d="m 2,51 c 0,0 1,-1 5,-1 8,0 9,3 8,10 l -4,22 c -1,6 0,9 4,9 3,0 8,-3 11,-8 M 1.9053571,51.313936 C 1.9053571,51.313936 3,54 2,60 l -3,18 c -0.6778344,4.067006 -1,8 -1,10 0,8 5,12 12,12 10,0 17.27889,-9.952228 18,-15 0.282843,-1.979899 -0.708036,-2.037247 -1.708036,-2.037247 M -1.0297619,71.716554 14.344346,70.197804"
@@ -4624,7 +4610,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
      style="display:none"
      id="g9101">
     <path
-       d="M 4.62371,83.8941 C 5.35086,74.8029 8.23796,65.9672 8.46582,56.8412 8.01072,54.2491 5.65394,52.5729 3.41947,51.5485 L 1.73562,39.1321 C 1.74069,36.2634 1.780398,33.38309 1.418683,30.53105"
+       d="M 4.62371,83.8941 C 5.35086,74.8029 8.23796,65.9672 8.46582,56.8412 8.01072,54.2491 5.65394,52.5729 3.41947,51.5485 M 1.73562,39.1321 C 1.74069,36.2634 1.780398,33.38309 1.418683,30.53105"
        style="fill:none;stroke:#4e2990;stroke-dasharray:0.5, 0.5"
        inkstitch:running_stitch_length_mm="1.2"
        id="autosatinrun113"
@@ -4632,7 +4618,8 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm="0.3"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:running_stitch_tolerance_mm="0.2" />
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       sodipodi:nodetypes="ccccc" />
     <g
        id="g24"
        style="fill:none;stroke:#4e2990">
@@ -4838,13 +4825,6 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
        inkstitch:zigzag_spacing_mm="0.25"
        inkstitch:center_walk_underlay_stitch_length_mm="1.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
-    <path
-       d="m 12.4252,42.8664 6.6243,13.0967"
-       style="fill:none;stroke:#4e2990;stroke-width:1px;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="1.2"
-       inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path72"
-       inkstitch:min_stitch_length_mm="0.3" />
     <path
        id="autosatin99"
        style="display:inline;fill:none;stroke:#4e2990;stroke-opacity:1"
@@ -11417,7 +11397,7 @@ Copyright (c) 2016 by Tanya Cherkiz. Art-director Jovanny Lemonad, technical eng
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-X"
-     style="display:inline"
+     style="display:none"
      id="g9325">
     <path
        d="m 18.707171,83.874735 c -3.03459,4.547606 -4.810793,12.25004 1.062291,15.453126"

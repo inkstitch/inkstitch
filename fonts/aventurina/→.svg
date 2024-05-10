@@ -28,13 +28,13 @@
      inkscape:window-height="796"
      id="namedview1432"
      showgrid="true"
-     inkscape:zoom="1.6735856"
-     inkscape:cx="69.909781"
-     inkscape:cy="83.05521"
+     inkscape:zoom="5.195882"
+     inkscape:cx="24.538664"
+     inkscape:cy="58.892793"
      inkscape:window-x="0"
      inkscape:window-y="153"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g2181"
+     inkscape:current-layer="g2661"
      inkscape:document-units="px"
      inkscape:document-rotation="0"
      inkscape:snap-global="false"
@@ -2111,7 +2111,7 @@ SushiHueDesign(c)2019
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-!"
      id="g2177"
-     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
     <path
        d="M 14.0073,79.1409 18.7194,35.966 14.1339,34"
        id="path9709-9-8"
@@ -15997,12 +15997,12 @@ SushiHueDesign(c)2019
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ê"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g2661">
     <path
-       d="M 8.20313,92.1387 6.29883,74.2676 C 6.23849,67.0571 8.9512,60.8253 15.5273,55.957 v 0 l 9.96573,0.628114 5.07217,-11.751614 -8.62257,-5.96647 -4.4872,3.58578 -4.30073,2.27779"
+       d="M 8.20313,92.1387 6.29883,74.2676 C 6.23849,67.0571 8.9512,60.8253 15.5273,55.957 v 0 l 9.96573,0.628114 M 30.5652,44.8335 21.94263,38.86703 17.45543,42.45281 13.1547,44.7306"
        id="path7922-7"
-       sodipodi:nodetypes="ccc"
+       sodipodi:nodetypes="ccccccccc"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2.5"
        style="stroke-width:0.25;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0"

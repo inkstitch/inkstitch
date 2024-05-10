@@ -27,13 +27,13 @@
      inkscape:window-height="800"
      id="namedview1755"
      showgrid="true"
-     inkscape:zoom="3.6310324"
-     inkscape:cx="101.21088"
-     inkscape:cy="63.342866"
+     inkscape:zoom="3.9856254"
+     inkscape:cx="74.141438"
+     inkscape:cy="72.259676"
      inkscape:window-x="4"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g3841"
+     inkscape:current-layer="g3877"
      inkscape:document-rotation="0"
      inkscape:snap-global="true"
      inkscape:snap-grids="false"
@@ -95,7 +95,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
    id="min_stitch_len_mm6094">0</inkstitch:min_stitch_len_mm>
 <inkstitch:collapse_len_mm
    id="collapse_len_mm2318">3</inkstitch:collapse_len_mm>
-<inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
+<inkstitch:inkstitch_svg_version>2</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs1751">
@@ -15623,7 +15623,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-é"
-     style="display:inline"
+     style="display:none"
      id="g3841">
     <g
        id="g161">
@@ -16769,86 +16769,8 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ü"
-     style="display:none"
+     style="display:inline"
      id="g3877">
-    <g
-       id="g25">
-      <path
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
-         d="m 30.7039,129.299 c 0.913287,-10.6487 1.43019,-21.3907 2.58967,-31.9814 1.57227,-4.11375 3.75189,-9.85555 5.78989,-15.7782 m 5.35471,-19.1025 1.57282,-6.26604 6.75518,-0.0059 M 67.98477,56.1517 83.34247,56.13832 81.0335,45.3657"
-         id="autosatinrun96-3"
-         sodipodi:nodetypes="cccccccc"
-         inkstitch:running_stitch_length_mm="2.5"
-         inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
-      <path
-         id="path43869-16-3"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 81.789433,45.365741 c 6.523183,-0.682667 12.73594,3.550691 11.875,10.641785 M 77.199893,45.365741 C 71.449136,45.933007 65.477115,49.791894 65.91443,56.257526 m -2.196853,-4.629221 h 32.001016"
-         inkstitch:satin_column="True"
-         inkstitch:ties="3"
-         inkstitch:zigzag_spacing_mm="0.3"
-         inkstitch:pull_compensation_mm="0."
-         inkstitch:zigzag_underlay="True"
-         inkstitch:max_stitch_length_mm="6"
-         inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:reverse_rails="none"
-         inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:zigzag_underlay_inset_mm="0.1" />
-      <path
-         d="m 69.5478,56.2248 11.9297,8.405"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
-         inkstitch:running_stitch_length_mm="2.5"
-         inkstitch:running_stitch_tolerance_mm="0.2"
-         id="path139"
-         inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
-      <path
-         id="path13744"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 82.233433,64.629798 c 4.77532,-0.525125 11.001015,-3.063677 11.431,-8.622272 m -17.378,8.622272 C 71.518126,64.728403 65.867972,61.600735 65.91443,56.257526 m -2.623533,1.486529 h 32.854376"
-         inkstitch:satin_column="True"
-         inkstitch:ties="0"
-         inkstitch:force_lock_stitches="True"
-         inkstitch:zigzag_spacing_mm="0.3"
-         inkstitch:pull_compensation_mm="0."
-         inkstitch:zigzag_underlay="True"
-         inkstitch:max_stitch_length_mm="6"
-         inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:reverse_rails="none"
-         inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:zigzag_underlay_inset_mm="0.1" />
-    </g>
-    <g
-       id="g26">
-      <path
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
-         d="M 54.2183,56.4001 C 48.1696,54.9833 42.121,53.5665 36.0724,52.1496 l 3.8834,-6.7839"
-         id="path16553"
-         inkstitch:running_stitch_length_mm="2.5"
-         inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3" />
-      <path
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 39.199893,45.365741 c -7.774171,-0.0832 -15.080629,9.180112 -9.254727,15.954283 2.135264,2.240886 5.292304,3.310207 8.341269,3.309774 m 5.502998,-19.264057 c 8.642534,-1.998472 16.181687,9.181365 9.345895,15.645113 -2.454727,2.14328 -5.688236,3.303132 -8.901895,3.618944 M 24.889679,54.188386 h 32.996602"
-         id="path43869-16-5-1"
-         inkstitch:satin_column="True"
-         inkstitch:ties="0"
-         inkstitch:force_lock_stitches="True"
-         inkstitch:zigzag_spacing_mm="0.3"
-         inkstitch:pull_compensation_mm="0."
-         inkstitch:zigzag_underlay="True"
-         inkstitch:max_stitch_length_mm="6"
-         inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:reverse_rails="none"
-         inkstitch:min_stitch_length_mm="0.5"
-         inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:zigzag_underlay_inset_mm="0.1" />
-    </g>
     <path
        id="autosatinrun65"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
