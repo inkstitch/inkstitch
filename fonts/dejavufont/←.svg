@@ -22,11 +22,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="9.1410167"
-     inkscape:cx="11.103798"
-     inkscape:cy="37.413781"
+     inkscape:zoom="10.033694"
+     inkscape:cx="9.3186018"
+     inkscape:cy="54.117655"
      inkscape:document-units="mm"
-     inkscape:current-layer="g13780"
+     inkscape:current-layer="layer9"
      showgrid="true"
      inkscape:window-width="1778"
      inkscape:window-height="1041"
@@ -9689,7 +9689,7 @@
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      inkscape:label="GlyphLayer-ö"
      id="layer9"
      inkscape:groupmode="layer">
@@ -9762,12 +9762,13 @@
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
     <path
        id="path29518-5-19-1-1"
-       d="M 4.08359,4.76285 3.82304,7.95549 C 1.78011,11.8948 1.9504,14.9692 3.58699,18.0805 l 2.52038,1.1862"
+       d="M 3.82304,7.95549 C 1.78011,11.8948 1.9504,14.9692 3.58699,18.0805 l 2.52038,1.1862"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.4, 0.1;stroke-dashoffset:0;stroke-opacity:1"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2.0"
        inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       inkstitch:min_jump_stitch_length_mm="3"
+       sodipodi:nodetypes="ccc" />
     <path
        id="path16104-0-3"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:22.5778px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Semi-Condensed';letter-spacing:0px;word-spacing:0px;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -11519,7 +11520,7 @@
   </g>
   <g
      id="g13780"
-     style="display:inline"
+     style="display:none"
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-w">
     <path
