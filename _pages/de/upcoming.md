@@ -1,6 +1,6 @@
 ---
 title: "Neue Funktionen, Aktualisierungen und Fehlerbehebungen für die nächste Ink/Stitch verison (3.1.0)"
-permalink: /upcoming/
+permalink: /de/upcoming/
 last_modified_at: 2024-05-09
 sidebar:
   nav: pages
