@@ -26,15 +26,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="true"
-     inkscape:zoom="1.126117"
-     inkscape:cx="68.820556"
-     inkscape:cy="130.53705"
+     inkscape:zoom="3.4961887"
+     inkscape:cx="20.736867"
+     inkscape:cy="108.11773"
      inkscape:window-width="1440"
      inkscape:window-height="798"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g15294"
+     inkscape:current-layer="layer4"
      inkscape:document-units="px"
      inkscape:snap-global="true"
      showguides="true"
@@ -11160,7 +11160,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="GlyphLayer-ë"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
     <path
        d="m 16.3831,133.704 c 1.42778,-11.9792 0.775625,-24.0654 0.960998,-36.0949 l 5.782002,1.0161 c 7.52981,-0.06081 15.0605,0.299202 22.589,0.033 l 0.7221,-3.5825"
        inkstitch:running_stitch_length_mm="2"
@@ -11226,7 +11226,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       d="M 8.83741,64.4659 20.1525,50.6656 c -0.577333,-2.26947 1.18782,-5.1655 3.71538,-4.95114 m 10.0994,0.299899 c 1.97893,1.41233 3.95786,2.82466 5.93679,4.237"
+       d="m 20.1525,50.6656 c -0.577333,-2.26947 1.18782,-5.1655 3.71538,-4.95114 m 10.0994,0.299899 c 1.97893,1.41233 3.95786,2.82466 5.93679,4.237"
        id="autosatinrun23-8-1-3-9-7-8"
        inkstitch:ties="3"
        inkstitch:running_stitch_length_mm="2"
@@ -13297,7 +13297,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-œ"
-     style="display:inline;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1"
      id="g15294">
     <path
        id="path32847"
