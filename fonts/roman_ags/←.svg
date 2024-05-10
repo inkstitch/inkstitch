@@ -27,13 +27,13 @@
      inkscape:window-height="800"
      id="namedview1755"
      showgrid="true"
-     inkscape:zoom="1.2038014"
-     inkscape:cx="71.855704"
-     inkscape:cy="107.99123"
+     inkscape:zoom="2.6427203"
+     inkscape:cx="34.623415"
+     inkscape:cy="105.95143"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g3885"
+     inkscape:current-layer="g3557"
      inkscape:document-rotation="0"
      inkscape:snap-global="true"
      inkscape:snap-grids="false"
@@ -6641,18 +6641,19 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-:"
-     style="display:none"
+     style="display:inline"
      id="g3557">
     <path
        id="autosatinrun32-6"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 2"
-       d="m 27.8685,134.547 c 0.335619,-5.9817 0.200947,-12.0196 1.62909,-17.6383 L 33.53,97.008 c 1.13375,-6.49222 6.36164,-12.0451 3.90865,-19.0643"
+       d="m 27.8685,134.547 c 0.335619,-5.9817 0.200947,-12.0196 1.62909,-17.6383 M 33.53,97.008 c 1.13375,-6.49222 6.36164,-12.0451 3.90865,-19.0643"
        inkstitch:ties="3"
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_tolerance_mm="0.2"
-       inkstitch:running_stitch_length_mm="2.5" />
+       inkstitch:running_stitch_length_mm="2.5"
+       sodipodi:nodetypes="cccc" />
     <path
        inkscape:label="Auto-remplissage satin 3"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -16936,9 +16937,9 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        inkstitch:short_stitch_distance_mm="0.22" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
-       d="m 29.1788,128.043 -4.6803,1.243 c 0.856816,-10.6575 7.30098,-20.0419 10.5956,-30.119 4.1639,-7.50766 6.68,-17.9606 -5.30481,-18.7303 L 25.2781,56.7574 34.43124,56.66191 M 49.457,56.5051 63.698,56.3565"
+       d="m 29.1788,128.043 -4.6803,1.243 c 0.856816,-10.6575 7.30098,-20.0419 10.5956,-30.119 4.1639,-7.50766 6.68,-17.9606 -5.30481,-18.7303 M 25.2781,56.7574 34.43124,56.66191 M 49.457,56.5051 63.698,56.3565"
        id="autosatinrun96-3-7"
-       sodipodi:nodetypes="cccc"
+       sodipodi:nodetypes="cccccccc"
        inkstitch:min_stitch_length_mm="0.5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_tolerance_mm="0.2"
@@ -17989,7 +17990,7 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-œ"
-     style="display:inline"
+     style="display:none"
      id="g3885">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953"
