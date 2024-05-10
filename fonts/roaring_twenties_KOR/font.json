@@ -1,10 +1,10 @@
 {
     "name": "Roaring Twenties KOR",
     "description": "Roaring Twenties KOR is a font of size approximatively 16 mm. It can be scaled down to 70% and up to 150%",
-     "keywords": [
+    "keywords": [
         "display"
     ],
-     "size": 20,
+    "size": 20,
     "leading": 80,
     "auto_satin": false,
     "reversible": false,
@@ -56,7 +56,7 @@
         "G": 63,
         "H": 57,
         "I": 32,
-	"İ": 32,
+        "İ": 32,
         "J": 44,
         "K": 56,
         "L": 43,
@@ -89,7 +89,7 @@
         "g": 46,
         "h": 58,
         "i": 29,
-	"ı": 29,
+        "ı": 29,
         "j": 31,
         "k": 51,
         "l": 29,
@@ -248,8 +248,7 @@
         "ﬃ": 94,
         "ﬄ": 94
     },
-    "kerning_pairs": {
-    },
+    "kerning_pairs": {},
     "glyphs": [
         "\"",
         "!",
@@ -341,7 +340,6 @@
         "«",
         "¯",
         "°",
-        "´",
         "»",
         "¿",
         "À",
@@ -399,7 +397,6 @@
         "ù",
         "ú",
         "û",
-        "ü",
         "ÿ",
         "Ā",
         "ā",
