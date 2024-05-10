@@ -60,12 +60,12 @@ class Outline(InkstitchExtension):
         return d
 
     def element_to_outline(self, element):
+        element_id = element.label or element.get_id()
         if element.tag_name == 'g':
             for element in element.iterdescendants(SVG_PATH_TAG):
                 self.element_to_outline(element)
             return
         elif element.tag_name != 'path':
-            element_id = element.label or element.get_id()
             errormsg(_("{element_id} is not a path element. "
                        "This extension is designed to generate an outline of an embroidery pattern.").format(element_id=element_id))
             return
