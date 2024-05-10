@@ -44,7 +44,7 @@ class FontSampleFrame(wx.Frame):
         scale_spinner_label = wx.StaticText(self.settings, label=_("Scale (%)"))
         self.scale_spinner = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=1000, initial=100)
         max_line_width_label = wx.StaticText(self.settings, label=_("Max. line width"))
-        self.max_line_width = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=5000, initial=500)
+        self.max_line_width = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=5000, initial=180)
 
         grid_settings_sizer.Add(direction_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.direction, 0, wx.EXPAND, 0)
