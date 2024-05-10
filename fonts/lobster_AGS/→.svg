@@ -28,13 +28,13 @@
      inkscape:window-height="800"
      id="namedview3559"
      showgrid="true"
-     inkscape:zoom="2.4245055"
-     inkscape:cx="76.510447"
-     inkscape:cy="57.331278"
+     inkscape:zoom="7.5272185"
+     inkscape:cx="28.895136"
+     inkscape:cy="111.86071"
      inkscape:window-x="121"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g6475"
+     inkscape:current-layer="g44"
      inkscape:document-rotation="0"
      inkscape:snap-global="false"
      inkscape:pagecheckerboard="0"
@@ -1943,7 +1943,7 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
   </g>
   <g
      id="g44"
-     style="display:none"
+     style="display:inline"
      inkscape:label="GlyphLayer-Ë"
      inkscape:groupmode="layer">
     <path
@@ -1965,14 +1965,15 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
        inkstitch:running_stitch_tolerance_mm="0.2"
        inkstitch:running_stitch_length_mm="2" />
     <g
-       id="g49">
+       id="g49"
+       sodipodi:insensitive="true">
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 23.4082,19.7905 2.5612,-5.84297 17.125,-0.125 1.1145,6.91517"
+         d="m 23.4082,19.7905 2.5612,-5.84297 m 17.125,-0.125 1.1145,6.91517"
          id="path45"
          inkstitch:ties="3"
          inkscape:label="path22332-1"
-         sodipodi:nodetypes="ccc"
+         sodipodi:nodetypes="cccc"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
@@ -2022,13 +2023,14 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
          inkstitch:pull_compensation_mm="0.1" />
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 37.5948,13.6209 -6.5882,0.2017 -4.75,-5.02537"
+         d="m 31.0066,13.8226 -4.75,-5.02537"
          id="path48"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         sodipodi:nodetypes="cc" />
       <path
          id="path49"
          style="display:inline;fill:none;stroke:#000000"
@@ -4916,16 +4918,17 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
     <g
        inkscape:groupmode="layer"
        id="g22330"
-       style="display:none">
+       style="display:inline">
       <path
          inkstitch:ties="3"
          id="path22332"
-         d="M 26.25,42.375 26.375,37.0245 43.5,36.8995"
+         d="m 26.25,42.375 0.125,-5.3505"
          style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         sodipodi:nodetypes="cc" />
       <g
          id="g68746">
         <path
@@ -5906,14 +5909,15 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
        id="g79">
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="M 8.13374,94.7552 C 8.01756,84.9683 7.28198,74.5931 11.9464,65.6107 c 1.4843,-2.96713 3.41819,-5.69624 5.63395,-8.16049 M 17.4642,41.9933 c 0.853732,-1.94766 1.70746,-3.89531 2.5612,-5.84297 5.70833,-0.04167 11.4167,-0.08333 17.125,-0.125 l 1.1144,6.91517"
+         d="M 8.13374,94.7552 C 8.01756,84.9683 7.28198,74.5931 11.9464,65.6107 c 1.4843,-2.96713 3.41819,-5.69624 5.63395,-8.16049 M 17.4642,41.9933 c 0.853732,-1.94766 1.70746,-3.89531 2.5612,-5.84297 m 17.125,-0.125 1.1144,6.91517"
          id="path22332-1"
          inkstitch:ties="3"
          inkscape:label="path22332-1"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         sodipodi:nodetypes="ccccccc" />
       <path
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay_inset_mm="0"
@@ -5958,13 +5962,14 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
          inkstitch:pull_compensation_mm="0.1" />
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="M 33.5173,36.219 25.0625,36.0254 C 23.4792,34.3502 21.8958,32.6751 20.3125,31"
+         d="M 25.0625,36.0254 C 23.4792,34.3502 21.8958,32.6751 20.3125,31"
          id="path22334-5"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         sodipodi:nodetypes="cc" />
       <path
          id="path22284-5-2"
          style="display:inline;fill:none;stroke:#000000"
@@ -6649,9 +6654,9 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
         <path
            inkstitch:ties="3"
            id="path22332-1-1"
-           d="m 11.7802,41.3257 1.4793,-5.0216 14.1404,-0.4046 -0.7697,6.8362"
+           d="m 11.7802,41.3257 1.4793,-5.0216 m 14.1404,-0.4046 -0.7697,6.8362"
            style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-           sodipodi:nodetypes="ccc"
+           sodipodi:nodetypes="cccc"
            inkstitch:min_stitch_length_mm=".5"
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:running_stitch_tolerance_mm="0.2"
@@ -6702,12 +6707,13 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
       <path
          inkstitch:ties="3"
          id="path22334-5-4"
-         d="M 21.90503,35.952923 H 10.274929 L 10.212429,31"
+         d="M 10.274929,35.952923 10.212429,31"
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         sodipodi:nodetypes="cc" />
       <path
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay_inset_mm="0"
@@ -7711,10 +7717,10 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
        id="g9">
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 19.7503,57.5901 c -1.96751,0.255951 -7.68914,3.34288 -7.81159,2.20747 -0.06883,-0.6383 1.63191,-2.61104 6.76403,-7.17137 M 16.549,42.4205 l 4.226,-6.396 2.4015,-0.01909 10.5353,-0.08375 3.49042,-5.17216 -2.54142,11.6814"
+         d="m 19.7503,57.5901 c -1.96751,0.255951 -7.68914,3.34288 -7.81159,2.20747 -0.06883,-0.6383 1.63191,-2.61104 6.76403,-7.17137 M 16.549,42.4205 l 4.226,-6.396 2.4015,-0.01909 M 33.7118,35.92166 37.20222,30.7495 34.6608,42.4309"
          id="path22332-1-1-9"
          inkstitch:ties="3"
-         sodipodi:nodetypes="cscccccc"
+         sodipodi:nodetypes="csccccccc"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
@@ -7763,13 +7769,14 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
          inkstitch:pull_compensation_mm="0.1" />
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="M 31.00503,35.952923 H 19.374929 L 19.312429,31"
+         d="M 19.374929,35.952923 19.312429,31"
          id="path22334-5-4-5"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         sodipodi:nodetypes="cc" />
       <path
          id="path22284-5-2-9-0"
          style="display:inline;fill:none;stroke:#000000"
@@ -8711,10 +8718,11 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
          inkstitch:running_stitch_tolerance_mm="0.2" />
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 22.168,42.4093 0.607,-6.3848 15.7249,-0.125"
+         d="m 22.168,42.4093 0.607,-6.3848"
          id="path22332-1-1-9-2"
          inkstitch:running_stitch_length_mm="2"
-         inkstitch:running_stitch_tolerance_mm="0.2" />
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         sodipodi:nodetypes="cc" />
       <path
          d="m 37.5826,42.7055 c -2.3895,-0.8363 -4.6502,-3.3679 -4.5958,-5.8487 m 7.2469,5.9576 c 2.4928,-0.6673 4.6946,-3.1573 4.7503,-5.6945 m -14.858044,1.282417 h 17.545886"
          id="path22302-1-7-2-8"
@@ -8760,12 +8768,13 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
       <path
          inkstitch:ties="3"
          id="path22334-5-4-5-9"
-         d="M 45.3425,36.8593 33.005,35.9529 H 21.3749 L 21.3124,31"
+         d="M 45.3425,36.8593 33.005,35.9529 m -11.6301,0 L 21.3124,31"
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         sodipodi:nodetypes="cccc" />
       <path
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay_inset_mm="0"
@@ -10651,7 +10660,7 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
      id="g51"
      inkscape:label="GlyphLayer-Ä"
      inkscape:groupmode="layer"
-     style="display:inline">
+     style="display:none">
     <path
        d="m 10.0806,97.3125 c -0.713139,4.07347 1.04307,6.48627 2.14916,10.5578 L 17,111"
        style="fill:none;stroke:#000000;stroke-width:1.00157;stroke-miterlimit:4;stroke-dasharray:0.5, 0.5;stroke-opacity:1"
@@ -10754,11 +10763,11 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
        transform="translate(24)">
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 23.4082,19.7905 2.5612,-5.84297 17.125,-0.125 1.1145,6.91517"
+         d="m 23.4082,19.7905 2.5612,-5.84297 m 17.125,-0.125 1.1145,6.91517"
          id="path62"
          inkstitch:ties="3"
          inkscape:label="path22332-1"
-         sodipodi:nodetypes="ccc"
+         sodipodi:nodetypes="cccc"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
@@ -10808,13 +10817,14 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
          inkstitch:pull_compensation_mm="0.1" />
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 39.4614,14.0162 -8.4548,-0.1936 -4.75,-5.02537"
+         d="m 31.0066,13.8226 -4.75,-5.02537"
          id="path65"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         sodipodi:nodetypes="cc" />
       <path
          id="path66"
          style="display:inline;fill:none;stroke:#000000"
@@ -10933,14 +10943,15 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
        transform="translate(10)">
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 23.4082,19.7905 c 0.853732,-1.94766 1.70746,-3.89531 2.5612,-5.84297 5.70833,-0.04167 11.4167,-0.08333 17.125,-0.125 l 1.1145,6.91517"
+         d="m 23.4082,19.7905 c 0.853732,-1.94766 1.70746,-3.89531 2.5612,-5.84297 m 17.125,-0.125 1.1145,6.91517"
          id="path67"
          inkstitch:ties="3"
          inkscape:label="path22332-1"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         sodipodi:nodetypes="cccc" />
       <path
          inkstitch:center_walk_underlay="False"
          inkstitch:zigzag_underlay_inset_mm="0"
@@ -10986,13 +10997,14 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
          inkstitch:pull_compensation_mm="0.1" />
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 37.6281,13.5184 -6.6215,0.3042 c -1.58333,-1.67512 -3.16667,-3.35025 -4.75,-5.02537"
+         d="m 31.0066,13.8226 -4.75,-5.02537"
          id="path70"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         sodipodi:nodetypes="cc" />
       <path
          id="path71"
          style="display:inline;fill:none;stroke:#000000"
@@ -11078,11 +11090,11 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
        transform="translate(28,-2)">
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 23.4082,19.7905 2.5612,-5.84297 17.125,-0.125 1.1145,6.91517"
+         d="m 23.4082,19.7905 2.5612,-5.84297 m 17.125,-0.125 1.1145,6.91517"
          id="path72"
          inkstitch:ties="3"
          inkscape:label="path22332-1"
-         sodipodi:nodetypes="ccc"
+         sodipodi:nodetypes="cccc"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
@@ -11132,13 +11144,14 @@ Copyright (c) 2011 by Pablo Impallari. All rights reserved.
          inkstitch:pull_compensation_mm="0.1" />
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 37.671,13.3498 -6.6644,0.4728 -4.75,-5.02537"
+         d="m 31.0066,13.8226 -4.75,-5.02537"
          id="path75"
          inkstitch:ties="3"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:running_stitch_tolerance_mm="0.2"
-         inkstitch:running_stitch_length_mm="2" />
+         inkstitch:running_stitch_length_mm="2"
+         sodipodi:nodetypes="cc" />
       <path
          id="path77"
          style="display:inline;fill:none;stroke:#000000"
