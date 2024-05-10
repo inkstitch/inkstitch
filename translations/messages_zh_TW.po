@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-08 00:56+0000\n"
-"PO-Revision-Date: 2024-05-08 00:57\n"
+"POT-Creation-Date: 2024-05-10 01:08+0000\n"
+"PO-Revision-Date: 2024-05-10 01:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 00:56+0000\n"
+"POT-Creation-Date: 2024-05-10 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2862,8 +2862,16 @@ msgstr ""
 msgid "Please choose one or more commands to attach."
 msgstr ""
 
-#: lib/extensions/outline.py:23
+#: lib/extensions/outline.py:29
 msgid "Please select one or more shapes to convert to their outline."
+msgstr ""
+
+#: lib/extensions/outline.py:69
+msgid "{element_id} is not a path element. This extension is designed to generate an outline of an embroidery pattern."
+msgstr ""
+
+#: lib/extensions/outline.py:75
+msgid "Could not generate path from element {element_id} with the given settings."
 msgstr ""
 
 #: lib/extensions/palette_split_text.py:16
@@ -6005,11 +6013,39 @@ msgid "Outline"
 msgstr ""
 
 #: inx/inkstitch_outline.inx:14
-msgid "Ratio"
+msgid "Keep original element(s)"
 msgstr ""
 
-#: inx/inkstitch_outline.inx:15
-msgid "Allow Holes"
+#: inx/inkstitch_outline.inx:19
+msgid "Threshold (mm²)"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:19
+msgid "Removes smaller shape areas than that"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:21
+msgid "Buffer (mm)"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:21
+msgid "Enlarge strokes by this amount"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:23
+msgid "Smoothness (mm)"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:23
+msgid "Smooth path by this amount"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:28
+msgid "Inset (mm)"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:28
+msgid "Counteract the buffer effect"
 msgstr ""
 
 #: inx/inkstitch_output_COL.inx:3

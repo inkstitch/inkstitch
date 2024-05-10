@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-08 00:56+0000\n"
-"PO-Revision-Date: 2024-05-08 00:57\n"
+"POT-Creation-Date: 2024-05-10 01:08+0000\n"
+"PO-Revision-Date: 2024-05-10 01:09\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 00:56+0000\n"
+"POT-Creation-Date: 2024-05-10 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1717,7 +1717,7 @@ msgstr "Erhöht oder verringert den Reihenabstand zum Ende hin."
 
 #: lib/elements/fill_stitch.py:356
 msgid "Stagger rows this many times before repeating"
-msgstr "Reihenanzahl bis sich das Muster wiederholt"
+msgstr "Stichversatz"
 
 #: lib/elements/fill_stitch.py:357 lib/elements/satin_column.py:203
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
@@ -1733,7 +1733,7 @@ msgstr "Der letzte Stich einer Reihe ist sehr nah an dem ersten Stich der nächs
 
 #: lib/elements/fill_stitch.py:389
 msgid "Flip fill (start right-to-left)"
-msgstr "Rückwärtsfüllung (von rechts nach links)"
+msgstr "Füllung umkehren (von rechts nach links)"
 
 #: lib/elements/fill_stitch.py:390
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
@@ -1741,7 +1741,7 @@ msgstr "Die Umkehr-Option kann bei der Reihenfolge des Stichpfads helfen. Wenn U
 
 #: lib/elements/fill_stitch.py:402
 msgid "Reverse fill"
-msgstr "Füllung umkehren"
+msgstr "Rückwärtsfüllung"
 
 #: lib/elements/fill_stitch.py:403
 msgid "Reverses fill path."
@@ -1825,11 +1825,11 @@ msgstr "Stichlänge im Zick-Zack Modus."
 
 #: lib/elements/fill_stitch.py:548
 msgid "Zig-zag width"
-msgstr ""
+msgstr "Zick-Zack Breite"
 
 #: lib/elements/fill_stitch.py:549
 msgid "Width of the zig-zag line."
-msgstr ""
+msgstr "Die Breite der Zick-Zack-Linie."
 
 #: lib/elements/fill_stitch.py:562 lib/gui/tartan/embroidery_panel.py:42
 msgid "Rows per tartan thread"
@@ -2103,7 +2103,7 @@ msgstr "Einfach"
 
 #: lib/elements/satin_column.py:147
 msgid "Staggered"
-msgstr "Gemustert"
+msgstr "Stichversatz"
 
 #: lib/elements/satin_column.py:151
 msgid "Split Method"
@@ -2143,7 +2143,7 @@ msgstr "Wenn leer, wir er Wert für die maximale Stichlänge verwendet. Kleinere
 
 #: lib/elements/satin_column.py:200
 msgid "Stagger split stitches this many times before repeating"
-msgstr "Reihenanzahl bis sich das Muster wiederholt"
+msgstr "Stichversatz"
 
 #: lib/elements/satin_column.py:212
 msgid "Short stitch inset"
@@ -2388,7 +2388,7 @@ msgstr "Diese Einstellung überschreibt den Wert \"Anzahl der Linien\""
 
 #: lib/elements/stroke.py:226
 msgid "Stagger lines this many times before repeating"
-msgstr "Reihenanzahl bis sich das Muster wiederholt"
+msgstr "Stichversatz"
 
 #: lib/elements/stroke.py:227
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. A value of 0 (default) disables staggering and instead stitches evenly.For linear ripples only."
@@ -2868,9 +2868,17 @@ msgstr "Bitte Objekte auswählen, die mit Befehlen verknüpft werden sollen."
 msgid "Please choose one or more commands to attach."
 msgstr "Bitte einen oder mehrere Befehle auswählen."
 
-#: lib/extensions/outline.py:23
+#: lib/extensions/outline.py:29
 msgid "Please select one or more shapes to convert to their outline."
 msgstr "Bitte mindestens ein Element auswählen, um eine Außenkontur zu erstellen."
+
+#: lib/extensions/outline.py:69
+msgid "{element_id} is not a path element. This extension is designed to generate an outline of an embroidery pattern."
+msgstr ""
+
+#: lib/extensions/outline.py:75
+msgid "Could not generate path from element {element_id} with the given settings."
+msgstr ""
 
 #: lib/extensions/palette_split_text.py:16
 msgid "Please select one or more text elements to split lines."
@@ -3705,7 +3713,7 @@ msgstr "Diese Erweiterung füllt Formen mit Tartan (oder Tartan-ähnlichen) Must
 
 #: lib/gui/tartan/help_panel.py:33 lib/gui/tartan/help_panel.py:34
 msgid "https://inkstitch.org/docs/stitches/tartan-fill"
-msgstr "https://inkstitch.org/de/docs/stitches/tartan-fill"
+msgstr ""
 
 #: lib/gui/tartan/main_panel.py:53
 msgid "Customize"
@@ -6019,12 +6027,40 @@ msgid "Outline"
 msgstr "Außenkontur"
 
 #: inx/inkstitch_outline.inx:14
-msgid "Ratio"
-msgstr "Auflösung"
+msgid "Keep original element(s)"
+msgstr ""
 
-#: inx/inkstitch_outline.inx:15
-msgid "Allow Holes"
-msgstr "Löcher erlauben"
+#: inx/inkstitch_outline.inx:19
+msgid "Threshold (mm²)"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:19
+msgid "Removes smaller shape areas than that"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:21
+msgid "Buffer (mm)"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:21
+msgid "Enlarge strokes by this amount"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:23
+msgid "Smoothness (mm)"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:23
+msgid "Smooth path by this amount"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:28
+msgid "Inset (mm)"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:28
+msgid "Counteract the buffer effect"
+msgstr ""
 
 #: inx/inkstitch_output_COL.inx:3
 msgid "COL file output"
