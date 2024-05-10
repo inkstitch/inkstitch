@@ -5,7 +5,7 @@ from shapely.geometry import LineString, MultiPoint, Point
 from shapely.ops import nearest_points
 
 from .. import tiles
-from ..debug import debug
+from ..debug.debug import debug
 from ..i18n import _
 from ..utils.clamp_path import clamp_path_to_polygon
 from ..utils.geometry import Point as InkStitchPoint

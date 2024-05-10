@@ -16,7 +16,7 @@ from shapely.ops import snap
 from shapely.strtree import STRtree
 
 
-from ..debug import debug
+from ..debug.debug import debug
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
 from ..utils import cache

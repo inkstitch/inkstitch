@@ -4,7 +4,7 @@ from math import degrees
 from inkex import DirectedLineSegment, Path
 from shapely.geometry import LineString
 
-from ..debug import debug
+from ..debug.debug import debug
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
 from ..utils import string_to_floats

@@ -11,7 +11,7 @@ import numpy as np
 from inkex import bezier, BaseElement
 
 from ..commands import find_commands
-from ..debug import debug
+from ..debug.debug import debug
 from ..exceptions import InkstitchException, format_uncaught_exception
 from ..i18n import _
 from ..marker import get_marker_elements_cache_key_data
