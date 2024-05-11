@@ -94,7 +94,7 @@ class StrokeToLpeSatin(InkstitchExtension):
                                        'prop_units': "false",
                                        'vertical_pattern': "false",
                                        'hide_knot': "false",
-                                       'fuse_tolerance': "0.02",
+                                       'fuse_tolerance': "0.2",
                                        'pattern-nodetypes': pattern_node_type})
         # add the path effect element to the defs section
         self.svg.defs.add(lpe)
