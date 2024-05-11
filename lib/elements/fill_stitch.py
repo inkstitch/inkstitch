@@ -609,7 +609,7 @@ class FillStitch(EmbroideryElement):
         sort_index=26)
     @cache
     def pull_compensation_px(self):
-        return self.get_split_mm_param_as_px("pull_compensation_mm", (0, 0))
+        return np.maximum(self.get_split_mm_param_as_px("pull_compensation_mm", (0, 0)), 0)
 
     @property
     @param(
@@ -624,7 +624,7 @@ class FillStitch(EmbroideryElement):
         sort_index=27)
     @cache
     def pull_compensation_percent(self):
-        return self.get_split_float_param("pull_compensation_percent", (0, 0))
+        return np.maximum(self.get_split_float_param("pull_compensation_percent", (0, 0)), 0)
 
     @property
     def color(self):
