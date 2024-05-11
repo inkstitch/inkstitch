@@ -29,6 +29,10 @@ At a scale of 100% this font has an approximate height of {{ font.size }} mm.
 It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
 up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
+## Too much work ?
+Each letter has its own tartan, therefore embroidering it as is, is not for the faint of heart ! Quite a few threads changes are required. However for a less work intense (but also less colorful) variation with only one tartan shared by all leters (or only a few tartans, each shared by several letters) see [this](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) 
+
+
 
 ## In real life
 
