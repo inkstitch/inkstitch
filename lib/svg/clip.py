@@ -14,5 +14,8 @@ def get_clip_path(node):
     transform = node.composed_transform()
     clip.transform = transform
     clip_element = EmbroideryElement(clip)
-    clip_element.paths.sort(key=lambda point_list: Polygon(point_list).area, reverse=True)
-    return MultiPolygon([(clip_element.paths[0], clip_element.paths[1:])])
+    clip_paths = [path for path in clip_element.paths if len(path) > 3]
+    clip_paths.sort(key=lambda point_list: Polygon(point_list).area, reverse=True)
+    if clip_paths:
+        return MultiPolygon([(clip_paths[0], clip_paths[1:])])
+    return MultiPolygon()
