@@ -5,7 +5,7 @@
 
 # this file is without: import inkex
 # - we need dump argv and sys.path as is on startup from inkscape
-#   - later sys.path may be modified that influences importing inkex (see prefere_pip_inkex)
+#   - later sys.path may be modified that influences importing inkex (see prefer_pip_inkex)
 
 import os
 import sys

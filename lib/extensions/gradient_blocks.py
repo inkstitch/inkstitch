@@ -5,7 +5,8 @@
 
 from math import degrees, pi
 
-from inkex import DirectedLineSegment, PathElement, Transform, errormsg
+from inkex import (DirectedLineSegment, LinearGradient, PathElement, Transform,
+                   errormsg)
 from shapely import geometry as shgeo
 from shapely.affinity import rotate
 from shapely.geometry import Point
@@ -42,7 +43,7 @@ class GradientBlocks(CommandsExtension):
         if not self.get_elements():
             return
 
-        elements = [element for element in self.elements if (isinstance(element, FillStitch) and self.has_gradient_color(element))]
+        elements = [element for element in self.elements if isinstance(element, FillStitch) and isinstance(element.gradient, LinearGradient)]
         if not elements:
             errormsg(_("Please select at least one object with a gradient fill."))
             return
@@ -97,21 +98,22 @@ class GradientBlocks(CommandsExtension):
                     block.set('inkstitch:fill_underlay_row_spacing_mm', end_row_spacing)
 
                 parent.insert(index, block)
-
                 if previous_color == color:
-                    current = FillStitch(block)
-                    previous = FillStitch(previous_element)
-                    nearest = nearest_points(current.shape, previous.shape)
-                    pos_current = self._get_command_postion(current, nearest[0])
-                    pos_previous = self._get_command_postion(previous, nearest[1])
-                    add_commands(current, ['fill_end'], pos_current)
-                    add_commands(previous, ['fill_start'], pos_previous)
+                    self._add_block_commands(block, previous_element)
                 previous_color = color
                 previous_element = block
             parent.remove(element.node)
 
-    def has_gradient_color(self, element):
-        return element.color.startswith('url') and "linearGradient" in element.color
+    def _add_block_commands(self, block, previous_element):
+        current = FillStitch(block)
+        previous = FillStitch(previous_element)
+        if previous.shape.is_empty:
+            return
+        nearest = nearest_points(current.shape, previous.shape)
+        pos_current = self._get_command_postion(current, nearest[0])
+        pos_previous = self._get_command_postion(previous, nearest[1])
+        add_commands(current, ['fill_end'], pos_current)
+        add_commands(previous, ['fill_start'], pos_previous)
 
     def _get_command_postion(self, fill, point):
         center = fill.shape.centroid
@@ -129,9 +131,7 @@ class GradientBlocks(CommandsExtension):
 
 def gradient_shapes_and_attributes(element, shape, unit_multiplier):
     # e.g. url(#linearGradient872) -> linearGradient872
-    color = element.color[5:-1]
-    xpath = f'.//svg:defs/svg:linearGradient[@id="{color}"]'
-    gradient = element.node.getroottree().getroot().findone(xpath)
+    gradient = element.gradient
     gradient.apply_transform()
     point1 = (float(gradient.get('x1')), float(gradient.get('y1')))
     point2 = (float(gradient.get('x2')), float(gradient.get('y2')))
@@ -170,7 +170,7 @@ def gradient_shapes_and_attributes(element, shape, unit_multiplier):
         # does this gradient line split the shape
         offset_outside_shape = len(polygon.geoms) == 1
         for poly in polygon.geoms:
-            if isinstance(poly, shgeo.Polygon) and element.shape_is_valid(poly):
+            if isinstance(poly, shgeo.Polygon) and poly.is_valid:
                 if poly.intersects(offset_line):
                     if previous_color:
                         polygons.append(poly)

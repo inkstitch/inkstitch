@@ -14,7 +14,7 @@ from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely.ops import nearest_points
 
-from ..debug import debug
+from ..debug.debug import debug
 from ..i18n import _
 from ..metadata import InkStitchMetadata
 from ..stitch_plan import StitchGroup

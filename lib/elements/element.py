@@ -11,7 +11,7 @@ import numpy as np
 from inkex import bezier, BaseElement
 
 from ..commands import find_commands
-from ..debug import debug
+from ..debug.debug import debug
 from ..exceptions import InkstitchException, format_uncaught_exception
 from ..i18n import _
 from ..marker import get_marker_elements_cache_key_data
@@ -169,9 +169,12 @@ class EmbroideryElement(object):
         return self.node.specified_style()
 
     def get_style(self, style_name, default=None):
-        style = self._get_specified_style().get(style_name, default)
+        element_style = self._get_specified_style()
+        style = element_style.get(style_name, default)
         if style == 'none':
             style = None
+        elif style == 'currentColor':
+            style = element_style(style_name)
         return style
 
     @property

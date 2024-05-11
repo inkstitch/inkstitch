@@ -7,7 +7,7 @@ import math
 import re
 
 import numpy as np
-from inkex import Transform
+from inkex import LinearGradient, Transform
 from shapely import geometry as shgeo
 from shapely.errors import GEOSException
 from shapely.ops import nearest_points
@@ -588,9 +588,10 @@ class FillStitch(EmbroideryElement):
 
     @property
     def gradient(self):
-        color = self.color[5:-1]
-        xpath = f'.//svg:defs/svg:linearGradient[@id="{color}"]'
-        return self.node.getroottree().getroot().findone(xpath)
+        gradient = self.node.get_computed_style("fill")
+        if isinstance(gradient, LinearGradient):
+            return gradient
+        return None
 
     @property
     @param('fill_underlay', _('Underlay'), type='toggle', group=_('Fill Underlay'), default=True)

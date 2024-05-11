@@ -8,7 +8,7 @@ import networkx as nx
 from shapely.geometry import LineString, MultiLineString
 from shapely.prepared import prep
 
-from .debug import debug
+from .debug.debug import debug
 from .i18n import _
 from .svg import apply_transforms
 from .utils import Point, cache, get_bundled_dir, guess_inkscape_config_path

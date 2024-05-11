@@ -1,7 +1,7 @@
 import threading
 
 from ..exceptions import InkstitchException
-from ..debug import debug
+from ..debug.debug import debug
 
 
 class ExitThread(InkstitchException):
