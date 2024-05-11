@@ -20,7 +20,7 @@ from ..metadata import InkStitchMetadata
 from ..stitch_plan import StitchGroup
 from ..stitches import running_stitch
 from ..svg import line_strings_to_csp, point_lists_to_csp
-from ..utils import Point, cache, cut, cut_multiple, prng
+from ..utils import Point, cache, cut, cut_multiple, offset_points, prng
 from ..utils.param import ParamOption
 from ..utils.threading import check_stop_flag
 from .element import PIXELS_PER_MM, EmbroideryElement, param
@@ -260,7 +260,7 @@ class SatinColumn(EmbroideryElement):
         'pull_compensation_percent',
         _('Pull compensation percentage'),
         tooltip=_('Additional pull compensation which varies as a percentage of stitch width. '
-                  'Two values separated by a space may be used for an aysmmetric effect.'),
+                  'Two values separated by a space may be used for an asymmetric effect.'),
         unit=_('% (each side)'),
         type='float',
         default=0,
@@ -276,7 +276,7 @@ class SatinColumn(EmbroideryElement):
         _('Pull compensation'),
         tooltip=_('Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. '
                   'This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. '
-                  'Two values separated by a space may be used for an aysmmetric effect.'),
+                  'Two values separated by a space may be used for an asymmetric effect.'),
         unit=_('mm (each side)'),
         type='float',
         default=0,
@@ -1015,34 +1015,6 @@ class SatinColumn(EmbroideryElement):
             center_walk = [center_walk[0], center_walk[0]]
         return shgeo.LineString(center_walk)
 
-    def offset_points(self, pos1, pos2, offset_px, offset_proportional):
-        # Expand or contract two points about their midpoint.  This is
-        # useful for pull compensation and insetting underlay.
-
-        distance = (pos1 - pos2).length()
-
-        if distance < 0.0001:
-            # if they're the same point, we don't know which direction
-            # to offset in, so we have to just return the points
-            return pos1, pos2
-
-        # calculate the offset for each side
-        offset_a = offset_px[0] + (distance * offset_proportional[0])
-        offset_b = offset_px[1] + (distance * offset_proportional[1])
-        offset_total = offset_a + offset_b
-
-        # don't contract beyond the midpoint, or we'll start expanding
-        if offset_total < -distance:
-            scale = -distance / offset_total
-            offset_a = offset_a * scale
-            offset_b = offset_b * scale
-
-        # convert offset to float before using because it may be a numpy.float64
-        out1 = pos1 + (pos1 - pos2).unit() * float(offset_a)
-        out2 = pos2 + (pos2 - pos1).unit() * float(offset_b)
-
-        return out1, out2
-
     def _stitch_distance(self, pos0, pos1, previous_pos0, previous_pos1):
         """Return the distance from one stitch to the next."""
 
@@ -1567,7 +1539,7 @@ class SatinColumn(EmbroideryElement):
                 offset_px[0] = -inset_px
             if b.distance(pairs[i-1][1]) < min_dist:
                 offset_px[1] = -inset_px
-            shortened.append(self.offset_points(a, b, offset_px, (0, 0)))
+            shortened.append(offset_points(a, b, offset_px, (0, 0)))
         return shortened
 
     def _get_inset_point(self, point1, point2, distance_fraction):
@@ -1656,7 +1628,7 @@ class SatinProcessor:
         else:
             offset_prop = self.offset_proportional
 
-        a, b = self.satin.offset_points(pos0, pos1, self.offset_px, offset_prop)
+        a, b = offset_points(pos0, pos1, self.offset_px, offset_prop)
         return a, b
 
     def get_stitch_spacing_multiple(self):

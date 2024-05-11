@@ -20,10 +20,11 @@ from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
 from ..utils import cache
 from ..utils.clamp_path import clamp_path_to_polygon
-from ..utils.geometry import Point as InkstitchPoint
+from ..utils.geometry import Point as InkstitchPoint, offset_points
 from ..utils.geometry import (ensure_multi_line_string,
                               line_string_to_point_list)
 from ..utils.prng import join_args
+from ..utils.list import is_all_zeroes
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
 from .fill import intersect_region_with_grating, stitch_row
@@ -82,13 +83,19 @@ def auto_fill(shape,
               gap_fill_rows=0,
               enable_random=False,
               random_sigma=0.0,
-              random_seed=""):
+              random_seed="",
+              pull_compensation_px=(0, 0),
+              pull_compensation_percent=(0, 0)):
     rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
     if not rows:
         # Small shapes may not intersect with the grating at all.
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
-
     segments = [segment for row in rows for segment in row]
+
+    has_pull_compensation = not is_all_zeroes(pull_compensation_px) or not is_all_zeroes(pull_compensation_percent)
+    if has_pull_compensation:
+        segments = apply_pull_compensation(segments, pull_compensation_px, pull_compensation_percent)
+
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
     if networkx.is_empty(fill_stitch_graph):
@@ -108,7 +115,8 @@ def auto_fill(shape,
     path = fill_gaps(path, round_to_multiple_of_2(gap_fill_rows))
     result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                              staggers, skip_last, underpath, enable_random, random_sigma, random_seed)
+                              staggers, skip_last, underpath, enable_random, random_sigma, random_seed,
+                              has_pull_compensation)
 
     return result
 
@@ -118,6 +126,19 @@ def round_to_multiple_of_2(number):
         return number + 1
     else:
         return number
+
+
+@debug.time
+def apply_pull_compensation(segments, pull_compensation_px, pull_compensation_percent):
+    new_segments = []
+    for segment in segments:
+        start = InkstitchPoint.from_tuple(segment[0])
+        end = InkstitchPoint.from_tuple(segment[1])
+        end = InkstitchPoint.from_tuple(segment[1])
+        new_start, new_end = offset_points(start, end, pull_compensation_px, pull_compensation_percent)
+        new_segments.append((new_start.as_tuple(), new_end.as_tuple()))
+
+    return new_segments
 
 
 def which_outline(shape, coords):
@@ -816,7 +837,7 @@ def collapse_sequential_outline_edges(path, graph):
     return new_path
 
 
-def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath):
+def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath, clamp):
     """Create stitches to get from one point on an outline of the shape to another."""
 
     start, end = edge
@@ -825,7 +846,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
         path = smooth_path(path, 2)
     else:
         path = [InkstitchPoint.from_tuple(point) for point in path]
-    if len(path) > 1:
+    if len(path) > 1 and clamp:
         path = clamp_path_to_polygon(path, shape)
 
     points = even_running_stitch(path, running_stitch_length, running_stitch_tolerance)
@@ -852,7 +873,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
 
 @debug.time
 def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length,
-                     running_stitch_tolerance, staggers, skip_last, underpath, enable_random, random_sigma, random_seed):
+                     running_stitch_tolerance, staggers, skip_last, underpath, enable_random, random_sigma, random_seed, has_pull_compensation):
     path = collapse_sequential_outline_edges(path, fill_stitch_graph)
 
     stitches = []
@@ -870,7 +891,14 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_sp
             if fill_stitch_graph.has_edge(edge[0], edge[1], key='segment'):
                 travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath))
+            stitches.extend(travel(shape,
+                                   travel_graph,
+                                   edge,
+                                   running_stitch_length,
+                                   running_stitch_tolerance,
+                                   skip_last,
+                                   underpath,
+                                   clamp=not has_pull_compensation))
 
         check_stop_flag()
 

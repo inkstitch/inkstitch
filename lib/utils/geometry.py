@@ -197,6 +197,37 @@ def cut_path(points, length):
     return [Point(*point) for point in subpath.coords]
 
 
+def offset_points(pos1, pos2, offset_px, offset_proportional):
+    """Expand or contract two points about their midpoint.
+
+    This is useful for pull compensation and insetting underlay.
+    """
+
+    distance = (pos1 - pos2).length()
+
+    if distance < 0.0001:
+        # if they're the same point, we don't know which direction
+        # to offset in, so we have to just return the points
+        return pos1, pos2
+
+    # calculate the offset for each side
+    offset_a = offset_px[0] + (distance * offset_proportional[0])
+    offset_b = offset_px[1] + (distance * offset_proportional[1])
+    offset_total = offset_a + offset_b
+
+    # don't contract beyond the midpoint, or we'll start expanding
+    if offset_total < -distance:
+        scale = -distance / offset_total
+        offset_a = offset_a * scale
+        offset_b = offset_b * scale
+
+    # convert offset to float before using because it may be a numpy.float64
+    out1 = pos1 + (pos1 - pos2).unit() * float(offset_a)
+    out2 = pos2 + (pos2 - pos1).unit() * float(offset_b)
+
+    return out1, out2
+
+
 class Point:
     def __init__(self, x: typing.Union[float, numpy.float64], y: typing.Union[float, numpy.float64]):
         self.x = float(x)

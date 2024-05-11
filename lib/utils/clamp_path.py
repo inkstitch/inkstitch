@@ -1,5 +1,6 @@
 from shapely.geometry import LineString, MultiPolygon
 from shapely.geometry import Point as ShapelyPoint
+from shapely.ops import nearest_points
 from shapely.prepared import prep
 
 from .geometry import (Point, ensure_geometry_collection,
@@ -14,6 +15,9 @@ def path_to_segments(path):
 
 def segments_to_path(segments):
     """Convert a list of contiguous LineStrings into a list of Points."""
+    if not segments:
+        return []
+
     coords = [segments[0].coords[0]]
 
     for segment in segments:
@@ -66,6 +70,22 @@ def find_border(polygon, point):
             return border
     else:
         return polygon.exterior
+
+
+def clamp_fully_external_path(path, polygon):
+    """Clamp a path that lies entirely outside a polygon."""
+
+    start = ShapelyPoint(path[0])
+    end = ShapelyPoint(path[-1])
+
+    start_on_outline = nearest_points(start, polygon.exterior)[1].buffer(0.01, resolution=1)
+    end_on_outline = nearest_points(end, polygon.exterior)[1].buffer(0.01, resolution=1)
+
+    border_pieces = ensure_multi_line_string(polygon.exterior.difference(MultiPolygon((start_on_outline, end_on_outline)))).geoms
+    border_pieces = fix_starting_point(border_pieces)
+    shorter = min(border_pieces, key=lambda piece: piece.length)
+
+    return adjust_line_end(shorter, start)
 
 
 def clamp_path_to_polygon(path, polygon):
@@ -142,5 +162,8 @@ def clamp_path_to_polygon(path, polygon):
             last_point_inside = ShapelyPoint(segment.coords[-1])
         else:
             was_inside = False
+
+    if not result:
+        return clamp_fully_external_path(path, polygon)
 
     return segments_to_path(result)
