@@ -1,6 +1,6 @@
 {
     "name": "Colorful",
-    "description": "Colorful is a tartan fill font approximatively 35mm tall. It  may be scaled down to 90% and up to 200%",
+    "description": "Colorful is a tartan fill font approximatively 35mm tall. It  may be scaled down to 70% and up to 200%",
     "keywords": [
         "display",
         "multicolor"
@@ -11,7 +11,7 @@
     "letter_case": "",
     "default_glyph": "�",
     "size": 35,
-    "min_scale": 0.9,
+    "min_scale": 0.7,
     "max_scale": 2,
     "horiz_adv_x_default": 97,
     "horiz_adv_x_space": 80,
