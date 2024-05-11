@@ -12,7 +12,7 @@ from typing import Iterator
 import networkx
 from shapely import geometry as shgeo
 from shapely import segmentize
-from shapely.ops import snap
+from shapely.ops import snap, unary_union
 from shapely.strtree import STRtree
 
 from ..debug.debug import debug
@@ -86,16 +86,16 @@ def auto_fill(shape,
               random_seed="",
               pull_compensation_px=(0, 0),
               pull_compensation_percent=(0, 0)):
+    has_pull_compensation = not is_all_zeroes(pull_compensation_px) or not is_all_zeroes(pull_compensation_percent)
+    if has_pull_compensation:
+        spacing = min(row_spacing, end_row_spacing or row_spacing)
+        shape = adjust_shape_for_pull_compensation(shape, angle, spacing, pull_compensation_px, pull_compensation_percent)
+
     rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
     if not rows:
         # Small shapes may not intersect with the grating at all.
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
     segments = [segment for row in rows for segment in row]
-
-    has_pull_compensation = not is_all_zeroes(pull_compensation_px) or not is_all_zeroes(pull_compensation_percent)
-    if has_pull_compensation:
-        segments = apply_pull_compensation(segments, pull_compensation_px, pull_compensation_percent)
-
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
     if networkx.is_empty(fill_stitch_graph):
@@ -115,8 +115,7 @@ def auto_fill(shape,
     path = fill_gaps(path, round_to_multiple_of_2(gap_fill_rows))
     result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                              staggers, skip_last, underpath, enable_random, random_sigma, random_seed,
-                              has_pull_compensation)
+                              staggers, skip_last, underpath, enable_random, random_sigma, random_seed)
 
     return result
 
@@ -129,6 +128,25 @@ def round_to_multiple_of_2(number):
 
 
 @debug.time
+def adjust_shape_for_pull_compensation(shape, angle, row_spacing, pull_compensation_px, pull_compensation_percent):
+    rows = intersect_region_with_grating(shape, angle, row_spacing)
+    if not rows:
+        return shape
+    segments = [segment for row in rows for segment in row]
+    segments = apply_pull_compensation(segments, pull_compensation_px, pull_compensation_percent)
+
+    lines = [shgeo.LineString((start, end)) for start, end in segments]
+    buffer_amount = row_spacing/2 + 0.01
+    buffered_lines = [line.buffer(buffer_amount) for line in lines]
+
+    polygon = unary_union(buffered_lines)
+    exterior = smooth_path(polygon.exterior.coords, 0.2)
+    min_hole_area = row_spacing ** 2
+    interiors = [smooth_path(interior.coords) for interior in polygon.interiors if shgeo.Polygon(interior).area > min_hole_area]
+
+    return shgeo.Polygon(exterior, interiors)
+
+
 def apply_pull_compensation(segments, pull_compensation_px, pull_compensation_percent):
     new_segments = []
     for segment in segments:
@@ -395,7 +413,6 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
     calculation.  We also weight the interior edges extra proportional to
     how close they are to the boundary.
     """
-
     graph = networkx.MultiGraph()
 
     # Add all the nodes from the main graph.  This will be all of the endpoints
@@ -837,7 +854,7 @@ def collapse_sequential_outline_edges(path, graph):
     return new_path
 
 
-def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath, clamp):
+def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath):
     """Create stitches to get from one point on an outline of the shape to another."""
 
     start, end = edge
@@ -846,7 +863,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
         path = smooth_path(path, 2)
     else:
         path = [InkstitchPoint.from_tuple(point) for point in path]
-    if len(path) > 1 and clamp:
+    if len(path) > 1:
         path = clamp_path_to_polygon(path, shape)
 
     points = even_running_stitch(path, running_stitch_length, running_stitch_tolerance)
@@ -873,7 +890,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
 
 @debug.time
 def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length,
-                     running_stitch_tolerance, staggers, skip_last, underpath, enable_random, random_sigma, random_seed, has_pull_compensation):
+                     running_stitch_tolerance, staggers, skip_last, underpath, enable_random, random_sigma, random_seed):
     path = collapse_sequential_outline_edges(path, fill_stitch_graph)
 
     stitches = []
@@ -891,14 +908,7 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_sp
             if fill_stitch_graph.has_edge(edge[0], edge[1], key='segment'):
                 travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(shape,
-                                   travel_graph,
-                                   edge,
-                                   running_stitch_length,
-                                   running_stitch_tolerance,
-                                   skip_last,
-                                   underpath,
-                                   clamp=not has_pull_compensation))
+            stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath))
 
         check_stop_flag()
 
