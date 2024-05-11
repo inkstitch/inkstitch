@@ -185,6 +185,12 @@ Do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/
 * [Chicken Scratch](/font/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
   ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
+
+* [Colorful](/font/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
+
+  ![Colorfu preview](/assets/images/fonts/colorful.png)
+
+  
 * [Emilio 20 Tartan](fonts/emilio-20/#emilio-20-tartan) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
 
   ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
