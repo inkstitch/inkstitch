@@ -11,8 +11,21 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="ratio" type="float" appearance="full" gui-text="Ratio" precision="2" min="0" max="1">0</param>
-    <param name="allow-holes" type="boolean" gui-text="Allow Holes">false</param>
+    <param name="keep-original" type="boolean" gui-text="Keep original element(s)">false</param>
+    <spacer />
+    <separator />
+    <spacer />
+    <param name="threshold" type="float" appearance="full" precision="2" min="0" max="100"
+           gui-text="Threshold (mm²)" gui-description="Removes smaller shape areas than that">10</param>
+    <param name="buffer" type="float" appearance="full" precision="3" min="0.001" max="1"
+           gui-text="Buffer (mm)" gui-description="Enlarge strokes by this amount">0.001</param>
+    <param name="smoothness" type="float" appearance="full" precision="2" min="0.01" max="5"
+           gui-text="Smoothness (mm)" gui-description="Smooth path by this amount">0.3</param>
+    <spacer />
+    <separator />
+    <spacer />
+    <param name="inset" type="float" appearance="full" precision="3" min="0" max="5"
+           gui-text="Inset (mm)" gui-description="Counteract the buffer effect">0</param>
     <script>
         {{ command_tag | safe }}
     </script>

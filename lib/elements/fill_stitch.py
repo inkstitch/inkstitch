@@ -7,7 +7,7 @@ import math
 import re
 
 import numpy as np
-from inkex import Transform
+from inkex import LinearGradient, Transform
 from shapely import geometry as shgeo
 from shapely.errors import GEOSException
 from shapely.ops import nearest_points
@@ -461,6 +461,13 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            type='float',
            default=0.1,
+           select_items=[('fill_method', 'auto_fill'),
+                         ('fill_method', 'contour_fill'),
+                         ('fill_method', 'guided_fill'),
+                         ('fill_method', 'meander_fill'),
+                         ('fill_method', 'circular_fill'),
+                         ('fill_method', 'linear_gradient_fill'),
+                         ('fill_method', 'tartan_fill')],
            sort_index=43)
     def running_stitch_tolerance(self):
         return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
@@ -479,7 +486,7 @@ class FillStitch(EmbroideryElement):
            sort_index=44)
     def enable_random_stitches(self):
         return self.get_boolean_param('enable_random_stitches', False)
-    
+
     @property
     @param('random_stitch_length_jitter_percent',
            _('Random stitch length jitter'),
@@ -538,8 +545,8 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('zigzag_width_mm',
-           _('Zigzag width'),
-           tooltip=_('Width of the zigzag line.'),
+           _('Zig-zag width'),
+           tooltip=_('Width of the zig-zag line.'),
            unit='mm',
            type='float',
            select_items=[('fill_method', 'meander_fill')],
@@ -581,9 +588,10 @@ class FillStitch(EmbroideryElement):
 
     @property
     def gradient(self):
-        color = self.color[5:-1]
-        xpath = f'.//svg:defs/svg:linearGradient[@id="{color}"]'
-        return self.node.getroottree().getroot().findone(xpath)
+        gradient = self.node.get_computed_style("fill")
+        if isinstance(gradient, LinearGradient):
+            return gradient
+        return None
 
     @property
     @param('fill_underlay', _('Underlay'), type='toggle', group=_('Fill Underlay'), default=True)

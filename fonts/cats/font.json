@@ -1,7 +1,7 @@
 {
     "name": "Cats",
     "description": "Cats is a silly font that makes use of satin random parameters. Font height is approximatively 40mm. It can be scaled down to 70% (28mm) and up to 150% (60mm)",
-    "keywords": [ 
+    "keywords": [
         "display"
     ],
     "leading": 200,
@@ -55,7 +55,7 @@
         "$": 78,
         "%": 153,
         "&": 112,
-        "'": 30,
+        "'": 47,
         "(": 59,
         ")": 59,
         "*": 83,
@@ -181,9 +181,6 @@
         "–": 99,
         "—": 200,
         "‘": 44,
-	"'": 47,
-        "'": 47,
-        "'":47,
         "’": 47,
         "‚": 35,
         "“": 81,
@@ -203,7 +200,7 @@
         "el": -10,
         "st": -10,
         "rl": -10,
-        "yi":-10
+        "yi": -10
     },
     "glyphs": [
         "!",
@@ -319,8 +316,6 @@
         "Œ",
         "Æ",
         "æ",
-        "'",
-        "'",
         "'"
     ]
 }

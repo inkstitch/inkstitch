@@ -22,7 +22,7 @@ from lxml import etree
 from werkzeug.serving import make_server
 
 from .base import InkstitchExtension
-from ..debug import debug
+from ..debug.debug import debug
 from ..i18n import _, get_languages
 from ..i18n import translation as inkstitch_translation
 from ..stitch_plan import stitch_groups_to_stitch_plan

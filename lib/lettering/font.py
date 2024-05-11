@@ -208,7 +208,7 @@ class Font(object):
             line = line.strip()
 
             letter_group = self._render_line(line, position, glyph_set)
-            if back_and_forth and self.reversible and i % 2 == 1:
+            if (back_and_forth and self.reversible and i % 2 == 1) or variant == '←':
                 letter_group[:] = reversed(letter_group)
             destination_group.append(letter_group)
 

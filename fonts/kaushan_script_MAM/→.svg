@@ -18,13 +18,13 @@
      inkscape:guide-bbox="true"
      showguides="true"
      inkscape:document-rotation="0"
-     inkscape:current-layer="g131"
+     inkscape:current-layer="g12867"
      inkscape:window-maximized="1"
      inkscape:window-y="-8"
      inkscape:window-x="-8"
-     inkscape:cy="40.781521"
-     inkscape:cx="51.035834"
-     inkscape:zoom="4.2421174"
+     inkscape:cy="69.339051"
+     inkscape:cx="72.073679"
+     inkscape:zoom="10.787572"
      showgrid="false"
      id="namedview10379"
      inkscape:window-height="837"
@@ -109,7 +109,7 @@ Special thanks to the project backers! They are all listed on the website: http:
    id="collapse_len_mm3362">3.0</inkstitch:collapse_len_mm>
 <inkstitch:min_stitch_len_mm
    id="min_stitch_len_mm3748">0.5</inkstitch:min_stitch_len_mm>
-<inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
+<inkstitch:inkstitch_svg_version>2</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs10375">
@@ -3297,7 +3297,7 @@ Special thanks to the project backers! They are all listed on the website: http:
        id="autosatinrun32"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 7"
-       d="m 20,73 c 2.66793,0.490397 9.93871,1.38562 13.8223,2.02093 L 20.13,107.277 20.2819,72.8943"
+       d="m 20,73 c 2.66793,0.490397 9.93871,1.38562 13.8223,2.02093 L 20.13,107.277"
        sodipodi:nodetypes="ccc"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
@@ -5724,7 +5724,7 @@ Special thanks to the project backers! They are all listed on the website: http:
   </g>
   <g
      id="g12867"
-     style="display:none"
+     style="display:inline"
      inkscape:label="GlyphLayer-W"
      inkscape:groupmode="layer">
     <path
@@ -5821,11 +5821,12 @@ Special thanks to the project backers! They are all listed on the website: http:
        id="autosatinrun95"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 6"
-       d="m 69.7547,55.9577 3.786,1.5669 c 2.24954,-8.32682 4.48326,-16.6839 7.33694,-24.8223 l 0.103894,-0.237061 0.04203,-0.09591"
+       d="m 69.7547,55.9577 2.781438,-1.677574 C 74.785678,45.953306 78.02396,40.8407 80.87764,32.7023 l 0.103894,-0.237061 0.04203,-0.09591"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2"
-       inkstitch:running_stitch_tolerance_mm="0.2" />
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       sodipodi:nodetypes="ccccc" />
     <path
        id="autosatin121"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.9;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -5848,14 +5849,6 @@ Special thanks to the project backers! They are all listed on the website: http:
        inkstitch:lock_start="half_stitch"
        inkstitch:zigzag_underlay="False"
        inkstitch:contour_underlay_stitch_tolerance_mm="0.2" />
-    <path
-       d="M 84.6472,58.5664 70.8587,56.341 82.3688,58.4526"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:2, 2;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="2"
-       inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path332"
-       inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
     <path
        id="autosatin122"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.9;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -5881,11 +5874,12 @@ Special thanks to the project backers! They are all listed on the website: http:
        id="autosatinrun96"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 9"
-       d="m 68.7119,108.675 9.1169,0.886 c -0.667417,3.07569 -0.842812,6.25372 -1.55123,9.30328 -0.208703,0.98739 -2.12051,1.6838 -0.581866,2.41557"
+       d="m 68.7119,108.675 4.852734,3.79 c -0.667417,3.07569 3.421354,3.34972 2.712936,6.39928 -0.208703,0.98739 -2.12051,1.6838 -0.581866,2.41557"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2"
-       inkstitch:running_stitch_tolerance_mm="0.2" />
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       sodipodi:nodetypes="cccc" />
     <path
        id="autosatin123"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.9;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -5912,8 +5906,8 @@ Special thanks to the project backers! They are all listed on the website: http:
        id="autosatinrun97"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:label="Points droits pour auto-remplissage satin 12"
-       d="m 89.2482,110.839 -4.7085,-0.013 c 8.06068,-19.9634 18.7188,-42.9202 29.3751,-61.6384 3.15743,-5.3702 6.42485,-10.7367 10.6158,-15.3732 0.01,-0.374803 0.0193,-0.749607 0.029,-1.12441"
-       sodipodi:nodetypes="cccc"
+       d="m 89.2482,110.839 -3.622695,-4.46256 C 93.686185,86.413035 103.2585,67.9058 113.9148,49.1876 c 3.15743,-5.3702 6.42485,-10.7367 10.6158,-15.3732 0.01,-0.374803 0.0193,-0.749607 0.029,-1.12441"
+       sodipodi:nodetypes="ccccc"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2"
@@ -11092,7 +11086,7 @@ Special thanks to the project backers! They are all listed on the website: http:
   </g>
   <g
      id="g131"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ö"
      inkscape:groupmode="layer">
     <path
@@ -11481,17 +11475,15 @@ Special thanks to the project backers! They are all listed on the website: http:
        inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
        inkstitch:contour_underlay_inset_mm="0.4" />
     <path
-       d="m 37.4447,110.487 -7.3194,8.877"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:2, 2;stroke-dashoffset:0"
-       inkstitch:running_stitch_length_mm="2"
+       d="m 37.4447,110.487 -7.3195,8.876"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path302"
-       inkstitch:min_stitch_length_mm=".5"
-       inkstitch:min_jump_stitch_length_mm="3" />
+       id="path113" />
     <path
        id="autosatin38"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
-       d="m 31.976363,121.58505 c 2.042,5.03 5.307037,5.26095 10.196837,2.21195 m -13.015784,-5.59468 c -4.3251,-5.896 5.017284,-4.44132 8.393084,-6.91732 m -2.877456,-3.03745 7.893051,21.7059"
+       d="m 29.1574,118.202 c -4.3251,-5.896 5.0173,-4.441 8.3931,-6.917 m -5.5741,10.3 c 2.042,5.03 5.307,5.261 10.1968,2.212 m -7.5002,-15.549 7.8931,21.705"
        inkstitch:satin_column="True"
        inkstitch:zigzag_spacing_mm="0.3"
        inkstitch:contour_underlay="True"

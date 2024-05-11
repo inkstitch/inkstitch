@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="7.1840255"
-     inkscape:cx="23.942009"
-     inkscape:cy="84.910612"
+     inkscape:zoom="7.8855905"
+     inkscape:cx="21.621716"
+     inkscape:cy="25.362717"
      inkscape:window-width="1128"
      inkscape:window-height="742"
      inkscape:window-x="224"
      inkscape:window-y="35"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g1008"
+     inkscape:current-layer="g97"
      inkscape:document-units="px"
      showguides="false">
     <sodipodi:guide
@@ -102,7 +102,7 @@ Created by FontForge 20230101 at Thu Jun  8 09:39:13 2023
 Copyright (c) 2010 Typeco. All rights reserved.
 <inkstitch:min_stitch_len_mm>0</inkstitch:min_stitch_len_mm>
 <inkstitch:collapse_len_mm>3</inkstitch:collapse_len_mm>
-<inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
+<inkstitch:inkstitch_svg_version>2</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs165">
@@ -7144,7 +7144,7 @@ Copyright (c) 2010 Typeco. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-x"
-     style="display:inline"
+     style="display:none"
      id="g1008">
     <path
        id="autosatin135"
@@ -8376,7 +8376,8 @@ Copyright (c) 2010 Typeco. All rights reserved.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:lock_start="half_stitch"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+       inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+       inkstitch:trim_after="True" />
     <g
        id="g98"
        transform="translate(-1.5748448,-7.0868089)"
@@ -8504,7 +8505,7 @@ Copyright (c) 2010 Typeco. All rights reserved.
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ä"
-     style="display:none"
+     style="display:inline"
      id="g97">
     <path
        id="path89"
@@ -8582,7 +8583,8 @@ Copyright (c) 2010 Typeco. All rights reserved.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:lock_start="half_stitch"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:center_walk_underlay_stitch_length_mm="2.5" />
+       inkstitch:center_walk_underlay_stitch_length_mm="2.5"
+       inkstitch:trim_after="True" />
     <g
        id="g102"
        transform="translate(-1.1811342,-27.559761)"

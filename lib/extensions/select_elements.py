@@ -9,7 +9,7 @@ import sys
 
 from inkex import Boolean, errormsg
 
-from ..elements import Clone, FillStitch, Polyline, SatinColumn, Stroke
+from ..elements import Clone, FillStitch, SatinColumn, Stroke
 from ..i18n import _
 from ..utils import get_bundled_dir
 from .base import InkstitchExtension
@@ -27,7 +27,6 @@ class SelectElements(InkstitchExtension):
         pars.add_argument("--select-ripples", type=Boolean, dest="ripples", default=False)
         pars.add_argument("--select-zigzag", type=Boolean, dest="zigzag", default=False)
         pars.add_argument("--select-manual", type=Boolean, dest="manual", default=False)
-        pars.add_argument("--select-polyline", type=Boolean, dest="poly", default=False)
         pars.add_argument("--select-satin", type=Boolean, dest="satin", default=False)
         pars.add_argument("--satin-underlay", type=str, dest="satin_underlay", default="all")
         pars.add_argument("--rung-count", type=str, dest="rung_count", default="all")
@@ -114,8 +113,6 @@ class SelectElements(InkstitchExtension):
         ids = set()
         for element in self.elements:
             if isinstance(element, Stroke) and self._select_stroke(element):
-                ids.add(element.id)
-            elif isinstance(element, Polyline) and self.options.poly:
                 ids.add(element.id)
             elif isinstance(element, FillStitch) and self._select_fill(element):
                 ids.add(element.id)

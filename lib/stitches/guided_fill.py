@@ -10,7 +10,7 @@ from shapely.ops import linemerge, nearest_points, unary_union
 
 from lib.utils import prng
 
-from ..debug import debug
+from ..debug.debug import debug
 from ..stitch_plan import Stitch
 from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import (ensure_geometry_collection,

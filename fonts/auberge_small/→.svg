@@ -20,9 +20,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="false"
      showgrid="false"
-     inkscape:zoom="1.7037426"
-     inkscape:cx="72.780948"
-     inkscape:cy="184.30014"
+     inkscape:zoom="1.8701237"
+     inkscape:cx="72.989824"
+     inkscape:cy="184.47977"
      inkscape:window-width="1383"
      inkscape:window-height="778"
      inkscape:window-x="57"
@@ -79,7 +79,7 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
    id="collapse_len_mm6549">0.5</inkstitch:collapse_len_mm>
 <inkstitch:min_stitch_len_mm
    id="min_stitch_len_mm9553">0.5</inkstitch:min_stitch_len_mm>
-<inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
+<inkstitch:inkstitch_svg_version>2</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs4043">
@@ -4827,82 +4827,6 @@ Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
        inkstitch:pull_compensation_mm="0.02"
        inkstitch:zigzag_underlay="False"
        inkstitch:zigzag_underlay_inset_mm=".25"
-       style="display:inline;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0"
-       inkstitch:max_stitch_length_mm="8"
-       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none"
-       inkstitch:min_stitch_length_mm=".3"
-       inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:short_stitch_distance_mm="0.17"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
-       inkstitch:center_walk_underlay_stitch_length_mm="1.2" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer14"
-     inkscape:label="GlyphLayer-'"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
-    <path
-       d="m 19.5953,107.262 c 7.49971,-6.95715 7.45074,-12.7348 1.81961,-17.6403 L 20.0394,85.4935"
-       id="path3177-9-3-8-5-0"
-       inkstitch:ties="3"
-       sodipodi:nodetypes="cc"
-       inkscape:label="Points droits pour auto-remplissage satin"
-       inkstitch:running_stitch_length_mm="1.2"
-       style="stroke:#000000;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
-       inkstitch:min_stitch_length_mm=".3"
-       inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:running_stitch_tolerance_mm="0.2" />
-    <path
-       id="path7"
-       d="m 19.451597,86.041248 c -5.794546,4.638697 -2.989908,10.144371 1.6476,12.966758 -0.256521,6.024194 -8.395041,5.092644 -4.123774,10.313934 m 3.651868,-24.376185 c 6.390146,-3.073279 12.083156,3.916186 10.890876,9.690014 -1.56319,7.570071 -9.870628,19.500081 -13.135477,16.092151 m -2.266488,-10.04155 23.775386,-3.670027"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.25"
-       inkstitch:ties="0"
-       inkstitch:pull_compensation_mm="0.02"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:zigzag_underlay_inset_mm=".25"
-       inkscape:label="Auto-remplissage satin"
-       sodipodi:nodetypes="ccccsccc"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       inkstitch:max_stitch_length_mm="8"
-       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
-       inkstitch:reverse_rails="none"
-       inkstitch:min_stitch_length_mm=".3"
-       inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:short_stitch_distance_mm="0.17"
-       inkstitch:center_walk_underlay="True"
-       inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
-       inkstitch:center_walk_underlay_stitch_length_mm="1.2" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="g18"
-     inkscape:label="GlyphLayer-‘"
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1">
-    <path
-       d="m 19.5953,107.262 c 7.49971,-6.95715 7.45074,-12.7348 1.81961,-17.6403 L 20.0394,85.4935"
-       id="path3"
-       inkstitch:ties="3"
-       sodipodi:nodetypes="cc"
-       inkscape:label="Points droits pour auto-remplissage satin"
-       inkstitch:running_stitch_length_mm="1.2"
-       style="stroke:#000000;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
-       inkstitch:min_stitch_length_mm=".3"
-       inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:running_stitch_tolerance_mm="0.2" />
-    <path
-       id="path4"
-       d="m 19.451597,86.041248 c -5.794546,4.638697 -2.989908,10.144371 1.6476,12.966758 -0.256521,6.024194 -8.395041,5.092644 -4.123774,10.313934 m 3.651868,-24.376185 c 6.390146,-3.073279 12.083156,3.916186 10.890876,9.690014 -1.56319,7.570071 -9.870628,19.500081 -13.135477,16.092151 m -2.266488,-10.04155 23.775386,-3.670027"
-       inkstitch:satin_column="True"
-       inkstitch:zigzag_spacing_mm="0.25"
-       inkstitch:ties="0"
-       inkstitch:pull_compensation_mm="0.02"
-       inkstitch:zigzag_underlay="False"
-       inkstitch:zigzag_underlay_inset_mm=".25"
-       inkscape:label="Auto-remplissage satin"
-       sodipodi:nodetypes="ccccsccc"
        style="display:inline;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0"
        inkstitch:max_stitch_length_mm="8"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"

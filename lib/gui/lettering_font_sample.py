@@ -44,7 +44,7 @@ class FontSampleFrame(wx.Frame):
         scale_spinner_label = wx.StaticText(self.settings, label=_("Scale (%)"))
         self.scale_spinner = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=1000, initial=100)
         max_line_width_label = wx.StaticText(self.settings, label=_("Max. line width"))
-        self.max_line_width = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=5000, initial=500)
+        self.max_line_width = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=5000, initial=180)
 
         grid_settings_sizer.Add(direction_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.direction, 0, wx.EXPAND, 0)
@@ -141,8 +141,10 @@ class FontSampleFrame(wx.Frame):
 
         # parameters
         line_width = self.max_line_width.GetValue()
+        direction = self.direction.GetValue()
+
         font._load_variants()
-        font_variant = font.variants[self.direction.GetValue()]
+        font_variant = font.variants[direction]
 
         # setup lines of text
         text = ''
@@ -155,9 +157,15 @@ class FontSampleFrame(wx.Frame):
             "Extensions > Ink/Stitch > Font Management > Update Glyphlist"
             % font.marked_custom_font_name
         )
-        if len(font.available_glyphs) != len(font_variant.glyphs):
+
+        self.duplicate_warning(font)
+
+        # font variant glyph list length falls short if a single quote sign is available
+        # let's add it in the length comparison
+        if len(set(font.available_glyphs)) != len(font_variant.glyphs):
             errormsg(update_glyphlist_warning)
             printed_warning = True
+
         for glyph in font.available_glyphs:
             glyph_obj = font_variant[glyph]
             if glyph_obj is None:
@@ -184,8 +192,16 @@ class FontSampleFrame(wx.Frame):
             width += width_to_add
 
         # render text and close
-        font.render_text(text, self.layer)
+        font.render_text(text, self.layer, variant=direction, back_and_forth=False)
         self.GetTopLevelParent().Close()
+
+    def duplicate_warning(self, font):
+        # warn about duplicated glyphs
+        if len(set(font.available_glyphs)) != len(font.available_glyphs):
+            duplicated_glyphs = " ".join(
+                [glyph for glyph in set(font.available_glyphs) if font.available_glyphs.count(glyph) > 1]
+            )
+            errormsg(_("Found duplicated glyphs in font file: {duplicated_glyphs}").format(duplicated_glyphs=duplicated_glyphs))
 
     def cancel(self, event):
         self.GetTopLevelParent().Close()

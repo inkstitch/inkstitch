@@ -5,7 +5,7 @@ SET GEOS_INSTALL=%CD%\geos-build
 if NOT DEFINED BUILD32 (SET BUILDFLAG="x64") else (SET BUILDFLAG="Win32")
 echo %BUILDFLAG%
 
-curl -O https://download.osgeo.org/geos/geos-3.12.1.tar.bz2
+curl -L -O  https://github.com/libgeos/geos/releases/download/3.12.1/geos-3.12.1.tar.bz2
 
 7z x geos-3.12.1.tar.bz2
 7z x geos-3.12.1.tar

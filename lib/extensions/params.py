@@ -16,15 +16,15 @@ import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
 from ..commands import is_command, is_command_symbol
-from ..elements import (Clone, EmbroideryElement, FillStitch, Polyline,
-                        SatinColumn, Stroke)
+from ..elements import (Clone, EmbroideryElement, FillStitch, SatinColumn,
+                        Stroke)
 from ..elements.clone import is_clone
 from ..exceptions import InkstitchException, format_uncaught_exception
 from ..gui import PresetsPanel, PreviewRenderer, WarningPanel
 from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
 from ..stitch_plan import stitch_groups_to_stitch_plan
-from ..svg.tags import SVG_POLYLINE_TAG
+from ..svg.tags import EMBROIDERABLE_TAGS
 from ..utils import get_resource_dir
 from ..utils.param import ParamOption
 from ..utils.svg_data import get_pagecolor
@@ -658,10 +658,10 @@ class Params(InkstitchExtension):
         classes = []
 
         if not is_command(node) and not is_command_symbol(node):
-            if node.tag == SVG_POLYLINE_TAG:
-                classes.append(Polyline)
-            elif is_clone(node):
+            if is_clone(node):
                 classes.append(Clone)
+            elif node.tag in EMBROIDERABLE_TAGS and not node.get_path():
+                pass
             else:
                 if element.get_style("fill", 'black') and not element.get_style("fill-opacity", 1) == "0":
                     classes.append(FillStitch)
@@ -693,8 +693,8 @@ class Params(InkstitchExtension):
         else:
             getter = 'get_param'
 
-        values = [item for item in (getattr(node, getter)(
-            param.name, param.default) for node in nodes) if item is not None]
+        values = [item if item is not None else "" for item in (getattr(node, getter)(
+            param.name, param.default) for node in nodes)]
 
         return values
 

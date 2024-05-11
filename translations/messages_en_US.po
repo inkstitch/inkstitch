@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-06 01:08+0000\n"
-"PO-Revision-Date: 2024-05-06 01:08\n"
+"POT-Creation-Date: 2024-05-10 01:08+0000\n"
+"PO-Revision-Date: 2024-05-10 01:09\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-06 01:08+0000\n"
+"POT-Creation-Date: 2024-05-10 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1228,8 +1228,8 @@ msgstr ""
 msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
 msgstr ""
 
-#: lib/elements/clone.py:43 inx/inkstitch_select_elements.inx:75
-#: inx/inkstitch_select_elements.inx:76
+#: lib/elements/clone.py:43 inx/inkstitch_select_elements.inx:74
+#: inx/inkstitch_select_elements.inx:75
 msgid "Clone"
 msgstr ""
 
@@ -1400,7 +1400,7 @@ msgstr ""
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:643
+#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:650
 msgid "Inset"
 msgstr ""
 
@@ -1553,32 +1553,32 @@ msgstr ""
 msgid "Auto Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:153 inx/inkstitch_select_elements.inx:57
+#: lib/elements/fill_stitch.py:153 inx/inkstitch_select_elements.inx:56
 msgid "Circular Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:154 inx/inkstitch_select_elements.inx:58
+#: lib/elements/fill_stitch.py:154 inx/inkstitch_select_elements.inx:57
 msgid "Contour Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:155 inx/inkstitch_select_elements.inx:59
+#: lib/elements/fill_stitch.py:155 inx/inkstitch_select_elements.inx:58
 msgid "Guided Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:60
+#: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:59
 msgid "Linear Gradient Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:61
+#: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:60
 msgid "Meander Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:158 inx/inkstitch_select_elements.inx:62
+#: lib/elements/fill_stitch.py:158 inx/inkstitch_select_elements.inx:61
 msgid "Tartan Fill"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:159 lib/gui/tartan/embroidery_panel.py:202
-#: inx/inkstitch_select_elements.inx:63
+#: inx/inkstitch_select_elements.inx:62
 msgid "Legacy Fill"
 msgstr ""
 
@@ -1723,11 +1723,11 @@ msgstr ""
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:373 lib/elements/fill_stitch.py:655
+#: lib/elements/fill_stitch.py:373 lib/elements/fill_stitch.py:662
 msgid "Skip last stitch in each row"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:374 lib/elements/fill_stitch.py:656
+#: lib/elements/fill_stitch.py:374 lib/elements/fill_stitch.py:663
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr ""
 
@@ -1755,11 +1755,11 @@ msgstr ""
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:427 lib/elements/fill_stitch.py:667
+#: lib/elements/fill_stitch.py:427 lib/elements/fill_stitch.py:674
 msgid "Underpath"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:428 lib/elements/fill_stitch.py:668
+#: lib/elements/fill_stitch.py:428 lib/elements/fill_stitch.py:675
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr ""
 
@@ -1779,121 +1779,121 @@ msgstr ""
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:470 lib/elements/stroke.py:134
+#: lib/elements/fill_stitch.py:477 lib/elements/stroke.py:134
 msgid "Randomize stitches"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:471 lib/elements/stroke.py:135
+#: lib/elements/fill_stitch.py:478 lib/elements/stroke.py:135
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:485 lib/elements/stroke.py:146
+#: lib/elements/fill_stitch.py:492 lib/elements/stroke.py:146
 msgid "Random stitch length jitter"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:486 lib/elements/stroke.py:147
+#: lib/elements/fill_stitch.py:493 lib/elements/stroke.py:147
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:500 lib/elements/satin_column.py:441
+#: lib/elements/fill_stitch.py:507 lib/elements/satin_column.py:441
 #: lib/elements/stroke.py:82
 msgid "Repeats"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:501 lib/elements/stroke.py:83
+#: lib/elements/fill_stitch.py:508 lib/elements/stroke.py:83
 msgid "Defines how many times to run down and back along the path."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:512 lib/elements/stroke.py:94
+#: lib/elements/fill_stitch.py:519 lib/elements/stroke.py:94
 msgid "Bean stitch number of repeats"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:513 lib/elements/stroke.py:95
+#: lib/elements/fill_stitch.py:520 lib/elements/stroke.py:95
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:528 lib/elements/satin_column.py:238
+#: lib/elements/fill_stitch.py:535 lib/elements/satin_column.py:238
 #: lib/elements/stroke.py:172
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:529 lib/elements/stroke.py:173
+#: lib/elements/fill_stitch.py:536 lib/elements/stroke.py:173
 msgid "Length of stitches in zig-zag mode."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:541
-msgid "Zigzag width"
+#: lib/elements/fill_stitch.py:548
+msgid "Zig-zag width"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:542
-msgid "Width of the zigzag line."
+#: lib/elements/fill_stitch.py:549
+msgid "Width of the zig-zag line."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:555 lib/gui/tartan/embroidery_panel.py:42
+#: lib/elements/fill_stitch.py:562 lib/gui/tartan/embroidery_panel.py:42
 msgid "Rows per tartan thread"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:556 lib/gui/tartan/embroidery_panel.py:44
+#: lib/elements/fill_stitch.py:563 lib/gui/tartan/embroidery_panel.py:44
 msgid "Consecutive rows of the same color"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:567
+#: lib/elements/fill_stitch.py:574
 msgid "Herringbone width"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:568
+#: lib/elements/fill_stitch.py:575
 msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:589 lib/elements/fill_stitch.py:598
-#: lib/elements/fill_stitch.py:625 lib/elements/fill_stitch.py:636
-#: lib/elements/fill_stitch.py:646 lib/elements/fill_stitch.py:658
-#: lib/elements/fill_stitch.py:671
+#: lib/elements/fill_stitch.py:596 lib/elements/fill_stitch.py:605
+#: lib/elements/fill_stitch.py:632 lib/elements/fill_stitch.py:643
+#: lib/elements/fill_stitch.py:653 lib/elements/fill_stitch.py:665
+#: lib/elements/fill_stitch.py:678
 msgid "Fill Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:589 lib/gui/tartan/embroidery_panel.py:55
-#: inx/inkstitch_select_elements.inx:37 inx/inkstitch_select_elements.inx:65
-#: inx/inkstitch_select_elements.inx:67
+#: lib/elements/fill_stitch.py:596 lib/gui/tartan/embroidery_panel.py:55
+#: inx/inkstitch_select_elements.inx:36 inx/inkstitch_select_elements.inx:64
+#: inx/inkstitch_select_elements.inx:66
 msgid "Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:595
+#: lib/elements/fill_stitch.py:602
 msgid "Fill angle"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:596
+#: lib/elements/fill_stitch.py:603
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:622 lib/gui/tartan/embroidery_panel.py:77
+#: lib/elements/fill_stitch.py:629 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:623
+#: lib/elements/fill_stitch.py:630
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:633 lib/elements/stroke.py:158
+#: lib/elements/fill_stitch.py:640 lib/elements/stroke.py:158
 #: lib/extensions/element_info.py:125 lib/extensions/element_info.py:181
 msgid "Max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:634
+#: lib/elements/fill_stitch.py:641
 msgid "default: equal to fill max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:644
+#: lib/elements/fill_stitch.py:651
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:679 lib/elements/satin_column.py:522
+#: lib/elements/fill_stitch.py:686 lib/elements/satin_column.py:522
 #: lib/elements/stroke.py:396 lib/gui/satin_multicolor/colorize.py:56
 msgid "Random seed"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:680 lib/elements/satin_column.py:523
+#: lib/elements/fill_stitch.py:687 lib/elements/satin_column.py:523
 #: lib/elements/stroke.py:397
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr ""
@@ -1936,30 +1936,6 @@ msgstr ""
 
 #: lib/elements/marker.py:21
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
-msgstr ""
-
-#: lib/elements/polyline.py:18
-msgid "Polyline Object"
-msgstr ""
-
-#: lib/elements/polyline.py:19
-msgid "This object is an SVG PolyLine.  Ink/Stitch can work with this shape, but you can't edit it in Inkscape.  Convert it to a manual stitch path to allow editing."
-msgstr ""
-
-#: lib/elements/polyline.py:23
-msgid "* Select this object."
-msgstr ""
-
-#: lib/elements/polyline.py:24
-msgid "* Do Path > Object to Path."
-msgstr ""
-
-#: lib/elements/polyline.py:25
-msgid "* Optional: Run the Params extension and check the \"manual stitch\" box."
-msgstr ""
-
-#: lib/elements/polyline.py:45
-msgid "Manual stitch along path"
 msgstr ""
 
 #: lib/elements/satin_column.py:31 lib/elements/stroke.py:35
@@ -2060,7 +2036,7 @@ msgid "* Hold \"Shift\" while drawing the rung."
 msgstr ""
 
 #: lib/elements/satin_column.py:91 lib/elements/satin_column.py:101
-#: inx/inkstitch_select_elements.inx:32
+#: inx/inkstitch_select_elements.inx:31
 msgid "Satin Column"
 msgstr ""
 
@@ -2886,8 +2862,16 @@ msgstr ""
 msgid "Please choose one or more commands to attach."
 msgstr ""
 
-#: lib/extensions/outline.py:23
+#: lib/extensions/outline.py:29
 msgid "Please select one or more shapes to convert to their outline."
+msgstr ""
+
+#: lib/extensions/outline.py:69
+msgid "{element_id} is not a path element. This extension is designed to generate an outline of an embroidery pattern."
+msgstr ""
+
+#: lib/extensions/outline.py:75
+msgid "Could not generate path from element {element_id} with the given settings."
 msgstr ""
 
 #: lib/extensions/palette_split_text.py:16
@@ -2991,7 +2975,7 @@ msgstr ""
 msgid "Ink/Stitch Multicolor Satin"
 msgstr ""
 
-#: lib/extensions/select_elements.py:103
+#: lib/extensions/select_elements.py:102
 msgid "Could not detect python path. Please insert python path manually as described in the help tab of the select elements dialog."
 msgstr ""
 
@@ -3056,7 +3040,7 @@ msgstr ""
 #: lib/extensions/troubleshoot.py:111 lib/extensions/troubleshoot.py:157
 #: inx/inkstitch_cleanup.inx:23 inx/inkstitch_element_info.inx:10
 #: inx/inkstitch_remove_embroidery_settings.inx:155
-#: inx/inkstitch_select_elements.inx:89 inx/inkstitch_troubleshoot.inx:12
+#: inx/inkstitch_select_elements.inx:88 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_update_svg.inx:10
 msgid "Troubleshoot"
 msgstr ""
@@ -3101,7 +3085,7 @@ msgstr ""
 msgid "Please select one or more clones to unlink."
 msgstr ""
 
-#: lib/extensions/update_svg.py:23
+#: lib/extensions/update_svg.py:26
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr ""
 
@@ -3161,7 +3145,7 @@ msgstr ""
 #: inx/inkstitch_jump_to_trim.inx:25 inx/inkstitch_lettering_along_path.inx:17
 #: inx/inkstitch_palette_to_text.inx:19
 #: inx/inkstitch_remove_embroidery_settings.inx:142
-#: inx/inkstitch_select_elements.inx:81
+#: inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
 #: inx/inkstitch_zigzag_line_to_satin.inx:18
 msgid "Help"
@@ -3310,7 +3294,7 @@ msgstr ""
 msgid "https://inkstitch.org/docs/font-tools/#font-sampling"
 msgstr ""
 
-#: lib/gui/lettering_font_sample.py:152
+#: lib/gui/lettering_font_sample.py:154
 #, python-format
 msgid "The glyphlist for this font seems to be outdated.\n\n"
 "Please update the glyph list for %s:\n"
@@ -4942,7 +4926,7 @@ msgid "Duplicate Params"
 msgstr ""
 
 #: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
-#: inx/inkstitch_select_elements.inx:104
+#: inx/inkstitch_select_elements.inx:103
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
 #: inx/inkstitch_unlink_clone.inx:11
@@ -6029,11 +6013,39 @@ msgid "Outline"
 msgstr ""
 
 #: inx/inkstitch_outline.inx:14
-msgid "Ratio"
+msgid "Keep original element(s)"
 msgstr ""
 
-#: inx/inkstitch_outline.inx:15
-msgid "Allow Holes"
+#: inx/inkstitch_outline.inx:19
+msgid "Threshold (mm²)"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:19
+msgid "Removes smaller shape areas than that"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:21
+msgid "Buffer (mm)"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:21
+msgid "Enlarge strokes by this amount"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:23
+msgid "Smoothness (mm)"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:23
+msgid "Smooth path by this amount"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:28
+msgid "Inset (mm)"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:28
+msgid "Counteract the buffer effect"
 msgstr ""
 
 #: inx/inkstitch_output_COL.inx:3
@@ -6425,8 +6437,8 @@ msgstr ""
 msgid "Select only specific running stitches"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:38
-#: inx/inkstitch_select_elements.inx:46 inx/inkstitch_select_elements.inx:66
+#: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:37
+#: inx/inkstitch_select_elements.inx:45 inx/inkstitch_select_elements.inx:65
 msgid "No restriction"
 msgstr ""
 
@@ -6446,104 +6458,100 @@ msgstr ""
 msgid "Ripples"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:25
-msgid "Polyline"
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:31
+#: inx/inkstitch_select_elements.inx:30
 msgid "Satin"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:33
+#: inx/inkstitch_select_elements.inx:32
 msgid "E-Stitch"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:34
+#: inx/inkstitch_select_elements.inx:33
 msgid "S-Stitch"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:35
+#: inx/inkstitch_select_elements.inx:34
 msgid "Zig-Zag"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:37
+#: inx/inkstitch_select_elements.inx:36
 msgid "Only select satins with this underlay type"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:39
+#: inx/inkstitch_select_elements.inx:38
 msgid "No underlay"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:40
+#: inx/inkstitch_select_elements.inx:39
 msgid "Centerwalk"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:41
+#: inx/inkstitch_select_elements.inx:40
 msgid "Contour"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:42
+#: inx/inkstitch_select_elements.inx:41
 #: inx/inkstitch_zigzag_line_to_satin.inx:12
 msgid "Zigzag"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:45
+#: inx/inkstitch_select_elements.inx:44
 msgid "Rung count"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:45
+#: inx/inkstitch_select_elements.inx:44
 msgid "Only select satins with this rung count"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:47
+#: inx/inkstitch_select_elements.inx:46
 msgid "No Rungs"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:48
+#: inx/inkstitch_select_elements.inx:47
 msgid "Two Rungs"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:55 inx/inkstitch_select_elements.inx:56
+#: inx/inkstitch_select_elements.inx:54 inx/inkstitch_select_elements.inx:55
 msgid "Fill"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:65
+#: inx/inkstitch_select_elements.inx:64
 msgid "Only select fills with this underlay"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:68
+#: inx/inkstitch_select_elements.inx:67
 msgid "No Underlay"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:82
+#: inx/inkstitch_select_elements.inx:81
 msgid "Select embroidery objects"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:84
+#: inx/inkstitch_select_elements.inx:83
 msgid "Selects specific embroidery elements by stitch type."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:85
+#: inx/inkstitch_select_elements.inx:84
 msgid "If there is already an active selection, non matching elements will be deselected."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:91
+#: inx/inkstitch_select_elements.inx:90
 msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:93
+#: inx/inkstitch_select_elements.inx:92
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:94
+#: inx/inkstitch_select_elements.inx:93
 msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:95
+#: inx/inkstitch_select_elements.inx:94
 msgid "* macOS: doesn't work, sorry"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:96
+#: inx/inkstitch_select_elements.inx:95
 msgid "Python Path"
 msgstr ""
 

@@ -11,7 +11,7 @@ import wx
 from numpy import split
 from wx.lib.intctrl import IntCtrl
 
-from lib.debug import debug
+from lib.debug.debug import debug
 from lib.utils import get_resource_dir
 from lib.utils.settings import global_settings
 from lib.utils.threading import ExitThread

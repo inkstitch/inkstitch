@@ -33,7 +33,7 @@ def smooth_path(path, smoothness=1.0):
     Returns:
         A list of Points.
     """
-    from ..debug import debug
+    from ..debug.debug import debug
 
     if smoothness == 0:
         # s of exactly zero seems to indicate a default level of smoothing

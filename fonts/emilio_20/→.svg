@@ -29,13 +29,13 @@
      inkscape:window-height="2097"
      id="namedview85"
      showgrid="true"
-     inkscape:zoom="1.7888318"
-     inkscape:cx="41.647292"
-     inkscape:cy="175.53355"
+     inkscape:zoom="10.341684"
+     inkscape:cx="106.94583"
+     inkscape:cy="43.416527"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1047"
+     inkscape:current-layer="g1111"
      inkscape:document-units="px"
      inkscape:document-rotation="0"
      inkscape:snap-global="false"
@@ -99,7 +99,7 @@ Created by FontForge 20190801 at Sat Mar 27 14:01:19 2021
    id="collapse_len_mm7561">3</inkstitch:collapse_len_mm>
 <inkstitch:min_stitch_len_mm
    id="min_stitch_len_mm9101">0</inkstitch:min_stitch_len_mm>
-<inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
+<inkstitch:inkstitch_svg_version>2</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs81">
@@ -1005,7 +1005,7 @@ Created by FontForge 20190801 at Sat Mar 27 14:01:19 2021
   </g>
   <g
      id="g1047"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-5"
      inkscape:groupmode="layer">
     <g
@@ -2521,7 +2521,7 @@ Created by FontForge 20190801 at Sat Mar 27 14:01:19 2021
   </g>
   <g
      id="g1111"
-     style="display:none"
+     style="display:inline"
      inkscape:label="GlyphLayer-D"
      inkscape:groupmode="layer">
     <g
@@ -2529,10 +2529,10 @@ Created by FontForge 20190801 at Sat Mar 27 14:01:19 2021
        style="display:inline">
       <path
          inkscape:label="Auto-remplissage satin 1"
-         sodipodi:nodetypes="cccc"
+         sodipodi:nodetypes="cccccc"
          id="autosatin56"
          style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-         d="M 26,181 H 45.5881 M 26,163 h 16.2 m -9.23426,-5.71767 v 26.21372"
+         d="M 26,181 H 42.453556 M 26,163 h 16.2 m -9.23426,-5.71767 v 26.21372"
          inkstitch:satin_column="True"
          inkstitch:ties="3"
          inkstitch:zigzag_spacing_mm="0.3"
@@ -2577,19 +2577,20 @@ Created by FontForge 20190801 at Sat Mar 27 14:01:19 2021
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3" />
       <path
-         d="m 53.4146,163 -8.0013,17.071"
+         d="M 53.4146,163 43.376145,180.83493"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-dasharray:3, 1"
          inkstitch:running_stitch_length_mm="4.0"
          inkstitch:running_stitch_tolerance_mm="0.2"
          id="path163"
          inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
+         inkstitch:min_jump_stitch_length_mm="3"
+         sodipodi:nodetypes="cc" />
       <path
          inkscape:label="Auto-remplissage satin 9"
-         sodipodi:nodetypes="ccccccccccc"
+         sodipodi:nodetypes="ccccccccccccc"
          id="autosatin67"
          style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-         d="M 45.5881,181 H 122 l 6,-8.5 3.51,-4.972 M 42.2,163 H 114 v -5.1 m -3.94656,2.42198 21.41953,14.53468 M 106,157.94792 v 26.70081 M 87.288797,158.29866 v 25.82176"
+         d="M 42.532367,181 H 122 l 6,-8.5 3.51,-4.972 M 42.2,163 H 114 v -5.1 m -3.94656,2.42198 21.41953,14.53468 M 106,157.94792 v 26.70081 M 87.288797,158.29866 v 25.82176"
          inkstitch:satin_column="True"
          inkstitch:ties="2"
          inkstitch:force_lock_stitches="False"
