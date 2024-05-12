@@ -1,7 +1,7 @@
 ---
 title: "Invercelia"
 permalink: /fr/fonts/invercelia/
-last_modified_at: 2024-04-24
+last_modified_at: 2024-05-13
 toc: false
 preview_image:
   - url: /assets/images/fonts/invercelia.png
