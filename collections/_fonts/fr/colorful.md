@@ -5,7 +5,7 @@ last_modified_at: 2024-05-12
 toc: false
 preview_image:
   - url: /assets/images/fonts/colorful.png
-    height: 40
+    height: 35
 ---
 {%- assign font = site.data.fonts.colorful.font -%}
 
