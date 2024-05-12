@@ -1213,11 +1213,13 @@ class SatinColumn(EmbroideryElement):
         points = [points[0] for points in pairs]
         stitches = running_stitch.even_running_stitch(points, self.center_walk_underlay_stitch_length, self.center_walk_underlay_stitch_tolerance)
 
+        repeated_stitches = []
         for i in range(self.center_walk_underlay_repeats - 1):
             if i % 2 == 0:
-                stitches.extend(reversed(stitches))
+                repeated_stitches.extend(reversed(stitches))
             else:
-                stitches.extend(stitches)
+                repeated_stitches.extend(stitches)
+        stitches.extend(repeated_stitches)
 
         return StitchGroup(
             color=self.color,
