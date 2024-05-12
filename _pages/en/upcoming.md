@@ -16,10 +16,10 @@ toc: true
 * [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
 
   ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
-* [Chicken Scratch](/font/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+* [Chicken Scratch](/fonst/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
   ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
-* [Colorful](/font/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
+* [Colorful](/fonts/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
 
   ![Colorfu preview](/assets/images/fonts/colorful.png)
 * [Emilio 20 Tartan](fonts/emilio-20/#emilio-20-tartan) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
