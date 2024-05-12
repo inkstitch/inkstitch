@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-10 01:08+0000\n"
-"PO-Revision-Date: 2024-05-10 01:09\n"
+"POT-Creation-Date: 2024-05-12 01:13+0000\n"
+"PO-Revision-Date: 2024-05-12 01:14\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-10 01:08+0000\n"
+"POT-Creation-Date: 2024-05-12 01:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -232,464 +232,474 @@ msgstr "Chopin Script"
 msgid "The capital M is 38.3 millimeter wide at 100% scale. Can be scaled down to 80% or up to 120%. Every satin has zigzag underlay"
 msgstr "Das Großbuchstabe M ist, bei einer Skalierung von 100 %, 38,3 mm breit. Die Schrift kann von 80 % bis zu 120 % skaliert werden. Jede Satinsäule hat eine Zick-Zack-Unterlage"
 
-#. name of font in fonts/coronaviral
+#. name of font in fonts/colorful
 #: inkstitch-fonts-metadata.py:82
+msgid "Colorful"
+msgstr ""
+
+#. description of font in fonts/colorful
+#: inkstitch-fonts-metadata.py:84
+msgid "Colorful is a tartan fill font approximatively 35mm tall. It  may be scaled down to 70% and up to 200%"
+msgstr ""
+
+#. name of font in fonts/coronaviral
+#: inkstitch-fonts-metadata.py:86
 msgid "Coronaviral"
 msgstr "Coronaviral"
 
 #. description of font in fonts/coronaviral
-#: inkstitch-fonts-metadata.py:84
+#: inkstitch-fonts-metadata.py:88
 msgid "A font created with manual sitch. Do not change the size or very little. The capital em is 22mm wide at 100%"
 msgstr "Diese Schrift wurde mit manueller Stichführung erstellt. Die Größe der Schrift bitte nicht oder nur ganz geringfügig ändern. Der Großbuchstabe M ist 22 mm breit"
 
 #. name of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:86
+#: inkstitch-fonts-metadata.py:90
 msgid "Dejavu Serif"
 msgstr "Dejavu Serif"
 
 #. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:88
+#: inkstitch-fonts-metadata.py:92
 #, python-format
 msgid "DejaVu Serif Condensed. The capital M is 19,8 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 150%.  Every satin has center-walk underlay."
 msgstr "DejaVu Serif Condensed. Der Großbuchstabe M ist bei einer Skalierung von 100 %, 19,8 mm breit. Die Schrift von 80 % bis zu 150 % skaliert werden. Jede Satinsäule hat eine Mittellinien-Unterlage."
 
 #. name of font in fonts/digory_doodles_bean
-#: inkstitch-fonts-metadata.py:90
+#: inkstitch-fonts-metadata.py:94
 msgid "Digory Doodles Bean"
 msgstr "Digory Doodles Bean"
 
 #. description of font in fonts/digory_doodles_bean
-#: inkstitch-fonts-metadata.py:92
+#: inkstitch-fonts-metadata.py:96
 msgid "All letters have mixed satin and bean stitch. The capital M is 16mm tall. The small x is 7 mm."
 msgstr "Alle Buchstaben sind eine Mischung aus Satinsäulen und Mehrfachgeradstichen. Der Großbuchstabe M ist 16 mm hoch. Der Kleinbuchstabe x 7 mm."
 
 #. name of font in fonts/dinomouse72
-#: inkstitch-fonts-metadata.py:94
+#: inkstitch-fonts-metadata.py:98
 msgid "DinoMouse72"
 msgstr "DinoMouse72"
 
 #. description of font in fonts/dinomouse72
-#: inkstitch-fonts-metadata.py:96
+#: inkstitch-fonts-metadata.py:100
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
 msgstr "Die Satinbreite beträgt bei 18 mm Großbuchstaben 2,5 mm"
 
 #. name of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:98
+#: inkstitch-fonts-metadata.py:102
 msgid "Emilio 20"
 msgstr "Emilio 20"
 
 #. description of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:100
+#: inkstitch-fonts-metadata.py:104
 #, python-format
 msgid "Emilio 20 is a font with capital only and numbers. M is 48.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 140%. Every satin has zigzag underlay"
 msgstr "Emilio 20 enthält nur Großbuchstaben und Zahlen. Das M ist, bei einer Skalierung von 100 %, 48,5 mm breit. Eine Skalierung ist von 70 % bis zu 140 % möglich. Jede Satinsäule hat eine Zick-Zack-Unterlage"
 
 #. name of font in fonts/emilio_20_applique
-#: inkstitch-fonts-metadata.py:102
+#: inkstitch-fonts-metadata.py:106
 msgid "EMILIO_20_Applique"
 msgstr "EMILIO_20_Applique"
 
 #. description of font in fonts/emilio_20_applique
-#: inkstitch-fonts-metadata.py:104
+#: inkstitch-fonts-metadata.py:108
 msgid "Emilio 20 Applique is an Applique font approximatively 50mm high. It should not be scaled down but may be scaled up to 150%. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique"
 msgstr "Emilio 20 Applique ist eine Applikationsschrift mit einer Höhe von ungefähr 50 mm. Die Schrift kann bis zu 150 % vergrößert werden, eine Verkleinerung ist nicht möglich. Diese Version ist eine Variante (breitere Satinsäulen) von Emilio_20. Emilio_20_Bold entspricht dieser Schrift, enthält jedoch nicht die Applikationsmethodik."
 
 #. name of font in fonts/emilio_20_bold
-#: inkstitch-fonts-metadata.py:106
+#: inkstitch-fonts-metadata.py:110
 msgid "EMILIO_20_Bold"
 msgstr "EMILIO_20_Bold"
 
 #. description of font in fonts/emilio_20_bold
-#: inkstitch-fonts-metadata.py:108
+#: inkstitch-fonts-metadata.py:112
 msgid "Emilio_20_Bold is an altered version of Emilio_20  and is approximatively 50mm high."
 msgstr "Emilio_20_Bold ist eine Variante von Emilio_20  mit einer Höhe von ungefähr 50 mm."
 
 #. name of font in fonts/emilio_20_simple
-#: inkstitch-fonts-metadata.py:110
+#: inkstitch-fonts-metadata.py:114
 msgid "Emilio 20 Simple"
 msgstr "Emilio 20 Simple"
 
 #. description of font in fonts/emilio_20_simple
-#: inkstitch-fonts-metadata.py:112
+#: inkstitch-fonts-metadata.py:116
 #, python-format
 msgid "Emilio is a font with capital only and numbers. M is 42.5 millimeter wide at 100% scale. Can be scaled down to 50% or up to 140%. Every satin has zigzag underlay"
 msgstr "Emilio ist eine Schrift aus Großbuchstaben und Zahlen. Das M ist bei einer Skalierung von 100 % 42,5 mm breit. Die Schrift kann bis zu 140 % vergrößert und bis zu 50 % verkleinert werden. Jede Satinsäule ist mit einer Zick-Zack Unterlage unterlegt."
 
 #. name of font in fonts/emilio_20_simple_small
-#: inkstitch-fonts-metadata.py:114
+#: inkstitch-fonts-metadata.py:118
 msgid "Emilio 20 Simple Small"
 msgstr "Emilio 20 Simple Small"
 
 #. description of font in fonts/emilio_20_simple_small
-#: inkstitch-fonts-metadata.py:116
+#: inkstitch-fonts-metadata.py:120
 msgid "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Emilio 20 Simple font between 15% (for a 8mm font ) and 40 % (for a 20mm font)."
 msgstr "Diese Schrift ist eine abgewandelte Version von Emilio 20 simple, die eine kleinere Skalierung erlaubt. Die Verwendung von dünnem Faden (60) und einer schmalen Nadel (60) wird vorausgesetzt. Die veränderten Stickparameter erlauben es, die Originalschrift zwischen 15% (8 mm Schrift) und 40 % (20 mm Schrift) herunterzuskalieren."
 
 #. name of font in fonts/emilio_20_tartan
-#: inkstitch-fonts-metadata.py:118
+#: inkstitch-fonts-metadata.py:122
 msgid "EMILIO_20_Tartan"
 msgstr "EMILIO_20_Tartan"
 
 #. description of font in fonts/emilio_20_tartan
-#: inkstitch-fonts-metadata.py:120
+#: inkstitch-fonts-metadata.py:124
 msgid "Emilio 20 Tartan uses tartan fill for a colorful font approximatively 40 mm high. The font can be scaled down to 65% and up to 150%."
 msgstr "Emilio 20 Tartan nutzt eine Tartanfüllung für ein farbenfrohes Aussehen. Die Schrift ist ca. 40 mm hoch und kann von 65 % bis zu 150 % skaliert werden."
 
 #. name of font in fonts/emilio_20_tricolore
-#: inkstitch-fonts-metadata.py:122
+#: inkstitch-fonts-metadata.py:126
 msgid "EMILIO 20 TRICOLORE"
 msgstr "EMILIO 20 TRICOLORE"
 
 #. description of font in fonts/emilio_20_tricolore
-#: inkstitch-fonts-metadata.py:124
+#: inkstitch-fonts-metadata.py:128
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font of  size approximately 100mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 90% and enlarged up to 120%"
 msgstr "Emilio 20 tricolore ist eine große, dreifarbige Schrift, die aus Füllstichen und Satinsäulen besteht. Die Größe beläuft sich auf annähernd 100 mm. Sie umfasst 36 Zeichen, einschließlich Zahlen und 26 Großbuchstaben A-Z. Eine Skalierung ist von 90 % bis zu 120 % möglich."
 
 #. name of font in fonts/espresso_KOR
-#: inkstitch-fonts-metadata.py:126
+#: inkstitch-fonts-metadata.py:130
 msgid "Espresso KOR"
 msgstr "Espresso KOR"
 
 #. description of font in fonts/espresso_KOR
-#: inkstitch-fonts-metadata.py:128
+#: inkstitch-fonts-metadata.py:132
 msgid "The capital M is 16.2 mm high at 100 scale. Every satin has zigzag underlay. x is 11.5 mm high, q is 17.5 mm high, l is 17.2 mm high. The font may be scaled up to 200% and down to 80%"
 msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100 %, 16,2 mm hoch. Jede Satinsäule hat eine Zick-Zack-Unterlage. Das x ist 11,5 mm hoch, q 17,5 mm und l 17,2 mm. Die Schrift kann von 80 % bis auf 200 % skaliert werden."
 
 #. name of font in fonts/espresso_tiny
-#: inkstitch-fonts-metadata.py:130
+#: inkstitch-fonts-metadata.py:134
 msgid "Espresso tiny"
 msgstr "Espresso tiny"
 
 #. description of font in fonts/espresso_tiny
-#: inkstitch-fonts-metadata.py:132
+#: inkstitch-fonts-metadata.py:136
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Espresso font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
 msgstr "Diese Schrift ist eine abgewandelte Version von Espresso KOR, die eine kleinere Skalierung erlaubt. Die Verwendung von dünnem Faden (60) und einer schmalen Nadel (60) wird vorausgesetzt. Die veränderten Stickparameter erlauben es, die Originalschrift zwischen 25% (5 mm Schrift) und 55 % (11 mm Schrift) herunterzuskalieren."
 
 #. name of font in fonts/excalibur_KOR
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:138
 msgid "Excalibur KOR"
 msgstr "Excalibur KOR"
 
 #. description of font in fonts/excalibur_KOR
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:140
 msgid "Excalibur KOR is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 50% and enlarged up to 140%. It contains 144 glyphs, covering most western European languages needs."
 msgstr "Excalibur KOR ist eine kleine Manuscript-Schrift aus Satinsäulen, mit einer Größe von ca. 20 mm. Eine Skalierung ist von 50 % bis zu 140 % möglich. Die Schrift umfasst 144 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab."
 
 #. name of font in fonts/excalibur_small
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:142
 msgid "Excalibur small"
 msgstr "Excalibur small"
 
 #. description of font in fonts/excalibur_small
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:144
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Excalibur KOR font between 25% (for a 5mm font ) and 50 % (for a 10mm font)."
 msgstr "Diese Schrift ist eine abgewandelte Version von Excalibur, die eine kleinere Skalierung erlaubt. Die Verwendung von dünnem Faden (60) und einer schmalen Nadel (60) wird vorausgesetzt. Die veränderten Stickparameter erlauben es, die Originalschrift zwischen 25% (5 mm Schrift) und 50 % (10 mm Schrift) herunterzuskalieren."
 
 #. name of font in fonts/fold_inkstitch
-#: inkstitch-fonts-metadata.py:142
+#: inkstitch-fonts-metadata.py:146
 msgid "Fold Ink/Stitch"
 msgstr "Fold Ink/Stitch"
 
 #. description of font in fonts/fold_inkstitch
-#: inkstitch-fonts-metadata.py:144
+#: inkstitch-fonts-metadata.py:148
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font of size 100 mm. It contains 40 glyphs including all numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged as much as you like"
 msgstr "Fold Ink/Stitch ist eine Großbuchstaben-Schrift aus Dreifach und Fünffach Geradstichen, mit einer Größe von 100 mm. Sie umfasst 40 Zeichen, einschließlich aller Zahlen und den Großbuchstaben A-Z. Eine Skalierung ist von 80 % bis zu 200 % möglich."
 
 #. name of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:150
 msgid "Geneva Simple Sans Rounded"
 msgstr "Geneva Simple Sans Rounded"
 
 #. description of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:148
+#: inkstitch-fonts-metadata.py:152
 msgid "Suitable for small fonts (8 to 20 mm)"
 msgstr "Geeignet für kleine Schriftarten (8 bis 20 mm)"
 
 #. name of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:150
+#: inkstitch-fonts-metadata.py:154
 msgid "Geneva Simple Sans"
 msgstr "Geneva Simple Sans"
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:152
+#: inkstitch-fonts-metadata.py:156
 msgid "Suitable for small fonts (6 to 15mm)"
 msgstr "Geeignet für kleine Schriftarten (6 bis 15 mm)"
 
 #. name of font in fonts/glacial_tiny
-#: inkstitch-fonts-metadata.py:154
+#: inkstitch-fonts-metadata.py:158
 msgid "Glacial Tiny 60 AGS"
 msgstr "Glacial Tiny 60 AGS"
 
 #. description of font in fonts/glacial_tiny
-#: inkstitch-fonts-metadata.py:156
+#: inkstitch-fonts-metadata.py:160
 msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 50% and enlarged up to 150%."
 msgstr "Glacial ist eine sehr kleine Schrift: mit 100% misst das M 5.6 mm. Dünnes Garn (60 wt) und eine schmale Nadel (8/60) werden vorausgesetzt. Die Buchstaben decken die meisten Westeuropäischer Sprachen ab. Die Schrift kann von 50% bis zu 150% skaliert werden."
 
 #. name of font in fonts/infinipicto
-#: inkstitch-fonts-metadata.py:158
+#: inkstitch-fonts-metadata.py:162
 msgid "InfiniPicto"
 msgstr "InfiniPicto"
 
 #. description of font in fonts/infinipicto
-#: inkstitch-fonts-metadata.py:160
+#: inkstitch-fonts-metadata.py:164
 msgid "InfiniPicto is a fun font of size approximatively 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
 msgstr "InfiniPicto ist eine lustige Schriftart, mit einer Größe von ca. 70 mm. Sie enthält nur die 26 A-Z Großbuchstaben. Jeder Buchstabe ist ein Piktogramm von einem Objekt, das mit diesem Buchstaben beginnt ... auf Französisch."
 
 #. name of font in fonts/kaushan_script_MAM
-#: inkstitch-fonts-metadata.py:162
+#: inkstitch-fonts-metadata.py:166
 msgid "Kaushan Script MAM"
 msgstr "Kaushan Script MAM"
 
 #. description of font in fonts/kaushan_script_MAM
-#: inkstitch-fonts-metadata.py:164
+#: inkstitch-fonts-metadata.py:168
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
 msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100 %, 29 mm breit. Eine Skalierung kann von 80 % bis zu 200 % vorgenommen werden. Jede Satinsäule hat eine Zick-Zack-Unterlage"
 
 #. name of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:166
+#: inkstitch-fonts-metadata.py:170
 msgid "Learning curve"
 msgstr "Learning curve"
 
 #. description of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:168
+#: inkstitch-fonts-metadata.py:172
 msgid "Small running stitch script font of size approximatively 12 mm. It can be reduced down to 90% and enlarged up to 200%"
 msgstr "Eine kleine Schreibschrift-Schriftart aus Geradstichen mit einer Größe von ca. 12 mm. Sie kann von 90 % bis zu 200 % skaliert werden."
 
 #. name of font in fonts/lobster_AGS
-#: inkstitch-fonts-metadata.py:170
+#: inkstitch-fonts-metadata.py:174
 msgid "Lobster AGS"
 msgstr "Lobster AGS"
 
 #. description of font in fonts/lobster_AGS
-#: inkstitch-fonts-metadata.py:172
+#: inkstitch-fonts-metadata.py:176
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
 msgstr " Der Großbuchstabe M ist, bei einer Skalierung von 100 %, 19,8 mm breit. Die Schrift kann von 80 % bis zu 150 % skaliert werden. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. name of font in fonts/magnolia_KOR
-#: inkstitch-fonts-metadata.py:174
+#: inkstitch-fonts-metadata.py:178
 msgid "Magnolia KOR"
 msgstr "Magnolia KOR"
 
 #. description of font in fonts/magnolia_KOR
-#: inkstitch-fonts-metadata.py:176
+#: inkstitch-fonts-metadata.py:180
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
 msgstr "Magnolia KOR ist eine Script-Schriftart mit einer Größe von annähernd 20mm. Sie kann von 80% bis zu 120% skaliert werden."
 
 #. name of font in fonts/magnolia_small
-#: inkstitch-fonts-metadata.py:178
+#: inkstitch-fonts-metadata.py:182
 msgid "Magnolia small"
 msgstr "Magnolia small"
 
 #. description of font in fonts/magnolia_small
-#: inkstitch-fonts-metadata.py:180
+#: inkstitch-fonts-metadata.py:184
 msgid "This font is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Magnolia KOR font between 25% (for a 5mm font ) and 50 % (for a 10mm font)."
 msgstr "Diese Schrift ist eine abgewandelte Version von Magnolia KOR, die eine kleinere Skalierung erlaubt. Die Verwendung von dünnem Faden (60) und einer schmalen Nadel (60) wird vorausgesetzt. Die veränderten Stickparameter erlauben es, die Originalschrift zwischen 25% (5 mm Schrift) und 50 % (10 mm Schrift) herunterzuskalieren."
 
 #. name of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:182
+#: inkstitch-fonts-metadata.py:186
 msgid "Manuskript Gothisch"
 msgstr "Manuskript Gothisch"
 
 #. description of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:184
+#: inkstitch-fonts-metadata.py:188
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
 msgstr "Der Großbuchstabe M ist, bei einer Skalierung von 100 %, 35 mm breit. Die Schrift kann von 70 % bis zu 140 % skaliert werden. Jede Satinsäule hat eine Zick-Zack-Unterlage"
 
 #. name of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:186
+#: inkstitch-fonts-metadata.py:190
 msgid "MarcellusSC-FI"
 msgstr "MarcellusSC-FI"
 
 #. description of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:188
+#: inkstitch-fonts-metadata.py:192
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
 msgstr "MarcellusSC-FI ist eine kleine Großbuchstaben-Schrift mit einer Größe von 36 mm. Sie umfasst 107 Zeichen und deckt damit die meisten westeuropäischen Sprachen ab. Eine Skalierung ist von 70 % auf bis zu 200 % möglich. Durch die Verwendung von geteilten Satinsäulen kann sogar bis auf 500 % skaliert werden."
 
 #. name of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:190
+#: inkstitch-fonts-metadata.py:194
 msgid "Ink/Stitch Medium Font"
 msgstr "Ink/Stitch Mittelgroße Schrift"
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:192
+#: inkstitch-fonts-metadata.py:196
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr "Für mittelgroße Schriftgrößen geeignet. Der Großbuchstabe \"M\" ist bei 100 % Skalierung 15,24 mm breit. Die Schrift kann von 75 % bis auf 150 % skaliert werden. Alle Satinsäulen haben eine Konturunterlage."
 
 #. name of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:194
+#: inkstitch-fonts-metadata.py:198
 msgid "Millimarif-bold20"
 msgstr "Millimarif-bold20"
 
 #. description of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:196
+#: inkstitch-fonts-metadata.py:200
 msgid "This bold font can be reduced down to 75% and enlarged up to 140% allowing Capital M height to flow from 15mm to 28mm."
 msgstr "Diese fette Schriftart kann bis zu 75 % verkleinert und bis zu 140 % vergrößert werden, sodass die Höhe des Großbuchstabens M von 15 mm auf 28 mm skaliert."
 
 #. name of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:198
+#: inkstitch-fonts-metadata.py:202
 msgid "MONICHA"
 msgstr "MONICHA"
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:200
+#: inkstitch-fonts-metadata.py:204
 msgid "Monicha is a script satin font of size approximatively 20mm. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters. The font can not be scaled down but can be scaled up to 150%. "
 msgstr "Monicha ist eine Schreibschrift-Satin-Schrift mit einer Größe von ca. 20 mm. Zusätzlich zu den Buchstaben, die die meisten westeuropäischen Sprachen abdecken, enthält sie zusätzliche Zierbuchstaben. Diese Zierbchstaben sollten vorsichtig eingesetzt werden um Überlagerungen zu vermeiden. Nutze am Besten nicht mehr als einen Zierbuchstaben pro Reihe. Auf unserer Webseite gibt es genaue Informationen, wie auf die Zierbuchstaben zugegriffen werden kann. Die Schrift kann von 100 % bis zu 150 % skaliert werden."
 
 #. name of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:202
+#: inkstitch-fonts-metadata.py:206
 msgid "Namskout"
 msgstr "Namskout"
 
 #. description of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:204
+#: inkstitch-fonts-metadata.py:208
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
 msgstr "Namskout ist eine große Applikationsschrift mit einer Größe von ca. 90mm. Sie umfasst 43 Zeichen, darunter alle Zahlen und 26 Großbuchstaben. Eine Skalierung ist von 50% bis auf 150% möglich."
 
 #. name of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:206
+#: inkstitch-fonts-metadata.py:210
 msgid "NickAinley"
 msgstr "NickAinley"
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:208
+#: inkstitch-fonts-metadata.py:212
 msgid "A tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn"
 msgstr "Ein 1 mm Mehrfachgeradstich-Alphabet auf der Grundlage einer 24 pt Schrift von Seniors Studio."
 
 #. name of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:210
+#: inkstitch-fonts-metadata.py:214
 msgid "Pacificlo"
 msgstr "Pacificlo"
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:212
+#: inkstitch-fonts-metadata.py:216
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr "Pacificlo ist eine kleine Manuscript-Schrift aus Satinsäulen mit einer Größe von ca. 20 mm. Eine Skalierung ist von 80 % bis zu 140 % möglich. Die Schrift umfasst 120 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab. "
 
 #. name of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:214
+#: inkstitch-fonts-metadata.py:218
 msgid "Pacificlo tiny"
 msgstr "Pacificlo tiny"
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:216
+#: inkstitch-fonts-metadata.py:220
 msgid "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
 msgstr "Diese Schrift ist eine abgewandelte Version von Pacificlo, die eine kleinere Skalierung erlaubt. Die Verwendung von dünnem Faden (60) und einer schmalen Nadel (60) wird vorausgesetzt. Die veränderten Stickparameter erlauben es, die Originalschrift zwischen 25% (5 mm Schrift) und 55 % (11 mm Schrift) herunterzuskalieren."
 
 #. name of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:218
+#: inkstitch-fonts-metadata.py:222
 msgid "Roaring Twenties KOR"
 msgstr "Roaring Twenties KOR"
 
 #. description of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:220
+#: inkstitch-fonts-metadata.py:224
 msgid "Roaring Twenties KOR is a font of size approximatively 16 mm. It can be scaled down to 70% and up to 150%"
 msgstr "Roaring Twenties KOR ist eine Script-Schriftart mit einer Größe von annähernd 16 mm. Sie kann von 70 % bis zu 150 % skaliert werden."
 
 #. name of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:222
+#: inkstitch-fonts-metadata.py:226
 msgid "Roaring Twenties KOR Small"
 msgstr "Roaring Twenties KOR Small"
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:224
+#: inkstitch-fonts-metadata.py:228
 msgid "This font is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Roaring  Twenties font between 35% (for a 6 mm font ) and 70 % (for a 12 mm font)."
 msgstr "Diese Schrift ist eine abgewandelte Version von Roaring Twenties KOR, die eine kleinere Skalierung erlaubt. Die Verwendung von dünnem Faden (60) und einer schmalen Nadel (60) wird vorausgesetzt. Die veränderten Stickparameter erlauben es, die Originalschrift zwischen 35% (6 mm Schrift) und 70 % (12 mm Schrift) herunterzuskalieren."
 
 #. name of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:226
+#: inkstitch-fonts-metadata.py:230
 msgid "Roman AGS"
 msgstr "Roman AGS"
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:228
+#: inkstitch-fonts-metadata.py:232
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
 msgstr "Basiert auf der Schrift Latin Modern Roman 10 fett kursiv. Der Großbuchstabe M ist, bei einer Skalierung von 100 % 42,5 mm breit. Eine Skalierung ist von 80 % bis zu 130 % möglich. Jede Satinsäule hat eine Zickzack-Unterlage."
 
 #. name of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:230
+#: inkstitch-fonts-metadata.py:234
 msgid "Roman bicolor AGS"
 msgstr "Roman bicolor AGS"
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:232
+#: inkstitch-fonts-metadata.py:236
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. A font with capital letters with 2 colors. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
 msgstr "Basiert auf der Schrift Latin Modern Roman 10 fett kursiv. Eine Schrift mit zweifarbigen Großbuchstaben. Gut kombinierbar mit den Buchstaben von Roman AGS. Das große M ist, bei einer Skalierung von 100 %, 42,5 mm breit. Eine Skalierung ist von 70 % bis zu 130 % möglich. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. name of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:234
+#: inkstitch-fonts-metadata.py:238
 msgid "Sacramarif"
 msgstr "Sacramarif"
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:236
+#: inkstitch-fonts-metadata.py:240
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
 msgstr "Basiert auf der Schrift Sacramento. Eine sehr kleine Schrift mit Geradstichen. Skalierung von 80 % bis 150 % möglich"
 
 #. name of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:238
+#: inkstitch-fonts-metadata.py:242
 msgid "Ink/Stitch Small Font"
 msgstr "Ink/Stitch Kleine Schrift"
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:240
+#: inkstitch-fonts-metadata.py:244
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr "Für kleine Schriftgrößen geeignet. Der Großbuchstabe \"M\" ist bei 100% Skalierung 5,08 mm breit. Die Schrift kann bis auf 300% skaliert werden."
 
 #. name of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:242
+#: inkstitch-fonts-metadata.py:246
 msgid "Sortefax XL Initials"
 msgstr "Sortefax XL Initials"
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:244
+#: inkstitch-fonts-metadata.py:248
 msgid " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame"
 msgstr "Sortefax ist eine sehr große Satin-Schrift mit Großbuchstaben mit 150 mm Größe. Sie kann von 75 % bis auf 200 % skaliert werden. Sie umfasst 37 Zeichen: &, A-Z und 0-9. Zusätzlich werden die Zeichen (){}[],;.: genutzt um Rahmen zu erstellen. Z.B. ergibt A( ein umrahmtes A. Warnung: für einige Buchstaben muss der Rahmen manuell vergrößert werden."
 
 #. name of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:246
+#: inkstitch-fonts-metadata.py:250
 msgid "Sortefax Medium Initials"
 msgstr "Sortefax Medium Initials"
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:248
+#: inkstitch-fonts-metadata.py:252
 msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
 msgstr "Sortefax ist eine sehr große Satin-Schrift mit Großbuchstaben mit 90 mm Größe. Sie kann von 70 % bis auf 200 % skaliert werden. Sie umfasst 37 Zeichen: &, A-Z und 0-9. Zusätzlich werden die Zeichen (){}[],;.: genutzt um Rahmen zu erstellen. Z.B. ergibt A) ein umrahmtes A. Warnung: für einige Zeichen muss der Rahmen manuell vergrößert werden."
 
 #. name of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:250
+#: inkstitch-fonts-metadata.py:254
 msgid "TT Directors"
 msgstr "TT Directors"
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:252
+#: inkstitch-fonts-metadata.py:256
 msgid "A font suited for directing"
 msgstr "Eine Schrift geeignete für wichtiges"
 
 #. name of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:254
+#: inkstitch-fonts-metadata.py:258
 msgid "TT Masters"
 msgstr "TT Meister"
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:256
+#: inkstitch-fonts-metadata.py:260
 msgid "A font suited for heavy typing :)"
 msgstr "Eine Schrift geeignete für fett geschriebenes :)"
 
 #. name of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:258
+#: inkstitch-fonts-metadata.py:262
 msgid "Violin Serif"
 msgstr "Violin Serif"
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:260
+#: inkstitch-fonts-metadata.py:264
 #, python-format
 msgid "A condensed serif font designed. Can be scaled up to 120% or scaled down to 80%. Caps height is about 28 millimeters or 1.1 inches"
 msgstr "Eine komprimierte Serifenschrift. Sie kann auf von 80% bis zu 120 % skaliert werden. Die Höhe der Großbuchstaben beträgt etwa 28 mm, bzw. 1,1 Zoll."
@@ -1249,126 +1259,126 @@ msgstr "Stichwinkel umkehren"
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr "In manchen Fällen, schlägt die automatische Winkelberechnung fehl. Der Fehler kann durch diese Option in der Regel behoben werden."
 
-#: lib/elements/element.py:223 lib/gui/preferences.py:59
+#: lib/elements/element.py:226 lib/gui/preferences.py:59
 #: lib/gui/preferences.py:106
 msgid "Minimum stitch length"
 msgstr "Minimale Stichlänge"
 
-#: lib/elements/element.py:224
+#: lib/elements/element.py:227
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
 msgstr "Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche kleiner sind als dieser Wert werden entfernt."
 
-#: lib/elements/element.py:234 lib/gui/preferences.py:41
+#: lib/elements/element.py:237 lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
 msgstr "Minimale Länge für Sprungstiche"
 
-#: lib/elements/element.py:235
+#: lib/elements/element.py:238
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
 msgstr "Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche."
 
-#: lib/elements/element.py:245
+#: lib/elements/element.py:248
 msgid "Allow lock stitches"
 msgstr "Vernähen erlauben"
 
-#: lib/elements/element.py:246
+#: lib/elements/element.py:249
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr "Den Faden am Anfang und/oder Ende dieses Objektes vernähen. Bei manueller Stichpositionierung werden nur dann Vernähstiche eingefügt, wenn die Option Vernächstiche erzwingen aktiviert ist."
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:251
+#: lib/elements/element.py:254
 msgid "Both"
 msgstr "Anfang und Ende"
 
-#: lib/elements/element.py:251
+#: lib/elements/element.py:254
 msgid "Before"
 msgstr "Anfang"
 
-#: lib/elements/element.py:251
+#: lib/elements/element.py:254
 msgid "After"
 msgstr "Ende"
 
-#: lib/elements/element.py:251
+#: lib/elements/element.py:254
 msgid "Neither"
 msgstr "Nie"
 
-#: lib/elements/element.py:260
+#: lib/elements/element.py:263
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr "Vernähen erzwingen"
 
-#: lib/elements/element.py:261
+#: lib/elements/element.py:264
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr "Am Ende dieses Objektes vernähen, auch wenn die Distanz zum Folgeobjekt kleiner ist, als in den Ink/Stitch Einstellungen (Minimale Länge für Sprungstiche) definiert."
 
-#: lib/elements/element.py:273
+#: lib/elements/element.py:276
 msgid "Tack stitch"
 msgstr "Anstecher"
 
-#: lib/elements/element.py:274
+#: lib/elements/element.py:277
 msgid "Tack down stitch type"
 msgstr "Anstecher Variante"
 
-#: lib/elements/element.py:284 lib/elements/element.py:330
+#: lib/elements/element.py:287 lib/elements/element.py:333
 msgid "Custom path"
 msgstr "Benutzerdefinierter Pfad"
 
-#: lib/elements/element.py:285
+#: lib/elements/element.py:288
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr "Bitte einen benutzerdefinierten Pfad eingeben. Bei SVG-Pfaden wird der letzte Knoten nicht gestickt, sondern bildet den ersten Stich des zugehörigen Elements ab."
 
-#: lib/elements/element.py:295 lib/elements/element.py:307
+#: lib/elements/element.py:298 lib/elements/element.py:310
 msgid "Scale tack stitch"
 msgstr "Anstecher skalieren"
 
-#: lib/elements/element.py:296
+#: lib/elements/element.py:299
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr "Stichlänge festlegen. Eine 1 in benutzerdefinierten Pfaden entspricht genau diesem Wert."
 
-#: lib/elements/element.py:308
+#: lib/elements/element.py:311
 msgid "Scale tack stitch by this percentage."
 msgstr "Anstecher um diesen Prozentwert skalieren."
 
-#: lib/elements/element.py:319
+#: lib/elements/element.py:322
 msgid "Lock stitch"
 msgstr "Verstecher"
 
-#: lib/elements/element.py:320
+#: lib/elements/element.py:323
 msgid "Lock stitch type"
 msgstr "Verstecher Variante"
 
-#: lib/elements/element.py:331
+#: lib/elements/element.py:334
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr "Bitte einen benutzerdefinierten Pfad eingeben. Bei SVG-Pfaden wird der erste Knoten nicht gestickt, sondern bildet den letzten Stich des zugehörigen Elements ab."
 
-#: lib/elements/element.py:341 lib/elements/element.py:353
+#: lib/elements/element.py:344 lib/elements/element.py:356
 msgid "Scale lock stitch"
 msgstr "Verstecher skalieren"
 
-#: lib/elements/element.py:342
+#: lib/elements/element.py:345
 msgid "Set length of lock stitches (mm)."
 msgstr "Stichlänge des Verstechers festlegen (mm)."
 
-#: lib/elements/element.py:354
+#: lib/elements/element.py:357
 msgid "Scale lock stitch by this percentage."
 msgstr "Verstecher um diesen Prozentwert skalieren."
 
-#: lib/elements/element.py:366
+#: lib/elements/element.py:369
 msgid "Trim After"
 msgstr "Fadenschnitt"
 
-#: lib/elements/element.py:367
+#: lib/elements/element.py:370
 msgid "Add a TRIM command after stitching this object."
 msgstr "Füge Fadenschnitt-Befehl nach diesem Objekt hinzu."
 
-#: lib/elements/element.py:376
+#: lib/elements/element.py:379
 msgid "Stop After"
 msgstr "Stopp"
 
-#: lib/elements/element.py:377
+#: lib/elements/element.py:380
 msgid "Add a STOP command after stitching this object."
 msgstr "Füge einen Stopp-Befehl nach diesem Objekt hinzu."
 
-#: lib/elements/element.py:627
+#: lib/elements/element.py:630
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Bitte rufe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten auf. Diese Erweiterung zeigt fehlerhafte Stellen an und gibt am rechten Seitenrand Vorschläge zum Lösen des Problems."
 
@@ -1400,7 +1410,7 @@ msgstr "Erweitern"
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr "Die \"Erweitern\"-Einstellung für dieses Füll-Objekt kann nicht angewendet werden. Ink/Stitch wird diese Einstellung ignorieren und stattdessen die Originalgröße nutzen."
 
-#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:650
+#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:651
 msgid "Inset"
 msgstr "Einzug"
 
@@ -1723,11 +1733,11 @@ msgstr "Stichversatz"
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr "Dieser Wert beschreibt, nach wie vielen Reihen die Einstichstellen übereinander liegen. Dezimalwerte sind zulässig und zeigen weniger deutliche Diagonalen im Stickbild."
 
-#: lib/elements/fill_stitch.py:373 lib/elements/fill_stitch.py:662
+#: lib/elements/fill_stitch.py:373 lib/elements/fill_stitch.py:663
 msgid "Skip last stitch in each row"
 msgstr "Letzten Stich in jeder Reihe überspringen"
 
-#: lib/elements/fill_stitch.py:374 lib/elements/fill_stitch.py:663
+#: lib/elements/fill_stitch.py:374 lib/elements/fill_stitch.py:664
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "Der letzte Stich einer Reihe ist sehr nah an dem ersten Stich der nächsten Reihe. Ihn zu überspringen verringert Stichanzahl und Dichte."
 
@@ -1755,11 +1765,11 @@ msgstr "Endposition erzwingen"
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
 msgstr "Ist diese Option deaktiviert, legt die Endposition lediglich die generelle Stickrichtung fest. In aktiviertem Zustand endet der letzte Farbabschnitt an diesem Punkt."
 
-#: lib/elements/fill_stitch.py:427 lib/elements/fill_stitch.py:674
+#: lib/elements/fill_stitch.py:427 lib/elements/fill_stitch.py:675
 msgid "Underpath"
 msgstr "Verbindungsstiche innerhalb des Objektes"
 
-#: lib/elements/fill_stitch.py:428 lib/elements/fill_stitch.py:675
+#: lib/elements/fill_stitch.py:428 lib/elements/fill_stitch.py:676
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Stiche zum Verbinden der Teilbereiche verlaufen innerhalb des Objektes. Verbindungsstiche vermeiden im Winkel des Füllmusters zu verlaufen. Das kann ihnen ein zackiges Aussehen verleihen."
 
@@ -1847,54 +1857,54 @@ msgstr "Fischgrätenmuster-Breite"
 msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr "Definiert die Breite des Fischgrätenmusters. 0 für reguläres Tartanmuster."
 
-#: lib/elements/fill_stitch.py:596 lib/elements/fill_stitch.py:605
-#: lib/elements/fill_stitch.py:632 lib/elements/fill_stitch.py:643
-#: lib/elements/fill_stitch.py:653 lib/elements/fill_stitch.py:665
-#: lib/elements/fill_stitch.py:678
+#: lib/elements/fill_stitch.py:597 lib/elements/fill_stitch.py:606
+#: lib/elements/fill_stitch.py:633 lib/elements/fill_stitch.py:644
+#: lib/elements/fill_stitch.py:654 lib/elements/fill_stitch.py:666
+#: lib/elements/fill_stitch.py:679
 msgid "Fill Underlay"
 msgstr "Füllung Unterlage"
 
-#: lib/elements/fill_stitch.py:596 lib/gui/tartan/embroidery_panel.py:55
+#: lib/elements/fill_stitch.py:597 lib/gui/tartan/embroidery_panel.py:55
 #: inx/inkstitch_select_elements.inx:36 inx/inkstitch_select_elements.inx:64
 #: inx/inkstitch_select_elements.inx:66
 msgid "Underlay"
 msgstr "Unterlage"
 
-#: lib/elements/fill_stitch.py:602
+#: lib/elements/fill_stitch.py:603
 msgid "Fill angle"
 msgstr "Füllwinkel"
 
-#: lib/elements/fill_stitch.py:603
+#: lib/elements/fill_stitch.py:604
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr "Standard: Füllwinkel + 90 Grad. Füge eine Liste von mit Leerzeichen getrennten Werten ein, um mehrere Lagen zu erzeugen."
 
-#: lib/elements/fill_stitch.py:629 lib/gui/tartan/embroidery_panel.py:77
+#: lib/elements/fill_stitch.py:630 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
 msgstr "Reihenabstand"
 
-#: lib/elements/fill_stitch.py:630
+#: lib/elements/fill_stitch.py:631
 msgid "default: 3x fill row spacing"
 msgstr "Standard: 3x Füllreihenabstand"
 
-#: lib/elements/fill_stitch.py:640 lib/elements/stroke.py:158
+#: lib/elements/fill_stitch.py:641 lib/elements/stroke.py:158
 #: lib/extensions/element_info.py:125 lib/extensions/element_info.py:181
 msgid "Max stitch length"
 msgstr "Maximale Stichlänge"
 
-#: lib/elements/fill_stitch.py:641
+#: lib/elements/fill_stitch.py:642
 msgid "default: equal to fill max stitch length"
 msgstr "Standard: entspricht der maximalen Stichlänge"
 
-#: lib/elements/fill_stitch.py:651
+#: lib/elements/fill_stitch.py:652
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Verkleinern Sie die Unterlage, um zu verhindern, dass die Unterlage an der Außenseite der Füllstiche sichtbar wird."
 
-#: lib/elements/fill_stitch.py:686 lib/elements/satin_column.py:522
+#: lib/elements/fill_stitch.py:687 lib/elements/satin_column.py:522
 #: lib/elements/stroke.py:396 lib/gui/satin_multicolor/colorize.py:56
 msgid "Random seed"
 msgstr "Zufallszahl"
 
-#: lib/elements/fill_stitch.py:687 lib/elements/satin_column.py:523
+#: lib/elements/fill_stitch.py:688 lib/elements/satin_column.py:523
 #: lib/elements/stroke.py:397
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer."
@@ -2786,7 +2796,7 @@ msgstr "Kein Element ausgewählt.\n\n"
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
 msgstr "Keine Textelemente mit Füllfarben gefunden. Anwendungshinweise sind auf unserer Webseite hinterlegt."
 
-#: lib/extensions/gradient_blocks.py:39 lib/extensions/gradient_blocks.py:47
+#: lib/extensions/gradient_blocks.py:40 lib/extensions/gradient_blocks.py:48
 msgid "Please select at least one object with a gradient fill."
 msgstr "Bitte mindestens ein Objekt mit Farbverlauf auswählen."
 
@@ -3311,6 +3321,10 @@ msgstr "Die Liste der Zeichen scheint veraltet zu sein.\n\n"
 "Bitte aktualisiere die Liste für die Schrift %s:\n"
 "Erweiterungen > Ink/Stith > Schriftverwaltung > Liste verfügbarer Zeichen aktualisieren ..."
 
+#: lib/gui/lettering_font_sample.py:204
+msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
+msgstr ""
+
 #: lib/gui/preferences.py:16 lib/gui/preferences.py:17
 #: inx/inkstitch_preferences.inx:3
 msgid "Preferences"
@@ -3593,6 +3607,10 @@ msgstr "1 Tartan-Faden entspricht (mm)"
 #: lib/gui/tartan/code_panel.py:29 lib/gui/tartan/code_panel.py:30
 msgid "Used only for Threadcount code (The Scottish Register of Tartans)"
 msgstr "Findet nur Anwendung auf die Code-Notierung die das Scottish Register of Tartans auf Anfrage per Mail zustellt."
+
+#: lib/gui/tartan/code_panel.py:34
+msgid "Apply Code"
+msgstr ""
 
 #: lib/gui/tartan/customize_panel.py:31
 msgid "Pattern Settings"
