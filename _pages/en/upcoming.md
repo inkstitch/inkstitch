@@ -132,6 +132,13 @@ Do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/
 
 * Add glyph filter ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
 
+## [Params](/docs/params/)
+
+`Params`
+
+* Improved error reporting ([#2437](https://github.com/inkstitch/inkstitch/issues/2437))
+* Add object based min stitch length und min jump stitch length ([#2792](https://github.com/inkstitch/inkstitch/issues/2792))
+
 ### [Preferences](/docs/preferences/)
 
 `Preferences`
@@ -157,9 +164,25 @@ Do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/
 * Option to select auto-satin underpathing ([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
 * Options to select new stitch types
 
+## [Simulator](/docs/visualize/#simulator)
+
+`Visualize and Export > Simulator`
+
+**Important announcement**<br>Realistic and simulator divorced. `Realistic preview` and `Stitch plan preview` started living together.<br><br><span style="font-style: italic;">The realistic preview has been moved to the stitch plan preview.</span>
+{: .notice--warning }
+
+The "standalone simulator" has been replaced with the reworked simulator from param and lettering extensions.
+
+* Improved params simulator([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
+* Simulator is now attachable/detachable ([#2557](https://github.com/inkstitch/inkstitch/issues/2557))
+* Simulator has a changable background color and can show/hide jumps ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
+
 ### [Stitch Plan Preview](/docs/visualize/#stitch-plan-preview)
 
 `Visualize and Export > Stitch Plan Preview`
+
+**Important announcement**<br>The realistic preview has been moved to the stitch plan preview.
+{: .notice--warning }
 
 * Add option to keep/overwrite previous stitch plan ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
 * Add realistic render methods (png, vector) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
@@ -242,21 +265,9 @@ All fonts have been reworked to be more stable when transformed.
 ## Palettes
 
 ### New Palettes
+
 * Simthread glow in the dark / 15 colors ([#2752](https://github.com/inkstitch/inkstitch/pull/2752))
 * Simthread 63 Brother Colours Polyester ([#2752](https://github.com/inkstitch/inkstitch/pull/2752))
-
-## Params
-
-* Improved error reporting ([#2437](https://github.com/inkstitch/inkstitch/issues/2437))
-* Add object based min stitch length und min jump stitch length ([#2792](https://github.com/inkstitch/inkstitch/issues/2792))
-
-## Simulator
-
-The "standalone simulator" has been replaced with the reworked simulator from param and lettering extensions.
-
-* Improved params simulator([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
-* Simulator is now attachable/detachable ([#2557](https://github.com/inkstitch/inkstitch/issues/2557))
-* Simulator has a changable background color and can show/hide jumps ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
 
 ## Stitch types
 

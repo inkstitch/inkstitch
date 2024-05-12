@@ -131,19 +131,24 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 `Lettrage`
 * Ajouter un filtre sur la présence des glyphes ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
 
+## [Paramètres](/fr/docs/params/)
+
+`Paramètres`
+
+* Meilleure information en cas d'erreur[#2437](https://github.com/inkstitch/inkstitch/issues/2437))
+* Ajout des paramètres "longueur minimum de point" et "longeur minimum de saut" sur les  objets de broderie  ([#2792](https://github.com/inkstitch/inkstitch/issues/2792))
+
 ### [Préferences](/fr/docs/preferences)
 
 `Préferences`
 
 * electron -> wxpython ([#2479](https://github.com/inkstitch/inkstitch/issues/2479))
 
-### Export  PDF
+### [Export  PDF](/fr/docs/visualize/#export-pdf)
   
 Visualise et Exporter > Export pdf
 
 * Le pdf s'ouvre à nouveau dans un navigateur ([#2849](https://github.com/inkstitch/inkstitch/issues/2849))
-
-
 
 ### [Supprimer tous les paramètres de broderie](/fr/docs/troubleshoot/#remove-embroidery-settings)
 
@@ -161,9 +166,22 @@ Visualise et Exporter > Export pdf
 * Option pour sélectionner les chemins de dessous de l'arrangement automatique de colonnes satin ([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
 * Options pour sélectionner les nouveaux types de  points
 
+## [Simulateur](/fr/docs/visualize/#simulateur)
+
+`Visualiser et exporter > Simulateur`
+
+**Important announcement**<br>Realistic and simulator divorced. `Realistic preview` and `Stitch plan preview` started living together.<br><br><span style="font-style: italic;">The realistic preview has been moved to the stitch plan preview.</span>
+{: .notice--warning }
+
+* Meilleur simulateur pour Paramètres et Lettrage ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
+* Le simulateur est maintenant attaché à la fenêtre principale (Paramètre et Lettrage)([#2557](https://github.com/inkstitch/inkstitch/issues/2557)), il est détachable, et son dernier état est conservé.
+
 ### [Stitch Plan Preview](/fr/docs/visualize/#stitch-plan-preview)
 
 `Visualiser et exporter > Prévisualisaton du plan de broderie`
+
+**Important announcement**<br>The realistic preview has been moved to the stitch plan preview.
+{: .notice--warning }
 
 * Ajout d'une option pour conserver/écraser le plan de broderie précédent ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
 * Ajout de méthodes de  rendu réaliste (png, vector) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
@@ -257,17 +275,6 @@ Toutes les fontes ont été retravaillées pour être plus stables si déformée
 ### Nouvelles palettes
 * Simthread glow in the dark / 15 couleurs ([#2752](https://github.com/inkstitch/inkstitch/pull/2752))
 * Simthread 63 Brother Colours Polyester ([#2752](https://github.com/inkstitch/inkstitch/pull/2752))
-
-## Paramètres
-
-* Meilleure information en cas d'erreur[#2437](https://github.com/inkstitch/inkstitch/issues/2437))
-* Ajout des paramètres "longueur minimum de point" et "longeur minimum de saut" sur les  objets de broderie  ([#2792](https://github.com/inkstitch/inkstitch/issues/2792))
-
-## Simulateur
-
-* Meilleur simulateur pour Paramètres et Lettrage ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
-* Le simulateur est maintenant attaché à la fenêtre principale (Paramètre et Lettrage)([#2557](https://github.com/inkstitch/inkstitch/issues/2557)), il est détachable, et son dernier état est conservé.
-
 
 ## Types de points 
 ### Clones

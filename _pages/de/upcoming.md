@@ -133,6 +133,13 @@ Gibt jetzt eine Zusammenhänge Satinsäule aus ([#2418](https://github.com/inkst
 
 * Filter nach vorhandenen Schriftzeichen ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
 
+## [Parameter](/de/docs/params)
+
+`Parameter`
+
+* Verbesserte Fehlermeldungen ([#2437](https://github.com/inkstitch/inkstitch/issues/2437))
+* Objektbasierte minimale Stichlänge und minimale Sprungstichlänge ([#2792](https://github.com/inkstitch/inkstitch/issues/2792))
+
 ### [Einstellungen](/de/docs/preferences/)
 
 `Einstellungen`
@@ -158,9 +165,28 @@ Gibt jetzt eine Zusammenhänge Satinsäule aus ([#2418](https://github.com/inkst
 * Option nach Verbindungslinien für automatisch geführte Satinsäulen / automatisch geführten Laufstichen auszuwählen ([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
 * Options to select new stitch types
 
+## [Simulator](/de/docs/visualize/#simulator)
+
+`Visualisieren und Exportieren > Simulator`
+
+**Important announcement**<br>Realistische Vorschau und Simulator haben sich getrennt. `Realistische Vorschau` und `Stichplanvorschau` leben jetzt zusammen.<br><br><span style="font-style: italic;">Die realistische Vorschau befindet sich jetzt in der Sitchplanvorschau.</span>
+{: .notice--warning }
+
+Der "alleinstehende Simulator" wurde durch den verbesserten Parameter-Simulator ersetzt.
+
+Die realistische Vorschau befindet sich jetzt in der Stichplan Vorschau.
+
+* Verbesserter Simulator ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
+* Simulator kann an die Einstellungsfenster angeheftet und gelöst werden([#2557](https://github.com/inkstitch/inkstitch/issues/2557))
+* Die Hintergrundfarbe kann im Simulator angepasst werden ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
+* Sprungstiche können angezeigt/versteckt werden ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
+
 ### [Stichplanvorschau](/de/docs/visualize/#stich-plan-vorschau)
 
 `Visualisieren und Exportieren > Stitchplan Vorschau`
+
+**Important announcement**<br>Die realistische Vorschau befindet sich jetzt in der Sitchplanvorschau.
+{: .notice--warning }
 
 * Option den vorherigen Stichplan zu überschreiben / zu behalten ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
 * Realistische Rendermodi (PNG oder Vektor) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
@@ -242,24 +268,9 @@ Alle Schriften wurden überarbeitet und sind stabiler bei Transformationen
 ## Farbpaletten
 
 ### Neue Farbpaletten
+
 * Simthread glow in the dark / 15 Farben ([#2752](https://github.com/inkstitch/inkstitch/pull/2752))
 * Simthread 63 Brother Colours Polyester ([#2752](https://github.com/inkstitch/inkstitch/pull/2752))
-
-## Parameter
-
-* Verbesserte Fehlermeldungen ([#2437](https://github.com/inkstitch/inkstitch/issues/2437))
-* Objektbasierte minimale Stichlänge und minimale Sprungstichlänge ([#2792](https://github.com/inkstitch/inkstitch/issues/2792))
-
-## Simulator
-
-Der "alleinstehende Simulator" wurde durch den verbesserten Parameter-Simulator ersetzt.
-
-Die realistische Vorschau befindet sich jetzt in der Stichplan Vorschau.
-
-* Verbesserter Simulator ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
-* Simulator kann an die Einstellungsfenster angeheftet und gelöst werden([#2557](https://github.com/inkstitch/inkstitch/issues/2557))
-* Die Hintergrundfarbe kann im Simulator angepasst werden ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
-* Sprungstiche können angezeigt/versteckt werden ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
 
 ## Sticharten
 
