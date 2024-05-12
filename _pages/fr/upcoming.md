@@ -238,18 +238,22 @@ Visualise et Exporter > Export pdf
 
 `Visualiser et exporter > Simulateur`
 
-**Important announcement**<br>Realistic and simulator divorced. `Realistic preview` and `Stitch plan preview` started living together.<br><br><span style="font-style: italic;">The realistic preview has been moved to the stitch plan preview.</span>
+
+**Annonce importante**<br> Simulateur et Vue réaliste ont divorcés. `Vue réaliste` et `Aperçu du plan de broderie` ont commençé une vie commune.<br><br><span style="font-style: italic;"> L'aperçu réaliste a été déplacé vers l'apercu du plan de  broderie.</span>
 {: .notice--warning }
+
 
 * Meilleur simulateur pour Paramètres et Lettrage ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
 * Le simulateur est maintenant attaché à la fenêtre principale (Paramètre et Lettrage)([#2557](https://github.com/inkstitch/inkstitch/issues/2557)), il est détachable, et son dernier état est conservé.
+* La couleur de fond du simulateur est maintenant modifiable, et il a la capacité de montrer/cacher les sauts de fil. ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
 
 ### [Stitch Plan Preview](/fr/docs/visualize/#stitch-plan-preview)
 
 `Visualiser et exporter > Prévisualisaton du plan de broderie`
 
-**Important announcement**<br>The realistic preview has been moved to the stitch plan preview.
+**Annonce importante**<br>  L'aperçu réaliste a été déplacé vers l'apercu du plan de  broderie.</span>
 {: .notice--warning }
+
 
 * Ajout d'une option pour conserver/écraser le plan de broderie précédent ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
 * Ajout de méthodes de  rendu réaliste (png, vector) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
