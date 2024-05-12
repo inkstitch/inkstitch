@@ -185,7 +185,6 @@ Do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/
 * [Chicken Scratch](/font/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
   ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
-
 * [Colorful](/font/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
 
   ![Colorfu preview](/assets/images/fonts/colorful.png)

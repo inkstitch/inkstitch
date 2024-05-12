@@ -4,7 +4,7 @@ permalink: /de/docs/visualize/
 last_modified_at: 2024-03-13
 toc: true
 ---
-## Simulator / Realistische Vorschau
+## Simulator
 
 Wähle die Objekte aus, die in der simulierten Vorschau angezeigt werden sollen. Wenn das gesamtes Design simuliert werden soll, wähle alles (`Strg + A`) oder nichts aus.
 
@@ -39,17 +39,26 @@ Wird der Stickplan jedoch eingefügt, kann das Design genauer untersucht und ggf
 
 Es gibt die folgenden Optionen:
 
-* **Stickplan an der Seite platzieren** Der Stichplan wird rechts neben dem Canvas abgebildet. Ist diese Option nicht aktiviert, wird der Stichplan direkt über das Design gelegt. In diesem Fall ist es nützlich die Sichtbarkeit des Designs anzupassen.
-* **Design-Layer Sichtbarkeit** definiert die Sichtbarkeit, bzw. Transparenz der Design-Layer
-  * **unverändert** die Design-Layer bleiben unverändert
-  * **versteckt** das Original-Design wird versteckt
-  * **Verrinerte Deckkraft** das Original wird mit 40%-Transparenz dargestellt
-* **Nadeleinstichstellen** zeigt Punkte an den Einstichstellen
-* **Lock** Stichplan reagiert nicht auf Mausinteraktionen. Das ist praktisch, wenn mit aktiviertem Stichplan das Original-Design bearbeitet werden soll
+- **Design-Layer Sichtbarkeit** definiert die Sichtbarkeit, bzw. Transparenz der Design-Layer
+  - **unverändert** die Design-Layer bleiben unverändert
+  - **versteckt** das Original-Design wird versteckt
+  - **Verrinerte Deckkraft** das Original wird mit 40%-Transparenz dargestellt
+- **Render Modus**
+  {% include upcoming_release.html %}
+  - **Einfach**: simple line drawing
+  - **Realistisch**: Realistic preview output as png image into the canvas (8-bit)
+  - **Realistisch (hohe Qualität)** Realistic preview output as png image into the canvas (16-bit)
+  - **Realistisch Vektor (langsam)** Vector output with realistic filters
+- **Stickplan an der Seite platzieren** Der Stichplan wird rechts neben dem Canvas abgebildet.
+  Ist diese Option nicht aktiviert, wird der Stichplan direkt über das Design gelegt.
+  In diesem Fall ist es nützlich die Sichtbarkeit des Designs anzupassen.
+- **Nadeleinstichstellen** zeigt Punkte an den Einstichstellen
+- **Lock** Stichplan reagiert nicht auf Mausinteraktionen. Das ist praktisch, wenn mit aktiviertem Stichplan das Original-Design bearbeitet werden soll
+- **Zeige visuelle Befehle**
+- **Letzten Stichplan überschreiben**
+  {% include upcoming_release.html %}
+  Überschreibt den letzten Stichplan wenn aktiviert. Soll der alte Stichplan erhalten bleiben, deaktiviere diese Option.
 
-{% include upcoming_release.html %}
-* **Overide last stitch plan** if checked,  the new stitch plan will replace the previous one, uncheck if you wish to keep the previous stitch plan
-  
 {% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
 
 ## Stich-Plan Vorschau aufheben

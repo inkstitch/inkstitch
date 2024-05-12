@@ -4,11 +4,11 @@ permalink: /docs/visualize/
 last_modified_at: 2024-03-13
 toc: true
 ---
-## Simulator / Realistic Preview
+## Simulator
 
 Select the objects you wish to see in a simulated preview. If you want to watch your whole design being simulated, select everything (`Ctrl+A`) or nothing.
 
-Then  run `Extensions > Ink/Stitch  > Visualize and Export > Simulator / Realistic Preview` and enjoy.
+Then  run `Extensions > Ink/Stitch  > Visualize and Export > Simulator` and enjoy.
 
 ![Simulator](/assets/images/docs/en/simulator.jpg)
 {: style="border: 2px solid gray; padding: 5px;"}
@@ -37,24 +37,25 @@ Instead of applying the stitch plan, you can also use the `Live preview` option.
 
 You have the following display options:
 
-
-* **Design layer visibility** defines the visibility of the original design layer.
-  * **unchanged** leave it as is
-  * **hidden** hide the original design
-  * **lower opacity** display original design with lower opacity
-
-* **Render Mode**
-  * **Simple** 
-  * **Realistic** 
-  * **Realistic High Quality** 
-  * **Realistic vector (slow)** 
-
-* **Move stitch plan beside the canvas** Displays the preview on the right side of the canvas. If not enabled, the stitch plan will be placed on top of your design. In that case you may want to update your design visibility to eather hidden or lower opacity.
-* **Needle points** displays needle points if enabled
-* **Lock** make stitch plan insensitive to mouse interactions (makes it easier to work on the actual design while the stitch plan is active)
-* **Display command symbols**
-{% include upcoming_release.html %}
-* **Overide last stitch plan** if checked the new stitch plan will replace the previous one, uncheck if you wish to keep the previous stitch plan
+- **Design layer visibility** defines the visibility of the original design layer.
+  - **unchanged** leave it as is
+  - **hidden** hide the original design
+  - **lower opacity** display original design with lower opacity
+- **Render Mode**
+  {% include upcoming_release.html %}
+  - **Simple**: simple line drawing
+  - **Realistic**: Realistic preview output as png image into the canvas (8-bit)
+  - **Realistic High Quality** Realistic preview output as png image into the canvas (16-bit)
+  - **Realistic vector (slow)** Vector output with realistic filters
+- **Move stitch plan beside the canvas**
+  Displays the preview on the right side of the canvas. If not enabled,the stitch plan will be placed on top of your design.
+  In that case you may want to update your design visibility to eather hidden or lower opacity.
+- **Needle points** displays needle points if enabled
+- **Lock** make stitch plan insensitive to mouse interactions (makes it easier to work on the actual design while the stitch plan is active)
+- **Display command symbols**
+- **Overide last stitch plan**
+  {% include upcoming_release.html %}
+  If checked the new stitch plan will replace the previous one, uncheck if you wish to keep the previous stitch plan
 
 {% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
 

@@ -4,11 +4,11 @@ permalink: /fr/docs/visualize/
 last_modified_at: 2024-04-20
 toc: true
 ---
-## Simulateur/ Aperçu Réaliste
+## Simulateur
 
 Sélectionnez les objets que vous souhaitez voir dans un aperçu simulé. Si vous souhaitez voir toute votre conception simulée, sélectionnez tout (`Ctrl+A`) ou rien.
 
-Puis faites `Extensions > Ink/Stitch  > Visualiser et Exporter > Simulateur / Aperçu Réaliste`.
+Puis faites `Extensions > Ink/Stitch  > Visualiser et Exporter > Simulateur`.
 
 ![Simulator](/assets/images/docs/en/simulator.jpg)
 {: style="border: 2px solid gray; padding: 5px;"}
