@@ -5,7 +5,7 @@ last_modified_at: 2024-05-12
 toc: false
 preview_image:
   - url: /assets/images/fonts/invercelia.png
-    height: 19
+    height: 90
 ---
 {%- assign font = site.data.fonts.invercelia.font -%}
 
