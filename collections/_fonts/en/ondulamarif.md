@@ -43,7 +43,7 @@ This font contains  {{ font2.glyphs.size }} glyphs:
 {: .font-glyphs }
 
 ### Dimensions
-This variation allow for a smaller scae
+This variation allow for a smaller scale
 
 It can be used  from {{ font2.min_scale | times: 100 | floor }}% ({{ font1.size | times: font2.min_scale }} mm)
 up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font1.max_scale }} mm).
