@@ -132,7 +132,7 @@ Do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/
 
 * Add glyph filter ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
 
-## [Params](/docs/params/)
+### [Params](/docs/params/)
 
 `Params`
 
@@ -164,7 +164,7 @@ Do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/
 * Option to select auto-satin underpathing ([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
 * Options to select new stitch types
 
-## [Simulator](/docs/visualize/#simulator)
+### [Simulator](/docs/visualize/#simulator)
 
 `Visualize and Export > Simulator`
 

@@ -133,7 +133,7 @@ Gibt jetzt eine Zusammenhänge Satinsäule aus ([#2418](https://github.com/inkst
 
 * Filter nach vorhandenen Schriftzeichen ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
 
-## [Parameter](/de/docs/params)
+### [Parameter](/de/docs/params)
 
 `Parameter`
 
@@ -165,7 +165,7 @@ Gibt jetzt eine Zusammenhänge Satinsäule aus ([#2418](https://github.com/inkst
 * Option nach Verbindungslinien für automatisch geführte Satinsäulen / automatisch geführten Laufstichen auszuwählen ([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
 * Options to select new stitch types
 
-## [Simulator](/de/docs/visualize/#simulator)
+### [Simulator](/de/docs/visualize/#simulator)
 
 `Visualisieren und Exportieren > Simulator`
 

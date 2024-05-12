@@ -131,7 +131,7 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 `Lettrage`
 * Ajouter un filtre sur la présence des glyphes ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
 
-## [Paramètres](/fr/docs/params/)
+### [Paramètres](/fr/docs/params/)
 
 `Paramètres`
 
@@ -166,7 +166,7 @@ Visualise et Exporter > Export pdf
 * Option pour sélectionner les chemins de dessous de l'arrangement automatique de colonnes satin ([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
 * Options pour sélectionner les nouveaux types de  points
 
-## [Simulateur](/fr/docs/visualize/#simulateur)
+### [Simulateur](/fr/docs/visualize/#simulateur)
 
 `Visualiser et exporter > Simulateur`
 
