@@ -1,7 +1,7 @@
 ---
 title: "Changements, Mises à jour et Corrections pour la prochaine  version Ink/Stitch v3.1.0"
 permalink: /fr/upcoming/
-last_modified_at: 2024-05-06
+last_modified_at: 2024-05-12
 sidebar:
   nav: pages
 toc: true
@@ -32,7 +32,7 @@ Cette extension informe sur divers paramètres des éléments de point sélectio
 
 Gestion des polices > Test de police ([#2858](https://github.com/inkstitch/inkstitch/issues/2858))
 
-Cette extension crée un calque qui contient toutes les lettres d'une fonte. Elle aide les créateurs de fontes   à tester leurs nouvelles fonte.
+Cette extension crée un calque qui contient toutes les lettres d'une fonte. Elle aide les créateurs de fontes   à tester leurs nouvelles fontes.
 
 ### [Générer des échantillons de test à partir de la sélection](/fr/docs/edit/#generate-test-swatches-from-selection)
 
@@ -157,11 +157,17 @@ Visualise et Exporter > Export pdf
 
 * ajout d'une option pour sélectioner  les colonnes satin sans traverse ou avec exactement deux traverses  ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
 
+* ajout  d'une option pour sélectionner selon  le nombre de répétitions (bean  stitch repeat)([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
+* Option pour sélectionner les chemins de dessous de l'arrangement automatique de colonnes satin ([#2875](https://github.com/inkstitch/inkstitch/pull/2875))
+* Options pour sélectionner les nouveaux types de  points
+
 ### [Stitch Plan Preview](/fr/docs/visualize/#stitch-plan-preview)
 
 `Visualiser et exporter > Prévisualisaton du plan de broderie`
 
 * Ajout d'une option pour conserver/écraser le plan de broderie précédent ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
+* Ajout de méthodes de  rendu réaliste (png, vector) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
+
 
 ### [Résolution de problème](/fr/docs/troubleshoot/#troubleshoot)
 
@@ -218,6 +224,12 @@ Visualise et Exporter > Export pdf
 *  Cherry for  Kaalleen a été modifiée pour inclure un léger remplissage.
   
 Toutes les fontes ont été retravaillées pour être plus stables si déformées.
+ [#2871](https://github.com/inkstitch/inkstitch/pull/2871)
+ [#2868](https://github.com/inkstitch/inkstitch/pull/2868)
+ [#2857](https://github.com/inkstitch/inkstitch/pull/2857)
+ [#2850](https://github.com/inkstitch/inkstitch/pull/2850)
+ [#2833](https://github.com/inkstitch/inkstitch/pull/2833)
+ [#2812](https://github.com/inkstitch/inkstitch/pull/2812)
  [#2807](https://github.com/inkstitch/inkstitch/pull/2807)
  [#2803](https://github.com/inkstitch/inkstitch/pull/2803)
  [#2802](https://github.com/inkstitch/inkstitch/pull/2802)
@@ -253,9 +265,14 @@ Toutes les fontes ont été retravaillées pour être plus stables si déformée
 
 
 ## Types de points 
+### Clones
+
+* Amélioration de la dédecton de l'angle pour les clones de remplissage ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
+* Ajout de la possibilitéde rendu pour les groupes de clones ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
+* Amélioration de la detection du style (([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
 
 ### Famille des Remplissages
-
+* Option d'ajout d'aléatoire à la longueur du point ([#2830](https://github.com/inkstitch/inkstitch/issues/2830))
 * Lissage des chemins de dessous([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
 * Prévention de la sortie de la forme pour le remplissage([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
 * [Remplissage dégradé linéaire](/fr/docs/stitches/linear-gradient-fill/): un nouveau type de points pour les dégradés linéaires([#2587](https://github.com/inkstitch/inkstitch/issues/2587))
@@ -279,12 +296,14 @@ Toutes les fontes ont été retravaillées pour être plus stables si déformée
 * Zig-Zag: un nouveau style de points pour cette famille ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![Zigzag Stitch](/assets/images/docs/en/compare-satin-zigzag.png)
 
-### Clones
+### Famille   des points droits
 
-* Meilleur détection de l'angle pour les clones de remplissage([#2766](https://github.com/inkstitch/inkstitch/issues/2766))
-* Ajout de la capacité de rendu de clones de groupes([#2766](https://github.com/inkstitch/inkstitch/issues/2766))
-* Meilleure détection du style (([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
-  
+* Option d'ajout d'aléatoire à la longueur du point ([#2830](https://github.com/inkstitch/inkstitch/issues/2830))
+
+### Polylines
+Dans les versions précédentes les polylines  étaient considérés come un type spécial de point (en fait un point manuel).
+Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu par défaut soit par des points droits (quand ils ont une couleur de trait), soit par des remplissages automatiques (lorsqu'ils ont une  couleur de fond). Dans  tout  fichier préexistant avec des  polylines, l'application de pararamètrage les convertiront automatiquement en point manuel afin de conserver leur comportement précédent.
+
 ## Export
 
 ### Export
@@ -303,10 +322,16 @@ Toutes les fontes ont été retravaillées pour être plus stables si déformée
 ## Pour les développeurs
 
 * [#2715](https://github.com/inkstitch/inkstitch/issues/2715) support multiversion
-* [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Mise à jour des procédures de debug et de profiling 
+* [#2655](https://github.com/inkstitch/inkstitch/issues/2655)  Dans les préférences d'In Ink/Stitch , mettre la taille de cache à 0  désactive le cache.
+* [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Mise à jour des procédures de debug et de profiling
+
 
 
 ## Corrections de bug
+
+
+* [#2836](https://github.com/inkstitch/inkstitch/issues/2836) Corrige l'affichage des paramètres non affectés lorsque plusieurs éléments sont sélectionnés.
+* [#2853](https://github.com/inkstitch/inkstitch/issues/2853) Correction d'une erreur concernnant le crénage des polices.
 * [#2819](https://github.com/inkstitch/inkstitch/issues/2819) Corrige l'extension nettoyage
 * [#2818](https://github.com/inkstitch/inkstitch/issues/2818) Supprime l'erreur empty d 
 * [#2777](https://github.com/inkstitch/inkstitch/issues/2777) Enregistrement des noms des fils dans les fichiers de broderie
@@ -337,4 +362,4 @@ Toutes les fontes ont été retravaillées pour être plus stables si déformée
 * [#2458](https://github.com/inkstitch/inkstitch/issues/2458) Carte de densité: ajout d'une commande "ignorer ce  calque"
 * [#2434](https://github.com/inkstitch/inkstitch/issues/2434) Ignorer  les commandes  avec "empty-d-connectors"
 * [#2404](https://github.com/inkstitch/inkstitch/issues/2404) Rendu des  satins avec un seul chemin en points  droits
-* [#2403](https://github.com/inkstitch/inkstitch/issues/2403) Ignorer les  petits remplissages selon contour avec les stragégies  spirale simple ou double
+* [#2403](https://github.com/inkstitch/inkstitch/issues/2403) Ignorer les  petits remplissages selon contour avec les stragégies spirale simple ou double
