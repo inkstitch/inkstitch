@@ -6,6 +6,78 @@ sidebar:
   nav: pages
 toc: true
 ---
+## [Fontes](/fr/fonts/font-library)
+
+### Nouvelles polices
+
+* [Cats](/fonts/cats) ([#2860](https://github.com/inkstitch/inkstitch/pull/2860))
+
+  ![Cats preview](/assets/images/fonts/cats.jpg)
+* [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
+
+  ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
+* [Chicken Scratch](/font/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+
+  ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
+
+  
+* [Colorful](/font/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
+
+  ![Colorfu preview](/assets/images/fonts/colorful.png)
+
+
+* [Emilio 20 Tartan](fonts/emilio-20/#emilio-20-tartan) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
+
+  ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
+* [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
+
+  ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
+* [Roaring twenties KOR](/fonts/roaring_twenties_KOR/)([#2856](https://github.com/inkstitch/inkstitch/issues/2856))
+
+  ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
+* [Violin Serif](/fonts/violin_serif/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+
+  ![Violin Serif preview](/assets/images/fonts/violin_serif.jpg)
+
+
+### Mises à jour de fontes
+
+* La plupart des fontes comportent maintenant les glyphes: éèêëÉÈÊËÜÄÖäöüß
+  
+  Les exceptions sont April en Fleur, Apex Lake, les Cherry's, les Emilio , Fold Inkstitch, Infinipicto, Namskout and Sortefax qui ne contiennent  que des glyphes sans diacritiques
+* Ũ à  été ajouté  dans TT directors
+  
+![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
+
+*  Cherry for  Kaalleen a été modifiée pour inclure un léger remplissage.
+  
+Toutes les fontes ont été retravaillées pour être plus stables si déformées.
+
+ [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
+ [#2894](https://github.com/inkstitch/inkstitch/pull/2894)
+ [#2890](https://github.com/inkstitch/inkstitch/pull/2890)
+ [#2886](https://github.com/inkstitch/inkstitch/pull/2886)
+ [#2871](https://github.com/inkstitch/inkstitch/pull/2871)
+ [#2868](https://github.com/inkstitch/inkstitch/pull/2868)
+ [#2857](https://github.com/inkstitch/inkstitch/pull/2857)
+ [#2850](https://github.com/inkstitch/inkstitch/pull/2850)
+ [#2833](https://github.com/inkstitch/inkstitch/pull/2833)
+ [#2812](https://github.com/inkstitch/inkstitch/pull/2812)
+ [#2807](https://github.com/inkstitch/inkstitch/pull/2807)
+ [#2803](https://github.com/inkstitch/inkstitch/pull/2803)
+ [#2802](https://github.com/inkstitch/inkstitch/pull/2802)
+ [#2793](https://github.com/inkstitch/inkstitch/pull/2793)
+ [#2784](https://github.com/inkstitch/inkstitch/pull/2784)
+ [#2769](https://github.com/inkstitch/inkstitch/pull/2769)
+ [#2762](https://github.com/inkstitch/inkstitch/pull/2762)
+ [#2749](https://github.com/inkstitch/inkstitch/pull/2749)
+ [#2744](https://github.com/inkstitch/inkstitch/pull/2744)
+ [#2742](https://github.com/inkstitch/inkstitch/pull/2742)
+ [#2714](https://github.com/inkstitch/inkstitch/pull/2714)
+ [#2607](https://github.com/inkstitch/inkstitch/pull/2607)
+ [#2579](https://github.com/inkstitch/inkstitch/pull/2579)
+ [#2476](https://github.com/inkstitch/inkstitch/pull/2476)
+ [#2682](https://github.com/inkstitch/inkstitch/pull/2682)
 
 ## Nouvelles extensions
 
@@ -194,81 +266,6 @@ Visualise et Exporter > Export pdf
 * ajout d'un signal de présence de colonnes satin avec deux rails et exactement deux traverses (car cela peut conduire à une mauvaise interprétation de la colonne par Ink/Stitch) ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
 * ajout d'un signal de présence de colonnes satin sans aucune traverse ([#2791](https://github.com/inkstitch/inkstitch/pull/2791))
 * ajout d'un signal de présence d'éléments de broderie comportant à la fois une couleur de trait et une couleur de fond ([#2761](https://github.com/inkstitch/inkstitch/pull/2761))
-
-
-## [Fontes](/fr/fonts/font-library)
-
-### Nouvelles polices
-
-* [Cats](/fonts/cats) ([#2860](https://github.com/inkstitch/inkstitch/pull/2860))
-
-  ![Cats preview](/assets/images/fonts/cats.jpg)
-* [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
-
-  ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
-* [Chicken Scratch](/font/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
-
-  ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
-
-  
-* [Colorful](/font/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
-
-  ![Colorfu preview](/assets/images/fonts/colorful.png)
-
-
-* [Emilio 20 Tartan](fonts/emilio-20/#emilio-20-tartan) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
-
-  ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
-* [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
-
-  ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
-* [Roaring twenties KOR](/fonts/roaring_twenties_KOR/)([#2856](https://github.com/inkstitch/inkstitch/issues/2856))
-
-  ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
-* [Violin Serif](/fonts/violin_serif/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
-
-  ![Violin Serif preview](/assets/images/fonts/violin_serif.jpg)
-
-
-### Mises à jour de fontes
-
-* La plupart des fontes comportent maintenant les glyphes: éèêëÉÈÊËÜÄÖäöüß
-  
-  Les exceptions sont April en Fleur, Apex Lake, les Cherry's, les Emilio , Fold Inkstitch, Infinipicto, Namskout and Sortefax qui ne contiennent  que des glyphes sans diacritiques
-* Ũ à  été ajouté  dans TT directors
-  
-![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
-
-*  Cherry for  Kaalleen a été modifiée pour inclure un léger remplissage.
-  
-Toutes les fontes ont été retravaillées pour être plus stables si déformées.
-
- [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
- [#2894](https://github.com/inkstitch/inkstitch/pull/2894)
- [#2890](https://github.com/inkstitch/inkstitch/pull/2890)
- [#2886](https://github.com/inkstitch/inkstitch/pull/2886)
- [#2871](https://github.com/inkstitch/inkstitch/pull/2871)
- [#2868](https://github.com/inkstitch/inkstitch/pull/2868)
- [#2857](https://github.com/inkstitch/inkstitch/pull/2857)
- [#2850](https://github.com/inkstitch/inkstitch/pull/2850)
- [#2833](https://github.com/inkstitch/inkstitch/pull/2833)
- [#2812](https://github.com/inkstitch/inkstitch/pull/2812)
- [#2807](https://github.com/inkstitch/inkstitch/pull/2807)
- [#2803](https://github.com/inkstitch/inkstitch/pull/2803)
- [#2802](https://github.com/inkstitch/inkstitch/pull/2802)
- [#2793](https://github.com/inkstitch/inkstitch/pull/2793)
- [#2784](https://github.com/inkstitch/inkstitch/pull/2784)
- [#2769](https://github.com/inkstitch/inkstitch/pull/2769)
- [#2762](https://github.com/inkstitch/inkstitch/pull/2762)
- [#2749](https://github.com/inkstitch/inkstitch/pull/2749)
- [#2744](https://github.com/inkstitch/inkstitch/pull/2744)
- [#2742](https://github.com/inkstitch/inkstitch/pull/2742)
- [#2714](https://github.com/inkstitch/inkstitch/pull/2714)
- [#2607](https://github.com/inkstitch/inkstitch/pull/2607)
- [#2579](https://github.com/inkstitch/inkstitch/pull/2579)
- [#2476](https://github.com/inkstitch/inkstitch/pull/2476)
- [#2682](https://github.com/inkstitch/inkstitch/pull/2682)
-
 
 ## Palettes
 

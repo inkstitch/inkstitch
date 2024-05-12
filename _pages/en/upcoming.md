@@ -6,6 +6,73 @@ sidebar:
   nav: pages
 toc: true
 ---
+## Fonts
+
+### New fonts
+
+* [Cats](/fonts/cats) ([#2860](https://github.com/inkstitch/inkstitch/pull/2860))
+
+  ![Cats preview](/assets/images/fonts/cats.jpg)
+* [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
+
+  ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
+* [Chicken Scratch](/font/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+
+  ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
+* [Colorful](/font/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
+
+  ![Colorfu preview](/assets/images/fonts/colorful.png)
+* [Emilio 20 Tartan](fonts/emilio-20/#emilio-20-tartan) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
+
+  ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
+* [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
+
+  ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
+* [Roaring twenties KOR](/fonts/roaring_twenties_KOR/)([#2856](https://github.com/inkstitch/inkstitch/issues/2856))
+
+  ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
+* [Violin Serif](/fonts/violin_serif/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+
+  ![Violin Serif preview](/assets/images/fonts/violin_serif.jpg)
+
+### Font Updates
+
+* Most fonts have now the following glyphs: éèêëÉÈÊËÜÄÖäöüß
+  Only exceptions are April en Fleur, Apex Lake, Cherry fonts, Emilio fonts, Fold Inkstitch, Infinipicto, Namskout and Sortefax (they contain only non diacritic glyphs).
+* TT-Directors: add Ũ
+
+![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
+
+*  Cherry for Kaalleen has been modified to include a light blue fill and random stitch length cherries.
+
+All fonts have been reworked to be more stable when transformed.
+
+ [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
+ [#2894](https://github.com/inkstitch/inkstitch/pull/2894)
+ [#2890](https://github.com/inkstitch/inkstitch/pull/2890)
+ [#2886](https://github.com/inkstitch/inkstitch/pull/2886)
+ [#2871](https://github.com/inkstitch/inkstitch/pull/2871)
+ [#2868](https://github.com/inkstitch/inkstitch/pull/2868)
+ [#2857](https://github.com/inkstitch/inkstitch/pull/2857)
+ [#2850](https://github.com/inkstitch/inkstitch/pull/2850)
+ [#2833](https://github.com/inkstitch/inkstitch/pull/2833)
+ [#2812](https://github.com/inkstitch/inkstitch/pull/2812)
+ [#2807](https://github.com/inkstitch/inkstitch/pull/2807)
+ [#2803](https://github.com/inkstitch/inkstitch/pull/2803)
+ [#2802](https://github.com/inkstitch/inkstitch/pull/2802)
+ [#2793](https://github.com/inkstitch/inkstitch/pull/2793)
+ [#2784](https://github.com/inkstitch/inkstitch/pull/2784)
+ [#2769](https://github.com/inkstitch/inkstitch/pull/2769)
+ [#2762](https://github.com/inkstitch/inkstitch/pull/2762)
+ [#2749](https://github.com/inkstitch/inkstitch/pull/2749)
+ [#2744](https://github.com/inkstitch/inkstitch/pull/2744)
+ [#2742](https://github.com/inkstitch/inkstitch/pull/2742)
+ [#2714](https://github.com/inkstitch/inkstitch/pull/2714)
+ [#2607](https://github.com/inkstitch/inkstitch/pull/2607)
+ [#2579](https://github.com/inkstitch/inkstitch/pull/2579)
+ [#2476](https://github.com/inkstitch/inkstitch/pull/2476)
+ [#2682](https://github.com/inkstitch/inkstitch/pull/2682)
+
 ## New Extensions
 
 ### [Apply Palette](/docs/thread-color/#apply-palette)
@@ -194,73 +261,6 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 * Add warning for satins with two rails and two rungs (possible detection conflict) ([#2734](https://github.com/inkstitch/inkstitch/pull/2734))
 * Add no rung warning ([#2791](https://github.com/inkstitch/inkstitch/pull/2791))
 * Add warning for elements with stroke and fill color ([#2761](https://github.com/inkstitch/inkstitch/pull/2761))
-
-## Fonts
-
-### New fonts
-
-* [Cats](/fonts/cats) ([#2860](https://github.com/inkstitch/inkstitch/pull/2860))
-
-  ![Cats preview](/assets/images/fonts/cats.jpg)
-* [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
-
-  ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
-* [Chicken Scratch](/font/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
-
-  ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
-* [Colorful](/font/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
-
-  ![Colorfu preview](/assets/images/fonts/colorful.png)
-* [Emilio 20 Tartan](fonts/emilio-20/#emilio-20-tartan) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
-
-  ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
-* [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
-
-  ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
-* [Roaring twenties KOR](/fonts/roaring_twenties_KOR/)([#2856](https://github.com/inkstitch/inkstitch/issues/2856))
-
-  ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
-* [Violin Serif](/fonts/violin_serif/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
-
-  ![Violin Serif preview](/assets/images/fonts/violin_serif.jpg)
-
-### Font Updates
-
-* Most fonts have now the following glyphs: éèêëÉÈÊËÜÄÖäöüß
-  Only exceptions are April en Fleur, Apex Lake, Cherry fonts, Emilio fonts, Fold Inkstitch, Infinipicto, Namskout and Sortefax (they contain only non diacritic glyphs).
-* TT-Directors: add Ũ
-
-![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
-
-*  Cherry for Kaalleen has been modified to include a light blue fill and random stitch length cherries.
-
-All fonts have been reworked to be more stable when transformed.
-
- [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
- [#2894](https://github.com/inkstitch/inkstitch/pull/2894)
- [#2890](https://github.com/inkstitch/inkstitch/pull/2890)
- [#2886](https://github.com/inkstitch/inkstitch/pull/2886)
- [#2871](https://github.com/inkstitch/inkstitch/pull/2871)
- [#2868](https://github.com/inkstitch/inkstitch/pull/2868)
- [#2857](https://github.com/inkstitch/inkstitch/pull/2857)
- [#2850](https://github.com/inkstitch/inkstitch/pull/2850)
- [#2833](https://github.com/inkstitch/inkstitch/pull/2833)
- [#2812](https://github.com/inkstitch/inkstitch/pull/2812)
- [#2807](https://github.com/inkstitch/inkstitch/pull/2807)
- [#2803](https://github.com/inkstitch/inkstitch/pull/2803)
- [#2802](https://github.com/inkstitch/inkstitch/pull/2802)
- [#2793](https://github.com/inkstitch/inkstitch/pull/2793)
- [#2784](https://github.com/inkstitch/inkstitch/pull/2784)
- [#2769](https://github.com/inkstitch/inkstitch/pull/2769)
- [#2762](https://github.com/inkstitch/inkstitch/pull/2762)
- [#2749](https://github.com/inkstitch/inkstitch/pull/2749)
- [#2744](https://github.com/inkstitch/inkstitch/pull/2744)
- [#2742](https://github.com/inkstitch/inkstitch/pull/2742)
- [#2714](https://github.com/inkstitch/inkstitch/pull/2714)
- [#2607](https://github.com/inkstitch/inkstitch/pull/2607)
- [#2579](https://github.com/inkstitch/inkstitch/pull/2579)
- [#2476](https://github.com/inkstitch/inkstitch/pull/2476)
- [#2682](https://github.com/inkstitch/inkstitch/pull/2682)
 
 ## Palettes
 
