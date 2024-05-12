@@ -45,10 +45,10 @@ Es gibt die folgenden Optionen:
   - **Verrinerte Deckkraft** das Original wird mit 40%-Transparenz dargestellt
 - **Render Modus**
   {% include upcoming_release.html %}
-  - **Einfach**: simple line drawing
-  - **Realistisch**: Realistic preview output as png image into the canvas (8-bit)
-  - **Realistisch (hohe Qualität)** Realistic preview output as png image into the canvas (16-bit)
-  - **Realistisch Vektor (langsam)** Vector output with realistic filters
+  - **Einfach**: einfache Liniendarstellung
+  - **Realistisch**: Realistische Vorschau als in Inkscape eingebundene PNG-Bilddatei (8-bit)
+  - **Realistisch (hohe Qualität)** Realistische Vorschau als in Inkscape eingebundene PNG-Bilddatei (16-bit)
+  - **Realistisch Vektor (langsam)** Vektor-Ausgabe mit realistischen Filtern
 - **Stickplan an der Seite platzieren** Der Stichplan wird rechts neben dem Canvas abgebildet.
   Ist diese Option nicht aktiviert, wird der Stichplan direkt über das Design gelegt.
   In diesem Fall ist es nützlich die Sichtbarkeit des Designs anzupassen.
