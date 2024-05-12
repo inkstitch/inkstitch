@@ -22,11 +22,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.013547"
-     inkscape:cx="9.3067202"
-     inkscape:cy="54.115173"
+     inkscape:zoom="12.089089"
+     inkscape:cx="8.4787202"
+     inkscape:cy="56.579947"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer9"
+     inkscape:current-layer="layer10"
      showgrid="true"
      inkscape:window-width="1778"
      inkscape:window-height="1041"
@@ -9689,7 +9689,7 @@
        inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-ö"
      id="layer9"
      inkscape:groupmode="layer">
@@ -9787,7 +9787,7 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="GlyphLayer-ô"
-     style="display:none">
+     style="display:inline">
     <path
        inkstitch:ties="3"
        id="path29652-1-4-7"
@@ -9847,12 +9847,6 @@
        inkstitch:running_stitch_length_mm="2.0"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
-    <path
-       d="M 3.25752,5.69077 3.70965,8.21936"
-       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-dasharray:3, 1"
-       inkstitch:running_stitch_length_mm="2.0"
-       inkstitch:running_stitch_tolerance_mm="0.2"
-       id="path209" />
     <path
        inkstitch:ties="3"
        id="path29652-1-4-7-2"
