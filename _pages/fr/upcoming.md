@@ -44,12 +44,10 @@ toc: true
 * La plupart des fontes comportent maintenant les glyphes: éèêëÉÈÊËÜÄÖäöüß
 
   Les exceptions sont April en Fleur, Apex Lake, les Cherry's, les Emilio , Fold Inkstitch, Infinipicto, Namskout and Sortefax qui ne contiennent  que des glyphes sans diacritiques
-* Ũ à  été ajouté  dans TT directors
-*  Cherry for  Kaalleen a été modifiée pour inclure un léger remplissage.
+* Cherry for  Kaalleen a été modifiée pour inclure un léger remplissage.
 
   ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
-
-Toutes les fontes ont été retravaillées pour être plus stables si déformées.
+* Toutes les fontes ont été retravaillées pour être plus stables si déformées.
 
  [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
  [#2894](https://github.com/inkstitch/inkstitch/pull/2894)

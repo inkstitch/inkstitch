@@ -46,8 +46,7 @@ toc: true
 * Cherry for Kaalleen hat jetzt einen hellblauen Hintergrund und die Kirschen werden mit einer randomisierten Stichlänge dargestellt
 
   ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
-
-Alle Schriften wurden überarbeitet und sind stabiler bei Transformationen
+* Alle Schriften wurden überarbeitet und sind stabiler bei Transformationen
 
  [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
  [#2894](https://github.com/inkstitch/inkstitch/pull/2894)

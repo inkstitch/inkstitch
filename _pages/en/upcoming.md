@@ -42,11 +42,10 @@ toc: true
 
 * Most fonts have now the following glyphs: éèêëÉÈÊËÜÄÖäöüß
   Only exceptions are April en Fleur, Apex Lake, Cherry fonts, Emilio fonts, Fold Inkstitch, Infinipicto, Namskout and Sortefax (they contain only non diacritic glyphs).
-*  Cherry for Kaalleen has been modified to include a light blue fill and random stitch length cherries.
+* Cherry for Kaalleen has been modified to include a light blue fill and random stitch length cherries.
 
   ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
-
-All fonts have been reworked to be more stable when transformed.
+* All fonts have been reworked to be more stable when transformed.
 
  [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
  [#2894](https://github.com/inkstitch/inkstitch/pull/2894)
