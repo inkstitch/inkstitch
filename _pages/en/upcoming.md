@@ -42,11 +42,9 @@ toc: true
 
 * Most fonts have now the following glyphs: éèêëÉÈÊËÜÄÖäöüß
   Only exceptions are April en Fleur, Apex Lake, Cherry fonts, Emilio fonts, Fold Inkstitch, Infinipicto, Namskout and Sortefax (they contain only non diacritic glyphs).
-* TT-Directors: add Ũ
-
-![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
-
 *  Cherry for Kaalleen has been modified to include a light blue fill and random stitch length cherries.
+
+  ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
 
 All fonts have been reworked to be more stable when transformed.
 

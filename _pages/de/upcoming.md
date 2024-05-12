@@ -41,8 +41,8 @@ toc: true
 ### Schrift-Aktualisierungen
 
 * Die meisten Schriften haben jetzt die folgenden Schriftzeichen: éèêëÉÈÊËÜÄÖäöüß
-  Ausnahmen sind: April en Fleur, Apex Lake, Cherry fonts, Emilio fonts, Fold Inkstitch, Infinipicto, Namskout und Sortefax
 
+  Ausnahmen sind: April en Fleur, Apex Lake, Cherry fonts, Emilio fonts, Fold Inkstitch, Infinipicto, Namskout und Sortefax
 * Cherry for Kaalleen hat jetzt einen hellblauen Hintergrund und die Kirschen werden mit einer randomisierten Stichlänge dargestellt
 
   ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
