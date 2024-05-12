@@ -1,6 +1,6 @@
 ---
 title: "Chicken Scratch"
-permalink: /fr/font/chicken_scratch/
+permalink: /fr/fonts/chicken_scratch/
 last_modified_at: 2024-04-24
 toc: false
 preview_image:

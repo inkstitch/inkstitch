@@ -1,6 +1,6 @@
 ---
 title: "Chicken Scratch"
-permalink: /font/chicken_scratch/
+permalink: /fonts/chicken_scratch/
 last_modified_at: 2024-04-24
 toc: false
 preview_image:
@@ -32,9 +32,6 @@ up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max
 
 ## In real life
 
-
 {% include folder-galleries path="fonts/chicken_scratch/" %}
-
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/chicken_scratch/LICENSE)
