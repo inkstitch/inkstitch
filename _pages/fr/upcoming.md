@@ -22,12 +22,18 @@ toc: true
 * [Colorful](/fonts/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
 
   ![Colorfu preview](/assets/images/fonts/colorful.png)
-* [Emilio 20 Tartan](/fonts/emilio-20/) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
-
-  ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
+  
 * [Invercelia](/fonts/invercelia/) ([#2888](https://github.com/inkstitch/inkstitch/pull/2888))
 
   ![Invercelia preview](/assets/images/fonts/invercelia.png)
+
+* [Ondulamarif](/fonts/ondulamarif/) ([#2902](https://github.com/inkstitch/inkstitch/pull/2902))
+
+ ![Ondulamarif preview](/assets/images/fonts/ondulamarif_Medium.png)
+ ![Ondulamarif preview](/assets/images/fonts/ondulamarif_XL.png)
+* [Emilio 20 Tartan](/fonts/emilio-20/) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
+
+  ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
 * [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
 
   ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
