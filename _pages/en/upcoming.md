@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-05-09
+last_modified_at: 2024-05-12
 sidebar:
   nav: pages
 toc: true
@@ -188,8 +188,6 @@ Do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/
 * [Colorful](/font/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
 
   ![Colorfu preview](/assets/images/fonts/colorful.png)
-
-  
 * [Emilio 20 Tartan](fonts/emilio-20/#emilio-20-tartan) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
 
   ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
@@ -211,10 +209,14 @@ Do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/
 
 ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
 
-*  Cherry for  Kaalleen has  been  modified  to include a light blue  fill.
+*  Cherry for Kaalleen has been modified to include a light blue fill and random stitch length cherries.
 
 All fonts have been reworked to be more stable when transformed.
 
+ [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
+ [#2894](https://github.com/inkstitch/inkstitch/pull/2894)
+ [#2890](https://github.com/inkstitch/inkstitch/pull/2890)
+ [#2886](https://github.com/inkstitch/inkstitch/pull/2886)
  [#2871](https://github.com/inkstitch/inkstitch/pull/2871)
  [#2868](https://github.com/inkstitch/inkstitch/pull/2868)
  [#2857](https://github.com/inkstitch/inkstitch/pull/2857)
