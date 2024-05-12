@@ -17,7 +17,7 @@ preview_image:
 ![Ondulamarif XL](/assets/images/fonts/ondulamarif_XL.png)
 ## Glyphes
 
-Cette fonte comporte  {{ font.glyphs.size }} glyphes:
+Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
 
 ```
 {{ font1.glyphs | sort | join: ' ' }}
