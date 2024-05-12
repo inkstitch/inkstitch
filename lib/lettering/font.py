@@ -109,7 +109,7 @@ class Font(object):
                     # we'll deal with missing variants when we apply lettering
                     pass
 
-    name = localized_font_metadata('name', '')
+    name = font_metadata('name', '')
     description = localized_font_metadata('description', '')
     keywords = font_metadata('keywords', '')
     letter_case = font_metadata('letter_case', '')
