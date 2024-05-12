@@ -16,7 +16,7 @@ toc: true
 * [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
 
   ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
-* [Chicken Scratch](/fonst/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+* [Chicken Scratch](/fonts/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
   ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
 * [Colorful](/fonts/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
