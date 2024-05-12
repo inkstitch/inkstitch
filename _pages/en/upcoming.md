@@ -29,10 +29,10 @@ toc: true
 
   ![Invercelia preview](/assets/images/fonts/invercelia.png)
 
-  * [Ondulamarif](/fonts/ondulamarif/) ([#2902](https://github.com/inkstitch/inkstitch/pull/2902))
+* [Ondulamarif](/fonts/ondulamarif/) ([#2902](https://github.com/inkstitch/inkstitch/pull/2902))
 
-  ![Ondulamarif preview](/assets/images/fonts/ondulamarif_Medium.png)
-    ![Ondulamarif preview](/assets/images/fonts/ondulamarif_XL.png)
+ ![Ondulamarif preview](/assets/images/fonts/ondulamarif_Medium.png)
+ ![Ondulamarif preview](/assets/images/fonts/ondulamarif_XL.png)
 
  
 * [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
