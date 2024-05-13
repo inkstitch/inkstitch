@@ -63,7 +63,7 @@ class ThreadPalette(Set):
                     thread_name, thread_number = fields[3].strip().rsplit(" ", 1)
                     thread_name = thread_name.strip()
 
-                    thread = ThreadColor(thread_color, thread_name, thread_number, manufacturer=self.name)
+                    thread = ThreadColor(thread_color, thread_name, thread_number, manufacturer=self.name, description=thread_name)
                     self.threads[thread] = convert_color(sRGBColor(*thread_color, is_upscaled=True), LabColor)
                 except (ValueError, IndexError):
                     continue

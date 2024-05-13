@@ -108,6 +108,7 @@ class _ThreadCatalog(Sequence):
             color_block.color.name = nearest.name
             color_block.color.number = nearest.number
             color_block.color.manufacturer = nearest.manufacturer
+            color_block.color.description = nearest.description
 
     def get_palette_by_name(self, name):
         for palette in self:
