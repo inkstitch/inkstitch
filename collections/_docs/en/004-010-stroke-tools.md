@@ -48,7 +48,7 @@ This extension helps reconstruct an original  object when one only has  the  sti
 
 ## Convert Satin to Stroke
 
-Satin to stroke will convert a satin column to it's centerline. This can be useful, when you decide later in the designing process to turn a satin column into a running stitch. You can also use it to alter the thickness of your satin column, when pull compensation isn't satisfying. In that case use this function to convert your satin column into a running stitch, set stroke width in the fill and stroke panel and run the ["Connvert line to to satin"](/docs/satin-tools/#convert-line-to-satin) function. 
+Satin to stroke will convert a satin column to it's centerline. This can be useful, when you decide later in the designing process to turn a satin column into a running stitch. You can also use it to alter the thickness of your satin column, when pull compensation isn't satisfying. In that case use this function to convert your satin column into a running stitch, set stroke width in the fill and stroke panel and run the ["Convert line to to satin"](/docs/satin-tools/#convert-line-to-satin) function. 
 
 This works best on evenly spaced satin columns.
 
