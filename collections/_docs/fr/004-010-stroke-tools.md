@@ -1,7 +1,7 @@
 ---
 title: "Outils: Trait"
 permalink: /fr/docs/stroke-tools/
-last_modified_at: 2024-03-13
+last_modified_at: 2024-05-13
 toc: true
 ---
 ## Agencement automatique de points droits {#autoroute-running-stitch}
