@@ -70,12 +70,18 @@ class SatinSegment(object):
     def to_satin(self):
         satin = self.satin
 
+        # get cut points before actually cutting the satin to avoid
+        # rounding errors which may produce gaps in between the satins
         if self.start > 0.0:
-            before, satin = satin.split(self.start)
-
+            start = satin.find_cut_points(self.start)
         if self.end < 1.0:
-            satin, after = satin.split(
-                (self.end - self.start) / (1.0 - self.start))
+            end = satin.find_cut_points(self.end)
+
+        # cut satin
+        if self.start > 0.0:
+            before, satin = satin.split(None, cut_points=start)
+        if self.end < 1.0:
+            satin, after = satin.split(None, cut_points=end)
 
         if self.reverse:
             satin = satin.reverse()
