@@ -23,8 +23,10 @@ FONT_CATEGORIES = [
     FontCategory('italic', _("Italic")),
     FontCategory('monogram', _("Monogram")),
     FontCategory('multicolor', _('Multicolor')),
+    FontCategory('ripple', _('Ripple Stitch')),
     FontCategory('running_stitch', _('Running Stitch')),
     FontCategory('sans_serif', _("Sans Serif")),
     FontCategory('serif', _("Serif")),
+    FontCategory('tartan', _("Tartan")),
     FontCategory('tiny', _("Tiny"))
 ]
