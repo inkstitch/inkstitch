@@ -1,7 +1,7 @@
 ---
 title: "Colonne Satin"
 permalink: /fr/docs/stitches/satin-column/
-last_modified_at: 2024-04-28
+last_modified_at: 2024-05-13
 toc: true
 ---
 ## Qu’est-ce que c’est
