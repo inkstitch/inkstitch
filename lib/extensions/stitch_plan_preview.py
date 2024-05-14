@@ -28,6 +28,7 @@ class StitchPlanPreview(InkstitchExtension):
         self.arg_parser.add_argument("-n", "--needle-points", type=Boolean, default=False, dest="needle_points")
         self.arg_parser.add_argument("-i", "--insensitive", type=Boolean, default=False, dest="insensitive")
         self.arg_parser.add_argument("-c", "--visual-commands", type=Boolean, default="symbols", dest="visual_commands")
+        self.arg_parser.add_argument("-j", "--render-jumps", type=Boolean, default=True, dest="render_jumps")
         self.arg_parser.add_argument("-o", "--overwrite", type=Boolean, default=True, dest="overwrite")
         self.arg_parser.add_argument("-m", "--render-mode", type=str, default="simple", dest="mode")
 
@@ -49,7 +50,7 @@ class StitchPlanPreview(InkstitchExtension):
         stitch_groups = self.elements_to_stitch_groups(self.elements)
         stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
 
-        layer = render_stitch_plan(svg, stitch_plan, realistic, visual_commands)
+        layer = render_stitch_plan(svg, stitch_plan, realistic, visual_commands, render_jumps=self.options.render_jumps)
         layer = self.rasterize(svg, layer, raster_mult)
 
         # update layer visibility (unchanged, hidden, lower opacity)
