@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-05-12
+last_modified_at: 2024-05-14
 sidebar:
   nav: pages
 toc: true
@@ -51,6 +51,8 @@ toc: true
   ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
 * All fonts have been reworked to be more stable when transformed.
 
+ [#2903](https://github.com/inkstitch/inkstitch/pull/2903)
+ [#2900](https://github.com/inkstitch/inkstitch/pull/2900)
  [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
  [#2894](https://github.com/inkstitch/inkstitch/pull/2894)
  [#2890](https://github.com/inkstitch/inkstitch/pull/2890)
@@ -341,6 +343,10 @@ to manual stitches and keep previous behavior. [#2866](https://github.com/inksti
 
 ## Bug Fixes
 
+* [#2897](https://github.com/inkstitch/inkstitch/issues/2897) Fix invalid clip paths
+* [#2899](https://github.com/inkstitch/inkstitch/issues/2899) Fix color display for some Pfaff-Machines
+* [#2895](https://github.com/inkstitch/inkstitch/issues/2895) Fix center walk underlay repeats
+* [#2896](https://github.com/inkstitch/inkstitch/issues/2896) LPE-Satin: increase fuse value
 * [#2836](https://github.com/inkstitch/inkstitch/issues/2836) Fixes None value param display when multiple elements are selected
 * [#2853](https://github.com/inkstitch/inkstitch/issues/2853) Fix an issue with font kerning
 * [#2819](https://github.com/inkstitch/inkstitch/issues/2819) Fix cleanup extension

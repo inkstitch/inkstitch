@@ -1,7 +1,7 @@
 ---
 title: "Changements, Mises à jour et Corrections pour la prochaine  version Ink/Stitch v3.1.0"
 permalink: /fr/upcoming/
-last_modified_at: 2024-05-12
+last_modified_at: 2024-05-14
 sidebar:
   nav: pages
 toc: true
@@ -53,6 +53,8 @@ toc: true
   ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
 * Toutes les fontes ont été retravaillées pour être plus stables si déformées.
 
+ [#2903](https://github.com/inkstitch/inkstitch/pull/2903)
+ [#2900](https://github.com/inkstitch/inkstitch/pull/2900)
  [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
  [#2894](https://github.com/inkstitch/inkstitch/pull/2894)
  [#2890](https://github.com/inkstitch/inkstitch/pull/2890)
@@ -342,7 +344,10 @@ Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu
 
 ## Corrections de bug
 
-
+* [#2897](https://github.com/inkstitch/inkstitch/issues/2897) Fix invalid clip paths
+* [#2899](https://github.com/inkstitch/inkstitch/issues/2899) Fix color display for some Pfaff-Machines
+* [#2895](https://github.com/inkstitch/inkstitch/issues/2895) Fix center walk underlay repeats
+* [#2896](https://github.com/inkstitch/inkstitch/issues/2896) LPE-Satin: increase fuse value
 * [#2836](https://github.com/inkstitch/inkstitch/issues/2836) Corrige l'affichage des paramètres non affectés lorsque plusieurs éléments sont sélectionnés.
 * [#2853](https://github.com/inkstitch/inkstitch/issues/2853) Correction d'une erreur concernnant le crénage des polices.
 * [#2819](https://github.com/inkstitch/inkstitch/issues/2819) Corrige l'extension nettoyage
