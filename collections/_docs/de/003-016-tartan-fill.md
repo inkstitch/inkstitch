@@ -1,62 +1,60 @@
 ---
 title: "Tartan Fill"
 permalink: /de/docs/stitches/tartan-fill/
-last_modified_at: 2024-03-10
+last_modified_at: 2024-05-14
 toc: true
 ---
 {% include upcoming_release.html %}
 
-## What it is
+## Beschreibung
 
 [![Tartan Fill Sample](/assets/images/docs/tartan-fill.jpg){: width="200x"}](/assets/images/docs/tartan-fill.svg){: title="Download SVG File" .align-left download="tartan-fill.svg" }
-Tartan is a patterned fabric with colored horizontal and vertical stripes. It is typically known from scottish kilts. The embroidery stitch type tries to mimic the typical pattern.
+Tartan ist ein gemusterter Stoff mit farbigen horizontalen und vertikalen Streifen. Man kennt es typischerweise von schottischen Kilts. Diese Stichart versucht, das typische Muster nachzuahmen.
 
-## How to Create
+## Funktionsweise
 
-* Create a **closed path with a fill color**. The shape may have holes.
-* Open the tartan extension under `Extensions > Ink/Stitch > Tools: Fill > Tartan` and create your own tartan pattern
-* You can update and change more stitch params in the params dialog (`Extensions > Ink/Stitch > Params`)
+* Erstelle einen **geschlossenen Pfad mit Füllfarbe**. Die Form darf Löcher enthalten.
+* Öffne den Tartn-Muster Editor unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Tartan` und erstelle ein Tartan-Muster
+* Weitere Stickparameter können im Anschluß im Parameter-Dialog eingestellt werden (`Erweiterungen > Ink/Stitch  > Parameter`)
 
-## Edit Tartan Patterns
+## Tartan-Muster bearbeiten
 
-The Tartan Pattern Editor can be found in `Extensions > Ink/Stitch > Tools: Fill > Tartan`
+Der Tartan-Muster Editor befindet sich unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Tartan`
 
-[Read more about the Tartan Stripe Editor](/docs/fill-tools#tartan)
+[Erfahre mehre über den Tartan-Muster Editor](/de/docs/fill-tools#tartan)
 
-## Params
+## Parameter
 
-Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
+Öffne das Parameter-Dialogfenster (`Erweiterungen > Ink/Stitch  > Parameter`, um die Einstellungen zu verfeinern.
 
-Settings||Description
+Einstellung                     ||Beschreibung
 ---|---|---
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
-Fill method          |Tartan Fill|Tartan Fill must be selected.
-Expand               |![Expand example](/assets/images/docs/params-fill-expand.png)  |Expand the shape before stitching, to compensate for gaps between shapes.
+Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
+Füllmethode                     | Tartanfüllung | Hier bitte `Tartanfüllung` auswählen
+Erweitern                       |![Expand example](/assets/images/docs/params-fill-expand.png) | Erweitern der Form vor dem Füllstich, um Lücken zwischen den Formen auszugleichen.
 Angle of lines of stitches|| Relative to the tartan stripe direction.
-Maximum fill stitch length         |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) |The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
-Spacing between rows               |![Spacing example](/assets/images/docs/params-fill-spacing_between_rows.png) |Distance between rows of stitches
-Stagger rows this many times before repeating|![Stagger example](/assets/images/docs/params-fill-stagger.png) |Stitches are staggered so that neighboring rows of stitches don't all fall in the same column (which would create a distracting valley effect). Setting this dictates the length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values.
-Running stitch length||Length of stitches around the outline of the fill region used when moving from section to section. 
-Running stitch tolerance||All stitches must be within this distance from a path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corner may be rounded.
-Bean stitch number of repeats ||◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/)<br />◦ Backtrack each stitch this many times.<br />◦ A value of 1 would triple each stitch (forward, back, forward).<br />◦ A value of 2 would quintuple each stitch, etc.
-Rows per tartan thread || Consecutive rows of the same color
-Herringbone width    ||Defines the width of a herringbone pattern. Use 0 for regular rows. It is recommended to use a multiple or a fraction of the defined stripe width (or to use only one color on warp and an other color on weft).
-Minimum stitch length         ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
-Minimum  jump stitch  length             ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches
-Allow lock stitches                ||Enables lock stitches in only desired positions
-Force lock stitches                |☑ |Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
-Tack stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
-Scale Tack stitch    ||
-Lock stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
-Scale Lock stitch    ||
-Trim After                         |☑ |Trim the thread after sewing this object.
-Stop After                         |☑ |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+Maximale Füll-Stichlänge        |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) | Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden.
+Reihenabstand                   |![Spacing example](/assets/images/docs/params-fill-spacing_between_rows.png) | Abstand zwischen den Stichreihen.
+Versatz                         |![Stagger example](/assets/images/docs/params-fill-stagger.png) | Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfernt sind, bevor sie in die gleiche Position münden.  Fractional values are allowed and can have less visible diagonals than integer values.
+Stichlänge                      |![Running stitch length example](/assets/images/docs/params-fill-running_stitch_length.png) | Stichlänge für Geradstiche beim Übergang von Abschnitt zu Abschnitt.
+Geradstich-Toleranz             ||Alle Stiche müssen innerhalb dieses Abstandes zum Pfad befinden. Ein niedrigerer Toleranzwert führt zu kürzeren Stichen. Ein höherer Wert könnte Ecken abrunden. Dezimalzahlen führen ggf. zu weniger deutlichen Diagonalen als Ganzzahlen.
+Mehrfachgeradstich Anzahl der Wiederholungen || ◦ Jeden Stich vervielfachen.<br/>◦ Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 würde jeden Stich fünffach ausführen, usw.<br/>◦ Gilt nur für den Geradstich.
+Reihen pro Tartan-Faden         || Aufeinanderfolgende Reihen gleicher Farbe
+Fischgrätenmuster-Breite        || Definiert die Breite des Frischgrätenmusters. Nutze 0 für das klassische Tartanmuster. Es wird empfohlen ein mehrfaches oder einen teilbaren Wert der Streifen-Breite zu nutzen. Ein schönes Ergebnis lässt sich auch erzielen, wenn für Kette und Schuss jeweils nur eine Farbe definiert wurde.
+Minimale Stichlänge             || Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
+Minimale Länge für Sprungstiche || Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche
+Vernähen erlauben               || Vernäht bei Bedarf an den ausgewählten Positionen
+Vernähen erzwingen              || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Anstecher                       || Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
+Verstecher                      || Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
+Stopp                           || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
+Fadenschnitt                    || Schneidet den Faden nachdem dieses Objekt genäht wurde
 {: .params-table }
 
-## Underlay
+## Unterlage
 
-Underlay in Tartan Fill is a normal Auto FillUnderlay and uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
+Die Unterlage nutzt den Stickwinkel der in den [Parametern der Unterlage](/de/docs/params/#füllung-unterlage) eingestellt werden kann.
 
-## Sample Files Including Tartan Fill Stitches
+## Beispieldateien mit Tartanfüllung
 
 {% include tutorials/tutorial_list key="stitch-type" value="Tartanfüllung" %}
