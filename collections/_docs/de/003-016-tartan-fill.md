@@ -59,4 +59,4 @@ Underlay in Tartan Fill is a normal Auto FillUnderlay and uses the fill angle wh
 
 ## Sample Files Including Tartan Fill Stitches
 
-{% include tutorials/tutorial_list key="stitch-type" value="Tartan Fill" %}
+{% include tutorials/tutorial_list key="stitch-type" value="Tartanfüllung" %}

@@ -33,6 +33,10 @@ Alkoholische Getränke und Speisen kosten extra.
 Ein Computerprogramm nur in der Theorie ist langweilig.
 Wir wollen gemeinsam Ausprobieren und Testen.
 
+Wir nutzen eine Entwicklerversion für das Treffen. Es wäre toll, wenn die bereits auf euren Laptops installiert ist:
+
+<https://github.com/inkstitch/inkstitch/releases/tag/dev-build-kaalleen-treffen-2024>
+
 **Eure Ink/Stitch Kreationen**
 Wenn ihr bereits Erfahrung mit Ink/Stitch habt, bringt gerne mit, was ihr bereits Schönes mit Ink/Stitch gemacht habt.
 Das wird uns alle inspirieren.
@@ -133,4 +137,4 @@ In einer kleinen Vorschau und gerade so wie es die Zeit uns noch ermöglicht mö
 
 Besonders hervorheben wollen wir dabei neue Sticharten wie z.B. Farbverläufe, Tartan, S-Stich oder die überarbeiteten Möglichkeiten für geklonte Objekte.
 
-[Vorschau über kommende Änderungen (englisch)](https://inkstitch.org/upcoming/)
+[Vorschau über kommende Änderungen](https://inkstitch.org/de/upcoming/)

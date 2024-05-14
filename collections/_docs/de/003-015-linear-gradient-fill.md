@@ -57,4 +57,4 @@ Die Unterlage nutzt den Stickwinkel der in den [Parametern der Unterlage](/de/do
 
 ## Beispieldateien mit linearer Farbverlaufsfüllung
 
-{% include tutorials/tutorial_list key="stitch-type" value="Linear Gradient Fill" %}
+{% include tutorials/tutorial_list key="stitch-type" value="Lineare Farbverlaufsfüllung" %}
