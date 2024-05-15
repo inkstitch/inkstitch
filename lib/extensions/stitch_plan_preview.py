@@ -9,7 +9,6 @@ from tempfile import TemporaryDirectory
 from typing import Optional, Tuple
 
 from inkex import BaseElement, Boolean, Image, errormsg
-from inkex.command import inkscape
 
 from ..commands import add_layer_commands
 from ..marker import set_marker
@@ -20,6 +19,7 @@ from ..svg.tags import (INKSCAPE_GROUPMODE, INKSTITCH_ATTRIBS,
                         XLINK_HREF)
 from .base import InkstitchExtension
 from .stitch_plan_preview_undo import reset_stitch_plan
+from .utils.inkex_command import inkscape
 
 
 class StitchPlanPreview(InkstitchExtension):
