@@ -35,6 +35,7 @@
     <spacer />
     <separator />
     <spacer />
+    <param name="ignore-layer" type="boolean" gui-text="Add ignore layer command">true</param>
     <param name="overwrite" type="boolean" gui-text="Override last stitch plan">true</param>
     <spacer />
     <script>

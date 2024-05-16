@@ -3,19 +3,21 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from tempfile import TemporaryDirectory
-from base64 import b64encode
-from typing import Optional, Tuple
 import sys
+from base64 import b64encode
+from tempfile import TemporaryDirectory
+from typing import Optional, Tuple
 
-from inkex import errormsg, Boolean, Image, BaseElement
+from inkex import BaseElement, Boolean, Image, errormsg
 from inkex.command import inkscape
 
+from ..commands import add_layer_commands
 from ..marker import set_marker
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import render_stitch_plan
 from ..svg.tags import (INKSCAPE_GROUPMODE, INKSTITCH_ATTRIBS,
-                        SODIPODI_INSENSITIVE, SVG_GROUP_TAG, SVG_PATH_TAG, XLINK_HREF)
+                        SODIPODI_INSENSITIVE, SVG_GROUP_TAG, SVG_PATH_TAG,
+                        XLINK_HREF)
 from .base import InkstitchExtension
 from .stitch_plan_preview_undo import reset_stitch_plan
 
@@ -29,8 +31,9 @@ class StitchPlanPreview(InkstitchExtension):
         self.arg_parser.add_argument("-i", "--insensitive", type=Boolean, default=False, dest="insensitive")
         self.arg_parser.add_argument("-c", "--visual-commands", type=Boolean, default="symbols", dest="visual_commands")
         self.arg_parser.add_argument("-j", "--render-jumps", type=Boolean, default=True, dest="render_jumps")
-        self.arg_parser.add_argument("-o", "--overwrite", type=Boolean, default=True, dest="overwrite")
         self.arg_parser.add_argument("-m", "--render-mode", type=str, default="simple", dest="mode")
+        self.arg_parser.add_argument("-l", "--ignore-layer", type=Boolean, default=True, dest="ignore_layer")
+        self.arg_parser.add_argument("-o", "--overwrite", type=Boolean, default=True, dest="overwrite")
 
     def effect(self):
         realistic, raster_mult = self.parse_mode()
@@ -51,6 +54,8 @@ class StitchPlanPreview(InkstitchExtension):
         stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
 
         layer = render_stitch_plan(svg, stitch_plan, realistic, visual_commands, render_jumps=self.options.render_jumps)
+        if self.options.ignore_layer:
+            add_layer_commands(layer, ["ignore_layer"])
         layer = self.rasterize(svg, layer, raster_mult)
 
         # update layer visibility (unchanged, hidden, lower opacity)
