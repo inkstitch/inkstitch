@@ -795,7 +795,7 @@ class SatinColumn(EmbroideryElement):
 
         return self._csp_to_satin(self.csp)
 
-    def split(self, split_point):
+    def split(self, split_point, cut_points=None):
         """Split a satin into two satins at the specified point
 
         split_point is a point on or near one of the rails, not at one of the
@@ -813,13 +813,14 @@ class SatinColumn(EmbroideryElement):
         their transforms applied.
         """
 
-        cut_points = self._find_cut_points(split_point)
+        if cut_points is None:
+            cut_points = self.find_cut_points(split_point)
         path_lists = self._cut_rails(cut_points)
         self._assign_rungs_to_split_rails(path_lists)
         self._add_rungs_if_necessary(path_lists)
         return [self._path_list_to_satins(path_list) for path_list in path_lists]
 
-    def _find_cut_points(self, split_point):
+    def find_cut_points(self, split_point):
         """Find the points on each satin corresponding to the split point.
 
         split_point is a point that is near but not necessarily touching one
