@@ -184,7 +184,7 @@ class Palette:
             Threadcount:
             B24W4B24R2K24G24W2
 
-            Palette:
+            Pallet:
             B=0000FFBLUE;W=FFFFFFWHITE;R=FF0000RED;K=000000BLACK;G=289C18GREEN;
 
             Threadcount given over a half sett with full count at the pivots.
@@ -199,15 +199,16 @@ class Palette:
             self.symmetry = True
 
         colors = []
+        color_dict = dict()
         thread_code = ''
         stripes = []
         lines = code.splitlines()
         i = 0
         while i < len(lines):
             line = lines[i].strip()
-            if 'Threadcount:' in line and len(lines) > i:
+            if 'Threadcount:' in line and len(lines) > i + 1:
                 thread_code = lines[i+1]
-            elif line.startswith('Palette:'):
+            elif 'Pallet:' in line and len(lines) > i + 1:
                 palette = lines[i+1]
                 colors = re.findall(r'([A-Za-z]+)=#?([0-9afA-F]{6})', palette)
                 color_dict = dict(colors)
