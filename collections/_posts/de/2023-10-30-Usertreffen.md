@@ -108,7 +108,7 @@ Welchen Sinn haben Unterleger?
 
 Wann setzen wir welchen Unterleger ein und welchen Einfluss hat denn das eigentlich auf das Stickergebnis?
 
-### Stickpfade optimieren
+### Stickpfade optimieren (Tina)
 
 ![Start and stop symbol](/assets/images/posts/de/routing.png)
 
