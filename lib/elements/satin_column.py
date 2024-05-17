@@ -546,7 +546,7 @@ class SatinColumn(EmbroideryElement):
     def csp(self):
         paths = self.parse_path()
         # exclude subpaths which are just a point
-        paths = [path for path in paths if shgeo.MultiLineString(path).length > 0]
+        paths = [path for path in paths if shgeo.LineString(self.flatten_subpath(path)).length > 0]
         return paths
 
     @property
