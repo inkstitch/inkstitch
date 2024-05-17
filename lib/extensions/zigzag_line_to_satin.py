@@ -170,7 +170,7 @@ class ZigzagLineToSatin(InkstitchExtension):
                     path_commands.append(inkex.paths.Curve(*start, *end, *point))
 
                     # recalculate rungs for zigzag pattern
-                    if self.options.pattern == 'zigzag' and (has_equal_rail_point_count or i <= len(r)) and (not self.options.reduce_rungs or j == 0):
+                    if self.options.pattern == 'zigzag' and i <= len(r) and (not self.options.reduce_rungs or j == 0):
                         # in zigzag mode we do have alternating points on rails
                         # when smoothing them out, rungs may not intersect anymore
                         # so we need to find a spot on the smoothed rail to ensure the correct length
