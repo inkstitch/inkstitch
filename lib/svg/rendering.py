@@ -131,7 +131,7 @@ def realistic_stitch(start, end):
     return str(path)
 
 
-def color_block_to_point_lists(color_block):
+def color_block_to_point_lists(color_block, render_jumps=True):
     point_lists = [[]]
 
     for stitch in color_block:
@@ -139,6 +139,9 @@ def color_block_to_point_lists(color_block):
             if point_lists[-1]:
                 point_lists.append([])
                 continue
+        if stitch.jump and not render_jumps and point_lists[-1]:
+            point_lists.append([])
+            continue
 
         if not stitch.jump and not stitch.color_change and not stitch.stop:
             point_lists[-1].append(stitch.as_tuple())
@@ -159,8 +162,8 @@ def get_correction_transform(svg):
     return str(transform)
 
 
-def color_block_to_realistic_stitches(color_block, svg, destination):
-    for point_list in color_block_to_point_lists(color_block):
+def color_block_to_realistic_stitches(color_block, svg, destination, render_jumps=True):
+    for point_list in color_block_to_point_lists(color_block, render_jumps):
         color = color_block.color.visible_on_white.darker.to_hex_str()
         start = point_list[0]
         for point in point_list[1:]:
@@ -172,7 +175,7 @@ def color_block_to_realistic_stitches(color_block, svg, destination):
             start = point
 
 
-def color_block_to_paths(color_block, svg, destination, visual_commands):
+def color_block_to_paths(color_block, svg, destination, visual_commands, render_jumps=True):
     # If we try to import these above, we get into a mess of circular
     # imports.
     from ..commands import add_commands
@@ -182,7 +185,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
     # emitting multiple paths makes it easier for the user to manipulate them.
     first = True
     path = None
-    for point_list in color_block_to_point_lists(color_block):
+    for point_list in color_block_to_point_lists(color_block, render_jumps):
         if first:
             first = False
         elif visual_commands:
@@ -213,7 +216,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands):
             path.set(INKSTITCH_ATTRIBS['stop_after'], 'true')
 
 
-def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True) -> inkex.Group:
+def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True, render_jumps=True) -> inkex.Group:
     layer = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
     if layer is None:
         layer = inkex.Group(attrib={
@@ -237,9 +240,9 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True) 
         })
         layer.append(group)
         if realistic:
-            color_block_to_realistic_stitches(color_block, svg, group)
+            color_block_to_realistic_stitches(color_block, svg, group, render_jumps)
         else:
-            color_block_to_paths(color_block, svg, group, visual_commands)
+            color_block_to_paths(color_block, svg, group, visual_commands, render_jumps)
 
     if realistic:
         # Remove filter from defs, if any

@@ -31,9 +31,11 @@
     <param name="insensitive" type="boolean" gui-text="Lock"
            gui-description="Make stitch plan insensitive to mouse interactions">false</param>
     <param name="visual-commands" type="boolean" gui-text="Display command symbols">false</param>
+    <param name="render-jumps" type="boolean" gui-text="Render jump stitches">true</param>
     <spacer />
     <separator />
     <spacer />
+    <param name="ignore-layer" type="boolean" gui-text="Add ignore layer command">true</param>
     <param name="overwrite" type="boolean" gui-text="Override last stitch plan">true</param>
     <spacer />
     <script>
