@@ -77,7 +77,8 @@ class TartanSvgGroup:
         else:
             group = Group()
             group.set('id', f'inkstitch-tartan-{int(time.time())}')
-            parent_group.append(group)
+            index = parent_group.index(outline)
+            parent_group.insert(index, group)
 
         outline_shape = FillStitch(outline).shape
         transform = get_correction_transform(outline)
