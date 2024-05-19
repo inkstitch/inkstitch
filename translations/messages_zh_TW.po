@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-14 01:08+0000\n"
-"PO-Revision-Date: 2024-05-14 01:09\n"
+"POT-Creation-Date: 2024-05-18 01:08+0000\n"
+"PO-Revision-Date: 2024-05-18 01:08\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-14 01:08+0000\n"
+"POT-Creation-Date: 2024-05-18 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3574,7 +3574,7 @@ msgstr ""
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr ""
 
-#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:356
+#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:362
 msgid "Auto-Route"
 msgstr ""
 
@@ -3590,14 +3590,14 @@ msgstr ""
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:529
+#: lib/stitches/auto_satin.py:535
 #, python-format
 msgid "AutoSatin %d"
 msgstr ""
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:532
+#: lib/stitches/auto_satin.py:538
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr ""
@@ -3606,7 +3606,7 @@ msgstr ""
 msgid "Could not build graph for meander stitching. Try to enlarge your shape or scale your meander pattern down."
 msgstr ""
 
-#: lib/svg/rendering.py:221
+#: lib/svg/rendering.py:224
 msgid "Stitch Plan"
 msgstr ""
 
@@ -6316,7 +6316,15 @@ msgstr ""
 msgid "Display command symbols"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:37
+#: inx/inkstitch_stitch_plan_preview.inx:34
+msgid "Render jump stitches"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:38
+msgid "Add ignore layer command"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:39
 msgid "Override last stitch plan"
 msgstr ""
 

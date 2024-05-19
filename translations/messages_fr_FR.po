@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-14 01:08+0000\n"
-"PO-Revision-Date: 2024-05-16 01:09\n"
+"POT-Creation-Date: 2024-05-18 01:08+0000\n"
+"PO-Revision-Date: 2024-05-19 01:13\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-14 01:08+0000\n"
+"POT-Creation-Date: 2024-05-18 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3588,7 +3588,7 @@ msgstr "Triangle"
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr "Aucun d'élément brodable est sélectionné. Veuillez exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage d'objets au cas où vous auriez attendu un résultat brodable."
 
-#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:356
+#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:362
 msgid "Auto-Route"
 msgstr "Agencement automatique"
 
@@ -3604,14 +3604,14 @@ msgstr "Chemin de dessous %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:529
+#: lib/stitches/auto_satin.py:535
 #, python-format
 msgid "AutoSatin %d"
 msgstr "Auto-remplissage satin %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:532
+#: lib/stitches/auto_satin.py:538
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "Points droits pour auto-remplissage satin %d"
@@ -3620,7 +3620,7 @@ msgstr "Points droits pour auto-remplissage satin %d"
 msgid "Could not build graph for meander stitching. Try to enlarge your shape or scale your meander pattern down."
 msgstr "Impossible de construire le remplissage en méandres. Essayer d'agrandir votre forme ou de diminuer la taille du méandre."
 
-#: lib/svg/rendering.py:221
+#: lib/svg/rendering.py:224
 msgid "Stitch Plan"
 msgstr "Plan de broderie"
 
@@ -6332,7 +6332,15 @@ msgstr "Rend le plan de broderie insensible aux actions de la souris"
 msgid "Display command symbols"
 msgstr "Montrer les symboles de commandes"
 
-#: inx/inkstitch_stitch_plan_preview.inx:37
+#: inx/inkstitch_stitch_plan_preview.inx:34
+msgid "Render jump stitches"
+msgstr "Montrer les sauts"
+
+#: inx/inkstitch_stitch_plan_preview.inx:38
+msgid "Add ignore layer command"
+msgstr "Ajouter la commande \"ignorer le calque\""
+
+#: inx/inkstitch_stitch_plan_preview.inx:39
 msgid "Override last stitch plan"
 msgstr "Écraser le dernier plan de broderie"
 
