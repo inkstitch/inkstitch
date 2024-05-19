@@ -27,7 +27,6 @@ from ..i18n import _, get_languages
 from ..i18n import translation as inkstitch_translation
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import render_stitch_plan
-from ..svg.tags import INKSCAPE_GROUPMODE
 from ..threads import ThreadCatalog
 
 
@@ -360,7 +359,7 @@ class Print(InkstitchExtension):
         # corresponding to each individual color block and a final one
         # for all color blocks together.
 
-        layers = svg.findall("./g[@%s='layer']" % INKSCAPE_GROUPMODE)
+        layers_and_groups = svg.findall("./g")
         stitch_plan_layer = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
 
         # Make sure there is no leftover translation from stitch plan preview
@@ -373,7 +372,7 @@ class Print(InkstitchExtension):
 
         # First, delete all of the other layers.  We don't need them and they'll
         # just bulk up the SVG.
-        for layer in layers:
+        for layer in layers_and_groups:
             if layer is not stitch_plan_layer:
                 svg.remove(layer)
 
