@@ -357,7 +357,7 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('contour_underlay_stitch_length_mm', _('Stitch length'), unit='mm', group=_('Contour Underlay'), type='float', default=1.5)
     def contour_underlay_stitch_length(self):
-        return max(self.get_float_param("contour_underlay_stitch_length_mm", 1.5), 0.01)
+        return max(self.get_float_param("contour_underlay_stitch_length_mm", 3), 0.01)
 
     @property
     @param(
@@ -415,7 +415,7 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('center_walk_underlay_stitch_length_mm', _('Stitch length'), unit='mm', group=_('Center-Walk Underlay'), type='float', default=1.5)
     def center_walk_underlay_stitch_length(self):
-        return max(self.get_float_param("center_walk_underlay_stitch_length_mm", 1.5), 0.01)
+        return max(self.get_float_param("center_walk_underlay_stitch_length_mm", 3), 0.01)
 
     @property
     @param(
