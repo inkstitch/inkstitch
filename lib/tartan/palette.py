@@ -58,7 +58,7 @@ class Palette:
         for i, outer_sizer in enumerate(sizers):
             stripes = []
             for stripe_sizer in outer_sizer.Children:
-                stripe = {'render': True, 'color': '#000000', 'width': '5'}
+                stripe = {'render': 1, 'color': '#000000', 'width': '5'}
                 stripe_info = stripe_sizer.GetSizer()
                 for color in stripe_info.GetChildren():
                     widget = color.GetWindow()
@@ -150,7 +150,13 @@ class Palette:
             width = float(width) * self.tt_unit
             if not color:
                 color = '#000000'
-                render = '?'
+                render = 0
+            elif render == '?':
+                render = 0
+            elif render == '*':
+                render = 2
+            else:
+                render = 1
             stripes.append({'render': render, 'color': color, 'width': float(width)})
         self.palette_stripes[0] = stripes
 
@@ -179,7 +185,7 @@ class Palette:
                 if not color:
                     color = '#000000'
                     render = 0
-                if render == '?':
+                elif render == '?':
                     render = 0
                 elif render == '*':
                     render = 2

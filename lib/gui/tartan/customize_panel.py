@@ -123,7 +123,7 @@ class CustomizePanel(ScrolledPanel):
 
         visibility = wx.CheckBox(self, style=wx.CHK_3STATE | wx.CHK_ALLOW_3RD_STATE_FOR_USER)
         visibility.SetToolTip(_("Checked: stitch this stripe | Minus: spacer for strokes only | Disabled: spacer for fill and stroke"))
-        visibility.SetValue(True)
+        visibility.Set3StateValue(1)
         visibility.Bind(wx.EVT_CHECKBOX, self._update_stripes_event)
 
         # hidden label used for linked colors
