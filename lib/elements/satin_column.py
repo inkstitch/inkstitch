@@ -150,6 +150,7 @@ class SatinColumn(EmbroideryElement):
     @param('split_method',
            _('Split Method'),
            type='combo',
+           tooltip=_('Display needle penetration points in simulator to see the effect of each split method.'),
            default=0,
            options=_split_methods,
            sort_index=93)
