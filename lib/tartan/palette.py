@@ -64,8 +64,7 @@ class Palette:
                     widget = color.GetWindow()
                     if isinstance(widget, wx.CheckBox):
                         # in embroidery it is ok to have gaps between the stripes
-                        if not widget.GetValue():
-                            stripe['render'] = False
+                        stripe['render'] = widget.Get3StateValue()
                     elif isinstance(widget, wx.ColourPickerCtrl):
                         stripe['color'] = widget.GetColour().GetAsString(wx.C2S_HTML_SYNTAX)
                     elif isinstance(widget, wx.SpinCtrlDouble):
@@ -113,7 +112,12 @@ class Palette:
         code = []
         for i, direction in enumerate(self.palette_stripes):
             for stripe in direction:
-                render = '' if stripe['render'] else '?'
+                if stripe['render'] == 0:
+                    render = '?'
+                elif stripe['render'] == 2:
+                    render = '*'
+                else:
+                    render = ''
                 code.append(f"({stripe['color']}){render}{stripe['width']}")
             if i == 0 and self.equal_warp_weft is False:
                 code.append("|")
@@ -138,7 +142,7 @@ class Palette:
         :param code: the tartan pattern code to apply
         """
         stripes = []
-        stripe_info = re.findall(r'([a-zA-Z]+)(\?)?([0-9.]*)', code)
+        stripe_info = re.findall(r'([a-zA-Z]+)(\?|\*)?([0-9.]*)', code)
         for color, render, width in stripe_info:
             if not width:
                 continue
@@ -147,7 +151,7 @@ class Palette:
             if not color:
                 color = '#000000'
                 render = '?'
-            stripes.append({'render': not bool(render), 'color': color, 'width': float(width)})
+            stripes.append({'render': render, 'color': color, 'width': float(width)})
         self.palette_stripes[0] = stripes
 
     def parse_inkstitch_code(self, code_str: str) -> None:
@@ -163,7 +167,7 @@ class Palette:
         code = code_str.split('|')
         for i, direction in enumerate(code):
             stripes = []
-            stripe_info = re.findall(r'\(([0-9A-Za-z#]+)\)(\?)?([0-9.]+)', direction)
+            stripe_info = re.findall(r'\(([0-9A-Za-z#]+)\)(\?|\*)?([0-9.]+)', direction)
             for color, render, width in stripe_info:
                 try:
                     # on macOS we need to run wxpython color method inside the app otherwise
@@ -174,8 +178,14 @@ class Palette:
                     color = str(Color(color).to_named())
                 if not color:
                     color = '#000000'
-                    render = False
-                stripes.append({'render': not bool(render), 'color': color, 'width': float(width)})
+                    render = 0
+                if render == '?':
+                    render = 0
+                elif render == '*':
+                    render = 2
+                else:
+                    render = 1
+                stripes.append({'render': render, 'color': color, 'width': float(width)})
             self.palette_stripes[i] = stripes
 
     def parse_threadcount_code(self, code: str) -> None:
@@ -216,12 +226,12 @@ class Palette:
 
         stripe_info = re.findall(r'([a-zA-Z]+)([0-9.]*)', thread_code)
         for color, width in stripe_info:
-            render = True
+            render = 1
             try:
                 color = f'#{color_dict[color]}'
             except KeyError:
                 color = '#000000'
-                render = False
+                render = 0
             width = float(width) * self.tt_unit
             stripes.append({'render': render, 'color': color, 'width': width})
 
@@ -237,8 +247,13 @@ class Palette:
         :returns: the width of all tartan stripes in given direction
         """
         width = 0
+        stroke_width = 0
         for stripe in self.palette_stripes[direction]:
             stripe_width = stripe['width'] * (scale / 100)
-            if stripe_width >= min_width or not stripe['render']:
+            if stripe_width >= min_width and stripe['render'] != 2:
                 width += stripe_width
+            elif stripe_width < min_width and stripe['render'] != 0:
+                stroke_width += stripe_width
+        if width == 0:
+            width = stroke_width
         return width

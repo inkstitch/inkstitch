@@ -121,8 +121,8 @@ class CustomizePanel(ScrolledPanel):
         position.Bind(wx.EVT_LEFT_DOWN, self._move_stripe_start)
         position.Bind(wx.EVT_LEFT_UP, self._move_stripe_end)
 
-        visibility = wx.CheckBox(self)
-        visibility.SetToolTip(_("Stitch this stripe"))
+        visibility = wx.CheckBox(self, style=wx.CHK_3STATE | wx.CHK_ALLOW_3RD_STATE_FOR_USER)
+        visibility.SetToolTip(_("Checked: stitch this stripe | Minus: spacer for strokes only | Disabled: spacer for fill and stroke"))
         visibility.SetValue(True)
         visibility.Bind(wx.EVT_CHECKBOX, self._update_stripes_event)
 
@@ -135,7 +135,7 @@ class CustomizePanel(ScrolledPanel):
         colorpicker.SetToolTip(_("Select stripe color"))
         colorpicker.Bind(wx.EVT_COLOURPICKER_CHANGED, self._update_color)
 
-        stripe_width = wx.SpinCtrlDouble(self, min=0.01, max=500, initial=5, style=wx.SP_WRAP)
+        stripe_width = wx.SpinCtrlDouble(self, min=0.0, max=500, initial=5, style=wx.SP_WRAP)
         stripe_width.SetDigits(2)
         stripe_width.SetToolTip(_("Set stripe width (mm)"))
         stripe_width.Bind(wx.EVT_SPINCTRLDOUBLE, self._update_stripes_event)
@@ -152,7 +152,7 @@ class CustomizePanel(ScrolledPanel):
         stripesizer.Add(remove_button, 0, wx.CENTER | wx.TOP, 5)
 
         if stripe is not None:
-            visibility.SetValue(stripe['render'])
+            visibility.Set3StateValue(stripe['render'])
             colorinfo.SetLabel(wx.Colour(stripe['color']).GetAsString(wx.C2S_HTML_SYNTAX))
             colorpicker.SetColour(wx.Colour(stripe['color']))
             stripe_width.SetValue(stripe['width'])
