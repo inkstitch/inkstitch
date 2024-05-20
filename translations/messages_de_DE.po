@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-18 01:08+0000\n"
-"PO-Revision-Date: 2024-05-18 01:08\n"
+"PO-Revision-Date: 2024-05-20 01:09\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -243,7 +243,7 @@ msgstr "InfiniPicto ist eine lustige Schriftart, mit einer Größe von ca. 70 mm
 #. description of font in fonts/invercelia
 #: inkstitch-fonts-metadata.py:84
 msgid "Invercelia is a modern two letters monogram font of size 80mm. It can be reduced down to  80% and enlarged up to 300%. Enter an upper case letter followed by a lower case letter (for example 'Ac') to get a simple monogram.  Add  a ')'at the end and the monogram  is framed with a circle (for example 'Ac)'), add an '(' to start (for example '(Ac)' and your monogram is ready for applique, or  try something like '!Ac)' to replace the appliqué by knockdown stitches."
-msgstr ""
+msgstr "Invercelia ist eine moderne Zwei-Zeichen-Monogramm-Schriftart mit einer Größe von 80 mm. Sie kann von 80 % bis zu 300 % skaliert werden. Für ein einfaches Monogramm folgt auf einen Großbuchstaben ein Kleinbuchstabe (z.B. 'Ac'). Eine runde Klammer ')' hinter den Buchstaben fügt einen Kreis um das Monogramm hinzu (z.B. 'Ac)'). Füge eine runde Klammer vor dem Monogramm (z.B. '(Ac')) bereitet es für eine Applikation vor. Die Eingabe von '!Ac)' erzeugt Knockdown-Stiche."
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:86
@@ -313,12 +313,12 @@ msgstr "Ein 1 mm Mehrfachgeradstich-Alphabet auf der Grundlage einer 24 pt Schri
 #. description of font in fonts/ondulamarif_Medium
 #: inkstitch-fonts-metadata.py:110
 msgid "This font is an altered version  of Ondulamarif XL, to allow a greater scaling down. The altered embroidery parameters of this font allow to scale down the original Ondulamarif font between 40% (for a 45mm font ) and 99 % (for a 110 mm font). "
-msgstr ""
+msgstr "Diese Schrift ist eine abgewandelte Version Ondulamarif XL, die eine kleinere Skalierung erlaubt. Die veränderten Stickparameter erlauben es, die Originalschrift zwischen 40% (45 mm Schrift) und 99 % (110 mm Schrift) herunterzuskalieren."
 
 #. description of font in fonts/ondulamarif_XL
 #: inkstitch-fonts-metadata.py:112
 msgid "Ripple stitch font, use it as large as you can"
-msgstr ""
+msgstr "Ripple-Stich Schrift in möglichst hoher Skalierung benutzen."
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:114
@@ -350,7 +350,7 @@ msgstr "Basiert auf der Schrift Latin Modern Roman 10 fett kursiv. Der Großbuch
 #: inkstitch-fonts-metadata.py:124
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Basiert auf der Schrift Latin Modern Roman 10 Bold italic. Gut kombinierbar mit den Buchstaben von Roman AGS. Das große M ist bei einer Skalierung von 100 %, 42,5 mm breit. Eine Skalierung ist von 70 % bis zu 130 % möglich. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:126
@@ -6332,11 +6332,11 @@ msgstr "Zeige visuelle Befehle"
 
 #: inx/inkstitch_stitch_plan_preview.inx:34
 msgid "Render jump stitches"
-msgstr ""
+msgstr "Sprungstiche anzeigen"
 
 #: inx/inkstitch_stitch_plan_preview.inx:38
 msgid "Add ignore layer command"
-msgstr ""
+msgstr "Ebene ignorieren Befehl einfügen"
 
 #: inx/inkstitch_stitch_plan_preview.inx:39
 msgid "Override last stitch plan"
