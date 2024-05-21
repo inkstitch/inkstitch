@@ -1,7 +1,6 @@
 {
-    "name": "Ondulamarif M",
-    "description": "This font is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow to scale down the original Ondulamarif font between 99% (for a 56mm tall m ) and 49 % (for a 28 mm tall  m) ",
-
+    "name": "Ondulamarif S",
+    "description": "This font is an altered version  of Ondulamarif XL, to allow a greater scaling down. The altered embroidery parameters of this font allow to scale down the original Ondulamarif font between 49% (for a 28 mm tall m ) and 30 % (for a 16mm tall m) ",
     "keywords": [
         "monogram",
         "running_stitch",
@@ -13,9 +12,9 @@
     "reversible": false,
     "letter_case": "",
     "default_glyph": "�",
-    "size": 82,
-    "min_scale": 0.5,
-    "max_scale": 0.99,
+    "size": 44,
+    "min_scale": 0.3,
+    "max_scale": 0.49,
     "horiz_adv_x_default": 327,
     "horiz_adv_x_space": 120,
     "units_per_em": 400,
