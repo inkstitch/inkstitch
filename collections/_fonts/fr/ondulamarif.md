@@ -18,7 +18,7 @@ preview_image:
 ## Ondulamarif XL
 <img 
      src="/assets/images/fonts/ondulamarif_XL.png"
-     alt="Ondulamarif XL " height="110">
+     alt="Ondulamarif XL " height="55">
      
 ## Glyphes
 
@@ -43,7 +43,7 @@ Elle peut être agrandie jusqu'à   {{ font1.max_scale | times: 100 | floor }}% 
 
 <img 
      src="/assets/images/fonts/ondulamarif_Medium.png"
-     alt="Ondulamarif XL " height="82">
+     alt="Ondulamarif XL " height="41">
 
 ## Glyphes
 
@@ -64,7 +64,7 @@ Cette variation d'ondulamarif XL   peut être utilisée
 ## Ondulamarif Small
 <img 
      src="/assets/images/fonts/ondulamarif_small.png"
-     alt="Ondulamarif XL " height="44">
+     alt="Ondulamarif XL " height="22">
 
 ## Glyphes
 
