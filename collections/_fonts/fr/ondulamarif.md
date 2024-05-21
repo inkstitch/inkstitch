@@ -84,13 +84,13 @@ Cette variation d'ondulamarif XL   peut être utilisée
 
 ## Ajouter de la couleur  à Ondulamarif.
 
-Une manière très simple d'ajouter de la couleur à Ondulamarif est d'utilisé un fil multicolore. 
+Une manière très simple d'ajouter de la couleur à Ondulamarif est d'utiliser un fil multicolore. 
 
 Mais elle est aussi  très jolie  bicolore en utilisant un fil différent pour les contours. 
 
 Il est  facile  de sélectionner tous les contours:
-* soit en utilisant Ink/Stitch  > Edition > Sélection des éléments de broderie et en recherchant  les  points droits qui sont paramètrés en point triple (mais actuellement cette méthode ne fonctionne pas pour les utilisateurs de mac)
-* soit en utilisant Inkscape >  Edition  >  Rechercher et Remplacer et rechercher "contour" (sans les guillements). La recherche doit être étendue aux propriétés, et il faut cocher "valeur de l'attribut" dans Propriétés. Après avoir cliquer sur Rechercher, tous les contours sont sélectionnés et leur couleur peut-être facilement modifiée.
+* soit en utilisant Ink/Stitch  > Édition > Sélection des éléments de broderie et en recherchant  les  points droits qui sont paramètrés en point triple (mais actuellement cette méthode ne fonctionne pas pour les utilisateurs de mac)
+* soit en utilisant Inkscape >  Édition  >  Rechercher et Remplacer et rechercher "contour" (sans les guillements). La recherche doit être étendue aux propriétés, et il faut cocher "valeur de l'attribut" dans Propriétés. Après avoir cliquer sur Rechercher, tous les contours sont sélectionnés et leur couleur peut-être facilement modifiée.
 
 * Si vous souhaitez ensuite trier les  couleurs [voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
 
