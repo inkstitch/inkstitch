@@ -14,11 +14,11 @@ preview_image:
 
 <img 
      src="/assets/images/fonts/magnolia_small.jpg"
-     alt="Emilio20" height="50">
+     alt="Magnolia KOR" height="50">
 
 <img 
      src="/assets/images/fonts/magnolia_KOR.jpg"
-     alt="Emilio20" height="100">  
+     alt="Magnolia KOR" height="100">  
 ## Glyphs
 
 This font contains  {{ font.glyphs.size }} glyphs:
