@@ -55,6 +55,8 @@ def stripes_to_shapes(
 
     left = minx
     top = miny
+    add_to_stroke = 0
+    add_to_fill = 0
     i = -1
     while True:
         i += 1
@@ -68,24 +70,39 @@ def stripes_to_shapes(
             right = left + width
             bottom = top + width
 
-            if (top > maxy and weft) or (left > maxx and not weft):
+            if ((top > maxy and weft) or (left > maxx and not weft) or
+                    (add_to_stroke > maxy and weft) or (add_to_stroke > maxx and not weft)):
                 return _merge_polygons(shapes, outline, intersect_outline)
 
-            if not stripe['render']:
-                left = right
-                top = bottom
+            if stripe['render'] == 0:
+                left = right + add_to_stroke
+                top = bottom + add_to_stroke
+                add_to_stroke = 0
+                continue
+            elif stripe['render'] == 2:
+                add_to_stroke += width
                 continue
 
             shape_dimensions = [top, bottom, left, right, minx, miny, maxx, maxy]
             if width <= min_stripe_width * PIXELS_PER_MM:
+                add_to_fill = add_to_stroke
+                shape_dimensions[0] += add_to_stroke
+                shape_dimensions[2] += add_to_stroke
                 linestrings = _get_linestrings(outline, shape_dimensions, rotation, rotation_center, weft)
                 shapes[stripe['color']].extend(linestrings)
+                add_to_stroke += width
                 continue
+            add_to_stroke = 0
+
+            # add the space of the lines to the following object to avoid bad symmetry
+            shape_dimensions[1] += add_to_fill
+            shape_dimensions[3] += add_to_fill
 
             polygon = _get_polygon(shape_dimensions, rotation, rotation_center, weft)
             shapes[stripe['color']].append(polygon)
-            left = right
-            top = bottom
+            left = right + add_to_fill
+            top = bottom + add_to_fill
+            add_to_fill = 0
 
 
 def _merge_polygons(
@@ -252,9 +269,9 @@ def get_tartan_stripes(settings: dict) -> Tuple[list, list]:
         warp = []
     if palette.get_palette_width(settings['scale'], settings['min_stripe_width'], 1) == 0:
         weft = []
-    if len([stripe for stripe in warp if stripe['render'] is True]) == 0:
+    if len([stripe for stripe in warp if stripe['render'] == 1]) == 0:
         warp = []
-    if len([stripe for stripe in weft if stripe['render'] is True]) == 0:
+    if len([stripe for stripe in weft if stripe['render'] == 1]) == 0:
         weft = []
 
     if palette.equal_warp_weft:
