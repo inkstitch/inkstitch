@@ -16,8 +16,10 @@ preview_image:
 
 
 ## Ondulamarif XL
-
-![Ondulamarif XL](/assets/images/fonts/ondulamarif_XL.png)
+<img 
+     src="/assets/images/fonts/ondulamarif_XL.png"
+     alt="Ondulamarif XL " height="110">
+     
 ## Glyphes
 
 Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
@@ -38,7 +40,11 @@ Elle peut être agrandie jusqu'à   {{ font1.max_scale | times: 100 | floor }}% 
 
 
 ## Ondulamarif Medium
-![Ondulamarif Medium](/assets/images/fonts/ondulamarif_Medium.png)
+
+<img 
+     src="/assets/images/fonts/ondulamarif_Medium.png"
+     alt="Ondulamarif XL " height="82">
+
 ## Glyphes
 
 Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
@@ -56,7 +62,10 @@ Cette variation d'ondulamarif XL   peut être utilisée
 à {{ font2.max_scale | times: 100 | floor }}% ({{ font1.size | times: font2.max_scale }} mm).
 
 ## Ondulamarif Small
-![Ondulamarif Small](/assets/images/fonts/ondulamarif_small.png)
+<img 
+     src="/assets/images/fonts/ondulamarif_small.png"
+     alt="Ondulamarif XL " height="44">
+
 ## Glyphes
 
 Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
@@ -73,6 +82,18 @@ Cette variation d'ondulamarif XL   peut être utilisée
  de {{ font3.min_scale | times: 100 | floor }}% ({{ font1.size | times: font3.min_scale }} mm)
 à {{ font3.max_scale | times: 100 | floor }}% ({{ font1.size | times: font3.max_scale }} mm).
 
+## Ajouter de la couleur  à Ondulamarif.
+
+Une manière très simple d'ajouter de la couleur à Ondulamarif est d'utilisé un fil multicolore. 
+
+Mais elle est aussi  très jolie  bicolore en utilisant un fil différent pour les contours. 
+
+Il est  facile  de sélectionner tous les contours:
+* soit en utilisant Ink/Stitch  > Edition > Sélection des éléments de broderie et en recherchant  les  points droits qui sont paramètrés en point triple (mais actuellement cette méthode ne fonctionne pas pour les utilisateurs de mac)
+* soit en utilisant Inkscape >  Edition  >  Rechercher et Remplacer et rechercher "contour" (sans les guillements). La recherche doit être étendue aux propriétés, et il faut cocher "valeur de l'attribut" dans Propriétés. Après avoir cliquer sur Rechercher, tous les contours sont sélectionnés et leur couleur peut-être facilement modifiée.
+
+* Si vous souhaitez ensuite trier les  couleurs [voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
+
 
 
 ## Dans la vraie vie
@@ -82,4 +103,6 @@ Cette variation d'ondulamarif XL   peut être utilisée
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/ondulamarif_XL/LICENSE)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/ondulamatif_Medium/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/ondulamarif_Medium/LICENSE)
+
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/ondulamarif_S/LICENSE)
