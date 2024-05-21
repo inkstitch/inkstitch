@@ -30,9 +30,9 @@ This font contains  {{ font.glyphs.size }} glyphs:
 
 ## Dimensions
 
-At 100%, this font is approximatively 22 mm (0.9 inch) tall.
+At 100%, this font is approximativel 30 mm (1.25 inch) tall.
 
-It can be scaled up to 120% (approx. 33 mm, 1.1  inches) or scaled down to  80% (approx.  20 mm, 0.8 inch).
+It can be scaled up to 120% (approx. 36 mm, 1.5  inches) or scaled down to  80% (approx.  24 mm, 1 inch).
 
 {% include upcoming_release.html %} 
 
