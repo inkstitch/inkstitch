@@ -6,8 +6,11 @@ preview_image:
   - url: /assets/images/fonts/ondulamarif_XL.png
     height: 110
   - url: /assets/images/fonts/ondulamarif_Medium.png
-    height: 70
+    height: 82
+  - url: /assets/images/fonts/ondulamarif_small.png
+    height: 44
 ---
+{%- assign font3 = site.data.fonts.ondulamarif_S.font -%}
 {%- assign font2 = site.data.fonts.ondulamarif_Medium.font -%}
 {%- assign font1 = site.data.fonts.ondulamarif_XL.font -%}
 
@@ -29,13 +32,13 @@ Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
 
 A une échelle de  100% cette fonte a une hauteur approximative de  {{ font1.size }} mm. 
 
-Elle peut être redimensionnée  de {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
-à {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
+Elle peut être agrandie jusqu'à   {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm), mais ne doit pas être diminuée
 
 
 
 
 ## Ondulamarif Medium
+![Ondulamarif Medium](/assets/images/fonts/ondulamarif_Medium.png)
 ## Glyphes
 
 Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
@@ -51,6 +54,24 @@ Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 Cette variation d'ondulamarif XL   peut être utilisée 
  de {{ font2.min_scale | times: 100 | floor }}% ({{ font1.size | times: font2.min_scale }} mm)
 à {{ font2.max_scale | times: 100 | floor }}% ({{ font1.size | times: font2.max_scale }} mm).
+
+## Ondulamarif Small
+![Ondulamarif Small](/assets/images/fonts/ondulamarif_small.png)
+## Glyphes
+
+Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
+
+```
+{{ font2.glyphs | sort | join: ' ' }}
+```
+{: .font-glyphs }
+
+
+## Dimensions
+
+Cette variation d'ondulamarif XL   peut être utilisée 
+ de {{ font3.min_scale | times: 100 | floor }}% ({{ font1.size | times: font3.min_scale }} mm)
+à {{ font3.max_scale | times: 100 | floor }}% ({{ font1.size | times: font3.max_scale }} mm).
 
 
 
