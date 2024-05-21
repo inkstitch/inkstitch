@@ -21,10 +21,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="12.130498"
-     inkscape:cx="54.119791"
-     inkscape:cy="77.490637"
-     inkscape:current-layer="g4130"
+     inkscape:zoom="1.9642942"
+     inkscape:cx="51.163417"
+     inkscape:cy="100.79957"
+     inkscape:current-layer="g4095"
      inkscape:document-units="mm"
      showgrid="false">
     <sodipodi:guide
@@ -66,7 +66,7 @@ Copyright (c) 2011 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
 Font Name &quot;Spicy Rice&quot;
 <inkstitch:min_stitch_len_mm>0.5</inkstitch:min_stitch_len_mm>
 <inkstitch:collapse_len_mm>2.0</inkstitch:collapse_len_mm>
-<inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
+<inkstitch:inkstitch_svg_version>2</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs3892">
@@ -20021,7 +20021,7 @@ Font Name &quot;Spicy Rice&quot;
        style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 30.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FFFF00)/0.8 (#FD8008)0.4 (#800080)4.8 (#FD8008)3.2 (#800080)1.6 (#FD8008)3.2 (#800080)/1.6&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 30.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FFFF00)/0.4 (#FD8008)0.4 (#800080)1.6 (#800080)3.2 (#FD8008)3.2 (#FD8008)0.4 (#800080)1.6 (#FD8008)3.2 (#FD8008)0.4 (#800080)/1.6&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -20125,7 +20125,7 @@ Font Name &quot;Spicy Rice&quot;
        style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: false, &quot;rotate&quot;: 30.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FB02FF)/3.0 (#0000FF)0.4 (#800080)0.4 (#FFFF00)3.0 | (#0000FF)0.4 (#800080)0.4 (#FB02FF)3.0 (#FFFF00)/3.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 30.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FB02FF)/3.0 (#0000FF)0.4 (#FFFF00)3.0 (#800080)/0.4&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:herringbone_width_mm="3.0"
@@ -20171,7 +20171,7 @@ Font Name &quot;Spicy Rice&quot;
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-E"
-     style="display:inline"
+     style="display:none"
      id="g3904">
     <path
        d="m 72.787778,151.19359 c -15.262985,-2.6789 -30.845828,-2.04478 -46.269804,-1.8975 -7.925328,0.33387 -15.856522,1.03625 -23.649005,2.55819 C 7.108774,142.0156 7.8902194,131.12022 8.8721594,120.5702 10.389047,100.26379 9.8814561,79.817652 7.8396091,59.566679 7.0854687,54.21972 6.6801983,48.668816 4.484696,43.671134 c 21.857858,3.098882 44.182039,2.454477 65.952846,-1.028354 0,11.481784 0,22.963568 0,34.445352 -6.141712,-5.680608 -14.018236,-10.330518 -22.56284,-10.561629 -4.917044,-0.196496 -10.615004,2.805088 -10.744081,8.294065 -1.061825,5.709366 2.773708,12.572084 9.026166,12.607653 4.368658,1.07485 8.631798,-4.767703 10.252914,-5.92884 0,9.791023 0,19.582049 0,29.373069 -1.941428,-5.68162 -8.57261,-9.71604 -14.376686,-7.19757 -5.939826,2.74002 -6.152987,10.66112 -4.334355,16.07055 1.464187,5.19179 7.5689,7.15747 12.346656,5.51981 7.917035,-2.30207 14.814862,-7.96526 18.849901,-15.12728 1.29752,13.68521 2.595041,27.37042 3.892561,41.05563 z"
@@ -20349,7 +20349,7 @@ Font Name &quot;Spicy Rice&quot;
        style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 45.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#800080)/2.0 (#FD8008)2.5 (#800080)2.0 (#FD8008)4.0 (#800080)2.0 (#FF0000)0.8 (#800080)/2.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 45.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FD8008)/2.5 (#FB0207)0.2 (#FB0207)0.2 (#800080)2.0 (#FD8008)4.0 (#FF0000)0.2 (#FB0207)0.2 (#800080)/2.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -20382,7 +20382,7 @@ Font Name &quot;Spicy Rice&quot;
        style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: false, &quot;rotate&quot;: 60.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FB02FF)/1.6 (#FD8008)3.2 (#FB02FF)1.6 (#FD8008)3.2 (#0000FF)0.5 | (#FB02FF)1.6 (#FD8008)3.2 (#FB02FF)1.6 (#FD8008)3.2 (#0000FF)/0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: false, &quot;rotate&quot;: 60.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FB02FF)/1.6 (#0000FF)0.5 (#FD8008)3.2 (#FB02FF)1.6 (#FD8008)3.2 (#0000FF)0.5 | (#FB02FF)1.6 (#0000FF)0.5 (#FD8008)3.2 (#FB02FF)1.6 (#FD8008)3.2 (#0000FF)/0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -20450,7 +20450,7 @@ Font Name &quot;Spicy Rice&quot;
        d="m 89.269089,149.28556 c -4.165035,0.17805 -8.325395,0.49478 -12.468848,0.88623 -3.655528,0.34536 -7.290654,0.88332 -10.916209,1.4631 2.974034,-6.24554 3.819028,-13.22027 4.831247,-19.98827 1.110481,-8.62022 1.641296,-17.3043 1.925617,-25.98763 -6.737529,14.46901 -12.137274,29.50813 -17.553156,44.50707 -5.554102,-14.96867 -10.871379,-30.04314 -17.332808,-44.654 0.919397,14.87318 2.565107,29.79665 6.463082,44.2127 -10.112186,-1.09279 -20.326416,-0.52573 -30.426657,0.42001 -3.702854,0.39242 -7.3926127,0.90229 -11.069287,1.49011 C 6.183804,137.29768 8.2038178,122.63729 9.0376947,107.9173 10.371927,86.232585 9.4998578,64.373761 5.88017,42.937598 c 10.586939,1.892024 21.436594,2.795701 32.168528,1.762373 1.594255,-0.162048 3.677168,-1.135797 3.328232,1.357439 3.363569,18.711486 8.230276,37.188853 15.179702,54.90073 6.102071,-18.77389 9.788794,-38.320409 11.016624,-58.020858 1.56116,0.482763 3.087557,1.158025 4.670384,1.520805 4.904182,0.11693 9.806129,0.262988 14.701433,0.585698 5.814037,0.224718 11.663996,0.08624 17.423687,-0.784764 -2.59112,12.941028 -3.10577,26.197088 -3.15767,39.361824 0.11451,19.668835 1.63766,39.415535 5.85689,58.657105 0.56106,2.496 1.17711,4.97975 1.85432,7.44681 -6.53085,-0.65615 -13.09782,-0.71944 -19.653211,-0.4392"
        id="path3912"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 15.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FFFF)/0.8 (#21FFFF)3.2 (#A8ACE8)0.8 (#21FFFF)0.4 (#A8ACE8)0.4 (#21FFFF)0.4 (#A8ACE8)1.6 (#21FFFF)0.8 (#21FFFF)/0.4&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 15.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FFFF)/2.4 (#0000FF)1.2 (#21FF06)0.4 (#FB02FF)0.4 (#21FF06)0.4 (#0000FF)1.6 (#21FFFF)/2.4&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -20768,7 +20768,7 @@ Font Name &quot;Spicy Rice&quot;
        style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 15.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 2.0, &quot;offset_y&quot;: 3.0, &quot;palette&quot;: &quot;(#21FF06)/2.0 (#FB0207)0.5 (#21FFFF)4.0 (#FFFF0A)3.0 | (#21FF06)2.0 (#FB0207)0.5 (#21FFFF)2.0 (#FFFF0A)/4.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 15.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 2.0, &quot;offset_y&quot;: 3.0, &quot;palette&quot;: &quot;(#21FF06)/2.0 (#FB0207)0.1 (#21FFFF)2.0 (#FFFF0A)/3.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -20871,7 +20871,7 @@ Font Name &quot;Spicy Rice&quot;
        style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 45.0, &quot;scale&quot;: 300, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FF06)/2.0 (#FB0207)0.5 (#FFFF0A)2.0 (#FB0207)0.5 | (#21FF06)2.0 (#FB0207)0.5 (#FFFF0A)2.0 (#FB0207)/0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 30.0, &quot;scale&quot;: 200, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FF06)/2.0 (#FB0207)0.2 (#FB0207)0.2 (#FFFF0A)/2.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -21696,7 +21696,7 @@ Font Name &quot;Spicy Rice&quot;
        sodipodi:nodetypes="csccccsscccsccscssscscssscccsssssscsssssssscccccsscscc"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 30.0, &quot;scale&quot;: 150, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FFFF)/2.0 (#FB0207)0.5 (#0000FF)2.0 (#FB0207)/?0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: false, &quot;rotate&quot;: 30.0, &quot;scale&quot;: 150, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FFFF)/2.0 (#FB0207)0.5 (#21FFFF)2.0 (#FB0207)0.5 | (#0000FF)2.0 (#FB0207)0.5 (#0000FF)2.0 (#FB0207)/0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.2, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -21823,7 +21823,7 @@ Font Name &quot;Spicy Rice&quot;
        id="path3932"
        style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 30.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 3.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#800080)/0.8 (#0000FF)3.2 (#FFFF0A)0.8 (#800080)0.4 (#FFFF0A)0.4 (#800080)0.4 (#FFFF0A)1.6 (#800080)0.8 (#800080)/0.4&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: false, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 30.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 3.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;...['(#800080)0.4', '(#FFFF0A)1.6', '(#0000FF)3.2', '(#FFFF0A)1.6', '(#800080)0.4']...&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -22040,7 +22040,7 @@ Font Name &quot;Spicy Rice&quot;
        style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        d="M 37.901815,149.87169 C 26.076079,148.92248 14.148874,149.5695 2.428304,151.34088 4.8136674,146.32423 5.5480123,140.73238 6.357551,135.29333 7.6135196,125.27076 7.9736172,115.15362 7.9954736,105.06002 7.7391476,93.734103 7.3534084,82.362223 5.5588468,71.158155 5.1354607,68.886156 4.7585477,66.558067 3.750297,64.456399 c 9.804478,1.675658 19.845566,2.280141 29.756342,1.274075 1.193314,-0.253069 2.254056,-0.475645 1.580958,1.016739 -2.835098,16.131992 -3.211486,32.612044 -2.372987,48.939557 0.689105,11.5112 2.096937,23.05129 5.187205,34.18492 z M 4.190962,32.846424 C 4.0616753,25.683451 9.2716243,18.922619 16.170671,17.075958 c 6.10671,-1.788083 13.113876,0.396512 17.099577,5.36896 4.432111,5.180862 4.987874,13.174803 1.366749,18.941144 -3.281295,5.589565 -10.084369,8.781482 -16.476738,7.731219 C 11.13365,48.158029 5.2123834,42.164659 4.3428335,35.125721 4.2401954,34.3706 4.1909074,33.608423 4.190962,32.846424 Z"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 15.0, &quot;scale&quot;: 70, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FF06)/0.8 (#0000FF)6.4 (#21FF06)3.2 (#FFFF00)0.4 (#21FF06)3.2 (#0000FF)/0.8&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 15.0, &quot;scale&quot;: 70, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FF06)/0.8 (#0000FF)4.0 (#21FF06)3.2 (#FFFF00)0.4 (#21FF06)3.2 (#0000FF)/0.8&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -22239,7 +22239,7 @@ Font Name &quot;Spicy Rice&quot;
        sodipodi:nodetypes="cccsccscscscsscccsssccccssscscccsssccssccssssssscccssssscssssscccsssccc"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: -23.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FF06)/2.0 (#0000FF)0.5 (#800080)3.0 (#FFFF0A)3.0 | (#21FF06)3.0 (#0000FF)0.5 (#800080)3.0 (#FFFF0A)/3.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: -23.0, &quot;scale&quot;: 150, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FF06)/2.0 (#0000FF)0.5 (#800080)3.0 (#0000FF)0.5 (#FFFF0A)/3.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -22290,7 +22290,8 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
-       inkstitch:row_spacing_mm="0.3" />
+       inkstitch:row_spacing_mm="0.3"
+       inkstitch:herringbone_width_mm="1.6" />
     <path
        id="path2"
        style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22320,12 +22321,13 @@ Font Name &quot;Spicy Rice&quot;
        style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 30.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FD8008)/2.0 (#FFFF0A)5.0 (#FD8008)3.0 (#21FF06)/0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 30.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#800080)/0.4 (#FD8008)2.0 (#FFFF0A)4.0 (#FD8008)2.0 (#800080)0.4 (#800080)/0.4&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        sodipodi:nodetypes="cccccccccccccccccccc"
        inkstitch:trim_after="True"
-       inkstitch:row_spacing_mm="0.3" />
+       inkstitch:row_spacing_mm="0.3"
+       inkstitch:herringbone_width_mm="2.0" />
     <g
        id="g33">
       <path
@@ -22527,10 +22529,10 @@ Font Name &quot;Spicy Rice&quot;
     <path
        d="m 48.257443,101.76578 q 1.248543,0 2.497103,-0.77123 1.248544,-0.77122 2.240038,-1.982924 0.991495,-1.211858 1.615775,-2.790884 0.62428,-1.579185 0.62428,-3.194943 0,-0.807801 -0.110198,-2.276787 -0.110198,-1.468829 -0.440665,-3.782348 -0.330498,-2.313519 -0.991494,-5.545037 -0.660997,-3.231517 -1.762673,-7.63816 -1.395427,4.406643 -2.827586,7.63816 -1.432175,3.231518 -2.570553,5.838898 -1.138377,2.607221 -1.872823,4.737078 -0.734446,2.129856 -0.734446,4.186406 0,2.71742 1.285276,4.149511 1.285277,1.43226 3.047934,1.43226 z m 67.127937,49.42781 q -1.6892,-0.22024 -4.9942,-0.44064 -3.30499,-0.22039 -7.78508,-0.36716 -4.48009,-0.14725 -9.8048,-0.25713 -5.32468,-0.11083 -10.979887,-0.11083 -5.214538,0 -10.392344,0.11083 -5.177822,0.11083 -10.02513,0.4039 -4.847307,0.29386 -9.070351,0.69776 -4.223028,0.4039 -7.528026,1.06493 1.17511,-0.95473 2.35022,-3.37845 1.17511,-2.42356 2.093155,-5.6185 0.918046,-3.19479 1.468876,-6.75674 0.550831,-3.56211 0.550831,-6.86709 0,-2.20333 -0.293766,-4.18625 -0.293781,-1.98309 -0.954778,-3.45191 -0.660996,-1.46883 -1.762657,-2.31352 -1.101661,-0.84454 -2.643986,-0.84454 -2.570553,0 -4.663708,2.01966 -2.093156,2.01966 -3.562048,5.25118 -1.468876,3.23167 -2.276755,7.27099 -0.807895,4.03948 -0.807895,8.00549 0,1.68922 0.14693,3.04785 0.146931,1.35879 0.367215,2.46045 0.220332,1.10166 0.367215,2.05639 0.146931,0.95473 0.146931,1.90962 -4.994207,-0.58756 -9.841514,-0.88142 -4.847324,-0.2937 -9.694632,-0.2937 -4.847323,0 -9.731347,0.2937 -4.884041,0.29386 -10.0985793,0.88142 6.8303133,-13.21993 12.4855163,-26.21962 5.655187,-12.99953 10.355611,-26.146157 4.700425,-13.146465 8.519521,-26.586791 3.819097,-13.440167 6.977196,-27.541521 8.152306,0.440633 15.827215,0.771226 7.67491,0.330435 15.166219,0.330435 11.677621,0 23.281792,-0.697602 11.60417,-0.697761 24.38345,-2.166748 v 34.445347 q -4.25976,-3.966011 -8.1523,-6.095867 -3.89253,-2.129857 -6.90375,-3.158052 -3.52531,-1.175126 -6.60996,-1.322057 -3.67222,0 -5.948989,0.918157 -2.276771,0.917997 -3.562031,2.350093 -1.285277,1.432254 -1.762673,3.231676 -0.477382,1.799263 -0.477382,3.635417 0,1.90962 0.550831,3.819081 0.55083,1.909619 1.762657,3.451913 1.211827,1.542293 3.047934,2.533756 1.836106,0.991463 4.480093,0.991463 1.98299,0 3.63548,-0.917998 1.65251,-0.917998 2.93777,-2.019658 1.28527,-1.101661 2.05644,-2.129857 0.77116,-1.028354 0.99149,-1.248591 v 29.744845 q -1.17511,-2.79089 -2.75415,-4.40665 -1.57904,-1.61575 -3.08465,-2.38698 -1.50561,-0.77107 -2.75415,-0.95473 -1.24856,-0.18366 -1.68923,-0.18366 -2.423651,0 -4.186308,0.91815 -1.762658,0.918 -2.901051,2.38683 -1.138378,1.46899 -1.689208,3.41518 -0.55083,1.94635 -0.55083,3.92928 0,2.27678 0.624264,4.44337 0.624279,2.16659 1.799389,3.89255 1.175111,1.72595 2.901035,2.79088 1.725941,1.06493 4.002709,1.06493 3.01122,0 6.35292,-1.3219 3.34171,-1.32205 6.49981,-3.52537 3.1581,-2.20333 5.76536,-5.03094 2.60727,-2.82762 4.14959,-5.76544 z"
        id="path4102"
-       style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
+       style="display:none;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 0.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FFFF)/1.6 (#800080)3.2 (#FD8008)0.6 (#21FFFF)1.6 (#800080)3.2 (#FD8008)/0.6&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 0.0, &quot;scale&quot;: 150, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FFFF)/1.6 (#21FF06)0.4 (#800080)3.2 (#21FF06)0.4 (#21FF06)0.4 (#21FF06)0.4 (#21FFFF)1.6 (#21FF06)0.4 (#800080)1.6 (#21FF06)0.4 (#21FF06)/0.4&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:herringbone_width_mm="1.6"
@@ -22906,8 +22908,8 @@ Font Name &quot;Spicy Rice&quot;
        style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        d="m 78.957095,150.92412 c -0.930295,-0.0982 -2.007478,0.0734 -3.231549,-0.0242 -1.028217,-0.0982 -2.264527,-0.17162 -3.70893,-0.22039 -1.444403,-0.0485 -3.023451,-0.0728 -4.737142,-0.0728 -2.448142,0 -5.128855,0.098 -8.04214,0.29386 -2.913284,0.1958 -5.912251,0.56302 -8.996902,1.10166 l 0.293782,-20.63785 c -1.86059,7.29543 -4.590264,12.92612 -8.189023,16.89208 -3.598769,3.96606 -7.821808,5.94909 -12.669116,5.94909 -1.517847,0 -3.231544,-0.19585 -5.141089,-0.58756 -1.909545,-0.39171 -3.855818,-1.1384 -5.838818,-2.24006 -1.982989,-1.10166 -3.917018,-2.63176 -5.802086,-4.5903 -1.885067,-1.95855 -3.5620417,-4.49236 -5.030923,-7.60143 -1.4688807,-3.10918 -2.6439853,-6.87934 -3.525314,-11.31047 -0.8813287,-4.43113 -1.321993,-9.68236 -1.321993,-15.75369 0,-8.22577 0.8323677,-15.264179 2.497103,-21.115215 1.6647353,-5.851036 3.794613,-10.637144 6.389633,-14.358323 2.59503,-3.72118 5.459353,-6.4386 8.59297,-8.152259 3.133617,-1.713765 6.193789,-2.570647 9.180517,-2.570647 2.546065,0 4.859553,0.354976 6.940464,1.064928 2.080922,0.709952 3.929268,1.615811 5.545037,2.717578 1.615769,1.101661 3.011206,2.337955 4.186311,3.708882 1.175115,1.370928 2.129893,2.741856 2.864334,4.112783 -0.146888,-1.664683 -0.36722,-3.439563 -0.660997,-5.324641 -0.293776,-1.885078 -0.636518,-3.831324 -1.028227,-5.838739 3.182583,0.636487 6.414126,1.052631 9.694631,1.248432 3.280505,0.195907 6.316194,0.293861 9.107068,0.293861 3.329471,0 6.022424,-0.07346 8.078857,-0.220395 1.175105,-0.04855 2.252288,-0.121966 3.231549,-0.220238 -0.538597,2.4481 -1.028227,5.190008 -1.468892,8.225724 -0.440664,3.03561 -0.820123,6.279372 -1.138377,9.731285 -0.318265,3.451913 -0.56308,7.075139 -0.734446,10.869678 -0.171366,3.794646 -0.257049,7.674946 -0.257049,11.640906 0,7.39338 0.36722,14.81125 1.101661,22.25361 0.112907,7.33674 0.882634,14.02401 3.819096,20.73489 z M 48.771556,109.11008 V 97.212205 c 0,-1.322057 -0.07344,-2.668549 -0.220332,-4.039476 -0.146888,-1.370927 -0.477391,-2.619466 -0.99151,-3.745615 -0.514109,-1.126149 -1.260788,-2.0442 -2.240039,-2.754152 -0.979251,-0.709953 -2.301244,-1.064929 -3.965979,-1.064929 -1.762668,0 -3.21931,0.611999 -4.369926,1.835996 -1.150627,1.224103 -2.080922,2.901082 -2.790885,5.030939 -0.709963,2.129962 -1.199588,4.651579 -1.468876,7.564852 -0.269299,2.91327 -0.403948,6.08357 -0.403948,9.51089 0,1.95855 0.134649,3.94158 0.403948,5.9491 0.269288,2.00741 0.722191,3.83127 1.35871,5.47157 0.636519,1.64019 1.493369,2.97444 2.570552,4.00274 1.077173,1.02819 2.399166,1.54229 3.965979,1.54229 1.762657,0 3.182578,-0.61205 4.259761,-1.83615 1.077183,-1.2241 1.897306,-2.74196 2.46037,-4.55357 0.563075,-1.81161 0.942539,-3.70888 1.138394,-5.69181 0.195854,-1.98303 0.293781,-3.75797 0.293781,-5.3248 z M 44.291464,54.10583 29.676075,47.56933 c 2.986729,-4.30869 5.777603,-8.446014 8.372623,-12.411971 1.077183,-1.664789 2.191088,-3.378501 3.341715,-5.141137 1.150627,-1.762636 2.22781,-3.464104 3.231549,-5.104404 1.003729,-1.6403 1.921779,-3.194891 2.754152,-4.663772 0.832363,-1.468881 1.493359,-2.717419 1.98299,-3.745615 1.517847,1.126149 3.366193,2.350252 5.545036,3.672309 2.178844,1.321951 4.296483,2.546001 6.352916,3.67215 2.35021,1.321951 4.798347,2.668442 7.344411,4.039475 z"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 15.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FFFF)/0.8 (#21FFFF)3.2 (#A8ACE8)0.8 (#21FFFF)0.4 (#A8ACE8)0.4 (#21FFFF)0.4 (#A8ACE8)1.6 (#21FFFF)0.8 (#21FFFF)/0.4&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
-       inkstitch:bean_stitch_repeats="1"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 15.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#800080)/0.8 (#800080)3.2 (#FD8008)0.8 (#800080)0.4 (#FD8008)0.4 (#800080)0.4 (#FD8008)1.6 (#800080)0.8 (#800080)/0.4&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:bean_stitch_repeats=""
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
        inkstitch:row_spacing_mm="0.3"
@@ -22999,7 +23001,7 @@ Font Name &quot;Spicy Rice&quot;
        d="m 67.059142,81.862418 q 0,5.508304 -1.579058,10.722748 -1.579042,5.214602 -5.545021,9.253914 -3.965994,4.03948 -10.686126,6.4632 -6.720146,2.42356 -17.075758,2.42356 0.293765,3.59884 1.505592,6.0224 1.211843,2.42372 2.901051,3.89254 1.689208,1.46899 3.598764,2.20333 1.90954,0.73449 3.525315,1.02835 1.615774,0.2937 2.717435,0.2937 h 1.101661 q 4.553542,-0.51409 8.152306,-2.35025 1.542325,-0.73433 3.011201,-1.87273 1.468892,-1.13839 2.680718,-2.71742 1.211827,-1.57918 1.98299,-3.59884 0.771163,-2.01966 0.918045,-4.66361 1.909556,4.77381 2.680719,8.92332 0.771163,4.14968 0.771163,7.74836 0,6.60997 -2.386938,12.155 -2.386937,5.54504 -6.573248,9.58451 -4.186311,4.03948 -9.95168,6.27953 -5.765369,2.24006 -12.522233,2.24006 -6.609965,0 -12.742548,-2.27679 -6.132584,-2.27678 -10.869742,-7.23426 -4.737141,-4.95747 -7.564743,-12.88949 -2.827601,-7.93187 -2.827601,-19.24233 0,-12.2652 3.525314,-21.739519 3.525331,-9.474315 9.474299,-15.900617 5.948985,-6.426302 13.770777,-9.768017 7.821807,-3.341715 16.414762,-3.341715 4.259761,0 8.189023,0.95473 3.929262,0.954731 6.903746,3.158052 2.9745,2.203322 4.737158,5.691967 1.762657,3.488646 1.762657,8.556317 z m -35.179745,16.74515 q 2.056439,-0.07283 4.773874,-0.844533 2.717436,-0.771226 5.14109,-2.166589 2.423653,-1.395521 4.076145,-3.451913 1.652491,-2.056391 1.652491,-4.700504 0,-1.689224 -1.17511,-2.717419 -1.175095,-1.028196 -3.011201,-1.028196 -2.570553,0 -4.590259,1.468987 -2.019722,1.468828 -3.451881,3.67215 -1.432159,2.203321 -2.313488,4.847276 -0.881329,2.643954 -1.101661,4.920741 z M 29.088512,53.608806 4.70506,27.389183 q 3.745662,-2.056391 7.344426,-4.039476 3.084651,-1.689065 6.389633,-3.67215 3.304983,-1.982926 5.655203,-3.67215 0.660996,1.542294 1.872823,3.745615 1.211827,2.203322 2.717436,4.663772 1.505608,2.460291 3.194816,5.104246 1.689208,2.644112 3.378432,5.141136 3.892545,5.948937 8.372638,12.41213 z"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 45.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#800080)/2.0 (#FD8008)2.5 (#800080)2.0 (#FD8008)4.0 (#800080)2.0 (#FF0000)0.8 (#800080)/2.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 45.0, &quot;scale&quot;: 150, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#800080)/2.0 (#FB0207)0.2 (#FD8008)2.5 (#800080)2.0 (#FB0207)0.2 (#FD8008)4.0 (#800080)2.0 (#FF0000)0.2 (#800080)/2.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -23811,8 +23813,8 @@ Font Name &quot;Spicy Rice&quot;
        style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        d="m 69.482796,65.484278 q -0.660997,3.304982 -1.211827,7.711625 -0.55083,4.406644 -0.954778,9.511048 -0.403932,5.104404 -0.624264,10.649441 -0.220332,5.545037 -0.220332,11.053338 0,1.836 0.07347,3.63542 0.07346,1.79942 0.07346,3.48865 0,3.59868 -0.403947,8.15225 -0.403948,4.55358 -1.615775,9.29066 -1.211827,4.73723 -3.341699,9.29081 -2.129888,4.55341 -5.618486,8.07879 -3.488598,3.52538 -8.482789,5.69197 -4.994206,2.16659 -11.824503,2.16659 -5.875535,0 -10.39236,-1.5423 -4.51681,-1.54245 -7.858509,-4.22314 -3.341715,-2.68068 -5.618486,-6.35283 -2.276771,-3.67231 -3.672198,-7.89529 -1.395442,-4.22298 -2.019722,-8.85002 -0.62428,-4.62704 -0.62428,-9.18046 0,-1.10166 0.03673,-1.35878 0.03673,-0.25713 0.03673,-0.33044 0,-0.0728 0.07346,-0.25713 0.07347,-0.18366 0.07347,-1.13839 0,-0.95473 0.03673,-3.01112 0.03673,-2.05655 0.03673,-5.80217 0,-4.406641 -0.14693,-9.951678 Q 5.14576,88.766086 4.668411,83.441444 4.19103,78.116645 3.309701,73.783467 2.428373,69.450288 1.03293,67.467362 q 5.948969,1.028196 11.200224,1.395363 5.251255,0.367168 9.584465,0.367168 2.864318,0 5.177806,-0.110831 2.313488,-0.110831 4.002712,-0.257128 1.90954,-0.147247 3.451881,-0.367168 -1.468892,7.197528 -2.827602,16.34125 -1.358725,9.14388 -1.358725,20.968284 0,2.71742 0.257065,5.65524 0.257048,2.93781 0.918045,5.3981 0.660996,2.46046 1.799374,4.03948 1.138393,1.57903 2.901051,1.57903 2.203321,0 3.451881,-1.46883 1.248544,-1.46899 1.872823,-3.85581 0.624264,-2.38699 0.73443,-5.3248 0.110198,-2.93766 0.110198,-5.87548 -0.07346,-9.547775 -0.587547,-17.846964 -0.220321,-3.52522 -0.550819,-7.124063 -0.330499,-3.598685 -0.771163,-6.793628 -0.440664,-3.194785 -1.028212,-5.728541 -0.587563,-2.533915 -1.322008,-4.002744 5.948984,1.028196 11.016624,1.395363 5.067656,0.367326 9.033635,0.367326 2.643986,0 4.737141,-0.110831 2.093156,-0.110831 3.562047,-0.257128 1.762658,-0.147247 3.084651,-0.367167 z M 30.263623,54.380416 5.88017,28.160952 q 3.745647,-2.05655 7.344411,-4.039476 3.084666,-1.689224 6.389648,-3.672308 3.304983,-1.982927 5.655203,-3.67215 0.660997,1.542293 1.872824,3.745615 1.211826,2.203321 2.717435,4.663771 1.505592,2.460292 3.194816,5.104404 1.689208,2.643955 3.378432,5.140979 3.89253,5.949095 8.372623,12.41213 z"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 15.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FFFF)/0.8 (#21FFFF)3.2 (#A8ACE8)0.8 (#21FFFF)0.4 (#A8ACE8)0.4 (#21FFFF)0.4 (#A8ACE8)1.6 (#21FFFF)0.8 (#21FFFF)/0.4&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
-       inkstitch:bean_stitch_repeats="1"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 15.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#21FFFF)/0.8 (#800080)3.2 (#A8ACE8)0.8 (#21FFFF)0.4 (#A8ACE8)0.4 (#21FFFF)0.4 (#A8ACE8)1.6 (#21FFFF)0.8 (#21FFFF)/0.4&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:bean_stitch_repeats=""
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
        inkstitch:row_spacing_mm="0.3" />
@@ -23906,7 +23908,7 @@ Font Name &quot;Spicy Rice&quot;
        sodipodi:nodetypes="ccccccccccccccccccccccccc"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: -15.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#0000FF)/2.4 (#800080)1.8 (#21FF06)0.6 (#800080)1.8 (#21FF06)/0.6&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: -15.0, &quot;scale&quot;: 200, &quot;offset_x&quot;: 1.0, &quot;offset_y&quot;: 10.0, &quot;palette&quot;: &quot;(#0000FF)/2.4 (#800080)1.8 (#21FF06)0.3 (#21FF06)0.3 (#800080)/1.8&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -24026,7 +24028,7 @@ Font Name &quot;Spicy Rice&quot;
        d="m 125.00657,81.862418 c 0.3914,10.148901 -4.645,21.034322 -14.42651,25.048532 -6.34947,3.03413 -13.497561,3.83333 -20.45946,3.81489 -0.212753,8.05481 7.843889,14.47343 15.65154,13.35364 7.7626,-0.43988 9.4749,-3.63294 17.26676,-8.1325 3.49188,6.99487 3.30881,9.05052 1.87699,16.70064 -2.57091,12.17839 -13.46476,21.78826 -25.848378,22.92612 -9.141723,1.23453 -18.924686,-0.97462 -26.132835,-6.87718 1.989966,4.21782 1.159468,8.47246 -4.047431,5.16044 -5.229444,-2.16535 -12.429174,-3.34557 -16.830131,-4.97466 -0.09714,-6.38279 -1.98835,-12.596 -1.963613,-18.98748 -1.702048,9.51832 -6.161272,20.27601 -16.04812,23.6645 C 22.307146,156.68414 10.289888,147.82981 6.8747452,136.75702 1.9710673,123.41211 2.213598,108.70174 4.6076155,94.866185 6.9443881,83.321091 12.820202,70.434371 24.920309,66.609477 c 9.3139,-2.568987 19.91308,2.39087 24.291864,10.919605 0.611763,-3.54446 -4.735274,-13.071695 2.735323,-10.436768 8.519024,1.036 17.139149,1.027373 25.687558,0.375048 -0.893226,2.75967 -1.884761,8.206959 1.855467,3.633673 10.714157,-7.724058 25.988689,-10.433539 38.002299,-4.198519 4.9948,3.135377 7.81609,9.127652 7.51375,14.959902 z M 48.771556,109.11008 c -0.482566,-6.9777 1.318322,-14.614001 -1.926867,-21.094936 -5.416351,-6.060643 -12.543207,1.303229 -11.838875,7.629187 -1.565276,8.787679 -1.774597,18.046889 0.449032,26.704909 3.182122,7.56114 12.258653,2.97185 12.350796,-3.83831 0.754033,-3.07283 0.873542,-6.25248 0.965914,-9.40085 z M 102.01855,93.760292 c 6.86623,-3.116527 1.536,-14.373782 -4.804085,-8.698632 -4.199866,2.478053 -8.456835,10.000012 -6.554783,13.505219 4.176493,-0.313033 8.180839,-2.107913 11.358868,-4.806587 z"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: false, &quot;rotate&quot;: 60.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FB02FF)/1.6 (#FD8008)3.2 (#FB02FF)1.6 (#FD8008)3.2 (#0000FF)0.5 | (#FB02FF)1.6 (#FD8008)3.2 (#FB02FF)1.6 (#FD8008)3.2 (#0000FF)/0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 60.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#0000FF)/0.5 (#0000FF)0.5 (#FB02FF)1.6 (#FD8008)3.2 (#FB02FF)1.6 (#FD8008)3.2 (#0000FF)0.5 (#0000FF)/0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -24713,7 +24715,7 @@ Font Name &quot;Spicy Rice&quot;
        sodipodi:nodetypes="ssccsssssscscccscccssccsscscsssccscsssscssssscsssccsssssccssssssccssscscccccccccc"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: false, &quot;rotate&quot;: 60.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FB02FF)/1.6 (#FD8008)3.2 (#FB02FF)1.6 (#FD8008)3.2 (#0000FF)0.5 | (#FB02FF)1.6 (#FD8008)3.2 (#FB02FF)1.6 (#FD8008)3.2 (#0000FF)/0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: false, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 60.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;...['(#0000FF)0.5', '(#FB02FF)1.6', '(#FD8008)3.2', '(#0000FF)0.5', '(#FB02FF)1.6', '(#FD8008)3.2', '(#0000FF)0.5']...&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
@@ -25579,7 +25581,7 @@ Font Name &quot;Spicy Rice&quot;
        style="display:inline;fill:#ed171f;stroke:none;stroke-width:1;stroke-linejoin:bevel"
        inkstitch:stroke_method="running_stitch"
        inkstitch:fill_method="tartan_fill"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 45.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#800080)/2.0 (#FD8008)2.5 (#800080)2.0 (#FD8008)4.0 (#800080)2.0 (#FF0000)0.8 (#800080)/2.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 45.0, &quot;scale&quot;: 80, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#800080)/2.0 (#FD8008)2.5 (#FB0207)0.8 (#800080)2.0 (#FD8008)2.0 (#800080)2.0 (#FF0000)0.8 (#800080)2.0 (#FB0207)/0.8&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:fill_underlay="False"
        inkstitch:trim_after="True"
