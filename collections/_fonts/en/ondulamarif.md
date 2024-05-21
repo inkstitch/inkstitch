@@ -21,6 +21,8 @@ preview_image:
 <img 
      src="/assets/images/fonts/ondulamarif_XL.png"
      alt="Ondulamarif XL " height="55">
+
+**At 100% each letter of Ondulamarif XL has 6 ripples. When the font is upscale, the number of ripples increases**
      
 ### Glyphs
 
@@ -42,6 +44,8 @@ up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.
      src="/assets/images/fonts/ondulamarif_Medium.png"
      alt="Ondulamarif XL " height="41">
 
+**Each letter of Ondulamarif Medium has 6 ripples**
+
 ### Glyphs
 
 This font contains  {{ font2.glyphs.size }} glyphs:
@@ -61,7 +65,9 @@ up to {{ font2.max_scale | times: 100 | floor }}% ({{ font1.size | times: font2.
 <img 
      src="/assets/images/fonts/ondulamarif_small.png"
      alt="Ondulamarif XL " height="22">
-     
+
+**Each letter of Ondulamarif Smalll has 4 ripples**
+
 ### Glyphs
      
 This font contains  {{ font3.glyphs.size }} glyphs:
