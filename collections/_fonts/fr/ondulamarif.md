@@ -1,7 +1,7 @@
 ---
 title: "Ondulamarif"
 permalink: /fr/fonts/ondulamarif/
-last_modified_at: 2024-05-13
+last_modified_at: 2024-05-22
 preview_image:
   - url: /assets/images/fonts/ondulamarif_XL.png
     height: 110
@@ -20,7 +20,7 @@ preview_image:
      src="/assets/images/fonts/ondulamarif_XL.png"
      alt="Ondulamarif XL " height="55">
      
-## Glyphes
+### Glyphes
 
 Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
 
@@ -30,7 +30,7 @@ Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
 {: .font-glyphs }
 
 
-## Dimensions
+### Dimensions
 
 A une échelle de  100% cette fonte a une hauteur approximative de  {{ font1.size }} mm. 
 
@@ -45,7 +45,7 @@ Elle peut être agrandie jusqu'à   {{ font1.max_scale | times: 100 | floor }}% 
      src="/assets/images/fonts/ondulamarif_Medium.png"
      alt="Ondulamarif XL " height="41">
 
-## Glyphes
+### Glyphes
 
 Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 
@@ -55,7 +55,7 @@ Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 {: .font-glyphs }
 
 
-## Dimensions
+###  Dimensions
 
 Cette variation d'ondulamarif XL   peut être utilisée 
  de {{ font2.min_scale | times: 100 | floor }}% ({{ font1.size | times: font2.min_scale }} mm)
@@ -66,7 +66,7 @@ Cette variation d'ondulamarif XL   peut être utilisée
      src="/assets/images/fonts/ondulamarif_small.png"
      alt="Ondulamarif XL " height="22">
 
-## Glyphes
+### Glyphes
 
 Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 
@@ -76,13 +76,13 @@ Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 {: .font-glyphs }
 
 
-## Dimensions
+### Dimensions
 
 Cette variation d'ondulamarif XL   peut être utilisée 
  de {{ font3.min_scale | times: 100 | floor }}% ({{ font1.size | times: font3.min_scale }} mm)
 à {{ font3.max_scale | times: 100 | floor }}% ({{ font1.size | times: font3.max_scale }} mm).
 
-## Ajouter de la couleur  à Ondulamarif.
+## Ajouter de la couleur à Ondulamarif.
 
 Une manière très simple d'ajouter de la couleur à Ondulamarif est d'utiliser un fil multicolore. 
 
