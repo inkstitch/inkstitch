@@ -21,15 +21,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="true"
-     inkscape:zoom="22.044861"
-     inkscape:cx="48.242537"
-     inkscape:cy="148.28853"
+     inkscape:zoom="40.386874"
+     inkscape:cx="48.245873"
+     inkscape:cy="148.29075"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1216"
+     inkscape:current-layer="g1244"
      inkscape:document-units="mm"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-global="false"
@@ -110,7 +110,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
    id="collapse_len_mm2178">3</inkstitch:collapse_len_mm>
 <inkstitch:min_stitch_len_mm
    id="min_stitch_len_mm9649">0</inkstitch:min_stitch_len_mm>
-<inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
+<inkstitch:inkstitch_svg_version>2</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs81">
@@ -12077,7 +12077,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:fill_method="tartan_fill"
        inkstitch:fill_underlay="False"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: false, &quot;rotate&quot;: 75.0, &quot;scale&quot;: 80, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FECC66)/5.0 (#6666FF)5.0 (#F50000)0.5 | (#6666FF)2.0 (#FF24FF)/5.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: false, &quot;rotate&quot;: 75.0, &quot;scale&quot;: 80, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FB0207)/0.5 (#FECC66)5.0 (#6666FF)5.0 (#F50000)0.5 | (#FB0207)0.5 (#FB0207)0.5 (#6666FF)5.0 (#FF24FF)/5.0&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1"
        inkstitch:rows_per_thread="3"
        inkstitch:tartan_angle="-60.0" />
@@ -12933,7 +12933,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:fill_method="tartan_fill"
        inkstitch:fill_underlay="False"
-       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 15.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#80FF08)/5.0 (#FFFF11)3.0 (#F50000)/0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
+       inkstitch:tartan="{&quot;symmetry&quot;: true, &quot;equal_warp_weft&quot;: true, &quot;rotate&quot;: 15.0, &quot;scale&quot;: 100, &quot;offset_x&quot;: 0.0, &quot;offset_y&quot;: 0.0, &quot;palette&quot;: &quot;(#FB0207)/0.5 (#80FF08)5.0 (#FFFF11)3.0 (#F50000)/0.5&quot;, &quot;output&quot;: &quot;embroidery&quot;, &quot;stitch_type&quot;: &quot;legacy_fill&quot;, &quot;row_spacing&quot;: 1.0, &quot;angle_warp&quot;: 0.0, &quot;angle_weft&quot;: 90.0, &quot;min_stripe_width&quot;: 1.0, &quot;bean_stitch_repeats&quot;: 0}"
        inkstitch:bean_stitch_repeats="1" />
     <g
        id="g26">
