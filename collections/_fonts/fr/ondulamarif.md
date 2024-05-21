@@ -20,8 +20,7 @@ preview_image:
      src="/assets/images/fonts/ondulamarif_XL.png"
      alt="Ondulamarif XL " height="55">
      
-**Ondulamarif XL à 100% présente un nombre d’ondulations  égal à  6, mais ce nombre augmente lorsque la fonte  est agrandie.
-.**
+**Ondulamarif XL à 100% présente un nombre d’ondulations  égal à  6 et ce nombre augmente lorsque la fonte  est agrandie.**
 
 ### Glyphes
 
