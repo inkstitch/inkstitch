@@ -41,7 +41,7 @@ Namskout AGS is  an appliqué font:
 * Third color (black) stitches the satin  columns
 
 ###  Namskout Tartan
-Namskout Tartann is a  tartan font. Each letter has its own tartan, therefore embroidering it as is is not for the faint of heart ! Quite a few threads changes are required. However for a less work intense (but also less colorful) variation with only one tartan shared by all leters, see  [this](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) 
+Namskout Tartan is a  tartan font. Each letter has its own tartan, therefore embroidering it as is is not for the faint of heart ! Quite a few threads changes are required. However for a less work intense (but also less colorful) variation with only one tartan shared by all leters, see  [this](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) 
  
 ## Impressionen
 
