@@ -3,6 +3,33 @@
     <name>Outline</name>
     <id>org.{{ id_inkstitch }}.outline</id>
     <param name="extension" type="string" gui-hidden="true">outline</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <param name="keep-original" type="boolean" gui-text="Keep original element(s)">false</param>
+            <spacer />
+            <separator />
+            <spacer />
+            <param name="threshold" type="float" appearance="full" precision="2" min="0" max="100"
+                   gui-text="Threshold (mm²)" gui-description="Removes smaller shape areas than that">10</param>
+            <param name="buffer" type="float" appearance="full" precision="3" min="0.001" max="1"
+                   gui-text="Buffer (mm)" gui-description="Enlarge strokes by this amount">0.001</param>
+            <param name="smoothness" type="float" appearance="full" precision="2" min="0.01" max="5"
+                   gui-text="Smoothness (mm)" gui-description="Smooth path by this amount">0.3</param>
+            <spacer />
+            <separator />
+            <spacer />
+            <param name="inset" type="float" appearance="full" precision="3" min="0" max="5"
+                   gui-text="Inset (mm)" gui-description="Counteract the buffer effect">0</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>This extension helps reconstruct an original object from a stitch file.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/stroke-tools/#outline</label>
+        </page>
+    </param>
+
     <effect>
         <object-type>all</object-type>
         <effects-menu>
@@ -11,21 +38,7 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="keep-original" type="boolean" gui-text="Keep original element(s)">false</param>
-    <spacer />
-    <separator />
-    <spacer />
-    <param name="threshold" type="float" appearance="full" precision="2" min="0" max="100"
-           gui-text="Threshold (mm²)" gui-description="Removes smaller shape areas than that">10</param>
-    <param name="buffer" type="float" appearance="full" precision="3" min="0.001" max="1"
-           gui-text="Buffer (mm)" gui-description="Enlarge strokes by this amount">0.001</param>
-    <param name="smoothness" type="float" appearance="full" precision="2" min="0.01" max="5"
-           gui-text="Smoothness (mm)" gui-description="Smooth path by this amount">0.3</param>
-    <spacer />
-    <separator />
-    <spacer />
-    <param name="inset" type="float" appearance="full" precision="3" min="0" max="5"
-           gui-text="Inset (mm)" gui-description="Counteract the buffer effect">0</param>
+
     <script>
         {{ command_tag | safe }}
     </script>

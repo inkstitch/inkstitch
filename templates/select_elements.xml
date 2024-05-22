@@ -4,7 +4,7 @@
     <id>org.{{ id_inkstitch }}.select_elements</id>
     <param name="extension" type="string" gui-hidden="true">select_elements</param>
 
-    <param name="options" type="notebook">
+    <param name="notebook" type="notebook">
         <page name="stitch-type" gui-text="Select options">
             <label appearance="header">Select Stitch Type</label>
             <hbox>
@@ -82,6 +82,9 @@
             <spacer />
             <label>Selects specific embroidery elements by stitch type.</label>
             <label>If there is already an active selection, non matching elements will be deselected.</label>
+            <spacer />
+            <label>More info on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/edit/#select-embroidery-elements/</label>
             <spacer />
             <separator />
             <spacer />

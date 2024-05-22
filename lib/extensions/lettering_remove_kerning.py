@@ -17,6 +17,7 @@ class LetteringRemoveKerning(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-p", "--font-files", type=str, default="", dest="paths")
 
     def effect(self):

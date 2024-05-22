@@ -22,6 +22,7 @@ class BreakApart(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-m", "--method", type=int, default=1, dest="method")
         self.minimum_size = 5
 

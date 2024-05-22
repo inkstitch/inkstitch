@@ -18,6 +18,7 @@ from .base import InkstitchExtension
 class Outline(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-k", "--keep-original", type=Boolean, default=False, dest="keep_original")
         self.arg_parser.add_argument("-b", "--buffer", type=float, default=0.001, dest="buffer")
         self.arg_parser.add_argument("-s", "--smoothness", type=float, default=0.3, dest="smoothness")

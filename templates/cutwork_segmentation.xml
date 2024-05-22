@@ -9,7 +9,7 @@
             <submenu name="{{ menu_inkstitch }}" translatable="no" />
         </effects-menu>
     </effect>
-    <param name="options" type="notebook">
+    <param name="notebook" type="notebook">
       <page name="options" gui-text="Cutwork Options">
         <hbox>
           <label>#1</label><spacer />

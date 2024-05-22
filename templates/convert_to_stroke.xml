@@ -3,9 +3,20 @@
     <name>Convert Satin to Stroke</name>
     <id>org.{{ id_inkstitch }}.convert_to_stroke</id>
     <param name="extension" type="string" gui-hidden="true">convert_to_stroke</param>
-    <label>Converts a satin column into a running stitch.</label>
-    <param name="keep_satin" type="boolean" gui-text="Keep satin column"
-       gui-description="Do not delete original satin column.">false</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+        <param name="keep_satin" type="boolean" gui-text="Keep satin column"
+           gui-description="Do not delete original satin column.">false</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>Converts a satin column into a running stitch.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/stroke-tools/#convert-satin-to-stroke</label>
+        </page>
+    </param>
+
     <effect>
         <object-type>all</object-type>
         <effects-menu>
@@ -14,6 +25,7 @@
             </submenu>
         </effects-menu>
     </effect>
+
     <script>
         {{ command_tag | safe }}
     </script>

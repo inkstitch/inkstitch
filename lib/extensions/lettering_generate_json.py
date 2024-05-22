@@ -21,10 +21,7 @@ class LetteringGenerateJson(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        self.arg_parser.add_argument("--options")
-        self.arg_parser.add_argument("--general")
-        self.arg_parser.add_argument("--settings")
-        self.arg_parser.add_argument("--kerning")
+        self.arg_parser.add_argument("--notebook")
 
         self.arg_parser.add_argument("-n", "--font-name", type=str, default="Font", dest="font_name")
         self.arg_parser.add_argument("-d", "--font-description", type=str, default="Description", dest="font_description")

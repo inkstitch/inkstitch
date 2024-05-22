@@ -20,6 +20,7 @@ from .base import InkstitchExtension
 class DensityMap(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-v", "--layer-visibility", type=int, default=0, dest="layer_visibility")
         self.arg_parser.add_argument("-l", "--num-neighbors-red", type=int, default=6, dest="num_neighbors_red")
         self.arg_parser.add_argument("-r", "--density-radius-red", type=float, default=0.5, dest="radius_red")

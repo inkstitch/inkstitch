@@ -368,7 +368,6 @@ class SatinColumn(EmbroideryElement):
             'All stitches must be within this distance from the path. '
             'A lower tolerance means stitches will be closer together. '
             'A higher tolerance means sharp corners may be rounded. '
-            'Defaults to stitch length.'
         ),
         unit='mm',
         group=_('Contour Underlay'),

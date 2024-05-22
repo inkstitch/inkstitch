@@ -3,6 +3,25 @@
     <name>Break Apart Fill Objects</name>
     <id>org.{{ id_inkstitch }}.break_apart</id>
     <param name="extension" type="string" gui-hidden="true">break_apart</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <param name="method" type="optiongroup" gui-text="Method">
+               <option value="0">Simple</option>
+               <option value="1">Complex</option>
+            </param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>
+                This extension will try to repair fill shapes and break them apart if necessary.
+                Holes will be retained. Use on simple or overlapping shapes.
+            </label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/fill-tools/#break-apart-fill-objects</label>
+        </page>
+    </param>
+
     <effect>
         <object-type>all</object-type>
         <effects-menu>
@@ -11,13 +30,7 @@
             </submenu>
         </effects-menu>
     </effect>
-    <label>
-        This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes.
-    </label>
-    <param name="method" type="optiongroup" gui-text="Method">
-       <option value="0">Simple</option>
-       <option value="1">Complex</option>
-    </param>
+
     <script>
         {{ command_tag | safe }}
     </script>

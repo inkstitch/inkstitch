@@ -18,6 +18,7 @@ class LetteringUpdateJsonGlyphlist(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-f", "--font-file", type=str, default="", dest="font_file")
         self.arg_parser.add_argument("-j", "--json-file", type=str, default="", dest="json_file")
 

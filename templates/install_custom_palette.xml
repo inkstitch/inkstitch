@@ -3,9 +3,22 @@
     <name>Install custom palette</name>
     <id>org.{{ id_inkstitch }}.install_custom_palette</id>
     <param name="extension" type="string" gui-hidden="true">install_custom_palette</param>
-    <label indent="1">Choose a .gpl color palette file to install into Inkscape.</label>
-    <label indent="1">Restart Inkscape to use.</label>
-    <param indent="1" name="filepath" type="path" gui-text="Choose file" mode="file" filetypes="gpl"/>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <label indent="1">Choose a .gpl color palette file to install into Inkscape.</label>
+            <label indent="1">Restart Inkscape to use.</label>
+            <spacer />
+            <param indent="1" name="filepath" type="path" gui-text="Choose file" mode="file" filetypes="gpl"/>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>This extension installs a custom thread palette into Inkscape.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/thread-color/#install-custom-palette</label>
+        </page>
+    </param>
+
     <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>

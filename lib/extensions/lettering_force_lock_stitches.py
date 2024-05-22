@@ -20,6 +20,7 @@ class LetteringForceLockStitches(InkstitchExtension):
 
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-s", "--satin_only", type=inkex.Boolean, dest="satin_only")
         self.arg_parser.add_argument("-a", "--max_distance", type=float, default=3, dest="max_distance")
         self.arg_parser.add_argument("-i", "--min_distance", type=float, default=1, dest="min_distance")

@@ -2,9 +2,21 @@
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <name>Auto-Route Satin Columns</name>
     <id>org.{{ id_inkstitch }}.auto_satin</id>
-    <param name="trim" type="boolean" gui-text="Trim jump stitches">true</param>
-    <param name="preserve_order" type="boolean" gui-text="Preserve order of satin columns">false</param>
-    <param name="extension" type="string" gui-hidden="true">auto_satin</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+        <param name="trim" type="boolean" gui-text="Trim jump stitches">true</param>
+        <param name="preserve_order" type="boolean" gui-text="Preserve order of satin columns">false</param>
+        <param name="extension" type="string" gui-hidden="true">auto_satin</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>This extension tries to create a single stitch path through all selected satin columns.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/satin-tools/#auto-route-satin-columns</label>
+        </page>
+    </param>
+
     <effect>
         <object-type>all</object-type>
         <effects-menu>
@@ -13,6 +25,7 @@
             </submenu>
         </effects-menu>
     </effect>
+
     <script>
         {{ command_tag | safe }}
     </script>

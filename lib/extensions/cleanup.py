@@ -14,6 +14,7 @@ from .base import InkstitchExtension
 class Cleanup(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-f", "--rm_fill", dest="rm_fill", type=Boolean, default=True)
         self.arg_parser.add_argument("-s", "--rm_stroke", dest="rm_stroke", type=Boolean, default=True)
         self.arg_parser.add_argument("-a", "--fill_threshold", dest="fill_threshold", type=int, default=20)
@@ -67,10 +68,13 @@ class Cleanup(InkstitchExtension):
             errormsg(f" - { group.label }: {group.get_id()}")
 
     def _remove(self):
-        errormsg(_("%s elements removed" % len(self.elements_to_remove)))
+        num_elements_removed = len(self.elements_to_remove)
+        num_groups_removed = len(self.groups_to_remove)
+
+        errormsg(_("{num_elements_removed} elements removed").format(num_elements_removed=num_elements_removed))
         for element in self.elements_to_remove:
             element.getparent().remove(element)
 
-        errormsg(_("%s groups/layers removed" % len(self.groups_to_remove)))
+        errormsg(_("{num_groups_removed} groups/layers removed").format(num_groups_removed=num_groups_removed))
         for group in self.groups_to_remove:
             group.getparent().remove(group)

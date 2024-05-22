@@ -19,6 +19,7 @@ class LetteringCustomFontDir(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-d", "--path", type=str, default="", dest="path")
 
     def effect(self):

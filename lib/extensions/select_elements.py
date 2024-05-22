@@ -17,7 +17,7 @@ from .base import InkstitchExtension
 
 class SelectElements(InkstitchExtension):
     def add_arguments(self, pars):
-        self.arg_parser.add_argument("--options", type=str, dest="notebook")
+        self.arg_parser.add_argument("--notebook", type=str, dest="notebook")
         pars.add_argument("--stitch-type", type=str, dest="stitch_type")
         pars.add_argument("--info", type=str, dest="info")
 

@@ -3,8 +3,20 @@
     <name>Troubleshoot Objects</name>
     <id>org.{{ id_inkstitch }}.troubleshoot</id>
     <param name="extension" type="string" gui-hidden="true">troubleshoot</param>
-    <param name="pointer-size" type="float" gui-text="Pointer size (mm)" min="1" max="800" precision="2">5</param>
-    <param name="font-size" type="float" gui-text="Font size (mm)" min="1" max="800" precision="2">2</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <param name="pointer-size" type="float" gui-text="Pointer size (mm)" min="1" max="800" precision="2">5</param>
+            <param name="font-size" type="float" gui-text="Font size (mm)" min="1" max="800" precision="2">2</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>This extension points on problematic or possibly problematic spots in the document or selection.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/troubleshoot/#troubleshoot-objects</label>
+        </page>
+    </param>
+
     <effect>
         <object-type>all</object-type>
         <effects-menu>
