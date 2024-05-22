@@ -19,7 +19,7 @@ preview_image:
 ## Ondulamarif XL
 
 <img 
-     src="/assets/images/fonts/ondulamarif_XL.png"
+     src="/assets/images/fonts/ondulamarif_xl.png"
      alt="Ondulamarif XL " height="55">
 
 **At 100% each letter of Ondulamarif XL has 6 ripples. When the font is upscale, the number of ripples increases**
@@ -41,7 +41,7 @@ up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.
 ## Ondulamarif Medium
 
 <img 
-     src="/assets/images/fonts/ondulamarif_Medium.png"
+     src="/assets/images/fonts/ondulamarif_medium.png"
      alt="Ondulamarif XL " height="41">
 
 **Each letter of Ondulamarif Medium has 6 ripples**
@@ -83,22 +83,18 @@ This variation allow for a smaller scale
 It can be used  from {{ font3.min_scale | times: 100 | floor }}% ({{ font1.size | times: font3.min_scale }} mm)
 up to {{ font3.max_scale | times: 100 | floor }}% ({{ font1.size | times: fon3.max_scale }} mm).
 
-## Add some color to  Ondulamarif.
 
-A very easy and very effective way to add color to Ondulamarif is to use a variagated  thread.
+## Color sorting
 
-But it is also a  beautiful bicolor font, when the contours are stitched with a  different  color.
-
-To select  all contours you may either do
-
-*  Ink/Stitch  > Edit > Select embroidery element and then  look for running stitches with bean repeat set to one. Unfortunatly this extension is not currently working for mac user.
- 
-  or
-  
-* Inkscape >  Edit > Search and Replace and search for the string "contour" (without the quotes).The search must be extended to properties,  and attribute value must be checked. After clicking Search, all Contours are selected, and a new stroke color may be chosen.
+When using bicolor  letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
 
 
-* If you  wish to color sort the letters , [see](https://inkstitch.org//docs/lettering/#color-sorting)
+
+## Making the font monochromous ... or not
+
+You may also embroider ondulamarif with a single thread. In that case, do not color sort but give the  same stroke color to all the font objects. This will save you many stops. 
+
+And it you use a varigated thread, then your font willl  have plenty of colors.
 
 ## In real life
 
