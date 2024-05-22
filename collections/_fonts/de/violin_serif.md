@@ -38,4 +38,4 @@ Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 19mm (0.75 in) hoch
 
 ## Lizenz
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/violin_serif/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/violin_serif/LICENSE.txt)
