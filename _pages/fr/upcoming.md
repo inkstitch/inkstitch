@@ -37,10 +37,10 @@ toc: true
   ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
 * [Ondulamarif](/fonts/ondulamarif/) ([#2902](https://github.com/inkstitch/inkstitch/pull/2902))
   <img 
-     src="/assets/images/fonts/ondulamarif_XL.png"
+     src="/assets/images/fonts/ondulamarif_xl.png"
      alt="Ondulamarif XL " height="77">
  <img 
-     src="/assets/images/fonts/ondulamarif_Medium.png"
+     src="/assets/images/fonts/ondulamarif_medium.png"
      alt="Ondulamarif XL " height="61">
   <img 
      src="/assets/images/fonts/ondulamarif_small.png"
