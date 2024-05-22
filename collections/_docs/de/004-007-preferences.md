@@ -1,11 +1,9 @@
 ---
 title: "Einstellungen"
 permalink: /de/docs/preferences/
-last_modified_at: 2023-05-10
+last_modified_at: 2024-05-22
 toc: true
 ---
-The current version (v 2.2.0) does not have global settings.
-
 Die Einstellungen können über `Erweiterungen > Ink/Stitch > Einstellungen` abgerufen werden.
 
 Globale Einstellungen werden direkt auf jedes neue SVG-Dokument angewendet, während die Einstellungen im ersten Reiter dokumentspezifisch sind.
@@ -21,16 +19,25 @@ Diese Einstellungen werden auf alle Elemente des Dokuments angewendet.
 * Sollten für einen kürzeren Abstand trotzdem Vernähstiche erwünscht sein, kann die Funktion `Vernähstiche erzwingen` aktiviert werden.
 * Längere Sprungstiche verhalten sich gemäß den Vernähstich-Einstellungen des einzelnen Objektes
 
+{% include upcoming_release.html %}
+
+Ab der Version 3.1.0 kann der globale Wert bei einzelnen Elementen durch eine Einstellung in den [Parametern](/docs/params) überschrieben werden.
+
 ## Minimale Stichlänge (mm)
 
 * Stiche die kleiner sind als dieser Wert, werden gelöscht (Ausnahme: Vernähstiche).
 * Setze den globalen Wert für die minimale Stichlänge auf mindestens 0.3 mm. Ansonsten kann es bei manchen Maschinen (z.B. W6-Stickeinheiten) passieren, dass an unerwarteten Stellen Stiche fehlen werden.
+
+{% include upcoming_release.html %}
+
+Ab der Version 3.1.0 kann der globale Wert bei einzelnen Elementen durch eine Einstellung in den [Parametern](/docs/params) überschrieben werden.
 
 ### Auswirkung auf den Stichplan
 
 Die Minimale Stichlänge wird auf den fertig gerenderten Stichplan angewendet und verhält sich evtl. anders als erwartet. Ist beispielsweise die minimale Stichlänge auf 2 mm gesetzt und die Geradstichlänge auf 1.5 mm eingestellt, ergibt dies im Ergebnis eine Stichlänge von durchschnittlich 3 mm.
 
 ![simulation](/assets/images/docs/preference_msl_paths.png)
+
 *Geradstiche mit einer Sitchlänge 0,5 mm. 1: Minimale Sitchlänge 0,5 mm. 2: Minimale Stichlänge 2 mm*
 
 Ist die minimale Stichlänge kleiner als der `Reihenabstand` fällt der Effekt bei **Füllstichen** ganz besonders an den Seitenrändern der Füllung auf (ganz wie der Wert `Letzten Stich überspringen`).

@@ -1,11 +1,9 @@
 ---
 title: "Preferences"
 permalink: /docs/preferences/
-last_modified_at: 2023-05-10
+last_modified_at: 2024-05-22
 toc: true
 ---
-The current version (v 2.2.0) does not have global settings.
-
 The preferences are found in `Extensions > Ink/Stitch > Preferences`.
 
 You may either set global values which will be applied to every new svg document or set document specific values that overide global ones. 
@@ -17,10 +15,17 @@ If you chose a local value as default, it will set the glocal value to the local
 
 
 ### Minimum jump stitch length (mm)
-  If a jump between two consecutive paths is shorter than this value, lock stitches at ending of first path and tack stiches at starting point of second path are only created if *Force lock stitches* is enabled in the corresponding path.  If the jump is longer, lock stitches and tack stitches are true to their settings.
-  
+
+If a jump between two consecutive paths is shorter than this value, lock stitches at ending of first path and tack stiches at starting point of second path are only created if *Force lock stitches* is enabled in the corresponding path.  If the jump is longer, lock stitches and tack stitches are true to their settings.
+
+{% include upcoming_release.html %}
+
+Up from v 3.1.0 it is possible to overwrite the global value for single elements in the [params dialog](/doc/params).
+
 ### Minimum stitch length (mm)
+
 #### What it is
+
 Stitches smaller than this value will be dropped (exception: lock stitches). This value is only used at the very end of the stitch plan computation to filter too short stitches. Be aware that the behavior may not be what you expected : for instance if Minimum stitch length is set to 2mm and you have running stitches with maximum stitch length of 1.5mm, every other stich is droped, yielding a running path  with 3mm stiches.
 
 Simulation take these parameters into account.
@@ -30,6 +35,10 @@ These are  the results of simulation for 1.5mm *running stitch length* running s
 ![simulation](/assets/images/docs/preference_msl_paths.png)
 
 When *Minimum stitch length* is set to 2mm, except for lock stitchs, every other stitch  is dropped,  as  1.5 is smaller than 2 and 1.5+1.5 is larger than 2. The number of stitches is divided by two. Should we set *minimum stitch length* to 3.1, then we would get  4.5mm running stitches.
+
+{% include upcoming_release.html %}
+
+Up from v 3.1.0 it is possible to overwrite the global value for single elements in the [params dialog](/doc/params).
 
 #### How it affects embroidery 
 
@@ -54,6 +63,7 @@ It also affects **Satin stiches** and threfore lettering fonts. You do not want 
 {: .notice--warning }
 
 ### Global only: Cache size (mb)
+
 Defines how much space on your harddrive can be occupied with cached stitch plans. 
 
 The higher the value the more stitch plans can be cached. 
