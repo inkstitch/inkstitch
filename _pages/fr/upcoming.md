@@ -62,7 +62,7 @@ toc: true
 
 * La plupart des fontes comportent maintenant les glyphes: éèêëÉÈÊËÜÄÖäöüß
 
-  Les exceptions sont April en Fleur, Apex Lake, les Cherry's, les Emilio , Fold Inkstitch, Infinipicto, Namskout and Sortefax qui ne contiennent  que des glyphes sans diacritiques
+  Les exceptions sont April en Fleur, Apex Lake, les Cherry's, les Emilio , Fold Inkstitch, Infinipicto, Namskout et Sortefax qui ne contiennent  que des glyphes sans diacritiques
 * Cherry for  Kaalleen a été modifiée pour inclure un léger remplissage.
 
   ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
