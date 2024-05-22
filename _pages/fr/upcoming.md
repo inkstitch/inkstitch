@@ -32,9 +32,15 @@ toc: true
 
   ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
 * [Ondulamarif](/fonts/ondulamarif/) ([#2902](https://github.com/inkstitch/inkstitch/pull/2902))
-
-  ![Ondulamarif preview](/assets/images/fonts/ondulamarif_Medium.png)
-  ![Ondulamarif preview](/assets/images/fonts/ondulamarif_XL.png)
+  <img 
+     src="/assets/images/fonts/ondulamarif_XL.png"
+     alt="Ondulamarif XL " height="77">
+ <img 
+     src="/assets/images/fonts/ondulamarif_Medium.png"
+     alt="Ondulamarif XL " height="61">
+  <img 
+     src="/assets/images/fonts/ondulamarif_small.png"
+     alt="Ondulamarif XL " height="33">
 * [Roaring twenties KOR](/fonts/roaring_twenties_KOR/) ([#2856](https://github.com/inkstitch/inkstitch/issues/2856))
 
   ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
