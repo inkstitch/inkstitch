@@ -7,6 +7,7 @@ preview_image:
   - url: /assets/images/fonts/honoka.jpg
     height: 35
 ---
+
 {%- assign font = site.data.fonts.honoka.font -%}
 
 {% include upcoming_release.html %} 
