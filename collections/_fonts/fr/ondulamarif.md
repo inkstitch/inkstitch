@@ -3,7 +3,7 @@ title: "Ondulamarif"
 permalink: /fr/fonts/ondulamarif/
 last_modified_at: 2024-05-22
 preview_image:
-  - url: /assets/images/fonts/ondulamarif_XL.png
+  - url: /assets/images/fonts/ondulamarif_xl.png
     height: 110
   - url: /assets/images/fonts/ondulamarif_medium.png
     height: 82
@@ -17,7 +17,7 @@ preview_image:
 
 ## Ondulamarif XL
 <img 
-     src="/assets/images/fonts/ondulamarif_XL.png"
+     src="/assets/images/fonts/ondulamarif_xl.png"
      alt="Ondulamarif XL " height="55">
      
 **Ondulamarif XL à 100% présente un nombre d’ondulations  égal à  6 et ce nombre augmente lorsque la fonte  est agrandie.**
@@ -86,17 +86,13 @@ Cette variation d'ondulamarif XL   peut être utilisée
  de {{ font3.min_scale | times: 100 | floor }}% ({{ font1.size | times: font3.min_scale }} mm)
 à {{ font3.max_scale | times: 100 | floor }}% ({{ font1.size | times: font3.max_scale }} mm).
 
-## Ajouter de la couleur à Ondulamarif.
+## Trier les couleurs 
 
-Une manière très simple d'ajouter de la couleur à Ondulamarif est d'utiliser un fil multicolore. 
+Si vous souhaitez trier les  couleurs [voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
 
-Mais elle est aussi  très jolie  bicolore en utilisant un fil différent pour les contours. 
+## Broder en monochrome.... ou pas
 
-Il est  facile  de sélectionner tous les contours:
-* soit en utilisant Ink/Stitch  > Édition > Sélection des éléments de broderie et en recherchant  les  points droits qui sont paramètrés en point triple (mais actuellement cette méthode ne fonctionne pas pour les utilisateurs de mac)
-* soit en utilisant Inkscape >  Édition  >  Rechercher et Remplacer et rechercher "contour" (sans les guillements). La recherche doit être étendue aux propriétés, et il faut cocher "valeur de l'attribut" dans Propriétés. Après avoir cliquer sur Rechercher, tous les contours sont sélectionnés et leur couleur peut-être facilement modifiée.
-
-* Si vous souhaitez ensuite trier les  couleurs [voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
+Vous pouvez aussi broder ondulamarif avec une seul fil , simplement en donnant la même couleur à toutes les contours du lettrage. Cela ne signifie pas qu'ondulamarif devient alors monocolore, car elle est très jolie brodée avec un fil multicolore.
 
 
 
