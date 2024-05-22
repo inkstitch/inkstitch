@@ -21,10 +21,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.53230133"
-     inkscape:cx="154.9874"
-     inkscape:cy="170.9558"
-     inkscape:current-layer="g643"
+     inkscape:zoom="0.9044964"
+     inkscape:cx="154.22947"
+     inkscape:cy="171.36608"
+     inkscape:current-layer="g545"
      inkscape:document-units="mm"
      showgrid="true"
      showguides="false"><sodipodi:guide
@@ -4755,7 +4755,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:running_stitch_tolerance_mm=".2"
        id="path248"
        sodipodi:nodetypes="cccc" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        d="m 108,296 c 0,1 -3,2 -4,2 H 87 c -13,0 -24,-1 -24,-5 0,0 1,-3 1,-5 L 88,106 c 6,-37 8,-42 28,-42 h 49 c -2,21 -19,87 -23,104 z"
        id="path249"
        inkscape:label="contour"
@@ -4811,7 +4811,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 132,365 c 42,0 71,-17 71,-48 0,-23 -24,-36 -52,-49 l -19,97"
        id="path300"
        inkscape:label="contourb"
@@ -4830,7 +4830,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 246.611,324.435 C 250.126,317.201 252,309.353 252,301 c 0,-42 -52,-62 -91,-85 -18,-12 -40,-30 -40,-47 0,-22 18,-34 46,-35 l -15,76 9,6 16,-82 c 28,1 44,15 47,48 18,0 27,-7 27,-22 0,-18 -33,-34 -72,-35 l 7,-36 -10,-2 -7,37 c -66,1 -104,24 -104,65 0,39 40,57 77,74 L 122,364 C 90,362 67,347 64,315 v -3 c -19,0 -30,3 -30,11 0,27 39,48 86,51 l -9,47 10,2 9,-48 c 56.711,0 101.608,-19.691 116.611,-50.565"
        id="path296"
        sodipodi:nodetypes="cccscccccsccccsccccsccccc"
@@ -4874,7 +4874,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 371.06266,316.65009 -7.62209,-8.15204 c -39.38905,52.92272 -85.84793,85.03994 -156.54622,85.03994 -45.85289,0 -71.30428,-31.51124 -71.30428,-90.8978 0,-8.4838 0.40399,-17.37158 1.41397,-27.06735 54.13469,0 101.40155,1.61596 109.88534,2.01995 l 2.01995,0.202 5.85786,-17.16959 -2.42394,0.202 c -15.35163,1.41396 -77.16213,2.22194 -100.39157,2.22194 h -6.05986 -7.06983 c 0.60599,-5.04987 1.61596,-10.30175 2.62594,-15.55362 1.41397,-7.06983 2.82793,-13.93766 4.44389,-20.40151 h 3.83791 c 55.34666,0.202 98.16963,1.41397 107.25941,2.01995 l 2.01995,0.202 5.85786,-17.16959 -2.42394,0.202 c -15.35163,1.41397 -77.16214,2.22195 -100.39158,2.22195 h -6.05985 -6.66584 c 22.01747,-74.5362 63.22447,-114.32924 114.53123,-114.32924 77.97012,0 87.0599,35.34914 92.51377,93.52374 24.8454,0 41.409,-13.33168 41.409,-33.53119 0,-4.64589 -1.61596,-9.49377 -5.25188,-14.74565 -28.48131,-40.19702 -68.27435,-55.346658 -126.65094,-55.346658 -89.88782,0 -154.72826,43.024958 -182.199594,123.621018 -16.361605,-0.40399 -27.673331,-0.60599 -31.915229,-1.00998 h -1.817956 l -6.059854,16.96759 2.423942,-0.202 c 6.059853,-0.40399 18.583551,-1.00997 32.925204,-1.21197 -1.615961,6.05986 -3.231922,12.5237 -4.443892,19.18954 -1.009976,5.04988 -1.817956,9.89776 -2.423942,14.74564 -15.755619,-0.40399 -26.46136,-0.60598 -30.703258,-1.00997 h -1.817956 l -6.059854,16.96759 2.423942,-0.202 c 6.261849,-0.40399 19.795522,-1.00997 35.147151,-1.41396 -0.201995,2.22194 -0.201995,4.24189 -0.201995,6.26185 0,74.73819 51.912741,122.40904 133.518771,122.40904 73.12224,0 124.17328,-32.24699 166.39026,-88.60362"
        id="path167"
-       style="font-weight:bold;font-size:413.686px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.377953;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:413.686px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.377953;paint-order:markers fill stroke"
        aria-label="€"
        sodipodi:nodetypes="ccsscccccscccccccccsccscscscccccccccccccssc"
        inkstitch:bean_stitch_repeats="1"
@@ -4921,7 +4921,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          inkstitch:running_stitch_tolerance_mm="0.5"
          inkstitch:min_line_dist_mm="3"
          inkscape:label="path9" /></g><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1.132;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:1.132;stroke-dasharray:none"
        d="M 141.2525,296.20486 C 164.96516,273.13175 188.44562,250.2168 206,233 218,221 330,107 341,94 l 11,15 c -8,7 -86,84 -138,135 C 202,256 64,394 53,407 L 42,392 c 5.299326,-4.63691 52.722941,-50.52052 99.2525,-95.79514"
        id="path543"
        sodipodi:nodetypes="cccccccc"
@@ -4989,7 +4989,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:bean_stitch_repeats="1" /></g><g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-("
-     style="display:none;fill:none;stroke:#000000;stroke-width:0.5"
+     style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
      id="g546"><path
        d="m 116.51016,180.09752 c 8.67476,-25.53373 18.95278,-48.70506 30.282,-67.46517 15.02227,-24.875428 31.89276,-41.994996 49.32439,-46.582266"
        id="path547-9"
@@ -5028,7 +5028,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 58.135932,179.75226 C 88.518065,113.07059 140.8731,69.824494 196.11655,55.050053 V 66.050084 C 139.01232,81.077488 88.116515,230.55535 88.116515,346.05006 c 0,47 15.000025,84 36.000035,92 l -6,8 c -55.000007,-20 -87.000028,-58 -87.000028,-134 0,-50.78409 10.10428,-95.17304 27.01941,-132.29779"
        id="path106-9"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        inkscape:label="contour"
        sodipodi:nodetypes="cccsccsc"
        inkstitch:bean_stitch_repeats="1"
@@ -5077,7 +5077,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 137.98059,323.29779 C 107.59845,389.97946 55.243445,433.22559 0,448 V 437 C 57.104233,421.97257 108,272.4947 108,157 108,110 93,73 72,65 l 6,-8 c 55,20 87,58 87,134 0,50.78408 -10.10428,95.17304 -27.01941,132.29779"
        id="path106"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        inkscape:label="contour"
        sodipodi:nodetypes="cccsccsc"
        inkstitch:bean_stitch_repeats="1"
@@ -5089,7 +5089,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
      inkscape:label="GlyphLayer-0"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.5"
      id="g548"><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.426002"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.426002"
        d="m 107.15716,361.85021 c 8.72284,22.80845 23.68044,30.00023 53.00893,31.27099 45.51382,1.97205 108.55795,-82.682 109.18949,-196.28584 0.33169,-59.66741 -20.02973,-87.71716 -60.06933,-87.58171 -65.4448,0.2214 -109.14715,96.89891 -110.08113,209.63707 -0.146467,17.67975 3.71063,31.86907 7.95204,42.95949"
        id="path576-8"
        inkscape:label="contourint"
@@ -5133,7 +5133,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.426002"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.426002"
        d="m 256.49335,366.55973 c -27.32305,25.02889 -61.45253,37.84721 -97.96645,37.84721 -67.782487,0 -117.735583,-45.45225 -117.133516,-118.12643 C 42.389109,166.08859 119.76589,99.93645 210.14254,99.93645 c 71.67804,0 119.74297,38.20053 119.15634,109.01127 -0.56639,68.36802 -35.41552,123.36141 -72.80553,157.61201"
        id="path157-8"
        inkstitch:bean_stitch_repeats="1"
@@ -5184,7 +5184,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 109.28829,361.83291 101,398 c 0,1 -3,2 -4,2 H 78 c -15.27898,0 -26,-2.14242 -26,-6 v -2 L 57.325516,360.93449 94,147 c 1,-4 1,-7 1,-10 0,-6 -2.378272,-6.8658 -4.378272,-6.8658 -6,0 -15.11055,8.8658 -27.11055,18.8658 L 57,142 c 43,-36 53,-39 53,-39 h 58 c -2,21 -19,86 -23,103 l -35.71171,155.83291"
        id="path238"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccssscccsscccccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -5224,7 +5224,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 264.75715,364.26836 -8,17.10992 C 239.75715,416.37828 225,426 207,426 179,426 143,400 74,400 H 9 c 1,-5 -1,-7 25,-34 L 136,260 c 51,-54 76,-84 76,-118 0,-22 -15,-31.48911 -42,-31.48911 C 116,110.51089 64,144 64,191 c 0,27 20,50 52,58 l -6,9 C 76,249 52.490076,224 52.490076,193 52.490076,138 114,99 172,99 c 61,0 94,21 94,61 0,41 -33,82 -77,123 l -87,81 c -13,12 -23,20 -30,24 v 2 h 6 c 50,0 94,6 126,6 24,0 35.71007,-3 42.71007,-17 l 9,-19 9.04708,4.26836"
        id="path224"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccsscccsssccsssccccssccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -5264,7 +5264,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:running_stitch_tolerance_mm=".1" /><path
        d="M 244.77673,360.96302 C 217.69697,388.81207 172.04753,404 124,404 66,404 24,375 24,342 c 0,-24 17,-39 44,-39 -2,8 -2,17 -2,24 0,48 33,67 60,67 42,0 83,-43 83,-102 0,-32 -16,-52 -43,-52 h -19 c -4,0 -6,-3 -6,-5 0,-3 3,-5 5,-5 h 12 c 25,0 54,-34 54,-77 0,-27 -17,-43.86486 -46,-43.86486 -28,0 -56,13.86486 -69,78.86486 -19,0 -31,-12 -31,-30 0,-36 50,-59 102,-59 64,0 105,23 105,59 0,38 -30,63 -70,75 42,8 67,33 67,67 0,24.27451 -9.46915,44.76136 -25.22327,60.96302"
        id="path227"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="csscsssssssssscssscsc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -5339,7 +5339,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 262,346.13419 H 234 L 224,386 l -3,14 h -55 l 7,-53.86581 H 21 L 27,330 C 100,234 171,171 188,103 h 2 c 12,0 56,-15 80,-31 C 233,207 112,245 37,336 h 137 v -5 c 6,-52 12,-49 30,-52 l 46,-8 c -2,12 -8,39 -14,65 h 28 l -2,10.13419"
        id="path219"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="cccccccccsccccccccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -5388,7 +5388,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 233.70543,362.45589 C 206.31504,388.38508 168.07578,404 129,404 69,404 29,379 29,342 c 0,-24 18,-39 45,-39 -2,8 -3,17 -3,24 0,40 24,67 60,67 42,0 82,-59 82,-134 0,-44 -13,-67 -39,-67 -56,0 -93,23 -108,55 l -8,-3 v 0 L 83,103 h 63 c 76,0 109,-2 120,-49 23,0 39,14 39,34 0,28 -37,37 -62,37 -35,0 -75,-12 -98,-12 h -6 -24 L 78,217 c 22,-21 54,-34 98,-34 64,0 98,31 98,89 0,35.86812 -15.81424,67.28152 -40.29457,90.45589"
        id="path216"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="csscssssccccscssscccssc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -5437,7 +5437,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 269.15219,360.37447 C 242.59009,389.30394 199.42551,404 154,404 83,404 41,359 41,289 41,167 124,99 224,99 c 52,0 79,13 79,38 0,21.97906 -11.5939,35.45593 -34.10217,38.39202 L 259,176 c 2,-9 2,-17 2,-24 0,-28 -13,-43 -39,-43 -48,0 -90,49 -110,118 -8.05189,28.35995 -11.65997,57.55605 -12,87 0,52 19,80 56,80 42,0 79,-40 79,-114 0,-38 -14.1093,-60 -39.1093,-60 -34,0 -62.1096,7 -83.1096,19 l 2.99716,-12 c 22,-11 49.11244,-17 82.11244,-17 30.95419,0 98.1093,8.16296 98.1093,79 0,29.34677 -10.13917,53.17665 -26.84781,71.37447"
        id="path256"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="cssssccsscssssccssc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -5486,7 +5486,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 163.65718,363.49396 C 162.10348,374.3037 160.87975,385.46552 160,397 c 0,2 -2,3 -4,3 h -31 c -12.25044,0 -14.30526,-0.65885 -16,-6 0,-122 39,-171 143,-256 11,-9 25,-20 31,-23 v -1 l -7,1 C 186,125 95.780784,116 65.780784,166 L 55.668659,187.13325 46,184 58,149 c 18,-50 32,-65 50,-65 24,0 55,24 116,24 8,0 16,0 26,-1 l 66,-7 c -1,15 -16,19 -36,38 -59.54851,55.93951 -102.00186,125.71797 -116.34282,225.49396"
        id="path234"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccsscccccscccsscccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -5507,7 +5507,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 139,249 c -41,16 -73,39 -73,88 0,39 31,57 82,57 42,0 84,-29 84,-82 0,-36 -51,-45 -93,-63 z"
        id="path242"
        inkscape:label="contourb"
@@ -5526,7 +5526,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 199,220 c 36,-14 64,-34 64,-69 0,-30 -25,-41.86486 -64,-41.86486 -27,0 -60,25.86486 -60,64.86486 0,24 28,35 60,46"
        id="path250"
        inkscape:label="contourh"
@@ -5570,7 +5570,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 270.19094,361.61806 C 285.85645,345.4081 295,324.75111 295,300 295,256 256.64629,240.8901 216.64629,226.8901 258.64629,212.8901 291,193 291,152 291,118 256,99 201,99 135,99 84,129 84,184 c 0,30 17.73354,48.37797 41.73354,60.37797 C 74.733537,261.37797 30,283 30,334 c 0,10.11712 2.379146,19.28258 6.906462,27.39914 C 52.06873,388.58198 91.325355,404 146,404 c 51.70759,0 97.45071,-14.71237 124.19094,-42.38194"
        id="path247"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        sodipodi:nodetypes="cscssscsssc"
        inkscape:label="contour"
        inkstitch:min_stitch_length_mm=".5"
@@ -5610,7 +5610,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 247.28739,362.15815 c -32.45401,27.7344 -75.08794,42.2952 -121.36206,42.2952 -51.999956,0 -78.999956,-13 -78.999956,-38 0,-21.97906 11.5939,-35.45593 34.10217,-38.39202 l 9.89783,-0.60798 c -2,9 -2,17 -2,24 0,28 12.999986,43 38.999956,43 48,0 90,-49 110,-118 l 2.99843,-12 c 6,-23 9.00157,-49 9.00157,-75 0,-52 -19,-80 -56,-80 -42,0 -79,40 -79,114 0,38 14.1093,60 39.1093,60 34,0 62.1096,-7 83.1096,-19 l -2.99716,12 c -22,11 -49.11244,17 -82.11244,17 -62.999956,0 -98.109256,-29 -98.109256,-79 0,-29.34677 10.13917,-53.17665 26.84781,-71.37447 26.562056,-28.92947 69.726636,-43.62553 115.152146,-43.62553 71,0 113,45 113,115 0,65.54557 -23.9577,115.5042 -61.63794,147.7048"
        id="path256-5"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        sodipodi:nodetypes="cssccssccssssccsscssc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -5700,7 +5700,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 96,380 c 0,6 -2,11 -5,16 -13,21 -36,31 -42,54 l -11.510396,-2 c 3.601534,-15.84851 15.904585,-27.0575 27,-38 C 47.489604,410 35,396 35,380 35,373.18836 36.861667,367.23594 40.151464,362.46792 45.555066,354.63627 54.811643,350 66,350 c 10.916029,0 19.625397,4.41332 24.789884,11.90175 C 94.141384,366.76137 96,372.91603 96,380"
        id="path112"
        sodipodi:nodetypes="cccccsscsc"
@@ -5737,7 +5737,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 160,303 c -52,0 -87,-22 -87,-55 0,-98 158,-74 158,-132 0,-26 -23,-44 -57,-44 -28,0 -58,0 -70,61 v 0 c -10,0 -31,-11 -31,-29 0,-25 42,-42 103,-42 62,0 102,23 102,58 0,98 -155,65 -155,132 0,24 17,41 39,41 28,0 51,-6 64,-71 v 0 c 10,0 31,11 31,29 0,31 -39,52 -97,52"
        id="path116"
        inkscape:label="contour"
@@ -5793,7 +5793,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.433909"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.433909"
        d="m 270.5171,239.50626 c 0,-1.73563 0,-3.47127 -0.86782,-4.33909 -6.94254,-13.88508 -20.82763,-20.33754 -32.97709,-20.33754 -41.65526,0 -70.29326,43.50382 -70.29326,109.45799 0,25.16673 13.88509,37.91921 38.18399,37.91921 32.10927,0 49.46563,-33.84491 59.87945,-59.87945 l 0.86782,21.36019 c -12.14945,26.03454 -32.10927,51.31087 -75.50017,51.31087 -45.12654,0 -75.50017,-26.41191 -75.50017,-66.33154 0,-62.4829 43.3909,-106.40699 108.47725,-106.40699 26.90236,0 44.14541,7.81036 52.82359,23.43109"
        id="path651-9"
        sodipodi:nodetypes="ccsssccsssc"
@@ -5829,7 +5829,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.433909"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.433909"
        d="m 376.40038,328.02774 c -16.05573,21.39208 -43.44201,47.88994 -72.03838,46.59333 -20.65436,-0.9365 -39.16504,-19.14984 -39.05181,-52.06908 l -0.86782,-19.092 c 0.50886,-3.29831 1.34549,-12.09444 1.73564,-13.88509 l 4.32551,-43.24503 c 0,-1.73564 0.39156,-4.59569 0.39156,-7.19915 l 3.96111,-11.1709 C 282.66655,210.60346 295.68382,208 299.15509,208 H 333 c -1.73564,18.22418 -14.75291,75.50017 -19.092,90.25308 l -7.81036,29.50582 c -0.57527,6.44401 -0.88072,5.29329 -0.86782,7.81036 0.0625,12.1493 7.07554,16.71072 15.62073,18.22418 21.13075,2.75882 35.66638,-16.0637 46.98621,-31.03679 C 382.55011,303.29485 390,270.83303 390,253 390,167 320,109 230,109 129,109 48,190 48,292 c 0,101 80,183 182,183 48,0 93,-18 126,-50 l 2,3 C 324,460 280,479 230,479 126,479 42,395 42,292 42,188 127,105 230,105 c 92,0 165.98181,60.03383 165.98181,148.03383 0,26.02079 -6.26417,53.35199 -19.58143,74.99391"
        id="path653-0"
        sodipodi:nodetypes="csccccccscccssassssccssssc"
@@ -5844,7 +5844,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
      style="display:none;fill:none;stroke:#000000;stroke-width:0.5"
      id="g562"><path
        d="m 176.78344,302.92165 c -22.1412,42.83526 -53.99356,93.10351 -87.59375,93.10351 -25.63718,0 -42.72851,-13.69078 -42.72851,-34.42383 0,-43.61757 37.48489,-63.96093 91.08984,-63.96093 11.45902,0.19608 24.86005,2.15175 39.23242,5.28125"
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        id="path145-3"
        inkscape:label="contourg"
        inkstitch:bean_stitch_repeats="1"
@@ -5863,7 +5863,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 194.65062,291.96852 c 25.44289,-55.15763 45.83719,-114.22607 60.98633,-141.60936 11.84748,27.57881 15.34375,77.84551 15.34375,126.74413 0,7.8239 0.19457,15.45184 0.77734,23.08008 -26.31524,-1.76291 -50.96092,-4.68686 -77.10742,-8.21485"
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        id="path144-3"
        inkscape:label="contourm"
        inkstitch:bean_stitch_repeats="1"
@@ -5908,7 +5908,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 315.26257,330.11053 c 1.99702,112.88497 26.89336,144.89135 107.79189,145.32721 27.5788,0.14859 44.4778,-12.12689 49.916,-40.68359 l 11.9375,1.04883 c 14.3297,2.69865 23.2149,10.41042 23.2149,20.85742 0,17.40779 -22.3353,40.8789 -77.1055,40.8789 -83.7088,0 -143.14,-67.08921 -156.9297,-172.12303 -28.55021,-5.28111 -58.65491,-13.88752 -85.84567,-20.14649 -10.6088,21.80072 -49.34016,108.35937 -102.54882,108.35937 -32.04635,0 -53.41211,-18.58104 -53.41211,-46.35546 0,-54.37523 41.9528,-79.41211 107.21093,-79.41211 13.77862,0.76096 29.4296,1.48362 43.11719,2.93359 28.07081,-53.28338 62.85554,-159.34616 59.23637,-158.82225 l 17.49492,-81.312247 c 0,0 2.12168,-6.119643 1.73358,-8.662363 4.04191,1.35149 5.07743,2.095332 8.61203,3.842042 3.3131,1.63727 9.05638,4.333241 11.95048,6.296633 31.5525,21.406 39.0625,61.509185 39.0625,107.218745 0,41.27004 -6.0196,87.04073 -6.0196,128.11523 0,4.88992 0,9.58312 0.1934,14.27734 39.70094,-0.75237 60.24949,-10.80045 65.32114,-28.36033 l 8.09557,4.88993 c -9.39423,46.34533 -42.31827,51.30231 -73.027,51.83263"
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        id="path151-8"
        inkscape:label="contourt"
        sodipodi:nodetypes="csccssccsscccccsssscccc"
@@ -5927,7 +5927,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="laison"
        sodipodi:nodetypes="csc"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 138,342 c -14,-6 -29,-10 -49,-10 -27,0 -49,14 -49,39 0,17 14,28 36,28 28,0 52,-23 62,-57"
        id="path184"
        inkscape:label="contourg"
@@ -5946,7 +5946,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 249,89 c -4,26 -19,82 -23,98 l -24,109 c -4,21 -12,40 -22,56 27,16 42,38 82,38 44,0 78,-38 78,-101 0,-36 -17,-59 -48,-59 -9.9375,0 -21.24658,-1.37158 -33.92725,-1.84306 l -14.98468,-5.6967 C 261,217 258.82927,216.92789 261,217 c 35.98015,1.19529 75,-31 75,-77 0,-30 -22,-50 -51,-50 -4,0 -18,-1 -36,-1"
        id="path182"
        inkscape:label="contourd"
@@ -5991,7 +5991,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        sodipodi:nodetypes="ccccccc"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 374.7305,360.02362 C 346.84036,389.51863 300.52391,404 260,404 c -41,0 -71,-32 -87,-43 -24,30 -59,48 -99,48 -28,0 -46.265828,-13 -46.265828,-35 0,-32 26.619839,-52.51211 60.619839,-52.51211 C 106.35401,321.48789 140,332 140,332 c 13.82943,-67.97294 23.33333,-136.66667 35,-205 2,-10 3,-17 3,-23 0,-12 -6,-16 -26,-16 -15,0 -26,1 -30,1 l -2,-12 c 9,0 158.00003,3.022234 167,3 67.92299,-0.167799 108.6969,24.28239 107,62 -2.12146,47.15452 -20.39869,81.7516 -78,79 v 0 c 53,6 84,35 84,76 0,25.68696 -9.80057,46.66456 -25.2695,63.02362"
        id="path172"
        inkscape:label="contourt"
@@ -6034,7 +6034,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 337.42486,326.01954 c -31.9623,40.30017 -85.63979,77.9239 -147.97767,78.05274 -36.09444,0.0746 -68.32516,-9.5171 -91.372421,-25.94156 C 66.284926,355.47593 48.492872,317.79627 50.260941,272.34323 55.261363,143.79376 138.67474,75.345332 245.71397,75.345332 c 68.11242,0 135.46683,30.292638 131.78273,71.409828 -1.70202,18.99576 -18.77535,26.57166 -30.74114,28.16604 l -10.16219,1.35406 c -0.8193,-14.42785 -1.83618,-18.05338 -4.24819,-31.18957 C 322.79916,93.096604 287.12082,88.996503 244.23327,86.749002 189.52226,83.8819 117.64086,140.33324 111.88913,300.72427 c -2.31501,64.55542 41.8887,96.38635 103.07527,83.53779 42.02388,-8.8246 90.29172,-31.78409 113.98298,-63.50409 l 8.47748,5.26157"
        id="path7-8"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.786129"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.786129"
        inkscape:label="contour"
        sodipodi:nodetypes="csssssscsssscc"
        inkstitch:bean_stitch_repeats="1"
@@ -6080,7 +6080,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 134,391 46,-204 c 4,-16 19,-73 23,-98 25,0 45,1 50,1 52,0 79,32 79,94 0,126 -54,208 -133,208 -22,0 -43,0 -65,-1"
        id="path303"
        inkscape:label="contourint"
@@ -6125,7 +6125,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 319.65174,361.89656 C 365.28008,325.82722 395,268.43535 395,197 395,121 347,80 255,80 246,80 91,77 82,77 l -1,12 c 4,0 14,-1 28,-1 17,0 23,4 23,16 0,6 -1,13 -3,22 l -45,264 -48,-1 -4,11 c 54,1 142,4 164,4 46.27986,0 89.43806,-15.05741 123.65174,-42.10344"
        id="path287"
        inkscape:label="contourext"
@@ -6218,7 +6218,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:running_stitch_tolerance_mm=".1" /><path
        d="m 327.46455,331.48883 9.29118,3.51117 -17,36 C 300.75573,411 281,423 257,423 223,423 178,400 101,400 H 32 l 1,-11 55,1 44,-262 c 2,-9 3,-16 3,-22 0,-14 -7,-16 -29,-16 -5,0 -10,1 -14,1 V 79 c 9,0 49,1 58,1 108,0 160,-1 176,-57 20,0 32,11 32,28 0,36 -56,43 -96,43 -19,0 -39,-1 -58,-2 -4,26 -17,81 -21,97 l -9,39 95,-4 -1,14 h -96 l -34,152 c 24,0 47,1 69,1 54,0 94.46455,-5.51117 104.46455,-25.51117 l 16,-34"
        id="path293"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="cccssccccssccscsscccccccscc"
        inkstitch:bean_stitch_repeats="1"
        inkscape:label="contour"
@@ -6292,7 +6292,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:running_stitch_tolerance_mm=".1" /><path
        d="M 136.94668,360.73092 C 127.10693,384.13691 111.30073,404 83,404 57,404 38.86614,392 34.86614,364 l 9.535747,-1.8907 c 1,12 10.621575,18 20.621575,18 C 77.023462,380.1093 87,372 91,352 l 37,-230 c 2,-10 3,-16 3,-22 0,-10 -3,-15 -15,-16 H 82 L 81,72 c 17,1 50,2 65,2 98,0 219,-30 295,-30 50,0 78,14 78,39 0,20 -15,34 -37,34 -9,-31 -54,-38 -123,-38 -44,0 -99,3 -161,4 -2,22 -13,83 -17,100 l -7,29 104,-4 -1,15 H 172 l -20,85 c -3.47188,14.75551 -7.5088,34.78463 -15.05332,52.73092"
        id="path311"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="csccsccscccssscsccccccsc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -6362,7 +6362,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:running_stitch_tolerance_mm=".1" /><path
        d="m 344,355 -10,45 h -49 l 1,-51 C 265,383 227,404 182,404 104,404 51,353 51,278 51,157 129,76 246,76 c 46,0 131,18 131,68 0,20 -29,32 -40,32 -5,-56 -18,-90 -93,-90 -78,0 -132,85 -132,214 0,60 26,92 72,92 55,0 97,-33 107,-82 l 1,-10 c 2,-10 4,-21 4,-27 0,-14 -7,-14.4866 -33,-14.4866 L 192,261.13262 194,248 h 128 l 46,-2 c -2,21 -20,92 -24,109"
        id="path317"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccccsssscsssccscccccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -6385,7 +6385,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:running_stitch_length_mm="2.5" /><path
        d="M 180,250.02175 C 168,322.02175 163,409 88,409 64,409 48.511862,390 48.511862,360 c 0,-12.9966 1.68035,-25.18956 4.887451,-36.41131 C 66.972204,276.09671 106.37886,249.02175 163,249.02175 c 5,0 11,1 17,1"
        id="path569"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="cssssc"
        inkscape:label="contourg"
        inkstitch:bean_stitch_repeats="1"
@@ -6456,7 +6456,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 389.81077,361.18938 413,257.73104 c 22,-6 36.24344,-16.13291 44.24344,-34.13291 l -10.48819,-2.84221 C 442.75525,231.75592 432,239 417,243 l 13,-60 c 4,-17 22,-82 24,-103 h -47 -23 v 3 c -2,16 -3,25 -5,39 l -22,129.13199 c -34,0 -82,-2.48535 -118,-6.48535 L 252,183 c 2.48016,-14.13962 20.54227,-79.25651 24,-103 h -47 v 0 h -57 l -1,10.179395 c 26,0 33,2 33,15.999995 0,6 -1,13 -3,23 l -19,108.95479 c -6,0 -12,-1 -17,-1 C 86,237.13418 33,288 33,365 c 0,37 20,61 51,61 96,0 125.10928,-53.97951 151.10928,-168.97951 C 270.10928,262.02049 319,264 354,265 l -18,110 c -1,4 -2,9 -2,13 0,65 45,109 112,109 47,0 78,-16 78,-41 0,-17 -26,-22 -36,-22 0,29 -25,48 -53,48 -41,0 -59,-11 -59,-48 0,-9 2,-20 4,-30 l 9.81077,-42.81062"
        id="path196"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="cccccccccccccccccccsccssscccssscsscc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -6505,7 +6505,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 110.40845,361.1058 102,398 c 0,1 -2,2 -3,2 H 80 C 73.904341,400 67.588817,399.78014 62.599834,399.23731 56.948987,398.62248 53,397.59331 53,396 v -2 l 47,-264.82061 c 2,-10 3,-17 3,-23 C 103,92.179396 96,90.179396 70,90.179396 V 80 h 58 46 c -2,21 -19,86 -23,103 l -40.59155,178.1058"
        id="path146"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        sodipodi:nodetypes="ccssssccscccccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -6554,7 +6554,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 136.29519,362.12224 132,382 c -7,33 -19,96 -65,96 -28,0 -47.757639,-9 -51.757639,-39 l -3,-25 9.671811,-2 3,26 c 1,12 9.730708,18 19.730708,18 C 56.64488,456 66,446 70,426 l 53,-297.19856 c 2,-10 3,-17 3,-23 0,-13.999998 -8,-15.999998 -34,-15.999998 L 93,80 h 58 48 c -2,21 -20,86 -24,103 l -38.70481,179.12224"
        id="path151"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccsccccsccscccccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -6643,7 +6643,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 339.56733,361.65585 C 361.19158,420.7967 381.67068,475 417,475 c 28,0 42,-12 50,-41 10,0 35,5 35,22 0,17 -22,41 -77,41 -50,0 -103,-58 -187,-220 -15,-28 -32,-46 -48,-46 -5,0 -10,1 -22,10 l -14,10 -11,55 c -7,34 -20,96 -70,96 -26,0 -44.510867,-11 -47.510867,-39 l 11.179841,-1 c 1,12 7.998251,15.55319 15.331026,18 10.687947,3.56637 27.165043,-9.93756 29,-30 l 38,-228 c 2,-10 3.42445,-17.01503 3,-23 C 121.07369,85.938489 107.17181,86.665409 90,86.155617 V 78 c 22,1 46,2 57,2 h 47 c -2,21 -19,86 -23,103 l -14,54 C 189,204 300,76 350,76 c 20,0 26,8 26,18 0,12 -9,27 -15,33 -5,-2 -11,-4 -17,-4 -41,0 -100.63667,47.057 -144.63667,87.057 C 207.14395,210.03441 211,210 219,210 c 56,0 86,60 110,123 3.59604,9.54334 7.09643,19.1632 10.56733,28.65585"
        id="path572"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="cscsscscccsccsccsccscccsscscscc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -6655,7 +6655,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
      inkscape:label="GlyphLayer-L"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.5"
      id="g573"><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 39.511179,381 c 0,17 12.493828,28.46934 34.488821,28 27.3424,-0.58344 48.66055,-24.00436 60.61064,-56.27419 C 120.90364,348.40154 108.21414,344.45684 87,342.75765 57.095772,340.36241 39.511179,357 39.511179,381"
        id="path153"
        inkscape:label="contour int"
@@ -6700,7 +6700,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 366.89006,350 -9.75732,19 C 339.13274,408 316,422 291,422 255,422 213,392 171,370 147,400 112,419 72,419 44,419 27.242833,401.97607 27.242833,379.97607 27.242833,349.97607 52,332 89,332 c 18,0 34,4.48694 49,10.48694 l 38.00125,-215.19495 c 2,-10 2.99875,-15.48787 2.99875,-21.48787 0,-14 -7,-16 -33,-16 V 80 h 58 46 c -2,21 -19,86 -23,103 l -27,123 c -4,20 -12,36.11151 -22,52.11151 45,14 91,26.88849 124,26.88849 26,0 40.08723,-7.88833 47.08723,-21.88833 l 8,-17"
        id="path144"
        inkscape:label="contour ex"
@@ -6741,7 +6741,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 421.51428,358.30716 412,422 c -1,9 -2,17 -2,24 0,25 12,34 54,34 28,0 50,-17 50,-46 10,0 35,5 35,22 0,25 -30,41 -77,41 -78,0 -105,-68 -105,-110 0,-3 1,-6 1,-9 l 27,-246 c -17,14 -31.48821,29.8879 -45.48821,47.8879 C 311.51179,230.8879 283,288 263,338 247.18263,374.72982 237.12659,387.7947 222,408 209,312 189,186 146,142 l -17,79 c -15,63 -17,142 -55,170 -10,8 -21,11 -30,11 -14,0 -26,-8 -26,-16 l 2.498165,-1.41418 C 78.24118,368.31353 92.321636,328.07992 117.10866,221 c 1,-5 10.62172,-50.37827 13.75653,-72.68914 C 134,126 137,102 137,80 137,70 136,60 135,52 227,80 250,217.35529 261,316.35529 281,269.35529 306,219 342,171 375.61047,126.46612 415.57531,89.698683 467.82709,60.697684 L 466,86 c -4,26 -16,80 -18,95 l -4.30673,28.83114 -22.17899,148.47602"
        id="path275"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccsscsssccccccccsccccscccccccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -6779,7 +6779,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 306.88873,359.14143 C 315.92674,308.34092 328.13606,233.09087 329.48959,227 354.48959,100 430.73541,61.622705 491.73541,61.622705 L 500,57 C 500,48 486,36 466,36 415,36 348,85 321,228 l -18,98 C 281,226 233,106 128,71 v 11 c 0,0 -2.361,48.03508 -4.29229,72 -1.77631,22.04187 -10.11024,66 -10.11024,66 C 92.853827,326.68162 83.326504,367.61017 26.056062,384.02395 L 16.490078,386 c 0,8 13.509922,16 27.509922,16 9,0 20,-3 30,-11 38,-28 41,-109 53,-172 l 11,-59 c 58,44 119,154 136,247 0,0 18,-2 23,-2 h 2 c 0.32324,-2.90913 3.57198,-21.59509 7.88873,-45.85857"
        id="path274"
        sodipodi:nodetypes="ccccsccccscccsccccscc"
@@ -6793,7 +6793,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
      inkscape:label="GlyphLayer-O"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.5"
      id="g576"><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 119.23772,357.10771 C 130.67617,381.58764 154.32106,393.51041 192,393.51041 275,393.51041 331,309 331,180 331,118 304,86 252,86 168,86 111,190 111,311 c 0,18.97538 2.67587,34.20455 8.23772,46.10771"
        id="path576"
        inkscape:label="contourint"
@@ -6837,7 +6837,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 315.32713,362.16236 C 280.52366,389.02545 236.86625,404 190,404 103,404 51,354 51,276 51,147 137,76 253,76 c 92,0 141,41 141,117 0,73.37826 -31.04633,132.40176 -78.67287,169.16236"
        id="path157"
        inkstitch:bean_stitch_repeats="1"
@@ -6914,7 +6914,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 137.2062,362.66385 C 127.16273,385.14608 112.07039,404 88,404 57,404 41.243463,394 37.243463,364 l 9.293384,-3.40251 c 1,12 11,18 21,18 C 79.536847,378.59749 88,372 92,352 l 37,-226 c 2,-10 3,-16 3,-22 0,-10 -5,-15 -16,-16 h -4 -12 -1 c -8,0 -15,1 -18,1 l 1,-12 c 9,0 164,3 173,3 78,0 120,28 120,80 0,84 -74,134 -162,134 l -46,-2 3,-12 c 10.9579,0.73053 29.38876,1.95925 45,3 53,0 96,-54 96,-132 0,-40 -20,-61 -58,-61 -5,0 -25,-1 -49,-1 -3,23 -18,82 -22,98 l -28,121 c -3.62356,14.9472 -8.47809,36.0492 -16.7938,54.66385"
        id="path180"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="csccsccsccccccssccccsscccc"
        inkstitch:bean_stitch_repeats="1"
        inkscape:label="contour"
@@ -6963,7 +6963,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 329.21139,361.63976 C 299.81053,394.91064 262.54457,420.78217 222,437 195,448 153.13582,456.22619 153.13582,456.22619 153.13582,456.22619 257,472 328,472 c 107,0 157,-17 157,-50 23,0 35,8 35,22 0,33 -45,52 -129,52 C 280,496 142,470.15686 112,466.15686 105.73742,465.32185 92.33444,465.44901 87.406006,458.4069 84.84107,454.74193 84.761163,448.08558 88,445 c 6.274975,-5.97805 14.24783,0.42135 26,0.10867 C 227.95967,442.07663 331,336 331,180 331,118 304,86 252,86 168,86 111,190 111,311 c 0,58 25,81 81,81 l -2,12 C 140.20688,404 101.87861,387.62165 78.202303,358.98946 60.510675,337.59465 51,309.35789 51,276 51,147 137,76 253,76 c 92,0 141,41 141,117 0,65.91973 -25.30031,123.95365 -64.78861,168.63976"
        id="path163"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="cccscsssaassssccssssc"
        inkstitch:bean_stitch_repeats="1"
        inkscape:label="contour"
@@ -7029,7 +7029,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:running_stitch_tolerance_mm=".1" /><path
        d="M 295.25495,359.35167 C 316.7852,416.85556 341.02056,475 376,475 c 28,0 42,-12 50,-41 10,0 35,5 35,22 0,17 -22,41 -77,41 -58,0 -111,-50 -192,-212 -6,-10 -15,-11 -21,-11 l 1,-5 c 1,-4 2,-7 6,-7 l 33,2 c 53,0 86,-44 86,-120 0,-35 -20,-54 -56,-54 -4,0 -19,-1 -37,-1 -3,23 -18,82 -22,98 l -18,75 -2,11 -8,35 c -8,33 -23,96 -66,96 -30,0 -47,-10 -51,-40 l 9.915273,-1.88975 c 1,12 9.865669,19.88975 19.865669,19.88975 C 78.780942,382 88,373 92,352 l 37,-226 c 2,-9 3,-16 3,-22 0,-11 -5,-16 -16,-16 -10,0 -27,1 -35,1 l 1,-12 c 9,0 152,3 161,3 75,0 115,26 115,73 0,82 -57,118 -139,121 v 1 c 10,2 48,10 60,41 5.33033,13.73585 10.70269,28.52246 16.25495,43.35167"
        id="path285"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="cscsscccccsscccccsccsccssccsscccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -7069,7 +7069,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:running_stitch_tolerance_mm=".1" /><path
        d="M 287.75542,361.25907 C 260.83032,387.97859 213.12345,404 153,404 112,404 34,391 34,342 34,328.47261 47.266798,318.60502 59.257528,313.63494 64.994871,311.25684 70.440065,310 74,310 c 5,54 24,84 82,84 57,0 95,-26 95,-64 C 251,268 78,268 78,182 78,113 126,76 218,76 c 40,0 112,14 112,62 0,20 -29,32 -40,32 -5,-54 -15,-84 -73,-84 -46,0 -77,24 -77,61 0,67 172,77 172,158 0,21.66017 -8.62581,40.75956 -24.24458,56.25907"
        id="path171"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="cssccssssscsssc"
        inkstitch:bean_stitch_repeats="1"
        inkscape:label="contour"
@@ -7135,7 +7135,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:running_stitch_tolerance_mm=".1" /><path
        d="M 220.61429,361.51488 C 210.75181,384.57872 194.98421,404 167,404 c -26,0 -43,-12 -47,-40 l 9.53574,-2.26865 c 1,12 10.24362,18 20.24362,18 C 161.77936,379.73135 171,372 175,352 l 37,-230 c 2,-10 3,-16 3,-22 0,-10 -3,-15 -15,-16 -56,0 -113,1 -122,1 l 2,-14 c 9,0 163,1.866798 235,1.866798 C 423,72.866798 499,63 526,7 c 20,0 34,11 34,27 0,6 -3,12 -10,20 -27,26 -94,30 -154,30 -32,0 -62,-1 -84,-1 h -24 c -2,22 -19,83 -23,100 l -29,125 c -3.52253,14.97074 -7.62669,35.37006 -15.38571,53.51488"
        id="path273"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="csccsccscccscscsscccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -7201,7 +7201,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 334.3529,345.48804 8.29228,5.02504 -11,22 C 320.64518,394.51308 300,404 284,404 c -22,0 -41,-19 -41,-56 0,-6 1,-12 1,-18 l -58,48 c -22,18 -50,26 -66,26 -42,0 -58,-30 -58,-68 0,-12 2,-25 5,-39 l 35,-163 c 0.89485,-5.55794 2.22266,-10.68906 3,-15 1.77457,-9.84129 -2.86693,-12.73068 -8.866932,-12.73068 -6,0 -12.354964,6 -18.354964,18 l -8.534013,-5.40441 4,-8 C 85.244092,86.864908 102,79 118,79 c 36,0 49,24 49,54 0,14 -3,29 -7,44 l -43,149 c -3,9 -4,18 -4,26 0,19 9,31 29,31 10,0 30,-6 38,-13 L 215.77985,340.2752 245,316 c 1,-7 2,-13 3,-19 L 284,82 c 0,-2 4,-2 4,-2 h 36 c 13,0 27,2 27,6 v 0 l -59,274 c -1,4 -2,9 -2,12 0,11 2.3529,14.48804 9.3529,14.48804 8,0 18,-7 24,-19 l 11,-22"
        id="path263"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        sodipodi:nodetypes="ccsssccssccssccsssccssccccccssccsssc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -7250,7 +7250,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 259.92883,360.98954 C 237.19473,387.28867 209.6991,404 178,404 c -64,0 -76,-91 -76,-164 0,-20 1,-36 2,-50 2,-20 3,-33 3,-42 0,-37 -1.59733,-48 -11.597327,-48 -4,0 -9.244252,9.53357 -16.244252,22.53357 L 71,117 c 12,-25 25,-42 44,-42 39,0 54,23 54,53 0,46 -15,119 -15,175 0,43 9,79 44,79 69,0 115,-127 115,-203 0,-34 -12,-63 -49,-77 2,-9.999999 18.99972,-31.999862 36,-32 6,-4.9e-5 11,2 16,9 14,17 19,35 19,53 0,74.09898 -26.80399,173.15339 -75.07117,228.98954"
        id="path174"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="csscssccssssscscsc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -7325,7 +7325,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 419.38049,361.61012 C 427.04931,352.847 434.30162,342.91588 441,332 c 32,-51 52,-124 52,-200 0,-18 -5,-36 -19,-53 -5,-7 -10,-9 -16,-9 -17,0 -34,22 -36,32 37,14 49,43 49,77 0,54 -15,108 -38,147 -20,34 -46,56 -71,56 -32,0 -41,-29 -41,-68 0,-57 20,-138 20,-186 0,-25 -12,-48 -48,-48 v 0 h -41 v 10.04853 c 21,0 26,17.95147 26,40.95147 0,10 -2,20 -2,27 -0.97974,30.83736 -4.00416,64.76944 -5,96 -0.35058,10.99441 0,23 1,34 -23,51 -56,94 -82,94 -32,0 -41,-30 -41,-68 0,-57 20,-138 20,-186 0,-30 -17,-53 -56,-53 -19,0 -33.134807,17 -45.134807,42 l 8.53811,4.0227 c 7,-13 13,-18 17,-18 C 103.4033,103.0227 105,114 105,148 c 0,6 -2,23 -4,46 -1,18 -2,39 -2,61 0,68 11,149 71,149 40,0 78,-43 104,-97 6,54 24,97 68,97 27.06882,0 54.13765,-15.8304 77.38049,-42.38988"
        id="path212"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccscscscsssscccscscssssccsscsscsc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -7408,7 +7408,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 317.13463,336.26584 299.26676,370 C 286.26676,395 262,404 246,404 187,404 164,354 153,294 121,346 85,412 41,412 23,412 17,398 17,384 c 0,-9 3,-18 6,-22 14,2 24,4 34,4 25,0 47,-22 93,-90 -12,-82 -4.97497,-172.11179 -46.97497,-172.11179 -5.999995,0 -14.489286,6.13292 -21.489286,19.13292 L 72.486925,119 l 4,-9 C 88.486925,86 112,77 128,77 c 49,0 66,53 76,116 68,-96 133,-142 217,-142 15,0 23,9 23,27 0,9 -3,19 -6,23 -16,-2 -32,-3 -49,-3 -54,0 -111,9 -183,111 14,143 25,176 54,176 12,0 24.46487,-8 33.46487,-25 l 14,-28 9.66976,4.26584"
        id="path199"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccscsscscscccscsscscsccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -7483,7 +7483,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 199.11281,360.53621 190,398 c 0,1 -3,2 -4,2 h -18 c -13,0 -27,-2 -27,-6 0,0 1,-2 1,-3 L 145.65954,360.41669 156,274 c 2,-13 3,-22 4,-30 -15,-71 -25.22048,-142 -60.220478,-142 -5,0 -13.583733,8.31971 -20.583733,21.31971 L 70,119 l 5,-9 c 12,-24 34,-33 50,-33 66,0 84,81 99.5,156 C 289,135 350,51 426,51 c 18,0 24,13 24,27 0,9 -3,19 -6,23 -56,0 -126,4 -217,146 -0.0781,0.39062 -0.15771,0.78442 -0.23872,1.18126 C 221.6582,273.18164 210.95313,310.21875 208,324 l -8.88719,36.53621"
        id="path177"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccsscccccscccscssccscc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -7540,7 +7540,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 323.16016,318.0551 -20.32426,51.29314 c -17.74402,51.9012 -47.72299,56.64667 -62.909,57.48551 -24.14759,1.33386 -44.46655,-18.17743 -120.45394,-23.30556 -30.349285,-2.04818 -67.81856,-0.44083 -98.23688,-0.44083 1.26743,-8.6502 9.55188,-12.97864 41.23763,-61.41976 L 208.35778,147.90312 c 13.94173,-22.49052 43.53168,-47.28791 48.6014,-51.61301 L 154.9961,106.81829 c -51.20158,6.48598 -51.9021,0.0699 -86.991064,61.90391 l -8.844763,-3.46008 c 25.3486,-84.771964 43.557917,-98.67088 67.639087,-98.67088 20.27889,0 53.69713,18.593034 104.39433,18.593034 39.29033,0 72.64677,-8.212794 110.66967,-9.942834 0,0 1.26743,1.73004 1.26743,3.46008 0,6.92016 -24.63622,22.49052 -51.25225,60.5514 L 139.23401,336.47748 C 124.02485,358.968 94.668097,386.82381 90.232092,391.14891 l 6.621993,0.13494 h 19.011445 c 45.62748,0 102.39677,4.48248 126.47794,4.48248 29.15089,0 44.75424,-14.30783 54.89368,-41.98847 l 16.52051,-39.18286 9.4025,3.46008"
        id="path88-0"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.740389"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.740389"
        sodipodi:nodetypes="ccsscccccccsscsccccssccc"
        inkstitch:stroke_method="running_stitch"
        inkstitch:repeats="1"
@@ -7585,7 +7585,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;opacity:1;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 213,247 c 0,-2 0,-4 -1,-5 -8,-16 -24,-23 -38,-23 -48,0 -81,51 -81,127 0,29 16,45 44,45 37,0 57,-39 69,-69 l 1,22 c -14,30 -37,60 -87,60 -52,0 -87,-30 -87,-76 0,-72 50,-120 125,-120 31,0 50,9 60,27"
        id="path651"
        sodipodi:nodetypes="ccsssccsssc"
@@ -7621,7 +7621,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;opacity:1;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 320.01172,340.29462 312,335 296.86644,361.74733 C 288.53085,372.65623 280.39452,380.65026 271,380 c -9.97613,-0.69052 -17.92803,-7.00018 -18,-21 -0.0149,-2.90046 0.33711,-1.57446 1,-9 l 9,-34 c 5,-17 20,-83 22,-104 h -39 c -4,0 -19,3 -28,23 l -5,12 c 0,3 -0.4512,6.29567 -0.4512,8.29567 L 208,306 c -0.44957,2.06339 -1.41363,12.19931 -2,16 l 1,22 c 0,38 21.0082,60.62738 45,60 16.0247,-0.41904 37.56873,-9.45067 49.6525,-30.98605 l 18.35922,-32.71933"
        id="path653"
        sodipodi:nodetypes="cccsscccsccccccssc"
@@ -7693,7 +7693,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 108,289 -13,58 c 0,34 26,45.10836 45,45.10836 52,0 80,-44.10836 80,-126.10836 0,-27 -18,-44 -44,-44 -36,0 -56,37 -68,67"
        id="path12"
        inkscape:label="contour int"
@@ -7714,7 +7714,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 236.53533,379.09933 C 215.29573,395.05397 194.65219,403.33142 155,404 118.00526,404.62377 97,391 90,366 l -19,32 c -1,1 -3,2 -4,2 h -7 c -13,0 -26,-2 -26,-6 v 0 L 77,145 c 2,-15 3,-23 3,-29 0,-8 -2,-9 -6,-9 v -4 h 31 c 30,0 38,11 38,27 0,11 -4,25 -6,39 l -19,79 c 15,-22 38,-40 76,-40 54,0 87,30 87,76 0,40.92084 -16.47382,74.08929 -44.46467,95.09933"
        id="path10"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        inkscape:label="contour ext"
        sodipodi:nodetypes="csccsccccsccssccssc"
        inkstitch:bean_stitch_repeats="1"
@@ -7755,7 +7755,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 230,362 c -24,26 -61,42 -103,42 -24.37658,0 -44.867077,-5.47585 -60.432136,-15.31395 C 45.098465,375.11603 33,353.24656 33,326 33,249 90,208 165,208 c 46,0 89,20 89,55 0,22 -26,29 -40,29 h -6 c 2,-12 3,-22 3,-30 0,-34 -15,-44 -47,-44 -37,0 -71,63 -71,125 0,34 16,48 52,48 29,0 62,-17 78,-36 l 7,7"
        id="path15"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        inkscape:label="contour"
        sodipodi:nodetypes="csssssscsssscc"
        inkstitch:bean_stitch_repeats="1"
@@ -7802,7 +7802,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        sodipodi:nodetypes="ccc"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 217,266 c 0,-34 -24,-47 -43,-47 -48,0 -81,58 -81,127 0,32 14,45 44,45 37,0 57,-40 69,-70"
        id="path591"
        inkscape:label="contourg"
@@ -7849,7 +7849,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 322.66959,339.37652 -17.43118,32.70372 C 293.66906,393.78622 271,404 254,404 c -25,0 -47,-22 -47,-61 -14,30 -37,61 -87,61 -54,0 -87,-30 -87,-76 0,-73 58,-120 125,-120 35,0 55,13 63,35 l 16,-98 c 2,-15 4,-24 4,-30 0,-8 -3,-8 -7,-8 v 0 l 1,-4 h 31 c 31,0 38,11 38,27 0,11 -4,25 -7,39 -12.9489,57.16468 -27.00942,119.2367 -41,181 -1,3 -1,6 -1,9 0,14 8.00048,20.90197 18,21 9.894,0.097 20.16138,-5.23263 27,-18 12.11981,-23.297 9.33746,-18.18546 14,-27 l 8.66959,4.37652"
        id="path18"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="csscsssccssccssccssccc"
        inkscape:label="contourd"
        inkstitch:bean_stitch_repeats="1"
@@ -7889,7 +7889,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
        id="path26"
-       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#000000;stroke-width:0.5;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#ed171f;stroke-width:0.5;paint-order:markers fill stroke"
        d="m 223.23498,354.78979 c -15.66983,18.99966 -49.16492,35.45503 -77.95823,35.45503 -36.0406,0 -51.904222,-13.51503 -51.904222,-47.79278 0,-2.15458 9.35e-4,-4.11618 0.196955,-6.27079 l 0.587345,-9.79141 c 4.896849,-56.60726 35.061392,-109.10145 69.534992,-109.10145 21.54603,0 32.70834,11.55484 32.70834,33.4926 0,53.66916 -39.36814,75.60885 -102.243332,75.60885 l -0.587345,9.79141 c 83.833597,-0.58761 157.087727,-27.4209 157.087727,-80.11069 0,-31.7314 -29.37851,-48.57705 -85.00639,-48.57705 h -3e-5 c -75.606953,0 -132.802629,40.74334 -132.802629,118.30898 0,17.17731 4.706842,32.11679 13.505549,44.18459 15.481523,21.23359 43.631117,33.57671 81.09878,33.57671 42.50441,0 79.13457,-15.67102 103.03104,-42.30972"
        sodipodi:nodetypes="cssccssccssssssc"
        inkstitch:bean_stitch_repeats="1"
@@ -7939,7 +7939,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 105.87292,357.3068 94,414 C 80,480 79,480 74,480 H 24 l 1,-5 c 2,0 5,-16 9,-37 L 47.95272,359.05698 72,223 H 48 v -11 h 26 l 2,-15 c 11,-64 43,-96 122,-96 42,0 70,14 70,35 0,18 -14,28 -40,28 1,-4 1,-8 1,-12 0,-26 -15,-41 -42,-41 -19,0 -32,12 -36,31 l -14,70 h 49 l -3,11 h -49 l -28.12708,134.3068"
        id="path46"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccscccccccccsscsscccccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -8003,7 +8003,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 120,328 c 33,0 54,-27 54,-74 0,-23 -10,-36 -32,-36 -33,0 -54,35 -54,79 0,22 9,31 32,31 z"
        id="path594"
        inkscape:label="contourh"
@@ -8047,7 +8047,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        sodipodi:nodetypes="ccccccccc"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 206.45053,364.03554 C 217.42769,371.14881 225,383.6368 225,404 c 0,56 -50,76 -117,76 -56,0 -92,-14 -92,-34 v 0 c 0,-15 11,-19 20,-19 3,0 6,0 8,1 -2,5 -3,9 -3,13 0,17 27,29 69,29 46,0 92,-17 92,-44 0,-10 -11,-14 -28,-14 -24,0 -60,7 -90,7 -32,0 -58,-9 -58,-38 0,-15 10,-40 34,-51 l 7,-4 c -17,-9 -27,-24 -27,-42 0,-51 44,-76 104,-76 22,0 38,3 51,9 15,-7 32,-12 45,-12 15,0 22,7 22,17 0,12 -15,20 -21,20 -1,-15 -10,-25 -25,-25 -5,0 -9,1 -15,3 14,8 21,22 21,39 0,50 -45,79 -103,79 -16,0 -30,-2 -41,-6 l -7,3 c -13.108217,4.37391 -16.445521,14.68554 -18,21 -2.593988,10.53706 5.122333,17.19558 21,18 25.966696,1.31557 63.71219,-17.35683 96.77192,-17.51213 11.56184,-1.00097 23.34257,0.32359 35.67861,7.54767"
        id="path76"
        inkstitch:bean_stitch_repeats="1"
@@ -8124,7 +8124,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 299.80439,335 -18,36 C 268.80439,396 241,405 225,405 c -27,0 -45,-25 -45,-61 0,-12 1,-23 5,-37 l 7,-21 c 6,-18 8,-31 8,-40 0,-13 -5,-18 -12,-18 -8,0 -19,7 -28,14 l -50,42 -27,114 c 0,1 -3,2 -4,2 H 60 c -13,0 -26,-2 -26,-6 v -2 L 77,145 c 2,-15 3,-23 3,-29 0,-8 -2,-9 -6,-9 v -4 h 31 c 30,0 38,11 38,27 0,11 -4,25 -6,39 l -23,99 40,-33 c 21,-17 41,-25 58,-25 27,0 46,19 46,53 0,15 -4,33 -12,53 l -14,34 c -3.49194,9.88478 -5.26182,16.02047 -5,20 0.72216,10.97627 7,16 15,16 11,0 25,-8 33,-24 l 15,-29 9.80439,2"
        id="path57"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccsscssscccsssccsccsscccssccssccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -8197,7 +8197,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 156.93732,370.62153 c -11,21 -39.93732,31 -59.93732,31 -25,0 -48,-15 -48,-46 0,-17 5,-36 7,-50 l 9,-53 c 1.065161,-6.02959 2.376556,-11.17099 2,-15 0,-9 -2,-9.97589 -6,-9.97589 -5,0 -8.975908,7 -14.975908,19 -3.666667,7.33333 -12.40941,24.81882 -11,22 l -9.290549,-5.02411 11.620785,-22 c 5.170943,-9.94412 11.55156,-18.61545 18.745918,-23.1749 10.892605,-6.90321 23.650581,-6.8251 36.899754,-6.8251 h 47 c -2,21 -20,87 -24,104 l -9,34 c -1,4 -2,8 -2,11 0,12 8,19 17,19 10,0 22,-6 28,-18 l 13,-27 9.42582,3.13293 -15.4885,32.86707"
        id="path34"
        inkscape:label="contour"
@@ -8264,7 +8264,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 107.98329,361.3629 102,386 c -8,33 -24,96 -68,96 -29,0 -49,-8 -54,-38 l 10,-3 c 2,12 11,18 21,18 12,0 26,-9 29,-29 L 50.523165,361.01481 67,253 c 1,-6 2,-9.10928 2,-13.10928 -0.65771,-8.8405 -2.4299,-8.42756 -5.999058,-8.84314 -3.478635,-0.40504 -8.834243,4.74599 -14.974488,16.73197 l -3.378897,8.00078 -8.16063,-5.78033 4,-8 c 6.663729,-12.81486 16.41705,-20.37466 25.82976,-24.69969 C 77.328871,214.21883 84.93341,212.68734 96,212 h 46 c -2,21 -19,87 -23,104 l -11.01671,45.3629"
        id="path31"
        sodipodi:nodetypes="ccsccsccccsccccccccc"
@@ -8367,7 +8367,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 218,368 c 28,55 53,108 89,108 25,0 41,-16 41,-42 23,0 35,8 35,22 0,22 -28,37 -70,37 -42,0 -78,-33 -141,-124 l -52,-76 c -6,8 -13,17 -19,27 l -18,78 c 0,2 -3,2 -4,2 H 60 c -13,0 -27,-1 -27,-4 l 1,-2 43,-249 c 3,-15 3,-23 3,-29 0,-8 -2,-9 -6,-9 v 0 -4 h 31 c 31,0 38,11 38,27 0,11 -4,25 -6,39 l -30,127 c 12,-17 28,-34 46,-50 28,-24 61,-42 92,-42 14,0 25,8 25,22 0,12 -7,25 -11,31 -16,-8 -38,-16 -55,-16 -15,0 -30,5 -44,14 l 58,113"
        id="path598"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        inkscape:label="contour"
        sodipodi:nodetypes="cscssccccsscccssccsscccsscscc"
        inkstitch:bean_stitch_repeats="1"
@@ -8407,7 +8407,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 147,335 6.78125,2.75529 -17,34 C 125.78125,392.75529 103,403 84,403 60,403 38,387 38,354 c 0,-17 4,-35 6,-48 L 71,145 c 2,-15 4,-24 4,-30 0,-8 -3,-8 -7,-8 v -4 h 31 46 c -2,21 -19,86 -23,103 L 88,350 c -1,4 -1,7 -1,10 0,14 8,20 17,20 11,0 20.4644,-8 25.4644,-18 l 15.26835,-27"
        id="path43"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="cccssccsccccccsscc"
        inkstitch:stroke_method="running_stitch"
        inkstitch:repeats="1"
@@ -8515,7 +8515,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 401.72249,371.60617 c -0.92722,1.85444 -1.91319,3.59604 -2.92383,5.28515 -8.24605,13.78196 -19.08821,22.12271 -29.84765,26.02344 -4.98797,1.80834 -9.95646,2.69141 -14.63281,2.69141 l 8e-5,-1.5e-4 c -11.31016,0 -20.16524,-2.35894 -27.04492,-6.48828 -15.6263,-9.37926 -20.95508,-27.98805 -20.95508,-49.51172 0,-2.02683 0.13117,-4.17246 0.22461,-6.28516 0.50589,-11.43788 2.24315,-23.89773 4.77539,-35.71484 l 4,-21 c 0.41034,-2.25685 0.99603,-4.82879 1.58984,-7.4375 2.05664,-9.03514 4.70549,-19.63688 5.26367,-29.19335 0.0662,-1.13273 0.14649,-2.2742 0.14649,-3.36914 0,-8.66254 -2.26582,-13.82144 -8.06836,-15.05079 -0.89579,-0.18978 -1.86179,-0.30273 -2.93164,-0.30273 -7.99986,0 -19.00015,8.13293 -28,15.13281 l -13.88867,10.74219 -16.05469,12.41992 c -0.05,3.83001 -0.38861,7.9688 -0.88281,12.30664 -0.76935,6.75305 -1.89351,13.98749 -3.07031,21.63672 -0.99998,3.9999 -1.00003,9.0001 -2,13 l -9.35742,36.98046 -11.64258,46.01953 c 0,0.99998 -3.00002,2 -4,2 h -24 c -6.53986,0 -12.2169,-0.31964 -17.08398,-1.28711 l -9.91602,-4.71289 7.14453,-43.26367 10.85547,-65.73632 c 2.32115,-13.1532 3.42667,-23.26045 3.81641,-31.35352 0.11397,-2.36664 0.18359,-4.61017 0.18359,-6.64648 0,-6.59742 -0.87949,-10.94911 -2.25391,-13.85742 -1.75039,-3.70388 -4.32428,-5.00977 -7.12499,-5.00977 -3.85004,0 -8.6848,2.8802 -13.92579,6.78516 -2.92646,2.18045 -5.94415,4.58963 -9.07421,7.21484 l -7.84375,6.57813 -22.73047,19.06445 -2.86719,14.33984 c -2.99992,11.99968 -7.1856,24.75806 -9.18554,33.75781 l -8.53321,34.98633 -7.9375,32.54492 -3.34375,13.71094 c 0,0.99997 -3.00002,2 -4,2 h -24 c -6.28719,0 -12.80907,-0.46869 -17.86718,-1.4043 l -9.13281,-4.5957 1,-2 1.40039,-8.45899 3.72851,-22.53515 1.57227,-9.50586 16.29882,-98.5 c 0.034,-0.20377 0.0464,-0.38446 0.0781,-0.58593 0.9015,-5.73043 0.92187,-10.55003 0.92187,-14.41406 0,-2.48735 -0.2299,-4.22673 -0.61914,-5.51172 -1.0191,-3.36437 -3.24427,-3.33008 -6.13867,-3.33008 -0.88272,0 -1.67453,0.0953 -2.43945,0.25586 -3.56769,0.74904 -6.21766,3.70486 -11.1582,13.58594 l -1.86524,3.73046 -9.13476,18.26953 -10.04492,-1 10.30078,-20.5996 0.69922,-1.40039 c 6.92221,-13.31198 13.0518,-21.48669 22.41992,-26.25196 6.63023,-3.37259 15.07501,-4.98191 26.43554,-5.49414 2.73206,-0.12318 5.43508,-0.2539 8.54492,-0.2539 27.99919,0 36,18.00063 36,40 0,0.85088 -0.0323,1.70184 -0.0352,2.55273 l 2.46093,0.006 16.32422,-13.48438 5.07031,-4.18945 c 4.11389,-3.36591 8.08811,-6.26959 11.99219,-8.94922 16.9733,-11.64988 32.0002,-17.05078 45.00781,-17.05078 6.26745,0 12.02459,1.34393 17.15625,3.91797 9.49973,4.76507 16.79824,13.85659 20.82422,27.2168 1.38205,4.58636 2.36889,9.68763 2.94336,15.26367 l 10.27929,-8.69531 13.69336,-11.58789 c 11.52195,-8.98716 22.3669,-15.77695 32.51367,-20.30274 3.59766,-1.55422 7.0835,-2.74333 10.50391,-3.75586 6.39331,-1.89258 12.47007,-2.9414 17.98242,-2.9414 15.04297,0.24486 25.86949,3.84049 33.31836,10.11914 0.0821,0.0707 0.17457,0.13372 0.25585,0.20508 0.64833,0.55734 1.22563,1.17111 1.82227,1.76953 0.47948,0.49006 0.98408,0.96183 1.42969,1.47656 0.22582,0.25657 0.42306,0.53568 0.64062,0.79883 0.71004,0.87214 1.40423,1.75617 2.02539,2.6914 4.61532,6.94895 6.82569,15.58284 7.36914,25.06055 0.0882,1.59253 0.13878,3.21621 0.13868,4.8789 -0.27035,7.78217 -1.12488,15.43825 -2.40821,23.00391 -0.40934,2.4132 -0.87059,4.81556 -1.36328,7.21094 -2.24779,10.34566 -5.2372,20.81412 -8.22851,30.78515 l -7.85743,26.71484 -2.14257,7.28516 c -0.8503,2.12574 -1.47996,4.23627 -1.96875,6.28516 -0.0799,0.32526 -0.18086,0.65524 -0.25196,0.97851 -0.0813,0.38082 -0.12295,0.73734 -0.1914,1.11133 -0.36019,1.9121 -0.59648,3.79631 -0.58789,5.625 0,1.22556 0.10071,2.34975 0.24414,3.42773 0.56096,4.21613 2.19189,7.28119 4.53125,9.34375 1.64488,1.61118 3.84317,2.81463 6.80273,3.14453 0.75945,0.0847 1.56015,0.12171 2.42188,0.084 3.41973,0 6.7112,-1.30505 9.83984,-3.65625 0.24434,-0.17676 0.47975,-0.36596 0.7168,-0.55274 0.50092,-0.40723 0.9988,-0.83042 1.49023,-1.29492 0.57303,-0.53244 1.12549,-1.09257 1.66016,-1.67773 0.21005,-0.23122 0.42083,-0.45935 0.6289,-0.70117 1.52229,-1.76249 2.89878,-3.72337 4.22461,-5.75586 0.94036,-1.44157 1.88375,-2.87965 2.79492,-4.36133 l 15.57887,-30.24851 9.80664,0.86719 -19.33668,38.38132"
-       style="display:inline;opacity:1;stroke:#000000"
+       style="display:inline;opacity:1;stroke:#ed171f"
        id="path124"
        inkscape:label="contour"
        sodipodi:nodetypes="cssccsssccssssscccsccccssccccsssssccccccccssccccccccssscscccccssssccccssssccccsccccccsccsccccccccscsccccccscccc"
@@ -8591,7 +8591,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 295.40313,371 C 283.40313,395 264,405 248,405 c -37,0 -48,-25 -48,-56 0,-13 2,-28 5,-42 l 4,-21 c 2,-11 7,-27 7,-40 0,-10 -3,-14.97763 -11,-14.97763 -8,0 -19,7.37607 -28,14.37607 l -48,38.73638 c -3,12 -7,22.86518 -9,31.86518 l -20,82 c 0,1 -3,2 -4,2 H 72 c -13,0 -27,-2 -27,-6 l 1,-2 5.128439,-30.99361 L 69,253 c 1,-6 1,-11 1,-15 0,-9 -2.757169,-8.84219 -6.757169,-8.84219 -5,0 -7.597951,1.84219 -13.597951,13.84219 l -11,22 -10.045984,-1 11,-22 c 13,-25 23.087351,-32 57.401104,-32 28,0 36,18 36,40 0,6 0,12 -1,18 l 39,-33 c 22,-18 44,-27 61,-27 36,0 47,21 47,47 0,19 -6,41 -12,61 l -10,34 c -2,5 -3,10 -3,14 0,11 6,16 14,16 8,0 15.35542,-6 21.35542,-18 l 14.24267,-27.86581 9.80504,0.86581 -18,36"
        id="path108"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none;stroke-dashoffset:0"
        sodipodi:nodetypes="cssccssccccssccccssscccssccssccsscccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -8632,7 +8632,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 176.94691,363.35568 C 191.33201,340.91384 200,307.70178 200,269 c 0,-33 -12,-51 -36,-51 -41,0 -72,66 -72,132 0,31 11,44 37,44 18.96149,0 35.57025,-11.33582 47.94691,-30.64432"
        id="path28"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        inkscape:label="contour int"
        sodipodi:nodetypes="cssssc"
        inkstitch:bean_stitch_repeats="1"
@@ -8651,7 +8651,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 198.53056,386.84123 C 177.93516,398.00723 153.42387,404 127,404 92.780358,404 66.634147,393.57182 50.707532,375.64204 39.174178,362.65809 33,345.74029 33,326 33,249 91,208 166,208 c 62,0 94,25 94,73 0,48.86197 -24.38747,85.73688 -61.46944,105.84123"
        id="path36"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        inkscape:label="contour ext"
        sodipodi:nodetypes="csssssc"
        inkstitch:stroke_method="running_stitch"
@@ -8732,7 +8732,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 275.1479,361.93196 C 253.07276,388.79938 217.58988,404 174,404 c -27,0 -45,-6 -56,-20 l 2,-12 c 8,12 21,22 38,22 48,0 81,-51 81,-126 0,-27 -18,-44 -44,-44 -36,0 -57,38 -69,68 -1,6 -2,11 -3,16 l -9,41 -5,19 -16,70 c -4,18 -7,27 -9,42 H 39 c -3,0 -5,-1 -5,-8 0,-8 2,-25 8,-58 L 50.780216,361.3187 67,264 c 1,-4 2,-16 2,-19 0,-11 -2,-14.11116 -6,-14.11116 -6,0 -10.465829,13.38047 -16.465829,24.38047 l -4,8 L 34,259 42,243 c 13,-25 27,-31 49,-31 30,0 38,25 38,51 14,-27 37,-53 83,-53 54,0 88,31 88,77 0,30.15371 -8.94513,55.57177 -24.8521,74.93196"
        id="path82"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="csccsssccccccsscccssccccccssc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -8778,7 +8778,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 217,259 c -3,-29 -25,-40 -43,-40 -48,0 -81,58 -81,127 0,32 14,45 44,45 38,0 60,-44 71,-76 l 6,-37 c 1,-7 2,-13 3,-19"
        id="path103"
        sodipodi:nodetypes="csssccc"
@@ -8823,7 +8823,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        sodipodi:nodetypes="cccc"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 260.32991,358.43228 235,474 c -1,4 -15,6 -29,6 h -20 c -2,0 -3,0 -3,-2 l 19,-125 c -15,26 -37,51 -82,51 C 80.097494,404 51.661521,387.61924 39.53381,360.5064 35.249108,350.92748 33,340.00898 33,328 33,255 91,208 158,208 c 35,0 55,12 63,34 6,-18 18,-30 50,-30 h 27.73117 l -0.61287,4.05901 C 292.81497,216.30139 291.44899,217.06414 283,255 l -22.67009,103.43228"
        id="path73"
        sodipodi:nodetypes="ccssccsssscscccc"
@@ -8900,7 +8900,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 108.80302,361.90761 100,398 c 0,1 -5,2 -5,2 H 70 c -13,0 -25,0 -25,-4 v -2 L 50.516625,361.58983 69,253 c 0,0 1,-11 1,-15 0,-9 0.546305,-9.94812 -3.176988,-8.48624 -3.323259,1.30481 -8.621795,3.55626 -14.532463,15.3776 l -11,22 L 32,264 43,242 c 13,-25 32,-34.26833 54,-34.26833 28,0 36,20.26833 36,42.26833 0,3 -1,5 -1,8 18,-35 57,-64 87,-64 24,0 39,14 39,34 0,18 -19,32 -33,32 -2,0 -4,-1 -6,-2 -2,-25 -12,-38 -28,-38 -9.55003,0 -20.26745,6.56662 -30.59146,17.52586 C 143.70642,255.25565 128.03399,284.48206 120,316 l -11.19698,45.90761"
        id="path80"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        inkscape:label="contour"
        sodipodi:nodetypes="cccsscccssscccsscssscsscc"
        inkstitch:bean_stitch_repeats="1"
@@ -8942,7 +8942,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none;paint-order:markers fill stroke"
        d="m 211.69882,373.83472 c 8.55873,-8.75403 13.50803,-19.29012 13.50803,-31.45243 0,-29.57899 -32.24918,-43.09362 -63.33228,-58.37285 -25.64361,-12.73269 -53.42229,-17.82782 -53.42229,-35.45771 0,-22.72295 20.97963,-30.94964 42.73778,-31.14554 30.69464,0 44.48967,12.73221 47.79229,48.38375 16.51288,0 27.38958,-9.00848 27.38958,-22.52472 0,-3.13421 -0.77438,-6.66247 -3.29989,-9.99256 -15.93009,-22.52707 -41.96415,-25.26819 -69.93901,-25.26819 -58.280858,0 -100.63198,19.19772 -100.63198,60.72589 0,26.44481 27.585984,42.89701 57.50356,52.4955 31.86017,9.99027 66.05311,18.416 66.05311,36.82946 0,22.72293 -28.36463,36.23856 -59.05927,36.23856 -35.939873,0 -58.085747,-17.2405 -61.194057,-52.1085 l -0.195353,-1.36829 c -19.038417,0 -29.332578,8.02985 -29.332578,23.30905 0,3.33013 0.969735,6.6601 3.495241,10.18612 17.095726,24.48592 52.840765,29.77376 85.283777,29.77376 40.27814,0 77.49452,-10.66551 96.64334,-30.2513"
        id="path56"
        sodipodi:nodetypes="cscsccscsscssccscsc"
@@ -8986,7 +8986,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 186.69338,337 -17,34 C 158.69338,392 128,403 108,403 82,403 58,386 58,354 c 0,-17 3,-35 5,-48 L 76,223 H 38 v -11 h 40 l 5,-33 c 4,-24 27,-43 45,-43 h 22 l 4,2 -16,74 h 58 v 11 h -60 l -28,127 c 0,3 -1,6 -1,8 0,16 9,22 20,22 13,0 29,-8 34,-18 l 14,-27 11.69338,2"
        id="path83"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccssccccccscccccccssccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -9061,7 +9061,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 289.02235,371 C 278.02235,393 258,403 241,403 c -24,0 -41,-18 -41,-60 l -41,35 c -22,18 -42,26 -58,26 -33,0 -43,-25 -43,-56 0,-16 2,-34 6,-51 l 9,-35 c 2,-6 2,-10 2,-14 0,-10 -1.864255,-15 -7.864255,-15 -6,0 -12.102298,6.13085 -18.357165,18 L 34.02299,282.02206 25.108818,277 42.597635,242 C 54.597635,218 70,208 86,208 c 35,0 47,23 47,51 0,15 -3,31 -9,47 l -8,20 c -4,10 -7,25 -7,37 0,11 2.9992,18.11167 12.9992,18.11167 9,0 22,-6 30,-13 l 49,-40 c 1,-12 3.04159,-22.36895 4.04159,-31.36895 v 0 L 218,215 c 0.55958,-3.70078 5.07408,-3 4,-3 H 233.33275 254 c 13,0 27,2 27,6 v 1 l -32,141 c -1.03317,4.30679 -1.01462,8.20463 -1,11 0.0627,11.99984 4.48944,16.24411 10.48944,16.24411 8,0 15.16388,-6.41097 21.48661,-18.24411 l 11.75512,-24.26802 9.29118,4.26802 -12,22"
        id="path127"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none;stroke-dashoffset:0"
        sodipodi:nodetypes="csccssccssscccsscssscccccscssccsssccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -9110,7 +9110,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:running_stitch_tolerance_mm=".1" /><path
        d="M 208.08236,361.05002 C 189.24743,386.15037 164.61119,404 137,404 112.10408,404 92.127263,389.2427 79.985394,362.22738 71.643644,343.66723 67,319.32128 67,290 c 0,-33 -0.865434,-55.4866 -10.865434,-55.4866 -4,0 -5.221577,3.4866 -12.221577,16.4866 l -5,10 -9.423699,-2 9,-17 C 50.48929,218 64,208 80,208 c 39,0 50,23 50,53 0,25 -8,57 -8,82 0,24 7,42 34,42 25,0 66,-47 66,-89 0,-28 -22,-52 -42,-60 5,-7 16,-30 34,-30 20,0 32,19 32,48 0,33.2795 -14.45935,75.78837 -37.91764,107.05002"
        id="path133"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="cssssccccssssscssc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -9185,7 +9185,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 321.8152,361.73474 C 303.54015,386.56121 280.07186,404 255,404 c -29,0 -46,-17 -54,-46 -20,26 -44,46 -71,46 C 104.46993,404 86.699198,388.48132 76.687806,360.13915 70.229269,341.85509 67,318.23416 67,290 c 0,-20 1.779683,-55.86455 -8.220317,-55.86455 -4,0 -9,3.86455 -16,16.86455 l -5,12.646 -9.628346,-4.646 9,-17 C 49.151337,218 64,208 80,208 c 39,0 50,23 50,53 0,26 -10,58 -10,83 0,24 2,41 29,41 14,0 35,-18 49,-42 -4,-21 -6,-47 -6,-77 0,-23 -2,-43.70959 -24,-43.70959 V 212 h 37 c 36,0 49,19 49,44 0,29 -12,67 -12,94 0,21 7,35 32,35 24,0 61,-51 61,-89 0,-39 -19,-62 -42,-71 5,-7 16,-31 34,-31 21,0 32,21 32,61 0,34.24187 -14.64107,76.1093 -37.1848,106.73474"
        id="path138"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="cscssssccccsssscsccssssscssc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -9271,7 +9271,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 268.04613,334 -19,36 C 236.04613,395 208,404 192,404 c -46,0 -66,-27 -77,-60 -23,33 -49,72 -80,72 -16,0 -25,-5 -25,-19 0,-10 5,-20 10,-27 11,6 20,10 30,10 20,0 36,-21 62,-47 -13,-47 -11.53953,-100.38538 -37.539535,-100.38538 -5,0 -8.411491,5.38538 -15.411491,18.38538 -5.263825,9.82581 -10.372467,19.36194 -15,28 l -9.803622,-2 18,-35 C 64.245352,218 87,208 103,208 c 49,0 61,30 65,66 18,-35 35,-65 64,-65 19,0 30,9 30,25 0,8 -2,16 -5,21 -12,-6 -22,-10 -32,-10 -16,0 -32,11 -56,45 2,46 -4,95 37,95 12,0 28.24251,-8 37.24251,-25 l 14,-28 10.80362,2"
        id="path105"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        inkscape:label="contour"
        sodipodi:nodetypes="ccscsscsccccccscsscscsccc"
        inkstitch:stroke_method="running_stitch"
@@ -9351,7 +9351,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 220.57003,361.96989 C 210.65859,379.7388 199.30109,397.18432 187,413 157,451 121,480 86,480 38,480 6,459 6,426 6,410.37212 16.148085,398.80348 32.548987,395.18933 36.087909,394.40949 39.917958,394 44,394 c 0,43 3,72 44,72 22,0 46,-15 66,-35 C 133.68023,423.13428 102.61923,399.80119 83.628618,361.28234 73.647004,341.03654 67,316.59546 67,288 c 0,-35 1.023777,-52.73069 -8.976223,-52.73069 -4,0 -5.478304,3.01071 -12.975116,15.73069 L 38.080169,262.82357 29.48929,259 l 9,-17 C 50.48929,218 64,208 80,208 c 30,0 50,19 50,47 0,12 -2,24 -2,36 0,48 13,96 51,111 30,-40 53,-83 53,-112 0,-25 -23,-47 -40,-54 5,-7 14,-30 34,-30 21,0 34,16 34,40 0,28.28468 -12.63626,67.25947 -39.42997,115.96989"
        id="path111"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccssscscsssscccssscscssc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -9407,7 +9407,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 248.64534,333 -22,48 C 212.64534,411 201,420 189,420 c -18,0 -42,-21 -106,-21 -24,0 -47,1 -71,1 1,-5 0,-7 25,-35 l 99,-112 c 11,-13 24.50442,-20.99902 28.50442,-23.49902 L 110,231 c -38,4 -40.442522,-2 -67.442522,36 L 32,265 c 20,-49 29,-59 48,-59 16,0 37,9 77,9 31,0 60,-3 90,-4 0,0 1,1 1,2 0,4 -9,13 -30,35 L 108,362 C 96,375 83.27526,385.42199 79.77526,387.92199 L 85,388 h 15 c 36,0 63,3 82,3 23,0 29.84172,-3 37.84172,-19 l 19,-41 9.80362,2"
        id="path140"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        sodipodi:nodetypes="ccsscccccccsscsccccssccc"
        inkstitch:stroke_method="running_stitch"
        inkstitch:repeats="1"
@@ -9428,7 +9428,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
      style="display:none;fill:none;stroke:#000000;stroke-width:0.5"
      id="g615"><path
        d="m 176.78344,302.92165 c -22.1412,42.83526 -53.99356,93.10351 -87.59375,93.10351 -25.63718,0 -42.72851,-13.69078 -42.72851,-34.42383 0,-43.61757 37.48489,-63.96093 91.08984,-63.96093 11.45902,0.19608 24.86005,2.15175 39.23242,5.28125"
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        id="path145-3-1"
        inkscape:label="contourg"
        inkstitch:bean_stitch_repeats="1"
@@ -9447,7 +9447,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 194.65062,291.96852 c 25.44289,-55.15763 45.83719,-114.22607 60.98633,-141.60936 11.84748,27.57881 15.34375,77.84551 15.34375,126.74413 0,7.8239 0.19457,15.45184 0.77734,23.08008 -26.31524,-1.76291 -50.96092,-4.68686 -77.10742,-8.21485"
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        id="path144-3-0"
        inkscape:label="contourm"
        inkstitch:bean_stitch_repeats="1"
@@ -9491,7 +9491,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        d="m 315.26257,330.11053 c 1.99702,112.88497 26.89336,144.89135 107.79189,145.32721 27.5788,0.14859 44.4778,-12.12689 49.916,-40.68359 l 11.9375,1.04883 c 14.3297,2.69865 23.2149,10.41042 23.2149,20.85742 0,17.40779 -22.3353,40.8789 -77.1055,40.8789 -83.7088,0 -143.14,-67.08921 -156.9297,-172.12303 -28.55021,-5.28111 -58.65491,-13.88752 -85.84567,-20.14649 -10.6088,21.80072 -49.34016,108.35937 -102.54882,108.35937 -32.04635,0 -53.41211,-18.58104 -53.41211,-46.35546 0,-54.37523 41.9528,-79.41211 107.21093,-79.41211 13.77862,0.76096 29.4296,1.48362 43.11719,2.93359 28.07081,-53.28338 62.85554,-159.34616 59.23637,-158.82225 l 17.49492,-81.312247 c 0,0 2.12168,-6.119643 1.73358,-8.662363"
        id="path151-8-6"
        inkscape:label="contour"
@@ -9511,7 +9511,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          d="m 195.24371,147.98657 a 15.445406,4.3521169 0.39044454 0 1 -21.79381,-0.54761 15.445406,4.3521169 0.39044454 0 1 1.45804,-6.13208 15.445406,4.3521169 0.39044454 0 1 21.79394,0.5476 15.445406,4.3521169 0.39044454 0 1 -1.45817,6.13209 z"
          id="path9-5-83-5-5"
          inkstitch:stroke_method="ripple_stitch" /></g><path
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        d="m 261.07405,41.99831 c 4.04191,1.35149 5.07743,2.095332 8.61203,3.842042 3.3131,1.63727 9.05638,4.333241 11.95048,6.296633 31.5525,21.406 39.0625,61.509185 39.0625,107.218745 0,41.27004 -6.0196,87.04073 -6.0196,128.11523 0,4.88992 0,9.58312 0.1934,14.27734 39.70094,-0.75237 60.24949,-10.80045 65.32114,-28.36033 l 8.09557,4.88993 c -9.39423,46.34533 -42.31827,51.30231 -73.027,51.83263"
        id="path190"
        inkscape:label="contour"
@@ -9525,7 +9525,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
      style="display:none;fill:none;stroke:#000000;stroke-width:0.5"
      id="g355"><path
        d="m 176.78344,302.92165 c -22.1412,42.83526 -53.99356,93.10351 -87.59375,93.10351 -25.63718,0 -42.72851,-13.69078 -42.72851,-34.42383 0,-43.61757 37.48489,-63.96093 91.08984,-63.96093 11.45902,0.19608 24.86005,2.15175 39.23242,5.28125"
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        id="path346"
        inkscape:label="contourg"
        inkstitch:bean_stitch_repeats="1"
@@ -9544,7 +9544,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 194.65062,291.96852 c 25.44289,-55.15763 45.83719,-114.22607 60.98633,-141.60936 11.84748,27.57881 15.34375,77.84551 15.34375,126.74413 0,7.8239 0.19457,15.45184 0.77734,23.08008 -26.31524,-1.76291 -50.96092,-4.68686 -77.10742,-8.21485"
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        id="path348"
        inkscape:label="contourm"
        inkstitch:bean_stitch_repeats="1"
@@ -9588,7 +9588,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        d="m 315.26257,330.11053 c 1.99702,112.88497 26.89336,144.89135 107.79189,145.32721 27.5788,0.14859 44.4778,-12.12689 49.916,-40.68359 l 11.9375,1.04883 c 14.3297,2.69865 23.2149,10.41042 23.2149,20.85742 0,17.40779 -22.3353,40.8789 -77.1055,40.8789 -83.7088,0 -143.14,-67.08921 -156.9297,-172.12303 -28.55021,-5.28111 -58.65491,-13.88752 -85.84567,-20.14649 -10.6088,21.80072 -49.34016,108.35937 -102.54882,108.35937 -32.04635,0 -53.41211,-18.58104 -53.41211,-46.35546 0,-54.37523 41.9528,-79.41211 107.21093,-79.41211 13.77862,0.76096 29.4296,1.48362 43.11719,2.93359 28.07081,-53.28338 62.85554,-159.34616 59.23637,-158.82225 l 17.49492,-81.312247 c 0,0 2.12168,-6.119643 1.73358,-8.662363"
        id="path352"
        inkscape:label="contour"
@@ -9632,7 +9632,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
            inkscape:transform-center-y="0.33832518"
            inkstitch:running_stitch_tolerance_mm="0.1"
            inkstitch:min_line_dist_mm="3" /></g></g><path
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        d="m 261.07405,41.99831 c 4.04191,1.35149 5.07743,2.095332 8.61203,3.842042 3.3131,1.63727 9.05638,4.333241 11.95048,6.296633 31.5525,21.406 39.0625,61.509185 39.0625,107.218745 0,41.27004 -6.0196,87.04073 -6.0196,128.11523 0,4.88992 0,9.58312 0.1934,14.27734 39.70094,-0.75237 60.24949,-10.80045 65.32114,-28.36033 l 8.09557,4.88993 c -9.39423,46.34533 -42.31827,51.30231 -73.027,51.83263"
        id="path355"
        inkscape:label="contour"
@@ -9646,7 +9646,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
      style="display:none;fill:none;stroke:#000000;stroke-width:0.5"
      id="g616"><path
        d="m 176.78344,302.92165 c -22.1412,42.83526 -53.99356,93.10351 -87.59375,93.10351 -25.63718,0 -42.72851,-13.69078 -42.72851,-34.42383 0,-43.61757 37.48489,-63.96093 91.08984,-63.96093 11.45902,0.19608 24.86005,2.15175 39.23242,5.28125"
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        id="path145-3-0"
        inkscape:label="contourg"
        inkstitch:bean_stitch_repeats="1"
@@ -9665,7 +9665,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 194.65062,291.96852 c 25.44289,-55.15763 45.83719,-114.22607 60.98633,-141.60936 11.84748,27.57881 15.34375,77.84551 15.34375,126.74413 0,7.8239 0.19457,15.45184 0.77734,23.08008 -26.31524,-1.76291 -50.96092,-4.68686 -77.10742,-8.21485"
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        id="path144-3-9"
        inkscape:label="contourm"
        inkstitch:bean_stitch_repeats="1"
@@ -9709,7 +9709,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        d="m 315.26257,330.11053 c 1.99702,112.88497 26.89336,144.89135 107.79189,145.32721 27.5788,0.14859 44.4778,-12.12689 49.916,-40.68359 l 11.9375,1.04883 c 14.3297,2.69865 23.2149,10.41042 23.2149,20.85742 0,17.40779 -22.3353,40.8789 -77.1055,40.8789 -83.7088,0 -143.14,-67.08921 -156.9297,-172.12303 -28.55021,-5.28111 -58.65491,-13.88752 -85.84567,-20.14649 -10.6088,21.80072 -49.34016,108.35937 -102.54882,108.35937 -32.04635,0 -53.41211,-18.58104 -53.41211,-46.35546 0,-54.37523 41.9528,-79.41211 107.21093,-79.41211 13.77862,0.76096 29.4296,1.48362 43.11719,2.93359 28.07081,-53.28338 62.85554,-159.34616 59.23637,-158.82225 l 17.49492,-81.312247 c 0,0 2.12168,-6.119643 1.73358,-8.662363"
        id="path151-8-5"
        inkscape:label="contour"
@@ -9737,7 +9737,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          d="m 194.37466,143.45404 26.79798,-23.93953 m -51.57102,-0.8787 20.48537,-28.420417 M 230,139 c 0,0 -31.61082,-45.897673 -56,-56 -3.38756,-1.403173 -7.61244,-1.403173 -11,0 -24.38918,10.102327 -56,56 -56,56 m 107,12 c -4,0 -8,-5 -16,-14 -11,-12 -28,-37 -29,-43 h -1 c -1,6 -17,31 -28,43 -8,9 -13,14 -17,14 M 164.00362,119.51451 134.7045,90.930005 m 6.78882,56.097095 -27.51259,-34.30141 m 53.59595,-7.86074 1.42923,-33.229488"
          transform="translate(0,1.95103)"
          sodipodi:nodetypes="cccccaaccccccccccccc" /></g><path
-       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#000000;stroke-width:0.498898;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:30.2362px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;opacity:0.99;fill:none;stroke:#ed171f;stroke-width:0.498898;paint-order:markers fill stroke"
        d="m 261.07405,41.99831 c 4.04191,1.35149 5.07743,2.095332 8.61203,3.842042 3.3131,1.63727 9.05638,4.333241 11.95048,6.296633 31.5525,21.406 39.0625,61.509185 39.0625,107.218745 0,41.27004 -6.0196,87.04073 -6.0196,128.11523 0,4.88992 0,9.58312 0.1934,14.27734 39.70094,-0.75237 60.24949,-10.80045 65.32114,-28.36033 l 8.09557,4.88993 c -9.39423,46.34533 -42.31827,51.30231 -73.027,51.83263"
        id="path159"
        inkscape:label="contour"
@@ -9779,7 +9779,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 337.42486,326.01954 c -31.9623,40.30017 -85.63979,77.9239 -147.97767,78.05274 -4.94032,0.0102 -9.80825,-0.16067 -14.51868,-0.28882 L 165,425 c 26,0 43,4 43,19 0,21 -43,42 -78,42 v -6 c 24,0 55,-18 55,-34 0,-8 -9,-12 -27,-12 h -8 l 14.80456,-31.22631 C 138.65209,399.23932 115.68317,390.67921 98.074769,378.13072 66.284929,355.47593 48.492872,317.79627 50.260941,272.34323 55.261363,143.79376 138.67474,75.345332 245.71397,75.345332 c 68.11242,0 135.46683,30.292638 131.78273,71.409828 -1.70202,18.99576 -18.77535,26.57166 -30.74114,28.16604 l -10.16219,1.35406 c -0.8193,-14.42785 -1.83618,-18.05338 -4.24819,-31.18957 C 322.79916,93.096604 287.12082,88.996503 244.23327,86.749002 189.52226,83.8819 117.64086,140.33324 111.88913,300.72427 c -2.31501,64.55542 41.8887,96.38635 103.07527,83.53779 42.02388,-8.8246 90.29172,-31.78409 113.98298,-63.50409 l 8.47748,5.26157"
        id="path7-8-7"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.786129"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.786129"
        inkscape:label="contour"
        sodipodi:nodetypes="csccsccssccssssscsssscc"
        inkstitch:bean_stitch_repeats="1"
@@ -9869,7 +9869,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 327.46455,331.48883 9.29118,3.51117 -17,36 C 300.75573,411 281,423 257,423 223,423 178,400 101,400 H 32 l 1,-11 55,1 44,-262 c 2,-9 3,-16 3,-22 0,-14 -7,-16 -29,-16 -5,0 -10,1 -14,1 V 79 c 9,0 49,1 58,1 108,0 160,-1 176,-57 20,0 32,11 32,28 0,36 -56,43 -96,43"
        id="path293-1"
        inkscape:label="contour"
@@ -9890,7 +9890,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          d="m 195.24371,147.98657 a 15.445406,4.3521169 0.39044454 0 1 -21.79381,-0.54761 15.445406,4.3521169 0.39044454 0 1 1.45804,-6.13208 15.445406,4.3521169 0.39044454 0 1 21.79394,0.5476 15.445406,4.3521169 0.39044454 0 1 -1.45817,6.13209 z"
          id="path9-5-83-5-0"
          inkstitch:stroke_method="ripple_stitch" /></g><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 262,94 c -19,0 -39,-1 -58,-2 -4,26 -17,81 -21,97 l -9,39 95,-4 -1,14 h -96 l -34,152 c 24,0 47,1 69,1 54,0 94.46455,-5.51117 104.46455,-25.51117 l 16,-34"
        id="path316"
        inkscape:label="contour"
@@ -9981,7 +9981,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 327.46455,331.48883 9.29118,3.51117 -17,36 C 300.75573,411 281,423 257,423 223,423 178,400 101,400 H 32 l 1,-11 55,1 44,-262 c 2,-9 3,-16 3,-22 0,-14 -7,-16 -29,-16 -5,0 -10,1 -14,1 V 79 c 9,0 49,1 58,1 108,0 160,-1 176,-57 20,0 32,11 32,28 0,36 -56,43 -96,43"
        id="path293-1-5"
        inkscape:label="contour"
@@ -10001,7 +10001,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          d="m 195.24371,147.98657 a 15.445406,4.3521169 0.39044454 0 1 -21.79381,-0.54761 15.445406,4.3521169 0.39044454 0 1 1.45804,-6.13208 15.445406,4.3521169 0.39044454 0 1 21.79394,0.5476 15.445406,4.3521169 0.39044454 0 1 -1.45817,6.13209 z"
          id="path9-5-83-5-0-8"
          inkstitch:stroke_method="ripple_stitch" /></g><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 262,94 c -19,0 -39,-1 -58,-2 -4,26 -17,81 -21,97 l -9,39 95,-4 -1,14 h -96 l -34,152 c 24,0 47,1 69,1 54,0 94.46455,-5.51117 104.46455,-25.51117 l 16,-34"
        id="path316-4"
        inkscape:label="contour"
@@ -10092,7 +10092,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 327.46455,331.48883 9.29118,3.51117 -17,36 C 300.75573,411 281,423 257,423 223,423 178,400 101,400 H 32 l 1,-11 55,1 44,-262 c 2,-9 3,-16 3,-22 0,-14 -7,-16 -29,-16 -5,0 -10,1 -14,1 V 79 c 9,0 49,1 58,1 108,0 160,-1 176,-57 20,0 32,11 32,28 0,36 -56,43 -96,43"
        id="path293-1-53"
        inkscape:label="contour"
@@ -10120,7 +10120,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          d="m 194.37466,143.45404 26.79798,-23.93953 m -51.57102,-0.8787 20.48537,-28.420417 M 230,139 c 0,0 -31.61082,-45.897673 -56,-56 -3.38756,-1.403173 -7.61244,-1.403173 -11,0 -24.38918,10.102327 -56,56 -56,56 m 107,12 c -4,0 -8,-5 -16,-14 -11,-12 -28,-37 -29,-43 h -1 c -1,6 -17,31 -28,43 -8,9 -13,14 -17,14 M 164.00362,119.51451 134.7045,90.930005 m 6.78882,56.097095 -27.51259,-34.30141 m 53.59595,-7.86074 1.42923,-33.229488"
          transform="translate(0,1.95103)"
          sodipodi:nodetypes="cccccaaccccccccccccc" /></g><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 262,94 c -19,0 -39,-1 -58,-2 -4,26 -17,81 -21,97 l -9,39 95,-4 -1,14 h -96 l -34,152 c 24,0 47,1 69,1 54,0 94.46455,-5.51117 104.46455,-25.51117 l 16,-34"
        id="path316-2"
        inkscape:label="contour"
@@ -10211,7 +10211,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 327.46455,331.48883 9.29118,3.51117 -17,36 C 300.75573,411 281,423 257,423 223,423 178,400 101,400 H 32 l 1,-11 55,1 44,-262 c 2,-9 3,-16 3,-22 0,-14 -7,-16 -29,-16 -5,0 -10,1 -14,1 V 79 c 9,0 49,1 58,1 108,0 160,-1 176,-57 20,0 32,11 32,28 0,36 -56,43 -96,43"
        id="path293-1-53-9"
        inkscape:label="contour"
@@ -10253,7 +10253,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
            inkscape:transform-center-y="0.33832518"
            inkstitch:running_stitch_tolerance_mm="0.1"
            inkstitch:min_line_dist_mm="3" /></g></g><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 262,94 c -19,0 -39,-1 -58,-2 -4,26 -17,81 -21,97 l -9,39 95,-4 -1,14 h -96 l -34,152 c 24,0 47,1 69,1 54,0 94.46455,-5.51117 104.46455,-25.51117 l 16,-34"
        id="path316-2-8"
        inkscape:label="contour"
@@ -10301,7 +10301,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        d="M 110.40845,361.1058 102,398 c 0,1 -2,2 -3,2 H 80 C 73.904341,400 67.588817,399.78014 62.599834,399.23731 56.948987,398.62248 53,397.59331 53,396 v -2 l 47,-264.82061 c 2,-10 3,-17 3,-23 C 103,92.179396 96,90.179396 70,90.179396 V 80 h 58"
        id="path146-7"
        inkscape:label="contour"
@@ -10329,7 +10329,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          d="m 194.37466,143.45404 26.79798,-23.93953 m -51.57102,-0.8787 20.48537,-28.420417 M 230,139 c 0,0 -31.61082,-45.897673 -56,-56 -3.38756,-1.403173 -7.61244,-1.403173 -11,0 -24.38918,10.102327 -56,56 -56,56 m 107,12 c -4,0 -8,-5 -16,-14 -11,-12 -28,-37 -29,-43 h -1 c -1,6 -17,31 -28,43 -8,9 -13,14 -17,14 M 164.00362,119.51451 134.7045,90.930005 m 6.78882,56.097095 -27.51259,-34.30141 m 53.59595,-7.86074 1.42923,-33.229488"
          transform="translate(0,1.95103)"
          sodipodi:nodetypes="cccccaaccccccccccccc" /></g><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        d="m 128,80 h 46 c -2,21 -19,86 -23,103 l -40.59155,178.1058"
        id="path220"
        inkscape:label="contour"
@@ -10342,7 +10342,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
      inkscape:label="GlyphLayer-Ô"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.5"
      id="g624"><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 119.23772,357.10771 C 130.67617,381.58764 154.32106,393.51041 192,393.51041 275,393.51041 331,309 331,180 331,118 304,86 252,86 168,86 111,190 111,311 c 0,18.97538 2.67587,34.20455 8.23772,46.10771"
        id="path576-3"
        inkscape:label="contourint"
@@ -10386,7 +10386,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 315.32713,362.16236 C 280.52366,389.02545 236.86625,404 190,404 103,404 51,354 51,276 51,147 137,76 253,76"
        id="path157-5"
        inkscape:label="contour"
@@ -10414,7 +10414,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          d="m 194.37466,143.45404 26.79798,-23.93953 m -51.57102,-0.8787 20.48537,-28.420417 M 230,139 c 0,0 -31.61082,-45.897673 -56,-56 -3.38756,-1.403173 -7.61244,-1.403173 -11,0 -24.38918,10.102327 -56,56 -56,56 m 107,12 c -4,0 -8,-5 -16,-14 -11,-12 -28,-37 -29,-43 h -1 c -1,6 -17,31 -28,43 -8,9 -13,14 -17,14 M 164.00362,119.51451 134.7045,90.930005 m 6.78882,56.097095 -27.51259,-34.30141 m 53.59595,-7.86074 1.42923,-33.229488"
          transform="translate(0,1.95103)"
          sodipodi:nodetypes="cccccaaccccccccccccc" /></g><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 253,76 c 92,0 141,41 141,117 0,73.37826 -31.04633,132.40176 -78.67287,169.16236"
        id="path206"
        inkscape:label="contour"
@@ -10427,7 +10427,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
      inkscape:label="GlyphLayer-Ö"
      style="display:none;fill:none;stroke:#000000;stroke-width:0.5"
      id="g367"><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 119.23772,357.10771 C 130.67617,381.58764 154.32106,393.51041 192,393.51041 275,393.51041 331,309 331,180 331,118 304,86 252,86 168,86 111,190 111,311 c 0,18.97538 2.67587,34.20455 8.23772,46.10771"
        id="path360"
        inkscape:label="contourint"
@@ -10471,7 +10471,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkscape:label="liaison"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 315.32713,362.16236 C 280.52366,389.02545 236.86625,404 190,404 103,404 51,354 51,276 51,147 137,76 253,76"
        id="path364"
        inkscape:label="contour"
@@ -10515,7 +10515,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
            inkscape:transform-center-y="0.33832518"
            inkstitch:running_stitch_tolerance_mm="0.1"
            inkstitch:min_line_dist_mm="3" /></g></g><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 253,76 c 92,0 141,41 141,117 0,73.37826 -31.04633,132.40176 -78.67287,169.16236"
        id="path367"
        inkscape:label="contour"
@@ -10580,7 +10580,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        d="m 334.3529,345.48804 8.29228,5.02504 -11,22 C 320.64518,394.51308 300,404 284,404 c -22,0 -41,-19 -41,-56 0,-6 1,-12 1,-18 l -58,48 c -22,18 -50,26 -66,26 -42,0 -58,-30 -58,-68 0,-12 2,-25 5,-39 l 35,-163 c 0.89485,-5.55794 2.22266,-10.68906 3,-15 1.77457,-9.84129 -2.86693,-12.73068 -8.866932,-12.73068 -6,0 -12.354964,6 -18.354964,18 l -8.534013,-5.40441 4,-8 C 85.244092,86.864908 102,79 118,79 c 36,0 49,24 49,54 0,14 -3,29 -7,44 l -43,149 c -3,9 -4,18 -4,26 0,19 9,31 29,31 10,0 30,-6 38,-13 L 215.77985,340.2752 245,316 c 1,-7 2,-13 3,-19 L 284,82"
        id="path263-1-2-9"
        inkscape:label="contour"
@@ -10601,7 +10601,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          d="m 195.24371,147.98657 a 15.445406,4.3521169 0.39044454 0 1 -21.79381,-0.54761 15.445406,4.3521169 0.39044454 0 1 1.45804,-6.13208 15.445406,4.3521169 0.39044454 0 1 21.79394,0.5476 15.445406,4.3521169 0.39044454 0 1 -1.45817,6.13209 z"
          id="path9-5-83-5-0-4"
          inkstitch:stroke_method="ripple_stitch" /></g><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        d="m 284,82 c 0,-2 4,-2 4,-2 h 36 c 13,0 27,2 27,6 v 0 l -59,274 c -1,4 -2,9 -2,12 0,11 2.3529,14.48804 9.3529,14.48804 8,0 18,-7 24,-19 l 11,-22"
        id="path318-4-3"
        inkscape:label="contour"
@@ -10666,7 +10666,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        d="m 334.3529,345.48804 8.29228,5.02504 -11,22 C 320.64518,394.51308 300,404 284,404 c -22,0 -41,-19 -41,-56 0,-6 1,-12 1,-18 l -58,48 c -22,18 -50,26 -66,26 -42,0 -58,-30 -58,-68 0,-12 2,-25 5,-39 l 35,-163 c 0.89485,-5.55794 2.22266,-10.68906 3,-15 1.77457,-9.84129 -2.86693,-12.73068 -8.866932,-12.73068 -6,0 -12.354964,6 -18.354964,18 l -8.534013,-5.40441 4,-8 C 85.244092,86.864908 102,79 118,79 c 36,0 49,24 49,54 0,14 -3,29 -7,44 l -43,149 c -3,9 -4,18 -4,26 0,19 9,31 29,31 10,0 30,-6 38,-13 L 215.77985,340.2752 245,316 c 1,-7 2,-13 3,-19 L 284,82"
        id="path263-1-2"
        inkscape:label="contour"
@@ -10694,7 +10694,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          d="m 194.37466,143.45404 26.79798,-23.93953 m -51.57102,-0.8787 20.48537,-28.420417 M 230,139 c 0,0 -31.61082,-45.897673 -56,-56 -3.38756,-1.403173 -7.61244,-1.403173 -11,0 -24.38918,10.102327 -56,56 -56,56 m 107,12 c -4,0 -8,-5 -16,-14 -11,-12 -28,-37 -29,-43 h -1 c -1,6 -17,31 -28,43 -8,9 -13,14 -17,14 M 164.00362,119.51451 134.7045,90.930005 m 6.78882,56.097095 -27.51259,-34.30141 m 53.59595,-7.86074 1.42923,-33.229488"
          transform="translate(0,1.95103)"
          sodipodi:nodetypes="cccccaaccccccccccccc" /></g><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        d="m 284,82 c 0,-2 4,-2 4,-2 h 36 c 13,0 27,2 27,6 v 0 l -59,274 c -1,4 -2,9 -2,12 0,11 2.3529,14.48804 9.3529,14.48804 8,0 18,-7 24,-19 l 11,-22"
        id="path318-4"
        inkscape:label="contour"
@@ -10759,7 +10759,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        d="m 334.3529,345.48804 8.29228,5.02504 -11,22 C 320.64518,394.51308 300,404 284,404 c -22,0 -41,-19 -41,-56 0,-6 1,-12 1,-18 l -58,48 c -22,18 -50,26 -66,26 -42,0 -58,-30 -58,-68 0,-12 2,-25 5,-39 l 35,-163 c 0.89485,-5.55794 2.22266,-10.68906 3,-15 1.77457,-9.84129 -2.86693,-12.73068 -8.866932,-12.73068 -6,0 -12.354964,6 -18.354964,18 l -8.534013,-5.40441 4,-8 C 85.244092,86.864908 102,79 118,79 c 36,0 49,24 49,54 0,14 -3,29 -7,44 l -43,149 c -3,9 -4,18 -4,26 0,19 9,31 29,31 10,0 30,-6 38,-13 L 215.77985,340.2752 245,316 c 1,-7 2,-13 3,-19 L 284,82"
        id="path263-1"
        inkscape:label="contour"
@@ -10800,7 +10800,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          inkscape:transform-center-y="0.33832518"
          inkstitch:running_stitch_tolerance_mm="0.1"
          inkstitch:min_line_dist_mm="3" /></g><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        d="m 284,82 c 0,-2 4,-2 4,-2 h 36 c 13,0 27,2 27,6 v 0 l -59,274 c -1,4 -2,9 -2,12 0,11 2.3529,14.48804 9.3529,14.48804 8,0 18,-7 24,-19 l 11,-22"
        id="path318"
        inkscape:label="contour"
@@ -10851,7 +10851,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:running_stitch_tolerance_mm=".1" /><path
        d="m 288,344 c 0,36 -33,60 -88,60 -49,0 -69,-16 -69,-38 0,-14 13,-23 27,-23 h 2.75464 v 1 c 3,31 5.24536,50 41.24536,50 24,0 36,-14 36,-36 0,-20 -23,-36 -42,-57 -15,-16 -27,-33 -27,-57 0,-42 26.24377,-66.75714 77.24377,-68.75714 C 242.24377,141.24286 220,124 183,124 c -11,0 -31,8 -35,29 l -45,233 c -6,33 -23,96 -67,96 -16,0 -30,-2.37637 -39,-9.37637 L 3,464 c 2,0 5,1 7,1 12,0 27,-8 30,-29 L 51.106264,359.68922 71,223 H 48 v -11 h 24 l 2,-15 c 9,-60 43,-96 93,-96 57,0 90.75621,30.7575 90.75621,84.7575 L 252,185 c -22.80339,-3.00087 -35,14 -35,40 0,16 15,32 31,49 19,20 40,42 40,70"
        id="path294"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        inkscape:label="contour"
        sodipodi:nodetypes="csssccsscscsccsccscccccccscsscc"
        inkstitch:bean_stitch_repeats="1"
@@ -10899,7 +10899,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 213,247 c 0,-2 0,-4 -1,-5 -8,-16 -24,-23 -38,-23 -48,0 -81,51 -81,127 0,29 16,45 44,45 37,0 57,-39 69,-69 l 1,22 c -14,30 -37,60 -87,60 -52,0 -87,-30 -87,-76 0,-72 50,-120 125,-120 31,0 50,9 60,27"
        id="path651-7"
        sodipodi:nodetypes="ccsssccsssc"
@@ -10935,7 +10935,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 320.01172,340.29462 312,335 296.86644,361.74733 C 288.53085,372.65623 280.39452,380.65026 271,380 c -9.97613,-0.69052 -17.92803,-7.00018 -18,-21 -0.0149,-2.90046 0.33711,-1.57446 1,-9 l 9,-34 c 5,-17 20,-83 22,-104 h -39 c -4,0 -19,3 -28,23 l -5,12 c 0,3 -0.4512,6.29567 -0.4512,8.29567 L 208,306 c -0.44957,2.06339 -1.41363,12.19931 -2,16 l 1,22 c 0,38 21.0082,60.62738 45,60 16.0247,-0.41904 37.56873,-9.45067 49.6525,-30.98605 l 18.35922,-32.71933"
        id="path653-9"
        sodipodi:nodetypes="cccsscccsccccccssc"
@@ -11008,7 +11008,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 213,247 c 0,-2 0,-4 -1,-5 -8,-16 -24,-23 -38,-23 -48,0 -81,51 -81,127 0,29 16,45 44,45 37,0 57,-39 69,-69 l 1,22 c -14,30 -37,60 -87,60 -52,0 -87,-30 -87,-76 0,-72 50,-120 125,-120 31,0 50,9 60,27"
        id="path295"
        sodipodi:nodetypes="ccsssccsssc"
@@ -11044,7 +11044,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 320.01172,340.29462 312,335 296.86644,361.74733 C 288.53085,372.65623 280.39452,380.65026 271,380 c -9.97613,-0.69052 -17.92803,-7.00018 -18,-21 -0.0149,-2.90046 0.33711,-1.57446 1,-9 l 9,-34 c 5,-17 20,-83 22,-104 h -39 c -4,0 -19,3 -28,23 l -5,12 c 0,3 -0.4512,6.29567 -0.4512,8.29567 L 208,306 c -0.44957,2.06339 -1.41363,12.19931 -2,16 l 1,22 c 0,38 21.0082,60.62738 45,60 16.0247,-0.41904 37.56873,-9.45067 49.6525,-30.98605 l 18.35922,-32.71933"
        id="path310"
        sodipodi:nodetypes="cccsscccsccccccssc"
@@ -11094,7 +11094,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 213,247 c 0,-2 0,-4 -1,-5 -8,-16 -24,-23 -38,-23 -48,0 -81,51 -81,127 0,29 16,45 44,45 37,0 57,-39 69,-69 l 1,22 c -14,30 -37,60 -87,60 -52,0 -87,-30 -87,-76 0,-72 50,-120 125,-120 31,0 50,9 60,27"
        id="path651-7-0"
        sodipodi:nodetypes="ccsssccsssc"
@@ -11130,7 +11130,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 320.01172,340.29462 312,335 296.86644,361.74733 C 288.53085,372.65623 280.39452,380.65026 271,380 c -9.97613,-0.69052 -17.92803,-7.00018 -18,-21 -0.0149,-2.90046 0.33711,-1.57446 1,-9 l 9,-34 c 5,-17 20,-83 22,-104 h -39 c -4,0 -19,3 -28,23 l -5,12 c 0,3 -0.4512,6.29567 -0.4512,8.29567 L 208,306 c -0.44957,2.06339 -1.41363,12.19931 -2,16 l 1,22 c 0,38 21.0082,60.62738 45,60 16.0247,-0.41904 37.56873,-9.45067 49.6525,-30.98605 l 18.35922,-32.71933"
        id="path653-9-8"
        sodipodi:nodetypes="cccsscccsccccccssc"
@@ -11188,7 +11188,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 213,247 c 0,-2 0,-4 -1,-5 -8,-16 -24,-23 -38,-23 -48,0 -81,51 -81,127 0,29 16,45 44,45 37,0 57,-39 69,-69 l 1,22 c -14,30 -37,60 -87,60 -52,0 -87,-30 -87,-76 0,-72 50,-120 125,-120 31,0 50,9 60,27"
        id="path651-22"
        sodipodi:nodetypes="ccsssccsssc"
@@ -11224,7 +11224,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="M 320.01172,340.29462 312,335 296.86644,361.74733 C 288.53085,372.65623 280.39452,380.65026 271,380 c -9.97613,-0.69052 -17.92803,-7.00018 -18,-21 -0.0149,-2.90046 0.33711,-1.57446 1,-9 l 9,-34 c 5,-17 20,-83 22,-104 h -39 c -4,0 -19,3 -28,23 l -5,12 c 0,3 -0.4512,6.29567 -0.4512,8.29567 L 208,306 c -0.44957,2.06339 -1.41363,12.19931 -2,16 l 1,22 c 0,38 21.0082,60.62738 45,60 16.0247,-0.41904 37.56873,-9.45067 49.6525,-30.98605 l 18.35922,-32.71933"
        id="path653-7"
        sodipodi:nodetypes="cccsscccsccccccssc"
@@ -11268,7 +11268,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 218,234.429 212,255 c 1.44812,-23.08249 -17.24868,-36.00138 -38,-36 -47.94206,0.003 -76.922874,51.22401 -81,127 -1.558091,28.95811 16,45 44,45 37,0 57,-39 69,-69 l 1,22 c -14,30 -37,60 -87,60 -52,0 -84.567935,-30.06434 -87,-76 -3.651379,-68.96547 49.542613,-120.60345 125,-120 29.45027,0.23552 44.8809,4.1563 61,23"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none;stroke-dashoffset:0"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1"
        id="path241"
@@ -11330,7 +11330,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 404.88659,360.98925 c -24,26 -61.38599,42.00954 -103.38599,42.00954 C 268.5006,402.99879 242,389 230,365 l -2.73324,37 H 223 c -10,0 -14,-30 -15,-60 -14,31 -37,62 -88,62 -54,0 -87,-30 -87,-76 0,-7 0,-14 2,-22 2.566613,-55.4588 56.963319,-96.78364 123,-98 34.99406,-0.64457 51,9 61,23 8,-17 17,-19 21,-19 h 14 c -1,7 -2,20 -4,34 20,-25 48.5006,-38.5006 89.5006,-38.5006 56,0 87.36134,18.80626 85.5006,50.75211 -2.98863,51.31022 -70.75041,77.03674 -157.02866,77.66492 1.72868,-32.08714 9.24825,-58.92574 21.15791,-80.68445 11.16121,-20.39132 32.31635,-48.6193 66.16916,-33.20044 29.76347,13.55631 13.4189,67.86805 -6.8741,83.43911 -28.1299,21.5844 -69.53179,20.20022 -79.86562,20.65437 l -0.58735,9.79141 c -0.90652,38 12.02625,54.08236 50.02625,54.08236 C 346.99879,389.99879 381,374 397,355 l 7.88659,5.98925"
        id="path266"
        inkscape:label="contour"
@@ -11373,7 +11373,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="m 230,362 c -24,26 -61,42 -103,42 -3.36542,0 -6.65677,-0.10437 -9.87131,-0.31019 L 107,424 c 26,0 43,5 43,20 0,21 -43,42 -78,42 v -6 c 24,0 55,-18 55,-34 0,-8 -9,-13 -27,-13 h -8 l 14.63017,-30.37801 C 91.056248,400.42283 77.579476,395.64608 66.567864,388.68605 45.098463,375.11603 33,353.24656 33,326 33,249 90,208 165,208 c 46,0 89,20 89,55 0,22 -26,29 -40,29 h -6 c 2,-12 3,-22 3,-30 0,-34 -15,-44 -47,-44 -37,0 -71,63 -71,125 0,34 16,48 52,48 29,0 62,-17 78,-36 l 7,7"
        id="path15-2"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        inkscape:label="contour"
        sodipodi:nodetypes="csccsccssccssssscsssscc"
        inkstitch:bean_stitch_repeats="1"
@@ -11412,7 +11412,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#000000;stroke-width:0.5;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#ed171f;stroke-width:0.5;paint-order:markers fill stroke"
        d="m 223.07815,355.39995 c -15.66983,18.99966 -49.16492,35.45503 -77.95823,35.45503 -36.0406,0 -51.90422,-13.51503 -51.90422,-47.79278 0,-2.15458 9.35e-4,-4.11618 0.196955,-6.27079 L 94,327 c 4.896849,-56.60726 35.06139,-109.10145 69.53499,-109.10145 21.54603,0 32.70834,11.55484 32.70834,33.4926 C 196.24333,305.06031 156.87519,327 94,327 l -0.587345,9.79141 c 83.833595,-0.58761 157.087725,-27.4209 157.087725,-80.11069 0,-31.7314 -29.37851,-48.57705 -94.99594,-48.57705"
        id="path26-3"
        inkscape:label="contour"
@@ -11431,7 +11431,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          d="m 195.24371,147.98657 a 15.445406,4.3521169 0.39044454 0 1 -21.79381,-0.54761 15.445406,4.3521169 0.39044454 0 1 1.45804,-6.13208 15.445406,4.3521169 0.39044454 0 1 21.79394,0.5476 15.445406,4.3521169 0.39044454 0 1 -1.45817,6.13209 z"
          id="path9-5-83-5"
          inkstitch:stroke_method="ripple_stitch" /></g><path
-       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#000000;stroke-width:0.5;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#ed171f;stroke-width:0.5;paint-order:markers fill stroke"
        d="m 155.50444,208.10367 c -65.617431,0 -122.813107,40.74334 -122.813107,118.30898 0,17.17731 4.706842,32.11679 13.505549,44.18459 15.481523,21.23359 43.631117,33.57671 81.098778,33.57671 42.50441,0 79.13457,-15.67102 103.03104,-42.30972"
        id="path187"
        inkscape:label="contour"
@@ -11471,7 +11471,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#000000;stroke-width:0.5;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#ed171f;stroke-width:0.5;paint-order:markers fill stroke"
        d="m 223.07815,355.39995 c -15.66983,18.99966 -49.16492,35.45503 -77.95823,35.45503 -36.0406,0 -51.90422,-13.51503 -51.90422,-47.79278 0,-2.15458 9.35e-4,-4.11618 0.196955,-6.27079 L 94,327 c 4.896849,-56.60726 35.06139,-109.10145 69.53499,-109.10145 21.54603,0 32.70834,11.55484 32.70834,33.4926 C 196.24333,305.06031 156.87519,327 94,327 l -0.587345,9.79141 c 83.833595,-0.58761 157.087725,-27.4209 157.087725,-80.11069 0,-31.7314 -29.37851,-48.57705 -94.99594,-48.57705"
        id="path26-3-6"
        inkscape:label="contour"
@@ -11491,7 +11491,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          d="m 195.24371,147.98657 a 15.445406,4.3521169 0.39044454 0 1 -21.79381,-0.54761 15.445406,4.3521169 0.39044454 0 1 1.45804,-6.13208 15.445406,4.3521169 0.39044454 0 1 21.79394,0.5476 15.445406,4.3521169 0.39044454 0 1 -1.45817,6.13209 z"
          id="path9-5-83-5-2"
          inkstitch:stroke_method="ripple_stitch" /></g><path
-       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#000000;stroke-width:0.5;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#ed171f;stroke-width:0.5;paint-order:markers fill stroke"
        d="m 155.50444,208.10367 c -65.617431,0 -122.813107,40.74334 -122.813107,118.30898 0,17.17731 4.706842,32.11679 13.505549,44.18459 15.481523,21.23359 43.631117,33.57671 81.098778,33.57671 42.50441,0 79.13457,-15.67102 103.03104,-42.30972"
        id="path187-6"
        inkscape:label="contour"
@@ -11531,7 +11531,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#000000;stroke-width:0.5;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#ed171f;stroke-width:0.5;paint-order:markers fill stroke"
        d="m 223.07815,355.39995 c -15.66983,18.99966 -49.16492,35.45503 -77.95823,35.45503 -36.0406,0 -51.90422,-13.51503 -51.90422,-47.79278 0,-2.15458 9.35e-4,-4.11618 0.196955,-6.27079 L 94,327 c 4.896849,-56.60726 35.06139,-109.10145 69.53499,-109.10145 21.54603,0 32.70834,11.55484 32.70834,33.4926 C 196.24333,305.06031 156.87519,327 94,327 l -0.587345,9.79141 c 83.833595,-0.58761 157.087725,-27.4209 157.087725,-80.11069 0,-31.7314 -29.37851,-48.57705 -94.99594,-48.57705"
        id="path26-1-5"
        inkscape:label="contour"
@@ -11559,7 +11559,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          d="m 194.37466,143.45404 26.79798,-23.93953 m -51.57102,-0.8787 20.48537,-28.420417 M 230,139 c 0,0 -31.61082,-45.897673 -56,-56 -3.38756,-1.403173 -7.61244,-1.403173 -11,0 -24.38918,10.102327 -56,56 -56,56 m 107,12 c -4,0 -8,-5 -16,-14 -11,-12 -28,-37 -29,-43 h -1 c -1,6 -17,31 -28,43 -8,9 -13,14 -17,14 M 164.00362,119.51451 134.7045,90.930005 m 6.78882,56.097095 -27.51259,-34.30141 m 53.59595,-7.86074 1.42923,-33.229488"
          transform="translate(0,1.95103)"
          sodipodi:nodetypes="cccccaaccccccccccccc" /></g><path
-       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#000000;stroke-width:0.5;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#ed171f;stroke-width:0.5;paint-order:markers fill stroke"
        d="m 155.50444,208.10367 c -65.617431,0 -122.813107,40.74334 -122.813107,118.30898 0,17.17731 4.706842,32.11679 13.505549,44.18459 15.481523,21.23359 43.631117,33.57671 81.098778,33.57671 42.50441,0 79.13457,-15.67102 103.03104,-42.30972 l -7.24855,-6.46428"
        id="path323-9"
        inkscape:label="contour"
@@ -11599,7 +11599,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:reverse_rails="automatic"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" /><path
-       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#000000;stroke-width:0.5;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#ed171f;stroke-width:0.5;paint-order:markers fill stroke"
        d="m 223.07815,355.39995 c -15.66983,18.99966 -49.16492,35.45503 -77.95823,35.45503 -36.0406,0 -51.90422,-13.51503 -51.90422,-47.79278 0,-2.15458 9.35e-4,-4.11618 0.196955,-6.27079 L 94,327 c 4.896849,-56.60726 35.06139,-109.10145 69.53499,-109.10145 21.54603,0 32.70834,11.55484 32.70834,33.4926 C 196.24333,305.06031 156.87519,327 94,327 l -0.587345,9.79141 c 83.833595,-0.58761 157.087725,-27.4209 157.087725,-80.11069 0,-31.7314 -29.37851,-48.57705 -94.99594,-48.57705"
        id="path26-1"
        inkscape:label="contour"
@@ -11640,7 +11640,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
          inkscape:transform-center-y="0.33832518"
          inkstitch:running_stitch_tolerance_mm="0.1"
          inkstitch:min_line_dist_mm="3" /></g><path
-       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#000000;stroke-width:0.5;paint-order:markers fill stroke"
+       style="font-weight:bold;font-size:60px;font-family:QumpellkaNo12;-inkscape-font-specification:'QumpellkaNo12 Bold';text-align:center;text-anchor:middle;display:inline;fill:none;stroke:#ed171f;stroke-width:0.5;paint-order:markers fill stroke"
        d="m 155.50444,208.10367 c -65.617431,0 -122.813107,40.74334 -122.813107,118.30898 0,17.17731 4.706842,32.11679 13.505549,44.18459 15.481523,21.23359 43.631117,33.57671 81.098778,33.57671 42.50441,0 79.13457,-15.67102 103.03104,-42.30972 l -7.24855,-6.46428"
        id="path323"
        inkscape:label="contour"
@@ -11717,7 +11717,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 156.93732,370.62153 c -11,21 -39.93732,31 -59.93732,31 -25,0 -48,-15 -48,-46 0,-17 5,-36 7,-50 l 9,-53 c 1.065161,-6.02959 2.376556,-11.17099 2,-15 0,-9 -2,-9.97589 -6,-9.97589 -5,0 -8.975908,7 -14.975908,19 -3.666667,7.33333 -12.40941,24.81882 -11,22 l -9.290549,-5.02411 11.620785,-22 c 5.170943,-9.94412 11.55156,-18.61545 18.745918,-23.1749 10.892605,-6.90321 23.650581,-6.8251 36.899754,-6.8251 h 47 c -2,21 -20,87 -24,104 l -9,34 c -1,4 -2,8 -2,11 0,12 8,19 17,19 10,0 22,-6 28,-18 l 13,-27 9.42582,3.13293 -15.4885,32.86707"
        id="path34-2-9"
        inkscape:label="contour"
@@ -11808,7 +11808,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm=".1" /><path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        d="m 156.93732,370.62153 c -11,21 -39.93732,31 -59.93732,31 -25,0 -48,-15 -48,-46 0,-17 5,-36 7,-50 l 9,-53 c 1.065161,-6.02959 2.376556,-11.17099 2,-15 0,-9 -2,-9.97589 -6,-9.97589 -5,0 -8.975908,7 -14.975908,19 -3.666667,7.33333 -12.40941,24.81882 -11,22 l -9.290549,-5.02411 11.620785,-22 c 5.170943,-9.94412 11.55156,-18.61545 18.745918,-23.1749 10.892605,-6.90321 23.650581,-6.8251 36.899754,-6.8251 h 47 c -2,21 -20,87 -24,104 l -9,34 c -1,4 -2,8 -2,11 0,12 8,19 17,19 10,0 22,-6 28,-18 l 13,-27 9.42582,3.13293 -15.4885,32.86707"
        id="path34-2"
        inkscape:label="contour"
@@ -11851,7 +11851,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 176.94691,363.35568 C 191.33201,340.91384 200,307.70178 200,269 c 0,-33 -12,-51 -36,-51 -41,0 -72,66 -72,132 0,31 11,44 37,44 18.96149,0 35.57025,-11.33582 47.94691,-30.64432"
        id="path28-0"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        inkscape:label="contour int"
        sodipodi:nodetypes="cssssc"
        inkstitch:bean_stitch_repeats="1"
@@ -11898,7 +11898,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 198.53056,386.84123 C 177.93516,398.00723 153.42387,404 127,404 92.780358,404 66.457732,393.72699 50.707532,375.64204 39.261859,362.49971 33.897869,344.11843 33,326 29.188896,249.09437 91,208 166,208 c 62,0 94,25 94,73 0,48.86197 -24.38747,85.73688 -61.46944,105.84123"
        id="path36-9"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        inkscape:label="contour ext"
        sodipodi:nodetypes="csssssc"
        inkstitch:stroke_method="running_stitch"
@@ -11947,7 +11947,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 176.94691,363.35568 C 191.33201,340.91384 200,307.70178 200,269 c 0,-33 -12,-51 -36,-51 -41,0 -72,66 -72,132 0,31 11,44 37,44 18.96149,0 35.57025,-11.33582 47.94691,-30.64432"
        id="path336"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.5"
        inkscape:label="contour int"
        sodipodi:nodetypes="cssssc"
        inkstitch:bean_stitch_repeats="1"
@@ -12009,7 +12009,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 198.53056,386.84123 C 177.93516,398.00723 153.42387,404 127,404 92.780358,404 66.457732,393.72699 50.707532,375.64204 39.261859,362.49971 33.897869,344.11843 33,326 29.188896,249.09437 91,208 166,208 c 62,0 94,25 94,73 0,48.86197 -24.38747,85.73688 -61.46944,105.84123"
        id="path341"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none"
        inkscape:label="contour ext"
        sodipodi:nodetypes="csssssc"
        inkstitch:stroke_method="running_stitch"
@@ -12103,7 +12103,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 289.02235,371 C 278.02235,393 258,403 241,403 c -24,0 -41,-18 -41,-60 l -41,35 c -22,18 -42,26 -58,26 -33,0 -43,-25 -43,-56 0,-16 2,-34 6,-51 l 9,-35 c 2,-6 2,-10 2,-14 0,-10 -1.864255,-15 -7.864255,-15 -6,0 -12.102298,6.13085 -18.357165,18 L 34.02299,282.02206 25.108818,277 42.597635,242 C 54.597635,218 70,208 86,208 c 35,0 47,23 47,51 0,15 -3,31 -9,47 l -8,20 c -4,10 -7,25 -7,37 0,11 2.9992,18.11167 12.9992,18.11167 9,0 22,-6 30,-13 l 49,-40 c 1,-12 3.04159,-22.36895 4.04159,-31.36895 v 0 L 218,215 c 0.55958,-3.70078 5.07408,-3 4,-3 H 233.33275 254 c 13,0 27,2 27,6 v 1 l -32,141 c -1.03317,4.30679 -1.01462,8.20463 -1,11 0.0627,11.99984 4.48944,16.24411 10.48944,16.24411 8,0 15.16388,-6.41097 21.48661,-18.24411 l 11.75512,-24.26802 9.29118,4.26802 -12,22"
        id="path127-9"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none;stroke-dashoffset:0"
        sodipodi:nodetypes="csccssccssscccsscssscccccscssccsssccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -12197,7 +12197,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 289.02235,371 C 278.02235,393 258,403 241,403 c -24,0 -41,-18 -41,-60 l -41,35 c -22,18 -42,26 -58,26 -33,0 -43,-25 -43,-56 0,-16 2,-34 6,-51 l 9,-35 c 2,-6 2,-10 2,-14 0,-10 -1.864255,-15 -7.864255,-15 -6,0 -12.102298,6.13085 -18.357165,18 L 34.02299,282.02206 25.108818,277 42.597635,242 C 54.597635,218 70,208 86,208 c 35,0 47,23 47,51 0,15 -3,31 -9,47 l -8,20 c -4,10 -7,25 -7,37 0,11 2.9992,18.11167 12.9992,18.11167 9,0 22,-6 30,-13 l 49,-40 c 1,-12 3.04159,-22.36895 4.04159,-31.36895 v 0 L 218,215 c 0.55958,-3.70078 5.07408,-3 4,-3 H 233.33275 254 c 13,0 27,2 27,6 v 1 l -32,141 c -1.03317,4.30679 -1.01462,8.20463 -1,11 0.0627,11.99984 4.48944,16.24411 10.48944,16.24411 8,0 15.16388,-6.41097 21.48661,-18.24411 l 11.75512,-24.26802 9.29118,4.26802 -12,22"
        id="path127-22"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none;stroke-dashoffset:0"
        sodipodi:nodetypes="csccssccssscccsscssscccccscssccsssccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
@@ -12304,7 +12304,7 @@ Created by gluk (gluksza@wp.pl | www.glukfonts.pl) with FontForge.
        inkstitch:min_jump_stitch_length_mm="3" /><path
        d="M 289.02235,371 C 278.02235,393 258,403 241,403 c -24,0 -41,-18 -41,-60 l -41,35 c -22,18 -42,26 -58,26 -33,0 -43,-25 -43,-56 0,-16 2,-34 6,-51 l 9,-35 c 2,-6 2,-10 2,-14 0,-10 -1.864255,-15 -7.864255,-15 -6,0 -12.102298,6.13085 -18.357165,18 L 34.02299,282.02206 25.108818,277 42.597635,242 C 54.597635,218 70,208 86,208 c 35,0 47,23 47,51 0,15 -3,31 -9,47 l -8,20 c -4,10 -7,25 -7,37 0,11 2.9992,18.11167 12.9992,18.11167 9,0 22,-6 30,-13 l 49,-40 c 1,-12 3.04159,-22.36895 4.04159,-31.36895 v 0 L 218,215 c 0.55958,-3.70078 5.07408,-3 4,-3 H 233.33275 254 c 13,0 27,2 27,6 v 1 l -32,141 c -1.03317,4.30679 -1.01462,8.20463 -1,11 0.0627,11.99984 4.48944,16.24411 10.48944,16.24411 8,0 15.16388,-6.41097 21.48661,-18.24411 l 11.75512,-24.26802 9.29118,4.26802 -12,22"
        id="path127-2"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.498898;stroke-dasharray:none;stroke-dashoffset:0"
        sodipodi:nodetypes="csccssccssscccsscssscccccscssccsssccc"
        inkscape:label="contour"
        inkstitch:bean_stitch_repeats="1"
