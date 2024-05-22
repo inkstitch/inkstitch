@@ -92,7 +92,7 @@ Si vous souhaitez trier les  couleurs [voici comment faire](https://inkstitch.or
 
 ## Broder en monochrome.... ou pas
 
-Vous pouvez aussi broder ondulamarif avec une seul fil , simplement en donnant la même couleur à toutes les contours du lettrage. Cela ne signifie pas qu'ondulamarif devient alors monocolore, car elle est très jolie brodée avec un fil multicolore.
+Vous pouvez aussi broder ondulamarif avec une seul fil , simplement en donnant la même couleur à tous les objets du lettrage. Cela ne signifie pas qu'ondulamarif devient alors monocolore, car elle est très jolie brodée avec un fil multicolore.
 
 
 
