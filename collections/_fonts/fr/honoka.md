@@ -5,7 +5,7 @@ last_modified_at: 2024-05-23
 toc: false
 preview_image:
   - url: /assets/images/fonts/honoka.jpg
-    height: 35
+    height: 20
 ---
 
 {%- assign font = site.data.fonts.honoka.font -%}
