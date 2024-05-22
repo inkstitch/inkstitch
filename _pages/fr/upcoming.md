@@ -268,7 +268,7 @@ Visualise et Exporter > Export pdf
 * Le simulateur est maintenant attaché à la fenêtre principale (Paramètre et Lettrage)([#2557](https://github.com/inkstitch/inkstitch/issues/2557)), il est détachable, et son dernier état est conservé.
 * La couleur de fond du simulateur est maintenant modifiable, et il a la capacité de montrer/cacher les sauts de fil. ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
 
-### [Stitch Plan Preview](/fr/docs/visualize/#stitch-plan-preview)
+### [Prévisualisaton du plan de broderie](/fr/docs/visualize/#stitch-plan-preview)
 
 `Visualiser et exporter > Prévisualisaton du plan de broderie`
 
