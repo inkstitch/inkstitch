@@ -5,7 +5,7 @@ last_modified_at: 2024-05-22
 preview_image:
   - url: /assets/images/fonts/ondulamarif_XL.png
     height: 110
-  - url: /assets/images/fonts/ondulamarif_Medium.png
+  - url: /assets/images/fonts/ondulamarif_medium.png
     height: 82
   - url: /assets/images/fonts/ondulamarif_small.png
     height: 44
@@ -41,8 +41,8 @@ Elle peut être agrandie jusqu'à   {{ font1.max_scale | times: 100 | floor }}% 
 ## Ondulamarif Medium
 
 <img 
-     src="/assets/images/fonts/ondulamarif_Medium.png"
-     alt="Ondulamarif XL " height="41">
+     src="/assets/images/fonts/ondulamarif_medium.png"
+     alt="Ondulamarif Medium " height="41">
      
 **Ondulamarif Medium  présente un nombre d’ondulations toujours égal à  6.**
 
@@ -66,7 +66,7 @@ Cette variation d'ondulamarif XL   peut être utilisée
 ## Ondulamarif Small
 <img 
      src="/assets/images/fonts/ondulamarif_small.png"
-     alt="Ondulamarif XL " height="22">
+     alt="Ondulamarif Small " height="22">
 
 **Ondulamarif Small présente un nombre d’ondulations toujours égal à  4.**
 
