@@ -1,7 +1,7 @@
 ---
 title: "Bibliothèque de points"
 permalink: /fr/docs/stitch-library/
-last_modified_at: 2023-04-18
+last_modified_at: 2024-05-22
 toc: true
 ---
 Les types de points Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
@@ -61,11 +61,28 @@ Ink/Stitch va dessiner des zig-zags entre deux lignes. Vous pouvez faire varier 
 
 [En savoir plus](/fr/docs/stitches/satin-column/){: .btn .btn--primary}
 
-### E-Stitch
+### Point en E
+
 Le point "E" est un point de recouvrement simple mais solide pour les éléments appliqués. Principalement pour les vêtements de bébé car leur peau a tendance à être plus sensible.
 ![Point en E Détail](/assets/images/docs/e-stitch-detail.jpg)
 
 [En savoir plus](/fr/docs/stitches/e-stitch/){: .btn .btn--primary}
+
+### Point en S
+
+Le point en “S” est une colonne satin qui se donne des airs de remplissage capable de suivre une courbe
+
+![S-Stitch sample](/assets/images/docs/s-stitch-detail.png)
+
+[En savoir plus](/fr/docs/stitches/s-stitch/){: .btn .btn--primary}
+
+### Point Satin en Zigzag
+
+Le satin en “zigzag” est une colonne satin avec un air de zigzag.
+
+![Zizag Sample](/assets/images/docs/en/compare-satin-zigzag.png)
+
+[En savoir plus](/fr/docs/stitches/zigzag-satin-stitch/){: .btn .btn--primary}
 
 
 ## Remplissage
@@ -79,19 +96,38 @@ Le point de remplissage est utilisé pour remplir une grande surface avec une co
 
 [En savoir plus](/fr/docs/stitches/fill-stitch/){: .btn .btn--primary}
 
+### Remplissage circulaire
+Le remplissage circulaire remplit une forme avec une spirale. Le centre de la spirale est positionné au centre de la forme. Il et possible de personnaliser la position du centre de la spirale à l'aide d'une cible.
+
+![Remplissage circulaire](/assets/images/docs/circular-fill-detail.png)
+
+[En savoir plus](/fr/docs/stitches/circular-fill){: .btn .btn--primary}
+
 ### Remplissage selon contour
+
 Le remplissage selon contour recouvre des zones en suivant leur contours.
 
 ![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
 
-[Learn more](/fr/docs/stitches/contour-stitch){: .btn .btn--primary}
+[En savoir plus](/fr/docs/stitches/contour-stitch){: .btn .btn--primary}
 
 ### Remplissage guidé
+
 Créez des lignes de guidage pour générer un remplissage courbé.
 
 ![Guided fill](/assets/images/docs/guided-fill-complex.svg)
 
-[Learn more](/fr/docs/stitches/guided-fill){: .btn .btn--primary}
+[En savoir plus](/fr/docs/stitches/guided-fill){: .btn .btn--primary}
+
+### Remplissage en dégradé linéaire
+
+{% include upcoming_release.html %}
+
+Le remplissage en dégradé linéaire utilise la couleur du dégradé linéaire d’Inkscapes pour créer des dégradés homogènes avec un positionnement de point cohérent.
+
+![Gradient sample](/assets/images/tutorials/make_tartan_font_easier/herbst.jpg)
+
+[En savoir plus](/docs/stitches/linear-gradient-fill){: .btn .btn--primary}
 
 ### Remplissage en méandres
 
@@ -101,9 +137,18 @@ Le remplissage en méandres est originaire des techniques de quilting. Il produi
 
 [En savoir plus](/fr/docs/stitches/meander-fill){: .btn .btn--primary}
 
-### Remplissage circulaire
-Le remplissage circulaire remplit une forme avec une spirale. Le centre de la spirale est positionné au centre de la forme. Il et possible de personnaliser la position du centre de la spirale à l'aide d'une cible.
+### Tartan Fill
 
-![Remplissage circulaire](/assets/images/docs/circular-fill-detail.png)
+{% include upcoming_release.html %}
 
-[En savoir plus](/fr/docs/stitches/circular-fill){: .btn .btn--primary}
+Un Tartan et un tissu à motif de rayures horizontales et verticales. Il est en particulier connu pour son utilisation pour les kilt écossais. Ce point de broderie essaye d’imiter ces motifs.
+
+![Tartan sample](/assets/images/galleries/fonts/colorful/bev_tartan.jpg)
+
+[En savoir plus](/fr/docs/stitches/tartan-fill){: .btn .btn--primary}
+
+### Remplissage legacy
+
+En mode de remplissage manuel, l’extension divisera la forme en sections, chacune pouvant être brodée en une fois. Ensuite, ces sections seront cousues un à la fois, en sautant directement entre les sections.
+
+[En savoir plus](/fr/docs/stitches/fill-stitch/#remplissage-manuel-dit-aussi-remplissage-legacy){: .btn .btn--primary}

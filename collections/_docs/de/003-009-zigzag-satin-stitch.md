@@ -1,23 +1,21 @@
 ---
-title: "Zigzag Satin Stitch"
+title: "Zick-Zack (Satin)"
 permalink: /de/docs/stitches/zigzag-satin-stitch/
-last_modified_at: 2024-04-29
+last_modified_at: 2024-05-22
 toc: true
 ---
 {% include upcoming_release.html %}
 
 ## Beschreibung
 
+"Zick-Zack" ist eine Satinsäule mit einem Zick-Zack-Muster das bessere Ergebnisse erzeugt als die einfache Variante aus nur einer Linie.
 
-"Zigzag " is a satin column that looks like a better version of the zigzag stitch
 ![Point Satin Zigzag](/assets/images/docs/en/compare-satin-zigzag.png)
-
 
 ## Funktionsweise
 
 Bereite deinen Pfad genauso vor, wie du es für [Satinsäulen](/de/docs/stitches/satin-column) tun würdest. 
 Dann aktiviere die Funktion "Zigzag" im [Parameter-Dialogfenster](/de/docs/params/#satinsäule). 
-
 
 ## Parameter
 
@@ -49,7 +47,6 @@ Reihenanzahl bis sich das Muster wiederholt |![Stagger example](/assets/images/d
 Minimale Stichlänge für randomisierte Zwischenstiche|  | Wenn leer, wird der Wert für die maximale Stichlänge verwendet. Kleinere Werte erlauben einen Übergang von Einzelstich zu Teilstich.
 Zufallszahl                          | | Zufallswert für randomisierte Attribute. Falls leer wird die Element-ID verwendet.
 {: .params-table }
-
 
 Die Parametereinstellungen der Unterlagen unterscheiden sich nicht zu den [Parametern der Satinsäule](/de/docs/stitches/satin-column).
 

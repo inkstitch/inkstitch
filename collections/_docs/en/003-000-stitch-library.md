@@ -1,7 +1,7 @@
 ---
 title: "Stitch Library"
 permalink: /docs/stitch-library/
-last_modified_at: 2023-02-26
+last_modified_at: 2024-05-22
 toc: true
 ---
 Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
@@ -52,6 +52,7 @@ Zig-Zag stitches are a very basic option to create a simple zig-zag line. We rec
 {% include video id="U7YtajKlftQ" provider="youtube" %}
 
 ### Satin Column
+
 Satin stitch is mostly used for borders, letters or small fill areas.
 
 Ink/Stitch will draw zig-zags back and forth between two lines, while you can vary the thickness of the column as you like.
@@ -61,11 +62,28 @@ Ink/Stitch will draw zig-zags back and forth between two lines, while you can va
 [Learn more](/docs/stitches/satin-column/){: .btn .btn--primary}
 
 ### E-Stitch
+
 The biggest purpose for E-stitch is a simple but strong cover stitch for applique items. Mainly for baby cloths as their skin tends to be more sensitive.
 
 ![E-Stitch Detail](/assets/images/docs/e-stitch-detail.jpg)
 
 [Learn more](/docs/stitches/e-stitch/){: .btn .btn--primary}
+
+### S-Stitch
+
+“S-Stitch” is a satin column that looks like a curvy fill.
+
+![S-Stitch sample](/assets/images/docs/s-stitch-detail.png)
+
+[Learn more](/docs/stitches/e-stitch/){: .btn .btn--primary}
+
+### Zigzag Satin
+
+“Zigzag “ is a satin column that looks like a better version of the zigzag stitch (stroke).
+
+![Zizag Sample](/assets/images/docs/en/compare-satin-zigzag.png)
+
+[Learn more](/docs/stitches/zigzag-satin-stitch/){: .btn .btn--primary}
 
 
 ## Fill
@@ -73,13 +91,23 @@ The biggest purpose for E-stitch is a simple but strong cover stitch for appliqu
 {% include video id="Dn1cVOxlX8c" provider="youtube" %}
 
 ### Fill Stitch
+
 Fill stitch is used to fill big areas with a color.
 
 ![Fill stitch realistic](/assets/images/docs/fill-stitch-realistic.png)
 
 [Learn more](/docs/stitches/fill-stitch/){: .btn .btn--primary}
 
+### Circular Fill
+
+Circular fill fills a shape with an embroidered spiral. The center of the spiral is positioned at the center of the shape. A target point can be used to define a custom spiral center.
+
+![Meander stitch detail](/assets/images/docs/circular-fill-detail.png)
+
+[Learn more](/docs/stitches/circular-fill){: .btn .btn--primary}
+
 ### Contour Stitch
+
 Contour fill covers areas with stitches following the contour of an object.
 
 ![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
@@ -87,22 +115,43 @@ Contour fill covers areas with stitches following the contour of an object.
 [Learn more](/docs/stitches/contour-stitch){: .btn .btn--primary}
 
 ### Guided Fill
+
 Create guide lines to generate a curved fill.
 
 ![Guided fill](/assets/images/docs/guided-fill-complex.svg)
 
 [Learn more](/docs/stitches/guided-fill){: .btn .btn--primary}
 
+### Linear Gradient Fill
+
+{% include upcoming_release.html %}
+
+Linear gradient fill uses Inkscapes linear gradient color to create seamless gradients with a consistent stitch positioning.
+
+![Gradient sample](/assets/images/tutorials/make_tartan_font_easier/herbst.jpg)
+
+[Learn more](/docs/stitches/linear-gradient-fill){: .btn .btn--primary}
+
 ### Meander Fill
+
 Meander fill has its origins in quilting techniques. A beautiful patterned effect results for machine embroidery. Large areas can be filled with relatively few stitches.
 
 ![Meander fill](/assets/images/docs/meander-fill.png)
 
 [Learn more](/docs/stitches/meander-fill){: .btn .btn--primary}
 
-### Circular Fill
-Circular fill fills a shape with an embroidered spiral. The center of the spiral is positioned at the center of the shape. A target point can be used to define a custom spiral center.
+### Tartan Fill
 
-![Meander stitch detail](/assets/images/docs/circular-fill-detail.png)
+{% include upcoming_release.html %}
 
-[Learn more](/docs/stitches/circular-fill){: .btn .btn--primary}
+Tartan is a patterned fabric with colored horizontal and vertical stripes. It is typically known from scottish kilts. The embroidery stitch type tries to mimic the typical pattern.
+
+![Tartan sample](/assets/images/galleries/fonts/colorful/bev_tartan.jpg)
+
+[Learn more](/docs/stitches/tartan-fill){: .btn .btn--primary}
+
+### Legacy Fill
+
+In legacy fill, the extension will still break up the shape into sections, each of which can be embroidered in one go. Then these sections will be fill-stitched one at a time, jumping directly between sections.
+
+[Learn more](/docs/stitches/fill-stitch/#legacy-fill){: .btn .btn--primary}

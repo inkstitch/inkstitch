@@ -1,7 +1,7 @@
 ---
 title: "Stich-Bibliothek"
 permalink: /de/docs/stitch-library/
-last_modified_at: 2023-02-26
+last_modified_at: 2024-05-22
 toc: true
 ---
 Ink/Stitch-Sticharten können grob in drei Gruppen eingeteilt werden: Linien, Satin- und Füllstich.
@@ -66,13 +66,29 @@ Ink/Stitch produziert Zick-Zack-Linien zwischen zwei Randlinien. Dabei ist es m�
 
 [Mehr lesen](/de/docs/stitches/satin-column/){: .btn .btn--primary}
 
-### E-Stitch
+### E-Stich
 
 E-Stich dient als einfacher (und dennoch fester) Deckstich für Applikationen. Er ist besonders geeignet für Baby-Kleidung, da ihre Haut besonders empfindlich ist.
 
 ![E-Stitch Detail](/assets/images/docs/e-stitch-detail.jpg)
 
 [Mehr lesen](/de/docs/stitches/e-stitch/){: .btn .btn--primary}
+
+### S-Stich
+
+S-Stich ist eine Satinsäule die wie eine Füllung aussieht.
+
+![S-Stitch sample](/assets/images/docs/s-stitch-detail.png)
+
+[Mehr lesen](/de/docs/stitches/s-stitch/){: .btn .btn--primary}
+
+### Zick-Zack (Satin)
+
+"Zick-Zack" ist eine Satinsäule mit einem Zick-Zack-Muster.
+
+![Zizag Sample](/assets/images/docs/en/compare-satin-zigzag.png)
+
+[Mehr lesen](/de/docs/stitches/zigzag-satin-stitch/){: .btn .btn--primary}
 
 
 ## Füllstiche
@@ -86,6 +102,14 @@ Füllstich wird benutzt, um große Bereiche mit einer Farbe zu füllen.
 ![Fill stitch realistic](/assets/images/docs/fill-stitch-realistic.png)
 
 [Mehr lesen](/de/docs/stitches/fill-stitch/){: .btn .btn--primary}
+
+### Circular Fill
+
+Eine Spiralfüllung füllt eine Form mit einer gestickten Spirale. Der Mittelpunkt der Spirale liegt im Mittelpunkt des Elements. Eine Zielposition kann definiert werden um den Spiralmittelpunkt zu verschieben.
+
+![Meander stitch detail](/assets/images/docs/circular-fill-detail.png)
+
+[Mehr lesen](/de/docs/stitches/circular-fill){: .btn .btn--primary}
 
 ### Konturfüllung
 
@@ -103,6 +127,14 @@ Kurvenfüllung füllt eine Fläche mit Kopien einer Führungslinie.
 
 [Mehr lesen](/de/docs/stitches/guided-fill){: .btn .btn--primary}
 
+### Lineare Verlaufsfüllung
+
+Die lineare Verlaufsfüllung nutzt die in Inkscape gesetzte Farbe “linearer Verlauf” um einen nahtlosen Verlauf mit guter Stichpositionierung zu schaffen.
+
+![Gradient sample](/assets/images/tutorials/make_tartan_font_easier/herbst.jpg)
+
+[Mehr lesen](/docs/stitches/linear-gradient-fill){: .btn .btn--primary}
+
 ### Mäanderfüllung
 
 Mäanderfüllung hat seinen Ursprung in Quilt-Techniken. Für das Maschinensticken ergibt sich ein schöner gemusterter Effekt. Große Bereiche können mit relativ wenigen Stichen befüllt werden.
@@ -111,10 +143,16 @@ Mäanderfüllung hat seinen Ursprung in Quilt-Techniken. Für das Maschinenstick
 
 [Mehr lesen](/de/docs/stitches/meander-fill){: .btn .btn--primary}
 
-### Circular Fill
+### Tartan Fill
 
-Eine Spiralfüllung füllt eine Form mit einer gestickten Spirale. Der Mittelpunkt der Spirale liegt im Mittelpunkt des Elements. Eine Zielposition kann definiert werden um den Spiralmittelpunkt zu verschieben.
+Tartan ist ein gemusterter Stoff mit farbigen horizontalen und vertikalen Streifen. Man kennt es typischerweise von schottischen Kilts. Diese Stichart versucht, das typische Muster nachzuahmen.
 
-![Meander stitch detail](/assets/images/docs/circular-fill-detail.png)
+![Tartan sample](/assets/images/galleries/fonts/colorful/bev_tartan.jpg)
 
-[Mehr lesen](/de/docs/stitches/circular-fill){: .btn .btn--primary}
+[Mehr lesen](/docs/stitches/tartan-fill){: .btn .btn--primary}
+
+### Veraltete Füllung
+
+Bei dem Manuellen Füllen zerlegt die Erweiterung die Form in Abschnitte, die zusammenhängend gestickt werden können. Diese Abschnitte werden hintereinander gestickt. Zwischen den Abschnitten können jedoch Sprungstiche entstehen.
+
+[Mehr lesen](/docs/stitches/fill-stitch/#legacy-fill){: .btn .btn--primary}

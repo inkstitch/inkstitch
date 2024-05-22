@@ -10,6 +10,7 @@ toc: true
 
 
 Le point en  "S" est une colonne satin qui se donne des airs de remplissage capable de suivre une courbe:
+
 ![Point S Détail](/assets/images/docs/s-stitch-detail.png)
 
 ## Comment le créer

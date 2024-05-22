@@ -1,23 +1,21 @@
 ---
 title: "S-Stich"
 permalink: /de/docs/stitches/s-stitch/
-last_modified_at: 2024-04-22
+last_modified_at: 2024-05-22
 toc: true
 ---
 {% include upcoming_release.html %}
 
 ## Beschreibung
 
+S-Stich ist eine Satinsäule die wie eine Füllung aussieht.
 
-"S-Stitch" is a satin column that looks like a curvy fill.  
 ![Point S Détail](/assets/images/docs/s-stitch-detail.png)
-
 
 ## Funktionsweise
 
 Bereite deinen Pfad genauso vor, wie du es für [Satinsäulen](/de/docs/stitches/satin-column) tun würdest. 
 Dann aktiviere die Funktion "S Stich" im [Parameter-Dialogfenster](/de/docs/params/#satinsäule). 
-
 
 ## Parameter
 
@@ -50,10 +48,8 @@ Minimale Stichlänge für randomisierte Zwischenstiche|  | Wenn leer, wird der W
 Zufallszahl                          | | Zufallswert für randomisierte Attribute. Falls leer wird die Element-ID verwendet.
 {: .params-table }
 
-
 Die Parametereinstellungen der Unterlagen unterscheiden sich nicht zu den [Parametern der Satinsäule](/de/docs/stitches/satin-column).
 
 ## Beispieldateien die S-Stich enthalten
 
 {% include tutorials/tutorial_list key="stichart" value="S-Stich" %}
-
