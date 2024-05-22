@@ -1,5 +1,5 @@
 ---
-title: "コリンの書いたもの"
+title: "コリンの書き方"
 permalink: /fr/fonts/honoka/
 last_modified_at: 2024-05-23
 toc: false
