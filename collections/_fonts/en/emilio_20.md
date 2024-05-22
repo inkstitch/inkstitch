@@ -113,7 +113,7 @@ Utilisée à 100%, cette fonte fait environ  45 mm de haut.
 Elle peut être agrandie jusqu'à 150% (env 67 mm) ou diminuée jusqu'à 65% (env 30 mm).
 
 
-This is yet another Emilio variation. It aims at looking liking  like a Tartan Appliqué. The satin border is much lighter as in the other Emilio Variation. Each letter has its own tartan, therefore embroidering it as is is not for the faint of heart ! Quite a few threads changes are required. However for a less work intense (but also less colorful) variation with only one tartan shared by all leters, see  [this](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) 
+This is yet another Emilio variation. It aims at looking liking  like a Tartan Appliqué. The satin border is much lighter as in the other Emilio Variation. Each letter has its own tartan, therefore embroidering it as is is not for the faint of heart ! Quite a few threads changes are required. However for a less work intense (but also less colorful) variation with only one tartan shared by all leters, see  [this](https://inkstitch.org/tutorials/make_tartan_font_easier/) 
 
 
 ## Color sorting
