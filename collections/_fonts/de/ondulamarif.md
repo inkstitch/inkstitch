@@ -90,7 +90,7 @@ When using bicolor  letters, you may wish to color sort. It is possible, providi
 
 
 
-## Making the font monochromous ... or not
+## Making the font monochromatic ... or not
 
 You may also embroider ondulamarif with a single thread. In that case, do not color sort but give the  same stroke color to all the font objects. This will save you many stops. 
 
