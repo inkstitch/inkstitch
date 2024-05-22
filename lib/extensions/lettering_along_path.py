@@ -24,8 +24,7 @@ class LetteringAlongPath(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        self.arg_parser.add_argument("-o", "--options", type=str, default=None, dest="page_1")
-        self.arg_parser.add_argument("-i", "--info", type=str, default=None, dest="page_2")
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-s", "--stretch-spaces", type=Boolean, default=False, dest="stretch_spaces")
 
     def effect(self):

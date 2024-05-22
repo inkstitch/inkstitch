@@ -15,6 +15,7 @@ from typing import List, Tuple
 class UnlinkClone(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-r", "--recursive", dest="recursive", type=Boolean, default=True)
 
     def effect(self):

@@ -24,6 +24,7 @@ class LettersToFont(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-d", "--font-dir", type=str, default="", dest="font_dir")
         self.arg_parser.add_argument("-f", "--file-format", type=str, default="", dest="file_format")
         self.arg_parser.add_argument("-c", "--import-commands", type=str, default="params", dest="import_commands")

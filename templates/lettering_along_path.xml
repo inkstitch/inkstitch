@@ -9,7 +9,7 @@
             <submenu name="{{ menu_inkstitch }}" translatable="no" />
         </effects-menu>
     </effect>
-    <param name="options" type="notebook">
+    <param name="notebook" type="notebook">
       <page name="options" gui-text="Options">
         <param name="stretch-spaces" type="bool" gui-text="Stretch"
                gui-description="Expand glyph and word spacing to stretch lettering over the entire path">false</param>
@@ -23,6 +23,9 @@
         <label indent="1">* The text should not be too large for the given path</label>
         <spacer />
         <label>The stretch option defines whether the spaces between glyphs should be expanded so that the text stretches over the entire path.</label>
+        <spacer />
+        <label>More information on our website</label>
+        <label appearance="url">https://inkstitch.org/docs/lettering/#lettering-along-path</label>
       </page>
     </param>
     <script>

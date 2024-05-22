@@ -3,6 +3,21 @@
     <name>Custom font directory</name>
     <id>org.{{ id_inkstitch }}.lettering_custom_font_dir</id>
     <param name="extension" type="string" gui-hidden="true">lettering_custom_font_dir</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <param name="path" type="path" mode="folder" gui-text="Custom font directory"></param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>Set a custom directory for additional fonts to be used with the lettering tool.</label>
+            <spacer />
+            <label>The custom font directory must contain a subdirectory for each font.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/font-tools/#custom-font-directory</label>
+        </page>
+    </param>
+
     <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>
@@ -11,15 +26,6 @@
             </submenu>
         </effects-menu>
     </effect>
-    <label indent="1" >
-        Set a custom directory for additional fonts to be used with the lettering tool.
-    </label>
-    <spacer />
-    <param name="path" type="path" mode="folder" gui-text="Custom font directory"  indent="1"></param>
-    <spacer />
-    <label indent="1" >
-        Usage: The custom font directory must contain a subdirectory for each font.
-    </label>
     <script>
         {{ command_tag | safe }}
     </script>

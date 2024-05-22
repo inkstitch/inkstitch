@@ -3,6 +3,19 @@
     <name>Display stacking order</name>
     <id>org.{{ id_inkstitch }}.display_stacking_order</id>
     <param name="extension" type="string" gui-hidden="true">display_stacking_order</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <param name="font_size" type="int" min="0" max="100" gui-text="Font size">4</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>This extension inserts numbered labels for selected elements into the document to visualize the stitch order.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/visualize/#display-stacking-order</label>
+        </page>
+    </param>
+
     <effect>
         <object-type>all</object-type>
         <effects-menu>
@@ -11,7 +24,7 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="font_size" type="int" min="0" max="100" gui-text="Font size">4</param>
+
     <script>
         {{ command_tag | safe }}
     </script>

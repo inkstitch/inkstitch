@@ -3,6 +3,20 @@
     <name>Update Glyphlist</name>
     <id>org.{{ id_inkstitch }}.lettering_update_json_glyphlist</id>
     <param name="extension" type="string" gui-hidden="true">lettering_update_json_glyphlist</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <param type="path" name="font-file" gui-text="SVG Font File" mode="file" filetypes="svg"/>
+            <param type="path" name="json-file" gui-text="JSON File" mode="file" filetypes="json"/>
+        </page>
+        <page name="info" gui-text="Help">
+            <label appearance="header">Updates the glyphlist in the json file.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/font-tools/#update-glyph-list</label>
+        </page>
+    </param>
+
     <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>
@@ -11,11 +25,7 @@
             </submenu>
         </effects-menu>
     </effect>
-    <label appearance="header" indent="1" >
-        Updates the glyphlist in the json file.
-    </label>
-    <param type="path" name="font-file" gui-text="SVG Font File" indent="1" mode="file" filetypes="svg"/>
-    <param type="path" name="json-file" gui-text="JSON File" indent="1" mode="file" filetypes="json"/>
+
     <script>
         {{ command_tag | safe }}
     </script>

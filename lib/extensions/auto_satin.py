@@ -18,7 +18,7 @@ class AutoSatin(CommandsExtension):
 
     def __init__(self, *args, **kwargs):
         CommandsExtension.__init__(self, *args, **kwargs)
-
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-p", "--preserve_order", dest="preserve_order", type=inkex.Boolean, default=False)
 
     def get_starting_point(self):

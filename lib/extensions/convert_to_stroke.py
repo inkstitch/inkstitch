@@ -16,6 +16,7 @@ class ConvertToStroke(InkstitchExtension):
 
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-k", "--keep_satin", type=inkex.Boolean, default=False, dest="keep_satin")
 
     def effect(self):

@@ -3,6 +3,45 @@
     <name>Stitch Plan Preview</name>
     <id>org.{{ id_inkstitch }}.stitch_plan_preview</id>
     <param name="extension" type="string" gui-hidden="true">stitch_plan_preview</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <param name="layer-visibility" type="optiongroup" appearance="combo" gui-text="Design layer visibility">
+                <option value="unchanged">Unchanged</option>
+                <option value="hidden">Hidden</option>
+                <option value="lower_opacity">Lower opacity</option>
+            </param>
+            <param name="render-mode" type="optiongroup" appearance="combo" gui-text="Render Mode"
+                gui-description="Realistic modes will render to a raster image for performance reasons. Realistic Vector may cause Inkscape to slow down for complex designs.">
+                <option value="simple">Simple</option>
+                <option value="realistic-8">Realistic</option>
+                <option value="realistic-16">Realistic High Quality</option>
+                <option value="realistic-vector">Realistic Vector (slow)</option>
+            </param>
+            <spacer />
+            <separator />
+            <spacer />
+            <param name="move-to-side" type="boolean" gui-text="Move stitch plan beside the canvas">true</param>
+            <param name="needle-points" type="boolean" gui-text="Needle points">false</param>
+            <param name="insensitive" type="boolean" gui-text="Lock"
+                   gui-description="Make stitch plan insensitive to mouse interactions">false</param>
+            <param name="visual-commands" type="boolean" gui-text="Display command symbols">false</param>
+            <param name="render-jumps" type="boolean" gui-text="Render jump stitches">true</param>
+            <spacer />
+            <separator />
+            <spacer />
+            <param name="ignore-layer" type="boolean" gui-text="Add ignore layer command">true</param>
+            <param name="overwrite" type="boolean" gui-text="Override last stitch plan">true</param>
+            <spacer />
+        </page>
+        <page name="info" gui-text="Help">
+            <label>Use this extension to render the stitch plan into the canvas.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/visualize/#stitch-plan-preview</label>
+        </page>
+    </param>
+
     <effect>
         <object-type>all</object-type>
         <effects-menu>
@@ -11,33 +50,7 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="layer-visibility" type="optiongroup" appearance="combo" gui-text="Design layer visibility">
-        <option value="unchanged">Unchanged</option>
-        <option value="hidden">Hidden</option>
-        <option value="lower_opacity">Lower opacity</option>
-    </param>
-    <param name="render-mode" type="optiongroup" appearance="combo" gui-text="Render Mode"
-        gui-description="Realistic modes will render to a raster image for performance reasons. Realistic Vector may cause Inkscape to slow down for complex designs.">
-        <option value="simple">Simple</option>
-        <option value="realistic-8">Realistic</option>
-        <option value="realistic-16">Realistic High Quality</option>
-        <option value="realistic-vector">Realistic Vector (slow)</option>
-    </param>
-    <spacer />
-    <separator />
-    <spacer />
-    <param name="move-to-side" type="boolean" gui-text="Move stitch plan beside the canvas">true</param>
-    <param name="needle-points" type="boolean" gui-text="Needle points">false</param>
-    <param name="insensitive" type="boolean" gui-text="Lock"
-           gui-description="Make stitch plan insensitive to mouse interactions">false</param>
-    <param name="visual-commands" type="boolean" gui-text="Display command symbols">false</param>
-    <param name="render-jumps" type="boolean" gui-text="Render jump stitches">true</param>
-    <spacer />
-    <separator />
-    <spacer />
-    <param name="ignore-layer" type="boolean" gui-text="Add ignore layer command">true</param>
-    <param name="overwrite" type="boolean" gui-text="Override last stitch plan">true</param>
-    <spacer />
+
     <script>
         {{ command_tag | safe }}
     </script>

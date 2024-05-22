@@ -16,6 +16,7 @@ from .base import InkstitchExtension
 class InstallCustomPalette(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-f", "--filepath", type=str, default="", dest="filepath")
 
     def effect(self):
@@ -35,7 +36,10 @@ class InstallCustomPalette(InkstitchExtension):
         if not os.path.isdir(palette_path):
             inkex.errormsg(_("Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."))
         dest = os.path.join(palette_path, palette_name)
-        shutil.copyfile(gpl,  dest)
+        try:
+            shutil.copyfile(gpl,  dest)
+        except shutil.SameFileError:
+            pass
 
         if not os.path.isfile(dest):
             inkex.errormsg("Something wwent wrong. Ink/Stitch wasn't able to copy your palette "

@@ -21,6 +21,7 @@ class Troubleshoot(InkstitchExtension):
 
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-p", "--pointer-size", type=float, default=5, dest="pointer_size_mm")
         self.arg_parser.add_argument("-f", "--font-size", type=float, default=2, dest="font_size_mm")
 

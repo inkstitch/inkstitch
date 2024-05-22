@@ -25,6 +25,7 @@ from .utils.inkex_command import inkscape
 class StitchPlanPreview(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-s", "--move-to-side", type=Boolean, default=True, dest="move_to_side")
         self.arg_parser.add_argument("-v", "--layer-visibility", type=str, default="unchanged", dest="layer_visibility")
         self.arg_parser.add_argument("-n", "--needle-points", type=Boolean, default=False, dest="needle_points")

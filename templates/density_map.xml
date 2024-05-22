@@ -3,6 +3,34 @@
     <name>Density Map</name>
     <id>org.{{ id_inkstitch }}.density_map</id>
     <param name="extension" type="string" gui-hidden="true">density_map</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <label appearance="header">Red markers</label>
+            <param name="num-neighbors-red" gui-text="Number of stitches" gui-description="0 = no density info" type="int" min="0" max="99" indents="1">6</param>
+            <param name="density-radius-red" gui-text="within a radius (mm) of" type="float" min="0" max="50" indents="1">0.5</param>
+            <spacer />
+            <label appearance="header">Yellow markers</label>
+            <param name="num-neighbors-yellow" gui-text="Number of stitches" gui-description="0 = no density info" type="int" min="0" max="99" indents="1">3</param>
+            <param name="density-radius-yellow" gui-text="within a radius (mm) of" type="float" min="0" max="50">0.5</param>
+            <spacer />
+            <param name="layer-visibility" type="optiongroup" appearance="combo" gui-text="Design layer visibility" indents="1">
+                <option value="0">Unchanged</option>
+                <option value="1">Hidden</option>
+                <option value="2">Lower opacity</option>
+            </param>
+            <spacer />
+              <param name="indicator-size" type="float" min="0" max="50"  indent="1" gui-text="Indicator size"
+                     precision="2">0.5</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>This extension helps you to determine the stitch density.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/visualize/#density-map</label>
+        </page>
+    </param>
+
     <effect>
         <object-type>all</object-type>
         <effects-menu>
@@ -11,22 +39,7 @@
             </submenu>
         </effects-menu>
     </effect>
-    <label appearance="header">Red markers</label>
-    <param name="num-neighbors-red" gui-text="Number of stitches" gui-description="0 = no density info" type="int" min="0" max="99" indents="1">6</param>
-    <param name="density-radius-red" gui-text="within a radius (mm) of" type="float" min="0" max="50" indents="1">0.5</param>
-    <spacer />
-    <label appearance="header">Yellow markers</label>
-    <param name="num-neighbors-yellow" gui-text="Number of stitches" gui-description="0 = no density info" type="int" min="0" max="99" indents="1">3</param>
-    <param name="density-radius-yellow" gui-text="within a radius (mm) of" type="float" min="0" max="50">0.5</param>
-    <spacer />
-    <param name="layer-visibility" type="optiongroup" appearance="combo" gui-text="Design layer visibility" indents="1">
-        <option value="0">Unchanged</option>
-        <option value="1">Hidden</option>
-        <option value="2">Lower opacity</option>
-    </param>
-    <spacer />
-      <param name="indicator-size" type="float" min="0" max="50"  indent="1" gui-text="Indicator size"
-             precision="2">0.5</param>
+
     <script>
         {{ command_tag | safe }}
     </script>

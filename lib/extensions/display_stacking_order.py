@@ -14,6 +14,7 @@ from .base import InkstitchExtension
 class DisplayStackingOrder(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-s", "--font_size", type=int, default=4, dest="font_size")
 
     def effect(self):

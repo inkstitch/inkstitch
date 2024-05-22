@@ -23,8 +23,7 @@ class CutworkSegmentation(InkstitchExtension):
     '''
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        self.arg_parser.add_argument("-o", "--options", type=str, default=None, dest="page_1")
-        self.arg_parser.add_argument("-i", "--info", type=str, default=None, dest="page_2")
+        self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-as", "--a_start", type=int, default=112, dest="a_start")
         self.arg_parser.add_argument("-ae", "--a_end", type=int, default=157, dest="a_end")
         self.arg_parser.add_argument("-ac", "--a_color", type=inkex.Color, default=inkex.Color(0x990000ff), dest="a_color")
