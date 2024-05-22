@@ -1,7 +1,7 @@
 ---
 title: "Mäander Füllung"
 permalink: /de/docs/stitches/meander-fill/
-last_modified_at: 2024-05-04
+last_modified_at: 2024-05-22
 toc: true
 ---
 ## Beschreibung
