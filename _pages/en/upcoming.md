@@ -26,7 +26,7 @@ toc: true
 
   ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
 
-* [コリンの書いたもの](/fonts/honoka/) ([#2935](https://github.com/inkstitch/inkstitch/pull/2935))
+* [コリンの書いたも](/fonts/honoka/) ([#2935](https://github.com/inkstitch/inkstitch/pull/2935))
 
   ![Honoka preview](/assets/images/fonts/honoka.jpg)
 * [Invercelia](/fonts/invercelia/) ([#2888](https://github.com/inkstitch/inkstitch/pull/2888))
