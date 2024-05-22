@@ -18,7 +18,7 @@ preview_image:
 ## Ondulamarif XL
 <img 
      src="/assets/images/fonts/ondulamarif_xl.png"
-     alt="Ondulamarif XL " height="55">
+     alt="Ondulamarif XL " height="77">
      
 **Ondulamarif XL à 100% présente un nombre d’ondulations  égal à  6 et ce nombre augmente lorsque la fonte  est agrandie.**
 
@@ -42,7 +42,7 @@ Elle peut être agrandie jusqu'à   {{ font1.max_scale | times: 100 | floor }}% 
 
 <img 
      src="/assets/images/fonts/ondulamarif_medium.png"
-     alt="Ondulamarif Medium " height="41">
+     alt="Ondulamarif Medium " height="61">
      
 **Ondulamarif Medium  présente un nombre d’ondulations toujours égal à  6.**
 
@@ -66,7 +66,7 @@ Cette variation d'ondulamarif XL   peut être utilisée
 ## Ondulamarif Small
 <img 
      src="/assets/images/fonts/ondulamarif_small.png"
-     alt="Ondulamarif Small " height="22">
+     alt="Ondulamarif Small " height="33">
 
 **Ondulamarif Small présente un nombre d’ondulations toujours égal à  4.**
 
