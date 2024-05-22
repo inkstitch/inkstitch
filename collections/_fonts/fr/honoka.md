@@ -23,7 +23,7 @@ Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 ```
 {: .font-glyphs }
 
-
+Pour l'instant cette  fonte ne contient que  les  hiragana, les katakana et les symboles  de constructions. Ultérieurement, elle sera complétée pour inclure des kanji.
 ## Dimensions
 
 A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
