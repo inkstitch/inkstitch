@@ -4,7 +4,7 @@ permalink: /fr/docs/fill-tools/
 last_modified_at: 2024-04-29
 toc: true
 ---
-## Briser les objets de remplissage
+## Briser les objets de remplissage {#break-apart-fill-objects}
 
 Les objets de remplissage peuvent être traités au mieux s'ils sont des éléments uniques sans bordures qui se croisent. Parfois, ces règles ne sont pas faciles à respecter et votre forme aura de minuscules petites boucles impossibles à découvrir dans Inkscape.
 
