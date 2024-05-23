@@ -82,3 +82,8 @@ Wiederhole diesen Prozess bis alle Farben gruppiert sind, wobei immer der zuerst
 Weitere Infos zu diesem Thema findest du in einem eigenen [Schrifterstellungs Tutorial](/de/tutorials/font-creation/).
 
 Kontaktiere uns wenn du deine Schriftart für die nächste Ink/Stitch Version zur Verfügung stellen willst: [GitHub](https://github.com/inkstitch/inkstitch/issues).
+
+## Sample Files Including Lettering
+
+{% include tutorials/tutorial_list key="techniques" value="Lettering" %}
+
