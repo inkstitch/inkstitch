@@ -77,7 +77,7 @@ It works basically the same way, except that this time you have four paths to co
 Here the enveloppe deformation is used independantly on each  line of text
 
 ## Perspective/Deformation
-This path effect  is very  handy for instance to apply....a perspective effect
+This path effect  is very  handy  to apply....a perspective effect
 
 ![perspective example](/assets/images/tutorials/distort/perspective.svg)
 
