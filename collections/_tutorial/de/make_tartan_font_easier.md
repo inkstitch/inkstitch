@@ -41,7 +41,7 @@ Hierfür die Option "Fadenschnitt" in den Parametern (nicht in der Tartan-Erweit
 * Wähle alle Füllelemente aus (rot). Wähle eine aus, klicke dann auf `Inkscape > Bearbeiten > Das Gleiche auswählen > Füllfarbe`
 * `Inkscape > Pfad > Kombinieren`
 * Lege den Pfad in der Stickreihenfolge nach vorne, so dass er zuerst gestickt wird
-* Öffne `Ink/Stitch > Werkzeuge: Füllung > [Tartan]((/de/docs/fill-tools/#tartan) und wähle deine eigenen Einstellungen
+* Öffne Ink/Stitch > Werkzeuge: Füllung > [Tartan](/de/docs/fill-tools/#tartan) und wähle deine eigenen Einstellungen
 
 Es ist auch möglich andere Füllmethoden zu verwenden. Ein besonders interessantes Ergebnis für Füllschriftarten liefert beispielsweise eine [lineare Farbverlaufsfüllung](/de/docs/stitches/linear-gradient-fill/).
 
