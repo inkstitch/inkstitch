@@ -51,7 +51,7 @@ However if  the distortotion is too extreme, the result will probably not stitch
 Bend effect is very easy to apply to a lettering :
 * Select the lettering group
 * Add a  bend path effect to the group
-* Click the "edit on canvas" button and  distort the green path that appears
+* In the path effects dialog, click the "edit on canvas" button and  distort the green path that appears
 
   As it is a live path effect you can change  the green  path again whenever you like 
 
@@ -67,17 +67,17 @@ Of course this is not limited to fonts, you can use this effect to pretend you h
 
 [Download](/assets/images/tutorials/distort/Mantas.svg){: download="Mantas.svg" }
 
-## Enveloppe deformation
-It works basically the same way, except that this time you have four paths to control the distortion. Edit on canvas any or all of the four paths
+## Envelope deformation
+It works basically the same way, except that this time you have four paths to control the distortion. Edit on canvas any or all of the four paths.
 
 ![Manger Enveloppe deformation example](/assets/images/tutorials/distort/manger.svg)
 
 [Download](/assets/images/tutorials/distort/manger.svg){: download="manger.svg" }
 
-Here the enveloppe deformation is used independantly on each  line of text
+Here the enveloppe deformation is used independantly on each  line of text.
 
-## Perspective/Deformation
-This path effect  is very  handy  to apply....a perspective effect
+## Perspective/Envelope
+This path effect  is very  handy  to apply....a perspective effect.
 
 ![perspective example](/assets/images/tutorials/distort/perspective.svg)
 
