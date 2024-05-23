@@ -31,9 +31,9 @@ To  get the best results :
 * avoid very small shapes
 
 Satin column  are tricky : because there is nothing  in the svg file that distinguish rails from rungs 
-in the compound path, inkstitch need to pinpoint the two rails among all the subpaths of a satin column. 
+in the compound path, Ink/Stitch need to pinpoint the two rails among all the subpaths of a satin column. 
 
-To help  inkstitch chose the same subpaths as rails after  distortion:
+To help  Ink/Stitch chose the same subpaths as rails after  distortion:
 
 - avoid  superposed  rails end points
 - rungs should not end  up on the rails,  but cross both rails with flair
