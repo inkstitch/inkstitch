@@ -83,6 +83,6 @@ This path effect  is very  handy for instance to apply text on the faces of a 3D
 
 [Download](/assets/images/tutorials/distort/manger.svg){: download="perspective.svg" }
 
-
+However, here the distortion is probably too much for a good stitchout. Shorter words would be better.
 
 
