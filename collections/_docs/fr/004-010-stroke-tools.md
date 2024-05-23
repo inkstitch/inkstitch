@@ -40,7 +40,7 @@ Cette extensionn aide à reconstruire l'objet original à partir du fichier de p
 - Adjust settings until you are happy with the outcome
 - Cliquez "Appliquer"
 
-## Satin en Trait {jump-to-stroke}
+## Satin en Trait {#convert-satin-to-stroke}
 
 Convertir le satin en trait converti une colonne satin en un trait qui correspond à sa ligne centrale. Ceci peut être utile si vous décider tardivement dans le processus  de transformer une colonne satin en point droit. Vous pouvez aussi l'utiliser pour modifier la largeur d'une colonne satin lorsque la compensation d'étirement ne convient pas bien. Dans ce cas, utilisez cette fonction pour convertir votre colonne satin en point droit, puis modifier l'épaisseur du trait dans le panneau Fond et Contour puis lancez l'extension "Outils Satin > convertir ligne en satin".
 Ceci fonctionne d'autant mieux que la largeur de la colonne satin initiale est constante.
