@@ -1,7 +1,7 @@
 ---
 title: "Vernähstiche"
 permalink: /de/docs/stitches/lock-stitches/
-last_modified_at: 2023-02-27
+last_modified_at: 2024-05-23
 toc: true
 ---
 An- und Verstecher sind kleine Stiche am Anfang (Anstecher) oder am Ende (Verstecher) eines Farbblocks oder vor und nach einem Sprungstich oder Fadenschnitt-Befehl. Sie helfen den Faden zu sichern.
