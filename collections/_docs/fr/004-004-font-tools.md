@@ -90,7 +90,7 @@ Si les informations de crénage ne peuvent être trouvées, ces valeurs seront u
 Un fichier `font.json` sera enregistré dans le dossier de votre fichier de fonte svg.
 
 
-## Lettres vers police
+## Lettres vers police {#letters-to-font}
 
 "Lettres vers police" est un outil pour convertir un ensemble de lettres pré-digitalisées en broderie en une police utilisable par l'outil Lettrage d'Ink/Stitch.
 
@@ -112,7 +112,7 @@ Souvent les fontes de broderie achetées sont organisées en sous dossiers car c
 * Sauvegardez votre fonte dans un fichier  `→.svg` dans un nouveau répertoire de votre  [répertoire personnalisé de polices](#custom-font-directory)
 * Exécutez  [`Génerer JSON`](#generate-json) pour rendre la police disponible dans l'outil de Lettrage et sauvegarder le fichier json dans le même dossier que votre fonte.  Ne pas cocher  "Agencement automatique de colonnes satin" pour les fontes pré-digitalisées et laisser l'échelle à 1.
 
-## Mettre à jour la liste des glyphes
+## Mettre à jour la liste des glyphes  {#update-glyph-list}
 
 {% include upcoming_release.html %} 
 
