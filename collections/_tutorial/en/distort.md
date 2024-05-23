@@ -77,12 +77,12 @@ It works basically the same way, except that this time you have four paths to co
 Here the enveloppe deformation is used independantly on each  line of text
 
 ## Perspective/Deformation
-This path effect  is very  handy for instance to apply text on the faces of a 3D Box
+This path effect  is very  handy for instance to apply....a perspective effect
 
 ![perspective example](/assets/images/tutorials/distort/perspective.svg)
 
 [Download](/assets/images/tutorials/distort/manger.svg){: download="perspective.svg" }
 
-However, here the distortion is probably too much for a good stitchout. Shorter words would be better.
+After adding the effect, activate the node  tool and move the form corners.
 
 
