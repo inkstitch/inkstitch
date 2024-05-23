@@ -83,6 +83,6 @@ This path effect  is very  handy  to apply....a perspective effect
 
 [Download](/assets/images/tutorials/distort/manger.svg){: download="perspective.svg" }
 
-After adding the effect, activate the node  tool and move the form corners.
+After adding the effect, activate the node  tool and move the four corners.
 
 
