@@ -17,9 +17,19 @@ user-level:
 ---
 Les remplissages automatiques ne sont pas forcement des aplats de couleurs, il est possible d'avoir des remplissages en dégradé. 
 
-Le plus simple est d'utiliser  l'extension Ink/Stitch
+## Linear Gradient Fill
 
-## [Convertir en blocs de dégradés](docs/fill-tools/#convert-to-gradient-blocks)
+{% include upcoming_release.html %}
+
+Generating color gradients with Ink/Stitch has become easy. The best quality can be achieved with the [linear gradient fill stitch type](/fr/docs/stitches/linear-gradient-fill/), which aims to produce a flawless fill in terms of row and stitch positions despite the color changes.
+
+* Create a shape with an inkscape gradient fill
+* In the params dialog choose "Linear Gradient Fill" as the fill method
+
+## Convert to Gradient Block extension
+
+Ink/Stitch has a tool to split color gradient fills into separate blocks. It doesn't deliver the same quality result as the usage of the linear gradient fill, but can be used for more experimental purposes. The [convert to gradient blocks extension](docs/fill-tools/#convert-to-gradient-blocks)
+
 * Créer une forme dont la couleur est un dégradé Inkscape, choisissez l'angle du dégradé sur le canevas  en mode édition de noeuds à l'aide des poignées du dégradé, c'est cette direction qui détermine l'*angle* du remplissage.
 * Choisir la méthode de remplissage **automatique** et vos autres paramètres de remplissage (mais l'angle ou l'espacement final entre les rangées seront ignorés, et toute sous-couche sera ignorée)
 * Sélectionner la forme
@@ -38,7 +48,7 @@ Ces 2n blocs de dégradé ont tous un espacement variable. Si l'on regarde deux 
 
 
 
-## A quoi est du l'espacement variable entre les rangées ?
+### A quoi est du l'espacement variable entre les rangées ?
 
 Donner une valeur au paramètre *Espacement final entre les rangées* déclenche un espacement variable entre les rangées.
 En regardant perpendiculairement à l'*angle* de remplissage, l'espacement entre les rangées varie linéairement depuis la valeur  *espacement entre les rangées* jusqu'à la valeur *espacement final entre les rangées*.
@@ -46,7 +56,7 @@ En regardant perpendiculairement à l'*angle* de remplissage, l'espacement entre
 Les deux blocs de dégradés que `Extensions > Ink/Stitch > Outils : Remplissage> Convertir en blocs de dégradés` empile sur chaque partie de la forme ont en fait le mêmes valeurs pour  *espacement entre les rangées* et  *espacement final entre les rangées*, mais leur *angles*  de remplissage sont opposés, remplissant ainsi les conditions d'obtention d'un dégradé. Les valeurs de ces paramètre dépendent du paramètrage initial de la forme, et visent à maintenir la densité de points souhaités. Il n'y a pas de sous-couche, sauf éventuellement sur les parties monochromes du dégradé.
 
 
-## Ajuster le résultat
+### Ajuster le résultat
 
 Utiliser l'extension plutôt que créer manuellement le découpage de la forme en  blocs de dégradés  est un énorme gain de temps. 
 Vous pouvez modifier précautioneusement les valeurs des paramètres *espacement entre les rangées* et  *espacement final entre les rangées* pour obtenir un effet de dégradé différent, mais soyez attentif à de possibles problèmes de densité . Souvenez vous que la densité dépend de l'inverse de l'*espacement entre les rangées*. Si les deux couleurs confondues, vous souhaitez un certain *espacement entre les rangées* **e**, la somme des inverses des espacement entre les rangées des deux blocs dégradés doit être égale à **1/e**, de même que la somme des inverses des *espacements finaux entre les rangées*.
@@ -63,7 +73,7 @@ Ceci est une vue partielle d'un fichier contenant 100 rectangles, chacun d'entre
 ## Dégradé manuel
 Si vous souhaiter réaliser manuellement un dégradé, voici deux techniques possibles
 
-## Faux Remplissage dégradé
+### Faux Remplissage dégradé
 
 1. Un faux dégradé a une couche de remplissage régulier en bas et chaque couche suivante a des paramètres de densité variables
 2. Assurez-vous que toutes les couches ont le même angle de point, c'est ce qui permet le mélange
@@ -76,7 +86,7 @@ Si vous souhaiter réaliser manuellement un dégradé, voici deux techniques pos
 
 [Télécharger le fichier exemple](/assets/images/tutorials/samples/Faux_Fill_Blend.svg){: download="/assets/images/tutorials/samples/Faux_Fill_Blend.svg" }
 
-## Véritable dégradé
+### Véritable dégradé
 
 1. Beaucoup de conditions des faux dégradés s'appliquent également ici. Angle de point, séquence de début / fin, passage des couleurs claires aux couleurs sombres (dépend également du motif)
 2. La plus grande différence réside dans les mathématiques et plus le dégradé est compliqué, plus les calculs sont compliqués. Il suffit de s’assurer que chaque couche d’une section donnée correspond à 100% de la densité de cette section.

@@ -1,7 +1,7 @@
 ---
 title: Color Blending
 permalink: /de/tutorials/color-blending/
-last_modified_at: 2020-10-04
+last_modified_at: 2024-05-23
 language: de
 excerpt: "Farbübergänge"
 image: "/assets/images/tutorials/tutorial-preview-images/blend.png"
@@ -14,61 +14,56 @@ stichart:
 techniken:
 schwierigkeitsgrad:
 ---
+Füllungen müssen nicht flach sein, denn Farbübergänge sind möglich und willkommen.
 
+## Lineare Farbverlaufsfüllung
 
-Automatic fills colors don't have to be flat, gradient fills are welcome !
+{% include upcoming_release.html %}
 
-The easiest way is to use
+Farbverläufe in Ink/Stitch zu erstellen ist leicht geworden. Die beste Qualität erreicht man mit der [Linearen Farbverlaufsfüllung](/de/docs/stitches/linear-gradient-fill/), einer Füllstichart. Da der Farbverlauf hier als Ganzes behandelt wird ist es möglich Reihenabstände und Stichpositionen trotz Farbwechsel konstant zu halten.
 
-## ["Convert to Gradient Block" Ink/Stitch extension](docs/fill-tools/#convert-to-gradient-blocks)
-* Create a shape with an inkscape gradient fill
-* Choose the automatic fill method and choose the rest of the parameters.
-* Select the shape
-* `Extensions > Ink/Stitch > Tools : fill > Convert to gradient blocks`
+* Erstelle eine Form mit einer linearen Farbverlaufsfüllung in Inkscape
+* Wähle in den Ink/Stitch Parametern "Lineare Farbverlaufsfüllung" als Füllmethode aus
 
+## Farbverlauf in Blöcke aufteilen
 
+Ink/Stitch hat ein Werkzeug um Farbverläufe in einzelne Blöcke aufzuteilen. Mit dieser Funktion kann nicht die Gleiche Qualität erreicht werden wir mit der Farbverlaufs-Stichart, aber sie kann für experimentelle Zwecke dienen. Wir sprechen über die Erweiterung [Farbverlauf in Blöcke aufteilen](/de/docs/fill-tools/#farbverlauf-in-blöcke-aufteilen).
+
+* Erstelle eine Form mit einer linearen Farbverlaufsfüllung in Inkscape
+* Wähle als Füllmethode "Automatische Füllung" in den Ink/Stitch Parameter-Einstellungen
+* `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Farbverlauf in Blöcke aufteilen`
 
 ![Download Sample File](/assets/images/tutorials/samples/inkstitch_gradient_extension.svg)
 
-[Download Sample File](/assets/images/tutorials/samples/inkstitch_gradient_extension.svg).
+[Beispieldatei herunterladen](/assets/images/tutorials/samples/inkstitch_gradient_extension.svg).
 
-On each subshape, while first color row spacing decreases,  second color row spacing increases, yielding a gradient fill from first color to second color. 
+In jedem Block erhöht sich der Reihenabstand vom Anfang zum Ende, während der Reihenabstand der nächsten Farbe verringert wird. So entsteht ein Farbübergang von einer zur nächsten Farbe.
 
+Die Richtung des Farbübergangs bestimmt den *Füllwinkel*.
 
-The gradient direction dictates the fill *angle*. 
+### Wie wird die Varianz im Reihenabstand erzeugt?
 
+Ist ein Wert für `Reihenabstand (Ende)` gesetzt, ändert sich der Reihenabstand kontinierlich hin zu diesem Wert. Senkrecht zum Füllwinkel betrachtet, beginnt der Reihenabstand beim Wert `Reihenabstand (Ende)` und endet beim Wert `Reihenabstand`, wobei er linear angepasst wird.
 
+Die übereinanderliegenden Farbblöcke die mit „Farbverlauf in Blöcke aufteilen“ erstellt wurden, haben die gleichen Werte für *Reihenabstand* und *Reihenabstand (Ende)*, aber entgegengesetzte Füllwinkel, wodurch der Verlaufseffekt erzielt wird. 
 
+### Das Ergebnis anpassen
 
-## How is varying row spacing achieved ?
+Die Erweiterung spart im Vergleich zur manuellen Methode viel Zeit. Die Werte für die Reihenabstände können im Nachinein weiter angepasst werden um das Ergebnis zu verändern. Dabei sollte man immer die Dichte aller übereinanderliegenden Blöcke im Auge behalten.
 
-Setting *End row spacing* parameter allows for a varying row spacing fill. 
-Looking perpendicularly to the fill angle, the  row spacing starts at *spacing between rows* value  and ends up at *end row spacing* value, varying linearly in between.
+Die Dichte ist immer dem Wert Reihenabstand entgegengesetzt. Wenn wir einen bestimmten *Gesamtreihenabstand* **sbr** anstreben (beide Farben), dann muss die Summe des Kehrwerts des *Reihenabstandes* der beiden Farbverlaufsblöcke gleich **1/sbr** sein sowie die Summe des Kehrwerts ihres Wertes für *Reihenabstand (Ende)*.
 
-The two gradient blocks the `Convert to gradient blocks` stacks on each subshape have same *spacing between rows* and *end row spacing* but opposite fill angles, therefore achieving the gradient effect. The actual values of these parameters depends on the initial parameters of the shape, aiming to respect the overall row spacing.
-
-
-## Tweaking the result
-
-Using the extension instead of manually creating the subshapes and the gradient blocks is a huge time saver. 
-You may carefully change the values of *spacing between rows* and *end row spacing* to achieve a different blending effect, but be aware of possible density issue, as you are filling each subshape twice.
-
-Remember that density is the inverse of *spacing between rows*. If you aim to a given overall *spacing between rows* **sbr** (both colors included), then the sum of the inverse of the  *spacing between rows* of the two gradient blocs must be equal to **1/sbr**, as well as the sum of the inverse of their 
-*end row spacing*.
-
-
-
-These is part of a file containing 100 rectangles each covered by a red varying spacing fill and a blue varying spacing fill, for different values of the parameters
+Dies ist ein Teil einer Datei mit 100 Rechtecken. Jedes Rechteck zeigt einen Verlauf von Rot nach Blau mit verschiedenen Parametern.
 
 ![Download Sample File](/assets/images/tutorials/samples/end_row_spacing_2_colors_blending.svg)
 
-[Dowload the sample  ](/assets/images/tutorials/samples/end_row_spacing_2_colors_blending.svg) 
+[Beispieldatei herunterladen](/assets/images/tutorials/samples/end_row_spacing_2_colors_blending.svg) 
 
+## Manuelle Farbverläufe
 
+Farbverläufe können auch manuell erstellt werden.
 
-## Manual blending
-If you wish to go the manual way and have total control
-## Falscher Farbübgergang (Faux Fill Blend)
+### Falscher Farbübgergang (Faux Fill Blend)
 
 1. Ein falscher Farbübergang hat eine unterste Ebene mit Standard-Füllstich, jede darüberliegende Ebene variiert in ihrer Dichte
 2. Jede Ebene sollte den selben Stich-Winkel haben, so kann der Farbübergang-Effekt erzielt werden
@@ -81,7 +76,7 @@ If you wish to go the manual way and have total control
 
 [Download Sample File](/assets/images/tutorials/samples/Faux_Fill_Blend.svg){: download="Faux_Fill_Blend.svg" }
 
-## Echter Farbübergang (True Blend)
+### Echter Farbübergang (True Blend)
 
 1. Viele Konditionen des falschen Farbübergangs sind auch auf den echten übertragbar.  Stichwinkel, Start- und Endpunkte, sowie Farbreihenfolge hängen vom individuellen Design ab.
 2. Der größte Unterschied ist, dass gerechnet werden muss: die Gesamtdichte für jeden Bereich sollte bei 100% liegen.
@@ -89,5 +84,3 @@ If you wish to go the manual way and have total control
 4. Was diese Methode zu einem echten Farbbergang macht, ist, dass sich die Farben tatsächlich miteinander "vermischen".
 
 [Download Sample File](/assets/images/tutorials/samples/True_Blend.svg){: download="True_Blend.svg" }
-
-

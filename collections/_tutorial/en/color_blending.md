@@ -1,7 +1,7 @@
 ---
 title: Color Blending
 permalink: /tutorials/color-blending/
-last_modified_at: 2023-05-05
+last_modified_at: 2024-05-22
 language: en
 excerpt: "Color Blending Methods"
 image: "/assets/images/tutorials/tutorial-preview-images/blend.png"
@@ -16,21 +16,27 @@ tool:
   -Fill Stitch
 user-level:
 ---
+Automatic fills don't have to be flat, gradient fills are welcome!
 
-Automatic fills colors don't have to be flat, gradient fills are welcome !
+## Linear Gradient Fill
 
-The easiest way is to use
+{% include upcoming_release.html %}
 
-## ["Convert to Gradient Block" Ink/Stitch extension](docs/fill-tools/#convert-to-gradient-blocks)
+Generating color gradients with Ink/Stitch has become easy. The best quality can be achieved with the [linear gradient fill stitch type](/docs/stitches/linear-gradient-fill/), which aims to produce a flawless fill in terms of row and stitch positions despite the color changes.
+
+* Create a shape with an inkscape gradient fill
+* In the params dialog choose "Linear Gradient Fill" as the fill method
+
+## Convert to Gradient Block extension
+
+Ink/Stitch has a tool to split color gradient fills into separate blocks. It doesn't deliver the same quality result as the usage of the linear gradient fill, but can be used for more experimental purposes. The [convert to gradient blocks extension](docs/fill-tools/#convert-to-gradient-blocks)
+
 * Create a shape with an inkscape gradient fill
 * Choose the automatic fill method and choose the rest of the parameters.
 * Select the shape
 * `Extensions > Ink/Stitch > Tools : fill > Convert to gradient blocks`
 
-
-
 {% include folder-galleries path="color-blending/" captions="1:Inkscape gradient;2:Result of extension ;3:Split view;"  %}
-
 
 If n+1 colors are used, the extension splits the shape into  n parts and stack two gradient blocs over each part. 
 
@@ -40,17 +46,14 @@ The 2n gradient blocs all have varying row spacing: looking at the two stacked g
 
 The gradient direction dictates the fill *angle*. 
 
-
-
-## How is varying row spacing achieved ?
+### How is varying row spacing achieved ?
 
 Setting *End row spacing* parameter allows for a varying row spacing fill. 
 Looking perpendicularly to the fill angle, the  row spacing starts at *spacing between rows* value  and ends up at *end row spacing* value, varying linearly in between.
 
 The two gradient blocks the `Convert to gradient blocks` stacks on each subshape have same *spacing between rows* and *end row spacing* but opposite fill angles, therefore achieving the gradient effect. The actual values of these parameters depends on the initial parameters of the shape, aiming to respect the overall row spacing.
 
-
-## Tweaking the result
+### Tweaking the result
 
 Using the extension instead of manually creating the subshapes and the gradient blocks is a huge time saver. 
 You may carefully change the values of *spacing between rows* and *end row spacing* to achieve a different blending effect, but be aware of possible density issue, as you are filling each subshape twice.
@@ -58,18 +61,16 @@ You may carefully change the values of *spacing between rows* and *end row spaci
 Remember that density is the inverse of *spacing between rows*. If you aim to a given overall *spacing between rows* **sbr** (both colors included), then the sum of the inverse of the  *spacing between rows* of the two gradient blocs must be equal to **1/sbr**, as well as the sum of the inverse of their 
 *end row spacing*.
 
-
-
 These is part of a file containing 100 rectangles each covered by a red varying spacing fill and a blue varying spacing fill, for different values of the parameters
 
 ![Download Sample File](/assets/images/tutorials/samples/end_row_spacing_2_colors_blending.svg)
 
 [Dowload the sample  ](/assets/images/tutorials/samples/end_row_spacing_2_colors_blending.svg) 
 
-
-
 ## Manual blending
+
 If you wish to go the manual way and have total control
+
 ### Faux Fill Blend
 
 1. A faux blend has a regular fill layer on bottom and each subsequent layer has variable density settings
@@ -85,14 +86,9 @@ If you wish to go the manual way and have total control
 
 ### True Blend
 
-
 1. Many of the conditions of faux blends also apply here.  Stitch angle, start/end sequencing, typically go from light to dark colors (depends on the design as well)
 2. Biggest difference is math is involved and the more complicated the blend, the more complicated the math.  Just have to make sure that each layer for a given section equals 100% of the density for that section that you are wanting.
 3. This can involve more layers of colors and more increments of density variation.  The biggest factor is the size/shape of the design and the specifics of the project.
 4. What makes this a true blend compared to a faux blend is that each section of the layers are actually mixing with each other.
 
 [Download Sample File](/assets/images/tutorials/samples/True_Blend.svg){: download="True_Blend.svg" }
-
-
-
-
