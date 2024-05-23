@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-22 01:09+0000\n"
-"PO-Revision-Date: 2024-05-22 01:10\n"
+"POT-Creation-Date: 2024-05-23 01:08+0000\n"
+"PO-Revision-Date: 2024-05-23 01:09\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-22 01:09+0000\n"
+"POT-Creation-Date: 2024-05-23 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -235,161 +235,171 @@ msgstr "小さいフォント(6〜15mm)に適しています"
 msgid "Glacial is a very tiny font: at 100%,  M stands at 5.6mm. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages. It can be reduced down to 50% and enlarged up to 150%."
 msgstr ""
 
-#. description of font in fonts/infinipicto
+#. description of font in fonts/honoka
 #: inkstitch-fonts-metadata.py:82
+msgid "コルの書きこも is a satin column japanese script font approximatively 20mm tall. It contains all hiragana, katakana and punctuation glyphs. It may be scaled  down to 50% and scaled up to 200%"
+msgstr ""
+
+#. description of font in fonts/infinipicto
+#: inkstitch-fonts-metadata.py:84
 msgid "InfiniPicto is a fun font of size approximatively 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
 msgstr "InfiniPicto は、約 70mm サイズの楽しいフォント（象形文字）で、A-Z の 26 文字しか含まれていません。各文字は、その文字で始まるフランス語の名前のオブジェクトを絵文字で表しています。"
 
 #. description of font in fonts/invercelia
-#: inkstitch-fonts-metadata.py:84
+#: inkstitch-fonts-metadata.py:86
 msgid "Invercelia is a modern two letters monogram font of size 80mm. It can be reduced down to  80% and enlarged up to 300%. Enter an upper case letter followed by a lower case letter (for example 'Ac') to get a simple monogram.  Add  a ')'at the end and the monogram  is framed with a circle (for example 'Ac)'), add an '(' to start (for example '(Ac)' and your monogram is ready for applique, or  try something like '!Ac)' to replace the appliqué by knockdown stitches."
 msgstr ""
 
 #. description of font in fonts/kaushan_script_MAM
-#: inkstitch-fonts-metadata.py:86
+#: inkstitch-fonts-metadata.py:88
 #, python-format
 msgid "The capital M is 29 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 200%.  Every satin has zigzag underlay"
 msgstr "大文字のMは100％の縮尺で29ミリ幅。 80%～200%まで拡大縮小可能です。 すべてのサテンにはジグザグの下地があります。"
 
 #. description of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:88
+#: inkstitch-fonts-metadata.py:90
 msgid "Small running stitch script font of size approximatively 12 mm. It can be reduced down to 90% and enlarged up to 200%"
 msgstr "約 12mm サイズのスクリプト体の刺繍フォント（小さめのランニングスティッチ）です。最小 90%、最大 200% まで拡大縮小可能です。"
 
 #. description of font in fonts/lobster_AGS
-#: inkstitch-fonts-metadata.py:90
+#: inkstitch-fonts-metadata.py:92
 #, python-format
 msgid " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay"
 msgstr " 大文字'M'は100%表示で幅19.8mm. 拡大縮小80~150%まで可能. すべての刺繍はジグザクの下縫いがあります"
 
 #. description of font in fonts/magnolia_KOR
-#: inkstitch-fonts-metadata.py:92
+#: inkstitch-fonts-metadata.py:94
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
 msgstr "Magnolia KORは最大20mmのフォントです. 拡大縮小80~120%まで可能"
 
 #. description of font in fonts/magnolia_small
-#: inkstitch-fonts-metadata.py:94
+#: inkstitch-fonts-metadata.py:96
 msgid "This font is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Magnolia KOR font between 25% (for a 5mm font ) and 50 % (for a 10mm font)."
 msgstr ""
 
 #. description of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:96
+#: inkstitch-fonts-metadata.py:98
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
 msgstr "大文字のMは100％の縮尺で35ミリ幅。 70%～140%まで拡大縮小可能です。 すべてのサテンにはジグザグの下地があります。"
 
 #. description of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:98
+#: inkstitch-fonts-metadata.py:100
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
 msgstr "MarcellusSC-FIは36mmの小さい大文字です. 西ヨーロッパ言語に対応した107文字収録. 拡大縮小70~200%[刺繍分割すれば500%] まで可能."
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:100
+#: inkstitch-fonts-metadata.py:102
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr "中型文字に適した基本フォント。大文字のemは、100％スケールで幅0.6インチです。 75％または最大150％に縮小できます。すべてのサテンには輪郭の下縫いがあります。"
 
 #. description of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:102
+#: inkstitch-fonts-metadata.py:104
 msgid "This bold font can be reduced down to 75% and enlarged up to 140% allowing Capital M height to flow from 15mm to 28mm."
 msgstr ""
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:104
+#: inkstitch-fonts-metadata.py:106
 msgid "Monicha is a script satin font of size approximatively 20mm. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters. The font can not be scaled down but can be scaled up to 150%. "
 msgstr "Monicha は、約 20mm サイズのスクリプト体の刺繍フォント（サテンステッチ）です。西ヨーロッパのほとんどの言語をカバーする文字に加え、巻きひげ文字を含む装飾文字が追加されています。これらの装飾文字は、重ならないように注意しながら使用する必要があります。特に、2 つの装飾文字を続けて使用しないようにしてください。装飾文字にアクセスする方法については、ドキュメントを参照してください。フォントは縮小できませんが、最大 150% まで拡大することができます。 "
 
 #. description of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:106
+#: inkstitch-fonts-metadata.py:108
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
 msgstr "Namskoutは最大サイズ90mm, アップリケ風のフォントです. 数字, 英語26文字など計43文字収録. 拡大縮小50~150%まで可能  "
 
+#. description of font in fonts/namskout_tartan
+#: inkstitch-fonts-metadata.py:110
+msgid "Namskout Tartan is a tartan font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
+msgstr ""
+
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:108
+#: inkstitch-fonts-metadata.py:112
 msgid "A tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn"
 msgstr "1mm の豆粒サイズの極小さなアルファベットです。24pt の Seniors Studio jawn フォントをベースにしています。"
 
 #. description of font in fonts/ondulamarif_Medium
-#: inkstitch-fonts-metadata.py:110
+#: inkstitch-fonts-metadata.py:114
 msgid "This font is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow to scale down the original Ondulamarif font between 99% (for a 56mm tall m ) and 49 % (for a 28 mm tall  m) "
 msgstr ""
 
 #. description of font in fonts/ondulamarif_S
-#: inkstitch-fonts-metadata.py:112
+#: inkstitch-fonts-metadata.py:116
 msgid "This font is an altered version  of Ondulamarif XL, to allow a greater scaling down. The altered embroidery parameters of this font allow to scale down the original Ondulamarif font between 49% (for a 28 mm tall m ) and 30 % (for a 16mm tall m) "
 msgstr ""
 
 #. description of font in fonts/ondulamarif_XL
-#: inkstitch-fonts-metadata.py:114
+#: inkstitch-fonts-metadata.py:118
 msgid "Ripple stitch font, use it as large as you can, but do not reduce it. At 100% M is 124mm tall and m is  56 mm tall."
 msgstr ""
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:116
+#: inkstitch-fonts-metadata.py:120
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr "Pacificloは最大20mmの小さな文字フォントです, 拡大縮小80~140%まで可能. 西ヨーロッパ言語に対応した120文字収録 "
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:118
+#: inkstitch-fonts-metadata.py:122
 msgid "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
 msgstr "このフォントは Pacificlo のバリエーションで、より縮小が可能です。細糸 (60)、細針 (60) の両方が必要です。このフォントの刺しゅうパラメータを変更することで、オリジナルの Pacificlo フォントを 25% (5mm フォントの場合) から 55% (11mm フォントの場合) に縮小することができます。"
 
 #. description of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:120
+#: inkstitch-fonts-metadata.py:124
 msgid "Roaring Twenties KOR is a font of size approximatively 16 mm. It can be scaled down to 70% and up to 150%"
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:122
+#: inkstitch-fonts-metadata.py:126
 msgid "This font is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Roaring  Twenties font between 35% (for a 6 mm font ) and 70 % (for a 12 mm font)."
 msgstr ""
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:124
+#: inkstitch-fonts-metadata.py:128
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
 msgstr "Latin Modern Roman 10 の太文字イタリック体をベースにしています。大文字 M は等倍（100% スケール）で 42.5mm 幅です。全てのサテンはジグザグ下縫いで、最小 80%、最大 130% に拡大縮小可能です。"
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:126
+#: inkstitch-fonts-metadata.py:130
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
 msgstr ""
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:128
+#: inkstitch-fonts-metadata.py:132
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
 msgstr "Sacramentoをベースにしています。非常に小さなフォントに走り縫いされます。80%～150%まで拡大縮小可能です。"
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:130
+#: inkstitch-fonts-metadata.py:134
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr "小さい文字に適したフォント。大文字のemは、100％スケールで幅0.2インチです。 300％までスケールアップできます。"
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:132
+#: inkstitch-fonts-metadata.py:136
 msgid " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame"
 msgstr " Sortefax は、大文字専用の 150mm サイズの非常に大きな刺繍フォント（サテンステッチ）です。最小 75%、最大 200% に拡大縮小可能です。アンパサンド（&）、A-Z、0-9 の 37 文字が含まれています。(){}[],;.:  の 10 文字はフレームの特殊な文字として利用されます。任意の文字の後に任意のフレーム (例：\"A(\" もしくは\"B;\") を入力すると、フレーム付きの大文字や数字が入力されます。【注意】一部の大きな文字については、フレームを手動で拡大する必要があります。"
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:138
 msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
 msgstr "Sortefax  Medium Initials は、大文字専用の 90mm サイズの刺繍フォント（サテンステッチ）です。最小 70%、最大 200% まで拡大縮小可能です。アンパサンド（&）、A-Z、0-9 の 37 文字が含まれています。また、(){}[],;.:  の 10 文字はフレームの特殊な文字として利用されます。任意の文字の後に任意のフレーム (例：\"A(\" もしくは\"7,\") を入力すると、フレーム付きの大文字や数字が入力されます。【注意】場合によっては、文字の周りにフレームを手動で配置する必要があることもあります。"
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:140
 msgid "A font suited for directing"
 msgstr "演出に適したフォント"
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:142
 msgid "A font suited for heavy typing :)"
 msgstr "ヘビータイピングに適したフォント:)"
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:144
 #, python-format
 msgid "A condensed serif font designed. Can be scaled up to 120% or scaled down to 80%. Caps height is about 28 millimeters or 1.1 inches"
 msgstr ""
@@ -1497,7 +1507,7 @@ msgstr ""
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:507 lib/elements/satin_column.py:442
+#: lib/elements/fill_stitch.py:507 lib/elements/satin_column.py:441
 #: lib/elements/stroke.py:82
 msgid "Repeats"
 msgstr "繰り返し"
@@ -1590,12 +1600,12 @@ msgstr "デフォルト：最大フィルステッチ長"
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "アンダーレイを行う前に形状を縮小して、アンダーレイが塗りつぶしの外側に表示されないようにします。"
 
-#: lib/elements/fill_stitch.py:687 lib/elements/satin_column.py:523
+#: lib/elements/fill_stitch.py:687 lib/elements/satin_column.py:522
 #: lib/elements/stroke.py:396 lib/gui/satin_multicolor/colorize.py:56
 msgid "Random seed"
 msgstr "乱数のシード値"
 
-#: lib/elements/fill_stitch.py:688 lib/elements/satin_column.py:524
+#: lib/elements/fill_stitch.py:688 lib/elements/satin_column.py:523
 #: lib/elements/stroke.py:397
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "ランダムに決まる属性に対して、パターンを固定する必要がある場合に設定します。空の場合は、要素 ID が使用されます。"
@@ -1759,7 +1769,7 @@ msgid "Zig-zag"
 msgstr ""
 
 #: lib/elements/satin_column.py:108 lib/elements/stroke.py:72
-#: inx/inkstitch_break_apart.inx:17
+#: inx/inkstitch_break_apart.inx:9
 msgid "Method"
 msgstr ""
 
@@ -1772,8 +1782,8 @@ msgid "shorten stitch across rails at most this percent. Two values separated by
 msgstr ""
 
 #: lib/elements/satin_column.py:121 lib/elements/satin_column.py:131
-#: lib/elements/satin_column.py:255 lib/elements/satin_column.py:402
-#: lib/elements/satin_column.py:501
+#: lib/elements/satin_column.py:255 lib/elements/satin_column.py:401
+#: lib/elements/satin_column.py:500
 msgid "% (each side)"
 msgstr ""
 
@@ -1798,7 +1808,7 @@ msgid "Default"
 msgstr ""
 
 #: lib/elements/satin_column.py:146 lib/stitch_plan/lock_stitch.py:209
-#: inx/inkstitch_break_apart.inx:18 inx/inkstitch_stitch_plan_preview.inx:21
+#: inx/inkstitch_break_apart.inx:10 inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Simple"
 msgstr "シンプル"
 
@@ -1814,7 +1824,7 @@ msgstr ""
 msgid "Display needle penetration points in simulator to see the effect of each split method."
 msgstr ""
 
-#: lib/elements/satin_column.py:162 lib/elements/satin_column.py:512
+#: lib/elements/satin_column.py:162 lib/elements/satin_column.py:511
 msgid "Maximum stitch length"
 msgstr "最大ステッチの長さ"
 
@@ -1886,8 +1896,8 @@ msgstr "縮み補正"
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect."
 msgstr ""
 
-#: lib/elements/satin_column.py:271 lib/elements/satin_column.py:387
-#: lib/elements/satin_column.py:481
+#: lib/elements/satin_column.py:271 lib/elements/satin_column.py:386
+#: lib/elements/satin_column.py:480
 msgid "mm (each side)"
 msgstr ""
 
@@ -1932,94 +1942,98 @@ msgid "Contour underlay"
 msgstr "輪郭アンダーレイ"
 
 #: lib/elements/satin_column.py:352 lib/elements/satin_column.py:359
-#: lib/elements/satin_column.py:374 lib/elements/satin_column.py:386
-#: lib/elements/satin_column.py:401
+#: lib/elements/satin_column.py:373 lib/elements/satin_column.py:385
+#: lib/elements/satin_column.py:400
 msgid "Contour Underlay"
 msgstr "輪郭アンダーレイ"
 
-#: lib/elements/satin_column.py:359 lib/elements/satin_column.py:417
+#: lib/elements/satin_column.py:359 lib/elements/satin_column.py:416
 msgid "Stitch length"
 msgstr "ステッチの長さ"
 
-#: lib/elements/satin_column.py:366 lib/elements/satin_column.py:424
+#: lib/elements/satin_column.py:366 lib/elements/satin_column.py:423
 #: lib/elements/stroke.py:120
 msgid "Stitch tolerance"
 msgstr ""
 
-#: lib/elements/satin_column.py:367 lib/elements/satin_column.py:425
-msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
+#: lib/elements/satin_column.py:367
+msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. "
 msgstr ""
 
-#: lib/elements/satin_column.py:384
+#: lib/elements/satin_column.py:383
 msgid "Inset distance (fixed)"
 msgstr ""
 
-#: lib/elements/satin_column.py:385
+#: lib/elements/satin_column.py:384
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:398
+#: lib/elements/satin_column.py:397
 msgid "Inset distance (proportional)"
 msgstr ""
 
-#: lib/elements/satin_column.py:399
+#: lib/elements/satin_column.py:398
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
 msgstr ""
 
-#: lib/elements/satin_column.py:410
+#: lib/elements/satin_column.py:409
 msgid "Center-walk underlay"
 msgstr "センターウォークアンダーレイ"
 
-#: lib/elements/satin_column.py:410 lib/elements/satin_column.py:417
-#: lib/elements/satin_column.py:432 lib/elements/satin_column.py:445
-#: lib/elements/satin_column.py:455
+#: lib/elements/satin_column.py:409 lib/elements/satin_column.py:416
+#: lib/elements/satin_column.py:431 lib/elements/satin_column.py:444
+#: lib/elements/satin_column.py:454
 msgid "Center-Walk Underlay"
 msgstr "センターウォークアンダーレイ"
 
-#: lib/elements/satin_column.py:443
+#: lib/elements/satin_column.py:424
+msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
+msgstr ""
+
+#: lib/elements/satin_column.py:442
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr ""
 
-#: lib/elements/satin_column.py:453 lib/gui/tartan/customize_panel.py:39
+#: lib/elements/satin_column.py:452 lib/gui/tartan/customize_panel.py:39
 msgid "Position"
 msgstr ""
 
-#: lib/elements/satin_column.py:454
+#: lib/elements/satin_column.py:453
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr ""
 
-#: lib/elements/satin_column.py:462
+#: lib/elements/satin_column.py:461
 msgid "Zig-zag underlay"
 msgstr "ジグザグアンダーレイ"
 
-#: lib/elements/satin_column.py:462 lib/elements/satin_column.py:471
-#: lib/elements/satin_column.py:482 lib/elements/satin_column.py:502
-#: lib/elements/satin_column.py:515
+#: lib/elements/satin_column.py:461 lib/elements/satin_column.py:470
+#: lib/elements/satin_column.py:481 lib/elements/satin_column.py:501
+#: lib/elements/satin_column.py:514
 msgid "Zig-zag Underlay"
 msgstr "ジグザグアンダーレイ"
 
-#: lib/elements/satin_column.py:468
+#: lib/elements/satin_column.py:467
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "ジグザグ間隔（ピークツーピーク）"
 
-#: lib/elements/satin_column.py:469
+#: lib/elements/satin_column.py:468
 msgid "Distance between peaks of the zig-zags."
 msgstr "ジグザグのピーク間の距離。"
 
-#: lib/elements/satin_column.py:479
+#: lib/elements/satin_column.py:478
 msgid "Inset amount (fixed)"
 msgstr ""
 
-#: lib/elements/satin_column.py:480 lib/elements/satin_column.py:500
+#: lib/elements/satin_column.py:479 lib/elements/satin_column.py:499
 msgid "default: half of contour underlay inset"
 msgstr "デフォルト：等高線アンダーレイインセットの半分"
 
-#: lib/elements/satin_column.py:499
+#: lib/elements/satin_column.py:498
 msgid "Inset amount (proportional)"
 msgstr ""
 
-#: lib/elements/satin_column.py:513
+#: lib/elements/satin_column.py:512
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "最大ステッチ長さを超えた場合のスプリットステッチ"
 
@@ -2048,7 +2062,7 @@ msgid "Running Stitch / Bean Stitch"
 msgstr ""
 
 #: lib/elements/stroke.py:66 lib/lettering/categories.py:26
-#: inx/inkstitch_lettering_generate_json.inx:55
+#: inx/inkstitch_lettering_generate_json.inx:46
 msgid "Ripple Stitch"
 msgstr ""
 
@@ -2266,7 +2280,7 @@ msgid "Please chose an other color palette for your design."
 msgstr "デザインに他のカラーパレットを選択してください。"
 
 #. auto-route running stitch columns extension
-#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:45
+#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:44
 msgid "Please select one or more stroke elements."
 msgstr ""
 
@@ -2300,28 +2314,26 @@ msgstr "インクステッチが操作可能なオブジェクトがこのドキ
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "ヒント: 拡張機能 > インクステッチ > トラブルシューティング > オブジェクトのトラブルシューティングを実行"
 
-#: lib/extensions/break_apart.py:30
+#: lib/extensions/break_apart.py:31
 msgid "Please select one or more fill areas to break apart."
 msgstr "分解する1つまたは複数の塗りつぶし領域を選択してください。"
 
-#: lib/extensions/cleanup.py:60
+#: lib/extensions/cleanup.py:61
 #, python-format
 msgid "%s elements to remove:"
 msgstr ""
 
-#: lib/extensions/cleanup.py:65
+#: lib/extensions/cleanup.py:66
 #, python-format
 msgid "%s groups/layers to remove:"
 msgstr ""
 
-#: lib/extensions/cleanup.py:70
-#, python-format
-msgid "%s elements removed"
-msgstr "%s 要素が削除されました"
-
 #: lib/extensions/cleanup.py:74
-#, python-format
-msgid "%s groups/layers removed"
+msgid "{num_elements_removed} elements removed"
+msgstr ""
+
+#: lib/extensions/cleanup.py:78
+msgid "{num_groups_removed} groups/layers removed"
 msgstr ""
 
 #: lib/extensions/convert_to_satin.py:35
@@ -2340,8 +2352,8 @@ msgstr "インク/ステッチでは、ストロークをサテンの列に変�
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
-#: lib/extensions/convert_to_stroke.py:23
-#: lib/extensions/convert_to_stroke.py:28
+#: lib/extensions/convert_to_stroke.py:24
+#: lib/extensions/convert_to_stroke.py:29
 msgid "Please select at least one satin column to convert to a running stitch."
 msgstr "ランニングステッチに変換するサテンの列を1つ以上選択してください"
 
@@ -2355,41 +2367,41 @@ msgstr "カットするサテンの柱を1つ以上選択してください。"
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "このサテンカラムには、「サテンカラムカットポイント」コマンドが付加されていません。 「コマンドの添付」拡張機能を使用して、最初に「サテンカラムカットポイント」コマンドを添付してください。"
 
-#: lib/extensions/cutwork_segmentation.py:75
+#: lib/extensions/cutwork_segmentation.py:74
 msgid "Please select at least one element with a stroke color."
 msgstr ""
 
-#: lib/extensions/cutwork_segmentation.py:159
+#: lib/extensions/cutwork_segmentation.py:158
 msgid "Cutwork Group"
 msgstr ""
 
-#: lib/extensions/cutwork_segmentation.py:167
+#: lib/extensions/cutwork_segmentation.py:166
 #, python-format
 msgid "Needle #%s"
 msgstr ""
 
-#: lib/extensions/density_map.py:71
+#: lib/extensions/density_map.py:72
 msgid "Density Plan"
 msgstr ""
 
-#: lib/extensions/density_map.py:86
+#: lib/extensions/density_map.py:87
 msgid "Red"
 msgstr ""
 
-#: lib/extensions/density_map.py:86
+#: lib/extensions/density_map.py:87
 msgid "Yellow"
 msgstr ""
 
-#: lib/extensions/density_map.py:86
+#: lib/extensions/density_map.py:87
 msgid "Green"
 msgstr ""
 
-#: lib/extensions/density_map.py:90
+#: lib/extensions/density_map.py:91
 #, python-format
 msgid "%s density"
 msgstr ""
 
-#: lib/extensions/display_stacking_order.py:58
+#: lib/extensions/display_stacking_order.py:59
 msgid "Stacking Order"
 msgstr ""
 
@@ -2505,16 +2517,16 @@ msgstr ""
 msgid "Could not install color palettes. Please file an issue on https://github.com/inkstitch/inkstitch/issues"
 msgstr ""
 
-#: lib/extensions/install_custom_palette.py:24
+#: lib/extensions/install_custom_palette.py:25
 #: lib/extensions/palette_to_text.py:26
 msgid "File does not exist."
 msgstr "ファイルが存在しません"
 
-#: lib/extensions/install_custom_palette.py:28
+#: lib/extensions/install_custom_palette.py:29
 msgid "Wrong file type. Ink/Stitch only accepts gpl color palettes."
 msgstr "ファイルタイプが違います。インクステッチはgplカラーパレットのみ対応しています。"
 
-#: lib/extensions/install_custom_palette.py:36
+#: lib/extensions/install_custom_palette.py:37
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
 msgstr "インクステッチはパレットフォルダを自動で見つける事ができません。手動でパレットをインストールしてください。"
 
@@ -2530,15 +2542,15 @@ msgstr "1ブロックのみ選択してください。"
 msgid "Ink/Stitch Lettering"
 msgstr "インク/ステッチの文字配置"
 
-#: lib/extensions/lettering_along_path.py:35
+#: lib/extensions/lettering_along_path.py:34
 msgid "Please select one path and one Ink/Stitch lettering group."
 msgstr ""
 
-#: lib/extensions/lettering_along_path.py:40
+#: lib/extensions/lettering_along_path.py:39
 msgid "The text doesn't contain any glyphs."
 msgstr ""
 
-#: lib/extensions/lettering_custom_font_dir.py:27
+#: lib/extensions/lettering_custom_font_dir.py:28
 msgid "Please specify the directory of your custom fonts."
 msgstr "カスタムフォントのディレクトリを指定してください。"
 
@@ -2546,19 +2558,19 @@ msgstr "カスタムフォントのディレクトリを指定してください
 msgid "Font Sample"
 msgstr ""
 
-#: lib/extensions/lettering_force_lock_stitches.py:30
+#: lib/extensions/lettering_force_lock_stitches.py:31
 msgid "The maximum value is smaller than the minimum value."
 msgstr "最大値が最小値以下になっています"
 
-#: lib/extensions/lettering_generate_json.py:51
+#: lib/extensions/lettering_generate_json.py:48
 msgid "Please specify a font file."
 msgstr "フォントファイルを指定してください。"
 
-#: lib/extensions/lettering_update_json_glyphlist.py:29
+#: lib/extensions/lettering_update_json_glyphlist.py:30
 msgid "Please verify file locations."
 msgstr ""
 
-#: lib/extensions/letters_to_font.py:36
+#: lib/extensions/letters_to_font.py:37
 msgid "Font directory not found. Please specify an existing directory."
 msgstr "フォントのディレクトリが見つかりません。既存のディレクトリを指定してください。"
 
@@ -2570,15 +2582,15 @@ msgstr "コマンドを添付するオブジェクトを1つまたは複数選�
 msgid "Please choose one or more commands to attach."
 msgstr "添付するコマンドを1つ以上選択してください。"
 
-#: lib/extensions/outline.py:29
+#: lib/extensions/outline.py:30
 msgid "Please select one or more shapes to convert to their outline."
 msgstr ""
 
-#: lib/extensions/outline.py:69
+#: lib/extensions/outline.py:70
 msgid "{element_id} is not a path element. This extension is designed to generate an outline of an embroidery pattern."
 msgstr ""
 
-#: lib/extensions/outline.py:75
+#: lib/extensions/outline.py:76
 msgid "Could not generate path from element {element_id} with the given settings."
 msgstr ""
 
@@ -2658,20 +2670,20 @@ msgstr "適用して終了"
 msgid "Embroidery Params"
 msgstr "刺繍パラメータ"
 
-#: lib/extensions/print_pdf.py:147
+#: lib/extensions/print_pdf.py:146
 msgid "Closing..."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:147
+#: lib/extensions/print_pdf.py:146
 msgid "It is safe to close this window now."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:279
+#: lib/extensions/print_pdf.py:278
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:468
+#: lib/extensions/print_pdf.py:467
 msgid "Ink/Stitch Print"
 msgstr ""
 
@@ -2728,68 +2740,68 @@ msgstr ""
 msgid "Please select one or more elements."
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:49
+#: lib/extensions/troubleshoot.py:50
 msgid "All selected shapes are valid! "
 msgstr "選択されたすべての形状が有効です。 "
 
-#: lib/extensions/troubleshoot.py:51
+#: lib/extensions/troubleshoot.py:52
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
 msgstr "形状が刺繍されない場合は、非表示設定のレイヤーにあるか確認してください。"
 
-#: lib/extensions/troubleshoot.py:79
+#: lib/extensions/troubleshoot.py:80
 msgid "Invalid Pointer"
 msgstr "無効なポインタ"
 
-#: lib/extensions/troubleshoot.py:85
-#: inx/inkstitch_lettering_generate_json.inx:28
+#: lib/extensions/troubleshoot.py:86
+#: inx/inkstitch_lettering_generate_json.inx:19
 msgid "Description"
 msgstr "説明"
 
-#: lib/extensions/troubleshoot.py:111 lib/extensions/troubleshoot.py:157
-#: inx/inkstitch_cleanup.inx:23 inx/inkstitch_element_info.inx:10
+#: lib/extensions/troubleshoot.py:112 lib/extensions/troubleshoot.py:158
+#: inx/inkstitch_cleanup.inx:34 inx/inkstitch_element_info.inx:10
 #: inx/inkstitch_remove_embroidery_settings.inx:155
-#: inx/inkstitch_select_elements.inx:88 inx/inkstitch_troubleshoot.inx:12
+#: inx/inkstitch_select_elements.inx:91 inx/inkstitch_troubleshoot.inx:24
 #: inx/inkstitch_update_svg.inx:10
 msgid "Troubleshoot"
 msgstr "トラブルシューティング"
 
-#: lib/extensions/troubleshoot.py:120 lib/extensions/troubleshoot.py:164
+#: lib/extensions/troubleshoot.py:121 lib/extensions/troubleshoot.py:165
 msgid "Errors"
 msgstr "エラー"
 
-#: lib/extensions/troubleshoot.py:126 lib/extensions/troubleshoot.py:168
+#: lib/extensions/troubleshoot.py:127 lib/extensions/troubleshoot.py:169
 msgid "Warnings"
 msgstr "注意事項"
 
-#: lib/extensions/troubleshoot.py:132
+#: lib/extensions/troubleshoot.py:133
 msgid "Type Warnings"
 msgstr "タイプ別警告"
 
-#: lib/extensions/troubleshoot.py:165
+#: lib/extensions/troubleshoot.py:166
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr "刺繍されない問題"
 
-#: lib/extensions/troubleshoot.py:169
+#: lib/extensions/troubleshoot.py:170
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr "この形状を刺繍することを妨げない問題です。この警告を修正を検討する必要がありますが、そうしない場合、インクステッチはこのオブジェクトを処理するために最善を尽くします。"
 
-#: lib/extensions/troubleshoot.py:174
+#: lib/extensions/troubleshoot.py:175
 msgid "Object Type Warnings"
 msgstr "オブジェクトタイプの警告"
 
-#: lib/extensions/troubleshoot.py:175
+#: lib/extensions/troubleshoot.py:176
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr "このオブジェクトはインクステッチで正しく動作しない場合があります。指示にしたがって動作を修正してください。"
 
-#: lib/extensions/troubleshoot.py:188
+#: lib/extensions/troubleshoot.py:189
 msgid "Possible solutions"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:193
+#: lib/extensions/troubleshoot.py:194
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "1つのオブジェクトに複数のエラーが含まれている可能性がありますが、ポインタはオブジェクトごとに1つしかありません。 さらにエラーが発生した場合は、この関数を再度実行してください。 ポインタを削除するには、オブジェクトパネル（オブジェクト -> Objects...）で「Troubleshoot」というレイヤーを削除します。"
 
-#: lib/extensions/unlink_clone.py:27
+#: lib/extensions/unlink_clone.py:28
 msgid "Please select one or more clones to unlink."
 msgstr ""
 
@@ -2815,7 +2827,7 @@ msgstr "タイトル"
 
 #: lib/extensions/zip.py:133 lib/gui/lettering.py:419
 #: inx/inkstitch_commands_scale_symbols.inx:6
-#: inx/inkstitch_lettering_generate_json.inx:86
+#: inx/inkstitch_lettering_generate_json.inx:77
 msgid "Size"
 msgstr "サイズ"
 
@@ -2835,7 +2847,7 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
-#: lib/gui/element_info.py:33 inx/inkstitch_lettering_generate_json.inx:27
+#: lib/gui/element_info.py:33 inx/inkstitch_lettering_generate_json.inx:18
 msgid "Name"
 msgstr "名前"
 
@@ -2847,15 +2859,27 @@ msgstr ""
 #: lib/gui/satin_multicolor/main_panel.py:52 lib/gui/tartan/main_panel.py:63
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_palette.inx:84
 #: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
-#: inx/inkstitch_cutwork_segmentation.inx:42
+#: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_break_apart.inx:14
+#: inx/inkstitch_cleanup.inx:22 inx/inkstitch_convert_to_stroke.inx:12
+#: inx/inkstitch_cutwork_segmentation.inx:42 inx/inkstitch_density_map.inx:26
+#: inx/inkstitch_display_stacking_order.inx:11
 #: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
-#: inx/inkstitch_gradient_blocks.inx:24 inx/inkstitch_jump_to_stroke.inx:40
-#: inx/inkstitch_jump_to_trim.inx:25 inx/inkstitch_lettering_along_path.inx:17
+#: inx/inkstitch_gradient_blocks.inx:24
+#: inx/inkstitch_install_custom_palette.inx:14
+#: inx/inkstitch_jump_to_stroke.inx:40 inx/inkstitch_jump_to_trim.inx:25
+#: inx/inkstitch_lettering_along_path.inx:17
+#: inx/inkstitch_lettering_custom_font_dir.inx:11
+#: inx/inkstitch_lettering_force_lock_stitches.inx:16
+#: inx/inkstitch_lettering_generate_json.inx:111
+#: inx/inkstitch_lettering_remove_kerning.inx:12
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:12
+#: inx/inkstitch_letters_to_font.inx:56 inx/inkstitch_outline.inx:25
 #: inx/inkstitch_palette_to_text.inx:19
 #: inx/inkstitch_remove_embroidery_settings.inx:142
 #: inx/inkstitch_select_elements.inx:80
-#: inx/inkstitch_stroke_to_lpe_satin.inx:26
-#: inx/inkstitch_zigzag_line_to_satin.inx:18
+#: inx/inkstitch_stitch_plan_preview.inx:37
+#: inx/inkstitch_stroke_to_lpe_satin.inx:26 inx/inkstitch_troubleshoot.inx:12
+#: inx/inkstitch_unlink_clone.inx:10 inx/inkstitch_zigzag_line_to_satin.inx:18
 msgid "Help"
 msgstr ""
 
@@ -2898,13 +2922,23 @@ msgstr ""
 
 #: lib/gui/lettering.py:75 lib/gui/test_swatches.py:33
 #: inx/inkstitch_apply_palette.inx:7 inx/inkstitch_apply_threadlist.inx:7
+#: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_break_apart.inx:8
+#: inx/inkstitch_cleanup.inx:8 inx/inkstitch_convert_to_stroke.inx:8
+#: inx/inkstitch_density_map.inx:8 inx/inkstitch_display_stacking_order.inx:8
 #: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
+#: inx/inkstitch_install_custom_palette.inx:8
 #: inx/inkstitch_jump_to_stroke.inx:15 inx/inkstitch_jump_to_trim.inx:15
 #: inx/inkstitch_lettering_along_path.inx:13
+#: inx/inkstitch_lettering_custom_font_dir.inx:8
+#: inx/inkstitch_lettering_force_lock_stitches.inx:8
+#: inx/inkstitch_lettering_remove_kerning.inx:9
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:8
+#: inx/inkstitch_letters_to_font.inx:8 inx/inkstitch_outline.inx:8
 #: inx/inkstitch_palette_to_text.inx:15
 #: inx/inkstitch_remove_embroidery_settings.inx:8
-#: inx/inkstitch_stroke_to_lpe_satin.inx:7
-#: inx/inkstitch_zigzag_line_to_satin.inx:7
+#: inx/inkstitch_stitch_plan_preview.inx:8
+#: inx/inkstitch_stroke_to_lpe_satin.inx:7 inx/inkstitch_troubleshoot.inx:8
+#: inx/inkstitch_unlink_clone.inx:6 inx/inkstitch_zigzag_line_to_satin.inx:7
 msgid "Options"
 msgstr "オプション"
 
@@ -2972,7 +3006,7 @@ msgid "Font Sampling"
 msgstr ""
 
 #: lib/gui/lettering_font_sample.py:31 print/templates/ui.html:5
-#: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:67
+#: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:58
 msgid "Settings"
 msgstr "設定"
 
@@ -3483,53 +3517,53 @@ msgstr ""
 msgid "An error occurred while rendering the stitch plan:"
 msgstr ""
 
-#: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:44
+#: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:35
 msgid "Applique"
 msgstr ""
 
-#: lib/lettering/categories.py:20 inx/inkstitch_lettering_generate_json.inx:45
+#: lib/lettering/categories.py:20 inx/inkstitch_lettering_generate_json.inx:36
 msgid "Crossstitch"
 msgstr ""
 
-#: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:46
+#: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:37
 msgid "Display"
 msgstr ""
 
-#: lib/lettering/categories.py:22 inx/inkstitch_lettering_generate_json.inx:49
+#: lib/lettering/categories.py:22 inx/inkstitch_lettering_generate_json.inx:40
 msgid "Handwriting"
 msgstr ""
 
-#: lib/lettering/categories.py:23 inx/inkstitch_lettering_generate_json.inx:50
+#: lib/lettering/categories.py:23 inx/inkstitch_lettering_generate_json.inx:41
 msgid "Italic"
 msgstr ""
 
-#: lib/lettering/categories.py:24 inx/inkstitch_lettering_generate_json.inx:51
+#: lib/lettering/categories.py:24 inx/inkstitch_lettering_generate_json.inx:42
 msgid "Monogram"
 msgstr ""
 
-#: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:52
+#: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:43
 msgid "Multicolor"
 msgstr ""
 
-#: lib/lettering/categories.py:27 inx/inkstitch_lettering_generate_json.inx:56
+#: lib/lettering/categories.py:27 inx/inkstitch_lettering_generate_json.inx:47
 #: inx/inkstitch_select_elements.inx:13
 msgid "Running Stitch"
 msgstr ""
 
-#: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:57
+#: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:48
 msgid "Sans Serif"
 msgstr ""
 
-#: lib/lettering/categories.py:29 inx/inkstitch_lettering_generate_json.inx:58
+#: lib/lettering/categories.py:29 inx/inkstitch_lettering_generate_json.inx:49
 msgid "Serif"
 msgstr ""
 
-#: lib/lettering/categories.py:30 inx/inkstitch_lettering_generate_json.inx:61
+#: lib/lettering/categories.py:30 inx/inkstitch_lettering_generate_json.inx:52
 #: inx/inkstitch_tartan.inx:3
 msgid "Tartan"
 msgstr ""
 
-#: lib/lettering/categories.py:31 inx/inkstitch_lettering_generate_json.inx:62
+#: lib/lettering/categories.py:31 inx/inkstitch_lettering_generate_json.inx:53
 msgid "Tiny"
 msgstr ""
 
@@ -4012,8 +4046,8 @@ msgstr "糸のパレットを変更すると、糸の名前やカタログ番号
 msgid "Yes"
 msgstr "はい"
 
-#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:80
-#: inx/inkstitch_letters_to_font.inx:66
+#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:71
+#: inx/inkstitch_letters_to_font.inx:53
 msgid "No"
 msgstr "いいえ"
 
@@ -4027,7 +4061,7 @@ msgstr "全てに適用"
 
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
-#: inx/inkstitch_stitch_plan_preview.inx:22
+#: inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Realistic"
 msgstr "リアル"
 
@@ -4275,7 +4309,7 @@ msgstr ""
 
 #: inx/inkstitch_apply_palette.inx:95 inx/inkstitch_apply_threadlist.inx:108
 #: inx/inkstitch_generate_palette.inx:10 inx/inkstitch_install.inx:10
-#: inx/inkstitch_install_custom_palette.inx:13
+#: inx/inkstitch_install_custom_palette.inx:26
 #: inx/inkstitch_palette_split_text.inx:10 inx/inkstitch_palette_to_text.inx:9
 msgid "Thread Color Management"
 msgstr "糸の色の管理"
@@ -4285,7 +4319,7 @@ msgid "Apply Threadlist"
 msgstr ""
 
 #: inx/inkstitch_apply_threadlist.inx:8
-#: inx/inkstitch_install_custom_palette.inx:8
+#: inx/inkstitch_install_custom_palette.inx:12
 #: inx/inkstitch_palette_to_text.inx:17
 msgid "Choose file"
 msgstr "ファイル選択"
@@ -4338,9 +4372,9 @@ msgstr ""
 msgid "Auto-Route Running Stitch"
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:10 inx/inkstitch_convert_to_stroke.inx:13
+#: inx/inkstitch_auto_run.inx:10 inx/inkstitch_convert_to_stroke.inx:24
 #: inx/inkstitch_fill_to_stroke.inx:10 inx/inkstitch_jump_to_stroke.inx:10
-#: inx/inkstitch_outline.inx:10
+#: inx/inkstitch_outline.inx:37
 msgid "Tools: Stroke"
 msgstr ""
 
@@ -4356,7 +4390,7 @@ msgstr ""
 msgid "Preserve order of running stitches"
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:21 inx/inkstitch_auto_satin.inx:5
+#: inx/inkstitch_auto_run.inx:21 inx/inkstitch_auto_satin.inx:8
 msgid "Trim jump stitches"
 msgstr "ジャンプスティッチのトリミング"
 
@@ -4388,11 +4422,35 @@ msgstr ""
 msgid "Auto-Route Satin Columns"
 msgstr "サテン自動ルーティング"
 
-#: inx/inkstitch_auto_satin.inx:6
+#: inx/inkstitch_auto_satin.inx:9
 msgid "Preserve order of satin columns"
 msgstr "サテンカラムの順序を保持"
 
-#: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_convert_to_satin.inx:10
+#: inx/inkstitch_auto_satin.inx:13
+msgid "This extension tries to create a single stitch path through all selected satin columns."
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:15 inx/inkstitch_break_apart.inx:20
+#: inx/inkstitch_cleanup.inx:25 inx/inkstitch_convert_to_stroke.inx:15
+#: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
+#: inx/inkstitch_install_custom_palette.inx:17
+#: inx/inkstitch_lettering_along_path.inx:27
+#: inx/inkstitch_lettering_custom_font_dir.inx:16
+#: inx/inkstitch_lettering_force_lock_stitches.inx:27
+#: inx/inkstitch_lettering_generate_json.inx:115
+#: inx/inkstitch_lettering_remove_kerning.inx:22
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:15
+#: inx/inkstitch_letters_to_font.inx:71 inx/inkstitch_outline.inx:28
+#: inx/inkstitch_stitch_plan_preview.inx:40 inx/inkstitch_troubleshoot.inx:15
+#: inx/inkstitch_unlink_clone.inx:13
+msgid "More information on our website"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:16
+msgid "https://inkstitch.org/docs/satin-tools/#auto-route-satin-columns"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:24 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_cut_satin.inx:10 inx/inkstitch_flip.inx:10
 #: inx/inkstitch_satin_multicolor.inx:10
 #: inx/inkstitch_stroke_to_lpe_satin.inx:40
@@ -4404,61 +4462,69 @@ msgstr ""
 msgid "Break Apart Fill Objects"
 msgstr "塗りつぶしオブジェクトの分割"
 
-#: inx/inkstitch_break_apart.inx:10 inx/inkstitch_gradient_blocks.inx:10
-#: inx/inkstitch_tartan.inx:10
-msgid "Tools: Fill"
-msgstr ""
+#: inx/inkstitch_break_apart.inx:11
+msgid "Complex"
+msgstr "複雑"
 
-#: inx/inkstitch_break_apart.inx:14
+#: inx/inkstitch_break_apart.inx:15
 msgid "This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes."
 msgstr ""
 
-#: inx/inkstitch_break_apart.inx:19
-msgid "Complex"
-msgstr "複雑"
+#: inx/inkstitch_break_apart.inx:21
+msgid "https://inkstitch.org/docs/fill-tools/#break-apart-fill-objects"
+msgstr ""
+
+#: inx/inkstitch_break_apart.inx:29 inx/inkstitch_gradient_blocks.inx:10
+#: inx/inkstitch_tartan.inx:10
+msgid "Tools: Fill"
+msgstr ""
 
 #: inx/inkstitch_cleanup.inx:3
 msgid "Cleanup Document"
 msgstr "クリーンアップドキュメント"
 
-#: inx/inkstitch_cleanup.inx:5
-msgid "Use this extension to remove small objects from the document."
-msgstr ""
-
-#: inx/inkstitch_cleanup.inx:7
+#: inx/inkstitch_cleanup.inx:10
 msgid "Remove Small Fill Areas"
 msgstr "小さな塗りつぶし部分の削除"
 
-#: inx/inkstitch_cleanup.inx:7
+#: inx/inkstitch_cleanup.inx:10
 msgid "Removes areas smaller than defined by threshold."
 msgstr ""
 
-#: inx/inkstitch_cleanup.inx:8
+#: inx/inkstitch_cleanup.inx:11
 msgid "Fill area threshold (px²)"
 msgstr "塗りつぶし領域のしきい値(px²)"
 
-#: inx/inkstitch_cleanup.inx:10
+#: inx/inkstitch_cleanup.inx:13
 msgid "Remove Small strokes"
 msgstr "小さいストロークを削除"
 
-#: inx/inkstitch_cleanup.inx:10
+#: inx/inkstitch_cleanup.inx:13
 msgid "Removes small strokes shorter than defined by threshold."
 msgstr "しきい値で定義された長さよりも短いストロークを削除します。"
 
-#: inx/inkstitch_cleanup.inx:11
+#: inx/inkstitch_cleanup.inx:14
 msgid "Stroke threshold (px)"
 msgstr "ストロークのしきい値（px)"
 
-#: inx/inkstitch_cleanup.inx:12
+#: inx/inkstitch_cleanup.inx:15
 msgid "Remove empty layers and groups"
 msgstr ""
 
-#: inx/inkstitch_cleanup.inx:17
+#: inx/inkstitch_cleanup.inx:20
 msgid "Test run"
 msgstr ""
 
-#: inx/inkstitch_cleanup.inx:17
+#: inx/inkstitch_cleanup.inx:20
 msgid "Only display labels and ids of affected elements and groups without removing them."
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:23
+msgid "Use this extension to remove small objects from the document."
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:26
+msgid "https://inkstitch.org/docs/troubleshoot/#cleanup-document"
 msgstr ""
 
 #: inx/inkstitch_commands_scale_symbols.inx:3
@@ -4485,17 +4551,21 @@ msgstr "ラインをサテンに変換"
 msgid "Convert Satin to Stroke"
 msgstr "サテンをストロークに変換"
 
-#: inx/inkstitch_convert_to_stroke.inx:6
-msgid "Converts a satin column into a running stitch."
-msgstr ""
-
-#: inx/inkstitch_convert_to_stroke.inx:8
+#: inx/inkstitch_convert_to_stroke.inx:10
 msgid "Keep satin column"
 msgstr ""
 
-#: inx/inkstitch_convert_to_stroke.inx:8
+#: inx/inkstitch_convert_to_stroke.inx:10
 msgid "Do not delete original satin column."
 msgstr "オリジナルのサテン列は削除しないでください。"
+
+#: inx/inkstitch_convert_to_stroke.inx:13
+msgid "Converts a satin column into a running stitch."
+msgstr ""
+
+#: inx/inkstitch_convert_to_stroke.inx:16
+msgid "https://inkstitch.org/docs/stroke-tools/#convert-satin-to-stroke"
+msgstr ""
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
@@ -4587,59 +4657,75 @@ msgstr ""
 msgid "Density Map"
 msgstr ""
 
-#: inx/inkstitch_density_map.inx:10 inx/inkstitch_display_stacking_order.inx:10
-#: inx/inkstitch_embroider.inx:14 inx/inkstitch_print.inx:10
-#: inx/inkstitch_simulator.inx:10 inx/inkstitch_stitch_plan_preview.inx:10
-#: inx/inkstitch_stitch_plan_preview_undo.inx:10
-msgid "Visualize and Export"
-msgstr ""
-
-#: inx/inkstitch_density_map.inx:14
+#: inx/inkstitch_density_map.inx:9
 msgid "Red markers"
 msgstr ""
 
-#: inx/inkstitch_density_map.inx:15 inx/inkstitch_density_map.inx:19
+#: inx/inkstitch_density_map.inx:10 inx/inkstitch_density_map.inx:14
 msgid "Number of stitches"
 msgstr ""
 
-#: inx/inkstitch_density_map.inx:15 inx/inkstitch_density_map.inx:19
+#: inx/inkstitch_density_map.inx:10 inx/inkstitch_density_map.inx:14
 msgid "0 = no density info"
 msgstr ""
 
-#: inx/inkstitch_density_map.inx:16 inx/inkstitch_density_map.inx:20
+#: inx/inkstitch_density_map.inx:11 inx/inkstitch_density_map.inx:15
 msgid "within a radius (mm) of"
 msgstr ""
 
-#: inx/inkstitch_density_map.inx:18
+#: inx/inkstitch_density_map.inx:13
 msgid "Yellow markers"
 msgstr ""
 
-#: inx/inkstitch_density_map.inx:22 inx/inkstitch_stitch_plan_preview.inx:14
+#: inx/inkstitch_density_map.inx:17 inx/inkstitch_stitch_plan_preview.inx:9
 msgid "Design layer visibility"
 msgstr ""
 
-#: inx/inkstitch_density_map.inx:23 inx/inkstitch_stitch_plan_preview.inx:15
+#: inx/inkstitch_density_map.inx:18 inx/inkstitch_stitch_plan_preview.inx:10
 msgid "Unchanged"
 msgstr ""
 
-#: inx/inkstitch_density_map.inx:24 inx/inkstitch_stitch_plan_preview.inx:16
+#: inx/inkstitch_density_map.inx:19 inx/inkstitch_stitch_plan_preview.inx:11
 msgid "Hidden"
 msgstr ""
 
-#: inx/inkstitch_density_map.inx:25 inx/inkstitch_stitch_plan_preview.inx:17
+#: inx/inkstitch_density_map.inx:20 inx/inkstitch_stitch_plan_preview.inx:12
 msgid "Lower opacity"
 msgstr ""
 
-#: inx/inkstitch_density_map.inx:29
+#: inx/inkstitch_density_map.inx:24
 msgid "Indicator size"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:27
+msgid "This extension helps you to determine the stitch density."
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:30
+msgid "https://inkstitch.org/docs/visualize/#density-map"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:38 inx/inkstitch_display_stacking_order.inx:23
+#: inx/inkstitch_embroider.inx:14 inx/inkstitch_print.inx:10
+#: inx/inkstitch_simulator.inx:10 inx/inkstitch_stitch_plan_preview.inx:49
+#: inx/inkstitch_stitch_plan_preview_undo.inx:10
+msgid "Visualize and Export"
 msgstr ""
 
 #: inx/inkstitch_display_stacking_order.inx:3
 msgid "Display stacking order"
 msgstr ""
 
-#: inx/inkstitch_display_stacking_order.inx:14
+#: inx/inkstitch_display_stacking_order.inx:9
 msgid "Font size"
+msgstr ""
+
+#: inx/inkstitch_display_stacking_order.inx:12
+msgid "This extension inserts numbered labels for selected elements into the document to visualize the stitch order."
+msgstr ""
+
+#: inx/inkstitch_display_stacking_order.inx:15
+msgid "https://inkstitch.org/docs/visualize/#display-stacking-order"
 msgstr ""
 
 #: inx/inkstitch_duplicate_params.inx:3
@@ -4647,10 +4733,10 @@ msgid "Duplicate Params"
 msgstr "重複したパラメータ"
 
 #: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
-#: inx/inkstitch_select_elements.inx:103
+#: inx/inkstitch_select_elements.inx:106
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
-#: inx/inkstitch_unlink_clone.inx:11
+#: inx/inkstitch_unlink_clone.inx:21
 msgid "Edit"
 msgstr "編集"
 
@@ -5359,13 +5445,21 @@ msgstr "Inkscapeのスレッドカラーパレットをインストールする"
 msgid "Install custom palette"
 msgstr "カスタムパレットの設置"
 
-#: inx/inkstitch_install_custom_palette.inx:6
+#: inx/inkstitch_install_custom_palette.inx:9
 msgid "Choose a .gpl color palette file to install into Inkscape."
 msgstr "Inkscapeにインストールする.gplカラーパレットファイルを選択します。"
 
-#: inx/inkstitch_install_custom_palette.inx:7
+#: inx/inkstitch_install_custom_palette.inx:10
 msgid "Restart Inkscape to use."
 msgstr "Inkscapeを再起動してご利用ください。"
+
+#: inx/inkstitch_install_custom_palette.inx:15
+msgid "This extension installs a custom thread palette into Inkscape."
+msgstr ""
+
+#: inx/inkstitch_install_custom_palette.inx:18
+msgid "https://inkstitch.org/docs/thread-color/#install-custom-palette"
+msgstr ""
 
 #: inx/inkstitch_jump_to_stroke.inx:3
 msgid "Jump Stitch to Stroke"
@@ -5507,51 +5601,63 @@ msgstr ""
 msgid "The stretch option defines whether the spaces between glyphs should be expanded so that the text stretches over the entire path."
 msgstr ""
 
+#: inx/inkstitch_lettering_along_path.inx:28
+msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
+msgstr ""
+
 #: inx/inkstitch_lettering_custom_font_dir.inx:3
-#: inx/inkstitch_lettering_custom_font_dir.inx:18
+#: inx/inkstitch_lettering_custom_font_dir.inx:9
 msgid "Custom font directory"
 msgstr "カスタムフォントディレクトリ"
 
-#: inx/inkstitch_lettering_custom_font_dir.inx:10
-#: inx/inkstitch_lettering_font_sample.inx:10
-#: inx/inkstitch_lettering_force_lock_stitches.inx:10
-#: inx/inkstitch_lettering_generate_json.inx:10
-#: inx/inkstitch_lettering_remove_kerning.inx:10
-#: inx/inkstitch_lettering_update_json_glyphlist.inx:10
-#: inx/inkstitch_letters_to_font.inx:10
-msgid "Font Management"
-msgstr "フォント管理"
-
-#: inx/inkstitch_lettering_custom_font_dir.inx:14
+#: inx/inkstitch_lettering_custom_font_dir.inx:12
 msgid "Set a custom directory for additional fonts to be used with the lettering tool."
 msgstr ""
 
-#: inx/inkstitch_lettering_custom_font_dir.inx:20
-msgid "Usage: The custom font directory must contain a subdirectory for each font."
+#: inx/inkstitch_lettering_custom_font_dir.inx:14
+msgid "The custom font directory must contain a subdirectory for each font."
 msgstr ""
 
-#: inx/inkstitch_lettering_force_lock_stitches.inx:14
-msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
+#: inx/inkstitch_lettering_custom_font_dir.inx:17
+msgid "https://inkstitch.org/docs/font-tools/#custom-font-directory"
 msgstr ""
 
-#: inx/inkstitch_lettering_force_lock_stitches.inx:20
-msgid "This extension has been build to help font authors to define \"force lock stitches\"-attributes automatically if they are placed in a predefined distance to the next object."
-msgstr ""
+#: inx/inkstitch_lettering_custom_font_dir.inx:25
+#: inx/inkstitch_lettering_font_sample.inx:10
+#: inx/inkstitch_lettering_force_lock_stitches.inx:36
+#: inx/inkstitch_lettering_generate_json.inx:10
+#: inx/inkstitch_lettering_remove_kerning.inx:31
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:24
+#: inx/inkstitch_letters_to_font.inx:80
+msgid "Font Management"
+msgstr "フォント管理"
 
-#: inx/inkstitch_lettering_force_lock_stitches.inx:26
+#: inx/inkstitch_lettering_force_lock_stitches.inx:9
 msgid "Restrict to Satin"
 msgstr ""
 
-#: inx/inkstitch_lettering_force_lock_stitches.inx:27
+#: inx/inkstitch_lettering_force_lock_stitches.inx:11
 msgid "Minimum distance (mm)"
 msgstr ""
 
-#: inx/inkstitch_lettering_force_lock_stitches.inx:28
+#: inx/inkstitch_lettering_force_lock_stitches.inx:12
 msgid "Maximum distance (mm)"
 msgstr ""
 
-#: inx/inkstitch_lettering_force_lock_stitches.inx:30
+#: inx/inkstitch_lettering_force_lock_stitches.inx:14
 msgid "Add force lock stitches attribute to the last element of each glyph"
+msgstr ""
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:17
+msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
+msgstr ""
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:23
+msgid "This extension has been build to help font authors to define \"force lock stitches\"-attributes automatically if they are placed in a predefined distance to the next object."
+msgstr ""
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:28
+msgid "https://inkstitch.org/docs/font-tools/#force-lock-stitches"
 msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:3
@@ -5562,163 +5668,179 @@ msgstr "JSONを生成する"
 msgid "Font info"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:18
-msgid "Generates font.json which can be used by the lettering tool."
-msgstr ""
-
-#: inx/inkstitch_lettering_generate_json.inx:21
-msgid "The generated file can be viewed and updated with a standard text editor tool."
-msgstr ""
-
-#: inx/inkstitch_lettering_generate_json.inx:34
-#: inx/inkstitch_lettering_update_json_glyphlist.inx:17
+#: inx/inkstitch_lettering_generate_json.inx:25
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:9
 msgid "SVG Font File"
 msgstr "SVGフォントファイル"
 
-#: inx/inkstitch_lettering_generate_json.inx:40
+#: inx/inkstitch_lettering_generate_json.inx:31
 msgid "Keywords"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:70
+#: inx/inkstitch_lettering_generate_json.inx:61
 msgid "Default Glyph"
 msgstr "デフォルトのグリフ"
 
-#: inx/inkstitch_lettering_generate_json.inx:76
+#: inx/inkstitch_lettering_generate_json.inx:67
 msgid "Autoroute Satin"
 msgstr "サテンの自動ルート"
 
-#: inx/inkstitch_lettering_generate_json.inx:76
+#: inx/inkstitch_lettering_generate_json.inx:67
 msgid "Disable if you defined manual routing in your font."
 msgstr "フォントで手動ルーティングを定義した場合は無効にします。"
 
-#: inx/inkstitch_lettering_generate_json.inx:78
+#: inx/inkstitch_lettering_generate_json.inx:69
 msgid "Reversible"
 msgstr "可逆"
 
-#: inx/inkstitch_lettering_generate_json.inx:78
+#: inx/inkstitch_lettering_generate_json.inx:69
 msgid "If disabled back and forth stitching will not be possile for this font."
 msgstr "無効にすると、このフォントの前後のステッチはできなくなります。"
 
-#: inx/inkstitch_lettering_generate_json.inx:79
+#: inx/inkstitch_lettering_generate_json.inx:70
 msgid "Force letter case"
 msgstr "大文字と小文字を強制する"
 
-#: inx/inkstitch_lettering_generate_json.inx:81
+#: inx/inkstitch_lettering_generate_json.inx:72
 msgid "Upper"
 msgstr "アッパー"
 
-#: inx/inkstitch_lettering_generate_json.inx:82
+#: inx/inkstitch_lettering_generate_json.inx:73
 msgid "Lower"
 msgstr "下"
 
-#: inx/inkstitch_lettering_generate_json.inx:87
+#: inx/inkstitch_lettering_generate_json.inx:78
 msgid "Min Scale"
 msgstr "最小スケール"
 
-#: inx/inkstitch_lettering_generate_json.inx:88
+#: inx/inkstitch_lettering_generate_json.inx:79
 msgid "Max Scale"
 msgstr "最大スケール"
 
-#: inx/inkstitch_lettering_generate_json.inx:93
-#: inx/inkstitch_lettering_generate_json.inx:94
+#: inx/inkstitch_lettering_generate_json.inx:84
+#: inx/inkstitch_lettering_generate_json.inx:85
 msgid "Kerning"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:95
+#: inx/inkstitch_lettering_generate_json.inx:86
 msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them). If the kerning information cannot be found, these values will apply automatically."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:103
-#: inx/inkstitch_lettering_generate_json.inx:111
+#: inx/inkstitch_lettering_generate_json.inx:94
+#: inx/inkstitch_lettering_generate_json.inx:102
 msgid "Force"
 msgstr "力"
 
-#: inx/inkstitch_lettering_generate_json.inx:103
+#: inx/inkstitch_lettering_generate_json.inx:94
 msgid "Overwrite leading information from font file."
 msgstr "フォントファイルから先頭の情報を上書きします。"
 
-#: inx/inkstitch_lettering_generate_json.inx:105
+#: inx/inkstitch_lettering_generate_json.inx:96
 msgid "Leading (px)"
 msgstr "リーディング（px）"
 
-#: inx/inkstitch_lettering_generate_json.inx:105
+#: inx/inkstitch_lettering_generate_json.inx:96
 msgid "Line height (default: 100)"
 msgstr "行の高さ（デフォルト：100）"
 
-#: inx/inkstitch_lettering_generate_json.inx:111
+#: inx/inkstitch_lettering_generate_json.inx:102
 msgid "Overwrite word spacing information from font file."
 msgstr "フォントファイルから単語間隔情報を上書きします。"
 
-#: inx/inkstitch_lettering_generate_json.inx:113
+#: inx/inkstitch_lettering_generate_json.inx:104
 msgid "Word spacing (px)"
 msgstr "単語間隔（px）"
 
-#: inx/inkstitch_lettering_generate_json.inx:113
+#: inx/inkstitch_lettering_generate_json.inx:104
 msgid "Space character width (default: 20)"
 msgstr "スペース文字の幅（デフォルト：20）"
+
+#: inx/inkstitch_lettering_generate_json.inx:112
+msgid "Generates font.json which can be used by the lettering tool."
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:113
+msgid "The generated file can be viewed and updated with a standard text editor tool."
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:116
+msgid "https://inkstitch.org/docs/font-tools/#generate-json"
+msgstr ""
 
 #: inx/inkstitch_lettering_remove_kerning.inx:3
 msgid "Remove Kerning"
 msgstr "カーニングを削除します"
 
+#: inx/inkstitch_lettering_remove_kerning.inx:10
+msgid "Select Font Files"
+msgstr "フォントファイルを選択"
+
 #: inx/inkstitch_lettering_remove_kerning.inx:14
 msgid "Removes Kerning information from given SVG files"
 msgstr ""
 
-#: inx/inkstitch_lettering_remove_kerning.inx:18
+#: inx/inkstitch_lettering_remove_kerning.inx:16
 msgid "⚠ Make sure you keep a copy of the original file. After running this extension kerning information will be lost unrevertably from these files."
 msgstr ""
 
 #: inx/inkstitch_lettering_remove_kerning.inx:23
-msgid "Select Font Files"
-msgstr "フォントファイルを選択"
+msgid "https://inkstitch.org/docs/font-tools/#remove-kerning"
+msgstr ""
 
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:3
 msgid "Update Glyphlist"
 msgstr ""
 
-#: inx/inkstitch_lettering_update_json_glyphlist.inx:14
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:10
+msgid "JSON File"
+msgstr ""
+
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:13
 msgid "Updates the glyphlist in the json file."
 msgstr ""
 
-#: inx/inkstitch_lettering_update_json_glyphlist.inx:18
-msgid "JSON File"
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:16
+msgid "https://inkstitch.org/docs/font-tools/#update-glyph-list"
 msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:14
-msgid "Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system."
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:17
-msgid "Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A."
-msgstr ""
-
-#: inx/inkstitch_letters_to_font.inx:22
+#: inx/inkstitch_letters_to_font.inx:9
 msgid "File format"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:61
+#: inx/inkstitch_letters_to_font.inx:48
 msgid "Font directory"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:63
+#: inx/inkstitch_letters_to_font.inx:50
 msgid "Import commands"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:64
+#: inx/inkstitch_letters_to_font.inx:51
 msgid "As param"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:65
+#: inx/inkstitch_letters_to_font.inx:52
 msgid "As symbol"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:70
+#: inx/inkstitch_letters_to_font.inx:57
+msgid "Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system."
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:60
+msgid "Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A."
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:65
 msgid "⚠ After running this function, drag the baseline into the desired position and place the letters accordingly. Save your font in a separate folder. Then generate the json file (with \"Autoroute Satin\" unchecked)."
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:72
+msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
 msgstr ""
 
 #: inx/inkstitch_object_commands.inx:3
@@ -5733,40 +5855,48 @@ msgstr ""
 msgid "Outline"
 msgstr ""
 
-#: inx/inkstitch_outline.inx:14
+#: inx/inkstitch_outline.inx:9
 msgid "Keep original element(s)"
 msgstr ""
 
-#: inx/inkstitch_outline.inx:19
+#: inx/inkstitch_outline.inx:14
 msgid "Threshold (mm²)"
 msgstr ""
 
-#: inx/inkstitch_outline.inx:19
+#: inx/inkstitch_outline.inx:14
 msgid "Removes smaller shape areas than that"
 msgstr ""
 
-#: inx/inkstitch_outline.inx:21
+#: inx/inkstitch_outline.inx:16
 msgid "Buffer (mm)"
 msgstr ""
 
-#: inx/inkstitch_outline.inx:21
+#: inx/inkstitch_outline.inx:16
 msgid "Enlarge strokes by this amount"
 msgstr ""
 
-#: inx/inkstitch_outline.inx:23
+#: inx/inkstitch_outline.inx:18
 msgid "Smoothness (mm)"
 msgstr ""
 
-#: inx/inkstitch_outline.inx:23
+#: inx/inkstitch_outline.inx:18
 msgid "Smooth path by this amount"
 msgstr ""
 
-#: inx/inkstitch_outline.inx:28
+#: inx/inkstitch_outline.inx:23
 msgid "Inset (mm)"
 msgstr ""
 
-#: inx/inkstitch_outline.inx:28
+#: inx/inkstitch_outline.inx:23
 msgid "Counteract the buffer effect"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:26
+msgid "This extension helps reconstruct an original object from a stitch file."
+msgstr ""
+
+#: inx/inkstitch_outline.inx:29
+msgid "https://inkstitch.org/docs/stroke-tools/#outline"
 msgstr ""
 
 #: inx/inkstitch_output_COL.inx:3
@@ -6256,23 +6386,31 @@ msgstr ""
 msgid "If there is already an active selection, non matching elements will be deselected."
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:90
-msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
+#: inx/inkstitch_select_elements.inx:86
+msgid "More info on our website"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:92
-msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
+#: inx/inkstitch_select_elements.inx:87
+msgid "https://inkstitch.org/docs/edit/#select-embroidery-elements/"
 msgstr ""
 
 #: inx/inkstitch_select_elements.inx:93
-msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
-msgstr ""
-
-#: inx/inkstitch_select_elements.inx:94
-msgid "* macOS: doesn't work, sorry"
+msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
 msgstr ""
 
 #: inx/inkstitch_select_elements.inx:95
+msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:96
+msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:97
+msgid "* macOS: doesn't work, sorry"
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:98
 msgid "Python Path"
 msgstr ""
 
@@ -6292,52 +6430,60 @@ msgstr ""
 msgid "Stitch Plan Preview"
 msgstr "ステッチプランプレビュー"
 
-#: inx/inkstitch_stitch_plan_preview.inx:20
+#: inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Render Mode"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:20
+#: inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Realistic modes will render to a raster image for performance reasons. Realistic Vector may cause Inkscape to slow down for complex designs."
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:23
+#: inx/inkstitch_stitch_plan_preview.inx:18
 msgid "Realistic High Quality"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:24
+#: inx/inkstitch_stitch_plan_preview.inx:19
 msgid "Realistic Vector (slow)"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:29
+#: inx/inkstitch_stitch_plan_preview.inx:24
 msgid "Move stitch plan beside the canvas"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:30
+#: inx/inkstitch_stitch_plan_preview.inx:25
 msgid "Needle points"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:32
+#: inx/inkstitch_stitch_plan_preview.inx:27
 msgid "Lock"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:32
+#: inx/inkstitch_stitch_plan_preview.inx:27
 msgid "Make stitch plan insensitive to mouse interactions"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:33
+#: inx/inkstitch_stitch_plan_preview.inx:28
 msgid "Display command symbols"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:34
+#: inx/inkstitch_stitch_plan_preview.inx:29
 msgid "Render jump stitches"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:38
+#: inx/inkstitch_stitch_plan_preview.inx:33
 msgid "Add ignore layer command"
 msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:39
+#: inx/inkstitch_stitch_plan_preview.inx:34
 msgid "Override last stitch plan"
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:38
+msgid "Use this extension to render the stitch plan into the canvas."
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:41
+msgid "https://inkstitch.org/docs/visualize/#stitch-plan-preview"
 msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
@@ -6437,20 +6583,36 @@ msgstr ""
 msgid "Troubleshoot Objects"
 msgstr "オブジェクトのトラブルシューティング"
 
-#: inx/inkstitch_troubleshoot.inx:6
+#: inx/inkstitch_troubleshoot.inx:9
 msgid "Pointer size (mm)"
 msgstr ""
 
-#: inx/inkstitch_troubleshoot.inx:7
+#: inx/inkstitch_troubleshoot.inx:10
 msgid "Font size (mm)"
+msgstr ""
+
+#: inx/inkstitch_troubleshoot.inx:13
+msgid "This extension points on problematic or possibly problematic spots in the document or selection."
+msgstr ""
+
+#: inx/inkstitch_troubleshoot.inx:16
+msgid "https://inkstitch.org/docs/troubleshoot/#troubleshoot-objects"
 msgstr ""
 
 #: inx/inkstitch_unlink_clone.inx:3
 msgid "Unlink Clone"
 msgstr ""
 
-#: inx/inkstitch_unlink_clone.inx:6
+#: inx/inkstitch_unlink_clone.inx:8
 msgid "Recursive"
+msgstr ""
+
+#: inx/inkstitch_unlink_clone.inx:11
+msgid "Unlink clones and apply the fill stitch angle."
+msgstr ""
+
+#: inx/inkstitch_unlink_clone.inx:14
+msgid "https://inkstitch.org/docs/edit/#unlink-clone/"
 msgstr ""
 
 #: inx/inkstitch_update_svg.inx:3
