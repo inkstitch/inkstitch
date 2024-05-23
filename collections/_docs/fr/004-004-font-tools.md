@@ -118,7 +118,7 @@ Souvent les fontes de broderie achetées sont organisées en sous dossiers car c
 
 Permet d'insérer dans le fichier json la liste des glyphes définis . Cette opération doit être effectuée une première fois, puis chaque fois que la liste des glyphes effectivement programmés est modifiée.
 
-## Supprimer les informations de crénage
+## Supprimer les informations de crénage {#remove-kerning}
 
 **⚠ Attention**: Les modifications effectuées par cet outil sont irréversibles. N'oubliez pas de faire **une copie** de votre fichier svg avant d'utiliser cet outil.
 {: .notice--warning }
