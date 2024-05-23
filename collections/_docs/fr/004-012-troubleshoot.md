@@ -4,7 +4,7 @@ permalink: /fr/docs/troubleshoot/
 last_modified_at: 2024-04-27
 toc: true
 ---
-## Dépistage de problèmes avec des objets {#troubleshoot}
+## Dépistage de problèmes avec des objets {#troubleshoot-objects}
 
 Ink/Stitch peut parfois être déroutant. Surtout pour les débutants. Mais si vous utilisez Ink/Stitch pendant un certain temps, vous recevrez également des messages d'erreur, indiquant que quelque chose s'est mal passé et que votre forme ne peut pas être affichée pour une raison quelconque.
 
