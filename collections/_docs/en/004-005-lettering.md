@@ -1,7 +1,7 @@
 ---
 title: "Lettering"
 permalink: /docs/lettering/
-last_modified_at: 2024-02-19
+last_modified_at: 2024-05-23
 toc: true
 ---
 ## Lettering Tool
@@ -81,3 +81,7 @@ repeat until all the colors are grouped, always starting with selecting the last
 Read the [font creation tutorial](/tutorials/font-creation/).
 
 Contact us if you are willing to publish your font in the Ink/Stitch lettering tool on [GitHub](https://github.com/inkstitch/inkstitch/issues).
+
+## Sample Files Including Lettering
+
+{% include tutorials/tutorial_list key="techniques" value="Lettering" %}
