@@ -42,7 +42,7 @@ Filtre les fontes par famille, par exemple les fontes d'appliqué ou les fontes 
 
 Vous pouvez enregistrer et rouvrir vos paramètres de police préférés.
 
-## Lettrage le long d'un chemin
+## Lettrage le long d'un chemin  {#lettering-along-path}
 
 Les lettres d'ink/stitch ont été soigneusement dessinées pour une broderie optimale. Si vous essayez de les modifier avec les outils usuels d'inkscape, il se peut que cela ne fonctionne pas comme vous le souhaitez. Placez les lettres le long  d'un chemin est un gros travail. Cet outil va vous aider à le faire.
 
