@@ -6,22 +6,22 @@ toc: true
 ---
 An- und Verstecher sind kleine Stiche am Anfang (Anstecher) oder am Ende (Verstecher) eines Farbblocks oder vor und nach einem Sprungstich oder Fadenschnitt-Befehl. Sie helfen den Faden zu sichern.
 
+Fadenscnittbefehle können auf zwei Arten eingefügt werden:
+
+* entweder als visueller Befehl übr `Erweiterungen > Ink/Stitch > Befehle > Objektbefehle hinzufügen ...`
+* oder im Parameter-Dialog mit dem aktivieren der `Fadenschnitt`-Checkbox
+
+Die Stickdatei enthält mehere Elemente die hintereinander gestickt werden sollen.
+
+Ist der Abstand zwischen dem letzten Stich des einen Elementes und dem ersten Stich des nächsten Elementes größer als der Wert `Minimale Sprungstichlänge` (`Erweiterungen > Ink/Stitch > Einstellungen`), dann wird ein Sprungstich zwischen den Elementen generiert. In diesem Fall kommen auch Vernähstiche am Ende des ersten Elements und Anfang des nächsten Elements zur Anwendung (wenn dies nicht durch die Option `Vernähen erlauben` explizit unterbunden wird).
+
+Ist der Abstand zwischen den Elementen kleiner als der Wert `Minimale Sprungstichlänge` erstellt das Stickprogramm einen normalen Stich und zwischen den Elementen werden keine Vernähstiche generiert.
+
+Ink/Stitch bietet die Möglichkeit auch bei kleinen Distanzen Vernähstiche zu erzwingen. Dies geschieht durch die Option `Vernähstiche erzwingen` in den Parametern. Hierdurch werden unabhängig von Abständen Vernähstiche zwischen den beiden Objekten erzeugt. Diese Option überschreibt auch die Einstellung `Vernähen erlauben`.
+
 Ink/Stitch bietet verschiedene Vernähstich-Typen an und erlaubt sogar die Definition eigener Vernähstiche.
 
-Ink/Stitch allows you to add trim commands
-
-*  either as a visual command  using  Extension < Ink/Stitch < Commands < Attach commands to selected objects
-* or by ckecking "Trim after" in the parameters dialog
-  
-The embroidery file contains several embroidery objects that will be embroidered one after another. 
-
-When the distance between the end of an object and the begining of the next one is larger than the  "minimum  jump stitch length"  as defined in Extension > Ink/Stitch > Preferences, then there is a jump in between the objects. In that  case,   lock stitches are added  at the end of the first object and tack stitches at the begining of the second one except if their respective  "allow lock stitches" parameter do not  allow one (or both) of them.
-
-If this distance is smaller thant the "minimum jump stitch length", then the needle move to go from first object to second object is not a jump, but a regular stitch and no tack down stitches is added to the first object and no lock stitches to the second one, regardless t their respective "allow lock stitch parameter" value.
-
-It is however possible to force small distance jumps to have  lock and tack stitches. Check the "force lock stitch" parameter of the **before jump** object to add lock stitches before jump and tack stitches after jump. This overides the "allow lock stitches"  parameters. Beware not to check "force lock stitch" on  the after jump object, as you would then force the "lock stitches" for it, not the "tack stitches", plus you would force lock stitches for next object, whatever its distance from after jump object.
-
-## Standart-Vernähstiche
+## Standard-Vernähstiche
 
 ![Lock stitch variants](/assets/images/docs/lock-stitches.png)
 {: .img-half }
