@@ -75,3 +75,7 @@ et recommencer jusqu'a qu'il n'y ait plus que des groupes de couleurs, en partan
 Lire le [tutoriel de création de police](/fr/tutorials/font-creation/).
 
 Contactez nous  sur  [GitHub](https://github.com/inkstitch/inkstitch/issues) si vous souhaitez publier votre police dans l'outil de lettrage d'Ink/Stitch.
+
+## Fichiers example concernant  le lettrage
+
+{% include tutorials/tutorial_list key="techniques" value="Lettering" %}
