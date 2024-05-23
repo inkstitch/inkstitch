@@ -17,7 +17,7 @@ toc: true
 **Astuce** Pour un accès plus rapide [activer les raccourcis](/fr/docs/customize/) des outils satin spécifiques.
 {: .notice--info}
 
-## Agencement automatique de Colonnes Satin
+## Agencement automatique de Colonnes Satin {#auto-route-satin-columns}
 
 Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin dans un ordre d'assemblage logique. Des sous-chemins et les sauts de points seront ajoutés si nécessaire et les colonnes seront scindées pour faciliter les sauts. Les points satins résultants conserveront tous les paramètres que vous avez définis sur les points satins originaux, y compris la sous-couche, l’espacement en zigzag, etc.
 
