@@ -114,6 +114,8 @@ This is yet another Emilio variation. It aims at looking liking  like a Tartan A
 
 ## Sortieren der Farben 
 
+This does not apply to the tartan variation.
+
 Wenn man mehrere Buchstaben sticken möchte, kann man die Farben sortieren. Das ist möglich, man muss aber die relative Reihenfolge innerhalb der einzelnen Buchstaben beachten. [So geht's](https://inkstitch.org/de/docs/lettering/#sortierung-von-farben)
 
 ## Impressionen
