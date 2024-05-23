@@ -57,7 +57,7 @@ Cette extension exportera les couleurs d'éléments textuels tout en utilisant l
 
 {% include video id="4bcRVoKvzAw" provider="youtube" %}
 
-## Installer une Palette personnalisée 
+## Installer une Palette personnalisée {#install-custom-palette}
 
 Si vous disposez d'un fichier `.gpl` qui contient la liste des fils que vous utilisez, vous pouvez la rendre disponible dans Ink/Stitch via cette extension: `Extensions > Ink/Stitch > Gestion des couleurs de fil > Installer une palette personnalisée...`. Vous devrez ensuite redémarrer Inkscape.
 
