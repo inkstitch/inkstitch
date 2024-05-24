@@ -2,7 +2,7 @@
 permalink: /de/tutorials/zigzag-meander-fill/
 title: "Fellimitation mit Mäanderfüllung"
 language: de
-last_modified_at: 2024-05-02
+last_modified_at: 2024-05-24
 excerpt: "Der Katzenkörper ist eine Meanderfüllung mit Zick-Zack-Stich"
 image: "/assets/images/docs/zigzagmeander_grumpycat.jpg"
 tutorial-type:
