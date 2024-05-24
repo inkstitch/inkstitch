@@ -23,8 +23,8 @@ Using inkscape live distort paths effects with embroidery is fun. You may try an
 
 * Bend
 * Envelope Deformation
-* Lattice Deformation
 * Perspective/Envelope
+* Lattice Deformation
 
 To  get the best results :
 * simplify the paths as much as possible
