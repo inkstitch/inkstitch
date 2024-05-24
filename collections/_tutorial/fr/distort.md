@@ -1,7 +1,7 @@
 ---
 title: Utiliser  les  effets de chemins de déformation
 permalink: /fr/tutorials/distort/
-last_modified_at: 2024-05-24
+last_modified_at: 2024-05-26
 language: fr
 excerpt: "Utiliser les effets de chemin de  deformation"
 image: "/assets/images/galleries/fonts/multiple/multifont3.jpg"
@@ -22,8 +22,8 @@ user-level:
 On  peut bien s'amuser en utilisant les effets de chemin de déformation sur des broderies. Vous pouvez pour cela utiliser ces effets:
 * Courber
 * Déformation par enveloppe
-* Déformation par grille
 * Perspective et enveloppe
+* Déformation par grille
 
 Pour obtenir de bons résultats il est préférable  de: 
 * simplifier les chemins  autant qu'il est possible
@@ -91,6 +91,17 @@ Cet effet est très utile pour appliquer un effet.... de perspective
 
 Après avoir ajouté l'effet, activez le mode noeud et déplacez  les 4 coins de l'enveloppe rectangulaire qui apparait.
 
+Avec cet  effet de  perspective, la fonte Marcellus semble   être passé en italique:
 
+![italique](/assets/images/tutorials/distort/italic.png)
+
+## Déformation par grille
+
+Après  avoir appliqué l'effet et  activé le mode noeud, vous disposez de 25 points de contrôles que vous pouvez déplacer pour déformer:
+![grid](/assets/images/tutorials/distort/grid.png)
+
+Utilisez le pour faire bouger  vos fontes:
+
+![italique](/assets/images/tutorials/distort/hello.png)
 
 
