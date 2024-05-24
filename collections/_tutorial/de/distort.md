@@ -1,88 +1,88 @@
 ---
-title: Using distort path effects
+title: Verformen mit Pfad-Effekten
 permalink: /de/tutorials/distort/
 last_modified_at: 2024-05-22
 language: de
-excerpt: "Using distort paths effects"
+excerpt: "Formen und Schriften mit Inkscape Pfad-Effekten verformen"
 image: "/assets/images/galleries/fonts/multiple/multifont3.jpg"
 
-tutorial-type:
+tutorial-typ:
   - Sample File
-stitch-type: 
+stichart: 
   - Satin Stitch
-techniques:
+techniken:
    -Lettering
 field-of-use:
-user-level: 
+schwierigkeitsgrad: 
 ---
 {% include upcoming_release.html %}
 
-![Distort effect](/assets/images/galleries/fonts/multiple/multifont3.jpg)
+![Verzerr Effekt](/assets/images/galleries/fonts/multiple/multifont3.jpg)
 
-Using inkscape live distort paths effects with embroidery is fun. You may try any  of these live path effects: 
+Stickobjekte mit Inkscape Pfadeffekten zu verformen macht Spaß. Inkscape bietet hierfür verschiedene Pfadeffekte an:
 
-* Bend
-* Envelope Deformation
-* Lattice Deformation
-* Perspective/Envelope
+* Biegen
+* Hüllenverformung
+* Gitterverformung
+* Perspektive/Umhüllung
 
-To  get the best results :
-* simplify the paths as much as possible
-* avoid very small shapes
+Für gute Resultate sollte folgendes beachtet werden:
 
-Satin column  are tricky : because there is nothing  in the svg file that distinguish rails from rungs 
-in the compound path, Ink/Stitch need to pinpoint the two rails among all the subpaths of a satin column. 
+* Pfade sollten so gut wie möglich vereinfacht werden
+* Sehr kleine Elemente eignen sich nicht für diese Technik
 
-To help  Ink/Stitch chose the same subpaths as rails after  distortion:
+Satinsäulen stellen eine Herausforderung dar: es gibt keine spezielle Kennzeichnung für Richtungsvekotren und Außenkonturen in der SVG-Pfad-Beschreibung. Ink/Stitch muss aus allen Unterpfaden die Außenkonturen herausfiltern.
 
-- avoid  superposed  rails end points
-- rungs should not end  up on the rails,  but cross both rails with flair
-- do not  use satin with no rung or with exactly two rungs.
+Um Ink/Stitch bei diesem Prozess zu unterstützen und das Ergebnis nach der Verformung konstant zu halten:
 
+* Außenkonturen sollten sich nach Möglichkeit nicht überschneiden
+* Richtungsvekotren sollten die Außenkonturen an beiden Seiten klar kreuzen
+* Die Satinsäulen sollte Richtungsvekotren haben, aber nicht exakt zwei
 
-If you follow these rules, there is a good chance that  your satin will still be recognized 
-as the same satin after distortion. 
+Wenn diese Regeln befolgt werden, ist die Chance groß, dass Ink/Stitch die Satinsäulen auch nach der Verformung noch richtig erkennen kann.
 
-Most Ink/Stitch lettering font do well with gentle distortion. 
-However if  the distortotion is too extreme, the result will probably not stitch well.
+Die meisten Ink/Stitch Schriften sind dazu optimiert worden mit leichten Verformungen gut zu funktionieren.
+Wenngleich extreme Verformungen möglicherweise zu Problemen beim Sticken führen können.
 
+## Biegen
 
-## Bend Effect
-Bend effect is very easy to apply to a lettering :
-* Select the lettering group
-* Add a  bend path effect to the group
-* In the path effects dialog, click the "edit on canvas" button and  distort the green path that appears
+Der Pfadeffekt `Biegen` ist sehr einfach auf Schriften anzuwenden
 
-  As it is a live path effect you can change  the green  path again whenever you like 
+* Wähle eine komplette Text-Gruppe
+* Füge den Pfadeffekt `Biegen` hinzu
+* Klicke im Pfadeffekt-Dialog auf `Auf der Arbeitsfläche bearbeiten` und verforme nun erschienenen grünen Pfad
 
-If your text is multiline, you may prefer to apply the effect independantly on each line.
+  Da es sich um einen Pfadeffekt handelt, kann der grüne Pfad auch später immer wieder angepasst werden
 
-![Lettering Bend Example](/assets/images/tutorials/distort/peace_dove.svg)
+Für mehrzeilige Texte lohnt es sich den Pfadeffekt auf jede Zeile einzelnd anzuwenden.
 
-[Download](/assets/images/tutorials/distort/peace_dove.svg){: download="peace_dove.svg" }
+![Text Biegen Beispiel](/assets/images/tutorials/distort/peace_dove.svg)
 
-Of course this is not limited to fonts, you can use this effect to pretend you have a whole school of Mantas even if you draw a single one.
+[Herunterladen](/assets/images/tutorials/distort/peace_dove.svg){: download="peace_dove.svg" }
+
+Natürlich ist diese Methode nicht auf Schriften begrenzt. In diesem Beispiel wurde aus einem einzigen gezeichneten Rochen ein ganzer Schwarm.
 
 ![Mantas Bend Example](/assets/images/tutorials/distort/Mantas.svg)
 
-[Download](/assets/images/tutorials/distort/Mantas.svg){: download="Mantas.svg" }
+[Herunterladen](/assets/images/tutorials/distort/Mantas.svg){: download="Mantas.svg" }
 
-## Envelope deformation
-It works basically the same way, except that this time you have four paths to control the distortion. Edit on canvas any or all of the four paths.
+## Hüllenverformung
+
+Die Hüllenverformung funktioniert im Wesentlichen genauso wie der Biegen-Pfadeffekt. Hier ist eine Bearbeitung auf der Arbeitsfläche für alle 4 Seiten möglich.
+
+In diesem Beispiel wurde die Hüllenverformung auf jede Textzeile getrennt angwendet.
 
 ![Manger Enveloppe deformation example](/assets/images/tutorials/distort/manger.svg)
 
 [Download](/assets/images/tutorials/distort/manger.svg){: download="manger.svg" }
 
-Here the enveloppe deformation is used independantly on each  line of text.
+## Perspektive/Umhüllung
 
-## Perspective/Envelope
-This path effect  is very  handy  to apply....a perspective effect.
+Dieser Pfadeffekt ist sehr nützlich um ... einer Form eine Perspektive zu geben.
+
+Nach der Anwendung des Effekts können die vier Ecken mit dem Knotenwerkzeug verschoben werden.
 
 ![perspective example](/assets/images/tutorials/distort/perspective.svg)
 
 [Download](/assets/images/tutorials/distort/manger.svg){: download="perspective.svg" }
-
-After adding the effect, activate the node  tool and move the four corners.
-
 

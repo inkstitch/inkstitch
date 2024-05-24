@@ -27,7 +27,7 @@ Das erlaubt dir dein Design mit den richtigen Farben zu planen. Die Farben werde
 * Wähle "Installieren"
 * Starte Inkscape neu
 
-## Benutzerdefinierte Farbpalette installieren
+### Benutzerdefinierte Farbpalette installieren
 
 Wenn du eine `.gpl` Liste hast, die deine Garnfarben abbildet, kannst du sie mit dieser Erweiterung einfach in Inkscape verfügbar machen: `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Benutzerdefinierte Farbpalette installieren`.
 Inkscape muss nach diesem Vorgang neu gestartet werden.
@@ -89,4 +89,4 @@ Außerdem könnte diese Funktion dazu dienen, verschiedene Farbvariationen auszu
 
 ## Garnliste Exportieren
 
-Garnlisten können nur über eine ZIP-Datei exportiert werden ([batch export](/de/docs/import-export/#batch-export))
+Garnlisten für ein Design können nur über eine ZIP-Datei exportiert werden ([batch export](/de/docs/import-export/#batch-export))

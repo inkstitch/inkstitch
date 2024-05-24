@@ -1,7 +1,7 @@
 ---
 title: "Text"
 permalink: /de/docs/lettering/
-last_modified_at: 2024-03-13
+last_modified_at: 2024-05-24
 toc: true
 ---
 ## Text-Werkzeug
@@ -85,5 +85,5 @@ Kontaktiere uns wenn du deine Schriftart für die nächste Ink/Stitch Version zu
 
 ## Sample Files Including Lettering
 
-{% include tutorials/tutorial_list key="techniques" value="Lettering" %}
+{% include tutorials/tutorial_list key="techniken" value="Text" %}
 
