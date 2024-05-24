@@ -96,7 +96,7 @@ Nachdem die Gitterverformung aktiviert wurde, kann das Element mit dem Knotenwer
 
 ![grid](/assets/images/tutorials/distort/grid.png)
 
-Langweilige Schriften werden so zum Tanzen gebracht ...
+Einfache Schriften werden so zum Tanzen gebracht ...
 
 ![italique](/assets/images/tutorials/distort/hello.png)
 

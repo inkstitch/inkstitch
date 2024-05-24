@@ -138,3 +138,7 @@ In einer kleinen Vorschau und gerade so wie es die Zeit uns noch ermöglicht mö
 Besonders hervorheben wollen wir dabei neue Sticharten wie z.B. Farbverläufe, Tartan, S-Stich oder die überarbeiteten Möglichkeiten für geklonte Objekte.
 
 [Vorschau über kommende Änderungen](https://inkstitch.org/de/upcoming/)
+
+## Handout
+
+[Handout zum Treffen herunterladen](/assets/files/Handout-InkStitch-Treffen-2024.pdf){: download="Handout-InkStitch-Treffen-2024.pdf" }
