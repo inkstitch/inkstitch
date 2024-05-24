@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-23 01:08+0000\n"
-"PO-Revision-Date: 2024-05-23 01:09\n"
+"PO-Revision-Date: 2024-05-24 01:09\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -238,7 +238,7 @@ msgstr "Glacial est une toute toute petite police, le M majuscule mesure 5.6 mm 
 #. description of font in fonts/honoka
 #: inkstitch-fonts-metadata.py:82
 msgid "コルの書きこも is a satin column japanese script font approximatively 20mm tall. It contains all hiragana, katakana and punctuation glyphs. It may be scaled  down to 50% and scaled up to 200%"
-msgstr ""
+msgstr "コルの書きこも est une  police japonaise en colonne satin d'environ 20 mm de haut. Elle contient tous les hiragana, katakana  et signes de ponctuations. Elle peut être réduite jusqu'à 50%  et agrandie jusqu'à 200%"
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:84
@@ -313,7 +313,7 @@ msgstr "Namskout est une grande police en appliqué d'environ 90mm. Il y a 43 gl
 #. description of font in fonts/namskout_tartan
 #: inkstitch-fonts-metadata.py:110
 msgid "Namskout Tartan is a tartan font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
-msgstr ""
+msgstr "Namskout Tartan est une fonte en remplissage tartan d'environ 90 mm  de  haut. Elle  contient 43 glyphes dont les chiffres et les 26 majuscules A-Z. Elle  peut être réduite jusqu'à 50% et agrandie jusqu'à 150%  "
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:112
@@ -1959,7 +1959,7 @@ msgstr "Tolérance"
 
 #: lib/elements/satin_column.py:367
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. "
-msgstr ""
+msgstr "Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible signifie que les points seront plus rapprochés. Une tolérance plus élevée signifie que les angles vifs peuvent être arrondis. "
 
 #: lib/elements/satin_column.py:383
 msgid "Inset distance (fixed)"
@@ -2334,11 +2334,11 @@ msgstr "%s groupes/calques à supprimer :"
 
 #: lib/extensions/cleanup.py:74
 msgid "{num_elements_removed} elements removed"
-msgstr ""
+msgstr "{num_elements_removed} éléments supprimés"
 
 #: lib/extensions/cleanup.py:78
 msgid "{num_groups_removed} groups/layers removed"
-msgstr ""
+msgstr "{num_groups_removed} groupes/calques supprimés"
 
 #: lib/extensions/convert_to_satin.py:35
 msgid "Please select at least one line to convert to a satin column."
@@ -4441,7 +4441,7 @@ msgstr "Préserver l’ordre des colonnes satin"
 
 #: inx/inkstitch_auto_satin.inx:13
 msgid "This extension tries to create a single stitch path through all selected satin columns."
-msgstr ""
+msgstr "Cette extension tente de créer un chemin de broderie unique qui parcourt toutes les colonnes satins sélectionnées."
 
 #: inx/inkstitch_auto_satin.inx:15 inx/inkstitch_break_apart.inx:20
 #: inx/inkstitch_cleanup.inx:25 inx/inkstitch_convert_to_stroke.inx:15
@@ -4457,11 +4457,11 @@ msgstr ""
 #: inx/inkstitch_stitch_plan_preview.inx:40 inx/inkstitch_troubleshoot.inx:15
 #: inx/inkstitch_unlink_clone.inx:13
 msgid "More information on our website"
-msgstr ""
+msgstr "Plus d'information sur notre site web"
 
 #: inx/inkstitch_auto_satin.inx:16
 msgid "https://inkstitch.org/docs/satin-tools/#auto-route-satin-columns"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/satin-tools/#auto-route-satin-columns"
 
 #: inx/inkstitch_auto_satin.inx:24 inx/inkstitch_convert_to_satin.inx:10
 #: inx/inkstitch_cut_satin.inx:10 inx/inkstitch_flip.inx:10
@@ -4485,7 +4485,7 @@ msgstr "Cette extension tentera de réparer les formes de remplissage et de les 
 
 #: inx/inkstitch_break_apart.inx:21
 msgid "https://inkstitch.org/docs/fill-tools/#break-apart-fill-objects"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/fill-tools/#break-apart-fill-objects"
 
 #: inx/inkstitch_break_apart.inx:29 inx/inkstitch_gradient_blocks.inx:10
 #: inx/inkstitch_tartan.inx:10
@@ -4538,7 +4538,7 @@ msgstr "Utilisez cette extension pour supprimer les petits objets du document."
 
 #: inx/inkstitch_cleanup.inx:26
 msgid "https://inkstitch.org/docs/troubleshoot/#cleanup-document"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/troubleshoot/#cleanup-document"
 
 #: inx/inkstitch_commands_scale_symbols.inx:3
 msgid "Scale Command Symbols"
@@ -4578,7 +4578,7 @@ msgstr "Convertit une colonne satin en un point droit."
 
 #: inx/inkstitch_convert_to_stroke.inx:16
 msgid "https://inkstitch.org/docs/stroke-tools/#convert-satin-to-stroke"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/stroke-tools/#convert-satin-to-stroke"
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
@@ -4712,11 +4712,11 @@ msgstr "Taille des marqueurs"
 
 #: inx/inkstitch_density_map.inx:27
 msgid "This extension helps you to determine the stitch density."
-msgstr ""
+msgstr "Cette extension aide à visualiser la densité des points de broderie."
 
 #: inx/inkstitch_density_map.inx:30
 msgid "https://inkstitch.org/docs/visualize/#density-map"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/visualize/#density-map"
 
 #: inx/inkstitch_density_map.inx:38 inx/inkstitch_display_stacking_order.inx:23
 #: inx/inkstitch_embroider.inx:14 inx/inkstitch_print.inx:10
@@ -4735,11 +4735,11 @@ msgstr "Taille de la police"
 
 #: inx/inkstitch_display_stacking_order.inx:12
 msgid "This extension inserts numbered labels for selected elements into the document to visualize the stitch order."
-msgstr ""
+msgstr "Cette extension insert dans le document des étiquettes numérotées pour visualiser l'ordre de broderie des éléments sélectionnés."
 
 #: inx/inkstitch_display_stacking_order.inx:15
 msgid "https://inkstitch.org/docs/visualize/#display-stacking-order"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/visualize/#display-stacking-order"
 
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
@@ -5468,11 +5468,11 @@ msgstr "Redémarrez Inkscape pour l'utiliser."
 
 #: inx/inkstitch_install_custom_palette.inx:15
 msgid "This extension installs a custom thread palette into Inkscape."
-msgstr ""
+msgstr "Cette extinction installe une palette personnalisée de couleurs de fil dans Inkscape."
 
 #: inx/inkstitch_install_custom_palette.inx:18
 msgid "https://inkstitch.org/docs/thread-color/#install-custom-palette"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/thread-color/#install-custom-palette"
 
 #: inx/inkstitch_jump_to_stroke.inx:3
 msgid "Jump Stitch to Stroke"
@@ -5616,7 +5616,7 @@ msgstr "L'option d'étirement détermine si les espaces entre les glyphes sont o
 
 #: inx/inkstitch_lettering_along_path.inx:28
 msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/lettering/#lettering-along-path"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:3
 #: inx/inkstitch_lettering_custom_font_dir.inx:9
@@ -5629,11 +5629,11 @@ msgstr "Définissez un répertoire personnalisé pour les polices supplémentair
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:14
 msgid "The custom font directory must contain a subdirectory for each font."
-msgstr ""
+msgstr "Le dossier personnel de fontes doit contenir un sous répertoire pour chaque fonte."
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:17
 msgid "https://inkstitch.org/docs/font-tools/#custom-font-directory"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/font-tools/#custom-font-directory"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:25
 #: inx/inkstitch_lettering_font_sample.inx:10
@@ -5671,7 +5671,7 @@ msgstr "Cette extension permet aux créateurs de fontes de broderie d'attribuer 
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:28
 msgid "https://inkstitch.org/docs/font-tools/#force-lock-stitches"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/font-tools/#force-lock-stitches"
 
 #: inx/inkstitch_lettering_generate_json.inx:3
 msgid "Generate JSON"
@@ -5778,7 +5778,7 @@ msgstr "Le fichier généré peut être visualisé et mis à jour avec un outil 
 
 #: inx/inkstitch_lettering_generate_json.inx:116
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/font-tools/#generate-json"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:3
 msgid "Remove Kerning"
@@ -5798,7 +5798,7 @@ msgstr "⚠ Assurez-vous de conserver une copie du fichier d'origine. Après avo
 
 #: inx/inkstitch_lettering_remove_kerning.inx:23
 msgid "https://inkstitch.org/docs/font-tools/#remove-kerning"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/font-tools/#remove-kerning"
 
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:3
 msgid "Update Glyphlist"
@@ -5814,7 +5814,7 @@ msgstr "Mets à jour la liste de glyphes dans le fichier json."
 
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:16
 msgid "https://inkstitch.org/docs/font-tools/#update-glyph-list"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/font-tools/#update-glyph-list"
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
@@ -5854,7 +5854,7 @@ msgstr "⚠ Après avoir lancé cette extension, faire glisser la \"baseline\" j
 
 #: inx/inkstitch_letters_to_font.inx:72
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/font-tools/#letters-to-font"
 
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
@@ -5906,11 +5906,11 @@ msgstr "Contrecarre l'effet tampon"
 
 #: inx/inkstitch_outline.inx:26
 msgid "This extension helps reconstruct an original object from a stitch file."
-msgstr ""
+msgstr "Cette extension aide à reconstruire l'objet originel à partir d'un fichier de points de broderie."
 
 #: inx/inkstitch_outline.inx:29
 msgid "https://inkstitch.org/docs/stroke-tools/#outline"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/stroke-tools/#outline"
 
 #: inx/inkstitch_output_COL.inx:3
 msgid "COL file output"
@@ -6401,11 +6401,11 @@ msgstr "S'il y a déjà des éléments sélectionnés, les éléments qui ne cor
 
 #: inx/inkstitch_select_elements.inx:86
 msgid "More info on our website"
-msgstr ""
+msgstr "Plus d'information sur notre site web"
 
 #: inx/inkstitch_select_elements.inx:87
 msgid "https://inkstitch.org/docs/edit/#select-embroidery-elements/"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/edit/#select-embroidery-elements/"
 
 #: inx/inkstitch_select_elements.inx:93
 msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
@@ -6493,11 +6493,11 @@ msgstr "Écraser le dernier plan de broderie"
 
 #: inx/inkstitch_stitch_plan_preview.inx:38
 msgid "Use this extension to render the stitch plan into the canvas."
-msgstr ""
+msgstr "Utilisez cette extension pour obtenir un rendu de la broderie sur la toile."
 
 #: inx/inkstitch_stitch_plan_preview.inx:41
 msgid "https://inkstitch.org/docs/visualize/#stitch-plan-preview"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/visualize/#stitch-plan-preview"
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
@@ -6606,11 +6606,11 @@ msgstr "Taille de la fonte (mm)"
 
 #: inx/inkstitch_troubleshoot.inx:13
 msgid "This extension points on problematic or possibly problematic spots in the document or selection."
-msgstr ""
+msgstr "Cette extension pointe les endroits problématiques ou possiblement problématiques du document ou de la sélection."
 
 #: inx/inkstitch_troubleshoot.inx:16
 msgid "https://inkstitch.org/docs/troubleshoot/#troubleshoot-objects"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/troubleshoot/#troubleshoot-objects"
 
 #: inx/inkstitch_unlink_clone.inx:3
 msgid "Unlink Clone"
@@ -6622,11 +6622,11 @@ msgstr "Récursivement"
 
 #: inx/inkstitch_unlink_clone.inx:11
 msgid "Unlink clones and apply the fill stitch angle."
-msgstr ""
+msgstr "Délier les clones et appliquer l'angle de broderie."
 
 #: inx/inkstitch_unlink_clone.inx:14
 msgid "https://inkstitch.org/docs/edit/#unlink-clone/"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/edit/#unlink-clone/"
 
 #: inx/inkstitch_update_svg.inx:3
 msgid "Update inkstitch svg"
