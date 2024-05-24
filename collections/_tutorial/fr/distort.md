@@ -41,7 +41,7 @@ Voici quelques recommandations  qui aideront Ink/Stitch a prendre la même déci
 
 Si vous suivez  toutes ces  règles, il est très probable que votre colonne satin soit analysée par Ink/Stitch  de la même manière avant et après déformation.
 
-La plupart des fontes du module de lettrage résistent bien à une déformation raisonnable. Pour certaines fontes il est préférable d'appliquer une simplification aux chemins avant de les déformer.
+La plupart des fontes du module de lettrage ont été revues pour bien résister à une déformation raisonnable. Pour certaines fontes il est préférable d'appliquer une simplification aux chemins avant de les déformer.
 
 Toutefois si  les déformations  sont trop extrêmes,la broderie ne sera probablement pas très belle.
 
