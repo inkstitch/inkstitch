@@ -31,9 +31,9 @@ To  get the best results :
 * avoid very small shapes
 
 Satin column  are tricky : because there is nothing  in the svg file that distinguish rails from rungs 
-in the compound path, iInk/Stitch  need to pinpoint the two rails among all the subpaths of a satin column. 
+in the compound path, Ink/Stitch  needs to pinpoint the two rails among all the subpaths of a satin column. 
 
-To help  Ink/Stitch chose the same subpaths as rails after  distortion:
+To help  Ink/Stitch chose the same subpaths as rails before and after  distortion:
 
 - avoid  superposed  rails end points
 - rungs should not end  up on the rails,  but cross both rails with flair
@@ -43,7 +43,7 @@ To help  Ink/Stitch chose the same subpaths as rails after  distortion:
 If you follow these rules, there is a good chance that  your satin will still be recognized 
 as the same satin after distortion. 
 
-Most Ink/Stitch lettering font do well with gentle distortion. 
+Most Ink/Stitch lettering fonts do well with gentle distortion. 
 However if  the distortotion is too extreme, the result will probably not stitch well.
 
 
