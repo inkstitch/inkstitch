@@ -686,15 +686,14 @@ class Params(InkstitchExtension):
         return sorted(list(nodes_by_class.items()), key=lambda cls_nodes: cls_nodes[0].__name__)
 
     def get_values(self, param, nodes):
-        getter = 'get_param'
-
         if param.type in ('toggle', 'boolean'):
             getter = 'get_boolean_param'
+            values = [item for item in (getattr(node, getter)(
+                param.name, param.default) for node in nodes) if item is not None]
         else:
             getter = 'get_param'
-
-        values = [item if item is not None else "" for item in (getattr(node, getter)(
-            param.name, param.default) for node in nodes)]
+            values = [item if item is not None else "" for item in (getattr(node, getter)(
+                param.name, param.default) for node in nodes)]
 
         return values
 

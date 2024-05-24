@@ -59,7 +59,8 @@ class Clone(EmbroideryElement):
            _('Flip angle'),
            tooltip=_(
                "Flip automatically calculated angle if it appears to be wrong."),
-           type='boolean')
+           type='boolean',
+           default=False)
     @cache
     def flip_angle(self):
         return self.get_boolean_param('flip_angle', False)
