@@ -20,8 +20,6 @@ user-level:
 
 Cat's body is a meander fill with zigzag activated.
 
-![SVG](assets/images/tutorials/zigzag-meander-fill/grumpycat.svg)
-
-
+![SVG](/assets/images/docs/zigzagmeander_grumpycat.jpg)
 
 [Télécharger](/assets/images/tutorials/samples/grumpycat.svg){: download="grumpycat.svg" }

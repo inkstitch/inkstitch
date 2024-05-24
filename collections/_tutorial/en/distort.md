@@ -91,7 +91,7 @@ You can use it to sort of turn  a font  into its italic version :
 
 ## Grid deformation
 
-After  applying the grid deformation effect and activating the node tooll, you cann move 25 control nodes  to distort your  embroidery:
+After  applying the grid deformation effect and activating the node tool, you cann move 25 control nodes  to distort your  embroidery:
 
 
 ![grid](/assets/images/tutorials/distort/grid.png)

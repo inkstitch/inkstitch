@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/zigzag-meander-fill/
+permalink: /de/tutorials/zigzag-meander-fill/
 title: "Fellimitation mit Mäanderfüllung"
 language: de
 last_modified_at: 2024-05-02
@@ -17,6 +17,6 @@ stitch-type:
 
 Der Katzenkörper ist eine Meanderfüllung mit Zick-Zack-Stich
 
-![SVG](assets/images/tutorials/zigzag-meander-fill/grumpycat.svg)
+![SVG](/assets/images/docs/zigzagmeander_grumpycat.jpg)
 
 [Download SVG](/assets/images/tutorials/samples/grumpycat.svg){: download="grumpycat.svg" }
