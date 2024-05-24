@@ -1,7 +1,7 @@
 ---
 title: Verformen mit Pfad-Effekten
 permalink: /de/tutorials/distort/
-last_modified_at: 2024-05-24
+last_modified_at: 2024-05-23
 language: de
 excerpt: "Formen und Schriften mit Inkscape Pfad-Effekten verformen"
 image: "/assets/images/galleries/fonts/multiple/multifont3.jpg"
@@ -23,8 +23,8 @@ Stickobjekte mit Inkscape Pfadeffekten zu verformen macht Spaß. Inkscape bietet
 
 * Biegen
 * Hüllenverformung
-* Gitterverformung
 * Perspektive/Umhüllung
+* Gitterverformung
 
 Für gute Resultate sollte folgendes beachtet werden:
 
@@ -85,4 +85,19 @@ Nach der Anwendung des Effekts können die vier Ecken mit dem Knotenwerkzeug ver
 ![perspective example](/assets/images/tutorials/distort/perspective.svg)
 
 [Download](/assets/images/tutorials/distort/manger.svg){: download="perspective.svg" }
+
+You can use it to sort of turn  a font  into its italic version :
+
+![italique](/assets/images/tutorials/distort/italic.png)
+
+## Gitterverformung
+
+After  applying the grid deformation effect and activating the node tooll, you cann move 25 control nodes  to distort your  embroidery:
+
+
+![grid](/assets/images/tutorials/distort/grid.png)
+
+Use it to transform  your still  fonts  into dancing ones....
+
+![italique](/assets/images/tutorials/distort/hello.png)
 
