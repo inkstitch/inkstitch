@@ -1,7 +1,7 @@
 ---
 title: Verformen mit Pfad-Effekten
 permalink: /de/tutorials/distort/
-last_modified_at: 2024-05-22
+last_modified_at: 2024-05-24
 language: de
 excerpt: "Formen und Schriften mit Inkscape Pfad-Effekten verformen"
 image: "/assets/images/galleries/fonts/multiple/multifont3.jpg"
