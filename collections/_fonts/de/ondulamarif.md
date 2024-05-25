@@ -1,7 +1,7 @@
 ---
 title: "Ondulamarif"
 permalink: /de/fonts/ondulamarif/
-last_modified_at: 2024-05-11
+last_modified_at: 2024-05-25
 preview_image:
   - url: /assets/images/fonts/ondulamarif_XL.png
     height: 110
