@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-23 01:08+0000\n"
-"PO-Revision-Date: 2024-05-24 01:09\n"
+"POT-Creation-Date: 2024-05-25 01:08+0000\n"
+"PO-Revision-Date: 2024-05-25 01:08\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-23 01:08+0000\n"
+"POT-Creation-Date: 2024-05-25 01:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2671,7 +2671,7 @@ msgstr "Utiliser les derniers paramètres"
 msgid "Apply and Quit"
 msgstr "Appliquer et Quitter"
 
-#: lib/extensions/params.py:787
+#: lib/extensions/params.py:786
 msgid "Embroidery Params"
 msgstr "Paramètres de broderie"
 
@@ -5659,7 +5659,7 @@ msgstr "Distance maximum (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:14
 msgid "Add force lock stitches attribute to the last element of each glyph"
-msgstr "Ajout de l'attribut \"force lock stitches\" (forcer des points d'arrêt) au dernier élément de chaque glyphe"
+msgstr "Ajouter l'attribut \"force lock stitches\" (forcer des points d'arrêt) au dernier élément de chaque glyphe"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:17
 msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
