@@ -12,6 +12,7 @@ preview_image:
 
 Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
+
 ## Schriftzeichen
 
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
@@ -21,15 +22,20 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
+
 ## Maße
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 20 mm hoch (3/4 Zoll)
 Sie kann bis zu 150% (~30mm, 1.25 Zoll) und bis zu 60% (~12mm, 0.5 Zoll) skaliert werden.
 
-## Gestickte Beispiele
+
+## Impressionen
 
 Lesezeichen, Handtuch...
 
 {% include folder-galleries path="fonts/aventurina/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/aventurina/LICENSE)
+
+## Lizenz
+
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/aventurina/LICENSE)

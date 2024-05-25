@@ -1,7 +1,7 @@
 ---
 title: "Cherries"
 permalink: /de/fonts/cherries/
-last_modified_at: 2024-04-27
+last_modified_at: 2024-05-25
 toc: false
 preview_image:
   - url: /assets/images/fonts/cherry_for_inkstitch.jpg
@@ -22,7 +22,9 @@ preview_image:
 
 
 ## Schriftzeichen
+
 ### Cherry for Ink/Stitch
+
 Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
 
 ```
@@ -31,6 +33,7 @@ Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
 {: .font-glyphs }
 
 ### Cherry for Kaalleen
+
 Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 
 ```
@@ -40,29 +43,37 @@ Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 
 {% include upcoming_release.html %}
 
-This font was modified in 2024 to add the light blue underlay. If you wish to find back the original version, just skip the first  two steps of the embroidery.
+Dieser Schrift wurde 2024 ein hellblauer Hintergrund hinzugefügt. Um die alte Version zu sticken einfach die ersten beiden Schritte beim Sticken überspringen.
+
 
 ## Maße
+
 ### Cherry for Ink/Stitch
+
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll)
 Sie kann bis auf 180% (~90mm, 3.5 Zoll) hochskaliert und bis zu 80% (~38mm, ~1.5 Zoll) herunterskaliert werden.
 
 
 ### Cherry for Kaalleen
+
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 75 mm hoch (3 Zoll)
 Sie kann bis auf 130% (~100mm, 4 Zoll) hochskaliert und bis zu 80% (~60mm, 2 Zoll) herunterskaliert werden.
 
 
-## Sortieren der Farben 
+## Farben sortieren
+
 Wenn man mehrere Buchstaben sticken möchte, kann man die Farben sortieren. Das ist möglich, man muss aber die relative Reihenfolge innerhalb der einzelnen Buchstaben beachten. [So geht's](https://inkstitch.org/de/docs/lettering/#sortierung-von-farben)
 
 
-## Gestickte Beispiele
+## Impressionen
+
 Man kann die Schriften gemeinsam oder einzeln benutzen:
 
 {% include folder-galleries path="fonts/cherries/" %}
 
 
-[Download Cherry for inkstitch Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/cherryforinkstitch/LICENSE)
+## Lizenz
 
-[Download Cherry for Kaalleen Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/cherryforkaalleen/LICENSE)
+[Lizenz herunterladen (Cherry for inkstitch)](https://github.com/inkstitch/inkstitch/tree/main/fonts/cherryforinkstitch/LICENSE)
+
+[Lizenz herunterladen (Cherry for Kaalleen)](https://github.com/inkstitch/inkstitch/tree/main/fonts/cherryforkaalleen/LICENSE)

@@ -1,7 +1,7 @@
 ---
 title: "Emilio 20"
 permalink: /de/fonts/emilio-20/
-last_modified_at: 2024-04-20
+last_modified_at: 2024-05-25
 toc: false
 preview_image:
  - url: /assets/images/fonts/emilio_simple.png
@@ -53,6 +53,7 @@ preview_image:
      src="/assets/images/fonts/emilio_20_all_versions_english.png"
      alt="Comparaison des Emilio 20" >
 
+
 ## Schriftzeichen
 
 Jeweils fünf  Schriften enthalten  {{ font.glyphs.size }} Schriftzeichen:
@@ -77,10 +78,12 @@ Sie kann bis auf 140% (~70mm, 2.8 Zoll) hochskaliert **but should not be scaled 
 
 ### Emilio 20 Applique
 
-Same dimension as Emilio Bold, but applique ready :
-* first color is placement. Add the applique fabric after that tep.  May also be used to prepare a cutting machine file.
-* second color  is  tackdown. After  that step you need to cut the applique fabric.
-* third color is the satin column.
+Emilio 20 Applique hat die gleichen Maße wie Emilio Bold, erfüllt aber alle Voraussetzungen für eine Applikation:
+
+* die erste Farbe ist für die Platzierung. Füge den Stoff erst nach diesem Schritt hinzu.
+  Die platzierungslinien können auch für den Schneideplotter genutzt werden.
+* die zweite Farbe befestigt den Stoff. Nach diesem Schritt kann der Applikationsstoff geschnitten werden.
+* die dritte Farbe ist die Satinsäule für einen sauberen Rand
 
 ###  Emilio 20
 
@@ -105,36 +108,37 @@ Im Gegensatz zu Emilio 20 Simple **MUSS** diese verkleinerte Schrift mit einem d
 ### Emilio 20 Tartan
 
 {% include upcoming_release.html %}
-At 100%, this font is approximatively 45mm (1.75 inches)
-It may be scaled  up to 150% (approx. 66 mm, 2.5 inches) or scaled down to 65% (approx.en 30 mm, 1.25 inches).
+
+Bei 100% ist diese schrift ca. 45 mm (1.75 zoll) hoch.
+Sie kann von 150 % (ca. 66 mm, 2.5 zoll) bis zu 65 % (ca. 30 mm, 1.25 zoll). skaliert werden.
+
+Emilio 20 Tartan ist eine weitere Emilio Varante, die aussieht wie eine Applikation aber voll gestickt wird. Die Satinsäule ist deutlich leichter als die der anderen Emilio Variationen. Jeder Buchstabe hat ein eigenes Tartan-Muster - das ist, aufgrund der vielen Farbwechsel, nichts für Svhwache Nerven! Durch eine Variation mit nur einem Tartan-Muster, kann dieser Prozess kann erheblich vereinfacht werden - allerdings wird das Stockergebnis dadurch auch weniger farbenfroh. Mehr Informationen wie das geht gibt es im Tutorial [Farbwechsel bei Tartan-Schriften reduzieren](https://inkstitch.org/de/tutorials/make_tartan_font_easier/)
 
 
+## Farben sortieren
 
-This is yet another Emilio variation. It aims at looking liking  like a Tartan Appliqué. The satin border is much lighter as in the other Emilio Variation. Each letter has its own tartan, therefore embroidering it as is is not for the faint of heart ! Quite a few threads changes are required. However for a less work intense (but also less colorful) variation with only one tartan shared by all leters, see  [this](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) 
-
-## Sortieren der Farben 
-
-This does not apply to the tartan variation.
+Dieser Abschnitt gilt nicht für die Tartan-Variante.
 
 Wenn man mehrere Buchstaben sticken möchte, kann man die Farben sortieren. Das ist möglich, man muss aber die relative Reihenfolge innerhalb der einzelnen Buchstaben beachten. [So geht's](https://inkstitch.org/de/docs/lettering/#sortierung-von-farben)
+
 
 ## Impressionen
 
 {% include folder-galleries path="fonts/emilio-20/" %}
 
+
 ## Lizenz
 
-[Download Emilio Simple Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_simple/LICENSE)
+[Lizenz herunterladen (Emilio Simple)](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_simple/LICENSE)
 
-[Download Emilio 20 Bold Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_bold/LICENSE)
+[Lizenz herunterladen (Emilio 20 Bold)](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_bold/LICENSE)
 
-[Download Emilio 20 Applique Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_applique/LICENSE)
+[Lizenz herunterladen (Emilio 20 Applique)](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_applique/LICENSE)
 
-[Download Emilio 20 Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
+[Lizenz herunterladen (Emilio 20)](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20/LICENSE)
 
-[Download Emilio 20 Tricolore Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
+[Lizenz herunterladen (Emilio 20 Tricolore)](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
 
-[Download Emilio 20 Small Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
+[Lizenz herunterladen (Emilio 20 Small)](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
 
-
-[Download Emilio 20 Tartan Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)
+[Lizenz herunterladen (Emilio 20 Tartan)](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_tricolore/LICENSE)

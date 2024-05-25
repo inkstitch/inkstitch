@@ -14,6 +14,7 @@ preview_image:
 
 ![Amitaclo small](/assets/images/fonts/amitaclo-small.jpg)
 
+
 ## Schriftzeichen
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
@@ -39,10 +40,14 @@ Wenn Sie Amitaclo small wählen, werden Sie im Dialogfenster für die Beschriftu
 
 Im Gegensatz zu Amitaclo **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-## Gestickte Beispiele
+
+## Impressionen
 
 Gemeinsam mit Déjà Vu und Magnolia KOR auf Einmachgläsern verwendet
 
 {%include folder-galleries path="fonts/amitaclo/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/amitaclo/LICENSE)
+
+## Lizenz
+
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/amitaclo/LICENSE)

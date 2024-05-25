@@ -8,9 +8,11 @@ preview_image:
     height: 22
 ---
 {%- assign font = site.data.fonts.dejavufont.font -%}
+
 ## Serif Semi-condensed
 
 ![Deja Vue Serif Semi-condensed](/assets/images/fonts/dejavu_serif.jpg)
+
 
 ## Schriftzeichen
 
@@ -27,17 +29,19 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 18 mm hoch (2/3 Zoll).
 Sie kann bis auf 150% (~27mm, 1 Zoll) hochskaliert werden, und bis zu 80% (~14mm, 1/2 Zoll) herunterskaliert werden.
 
-
  
-## Anmerkung
+## Besonderheiten
 
 Deja Vu kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts, von rechts nach links, von oben nach unten und von unten nach oben gestickt werden.
 
-## Gestickte Beispiele
+
+## Impressionen
 
 Alleine, mit Amitaclo und Magnolia KOR auf Marmeladengläsern genutzt
 
 {% include folder-galleries path="fonts/dejavu/" %}
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/dejavufont/LICENSE)
+## Lizenz
+
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/dejavufont/LICENSE)

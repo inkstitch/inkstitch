@@ -14,6 +14,7 @@ preview_image:
 
 ![Chicken Little](/assets/images/fonts/chicken_little_KOR_small.jpg)
 
+
 ## Schriftzeichen
 
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
@@ -24,7 +25,7 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {: .font-glyphs }
 
 
-## Maße:
+## Maße
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr roughtly 35 mm high.
 
@@ -37,11 +38,12 @@ Deshalb muss man im Dialogfenster des Text-Moduls für die Nutzung von Chicken L
 
 Im Gegensatz zu Chicken Little KOR, **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-## Gestickte Beispiele
 
-
-
+## Impressionen
 
 {% include folder-galleries path="fonts/chicken_little/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/chicken_little/LICENSE)
+
+## Lizenz
+
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/chicken_little/LICENSE)

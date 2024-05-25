@@ -28,8 +28,11 @@ Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 14 mm hoch (1/2 Zoll)
 Sie kann bis zu 200% (28mm, 1 Zoll) und bis zu 75% (9mm, 1/3 Zoll) skaliert werden.
 
 
-## Gestickte Beispiele
+## Impressionen
 
 {%include folder-galleries path="fonts/abecedaire/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/abecedaire/LICENSE)
+
+## Lizenz
+
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/abecedaire/LICENSE)

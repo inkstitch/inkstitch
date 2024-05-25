@@ -1,7 +1,7 @@
 ---
 title: "Namskout AGS"
 permalink: /de/fonts/namskout_ags/
-last_modified_at: 2023-04-24
+last_modified_at: 2023-05-25
 toc: false
 preview_image:
   - url: /assets/images/fonts/namskout_AGS.jpg
@@ -15,7 +15,6 @@ preview_image:
 ![NamskoutTartan](/assets/images/fonts/namskout_tartan.png)
 
 
-
 ## Schriftzeichen
 
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
@@ -25,28 +24,35 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
+
 ## Maße
 
 Bei einer Größe ist die Schrift ~ 100 mm groß (4 Zoll)
 
 Sie kann auf 150 % vergrößert (~150 mm, 6 Zoll) und bis zu 50% (~50 mm, 2 Zoll) herunterskaliert werden.
 
-## How to use them
+
+## Anwendung
+
 ### Namskout  AGS
-Namskout AGS is  an appliqué font:
-* First color (red) is a placement stitch
-* Add your fabric to cover  the placement stitch
-* Second color (green) is a tack down
-* Cut  the excess of fabric after stitching the second color
-* Third color (black) stitches the satin  columns
+
+Namskout AGS ist eine Applikationsschrift:
+
+* erste Farbe (rot) ist für die Platzierung
+* zweite Farbe (grün) für die Befestigung des Applikationsstoffes
+* Überstehenden Stoff nach dem Sticken der zweiten Farbe wegschneiden
+* dritte Farbe (schwarz) ist die Satinsäule für einen schönen Randabschluss
 
 ###  Namskout Tartan
-Namskout Tartan is a  tartan font. Each letter has its own tartan, therefore embroidering it as is is not for the faint of heart ! Quite a few threads changes are required. However for a less work intense (but also less colorful) variation with only one tartan shared by all leters, see  [this](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) 
- 
+
+Namskout Tartan ist eine Tartan-Schrift. Jeder Buchstabe hat ein eigenes Tartan-Muster. Daher ist das Sticken dieser Schrift nichts für schwache Nerven, denn es gibt sehr viele Farbwechsel. Durch eine Variation mit nur einem Tartan-Muster, kann dieser Prozess kann erheblich vereinfacht werden - allerdings wird das Stockergebnis dadurch auch weniger farbenfroh. Mehr Informationen wie das geht gibt es im Tutorial [Farbwechsel bei Tartan-Schriften reduzieren](https://inkstitch.org/de/tutorials/make_tartan_font_easier/)
+
+
 ## Impressionen
 
 {% include folder-galleries path="fonts/namskout_ags/" %}
 
+
 ## Lizenz
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/namskout_AGS/LICENSE)
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/namskout_AGS/LICENSE)

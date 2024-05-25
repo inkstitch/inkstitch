@@ -23,8 +23,8 @@ preview_image:
      alt="Roaring Twenties KOR Small" height="55">
 
 
-
 ## Schriftzeichen
+
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
 ```
@@ -51,9 +51,12 @@ also von Buchstaben mit einer Höhe von etwa 20 mm auf Buchstaben mit einer Höh
 
 Im Gegensatz zu Roaring Twenties KOR **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-## Gestickte Beispiele
 
+## Impressionen
 
 {%include folder-galleries path="fonts/roaring_twenties_KOR/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roaring_twenties_KOR/LICENSE)
+
+## Lizenz
+
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/roaring_twenties_KOR/LICENSE)

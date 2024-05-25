@@ -23,6 +23,7 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
+
 ## Maße
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 20 mm hoch (3/4 Zoll).
@@ -37,11 +38,11 @@ Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Excali
 Im Gegensatz zu Excalibur KOR **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
 
+## Impressionen
 
-
-
-
-## Gestickte Beispiele
 {% include folder-galleries path="fonts/excalibur_KOR/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/excalibur_KOR/LICENSE)
+
+## Lizenz
+
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/excalibur_KOR/LICENSE)

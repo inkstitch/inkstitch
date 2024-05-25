@@ -11,7 +11,7 @@ preview_image:
 ![AGS garamond](/assets/images/fonts/garamond.png)
 
 
-## Glyphs
+## Schriftzeichen
 
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
@@ -20,17 +20,20 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-## Dimensions
+
+## Maße
 
 Used at 100%, this font is approximatively 20mm high (3/4 inches). 
 
 It can be scaled up to 150%  (30mm, 1.25 inches) and scalled down to 80% (16mm  5/8 inch)
 
 
-## In real life
+
+## Impressionen
 
 {% include folder-galleries path="fonts/ags_greek_garamond/" %}
 
 
+## Lizenz
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/ags_greek_garamond/LICENSE)
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/ags_greek_garamond/LICENSE)

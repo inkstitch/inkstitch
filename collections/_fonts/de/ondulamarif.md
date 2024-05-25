@@ -14,8 +14,6 @@ preview_image:
 {%- assign font2 = site.data.fonts.ondulamarif_Medium.font -%}
 {%- assign font1 = site.data.fonts.ondulamarif_XL.font -%}
 
-
-
 ## Ondulamarif XL
 
 <img 
@@ -24,19 +22,21 @@ preview_image:
 
 **At 100% each letter of Ondulamarif XL has 6 ripples. When the font is upscale, the number of ripples increases**
      
-### Glyphs
+### Schriftzeichen
 
-This font contains  {{ font1.glyphs.size }} glyphs:
+Diese Schrift umfasst  {{ font1.glyphs.size }} Zeichen:
 
 ```
 {{ font1.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-### Dimensions
-At a scale of 100% this font has an approximate height of {{ font1.size }} mm. 
 
-It can be scaled 
-up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm) but should not be  reduced.
+
+### Maße
+
+Bei einer Skalierung von 100% hat diese Schrift eine ungefähre Höhe von {{ font1.size }} mm. 
+
+Sie kann bis zu {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm) hochskaliert, aber nicht verkleinert werden.
 
 ## Ondulamarif Medium
 
@@ -46,62 +46,65 @@ up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.
 
 **Each letter of Ondulamarif Medium has 6 ripples**
 
-### Glyphs
+### Schriftzeichen
 
-This font contains  {{ font2.glyphs.size }} glyphs:
+Diese Schrift umfasst {{ font2.glyphs.size }} Zeichen:
 
 ```
 {{ font2.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
-### Dimensions
-This variation allow for a smaller scale
+### Maße
 
-It can be used  from {{ font2.min_scale | times: 100 | floor }}% ({{ font1.size | times: font2.min_scale }} mm)
-up to {{ font2.max_scale | times: 100 | floor }}% ({{ font1.size | times: font2.max_scale }} mm).
+Diese Variante kann von {{ font2.min_scale | times: 100 | floor }}% ({{ font1.size | times: font2.min_scale }} mm)
+bis zu {{ font2.max_scale | times: 100 | floor }}% ({{ font1.size | times: font2.max_scale }} mm) skaliert werdens.
+
 
 ## Ondulamarif Small
+
 <img 
      src="/assets/images/fonts/ondulamarif_small.png"
      alt="Ondulamarif XL " height="22">
 
 **Each letter of Ondulamarif Smalll has 4 ripples**
 
-### Glyphs
+### Schriftzeichen
      
-This font contains  {{ font3.glyphs.size }} glyphs:
+Diese Schrift umfasst {{ font3.glyphs.size }} Zeichen:
 
 ```
 {{ font3.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
-### Dimensions
-This variation allow for a smaller scale
+### Maße 
 
-It can be used  from {{ font3.min_scale | times: 100 | floor }}% ({{ font1.size | times: font3.min_scale }} mm)
-up to {{ font3.max_scale | times: 100 | floor }}% ({{ font1.size | times: fon3.max_scale }} mm).
-
-
-## Color sorting
-
-When using bicolor  letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
+Diese Variante kann von {{ font3.min_scale | times: 100 | floor }}% ({{ font1.size | times: font3.min_scale }} mm)
+bis zu {{ font3.max_scale | times: 100 | floor }}% ({{ font1.size | times: fon3.max_scale }} mm) skaliert werden.
 
 
+## Farben sortieren
 
-## Making the font monochromatic ... or not
+In der zweifarbigen Variante ist es sinnvoll die Farben zu sortieren. Dabei sollte die Objekt-Reihenfolge innerhalb einer Farbe eines Zeichens unbedingt beibehalten werden. Eine genauere Beschreibung gibt es beim Text-Modul im Abschnitt [Farben sortieren](/de/docs/lettering/#farben-sortieren).
 
-You may also embroider ondulamarif with a single thread. In that case, do not color sort but give the  same stroke color to all the font objects. This will save you many stops. 
 
-And it you use a varigated thread, then your font willl  have plenty of colors.
+## Einfarbig ... oder nicht
 
-## In real life
+Ondulamarif kann auch einfarbig gestickt werden. In diesem Fall sollten die Farben niht sortiert werden, sondern eine Farbe auf alle Linien angewendet werden. Dies erspart viele Stickpausen.
+
+Mit mehrfarbigem Garn kann diese Schrift trotzdem farbenfroh sein.
+
+
+## Impressionen
 
 {% include folder-galleries path="fonts/ondulamarif/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/ondulamarif_XL/LICENSE)
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/ondulamarif_Medium/LICENSE)
+## Lizenz
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/ondulamarif_S/LICENSE)
+[Lizenz herunterladen (Ondulamarif XL)](https://github.com/inkstitch/inkstitch/tree/main/fonts/ondulamarif_XL/LICENSE)
+
+[Lizenz herunterladen (Ondulamarif Medium)](https://github.com/inkstitch/inkstitch/tree/main/fonts/ondulamarif_Medium/LICENSE)
+
+[Lizenz herunterladen (Ondulamarif Small)](https://github.com/inkstitch/inkstitch/tree/main/fonts/ondulamarif_S/LICENSE)

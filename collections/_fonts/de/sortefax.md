@@ -14,6 +14,7 @@ preview_image:
 
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.jpg)
 
+
 ## Schriftzeichen
 
 Diese Schrift enthält folgende 47 Schriftzeichen:
@@ -21,6 +22,7 @@ Diese Schrift enthält folgende 47 Schriftzeichen:
 ?.:;,([{)]}&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 
 Anmerkung: Diese Schriftzeichen :;,.(){}[] werden genutzt um die Rahmen zu speichern.
+
 
 ## Maße
 
@@ -33,6 +35,7 @@ Sie kann bis auf 200% (~ 300 mm, 12 Zoll) hochskaliert und bis zu 70% (~ 100 mm,
 
 Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 90 mm (3.5 Zoll) groá.
 Sie kann bis auf 200% (~ 180 mm, 7 Zoll) hochskaliert und bis zu 70% (~ 60 mm, 2.5 Zoll) herunterskaliert werden.
+
 
 ## Beschreibung
 
@@ -56,9 +59,7 @@ Mit dieser Schriftart kannst du aber ganze Wörter mit korrektem Kerning schreib
 
 ## Um auf die Rahmen zuzugreifen, benutze die entsprechenden Schriftzeichen:
 
-Übersetzt mit www.DeepL.com/Translator (kostenlose Version)
-
-Frame|Key
+Rahmen|Zeichen
 ---|---
 ![ouvrante](/assets/images/fonts/sortefax/ouvrante.png)|<key>(</key>
 ![fermante](/assets/images/fonts/sortefax/fermante.png)|<key>)</key>
@@ -71,10 +72,12 @@ Frame|Key
 ![DeuxPoints](/assets/images/fonts/sortefax/deuxpoints.png)|<key>:</key>
 ![PointVirgule](/assets/images/fonts/sortefax/pointvirgule.png)|<key>;</key>
 
+
 ## Impressionen
 
 {% include folder-galleries path="fonts/sortefax/" %}
 
+
 ## Lizenz
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/sortefaxXL/LICENSE)
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/sortefaxXL/LICENSE)

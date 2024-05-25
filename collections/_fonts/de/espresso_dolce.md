@@ -16,6 +16,7 @@ preview_image:
 
 
 ## Schriftzeichen
+
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
 ```
@@ -24,14 +25,15 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {: .font-glyphs }
 
 
-## Anmerkung
+## Besonderheiten
+
 Diese Schrift kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts, rechts nach links usw. gestickt werden.
+
 
 ## Maße
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 20 mm hoch (0.8 Zoll).
 Sie kann bis auf 200% (~40mm, 1.5 Zoll) hochskaliert und bis zu 80% (~16mm, 0.7 Zoll) herunterskaliert werden.
-
 
 ![Dimensions Espresso](/assets/images/fonts/Sizing/espressosizing.jpg)
 
@@ -44,11 +46,13 @@ Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Espres
 Im Gegensatz zu Espresso KOR **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
 
-## Gestickte Beispiele
+## Impressionen
 
 Espresso KOR auf einem Kinder-T-shirt
 
 {% include folder-galleries path="fonts/espresso_KOR/" %}
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/espresso_KOR/LICENSE)
+## Lizenz
+
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/espresso_KOR/LICENSE)

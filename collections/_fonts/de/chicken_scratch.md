@@ -29,15 +29,11 @@ Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 28mm (1.1 in) hoch.
 Sie kann bis auf 120% (~ 33mm, 1.3 Zoll) hochskaliert und bis zu 80% (~ 22 mm, 0.9 Zoll) herunterskaliert werden.
 
 
-
-
-## Gestickte Beispiele
-
+## Impressionen
 
 {%include folder-galleries path="fonts/chicken_scratch/" %}
 
 
-
 ## Lizenz
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/violin_serif/LICENSE)
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/violin_serif/LICENSE)

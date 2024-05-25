@@ -10,6 +10,7 @@ preview_image:
 {%- assign font = site.data.fonts.Brockscript.font -%}
 ![Brockscript](/assets/images/fonts/brockscript.jpg)
 
+
 ## Schriftzeichen
 
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
@@ -27,6 +28,7 @@ Sie kann bis auf 250% (~100mm, 4 Zoll) hochskaliert werden, aber NICHT herunters
 
 
 ## Zu Weihnachtlich?
+
 Das µ-Zeichen wurde gehackt, um diese 4 Alternativen Mini-Motive zur Stechpalme zu speichern ![Brockscript](/assets/images/fonts/brockscriptmu.png). 
 
 Der Austausch ist beliebig möglich, und mit etwas Inkscape-Übung gut zu meistern.
@@ -36,11 +38,13 @@ Du könntest die Stechpalme auch einfach weglassen oder durch eine beliebige kle
 Und wenn du nicht weißt wie man per Tastatur zum µ kommt, kopiere es von hier in das Inkstitch-Textmodul Dialogfenster.
 
 
+## Impressionen
 
-## Gestickte Beispiele
 Hier wurde Brockscript auf einem Handtuch, einem T-Shirt oder als Verzierung verwendet:
 
 {% include folder-galleries path="fonts/brockscript/" %}
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/Brockscript/LICENSE)
+## Lizenz
+
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/Brockscript/LICENSE)

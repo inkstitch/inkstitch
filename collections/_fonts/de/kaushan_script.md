@@ -10,6 +10,7 @@ preview_image:
 {%- assign font = site.data.fonts.kaushan_script_MAM.font -%}
 ![KaushanScript](/assets/images/fonts/kaushan_script_MAM.jpg)
 
+
 ## Schriftzeichen
 
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
@@ -19,11 +20,13 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
+
 ## Maße
 
 Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 30 mm (1.25 Zoll) groß.
 
 Sie kann bis auf 200% (~60 mm, 2.5 Zoll) hochskaliert und bis zu 80% (~24 mm, 1 Zoll) herunterskaliert werden.
+
 
 ## Impressionen
 
@@ -31,6 +34,7 @@ Hier sieht man ein mit Kaushan Script gesticktes Datum in Begleitung von Cherry 
 
 {% include folder-galleries path="fonts/kaushan_script/" %}
 
+
 ## Lizenz
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/kaushan_script_MAM/LICENSE)
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/kaushan_script_MAM/LICENSE)

@@ -15,7 +15,6 @@ preview_image:
 ![grand_hotel_marif](/assets/images/fonts/auberge_small.jpg)
 
 
-
 ## Schriftzeichen
 
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
@@ -26,7 +25,7 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {: .font-glyphs }
 
 
-## Maße:
+## Maße
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr roughtly 35 mm high.
 
@@ -42,9 +41,13 @@ Deshalb muss man im Dialogfenster des Text-Moduls für die Nutzung von Grand Hot
 
 Im Gegensatz zu Auberge Marif, **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-## Gestickte Beispiele
+## Impressionen
+
 Von 25% auf dem T-Shirt zu voller Größe auf der Schürze und dem Label
 
 {% include folder-galleries path="fonts/grand_hotel_marif/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/auberge_marif/LICENSE)
+
+## Lizenz
+
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/auberge_marif/LICENSE)

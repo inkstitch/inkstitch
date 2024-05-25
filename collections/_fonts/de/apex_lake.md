@@ -42,7 +42,9 @@ Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
+
 ## Besonderheiten
+
 Apex Lake ist eine Schriftart für Einzelbuchstaben. 
 
 Wer den Rahmen nicht sticken möchten, überspringt die letzten beiden Schritte.  
@@ -55,6 +57,7 @@ Die beiden Versionen passen gut zusammen. Es bietet sich an für den ersten Buch
 
 ![Both_Apex](/assets/images/fonts/both_apex.png)
 
+
 ## Maße
 
 ### Apex Lake
@@ -66,16 +69,21 @@ Mit einer Skalierung von 100% ist sie ca. 60 mm hoch. Sie kann bis zu 80% verkle
 
 Mit einer Skalierung von 100% ist sie ca. 35 mm hoch. Sie kann bis zu 75% verkleinert (25mm) und bis zu 300% vergrößert (100mm) werden.
 
-## Sortieren der Farben 
+
+## Farben sortieren
+
 Wenn man mehrere Buchstaben sticken möchte, kann man die Farben sortieren. Das ist möglich, man muss aber die relative Reihenfolge innerhalb der einzelnen Buchstaben beachten. [So geht's](https://inkstitch.org/de/docs/lettering/#sortierung-von-farben)
 
-## Gestickte Beispiele
+
+## Impressionen
+
 Wie wäre es auf einem schicken T-Shirt? Oder auf einem Stoffkorb?
 
 {%include folder-galleries path="fonts/apex-lake/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_lake/LICENSE)
 
-[Download Apex Lake Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_lake/LICENSE)
+## Lizenz
 
-[DownloadApex Simple AGS Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_simple_AGS/LICENSE)
+[Lizenz herunterladen (Apex Lake)](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_lake/LICENSE)
+
+[Lizenz herunterladen (Apex simple)](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_simple_AGS/LICENSE)
