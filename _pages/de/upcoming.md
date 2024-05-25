@@ -13,33 +13,33 @@ toc: true
 * [Cats](/de/fonts/cats) ([#2860](https://github.com/inkstitch/inkstitch/pull/2860))
 
   ![Cats preview](/assets/images/fonts/cats.jpg)
-* [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
+* [Chicken Little KOR](/de/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
 
   ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
 * [Chicken Scratch](/de/fonts/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
   ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
-* [Colorful](/fonts/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
+* [Colorful](/de/fonts/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
 
   ![Colorfu preview](/assets/images/fonts/colorful.png)
 * [Emilio 20 Tartan](/de/fonts/emilio-20/) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
 
-* [コリンの書き方](/fonts/honoka/) ([#2935](https://github.com/inkstitch/inkstitch/pull/2935))
+* [コリンの書き方](/de/fonts/honoka/) ([#2935](https://github.com/inkstitch/inkstitch/pull/2935))
 
   ![Honoka preview](/assets/images/fonts/honoka.jpg)
 
   ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
-* [Invercelia](/fonts/invercelia/) ([#2888](https://github.com/inkstitch/inkstitch/pull/2888))
+* [Invercelia](/de/fonts/invercelia/) ([#2888](https://github.com/inkstitch/inkstitch/pull/2888))
 
   ![Invercelia preview](/assets/images/fonts/invercelia.png)
 * [Millimarif-bold20](/de/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
 
   ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
   
-* [Namskout Tartan](/fonts/namskout_AGS/) ([#2938](https://github.com/inkstitch/inkstitch/pull/2938))
+* [Namskout Tartan](/de/fonts/namskout_AGS/) ([#2938](https://github.com/inkstitch/inkstitch/pull/2938))
 
   ![Namskout Tartan preview](/assets/images/fonts/namskout_tartan.png)
-* [Ondulamarif](/fonts/ondulamarif/) ([#2902](https://github.com/inkstitch/inkstitch/pull/2902))
+* [Ondulamarif](/de/fonts/ondulamarif/) ([#2902](https://github.com/inkstitch/inkstitch/pull/2902))
 
  <img 
      src="/assets/images/fonts/ondulamarif_xl.png"
