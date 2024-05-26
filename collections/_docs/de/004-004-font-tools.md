@@ -110,9 +110,9 @@ Bei gekauften Schriften kommt es häufig vor, dass die Buchstaben in Unterordner
 * Speichere die Datei als `→.svg` in einem neuen Ordner in dem [Benutzerdefinierten Ordner für Schriften](#benutzerdefinierter-ordner-für-schriften)
 * Erstelle mit [JSON-Datei erstellen](#json-datei-erstellen) eine JSON-Datei, die die Schrift für das Textwerkzeug von Ink/Stitch nutzbar macht. "Automatisch geführte Satinsäulen" sollte für digitalisierte Schriften nicht ausgewählt sein. Die Skalierung bleibt bei 1.
 
-## Update glyph list
+## Liste verfügbarer Zeichen aktualisieren
 
-This extension insert the list of the glyphs into the json file. Must be done a first time when all the glyphs are present in the  svg file, and must be redone if glyphs are added or deleted.
+Diese Erweiterun aktualisiert die Liste der verfügbaren Zeichen in der JSON-Datei. Diese Funktion sollte das erste Mal ausgeführt werden, wenn alle Zeichen in der SVG-Datei eingefügt wurden. Werden Zeicchen hinzugefügt oder entfernt, muss der Vorgang wiederholt werden.
 
 ## Kerning entfernen
 
