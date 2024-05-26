@@ -1,7 +1,7 @@
 ---
 title: "Schriftverwaltung"
 permalink: /de/docs/font-tools/
-last_modified_at: 2024-03-13
+last_modified_at: 2024-05-26
 toc: true
 ---
 Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem [Text-Werkzeug](/de/docs/lettering/) von Ink/Stitch zusätzliche Schriften hinzufügen wollen.

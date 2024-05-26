@@ -105,4 +105,4 @@ Schalte die Sichtbarkeit von Objekt-Befehlen an und aus. Befehle funktionieren a
 
 Anpassen der Größe der Befehlsymbole im gesamten Dokument: `Erweiterungen > Ink/Stitch > Befehle > Ansicht > Befehlsymbole skalieren...`
 
-Use live preview to see the effect while scaling.
+Nutze "Live Preview" um den Effekt während der Skalierungseinstellung direkt zu sehen.
