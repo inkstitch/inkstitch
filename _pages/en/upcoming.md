@@ -32,6 +32,11 @@ toc: true
 * [Invercelia](/fonts/invercelia/) ([#2888](https://github.com/inkstitch/inkstitch/pull/2888))
 
   ![Invercelia preview](/assets/images/fonts/invercelia.png)
+* [Magnolia bicolor](/fonts/magnolia_KOR/) ([#2927](https://github.com/inkstitch/inkstitch/pull/2927))
+
+  ![Magnolia bicolor  preview](/assets/images/fonts/magnolia_bicolor.png)
+
+  
 * [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
 
   ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
