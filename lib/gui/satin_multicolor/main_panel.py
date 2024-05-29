@@ -15,8 +15,7 @@ from ...i18n import _
 from ...stitch_plan import stitch_groups_to_stitch_plan
 from ...utils.threading import ExitThread, check_stop_flag
 from .. import PreviewRenderer, WarningPanel
-from .colorize import ColorizePanel
-from .help_panel import HelpPanel
+from . import ColorizePanel, HelpPanel
 
 
 class MultiColorSatinPanel(wx.Panel):

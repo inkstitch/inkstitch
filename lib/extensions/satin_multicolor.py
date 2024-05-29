@@ -10,7 +10,7 @@ import wx.adv
 from inkex import errormsg
 
 from ..elements import SatinColumn
-from ..gui import MultiColorSatinPanel
+from ..gui.satin_multicolor import MultiColorSatinPanel
 from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
 from ..utils.svg_data import get_pagecolor

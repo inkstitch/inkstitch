@@ -7,4 +7,3 @@ from .dialogs import confirm_dialog, info_dialog
 from .presets import PresetsPanel
 from .simulator import PreviewRenderer
 from .warnings import WarningPanel
-from .satin_multicolor.main_panel import MultiColorSatinPanel
