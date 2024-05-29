@@ -51,6 +51,11 @@ A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 ### Magnolia Bicolor
 Magnolia Bicolor is approximatively 45 mm (2 inches) tall.  It can be scaled up to 150% (approx. 67 mm, 3  inches) or scaled down to  70% (approx.  31 mm, 1.25 inch).
 
+## Color sorting
+
+If you use Magnolia bicolor , you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
+
+
 ## In real life
 
 {% include folder-galleries path="fonts/magnolia_KOR/" %}
