@@ -4,7 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import networkx as nx
-from inkex import Path, errormsg
+from inkex import Group, Path, PathElement, errormsg
 from shapely import unary_union
 from shapely.geometry import LineString, MultiLineString, Point
 from shapely.ops import linemerge, nearest_points, substring
@@ -78,20 +78,71 @@ class Redwork(InkstitchExtension):
                 return command.target_point
 
     def _edge_groups_to_elements(self, elements):
+        # get node style and transform information
+        node = elements[0].node
+        index = node.getparent().index(node)
+        style = node.style
+        transform = get_correction_transform(node)
+
+        # create redwork group
+        redwork_group = Group()
+        redwork_group.label = _("Redwork Group")
+        node.getparent().insert(index, redwork_group)
+
+        # insert lines grouped by underpath and top layer
+        visited_lines = []
         path = ''
+        underpath = True
+        insert_path = False
+        i = 1
         for edge in self.sorted_edges:
-            linestring = self.graph.get_edge_data(edge[0], edge[1], key=True)['path']
+            # Split into underpath and normal path
+            linestring = self.graph.get_edge_data(edge[0], edge[1], key=edge[2])['path']
+            current_line = linestring
+            if current_line in visited_lines:
+                if underpath and path:
+                    path_id = self.svg.get_unique_id('underpath_')
+                    label = _("Redwork Underpath") + f' {i}'
+                    insert_path = True
+                underpath = False
+            else:
+                if not underpath and path:
+                    path_id = self.svg.get_unique_id('redwork_')
+                    label = _("Redwork") + f' {i}'
+                    insert_path = True
+                underpath = True
+                visited_lines.append(current_line)
+
+            if insert_path:
+                self._insert_element(path, redwork_group, style, transform, label, path_id)
+                path = ''
+                i += 1
+                insert_path = False
+
+            # add edge to path
             if edge[3] == 'reverse':
                 linestring = linestring.reverse()
             path += str(Path(list(linestring.coords)))
 
-        node = elements[0].node
-        node.set('d', path)
-        node.set('transform', get_correction_transform(node))
+        # add last top layer line
+        if path:
+            path_id = self.svg.get_unique_id('redwork_')
+            label = _("Redwork") + f' {i}'
+            self._insert_element(path, redwork_group, style, transform, label, path_id)
 
-        if len(elements) > 1:
-            for element in elements[1:]:
-                element.node.getparent().remove(element.node)
+        # remove input elements
+        for element in elements:
+            element.node.getparent().remove(element.node)
+
+    def _insert_element(self, path, group, style, transform, label, path_id):
+        element = PathElement(
+            id=path_id,
+            style=str(style),
+            transform=transform,
+            d=path
+        )
+        element.label = label
+        group.add(element)
 
     def _build_graph(self, multi_line_string):
         self.graph = nx.MultiDiGraph()
@@ -99,9 +150,6 @@ class Redwork(InkstitchExtension):
         for geom in multi_line_string.geoms:
             start = geom.coords[0]
             end = geom.coords[-1]
-
-            self.graph.add_node(str(start), point=start)
-            self.graph.add_node(str(end), point=end)
 
             self.graph.add_edge(str(start), str(end), path=geom)
             self.graph.add_edge(str(start), str(end), path=geom)
