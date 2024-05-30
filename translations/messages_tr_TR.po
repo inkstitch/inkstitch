@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-25 01:08+0000\n"
-"PO-Revision-Date: 2024-05-25 01:08\n"
+"POT-Creation-Date: 2024-05-30 01:10+0000\n"
+"PO-Revision-Date: 2024-05-30 01:11\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-25 01:08+0000\n"
+"POT-Creation-Date: 2024-05-30 01:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -272,134 +272,139 @@ msgstr ""
 msgid "Magnolia KOR is a script font of size approximatively 20mm. It can be scaled down to 80% and up to 120%"
 msgstr ""
 
-#. description of font in fonts/magnolia_small
+#. description of font in fonts/magnolia_bicolor
 #: inkstitch-fonts-metadata.py:96
+msgid "This is a  larger  bicolor variation of Magnolia font"
+msgstr ""
+
+#. description of font in fonts/magnolia_small
+#: inkstitch-fonts-metadata.py:98
 msgid "This font is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Magnolia KOR font between 25% (for a 5mm font ) and 50 % (for a 10mm font)."
 msgstr ""
 
 #. description of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:98
+#: inkstitch-fonts-metadata.py:100
 #, python-format
 msgid "The capital M is 35 millimeter wide at 100% scale.  Can be scaled down to 70% or up to 140%.  Every satin has zigzag underlay"
 msgstr ""
 
 #. description of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:100
+#: inkstitch-fonts-metadata.py:102
 #, python-format
 msgid "MarcellusSC-FI is a small capital font of size 36 mm. It contains 107 glyphs covering most Western European languages. It can be reduced down to 70% and enlarged up to 200% or 500% using satin split"
 msgstr ""
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:102
+#: inkstitch-fonts-metadata.py:104
 #, python-format
 msgid "A basic font suited for medium-sized characters.  The capital em is 0.6 inches wide at 100% scale.  Can be scaled down to 75% or up to 150%.  Every satin has contour underlay."
 msgstr ""
 
 #. description of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:104
+#: inkstitch-fonts-metadata.py:106
 msgid "This bold font can be reduced down to 75% and enlarged up to 140% allowing Capital M height to flow from 15mm to 28mm."
 msgstr ""
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:106
+#: inkstitch-fonts-metadata.py:108
 msgid "Monicha is a script satin font of size approximatively 20mm. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters. The font can not be scaled down but can be scaled up to 150%. "
 msgstr ""
 
 #. description of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:108
+#: inkstitch-fonts-metadata.py:110
 msgid "Namskout  is a large applique font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
 msgstr ""
 
 #. description of font in fonts/namskout_tartan
-#: inkstitch-fonts-metadata.py:110
+#: inkstitch-fonts-metadata.py:112
 msgid "Namskout Tartan is a tartan font of size approximatively 90mm. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.  It can be reduced down to 50% and enlarged up to 150%  "
 msgstr ""
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:112
+#: inkstitch-fonts-metadata.py:114
 msgid "A tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn"
 msgstr ""
 
 #. description of font in fonts/ondulamarif_Medium
-#: inkstitch-fonts-metadata.py:114
+#: inkstitch-fonts-metadata.py:116
 msgid "This font is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow to scale down the original Ondulamarif font between 99% (for a 56mm tall m ) and 49 % (for a 28 mm tall  m) "
 msgstr ""
 
 #. description of font in fonts/ondulamarif_S
-#: inkstitch-fonts-metadata.py:116
+#: inkstitch-fonts-metadata.py:118
 msgid "This font is an altered version  of Ondulamarif XL, to allow a greater scaling down. The altered embroidery parameters of this font allow to scale down the original Ondulamarif font between 49% (for a 28 mm tall m ) and 30 % (for a 16mm tall m) "
 msgstr ""
 
 #. description of font in fonts/ondulamarif_XL
-#: inkstitch-fonts-metadata.py:118
+#: inkstitch-fonts-metadata.py:120
 msgid "Ripple stitch font, use it as large as you can, but do not reduce it. At 100% M is 124mm tall and m is  56 mm tall."
 msgstr ""
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:120
+#: inkstitch-fonts-metadata.py:122
 msgid "Pacificlo is a small satin column manuscript font of size approximatively 20mm. It can be reduced down to 80% and enlarged up to 140%. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr ""
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:122
+#: inkstitch-fonts-metadata.py:124
 msgid "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:124
+#: inkstitch-fonts-metadata.py:126
 msgid "Roaring Twenties KOR is a font of size approximatively 16 mm. It can be scaled down to 70% and up to 150%"
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:126
+#: inkstitch-fonts-metadata.py:128
 msgid "This font is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Roaring  Twenties font between 35% (for a 6 mm font ) and 70 % (for a 12 mm font)."
 msgstr ""
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:128
+#: inkstitch-fonts-metadata.py:130
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
 msgstr ""
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:130
+#: inkstitch-fonts-metadata.py:132
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
 msgstr ""
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:132
+#: inkstitch-fonts-metadata.py:134
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
 msgstr ""
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:136
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr ""
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:138
 msgid " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame"
 msgstr ""
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:140
 msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
 msgstr ""
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:142
 msgid "A font suited for directing"
 msgstr ""
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:142
+#: inkstitch-fonts-metadata.py:144
 msgid "A font suited for heavy typing :)"
 msgstr ""
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:144
+#: inkstitch-fonts-metadata.py:146
 #, python-format
 msgid "A condensed serif font designed. Can be scaled up to 120% or scaled down to 80%. Caps height is about 28 millimeters or 1.1 inches"
 msgstr ""
@@ -1599,7 +1604,7 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr ""
 
 #: lib/elements/fill_stitch.py:687 lib/elements/satin_column.py:522
-#: lib/elements/stroke.py:396 lib/gui/satin_multicolor/colorize.py:56
+#: lib/elements/stroke.py:396 lib/gui/satin_multicolor/colorize_panel.py:56
 msgid "Random seed"
 msgstr ""
 
@@ -2222,7 +2227,7 @@ msgstr ""
 msgid "point"
 msgstr ""
 
-#: lib/elements/text.py:13 lib/gui/lettering.py:92
+#: lib/elements/text.py:13 lib/gui/lettering/option_panel.py:96
 msgid "Text"
 msgstr "Yazı"
 
@@ -2448,7 +2453,7 @@ msgid "All Selected Elements"
 msgstr ""
 
 #: lib/extensions/element_info.py:153 lib/extensions/zip.py:135
-#: lib/gui/satin_multicolor/colorize.py:67
+#: lib/gui/satin_multicolor/colorize_panel.py:67
 msgid "Colors"
 msgstr ""
 
@@ -2646,9 +2651,9 @@ msgstr ""
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:498 lib/gui/lettering.py:97
+#: lib/extensions/params.py:498 lib/gui/lettering/main_panel.py:58
 #: lib/gui/lettering_font_sample.py:57
-#: lib/gui/satin_multicolor/main_panel.py:55 lib/gui/tartan/main_panel.py:66
+#: lib/gui/satin_multicolor/main_panel.py:54 lib/gui/tartan/main_panel.py:66
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:101
 #: print/templates/ui.html:105 print/templates/ui.html:111
@@ -2659,7 +2664,7 @@ msgstr "İptal et"
 msgid "Use Last Settings"
 msgstr "En Son Ayarları Kullan"
 
-#: lib/extensions/params.py:506 lib/gui/lettering.py:101
+#: lib/extensions/params.py:506 lib/gui/lettering/main_panel.py:56
 msgid "Apply and Quit"
 msgstr "Uygula ve Kapat"
 
@@ -2822,7 +2827,7 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: lib/extensions/zip.py:133 lib/gui/lettering.py:419
+#: lib/extensions/zip.py:133 lib/gui/lettering/option_panel.py:50
 #: inx/inkstitch_commands_scale_symbols.inx:6
 #: inx/inkstitch_lettering_generate_json.inx:77
 msgid "Size"
@@ -2852,8 +2857,9 @@ msgstr ""
 msgid "Value"
 msgstr ""
 
-#: lib/gui/element_info.py:41 lib/gui/lettering_font_sample.py:70
-#: lib/gui/satin_multicolor/main_panel.py:52 lib/gui/tartan/main_panel.py:63
+#: lib/gui/element_info.py:41 lib/gui/lettering/main_panel.py:48
+#: lib/gui/lettering_font_sample.py:70
+#: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:63
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_palette.inx:84
 #: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_break_apart.inx:14
@@ -2893,107 +2899,102 @@ msgstr ""
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
 msgstr ""
 
-#: lib/gui/lettering.py:43
-msgid "Font"
+#: lib/gui/lettering/help_panel.py:19
+msgid "Add text to your design."
 msgstr ""
 
-#: lib/gui/lettering.py:52
-msgid "Font size filter (mm). 0 for all sizes."
+#: lib/gui/lettering/help_panel.py:28 lib/gui/lettering/help_panel.py:29
+msgid "https://inkstitch.org/docs/lettering/#lettering-tool"
 msgstr ""
 
-#: lib/gui/lettering.py:54
-msgid "Glyphs"
+#: lib/gui/lettering/help_panel.py:36
+msgid "A font library with full description and embroidered examples can be found on our website:"
 msgstr ""
 
-#: lib/gui/lettering.py:56
-msgid "Filter fonts by available glyphs."
+#: lib/gui/lettering/help_panel.py:42 lib/gui/lettering/help_panel.py:43
+msgid "https://inkstitch.org/fonts/font-library/"
 msgstr ""
 
-#: lib/gui/lettering.py:63
-msgid "Filter fonts by category."
-msgstr ""
-
-#: lib/gui/lettering.py:72
-msgid "Font Filter"
-msgstr ""
-
-#: lib/gui/lettering.py:75 lib/gui/test_swatches.py:33
-#: inx/inkstitch_apply_palette.inx:7 inx/inkstitch_apply_threadlist.inx:7
-#: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_break_apart.inx:8
-#: inx/inkstitch_cleanup.inx:8 inx/inkstitch_convert_to_stroke.inx:8
-#: inx/inkstitch_density_map.inx:8 inx/inkstitch_display_stacking_order.inx:8
-#: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
-#: inx/inkstitch_install_custom_palette.inx:8
-#: inx/inkstitch_jump_to_stroke.inx:15 inx/inkstitch_jump_to_trim.inx:15
-#: inx/inkstitch_lettering_along_path.inx:13
-#: inx/inkstitch_lettering_custom_font_dir.inx:8
-#: inx/inkstitch_lettering_force_lock_stitches.inx:8
-#: inx/inkstitch_lettering_remove_kerning.inx:9
-#: inx/inkstitch_lettering_update_json_glyphlist.inx:8
-#: inx/inkstitch_letters_to_font.inx:8 inx/inkstitch_outline.inx:8
-#: inx/inkstitch_palette_to_text.inx:15
-#: inx/inkstitch_remove_embroidery_settings.inx:8
-#: inx/inkstitch_stitch_plan_preview.inx:8
-#: inx/inkstitch_stroke_to_lpe_satin.inx:7 inx/inkstitch_troubleshoot.inx:8
-#: inx/inkstitch_unlink_clone.inx:6 inx/inkstitch_zigzag_line_to_satin.inx:7
-msgid "Options"
-msgstr ""
-
-#: lib/gui/lettering.py:80
-msgid "Stitch lines of text back and forth"
-msgstr ""
-
-#: lib/gui/lettering.py:83
-msgid "Never"
-msgstr ""
-
-#: lib/gui/lettering.py:83
-msgid "after each line"
-msgstr ""
-
-#: lib/gui/lettering.py:83
-msgid "after each word"
-msgstr ""
-
-#: lib/gui/lettering.py:83
-msgid "after each letter"
-msgstr ""
-
-#: lib/gui/lettering.py:84
-msgid "Add trim command"
-msgstr ""
-
-#: lib/gui/lettering.py:87
-msgid "Use command symbols"
-msgstr ""
-
-#: lib/gui/lettering.py:89
-msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
-msgstr ""
-
-#: lib/gui/lettering.py:261
+#: lib/gui/lettering/main_panel.py:232
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr ""
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/gui/lettering.py:322
+#: lib/gui/lettering/main_panel.py:293
 #, python-format
 msgid "Text scale %s%%"
 msgstr ""
 
-#: lib/gui/lettering.py:333
+#: lib/gui/lettering/main_panel.py:304
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr ""
 
-#: lib/gui/lettering.py:433
+#: lib/gui/lettering/option_panel.py:21
+msgid "Font"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:33
+msgid "Font size filter (mm). 0 for all sizes."
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:35
+msgid "Glyphs"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:37
+msgid "Filter fonts by available glyphs."
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:44
+msgid "Filter fonts by category."
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:48
+msgid "Font Filter"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:65
+msgid "Stitch lines of text back and forth"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:68
+msgid "Never"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:68
+msgid "after each line"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:68
+msgid "after each word"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:68
+msgid "after each letter"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:69
+msgid "Add trim command"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:72
+msgid "Use command symbols"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:74
+msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:80
 msgid "Add trims"
 msgstr ""
 
-#: lib/gui/lettering.py:439 print/templates/ui_svg_action_buttons.html:1
+#: lib/gui/lettering/option_panel.py:86
+#: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
 msgstr ""
 
@@ -3020,7 +3021,7 @@ msgid "Max. line width"
 msgstr ""
 
 #: lib/gui/lettering_font_sample.py:59
-#: lib/gui/satin_multicolor/main_panel.py:57 lib/gui/tartan/main_panel.py:68
+#: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/tartan/main_panel.py:68
 #: lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr ""
@@ -3094,7 +3095,7 @@ msgstr ""
 msgid "Load"
 msgstr "Yükle"
 
-#: lib/gui/presets.py:61 lib/gui/satin_multicolor/colorize.py:73
+#: lib/gui/presets.py:61 lib/gui/satin_multicolor/colorize_panel.py:73
 #: lib/gui/tartan/customize_panel.py:65 lib/gui/tartan/customize_panel.py:67
 msgid "Add"
 msgstr "Ekle"
@@ -3125,67 +3126,67 @@ msgstr ""
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:26
+#: lib/gui/satin_multicolor/colorize_panel.py:26
 msgid "General Settings"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:29
+#: lib/gui/satin_multicolor/colorize_panel.py:29
 msgid "Equidistant colors"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:30
+#: lib/gui/satin_multicolor/colorize_panel.py:30
 msgid "Whether colors should be equidistant or have varying widths."
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:35
+#: lib/gui/satin_multicolor/colorize_panel.py:35
 msgid "Monochrome color width"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:36
+#: lib/gui/satin_multicolor/colorize_panel.py:36
 msgid "Adapt color width here when equidistance is enabled."
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:41
+#: lib/gui/satin_multicolor/colorize_panel.py:41
 msgid "Overflow left"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:46
+#: lib/gui/satin_multicolor/colorize_panel.py:46
 msgid "Overflow right"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:51
+#: lib/gui/satin_multicolor/colorize_panel.py:51
 msgid "Pull compensation (mm)"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:62
+#: lib/gui/satin_multicolor/colorize_panel.py:62
 msgid "Keep original satin"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:71
+#: lib/gui/satin_multicolor/colorize_panel.py:71
 msgid "Overflow excluded"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:124
+#: lib/gui/satin_multicolor/colorize_panel.py:124
 msgid "Click to move color up."
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:128
+#: lib/gui/satin_multicolor/colorize_panel.py:128
 msgid "Select color"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:133
+#: lib/gui/satin_multicolor/colorize_panel.py:133
 msgid "Monochrome width. Can be changed individually when equidistance is disabled."
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:138
+#: lib/gui/satin_multicolor/colorize_panel.py:138
 msgid "Margin right (bicolor section). Can be changed individually when equidistance is disabled."
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:142
+#: lib/gui/satin_multicolor/colorize_panel.py:142
 msgid "Remove color"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize.py:253
+#: lib/gui/satin_multicolor/colorize_panel.py:253
 msgid "Total width: {width}%"
 msgstr ""
 
@@ -3198,11 +3199,11 @@ msgstr ""
 msgid "https://inkstitch.org/docs/satin-tools/#multicolor-satin"
 msgstr ""
 
-#: lib/gui/satin_multicolor/main_panel.py:48
+#: lib/gui/satin_multicolor/main_panel.py:47
 msgid "Colorize"
 msgstr ""
 
-#: lib/gui/satin_multicolor/main_panel.py:145
+#: lib/gui/satin_multicolor/main_panel.py:144
 msgid "Multicolor Satin Group"
 msgstr ""
 
@@ -3465,6 +3466,29 @@ msgstr ""
 
 #: lib/gui/test_swatches.py:21
 msgid "Generate Swatches"
+msgstr ""
+
+#: lib/gui/lettering/main_panel.py:46 lib/gui/lettering/option_panel.py:60
+#: lib/gui/test_swatches.py:33 inx/inkstitch_apply_palette.inx:7
+#: inx/inkstitch_apply_threadlist.inx:7 inx/inkstitch_auto_satin.inx:7
+#: inx/inkstitch_break_apart.inx:8 inx/inkstitch_cleanup.inx:8
+#: inx/inkstitch_convert_to_stroke.inx:8 inx/inkstitch_density_map.inx:8
+#: inx/inkstitch_display_stacking_order.inx:8
+#: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
+#: inx/inkstitch_install_custom_palette.inx:8
+#: inx/inkstitch_jump_to_stroke.inx:15 inx/inkstitch_jump_to_trim.inx:15
+#: inx/inkstitch_lettering_along_path.inx:13
+#: inx/inkstitch_lettering_custom_font_dir.inx:8
+#: inx/inkstitch_lettering_force_lock_stitches.inx:8
+#: inx/inkstitch_lettering_remove_kerning.inx:9
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:8
+#: inx/inkstitch_letters_to_font.inx:8 inx/inkstitch_outline.inx:8
+#: inx/inkstitch_palette_to_text.inx:15
+#: inx/inkstitch_remove_embroidery_settings.inx:8
+#: inx/inkstitch_stitch_plan_preview.inx:8
+#: inx/inkstitch_stroke_to_lpe_satin.inx:7 inx/inkstitch_troubleshoot.inx:8
+#: inx/inkstitch_unlink_clone.inx:6 inx/inkstitch_zigzag_line_to_satin.inx:7
+msgid "Options"
 msgstr ""
 
 #: lib/gui/test_swatches.py:40
