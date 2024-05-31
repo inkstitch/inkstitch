@@ -15,7 +15,6 @@ from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..utils.geometry import ensure_multi_line_string
 from .base import InkstitchExtension
 
-
 class Redwork(InkstitchExtension):
     """Takes a bunch of stroke elements and traverses them so,
        that every stroke has exactly two passes
@@ -28,8 +27,8 @@ class Redwork(InkstitchExtension):
 
         self.elements = None
         self.graph = None
-        self.edge_groups = None
-        self.sorted_group = None
+        self.connected_components = None
+        self.eulerian_circuits = None
         self.merge_distance = None
 
     def effect(self):
@@ -48,10 +47,11 @@ class Redwork(InkstitchExtension):
         if starting_point:
             multi_line_string = self._ensure_starting_point(multi_line_string, starting_point)
         self._build_graph(multi_line_string)
-        self._generate_edge_groups()
-        self._sort_edge_groups()
-        self._edge_groups_to_elements(elements)
-
+        
+        self._generate_strongly_connected_components()
+        self._generate_eulerian_circuits()
+        self._eulerian_circuits_to_elements(elements)
+        
     def _ensure_starting_point(self, multi_line_string, starting_point):
         starting_point = Point(*starting_point)
         new_lines = []
@@ -77,8 +77,8 @@ class Redwork(InkstitchExtension):
                 # return the first occurence directly
                 return command.target_point
 
-    def _edge_groups_to_elements(self, elements):
-        # get node style and transform information
+    def _eulerian_circuits_to_elements(self, elements):
+
         node = elements[0].node
         index = node.getparent().index(node)
         style = node.style
@@ -91,50 +91,34 @@ class Redwork(InkstitchExtension):
 
         # insert lines grouped by underpath and top layer
         visited_lines = []
-        path = ''
-        underpath = True
-        insert_path = False
         i = 1
-        for edge in self.sorted_edges:
-            # Split into underpath and normal path
-            linestring = self.graph.get_edge_data(edge[0], edge[1], key=edge[2])['path']
-            current_line = linestring
-            if current_line in visited_lines:
-                if underpath and path:
-                    path_id = self.svg.get_unique_id('underpath_')
-                    label = _("Redwork Underpath") + f' {i}'
-                    insert_path = True
-                underpath = False
-            else:
-                if not underpath and path:
+
+        for circuit in self.eulerian_circuit:
+            for edge in  circuit:
+                linestring = self.graph.get_edge_data(edge[0], edge[1], edge[2])['path'] 
+                current_line = linestring
+                if current_line   in visited_lines:
                     path_id = self.svg.get_unique_id('redwork_')
                     label = _("Redwork") + f' {i}'
-                    insert_path = True
-                underpath = True
-                visited_lines.append(current_line)
-
-            if insert_path:
+                  
+                else:
+                    path_id = self.svg.get_unique_id('underpath_')
+                    label = _("Redwork Underpath") + f' {i}'
+                    visited_lines.append(current_line.reverse())
+                     
+                path= str(Path(list(current_line.coords)))
                 self._insert_element(path, redwork_group, style, transform, label, path_id)
-                path = ''
+                    
+            
                 i += 1
-                insert_path = False
-
-            # add edge to path
-            if edge[3] == 'reverse':
-                linestring = linestring.reverse()
-            path += str(Path(list(linestring.coords)))
-
-        # add last top layer line
-        if path:
-            path_id = self.svg.get_unique_id('redwork_')
-            label = _("Redwork") + f' {i}'
-            self._insert_element(path, redwork_group, style, transform, label, path_id)
-
+                
         # remove input elements
         for element in elements:
-            element.node.getparent().remove(element.node)
+             element.node.getparent().remove(element.node)  
+           
 
     def _insert_element(self, path, group, style, transform, label, path_id):
+        
         element = PathElement(
             id=path_id,
             style=str(style),
@@ -151,62 +135,21 @@ class Redwork(InkstitchExtension):
             start = geom.coords[0]
             end = geom.coords[-1]
 
-            self.graph.add_edge(str(start), str(end), path=geom)
-            self.graph.add_edge(str(start), str(end), path=geom)
+            key =  self.graph.add_edge(str(start), str(end), path=geom)
+            geom = geom.reverse()
+            key= self.graph.add_edge(str(end), str(start), path=geom)
 
-    def _generate_edge_groups(self):
-        # edge_dfs traverses all edges, however, it doesn't sort them as we need it
-        # so let's create groups of connected edges and see if we can combine them later on
-        self.edge_groups = []
-        edge_group = []
-        prev_edge = None
-        for edge in nx.edge_dfs(self.graph, orientation="ignore"):
-            start = edge[0] if edge[3] == 'forward' else edge[1]
-            end = edge[1] if edge[3] == 'forward' else edge[0]
-            if prev_edge is None or start == prev_edge:
-                edge_group.append(edge)
-            else:
-                self.edge_groups.append(edge_group)
-                edge_group = [edge]
-            # set previous edge
-            prev_edge = end
-        self.edge_groups.append(edge_group)
+    def _generate_strongly_connected_components(self):
 
-    def _sort_edge_groups(self):
-        # connect groups if possible
-        self.sorted_edges = []
-        self.used_edge_groups = []
-        for i, edge_group in enumerate(self.edge_groups):
-            if i in self.used_edge_groups:
-                continue
-            self.used_edge_groups.append(i)
-            for edge in edge_group:
-                self.add_recursive_edges(edge)
+        self.connected_components  = list(nx.strongly_connected_components(self.graph))
 
-    def add_recursive_edges(self, edge):
-        self.sorted_edges.append(edge)
-        end = edge[1] if edge[3] == 'forward' else edge[0]
-        if len(self.graph.out_edges(end)) + len(self.graph.in_edges(end)) < 2:
-            return
-        for j, edge_group in enumerate(self.edge_groups):
-            if j in self.used_edge_groups:
-                continue
-            # Find connected edge
-            connected_edge = None
-            for edg in edge_group:
-                if edg[3] == 'forward' and edg[0] == end:
-                    connected_edge = edg
-                    break
-                elif edg[3] == 'reverse' and edg[1] == end:
-                    connected_edge = edg
-                    break
-            # insert edge group
-            if connected_edge:
-                self.used_edge_groups.append(j)
-                index = edge_group.index(connected_edge)
-                sorted_group = edge_group[index:] + edge_group[:index]
-                for edge in sorted_group:
-                    self.add_recursive_edges(edge)
+    def _generate_eulerian_circuits(self):
+        self.eulerian_circuit = []
+        for c in self.connected_components:
+            G=self.graph.subgraph(c).copy() 
+            self.eulerian_circuit.append(nx.eulerian_circuit(G,keys=True))
+
+
 
     def _elements_to_multi_line_string(self, elements):
         lines = []
