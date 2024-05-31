@@ -15,6 +15,7 @@ from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..utils.geometry import ensure_multi_line_string
 from .base import InkstitchExtension
 
+
 class Redwork(InkstitchExtension):
     """Takes a bunch of stroke elements and traverses them so,
        that every stroke has exactly two passes
@@ -47,11 +48,11 @@ class Redwork(InkstitchExtension):
         if starting_point:
             multi_line_string = self._ensure_starting_point(multi_line_string, starting_point)
         self._build_graph(multi_line_string)
-        
+
         self._generate_strongly_connected_components()
         self._generate_eulerian_circuits()
         self._eulerian_circuits_to_elements(elements)
-        
+
     def _ensure_starting_point(self, multi_line_string, starting_point):
         starting_point = Point(*starting_point)
         new_lines = []
@@ -94,31 +95,29 @@ class Redwork(InkstitchExtension):
         i = 1
 
         for circuit in self.eulerian_circuit:
-            for edge in  circuit:
-                linestring = self.graph.get_edge_data(edge[0], edge[1], edge[2])['path'] 
+            for edge in circuit:
+                linestring = self.graph.get_edge_data(edge[0], edge[1], edge[2])['path']
                 current_line = linestring
-                if current_line   in visited_lines:
+                if current_line in visited_lines:
                     path_id = self.svg.get_unique_id('redwork_')
                     label = _("Redwork") + f' {i}'
-                  
+
                 else:
                     path_id = self.svg.get_unique_id('underpath_')
                     label = _("Redwork Underpath") + f' {i}'
                     visited_lines.append(current_line.reverse())
-                     
-                path= str(Path(list(current_line.coords)))
+
+                path = str(Path(list(current_line.coords)))
                 self._insert_element(path, redwork_group, style, transform, label, path_id)
-                    
-            
+
                 i += 1
-                
+
         # remove input elements
         for element in elements:
-             element.node.getparent().remove(element.node)  
-           
+            element.node.getparent().remove(element.node)
 
     def _insert_element(self, path, group, style, transform, label, path_id):
-        
+
         element = PathElement(
             id=path_id,
             style=str(style),
@@ -134,22 +133,19 @@ class Redwork(InkstitchExtension):
         for geom in multi_line_string.geoms:
             start = geom.coords[0]
             end = geom.coords[-1]
-
-            key =  self.graph.add_edge(str(start), str(end), path=geom)
+            self.graph.add_edge(str(start), str(end), path=geom)
             geom = geom.reverse()
-            key= self.graph.add_edge(str(end), str(start), path=geom)
+            self.graph.add_edge(str(end), str(start), path=geom)
 
     def _generate_strongly_connected_components(self):
 
-        self.connected_components  = list(nx.strongly_connected_components(self.graph))
+        self.connected_components = list(nx.strongly_connected_components(self.graph))
 
     def _generate_eulerian_circuits(self):
         self.eulerian_circuit = []
         for c in self.connected_components:
-            G=self.graph.subgraph(c).copy() 
-            self.eulerian_circuit.append(nx.eulerian_circuit(G,keys=True))
-
-
+            G = self.graph.subgraph(c).copy()
+            self.eulerian_circuit.append(nx.eulerian_circuit(G, keys=True))
 
     def _elements_to_multi_line_string(self, elements):
         lines = []
