@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-30 01:10+0000\n"
-"PO-Revision-Date: 2024-05-30 01:11\n"
+"PO-Revision-Date: 2024-06-01 01:14\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -275,7 +275,7 @@ msgstr "Magnolia KOR est une police scripte d'environ 20mm. Peut être diminuée
 #. description of font in fonts/magnolia_bicolor
 #: inkstitch-fonts-metadata.py:96
 msgid "This is a  larger  bicolor variation of Magnolia font"
-msgstr ""
+msgstr "Cette fonte est une variante plus grande et bicolore de Magnolia Kor"
 
 #. description of font in fonts/magnolia_small
 #: inkstitch-fonts-metadata.py:98
