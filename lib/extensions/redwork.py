@@ -54,6 +54,7 @@ class Redwork(InkstitchExtension):
         self._eulerian_circuits_to_elements(elements)
 
     def _ensure_starting_point(self, multi_line_string, starting_point):
+        # returns a MultiLineString whose first  LineString starts close to  starting_point
         starting_point = Point(*starting_point)
         new_lines = []
         start_applied = False
@@ -141,9 +142,16 @@ class Redwork(InkstitchExtension):
 
         self.connected_components = list(nx.strongly_connected_components(self.graph))
 
+        for i, cc in enumerate(self.connected_components):
+            if list(self.graph.nodes)[0] in cc:
+                break
+        ordered_connected_components = [self.connected_components[i]] + self.connected_components[:i] + self.connected_components[i+1:]
+        self.connected_components = ordered_connected_components
+
     def _generate_eulerian_circuits(self):
-        self.eulerian_circuit = []
-        for c in self.connected_components:
+        G = self.graph.subgraph(self.connected_components[0]).copy()
+        self.eulerian_circuit = [nx.eulerian_circuit(G, list(self.graph.nodes)[0], keys=True)]
+        for c in self.connected_components[1:]:
             G = self.graph.subgraph(c).copy()
             self.eulerian_circuit.append(nx.eulerian_circuit(G, keys=True))
 
