@@ -9,6 +9,7 @@ from itertools import chain
 import inkex
 import networkx as nx
 from shapely import geometry as shgeo
+from shapely import set_precision
 from shapely.geometry import Point as ShapelyPoint
 
 from ..commands import add_commands
@@ -230,10 +231,11 @@ class RunningStitch(object):
             # Technically a Stroke object's underlying path could have multiple
             # subpaths.  We don't have a particularly good way of dealing with
             # that so we'll just use the first one.
-            self.path = shgeo.LineString(path_or_stroke.paths[0])
+            self.path = set_precision(shgeo.LineString(path_or_stroke.paths[0]), 0.00001)
             original_element = path_or_stroke
         else:
-            self.path = path_or_stroke
+            # set geometry precision to avoid a FloatingPointError later on
+            self.path = set_precision(path_or_stroke, 0.00001)
 
         self.original_element = original_element
         self.running_stitch_length = \
