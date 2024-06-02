@@ -43,6 +43,8 @@ class Redwork(InkstitchExtension):
 
         self.merge_distance = self.options.merge_distance * PIXELS_PER_MM
         starting_point = self._get_starting_point('run_start')
+        if not starting_point:
+            starting_point = self._get_starting_point('run_end')
 
         multi_line_string = self._elements_to_multi_line_string(elements)
         if starting_point:
