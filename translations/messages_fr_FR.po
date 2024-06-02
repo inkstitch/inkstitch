@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-05-30 01:10+0000\n"
-"PO-Revision-Date: 2024-06-01 01:14\n"
+"PO-Revision-Date: 2024-06-02 01:15\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2910,19 +2910,19 @@ msgstr "https://inkstitch.org/fr/docs/troubleshoot#element-info"
 
 #: lib/gui/lettering/help_panel.py:19
 msgid "Add text to your design."
-msgstr ""
+msgstr "Ajoute du texte à vos dessins."
 
 #: lib/gui/lettering/help_panel.py:28 lib/gui/lettering/help_panel.py:29
 msgid "https://inkstitch.org/docs/lettering/#lettering-tool"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/lettering/#lettering-tool"
 
 #: lib/gui/lettering/help_panel.py:36
 msgid "A font library with full description and embroidered examples can be found on our website:"
-msgstr ""
+msgstr "Une bibliothèque de fontes avec description complète et exemples brodés peut être trouvée sur notre site :"
 
 #: lib/gui/lettering/help_panel.py:42 lib/gui/lettering/help_panel.py:43
 msgid "https://inkstitch.org/fonts/font-library/"
-msgstr ""
+msgstr "https://inkstitch.org/fr/fonts/font-library/"
 
 #: lib/gui/lettering/main_panel.py:232
 msgid "This font has no available font variant. Please update or remove the font."
