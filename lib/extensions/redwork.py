@@ -43,6 +43,7 @@ class Redwork(InkstitchExtension):
 
         self.merge_distance = self.options.merge_distance * PIXELS_PER_MM
         starting_point = self._get_starting_point('run_start')
+        ## as the resulting path starts and ends at same place we can also use ending point
         if not starting_point:
             starting_point = self._get_starting_point('run_end')
 
