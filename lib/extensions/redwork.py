@@ -25,12 +25,14 @@ class Redwork(InkstitchExtension):
 
         self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-m", "--merge_distance", dest="merge_distance", type=float, default=0.5)
+        self.arg_parser.add_argument("-z", "--minimum_path_length", dest="minimum_path_length", type=float, default=0.5)
 
         self.elements = None
         self.graph = None
         self.connected_components = None
         self.eulerian_circuits = None
         self.merge_distance = None
+        self.minimum_path_length = None
 
     def effect(self):
         if not self.get_elements():
@@ -42,8 +44,10 @@ class Redwork(InkstitchExtension):
             return
 
         self.merge_distance = self.options.merge_distance * PIXELS_PER_MM
+        self.minimum_path_length = self.options.minimum_path_length * PIXELS_PER_MM
+
         starting_point = self._get_starting_point('run_start')
-        ## as the resulting path starts and ends at same place we can also use ending point
+        # as the resulting path starts and ends at same place we can also use ending point
         if not starting_point:
             starting_point = self._get_starting_point('run_end')
 
@@ -88,7 +92,7 @@ class Redwork(InkstitchExtension):
         index = node.getparent().index(node)
         style = node.style
         transform = get_correction_transform(node)
-
+        nb_circuits = len(self.eulerian_circuit)
         # create redwork group
         redwork_group = Group()
         redwork_group.label = _("Redwork Group")
@@ -97,31 +101,33 @@ class Redwork(InkstitchExtension):
         # insert lines grouped by underpath and top layer
         visited_lines = []
         i = 1
-     
+
         for circuit in self.eulerian_circuit:
             connected_group = Group()
             connected_group.label = _("Connected Group")
-           
+
             for edge in circuit:
                 linestring = self.graph.get_edge_data(edge[0], edge[1], edge[2])['path']
-                current_line = linestring
-                if current_line in visited_lines:
-                    path_id = self.svg.get_unique_id('redwork_')
-                    label = _("Redwork") + f' {i}'
 
-                else:
-                    path_id = self.svg.get_unique_id('underpath_')
-                    label = _("Redwork Underpath") + f' {i}'
-                    visited_lines.append(current_line.reverse())
+                if Point(linestring.coords[0]).distance(Point(linestring.coords[-1])) > self.minimum_path_length:
+                    current_line = linestring
+                    if current_line in visited_lines:
+                        path_id = self.svg.get_unique_id('redwork_')
+                        label = _("Redwork") + f' {i}'
 
-                path = str(Path(list(current_line.coords)))
-                if len(self.eulerian_circuit) > 1:
-                    redwork_group.insert(i, connected_group)
-                    self._insert_element(path, connected_group, style, transform, label, path_id)
-                else:
-                   self._insert_element(path, redwork_group, style, transform, label, path_id) 
+                    else:
+                        path_id = self.svg.get_unique_id('underpath_')
+                        label = _("Redwork Underpath") + f' {i}'
+                        visited_lines.append(current_line.reverse())
 
-                i += 1
+                    path = str(Path(list(current_line.coords)))
+                    if nb_circuits > 1:
+                        redwork_group.insert(i, connected_group)
+                        self._insert_element(path, connected_group, style, transform, label, path_id)
+                    else:
+                        self._insert_element(path, redwork_group, style, transform, label, path_id)
+
+                    i += 1
 
         # remove input elements
         for element in elements:

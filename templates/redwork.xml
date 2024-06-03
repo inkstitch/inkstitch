@@ -9,6 +9,9 @@
           <param name="merge_distance" type="float" precision="2" min="0" max="500"
                  gui-text="Connect lines below this distance (mm)"
                  gui-description="Unconnected lines may result in jump stitches">0.5</param>
+           <param name="minimum_path_length" type="float" precision="2" min="0" max="500"
+                 gui-text="Minmum path length (mm)"
+                 gui-description="Shorter paths  will be removed from redwork result">0.5</param>
       </page>
       <page name="info" gui-text="Help">
           <label>Redwork embroidery is a stroke art embroidery which passes every line exactly twice.</label>
