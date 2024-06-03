@@ -450,8 +450,8 @@ class ParamsTab(ScrolledPanel):
         box.Add(self.settings_grid, proportion=1, flag=wx.ALL | wx.EXPAND, border=10)
 
         self.update_choice_widgets()
-        self.SetSizerAndFit(box)
-        self.SetMinSize(box.CalcMin())
+        self.SetSizer(box)
+        self.SetMinSize((box.CalcMin()[0], 200))
 
         self.Layout()
 
@@ -639,7 +639,7 @@ class SettingsPanel(wx.Panel):
         # otherwise the scrollbar jumps to the side and produces a
         # deprecation warning in wxpythons scrolledpanel.py line 225 -
         # which is expecting an integer, but uses previously a division
-        self.SetSizeHints(500, 400)
+        # self.SetSizeHints(600, 400)
 
         self.Layout()
         # end wxGlade
