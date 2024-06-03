@@ -9,7 +9,7 @@ import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
 from ...i18n import _
-from .color_panel import ColorPanel
+from . import ColorPanel
 
 
 class ColorizePanel(ScrolledPanel):
@@ -169,9 +169,8 @@ class ColorizePanel(ScrolledPanel):
         self.Layout()
 
     def _remove_color(self, event):
-        sizer = event.GetEventObject().GetContainingSizer()
-        sizer.Clear(True)
-        self.color_sizer.Remove(sizer)
+        panel = event.GetEventObject().GetParent()
+        panel.Destroy()
         self.FitInside()
 
         self._update_colors()

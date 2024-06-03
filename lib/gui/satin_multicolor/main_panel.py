@@ -60,12 +60,11 @@ class MultiColorSatinPanel(wx.Panel):
 
         self.notebook_sizer.Add(apply_sizer, 0, wx.ALIGN_RIGHT | wx.ALL, 10)
 
-        self.SetSizer(self.notebook_sizer)
-
         self.colorize_panel.add_color(self.elements[0].color)
 
+        self.SetSizerAndFit(self.notebook_sizer)
+
         self.Layout()
-        self.SetMinSize(self.notebook_sizer.CalcMin())
 
     def _hide_warning(self):
         self.warning_panel.clear()

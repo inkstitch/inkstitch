@@ -449,8 +449,9 @@ class ParamsTab(ScrolledPanel):
 
         box.Add(self.settings_grid, proportion=1, flag=wx.ALL | wx.EXPAND, border=10)
 
-        self.SetSizer(box)
         self.update_choice_widgets()
+        self.SetSizerAndFit(box)
+        self.SetMinSize(box.CalcMin())
 
         self.Layout()
 

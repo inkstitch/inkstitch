@@ -59,18 +59,10 @@ class Palette:
             stripes = []
             for stripe_sizer in outer_sizer.Children:
                 stripe = {'render': 1, 'color': '#000000', 'width': '5'}
-                stripe_info = stripe_sizer.GetSizer()
-                for color in stripe_info.GetChildren():
-                    widget = color.GetWindow()
-                    if isinstance(widget, wx.CheckBox):
-                        # in embroidery it is ok to have gaps between the stripes
-                        stripe['render'] = widget.Get3StateValue()
-                    elif isinstance(widget, wx.ColourPickerCtrl):
-                        stripe['color'] = widget.GetColour().GetAsString(wx.C2S_HTML_SYNTAX)
-                    elif isinstance(widget, wx.SpinCtrlDouble):
-                        stripe['width'] = widget.GetValue()
-                    elif isinstance(widget, wx.Button) or isinstance(widget, wx.StaticText):
-                        continue
+                stripe_panel = stripe_sizer.GetWindow()
+                stripe['render'] = stripe_panel.visibility.Get3StateValue()
+                stripe['color'] = stripe_panel.colorpicker.GetColour().GetAsString(wx.C2S_HTML_SYNTAX)
+                stripe['width'] = stripe_panel.stripe_width.GetValue()
                 stripes.append(stripe)
             self.palette_stripes[i] = stripes
             if self.equal_warp_weft:

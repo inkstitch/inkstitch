@@ -3,12 +3,11 @@
 # Copyright (c) 2023 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from math import floor
-
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
 from ...i18n import _
+from . import StripePanel
 
 
 class CustomizePanel(ScrolledPanel):
@@ -114,91 +113,66 @@ class CustomizePanel(ScrolledPanel):
         self.add_stripe(False)
 
     def add_stripe(self, warp=True, stripe=None, update=True):
-        stripesizer = wx.BoxSizer(wx.HORIZONTAL)
-
-        position = wx.Button(self, label='⁝', style=wx.BU_EXACTFIT)
-        position.SetToolTip(_("Drag and drop to adjust position."))
-        position.Bind(wx.EVT_LEFT_DOWN, self._move_stripe_start)
-        position.Bind(wx.EVT_LEFT_UP, self._move_stripe_end)
-
-        visibility = wx.CheckBox(self, style=wx.CHK_3STATE | wx.CHK_ALLOW_3RD_STATE_FOR_USER)
-        visibility.SetToolTip(_("Checked: stitch this stripe | Minus: spacer for strokes only | Disabled: spacer for fill and stroke"))
-        visibility.Set3StateValue(1)
-        visibility.Bind(wx.EVT_CHECKBOX, self._update_stripes_event)
-
-        # hidden label used for linked colors
-        # there seems to be no native way to catch the old color setting
-        colorinfo = wx.StaticText(self, label='black')
-        colorinfo.Hide()
-
-        colorpicker = wx.ColourPickerCtrl(self, colour=wx.Colour('black'))
-        colorpicker.SetToolTip(_("Select stripe color"))
-        colorpicker.Bind(wx.EVT_COLOURPICKER_CHANGED, self._update_color)
-
-        stripe_width = wx.SpinCtrlDouble(self, min=0.0, max=500, initial=5, style=wx.SP_WRAP)
-        stripe_width.SetDigits(2)
-        stripe_width.SetToolTip(_("Set stripe width (mm)"))
-        stripe_width.Bind(wx.EVT_SPINCTRLDOUBLE, self._update_stripes_event)
-
-        remove_button = wx.Button(self, label='X')
-        remove_button.SetToolTip(_("Remove stripe"))
-        remove_button.Bind(wx.EVT_BUTTON, self._remove_stripe)
-
-        stripesizer.Add(position, 0, wx.CENTER | wx.RIGHT | wx.TOP, 5)
-        stripesizer.Add(visibility, 0, wx.CENTER | wx.RIGHT | wx.TOP, 5)
-        stripesizer.Add(colorinfo, 0, wx.RIGHT | wx.TOP, 5)
-        stripesizer.Add(colorpicker, 0, wx.RIGHT | wx.TOP, 5)
-        stripesizer.Add(stripe_width, 1, wx.RIGHT | wx.TOP, 5)
-        stripesizer.Add(remove_button, 0, wx.CENTER | wx.TOP, 5)
+        stripe_panel = StripePanel(self)
 
         if stripe is not None:
-            visibility.Set3StateValue(stripe['render'])
-            colorinfo.SetLabel(wx.Colour(stripe['color']).GetAsString(wx.C2S_HTML_SYNTAX))
-            colorpicker.SetColour(wx.Colour(stripe['color']))
-            stripe_width.SetValue(stripe['width'])
+            stripe_panel.visibility.Set3StateValue(stripe['render'])
+            stripe_panel.colorinfo.SetLabel(wx.Colour(stripe['color']).GetAsString(wx.C2S_HTML_SYNTAX))
+            stripe_panel.colorpicker.SetColour(wx.Colour(stripe['color']))
+            stripe_panel.stripe_width.SetValue(stripe['width'])
+
         if warp:
-            self.warp_sizer.Add(stripesizer, 0, wx.EXPAND | wx.ALL, 5)
+            self.warp_sizer.Add(stripe_panel, 0, wx.EXPAND | wx.ALL, 5)
         else:
-            self.weft_sizer.Add(stripesizer, 0, wx.EXPAND | wx.ALL, 5)
+            self.weft_sizer.Add(stripe_panel, 0, wx.EXPAND | wx.ALL, 5)
+
         if update:
             self.panel.update_from_stripes()
-        self.set_stripe_width_color(stripe_width)
+
+        self._hide_first_position_button()
+        self.set_stripe_width_color(stripe_panel.stripe_width)
         self.FitInside()
 
-    def _move_stripe_start(self, event):
-        self.mouse_position = wx.GetMousePosition()
-
-    def _move_stripe_end(self, event):
+    def _move_stripe_up(self, event):
         stripe = event.GetEventObject()
-        sizer = stripe.GetContainingSizer()
-        if self.warp_sizer.GetItem(sizer):
-            main_sizer = self.warp_sizer
-        else:
-            main_sizer = self.weft_sizer
-        for i, item in enumerate(main_sizer.GetChildren()):
-            if item.GetSizer() == sizer:
+
+        main_sizer = None
+        i = 0
+        panel = stripe.GetParent()
+        for i, item in enumerate(self.warp_sizer.GetChildren()):
+            if item.GetWindow() == panel:
+                main_sizer = self.warp_sizer
                 index = i
-                break
-        position = wx.GetMousePosition()
-        sizer_height = sizer.GetSize()[1] + 10
-        move = floor((position[1] - self.mouse_position[1]) / sizer_height)
-        index = min(len(main_sizer.Children) - 1, max(0, (index + move)))
-        main_sizer.Detach(sizer)
-        main_sizer.Insert(index, sizer, 0, wx.EXPAND | wx.ALL, 5)
+        if not main_sizer:
+            for i, item in enumerate(self.weft_sizer.GetChildren()):
+                if item.GetWindow() == panel:
+                    main_sizer = self.weft_sizer
+                    index = i
+
+        index = max(0, (index - 1))
+        if index == 0:
+            previous_first = main_sizer.GetChildren()[0].GetWindow()
+            previous_first.position.Show()
+
+        main_sizer.Detach(panel)
+        main_sizer.Insert(index, panel, 0, wx.EXPAND | wx.ALL, 5)
+        self._hide_first_position_button()
         self.panel.update_from_stripes()
         self.FitInside()
+        self.Layout()
 
     def _remove_stripe(self, event):
-        sizer = event.GetEventObject().GetContainingSizer()
-        sizer.Clear(True)
-        self.warp_sizer.Remove(sizer)
-        try:
-            self.weft_sizer.Remove(sizer)
-        except RuntimeError:
-            # we may have removed it already
-            pass
+        panel = event.GetEventObject().GetParent()
+        panel.Destroy()
+        self._hide_first_position_button()
         self.panel.update_from_stripes()
         self.FitInside()
+
+    def _hide_first_position_button(self):
+        if len(self.warp_sizer.GetChildren()) > 0:
+            self.warp_sizer.GetChildren()[0].GetWindow().position.Show(False)
+        if len(self.weft_sizer.GetChildren()) > 0:
+            self.weft_sizer.GetChildren()[0].GetWindow().position.Show(False)
 
     def on_change(self, attribute, event):
         self.panel.settings[attribute] = event.EventObject.GetValue()
@@ -217,11 +191,8 @@ class CustomizePanel(ScrolledPanel):
     def update_stripe_width_colors(self):
         for sizer in [self.warp_sizer, self.weft_sizer]:
             for stripe_sizer in sizer.GetChildren():
-                inner_sizer = stripe_sizer.GetSizer()
-                for stripe_widget in inner_sizer:
-                    widget = stripe_widget.GetWindow()
-                    if isinstance(widget, wx.SpinCtrlDouble):
-                        self.set_stripe_width_color(widget)
+                stripe_panel = stripe_sizer.GetWindow()
+                self.set_stripe_width_color(stripe_panel.stripe_width)
 
     def set_stripe_width_color(self, stripe_width_ctrl):
         scale = self.scale.GetValue()
@@ -258,14 +229,11 @@ class CustomizePanel(ScrolledPanel):
 
     def _update_color_picker(self, old_color, new_color, sizer):
         for stripe_sizer in sizer.Children:
-            stripe_info = stripe_sizer.GetSizer()
-            for widget in stripe_info.GetChildren():
-                widget = widget.GetWindow()
-                if isinstance(widget, wx.ColourPickerCtrl):
-                    color = widget.GetColour()
-                    if color == old_color:
-                        widget.SetColour(new_color)
-                        widget.GetPrevSibling().SetLabel(new_color.GetAsString(wx.C2S_HTML_SYNTAX))
+            stripe_panel = stripe_sizer.GetWindow()
+            color = stripe_panel.colorpicker.GetColour()
+            if color == old_color:
+                stripe_panel.colorpicker.SetColour(new_color)
+                stripe_panel.colorinfo.SetLabel(new_color.GetAsString(wx.C2S_HTML_SYNTAX))
 
     def update_symmetry(self, event=None):
         symmetry = self.symmetry_checkbox.GetValue()
@@ -293,8 +261,5 @@ class CustomizePanel(ScrolledPanel):
 
     def _hide_colorinfo(self):
         for stripe_sizer in self.weft_sizer.Children:
-            stripe_info = stripe_sizer.GetSizer()
-            for stripe in stripe_info.GetChildren():
-                widget = stripe.GetWindow()
-                if isinstance(widget, wx.StaticText):
-                    widget.Hide()
+            stripe_panel = stripe_sizer.GetWindow()
+            stripe_panel.colorinfo.Hide()
