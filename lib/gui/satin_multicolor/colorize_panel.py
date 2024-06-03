@@ -9,6 +9,7 @@ import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
 from ...i18n import _
+from .color_panel import ColorPanel
 
 
 class ColorizePanel(ScrolledPanel):
@@ -118,50 +119,21 @@ class ColorizePanel(ScrolledPanel):
         self.add_color()
 
     def add_color(self, color='black'):
-        colorsizer = wx.BoxSizer(wx.HORIZONTAL)
-
-        position = wx.Button(self, label='↑', style=wx.BU_EXACTFIT)
-        position.SetToolTip(_("Click to move color up."))
-        position.Bind(wx.EVT_BUTTON, self._move_color_up)
-
-        colorpicker = wx.ColourPickerCtrl(self, colour=wx.Colour(color))
-        colorpicker.SetToolTip(_("Select color"))
-        colorpicker.Bind(wx.EVT_COLOURPICKER_CHANGED, self._update)
-
-        color_width = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, style=wx.SP_WRAP)
-        color_width.SetDigits(2)
-        color_width.SetToolTip(_("Monochrome width. Can be changed individually when equidistance is disabled."))
-        color_width.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
-
-        color_margin_right = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, style=wx.SP_WRAP)
-        color_margin_right.SetDigits(2)
-        color_margin_right.SetToolTip(_("Margin right (bicolor section). Can be changed individually when equidistance is disabled."))
-        color_margin_right.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
-
-        remove_button = wx.Button(self, label='X')
-        remove_button.SetToolTip(_("Remove color"))
-        remove_button.Bind(wx.EVT_BUTTON, self._remove_color)
-
-        colorsizer.Add(position, 0, wx.CENTER | wx.RIGHT | wx.TOP | wx.RESERVE_SPACE_EVEN_IF_HIDDEN, 5)
-        colorsizer.Add(colorpicker, 0, wx.RIGHT | wx.TOP, 5)
-        colorsizer.Add(color_width, 1, wx.RIGHT | wx.TOP, 5)
-        colorsizer.Add(color_margin_right, 1, wx.RIGHT | wx.TOP | wx.RESERVE_SPACE_EVEN_IF_HIDDEN, 5)
-        colorsizer.Add(remove_button, 0, wx.CENTER | wx.TOP, 5)
-
-        self.color_sizer.Add(colorsizer, 0, wx.EXPAND | wx.ALL, 10)
+        color_panel = ColorPanel(self, color)
+        self.color_sizer.Add(color_panel, 0, wx.EXPAND | wx.ALL, 10)
 
         if self.equististance.GetValue():
-            color_margin_right.Enable(False)
-            color_width.Enable(False)
+            color_panel.color_margin_right.Enable(False)
+            color_panel.color_width.Enable(False)
         else:
-            color_margin_right.Enable(True)
-            color_width.Enable(True)
+            color_panel.color_margin_right.Enable(True)
+            color_panel.color_width.Enable(True)
 
         self._update_colors()
 
-        color_margin_right.Show(False)
+        color_panel.color_margin_right.Show(False)
         if len(self.color_sizer.GetChildren()) > 1:
-            self.color_sizer.GetChildren()[-2].GetSizer().GetChildren()[3].GetWindow().Show()
+            self.color_sizer.GetChildren()[-2].GetWindow().color_margin_right.Show()
 
         self._update()
 
@@ -170,21 +142,25 @@ class ColorizePanel(ScrolledPanel):
 
     def _move_color_up(self, event):
         color = event.GetEventObject()
-        sizer = color.GetContainingSizer()
+
+        sizer = color.GetParent()
         main_sizer = self.color_sizer
+
         for i, item in enumerate(main_sizer.GetChildren()):
-            if item.GetSizer() == sizer:
+            if item.GetWindow() == sizer:
                 index = i
                 break
+
         if index == len(main_sizer.GetChildren()) - 1:
-            last_sizer = main_sizer.GetChildren()[-2].GetSizer().GetChildren()
-            last_sizer[2].GetWindow().Show(False)
-            sizer.GetChildren()[2].GetWindow().Show()
+            last_sizer = main_sizer.GetChildren()[-2].GetWindow()
+            last_sizer.color_margin_right.Show(False)
+            sizer.color_margin_right.Show()
+
         index = max(0, (index - 1))
         if index == 0:
-            previous_first = main_sizer.GetChildren()[0].GetSizer().GetChildren()
-            previous_first[0].GetWindow().Show()
-            sizer.GetChildren()[0].GetWindow().Show(False)
+            previous_first = main_sizer.GetChildren()[0].GetWindow()
+            previous_first.position.Show()
+            sizer.position.Show(False)
 
         main_sizer.Detach(sizer)
         main_sizer.Insert(index, sizer, 0, wx.EXPAND | wx.ALL, 10)
@@ -215,36 +191,28 @@ class ColorizePanel(ScrolledPanel):
 
     def _set_widget_status(self, status):
         for color in self.color_sizer.GetChildren():
-            inner_sizer = color.GetSizer()
-            for color_widget in inner_sizer:
-                widget = color_widget.GetWindow()
-                if isinstance(widget, wx.SpinCtrlDouble):
-                    widget.Enable(status)
+            color_panel = color.GetWindow()
+            color_panel.color_width.Enable(status)
+            color_panel.color_margin_right.Enable(status)
 
-    def _set_widget_width_value(self, value, margin=0):
+    def _set_widget_width_value(self, width, margin=0):
         first = True
         for color in self.color_sizer.GetChildren():
-            inner_sizer = color.GetSizer()
-            for color_widget in inner_sizer:
-                widget = color_widget.GetWindow()
-                if first and widget.Label == "↑":
-                    inner_sizer.Hide(widget)
-                    first = False
-                if isinstance(widget, wx.SpinCtrlDouble):
-                    widget.SetValue(value)
-                    widget.GetNextSibling().SetValue(margin)
-                    break
+            color_panel = color.GetWindow()
+            if first:
+                color_panel.position.Hide()
+                first = False
+            color_panel.color_width.SetValue(width)
+            color_panel.color_margin_right.SetValue(margin)
 
     def get_total_width(self):
         width = 0
         colors = self.color_sizer.GetChildren()
         for color in colors:
-            inner_sizer = color.GetSizer()
-            for color_widget in inner_sizer:
-                widget = color_widget.GetWindow()
-                if isinstance(widget, wx.SpinCtrlDouble):
-                    width += widget.GetValue()
-        last_margin = inner_sizer.GetChildren()[3].GetWindow().GetValue()
+            color_panel = color.GetWindow()
+            width += color_panel.color_width.GetValue()
+            width += color_panel.color_margin_right.GetValue()
+        last_margin = color_panel.color_margin_right.GetValue()
         width -= last_margin
         return round(width, 2)
 
