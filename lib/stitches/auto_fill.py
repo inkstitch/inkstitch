@@ -15,7 +15,6 @@ from shapely import segmentize
 from shapely.ops import snap
 from shapely.strtree import STRtree
 
-
 from ..debug.debug import debug
 from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
@@ -24,9 +23,9 @@ from ..utils.clamp_path import clamp_path_to_polygon
 from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import (ensure_multi_line_string,
                               line_string_to_point_list)
+from ..utils.prng import join_args
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
-from ..utils.prng import join_args
 from .fill import intersect_region_with_grating, stitch_row
 from .running_stitch import even_running_stitch
 
@@ -143,6 +142,7 @@ def project(shape, coords, outline_index):
     """
 
     outline = ensure_multi_line_string(shape.boundary).geoms[outline_index]
+
     return outline.project(shgeo.Point(*coords))
 
 

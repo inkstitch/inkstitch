@@ -9,6 +9,7 @@ import re
 import numpy as np
 from inkex import LinearGradient, Transform
 from shapely import geometry as shgeo
+from shapely import set_precision
 from shapely.errors import GEOSException
 from shapely.ops import nearest_points
 from shapely.validation import explain_validity, make_valid
@@ -726,7 +727,8 @@ class FillStitch(EmbroideryElement):
     @property
     @cache
     def shape(self):
-        shape = self._get_clipped_path()
+        # avoid FloatingPointError while keeping a decent precision necessary for clamp path
+        shape = set_precision(self._get_clipped_path(), 0.0000000001)
 
         if shape.is_valid:
             return ensure_multi_polygon(shape, 3)
