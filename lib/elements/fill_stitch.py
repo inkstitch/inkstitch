@@ -727,14 +727,14 @@ class FillStitch(EmbroideryElement):
     @property
     @cache
     def shape(self):
-        # avoid FloatingPointError while keeping a decent precision necessary for clamp path
-        shape = set_precision(self._get_clipped_path(), 0.0000000001)
+        shape = self._get_clipped_path()
 
         if shape.is_valid:
-            return ensure_multi_polygon(shape, 3)
+            # set_precision to avoid FloatingPointErrors
+            return ensure_multi_polygon(set_precision(shape, 0.0000000001), 3)
 
         shape = make_valid(shape)
-        return ensure_multi_polygon(shape, 3)
+        return ensure_multi_polygon(set_precision(shape, 0.00000000001), 3)
 
     def _get_clipped_path(self):
         if self.node.clip is None:
