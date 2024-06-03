@@ -144,14 +144,14 @@ class MultiColorSatinPanel(wx.Panel):
             group.label = _("Multicolor Satin Group")
             current_position = 0
             previous_margin = overflow_left
-            for i, segment_sizer in enumerate(color_sizer):
-                segment = segment_sizer.GetSizer().GetChildren()
-                color = segment[1].GetWindow().GetColour().GetAsString(wx.C2S_HTML_SYNTAX)
+            for i, color_panel in enumerate(color_sizer):
+                panel = color_panel.GetWindow()
+                color = panel.colorpicker.GetColour().GetAsString(wx.C2S_HTML_SYNTAX)
                 if i == num_colors - 1:
                     margin = overflow_right
                 else:
-                    margin = segment[3].GetWindow().GetValue()
-                width = segment[2].GetWindow().GetValue()
+                    margin = panel.color_margin_right.GetValue()
+                width = panel.color_width.GetValue()
 
                 new_satin = copy(element.node)
                 new_satin.style['stroke'] = color
