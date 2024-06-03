@@ -964,7 +964,8 @@ class FillStitch(EmbroideryElement):
     def do_underlay(self, shape, starting_point):
         color = self.color
         if self.gradient is not None and self.fill_method == 'linear_gradient_fill':
-            color = [style['stop-color'] for style in self.gradient.stop_styles][0]
+            color = self.gradient.stops[0].get_computed_style('stop-color')
+
         stitch_groups = []
         for i in range(len(self.fill_underlay_angle)):
             underlay = StitchGroup(

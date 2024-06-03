@@ -66,7 +66,17 @@ def _get_gradient_info(fill, bbox):
     else:
         fill.gradient.apply_transform()
         offsets = fill.gradient.stop_offsets
-        colors = [style['stop-color'] if float(style['stop-opacity']) > 0 else 'none' for style in fill.gradient.stop_styles]
+        # get stop colors
+        # it would be easier if we just used fill.gradient.stop_styles to collect them
+        # but inkex/tinycss fails on stop color styles when it is not in the style attribute, but in it's own stop-color attribute
+        colors = []
+        for stop in fill.gradient.stops:
+            color = stop.get_computed_style('stop-color')
+            opacity = stop.get_computed_style('stop-opacity')
+            if float(opacity) > 0:
+                colors.append(color)
+            else:
+                colors.append('none')
         gradient_start, gradient_end = gradient_start_end(fill.node, fill.gradient)
         angle = gradient_angle(fill.node, fill.gradient)
     return angle, colors, offsets, Point(list(gradient_start)), Point(list(gradient_end))
@@ -167,6 +177,7 @@ def _get_color_lines(lines, colors, stop_color_line_indices):
 
         c2_count = 0
         c1_count = 0
+        max_count = 1000
         current_line = 0
 
         line_count_diff = floor((total_lines - sections**2) / 2)
@@ -181,7 +192,7 @@ def _get_color_lines(lines, colors, stop_color_line_indices):
             rest = c1_count % c2_count
             c1_count = ceil(c1_count / c2_count)
 
-            current_line, line_count_diff, color1, color2, stop = _add_lines(
+            current_line, line_count_diff, color1, color2, max_count, stop = _add_lines(
                 current_line,
                 total_lines,
                 line_count_diff,
@@ -190,7 +201,8 @@ def _get_color_lines(lines, colors, stop_color_line_indices):
                 stop,
                 rest,
                 c1_count,
-                c2_count
+                c2_count,
+                max_count
             )
 
         # mirror the first half of the color section to receive the full section
@@ -232,10 +244,11 @@ def _get_color_lines(lines, colors, stop_color_line_indices):
     return color_lines, colors
 
 
-def _add_lines(current_line, total_lines, line_count_diff, color1, color2, stop, rest, c1_count, c2_count):
+def _add_lines(current_line, total_lines, line_count_diff, color1, color2, stop, rest, c1_count, c2_count, max_count):
     for j in range(c2_count):
         if stop:
             break
+
         if rest == 0 or j < rest:
             count = c1_count
         else:
@@ -243,6 +256,8 @@ def _add_lines(current_line, total_lines, line_count_diff, color1, color2, stop,
         if line_count_diff > 0:
             count += 1
             line_count_diff -= 1
+        count = min(count, max_count)
+
         for k in range(count):
             color1.append(current_line)
             current_line += 1
@@ -251,7 +266,8 @@ def _add_lines(current_line, total_lines, line_count_diff, color1, color2, stop,
                 break
         color2.append(current_line)
         current_line += 1
-    return current_line, line_count_diff, color1, color2, stop
+    max_count = count
+    return current_line, line_count_diff, color1, color2, max_count, stop
 
 
 def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_point):
