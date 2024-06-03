@@ -5,7 +5,7 @@
 
 import networkx as nx
 from inkex import Group, Path, PathElement, errormsg
-from shapely import unary_union
+from shapely import unary_union, length
 from shapely.geometry import LineString, MultiLineString, Point
 from shapely.ops import linemerge, nearest_points, substring
 
@@ -109,7 +109,8 @@ class Redwork(InkstitchExtension):
             for edge in circuit:
                 linestring = self.graph.get_edge_data(edge[0], edge[1], edge[2])['path']
 
-                if Point(linestring.coords[0]).distance(Point(linestring.coords[-1])) > self.minimum_path_length:
+                if length(linestring) > self.minimum_path_length:
+                    #Point(linestring.coords[0]).distance(Point(linestring.coords[-1])) > self.minimum_path_length:
                     current_line = linestring
                     if current_line in visited_lines:
                         path_id = self.svg.get_unique_id('redwork_')
