@@ -97,11 +97,11 @@ class Redwork(InkstitchExtension):
         # insert lines grouped by underpath and top layer
         visited_lines = []
         i = 1
-
+     
         for circuit in self.eulerian_circuit:
             connected_group = Group()
             connected_group.label = _("Connected Group")
-            redwork_group.insert(i, connected_group)
+           
             for edge in circuit:
                 linestring = self.graph.get_edge_data(edge[0], edge[1], edge[2])['path']
                 current_line = linestring
@@ -115,7 +115,11 @@ class Redwork(InkstitchExtension):
                     visited_lines.append(current_line.reverse())
 
                 path = str(Path(list(current_line.coords)))
-                self._insert_element(path, connected_group, style, transform, label, path_id)
+                if len(self.eulerian_circuit) > 1:
+                    redwork_group.insert(i, connected_group)
+                    self._insert_element(path, connected_group, style, transform, label, path_id)
+                else:
+                   self._insert_element(path, redwork_group, style, transform, label, path_id) 
 
                 i += 1
 
