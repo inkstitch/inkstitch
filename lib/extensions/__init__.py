@@ -47,6 +47,7 @@ from .palette_to_text import PaletteToText
 from .params import Params
 from .preferences import Preferences
 from .print_pdf import Print
+from .redwork import Redwork
 from .remove_embroidery_settings import RemoveEmbroiderySettings
 from .reorder import Reorder
 from .satin_multicolor import SatinMulticolor
@@ -109,6 +110,7 @@ __all__ = extensions = [ApplyPalette,
                         Params,
                         Preferences,
                         Print,
+                        Redwork,
                         RemoveEmbroiderySettings,
                         Reorder,
                         SatinMulticolor,

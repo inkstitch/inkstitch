@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Redwork</name>
+    <id>org.{{ id_inkstitch }}.redwork</id>
+    <param name="extension" type="string" gui-hidden="true">redwork</param>
+
+    <param name="notebook" type="notebook">
+      <page name="options" gui-text="Options">
+          <param name="merge_distance" type="float" precision="2" min="0" max="500"
+                 gui-text="Connect lines below this distance (mm)"
+                 gui-description="Unconnected lines may result in jump stitches">0.5</param>
+           <param name="minimum_path_length" type="float" precision="2" min="0" max="500"
+                 gui-text="Minimum path length (mm)"
+                 gui-description="Shorter paths  will be removed from redwork result">0.5</param>
+           <param name="redwork_running_stitch_length_mm" type="float" precision="2" min="0" max="500"
+                 gui-text="Redwork stitch length (mm)"
+                 gui-description="set  redwork  stitch length">2.5</param>
+           <param name="redwork_bean_stitch_repeats" type="string" precision="0" min="0" max="500"
+                 gui-text="Redwork bean stitch number of repeats"
+                 gui-description="Redwork bean stitch number of repeats">0</param>
+    
+      </page>
+      <page name="info" gui-text="Help">
+          <label>Redwork embroidery is a stroke art embroidery which passes every line exactly twice.</label>
+          <spacer />
+          <label>More information on our website</label>
+          <label appearance="url">https://inkstitch.org/docs/stroke-tools/#redwork</label>
+      </page>
+    </param>
+
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Tools: Stroke" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
