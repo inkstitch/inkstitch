@@ -39,6 +39,7 @@ class TartanMainPanel(wx.Panel):
 
         # preview
         self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
+        # presets
         self.presets_panel = PresetsPanel(self)
         # warnings
         self.warning_panel = WarningPanel(self)
@@ -73,7 +74,7 @@ class TartanMainPanel(wx.Panel):
         self.notebook_sizer.Add(self.presets_panel, 0, wx.EXPAND | wx.ALL, 10)
         self.notebook_sizer.Add(apply_sizer, 0, wx.ALIGN_RIGHT | wx.ALL, 10)
 
-        self.SetSizer(self.notebook_sizer)
+        self.SetSizerAndFit(self.notebook_sizer)
 
         self.load_settings()
         self.apply_settings()

@@ -55,7 +55,7 @@ class StitchPlanPreview(InkstitchExtension):
         stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
 
         layer = render_stitch_plan(svg, stitch_plan, realistic, visual_commands, render_jumps=self.options.render_jumps)
-        if self.options.ignore_layer:
+        if self.options.ignore_layer and not self.options.mode[-1].isdigit():
             add_layer_commands(layer, ["ignore_layer"])
         layer = self.rasterize(svg, layer, raster_mult)
 

@@ -727,14 +727,14 @@ class FillStitch(EmbroideryElement):
     @property
     @cache
     def shape(self):
-        # avoid FloatingPointError while keeping a decent precision necessary for clamp path
-        shape = set_precision(self._get_clipped_path(), 0.0000000001)
+        shape = self._get_clipped_path()
 
         if shape.is_valid:
-            return ensure_multi_polygon(shape, 3)
+            # set_precision to avoid FloatingPointErrors
+            return ensure_multi_polygon(set_precision(shape, 0.0000000001), 3)
 
         shape = make_valid(shape)
-        return ensure_multi_polygon(shape, 3)
+        return ensure_multi_polygon(set_precision(shape, 0.00000000001), 3)
 
     def _get_clipped_path(self):
         if self.node.clip is None:
@@ -964,7 +964,8 @@ class FillStitch(EmbroideryElement):
     def do_underlay(self, shape, starting_point):
         color = self.color
         if self.gradient is not None and self.fill_method == 'linear_gradient_fill':
-            color = [style['stop-color'] for style in self.gradient.stop_styles][0]
+            color = self.gradient.stops[0].get_computed_style('stop-color')
+
         stitch_groups = []
         for i in range(len(self.fill_underlay_angle)):
             underlay = StitchGroup(
