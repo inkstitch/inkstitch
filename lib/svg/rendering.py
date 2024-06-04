@@ -217,20 +217,15 @@ def color_block_to_paths(color_block, svg, destination, visual_commands, render_
 
 
 def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True, render_jumps=True) -> inkex.Group:
-    layer = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
-    if layer is None:
-        layer = inkex.Group(attrib={
-            'id': '__inkstitch_stitch_plan__',
-            INKSCAPE_LABEL: _('Stitch Plan'),
-            INKSCAPE_GROUPMODE: 'layer'
-        })
-    else:
-        # delete old stitch plan
-        del layer[:]
+    layer_or_image = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
+    if layer_or_image is not None:
+        layer_or_image.getparent().remove(layer_or_image)
 
-        # make sure the layer is visible
-        layer.set('style', 'display:inline')
-
+    layer = inkex.Group(attrib={
+        'id': '__inkstitch_stitch_plan__',
+        INKSCAPE_LABEL: _('Stitch Plan'),
+        INKSCAPE_GROUPMODE: 'layer'
+    })
     svg.append(layer)
 
     for i, color_block in enumerate(stitch_plan):
