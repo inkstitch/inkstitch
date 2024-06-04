@@ -29,7 +29,7 @@ class Redwork(InkstitchExtension):
         self.arg_parser.add_argument("-p", "--minimum_path_length", dest="minimum_path_length", type=float, default=0.5)
         self.arg_parser.add_argument("-s", "--redwork_running_stitch_length_mm", dest="redwork_running_stitch_length_mm", type=float, default=2.5)
         self.arg_parser.add_argument("-b", "--redwork_bean_stitch_repeats", dest="redwork_bean_stitch_repeats", type=str, default='0')
-        
+
         self.elements = None
         self.graph = None
         self.connected_components = None
@@ -39,8 +39,6 @@ class Redwork(InkstitchExtension):
         self.redwork_running_stitch_length_mm = None
         self.redwork_bean_stitch_repeats = None
 
-      
-       
     def effect(self):
         if not self.get_elements():
             return
@@ -52,7 +50,7 @@ class Redwork(InkstitchExtension):
 
         self.merge_distance = self.options.merge_distance * PIXELS_PER_MM
         self.minimum_path_length = self.options.minimum_path_length * PIXELS_PER_MM
-       
+
         starting_point = self._get_starting_point('run_start')
         # as the resulting path starts and ends at same place we can also use ending point
         if not starting_point:
@@ -117,7 +115,6 @@ class Redwork(InkstitchExtension):
                 linestring = self.graph.get_edge_data(edge[0], edge[1], edge[2])['path']
 
                 if length(linestring) > self.minimum_path_length:
-                    #Point(linestring.coords[0]).distance(Point(linestring.coords[-1])) > self.minimum_path_length:
                     current_line = linestring
                     if current_line in visited_lines:
                         path_id = self.svg.get_unique_id('redwork_')
@@ -135,7 +132,7 @@ class Redwork(InkstitchExtension):
                         redwork_group.insert(i, connected_group)
                         self._insert_element(path, connected_group, style, transform, label, path_id, redwork)
                     else:
-                        self._insert_element(path, redwork_group, style, transform, label, path_id, redwork), 
+                        self._insert_element(path, redwork_group, style, transform, label, path_id, redwork)
 
                     i += 1
 
@@ -153,11 +150,11 @@ class Redwork(InkstitchExtension):
         )
 
         element.label = label
-        element.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'],self.options.redwork_running_stitch_length_mm)
-           
-        if redwork: 
-            element.set(INKSTITCH_ATTRIBS['bean_stitch_repeats'],self.options.redwork_bean_stitch_repeats )
-                  
+        element.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.options.redwork_running_stitch_length_mm)
+
+        if redwork:
+            element.set(INKSTITCH_ATTRIBS['bean_stitch_repeats'], self.options.redwork_bean_stitch_repeats)
+
         group.add(element)
 
     def _build_graph(self, multi_line_string):
