@@ -506,12 +506,16 @@ class DrawingPanel(wx.Panel):
         self.Bind(wx.EVT_SIZE, self.choose_zoom_and_pan)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_left_mouse_button_down)
         self.Bind(wx.EVT_MOUSEWHEEL, self.on_mouse_wheel)
+        self.Bind(wx.EVT_SIZE, self.on_resize)
 
         self.SetMinSize((400, 400))
 
         # wait for layouts so that panel size is set
         if self.stitch_plan:
             wx.CallLater(50, self.load, self.stitch_plan)
+
+    def on_resize(self, event):
+        self.Refresh()
 
     def clamp_current_stitch(self):
         if self.current_stitch < 1:
