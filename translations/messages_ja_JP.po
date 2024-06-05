@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-04 01:11+0000\n"
-"PO-Revision-Date: 2024-06-04 01:11\n"
+"POT-Creation-Date: 2024-06-05 01:11+0000\n"
+"PO-Revision-Date: 2024-06-05 01:11\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-04 01:11+0000\n"
+"POT-Creation-Date: 2024-06-05 01:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1999,7 +1999,7 @@ msgstr ""
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr ""
 
-#: lib/elements/satin_column.py:452 lib/gui/tartan/customize_panel.py:39
+#: lib/elements/satin_column.py:452 lib/gui/tartan/customize_panel.py:38
 msgid "Position"
 msgstr ""
 
@@ -2205,7 +2205,7 @@ msgstr ""
 msgid "How big the last copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:371 lib/gui/tartan/customize_panel.py:44
+#: lib/elements/stroke.py:371 lib/gui/tartan/customize_panel.py:43
 msgid "Rotate"
 msgstr ""
 
@@ -2646,32 +2646,32 @@ msgstr ""
 msgid "Re-roll"
 msgstr ""
 
-#: lib/extensions/params.py:461
+#: lib/extensions/params.py:462
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr "適用して終了 \"をクリックしたときに、このパラメータを強制的に保存する場合は、クリックしてください。"
 
-#: lib/extensions/params.py:471
+#: lib/extensions/params.py:472
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "このパラメータは、\"適応して終了 \"をクリックしたときに保存されます。"
 
-#: lib/extensions/params.py:498 lib/gui/lettering/main_panel.py:58
+#: lib/extensions/params.py:499 lib/gui/lettering/main_panel.py:58
 #: lib/gui/lettering_font_sample.py:57
-#: lib/gui/satin_multicolor/main_panel.py:54 lib/gui/tartan/main_panel.py:66
+#: lib/gui/satin_multicolor/main_panel.py:54 lib/gui/tartan/main_panel.py:67
 #: print/templates/custom-page.html:23 print/templates/custom-page.html:27
 #: print/templates/custom-page.html:33 print/templates/ui.html:101
 #: print/templates/ui.html:105 print/templates/ui.html:111
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: lib/extensions/params.py:503
+#: lib/extensions/params.py:504
 msgid "Use Last Settings"
 msgstr "前回の設定を使う"
 
-#: lib/extensions/params.py:506 lib/gui/lettering/main_panel.py:56
+#: lib/extensions/params.py:507 lib/gui/lettering/main_panel.py:56
 msgid "Apply and Quit"
 msgstr "適用して終了"
 
-#: lib/extensions/params.py:786
+#: lib/extensions/params.py:787
 msgid "Embroidery Params"
 msgstr "刺繍パラメータ"
 
@@ -2690,6 +2690,26 @@ msgstr ""
 
 #: lib/extensions/print_pdf.py:467
 msgid "Ink/Stitch Print"
+msgstr ""
+
+#: lib/extensions/redwork.py:48
+msgid "Please select one or more strokes."
+msgstr ""
+
+#: lib/extensions/redwork.py:103
+msgid "Redwork Group"
+msgstr ""
+
+#: lib/extensions/redwork.py:112
+msgid "Connected Group"
+msgstr ""
+
+#: lib/extensions/redwork.py:121 inx/inkstitch_redwork.inx:3
+msgid "Redwork"
+msgstr ""
+
+#: lib/extensions/redwork.py:126
+msgid "Redwork Underpath"
 msgstr ""
 
 #: lib/extensions/reorder.py:20
@@ -2862,7 +2882,7 @@ msgstr ""
 
 #: lib/gui/element_info.py:41 lib/gui/lettering/main_panel.py:48
 #: lib/gui/lettering_font_sample.py:70
-#: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:63
+#: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_palette.inx:84
 #: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
 #: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_break_apart.inx:14
@@ -2880,7 +2900,7 @@ msgstr ""
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:12
 #: inx/inkstitch_letters_to_font.inx:56 inx/inkstitch_outline.inx:25
-#: inx/inkstitch_palette_to_text.inx:19
+#: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_redwork.inx:23
 #: inx/inkstitch_remove_embroidery_settings.inx:142
 #: inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stitch_plan_preview.inx:37
@@ -3015,7 +3035,7 @@ msgstr "設定"
 msgid "Stitch direction"
 msgstr ""
 
-#: lib/gui/lettering_font_sample.py:44 lib/gui/tartan/customize_panel.py:47
+#: lib/gui/lettering_font_sample.py:44 lib/gui/tartan/customize_panel.py:46
 msgid "Scale (%)"
 msgstr ""
 
@@ -3024,7 +3044,7 @@ msgid "Max. line width"
 msgstr ""
 
 #: lib/gui/lettering_font_sample.py:59
-#: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/tartan/main_panel.py:68
+#: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/tartan/main_panel.py:69
 #: lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr ""
@@ -3099,7 +3119,7 @@ msgid "Load"
 msgstr "読み込み"
 
 #: lib/gui/presets.py:61 lib/gui/satin_multicolor/colorize_panel.py:74
-#: lib/gui/tartan/customize_panel.py:65 lib/gui/tartan/customize_panel.py:67
+#: lib/gui/tartan/customize_panel.py:64 lib/gui/tartan/customize_panel.py:66
 msgid "Add"
 msgstr "追加"
 
@@ -3129,7 +3149,7 @@ msgstr "プリセット\"%s \"が見つかりません。"
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "プリセット「%s」はすでに存在しています。 別の名前を使うか、\"上書き \"を押してください。"
 
-#: lib/gui/satin_multicolor/color_panel.py:19
+#: lib/gui/satin_multicolor/color_panel.py:19 lib/gui/tartan/stripe_panel.py:19
 msgid "Click to move color up."
 msgstr ""
 
@@ -3189,7 +3209,7 @@ msgstr ""
 msgid "Overflow excluded"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize_panel.py:221
+#: lib/gui/satin_multicolor/colorize_panel.py:220
 msgid "Total width: {width}%"
 msgstr ""
 
@@ -3206,7 +3226,7 @@ msgstr ""
 msgid "Colorize"
 msgstr ""
 
-#: lib/gui/satin_multicolor/main_panel.py:144
+#: lib/gui/satin_multicolor/main_panel.py:143
 msgid "Multicolor Satin Group"
 msgstr ""
 
@@ -3334,68 +3354,48 @@ msgstr ""
 msgid "Apply Code"
 msgstr ""
 
-#: lib/gui/tartan/customize_panel.py:31
+#: lib/gui/tartan/customize_panel.py:30
 msgid "Pattern Settings"
 msgstr ""
 
-#: lib/gui/tartan/customize_panel.py:33
+#: lib/gui/tartan/customize_panel.py:32
 msgid "Symmetrical / reflective sett"
 msgstr ""
 
-#: lib/gui/tartan/customize_panel.py:34
+#: lib/gui/tartan/customize_panel.py:33
 msgid "Disabled: asymmetrical / repeating sett"
 msgstr ""
 
-#: lib/gui/tartan/customize_panel.py:36
+#: lib/gui/tartan/customize_panel.py:35
 msgid "Equal threadcount for warp and weft"
 msgstr ""
 
-#: lib/gui/tartan/customize_panel.py:51
+#: lib/gui/tartan/customize_panel.py:50
 msgid "Offset X (mm)"
 msgstr ""
 
-#: lib/gui/tartan/customize_panel.py:55
+#: lib/gui/tartan/customize_panel.py:54
 msgid "Offset Y (mm)"
 msgstr ""
 
-#: lib/gui/tartan/customize_panel.py:57
+#: lib/gui/tartan/customize_panel.py:56
 msgid "Stripes"
 msgstr ""
 
-#: lib/gui/tartan/customize_panel.py:59
+#: lib/gui/tartan/customize_panel.py:58
 msgid "Link colors"
 msgstr ""
 
-#: lib/gui/tartan/customize_panel.py:60
+#: lib/gui/tartan/customize_panel.py:59
 msgid "When enabled update all equal colors simultaneously."
 msgstr ""
 
-#: lib/gui/tartan/customize_panel.py:61
+#: lib/gui/tartan/customize_panel.py:60
 msgid "Warp"
 msgstr ""
 
-#: lib/gui/tartan/customize_panel.py:63
+#: lib/gui/tartan/customize_panel.py:62
 msgid "Weft"
-msgstr ""
-
-#: lib/gui/tartan/customize_panel.py:120
-msgid "Drag and drop to adjust position."
-msgstr ""
-
-#: lib/gui/tartan/customize_panel.py:125
-msgid "Checked: stitch this stripe | Minus: spacer for strokes only | Disabled: spacer for fill and stroke"
-msgstr ""
-
-#: lib/gui/tartan/customize_panel.py:135
-msgid "Select stripe color"
-msgstr ""
-
-#: lib/gui/tartan/customize_panel.py:140
-msgid "Set stripe width (mm)"
-msgstr ""
-
-#: lib/gui/tartan/customize_panel.py:144
-msgid "Remove stripe"
 msgstr ""
 
 #: lib/gui/tartan/embroidery_panel.py:25
@@ -3455,16 +3455,32 @@ msgstr ""
 msgid "https://inkstitch.org/docs/stitches/tartan-fill"
 msgstr ""
 
-#: lib/gui/tartan/main_panel.py:53
+#: lib/gui/tartan/main_panel.py:54
 msgid "Customize"
 msgstr ""
 
-#: lib/gui/tartan/main_panel.py:57
+#: lib/gui/tartan/main_panel.py:58
 msgid "Palette Code"
 msgstr ""
 
-#: lib/gui/tartan/main_panel.py:60
+#: lib/gui/tartan/main_panel.py:61
 msgid "Embroidery Settings"
+msgstr ""
+
+#: lib/gui/tartan/stripe_panel.py:23
+msgid "Checked: stitch this stripe | Minus: spacer for strokes only | Disabled: spacer for fill and stroke"
+msgstr ""
+
+#: lib/gui/tartan/stripe_panel.py:33
+msgid "Select stripe color"
+msgstr ""
+
+#: lib/gui/tartan/stripe_panel.py:38
+msgid "Set stripe width (mm)"
+msgstr ""
+
+#: lib/gui/tartan/stripe_panel.py:42
+msgid "Remove stripe"
 msgstr ""
 
 #: lib/gui/test_swatches.py:21
@@ -3486,7 +3502,7 @@ msgstr ""
 #: inx/inkstitch_lettering_remove_kerning.inx:9
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:8
 #: inx/inkstitch_letters_to_font.inx:8 inx/inkstitch_outline.inx:8
-#: inx/inkstitch_palette_to_text.inx:15
+#: inx/inkstitch_palette_to_text.inx:15 inx/inkstitch_redwork.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:8
 #: inx/inkstitch_stitch_plan_preview.inx:8
 #: inx/inkstitch_stroke_to_lpe_satin.inx:7 inx/inkstitch_troubleshoot.inx:8
@@ -4398,7 +4414,7 @@ msgstr ""
 
 #: inx/inkstitch_auto_run.inx:10 inx/inkstitch_convert_to_stroke.inx:24
 #: inx/inkstitch_fill_to_stroke.inx:10 inx/inkstitch_jump_to_stroke.inx:10
-#: inx/inkstitch_outline.inx:37
+#: inx/inkstitch_outline.inx:37 inx/inkstitch_redwork.inx:35
 msgid "Tools: Stroke"
 msgstr ""
 
@@ -4465,8 +4481,8 @@ msgstr ""
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:15
 #: inx/inkstitch_letters_to_font.inx:71 inx/inkstitch_outline.inx:28
-#: inx/inkstitch_stitch_plan_preview.inx:40 inx/inkstitch_troubleshoot.inx:15
-#: inx/inkstitch_unlink_clone.inx:13
+#: inx/inkstitch_redwork.inx:26 inx/inkstitch_stitch_plan_preview.inx:40
+#: inx/inkstitch_troubleshoot.inx:15 inx/inkstitch_unlink_clone.inx:13
 msgid "More information on our website"
 msgstr ""
 
@@ -6250,6 +6266,42 @@ msgstr "パラメーター"
 #: inx/inkstitch_print.inx:3
 msgid "PDF Export"
 msgstr "PDFエクスポート"
+
+#: inx/inkstitch_redwork.inx:11
+msgid "Connect lines below this distance (mm)"
+msgstr ""
+
+#: inx/inkstitch_redwork.inx:11
+msgid "Unconnected lines may result in jump stitches"
+msgstr ""
+
+#: inx/inkstitch_redwork.inx:14
+msgid "Minimum path length (mm)"
+msgstr ""
+
+#: inx/inkstitch_redwork.inx:14
+msgid "Shorter paths will be removed from redwork result"
+msgstr ""
+
+#: inx/inkstitch_redwork.inx:17
+msgid "Redwork stitch length (mm)"
+msgstr ""
+
+#: inx/inkstitch_redwork.inx:17
+msgid "set redwork stitch length"
+msgstr ""
+
+#: inx/inkstitch_redwork.inx:20
+msgid "Redwork bean stitch number of repeats"
+msgstr ""
+
+#: inx/inkstitch_redwork.inx:24
+msgid "Redwork embroidery is a stroke art embroidery which passes every line exactly twice."
+msgstr ""
+
+#: inx/inkstitch_redwork.inx:27
+msgid "https://inkstitch.org/docs/stroke-tools/#redwork"
+msgstr ""
 
 #: inx/inkstitch_remove_embroidery_settings.inx:3
 msgid "Remove embroidery settings"
