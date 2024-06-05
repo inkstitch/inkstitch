@@ -10,42 +10,42 @@ toc: true
 
 ### Nouvelles polices
 
-* [Cats](/fonts/cats) ([#2860](https://github.com/inkstitch/inkstitch/pull/2860))
+* [Cats](/fr/fonts/cats) ([#2860](https://github.com/inkstitch/inkstitch/pull/2860))
 
   ![Cats preview](/assets/images/fonts/cats.jpg)
-* [Chicken Little KOR](/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
+* [Chicken Little KOR](/fr/fonts/chicken_little/) ([#2839](https://github.com/inkstitch/inkstitch/pull/2839))
 
   ![Chicken little preview](/assets/images/fonts/chicken_little_KOR.jpg)
 * [Chicken Scratch](/fonts/chicken_scratch/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
   ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
-* [Colorful](/fonts/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
+* [Colorful](/fr/fonts/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
 
   ![Colorfu preview](/assets/images/fonts/colorful.png)
-  * [Emilio 20 Tartan](/fonts/emilio-20/) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
+  * [Emilio 20 Tartan](/fr/fonts/emilio-20/) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
 
   ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
 
-  * [コリンの書き方](/fonts/honoka/) ([#2935](https://github.com/inkstitch/inkstitch/pull/2935))
+  * [コリンの書き方](/fr/fonts/honoka/) ([#2935](https://github.com/inkstitch/inkstitch/pull/2935))
 
   ![Honoka preview](/assets/images/fonts/honoka.jpg)
-* [Invercelia](/fonts/invercelia/) ([#2888](https://github.com/inkstitch/inkstitch/pull/2888))
+* [Invercelia](/fr/fonts/invercelia/) ([#2888](https://github.com/inkstitch/inkstitch/pull/2888))
 
   ![Invercelia preview](/assets/images/fonts/invercelia.png)
 
-* [Magnolia bicolor](/fonts/magnolia_KOR/) ([#2927](https://github.com/inkstitch/inkstitch/pull/2927))
+* [Magnolia bicolor](/fr/fonts/magnolia-script/) ([#2927](https://github.com/inkstitch/inkstitch/pull/2927))
 
   ![Magnolia bicolor  preview](/assets/images/fonts/magnolia_bicolor.png)
  
-* [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
+* [Millimarif-bold20](/fr/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
 
   ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
 
-* [Namskout Tartan](/fonts/namskout_AGS/) ([#2938](https://github.com/inkstitch/inkstitch/pull/2938))
+* [Namskout Tartan](/fr/fonts/namskout_AGS/) ([#2938](https://github.com/inkstitch/inkstitch/pull/2938))
 
   ![Namskout Tartan preview](/assets/images/fonts/namskout_tartan.png)
   
-* [Ondulamarif](/fonts/ondulamarif/) ([#2902](https://github.com/inkstitch/inkstitch/pull/2902))
+* [Ondulamarif](/fr/fonts/ondulamarif/) ([#2902](https://github.com/inkstitch/inkstitch/pull/2902))
   <img 
      src="/assets/images/fonts/ondulamarif_xl.png"
      alt="Ondulamarif XL " height="77">
@@ -55,10 +55,10 @@ toc: true
   <img 
      src="/assets/images/fonts/ondulamarif_small.png"
      alt="Ondulamarif XL " height="33">
-* [Roaring twenties KOR](/fonts/roaring_twenties_KOR/) ([#2856](https://github.com/inkstitch/inkstitch/issues/2856))
+* [Roaring twenties KOR](/fr/fonts/roaring_twenties_KOR/) ([#2856](https://github.com/inkstitch/inkstitch/issues/2856))
 
   ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
-* [Violin Serif](/fonts/violin_serif/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
+* [Violin Serif](/fr/fonts/violin_serif/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
   ![Violin Serif preview](/assets/images/fonts/violin_serif.jpg)
 
@@ -73,6 +73,15 @@ toc: true
   ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
 * Toutes les fontes ont été retravaillées pour être plus stables si déformées.
 
+ [#2949](https://github.com/inkstitch/inkstitch/pull/2949)
+ [#2938](https://github.com/inkstitch/inkstitch/pull/2938)
+ [#2935](https://github.com/inkstitch/inkstitch/pull/2936)
+ [#2935](https://github.com/inkstitch/inkstitch/pull/2935)
+ [#2934](https://github.com/inkstitch/inkstitch/pull/2934)
+ [#2930](https://github.com/inkstitch/inkstitch/pull/2930)
+ [#2929](https://github.com/inkstitch/inkstitch/pull/2929)
+ [#2928](https://github.com/inkstitch/inkstitch/pull/2928)
+ [#2927](https://github.com/inkstitch/inkstitch/pull/2927)
  [#2903](https://github.com/inkstitch/inkstitch/pull/2903)
  [#2900](https://github.com/inkstitch/inkstitch/pull/2900)
  [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
@@ -146,11 +155,9 @@ Cette extension insère des commandes de coupe à la place des sauts.
 
 `Outils: Satin>Satin Multicolore`  ([#2863](https://github.com/inkstitch/inkstitch/issues/2863))
 
-
 Cette extension crée des copies des satins  sélectionnés pour imiter une colone satin multicolore.
 
 ![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
-
 
 ### [Contour](/fr/docs/stroke-tools/#outline)
 
@@ -166,11 +173,7 @@ Edition > Délier le clone ...
 
 Cette extension délie les clones (récursivement en option) et applique les transformations sur l'angle de remplissage
 
-
-
-
 ### [Tartan](/fr/docs/fill-tools/#tartan)
-
 
 `Outils : Remplissage > Tartan` ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
 
@@ -178,6 +181,8 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 
 
 ## Mises à jour d'extensions
+
+All extensions now come with a help tab with a link to our website with detailed information ([#2937](https://github.com/inkstitch/inkstitch/issues/2937), [#2948](https://github.com/inkstitch/inkstitch/issues/2948))
 
 ### [Nettoyer le document](/fr/docs/troubleshoot/#cleanup-document)
 `Résolution de problèmes > Nettoyer le document`
@@ -219,6 +224,12 @@ Cette extension génère les bandes du tartan et les applique au document soit e
     * Ne pas connecter après une commande de coupe ou d'arrêt ou des points d'arrêts forcés. 
     * Combiner les nouveaux chemins avec le chemin précédent ou suivant
     * Combiner les sous-chemins ([#2750](https://github.com/inkstitch/inkstitch/pull/2750))
+
+### [Redwork](/fr/docs/stroke-tools/#redwork)
+
+`Stroke tools > Redwork` ([#2958](https://github.com/inkstitch/inkstitch/issues/2958))
+
+A new auto-route extension for running stitches which makes sure, that every path is used exactly two times.
 
 ### [Lettrage](/fr/docs/lettering)
 
@@ -264,10 +275,8 @@ Visualise et Exporter > Export pdf
 
 `Visualiser et exporter > Simulateur`
 
-
 **Annonce importante**<br> Simulateur et Vue réaliste ont divorcés. `Vue réaliste` et `Aperçu du plan de broderie` ont commençé une vie commune.<br><br><span style="font-style: italic;"> L'aperçu réaliste a été déplacé vers l'apercu du plan de  broderie.</span>
 {: .notice--warning }
-
 
 * Meilleur simulateur pour Paramètres et Lettrage ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
 * Le simulateur est maintenant attaché à la fenêtre principale (Paramètre et Lettrage)([#2557](https://github.com/inkstitch/inkstitch/issues/2557)), il est détachable, et son dernier état est conservé.
@@ -280,10 +289,12 @@ Visualise et Exporter > Export pdf
 **Annonce importante**<br>  L'aperçu réaliste a été déplacé vers l'apercu du plan de  broderie.</span>
 {: .notice--warning }
 
+Ajout d'options
 
-* Ajout d'une option pour conserver/écraser le plan de broderie précédent ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
-* Ajout de méthodes de  rendu réaliste (png, vector) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
-
+* conserver/écraser le plan de broderie précédent ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
+* rendu réaliste (png, vector) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
+* ignore jumps ([#2911](https://github.com/inkstitch/inkstitch/issues/2911)
+* ignore layer (([#2911](https://github.com/inkstitch/inkstitch/issues/2911))
 
 ### [Résolution de problème](/fr/docs/troubleshoot/#troubleshoot)
 
@@ -326,6 +337,7 @@ Visualise et Exporter > Export pdf
 * Ajout de l'option "Décalés" pour le découpage des points ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![Staggered split stitch example](/assets/images/docs/split-satin-detail.png)
 * Ajout du paramètre tolérance aux sous couches satin ([#2814](https://github.com/inkstitch/inkstitch/issues/2431))
+  and set default stitch length to 3 ([#2925](https://github.com/inkstitch/inkstitch/issues/2925))
 *  S-Stitch: un nouveau style de points pour cette famille ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![S-Stitch](/assets/images/docs/s-stitch-detail.png)
 * Zig-Zag: un nouveau style de points pour cette famille ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
@@ -364,6 +376,11 @@ Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu
 
 ## Corrections de bug
 
+* [#2959](https://github.com/inkstitch/inkstitch/issues/2959) Avoid FloatingPointError for fills
+* [#2954](https://github.com/inkstitch/inkstitch/issues/2954) Avoid FloatingPointError in Autoroute Satin
+* [#2924](https://github.com/inkstitch/inkstitch/issues/2924) Fix print pdf for grouped objects without a layer
+* [#2918](https://github.com/inkstitch/inkstitch/issues/2918) Filter invalid paths in satins
+* [#2917](https://github.com/inkstitch/inkstitch/issues/2917) Fix zigzag line to satin
 * [#2897](https://github.com/inkstitch/inkstitch/issues/2897) Fix invalid clip paths
 * [#2899](https://github.com/inkstitch/inkstitch/issues/2899) Fix color display for some Pfaff-Machines
 * [#2895](https://github.com/inkstitch/inkstitch/issues/2895) Fix center walk underlay repeats

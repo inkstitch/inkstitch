@@ -1,12 +1,12 @@
 ---
 title: "Tools: Stroke"
 permalink: /docs/stroke-tools/
-last_modified_at: 2024-05-09
+last_modified_at: 2024-06-05
 toc: true
 ---
 ## Autoroute Running Stitch
 
-This tool will **replace** your set of running stitches  with a new set of running stitches in logical stitching order avoiding as many jumps as possible . Under-pathing  will be added as necessary  . The resulting running stitches will retain all of the parameters you had set on the original stitches including stitch length, number of repeats, bean stitch number of repeats, etc. Underpaths will only retain the stitch length, but will be set to only one  repeat and no bean stitch number of repeats.
+This tool will **replace** your set of running stitches with a new set of running stitches in logical stitching order avoiding as many jumps as possible . Under-pathing  will be added as necessary  . The resulting running stitches will retain all of the parameters you had set on the original stitches including stitch length, number of repeats, bean stitch number of repeats, etc. Underpaths will only retain the stitch length, but will be set to only one  repeat and no bean stitch number of repeats.
 
 ### Usage
 
@@ -23,28 +23,6 @@ Tip: By default, it will choose the left-most extreme node as the starting point
 - Enable **Trim jump stitches** to use trims instead of jump stitches. Trim commands are added to the SVG, so you can modify/delete as you see fit.
 - Enable **Preserve order of running stitches** if you prefer to keep your former order. 
 
-## Outline
-
-{% include upcoming_release.html %}
-
-This extension helps reconstruct an original  object when one only has  the  stitch file, but  not the svg design file.
-
-### Usage
-
-- Select one or more objects
-- Run `Extensions > Ink/Stitch > Werkzeuge: Linie > Außenkontur`
-- Activate Live preview to see the actual result
-- Adjust settings until you are happy with the outcome
-- Click on `Apply`
-
-![Stitchpath to outline](/assets/images/docs/outline.png)
-
-### Usage
-
-- Select the elements you want to convert
-- Run `Extensions > Ink/Stitch > Tools: Stroke > Outline...`
-- Enable live preview and change the ratio via the scroll bar to find the best value for the given object
-- Click apply
 
 ## Convert Satin to Stroke
 
@@ -88,6 +66,7 @@ You can improve the result by defining cut lines.
 * Line width (px): If you want to convert this directly into a satin column, set this to the satin column width. In most cases you would want to keep this value low, so it will be easier to check and correct the outlines before the conversion.
 * Cut lines: close gaps: Cut lines create gaps which can be closed by enabling this option. This option will only be useful, when no satin column conversion is planed.
 
+
 ## Jump to Stroke
 
 This will create a running stitch from the end position of the first element to the start position of the second element. Place this running stitch under following top stitches and avoid jump stitches.
@@ -106,13 +85,68 @@ This will create a running stitch from the end position of the first element to 
 * Connect only within groups or layers
 * Do not connect after trim, stop or forced lock stitches
 
-#### Output settings options
+### Output settings options
 * Merge new strokes with previous/next stroke if same type
 * Merge subpaths
 
 and for unmerged connections only 
 * Minimum length of running stitch
 * Tolerance
+
+
+## Redwork
+
+{% include upcoming_release.html %}
+
+Redwork is an old handembroidery method where the embroiderers made sure to stitch every line exactly twice.
+
+This tool will **replace** your set of running stitches with a new set of running stitches in logical stitching order.
+The main difference to `Autoroute Running Stitch` is that it ensures that paths are traversed exactly twice.
+
+### Usage
+
+* Select the running stitches you wish to route
+* Run `Extensions > Ink/Stitch > Tools : Stroke > Redwork...`
+* Set desired options and click apply
+
+### Options
+
+* Connect lines below this distance (mm)
+
+  The redwork extension is able to render disconnected groups of running stitches in one go.
+  On the other hand some of your lines may not be snaped onto each other which leaves small gaps.
+  With this option you can define up to which distance those gaps shall be removed.
+  Lines with a greater distance than this value will be considered unconnected.
+  Unconnected groups have jump stitches in between.
+* Minimum path length (mm)
+
+  Remove shorter paths than this value from the result.
+  Short paths can be a result of the routing operation (for example lines that are not snaped, but have a minimal overlap).
+  Paths smaller than the defined [minimum jump stitch length](/docs/preferences/#minimum-jump-stitch-length-mm) can usually be removed.
+  But if there are consecutive short paths it will be better to lower the value.
+* Redwork stitch length (mm)
+
+  Sets the stitch length for all resulting paths
+* Redwork bean stitch number of repeats
+
+  Sets the [bean stitch number of repeats](/docs/stitches/bean-stitch/) for the top layer stitches (not on underpaths).
+
+
+## Outline
+
+{% include upcoming_release.html %}
+
+This extension helps reconstruct an original  object when one only has  the  stitch file, but  not the svg design file.
+
+### Usage
+
+- Select one or more objects
+- Run `Extensions > Ink/Stitch > Tools: Stroke > Outline...`
+- Activate Live preview to see the actual result
+- Adjust settings until you are happy with the outcome
+- Click on `Apply`
+
+![Stitchpath to outline](/assets/images/docs/outline.png)
 
 ## Tutorials using Tools: Stroke
 {% include tutorials/tutorial_list key="tool" value="Stroke" %}

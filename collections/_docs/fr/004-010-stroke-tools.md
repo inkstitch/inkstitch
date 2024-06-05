@@ -25,20 +25,6 @@ Par défaut, l'extension choisira de commencer par le noeud le plus à gauche et
 - Cocher **Préserver l'ordre des points droits** si vous souhaitez préserver l'ordre initial des chemins paramétrés en points droits.
 - Cocher **Couper les sauts de fil**  pour  utiliser des commandes de coupe plutôt que des sauts de fil. Les commandes de coupe sont ajoutées au svg, vous pouvez donc ensuite les modifier/supprimer à votre guise.
 
-## Contour {#outline}
-{% include upcoming_release.html %}
-
-![Fill to outline](/assets/images/docs/outline.png)
-
-Cette extensionn aide à reconstruire l'objet original à partir du fichier de points lorsqu'on ne dispose plus du fichier svg de départ. Sélectionner un ou plusieurs chemins de points (en general un remplissage) et cette extension va essayer de trouver leur contour.
-
-### Usage
-
-- Sélectioner  les éléments que vous souhaitez convertir
-- Exécutez `Extensions > Ink/Stitch > Outils: Trait > Contour...`
-- Cochez  "live preview" to see the actual result
-- Adjust settings until you are happy with the outcome
-- Cliquez "Appliquer"
 
 ## Satin en Trait {#convert-satin-to-stroke}
 
@@ -53,6 +39,7 @@ Ceci fonctionne d'autant mieux que la largeur de la colonne satin initiale est c
 2. Exécutez  `Extensions > Ink/Stitch > Outils: Trait > Satin en Trait...`
 3. Choisissez si vous vous souhaitez ou non conserver les colonnes satins sélectionnées.
 4. Cliquez sur Appliquer
+
 
 ## Remplissage en Trait {#fill-to-stroke}
 
@@ -107,6 +94,59 @@ et pour les connexions non fusionnées:
 * Longueur minimum du point droit
 * Tolerance
 
+
+## Redwork
+
+{% include upcoming_release.html %}
+
+Redwork is an old handembroidery method where the embroiderers made sure to stitch every line exactly twice.
+
+This tool will **replace** your set of running stitches with a new set of running stitches in logical stitching order.
+The main difference to `Autoroute Running Stitch` is that it ensures that paths are traversed exactly twice.
+
+### Usage
+
+* Select the running stitches you wish to route
+* Run `Extensions > Ink/Stitch > Tools : Stroke > Redwork...`
+* Set desired options and click apply
+
+### Options
+
+* Connect lines below this distance (mm)
+
+  The redwork extension is able to render disconnected groups of running stitches in one go.
+  On the other hand some of your lines may not be snaped onto each other which leaves small gaps.
+  With this option you can define up to which distance those gaps shall be removed.
+  Lines with a greater distance than this value will be considered unconnected.
+  Unconnected groups have jump stitches in between.
+* Minimum path length (mm)
+
+  Remove shorter paths than this value from the result.
+  Short paths can be a result of the routing operation (for example lines that are not snaped, but have a minimal overlap).
+  Paths smaller than the defined [minimum jump stitch length](/docs/preferences/#minimum-jump-stitch-length-mm) can usually be removed.
+  But if there are consecutive short paths it will be better to lower the value.
+* Redwork stitch length (mm)
+
+  Sets the stitch length for all resulting paths
+* Redwork bean stitch number of repeats
+
+  Sets the [bean stitch number of repeats](/docs/stitches/bean-stitch/) for the top layer stitches (not on underpaths).
+
+
+## Contour {#outline}
+{% include upcoming_release.html %}
+
+![Fill to outline](/assets/images/docs/outline.png)
+
+Cette extensionn aide à reconstruire l'objet original à partir du fichier de points lorsqu'on ne dispose plus du fichier svg de départ. Sélectionner un ou plusieurs chemins de points (en general un remplissage) et cette extension va essayer de trouver leur contour.
+
+### Usage
+
+- Sélectioner  les éléments que vous souhaitez convertir
+- Exécutez `Extensions > Ink/Stitch > Outils: Trait > Contour...`
+- Cochez  "live preview" to see the actual result
+- Adjust settings until you are happy with the outcome
+- Cliquez "Appliquer"
 
 ## Tutoriaux utilisant Outils: Trait
 

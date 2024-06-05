@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-05-14
+last_modified_at: 2024-06-05
 sidebar:
   nav: pages
 toc: true
@@ -32,7 +32,7 @@ toc: true
 * [Invercelia](/fonts/invercelia/) ([#2888](https://github.com/inkstitch/inkstitch/pull/2888))
 
   ![Invercelia preview](/assets/images/fonts/invercelia.png)
-* [Magnolia bicolor](/fonts/magnolia_KOR/) ([#2927](https://github.com/inkstitch/inkstitch/pull/2927))
+* [Magnolia bicolor](/fonts/magnolia-script/) ([#2927](https://github.com/inkstitch/inkstitch/pull/2927))
 
   ![Magnolia bicolor  preview](/assets/images/fonts/magnolia_bicolor.png)
  
@@ -69,6 +69,15 @@ toc: true
   ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
 * All fonts have been reworked to be more stable when transformed.
 
+ [#2949](https://github.com/inkstitch/inkstitch/pull/2949)
+ [#2938](https://github.com/inkstitch/inkstitch/pull/2938)
+ [#2935](https://github.com/inkstitch/inkstitch/pull/2936)
+ [#2935](https://github.com/inkstitch/inkstitch/pull/2935)
+ [#2934](https://github.com/inkstitch/inkstitch/pull/2934)
+ [#2930](https://github.com/inkstitch/inkstitch/pull/2930)
+ [#2929](https://github.com/inkstitch/inkstitch/pull/2929)
+ [#2928](https://github.com/inkstitch/inkstitch/pull/2928)
+ [#2927](https://github.com/inkstitch/inkstitch/pull/2927)
  [#2903](https://github.com/inkstitch/inkstitch/pull/2903)
  [#2900](https://github.com/inkstitch/inkstitch/pull/2900)
  [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
@@ -157,6 +166,12 @@ This extension helps reconstruct an original object from a stitch file.
 
 ![Fill to outline](/assets/images/docs/outline.png)
 
+### [Redwork](/docs/stroke-tools/#redwork)
+
+`Stroke tools > Redwork` ([#2958](https://github.com/inkstitch/inkstitch/issues/2958))
+
+A new auto-route extension for running stitches which makes sure, that every path is used exactly two times.
+
 ### [Tartan](/docs/fill-tools/#tartan)
 
 `Tools: Fill > Tartan` ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
@@ -170,6 +185,8 @@ This extension generates the tartan stripes and applies them to the document eit
 This extension unlinks clones (optionally recursive) and applies fill angle transformations
 
 ## Extension Updates
+
+All extensions now come with a help tab with a link to our website with detailed information ([#2937](https://github.com/inkstitch/inkstitch/issues/2937), [#2948](https://github.com/inkstitch/inkstitch/issues/2948))
 
 ### [Cleanup document](/docs/troubleshoot/#cleanup-document)
 
@@ -275,8 +292,12 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 **Important announcement**<br>The realistic preview has been moved to the stitch plan preview.
 {: .notice--warning }
 
-* Add option to keep/overwrite previous stitch plan ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
-* Add realistic render methods (png, vector) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
+New options
+
+* keep/overwrite previous stitch plan ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
+* realistic render (png or vector) ([#2838](https://github.com/inkstitch/inkstitch/issues/2838)
+* ignore jumps ([#2911](https://github.com/inkstitch/inkstitch/issues/2911)
+* ignore layer (([#2911](https://github.com/inkstitch/inkstitch/issues/2911))
 
 ### [Troubleshoot](/docs/troubleshoot/)
 
@@ -326,6 +347,7 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 * Add stagger option for split stitches ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![Staggered split stitch example](/assets/images/docs/split-satin-detail.png)
 * Add stitch tolerance to satin underlays ([#2814](https://github.com/inkstitch/inkstitch/issues/2431))
+  and set default stitch length to 3 ([#2925](https://github.com/inkstitch/inkstitch/issues/2925))
 * S-Stitch: a new stitch type for the satin stitch type family ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
   ![S-Stitch](/assets/images/docs/s-stitch-detail.png)
 * Zig-Zag: a new stitch type for the satin stitch type family ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
@@ -361,6 +383,11 @@ to manual stitches and keep previous behavior. [#2866](https://github.com/inksti
 
 ## Bug Fixes
 
+* [#2959](https://github.com/inkstitch/inkstitch/issues/2959) Avoid FloatingPointError for fills
+* [#2954](https://github.com/inkstitch/inkstitch/issues/2954) Avoid FloatingPointError in Autoroute Satin
+* [#2924](https://github.com/inkstitch/inkstitch/issues/2924) Fix print pdf for grouped objects without a layer
+* [#2918](https://github.com/inkstitch/inkstitch/issues/2918) Filter invalid paths in satins
+* [#2917](https://github.com/inkstitch/inkstitch/issues/2917) Fix zigzag line to satin
 * [#2897](https://github.com/inkstitch/inkstitch/issues/2897) Fix invalid clip paths
 * [#2899](https://github.com/inkstitch/inkstitch/issues/2899) Fix color display for some Pfaff-Machines
 * [#2895](https://github.com/inkstitch/inkstitch/issues/2895) Fix center walk underlay repeats

@@ -1,7 +1,7 @@
 ---
 title: "Neue Funktionen, Aktualisierungen und Fehlerbehebungen für die nächste Ink/Stitch verison (3.1.0)"
 permalink: /de/upcoming/
-last_modified_at: 2024-05-14
+last_modified_at: 2024-06-05
 sidebar:
   nav: pages
 toc: true
@@ -33,7 +33,7 @@ toc: true
 
   ![Invercelia preview](/assets/images/fonts/invercelia.png)
 
-  * [Magnolia bicolor](/fonts/magnolia_KOR/) ([#2927](https://github.com/inkstitch/inkstitch/pull/2927))
+  * [Magnolia bicolor](/de/fonts/magnolia-script/) ([#2927](https://github.com/inkstitch/inkstitch/pull/2927))
 
   ![Magnolia bicolor  preview](/assets/images/fonts/magnolia_bicolor.png)
  
@@ -72,6 +72,15 @@ toc: true
   ![Cherry for  kaallen preview](/assets/images/fonts/cherry_for_kaalleen.png)
 * Alle Schriften wurden überarbeitet und sind stabiler bei Transformationen
 
+ [#2949](https://github.com/inkstitch/inkstitch/pull/2949)
+ [#2938](https://github.com/inkstitch/inkstitch/pull/2938)
+ [#2935](https://github.com/inkstitch/inkstitch/pull/2936)
+ [#2935](https://github.com/inkstitch/inkstitch/pull/2935)
+ [#2934](https://github.com/inkstitch/inkstitch/pull/2934)
+ [#2930](https://github.com/inkstitch/inkstitch/pull/2930)
+ [#2929](https://github.com/inkstitch/inkstitch/pull/2929)
+ [#2928](https://github.com/inkstitch/inkstitch/pull/2928)
+ [#2927](https://github.com/inkstitch/inkstitch/pull/2927)
  [#2903](https://github.com/inkstitch/inkstitch/pull/2903)
  [#2900](https://github.com/inkstitch/inkstitch/pull/2900)
  [#2898](https://github.com/inkstitch/inkstitch/pull/2898)
@@ -161,6 +170,12 @@ Diese Erweiterung hilft die Originalform aus einer Stickdatei wiederherzustellen
 
 ![Stickpfad zu Außenkontur](/assets/images/docs/outline.png)
 
+### [Redwork](/de/docs/stroke-tools/#redwork)
+
+`Werkzeuge: Linie > Redwork` ([#2958](https://github.com/inkstitch/inkstitch/issues/2958))
+
+Eine neue Funktion für die automatische Führung von Geradstichen. Das besondere an dieser Funktion ist, dass jeder Pfad genau zweimal gestickt wird.
+
 ### [Tartan](/de/docs/fill-tools/#tartan)
 
 `Werkzeuge: Füllung > Tartan` ([#2782](https://github.com/inkstitch/inkstitch/issues/2782))
@@ -174,6 +189,8 @@ Diese Erweiterung ist der Editor für Tartan-Muster. Tartanmuster können als St
 Diese Erweiterung trennt Klonverbindungen auf (optional rekursiv) und wendet Transformationen und den Füllwinkel an.
 
 ## Aktualisierte Erweiterungen
+
+All extensions now come with a help tab with a link to our website with detailed information ([#2937](https://github.com/inkstitch/inkstitch/issues/2937), [#2948](https://github.com/inkstitch/inkstitch/issues/2948))
 
 ### [Dokument bereinigen](/docs/troubleshoot/#dokument-bereinigen)
 
@@ -282,8 +299,12 @@ Die realistische Vorschau befindet sich jetzt in der Stichplan Vorschau.
 **Important announcement**<br>Die realistische Vorschau befindet sich jetzt in der Sitchplanvorschau.
 {: .notice--warning }
 
-* Option den vorherigen Stichplan zu überschreiben / zu behalten ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
-* Realistische Rendermodi (PNG oder Vektor) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
+Neue Optionen
+
+* vorherigen Stichplan zu überschreiben / zu behalten ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
+* realistische Vorschau (PNG oder Vektor) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
+* Sprungstiche anzeigen ([#2911](https://github.com/inkstitch/inkstitch/issues/2911)
+* Layer ignorieren-Befehl (([#2911](https://github.com/inkstitch/inkstitch/issues/2911))
 
 ### [Fehlerbehebung](/de/docs/troubleshoot/)
 
@@ -333,7 +354,9 @@ Die realistische Vorschau befindet sich jetzt in der Stichplan Vorschau.
 * Stichversatz-Option für geteilte Stiche ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
 
   ![Staggered split stitch example](/assets/images/docs/split-satin-detail.png)
-* Toleranzwert für Satinsäulen-Unterlagen ([#2814](https://github.com/inkstitch/inkstitch/issues/2431))
+* Option für Toleranzwert für Satinsäulen-Unterlagen ([#2814](https://github.com/inkstitch/inkstitch/issues/2431))
+
+  Der Standardwert für die Stichlänge konnte damit auf 3 heraufgesetzt werden ([#2925](https://github.com/inkstitch/inkstitch/issues/2925))
 
 * S-Stich: eine neue Stichart aus der Satinsäulen-Familie ([#2431](https://github.com/inkstitch/inkstitch/issues/2431))
 
@@ -371,6 +394,11 @@ Bestehende Designs mit Ink/Stitch Parametern werden automatisch aktualisert um m
 
 ## Bug Fixes
 
+* [#2959](https://github.com/inkstitch/inkstitch/issues/2959) Avoid FloatingPointError for fills
+* [#2954](https://github.com/inkstitch/inkstitch/issues/2954) Avoid FloatingPointError in Autoroute Satin
+* [#2924](https://github.com/inkstitch/inkstitch/issues/2924) Fix print pdf for grouped objects without a layer
+* [#2918](https://github.com/inkstitch/inkstitch/issues/2918) Filter invalid paths in satins
+* [#2917](https://github.com/inkstitch/inkstitch/issues/2917) Fix zigzag line to satin
 * [#2897](https://github.com/inkstitch/inkstitch/issues/2897) Fix invalid clip paths
 * [#2899](https://github.com/inkstitch/inkstitch/issues/2899) Fix color display for some Pfaff-Machines
 * [#2895](https://github.com/inkstitch/inkstitch/issues/2895) Fix center walk underlay repeats

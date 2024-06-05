@@ -1,7 +1,7 @@
 ---
 title: "Werkzeuge: Linie"
 permalink: /de/docs/stroke-tools/
-last_modified_at: 2024-05-09
+last_modified_at: 2024-06-05
 toc: true
 ---
 ## Automatisch geführter Geradstich
@@ -24,19 +24,6 @@ Tipp: Standardmäßig wird die Stelle als Startpunkt ausgewählt, die am weitest
 - Aktiviere **Reihenfolge der Geradstiche beibehalten** wenn die ursprüngliche Reihenfolge beibehalten werden soll.
 - Aktiviere **Schneide Faden bei Sprungstichen** um Fadenschnitt-Befehle zu den Objekten inzuzufügen auf die sonst ein Sprungstich folgen würde.
 
-## Außenkontur
-
-{% include upcoming_release.html %}
-
-Diese Erweiterung hilft die Originalform aus einer Stickdatei wiederherzustellen.
-
-### Funktionsweise
-
-* Wähle ein oder mehrere Objekte
-* Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Außenkontur`
-* Aktiviere die Vorschau um das Ergebnis auf der Bildfläche zu sehen
-* Passe die Parameter an, bis das Ergebnis zufriedenstellend ist
-* Klicke auf `Andwenden`
 
 ## Satin zu Geradstich
 
@@ -57,6 +44,7 @@ Satin zu Geradstich konvertiert eine Satinsäule in ihre Mittellinie. Das kann b
 2. Öffne die Erweiterung `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Satin zu Geradstich ...`
 3. Wähle aus ob die Satinsäulen eralten bleiben oder ersetzt werden sollen
 4. Klicke auf `Anwenden`
+
 
 ## Füllung zu Mittellinie
 
@@ -85,6 +73,7 @@ Die Funktion ist vergleichbar mit der Inkscape Funktion unter `Pfad > Bitmap nac
 * Gestrichelte Linie: aktiviere diese Option, wenn das Endergebnis ein Geradstich werden soll (sonst: Zick zack oder Weiterverarbeitung zu Satin)
 * Linienbreite (mm): wird eine Weiterverarbeitung zu Satinsäulen angestrebt, kann hier direkt die Linienbreite angegeben werden. In den meisten Fällen ist aber eine Überprüfung des Ergebnisses notwendig, dafür diesen Wert klein halten.
 * Schnittlinien: Lücken schließen: Bei der Nutzung von Schnittlinien entstehen an der Stelle des Schnitts Lücken, die durch diese Option geschlossen werden können. Diese Option nur anwählen, wenn keine Weiterverarbeitung in Satinsäulen geplant ist.
+
 
 ## Sprungstich zu Geradstich
 
@@ -115,6 +104,57 @@ Für nicht verschmolzene Pfade gelten die folgenden Einstellungen:
 * Geradstichtoleranz
 
 
+## Redwork
+
+{% include upcoming_release.html %}
+
+Redwork ist eine alte Stickkunst bei der jede Linie genau zweimal gestickt wird.
+
+Dieses Werkzeug **ersetzt** eine Auswahl von Geradstichen mit neuen Geradstichen in logischer Reihenfolge.
+Der Hauptunterschied zum `Automatisch geführtem Laufstich` ist, dass jede Linie genau zweimal gestickt wird.
+
+### Funktionsweise
+
+* Wähle die Geradstiche an die geführt werden sollen
+* Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Redwork`
+* Passe die Optionen nach Wunsch an und klicke auf `Anwenden`
+
+### Optionen
+
+* Verbinde Linien mit kleinerer Distanz (mm)
+
+  Das Redwork Werkzeug kann mehrere nicht verbundene Gruppen gleichzeitig behandeln.
+  Auf der anderen Seite ist es in der Regel der Fall, dass Linien nicht genau aufeinander eingerastet sind und kleine Lücken zwischen ihnen bestehen.
+  Mit dieser Option kannst du definieren, bis zu welcher Distanz diese Lücken überbrückt werden sollen.
+  Linien mit einem größeren Abstand werden als unverbunden betrachtet.
+  Unverbundene Gruppen haben Sprungstiche.
+* Minimale Pfadlänge (mm)
+
+  Entfernt kurze Pfade aus dem Ergebnis.
+  Kurze Pfade können ein Ergebnis der automatischen Führung sein. Sie entstehen z.B. dann, wenn zwei Pfade sich minimal überschneiden.
+  Pfade die kürzer sind als die definierte [minimale Sprungstichlänge](/de/docs/preferences/#minimale-länge-für-sprungstiche-mm) können üblicherweise problemlos gelöscht werden.
+  Folgen mehrere kurze Pfade aufeinander, sollte der Wert aber verringert werden.
+* Redwork Stichlänge(mm)
+
+  Setzt die Stichlänge für alle Pfade auf diesen Wert
+* Redwork Mehrfach-Geradstitch Anzahl der Wiederholungen
+
+  Wendet den Wert für [Mehrfach-Geradstitch Anzahl der Wiederholungen](/de/docs/stitches/bean-stitch/) auf die Deckstiche an (nicht auf die Unterpfade).
+
+
+## Außenkontur
+
+{% include upcoming_release.html %}
+
+Diese Erweiterung hilft die Originalform aus einer Stickdatei wiederherzustellen.
+
+### Funktionsweise
+
+* Wähle ein oder mehrere Objekte
+* Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Außenkontur`
+* Aktiviere die Vorschau um das Ergebnis auf der Bildfläche zu sehen
+* Passe die Parameter an, bis das Ergebnis zufriedenstellend ist
+* Klicke auf `Andwenden`
 
 ## Tutorials zu Linien-Werkzeugen
 

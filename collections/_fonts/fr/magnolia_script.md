@@ -41,7 +41,6 @@ A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size
 Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
-{% include upcoming_release.html %}
 ### Magnolia Smalll
 La fonte Magnolia Small est une déclinaison de  Magnolia KOR avec des paramètres de broderie différents. La densité, la compensation et les sous-couches ont été modifiées pour permettre de broder cette fonte en plus petite taille.
 
@@ -50,6 +49,8 @@ Dans la fenêtre de dialogue du lettrage, il vous sera demandé si vous choisiss
 Contrairement à  Magnolia KOR, cette fonte diminuée DOIT être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT DOIVENT être utilisés.
 
 ### Magnolia Bicolor
+
+{% include upcoming_release.html %}
 
 Magnolia bicolor a une hauteur d'environ 45mm. Elle peut être agrandie jusqu'à 150% (approximativement 67mm) et réduite jusqu'à 70% (approximativement 31mm)
 

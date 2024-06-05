@@ -66,9 +66,11 @@ It can be scaled down to 75% (approx. 25mm,  1 inch) and scaled up to 300% (appr
 
 
 ## Color sorting
+
 If you embroider several letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/docs/lettering/#color-sorting)
 
 ## In real life 
+
 Why not use Apex Lake on a T shirt ? or on a fabric basket ?
 
 {%include folder-galleries path="fonts/apex-lake/" %}
