@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-05 01:11+0000\n"
-"PO-Revision-Date: 2024-06-05 01:11\n"
+"POT-Creation-Date: 2024-06-06 01:10+0000\n"
+"PO-Revision-Date: 2024-06-06 01:11\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-05 01:11+0000\n"
+"POT-Creation-Date: 2024-06-06 01:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2700,23 +2700,23 @@ msgstr "Impression Ink/Stitch"
 
 #: lib/extensions/redwork.py:48
 msgid "Please select one or more strokes."
-msgstr ""
+msgstr "Merci de sélectionner un ou plusieurs traits."
 
 #: lib/extensions/redwork.py:103
 msgid "Redwork Group"
-msgstr ""
+msgstr "Groupe de redwork"
 
 #: lib/extensions/redwork.py:112
 msgid "Connected Group"
-msgstr ""
+msgstr "Groupe connecté"
 
 #: lib/extensions/redwork.py:121 inx/inkstitch_redwork.inx:3
 msgid "Redwork"
-msgstr ""
+msgstr "Redwork"
 
 #: lib/extensions/redwork.py:126
 msgid "Redwork Underpath"
-msgstr ""
+msgstr "Chemin de dessous redwork"
 
 #: lib/extensions/reorder.py:20
 msgid "Please select at least two elements to reorder."
@@ -3703,7 +3703,7 @@ msgstr "Points droits pour auto-remplissage satin %d"
 msgid "Could not build graph for meander stitching. Try to enlarge your shape or scale your meander pattern down."
 msgstr "Impossible de construire le remplissage en méandres. Essayer d'agrandir votre forme ou de diminuer la taille du méandre."
 
-#: lib/svg/rendering.py:224
+#: lib/svg/rendering.py:226
 msgid "Stitch Plan"
 msgstr "Plan de broderie"
 
@@ -6282,39 +6282,39 @@ msgstr "Export PDF"
 
 #: inx/inkstitch_redwork.inx:11
 msgid "Connect lines below this distance (mm)"
-msgstr ""
+msgstr "Connecter si la distance est inférieur à (en mm)"
 
 #: inx/inkstitch_redwork.inx:11
 msgid "Unconnected lines may result in jump stitches"
-msgstr ""
+msgstr "Ne pas connecter peut laisser des sauts"
 
 #: inx/inkstitch_redwork.inx:14
 msgid "Minimum path length (mm)"
-msgstr ""
+msgstr "Longueur minimum d'un chemin (en mm)"
 
 #: inx/inkstitch_redwork.inx:14
 msgid "Shorter paths will be removed from redwork result"
-msgstr ""
+msgstr "Les chemins plus courts seront supprimés du résultat de l'extension redwork"
 
 #: inx/inkstitch_redwork.inx:17
 msgid "Redwork stitch length (mm)"
-msgstr ""
+msgstr "Longueur de point du redwork (en mm)"
 
 #: inx/inkstitch_redwork.inx:17
 msgid "set redwork stitch length"
-msgstr ""
+msgstr "Défini la longueur de point du redwork"
 
 #: inx/inkstitch_redwork.inx:20
 msgid "Redwork bean stitch number of repeats"
-msgstr ""
+msgstr "Nombre de répétitions du chemin multiple (bean stitch)"
 
 #: inx/inkstitch_redwork.inx:24
 msgid "Redwork embroidery is a stroke art embroidery which passes every line exactly twice."
-msgstr ""
+msgstr "Une broderie redwork est une broderie à base de traits où chaque trait est brodé exactement deux fois."
 
 #: inx/inkstitch_redwork.inx:27
 msgid "https://inkstitch.org/docs/stroke-tools/#redwork"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/stroke-tools/#redwork"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:3
 msgid "Remove embroidery settings"
