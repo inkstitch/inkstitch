@@ -50,7 +50,6 @@ Zufallsabweichung von der Stichlänge| |Maximale randomisierte Abweichung der St
 Zuffalszahl| |Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer.
 Minimale Stichlänge  | | Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
 Minimale Länge für Sprungstiche     | | Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
-to the next object will have no lock stitches.
 Wiederholungen       ||◦ Definiert wie oft der Pfad hoch und runter gestickt wird.<br />Standart: 1 stickt einmal von Anfang bis Ende<br />◦ Ungerade Anzahl: der Stickpfad endet am Ende des Pfades<br />◦ Gerade Anzahl: der Stickpfad endet dort, wo er gestartet ist
 Mehrfachgeradstich Anzahl der Wiederholungen ||◦ Aktiviert den [Mehrfachgeradstich](/de/docs/stitches/bean-stitch/)<br/>◦ Ein Wert von 1 verdreifacht jeden Stich (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 verfünffacht jeden Stich, usw.<br/>◦ Durch die Eingabe mehrerer durch ein Leerzeichen getrennter Werte, kann ein Wiederholungsmuster erstellt werden.
 Vernähen erlauben    || Vernäht bei Bedarf an den ausgewählten Positionen
