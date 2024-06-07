@@ -1,7 +1,7 @@
 ---
 title: "Spiralfüllung"
 permalink: /de/docs/stitches/circular-fill/
-last_modified_at: 2024-05-07
+last_modified_at: 2024-06-07
 toc: true
 ---
 ## Beschreibung
@@ -17,14 +17,15 @@ Eine Spiralfüllung füllt eine Form mit einer gestickten Spirale. Der Mittelpun
 
 ## Spiralmittelpunkt festlegen
 
-Definiere eine Zielposition mit einem [visuellen Befehl](/de/docs/commmands/):
+Standartmäßig ist der Spiralmittelpunkt im geometrischen Schwerpunkt des Elements (Flächenschwerpunkt).
+Das entspricht nicht in jedem Fall dem Mittelpunkt des Begrenzungsrahmens. 
+
+Der Spiralmittelpunkt lässt sich mit einem [Zielpositions-Befehl](/de/docs/commmands/) manuell definieren:
 
 * Wähle ein Element mit einer Spiralfüllung aus 
 * Öffne `Erweiterungen > Ink/Stitch > Befehle > Befehle mit gewählten Objekten verknüpfen...`
-* Wähle `Zielposition` und clicke auf Anwenden
+* Wähle `Zielposition` und klicke auf Anwenden
 * `Strg + Klick` auf das Symbol des Befehls um es auszuwählen, dann bewege es zur gewünschten Position
-
-Wenn keine Zielposition definiert wurde, liegt der Spiralmittelpunkt in der Mitte des Objektes.
 
 ## Anfangs- und Endpunkt festlegen
 
@@ -41,14 +42,17 @@ Füllmethode          | Spiralfüllung|Für diesen Stichtyp bitte Spiralfüllung
 Erweitern            |![Expand example](/assets/images/docs/params-fill-expand.png)  |Erweitert die Ursprungsform. Diese Option kann genutzt werden um Lücken zwischen angrenzenden Objekten zu verringern. Negative Werte verkleinern die Form.
 Reihenabstand        |![Spacing example](/assets/images/docs/params-fill-spacing_between_rows.png) | Abstand zwischen den Stichreihen.
 Reihenabstand (Ende) |![End row spacing example](/assets/images/docs/params-fill-end_row_spacing.png) | Erhöht oder verringert den Reihenabstand zum Ende hin.
-Verbindungsstiche innerhalb des Objektes|![Skip example](/assets/images/docs/params-fill-underpathing.png)| Muss aktiviert sein, um Geradstiche zum Verbinden der Abschnitte innerhalb des Objekts verlaufen zu lassen, anstatt sie am Rand entlang zu führen.
+Unterpfad            |![Skip example](/assets/images/docs/params-fill-underpathing.png)| Muss aktiviert sein, um Geradstiche zum Verbinden der Abschnitte innerhalb des Objekts verlaufen zu lassen, anstatt sie am Rand entlang zu führen.
 Stichlänge           ||Definiert die maximale Stichlänge. Minimale Stichlänge bitte über die Geradstich-Toleranz festlegen.
 Geradstich-Toleranz  ||Alle Stiche müssen innerhalb dieser Distanz vom Ursprungspfad liegen. Ein geringerer Toleranzwert bedeutet, dass Stiche enger zusammenliegen. Ein höherer Wert kann zu abgerundeten Ecken führen.
-Zufällige Stiche |☑  |Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
+Zufällige Stiche     |☑ |Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
 Zufallsabweichung von der Stichlänge| |Maximale randomisierte Abweichung der Stichabstände in Prozent.
 Zuffalszahl| |Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer.
-Minimale Stichlänge                    | | Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
-Minimale Länge für Sprungstiche        | | Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
+Minimale Stichlänge  | | Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
+Minimale Länge für Sprungstiche     | | Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
+to the next object will have no lock stitches.
+Wiederholungen       ||◦ Definiert wie oft der Pfad hoch und runter gestickt wird.<br />Standart: 1 stickt einmal von Anfang bis Ende<br />◦ Ungerade Anzahl: der Stickpfad endet am Ende des Pfades<br />◦ Gerade Anzahl: der Stickpfad endet dort, wo er gestartet ist
+Mehrfachgeradstich Anzahl der Wiederholungen ||◦ Aktiviert den [Mehrfachgeradstich](/de/docs/stitches/bean-stitch/)<br/>◦ Ein Wert von 1 verdreifacht jeden Stich (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 verfünffacht jeden Stich, usw.<br/>◦ Durch die Eingabe mehrerer durch ein Leerzeichen getrennter Werte, kann ein Wiederholungsmuster erstellt werden.
 Vernähen erlauben    || Vernäht bei Bedarf an den ausgewählten Positionen
 Vernähen erzwingen   || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
 Anstecher            ||Wähle die [Anstecher](/docs/stitches/lock-stitches) Variante (Anfang).

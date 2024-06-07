@@ -1,7 +1,7 @@
 ---
 title: "Circular Fill"
 permalink: /docs/stitches/circular-fill/
-last_modified_at: 2024-05-06
+last_modified_at: 2024-06-07
 toc: true
 ---
 ## What it is
@@ -18,7 +18,13 @@ Circular fill fills a shape with an embroidered spiral. The center of the spiral
 
 ## Set spiral center
 
-* Select the circular fill shape and attach the Target point command to the shape. Read [how to attach commands to objects](/docs/commands/).
+By default the center of the spiral is the geometrical center of the shape.
+Note that this is not equal to the center of the bounding box.
+
+To change default behavior select the circular fill shape and attach the `Target position` command to the shape.
+The center of the command symbol will be the new spiral center.
+
+Read [how to attach commands to objects](/docs/commands/).
 
 ## Set Start and End Point
 

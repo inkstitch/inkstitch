@@ -121,7 +121,7 @@ Der Hauptunterschied zum `Automatisch geführtem Laufstich` ist, dass jede Linie
 
 ### Optionen
 
-* Verbinde Linien mit kleinerer Distanz (mm)
+* Verbinde Linien deren Abstand geringer ist als (mm)
 
   Das Redwork Werkzeug kann mehrere nicht verbundene Gruppen gleichzeitig behandeln.
   Auf der anderen Seite ist es in der Regel der Fall, dass Linien nicht genau aufeinander eingerastet sind und kleine Lücken zwischen ihnen bestehen.
@@ -147,6 +147,8 @@ Der Hauptunterschied zum `Automatisch geführtem Laufstich` ist, dass jede Linie
 {% include upcoming_release.html %}
 
 Diese Erweiterung hilft die Originalform aus einer Stickdatei wiederherzustellen.
+
+![Stitchpath to outline](/assets/images/docs/outline.png)
 
 ### Funktionsweise
 

@@ -18,8 +18,13 @@ Le remplissage circulaire remplit une forme avec une spirale. Le centre de la sp
  
 ## Définir le centre de la spirale
 
-* Selectionnez la forme et attachez lui la commande d'objet "Position de la cible". Lire
- [comment attacher des commandes aux objets](/fr/docs/commands/).
+By default the center of the spiral is the geometrical center of the shape.
+Note that this is not equal to the center of the bounding box.
+
+To change default behavior selectionnez la forme et attachez lui la commande d'objet "Position de la cible".
+The center of the command symbol will be the new spiral center.
+
+Lire [comment attacher des commandes aux objets](/fr/docs/commands/).
 
 ## Définir les positions de début et de fin de la broderie.
 
@@ -28,8 +33,6 @@ Utilisez les commandes "Position de début du remplissage" et "Position de fin d
 ## Paramètres
 
 Lancez `Extensions > Ink/Stitch  > Paramètres` pour choisir vos réglages.
-
-
 
 |Paramètres||Description|
 |---|---|---|
