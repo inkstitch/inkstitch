@@ -86,8 +86,11 @@ class ParamsTab(ScrolledPanel):
         self.pencil_icon = wx.Image(os.path.join(get_resource_dir(
             "icons"), "pencil_20x20.png")).ConvertToBitmap()
 
-        self.randomize_icon = wx.Image(os.path.join(get_resource_dir(
-            "icons"), "randomize_20x20.png")).ConvertToBitmap()
+        randomize_icon = 'randomize_20x20.png'
+        if wx.SystemSettings().GetAppearance().IsDark():
+            randomize_icon = 'randomize_20x20_dark.png'
+        self.randomize_icon = wx.Image(
+            os.path.join(get_resource_dir("icons"), randomize_icon)).ConvertToBitmap()
 
         self.__set_properties()
         self.__do_layout()

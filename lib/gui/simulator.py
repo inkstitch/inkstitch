@@ -288,8 +288,14 @@ class ControlPanel(wx.Panel):
                 elif stitch.color_change:
                     self.slider.add_marker("color_change", stitch_num)
 
+    def is_dark_theme(self):
+        return wx.SystemSettings().GetAppearance().IsDark()
+
     def load_icon(self, icon_name):
-        icon = wx.Image(os.path.join(self.icons_dir, f"{icon_name}.png"))
+        if self.is_dark_theme():
+            icon = wx.Image(os.path.join(self.icons_dir, f"{icon_name}_dark.png"))
+        else:
+            icon = wx.Image(os.path.join(self.icons_dir, f"{icon_name}.png"))
         icon.Rescale(self.button_size, self.button_size, wx.IMAGE_QUALITY_HIGH)
         return icon.ConvertToBitmap()
 
@@ -500,12 +506,16 @@ class DrawingPanel(wx.Panel):
         self.Bind(wx.EVT_SIZE, self.choose_zoom_and_pan)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_left_mouse_button_down)
         self.Bind(wx.EVT_MOUSEWHEEL, self.on_mouse_wheel)
+        self.Bind(wx.EVT_SIZE, self.on_resize)
 
         self.SetMinSize((400, 400))
 
         # wait for layouts so that panel size is set
         if self.stitch_plan:
             wx.CallLater(50, self.load, self.stitch_plan)
+
+    def on_resize(self, event):
+        self.Refresh()
 
     def clamp_current_stitch(self):
         if self.current_stitch < 1:
@@ -876,6 +886,7 @@ class SimulatorSlider(wx.Panel):
 
     def __init__(self, parent, id=wx.ID_ANY, minValue=1, maxValue=2, **kwargs):
         super().__init__(parent, id)
+        self.control_panel = parent
 
         kwargs['style'] = wx.SL_HORIZONTAL | wx.SL_VALUE_LABEL | wx.SL_TOP | wx.ALIGN_TOP
 
@@ -988,8 +999,12 @@ class SimulatorSlider(wx.Panel):
             gc.DrawRectangle(start_x, height * self.color_bar_start,
                              end_x - start_x, height * self.color_bar_thickness)
 
-        gc.SetPen(wx.Pen(wx.Colour(255, 255, 255), 1))
-        gc.SetBrush(wx.Brush(wx.Colour(0, 0, 0)))
+        if self.control_panel.is_dark_theme():
+            gc.SetPen(wx.Pen(wx.Colour(0, 0, 0), 1))
+            gc.SetBrush(wx.Brush(wx.Colour(255, 255, 255)))
+        else:
+            gc.SetPen(wx.Pen(wx.Colour(255, 255, 255), 1))
+            gc.SetBrush(wx.Brush(wx.Colour(0, 0, 0)))
 
         value_x = _value_to_x(self._value)
         tab_height = self.tab_height * height
