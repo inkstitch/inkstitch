@@ -276,6 +276,19 @@ class FillStitch(EmbroideryElement):
         return self.get_float_param('expand_mm', 0)
 
     @property
+    @param('gap_fill_rows',
+           _('Gap Filling'),
+           tooltip=_('Add extra rows to compensate for gaps between sections caused by distortion.'
+                     'Rows are always added in pairs, so this number will be rounded up to the nearest multiple of 2.'),
+           unit='rows',
+           type='int',
+           default=0,
+           sort_index=21,
+           select_items=[('fill_method', 'auto_fill')])
+    def gap_fill_rows(self):
+        return self.get_int_param('gap_fill_rows', 0)
+
+    @property
     @param('angle',
            _('Angle of lines of stitches'),
            tooltip=_('The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed.'),
@@ -1009,6 +1022,7 @@ class FillStitch(EmbroideryElement):
                 starting_point,
                 ending_point,
                 self.underpath,
+                self.gap_fill_rows,
                 self.enable_random_stitches,
                 self.random_stitch_length_jitter,
                 self.random_seed,

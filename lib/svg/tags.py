@@ -108,6 +108,7 @@ inkstitch_attribs = [
     'tartan_angle',
     'enable_random_stitches',
     'random_stitch_length_jitter_percent',
+    'gap_fill_rows',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',
