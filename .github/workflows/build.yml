@@ -117,7 +117,7 @@ jobs:
           # for networkx
           python -m pip install pandas
 
-          python -m pip install pyinstaller
+          python -m pip install pyinstaller==6.7.0
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - name: install geos 32
@@ -178,7 +178,7 @@ jobs:
           python -m pip install pandas
           python -m pip install pyarrow
 
-          python -m pip install pyinstaller
+          python -m pip install pyinstaller==6.7.0
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - name: install geos 64
