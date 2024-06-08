@@ -11,6 +11,7 @@ from inkex.units import convert_unit
 
 from ..elements import Stroke
 from ..i18n import _
+from ..lettering import get_font_by_id
 from ..svg import get_correction_transform
 from ..svg.tags import EMBROIDERABLE_TAGS, INKSTITCH_LETTERING, SVG_GROUP_TAG
 from ..utils import DotDict
@@ -40,11 +41,36 @@ class LetteringAlongPath(InkstitchExtension):
             return
 
         self.load_settings(text)
+
+        if glyphs[0].get('transform', None) is not None:
+            glyphs = self._reset_glyph_transforms(text, glyphs)
+
         path = Stroke(path).as_multi_line_string().geoms[0]
         hidden_commands = self.hide_commands(glyphs)
         space_indices, stretch_space, text_baseline = self.get_position_and_stretch_values(path, text, glyphs)
         self.transform_glyphs(glyphs, path, stretch_space, space_indices, text_baseline)
         self.restore_commands(hidden_commands)
+
+    def _reset_glyph_transforms(self, text_group, glyphs):
+        font = get_font_by_id(self.settings.font)
+        if font is not None:
+            if self.settings.scale != 100:
+                try:
+                    text_group = list(text_group.iterchildren(SVG_GROUP_TAG))[0]
+                except IndexError:
+                    pass
+            for glyph in text_group.iterchildren():
+                text_group.remove(glyph)
+            text = font.render_text(
+                self.settings.text,
+                text_group,
+                None,  # we don't know the font variant (?)
+                self.settings.back_and_forth,
+                self.settings.trim_option,
+                self.settings.use_trim_symbols
+            )
+            return [glyph for glyph in text.iterdescendants(SVG_GROUP_TAG) if glyph.label and len(glyph.label) == 1]
+        return glyphs
 
     def get_position_and_stretch_values(self, path, text, glyphs):
         text_bbox = glyphs[0].getparent().bounding_box()
@@ -82,7 +108,7 @@ class LetteringAlongPath(InkstitchExtension):
             command.style['display'] = "inline"
 
     def transform_glyphs(self, glyphs, path, stretch_space, space_indices, text_baseline):
-        text_scale = Transform(f'scale({self.settings["scale"] / 100})')
+        text_scale = Transform(f'scale({self.settings.scale / 100})')
         distance = 0
         old_bbox = None
         i = 0
@@ -129,7 +155,8 @@ class LetteringAlongPath(InkstitchExtension):
             "back_and_forth": False,
             "font": None,
             "scale": 100,
-            "trim_option": 0
+            "trim_option": 0,
+            "use_trim_symbols": False
         })
 
         if INKSTITCH_LETTERING in text.attrib:

@@ -5,3 +5,4 @@
 
 from .font import Font, FontError
 from .utils import get_font_list
+from .utils import get_font_by_id
