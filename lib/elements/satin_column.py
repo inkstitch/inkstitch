@@ -48,9 +48,13 @@ class NotStitchableError(ValidationError):
 rung_message = _("Each rung should intersect both rails once.")
 
 
-class TooManyIntersectionsWarning(ValidationWarning):
-    name = _("Rungs intersects too many times")
-    description = _("Satin column: A rung intersects a rail more than once.") + " " + rung_message
+class ClosedPathWarning(ValidationWarning):
+    name = _("Rail is a closed path")
+    description = _("Rail is a closed path without a definite starting and ending point.")
+    steps_to_solve = [
+        _('* Select the node where you want the satin to start.'),
+        _('* Click on: Break path at selected nodes.')
+    ]
 
 
 class DanglingRungWarning(ValidationWarning):
@@ -65,6 +69,11 @@ class NoRungWarning(ValidationWarning):
         _('* With the selected object press "P" to activate the pencil tool.'),
         _('* Hold "Shift" while drawing a rung.')
     ]
+
+
+class TooManyIntersectionsWarning(ValidationWarning):
+    name = _("Rungs intersects too many times")
+    description = _("Satin column: A rung intersects a rail more than once.") + " " + rung_message
 
 
 class TwoRungsWarning(ValidationWarning):
@@ -738,6 +747,9 @@ class SatinColumn(EmbroideryElement):
                         yield DanglingRungWarning(rung.interpolate(0.5, normalized=True))
                     elif not isinstance(intersection, shgeo.Point):
                         yield TooManyIntersectionsWarning(rung.interpolate(0.5, normalized=True))
+        paths = self.node.get_path()
+        if any([path.letter == 'Z' for path in paths]):
+            yield ClosedPathWarning(self.flattened_rails[0].coords[0])
 
     def validation_errors(self):
         # The node should have exactly two paths with the same number of points - or it should
