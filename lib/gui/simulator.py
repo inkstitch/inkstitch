@@ -508,13 +508,12 @@ class DrawingPanel(wx.Panel):
         self.Bind(wx.EVT_MOUSEWHEEL, self.on_mouse_wheel)
         self.Bind(wx.EVT_SIZE, self.on_resize)
 
-        self.SetMinSize((400, 400))
-
         # wait for layouts so that panel size is set
         if self.stitch_plan:
             wx.CallLater(50, self.load, self.stitch_plan)
 
     def on_resize(self, event):
+        self.choose_zoom_and_pan()
         self.Refresh()
 
     def clamp_current_stitch(self):
@@ -686,7 +685,7 @@ class DrawingPanel(wx.Panel):
         # add some padding to make stitches at the edge more visible
         width_ratio = panel_width / float(self.width + 10)
         height_ratio = panel_height / float(self.height + 10)
-        self.zoom = min(width_ratio, height_ratio)
+        self.zoom = max(min(width_ratio, height_ratio), 0.01)
 
         # center the design
         self.pan = ((panel_width - self.zoom * self.width) / 2.0,
@@ -1171,6 +1170,8 @@ class SplitSimulatorWindow(wx.Frame):
 
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
+        self.statusbar = self.CreateStatusBar(2)
+
         self.detached_simulator_frame = None
         self.splitter = wx.SplitterWindow(self, style=wx.SP_LIVE_UPDATE)
         background_color = kwargs.pop('background_color', 'white')
@@ -1188,8 +1189,6 @@ class SplitSimulatorWindow(wx.Frame):
 
         icon = wx.Icon(os.path.join(get_resource_dir("icons"), "inkstitch256x256.png"))
         self.SetIcon(icon)
-
-        self.statusbar = self.CreateStatusBar(2)
 
         self.sizer = wx.BoxSizer(wx.VERTICAL)
         self.sizer.Add(self.splitter, 1, wx.EXPAND)
