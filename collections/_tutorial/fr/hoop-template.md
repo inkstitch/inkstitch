@@ -1,4 +1,4 @@
----
+bb---
 title: Modèle pour cadre
 permalink: /fr/tutorials/resources/hoop-template/
 last_modified_at: 2019-10-26
@@ -16,16 +16,10 @@ user-level:
 [![Modèle pour cadre](https://user-images.githubusercontent.com/11083514/40359689-87495ec8-5dbb-11e8-8ef9-80d4fac89d72.png){: width="250"}](/assets/images/tutorials/templates/hoop-template.svg)
 {: .text-center}
 
-[Télécharger](/assets/images/tutorials/templates/hoop-template.svg){: download="hoop-template.svg" } dans le dossier des modèles d’utilisateur inkscape à utiliser:
+* [Download](/assets/images/tutorials/templates/hoop-template.svg){: download="hoop-template.svg" } the file.
+* Open it in Inkscape.
+* Save the file through `Save template...`
+* Now it will be easily accessible through `File -> New from Template` in the `Custom` tab.
 
-Operating System|Location
-----|----
-Windows|`C:\Users%USERNAME%\AppData\Roaming\inkscape\templates`
-Linux|`~/.config/inkscape/templates`
-MacOS|`/Users/%USERNAME%/Library/Application Support/org.inkscape.Inkscape/config/inkscape/templates`
-Aller à `Fichier -> Nouveau à partir d'un modèle` pour démarrer un nouveau fichier basé sur le modèle.
-
-Vous devez confirmer le dossier de l'utilisateur dans vos préférences d'Inkscape. Voir les [FAQ](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it)
-
-**Note:** Si vous souhaitez l’utiliser comme modèle par défaut, renommer le fichier en `default.svg`.
+**Note:** If you wish to use it as the default template check the option `Set as default template` during the save template operation.
 {: .notice--info}

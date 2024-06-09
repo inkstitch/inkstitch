@@ -1,7 +1,7 @@
 ---
 title: "Customize Ink/Stitch"
 permalink: /docs/customize/
-last_modified_at: 2021-10-15
+last_modified_at: 2024-06-09
 toc: true
 ---
 
@@ -77,14 +77,9 @@ Make sure that also **Show path outline** is enabled in `Tool Controls Bar` as y
 
 ## Working with Templates
 
-If you decided to use Ink/Stitch more frequently for your embroidery work, you might get tired of setting up the whole scene over and over again. In this case you are ready to create a template for your basic embroidery setup. Once you organised everything as desired, simply save your file in your templates folder. You can now access it by `File > New from template`.
+If you decided to use Ink/Stitch more frequently for your embroidery work, you might get tired of setting up the whole scene over and over again. In this case you are ready to create a template for your basic embroidery setup. Once you organised everything as desired, simply save your file in your templates folder (`File > Save template...`). You can now access it by `File > New from template > Custom`.
 
-Operating system|Template Folder
----|---
-Linux|`~/.config/inkscape/templates`
-Windows|`C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
-
-You should confirm the user folder in your inkscape preferences see the [FAQ](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it).
+If you are going to use Inkscape mainly for embroidery, you may wish to check the option `Set as default template` when saving.
 
 **Tip:** Get [predefined templates](/tutorials/resources/templates/) from our tutorial section.
 {: .notice--info }

@@ -15,17 +15,10 @@ schwierigkeitsgrad:
 [![Hoop template](https://user-images.githubusercontent.com/11083514/40359689-87495ec8-5dbb-11e8-8ef9-80d4fac89d72.png){: width="250"}](/assets/images/tutorials/templates/hoop-template.svg)
 {: .text-center}
 
-[Downloade](/assets/images/tutorials/templates/hoop-template.svg){: download="hoop-template.svg" } die Datei ins ins inkscape user Verzeichnis um die Vorlagen zu benutzen:
+* [Lade die Datei herunter](/assets/images/tutorials/templates/hoop-template.svg){: download="hoop-template.svg" }
+* Öffne die Datei in Inkscape.
+* Speichere die Datei über `Datei > Als Vorlage speichern`.
+* Von jetzt an kann das Template über `Datei -> Neu aus Vorlage` geöffnet werden. Die Vorlage befindet sich unter dem Reiter `Benutzerdefiniert`
 
-Betriebsystem|Ort
-----|----
-Windows|`C:\Users%USERNAME%\AppData\Roaming\inkscape\templates`
-Linux|`~/.config/inkscape/templates`
-MacOS|`/Users/%USERNAME%/Library/Application Support/org.inkscape.Inkscape/config/inkscape/templates`
-
-Der Template-Ordner für dein System kann auch über die Inkscape Einstellungen überprüft werden (`Bearbeiten > Einstellungen > System > Benutzerdefinierte Vorlagen`)
-
-Öffne dei Vorlage über `Datei -> Neu aus Vorlage`.
-
-**Hinweis:** Wenn du sie als Standardvorlage verwenden möchtest, benenne die Datei in `default.svg` um.
+**Hinweis:** Wenn du sie als Standardvorlage verwenden möchtest, aktiviere beim Abspeichern die Option `Als Standartvorlage festlegen`.
 {: .notice--info}

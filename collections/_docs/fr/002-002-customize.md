@@ -30,16 +30,11 @@ Raccourcis&nbsp;Clavier | Effet | Remplace
 <key>ctrl</key>+<key>shift</key>+<key>B</key> | Scinder colonne satin  (B est coupé en deux parties) | Chemin > Union (utiliser Ctrl++ à la place )
 <key>ctrl</key>+<key>shift</key>+<key>*</key> | Agencement automatique de colonnes satin (ordonne tout)
 
-
-
 \* Monter et Descendre dans la pile d'objets permet de contrôler précisement l'ordre dans lequel les objets sont brodés. Très utile en combinaison avec le panneau Calques et Objets (`Objet > Calques et Objets`).  L'ordre de la pile défini l'ordre dans lequel les éléments sont brodés (le bas de la pile en premier, pour finir par le haut de la pile).<br><br>** Pour les colonnes satin et les points droits, ceci change la direction des points. A utiliser avec `Afficher le sens des chemins sur le contour` selectionné dans `Edition > Préférences > Outils > Noeuds`. Si vous selectionnez un seul sommet en utilisant l'éditeur de noeuds et que vous effectuez un `Ctrl+R`, Inkscape ne renverse que le sous-chemin qui contient ce noeud. Vous pouvez de cette manière vous assurer que les deux rails d'une colonne satin sont orientés dans le même sens.
 {: .notice--info }
 {: style="font-size: 70%" }
 
-
-
 ### Télécharger et importer des raccourcis clavier
-
 
 * [Téléchargez le fichier de raccourcis clavier](/assets/files/inkstitch.xml){: download="inkstitch.xml" }
 * Allez à  `Edition > Préférences > Interface > Clavier`
@@ -58,6 +53,7 @@ Dans Ink/Stitch la [simulation](/fr/docs/visualize/) inclut ses propres raccourc
 ![Raccourcis Simulation](/assets/images/docs/fr/raccourcis_simulateur.png)
 
 ## Correction du facteur de zoom
+
 Pour broder il est essentiel d'avoir une bonne idée de la véritable taille du dessin. Inkscape a un réglage pour adapter le niveau de zoom à votre écran:
 
 * Allez à `Edition > Préférences > Interface`
@@ -66,6 +62,7 @@ Pour broder il est essentiel d'avoir une bonne idée de la véritable taille du 
 ![Correction de zoom](/assets/images/docs/fr/customize-zoom-correction.png)
 
 ## Grilles
+
 Pour aligner correctement vos formes vectorielles, vous pouvez utiliser la fonctionnalité de grille d’Inkscape. Aller à  `Affichage` et activer  la `Grille`. N'oubliez pas d'activer le magnetisme (en haut à droite) et  vérifiez que `Aimanter aux grilles` est activé. Il est également possible de régler l'espacement et l'origine de vos grilles dans `Fichier> Propriétés du document> Grilles`.
 
 ![Grids](/assets/images/docs/fr/grille.png)
@@ -79,15 +76,9 @@ Vérifier aussi que **Afficher le contour du chemin** est activé dans la  `Barr
 
 ## Travailler avec des modèles
 
-Si vous décidez d'utiliser plus fréquemment Ink/Stitch pour vos travaux de broderie, vous en aurez peut-être assez de mettre tout en scène à chaque fois. Dans ce cas, vous êtes prêt à créer un modèle pour votre configuration de broderie de base. Une fois que vous avez tout organisé comme vous le souhaitez, enregistrez simplement votre fichier dans votre dossier de modèles. Vous pouvez maintenant y accéder par `Fichier > Nouveau à partir d'un modèle`.
+Si vous décidez d'utiliser plus fréquemment Ink/Stitch pour vos travaux de broderie, vous en aurez peut-être assez de mettre tout en scène à chaque fois. Dans ce cas, vous êtes prêt à créer un modèle pour votre configuration de broderie de base. Une fois que vous avez tout organisé comme vous le souhaitez, simply save your file in your templates folder (`File > Save template...`). You can now access it by `File > New from template > Custom`.
 
-Système|Dossier des modèles
----|---
-Linux|`~/.config/inkscape/templates`
-Windows|`C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
-MacOS|`/Users/%USERNAME%/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/templates`
-
-Retrouvez le dossier utilisateur dans vos préférences inkscape. Voir [FAQ](/fr/docs/faq/#jai-t%C3%A9l%C3%A9charg%C3%A9-et-d%C3%A9compress%C3%A9-la-derni%C3%A8re-version-o%C3%B9-je-la-mets).
+If you are going to use Inkscape mainly for embroidery, you may wish to check the option `Set as default template` when saving.
 
 **Astuce:** Obtenez des [modèles prédéfinis](/fr/tutorials/resources/templates/) dans notre section tutoriel.
 {: .notice--info }
