@@ -17,6 +17,7 @@ Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anza
 **Tip:** Setze [Tastenkürzel](/docs/customize/) um die einzelnen Satin-Werkzeuge schneller ausführen zu können.
 {: .notice--info}
 
+
 ## Automatisch geführte Satinsäulen...
 
 Dieses Werkzeug ersetzt deine Satinsäulen mit einem Set von neuen Satinsäulen in logischer Reihenfolge. Sprungstiche werden hinzugefügt, falls nötig, optional werden stattdessen Fadenschneide-Befehle eingesetzt. Um Sprungstiche zu vermeiden werden Satinsäulen getrennt und versteckte Geradstiche hinzugefügt. Die neuen Satinsäulen behalten alle Einstellungen bei, die zuvor über den Paramter-Dialog gesetzt wurden, einschließlich Unterlage, Zick-Zack-Abstand, etc.
@@ -36,6 +37,7 @@ Dieses Werkzeug ersetzt deine Satinsäulen mit einem Set von neuen Satinsäulen 
 
 * Solltest du es bevorzugen die vorher gesetzte Objekt-Reihenfolge beizubehalten (das könnte der Fall sein, wenn sich die Satinsäulen überschneiden), benutze die Option **Preserve order of Satin Columns**.
 
+
 ## Mehrfarbige Satinsäule
 
 `Werkzeuge: Satin > Mehrfarbige Satinsäule`
@@ -47,7 +49,7 @@ Diese Erweiterung generiert Kopien der ausgewählten Satinsäule um einen mehrfa
 ### Funktionsweise
 
 * Wähle eine oder mehrere Satinsäulen
-* Öffne `Werkzeuge: Satin > Mehrfarbige Satinsäule`
+* Öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Satin > Mehrfarbige Satinsäule`
 * Setze alle bevorzugten Präferenzen in `Farben`:
   - Wähle ob die Farben gleiche Breiten und Abstände haben sollen oder nicht
     (ist die Option deaktiviert, kann für jede Farbe sowohl die Breite der reinen Farbe als auch die Breite des darauf folgenden zweifarbigen Bereichs  festgelegt werden).
@@ -65,6 +67,7 @@ Diese Erweiterung generiert Kopien der ausgewählten Satinsäule um einen mehrfa
  
 Für nähere Infos über die Funktionsweise dieser Erweiterung gibt es im [Tutorial für mehrfarbige Satinsäulen](/de/tutorials/multicolor_satin.md).
 
+
 ## Linie zu Satin
 
 Diese Erweiterung konvertiert einen einfachen Pfad in eine Satinsäulen. Dabei wird die Linienbreite übernommen. Nach der Konvertierung wirst du zwei "Holme" und (möglicherweise) viele Sprossen (wie bei einer Leiter). Wieviele Sprossen es gibt hängt ganz von der Form der Linie ab.
@@ -74,6 +77,7 @@ Diese Erweiterung konvertiert einen einfachen Pfad in eine Satinsäulen. Dabei w
 1. Zeichne eine Beziér-Kurve (`B`)
 2. Stelle die Linienbreite ein (`Ctrl+Shift+F)
 2. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Linie zu Satin` aus
+
 
 ## Satinsäule schneiden
 
@@ -88,6 +92,7 @@ Diese Option schneidet eine Satinsäule an einem vordefiniertem Punkt. Alle Para
 5. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Satinsäule schneiden` aus
 6. Der Satin-Schnittstelle-Befehl und sein Zeiger sind verschwunden. Wähle die Satinsäule aus: es sind jetzt zwei.
 
+
 ## Satinsäule umkehren
 
 Dies ist ein kleines Werkzeug, mit dem der Stichpfad genau geplant werden kann. Bei Anwendung kehrt es eine Satinsäule, die auf der linken Seite beginnt und auf der rechten Seite endet, um. Diese wird nun auf der rechten Seite beginnen und auf der linken Seite enden.
@@ -99,6 +104,7 @@ Sonst wird nichts an der Satinsäule verändert.
 
 * Wähle eine oder mehrere Satinsäule(n) aus
 * Starte `Erweiterungen -> Ink/Stitch -> Satinsäule umkehren`
+
 
 ## Linie zu Pfadeffekt-Satin
 
@@ -139,6 +145,7 @@ Es ist möglich auch im Nachhinein das Muster zu personalisieren, bzw. ein ander
 
 Nutze die Funktion `Pfad > Objekt in Pfad umwandeln` um eine "normale" Satinsäule zu erhalten.
 
+
 ## Zickzack-Linie zu Satin
 
 Wenn du manuell eine Form für einen Satinstich nachzeichnen willst, kann dieses Tool hilfreich sein.
@@ -163,6 +170,7 @@ Anstatt zunächst beide Außenlinien und dann die Richtungsvektoren zu erstellen
 Wenn dein Ergebnis in etwa so aussieht wie auf dem Bild unten, hast du wahrscheinlich das falsche Muster für deine Linie gewählt.
 
 ![Zigzag Line wrong pattern](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
+
 
 ## Tutorials zu Satinwerkzeugen
 

@@ -17,6 +17,7 @@ toc: true
 **Astuce** Pour un accès plus rapide [activer les raccourcis](/fr/docs/customize/) des outils satin spécifiques.
 {: .notice--info}
 
+
 ## Agencement automatique de Colonnes Satin {#auto-route-satin-columns}
 
 Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin dans un ordre d'assemblage logique. Des sous-chemins et les sauts de points seront ajoutés si nécessaire et les colonnes seront scindées pour faciliter les sauts. Les points satins résultants conserveront tous les paramètres que vous avez définis sur les points satins originaux, y compris la sous-couche, l’espacement en zigzag, etc.
@@ -35,6 +36,7 @@ Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin
 * Activer **Couper les sauts de fil** pour couper les fils au lieu de créer des sauts de fil. Tout saut de fil au-dessus de 1mm est coupé. Les commandes de coupe sont ajoutées au SVG, vous pouvez donc les modifier / supprimer à votre guise.
 
 * Si vous préférez conserver votre ordre initial (ce qui pourrait être le cas si vous avez superposé des satins), activez l'option ** **Préserver l'ordre des colonnes satin**.
+
 
 ## Intervertir les rails des colonnes satin
 
@@ -72,6 +74,7 @@ Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le fa
 Si vous voyez quelque chose comme le dessin ci-dessous, vous avez probablement choisi le mauvais style de zigzag pour votre dessin.
 ![Mauvais choix de style de zigzag](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
 
+
 ## Satin Multicolore {#multicolor-satin}
 
 `Outils: Satin>Satin Multicolore` 
@@ -80,7 +83,7 @@ Cette extension crée des copies des satins  sélectionnés pour imiter une colo
 ![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
 
 * Sélectionnez  une ou plusieurs colonnes satin
-* `Outils: Satin> Satin Multicolore`
+* `Extensions > Ink/Stitch > Outils: Satin > Satin Multicolore`
 * Dans l'onglet 'Colorer' il  est possible de 
   - Choisir si les couleurs sont équidistantes ou si elles ont des largeurs différentes. Si la case est décochée  il  devient possible de choisir individuellement la largeur de chaque couleur **ET** d'ajouter une zone où deux couleurs se  mélangent.
   - Ajouter un  dépassement à gauche  (en pourcentage)
@@ -96,6 +99,7 @@ Cette extension crée des copies des satins  sélectionnés pour imiter une colo
 
 Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin.md), si vous souhaitez comprendre comment cette extension fonctionne.
 
+
 ## Scinder une colonne Satin
 
 Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'un point pour que les deux satins résultants soient cousus exactement comme l'original. Tous les paramètres définis sur le satin d'origine restent sur les deux nouveaux satins et toutes les traverses sont conservées. Si l'un des satins n'a plus de traverse, de nouvelles sont ajoutées.
@@ -108,8 +112,6 @@ Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'
 4. Sélectionnez à nouveau la colonne satin.
 5. Faire `Extensions > Ink/Stitch  > Outils de Satin > Scinder colonne Satin`.
 6. La commande de point de partage et la ligne de connexion disparaissent et il semble que rien ne s'être passé. Sélectionnez votre satin et vous verrez qu'il a été divisé.
-
-
 
 
 ## Trait en Effet de Chemin Satin {#stroke-to-live-path-effect-satin}
@@ -151,6 +153,7 @@ Vous pouvez changer le motif de plusieurs manières :
 * Changer de motif en relançant à nouveau `Convertir Ligne en Effet de Chemin Satin`.
 * Convertir en chemin normal  (`Shift + Ctrl + C`)  et raffiner manuellement le chemin (ceci perdra la fonctionnalité Effet de Chemin)
 
+
 ## Trait en Satin
 
 Cette extension convertira un trait en une (ou plusieurs) colonne satin avec une largeur spécifiée. Après la conversion, vous verrez les deux rails et (éventuellement) de nombreuses traverses de direction, en fonction de la forme de votre ligne.
@@ -162,9 +165,6 @@ Cette extension convertira un trait en une (ou plusieurs) colonne satin avec une
 2. Lancer `Extensions > Ink/Stitch  > Outils: Satin > Trait en Satin`
 
 
-
-
 ## Tutoriaux utilisant Outils: Satin
-
 
 {% include tutorials/tutorial_list key="tool" value="Satin" %}

@@ -17,6 +17,7 @@ toc: true
 **Tip:** For faster access [set shortcuts](/docs/customize/) on specific satin tools.
 {: .notice--info}
 
+
 ## Auto-Route Satin Columns...
 
 This tool will replace your satins with a new set of satin columns in logical stitching order. Under-pathing and jump-stitches will be added as necessary and satins will be broken to facilitate jumps. The resulting satins will retain all of the parameters you had set on the original satins, including underlay, zig-zag spacing, etc.
@@ -85,8 +86,6 @@ Sharp edges are indicated by two points that are close together.
 
 ## Multicolor Satin
 
-`Tools: Satin: Multicolor Satin` ([#2863](https://github.com/inkstitch/inkstitch/issues/2863))
-
 This extension creates copies of selected satins to mimic a multicolor satin
 
 ![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
@@ -94,7 +93,7 @@ This extension creates copies of selected satins to mimic a multicolor satin
 ### Usage
 
 * Select one  or more  satin column
-* `Tools: Satin: Multicolor Satin`
+* Open `Extensions > Ink/Stitch > Tools: Satin > Multicolor Satin`
 * Set your prefered options and colors in the colorize tab
   - Choose  if the colors  are equidistant or not.  If unchecked  you are able to independantly chose each color width **AND** add a width for  color sharing.
   - Add a left overflow  (percent)
@@ -110,6 +109,7 @@ This extension creates copies of selected satins to mimic a multicolor satin
 
 If you want to  understand how this extension works,  [read this](/tutorials/multicolor_satin.md).
 
+
 ## Cut Satin Column
 
 Split a satin column at a specified point. The split happens at a stitch boundary to ensure that the two resulting satins sew just like the original. All parameters set on the original satin remain on the two new satins, and all rungs are retained. If one of the satins would have no rungs left, a new rung is added.
@@ -122,6 +122,7 @@ Split a satin column at a specified point. The split happens at a stitch boundar
 4. Select the satin column again.
 5. Run `Extensions > Ink/Stitch  > Tools: Satin > Split Satin Column`.
 6. The split point command and connector line disappear, and nothing else appears to have happened. Select your satin and you'll see that it's been split.
+
 
 ## Stroke to Live Path Effect Satin
 
@@ -162,6 +163,7 @@ Now you can change the pattern in the following ways.
 
 Use `Path > Object to path` to convert this to a standard satin column.
 
+
 ## Convert Line to Satin
 
 This extension will convert a stroke into a satin column with a specified width. After the conversion you will see the two rails and (possibly) lots of rungs, depending on the shape of your line.
@@ -172,8 +174,7 @@ This extension will convert a stroke into a satin column with a specified width.
 2. Set the stroke width in the "Fill and Stroke" panel ("Stroke style" tab), which you can access with `Shift+Ctrl+F`
 2. Run `Extensions > Ink/Stitch  >  Tools: Satin > Convert Line to Satin`
 
+
 ## Tutorials using Tools: Satin
 
-
 {% include tutorials/tutorial_list key="tool" value="Satin" %}
-
