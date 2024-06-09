@@ -1,7 +1,7 @@
 ---
 title: "Satin Werkzeuge"
 permalink: /de/docs/satin-tools/
-last_modified_at: 2023-05-01
+last_modified_at: 2023-06-09
 toc: true
 ---
 Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinsäulen](/docs/stitches/satin-column/) erleichtern sollen.
@@ -36,7 +36,7 @@ Dieses Werkzeug ersetzt deine Satinsäulen mit einem Set von neuen Satinsäulen 
 
 * Solltest du es bevorzugen die vorher gesetzte Objekt-Reihenfolge beizubehalten (das könnte der Fall sein, wenn sich die Satinsäulen überschneiden), benutze die Option **Preserve order of Satin Columns**.
 
-### Mehrfarbige Satinsäule
+## Mehrfarbige Satinsäule
 
 `Werkzeuge: Satin > Mehrfarbige Satinsäule`
 
@@ -48,12 +48,20 @@ Diese Erweiterung generiert Kopien der ausgewählten Satinsäule um einen mehrfa
 
 * Wähle eine oder mehrere Satinsäulen
 * Öffne `Werkzeuge: Satin > Mehrfarbige Satinsäule`
-* In `Farben`:
+* Setze alle bevorzugten Präferenzen in `Farben`:
   - Wähle ob die Farben gleiche Breiten und Abstände haben sollen oder nicht
     (ist die Option deaktiviert, kann für jede Farbe sowohl die Breite der reinen Farbe als auch die Breite des darauf folgenden zweifarbigen Bereichs  festgelegt werden).
   - Überlauf rechts (Prozent)
   - Überlauf links (Prozent)
   - Füge Farben hinzu
+
+    Bitte beachte, dass das erste Eingabefeld die Breite für die einfarbigen Bereiche definiert. Das zweite Eingabefeld definiert die Breite des zweifarbigen Abschnitts bis zur nächsten Farben.
+    Ist die Option `Gleichmäßige Abstände` aktiviert, reduziere den Wert für `Monochrome Farbbreite` um ein breiteres zweifarbiges Feld zu erhalten.
+    {: .notice--info}
+
+    ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
+
+    ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
  
 Für nähere Infos über die Funktionsweise dieser Erweiterung gibt es im [Tutorial für mehrfarbige Satinsäulen](/de/tutorials/multicolor_satin.md).
 

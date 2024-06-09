@@ -1,7 +1,7 @@
 ---
 title: "Tools: Satin"
 permalink: /docs/satin-tools/
-last_modified_at: 2023-04-30
+last_modified_at: 2023-06-09
 toc: true
 ---
 `Extensions > Ink/Stitch  > Tools: Satin` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
@@ -83,7 +83,7 @@ When you are using the smooth option it is still possible to quickly produce sha
 Sharp edges are indicated by two points that are close together.
 
 
-### Multicolor Satin 
+## Multicolor Satin
 
 `Tools: Satin: Multicolor Satin` ([#2863](https://github.com/inkstitch/inkstitch/issues/2863))
 
@@ -91,15 +91,23 @@ This extension creates copies of selected satins to mimic a multicolor satin
 
 ![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
 
+### Usage
+
 * Select one  or more  satin column
 * `Tools: Satin: Multicolor Satin`
-* In the colorize tab you may :
-  -choose  if the colors  are equidistant or not.  If unchecked  you are  able to independantly chose each color width **AND** add a width for  color sharing.
-  - add a left overflow  (percent)
-  - add a  right overflow (percent)
-  - add more colors
+* Set your prefered options and colors in the colorize tab
+  - Choose  if the colors  are equidistant or not.  If unchecked  you are able to independantly chose each color width **AND** add a width for  color sharing.
+  - Add a left overflow  (percent)
+  - Add a  right overflow (percent)
+  - Add more colors
 
- 
+    Please note that the first input field in each color definition sets the width of the area with only one color. The second input box defines the margin to the next color. This is the width of the area with the "color transition". When `equidistant colors` colors is checked, reduce the value for `monochrome color width` to receive a wider field of bicolor sections.
+    {: .notice--info}
+
+    ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
+
+    ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
+
 If you want to  understand how this extension works,  [read this](/tutorials/multicolor_satin.md).
 
 ## Cut Satin Column
@@ -114,6 +122,7 @@ Split a satin column at a specified point. The split happens at a stitch boundar
 4. Select the satin column again.
 5. Run `Extensions > Ink/Stitch  > Tools: Satin > Split Satin Column`.
 6. The split point command and connector line disappear, and nothing else appears to have happened. Select your satin and you'll see that it's been split.
+
 ## Stroke to Live Path Effect Satin
 
 Converts a stroke into a satin using a live path effect. This makes it more adaptable in width and shape as a normal satin column.
@@ -125,7 +134,7 @@ Converts a stroke into a satin using a live path effect. This makes it more adap
 3. Set the approximate sizes that you wish your satin to be
 4. Click on apply
 
-## Options
+### Options
 
 --|--
 Pattern             | ![LPE-Patterns](/assets/images/docs/lpe_patterns.png) | Choice of the pattern to be applied repeatedly to the satin column

@@ -72,9 +72,7 @@ Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le fa
 Si vous voyez quelque chose comme le dessin ci-dessous, vous avez probablement choisi le mauvais style de zigzag pour votre dessin.
 ![Mauvais choix de style de zigzag](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
 
-
-
-### Satin Multicolore {#multicolor-satin}
+## Satin Multicolore {#multicolor-satin}
 
 `Outils: Satin>Satin Multicolore` 
 
@@ -88,9 +86,15 @@ Cette extension crée des copies des satins  sélectionnés pour imiter une colo
   - Ajouter un  dépassement à gauche  (en pourcentage)
   - Ajouter un dépassement à droite (en pourcentage)
   - Ajouter des couleurs
- 
-  Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin.md), si vous souhaitez comprendre comment cette extension fonctionne.
 
+    Please note that the first input field in each color definition sets the width of the area with only one color. The second input box defines the margin to the next color. This is the width of the area with the "color transition". When `equidistant colors` colors is checked, reduce the value for `monochrome color width` to receive a wider field of bicolor sections.
+    {: .notice--info}
+
+    ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
+
+    ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
+
+Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin.md), si vous souhaitez comprendre comment cette extension fonctionne.
 
 ## Scinder une colonne Satin
 
