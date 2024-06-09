@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-08 01:11+0000\n"
-"PO-Revision-Date: 2024-06-08 01:11\n"
+"POT-Creation-Date: 2024-06-09 01:17+0000\n"
+"PO-Revision-Date: 2024-06-09 01:17\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-08 01:11+0000\n"
+"POT-Creation-Date: 2024-06-09 01:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1395,11 +1395,11 @@ msgstr "Erweitert die Ursprungsform. Diese Option kann genutzt werden, um Lücke
 
 #: lib/elements/fill_stitch.py:280
 msgid "Gap Filling"
-msgstr ""
+msgstr "Lücken schließen"
 
 #: lib/elements/fill_stitch.py:281
 msgid "Add extra rows to compensate for gaps between sections caused by distortion.Rows are always added in pairs, so this number will be rounded up to the nearest multiple of 2."
-msgstr ""
+msgstr "Fügt zusätzliche Linien zwischen Abschnitten hinzu, um Verzug auszugleichen. Linien werden immer in Paaren hinzugefügt. Ungerade Eingaben werden dementsprechend aufgerundet."
 
 #: lib/elements/fill_stitch.py:293 lib/elements/fill_stitch.py:306
 #: lib/gui/tartan/embroidery_panel.py:35
@@ -2558,11 +2558,11 @@ msgstr "Bitte wähle nur einen Textabschnitt."
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Text"
 
-#: lib/extensions/lettering_along_path.py:34
+#: lib/extensions/lettering_along_path.py:35
 msgid "Please select one path and one Ink/Stitch lettering group."
 msgstr "Bitte einen Pfad und eine Ink/Stitch-Textgruppe auswählen."
 
-#: lib/extensions/lettering_along_path.py:39
+#: lib/extensions/lettering_along_path.py:40
 msgid "The text doesn't contain any glyphs."
 msgstr "Der Text enthält keine Schriftzeichen."
 
@@ -3349,12 +3349,12 @@ msgstr "Geschwindigkeit"
 msgid "%d stitches/sec"
 msgstr "%d Stiche/Sekunde"
 
-#: lib/gui/simulator.py:778
+#: lib/gui/simulator.py:777
 #, python-format
 msgid "Command: %s"
 msgstr "Befehl: %s"
 
-#: lib/gui/simulator.py:1124
+#: lib/gui/simulator.py:1123
 msgid "Embroidery Simulation"
 msgstr "Stick Simulation"
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-08 01:11+0000\n"
-"PO-Revision-Date: 2024-06-08 01:11\n"
+"POT-Creation-Date: 2024-06-09 01:17+0000\n"
+"PO-Revision-Date: 2024-06-09 01:17\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-08 01:11+0000\n"
+"POT-Creation-Date: 2024-06-09 01:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2552,11 +2552,11 @@ msgstr ""
 msgid "Ink/Stitch Lettering"
 msgstr ""
 
-#: lib/extensions/lettering_along_path.py:34
+#: lib/extensions/lettering_along_path.py:35
 msgid "Please select one path and one Ink/Stitch lettering group."
 msgstr ""
 
-#: lib/extensions/lettering_along_path.py:39
+#: lib/extensions/lettering_along_path.py:40
 msgid "The text doesn't contain any glyphs."
 msgstr ""
 
@@ -3338,12 +3338,12 @@ msgstr ""
 msgid "%d stitches/sec"
 msgstr ""
 
-#: lib/gui/simulator.py:778
+#: lib/gui/simulator.py:777
 #, python-format
 msgid "Command: %s"
 msgstr ""
 
-#: lib/gui/simulator.py:1124
+#: lib/gui/simulator.py:1123
 msgid "Embroidery Simulation"
 msgstr ""
 
