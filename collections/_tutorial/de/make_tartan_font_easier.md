@@ -5,7 +5,7 @@ language: de
 last_modified_at: 2024-04-25
 excerpt: "So machst du deine Tartan-Schrift nutzerfreundlicher"
 image: "/assets/images/tutorials/tutorial-preview-images/make_tartan_font_easier.jpg"
-tutorial-type:
+tutorial-typ:
   - Beispieldatei
 stitch-type:
   - "Tartanfüllung"

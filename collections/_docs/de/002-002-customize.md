@@ -77,14 +77,7 @@ Damit die Pfadrichtungen auch wirklich angezeigt werden, aktiviere außerdem die
 
 ## Vorlagen
 
-Wenn man Ink/Stitch häufiger verwendet, möchte man nicht die gleichen Arbeitsschritte immer und immer wieder wiederholen. In diesem Fall kann eine Vorlage für die grundlegende Stickkonfiguration erstellt werden. Nachdem alles nach Wunsch eingerichtet wurde, speichere die Datei einfach in dem Vorlagenverzeichnis. Nun kann mit `Datei > Neu aus Vorlage` darauf zugegriffen werden.
-
-Betriebssystem | Vorlagenverzeichnis
----|---
-Linux   | `~/.config/inkscape/templates`
-Windows | `C:\Users\%USERNAME%\AppData\Roaming\inkscape\templates`
-
-Das Benutzerverzeichnis für Erweiterungen kann in den Inkscape Einstellungen überprüft werden. [Mehr dazu](/de/docs/faq/#ich-habe-die-aktuelle-version-heruntergeladen-und-entpackt-was-soll-ich-jetzt-machen).
+Wenn man Ink/Stitch häufiger verwendet, möchte man nicht die gleichen Arbeitsschritte immer und immer wieder wiederholen. In diesem Fall kann eine Vorlage für die grundlegende Stickkonfiguration erstellt werden. Nachdem alles nach Wunsch eingerichtet wurde, speichere die Datei einfach in dem Vorlagenverzeichnis. Das geht über `Datei > Als Vorlage speichern`. Nun kann mit `Datei > Neu aus Vorlage` darauf zugegriffen werden. Wer Inkscape hautpsächlich für Ink/Stitch nutzt, kann beim Abspeichern der Vorlage auch die Option `Als Standartvorlage festlegen` anwählen.
 
 **Tip:** Hier gibt es [Vorlagen](/de/tutorials/resources/templates/) die du nutzen kannst.
 {: .notice--info }

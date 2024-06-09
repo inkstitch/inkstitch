@@ -1,7 +1,7 @@
 ---
 title: Stickrahmen Vorlage
 permalink: /de/tutorials/resources/hoop-template/
-last_modified_at: 2018-05-20
+last_modified_at: 2024-06-09
 language: de
 excerpt: "Vorlage für verschieden große Stickrahmen"
 image: "https://user-images.githubusercontent.com/11083514/40359689-87495ec8-5dbb-11e8-8ef9-80d4fac89d72.png"
@@ -21,10 +21,11 @@ Betriebsystem|Ort
 ----|----
 Windows|`C:\Users%USERNAME%\AppData\Roaming\inkscape\templates`
 Linux|`~/.config/inkscape/templates`
+MacOS|`/Users/%USERNAME%/Library/Application Support/org.inkscape.Inkscape/config/inkscape/templates`
 
-Go to `Datei -> Neu aus Vorlage` um eine Datei auf Basis des Template zu nutzen.
+Der Template-Ordner für dein System kann auch über die Inkscape Einstellungen überprüft werden (`Bearbeiten > Einstellungen > System > Benutzerdefinierte Vorlagen`)
 
-Du solltest den Benutzerordner in deinen Inkscape-Einstellungen bestätigen. Siehe die [FAQ](/docs/faq/#i-have-downloaded-and-unzipped-the-latest-release-where-do-i-put-it)
+Öffne dei Vorlage über `Datei -> Neu aus Vorlage`.
 
 **Hinweis:** Wenn du sie als Standardvorlage verwenden möchtest, benenne die Datei in `default.svg` um.
 {: .notice--info}

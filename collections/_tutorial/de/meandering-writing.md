@@ -6,6 +6,7 @@ last_modified_at: 2023-04-26
 excerpt: "Mit Mäanderfüllung schreiben"
 image: "/assets/images/tutorials/tutorial-preview-images/meandering_writing.jpg"
 tutorial-typ:
+  - Text
 stichart:
   - "Mäanderfüllung Fill"
   - "Mehrfachgeradstich"

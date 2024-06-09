@@ -7,7 +7,7 @@ excerpt: "Formen und Schriften mit Inkscape Pfad-Effekten verformen"
 image: "/assets/images/galleries/fonts/multiple/multifont3.jpg"
 
 tutorial-typ:
-  - Sample File
+  - Beispieldatei
 stichart: 
   - Satin Stitch
 techniken:

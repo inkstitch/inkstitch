@@ -5,7 +5,8 @@ language: de
 last_modified_at: 2023-05-04
 excerpt: "Monogramm mit Spiralfüllung"
 image: "/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg"
-tutorial-type:
+tutorial-typ:
+  - Beispieldatei
 stichart:
   - Spiralfüllung
 werkzeug:
