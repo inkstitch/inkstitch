@@ -83,7 +83,7 @@ jobs:
           name: inkstitch-linux
           path: artifacts
   windows32:
-    runs-on: windows-latest
+    runs-on: windows-2019
     steps:
       - uses: actions/checkout@v4
         with:
@@ -117,7 +117,7 @@ jobs:
           # for networkx
           python -m pip install pandas
 
-          python -m pip install pyinstaller==6.7.0
+          python -m pip install pyinstaller
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - name: install geos 32
@@ -149,7 +149,7 @@ jobs:
           name: inkstitch-windows32
           path: artifacts
   windows64:
-    runs-on: windows-latest
+    runs-on: windows-2019
     steps:
       - uses: actions/checkout@v4
         with:
@@ -178,7 +178,7 @@ jobs:
           python -m pip install pandas
           python -m pip install pyarrow
 
-          python -m pip install pyinstaller==6.7.0
+          python -m pip install pyinstaller
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - name: install geos 64
