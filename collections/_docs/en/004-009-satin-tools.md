@@ -90,24 +90,40 @@ This extension creates copies of selected satins to mimic a multicolor satin
 
 ![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
 
+If you want to understand how this extension works internally, [read this](/tutorials/multicolor_satin.md).
+
 ### Usage
 
 * Select one  or more  satin column
 * Open `Extensions > Ink/Stitch > Tools: Satin > Multicolor Satin`
 * Set your prefered options and colors in the colorize tab
-  - Choose  if the colors  are equidistant or not.  If unchecked  you are able to independantly chose each color width **AND** add a width for  color sharing.
-  - Add a left overflow  (percent)
-  - Add a  right overflow (percent)
-  - Add more colors
+* Apply
 
-    Please note that the first input field in each color definition sets the width of the area with only one color. The second input box defines the margin to the next color. This is the width of the area with the "color transition". When `equidistant colors` colors is checked, reduce the value for `monochrome color width` to receive a wider field of bicolor sections.
-    {: .notice--info}
+### Options
 
-    ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
+* 
 
-    ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
+  Choose  if the colors  are equidistant or not.
 
-If you want to  understand how this extension works,  [read this](/tutorials/multicolor_satin.md).
+  If checked the color width and margins are defined for all colors by the `monochrome color width` value.
+
+  If unchecked you are able to independantly chose width and margins for each color.
+* Add a left overflow  (percent)
+
+  Adds a jagged edge to the left side of the satin
+* Add a  right overflow (percent)
+
+  Adds a jagged edge to the right side of the satin
+* Add more colors
+
+  Width values are given in percentages. Make sure all numbers for all colors add up to 100%.
+
+  Please note that the first input field in each color definition sets the width of the area with only one color. The second input box defines the margin to the next color. This is the width of the area with the "color transition". When `equidistant colors` colors is checked, reduce the value for `monochrome color width` to receive a wider field of bicolor sections.
+  {: .notice--info}
+
+  ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
+
+  ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
 
 
 ## Cut Satin Column

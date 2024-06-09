@@ -77,27 +77,41 @@ Si vous voyez quelque chose comme le dessin ci-dessous, vous avez probablement c
 
 ## Satin Multicolore {#multicolor-satin}
 
-`Outils: Satin>Satin Multicolore` 
-
 Cette extension crée des copies des satins  sélectionnés pour imiter une colone satin multicolore.
 ![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
 
+Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin.md), si vous souhaitez comprendre comment cette extension fonctionne.
+
+### Usage
+
 * Sélectionnez  une ou plusieurs colonnes satin
 * `Extensions > Ink/Stitch > Outils: Satin > Satin Multicolore`
-* Dans l'onglet 'Colorer' il  est possible de 
-  - Choisir si les couleurs sont équidistantes ou si elles ont des largeurs différentes. Si la case est décochée  il  devient possible de choisir individuellement la largeur de chaque couleur **ET** d'ajouter une zone où deux couleurs se  mélangent.
-  - Ajouter un  dépassement à gauche  (en pourcentage)
-  - Ajouter un dépassement à droite (en pourcentage)
-  - Ajouter des couleurs
+* Set the desired options dans l'onglet `Colorer`
+* Click on `Apply`
 
-    Please note that the first input field in each color definition sets the width of the area with only one color. The second input box defines the margin to the next color. This is the width of the area with the "color transition". When `equidistant colors` colors is checked, reduce the value for `monochrome color width` to receive a wider field of bicolor sections.
-    {: .notice--info}
+## Options
 
-    ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
+* Choisir si les couleurs sont équidistantes ou si elles ont des largeurs différentes.
 
-    ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
+  If checked the color width and margins are defined for all colors by the `monochrome color width` value.
 
-Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin.md), si vous souhaitez comprendre comment cette extension fonctionne.
+  Si la case est décochée il devient possible de choisir individuellement la largeur de chaque couleur **ET** d'ajouter une zone où deux couleurs se mélangent.
+* Ajouter un  dépassement à gauche  (en pourcentage)
+
+  Adds a jagged edge to the left side of the satin
+* Ajouter un dépassement à droite (en pourcentage)
+
+  Adds a jagged edge to the right side of the satin
+* Ajouter des couleurs
+
+  Width values are given in percentages. Make sure all numbers for all colors add up to 100%.
+
+  Please note that the first input field in each color definition sets the width of the area with only one color. The second input box defines the margin to the next color. This is the width of the area with the "color transition". When `equidistant colors` colors is checked, reduce the value for `monochrome color width` to receive a wider field of bicolor sections.
+  {: .notice--info}
+
+  ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
+
+  ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
 
 
 ## Scinder une colonne Satin
