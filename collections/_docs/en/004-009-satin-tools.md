@@ -101,7 +101,7 @@ If you want to understand how this extension works internally, [read this](/tuto
 
 ### Options
 
-* 
+* Equidistant colors
 
   Choose  if the colors  are equidistant or not.
 
