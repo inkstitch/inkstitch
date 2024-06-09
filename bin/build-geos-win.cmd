@@ -11,7 +11,7 @@ curl -L -O  https://github.com/libgeos/geos/releases/download/3.12.2/geos-3.12.2
 7z x geos-3.12.2.tar
 
 cd geos-3.12.2
-cmake -S . -B _build -G "Visual Studio 17 2022" -A %BUILDFLAG% -DCMAKE_INSTALL_PREFIX=%GEOS_INSTALL% -DCMAKE_GENERATOR_TOOLSET=host=x64
+cmake -S . -B _build -G "Visual Studio 16 2019" -A %BUILDFLAG% -DCMAKE_INSTALL_PREFIX=%GEOS_INSTALL% -DCMAKE_GENERATOR_TOOLSET=host=x64
 
 cmake --build _build --config Release -j 16 --verbose
 cd _build
