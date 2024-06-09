@@ -9,7 +9,8 @@ image: /assets/images/tutorials/samples/PuffRegular.svg
 
 tutorial-typ:
   - Beispieldatei
-stichart: Satinstich
+stichart:
+  - Satinstich
 techniken:
   - Puffy
 schwierigkeitsgrad: 

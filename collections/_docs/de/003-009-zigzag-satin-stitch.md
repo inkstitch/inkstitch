@@ -52,6 +52,6 @@ Die Parametereinstellungen der Unterlagen unterscheiden sich nicht zu den [Param
 
 ## Beispieldateien die Zigzag Satin stitch enthalten
 
-{% include tutorials/tutorial_list key="stitch-type" value="zigzag-satin-stitch" %}
+{% include tutorials/tutorial_list key="stichart" value="Zick-Zack Satin" %}
 
 

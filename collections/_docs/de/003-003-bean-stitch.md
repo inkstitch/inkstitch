@@ -1,5 +1,5 @@
 ---
-title: "Mehrfach Geradstich"
+title: "Mehrfachgeradstich"
 permalink: /de/docs/stitches/bean-stitch/
 last_modified_at: 2024-05-07
 toc: true

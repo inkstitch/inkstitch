@@ -8,9 +8,9 @@ image: "/assets/images/tutorials/tutorial-preview-images/ripple-iris.jpg"
 tutorial-typ:
   - Beispieldatei
 stichart:
-  - Ripple Stich
+  - Ripplestich
   - Satinstich
-  - Mehrfach-Geradstich
+  - Mehrfachgeradstich
 techniken:
 schwierigkeitsgrad:
 ---

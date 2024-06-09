@@ -8,7 +8,7 @@ image: "/assets/images/tutorials/tutorial-preview-images/ripple_monochrome.jpg"
 tutorial-typ:
   - Beispieldatei
 stichart:
-  - Ripple-Stich
+  - Ripplestich
   - Konturfüllung
 techniken:
 schwierigkeitsgrad: 

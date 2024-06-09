@@ -8,7 +8,7 @@ image: "/assets/images/tutorials/tutorial-preview-images/meandering_writing.jpg"
 tutorial-typ:
   - Text
 stichart:
-  - "Mäanderfüllung Fill"
+  - "Mäanderfüllung"
   - "Mehrfachgeradstich"
 techniken:
 schwierigkeitsgrad:

@@ -11,7 +11,7 @@ tutorial-typ:
 stichart: 
   - Satin Stitch
 techniken:
-   -Lettering
+   - Lettering
 field-of-use:
 schwierigkeitsgrad: 
 ---

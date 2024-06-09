@@ -7,7 +7,9 @@ excerpt: "Mehrfarbige Satinsäulen simulieren"
 image: "assets/images/tutorials/multicolor_satin/snake.jpg"
 tutorial-typ:
   - Text
-stitch-type: 
+werkzeug:
+  - Satin
+stichart: 
   - Satinstich
 techniques:
 field-of-use:

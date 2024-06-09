@@ -7,11 +7,11 @@ excerpt: "So machst du deine Tartan-Schrift nutzerfreundlicher"
 image: "/assets/images/tutorials/tutorial-preview-images/make_tartan_font_easier.jpg"
 tutorial-typ:
   - Beispieldatei
-stitch-type:
-  - "Tartanfüllung"
-  - "Lineare Farbverlaufsfüllung"
-techniques:
-tool:
+stichart:
+  - Tartanfüllung
+  - Lineare Farbverlaufsfüllung
+techniken:
+werkzeug:
   - "Füllung"
 field-of-use:
 user-level:

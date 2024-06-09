@@ -8,7 +8,7 @@ image: "/assets/images/tutorials/samples/paon.svg"
 tutorial-typ:
   - Beispieldatei
 stichart:
-  - Ripple Stich
+  - Ripplestich
   - Kurvenfüllung
 techniken:
 schwierigkeitsgrad: 

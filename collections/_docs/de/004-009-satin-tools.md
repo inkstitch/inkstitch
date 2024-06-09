@@ -187,4 +187,4 @@ Wenn dein Ergebnis in etwa so aussieht wie auf dem Bild unten, hast du wahrschei
 
 ## Tutorials zu Satinwerkzeugen
 
-{% include tutorials/tutorial_list key="tool" value="Satin" %}
+{% include tutorials/tutorial_list key="Werkzeug" value="Satin" %}

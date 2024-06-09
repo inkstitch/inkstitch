@@ -57,4 +57,4 @@ Die Unterlage nutzt den Stickwinkel der in den [Parametern der Unterlage](/de/do
 
 ## Beispieldateien mit Tartanfüllung
 
-{% include tutorials/tutorial_list key="stitch-type" value="Tartanfüllung" %}
+{% include tutorials/tutorial_list key="stichart" value="Tartanfüllung" %}

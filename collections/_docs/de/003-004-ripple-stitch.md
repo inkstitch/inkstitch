@@ -1,5 +1,5 @@
 ---
-title: "Ripple Stich"
+title: "Ripplestich"
 permalink: /de/docs/stitches/ripple-stitch/
 last_modified_at: 2024-04-28
 toc: true
@@ -117,4 +117,4 @@ Stopp                          | ☑  oder ▢| Stoppt die Maschine nachdem dies
 
 ### Beispieldateien mit Ripple Stitch
 
-{% include tutorials/tutorial_list key="stitch-type" value="Ripple Stitch" %}
+{% include tutorials/tutorial_list key="stichart" value="Ripplestich" %}

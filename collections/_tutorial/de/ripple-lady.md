@@ -8,9 +8,8 @@ image: "/assets/images/tutorials/samples/ripple-lady.svg"
 tutorial-typ:
   - Beispieldatei
 stichart:
-  - Ripple-Stich
-  - Muster-Stich
-  - Mehrfach-Geradstich
+  - Ripplestich
+  - Mehrfachgeradstich
 techniken:
 schwierigkeitsgrad: 
 ---

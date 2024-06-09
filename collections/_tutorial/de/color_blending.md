@@ -1,5 +1,5 @@
 ---
-title: Color Blending
+title: Farbübergänge
 permalink: /de/tutorials/color-blending/
 last_modified_at: 2024-05-23
 language: de
@@ -11,6 +11,7 @@ tutorial-typ:
   - Beispieldatei
 stichart: 
   - Füllstich
+  - Lineare Farbverlaufsfüllung
 techniken:
 schwierigkeitsgrad:
 ---

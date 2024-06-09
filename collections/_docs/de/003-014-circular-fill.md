@@ -66,4 +66,4 @@ Die Unterlage der Spiralfüllung ist keine Spirale, sondern nutzt den Stichwinke
 
 ## Beispieldateien mit Spiralfüllung
 
-{% include tutorials/tutorial_list key="stitch-type" value="Spiralfüllung" %}
+{% include tutorials/tutorial_list key="stichart" value="Spiralfüllung" %}

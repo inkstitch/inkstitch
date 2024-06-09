@@ -7,7 +7,7 @@ excerpt: "Der Katzenkörper ist eine Meanderfüllung mit Zick-Zack-Stich"
 image: "/assets/images/docs/zigzagmeander_grumpycat.jpg"
 tutorial-typ:
   - Beispieldatei
-stitch-type:
+stichart:
   - "Mäanderfüllung"
 ---
 
