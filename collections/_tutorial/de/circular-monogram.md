@@ -10,7 +10,7 @@ tutorial-typ:
 stichart:
   - Spiralfüllung
 werkzeug:
-  - Füllung
+  - Satin
   - Linie
 ---
 ![Stickerei](/assets/images/tutorials/tutorial-preview-images/circular_monogram.jpg)
