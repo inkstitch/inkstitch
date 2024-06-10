@@ -229,3 +229,5 @@ developers:
     url: /fr/statistics/
   - title: Espace de nommage
     url: /fr/developers/inkstitch/namespace/
+  - title: Git et GitHub
+    url: /fr/developers/git/

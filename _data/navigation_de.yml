@@ -229,3 +229,5 @@ developers:
     url: /de/statistics/
   - title: Namespace
     url: /de/developers/inkstitch/namespace/
+  - title: Git und GitHub
+    url: /de/developers/git/
