@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-10 01:13+0000\n"
-"PO-Revision-Date: 2024-06-10 01:14\n"
+"PO-Revision-Date: 2024-06-11 01:12\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1396,11 +1396,11 @@ msgstr "Étend la forme avant le remplissage pour éviter les trous entre les fo
 
 #: lib/elements/fill_stitch.py:280
 msgid "Gap Filling"
-msgstr ""
+msgstr "Boucher les espaces entre sections"
 
 #: lib/elements/fill_stitch.py:281
 msgid "Add extra rows to compensate for gaps between sections caused by distortion.Rows are always added in pairs, so this number will be rounded up to the nearest multiple of 2."
-msgstr ""
+msgstr "Ajoute des rangées supplémentaires pour compenser les espaces entre les sections causés par la distorsion. Les rangées sont toujours ajoutées par paires donc ce nombre sera arrondi au nombre pair le plus proche."
 
 #: lib/elements/fill_stitch.py:293 lib/elements/fill_stitch.py:306
 #: lib/gui/tartan/embroidery_panel.py:35
@@ -1702,19 +1702,19 @@ msgstr "Chaque traverse de direction doit couper chacun des deux rails une fois.
 
 #: lib/elements/satin_column.py:52
 msgid "Rail is a closed path"
-msgstr ""
+msgstr "Le rail est un chemin fermé"
 
 #: lib/elements/satin_column.py:53
 msgid "Rail is a closed path without a definite starting and ending point."
-msgstr ""
+msgstr "Le rail est un chemin fermé sans définition d'un point de départ et d'arrivée."
 
 #: lib/elements/satin_column.py:55
 msgid "* Select the node where you want the satin to start."
-msgstr ""
+msgstr "* Sélectionnez le point d'où vous voulez que le satin démarre."
 
 #: lib/elements/satin_column.py:56
 msgid "* Click on: Break path at selected nodes."
-msgstr ""
+msgstr "* Cliquez sur : Briser le chemin aux nœuds sélectionnés."
 
 #: lib/elements/satin_column.py:61
 msgid "Rung doesn't intersect rails"
