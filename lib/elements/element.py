@@ -3,12 +3,14 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import sys
+import time
 from contextlib import contextmanager
 from copy import deepcopy
 
 import inkex
 import numpy as np
 from inkex import bezier, BaseElement
+from typing import List
 
 from ..commands import find_commands
 from ..debug.debug import debug
@@ -23,6 +25,7 @@ from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import Point, cache
 from ..utils.cache import get_stitch_plan_cache, is_cache_disabled, CacheKeyGenerator
+from ..stitch_plan import StitchGroup
 
 
 class Param(object):
@@ -495,7 +498,7 @@ class EmbroideryElement(object):
 
         return lock_start, lock_end
 
-    def to_stitch_groups(self, last_stitch_group):
+    def to_stitch_groups(self, last_stitch_group: StitchGroup) -> List[StitchGroup]:
         raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
     @debug.time
@@ -590,6 +593,7 @@ class EmbroideryElement(object):
         return cache_key
 
     def embroider(self, last_stitch_group):
+        start = time.monotonic()
         debug.log(f"starting {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
 
         with self.handle_unexpected_exceptions():
@@ -615,7 +619,8 @@ class EmbroideryElement(object):
 
                 self._save_cached_stitch_groups(stitch_groups, previous_stitch)
 
-        debug.log(f"ending {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
+        duration = time.monotonic() - start
+        debug.log(f"ending {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)} ({duration}s)")
         return stitch_groups
 
     def fatal(self, message, point_to_troubleshoot=False):

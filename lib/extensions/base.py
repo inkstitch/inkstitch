@@ -7,6 +7,8 @@ import os
 
 import inkex
 from lxml.etree import Comment
+from multiprocessing import Pool
+from typing import List, Tuple
 
 from ..commands import is_command, layer_commands
 from ..elements import EmbroideryElement, nodes_to_elements
@@ -19,6 +21,8 @@ from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
                         NOT_EMBROIDERABLE_TAGS, SVG_CLIPPATH_TAG, SVG_DEFS_TAG,
                         SVG_GROUP_TAG, SVG_MASK_TAG)
 from ..update import update_inkstitch_document
+from ..stitch_plan import StitchGroup
+from ..debug.debug import debug
 
 
 class InkstitchExtension(inkex.EffectExtension):
@@ -123,17 +127,62 @@ class InkstitchExtension(inkex.EffectExtension):
             self.no_elements_error()
         return False
 
-    def elements_to_stitch_groups(self, elements):
-        stitch_groups = []
-        for element in elements:
-            if stitch_groups:
-                last_stitch_group = stitch_groups[-1]
+    def elements_to_stitch_groups(self, elements: List[EmbroideryElement]) -> List[StitchGroup]:
+        if len(elements) == 0:
+            return []
+
+        # Because the embroidery processeses are implemented largely in python, the best way to get parallelism is multiprocessing
+        # to sidestep the GIL. To make this happen we need to do a little setup.
+
+        # Unfortunately you can't pass inkex/lxml elements to multiprocessing because they aren't pickleable,
+        # and because EmbroideryElement has one of those as a member, it in turn is not pickleable.
+        # To get around this, we give the xml document to each worker thread, and pass each element as a tuple
+        # of (xpath to the element, element class) so it can be instantiated in the worker thread.
+        def serialize_element(e):
+            return (self.svg.getroottree().getpath(e.node), e.__class__)
+
+        # We want to embroider each element as a seperate parallelizable task, but some elements (notably, fills with no user-defined
+        # start command) are dependent on the last stitch location of the previous element. As such, we instead break the
+        # list of elements into "chains" of elements which are dependent on the element before them (based on uses_previous_stitch).
+        chains = []
+        g = [serialize_element(elements[0])]
+        for element in elements[1:]:
+            if element.uses_previous_stitch():
+                g.append(serialize_element(element))
             else:
-                last_stitch_group = None
+                chains.append(g)
+                g = [serialize_element(element)]
 
-            stitch_groups.extend(element.embroider(last_stitch_group))
+        chains.append(g)
+        debug.log(f"Multiprocessing: Elements: {len(elements)} Chain count: {len(chains)} Max chain size: {max(len(c) for c in chains)}")
 
-        return stitch_groups
+        svg_str = self.svg.tostring()
+
+        if len(chains) > 1:
+            # Embroider each chain of independent elements in a seperate task: See mp_init and mp_chain_to_stitch_groups below
+            with Pool(None, initializer=mp_init, initargs=[svg_str]) as p:
+                # Chunk size 1 is usually ill-advised, but the amount of work each of these groups can vary wildly
+                # depending on what elements they get, so it makes sense to keep the chunk size at 1 and have the
+                # pool take elements one at a time rather than have threads stay idle
+                stitch_group_chunks = p.map(mp_chain_to_stitch_groups, chains, 1)
+
+            stitch_groups = []
+            for chunk in stitch_group_chunks:
+                stitch_groups.extend(chunk)
+
+            return stitch_groups
+        else:
+            # If there are no truly independent stitch groups, just do it single-threaded to save on pool init/teardown.
+            stitch_groups = []
+            for element in elements:
+                if stitch_groups:
+                    last_stitch_group = stitch_groups[-1]
+                else:
+                    last_stitch_group = None
+
+                stitch_groups.extend(element.embroider(last_stitch_group))
+
+            return stitch_groups
 
     def get_inkstitch_metadata(self):
         return InkStitchMetadata(self.svg)
@@ -146,3 +195,34 @@ class InkstitchExtension(inkex.EffectExtension):
     def uniqueId(self, prefix, make_new_id=True):
         """Override inkex.Effect.uniqueId with a nicer naming scheme."""
         return generate_unique_id(self.document, prefix)
+
+# Multiprocessing methods, which need to be declared as top-level functions for the multiprocessing library
+def mp_init(svg_str: str):
+    """
+    An init function called by each multiprocessing worker.
+    Takes the SVG document as a string, and parses it to make it available for the worker tasks.
+    """
+    # The only real way to have multiprocessing tasks read something like this once is to make it a global.
+    # Don't worry, it's only set as a global in the worker processes, not the main process...
+    global doc
+    doc = inkex.load_svg(svg_str)
+
+def mp_chain_to_stitch_groups(elements: List[Tuple[str, type]]) -> List[StitchGroup]:
+    """
+    Returns a list of stitch groups given a set of embroidery elements (which depend on each other).
+    Requires that the pool was passed mp_init as an initializer function.
+    """
+    global doc
+
+    stitch_groups = []
+    for path, cls in elements:
+        if stitch_groups:
+            last_stitch_group = stitch_groups[-1]
+        else:
+            last_stitch_group = None
+
+        element = cls(doc.xpath(path)[0])
+
+        stitch_groups.extend(element.embroider(last_stitch_group))
+
+    return stitch_groups

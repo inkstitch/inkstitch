@@ -1,4 +1,4 @@
-__pycache__
+_pycache__
 *.swp
 *.kate-swp
 *.pyc
@@ -33,3 +33,4 @@ logs/
 /DEBUG
 /PROFILE
 /profile*
+node_modules
