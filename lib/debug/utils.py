@@ -217,6 +217,8 @@ def profile(profiler_type, profile_dir: Path, ini: dict, extension, remaining_ar
         with_profile(extension, remaining_args, profile_file_path)
     elif profiler_type == 'pyinstrument':
         with_pyinstrument(extension, remaining_args, profile_file_path)
+    elif profiler_type == 'time':
+        with_time(extension, remaining_args, profile_file_path)
     else:
         raise ValueError(f"unknown profiler type: '{profiler_type}'")
 
@@ -276,3 +278,17 @@ def with_pyinstrument(extension, remaining_args, profile_file_path: Path):
     with open(profile_file_path, 'w') as stats_file:
         stats_file.write(profiler.output_html())
     print(f"Profiler: pyinstrument, stats written to '{profile_file_path.name}'. Use browser to see it.", file=sys.stderr)
+
+def with_time(extension, remaining_args, profile_file_path: Path):
+    '''
+    'Profile' by logging elapsed wall and CPU time.
+    '''
+    import time
+    start_wall = time.perf_counter()
+    start_proc = time.process_time()
+
+    extension.run(args=remaining_args)
+
+    duration_wall = time.perf_counter() - start_wall
+    duration_proc = time.process_time() - start_proc
+    print(f"Profiler: wall {duration_wall}s, proc {duration_proc}s", file=sys.stderr)
