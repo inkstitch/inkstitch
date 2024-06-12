@@ -18,6 +18,8 @@ from lib.utils.threading import ExitThread
 
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
+from .simulator_preferences import SimulatorPreferenceDialog
+from wx.lib.scrolledpanel import ScrolledPanel
 
 # L10N command label at bottom of simulator window
 COMMAND_NAMES = [_("STITCH"), _("JUMP"), _("TRIM"), _("STOP"), _("COLOR CHANGE")]
@@ -91,10 +93,6 @@ class ControlPanel(wx.Panel):
         self.btnRestart.Bind(wx.EVT_BUTTON, self.animation_restart)
         self.btnRestart.SetBitmap(self.load_icon('restart'))
         self.btnRestart.SetToolTip(_('Restart (R)'))
-        self.btnNpp = wx.BitmapToggleButton(self, -1, style=self.button_style)
-        self.btnNpp.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
-        self.btnNpp.SetBitmap(self.load_icon('npp'))
-        self.btnNpp.SetToolTip(_('Display needle penetration point (O)'))
         self.slider = SimulatorSlider(self, -1, value=1, minValue=1, maxValue=2)
         self.slider.Bind(wx.EVT_SLIDER, self.on_slider)
         self.stitchBox = IntCtrl(self, -1, value=1, min=1, max=2, limited=True, allow_none=True,
@@ -108,30 +106,6 @@ class ControlPanel(wx.Panel):
         self.totalstitchText = wx.StaticText(self, -1, label="")
         extent = self.totalstitchText.GetTextExtent("0000000")
         self.totalstitchText.SetMinSize(extent)
-        self.btnJump = wx.BitmapToggleButton(self, -1, style=self.button_style)
-        self.btnJump.SetToolTip(_('Show jump stitches'))
-        self.btnJump.SetBitmap(self.load_icon('jump'))
-        self.btnJump.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('jump', event))
-        self.btnTrim = wx.BitmapToggleButton(self, -1, style=self.button_style)
-        self.btnTrim.SetToolTip(_('Show trims'))
-        self.btnTrim.SetBitmap(self.load_icon('trim'))
-        self.btnTrim.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('trim', event))
-        self.btnStop = wx.BitmapToggleButton(self, -1, style=self.button_style)
-        self.btnStop.SetToolTip(_('Show stops'))
-        self.btnStop.SetBitmap(self.load_icon('stop'))
-        self.btnStop.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('stop', event))
-        self.btnColorChange = wx.BitmapToggleButton(self, -1, style=self.button_style)
-        self.btnColorChange.SetToolTip(_('Show color changes'))
-        self.btnColorChange.SetBitmap(self.load_icon('color_change'))
-        self.btnColorChange.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('color_change', event))
-        self.btnBackgroundColor = wx.ColourPickerCtrl(self, -1, colour='white', size=((40, -1)))
-        self.btnBackgroundColor.SetToolTip(_("Change background color"))
-        self.btnBackgroundColor.Bind(wx.EVT_COLOURPICKER_CHANGED, self.on_update_background_color)
-        if self.detach_callback:
-            self.btnDetachSimulator = wx.BitmapButton(self, -1, style=self.button_style)
-            self.btnDetachSimulator.SetToolTip(_('Detach/attach simulator window'))
-            self.btnDetachSimulator.SetBitmap(self.load_icon('detach_window'))
-            self.btnDetachSimulator.Bind(wx.EVT_BUTTON, lambda event: self.detach_callback())
 
         # Layout
         self.hbSizer1 = wx.BoxSizer(wx.HORIZONTAL)
@@ -153,20 +127,6 @@ class ControlPanel(wx.Panel):
         self.controls_sizer.Add((1, 1), 1)
         self.controls_sizer.Add(self.controls_inner_sizer, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
         self.controls_sizer.Add((1, 1), 1)
-
-        self.show_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Show")), wx.HORIZONTAL)
-        self.show_inner_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.show_inner_sizer.Add(self.btnNpp, 0, wx.ALL, 2)
-        self.show_inner_sizer.Add(self.btnJump, 0, wx.ALL, 2)
-        self.show_inner_sizer.Add(self.btnTrim, 0, wx.ALL, 2)
-        self.show_inner_sizer.Add(self.btnStop, 0, wx.ALL, 2)
-        self.show_inner_sizer.Add(self.btnColorChange, 0, wx.ALL, 2)
-        self.show_inner_sizer.Add(self.btnBackgroundColor, 0, wx.EXPAND | wx.ALL, 2)
-        if self.detach_callback:
-            self.show_inner_sizer.Add(self.btnDetachSimulator, 0, wx.ALL, 2)
-        self.show_sizer.Add((1, 1), 1)
-        self.show_sizer.Add(self.show_inner_sizer, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
-        self.show_sizer.Add((1, 1), 1)
 
         self.speed_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Speed")), wx.VERTICAL)
 
@@ -191,51 +151,11 @@ class ControlPanel(wx.Panel):
         self.control_row2_sizer.AddGrowableCol(2)
         self.control_row2_sizer.Add(self.controls_sizer, 0, wx.EXPAND)
         self.control_row2_sizer.Add(self.speed_sizer, 0, wx.EXPAND)
-        self.control_row2_sizer.Add(self.show_sizer, 0, wx.EXPAND)
 
         self.vbSizer = vbSizer = wx.BoxSizer(wx.VERTICAL)
         vbSizer.Add(self.hbSizer1, 1, wx.EXPAND | wx.ALL, 10)
         vbSizer.Add(self.control_row2_sizer, 0, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 10)
         self.SetSizerAndFit(vbSizer)
-
-        # Keyboard Shortcuts
-        shortcut_keys = [
-            (wx.ACCEL_NORMAL, wx.WXK_RIGHT, self.animation_forward),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_RIGHT, self.animation_forward),
-            (wx.ACCEL_NORMAL, wx.WXK_LEFT, self.animation_reverse),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_LEFT, self.animation_reverse),
-            (wx.ACCEL_NORMAL, wx.WXK_UP, self.animation_speed_up),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.animation_speed_up),
-            (wx.ACCEL_NORMAL, wx.WXK_DOWN, self.animation_slow_down),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_DOWN, self.animation_slow_down),
-            (wx.ACCEL_NORMAL, ord('+'), self.animation_one_stitch_forward),
-            (wx.ACCEL_NORMAL, ord('='), self.animation_one_stitch_forward),
-            (wx.ACCEL_SHIFT, ord('='), self.animation_one_stitch_forward),
-            (wx.ACCEL_NORMAL, wx.WXK_ADD, self.animation_one_stitch_forward),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_ADD, self.animation_one_stitch_forward),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.animation_one_stitch_forward),
-            (wx.ACCEL_NORMAL, ord('-'), self.animation_one_stitch_backward),
-            (wx.ACCEL_NORMAL, ord('_'), self.animation_one_stitch_backward),
-            (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, self.animation_one_stitch_backward),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.animation_one_stitch_backward),
-            (wx.ACCEL_NORMAL, ord('r'), self.animation_restart),
-            (wx.ACCEL_NORMAL, ord('o'), self.on_toggle_npp_shortcut),
-            (wx.ACCEL_NORMAL, ord('p'), self.play_or_pause),
-            (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.play_or_pause),
-            (wx.ACCEL_NORMAL, wx.WXK_PAGEDOWN, self.animation_one_command_backward),
-            (wx.ACCEL_NORMAL, wx.WXK_PAGEUP, self.animation_one_command_forward),
-
-        ]
-
-        self.accel_entries = []
-
-        for shortcut_key in shortcut_keys:
-            eventId = wx.NewIdRef()
-            self.accel_entries.append((shortcut_key[0], shortcut_key[1], eventId))
-            self.Bind(wx.EVT_MENU, shortcut_key[2], id=eventId)
-
-        self.accel_table = wx.AcceleratorTable(self.accel_entries)
-        self.SetAcceleratorTable(self.accel_table)
 
         # wait for layouts so that panel size is set
         if self.stitch_plan:
@@ -299,19 +219,6 @@ class ControlPanel(wx.Panel):
         icon.Rescale(self.button_size, self.button_size, wx.IMAGE_QUALITY_HIGH)
         return icon.ConvertToBitmap()
 
-    def on_marker_button(self, marker_type, event):
-        self.slider.enable_marker_list(marker_type, event.GetEventObject().GetValue())
-        if marker_type == 'jump':
-            self.drawing_panel.Refresh()
-
-    def on_update_background_color(self, event):
-        self.set_background_color(event.Colour)
-
-    def set_background_color(self, color):
-        self.btnBackgroundColor.SetColour(color)
-        self.drawing_panel.SetBackgroundColour(color)
-        self.drawing_panel.Refresh()
-
     def choose_speed(self):
         if self.target_duration:
             self.set_speed(int(self.num_stitches / float(self.target_duration)))
@@ -365,11 +272,11 @@ class ControlPanel(wx.Panel):
 
     def on_stitch_box_focus(self, event):
         self.animation_pause()
-        self.SetAcceleratorTable(wx.AcceleratorTable([]))
+        self.parent.SetAcceleratorTable(wx.AcceleratorTable([]))
         event.Skip()
 
     def on_stitch_box_focusout(self, event):
-        self.SetAcceleratorTable(self.accel_table)
+        self.parent.SetAcceleratorTable(self.parent.accel_table)
         stitch = self.stitchBox.GetValue()
         # We now want to remove the focus from the stitchBox.
         # In Windows it won't work if we set focus to self.parent, while setting the focus to the
@@ -453,12 +360,123 @@ class ControlPanel(wx.Panel):
     def animation_restart(self, event):
         self.drawing_panel.restart()
 
+
+class ViewPanel(ScrolledPanel):
+    """"""
+
+    @debug.time
+    def __init__(self, parent, detach_callback):
+        """"""
+        self.parent = parent
+        self.detach_callback = detach_callback
+        ScrolledPanel.__init__(self, parent)
+        self.SetupScrolling(scroll_y=True, scroll_x=False)
+
+        self.button_style = wx.BU_EXACTFIT | wx.BU_NOTEXT
+
+        self.control_panel = parent.cp
+        self.line_width = 0.1
+        self.npp_size = 0.5
+
+        self.btnNpp = wx.BitmapToggleButton(self, -1, style=self.button_style)
+        self.btnNpp.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
+        self.btnNpp.SetBitmap(self.control_panel.load_icon('npp'))
+        self.btnNpp.SetToolTip(_('Display needle penetration point (O)'))
+        self.btnJump = wx.BitmapToggleButton(self, -1, style=self.button_style)
+        self.btnJump.SetToolTip(_('Show jump stitches'))
+        self.btnJump.SetBitmap(self.control_panel.load_icon('jump'))
+        self.btnJump.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('jump', event))
+        self.btnTrim = wx.BitmapToggleButton(self, -1, style=self.button_style)
+        self.btnTrim.SetToolTip(_('Show trims'))
+        self.btnTrim.SetBitmap(self.control_panel.load_icon('trim'))
+        self.btnTrim.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('trim', event))
+        self.btnStop = wx.BitmapToggleButton(self, -1, style=self.button_style)
+        self.btnStop.SetToolTip(_('Show stops'))
+        self.btnStop.SetBitmap(self.control_panel.load_icon('stop'))
+        self.btnStop.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('stop', event))
+        self.btnColorChange = wx.BitmapToggleButton(self, -1, style=self.button_style)
+        self.btnColorChange.SetToolTip(_('Show color changes'))
+        self.btnColorChange.SetBitmap(self.control_panel.load_icon('color_change'))
+        self.btnColorChange.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('color_change', event))
+
+        self.btnBackgroundColor = wx.ColourPickerCtrl(self, -1, colour='white', size=((40, -1)))
+        self.btnBackgroundColor.SetToolTip(_("Change background color"))
+        self.btnBackgroundColor.Bind(wx.EVT_COLOURPICKER_CHANGED, self.on_update_background_color)
+
+        self.btnSettings = wx.BitmapButton(self, -1, style=self.button_style)
+        self.btnSettings.SetToolTip(_('Open settings dialog'))
+        self.btnSettings.SetBitmap(self.control_panel.load_icon('settings'))
+        self.btnSettings.Bind(wx.EVT_BUTTON, self.on_settings_button)
+
+        if self.detach_callback:
+            self.btnDetachSimulator = wx.BitmapButton(self, -1, style=self.button_style)
+            self.btnDetachSimulator.SetToolTip(_('Detach/attach simulator window'))
+            self.btnDetachSimulator.SetBitmap(self.control_panel.load_icon('detach_window'))
+            self.btnDetachSimulator.Bind(wx.EVT_BUTTON, lambda event: self.control_panel.detach_callback())
+
+        outer_sizer = wx.BoxSizer(wx.VERTICAL)
+
+        show_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Show")), wx.VERTICAL)
+        show_inner_sizer = wx.BoxSizer(wx.VERTICAL)
+        show_inner_sizer.Add(self.btnNpp, 0, wx.ALL, 2)
+        show_inner_sizer.Add(self.btnJump, 0, wx.ALL, 2)
+        show_inner_sizer.Add(self.btnTrim, 0, wx.ALL, 2)
+        show_inner_sizer.Add(self.btnStop, 0, wx.ALL, 2)
+        show_inner_sizer.Add(self.btnColorChange, 0, wx.ALL, 2)
+        show_sizer.Add(0, 2, 0)
+        show_sizer.Add(show_inner_sizer, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.ALL, 2)
+        show_sizer.Add(0, 2, 0)
+        outer_sizer.Add(show_sizer)
+        outer_sizer.Add(0, 10, 0)
+
+        settings_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Settings")), wx.VERTICAL)
+        settings_inner_sizer = wx.BoxSizer(wx.VERTICAL)
+        settings_inner_sizer.Add(self.btnBackgroundColor, 0, wx.EXPAND | wx.ALL, 2)
+        settings_inner_sizer.Add(self.btnSettings, 0, wx.EXPAND | wx.ALL, 2)
+        settings_sizer.Add(0, 2, 0)
+        settings_sizer.Add(settings_inner_sizer, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.ALL, 2)
+        settings_sizer.Add(0, 2, 0)
+        outer_sizer.Add(settings_sizer)
+
+        if self.detach_callback:
+            outer_sizer.Add(0, 10, 0)
+            outer_sizer.Add(self.btnDetachSimulator, 0, wx.ALL, 2)
+
+        self.SetSizerAndFit(outer_sizer)
+
+    def set_drawing_panel(self, drawing_panel):
+        self.drawing_panel = drawing_panel
+
+    def on_update_background_color(self, event):
+        self.set_background_color(event.Colour)
+
+    def set_background_color(self, color):
+        self.btnBackgroundColor.SetColour(color)
+        self.drawing_panel.SetBackgroundColour(color)
+        self.drawing_panel.Refresh()
+
     def on_toggle_npp_shortcut(self, event):
         self.btnNpp.SetValue(not self.btnNpp.GetValue())
         self.toggle_npp(event)
 
     def toggle_npp(self, event):
         self.drawing_panel.Refresh()
+
+    def on_marker_button(self, marker_type, event):
+        self.control_panel.slider.enable_marker_list(marker_type, event.GetEventObject().GetValue())
+        if marker_type == 'jump':
+            self.drawing_panel.Refresh()
+
+    def on_settings_button(self, event):
+        settings_dialog = SimulatorPreferenceDialog(self)
+
+        if settings_dialog.ShowModal() == wx.ID_OK:
+            settings_dialog.ShowModal()
+
+        self.drawing_panel.update_pen_size()
+        self.drawing_panel.Refresh()
+
+        settings_dialog.Destroy()
 
 
 class DrawingPanel(wx.Panel):
@@ -476,12 +494,16 @@ class DrawingPanel(wx.Panel):
     # Line width in pixels.
     LINE_THICKNESS = 0.4
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, parent, *args, **kwargs):
         """"""
+        self.parent = parent
         self.stitch_plan = kwargs.pop('stitch_plan', None)
-        self.control_panel = kwargs.pop('control_panel')
         kwargs['style'] = wx.BORDER_SUNKEN
-        wx.Panel.__init__(self, *args, **kwargs)
+
+        wx.Panel.__init__(self, parent, *args, **kwargs)
+
+        self.control_panel = parent.cp
+        self.view_panel = parent.vp
 
         # Drawing panel can really be any size, but without this wxpython likes
         # to allow the status bar and control panel to get squished.
@@ -642,7 +664,7 @@ class DrawingPanel(wx.Panel):
         canvas.EndLayer()
 
     def draw_stitch_lines(self, canvas, pen, stitches, jumps):
-        render_jumps = self.control_panel.btnJump.GetValue()
+        render_jumps = self.view_panel.btnJump.GetValue()
         if render_jumps:
             canvas.StrokeLines(stitches)
         else:
@@ -652,8 +674,8 @@ class DrawingPanel(wx.Panel):
                     canvas.StrokeLines(block)
 
     def draw_needle_penetration_points(self, canvas, pen, stitches):
-        if self.control_panel.btnNpp.GetValue():
-            npp_pen = wx.Pen(pen.GetColour(), width=int(0.5 * PIXELS_PER_MM * self.PIXEL_DENSITY))
+        if self.view_panel.btnNpp.GetValue():
+            npp_pen = wx.Pen(pen.GetColour(), width=int(self.view_panel.npp_size * PIXELS_PER_MM * self.PIXEL_DENSITY))
             canvas.SetPen(npp_pen)
             canvas.StrokeLineSegments(stitches, [(stitch[0] + 0.001, stitch[1]) for stitch in stitches])
 
@@ -708,7 +730,11 @@ class DrawingPanel(wx.Panel):
         # We draw the thread with a thickness of 0.1mm.  Real thread has a
         # thickness of ~0.4mm, but if we did that, we wouldn't be able to
         # see the individual stitches.
-        return wx.Pen(list(map(int, color.visible_on_white.rgb)), int(0.1 * PIXELS_PER_MM * self.PIXEL_DENSITY))
+        return wx.Pen(list(map(int, color.visible_on_white.rgb)), int(self.view_panel.line_width * PIXELS_PER_MM * self.PIXEL_DENSITY))
+
+    def update_pen_size(self):
+        for pen in self.pens:
+            pen.SetWidth(self.view_panel.line_width * PIXELS_PER_MM * self.PIXEL_DENSITY)
 
     def parse_stitch_plan(self, stitch_plan):
         self.pens = []
@@ -1088,19 +1114,71 @@ class SimulatorPanel(wx.Panel):
         """"""
         super().__init__(parent, style=wx.BORDER_SUNKEN)
 
-        self.cp = ControlPanel(self,
-                               stitch_plan=stitch_plan,
-                               stitches_per_second=stitches_per_second,
-                               target_duration=target_duration,
-                               detach_callback=detach_callback)
-        self.dp = DrawingPanel(self, stitch_plan=stitch_plan, control_panel=self.cp)
+        self.cp = ControlPanel(
+            self,
+            stitch_plan=stitch_plan,
+            stitches_per_second=stitches_per_second,
+            target_duration=target_duration,
+            detach_callback=detach_callback
+        )
+
+        self.vp = ViewPanel(
+            self,
+            detach_callback
+        )
+        self.dp = DrawingPanel(self, stitch_plan=stitch_plan)
         self.cp.set_drawing_panel(self.dp)
-        self.cp.set_background_color(wx.Colour(background_color))
+        self.vp.set_drawing_panel(self.dp)
+        self.vp.set_background_color(wx.Colour(background_color))
+
+        dvSizer = wx.BoxSizer(wx.HORIZONTAL)
 
         vbSizer = wx.BoxSizer(wx.VERTICAL)
         vbSizer.Add(self.dp, 1, wx.EXPAND | wx.ALL, 2)
         vbSizer.Add(self.cp, 0, wx.EXPAND | wx.ALL, 2)
-        self.SetSizerAndFit(vbSizer)
+
+        dvSizer.Add(vbSizer, 1, wx.EXPAND | wx.ALL, 2)
+        dvSizer.Add(self.vp, 0, wx.ALL, 2)
+
+        self.SetSizerAndFit(dvSizer)
+
+        # Keyboard Shortcuts
+        shortcut_keys = [
+            (wx.ACCEL_NORMAL, wx.WXK_RIGHT, self.cp.animation_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_RIGHT, self.cp.animation_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_LEFT, self.cp.animation_reverse),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_LEFT, self.cp.animation_reverse),
+            (wx.ACCEL_NORMAL, wx.WXK_UP, self.cp.animation_speed_up),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.cp.animation_speed_up),
+            (wx.ACCEL_NORMAL, wx.WXK_DOWN, self.cp.animation_slow_down),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_DOWN, self.cp.animation_slow_down),
+            (wx.ACCEL_NORMAL, ord('+'), self.cp.animation_one_stitch_forward),
+            (wx.ACCEL_NORMAL, ord('='), self.cp.animation_one_stitch_forward),
+            (wx.ACCEL_SHIFT, ord('='), self.cp.animation_one_stitch_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_ADD, self.cp.animation_one_stitch_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_ADD, self.cp.animation_one_stitch_forward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.cp.animation_one_stitch_forward),
+            (wx.ACCEL_NORMAL, ord('-'), self.cp.animation_one_stitch_backward),
+            (wx.ACCEL_NORMAL, ord('_'), self.cp.animation_one_stitch_backward),
+            (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, self.cp.animation_one_stitch_backward),
+            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_SUBTRACT, self.cp.animation_one_stitch_backward),
+            (wx.ACCEL_NORMAL, ord('r'), self.cp.animation_restart),
+            (wx.ACCEL_NORMAL, ord('p'), self.cp.play_or_pause),
+            (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.cp.play_or_pause),
+            (wx.ACCEL_NORMAL, wx.WXK_PAGEDOWN, self.cp.animation_one_command_backward),
+            (wx.ACCEL_NORMAL, wx.WXK_PAGEUP, self.cp.animation_one_command_forward),
+            (wx.ACCEL_NORMAL, ord('o'), self.vp.on_toggle_npp_shortcut)
+        ]
+
+        self.accel_entries = []
+
+        for shortcut_key in shortcut_keys:
+            eventId = wx.NewIdRef()
+            self.accel_entries.append((shortcut_key[0], shortcut_key[1], eventId))
+            self.Bind(wx.EVT_MENU, shortcut_key[2], id=eventId)
+
+        self.accel_table = wx.AcceleratorTable(self.accel_entries)
+        self.SetAcceleratorTable(self.accel_table)
 
     def go(self):
         self.dp.go()
