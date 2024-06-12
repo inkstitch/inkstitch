@@ -63,4 +63,4 @@ C'est possible à condition que le tri respecte l'ordre  des couleurs de chaque 
 
 {% include folder-galleries path="fonts/magnolia_KOR/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/magnolia_%20KOR/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/magnolia_KOR/LICENSE)
