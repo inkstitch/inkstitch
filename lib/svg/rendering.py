@@ -246,6 +246,10 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True, 
             svg.defs.remove(filter)
 
         filter_document = inkex.load_svg(realistic_filter)
+        # Hack: Remove whitespace text from filter, because otherwise Inkscape will fail to render it
+        for n in filter_document.iter():
+            n.text = None
+
         svg.defs.append(filter_document.getroot())
 
     return layer
