@@ -4,9 +4,12 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import os
+import re
 import sys
 
 import inkex
+from pyembroidery.exceptions import TooManyColorChangesError
+
 import pyembroidery
 
 from .commands import global_command
@@ -111,5 +114,16 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         # L10N low-level file error.  %(error)s is (hopefully?) translated by
         # the user's system automatically.
         msg = _("Error writing to %(path)s: %(error)s") % dict(path=file_path, error=e.strerror)
+        inkex.errormsg(msg)
+        sys.exit(1)
+    except TooManyColorChangesError as e:
+        num_color_changes = re.search("d+", str(e)).group()
+        msg = _("Couldn't save embrodiery file.")
+        msg += '\n\n'
+        msg += _("There are {num_color_changes} in your design. This is way too many.").format(num_color_changes=num_color_changes)
+        msg += '\n'
+        msg += _("Please reduce color changes. Find more information on our website:")
+        msg += '\n\n'
+        msg += _("http://inkstitch.org/docs/faq/#too-many-color-changes")
         inkex.errormsg(msg)
         sys.exit(1)
