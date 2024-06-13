@@ -6,9 +6,9 @@ language: de
 excerpt: "Optimising the stitch path is one of the most important subjects in embroidery. Learn how Ink/Stitch can assist you with the task."
 image: /assets/images/tutorials/routing/routing.png
 
-tutorial-type:
+tutorial-typ:
   - Text
-stitch-type:
+stichart:
   - Füllung
   - Kurvenfüllung
   - Spiralfüllung
