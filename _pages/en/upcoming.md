@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-06-05
+last_modified_at: 2024-06-13
 sidebar:
   nav: pages
 toc: true
@@ -240,6 +240,12 @@ Do not split into several parts ([#2418](https://github.com/inkstitch/inkstitch/
 
 * Add glyph filter ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
 
+### [Lettering Along Path](/docs/lettering/#lettering-along-path)
+
+`Lettering along path`
+
+* Remove previous transforms so that it can be adapted to an other (or an updated) path [#2973](https://github.com/inkstitch/inkstitch/pull/2973)
+
 ### [Params](/docs/params/)
 
 `Params`
@@ -383,8 +389,9 @@ to manual stitches and keep previous behavior. [#2866](https://github.com/inksti
 
 ## Bug Fixes
 
-* [#2959](https://github.com/inkstitch/inkstitch/issues/2959) Avoid FloatingPointError for fills
-* [#2954](https://github.com/inkstitch/inkstitch/issues/2954) Avoid FloatingPointError in Autoroute Satin
+* [#2984](https://github.com/inkstitch/inkstitch/issues/2984) improve error message for files with too many color changes
+* [#2974](https://github.com/inkstitch/inkstitch/issues/2974) Remove simulator fragments on resize
+* [#2969](https://github.com/inkstitch/inkstitch/issues/2969) Improve simulator dark theme
 * [#2924](https://github.com/inkstitch/inkstitch/issues/2924) Fix print pdf for grouped objects without a layer
 * [#2918](https://github.com/inkstitch/inkstitch/issues/2918) Filter invalid paths in satins
 * [#2917](https://github.com/inkstitch/inkstitch/issues/2917) Fix zigzag line to satin
