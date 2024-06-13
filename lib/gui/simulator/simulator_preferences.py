@@ -23,7 +23,7 @@ class SimulatorPreferenceDialog(wx.Dialog):
         self.npp_size_value = global_settings['simulator_npp_size']
 
         sizer = wx.BoxSizer(wx.VERTICAL)
-        settings_sizer = wx.FlexGridSizer(2, 2, 10, 10)
+        settings_sizer = wx.FlexGridSizer(2, 2, 5, 5)
         line_width_label = wx.StaticText(self, label=_("Line width (mm)"))
         self.line_width = wx.SpinCtrlDouble(self, min=0.03, max=2, initial=0.1, inc=0.01, style=wx.SP_WRAP | wx.SP_ARROW_KEYS)
         self.line_width.SetDigits(2)
@@ -47,9 +47,9 @@ class SimulatorPreferenceDialog(wx.Dialog):
         button_sizer.Add(btn_cancel, 0, wx.RIGHT, 10)
         button_sizer.Add(btn_apply, 0, wx.RIGHT, 10)
 
-        sizer.Add(settings_sizer)
-        sizer.Add(button_sizer, 0, wx.ALIGN_RIGHT, 0)
-        self.SetSizer(sizer)
+        sizer.Add(settings_sizer, 1, wx.ALL, 10)
+        sizer.Add(button_sizer, 0, wx.ALIGN_RIGHT | wx.ALL, 10)
+        self.SetSizerAndFit(sizer)
 
     def on_change(self, attribute, event):
         global_settings[attribute] = event.EventObject.GetValue()
