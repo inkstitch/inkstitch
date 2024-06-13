@@ -115,5 +115,5 @@ class ViewPanel(ScrolledPanel):
             self.drawing_panel.Refresh()
 
     def on_settings_button(self, event):
-        simulator_panel = SimulatorPreferenceDialog(self)
+        simulator_panel = SimulatorPreferenceDialog(self, title=_('Simulator Preferences'))
         simulator_panel.Show()
