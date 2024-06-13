@@ -1,5 +1,5 @@
 ---
-title: Stitch Path Optimisation
+title: Stitch Path Optimization
 permalink: /tutorials/routing/
 last_modified_at: 2024-06-13
 language: en
@@ -51,7 +51,7 @@ Moving the elements in the Layers and Objects panel up and down can be tiresome.
 ### Jump to Stroke
 
 After you've prepared the correct order of your elements and made sure where they are supposed to start and end,
-run the [jump to stroke](/docs/stroke-tools/#jump-to-stroke] to create a running stitch from the end position of the first element to the start position of the second element.
+run the [jump to stroke](/docs/stroke-tools/#jump-to-stroke) to create a running stitch from the end position of the first element to the start position of the second element.
 
 You can then alter the stroke to be hidden under other elements. If the distance is short, you can also use it to make the connection stitch sink into the fabric while avoiding an additional jump.
 
