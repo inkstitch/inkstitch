@@ -115,12 +115,5 @@ class ViewPanel(ScrolledPanel):
             self.drawing_panel.Refresh()
 
     def on_settings_button(self, event):
-        settings_dialog = SimulatorPreferenceDialog(self)
-
-        if settings_dialog.ShowModal() == wx.ID_OK:
-            settings_dialog.ShowModal()
-
-        self.drawing_panel.update_pen_size()
-        self.drawing_panel.Refresh()
-
-        settings_dialog.Destroy()
+        simulator_panel = SimulatorPreferenceDialog(self)
+        simulator_panel.Show()

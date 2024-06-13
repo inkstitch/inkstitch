@@ -15,6 +15,7 @@ class SimulatorPreferenceDialog(wx.Dialog):
 
     def __init__(self, *args, **kwargs):
         super(SimulatorPreferenceDialog, self).__init__(*args, **kwargs)
+        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
         self.view_panel = self.GetParent()
         self.drawing_panel = self.view_panel.drawing_panel
@@ -40,7 +41,7 @@ class SimulatorPreferenceDialog(wx.Dialog):
         settings_sizer.Add(self.npp_size, 0, wx.EXPAND | wx.ALL, 10)
 
         button_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        btn_cancel = wx.Button(self, label=_('Cancel'))
+        btn_cancel = wx.Button(self, id=wx.ID_CANCEL, label=_('Cancel'))
         btn_cancel.Bind(wx.EVT_BUTTON, self.on_cancel)
         btn_apply = wx.Button(self, id=wx.ID_OK, label=_('Apply'))
         btn_apply.Bind(wx.EVT_BUTTON, self.on_apply)
@@ -65,4 +66,6 @@ class SimulatorPreferenceDialog(wx.Dialog):
     def on_cancel(self, event):
         global_settings['simulator_line_width'] = self.line_width_value
         global_settings['simulator_npp_size'] = self.npp_size_value
+        self.drawing_panel.update_pen_size()
+        self.drawing_panel.Refresh()
         self.Destroy()
