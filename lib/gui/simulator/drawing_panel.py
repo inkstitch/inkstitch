@@ -267,9 +267,6 @@ class DrawingPanel(wx.Panel):
             self.control_panel.on_start()
 
     def color_to_pen(self, color):
-        # We draw the thread with a thickness of 0.1mm.  Real thread has a
-        # thickness of ~0.4mm, but if we did that, we wouldn't be able to
-        # see the individual stitches.
         line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
         return wx.Pen(list(map(int, color.visible_on_white.rgb)), int(line_width))
 
