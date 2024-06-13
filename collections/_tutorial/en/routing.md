@@ -28,7 +28,7 @@ Optimising the stitch path is one of the most important subjects in embroidery. 
 
 Embroidery is not only a setup of various elements printed on a piece of paper. When you create embroidery it is essential to
 
-* **Put elements into a logical Order**
+* **Put elements into a logical order**
   * To avoid color changes where possible
 
     It is still sometimes necessary to add an extra color change when either one color goes both - underneath AND on top of an other color
@@ -59,11 +59,13 @@ You can then alter the stroke to be hidden under other elements. If the distance
 
 *1: Original 2: Jump to Stroke 3: Manually adjusted stroke*
 
-### Strokes routing options
+## Stroke Routing Options
 
 Strokes elements start at the beginning of the path and run til the end.
 
 ### Make path directions visible
+
+![Stroke with visible path direction](/assets/images/tutorials/routing/path_direction.png)
 
 In our [customize](/docs/customize/#enabling-path-outlines--direction) article we described, how you can setup Inkscape so that you can see the path direction right away and know where your stroke type stitches will begin and end.
 
