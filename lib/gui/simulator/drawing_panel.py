@@ -46,7 +46,7 @@ class DrawingPanel(wx.Panel):
 
         # Drawing panel can really be any size, but without this wxpython likes
         # to allow the status bar and control panel to get squished.
-        self.SetMinSize((100, 100))
+        self.SetMinSize((300, 300))
         self.SetBackgroundColour('#FFFFFF')
         self.SetDoubleBuffered(True)
 
