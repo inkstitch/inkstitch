@@ -24,8 +24,6 @@ class ViewPanel(ScrolledPanel):
         self.button_style = wx.BU_EXACTFIT | wx.BU_NOTEXT
 
         self.control_panel = parent.cp
-        self.line_width = 0.1
-        self.npp_size = 0.5
 
         self.btnNpp = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnNpp.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)

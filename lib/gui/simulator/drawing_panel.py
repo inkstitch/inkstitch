@@ -9,6 +9,7 @@ from numpy import split
 
 from ...i18n import _
 from ...svg import PIXELS_PER_MM
+from ...utils.settings import global_settings
 
 # L10N command label at bottom of simulator window
 COMMAND_NAMES = [_("STITCH"), _("JUMP"), _("TRIM"), _("STOP"), _("COLOR CHANGE")]
@@ -216,7 +217,8 @@ class DrawingPanel(wx.Panel):
 
     def draw_needle_penetration_points(self, canvas, pen, stitches):
         if self.view_panel.btnNpp.GetValue():
-            npp_pen = wx.Pen(pen.GetColour(), width=int(self.view_panel.npp_size * PIXELS_PER_MM * self.PIXEL_DENSITY))
+            npp_size = global_settings['simulator_npp_size'] or 0.5
+            npp_pen = wx.Pen(pen.GetColour(), width=int(npp_size * PIXELS_PER_MM * self.PIXEL_DENSITY))
             canvas.SetPen(npp_pen)
             canvas.StrokeLineSegments(stitches, [(stitch[0] + 0.001, stitch[1]) for stitch in stitches])
 
@@ -271,11 +273,13 @@ class DrawingPanel(wx.Panel):
         # We draw the thread with a thickness of 0.1mm.  Real thread has a
         # thickness of ~0.4mm, but if we did that, we wouldn't be able to
         # see the individual stitches.
-        return wx.Pen(list(map(int, color.visible_on_white.rgb)), int(self.view_panel.line_width * PIXELS_PER_MM * self.PIXEL_DENSITY))
+        line_width = global_settings['simulator_line_width']
+        return wx.Pen(list(map(int, color.visible_on_white.rgb)), int(line_width * PIXELS_PER_MM * self.PIXEL_DENSITY))
 
     def update_pen_size(self):
+        line_width = global_settings['simulator_line_width']
         for pen in self.pens:
-            pen.SetWidth(self.view_panel.line_width * PIXELS_PER_MM * self.PIXEL_DENSITY)
+            pen.SetWidth(line_width * PIXELS_PER_MM * self.PIXEL_DENSITY)
 
     def parse_stitch_plan(self, stitch_plan):
         self.pens = []
