@@ -273,7 +273,7 @@ class DrawingPanel(wx.Panel):
     def update_pen_size(self):
         line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
         for pen in self.pens:
-            pen.SetWidth(line_width)
+            pen.SetWidth(int(line_width))
 
     def parse_stitch_plan(self, stitch_plan):
         self.pens = []
