@@ -1,6 +1,6 @@
 ---
 title: Stitch Path Optimization
-permalink: /de/tutorials/routing/
+permalink: /fr/tutorials/routing/
 last_modified_at: 2024-06-12
 language: fr
 excerpt: "Optimising the stitch path is one of the most important subjects in embroidery. Learn how Ink/Stitch can assist you with the task."

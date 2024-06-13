@@ -157,7 +157,7 @@ Wer ein bisschen tiefer in die Materie einsteigen möchte, hat mit dem XML-Edito
 die Datei auf Code-Ebene zu betrachten und zu ändern. Alle Ink/Stitch-Parameter sind hierüber
 direkt editierbar.
 
-#### Testen, testen, testen
+### Testen, testen, testen
 
 Ink/Stitch bietet mittlerweile eine Vielzahl an Parametereinstellungen (Hinweis an die Entwickler:
 es wird langsam wirklich etwas unübersichtlich).
@@ -170,7 +170,7 @@ Zu finden ist es unter `Erweiterungen > Ink/Stitch > Bearbeiten > Testmuster aus
 Hiermit lässt sich schnell ein Raster mit Elementen anlegen, bei denen ein Stickparameter
 kontinuierlich geändert wird.
 
-#### Sticken
+### Sticken
 
 Auch beim Sticken können Fehlerquellen liegen. Achtet beim Sticken auf
 
