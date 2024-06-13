@@ -1,7 +1,7 @@
 ---
 title: "Werkzeuge: Linie"
 permalink: /de/docs/stroke-tools/
-last_modified_at: 2024-06-05
+last_modified_at: 2024-06-13
 toc: true
 ---
 ## Automatisch geführter Geradstich
@@ -140,6 +140,10 @@ Der Hauptunterschied zum `Automatisch geführtem Laufstich` ist, dass jede Linie
 * Redwork Mehrfach-Geradstitch Anzahl der Wiederholungen
 
   Wendet den Wert für [Mehrfach-Geradstitch Anzahl der Wiederholungen](/de/docs/stitches/bean-stitch/) auf die Deckstiche an (nicht auf die Unterpfade).
+
+### Anfangs- und Endposition
+
+Redwork wird immer an der gleichen Stelle beginnen und enden. Dieser Punkt mit einem [Startbefehl für automatisch geführte Geradstiche](/de/docs/commands/#--start--und-endposition-für-automatisch-geführten-laufstich) festgelegt werden.
 
 
 ## Außenkontur

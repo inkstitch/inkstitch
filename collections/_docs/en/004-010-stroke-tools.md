@@ -1,7 +1,7 @@
 ---
 title: "Tools: Stroke"
 permalink: /docs/stroke-tools/
-last_modified_at: 2024-06-05
+last_modified_at: 2024-06-13
 toc: true
 ---
 ## Autoroute Running Stitch
@@ -131,6 +131,9 @@ The main difference to `Autoroute Running Stitch` is that it ensures that paths 
 
   Sets the [bean stitch number of repeats](/docs/stitches/bean-stitch/) for the top layer stitches (not on underpaths).
 
+### Start- and end position
+
+Redwork will always start and end at the same spot. However, you can define this spot with a [Auto-route start position command](/docs/commands/#--startingending-position-for-auto-route-of-running-stitch).
 
 ## Outline
 
