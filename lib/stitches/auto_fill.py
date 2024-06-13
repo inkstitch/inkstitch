@@ -11,7 +11,7 @@ from typing import Iterator
 
 import networkx
 from shapely import geometry as shgeo
-from shapely import segmentize
+from shapely import make_valid, segmentize
 from shapely.ops import snap, unary_union
 from shapely.strtree import STRtree
 
@@ -20,11 +20,11 @@ from ..stitch_plan import Stitch
 from ..svg import PIXELS_PER_MM
 from ..utils import cache
 from ..utils.clamp_path import clamp_path_to_polygon
-from ..utils.geometry import Point as InkstitchPoint, offset_points
+from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import (ensure_multi_line_string,
-                              line_string_to_point_list)
-from ..utils.prng import join_args
+                              line_string_to_point_list, offset_points)
 from ..utils.list import is_all_zeroes
+from ..utils.prng import join_args
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
 from .fill import intersect_region_with_grating, stitch_row
@@ -144,7 +144,7 @@ def adjust_shape_for_pull_compensation(shape, angle, row_spacing, pull_compensat
     min_hole_area = row_spacing ** 2
     interiors = [smooth_path(interior.coords) for interior in polygon.interiors if shgeo.Polygon(interior).area > min_hole_area]
 
-    return shgeo.Polygon(exterior, interiors)
+    return make_valid(shgeo.Polygon(exterior, interiors))
 
 
 def apply_pull_compensation(segments, pull_compensation_px, pull_compensation_percent):
