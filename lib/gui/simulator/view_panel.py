@@ -80,14 +80,12 @@ class ViewPanel(ScrolledPanel):
         settings_inner_sizer = wx.BoxSizer(wx.VERTICAL)
         settings_inner_sizer.Add(self.btnBackgroundColor, 0, wx.EXPAND | wx.ALL, 2)
         settings_inner_sizer.Add(self.btnSettings, 0, wx.EXPAND | wx.ALL, 2)
+        if self.detach_callback:
+            settings_inner_sizer.Add(self.btnDetachSimulator, 0, wx.ALL, 2)
         settings_sizer.Add(0, 2, 0)
         settings_sizer.Add(settings_inner_sizer, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.ALL, 2)
         settings_sizer.Add(0, 2, 0)
         outer_sizer.Add(settings_sizer)
-
-        if self.detach_callback:
-            outer_sizer.Add(0, 10, 0)
-            outer_sizer.Add(self.btnDetachSimulator, 0, wx.ALL, 2)
 
         self.SetSizerAndFit(outer_sizer)
 
