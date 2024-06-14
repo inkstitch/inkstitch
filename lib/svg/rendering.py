@@ -56,50 +56,53 @@ stitch_path = (
     "l-0.55,-0.1,0.55,0.1"  # Bottom-left whisker
     "z")  # return to start
 
-# The filter needs the xmlns:inkscape declaration, or Inkscape will display a parse error
-# "Namespace prefix inkscape for auto-region on filter is not defined"
-# Even when the document itself has the namespace, go figure.
-realistic_filter = """
-    <filter
-       style="color-interpolation-filters:sRGB"
-       id="realistic-stitch-filter"
-       x="0"
-       width="1"
-       y="0"
-       height="1"
-       inkscape:auto-region="false"
-       xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
-      <feGaussianBlur
-         edgeMode="none"
-         stdDeviation="0.9"
-         id="feGaussianBlur1542-6"
-         in="SourceAlpha" />
-      <feSpecularLighting
-         id="feSpecularLighting1973"
-         result="result2"
-         surfaceScale="1.5"
-         specularConstant="0.78"
-         specularExponent="2.5">
-        <feDistantLight
-           id="feDistantLight1975"
-           azimuth="-125"
-           elevation="20" />
-      </feSpecularLighting>
-      <feComposite
-         in2="SourceAlpha"
-         id="feComposite1981"
-         operator="atop" />
-      <feComposite
-         in2="SourceGraphic"
-         id="feComposite1982"
-         operator="arithmetic"
-         k2="0.8"
-         k3="1.2"
-         result="result3"
-         k1="0"
-         k4="0" />
-    </filter>
-"""
+def generate_realistic_filter() -> inkex.BaseElement:
+    """
+    Return a copy of the realistic stitch filter, ready to add to svg defs.
+    """
+    filter = inkex.Filter(attrib = {
+       "style": "color-interpolation-filters:sRGB",
+       "id": "realistic-stitch-filter",
+       "x": "0",
+       "width": "1",
+       "y": "0",
+       "height": "1",
+       inkex.addNS('auto-region', 'inkscape'): "false",
+    })
+
+    filter.add(
+        inkex.Filter.GaussianBlur(attrib = {
+            "edgeMode": "none",
+            "stdDeviation": "0.9",
+            "in": "SourceAlpha",
+        }),
+        inkex.Filter.SpecularLighting(
+            inkex.Filter.DistantLight(attrib = {
+                "azimuth": "-125",
+                "elevation": "20",
+            }), attrib = {
+                "result": "result2",
+                "surfaceScale": "1.5",
+                "specularConstant": "0.78",
+                "specularExponent": "2.5",
+            }
+        ),
+        inkex.Filter.Composite(attrib = {
+            "in2": "SourceAlpha",
+            "operator": "atop",
+        }),
+        inkex.Filter.Composite(attrib = {
+            "in2": "SourceGraphic",
+            "operator": "arithmetic",
+            "result": "result3",
+            "k1": "0",
+            "k2": "0.8",
+            "k3": "1.2",
+            "k4": "0",
+        })
+    )
+
+    return filter
 
 
 def realistic_stitch(start, end):
@@ -243,9 +246,8 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True, 
         # Remove filter from defs, if any
         filter: inkex.BaseElement = svg.defs.findone("//*[@id='realistic-stitch-filter']")
         if filter is not None:
-            svg.defs.remove(filter)
+            filter.delete()
 
-        filter_document = inkex.load_svg(realistic_filter)
-        svg.defs.append(filter_document.getroot())
+        svg.defs.append(generate_realistic_filter())
 
     return layer
