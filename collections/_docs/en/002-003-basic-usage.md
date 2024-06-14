@@ -25,11 +25,11 @@ Create an object, e.g. a circle and make sure it has a fill.
 
 ## Step 3 - Create the Embroidery File
 
-* Run `File > Save as...`
+* Run `File > Save a copy...`
 * Navigate to the folder where you would like to save the file
 * Choose the correct file format for your machine
 * Click `Save`
-* Copy the file to your machine
+* Copy the file to your embroidery machine
 
 **Tip:** Make sure to save the file as an SVG file as well. Then you will always be able to modify it easily.
 {: .notice--info}
