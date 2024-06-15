@@ -1,7 +1,7 @@
 ---
 title: "Remplissage circulaire"
 permalink: /fr/docs/stitches/circular-fill/
-last_modified_at: 2024-05-07
+last_modified_at: 2024-06-15
 toc: true
 ---
 ## De quoi s'agit-il ?
@@ -18,11 +18,13 @@ Le remplissage circulaire remplit une forme avec une spirale. Le centre de la sp
  
 ## Définir le centre de la spirale
 
-By default the center of the spiral is the geometrical center of the shape.
-Note that this is not equal to the center of the bounding box.
+Par défaut, le centre de la spiral est le centre géométrique de la forme.
 
-To change default behavior selectionnez la forme et attachez lui la commande d'objet "Position de la cible".
-The center of the command symbol will be the new spiral center.
+Notez que ce n'est pas le centre de la boite englobante.
+
+Pour modifier le comportement par défaut, selectionnez la forme et attachez lui la commande d'objet "Position de la cible".
+
+Le centtre du symbole de commande sera le nouveau centre de la spirale.
 
 Lire [comment attacher des commandes aux objets](/fr/docs/commands/).
 
