@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-10 01:13+0000\n"
-"PO-Revision-Date: 2024-06-11 01:12\n"
+"POT-Creation-Date: 2024-06-15 01:12+0000\n"
+"PO-Revision-Date: 2024-06-15 01:12\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-10 01:13+0000\n"
+"POT-Creation-Date: 2024-06-15 01:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2685,10 +2685,12 @@ msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et
 
 #: lib/extensions/params.py:502 lib/gui/lettering/main_panel.py:58
 #: lib/gui/lettering_font_sample.py:57
-#: lib/gui/satin_multicolor/main_panel.py:54 lib/gui/tartan/main_panel.py:67
-#: print/templates/custom-page.html:23 print/templates/custom-page.html:27
-#: print/templates/custom-page.html:33 print/templates/ui.html:101
-#: print/templates/ui.html:105 print/templates/ui.html:111
+#: lib/gui/satin_multicolor/main_panel.py:54
+#: lib/gui/simulator/simulator_preferences.py:44
+#: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
+#: print/templates/custom-page.html:27 print/templates/custom-page.html:33
+#: print/templates/ui.html:101 print/templates/ui.html:105
+#: print/templates/ui.html:111
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -3057,8 +3059,9 @@ msgstr "Échelle"
 msgid "Font Sampling"
 msgstr "Test de police"
 
-#: lib/gui/lettering_font_sample.py:31 print/templates/ui.html:5
-#: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:58
+#: lib/gui/lettering_font_sample.py:31 lib/gui/simulator/view_panel.py:79
+#: print/templates/ui.html:5 print/templates/ui.html:15
+#: inx/inkstitch_lettering_generate_json.inx:58
 msgid "Settings"
 msgstr "Paramètres"
 
@@ -3075,8 +3078,9 @@ msgid "Max. line width"
 msgstr "Largeur du texte"
 
 #: lib/gui/lettering_font_sample.py:59
-#: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/tartan/main_panel.py:69
-#: lib/gui/test_swatches.py:117
+#: lib/gui/satin_multicolor/main_panel.py:56
+#: lib/gui/simulator/simulator_preferences.py:46
+#: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr "Appliquer"
 
@@ -3263,117 +3267,134 @@ msgstr "Colorer"
 msgid "Multicolor Satin Group"
 msgstr "Groupe de satins multicolores"
 
-#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
-#. command label at bottom of simulator window
-#: lib/gui/simulator.py:23 inx/inkstitch_output_GCODE.inx:29
-msgid "STITCH"
-msgstr "BRODER"
-
-#: lib/gui/simulator.py:23
-msgid "JUMP"
-msgstr "SAUT"
-
-#: lib/gui/simulator.py:23
-msgid "TRIM"
-msgstr "COUPURE"
-
-#: lib/gui/simulator.py:23 inx/inkstitch_output_GCODE.inx:33
-msgid "STOP"
-msgstr "STOP"
-
-#: lib/gui/simulator.py:23 inx/inkstitch_output_GCODE.inx:31
-msgid "COLOR CHANGE"
-msgstr "CHANGEMENT COULEUR"
-
-#: lib/gui/simulator.py:61
+#: lib/gui/simulator/control_panel.py:45
 msgid "Slow down (arrow down)"
 msgstr "Ralentir (flèche vers le bas)"
 
-#: lib/gui/simulator.py:65
+#: lib/gui/simulator/control_panel.py:49
 msgid "Speed up (arrow up)"
 msgstr "Accélérer (flèche vers le haut)"
 
-#: lib/gui/simulator.py:69
+#: lib/gui/simulator/control_panel.py:53
 msgid "Go backward one stitch (-)"
 msgstr "Reculer d'un point (-)"
 
-#: lib/gui/simulator.py:73
+#: lib/gui/simulator/control_panel.py:57
 msgid "Go forward one stitch (+)"
 msgstr "Avancer d'un point (+)"
 
-#: lib/gui/simulator.py:77
+#: lib/gui/simulator/control_panel.py:61
 msgid "Go backward one command (page-down)"
 msgstr "Reculer d'une commande (page précédente pgDn)"
 
-#: lib/gui/simulator.py:81
+#: lib/gui/simulator/control_panel.py:65
 msgid "Go forward one command (page-up)"
 msgstr "Avancer d'une commande (page précédente)"
 
-#: lib/gui/simulator.py:85
+#: lib/gui/simulator/control_panel.py:69
 msgid "Switch animation direction (arrow left, arrow right)"
 msgstr "Changer de direction (flèche à gauche | flèche à droite)"
 
-#: lib/gui/simulator.py:89
+#: lib/gui/simulator/control_panel.py:73
 msgid "Play (P)"
 msgstr "Jouer (P)"
 
-#: lib/gui/simulator.py:93
+#: lib/gui/simulator/control_panel.py:77
 msgid "Restart (R)"
 msgstr "Redémarrer (R)"
 
-#: lib/gui/simulator.py:97
-msgid "Display needle penetration point (O)"
-msgstr "Afficher les points de pénétration de l'aiguille (O)"
-
-#: lib/gui/simulator.py:112
-msgid "Show jump stitches"
-msgstr "Montrer les sauts de fil"
-
-#: lib/gui/simulator.py:116
-msgid "Show trims"
-msgstr "Montrer les coupes de fil"
-
-#: lib/gui/simulator.py:120
-msgid "Show stops"
-msgstr "Montrer les stops"
-
-#: lib/gui/simulator.py:124
-msgid "Show color changes"
-msgstr "Montrer les changements de couleur"
-
-#: lib/gui/simulator.py:128
-msgid "Change background color"
-msgstr "Changer la couleur d'arrière fond"
-
-#: lib/gui/simulator.py:132
-msgid "Detach/attach simulator window"
-msgstr "Détacher/Attacher le simulateur"
-
-#: lib/gui/simulator.py:144
+#: lib/gui/simulator/control_panel.py:100
 msgid "Controls"
 msgstr "Contrôles"
 
-#: lib/gui/simulator.py:157
-msgid "Show"
-msgstr "Montrer"
-
-#: lib/gui/simulator.py:171
+#: lib/gui/simulator/control_panel.py:113
 msgid "Speed"
 msgstr "Vitesse"
 
-#: lib/gui/simulator.py:345
+#: lib/gui/simulator/control_panel.py:234
 #, python-format
 msgid "%d stitches/sec"
 msgstr "%d points/sec"
 
-#: lib/gui/simulator.py:777
+#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
+#. command label at bottom of simulator window
+#: lib/gui/simulator/drawing_panel.py:15 inx/inkstitch_output_GCODE.inx:29
+msgid "STITCH"
+msgstr "BRODER"
+
+#: lib/gui/simulator/drawing_panel.py:15
+msgid "JUMP"
+msgstr "SAUT"
+
+#: lib/gui/simulator/drawing_panel.py:15
+msgid "TRIM"
+msgstr "COUPURE"
+
+#: lib/gui/simulator/drawing_panel.py:15 inx/inkstitch_output_GCODE.inx:33
+msgid "STOP"
+msgstr "STOP"
+
+#: lib/gui/simulator/drawing_panel.py:15 inx/inkstitch_output_GCODE.inx:31
+msgid "COLOR CHANGE"
+msgstr "CHANGEMENT COULEUR"
+
+#: lib/gui/simulator/drawing_panel.py:342
 #, python-format
 msgid "Command: %s"
 msgstr "Commande : %s"
 
-#: lib/gui/simulator.py:1123
+#: lib/gui/simulator/simulator_preferences.py:28
+#: inx/inkstitch_fill_to_stroke.inx:20
+msgid "Line width (mm)"
+msgstr "Largeur du trait (mm)"
+
+#: lib/gui/simulator/simulator_preferences.py:33
+msgid "Needle penetration point size (mm)"
+msgstr ""
+
+#: lib/gui/simulator/simulator_window.py:14
 msgid "Embroidery Simulation"
 msgstr "Simulation de broderie"
+
+#: lib/gui/simulator/view_panel.py:31
+msgid "Display needle penetration point (O)"
+msgstr "Afficher les points de pénétration de l'aiguille (O)"
+
+#: lib/gui/simulator/view_panel.py:33
+msgid "Show jump stitches"
+msgstr "Montrer les sauts de fil"
+
+#: lib/gui/simulator/view_panel.py:37
+msgid "Show trims"
+msgstr "Montrer les coupes de fil"
+
+#: lib/gui/simulator/view_panel.py:41
+msgid "Show stops"
+msgstr "Montrer les stops"
+
+#: lib/gui/simulator/view_panel.py:45
+msgid "Show color changes"
+msgstr "Montrer les changements de couleur"
+
+#: lib/gui/simulator/view_panel.py:50
+msgid "Change background color"
+msgstr "Changer la couleur d'arrière fond"
+
+#: lib/gui/simulator/view_panel.py:54
+msgid "Open settings dialog"
+msgstr ""
+
+#: lib/gui/simulator/view_panel.py:60
+msgid "Detach/attach simulator window"
+msgstr "Détacher/Attacher le simulateur"
+
+#: lib/gui/simulator/view_panel.py:66
+msgid "Show"
+msgstr "Montrer"
+
+#: lib/gui/simulator/view_panel.py:116
+msgid "Simulator Preferences"
+msgstr ""
 
 #: lib/gui/tartan/code_panel.py:24
 msgid "1 Tartan thread equals (mm)"
@@ -3649,10 +3670,26 @@ msgstr "Aucun fichier variant trouvé pour la police '%s'."
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:113
+#: lib/output.py:116
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Erreur d’écriture pour %(path)s: %(error)s"
+
+#: lib/output.py:121
+msgid "Couldn't save embrodiery file."
+msgstr "Impossible de sauver le fichier de broderie."
+
+#: lib/output.py:123
+msgid "There are {num_color_changes} in your design. This is way too many."
+msgstr "Il y a {num_color_changes} changement de couleurs dans votre dessin. C'est beaucoup trop."
+
+#: lib/output.py:125
+msgid "Please reduce color changes. Find more information on our website:"
+msgstr "Diminuez le nombre de changements de couleurs. Vous trouverez plus d'information sur notre site :"
+
+#: lib/output.py:127
+msgid "http://inkstitch.org/docs/faq/#too-many-color-changes"
+msgstr "http://inkstitch.org/fr/docs/faq/#too-many-color-changes"
 
 #: lib/stitch_plan/generate_stitch_plan.py:76
 #, python-format
@@ -3727,7 +3764,7 @@ msgstr "Points droits pour auto-remplissage satin %d"
 msgid "Could not build graph for meander stitching. Try to enlarge your shape or scale your meander pattern down."
 msgstr "Impossible de construire le remplissage en méandres. Essayer d'agrandir votre forme ou de diminuer la taille du méandre."
 
-#: lib/svg/rendering.py:226
+#: lib/svg/rendering.py:229
 msgid "Stitch Plan"
 msgstr "Plan de broderie"
 
@@ -4848,10 +4885,6 @@ msgstr "Seuil pour les culs-de-sacs (mm)"
 #: inx/inkstitch_fill_to_stroke.inx:19
 msgid "Deletes small lines. A good value in most cases is the approximate line width of the original shape"
 msgstr "Supprime les traits courts. Une bonne valeur est souvent approximativement la largeur de la forme originelle"
-
-#: inx/inkstitch_fill_to_stroke.inx:20
-msgid "Line width (mm)"
-msgstr "Largeur du trait (mm)"
 
 #: inx/inkstitch_fill_to_stroke.inx:21
 msgid "Cut lines: close gaps"
