@@ -1,7 +1,7 @@
 ---
 title: "Préférences"
 permalink: /fr/docs/preferences/
-last_modified_at: 2023-05-11
+last_modified_at: 2024-06-15
 toc: true
 ---
 On accède aux préférences via `Extensions > Ink/Stitch > Préférences`.
@@ -22,7 +22,7 @@ Pour les sauts de fils plus longs que 2 mm, le paramétrage des points de suret�
 
 {% include upcoming_release.html %}
 
-Up from v 3.1.0 it is possible to overwrite the global value for single elements in the [params dialog](/doc/params).
+A partir de la version  v 3.1.0 il  est possible de surcharger la valeur globale pour des éléments particuliers dan [le dialogue de paramétrage](/doc/params).
 
 ### Longueur minimum de points (mm)
 
