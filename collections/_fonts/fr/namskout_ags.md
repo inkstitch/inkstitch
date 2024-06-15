@@ -1,7 +1,7 @@
 ---
 title: "Namskout AGS"
 permalink: /fr/fonts/namskout_ags/
-last_modified_at: 2022-05-28
+last_modified_at: 2024-06-15
 toc: false
 preview_image:
   - url: /assets/images/fonts/namskout_AGS.jpg
