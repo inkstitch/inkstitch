@@ -23,8 +23,8 @@ Diese Schrift umfasst  {{ font.glyphs.size }} Zeichen:
 ```
 {: .font-glyphs }
 
-Zum jetzigen Zeitpunkt umfasst diese Schrift nur hiragana, katakana und Satzzeichen.
-kanji wird zu einem späteren Zeitpunkt noch hinzugefügt werden.
+Zum jetzigen Zeitpunkt umfasst diese Schrift  hiragana, katakana, Satzzeichen und 80
+kanji.
 
 
 ## Maße
