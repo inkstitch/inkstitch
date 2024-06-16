@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-15 01:12+0000\n"
-"PO-Revision-Date: 2024-06-15 01:12\n"
+"PO-Revision-Date: 2024-06-16 01:17\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -3350,7 +3350,7 @@ msgstr "Largeur du trait (mm)"
 
 #: lib/gui/simulator/simulator_preferences.py:33
 msgid "Needle penetration point size (mm)"
-msgstr ""
+msgstr "Taille du point de pénétration de l'aiguille (mm)"
 
 #: lib/gui/simulator/simulator_window.py:14
 msgid "Embroidery Simulation"
@@ -3382,7 +3382,7 @@ msgstr "Changer la couleur d'arrière fond"
 
 #: lib/gui/simulator/view_panel.py:54
 msgid "Open settings dialog"
-msgstr ""
+msgstr "Ouvrir le dialogue de paramétrage"
 
 #: lib/gui/simulator/view_panel.py:60
 msgid "Detach/attach simulator window"
@@ -3394,7 +3394,7 @@ msgstr "Montrer"
 
 #: lib/gui/simulator/view_panel.py:116
 msgid "Simulator Preferences"
-msgstr ""
+msgstr "Préférences du simulateur"
 
 #: lib/gui/tartan/code_panel.py:24
 msgid "1 Tartan thread equals (mm)"
