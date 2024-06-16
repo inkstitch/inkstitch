@@ -1,7 +1,8 @@
 ---
 title: "Outils: Trait"
 permalink: /fr/docs/stroke-tools/
-last_modified_at: 2024-05-13
+last_modified_at: 2024-06-16
+
 toc: true
 ---
 ## Agencement automatique de points droits {#autoroute-running-stitch}
@@ -87,7 +88,7 @@ Ceci crééra un point droit direct entre la fin du premier élément et le déb
 * Ne pas connecger après une coupe, un stop ou des points d'arrêt forcés.
 
 #### Options de sortie
-* Fusionner les nouveaux points droits avec le précédent ou le suivant si de même type.Merge new strokes with previous/next stroke if same type
+* Fusionner les nouveaux points droits avec le précédent ou le suivant si de même type.
 * Connectez les sous-chemins et fusionner
 
 et pour les connexions non fusionnées:
@@ -98,43 +99,51 @@ et pour les connexions non fusionnées:
 ## Redwork
 
 {% include upcoming_release.html %}
+Redwork  est une technique de broderie qui assure que chaque point est brodé exactement deux fois.
 
-Redwork is an old handembroidery method where the embroiderers made sure to stitch every line exactly twice.
+Cet outil va **remplacer** votre ensemble de points droits par un nouveau ensemble de points  droits en ordre logique de broderie. 
 
-This tool will **replace** your set of running stitches with a new set of running stitches in logical stitching order.
-The main difference to `Autoroute Running Stitch` is that it ensures that paths are traversed exactly twice.
+La différence principale avec  "l'agencement automatique" est qu'il assure que les chemins sont brodés exactement deux fois. De plus, le nombre de sauts est optimisé  (chaque partie connexe est brodée entièrement avant de  passer à la suivante), mais pas leur longueur. 
+
+Cet outil est à utiliser de préférence avec un dessin connexe ou avec peu de morceaux disjoints.
+
 
 ### Usage
 
-* Select the running stitches you wish to route
-* Run `Extensions > Ink/Stitch > Tools : Stroke > Redwork...`
-* Set desired options and click apply
+* Sélectionnez les chemins que vous désirez organiser
+* Lancez `Extensions > Ink/Stitch > Outils : Trait > Redwork...`
+* Paramétrez les options et  cliquez sur "Appliquer"
 
 ### Options
 
-* Connect lines below this distance (mm)
+* Connectez les traits distants de  moins de (mm)
+  
+L'extension redwork peut travailler avec des groupes disconnectés de points droits.  Par contre certains de vos traits peuvent de ne pas s'enchainer les uns les autres ce qui laisse de petits espaces.
+Avec cette option, vous pouvez définir jusqu'à quelle distance ces espaces doivent être supprimés.
 
-  The redwork extension is able to render disconnected groups of running stitches in one go.
-  On the other hand some of your lines may not be snaped onto each other which leaves small gaps.
-  With this option you can define up to which distance those gaps shall be removed.
-  Lines with a greater distance than this value will be considered unconnected.
-  Unconnected groups have jump stitches in between.
-* Minimum path length (mm)
+Les  traits dont la distance est supérieure à cette valeur seront considérés comme non connectés.
 
-  Remove shorter paths than this value from the result.
-  Short paths can be a result of the routing operation (for example lines that are not snaped, but have a minimal overlap).
-  Paths smaller than the defined [minimum jump stitch length](/docs/preferences/#minimum-jump-stitch-length-mm) can usually be removed.
-  But if there are consecutive short paths it will be better to lower the value.
-* Redwork stitch length (mm)
+L'extension brode  successivement chaque groupe connecté, avec un unique saut entre deux groupes connectés.
 
-  Sets the stitch length for all resulting paths
-* Redwork bean stitch number of repeats
 
-  Sets the [bean stitch number of repeats](/docs/stitches/bean-stitch/) for the top layer stitches (not on underpaths).
+* Longueur minimale du chemin (mm)
 
-### Start- and end position
+Supprime du résultat les chemins plus court  que cette valeur
 
-Redwork will always start and end at the same spot. However, you can define this spot with a [Auto-route start position command](/docs/commands/#--startingending-position-for-auto-route-of-running-stitch).
+Le résultat peut contenir des petits chemins (par exemple en cas de traits pas tout a fait jointif mais avec une  petite superposition). 
+Des chemins plus court que  la [longeur minimum  de saut](/docs/preferences/#minimum-jump-stitch-length-mm) peuvent généralement être supprimés, mais s'ils sont consecutifs, il vaudra mieux diminuer cettte valeur.
+
+  
+* Longueur du point Redwork  (mm)
+  
+Détermine la longueur du point pour tous les chemins du résultat.
+  
+* Nombre de répétitions du point multiple (bean stitch)
+  
+Détermine [le nombre de répétitions du point multiple (bean stitch)](/docs/stitches/bean-stitch/) pour les chemins brodés au deuxime passage uniquement.
+
+### Position de début et de fin
+Le redwork commence et termine toujours au même endroit. Vous pouvez  définir cet endroit à l'aide de la commande [Position de départ pour l'agencement automatique de point droit](/docs/commands/#--startingending-position-for-auto-route-of-running-stitch).
 
 
 ## Contour {#outline}
