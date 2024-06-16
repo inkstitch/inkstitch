@@ -22,8 +22,7 @@ This font contains  {{ font.glyphs.size }} glyphs:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
-At the present time,  this font contains only hiragana, katakana and punctuation symbols. Later it will also include some kanji.
+This font contains al hiragana, katakana and punctuation symbols plus 80 kanjis.
 
 ## Dimensions
 
