@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-15 01:12+0000\n"
-"PO-Revision-Date: 2024-06-15 01:12\n"
+"POT-Creation-Date: 2024-06-17 01:13+0000\n"
+"PO-Revision-Date: 2024-06-17 01:14\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-15 01:12+0000\n"
+"POT-Creation-Date: 2024-06-17 01:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -237,7 +237,7 @@ msgstr ""
 
 #. description of font in fonts/honoka
 #: inkstitch-fonts-metadata.py:82
-msgid "コルの書きこも is a satin column japanese script font approximatively 20mm tall. It contains all hiragana, katakana and punctuation glyphs. It may be scaled  down to 50% and scaled up to 200%"
+msgid "コルの書きこも is a satin column japanese script font approximatively 20mm tall. It contains all hiragana, katakana and punctuation glyphs plus 80 kanjis. It may be scaled  down to 50% and scaled up to 200%"
 msgstr ""
 
 #. description of font in fonts/infinipicto
