@@ -58,6 +58,13 @@ toc: true
 * [Roaring twenties KOR](/fr/fonts/roaring_twenties_KOR/) ([#2856](https://github.com/inkstitch/inkstitch/issues/2856))
 
   ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
+
+
+* [Shojumaru](/fr/fonts/shojumaru) ([#2997](https://github.com/inkstitch/inkstitch/pull/2997))
+
+  ![Shojumaru preview](/assets/images/fonts/shojumaru.png)
+
+
 * [Violin Serif](/fr/fonts/violin_serif/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
   ![Violin Serif preview](/assets/images/fonts/violin_serif.jpg)
