@@ -17,7 +17,20 @@ function ping() {
    .fail(function() { $('#errors').attr('class', 'show') });
 }
 
-//function to chunk opd view into pieces 
+var pingWorker = null;
+function startPinging() {
+  try {
+    pingWorker = new Worker('resources/pingworker.js')
+    pingWorker.onmessage = function () {
+      $('#errors').attr('class', 'show')
+    }
+  } catch (e) {
+    console.error('Error starting web worker, falling back to setTimeout.', e);
+    setTimeout(ping, 1000);
+  }
+}
+
+//function to chunk opd view into pieces
   // source: https://stackoverflow.com/questions/3366529/wrap-every-3-divs-in-a-div
 $.fn.chunk = function(size) {
   var arr = [];
@@ -32,9 +45,9 @@ function buildOpd(thumbnail_size = $('#operator-detailedview-thumbnail-size').va
 
   var thumbnail_size    = parseInt(thumbnail_size);
   var thumbnail_size_mm = thumbnail_size  + 'mm';
-  
+
   var thumbnail_layout  = (thumbnail_size >= 60) ? 'medium' : 'small';
-  
+
   // remove old settings
   $('div.page.operator-detailedview header').remove();
   $('div.page.operator-detailedview footer').remove();
@@ -42,14 +55,14 @@ function buildOpd(thumbnail_size = $('#operator-detailedview-thumbnail-size').va
   $('div.page.operator-detailedview .opd-color-block').parentsUntil('div.page.operator-detailedview').addBack().unwrap();
   $('.opd-color-block').removeClass('medium large');
   $('.opd-color-block').removeAttr('style');
-  
+
   // set thumbnail size
   $('.operator-svg.operator-preview').css({
-      'width': thumbnail_size_mm, 
+      'width': thumbnail_size_mm,
       'height': thumbnail_size_mm,
       'max-width': thumbnail_size_mm
   });
-  
+
   // calculate number of blocks per page
   var num_blocks_per_page = 1;
   if(thumbnail_layout == 'medium') {
@@ -68,7 +81,7 @@ function buildOpd(thumbnail_size = $('#operator-detailedview-thumbnail-size').va
     // set number of color blocks per page for medium thumbnails
     num_blocks_per_page = num_columns * num_rows;
     // use layout for large thumbnails if only 2 or less color blocks fit on one page
-    if(num_blocks_per_page <= 2) { 
+    if(num_blocks_per_page <= 2) {
       $('.opd-color-block').removeClass('medium').removeAttr('style').addClass('large');
       thumbnail_layout = 'large';
       // set number of color blocks per page for large thumbnails
@@ -79,9 +92,9 @@ function buildOpd(thumbnail_size = $('#operator-detailedview-thumbnail-size').va
     num_blocks_per_page = Math.floor(220 / thumbnail_size);
   }
   // set number of color blocks per page to 1 if it defaults to zero
-    // this should never happen, but we want to avoid the browser to crash 
+    // this should never happen, but we want to avoid the browser to crash
   num_blocks_per_page = (num_blocks_per_page <= 0) ? '1' : num_blocks_per_page;
-  
+
   // adjust to new settings
   var header = $('#opd-info header').prop('outerHTML');
   var footer = $('#opd-info footer').prop('outerHTML');
@@ -121,7 +134,7 @@ function setEstimatedTime() {
       var estimatedTime = stitchCount/speed + (timeTrim * numTrims);
       writeEstimatedTime( selector, estimatedTime );
   });
-  
+
   // client detailed view
   $('.cld-estimated-time').each(function(index, item) {
       var selector = $(this);
@@ -208,8 +221,9 @@ function setSVGTransform(figure, transform) {
   }, 250);
 }
 
+var pingWorker;
 $(function() {
-  setTimeout(ping, 1000);
+  startPinging();
   /* SCALING AND MOVING SVG  */
 
   /* Mousewheel scaling */
@@ -345,7 +359,7 @@ $(function() {
     });
 
     // wait until page size is set (if they've specified one) and then scale SVGs to fit and build operator detailed view
-    setTimeout(function() { 
+    setTimeout(function() {
       scaleAllSvg();
       buildOpd();
     }, 500);
@@ -576,7 +590,7 @@ $('button.settings').click(function(){
   }).on('change', function() {
     $.postJSON('/settings/paper-size', {value: $(this).find(':selected').val()});
   });
-  
+
   // Operator detailed view: thumbnail size setting
   $(document).on('input', '#operator-detailedview-thumbnail-size', function() {
     var thumbnail_size_mm = $(this).val()  + 'mm';
@@ -589,7 +603,7 @@ $('button.settings').click(function(){
     var thumbnail_size = $(this).val();
     // set page break positions
     buildOpd(thumbnail_size);
-    
+
     $.postJSON('/settings/operator-detailedview-thumbnail-size', {value: thumbnail_size});
   });
 
@@ -768,7 +782,7 @@ $('button.settings').click(function(){
 
     settings["machine-speed"] = $("[data-field-name='machine-speed']").val();
     settings["time-additional"] = $("[data-field-name='time-additional']").val();
-    settings["time-color-change"] = $("[data-field-name='time-color-change']").val(); 
+    settings["time-color-change"] = $("[data-field-name='time-color-change']").val();
     settings["time-trims"] = $("[data-field-name='time-trims']").val();
 
     settings["time-clo"] = $("[data-field-name='time-clo']").val();
