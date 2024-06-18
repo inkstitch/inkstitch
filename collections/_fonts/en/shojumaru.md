@@ -8,7 +8,7 @@ preview_image:
     height: 20
 ---
 {%- assign font = site.data.fonts.shojumaru.font -%}
-![Abecedaire](/assets/images/fonts/shojumaru.png)
+![Shojumaru](/assets/images/fonts/shojumaru.png)
 
 ## Glyphs
 
