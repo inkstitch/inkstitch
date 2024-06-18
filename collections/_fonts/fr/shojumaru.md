@@ -8,6 +8,9 @@ preview_image:
     height: 20
 ---
 {%- assign font = site.data.fonts.shojumaru.font -%}
+
+
+{% include upcoming_release.html %} 
 ![Shojumaru](/assets/images/fonts/shojumaru.png)
 
 ## Glyphes
