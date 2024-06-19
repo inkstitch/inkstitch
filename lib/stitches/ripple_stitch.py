@@ -50,7 +50,7 @@ def _get_stitches(stroke, is_linear, lines, skip_start):
         return running_stitch(points,
                               stroke.running_stitch_length,
                               stroke.running_stitch_tolerance,
-                              stroke.enable_random_stitches,
+                              stroke.enable_random_stitch_length,
                               stroke.random_stitch_length_jitter,
                               stroke.random_seed)
 
@@ -59,7 +59,7 @@ def _get_staggered_stitches(stroke, lines, skip_start):
     stitches = []
     stitch_length = stroke.running_stitch_length
     tolerance = stroke.running_stitch_tolerance
-    enable_random = stroke.enable_random_stitches
+    enable_random_stitch_length = stroke.enable_random_stitch_length
     length_sigma = stroke.random_stitch_length_jitter
     random_seed = stroke.random_seed
     last_point = None
@@ -77,10 +77,10 @@ def _get_staggered_stitches(stroke, lines, skip_start):
         elif stroke.join_style == 1:
             should_reverse = (i + skip_start) % 2 == 1
 
-        if enable_random or stroke.staggers == 0:
+        if enable_random_stitch_length or stroke.staggers == 0:
             if should_reverse:
                 line.reverse()
-            points = running_stitch(line, stitch_length, tolerance, enable_random, length_sigma, prng.join_args(random_seed, i))
+            points = running_stitch(line, stitch_length, tolerance, enable_random_stitch_length, length_sigma, prng.join_args(random_seed, i))
             stitched_line = connector + points
         else:
             # uses the guided fill alforithm to stagger rows of stitches

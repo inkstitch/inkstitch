@@ -56,11 +56,12 @@ stitch_path = (
     "l-0.55,-0.1,0.55,0.1"  # Bottom-left whisker
     "z")  # return to start
 
+
 def generate_realistic_filter() -> inkex.BaseElement:
     """
     Return a copy of the realistic stitch filter, ready to add to svg defs.
     """
-    filter = inkex.Filter(attrib = {
+    filter = inkex.Filter(attrib={
        "style": "color-interpolation-filters:sRGB",
        "id": "realistic-stitch-filter",
        "x": "0",
@@ -71,27 +72,27 @@ def generate_realistic_filter() -> inkex.BaseElement:
     })
 
     filter.add(
-        inkex.Filter.GaussianBlur(attrib = {
+        inkex.Filter.GaussianBlur(attrib={
             "edgeMode": "none",
             "stdDeviation": "0.9",
             "in": "SourceAlpha",
         }),
         inkex.Filter.SpecularLighting(
-            inkex.Filter.DistantLight(attrib = {
+            inkex.Filter.DistantLight(attrib={
                 "azimuth": "-125",
                 "elevation": "20",
-            }), attrib = {
+            }), attrib={
                 "result": "result2",
                 "surfaceScale": "1.5",
                 "specularConstant": "0.78",
                 "specularExponent": "2.5",
             }
         ),
-        inkex.Filter.Composite(attrib = {
+        inkex.Filter.Composite(attrib={
             "in2": "SourceAlpha",
             "operator": "atop",
         }),
-        inkex.Filter.Composite(attrib = {
+        inkex.Filter.Composite(attrib={
             "in2": "SourceGraphic",
             "operator": "arithmetic",
             "result": "result3",

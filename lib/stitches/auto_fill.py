@@ -80,7 +80,7 @@ def auto_fill(shape,
               ending_point=None,
               underpath=True,
               gap_fill_rows=0,
-              enable_random=False,
+              enable_random_stitch_length=False,
               random_sigma=0.0,
               random_seed=""):
     rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
@@ -108,7 +108,7 @@ def auto_fill(shape,
     path = fill_gaps(path, round_to_multiple_of_2(gap_fill_rows))
     result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                              staggers, skip_last, underpath, enable_random, random_sigma, random_seed)
+                              staggers, skip_last, underpath, enable_random_stitch_length, random_sigma, random_seed)
 
     return result
 
@@ -852,7 +852,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
 
 @debug.time
 def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing, max_stitch_length, running_stitch_length,
-                     running_stitch_tolerance, staggers, skip_last, underpath, enable_random, random_sigma, random_seed):
+                     running_stitch_tolerance, staggers, skip_last, underpath, enable_random_stitch_length, random_sigma, random_seed):
     path = collapse_sequential_outline_edges(path, fill_stitch_graph)
 
     stitches = []
@@ -864,7 +864,7 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_sp
     for i, edge in enumerate(path):
         if edge.is_segment():
             stitch_row(stitches, edge[0], edge[1], angle, row_spacing, max_stitch_length, staggers, skip_last,
-                       enable_random, random_sigma, join_args(random_seed, i))
+                       enable_random_stitch_length, random_sigma, join_args(random_seed, i))
 
             # note: gap fill segments won't be in the graph
             if fill_stitch_graph.has_edge(edge[0], edge[1], key='segment'):

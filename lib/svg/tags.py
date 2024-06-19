@@ -106,7 +106,7 @@ inkstitch_attribs = [
     'rows_per_thread',
     'herringbone_width_mm',
     'tartan_angle',
-    'enable_random_stitches',
+    'enable_random_stitch_length',
     'random_stitch_length_jitter_percent',
     'gap_fill_rows',
     # stroke

@@ -27,7 +27,7 @@ def circular_fill(shape,
                   ending_point,
                   underpath,
                   target,
-                  use_random,
+                  enable_random_stitch_length,
                   running_stitch_length_jitter,
                   random_seed,
                   ):
@@ -69,7 +69,7 @@ def circular_fill(shape,
         stitches = running_stitch([Stitch(*point) for point in path],
                                   running_stitch_length,
                                   running_stitch_tolerance,
-                                  use_random,
+                                  enable_random_stitch_length,
                                   running_stitch_length_jitter,
                                   random_seed)
         return _apply_bean_stitch_and_repeats(stitches, repeats, bean_stitch_repeats)
@@ -81,7 +81,7 @@ def circular_fill(shape,
             coords = running_stitch([Point(*point) for point in line.coords],
                                     running_stitch_length,
                                     running_stitch_tolerance,
-                                    use_random,
+                                    enable_random_stitch_length,
                                     running_stitch_length_jitter,
                                     prng.join_args(random_seed, n))
             segments.append([(point.x, point.y) for point in coords])
