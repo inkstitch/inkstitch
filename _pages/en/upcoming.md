@@ -57,7 +57,7 @@ toc: true
 
   ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
 
-  * [Shojumaru](/fr/fonts/shojumaru) ([#2997](https://github.com/inkstitch/inkstitch/pull/2997))
+* [Shojumaru](/fr/fonts/shojumaru) ([#2997](https://github.com/inkstitch/inkstitch/pull/2997))
 
   ![Shojumaru preview](/assets/images/fonts/shojumaru.png)
 
