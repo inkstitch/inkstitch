@@ -64,19 +64,24 @@ def _get_gradient_info(fill, bbox):
         gradient_start = (bbox[0], bbox[1])
         gradient_end = (bbox[2], bbox[3])
     else:
+        duplicate_first_color = False
         fill.gradient.apply_transform()
         offsets = fill.gradient.stop_offsets
+        if offsets[0] > 0:
+            offsets = [0] + offsets
+            duplicate_first_color = True
         # get stop colors
         # it would be easier if we just used fill.gradient.stop_styles to collect them
         # but inkex/tinycss fails on stop color styles when it is not in the style attribute, but in it's own stop-color attribute
         colors = []
-        for stop in fill.gradient.stops:
+        for i, stop in enumerate(fill.gradient.stops):
             color = stop.get_computed_style('stop-color')
             opacity = stop.get_computed_style('stop-opacity')
-            if float(opacity) > 0:
+            if float(opacity) == 0:
+                color = 'none'
+            colors.append(color)
+            if i == 0 and duplicate_first_color:
                 colors.append(color)
-            else:
-                colors.append('none')
         gradient_start, gradient_end = gradient_start_end(fill.node, fill.gradient)
         angle = gradient_angle(fill.node, fill.gradient)
     return angle, colors, offsets, Point(list(gradient_start)), Point(list(gradient_end))
