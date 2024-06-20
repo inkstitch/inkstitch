@@ -5,6 +5,8 @@
 
 import sys
 from base64 import b64encode
+from os import environ
+from re import findall
 from tempfile import TemporaryDirectory
 from typing import Optional, Tuple
 
@@ -119,6 +121,7 @@ class StitchPlanPreview(InkstitchExtension):
                 # however, layer.bounding_box() is pure python, so it can be very slow for more complex stitch previews.
                 # Instead, especially because we need to invoke Inkscape anyway to perform the rasterization, we get
                 # the bounding box with query commands before we perform the export. This is quite cheap.
+                environ["SELF_CALL"] = "true"  # needed for inkscape versions 1.3 and 1.3.1
                 out = inkscape(temp_svg_path, actions="; ".join([
                     f"select-by-id:{layer.get_id()}",
                     "query-x",
@@ -133,10 +136,14 @@ class StitchPlanPreview(InkstitchExtension):
                     "export-do"  # Inkscape docs say this should be implicit at the end, but it doesn't seem to be.
                 ]))
 
+                # Extract numbers from returned string. It can include other information such as warnings the usage of AppImages
+                out = findall(r"\d+\.\d+", out)
+
                 # The query commands return positions in px, so we need to convert to uu.
                 px_to_uu = svg.unittouu("1px")
+
                 # Parse the returned coordinates out.
-                x, y, width, height = map(lambda x: px_to_uu*float(x), out.split())
+                x, y, width, height = map(lambda x: px_to_uu*float(x), out)
 
                 # Embed the rasterized stitch plan into the SVG, and replace the original stitch plan
                 with open(temp_png_path, "rb") as f:
