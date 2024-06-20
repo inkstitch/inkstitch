@@ -175,7 +175,7 @@ def _get_color_lines(lines, colors, stop_color_line_indices):
         prev += 1
         line_index += 1
         total_lines = line_index - prev
-        sections = floor(sqrt(total_lines))
+        sections = floor(sqrt(max(total_lines, 0)))
 
         color1 = []
         color2 = []
