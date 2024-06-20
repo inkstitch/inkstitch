@@ -136,7 +136,7 @@ class StitchPlanPreview(InkstitchExtension):
                     "export-do"  # Inkscape docs say this should be implicit at the end, but it doesn't seem to be.
                 ]))
 
-                # Extract numbers from returned string. It can include other information such as warnings the usage of AppImages
+                # Extract numbers from returned string. It can include other information such as warnings about the usage of AppImages
                 out = findall(r"\d+\.\d+", out)
 
                 # The query commands return positions in px, so we need to convert to uu.
