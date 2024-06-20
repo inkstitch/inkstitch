@@ -205,6 +205,9 @@ def _get_color_lines(lines, colors, stop_color_line_indices):
                 max_count
             )
 
+        if not color1 or not color2:
+            continue
+
         # mirror the first half of the color section to receive the full section
         second_half = color2[-1] * 2 + 1
 
