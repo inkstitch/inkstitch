@@ -85,25 +85,20 @@ class RelativeLock(LockStitchDefinition):
         to_previous = stitches[1] - stitches[0]
         length = to_previous.length()
 
+        # travel at least 0.5 and at most 1.5
+        length = max(length, 0.5 * PIXELS_PER_MM)
+        length = min(length, 1.5 * PIXELS_PER_MM)
+
+        direction = to_previous.unit()
+
+        # Travel back one stitch, stopping halfway there.
+        # Then go forward one stitch, stopping halfway between
+        # again.
+
         lock_stitches = []
-        if length > 0.5 * PIXELS_PER_MM:
+        for delta in path:
+            lock_stitches.append(Stitch(stitches[0] + delta * length * direction, tags=('lock_stitch',)))
 
-            # Travel back one stitch, stopping halfway there.
-            # Then go forward one stitch, stopping halfway between
-            # again.
-
-            # but travel at most 1.5 mm
-            length = min(length, 1.5 * PIXELS_PER_MM)
-
-            direction = to_previous.unit()
-
-            for delta in path:
-                lock_stitches.append(Stitch(stitches[0] + delta * length * direction, tags=('lock_stitch',)))
-        else:
-            # Too short to travel part of the way to the previous stitch; just go
-            # back and forth to it a couple times.
-            for i in (1, 0, 1, 0):
-                lock_stitches.append(stitches[i])
         return lock_stitches
 
 
