@@ -97,7 +97,8 @@ class ParamsTab(ScrolledPanel):
 
         if self.toggle:
             self.update_toggle_state()
-        # end wxGlade
+
+        self.update_enable_widgets()
 
     def pair(self, tab):
         self.paired_tab = tab
@@ -349,6 +350,28 @@ class ParamsTab(ScrolledPanel):
                 widgets[3].Show(True)
             choice["last_initialized_choice"] = current_selection
 
+    def update_enable_widgets(self, event=None):
+        if event is None:
+            for param in self.params:
+                if param.enables is not None:
+                    value = self.param_inputs[param.name].GetValue()
+                    for item in param.enables:
+                        enable_input = self.param_inputs[item]
+                        enable_input.Enable(value)
+                        enable_input.GetPrevSibling().Enable(value)
+        else:
+            input = event.GetEventObject()
+            param = [param for param in self.params if param.name == input.Name]
+            if not param:
+                return
+            param = param[0]
+            if param.enables is not None:
+                value = input.GetValue()
+                for item in param.enables:
+                    enable_input = self.param_inputs[item]
+                    enable_input.Enable(value)
+                    enable_input.GetPrevSibling().Enable(value)
+
     def __do_layout(self, only_settings_grid=False):  # noqa: C901
 
         # just to add space around the settings
@@ -393,7 +416,8 @@ class ParamsTab(ScrolledPanel):
                     input = wx.CheckBox(self)
                     if param.values:
                         input.SetValue(param.values[0])
-
+                input.SetName(param.name)
+                input.Bind(wx.EVT_CHECKBOX, self.update_enable_widgets)
                 input.Bind(wx.EVT_CHECKBOX, self.changed)
             elif param.type == 'dropdown':
                 input = wx.Choice(self, wx.ID_ANY, choices=param.options)

@@ -35,12 +35,12 @@ def guided_fill(shape,
                 ending_point,
                 underpath,
                 strategy,
-                enable_random,
+                enable_random_stitch_length,
                 random_sigma,
                 random_seed,
                 ):
     segments = intersect_region_with_grating_guideline(shape, guideline, row_spacing, num_staggers, max_stitch_length, strategy,
-                                                       enable_random, running_stitch_tolerance, random_sigma, random_seed,)
+                                                       enable_random_stitch_length, running_stitch_tolerance, random_sigma, random_seed,)
     if not segments:
         return fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
                         num_staggers, skip_last, starting_point, ending_point, underpath)
@@ -239,7 +239,7 @@ def _get_start_row(line, shape, row_spacing, line_direction):
 
 
 def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy,
-                                            enable_random, tolerance, random_sigma, random_seed):
+                                            enable_random_stitch_length, tolerance, random_sigma, random_seed):
     line = prepare_guide_line(line, shape)
 
     debug.log_line_string(shape.exterior, "guided fill shape")
@@ -271,7 +271,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
 
         debug.log_line_string(offset_line, f"offset {row}")
 
-        if enable_random:
+        if enable_random_stitch_length:
             points = [InkstitchPoint(*x) for x in offset_line.coords]
             stitched_line = shgeo.LineString(random_running_stitch(
                 points, max_stitch_length, tolerance, random_sigma, prng.join_args(random_seed, row)))

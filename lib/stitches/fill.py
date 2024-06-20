@@ -52,12 +52,13 @@ def adjust_stagger(stitch, angle, row_spacing, max_stitch_length, staggers):
     return stitch - offset * east(angle)
 
 
-def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last, enable_random, random_sigma, random_seed):
+def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last,
+               enable_random_stitch_length, random_sigma, random_seed):
     beg = Stitch(*beg, tags=('fill_row_start',))
     end = Stitch(*end, tags=('fill_row_start',))
     stitches.append(beg)
 
-    if enable_random:
+    if enable_random_stitch_length:
         stitches += split_segment_random_phase(beg, end, max_stitch_length, random_sigma, random_seed)
     else:
         # We want our stitches to look like this:
