@@ -113,10 +113,10 @@ def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=Non
     # Now get a unit vector rotated to the requested angle.  I use -angle
     # because shapely rotates clockwise, but my geometry textbooks taught
     # me to consider angles as counter-clockwise from the X axis.
-    direction = InkstitchPoint(1, 0).rotate(-angle)
+    direction = InkstitchPoint(-1, 0).rotate(-angle)
 
     # and get a normal vector
-    normal = direction.rotate(math.pi / 2)
+    normal = direction.rotate(-math.pi / 2)
 
     # I'll start from the center, move in the normal direction some amount,
     # and then walk left and right half_length in each direction to create

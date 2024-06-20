@@ -597,6 +597,37 @@ class FillStitch(EmbroideryElement):
         return self.get_float_param('herringbone_width_mm', 0)
 
     @property
+    @param(
+        'pull_compensation_mm',
+        _('Pull compensation'),
+        tooltip=_('Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. '
+                  'This setting expands each row of stitches outward from the center of the row by a fixed length. '
+                  'Two values separated by a space may be used for an asymmetric effect.'),
+        select_items=[('fill_method', 'auto_fill')],
+        unit=_('mm (each side)'),
+        type='float',
+        default=0,
+        sort_index=26)
+    @cache
+    def pull_compensation_px(self):
+        return np.maximum(self.get_split_mm_param_as_px("pull_compensation_mm", (0, 0)), 0)
+
+    @property
+    @param(
+        'pull_compensation_percent',
+        _('Pull compensation percentage'),
+        tooltip=_('Additional pull compensation which varies as a percentage of row width. '
+                  'Two values separated by a space may be used for an asymmetric effect.'),
+        select_items=[('fill_method', 'auto_fill')],
+        unit=_('% (each side)'),
+        type='float',
+        default=0,
+        sort_index=27)
+    @cache
+    def pull_compensation_percent(self):
+        return np.maximum(self.get_split_float_param("pull_compensation_percent", (0, 0)), 0)
+
+    @property
     def color(self):
         # SVG spec says the default fill is black
         return self.get_style("fill", "#000000")
@@ -1027,6 +1058,8 @@ class FillStitch(EmbroideryElement):
                 self.enable_random_stitch_length,
                 self.random_stitch_length_jitter,
                 self.random_seed,
+                self.pull_compensation_px,
+                self.pull_compensation_percent / 100,
             )
         )
         return [stitch_group]

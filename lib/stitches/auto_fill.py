@@ -11,8 +11,8 @@ from typing import Iterator
 
 import networkx
 from shapely import geometry as shgeo
-from shapely import segmentize
-from shapely.ops import snap
+from shapely import make_valid, segmentize
+from shapely.ops import snap, unary_union
 from shapely.strtree import STRtree
 
 from ..debug.debug import debug
@@ -22,7 +22,8 @@ from ..utils import cache
 from ..utils.clamp_path import clamp_path_to_polygon
 from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import (ensure_multi_line_string,
-                              line_string_to_point_list)
+                              line_string_to_point_list, offset_points)
+from ..utils.list import is_all_zeroes
 from ..utils.prng import join_args
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
@@ -82,12 +83,18 @@ def auto_fill(shape,
               gap_fill_rows=0,
               enable_random_stitch_length=False,
               random_sigma=0.0,
-              random_seed=""):
+              random_seed="",
+              pull_compensation_px=(0, 0),
+              pull_compensation_percent=(0, 0)):
+    has_pull_compensation = not is_all_zeroes(pull_compensation_px) or not is_all_zeroes(pull_compensation_percent)
+    if has_pull_compensation:
+        spacing = min(row_spacing, end_row_spacing or row_spacing)
+        shape = adjust_shape_for_pull_compensation(shape, angle, spacing, pull_compensation_px, pull_compensation_percent)
+
     rows = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing)
     if not rows:
         # Small shapes may not intersect with the grating at all.
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
-
     segments = [segment for row in rows for segment in row]
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
@@ -118,6 +125,34 @@ def round_to_multiple_of_2(number):
         return number + 1
     else:
         return number
+
+
+@debug.time
+def adjust_shape_for_pull_compensation(shape, angle, row_spacing, pull_compensation_px, pull_compensation_percent):
+    rows = intersect_region_with_grating(shape, angle, row_spacing)
+    if not rows:
+        return shape
+    segments = [segment for row in rows for segment in row]
+    segments = apply_pull_compensation(segments, pull_compensation_px, pull_compensation_percent)
+
+    lines = [shgeo.LineString((start, end)) for start, end in segments]
+    buffer_amount = row_spacing/2 + 0.01
+    buffered_lines = [line.buffer(buffer_amount) for line in lines]
+
+    polygon = unary_union(buffered_lines)
+    return make_valid(polygon)
+
+
+def apply_pull_compensation(segments, pull_compensation_px, pull_compensation_percent):
+    new_segments = []
+    for segment in segments:
+        start = InkstitchPoint.from_tuple(segment[0])
+        end = InkstitchPoint.from_tuple(segment[1])
+        end = InkstitchPoint.from_tuple(segment[1])
+        new_start, new_end = offset_points(start, end, pull_compensation_px, pull_compensation_percent)
+        new_segments.append((new_start.as_tuple(), new_end.as_tuple()))
+
+    return new_segments
 
 
 def which_outline(shape, coords):
@@ -374,7 +409,6 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
     calculation.  We also weight the interior edges extra proportional to
     how close they are to the boundary.
     """
-
     graph = networkx.MultiGraph()
 
     # Add all the nodes from the main graph.  This will be all of the endpoints

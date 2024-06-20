@@ -21,3 +21,7 @@ def poprandom(sequence, rng=_rng):
         sequence[index] = last_item
 
     return item
+
+
+def is_all_zeroes(sequence):
+    return all(item == 0 for item in sequence)
