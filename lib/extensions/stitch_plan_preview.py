@@ -5,6 +5,7 @@
 
 import sys
 from base64 import b64encode
+from re import findall
 from tempfile import TemporaryDirectory
 from typing import Optional, Tuple
 
@@ -133,10 +134,14 @@ class StitchPlanPreview(InkstitchExtension):
                     "export-do"  # Inkscape docs say this should be implicit at the end, but it doesn't seem to be.
                 ]))
 
+                # Extract numbers from returned string. It can include other information such as warnings about the usage of AppImages
+                out = findall(r"(?m)^-?\d+\.?\d*$", out)
+
                 # The query commands return positions in px, so we need to convert to uu.
                 px_to_uu = svg.unittouu("1px")
+
                 # Parse the returned coordinates out.
-                x, y, width, height = map(lambda x: px_to_uu*float(x), out.split())
+                x, y, width, height = map(lambda x: px_to_uu*float(x), out)
 
                 # Embed the rasterized stitch plan into the SVG, and replace the original stitch plan
                 with open(temp_png_path, "rb") as f:

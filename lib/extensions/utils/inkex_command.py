@@ -208,6 +208,7 @@ def inkscape(svg_file, *args, **kwargs):
         to `--export-id` and `--query-id`, by converting the call to the appropriate
         action sequence. The stdout is cleaned to resemble non-interactive mode.
     """
+    os.environ["SELF_CALL"] = "true"  # needed for inkscape versions 1.3 and 1.3.1
     actions = kwargs.get("actions", None)
     strip_stdout = False
     # Keep some safe margin to the 8191 character limit.
