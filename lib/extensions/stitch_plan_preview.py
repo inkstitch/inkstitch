@@ -5,7 +5,6 @@
 
 import sys
 from base64 import b64encode
-from os import environ
 from re import findall
 from tempfile import TemporaryDirectory
 from typing import Optional, Tuple
