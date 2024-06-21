@@ -135,7 +135,7 @@ class StitchPlanPreview(InkstitchExtension):
                 ]))
 
                 # Extract numbers from returned string. It can include other information such as warnings about the usage of AppImages
-                out = findall(r"(?m)^\d+\.?\d*$", out)
+                out = findall(r"(?m)^-?\d+\.?\d*$", out)
 
                 # The query commands return positions in px, so we need to convert to uu.
                 px_to_uu = svg.unittouu("1px")
