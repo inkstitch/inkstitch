@@ -47,9 +47,9 @@ def _get_lines_and_colors(shape, fill):
     gradient_start_line_index = round(bottom_line.project(gradient_start) / fill.row_spacing)
     if gradient_start_line_index == 0:
         gradient_start_line_index = -round(LineString([gradient_start, gradient_end]).project(Point(bottom_line.coords[0])) / fill.row_spacing)
-    stop_color_line_indices = [gradient_start_line_index]
+    stop_color_line_indices = []
     gradient_line = LineString([gradient_start, gradient_end])
-    for offset in offsets[1:]:
+    for offset in offsets:
         stop_color_line_indices.append(round((gradient_line.length * offset) / fill.row_spacing) + gradient_start_line_index)
 
     return lines, colors, stop_color_line_indices
@@ -70,13 +70,12 @@ def _get_gradient_info(fill, bbox):
         # it would be easier if we just used fill.gradient.stop_styles to collect them
         # but inkex/tinycss fails on stop color styles when it is not in the style attribute, but in it's own stop-color attribute
         colors = []
-        for stop in fill.gradient.stops:
+        for i, stop in enumerate(fill.gradient.stops):
             color = stop.get_computed_style('stop-color')
             opacity = stop.get_computed_style('stop-opacity')
-            if float(opacity) > 0:
-                colors.append(color)
-            else:
-                colors.append('none')
+            if float(opacity) == 0:
+                color = 'none'
+            colors.append(color)
         gradient_start, gradient_end = gradient_start_end(fill.node, fill.gradient)
         angle = gradient_angle(fill.node, fill.gradient)
     return angle, colors, offsets, Point(list(gradient_start)), Point(list(gradient_end))
@@ -170,7 +169,7 @@ def _get_color_lines(lines, colors, stop_color_line_indices):
         prev += 1
         line_index += 1
         total_lines = line_index - prev
-        sections = floor(sqrt(total_lines))
+        sections = floor(sqrt(max(total_lines, 0)))
 
         color1 = []
         color2 = []
@@ -204,6 +203,9 @@ def _get_color_lines(lines, colors, stop_color_line_indices):
                 c2_count,
                 max_count
             )
+
+        if not color1 or not color2:
+            continue
 
         # mirror the first half of the color section to receive the full section
         second_half = color2[-1] * 2 + 1
