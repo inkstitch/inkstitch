@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-21 01:11+0000\n"
-"PO-Revision-Date: 2024-06-21 01:11\n"
+"PO-Revision-Date: 2024-06-22 01:11\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1510,7 +1510,7 @@ msgstr "Détermine la force avec laquelle Ink/Stitch essaie d'éviter de broder 
 
 #: lib/elements/fill_stitch.py:491
 msgid "Randomize stitch length"
-msgstr ""
+msgstr "Rendre aléatoire la longueur du point"
 
 #: lib/elements/fill_stitch.py:492 lib/elements/stroke.py:135
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
@@ -1584,7 +1584,7 @@ msgstr "Compensation d'étirement"
 
 #: lib/elements/fill_stitch.py:603
 msgid "Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. This setting expands each row of stitches outward from the center of the row by a fixed length. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "Les points de remplissage resserrent le tissu, ce qui entraîne une forme plus étroite que celle que vous dessinez dans Inkscape. Ce paramètre allonge d'une valeur fixe chaque rangée de ponts. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
 #: lib/elements/fill_stitch.py:607 lib/elements/satin_column.py:280
 #: lib/elements/satin_column.py:395 lib/elements/satin_column.py:489
@@ -1597,7 +1597,7 @@ msgstr "Pourcentage de compensation d'étirement"
 
 #: lib/elements/fill_stitch.py:619
 msgid "Additional pull compensation which varies as a percentage of row width. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "Compensation d'étirement supplémentaire qui varie comme un pourcentage de la longueur de la rangée. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
 #: lib/elements/fill_stitch.py:622 lib/elements/satin_column.py:130
 #: lib/elements/satin_column.py:140 lib/elements/satin_column.py:264
@@ -1939,11 +1939,11 @@ msgstr "Distance entre les crêtes des zigzags. C'est le double de millimètres 
 
 #: lib/elements/satin_column.py:262
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "Compensation d'étirement supplémentaire qui varie comme un pourcentage de la largeur du point. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
 #: lib/elements/satin_column.py:277
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "Les points satin resserrent le tissu, ce qui entraîne une colonne plus étroite que celle que vous dessinez dans Inkscape. Ce paramètre étend d'une valeur fixe chaque point depuis le centre vers l’extérieur de la colonne satin. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
 #: lib/elements/satin_column.py:291 lib/elements/stroke.py:299
 msgid "Automatic"
@@ -2128,7 +2128,7 @@ msgstr "Tous les points doivent rester au plus à cette distance du chemin. Une 
 
 #: lib/elements/stroke.py:134
 msgid "Randomized stitch length"
-msgstr ""
+msgstr "Rendre aléatoire la longueur du point"
 
 #: lib/elements/stroke.py:160
 msgid "Split stitches longer than this."
