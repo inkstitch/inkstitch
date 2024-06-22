@@ -39,10 +39,15 @@ toc: true
 * [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
 
   ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
-  
+  ≈
 * [Namskout Tartan](/fonts/namskout_AGS/) ([#2938](https://github.com/inkstitch/inkstitch/pull/2938))
 
   ![Namskout Tartan preview](/assets/images/fonts/namskout_tartan.png)
+
+* [Namskout Relief](/fonts/namskout_AGS/) ([#2938](https://github.com/inkstitch/inkstitch/pull/3008))
+
+  ![Namskout Relief preview](/assets/images/fonts/namskout_relief.png)
+  
 * [Ondulamarif](/fonts/ondulamarif/) ([#2902](https://github.com/inkstitch/inkstitch/pull/2902))
  <img 
      src="/assets/images/fonts/ondulamarif_xl.png"
