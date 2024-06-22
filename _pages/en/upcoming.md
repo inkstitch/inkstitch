@@ -40,11 +40,11 @@ toc: true
 
   ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
   ≈
-* [Namskout Tartan](/fonts/namskout_AGS/) ([#2938](https://github.com/inkstitch/inkstitch/pull/2938))
+* [Namskout Tartan](/fonts/namskout_ags/) ([#2938](https://github.com/inkstitch/inkstitch/pull/2938))
 
   ![Namskout Tartan preview](/assets/images/fonts/namskout_tartan.png)
 
-* [Namskout Relief](/fonts/namskout_AGS/) ([#2938](https://github.com/inkstitch/inkstitch/pull/3008))
+* [Namskout Relief](/fonts/namskout_ags/) ([#2938](https://github.com/inkstitch/inkstitch/pull/3008))
 
   ![Namskout Relief preview](/assets/images/fonts/namskout_relief.png)
   
