@@ -15,7 +15,7 @@
     "max_scale": 1.5,
     "size": 90,
     "horiz_adv_x_default": 280,
-    "horiz_adv_x_space": 140,
+    "horiz_adv_x_space": 200,
     "units_per_em": 350,
     "horiz_adv_x": {
         "!": 164,
