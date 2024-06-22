@@ -72,7 +72,7 @@ Si vous supprimez la couleur de contour des chemins verts et la remplacez par un
 *  enlever l'excès de mousse et poser une doublure sous la de mousse .
 *  broder la dernière couleur (bleue): Un point quintuple est brodé autour des lettres, prenant la mousse en sandwich entre la doublure et le tissu définitif.
 
-[Vous trouverez ici  plus de détails pour utiliser cette fonte](https://lyogau.over-blog.com/2024/06/broderie-en-relief-mousse-puffy-ou-autre.html)
+[Vous trouverez ici  plus de détails pour utiliser cette fonte.](https://lyogau.over-blog.com/2024/06/broderie-en-relief-mousse-puffy-ou-autre.html)
 
 ###  Namskout Tartan
 
