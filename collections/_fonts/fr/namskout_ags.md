@@ -55,8 +55,8 @@ Les trois couleurs de cette version correspondent à trois étapes de broderie :
 ### Namskout Relief
 Telle quelle Namskout Relief est prévue pour être utilisée ainsi  
 *  placer une doublure sur le stabilisateur.
-*  broder la première couleur (verte). C'est un positionnement, en point droit,  qui indique où poser  la mousse pour obtenir un effet relief.
-*  broder la seconde couleur (rouge) : ce point triple va découper la mousse.
+*  broder la première couleur (rouge). C'est un positionnement, en point droit,  qui indique où poser  la mousse pour obtenir un effet relief.
+*  poser la mousse puis broder la seconde couleur (verte) : ce point triple va découper la mousse.
 *  enlever l'excès de mousse et poser le tissu "définitif".
 *  broder la dernière couleur (bleue): Un point quintuple est brodé autour des lettres.
   
