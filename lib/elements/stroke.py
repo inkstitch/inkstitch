@@ -131,7 +131,7 @@ class Stroke(EmbroideryElement):
 
     @property
     @param('enable_random_stitch_length',
-           _('Randomized stitch length'),
+           _('Randomize stitch length'),
            tooltip=_('Randomize stitch length and phase instead of dividing evenly or staggering. '
                      'This is recommended for closely-spaced curved fills to avoid Moiré artefacts.'),
            type='boolean',
