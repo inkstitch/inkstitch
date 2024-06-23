@@ -22,6 +22,9 @@ toc: true
 * [Colorful](/de/fonts/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
 
   ![Colorfu preview](/assets/images/fonts/colorful.png)
+* [Cooper Marif](/fr/fonts/cooper_marif/) ([#3012](https://github.com/inkstitch/inkstitch/pull/3012))
+
+  ![Cooper  Marif preview](/assets/images/fonts/cooper_marif.png)
 * [Emilio 20 Tartan](/de/fonts/emilio-20/) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
 
 * [コリンの書き方](/de/fonts/honoka/) ([#2935](https://github.com/inkstitch/inkstitch/pull/2935))
