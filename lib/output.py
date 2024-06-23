@@ -124,6 +124,6 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         msg += '\n'
         msg += _("Please reduce color changes. Find more information on our website:")
         msg += '\n\n'
-        msg += _("http://inkstitch.org/docs/faq/#too-many-color-changes")
+        msg += _("https://inkstitch.org/docs/faq/#too-many-color-changes")
         inkex.errormsg(msg)
         sys.exit(1)
