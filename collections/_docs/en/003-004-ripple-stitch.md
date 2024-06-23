@@ -85,6 +85,8 @@ Repeats                       ||◦ Defines how many times to run down and back 
 Bean stitch number of repeats ||◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/) which also applies to ripple stitching<br>◦ Backtrack each stitch this many times.<br>◦ A value of 1 would triple each stitch (forward, back, forward).<br>◦ A value of 2 would quintuple each stitch, etc.<br>◦ It is possible to define a repeat pattern by entering multiple values separated by a space.
 Running stitch length         ||Length of stitches in [Running Stitch Mode](/docs/stitches/running-stitch/)
 Running stitch tolerance      ||All stitches must be within this distance of the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded.
+Randomize stitch length       |Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts.
+Random stitch length jitter   |Amount to vary the length of each stitch by when randomizing. Randomize stitch length must be activated.
 Number of lines|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Chose how many times the ripple replicates. Default value is 10.
 Minimum line distance || Overwrites the number of lines setting.
 Stagger rows this many times before repeating    ||  Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. For linear ripples only. 

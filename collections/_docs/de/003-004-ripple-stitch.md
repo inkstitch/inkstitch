@@ -85,6 +85,8 @@ Wiederholungen                 || ◦ Legt fest, wie oft der Pfad durchlaufen we
 Mehrfach Geradstich Anzahl der Wiederholungen || ◦ Aktiviert den [Mehrfachgeradstich Modus](/de/docs/stitches/bean-stitch/)<br />◦ Jeden Stich vervielfachen.<br />Ein Wert von 1 verdreifacht jeden Stich (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 verfünffacht jeden Stich, usw.
 Stichlänge                     || Länge der Stiche
 Geradstich Toleranz            || Alle Stiche müssen innerhalb dieser Distanz zum Pfad liegen. Eine niedrigere Toleranz verkürzt die Stiche. Eine höhere Toleranz kann scharfe Ecken abrunden.
+Zufällige Stichlänge                  | Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
+Zufallsabweichung von der Stichlänge  | Maximale randomisierte Abweichung der Stichabstände in Prozent. Zufällige Stichlänge randomisieren muss aktiviert sein.
 Anzahl der Linien|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>| Anzahl der Wiederholungen der Ripple-Form. Voreinstellung: 10.
 Minimaler Linienabstand        || Diese Einstellung überschreibt den Wert "Anzahl der Linien"
 Reihenanzahl bis sich das Muster wiederholt   ||  Dieser Wert beschreibt, nach wie vielen Reihen die Einstichstellen übereinander liegen. Dezimalwerte sind zulässig und zeigen weniger deutliche Diagonalen im Stickbild. Nur für lineare Ripples.
