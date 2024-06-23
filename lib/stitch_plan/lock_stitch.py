@@ -85,11 +85,14 @@ class RelativeLock(LockStitchDefinition):
         to_previous = stitches[1] - stitches[0]
         length = to_previous.length()
 
+        if length == 0:
+            direction = Stitch(0, 0.5)
+        else:
+            direction = to_previous.unit()
+
         # travel at least 0.5 and at most 1.5
         length = max(length, 0.5 * PIXELS_PER_MM)
         length = min(length, 1.5 * PIXELS_PER_MM)
-
-        direction = to_previous.unit()
 
         # Travel back one stitch, stopping halfway there.
         # Then go forward one stitch, stopping halfway between
