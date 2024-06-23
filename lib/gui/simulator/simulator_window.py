@@ -17,8 +17,8 @@ class SimulatorWindow(wx.Frame):
 
         self.sizer = wx.BoxSizer(wx.VERTICAL)
 
-        self.statusbar = self.CreateStatusBar(2)
-        self.statusbar.SetStatusWidths((0, -1))
+        self.statusbar = self.CreateStatusBar(3)
+        self.statusbar.SetStatusWidths((0, -1, -1))
 
         if panel and parent:
             self.is_child = True

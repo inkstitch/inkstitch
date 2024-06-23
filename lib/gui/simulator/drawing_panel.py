@@ -234,6 +234,14 @@ class DrawingPanel(wx.Panel):
         self.parse_stitch_plan(stitch_plan)
         self.choose_zoom_and_pan()
         self.set_current_stitch(0)
+        statusbar = self.GetTopLevelParent().statusbar
+        statusbar.SetStatusText(
+            _("Dimensions: {:.2f} x {:.2f}").format(
+                stitch_plan.dimensions[0] / PIXELS_PER_MM,
+                stitch_plan.dimensions[1] / PIXELS_PER_MM
+            ),
+            1
+        )
         self.loaded = True
         self.go()
 
@@ -340,7 +348,7 @@ class DrawingPanel(wx.Panel):
         command = self.commands[self.current_stitch]
         self.control_panel.on_current_stitch(self.current_stitch, command)
         statusbar = self.GetTopLevelParent().statusbar
-        statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command], 1)
+        statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command], 2)
         self.stop_if_at_end()
         self.Refresh()
 

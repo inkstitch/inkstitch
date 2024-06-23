@@ -18,7 +18,7 @@ class SplitSimulatorWindow(wx.Frame):
 
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
-        self.statusbar = self.CreateStatusBar(2)
+        self.statusbar = self.CreateStatusBar(3)
 
         self.detached_simulator_frame = None
         self.splitter = wx.SplitterWindow(self, style=wx.SP_LIVE_UPDATE)
@@ -56,13 +56,13 @@ class SplitSimulatorWindow(wx.Frame):
             self.detach_simulator()
 
     def splitter_resize(self, event):
-        self.statusbar.SetStatusWidths((self.simulator_panel.GetScreenPosition()[0], -1))
+        self.statusbar.SetStatusWidths((self.simulator_panel.GetScreenPosition()[0], -1, -1))
 
     def set_sash_position(self):
         settings_panel_min_size = self.settings_panel.GetSizer().CalcMin()
         debug.log(f"{settings_panel_min_size=}")
         self.splitter.SetSashPosition(settings_panel_min_size.width)
-        self.statusbar.SetStatusWidths((settings_panel_min_size.width, -1))
+        self.statusbar.SetStatusWidths((settings_panel_min_size.width, -1, -1))
 
     def cancel(self, event=None):
         if self.cancel_hook:
@@ -86,7 +86,7 @@ class SplitSimulatorWindow(wx.Frame):
         self.simulator_panel.Reparent(self.splitter)
         self.splitter.SplitVertically(self.settings_panel, self.simulator_panel)
 
-        self.GetStatusBar().SetStatusText(self.detached_simulator_frame.GetStatusBar().GetStatusText(1), 1)
+        self.GetStatusBar().SetStatusText(self.detached_simulator_frame.GetStatusBar().GetStatusText(1), 2)
 
         self.detached_simulator_frame.Destroy()
         self.detached_simulator_frame = None
@@ -114,7 +114,7 @@ class SplitSimulatorWindow(wx.Frame):
         self.detached_simulator_frame.SetSize((screen_rect.width - settings_panel_size.width, screen_rect.height))
         self.detached_simulator_frame.SetPosition((settings_panel_size.width, screen_rect.top))
 
-        self.detached_simulator_frame.GetStatusBar().SetStatusText(self.GetStatusBar().GetStatusText(1), 1)
+        self.detached_simulator_frame.GetStatusBar().SetStatusText(self.GetStatusBar().GetStatusText(1), 2)
         self.GetStatusBar().SetStatusText("", 1)
 
         self.detached_simulator_frame.Show()
