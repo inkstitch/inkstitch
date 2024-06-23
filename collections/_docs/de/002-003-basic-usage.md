@@ -24,13 +24,13 @@ Erstelle ein Objekt, z.B. ein Kreis und stelle sicher, dass es eine Füllung hat
 
 ## Schritt 3 - Stickdatei erstellen
 
-* Öffne `Datei > Speichern als...`
+* Öffne `Datei > Kopie speichern ...`
 * Navigiere zu dem Ordner, in dem du die Datei speichern willst
-* Wähle das Format entsprechend den Präferenzen deiner Maschine
+* Speichere die Datei in einem Format, das deine Maschine lesen kann
 * Klicke auf `Speichern`
 * Sende die Datei an deine Maschine
 
-**Tipp:** Stelle sicher, dass du die Dateien immer auch im SVG-Format speicherst. Dann hast du immer die Möglichkeit das Motiv zu einem späteren Zeitpunkt ohne großen Aufwand zu verändern.
+**Tipp:** Die Dateien sollten auch immer im SVG-Format gespeichert werden (z.B. über `Datei > Speichern unter...`). Dann hast du immer die Möglichkeit das Motiv zu einem späteren Zeitpunkt ohne großen Aufwand anzupassen.
 {: .notice--info}
 
 ## Arbeitsablauf
