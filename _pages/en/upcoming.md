@@ -21,7 +21,7 @@ toc: true
   ![Chicken Scratch preview](/assets/images/fonts/chicken_scratch.jpg)
 * [Colorful](/fonts/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
 
-  ![Colorfu preview](/assets/images/fonts/colorful.png)
+  ![Colorful preview](/assets/images/fonts/colorful.png)
 * [Cooper Marif](/fonts/cooper_marif/) ([#3012](https://github.com/inkstitch/inkstitch/pull/3012))
 
   ![Cooper  Marif preview](/assets/images/fonts/cooper_marif.png
