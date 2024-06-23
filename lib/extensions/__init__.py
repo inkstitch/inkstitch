@@ -3,6 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from .about import About
 from .apply_palette import ApplyPalette
 from .apply_threadlist import ApplyThreadlist
 from .auto_run import AutoRun
@@ -66,7 +67,8 @@ from .update_svg import UpdateSvg
 from .zigzag_line_to_satin import ZigzagLineToSatin
 from .zip import Zip
 
-__all__ = extensions = [ApplyPalette,
+__all__ = extensions = [About,
+                        ApplyPalette,
                         ApplyThreadlist,
                         AutoRun,
                         AutoSatin,
