@@ -268,7 +268,8 @@ class DrawingPanel(wx.Panel):
 
     def color_to_pen(self, color):
         line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
-        return wx.Pen(list(map(int, color.visible_on_white.rgb)), int(line_width))
+        background_color = self.GetBackgroundColour().GetAsString()
+        return wx.Pen(list(map(int, color.visible_on_background(background_color).rgb)), int(line_width))
 
     def update_pen_size(self):
         line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY

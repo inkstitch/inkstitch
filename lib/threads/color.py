@@ -138,6 +138,34 @@ class ThreadColor(object):
 
         return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer, description=self.description, chart=self.chart)
 
+    def visible_on_background(self, background_color):
+        """A ThreadColor similar to this one but visible on given background color.
+
+        Choose a color that's as close as possible to the actual thread color but is still at least
+        somewhat visible on given background.
+        """
+        hls = list(colorsys.rgb_to_hls(*self.rgb_normalized))
+        background = ThreadColor(background_color)
+        background_hls = list(colorsys.rgb_to_hls(*background.rgb_normalized))
+
+        difference = hls[1] - background_hls[1]
+
+        if abs(difference) < 0.1:
+            if hls[1] > 0.5:
+                hls[1] -= 0.1
+            else:
+                hls[1] += 0.1
+
+            color = colorsys.hls_to_rgb(*hls)
+
+            # convert back to values in the range of 0-255
+            color = tuple(value * 255 for value in color)
+
+            return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer,
+                               description=self.description, chart=self.chart)
+
+        return self
+
     @property
     def darker(self):
         hls = list(colorsys.rgb_to_hls(*self.rgb_normalized))
