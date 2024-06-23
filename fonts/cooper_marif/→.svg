@@ -23,10 +23,10 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="1.4994288"
-     inkscape:cx="237.09029"
-     inkscape:cy="-66.358603"
-     inkscape:current-layer="g209"
+     inkscape:zoom="7.759544"
+     inkscape:cx="237.44952"
+     inkscape:cy="-66.692063"
+     inkscape:current-layer="g212"
      inkscape:document-units="mm"
      showguides="true">
     <sodipodi:guide
@@ -3252,8 +3252,7 @@ Created by FontForge 20201107 at Mon Jun 17 22:36:34 2024
      inkscape:label="GlyphLayer-C"
      style="display:none"
      id="g212"
-     transform="translate(0,123.307)"
-     sodipodi:insensitive="true">
+     transform="translate(0,123.307)">
     <path
        d="M 169,431 C 74,431 14,365 14,279 14,198 68,122 171,122 c 57,0 66,18 80,18 10,0 10,-5 21,-5 16,0 27,36 27,66 0,28 -16,40 -30,40 -16,0 -19,-11 -25,-28 -7,-26 -40,-50 -75,-50 -58,0 -80,47 -80,88 0,74 47,127 105,127 38,0 61,-16 75,-39 4,-7 8,-17 16,-17 7,0 17,6 17,22 0,18 -12,43 -19,53 -3,3 -6,4 -10,5 -4,1 -7,2 -11,2 -14,0 -36,27 -93,27 z"
        id="path212"
