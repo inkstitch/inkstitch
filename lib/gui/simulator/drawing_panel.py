@@ -230,20 +230,27 @@ class DrawingPanel(wx.Panel):
         self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
         self.width = self.maxx - self.minx
         self.height = self.maxy - self.miny
+        self.dimensions_mm = stitch_plan.dimensions_mm
         self.num_stitches = stitch_plan.num_stitches
+        self.num_trims = stitch_plan.num_trims
+        self.num_color_changes = stitch_plan.num_color_blocks - 1
+        self.num_stops = stitch_plan.num_stops
+        self.num_jumps = stitch_plan.num_jumps - 1
         self.parse_stitch_plan(stitch_plan)
         self.choose_zoom_and_pan()
         self.set_current_stitch(0)
         statusbar = self.GetTopLevelParent().statusbar
         statusbar.SetStatusText(
             _("Dimensions: {:.2f} x {:.2f}").format(
-                stitch_plan.dimensions[0] / PIXELS_PER_MM,
-                stitch_plan.dimensions[1] / PIXELS_PER_MM
+                stitch_plan.dimensions_mm[0],
+                stitch_plan.dimensions_mm[1]
             ),
             1
         )
         self.loaded = True
         self.go()
+        if hasattr(self.view_panel, 'info_panel'):
+            self.view_panel.info_panel.update()
 
     def choose_zoom_and_pan(self, event=None):
         # ignore if EVT_SIZE fired before we load the stitch plan
