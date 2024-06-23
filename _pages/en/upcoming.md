@@ -1,12 +1,12 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-06-13
+last_modified_at: 2024-06-23
 sidebar:
   nav: pages
 toc: true
 ---
-## Fonts
+## [Fonts](/fonts/font-library)
 
 ### New fonts
 
@@ -39,8 +39,8 @@ toc: true
 * [Millimarif-bold20](/fonts/milli-marif-bold/) ([#2780](https://github.com/inkstitch/inkstitch/pull/2780))
 
   ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
-  ≈
-* [Namskout Tartan](/fonts/namskout_ags/) ([#2938](https://github.com/inkstitch/inkstitch/pull/2938))
+  
+* [Namskout Tartan](/fonts/namskout_AGS/) ([#2938](https://github.com/inkstitch/inkstitch/pull/2938))
 
   ![Namskout Tartan preview](/assets/images/fonts/namskout_tartan.png)
 
@@ -300,6 +300,7 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 * Improved params simulator([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
 * Simulator is now attachable/detachable ([#2557](https://github.com/inkstitch/inkstitch/issues/2557))
 * Simulator has a changable background color and can show/hide jumps ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
+* Simulator has a preferences button to scale line width and needle penetration points ([#2992](https://github.com/inkstitch/inkstitch/issues/2992))
 
 ### [Stitch Plan Preview](/docs/visualize/#stitch-plan-preview)
 
@@ -343,6 +344,7 @@ New options
 * Randomize stitch length option ([#2830](https://github.com/inkstitch/inkstitch/issues/2830))
 * Smooth underpath ([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
 * Prevent fill stitch from going outside the shape ([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
+* Proportional pull compensation ([#2891](https://github.com/inkstitch/inkstitch/issues/2891))
 * [Linear gradient fill](/docs/stitches/linear-gradient-fill/): a new stitch type to stitch gradients ([#2587](https://github.com/inkstitch/inkstitch/issues/2587))
 
   [![Linear gradient fill](/assets/images/docs/linear-gradient.jpg)](/assets/images/docs/linear-gradient.svg)
@@ -399,6 +401,11 @@ to manual stitches and keep previous behavior. [#2866](https://github.com/inksti
 
 ## Bug Fixes
 
+* [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Fix about extension for Inkscape version 1.4
+* [#3004](https://github.com/inkstitch/inkstitch/issues/3004) Fix realistic stitch plan preview for inkscape versions 1.3 and 1.3.1
+* [#3002](https://github.com/inkstitch/inkstitch/issues/3002) gray out randomize stitch length param when random stitch length is disabled
+* [#2998](https://github.com/inkstitch/inkstitch/issues/2998) Fix short relative lock stitches
+* [#2993](https://github.com/inkstitch/inkstitch/issues/2993) PDF Preview webpage now pings in worker
 * [#2984](https://github.com/inkstitch/inkstitch/issues/2984) improve error message for files with too many color changes
 * [#2974](https://github.com/inkstitch/inkstitch/issues/2974) Remove simulator fragments on resize
 * [#2969](https://github.com/inkstitch/inkstitch/issues/2969) Improve simulator dark theme

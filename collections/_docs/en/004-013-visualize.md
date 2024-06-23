@@ -35,7 +35,7 @@ It is also possible to **zoom** and **pan** the simulation with the mouse.
 Run `Extensions > Ink/Stitch > Visualize and Export > Stitch Plan Preview...`.
 Instead of applying the stitch plan, you can also use the `Live preview` option. Then you don't need to undo your changes afterwards. If you apply the stitch plan, you will have the ability to inspect it and adapt your design as you wish. Use the Undo Stitch Plan extension to remove it afterwards.
 
-You have the following display options:
+### Options
 
 - **Design layer visibility** defines the visibility of the original design layer.
   - **unchanged** leave it as is
@@ -47,6 +47,10 @@ You have the following display options:
   - **Realistic**: Realistic preview output as png image into the canvas (8-bit)
   - **Realistic High Quality** Realistic preview output as png image into the canvas (16-bit)
   - **Realistic vector (slow)** Vector output with realistic filters
+
+    Slow means, that it has the capability to slow down Inkscape after the rendering process and even may make it freeze.
+    So use with care on complex designs and save your design before you render the stitch plan.
+    {: .notice--warning }
 - **Move stitch plan beside the canvas**
   Displays the preview on the right side of the canvas. If not enabled,the stitch plan will be placed on top of your design.
   In that case you may want to update your design visibility to eather hidden or lower opacity.

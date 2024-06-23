@@ -24,25 +24,28 @@ user-level:
 
 toc: true
 ---
-Optimising the stitch path is one of the most important subjects in embroidery. Learn how Ink/Stitch can assist you with the task.
+Den Stickpfad zu optimisieren ist eine der wichtigsten Aufgaben beim Erstellen einer Stickdatei. Lerne hier, wie Ink/Stitch dir bei dieser Aufgabe helfen kann.
 
-Embroidery is not only a setup of various elements printed on a piece of paper. When you create embroidery it is essential to
+Beim Drucken spielt die Reihenfolge und die Verbindung der Elemente untereinander keine Rolle. Beim Sticken aber sollte man unbedingt darauf achten dass:
 
-* **Put elements into a logical order**
-  * To avoid color changes where possible
+* **die Elemente in logischer Reihenfolge aufgebaut sind**
 
-    It is still sometimes necessary to add an extra color change when either one color goes both - underneath AND on top of an other color
-    or when push and pull on the fabric during the stitch out demands us to do so.
-  * To avoid registration problems
-  * To avoid puckering
-* **Avoid jump stitches**
+  * Vermeide Farbwechsel so gut wie möglich
 
-  There should be no unneccessary jump stitches in your file. Do not just try to hide them by adding trim commands.
-  Trims produce chaos on the backside of the embroidery and slow down the machine quite a bit.
+    Es kann aber manchmal nötig sein, zusätzliche Farbwechsel zu nutzen, nämlich dann, wenn die Farben mal unterhalb, mal oberhalb anderer Elemente gestickt werden müssen oder
+    wenn der Verzug am Stoff andernfalls für die folgenden Elemente zu groß werden würde.
+  * Registrierungsprobleme verhinden
+  * Knittern im Stoff verhindern
 
-Each file is individual and you are the designer who has to decide on how to route your stitch paths. But Ink/Stitch has some tools to assist you with the task.
+* **Sprungstiche vermieden werde**
 
-## General Routing Options
+  In der gesamten Stickdatei sollten keine unnätigen Sprungstiche vorhanden sein. Versuche nicht, sie durch Fadenschnittbefehle zu verstecken,
+  sondern versuche lieber duch geschickte Unterpfade eine bessere Lösung zu finden. Fadenschnitte verursachen Chaos auf der Rückseite der Stickerei und
+  verlangsamt die Maschine beim Stickvorgang stark.
+
+Jede Datei ist individuell und du bist der Designer der entscheiden kann wie die Stickpfade aufgebaut sind. Aber Ink/Stitch hält ein paar Werkzeuge bereit, die dich unterstützen können.
+
+## Generelle Pfadoptimisierung
 
 ### Order elements in selected order
 

@@ -1,7 +1,7 @@
 ---
 title: "Changements, Mises à jour et Corrections pour la prochaine  version Ink/Stitch v3.1.0"
 permalink: /fr/upcoming/
-last_modified_at: 2024-06-14
+last_modified_at: 2024-06-22
 sidebar:
   nav: pages
 toc: true
@@ -22,11 +22,11 @@ toc: true
 * [Colorful](/fr/fonts/colorful/) ([#2887](https://github.com/inkstitch/inkstitch/pull/2887))
 
   ![Colorfu preview](/assets/images/fonts/colorful.png)
-  * [Emilio 20 Tartan](/fr/fonts/emilio-20/) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
+* [Emilio 20 Tartan](/fr/fonts/emilio-20/) ([#2869](https://github.com/inkstitch/inkstitch/pull/2869))
 
   ![Emilio 20 Tartan preview](/assets/images/fonts/emilio_tartan.png)
 
-  * [コリンの書き方](/fr/fonts/honoka/) ([#2935](https://github.com/inkstitch/inkstitch/pull/2935))
+*  [コリンの書き方](/fr/fonts/honoka/) ([#2935](https://github.com/inkstitch/inkstitch/pull/2935))
 
   ![Honoka preview](/assets/images/fonts/honoka.jpg)
 * [Invercelia](/fr/fonts/invercelia/) ([#2888](https://github.com/inkstitch/inkstitch/pull/2888))
@@ -63,13 +63,9 @@ toc: true
 * [Roaring twenties KOR](/fr/fonts/roaring_twenties_KOR/) ([#2856](https://github.com/inkstitch/inkstitch/issues/2856))
 
   ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
-
-
 * [Shojumaru](/fr/fonts/shojumaru) ([#2997](https://github.com/inkstitch/inkstitch/pull/2997))
 
   ![Shojumaru preview](/assets/images/fonts/shojumaru.png)
-
-
 * [Violin Serif](/fr/fonts/violin_serif/) ([#2703](https://github.com/inkstitch/inkstitch/pull/2703))
 
   ![Violin Serif preview](/assets/images/fonts/violin_serif.jpg)
@@ -299,6 +295,7 @@ Visualise et Exporter > Export pdf
 * Meilleur simulateur pour Paramètres et Lettrage ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
 * Le simulateur est maintenant attaché à la fenêtre principale (Paramètre et Lettrage)([#2557](https://github.com/inkstitch/inkstitch/issues/2557)), il est détachable, et son dernier état est conservé.
 * La couleur de fond du simulateur est maintenant modifiable, et il a la capacité de montrer/cacher les sauts de fil. ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
+* Simulator has a preferences button to scale line width and needle penetration points ([#2992](https://github.com/inkstitch/inkstitch/issues/2992))
 
 ### [Prévisualisaton du plan de broderie](/fr/docs/visualize/#stitch-plan-preview)
 
@@ -339,6 +336,7 @@ Ajout d'options
 * Option d'ajout d'aléatoire à la longueur du point ([#2830](https://github.com/inkstitch/inkstitch/issues/2830))
 * Lissage des chemins de dessous([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
 * Prévention de la sortie de la forme pour le remplissage([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
+* Proportional pull compensation ([#2891](https://github.com/inkstitch/inkstitch/issues/2891))
 * [Remplissage dégradé linéaire](/fr/docs/stitches/linear-gradient-fill/): un nouveau type de points pour les dégradés linéaires([#2587](https://github.com/inkstitch/inkstitch/issues/2587))
 
   [![Linear gradient fill](/assets/images/docs/linear-gradient.jpg)](/assets/images/docs/linear-gradient.svg)
@@ -394,6 +392,13 @@ Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu
 
 ## Corrections de bug
 
+* [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Fix about extension for Inkscape version 1.4
+* [#3004](https://github.com/inkstitch/inkstitch/issues/3004) Fix realistic stitch plan preview for inkscape versions 1.3 and 1.3.1
+* [#3002](https://github.com/inkstitch/inkstitch/issues/3002) gray out randomize stitch length param when random stitch length is disabled
+* [#2998](https://github.com/inkstitch/inkstitch/issues/2998) Fix short relative lock stitches
+* [#2993](https://github.com/inkstitch/inkstitch/issues/2993) PDF Preview webpage now pings in worker
+* [#2984](https://github.com/inkstitch/inkstitch/issues/2984) improve error message for files with too many color changes
+* [#2974](https://github.com/inkstitch/inkstitch/issues/2974) Remove simulator fragments on resize
 * [#2984](https://github.com/inkstitch/inkstitch/issues/2984) improve error message for files with too many color changes
 * [#2974](https://github.com/inkstitch/inkstitch/issues/2974) Remove simulator fragments on resize
 * [#2969](https://github.com/inkstitch/inkstitch/issues/2969) Improve simulator dark theme

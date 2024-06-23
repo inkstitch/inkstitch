@@ -1,12 +1,12 @@
 ---
 title: "Neue Funktionen, Aktualisierungen und Fehlerbehebungen für die nächste Ink/Stitch verison (3.1.0)"
 permalink: /de/upcoming/
-last_modified_at: 2024-06-13
+last_modified_at: 2024-06-23
 sidebar:
   nav: pages
 toc: true
 ---
-## Schriften
+## [Schriften](/de/fonts/font-library)
 
 ### Neue Schriftarten
 
@@ -33,7 +33,7 @@ toc: true
 
   ![Invercelia preview](/assets/images/fonts/invercelia.png)
 
-  * [Magnolia bicolor](/de/fonts/magnolia-script/) ([#2927](https://github.com/inkstitch/inkstitch/pull/2927))
+* [Magnolia bicolor](/de/fonts/magnolia-script/) ([#2927](https://github.com/inkstitch/inkstitch/pull/2927))
 
   ![Magnolia bicolor  preview](/assets/images/fonts/magnolia_bicolor.png)
  
@@ -41,7 +41,7 @@ toc: true
 
   ![Millimarif-bold20 preview](/assets/images/fonts/milli_marif.jpg)
   
-* [Namskout Tartan](/de/fonts/namskout_ags/) ([#2938](https://github.com/inkstitch/inkstitch/pull/2938))
+* [Namskout Tartan](/de/fonts/namskout_AGS/) ([#2938](https://github.com/inkstitch/inkstitch/pull/2938))
 
   ![Namskout Tartan preview](/assets/images/fonts/namskout_tartan.png)
 
@@ -170,7 +170,7 @@ Diese Erweiterung generiert Kopien der ausgewählten Satinsäule um einen mehrfa
 
 ![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
 
-### [Außenkontur](/docs/stroke-tools/#ausenkontur)
+### [Außenkontur](/docs/stroke-tools/#außenkontur)
 
 `Werkzeuge: Linie > Außenkontur` ([#2529](https://github.com/inkstitch/inkstitch/issues/2529), [#2881](https://github.com/inkstitch/inkstitch/issues/2881))
 
@@ -306,6 +306,7 @@ Die realistische Vorschau befindet sich jetzt in der Stichplan Vorschau.
 * Simulator kann an die Einstellungsfenster angeheftet und gelöst werden([#2557](https://github.com/inkstitch/inkstitch/issues/2557))
 * Die Hintergrundfarbe kann im Simulator angepasst werden ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
 * Sprungstiche können angezeigt/versteckt werden ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
+* Die Linienbreite und die Größe der Punkte für die Nadeleinstichstellen können in den Einstellungen manuell gesetzt werden ([#2992](https://github.com/inkstitch/inkstitch/issues/2992))
 
 ### [Stichplanvorschau](/de/docs/visualize/#stich-plan-vorschau)
 
@@ -349,6 +350,7 @@ Neue Optionen
 * Option für randomisierte Stichlänge ([#2830](https://github.com/inkstitch/inkstitch/issues/2830))
 * Gebogene Verbindunglinien ([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
 * Füllstiche verlaufen nicht mehr so häufig außerhalb der Außenkontur ([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
+* Proportionaler Zugauslgleich ([#2891](https://github.com/inkstitch/inkstitch/issues/2891))
 * [Lineare Farbverlaufsfüllung](/de/docs/stitches/linear-gradient-fill/): eine neue Stichart für Farbverläufe ([#2587](https://github.com/inkstitch/inkstitch/issues/2587))
 
   [![Linear gradient fill](/assets/images/docs/linear-gradient.jpg)](/assets/images/docs/linear-gradient.svg)
@@ -409,6 +411,13 @@ Bestehende Designs mit Ink/Stitch Parametern werden automatisch aktualisert um m
 
 ## Bug Fixes
 
+* [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Fix about extension for Inkscape version 1.4
+* [#3004](https://github.com/inkstitch/inkstitch/issues/3004) Fix realistic stitch plan preview for inkscape versions 1.3 and 1.3.1
+* [#3002](https://github.com/inkstitch/inkstitch/issues/3002) gray out randomize stitch length param when random stitch length is disabled
+* [#2998](https://github.com/inkstitch/inkstitch/issues/2998) Fix short relative lock stitches
+* [#2993](https://github.com/inkstitch/inkstitch/issues/2993) PDF Preview webpage now pings in worker
+* [#2984](https://github.com/inkstitch/inkstitch/issues/2984) improve error message for files with too many color changes
+* [#2974](https://github.com/inkstitch/inkstitch/issues/2974) Remove simulator fragments on resize
 * [#2984](https://github.com/inkstitch/inkstitch/issues/2984) improve error message for files with too many color changes
 * [#2974](https://github.com/inkstitch/inkstitch/issues/2974) Remove simulator fragments on resize
 * [#2969](https://github.com/inkstitch/inkstitch/issues/2969) Improve simulator dark theme
