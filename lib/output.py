@@ -120,10 +120,10 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         num_color_changes = re.search("d+", str(e)).group()
         msg = _("Couldn't save embrodiery file.")
         msg += '\n\n'
-        msg += _("There are {num_color_changes} in your design. This is way too many.").format(num_color_changes=num_color_changes)
+        msg += _("There are {num_color_changes} color changes in your design. This is way too many.").format(num_color_changes=num_color_changes)
         msg += '\n'
         msg += _("Please reduce color changes. Find more information on our website:")
         msg += '\n\n'
-        msg += _("http://inkstitch.org/docs/faq/#too-many-color-changes")
+        msg += _("https://inkstitch.org/docs/faq/#too-many-color-changes")
         inkex.errormsg(msg)
         sys.exit(1)

@@ -126,7 +126,7 @@ class SatinColumn(EmbroideryElement):
     @param('random_width_decrease_percent',
            _('Random percentage of satin width decrease'),
            tooltip=_('shorten stitch across rails at most this percent. '
-                     'Two values separated by a space may be used for an aysmmetric effect.'),
+                     'Two values separated by a space may be used for an asymmetric effect.'),
            default=0, type='float', unit=_("% (each side)"), sort_index=91)
     @cache
     def random_width_decrease(self):
@@ -136,7 +136,7 @@ class SatinColumn(EmbroideryElement):
     @param('random_width_increase_percent',
            _('Random percentage of satin width increase'),
            tooltip=_('lengthen stitch across rails at most this percent. '
-                     'Two values separated by a space may be used for an aysmmetric effect.'),
+                     'Two values separated by a space may be used for an asymmetric effect.'),
            default=0, type='float', unit=_("% (each side)"), sort_index=90)
     @cache
     def random_width_increase(self):
@@ -365,7 +365,7 @@ class SatinColumn(EmbroideryElement):
         return self.get_boolean_param("contour_underlay")
 
     @property
-    @param('contour_underlay_stitch_length_mm', _('Stitch length'), unit='mm', group=_('Contour Underlay'), type='float', default=1.5)
+    @param('contour_underlay_stitch_length_mm', _('Stitch length'), unit='mm', group=_('Contour Underlay'), type='float', default=3)
     def contour_underlay_stitch_length(self):
         return max(self.get_float_param("contour_underlay_stitch_length_mm", 3), 0.01)
 
@@ -422,7 +422,7 @@ class SatinColumn(EmbroideryElement):
         return self.get_boolean_param("center_walk_underlay")
 
     @property
-    @param('center_walk_underlay_stitch_length_mm', _('Stitch length'), unit='mm', group=_('Center-Walk Underlay'), type='float', default=1.5)
+    @param('center_walk_underlay_stitch_length_mm', _('Stitch length'), unit='mm', group=_('Center-Walk Underlay'), type='float', default=3)
     def center_walk_underlay_stitch_length(self):
         return max(self.get_float_param("center_walk_underlay_stitch_length_mm", 3), 0.01)
 
