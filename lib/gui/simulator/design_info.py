@@ -1,6 +1,6 @@
 # Authors: see git history
 #
-# Copyright (c) 2010 Authors
+# Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import wx
@@ -9,7 +9,7 @@ from ...i18n import _
 
 
 class DesignInfoDialog(wx.Dialog):
-    """A dialog to set simulator preferences
+    """A dialog to show design info
     """
 
     def __init__(self, *args, **kwargs):
