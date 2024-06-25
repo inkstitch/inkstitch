@@ -230,12 +230,27 @@ class DrawingPanel(wx.Panel):
         self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
         self.width = self.maxx - self.minx
         self.height = self.maxy - self.miny
+        self.dimensions_mm = stitch_plan.dimensions_mm
         self.num_stitches = stitch_plan.num_stitches
+        self.num_trims = stitch_plan.num_trims
+        self.num_color_changes = stitch_plan.num_color_blocks - 1
+        self.num_stops = stitch_plan.num_stops
+        self.num_jumps = stitch_plan.num_jumps - 1
         self.parse_stitch_plan(stitch_plan)
         self.choose_zoom_and_pan()
         self.set_current_stitch(0)
+        statusbar = self.GetTopLevelParent().statusbar
+        statusbar.SetStatusText(
+            _("Dimensions: {:.2f} x {:.2f}").format(
+                stitch_plan.dimensions_mm[0],
+                stitch_plan.dimensions_mm[1]
+            ),
+            1
+        )
         self.loaded = True
         self.go()
+        if hasattr(self.view_panel, 'info_panel'):
+            self.view_panel.info_panel.update()
 
     def choose_zoom_and_pan(self, event=None):
         # ignore if EVT_SIZE fired before we load the stitch plan
@@ -268,7 +283,8 @@ class DrawingPanel(wx.Panel):
 
     def color_to_pen(self, color):
         line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
-        return wx.Pen(list(map(int, color.visible_on_white.rgb)), int(line_width))
+        background_color = self.GetBackgroundColour().GetAsString()
+        return wx.Pen(list(map(int, color.visible_on_background(background_color).rgb)), int(line_width))
 
     def update_pen_size(self):
         line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
@@ -339,7 +355,7 @@ class DrawingPanel(wx.Panel):
         command = self.commands[self.current_stitch]
         self.control_panel.on_current_stitch(self.current_stitch, command)
         statusbar = self.GetTopLevelParent().statusbar
-        statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command], 1)
+        statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command], 2)
         self.stop_if_at_end()
         self.Refresh()
 

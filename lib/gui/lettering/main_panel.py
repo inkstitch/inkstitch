@@ -266,6 +266,7 @@ class LetteringPanel(wx.Panel):
         elif filter_size != 0:
             self.options_panel.scale_spinner.SetValue(int(filter_size / font.size * 100))
             self.settings['scale'] = self.options_panel.scale_spinner.GetValue()
+            self.update_preview()
 
     def resize(self, event=None):
         description = self.options_panel.font_description.GetLabel().replace("\n", " ")

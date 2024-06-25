@@ -3,6 +3,7 @@
 # Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from .design_info import DesignInfoDialog
 from .simulator_preferences import SimulatorPreferenceDialog
 from .simulator_slider import SimulatorSlider
 from .control_panel import ControlPanel

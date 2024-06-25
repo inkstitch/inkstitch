@@ -8,6 +8,7 @@ from wx.lib.scrolledpanel import ScrolledPanel
 from ...debug.debug import debug
 from ...i18n import _
 from . import SimulatorPreferenceDialog
+from . import DesignInfoDialog
 
 
 class ViewPanel(ScrolledPanel):
@@ -46,6 +47,11 @@ class ViewPanel(ScrolledPanel):
         self.btnColorChange.SetBitmap(self.control_panel.load_icon('color_change'))
         self.btnColorChange.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('color_change', event))
 
+        self.btnInfo = wx.BitmapButton(self, -1, style=self.button_style)
+        self.btnInfo.SetToolTip(_('Open info dialog'))
+        self.btnInfo.SetBitmap(self.control_panel.load_icon('info'))
+        self.btnInfo.Bind(wx.EVT_BUTTON, self.on_info_button)
+
         self.btnBackgroundColor = wx.ColourPickerCtrl(self, -1, colour='white', size=((40, -1)))
         self.btnBackgroundColor.SetToolTip(_("Change background color"))
         self.btnBackgroundColor.Bind(wx.EVT_COLOURPICKER_CHANGED, self.on_update_background_color)
@@ -73,7 +79,16 @@ class ViewPanel(ScrolledPanel):
         show_sizer.Add(0, 2, 0)
         show_sizer.Add(show_inner_sizer, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.ALL, 2)
         show_sizer.Add(0, 2, 0)
-        outer_sizer.Add(show_sizer)
+        outer_sizer.Add(show_sizer, 0, wx.EXPAND)
+        outer_sizer.Add(0, 10, 0)
+
+        info_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Info")), wx.VERTICAL)
+        info_inner_sizer = wx.BoxSizer(wx.VERTICAL)
+        info_inner_sizer.Add(self.btnInfo, 0, wx.EXPAND | wx.ALL, 2)
+        info_sizer.Add(0, 2, 0)
+        info_sizer.Add(info_inner_sizer, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.ALL, 2)
+        info_sizer.Add(0, 2, 0)
+        outer_sizer.Add(info_sizer, 0, wx.EXPAND)
         outer_sizer.Add(0, 10, 0)
 
         settings_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Settings")), wx.VERTICAL)
@@ -85,7 +100,7 @@ class ViewPanel(ScrolledPanel):
         settings_sizer.Add(0, 2, 0)
         settings_sizer.Add(settings_inner_sizer, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.ALL, 2)
         settings_sizer.Add(0, 2, 0)
-        outer_sizer.Add(settings_sizer)
+        outer_sizer.Add(settings_sizer, 0, wx.EXPAND)
 
         self.SetSizerAndFit(outer_sizer)
 
@@ -113,5 +128,9 @@ class ViewPanel(ScrolledPanel):
             self.drawing_panel.Refresh()
 
     def on_settings_button(self, event):
-        simulator_panel = SimulatorPreferenceDialog(self, title=_('Simulator Preferences'))
-        simulator_panel.Show()
+        settings_panel = SimulatorPreferenceDialog(self, title=_('Simulator Preferences'))
+        settings_panel.Show()
+
+    def on_info_button(self, event):
+        self.info_panel = DesignInfoDialog(self, title=_('Design Info'))
+        self.info_panel.Show()
