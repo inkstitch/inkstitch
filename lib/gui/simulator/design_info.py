@@ -20,10 +20,13 @@ class DesignInfoDialog(wx.Dialog):
         self.drawing_panel = self.view_panel.drawing_panel
 
         sizer = wx.BoxSizer(wx.VERTICAL)
-        info_sizer = wx.FlexGridSizer(5, 2, 5, 5)
+        info_sizer = wx.FlexGridSizer(6, 2, 5, 5)
 
         dimensions_label = wx.StaticText(self, label=_("Design dimensions (mm)"))
         self.dimensions = wx.StaticText(self)
+
+        num_stitches_label = wx.StaticText(self, label=_('# Stitches'))
+        self.num_stitches = wx.StaticText(self)
 
         num_color_changes_label = wx.StaticText(self, label=_("# Color Changes"))
         self.num_color_changes = wx.StaticText(self)
@@ -39,6 +42,8 @@ class DesignInfoDialog(wx.Dialog):
 
         info_sizer.Add(dimensions_label, 0, wx.ALL, 10)
         info_sizer.Add(self.dimensions, 0, wx.EXPAND | wx.ALL, 10)
+        info_sizer.Add(num_stitches_label, 0, wx.ALL, 10)
+        info_sizer.Add(self.num_stitches, 0, wx.EXPAND | wx.ALL, 10)
         info_sizer.Add(num_color_changes_label, 0, wx.ALL, 10)
         info_sizer.Add(self.num_color_changes, 0, wx.EXPAND | wx.ALL, 10)
         info_sizer.Add(num_jumps_label, 0, wx.ALL, 10)
@@ -56,6 +61,7 @@ class DesignInfoDialog(wx.Dialog):
         if not self.drawing_panel.loaded:
             return
         self.dimensions.SetLabel("{:.2f} x {:.2f}".format(self.drawing_panel.dimensions_mm[0], self.drawing_panel.dimensions_mm[1]))
+        self.num_stitches.SetLabel(f"{self.drawing_panel.num_stitches}")
         self.num_color_changes.SetLabel(f"{self.drawing_panel.num_color_changes}")
         self.num_jumps.SetLabel(f"{self.drawing_panel.num_jumps}")
         self.num_trims.SetLabel(f"{self.drawing_panel.num_trims}")
