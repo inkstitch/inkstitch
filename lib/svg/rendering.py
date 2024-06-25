@@ -179,7 +179,7 @@ def color_block_to_realistic_stitches(color_block, svg, destination, render_jump
             start = point
 
 
-def color_block_to_paths(color_block, svg, destination, visual_commands, render_jumps=True):
+def color_block_to_paths(color_block, svg, destination, visual_commands, line_width, render_jumps=True):
     # If we try to import these above, we get into a mess of circular
     # imports.
     from ..commands import add_commands
@@ -200,7 +200,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands, render_
         color = color_block.color.visible_on_white.to_hex_str()
         path = inkex.PathElement(attrib={
             'id': svg.get_unique_id("object"),
-            'style': "stroke: %s; stroke-width: 0.4; fill: none;" % color,
+            'style': f"stroke: {color}; stroke-width: {line_width}; fill: none;stroke-linejoin: round;stroke-linecap: round;",
             'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
             'transform': get_correction_transform(svg),
             INKSTITCH_ATTRIBS['stroke_method']: 'manual_stitch'
@@ -220,7 +220,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands, render_
             path.set(INKSTITCH_ATTRIBS['stop_after'], 'true')
 
 
-def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True, render_jumps=True) -> inkex.Group:
+def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True, render_jumps=True, line_width=0.4) -> inkex.Group:
     layer_or_image = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
     if layer_or_image is not None:
         layer_or_image.getparent().remove(layer_or_image)
@@ -241,7 +241,7 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True, 
         if realistic:
             color_block_to_realistic_stitches(color_block, svg, group, render_jumps)
         else:
-            color_block_to_paths(color_block, svg, group, visual_commands, render_jumps)
+            color_block_to_paths(color_block, svg, group, visual_commands, line_width, render_jumps)
 
     if realistic:
         # Remove filter from defs, if any

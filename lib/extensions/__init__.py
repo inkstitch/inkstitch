@@ -46,6 +46,8 @@ from .output import Output
 from .palette_split_text import PaletteSplitText
 from .palette_to_text import PaletteToText
 from .params import Params
+from .png_realistic import PngRealistic
+from .png_simple import PngSimple
 from .preferences import Preferences
 from .print_pdf import Print
 from .redwork import Redwork
@@ -61,6 +63,7 @@ from .stitch_plan_preview_undo import StitchPlanPreviewUndo
 from .stroke_to_lpe_satin import StrokeToLpeSatin
 from .tartan import Tartan
 from .test_swatches import TestSwatches
+from .thread_list import ThreadList
 from .troubleshoot import Troubleshoot
 from .unlink_clone import UnlinkClone
 from .update_svg import UpdateSvg
@@ -110,6 +113,8 @@ __all__ = extensions = [About,
                         PaletteSplitText,
                         PaletteToText,
                         Params,
+                        PngRealistic,
+                        PngSimple,
                         Preferences,
                         Print,
                         Redwork,
@@ -125,6 +130,7 @@ __all__ = extensions = [About,
                         StrokeToLpeSatin,
                         Tartan,
                         TestSwatches,
+                        ThreadList,
                         Troubleshoot,
                         UnlinkClone,
                         UpdateSvg,

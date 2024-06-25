@@ -20,7 +20,8 @@ def pyembroidery_output_formats():
                 description = "%s [STITCH]" % description
             elif format['category'] != "embroidery":
                 description = "%s [DEBUG]" % description
-            yield format['extension'], description, format['mimetype'], format['category']
+            if not format['extension'] == 'png':
+                yield format['extension'], description, format['mimetype'], format['category']
 
 
 def generate_output_inx_files(alter_data):

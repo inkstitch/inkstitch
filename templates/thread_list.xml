@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>embroidery TXT file output</name>
+    <id>org.{{ id_inkstitch }}.thread_list</id>
+    <output>
+        <extension>.txt</extension>
+        <mimetype>text/plain</mimetype>
+        <filetypename>{{ menu_inkstitch }}: Threadlist [COLOR] (.txt)</filetypename>
+        <filetypetooltip>A list of thread colors</filetypetooltip>
+        <dataloss>true</dataloss>
+    </output>
+    <param name="extension" type="string" gui-hidden="true">thread_list</param>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
