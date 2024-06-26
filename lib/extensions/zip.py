@@ -10,6 +10,7 @@ from copy import deepcopy
 from zipfile import ZipFile
 
 from inkex import Boolean, errormsg
+from inkex.units import convert_unit
 from lxml import etree
 
 import pyembroidery
@@ -17,10 +18,12 @@ import pyembroidery
 from ..i18n import _
 from ..output import write_embroidery_file
 from ..stitch_plan import stitch_groups_to_stitch_plan
-from ..svg import PIXELS_PER_MM
+from ..svg import PIXELS_PER_MM, render_stitch_plan
 from ..threads import ThreadCatalog
 from ..utils.geometry import Point
 from .base import InkstitchExtension
+from .png_simple import generate_png
+from .thread_list import get_threadlist
 
 
 class Zip(InkstitchExtension):
@@ -41,6 +44,11 @@ class Zip(InkstitchExtension):
         self.formats.append('svg')
         self.arg_parser.add_argument('--format-threadlist', type=Boolean, default=False, dest='threadlist')
         self.formats.append('threadlist')
+        self.arg_parser.add_argument('--format-png_realistic', type=Boolean, default=False, dest='png_realistic')
+        self.formats.append('png_realistic')
+        self.arg_parser.add_argument('--format-png_simple', type=Boolean, default=False, dest='png_simple')
+        self.arg_parser.add_argument('--png_simple_line_width', type=float, default=0.3, dest='line_width')
+        self.formats.append('png_simple')
 
         self.arg_parser.add_argument('--x-repeats', type=int, default=1, dest='x_repeats', )
         self.arg_parser.add_argument('--y-repeats', type=int, default=1, dest='y_repeats',)
@@ -64,23 +72,7 @@ class Zip(InkstitchExtension):
         base_file_name = self._get_file_name()
         path = tempfile.mkdtemp()
 
-        files = []
-
-        for format in self.formats:
-            if getattr(self.options, format):
-                output_file = os.path.join(path, "%s.%s" % (base_file_name, format))
-                if format == 'svg':
-                    document = deepcopy(self.document.getroot())
-                    with open(output_file, 'w', encoding='utf-8') as svg:
-                        svg.write(etree.tostring(document).decode('utf-8'))
-                elif format == 'threadlist':
-                    output_file = os.path.join(path, "%s_%s.txt" % (base_file_name, _("threadlist")))
-                    output = open(output_file, 'w', encoding='utf-8')
-                    output.write(self.get_threadlist(stitch_plan, base_file_name))
-                    output.close()
-                else:
-                    write_embroidery_file(output_file, stitch_plan, self.document.getroot())
-                files.append(output_file)
+        files = self.generate_output_files(stitch_plan, path, base_file_name)
 
         if not files:
             errormsg(_("No embroidery file formats selected."))
@@ -123,34 +115,37 @@ class Zip(InkstitchExtension):
                 offsets.append(Point(x * dx, y * dy))
         return stitch_plan.make_offsets(offsets)
 
-    def get_threadlist(self, stitch_plan, design_name):
-        thread_used = []
+    def generate_output_files(self, stitch_plan, path, base_file_name):
+        files = []
+        for format in self.formats:
+            if getattr(self.options, format):
+                output_file = os.path.join(path, "%s.%s" % (base_file_name, format))
+                if format == 'svg':
+                    document = deepcopy(self.document.getroot())
+                    with open(output_file, 'w', encoding='utf-8') as svg:
+                        svg.write(etree.tostring(document).decode('utf-8'))
+                elif format == 'threadlist':
+                    output_file = os.path.join(path, "%s_%s.txt" % (base_file_name, _("threadlist")))
+                    with open(output_file, 'w', encoding='utf-8') as output:
+                        output.write(get_threadlist(stitch_plan, base_file_name))
+                elif format == 'png_realistic':
+                    output_file = os.path.join(path, f"{base_file_name}_realistic.png")
+                    layer = render_stitch_plan(self.svg, stitch_plan, True, visual_commands=False, render_jumps=False)
+                    self.generate_png_output(output_file, layer)
+                elif format == 'png_simple':
+                    output_file = os.path.join(path, f"{base_file_name}_simple.png")
+                    line_width = convert_unit(f"{self.options.line_width}mm", self.svg.document_unit)
+                    layer = render_stitch_plan(self.svg, stitch_plan, False, visual_commands=False,
+                                               render_jumps=False, line_width=line_width)
+                    self.generate_png_output(output_file, layer)
+                else:
+                    write_embroidery_file(output_file, stitch_plan, self.document.getroot())
+                files.append(output_file)
+        return files
 
-        thread_output = "%s\n" % _("Design Details")
-        thread_output += "==============\n\n"
-
-        thread_output += "%s: %s\n" % (_("Title"), design_name)
-        thread_output += "%s (mm): %.2f x %.2f\n" % (_("Size"),  stitch_plan.dimensions_mm[0], stitch_plan.dimensions_mm[1])
-        thread_output += "%s: %s\n" % (_("Stitches"), stitch_plan.num_stitches)
-        thread_output += "%s: %s\n\n" % (_("Colors"), stitch_plan.num_colors)
-
-        thread_output += "%s\n" % _("Thread Order")
-        thread_output += "============\n\n"
-
-        for i, color_block in enumerate(stitch_plan):
-            thread = color_block.color
-
-            thread_output += str(i + 1) + " "
-            string = "%s #%s - %s (#%s)" % (thread.name, thread.number, thread.manufacturer, thread.hex_digits.lower())
-            thread_output += string + "\n"
-
-            thread_used.append(string)
-
-        thread_output += "\n"
-        thread_output += _("Thread Used") + "\n"
-        thread_output += "============" + "\n\n"
-
-        for thread in set(thread_used):
-            thread_output += thread + "\n"
-
-        return "%s" % thread_output
+    def generate_png_output(self, output_file, layer):
+        with tempfile.TemporaryDirectory() as tempdir:
+            temp_svg_path = f"{tempdir}/temp.svg"
+            with open(temp_svg_path, "wb") as f:
+                f.write(self.svg.tostring())
+            generate_png(self.svg, layer, temp_svg_path, output_file)
