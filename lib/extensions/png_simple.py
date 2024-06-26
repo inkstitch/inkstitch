@@ -36,7 +36,7 @@ class PngSimple(InkstitchExtension):
 
         line_width = convert_unit(f"{self.options.line_width}mm", self.svg.document_unit)
         layer = render_stitch_plan(self.svg, stitch_plan, False, visual_commands=False,
-                                   render_jumps=False, line_width=self.options.line_width)
+                                   render_jumps=False, line_width=line_width)
 
         write_png_output(self.svg, layer)
 
@@ -62,7 +62,6 @@ def write_png_output(svg, layer):
 
 def generate_png(svg, layer, input_path, output_path):
     inkscape(input_path, actions="; ".join([
-        f"select-by-id:{layer.get_id()}",
         f"export-id:{layer.get_id()}",
         "export-id-only",
         "export-type:png",
