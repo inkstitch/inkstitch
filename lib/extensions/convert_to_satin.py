@@ -11,6 +11,7 @@ import inkex
 import numpy
 from numpy import diff, setdiff1d, sign
 from shapely import geometry as shgeo
+from shapely.ops import substring
 
 from ..elements import SatinColumn, Stroke
 from ..i18n import _
@@ -89,17 +90,11 @@ class ConvertToSatin(InkstitchExtension):
                     yield satin
 
     def split_path(self, path):
-        half = len(path) // 2
-        halves = [path[:half], path[half:]]
-
-        start = Point.from_tuple(halves[0][-1])
-        end = Point.from_tuple(halves[1][0])
-
-        midpoint = (start + end) / 2
-        midpoint = midpoint.as_tuple()
-
-        halves[0].append(midpoint)
-        halves[1] = [midpoint] + halves[1]
+        linestring = shgeo.LineString(path)
+        halves = [
+            list(substring(linestring, 0, 0.5, normalized=True).coords),
+            list(substring(linestring, 0.5, 1, normalized=True).coords),
+        ]
 
         return halves
 
@@ -164,10 +159,10 @@ class ConvertToSatin(InkstitchExtension):
             # path intersects itself, when taking its stroke width into consideration.
             raise SelfIntersectionError()
 
+        rungs = self.generate_rungs(path, stroke_width, left_rail, right_rail)
+
         left_rail = list(left_rail.coords)
         right_rail = list(right_rail.coords)
-
-        rungs = self.generate_rungs(path, stroke_width)
 
         return (left_rail, right_rail), rungs
 
@@ -235,7 +230,7 @@ class ConvertToSatin(InkstitchExtension):
         # 5% before and after a sharp corner such as in a square.
         return (diff(sign(diff(array))) > 0).nonzero()[0] + 1
 
-    def generate_rungs(self, path, stroke_width):
+    def generate_rungs(self, path, stroke_width, left_rail, right_rail):
         """Create rungs for a satin column.
 
         Where should we put the rungs along a path?  We want to ensure that the
@@ -318,7 +313,11 @@ class ConvertToSatin(InkstitchExtension):
             rung_start = rung_center + offset
             rung_end = rung_center - offset
 
-            rungs.append((rung_start.as_tuple(), rung_end.as_tuple()))
+            rung_tuple = (rung_start.as_tuple(), rung_end.as_tuple())
+            rung_linestring = shgeo.LineString(rung_tuple)
+            if (isinstance(rung_linestring.intersection(left_rail), shgeo.Point) and
+                    isinstance(rung_linestring.intersection(right_rail), shgeo.Point)):
+                rungs.append(rung_tuple)
 
         return rungs
 
