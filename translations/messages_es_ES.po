@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-24 01:13+0000\n"
-"PO-Revision-Date: 2024-06-24 01:14\n"
+"POT-Creation-Date: 2024-06-27 01:12+0000\n"
+"PO-Revision-Date: 2024-06-27 01:12\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-24 01:13+0000\n"
+"POT-Creation-Date: 2024-06-27 01:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2481,7 +2481,7 @@ msgid "Dimensions (mm)"
 msgstr ""
 
 #: lib/extensions/element_info.py:98 lib/extensions/element_info.py:113
-#: lib/extensions/element_info.py:173 lib/extensions/zip.py:134
+#: lib/extensions/element_info.py:173 lib/extensions/thread_list.py:54
 msgid "Stitches"
 msgstr "Puntadas"
 
@@ -2501,7 +2501,7 @@ msgstr ""
 msgid "All Selected Elements"
 msgstr ""
 
-#: lib/extensions/element_info.py:153 lib/extensions/zip.py:135
+#: lib/extensions/element_info.py:153 lib/extensions/thread_list.py:57
 #: lib/gui/satin_multicolor/colorize_panel.py:68
 msgid "Colors"
 msgstr "Colores"
@@ -2813,6 +2813,28 @@ msgstr ""
 msgid "Please select one or more elements."
 msgstr ""
 
+#: lib/extensions/thread_list.py:45
+msgid "Design Details"
+msgstr "Detalles del Diseño"
+
+#: lib/extensions/thread_list.py:48
+msgid "Title"
+msgstr "Titulo"
+
+#: lib/extensions/thread_list.py:51 lib/gui/lettering/option_panel.py:50
+#: inx/inkstitch_commands_scale_symbols.inx:6
+#: inx/inkstitch_lettering_generate_json.inx:77
+msgid "Size"
+msgstr "Tamaño"
+
+#: lib/extensions/thread_list.py:60
+msgid "Thread Order"
+msgstr "Orden de subprocesos"
+
+#: lib/extensions/thread_list.py:72
+msgid "Thread Used"
+msgstr "Hilo usado"
+
 #: lib/extensions/troubleshoot.py:50
 msgid "All selected shapes are valid! "
 msgstr "Todas las formas seleccionadas son validas ! "
@@ -2882,35 +2904,13 @@ msgstr ""
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr ""
 
-#: lib/extensions/zip.py:77
-msgid "threadlist"
-msgstr "lista de subprocesos"
-
-#: lib/extensions/zip.py:86
+#: lib/extensions/zip.py:78
 msgid "No embroidery file formats selected."
 msgstr "No se seleccionaron formatos de archivo de bordado."
 
-#: lib/extensions/zip.py:129
-msgid "Design Details"
-msgstr "Detalles del Diseño"
-
-#: lib/extensions/zip.py:132
-msgid "Title"
-msgstr "Titulo"
-
-#: lib/extensions/zip.py:133 lib/gui/lettering/option_panel.py:50
-#: inx/inkstitch_commands_scale_symbols.inx:6
-#: inx/inkstitch_lettering_generate_json.inx:77
-msgid "Size"
-msgstr "Tamaño"
-
-#: lib/extensions/zip.py:137
-msgid "Thread Order"
-msgstr "Orden de subprocesos"
-
-#: lib/extensions/zip.py:150
-msgid "Thread Used"
-msgstr "Hilo usado"
+#: lib/extensions/zip.py:128
+msgid "threadlist"
+msgstr "lista de subprocesos"
 
 #: lib/gui/about.py:18
 msgid "About Ink/Stitch"
@@ -2936,7 +2936,7 @@ msgstr "Licencia"
 msgid "Element Info"
 msgstr ""
 
-#: lib/gui/element_info.py:28
+#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:85
 msgid "Info"
 msgstr ""
 
@@ -2967,13 +2967,15 @@ msgstr ""
 #: inx/inkstitch_lettering_generate_json.inx:111
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:12
-#: inx/inkstitch_letters_to_font.inx:56 inx/inkstitch_outline.inx:25
-#: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_redwork.inx:23
+#: inx/inkstitch_letters_to_font.inx:54 inx/inkstitch_outline.inx:25
+#: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_png_simple.inx:17
+#: inx/inkstitch_redwork.inx:23
 #: inx/inkstitch_remove_embroidery_settings.inx:142
 #: inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stitch_plan_preview.inx:37
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_unlink_clone.inx:10 inx/inkstitch_zigzag_line_to_satin.inx:18
+#: inx/inkstitch_zip.inx:46
 msgid "Help"
 msgstr "Ayuda"
 
@@ -3013,12 +3015,12 @@ msgstr "Esta fuente no tiene ninguna variante de fuente disponible. Actualice o 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/gui/lettering/main_panel.py:293
+#: lib/gui/lettering/main_panel.py:294
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Escalar Texto %s%%"
 
-#: lib/gui/lettering/main_panel.py:304
+#: lib/gui/lettering/main_panel.py:305
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
@@ -3094,9 +3096,9 @@ msgstr "Escala"
 msgid "Font Sampling"
 msgstr ""
 
-#: lib/gui/lettering_font_sample.py:31 lib/gui/simulator/view_panel.py:79
+#: lib/gui/lettering_font_sample.py:31 lib/gui/simulator/view_panel.py:94
 #: print/templates/ui.html:5 print/templates/ui.html:15
-#: inx/inkstitch_lettering_generate_json.inx:58
+#: inx/inkstitch_lettering_generate_json.inx:58 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
 msgstr "Ajustes"
 
@@ -3349,6 +3351,30 @@ msgstr ""
 msgid "%d stitches/sec"
 msgstr ""
 
+#: lib/gui/simulator/design_info.py:25
+msgid "Design dimensions (mm)"
+msgstr ""
+
+#: lib/gui/simulator/design_info.py:28
+msgid "# Stitches"
+msgstr ""
+
+#: lib/gui/simulator/design_info.py:31
+msgid "# Color Changes"
+msgstr ""
+
+#: lib/gui/simulator/design_info.py:34
+msgid "# Jumps"
+msgstr ""
+
+#: lib/gui/simulator/design_info.py:37
+msgid "# Trims"
+msgstr ""
+
+#: lib/gui/simulator/design_info.py:40
+msgid "# Stops"
+msgstr ""
+
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
 #: lib/gui/simulator/drawing_panel.py:15 inx/inkstitch_output_GCODE.inx:29
@@ -3371,13 +3397,18 @@ msgstr "PARAR"
 msgid "COLOR CHANGE"
 msgstr "Cambio de Color"
 
-#: lib/gui/simulator/drawing_panel.py:342
+#: lib/gui/simulator/drawing_panel.py:244
+msgid "Dimensions: {:.2f} x {:.2f}"
+msgstr ""
+
+#: lib/gui/simulator/drawing_panel.py:358
 #, python-format
 msgid "Command: %s"
 msgstr ""
 
 #: lib/gui/simulator/simulator_preferences.py:28
-#: inx/inkstitch_fill_to_stroke.inx:20
+#: inx/inkstitch_fill_to_stroke.inx:20 inx/inkstitch_png_simple.inx:15
+#: inx/inkstitch_zip.inx:34
 msgid "Line width (mm)"
 msgstr ""
 
@@ -3389,44 +3420,52 @@ msgstr ""
 msgid "Embroidery Simulation"
 msgstr "Simulación de bordado"
 
-#: lib/gui/simulator/view_panel.py:31
+#: lib/gui/simulator/view_panel.py:32
 msgid "Display needle penetration point (O)"
 msgstr "Muestra el punto de penetración de la aguja (O)"
 
-#: lib/gui/simulator/view_panel.py:33
+#: lib/gui/simulator/view_panel.py:34
 msgid "Show jump stitches"
 msgstr ""
 
-#: lib/gui/simulator/view_panel.py:37
+#: lib/gui/simulator/view_panel.py:38
 msgid "Show trims"
 msgstr ""
 
-#: lib/gui/simulator/view_panel.py:41
+#: lib/gui/simulator/view_panel.py:42
 msgid "Show stops"
 msgstr ""
 
-#: lib/gui/simulator/view_panel.py:45
+#: lib/gui/simulator/view_panel.py:46
 msgid "Show color changes"
 msgstr ""
 
-#: lib/gui/simulator/view_panel.py:50
+#: lib/gui/simulator/view_panel.py:51
+msgid "Open info dialog"
+msgstr ""
+
+#: lib/gui/simulator/view_panel.py:56
 msgid "Change background color"
 msgstr ""
 
-#: lib/gui/simulator/view_panel.py:54
+#: lib/gui/simulator/view_panel.py:60
 msgid "Open settings dialog"
 msgstr ""
 
-#: lib/gui/simulator/view_panel.py:60
+#: lib/gui/simulator/view_panel.py:66
 msgid "Detach/attach simulator window"
 msgstr ""
 
-#: lib/gui/simulator/view_panel.py:66
+#: lib/gui/simulator/view_panel.py:72
 msgid "Show"
 msgstr "Mostrar"
 
-#: lib/gui/simulator/view_panel.py:116
+#: lib/gui/simulator/view_panel.py:131
 msgid "Simulator Preferences"
+msgstr ""
+
+#: lib/gui/simulator/view_panel.py:135
+msgid "Design Info"
 msgstr ""
 
 #: lib/gui/tartan/code_panel.py:24
@@ -3701,24 +3740,24 @@ msgstr "La fuente '%s' no tiene variantes."
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:116
+#: lib/output.py:113
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Error escribiendo a %(path)s: %(error)s"
 
-#: lib/output.py:121
+#: lib/output.py:118
 msgid "Couldn't save embrodiery file."
 msgstr ""
 
-#: lib/output.py:123
+#: lib/output.py:120
 msgid "There are {num_color_changes} color changes in your design. This is way too many."
 msgstr ""
 
-#: lib/output.py:125
+#: lib/output.py:122
 msgid "Please reduce color changes. Find more information on our website:"
 msgstr ""
 
-#: lib/output.py:127
+#: lib/output.py:124
 msgid "https://inkstitch.org/docs/faq/#too-many-color-changes"
 msgstr ""
 
@@ -4190,7 +4229,7 @@ msgid "Yes"
 msgstr "Si"
 
 #: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:71
-#: inx/inkstitch_letters_to_font.inx:53
+#: inx/inkstitch_letters_to_font.inx:51
 msgid "No"
 msgstr "No"
 
@@ -4563,7 +4602,7 @@ msgstr ""
 #: inx/inkstitch_lettering_generate_json.inx:115
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:15
-#: inx/inkstitch_letters_to_font.inx:71 inx/inkstitch_outline.inx:28
+#: inx/inkstitch_letters_to_font.inx:69 inx/inkstitch_outline.inx:28
 #: inx/inkstitch_redwork.inx:26 inx/inkstitch_stitch_plan_preview.inx:40
 #: inx/inkstitch_troubleshoot.inx:15 inx/inkstitch_unlink_clone.inx:13
 msgid "More information on our website"
@@ -5727,7 +5766,7 @@ msgstr ""
 #: inx/inkstitch_lettering_generate_json.inx:10
 #: inx/inkstitch_lettering_remove_kerning.inx:31
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:24
-#: inx/inkstitch_letters_to_font.inx:80
+#: inx/inkstitch_letters_to_font.inx:78
 msgid "Font Management"
 msgstr "Gestión de fuentes"
 
@@ -5910,35 +5949,35 @@ msgstr "Letras fuente"
 msgid "File format"
 msgstr "Formato de Archivo"
 
-#: inx/inkstitch_letters_to_font.inx:48
+#: inx/inkstitch_letters_to_font.inx:46
 msgid "Font directory"
 msgstr "Carpeta de Fuentes"
 
-#: inx/inkstitch_letters_to_font.inx:50
+#: inx/inkstitch_letters_to_font.inx:48
 msgid "Import commands"
 msgstr "Importar comandos"
 
-#: inx/inkstitch_letters_to_font.inx:51
+#: inx/inkstitch_letters_to_font.inx:49
 msgid "As param"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:52
+#: inx/inkstitch_letters_to_font.inx:50
 msgid "As symbol"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:57
+#: inx/inkstitch_letters_to_font.inx:55
 msgid "Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system."
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:60
+#: inx/inkstitch_letters_to_font.inx:58
 msgid "Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A."
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:65
+#: inx/inkstitch_letters_to_font.inx:63
 msgid "⚠ After running this function, drag the baseline into the desired position and place the letters accordingly. Save your font in a separate folder. Then generate the json file (with \"Autoroute Satin\" unchecked)."
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:72
+#: inx/inkstitch_letters_to_font.inx:70
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
 msgstr ""
 
@@ -6234,18 +6273,6 @@ msgstr ""
 msgid "Save design in PMV format using Ink/Stitch"
 msgstr "Guardar el diseño en formato PMV usando Ink/Stitch"
 
-#: inx/inkstitch_output_PNG.inx:3
-msgid "PNG file output"
-msgstr ""
-
-#: inx/inkstitch_output_PNG.inx:8
-msgid "Ink/Stitch: PNG Format, Portable Network Graphics [IMAGE] (.png)"
-msgstr ""
-
-#: inx/inkstitch_output_PNG.inx:9
-msgid "Save design in PNG format using Ink/Stitch"
-msgstr ""
-
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
 msgstr "Archivo de salida SVG"
@@ -6310,7 +6337,7 @@ msgstr ""
 msgid "Import a .gpl palette into Inkscape as text elements to edit color entries."
 msgstr ""
 
-#: inx/inkstitch_palette_to_text.inx:23
+#: inx/inkstitch_palette_to_text.inx:23 inx/inkstitch_zip.inx:50
 msgid "Read more on our webiste:"
 msgstr ""
 
@@ -6321,6 +6348,46 @@ msgstr ""
 #: inx/inkstitch_params.inx:3
 msgid "Params"
 msgstr "Parametros"
+
+#: inx/inkstitch_png_realistic.inx:3
+msgid "PNG file output (realistic)"
+msgstr ""
+
+#: inx/inkstitch_png_realistic.inx:8
+msgid "Ink/Stitch: Portable Network Graphics (Realistic) [IMAGE] (.png)"
+msgstr ""
+
+#: inx/inkstitch_png_realistic.inx:9
+msgid "Create a PNG file with a realistic embroidery representation using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_png_simple.inx:3
+msgid "embroidery PNG file output"
+msgstr ""
+
+#: inx/inkstitch_png_simple.inx:8
+msgid "Ink/Stitch: Portable Network Graphics (Simple) [IMAGE] (.png)"
+msgstr ""
+
+#: inx/inkstitch_png_simple.inx:9
+msgid "Create a PNG file with a simple line embroidery representation using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_png_simple.inx:18
+msgid "PNG file export"
+msgstr ""
+
+#: inx/inkstitch_png_simple.inx:19
+msgid "Export embroidery design to PNG"
+msgstr ""
+
+#: inx/inkstitch_png_simple.inx:23
+msgid "Read more on our webiste"
+msgstr ""
+
+#: inx/inkstitch_png_simple.inx:24
+msgid "https://inkstitch.org/docs/import-export/"
+msgstr ""
 
 #: inx/inkstitch_print.inx:3
 msgid "PDF Export"
@@ -6714,6 +6781,18 @@ msgstr ""
 msgid "Generate Test Swatches from Selection"
 msgstr ""
 
+#: inx/inkstitch_thread_list.inx:3
+msgid "embroidery TXT file output"
+msgstr ""
+
+#: inx/inkstitch_thread_list.inx:8
+msgid "Ink/Stitch: Threadlist [COLOR] (.txt)"
+msgstr ""
+
+#: inx/inkstitch_thread_list.inx:9
+msgid "A list of thread colors"
+msgstr ""
+
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
 msgstr "Solucionar problemas de Objetos"
@@ -6851,35 +6930,107 @@ msgstr ""
 msgid "Output formats:"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:32
+#: inx/inkstitch_zip.inx:18
+msgid ".PEC: Brother Embroidery Format"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:19
+msgid ".PES: Brother Embroidery Format"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:20
+msgid ".EXP: Melco Expanded Embroidery Format"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:21
+msgid ".DST: Tajima Embroidery Format"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:22
+msgid ".JEF: Janome Embroidery Format"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:23
+msgid ".VP3: Pfaff Embroidery Format"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:24
+msgid ".XXX: Singer Embroidery Format"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:25
+msgid ".U01: Barudan Embroidery Format"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:26
+msgid ".PMV: Brother Stitch Format [STITCH]"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:27
+msgid ".GCODE: gcode Format, Text File"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:28
+msgid ".EDR: Edr Color Format [COLOR]"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:29
+msgid ".COL: Col Color Format [COLOR]"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:30
+msgid ".INF: Inf Color Format [COLOR]"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:31
 msgid ".TXT: Threadlist [COLOR]"
 msgstr ""
 
+#: inx/inkstitch_zip.inx:32
+msgid ".PNG: Portable Network Graphics (Realistic) [COLOR]"
+msgstr ""
+
 #: inx/inkstitch_zip.inx:33
+msgid ".PNG: Portable Network Graphics (Simple) [COLOR]"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:35
 msgid ".SVG: Scalable Vector Graphic"
 msgstr ".SVG: Scalable Vector Graphic"
 
-#: inx/inkstitch_zip.inx:36
+#: inx/inkstitch_zip.inx:38
 msgid "Panelization Options"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:37
+#: inx/inkstitch_zip.inx:39
 msgid "For single design set horizontal and vertical repeats to 1"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:39
+#: inx/inkstitch_zip.inx:41
 msgid "Horizontal repeats"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:40
+#: inx/inkstitch_zip.inx:42
 msgid "Horizontal spacing (mm)"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:41
+#: inx/inkstitch_zip.inx:43
 msgid "Vertical repeats"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:42
+#: inx/inkstitch_zip.inx:44
 msgid "Vertical spacing (mm)"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:47
+msgid "Zip File Export"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:48
+msgid "Export multiple embroidery file formats at once."
+msgstr ""
+
+#: inx/inkstitch_zip.inx:51
+msgid "https://inkstitch.org/docs/import-export/#batch-export"
 msgstr ""
 
