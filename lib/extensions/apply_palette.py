@@ -3,7 +3,7 @@
 # Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from ..elements import FillStitch
+from ..elements import Clone, FillStitch
 from ..threads import ThreadCatalog, ThreadColor
 from .base import InkstitchExtension
 
@@ -29,6 +29,16 @@ class ApplyPalette(InkstitchExtension):
 
         # Iterate through the color blocks to apply colors
         for element in self.elements:
+            if isinstance(element, Clone):
+                # clones use the color of their source element
+                continue
+            elif hasattr(element, 'gradient') and element.gradient is not None:
+                # apply colors to each gradient stop
+                for i, gradient_style in enumerate(element.gradient.stop_styles):
+                    color = gradient_style['stop-color']
+                    gradient_style['stop-color'] = palette.nearest_color(ThreadColor(color)).to_hex_str()
+                continue
+
             nearest_color = palette.nearest_color(ThreadColor(element.color))
             if isinstance(element, FillStitch):
                 element.node.style['fill'] = nearest_color.to_hex_str()
