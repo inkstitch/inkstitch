@@ -28,11 +28,8 @@ class Tartan(InkstitchExtension):
 
     def get_tartan_elements(self):
         if self.svg.selection:
-            self._get_elements()
-
-    def _get_elements(self):
-        for node in self.svg.selection:
-            self.get_selection(node)
+            for node in self.svg.selection:
+                self.get_selection(node)
 
     def get_selection(self, node):
         if node.TAG == 'g' and not node.get_id().startswith('inkstitch-tartan'):
@@ -40,7 +37,7 @@ class Tartan(InkstitchExtension):
                 self.get_selection(child_node)
         else:
             node = self.get_outline(node)
-            if node.tag in EMBROIDERABLE_TAGS and node.style('fill'):
+            if node.tag in EMBROIDERABLE_TAGS and node.style('fill') is not None:
                 self.elements.add(node)
 
     def get_outline(self, node):

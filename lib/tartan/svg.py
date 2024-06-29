@@ -80,8 +80,16 @@ class TartanSvgGroup:
             index = parent_group.index(outline)
             parent_group.insert(index, group)
 
-        outline_shape = FillStitch(outline).shape
         transform = get_correction_transform(outline)
+        outline_shapes = FillStitch(outline).shape
+        for outline_shape in outline_shapes.geoms:
+            self._generate_tartan_group_elements(group, outline_shape, transform)
+
+        # set outline invisible
+        outline.style['display'] = 'none'
+        group.append(outline)
+
+    def _generate_tartan_group_elements(self, group, outline_shape, transform):
         dimensions, rotation_center = self._get_dimensions(outline_shape)
 
         warp = stripes_to_shapes(
@@ -128,11 +136,6 @@ class TartanSvgGroup:
         for color, stroke_elements in strokes.items():
             for element in stroke_elements:
                 group.append(element)
-
-        # set outline invisible
-        outline.style['display'] = 'none'
-        group.append(outline)
-        return group
 
     def _get_command_position(self, fill: FillStitch, point: Tuple[float, float]) -> Point:
         """
