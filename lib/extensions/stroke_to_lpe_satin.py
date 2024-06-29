@@ -171,7 +171,7 @@ class SatinPattern:
 
     def get_path(self, add_rungs, min_width, max_width, length, to_unit):
         # scale the pattern path to fit the unit of the current svg
-        scale_factor = scale_factor = 1 / inkex.units.convert_unit('1mm', f'{to_unit}')
+        scale_factor = 1 / inkex.units.convert_unit('1mm', f'{to_unit}')
         pattern_path = inkex.Path(self.path).transform(inkex.Transform(f'scale({scale_factor})'), True)
 
         # create a path element
