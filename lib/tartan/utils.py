@@ -46,63 +46,115 @@ def stripes_to_shapes(
     :returns: a dictionary with shapes grouped by color
     """
 
+    full_sett = _stripes_to_sett(stripes, symmetry, scale, min_stripe_width)
+
     minx, miny, maxx, maxy = dimensions
     shapes: defaultdict = defaultdict(list)
 
-    original_stripes = stripes
-    if len(original_stripes) == 0:
+    if len(full_sett) == 0:
         return shapes
 
     left = minx
     top = miny
-    add_to_stroke = 0
-    add_to_fill = 0
     i = -1
     while True:
         i += 1
-        stripes = original_stripes
-
-        segments = stripes
-        if symmetry and i % 2 != 0 and len(stripes) > 1:
-            segments = list(reversed(stripes[1:-1]))
-        for stripe in segments:
-            width = stripe['width'] * PIXELS_PER_MM * (scale / 100)
+        for stripe in full_sett:
+            width = stripe['width']
             right = left + width
             bottom = top + width
 
-            if ((top > maxy and weft) or (left > maxx and not weft) or
-                    (add_to_stroke > maxy and weft) or (add_to_stroke > maxx and not weft)):
+            if (top > maxy and weft) or (left > maxx and not weft):
                 return _merge_polygons(shapes, outline, intersect_outline)
 
-            if stripe['render'] == 0:
-                left = right + add_to_stroke
-                top = bottom + add_to_stroke
-                add_to_stroke = 0
-                continue
-            elif stripe['render'] == 2:
-                add_to_stroke += width
+            if stripe['color'] is None or not stripe['render']:
+                left = right
+                top = bottom
                 continue
 
             shape_dimensions = [top, bottom, left, right, minx, miny, maxx, maxy]
-            if width <= min_stripe_width * PIXELS_PER_MM:
-                add_to_fill = add_to_stroke
-                shape_dimensions[0] += add_to_stroke
-                shape_dimensions[2] += add_to_stroke
+            if stripe['is_stroke']:
                 linestrings = _get_linestrings(outline, shape_dimensions, rotation, rotation_center, weft)
                 shapes[stripe['color']].extend(linestrings)
-                add_to_stroke += width
-                continue
-            add_to_stroke = 0
+            else:
+                polygon = _get_polygon(shape_dimensions, rotation, rotation_center, weft)
+                shapes[stripe['color']].append(polygon)
+                left = right
+                top = bottom
+    return shapes
 
-            # add the space of the lines to the following object to avoid bad symmetry
-            shape_dimensions[1] += add_to_fill
-            shape_dimensions[3] += add_to_fill
 
-            polygon = _get_polygon(shape_dimensions, rotation, rotation_center, weft)
-            shapes[stripe['color']].append(polygon)
-            left = right + add_to_fill
-            top = bottom + add_to_fill
-            add_to_fill = 0
+def _stripes_to_sett(
+    stripes: List[dict],
+    symmetry: bool,
+    scale: int,
+    min_stripe_width: float,
+) -> List[dict]:
+    """
+    Builds a full sett for easier conversion into elements
+
+    :param stripes: a list of dictionaries with stripe information
+    :param symmetry: reflective sett (True) / repeating sett (False)
+    :param scale: the scale value (percent) for the pattern
+    :param min_stripe_width: min stripe width before it is rendered as running stitch
+    :returns: a list of dictionaries with stripe information (color, width, is_stroke, render)
+    """
+
+    sett = []
+    last_fill_color = None
+    first_was_stroke = False
+    last_was_stroke = False
+    add_width = 0
+    for stripe in stripes:
+        width = stripe['width'] * PIXELS_PER_MM * (scale / 100)
+        is_stroke = width <= min_stripe_width * PIXELS_PER_MM
+        render = stripe['render']
+
+        if render == 0:
+            sett.append({'color': None, 'width': width + add_width, 'is_stroke': False, 'render': False})
+            last_fill_color = None
+            add_width = 0
+            last_was_stroke = False
+            continue
+
+        if render == 2:
+            sett.append({'color': last_fill_color, 'width': width + add_width, 'is_stroke': False, 'render': True})
+            add_width = 0
+            last_was_stroke = False
+            continue
+
+        if is_stroke:
+            if len(sett) == 0:
+                first_was_stroke = True
+            width /= 2
+            sett.append({'color': last_fill_color, 'width': width + add_width, 'is_stroke': False, 'render': True})
+            sett.append({'color': stripe['color'], 'width': 0, 'is_stroke': True, 'render': True})
+            add_width = width
+            last_was_stroke = True
+        else:
+            sett.append({'color': stripe['color'], 'width':  width + add_width, 'is_stroke': False, 'render': True})
+            last_fill_color = stripe['color']
+            last_was_stroke = False
+
+    if add_width > 0:
+        sett.append({'color': last_fill_color, 'width':  add_width, 'is_stroke': False, 'render': True})
+
+    # For symmetric setts we want to mirror the sett and append to receive a full sett
+    # We do not repeat at pivot points, which means we exclude the first and the last list item from the mirror
+    if symmetry:
+        reversed_sett = list(reversed(sett[1:-1]))
+        if first_was_stroke:
+            reversed_sett = reversed_sett[:-1]
+        if last_was_stroke:
+            reversed_sett = reversed_sett[1:]
+        sett.extend(reversed_sett)
+
+    return sett
+
+
+# TODO: use or remove
+def _get_fill_stripes(stripes: List[dict], scale: int, min_stripe_width: float) -> List[dict]:
+    return [stripe for stripe in stripes if stripe['width'] * PIXELS_PER_MM * (scale / 100) > min_stripe_width]
 
 
 def _merge_polygons(
