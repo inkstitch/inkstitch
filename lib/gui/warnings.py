@@ -20,7 +20,7 @@ class WarningPanel(wx.Panel):
         self.warning = wx.StaticText(self)
         self.warning.SetLabel(_("An error occurred while rendering the stitch plan:"))
         self.warning.SetForegroundColour(wx.Colour(255, 25, 25))
-        self.main_sizer.Add(self.warning, 1, wx.LEFT | wx.BOTTOM | wx.EXPAND, 10)
+        self.main_sizer.Add(self.warning, 0, wx.LEFT | wx.BOTTOM | wx.EXPAND, 10)
 
         tc_style = wx.TE_MULTILINE | wx.TE_READONLY | wx.VSCROLL | wx.TE_RICH2
         self.warning_text = wx.TextCtrl(self, size=(300, 300), style=tc_style)
