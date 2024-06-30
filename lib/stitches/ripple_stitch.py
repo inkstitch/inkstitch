@@ -24,6 +24,9 @@ def ripple_stitch(stroke):
     If more sublines are present interpolation will take place between the first two.
     '''
 
+    if stroke.as_multi_line_string().length < 0.1:
+        return []
+
     is_linear, helper_lines = _get_helper_lines(stroke)
 
     num_lines = len(helper_lines[0])
