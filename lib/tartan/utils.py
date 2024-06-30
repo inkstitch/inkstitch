@@ -100,11 +100,11 @@ def _stripes_to_sett(
     :returns: a list of dictionaries with stripe information (color, width, is_stroke, render)
     """
 
-    sett = []
-    last_fill_color = None
+    last_fill_color = _get_last_fill_color(stripes, scale, min_stripe_width, symmetry)
     first_was_stroke = False
     last_was_stroke = False
     add_width = 0
+    sett = []
     for stripe in stripes:
         width = stripe['width'] * PIXELS_PER_MM * (scale / 100)
         is_stroke = width <= min_stripe_width * PIXELS_PER_MM
@@ -152,9 +152,32 @@ def _stripes_to_sett(
     return sett
 
 
-# TODO: use or remove
-def _get_fill_stripes(stripes: List[dict], scale: int, min_stripe_width: float) -> List[dict]:
-    return [stripe for stripe in stripes if stripe['width'] * PIXELS_PER_MM * (scale / 100) > min_stripe_width]
+def _get_last_fill_color(stripes: List[dict], scale: int, min_stripe_width: float, symmetry: bool,) -> List[dict]:
+    '''
+    Returns the first fill color of a pattern to substitute spaces if the pattern starts with strokes or
+    stripes with render mode 2
+
+    :param stripes: a list of dictionaries with stripe information
+    :param scale: the scale value (percent) for the pattern
+    :param min_stripe_width: min stripe width before it is rendered as running stitch
+    :param symmetry: reflective sett (True) / repeating sett (False)
+    :returns: a list with fill colors or a list with one None item if there are no fills
+    '''
+    fill_colors = []
+    for stripe in stripes:
+        if stripe['render'] == 0:
+            fill_colors.append(None)
+        elif stripe['render'] == 2:
+            continue
+        elif stripe['width'] * (scale / 100) > min_stripe_width:
+            fill_colors.append(stripe['color'])
+    if len(fill_colors) == 0:
+        fill_colors = [None]
+
+    if symmetry:
+        return fill_colors[0]
+    else:
+        return fill_colors[-1]
 
 
 def _merge_polygons(
