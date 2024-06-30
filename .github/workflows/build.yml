@@ -57,7 +57,7 @@ jobs:
           python -m pip install pycairo
           python -m pip install PyGObject
 
-          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.1-cp38-cp38-linux_x86_64.whl
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.1-cp39-cp39-linux_x86_64.whl
 
           # june 30, 2024: linux build fails due to an update in beniget
           # (which is a requirement of pythran which in turn in a requirement of scipy)
