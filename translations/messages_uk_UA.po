@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-27 01:12+0000\n"
-"PO-Revision-Date: 2024-06-27 01:12\n"
+"POT-Creation-Date: 2024-06-28 01:12+0000\n"
+"PO-Revision-Date: 2024-06-28 01:13\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-27 01:12+0000\n"
+"POT-Creation-Date: 2024-06-28 01:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2386,17 +2386,17 @@ msgstr ""
 msgid "{num_groups_removed} groups/layers removed"
 msgstr ""
 
-#: lib/extensions/convert_to_satin.py:35
+#: lib/extensions/convert_to_satin.py:36
 msgid "Please select at least one line to convert to a satin column."
 msgstr "Виберіть хоча б одну лінію для її конвертації в сатинову колонку."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
-#: lib/extensions/convert_to_satin.py:40
+#: lib/extensions/convert_to_satin.py:41
 msgid "Only simple lines may be converted to satin columns."
 msgstr "В сатинову колонку можна перетворити тільки прості линії."
 
-#: lib/extensions/convert_to_satin.py:158
+#: lib/extensions/convert_to_satin.py:153
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr "Ink/Stitch не може перетворити вашу лінію в сатинову колонку. Разділіть лінію і спробуйте знову."
 

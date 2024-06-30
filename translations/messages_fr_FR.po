@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-27 01:12+0000\n"
-"PO-Revision-Date: 2024-06-27 01:12\n"
+"POT-Creation-Date: 2024-06-28 01:12+0000\n"
+"PO-Revision-Date: 2024-06-30 01:18\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-27 01:12+0000\n"
+"POT-Creation-Date: 2024-06-28 01:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2393,17 +2393,17 @@ msgstr "{num_elements_removed} éléments supprimés"
 msgid "{num_groups_removed} groups/layers removed"
 msgstr "{num_groups_removed} groupes/calques supprimés"
 
-#: lib/extensions/convert_to_satin.py:35
+#: lib/extensions/convert_to_satin.py:36
 msgid "Please select at least one line to convert to a satin column."
 msgstr "Veuillez sélectionner au moins une ligne pour convertir en colonne Satin."
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
-#: lib/extensions/convert_to_satin.py:40
+#: lib/extensions/convert_to_satin.py:41
 msgid "Only simple lines may be converted to satin columns."
 msgstr "Seules les lignes simples peuvent être converties en colonnes satin."
 
-#: lib/extensions/convert_to_satin.py:158
+#: lib/extensions/convert_to_satin.py:153
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr "Inkstitch ne peut pas convertir votre trait en colonne satin. Veuillez séparer votre chemin et réessayer."
 
@@ -6366,43 +6366,43 @@ msgstr "Paramètres"
 
 #: inx/inkstitch_png_realistic.inx:3
 msgid "PNG file output (realistic)"
-msgstr ""
+msgstr "Fichier de sortie PNG (réaliste)"
 
 #: inx/inkstitch_png_realistic.inx:8
 msgid "Ink/Stitch: Portable Network Graphics (Realistic) [IMAGE] (.png)"
-msgstr ""
+msgstr "Ink/Stitch: Portable Network Graphics (Réaliste) [IMAGE] (.png)"
 
 #: inx/inkstitch_png_realistic.inx:9
 msgid "Create a PNG file with a realistic embroidery representation using Ink/Stitch"
-msgstr ""
+msgstr "Créer un fichier PNG de représentation réaliste de broderie avec Ink/Stitch"
 
 #: inx/inkstitch_png_simple.inx:3
 msgid "embroidery PNG file output"
-msgstr ""
+msgstr "format de sortie PNG de broderie"
 
 #: inx/inkstitch_png_simple.inx:8
 msgid "Ink/Stitch: Portable Network Graphics (Simple) [IMAGE] (.png)"
-msgstr ""
+msgstr "Ink/Stitch: Portable Network Graphics (Simple) [IMAGE] (.png)"
 
 #: inx/inkstitch_png_simple.inx:9
 msgid "Create a PNG file with a simple line embroidery representation using Ink/Stitch"
-msgstr ""
+msgstr "Créer un fichier PNG de représentation simple de broderie avec Ink/Stitch"
 
 #: inx/inkstitch_png_simple.inx:18
 msgid "PNG file export"
-msgstr ""
+msgstr "Ficher d'export PNG"
 
 #: inx/inkstitch_png_simple.inx:19
 msgid "Export embroidery design to PNG"
-msgstr ""
+msgstr "Sortie en format de broderie PNG"
 
 #: inx/inkstitch_png_simple.inx:23
 msgid "Read more on our webiste"
-msgstr ""
+msgstr "Plus d'informations sur notre site web"
 
 #: inx/inkstitch_png_simple.inx:24
 msgid "https://inkstitch.org/docs/import-export/"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/import-export/"
 
 #: inx/inkstitch_print.inx:3
 msgid "PDF Export"
@@ -6798,15 +6798,15 @@ msgstr "Générer des échantillons de test à partir de la sélection"
 
 #: inx/inkstitch_thread_list.inx:3
 msgid "embroidery TXT file output"
-msgstr ""
+msgstr "sortie en format de broderie TXT"
 
 #: inx/inkstitch_thread_list.inx:8
 msgid "Ink/Stitch: Threadlist [COLOR] (.txt)"
-msgstr ""
+msgstr "Ink/Stitch: Liste des fils [COULEUR] (.txt)"
 
 #: inx/inkstitch_thread_list.inx:9
 msgid "A list of thread colors"
-msgstr ""
+msgstr "Une liste de couleurs de fil"
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
@@ -6947,55 +6947,55 @@ msgstr "Formats de sortie:"
 
 #: inx/inkstitch_zip.inx:18
 msgid ".PEC: Brother Embroidery Format"
-msgstr ""
+msgstr ".PEC : Format de broderie Brother"
 
 #: inx/inkstitch_zip.inx:19
 msgid ".PES: Brother Embroidery Format"
-msgstr ""
+msgstr ".PES : Format de broderie Brother"
 
 #: inx/inkstitch_zip.inx:20
 msgid ".EXP: Melco Expanded Embroidery Format"
-msgstr ""
+msgstr ".EXP : Format de broderie Melco"
 
 #: inx/inkstitch_zip.inx:21
 msgid ".DST: Tajima Embroidery Format"
-msgstr ""
+msgstr ".DST : Format de broderie Tajima"
 
 #: inx/inkstitch_zip.inx:22
 msgid ".JEF: Janome Embroidery Format"
-msgstr ""
+msgstr ".JEF : Format de broderie Janome"
 
 #: inx/inkstitch_zip.inx:23
 msgid ".VP3: Pfaff Embroidery Format"
-msgstr ""
+msgstr ".VP3 : Format de broderie Pfaff"
 
 #: inx/inkstitch_zip.inx:24
 msgid ".XXX: Singer Embroidery Format"
-msgstr ""
+msgstr ".XXX : Format de broderie Singer"
 
 #: inx/inkstitch_zip.inx:25
 msgid ".U01: Barudan Embroidery Format"
-msgstr ""
+msgstr ".Uo1 : Format de broderie Barudan"
 
 #: inx/inkstitch_zip.inx:26
 msgid ".PMV: Brother Stitch Format [STITCH]"
-msgstr ""
+msgstr ".PMV : Format de points Brother [STITCH]"
 
 #: inx/inkstitch_zip.inx:27
 msgid ".GCODE: gcode Format, Text File"
-msgstr ""
+msgstr ".GCODE : format gcode, fichier texte"
 
 #: inx/inkstitch_zip.inx:28
 msgid ".EDR: Edr Color Format [COLOR]"
-msgstr ""
+msgstr ".EDR: Format de couleur Edr [COLOR]"
 
 #: inx/inkstitch_zip.inx:29
 msgid ".COL: Col Color Format [COLOR]"
-msgstr ""
+msgstr ".COL: Format Couleur Col [COLOR]"
 
 #: inx/inkstitch_zip.inx:30
 msgid ".INF: Inf Color Format [COLOR]"
-msgstr ""
+msgstr ".INF: Format Couleur INF [COLOR]"
 
 #: inx/inkstitch_zip.inx:31
 msgid ".TXT: Threadlist [COLOR]"
@@ -7003,11 +7003,11 @@ msgstr ".TXT : Palette de fils [COLOR]"
 
 #: inx/inkstitch_zip.inx:32
 msgid ".PNG: Portable Network Graphics (Realistic) [COLOR]"
-msgstr ""
+msgstr ".PNG: Portable Network Graphics (Réaliste) [COLOR]"
 
 #: inx/inkstitch_zip.inx:33
 msgid ".PNG: Portable Network Graphics (Simple) [COLOR]"
-msgstr ""
+msgstr ".PNG: Portable Network Graphics (Simple) [COLOR]"
 
 #: inx/inkstitch_zip.inx:35
 msgid ".SVG: Scalable Vector Graphic"
@@ -7039,13 +7039,13 @@ msgstr "Espacement vertical (mm)"
 
 #: inx/inkstitch_zip.inx:47
 msgid "Zip File Export"
-msgstr ""
+msgstr "Export en fichier Zip"
 
 #: inx/inkstitch_zip.inx:48
 msgid "Export multiple embroidery file formats at once."
-msgstr ""
+msgstr "Export plusieurs formats de fichier de broderie en une seule fois."
 
 #: inx/inkstitch_zip.inx:51
 msgid "https://inkstitch.org/docs/import-export/#batch-export"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/import-export/#batch-export"
 
