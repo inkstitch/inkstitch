@@ -15,7 +15,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.8.x'
+          python-version: '3.9.x'
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -57,7 +57,7 @@ jobs:
           python -m pip install pycairo
           python -m pip install PyGObject
 
-          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.1-cp38-cp38-linux_x86_64.whl
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.1-cp39-cp39-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
           # for networkx
