@@ -21,8 +21,8 @@
         {%- endif %}
         {%- endfor %}
         <param name="format-threadlist" type="boolean" gui-text=".TXT: Threadlist [COLOR]">false</param>
-        <param name="format-png_realistic" type="boolean" gui-text=".PNG: Portable Network Graphics (Realistic) [COLOR]">false</param>
-        <param name="format-png_simple" type="boolean" gui-text=".PNG: Portable Network Graphics (Simple) [COLOR]">false</param>
+        <param name="format-png_realistic" type="boolean" gui-text=".PNG: Portable Network Graphics (Realistic) [IMAGE]">false</param>
+        <param name="format-png_simple" type="boolean" gui-text=".PNG: Portable Network Graphics (Simple) [IMAGE]">false</param>
             <param name="png_simple_line_width" type="float" precision="2" min="0.01" max="5" gui-text="Line width (mm)" indent="4">0.3</param>
         <param name="format-svg" type="boolean" gui-text=".SVG: Scalable Vector Graphic">false</param>
         <param name="extension" type="string" gui-hidden="true">zip</param>
@@ -39,7 +39,7 @@
         <label appearance="header">Zip File Export</label>
         <label>Export multiple embroidery file formats at once.</label>
         <separator />
-        <label>Read more on our webiste:</label>
+        <label>Read more on our website:</label>
         <label appearance="url">https://inkstitch.org/docs/import-export/#batch-export</label>
       </page>
     </param>
