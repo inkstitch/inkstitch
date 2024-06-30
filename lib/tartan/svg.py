@@ -24,7 +24,7 @@ from ..stitches.auto_fill import (PathEdge, build_fill_stitch_graph,
 from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..utils import DotDict, ensure_multi_line_string
 from .palette import Palette
-from .utils import sort_fills_and_strokes, stripes_to_shapes
+from .utils import sort_fills_and_strokes, stripes_to_shapes, get_palette_width
 
 
 class TartanSvgGroup:
@@ -51,6 +51,8 @@ class TartanSvgGroup:
         self.symmetry = self.palette.symmetry
         self.stripes = self.palette.palette_stripes
         self.warp, self.weft = self.stripes
+        self.warp_width = get_palette_width(settings)
+        self.weft_width = get_palette_width(settings)
         if self.palette.get_palette_width(self.scale, self.min_stripe_width) == 0:
             self.warp = []
         if self.palette.get_palette_width(self.scale, self.min_stripe_width, 1) == 0:
@@ -80,8 +82,16 @@ class TartanSvgGroup:
             index = parent_group.index(outline)
             parent_group.insert(index, group)
 
-        outline_shape = FillStitch(outline).shape
         transform = get_correction_transform(outline)
+        outline_shapes = FillStitch(outline).shape
+        for outline_shape in outline_shapes.geoms:
+            self._generate_tartan_group_elements(group, outline_shape, transform)
+
+        # set outline invisible
+        outline.style['display'] = 'none'
+        group.append(outline)
+
+    def _generate_tartan_group_elements(self, group, outline_shape, transform):
         dimensions, rotation_center = self._get_dimensions(outline_shape)
 
         warp = stripes_to_shapes(
@@ -128,11 +138,6 @@ class TartanSvgGroup:
         for color, stroke_elements in strokes.items():
             for element in stroke_elements:
                 group.append(element)
-
-        # set outline invisible
-        outline.style['display'] = 'none'
-        group.append(outline)
-        return group
 
     def _get_command_position(self, fill: FillStitch, point: Tuple[float, float]) -> Point:
         """
@@ -492,6 +497,8 @@ class TartanSvgGroup:
         """
         Calculates the dimensions for the tartan pattern.
         Make sure it is big enough for pattern rotations.
+        We also need additional space to ensure fill stripes go to their full extend, this might be problematic if
+        start or end stripes use render mode 2 (stroke spacing).
 
         :param outline: the shape to be filled with a tartan pattern
         :returns: [0] a list with boundaries and [1] the center point (for rotations)
@@ -509,6 +516,13 @@ class TartanSvgGroup:
             miny = center.y - min_radius
             maxx = center.x + min_radius
             maxy = center.y + min_radius
+
+        extra_space = max(self.warp_width * PIXELS_PER_MM, self.weft_width * PIXELS_PER_MM)
+        minx -= extra_space
+        maxx += extra_space
+        miny -= extra_space
+        maxy += extra_space
+
         return (float(minx), float(miny), float(maxx), float(maxy)), center
 
     def _polygon_to_path(

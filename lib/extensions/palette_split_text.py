@@ -3,10 +3,13 @@
 # Copyright (c) 2022 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from tempfile import TemporaryDirectory
+
 import inkex
 
 from ..i18n import _
 from .base import InkstitchExtension
+from .utils.inkex_command import inkscape
 
 
 class PaletteSplitText(InkstitchExtension):
@@ -30,7 +33,14 @@ class PaletteSplitText(InkstitchExtension):
             transform = text.transform
             text.pop('transform')
 
-            bbox = text.get_inkscape_bbox()
+            # the inkex command `bbox = text.get_inkscape_bbox()` is causing problems for our pyinstaller bundled
+            # releases, this code block is taken from inkex/elements/_text
+            with TemporaryDirectory(prefix="inkscape-command") as tmpdir:
+                svg_file = inkex.command.write_svg(text.root, tmpdir, "input.svg")
+                bbox = inkscape(svg_file, "-X", "-Y", "-W", "-H", query_id=text.get_id())
+                bbox = list(map(text.root.viewport_to_unit, bbox.splitlines()))
+                bbox = inkex.BoundingBox.new_xywh(*bbox[1:])
+
             x = bbox.left
             y = bbox.bottom
             height = bbox.height / (len(lines))

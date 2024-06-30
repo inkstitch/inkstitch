@@ -28,11 +28,8 @@ class Tartan(InkstitchExtension):
 
     def get_tartan_elements(self):
         if self.svg.selection:
-            self._get_elements()
-
-    def _get_elements(self):
-        for node in self.svg.selection:
-            self.get_selection(node)
+            for node in self.svg.selection:
+                self.get_selection(node)
 
     def get_selection(self, node):
         if node.TAG == 'g' and not node.get_id().startswith('inkstitch-tartan'):
@@ -40,13 +37,13 @@ class Tartan(InkstitchExtension):
                 self.get_selection(child_node)
         else:
             node = self.get_outline(node)
-            if node.tag in EMBROIDERABLE_TAGS and node.style('fill'):
+            if node.tag in EMBROIDERABLE_TAGS and node.style('fill') is not None:
                 self.elements.add(node)
 
     def get_outline(self, node):
         # existing tartans are marked through their outline element
         # we have either selected the element itself or some other element within a tartan group
-        if node.get(INKSTITCH_TARTAN, None):
+        if node.get(INKSTITCH_TARTAN, None) is not None:
             return node
         if node.get_id().startswith('inkstitch-tartan'):
             for element in node.iterchildren(EMBROIDERABLE_TAGS):
@@ -55,7 +52,7 @@ class Tartan(InkstitchExtension):
         for group in node.iterancestors(SVG_GROUP_TAG):
             if group.get_id().startswith('inkstitch-tartan'):
                 for element in group.iterchildren(EMBROIDERABLE_TAGS):
-                    if element.get(INKSTITCH_TARTAN, None):
+                    if element.get(INKSTITCH_TARTAN, None) is not None:
                         return element
         # if we don't find an existing tartan, return node
         return node

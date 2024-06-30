@@ -8,6 +8,7 @@ import os
 import inkex
 
 from ..i18n import _
+from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 from ..threads.palette import ThreadPalette
 from .base import InkstitchExtension
 
@@ -31,11 +32,15 @@ class PaletteToText(InkstitchExtension):
             inkex.errormsg(_("Cannot read palette: invalid GIMP palette header"))
             return
 
-        current_layer = self.svg.get_current_layer()
+        layer = inkex.Group(attrib={
+            'id': '__inkstitch_palette__',
+            INKSCAPE_LABEL: _('Thread Palette') + f': {thread_palette.name}',
+            INKSCAPE_GROUPMODE: 'layer',
+        })
+        self.svg.append(layer)
 
         x = 0
         y = 0
-        pos = 0
         for color in thread_palette:
             line = "%s %s" % (color.name, color.number)
             element = inkex.TextElement()
@@ -43,10 +48,9 @@ class PaletteToText(InkstitchExtension):
             element.style = "fill:%s;font-size:4px;" % color.to_hex_str()
             element.set('x', x)
             element.set('y', str(y))
-            current_layer.insert(pos, element)
+            layer.append(element)
 
             y = float(y) + 5
-            pos += 1
 
 
 if __name__ == '__main__':
