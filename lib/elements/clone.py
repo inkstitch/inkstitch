@@ -195,7 +195,7 @@ class Clone(EmbroideryElement):
         transform = Transform(self.node.composed_transform())
         path = path.transform(transform)
         path = path.to_superpath()
-        return MultiLineString(path)
+        return MultiLineString(path[0])
 
     def center(self, source_node):
         transform = get_node_transform(self.node.getparent())
