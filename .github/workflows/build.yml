@@ -59,6 +59,10 @@ jobs:
 
           python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.1-cp38-cp38-linux_x86_64.whl
 
+          # june 30, 2024: linux build fails due to an update in beniget
+          # (which is a requirement of pythran which in turn in a requirement of scipy)
+          python -m pip install beniget==0.4.2
+
           python -m pip install -r requirements.txt
           # for networkx
           python -m pip install pandas
