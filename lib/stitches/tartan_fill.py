@@ -713,6 +713,8 @@ def _get_fill_stitch_groups(
             starting_point = ensure_multi_line_string(shape.boundary).geoms[0].coords[1]
         ending_point = ensure_multi_line_string(shape.boundary).geoms[0].coords[1]
         segments = [list(line.coords) for line in lines if len(line.coords) > 1]
+        if len(segments) == 0:
+            continue
         stitch_group = _segments_to_stitch_group(fill, shape, segments, i, color, starting_point, ending_point)
         if stitch_group is not None:
             stitch_groups.append(stitch_group)
@@ -737,9 +739,13 @@ def _get_run_stitch_groups(
     :param ending_point: the ending point
     :returns: a list with StitchGroup objects
     """
+
     stitch_groups: List[StitchGroup] = []
     for color, lines in color_lines.items():
-        segments = [list(line.coords) for line in lines if len(line.coords) > 1]
+        # get segments and ignore lines smaller than 0.5 mm
+        segments = [list(line.coords) for line in lines if line.length > 0.5 * PIXELS_PER_MM]
+        if len(segments) == 0:
+            continue
         stitch_group = _segments_to_stitch_group(fill, shape, segments, None, color, starting_point, ending_point, True)
         if stitch_group is not None:
             stitch_groups.append(stitch_group)
