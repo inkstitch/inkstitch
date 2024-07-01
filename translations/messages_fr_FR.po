@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-28 01:12+0000\n"
-"PO-Revision-Date: 2024-06-30 01:18\n"
+"POT-Creation-Date: 2024-07-01 01:20+0000\n"
+"PO-Revision-Date: 2024-07-01 01:20\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-28 01:12+0000\n"
+"POT-Creation-Date: 2024-07-01 01:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2576,7 +2576,7 @@ msgid "Could not install color palettes. Please file an issue on https://github.
 msgstr "Impossible d'installer les palettes de couleur. Merci de le signaler sur https://github.com/inkstitch/inkstitch/issues"
 
 #: lib/extensions/install_custom_palette.py:25
-#: lib/extensions/palette_to_text.py:26
+#: lib/extensions/palette_to_text.py:27
 msgid "File does not exist."
 msgstr "Le fichier n'existe pas."
 
@@ -2652,13 +2652,17 @@ msgstr "{element_id} n'est pas un chemin. Cette extension est prévue pour gén�
 msgid "Could not generate path from element {element_id} with the given settings."
 msgstr "Impossible de générer un chemin à partir de l'élément {element_id} avec ce paramétrage."
 
-#: lib/extensions/palette_split_text.py:16
+#: lib/extensions/palette_split_text.py:19
 msgid "Please select one or more text elements to split lines."
 msgstr "Veuillez sélectionner un ou plusieurs éléments de texte pour diviser les lignes."
 
-#: lib/extensions/palette_to_text.py:31
+#: lib/extensions/palette_to_text.py:32
 msgid "Cannot read palette: invalid GIMP palette header"
 msgstr "Impossible de lire la palette : header de palette GIMP invalide"
+
+#: lib/extensions/palette_to_text.py:37 print/templates/ui.html:177
+msgid "Thread Palette"
+msgstr "Palette de fil"
 
 #: lib/extensions/params.py:280
 msgid "These settings will be applied to 1 object."
@@ -2809,11 +2813,11 @@ msgstr "Impossible de trouver le motif spécifié."
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr "Impossible d'appliquer l'effet de chemin satin à une colonne satin. Merci de sélectionner une ligne."
 
-#: lib/extensions/tartan.py:66
+#: lib/extensions/tartan.py:63
 msgid "To create a tartan pattern please select at least one element with a fill color."
 msgstr "Pour créer un motif de tartan, sélectionner au moins un élément avec une couleur de remplissage."
 
-#: lib/extensions/tartan.py:73
+#: lib/extensions/tartan.py:70
 msgid "Ink/Stitch Tartan"
 msgstr "Tartan Ink/Stitch"
 
@@ -4231,10 +4235,6 @@ msgstr "Facteur à multiplier avec la longueur du fil"
 msgid "* path length"
 msgstr "* longueur du chemin"
 
-#: print/templates/ui.html:177
-msgid "Thread Palette"
-msgstr "Palette de fil"
-
 #: print/templates/ui.html:196
 msgid "Changing the thread palette will cause thread names and catalog numbers to be recalculated based on the new palette.  Any changes you have made to color or thread names will be lost.  Are you sure?"
 msgstr "Changer la palette de fil recalculera les noms de fils et les numéros de catalogue, basé sur la nouvelle palette.  Toutes les modifications apportées aux couleurs ou noms de fils seront perdues.  Êtes-vous sûr/e ?"
@@ -4618,7 +4618,7 @@ msgstr "Cette extension tente de créer un chemin de broderie unique qui parcour
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:15
 #: inx/inkstitch_letters_to_font.inx:69 inx/inkstitch_outline.inx:28
-#: inx/inkstitch_redwork.inx:26 inx/inkstitch_stitch_plan_preview.inx:40
+#: inx/inkstitch_redwork.inx:26 inx/inkstitch_stitch_plan_preview.inx:46
 #: inx/inkstitch_troubleshoot.inx:15 inx/inkstitch_unlink_clone.inx:13
 msgid "More information on our website"
 msgstr "Plus d'information sur notre site web"
@@ -4884,7 +4884,7 @@ msgstr "https://inkstitch.org/fr/docs/visualize/#density-map"
 
 #: inx/inkstitch_density_map.inx:38 inx/inkstitch_display_stacking_order.inx:23
 #: inx/inkstitch_print.inx:10 inx/inkstitch_simulator.inx:10
-#: inx/inkstitch_stitch_plan_preview.inx:49
+#: inx/inkstitch_stitch_plan_preview.inx:55
 #: inx/inkstitch_stitch_plan_preview_undo.inx:10
 msgid "Visualize and Export"
 msgstr "Visualiser et exporter"
@@ -6352,7 +6352,7 @@ msgstr "Choisissez un fichier de palette de couleurs .gpl pour importer des coul
 msgid "Import a .gpl palette into Inkscape as text elements to edit color entries."
 msgstr "Importez une palette .gpl dans Inkscape en tant qu'éléments de texte pour modifier les entrées de couleur."
 
-#: inx/inkstitch_palette_to_text.inx:23 inx/inkstitch_zip.inx:50
+#: inx/inkstitch_palette_to_text.inx:23
 msgid "Read more on our webiste:"
 msgstr "Plus d'informations sur notre site web :"
 
@@ -6699,7 +6699,11 @@ msgstr "Écraser le dernier plan de broderie"
 msgid "Use this extension to render the stitch plan into the canvas."
 msgstr "Utilisez cette extension pour obtenir un rendu de la broderie sur la toile."
 
-#: inx/inkstitch_stitch_plan_preview.inx:41
+#: inx/inkstitch_stitch_plan_preview.inx:40
+msgid "Please use realistic output options with care. Realistic render outputs can cause Inkscape to slow massivley down. Designs with a lot of stitches shouldn't be rendered with vector, while the vector option can be prefered if the design is huge. For huge designs with a lot of stitches consider to render in chunks or choose simple as the render mode."
+msgstr ""
+
+#: inx/inkstitch_stitch_plan_preview.inx:47
 msgid "https://inkstitch.org/docs/visualize/#stitch-plan-preview"
 msgstr "https://inkstitch.org/fr/docs/visualize/#stitch-plan-preview"
 
@@ -7002,12 +7006,12 @@ msgid ".TXT: Threadlist [COLOR]"
 msgstr ".TXT : Palette de fils [COLOR]"
 
 #: inx/inkstitch_zip.inx:32
-msgid ".PNG: Portable Network Graphics (Realistic) [COLOR]"
-msgstr ".PNG: Portable Network Graphics (Réaliste) [COLOR]"
+msgid ".PNG: Portable Network Graphics (Realistic) [IMAGE]"
+msgstr ""
 
 #: inx/inkstitch_zip.inx:33
-msgid ".PNG: Portable Network Graphics (Simple) [COLOR]"
-msgstr ".PNG: Portable Network Graphics (Simple) [COLOR]"
+msgid ".PNG: Portable Network Graphics (Simple) [IMAGE]"
+msgstr ""
 
 #: inx/inkstitch_zip.inx:35
 msgid ".SVG: Scalable Vector Graphic"
@@ -7044,6 +7048,10 @@ msgstr "Export en fichier Zip"
 #: inx/inkstitch_zip.inx:48
 msgid "Export multiple embroidery file formats at once."
 msgstr "Export plusieurs formats de fichier de broderie en une seule fois."
+
+#: inx/inkstitch_zip.inx:50
+msgid "Read more on our website:"
+msgstr ""
 
 #: inx/inkstitch_zip.inx:51
 msgid "https://inkstitch.org/docs/import-export/#batch-export"
