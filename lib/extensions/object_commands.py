@@ -3,12 +3,12 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import inkex
+from inkex import errormsg
 
 from ..commands import OBJECT_COMMANDS, add_commands
+from ..elements import Clone
 from ..i18n import _
 from .commands import CommandsExtension
-from ..elements import Clone
 
 
 class ObjectCommands(CommandsExtension):
@@ -19,7 +19,7 @@ class ObjectCommands(CommandsExtension):
             return
 
         if not self.svg.selection:
-            inkex.errormsg(_("Please select one or more objects to which to attach commands."))
+            errormsg(_("Please select one or more objects to which to attach commands."))
             return
 
         self.svg = self.document.getroot()
@@ -27,13 +27,13 @@ class ObjectCommands(CommandsExtension):
         commands = [command for command in self.COMMANDS if getattr(self.options, command)]
 
         if not commands:
-            inkex.errormsg(_("Please choose one or more commands to attach."))
+            errormsg(_("Please choose one or more commands to attach."))
             return
 
         # Clones currently can't really take any commands, so error if we try to add one to them.
         clones = [e for e in self.elements if isinstance(e, Clone)]
         if clones:
-            raise inkex.AbortExtension(_(
+            errormsg(_(
                 "Cannot attach commands to Clone element(s) {clones}. "
                 "They must be unlinked to add commands.\n"
                 "* Select the clone(s)\n"
@@ -45,6 +45,6 @@ class ObjectCommands(CommandsExtension):
         seen_nodes = set()
 
         for element in self.elements:
-            if element.node not in seen_nodes and element.shape:
+            if element.node not in seen_nodes and element.shape and not isinstance(element, Clone):
                 add_commands(element, commands)
                 seen_nodes.add(element.node)
