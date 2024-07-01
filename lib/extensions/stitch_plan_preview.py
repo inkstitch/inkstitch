@@ -121,16 +121,17 @@ class StitchPlanPreview(InkstitchExtension):
                 # Instead, especially because we need to invoke Inkscape anyway to perform the rasterization, we get
                 # the bounding box with query commands before we perform the export. This is quite cheap.
                 out = inkscape(temp_svg_path, actions="; ".join([
-                    f"select-by-id:{layer.get_id()}",
+                    f"select-by-id: {layer.get_id()}",
                     "query-x",
                     "query-y",
                     "query-width",
                     "query-height",
-                    f"export-id:{layer.get_id()}",
+                    f"export-id: {layer.get_id()}",
                     "export-id-only",
-                    "export-type:png",
-                    f"export-dpi:{96*raster_mult}",
-                    f"export-filename:{temp_png_path}",
+                    "export-type: png",
+                    f"export-dpi: 300",
+                    f"export-png-color-mode: RGBA_{raster_mult}",
+                    f"export-filename: {temp_png_path}",
                     "export-do"  # Inkscape docs say this should be implicit at the end, but it doesn't seem to be.
                 ]))
 
