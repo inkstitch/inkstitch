@@ -5,6 +5,7 @@
 
 import os
 import sys
+from multiprocessing import freeze_support
 from pathlib import Path  # to work with paths as objects
 from argparse import ArgumentParser  # to parse arguments and remove --extension
 
@@ -45,6 +46,8 @@ running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running
 if not running_as_frozen:  # override running_as_frozen from DEBUG.toml - for testing
     if safe_get(ini, "DEBUG", "force_frozen", default=False):
         running_as_frozen = True
+else:
+    freeze_support()  # Allow multiprocessing to work with the frozen executable
 
 if len(sys.argv) < 2:
     # no arguments - prevent accidentally running this script
