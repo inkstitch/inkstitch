@@ -130,7 +130,7 @@ class StitchPlanPreview(InkstitchExtension):
                     "export-id-only",
                     "export-type: png",
                     f"export-dpi: {dpi}",
-                    f"export-png-color-mode: RGBA_16",
+                    "export-png-color-mode: RGBA_16",
                     f"export-filename: {temp_png_path}",
                     "export-do"  # Inkscape docs say this should be implicit at the end, but it doesn't seem to be.
                 ]))

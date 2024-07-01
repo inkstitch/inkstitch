@@ -13,6 +13,12 @@ from .png_simple import write_png_output
 
 
 class PngRealistic(InkstitchExtension):
+    def __init__(self, *args, **kwargs):
+        InkstitchExtension.__init__(self)
+
+        self.arg_parser.add_argument('--notebook')
+        self.arg_parser.add_argument('--dpi', type=int, default=300, dest='dpi')
+
     def effect(self):
         if not self.get_elements():
             return
@@ -26,7 +32,7 @@ class PngRealistic(InkstitchExtension):
 
         layer = render_stitch_plan(self.svg, stitch_plan, True, visual_commands=False, render_jumps=False)
 
-        write_png_output(self.svg, layer)
+        write_png_output(self.svg, layer, self.options.dpi)
 
         # don't let inkex output the SVG!
         sys.exit(0)

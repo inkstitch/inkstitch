@@ -9,23 +9,41 @@
         <filetypetooltip>Create a ZIP with multiple embroidery file formats using Ink/Stitch</filetypetooltip>
         <dataloss>true</dataloss>
     </output>
+    <param name="extension" type="string" gui-hidden="true">zip</param>
     <param name="custom-file-name" type="string" gui-text="Custom file name"
        gui-description="Defines the file names inside the zip archive. Leave empty for default file name."></param>
     <spacer />
     <param name="notebook" type="notebook">
       <page name="file-formats" gui-text="File Formats">
         <label>Output formats:</label>
-        {%- for format, description, mimetype, category in formats %}
-        {%- if category != "vector" and category != "debug" %}
-        <param name="format-{{ format }}" type="boolean" gui-text=".{{ format | upper }}: {{ description }}">false</param>
-        {%- endif %}
-        {%- endfor %}
-        <param name="format-threadlist" type="boolean" gui-text=".TXT: Threadlist [COLOR]">false</param>
-        <param name="format-png_realistic" type="boolean" gui-text=".PNG: Portable Network Graphics (Realistic) [IMAGE]">false</param>
-        <param name="format-png_simple" type="boolean" gui-text=".PNG: Portable Network Graphics (Simple) [IMAGE]">false</param>
-            <param name="png_simple_line_width" type="float" precision="2" min="0.01" max="5" gui-text="Line width (mm)" indent="4">0.3</param>
-        <param name="format-svg" type="boolean" gui-text=".SVG: Scalable Vector Graphic">false</param>
-        <param name="extension" type="string" gui-hidden="true">zip</param>
+        <hbox>
+            <vbox>
+                {%- for format, description, mimetype, category in formats %}
+                {%- if category != "vector" and category != "debug" %}
+                <param name="format-{{ format }}" type="boolean" gui-text=".{{ format | upper }}: {{ description }}">false</param>
+                {%- endif %}
+            {%- if loop.index == 13 %}
+            </vbox>
+            <spacer />
+            <separator />
+            <spacer />
+            <vbox>
+            {%- endif %}
+                {%- endfor %}
+                <param name="format-threadlist" type="boolean" gui-text=".TXT: Threadlist [COLOR]">false</param>
+            </vbox>
+            <spacer />
+            <separator />
+            <spacer />
+            <vbox>
+                <param name="format-svg" type="boolean" gui-text=".SVG: Scalable Vector Graphic">false</param>
+                <param name="format-png-realistic" type="boolean" gui-text=".PNG: Portable Network Graphics (Realistic) [IMAGE]">false</param>
+                    <param name="dpi-realistic" type="int" min="100" max="2000" gui-text="DPI" indent="4">300</param>
+                <param name="format-png-simple" type="boolean" gui-text=".PNG: Portable Network Graphics (Simple) [IMAGE]">false</param>
+                    <param name="png-simple-line-width" type="float" precision="2" min="0.01" max="5" gui-text="Line width (mm)" indent="4">0.3</param>
+                    <param name="dpi-simple" type="int" min="100" max="2000" gui-text="DPI" indent="4">300</param>
+            </vbox>
+        </hbox>
       </page>
       <page name="panelization" gui-text="Panelization Options">
         <label>For single design set horizontal and vertical repeats to 1</label>
