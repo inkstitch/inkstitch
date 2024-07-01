@@ -8,6 +8,7 @@ import inkex
 from ..commands import OBJECT_COMMANDS, add_commands
 from ..i18n import _
 from .commands import CommandsExtension
+from ..elements import Clone
 
 
 class ObjectCommands(CommandsExtension):
@@ -28,6 +29,16 @@ class ObjectCommands(CommandsExtension):
         if not commands:
             inkex.errormsg(_("Please choose one or more commands to attach."))
             return
+
+        # Clones currently can't really take any commands, so error if we try to add one to them.
+        clones = [e for e in self.elements if isinstance(e, Clone)]
+        if clones:
+            raise inkex.AbortExtension(_(
+                "Cannot attach commands to Clone element(s) {clones}. "
+                "They must be unlinked to add commands.\n"
+                "* Select the clone(s)\n"
+                "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
+            ).format(clones=", ".join(c.node.get_id() for c in clones)))
 
         # Each object (node) in the SVG may correspond to multiple Elements of different
         # types (e.g. stroke + fill).  We only want to process each one once.
