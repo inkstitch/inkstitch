@@ -3,6 +3,7 @@
 # Copyright (c) 2022 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from re import findall
 from tempfile import TemporaryDirectory
 
 import inkex
@@ -38,8 +39,10 @@ class PaletteSplitText(InkstitchExtension):
             with TemporaryDirectory(prefix="inkscape-command") as tmpdir:
                 svg_file = inkex.command.write_svg(text.root, tmpdir, "input.svg")
                 bbox = inkscape(svg_file, "-X", "-Y", "-W", "-H", query_id=text.get_id())
-                bbox = list(map(text.root.viewport_to_unit, bbox.splitlines()))
-                bbox = inkex.BoundingBox.new_xywh(*bbox[1:])
+                # output can contain other information, so let's filter out the requested numbers
+                bbox = findall(r"(?m)^-?\d+\.?\d*$", bbox)
+                bbox = list(map(text.root.viewport_to_unit, bbox))
+                bbox = inkex.BoundingBox.new_xywh(*bbox)
 
             x = bbox.left
             y = bbox.bottom
