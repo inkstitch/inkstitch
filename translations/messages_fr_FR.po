@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-07-01 01:20+0000\n"
-"PO-Revision-Date: 2024-07-01 01:20\n"
+"PO-Revision-Date: 2024-07-02 01:13\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -6701,7 +6701,7 @@ msgstr "Utilisez cette extension pour obtenir un rendu de la broderie sur la toi
 
 #: inx/inkstitch_stitch_plan_preview.inx:40
 msgid "Please use realistic output options with care. Realistic render outputs can cause Inkscape to slow massivley down. Designs with a lot of stitches shouldn't be rendered with vector, while the vector option can be prefered if the design is huge. For huge designs with a lot of stitches consider to render in chunks or choose simple as the render mode."
-msgstr ""
+msgstr "Merci d'utliser les options réallistes avec attention. Les rendus réalistes peuvent causer un très fort ralentissement d'inkscape. Il est recommandé de ne pas utilliser le rendu vectoriel pour les broderies avec beaucoup de points. En revanche, le rendu vectoriel est recommandé pour les broderies de grande taille avec relativement peu de points. Pour des broderies de grande taille avec beaucoup de points, choisissez un rendu simple ou si vous désirez un rendu réalliste, réalisez le rendu en plusieurs morceaux."
 
 #: inx/inkstitch_stitch_plan_preview.inx:47
 msgid "https://inkstitch.org/docs/visualize/#stitch-plan-preview"
@@ -7007,11 +7007,11 @@ msgstr ".TXT : Palette de fils [COLOR]"
 
 #: inx/inkstitch_zip.inx:32
 msgid ".PNG: Portable Network Graphics (Realistic) [IMAGE]"
-msgstr ""
+msgstr ".PNG: Portable Network Graphics (Réaliste) [IMAGE]"
 
 #: inx/inkstitch_zip.inx:33
 msgid ".PNG: Portable Network Graphics (Simple) [IMAGE]"
-msgstr ""
+msgstr ".PNG: Portable Network Graphics (Simple) [IMAGE]"
 
 #: inx/inkstitch_zip.inx:35
 msgid ".SVG: Scalable Vector Graphic"
@@ -7051,7 +7051,7 @@ msgstr "Export plusieurs formats de fichier de broderie en une seule fois."
 
 #: inx/inkstitch_zip.inx:50
 msgid "Read more on our website:"
-msgstr ""
+msgstr "Plus d'informations sur notre site web :"
 
 #: inx/inkstitch_zip.inx:51
 msgid "https://inkstitch.org/docs/import-export/#batch-export"
