@@ -50,7 +50,7 @@ if [ "$BUILD" = "osx" ]; then
                         --version ${VERSION} \
                         --scripts installer_scripts/scripts \
                         --install-location ${PKG_INSTALL_PATH}inkstitch.app \
-                        artifacts/inkstitch-${VERSION}-${OS}.pkg
+                        artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.pkg
         if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ || $NOTARIZE_DEVELOPMENT_BUILDS == true ]]; then
             echo "Notary starting"
             echo "Adding keychain item for notarytool"
@@ -61,9 +61,9 @@ if [ "$BUILD" = "osx" ]; then
             echo "Invoking notary process"
             xcrun notarytool submit -f json --wait \
                                     --keychain-profile "inkstitch-profile" \
-                                    artifacts/inkstitch-${VERSION}-${OS}.pkg 2>&1 | tee /tmp/notarization_info.json
+                                    artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.pkg 2>&1 | tee /tmp/notarization_info.json
             echo "Stapling the pkg for release"
-            xcrun stapler staple artifacts/inkstitch-${VERSION}-${OS}.pkg
+            xcrun stapler staple artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.pkg
             echo "Fetching the Notary Log"
             # code snippet is from https://github.com/ddev/signing_tools/blob/master/macos_notarize.sh
             status=$(jq -r .status </tmp/notarization_info.json)
@@ -85,14 +85,14 @@ if [ "$BUILD" = "osx" ]; then
                 --version ${VERSION} \
                 --scripts installer_scripts/scripts \
                 --install-location ${PKG_INSTALL_PATH}inkstitch.app \
-                artifacts/inkstitch-${VERSION}-${OS}.pkg
+                artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.pkg
     fi
     # Creating the zip for Drag n' Drop install
     cd dist
-    7z a ../artifacts/inkstitch-${VERSION}-${OS}.zip *
+    7z a ../artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.zip *
     cd ..
 else
-    cp -a images/examples palettes symbols fonts tiles dbus inx LICENSE VERSION dist/inkstitch
+    cp -a palettes symbols fonts tiles dbus inx LICENSE VERSION dist/inkstitch
     cp -a icons locales print dist/inkstitch/bin
 fi
 
