@@ -13,6 +13,7 @@
     <param name="notebook" type="notebook">
       <page name="settings" gui-text="Settings">
         <param name="line_width" type="float" precision="2" min="0.01" max="5" gui-text="Line width (mm)">0.3</param>
+        <param name="dpi" type="int" min="100" max="2000" gui-text="DPI">300</param>
       </page>
       <page name="info" gui-text="Help">
         <label appearance="header">PNG file export</label>
@@ -20,7 +21,7 @@
         <spacer />
         <separator />
         <spacer />
-        <label>Read more on our webiste</label>
+        <label>Read more on our website</label>
         <label appearance="url">https://inkstitch.org/docs/import-export/</label>
       </page>
     </param>

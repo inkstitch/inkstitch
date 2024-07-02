@@ -30,7 +30,7 @@ class Zip(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self)
 
-        self.arg_parser.add_argument('--notebook', type=str, default='')
+        self.arg_parser.add_argument('--notebook')
         self.arg_parser.add_argument('--custom-file-name', type=str, default='', dest='custom_file_name')
 
         # it's kind of obnoxious that I have to do this...
@@ -44,10 +44,12 @@ class Zip(InkstitchExtension):
         self.formats.append('svg')
         self.arg_parser.add_argument('--format-threadlist', type=Boolean, default=False, dest='threadlist')
         self.formats.append('threadlist')
-        self.arg_parser.add_argument('--format-png_realistic', type=Boolean, default=False, dest='png_realistic')
+        self.arg_parser.add_argument('--format-png-realistic', type=Boolean, default=False, dest='png_realistic')
+        self.arg_parser.add_argument('--dpi-realistic', type=int, default='', dest='dpi_realistic')
         self.formats.append('png_realistic')
-        self.arg_parser.add_argument('--format-png_simple', type=Boolean, default=False, dest='png_simple')
-        self.arg_parser.add_argument('--png_simple_line_width', type=float, default=0.3, dest='line_width')
+        self.arg_parser.add_argument('--format-png-simple', type=Boolean, default=False, dest='png_simple')
+        self.arg_parser.add_argument('--png-simple-line-width', type=float, default=0.3, dest='line_width')
+        self.arg_parser.add_argument('--dpi-simple', type=int, default='', dest='dpi_simple')
         self.formats.append('png_simple')
 
         self.arg_parser.add_argument('--x-repeats', type=int, default=1, dest='x_repeats', )
@@ -131,21 +133,21 @@ class Zip(InkstitchExtension):
                 elif format == 'png_realistic':
                     output_file = os.path.join(path, f"{base_file_name}_realistic.png")
                     layer = render_stitch_plan(self.svg, stitch_plan, True, visual_commands=False, render_jumps=False)
-                    self.generate_png_output(output_file, layer)
+                    self.generate_png_output(output_file, layer, self.options.dpi_realistic)
                 elif format == 'png_simple':
                     output_file = os.path.join(path, f"{base_file_name}_simple.png")
                     line_width = convert_unit(f"{self.options.line_width}mm", self.svg.document_unit)
                     layer = render_stitch_plan(self.svg, stitch_plan, False, visual_commands=False,
                                                render_jumps=False, line_width=line_width)
-                    self.generate_png_output(output_file, layer)
+                    self.generate_png_output(output_file, layer, self.options.dpi_simple)
                 else:
                     write_embroidery_file(output_file, stitch_plan, self.document.getroot())
                 files.append(output_file)
         return files
 
-    def generate_png_output(self, output_file, layer):
+    def generate_png_output(self, output_file, layer, dpi):
         with tempfile.TemporaryDirectory() as tempdir:
             temp_svg_path = f"{tempdir}/temp.svg"
             with open(temp_svg_path, "wb") as f:
                 f.write(self.svg.tostring())
-            generate_png(self.svg, layer, temp_svg_path, output_file)
+            generate_png(self.svg, layer, temp_svg_path, output_file, dpi)

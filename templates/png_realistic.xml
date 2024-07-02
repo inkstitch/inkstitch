@@ -10,6 +10,20 @@
         <dataloss>true</dataloss>
     </output>
     <param name="extension" type="string" gui-hidden="true">png_realistic</param>
+    <param name="notebook" type="notebook">
+      <page name="settings" gui-text="Settings">
+        <param name="dpi" type="int" min="100" max="2000" gui-text="DPI">300</param>
+      </page>
+      <page name="info" gui-text="Help">
+        <label appearance="header">PNG file export</label>
+        <label>Export embroidery design to PNG</label>
+        <spacer />
+        <separator />
+        <spacer />
+        <label>Read more on our website</label>
+        <label appearance="url">https://inkstitch.org/docs/import-export/</label>
+      </page>
+    </param>
     <script>
         {{ command_tag | safe }}
     </script>
