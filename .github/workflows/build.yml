@@ -208,7 +208,7 @@ jobs:
         with:
           name: inkstitch-windows64
           path: artifacts
-  mac:
+  macx86:
     runs-on: macos-12
     steps:
       - uses: actions/checkout@v4
@@ -268,12 +268,74 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: inkstitch-mac
+          name: inkstitch-mac-x86
+          path: artifacts
+  macarm64:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9.x'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: install dependencies
+        shell: bash
+        run: |
+          brew update
+
+          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt || true
+
+          export LDFLAGS="-L/usr/local/opt/libffi/lib"
+          export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+
+          # for msgfmt
+          echo "/usr/local/opt/gettext/bin" >> $GITHUB_PATH
+
+          echo "GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/" >> $GITHUB_ENV
+
+          pip install --upgrade pip
+          pip --version
+          pip install wheel
+          pip install PyGObject
+          pip install wxPython
+          pip install -r requirements.txt
+          # for networkx
+          pip install pandas
+          pip install pyarrow
+          # remove and build shapely with brew geos version
+          pip uninstall -y shapely
+          pip cache remove shapely
+          pip install -v shapely --no-binary shapely
+
+          pip install pyinstaller
+
+          echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
+      - shell: bash
+        run: |
+          make dist
+        env:
+          BUILD: osx
+          MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+          MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+          KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
+          INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+          INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+          NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+          NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inkstitch-mac-arm64
           path: artifacts
 
   release:
     runs-on: ubuntu-latest
-    needs: [linux, windows32, windows64, mac]
+    needs: [linux, windows32, windows64, macx86, macarm64]
     if: always()
     steps:
       - name: determine release info
@@ -308,10 +370,16 @@ jobs:
           name: 'inkstitch-windows64'
           path: 'artifacts/'
         if: always()
-      - name: download mac
+      - name: download macx86
         uses: actions/download-artifact@v4
         with:
-          name: 'inkstitch-mac'
+          name: 'inkstitch-mac-x86'
+          path: 'artifacts/'
+        if: always()
+      - name: download macarm64
+        uses: actions/download-artifact@v4
+        with:
+          name: 'inkstitch-mac-arm64'
           path: 'artifacts/'
         if: always()
       - name: create/update release
