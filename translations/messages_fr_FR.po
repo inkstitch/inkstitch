@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-03 01:12+0000\n"
-"PO-Revision-Date: 2024-07-03 01:13\n"
+"POT-Creation-Date: 2024-07-03 05:23+0000\n"
+"PO-Revision-Date: 2024-07-03 05:23\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-03 01:12+0000\n"
+"POT-Creation-Date: 2024-07-03 05:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2632,13 +2632,19 @@ msgstr "Veuillez vérifier les emplacements des fichiers."
 msgid "Font directory not found. Please specify an existing directory."
 msgstr "Répertoire de polices non trouvé. Veuillez spécifier un répertoire existant."
 
-#: lib/extensions/object_commands.py:21
+#: lib/extensions/object_commands.py:22
 msgid "Please select one or more objects to which to attach commands."
 msgstr "Veuillez sélectionner un ou plusieurs objets pour y attacher des commandes."
 
-#: lib/extensions/object_commands.py:29
+#: lib/extensions/object_commands.py:30
 msgid "Please choose one or more commands to attach."
 msgstr "Veuillez choisir une ou plusieurs commandes à attacher."
+
+#: lib/extensions/object_commands.py:36
+msgid "Cannot attach commands to Clone element(s) {clones}. They must be unlinked to add commands.\n"
+"* Select the clone(s)\n"
+"* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
+msgstr ""
 
 #: lib/extensions/outline.py:30
 msgid "Please select one or more shapes to convert to their outline."
@@ -2916,11 +2922,11 @@ msgstr "Merci de sélectionner un ou plusieurs clones à délier."
 msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
 msgstr "Merci de sélectionner au moins un élément à mettre à jour. Cette extension est prévue pour vous aider à copier/coller des éléments d'anciens dessins."
 
-#: lib/extensions/zip.py:78
+#: lib/extensions/zip.py:80
 msgid "No embroidery file formats selected."
 msgstr "Aucun format de fichier broderie sélectionné."
 
-#: lib/extensions/zip.py:128
+#: lib/extensions/zip.py:130
 msgid "threadlist"
 msgstr "liste de fils"
 
@@ -2980,14 +2986,14 @@ msgstr "Valeur"
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:12
 #: inx/inkstitch_letters_to_font.inx:54 inx/inkstitch_outline.inx:25
-#: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_png_simple.inx:17
-#: inx/inkstitch_redwork.inx:23
+#: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_png_realistic.inx:17
+#: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:23
 #: inx/inkstitch_remove_embroidery_settings.inx:142
 #: inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stitch_plan_preview.inx:37
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_unlink_clone.inx:10 inx/inkstitch_zigzag_line_to_satin.inx:18
-#: inx/inkstitch_zip.inx:46
+#: inx/inkstitch_zip.inx:62
 msgid "Help"
 msgstr "Aide"
 
@@ -3111,7 +3117,8 @@ msgstr "Test de police"
 
 #: lib/gui/lettering_font_sample.py:31 lib/gui/simulator/view_panel.py:94
 #: print/templates/ui.html:5 print/templates/ui.html:15
-#: inx/inkstitch_lettering_generate_json.inx:58 inx/inkstitch_png_simple.inx:14
+#: inx/inkstitch_lettering_generate_json.inx:58
+#: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
 msgstr "Paramètres"
 
@@ -3423,7 +3430,7 @@ msgstr "Commande : %s"
 
 #: lib/gui/simulator/simulator_preferences.py:28
 #: inx/inkstitch_fill_to_stroke.inx:20 inx/inkstitch_png_simple.inx:15
-#: inx/inkstitch_zip.inx:34
+#: inx/inkstitch_zip.inx:49
 msgid "Line width (mm)"
 msgstr "Largeur du trait (mm)"
 
@@ -6376,6 +6383,27 @@ msgstr "Ink/Stitch: Portable Network Graphics (Réaliste) [IMAGE] (.png)"
 msgid "Create a PNG file with a realistic embroidery representation using Ink/Stitch"
 msgstr "Créer un fichier PNG de représentation réaliste de broderie avec Ink/Stitch"
 
+#: inx/inkstitch_png_realistic.inx:15 inx/inkstitch_png_simple.inx:16
+#: inx/inkstitch_zip.inx:47 inx/inkstitch_zip.inx:50
+msgid "DPI"
+msgstr ""
+
+#: inx/inkstitch_png_realistic.inx:18 inx/inkstitch_png_simple.inx:19
+msgid "PNG file export"
+msgstr "Ficher d'export PNG"
+
+#: inx/inkstitch_png_realistic.inx:19 inx/inkstitch_png_simple.inx:20
+msgid "Export embroidery design to PNG"
+msgstr "Sortie en format de broderie PNG"
+
+#: inx/inkstitch_png_realistic.inx:23 inx/inkstitch_png_simple.inx:24
+msgid "Read more on our website"
+msgstr ""
+
+#: inx/inkstitch_png_realistic.inx:24 inx/inkstitch_png_simple.inx:25
+msgid "https://inkstitch.org/docs/import-export/"
+msgstr "https://inkstitch.org/fr/docs/import-export/"
+
 #: inx/inkstitch_png_simple.inx:3
 msgid "embroidery PNG file output"
 msgstr "format de sortie PNG de broderie"
@@ -6387,22 +6415,6 @@ msgstr "Ink/Stitch: Portable Network Graphics (Simple) [IMAGE] (.png)"
 #: inx/inkstitch_png_simple.inx:9
 msgid "Create a PNG file with a simple line embroidery representation using Ink/Stitch"
 msgstr "Créer un fichier PNG de représentation simple de broderie avec Ink/Stitch"
-
-#: inx/inkstitch_png_simple.inx:18
-msgid "PNG file export"
-msgstr "Ficher d'export PNG"
-
-#: inx/inkstitch_png_simple.inx:19
-msgid "Export embroidery design to PNG"
-msgstr "Sortie en format de broderie PNG"
-
-#: inx/inkstitch_png_simple.inx:23
-msgid "Read more on our webiste"
-msgstr "Plus d'informations sur notre site web"
-
-#: inx/inkstitch_png_simple.inx:24
-msgid "https://inkstitch.org/docs/import-export/"
-msgstr "https://inkstitch.org/fr/docs/import-export/"
 
 #: inx/inkstitch_print.inx:3
 msgid "PDF Export"
@@ -6933,127 +6945,127 @@ msgstr "Ink/Stitch: ZIP exporte des formats multiples et options en extra (.zip)
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
 msgstr "Créer un ZIP avec des formats multiples de fichiers de broderie à l’aide d’Ink/Stitch"
 
-#: inx/inkstitch_zip.inx:13
+#: inx/inkstitch_zip.inx:14
 msgid "Custom file name"
 msgstr "Nom de fichier personnalisé"
 
-#: inx/inkstitch_zip.inx:13
+#: inx/inkstitch_zip.inx:14
 msgid "Defines the file names inside the zip archive. Leave empty for default file name."
 msgstr "Définit les noms de fichiers à l'intérieur de l'archive zip. Laissez vide pour le nom de fichier par défaut."
 
-#: inx/inkstitch_zip.inx:16
+#: inx/inkstitch_zip.inx:17
 msgid "File Formats"
 msgstr "Formats de fichier"
 
-#: inx/inkstitch_zip.inx:17
+#: inx/inkstitch_zip.inx:18
 msgid "Output formats:"
 msgstr "Formats de sortie:"
 
-#: inx/inkstitch_zip.inx:18
+#: inx/inkstitch_zip.inx:21
 msgid ".PEC: Brother Embroidery Format"
 msgstr ".PEC : Format de broderie Brother"
 
-#: inx/inkstitch_zip.inx:19
+#: inx/inkstitch_zip.inx:22
 msgid ".PES: Brother Embroidery Format"
 msgstr ".PES : Format de broderie Brother"
 
-#: inx/inkstitch_zip.inx:20
+#: inx/inkstitch_zip.inx:23
 msgid ".EXP: Melco Expanded Embroidery Format"
 msgstr ".EXP : Format de broderie Melco"
 
-#: inx/inkstitch_zip.inx:21
+#: inx/inkstitch_zip.inx:24
 msgid ".DST: Tajima Embroidery Format"
 msgstr ".DST : Format de broderie Tajima"
 
-#: inx/inkstitch_zip.inx:22
+#: inx/inkstitch_zip.inx:25
 msgid ".JEF: Janome Embroidery Format"
 msgstr ".JEF : Format de broderie Janome"
 
-#: inx/inkstitch_zip.inx:23
+#: inx/inkstitch_zip.inx:26
 msgid ".VP3: Pfaff Embroidery Format"
 msgstr ".VP3 : Format de broderie Pfaff"
 
-#: inx/inkstitch_zip.inx:24
+#: inx/inkstitch_zip.inx:27
 msgid ".XXX: Singer Embroidery Format"
 msgstr ".XXX : Format de broderie Singer"
 
-#: inx/inkstitch_zip.inx:25
+#: inx/inkstitch_zip.inx:28
 msgid ".U01: Barudan Embroidery Format"
 msgstr ".Uo1 : Format de broderie Barudan"
 
-#: inx/inkstitch_zip.inx:26
+#: inx/inkstitch_zip.inx:29
 msgid ".PMV: Brother Stitch Format [STITCH]"
 msgstr ".PMV : Format de points Brother [STITCH]"
 
-#: inx/inkstitch_zip.inx:27
+#: inx/inkstitch_zip.inx:30
 msgid ".GCODE: gcode Format, Text File"
 msgstr ".GCODE : format gcode, fichier texte"
 
-#: inx/inkstitch_zip.inx:28
+#: inx/inkstitch_zip.inx:36
 msgid ".EDR: Edr Color Format [COLOR]"
 msgstr ".EDR: Format de couleur Edr [COLOR]"
 
-#: inx/inkstitch_zip.inx:29
+#: inx/inkstitch_zip.inx:37
 msgid ".COL: Col Color Format [COLOR]"
 msgstr ".COL: Format Couleur Col [COLOR]"
 
-#: inx/inkstitch_zip.inx:30
+#: inx/inkstitch_zip.inx:38
 msgid ".INF: Inf Color Format [COLOR]"
 msgstr ".INF: Format Couleur INF [COLOR]"
 
-#: inx/inkstitch_zip.inx:31
+#: inx/inkstitch_zip.inx:39
 msgid ".TXT: Threadlist [COLOR]"
 msgstr ".TXT : Palette de fils [COLOR]"
 
-#: inx/inkstitch_zip.inx:32
-msgid ".PNG: Portable Network Graphics (Realistic) [IMAGE]"
-msgstr ".PNG: Portable Network Graphics (Réaliste) [IMAGE]"
-
-#: inx/inkstitch_zip.inx:33
-msgid ".PNG: Portable Network Graphics (Simple) [IMAGE]"
-msgstr ".PNG: Portable Network Graphics (Simple) [IMAGE]"
-
-#: inx/inkstitch_zip.inx:35
+#: inx/inkstitch_zip.inx:45
 msgid ".SVG: Scalable Vector Graphic"
 msgstr ".SVG: Scalable Vector Graphic"
 
-#: inx/inkstitch_zip.inx:38
+#: inx/inkstitch_zip.inx:46
+msgid ".PNG: Portable Network Graphics (Realistic) [IMAGE]"
+msgstr ".PNG: Portable Network Graphics (Réaliste) [IMAGE]"
+
+#: inx/inkstitch_zip.inx:48
+msgid ".PNG: Portable Network Graphics (Simple) [IMAGE]"
+msgstr ".PNG: Portable Network Graphics (Simple) [IMAGE]"
+
+#: inx/inkstitch_zip.inx:54
 msgid "Panelization Options"
 msgstr "Options de panélisation"
 
-#: inx/inkstitch_zip.inx:39
+#: inx/inkstitch_zip.inx:55
 msgid "For single design set horizontal and vertical repeats to 1"
 msgstr "Pour un seul motif, réglez les répétitions horizontales et verticales sur 1"
 
-#: inx/inkstitch_zip.inx:41
+#: inx/inkstitch_zip.inx:57
 msgid "Horizontal repeats"
 msgstr "Répétitions horizontales"
 
-#: inx/inkstitch_zip.inx:42
+#: inx/inkstitch_zip.inx:58
 msgid "Horizontal spacing (mm)"
 msgstr "Espacement horizontal (mm)"
 
-#: inx/inkstitch_zip.inx:43
+#: inx/inkstitch_zip.inx:59
 msgid "Vertical repeats"
 msgstr "Répétitions verticales"
 
-#: inx/inkstitch_zip.inx:44
+#: inx/inkstitch_zip.inx:60
 msgid "Vertical spacing (mm)"
 msgstr "Espacement vertical (mm)"
 
-#: inx/inkstitch_zip.inx:47
+#: inx/inkstitch_zip.inx:63
 msgid "Zip File Export"
 msgstr "Export en fichier Zip"
 
-#: inx/inkstitch_zip.inx:48
+#: inx/inkstitch_zip.inx:64
 msgid "Export multiple embroidery file formats at once."
 msgstr "Export plusieurs formats de fichier de broderie en une seule fois."
 
-#: inx/inkstitch_zip.inx:50
+#: inx/inkstitch_zip.inx:66
 msgid "Read more on our website:"
 msgstr "Plus d'informations sur notre site web :"
 
-#: inx/inkstitch_zip.inx:51
+#: inx/inkstitch_zip.inx:67
 msgid "https://inkstitch.org/docs/import-export/#batch-export"
 msgstr "https://inkstitch.org/fr/docs/import-export/#batch-export"
 
