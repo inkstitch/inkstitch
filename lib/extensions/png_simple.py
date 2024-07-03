@@ -20,8 +20,9 @@ class PngSimple(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self)
 
-        self.arg_parser.add_argument('--notebook', type=str, default='')
-        self.arg_parser.add_argument('--line_width', type=str, default='', dest='line_width')
+        self.arg_parser.add_argument('--notebook')
+        self.arg_parser.add_argument('--line_width', type=float, default=0.3, dest='line_width')
+        self.arg_parser.add_argument('--dpi', type=int, default=300, dest='dpi')
 
     def effect(self):
         if not self.get_elements():
@@ -38,13 +39,13 @@ class PngSimple(InkstitchExtension):
         layer = render_stitch_plan(self.svg, stitch_plan, False, visual_commands=False,
                                    render_jumps=False, line_width=line_width)
 
-        write_png_output(self.svg, layer)
+        write_png_output(self.svg, layer, self.options.dpi)
 
         # don't let inkex output the SVG!
         sys.exit(0)
 
 
-def write_png_output(svg, layer):
+def write_png_output(svg, layer, dpi):
     with TemporaryDirectory() as tempdir:
         # Inkex's command functionality also writes files to temp directories like this.
         temp_svg_path = f"{tempdir}/temp.svg"
@@ -52,7 +53,7 @@ def write_png_output(svg, layer):
         with open(temp_svg_path, "wb") as f:
             f.write(svg.tostring())
 
-        generate_png(svg, layer, temp_svg_path, temp_png_path)
+        generate_png(svg, layer, temp_svg_path, temp_png_path, dpi)
 
         # inkscape will read the file contents from stdout and copy
         # to the destination file that the user chose
@@ -60,13 +61,13 @@ def write_png_output(svg, layer):
             sys.stdout.buffer.write(output_file.read())
 
 
-def generate_png(svg, layer, input_path, output_path):
+def generate_png(svg, layer, input_path, output_path, dpi):
     inkscape(input_path, actions="; ".join([
-        f"export-id:{layer.get_id()}",
+        f"export-id: {layer.get_id()}",
         "export-id-only",
         "export-type:png",
-        f"export-dpi:{96*8}",
-        f"export-filename:{output_path}",
-        f"export-background:{get_pagecolor(svg.namedview)}",
+        f"export-dpi: {dpi}",
+        f"export-filename: {output_path}",
+        f"export-background: {get_pagecolor(svg.namedview)}",
         "export-do"  # Inkscape docs say this should be implicit at the end, but it doesn't seem to be.
     ]))

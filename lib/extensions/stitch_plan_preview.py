@@ -38,7 +38,7 @@ class StitchPlanPreview(InkstitchExtension):
         self.arg_parser.add_argument("-o", "--overwrite", type=Boolean, default=True, dest="overwrite")
 
     def effect(self):
-        realistic, raster_mult = self.parse_mode()
+        realistic, dpi = self.parse_mode()
 
         # delete old stitch plan
         self.remove_old()
@@ -58,7 +58,7 @@ class StitchPlanPreview(InkstitchExtension):
         layer = render_stitch_plan(svg, stitch_plan, realistic, visual_commands, render_jumps=self.options.render_jumps)
         if self.options.ignore_layer and not self.options.mode[-1].isdigit():
             add_layer_commands(layer, ["ignore_layer"])
-        layer = self.rasterize(svg, layer, raster_mult)
+        layer = self.rasterize(svg, layer, dpi)
 
         # update layer visibility (unchanged, hidden, lower opacity)
         groups = self.document.getroot().findall(SVG_GROUP_TAG)
@@ -72,27 +72,27 @@ class StitchPlanPreview(InkstitchExtension):
     def parse_mode(self) -> Tuple[bool, Optional[int]]:
         """
         Parse the "mode" option and return a tuple of a bool indicating if realistic rendering should be used,
-        and an optional int indicating the resolution multiplier to use for rasterization, or None if rasterization should not be used.
+        and an optional int indicating the dpi value to use for rasterization, or None if rasterization should not be used.
         """
         realistic = False
-        raster_mult: Optional[int] = None
+        dpi: Optional[int] = None
         render_mode = self.options.mode
         if render_mode == "simple":
             pass
         elif render_mode.startswith("realistic-"):
             realistic = True
-            raster_option = render_mode.split('-')[1]
-            if raster_option != "vector":
+            dpi_option = render_mode.split('-')[1]
+            if dpi_option != "vector":
                 try:
-                    raster_mult = int(raster_option)
+                    dpi = int(dpi_option)
                 except ValueError:
-                    errormsg(f"Invalid raster mode {raster_option}")
+                    errormsg(f"Invalid raster mode {dpi_option}")
                     sys.exit(1)
         else:
             errormsg(f"Invalid render mode {render_mode}")
             sys.exit(1)
 
-        return (realistic, raster_mult)
+        return (realistic, dpi)
 
     def remove_old(self):
         svg = self.document.getroot()
@@ -104,8 +104,8 @@ class StitchPlanPreview(InkstitchExtension):
             if layer is not None:
                 layer.set('id', svg.get_unique_id('inkstitch_stitch_plan_'))
 
-    def rasterize(self, svg: BaseElement, layer: BaseElement, raster_mult: Optional[int]) -> BaseElement:
-        if raster_mult is None:
+    def rasterize(self, svg: BaseElement, layer: BaseElement, dpi: Optional[int]) -> BaseElement:
+        if dpi is None:
             # Don't rasterize if there's no reason to.
             return layer
         else:
@@ -121,16 +121,17 @@ class StitchPlanPreview(InkstitchExtension):
                 # Instead, especially because we need to invoke Inkscape anyway to perform the rasterization, we get
                 # the bounding box with query commands before we perform the export. This is quite cheap.
                 out = inkscape(temp_svg_path, actions="; ".join([
-                    f"select-by-id:{layer.get_id()}",
+                    f"select-by-id: {layer.get_id()}",
                     "query-x",
                     "query-y",
                     "query-width",
                     "query-height",
-                    f"export-id:{layer.get_id()}",
+                    f"export-id: {layer.get_id()}",
                     "export-id-only",
-                    "export-type:png",
-                    f"export-dpi:{96*raster_mult}",
-                    f"export-filename:{temp_png_path}",
+                    "export-type: png",
+                    f"export-dpi: {dpi}",
+                    "export-png-color-mode: RGBA_16",
+                    f"export-filename: {temp_png_path}",
                     "export-do"  # Inkscape docs say this should be implicit at the end, but it doesn't seem to be.
                 ]))
 
