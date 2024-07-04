@@ -304,6 +304,7 @@ The "standalone simulator" has been replaced with the reworked simulator from pa
 * Simulator is now attachable/detachable ([#2557](https://github.com/inkstitch/inkstitch/issues/2557))
 * Simulator has a changable background color and can show/hide jumps ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
 * Simulator has a preferences button to scale line width and needle penetration points ([#2992](https://github.com/inkstitch/inkstitch/issues/2992))
+* Make colors visible on background ([#3010](https://github.com/inkstitch/inkstitch/issues/3010))
 
 ### [Stitch Plan Preview](/docs/visualize/#stitch-plan-preview)
 
@@ -383,10 +384,13 @@ to manual stitches and keep previous behavior. [#2866](https://github.com/inksti
 
 ## Export
 
+* Make PNG (simple/realistic) and threadlist available in export file formats ([#3019](https://github.com/inkstitch/inkstitch/issues/3019))
+
 ### Zip-Export
 
 * Add input field for custom file names within the zip file ([#2426](https://github.com/inkstitch/inkstitch/issues/2426))
 * Add option to export panel ([#2349](https://github.com/inkstitch/inkstitch/issues/2349))
+* Add realistic PNG output option ([#3019](https://github.com/inkstitch/inkstitch/issues/3019))
 
 ### Inkscape export dialog
 
@@ -395,6 +399,7 @@ to manual stitches and keep previous behavior. [#2866](https://github.com/inksti
 ## Install
 
 * Windows is now available as 32 bit and 64 bit version ([#2413](https://github.com/inkstitch/inkstitch/issues/2413))
+* macOS is now also available as an arm version, no need to install rosetta ([#3038](https://github.com/inkstitch/inkstitch/issues/3038))
 
 ## Developer Features
 
@@ -404,7 +409,9 @@ to manual stitches and keep previous behavior. [#2866](https://github.com/inksti
 
 ## Bug Fixes
 
-* [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Fix about extension for Inkscape version 1.4
+* [#3034](https://github.com/inkstitch/inkstitch/issues/3034) adding commands to clones informs users that they have to unlink clones
+* [#3021](https://github.com/inkstitch/inkstitch/issues/3021) make line to satin a little bit more robust
+* [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Fix about extension for Inkscape version 1.4 (use wxpython)
 * [#3004](https://github.com/inkstitch/inkstitch/issues/3004) Fix realistic stitch plan preview for inkscape versions 1.3 and 1.3.1
 * [#3002](https://github.com/inkstitch/inkstitch/issues/3002) gray out randomize stitch length param when random stitch length is disabled
 * [#2998](https://github.com/inkstitch/inkstitch/issues/2998) Fix short relative lock stitches

@@ -299,6 +299,7 @@ Visualise et Exporter > Export pdf
 * Le simulateur est maintenant attaché à la fenêtre principale (Paramètre et Lettrage)([#2557](https://github.com/inkstitch/inkstitch/issues/2557)), il est détachable, et son dernier état est conservé.
 * La couleur de fond du simulateur est maintenant modifiable, et il a la capacité de montrer/cacher les sauts de fil. ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
 * Simulator has a preferences button to scale line width and needle penetration points ([#2992](https://github.com/inkstitch/inkstitch/issues/2992))
+* Make colors visible on background ([#3010](https://github.com/inkstitch/inkstitch/issues/3010))
 
 ### [Prévisualisaton du plan de broderie](/fr/docs/visualize/#stitch-plan-preview)
 
@@ -372,10 +373,13 @@ Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu
 
 ## Export
 
-### Export
+* Make PNG (simple/realistic) and threadlist available in export file formats ([#3019](https://github.com/inkstitch/inkstitch/issues/3019))
+
+### Zip-Export
 
 * Ajout d'un champs  "nom de fichier personnalisé " au sein du fichier zip ([#2426](https://github.com/inkstitch/inkstitch/issues/2426))
 * Ajout d'une option de panélisation ([#2349](https://github.com/inkstitch/inkstitch/issues/2349))
+* Add realistic PNG output option ([#3019](https://github.com/inkstitch/inkstitch/issues/3019))
 
 ### Dialogue d'export d'Inkscape 
 
@@ -384,6 +388,7 @@ Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu
 ## Installation
 
 * Windows est maintenant disponible en version 32 et 64 bits([#2413](https://github.com/inkstitch/inkstitch/issues/2413))
+* macOS is now also available as an arm version, no need to install rosetta ([#3038](https://github.com/inkstitch/inkstitch/issues/3038))
 
 ## Pour les développeurs
 
@@ -391,11 +396,11 @@ Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu
 * [#2655](https://github.com/inkstitch/inkstitch/issues/2655)  Dans les préférences d'In Ink/Stitch , mettre la taille de cache à 0  désactive le cache.
 * [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Mise à jour des procédures de debug et de profiling
 
-
-
 ## Corrections de bug
 
-* [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Fix about extension for Inkscape version 1.4
+* [#3034](https://github.com/inkstitch/inkstitch/issues/3034) adding commands to clones informs users that they have to unlink clones
+* [#3021](https://github.com/inkstitch/inkstitch/issues/3021) make line to satin a little bit more robust
+* [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Fix about extension for Inkscape version 1.4 (use wxpython)
 * [#3004](https://github.com/inkstitch/inkstitch/issues/3004) Fix realistic stitch plan preview for inkscape versions 1.3 and 1.3.1
 * [#3002](https://github.com/inkstitch/inkstitch/issues/3002) gray out randomize stitch length param when random stitch length is disabled
 * [#2998](https://github.com/inkstitch/inkstitch/issues/2998) Fix short relative lock stitches

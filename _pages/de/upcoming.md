@@ -310,6 +310,7 @@ Die realistische Vorschau befindet sich jetzt in der Stichplan Vorschau.
 * Die Hintergrundfarbe kann im Simulator angepasst werden ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
 * Sprungstiche können angezeigt/versteckt werden ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
 * Die Linienbreite und die Größe der Punkte für die Nadeleinstichstellen können in den Einstellungen manuell gesetzt werden ([#2992](https://github.com/inkstitch/inkstitch/issues/2992))
+* Alle Farben auf jedem Hintergrund sichtbar ([#3010](https://github.com/inkstitch/inkstitch/issues/3010))
 
 ### [Stichplanvorschau](/de/docs/visualize/#stich-plan-vorschau)
 
@@ -393,10 +394,14 @@ Bestehende Designs mit Ink/Stitch Parametern werden automatisch aktualisert um m
 
 ## Export
 
+* PNG (einfach/realistisch) und Garnliste direkt in der Dateiformatliste auswählbar ([#3019](https://github.com/inkstitch/inkstitch/issues/3019))
+
 ### Zip-Export
 
 * Eingabefeld für nutzerdefinierte Dateinamen innerhalb der Zip-Datei ([#2426](https://github.com/inkstitch/inkstitch/issues/2426))
 * Option für Panel-Export ([#2349](https://github.com/inkstitch/inkstitch/issues/2349))
+* Füge realistisches PNG-Ausgabeformat hinzu ([#3019](https://github.com/inkstitch/inkstitch/issues/3019))
+
 
 ### Inkscape Export-Dialog
 
@@ -405,6 +410,7 @@ Bestehende Designs mit Ink/Stitch Parametern werden automatisch aktualisert um m
 ## Installation
 
 * Windows ist jetzt als 32 bit und 64 bit Version verfügbar ([#2413](https://github.com/inkstitch/inkstitch/issues/2413))
+* macOS ist jetzt auch als arm Version verfügbar. Rosetta wird hiermit nicht mehr benötigt ([#3038](https://github.com/inkstitch/inkstitch/issues/3038))
 
 ## Entwickler Funktionen
 
@@ -414,7 +420,9 @@ Bestehende Designs mit Ink/Stitch Parametern werden automatisch aktualisert um m
 
 ## Bug Fixes
 
-* [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Fix about extension for Inkscape version 1.4
+* [#3034](https://github.com/inkstitch/inkstitch/issues/3034) adding commands to clones informs users that they have to unlink clones
+* [#3021](https://github.com/inkstitch/inkstitch/issues/3021) make line to satin a little bit more robust
+* [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Fix about extension for Inkscape version 1.4 (use wxpython)
 * [#3004](https://github.com/inkstitch/inkstitch/issues/3004) Fix realistic stitch plan preview for inkscape versions 1.3 and 1.3.1
 * [#3002](https://github.com/inkstitch/inkstitch/issues/3002) gray out randomize stitch length param when random stitch length is disabled
 * [#2998](https://github.com/inkstitch/inkstitch/issues/2998) Fix short relative lock stitches
