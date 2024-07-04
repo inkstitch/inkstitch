@@ -22,13 +22,10 @@ class DisplayStackingOrder(InkstitchExtension):
 
         nodes = self.get_nodes()
         for i, node in enumerate(nodes):
-            if node.style['fill'] != 'none':
-                position = node.bounding_box(node.composed_transform()).minimum
-                self.insert_stacking_num(layer, i + 1, position)
-            else:
-                path = node.get_path().transform(node.composed_transform())
-                position = next(path.end_points)
-                self.insert_stacking_num(layer, i + 1, position)
+            transform = node.composed_transform()
+            point = tuple(next(node.get_path().end_points))
+            position = transform.apply_to_point(point)
+            self.insert_stacking_num(layer, i + 1, position)
 
         add_layer_commands(layer, ["ignore_layer"])
 
