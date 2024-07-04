@@ -346,6 +346,11 @@ jobs:
             echo "release_tag=${tag}" >> $GITHUB_ENV
             echo "prerelease=false" >> $GITHUB_ENV
             echo "title=${tag}" >> $GITHUB_ENV
+          elif [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+beta$ ]]; then
+            tag="${GITHUB_REF#refs/tags/}"
+            echo "release_tag=${tag}" >> $GITHUB_ENV
+            echo "prerelease=true" >> $GITHUB_ENV
+            echo "title=${tag}" >> $GITHUB_ENV
           else
             branch="${GITHUB_REF#refs/heads/}"
             tag="dev-build-$(echo $branch | tr / -)"
