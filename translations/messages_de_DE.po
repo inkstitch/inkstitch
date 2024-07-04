@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-07-03 05:23+0000\n"
-"PO-Revision-Date: 2024-07-03 05:23\n"
+"PO-Revision-Date: 2024-07-04 01:12\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2642,7 +2642,10 @@ msgstr "Bitte einen oder mehrere Befehle auswählen."
 msgid "Cannot attach commands to Clone element(s) {clones}. They must be unlinked to add commands.\n"
 "* Select the clone(s)\n"
 "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
-msgstr ""
+msgstr "{clones}: Befehle können nicht zu Klon-Elementen hinzugefügt werden.\n"
+"Um Befehle nutzen zu können, muss die Klonverbindung aufgetrennt werden.\n"
+"* Klon(e) auswählen\n"
+"* Erweiterungen > Ink/Stitch > Bearbeiten > Klonverbindung auftrennen"
 
 #: lib/extensions/outline.py:30
 msgid "Please select one or more shapes to convert to their outline."
@@ -6384,7 +6387,7 @@ msgstr "Erstellt eine PNG-Datei mit einer realistischen Abbildung der Stickdatei
 #: inx/inkstitch_png_realistic.inx:15 inx/inkstitch_png_simple.inx:16
 #: inx/inkstitch_zip.inx:47 inx/inkstitch_zip.inx:50
 msgid "DPI"
-msgstr ""
+msgstr "DPI"
 
 #: inx/inkstitch_png_realistic.inx:18 inx/inkstitch_png_simple.inx:19
 msgid "PNG file export"
@@ -6396,7 +6399,7 @@ msgstr "Stickmuster als PNG exportieren"
 
 #: inx/inkstitch_png_realistic.inx:23 inx/inkstitch_png_simple.inx:24
 msgid "Read more on our website"
-msgstr ""
+msgstr "Mehr Infos auf unserer Webseite"
 
 #: inx/inkstitch_png_realistic.inx:24 inx/inkstitch_png_simple.inx:25
 msgid "https://inkstitch.org/docs/import-export/"

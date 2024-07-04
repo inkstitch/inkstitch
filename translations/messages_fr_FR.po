@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-07-03 05:23+0000\n"
-"PO-Revision-Date: 2024-07-03 05:23\n"
+"PO-Revision-Date: 2024-07-04 01:12\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2644,7 +2644,9 @@ msgstr "Veuillez choisir une ou plusieurs commandes à attacher."
 msgid "Cannot attach commands to Clone element(s) {clones}. They must be unlinked to add commands.\n"
 "* Select the clone(s)\n"
 "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
-msgstr ""
+msgstr "Impossible d'attacher des commandes à un ou des éléments clonés (clones). Ils doivent être déliés pour qu'il soit possible d'ajouter des commandes. T\n"
+"* Sélectionner le ou les clone(s)\n"
+"* Lancez : Extensions > Ink/Stitch >Édition > Délier le clone"
 
 #: lib/extensions/outline.py:30
 msgid "Please select one or more shapes to convert to their outline."
@@ -6386,7 +6388,7 @@ msgstr "Créer un fichier PNG de représentation réaliste de broderie avec Ink/
 #: inx/inkstitch_png_realistic.inx:15 inx/inkstitch_png_simple.inx:16
 #: inx/inkstitch_zip.inx:47 inx/inkstitch_zip.inx:50
 msgid "DPI"
-msgstr ""
+msgstr "DPI"
 
 #: inx/inkstitch_png_realistic.inx:18 inx/inkstitch_png_simple.inx:19
 msgid "PNG file export"
@@ -6398,7 +6400,7 @@ msgstr "Sortie en format de broderie PNG"
 
 #: inx/inkstitch_png_realistic.inx:23 inx/inkstitch_png_simple.inx:24
 msgid "Read more on our website"
-msgstr ""
+msgstr "Plus d'informations sur notre site web"
 
 #: inx/inkstitch_png_realistic.inx:24 inx/inkstitch_png_simple.inx:25
 msgid "https://inkstitch.org/docs/import-export/"
