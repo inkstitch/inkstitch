@@ -193,7 +193,7 @@ Cette extension génère les bandes du tartan et les applique au document soit e
 
 ## Mises à jour d'extensions
 
-All extensions now come with a help tab with a link to our website with detailed information ([#2937](https://github.com/inkstitch/inkstitch/issues/2937), [#2948](https://github.com/inkstitch/inkstitch/issues/2948))
+Toutes les extensions ont maintenant un onglet  d'aide avec un lien vers notre site web avec des informations détaillées ([#2937](https://github.com/inkstitch/inkstitch/issues/2937), [#2948](https://github.com/inkstitch/inkstitch/issues/2948))
 
 ### [Nettoyer le document](/fr/docs/troubleshoot/#cleanup-document)
 `Résolution de problèmes > Nettoyer le document`
@@ -238,9 +238,9 @@ All extensions now come with a help tab with a link to our website with detailed
 
 ### [Redwork](/fr/docs/stroke-tools/#redwork)
 
-`Stroke tools > Redwork` ([#2958](https://github.com/inkstitch/inkstitch/issues/2958))
+`Outils : Trait > Redwork` ([#2958](https://github.com/inkstitch/inkstitch/issues/2958))
 
-A new auto-route extension for running stitches which makes sure, that every path is used exactly two times.
+Une nouvelle extension d'agencement automatique qui assure que chaque chemin est utilisé exactement deux fois.
 
 ### [Lettrage](/fr/docs/lettering)
 
@@ -251,7 +251,7 @@ A new auto-route extension for running stitches which makes sure, that every pat
 
 `Lettering along path`
 
-* Remove previous transforms so that it can be adapted to an other (or an updated) path [#2973](https://github.com/inkstitch/inkstitch/pull/2973)
+* Suppresion des transformations précédentes afin qu'il puisse puisse être adapté à un nouveau chemin (ou a une mise à jour du chemin) [#2973](https://github.com/inkstitch/inkstitch/pull/2973)
 
 ### [Paramètres](/fr/docs/params/)
 
@@ -373,7 +373,7 @@ Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu
 
 ## Export
 
-* Make PNG (simple/realistic) and threadlist available in export file formats ([#3019](https://github.com/inkstitch/inkstitch/issues/3019))
+*  Il est mamintenant possible d'exporter dans les format de liste de fils et en PNG  (simple/réaliste) ([#3019](https://github.com/inkstitch/inkstitch/issues/3019))
 
 ### Zip-Export
 
@@ -398,25 +398,23 @@ Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu
 
 ## Corrections de bug
 
-* [#3034](https://github.com/inkstitch/inkstitch/issues/3034) adding commands to clones informs users that they have to unlink clones
-* [#3021](https://github.com/inkstitch/inkstitch/issues/3021) make line to satin a little bit more robust
-* [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Fix about extension for Inkscape version 1.4 (use wxpython)
-* [#3004](https://github.com/inkstitch/inkstitch/issues/3004) Fix realistic stitch plan preview for inkscape versions 1.3 and 1.3.1
-* [#3002](https://github.com/inkstitch/inkstitch/issues/3002) gray out randomize stitch length param when random stitch length is disabled
-* [#2998](https://github.com/inkstitch/inkstitch/issues/2998) Fix short relative lock stitches
+* [#3034](https://github.com/inkstitch/inkstitch/issues/3034) l'ajout de  commande aux clones informe les utilisateurs de la necessité de délier les clones.
+* [#3021](https://github.com/inkstitch/inkstitch/issues/3021) rend l'extension trait en satin un peu plus robuste.
+* [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Correction de l'extension à propos pour la version 1.4 d'Inkscape (utilise wxpython)
+* [#3004](https://github.com/inkstitch/inkstitch/issues/3004)  Correction de l'aperçu du plan de broderie réaliste pour les versions 1.3 et 1.3.1 d'Inkscape
+* [#3002](https://github.com/inkstitch/inkstitch/issues/3002)  Grise le paramètre "Mouvement aléatoire de la longueur du point" lorsque "Rendre aléatoire la longueur du point" n'est pas coché. 
+* [#2998](https://github.com/inkstitch/inkstitch/issues/2998)  Corrige les petits points d'arrêts relatifs.
 * [#2993](https://github.com/inkstitch/inkstitch/issues/2993) PDF Preview webpage now pings in worker
-* [#2984](https://github.com/inkstitch/inkstitch/issues/2984) improve error message for files with too many color changes
-* [#2974](https://github.com/inkstitch/inkstitch/issues/2974) Remove simulator fragments on resize
-* [#2984](https://github.com/inkstitch/inkstitch/issues/2984) improve error message for files with too many color changes
-* [#2974](https://github.com/inkstitch/inkstitch/issues/2974) Remove simulator fragments on resize
-* [#2969](https://github.com/inkstitch/inkstitch/issues/2969) Improve simulator dark theme
-* [#2924](https://github.com/inkstitch/inkstitch/issues/2924) Fix print pdf for grouped objects without a layer
-* [#2918](https://github.com/inkstitch/inkstitch/issues/2918) Filter invalid paths in satins
-* [#2917](https://github.com/inkstitch/inkstitch/issues/2917) Fix zigzag line to satin
-* [#2897](https://github.com/inkstitch/inkstitch/issues/2897) Fix invalid clip paths
-* [#2899](https://github.com/inkstitch/inkstitch/issues/2899) Fix color display for some Pfaff-Machines
-* [#2895](https://github.com/inkstitch/inkstitch/issues/2895) Fix center walk underlay repeats
-* [#2896](https://github.com/inkstitch/inkstitch/issues/2896) LPE-Satin: increase fuse value
+* [#2984](https://github.com/inkstitch/inkstitch/issues/2984)  Amélioration  du message d'error pour les fichiers avec trop de changement de couleurs.
+* [#2974](https://github.com/inkstitch/inkstitch/issues/2974) Suppresion des fragments de simulateur àau redimensionement
+* [#2969](https://github.com/inkstitch/inkstitch/issues/2969) Amélioration du thème sombre du simulateur
+* [#2924](https://github.com/inkstitch/inkstitch/issues/2924)  Correction  de l 'impression pdf  pour les groupes sans  calque
+* [#2918](https://github.com/inkstitch/inkstitch/issues/2918) Filtre les chemins invalides dans le satin
+* [#2917](https://github.com/inkstitch/inkstitch/issues/2917) Correction de ligne zigzag en satin
+* [#2897](https://github.com/inkstitch/inkstitch/issues/2897) Correction des chemins de découpe invalide
+* [#2899](https://github.com/inkstitch/inkstitch/issues/2899)  Correction du mauvais affichage des couleurs pour ceraines Machines Pfaff
+* [#2895](https://github.com/inkstitch/inkstitch/issues/2895) Correction du nombre de répétition du chemin dans la sous couche centrale
+* [#2896](https://github.com/inkstitch/inkstitch/issues/2896) Effet de chemin satin : augmentation de la valeur de fusion
 * [#2836](https://github.com/inkstitch/inkstitch/issues/2836) Corrige l'affichage des paramètres non affectés lorsque plusieurs éléments sont sélectionnés.
 * [#2853](https://github.com/inkstitch/inkstitch/issues/2853) Correction d'une erreur concernnant le crénage des polices.
 * [#2819](https://github.com/inkstitch/inkstitch/issues/2819) Corrige l'extension nettoyage
