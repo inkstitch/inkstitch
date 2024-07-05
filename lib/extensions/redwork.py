@@ -5,14 +5,13 @@
 
 import networkx as nx
 from inkex import Group, Path, PathElement, errormsg
-from shapely import unary_union, length
+from shapely import length, unary_union
 from shapely.geometry import LineString, MultiLineString, Point
 from shapely.ops import linemerge, nearest_points, substring
 
 from ..elements import Stroke
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
-from ..svg.tags import INKSTITCH_ATTRIBS
 from ..utils.geometry import ensure_multi_line_string
 from .base import InkstitchExtension
 
@@ -33,11 +32,8 @@ class Redwork(InkstitchExtension):
         self.elements = None
         self.graph = None
         self.connected_components = None
-        self.eulerian_circuits = None
         self.merge_distance = None
         self.minimum_path_length = None
-        self.redwork_running_stitch_length_mm = None
-        self.redwork_bean_stitch_repeats = None
 
     def effect(self):
         if not self.get_elements():
@@ -92,7 +88,6 @@ class Redwork(InkstitchExtension):
                 return command.target_point
 
     def _eulerian_circuits_to_elements(self, elements):
-
         node = elements[0].node
         index = node.getparent().index(node)
         style = node.style
@@ -150,10 +145,12 @@ class Redwork(InkstitchExtension):
         )
 
         element.label = label
-        element.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.options.redwork_running_stitch_length_mm)
+        element.set('inkstitch:running_stitch_length_mm', self.options.redwork_running_stitch_length_mm)
 
         if redwork:
-            element.set(INKSTITCH_ATTRIBS['bean_stitch_repeats'], self.options.redwork_bean_stitch_repeats)
+            element.set('inkstitch:bean_stitch_repeats', self.options.redwork_bean_stitch_repeats)
+        else:
+            element.style['stroke-dasharray'] = '0.5,0.5'
 
         group.add(element)
 
