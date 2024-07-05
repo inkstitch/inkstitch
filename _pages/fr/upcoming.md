@@ -178,7 +178,7 @@ Cette extension permet de reconstruire un objet original à partir d'un fichier 
 
 ![Remplissage en contour](/assets/images/docs/outline.png)
 
-### [Unlink Clone](/fr/docs/edit#unlink-clone)
+### [Délier le Clone](/fr/docs/edit#unlink-clone)
 
 Edition > Délier le clone ...
 
@@ -247,9 +247,9 @@ Une nouvelle extension d'agencement automatique qui assure que chaque chemin est
 `Lettrage`
 * Ajouter un filtre sur la présence des glyphes ([#2400](https://github.com/inkstitch/inkstitch/issues/2400))
 
-### [Lettering Along Path](/docs/lettering/#lettering-along-path)
+### [Lettrage le long d'un chemin](/docs/lettering/#lettering-along-path)
 
-`Lettering along path`
+`Lettrage le long d'un chemin`
 
 * Suppresion des transformations précédentes afin qu'il puisse puisse être adapté à un nouveau chemin (ou a une mise à jour du chemin) [#2973](https://github.com/inkstitch/inkstitch/pull/2973)
 
@@ -292,28 +292,28 @@ Visualise et Exporter > Export pdf
 
 `Visualiser et exporter > Simulateur`
 
-**Annonce importante**<br> Simulateur et Vue réaliste ont divorcés. `Vue réaliste` et `Aperçu du plan de broderie` ont commençé une vie commune.<br><br><span style="font-style: italic;"> L'aperçu réaliste a été déplacé vers l'apercu du plan de  broderie.</span>
+**Annonce importante**<br> Simulateur et Vue réaliste ont divorcés. `Vue réaliste` et `Aperçu du plan de broderie` ont commençé une vie commune.<br><br><span style="font-style: italic;"> L'aperçu réaliste a été déplacé vers l'apercu du plan de  broderie. </span>
 {: .notice--warning }
 
 * Meilleur simulateur pour Paramètres et Lettrage ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
 * Le simulateur est maintenant attaché à la fenêtre principale (Paramètre et Lettrage)([#2557](https://github.com/inkstitch/inkstitch/issues/2557)), il est détachable, et son dernier état est conservé.
 * La couleur de fond du simulateur est maintenant modifiable, et il a la capacité de montrer/cacher les sauts de fil. ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
-* Simulator has a preferences button to scale line width and needle penetration points ([#2992](https://github.com/inkstitch/inkstitch/issues/2992))
-* Make colors visible on background ([#3010](https://github.com/inkstitch/inkstitch/issues/3010))
+* Le simulateur a un bouton préférence pour modifier l'épaisseur  des traits et la taille des points de pénétration de l'aiguille ([#2992](https://github.com/inkstitch/inkstitch/issues/2992))
+* Les couleurs sont rendus visibles sur n'importe quel couleur  de fond([#3010](https://github.com/inkstitch/inkstitch/issues/3010))
 
 ### [Prévisualisaton du plan de broderie](/fr/docs/visualize/#stitch-plan-preview)
 
 `Visualiser et exporter > Prévisualisaton du plan de broderie`
 
-**Annonce importante**<br>  L'aperçu réaliste a été déplacé vers l'apercu du plan de  broderie.</span>
+**Annonce importante**<br>  L'aperçu réaliste a été déplacé vers l'apercu du plan de  broderie.
 {: .notice--warning }
 
 Ajout d'options
 
 * conserver/écraser le plan de broderie précédent ([#2642](https://github.com/inkstitch/inkstitch/issues/#2642))
 * rendu réaliste (png, vector) [#2838](https://github.com/inkstitch/inkstitch/issues/2838)
-* ignore jumps ([#2911](https://github.com/inkstitch/inkstitch/issues/2911)
-* ignore layer (([#2911](https://github.com/inkstitch/inkstitch/issues/2911))
+* ignorer les sauts ([#2911](https://github.com/inkstitch/inkstitch/issues/2911)
+* commande ignorer le calque (([#2911](https://github.com/inkstitch/inkstitch/issues/2911))
 
 ### [Résolution de problème](/fr/docs/troubleshoot/#troubleshoot)
 
@@ -332,15 +332,15 @@ Ajout d'options
 ## Types de points 
 ### Clones
 
-* Amélioration de la dédecton de l'angle pour les clones de remplissage ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
+* Amélioration de la détection de l'angle pour les clones de remplissage ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
 * Ajout de la possibilitéde rendu pour les groupes de clones ([#2766](https://github.com/inkstitch/inkstitch/issues/2766), ([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
-* Amélioration de la detection du style (([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
+* Amélioration de la détection du style (([#2834](https://github.com/inkstitch/inkstitch/issues/2834))
 
 ### Famille des Remplissages
 * Option d'ajout d'aléatoire à la longueur du point ([#2830](https://github.com/inkstitch/inkstitch/issues/2830))
 * Lissage des chemins de dessous([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
 * Prévention de la sortie de la forme pour le remplissage([#2346](https://github.com/inkstitch/inkstitch/issues/2346))
-* Proportional pull compensation ([#2891](https://github.com/inkstitch/inkstitch/issues/2891))
+* Compensation d'étirement proportionnelle ([#2891](https://github.com/inkstitch/inkstitch/issues/2891))
 * [Remplissage dégradé linéaire](/fr/docs/stitches/linear-gradient-fill/): un nouveau type de points pour les dégradés linéaires([#2587](https://github.com/inkstitch/inkstitch/issues/2587))
 
   [![Linear gradient fill](/assets/images/docs/linear-gradient.jpg)](/assets/images/docs/linear-gradient.svg)
@@ -379,7 +379,7 @@ Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu
 
 * Ajout d'un champs  "nom de fichier personnalisé " au sein du fichier zip ([#2426](https://github.com/inkstitch/inkstitch/issues/2426))
 * Ajout d'une option de panélisation ([#2349](https://github.com/inkstitch/inkstitch/issues/2349))
-* Add realistic PNG output option ([#3019](https://github.com/inkstitch/inkstitch/issues/3019))
+* Ajout  d'une  option de sortie en PNG  réaliste. ([#3019](https://github.com/inkstitch/inkstitch/issues/3019))
 
 ### Dialogue d'export d'Inkscape 
 
@@ -388,12 +388,12 @@ Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu
 ## Installation
 
 * Windows est maintenant disponible en version 32 et 64 bits([#2413](https://github.com/inkstitch/inkstitch/issues/2413))
-* macOS is now also available as an arm version, no need to install rosetta ([#3038](https://github.com/inkstitch/inkstitch/issues/3038))
+* macOS  est maintenant disponible aussi en version arm, sans necessité d'installer rosetta([#3038](https://github.com/inkstitch/inkstitch/issues/3038))
 
 ## Pour les développeurs
 
 * [#2715](https://github.com/inkstitch/inkstitch/issues/2715) support multiversion
-* [#2655](https://github.com/inkstitch/inkstitch/issues/2655)  Dans les préférences d'In Ink/Stitch , mettre la taille de cache à 0  désactive le cache.
+* [#2655](https://github.com/inkstitch/inkstitch/issues/2655)  Dans les préférences d'Ink/Stitch , mettre la taille de cache à 0  désactive le cache.
 * [#2653](https://github.com/inkstitch/inkstitch/issues/2653) Mise à jour des procédures de debug et de profiling
 
 ## Corrections de bug
@@ -404,15 +404,15 @@ Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu
 * [#3004](https://github.com/inkstitch/inkstitch/issues/3004)  Correction de l'aperçu du plan de broderie réaliste pour les versions 1.3 et 1.3.1 d'Inkscape
 * [#3002](https://github.com/inkstitch/inkstitch/issues/3002)  Grise le paramètre "Mouvement aléatoire de la longueur du point" lorsque "Rendre aléatoire la longueur du point" n'est pas coché. 
 * [#2998](https://github.com/inkstitch/inkstitch/issues/2998)  Corrige les petits points d'arrêts relatifs.
-* [#2993](https://github.com/inkstitch/inkstitch/issues/2993) PDF Preview webpage now pings in worker
-* [#2984](https://github.com/inkstitch/inkstitch/issues/2984)  Amélioration  du message d'error pour les fichiers avec trop de changement de couleurs.
-* [#2974](https://github.com/inkstitch/inkstitch/issues/2974) Suppresion des fragments de simulateur àau redimensionement
+* [#2993](https://github.com/inkstitch/inkstitch/issues/2993)  Meilleur communication entre inkscape et la page web de prévisualisation du PDF 
+* [#2984](https://github.com/inkstitch/inkstitch/issues/2984)  Amélioration  du message d'erreur pour les fichiers avec trop de changement de couleurs.
+* [#2974](https://github.com/inkstitch/inkstitch/issues/2974) Suppresion des fragments de simulateur au redimensionement
 * [#2969](https://github.com/inkstitch/inkstitch/issues/2969) Amélioration du thème sombre du simulateur
 * [#2924](https://github.com/inkstitch/inkstitch/issues/2924)  Correction  de l 'impression pdf  pour les groupes sans  calque
 * [#2918](https://github.com/inkstitch/inkstitch/issues/2918) Filtre les chemins invalides dans le satin
 * [#2917](https://github.com/inkstitch/inkstitch/issues/2917) Correction de ligne zigzag en satin
 * [#2897](https://github.com/inkstitch/inkstitch/issues/2897) Correction des chemins de découpe invalide
-* [#2899](https://github.com/inkstitch/inkstitch/issues/2899)  Correction du mauvais affichage des couleurs pour ceraines Machines Pfaff
+* [#2899](https://github.com/inkstitch/inkstitch/issues/2899)  Correction du mauvais affichage des couleurs pour certaines Machines Pfaff
 * [#2895](https://github.com/inkstitch/inkstitch/issues/2895) Correction du nombre de répétition du chemin dans la sous couche centrale
 * [#2896](https://github.com/inkstitch/inkstitch/issues/2896) Effet de chemin satin : augmentation de la valeur de fusion
 * [#2836](https://github.com/inkstitch/inkstitch/issues/2836) Corrige l'affichage des paramètres non affectés lorsque plusieurs éléments sont sélectionnés.
