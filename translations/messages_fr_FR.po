@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-07-03 05:23+0000\n"
-"PO-Revision-Date: 2024-07-04 01:12\n"
+"PO-Revision-Date: 2024-07-06 01:11\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1125,7 +1125,7 @@ msgstr "Ce remplissage est si petit qu'il serait sans doute mieux en point droit
 
 #: lib/elements/fill_stitch.py:44 lib/elements/fill_stitch.py:263
 msgid "Expand"
-msgstr "Compensation d'étirement - élargir"
+msgstr "Élargir"
 
 #: lib/elements/fill_stitch.py:45
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
