@@ -149,8 +149,9 @@ class Redwork(InkstitchExtension):
 
         if redwork:
             element.set('inkstitch:bean_stitch_repeats', self.options.redwork_bean_stitch_repeats)
+            element.style['stroke-dasharray'] = 'none'
         else:
-            element.style['stroke-dasharray'] = '0.5,0.5'
+            element.style['stroke-dasharray'] = '2 1.1'
 
         group.add(element)
 
