@@ -271,14 +271,18 @@ def create_element(path, position, direction, element):
     index = position + 1
     if direction == "autorun":
         label = _("AutoRun %d") % index
+        dasharray = 'none'
     else:
         label = _("AutoRun Underpath %d") % index
+        dasharray = '2 1.1'
 
     node = inkex.PathElement()
     node.set("id", generate_unique_id(element.node, el_id))
     node.set(INKSCAPE_LABEL, label)
     node.set("d", path)
     node.set("style", element.node.style)
+    node.style["fill"] = 'none'
+    node.style["stroke-dasharray"] = dasharray
 
     # Set Ink/Stitch attributes
     stitch_length = element.node.get(INKSTITCH_ATTRIBS['running_stitch_length_mm'], '')
@@ -299,7 +303,6 @@ def create_element(path, position, direction, element):
             node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], stitch_length)
         if tolerance:
             node.set(INKSTITCH_ATTRIBS['running_stitch_tolerance_mm'], tolerance)
-        node.set("style", element.node.style + inkex.Style("stroke-dasharray:0.5,0.5;fill:none;"))
     return Stroke(node)
 
 

@@ -14,9 +14,9 @@
                     <param indent="3" name="running-stitch-condition" type="optiongroup" appearance="combo" gui-text="Type"
                            gui-description="Select only specific running stitches">
                         <option value="all">No restriction</option>
-                        <option value="autorun-top">Auto-Run Top Stitching</option>
-                        <option value="autorun-underpath">Auto-Run Underpath</option>
-                        <option value="autosatin-underpath">Auto-Satin Underpath</option>
+                        <option value="autorun-top">Top Stitching (Redwork/Auto-Run)</option>
+                        <option value="autorun-underpath">Underpath (Redwork/Auto-Run)</option>
+                        <option value="autosatin-underpath">Underpath (Auto-Satin)</option>
                     </param>
                     <param indent="3" name="bean-stitch-repeats" type="string" gui-text="Bean stitch repeats">0</param>
                     <param indent="1" name="select-ripples" type="boolean" gui-text="Ripples">false</param>
