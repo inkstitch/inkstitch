@@ -140,7 +140,11 @@ def adjust_shape_for_pull_compensation(shape, angle, row_spacing, pull_compensat
     buffered_lines = [line.buffer(buffer_amount) for line in lines]
 
     polygon = unary_union(buffered_lines)
-    return make_valid(polygon)
+    exterior = smooth_path(polygon.exterior.coords, 0.2)
+    min_hole_area = row_spacing ** 2
+    interiors = [smooth_path(interior.coords) for interior in polygon.interiors if shgeo.Polygon(interior).area > min_hole_area]
+
+    return make_valid(shgeo.Polygon(exterior, interiors))
 
 
 def apply_pull_compensation(segments, pull_compensation_px, pull_compensation_percent):
