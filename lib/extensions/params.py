@@ -545,8 +545,11 @@ class SettingsPanel(wx.Panel):
     def render_stitch_plan(self):
         stitch_groups = []
         nodes = []
-
-        for tab in self.tabs:
+        # move the stroke tab to the end of the list
+        tabs = self.tabs
+        stroke_index = [tabs.index(tab) for tab in tabs if tab.name == _("Stroke")][0]
+        tabs.append(tabs.pop(stroke_index))
+        for tab in tabs:
             tab.apply()
             if tab.enabled() and not tab.is_dependent_tab():
                 nodes.extend(tab.nodes)
@@ -558,12 +561,15 @@ class SettingsPanel(wx.Panel):
 
         try:
             wx.CallAfter(self._hide_warning)
+            last_stitch_group = None
             for node in nodes:
                 # Making a copy of the embroidery element is an easy
                 # way to drop the cache in the @cache decorators used
                 # for many params in embroider.py.
 
-                stitch_groups.extend(copy(node).embroider(None))
+                stitch_groups.extend(copy(node).embroider(last_stitch_group))
+                if stitch_groups:
+                    last_stitch_group = stitch_groups[-1]
 
                 check_stop_flag()
 
