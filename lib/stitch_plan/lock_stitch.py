@@ -81,12 +81,30 @@ class RelativeLock(LockStitchDefinition):
             stitches = list(reversed(stitches))
 
         path = string_to_floats(self._path, " ")
+        # ommit first path point from end lock stitches
+        # to avoid duplicated stitches in the end result
+        if len(path) > 1 and pos == "end":
+            path = path[1:]
 
-        to_previous = stitches[1] - stitches[0]
+        # Travel back one stitch, stopping halfway there.
+        # Then go forward one stitch, stopping halfway between
+        # again.
+        direction, length = self.get_direction_and_length(stitches)
+        lock_stitches = []
+        for delta in path:
+            lock_stitches.append(Stitch(stitches[0] + delta * length * direction, tags=('lock_stitch',)))
+
+        return lock_stitches
+
+    def get_direction_and_length(self, stitches, i=1):
+        if len(stitches) < i+1:
+            return Stitch(1, 0), 0.5
+
+        to_previous = stitches[i] - stitches[0]
         length = to_previous.length()
 
-        if length == 0:
-            direction = Stitch(0, 0.5)
+        if length <= 0.5 * PIXELS_PER_MM:
+            return self.get_direction_and_length(stitches, i+1)
         else:
             direction = to_previous.unit()
 
@@ -94,15 +112,7 @@ class RelativeLock(LockStitchDefinition):
         length = max(length, 0.5 * PIXELS_PER_MM)
         length = min(length, 1.5 * PIXELS_PER_MM)
 
-        # Travel back one stitch, stopping halfway there.
-        # Then go forward one stitch, stopping halfway between
-        # again.
-
-        lock_stitches = []
-        for delta in path:
-            lock_stitches.append(Stitch(stitches[0] + delta * length * direction, tags=('lock_stitch',)))
-
-        return lock_stitches
+        return direction, length
 
 
 class AbsoluteLock(LockStitchDefinition):
