@@ -49,7 +49,7 @@ def get_threadlist(stitch_plan, design_name):
     thread_output += f": {design_name}\n"
 
     thread_output += _("Size")
-    thread_output += f" (mm): {width}, {height}"
+    thread_output += f" (mm): {width}, {height}\n"
 
     thread_output += _("Stitches")
     thread_output += f": {stitch_plan.num_stitches}\n"
