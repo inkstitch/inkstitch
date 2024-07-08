@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-03 05:23+0000\n"
-"PO-Revision-Date: 2024-07-06 01:11\n"
+"POT-Creation-Date: 2024-07-08 01:14+0000\n"
+"PO-Revision-Date: 2024-07-08 01:15\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-03 05:23+0000\n"
+"POT-Creation-Date: 2024-07-08 01:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2760,23 +2760,23 @@ msgstr "Un  aperçu de l'impression a été ouvert dans votre navigateur. Cette 
 msgid "Ink/Stitch Print"
 msgstr "Impression Ink/Stitch"
 
-#: lib/extensions/redwork.py:48
+#: lib/extensions/redwork.py:44
 msgid "Please select one or more strokes."
 msgstr "Merci de sélectionner un ou plusieurs traits."
 
-#: lib/extensions/redwork.py:103
+#: lib/extensions/redwork.py:98
 msgid "Redwork Group"
 msgstr "Groupe de redwork"
 
-#: lib/extensions/redwork.py:112
+#: lib/extensions/redwork.py:107
 msgid "Connected Group"
 msgstr "Groupe connecté"
 
-#: lib/extensions/redwork.py:121 inx/inkstitch_redwork.inx:3
+#: lib/extensions/redwork.py:116 inx/inkstitch_redwork.inx:3
 msgid "Redwork"
 msgstr "Redwork"
 
-#: lib/extensions/redwork.py:126
+#: lib/extensions/redwork.py:121
 msgid "Redwork Underpath"
 msgstr "Chemin de dessous redwork"
 
@@ -3837,7 +3837,7 @@ msgstr "Agencement automatique"
 msgid "AutoRun %d"
 msgstr "Agencement automatique %d"
 
-#: lib/stitches/auto_run.py:275
+#: lib/stitches/auto_run.py:276
 #, python-format
 msgid "AutoRun Underpath %d"
 msgstr "Chemin de dessous %d"
@@ -6525,16 +6525,16 @@ msgid "No restriction"
 msgstr "Sans restriction"
 
 #: inx/inkstitch_select_elements.inx:17
-msgid "Auto-Run Top Stitching"
-msgstr "Points de dessus de l'agencement automatique"
+msgid "Top Stitching (Redwork/Auto-Run)"
+msgstr ""
 
 #: inx/inkstitch_select_elements.inx:18
-msgid "Auto-Run Underpath"
-msgstr "Points de dessous de l'agencement automatique"
+msgid "Underpath (Redwork/Auto-Run)"
+msgstr ""
 
 #: inx/inkstitch_select_elements.inx:19
-msgid "Auto-Satin Underpath"
-msgstr "Chemin de dessous de l'arrangement automatique de satin"
+msgid "Underpath (Auto-Satin)"
+msgstr ""
 
 #: inx/inkstitch_select_elements.inx:22
 msgid "Ripples"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-03 05:23+0000\n"
-"PO-Revision-Date: 2024-07-03 05:23\n"
+"POT-Creation-Date: 2024-07-08 01:14+0000\n"
+"PO-Revision-Date: 2024-07-08 01:15\n"
 "Last-Translator: \n"
 "Language-Team: Romanian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-03 05:23+0000\n"
+"POT-Creation-Date: 2024-07-08 01:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2749,23 +2749,23 @@ msgstr ""
 msgid "Ink/Stitch Print"
 msgstr ""
 
-#: lib/extensions/redwork.py:48
+#: lib/extensions/redwork.py:44
 msgid "Please select one or more strokes."
 msgstr ""
 
-#: lib/extensions/redwork.py:103
+#: lib/extensions/redwork.py:98
 msgid "Redwork Group"
 msgstr ""
 
-#: lib/extensions/redwork.py:112
+#: lib/extensions/redwork.py:107
 msgid "Connected Group"
 msgstr ""
 
-#: lib/extensions/redwork.py:121 inx/inkstitch_redwork.inx:3
+#: lib/extensions/redwork.py:116 inx/inkstitch_redwork.inx:3
 msgid "Redwork"
 msgstr ""
 
-#: lib/extensions/redwork.py:126
+#: lib/extensions/redwork.py:121
 msgid "Redwork Underpath"
 msgstr ""
 
@@ -3821,7 +3821,7 @@ msgstr ""
 msgid "AutoRun %d"
 msgstr ""
 
-#: lib/stitches/auto_run.py:275
+#: lib/stitches/auto_run.py:276
 #, python-format
 msgid "AutoRun Underpath %d"
 msgstr ""
@@ -6507,15 +6507,15 @@ msgid "No restriction"
 msgstr ""
 
 #: inx/inkstitch_select_elements.inx:17
-msgid "Auto-Run Top Stitching"
+msgid "Top Stitching (Redwork/Auto-Run)"
 msgstr ""
 
 #: inx/inkstitch_select_elements.inx:18
-msgid "Auto-Run Underpath"
+msgid "Underpath (Redwork/Auto-Run)"
 msgstr ""
 
 #: inx/inkstitch_select_elements.inx:19
-msgid "Auto-Satin Underpath"
+msgid "Underpath (Auto-Satin)"
 msgstr ""
 
 #: inx/inkstitch_select_elements.inx:22
