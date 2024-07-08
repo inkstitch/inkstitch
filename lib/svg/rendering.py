@@ -234,8 +234,8 @@ def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True, 
 
     for i, color_block in enumerate(stitch_plan):
         group = inkex.Group(attrib={
-            'id': '__color_block_%d__' % i,
-            INKSCAPE_LABEL: "color block %d" % (i + 1)
+            'id': f'__color_block_{i}__',
+            INKSCAPE_LABEL: f"color block {(i + 1)}"
         })
         layer.append(group)
         if realistic:
