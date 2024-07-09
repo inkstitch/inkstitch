@@ -55,6 +55,7 @@ def adjust_stagger(stitch, angle, row_spacing, max_stitch_length, staggers):
 def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, staggers, skip_last,
                enable_random_stitch_length, random_sigma, random_seed):
     if end == beg:
+        stitches.append(Stitch(*beg, tags=('fill_row_start',)))
         return
 
     beg = Stitch(*beg, tags=('fill_row_start',))
