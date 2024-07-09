@@ -144,7 +144,15 @@ def adjust_shape_for_pull_compensation(shape, angle, row_spacing, pull_compensat
     min_hole_area = row_spacing ** 2
     interiors = [smooth_path(interior.coords) for interior in polygon.interiors if shgeo.Polygon(interior).area > min_hole_area]
 
-    return make_valid(shgeo.Polygon(exterior, interiors))
+    shape = make_valid(shgeo.Polygon(exterior, interiors))
+    if shape.geom_type == 'MultiPolygon':
+        # the shape is somehow messed up
+        # rescue it by just using the first geometry
+        shape = list(shape.geoms)
+        shape.sort(key=lambda polygon: polygon.area, reverse=True)
+        shape = shape[0]
+
+    return shape
 
 
 def apply_pull_compensation(segments, pull_compensation_px, pull_compensation_percent):
