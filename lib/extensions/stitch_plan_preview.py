@@ -139,7 +139,7 @@ class StitchPlanPreview(InkstitchExtension):
                 out = findall(r"(?m)^-?\d+\.?\d*$", out)
 
                 # Parse the returned coordinates out into viewport units
-                x, y, width, height = map(lambda x: svg.viewport_to_unit(f'{x}px', svg.unit), out)
+                x, y, width, height = map(lambda x: svg.viewport_to_unit(f'{x}px'), out)
 
                 # Embed the rasterized stitch plan into the SVG, and replace the original stitch plan
                 with open(temp_png_path, "rb") as f:
