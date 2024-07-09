@@ -138,11 +138,8 @@ class StitchPlanPreview(InkstitchExtension):
                 # Extract numbers from returned string. It can include other information such as warnings about the usage of AppImages
                 out = findall(r"(?m)^-?\d+\.?\d*$", out)
 
-                # The query commands return positions in px, so we need to convert to uu.
-                px_to_uu = svg.unittouu("1px")
-
-                # Parse the returned coordinates out.
-                x, y, width, height = map(lambda x: px_to_uu*float(x), out)
+                # Parse the returned coordinates out into viewport units
+                x, y, width, height = map(lambda x: svg.viewport_to_unit(f'{x}px', svg.unit), out)
 
                 # Embed the rasterized stitch plan into the SVG, and replace the original stitch plan
                 with open(temp_png_path, "rb") as f:
