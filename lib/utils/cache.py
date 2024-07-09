@@ -2,10 +2,11 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-import os
 import atexit
 import hashlib
+import os
 import pickle
+import sqlite3
 
 import appdirs
 import diskcache
@@ -32,10 +33,22 @@ def get_stitch_plan_cache():
     if __stitch_plan_cache is None:
         cache_dir = os.path.join(appdirs.user_config_dir('inkstitch'), 'cache', 'stitch_plan')
         size_limit = global_settings['cache_size'] * 1024 * 1024
-        __stitch_plan_cache = diskcache.Cache(cache_dir, size=size_limit)
+        try:
+            __stitch_plan_cache = diskcache.Cache(cache_dir, size=size_limit)
+        except sqlite3.DatabaseError:
+            # reset cache database file if it couldn't parse correctly
+            cache_file = os.path.join(appdirs.user_config_dir('inkstitch'), 'cache', 'stitch_plan', 'cache.db')
+            if os.path.exists(cache_file):
+                os.remove(cache_file)
+                __stitch_plan_cache = diskcache.Cache(cache_dir, size=size_limit)
         __stitch_plan_cache.size_limit = size_limit
-        atexit.register(__stitch_plan_cache.close)
 
+        # reset cache if warnings appear within the files
+        warnings = __stitch_plan_cache.check()
+        if warnings:
+            __stitch_plan_cache.clear()
+
+        atexit.register(__stitch_plan_cache.close)
     return __stitch_plan_cache
 
 
