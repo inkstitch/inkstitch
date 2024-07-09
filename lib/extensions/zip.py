@@ -45,11 +45,11 @@ class Zip(InkstitchExtension):
         self.arg_parser.add_argument('--format-threadlist', type=Boolean, default=False, dest='threadlist')
         self.formats.append('threadlist')
         self.arg_parser.add_argument('--format-png-realistic', type=Boolean, default=False, dest='png_realistic')
-        self.arg_parser.add_argument('--dpi-realistic', type=int, default='', dest='dpi_realistic')
+        self.arg_parser.add_argument('--dpi-realistic', type=int, default=300, dest='dpi_realistic')
         self.formats.append('png_realistic')
         self.arg_parser.add_argument('--format-png-simple', type=Boolean, default=False, dest='png_simple')
         self.arg_parser.add_argument('--png-simple-line-width', type=float, default=0.3, dest='line_width')
-        self.arg_parser.add_argument('--dpi-simple', type=int, default='', dest='dpi_simple')
+        self.arg_parser.add_argument('--dpi-simple', type=int, default=300, dest='dpi_simple')
         self.formats.append('png_simple')
 
         self.arg_parser.add_argument('--x-repeats', type=int, default=1, dest='x_repeats', )
