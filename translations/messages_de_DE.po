@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-08 01:14+0000\n"
-"PO-Revision-Date: 2024-07-08 01:15\n"
+"POT-Creation-Date: 2024-07-10 01:14+0000\n"
+"PO-Revision-Date: 2024-07-10 01:14\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-08 01:14+0000\n"
+"POT-Creation-Date: 2024-07-10 01:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1835,7 +1835,7 @@ msgstr "\"E\"-Stich"
 msgid "\"S\" Stitch"
 msgstr "\"S\"-Stich"
 
-#: lib/elements/satin_column.py:113 lib/stitch_plan/lock_stitch.py:209
+#: lib/elements/satin_column.py:113 lib/stitch_plan/lock_stitch.py:219
 msgid "Zig-zag"
 msgstr "Zick-Zack"
 
@@ -1872,7 +1872,7 @@ msgstr "Maximale randomisierte Abweichung der Stichabstände in Prozent."
 msgid "Default"
 msgstr "Standard"
 
-#: lib/elements/satin_column.py:155 lib/stitch_plan/lock_stitch.py:207
+#: lib/elements/satin_column.py:155 lib/stitch_plan/lock_stitch.py:217
 #: inx/inkstitch_break_apart.inx:10 inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Simple"
 msgstr "Einfach"
@@ -2101,7 +2101,8 @@ msgstr "* In einen Geradstich umwandeln: wähle das Element aus und öffne Erwei
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr "* Als Satinsäule benutzen: füge eine weitere Außenkonturlinie hinzu und ggf. Richtungsvektoren."
 
-#: lib/elements/stroke.py:44 inx/inkstitch_select_elements.inx:12
+#: lib/elements/stroke.py:44 lib/extensions/params.py:550
+#: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "Linie"
 
@@ -2456,7 +2457,7 @@ msgstr "Grün"
 msgid "%s density"
 msgstr "%s Dichte"
 
-#: lib/extensions/display_stacking_order.py:59
+#: lib/extensions/display_stacking_order.py:56
 msgid "Stacking Order"
 msgstr "Stickreihenfolge"
 
@@ -2737,7 +2738,7 @@ msgstr "Letzte Einstellungen verwenden"
 msgid "Apply and Quit"
 msgstr "Anwenden und schließen"
 
-#: lib/extensions/params.py:814
+#: lib/extensions/params.py:820
 msgid "Embroidery Params"
 msgstr "Stickparameter"
 
@@ -3792,35 +3793,35 @@ msgstr "https://inkstitch.org/de/docs/faq/#zu-viele-farbwechsel"
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr "Die Datei kann nicht geöffnet werden. Bitte überprüfe den Dateipfad und versuche es erneut.\\r%s"
 
-#: lib/stitch_plan/lock_stitch.py:34 lib/stitch_plan/lock_stitch.py:210
+#: lib/stitch_plan/lock_stitch.py:34 lib/stitch_plan/lock_stitch.py:220
 msgid "Custom"
 msgstr "Benutzerdefiniert"
 
-#: lib/stitch_plan/lock_stitch.py:201
+#: lib/stitch_plan/lock_stitch.py:211
 msgid "Half Stitch"
 msgstr "Halbstich"
 
-#: lib/stitch_plan/lock_stitch.py:202
+#: lib/stitch_plan/lock_stitch.py:212
 msgid "Arrow"
 msgstr "Pfeil"
 
-#: lib/stitch_plan/lock_stitch.py:203
+#: lib/stitch_plan/lock_stitch.py:213
 msgid "Back and forth"
 msgstr "Vor und zurück"
 
-#: lib/stitch_plan/lock_stitch.py:204
+#: lib/stitch_plan/lock_stitch.py:214
 msgid "Bowtie"
 msgstr "Schleife"
 
-#: lib/stitch_plan/lock_stitch.py:205
+#: lib/stitch_plan/lock_stitch.py:215
 msgid "Cross"
 msgstr "Kreuz"
 
-#: lib/stitch_plan/lock_stitch.py:206
+#: lib/stitch_plan/lock_stitch.py:216
 msgid "Star"
 msgstr "Stern"
 
-#: lib/stitch_plan/lock_stitch.py:208
+#: lib/stitch_plan/lock_stitch.py:218
 msgid "Triangle"
 msgstr "Dreieck"
 

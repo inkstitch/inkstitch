@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-08 01:14+0000\n"
-"PO-Revision-Date: 2024-07-08 01:15\n"
+"POT-Creation-Date: 2024-07-10 01:14+0000\n"
+"PO-Revision-Date: 2024-07-10 01:14\n"
 "Last-Translator: \n"
 "Language-Team: Arabic\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-08 01:14+0000\n"
+"POT-Creation-Date: 2024-07-10 01:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1834,7 +1834,7 @@ msgstr ""
 msgid "\"S\" Stitch"
 msgstr ""
 
-#: lib/elements/satin_column.py:113 lib/stitch_plan/lock_stitch.py:209
+#: lib/elements/satin_column.py:113 lib/stitch_plan/lock_stitch.py:219
 msgid "Zig-zag"
 msgstr ""
 
@@ -1871,7 +1871,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: lib/elements/satin_column.py:155 lib/stitch_plan/lock_stitch.py:207
+#: lib/elements/satin_column.py:155 lib/stitch_plan/lock_stitch.py:217
 #: inx/inkstitch_break_apart.inx:10 inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Simple"
 msgstr ""
@@ -2100,7 +2100,8 @@ msgstr ""
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr ""
 
-#: lib/elements/stroke.py:44 inx/inkstitch_select_elements.inx:12
+#: lib/elements/stroke.py:44 lib/extensions/params.py:550
+#: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr ""
 
@@ -2451,7 +2452,7 @@ msgstr ""
 msgid "%s density"
 msgstr ""
 
-#: lib/extensions/display_stacking_order.py:59
+#: lib/extensions/display_stacking_order.py:56
 msgid "Stacking Order"
 msgstr ""
 
@@ -2728,7 +2729,7 @@ msgstr ""
 msgid "Apply and Quit"
 msgstr ""
 
-#: lib/extensions/params.py:814
+#: lib/extensions/params.py:820
 msgid "Embroidery Params"
 msgstr ""
 
@@ -3776,35 +3777,35 @@ msgstr ""
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:34 lib/stitch_plan/lock_stitch.py:210
+#: lib/stitch_plan/lock_stitch.py:34 lib/stitch_plan/lock_stitch.py:220
 msgid "Custom"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:201
+#: lib/stitch_plan/lock_stitch.py:211
 msgid "Half Stitch"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:202
+#: lib/stitch_plan/lock_stitch.py:212
 msgid "Arrow"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:203
+#: lib/stitch_plan/lock_stitch.py:213
 msgid "Back and forth"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:204
+#: lib/stitch_plan/lock_stitch.py:214
 msgid "Bowtie"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:205
+#: lib/stitch_plan/lock_stitch.py:215
 msgid "Cross"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:206
+#: lib/stitch_plan/lock_stitch.py:216
 msgid "Star"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:208
+#: lib/stitch_plan/lock_stitch.py:218
 msgid "Triangle"
 msgstr ""
 

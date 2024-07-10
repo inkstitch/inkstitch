@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-08 01:14+0000\n"
-"PO-Revision-Date: 2024-07-08 01:15\n"
+"POT-Creation-Date: 2024-07-10 01:14+0000\n"
+"PO-Revision-Date: 2024-07-10 01:14\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-08 01:14+0000\n"
+"POT-Creation-Date: 2024-07-10 01:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1837,7 +1837,7 @@ msgstr "Point en E"
 msgid "\"S\" Stitch"
 msgstr "Point en S"
 
-#: lib/elements/satin_column.py:113 lib/stitch_plan/lock_stitch.py:209
+#: lib/elements/satin_column.py:113 lib/stitch_plan/lock_stitch.py:219
 msgid "Zig-zag"
 msgstr "Zigzag"
 
@@ -1874,7 +1874,7 @@ msgstr "Quantité d'aléatoire ajoutée à l'espacement zigzag."
 msgid "Default"
 msgstr "Par défaut"
 
-#: lib/elements/satin_column.py:155 lib/stitch_plan/lock_stitch.py:207
+#: lib/elements/satin_column.py:155 lib/stitch_plan/lock_stitch.py:217
 #: inx/inkstitch_break_apart.inx:10 inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Simple"
 msgstr "Simple"
@@ -2103,7 +2103,8 @@ msgstr "* Convertir en trait : sélectionnez l'élément et ouvrez la boîte de 
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr "* Utilisation en colonne satin : ajouter un autre rail et éventuellement des traverses."
 
-#: lib/elements/stroke.py:44 inx/inkstitch_select_elements.inx:12
+#: lib/elements/stroke.py:44 lib/extensions/params.py:550
+#: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "Trait"
 
@@ -2458,7 +2459,7 @@ msgstr "Vert"
 msgid "%s density"
 msgstr "%s densité"
 
-#: lib/extensions/display_stacking_order.py:59
+#: lib/extensions/display_stacking_order.py:56
 msgid "Stacking Order"
 msgstr "Ordre de broderie"
 
@@ -2738,7 +2739,7 @@ msgstr "Utiliser les derniers paramètres"
 msgid "Apply and Quit"
 msgstr "Appliquer et Quitter"
 
-#: lib/extensions/params.py:814
+#: lib/extensions/params.py:820
 msgid "Embroidery Params"
 msgstr "Paramètres de broderie"
 
@@ -3792,35 +3793,35 @@ msgstr "http://inkstitch.org/fr/docs/faq/#too-many-color-changes"
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr "Le fichier n'existe pas et ne peut être ouvert. Veuillez corriger le chemin du fichier et réessayer.\\r%s"
 
-#: lib/stitch_plan/lock_stitch.py:34 lib/stitch_plan/lock_stitch.py:210
+#: lib/stitch_plan/lock_stitch.py:34 lib/stitch_plan/lock_stitch.py:220
 msgid "Custom"
 msgstr "Personnalisé"
 
-#: lib/stitch_plan/lock_stitch.py:201
+#: lib/stitch_plan/lock_stitch.py:211
 msgid "Half Stitch"
 msgstr "Demi point"
 
-#: lib/stitch_plan/lock_stitch.py:202
+#: lib/stitch_plan/lock_stitch.py:212
 msgid "Arrow"
 msgstr "Flèche"
 
-#: lib/stitch_plan/lock_stitch.py:203
+#: lib/stitch_plan/lock_stitch.py:213
 msgid "Back and forth"
 msgstr "Avant/Arrièrre"
 
-#: lib/stitch_plan/lock_stitch.py:204
+#: lib/stitch_plan/lock_stitch.py:214
 msgid "Bowtie"
 msgstr "Noeud papillon"
 
-#: lib/stitch_plan/lock_stitch.py:205
+#: lib/stitch_plan/lock_stitch.py:215
 msgid "Cross"
 msgstr "Croix"
 
-#: lib/stitch_plan/lock_stitch.py:206
+#: lib/stitch_plan/lock_stitch.py:216
 msgid "Star"
 msgstr "Étoile"
 
-#: lib/stitch_plan/lock_stitch.py:208
+#: lib/stitch_plan/lock_stitch.py:218
 msgid "Triangle"
 msgstr "Triangle"
 
@@ -6526,15 +6527,15 @@ msgstr "Sans restriction"
 
 #: inx/inkstitch_select_elements.inx:17
 msgid "Top Stitching (Redwork/Auto-Run)"
-msgstr ""
+msgstr "Chemin de dessus (Redwork / Agencement Automatique)"
 
 #: inx/inkstitch_select_elements.inx:18
 msgid "Underpath (Redwork/Auto-Run)"
-msgstr ""
+msgstr "Chemin de dessous (Redwork / Agencement Automatique de points droits)"
 
 #: inx/inkstitch_select_elements.inx:19
 msgid "Underpath (Auto-Satin)"
-msgstr ""
+msgstr "Chemin de dessous ( Agencement Automatique de Satins)"
 
 #: inx/inkstitch_select_elements.inx:22
 msgid "Ripples"
