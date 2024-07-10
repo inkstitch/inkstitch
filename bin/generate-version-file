@@ -2,9 +2,9 @@
 
 VERSION="${GITHUB_REF##*/}"
 OS="${BUILD:-$(uname)}"
-
+DATE=$(date +"%d-%m-%Y")
 if [[ "$VERSION" == "" ]]; then
   VERSION="Manual Install"
 fi
 
-echo "${VERSION} (${OS})" > VERSION
+echo "${VERSION} (${OS}) ${DATE}" > VERSION
