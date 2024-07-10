@@ -91,7 +91,19 @@ class Font(object):
             with open(os.path.join(self.path, "font.json"), encoding="utf-8-sig") as metadata_file:
                 self.metadata = json.load(metadata_file)
         except IOError:
-            pass
+            path = os.path.join(self.path, "font.json")
+            msg = _("JSON file missing. Expected a JSON file at the following location:")
+            msg += f"\n{path}\n\n"
+            msg += _("Generate the JSON file through:\nExtensions > Ink/Stitch > Font Management > Generate JSON...")
+            msg += '\n\n'
+            inkex.errormsg(msg)
+        except json.decoder.JSONDecodeError as exception:
+            path = os.path.join(self.path, "font.json")
+            msg = _("Corrupt JSON file")
+            msg += f" ({exception}):\n{path}\n\n"
+            msg += _("Regenerate the JSON file through:\nExtensions > Ink/Stitch > Font Management > Generate JSON...")
+            msg += '\n\n'
+            inkex.errormsg(msg)
 
     def _load_license(self):
         try:

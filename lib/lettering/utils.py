@@ -23,6 +23,8 @@ def get_font_list():
             continue
 
         for font_dir in font_dirs:
+            if not os.path.isdir(os.path.join(font_path, font_dir)) or font_dir.startswith('.'):
+                continue
             font = Font(os.path.join(font_path, font_dir))
             if font.marked_custom_font_name == "" or font.marked_custom_font_id == "":
                 continue
