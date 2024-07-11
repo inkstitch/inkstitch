@@ -546,9 +546,7 @@ class SettingsPanel(wx.Panel):
         stitch_groups = []
         nodes = []
         # move the stroke tab to the end of the list
-        tabs = self.tabs
-        stroke_index = [tabs.index(tab) for tab in tabs if tab.name == _("Stroke")][0]
-        tabs.append(tabs.pop(stroke_index))
+        tabs = self.get_stroke_last_tabs()
         for tab in tabs:
             tab.apply()
             if tab.enabled() and not tab.is_dependent_tab():
@@ -585,6 +583,13 @@ class SettingsPanel(wx.Panel):
             wx.CallAfter(self._show_warning, str(exc))
         except Exception:
             wx.CallAfter(self._show_warning, format_uncaught_exception())
+
+    def get_stroke_last_tabs(self):
+        tabs = self.tabs
+        stroke_index = [tabs.index(tab) for tab in tabs if tab.name == _("Stroke")]
+        if stroke_index:
+            tabs.append(tabs.pop(stroke_index[0]))
+        return tabs
 
     def on_stitch_plan_rendered(self, stitch_plan):
         self.simulator.stop()
