@@ -11,7 +11,7 @@ from typing import Iterator
 
 import networkx
 from shapely import geometry as shgeo
-from shapely import make_valid, segmentize
+from shapely import make_valid, segmentize, set_precision
 from shapely.ops import snap, unary_union
 from shapely.strtree import STRtree
 
@@ -484,7 +484,7 @@ def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
 
     # This makes the distance calculations below a bit faster.  We're
     # not looking for high precision anyway.
-    outline = shape.boundary.simplify(0.5 * PIXELS_PER_MM, preserve_topology=False)
+    outline = set_precision(shape.boundary.simplify(0.5 * PIXELS_PER_MM, preserve_topology=False), 0.000001)
 
     for ls in travel_edges:
         # In most cases, ls will be a simple line segment.  If we're
