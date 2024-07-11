@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-10 01:14+0000\n"
-"PO-Revision-Date: 2024-07-10 01:14\n"
+"POT-Creation-Date: 2024-07-11 01:14+0000\n"
+"PO-Revision-Date: 2024-07-11 01:15\n"
 "Last-Translator: \n"
 "Language-Team: Romanian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-10 01:14+0000\n"
+"POT-Creation-Date: 2024-07-11 01:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3744,7 +3744,25 @@ msgstr ""
 msgid "Tiny"
 msgstr ""
 
-#: lib/lettering/font.py:169
+#: lib/lettering/font.py:95
+msgid "JSON file missing. Expected a JSON file at the following location:"
+msgstr ""
+
+#: lib/lettering/font.py:97
+msgid "Generate the JSON file through:\n"
+"Extensions > Ink/Stitch > Font Management > Generate JSON..."
+msgstr ""
+
+#: lib/lettering/font.py:102
+msgid "Corrupt JSON file"
+msgstr ""
+
+#: lib/lettering/font.py:104
+msgid "Regenerate the JSON file through:\n"
+"Extensions > Ink/Stitch > Font Management > Generate JSON..."
+msgstr ""
+
+#: lib/lettering/font.py:181
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr ""

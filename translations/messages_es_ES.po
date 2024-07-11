@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-10 01:14+0000\n"
-"PO-Revision-Date: 2024-07-10 01:14\n"
+"POT-Creation-Date: 2024-07-11 01:14+0000\n"
+"PO-Revision-Date: 2024-07-11 01:15\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-10 01:14+0000\n"
+"POT-Creation-Date: 2024-07-11 01:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,22 +35,22 @@ msgstr "Brock Script es una fuente manuscrita de columna satinada decorativa de 
 #. description of font in fonts/Shojumaru
 #: inkstitch-fonts-metadata.py:4
 msgid "Shojumaru is a manga like font with upper case letters 23 mm high and lower case letters 19mm high. It can be reduced down to 40% and enlarged up to 200%. "
-msgstr ""
+msgstr "Shojumaru es una fuente estilo manga con letras mayúsculas de 23 mm de alto y letras minúsculas de 19 mm de alto. Puede ser reducida al 40% y aumentada al 200%. "
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
 msgid "Abécédaire AGS is a crossstitch font of size 14mm. The font can be scaled down to 75% and up to 200%"
-msgstr ""
+msgstr "Abécédaire AGS es una fuente de cross stitch de 14 mm de tamaño. La fuente se puede reducir al 75% y agrandar al 200%"
 
 #. description of font in fonts/abril
 #: inkstitch-fonts-metadata.py:8
 msgid "Abril En Fleur AGS is a monogram font. M is 103.5mm high. It can be increased up to 150 % and decreased down to 80 %"
-msgstr ""
+msgstr "Abril En Fleur AGS es una fuente para monogramas. M tiene 103.5 mm de alto. Puede ser agrandada hasta 150% y disminuida hasta 80%"
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:10
 msgid "This font contains all the letters of  the latin and  greek alphabets  and cover most european languages. Μ is 22mm hight and 20mm wide. It may be scaled down to 80% and scaled up to 150%"
-msgstr ""
+msgstr "Esta fuente contiene todas las letras tanto del alfabeto del latín como del griego, y cubre la mayoría de los lenguajes de Europa. M tiene 22 mm de alto y 20 mm de ancho. Puede ser reducida al 80% o aumentada al 150%"
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:12
@@ -61,7 +61,7 @@ msgstr "La \"M\" mayúscula mide 25,3 milímetros de ancho a escala 100%. Se pue
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:14
 msgid "This font is an altered version  of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory.  parameters of this font allow to scale down the original Amitaclo font between 20% (for a 6 mm font ) and 55 % (for a 16mm font)."
-msgstr ""
+msgstr "Esta fuente es una versión modificada de Amitaclo, para permitir mayor escala de reducción. El uso de tanto hilo fino (60) como aguja fina (60) es preciso. Parámetros de esta fuente permiten reducir la escala de Amitaclo original entre 20% (para una fuente de 6 mm) y 55% (para una fuente de 16 mm)."
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:16
@@ -71,22 +71,22 @@ msgstr "Apex Lake es una fuente grande de letras mayúsculas adornadas de un tam
 #. description of font in fonts/apex_simple_AGS
 #: inkstitch-fonts-metadata.py:18
 msgid "M width 41mm, height 33,6mm. The font can be scaled down to 75% and up to 130%"
-msgstr ""
+msgstr "El ancho de M es de 41 mm, el alto es de 33,6 mm. La fuente se puede reducir al 75% y ampliar al 130%"
 
 #. description of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:20
 msgid "Auberge Marif is a script satin font of size approximatively 35 mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 140%."
-msgstr ""
+msgstr "Auberge Marif es una fuente cursiva satinada de tamaño aproximado de 35 mm. Los glifos cubren la mayoría de los idiomas de Europa Occidental. La fuente puede reducirse hasta el 60% y aumentarse hasta el 140%."
 
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:22
 msgid "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Auberge Marif font between 20% (for a 7mm font ) and 55 % (for a 20 mm font). "
-msgstr ""
+msgstr "Esta fuente es una versión modificada de Auberge Marif, para permitir una mayor reducción de escala. El uso de tanto hilo fino (60) como aguja fina (60) es indispensable. Los parametros de bordado de esta fuente permiten reducir la escala de la fuente Auberge Marif original entre 20% (para una fuente de 7 mm) y un 55% (para una fuente de 20 mm). "
 
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:24
 msgid "Aventurina is a script satin font of size approximatively 20mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 150% "
-msgstr ""
+msgstr "Aventurina es una fuente cursiva satinada de tamaño aproximado de 20 mm. Los glifos cubren la mayoría de los idiomas de Europa Occidental. La fuente puede reducirse hasta el 60% y aumentarse hasta el 150% "
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:26
@@ -97,12 +97,12 @@ msgstr "La \"M\" mayúscula mide 22,3 milímetros de ancho a escala 100%. Se pue
 #. description of font in fonts/baumans_FI_Small
 #: inkstitch-fonts-metadata.py:28
 msgid "This font is an altered version  of Baumans FI, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Baumanns FI font between 15% (for a 7mm font ) and 30 % (for a 14 mm font). "
-msgstr ""
+msgstr "Esta fuente es una versión modificada de Baumans Fl, para permitir mayor reducción de la escala. El uso tanto de hilo fino (60) como aguja fina (60) es imprescindible. Los parámetros de bordado modificados de esta fuente permiten la reduccion de escala de Baumans Fl Original entre 15% (para una fuente de 7 mm) y 30% (para una fuente de 14 mm ). "
 
 #. description of font in fonts/cats
 #: inkstitch-fonts-metadata.py:30
 msgid "Cats is a silly font that makes use of satin random parameters. Font height is approximatively 40mm. It can be scaled down to 70% (28mm) and up to 150% (60mm)"
-msgstr ""
+msgstr "Cats es una fuente simpática que hace utiliza parámetros aleatorios satinados. La altura de la fuente es aproximadamente de 40 mm. Puede reducirse en escala al 70% (28 mm) y aumentarse hasta 150% (60 mm)"
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:32
@@ -118,18 +118,18 @@ msgstr "Cherry Kaalleen es una fuente grande y decorativa de unos 75 mm aproxima
 #: inkstitch-fonts-metadata.py:36
 #, python-format
 msgid "Chicken Little  is a  playful decorative display font with loads of personality. There is no common baseline, no common character size and no common slope of the letters. M is 38 mm high.  The font may be scaled up to 200% and down to 50%. Beyond 110% some satin columns will split."
-msgstr ""
+msgstr "Chicken Little es una fuente decorativa divertida con gran personalidad. No existe una línea de base, ni un tamaño o inclinación común entre las letras. M tiene 38 mm de alto. La fuente se puede ampliar hasta un 200% y reducir hasta un 50%. Pasado el 110% algunas columnas del satinado se dividirán."
 
 #. description of font in fonts/chicken_little_small
 #: inkstitch-fonts-metadata.py:38
 msgid "This font is an altered version  of Chicken Little KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory.  Parameters of this font allow to scale down the original Chicken Little KOR font between 25% (for a 10 mm font ) and 45 % (for a 19mm font)."
-msgstr ""
+msgstr "Esta fuente es una versión modificada de Chicken Little KOR, para permitir mayor escala de reducción. El uso de tanto hilo fino (60) como aguja fina (60) es preciso. Parámetros de esta fuente permiten reducir la escala deChicken Little KOR original entre 25% (para una fuente de 10 mm) y 45% (para una fuente de 19 mm)."
 
 #. description of font in fonts/chicken_scratch
 #: inkstitch-fonts-metadata.py:40
 #, python-format
 msgid "A handwritten font. Can be scaled up to 120% or down to 80%. Caps height is around 19mm or .75 inches."
-msgstr ""
+msgstr "Una fuente escrita a mano. Puede ser aumentada hasta 120% o reducida hasta el 80%. La altura de mayúsculas es alrededor de 19 mm o .75 inches."
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:42
@@ -3745,7 +3745,25 @@ msgstr ""
 msgid "Tiny"
 msgstr ""
 
-#: lib/lettering/font.py:169
+#: lib/lettering/font.py:95
+msgid "JSON file missing. Expected a JSON file at the following location:"
+msgstr ""
+
+#: lib/lettering/font.py:97
+msgid "Generate the JSON file through:\n"
+"Extensions > Ink/Stitch > Font Management > Generate JSON..."
+msgstr ""
+
+#: lib/lettering/font.py:102
+msgid "Corrupt JSON file"
+msgstr ""
+
+#: lib/lettering/font.py:104
+msgid "Regenerate the JSON file through:\n"
+"Extensions > Ink/Stitch > Font Management > Generate JSON..."
+msgstr ""
+
+#: lib/lettering/font.py:181
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "La fuente '%s' no tiene variantes."
