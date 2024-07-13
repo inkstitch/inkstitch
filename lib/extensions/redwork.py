@@ -69,8 +69,13 @@ class Redwork(InkstitchExtension):
         for line in multi_line_string.geoms:
             if line.distance(starting_point) < 2 and not start_applied:
                 project = line.project(starting_point, True)
-                new_lines.append(substring(line, 0, project, True))
-                new_lines = [substring(line, project, 1, True)] + new_lines
+                if project == 1:
+                    new_lines = [line.reverse()] + new_lines
+                elif project == 0:
+                    new_lines = [line] + new_lines
+                else:
+                    new_lines.append(substring(line, 0, project, True))
+                    new_lines = [substring(line, project, 1, True)] + new_lines
                 start_applied = True
             else:
                 new_lines.append(line)
