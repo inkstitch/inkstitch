@@ -1,7 +1,7 @@
 ---
 title: "Running Ink/Stitch from Command Line"
 permalink: /docs/command-line/
-last_modified_at: 2023-12-31
+last_modified_at: 2024-07-13
 ---
 Ink/Stitch extensions can be run from command line.
 
@@ -22,4 +22,14 @@ Here an example of outputting a stitch svg for two specific elements, which will
 
 ```
 ./inkstitch --extension=stitch_plan_preview --id=path1 id=path2 --move-to-side=False --layer-visibility=hidden --needle-points=True input.svg > output.svg
+```
+
+## Inkscape command line options
+
+For a full manual on inkscape command line options check out their [man page](https://inkscape.org/doc/inkscape-man.html)
+
+Please note, that you can also access inkstitch combined with other inkscape actions. You can view the full list of available actions through
+
+```
+inkscape --action-list
 ```
