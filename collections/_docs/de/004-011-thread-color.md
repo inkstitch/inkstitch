@@ -1,18 +1,16 @@
 ---
 title: "Garnfarben-Verwaltung"
 permalink: /de/docs/thread-color/
-last_modified_at: 2024-05-09
+last_modified_at: 2024-07-13
 toc: true
 ---
-## Handhabung von Farbpaletten
+Inkscape unterstützt den Gebrauch von Farbpaletten. Farbpaletten helfen Ink/Stitch Farbnamen zu definieren und zusätzliche Informationen wie den Namen des Garnherstellers und die Katalognummer in die Stickdatei abzuspeichern.
 
-Die Inkscape Farbpaletten befinden sich unten rechts neben den Farbfeldern.
+Abhängig von den Möglichkeiten der genutzten Maschine können Farbnamen während des Stickvorgangs vom Maschinendisplay abgelesen werden. Bitte beachte, dass nicht alle Stickdatei-Formate das Abspeichern von Farbinformationen erlauben (z.B. DST). Für andere Formate nutzen ein Mehr-Dateien-System. Für EXP-Dateien beispielsweise ist es üblich, neben der Stickdatei auch eine INF-Datei abzuspeichern, die dann die Farbinformationen enthält.
 
-![Inkscape Farbpaletten](/assets/images/docs/palettes-location.png)
+Farbinformationen werden auch in die [PDF Ausgabe](/de/docs/threadlist/) übernommen. Außerdem können auch menschenlesbare einfach Textdateien mit der Garnabfolge (sogenannte [Garnfarben-Listen](/de/docs/threadlist/)) exportiert werden.
 
-Klicke auf den kleinen Pfeil, um eine Liste der installierten Paletten zu öffnen und wähle die Herstellerfarbpalette abhängig von dem Garn, das verwendet werden soll.
-
-Die Auswahl wirkt sich auch auf die in der Druckvorschau angezeigten Garnnamen aus.
+Bevor aber mit den Garnfarben gearbeitet werden kann, müssen zunächst die Farbpaletten installiert werden. Es gibt die Möglichkeit entweder [eigene Farbpaletten](/de/docs/thread-color/#benutzerdefinierte-farbpalette-installieren) zu erstellen und zu installieren oder die von [Ink/Stitch mitgelieferten Farbpaletten](/de/docs/thread-color/#vordefinierte-farbpaletten-für-insckape-installieren) in Inkscape verfügbar zu machen.
 
 ## Farbpaletten installieren
 
@@ -34,7 +32,9 @@ Inkscape muss nach diesem Vorgang neu gestartet werden.
 
 Farbpaletten können mit Ink/Stitch erstellt werden. Wie das geht wird auf dieser Seite weiter unten beschrieben.
 
-## Farbpalette erstellen
+## Farbpaletten erstellen und bearbeiten
+
+### Farbpalette erstellen
 
 Inkscape kann `.gpl` Farbpaletten erstellen. Aber es ist nicht möglich, die Farben zu sortieren.
 
@@ -62,7 +62,17 @@ Bereits bestehende Farbpaletten können mit Ink/Stitch als Text bearbeitet werde
 * Exportiere die Palette mit `Erweiterungen > Ink/Stitch > Garnfarben Verwaltung > Palette erstellen > Farbpalette erstellen ...`
 * Inkscape neu starten
 
-## Farben auf ein geöffnetes Design übertragen
+## Mit Farbpaleten arbeiten
+
+### Generelle Handhabung
+
+Die Inkscape Farbpaletten befinden sich unten rechts neben den Farbfeldern.
+
+![Inkscape Farbpaletten](/assets/images/docs/palettes-location.png)
+
+Klicke auf den kleinen Pfeil, um eine Liste der installierten Paletten zu öffnen und wähle die Herstellerfarbpalette dem Garn entsprechend, das verwendet werden soll.
+
+Um eine bestimmte Farbe auf ein Element anzuwenden, klicke auf die Farben am unteren Bildschirmrand. Nutze einen einfachen `Links-Klick` für eine Füllfarbe und `Umschalttaste + Links-Klick` für eine Konturfarbe. Nutze das X auf der linken Seite um eine Farbe zu entfernen.
 
 ### Farbpalette anwenden
 
@@ -75,18 +85,21 @@ Die Farben werden entsprechend in die Stickdatei gespeichert und in der PDF-Ausg
 * Wähle eine Farbpalette
 * Klicke auf `Anwenden`
 
+## Mit Garnlisten arbeiten
+
 ### Garnfarben-Liste anwenden
 
 Ink/Stitch kann Garnlisten auf ein Design anwenden. Das ist besonders dann nützlich, wenn du mit bestehenden Stickdateien arbeitest, die keine Farbinformationen speichern (z.B. DST).
 
-Außerdem könnte diese Funktion dazu dienen, verschiedene Farbvariationen auszuprobieren. Du kannst Garnlisten importieren und exportieren wie es dir gefällt. Wichtig ist nur, dass sich die Stickreihenfolge- und anzahl der Objekte nicht ändert. In einem solchen Fall solltest du auf das Speichern der kompletten SVG-Datei zurückgreifen (das ist auch sonst nie eine schlechte Idee).
+Außerdem kann diese Funktion dazu dienen, verschiedene Farbvariationen auszuprobieren. Du kannst Garnlisten importieren und exportieren wie es dir gefällt. Wichtig ist nur, dass sich die Stickreihenfolge- und anzahl der Objekte nicht ändert. In einem solchen Fall solltest du auf das Speichern der kompletten SVG-Datei zurückgreifen (das ist immer eine gute Idee).
 
-* Run `Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist`
-* Choose a file with the thread color information to match the elements in the current document
-* Define wether the color infomration file has been generated with Ink/Stitch or otherwise.
-  If otherwise: Select the Ink/Stitch color palette to match colors to.
-* Click on Apply
+* Öffne `Erweiterungen > Ink/Stitch > Garnfarbenverwaltung > Garnfarben-Liste anwenden`
+* Wähle eine Datei mit Farbinformationen
+* Definiere, ob die Datei mit Ink/Stitch erstellt wurde oder nicht
 
-## Garnliste Exportieren
+  Wenn nicht: Wähle die Farbpalette aus, die genutzt werden soll
+* Klick auf anweden
+
+### Garnliste Exportieren
 
 Garnlisten für ein Design können nur über eine ZIP-Datei exportiert werden ([batch export](/de/docs/import-export/#batch-export))

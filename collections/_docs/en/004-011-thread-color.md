@@ -1,55 +1,40 @@
 ---
 title: "Thread Color Management"
 permalink: /docs/thread-color/
-last_modified_at: 2024-04-21
+last_modified_at: 2024-07-13
 toc: true
 ---
-### Apply Palette
+Inkscape supports the usage of color palettes. Color palettes help Ink/Stitch to define color names and save additional information such as thread manufacturer name and the thread catalog number into the exported embroidery file.
 
-{% include upcoming_release.html %}
+Depending on the capabilities of your embroidery machine you will be able to read color names from the display. Please note, that some embroidery formats (for example DST) do not store color information. Other file formats use a mutliple file system to store color information. For EXP files for example it is common to save the color format INF along with the EXP file to transmit the color information to your machine.
 
-This extension applies nearest colors from a specified thread palette on a design. This will also be recognized by the Ink/Stitch embroidery file and pdf output.
+Color definitions are shown in the [pdf output](/docs/print-pdf/). It is also possible to [export threadlist information](/docs/threadlist/) into a simple textfile.
 
-* Run `Extensions > Ink/Stitch > Thread Color Management > Apply Palette`
-* Select the color palette you wish to apply
-* Click on Apply
+Before you can use thread color features you need to install color palettes. You can either [define your own custom palette(s)](/docs/thread-color/#install-custom-palette) or [install the ones delivered with Ink/Stitch](/docs/thread-color/#install-thread-color-palettes-for-inkscape). Whichever method you choose, restart Inkscape after installing color palettes.
 
-## Apply Threadlist
+## Install Palettes
 
-Ink/Stitch can apply a threadlist to an embroidery design. This is especially useful, if you want to work on existing embroidery files which do not support color information (e.g. DST).
+### Install Thread Color Palettes for Inkscape
 
-It could also be helpful, if you are wanting to test different color settings. You can export and import them as you like. But be careful not to change the amount and order of colors. In case you are planing to change these, you'd prefer to save the entire SVG instead.
+Ink/Stitch comes with a lot of thread manufacturer color palettes which can be installed into Inkscape. This allows to build the designs with the correct colors in mind.
+Colors will appear in the PDF-Output and will also be included into your embroidery file, if your file format supports it. 
 
-* Run `Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist`
-* Choose a file with the thread color information to match the elements in the current document
-* Define wether the color infomration file has been generated with Ink/Stitch or otherwise.
-  If otherwise: Select the Ink/Stitch color palette to match colors to.
-* Click on Apply
+* Go to `Extensions > Ink/Stitch  > Thread Color Management > Install thread color palettes for Inkscape`
+* Click `Install`
+* Restart Inkscape
 
-### Import
-
-Run `Extensions > Ink/Stitch > Thread Color Management > Import Threadlist ...` to apply a threadlist exported by Ink/Stitch.
-
-If you want to import any other threadlist from a txt-file, choose the option "Import other threadlist" and pick a threadlist from the dropdown menu before clicking on apply.
-
-**Tipp:** Install Add-Ons for Ink/Stitch to have more threadlists available.
+**Info**: Just click install if you are not sure where to install the palettes. Ink/Stitch usually discoveres the correct path for your system by itself.
 {: .notice--info }
 
-### Export
+### Install Custom Palette
 
-Threadlists can only be exported through a zip-file ([batch export](/docs/import-export/#batch-export)).
+In case you own a `.gpl` color list of the threads you are actually using. Make it available in Inkscape with this extension: `Extensions > Ink/Stitch > Thread Color Management > Install custom palette...`. You will need to restart Inkscape after this process.
 
-## Apply Palette
+The .gpl color palettes can be generated with [Generate Color Palette](#generate-color-palette). 
 
-{% include upcoming_release.html %}
+## Generate And Edit Custom Color Palettes
 
-This extension applies nearest colors from a specified thread palette on a design. 
-
-This will also be recognized by the Ink/Stitch pdf output.
-
-Run `Extensions > Ink/Stitch  > Thread Color Management > Apply Palette 
-
-## Generate Palette
+### Generate Palette
 
 Inkscape allows to generate `.gpl` color palette files. But it doesn't allow us to order color swatches properly.
 
@@ -67,38 +52,7 @@ This extension will export colors of text elements while using the text as color
 
 {% include video id="4bcRVoKvzAw" provider="youtube" %}
 
-
-## Install Custom Palette
-
-In case you own a `.gpl` color list of the threads you are actually using. Make it available in Inkscape with this extension: `Extensions > Ink/Stitch > Thread Color Management > Install custom palette...`. You will need to restart Inkscape after this process.
-
-The .gpl color palettes can be generated with [Generate Color Palette](#generate-color-palette). 
-
-## Install Thread Color Palettes for Inkscape
-
-Ink/Stitch comes with a lot of thread manufacturer color palettes which can be installed into Inkscape. This allows to build the designs with the correct colors in mind.
-Colors will appear in the PDF-Output and will also be included into your embroidery file, if your file format supports it. 
-
-**Install**
-* Go to `Extensions > Ink/Stitch  > Thread Color Management > Install thread color palettes for Inkscape`
-* Click `Install`
-* Restart Inkscape
-
-**Info**: Just click install if you are not sure where to install the palettes. Ink/Stitch usually discoveres the correct path for your system by itself.
-{: .notice--info }
-
-### Usage
-
-Inkscape palettes are found on the bottom to the right of the color swatches.
-
-![Inkscape Color Palettes](/assets/images/docs/palettes-location.png)
-
-Click on the little arrow to open a list of installed palettes and choose the manufacturer color palette depending on the thread you are willing to use.
-
-The choice will also take effect on the thread names to appear in the print preview.
-
-
-## Palette to Text
+### Palette to Text
 
 Existing palettes can be edited with Ink/Stitch as text.
 
@@ -106,3 +60,45 @@ Existing palettes can be edited with Ink/Stitch as text.
 * Change colors, update color names or catalog numbers or add more colors.
 * Export your palette with `Extensions > Ink/Stitch > Thread Color Management > Generate Palette > Generate Color Palette ...`
 * Restart Inkscape
+
+## Working With Palettes
+
+### General Usage
+
+Inkscape palettes are found on the bottom to the right of the color swatches.
+
+![Inkscape Color Palettes](/assets/images/docs/palettes-location.png)
+
+Click on the little arrow to open a list of installed palettes and choose the manufacturer color palette depending on the thread you are willing to use.
+
+To apply a color to an element, select the element and click on the color swatches at the bottom. Use `left click` for a fill color and `shift + left click` for a stroke color. Use the X on the left side to remove colors.
+
+### Apply Palette
+
+{% include upcoming_release.html %}
+
+This extension applies nearest colors from a specified thread palette on a design. This will also be recognized by the Ink/Stitch embroidery file and pdf output.
+
+* Run `Extensions > Ink/Stitch > Thread Color Management > Apply Palette`
+* Select the color palette you wish to apply
+* Click on Apply
+
+## Working with Threadlists
+
+### Export Threadlist
+
+Export threadlists and color files using your normal file export routine in Inkscape.
+Threadlists can also be exported within the Ink/Stitch zip-file ([batch export](/docs/import-export/#batch-export)).
+
+### Apply Threadlist
+
+Ink/Stitch can apply a threadlist to an embroidery design. This is especially useful, if you want to work on existing embroidery files which do not support color information (e.g. DST).
+
+It could also be helpful, if you are wanting to test different color settings. You can export and import them as you like. But be careful not to change the amount and order of colors. In case you are planing to change these, you'd prefer to save the entire SVG instead.
+
+* Run `Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist`
+* Choose a file with the thread color information
+* Define wether the color infomration file has been generated with Ink/Stitch or otherwise.
+
+  If otherwise: Select the Ink/Stitch color palette to match colors to.
+* Click on Apply
