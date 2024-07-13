@@ -1,11 +1,10 @@
 ---
 title: "Import und Export von Dateien"
 permalink: /de/docs/import-export/
-last_modified_at: 2020-10-01
+last_modified_at: 2024-07-13
 toc: true
 ---
-
-## Import von Stickdateien
+## Stickdateien importieren
 
 Öffne eine fertige Stickdatei, so wie eine beliebige SVG-Datei in Inkscape geöffnet wird: `Datei -> Öffnen ...`, wähle die Datei aus und wähle `Öffnen`.
 
@@ -23,12 +22,15 @@ Für zukünftige Änderungen stelle sicher, dass auch eine SVG-Version des Desig
 
 ## Batch-Export
 
-**Info:** Seit Ink/Stitch Version 1.10.0 ist es möglich, mehrere Dateiformate gleichzeitig zu exportieren.
-{: .notice--info }
-
 Unter `Datei -> Speichern unter ...` wähle den kleinen Pfeil im Dateiformat-Auswahlfeld, um eine Liste der verfügbaren Dateiformate zu öffnen.
 
 Navigiere zum gewünschten Ausgabeverzeichnis und wähle dort das `Ink/Stitch: Export von mehreren Formaten (.zip)` aus. Klicke auf "Speichern". Dort wird  gefragt, welche Dateiformate hinein sollen.
 
 ![Batch Export](/assets/images/docs/en/export-batch.jpg)
 
+Ink/Stitch speichert die Dateien innerhalb der ZIP-Datei mit dem Namen der Originaldatei (!) ab. Solltest du andere Dateinamen wünschen, diesen bitte in das Feld `Benutzerdefinierter Dateiname` eintragen.
+
+![Batch export options](/assets/images/docs/de/zip-export1.png)
+
+Die Zip-Export Funktion bietet die Möglichkeit zur Panelisierung. Sind die Werte für Wiederholungen höher als 1, wird Ink/Stitch Kopien des Stickplans in den gewünschten Abständen einfügen.
+Die Abstände berechnen sich ausgehend von der oberen linken Ecke. Die Farbblöcke werden sortiert um Farbwechsel zu vermeiden.
