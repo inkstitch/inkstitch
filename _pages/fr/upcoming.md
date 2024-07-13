@@ -1,7 +1,7 @@
 ---
 title: "Changements, Mises à jour et Corrections pour la prochaine  version Ink/Stitch v3.1.0"
 permalink: /fr/upcoming/
-last_modified_at: 2024-07-04
+last_modified_at: 2024-07-12
 sidebar:
   nav: pages
 toc: true
@@ -398,6 +398,10 @@ Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu
 
 ## Corrections de bug
 
+* [#3071](https://github.com/inkstitch/inkstitch/issues/3071) Lettering: skip font with corrupt json file
+* [#3074](https://github.com/inkstitch/inkstitch/issues/3074) Reset corrupted cache files
+* [#3065](https://github.com/inkstitch/inkstitch/issues/3065) Params: fix stroke and fill rendering order
+* [#3053](https://github.com/inkstitch/inkstitch/issues/3053) Ensure that redwork and auto-run underpath style to dashed and top stitching lines to solid
 * [#3034](https://github.com/inkstitch/inkstitch/issues/3034) l'ajout de  commande aux clones informe les utilisateurs de la necessité de délier les clones.
 * [#3021](https://github.com/inkstitch/inkstitch/issues/3021) rend l'extension trait en satin un peu plus robuste.
 * [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Correction de l'extension à propos pour la version 1.4 d'Inkscape (utilise wxpython)

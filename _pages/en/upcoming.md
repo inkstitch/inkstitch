@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-07-04
+last_modified_at: 2024-07-013
 sidebar:
   nav: pages
 toc: true
@@ -409,6 +409,10 @@ to manual stitches and keep previous behavior. [#2866](https://github.com/inksti
 
 ## Bug Fixes
 
+* [#3071](https://github.com/inkstitch/inkstitch/issues/3071) Lettering: skip font with corrupt json file
+* [#3074](https://github.com/inkstitch/inkstitch/issues/3074) Reset corrupted cache files
+* [#3065](https://github.com/inkstitch/inkstitch/issues/3065) Params: fix stroke and fill rendering order
+* [#3053](https://github.com/inkstitch/inkstitch/issues/3053) Ensure that redwork and auto-run underpath style to dashed and top stitching lines to solid
 * [#3034](https://github.com/inkstitch/inkstitch/issues/3034) adding commands to clones informs users that they have to unlink clones
 * [#3021](https://github.com/inkstitch/inkstitch/issues/3021) make line to satin a little bit more robust
 * [#3007](https://github.com/inkstitch/inkstitch/issues/3007) Fix about extension for Inkscape version 1.4 (use wxpython)
