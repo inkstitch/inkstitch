@@ -47,22 +47,21 @@ Jede Datei ist individuell und du bist der Designer der entscheiden kann wie die
 
 ## Generelle Pfadoptimisierung
 
-### Order elements in selected order
+### Objekte in Auswahlreihenfolge sortieren
 
-Moving the elements in the Layers and Objects panel up and down can be tiresome. Select the elements in desired stitch order and run the Ink/Stitch extension [Re-stack elements in selected order](/docs/edit/#re-stack-objects-in-order-of-selection) and have it doing the task.
+Elemente im Ebenen und Objekte Dialog hoch und runter zu bewegen kann ermüdend sein. Dafür gibt es einen schnelleren Weg: wähle die Elemente in der gewünschten Stickreihenfolge aus und nutze die Ink/Stitch Erweiterung [Objekte in Auswahlreiehenfolge sortieren](/de/docs/edit/#objekte-in-auswahlreihenfolge-sortieren).
 
-### Jump to Stroke
+### Sprungstich zu Geradstich
 
-After you've prepared the correct order of your elements and made sure where they are supposed to start and end,
-run the [jump to stroke](/docs/stroke-tools/#jump-to-stroke) to create a running stitch from the end position of the first element to the start position of the second element.
+Wenn alle Stickelemente gut vorbereitet sind. Alle in die richtige Reihenfolge gebracht worden sind und die Start- und Endpunkte festliegen, kann die Funktion [Sprungstich zu Geradstich](/de/docs/stroke-tools/#sprungstich-zu-geradstich) die letzten Sprungstiche beseitigen. Sie fügt Geradstiche an den Stellen ein, an denen ein Sprungstich gesetzt werden würde. Ändere den Pfad der neuen Geradstich-Pfade, um die Sprungstiche unter nachfolgenden Stickobjekten zu verstecken.
 
-You can then alter the stroke to be hidden under other elements. If the distance is short, you can also use it to make the connection stitch sink into the fabric while avoiding an additional jump.
+Gibt es einen kurzen Abstand ohne die Möglichkeit den Geradstich zu verdecken, nutze die Verbindung um kleine Zwischenstiche zu setzen, die beim Sticken in den Stoff einsinken werden.
 
 ![Jump to stroke process](/assets/images/docs/jump_to_stroke.png)
 
-*1: Original 2: Jump to Stroke 3: Manually adjusted stroke*
+*1: Original 2: Sprungstich zu Geradstich 3: Der manuell angepasste Geradstich-Pfad verläuft unter der nachfolgenden Füllung*
 
-## Stroke Routing Options
+## Pfadoptimisierung für linienartige Sticharten
 
 Strokes elements start at the beginning of the path and run til the end.
 

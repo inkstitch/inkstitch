@@ -16,7 +16,8 @@ Cette extension insère des commandes de coupe à la place des sauts.
 
 Ces commandes affectent l’ensemble du motif de broderie.
 
-
+**Info**: Do not to use this option when you can optimize routing instead. Cutting threads should be avoided as much as possible. Learn about the options Ink/Stitch has to offer for a [better routing](/tutorials/routing/).
+{: .notice--info }
 
 ### ![origine](/assets/images/docs/visual-commands-origin.jpg) Origine
 

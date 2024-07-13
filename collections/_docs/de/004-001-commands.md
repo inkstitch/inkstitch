@@ -1,7 +1,7 @@
 ---
 title: "Visuelle Befehle"
 permalink: /de/docs/commands/
-last_modified_at: 2023-12-31
+last_modified_at: 2024-07-13
 toc: true
 ---
 Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber festzulegen, wie das Design gestickt werden soll. Sie können z.B. der Maschine mitteilen, dass der Faden nach einem Stickobjekt geschnitten werden soll oder definieren, wann und wo die Maschine pausieren soll, so dass man für eine Applikation bequem ein Stück Stoff hinzufügen kann.
@@ -16,6 +16,9 @@ Nicht jede Maschine kann diese zusätzliche Informationen umsetzen und verstehen
 `Befehle > Sprungstich zu Fadenschnitt-Befehl` 
 
 Fügt Fadenschnitt-Befehle ein um Sprungstiche zu vermeiden
+
+**Info**: Nutze diese Option nicht, wenn es die Möglichkeit gibt den Stickpfad weiter zu optimisieren. Das Fadenschneiden sollte so gut wie möglich vermieden werden. Lerne über Funktionen die Ink/Stitch für eine bessere [Pfadoptimisierung](/de/tutorials/routing/) bereithält.
+{: .notice--info }
 
 ## Dokumentbefehle hinzufügen ...
 
