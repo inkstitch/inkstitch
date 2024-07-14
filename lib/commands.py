@@ -296,9 +296,10 @@ def ensure_symbol(svg, command):
 
 def add_group(document, node, command):
     parent = node.getparent()
+    description = _(get_command_description(command))
     group = inkex.Group(attrib={
         "id": generate_unique_id(document, "command_group"),
-        INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
+        INKSCAPE_LABEL: _("Ink/Stitch Command") + f": {description}",
         "transform": get_correction_transform(node)
     })
     parent.insert(parent.index(node) + 1, group)
@@ -431,9 +432,10 @@ def add_layer_commands(layer, commands):
 
     for i, command in enumerate(commands):
         ensure_symbol(svg, command)
+        description = _(get_command_description(command))
         layer.append(inkex.Use(attrib={
             "id": generate_unique_id(svg, "use"),
-            INKSCAPE_LABEL: _("Ink/Stitch Command") + ": %s" % get_command_description(command),
+            INKSCAPE_LABEL: _("Ink/Stitch Command") + f": {description}",
             XLINK_HREF: "#inkstitch_%s" % command,
             "height": "100%",
             "width": "100%",

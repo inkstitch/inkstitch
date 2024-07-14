@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from html import unescape
+from sys import platform
 
 from inkex import errormsg
 from lxml import etree
@@ -21,4 +22,8 @@ class Input(object):
             errormsg(msg)
             exit(0)
         stitch_plan = generate_stitch_plan(embroidery_file)
-        print(unescape(etree.tostring(stitch_plan).decode('utf-8')))
+        out = etree.tostring(stitch_plan).decode('utf-8')
+        if platform == "win32":
+            print(out)
+        else:
+            print(unescape(out))
