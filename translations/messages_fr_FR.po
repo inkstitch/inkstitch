@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-11 01:14+0000\n"
-"PO-Revision-Date: 2024-07-11 01:15\n"
+"POT-Creation-Date: 2024-07-12 01:13+0000\n"
+"PO-Revision-Date: 2024-07-14 01:20\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-11 01:14+0000\n"
+"POT-Creation-Date: 2024-07-12 01:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2103,7 +2103,7 @@ msgstr "* Convertir en trait : sélectionnez l'élément et ouvrez la boîte de 
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr "* Utilisation en colonne satin : ajouter un autre rail et éventuellement des traverses."
 
-#: lib/elements/stroke.py:44 lib/extensions/params.py:550
+#: lib/elements/stroke.py:44 lib/extensions/params.py:589
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "Trait"
@@ -2739,7 +2739,7 @@ msgstr "Utiliser les derniers paramètres"
 msgid "Apply and Quit"
 msgstr "Appliquer et Quitter"
 
-#: lib/extensions/params.py:820
+#: lib/extensions/params.py:825
 msgid "Embroidery Params"
 msgstr "Paramètres de broderie"
 
@@ -3762,21 +3762,23 @@ msgstr "Petite"
 
 #: lib/lettering/font.py:95
 msgid "JSON file missing. Expected a JSON file at the following location:"
-msgstr ""
+msgstr "Il manque le fichier JSON. Un fichier JSO est attendu à cet endroit :"
 
 #: lib/lettering/font.py:97
 msgid "Generate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
-msgstr ""
+msgstr "Générez le fichier JSON avec\n"
+"Extensions > Ink/Stitch >Gestion des polices > Générer JSON..."
 
 #: lib/lettering/font.py:102
 msgid "Corrupt JSON file"
-msgstr ""
+msgstr "Fichier JSON corrompu"
 
 #: lib/lettering/font.py:104
 msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
-msgstr ""
+msgstr "Re-générez le fichier JSON avec\n"
+"Extensions > Ink/Stitch >Gestion des polices > Générer JSON..."
 
 #: lib/lettering/font.py:181
 #, python-format

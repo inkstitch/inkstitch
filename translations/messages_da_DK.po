@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-11 01:14+0000\n"
-"PO-Revision-Date: 2024-07-11 01:15\n"
+"POT-Creation-Date: 2024-07-12 01:13+0000\n"
+"PO-Revision-Date: 2024-07-12 01:13\n"
 "Last-Translator: \n"
 "Language-Team: Danish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-11 01:14+0000\n"
+"POT-Creation-Date: 2024-07-12 01:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2100,7 +2100,7 @@ msgstr ""
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr ""
 
-#: lib/elements/stroke.py:44 lib/extensions/params.py:550
+#: lib/elements/stroke.py:44 lib/extensions/params.py:589
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr ""
@@ -2729,7 +2729,7 @@ msgstr ""
 msgid "Apply and Quit"
 msgstr ""
 
-#: lib/extensions/params.py:820
+#: lib/extensions/params.py:825
 msgid "Embroidery Params"
 msgstr ""
 

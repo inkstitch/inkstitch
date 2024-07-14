@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-11 01:14+0000\n"
-"PO-Revision-Date: 2024-07-11 01:15\n"
+"POT-Creation-Date: 2024-07-12 01:13+0000\n"
+"PO-Revision-Date: 2024-07-14 01:20\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-11 01:14+0000\n"
+"POT-Creation-Date: 2024-07-12 01:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2101,7 +2101,7 @@ msgstr "* In einen Geradstich umwandeln: wähle das Element aus und öffne Erwei
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr "* Als Satinsäule benutzen: füge eine weitere Außenkonturlinie hinzu und ggf. Richtungsvektoren."
 
-#: lib/elements/stroke.py:44 lib/extensions/params.py:550
+#: lib/elements/stroke.py:44 lib/extensions/params.py:589
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "Linie"
@@ -2738,7 +2738,7 @@ msgstr "Letzte Einstellungen verwenden"
 msgid "Apply and Quit"
 msgstr "Anwenden und schließen"
 
-#: lib/extensions/params.py:820
+#: lib/extensions/params.py:825
 msgid "Embroidery Params"
 msgstr "Stickparameter"
 
@@ -3762,21 +3762,23 @@ msgstr "Kleine Schriftgrößen"
 
 #: lib/lettering/font.py:95
 msgid "JSON file missing. Expected a JSON file at the following location:"
-msgstr ""
+msgstr "Die JSON-Datei fehlt. JSON-Datei unter folgendem Pfad erwartet:"
 
 #: lib/lettering/font.py:97
 msgid "Generate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
-msgstr ""
+msgstr "Die JSON-Datei kann über folgende Ink/Stitch Funktion erstellt werden:\n"
+"Erweiterungen > Ink/Stitch > Schriftverwaltung > JSON erstellen..."
 
 #: lib/lettering/font.py:102
 msgid "Corrupt JSON file"
-msgstr ""
+msgstr "Die JSON-Datei ist beschädigt"
 
 #: lib/lettering/font.py:104
 msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
-msgstr ""
+msgstr "Die JSON-Datei kann über folgende Ink/Stitch Funktion neu erstellt werden:\n"
+"Erweiterungen > Ink/Stitch > Schriftverwaltung > JSON erstellen..."
 
 #: lib/lettering/font.py:181
 #, python-format
