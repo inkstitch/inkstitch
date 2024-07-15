@@ -12,7 +12,7 @@ from shapely import MultiLineString
 
 from ..stitch_plan.stitch_group import StitchGroup
 
-from ..commands import is_command_symbol
+from ..commands import is_command_symbol, add_command
 from ..i18n import _
 from ..svg.path import get_node_transform
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
@@ -104,24 +104,24 @@ class Clone(EmbroideryElement):
         Could possibly be refactored into just a generator - being a context manager is mainly to control the lifecycle of the elements
         that are cloned (again, for testing convenience primarily)
         """
-        parent: BaseElement = self.node.getparent()
-        cloned_node = self.resolve_clone()
+        cloned_nodes = self.resolve_clone()
         try:
             # In a try block so we can ensure that the cloned_node is removed from the tree in the event of an exception.
             # Otherwise, it might be left around on the document if we throw for some reason.
-            yield self.clone_to_elements(cloned_node)
+            yield self.clone_to_elements(cloned_nodes[0])
         finally:
             # Remove the "manually cloned" tree.
-            parent.remove(cloned_node)
+            for cloned_node in cloned_nodes:
+                cloned_node.delete()
 
-    def resolve_clone(self, recursive=True) -> BaseElement:
+    def resolve_clone(self, recursive=True) -> List[BaseElement]:
         """
         "Resolve" this clone element by copying the node it hrefs as if unlinking the clone in Inkscape.
         The node will be added as a sibling of this element's node, with its transform and style applied.
         The fill angles for resolved elements will be rotated per the transform and clone_fill_angle properties of the clone.
 
         :param recursive: Recursively "resolve" all child clones in the same manner
-        :returns: The "resolved" node
+        :returns: A list where the first element is the "resolved" node, and zero or more commands attached to that node
         """
         parent: BaseElement = self.node.getparent()
         source_node: BaseElement = self.node.href
@@ -133,11 +133,11 @@ class Clone(EmbroideryElement):
             source_parent.add(cloned_node)
 
             if is_clone(cloned_node):
-                cloned_node = cloned_node.replace_with(Clone(cloned_node).resolve_clone())
+                cloned_node = cloned_node.replace_with(Clone(cloned_node).resolve_clone()[0])
             else:
                 clones: List[BaseElement] = [n for n in cloned_node.iterdescendants() if is_clone(n)]
                 for clone in clones:
-                    clone.replace_with(Clone(clone).resolve_clone())
+                    clone.replace_with(Clone(clone).resolve_clone()[0])
 
             source_parent.remove(cloned_node)
 
@@ -153,12 +153,26 @@ class Clone(EmbroideryElement):
         # Compute angle transform:
         # Effectively, this is (local clone transform) * (to parent space) * (from clone's parent space)
         # There is a translation component here that will be ignored.
-        source_transform = source_parent.composed_transform()
-        clone_transform = self.node.composed_transform()
+        source_transform: Transform = source_parent.composed_transform()
+        clone_transform: Transform = self.node.composed_transform()
         angle_transform = clone_transform @ -source_transform
         self.apply_angles(cloned_node, angle_transform)
 
-        return cloned_node
+        ret = [cloned_node]
+        # copy commands from root for now
+        from .utils import node_to_elements
+        # We need
+        elements = node_to_elements(cloned_node)
+        if elements:
+            # Just pick the first element, we need a "real" element that implements shape for add_commands to work
+            source_element = node_to_elements(source_node)[0]
+            cloned_element = elements[0]
+            for command in source_element.commands:
+                target = command.local_target_point
+                pos = angle_transform.apply_to_point(target)
+                ret.append(add_command(cloned_element, command.command, pos))
+
+        return ret
 
     def apply_angles(self, cloned_node: BaseElement, transform: Transform) -> None:
         """

@@ -149,6 +149,13 @@ class Command(BaseCommand):
     def __repr__(self):
         return "Command('%s', %s)" % (self.command, self.target_point)
 
+    @property
+    @cache
+    def local_target_point(self) -> inkex.Vector2d:
+        attrib = self.use.attrib
+        pos = [float(attrib.get('x', 0)), float(attrib.get('y', 0))]
+        return self.connector.getparent().transform.apply_to_point(pos)
+
 
 class StandaloneCommand(BaseCommand):
     def __init__(self, use):
@@ -412,6 +419,21 @@ def add_commands(element, commands, pos=None):
 
         symbol = add_symbol(svg, group, command, position)
         add_connector(svg, symbol, command, element)
+
+
+# element is an EmbroideryElement: Should this be added to there?
+def add_command(element, command: str, position: inkex.Vector2d) -> inkex.Group:
+    svg = get_document(element.node)
+
+    ensure_symbol(svg, command)
+    remove_legacy_param(element, command)
+
+    group = add_group(svg, element.node, command)
+    position = Point(*(-group.transform).apply_to_point(position))
+
+    symbol = add_symbol(svg, group, command, position)
+    add_connector(svg, symbol, command, element)
+    return group
 
 
 def add_layer_commands(layer, commands):

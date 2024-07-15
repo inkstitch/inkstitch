@@ -9,8 +9,9 @@ from copy import deepcopy
 import inkex
 import numpy as np
 from inkex import bezier, BaseElement
+from typing import List
 
-from ..commands import find_commands
+from ..commands import Command, find_commands
 from ..debug.debug import debug
 from ..exceptions import InkstitchException, format_uncaught_exception
 from ..i18n import _
@@ -436,7 +437,7 @@ class EmbroideryElement(object):
 
     @property
     @cache
-    def commands(self):
+    def commands(self) -> List[Command]:
         return find_commands(self.node)
 
     @cache
