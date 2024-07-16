@@ -267,7 +267,10 @@ class ParamsTab(ScrolledPanel):
                 elif isinstance(self.param_inputs[name], wx.Choice):
                     self.param_inputs[name].SetSelection(int(value))
                 else:
-                    self.param_inputs[name].SetValue(value)
+                    input = self.param_inputs[name]
+                    if name == "satin_column" and input.Label == _('Running stitch along paths'):
+                        value = not value
+                    input.SetValue(value)
                 self.changed_inputs.add(self.param_inputs[name])
 
         self.update_toggle_state()
