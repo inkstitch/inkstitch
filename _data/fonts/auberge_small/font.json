@@ -1,12 +1,16 @@
 {
     "name": "Auberge small",
-    "description": "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Grand Hotel font between 25% (for a 9mm font ) and 55 % (for a  20 mm font).",
+    "description": "This font is an altered version  of Auberge Marif, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Auberge Marif font between 20% (for a 7mm font ) and 55 % (for a 20 mm font). ",
+    "keywords": [
+        "handwriting",
+        "tiny"
+    ],
     "leading": 190,
     "auto_satin": false,
     "reversible": false,
     "letter_case": "",
     "default_glyph": " ",
-    "min_scale": 0.25,
+    "min_scale": 0.2,
     "max_scale": 0.55,
     "size": 35,
     "horiz_adv_x_default": 62,
@@ -7297,8 +7301,6 @@
         "\"",
         "'",
         "‘",
-        "'",
-        "‘",
         "(",
         ")",
         "+",
@@ -7318,7 +7320,6 @@
         ":",
         ";",
         "=",
-        "?",
         "A",
         "B",
         "C",
@@ -7398,7 +7399,6 @@
         "à",
         "á",
         "â",
-        "ã",
         "æ",
         "ç",
         "è",
@@ -7425,6 +7425,9 @@
         "œ",
         "Ũ",
         "ũ",
-        "’"
+        "’",
+        "ã",
+        "ä",
+        "Ä"
     ]
 }
