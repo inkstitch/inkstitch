@@ -1,6 +1,9 @@
 {
     "name": "Abécédaire AGS",
     "description": "Abécédaire AGS is a crossstitch font of size 14mm. The font can be scaled down to 75% and up to 200%",
+    "keywords": [
+        "crossstitch"
+    ],
     "auto_satin": false,
     "reversible": false,
     "letter_case": "",
