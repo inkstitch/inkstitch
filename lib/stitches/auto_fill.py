@@ -428,21 +428,24 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
     # They'll all already have their `outline` and `projection` tags set.
     graph.add_nodes_from(fill_stitch_graph.nodes(data=True))
 
+    grating = True
     if underpath:
         try:
             boundary_points, travel_edges = build_travel_edges(shape, fill_stitch_angle)
         except NoGratingsError:
-            return
+            grating = False
 
-        # This will ensure that a path traveling inside the shape can reach its
-        # target on the outline, which will be one of the points added above.
-        tag_nodes_with_outline_and_projection(graph, shape, boundary_points)
-    else:
+        if grating:
+            # This will ensure that a path traveling inside the shape can reach its
+            # target on the outline, which will be one of the points added above.
+            tag_nodes_with_outline_and_projection(graph, shape, boundary_points)
+
+    if not underpath or not grating:
         add_boundary_travel_nodes(graph, shape)
 
     add_edges_between_outline_nodes(graph)
 
-    if underpath:
+    if underpath and grating:
         process_travel_edges(graph, fill_stitch_graph, shape, travel_edges)
 
     debug.log_graph(graph, "travel graph")
