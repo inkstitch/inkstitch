@@ -1,6 +1,9 @@
 {
     "name": "Aventurina",
     "description": "Aventurina is a script satin font of size approximatively 20mm. The glyphs cover most Western European languages. The font can be scaled down to 60% and up to 150% ",
+    "keywords": [
+        "handwriting"
+    ],
     "leading": 100,
     "auto_satin": false,
     "reversible": false,
@@ -74,6 +77,7 @@
         "j": 21,
         "l": 26,
         "m": 70,
+        "#": 68,
         "o": 42,
         "q": 49,
         "r": 42,
@@ -138,7 +142,9 @@
         "õ": 42,
         "ö": 42,
         "ý": 45,
-        "ÿ": 45
+        "ÿ": 45,
+        "œ": 74,
+        "Œ": 124
     },
     "kerning_pairs": {
         "Fÿ": 23,
@@ -358,7 +364,6 @@
         "#",
         "&",
         "'",
-        "‘",
         "’",
         "(",
         ")",
