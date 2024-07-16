@@ -1,6 +1,10 @@
 {
     "name": "InfiniPicto",
     "description": "InfiniPicto is a fun font of size approximatively 70 mm containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French",
+    "keywords": [
+        "display",
+        "multicolor"
+    ],
     "leading": 350,
     "auto_satin": false,
     "reversible": false,
