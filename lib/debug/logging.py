@@ -100,10 +100,9 @@ def activate_logging(running_as_frozen: bool, ini: dict, SCRIPTDIR: Path):
 #  - PYTHONWARNINGS, -W - warnings action controlled by python
 #       actions: 'error', 'ignore', 'always', 'default', 'module', 'once'
 def activate_for_frozen():
-    loglevel = os.environ.get('INKSTITCH_LOGLEVEL')  # read log level from environment variable or None
-    docpath = os.environ.get('DOCUMENT_PATH')  # read document path from environment variable (set by inkscape) or None
-
-    if docpath is not None and loglevel is not None and loglevel.upper() in ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']:
+    if frozen_debug_active():
+        loglevel = os.environ.get('INKSTITCH_LOGLEVEL')  # read log level from environment variable or None
+        docpath = os.environ.get('DOCUMENT_PATH')  # read document path from environment variable (set by inkscape) or None
 
         # The end user enabled logging and warnings are redirected to the input_svg.inkstitch.log file.
 
@@ -122,7 +121,19 @@ def activate_for_frozen():
         logging.captureWarnings(True)                           # capture all warnings to log file with level WARNING
     else:
         logging.disable()                # globally disable all logging of all loggers
-        warnings.simplefilter('ignore')  # ignore all warnings
+        disable_warnings()
+
+
+def frozen_debug_active():
+    loglevel = os.environ.get('INKSTITCH_LOGLEVEL')  # read log level from environment variable or None
+    docpath = os.environ.get('DOCUMENT_PATH')  # read document path from environment variable (set by inkscape) or None
+    if docpath is not None and loglevel is not None and loglevel.upper() in ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']:
+        return True
+    return False
+
+
+def disable_warnings():
+    warnings.simplefilter('ignore')  # ignore all warnings
 
 
 # in development mode we want to use configuration from some LOGGING.toml file

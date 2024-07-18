@@ -124,6 +124,10 @@ debug_logging.startup_info(logger, SCRIPTDIR, running_as_frozen, running_from_in
 # we need to import only after possible modification of sys.path, we disable here flake8 E402
 from lib import extensions  # noqa: E402  # import all supported extensions of institch
 
+# TODO: if we run this earlier the warnings ignore filter for releases will not work properly
+if running_as_frozen and not debug_logging.frozen_debug_active():
+    debug_logging.disable_warnings()
+
 parser = ArgumentParser()
 parser.add_argument("--extension")
 my_args, remaining_args = parser.parse_known_args()
