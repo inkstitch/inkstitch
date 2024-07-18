@@ -12,7 +12,7 @@ Color definitions are shown in the [pdf output](/fr/docs/print-pdf/). It is also
 
 Before you can use thread color features you need to install color palettes. You can either [define your own custom palette(s)](/docs/thread-color/#install-custom-palette) or [install the ones delivered with Ink/Stitch](/docs/thread-color/#install-thread-color-palettes-for-inkscape). Whichever method you choose, restart Inkscape after installing color palettes.
 
-## Install Palettes
+## Installer des palettes
 
 ### Installer des Palettes de couleurs de fils à broder pour Inkscape
 
