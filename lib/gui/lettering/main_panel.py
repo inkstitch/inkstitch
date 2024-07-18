@@ -67,10 +67,10 @@ class LetteringPanel(wx.Panel):
         self.update_font_list()
         self.set_font_list()
 
+        self.SetSizerAndFit(outer_sizer)
+
         self.load_settings()
         self.apply_settings()
-
-        self.SetSizerAndFit(outer_sizer)
 
     def load_settings(self):
         """Load the settings saved into the SVG group element"""
