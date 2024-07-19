@@ -1,6 +1,9 @@
 {
     "name": "MONICHA",
     "description": "Monicha is a script satin font of size approximatively 20mm. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters. The font can not be scaled down but can be scaled up to 150%. ",
+    "keywords": [
+        "handwriting"
+    ],
     "leading": 100,
     "auto_satin": false,
     "reversible": false,
@@ -13,6 +16,7 @@
     "horiz_adv_x_space": 20,
     "units_per_em": 100,
     "horiz_adv_x": {
+        "ß": 42,
         "b": 42,
         "c": 38,
         "e": 38,
@@ -104,6 +108,7 @@
         "Ä": 66,
         "Å": 66,
         "Æ": 120,
+        "Œ":120,
         "Ç": 75,
         "È": 82,
         "É": 82,
@@ -197,6 +202,8 @@
         "Ⓨ": 43
     },
     "kerning_pairs": {
+        "tr": -4,
+        "ßß":-8,
         "CD": 5,
         "Aj": -14,
         "Ap": -7,
@@ -1136,6 +1143,7 @@
         "ⓛ",
         "ⓞ",
         "ⓣ",
-        "ⓨ"
+        "ⓨ",
+        "ß"
     ]
 }
