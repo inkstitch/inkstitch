@@ -1,6 +1,10 @@
 {
     "name": "Lobster AGS",
     "description": " The capital M is 19.8 millimeter wide at 100% scale. Can be scaled down to 80% or up to 150%. Every satin has zigzag underlay",
+    "keywords": [
+        "handwriting",
+        "italic"
+    ],
     "leading": 100,
     "auto_satin": false,
     "reversible": false,
@@ -8729,6 +8733,10 @@
         "C",
         "D",
         "E",
+        "É",
+        "È",
+        "Ê",
+        "Ë",
         "F",
         "G",
         "H",
@@ -8811,6 +8819,9 @@
         "=",
         ":",
         "!",
-        "\""
+        "\"",
+        "Ä",
+        "Ö",
+        "Ü"
     ]
 }
