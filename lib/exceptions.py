@@ -20,8 +20,11 @@ def get_os_version():
         os_ver = "Windows " + platform.release() + " version: " + platform.version()
     if sys.platform == "darwin":
         # macOS command line progam provides accurate info than python functions
-        mac_v = subprocess.run(["sw_vers"], capture_output=True, text=True)
-        os_ver = str(mac_v.stdout.strip())
+        mac_v1 = subprocess.run(["sw_vers"], capture_output=True, text=True)
+        mac_v1 = str(mac_v1.stdout.strip())
+        mac_v2 = subprocess.run(["uname",  "-m"], capture_output=True, text=True)
+        mac_v2 = str(mac_v2.stdout.strip())
+        os_ver = mac_v1 + "\nCPU:\t\t\t\t" + mac_v2
     if sys.platform == "linux":
         # Getting linux version method used here is for systemd and nonsystemd linux.
         try:

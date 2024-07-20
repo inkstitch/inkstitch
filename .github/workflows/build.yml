@@ -287,7 +287,7 @@ jobs:
         run: |
           brew update
 
-          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt || true
+          brew install gtk+3 pkg-config gobject-introspection libffi gettext jq gnu-getopt || true
 
           export LDFLAGS="-L/usr/local/opt/libffi/lib"
           export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
@@ -307,9 +307,9 @@ jobs:
           pip install pandas
           pip install pyarrow
           # remove and build shapely with brew geos version
-          pip uninstall -y shapely
-          pip cache remove shapely
-          pip install -v shapely --no-binary shapely
+          # pip uninstall -y shapely
+          # pip cache remove shapely
+          # pip install -v shapely --no-binary shapely
 
           pip install pyinstaller
 

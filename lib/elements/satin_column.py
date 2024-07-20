@@ -12,6 +12,7 @@ import numpy as np
 from inkex import paths
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
+from shapely import set_precision
 from shapely.ops import nearest_points
 
 from ..debug.debug import debug
@@ -572,7 +573,7 @@ class SatinColumn(EmbroideryElement):
     @cache
     def flattened_rails(self):
         """The rails, as LineStrings."""
-        paths = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
+        paths = [set_precision(shgeo.LineString(self.flatten_subpath(rail)), 0.00001) for rail in self.rails]
 
         rails_to_reverse = self._get_rails_to_reverse()
         if paths and rails_to_reverse is not None:
@@ -698,7 +699,6 @@ class SatinColumn(EmbroideryElement):
         rails = list(self.flattened_rails)
         rungs = self.flattened_rungs
         cut_points = [[], []]
-
         for rung in rungs:
             intersections = rung.intersection(shgeo.MultiLineString(rails))
             # ignore the rungs that are cutting a rail multiple times
