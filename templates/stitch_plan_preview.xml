@@ -38,9 +38,8 @@
             <label>Use this extension to render the stitch plan into the canvas.</label>
             <spacer />
             <label>
-                Please use realistic output options with care. Realistic render outputs can cause Inkscape to slow massivley down.
-                Designs with a lot of stitches shouldn't be rendered with vector, while the vector option can be prefered if the design
-                is huge. For huge designs with a lot of stitches consider to render in chunks or choose simple as the render mode.
+                Please use the realistic vector output option with care. Designs with many stitches can slow down Inkscape significantly.
+                Make sure that you save your design before using it.
             </label>
             <spacer />
             <label>More information on our website</label>
