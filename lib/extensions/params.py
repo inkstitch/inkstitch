@@ -595,9 +595,13 @@ class SettingsPanel(wx.Panel):
         return tabs
 
     def on_stitch_plan_rendered(self, stitch_plan):
-        self.simulator.stop()
-        self.simulator.load(stitch_plan)
-        self.simulator.go()
+        try:
+            self.simulator.stop()
+            self.simulator.load(stitch_plan)
+            self.simulator.go()
+        except RuntimeError:
+            # this can happen when they close the window at a bad time
+            pass
 
     def _hide_warning(self):
         self.warning_panel.clear()
