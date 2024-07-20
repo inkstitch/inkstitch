@@ -67,16 +67,7 @@ class LetteringPanel(wx.Panel):
         self.update_font_list()
         self.set_font_list()
 
-        self.SetSizer(outer_sizer)
-        self.Layout()
-
-        # SetSizerAndFit determined the minimum size that fits all the controls
-        # and set the window's minimum size so that the user can't make it
-        # smaller.  It also set the window to that size.  We'd like to give the
-        # user a bit more room for text, so we'll add some height.
-        size = self.options_panel.GetSize()
-        size.height = size.height + 200
-        self.options_panel.SetSize(size)
+        self.SetSizerAndFit(outer_sizer)
 
         self.load_settings()
         self.apply_settings()
@@ -174,9 +165,6 @@ class LetteringPanel(wx.Panel):
             else:
                 self.options_panel.font_chooser.Append(font.marked_custom_font_name)
 
-    def get_font_descriptions(self):
-        return {font.name: font.description for font in self.fonts.values()}
-
     def set_initial_font(self, font_id):
         if font_id:
             if font_id not in self.fonts_by_id:
@@ -242,8 +230,8 @@ class LetteringPanel(wx.Panel):
             self.options_panel.back_and_forth_checkbox.Disable()
             self.options_panel.back_and_forth_checkbox.SetValue(False)
 
+        self.options_panel.Layout()
         self.update_preview()
-        self.Layout()
 
     def on_filter_changed(self, event=None):
         self.update_font_list()

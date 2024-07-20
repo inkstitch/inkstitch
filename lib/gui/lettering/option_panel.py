@@ -102,4 +102,4 @@ class LetteringOptionsPanel(wx.Panel):
         outer_sizer.Add(text_input_sizer, 2, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
         # set panel sizer
-        self.SetSizer(outer_sizer)
+        self.SetSizerAndFit(outer_sizer)
