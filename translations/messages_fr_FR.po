@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-12 01:13+0000\n"
-"PO-Revision-Date: 2024-07-14 01:20\n"
+"POT-Creation-Date: 2024-07-21 01:20+0000\n"
+"PO-Revision-Date: 2024-07-21 01:20\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-12 01:13+0000\n"
+"POT-Creation-Date: 2024-07-21 01:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -800,11 +800,11 @@ msgstr "treillis hexagonal"
 msgid "weird one"
 msgstr "bizarre"
 
-#: inkstitch.py:162
+#: inkstitch.py:166
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
 msgstr "Ink/Stitch ne peut pas lire votre fichier SVG. C'est souvent le cas si vous utilisez un fichier créé avec Adobe Illustrator."
 
-#: inkstitch.py:165
+#: inkstitch.py:169
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
 msgstr "Essayez d'importer le fichier dans Inkscape avec 'Ficher > Import...' (Ctrl+I)"
 
@@ -921,21 +921,21 @@ msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, 
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:301 lib/commands.py:436
+#: lib/commands.py:302 lib/commands.py:438
 msgid "Ink/Stitch Command"
 msgstr "Commande Ink/Stitch"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:326
+#: lib/commands.py:327
 msgid "connector"
 msgstr "connecteur"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:345
+#: lib/commands.py:346
 msgid "command marker"
 msgstr "marqueur de commande"
 
-#: lib/commands.py:426
+#: lib/commands.py:427
 msgid "Please select a layer to include layer commands."
 msgstr "Merci de sélectionner un calque pour ajouter des commandes de calque."
 
@@ -1458,7 +1458,7 @@ msgstr "Augmente ou réduit l'espacement entre les rangées au fur et à mesure 
 msgid "Stagger rows this many times before repeating"
 msgstr "Décaler les rangées autant de fois avant de répéter"
 
-#: lib/elements/fill_stitch.py:371 lib/elements/satin_column.py:213
+#: lib/elements/fill_stitch.py:371 lib/elements/satin_column.py:214
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr "Longueur du cycle de décalage des rangées. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières."
 
@@ -1534,7 +1534,7 @@ msgstr "Mouvement aléatoire de la longueur du point"
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr "Pourcentage maximum de variation de la longueur du point appliqué si la longueur est rendue aléatoire."
 
-#: lib/elements/fill_stitch.py:522 lib/elements/satin_column.py:450
+#: lib/elements/fill_stitch.py:522 lib/elements/satin_column.py:451
 #: lib/elements/stroke.py:82
 msgid "Repeats"
 msgstr "Répétitions"
@@ -1554,7 +1554,7 @@ msgstr "Repasse sur chaque point le nombre de fois indiqué. Une valeur de 1 tri
 "Une valeur de 2 permettra de quintupler chaque point, etc.\n\n"
 "Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace."
 
-#: lib/elements/fill_stitch.py:550 lib/elements/satin_column.py:248
+#: lib/elements/fill_stitch.py:550 lib/elements/satin_column.py:249
 #: lib/elements/stroke.py:173
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
@@ -1587,7 +1587,7 @@ msgstr "Largeur de chevron"
 msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr "Défini la largeur d'un motif de chevrons. Utiliser 0 pour des bandes normales."
 
-#: lib/elements/fill_stitch.py:602 lib/elements/satin_column.py:276
+#: lib/elements/fill_stitch.py:602 lib/elements/satin_column.py:277
 #: lib/elements/stroke.py:186
 msgid "Pull compensation"
 msgstr "Compensation d'étirement"
@@ -1596,12 +1596,12 @@ msgstr "Compensation d'étirement"
 msgid "Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. This setting expands each row of stitches outward from the center of the row by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Les points de remplissage resserrent le tissu, ce qui entraîne une forme plus étroite que celle que vous dessinez dans Inkscape. Ce paramètre allonge d'une valeur fixe chaque rangée de ponts. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
-#: lib/elements/fill_stitch.py:607 lib/elements/satin_column.py:280
-#: lib/elements/satin_column.py:395 lib/elements/satin_column.py:489
+#: lib/elements/fill_stitch.py:607 lib/elements/satin_column.py:281
+#: lib/elements/satin_column.py:396 lib/elements/satin_column.py:490
 msgid "mm (each side)"
 msgstr "mm (de chaque côté)"
 
-#: lib/elements/fill_stitch.py:618 lib/elements/satin_column.py:261
+#: lib/elements/fill_stitch.py:618 lib/elements/satin_column.py:262
 msgid "Pull compensation percentage"
 msgstr "Pourcentage de compensation d'étirement"
 
@@ -1609,9 +1609,9 @@ msgstr "Pourcentage de compensation d'étirement"
 msgid "Additional pull compensation which varies as a percentage of row width. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Compensation d'étirement supplémentaire qui varie comme un pourcentage de la longueur de la rangée. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
-#: lib/elements/fill_stitch.py:622 lib/elements/satin_column.py:130
-#: lib/elements/satin_column.py:140 lib/elements/satin_column.py:264
-#: lib/elements/satin_column.py:410 lib/elements/satin_column.py:509
+#: lib/elements/fill_stitch.py:622 lib/elements/satin_column.py:131
+#: lib/elements/satin_column.py:141 lib/elements/satin_column.py:265
+#: lib/elements/satin_column.py:411 lib/elements/satin_column.py:510
 msgid "% (each side)"
 msgstr "% (de chaque côté)"
 
@@ -1657,12 +1657,12 @@ msgstr "défaut : égal à longueur max des points de remplissage"
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Rétrécit la forme avant de faire la sous-couche, pour empêcher que la sous-couche se montre en dehors du remplissage."
 
-#: lib/elements/fill_stitch.py:733 lib/elements/satin_column.py:531
+#: lib/elements/fill_stitch.py:733 lib/elements/satin_column.py:532
 #: lib/elements/stroke.py:397 lib/gui/satin_multicolor/colorize_panel.py:57
 msgid "Random seed"
 msgstr "Graine aléatoire"
 
-#: lib/elements/fill_stitch.py:734 lib/elements/satin_column.py:532
+#: lib/elements/fill_stitch.py:734 lib/elements/satin_column.py:533
 #: lib/elements/stroke.py:398
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément."
@@ -1707,387 +1707,387 @@ msgstr "* Allez dans l'onglet Style du contour"
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
 msgstr "* Sous \"Marqueurs\", choisissez la première option (vide) dans la première liste déroulante."
 
-#: lib/elements/satin_column.py:31 lib/elements/stroke.py:35
+#: lib/elements/satin_column.py:32 lib/elements/stroke.py:35
 msgid "Too few subpaths"
 msgstr "Trop peu de sous-chemins"
 
-#: lib/elements/satin_column.py:32
+#: lib/elements/satin_column.py:33
 msgid "Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails)."
 msgstr "Colonne satin: L'objet a trop peu de sous-chemins. Une colonne satin doit avoir au moins deux sous-chemins (les rails)."
 
-#: lib/elements/satin_column.py:34
+#: lib/elements/satin_column.py:35
 msgid "* Add another subpath (select two rails and do Path > Combine)"
 msgstr "* Ajouter un autre sous-chemin (sélectionner deux rails et faire Chemin>Combiner)"
 
-#: lib/elements/satin_column.py:35
+#: lib/elements/satin_column.py:36
 msgid "* Convert to running stitch or simple satin (Params extension)"
 msgstr "* Convertir en point droit ou satin simple (Params extension)"
 
-#: lib/elements/satin_column.py:40
+#: lib/elements/satin_column.py:41
 msgid "Not stitchable satin column"
 msgstr "Colonne de satin non brodable"
 
-#: lib/elements/satin_column.py:41
+#: lib/elements/satin_column.py:42
 msgid "A satin column consists out of two rails and one or more rungs. This satin column may have a different setup."
 msgstr "Une colonne satin est constituée de deux rails et d'une ou plusieurs traverses. Cette colonne satin peut avoir une configuration différente."
 
-#: lib/elements/satin_column.py:43
+#: lib/elements/satin_column.py:44
 msgid "Make sure your satin column is not a combination of multiple satin columns."
 msgstr "Assurez-vous que votre colonne satin n'est pas une combinaison de plusieurs colonnes satin."
 
-#: lib/elements/satin_column.py:44
+#: lib/elements/satin_column.py:45
 msgid "Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/"
 msgstr "Allez sur notre site web et lisez à quoi une colonne de satin devrait ressembler: https://inkstitch.org/fr/docs/stitches/satin-column/"
 
-#: lib/elements/satin_column.py:48
+#: lib/elements/satin_column.py:49
 msgid "Each rung should intersect both rails once."
 msgstr "Chaque traverse de direction doit couper chacun des deux rails une fois."
 
-#: lib/elements/satin_column.py:52
+#: lib/elements/satin_column.py:53
 msgid "Rail is a closed path"
 msgstr "Le rail est un chemin fermé"
 
-#: lib/elements/satin_column.py:53
+#: lib/elements/satin_column.py:54
 msgid "Rail is a closed path without a definite starting and ending point."
 msgstr "Le rail est un chemin fermé sans définition d'un point de départ et d'arrivée."
 
-#: lib/elements/satin_column.py:55
+#: lib/elements/satin_column.py:56
 msgid "* Select the node where you want the satin to start."
 msgstr "* Sélectionnez le point d'où vous voulez que le satin démarre."
 
-#: lib/elements/satin_column.py:56
+#: lib/elements/satin_column.py:57
 msgid "* Click on: Break path at selected nodes."
 msgstr "* Cliquez sur : Briser le chemin aux nœuds sélectionnés."
 
-#: lib/elements/satin_column.py:61
+#: lib/elements/satin_column.py:62
 msgid "Rung doesn't intersect rails"
 msgstr "La traverse de direction ne coupe pas les rails"
 
-#: lib/elements/satin_column.py:62
+#: lib/elements/satin_column.py:63
 msgid "Satin column: A rung doesn't intersect both rails."
 msgstr "Colonne satin : Une traverse de direction ne coupe pas les deux rails."
 
-#: lib/elements/satin_column.py:66
+#: lib/elements/satin_column.py:67
 msgid "Satin has no rungs"
 msgstr "La colonne satin n'a pas de traverses"
 
-#: lib/elements/satin_column.py:67
+#: lib/elements/satin_column.py:68
 msgid "Rungs control the stitch direction in satin columns. It is best pratice to use them."
 msgstr "Les traverses contrôlent la direction des points des colonnes satin. Il est préférable de les utiliser."
 
-#: lib/elements/satin_column.py:69 lib/elements/satin_column.py:83
-#: lib/elements/satin_column.py:94
+#: lib/elements/satin_column.py:70 lib/elements/satin_column.py:84
+#: lib/elements/satin_column.py:95
 msgid "* With the selected object press \"P\" to activate the pencil tool."
 msgstr "* L'objet étant sélectionné, appuyez sur \"P\" pour activer l'outil crayon."
 
-#: lib/elements/satin_column.py:70 lib/elements/satin_column.py:84
+#: lib/elements/satin_column.py:71 lib/elements/satin_column.py:85
 msgid "* Hold \"Shift\" while drawing a rung."
 msgstr "Maintenir la touche majuscule enfoncée tout en dessinant une traverse."
 
-#: lib/elements/satin_column.py:75
+#: lib/elements/satin_column.py:76
 msgid "Rungs intersects too many times"
 msgstr "La traverse de direction coupe les rails trop de fois"
 
-#: lib/elements/satin_column.py:76
+#: lib/elements/satin_column.py:77
 msgid "Satin column: A rung intersects a rail more than once."
 msgstr "Colonne satin: Une traverse de direction coupe un rail plus d'une fois."
 
-#: lib/elements/satin_column.py:80
+#: lib/elements/satin_column.py:81
 msgid "Satin has exactly two rungs"
 msgstr "La colonne satin a exactement deux traverses"
 
-#: lib/elements/satin_column.py:81
+#: lib/elements/satin_column.py:82
 msgid "There are exactly two rungs. This may lead to false rail/rung detection."
 msgstr "Il y a exactement deux traverses. Ceci peut conduire à une mauvaise détection des rails/traverses."
 
-#: lib/elements/satin_column.py:89
+#: lib/elements/satin_column.py:90
 msgid "Unequal number of points"
 msgstr "Nombre de points inégal"
 
-#: lib/elements/satin_column.py:90
+#: lib/elements/satin_column.py:91
 msgid "Satin column: There are no rungs and rails have an unequal number of points."
 msgstr "Colonne Satin : Il n'y a pas de traverses et les rails n'ont pas le même nombre de nœuds."
 
-#: lib/elements/satin_column.py:92
+#: lib/elements/satin_column.py:93
 msgid "The easiest way to solve this issue is to add one or more rungs. "
 msgstr "La façon la plus simple de résoudre ce problème est d'ajouter une ou plusieurs traverses de direction. "
 
-#: lib/elements/satin_column.py:93
+#: lib/elements/satin_column.py:94
 msgid "Rungs control the stitch direction in satin columns."
 msgstr "Les traverses de direction contrôlent la direction des points dans les colonnes Satin."
 
-#: lib/elements/satin_column.py:95
+#: lib/elements/satin_column.py:96
 msgid "* Hold \"Shift\" while drawing the rung."
 msgstr "* Maintenir la touche \"Majuscule\" enfoncée en traçant la traverse de direction."
 
-#: lib/elements/satin_column.py:100 lib/elements/satin_column.py:110
+#: lib/elements/satin_column.py:101 lib/elements/satin_column.py:111
 #: inx/inkstitch_select_elements.inx:31
 msgid "Satin Column"
 msgstr "Colonne Satin"
 
-#: lib/elements/satin_column.py:106
+#: lib/elements/satin_column.py:107
 msgid "Custom satin column"
 msgstr "Colonne de satin personnalisée"
 
-#: lib/elements/satin_column.py:111
+#: lib/elements/satin_column.py:112
 msgid "\"E\" Stitch"
 msgstr "Point en E"
 
-#: lib/elements/satin_column.py:112
+#: lib/elements/satin_column.py:113
 msgid "\"S\" Stitch"
 msgstr "Point en S"
 
-#: lib/elements/satin_column.py:113 lib/stitch_plan/lock_stitch.py:219
+#: lib/elements/satin_column.py:114 lib/stitch_plan/lock_stitch.py:219
 msgid "Zig-zag"
 msgstr "Zigzag"
 
-#: lib/elements/satin_column.py:117 lib/elements/stroke.py:72
+#: lib/elements/satin_column.py:118 lib/elements/stroke.py:72
 #: inx/inkstitch_break_apart.inx:9
 msgid "Method"
 msgstr "Méthode"
 
-#: lib/elements/satin_column.py:127
+#: lib/elements/satin_column.py:128
 msgid "Random percentage of satin width decrease"
 msgstr "Diminution aléatoire de la largeur du satin (%)"
 
-#: lib/elements/satin_column.py:128
+#: lib/elements/satin_column.py:129
 msgid "shorten stitch across rails at most this percent. Two values separated by a space may be used for an asymmetric effect."
 msgstr "réduire la largeur du satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
-#: lib/elements/satin_column.py:137
+#: lib/elements/satin_column.py:138
 msgid "Random percentage of satin width increase"
 msgstr "Augmentation aléatoire de la largeur du satin (%)"
 
-#: lib/elements/satin_column.py:138
+#: lib/elements/satin_column.py:139
 msgid "lengthen stitch across rails at most this percent. Two values separated by a space may be used for an asymmetric effect."
 msgstr "élargir le satin au plus de ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
-#: lib/elements/satin_column.py:147
+#: lib/elements/satin_column.py:148
 msgid "Random zig-zag spacing percentage"
 msgstr "Pourcentage aléatoire pour l'espacement zigzag"
 
-#: lib/elements/satin_column.py:148
+#: lib/elements/satin_column.py:149
 msgid "Amount of random jitter added to zigzag spacing."
 msgstr "Quantité d'aléatoire ajoutée à l'espacement zigzag."
 
-#: lib/elements/satin_column.py:154
+#: lib/elements/satin_column.py:155
 msgid "Default"
 msgstr "Par défaut"
 
-#: lib/elements/satin_column.py:155 lib/stitch_plan/lock_stitch.py:217
+#: lib/elements/satin_column.py:156 lib/stitch_plan/lock_stitch.py:217
 #: inx/inkstitch_break_apart.inx:10 inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Simple"
 msgstr "Simple"
 
-#: lib/elements/satin_column.py:156
+#: lib/elements/satin_column.py:157
 msgid "Staggered"
 msgstr "Décalés"
 
-#: lib/elements/satin_column.py:160
+#: lib/elements/satin_column.py:161
 msgid "Split Method"
 msgstr "Méthode de découpage"
 
-#: lib/elements/satin_column.py:162
+#: lib/elements/satin_column.py:163
 msgid "Display needle penetration points in simulator to see the effect of each split method."
 msgstr "Affichez les points de pénétration de l'aiguille dans le simulateur pour voir l'effet de chaque méthode de découpage."
 
-#: lib/elements/satin_column.py:171 lib/elements/satin_column.py:520
+#: lib/elements/satin_column.py:172 lib/elements/satin_column.py:521
 msgid "Maximum stitch length"
 msgstr "Longueur maximale du point"
 
-#: lib/elements/satin_column.py:172
+#: lib/elements/satin_column.py:173
 msgid "Maximum stitch length for split stitches."
 msgstr "Longueur maximale du point pour couper les points."
 
-#: lib/elements/satin_column.py:181
+#: lib/elements/satin_column.py:182
 msgid "Random jitter for split stitches"
 msgstr "Déplacement aléatoire pour le découpage des points"
 
-#: lib/elements/satin_column.py:182
+#: lib/elements/satin_column.py:183
 msgid "Randomizes split stitch length if random phase is enabled, stitch position if disabled."
 msgstr "Rend la longueur du point aléatoire si le découpage totalement aléatoire des points est activé. Sinon, le déplacement aléatoire du découpage se fait autour de sa position normale."
 
-#: lib/elements/satin_column.py:190
+#: lib/elements/satin_column.py:191
 msgid "Random phase for split stitches"
 msgstr "Découpage totalement aléatoire des points"
 
-#: lib/elements/satin_column.py:191
+#: lib/elements/satin_column.py:192
 msgid "Controls whether split stitches are centered or with a random phase (which may increase stitch count)."
 msgstr "Contrôle si le découpage des points est totalement aléatoire (ce qui peut modifier le nombre de points) ou s'il reste centré."
 
-#: lib/elements/satin_column.py:199
+#: lib/elements/satin_column.py:200
 msgid "Minimum length for random-phase split"
 msgstr "Longueur minimum du point si découpage totalement aléatoire"
 
-#: lib/elements/satin_column.py:200
+#: lib/elements/satin_column.py:201
 msgid "Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch."
 msgstr "Par défaut, prend la valeur de la longueur maximum du point. Une valeur inférieure permet une meilleure transition entre les points découpés et les points non découpés."
 
-#: lib/elements/satin_column.py:210
+#: lib/elements/satin_column.py:211
 msgid "Stagger split stitches this many times before repeating"
 msgstr "Décaler les découpages de points ce nombre de fois avant de répéter"
 
-#: lib/elements/satin_column.py:222
+#: lib/elements/satin_column.py:223
 msgid "Short stitch inset"
 msgstr "Décalage des points courts"
 
-#: lib/elements/satin_column.py:223
+#: lib/elements/satin_column.py:224
 msgid "Stitches in areas with high density will be inset by this amount."
 msgstr "Les points dans les zones à forte densité seront raccourcis de cette quantité."
 
-#: lib/elements/satin_column.py:233
+#: lib/elements/satin_column.py:234
 msgid "Short stitch distance"
 msgstr "Distance des points courts"
 
-#: lib/elements/satin_column.py:234
+#: lib/elements/satin_column.py:235
 msgid "Inset stitches if the distance between stitches is smaller than this."
 msgstr "Faire des points courts si la distance entre les crêtes est inférieure à cette valeur."
 
-#: lib/elements/satin_column.py:249
+#: lib/elements/satin_column.py:250
 msgid "Peak-to-peak distance between zig-zags. This is double the mm/stitch measurement used by most mechanical machines."
 msgstr "Distance entre les crêtes des zigzags. C'est le double de millimètres par point que ce qu'utilisent la plupart des machines à coudre."
 
-#: lib/elements/satin_column.py:262
+#: lib/elements/satin_column.py:263
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Compensation d'étirement supplémentaire qui varie comme un pourcentage de la largeur du point. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
-#: lib/elements/satin_column.py:277
+#: lib/elements/satin_column.py:278
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Les points satin resserrent le tissu, ce qui entraîne une colonne plus étroite que celle que vous dessinez dans Inkscape. Ce paramètre étend d'une valeur fixe chaque point depuis le centre vers l’extérieur de la colonne satin. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
-#: lib/elements/satin_column.py:291 lib/elements/stroke.py:299
+#: lib/elements/satin_column.py:292 lib/elements/stroke.py:299
 msgid "Automatic"
 msgstr "Automatique"
 
-#: lib/elements/satin_column.py:292 lib/elements/stroke.py:300
+#: lib/elements/satin_column.py:293 lib/elements/stroke.py:300
 msgid "Don't reverse"
 msgstr "Ne pas inverser"
 
-#: lib/elements/satin_column.py:293 lib/elements/stroke.py:301
+#: lib/elements/satin_column.py:294 lib/elements/stroke.py:301
 msgid "Reverse first rail"
 msgstr "Inverser la direction du premier rail"
 
-#: lib/elements/satin_column.py:294 lib/elements/stroke.py:302
+#: lib/elements/satin_column.py:295 lib/elements/stroke.py:302
 msgid "Reverse second rail"
 msgstr "Inverser la direction du second rail"
 
-#: lib/elements/satin_column.py:295 lib/elements/stroke.py:303
+#: lib/elements/satin_column.py:296 lib/elements/stroke.py:303
 msgid "Reverse both rails"
 msgstr "Inverser la direction des deux rails"
 
-#: lib/elements/satin_column.py:301 lib/elements/stroke.py:309
+#: lib/elements/satin_column.py:302 lib/elements/stroke.py:309
 msgid "Reverse rails"
 msgstr "Inverser la direction des rails"
 
-#: lib/elements/satin_column.py:302
+#: lib/elements/satin_column.py:303
 msgid "This may help if your satin renders very strangely.  Default: automatically detect and fix a reversed rail."
 msgstr "Ceci peut aider si le rendu de votre satin est étrange. La valeur par défaut Automatique détecte et corrige le cas des deux rails ayant une direction opposée."
 
-#: lib/elements/satin_column.py:351
+#: lib/elements/satin_column.py:352
 msgid "Swap rails"
 msgstr "Echanger les rails"
 
-#: lib/elements/satin_column.py:352
+#: lib/elements/satin_column.py:353
 msgid "Swaps the first and second rails of the satin column, affecting which side the thread finished on as well as any sided properties"
 msgstr "Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques"
 
-#: lib/elements/satin_column.py:361
+#: lib/elements/satin_column.py:362
 msgid "Contour underlay"
 msgstr "Sous-couche de contour"
 
-#: lib/elements/satin_column.py:361 lib/elements/satin_column.py:368
-#: lib/elements/satin_column.py:382 lib/elements/satin_column.py:394
-#: lib/elements/satin_column.py:409
+#: lib/elements/satin_column.py:362 lib/elements/satin_column.py:369
+#: lib/elements/satin_column.py:383 lib/elements/satin_column.py:395
+#: lib/elements/satin_column.py:410
 msgid "Contour Underlay"
 msgstr "Sous-couche de Contour"
 
-#: lib/elements/satin_column.py:368 lib/elements/satin_column.py:425
+#: lib/elements/satin_column.py:369 lib/elements/satin_column.py:426
 msgid "Stitch length"
 msgstr "Longueur de point"
 
-#: lib/elements/satin_column.py:375 lib/elements/satin_column.py:432
+#: lib/elements/satin_column.py:376 lib/elements/satin_column.py:433
 #: lib/elements/stroke.py:120
 msgid "Stitch tolerance"
 msgstr "Tolérance"
 
-#: lib/elements/satin_column.py:376
+#: lib/elements/satin_column.py:377
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. "
 msgstr "Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible signifie que les points seront plus rapprochés. Une tolérance plus élevée signifie que les angles vifs peuvent être arrondis. "
 
-#: lib/elements/satin_column.py:392
+#: lib/elements/satin_column.py:393
 msgid "Inset distance (fixed)"
 msgstr "Décalage (fixe)"
 
-#: lib/elements/satin_column.py:393
+#: lib/elements/satin_column.py:394
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Rétrécir le contour, pour empêcher que la sous-couche ne se voit autour de la colonne satin."
 
-#: lib/elements/satin_column.py:406
+#: lib/elements/satin_column.py:407
 msgid "Inset distance (proportional)"
 msgstr "Décalage (proportionnel)"
 
-#: lib/elements/satin_column.py:407
+#: lib/elements/satin_column.py:408
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Rétrécir le contour proportionnellement à la largeur de la colonne pour empêcher que la sous-couche ne se voit autour de la colonne satin."
 
-#: lib/elements/satin_column.py:418
+#: lib/elements/satin_column.py:419
 msgid "Center-walk underlay"
 msgstr "Sous-couche centrale"
 
-#: lib/elements/satin_column.py:418 lib/elements/satin_column.py:425
-#: lib/elements/satin_column.py:440 lib/elements/satin_column.py:453
-#: lib/elements/satin_column.py:463
+#: lib/elements/satin_column.py:419 lib/elements/satin_column.py:426
+#: lib/elements/satin_column.py:441 lib/elements/satin_column.py:454
+#: lib/elements/satin_column.py:464
 msgid "Center-Walk Underlay"
 msgstr "Sous-couche centrale"
 
-#: lib/elements/satin_column.py:433
+#: lib/elements/satin_column.py:434
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
 msgstr "Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible signifie que les points seront plus rapprochés. Une tolérance plus élevée signifie que les angles vifs peuvent être arrondis. Prend par défaut la valeur de la longueur du point."
 
-#: lib/elements/satin_column.py:451
+#: lib/elements/satin_column.py:452
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr "Pour un nombre impair de répétitions, ceci renversa la direction de broderie de la colonne satin, la broderie commençant et terminant au point de départ."
 
-#: lib/elements/satin_column.py:461 lib/gui/tartan/customize_panel.py:38
+#: lib/elements/satin_column.py:462 lib/gui/tartan/customize_panel.py:38
 msgid "Position"
 msgstr "Position"
 
-#: lib/elements/satin_column.py:462
+#: lib/elements/satin_column.py:463
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr "Position de la sous-couche entre les rails. A 0% la sous couche est le long du premier rail, à 50% centrée, à 100% le long du second rail."
 
-#: lib/elements/satin_column.py:470
+#: lib/elements/satin_column.py:471
 msgid "Zig-zag underlay"
 msgstr "Sous-couche Zig-Zag"
 
-#: lib/elements/satin_column.py:470 lib/elements/satin_column.py:479
-#: lib/elements/satin_column.py:490 lib/elements/satin_column.py:510
-#: lib/elements/satin_column.py:523
+#: lib/elements/satin_column.py:471 lib/elements/satin_column.py:480
+#: lib/elements/satin_column.py:491 lib/elements/satin_column.py:511
+#: lib/elements/satin_column.py:524
 msgid "Zig-zag Underlay"
 msgstr "Sous-couche Zig-Zag"
 
-#: lib/elements/satin_column.py:476
+#: lib/elements/satin_column.py:477
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
 
-#: lib/elements/satin_column.py:477
+#: lib/elements/satin_column.py:478
 msgid "Distance between peaks of the zig-zags."
 msgstr "Distance entre les crêtes des zig-zags."
 
-#: lib/elements/satin_column.py:487
+#: lib/elements/satin_column.py:488
 msgid "Inset amount (fixed)"
 msgstr "Décalage (fixe)"
 
-#: lib/elements/satin_column.py:488 lib/elements/satin_column.py:508
+#: lib/elements/satin_column.py:489 lib/elements/satin_column.py:509
 msgid "default: half of contour underlay inset"
 msgstr "par défaut: la moitié du décalage du contour de la sous-couche"
 
-#: lib/elements/satin_column.py:507
+#: lib/elements/satin_column.py:508
 msgid "Inset amount (proportional)"
 msgstr "Décalage (proportionnel)"
 
-#: lib/elements/satin_column.py:521
+#: lib/elements/satin_column.py:522
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Découper le point en plusieurs si sa longueur dépasse la longueur maximale définie"
 
@@ -2103,12 +2103,12 @@ msgstr "* Convertir en trait : sélectionnez l'élément et ouvrez la boîte de 
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr "* Utilisation en colonne satin : ajouter un autre rail et éventuellement des traverses."
 
-#: lib/elements/stroke.py:44 lib/extensions/params.py:589
+#: lib/elements/stroke.py:44 lib/extensions/params.py:592
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "Trait"
 
-#: lib/elements/stroke.py:47
+#: lib/elements/stroke.py:47 lib/extensions/params.py:271
 msgid "Running stitch along paths"
 msgstr "Points droits le long des chemins"
 
@@ -2295,13 +2295,13 @@ msgstr "* Texte : Créez vos propres lettres ou essayez l'outil de lettrage :"
 msgid "- Extensions > Ink/Stitch > Lettering"
 msgstr "- Extensions > Ink/Stitch > Lettrage"
 
-#: lib/exceptions.py:50
+#: lib/exceptions.py:53
 msgid "Ink/Stitch experienced an unexpected error. This means it is a bug in Ink/Stitch."
 msgstr "Ink/Stitch a rencontré une erreur inattendue. Ceci signifie qu'il s'agit d'un bug dans Ink/Stitch."
 
 #. this message is followed by a URL:
 #. https://github.com/inkstitch/inkstitch/issues/new
-#: lib/exceptions.py:53
+#: lib/exceptions.py:56
 msgid "If you'd like to help please\n"
 "- copy the entire error message below\n"
 "- save your SVG file and\n"
@@ -2311,7 +2311,7 @@ msgstr "Si vous souhaitez aider, merci de \n"
 "- sauvegarder votre fichier svg\n"
 "- créer un rapport d'erreur (issue) sur"
 
-#: lib/exceptions.py:58
+#: lib/exceptions.py:61
 msgid "Include the error description and also (if possible) the svg file."
 msgstr "Incluez la description de l'erreur et (si possible) le fichier svg."
 
@@ -2563,7 +2563,7 @@ msgstr "Nous n'avons pas trouvé de couleurs de remplissage sur vos éléments d
 msgid "Please select at least one object with a gradient fill."
 msgstr "Merci de sélectionner au moins un objet avec un remplissage en dégradé."
 
-#: lib/extensions/input.py:19
+#: lib/extensions/input.py:20
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
 msgstr "Ink/Stitch ne peut pas importer directement les formats de couleur. Mais vous pouvez ouvrir le fichier de broderie et appliquer la couleur avec Extensions > Ink/Stitch > Gestion des couleurs de fil > Appliquer la liste de fils."
 
@@ -2673,54 +2673,54 @@ msgstr "Impossible de lire la palette : header de palette GIMP invalide"
 msgid "Thread Palette"
 msgstr "Palette de fil"
 
-#: lib/extensions/params.py:280
+#: lib/extensions/params.py:283
 msgid "These settings will be applied to 1 object."
 msgstr "Ces paramètres seront appliqués à 1 objet."
 
-#: lib/extensions/params.py:282
+#: lib/extensions/params.py:285
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr "Ces paramètres seront appliqués aux %d objets."
 
-#: lib/extensions/params.py:287
+#: lib/extensions/params.py:290
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr "Certains paramètres ont des valeurs différentes d'un objet à l'autre. Sélectionnez une valeur dans la liste déroulante ou entrez-en une nouvelle."
 
-#: lib/extensions/params.py:292
+#: lib/extensions/params.py:295
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr "La désactivation de cet onglet désactivera les onglets %d suivants."
 
-#: lib/extensions/params.py:296
+#: lib/extensions/params.py:299
 msgid "Disabling this tab will disable the following tab."
 msgstr "La désactivation de cet onglet désactivera l'onglet suivant."
 
-#: lib/extensions/params.py:300
+#: lib/extensions/params.py:303
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr "Activer cet onglet désactivera %s et vice-versa."
 
-#: lib/extensions/params.py:380
+#: lib/extensions/params.py:383
 msgid "Inkscape objects"
 msgstr "Objets Inkscape"
 
-#: lib/extensions/params.py:440
+#: lib/extensions/params.py:443
 msgid "No options available"
 msgstr "Aucune option disponible"
 
-#: lib/extensions/params.py:460
+#: lib/extensions/params.py:463
 msgid "Re-roll"
 msgstr "Relancer"
 
-#: lib/extensions/params.py:489
+#: lib/extensions/params.py:492
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr "Cliquez pour forcer l’enregistrement de ce paramètre lorsque vous cliquez sur « Appliquer et quitter »"
 
-#: lib/extensions/params.py:499
+#: lib/extensions/params.py:502
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et quitter »"
 
-#: lib/extensions/params.py:526 lib/gui/lettering/main_panel.py:58
+#: lib/extensions/params.py:529 lib/gui/lettering/main_panel.py:58
 #: lib/gui/lettering_font_sample.py:57
 #: lib/gui/satin_multicolor/main_panel.py:54
 #: lib/gui/simulator/simulator_preferences.py:44
@@ -2731,15 +2731,15 @@ msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et
 msgid "Cancel"
 msgstr "Annuler"
 
-#: lib/extensions/params.py:531
+#: lib/extensions/params.py:534
 msgid "Use Last Settings"
 msgstr "Utiliser les derniers paramètres"
 
-#: lib/extensions/params.py:534 lib/gui/lettering/main_panel.py:56
+#: lib/extensions/params.py:537 lib/gui/lettering/main_panel.py:56
 msgid "Apply and Quit"
 msgstr "Appliquer et Quitter"
 
-#: lib/extensions/params.py:825
+#: lib/extensions/params.py:832
 msgid "Embroidery Params"
 msgstr "Paramètres de broderie"
 
@@ -2765,19 +2765,19 @@ msgstr "Impression Ink/Stitch"
 msgid "Please select one or more strokes."
 msgstr "Merci de sélectionner un ou plusieurs traits."
 
-#: lib/extensions/redwork.py:98
+#: lib/extensions/redwork.py:103
 msgid "Redwork Group"
 msgstr "Groupe de redwork"
 
-#: lib/extensions/redwork.py:107
+#: lib/extensions/redwork.py:112
 msgid "Connected Group"
 msgstr "Groupe connecté"
 
-#: lib/extensions/redwork.py:116 inx/inkstitch_redwork.inx:3
+#: lib/extensions/redwork.py:121 inx/inkstitch_redwork.inx:3
 msgid "Redwork"
 msgstr "Redwork"
 
-#: lib/extensions/redwork.py:121
+#: lib/extensions/redwork.py:126
 msgid "Redwork Underpath"
 msgstr "Chemin de dessous redwork"
 
@@ -3029,19 +3029,19 @@ msgstr "Une bibliothèque de fontes avec description complète et exemples brod�
 msgid "https://inkstitch.org/fonts/font-library/"
 msgstr "https://inkstitch.org/fr/fonts/font-library/"
 
-#: lib/gui/lettering/main_panel.py:232
+#: lib/gui/lettering/main_panel.py:220
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Cette police n'a pas de variante de police disponible. Veuillez mettre à jour ou supprimer la police."
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/gui/lettering/main_panel.py:294
+#: lib/gui/lettering/main_panel.py:282
 #, python-format
 msgid "Text scale %s%%"
 msgstr "Échelle du texte %s%%"
 
-#: lib/gui/lettering/main_panel.py:305
+#: lib/gui/lettering/main_panel.py:293
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
@@ -4648,7 +4648,7 @@ msgstr "Cette extension tente de créer un chemin de broderie unique qui parcour
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:15
 #: inx/inkstitch_letters_to_font.inx:69 inx/inkstitch_outline.inx:28
-#: inx/inkstitch_redwork.inx:26 inx/inkstitch_stitch_plan_preview.inx:46
+#: inx/inkstitch_redwork.inx:26 inx/inkstitch_stitch_plan_preview.inx:45
 #: inx/inkstitch_troubleshoot.inx:15 inx/inkstitch_unlink_clone.inx:13
 msgid "More information on our website"
 msgstr "Plus d'information sur notre site web"
@@ -4914,7 +4914,7 @@ msgstr "https://inkstitch.org/fr/docs/visualize/#density-map"
 
 #: inx/inkstitch_density_map.inx:38 inx/inkstitch_display_stacking_order.inx:23
 #: inx/inkstitch_print.inx:10 inx/inkstitch_simulator.inx:10
-#: inx/inkstitch_stitch_plan_preview.inx:55
+#: inx/inkstitch_stitch_plan_preview.inx:54
 #: inx/inkstitch_stitch_plan_preview_undo.inx:10
 msgid "Visualize and Export"
 msgstr "Visualiser et exporter"
@@ -6735,10 +6735,10 @@ msgid "Use this extension to render the stitch plan into the canvas."
 msgstr "Utilisez cette extension pour obtenir un rendu de la broderie sur la toile."
 
 #: inx/inkstitch_stitch_plan_preview.inx:40
-msgid "Please use realistic output options with care. Realistic render outputs can cause Inkscape to slow massivley down. Designs with a lot of stitches shouldn't be rendered with vector, while the vector option can be prefered if the design is huge. For huge designs with a lot of stitches consider to render in chunks or choose simple as the render mode."
-msgstr "Merci d'utliser les options réallistes avec attention. Les rendus réalistes peuvent causer un très fort ralentissement d'inkscape. Il est recommandé de ne pas utilliser le rendu vectoriel pour les broderies avec beaucoup de points. En revanche, le rendu vectoriel est recommandé pour les broderies de grande taille avec relativement peu de points. Pour des broderies de grande taille avec beaucoup de points, choisissez un rendu simple ou si vous désirez un rendu réalliste, réalisez le rendu en plusieurs morceaux."
+msgid "Please use the realistic vector output option with care. Designs with many stitches can slow down Inkscape significantly. Make sure that you save your design before using it."
+msgstr ""
 
-#: inx/inkstitch_stitch_plan_preview.inx:47
+#: inx/inkstitch_stitch_plan_preview.inx:46
 msgid "https://inkstitch.org/docs/visualize/#stitch-plan-preview"
 msgstr "https://inkstitch.org/fr/docs/visualize/#stitch-plan-preview"
 
