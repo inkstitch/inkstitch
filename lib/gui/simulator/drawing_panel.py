@@ -277,9 +277,12 @@ class DrawingPanel(wx.Panel):
             return
 
         if not self.animating:
-            self.animating = True
-            self.animate()
-            self.control_panel.on_start()
+            try:
+                self.animating = True
+                self.animate()
+                self.control_panel.on_start()
+            except RuntimeError:
+                pass
 
     def color_to_pen(self, color):
         line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
