@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-21 01:20+0000\n"
-"PO-Revision-Date: 2024-07-21 01:20\n"
+"POT-Creation-Date: 2024-07-21 08:55+0000\n"
+"PO-Revision-Date: 2024-07-21 08:55\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-21 01:20+0000\n"
+"POT-Creation-Date: 2024-07-21 08:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3426,7 +3426,7 @@ msgstr "FARBWECHSEL"
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr "Maße: {:.2f} x {:.2f}"
 
-#: lib/gui/simulator/drawing_panel.py:358
+#: lib/gui/simulator/drawing_panel.py:361
 #, python-format
 msgid "Command: %s"
 msgstr "Befehl: %s"
@@ -6735,7 +6735,7 @@ msgstr "Diese Erweiterung fügt den Stichplan in die Arbeitsfläche ein."
 
 #: inx/inkstitch_stitch_plan_preview.inx:40
 msgid "Please use the realistic vector output option with care. Designs with many stitches can slow down Inkscape significantly. Make sure that you save your design before using it."
-msgstr ""
+msgstr "Bitte die Option „Realistisch Vektor (langsam)“ mit Vorsicht verwenden. Designs mit vielen Stichen können Inkscape erheblich verlangsamen. Es immer sinnvoll, die Datei vor dem Ausführen dieser Funktion zu speichern."
 
 #: inx/inkstitch_stitch_plan_preview.inx:46
 msgid "https://inkstitch.org/docs/visualize/#stitch-plan-preview"
