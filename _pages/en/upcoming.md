@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version (3.1.0)"
 permalink: /upcoming/
-last_modified_at: 2024-07-13
+last_modified_at: 2024-07-21
 sidebar:
   nav: pages
 toc: true
@@ -408,6 +408,17 @@ to manual stitches and keep previous behavior. [#2866](https://github.com/inksti
 * [#2653](https://github.com/inkstitch/inkstitch/issues/2653) [#2720](https://github.com/inkstitch/inkstitch/issues/2720) Updated debug and profiling procedures
 
 ## Bug Fixes
+
+
+* [#3097](https://github.com/inkstitch/inkstitch/issues/3097) [#3101](https://github.com/inkstitch/inkstitch/issues/3101) Prevent some RuntimeError occurences when simulator closes
+* [#3095](https://github.com/inkstitch/inkstitch/issues/3095) Lettering wrap font description
+* [#3094](https://github.com/inkstitch/inkstitch/issues/3094) shapely arm fix
+* [#3098](https://github.com/inkstitch/inkstitch/issues/3098) Fix issue in about extension template
+* [#3081](https://github.com/inkstitch/inkstitch/issues/3081) Ignore warnings in releases
+* [#3089](https://github.com/inkstitch/inkstitch/issues/3089) Fill: fallback to edge run when underpath fails
+* [#3090](https://github.com/inkstitch/inkstitch/issues/3090) Fix satin and stroke presets
+* [#3075](https://github.com/inkstitch/inkstitch/issues/3075) Fix command translations
+* [#3082](https://github.com/inkstitch/inkstitch/issues/3082) redwork: fix starting_point issue
 
 * [#3071](https://github.com/inkstitch/inkstitch/issues/3071) Lettering: skip font with corrupt json file
 * [#3074](https://github.com/inkstitch/inkstitch/issues/3074) Reset corrupted cache files
