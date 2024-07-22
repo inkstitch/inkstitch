@@ -101,7 +101,7 @@ class Stroke(EmbroideryElement):
         default=0,
         sort_index=3)
     def bean_stitch_repeats(self):
-        return self.get_multiple_int_param("bean_stitch_repeats", "0")
+        return self.get_multiple_int_param("bean_stitch_repeats", 0)
 
     @property
     @param('running_stitch_length_mm',
