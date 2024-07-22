@@ -292,14 +292,14 @@ Visualise et Exporter > Export pdf
 
 `Visualiser et exporter > Simulateur`
 
-**Annonce importante**<br> Simulateur et Vue réaliste ont divorcés. `Vue réaliste` et `Aperçu du plan de broderie` ont commençé une vie commune.<br><br><span style="font-style: italic;"> L'aperçu réaliste a été déplacé vers l'apercu du plan de  broderie. </span>
+**Annonce importante**<br> Simulateur et Vue réaliste ont divorcé. `Vue réaliste` et `Aperçu du plan de broderie` ont commençé une vie commune.<br><br><span style="font-style: italic;"> L'aperçu réaliste a été déplacé vers l'apercu du plan de  broderie. </span>
 {: .notice--warning }
 
 * Meilleur simulateur pour Paramètres et Lettrage ([#2481](https://github.com/inkstitch/inkstitch/issues/2481))
 * Le simulateur est maintenant attaché à la fenêtre principale (Paramètre et Lettrage)([#2557](https://github.com/inkstitch/inkstitch/issues/2557)), il est détachable, et son dernier état est conservé.
 * La couleur de fond du simulateur est maintenant modifiable, et il a la capacité de montrer/cacher les sauts de fil. ([#2844](https://github.com/inkstitch/inkstitch/issues/2844))
 * Le simulateur a un bouton préférence pour modifier l'épaisseur  des traits et la taille des points de pénétration de l'aiguille ([#2992](https://github.com/inkstitch/inkstitch/issues/2992))
-* Les couleurs sont rendus visibles sur n'importe quel couleur  de fond([#3010](https://github.com/inkstitch/inkstitch/issues/3010))
+* Les couleurs sont rendues visibles sur n'importe quelle couleur  de fond([#3010](https://github.com/inkstitch/inkstitch/issues/3010))
 
 ### [Prévisualisaton du plan de broderie](/fr/docs/visualize/#stitch-plan-preview)
 
@@ -369,7 +369,7 @@ Ajout d'options
 
 ### Polylines
 Dans les versions précédentes les polylines  étaient considérés come un type spécial de point (en fait un point manuel).
-Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu par défaut soit par des points droits (quand ils ont une couleur de trait), soit par des remplissages automatiques (lorsqu'ils ont une  couleur de fond). Dans  tout  fichier préexistant avec des  polylines, l'application de pararamètrage les convertiront automatiquement en point manuel afin de conserver leur comportement précédent.
+Ils seront  maintenant reconnus comme des objets de type chemin normaux et rendu par défaut soit par des points droits (quand ils ont une couleur de trait), soit par des remplissages automatiques (lorsqu'ils ont une  couleur de fond). Dans  tout  fichier préexistant avec des  polylines, l'application de pararamètrage les convertira automatiquement en point manuel afin de conserver leur comportement précédent.
 
 ## Export
 
