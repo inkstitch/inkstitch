@@ -7,7 +7,7 @@ excerpt: "Ink/Stitch logo als SVG Datei, digitalisierte Version und Branding-Lei
 toc: true
 image: /assets/images/tutorials/logo/InkStitch_Multi_Color.svg
 
-topic: "branding-guide" #This is the key we are searching for in _tutorials/002-001-branding-guide.md. It serves to include this file to the tutorial navigation.
+topic: "branding-guide-de" #This is the key we are searching for in _tutorials/002-001-branding-guide.md. It serves to include this file to the tutorial navigation.
 
 tutorial-typ:
   - Beispieldatei
