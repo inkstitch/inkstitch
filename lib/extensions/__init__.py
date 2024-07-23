@@ -58,6 +58,7 @@ from .select_elements import SelectElements
 from .selection_to_guide_line import SelectionToGuideLine
 from .selection_to_pattern import SelectionToPattern
 from .simulator import Simulator
+from .stereogram import Stereogram
 from .stitch_plan_preview import StitchPlanPreview
 from .stitch_plan_preview_undo import StitchPlanPreviewUndo
 from .stroke_to_lpe_satin import StrokeToLpeSatin
@@ -125,6 +126,7 @@ __all__ = extensions = [About,
                         SelectionToGuideLine,
                         SelectionToPattern,
                         Simulator,
+                        Stereogram,
                         StitchPlanPreview,
                         StitchPlanPreviewUndo,
                         StrokeToLpeSatin,
