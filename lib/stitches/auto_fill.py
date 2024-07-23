@@ -869,7 +869,14 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
     """Create stitches to get from one point on an outline of the shape to another."""
 
     start, end = edge
-    path = networkx.shortest_path(travel_graph, start, end, weight='weight')
+    try:
+        path = networkx.shortest_path(travel_graph, start, end, weight='weight')
+    except networkx.NetworkXNoPath:
+        # TODO: find a better solution, this may produce unwanted jump stitches
+        # but at least it renders the requested shape
+        # test case: underpath disabled, starts and ends on different outlines
+        return
+
     if underpath and path != (start, end):
         path = smooth_path(path, 2)
     else:
