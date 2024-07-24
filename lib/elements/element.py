@@ -146,12 +146,12 @@ class EmbroideryElement(object):
 
     # returns an array of multiple space separated int values
     @cache
-    def get_multiple_int_param(self, param, default=0):
+    def get_multiple_int_param(self, param, default="0"):
         params = self.get_param(param, default).split(" ")
         try:
             params = [int(param) for param in params if param]
         except (TypeError, ValueError):
-            return [default]
+            return [int(default)]
         return params
 
     def set_param(self, name, value):
