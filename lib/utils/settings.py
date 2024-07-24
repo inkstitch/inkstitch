@@ -7,7 +7,7 @@ from .paths import get_user_dir
 # These settings are the defaults for SVG metadata settings of the same name in
 # lib.extensions.base.InkstitchMetadata
 DEFAULT_METADATA = {
-    "min_stitch_len_mm": 0,
+    "min_stitch_len_mm": 0.1,
     "collapse_len_mm": 3,
 }
 

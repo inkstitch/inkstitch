@@ -47,7 +47,7 @@ class PreferencesFrame(wx.Frame):
             value=str(metadata['collapse_len_mm'] or global_settings['default_collapse_len_mm']),
             style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
         )
-        self.minimum_jump_stitch_length.SetDigits(1)
+        self.minimum_jump_stitch_length.SetDigits(2)
         this_svg_grid.Add(self.minimum_jump_stitch_length, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         label_2 = wx.StaticText(self.this_svg_page, wx.ID_ANY, _("mm"))
@@ -64,7 +64,7 @@ class PreferencesFrame(wx.Frame):
             value=str(metadata['min_stitch_len_mm'] or global_settings['default_min_stitch_len_mm']),
             style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
         )
-        self.minimum_stitch_length.SetDigits(1)
+        self.minimum_stitch_length.SetDigits(2)
         this_svg_grid.Add(self.minimum_stitch_length, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         label_4 = wx.StaticText(self.this_svg_page, wx.ID_ANY, _("mm"))
@@ -95,7 +95,7 @@ class PreferencesFrame(wx.Frame):
             value=str(global_settings['default_collapse_len_mm']),
             style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
         )
-        self.default_minimum_jump_stitch_length.SetDigits(1)
+        self.default_minimum_jump_stitch_length.SetDigits(2)
         global_grid_sizer.Add(self.default_minimum_jump_stitch_length, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         label_6 = wx.StaticText(self.global_page, wx.ID_ANY, _("mm"))
@@ -111,7 +111,7 @@ class PreferencesFrame(wx.Frame):
             value=str(global_settings['default_min_stitch_len_mm']),
             style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
         )
-        self.default_minimum_stitch_length.SetDigits(1)
+        self.default_minimum_stitch_length.SetDigits(2)
         global_grid_sizer.Add(self.default_minimum_stitch_length, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         label_8 = wx.StaticText(self.global_page, wx.ID_ANY, _("mm"))
