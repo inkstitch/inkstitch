@@ -63,6 +63,11 @@ toc: true
   <img 
      src="/assets/images/fonts/ondulamarif_small.png"
      alt="Ondulamarif XL " height="33">
+
+     
+* [Perspective Tricolore KOR](/fonts/perspective_tricolore_KOR/) ([#3112](https://github.com/inkstitch/inkstitch/pull/3112))
+
+  ![Perspective preview](/assets/images/fonts/perspective_tricolore_KOR.png)
 * [Roaring twenties KOR](/de/fonts/roaring_twenties_KOR/) ([#2856](https://github.com/inkstitch/inkstitch/issues/2856))
 
   ![Roaring twenties preview](/assets/images/fonts/roaring_twenties_KOR.jpg)
