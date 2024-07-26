@@ -9,7 +9,6 @@ preview_image:
 {%- assign font = site.data.fonts.abecedaire.font -%}
 ![Abecedaire](/assets/images/fonts/abecedaire.jpg)
 
-Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
 ## Schriftzeichen
 
