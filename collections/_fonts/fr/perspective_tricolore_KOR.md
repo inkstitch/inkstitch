@@ -8,7 +8,7 @@ preview_image:
     height: 14
 ---
 {%- assign font = site.data.fonts.perspective_tricolore_KOR.font -%}
-![Abecedaire](/assets/images/fonts/perspective_tricolore_KOR.png)
+![Perspective_Tricolore_KOR](/assets/images/fonts/perspective_tricolore_KOR.png)
 
 ## Glyphes
 
