@@ -15,7 +15,7 @@
                 gui-description="Realistic modes will render to a raster image for performance reasons. Realistic Vector may cause Inkscape to slow down for complex designs.">
                 <option value="simple">Stitch Plan</option>
                 <option value="realistic-300">Realistic View</option>
-                <option value="realistic-600">Realistic  View  (High Quality) </option>
+                <option value="realistic-600">Realistic View (High Quality)</option>
                 <option value="realistic-vector">Realistic Vector (slow)</option>
             </param>
             <spacer />
