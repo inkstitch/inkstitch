@@ -4,8 +4,6 @@ permalink: /fr/docs/stitches/linear-gradient-fill/
 last_modified_at: 2024-05-07
 toc: true
 ---
- {% include upcoming_release.html %}
-
 ## Qu'est ce que c'est 
 
 [![Linear Gradient Fill Sample](/assets/images/docs/linear-gradient.jpg){: width="200x"}](/assets/images/docs/linear-gradient.svg){: title="Download SVG File" .align-left download="linear-gradient.svg" }

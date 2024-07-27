@@ -25,8 +25,6 @@ You will either get a message, that no error could be found or a new layer with 
 
 ## Element Info
 
-{% include upcoming_release.html %}
-
 This extension informs about various parameters of selected stitch elements.
 
 ![Element info](/assets/images/docs/en/element_info.png)
@@ -46,7 +44,6 @@ The extensions will remove embroidery settings from your entire design or from s
 
 * Remove params
 * Remove commands
-  {% include upcoming_release.html %}
   (all/none/specific command only)
 * Remove print settings from SVG metadata
 
@@ -59,7 +56,6 @@ Sometimes you will find very small shapes and leftover objects from various oper
 * Run `Extensions > Ink/Stitch > Troubleshoot > Cleanup Document...`
 * Choose which types of objects should be removed and define a threshold
 * Click apply
- {% include upcoming_release.html %}
 * You may also  choose  to additionnaly delete empty groups or layers 
 * Check test run option to display names of the elements that will be removed with the current settings without actually removing anything
 

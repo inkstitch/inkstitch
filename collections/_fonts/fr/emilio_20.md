@@ -89,8 +89,6 @@ Elle peut être agrandie jusqu'à 120% (env 120 mm) ou diminuée jusqu'à 90% (e
 
 ### Emilio 20 Simple Small
 
-{% include upcoming_release.html %}
-
 La fonte Emilio 20 Simple Small est une déclinaison de Emilio 20 Simple avec des paramètres de broderie différents. La densité, la compensation et les sous-couches ont été modifiées pour permettre de broder cette fonte en plus petite taille.
 
 Dans la fenêtre de dialogue du lettrage, il vous sera demandé si vous choisissez Emilio 20 Simple Small d'indiquer un redimensionnement entre 25 et 40% de la taille de la fonte Emilio 20 Simple initiale, passant ainsi de lettres d'environ 32 mm de haut à des lettres mesurant entre 8 et 20 mm.
@@ -98,8 +96,6 @@ Dans la fenêtre de dialogue du lettrage, il vous sera demandé si vous choisiss
 Contrairement à Emilio 20 Simple, cette fonte diminuée DOIT être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT DOIVENT être utilisés.
 
 ### Emilio 20 Tartan
-
-{% include upcoming_release.html %}
 
 Utilisée à 100%, cette fonte fait environ  45 mm de haut.
 Elle peut être agrandie jusqu'à 150% (env 67 mm) ou diminuée jusqu'à 65% (env 30 mm).

@@ -11,8 +11,6 @@ Nicht jede Maschine kann diese zusätzliche Informationen umsetzen und verstehen
 
 ## Sprungstich zu Fadenschnitt-Befehl
 
-{% include upcoming_release.html %}
-
 `Befehle > Sprungstich zu Fadenschnitt-Befehl` 
 
 Fügt Fadenschnitt-Befehle ein um Sprungstiche zu vermeiden

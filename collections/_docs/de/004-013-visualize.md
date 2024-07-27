@@ -44,7 +44,6 @@ Es gibt die folgenden Optionen:
   - **versteckt** das Original-Design wird versteckt
   - **Verrinerte Deckkraft** das Original wird mit 40%-Transparenz dargestellt
 - **Render Modus**
-  {% include upcoming_release.html %}
   - **Einfach**: einfache Liniendarstellung
   - **Realistisch**: Realistische Vorschau als in Inkscape eingebundene PNG-Bilddatei (8-bit)
   - **Realistisch (hohe Qualität)** Realistische Vorschau als in Inkscape eingebundene PNG-Bilddatei (16-bit)
@@ -56,7 +55,6 @@ Es gibt die folgenden Optionen:
 - **Lock** Stichplan reagiert nicht auf Mausinteraktionen. Das ist praktisch, wenn mit aktiviertem Stichplan das Original-Design bearbeitet werden soll
 - **Zeige visuelle Befehle**
 - **Letzten Stichplan überschreiben**
-  {% include upcoming_release.html %}
   Überschreibt den letzten Stichplan wenn aktiviert. Soll der alte Stichplan erhalten bleiben, deaktiviere diese Option.
 
 {% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
@@ -88,11 +86,8 @@ Zeigt Punkte in frei wählbaren Farben (Standart: rot, gelb, grün) über dem De
 * Indikator-Größe
 
   Lege die Größe der eingefügten Markierungen in Dokumenteinheit fest
-  {% include upcoming_release.html %}
 
 ## Stickreihenfolge anzeigen
-
-{% include upcoming_release.html %}
 
 Diese Erweiterung fügt nummerierte Beschriftungen für ausgewählte Elemente in das Dokument ein, um die Stichreihenfolge zu visualisieren.
 

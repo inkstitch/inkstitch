@@ -9,7 +9,6 @@ preview_image:
   - url: /assets/images/fonts/baumans_FI_small.jpg
     height: 10
 ---
-
 {%- assign font = site.data.fonts.baumans_FI.font -%}
 ![Baumans](/assets/images/fonts/baumans_fi.jpg)
 ![Baumans](/assets/images/fonts/baumans_FI_small.jpg)
@@ -34,8 +33,6 @@ Baumans FI kann mit der [Option](https://inkstitch.org/de/docs/lettering/#option
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 32 mm hoch (1.25 Zoll).
 Sie kann bis auf 150% (~48mm, 2 Zoll) hochskaliert und bis zu 80% (~25mm, 1 Zoll) herunterskaliert werden.
-
-{% include upcoming_release.html %} 
 
 Baumans FI Small ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 30% (10 mm, 0.4 Zoll) und 15% (5mm, 1/5 Zoll) zu ermöglichen.
 

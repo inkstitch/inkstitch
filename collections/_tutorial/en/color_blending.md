@@ -20,8 +20,6 @@ Automatic fills don't have to be flat, gradient fills are welcome!
 
 ## Linear Gradient Fill
 
-{% include upcoming_release.html %}
-
 Generating color gradients with Ink/Stitch has become easy. The best quality can be achieved with the [linear gradient fill stitch type](/docs/stitches/linear-gradient-fill/), which aims to produce a flawless fill in terms of row and stitch positions despite the color changes.
 
 * Create a shape with an inkscape gradient fill

@@ -20,8 +20,6 @@ Par exemple si cette valeur est à 2 mm, chaque fois qu'il y a un saut de fil  d
 
 Pour les sauts de fils plus longs que 2 mm, le paramétrage des points de sureté est respecté.
 
-{% include upcoming_release.html %}
-
 A partir de la version  v 3.1.0 il  est possible de surcharger la valeur globale pour des éléments particuliers dan [le dialogue de paramétrage](/doc/params).
 
 ### Longueur minimum de points (mm)
@@ -41,8 +39,6 @@ Voici les résultats de la simulation d'un point droit  paramétré avec une *lo
 Quand la *Longueur minimum de points* vaut 2 mm, un point sur deux est sauté (à l'exception des points de sûreté) car 1.5 est plus petit que 2 mais 1.5+1.5 plus grand que 2. Le nombre de points est donc divisé par deux (hors point de sureté).
 
 Si la valeur de  *Longueur minimum de points* avait été 3.1 mm, on aurait obtenu des points de 4.5mm
-
-{% include upcoming_release.html %}
 
 Up from v 3.1.0 it is possible to overwrite the global value for single elements in the [params dialog](/doc/params).
 

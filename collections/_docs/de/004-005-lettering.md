@@ -26,8 +26,6 @@ Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden v
   Schriften sind für eine bestimmte Skalierung digitalisiert. Der Schriftgrößenfilter hilft dir eine Schrift mit der richtigen Größe zu finden, indem er die
   Liste der Schriftarten nach der angegebenen Größe filtert.
   Ein aktivierter Filter (nicht 0) setzt bei der Auswahl einer Schriftart automatisch die Skalierung passend zur Suchgröße.
-  
-{% include upcoming_release.html %}
 
 * **Zeichen**<br>
   Wenn aktiviert, werden nur Schriften angezeigt, die alle im Textfeld genutzten Buchstaben enthalten

@@ -4,11 +4,7 @@ permalink: /docs/stitches/zigzag-satin-stitch/
 last_modified_at: 2024-05-1
 toc: true
 ---
-
-{% include upcoming_release.html %} 
-
 ## What it is
-
 
 "Zigzag " is a satin column that looks like a better version of the zigzag stitch
 ![Point Satin Zigzag](/assets/images/docs/en/compare-satin-zigzag.png)
@@ -17,7 +13,6 @@ toc: true
 
 Prepare your path exactly as you would with a [Satin Column](/docs/stitches/satin-column). 
 But in Params chose `"Zigzag` as Method.
-
 
 ## Params
 
@@ -51,8 +46,6 @@ Stagger this many times before repeating|![Stagger example](/assets/images/docs/
 Minimum length for random-phase split     |  | Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch.
 Random seed           | | Use a specific seed to compute stitch plan. If empty, the seed is the element ID . Re-roll if you are not happy with the result.
 {: .params-table }
-
-
 
 For the underlay params have a look at the [satin stitch params](/docs/stitches/satin-column/#params).
 

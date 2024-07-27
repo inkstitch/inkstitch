@@ -11,9 +11,6 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.roaring_twenties_KOR.font -%}
 
-{% include upcoming_release.html %} 
-
-
 <img 
      src="/assets/images/fonts/roaring_twenties_KOR.jpg"
      alt="Roaring Twenties KOR" height="100">
@@ -21,7 +18,6 @@ preview_image:
 <img 
      src="/assets/images/fonts/roaring_twenties_KOR_small.jpg"
      alt="Roaring Twenties KOR Small" height="55">
-
 
 
 ## Glyphs
@@ -32,6 +28,7 @@ This font contains  {{ font.glyphs.size }} glyphs:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
+
 
 # Dimensions
 

@@ -10,7 +10,6 @@ Ink/Stitch kann verwirrend sein. Besonders für Anfänger. Aber auch, wenn du In
 
 Ink/Stitch hat ein Hilfsmittel diese Fehler verständlicher zu machen. Es zeigt die genaue Position wo das Problem liegt und erklärt wie man es lösen kann. Auch für problematische Objekte, die keine Fehlermeldung verursachen, können Warnhinweise angezeigt werden.
 
-
 ## Funktionsweise
 
 * (Optional) Wähle die Objekte aus, die du testen möchtest. Ist kein Objekt ausgewählt, läuft der Test für das gesamte Dokument.
@@ -23,13 +22,11 @@ Entweder erhälst du eine nun Nachricht, dass kein Fehler gefunden wurde oder es
 **Tipp:** Es ist möglich, dass ein Objekt mehrere Fehler enthält. Objekte mit Füllstich zeigen aber in der Regel nur den zuerst aufgetretenen Fehler an. Nutze das Troubleshoot-Werkzeug erneut, wenn du weitere Fehlermeldungen erhälst.
 {: .notice--info }
 
-
 ## Element Info
-{% include upcoming_release.html %}
+
 Diese Erweiterung sammelt Informationen über verschiedene Parameter für eine Auswahl von Stickobjekten.
 
 ![Element info](/assets/images/docs/en/element_info.png)
-
 
 ## Stickeinstellungen entfernen
 
@@ -47,12 +44,10 @@ Die Erweiterung entfernt alle Stickparameter aus dem gesamten Dokument oder von 
 * Parameter entfernen
 * Befehle entfernen
 
-  {% include upcoming_release.html %}
   (Alle/Keine/bestimmte Befehle)
 * Druckeinstellungen aus den SVG Metadaten entfernen
 
 ![Stickeinstellungen entfernen - GUI](/assets/images/docs/en/remove-embroidery-settings.png)
-
 
 ## Dokument bereinigen
 
@@ -61,12 +56,8 @@ Manchmal entstehen während der Arbeit an SVG-Dateien sehr kleine Objekte, die g
 * Öffne `Erweiterungen > Ink/Stitch > Fehlerbehebung > Dokument bereinigen...`
 * Wähle welche Objekttypen behandlet werden sollen und definiere den Schwellwert
 * `Anwenden`
-
-{% include upcoming_release.html %}
-
 * Leere Gruppen oder Ebenen können optional entfernt werden
 * Bei aktiviertem Testdurchlauf werden lediglich die Namen der Elemente die entfernt werden würden angezeigt ohne sie zu entfernen
-
 
 ## Ink/Stitch SVG aktualisieren
 

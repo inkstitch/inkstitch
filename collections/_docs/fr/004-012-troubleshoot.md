@@ -22,8 +22,6 @@ Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée,
 **Astuce:** Il est possible qu'un objet contienne plus d'une erreur. Les formes de remplissage affichent uniquement la première erreur qui apparaîtra. Exécutez l'extension à nouveau si vous recevez encore des messages d'erreur.
 {: .notice--info }
 
-
-{% include upcoming_release.html %}
 Cette extension vous signale aussi
 * la présence de colonnes satin avec deux rails et exactement deux traverses (car cela peut conduite a une mauvaise interprétation de la colonne par Ink/Stitch).
 * la présence de colonnes satins sans aucune traverse
@@ -31,7 +29,7 @@ Cette extension vous signale aussi
 
 
 ## Informations sur l'élément {#element-info}
-{% include upcoming_release.html %}
+
 Cette extension affiche des informations sur divers paramètres des éléments de broderie sélectionnés.
 
 ![Element info](/assets/images/docs/en/element_info.png)
@@ -45,8 +43,6 @@ Cette extension supprimera les paramètres de broderie de votre broderie toute e
 * Sélectionnez des objets (sautez cette étape si vous voulez supprimer toutes les informations de broderie)
 * Exécutez `Extensions > Ink/Stitch > Supprimez tous les paramètres de broderie...`
 * Sélectionnez une ou plusieurs des options proposées et cliquez sur "Appliquer"
-  
-{% include upcoming_release.html %} 
 * Avant d'appliquer vous pouvez choisir de supprimer aucune/toutes ou certaines commandes
 * Avant d'appliquer vous pouvez choisir de supprimer un paramètre particulier
 ![Remove embroidery settings - GUI](/assets/images/docs/fr/supprimer_parametres_broderie.png)
@@ -59,8 +55,6 @@ Ink/Stitch  offre une fonction de nettoyage de votre document qui empêche ces o
 * Exécutez `Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document...`
 * Choisissez quels types d'objets doivent être supprimés et définissez un seuil
 * Cliquez sur "Appliquer"
-
- {% include upcoming_release.html %}
 * Il est aussi possible de choisir de supprimer les groupes et calques vides
 * Cochez l'option "essayer" pour obtenir la liste des noms des éléments qui seraient supprimés avec le paramètrage choisi, sans rien réellement supprimer
 

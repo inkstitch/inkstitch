@@ -9,7 +9,7 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.shojumaru.font -%}
 ![Shojumaru](/assets/images/fonts/shojumaru.png)
-{% include upcoming_release.html %} 
+
 
 ## Schriftzeichen
 

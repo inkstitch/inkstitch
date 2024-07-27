@@ -11,9 +11,6 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.roaring_twenties_KOR.font -%}
 
-{% include upcoming_release.html %} 
-
-
 <img 
      src="/assets/images/fonts/roaring_twenties_KOR.jpg"
      alt="Roaring Twenties KOR" height="100">

@@ -75,8 +75,6 @@ To apply a color to an element, select the element and click on the color swatch
 
 ### Apply Palette
 
-{% include upcoming_release.html %}
-
 This extension applies nearest colors from a specified thread palette on a design. This will also be recognized by the Ink/Stitch embroidery file and pdf output.
 
 * Run `Extensions > Ink/Stitch > Thread Color Management > Apply Palette`

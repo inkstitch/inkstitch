@@ -9,8 +9,6 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.invercelia.font -%}
 
-{% include upcoming_release.html %} 
-
 ![Invercellia](/assets/images/fonts/invercelia.png)
 
 

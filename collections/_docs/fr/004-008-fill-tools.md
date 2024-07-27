@@ -46,20 +46,19 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 1. Depuis Fond et Contour, appliquez un dégradé linéaire comme couleur de fond à un élement.
 
    ![linear gradient](/assets/images/docs/en/linear-gradient.png)
-   
+
    Choisir l'angle du dégradé à l'aide de  poignées du dégradé (passer en mode edition de noeud pour les voirs
-   
+
 2. Lancez `Extensions > Ink/Stitch > Outils: Remplissage > Convertir en blocs de dégradé
 
    ![color blocks](/assets/images/docs/color_blocks.png)
-   
-   Choisir l'espacement final des rangées
 
+   Choisir l'espacement final des rangées
 
 ## Tartan
 
-{% include upcoming_release.html %}
 L'éditeur de bandes du tartan se trouve dans   `Extensions > Ink/Stitch > Outils: remplissage > Tartan`
+
 ### Personnaliser
 
 #### Positionnement

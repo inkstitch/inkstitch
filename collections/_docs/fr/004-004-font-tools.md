@@ -21,7 +21,6 @@ Options  :
 * Échelle:  en pourcentage
 * largeur du texte: des sauts de lignes seront ajoutés pour ne  pas dépasser cette largeur;
 
-
 ## Forcer des points d'arrêt {#force-lock-stitches}
 
 Les petites fontes se défont parfois si les fils sont coupés après la broderie. 
@@ -39,7 +38,7 @@ Pour la même raison, lorsque les lettres sont détachées, il peut être utile 
 * Cliquer sur appliquer
 
 ### Options
- {% include upcoming_release.html %}
+
 * Mininum distance (mm)
 * Maximum distance (mm)
 * Restreindre au satin
@@ -58,6 +57,7 @@ Il est aussi possible pour une direction donnée de créer un repertoire dont le
 Le fichier json doit inclure au minimum le nom des polices.
 
 ## Générer  le fichier JSON {#generate-json}
+
 Cette extension est destinée à vous aider à créer le fichier json.
 Selon la façon dont vous avez généré votre fichier de police, il peut permettre d'inclure des informations de crénage supplémentaires dans le fichier json.
 Lire [**comment générer une police svg avec des informations de crénage**](/tutorials/font-creation).
@@ -113,8 +113,6 @@ Souvent les fontes de broderie achetées sont organisées en sous dossiers car c
 * Exécutez  [`Génerer JSON`](#generate-json) pour rendre la police disponible dans l'outil de Lettrage et sauvegarder le fichier json dans le même dossier que votre fonte.  Ne pas cocher  "Agencement automatique de colonnes satin" pour les fontes pré-digitalisées et laisser l'échelle à 1.
 
 ## Mettre à jour la liste des glyphes  {#update-glyph-list}
-
-{% include upcoming_release.html %} 
 
 Permet d'insérer dans le fichier json la liste des glyphes définis . Cette opération doit être effectuée une première fois, puis chaque fois que la liste des glyphes effectivement programmés est modifiée.
 

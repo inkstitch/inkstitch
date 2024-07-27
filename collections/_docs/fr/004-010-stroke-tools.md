@@ -80,8 +80,6 @@ Ceci crééra un point droit direct entre la fin du premier élément et le déb
 
 ### Options
 
-* {% include upcoming_release.html %}
-
 * Convertir les sauts de longueur au moins 
 * Convertir les sauts de longueur au plus 
 * Connecter seulement au sein des groupes ou des calques 
@@ -98,7 +96,6 @@ et pour les connexions non fusionnées:
 
 ## Redwork
 
-{% include upcoming_release.html %}
 Redwork  est une technique de broderie qui assure que chaque point est brodé exactement deux fois.
 
 Cet outil va **remplacer** votre ensemble de points droits par un nouveau ensemble de points  droits en ordre logique de broderie. 
@@ -147,7 +144,6 @@ Le redwork commence et termine toujours au même endroit. Vous pouvez  définir 
 
 
 ## Contour {#outline}
-{% include upcoming_release.html %}
 
 ![Fill to outline](/assets/images/docs/outline.png)
 

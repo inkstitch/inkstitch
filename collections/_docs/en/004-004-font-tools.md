@@ -9,7 +9,6 @@ A collection of tools suitable for font creators or those who want to add additi
 Read the [Ink/Stitch font creation tutorial](/tutorials/font-creation) for in-depth instrustions.
 {: .notice--info }
 
-
 ## Font Sampling
 
 This extension creates a list of all letters in a font. It helps font creators to test the outcome of a new font.
@@ -21,7 +20,6 @@ Options are :
 * Scale : in percent
 * Max line width : line breaks will  be chosen accordingly
 
-  
 ## Force lock stitches
 
 Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work.
@@ -41,7 +39,6 @@ This extension helps adding forced lock stitches. One may chose to restrict the 
 * Mininum distance (mm)
 * Maximum distance (mm)
 * Restrict to satin
-  {% include upcoming_release.html %}
 * Add force lock stitches attribute to the last element of each glyph
 
 ## Custom Font Directory
@@ -85,8 +82,6 @@ If kerning information cannot be found, these values will be used instead.
 
 A file `font.json` will be saved into the folder of your svg font file.
 
-
-
 ## Letters to font
 
 "Letters to font" is a tool to convert predigitized embroidery letters into a font for use with the Ink/Stitch lettering tool.
@@ -109,7 +104,6 @@ You will often see, that bought fonts are organized in subfolders, because each 
 * Run [`Generate JSON`](#generate-json) to make the font available for the lettering tool and save the json file into the same folder as your font. Do not check "AutoRoute Satin" for predigitized fonts and leave scaling to 1.
 
 ## Update glyph list
-dans le fichier json
 
 This extension insert the list of the glyphs into the json file. Must be done a first time when all the glyphs are present in the  svg file, and must be redone if glyphs are added or deleted.
 

@@ -17,10 +17,6 @@ preview_image:
  - url: /assets/images/fonts/emilio_20_simple_small.jpg
    height: 17
 ---
-
-
-
-
 {%- assign font = site.data.fonts.emilio_20.font -%}
 
 <img 
@@ -96,8 +92,6 @@ It may be scaled  up to 120% (approx. 120 mm, 5 inches) or scaled down to 90% (a
 
 ### Emilio 20 Simple Small
 
-{% include upcoming_release.html %} 
-
 Emilio 20 Simple Small is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 40% (20mm, 0.75 inch) and 25% (8mm ,1/3 inch). That's why in the lettering dialog window, if using Emilio 20 Simple Small, you will have to pick up a scale between 25 and 40%. 
 
 Contrarly to Emilio 20 Simple, Emilio 20 Simple  Small  **MUST** be embroidered with thread and needle smaller than usual.
@@ -105,13 +99,11 @@ A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 ### Emilio 20 Tartan
 
-{% include upcoming_release.html %}
 At 100%, this font is approximatively 45mm (1.75 inches)
 It may be scaled  up to 150% (approx. 66 mm, 2.5 inches) or scaled down to 65% (approx.en 30 mm, 1.25 inches).
 
 Utilisée à 100%, cette fonte fait environ  45 mm de haut.
 Elle peut être agrandie jusqu'à 150% (env 67 mm) ou diminuée jusqu'à 65% (env 30 mm).
-
 
 This is yet another Emilio variation. It aims at looking liking  like a Tartan Appliqué. The satin border is much lighter as in the other Emilio Variation. Each letter has its own tartan, therefore embroidering it as is is not for the faint of heart ! Quite a few threads changes are required. However for a less work intense (but also less colorful) variation with only one tartan shared by all leters, see  [this](https://inkstitch.org/tutorials/make_tartan_font_easier/) 
 

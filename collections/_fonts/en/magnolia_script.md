@@ -52,8 +52,6 @@ A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 ### Magnolia Bicolor
 
-{% include upcoming_release.html %}
-
 Magnolia Bicolor is approximatively 45 mm (2 inches) tall.  It can be scaled up to 150% (approx. 67 mm, 3  inches) or scaled down to  70% (approx.  31 mm, 1.25 inch).
 
 ## Color sorting

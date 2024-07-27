@@ -121,8 +121,6 @@ Créez des lignes de guidage pour générer un remplissage courbé.
 
 ### Remplissage en dégradé linéaire
 
-{% include upcoming_release.html %}
-
 Le remplissage en dégradé linéaire utilise la couleur du dégradé linéaire d’Inkscapes pour créer des dégradés homogènes avec un positionnement de point cohérent.
 
 ![Gradient sample](/assets/images/tutorials/make_tartan_font_easier/herbst.jpg)
@@ -138,8 +136,6 @@ Le remplissage en méandres est originaire des techniques de quilting. Il produi
 [En savoir plus](/fr/docs/stitches/meander-fill){: .btn .btn--primary}
 
 ### Tartan Fill
-
-{% include upcoming_release.html %}
 
 Un Tartan et un tissu à motif de rayures horizontales et verticales. Il est en particulier connu pour son utilisation pour les kilt écossais. Ce point de broderie essaye d’imiter ces motifs.
 

@@ -4,8 +4,6 @@ permalink: /de/docs/stitches/zigzag-satin-stitch/
 last_modified_at: 2024-05-22
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## Beschreibung
 
 "Zick-Zack" ist eine Satinsäule mit einem Zick-Zack-Muster.

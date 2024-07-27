@@ -22,7 +22,6 @@ L'outil de lettrage génère un texte multilignes sous la forme de colonnes sati
   Les fontes sont conçues pour être  brodées dans  un intervalle de tailles donné. Le filtrage par taille vous aide en réduisant la liste des fontes à uniquement les fontes qui peuvent être brodées dans les dimensions choisies.
   Un filtre actif (pas à 0) déterminera  automatiquement la bonne échelle pour que la fonte sélectionnée soit dans la dimension souhaitée.
 
-{% include upcoming_release.html %}
 * **Glyphs**<br>
 si l'option est cochée, seules les fontes contenant tous les glyphes de votre texte apparaissent dans le menu déroulant des fontes
 

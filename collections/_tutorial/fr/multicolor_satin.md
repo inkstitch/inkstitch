@@ -18,9 +18,7 @@ toc : true
 On parle ici de simulation, car il ne s'agit pas d'une seule colonne satin  multicolore, mais d'un effet similaire obtenu en 
 utilisant plusieurs  copies superposées d'une même colonne satin, simplement en utilisant des paramètres aléatoires différents.
 
-{% include upcoming_release.html %} 
 Ceci est devenu une des [extensions d'Ink/Stitch](/fr/docs/satin-tools/#multicolor-satin)
-
 
 ## Commençons par le bicolore
 Revenons sur les paramètres "aléatoires" des colonnes satin.

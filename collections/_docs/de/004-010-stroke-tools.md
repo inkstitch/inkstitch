@@ -86,8 +86,6 @@ Dieses Werkzeug erstellt Geradstiche von der Endposition des ersten Elements zu 
 
 ### Optionen
 
-{% include upcoming_release.html %}
-
 * Konvertiere nur Sprungstitch die länger sind als der angegebene Wert
 * Konvertiere nur Sprungstitche die kürzer sind als der angegebene Wert
 * Verbinde nur Elemente innerhalb einer Gruppe oder einer Ebene
@@ -103,10 +101,7 @@ Für nicht verschmolzene Pfade gelten die folgenden Einstellungen:
 * (Maximale) Stitchlänge
 * Geradstichtoleranz
 
-
 ## Redwork
-
-{% include upcoming_release.html %}
 
 Redwork ist eine alte Stickkunst bei der jede Linie genau zweimal gestickt wird.
 
@@ -145,10 +140,7 @@ Der Hauptunterschied zum `Automatisch geführtem Laufstich` ist, dass jede Linie
 
 Redwork wird immer an der gleichen Stelle beginnen und enden. Dieser Punkt mit einem [Startbefehl für automatisch geführte Geradstiche](/de/docs/commands/#--start--und-endposition-für-automatisch-geführten-laufstich) festgelegt werden.
 
-
 ## Außenkontur
-
-{% include upcoming_release.html %}
 
 Diese Erweiterung hilft die Originalform aus einer Stickdatei wiederherzustellen.
 

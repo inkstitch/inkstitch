@@ -41,8 +41,6 @@ Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-{% include upcoming_release.html %}
-
 Dieser Schrift wurde 2024 ein hellblauer Hintergrund hinzugefügt. Um die alte Version zu sticken einfach die ersten beiden Schritte beim Sticken überspringen.
 
 

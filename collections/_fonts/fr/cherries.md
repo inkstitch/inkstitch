@@ -49,21 +49,16 @@ Il n'est pas obligatoire de broder la cerise, la fonte est aussi très jolie san
 Utilisée à  100%, cette fonte fait environ 75 mm  de haut.
 Elle peut être agrandie jusqu'à 130% (env 100 mm) ou réduite jusqu'à 80% (env 60  mm).
 
-
-{% include upcoming_release.html %}
-
 Cette fonte a été modifée en  2024 pour inclure un léger fond bleu.  Si vous sautez les deux premières étapes de la broderie, vous retrouverez la version initiale.
 
 ## Tri des couleurs 
 Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
 
 
-
 ## Dans la vraie vie
 Elles peuvent être utilisées ensemble  ou séparement.
 
 {% include folder-galleries path="fonts/cherries/" %}
-
 
 [Download Cherry for inkstitch Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/cherryforinkstitch/LICENSE)
 

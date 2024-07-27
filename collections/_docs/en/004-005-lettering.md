@@ -25,15 +25,12 @@ The lettering tool generates multi-line text as satin columns and dynamically ro
   Fonts are designed for a special range of sizes. The font size filter helps you to reduce the font list to only the fonts fitting to your target size.
   A active font filter (not 0) will set the correct scale value when you select a font.
 
-{% include upcoming_release.html %}
 * **Glyphs**<br>
  If checked only the fonts that contain all the glyphs of your text are listed
 
 * **Font family**<br>
 Filter the fonts by families, by example get only the applique fonts or only the script fonts
 
-
-  
 ### Options
 * **Stitch lines of text back and forth**<br>
   With this option enabled the first line will be stitched from left to right and the second from right to left, etc.

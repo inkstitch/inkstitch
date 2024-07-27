@@ -40,7 +40,6 @@ Diese Erweiterung soll dabei helfen, die Stickobjekte entsprechend zu bearbeiten
 * Minimaler Abstand (mm)
 * Maximaler Abstand (mm)
 * Auf Satinsäulen beschränken
-  {% include upcoming_release.html %}
 * Füge das Attribut "Vernähen erzwingen" dem jeweils letzten Element eines Schriftzeichens hinzu
 
 ## Benutzerdefinierter Ordner für Schriften

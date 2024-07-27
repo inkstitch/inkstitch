@@ -124,8 +124,6 @@ Create guide lines to generate a curved fill.
 
 ### Linear Gradient Fill
 
-{% include upcoming_release.html %}
-
 Linear gradient fill uses Inkscapes linear gradient color to create seamless gradients with a consistent stitch positioning.
 
 ![Gradient sample](/assets/images/tutorials/make_tartan_font_easier/herbst.jpg)
@@ -141,8 +139,6 @@ Meander fill has its origins in quilting techniques. A beautiful patterned effec
 [Learn more](/docs/stitches/meander-fill){: .btn .btn--primary}
 
 ### Tartan Fill
-
-{% include upcoming_release.html %}
 
 Tartan is a patterned fabric with colored horizontal and vertical stripes. It is typically known from scottish kilts. The embroidery stitch type tries to mimic the typical pattern.
 

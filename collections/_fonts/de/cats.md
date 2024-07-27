@@ -9,8 +9,6 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.cats.font -%}
 
-{% include upcoming_release.html %} 
-
 ![Cats](/assets/images/fonts/cats.jpg)
 
 

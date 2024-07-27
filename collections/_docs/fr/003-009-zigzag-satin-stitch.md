@@ -4,21 +4,16 @@ permalink: /fr/docs/stitches/zigzag-satin-stitch/
 last_modified_at: 2024-05-02
 toc: true
 ---
-
-{% include upcoming_release.html %} 
 ## Qu'est-ce que c'est
 
-
 Le satin en  "zigzag" est une colonne satin avec un air de zigzag
-![Point Satin Zigzag](/assets/images/docs/en/compare-satin-zigzag.png)
 
+![Point Satin Zigzag](/assets/images/docs/en/compare-satin-zigzag.png)
 
 ## Comment le créer
 
 Préparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](/fr/docs/stitches/satin-column). 
 Mais dans les paramètres choisissez la méthode `Zigzag`.
-
-
 
 ## Paramétres
 
@@ -54,9 +49,8 @@ Inverser la direction des rails    |![Reverse Rung](/assets/images/docs/satin-re
 |Graine Aléatoire              | | Utiliser cette graine aléatoire pour le calcul du plan de broderie. Si vide, utilise l'identificateur de l'élément. Relancer le dé si vous n'êtes pas satisfait du résultat.|
 {: .params-table }
 
-
-
 Pour le paramètrage de la sous-couche, se référrer [au paramètrage des colonnes satin](/fr/docs/stitches/satin-column/).
 
 ## Fichiers exemples contenant du satin en zigzag
+
 {% include tutorials/tutorial_list key="stitch-type" value="zigzag-satin-stitch" %}

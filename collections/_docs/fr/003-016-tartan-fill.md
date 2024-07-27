@@ -4,8 +4,6 @@ permalink: /fr/docs/stitches/tartan-fill/
 last_modified_at: 2024-05-07
 toc: true
 ---
-{% include upcoming_release.html %}
-
 ## Qu'est ce que c'est
 
 [![Tartan Fill Sample](/assets/images/docs/tartan-fill.jpg){: width="200x"}](/assets/images/docs/tartan-fill.svg){: title="Download SVG File" .align-left download="tartan-fill.svg" }

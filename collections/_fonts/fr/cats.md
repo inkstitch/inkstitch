@@ -9,8 +9,6 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.cats.font -%}
 
-{% include upcoming_release.html %} 
-
 ![Cats](/assets/images/fonts/cats.jpg)
 
 ## Glyphes
@@ -33,11 +31,8 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 Les poils ébouriffés des chats sont dus à l'ajout d'aléatoire sur les colonnes satin. Pour des chats plus relaxés, recopier le paramétrage d'un satin sans aléatoire sur tous les satins aléatoires.
 
 
-
 ## Dans la vraie vie
 
 {% include folder-galleries path="fonts/cats/" %}
-
-
 
 [Télécharger la licence](https://github.com/inkstitch/inkstitch/tree/main/fonts/cats/LICENSE)

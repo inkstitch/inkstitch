@@ -71,8 +71,6 @@ To apply a color to an element, select the element and click on the color swatch
 
 ### Appliquer une palette {#apply-palette}
 
-{% include upcoming_release.html %}
-
 Cette extension applique aux éléments d'un document les couleurs les plus proches parmi celles de la palette choisie.
 
 Ces changement seront pris en compte dans l'export pdf d'Ink/Stitcht.

@@ -19,8 +19,6 @@ Füllungen müssen nicht flach sein, denn Farbübergänge sind möglich und will
 
 ## Lineare Farbverlaufsfüllung
 
-{% include upcoming_release.html %}
-
 Farbverläufe in Ink/Stitch zu erstellen ist leicht geworden. Die beste Qualität erreicht man mit der [Linearen Farbverlaufsfüllung](/de/docs/stitches/linear-gradient-fill/), einer Füllstichart. Da der Farbverlauf hier als Ganzes behandelt wird ist es möglich Reihenabstände und Stichpositionen trotz Farbwechsel konstant zu halten.
 
 * Erstelle eine Form mit einer linearen Farbverlaufsfüllung in Inkscape

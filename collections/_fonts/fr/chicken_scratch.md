@@ -9,9 +9,6 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.chicken_scratch.font -%}
 
-
-{% include upcoming_release.html %} 
-
 ![Chicken Scratch](/assets/images/fonts/chicken_scratch.jpg)
 
 ## Glyphes
@@ -32,11 +29,8 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 
-
 ## Dans la vraie vie
 
 {% include folder-galleries path="fonts/chicken_scratch/" %}
-
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/violin_serif/LICENSE)

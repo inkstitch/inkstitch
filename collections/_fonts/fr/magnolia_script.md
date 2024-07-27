@@ -50,8 +50,6 @@ Contrairement à  Magnolia KOR, cette fonte diminuée DOIT être brodée avec un
 
 ### Magnolia Bicolor
 
-{% include upcoming_release.html %}
-
 Magnolia bicolor a une hauteur d'environ 45mm. Elle peut être agrandie jusqu'à 150% (approximativement 67mm) et réduite jusqu'à 70% (approximativement 31mm)
 
 ## Tri des couleurs

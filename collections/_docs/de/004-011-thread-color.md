@@ -76,8 +76,6 @@ Um eine bestimmte Farbe auf ein Element anzuwenden, klicke auf die Farben am unt
 
 ### Farbpalette anwenden
 
-{% include upcoming_release.html %}
-
 Diese Erweiterung wendet die ähnlichsten Farben einer gewählten Farbpalette auf das geöffnete Design an.
 Die Farben werden entsprechend in die Stickdatei gespeichert und in der PDF-Ausgabedatei angezeigt.
 

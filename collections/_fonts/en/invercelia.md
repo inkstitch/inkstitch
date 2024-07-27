@@ -9,8 +9,6 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.invercelia.font -%}
 
-{% include upcoming_release.html %} 
-
 ![Invercellia](/assets/images/fonts/invercelia.png)
 
 ## Glyphs
@@ -33,7 +31,5 @@ up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max
 ## In real life
 
 {% include folder-galleries path="fonts/invercelia/" %}
-
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/invercelia/LICENSE)

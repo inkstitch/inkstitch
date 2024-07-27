@@ -9,9 +9,8 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.cats.font -%}
 
-{% include upcoming_release.html %} 
-
 ![Cats](/assets/images/fonts/cats.jpg)
+
 ## Glyphs
 
 This font contains  {{ font.glyphs.size }} glyphs:
@@ -33,7 +32,4 @@ The cats' ruffled hairs are due to the addition of randomness parameters on the 
 ## In real life
 {% include folder-galleries path="fonts/cats/" %}
 
-
-
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/cats/LICENSE)
-

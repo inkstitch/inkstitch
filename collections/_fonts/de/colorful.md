@@ -9,8 +9,6 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.colorful.font -%}
 
-{% include upcoming_release.html %} 
-
 ![colorful](/assets/images/fonts/colorful.png)
 
 

@@ -42,7 +42,6 @@ Instead of applying the stitch plan, you can also use the `Live preview` option.
   - **hidden** hide the original design
   - **lower opacity** display original design with lower opacity
 - **Render Mode**
-  {% include upcoming_release.html %}
   - **Simple**: simple line drawing
   - **Realistic**: Realistic preview output as png image into the canvas (8-bit)
   - **Realistic High Quality** Realistic preview output as png image into the canvas (16-bit)
@@ -58,7 +57,6 @@ Instead of applying the stitch plan, you can also use the `Live preview` option.
 - **Lock** make stitch plan insensitive to mouse interactions (makes it easier to work on the actual design while the stitch plan is active)
 - **Display command symbols**
 - **Overide last stitch plan**
-  {% include upcoming_release.html %}
   If checked the new stitch plan will replace the previous one, uncheck if you wish to keep the previous stitch plan
 
 {% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
@@ -95,11 +93,7 @@ This will display red, yellow and green dots on top of your elements so you can 
 
   Define the size of the dots in document units
 
-{% include upcoming_release.html %}
-
 ## Display stacking order
-
-{% include upcoming_release.html %}
 
 This extension inserts numbered labels for selected elements into the document to visualize the stitch order.
 

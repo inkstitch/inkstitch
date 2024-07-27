@@ -28,8 +28,6 @@ At 100%, this font is approximatively 20 mm (3/4 inch) high.
 
 It can be scaled up to 140% (approx. 28 mm, 1 inch) or scaled down to  80% (approx.  16mm, 0.6 inch).
 
-{% include upcoming_release.html %} 
-
 Excalibur Small is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 50% (10 mm, 0.4 inch) and 25% (5mm ,1/5 inch). 
 
 That's why in the lettering dialog window, if using Excalibur small, you will have to pick up a scale between 25 and 50%. 

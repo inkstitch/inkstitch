@@ -31,9 +31,6 @@ A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size
 Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
-
-{% include upcoming_release.html %} 
-
 La fonte Excalibur Small  est une déclinaison de Excalibur KOR avec des paramètres de broderie différents. La densité, la compensation et les sous-couches ont été modifiées pour permettre de broder cette fonte en plus petite taille. 
 
 Dans la fenêtre de dialogue du lettrage, il vous sera demandé si  vous choisissez Excalibur Small  d'indiquer un redimensionnement entre 25 et 50% de la taille de la fonte Excalibur KOR initiale, passant ainsi de lettres d'environ 20 mm de haut à des lettres mesurant entre 5 et 10 mm.

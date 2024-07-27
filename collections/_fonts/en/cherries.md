@@ -47,8 +47,6 @@ It can be scaled up to 180% ( approx 90mm 3.5 inches) or scaled down to 80% (app
 At 100%, this font is approximatively 75 mm high (3 inches)
 It can be scaled up to 130% (approx 100 mm, 4 inches ) or scaled down to 80% (approx 60 mm, 2 inches).
 
-{% include upcoming_release.html %}
-
 This font was modified in 2024 to add the light blue underlay. If you wish to find back the original version, just skip the first  two steps of the embroidery.
 
 

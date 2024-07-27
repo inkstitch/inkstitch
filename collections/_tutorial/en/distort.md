@@ -15,8 +15,6 @@ techniques:
 field-of-use:
 user-level: 
 ---
-{% include upcoming_release.html %}
-
 ![Distort effect](/assets/images/galleries/fonts/multiple/multifont3.jpg)
 
 Using inkscape live distort paths effects with embroidery is fun. You may try any  of these live path effects: 

@@ -23,7 +23,6 @@ Tip: By default, it will choose the left-most extreme node as the starting point
 - Enable **Trim jump stitches** to use trims instead of jump stitches. Trim commands are added to the SVG, so you can modify/delete as you see fit.
 - Enable **Preserve order of running stitches** if you prefer to keep your former order. 
 
-
 ## Convert Satin to Stroke
 
 Satin to stroke will convert a satin column to it's centerline. This can be useful, when you decide later in the designing process to turn a satin column into a running stitch. You can also use it to alter the thickness of your satin column, when pull compensation isn't satisfying. In that case use this function to convert your satin column into a running stitch, set stroke width in the fill and stroke panel and run the ["Convert line to to satin"](/docs/satin-tools/#convert-line-to-satin) function. 
@@ -78,8 +77,6 @@ This will create a running stitch from the end position of the first element to 
 
 ### Options
 
-{% include upcoming_release.html %}
-
 * Convert jumps no shorter than
 * Convert jumps no longer than
 * Connect only within groups or layers
@@ -95,8 +92,6 @@ and for unmerged connections only
 
 
 ## Redwork
-
-{% include upcoming_release.html %}
 
 Redwork is an old handembroidery method where the embroiderers made sure to stitch every line exactly twice.
 
@@ -137,8 +132,6 @@ Redwork will always start and end at the same spot. However, you can define this
 
 ## Outline
 
-{% include upcoming_release.html %}
-
 This extension helps reconstruct an original  object when one only has  the  stitch file, but  not the svg design file.
 
 ### Usage
@@ -152,4 +145,5 @@ This extension helps reconstruct an original  object when one only has  the  sti
 ![Stitchpath to outline](/assets/images/docs/outline.png)
 
 ## Tutorials using Tools: Stroke
+
 {% include tutorials/tutorial_list key="tool" value="Stroke" %}

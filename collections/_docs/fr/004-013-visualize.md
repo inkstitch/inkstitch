@@ -52,7 +52,6 @@ Vous disposez des options suivanes:
 * **Points de l'aiguille** si coché, montre les points de l'aiguille
 * **Verrouiller** rend le plan de broderie insensible aux interactions de la souris, facilitant le travail sur les objets de broderie quand le plan de broderie est actif.
 
-{% include upcoming_release.html %}
 * **Écraser le dernier plan de broderie** si l'option est cochée, le nouveau plan de broderie écrase le présendant, décochez si vous souhaitez garder le plan de broderie précédent.f
 Utiliser un plan de broderie verrouillé superposé au motif (rendu invisible ou avec visibilité abaissée) aidera à avoir une meilleure idée du rendu final.
 
@@ -84,30 +83,23 @@ Lancez `Extensions > Ink/Stitch > Visualisr et Exporter > Annuler le plan de bro
 * Vous pouvez annuler avec `Ctrl + Z`
 
 Ceci montrera des marqueurs rouges, jaunes et verts au dessus de vos éléments, pour vous permettre d'identifier facilement les zones à forte densité. Tous les marqueurss d'une même couleur sont dans un groupe du calque Densité, ce qui vous permet de masquer facilement tous les marqueurs d'une couleur donnée.
-{% include upcoming_release.html %}
+
 ### Options
 
 * Marqueurs jaunes et rouges
  Définir à partir de quel nombre de points de l'aiguille dans quel rayon autour  d'un point la coloration est rouge ou jaune
 
- 
 * Visibilité du calque de conception
 Définir si Ink/Stitch doit laisser le calque de conception tel quel,le cacher  ou baisser son opacité
-   
+
 * Indicateur de taille
 Définir la taille des marqueurs (l'unité est celle du document)
-  
 
 ## Afficher l'ordre de broderie {#display-stacking-order}
-
-
-{% include upcoming_release.html %}
-
 
 Lancez `Extensions > Ink/Stitch > Visualiser et Exporter> Afficher l'ordre de broderie...`.
 
 Choisir la taille de la fonte et cliquer sur  Appliquer pour créer un nouveau calque (non brodable) de texte qui numérote les éléments de broderie dans l'ordre de broderie, c'est à dire dans l'ordre  inverse de la  pile d'objets.
-
 
 ![Display stacking order](/assets/images/docs/stacking_order.png)
 

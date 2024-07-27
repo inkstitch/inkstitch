@@ -9,8 +9,6 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.honoka.font -%}
 
-{% include upcoming_release.html %} 
-
 ![Honoka](/assets/images/fonts/honoka.jpg)
 
 

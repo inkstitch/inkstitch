@@ -11,9 +11,6 @@ preview_image:
 ---
 {%- assign font = site.data.fonts.roaring_twenties_KOR.font -%}
 
-{% include upcoming_release.html %} 
-
-
 <img 
      src="/assets/images/fonts/roaring_twenties_KOR.jpg"
      alt="Roaring Twenties KOR" height="100">
@@ -21,7 +18,6 @@ preview_image:
 <img 
      src="/assets/images/fonts/roaring_twenties_KOR_small.jpg"
      alt="Roaring Twenties KOR Small" height="55">
-
 
 
 ## Glyphs
@@ -32,6 +28,7 @@ Cette fonte contient {{ font.glyphs.size }} glyphes:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
+
 
 # Dimensions
 
@@ -52,11 +49,8 @@ Contrairement à Roaring Twenties KOR, cette fonte diminuée **DOIT** être brod
 Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT **DOIVENT** être utilisés.
 
 
-
 ## Dans  la  vraie vie
 
 {% include folder-galleries path="fonts/roaring_twenties_KOR/" %}
-
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roaring_twenties_KOR/LICENSE)

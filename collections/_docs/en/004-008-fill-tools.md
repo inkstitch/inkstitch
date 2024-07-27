@@ -35,7 +35,7 @@ While "simple" splits up loops, it will not respect overlapping subpaths. It wil
 [Download SVG](/assets/images/docs/en/break_apart.svg)
 
 ## Convert to gradient blocks
-
+upcom
 Convert to gradient blocks will split a fill with a linear gradient into multiple blocks of solid color and adapted row spacing.
 
 ### Usage
@@ -47,10 +47,7 @@ Convert to gradient blocks will split a fill with a linear gradient into multipl
 
    ![color blocks](/assets/images/docs/color_blocks.png)
 
-
 ## Tartan
-
-{% include upcoming_release.html %}
 
 The Stripe Editor can be found in `Extensions > Ink/Stitch > Tools: Fill > Tartan`
 

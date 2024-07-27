@@ -15,8 +15,6 @@ techniken:
 field-of-use:
 schwierigkeitsgrad: 
 ---
-{% include upcoming_release.html %}
-
 ![Verzerr Effekt](/assets/images/galleries/fonts/multiple/multifont3.jpg)
 
 Stickobjekte mit Inkscape Pfadeffekten zu verformen macht Spaß. Inkscape bietet hierfür verschiedene Pfadeffekte an:

@@ -40,8 +40,6 @@ Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrer
 
 ## Tartan
 
-{% include upcoming_release.html %}
-
 Der Farbeditor ist unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Tartan` zu finden.
 
 ### Muster anpassen

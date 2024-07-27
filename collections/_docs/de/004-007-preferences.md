@@ -19,16 +19,12 @@ Diese Einstellungen werden auf alle Elemente des Dokuments angewendet.
 * Sollten für einen kürzeren Abstand trotzdem Vernähstiche erwünscht sein, kann die Funktion `Vernähstiche erzwingen` aktiviert werden.
 * Längere Sprungstiche verhalten sich gemäß den Vernähstich-Einstellungen des einzelnen Objektes
 
-{% include upcoming_release.html %}
-
 Ab der Version 3.1.0 kann der globale Wert bei einzelnen Elementen durch eine Einstellung in den [Parametern](/docs/params) überschrieben werden.
 
 ## Minimale Stichlänge (mm)
 
 * Stiche die kleiner sind als dieser Wert, werden gelöscht (Ausnahme: Vernähstiche).
 * Setze den globalen Wert für die minimale Stichlänge auf mindestens 0.3 mm. Ansonsten kann es bei manchen Maschinen (z.B. W6-Stickeinheiten) passieren, dass an unerwarteten Stellen Stiche fehlen werden.
-
-{% include upcoming_release.html %}
 
 Ab der Version 3.1.0 kann der globale Wert bei einzelnen Elementen durch eine Einstellung in den [Parametern](/docs/params) überschrieben werden.
 

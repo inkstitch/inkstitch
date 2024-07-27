@@ -19,7 +19,6 @@ toc : true
 We are talking simulation here, because it is not a single multicolored satin column, but a similar effect obtained by
 using several superimposed copies of the same satin column, simply using different parameters settings.
 
-{% include upcoming_release.html %} 
 This is now an [Ink/Stitch extension](/docs/satin-tools/#multicolor-satin)
 
 ## Let's start with a bicolor satin

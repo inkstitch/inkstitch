@@ -97,8 +97,6 @@ Sie kann bis auf 120% (~120mm, 5 Zoll) hochskaliert und bis zu 90% (~90mm, 3.5 Z
 
 ### Emilio 20 Simple Small
 
-{% include upcoming_release.html %} 
-
 Emilio 20 Simple Small ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 40% (20 mm, 0.75 Zoll) und 25% (8mm, 1/3 Zoll) zu ermöglichen.
 
 Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Emilio 20 Simple Small  eine Skalierung zwischen 25 und 40% wählen.
@@ -106,8 +104,6 @@ Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Emilio
 Im Gegensatz zu Emilio 20 Simple **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
 ### Emilio 20 Tartan
-
-{% include upcoming_release.html %}
 
 Bei 100% ist diese schrift ca. 45 mm (1.75 zoll) hoch.
 Sie kann von 150 % (ca. 66 mm, 2.5 zoll) bis zu 65 % (ca. 30 mm, 1.25 zoll). skaliert werden.

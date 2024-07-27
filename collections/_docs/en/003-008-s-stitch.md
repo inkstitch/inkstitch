@@ -4,9 +4,7 @@ permalink: /docs/stitches/s-stitch/
 last_modified_at: 2024-04-30
 toc: true
 ---
-{% include upcoming_release.html %} 
 ## What it is
-
 
 "S-Stitch" is a satin column that looks like a curvy fill.  
 ![Point S Détail](/assets/images/docs/s-stitch-detail.png)
@@ -18,8 +16,6 @@ But in Params chose `"S" stitch` as Method.
 
 If you set a maximum stitch length, you will be able to chose among three split methods.
 If you chose the staggered method, then as for a fill you will be able to set "Stagger this many times before repeating".
-
-
 
 ## Params
 
@@ -53,8 +49,6 @@ Stagger this many times before repeating|![Stagger example](/assets/images/docs/
 Minimum length for random-phase split     |  | Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch.
 Random seed           | | Use a specific seed to compute stitch plan. If empty, the seed is the element ID . Re-roll if you are not happy with the result.
 {: .params-table }
-
-
 
 For the underlay params have a look at the [satin stitch params](/docs/stitches/satin-column/#params).
 

@@ -33,8 +33,6 @@ At a scale of 100% this font has an approximate height of {{ font.size }} mm.
 It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
 up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
-{% include upcoming_release.html %} 
-
 Baumans FI Small is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 30% (10 mm, 0.4 inch) and 15% (5mm ,1/5 inch). 
 That's why in the lettering dialog window, if using Baumans FI Small, you will have to pick up a scale between 15 and 30%. 
 

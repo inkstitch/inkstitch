@@ -15,8 +15,6 @@ techniques:
 field-of-use:
 user-level: 
 ---
-{% include upcoming_release.html %}
-
 ![Distort effect](/assets/images/galleries/fonts/multiple/multifont3.jpg)
 
 On  peut bien s'amuser en utilisant les effets de chemin de déformation sur des broderies. Vous pouvez pour cela utiliser ces effets:
