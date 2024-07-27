@@ -29,9 +29,9 @@ Lade die aktuelle Version für dein macOS System herunter.
 Ink/Stitch ist eine Inkscape Erweiterung, deshalb **muss <span style="text-decoration:underline;">vor</span> der Ink/Stitch-Installation [Inkscape](https://inkscape.org/release/) Version 1.0.2 oder höher <span style="text-decoration:underline;">installiert und mindestens einmal geöffnet</span> worden sein**. Sonst schlägt die Installation fehl.
 {: .notice--warning .bold--warning }
 
-**Monterey:** Öffne die heruntergeladene Datei mit Klick.
+**Big Sur und höher:** Öffne die heruntergeladene Datei
 
-**El Capitan - Big Sur:** Folge den [Anweisungen für nicht notarisierte Versionen](##xxxx-kann-nicht-geöffnet-werden-da-es-von-einem-nicht-verifizierten-entwickler-stammt)
+**High Sierra / Mojave / Catalina:** Folge den [Anweisungen für nicht notarisierte Versionen](##xxxx-kann-nicht-geöffnet-werden-da-es-von-einem-nicht-verifizierten-entwickler-stammt)
 
 Klicke auf `Weiter`.
 

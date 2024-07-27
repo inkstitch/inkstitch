@@ -31,7 +31,7 @@ Ink/Stitch is an Inkscape extension. Download and install [Inkscape](https://ink
 **Make sure, that you have <span style="text-decoration:underline;">installed and run</span> Inkscape <span style="text-decoration:underline;">before</span> installing Ink/Stitch**. Otherwise the installation will fail.
 {: .notice--warning .bold--warning }
 
-**Monterey:** Click on the downloaded file to run the installer.
+**Big Sur and higher:** Click on the downloaded file to run the installer.
 
 **High Sierra / Mojave / Catalina:** Follow the [instructions for not notarized releases](#xxxx-cannot-be-opened-because-the-developer-cannot-be-verified)
 
