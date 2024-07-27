@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-21 08:55+0000\n"
-"PO-Revision-Date: 2024-07-21 08:55\n"
+"POT-Creation-Date: 2024-07-27 05:29+0000\n"
+"PO-Revision-Date: 2024-07-27 05:29\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-21 08:55+0000\n"
+"POT-Creation-Date: 2024-07-27 05:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -365,61 +365,66 @@ msgstr "Pacificlo es una pequeña fuente manuscrita de columna satinada de un ta
 msgid "This font is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory. The altered embroidery parameters of this font allow to scale down the original Pacificlo font between 25% (for a 5mm font ) and 55 % (for a 11mm font)."
 msgstr "Esta fuente es una versión modificada de Pacificlo, para permitir una mayor reducción de escala. Tanto el hilo fino (60) como la aguja fina (60) son obligatorios. Los parámetros de bordado modificados de esta fuente permiten reducir la escala de la fuente Pacificlo original entre un 25% (para una fuente de 5 mm) y un 55% (para una fuente de 11 mm)."
 
-#. description of font in fonts/roaring_twenties_KOR
+#. description of font in fonts/perspective_tricolore_KOR
 #: inkstitch-fonts-metadata.py:132
+msgid "Shaded tricolor font with capital letters only, numbers and ponctuation,  approximatively 36mm high. It can be scaled up to 250% and down to 80%"
+msgstr ""
+
+#. description of font in fonts/roaring_twenties_KOR
+#: inkstitch-fonts-metadata.py:134
 msgid "Roaring Twenties KOR is a font of size approximatively 16 mm. It can be scaled down to 70% and up to 150%"
 msgstr "Roaring Twenties KOR es una fuente de tamaño aproximado de 16 mm. Se puede reducir hasta el 70% y ampliar hasta el 150%"
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:136
 msgid "This font is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Roaring  Twenties font between 35% (for a 6 mm font ) and 70 % (for a 12 mm font)."
 msgstr "Este tipo de fuente es una versión modificada de Roaring Twenties KOR, para permitir una mayor reducción de escala. Es obligatorio el uso de hilo fino (60) y aguja fina (60). Los parámetros de bordado modificados de esta fuente permiten reducir la escala de la fuente original Roaring Twenties entre un 35% (para una fuente de 6 mm) y un 70% (para una fuente de 12 mm)."
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:138
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. The capital M is 42.5 millimeter wide at 100% scale.  Can be scaled down to 80% or up to 130%.  Every satin has zigzag underlay"
 msgstr "Basado en Latin Modern Roman 10 Bold italic. La M mayúscula mide 42,5 milímetros de ancho a escala del 100%.  Puede reducirse hasta el 80% o aumentarse hasta el 130%.  Cada satín tiene un fondo en zigzag"
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:140
 #, python-format
 msgid "Based on Latin Modern Roman 10 Bold italic. Very easy to use with letters from Romanaugusa. The capital M is 42.5 millimeter wide at 100% scale. Can be scaled down to 70% or up to 130%. Every satin has zigzag underlay"
 msgstr "Basada en Latin Modern Roman 10 Bold italic. Muy fácil de usar con letras de Romanaugusa. La M mayúscula mide 42,5 milímetros de ancho a escala del 100%. Puede reducirse hasta el 70% o aumentarse hasta el 130%. Cada satín tiene zigzag debajo"
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:142
 msgid "Based on Sacramento. Very small font with runstitch. It can be scaled from 80% to 150%"
 msgstr "Basado en Sacramento. Fuente muy pequeña con puntada. Se puede escalar entre el 80% y el 150%"
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:142
+#: inkstitch-fonts-metadata.py:144
 #, python-format
 msgid "A font suited for small characters.  The capital em is 0.2 inches wide at 100% scale.  Can be scaled up to 300%."
 msgstr "Fuente adecuada para caracteres pequeños. La \"M\", eme mayúscula, tiene 5,08mm de ancho en la escala 100%. Se puede escalar hasta 300%."
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:144
+#: inkstitch-fonts-metadata.py:146
 msgid " Sortefax is a very large satin stitch Capital font of size 150mm.  It can be reduced down to 75% and enlarged up to 200%  It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame"
 msgstr " Sortefax es un tipo de letra mayúscula satinada muy grande de tamaño 150 mm.  Puede reducirse hasta el 75% y ampliarse hasta el 200% Contiene los 37 glifos :ampersand, A-Z y 0-9. Además, los diez glifos (){}[],;.: se utilizan para almacenar marcos. Escriba cualquier letra seguida de cualquier marco (por ejemplo, A( o B; ) para obtener una mayúscula o un número enmarcados. Atención: para algunas letras grandes, deberá ampliar manualmente el marco"
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:148
 msgid "Sortefax  Medium Initials is a  satin stitch Capital font of size 90 mm.  It can be reduced down to 70% and enlarged up to 200%. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required"
 msgstr "Sortefax Medium Initials es un tipo de letra mayúscula satinada de tamaño 90 mm.  Puede reducirse hasta el 70% y ampliarse hasta el 200%. Contiene los 37 glifos :ampersand, A-Z y 0-9. Además, los diez glifos (){}[],;.: se utilizan para almacenar marcos. Escriba cualquier letra seguida de cualquier marco (por ejemplo, A( o B; o 7, ) para obtener una mayúscula o un número enmarcados. Puede que sea necesario acomodar manualmente el marco alrededor de la letra"
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:148
+#: inkstitch-fonts-metadata.py:150
 msgid "A font suited for directing"
 msgstr "Una fuente adecuada para dirigir"
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:150
+#: inkstitch-fonts-metadata.py:152
 msgid "A font suited for heavy typing :)"
 msgstr "Una fuente adecuada para escribir mucho :)"
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:152
+#: inkstitch-fonts-metadata.py:154
 #, python-format
 msgid "A condensed serif font designed. Can be scaled up to 120% or scaled down to 80%. Caps height is about 28 millimeters or 1.1 inches"
 msgstr "Una fuente serif condensada diseñada. Puede ampliarse hasta el 120% o reducirse hasta el 80%. La altura de las mayúsculas es de unos 28 milímetros o 1,1 pulgadas"
@@ -1872,7 +1877,7 @@ msgid "Default"
 msgstr ""
 
 #: lib/elements/satin_column.py:156 lib/stitch_plan/lock_stitch.py:217
-#: inx/inkstitch_break_apart.inx:10 inx/inkstitch_stitch_plan_preview.inx:16
+#: inx/inkstitch_break_apart.inx:10
 msgid "Simple"
 msgstr "Simple"
 
@@ -3864,7 +3869,7 @@ msgstr "AutoSatinar Puntada corriente %d"
 msgid "Could not build graph for meander stitching. Try to enlarge your shape or scale your meander pattern down."
 msgstr ""
 
-#: lib/svg/rendering.py:230
+#: lib/svg/rendering.py:230 inx/inkstitch_stitch_plan_preview.inx:16
 msgid "Stitch Plan"
 msgstr "Plan de puntada"
 
@@ -4269,7 +4274,6 @@ msgstr "Aplicar a todo"
 
 #: print/templates/ui_svg_action_buttons.html:9
 #: print/templates/ui_svg_action_buttons.html:12
-#: inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Realistic"
 msgstr "Realista"
 
@@ -6671,8 +6675,12 @@ msgstr ""
 msgid "Realistic modes will render to a raster image for performance reasons. Realistic Vector may cause Inkscape to slow down for complex designs."
 msgstr ""
 
+#: inx/inkstitch_stitch_plan_preview.inx:17
+msgid "Realistic View"
+msgstr ""
+
 #: inx/inkstitch_stitch_plan_preview.inx:18
-msgid "Realistic High Quality"
+msgid "Realistic View (High Quality)"
 msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview.inx:19
