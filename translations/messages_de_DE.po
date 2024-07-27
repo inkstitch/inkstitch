@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-07-27 05:29+0000\n"
-"PO-Revision-Date: 2024-07-27 05:29\n"
+"PO-Revision-Date: 2024-07-27 05:44\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -368,7 +368,7 @@ msgstr "Diese Schrift ist eine abgewandelte Version von Pacificlo, die eine klei
 #. description of font in fonts/perspective_tricolore_KOR
 #: inkstitch-fonts-metadata.py:132
 msgid "Shaded tricolor font with capital letters only, numbers and ponctuation,  approximatively 36mm high. It can be scaled up to 250% and down to 80%"
-msgstr ""
+msgstr "Schattierte dreifarbige Schriftart, die ausschließlich aus Großbuchstaben, Zahlen und Satzzeichen besteht. Die Schrift ist ca. 36 mm hoch und kann von 80 % bis zu 250 % skaliert werden."
 
 #. description of font in fonts/roaring_twenties_KOR
 #: inkstitch-fonts-metadata.py:134
@@ -6695,11 +6695,11 @@ msgstr "Realistische Modi geben das Ergebnis als PNG-Rasterbild aus. \"Realistis
 
 #: inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Realistic View"
-msgstr ""
+msgstr "Realistische Ansicht"
 
 #: inx/inkstitch_stitch_plan_preview.inx:18
 msgid "Realistic View (High Quality)"
-msgstr ""
+msgstr "Realistische Ansicht (hohe Qualität)"
 
 #: inx/inkstitch_stitch_plan_preview.inx:19
 msgid "Realistic Vector (slow)"
