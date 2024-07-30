@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import time
 
+import inkex
 import wx
 from numpy import split
 
@@ -129,8 +130,25 @@ class DrawingPanel(wx.Panel):
             return
 
         with debug.log_exceptions():
-            canvas.SetPen(wx.Pen(wx.Colour(0, 0, 0)))
-            canvas.DrawRectangle(0, 0, self.page_specs['width'], self.page_specs['height'])
+            if self.page_specs['show_page_shadow']:
+                canvas.SetPen(wx.TRANSPARENT_PEN)
+                canvas.SetBrush(wx.Brush(wx.Colour(0, 0, 0, 64)))
+                canvas.DrawRoundedRectangle(
+                    (-self.page_specs['x'] + 4) * self.PIXEL_DENSITY, (-self.page_specs['y'] + 4) * self.PIXEL_DENSITY,
+                    self.page_specs['width'] * self.PIXEL_DENSITY, self.page_specs['height'] * self.PIXEL_DENSITY,
+                    1 * self.PIXEL_DENSITY
+                )
+
+            border_color = inkex.Color.parse_str(self.page_specs['border_color'])[1]
+            canvas.SetPen(canvas.CreatePen(wx.GraphicsPenInfo(wx.Colour(*border_color), width=1 * self.PIXEL_DENSITY).Join(wx.JOIN_MITER)))
+
+            page_color = inkex.Color.parse_str(self.page_specs['page_color'])[1]
+            canvas.SetBrush(wx.Brush(wx.Colour(*page_color)))
+
+            canvas.DrawRectangle(
+                -self.page_specs['x'] * self.PIXEL_DENSITY, -self.page_specs['y'] * self.PIXEL_DENSITY,
+                self.page_specs['width'] * self.PIXEL_DENSITY, self.page_specs['height'] * self.PIXEL_DENSITY
+            )
 
     def draw_stitches(self, canvas):
         canvas.BeginLayer(1)

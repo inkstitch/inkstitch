@@ -38,11 +38,11 @@ class Simulator(InkstitchExtension):
         app.SetTopWindow(simulator)
         simulator.Show()
         simulator.load(stitch_plan)
-        simulator.set_page_specs(self.get_page_specs())
+        simulator.set_page_specs(self.get_page_specs(stitch_plan))
         simulator.go()
         app.MainLoop()
 
-    def get_page_specs(self):
+    def get_page_specs(self, stitch_plan):
         svg = self.document.getroot()
         width = svg.get('width', 0)
         height = svg.get('height', 0)
@@ -61,6 +61,8 @@ class Simulator(InkstitchExtension):
         return {
             "width": convert_length(width),
             "height": convert_length(height),
+            "x": stitch_plan.bounding_box[0],
+            "y": stitch_plan.bounding_box[1],
             "page_color": page_color,
             "desk_color": desk_color,
             "border_color": border_color,
