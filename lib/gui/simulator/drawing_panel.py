@@ -4,7 +4,6 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import time
 
-import inkex
 import wx
 from numpy import split
 
@@ -62,6 +61,8 @@ class DrawingPanel(wx.Panel):
         self.height = 0
         self.loaded = False
         self.page_specs = {}
+        self.show_page = True
+        self.background_color = None
 
         # desired simulation speed in stitches per second
         self.speed = 16
@@ -126,7 +127,9 @@ class DrawingPanel(wx.Panel):
         self.draw_scale(canvas)
 
     def draw_page(self, canvas):
-        if not self.page_specs:
+        self._update_background_color()
+
+        if not self.page_specs or not self.show_page:
             return
 
         with debug.log_exceptions():
@@ -139,11 +142,13 @@ class DrawingPanel(wx.Panel):
                     1 * self.PIXEL_DENSITY
                 )
 
-            border_color = inkex.Color.parse_str(self.page_specs['border_color'])[1]
-            canvas.SetPen(canvas.CreatePen(wx.GraphicsPenInfo(wx.Colour(*border_color), width=1 * self.PIXEL_DENSITY).Join(wx.JOIN_MITER)))
-
-            page_color = inkex.Color.parse_str(self.page_specs['page_color'])[1]
-            canvas.SetBrush(wx.Brush(wx.Colour(*page_color)))
+            pen = canvas.CreatePen(
+                wx.GraphicsPenInfo(
+                    wx.Colour(self.page_specs['border_color']), width=1 * self.PIXEL_DENSITY)
+                .Join(wx.JOIN_MITER)
+            )
+            canvas.SetPen(pen)
+            canvas.SetBrush(wx.Brush(wx.Colour(self.background_color or self.page_specs['page_color'])))
 
             canvas.DrawRectangle(
                 -self.page_specs['x'] * self.PIXEL_DENSITY, -self.page_specs['y'] * self.PIXEL_DENSITY,
@@ -285,6 +290,22 @@ class DrawingPanel(wx.Panel):
     def set_page_specs(self, page_specs):
         self.SetBackgroundColour(page_specs['desk_color'])
         self.page_specs = page_specs
+
+    def set_background_color(self, color):
+        self.background_color = color
+
+    def _update_background_color(self):
+        if not self.page_specs:
+            self.SetBackgroundColour(self.background_color or "#FFFFFF")
+        else:
+            if self.show_page:
+                self.SetBackgroundColour(self.page_specs['desk_color'])
+            else:
+                self.SetBackgroundColour(self.background_color or self.page_specs['page_color'])
+
+    def set_show_page(self, show_page):
+        self.show_page = show_page
+        self._update_background_color()
 
     def choose_zoom_and_pan(self, event=None):
         # ignore if EVT_SIZE fired before we load the stitch plan
