@@ -93,3 +93,6 @@ class SimulatorPanel(wx.Panel):
     def clear(self):
         self.dp.clear()
         self.cp.clear()
+
+    def set_page_specs(self, page_specs):
+        self.dp.set_page_specs(page_specs)

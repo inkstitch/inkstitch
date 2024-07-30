@@ -7,6 +7,7 @@ import time
 import wx
 from numpy import split
 
+from ...debug.debug import debug
 from ...i18n import _
 from ...svg import PIXELS_PER_MM
 from ...utils.settings import global_settings
@@ -59,6 +60,7 @@ class DrawingPanel(wx.Panel):
         self.width = 0
         self.height = 0
         self.loaded = False
+        self.page_specs = {}
 
         # desired simulation speed in stitches per second
         self.speed = 16
@@ -122,6 +124,14 @@ class DrawingPanel(wx.Panel):
         self.draw_stitches(canvas)
         self.draw_scale(canvas)
 
+    def draw_page(self, canvas):
+        if not self.page_specs:
+            return
+
+        with debug.log_exceptions():
+            canvas.SetPen(wx.Pen(wx.Colour(0, 0, 0)))
+            canvas.DrawRectangle(0, 0, self.page_specs['width'], self.page_specs['height'])
+
     def draw_stitches(self, canvas):
         canvas.BeginLayer(1)
 
@@ -129,6 +139,8 @@ class DrawingPanel(wx.Panel):
         transform.Translate(*self.pan)
         transform.Scale(self.zoom / self.PIXEL_DENSITY, self.zoom / self.PIXEL_DENSITY)
         canvas.SetTransform(transform)
+
+        self.draw_page(canvas)
 
         stitch = 0
         last_stitch = None
@@ -251,6 +263,10 @@ class DrawingPanel(wx.Panel):
         self.go()
         if hasattr(self.view_panel, 'info_panel'):
             self.view_panel.info_panel.update()
+
+    def set_page_specs(self, page_specs):
+        self.SetBackgroundColour(page_specs['desk_color'])
+        self.page_specs = page_specs
 
     def choose_zoom_and_pan(self, event=None):
         # ignore if EVT_SIZE fired before we load the stitch plan
