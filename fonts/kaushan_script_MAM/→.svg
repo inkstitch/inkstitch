@@ -3,9 +3,9 @@
    version="1.1"
    id="svg10377"
    sodipodi:docname="→.svg"
-   width="150"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
-   height="150"
+   width="39.6875mm"
+   inkscape:version="1.4-beta (62f545ba, 2024-04-22)"
+   height="39.6875mm"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -18,13 +18,13 @@
      inkscape:guide-bbox="true"
      showguides="true"
      inkscape:document-rotation="0"
-     inkscape:current-layer="g12867"
+     inkscape:current-layer="g197"
      inkscape:window-maximized="1"
      inkscape:window-y="-8"
      inkscape:window-x="-8"
-     inkscape:cy="69.339051"
-     inkscape:cx="72.073679"
-     inkscape:zoom="10.787572"
+     inkscape:cy="46.959399"
+     inkscape:cx="30.746457"
+     inkscape:zoom="7.7407293"
      showgrid="false"
      id="namedview10379"
      inkscape:window-height="837"
@@ -39,7 +39,8 @@
      pagecolor="#ffffff"
      inkscape:showpageshadow="2"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1">
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
     <sodipodi:guide
        inkscape:color="rgb(0,0,255)"
        inkscape:locked="false"
@@ -81,7 +82,7 @@
        inkscape:label="dépaet et fin de satin"
        id="guide13163"
        orientation="0,1"
-       position="0,41" />
+       position="23.750703,42.751265" />
   </sodipodi:namedview>
   <metadata
      id="metadata5608">
@@ -5724,7 +5725,7 @@ Special thanks to the project backers! They are all listed on the website: http:
   </g>
   <g
      id="g12867"
-     style="display:inline"
+     style="display:none"
      inkscape:label="GlyphLayer-W"
      inkscape:groupmode="layer">
     <path
@@ -11628,5 +11629,836 @@ Special thanks to the project backers! They are all listed on the website: http:
        inkstitch:zigzag_underlay="False"
        inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
        inkstitch:contour_underlay_inset_mm="0.4" />
+  </g>
+  <g
+     id="g123"
+     style="display:none"
+     inkscape:label="GlyphLayer-,"
+     inkscape:groupmode="layer">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+       d="M 15.944274,115.42317 22.8871,102.486"
+       id="path134"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="text127"
+       style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+       d="m 24.242766,103.15471 c 0.979333,0.904 1.582,1.808 1.808,2.712 -1.931548,6.82206 -5.129805,12.55678 -9.59477,17.20414 m -0.91423,-24.210143 c -1.808,-0.527333 -3.653667,-0.866333 -5.537,-1.017 0.527333,2.109335 0.866333,3.992673 1.017,5.650003 0.226,1.582 0.339,3.503 0.339,5.763 0,3.46533 -0.828667,6.667 -2.4860003,9.605 m -0.3464333,-4.82902 13.1632956,6.67434"
+       sodipodi:nodetypes="ccccccsc"
+       inkscape:label="satin"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:contour_underlay="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:force_lock_stitches="False"
+       inkstitch:short_stitch_distance_mm="0.22"
+       inkstitch:min_stitch_length_mm=".5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:max_stitch_length_mm="7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+       inkstitch:contour_underlay_inset_mm="0.4" />
+    <path
+       d="m 8.21389,118.495 c 2.943987,6.67712 -2.9023822,8.80751 -6.70114,11.997"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path137"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path132"
+       style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+       d="M 0.994972,129.294 C 0.899501,128.896 0.851766,128.507 0.851766,128.128 4.61843,124.888 7.29277,121.8 8.87477,118.862 M 2.03053,131.69 c 0.20094,0.306 0.41068,0.55 0.62924,0.732 5.47785,-2.363 10.07663,-5.48 13.79623,-9.351 m -14.65342,2.611 4.78502,6.227"
+       sodipodi:nodetypes="cccccc"
+       inkscape:label="satin"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:contour_underlay="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:short_stitch_distance_mm="0.22"
+       inkstitch:min_stitch_length_mm=".5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:max_stitch_length_mm="7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+       inkstitch:contour_underlay_inset_mm="0.4" />
+  </g>
+  <g
+     id="g141"
+     style="display:none"
+     inkscape:label="GlyphLayer-."
+     inkscape:groupmode="layer">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:29.6;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+       d="M 15.076104,110.67103 19.009,107.39381 22.3446,102.769"
+       id="path146"
+       sodipodi:nodetypes="ccc" />
+    <path
+       id="text125"
+       style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+       d="m 23.67114,103.49371 c 1.356,0.97933 2.373,1.99633 3.051,3.051 -0.678,1.50667 -1.544333,2.938 -2.599,4.294 -0.01779,0.0229 -2.273131,2.92086 -5.187312,4.98067 M 15.19614,98.860707 c -1.356,-0.452 -2.486,-0.678 -3.39,-0.678 -0.150667,0.678 -0.414333,1.695001 -0.791,3.051003 -0.376667,1.28067 -0.753333,2.67433 -1.1299996,4.181 -0.3766667,1.43133 -0.7156667,2.86267 -1.017,4.294 m 0.7674566,-7.49341 15.534942,9.57005"
+       sodipodi:nodetypes="ccccccccccc"
+       inkscape:label="satin"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:contour_underlay="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:force_lock_stitches="False"
+       inkstitch:short_stitch_distance_mm="0.22"
+       inkstitch:min_stitch_length_mm=".5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:max_stitch_length_mm="7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+       inkstitch:contour_underlay_inset_mm="0.4" />
+    <path
+       d="m 8.22195,109.316 3.46195,6.914"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path148" />
+    <path
+       id="path142"
+       style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+       d="m 9.38796,114.657 c -0.39113,-0.456 -0.6774,-0.937 -0.85882,-1.445 0,-0.904 0.113,-2.072 0.339,-3.503 m 4.06296,7.376 c 0.662,0.278 1.3041,0.456 1.926,0.534 1.5137,0 3.9547,-1.712 4.0787,-1.8 m 0.3354,1.177 -11.43818,-7.112"
+       inkscape:label="satin"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:contour_underlay="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:short_stitch_distance_mm="0.22"
+       inkstitch:min_stitch_length_mm=".5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:max_stitch_length_mm="7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+       inkstitch:contour_underlay_inset_mm="0.4"
+       sodipodi:nodetypes="cccccccc" />
+  </g>
+  <g
+     id="g153"
+     style="display:none"
+     inkscape:label="GlyphLayer-:"
+     inkscape:groupmode="layer">
+    <g
+       id="g178"
+       transform="translate(11.3273,-36.5395)">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:29.6;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+         d="M 2.6526594,152.6915 7.54128,139.15283 m 6.78305,-25.86872 4.68467,-5.8903 3.3356,-4.62481"
+         id="path175"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="path176"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 23.67114,103.49371 c 1.356,0.97933 2.373,1.99633 3.051,3.051 -0.678,1.50667 -1.544333,2.938 -2.599,4.294 -0.01779,0.0229 -2.273131,2.92086 -5.187312,4.98067 M 15.19614,98.860707 c -1.356,-0.452 -2.486,-0.678 -3.39,-0.678 -0.150667,0.678 -0.414333,1.695001 -0.791,3.051003 -0.376667,1.28067 -0.753333,2.67433 -1.1299996,4.181 -0.3766667,1.43133 -0.7156667,2.86267 -1.017,4.294 m 0.7674566,-7.49341 15.534942,9.57005"
+         sodipodi:nodetypes="ccccccccccc"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="False"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4" />
+      <path
+         d="m 8.22195,109.316 3.46195,6.914"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path177" />
+      <path
+         id="path178"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 12.931066,117.08459 c 0.662084,0.27833 1.304108,0.45642 1.926074,0.53412 1.513644,0 3.954696,-1.71173 4.078688,-1.79933 m -9.5478707,-1.1624 c -0.3911264,-0.45554 -0.6773987,-0.9373 -0.8588169,-1.44527 0,-0.904 0.113,-2.07167 0.339,-3.503 m 10.4030536,7.28773 -11.4381746,-7.11199"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4"
+         sodipodi:nodetypes="cccccccc" />
+    </g>
+    <g
+       id="g163">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:29.6;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+         d="M 15.076104,110.67103 19.009,107.39381 22.3446,102.769"
+         id="path149"
+         sodipodi:nodetypes="ccc" />
+      <path
+         id="path150"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 23.67114,103.49371 c 1.356,0.97933 2.373,1.99633 3.051,3.051 -0.678,1.50667 -1.544333,2.938 -2.599,4.294 -0.01779,0.0229 -2.273131,2.92086 -5.187312,4.98067 M 15.19614,98.860707 c -1.356,-0.452 -2.486,-0.678 -3.39,-0.678 -0.150667,0.678 -0.414333,1.695001 -0.791,3.051003 -0.376667,1.28067 -0.753333,2.67433 -1.1299996,4.181 -0.3766667,1.43133 -0.7156667,2.86267 -1.017,4.294 m 0.7674566,-7.49341 15.534942,9.57005"
+         sodipodi:nodetypes="ccccccccccc"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="False"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4" />
+      <path
+         d="m 8.22195,109.316 3.46195,6.914"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path151" />
+      <path
+         id="path152"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 9.38796,114.657 c -0.39113,-0.456 -0.6774,-0.937 -0.85882,-1.445 0,-0.904 0.113,-2.072 0.339,-3.503 m 4.06296,7.376 c 0.662,0.278 1.3041,0.456 1.926,0.534 1.5137,0 3.9547,-1.712 4.0787,-1.8 m 0.3354,1.177 -11.43818,-7.112"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4"
+         sodipodi:nodetypes="cccccccc" />
+    </g>
+  </g>
+  <g
+     id="g162"
+     style="display:none"
+     inkscape:label="GlyphLayer-;"
+     inkscape:groupmode="layer">
+    <g
+       id="g179"
+       transform="translate(11.3273,-35.078)">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:29.6;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+         d="M 6.3066137,151.96071 10.990996,141.18585 M 19.009,107.39381 22.3446,102.769"
+         id="path159"
+         sodipodi:nodetypes="cccc" />
+      <path
+         id="path160"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 23.67114,103.49371 c 1.356,0.97933 2.373,1.99633 3.051,3.051 -0.678,1.50667 -1.544333,2.938 -2.599,4.294 -0.01779,0.0229 -2.273131,2.92086 -5.187312,4.98067 M 15.19614,98.860707 c -1.356,-0.452 -2.486,-0.678 -3.39,-0.678 -0.150667,0.678 -0.414333,1.695001 -0.791,3.051003 -0.376667,1.28067 -0.753333,2.67433 -1.1299996,4.181 -0.3766667,1.43133 -0.7156667,2.86267 -1.017,4.294 m 0.7674566,-7.49341 15.534942,9.57005"
+         sodipodi:nodetypes="ccccccccccc"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="False"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4" />
+      <path
+         d="m 8.22195,109.316 3.46195,6.914"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path161" />
+      <path
+         id="path162"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 12.931066,117.08459 c 0.662084,0.27833 1.304108,0.45642 1.926074,0.53412 1.513644,0 3.954696,-1.71173 4.078688,-1.79933 m -9.5478707,-1.1624 c -0.3911264,-0.45554 -0.6773987,-0.9373 -0.8588169,-1.44527 0,-0.904 0.113,-2.07167 0.339,-3.503 m 10.4030536,7.28773 -11.4381746,-7.11199"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="False"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4"
+         sodipodi:nodetypes="cccccccc" />
+    </g>
+    <g
+       id="g183"
+       style="display:inline"
+       transform="translate(1.09619,0.730791)">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+         d="M 15.944274,115.42317 22.8871,102.486"
+         id="path180"
+         sodipodi:nodetypes="cc" />
+      <path
+         id="path181"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 24.242766,103.15471 c 0.979333,0.904 1.582,1.808 1.808,2.712 -1.931548,6.82206 -5.129805,12.55678 -9.59477,17.20414 m -0.91423,-24.210143 c -1.808,-0.527333 -3.653667,-0.866333 -5.537,-1.017 0.527333,2.109335 0.866333,3.992673 1.017,5.650003 0.226,1.582 0.339,3.503 0.339,5.763 0,3.46533 -0.828667,6.667 -2.4860003,9.605 m -0.3464333,-4.82902 13.1632956,6.67434"
+         sodipodi:nodetypes="ccccccsc"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="False"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4" />
+      <path
+         d="m 8.21389,118.495 c 2.943987,6.67712 -2.9023822,8.80751 -6.70114,11.997"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path182"
+         sodipodi:nodetypes="cc" />
+      <path
+         id="path183"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="M 0.994972,129.294 C 0.899501,128.896 0.851766,128.507 0.851766,128.128 4.61843,124.888 7.29277,121.8 8.87477,118.862 M 2.03053,131.69 c 0.20094,0.306 0.41068,0.55 0.62924,0.732 5.47785,-2.363 10.07663,-5.48 13.79623,-9.351 m -14.65342,2.611 4.78502,6.227"
+         sodipodi:nodetypes="cccccc"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4" />
+    </g>
+  </g>
+  <g
+     id="g117"
+     style="display:none"
+     inkscape:label="GlyphLayer-!"
+     inkscape:groupmode="layer">
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:29.6;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+       d="M 15.076104,110.67103 19.009,107.39381 22.3446,102.769"
+       id="path139"
+       sodipodi:nodetypes="ccc" />
+    <path
+       d="M 21.311106,88.041706 53.2396,21.6613"
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path140"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path136"
+       style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+       d="m 52.109606,20.656917 c -1.356,-0.904 -2.636667,-1.469 -3.842,-1.695 -1.506667,1.054667 -3.277,3.201667 -5.311,6.441 -2.034,3.164 -4.181,6.930667 -6.441,11.3 -2.184667,4.369333 -4.369333,9.077667 -6.554,14.125 -2.451628,5.579566 -4.505626,10.738888 -6.651745,16.698861 M 59.228606,26.984917 c 0.904,1.205333 1.431333,2.26 1.582,3.164 -3.842,3.164 -7.646333,7.119 -11.413,11.865 -3.766667,4.670667 -7.269667,9.868667 -10.509,15.594 -3.164,5.725333 -5.951333,11.865 -8.362,18.419 M 41.339774,19.392152 58.134057,36.573995"
+       sodipodi:nodetypes="ccccccccccc"
+       inkscape:label="satin"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:contour_underlay="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:force_lock_stitches="False"
+       inkstitch:short_stitch_distance_mm="0.22"
+       inkstitch:min_stitch_length_mm=".5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:max_stitch_length_mm="7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+       inkstitch:contour_underlay_inset_mm="0.4" />
+    <path
+       d="M 31.0158,76.6032 19.7947,92.2847"
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path141" />
+    <path
+       id="text124"
+       style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+       d="m 18.774606,91.168917 c -0.376667,-1.054667 -0.565,-2.410667 -0.565,-4.068 0,-3.715322 1.726349,-10.204486 5.100255,-19.574139 m -0.919255,27.597139 c 0.904,0.301333 1.808,0.565 2.712,0.791 1.205333,-6.78 3.013333,-13.409333 5.424,-19.888 m -10.761027,-8.448091 11.755999,13.30624"
+       sodipodi:nodetypes="cscccc"
+       inkscape:label="satin"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:contour_underlay="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:short_stitch_distance_mm="0.22"
+       inkstitch:min_stitch_length_mm=".5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:max_stitch_length_mm="7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+       inkstitch:contour_underlay_inset_mm="0.4" />
+    <g
+       id="g126">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:29.6;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+         d="M 15.076104,110.67103 19.009,107.39381 22.3446,102.769"
+         id="path114"
+         sodipodi:nodetypes="ccc" />
+      <path
+         id="path115"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 23.67114,103.49371 c 1.356,0.97933 1.339506,1.22121 2.017506,2.27588 -3.099551,3.57246 -3.225785,7.36326 -6.752818,10.04979 M 15.19614,98.860707 c -1.356,-0.452 -3.804333,1.017001 -4.181,2.373003 -0.376667,1.28067 -0.753333,2.67433 -1.1299996,4.181 -0.3766667,1.43133 -0.7156667,2.86267 -1.017,4.294 m 0.7674566,-7.49341 15.534942,9.57005"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="False"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4" />
+      <path
+         d="m 8.22195,109.316 2.170082,5.62213"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path116"
+         sodipodi:nodetypes="cc" />
+      <path
+         id="path117"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 9.38796,114.657 c -0.39113,-0.456 -0.6774,-0.937 -0.85882,-1.445 0,-0.904 0.113,-2.072 0.339,-3.503 m 4.06296,7.376 c 0.662,0.278 1.3041,0.456 1.926,0.534 1.5137,0 3.9547,-1.712 4.0787,-1.8 m 0.3354,1.177 -11.43818,-7.112"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4"
+         sodipodi:nodetypes="cccccccc" />
+    </g>
+  </g>
+  <g
+     id="g222"
+     style="display:none"
+     inkscape:label="GlyphLayer-¡"
+     inkscape:groupmode="layer">
+    <g
+       id="g221"
+       transform="translate(27.4999,-44.6766)">
+      <path
+         d="M 7.782006,150.05842 39.7105,83.678018"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path223"
+         sodipodi:nodetypes="cc"
+         transform="translate(-27.4999,44.6766)" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:29.6;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+         d="M 13.525862,112.47965 19.009,107.39381 22.3446,102.769"
+         id="path215"
+         sodipodi:nodetypes="ccc" />
+      <path
+         id="path216"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 23.67114,103.49371 c 1.356,0.97933 1.339506,1.22121 2.017506,2.27588 -3.099551,3.57246 -3.225785,7.36326 -6.752818,10.04979 M 15.19614,98.860707 c -1.356,-0.452 -3.804333,1.017001 -4.181,2.373003 -0.376667,1.28067 -0.753333,2.67433 -1.1299996,4.181 -0.3766667,1.43133 -0.7156667,2.86267 -1.017,4.294 m 0.7674566,-7.49341 15.534942,9.57005"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="False"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4" />
+      <path
+         d="m 8.22195,109.316 2.170082,5.62213"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path217"
+         sodipodi:nodetypes="cc" />
+      <path
+         id="path221"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 9.38796,114.657 c -0.39113,-0.456 -0.6774,-0.937 -0.85882,-1.445 0,-0.904 0.113,-2.072 0.339,-3.503 m 4.06296,7.376 c 0.662,0.278 1.3041,0.456 1.926,0.534 1.5137,0 3.9547,-1.712 4.0787,-1.8 m 0.3354,1.177 -11.43818,-7.112"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4"
+         sodipodi:nodetypes="cccccccc" />
+    </g>
+    <path
+       d="M 39.7105,83.678018 7.782006,150.05842"
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path199"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path200"
+       style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+       d="m 8.912,151.06281 c 1.356,0.904 2.636667,1.469 3.842,1.695 1.506667,-1.05467 3.277,-3.20167 5.311,-6.441 2.034,-3.164 4.181,-6.93067 6.441,-11.3 2.184667,-4.36934 4.369333,-9.07767 6.554,-14.125 2.451628,-5.57957 4.505626,-10.73889 6.651745,-16.69886 M 1.793,144.73481 c -0.904,-1.20534 -1.431333,-2.26 -1.582,-3.164 3.842,-3.164 7.646333,-7.119 11.413,-11.865 3.766667,-4.67067 7.269667,-9.86867 10.509,-15.594 3.164,-5.72534 5.951333,-11.865 8.362,-18.419003 M 19.681832,152.32757 2.887549,135.14573"
+       sodipodi:nodetypes="ccccccccccc"
+       inkscape:label="satin"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:contour_underlay="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:force_lock_stitches="False"
+       inkstitch:short_stitch_distance_mm="0.22"
+       inkstitch:min_stitch_length_mm=".5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:max_stitch_length_mm="7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+       inkstitch:contour_underlay_inset_mm="0.4" />
+    <path
+       d="M 30.005806,95.116524 38.64317,77.626409"
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path201"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path214"
+       style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+       d="m 38.631,76.5958 c -0.904,-0.3013 -1.808,-0.565 -2.712,-0.791 -1.2053,6.78 -3.0133,13.4093 -5.424,19.888 m 11.752,-15.142 c 0.3767,1.0547 0.565,2.4107 0.565,4.068 0,3.7153 -1.7263,10.2045 -5.1003,19.5742 M 41.256,104.141 29.5,90.8347"
+       sodipodi:nodetypes="cscccc"
+       inkscape:label="satin"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:contour_underlay="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:short_stitch_distance_mm="0.22"
+       inkstitch:min_stitch_length_mm=".5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:max_stitch_length_mm="7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+       inkstitch:contour_underlay_inset_mm="0.4" />
+  </g>
+  <g
+     id="g124"
+     style="display:none"
+     inkscape:label="GlyphLayer-?"
+     inkscape:groupmode="layer"
+     transform="translate(9.8708132,-0.25837359)">
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:29.6;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+       d="M 15.076104,110.67103 19.009,107.39381 22.3446,102.769"
+       id="path179"
+       sodipodi:nodetypes="ccc" />
+    <path
+       d="M 25.832643,85.974717 45.549288,63.026636 C 50.95155,53.712887 63.065234,49.344397 56.610418,31.293854 50.182409,27.780057 40.750516,20.912649 35.633223,30.178341 L 26.6704,47.9241"
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path186"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="path143"
+       style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+       d="m 28.085962,48.454917 c 1.506667,0.301333 3.013333,0.452 4.52,0.452 h 1.13 c 0.376667,0 0.866333,-0.07533 1.469,-0.226 -0.226,-0.301333 -0.339,-0.979333 -0.339,-2.034 0,-1.582 0.414333,-3.352333 1.243,-5.311 0.828667,-1.958667 1.845667,-3.766667 3.051,-5.424 1.205333,-1.657333 2.486,-3.051 3.842,-4.181 1.431333,-1.13 2.712,-1.695 3.842,-1.695 0.979333,0 1.958667,0.301333 2.938,0.904 1.054667,0.527333 1.958667,1.243 2.712,2.147 0.753333,0.904 1.356,1.921 1.808,3.051 0.527333,1.13 0.791,2.297667 0.791,3.503 0,2.636667 -1.469,5.612333 -4.407,8.927 -2.938,3.314667 -7.382667,6.742333 -13.334,10.283 -3.691333,2.184667 -6.893,4.633 -9.605,7.345 m -6.893,-20.453 c -0.828667,-0.678 -1.356,-1.356 -1.582,-2.034 0.527333,-2.486 1.582,-5.047333 3.164,-7.684 1.582,-2.636667 3.39,-5.047333 5.424,-7.232 2.034,-2.26 4.181,-4.143333 6.441,-5.65 2.26,-1.506667 4.407,-2.373 6.441,-2.599 2.938,0.226 5.763,0.979333 8.475,2.26 2.787333,1.280667 5.235667,2.900333 7.345,4.859 2.109333,1.958667 3.804333,4.218667 5.085,6.78 1.280667,2.561333 1.921,5.235667 1.921,8.023 0,2.862667 -0.527333,5.537 -1.582,8.023 -0.979333,2.486 -2.448333,5.009667 -4.407,7.571 -1.958667,2.561333 -4.369333,5.235667 -7.232,8.023 -2.862667,2.712 -6.102,5.800667 -9.718,9.266 M 21.445008,30.889776 39.918719,39.932852"
+       inkscape:label="satin"
+       sodipodi:nodetypes="csscssscscscssccccscsccssscscccc"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:contour_underlay="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:force_lock_stitches="False"
+       inkstitch:short_stitch_distance_mm="0.22"
+       inkstitch:min_stitch_length_mm=".5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:max_stitch_length_mm="7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+       inkstitch:contour_underlay_inset_mm="0.4" />
+    <path
+       d="M 41.2452,75.7867 35.41419,74.441288 19.6457,92.2029"
+       style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.5"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path187"
+       sodipodi:nodetypes="ccc" />
+    <path
+       id="text126"
+       style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+       d="m 18.367962,91.394917 c -0.979333,-1.054667 -1.695,-2.109333 -2.147,-3.164 0,-1.732667 0.414333,-3.804333 1.243,-6.215 0.828667,-2.486 2.071667,-5.047333 3.729,-7.684 1.732667,-2.712 3.917333,-5.424 6.554,-8.136 m -1.695,30.058 c 1.431333,0.527333 2.787333,0.82867 4.068,0.904 -0.07533,-0.452 -0.15067,-0.866333 -0.226,-1.243 v -1.13 c 0,-2.787333 0.904,-5.876 2.712,-9.266 1.808,-3.465333 4.482333,-6.855333 8.023,-10.17 m -17.892086,-9.320333 17.31103,13.952174"
+       inkscape:label="satin"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.3"
+       inkstitch:contour_underlay="True"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:force_lock_stitches="True"
+       inkstitch:short_stitch_distance_mm="0.22"
+       inkstitch:min_stitch_length_mm=".5"
+       inkstitch:min_jump_stitch_length_mm="3"
+       inkstitch:max_stitch_length_mm="7"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+       inkstitch:lock_start="half_stitch"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+       inkstitch:contour_underlay_inset_mm="0.4" />
+    <g
+       id="g135"
+       style="display:inline">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:29.6;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+         d="M 15.076104,110.67103 19.009,107.39381 22.3446,102.769"
+         id="path126"
+         sodipodi:nodetypes="ccc" />
+      <path
+         id="path127"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 23.67114,103.49371 c 1.356,0.97933 1.339506,1.22121 2.017506,2.27588 -3.099551,3.57246 -3.225785,7.36326 -6.752818,10.04979 M 15.19614,98.860707 c -1.356,-0.452 -3.804333,1.017001 -4.181,2.373003 -0.376667,1.28067 -0.753333,2.67433 -1.1299996,4.181 -0.3766667,1.43133 -0.7156667,2.86267 -1.017,4.294 m 0.7674566,-7.49341 15.534942,9.57005"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="False"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4" />
+      <path
+         d="m 8.22195,109.316 2.040895,5.49295"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path133"
+         sodipodi:nodetypes="cc" />
+      <path
+         id="path135"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 9.38796,114.657 c -0.39113,-0.456 -0.6774,-0.937 -0.85882,-1.445 0,-0.904 0.113,-2.072 0.339,-3.503 m 4.06296,7.376 c 0.662,0.278 1.3041,0.456 1.926,0.534 1.5137,0 3.9547,-1.712 4.0787,-1.8 m 0.3354,1.177 -11.43818,-7.112"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4"
+         sodipodi:nodetypes="cccccccc" />
+    </g>
+  </g>
+  <g
+     id="g197"
+     style="display:inline"
+     inkscape:label="GlyphLayer-¿"
+     inkscape:groupmode="layer">
+    <g
+       id="g223"
+       transform="translate(-6.5885265)">
+      <g
+         id="g196"
+         style="display:inline"
+         transform="translate(44.2095,-45.6783)">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-miterlimit:29.6;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+           d="M 15.076104,110.67103 19.009,107.39381 22.3446,102.769"
+           id="path193"
+           sodipodi:nodetypes="ccc" />
+        <path
+           id="path194"
+           style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+           d="m 23.67114,103.49371 c 1.356,0.97933 1.339506,1.22121 2.017506,2.27588 -3.099551,3.57246 -3.225785,7.36326 -6.752818,10.04979 M 15.19614,98.860707 c -1.356,-0.452 -3.804333,1.017001 -4.181,2.373003 -0.376667,1.28067 -0.753333,2.67433 -1.1299996,4.181 -0.3766667,1.43133 -0.7156667,2.86267 -1.017,4.294 m 0.7674566,-7.49341 15.534942,9.57005"
+           sodipodi:nodetypes="ccccccccc"
+           inkscape:label="satin"
+           inkstitch:satin_column="True"
+           inkstitch:zigzag_spacing_mm="0.3"
+           inkstitch:contour_underlay="True"
+           inkstitch:pull_compensation_mm="0.2"
+           inkstitch:force_lock_stitches="False"
+           inkstitch:short_stitch_distance_mm="0.22"
+           inkstitch:min_stitch_length_mm=".5"
+           inkstitch:min_jump_stitch_length_mm="3"
+           inkstitch:max_stitch_length_mm="7"
+           inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+           inkstitch:lock_start="half_stitch"
+           inkstitch:zigzag_underlay="False"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+           inkstitch:contour_underlay_inset_mm="0.4" />
+        <path
+           d="m 8.22195,109.316 3.46195,6.914"
+           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:3, 1"
+           inkstitch:running_stitch_length_mm="2.5"
+           inkstitch:running_stitch_tolerance_mm="0.2"
+           id="path195" />
+        <path
+           id="path196"
+           style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+           d="m 12.931066,117.08459 c 0.662084,0.27833 1.304108,0.45642 1.926074,0.53412 1.513644,0 3.954696,-1.71173 4.078688,-1.79933 m -9.5478707,-1.1624 c -0.3911264,-0.45554 -0.6773987,-0.9373 -0.8588169,-1.44527 0,-0.904 0.113,-2.07167 0.339,-3.503 m 10.4030536,7.28773 -11.4381746,-7.11199"
+           inkscape:label="satin"
+           inkstitch:satin_column="True"
+           inkstitch:zigzag_spacing_mm="0.3"
+           inkstitch:contour_underlay="True"
+           inkstitch:pull_compensation_mm="0.2"
+           inkstitch:force_lock_stitches="True"
+           inkstitch:short_stitch_distance_mm="0.22"
+           inkstitch:min_stitch_length_mm=".5"
+           inkstitch:min_jump_stitch_length_mm="3"
+           inkstitch:max_stitch_length_mm="7"
+           inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+           inkstitch:lock_start="half_stitch"
+           inkstitch:zigzag_underlay="False"
+           inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+           inkstitch:contour_underlay_inset_mm="0.4"
+           sodipodi:nodetypes="cccccccc" />
+      </g>
+      <path
+         d="M 50.994185,88.489399 31.27754,111.43748 c -5.402262,9.31375 -17.515946,13.68224 -11.06113,31.73278 6.428009,3.5138 15.859902,10.38121 20.977195,1.11551 l 8.962823,-17.74575"
+         style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path189"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="path190"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 48.740866,126.0092 c -1.506667,-0.30133 -3.013333,-0.452 -4.52,-0.452 h -1.13 c -0.376667,0 -0.866333,0.0753 -1.469,0.226 0.226,0.30133 0.339,0.97933 0.339,2.034 0,1.582 -0.414333,3.35233 -1.243,5.311 -0.828667,1.95867 -1.845667,3.76667 -3.051,5.424 -1.205333,1.65733 -2.486,3.051 -3.842,4.181 -1.431333,1.13 -2.712,1.695 -3.842,1.695 -0.979333,0 -1.958667,-0.30133 -2.938,-0.904 -1.054667,-0.52733 -1.958667,-1.243 -2.712,-2.147 -0.753333,-0.904 -1.356,-1.921 -1.808,-3.051 -0.527333,-1.13 -0.791,-2.29767 -0.791,-3.503 0,-2.63667 1.469,-5.61233 4.407,-8.927 2.938,-3.31467 7.382667,-6.74233 13.334,-10.283 3.691333,-2.18467 6.893,-4.633 9.605,-7.345 m 6.893,20.453 c 0.828667,0.678 1.356,1.356 1.582,2.034 -0.527333,2.486 -1.582,5.04733 -3.164,7.684 -1.582,2.63667 -3.39,5.04733 -5.424,7.232 -2.034,2.26 -4.181,4.14333 -6.441,5.65 -2.26,1.50667 -4.407,2.373 -6.441,2.599 -2.938,-0.226 -5.763,-0.97933 -8.475,-2.26 -2.787333,-1.28067 -5.235667,-2.90033 -7.345,-4.859 -2.109333,-1.95867 -3.804333,-4.21867 -5.085,-6.78 -1.280667,-2.56133 -1.921,-5.23567 -1.921,-8.023 0,-2.86267 0.527333,-5.537 1.582,-8.023 0.979333,-2.486 2.448333,-5.00967 4.407,-7.571 1.958667,-2.56133 4.369333,-5.23567 7.232,-8.023 2.862667,-2.712 6.102,-5.80067 9.718,-9.266001 M 55.38182,143.57434 36.908109,134.53126"
+         inkscape:label="satin"
+         sodipodi:nodetypes="csscssscscscssccccscsccssscscccc"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="False"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4" />
+      <path
+         d="m 35.581628,98.677416 5.83101,1.345414 9.922163,-20.319382"
+         style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.5"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path191"
+         sodipodi:nodetypes="ccc" />
+      <path
+         id="path192"
+         style="font-size:113px;font-family:'Kaushan Script';-inkscape-font-specification:'Kaushan Script';text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:square;stroke-miterlimit:29.6"
+         d="m 50.7749,78.2102 c -1.4314,-0.5273 -2.7874,-0.8287 -4.068,-0.904 0.0753,0.452 0.1506,0.8663 0.226,1.243 v 1.13 c 0,2.7873 -0.904,5.876 -2.712,9.266 -1.808,3.4653 -4.4824,6.8553 -8.023,10.17 m 22.261,-16.046 c 0.9793,1.0547 1.695,2.1093 2.147,3.164 0,1.7327 -0.4144,3.8043 -1.243,6.215 -0.8287,2.486 -2.0717,5.0473 -3.729,7.6838 -1.7327,2.712 -3.9174,5.424 -6.554,8.136 M 54.09,108.436 36.7789,94.4834"
+         inkscape:label="satin"
+         inkstitch:satin_column="True"
+         inkstitch:zigzag_spacing_mm="0.3"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:force_lock_stitches="True"
+         inkstitch:short_stitch_distance_mm="0.22"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:max_stitch_length_mm="7"
+         inkstitch:zigzag_underlay_max_stitch_length_mm="5.8"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:zigzag_underlay="False"
+         inkstitch:contour_underlay_stitch_tolerance_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.4" />
+    </g>
   </g>
 </svg>
