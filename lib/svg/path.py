@@ -31,7 +31,7 @@ def compose_parent_transforms(node, mat):
     return mat
 
 
-def get_node_transform(node):
+def get_node_transform(node: inkex.BaseElement):
     """
     if getattr(node, "composed_transform", None):
         return node.composed_transform()

@@ -88,7 +88,7 @@ class Clone(EmbroideryElement):
             stitch_groups = []
 
             for element in elements:
-                element_stitch_groups = element.to_stitch_groups(last_stitch_group)
+                element_stitch_groups = element.embroider(last_stitch_group)
                 if len(element_stitch_groups):
                     last_stitch_group = element_stitch_groups[-1]
                     stitch_groups.extend(element_stitch_groups)

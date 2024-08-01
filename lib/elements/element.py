@@ -607,8 +607,10 @@ class EmbroideryElement(object):
                 apply_patterns(stitch_groups, self.node)
 
                 if stitch_groups:
-                    stitch_groups[-1].trim_after = self.has_command("trim") or self.trim_after
-                    stitch_groups[-1].stop_after = self.has_command("stop") or self.stop_after
+                    # In some cases (clones) the last stitch group may have trim_after or stop_after already set,
+                    # and we shouldn't override that with this element's values, hence the use of or-equals
+                    stitch_groups[-1].trim_after |= self.has_command("trim") or self.trim_after
+                    stitch_groups[-1].stop_after |= self.has_command("stop") or self.stop_after
 
                 for stitch_group in stitch_groups:
                     stitch_group.min_jump_stitch_length = self.min_jump_stitch_length
