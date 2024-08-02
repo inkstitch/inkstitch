@@ -130,6 +130,7 @@ class ViewPanel(ScrolledPanel):
     def on_settings_button(self, event):
         if event.GetEventObject().GetValue():
             self.settings_panel = SimulatorPreferenceDialog(self, title=_('Simulator Preferences'))
+            self.settings_panel.Bind(wx.EVT_CLOSE, self.settings_panel_closed)
             self.settings_panel.Show()
         else:
             self.settings_panel.Close()
@@ -137,6 +138,17 @@ class ViewPanel(ScrolledPanel):
     def on_info_button(self, event):
         if event.GetEventObject().GetValue():
             self.info_panel = DesignInfoDialog(self, title=_('Design Info'))
+            self.info_panel.Bind(wx.EVT_CLOSE, self.info_panel_closed)
             self.info_panel.Show()
         else:
             self.info_panel.Close()
+
+    def info_panel_closed(self, event):
+        self.info_panel.Destroy()
+        self.info_panel = None
+        self.btnInfo.SetValue(False)
+
+    def settings_panel_closed(self, event):
+        self.settings_panel.Destroy()
+        self.settings_panel = None
+        self.btnSettings.SetValue(False)

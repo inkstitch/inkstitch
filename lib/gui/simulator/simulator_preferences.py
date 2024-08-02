@@ -69,4 +69,4 @@ class SimulatorPreferenceDialog(wx.Dialog):
         if self.drawing_panel.loaded:
             self.drawing_panel.update_pen_size()
             self.drawing_panel.Refresh()
-        self.Destroy()
+        self.Close()
