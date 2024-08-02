@@ -249,7 +249,7 @@ class DrawingPanel(wx.Panel):
         )
         self.loaded = True
         self.go()
-        if self.view_panel.info_panel is not None:
+        if hasattr(self.view_panel, 'info_panel'):
             self.view_panel.info_panel.update()
 
     def choose_zoom_and_pan(self, event=None):

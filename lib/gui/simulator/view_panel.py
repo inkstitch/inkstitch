@@ -22,10 +22,6 @@ class ViewPanel(ScrolledPanel):
         ScrolledPanel.__init__(self, parent)
         self.SetupScrolling(scroll_y=True, scroll_x=False)
 
-        # these must be created later because they need the drawing panel to be set
-        self.settings_panel = None
-        self.info_panel = None
-
         self.button_style = wx.BU_EXACTFIT | wx.BU_NOTEXT
 
         self.control_panel = parent.cp
@@ -133,28 +129,14 @@ class ViewPanel(ScrolledPanel):
 
     def on_settings_button(self, event):
         if event.GetEventObject().GetValue():
-            if self.settings_panel is None:
-                self.settings_panel = SimulatorPreferenceDialog(self, title=_('Simulator Preferences'))
-                self.settings_panel.Bind(wx.EVT_CLOSE, self.on_settings_panel_closed)
-
+            self.settings_panel = SimulatorPreferenceDialog(self, title=_('Simulator Preferences'))
             self.settings_panel.Show()
         else:
             self.settings_panel.Close()
 
-    def on_settings_panel_closed(self, event):
-        self.btnSettings.SetValue(False)
-        event.GetEventObject().Hide()
-
     def on_info_button(self, event):
         if event.GetEventObject().GetValue():
-            if self.info_panel is None:
-                self.info_panel = DesignInfoDialog(self, title=_('Design Info'))
-                self.info_panel.Bind(wx.EVT_CLOSE, self.on_info_panel_closed)
-
+            self.info_panel = DesignInfoDialog(self, title=_('Design Info'))
             self.info_panel.Show()
         else:
             self.info_panel.Close()
-
-    def on_info_panel_closed(self, event):
-        self.btnInfo.SetValue(False)
-        event.GetEventObject().Hide()
