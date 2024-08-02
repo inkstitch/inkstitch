@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Remove duplicated points</name>
+    <id>org.{{ id_inkstitch }}.remove_duplicated_points</id>
+    <param name="extension" type="string" gui-hidden="true">remove_duplicated_points</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <param name="num_points" type="int" min="1" max="5000"
+                   gui-text="Remove point if repeated within this number of consecutive points">10</param>
+            <param name="distance" type="float" precision="2" min="0" max="500"
+                   gui-text="Distance tolerance">0.01</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>
+                This extension removes duplicated points from selected elements.
+            </label>
+            <spacer />
+            <label>
+                It is most useful for manual paths (straight lines), since it will increase node count on Bézier curves. 
+                One possible usecase is to convert a bean stitch path from an embroidery file back into a simple line.
+            </label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/edit/#remove-duplicated-points</label>
+        </page>
+    </param>
+
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Edit" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
