@@ -61,7 +61,7 @@ class SimulatorPreferenceDialog(wx.Dialog):
     def on_apply(self, event):
         global_settings['simulator_line_width'] = self.line_width.GetValue()
         global_settings['simulator_npp_size'] = self.npp_size.GetValue()
-        self.Destroy()
+        self.Close()
 
     def on_cancel(self, event):
         global_settings['simulator_line_width'] = self.line_width_value
