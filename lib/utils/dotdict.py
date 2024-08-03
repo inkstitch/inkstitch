@@ -19,11 +19,16 @@ class DotDict(dict):
 
     def _dotdictify(self):
         for k, v in self.items():
-            if isinstance(v, dict):
+            if isinstance(v, dict) and not isinstance(v, DotDict):
                 self[k] = DotDict(v)
 
-    __setattr__ = dict.__setitem__
     __delattr__ = dict.__delitem__
+
+    def __setattr__(self, name, value):
+        if isinstance(value, dict) and not isinstance(value, DotDict):
+            value = DotDict(value)
+
+        super().__setattr__(name, value)
 
     def __getattr__(self, name):
         if name.startswith('_'):
