@@ -2,6 +2,7 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+import json
 import sys
 from contextlib import contextmanager
 from copy import deepcopy
@@ -155,6 +156,13 @@ class EmbroideryElement(object):
         except (TypeError, ValueError):
             return [int(default)]
         return params
+
+    def get_json_param(self, param):
+        json_value = self.get_param(param, "{}")
+        try:
+            return json.loads(json_value)
+        except json.JSONDecodeError:
+            return {}
 
     def set_param(self, name, value):
         # Sets a param on the node backing this element. Used by params dialog.

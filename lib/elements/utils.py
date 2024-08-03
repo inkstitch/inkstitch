@@ -35,18 +35,24 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
         return [MarkerObject(node)]
 
     elif node.tag in EMBROIDERABLE_TAGS or is_clone(node):
-        element = EmbroideryElement(node)
-
         elements = []
-        if element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0":
-            elements.append(FillStitch(node))
-        if element.get_style("stroke"):
-            if element.get_boolean_param("satin_column") and len(element.path) > 1:
-                elements.append(SatinColumn(node))
-            elif not is_command(element.node):
-                elements.append(Stroke(node))
-        if element.get_boolean_param("stroke_first", False):
-            elements.reverse()
+
+        from ..sew_stack import SewStack
+        sew_stack = SewStack(node)
+        elements.append(sew_stack)
+
+        if not sew_stack.sew_stack_only():
+            element = EmbroideryElement(node)
+            if element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0":
+                elements.append(FillStitch(node))
+            if element.get_style("stroke"):
+                if element.get_boolean_param("satin_column") and len(element.path) > 1:
+                    elements.append(SatinColumn(node))
+                elif not is_command(element.node):
+                    elements.append(Stroke(node))
+            if element.get_boolean_param("stroke_first", False):
+                elements.reverse()
+
         return elements
 
     elif node.tag == SVG_IMAGE_TAG:
