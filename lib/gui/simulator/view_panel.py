@@ -47,19 +47,19 @@ class ViewPanel(ScrolledPanel):
         self.btnColorChange.SetBitmap(self.control_panel.load_icon('color_change'))
         self.btnColorChange.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('color_change', event))
 
-        self.btnInfo = wx.BitmapButton(self, -1, style=self.button_style)
+        self.btnInfo = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnInfo.SetToolTip(_('Open info dialog'))
         self.btnInfo.SetBitmap(self.control_panel.load_icon('info'))
-        self.btnInfo.Bind(wx.EVT_BUTTON, self.on_info_button)
+        self.btnInfo.Bind(wx.EVT_TOGGLEBUTTON, self.on_info_button)
 
         self.btnBackgroundColor = wx.ColourPickerCtrl(self, -1, colour='white', size=((40, -1)))
         self.btnBackgroundColor.SetToolTip(_("Change background color"))
         self.btnBackgroundColor.Bind(wx.EVT_COLOURPICKER_CHANGED, self.on_update_background_color)
 
-        self.btnSettings = wx.BitmapButton(self, -1, style=self.button_style)
+        self.btnSettings = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnSettings.SetToolTip(_('Open settings dialog'))
         self.btnSettings.SetBitmap(self.control_panel.load_icon('settings'))
-        self.btnSettings.Bind(wx.EVT_BUTTON, self.on_settings_button)
+        self.btnSettings.Bind(wx.EVT_TOGGLEBUTTON, self.on_settings_button)
 
         if self.detach_callback:
             self.btnDetachSimulator = wx.BitmapButton(self, -1, style=self.button_style)
@@ -128,9 +128,27 @@ class ViewPanel(ScrolledPanel):
             self.drawing_panel.Refresh()
 
     def on_settings_button(self, event):
-        settings_panel = SimulatorPreferenceDialog(self, title=_('Simulator Preferences'))
-        settings_panel.Show()
+        if event.GetEventObject().GetValue():
+            self.settings_panel = SimulatorPreferenceDialog(self, title=_('Simulator Preferences'))
+            self.settings_panel.Bind(wx.EVT_CLOSE, self.settings_panel_closed)
+            self.settings_panel.Show()
+        else:
+            self.settings_panel.Close()
 
     def on_info_button(self, event):
-        self.info_panel = DesignInfoDialog(self, title=_('Design Info'))
-        self.info_panel.Show()
+        if event.GetEventObject().GetValue():
+            self.info_panel = DesignInfoDialog(self, title=_('Design Info'))
+            self.info_panel.Bind(wx.EVT_CLOSE, self.info_panel_closed)
+            self.info_panel.Show()
+        else:
+            self.info_panel.Close()
+
+    def info_panel_closed(self, event):
+        self.info_panel.Destroy()
+        self.info_panel = None
+        self.btnInfo.SetValue(False)
+
+    def settings_panel_closed(self, event):
+        self.settings_panel.Destroy()
+        self.settings_panel = None
+        self.btnSettings.SetValue(False)
