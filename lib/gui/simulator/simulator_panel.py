@@ -30,6 +30,7 @@ class SimulatorPanel(wx.Panel):
         self.cp.set_drawing_panel(self.dp)
         self.vp.set_drawing_panel(self.dp)
         self.vp.set_background_color(wx.Colour(background_color))
+        self.dp.set_background_color(wx.Colour(background_color))
 
         dvSizer = wx.BoxSizer(wx.HORIZONTAL)
 
