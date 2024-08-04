@@ -2,7 +2,7 @@
 title: "Installer Ink/Stitch"
 permalink: /fr/docs/install-macos/
 excerpt: "Comment installer rapidement Ink/Stitch."
-last_modified_at: 2024-07-27
+last_modified_at: 2024-08-04
 toc: true
 ---
 ## Télécharger
@@ -49,15 +49,15 @@ A la dernière question : Voulez vous placer le fichier d'installation dans la c
 
 ![Install Ink/Stitch](/assets/images/docs/fr/macos-install/installer05.png)
 
-## Alternative Install Routine with Homebrew
+## Installation alternative avec  Homebrew
 
-Homebrew is a package manager for macOS. For more information see <https://brew.sh/>
+Homebrew est un gestionnaire de paquets pour MacOS. Pour plus d'information voir <https://brew.sh/>
 {: .notice--info}
 
-Please remove previously installed Inkscape versions. Brew will install Inkscape along with the Ink/Stitch extension.
+Merci de désinstaller Inkscape s'il a été installé auparavant.  Brew installera Inkscape avec l'extension Ink/Stitch 
 {: .notice--warning }
 
-Open the terminal and enter the following command:
+Ouvrir un terminal et entrer la commande suivante:
 
 ```
 brew install inkstitch
