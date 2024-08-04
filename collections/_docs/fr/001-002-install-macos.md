@@ -49,6 +49,20 @@ A la dernière question : Voulez vous placer le fichier d'installation dans la c
 
 ![Install Ink/Stitch](/assets/images/docs/fr/macos-install/installer05.png)
 
+## Alternative Install Routine with Homebrew
+
+Homebrew is a package manager for macOS. For more information see <https://brew.sh/>
+{: .notice--info}
+
+Please remove previously installed Inkscape versions. Brew will install Inkscape along with the Ink/Stitch extension.
+{: .notice--warning }
+
+Open the terminal and enter the following command:
+
+```
+brew install inkstitch
+```
+
 ## Exécuter Ink/Stitch
 
 Ouvrez Inkscape. Vous trouverez alors Ink/Stitch dans `Extensions > Ink/Stitch`.
