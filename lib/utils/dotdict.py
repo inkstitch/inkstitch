@@ -3,6 +3,9 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from copy import copy
+
+
 class DotDict(dict):
     """A dict subclass that allows accessing methods using dot notation.
 
@@ -10,11 +13,11 @@ class DotDict(dict):
     """
 
     def __init__(self, *args, **kwargs):
-        super(DotDict, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self._dotdictify()
 
     def update(self, *args, **kwargs):
-        super(DotDict, self).update(*args, **kwargs)
+        super().update(*args, **kwargs)
         self._dotdictify()
 
     def _dotdictify(self):
@@ -25,14 +28,17 @@ class DotDict(dict):
     __delattr__ = dict.__delitem__
 
     def __setattr__(self, name, value):
-        if isinstance(value, dict) and not isinstance(value, DotDict):
-            value = DotDict(value)
+        if name.startswith('_'):
+            super().__setattr__(name, value)
+        else:
+            if isinstance(value, dict) and not isinstance(value, DotDict):
+                value = DotDict(value)
 
-        super().__setattr__(name, value)
+            super().__setitem__(name, value)
 
     def __getattr__(self, name):
         if name.startswith('_'):
-            raise AttributeError("'DotDict' object has no attribute '%s'" % name)
+            raise AttributeError(f"'{self.__class__.__name__}' object has no attribute '{name}'")
 
         if name in self:
             return self.__getitem__(name)
@@ -42,5 +48,38 @@ class DotDict(dict):
             return new_dict
 
     def __repr__(self):
-        super_repr = super(DotDict, self).__repr__()
-        return "DotDict(%s)" % super_repr
+        super_repr = super().__repr__()
+        return f"{self.__class__.__name__}({super_repr})"
+
+
+class DefaultDotDict(DotDict):
+    """Like a DotDict, but with default values for some items"""
+
+    def __init__(self, *args, defaults=None, **kwargs):
+        """Create a DefaultDotDict
+
+        Arguments:
+            defaults: a dict of default values
+
+        Default values are copied (with copy.copy()) before being used, so it's
+        safe to set a default value of a collection like [].
+
+
+        """
+
+        super().__init__(*args, **kwargs)
+        self.__defaults = defaults or {}
+
+    def set_defaults(self, defaults):
+        self.__defaults = defaults
+
+    def update_defaults(self, new_defaults):
+        self.__defaults.update(new_defaults)
+
+    def __getattr__(self, name):
+        if name in self or name not in self.__defaults:
+            return super().__getattr__(name)
+        else:
+            value = copy(self.__defaults[name])
+            self.__setitem__(name, value)
+            return value
