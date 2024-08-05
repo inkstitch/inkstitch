@@ -5,7 +5,7 @@
 
 from math import degrees
 from contextlib import contextmanager
-from typing import Generator, List
+from typing import Generator, List, Dict
 
 from inkex import Transform, BaseElement
 from shapely import MultiLineString
@@ -16,7 +16,8 @@ from ..commands import is_command_symbol, add_command
 from ..i18n import _
 from ..svg.path import get_node_transform
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
-                        XLINK_HREF, SVG_GROUP_TAG)
+                        XLINK_HREF, CONNECTION_START, CONNECTION_END,
+                        SVG_GROUP_TAG)
 from ..utils import cache
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
@@ -88,6 +89,7 @@ class Clone(EmbroideryElement):
             stitch_groups = []
 
             for element in elements:
+                # Using `embroider` here to get trim/stop after commands, etc.
                 element_stitch_groups = element.embroider(last_stitch_group)
                 if len(element_stitch_groups):
                     last_stitch_group = element_stitch_groups[-1]
@@ -126,7 +128,7 @@ class Clone(EmbroideryElement):
         parent: BaseElement = self.node.getparent()
         source_node: BaseElement = self.node.href
         source_parent: BaseElement = source_node.getparent()
-        cloned_node = source_node.copy()
+        cloned_node = clone_with_fixup(parent, source_node)
 
         if recursive:
             # Recursively resolve all clones as if the clone was in the same place as its source
@@ -226,3 +228,38 @@ def is_clone(node):
     if node.tag == SVG_USE_TAG and node.get(XLINK_HREF) and not is_command_symbol(node):
         return True
     return False
+
+
+def clone_with_fixup(parent: BaseElement, node: BaseElement) -> BaseElement:
+    """
+    Clone the node, placing the clone as a child of parent, and fix up
+    references in the cloned subtree to point to elements from the clone subtree.
+    """
+    # A map of "#id" -> "#corresponding-id-in-the-subtree"
+    id_map: Dict[str, str] = {}
+
+    def clone_children(parent: BaseElement, node: BaseElement) -> BaseElement:
+        # Copy the node without copying its children.
+        cloned = type(node)(attrib=node.attrib)
+        parent.append(cloned)
+        id_map[f"#{node.get_id()}"] = f"#{cloned.get_id()}"
+
+        for child in node.getchildren():
+            clone_children(cloned, child)
+
+        return cloned
+
+    ret = clone_children(parent, node)
+
+    def fixup_id_attr(node: BaseElement, attr: str):
+        # Replace the id value for this attrib with the corresponding one in the clone subtree, if applicable.
+        val = node.get(attr)
+        if val is not None:
+            node.set(attr, id_map.get(val, val))
+
+    for n in ret.iter():
+        fixup_id_attr(n, XLINK_HREF)
+        fixup_id_attr(n, CONNECTION_START)
+        fixup_id_attr(n, CONNECTION_END)
+
+    return ret
