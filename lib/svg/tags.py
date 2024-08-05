@@ -173,7 +173,10 @@ inkstitch_attribs = [
     'random_seed',
     'manual_stitch',
     # legacy
-    'grid_size'
+    'grid_size',
+    # sew stack
+    'sew_stack_only',
+    'sew_stack'
 ]
 for attrib in inkstitch_attribs:
     INKSTITCH_ATTRIBS[attrib] = inkex.addNS(attrib, 'inkstitch')

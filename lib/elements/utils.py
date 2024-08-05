@@ -41,7 +41,7 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
         sew_stack = SewStack(node)
         elements.append(sew_stack)
 
-        if not sew_stack.sew_stack_only():
+        if not sew_stack.sew_stack_only:
             element = EmbroideryElement(node)
             if element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0":
                 elements.append(FillStitch(node))

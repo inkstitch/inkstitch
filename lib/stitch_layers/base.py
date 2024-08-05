@@ -1,6 +1,27 @@
-class StitchLayer:
-    def __init__(self, config):
-        self.config = config
+import inspect
+from ..utils.dotdict import DefaultDotDict
+from .utils import NodeUtilsMixin
+
+
+class StitchLayer(NodeUtilsMixin):
+    DEFAULT_CONFIG = {
+        "whatever": "parent",
+        "other": "parent only"
+    }
+
+    uses_last_stitch_group = False
+
+    def __init__(self, node, config):
+        self.node = node
+        self.config = DefaultDotDict(config)
+
+        # merge in default configs from parent classes
+        for ancestor_class in reversed(inspect.getmro(self.__class__)):
+            try:
+                self.config.update_defaults(ancestor_class.DEFAULT_CONFIG)
+            except AttributeError:
+                # ignore ancestor classes that don't have DEFAULT_CONFIG
+                pass
 
     @classmethod
     @property
@@ -34,3 +55,17 @@ class StitchLayer:
     @property
     def name(self):
         return self.config.get('name', self.get_default_layer_name())
+
+    @property
+    def uses_previous_stitch_group(self):
+        # Can be overridden in child class
+        return False
+
+    def to_stitch_groups(self, *args):
+        raise NotImplementedError(f"{self.__class__.__name__} must implement to_stitch_groups()!")
+
+    def embroider(self, last_stitch_group):
+        if self.uses_last_stitch_group:
+            return self.to_stitch_groups(last_stitch_group)
+        else:
+            return self.to_stitch_groups()
