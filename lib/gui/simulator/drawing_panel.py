@@ -133,9 +133,11 @@ class DrawingPanel(wx.Panel):
             return
 
         with debug.log_exceptions():
+            border_color = wx.Colour(self.page_specs['border_color'])
             if self.page_specs['show_page_shadow']:
                 canvas.SetPen(wx.TRANSPARENT_PEN)
-                canvas.SetBrush(canvas.CreateBrush(wx.Brush(wx.Colour(0, 0, 0, 64))))
+                canvas.SetBrush(canvas.CreateBrush(wx.Brush(border_color)))
+                canvas.SetBrush(canvas.CreateBrush(wx.Brush(wx.Colour(border_color.Red(), border_color.Green(), border_color.Blue(), alpha=65))))
                 canvas.DrawRoundedRectangle(
                     (-self.page_specs['x'] + 4) * self.PIXEL_DENSITY, (-self.page_specs['y'] + 4) * self.PIXEL_DENSITY,
                     self.page_specs['width'] * self.PIXEL_DENSITY, self.page_specs['height'] * self.PIXEL_DENSITY,
@@ -143,9 +145,7 @@ class DrawingPanel(wx.Panel):
                 )
 
             pen = canvas.CreatePen(
-                wx.GraphicsPenInfo(
-                    wx.Colour(self.page_specs['border_color']), width=1 * self.PIXEL_DENSITY)
-                .Join(wx.JOIN_MITER)
+                wx.GraphicsPenInfo(wx.Colour(border_color)).Width(1 * self.PIXEL_DENSITY).Join(wx.JOIN_MITER)
             )
             canvas.SetPen(pen)
             canvas.SetBrush(wx.Brush(wx.Colour(self.background_color or self.page_specs['page_color'])))

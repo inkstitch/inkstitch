@@ -56,7 +56,7 @@ class Simulator(InkstitchExtension):
             page_color = named_view.get('pagecolor', page_color)
             desk_color = named_view.get('inkscape:deskcolor', desk_color)
             border_color = named_view.get('bordercolor', border_color)
-            show_page_shadow = named_view.get('inkscape:showpageshadow', show_page_shadow) in ['true', '1', 'yes', 'y']
+            show_page_shadow = named_view.get('inkscape:showpageshadow', show_page_shadow) in ['true', 'yes', 'y', '1', '2']
 
         return {
             "width": convert_length(width),
