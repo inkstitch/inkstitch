@@ -24,7 +24,7 @@ from ..stitch_plan.lock_stitch import (LOCK_DEFAULTS, AbsoluteLock, CustomLock,
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
-from ..utils import Point, cache
+from ..utils import DotDict, Point, cache
 from ..utils.cache import get_stitch_plan_cache, is_cache_disabled, CacheKeyGenerator
 
 
@@ -160,7 +160,7 @@ class EmbroideryElement(object):
     def get_json_param(self, param):
         json_value = self.get_param(param, "{}")
         try:
-            return json.loads(json_value)
+            return json.loads(json_value, object_hook=DotDict)
         except json.JSONDecodeError:
             return {}
 
