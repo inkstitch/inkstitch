@@ -1,27 +1,8 @@
-import inspect
-from ..utils.dotdict import DefaultDotDict
-from .utils import NodeUtilsMixin
+from .utils import ConfigMixin, PathUtilsMixin
 
 
-class StitchLayer(NodeUtilsMixin):
-    DEFAULT_CONFIG = {
-        "whatever": "parent",
-        "other": "parent only"
-    }
-
+class StitchLayer(PathUtilsMixin, ConfigMixin):
     uses_last_stitch_group = False
-
-    def __init__(self, node, config):
-        self.node = node
-        self.config = DefaultDotDict(config)
-
-        # merge in default configs from parent classes
-        for ancestor_class in reversed(inspect.getmro(self.__class__)):
-            try:
-                self.config.update_defaults(ancestor_class.DEFAULT_CONFIG)
-            except AttributeError:
-                # ignore ancestor classes that don't have DEFAULT_CONFIG
-                pass
 
     @classmethod
     @property
@@ -54,7 +35,11 @@ class StitchLayer(NodeUtilsMixin):
 
     @property
     def name(self):
-        return self.config.get('name', self.get_default_layer_name())
+        return self.config.name
+
+    @name.setter
+    def name(self, value):
+        self.config.name = value
 
     @property
     def uses_previous_stitch_group(self):

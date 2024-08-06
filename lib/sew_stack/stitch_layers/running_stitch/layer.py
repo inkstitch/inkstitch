@@ -1,12 +1,15 @@
-from .base import StitchLayer
-from .utils import RandomizationMixin
-from ..stitch_plan import StitchGroup
-from ..stitches.running_stitch import running_stitch
-from ..svg import PIXELS_PER_MM
+from ..stitch_layer import StitchLayer
+from ..utils import RandomizationMixin
+
+from lib.i18n import _
+from lib.stitch_plan import StitchGroup
+from lib.stitches.running_stitch import running_stitch
+from lib.svg import PIXELS_PER_MM
 
 
 class RunningStitchLayer(StitchLayer, RandomizationMixin):
     DEFAULT_CONFIG = dict(
+        name=lambda: _("Running Stitch"),
         stitch_length=2,
         stitch_length_jitter_percent=0,
         tolerance=0.2,
@@ -53,7 +56,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin):
                     repeated_stitches.extend(reversed(stitches))
             stitches = repeated_stitches
 
-        return StitchGroup(stitches=stitches, color=self.node.stroke_color)
+        return StitchGroup(stitches=stitches, color=self.stroke_color)
 
     def to_stitch_groups(self):
         return [self.running_stitch(path) for path in self.paths]
