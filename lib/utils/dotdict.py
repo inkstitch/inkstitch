@@ -61,10 +61,13 @@ class DefaultDotDict(DotDict):
         Arguments:
             defaults: a dict of default values
 
-        Default values are copied (with copy.copy()) before being used, so it's
-        safe to set a default value of a collection like [].
+        If a default value is callable, it will be called and the return value
+        will be used.  This means you can set a default of "list" to cause a new
+        list to be created, or you can pass a lambda.
 
-
+        If a default value is not callable, default values are copied (with
+        copy.copy()) before being used, so it's safe to set a default value of a
+        mutable collection like [].
         """
 
         super().__init__(*args, **kwargs)
@@ -80,6 +83,11 @@ class DefaultDotDict(DotDict):
         if name in self or name not in self.__defaults:
             return super().__getattr__(name)
         else:
-            value = copy(self.__defaults[name])
-            self.__setitem__(name, value)
-            return value
+            raw_default = self.__defaults[name]
+            if callable(raw_default):
+                default = raw_default()
+            else:
+                default = copy(raw_default)
+
+            self.__setitem__(name, default)
+            return default
