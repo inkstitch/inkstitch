@@ -7,6 +7,7 @@ import time
 import wx
 from numpy import split
 
+from ...debug.debug import debug
 from ...i18n import _
 from ...svg import PIXELS_PER_MM
 from ...utils.settings import global_settings
@@ -59,6 +60,9 @@ class DrawingPanel(wx.Panel):
         self.width = 0
         self.height = 0
         self.loaded = False
+        self.page_specs = {}
+        self.show_page = True
+        self.background_color = None
 
         # desired simulation speed in stitches per second
         self.speed = 16
@@ -122,6 +126,34 @@ class DrawingPanel(wx.Panel):
         self.draw_stitches(canvas)
         self.draw_scale(canvas)
 
+    def draw_page(self, canvas):
+        self._update_background_color()
+
+        if not self.page_specs or not self.show_page:
+            return
+
+        with debug.log_exceptions():
+            border_color = wx.Colour(self.page_specs['border_color'])
+            if self.page_specs['show_page_shadow']:
+                canvas.SetPen(wx.TRANSPARENT_PEN)
+                canvas.SetBrush(canvas.CreateBrush(wx.Brush(wx.Colour(border_color.Red(), border_color.Green(), border_color.Blue(), alpha=65))))
+                canvas.DrawRoundedRectangle(
+                    (-self.page_specs['x'] + 4) * self.PIXEL_DENSITY, (-self.page_specs['y'] + 4) * self.PIXEL_DENSITY,
+                    self.page_specs['width'] * self.PIXEL_DENSITY, self.page_specs['height'] * self.PIXEL_DENSITY,
+                    1 * self.PIXEL_DENSITY
+                )
+
+            pen = canvas.CreatePen(
+                wx.GraphicsPenInfo(wx.Colour(border_color)).Width(1 * self.PIXEL_DENSITY).Join(wx.JOIN_MITER)
+            )
+            canvas.SetPen(pen)
+            canvas.SetBrush(wx.Brush(wx.Colour(self.background_color or self.page_specs['page_color'])))
+
+            canvas.DrawRectangle(
+                -self.page_specs['x'] * self.PIXEL_DENSITY, -self.page_specs['y'] * self.PIXEL_DENSITY,
+                self.page_specs['width'] * self.PIXEL_DENSITY, self.page_specs['height'] * self.PIXEL_DENSITY
+            )
+
     def draw_stitches(self, canvas):
         canvas.BeginLayer(1)
 
@@ -129,6 +161,8 @@ class DrawingPanel(wx.Panel):
         transform.Translate(*self.pan)
         transform.Scale(self.zoom / self.PIXEL_DENSITY, self.zoom / self.PIXEL_DENSITY)
         canvas.SetTransform(transform)
+
+        self.draw_page(canvas)
 
         stitch = 0
         last_stitch = None
@@ -251,6 +285,28 @@ class DrawingPanel(wx.Panel):
         self.go()
         if hasattr(self.view_panel, 'info_panel'):
             self.view_panel.info_panel.update()
+
+    def set_page_specs(self, page_specs):
+        self.SetBackgroundColour(page_specs['desk_color'])
+        self.page_specs = page_specs
+
+    def set_background_color(self, color):
+        self.background_color = color
+        # this refresh is necessary for macOS
+        self.Refresh()
+
+    def _update_background_color(self):
+        if not self.page_specs:
+            self.SetBackgroundColour(self.background_color or "#FFFFFF")
+        else:
+            if self.show_page:
+                self.SetBackgroundColour(self.page_specs['desk_color'])
+            else:
+                self.SetBackgroundColour(self.background_color or self.page_specs['page_color'])
+
+    def set_show_page(self, show_page):
+        self.show_page = show_page
+        self._update_background_color()
 
     def choose_zoom_and_pan(self, event=None):
         # ignore if EVT_SIZE fired before we load the stitch plan

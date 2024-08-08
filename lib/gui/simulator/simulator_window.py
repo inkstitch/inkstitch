@@ -53,3 +53,6 @@ class SimulatorWindow(wx.Frame):
 
     def go(self):
         self.panel.go()
+
+    def set_page_specs(self, page_specs):
+        self.panel.set_page_specs(page_specs)

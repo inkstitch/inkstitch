@@ -5,6 +5,7 @@
 
 import atexit  # to save svg file on exit
 import time    # to measure time of code block, use time.monotonic() instead of time.time()
+import traceback
 from datetime import datetime
 
 from contextlib import contextmanager  # to measure time of with block
@@ -245,6 +246,18 @@ class Debug(object):
 
         if self.enabled:
             self.raw_log("completed %s, duration = %s", label, time.monotonic() - start)
+
+    def log_exception(self):
+        if self.enabled:
+            self.raw_log(traceback.format_exc())
+
+    @contextmanager
+    def log_exceptions(self):
+        try:
+            yield
+        except Exception:
+            self.log_exception()
+            raise
 
 
 # global debug object

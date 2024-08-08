@@ -56,6 +56,13 @@ class ViewPanel(ScrolledPanel):
         self.btnBackgroundColor.SetToolTip(_("Change background color"))
         self.btnBackgroundColor.Bind(wx.EVT_COLOURPICKER_CHANGED, self.on_update_background_color)
 
+        if not self.detach_callback:
+            self.btnPage = wx.BitmapToggleButton(self, -1, style=self.button_style)
+            self.btnPage.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_page)
+            self.btnPage.SetValue(True)
+            self.btnPage.SetBitmap(self.control_panel.load_icon('page'))
+            self.btnPage.SetToolTip(_('Show page'))
+
         self.btnSettings = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnSettings.SetToolTip(_('Open settings dialog'))
         self.btnSettings.SetBitmap(self.control_panel.load_icon('settings'))
@@ -94,6 +101,8 @@ class ViewPanel(ScrolledPanel):
         settings_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Settings")), wx.VERTICAL)
         settings_inner_sizer = wx.BoxSizer(wx.VERTICAL)
         settings_inner_sizer.Add(self.btnBackgroundColor, 0, wx.EXPAND | wx.ALL, 2)
+        if not self.detach_callback:
+            settings_inner_sizer.Add(self.btnPage, 0, wx.EXPAND | wx.ALL, 2)
         settings_inner_sizer.Add(self.btnSettings, 0, wx.EXPAND | wx.ALL, 2)
         if self.detach_callback:
             settings_inner_sizer.Add(self.btnDetachSimulator, 0, wx.ALL, 2)
@@ -109,17 +118,21 @@ class ViewPanel(ScrolledPanel):
 
     def on_update_background_color(self, event):
         self.set_background_color(event.Colour)
+        self.drawing_panel.set_background_color(event.Colour)
 
     def set_background_color(self, color):
         self.btnBackgroundColor.SetColour(color)
-        self.drawing_panel.SetBackgroundColour(color)
-        self.drawing_panel.Refresh()
 
     def on_toggle_npp_shortcut(self, event):
         self.btnNpp.SetValue(not self.btnNpp.GetValue())
         self.toggle_npp(event)
 
     def toggle_npp(self, event):
+        self.drawing_panel.Refresh()
+
+    def toggle_page(self, event):
+        debug.log("toggle page")
+        self.drawing_panel.set_show_page(self.btnPage.GetValue())
         self.drawing_panel.Refresh()
 
     def on_marker_button(self, marker_type, event):

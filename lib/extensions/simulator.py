@@ -7,6 +7,7 @@ import wx
 
 from ..gui.simulator import SimulatorWindow
 from ..stitch_plan import stitch_groups_to_stitch_plan
+from ..svg import convert_length
 from ..utils.svg_data import get_pagecolor
 from .base import InkstitchExtension
 
@@ -37,5 +38,33 @@ class Simulator(InkstitchExtension):
         app.SetTopWindow(simulator)
         simulator.Show()
         simulator.load(stitch_plan)
+        simulator.set_page_specs(self.get_page_specs(stitch_plan))
         simulator.go()
         app.MainLoop()
+
+    def get_page_specs(self, stitch_plan):
+        svg = self.document.getroot()
+        width = svg.get('width', 0)
+        height = svg.get('height', 0)
+        page_color = "white"
+        desk_color = "white"
+        border_color = "black"
+        show_page_shadow = "true"
+
+        named_view = svg.namedview
+        if named_view is not None:
+            page_color = named_view.get('pagecolor', page_color)
+            desk_color = named_view.get('inkscape:deskcolor', desk_color)
+            border_color = named_view.get('bordercolor', border_color)
+            show_page_shadow = named_view.get('inkscape:showpageshadow', show_page_shadow) in ['true', 'yes', 'y', '1', '2']
+
+        return {
+            "width": convert_length(width),
+            "height": convert_length(height),
+            "x": stitch_plan.bounding_box[0],
+            "y": stitch_plan.bounding_box[1],
+            "page_color": page_color,
+            "desk_color": desk_color,
+            "border_color": border_color,
+            "show_page_shadow": show_page_shadow
+        }
