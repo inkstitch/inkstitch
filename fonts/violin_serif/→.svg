@@ -6,7 +6,7 @@
    width="39.6875mm"
    height="39.6875mm"
    viewBox="0 0 150 150"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   inkscape:version="1.4-beta2 (9aaf4f34, 2024-07-30)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -22,15 +22,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="12.049196"
-     inkscape:cx="33.653697"
-     inkscape:cy="13.610866"
+     inkscape:zoom="8.4953145"
+     inkscape:cx="54.382919"
+     inkscape:cy="13.478018"
      inkscape:window-width="1160"
      inkscape:window-height="742"
      inkscape:window-x="192"
      inkscape:window-y="35"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g17790"
+     inkscape:current-layer="g427"
      inkscape:document-units="mm"
      showguides="true">
     <sodipodi:guide
@@ -5444,7 +5444,7 @@ Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrume
     <path
        id="autosatin64"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       d="m 46.5257,144.714 v 6.979 m -5.0499,-1.58 29.5804,-0.008 m -0.334978,-4.41291 -29.37726,-0.008"
+       d="m 46.5257,144.714 v 6.979 m -5.0499,-1.58 29.5804,-0.008 m -29.7122,-4.421 29.3772,0.008"
        inkstitch:satin_column="True"
        inkscape:label="AutoSatin 12"
        inkstitch:reverse_rails="none"
@@ -11950,7 +11950,7 @@ Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrume
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-2"
-     style="display:inline"
+     style="display:none"
      id="g17790">
     <path
        d="M 9.51128,140.704 C 21.519466,123.3775 33.368528,105.80601 42.708187,86.865267 47.201077,77.177559 50.99227,65.874668 47.4777,55.2802 43.411006,43.400405 26.761831,39.272125 17.141,46.9521 10.373863,52.054315 6.3613625,60.475592 5.89699,68.8617"
@@ -16035,7 +16035,7 @@ Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrume
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ä"
      id="g427"
-     style="display:none">
+     style="display:inline">
     <path
        style="display:inline;fill:none;fill-opacity:0.851613;stroke:#000000;stroke-width:0.377953;stroke-linejoin:round;stroke-dasharray:0.755906, 0.755906;stroke-dashoffset:0"
        d="M 9.03486,148.661 C 5.396219,147.92635 1.6885725,147.88823 -2.0001,147.587"
@@ -16264,7 +16264,7 @@ Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrume
     <path
        id="path427"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-       d="m 46.5257,144.714 v 6.979 m -5.0499,-1.58 29.5804,-0.008 m -0.334978,-4.41291 -29.37726,-0.008"
+       d="m 46.5257,144.714 v 6.979 m -5.0499,-1.58 29.5804,-0.008 m -29.712238,-4.42091 29.37726,0.008"
        inkstitch:satin_column="True"
        inkscape:label="AutoSatin 12"
        inkstitch:reverse_rails="none"
