@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import NSS
+from inkex import NSS, BaseElement
 from lxml import etree
 
 from ..utils import cache
@@ -29,3 +29,7 @@ def find_elements(node, xpath):
     document = get_document(node)
     elements = document.xpath(xpath, namespaces=NSS)
     return elements
+
+
+def copy_no_children(node: BaseElement) -> BaseElement:
+    return type(node)(attrib=node.attrib)

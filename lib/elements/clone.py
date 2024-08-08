@@ -12,8 +12,9 @@ from shapely import MultiLineString
 
 from ..stitch_plan.stitch_group import StitchGroup
 
-from ..commands import is_command_symbol, add_command
+from ..commands import is_command_symbol, find_commands
 from ..i18n import _
+from ..svg.svg import copy_no_children
 from ..svg.path import get_node_transform
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
                         XLINK_HREF, CONNECTION_START, CONNECTION_END,
@@ -161,18 +162,10 @@ class Clone(EmbroideryElement):
         self.apply_angles(cloned_node, angle_transform)
 
         ret = [cloned_node]
-        # copy commands from root for now
-        from .utils import node_to_elements
-        # We need
-        elements = node_to_elements(cloned_node)
-        if elements:
-            # Just pick the first element, we need a "real" element that implements shape for add_commands to work
-            source_element = node_to_elements(source_node)[0]
-            cloned_element = elements[0]
-            for command in source_element.commands:
-                target = command.local_target_point
-                pos = angle_transform.apply_to_point(target)
-                ret.append(add_command(cloned_element, command.command, pos))
+
+        # We need to copy all commands that were attached directly to the href'd node
+        for command in find_commands(source_node):
+            ret.append(command.clone(cloned_node))
 
         return ret
 
@@ -235,12 +228,12 @@ def clone_with_fixup(parent: BaseElement, node: BaseElement) -> BaseElement:
     Clone the node, placing the clone as a child of parent, and fix up
     references in the cloned subtree to point to elements from the clone subtree.
     """
-    # A map of "#id" -> "#corresponding-id-in-the-subtree"
+    # A map of "#id" -> "#corresponding-id-in-the-cloned-subtree"
     id_map: Dict[str, str] = {}
 
     def clone_children(parent: BaseElement, node: BaseElement) -> BaseElement:
         # Copy the node without copying its children.
-        cloned = type(node)(attrib=node.attrib)
+        cloned = copy_no_children(node)
         parent.append(cloned)
         id_map[f"#{node.get_id()}"] = f"#{cloned.get_id()}"
 

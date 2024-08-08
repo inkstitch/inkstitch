@@ -5,8 +5,10 @@
 
 import os
 import sys
+import math
 from copy import deepcopy
 from random import random
+from typing import List
 
 import inkex
 from shapely import geometry as shgeo
@@ -15,6 +17,7 @@ from shapely import get_coordinates
 from .i18n import N_, _
 from .svg import (apply_transforms, generate_unique_id,
                   get_correction_transform, get_document, get_node_transform)
+from .svg.svg import copy_no_children
 from .svg.tags import (CONNECTION_END, CONNECTION_START, CONNECTOR_TYPE,
                        INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_SYMBOL_TAG,
                        SVG_USE_TAG, XLINK_HREF)
@@ -114,7 +117,7 @@ class BaseCommand(object):
 
 class Command(BaseCommand):
     def __init__(self, connector):
-        self.connector = connector
+        self.connector: inkex.Path = connector
         self.svg = self.connector.getroottree().getroot()
 
         self.parse_command()
@@ -133,7 +136,8 @@ class Command(BaseCommand):
             (self.get_node_by_url(self.connector.get(CONNECTION_END)), path[0][-1][1])
         ]
 
-        if neighbors[0][0].tag != SVG_USE_TAG:
+        self.symbol_is_end = neighbors[0][0].tag != SVG_USE_TAG
+        if self.symbol_is_end:
             neighbors.reverse()
 
         if neighbors[0][0].tag != SVG_USE_TAG:
@@ -144,18 +148,55 @@ class Command(BaseCommand):
         self.symbol = self.get_node_by_url(neighbors[0][0].get(XLINK_HREF))
         self.parse_symbol()
 
-        self.target = neighbors[1][0]
+        self.target: inkex.BaseElement = neighbors[1][0]
         self.target_point = neighbors[1][1]
 
     def __repr__(self):
         return "Command('%s', %s)" % (self.command, self.target_point)
 
-    @property
-    @cache
-    def local_target_point(self) -> inkex.Vector2d:
-        attrib = self.use.attrib
-        pos = [float(attrib.get('x', 0)), float(attrib.get('y', 0))]
-        return self.connector.getparent().transform.apply_to_point(pos)
+    def clone(self, new_target: inkex.BaseElement) -> inkex.BaseElement:
+        """
+            Clone this command and point it to the new target, positioning it relative to the new target the same as the target
+        """
+        relative_transform = new_target.composed_transform() @ -self.target.composed_transform()
+
+        # Clone group
+        cloned_group = copy_no_children(self.connector.getparent())
+        cloned_group.transform = relative_transform @ cloned_group.transform
+        new_target.getparent().append(cloned_group)
+
+        symbol = copy_no_children(self.use)
+        cloned_group.append(symbol)
+        # Adjust the transform of the symbol so it's face-up and the right way around.
+        symbol_transform = symbol.composed_transform()
+        symbol_correction = inkex.Transform().add_translate(float(symbol.get('x', 0)), float(symbol.get('y', 0)))
+        # Quick hack to compute the rotational angle - symbol_transform @ (1,0) = (a, b)
+        angle = math.degrees(math.atan2(symbol_transform.b, symbol_transform.a))
+        symbol_correction.add_rotate(-angle)
+        # Check the determinant of the transformation matrix to see if we need to flip.
+        if symbol_transform.a*symbol_transform.d < symbol_transform.b*symbol_transform.c:
+            symbol_correction.add_scale(-1, 1)
+
+        symbol.transform = symbol.transform @ symbol_correction
+        # Clear the x and y coords, they've been set above.
+        symbol.set('x', None)
+        symbol.set('y', None)
+
+        # Copy connector
+        connector = copy_no_children(self.connector)
+        cloned_group.append(connector)
+        if self.symbol_is_end:
+            symbol_attr = CONNECTION_END
+            target_attr = CONNECTION_START
+        else:
+            symbol_attr = CONNECTION_START
+            target_attr = CONNECTION_END
+        connector.set(symbol_attr, f"#{symbol.get_id()}")
+        connector.set(target_attr, f"#{new_target.get_id()}")
+        # connector.set(symbol_attr, None)
+        # connector.set(target_attr, None)
+
+        return cloned_group
 
 
 class StandaloneCommand(BaseCommand):
@@ -187,7 +228,7 @@ def get_command_description(command):
     return COMMANDS[command]
 
 
-def find_commands(node):
+def find_commands(node) -> List[Command]:
     """Find the symbols this node is connected to and return them as Commands"""
 
     # find all paths that have this object as a connection
@@ -434,21 +475,6 @@ def add_commands(element, commands, pos=None):
 
         symbol = add_symbol(svg, group, command, position)
         add_connector(svg, symbol, command, element)
-
-
-# element is an EmbroideryElement: Should this be added to there?
-def add_command(element, command: str, position: inkex.Vector2d) -> inkex.Group:
-    svg = get_document(element.node)
-
-    ensure_symbol(svg, command)
-    remove_legacy_param(element, command)
-
-    group = add_group(svg, element.node, command)
-    position = Point(*(-group.transform).apply_to_point(position))
-
-    symbol = add_symbol(svg, group, command, position)
-    add_connector(svg, symbol, command, element)
-    return group
 
 
 def add_layer_commands(layer, commands):

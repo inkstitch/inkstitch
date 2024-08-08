@@ -1,4 +1,5 @@
-from lib.elements import Clone, EmbroideryElement
+from lib.elements import Clone, EmbroideryElement, FillStitch
+from lib.commands import add_commands
 from lib.svg.tags import INKSTITCH_ATTRIBS, SVG_RECT_TAG
 from inkex import SvgDocumentElement, Rectangle, Circle, Group, Use, Transform, TextElement
 from inkex.tester import TestCase
@@ -440,3 +441,22 @@ class CloneElementTest(TestCase):
             self.assertEqual(len(elements), 1)
             # Angle goes from 0 (g -> u2) -> -7 (u3)
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -7)
+
+    # Command clone tests
+
+    def test_copies_directly_attached_commands(self):
+        """
+        Check that commands attached to the clone target directly are applied to clones.
+        """
+        root: SvgDocumentElement = svg()
+        rect = root.add(Rectangle(attrib={
+            "width": "10",
+            "height": "10",
+            INKSTITCH_ATTRIBS["angle"]: "30"
+        }))
+        use = root.add(Use())
+        use.href = rect
+        use.set('transform', Transform().add_translate(10, 10))
+
+        element = FillStitch(rect)
+        add_commands(element, ["fill_end"])
