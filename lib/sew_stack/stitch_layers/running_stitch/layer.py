@@ -1,5 +1,5 @@
 from ..stitch_layer import StitchLayer
-from ..utils import RandomizationMixin
+from ..utils import Category, Property, PropertyGridHelper, PropertyGridMixin, RandomizationMixin
 
 from lib.i18n import _
 from lib.stitch_plan import StitchGroup
@@ -7,15 +7,50 @@ from lib.stitches.running_stitch import running_stitch
 from lib.svg import PIXELS_PER_MM
 
 
-class RunningStitchLayer(StitchLayer, RandomizationMixin):
-    DEFAULT_CONFIG = dict(
-        name=lambda: _("Running Stitch"),
-        stitch_length=2,
-        stitch_length_jitter_percent=0,
-        tolerance=0.2,
-        repeats=1,
-        repeat_stitches=True
-    )
+class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
+    @classmethod
+    @property
+    def DEFAULT_CONFIG(_class):
+        return dict(
+            name=_("Running Stitch"),
+            stitch_length=2,
+            tolerance=0.2,
+            stitch_length_jitter_percent=0,
+            repeats=1,
+            repeat_stitches=True
+        )
+
+    @classmethod
+    @property
+    def LAYOUT(_class):
+        return PropertyGridHelper(
+            Category(_("Running Stitch")).children(
+                Property("stitch_length", _("Stitch length asdfklafslj adfs kjlk ljasfd lkjasl kjfsda"),
+                         help=_('Length of stitches. Stitches can be shorter according to the stitch tolerance setting.'),
+                         min=0.1,
+                         unit="mm",
+                         ),
+                Property("tolerance", _("Tolerance"),
+                         help=_('All stitches must be within this distance from the path.  ' +
+                                'A lower tolerance means stitches will be closer together.  ' +
+                                'A higher tolerance means sharp corners may be rounded.'),
+                         min=0.01,
+                         unit="mm",
+                         ),
+            ),
+            Category(_("Repeats")).children(
+                Property(
+                    "repeats", _("Repeats"),
+                    help=_('Defines how many times to run down and back along the path.'),
+                    min=1,
+                ),
+                Property(
+                    "repeat_stitches", _("Repeat stitches"),
+                    help=_('Should the exact same stitches be repeated in each pass?' +
+                           'If not, different randomization settings are applied on each pass.'),
+                ),
+            )
+        )
 
     uses_previous_stitch_group = False
 
