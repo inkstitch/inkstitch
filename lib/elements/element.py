@@ -9,7 +9,7 @@ from copy import deepcopy
 import inkex
 import numpy as np
 from inkex import bezier, BaseElement
-from typing import List
+from typing import List, Optional
 
 from ..commands import Command, find_commands
 from ..debug.debug import debug
@@ -441,15 +441,15 @@ class EmbroideryElement(object):
         return find_commands(self.node)
 
     @cache
-    def get_commands(self, command):
+    def get_commands(self, command: str) -> List[Command]:
         return [c for c in self.commands if c.command == command]
 
     @cache
-    def has_command(self, command):
+    def has_command(self, command: str) -> bool:
         return len(self.get_commands(command)) > 0
 
     @cache
-    def get_command(self, command):
+    def get_command(self, command: str) -> Optional[Command]:
         commands = self.get_commands(command)
 
         if commands:

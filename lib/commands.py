@@ -5,7 +5,6 @@
 
 import os
 import sys
-import math
 from copy import deepcopy
 from random import random
 from typing import List
@@ -17,7 +16,7 @@ from shapely import get_coordinates
 from .i18n import N_, _
 from .svg import (apply_transforms, generate_unique_id,
                   get_correction_transform, get_document, get_node_transform)
-from .svg.svg import copy_no_children
+from .svg.svg import copy_no_children, point_upwards
 from .svg.tags import (CONNECTION_END, CONNECTION_START, CONNECTOR_TYPE,
                        INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_SYMBOL_TAG,
                        SVG_USE_TAG, XLINK_HREF)
@@ -167,20 +166,7 @@ class Command(BaseCommand):
 
         symbol = copy_no_children(self.use)
         cloned_group.append(symbol)
-        # Adjust the transform of the symbol so it's face-up and the right way around.
-        symbol_transform = symbol.composed_transform()
-        symbol_correction = inkex.Transform().add_translate(float(symbol.get('x', 0)), float(symbol.get('y', 0)))
-        # Quick hack to compute the rotational angle - symbol_transform @ (1,0) = (a, b)
-        angle = math.degrees(math.atan2(symbol_transform.b, symbol_transform.a))
-        symbol_correction.add_rotate(-angle)
-        # Check the determinant of the transformation matrix to see if we need to flip.
-        if symbol_transform.a*symbol_transform.d < symbol_transform.b*symbol_transform.c:
-            symbol_correction.add_scale(-1, 1)
-
-        symbol.transform = symbol.transform @ symbol_correction
-        # Clear the x and y coords, they've been set above.
-        symbol.set('x', None)
-        symbol.set('y', None)
+        point_upwards(symbol)
 
         # Copy connector
         connector = copy_no_children(self.connector)
@@ -193,8 +179,6 @@ class Command(BaseCommand):
             target_attr = CONNECTION_END
         connector.set(symbol_attr, f"#{symbol.get_id()}")
         connector.set(target_attr, f"#{new_target.get_id()}")
-        # connector.set(symbol_attr, None)
-        # connector.set(target_attr, None)
 
         return cloned_group
 
@@ -224,11 +208,11 @@ class StandaloneCommand(BaseCommand):
         return Point(*pos)
 
 
-def get_command_description(command):
+def get_command_description(command: str):
     return COMMANDS[command]
 
 
-def find_commands(node) -> List[Command]:
+def find_commands(node: BaseCommand) -> List[Command]:
     """Find the symbols this node is connected to and return them as Commands"""
 
     # find all paths that have this object as a connection

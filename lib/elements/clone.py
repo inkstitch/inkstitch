@@ -183,6 +183,11 @@ class Clone(EmbroideryElement):
             if node.tag not in EMBROIDERABLE_TAGS:
                 continue
 
+            # Only need to adjust angles on fill elements.
+            element = EmbroideryElement(node)
+            if not (element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0"):
+                continue
+
             # Normally, rotate the cloned element's angle by the clone's rotation.
             if self.clone_fill_angle is None:
                 element_angle = float(node.get(INKSTITCH_ATTRIBS['angle'], 0))

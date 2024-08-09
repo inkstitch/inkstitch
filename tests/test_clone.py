@@ -181,6 +181,23 @@ class CloneElementTest(TestCase):
             # Angle goes from 0 -> -30
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -30)
 
+    def test_angle_not_applied_to_non_fills(self):
+        """Make sure that angle changes are not applied to non-fill elements."""
+        root: SvgDocumentElement = svg()
+        rect = root.add(Rectangle(attrib={
+            "width": "10",
+            "height": "10",
+            "style": "stroke: skyblue; fill-opacity: 0;"
+        }))
+        use = root.add(Use())
+        use.href = rect
+        use.set('transform', Transform().add_rotate(30))
+
+        clone = Clone(use)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)  # One for the stroke, one for the fill
+            self.assertIsNone(elements[0].get_param("angle", None))  # Angle as not set, as this isn't a fill
+
     def test_style_inherits(self):
         root: SvgDocumentElement = svg()
         rect = root.add(Rectangle(attrib={
@@ -332,6 +349,8 @@ class CloneElementTest(TestCase):
             self.assertEqual(len(elements), 1)
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -10)
 
+    # Recursive use tests
+
     def test_recursive_uses(self):
         root: SvgDocumentElement = svg()
         g1 = root.add(Group())
@@ -452,11 +471,47 @@ class CloneElementTest(TestCase):
         rect = root.add(Rectangle(attrib={
             "width": "10",
             "height": "10",
-            INKSTITCH_ATTRIBS["angle"]: "30"
         }))
+
         use = root.add(Use())
         use.href = rect
         use.set('transform', Transform().add_translate(10, 10))
 
-        element = FillStitch(rect)
-        add_commands(element, ["fill_end"])
+        original = FillStitch(rect)
+        add_commands(original, ["fill_end"])
+
+        clone = Clone(use)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            cmd_orig = original.get_command("fill_end")
+            cmd_clone = elements[0].get_command("fill_end")
+            self.assertIsNotNone(cmd_clone)
+            self.assertAlmostEqual(cmd_orig.target_point[0]+10, cmd_clone.target_point[0], 4)
+            self.assertAlmostEqual(cmd_orig.target_point[1]+10, cmd_clone.target_point[1], 4)
+
+    def test_copies_indirectly_attached_commands(self):
+        """
+        Check that commands attached to children of the clone target are copied to clones.
+        """
+        root: SvgDocumentElement = svg()
+        group = root.add(Group())
+        rect = group.add(Rectangle(attrib={
+            "width": "10",
+            "height": "10",
+        }))
+
+        use = root.add(Use())
+        use.href = group
+        use.set('transform', Transform().add_translate(10, 10))
+
+        original = FillStitch(rect)
+        add_commands(original, ["fill_end"])
+
+        clone = Clone(use)
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            cmd_orig = original.get_command("fill_end")
+            cmd_clone = elements[0].get_command("fill_end")
+            self.assertIsNotNone(cmd_clone)
+            self.assertAlmostEqual(cmd_orig.target_point[0]+10, cmd_clone.target_point[0], 4)
+            self.assertAlmostEqual(cmd_orig.target_point[1]+10, cmd_clone.target_point[1], 4)
