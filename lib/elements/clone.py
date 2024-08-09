@@ -5,18 +5,20 @@
 
 from math import degrees
 from contextlib import contextmanager
-from typing import Generator, List
+from typing import Generator, List, Dict
 
 from inkex import Transform, BaseElement
 from shapely import MultiLineString
 
 from ..stitch_plan.stitch_group import StitchGroup
 
-from ..commands import is_command_symbol
+from ..commands import is_command_symbol, find_commands
 from ..i18n import _
+from ..svg.svg import copy_no_children
 from ..svg.path import get_node_transform
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
-                        XLINK_HREF, SVG_GROUP_TAG)
+                        XLINK_HREF, CONNECTION_START, CONNECTION_END,
+                        SVG_GROUP_TAG)
 from ..utils import cache
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
@@ -88,7 +90,8 @@ class Clone(EmbroideryElement):
             stitch_groups = []
 
             for element in elements:
-                element_stitch_groups = element.to_stitch_groups(last_stitch_group)
+                # Using `embroider` here to get trim/stop after commands, etc.
+                element_stitch_groups = element.embroider(last_stitch_group)
                 if len(element_stitch_groups):
                     last_stitch_group = element_stitch_groups[-1]
                     stitch_groups.extend(element_stitch_groups)
@@ -104,40 +107,40 @@ class Clone(EmbroideryElement):
         Could possibly be refactored into just a generator - being a context manager is mainly to control the lifecycle of the elements
         that are cloned (again, for testing convenience primarily)
         """
-        parent: BaseElement = self.node.getparent()
-        cloned_node = self.resolve_clone()
+        cloned_nodes = self.resolve_clone()
         try:
             # In a try block so we can ensure that the cloned_node is removed from the tree in the event of an exception.
             # Otherwise, it might be left around on the document if we throw for some reason.
-            yield self.clone_to_elements(cloned_node)
+            yield self.clone_to_elements(cloned_nodes[0])
         finally:
             # Remove the "manually cloned" tree.
-            parent.remove(cloned_node)
+            for cloned_node in cloned_nodes:
+                cloned_node.delete()
 
-    def resolve_clone(self, recursive=True) -> BaseElement:
+    def resolve_clone(self, recursive=True) -> List[BaseElement]:
         """
         "Resolve" this clone element by copying the node it hrefs as if unlinking the clone in Inkscape.
         The node will be added as a sibling of this element's node, with its transform and style applied.
         The fill angles for resolved elements will be rotated per the transform and clone_fill_angle properties of the clone.
 
         :param recursive: Recursively "resolve" all child clones in the same manner
-        :returns: The "resolved" node
+        :returns: A list where the first element is the "resolved" node, and zero or more commands attached to that node
         """
         parent: BaseElement = self.node.getparent()
         source_node: BaseElement = self.node.href
         source_parent: BaseElement = source_node.getparent()
-        cloned_node = source_node.copy()
+        cloned_node = clone_with_fixup(parent, source_node)
 
         if recursive:
             # Recursively resolve all clones as if the clone was in the same place as its source
             source_parent.add(cloned_node)
 
             if is_clone(cloned_node):
-                cloned_node = cloned_node.replace_with(Clone(cloned_node).resolve_clone())
+                cloned_node = cloned_node.replace_with(Clone(cloned_node).resolve_clone()[0])
             else:
                 clones: List[BaseElement] = [n for n in cloned_node.iterdescendants() if is_clone(n)]
                 for clone in clones:
-                    clone.replace_with(Clone(clone).resolve_clone())
+                    clone.replace_with(Clone(clone).resolve_clone()[0])
 
             source_parent.remove(cloned_node)
 
@@ -153,12 +156,18 @@ class Clone(EmbroideryElement):
         # Compute angle transform:
         # Effectively, this is (local clone transform) * (to parent space) * (from clone's parent space)
         # There is a translation component here that will be ignored.
-        source_transform = source_parent.composed_transform()
-        clone_transform = self.node.composed_transform()
+        source_transform: Transform = source_parent.composed_transform()
+        clone_transform: Transform = self.node.composed_transform()
         angle_transform = clone_transform @ -source_transform
         self.apply_angles(cloned_node, angle_transform)
 
-        return cloned_node
+        ret = [cloned_node]
+
+        # We need to copy all commands that were attached directly to the href'd node
+        for command in find_commands(source_node):
+            ret.append(command.clone(cloned_node))
+
+        return ret
 
     def apply_angles(self, cloned_node: BaseElement, transform: Transform) -> None:
         """
@@ -172,6 +181,11 @@ class Clone(EmbroideryElement):
         for node in cloned_node.iter():
             # Only need to adjust angles on embroiderable nodes
             if node.tag not in EMBROIDERABLE_TAGS:
+                continue
+
+            # Only need to adjust angles on fill elements.
+            element = EmbroideryElement(node)
+            if not (element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0"):
                 continue
 
             # Normally, rotate the cloned element's angle by the clone's rotation.
@@ -212,3 +226,38 @@ def is_clone(node):
     if node.tag == SVG_USE_TAG and node.get(XLINK_HREF) and not is_command_symbol(node):
         return True
     return False
+
+
+def clone_with_fixup(parent: BaseElement, node: BaseElement) -> BaseElement:
+    """
+    Clone the node, placing the clone as a child of parent, and fix up
+    references in the cloned subtree to point to elements from the clone subtree.
+    """
+    # A map of "#id" -> "#corresponding-id-in-the-cloned-subtree"
+    id_map: Dict[str, str] = {}
+
+    def clone_children(parent: BaseElement, node: BaseElement) -> BaseElement:
+        # Copy the node without copying its children.
+        cloned = copy_no_children(node)
+        parent.append(cloned)
+        id_map[f"#{node.get_id()}"] = f"#{cloned.get_id()}"
+
+        for child in node.getchildren():
+            clone_children(cloned, child)
+
+        return cloned
+
+    ret = clone_children(parent, node)
+
+    def fixup_id_attr(node: BaseElement, attr: str):
+        # Replace the id value for this attrib with the corresponding one in the clone subtree, if applicable.
+        val = node.get(attr)
+        if val is not None:
+            node.set(attr, id_map.get(val, val))
+
+    for n in ret.iter():
+        fixup_id_attr(n, XLINK_HREF)
+        fixup_id_attr(n, CONNECTION_START)
+        fixup_id_attr(n, CONNECTION_END)
+
+    return ret
