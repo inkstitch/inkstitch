@@ -76,7 +76,15 @@ class MillimeterFloatProperty(wx.propgrid.FloatProperty):
 
     def ValueToString(self, value, flags=None):
         debug.log(f"ValueToString({repr(value)}, {flags})")
-        if flags == 64:
+
+        # Goal: present "0.25 mm" to the user but still let them edit the number
+        # as a plain float using the SpinCtrl.
+        #
+        # This code was determined by experimentation.  I can't find this
+        # behavior described anywhere in the docs for wxPython or wxWidgets.
+        # Note that even though flags is a bitmask, == seems to be correct here.
+        #  Using & results in subtly different behavior that doesn't look right.
+        if flags == wx.propgrid.PG_VALUE_IS_CURRENT:
             return f"{value:0.2f} mm"
         else:
             return f"{value:0.2f}"

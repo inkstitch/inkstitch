@@ -13,6 +13,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
     def DEFAULT_CONFIG(_class):
         return dict(
             name=_("Running Stitch"),
+            type_name=_("Running Stitch"),
             stitch_length=2,
             tolerance=0.2,
             stitch_length_jitter_percent=0,
@@ -53,6 +54,10 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
         )
 
     uses_previous_stitch_group = False
+
+    @property
+    def type_name(self):
+        return _("Running Stitch")
 
     def num_copies(self):
         if self.config.repeat_stitches:
