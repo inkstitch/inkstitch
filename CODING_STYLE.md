@@ -38,7 +38,6 @@ Code review is an important in our project, and we ask that all code changes be 
 
 When providing feedback, please keep in mind our goals of making the codebase **fun to work on** and **easy to understand**.  It may be the case that someone does something in a different way than you would have.  If it still meets these goals, then perhaps it's fine as it is.  Diversity of thought makes a codebase like ours stronger.
 
-
 Object-Oriented Programming
 ===========================
 Object-oriented programming is encouraged but not required.  It can often make code easier to understand, but not always.  We pick the best tool to express the solution to our problem as clearly as possible.
