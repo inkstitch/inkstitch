@@ -10,6 +10,7 @@ from copy import copy
 
 import wx
 from wx.lib.agw import ultimatelistctrl as ulc
+from wx.lib.splitter import MultiSplitterWindow
 
 from .base import InkstitchExtension
 from ..debug.debug import debug
@@ -32,23 +33,30 @@ class SewStackPanel(wx.Panel):
         self.background_color = background_color
         self.simulator = simulator
         self.parent = parent
-
         self.layers = self.sew_stacks[0].layers
+
+        self.splitter = MultiSplitterWindow(self, wx.ID_ANY, style=wx.SP_LIVE_UPDATE)
+        self.splitter.SetOrientation(wx.VERTICAL)
+
         self.layer_list = ulc.UltimateListCtrl(
-            self,
-            size=(300, 300),
+            parent=self.splitter,
+            size=(300, 200),
             agwStyle=ulc.ULC_REPORT | ulc.ULC_SINGLE_SEL | ulc.ULC_VRULES | ulc.ULC_HAS_VARIABLE_ROW_HEIGHT
         )
         self.update_layer_list()
+        self.splitter.AppendWindow(self.layer_list, 300)
+        self.layer_config_panel = None
+        self.splitter.SizeWindows()
 
         self._dragging_row = None
         self._editing_row = None
         self._name_editor = None
+
         self.layer_list.Bind(ulc.EVT_LIST_BEGIN_DRAG, self.on_begin_drag)
         self.layer_list.Bind(ulc.EVT_LIST_END_DRAG, self.on_end_drag)
         self.layer_list.Bind(ulc.EVT_LIST_ITEM_ACTIVATED, self.on_double_click)
-        self.layer_list.Bind(ulc.EVT_LIST_ITEM_SELECTED, self.on_name_editor_end)
-        self.layer_list.Bind(ulc.EVT_LIST_ITEM_DESELECTED, self.on_name_editor_end)
+        self.layer_list.Bind(ulc.EVT_LIST_ITEM_SELECTED, self.on_layer_selection_changed)
+        # self.layer_list.Bind(ulc.EVT_LIST_ITEM_DESELECTED, self.on_layer_selection_changed)
 
         self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
 
@@ -64,6 +72,18 @@ class SewStackPanel(wx.Panel):
 
         self.__do_layout()
         self.update_preview()
+
+    def __do_layout(self):
+        main_sizer = wx.BoxSizer(wx.VERTICAL)
+        main_sizer.Add(self.warning_panel, 0, flag=wx.ALL, border=10)
+        main_sizer.Add(self.splitter, 1, wx.LEFT | wx.TOP | wx.RIGHT, 10)
+        buttons_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        buttons_sizer.Add(self.cancel_button, 0, wx.RIGHT, 5)
+        buttons_sizer.Add(self.apply_button, 0, wx.BOTTOM, 5)
+        main_sizer.Add(buttons_sizer, 0, wx.ALIGN_RIGHT | wx.TOP | wx.LEFT | wx.RIGHT, 10)
+        self.SetSizer(main_sizer)
+        main_sizer.Fit(self)
+        self.Layout()
 
     def update_layer_list(self):
         self.layer_list.Freeze()
@@ -146,6 +166,23 @@ class SewStackPanel(wx.Panel):
 
     def on_name_editor_end(self, event):
         self.stop_editing()
+
+    def on_layer_selection_changed(self, event):
+        self.stop_editing()
+        debug.log(f"layer selection changed: {event.Index} {self.layer_list.GetFirstSelected()}")
+        if -1 < event.Index < len(self.layers):
+            selected_layer = self.layers[event.Index]
+            new_layer_config_panel = selected_layer.get_property_grid_panel(parent=self.splitter)
+
+            if self.layer_config_panel is not None:
+                self.layer_config_panel.Hide()
+                self.splitter.ReplaceWindow(self.layer_config_panel, new_layer_config_panel)
+            else:
+                self.splitter.AppendWindow(new_layer_config_panel)
+            self.layer_config_panel = new_layer_config_panel
+            self.splitter.SizeWindows()
+
+            self.Layout()
 
     def stop_editing(self, cancel=False):
         if self._name_editor is None or self._editing_row is None:
@@ -250,18 +287,6 @@ class SewStackPanel(wx.Panel):
     def cancel(self, event):
         self.simulator.stop()
         wx.CallAfter(self.GetTopLevelParent().cancel)
-
-    def __do_layout(self):
-        sizer_1 = wx.BoxSizer(wx.VERTICAL)
-        sizer_3 = wx.BoxSizer(wx.HORIZONTAL)
-        sizer_1.Add(self.warning_panel, 0, flag=wx.EXPAND | wx.ALL, border=10)
-        sizer_1.Add(self.layer_list, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
-        sizer_3.Add(self.cancel_button, 0, wx.RIGHT, 5)
-        sizer_3.Add(self.apply_button, 0, wx.RIGHT | wx.BOTTOM, 5)
-        sizer_1.Add(sizer_3, 0, wx.ALIGN_RIGHT, 0)
-        self.SetSizer(sizer_1)
-        sizer_1.Fit(self)
-        self.Layout()
 
 
 class SewStackEditor(InkstitchExtension):

@@ -75,8 +75,6 @@ class MillimeterFloatProperty(wx.propgrid.FloatProperty):
         return wx.propgrid.PGEditor_SpinCtrl
 
     def ValueToString(self, value, flags=None):
-        debug.log(f"ValueToString({repr(value)}, {flags})")
-
         # Goal: present "0.25 mm" to the user but still let them edit the number
         # as a plain float using the SpinCtrl.
         #
@@ -193,7 +191,6 @@ class Property:
         try:
             return self._type_to_property[data_type]
         except KeyError:
-            raise
             return wx.propgrid.IntProperty
 
 
@@ -219,24 +216,23 @@ class PropertyGridMixin(ConfigMixin):
         raise NotImplementedError(
             f"{_class.__name__} must implement LAYOUT as a class property!")
 
-    def generate_property_grid_panel(self, parent):
-        self.property_grid_panel = wx.Panel(parent, wx.ID_ANY)
-        sizer = wx.BoxSizer(wx.VERTICAL)
-        self.property_grid = wx.propgrid.PropertyGrid(
-            self.property_grid_panel,
-            wx.ID_ANY,
-            style=wx.propgrid.PG_SPLITTER_AUTO_CENTER |
-            wx.propgrid.PG_BOLD_MODIFIED |
-            wx.propgrid.PG_DESCRIPTION
-        )
-        # self.property_grid.SetColumnCount(3)
-        self.LAYOUT.generate(self, self.property_grid)
-        self.property_grid.ResetColumnSizes(enableAutoResizing=True)
-        self.property_grid.Bind(
-            wx.propgrid.EVT_PG_CHANGED, self.on_property_changed)
-        sizer.Add(self.property_grid, 1, wx.EXPAND | wx.ALL, 8)
-        self.property_grid_panel.SetSizer(sizer)
-        sizer.Layout()
+    def get_property_grid_panel(self, parent):
+        if self.property_grid_panel is None:
+            self.property_grid_panel = wx.Panel(parent, wx.ID_ANY)
+            sizer = wx.BoxSizer(wx.VERTICAL)
+            self.property_grid = wx.propgrid.PropertyGrid(
+                self.property_grid_panel,
+                wx.ID_ANY,
+                style=wx.propgrid.PG_SPLITTER_AUTO_CENTER | wx.propgrid.PG_BOLD_MODIFIED | wx.propgrid.PG_DESCRIPTION
+            )
+            # self.property_grid.SetColumnCount(3)
+            self.LAYOUT.generate(self, self.property_grid)
+            self.property_grid.ResetColumnSizes(enableAutoResizing=True)
+            self.property_grid.Bind(
+                wx.propgrid.EVT_PG_CHANGED, self.on_property_changed)
+            sizer.Add(self.property_grid, 1, wx.EXPAND | wx.ALL, 8)
+            self.property_grid_panel.SetSizer(sizer)
+            sizer.Layout()
 
         return self.property_grid_panel
 
