@@ -65,7 +65,7 @@ class AutoSatin(CommandsExtension):
 
         # Ignore fills and zero length satins
         elements = [element for element in self.elements if (isinstance(element, SatinColumn) and element.center_line.length != 0) or
-                    isinstance(element, Stroke)]
+                    (isinstance(element, Stroke) and element.as_multi_line_string().length != 0)]
 
         # at this point we possibly removed all the elements, in this case stop here
         if not elements:
