@@ -16,10 +16,11 @@ from wx.lib.splitter import MultiSplitterWindow
 from .base import InkstitchExtension
 from ..debug.debug import debug
 from ..exceptions import InkstitchException, format_uncaught_exception
-from ..gui import PreviewRenderer, WarningPanel
+from ..gui import PreviewRenderer, WarningPanel, confirm_dialog
 from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
 from ..sew_stack import SewStack
+from ..sew_stack.stitch_layers import RunningStitchLayer
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..utils import get_resource_dir
 from ..utils.svg_data import get_pagecolor
@@ -72,6 +73,7 @@ class SewStackPanel(wx.Panel):
         self.splitter.SetMinimumPaneSize(50)
         self.splitter.Bind(wx.EVT_SPLITTER_SASH_POS_CHANGING, self.on_splitter_sash_pos_changing)
 
+        self.layer_config_panel = None
         self.layer_list_wrapper = wx.Panel(self.splitter, wx.ID_ANY)
         layer_list_sizer = wx.BoxSizer(wx.VERTICAL)
         self.layer_list = ulc.UltimateListCtrl(
@@ -82,9 +84,9 @@ class SewStackPanel(wx.Panel):
         self._checkbox_to_row = {}
         self.update_layer_list()
         layer_list_sizer.Add(self.layer_list, 1, wx.BOTTOM, 10)
+        layer_list_sizer.Add(self.create_layer_buttons(), 0, wx.ALIGN_RIGHT | wx.BOTTOM, 10)
         self.layer_list_wrapper.SetSizer(layer_list_sizer)
         self.splitter.AppendWindow(self.layer_list_wrapper, 350)
-        self.layer_config_panel = None
         self.splitter.SizeWindows()
 
         self._dragging_row = None
@@ -125,6 +127,31 @@ class SewStackPanel(wx.Panel):
         main_sizer.Fit(self)
         self.Layout()
 
+    def create_layer_buttons(self):
+        self.layer_buttons_sizer = wx.BoxSizer(wx.HORIZONTAL)
+
+        self.add_layer_button = wx.Button(self.layer_list_wrapper, wx.ID_ANY, style=wx.BU_EXACTFIT)
+        self.add_layer_button.SetBitmapLabel(wx.ArtProvider.GetBitmap(wx.ART_PLUS, wx.ART_MENU))
+        self.layer_buttons_sizer.Add(self.add_layer_button, 0, wx.LEFT, 10)
+        self.add_layer_button.Bind(wx.EVT_BUTTON, self.on_add_layer_button)
+
+        self.delete_layer_button = wx.Button(self.layer_list_wrapper, wx.ID_ANY, style=wx.BU_EXACTFIT)
+        self.delete_layer_button.SetBitmapLabel(wx.ArtProvider.GetBitmap(wx.ART_DELETE, wx.ART_MENU))
+        self.layer_buttons_sizer.Add(self.delete_layer_button, 0, wx.LEFT, 10)
+        self.delete_layer_button.Bind(wx.EVT_BUTTON, self.on_delete_layer_button)
+
+        self.move_layer_up_button = wx.Button(self.layer_list_wrapper, wx.ID_ANY, style=wx.BU_EXACTFIT)
+        self.move_layer_up_button.SetBitmapLabel(wx.ArtProvider.GetBitmap(wx.ART_GO_UP, wx.ART_MENU))
+        self.layer_buttons_sizer.Add(self.move_layer_up_button, 0, wx.LEFT, 10)
+        self.move_layer_up_button.Bind(wx.EVT_BUTTON, self.on_move_layer_up_button)
+
+        self.move_layer_down_button = wx.Button(self.layer_list_wrapper, wx.ID_ANY, style=wx.BU_EXACTFIT)
+        self.move_layer_down_button.SetBitmapLabel(wx.ArtProvider.GetBitmap(wx.ART_GO_DOWN, wx.ART_MENU))
+        self.layer_buttons_sizer.Add(self.move_layer_down_button, 0, wx.LEFT, 10)
+        self.move_layer_down_button.Bind(wx.EVT_BUTTON, self.on_move_layer_down_button)
+
+        return self.layer_buttons_sizer
+
     def update_layer_list(self):
         self.layer_list.Freeze()
 
@@ -140,7 +167,7 @@ class SewStackPanel(wx.Panel):
 
         self.layer_list.InsertColumn(0, "", format=ulc.ULC_FORMAT_RIGHT)
         self.layer_list.InsertColumn(1, _("Type"), format=ulc.ULC_FORMAT_CENTER)
-        self.layer_list.InsertColumn(2, _("Name"))
+        self.layer_list.InsertColumn(2, _("Layer Name"))
 
         self._checkbox_to_row.clear()
 
@@ -168,6 +195,11 @@ class SewStackPanel(wx.Panel):
         for i, size in enumerate(column_sizes):
             self.layer_list.SetColumnWidth(i, size)
 
+        if self.layer_config_panel is not None:
+            self.layer_config_panel.Hide()
+            self.splitter.DetachWindow(self.layer_config_panel)
+            self.layer_config_panel = None
+
         self.layer_list.Thaw()
 
     def on_begin_drag(self, event):
@@ -177,13 +209,20 @@ class SewStackPanel(wx.Panel):
     def on_end_drag(self, event):
         self.stop_editing()
         if self._dragging_row is not None:
-            row = self.layers.pop(self._dragging_row)
             destination = event.Index
             if destination > self._dragging_row:
                 destination -= 1
-            self.layers.insert(destination, row)
-            self.update_layer_list()
+            self.move_layer(self._dragging_row, destination)
             self._dragging_row = None
+
+    def move_layer(self, from_index, to_index):
+        if 0 <= from_index < len(self.layers):
+            if 0 <= to_index < len(self.layers):
+                row = self.layers.pop(from_index)
+                self.layers.insert(to_index, row)
+                self.update_layer_list()
+                return True
+        return False
 
     def on_double_click(self, event):
         debug.log(f"double-click {event.Index}")
@@ -241,6 +280,34 @@ class SewStackPanel(wx.Panel):
         sash_position = event.GetSashPosition()
         sash_position = min(sash_position, size.y - 50)
         event.SetSashPosition(sash_position)
+
+    def on_add_layer_button(self, event):
+        # TODO: pop up a dialog to select layer type.  Also support pre-set
+        # groups of layers (for example contour underlay, zig-zag underlay, and
+        # satin) and saved "favorite" layers.
+        self.layers.append(RunningStitchLayer(sew_stack=self.sew_stacks[0], config={}))
+        self.update_layer_list()
+        self.layer_list.Select(len(self.layers) - 1)
+
+    def on_delete_layer_button(self, event):
+        index = self.layer_list.GetFirstSelected()
+        if 0 <= index < len(self.layers):
+            layer = self.layers[index]
+            if confirm_dialog(self, _("Are you sure you want to delete this layer?") + "\n\n" + layer.name):
+                del self.layers[index]
+                self.update_layer_list()
+
+    def on_move_layer_up_button(self, event):
+        index = self.layer_list.GetFirstSelected()
+        destination = index - 1
+        if self.move_layer(index, destination):
+            self.layer_list.Select(destination)
+
+    def on_move_layer_down_button(self, event):
+        index = self.layer_list.GetFirstSelected()
+        destination = index + 1
+        if self.move_layer(index, destination):
+            self.layer_list.Select(destination)
 
     def stop_editing(self, cancel=False):
         if self._name_editor is None or self._editing_row is None:
