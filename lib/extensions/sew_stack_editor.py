@@ -2,7 +2,7 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-
+import os
 # -*- coding: UTF-8 -*-
 
 import sys
@@ -10,6 +10,7 @@ from copy import copy
 
 import wx
 from wx.lib.agw import ultimatelistctrl as ulc
+from wx.lib.checkbox import GenCheckBox
 from wx.lib.splitter import MultiSplitterWindow
 
 from .base import InkstitchExtension
@@ -20,8 +21,39 @@ from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
 from ..sew_stack import SewStack
 from ..stitch_plan import stitch_groups_to_stitch_plan
+from ..utils import get_resource_dir
 from ..utils.svg_data import get_pagecolor
 from ..utils.threading import ExitThread, check_stop_flag
+
+
+class VisibleCheckBox(GenCheckBox):
+    def __init__(self, parent, *args, **kwargs):
+        render = wx.RendererNative.Get()
+        width, height = render.GetCheckBoxSize(parent)
+
+        checked_image = wx.Image(os.path.join(get_resource_dir("icons"), "visible.png"))
+        checked_image.Rescale(width, height, wx.IMAGE_QUALITY_HIGH)
+        unchecked_image = wx.Image(os.path.join(get_resource_dir("icons"), "invisible.png"))
+        unchecked_image.Rescale(width, height, wx.IMAGE_QUALITY_HIGH)
+
+        self.enabled_checked_bitmap = checked_image.ConvertToBitmap()
+        self.disabled_checked_bitmap = checked_image.ConvertToDisabled().ConvertToBitmap()
+        self.enabled_unchecked_bitmap = unchecked_image.ConvertToBitmap()
+        self.disabled_unchecked_bitmap = unchecked_image.ConvertToDisabled().ConvertToBitmap()
+
+        super().__init__(parent, *args, **kwargs)
+
+    def GetBitmap(self):
+        if self.IsEnabled():
+            if self.IsChecked():
+                return self.enabled_checked_bitmap
+            else:
+                return self.enabled_unchecked_bitmap
+        else:
+            if self.IsChecked():
+                return self.disabled_checked_bitmap
+            else:
+                return self.disabled_unchecked_bitmap
 
 
 class SewStackPanel(wx.Panel):
@@ -37,14 +69,20 @@ class SewStackPanel(wx.Panel):
 
         self.splitter = MultiSplitterWindow(self, wx.ID_ANY, style=wx.SP_LIVE_UPDATE)
         self.splitter.SetOrientation(wx.VERTICAL)
+        self.splitter.SetMinimumPaneSize(50)
+        self.splitter.Bind(wx.EVT_SPLITTER_SASH_POS_CHANGING, self.on_splitter_sash_pos_changing)
 
+        self.layer_list_wrapper = wx.Panel(self.splitter, wx.ID_ANY)
+        layer_list_sizer = wx.BoxSizer(wx.VERTICAL)
         self.layer_list = ulc.UltimateListCtrl(
-            parent=self.splitter,
+            parent=self.layer_list_wrapper,
             size=(300, 200),
             agwStyle=ulc.ULC_REPORT | ulc.ULC_SINGLE_SEL | ulc.ULC_VRULES | ulc.ULC_HAS_VARIABLE_ROW_HEIGHT
         )
         self.update_layer_list()
-        self.splitter.AppendWindow(self.layer_list, 300)
+        layer_list_sizer.Add(self.layer_list, 1, wx.BOTTOM, 10)
+        self.layer_list_wrapper.SetSizer(layer_list_sizer)
+        self.splitter.AppendWindow(self.layer_list_wrapper, 350)
         self.layer_config_panel = None
         self.splitter.SizeWindows()
 
@@ -104,8 +142,9 @@ class SewStackPanel(wx.Panel):
 
         for i, layer in enumerate(self.layers):
             item = ulc.UltimateListItem()
-            item.SetMask(ulc.ULC_MASK_KIND | ulc.ULC_MASK_CHECK | ulc.ULC_MASK_FORMAT | ulc.ULC_MASK_ENABLE)
-            item.SetKind(1)  # 1 is "a checkbox-like item"
+            item.SetMask(ulc.ULC_MASK_WINDOW | ulc.ULC_MASK_CHECK | ulc.ULC_MASK_FORMAT | ulc.ULC_MASK_ENABLE)
+            checkbox = VisibleCheckBox(self.layer_list)
+            item.SetWindow(checkbox)
             item.SetAlign(ulc.ULC_FORMAT_RIGHT)
             item.Check(layer.enabled)
             item.Enable(layer.enabled)
@@ -183,6 +222,15 @@ class SewStackPanel(wx.Panel):
             self.splitter.SizeWindows()
 
             self.Layout()
+
+    def on_splitter_sash_pos_changing(self, event):
+        # MultiSplitterWindow doesn't enforce the minimum pane size on the lower
+        # pane for some reason, so we'll have to.  Setting the sash position on
+        # the event overrides whatever the user is trying to do.
+        size = self.splitter.GetSize()
+        sash_position = event.GetSashPosition()
+        sash_position = min(sash_position, size.y - 50)
+        event.SetSashPosition(sash_position)
 
     def stop_editing(self, cancel=False):
         if self._name_editor is None or self._editing_row is None:
