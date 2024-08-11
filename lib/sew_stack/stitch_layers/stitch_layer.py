@@ -46,6 +46,9 @@ class StitchLayer(PathUtilsMixin, ConfigMixin):
     def enabled(self):
         return self.config.enabled
 
+    def enable(self, enabled=True):
+        self.config.enabled = enabled
+
     def to_stitch_groups(self, *args):
         raise NotImplementedError(f"{self.__class__.__name__} must implement to_stitch_groups()!")
 

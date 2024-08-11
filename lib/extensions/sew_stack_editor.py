@@ -79,6 +79,7 @@ class SewStackPanel(wx.Panel):
             size=(300, 200),
             agwStyle=ulc.ULC_REPORT | ulc.ULC_SINGLE_SEL | ulc.ULC_VRULES | ulc.ULC_HAS_VARIABLE_ROW_HEIGHT
         )
+        self._checkbox_to_row = {}
         self.update_layer_list()
         layer_list_sizer.Add(self.layer_list, 1, wx.BOTTOM, 10)
         self.layer_list_wrapper.SetSizer(layer_list_sizer)
@@ -95,6 +96,7 @@ class SewStackPanel(wx.Panel):
         self.layer_list.Bind(ulc.EVT_LIST_ITEM_ACTIVATED, self.on_double_click)
         self.layer_list.Bind(ulc.EVT_LIST_ITEM_SELECTED, self.on_layer_selection_changed)
         # self.layer_list.Bind(ulc.EVT_LIST_ITEM_DESELECTED, self.on_layer_selection_changed)
+        self.Bind(wx.EVT_CHECKBOX, self.on_checkbox)
 
         self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
 
@@ -140,14 +142,17 @@ class SewStackPanel(wx.Panel):
         self.layer_list.InsertColumn(1, _("Type"), format=ulc.ULC_FORMAT_CENTER)
         self.layer_list.InsertColumn(2, _("Name"))
 
+        self._checkbox_to_row.clear()
+
         for i, layer in enumerate(self.layers):
             item = ulc.UltimateListItem()
-            item.SetMask(ulc.ULC_MASK_WINDOW | ulc.ULC_MASK_CHECK | ulc.ULC_MASK_FORMAT | ulc.ULC_MASK_ENABLE)
+            item.SetMask(ulc.ULC_MASK_WINDOW | ulc.ULC_MASK_CHECK | ulc.ULC_MASK_FORMAT)
             checkbox = VisibleCheckBox(self.layer_list)
+            self._checkbox_to_row[checkbox] = i
+            checkbox.SetValue(layer.enabled)
             item.SetWindow(checkbox)
             item.SetAlign(ulc.ULC_FORMAT_RIGHT)
             item.Check(layer.enabled)
-            item.Enable(layer.enabled)
             item.SetId(i)
             item.SetColumn(0)
             self.layer_list.InsertItem(item)
@@ -222,6 +227,11 @@ class SewStackPanel(wx.Panel):
             self.splitter.SizeWindows()
 
             self.Layout()
+
+    def on_checkbox(self, event):
+        row = self._checkbox_to_row.get(event.GetEventObject())
+        if row is not None:
+            self.layers[row].enable(event.IsChecked())
 
     def on_splitter_sash_pos_changing(self, event):
         # MultiSplitterWindow doesn't enforce the minimum pane size on the lower
