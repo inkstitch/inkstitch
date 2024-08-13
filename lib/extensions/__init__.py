@@ -51,6 +51,7 @@ from .png_simple import PngSimple
 from .preferences import Preferences
 from .print_pdf import Print
 from .redwork import Redwork
+from .remove_duplicated_points import RemoveDuplicatedPoints
 from .remove_embroidery_settings import RemoveEmbroiderySettings
 from .reorder import Reorder
 from .satin_multicolor import SatinMulticolor
@@ -118,6 +119,7 @@ __all__ = extensions = [About,
                         Preferences,
                         Print,
                         Redwork,
+                        RemoveDuplicatedPoints,
                         RemoveEmbroiderySettings,
                         Reorder,
                         SatinMulticolor,
