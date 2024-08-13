@@ -37,3 +37,8 @@ flask-cors
 pywinutils ; sys_platform == 'win32'
 pywin32 ; sys_platform == 'win32'
 
+# Test dependencies.
+# It should be okay to include these here because this list isn't the one used for bundling dependencies.
+# Instead Pyinstaller finds what dependencies the project needs based on what inkstitch.py imports
+pytest
+

@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
+set -e
 # creating folder to install geos
 mkdir $HOME/geos-build
 GEOS_PATH=$HOME/geos-build
 # Downloading geos
 curl -L -O  https://github.com/libgeos/geos/releases/download/3.12.2/geos-3.12.2.tar.bz2
 
-# uzipping geos 
-tar -xf geos-3.12.2.tar.bz2 
-cd geos-3.12.2
+# uzipping geos into the geos directory
+mkdir -p geos && cd geos
+tar -xf ../geos-3.12.2.tar.bz2 --strip-components=1
 # Building geos
-mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX:PATH=$GEOS_PATH -DCMAKE_BUILD_TYPE=Release ..
+mkdir -p build && cd build && cmake -DCMAKE_INSTALL_PREFIX:PATH=$GEOS_PATH -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF ..
 make && make install
 
 export PATH=$GEOS_PATH/bin:$PATH
@@ -20,5 +21,9 @@ cd ../..
 python -m pip uninstall -y shapely
 python -m pip cache remove shapely
 python -m pip install -v shapely --no-binary shapely
+# Future improvement might be to split this out so pytest is a separate step and line on the build log,
+# but the LD_LIBRARY_PATH env var needs to be passed between those steps with step outputs or something.
+# This works for now.
+pytest
 make dist
 
