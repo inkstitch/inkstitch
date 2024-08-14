@@ -5,9 +5,10 @@
 
 from inkex import Boolean, errormsg, BaseElement
 
-from ..elements import Clone
+from ..elements import Clone, EmbroideryElement
 from ..i18n import _
 from .base import InkstitchExtension
+from ..svg.tags import CONNECTION_END, CONNECTION_START
 
 from typing import List, Tuple
 
@@ -34,8 +35,14 @@ class UnlinkClone(InkstitchExtension):
         for element in self.elements:
             if isinstance(element, Clone):
                 resolved = element.resolve_clone(recursive=recursive)
-                clones_resolved.append((element.node, resolved))
+                clones_resolved.append((element.node, resolved[0]))
 
         for (clone, resolved) in clones_resolved:
-            clone.getparent().remove(clone)
-            resolved.set_id(clone.get_id())
+            clone.delete()
+            orig_id = resolved.get_id()
+            new_id = clone.get_id()
+            # Fix up command backlinks - note this has to happen before we rename so they can actually be found.
+            for command in EmbroideryElement(resolved).commands:
+                backlink_attrib = CONNECTION_START if command.connector.get(CONNECTION_START) == ("#"+orig_id) else CONNECTION_END
+                command.connector.set(backlink_attrib, "#"+new_id)
+            resolved.set_id(new_id)
