@@ -7,13 +7,16 @@ import os
 import sys
 from copy import deepcopy
 from random import random
+from typing import List
 
 import inkex
 from shapely import geometry as shgeo
+from shapely import get_coordinates
 
 from .i18n import N_, _
 from .svg import (apply_transforms, generate_unique_id,
                   get_correction_transform, get_document, get_node_transform)
+from .svg.svg import copy_no_children, point_upwards
 from .svg.tags import (CONNECTION_END, CONNECTION_START, CONNECTOR_TYPE,
                        INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_SYMBOL_TAG,
                        SVG_USE_TAG, XLINK_HREF)
@@ -113,7 +116,7 @@ class BaseCommand(object):
 
 class Command(BaseCommand):
     def __init__(self, connector):
-        self.connector = connector
+        self.connector: inkex.Path = connector
         self.svg = self.connector.getroottree().getroot()
 
         self.parse_command()
@@ -132,7 +135,8 @@ class Command(BaseCommand):
             (self.get_node_by_url(self.connector.get(CONNECTION_END)), path[0][-1][1])
         ]
 
-        if neighbors[0][0].tag != SVG_USE_TAG:
+        self.symbol_is_end = neighbors[0][0].tag != SVG_USE_TAG
+        if self.symbol_is_end:
             neighbors.reverse()
 
         if neighbors[0][0].tag != SVG_USE_TAG:
@@ -143,11 +147,40 @@ class Command(BaseCommand):
         self.symbol = self.get_node_by_url(neighbors[0][0].get(XLINK_HREF))
         self.parse_symbol()
 
-        self.target = neighbors[1][0]
+        self.target: inkex.BaseElement = neighbors[1][0]
         self.target_point = neighbors[1][1]
 
     def __repr__(self):
         return "Command('%s', %s)" % (self.command, self.target_point)
+
+    def clone(self, new_target: inkex.BaseElement) -> inkex.BaseElement:
+        """
+            Clone this command and point it to the new target, positioning it relative to the new target the same as the target
+        """
+        relative_transform = new_target.composed_transform() @ -self.target.composed_transform()
+
+        # Clone group
+        cloned_group = copy_no_children(self.connector.getparent())
+        cloned_group.transform = relative_transform @ cloned_group.transform
+        new_target.getparent().append(cloned_group)
+
+        symbol = copy_no_children(self.use)
+        cloned_group.append(symbol)
+        point_upwards(symbol)
+
+        # Copy connector
+        connector = copy_no_children(self.connector)
+        cloned_group.append(connector)
+        if self.symbol_is_end:
+            symbol_attr = CONNECTION_END
+            target_attr = CONNECTION_START
+        else:
+            symbol_attr = CONNECTION_START
+            target_attr = CONNECTION_END
+        connector.set(symbol_attr, f"#{symbol.get_id()}")
+        connector.set(target_attr, f"#{new_target.get_id()}")
+
+        return cloned_group
 
 
 class StandaloneCommand(BaseCommand):
@@ -175,11 +208,11 @@ class StandaloneCommand(BaseCommand):
         return Point(*pos)
 
 
-def get_command_description(command):
+def get_command_description(command: str):
     return COMMANDS[command]
 
 
-def find_commands(node):
+def find_commands(node: BaseCommand) -> List[Command]:
     """Find the symbols this node is connected to and return them as Commands"""
 
     # find all paths that have this object as a connection
@@ -307,10 +340,24 @@ def add_group(document, node, command):
 
 
 def add_connector(document, symbol, command, element):
-    # I'd like it if I could position the connector endpoint nicely but inkscape just
-    # moves it to the element's center immediately after the extension runs.
+    # "I'd like it if I could position the connector endpoint nicely but inkscape just
+    # moves it to the element's center immediately after the extension runs." - Lex Neva, rev. 4baced7085
+    # "Maybe we should have the target point be a seperately-moveable node? Sometimes moving the command
+    # node so the line drawn from the command to the centroid of the target is awkward anyway?" - CapellanCitizen
+
+    # Inkscape will draw this connector line from the bounding box center of the two nodes, but
+    # will stop at the first intersection with the path it's pointing to. It is necessary to
+    # compute the target point accurately to what inkscape will do.
+    # If not, then the target position will change when the document is loaded by inkscape and break.
+    # For example, not doing this caused issues when implementing commands attached to clones.
     start_pos = (symbol.get('x'), symbol.get('y'))
-    end_pos = element.shape.centroid
+    centroid_pos = element.node.bounding_box(inkex.Transform(get_node_transform(element.node.getparent()))).center
+    connector_line = shgeo.LineString([start_pos, centroid_pos])
+    if connector_line.intersects(element.shape):
+        end_pos = get_coordinates(connector_line.intersection(element.shape))[0]
+    else:
+        # Sometimes the line won't intersect anything and will go straight to the centroid.
+        end_pos = centroid_pos
 
     # Make sure the element's XML node has an id so that we can reference it.
     if element.node.get('id') is None:
@@ -318,10 +365,10 @@ def add_connector(document, symbol, command, element):
 
     path = inkex.PathElement(attrib={
         "id": generate_unique_id(document, "command_connector"),
-        "d": "M %s,%s %s,%s" % (start_pos[0], start_pos[1], end_pos.x, end_pos.y),
+        "d": f"M {start_pos[0]},{start_pos[1]} {end_pos[0]},{end_pos[1]}",
         "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
-        CONNECTION_START: "#%s" % symbol.get('id'),
-        CONNECTION_END: "#%s" % element.node.get('id'),
+        CONNECTION_START: f"#{symbol.get('id')}",
+        CONNECTION_END: f"#{element.node.get('id')}",
 
         # l10n: the name of the line that connects a command to the object it applies to
         INKSCAPE_LABEL: _("connector")

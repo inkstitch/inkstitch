@@ -9,8 +9,10 @@ from copy import deepcopy
 import inkex
 import numpy as np
 from inkex import bezier, BaseElement
+from typing import List, Optional
 
-from ..commands import find_commands
+from ..commands import Command, find_commands
+from ..stitch_plan import StitchGroup
 from ..debug.debug import debug
 from ..exceptions import InkstitchException, format_uncaught_exception
 from ..i18n import _
@@ -436,19 +438,19 @@ class EmbroideryElement(object):
 
     @property
     @cache
-    def commands(self):
+    def commands(self) -> List[Command]:
         return find_commands(self.node)
 
     @cache
-    def get_commands(self, command):
+    def get_commands(self, command: str) -> List[Command]:
         return [c for c in self.commands if c.command == command]
 
     @cache
-    def has_command(self, command):
+    def has_command(self, command: str) -> bool:
         return len(self.get_commands(command)) > 0
 
     @cache
-    def get_command(self, command):
+    def get_command(self, command: str) -> Optional[Command]:
         commands = self.get_commands(command)
 
         if commands:
@@ -495,7 +497,7 @@ class EmbroideryElement(object):
 
         return lock_start, lock_end
 
-    def to_stitch_groups(self, last_stitch_group):
+    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup]) -> List[StitchGroup]:
         raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
     @debug.time
@@ -517,7 +519,7 @@ class EmbroideryElement(object):
 
         return stitch_groups
 
-    def uses_previous_stitch(self):
+    def uses_previous_stitch(self) -> bool:
         """Returns True if the previous stitch can affect this Element's stitches.
 
         This function may be overridden in a subclass.
@@ -589,7 +591,7 @@ class EmbroideryElement(object):
 
         return cache_key
 
-    def embroider(self, last_stitch_group):
+    def embroider(self, last_stitch_group: Optional[StitchGroup]) -> List[StitchGroup]:
         debug.log(f"starting {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
 
         with self.handle_unexpected_exceptions():
@@ -606,8 +608,10 @@ class EmbroideryElement(object):
                 apply_patterns(stitch_groups, self.node)
 
                 if stitch_groups:
-                    stitch_groups[-1].trim_after = self.has_command("trim") or self.trim_after
-                    stitch_groups[-1].stop_after = self.has_command("stop") or self.stop_after
+                    # In some cases (clones) the last stitch group may have trim_after or stop_after already set,
+                    # and we shouldn't override that with this element's values, hence the use of or-equals
+                    stitch_groups[-1].trim_after |= self.has_command("trim") or self.trim_after
+                    stitch_groups[-1].stop_after |= self.has_command("stop") or self.stop_after
 
                 for stitch_group in stitch_groups:
                     stitch_group.min_jump_stitch_length = self.min_jump_stitch_length
