@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-27 05:29+0000\n"
-"PO-Revision-Date: 2024-07-27 05:44\n"
+"POT-Creation-Date: 2024-08-14 01:16+0000\n"
+"PO-Revision-Date: 2024-08-14 01:16\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-27 05:29+0000\n"
+"POT-Creation-Date: 2024-08-14 01:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2766,7 +2766,7 @@ msgstr "Un  aperçu de l'impression a été ouvert dans votre navigateur. Cette 
 msgid "Ink/Stitch Print"
 msgstr "Impression Ink/Stitch"
 
-#: lib/extensions/redwork.py:44
+#: lib/extensions/redwork.py:44 lib/extensions/remove_duplicated_points.py:32
 msgid "Please select one or more strokes."
 msgstr "Merci de sélectionner un ou plusieurs traits."
 
@@ -2962,7 +2962,7 @@ msgstr "Licence"
 msgid "Element Info"
 msgstr "Information sur l'élément"
 
-#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:85
+#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:92
 msgid "Info"
 msgstr "Information"
 
@@ -2996,6 +2996,7 @@ msgstr "Valeur"
 #: inx/inkstitch_letters_to_font.inx:54 inx/inkstitch_outline.inx:25
 #: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_png_realistic.inx:17
 #: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:23
+#: inx/inkstitch_remove_duplicated_points.inx:14
 #: inx/inkstitch_remove_embroidery_settings.inx:142
 #: inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stitch_plan_preview.inx:37
@@ -3123,7 +3124,7 @@ msgstr "Échelle"
 msgid "Font Sampling"
 msgstr "Test de police"
 
-#: lib/gui/lettering_font_sample.py:31 lib/gui/simulator/view_panel.py:94
+#: lib/gui/lettering_font_sample.py:31 lib/gui/simulator/view_panel.py:101
 #: print/templates/ui.html:5 print/templates/ui.html:15
 #: inx/inkstitch_lettering_generate_json.inx:58
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
@@ -3407,31 +3408,31 @@ msgstr "# Stops"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator/drawing_panel.py:15 inx/inkstitch_output_GCODE.inx:29
+#: lib/gui/simulator/drawing_panel.py:16 inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr "BRODER"
 
-#: lib/gui/simulator/drawing_panel.py:15
+#: lib/gui/simulator/drawing_panel.py:16
 msgid "JUMP"
 msgstr "SAUT"
 
-#: lib/gui/simulator/drawing_panel.py:15
+#: lib/gui/simulator/drawing_panel.py:16
 msgid "TRIM"
 msgstr "COUPURE"
 
-#: lib/gui/simulator/drawing_panel.py:15 inx/inkstitch_output_GCODE.inx:33
+#: lib/gui/simulator/drawing_panel.py:16 inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
 msgstr "STOP"
 
-#: lib/gui/simulator/drawing_panel.py:15 inx/inkstitch_output_GCODE.inx:31
+#: lib/gui/simulator/drawing_panel.py:16 inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr "CHANGEMENT COULEUR"
 
-#: lib/gui/simulator/drawing_panel.py:244
+#: lib/gui/simulator/drawing_panel.py:278
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr "Dimensions: {:.2f} x {:.2f}"
 
-#: lib/gui/simulator/drawing_panel.py:361
+#: lib/gui/simulator/drawing_panel.py:417
 #, python-format
 msgid "Command: %s"
 msgstr "Commande : %s"
@@ -3478,23 +3479,27 @@ msgstr "Ouvrir le dialogue Informations"
 msgid "Change background color"
 msgstr "Changer la couleur d'arrière fond"
 
-#: lib/gui/simulator/view_panel.py:60
+#: lib/gui/simulator/view_panel.py:64
+msgid "Show page"
+msgstr "Montrer la page"
+
+#: lib/gui/simulator/view_panel.py:67
 msgid "Open settings dialog"
 msgstr "Ouvrir le dialogue de paramétrage"
 
-#: lib/gui/simulator/view_panel.py:66
+#: lib/gui/simulator/view_panel.py:73
 msgid "Detach/attach simulator window"
 msgstr "Détacher/Attacher le simulateur"
 
-#: lib/gui/simulator/view_panel.py:72
+#: lib/gui/simulator/view_panel.py:79
 msgid "Show"
 msgstr "Montrer"
 
-#: lib/gui/simulator/view_panel.py:131
+#: lib/gui/simulator/view_panel.py:145
 msgid "Simulator Preferences"
 msgstr "Préférences du simulateur"
 
-#: lib/gui/simulator/view_panel.py:135
+#: lib/gui/simulator/view_panel.py:153
 msgid "Design Info"
 msgstr "Information sur la broderie"
 
@@ -3659,6 +3664,7 @@ msgstr "Générer des échantillons"
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:8
 #: inx/inkstitch_letters_to_font.inx:8 inx/inkstitch_outline.inx:8
 #: inx/inkstitch_palette_to_text.inx:15 inx/inkstitch_redwork.inx:8
+#: inx/inkstitch_remove_duplicated_points.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:8
 #: inx/inkstitch_stitch_plan_preview.inx:8
 #: inx/inkstitch_stroke_to_lpe_satin.inx:7 inx/inkstitch_troubleshoot.inx:8
@@ -4652,8 +4658,9 @@ msgstr "Cette extension tente de créer un chemin de broderie unique qui parcour
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:15
 #: inx/inkstitch_letters_to_font.inx:69 inx/inkstitch_outline.inx:28
-#: inx/inkstitch_redwork.inx:26 inx/inkstitch_stitch_plan_preview.inx:45
-#: inx/inkstitch_troubleshoot.inx:15 inx/inkstitch_unlink_clone.inx:13
+#: inx/inkstitch_redwork.inx:26 inx/inkstitch_remove_duplicated_points.inx:24
+#: inx/inkstitch_stitch_plan_preview.inx:45 inx/inkstitch_troubleshoot.inx:15
+#: inx/inkstitch_unlink_clone.inx:13
 msgid "More information on our website"
 msgstr "Plus d'information sur notre site web"
 
@@ -4943,7 +4950,8 @@ msgstr "https://inkstitch.org/fr/docs/visualize/#display-stacking-order"
 msgid "Duplicate Params"
 msgstr "Dupliquer les paramètres"
 
-#: inx/inkstitch_duplicate_params.inx:10 inx/inkstitch_reorder.inx:10
+#: inx/inkstitch_duplicate_params.inx:10
+#: inx/inkstitch_remove_duplicated_points.inx:33 inx/inkstitch_reorder.inx:10
 #: inx/inkstitch_select_elements.inx:106
 #: inx/inkstitch_selection_to_guide_line.inx:10
 #: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
@@ -6482,6 +6490,30 @@ msgstr "Une broderie redwork est une broderie à base de traits où chaque trait
 #: inx/inkstitch_redwork.inx:27
 msgid "https://inkstitch.org/docs/stroke-tools/#redwork"
 msgstr "https://inkstitch.org/fr/docs/stroke-tools/#redwork"
+
+#: inx/inkstitch_remove_duplicated_points.inx:3
+msgid "Remove duplicated points"
+msgstr ""
+
+#: inx/inkstitch_remove_duplicated_points.inx:10
+msgid "Remove point if repeated within this number of consecutive points"
+msgstr ""
+
+#: inx/inkstitch_remove_duplicated_points.inx:12
+msgid "Distance tolerance"
+msgstr ""
+
+#: inx/inkstitch_remove_duplicated_points.inx:15
+msgid "This extension removes duplicated points from selected elements."
+msgstr ""
+
+#: inx/inkstitch_remove_duplicated_points.inx:19
+msgid "It is most useful for manual paths (straight lines), since it will increase node count on Bézier curves. One possible usecase is to convert a bean stitch path from an embroidery file back into a simple line."
+msgstr ""
+
+#: inx/inkstitch_remove_duplicated_points.inx:25
+msgid "https://inkstitch.org/docs/edit/#remove-duplicated-points"
+msgstr ""
 
 #: inx/inkstitch_remove_embroidery_settings.inx:3
 msgid "Remove embroidery settings"
