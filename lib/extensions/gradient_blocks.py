@@ -107,7 +107,7 @@ class GradientBlocks(CommandsExtension):
     def _add_block_commands(self, block, previous_element):
         current = FillStitch(block)
         previous = FillStitch(previous_element)
-        if previous.shape.is_empty:
+        if previous.shape.is_empty or current.shape.is_empty:
             return
         nearest = nearest_points(current.shape, previous.shape)
         pos_current = self._get_command_postion(current, nearest[0])
