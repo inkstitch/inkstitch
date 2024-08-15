@@ -53,7 +53,7 @@ def guided_fill(shape,
     graph_make_valid(fill_stitch_graph)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, angle, underpath)
-    path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
+    path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point, underpath)
     result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance, skip_last,
                               underpath)

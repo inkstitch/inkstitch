@@ -111,7 +111,7 @@ def auto_fill(shape,
     if not travel_graph:
         return fallback(shape, running_stitch_length, running_stitch_tolerance)
 
-    path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
+    path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point, underpath)
     path = fill_gaps(path, round_to_multiple_of_2(gap_fill_rows))
     result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_spacing,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance,
@@ -375,13 +375,13 @@ def graph_make_valid(graph):
                     graph.add_edge(start, end, key=f'segment-{key}', **data)
                 elif 'outline' in graph_edges.keys():
                     data = graph_edges['outline']
-                    graph.add_edge(start, end, key='outline-{key}', **data)
+                    graph.add_edge(start, end, key=f'outline-{key}', **data)
                 elif 'extra' in graph_edges.keys():
                     data = graph_edges['extra']
-                    graph.add_edge(start, end, key='extra-{key}', **data)
+                    graph.add_edge(start, end, key=f'extra-{key}', **data)
                 elif 'initial' in graph_edges.keys():
                     data = graph_edges['initial']
-                    graph.add_edge(start, end, key='initial-{key}', **data)
+                    graph.add_edge(start, end, key=f'initial-{key}', **data)
 
 
 def fallback(shape, running_stitch_length, running_stitch_tolerance):
@@ -600,7 +600,7 @@ def nearest_node(nodes, point, attr=None):
 
 
 @debug.time
-def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None):
+def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None, underpath=True):
     """find a path that visits every grating segment exactly once
 
     Theoretically, we just need to find an Eulerian Path in the graph.
@@ -623,6 +623,7 @@ def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None
     """
 
     graph = graph.copy()
+    composed_graph = networkx.compose(graph, travel_graph)
 
     if not starting_point:
         starting_point = list(graph.nodes.keys())[0]
@@ -640,6 +641,10 @@ def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None
     vertex_stack = [(ending_node, None)]
     last_vertex = None
     last_key = None
+
+    # get the outline index for starting and ending node
+    outline_start = travel_graph[starting_node][list(travel_graph[starting_node])[0]]['outline']['outline']
+    outline_end = travel_graph[ending_node][list(travel_graph[ending_node])[0]]['outline']['outline']
 
     while vertex_stack:
         current_vertex, current_key = vertex_stack[-1]
@@ -664,8 +669,21 @@ def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None
     # Note, it's quite possible that part of this PathEdge will be eliminated by
     # collapse_sequential_outline_edges().
 
-    if starting_node is not ending_node:
-        path.insert(0, PathEdge((starting_node, ending_node), key="initial"))
+    if underpath or outline_start == outline_end:
+        if starting_node is not ending_node:
+            path.insert(0, PathEdge((starting_node, ending_node), key="initial"))
+    else:
+        # If underpath is disabled, we only have the option travel along the outline edges.
+        # The user chose to start and end on different oultines, so there is no way to travel
+        # along the edge from start to end. Add an additional path from start to end along existing
+        # graph and travel edges (they will be duplicated).
+        start_path = networkx.shortest_path(composed_graph, starting_node, ending_node, weight='weight')
+        for i, edge in enumerate(list(zip(start_path, start_path[1:]))):
+            # add as segment so it won't be collapsed
+            if 'segment' in composed_graph[edge[0]][edge[1]].keys():
+                path.insert(i, PathEdge(edge, key=f'segment-start{i}'))
+            else:
+                path.insert(i, PathEdge(edge, key=f'outline-start{i}'))
 
     # If the starting and/or ending point falls far away from the end of a row
     # of stitches (like can happen at the top of a square), then we need to
@@ -872,10 +890,8 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
     try:
         path = networkx.shortest_path(travel_graph, start, end, weight='weight')
     except networkx.NetworkXNoPath:
-        # TODO: find a better solution, this may produce unwanted jump stitches
-        # but at least it renders the requested shape
-        # test case: underpath disabled, starts and ends on different outlines
-        return
+        # This may not look good, but it prevents the fill from failing (which hopefully never happens)
+        path = [start, end]
 
     if underpath and path != (start, end):
         path = smooth_path(path, 2)
