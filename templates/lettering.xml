@@ -3,7 +3,7 @@
     <name>Lettering</name>
     <id>org.{{ id_inkstitch }}.lettering</id>
     <param name="extension" type="string" gui-hidden="true">lettering</param>
-    <effect>
+    <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no" />

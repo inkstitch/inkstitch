@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from ..elements import FillStitch, SatinColumn, Stroke
+from ..gui.abort_message import AbortMessageApp
 from ..gui.element_info import ElementInfoApp
 from ..i18n import _
 from ..stitch_plan import stitch_groups_to_stitch_plan
@@ -15,6 +16,11 @@ class ElementInfo(InkstitchExtension):
 
     def effect(self):
         if not self.svg.selection or not self.get_elements():
+            app = AbortMessageApp(
+                _("Please select at least one element."),
+                _("https://inkstitch.org/docs/troubleshoot/#element-info")
+            )
+            app.MainLoop()
             return
 
         self.metadata = self.get_inkstitch_metadata()

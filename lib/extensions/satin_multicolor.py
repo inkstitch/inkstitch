@@ -7,9 +7,9 @@ import sys
 
 import wx
 import wx.adv
-from inkex import errormsg
 
 from ..elements import SatinColumn
+from ..gui.abort_message import AbortMessageApp
 from ..gui.satin_multicolor import MultiColorSatinPanel
 from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
@@ -30,7 +30,11 @@ class SatinMulticolor(InkstitchExtension):
         self.get_elements()
         satins = [element for element in self.elements if isinstance(element, SatinColumn)]
         if not satins:
-            errormsg(_("Please select at least one satin column."))
+            app = AbortMessageApp(
+                _("Please select at least one satin column."),
+                _("https://inkstitch.org/docs/satin-tools/#multicolor-satin")
+            )
+            app.MainLoop()
             return
 
         metadata = self.get_inkstitch_metadata()
