@@ -64,6 +64,11 @@ class ColorizePanel(ScrolledPanel):
         self.keep_original = wx.CheckBox(self)
         self.keep_original.SetValue(True)
 
+        adjust_underlay_per_color_label = wx.StaticText(self, label=_("Adjust underlay per color"))
+        self.adjust_underlay_per_color = wx.CheckBox(self)
+        self.adjust_underlay_per_color.Bind(wx.EVT_CHECKBOX, self._update_underlay)
+        equististance_label.SetToolTip(_("When disabled existing underlay is applied only to the first color."))
+
         # Colors
         color_settings_headline = wx.StaticText(self, label=_("Colors"))
         color_settings_headline.SetFont(wx.Font().Bold())
@@ -89,6 +94,8 @@ class ColorizePanel(ScrolledPanel):
         general_settings_sizer.Add(self.seed, 0, wx.ALL | wx.EXPAND, 0)
         general_settings_sizer.Add(keep_original_label, 0, wx.TOP, 30)
         general_settings_sizer.Add(self.keep_original, 0, wx.TOP | wx.EXPAND, 30)
+        general_settings_sizer.Add(adjust_underlay_per_color_label, 0, wx.ALL, 0)
+        general_settings_sizer.Add(self.adjust_underlay_per_color, 0, wx.ALL | wx.EXPAND, 0)
         general_settings_sizer.AddGrowableCol(1)
 
         color_header_sizer.Add(color_settings_headline, 0, wx.ALL, 10)
@@ -238,3 +245,6 @@ class ColorizePanel(ScrolledPanel):
             self.monochrome_width.SetMax(max_width)
         self.Refresh()
         self._update()
+
+    def _update_underlay(self, event):
+        self.panel.update_preview()
