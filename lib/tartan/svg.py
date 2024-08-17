@@ -224,7 +224,7 @@ class TartanSvgGroup:
             return []
         graph_make_valid(fill_stitch_graph)
         travel_graph = build_travel_graph(fill_stitch_graph, outline_shape, 0, False)
-        path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point)
+        path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point, False)
         return self._path_to_shapes(path, fill_stitch_graph, polygons, geometry_type, outline_shape)
 
     def _path_to_shapes(
