@@ -129,7 +129,7 @@ class SimulatorSlider(wx.Panel):
             gc.DrawRectangle(start_x, height * self.color_bar_start,
                              end_x - start_x, height * self.color_bar_thickness)
 
-        if self.control_panel.is_dark_theme():
+        if self.is_dark_theme() and sys.platform != "win32":
             gc.SetPen(wx.Pen(wx.Colour(0, 0, 0), 1))
             gc.SetBrush(wx.Brush(wx.Colour(255, 255, 255)))
         else:

@@ -3,6 +3,7 @@
 # Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import os
+from sys import platform
 
 import wx
 from wx.lib.intctrl import IntCtrl
@@ -194,7 +195,7 @@ class ControlPanel(wx.Panel):
         return wx.SystemSettings().GetAppearance().IsDark()
 
     def load_icon(self, icon_name):
-        if self.is_dark_theme():
+        if self.is_dark_theme() and platform != "win32":
             icon = wx.Image(os.path.join(self.icons_dir, f"{icon_name}_dark.png"))
         else:
             icon = wx.Image(os.path.join(self.icons_dir, f"{icon_name}.png"))
