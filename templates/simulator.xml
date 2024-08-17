@@ -3,7 +3,7 @@
     <name>Simulator</name>
     <id>org.{{ id_inkstitch }}.simulator</id>
     <param name="extension" type="string" gui-hidden="true">simulator</param>
-    <effect implements-custom-gui="true">
+    <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">

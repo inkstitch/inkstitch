@@ -3,7 +3,7 @@
     <name>Tartan</name>
     <id>org.{{ id_inkstitch }}.tartan</id>
     <param name="extension" type="string" gui-hidden="true">tartan</param>
-    <effect>
+    <effect implements-custom-gui="true">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">

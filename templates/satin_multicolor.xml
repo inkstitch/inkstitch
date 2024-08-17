@@ -3,7 +3,7 @@
     <name>Multicolor Satin</name>
     <id>org.{{ id_inkstitch }}.satin_multicolor</id>
     <param name="extension" type="string" gui-hidden="true">satin_multicolor</param>
-    <effect needs-live-preview="false">
+    <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">

@@ -3,7 +3,7 @@
     <name>Font Sampling</name>
     <id>org.{{ id_inkstitch }}.lettering_font_sample</id>
     <param name="extension" type="string" gui-hidden="true">lettering_font_sample</param>
-    <effect>
+    <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">

@@ -7,8 +7,8 @@ import sys
 
 import wx
 import wx.adv
-from inkex import errormsg
 
+from ..gui.abort_message import AbortMessageApp
 from ..gui.simulator import SplitSimulatorWindow
 from ..gui.tartan import TartanMainPanel
 from ..i18n import _
@@ -59,9 +59,15 @@ class Tartan(InkstitchExtension):
 
     def effect(self):
         self.get_tartan_elements()
+
         if not self.elements:
-            errormsg(_("To create a tartan pattern please select at least one element with a fill color."))
+            app = AbortMessageApp(
+                _("To create a tartan pattern please select at least one element with a fill color."),
+                _("https://inkstitch.org/docs/fill-tools/#tartan")
+            )
+            app.MainLoop()
             return
+
         metadata = self.get_inkstitch_metadata()
         background_color = get_pagecolor(self.svg.namedview)
 

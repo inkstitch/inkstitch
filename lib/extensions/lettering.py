@@ -9,6 +9,7 @@ import inkex
 import wx
 import wx.adv
 
+from ..gui.abort_message import AbortMessageApp
 from ..gui.lettering import LetteringPanel
 from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
@@ -41,7 +42,11 @@ class Lettering(CommandsExtension):
                         groups.add(group)
 
             if len(groups) > 1:
-                inkex.errormsg(_("Please select only one block of text."))
+                app = AbortMessageApp(
+                    _("Please select only one block of text."),
+                    _("https://inkstitch.org/docs/lettering/#lettering-tool")
+                )
+                app.MainLoop()
                 sys.exit(1)
             elif len(groups) == 0:
                 return self.create_group()
