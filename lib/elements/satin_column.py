@@ -752,15 +752,24 @@ class SatinColumn(EmbroideryElement):
             yield ClosedPathWarning(self.flattened_rails[0].coords[0])
 
     def validation_errors(self):
-        # The node should have exactly two paths with the same number of points - or it should
-        # have two rails and at least one rung
-        if len(self.csp) < 2:
-            yield TooFewPathsError((0, 0))
-        elif len(self.rails) < 2:
-            yield TooFewPathsError(self.flattened_rails[0].representative_point())
+        if len(self.flattened_rails) == 0:
+            # Non existing rails can happen due to insane transforms which reduce the size of the
+            # satin to zero. The path should still be pointable.
+            try:
+                point = self.paths[0][0]
+            except IndexError:
+                point = (0, 0)
+            yield NotStitchableError(point)
+        else:
+            # The node should have exactly two paths with the same number of points - or it should
+            # have two rails and at least one rung
+            if len(self.csp) < 2:
+                yield TooFewPathsError((0, 0))
+            elif len(self.rails) < 2:
+                yield TooFewPathsError(self.flattened_rails[0].representative_point())
 
-        if not self.to_stitch_groups():
-            yield NotStitchableError(self.flattened_rails[0].representative_point())
+            if not self.to_stitch_groups():
+                yield NotStitchableError(self.flattened_rails[0].representative_point())
 
     def _center_walk_is_odd(self):
         return self.center_walk_underlay_repeats % 2 == 1
