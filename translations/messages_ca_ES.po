@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-08-14 01:16+0000\n"
-"PO-Revision-Date: 2024-08-14 01:16\n"
+"POT-Creation-Date: 2024-08-18 01:20+0000\n"
+"PO-Revision-Date: 2024-08-18 01:20\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-14 01:16+0000\n"
+"POT-Creation-Date: 2024-08-18 01:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -814,103 +814,103 @@ msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:24 inx/inkstitch_object_commands.inx:4
+#: lib/commands.py:27 inx/inkstitch_object_commands.inx:4
 #: inx/inkstitch_remove_embroidery_settings.inx:118
 msgid "Fill stitch starting position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:27 inx/inkstitch_object_commands.inx:5
+#: lib/commands.py:30 inx/inkstitch_object_commands.inx:5
 #: inx/inkstitch_remove_embroidery_settings.inx:119
 msgid "Fill stitch ending position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:30 inx/inkstitch_object_commands.inx:6
+#: lib/commands.py:33 inx/inkstitch_object_commands.inx:6
 #: inx/inkstitch_remove_embroidery_settings.inx:120
 msgid "Target position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:33 inx/inkstitch_object_commands.inx:7
+#: lib/commands.py:36 inx/inkstitch_object_commands.inx:7
 #: inx/inkstitch_remove_embroidery_settings.inx:121
 msgid "Auto-route running stitch starting position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:36 inx/inkstitch_object_commands.inx:8
+#: lib/commands.py:39 inx/inkstitch_object_commands.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:122
 msgid "Auto-route running stitch ending position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:39 inx/inkstitch_object_commands.inx:9
+#: lib/commands.py:42 inx/inkstitch_object_commands.inx:9
 #: inx/inkstitch_remove_embroidery_settings.inx:123
 msgid "Auto-route satin stitch starting position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:42 inx/inkstitch_object_commands.inx:10
+#: lib/commands.py:45 inx/inkstitch_object_commands.inx:10
 #: inx/inkstitch_remove_embroidery_settings.inx:124
 msgid "Auto-route satin stitch ending position"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:45 inx/inkstitch_object_commands.inx:11
+#: lib/commands.py:48 inx/inkstitch_object_commands.inx:11
 #: inx/inkstitch_remove_embroidery_settings.inx:125
 msgid "Stop (pause machine) after sewing this object"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:48 inx/inkstitch_object_commands.inx:12
+#: lib/commands.py:51 inx/inkstitch_object_commands.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:126
 msgid "Trim thread after sewing this object"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:51 inx/inkstitch_object_commands.inx:13
+#: lib/commands.py:54 inx/inkstitch_object_commands.inx:13
 #: inx/inkstitch_remove_embroidery_settings.inx:127
 msgid "Ignore this object (do not stitch)"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:54 inx/inkstitch_object_commands.inx:14
+#: lib/commands.py:57 inx/inkstitch_object_commands.inx:14
 #: inx/inkstitch_remove_embroidery_settings.inx:128
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects a layer
-#: lib/commands.py:57 inx/inkstitch_layer_commands.inx:7
+#: lib/commands.py:60 inx/inkstitch_layer_commands.inx:7
 #: inx/inkstitch_remove_embroidery_settings.inx:131
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
-#: lib/commands.py:60 inx/inkstitch_global_commands.inx:7
+#: lib/commands.py:63 inx/inkstitch_global_commands.inx:7
 #: inx/inkstitch_remove_embroidery_settings.inx:134
 msgid "Origin for exported embroidery files"
 msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
-#: lib/commands.py:63 inx/inkstitch_global_commands.inx:9
+#: lib/commands.py:66 inx/inkstitch_global_commands.inx:9
 #: inx/inkstitch_remove_embroidery_settings.inx:136
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr ""
 
-#: lib/commands.py:229
+#: lib/commands.py:262
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr ""
@@ -920,190 +920,190 @@ msgstr ""
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:236
+#: lib/commands.py:269
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr ""
 
-#: lib/commands.py:302 lib/commands.py:438
+#: lib/commands.py:335 lib/commands.py:485
 msgid "Ink/Stitch Command"
 msgstr ""
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:327
+#: lib/commands.py:374
 msgid "connector"
 msgstr ""
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:346
+#: lib/commands.py:393
 msgid "command marker"
 msgstr ""
 
-#: lib/commands.py:427
+#: lib/commands.py:474
 msgid "Please select a layer to include layer commands."
 msgstr ""
 
-#: lib/elements/clone.py:26
+#: lib/elements/clone.py:28
 msgid "Clone Object"
 msgstr ""
 
-#: lib/elements/clone.py:27
+#: lib/elements/clone.py:29
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with clones, but you are limited to set a very few parameters. "
 msgstr ""
 
-#: lib/elements/clone.py:30
+#: lib/elements/clone.py:32
 msgid "If you want to convert the clone into a real element, follow these steps:"
 msgstr ""
 
-#: lib/elements/clone.py:31
+#: lib/elements/clone.py:33
 msgid "* Select the clone"
 msgstr ""
 
-#: lib/elements/clone.py:32
+#: lib/elements/clone.py:34
 msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
 msgstr ""
 
-#: lib/elements/clone.py:43 inx/inkstitch_select_elements.inx:74
+#: lib/elements/clone.py:45 inx/inkstitch_select_elements.inx:74
 #: inx/inkstitch_select_elements.inx:75
 msgid "Clone"
 msgstr ""
 
-#: lib/elements/clone.py:49
+#: lib/elements/clone.py:51
 msgid "Custom fill angle"
 msgstr ""
 
-#: lib/elements/clone.py:50
+#: lib/elements/clone.py:52
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr ""
 
-#: lib/elements/clone.py:59
+#: lib/elements/clone.py:61
 msgid "Flip angle"
 msgstr ""
 
-#: lib/elements/clone.py:60
+#: lib/elements/clone.py:62
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr ""
 
-#: lib/elements/element.py:227 lib/gui/preferences.py:59
+#: lib/elements/element.py:229 lib/gui/preferences.py:59
 #: lib/gui/preferences.py:106
 msgid "Minimum stitch length"
 msgstr ""
 
-#: lib/elements/element.py:228
+#: lib/elements/element.py:230
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
 msgstr ""
 
-#: lib/elements/element.py:238 lib/gui/preferences.py:41
+#: lib/elements/element.py:240 lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
 msgstr ""
 
-#: lib/elements/element.py:239
+#: lib/elements/element.py:241
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
 msgstr ""
 
-#: lib/elements/element.py:249
+#: lib/elements/element.py:251
 msgid "Allow lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:250
+#: lib/elements/element.py:252
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr ""
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:255
+#: lib/elements/element.py:257
 msgid "Both"
 msgstr ""
 
-#: lib/elements/element.py:255
+#: lib/elements/element.py:257
 msgid "Before"
 msgstr ""
 
-#: lib/elements/element.py:255
+#: lib/elements/element.py:257
 msgid "After"
 msgstr ""
 
-#: lib/elements/element.py:255
+#: lib/elements/element.py:257
 msgid "Neither"
 msgstr ""
 
-#: lib/elements/element.py:264
+#: lib/elements/element.py:266
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:265
+#: lib/elements/element.py:267
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr ""
 
-#: lib/elements/element.py:277
+#: lib/elements/element.py:279
 msgid "Tack stitch"
 msgstr ""
 
-#: lib/elements/element.py:278
+#: lib/elements/element.py:280
 msgid "Tack down stitch type"
 msgstr ""
 
-#: lib/elements/element.py:288 lib/elements/element.py:334
+#: lib/elements/element.py:290 lib/elements/element.py:336
 msgid "Custom path"
 msgstr ""
 
-#: lib/elements/element.py:289
+#: lib/elements/element.py:291
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr ""
 
-#: lib/elements/element.py:299 lib/elements/element.py:311
+#: lib/elements/element.py:301 lib/elements/element.py:313
 msgid "Scale tack stitch"
 msgstr ""
 
-#: lib/elements/element.py:300
+#: lib/elements/element.py:302
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr ""
 
-#: lib/elements/element.py:312
+#: lib/elements/element.py:314
 msgid "Scale tack stitch by this percentage."
 msgstr ""
 
-#: lib/elements/element.py:323
+#: lib/elements/element.py:325
 msgid "Lock stitch"
 msgstr ""
 
-#: lib/elements/element.py:324
+#: lib/elements/element.py:326
 msgid "Lock stitch type"
 msgstr ""
 
-#: lib/elements/element.py:335
+#: lib/elements/element.py:337
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr ""
 
-#: lib/elements/element.py:345 lib/elements/element.py:357
+#: lib/elements/element.py:347 lib/elements/element.py:359
 msgid "Scale lock stitch"
 msgstr ""
 
-#: lib/elements/element.py:346
+#: lib/elements/element.py:348
 msgid "Set length of lock stitches (mm)."
 msgstr ""
 
-#: lib/elements/element.py:358
+#: lib/elements/element.py:360
 msgid "Scale lock stitch by this percentage."
 msgstr ""
 
-#: lib/elements/element.py:370
+#: lib/elements/element.py:372
 msgid "Trim After"
 msgstr ""
 
-#: lib/elements/element.py:371
+#: lib/elements/element.py:373
 msgid "Add a TRIM command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:380
+#: lib/elements/element.py:382
 msgid "Stop After"
 msgstr ""
 
-#: lib/elements/element.py:381
+#: lib/elements/element.py:383
 msgid "Add a STOP command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:631
+#: lib/elements/element.py:635
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr ""
 
@@ -1647,7 +1647,7 @@ msgid "default: 3x fill row spacing"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:687 lib/elements/stroke.py:159
-#: lib/extensions/element_info.py:125 lib/extensions/element_info.py:181
+#: lib/extensions/element_info.py:131 lib/extensions/element_info.py:187
 msgid "Max stitch length"
 msgstr ""
 
@@ -2353,7 +2353,7 @@ msgstr ""
 msgid "Please select one or more satin columns."
 msgstr ""
 
-#: lib/extensions/auto_satin.py:54 lib/extensions/satin_multicolor.py:33
+#: lib/extensions/auto_satin.py:54 lib/extensions/satin_multicolor.py:34
 msgid "Please select at least one satin column."
 msgstr ""
 
@@ -2465,65 +2465,73 @@ msgstr ""
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr ""
 
-#: lib/extensions/element_info.py:47 inx/inkstitch_select_elements.inx:15
+#: lib/extensions/element_info.py:20
+msgid "Please select at least one element."
+msgstr ""
+
+#: lib/extensions/element_info.py:21
+msgid "https://inkstitch.org/docs/troubleshoot/#element-info"
+msgstr ""
+
+#: lib/extensions/element_info.py:53 inx/inkstitch_select_elements.inx:15
 msgid "Type"
 msgstr ""
 
-#: lib/extensions/element_info.py:53
+#: lib/extensions/element_info.py:59
 msgid "Fill Method"
 msgstr ""
 
-#: lib/extensions/element_info.py:60
+#: lib/extensions/element_info.py:66
 msgid "Satin Method"
 msgstr ""
 
-#: lib/extensions/element_info.py:67
+#: lib/extensions/element_info.py:73
 msgid "Stroke Method"
 msgstr ""
 
-#: lib/extensions/element_info.py:72 lib/extensions/element_info.py:149
+#: lib/extensions/element_info.py:78 lib/extensions/element_info.py:155
 msgid "Dimensions (mm)"
 msgstr ""
 
-#: lib/extensions/element_info.py:98 lib/extensions/element_info.py:113
-#: lib/extensions/element_info.py:173 lib/extensions/thread_list.py:54
+#: lib/extensions/element_info.py:104 lib/extensions/element_info.py:119
+#: lib/extensions/element_info.py:179 lib/extensions/thread_list.py:54
 msgid "Stitches"
 msgstr ""
 
-#: lib/extensions/element_info.py:103 lib/extensions/element_info.py:117
+#: lib/extensions/element_info.py:109 lib/extensions/element_info.py:123
 msgid "Small stitches (removed)"
 msgstr ""
 
-#: lib/extensions/element_info.py:121 lib/extensions/element_info.py:161
+#: lib/extensions/element_info.py:127 lib/extensions/element_info.py:167
 msgid "Jumps"
 msgstr ""
 
-#: lib/extensions/element_info.py:129 lib/extensions/element_info.py:177
+#: lib/extensions/element_info.py:135 lib/extensions/element_info.py:183
 msgid "Min stitch length"
 msgstr ""
 
-#: lib/extensions/element_info.py:145
+#: lib/extensions/element_info.py:151
 msgid "All Selected Elements"
 msgstr ""
 
-#: lib/extensions/element_info.py:153 lib/extensions/thread_list.py:57
+#: lib/extensions/element_info.py:159 lib/extensions/thread_list.py:57
 #: lib/gui/satin_multicolor/colorize_panel.py:68
 msgid "Colors"
 msgstr ""
 
-#: lib/extensions/element_info.py:157
+#: lib/extensions/element_info.py:163
 msgid "Color Changes"
 msgstr ""
 
-#: lib/extensions/element_info.py:165
+#: lib/extensions/element_info.py:171
 msgid "Trims"
 msgstr ""
 
-#: lib/extensions/element_info.py:169
+#: lib/extensions/element_info.py:175
 msgid "Stops"
 msgstr ""
 
-#: lib/extensions/element_info.py:185
+#: lib/extensions/element_info.py:191
 msgid "Filter stitches smaller than (mm)"
 msgstr ""
 
@@ -2590,11 +2598,16 @@ msgstr ""
 msgid "Please choose one or more commands to add."
 msgstr ""
 
-#: lib/extensions/lettering.py:44
+#: lib/extensions/lettering.py:46
 msgid "Please select only one block of text."
 msgstr ""
 
-#: lib/extensions/lettering.py:55 lib/extensions/lettering.py:66
+#: lib/extensions/lettering.py:47 lib/gui/lettering/help_panel.py:28
+#: lib/gui/lettering/help_panel.py:29
+msgid "https://inkstitch.org/docs/lettering/#lettering-tool"
+msgstr ""
+
+#: lib/extensions/lettering.py:60 lib/extensions/lettering.py:71
 msgid "Ink/Stitch Lettering"
 msgstr ""
 
@@ -2779,7 +2792,13 @@ msgstr ""
 msgid "Please select at least two elements to reorder."
 msgstr ""
 
-#: lib/extensions/satin_multicolor.py:41
+#: lib/extensions/satin_multicolor.py:35
+#: lib/gui/satin_multicolor/help_panel.py:33
+#: lib/gui/satin_multicolor/help_panel.py:34
+msgid "https://inkstitch.org/docs/satin-tools/#multicolor-satin"
+msgstr ""
+
+#: lib/extensions/satin_multicolor.py:45
 msgid "Ink/Stitch Multicolor Satin"
 msgstr ""
 
@@ -2816,11 +2835,15 @@ msgstr ""
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr ""
 
-#: lib/extensions/tartan.py:63
+#: lib/extensions/tartan.py:65
 msgid "To create a tartan pattern please select at least one element with a fill color."
 msgstr ""
 
-#: lib/extensions/tartan.py:70
+#: lib/extensions/tartan.py:66
+msgid "https://inkstitch.org/docs/fill-tools/#tartan"
+msgstr ""
+
+#: lib/extensions/tartan.py:76
 msgid "Ink/Stitch Tartan"
 msgstr ""
 
@@ -2911,7 +2934,7 @@ msgstr ""
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr ""
 
-#: lib/extensions/unlink_clone.py:28
+#: lib/extensions/unlink_clone.py:29
 msgid "Please select one or more clones to unlink."
 msgstr ""
 
@@ -2925,6 +2948,12 @@ msgstr ""
 
 #: lib/extensions/zip.py:130
 msgid "threadlist"
+msgstr ""
+
+#: lib/gui/abort_message.py:38 lib/gui/element_info.py:56
+#: lib/gui/lettering_font_sample.py:85
+#: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
+msgid "More information on our website:"
 msgstr ""
 
 #: lib/gui/about.py:18
@@ -2999,21 +3028,12 @@ msgstr ""
 msgid "This extension informs about various parameters of selected stitch elements."
 msgstr ""
 
-#: lib/gui/element_info.py:56 lib/gui/lettering_font_sample.py:85
-#: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
-msgid "More information on our website:"
-msgstr ""
-
 #: lib/gui/element_info.py:62 lib/gui/element_info.py:63
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
 msgstr ""
 
 #: lib/gui/lettering/help_panel.py:19
 msgid "Add text to your design."
-msgstr ""
-
-#: lib/gui/lettering/help_panel.py:28 lib/gui/lettering/help_panel.py:29
-msgid "https://inkstitch.org/docs/lettering/#lettering-tool"
 msgstr ""
 
 #: lib/gui/lettering/help_panel.py:36
@@ -3306,11 +3326,6 @@ msgstr ""
 msgid "This extension simulates a multicolor satin by creating colored copies of the selected satin(s)."
 msgstr ""
 
-#: lib/gui/satin_multicolor/help_panel.py:33
-#: lib/gui/satin_multicolor/help_panel.py:34
-msgid "https://inkstitch.org/docs/satin-tools/#multicolor-satin"
-msgstr ""
-
 #: lib/gui/satin_multicolor/main_panel.py:47
 msgid "Colorize"
 msgstr ""
@@ -3319,51 +3334,51 @@ msgstr ""
 msgid "Multicolor Satin Group"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:45
+#: lib/gui/simulator/control_panel.py:46
 msgid "Slow down (arrow down)"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:49
+#: lib/gui/simulator/control_panel.py:50
 msgid "Speed up (arrow up)"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:53
+#: lib/gui/simulator/control_panel.py:54
 msgid "Go backward one stitch (-)"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:57
+#: lib/gui/simulator/control_panel.py:58
 msgid "Go forward one stitch (+)"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:61
+#: lib/gui/simulator/control_panel.py:62
 msgid "Go backward one command (page-down)"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:65
+#: lib/gui/simulator/control_panel.py:66
 msgid "Go forward one command (page-up)"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:69
+#: lib/gui/simulator/control_panel.py:70
 msgid "Switch animation direction (arrow left, arrow right)"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:73
+#: lib/gui/simulator/control_panel.py:74
 msgid "Play (P)"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:77
+#: lib/gui/simulator/control_panel.py:78
 msgid "Restart (R)"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:100
+#: lib/gui/simulator/control_panel.py:101
 msgid "Controls"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:113
+#: lib/gui/simulator/control_panel.py:114
 msgid "Speed"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:234
+#: lib/gui/simulator/control_panel.py:235
 #, python-format
 msgid "%d stitches/sec"
 msgstr ""
