@@ -179,6 +179,18 @@ def ensure_multi_point(thing):
     return multi_point
 
 
+def ensure_polygon(thing):
+    """Given a Polygon or a MultiPolygon
+
+   Returns the Polygon or the biggest Polygon of the MultiPolygon"""
+
+    if thing.geom_type == "MultiPolygon":
+        thing = list(thing.geoms)
+        thing.sort(key=lambda thing: thing.area, reverse=True)
+        return thing[0]
+    return thing
+
+
 def cut_path(points, length):
     """Return a subsection of at the start of the path that is length units long.
 

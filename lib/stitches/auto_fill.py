@@ -21,7 +21,7 @@ from ..svg import PIXELS_PER_MM
 from ..utils import cache
 from ..utils.clamp_path import clamp_path_to_polygon
 from ..utils.geometry import Point as InkstitchPoint
-from ..utils.geometry import (ensure_multi_line_string,
+from ..utils.geometry import (ensure_multi_line_string, ensure_polygon,
                               line_string_to_point_list, offset_points)
 from ..utils.list import is_all_zeroes
 from ..utils.prng import join_args
@@ -139,18 +139,13 @@ def adjust_shape_for_pull_compensation(shape, angle, row_spacing, pull_compensat
     buffer_amount = row_spacing/2 + 0.01
     buffered_lines = [line.buffer(buffer_amount) for line in lines]
 
-    polygon = unary_union(buffered_lines)
+    polygon = ensure_polygon(unary_union(buffered_lines))
     exterior = smooth_path(polygon.exterior.coords, 0.2)
     min_hole_area = row_spacing ** 2
     interiors = [smooth_path(interior.coords) for interior in polygon.interiors if shgeo.Polygon(interior).area > min_hole_area]
 
     shape = make_valid(shgeo.Polygon(exterior, interiors))
-    if shape.geom_type == 'MultiPolygon':
-        # the shape is somehow messed up
-        # rescue it by just using the first geometry
-        shape = list(shape.geoms)
-        shape.sort(key=lambda polygon: polygon.area, reverse=True)
-        shape = shape[0]
+    shape = ensure_polygon(shape)
 
     return shape
 
