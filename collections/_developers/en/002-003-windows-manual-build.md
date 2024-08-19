@@ -1,7 +1,7 @@
 ---
 title: "Windows Manual Install and Manual Build"
 permalink: /developers/inkstitch/windows-manual-build/
-last_modified_at: 2024-01-17
+last_modified_at: 2024-08-19
 toc: true
 ---
 **Info:** For this description we use **`foo`** as a user name. Whenever it occures **replace it** with your personal windows user name.
@@ -174,3 +174,16 @@ The bash environment needs some paths for the installed software. So let's set i
 
   Do not install the build version if you have the manual install in the extensions folder or you'll have duplicated menu entries.
   {: .notice--warning }
+
+  ## Troubleshooting missing Python modules
+  If when trying to open Inkstitch, you encounter errors about missing Python modules: `ModuleNotFoundError: No module named 'diskcache'` 
+
+  Most likely you will need to tell, Inkscape to use your Python version:
+
+  * Within Inkscape, Go to Edit > Preferences > System > User preferences and click on Open.
+  *  In your user preferences folder, locate `preferences.xml`
+  *  Close Inkscape
+  *  Open `preferences.xml` with a text editor
+  *  Search for `<group id="extensions"`
+  *  Add this attribute `python-interpreter="C:\Program Files\Python39\python.exe"`. Substitute the path with yours. You can find the path by running `where python` in a command prompt
+  
