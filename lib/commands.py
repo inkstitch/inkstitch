@@ -155,13 +155,14 @@ class Command(BaseCommand):
 
     def clone(self, new_target: inkex.BaseElement) -> inkex.BaseElement:
         """
-            Clone this command and point it to the new target, positioning it relative to the new target the same as the target
+        Clone this command and point it to the new target, positioning it relative to the new target the same as the target
         """
-        relative_transform = new_target.composed_transform() @ -self.target.composed_transform()
+        group: inkex.BaseElement = self.connector.getparent()
+        transform_relative_to_target = -self.target.composed_transform() @ group.composed_transform()
 
         # Clone group
         cloned_group = copy_no_children(self.connector.getparent())
-        cloned_group.transform = relative_transform @ cloned_group.transform
+        cloned_group.transform = new_target.transform @ transform_relative_to_target
         new_target.getparent().append(cloned_group)
 
         symbol = copy_no_children(self.use)
@@ -170,7 +171,7 @@ class Command(BaseCommand):
 
         # Copy connector
         connector = copy_no_children(self.connector)
-        cloned_group.append(connector)
+        cloned_group.insert(0, connector)
         if self.symbol_is_end:
             symbol_attr = CONNECTION_END
             target_attr = CONNECTION_START
@@ -208,15 +209,27 @@ class StandaloneCommand(BaseCommand):
         return Point(*pos)
 
 
-def get_command_description(command: str):
+def get_command_description(command: str) -> str:
     return COMMANDS[command]
 
 
-def find_commands(node: BaseCommand) -> List[Command]:
+def point_command_symbols_up(node: inkex.BaseElement) -> None:
+    """
+    Find all command symbols in the subtree and alter their transformations so they're pointing upwards.
+    """
+    xpath = ".//svg:use"
+    uses = node.xpath(xpath, namespaces=inkex.NSS)
+    for use in uses:
+        if use.href.get('id').startswith('inkstitch_'):
+            point_upwards(use)
+
+
+def find_commands(node: inkex.BaseElement) -> List[Command]:
     """Find the symbols this node is connected to and return them as Commands"""
 
     # find all paths that have this object as a connection
-    xpath = ".//*[@inkscape:connection-start='#%(id)s' or @inkscape:connection-end='#%(id)s']" % dict(id=node.get('id'))
+    id = node.get('id')
+    xpath = f".//*[@inkscape:connection-start='#{id}' or @inkscape:connection-end='#{id}']"
     connectors = node.getroottree().getroot().xpath(xpath, namespaces=inkex.NSS)
 
     # try to turn them into commands
