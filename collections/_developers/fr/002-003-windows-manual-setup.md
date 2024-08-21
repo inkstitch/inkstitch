@@ -115,3 +115,16 @@ Installez tout module dit manquant.
 Si quelque chose ne va tounours pas, la meilleure manière de débuger en attendant que le debugger à distance fonctionne est probablement d'éditer le fichier inkex.py du dossier d'extension d'inkscape:
 
     C.\Program Files\inkscape\share\extensions\inkex.py
+
+## Troubleshooting missing Python modules
+
+If when trying to open Inkstitch, you encounter errors about missing Python modules: `ModuleNotFoundError: No module named 'diskcache'` 
+
+Most likely you will need to tell, Inkscape to use your Python version:
+
+* Within Inkscape, Go to Edit > Preferences > System > User preferences and click on Open.
+*  In your user preferences folder, locate `preferences.xml`
+*  Close Inkscape
+*  Open `preferences.xml` with a text editor
+*  Search for `<group id="extensions"`
+*  Add this attribute `python-interpreter="C:\Program Files\Python39\python.exe"`. Substitute the path with yours. You can find the path by running `where python` in a command prompt

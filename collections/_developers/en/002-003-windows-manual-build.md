@@ -132,13 +132,6 @@ The bash environment needs some paths for the installed software. So let's set i
   python -m pip install pydevd
   ```
 
-## Setup yarn
-
-* In the terminal emulator run
-  ```
-  npm install --global yarn
-  ```
-
 ## Manual Install for developing Ink/Stitch
 
 * We prepared everything to finally setup Ink/Stitch itself. In your terminal emulator run:
@@ -175,15 +168,15 @@ The bash environment needs some paths for the installed software. So let's set i
   Do not install the build version if you have the manual install in the extensions folder or you'll have duplicated menu entries.
   {: .notice--warning }
 
-  ## Troubleshooting missing Python modules
-  If when trying to open Inkstitch, you encounter errors about missing Python modules: `ModuleNotFoundError: No module named 'diskcache'` 
+## Troubleshooting missing Python modules
 
-  Most likely you will need to tell, Inkscape to use your Python version:
+If when trying to open Inkstitch, you encounter errors about missing Python modules: `ModuleNotFoundError: No module named 'diskcache'` 
 
-  * Within Inkscape, Go to Edit > Preferences > System > User preferences and click on Open.
-  *  In your user preferences folder, locate `preferences.xml`
-  *  Close Inkscape
-  *  Open `preferences.xml` with a text editor
-  *  Search for `<group id="extensions"`
-  *  Add this attribute `python-interpreter="C:\Program Files\Python39\python.exe"`. Substitute the path with yours. You can find the path by running `where python` in a command prompt
-  
+Most likely you will need to tell, Inkscape to use your Python version:
+
+* Within Inkscape, Go to Edit > Preferences > System > User preferences and click on Open.
+*  In your user preferences folder, locate `preferences.xml`
+*  Close Inkscape
+*  Open `preferences.xml` with a text editor
+*  Search for `<group id="extensions"`
+*  Add this attribute `python-interpreter="C:\Program Files\Python39\python.exe"`. Substitute the path with yours. You can find the path by running `where python` in a command prompt
