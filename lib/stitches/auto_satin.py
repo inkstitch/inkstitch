@@ -243,6 +243,8 @@ class RunningStitch(object):
             original_element.node.get(INKSTITCH_ATTRIBS['center_walk_underlay_stitch_length_mm'], '') or \
             original_element.node.get(INKSTITCH_ATTRIBS['contour_underlay_stitch_length_mm'], '')
 
+        self.min_jump_stitch_length = original_element.node.get('inkstitch:min_jump_stitch_length_mm', None)
+
     def to_element(self):
         node = inkex.PathElement()
         d = str(inkex.paths.CubicSuperPath(line_strings_to_csp([self.path])))
@@ -252,6 +254,8 @@ class RunningStitch(object):
         style = inkex.Style(self.original_element.node.get('style', '')) + dasharray
         node.set("style", str(style))
         node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.running_stitch_length)
+        if self.min_jump_stitch_length is not None:
+            node.set('inkstitch:min_jump_stitch_length_mm', self.min_jump_stitch_length)
 
         stroke = Stroke(node)
 
