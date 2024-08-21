@@ -165,12 +165,27 @@ class MultiColorSatinPanel(wx.Panel):
                     new_satin.set('inkstitch:swap_satin_rails', False)
                     new_satin.set('inkstitch:random_width_increase_percent', f'{ margin } 0')
                     new_satin.set('inkstitch:random_width_decrease_percent', f'0 { -previous_margin }')
-                    new_satin.set('inkstitch:pull_compensation_percent', f'{  current_position + width - 100} { -current_position }')
+                    new_satin.set('inkstitch:pull_compensation_percent', f'{ current_position + width - 100} { -current_position }')
                 else:
                     new_satin.set('inkstitch:swap_satin_rails', True)
                     new_satin.set('inkstitch:random_width_increase_percent', f'0 { margin }')
                     new_satin.set('inkstitch:random_width_decrease_percent', f'{ -previous_margin } 0')
                     new_satin.set('inkstitch:pull_compensation_percent', f'{ -current_position } { current_position + width - 100}')
+
+                # underlay
+                if self.colorize_panel.adjust_underlay_per_color.GetValue():
+                    if i % 2 == 0:
+                        new_satin.set('inkstitch:center_walk_underlay_position', f'{ 100 - current_position - width / 2 }')
+                        new_satin.set('inkstitch:contour_underlay_inset_percent', f'{ 100 - current_position - width } { current_position }')
+                        new_satin.set('inkstitch:zigzag_underlay_inset_percent', f'{ 100 - current_position - width} { current_position }')
+                    else:
+                        new_satin.set('inkstitch:center_walk_underlay_position', f'{ current_position + width / 2 }')
+                        new_satin.set('inkstitch:contour_underlay_inset_percent', f'{ current_position } { 100 - current_position - width }')
+                        new_satin.set('inkstitch:zigzag_underlay_inset_percent', f'{ current_position } { 100 - current_position - width }')
+                elif i > 0:
+                    new_satin.set('inkstitch:center_walk_underlay', False)
+                    new_satin.set('inkstitch:contour_underlay', False)
+                    new_satin.set('inkstitch:zigzag_underlay', False)
 
                 previous_margin = margin
                 current_position += width + margin
