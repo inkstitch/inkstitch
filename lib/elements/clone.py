@@ -12,7 +12,7 @@ from shapely import MultiLineString
 
 from ..stitch_plan.stitch_group import StitchGroup
 
-from ..commands import is_command_symbol, find_commands
+from ..commands import is_command_symbol, find_commands, point_command_symbols_up
 from ..i18n import _
 from ..svg.svg import copy_no_children
 from ..svg.path import get_node_transform
@@ -162,6 +162,9 @@ class Clone(EmbroideryElement):
         self.apply_angles(cloned_node, angle_transform)
 
         ret = [cloned_node]
+
+        # For aesthetic purposes, transform allof the cloned command symbols so they're facing upwards
+        point_command_symbols_up(cloned_node)
 
         # We need to copy all commands that were attached directly to the href'd node
         for command in find_commands(source_node):
