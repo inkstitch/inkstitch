@@ -1,4 +1,7 @@
+import re
+
 import wx.propgrid
+import wx.html
 
 from ...debug.debug import debug
 from ...svg import PIXELS_PER_MM
@@ -194,9 +197,18 @@ class Property:
             return wx.propgrid.IntProperty
 
 
+class SewStackPropertyGrid(wx.propgrid.PropertyGrid):
+    # Without this override, selecting a property will cause its help text to
+    # be shown in the status bar.  We use the status bar for the simulator,
+    # so we don't want PropertyGrid to overwrite it.
+    def GetStatusBar(self):
+        return None
+
+
 class PropertyGridMixin(ConfigMixin):
     def __init__(self, *args, **kwargs):
         self.property_grid = None
+        self.help_box = None
         self.property_grid_panel = None
         self.extra_config_panel = None
 
@@ -220,7 +232,8 @@ class PropertyGridMixin(ConfigMixin):
         if self.property_grid_panel is None:
             self.property_grid_panel = wx.Panel(parent, wx.ID_ANY)
             sizer = wx.BoxSizer(wx.VERTICAL)
-            self.property_grid = wx.propgrid.PropertyGrid(
+
+            self.property_grid = SewStackPropertyGrid(
                 self.property_grid_panel,
                 wx.ID_ANY,
                 style=wx.propgrid.PG_SPLITTER_AUTO_CENTER | wx.propgrid.PG_BOLD_MODIFIED | wx.propgrid.PG_DESCRIPTION
@@ -228,9 +241,13 @@ class PropertyGridMixin(ConfigMixin):
             # self.property_grid.SetColumnCount(3)
             self.LAYOUT.generate(self, self.property_grid)
             self.property_grid.ResetColumnSizes(enableAutoResizing=True)
-            self.property_grid.Bind(
-                wx.propgrid.EVT_PG_CHANGED, self.on_property_changed)
-            sizer.Add(self.property_grid, 1, wx.EXPAND | wx.ALL, 8)
+            self.property_grid.Bind(wx.propgrid.EVT_PG_CHANGED, self.on_property_changed)
+            self.property_grid.Bind(wx.propgrid.EVT_PG_SELECTED, self.on_select)
+
+            self.help_box = wx.html.HtmlWindow(self.property_grid_panel, wx.ID_ANY, style=wx.html.HW_SCROLLBAR_AUTO)
+
+            sizer.Add(self.property_grid, 2, wx.EXPAND | wx.TOP, 10)
+            sizer.Add(self.help_box, 1, wx.EXPAND | wx.TOP, 2)
             self.property_grid_panel.SetSizer(sizer)
             sizer.Layout()
 
@@ -251,3 +268,17 @@ class PropertyGridMixin(ConfigMixin):
         self.config[changed_property.GetName()] = changed_property.GetValue()
         debug.log(
             f"Changed property: {changed_property.GetName()} = {changed_property.GetValue()}")
+
+    def on_select(self, event):
+        property = event.GetProperty()
+
+        if property:
+            self.help_box.SetPage(self.format_help(property))
+        else:
+            self.help_box.SetPage("")
+
+    def format_help(self, property):
+        help_string = f"<h2>{property.GetLabel()}</h2>"
+        help_string += re.sub(r'\n\n?', "<br/>", property.GetHelpString())
+
+        return help_string

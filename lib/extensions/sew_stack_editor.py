@@ -83,7 +83,7 @@ class SewStackPanel(wx.Panel):
         )
         self._checkbox_to_row = {}
         self.update_layer_list()
-        layer_list_sizer.Add(self.layer_list, 1, wx.BOTTOM, 10)
+        layer_list_sizer.Add(self.layer_list, 1, wx.BOTTOM | wx.EXPAND, 10)
         layer_list_sizer.Add(self.create_layer_buttons(), 0, wx.ALIGN_RIGHT | wx.BOTTOM, 10)
         self.layer_list_wrapper.SetSizer(layer_list_sizer)
         self.splitter.AppendWindow(self.layer_list_wrapper, 350)
@@ -118,7 +118,7 @@ class SewStackPanel(wx.Panel):
     def __do_layout(self):
         main_sizer = wx.BoxSizer(wx.VERTICAL)
         main_sizer.Add(self.warning_panel, 0, flag=wx.ALL, border=10)
-        main_sizer.Add(self.splitter, 1, wx.LEFT | wx.TOP | wx.RIGHT, 10)
+        main_sizer.Add(self.splitter, 1, wx.LEFT | wx.TOP | wx.RIGHT | wx.EXPAND, 10)
         buttons_sizer = wx.BoxSizer(wx.HORIZONTAL)
         buttons_sizer.Add(self.cancel_button, 0, wx.RIGHT, 5)
         buttons_sizer.Add(self.apply_button, 0, wx.BOTTOM, 5)

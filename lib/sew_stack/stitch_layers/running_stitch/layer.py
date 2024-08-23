@@ -47,7 +47,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
                 ),
                 Property(
                     "repeat_stitches", _("Repeat stitches"),
-                    help=_('Should the exact same stitches be repeated in each pass?' +
+                    help=_('Should the exact same stitches be repeated in each pass?  ' +
                            'If not, different randomization settings are applied on each pass.'),
                 ),
             )
