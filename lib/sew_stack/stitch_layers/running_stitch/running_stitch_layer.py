@@ -26,7 +26,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
     def LAYOUT(_class):
         return PropertyGridHelper(
             Category(_("Running Stitch")).children(
-                Property("stitch_length", _("Stitch length asdfklafslj adfs kjlk ljasfd lkjasl kjfsda"),
+                Property("stitch_length", _("Stitch length"),
                          help=_('Length of stitches. Stitches can be shorter according to the stitch tolerance setting.'),
                          min=0.1,
                          unit="mm",

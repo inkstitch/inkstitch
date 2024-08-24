@@ -1,1 +1,1 @@
-from .layer import RunningStitchLayer
+from .running_stitch_layer import RunningStitchLayer
