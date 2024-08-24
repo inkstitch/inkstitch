@@ -1,16 +1,17 @@
-from .utils import ConfigMixin, PathUtilsMixin
+from .utils import PathUtilsMixin
+from ...utils.dotdict import DotDict
 
 
-class StitchLayer(PathUtilsMixin, ConfigMixin):
-    DEFAULT_CONFIG = {
-        "enabled": True,
-
-        # override in child class to set default layer name
-        "name": "",
-    }
-
+class StitchLayer(PathUtilsMixin):
     # can be overridden in child class
     uses_last_stitch_group = False
+
+    def __init__(self, *args, config=None, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        if config is None:
+            config = {"enabled": True}
+        self.config = DotDict(config)
 
     @classmethod
     @property
@@ -32,15 +33,20 @@ class StitchLayer(PathUtilsMixin, ConfigMixin):
 
     @property
     def name(self):
-        return self.config.name
-
-    @property
-    def type_name(self):
-        raise NotImplementedError(f"{self.__class__.__name__} must implement type_name property!")
+        return self.config.get('name', self.default_layer_name)
 
     @name.setter
     def name(self, value):
         self.config.name = value
+
+    @property
+    def default_layer_name(self):
+        # defaults to the same as the layer type name but can be overridden in a child class
+        return self.layer_type_name
+
+    @property
+    def layer_type_name(self):
+        raise NotImplementedError(f"{self.__class__.__name__} must implement type_name property!")
 
     @property
     def enabled(self):

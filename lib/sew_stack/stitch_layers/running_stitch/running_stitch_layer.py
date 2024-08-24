@@ -1,6 +1,6 @@
 from ..stitch_layer import StitchLayer
 from ..utils import RandomizationMixin
-from ..property_grid import Category, Property, PropertyGridHelper, PropertyGridMixin
+from ..property_grid import Category, Property, Properties, PropertyGridMixin
 
 from lib.i18n import _
 from lib.stitch_plan import StitchGroup
@@ -24,11 +24,12 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
 
     @classmethod
     @property
-    def LAYOUT(_class):
-        return PropertyGridHelper(
+    def properties(cls):
+        return Properties(
             Category(_("Running Stitch")).children(
                 Property("stitch_length", _("Stitch length"),
                          help=_('Length of stitches. Stitches can be shorter according to the stitch tolerance setting.'),
+                         default=2,
                          min=0.1,
                          unit="mm",
                          ),
@@ -37,6 +38,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
                                 'A lower tolerance means stitches will be closer together and ' +
                                 'fit the SVG path more precisely.  A higher tolerance means ' +
                                 'some corners may be rounded and fewer stitches are needed.'),
+                         default=0.2,
                          min=0.01,
                          unit="mm",
                          ),
@@ -45,12 +47,14 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
                 Property(
                     "repeats", _("Repeats"),
                     help=_('Defines how many times to run down and back along the path.'),
+                    default=1,
                     min=1,
                 ),
                 Property(
                     "repeat_stitches", _("Repeat stitches"),
                     help=_('Should the exact same stitches be repeated in each pass?  ' +
                            'If not, different randomization settings are applied on each pass.'),
+                    default=True,
                 ),
             )
         )
@@ -58,7 +62,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
     uses_previous_stitch_group = False
 
     @property
-    def type_name(self):
+    def layer_type_name(self):
         return _("Running Stitch")
 
     def num_copies(self):

@@ -1,22 +1,16 @@
 import wx
 
 from . import stitch_layers
-from .stitch_layers.utils import ConfigMixin
 from ..debug.debug import debug
 from ..elements import EmbroideryElement
 from ..utils import DotDict
 
 
 class SewStack(EmbroideryElement):
-    DEFAULT_CONFIG = {
-        "layers": []
-    }
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.config = DotDict(self.DEFAULT_CONFIG)
-        self.config.update(self.get_json_param('sew_stack'))
+        self.config = DotDict(self.get_json_param('sew_stack', default=dict(layers=list())))
 
         self.layers = []
         for layer_config in self.config.layers:
@@ -46,9 +40,6 @@ class SewStack(EmbroideryElement):
         return self.node.get_id()
 
     def to_stitch_groups(self, previous_stitch_group):
-        self.show_property_grid()
-        return []
-
         stitch_groups = []
 
         for layer in self.layers:
@@ -58,27 +49,3 @@ class SewStack(EmbroideryElement):
                 previous_stitch_group = stitch_groups[-1]
 
         return stitch_groups
-
-    def show_property_grid(self):
-        app = LayerEditor(self.layers[0])
-        app.MainLoop()
-
-
-class LayerEditorFrame(wx.Frame):
-    def __init__(self, layer, *args, **kwargs):
-        super().__init__(None, wx.ID_ANY, _("Layer Editor"), *args, **kwargs)
-        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
-
-        self.main_panel = layer.generate_property_grid_panel(self)
-        self.Layout()
-
-class LayerEditor(wx.App):
-    def __init__(self, layer, *args, **kwargs):
-        self.layer = layer
-        super().__init__(*args, **kwargs)
-
-    def OnInit(self):
-        self.frame = LayerEditorFrame(self.layer)
-        self.SetTopWindow(self.frame)
-        self.frame.Show()
-        return True

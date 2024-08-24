@@ -1,9 +1,8 @@
 from ...utils import coordinate_list_to_point_list
-from ...utils.dotdict import DotDict
 
 
 # Functionality for StitchLayers is broken down into separate "mix-in" classes.
-# This allows us to divide up the implementation so that we don'd end up with
+# This allows us to divide up the implementation so that we don't end up with
 # one gigantic StitchLayer class.  Individual StitchLayer subclasses can include
 # just the functionality they need.
 #
@@ -30,29 +29,7 @@ class PathUtilsMixin:
         return self.element.get_style("stroke")
 
 
-class ConfigMixin:
-    def __init__(self, *args, **kwargs):
-        self.config = DotDict()
-
-        # merge in default configs from all parent and mix-in classes
-        for ancestor_class in reversed(self.__class__.__mro__):
-            try:
-                self.config.update(ancestor_class.DEFAULT_CONFIG)
-            except AttributeError:
-                # ignore ancestor classes that don't have DEFAULT_CONFIG
-                pass
-
-        # now override defaults with the actual config
-        self.config.update(kwargs.pop('config'))
-
-        super().__init__(*args, **kwargs)
-
-
-class RandomizationMixin(PathUtilsMixin, ConfigMixin):
-    DEFAULT_CONFIG = dict(
-        random_seed=None
-    )
-
+class RandomizationMixin:
     def get_random_seed(self):
         if self.config.random_seed is None:
             self.config.random_seed = self.element.get_default_random_seed() or ""

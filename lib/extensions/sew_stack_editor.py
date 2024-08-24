@@ -184,7 +184,7 @@ class SewStackPanel(wx.Panel):
             item.SetColumn(0)
             self.layer_list.InsertItem(item)
 
-            self.layer_list.SetStringItem(i, 1, layer.type_name)
+            self.layer_list.SetStringItem(i, 1, layer.layer_type_name)
             self.layer_list.SetStringItem(i, 2, layer.name)
 
         # insert one more row so that the UltimateListCtrl allows dragging items to the very
@@ -255,7 +255,7 @@ class SewStackPanel(wx.Panel):
         debug.log(f"layer selection changed: {event.Index} {self.layer_list.GetFirstSelected()}")
         if -1 < event.Index < len(self.layers):
             selected_layer = self.layers[event.Index]
-            new_layer_config_panel = selected_layer.get_property_grid_panel(parent=self.splitter)
+            new_layer_config_panel = selected_layer.get_panel(parent=self.splitter)
 
             if self.layer_config_panel is not None:
                 self.layer_config_panel.Hide()

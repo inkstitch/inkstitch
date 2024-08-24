@@ -3,7 +3,6 @@ import re
 import wx.html
 import wx.propgrid
 
-from .utils import ConfigMixin
 from ...debug.debug import debug
 from ...svg import PIXELS_PER_MM
 
@@ -35,11 +34,11 @@ class MillimeterFloatProperty(wx.propgrid.FloatProperty):
         return self.m_value * PIXELS_PER_MM
 
 
-class PropertyGridHelper:
+class Properties:
     """Define PropertyGrid properties and attributes concisely
 
     Example:
-        PropertyGridHelper(
+        Properties(
             Category("cat1",_("First category")).children(
                 Property("stitch_length", _("Running stitch length"),
                     help=_("Distance between stitches"),
@@ -60,6 +59,7 @@ class PropertyGridHelper:
 
     def __init__(self, *children):
         self._children = children
+        self.layer = None
         self.pg = None
 
     def generate(self, layer, pg):
@@ -108,26 +108,26 @@ class Property:
         wx.Colour: wx.propgrid.ColourProperty
     }
 
-    def __init__(self, name, label, help="", min=None, max=None, **kwargs):
+    def __init__(self, name, label, help="", default=None, min=None, max=None, **kwargs):
         self.name = name
         self.label = label
         self.help = help
+        self.default = default
+        self.min = min
+        self.max = max
         self.attributes = kwargs
         self.property = None
         self.layer = None
         self.pg = None
-        self.min = min
-        self.max = max
 
     def generate(self, layer, pg, parent):
         self.layer = layer
         self.pg = pg
 
-        value = layer.config.get(self.name)
+        value = layer.config.get(self.name, self.default)
         property_class = self.get_property_class(type(value))
 
-        self.property = property_class(
-            name=self.name, label=self.label, value=value)
+        self.property = property_class(name=self.name, label=self.label, value=value)
         pg.AppendIn(parent, self.property)
         pg.SetPropertyHelpString(self.property, self.help)
         for name, value in self.attributes.items():
@@ -148,30 +148,29 @@ class SewStackPropertyGrid(wx.propgrid.PropertyGrid):
         return None
 
 
-class PropertyGridMixin(ConfigMixin):
+class PropertyGridMixin:
     def __init__(self, *args, **kwargs):
         self.property_grid = None
         self.help_box = None
         self.property_grid_panel = None
-        self.extra_config_panel = None
 
         super().__init__(*args, **kwargs)
 
     @classmethod
     @property
-    def LAYOUT(_class):
+    def properties(cls):
         """Define PropertyGrid properties and attributes concisely
 
         Return value:
-            an instance of PropertyGridHelper
+            an instance of Properties
 
         Example:
-            return PropertyGridHelper(...)
+            return Properties(...)
         """
         raise NotImplementedError(
-            f"{_class.__name__} must implement LAYOUT as a class property!")
+            f"{cls.__name__} must implement properties() with @classmethod and @property decorators!")
 
-    def get_property_grid_panel(self, parent):
+    def get_panel(self, parent):
         if self.property_grid_panel is None:
             self.property_grid_panel = wx.Panel(parent, wx.ID_ANY)
             sizer = wx.BoxSizer(wx.VERTICAL)
@@ -182,7 +181,7 @@ class PropertyGridMixin(ConfigMixin):
                 style=wx.propgrid.PG_SPLITTER_AUTO_CENTER | wx.propgrid.PG_BOLD_MODIFIED | wx.propgrid.PG_DESCRIPTION
             )
             # self.property_grid.SetColumnCount(3)
-            self.LAYOUT.generate(self, self.property_grid)
+            self.properties.generate(self, self.property_grid)
             self.property_grid.ResetColumnSizes(enableAutoResizing=True)
             self.property_grid.Bind(wx.propgrid.EVT_PG_CHANGED, self.on_property_changed)
             self.property_grid.Bind(wx.propgrid.EVT_PG_SELECTED, self.on_select)
@@ -195,15 +194,6 @@ class PropertyGridMixin(ConfigMixin):
             sizer.Layout()
 
         return self.property_grid_panel
-
-    def generate_extra_config_panel(self, parent):
-        self.extra_config_panel = wx.Panel(parent, wx.ID_ANY)
-        self.populate_extra_config_panel(self.extra_config_panel)
-
-    def populate_extra_config_panel(self, panel):
-        # override in subclass to add additional layer configuration UI outside of the
-        # PropertyGrid
-        pass
 
     def on_property_changed(self, event):
         # override in subclass if needed but always call super().on_property_changed(event)!
