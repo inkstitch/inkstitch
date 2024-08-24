@@ -32,9 +32,10 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
                          unit="mm",
                          ),
                 Property("tolerance", _("Tolerance"),
-                         help=_('All stitches must be within this distance from the path.  ' +
-                                'A lower tolerance means stitches will be closer together.  ' +
-                                'A higher tolerance means sharp corners may be rounded.'),
+                         help=_('Determines how closely the stitch path matches the SVG path.  ' +
+                                'A lower tolerance means stitches will be closer together and ' +
+                                'fit the SVG path more precisely.  A higher tolerance means ' +
+                                'some corners may be rounded and fewer stitches are needed.'),
                          min=0.01,
                          unit="mm",
                          ),
