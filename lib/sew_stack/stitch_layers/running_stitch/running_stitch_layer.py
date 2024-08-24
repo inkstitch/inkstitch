@@ -1,5 +1,6 @@
 from ..stitch_layer import StitchLayer
-from ..utils import Category, Property, PropertyGridHelper, PropertyGridMixin, RandomizationMixin
+from ..utils import RandomizationMixin
+from ..property_grid import Category, Property, PropertyGridHelper, PropertyGridMixin
 
 from lib.i18n import _
 from lib.stitch_plan import StitchGroup
