@@ -3,9 +3,15 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from ..commands import is_command
+from lxml.etree import Comment
+from typing import List, Optional
+from inkex import BaseElement
+
+from ..commands import is_command, layer_commands
 from ..marker import has_marker
-from ..svg.tags import EMBROIDERABLE_TAGS, SVG_IMAGE_TAG, SVG_TEXT_TAG
+from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
+                        NOT_EMBROIDERABLE_TAGS, SVG_CLIPPATH_TAG, SVG_DEFS_TAG,
+                        SVG_GROUP_TAG, SVG_MASK_TAG, SVG_IMAGE_TAG, SVG_TEXT_TAG)
 from .clone import Clone, is_clone
 from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
@@ -15,8 +21,6 @@ from .marker import MarkerObject
 from .satin_column import SatinColumn
 from .stroke import Stroke
 from .text import TextObject
-from typing import List
-from inkex import BaseElement
 
 
 def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  # noqa: C901
@@ -55,31 +59,66 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
         return []
 
 
-def node_and_children_to_elements(node: BaseElement, clone_to_element=False) -> List[EmbroideryElement]:
-    """
-    Iterate through a node and its children, and return all applicable EmbroideryElements.
-
-    Notably, does not return EmbroideryElements for hidden elements or children of hidden elements,
-    similar to `Base.descendants`.
-    """
-    elements: List[EmbroideryElement] = []
-
-    def walk(node: BaseElement):
-        if node.get_computed_style('display') == 'none':
-            return
-
-        elements.extend(node_to_elements(node, clone_to_element))
-        for child in node:
-            walk(child)
-
-    walk(node)
-
-    return elements
-
-
 def nodes_to_elements(nodes):
     elements = []
     for node in nodes:
         elements.extend(node_to_elements(node))
 
     return elements
+
+
+def iterate_nodes(node: BaseElement,  # noqa: C901
+                  selection: Optional[List[BaseElement]] = None,
+                  troubleshoot=False) -> List[BaseElement]:
+    # Postorder traversal of selected nodes and their descendants.
+    # Returns all nodes if there is no selection.
+    def walk(node: BaseElement, selected: bool) -> List[BaseElement]:
+        nodes = []
+
+        if node.tag == Comment:
+            return []
+
+        element = EmbroideryElement(node)
+
+        if element.has_command('ignore_object'):
+            return []
+
+        if node.tag == SVG_GROUP_TAG and node.get(INKSCAPE_GROUPMODE) == "layer":
+            if len(list(layer_commands(node, "ignore_layer"))):
+                return []
+
+        if (node.tag in EMBROIDERABLE_TAGS or node.tag == SVG_GROUP_TAG) and element.get_style('display', 'inline') is None:
+            return []
+
+        # defs, masks and clippaths can contain embroiderable elements
+        # but should never be rendered directly.
+        if node.tag in [SVG_DEFS_TAG, SVG_MASK_TAG, SVG_CLIPPATH_TAG]:
+            return []
+
+        # command connectors with a fill color set, will glitch into the elements list
+        if is_command(node) or node.get(CONNECTOR_TYPE):
+            return []
+
+        if not selected:
+            if selection:
+                if node in selection:
+                    selected = True
+            else:
+                # if the user didn't select anything that means we process everything
+                selected = True
+
+        for child in node:
+            nodes.extend(walk(child, selected))
+
+        if selected:
+            if node.tag == SVG_GROUP_TAG:
+                pass
+            elif (node.tag in EMBROIDERABLE_TAGS or is_clone(node)) and not has_marker(node):
+                nodes.append(node)
+            # add images, text and elements with a marker for the troubleshoot extension
+            elif troubleshoot and (node.tag in NOT_EMBROIDERABLE_TAGS or has_marker(node)):
+                nodes.append(node)
+
+        return nodes
+
+    return walk(node, False)

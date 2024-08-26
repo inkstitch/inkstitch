@@ -17,7 +17,8 @@ from ..i18n import _
 from ..svg.svg import copy_no_children
 from ..svg.path import get_node_transform
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
-                        XLINK_HREF, CONNECTION_START, CONNECTION_END)
+                        XLINK_HREF, CONNECTION_START, CONNECTION_END,
+                        SVG_GROUP_TAG)
 from ..utils import cache
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
@@ -71,9 +72,16 @@ class Clone(EmbroideryElement):
         source_elements = self.clone_to_elements(source_node)
         return [element.get_cache_key(previous_stitch) for element in source_elements]
 
-    def clone_to_elements(self, node):
-        from .utils import node_and_children_to_elements
-        return node_and_children_to_elements(node, True)
+    def clone_to_elements(self, node) -> List[EmbroideryElement]:
+        # Only used in get_cache_key_data, actual embroidery uses nodes_to_elements+iterate_nodes
+        from .utils import node_to_elements
+        elements = []
+        if node.tag in EMBROIDERABLE_TAGS:
+            elements = node_to_elements(node, True)
+        elif node.tag == SVG_GROUP_TAG:
+            for child in node.iterdescendants():
+                elements.extend(node_to_elements(child, True))
+        return elements
 
     def to_stitch_groups(self, last_stitch_group=None) -> List[StitchGroup]:
         if not self.clone:
@@ -100,11 +108,13 @@ class Clone(EmbroideryElement):
         Could possibly be refactored into just a generator - being a context manager is mainly to control the lifecycle of the elements
         that are cloned (again, for testing convenience primarily)
         """
+        from .utils import nodes_to_elements, iterate_nodes
+
         cloned_nodes = self.resolve_clone()
         try:
             # In a try block so we can ensure that the cloned_node is removed from the tree in the event of an exception.
             # Otherwise, it might be left around on the document if we throw for some reason.
-            yield self.clone_to_elements(cloned_nodes[0])
+            yield nodes_to_elements(iterate_nodes(cloned_nodes[0]))
         finally:
             # Remove the "manually cloned" tree.
             for cloned_node in cloned_nodes:

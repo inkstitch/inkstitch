@@ -5,7 +5,9 @@ from inkex.tester.svg import svg
 
 
 class ElementsUtilsTest(TestCase):
-    def test_node_and_children_to_elements(self):
+    # These tests test two functions at once, but they're sort of complimentary.
+    # Might suggest that they could be combined in a later refactor?
+    def test_iterate_nodes_to_elements(self):
         root = svg()
         g = root.add(Group())
         rect = g.add(Rectangle(attrib={
@@ -25,20 +27,20 @@ class ElementsUtilsTest(TestCase):
             "height": "10",
         }))
 
-        elements = utils.node_and_children_to_elements(g)
+        elements = utils.nodes_to_elements(utils.iterate_nodes(g))
         self.assertEqual(len(elements), 1)
         self.assertEqual(type(elements[0]), FillStitch)
         self.assertEqual(elements[0].node, rect)
 
-    def test_node_and_children_to_elements_root_embroiderable(self):
-        """ Test node_and_children_to_elements where the the node passed is directly embroiderable """
+    def test_iterate_nodes_to_elements_root_embroiderable(self):
+        """ Case where the root node is directly embroiderable """
         root = svg()
         rect = root.add(Rectangle(attrib={
             "width": "10",
             "height": "10"
         }))
 
-        elements = utils.node_and_children_to_elements(rect)
+        elements = utils.nodes_to_elements(utils.iterate_nodes(rect))
         self.assertEqual(len(elements), 1)
         self.assertEqual(type(elements[0]), FillStitch)
         self.assertEqual(elements[0].node, rect)
@@ -46,5 +48,5 @@ class ElementsUtilsTest(TestCase):
         # Now make the element hidden: It shouldn't return an element
         rect.style = rect.style + Style({"display": "none"})
 
-        elements = utils.node_and_children_to_elements(rect)
+        elements = utils.nodes_to_elements(utils.iterate_nodes(rect))
         self.assertEqual(len(elements), 0)
