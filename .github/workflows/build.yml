@@ -21,7 +21,7 @@ jobs:
         id: geos-build-cache
         with:
           path: geos/build
-          key: ${{ runner.os }}-20.04-geos-build-${{ hashFiles('**/bin/build-linux-dist') }}
+          key: ${{ runner.os }}-20.04-geos-build-${{ hashFiles('**/bin/build-linux') }}
           restore-keys: |
             ${{ runner.os }}-20.04-geos-build-
 
@@ -69,7 +69,13 @@ jobs:
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
         run: |
-          bin/build-linux-dist
+          bin/build-linux
+      - shell: bash
+        run: |
+          pytest
+      - shell: bash
+        run: |
+          make dist
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
