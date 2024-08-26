@@ -19,6 +19,7 @@ def element_fill_angle(element: EmbroideryElement) -> Optional[float]:
 
 
 class CloneElementTest(TestCase):
+    # Monkey-patch the cahce to forcibly disable it: We may need to refactor this out for tests.
     def setUp(self):
         from pytest import MonkeyPatch
         self.monkeypatch = MonkeyPatch()

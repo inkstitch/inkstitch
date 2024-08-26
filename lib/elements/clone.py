@@ -17,8 +17,7 @@ from ..i18n import _
 from ..svg.svg import copy_no_children
 from ..svg.path import get_node_transform
 from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
-                        XLINK_HREF, CONNECTION_START, CONNECTION_END,
-                        SVG_GROUP_TAG)
+                        XLINK_HREF, CONNECTION_START, CONNECTION_END)
 from ..utils import cache
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
@@ -73,14 +72,8 @@ class Clone(EmbroideryElement):
         return [element.get_cache_key(previous_stitch) for element in source_elements]
 
     def clone_to_elements(self, node):
-        from .utils import node_to_elements
-        elements = []
-        if node.tag in EMBROIDERABLE_TAGS:
-            elements = node_to_elements(node, True)
-        elif node.tag == SVG_GROUP_TAG:
-            for child in node.iterdescendants():
-                elements.extend(node_to_elements(child, True))
-        return elements
+        from .utils import node_and_children_to_elements
+        return node_and_children_to_elements(node, True)
 
     def to_stitch_groups(self, last_stitch_group=None) -> List[StitchGroup]:
         if not self.clone:
@@ -163,7 +156,7 @@ class Clone(EmbroideryElement):
 
         ret = [cloned_node]
 
-        # For aesthetic purposes, transform allof the cloned command symbols so they're facing upwards
+        # For aesthetic purposes, transform all of the cloned command symbols so they're facing upwards
         point_command_symbols_up(cloned_node)
 
         # We need to copy all commands that were attached directly to the href'd node
@@ -245,7 +238,7 @@ def clone_with_fixup(parent: BaseElement, node: BaseElement) -> BaseElement:
         parent.append(cloned)
         id_map[f"#{node.get_id()}"] = f"#{cloned.get_id()}"
 
-        for child in node.getchildren():
+        for child in node:
             clone_children(cloned, child)
 
         return cloned

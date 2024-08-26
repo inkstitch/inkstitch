@@ -15,9 +15,11 @@ from .marker import MarkerObject
 from .satin_column import SatinColumn
 from .stroke import Stroke
 from .text import TextObject
+from typing import List
+from inkex import BaseElement
 
 
-def node_to_elements(node, clone_to_element=False):  # noqa: C901
+def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  # noqa: C901
     if is_clone(node) and not clone_to_element:
         # clone_to_element: get an actual embroiderable element once a clone has been defined as a clone
         return [Clone(node)]
@@ -51,6 +53,28 @@ def node_to_elements(node, clone_to_element=False):  # noqa: C901
 
     else:
         return []
+
+
+def node_and_children_to_elements(node: BaseElement, clone_to_element=False) -> List[EmbroideryElement]:
+    """
+    Iterate through a node and its children, and return all applicable EmbroideryElements.
+
+    Notably, does not return EmbroideryElements for hidden elements or children of hidden elements,
+    similar to `Base.descendants`.
+    """
+    elements: List[EmbroideryElement] = []
+
+    def walk(node: BaseElement):
+        if node.get_computed_style('display') == 'none':
+            return
+
+        elements.extend(node_to_elements(node, clone_to_element))
+        for child in node:
+            walk(child)
+
+    walk(node)
+
+    return elements
 
 
 def nodes_to_elements(nodes):
