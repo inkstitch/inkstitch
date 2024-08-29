@@ -24,6 +24,7 @@ class RandomSeedEditor(wx.propgrid.PGTextCtrlAndButtonEditor):
         button = window_list.GetSecondary()
         button.SetBitmap(randomize_icon)
         button.SetLabel("")
+        button.SetTooltip(_("Re-roll"))
         return window_list
 
 
@@ -56,5 +57,10 @@ class RandomizationMixin:
             wx.propgrid.PropertyGrid.DoRegisterEditorClass(editor_instance, "RandomSeedEditor")
 
         return Category(_("Randomization")).children(
-            Property("random_seed", _("Random seed"), type=RandomSeedProperty)
+            Property("random_seed", _("Random seed"), type=RandomSeedProperty,
+                     # Wow, it's really hard to explain the concept of a random seed to non-programmers...
+                     help=_("The random seed is used when handling randomization settings.  " +
+                            "Click the button to choose a new random seed, which will generate random features differently. " +
+                            "Alternatively, you can enter your own random seed.  If you reuse a random seed, random features " +
+                            "will look the same."))
         )
