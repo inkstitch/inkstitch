@@ -1,6 +1,6 @@
 from lib.elements import Clone, EmbroideryElement, FillStitch
 from lib.commands import add_commands
-from lib.svg.tags import INKSTITCH_ATTRIBS, SVG_RECT_TAG
+from lib.svg.tags import INKSTITCH_ATTRIBS, SVG_RECT_TAG, INKSCAPE_LABEL
 from lib.utils import cache_module
 from inkex import SvgDocumentElement, Rectangle, Circle, Group, Use, Transform, TextElement
 from inkex.tester import TestCase
@@ -19,6 +19,7 @@ def element_fill_angle(element: EmbroideryElement) -> Optional[float]:
 
 
 class CloneElementTest(TestCase):
+    # Monkey-patch the cahce to forcibly disable it: We may need to refactor this out for tests.
     def setUp(self):
         from pytest import MonkeyPatch
         self.monkeypatch = MonkeyPatch()
@@ -77,6 +78,37 @@ class CloneElementTest(TestCase):
         with clone.clone_elements() as elements:
             self.assertEqual(len(elements), 1)
             self.assertAlmostEqual(element_fill_angle(elements[0]), 30)
+
+    def test_hidden_cloned_elements_not_embroidered(self):
+        root = svg()
+        g = root.add(Group())
+        g.add(Rectangle(attrib={
+            INKSCAPE_LABEL: "NotHidden",
+            "width": "10",
+            "height": "10"
+        }))
+        g.add(Rectangle(attrib={
+            INKSCAPE_LABEL: "Hidden",
+            "width": "10",
+            "height": "10",
+            "style": "display:none"
+        }))
+        hidden_group = g.add(Group(attrib={
+            "style": "display:none"
+        }))
+        hidden_group.add(Rectangle(attrib={
+            INKSCAPE_LABEL: "ChildOfHidden",
+            "width": "10",
+            "height": "10",
+        }))
+        use = root.add(Use())
+        use.href = g
+
+        clone = Clone(use)
+
+        with clone.clone_elements() as elements:
+            self.assertEqual(len(elements), 1)
+            self.assertEqual(elements[0].node.get(INKSCAPE_LABEL), "NotHidden")
 
     def test_angle_rotated(self):
         root: SvgDocumentElement = svg()

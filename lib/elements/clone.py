@@ -72,7 +72,8 @@ class Clone(EmbroideryElement):
         source_elements = self.clone_to_elements(source_node)
         return [element.get_cache_key(previous_stitch) for element in source_elements]
 
-    def clone_to_elements(self, node):
+    def clone_to_elements(self, node) -> List[EmbroideryElement]:
+        # Only used in get_cache_key_data, actual embroidery uses nodes_to_elements+iterate_nodes
         from .utils import node_to_elements
         elements = []
         if node.tag in EMBROIDERABLE_TAGS:
@@ -107,11 +108,13 @@ class Clone(EmbroideryElement):
         Could possibly be refactored into just a generator - being a context manager is mainly to control the lifecycle of the elements
         that are cloned (again, for testing convenience primarily)
         """
+        from .utils import nodes_to_elements, iterate_nodes
+
         cloned_nodes = self.resolve_clone()
         try:
             # In a try block so we can ensure that the cloned_node is removed from the tree in the event of an exception.
             # Otherwise, it might be left around on the document if we throw for some reason.
-            yield self.clone_to_elements(cloned_nodes[0])
+            yield nodes_to_elements(iterate_nodes(cloned_nodes[0]))
         finally:
             # Remove the "manually cloned" tree.
             for cloned_node in cloned_nodes:
@@ -163,7 +166,7 @@ class Clone(EmbroideryElement):
 
         ret = [cloned_node]
 
-        # For aesthetic purposes, transform allof the cloned command symbols so they're facing upwards
+        # For aesthetic purposes, transform all of the cloned command symbols so they're facing upwards
         point_command_symbols_up(cloned_node)
 
         # We need to copy all commands that were attached directly to the href'd node
@@ -245,7 +248,7 @@ def clone_with_fixup(parent: BaseElement, node: BaseElement) -> BaseElement:
         parent.append(cloned)
         id_map[f"#{node.get_id()}"] = f"#{cloned.get_id()}"
 
-        for child in node.getchildren():
+        for child in node:
             clone_children(cloned, child)
 
         return cloned
