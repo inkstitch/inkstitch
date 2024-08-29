@@ -16,18 +16,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.9.x'
-      - uses: actions/cache@v4
-        id: pip-cache
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-20.04-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-20.04-pip-
+          cache: 'pip'
       - uses: actions/cache@v4
         id: geos-build-cache
         with:
           path: geos/build
-          key: ${{ runner.os }}-20.04-geos-build-${{ hashFiles('bin/build-linux') }}
+          key: ${{ runner.os }}-20.04-geos-build-${{ hashFiles('**/bin/build-linux') }}
           restore-keys: |
             ${{ runner.os }}-20.04-geos-build-
 
@@ -75,7 +69,13 @@ jobs:
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
         run: |
-          bin/build-linux-dist
+          bin/build-linux
+      - shell: bash
+        run: |
+          pytest
+      - shell: bash
+        run: |
+          make dist
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
@@ -93,11 +93,12 @@ jobs:
         with:
           python-version: '3.8.x'
           architecture: 'x86'
+          cache: 'pip'
       - uses: actions/cache@v4
         id: geos-build-cache
         with:
           path: geos
-          key: win32-geos-build-${{ hashFiles('bin/geos-win.cmd') }}
+          key: win32-geos-build-${{ hashFiles('**/bin/build-geos-win.cmd') }}
           restore-keys: |
             win32-geos-build-
       - uses: microsoft/setup-msbuild@v2
@@ -166,11 +167,12 @@ jobs:
         with:
           python-version: '3.8.x'
           architecture: 'x64'
+          cache: 'pip'
       - uses: actions/cache@v4
         id: geos-build-cache
         with:
           path: geos
-          key: win64-geos-build-${{ hashFiles('bin/geos-win.cmd') }}
+          key: win64-geos-build-${{ hashFiles('**/bin/build-geos-win.cmd') }}
           restore-keys: |
             win64-geos-build-
       - uses: microsoft/setup-msbuild@v2
@@ -232,6 +234,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.9.x'
+          cache: 'pip'
       - name: install dependencies
         shell: bash
         run: |
@@ -293,6 +296,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.9.x'
+          cache: 'pip'
       - name: install dependencies
         shell: bash
         run: |

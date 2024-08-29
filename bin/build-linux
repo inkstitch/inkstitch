@@ -17,13 +17,16 @@ export PATH=$GEOS_PATH/bin:$PATH
 export GEOS_INCLUDE_PATH=$GEOS_PATH/include
 export GEOS_LIBRARY_PATH=$GEOS_PATH/lib
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$GEOS_PATH/lib
+if [ ! -z "$CI" ]; then
+    # Write the geos path to GITHUB_PATH so successive steps can use
+    echo $GEOS_PATH/bin >> $GITHUB_PATH
+    # Set these variables in GITHUB_ENV so successive steps can use them.
+    echo "GEOS_INCLUDE_PATH=$GEOS_INCLUDE_PATH" >> $GITHUB_ENV
+    echo "GEOS_LIBRARY_PATH=$GEOS_LIBRARY_PATH" >> $GITHUB_ENV
+    echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH" >> $GITHUB_ENV
+fi
+
 cd ../..
 python -m pip uninstall -y shapely
 python -m pip cache remove shapely
 python -m pip install -v shapely --no-binary shapely
-# Future improvement might be to split this out so pytest is a separate step and line on the build log,
-# but the LD_LIBRARY_PATH env var needs to be passed between those steps with step outputs or something.
-# This works for now.
-pytest
-make dist
-
