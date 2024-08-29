@@ -1,6 +1,6 @@
 from ..stitch_layer import StitchLayer
-from ..utils import RandomizationMixin
-from ..property_grid import Category, Property, Properties, PropertyGridMixin
+from ..mixins.randomization import RandomizationMixin
+from ..mixins.property_grid import Category, Property, Properties, PropertyGridMixin
 
 from lib.i18n import _
 from lib.stitch_plan import StitchGroup
@@ -56,7 +56,8 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
                            'If not, different randomization settings are applied on each pass.'),
                     default=True,
                 ),
-            )
+            ),
+            cls.randomization_properties,
         )
 
     uses_previous_stitch_group = False

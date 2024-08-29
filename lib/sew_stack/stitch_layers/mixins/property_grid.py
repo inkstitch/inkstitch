@@ -3,8 +3,7 @@ import re
 import wx.html
 import wx.propgrid
 
-from ...debug.debug import debug
-from ...svg import PIXELS_PER_MM
+from ....debug.debug import debug
 
 
 class CheckBoxProperty(wx.propgrid.BoolProperty):
@@ -13,25 +12,47 @@ class CheckBoxProperty(wx.propgrid.BoolProperty):
         self.SetAttribute(wx.propgrid.PG_BOOL_USE_CHECKBOX, True)
 
 
-class MillimeterFloatProperty(wx.propgrid.FloatProperty):
+class InkStitchFloatProperty(wx.propgrid.FloatProperty):
+    def __init__(self, *args, unit="", **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.unit = unit
+
+        # default to a step of 0.1, but can be changed per-property
+        self.SetAttribute(wx.propgrid.PG_ATTR_SPINCTRL_STEP, 0.1)
+
     def DoGetEditorClass(self):
         return wx.propgrid.PGEditor_SpinCtrl
 
     def ValueToString(self, value, flags=None):
-        # Goal: present "0.25 mm" to the user but still let them edit the number
-        # as a plain float using the SpinCtrl.
+        # Goal: present "0.25 mm" (for example) to the user but still let them
+        # edit the number as a plain float using the SpinCtrl.
         #
         # This code was determined by experimentation.  I can't find this
         # behavior described anywhere in the docs for wxPython or wxWidgets.
         # Note that even though flags is a bitmask, == seems to be correct here.
-        #  Using & results in subtly different behavior that doesn't look right.
+        # Using & results in subtly different behavior that doesn't look right.
         if flags == wx.propgrid.PG_VALUE_IS_CURRENT:
-            return f"{value:0.2f} mm"
+            return f"{value:0.2f} {self.unit}"
         else:
             return f"{value:0.2f}"
 
-    def GetValue(self):
-        return self.m_value * PIXELS_PER_MM
+
+class InkStitchIntProperty(wx.propgrid.IntProperty):
+    def __init__(self, *args, unit="", **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.unit = unit
+
+    def DoGetEditorClass(self):
+        return wx.propgrid.PGEditor_SpinCtrl
+
+    def ValueToString(self, value, flags=None):
+        # see note in InkStitchFloatProperty.ValueToString
+        if flags == wx.propgrid.PG_VALUE_IS_CURRENT:
+            return f"{value} {self.unit}"
+        else:
+            return str(value)
 
 
 class Properties:
@@ -100,22 +121,24 @@ class Property:
     # Adapted from wxPython source
     _type_to_property = {
         str: wx.propgrid.StringProperty,
-        int: wx.propgrid.IntProperty,
-        float: MillimeterFloatProperty,
+        int: InkStitchIntProperty,
+        float: InkStitchFloatProperty,
         bool: CheckBoxProperty,
         list: wx.propgrid.ArrayStringProperty,
         tuple: wx.propgrid.ArrayStringProperty,
         wx.Colour: wx.propgrid.ColourProperty
     }
 
-    def __init__(self, name, label, help="", default=None, min=None, max=None, **kwargs):
+    def __init__(self, name, label, help="", default=None, min=None, max=None, unit=None, type=None, attributes=None):
         self.name = name
         self.label = label
         self.help = help
         self.default = default
         self.min = min
         self.max = max
-        self.attributes = kwargs
+        self.unit = unit
+        self.type = type
+        self.attributes = attributes
         self.property = None
         self.layer = None
         self.pg = None
@@ -125,19 +148,42 @@ class Property:
         self.pg = pg
 
         value = layer.config.get(self.name, self.default)
-        property_class = self.get_property_class(type(value))
+        property_class = self.get_property_class()
 
-        self.property = property_class(name=self.name, label=self.label, value=value)
+        if value is None:
+            self.property = property_class(name=self.name, label=self.label)
+        else:
+            self.property = property_class(name=self.name, label=self.label, value=value)
+
         pg.AppendIn(parent, self.property)
         pg.SetPropertyHelpString(self.property, self.help)
-        for name, value in self.attributes.items():
-            self.property.SetAttribute(name.title(), value)
 
-    def get_property_class(self, data_type):
-        try:
-            return self._type_to_property[data_type]
-        except KeyError:
-            return wx.propgrid.IntProperty
+        if self.attributes:
+            for name, value in self.attributes.items():
+                self.property.SetAttribute(name.title(), value)
+
+        # These attributes are provided as convenient shorthands
+        if self.max is not None:
+            self.property.SetAttribute(wx.propgrid.PG_ATTR_MAX, self.max)
+        if self.min is not None:
+            self.property.SetAttribute(wx.propgrid.PG_ATTR_MIN, self.min)
+
+    def get_property_class(self):
+        if self.type is not None:
+            if issubclass(self.type, wx.propgrid.PGProperty):
+                return self.type
+            elif self.type in self._type_to_property:
+                return self._type_to_property[self.type]
+            else:
+                raise ValueError(f"property type {repr(self.type)} unknown")
+        else:
+            if self.unit == "mm":
+                return InkStitchFloatProperty
+            else:
+                try:
+                    return self._type_to_property[type(self.default)]
+                except KeyError:
+                    return wx.propgrid.StringProperty
 
 
 class SewStackPropertyGrid(wx.propgrid.PropertyGrid):

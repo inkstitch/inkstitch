@@ -1,17 +1,16 @@
-from .utils import PathUtilsMixin
+from ...utils import coordinate_list_to_point_list
 from ...utils.dotdict import DotDict
 
 
-class StitchLayer(PathUtilsMixin):
+class StitchLayer:
     # can be overridden in child class
     uses_last_stitch_group = False
 
-    def __init__(self, *args, config=None, **kwargs):
+    def __init__(self, *args, config=None, sew_stack=None, **kwargs):
         super().__init__(*args, **kwargs)
 
-        if config is None:
-            config = {"enabled": True}
         self.config = DotDict(config)
+        self.element = sew_stack
 
     @classmethod
     @property
@@ -50,10 +49,22 @@ class StitchLayer(PathUtilsMixin):
 
     @property
     def enabled(self):
-        return self.config.enabled
+        return self.config.get('enabled', True)
 
     def enable(self, enabled=True):
         self.config.enabled = enabled
+
+    @property
+    def paths(self):
+        return [coordinate_list_to_point_list(path) for path in self.element.paths]
+
+    @property
+    def stroke_color(self):
+        return self.element.get_style("stroke")
+
+    @property
+    def fill_color(self):
+        return self.element.get_style("stroke")
 
     def to_stitch_groups(self, *args):
         raise NotImplementedError(f"{self.__class__.__name__} must implement to_stitch_groups()!")
