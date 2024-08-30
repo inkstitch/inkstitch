@@ -163,9 +163,9 @@ class EmbroideryElement(object):
             return json.loads(json_value, object_hook=DotDict)
         except json.JSONDecodeError:
             if default is None:
-                return {}
+                return DotDict()
             else:
-                return default
+                return DotDict(default)
 
     def set_param(self, name, value):
         # Sets a param on the node backing this element. Used by params dialog.
