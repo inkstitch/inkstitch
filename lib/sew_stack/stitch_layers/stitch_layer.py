@@ -6,11 +6,12 @@ class StitchLayer:
     # can be overridden in child class
     uses_last_stitch_group = False
 
-    def __init__(self, *args, config=None, sew_stack=None, **kwargs):
-        super().__init__(*args, **kwargs)
-
+    def __init__(self, *args, config=None, sew_stack=None, change_callback=None, **kwargs):
         self.config = DotDict(config)
         self.element = sew_stack
+        self.change_callback = change_callback
+
+        super().__init__(*args, **kwargs)
 
     @classmethod
     @property

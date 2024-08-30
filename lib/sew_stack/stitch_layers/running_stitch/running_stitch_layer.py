@@ -57,7 +57,15 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
                     default=True,
                 ),
             ),
-            cls.randomization_properties,
+            cls.randomization_properties().children(
+                Property(
+                    "stitch_length_jitter_percent", _('Stitch length variance'),
+                    help=_('Enter a percentage.  Stitch length will vary randomly by up to this percentage.'),
+                    default=0.0,
+                    prefix="±",
+                    unit="%",
+                ),
+            ),
         )
 
     uses_previous_stitch_group = False
@@ -66,7 +74,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
     def layer_type_name(self):
         return _("Running Stitch")
 
-    def num_copies(self):
+    def get_num_copies(self):
         if self.config.repeat_stitches:
             # When repeating stitches, we use multiple copies of one pass of running stitch
             return 1
@@ -78,7 +86,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
     def running_stitch(self, path):
         stitches = []
 
-        for i in range(self.num_copies()):
+        for i in range(self.get_num_copies()):
             if i % 2 == 0:
                 this_path = path
             else:

@@ -13,13 +13,20 @@ class CheckBoxProperty(wx.propgrid.BoolProperty):
 
 
 class InkStitchFloatProperty(wx.propgrid.FloatProperty):
-    def __init__(self, *args, unit="", **kwargs):
+    def __init__(self, *args, prefix="", unit="", **kwargs):
         super().__init__(*args, **kwargs)
 
+        self.prefix = prefix
         self.unit = unit
 
         # default to a step of 0.1, but can be changed per-property
         self.SetAttribute(wx.propgrid.PG_ATTR_SPINCTRL_STEP, 0.1)
+
+    def set_unit(self, unit):
+        self.unit = unit
+
+    def set_prefix(self, prefix):
+        self.prefix = prefix
 
     def DoGetEditorClass(self):
         return wx.propgrid.PGEditor_SpinCtrl
@@ -33,16 +40,27 @@ class InkStitchFloatProperty(wx.propgrid.FloatProperty):
         # Note that even though flags is a bitmask, == seems to be correct here.
         # Using & results in subtly different behavior that doesn't look right.
         if flags == wx.propgrid.PG_VALUE_IS_CURRENT:
-            return f"{value:0.2f} {self.unit}"
+            prefix = ""
+            if self.prefix:
+                prefix = self.prefix + " "
+
+            return f"{prefix}{value:0.2f} {self.unit}"
         else:
             return f"{value:0.2f}"
 
 
 class InkStitchIntProperty(wx.propgrid.IntProperty):
-    def __init__(self, *args, unit="", **kwargs):
+    def __init__(self, *args, prefix="", unit="", **kwargs):
         super().__init__(*args, **kwargs)
 
+        self.prefix = prefix
         self.unit = unit
+
+    def set_unit(self, unit):
+        self.unit = unit
+
+    def set_prefix(self, prefix):
+        self.prefix = prefix
 
     def DoGetEditorClass(self):
         return wx.propgrid.PGEditor_SpinCtrl
@@ -50,7 +68,11 @@ class InkStitchIntProperty(wx.propgrid.IntProperty):
     def ValueToString(self, value, flags=None):
         # see note in InkStitchFloatProperty.ValueToString
         if flags == wx.propgrid.PG_VALUE_IS_CURRENT:
-            return f"{value} {self.unit}"
+            prefix = ""
+            if self.prefix:
+                prefix = self.prefix + " "
+
+            return f"{prefix}{value} {self.unit}"
         else:
             return str(value)
 
@@ -92,6 +114,16 @@ class Properties:
 
         return self.pg
 
+    def all_properties(self):
+        yield from self._iter_properties(self)
+
+    def _iter_properties(self, parent):
+        for child in parent._children:
+            if isinstance(child, Category):
+                yield from self._iter_properties(child)
+            else:
+                yield child
+
 
 class Category:
     def __init__(self, label, name=wx.propgrid.PG_LABEL):
@@ -103,7 +135,7 @@ class Category:
         self.pg = None
 
     def children(self, *args):
-        self._children = args
+        self._children.extend(args)
         return self
 
     def generate(self, layer, pg, parent):
@@ -129,13 +161,14 @@ class Property:
         wx.Colour: wx.propgrid.ColourProperty
     }
 
-    def __init__(self, name, label, help="", default=None, min=None, max=None, unit=None, type=None, attributes=None):
+    def __init__(self, name, label, help="", default=None, min=None, max=None, prefix=None, unit=None, type=None, attributes=None):
         self.name = name
         self.label = label
         self.help = help
         self.default = default
         self.min = min
         self.max = max
+        self.prefix = prefix
         self.unit = unit
         self.type = type
         self.attributes = attributes
@@ -147,16 +180,20 @@ class Property:
         self.layer = layer
         self.pg = pg
 
-        value = layer.config.get(self.name, self.default)
         property_class = self.get_property_class()
+        value = layer.config.get(self.name)
 
-        if value is None:
-            self.property = property_class(name=self.name, label=self.label)
-        else:
-            self.property = property_class(name=self.name, label=self.label, value=value)
+        self.property = property_class(name=self.name, label=self.label)
+        if value is not None:
+            self.property.SetValue(value)
 
         pg.AppendIn(parent, self.property)
         pg.SetPropertyHelpString(self.property, self.help)
+
+        if self.prefix:
+            self.property.set_prefix(self.prefix)
+        if self.unit:
+            self.property.set_unit(self.unit)
 
         if self.attributes:
             for name, value in self.attributes.items():
@@ -196,11 +233,13 @@ class SewStackPropertyGrid(wx.propgrid.PropertyGrid):
 
 class PropertyGridMixin:
     def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
         self.property_grid = None
         self.help_box = None
         self.property_grid_panel = None
 
-        super().__init__(*args, **kwargs)
+        self.set_defaults()
 
     @classmethod
     @property
@@ -215,6 +254,11 @@ class PropertyGridMixin:
         """
         raise NotImplementedError(
             f"{cls.__name__} must implement properties() with @classmethod and @property decorators!")
+
+    def set_defaults(self):
+        for property in self.properties.all_properties():
+            if property.name not in self.config:
+                self.config[property.name] = property.default
 
     def get_panel(self, parent):
         if self.property_grid_panel is None:
@@ -245,8 +289,11 @@ class PropertyGridMixin:
         # override in subclass if needed but always call super().on_property_changed(event)!
         changed_property = event.GetProperty()
         self.config[changed_property.GetName()] = changed_property.GetValue()
-        debug.log(
-            f"Changed property: {changed_property.GetName()} = {changed_property.GetValue()}")
+
+        if self.change_callback is not None:
+            self.change_callback(changed_property.GetName(), changed_property.GetValue())
+
+        debug.log(f"Changed property: {changed_property.GetName()} = {changed_property.GetValue()}")
 
     def on_select(self, event):
         property = event.GetProperty()

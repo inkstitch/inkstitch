@@ -24,7 +24,7 @@ class RandomSeedEditor(wx.propgrid.PGTextCtrlAndButtonEditor):
         button = window_list.GetSecondary()
         button.SetBitmap(randomize_icon)
         button.SetLabel("")
-        button.SetTooltip(_("Re-roll"))
+        button.SetToolTip(_("Re-roll"))
         return window_list
 
 
@@ -47,7 +47,6 @@ class RandomizationMixin:
         return self.config.random_seed
 
     @classmethod
-    @property
     def randomization_properties(cls):
         # We have to register the editor class once. We have to save a reference
         # to the editor to avoid letting it get garbage collected.

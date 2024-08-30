@@ -3,10 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import os
-# -*- coding: UTF-8 -*-
-
 import sys
-from copy import copy
 
 import wx
 from wx.lib.agw import ultimatelistctrl as ulc
@@ -25,6 +22,9 @@ from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..utils import get_resource_dir
 from ..utils.svg_data import get_pagecolor
 from ..utils.threading import ExitThread, check_stop_flag
+
+
+# -*- coding: UTF-8 -*-
 
 
 class VisibleCheckBox(GenCheckBox):
@@ -271,6 +271,7 @@ class SewStackPanel(wx.Panel):
         row = self._checkbox_to_row.get(event.GetEventObject())
         if row is not None:
             self.layers[row].enable(event.IsChecked())
+            self.update_preview()
 
     def on_splitter_sash_pos_changing(self, event):
         # MultiSplitterWindow doesn't enforce the minimum pane size on the lower
@@ -327,40 +328,27 @@ class SewStackPanel(wx.Panel):
         self._name_editor = None
         self._editing_row = None
 
+    def on_layer_property_changed(self, property_name, property_value):
+        self.update_preview()
+
     def update_preview(self):
         self.simulator.stop()
         self.simulator.clear()
         self.preview_renderer.update()
 
     def render_stitch_plan(self):
-        return
-        stitch_groups = []
-        nodes = []
-        # move the stroke tab to the end of the list
-        tabs = self.get_stroke_last_tabs()
-        for tab in tabs:
-            tab.apply()
-            if tab.enabled() and not tab.is_dependent_tab():
-                nodes.extend(tab.nodes)
-
-            check_stop_flag()
-
-        # sort nodes into the proper stacking order
-        nodes.sort(key=lambda node: node.order)
-
         try:
             wx.CallAfter(self._hide_warning)
+
+            stitch_groups = []
             last_stitch_group = None
-            for node in nodes:
-                # Making a copy of the embroidery element is an easy
-                # way to drop the cache in the @cache decorators used
-                # for many params in embroider.py.
+            for layer in self.layers:
+                if layer.enabled:
+                    stitch_groups.extend(layer.embroider(last_stitch_group))
+                    if stitch_groups:
+                        last_stitch_group = stitch_groups[-1]
 
-                stitch_groups.extend(copy(node).embroider(last_stitch_group))
-                if stitch_groups:
-                    last_stitch_group = stitch_groups[-1]
-
-                check_stop_flag()
+                    check_stop_flag()
 
             if stitch_groups:
                 return stitch_groups_to_stitch_plan(
