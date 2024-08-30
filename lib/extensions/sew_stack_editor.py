@@ -214,6 +214,7 @@ class SewStackPanel(wx.Panel):
                 destination -= 1
             self.move_layer(self._dragging_row, destination)
             self._dragging_row = None
+            self.update_preview()
 
     def move_layer(self, from_index, to_index):
         if 0 <= from_index < len(self.layers):
@@ -221,6 +222,7 @@ class SewStackPanel(wx.Panel):
                 row = self.layers.pop(from_index)
                 self.layers.insert(to_index, row)
                 self.update_layer_list()
+                self.update_preview()
                 return True
         return False
 
@@ -289,6 +291,7 @@ class SewStackPanel(wx.Panel):
         self.layers.append(RunningStitchLayer(sew_stack=self.sew_stacks[0], config={}))
         self.update_layer_list()
         self.layer_list.Select(len(self.layers) - 1)
+        self.update_preview()
 
     def on_delete_layer_button(self, event):
         index = self.layer_list.GetFirstSelected()
@@ -297,6 +300,7 @@ class SewStackPanel(wx.Panel):
             if confirm_dialog(self, _("Are you sure you want to delete this layer?") + "\n\n" + layer.name):
                 del self.layers[index]
                 self.update_layer_list()
+                self.update_preview()
 
     def on_move_layer_up_button(self, event):
         index = self.layer_list.GetFirstSelected()
