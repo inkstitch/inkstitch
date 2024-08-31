@@ -2,7 +2,6 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-import os
 import sys
 
 import wx
@@ -19,7 +18,7 @@ from ..i18n import _
 from ..sew_stack import SewStack
 from ..sew_stack.stitch_layers import RunningStitchLayer
 from ..stitch_plan import stitch_groups_to_stitch_plan
-from ..utils import get_resource_dir
+from ..utils.icons import load_icon
 from ..utils.svg_data import get_pagecolor
 from ..utils.threading import ExitThread, check_stop_flag
 
@@ -32,29 +31,16 @@ class VisibleCheckBox(GenCheckBox):
         render = wx.RendererNative.Get()
         width, height = render.GetCheckBoxSize(parent)
 
-        checked_image = wx.Image(os.path.join(get_resource_dir("icons"), "visible.png"))
-        checked_image.Rescale(width, height, wx.IMAGE_QUALITY_HIGH)
-        unchecked_image = wx.Image(os.path.join(get_resource_dir("icons"), "invisible.png"))
-        unchecked_image.Rescale(width, height, wx.IMAGE_QUALITY_HIGH)
-
-        self.enabled_checked_bitmap = checked_image.ConvertToBitmap()
-        self.disabled_checked_bitmap = checked_image.ConvertToDisabled().ConvertToBitmap()
-        self.enabled_unchecked_bitmap = unchecked_image.ConvertToBitmap()
-        self.disabled_unchecked_bitmap = unchecked_image.ConvertToDisabled().ConvertToBitmap()
+        self.checked_bitmap = load_icon("visible", width=width, height=height)
+        self.unchecked_bitmap = load_icon("invisible", width=width, height=height)
 
         super().__init__(parent, *args, **kwargs)
 
     def GetBitmap(self):
-        if self.IsEnabled():
-            if self.IsChecked():
-                return self.enabled_checked_bitmap
-            else:
-                return self.enabled_unchecked_bitmap
+        if self.IsChecked():
+            return self.checked_bitmap
         else:
-            if self.IsChecked():
-                return self.disabled_checked_bitmap
-            else:
-                return self.disabled_unchecked_bitmap
+            return self.unchecked_bitmap
 
 
 class SewStackPanel(wx.Panel):
@@ -84,7 +70,7 @@ class SewStackPanel(wx.Panel):
         self._checkbox_to_row = {}
         self.update_layer_list()
         layer_list_sizer.Add(self.layer_list, 1, wx.BOTTOM | wx.EXPAND, 10)
-        layer_list_sizer.Add(self.create_layer_buttons(), 0, wx.ALIGN_RIGHT | wx.BOTTOM, 10)
+        layer_list_sizer.Add(self.create_layer_buttons(), 0, wx.EXPAND | wx.BOTTOM, 10)
         self.layer_list_wrapper.SetSizer(layer_list_sizer)
         self.splitter.AppendWindow(self.layer_list_wrapper, 350)
         self.splitter.SizeWindows()
@@ -149,6 +135,21 @@ class SewStackPanel(wx.Panel):
         self.move_layer_down_button.SetBitmapLabel(wx.ArtProvider.GetBitmap(wx.ART_GO_DOWN, wx.ART_MENU))
         self.layer_buttons_sizer.Add(self.move_layer_down_button, 0, wx.LEFT, 10)
         self.move_layer_down_button.Bind(wx.EVT_BUTTON, self.on_move_layer_down_button)
+
+        self.layer_buttons_sizer.Add(0, 0, 1, wx.EXPAND)
+
+        self.single_layer_preview_button = wx.BitmapToggleButton(self.layer_list_wrapper, wx.ID_ANY, style=wx.BU_EXACTFIT | wx.BU_NOTEXT)
+        self.single_layer_preview_button.SetToolTip(_("Preview selected layer"))
+        self.single_layer_preview_button.SetBitmap(load_icon('layer', self))
+        self.single_layer_preview_button.Bind(wx.EVT_TOGGLEBUTTON, self.on_single_layer_preview_button)
+        self.layer_buttons_sizer.Add(self.single_layer_preview_button, 0, wx.LEFT, 0)
+
+        self.all_layers_preview_button = wx.BitmapToggleButton(self.layer_list_wrapper, wx.ID_ANY, style=wx.BU_EXACTFIT | wx.BU_NOTEXT)
+        self.all_layers_preview_button.SetToolTip(_("Preview all layers"))
+        self.all_layers_preview_button.SetBitmap(load_icon('layers', self))
+        self.all_layers_preview_button.SetValue(True)
+        self.all_layers_preview_button.Bind(wx.EVT_TOGGLEBUTTON, self.on_all_layers_preview_button)
+        self.layer_buttons_sizer.Add(self.all_layers_preview_button, 0, wx.LEFT, 1)
 
         return self.layer_buttons_sizer
 
@@ -269,6 +270,9 @@ class SewStackPanel(wx.Panel):
 
             self.Layout()
 
+        if self.single_layer_preview_button.GetValue():
+            self.update_preview()
+
     def on_checkbox(self, event):
         row = self._checkbox_to_row.get(event.GetEventObject())
         if row is not None:
@@ -335,18 +339,50 @@ class SewStackPanel(wx.Panel):
     def on_layer_property_changed(self, property_name, property_value):
         self.update_preview()
 
+    def on_single_layer_preview_button(self, event):
+        if not event.GetInt():
+            # don't allow them to unselect this button, they're supposed to select the other one
+            self.single_layer_preview_button.SetValue(True)
+            return
+
+        self.all_layers_preview_button.SetValue(False)
+
+        # ensure a layer is selected so that it's clear which one is being previewed
+        if self.layer_list.GetFirstSelected() == -1:
+            self.layer_list.Select(0)
+
+        self.update_preview()
+
+    def on_all_layers_preview_button(self, event):
+        if not event.GetInt():
+            # don't allow them to unselect this button, they're supposed to select the other one
+            self.all_layers_preview_button.SetValue(True)
+            return
+
+        self.single_layer_preview_button.SetValue(False)
+        self.update_preview()
+
     def update_preview(self):
         self.simulator.stop()
         self.simulator.clear()
         self.preview_renderer.update()
 
+    def layers_to_render(self):
+        if self.single_layer_preview_button.GetValue():
+            yield self.layers[self.layer_list.GetFirstSelected()]
+        else:
+            yield from self.layers
+
     def render_stitch_plan(self):
         try:
+            if not self.layers:
+                return
+
             wx.CallAfter(self._hide_warning)
 
             stitch_groups = []
             last_stitch_group = None
-            for layer in self.layers:
+            for layer in self.layers_to_render():
                 if layer.enabled:
                     stitch_groups.extend(layer.embroider(last_stitch_group))
                     if stitch_groups:

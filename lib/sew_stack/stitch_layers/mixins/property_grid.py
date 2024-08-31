@@ -258,7 +258,8 @@ class PropertyGridMixin:
     def set_defaults(self):
         for property in self.properties.all_properties():
             if property.name not in self.config:
-                self.config[property.name] = property.default
+                if property.default is not None:
+                    self.config[property.name] = property.default
 
     def get_panel(self, parent):
         if self.property_grid_panel is None:
