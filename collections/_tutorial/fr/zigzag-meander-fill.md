@@ -20,6 +20,4 @@ user-level:
 
 Le corps du chat est un remplissage en méandre avec le point de zigzag activé
 
-![SVG](/assets/images/docs/zigzagmeander_grumpycat.jpg)
-
 [Télécharger](/assets/images/tutorials/samples/grumpycat.svg){: download="grumpycat.svg" }

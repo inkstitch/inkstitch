@@ -17,6 +17,4 @@ stichart:
 
 Der Katzenkörper ist eine Meanderfüllung mit Zick-Zack-Stich
 
-![SVG](/assets/images/docs/zigzagmeander_grumpycat.jpg)
-
 [Download SVG](/assets/images/tutorials/samples/grumpycat.svg){: download="grumpycat.svg" }
