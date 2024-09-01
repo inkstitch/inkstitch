@@ -1,5 +1,5 @@
 ---
-title: "Stich-Bibliothek"
+title: "Sticharten-Bibliothek"
 permalink: /de/docs/stitch-library/
 last_modified_at: 2024-05-22
 toc: true
