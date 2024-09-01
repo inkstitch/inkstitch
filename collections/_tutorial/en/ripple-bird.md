@@ -22,4 +22,4 @@ Some sort of color gradient is achieved using copies of the same ripple with dif
 
 ![Exemple svg](/assets/images/tutorials/samples/paon.svg)
 
-[Télécharger](/assets/images/tutorials/samples/paon.svg){: download="paon.svg" }
+[Download](/assets/images/tutorials/samples/paon.svg){: download="paon.svg" }
