@@ -1,7 +1,7 @@
 ---
 title: "Text"
 permalink: /de/docs/lettering/
-last_modified_at: 2024-05-24
+last_modified_at: 2024-09-01
 toc: true
 ---
 ## Text-Werkzeug
@@ -57,6 +57,9 @@ Ink/Stitch Schriften sind liebevoll designed. Wenn sie mit Inkscape tools verfor
 * Ist `Strecken` aktiviert, wird Ink/Stitch die Buchstaben-Zwischenräume der Pfadlänge anpassen, so dass sich der Schriftzug über den gesamten Pfad erstreckt.
   Ist diese Option deaktiviert, bleiben die Buchstaben-Abstände unverändert.
 * Klicke auf `Anwenden`
+
+Die Buchstaben folgen der Pfadrichtung. Kehre den Pfad bei Bedarf mit `Pfad > Richtung umkehren` um.
+{: .notice--info}
 
 ## Schrift-Bibliothek
 

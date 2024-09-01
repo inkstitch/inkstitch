@@ -26,9 +26,9 @@ L'outil de lettrage génère un texte multilignes sous la forme de colonnes sati
 si l'option est cochée, seules les fontes contenant tous les glyphes de votre texte apparaissent dans le menu déroulant des fontes
 
 * **Famille de fonte**<br>
-Filtre les fontes par famille, par exemple les fontes d'appliqué ou les fontes d'écriture manuelle. 
-## Options
+Filtre les fontes par famille, par exemple les fontes d'appliqué ou les fontes d'écriture manuelle.
 
+## Options
 
 * **Broder les lignes de texte en aller retour**
  Lorsque cette option est activée, la première ligne sera brodée de gauche à droite et la seconde de droite à gauche, etc.
@@ -52,7 +52,8 @@ Les lettres d'ink/stitch ont été soigneusement dessinées pour une broderie op
 * Si `Etendre` est coché Ink/Stitch va étendre les espaces entre les lettres pour que le texte utilise tout le chemin. Sinon il gardera les distances du texte original. 
 * Cliquez sur 'Appliquer'
 
-
+Lettering will follow the path direction. Reverse the path if needed (`Path > Reverse`).
+{: .notice--info}
 
 ## Bibliothèque de polices
 

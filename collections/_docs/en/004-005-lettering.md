@@ -1,7 +1,7 @@
 ---
 title: "Lettering"
 permalink: /docs/lettering/
-last_modified_at: 2024-05-23
+last_modified_at: 2024-09-01
 toc: true
 ---
 ## Lettering Tool
@@ -55,7 +55,9 @@ Ink/Stitch letters are carefully designed. If you try to transform them with com
 * If `stretch` is enabled, Ink/Stitch will stretch the spaces in between the letters, so that the text will use the entire path.
   Otherwise it will keep the distances from the original text.
 * Click on apply
-* Lettering will follow the path direction. Reverse the path if needed.
+
+Lettering will follow the path direction. Reverse the path if needed (`Path > Reverse`).
+{: .notice--info}
 
 ## Font library
 
