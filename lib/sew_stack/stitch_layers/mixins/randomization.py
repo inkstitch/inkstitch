@@ -3,7 +3,7 @@ from secrets import randbelow
 
 import wx.propgrid
 
-from .property_grid import Category, Property
+from ..stitch_layer_editor import Category, Property
 from ....i18n import _
 from ....utils import get_resource_dir
 

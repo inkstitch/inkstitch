@@ -167,6 +167,10 @@ class EmbroideryElement(object):
             else:
                 return DotDict(default)
 
+    def set_json_param(self, param, value):
+        json_value = json.dumps(value)
+        self.set_param(param, json_value)
+
     def set_param(self, name, value):
         # Sets a param on the node backing this element. Used by params dialog.
         # After calling, this element is invalid due to caching and must be re-created to use the new value.

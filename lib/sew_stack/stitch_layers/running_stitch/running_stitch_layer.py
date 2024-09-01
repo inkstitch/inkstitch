@@ -1,27 +1,15 @@
 from ..stitch_layer import StitchLayer
 from ..mixins.randomization import RandomizationMixin
-from ..mixins.property_grid import Category, Property, Properties, PropertyGridMixin
+from ..stitch_layer_editor import Category, Property, Properties
 
-from lib.i18n import _
-from lib.stitch_plan import StitchGroup
-from lib.stitches.running_stitch import running_stitch
-from lib.svg import PIXELS_PER_MM
+from ....i18n import _
+from ....stitch_plan import StitchGroup
+from ....stitches.running_stitch import running_stitch
+from ....svg import PIXELS_PER_MM
+from ..stitch_layer_editor import StitchLayerEditor
 
 
-class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
-    @classmethod
-    @property
-    def DEFAULT_CONFIG(_class):
-        return dict(
-            name=_("Running Stitch"),
-            type_name=_("Running Stitch"),
-            stitch_length=2,
-            tolerance=0.2,
-            stitch_length_jitter_percent=0,
-            repeats=1,
-            repeat_stitches=True
-        )
-
+class RunningStitchLayerEditor(StitchLayerEditor, RandomizationMixin):
     @classmethod
     @property
     def properties(cls):
@@ -66,6 +54,23 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PropertyGridMixin):
                     unit="%",
                 ),
             ),
+        )
+
+
+class RunningStitchLayer(StitchLayer, RandomizationMixin):
+    editor_class = RunningStitchLayerEditor
+
+    @classmethod
+    @property
+    def defaults(cls):
+        return dict(
+            name=_("Running Stitch"),
+            type_name=_("Running Stitch"),
+            stitch_length=2,
+            tolerance=0.2,
+            stitch_length_jitter_percent=0,
+            repeats=1,
+            repeat_stitches=True
         )
 
     uses_previous_stitch_group = False

@@ -44,15 +44,34 @@ class VisibleCheckBox(GenCheckBox):
 
 
 class SewStackPanel(wx.Panel):
+    """An editing UI to modify the sew stacks on multiple objects.
+
+    Each object has a Sew Stack, and every Sew Stack has one or more Stitch
+    Layers in it.  This GUI will present the layers to the user and let them
+    edit each layer's properties.  The user can also reorder the layers and add
+    and remove layers.
+
+    When editing multiple objects' Sew Stacks at once, all Sew Stacks must be
+    compatible.  That means each one must have the same types of layers in the
+    same order.
+
+    When the user changes a property in a layer, the property is bolded to
+    indicate that it has changed. When saving changes, only properties that the
+    user changed are saved into the corresponding layers in all objects' Sew
+    Stacks. Ditto if layers are added, removed, or reordered: the layers will be
+    added, removed, or reordered in all objects' Sew Stacks.
+    """
+
     def __init__(self, parent, sew_stacks=None, metadata=None, background_color='white', simulator=None):
         super().__init__(parent, wx.ID_ANY)
 
-        self.sew_stacks = sew_stacks
         self.metadata = metadata
         self.background_color = background_color
         self.simulator = simulator
         self.parent = parent
-        self.layers = self.sew_stacks[0].layers
+
+        self.sew_stacks = sew_stacks
+        self.layer_editors = self.get_layer_editors()
 
         self.splitter = MultiSplitterWindow(self, wx.ID_ANY, style=wx.SP_LIVE_UPDATE)
         self.splitter.SetOrientation(wx.VERTICAL)
@@ -100,6 +119,26 @@ class SewStackPanel(wx.Panel):
 
         self.__do_layout()
         self.update_preview()
+
+    def get_layer_types(self):
+        sew_stacks_layer_types = []
+
+        for sew_stack in self.sew_stacks:
+            sew_stacks_layer_types.append(tuple(type(layer) for layer in sew_stack.layers))
+
+        if len(set(sew_stacks_layer_types)) > 1:
+            raise ValueError("SewStackPanel: internal error: sew stacks do not all have the same layer types")
+
+        return sew_stacks_layer_types[0]
+
+    def get_layer_editors(self):
+        layer_types = self.get_layer_types()
+        editors = []
+        for i, layer_type in enumerate(layer_types):
+            layers = [sew_stack.layers[i] for sew_stack in self.sew_stacks]
+            editors.append(layer_type.editor_class(layers, change_callback=self.on_property_changed))
+
+        return editors
 
     def __do_layout(self):
         main_sizer = wx.BoxSizer(wx.VERTICAL)
@@ -172,26 +211,27 @@ class SewStackPanel(wx.Panel):
 
         self._checkbox_to_row.clear()
 
-        for i, layer in enumerate(self.layers):
+        for i in range(len(self.layer_editors)):
+            is_checked = any(sew_stack.layers[i].enabled for sew_stack in self.sew_stacks)
             item = ulc.UltimateListItem()
             item.SetMask(ulc.ULC_MASK_WINDOW | ulc.ULC_MASK_CHECK | ulc.ULC_MASK_FORMAT)
             checkbox = VisibleCheckBox(self.layer_list)
             self._checkbox_to_row[checkbox] = i
-            checkbox.SetValue(layer.enabled)
+            checkbox.SetValue(is_checked)
             item.SetWindow(checkbox)
             item.SetAlign(ulc.ULC_FORMAT_RIGHT)
-            item.Check(layer.enabled)
+            item.Check(is_checked)
             item.SetId(i)
             item.SetColumn(0)
             self.layer_list.InsertItem(item)
 
-            self.layer_list.SetStringItem(i, 1, layer.layer_type_name)
-            self.layer_list.SetStringItem(i, 2, layer.name)
+            self.layer_list.SetStringItem(i, 1, self.sew_stacks[0].layers[i].layer_type_name)
+            self.layer_list.SetStringItem(i, 2, self.sew_stacks[0].layers[i].name)
 
         # insert one more row so that the UltimateListCtrl allows dragging items to the very
         # end of the list
-        self.layer_list.InsertStringItem(len(self.layers), "")
-        self.layer_list.EnableItem(len(self.layers), enable=False)
+        self.layer_list.InsertStringItem(len(self.layer_editors), "")
+        self.layer_list.EnableItem(len(self.layer_editors), enable=False)
 
         for i, size in enumerate(column_sizes):
             self.layer_list.SetColumnWidth(i, size)
@@ -218,10 +258,14 @@ class SewStackPanel(wx.Panel):
             self.update_preview()
 
     def move_layer(self, from_index, to_index):
-        if 0 <= from_index < len(self.layers):
-            if 0 <= to_index < len(self.layers):
-                row = self.layers.pop(from_index)
-                self.layers.insert(to_index, row)
+        if 0 <= from_index < len(self.layer_editors):
+            if 0 <= to_index < len(self.layer_editors):
+                layer_editor = self.layer_editors.pop(from_index)
+                self.layer_editors.insert(to_index, layer_editor)
+
+                for sew_stack in self.sew_stacks:
+                    sew_stack.move_layer(from_index, to_index)
+
                 self.update_layer_list()
                 self.update_preview()
                 return True
@@ -237,7 +281,7 @@ class SewStackPanel(wx.Panel):
         self.stop_editing()
 
         self._editing_row = event.Index
-        self._name_editor = wx.TextCtrl(self.layer_list, wx.ID_ANY, value=self.layers[event.Index].name,
+        self._name_editor = wx.TextCtrl(self.layer_list, wx.ID_ANY, value=self.layer_editors[event.Index].name,
                                         style=wx.TE_PROCESS_ENTER | wx.TE_PROCESS_TAB | wx.TE_LEFT)
         self._name_editor.Bind(wx.EVT_TEXT_ENTER, self.on_name_editor_end)
         self._name_editor.Bind(wx.EVT_KEY_UP, self.on_name_editor_key_up)
@@ -256,8 +300,8 @@ class SewStackPanel(wx.Panel):
     def on_layer_selection_changed(self, event):
         self.stop_editing()
         debug.log(f"layer selection changed: {event.Index} {self.layer_list.GetFirstSelected()}")
-        if -1 < event.Index < len(self.layers):
-            selected_layer = self.layers[event.Index]
+        if -1 < event.Index < len(self.layer_editors):
+            selected_layer = self.layer_editors[event.Index]
             new_layer_config_panel = selected_layer.get_panel(parent=self.splitter)
 
             if self.layer_config_panel is not None:
@@ -276,8 +320,9 @@ class SewStackPanel(wx.Panel):
     def on_checkbox(self, event):
         row = self._checkbox_to_row.get(event.GetEventObject())
         if row is not None:
-            self.layers[row].enable(event.IsChecked())
-            self.update_preview()
+            for sew_stack in self.sew_stacks:
+                sew_stack.layers[row].enable(event.IsChecked())
+                self.update_preview()
 
     def on_splitter_sash_pos_changing(self, event):
         # MultiSplitterWindow doesn't enforce the minimum pane size on the lower
@@ -292,17 +337,24 @@ class SewStackPanel(wx.Panel):
         # TODO: pop up a dialog to select layer type.  Also support pre-set
         # groups of layers (for example contour underlay, zig-zag underlay, and
         # satin) and saved "favorite" layers.
-        self.layers.append(RunningStitchLayer(sew_stack=self.sew_stacks[0], config={}))
+        new_layers = []
+        for sew_stack in self.sew_stacks:
+            new_layers.append(sew_stack.append_layer(RunningStitchLayer))
+
+        self.layer_editors.append(RunningStitchLayer.editor_class(new_layers[0]))
         self.update_layer_list()
-        self.layer_list.Select(len(self.layers) - 1)
+        self.layer_list.Select(len(self.layer_editors) - 1)
         self.update_preview()
 
     def on_delete_layer_button(self, event):
         index = self.layer_list.GetFirstSelected()
-        if 0 <= index < len(self.layers):
-            layer = self.layers[index]
-            if confirm_dialog(self, _("Are you sure you want to delete this layer?") + "\n\n" + layer.name):
-                del self.layers[index]
+        if 0 <= index < len(self.layer_editors):
+            if confirm_dialog(self, _("Are you sure you want to delete this layer?") + "\n\n" + self.sew_stacks[0].layers[index].name):
+                del self.layer_editors[index]
+
+                for sew_stack in self.sew_stacks:
+                    sew_stack.delete_layer(index)
+
                 self.update_layer_list()
                 self.update_preview()
 
@@ -324,7 +376,9 @@ class SewStackPanel(wx.Panel):
 
         if not cancel:
             new_name = self._name_editor.GetValue()
-            self.layers[self._editing_row].name = new_name
+            for sew_stack in self.sew_stacks:
+                sew_stack.layers[self._editing_row].name = new_name
+
             self.layer_list.DeleteItemWindow(self._editing_row, 2)
             item = self.layer_list.GetItem(self._editing_row, 2)
             item.SetMask(ulc.ULC_MASK_TEXT)
@@ -336,7 +390,7 @@ class SewStackPanel(wx.Panel):
         self._name_editor = None
         self._editing_row = None
 
-    def on_layer_property_changed(self, property_name, property_value):
+    def on_property_changed(self, property_name, property_value):
         self.update_preview()
 
     def on_single_layer_preview_button(self, event):
@@ -369,26 +423,25 @@ class SewStackPanel(wx.Panel):
 
     def layers_to_render(self):
         if self.single_layer_preview_button.GetValue():
-            yield self.layers[self.layer_list.GetFirstSelected()]
+            yield self.layer_list.GetFirstSelected()
         else:
-            yield from self.layers
+            yield from range(len(self.layer_editors))
 
     def render_stitch_plan(self):
         try:
-            if not self.layers:
+            if not self.layer_editors:
                 return
 
             wx.CallAfter(self._hide_warning)
+            self._update_layers()
 
             stitch_groups = []
-            last_stitch_group = None
-            for layer in self.layers_to_render():
-                if layer.enabled:
-                    stitch_groups.extend(layer.embroider(last_stitch_group))
-                    if stitch_groups:
-                        last_stitch_group = stitch_groups[-1]
-
-                    check_stop_flag()
+            for sew_stack in self.sew_stacks:
+                for layer_num in self.layers_to_render():
+                    layer = sew_stack.layers[layer_num]
+                    if layer.enabled:
+                        stitch_groups.extend(layer.embroider(stitch_groups[-1] if stitch_groups else None))
+                        check_stop_flag()
 
             if stitch_groups:
                 return stitch_groups_to_stitch_plan(
@@ -422,16 +475,20 @@ class SewStackPanel(wx.Panel):
         self.warning_panel.Show()
         self.Layout()
 
+    def _update_layers(self):
+        for sew_stack in self.sew_stacks:
+            for layer_num in range(len(self.layer_editors)):
+                layer = sew_stack.layers[layer_num]
+                self.layer_editors[layer_num].update_layer(layer)
+
     def _apply(self):
-        pass
+        self._update_layers()
+        for sew_stack in self.sew_stacks:
+            sew_stack.save()
 
     def apply(self, event):
         self._apply()
         self.close()
-
-    def use_last(self, event):
-        self.presets_panel.load_preset("__LAST__")
-        self.apply(event)
 
     def close(self):
         self.simulator.stop()

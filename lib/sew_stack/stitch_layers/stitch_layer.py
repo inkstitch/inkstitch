@@ -3,22 +3,35 @@ from ...utils.dotdict import DotDict
 
 
 class StitchLayer:
+    # must be overridden in child classes and set to a subclass of StitchLayerEditor
+    editor_class = None
+
     # can be overridden in child class
     uses_last_stitch_group = False
 
-    def __init__(self, *args, config=None, sew_stack=None, change_callback=None, **kwargs):
-        self.config = DotDict(config)
+    # not to be overridden in child classes
+    _defaults = None
+
+    def __init__(self, *args, config, sew_stack=None, change_callback=None, **kwargs):
+        self.config = DotDict(self.defaults)
+        self.config.update(config)
         self.element = sew_stack
-        self.change_callback = change_callback
 
         super().__init__(*args, **kwargs)
+
+    @classmethod
+    @property
+    def defaults(cls):
+        # Implement this in each child class.  Return a dict with default
+        # values for all properties used in this layer.
+        raise NotImplementedError(f"{cls.__name__} must implement class property: defaults")
 
     @classmethod
     @property
     def layer_id(my_class):
         """Get the internal layer ID
 
-        Internal layer name is not shown to users and is used to identify the
+        Internal layer ID is not shown to users and is used to identify the
         layer class when loading a SewStack.
 
         Example:

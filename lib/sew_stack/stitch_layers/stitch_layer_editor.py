@@ -3,7 +3,7 @@ import re
 import wx.html
 import wx.propgrid
 
-from ....debug.debug import debug
+from ...debug.debug import debug
 
 
 class CheckBoxProperty(wx.propgrid.BoolProperty):
@@ -102,15 +102,13 @@ class Properties:
 
     def __init__(self, *children):
         self._children = children
-        self.layer = None
         self.pg = None
 
-    def generate(self, layer, pg):
-        self.layer = layer
+    def generate(self, pg, config):
         self.pg = pg
         root_category = self.pg.GetRoot()
         for child in self._children:
-            child.generate(self.layer, self.pg, root_category)
+            child.generate(self.pg, root_category, config)
 
         return self.pg
 
@@ -131,22 +129,20 @@ class Category:
         self.label = label
         self._children = []
         self.category = None
-        self.layer = None
         self.pg = None
 
     def children(self, *args):
         self._children.extend(args)
         return self
 
-    def generate(self, layer, pg, parent):
-        self.layer = layer
+    def generate(self, pg, parent, config):
         self.pg = pg
         self.category = wx.propgrid.PropertyCategory(
             name=self.name, label=self.label)
         pg.AppendIn(parent, self.category)
 
         for child in self._children:
-            child.generate(layer, pg, self.category)
+            child.generate(pg, self.category, config)
 
 
 class Property:
@@ -173,19 +169,14 @@ class Property:
         self.type = type
         self.attributes = attributes
         self.property = None
-        self.layer = None
         self.pg = None
 
-    def generate(self, layer, pg, parent):
-        self.layer = layer
+    def generate(self, pg, parent, config):
         self.pg = pg
 
         property_class = self.get_property_class()
-        value = layer.config.get(self.name)
-
         self.property = property_class(name=self.name, label=self.label)
-        if value is not None:
-            self.property.SetValue(value)
+        self.property.SetValue(config.get(self.name))
 
         pg.AppendIn(parent, self.property)
         pg.SetPropertyHelpString(self.property, self.help)
@@ -231,20 +222,25 @@ class SewStackPropertyGrid(wx.propgrid.PropertyGrid):
         return None
 
 
-class PropertyGridMixin:
-    def __init__(self, *args, **kwargs):
+class StitchLayerEditor:
+    def __init__(self, layers, change_callback=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        self.hints = {}
+        self.config = self.merge_config(layers)
         self.property_grid = None
         self.help_box = None
         self.property_grid_panel = None
-
-        self.set_defaults()
+        self.change_callback = change_callback
 
     @classmethod
     @property
     def properties(cls):
-        """Define PropertyGrid properties and attributes concisely
+        """Define PropertyGrid properties and attributes concisely.
+
+        Must be implemented in each child class.  Be sure to include all the
+        properties listed in the corresponding StitchLayer subclass's defaults
+        property.
 
         Return value:
             an instance of Properties
@@ -255,11 +251,39 @@ class PropertyGridMixin:
         raise NotImplementedError(
             f"{cls.__name__} must implement properties() with @classmethod and @property decorators!")
 
-    def set_defaults(self):
-        for property in self.properties.all_properties():
-            if property.name not in self.config:
-                if property.default is not None:
-                    self.config[property.name] = property.default
+    def merge_config(self, layers):
+        if not layers:
+            return {}
+
+        if len(set(type(layer) for layer in layers)) > 1:
+            raise ValueError("StitchLayerEditor: internal error: all layers must be of the same type!")
+
+        config = dict(layers[0].defaults)
+        for property_name in list(config.keys()):
+            # Get all values from layers.  Don't use set() here because values
+            # might not be hashable (example: list).
+            values = []
+            for layer in layers:
+                if layer.config[property_name] not in values:
+                    values.append(layer.config[property_name])
+
+            if len(values) == 1:
+                config[property_name] = values[0]
+            elif len(values) > 1:
+                del config[property_name]
+                self.hints[property_name] = "[ " + ", ".join(str(value) for value in values) + " ]"
+
+        return config
+
+    def update_layer(self, layer):
+        """ Apply only properties modified by the user to layer's config """
+        if self.property_grid is not None:
+            for property in self.property_grid.Items:
+                if isinstance(property, wx.propgrid.PGProperty):
+                    if property.HasFlag(wx.propgrid.PG_PROP_MODIFIED):
+                        name = property.GetName()
+                        value = property.GetValue()
+                        layer.config[name] = value
 
     def get_panel(self, parent):
         if self.property_grid_panel is None:
@@ -272,7 +296,7 @@ class PropertyGridMixin:
                 style=wx.propgrid.PG_SPLITTER_AUTO_CENTER | wx.propgrid.PG_BOLD_MODIFIED | wx.propgrid.PG_DESCRIPTION
             )
             # self.property_grid.SetColumnCount(3)
-            self.properties.generate(self, self.property_grid)
+            self.properties.generate(self.property_grid, self.config)
             self.property_grid.ResetColumnSizes(enableAutoResizing=True)
             self.property_grid.Bind(wx.propgrid.EVT_PG_CHANGED, self.on_property_changed)
             self.property_grid.Bind(wx.propgrid.EVT_PG_SELECTED, self.on_select)
@@ -282,6 +306,10 @@ class PropertyGridMixin:
             sizer.Add(self.property_grid, 2, wx.EXPAND | wx.TOP, 10)
             sizer.Add(self.help_box, 1, wx.EXPAND | wx.TOP, 2)
             self.property_grid_panel.SetSizer(sizer)
+
+            for property_name, hint in self.hints.items():
+                self.property_grid.SetPropertyAttribute(property_name, wx.propgrid.PG_ATTR_HINT, hint)
+
             sizer.Layout()
 
         return self.property_grid_panel
@@ -289,8 +317,6 @@ class PropertyGridMixin:
     def on_property_changed(self, event):
         # override in subclass if needed but always call super().on_property_changed(event)!
         changed_property = event.GetProperty()
-        self.config[changed_property.GetName()] = changed_property.GetValue()
-
         if self.change_callback is not None:
             self.change_callback(changed_property.GetName(), changed_property.GetValue())
 

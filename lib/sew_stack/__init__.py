@@ -23,9 +23,21 @@ class SewStack(EmbroideryElement):
         """Should we only process the SewStack for this object and skip legacy Params-based EmbroideryElements?"""
         return self.get_boolean_param('sew_stack_only', False)
 
+    def move_layer(self, from_index, to_index):
+        layer = self.config.layers.pop(from_index)
+        self.config.layers.insert(to_index, layer)
+
+    def append_layer(self, layer_class):
+        new_layer = self.layers.append(layer_class(sew_stack=self, config={}))
+        return new_layer
+
+    def delete_layer(self, index):
+        del self.layers[index]
+
     def save(self):
-        """Gather configuration from all layers and save sew_stack_config attribute"""
-        pass
+        """Save current configuration of layers to sew_stack SVG attribute"""
+        self.config.layers = [layer.config for layer in self.layers]
+        self.set_json_param("sew_stack", self.config)
 
     def uses_previous_stitch(self):
         if self.config.layers:
