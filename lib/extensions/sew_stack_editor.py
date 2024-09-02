@@ -421,12 +421,6 @@ class SewStackPanel(wx.Panel):
         self.simulator.clear()
         self.preview_renderer.update()
 
-    def layers_to_render(self):
-        if self.single_layer_preview_button.GetValue():
-            yield self.layer_list.GetFirstSelected()
-        else:
-            yield from range(len(self.layer_editors))
-
     def render_stitch_plan(self):
         try:
             if not self.layer_editors:
@@ -437,11 +431,13 @@ class SewStackPanel(wx.Panel):
 
             stitch_groups = []
             for sew_stack in self.sew_stacks:
-                for layer_num in self.layers_to_render():
-                    layer = sew_stack.layers[layer_num]
-                    if layer.enabled:
-                        stitch_groups.extend(layer.embroider(stitch_groups[-1] if stitch_groups else None))
-                        check_stop_flag()
+                if self.single_layer_preview_button.GetValue():
+                    layer = sew_stack.layers[self.layer_list.GetFirstSelected()]
+                    stitch_groups.extend(layer.embroider(None))
+                else:
+                    stitch_groups.extend(sew_stack.embroider(stitch_groups[-1] if stitch_groups else None))
+
+                check_stop_flag()
 
             if stitch_groups:
                 return stitch_groups_to_stitch_plan(

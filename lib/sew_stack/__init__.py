@@ -53,11 +53,8 @@ class SewStack(EmbroideryElement):
 
     def to_stitch_groups(self, previous_stitch_group):
         stitch_groups = []
-
         for layer in self.layers:
-            stitch_groups.extend(layer.embroider(previous_stitch_group))
-
-            if stitch_groups:
-                previous_stitch_group = stitch_groups[-1]
+            if layer.enabled:
+                stitch_groups.extend(layer.embroider(stitch_groups[-1] if stitch_groups else None))
 
         return stitch_groups
