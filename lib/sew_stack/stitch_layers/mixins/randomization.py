@@ -5,6 +5,7 @@ import wx.propgrid
 
 from ..stitch_layer_editor import Category, Property
 from ....i18n import _
+from ....svg import PIXELS_PER_MM
 from ....utils import get_resource_dir, prng
 
 editor_instance = None
@@ -57,11 +58,23 @@ class RandomizationPropertiesMixin:
                             "Alternatively, you can enter your own random seed.  If you reuse a random seed, random features " +
                             "will look the same.")),
             Property("stitch_jitter", _("Jitter stitches"), unit="mm", prefix="±",
-                     help=_("Move stitches randomly by up to this many millimeters."))
+                     help=_("Move stitches randomly by up to this many millimeters in any direction.")),
+            Property("stitch_path_jitter", _("Jitter stitch path"), unit="mm", prefix="±",
+                     help=_("Move stitches randomly by up to this many millimeters perpendicular to the stitch path.\n\n" +
+                            "If Jitter Stitches is also specified, then this one is processed first.")),
         )
 
 
 class RandomizationMixin:
+    @classmethod
+    @property
+    def randomization_defaults(cls):
+        return dict(
+            random_seed=None,
+            stitch_jitter=None,
+            stitch_path_jitter=None,
+        )
+
     def get_random_seed(self):
         if 'random_seed' not in self.config:
             self.config.random_seed = self.element.get_default_random_seed() or ""
@@ -71,9 +84,26 @@ class RandomizationMixin:
     def jitter_stitches(self, stitches):
         """Randomly move stitches by modifying a list of stitches in-place."""
 
+        if not stitches:
+            return
+
+        if 'stitch_path_jitter' in self.config and self.config.stitch_path_jitter:
+            jitter = self.config.stitch_path_jitter * PIXELS_PER_MM
+            rand_iter = iter(prng.iter_uniform_floats(self.get_random_seed(), "stitch_path_jitter"))
+
+            last_stitch = stitches[0]
+            for stitch in stitches[1:]:
+                direction = (stitch - last_stitch).unit().rotate_left()
+                last_stitch = stitch
+                distance = next(rand_iter) * 2 * jitter - jitter
+                result = stitch + direction * distance
+                stitch.x = result.x
+                stitch.y = result.y
+
         if 'stitch_jitter' in self.config and self.config.stitch_jitter:
+            jitter = self.config.stitch_jitter * PIXELS_PER_MM
             rand_iter = iter(prng.iter_uniform_floats(self.get_random_seed(), "stitch_jitter"))
 
             for stitch in stitches:
-                stitch.x += next(rand_iter) * 2 * self.config.stitch_jitter - self.config.stitch_jitter
-                stitch.y += next(rand_iter) * 2 * self.config.stitch_jitter - self.config.stitch_jitter
+                stitch.x += next(rand_iter) * 2 * jitter - jitter
+                stitch.y += next(rand_iter) * 2 * jitter - jitter

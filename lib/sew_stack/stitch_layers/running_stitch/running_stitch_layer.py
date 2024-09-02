@@ -59,7 +59,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
     @classmethod
     @property
     def defaults(cls):
-        return dict(
+        defaults = dict(
             name=_("Running Stitch"),
             type_name=_("Running Stitch"),
             stitch_length=2,
@@ -69,6 +69,9 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
             repeat_stitches=True,
             reverse_path=False,
         )
+        defaults.update(cls.randomization_defaults)
+
+        return defaults
 
     uses_previous_stitch_group = False
 
