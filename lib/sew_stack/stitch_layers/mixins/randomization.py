@@ -95,7 +95,11 @@ class RandomizationMixin:
 
             last_stitch = stitches[0]
             for stitch in stitches[1:]:
-                direction = (stitch - last_stitch).unit().rotate_left()
+                try:
+                    direction = (stitch - last_stitch).unit().rotate_left()
+                except ZeroDivisionError:
+                    continue
+
                 last_stitch = stitch
                 distance = next(rand_iter) * 2 * jitter - jitter
                 result = stitch + direction * distance

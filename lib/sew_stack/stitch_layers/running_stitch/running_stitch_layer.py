@@ -97,7 +97,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
             if i % 2 == 0:
                 this_path = path
             else:
-                this_path = reversed(path)
+                this_path = list(reversed(path))
 
             stitches.extend(running_stitch(
                 this_path,
