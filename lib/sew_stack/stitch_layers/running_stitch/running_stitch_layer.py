@@ -16,7 +16,7 @@ class RunningStitchLayerEditor(StitchLayerEditor, RandomizationPropertiesMixin, 
     @property
     def properties(cls):
         return Properties(
-            Category(_("Running Stitch")).children(
+            Category(_("Running Stitch"), help=_("Stitch along a path using evenly-spaced stitches.")).children(
                 Property("stitch_length", _("Stitch length"),
                          help=_('Length of stitches. Stitches can be shorter according to the stitch tolerance setting.'),
                          min=0.1,
@@ -30,22 +30,22 @@ class RunningStitchLayerEditor(StitchLayerEditor, RandomizationPropertiesMixin, 
                          min=0.01,
                          unit="mm",
                          ),
-            ),
-            Category(_("Repeats")).children(
-                Property(
-                    "repeats", _("Repeats"),
-                    help=_('Defines how many times to run down and back along the path.'),
-                    type=int,
-                    min=1,
+                Category(_("Repeats")).children(
+                    Property(
+                        "repeats", _("Repeats"),
+                        help=_('Defines how many times to run down and back along the path.'),
+                        type=int,
+                        min=1,
+                    ),
+                    Property(
+                        "repeat_stitches", _("Repeat stitches"),
+                        type=bool,
+                        help=_('Should the exact same stitches be repeated in each pass?  ' +
+                               'If not, different randomization settings are applied on each pass.'),
+                    ),
                 ),
-                Property(
-                    "repeat_stitches", _("Repeat stitches"),
-                    type=bool,
-                    help=_('Should the exact same stitches be repeated in each pass?  ' +
-                           'If not, different randomization settings are applied on each pass.'),
-                ),
+                cls.path_properties(),
             ),
-            cls.path_properties(),
             cls.randomization_properties().children(
                 Property(
                     "stitch_length_jitter_percent", _('Stitch length variance'),

@@ -49,7 +49,7 @@ class SewStack(EmbroideryElement):
         return self.config.layers
 
     def get_default_random_seed(self):
-        return self.node.get_id()
+        return self.node.get_id() or ""
 
     def to_stitch_groups(self, previous_stitch_group):
         stitch_groups = []

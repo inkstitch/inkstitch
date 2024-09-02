@@ -86,7 +86,7 @@ class RandomizationMixin:
 
     def get_random_seed(self):
         if 'random_seed' not in self.config:
-            self.config.random_seed = self.element.get_default_random_seed() or ""
+            self.config.random_seed = self.element.get_default_random_seed()
 
         return self.config.random_seed
 

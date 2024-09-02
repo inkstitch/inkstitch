@@ -124,9 +124,10 @@ class Properties:
 
 
 class Category:
-    def __init__(self, label, name=wx.propgrid.PG_LABEL):
+    def __init__(self, label, name=wx.propgrid.PG_LABEL, help=None):
         self.name = name
         self.label = label
+        self.help = help
         self._children = []
         self.category = None
         self.pg = None
@@ -139,6 +140,8 @@ class Category:
         self.pg = pg
         self.category = wx.propgrid.PropertyCategory(
             name=self.name, label=self.label)
+        if self.help:
+            pg.SetPropertyHelpString(self.category, self.help)
         pg.AppendIn(parent, self.category)
 
         for child in self._children:
@@ -178,7 +181,8 @@ class Property:
         self.property.SetValue(config.get(self.name))
 
         pg.AppendIn(parent, self.property)
-        pg.SetPropertyHelpString(self.property, self.help)
+        if self.help:
+            pg.SetPropertyHelpString(self.property, self.help)
 
         if self.prefix:
             self.property.set_prefix(self.prefix)
@@ -241,8 +245,7 @@ class StitchLayerEditor:
         Example:
             return Properties(...)
         """
-        raise NotImplementedError(
-            f"{cls.__name__} must implement properties() with @classmethod and @property decorators!")
+        raise NotImplementedError(f"{cls.__name__} must implement properties() with @classmethod and @property decorators!")
 
     def merge_config(self, layers):
         if not layers:
@@ -295,6 +298,7 @@ class StitchLayerEditor:
             self.property_grid.Bind(wx.propgrid.EVT_PG_SELECTED, self.on_select)
 
             self.help_box = wx.html.HtmlWindow(self.property_grid_panel, wx.ID_ANY, style=wx.html.HW_SCROLLBAR_AUTO)
+            self.show_help(self.property_grid.GetFirst(wx.propgrid.PG_ITERATE_CATEGORIES))
 
             sizer.Add(self.property_grid, 2, wx.EXPAND | wx.TOP, 10)
             sizer.Add(self.help_box, 1, wx.EXPAND | wx.TOP, 2)
@@ -317,7 +321,9 @@ class StitchLayerEditor:
 
     def on_select(self, event):
         property = event.GetProperty()
+        self.show_help(property)
 
+    def show_help(self, property):
         if property:
             self.help_box.SetPage(self.format_help(property))
         else:
