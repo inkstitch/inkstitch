@@ -35,7 +35,9 @@ class RandomSeedProperty(wx.propgrid.IntProperty):
 
     def OnEvent(self, propgrid, primaryEditor, event):
         if event.GetEventType() == wx.wxEVT_COMMAND_BUTTON_CLICKED:
-            self.SetValue(randbelow(int(1e8)))
+            new_seed = randbelow(int(1e8))
+            propgrid.ChangePropertyValue(self.GetName(), new_seed)
+            propgrid.GetEditorTextCtrl().SetValue(str(new_seed))
             return True
         return False
 
