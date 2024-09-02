@@ -73,7 +73,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
             repeat_stitches=True,
             reverse_path=False,
         )
-        defaults.update(cls.randomization_defaults)
+        defaults.update(cls.randomization_defaults())
 
         return defaults
 

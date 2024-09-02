@@ -1,5 +1,6 @@
 from ..stitch_layer_editor import Category, Property
 from ....i18n import _
+from ....utils import DotDict, Point
 
 
 class PathPropertiesMixin:
@@ -12,6 +13,9 @@ class PathPropertiesMixin:
 
 
 class PathMixin:
+    config: DotDict
+    paths: list[list[Point]]
+
     def get_paths(self):
         paths = self.paths
 
