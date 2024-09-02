@@ -1,3 +1,5 @@
+from copy import copy
+
 from ..mixins.path import PathMixin, PathPropertiesMixin
 from ..mixins.randomization import RandomizationPropertiesMixin, RandomizationMixin
 from ..stitch_layer import StitchLayer
@@ -108,17 +110,17 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
                 self.get_random_seed()
             ))
 
+        self.jitter_stitches(stitches)
+
         if self.config.repeats > 0 and self.config.repeat_stitches:
             repeated_stitches = []
             for i in range(self.config.repeats):
                 if i % 2 == 0:
-                    repeated_stitches.extend(stitches)
+                    repeated_stitches.extend(copy(stitches))
                 else:
                     # reverse every other pass
-                    repeated_stitches.extend(reversed(stitches))
+                    repeated_stitches.extend(reversed(copy(stitches)))
             stitches = repeated_stitches
-
-        self.jitter_stitches(stitches)
 
         return StitchGroup(stitches=stitches, color=self.stroke_color)
 
