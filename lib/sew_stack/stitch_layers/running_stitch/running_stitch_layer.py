@@ -33,10 +33,12 @@ class RunningStitchLayerEditor(StitchLayerEditor, RandomizationPropertiesMixin, 
                 Property(
                     "repeats", _("Repeats"),
                     help=_('Defines how many times to run down and back along the path.'),
+                    type=int,
                     min=1,
                 ),
                 Property(
                     "repeat_stitches", _("Repeat stitches"),
+                    type=bool,
                     help=_('Should the exact same stitches be repeated in each pass?  ' +
                            'If not, different randomization settings are applied on each pass.'),
                 ),
