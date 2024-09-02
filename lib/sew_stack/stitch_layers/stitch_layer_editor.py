@@ -157,11 +157,10 @@ class Property:
         wx.Colour: wx.propgrid.ColourProperty
     }
 
-    def __init__(self, name, label, help="", default=None, min=None, max=None, prefix=None, unit=None, type=None, attributes=None):
+    def __init__(self, name, label, help="", min=None, max=None, prefix=None, unit=None, type=None, attributes=None):
         self.name = name
         self.label = label
         self.help = help
-        self.default = default
         self.min = min
         self.max = max
         self.prefix = prefix
@@ -205,13 +204,7 @@ class Property:
             else:
                 raise ValueError(f"property type {repr(self.type)} unknown")
         else:
-            if self.unit == "mm":
-                return InkStitchFloatProperty
-            else:
-                try:
-                    return self._type_to_property[type(self.default)]
-                except KeyError:
-                    return wx.propgrid.StringProperty
+            return InkStitchFloatProperty
 
 
 class SewStackPropertyGrid(wx.propgrid.PropertyGrid):

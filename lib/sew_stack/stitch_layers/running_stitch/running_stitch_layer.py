@@ -1,15 +1,15 @@
+from ..mixins.path import PathMixin, PathPropertiesMixin
+from ..mixins.randomization import RandomizationPropertiesMixin, RandomizationMixin
 from ..stitch_layer import StitchLayer
-from ..mixins.randomization import RandomizationMixin
-from ..stitch_layer_editor import Category, Property, Properties
-
+from ..stitch_layer_editor import Category, Properties, Property
+from ..stitch_layer_editor import StitchLayerEditor
 from ....i18n import _
 from ....stitch_plan import StitchGroup
 from ....stitches.running_stitch import running_stitch
 from ....svg import PIXELS_PER_MM
-from ..stitch_layer_editor import StitchLayerEditor
 
 
-class RunningStitchLayerEditor(StitchLayerEditor, RandomizationMixin):
+class RunningStitchLayerEditor(StitchLayerEditor, RandomizationPropertiesMixin, PathPropertiesMixin):
     @classmethod
     @property
     def properties(cls):
@@ -17,7 +17,6 @@ class RunningStitchLayerEditor(StitchLayerEditor, RandomizationMixin):
             Category(_("Running Stitch")).children(
                 Property("stitch_length", _("Stitch length"),
                          help=_('Length of stitches. Stitches can be shorter according to the stitch tolerance setting.'),
-                         default=2,
                          min=0.1,
                          unit="mm",
                          ),
@@ -26,7 +25,6 @@ class RunningStitchLayerEditor(StitchLayerEditor, RandomizationMixin):
                                 'A lower tolerance means stitches will be closer together and ' +
                                 'fit the SVG path more precisely.  A higher tolerance means ' +
                                 'some corners may be rounded and fewer stitches are needed.'),
-                         default=0.2,
                          min=0.01,
                          unit="mm",
                          ),
@@ -35,21 +33,19 @@ class RunningStitchLayerEditor(StitchLayerEditor, RandomizationMixin):
                 Property(
                     "repeats", _("Repeats"),
                     help=_('Defines how many times to run down and back along the path.'),
-                    default=1,
                     min=1,
                 ),
                 Property(
                     "repeat_stitches", _("Repeat stitches"),
                     help=_('Should the exact same stitches be repeated in each pass?  ' +
                            'If not, different randomization settings are applied on each pass.'),
-                    default=True,
                 ),
             ),
+            cls.path_properties(),
             cls.randomization_properties().children(
                 Property(
                     "stitch_length_jitter_percent", _('Stitch length variance'),
                     help=_('Enter a percentage.  Stitch length will vary randomly by up to this percentage.'),
-                    default=0.0,
                     prefix="±",
                     unit="%",
                 ),
@@ -57,7 +53,7 @@ class RunningStitchLayerEditor(StitchLayerEditor, RandomizationMixin):
         )
 
 
-class RunningStitchLayer(StitchLayer, RandomizationMixin):
+class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
     editor_class = RunningStitchLayerEditor
 
     @classmethod
@@ -70,7 +66,8 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin):
             tolerance=0.2,
             stitch_length_jitter_percent=0,
             repeats=1,
-            repeat_stitches=True
+            repeat_stitches=True,
+            reverse_path=False,
         )
 
     uses_previous_stitch_group = False
@@ -116,7 +113,9 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin):
                     repeated_stitches.extend(reversed(stitches))
             stitches = repeated_stitches
 
+        self.jitter_stitches(stitches)
+
         return StitchGroup(stitches=stitches, color=self.stroke_color)
 
     def to_stitch_groups(self):
-        return [self.running_stitch(path) for path in self.paths]
+        return [self.running_stitch(path) for path in self.get_paths()]

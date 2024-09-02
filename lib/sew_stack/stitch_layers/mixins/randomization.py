@@ -5,7 +5,7 @@ import wx.propgrid
 
 from ..stitch_layer_editor import Category, Property
 from ....i18n import _
-from ....utils import get_resource_dir
+from ....utils import get_resource_dir, prng
 
 editor_instance = None
 
@@ -39,13 +39,7 @@ class RandomSeedProperty(wx.propgrid.IntProperty):
         return False
 
 
-class RandomizationMixin:
-    def get_random_seed(self):
-        if 'random_seed' not in self.config:
-            self.config.random_seed = self.element.get_default_random_seed() or ""
-
-        return self.config.random_seed
-
+class RandomizationPropertiesMixin:
     @classmethod
     def randomization_properties(cls):
         # We have to register the editor class once. We have to save a reference
@@ -61,5 +55,25 @@ class RandomizationMixin:
                      help=_("The random seed is used when handling randomization settings.  " +
                             "Click the button to choose a new random seed, which will generate random features differently. " +
                             "Alternatively, you can enter your own random seed.  If you reuse a random seed, random features " +
-                            "will look the same."))
+                            "will look the same.")),
+            Property("stitch_jitter", _("Jitter stitches"), unit="mm", prefix="±",
+                     help=_("Move stitches randomly by up to this many millimeters."))
         )
+
+
+class RandomizationMixin:
+    def get_random_seed(self):
+        if 'random_seed' not in self.config:
+            self.config.random_seed = self.element.get_default_random_seed() or ""
+
+        return self.config.random_seed
+
+    def jitter_stitches(self, stitches):
+        """Randomly move stitches by modifying a list of stitches in-place."""
+
+        if 'stitch_jitter' in self.config and self.config.stitch_jitter:
+            rand_iter = iter(prng.iter_uniform_floats(self.get_random_seed(), "stitch_jitter"))
+
+            for stitch in stitches:
+                stitch.x += next(rand_iter) * 2 * self.config.stitch_jitter - self.config.stitch_jitter
+                stitch.y += next(rand_iter) * 2 * self.config.stitch_jitter - self.config.stitch_jitter
