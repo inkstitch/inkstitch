@@ -5,6 +5,7 @@ import wx.html
 import wx.propgrid
 
 from ...debug.debug import debug
+from ...gui.windows import SimpleBox
 
 
 class CheckBoxProperty(wx.propgrid.BoolProperty):
@@ -303,7 +304,7 @@ class StitchLayerEditor:
     def get_panel(self, parent):
         if self.property_grid_panel is None:
             self.property_grid_panel = wx.Panel(parent, wx.ID_ANY)
-            sizer = wx.BoxSizer(wx.VERTICAL)
+            main_sizer = wx.BoxSizer(wx.VERTICAL)
 
             self.property_grid = SewStackPropertyGrid(
                 self.property_grid_panel,
@@ -315,20 +316,22 @@ class StitchLayerEditor:
             self.property_grid.ResetColumnSizes(enableAutoResizing=True)
             self.property_grid.Bind(wx.propgrid.EVT_PG_CHANGED, self.on_property_changed)
             self.property_grid.Bind(wx.propgrid.EVT_PG_SELECTED, self.on_select)
+            self.property_grid_box = SimpleBox(self.property_grid_panel, self.property_grid)
 
             self.help_box = wx.html.HtmlWindow(self.property_grid_panel, wx.ID_ANY, style=wx.html.HW_SCROLLBAR_AUTO)
+            self.help_box_box = SimpleBox(self.property_grid_panel, self.help_box)
             self.show_help(self.property_grid.GetFirst(wx.propgrid.PG_ITERATE_CATEGORIES))
 
-            sizer.Add(self.property_grid, 2, wx.EXPAND | wx.TOP, 10)
-            sizer.Add(self.help_box, 1, wx.EXPAND | wx.TOP, 2)
-            self.property_grid_panel.SetSizer(sizer)
+            main_sizer.Add(self.property_grid_box, 2, wx.EXPAND | wx.TOP, 10)
+            main_sizer.Add(self.help_box_box, 1, wx.EXPAND | wx.TOP, 2)
+            self.property_grid_panel.SetSizer(main_sizer)
 
             for property_name, hint in self.hints.items():
                 if property := self.property_grid.GetPropertyByName(property_name):
                     property.SetAttribute(wx.propgrid.PG_ATTR_HINT, hint)
                     property.SetAttribute("InitialValue", self.initial_values[property_name])
 
-            sizer.Layout()
+            main_sizer.Layout()
 
         return self.property_grid_panel
 
