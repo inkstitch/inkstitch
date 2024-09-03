@@ -1,4 +1,5 @@
 import re
+from typing import Callable
 
 import wx.html
 import wx.propgrid
@@ -12,15 +13,25 @@ class CheckBoxProperty(wx.propgrid.BoolProperty):
         self.SetAttribute(wx.propgrid.PG_BOOL_USE_CHECKBOX, True)
 
 
-class InkStitchFloatProperty(wx.propgrid.FloatProperty):
+class InkStitchNumericProperty:
+    """Base class for functionality common to Ink/Stitch-specific numeric PropertyGrid Properties.
+
+    When using this class, be sure to specify it first in the inheritance list.
+    This is necessary because wxPython's property classes don't properly call
+    the super-class's constructor.
+    """
+
+    # typing hints for PyCharm
+    value_to_string: Callable
+    IsValueUnspecified: Callable
+    GetAttribute: Callable
+    SetValueInEvent: Callable
+
     def __init__(self, *args, prefix="", unit="", **kwargs):
         super().__init__(*args, **kwargs)
 
         self.prefix = prefix
         self.unit = unit
-
-        # default to a step of 0.1, but can be changed per-property
-        self.SetAttribute(wx.propgrid.PG_ATTR_SPINCTRL_STEP, 0.1)
 
     def set_unit(self, unit):
         self.unit = unit
@@ -33,48 +44,50 @@ class InkStitchFloatProperty(wx.propgrid.FloatProperty):
 
     def ValueToString(self, value, flags=None):
         # Goal: present "0.25 mm" (for example) to the user but still let them
-        # edit the number as a plain float using the SpinCtrl.
+        # edit the number using the SpinCtrl.
         #
         # This code was determined by experimentation.  I can't find this
         # behavior described anywhere in the docs for wxPython or wxWidgets.
         # Note that even though flags is a bitmask, == seems to be correct here.
         # Using & results in subtly different behavior that doesn't look right.
+
+        value_str = self.value_to_string(value)
         if flags == wx.propgrid.PG_VALUE_IS_CURRENT:
             prefix = ""
             if self.prefix:
                 prefix = self.prefix + " "
 
-            return f"{prefix}{value:0.2f} {self.unit}"
+            return f"{prefix}{value_str} {self.unit}"
         else:
-            return f"{value:0.2f}"
+            return value_str
+
+    def OnEvent(self, pg, window, event):
+        # If the user starts editing a property that had multiple values, set
+        # the value quickly before editing starts.  Otherwise, clicking the
+        # spin-buttons causes a low-level C++ exception since the property is
+        # set to None.
+        if event.GetEventType() == wx.wxEVT_CHILD_FOCUS:
+            if self.IsValueUnspecified():
+                self.SetValueInEvent(self.GetAttribute('InitialValue'))
+                return True
+
+        return False
 
 
-class InkStitchIntProperty(wx.propgrid.IntProperty):
+class InkStitchFloatProperty(InkStitchNumericProperty, wx.propgrid.FloatProperty):
     def __init__(self, *args, prefix="", unit="", **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.prefix = prefix
-        self.unit = unit
+        # default to a step of 0.1, but can be changed per-property
+        self.SetAttribute(wx.propgrid.PG_ATTR_SPINCTRL_STEP, 0.1)
 
-    def set_unit(self, unit):
-        self.unit = unit
+    def value_to_string(self, value):
+        return f"{value:0.2f}"
 
-    def set_prefix(self, prefix):
-        self.prefix = prefix
 
-    def DoGetEditorClass(self):
-        return wx.propgrid.PGEditor_SpinCtrl
-
-    def ValueToString(self, value, flags=None):
-        # see note in InkStitchFloatProperty.ValueToString
-        if flags == wx.propgrid.PG_VALUE_IS_CURRENT:
-            prefix = ""
-            if self.prefix:
-                prefix = self.prefix + " "
-
-            return f"{prefix}{value} {self.unit}"
-        else:
-            return str(value)
+class InkStitchIntProperty(InkStitchNumericProperty, wx.propgrid.IntProperty):
+    def value_to_string(self, value):
+        return str(value)
 
 
 class Properties:
@@ -224,6 +237,7 @@ class StitchLayerEditor:
         super().__init__(*args, **kwargs)
 
         self.hints = {}
+        self.initial_values = {}
         self.config = self.merge_config(layers)
         self.property_grid = None
         self.help_box = None
@@ -259,15 +273,20 @@ class StitchLayerEditor:
             # Get all values from layers.  Don't use set() here because values
             # might not be hashable (example: list).
             values = []
+            unique_values = []
             for layer in layers:
-                if layer.config[property_name] not in values:
-                    values.append(layer.config[property_name])
+                value = layer.config[property_name]
+                values.append(value)
+                if value not in unique_values:
+                    unique_values.append(value)
 
-            if len(values) == 1:
-                config[property_name] = values[0]
-            elif len(values) > 1:
+            if len(unique_values) == 1:
+                config[property_name] = unique_values[0]
+            elif len(unique_values) > 1:
+                unique_values.sort(key=lambda item: values.count(item), reverse=True)
                 del config[property_name]
-                self.hints[property_name] = "[ " + ", ".join(str(value) for value in values) + " ]"
+                self.hints[property_name] = "[ " + ", ".join(str(value) for value in unique_values) + " ]"
+                self.initial_values[property_name] = unique_values[0]
 
         return config
 
@@ -305,7 +324,9 @@ class StitchLayerEditor:
             self.property_grid_panel.SetSizer(sizer)
 
             for property_name, hint in self.hints.items():
-                self.property_grid.SetPropertyAttribute(property_name, wx.propgrid.PG_ATTR_HINT, hint)
+                if property := self.property_grid.GetPropertyByName(property_name):
+                    property.SetAttribute(wx.propgrid.PG_ATTR_HINT, hint)
+                    property.SetAttribute("InitialValue", self.initial_values[property_name])
 
             sizer.Layout()
 

@@ -281,7 +281,7 @@ class SewStackPanel(wx.Panel):
         self.stop_editing()
 
         self._editing_row = event.Index
-        self._name_editor = wx.TextCtrl(self.layer_list, wx.ID_ANY, value=self.layer_editors[event.Index].name,
+        self._name_editor = wx.TextCtrl(self.layer_list, wx.ID_ANY, value=self.sew_stacks[0].layers[event.Index].name,
                                         style=wx.TE_PROCESS_ENTER | wx.TE_PROCESS_TAB | wx.TE_LEFT)
         self._name_editor.Bind(wx.EVT_TEXT_ENTER, self.on_name_editor_end)
         self._name_editor.Bind(wx.EVT_KEY_UP, self.on_name_editor_key_up)
