@@ -157,7 +157,7 @@ class SewStackPanel(wx.Panel):
 
         self.add_layer_button = wx.Button(self.layer_list_wrapper, wx.ID_ANY, style=wx.BU_EXACTFIT)
         self.add_layer_button.SetBitmapLabel(wx.ArtProvider.GetBitmap(wx.ART_PLUS, wx.ART_MENU))
-        self.layer_buttons_sizer.Add(self.add_layer_button, 0, wx.LEFT, 10)
+        self.layer_buttons_sizer.Add(self.add_layer_button, 0, 0, 0)
         self.add_layer_button.Bind(wx.EVT_BUTTON, self.on_add_layer_button)
 
         self.delete_layer_button = wx.Button(self.layer_list_wrapper, wx.ID_ANY, style=wx.BU_EXACTFIT)
@@ -495,16 +495,19 @@ class SewStackPanel(wx.Panel):
 
     def cancel(self, event):
         self.simulator.stop()
-        wx.CallAfter(self.GetTopLevelParent().cancel)
+
+        if any(layer_editor.has_changes() for layer_editor in self.layer_editors):
+            if not confirm_dialog(self, _("Are you sure you want to quit without saving changes?")):
+                event.Veto()
+                return
+
+        self.close()
 
 
 class SewStackEditor(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         self.cancelled = False
         InkstitchExtension.__init__(self, *args, **kwargs)
-
-    def cancel(self):
-        self.cancelled = True
 
     def get_sew_stacks(self):
         nodes = self.get_nodes()
@@ -521,7 +524,6 @@ class SewStackEditor(InkstitchExtension):
             title=_("Embroidery Params"),
             panel_class=SewStackPanel,
             sew_stacks=self.get_sew_stacks(),
-            on_cancel=self.cancel,
             metadata=metadata,
             background_color=background_color,
             target_duration=5

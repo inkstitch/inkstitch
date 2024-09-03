@@ -67,6 +67,13 @@ class SplitSimulatorWindow(wx.Frame):
     def cancel(self, event=None):
         if self.cancel_hook:
             self.cancel_hook()
+        try:
+            self.settings_panel.cancel(event)
+            if event.GetVeto():
+                return
+        except AttributeError:
+            pass
+
         self.close(None)
 
     def close(self, event=None):

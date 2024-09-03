@@ -301,6 +301,12 @@ class StitchLayerEditor:
                         value = property.GetValue()
                         layer.config[name] = value
 
+    def has_changes(self):
+        if self.property_grid is None:
+            return False
+        else:
+            return any(property.HasFlag(wx.propgrid.PG_PROP_MODIFIED) for property in self.property_grid.Items)
+
     def get_panel(self, parent):
         if self.property_grid_panel is None:
             self.property_grid_panel = wx.Panel(parent, wx.ID_ANY)
