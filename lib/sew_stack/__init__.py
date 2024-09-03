@@ -24,11 +24,12 @@ class SewStack(EmbroideryElement):
         return self.get_boolean_param('sew_stack_only', False)
 
     def move_layer(self, from_index, to_index):
-        layer = self.config.layers.pop(from_index)
-        self.config.layers.insert(to_index, layer)
+        layer = self.layers.pop(from_index)
+        self.layers.insert(to_index, layer)
 
     def append_layer(self, layer_class):
-        new_layer = self.layers.append(layer_class(sew_stack=self, config={}))
+        new_layer = layer_class(sew_stack=self, config={})
+        self.layers.append(new_layer)
         return new_layer
 
     def delete_layer(self, index):

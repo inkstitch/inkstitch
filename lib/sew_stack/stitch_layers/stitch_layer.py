@@ -14,6 +14,7 @@ class StitchLayer:
 
     def __init__(self, *args, config, sew_stack=None, change_callback=None, **kwargs):
         self.config = DotDict(self.defaults)
+        self.config.layer_id = self.layer_id
         self.config.update(config)
         self.element = sew_stack
 

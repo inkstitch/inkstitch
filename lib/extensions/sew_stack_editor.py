@@ -258,13 +258,17 @@ class SewStackPanel(wx.Panel):
             self.update_preview()
 
     def move_layer(self, from_index, to_index):
+        debug.log(f"move_layer({from_index=}, {to_index=})")
         if 0 <= from_index < len(self.layer_editors):
             if 0 <= to_index < len(self.layer_editors):
+                debug.log(f"before move: {self.layer_editors}")
                 layer_editor = self.layer_editors.pop(from_index)
                 self.layer_editors.insert(to_index, layer_editor)
 
                 for sew_stack in self.sew_stacks:
                     sew_stack.move_layer(from_index, to_index)
+
+                debug.log(f"after move: {self.layer_editors}")
 
                 self.update_layer_list()
                 self.update_preview()
@@ -340,8 +344,7 @@ class SewStackPanel(wx.Panel):
         new_layers = []
         for sew_stack in self.sew_stacks:
             new_layers.append(sew_stack.append_layer(RunningStitchLayer))
-
-        self.layer_editors.append(RunningStitchLayer.editor_class(new_layers[0]))
+        self.layer_editors.append(RunningStitchLayer.editor_class(new_layers, change_callback=self.on_property_changed))
         self.update_layer_list()
         self.layer_list.Select(len(self.layer_editors) - 1)
         self.update_preview()
