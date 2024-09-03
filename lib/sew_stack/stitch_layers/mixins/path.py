@@ -14,7 +14,7 @@ class PathPropertiesMixin:
 
 class PathMixin:
     config: DotDict
-    paths: list[list[Point]]
+    paths: 'list[list[Point]]'
 
     def get_paths(self):
         paths = self.paths
