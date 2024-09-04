@@ -111,8 +111,8 @@ class SewStackPanel(wx.Panel):
         self.warning_panel.Hide()
 
         self.cancel_button = wx.Button(self, wx.ID_ANY, _("Cancel"))
-        self.cancel_button.Bind(wx.EVT_BUTTON, self.cancel)
-        self.Bind(wx.EVT_CLOSE, self.cancel)
+        self.cancel_button.Bind(wx.EVT_BUTTON, self.on_cancel)
+        self.Bind(wx.EVT_CLOSE, self.on_close)
 
         self.apply_button = wx.Button(self, wx.ID_ANY, _("Apply and Quit"))
         self.apply_button.Bind(wx.EVT_BUTTON, self.apply)
@@ -489,19 +489,26 @@ class SewStackPanel(wx.Panel):
         self._apply()
         self.close()
 
-    def close(self):
+    def confirm_close(self):
         self.simulator.stop()
+        if any(layer_editor.has_changes() for layer_editor in self.layer_editors):
+            return confirm_dialog(self, _("Are you sure you want to quit without saving changes?"))
+        else:
+            # They made no changes, so it's safe to close.
+            return True
+
+    def close(self):
         wx.CallAfter(self.GetTopLevelParent().close)
 
-    def cancel(self, event):
-        self.simulator.stop()
+    def on_close(self, event):
+        if self.confirm_close():
+            self.close()
+        else:
+            event.Veto()
 
-        if any(layer_editor.has_changes() for layer_editor in self.layer_editors):
-            if not confirm_dialog(self, _("Are you sure you want to quit without saving changes?")):
-                event.Veto()
-                return
-
-        self.close()
+    def on_cancel(self, event):
+        if self.confirm_close():
+            self.close()
 
 
 class SewStackEditor(InkstitchExtension):

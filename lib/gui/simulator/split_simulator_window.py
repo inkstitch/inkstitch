@@ -68,8 +68,8 @@ class SplitSimulatorWindow(wx.Frame):
         if self.cancel_hook:
             self.cancel_hook()
         try:
-            self.settings_panel.cancel(event)
-            if event.GetVeto():
+            if not self.settings_panel.confirm_close():
+                event.Veto()
                 return
         except AttributeError:
             pass
