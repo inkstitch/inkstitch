@@ -62,11 +62,11 @@ class RandomizationPropertiesMixin:
                             "Click the button to choose a new random seed, which will generate random features differently. " +
                             "Alternatively, you can enter your own random seed.  If you reuse a random seed, random features " +
                             "will look the same.")),
-            Property("stitch_jitter", _("Jitter stitches"), unit="mm", prefix="±",
+            Property("random_stitch_offset", _("Offset stitches"), unit="mm", prefix="±",
                      help=_("Move stitches randomly by up to this many millimeters in any direction.")),
-            Property("stitch_path_jitter", _("Jitter stitch path"), unit="mm", prefix="±",
+            Property("random_stitch_path_offset", _("Offset stitch path"), unit="mm", prefix="±",
                      help=_("Move stitches randomly by up to this many millimeters perpendicular to the stitch path.\n\n" +
-                            "If Jitter Stitches is also specified, then this one is processed first.")),
+                            "If <b>Offset stitches</b> is also specified, then this one is processed first.")),
         )
 
 
@@ -78,25 +78,25 @@ class RandomizationMixin:
     def randomization_defaults(cls):
         return dict(
             random_seed=None,
-            stitch_jitter=0.0,
-            stitch_path_jitter=0.0,
+            random_stitch_offset=0.0,
+            random_stitch_path_offset=0.0,
         )
 
     def get_random_seed(self):
-        if 'random_seed' not in self.config:
-            self.config.random_seed = self.element.get_default_random_seed()
+        if seed := self.config.get('random_seed') is not None:
+            return seed
+        else:
+            return self.element.get_default_random_seed()
 
-        return self.config.random_seed
-
-    def jitter_stitches(self, stitches):
+    def offset_stitches(self, stitches):
         """Randomly move stitches by modifying a list of stitches in-place."""
 
         if not stitches:
             return
 
-        if 'stitch_path_jitter' in self.config and self.config.stitch_path_jitter:
-            jitter = self.config.stitch_path_jitter * PIXELS_PER_MM
-            rand_iter = iter(prng.iter_uniform_floats(self.get_random_seed(), "stitch_path_jitter"))
+        if 'random_stitch_path_offset' in self.config and self.config.stitch_path_jitter:
+            offset = self.config.random_stitch_path_offset * PIXELS_PER_MM
+            rand_iter = iter(prng.iter_uniform_floats(self.get_random_seed(), "random_stitch_path_offset"))
 
             last_stitch = stitches[0]
             for stitch in stitches[1:]:
@@ -106,15 +106,15 @@ class RandomizationMixin:
                     continue
 
                 last_stitch = stitch
-                distance = next(rand_iter) * 2 * jitter - jitter
+                distance = next(rand_iter) * 2 * offset - offset
                 result = stitch + direction * distance
                 stitch.x = result.x
                 stitch.y = result.y
 
-        if 'stitch_jitter' in self.config and self.config.stitch_jitter:
-            jitter = self.config.stitch_jitter * PIXELS_PER_MM
-            rand_iter = iter(prng.iter_uniform_floats(self.get_random_seed(), "stitch_jitter"))
+        if 'random_stitch_offset' in self.config and self.config.stitch_jitter:
+            offset = self.config.random_stitch_offset * PIXELS_PER_MM
+            rand_iter = iter(prng.iter_uniform_floats(self.get_random_seed(), "random_stitch_offset"))
 
             for stitch in stitches:
-                stitch.x += next(rand_iter) * 2 * jitter - jitter
-                stitch.y += next(rand_iter) * 2 * jitter - jitter
+                stitch.x += next(rand_iter) * 2 * offset - offset
+                stitch.y += next(rand_iter) * 2 * offset - offset

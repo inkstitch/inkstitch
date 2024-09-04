@@ -110,7 +110,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
                 self.get_random_seed()
             ))
 
-        self.jitter_stitches(stitches)
+        self.offset_stitches(stitches)
 
         if self.config.repeats > 0 and self.config.repeat_stitches:
             repeated_stitches = []
