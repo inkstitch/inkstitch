@@ -88,7 +88,7 @@ class SewStackPanel(wx.Panel):
         )
         self._checkbox_to_row = {}
         self.update_layer_list()
-        layer_list_sizer.Add(self.layer_list, 1, wx.BOTTOM | wx.EXPAND, 10)
+        layer_list_sizer.Add(self.layer_list, 1, wx.BOTTOM | wx.EXPAND, 2)
         layer_list_sizer.Add(self.create_layer_buttons(), 0, wx.EXPAND | wx.BOTTOM, 10)
         self.layer_list_wrapper.SetSizer(layer_list_sizer)
         self.splitter.AppendWindow(self.layer_list_wrapper, 350)
@@ -162,17 +162,17 @@ class SewStackPanel(wx.Panel):
 
         self.delete_layer_button = wx.Button(self.layer_list_wrapper, wx.ID_ANY, style=wx.BU_EXACTFIT)
         self.delete_layer_button.SetBitmapLabel(wx.ArtProvider.GetBitmap(wx.ART_DELETE, wx.ART_MENU))
-        self.layer_buttons_sizer.Add(self.delete_layer_button, 0, wx.LEFT, 10)
+        self.layer_buttons_sizer.Add(self.delete_layer_button, 0, wx.LEFT, 5)
         self.delete_layer_button.Bind(wx.EVT_BUTTON, self.on_delete_layer_button)
 
         self.move_layer_up_button = wx.Button(self.layer_list_wrapper, wx.ID_ANY, style=wx.BU_EXACTFIT)
         self.move_layer_up_button.SetBitmapLabel(wx.ArtProvider.GetBitmap(wx.ART_GO_UP, wx.ART_MENU))
-        self.layer_buttons_sizer.Add(self.move_layer_up_button, 0, wx.LEFT, 10)
+        self.layer_buttons_sizer.Add(self.move_layer_up_button, 0, wx.LEFT, 5)
         self.move_layer_up_button.Bind(wx.EVT_BUTTON, self.on_move_layer_up_button)
 
         self.move_layer_down_button = wx.Button(self.layer_list_wrapper, wx.ID_ANY, style=wx.BU_EXACTFIT)
         self.move_layer_down_button.SetBitmapLabel(wx.ArtProvider.GetBitmap(wx.ART_GO_DOWN, wx.ART_MENU))
-        self.layer_buttons_sizer.Add(self.move_layer_down_button, 0, wx.LEFT, 10)
+        self.layer_buttons_sizer.Add(self.move_layer_down_button, 0, wx.LEFT, 5)
         self.move_layer_down_button.Bind(wx.EVT_BUTTON, self.on_move_layer_down_button)
 
         self.layer_buttons_sizer.Add(0, 0, 1, wx.EXPAND)

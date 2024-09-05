@@ -6,6 +6,7 @@ import wx.propgrid
 
 from ...debug.debug import debug
 from ...gui.windows import SimpleBox
+from ...i18n import _
 
 
 class CheckBoxProperty(wx.propgrid.BoolProperty):
@@ -240,6 +241,7 @@ class StitchLayerEditor:
         self.hints = {}
         self.initial_values = {}
         self.config = self.merge_config(layers)
+        self.defaults = layers[0].defaults
         self.property_grid = None
         self.help_box = None
         self.property_grid_panel = None
@@ -324,12 +326,33 @@ class StitchLayerEditor:
             self.property_grid.Bind(wx.propgrid.EVT_PG_SELECTED, self.on_select)
             self.property_grid_box = SimpleBox(self.property_grid_panel, self.property_grid)
 
+            buttons_sizer = wx.BoxSizer(wx.HORIZONTAL)
+            buttons_sizer.Add((0, 0), 1, 0, 0)
+
+            self.undo_button = wx.Button(self.property_grid_panel, wx.ID_ANY, style=wx.BU_EXACTFIT)
+            self.undo_button.SetBitmapLabel(wx.ArtProvider.GetBitmap(wx.ART_UNDO, wx.ART_OTHER))
+            self.undo_button.SetToolTip(_("Undo changes"))
+            self.undo_button.Disable()
+            self.undo_button.Bind(wx.EVT_BUTTON, self.on_undo)
+            buttons_sizer.Add(self.undo_button, 0, 0, 0)
+
+            self.reset_button = wx.Button(self.property_grid_panel, wx.ID_ANY, style=wx.BU_EXACTFIT)
+            # For some reason wx.ART_REFRESH doesn't exist in wxPython even
+            # though wxART_REFRESH does exist in wxWidgets.  Fortunately we
+            # can use the string value.
+            self.reset_button.SetBitmapLabel(wx.ArtProvider.GetBitmap("wxART_REFRESH", wx.ART_TOOLBAR))
+            self.reset_button.SetToolTip(_("Reset to default"))
+            self.reset_button.Disable()
+            self.reset_button.Bind(wx.EVT_BUTTON, self.on_reset)
+            buttons_sizer.Add(self.reset_button, 0, wx.LEFT, 5)
+
             self.help_box = wx.html.HtmlWindow(self.property_grid_panel, wx.ID_ANY, style=wx.html.HW_SCROLLBAR_AUTO)
             self.help_box_box = SimpleBox(self.property_grid_panel, self.help_box)
             self.show_help(self.property_grid.GetFirst(wx.propgrid.PG_ITERATE_CATEGORIES))
 
             main_sizer.Add(self.property_grid_box, 2, wx.EXPAND | wx.TOP, 10)
-            main_sizer.Add(self.help_box_box, 1, wx.EXPAND | wx.TOP, 2)
+            main_sizer.Add(buttons_sizer, 0, wx.EXPAND | wx.TOP, 2)
+            main_sizer.Add(self.help_box_box, 1, wx.EXPAND | wx.TOP, 10)
             self.property_grid_panel.SetSizer(main_sizer)
 
             for property_name, hint in self.hints.items():
@@ -351,7 +374,38 @@ class StitchLayerEditor:
 
     def on_select(self, event):
         property = event.GetProperty()
-        self.show_help(property)
+
+        if property is None:
+            enable = False
+            self.show_help(property)
+        else:
+            enable = not property.IsCategory()
+
+        self.undo_button.Enable(enable)
+        self.reset_button.Enable(enable)
+
+    def on_undo(self, event):
+        property = self.property_grid.GetSelection()
+
+        if property and not property.IsCategory():
+            property_name = property.GetName()
+            if property_name in self.config:
+                value = self.config[property_name]
+                self.property_grid.ChangePropertyValue(property_name, value)
+                self.change_callback(property_name, value)
+                property.SetModifiedStatus(False)
+                self.property_grid.RefreshEditor()
+
+    def on_reset(self, event):
+        property = self.property_grid.GetSelection()
+
+        if property and not property.IsCategory():
+            property_name = property.GetName()
+            if property_name in self.defaults:
+                value = self.defaults[property_name]
+                self.property_grid.ChangePropertyValue(property_name, value)
+                self.change_callback(property_name, value)
+                self.property_grid.RefreshEditor()
 
     def show_help(self, property):
         if property:
