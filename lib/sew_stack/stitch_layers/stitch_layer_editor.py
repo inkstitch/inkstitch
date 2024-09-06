@@ -405,6 +405,10 @@ class StitchLayerEditor:
                 value = self.defaults[property_name]
                 self.property_grid.ChangePropertyValue(property_name, value)
                 self.change_callback(property_name, value)
+
+                if value == self.config[property_name]:
+                    property.SetModifiedStatus(False)
+
                 self.property_grid.RefreshEditor()
 
     def show_help(self, property):
