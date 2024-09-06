@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-08-18 01:20+0000\n"
-"PO-Revision-Date: 2024-08-18 01:20\n"
+"POT-Creation-Date: 2024-08-29 01:18+0000\n"
+"PO-Revision-Date: 2024-09-06 01:20\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-18 01:20+0000\n"
+"POT-Creation-Date: 2024-08-29 01:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -911,7 +911,7 @@ msgstr "Origine des fichiers broderie exportés"
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Destination de saut pour les commandes stop (\"position en dehors du cadre\")."
 
-#: lib/commands.py:262
+#: lib/commands.py:275
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, mais il ne peut y en avoir qu'une seule.  Merci de toutes les supprimer, sauf une."
@@ -921,26 +921,26 @@ msgstr "Erreur : il y a plus d’une commande de %(command)s dans le document, 
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:269
+#: lib/commands.py:282
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:335 lib/commands.py:485
+#: lib/commands.py:348 lib/commands.py:498
 msgid "Ink/Stitch Command"
 msgstr "Commande Ink/Stitch"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:374
+#: lib/commands.py:387
 msgid "connector"
 msgstr "connecteur"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:393
+#: lib/commands.py:406
 msgid "command marker"
 msgstr "marqueur de commande"
 
-#: lib/commands.py:474
+#: lib/commands.py:487
 msgid "Please select a layer to include layer commands."
 msgstr "Merci de sélectionner un calque pour ajouter des commandes de calque."
 
@@ -2365,15 +2365,15 @@ msgid "Please select at least one satin column."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin."
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:58
+#: lib/extensions/base.py:52
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected. Please check if selected elements are visible."
 msgstr "Ink/Stitch ne sait pas travailler avec les objets sélectionnés. Vérifier que les éléments sélectionnés sont bien visibles."
 
-#: lib/extensions/base.py:61
+#: lib/extensions/base.py:55
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr "Il n'y a aucun objet dans tout le document sur lequel Ink/Stitch sait quoi faire."
 
-#: lib/extensions/base.py:63
+#: lib/extensions/base.py:57
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "Conseil : Exécutez Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets"
 
@@ -2474,11 +2474,11 @@ msgstr "Cette fonction copie les paramètres de Ink/Stitch du premier élément 
 
 #: lib/extensions/element_info.py:20
 msgid "Please select at least one element."
-msgstr ""
+msgstr "Merci de sélectionner au moins un élément."
 
 #: lib/extensions/element_info.py:21
 msgid "https://inkstitch.org/docs/troubleshoot/#element-info"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/troubleshoot/#element-info"
 
 #: lib/extensions/element_info.py:53 inx/inkstitch_select_elements.inx:15
 msgid "Type"
@@ -2522,7 +2522,7 @@ msgid "All Selected Elements"
 msgstr "Tous les éléments sélectionnés"
 
 #: lib/extensions/element_info.py:159 lib/extensions/thread_list.py:57
-#: lib/gui/satin_multicolor/colorize_panel.py:68
+#: lib/gui/satin_multicolor/colorize_panel.py:73
 msgid "Colors"
 msgstr "Couleurs"
 
@@ -2852,7 +2852,7 @@ msgstr "Pour créer un motif de tartan, sélectionner au moins un élément avec
 
 #: lib/extensions/tartan.py:66
 msgid "https://inkstitch.org/docs/fill-tools/#tartan"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/fill-tools/#tartan"
 
 #: lib/extensions/tartan.py:76
 msgid "Ink/Stitch Tartan"
@@ -3241,7 +3241,7 @@ msgstr "Préréglage"
 msgid "Load"
 msgstr "Charger"
 
-#: lib/gui/presets.py:61 lib/gui/satin_multicolor/colorize_panel.py:74
+#: lib/gui/presets.py:61 lib/gui/satin_multicolor/colorize_panel.py:79
 #: lib/gui/tartan/customize_panel.py:64 lib/gui/tartan/customize_panel.py:66
 msgid "Add"
 msgstr "Ajouter"
@@ -3328,11 +3328,19 @@ msgstr "Compensation d'étirement (mm)"
 msgid "Keep original satin"
 msgstr "Garder le satin originel"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:72
+#: lib/gui/satin_multicolor/colorize_panel.py:67
+msgid "Adjust underlay per color"
+msgstr "Ajuster les sous-couches par couleur"
+
+#: lib/gui/satin_multicolor/colorize_panel.py:70
+msgid "When disabled existing underlay is applied only to the first color."
+msgstr "Quand désactivé, la sous-couche existante est appliquée uniquement à la première couleur."
+
+#: lib/gui/satin_multicolor/colorize_panel.py:77
 msgid "Overflow excluded"
 msgstr "Sans débordement"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:220
+#: lib/gui/satin_multicolor/colorize_panel.py:227
 msgid "Total width: {width}%"
 msgstr "Largeur totale : {width}%"
 
@@ -3875,7 +3883,7 @@ msgstr "Triangle"
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr "Aucun d'élément brodable est sélectionné. Veuillez exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage d'objets au cas où vous auriez attendu un résultat brodable."
 
-#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:364
+#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:368
 msgid "Auto-Route"
 msgstr "Agencement automatique"
 
@@ -3891,14 +3899,14 @@ msgstr "Chemin de dessous %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:537
+#: lib/stitches/auto_satin.py:541
 #, python-format
 msgid "AutoSatin %d"
 msgstr "Auto-remplissage satin %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:540
+#: lib/stitches/auto_satin.py:544
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "Points droits pour auto-remplissage satin %d"
@@ -6508,27 +6516,27 @@ msgstr "https://inkstitch.org/fr/docs/stroke-tools/#redwork"
 
 #: inx/inkstitch_remove_duplicated_points.inx:3
 msgid "Remove duplicated points"
-msgstr ""
+msgstr "Supprimer les points répétés"
 
 #: inx/inkstitch_remove_duplicated_points.inx:10
 msgid "Remove point if repeated within this number of consecutive points"
-msgstr ""
+msgstr "Supprimer le point s'il est répété dans ce nombre de points consécutifs"
 
 #: inx/inkstitch_remove_duplicated_points.inx:12
 msgid "Distance tolerance"
-msgstr ""
+msgstr "Tolérance sur la distance"
 
 #: inx/inkstitch_remove_duplicated_points.inx:15
 msgid "This extension removes duplicated points from selected elements."
-msgstr ""
+msgstr "Cette extension supprime les points répétés des éléments sélectionnés."
 
 #: inx/inkstitch_remove_duplicated_points.inx:19
 msgid "It is most useful for manual paths (straight lines), since it will increase node count on Bézier curves. One possible usecase is to convert a bean stitch path from an embroidery file back into a simple line."
-msgstr ""
+msgstr "Ceci est particulièrement utile pour les chemins manuels (lignes droites) car cela augmente le nombre de nœuds sur les courbes de Béziers. Un cas d'utilisation possible est de l'utiliser dans un fichier de broderie machine pour convertir un chemin en point multiple en chemin simple."
 
 #: inx/inkstitch_remove_duplicated_points.inx:25
 msgid "https://inkstitch.org/docs/edit/#remove-duplicated-points"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/edit/#remove-duplicated-points"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:3
 msgid "Remove embroidery settings"

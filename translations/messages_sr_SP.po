@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-08-18 01:20+0000\n"
-"PO-Revision-Date: 2024-08-18 01:20\n"
+"POT-Creation-Date: 2024-08-29 01:18+0000\n"
+"PO-Revision-Date: 2024-08-29 01:19\n"
 "Last-Translator: \n"
 "Language-Team: Serbian (Cyrillic)\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-18 01:20+0000\n"
+"POT-Creation-Date: 2024-08-29 01:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -910,7 +910,7 @@ msgstr ""
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr ""
 
-#: lib/commands.py:262
+#: lib/commands.py:275
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr ""
@@ -920,26 +920,26 @@ msgstr ""
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:269
+#: lib/commands.py:282
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr ""
 
-#: lib/commands.py:335 lib/commands.py:485
+#: lib/commands.py:348 lib/commands.py:498
 msgid "Ink/Stitch Command"
 msgstr ""
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:374
+#: lib/commands.py:387
 msgid "connector"
 msgstr ""
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:393
+#: lib/commands.py:406
 msgid "command marker"
 msgstr ""
 
-#: lib/commands.py:474
+#: lib/commands.py:487
 msgid "Please select a layer to include layer commands."
 msgstr ""
 
@@ -2358,15 +2358,15 @@ msgid "Please select at least one satin column."
 msgstr ""
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:58
+#: lib/extensions/base.py:52
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected. Please check if selected elements are visible."
 msgstr ""
 
-#: lib/extensions/base.py:61
+#: lib/extensions/base.py:55
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr ""
 
-#: lib/extensions/base.py:63
+#: lib/extensions/base.py:57
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr ""
 
@@ -2515,7 +2515,7 @@ msgid "All Selected Elements"
 msgstr ""
 
 #: lib/extensions/element_info.py:159 lib/extensions/thread_list.py:57
-#: lib/gui/satin_multicolor/colorize_panel.py:68
+#: lib/gui/satin_multicolor/colorize_panel.py:73
 msgid "Colors"
 msgstr ""
 
@@ -3227,7 +3227,7 @@ msgstr ""
 msgid "Load"
 msgstr ""
 
-#: lib/gui/presets.py:61 lib/gui/satin_multicolor/colorize_panel.py:74
+#: lib/gui/presets.py:61 lib/gui/satin_multicolor/colorize_panel.py:79
 #: lib/gui/tartan/customize_panel.py:64 lib/gui/tartan/customize_panel.py:66
 msgid "Add"
 msgstr ""
@@ -3314,11 +3314,19 @@ msgstr ""
 msgid "Keep original satin"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize_panel.py:72
+#: lib/gui/satin_multicolor/colorize_panel.py:67
+msgid "Adjust underlay per color"
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize_panel.py:70
+msgid "When disabled existing underlay is applied only to the first color."
+msgstr ""
+
+#: lib/gui/satin_multicolor/colorize_panel.py:77
 msgid "Overflow excluded"
 msgstr ""
 
-#: lib/gui/satin_multicolor/colorize_panel.py:220
+#: lib/gui/satin_multicolor/colorize_panel.py:227
 msgid "Total width: {width}%"
 msgstr ""
 
@@ -3857,7 +3865,7 @@ msgstr ""
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr ""
 
-#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:364
+#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:368
 msgid "Auto-Route"
 msgstr ""
 
@@ -3873,14 +3881,14 @@ msgstr ""
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:537
+#: lib/stitches/auto_satin.py:541
 #, python-format
 msgid "AutoSatin %d"
 msgstr ""
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:540
+#: lib/stitches/auto_satin.py:544
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr ""
