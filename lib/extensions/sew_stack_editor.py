@@ -91,7 +91,7 @@ class SewStackPanel(wx.Panel):
         layer_list_sizer.Add(self.layer_list, 1, wx.BOTTOM | wx.EXPAND, 2)
         layer_list_sizer.Add(self.create_layer_buttons(), 0, wx.EXPAND | wx.BOTTOM, 10)
         self.layer_list_wrapper.SetSizer(layer_list_sizer)
-        self.splitter.AppendWindow(self.layer_list_wrapper, 350)
+        self.splitter.AppendWindow(self.layer_list_wrapper, 250)
         self.splitter.SizeWindows()
 
         self._dragging_row = None
