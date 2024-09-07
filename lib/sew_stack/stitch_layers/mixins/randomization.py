@@ -83,10 +83,11 @@ class RandomizationMixin:
         )
 
     def get_random_seed(self):
-        if seed := self.config.get('random_seed') is not None:
-            return seed
-        else:
+        seed = self.config.get('random_seed')
+        if seed is None:
             return self.element.get_default_random_seed()
+        else:
+            return seed
 
     def offset_stitches(self, stitches):
         """Randomly move stitches by modifying a list of stitches in-place."""
@@ -94,7 +95,7 @@ class RandomizationMixin:
         if not stitches:
             return
 
-        if 'random_stitch_path_offset' in self.config and self.config.stitch_path_jitter:
+        if 'random_stitch_path_offset' in self.config and self.config.random_stitch_path_offset:
             offset = self.config.random_stitch_path_offset * PIXELS_PER_MM
             rand_iter = iter(prng.iter_uniform_floats(self.get_random_seed(), "random_stitch_path_offset"))
 
@@ -111,7 +112,7 @@ class RandomizationMixin:
                 stitch.x = result.x
                 stitch.y = result.y
 
-        if 'random_stitch_offset' in self.config and self.config.stitch_jitter:
+        if 'random_stitch_offset' in self.config and self.config.random_stitch_offset:
             offset = self.config.random_stitch_offset * PIXELS_PER_MM
             rand_iter = iter(prng.iter_uniform_floats(self.get_random_seed(), "random_stitch_offset"))
 
