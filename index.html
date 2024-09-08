@@ -1,19 +1,90 @@
 ---
 title: "Ink/Stitch"
 permalink: /
-sidebar:
-  nav: "pages"
 lang: en
----
-<p>An open-source machine embroidery design platform based on <a href="https://inkscape.org/">Inkscape</a>.</p>
+layout: splash
 
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/thread_banner_dark.jpg
+  actions:
+    - label: "Download"
+      url: "/docs/install/"
+excerpt: "An open-source machine embroidery design platform based on [Inkscape](https://inkscape.org/)<br><br>
+          Ink/Stitch aims to be a full-fledged, cross-platform embroidery digitizing platform based entirely on free,
+          open-source software. Our goal is to be approachable for hobbyists while also providing the power needed by professional digitizers."
+feature_page:
+  - image_path: /assets/images/galleries/fonts/apex-lake/apex_set.jpg
+    alt: "text: Features"
+    title: "Features"
+    excerpt: "Ink/Stitch has a lot to offer. View a list of most noticable Ink/Stitch features."
+    url: "/features/"
+    btn_class: "btn--primary"
+user_manual:
+  - image_path: /assets/images/galleries/fonts/abril/abril_collage.jpg
+    alt: "text: user manual"
+    title: "User manual"
+    excerpt: 'Learn how to use Ink/Stitch. The user manual contains an in-depth description for every feature Ink/Stitch has to offer.'
+    url: "/docs/install/"
+    btn_class: "btn--primary"
+font_library:
+  - image_path: /assets/images/galleries/fonts/multiple/multifont3.jpg
+    alt: "text: Font library"
+    title: "Font library"
+    excerpt: "Ink/Stitch comes with a long list of pre-digitized fonts ready to use."
+    url: "/fonts/font-library/"
+    btn_class: "btn--primary"
+stitch_library:
+  - image_path: /assets/images/tutorials/multicolor_satin/snake.jpg
+    alt: "text: Stitch library"
+    title: "Stitch library"
+    excerpt: "Get an overview of all possible stitch types."
+    url: "/docs/stitch-library/"
+    btn_class: "btn--primary"
+tutorials:
+  - image_path: /assets/images/tutorials/randomized_satin/random_satin.jpg
+    alt: "text: Tutorials and Sample Files"
+    title: "Tutorials and Sample Files"
+    excerpt: "Get started with ready to use files or read detailed tutorials."
+    url: "/tutorials/"
+    btn_class: "btn--primary"
+social:
+  - image_path: /assets/images/galleries/fonts/chicken_little/chickenlittle.jpg
+    alt: "text: Socialize and Get Help"
+    title: "Socialize and Get Help"
+    excerpt: 'Ink/Stitch has a broad community willing to help you to get started. Get in contact and start your embroidery journey.'
+    url: "/docs/faq/"
+    btn_class: "btn--primary"
+develope:
+  - image_path: /assets/images/galleries/fonts/cats/no_ordinary_cat.jpg
+    alt: "text: Get involved"
+    title: "Get involved"
+    excerpt: 'Ink/Stitch is a community project and there are lots of ways to help to improve the programm.
+              You can help out with documentation, provide samples and tutorials or do some programming.
+              Even bug reporting will be a great help.'
+    url: "/developers/introduction/"
+    btn_class: "btn--primary"
+
+---
 <img src="/assets/images/index-inkstitch-logo.png" alt="Ink/Stitch" style="margin-bottom: 1em;">
 
-<p>Ink/Stitch aims to be a full-fledged, cross-platform embroidery digitizing platform based entirely on free, open-source software.  Our goal is to be approachable for hobbyists while also providing the power needed by professional digitizers.</p>
-
-<p><a href="/docs/install/" class="btn btn--primary btn--large">Install Ink/Stitch</a></p>
-
 <h2>News</h2>
+
 {% assign posts = site.posts | where: "lang", "en"  %}
-<ul>{% for post in posts offset: 0 limit: 5 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>
-<p><a href="{{ site.url }}/news/" class="btn btn--primary">{{ site.data.ui-text[page.lang].more_label | default: "Read more" }}</a></p>
+<p><ul>{% for post in posts offset: 0 limit: 5 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul></p>
+<p><a href="{{ site.url }}/news/" class="btn btn--primary btn--large">{{ site.data.ui-text[page.lang].more_label | default: "Read more" }}</a></p>
+
+<hr>
+
+{% include feature_row id="feature_page" type="left" %}
+
+{% include feature_row id="user_manual" type="right" %}
+
+{% include feature_row id="font_library" type="left" %}
+
+{% include feature_row id="tutorials" type="right" %}
+
+{% include feature_row id="social" type="left" %}
+
+{% include feature_row id="develope" type="right" %}

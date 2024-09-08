@@ -1,23 +1,91 @@
 ---
 title: "Ink/Stitch"
 permalink: /de/
-locale: de-DE
 lang: de
-sidebar:
-  nav: "pages"
----
-<p>Ein <a href="https://inkscape.org/">Inkscape</a>-Plugin für die Erstellung von Stickdateien.</p>
+layout: splash
 
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/thread_banner_dark.jpg
+  actions:
+    - label: "Download"
+      url: " /de/docs/install/"
+excerpt: "Ein [Inkscape](https://inkscape.org/)-Plugin für die Erstellung von Stickdateien<br><br>
+          Ink/Stitch hat es sich zum Ziel gesetzt, sowohl für Hobby-Sticker als auch für professionelle Digitalisierer alle Funktionen bereit zu stellen,
+          die sie für die Erstellung von Stickdateien benötigen."
+feature_page:
+  - image_path: /assets/images/galleries/fonts/apex-lake/apex_set.jpg
+    alt: "text: Features"
+    title: "Features"
+    excerpt: "Ink/Stitch hat viel zu bieten. Für einen ersten Überblick haben wir eine Liste über bersonders hervorzuhebende Ink/Stitch Funktionen zusammengestellt."
+    url: "/features/"
+    btn_class: "btn--primary"
+user_manual:
+  - image_path: /assets/images/galleries/fonts/abril/abril_collage.jpg
+    alt: "text: Benutzerhandbuch"
+    title: "Benutzerhandbuch"
+    excerpt: 'Das Benutzerhandbuch enthält eine genaue Beschreibung über jede verfügbare Ink/Stitch Funktion.'
+    url: " /de/docs/install/"
+    btn_class: "btn--primary"
+font_library:
+  - image_path: /assets/images/galleries/fonts/multiple/multifont3.jpg
+    alt: "text: Schriftbibliothek"
+    title: "Schriftbibliothek"
+    excerpt: "Ink/Stitch bringt bereits eine lange Liste von vordigitalisierten und einfach verwendbaren Schriften mit."
+    url: "/de/fonts/font-library/"
+    btn_class: "btn--primary"
+stitch_library:
+  - image_path: /assets/images/tutorials/multicolor_satin/snake.jpg
+    alt: "text: Stichbibliothek"
+    title: "Stichbibliothek"
+    excerpt: "Verschaffe dir eine Übersicht über alle in Ink/Stitch verfügbaren Sticharten."
+    url: " /de/docs/stitch-library/"
+    btn_class: "btn--primary"
+tutorials:
+  - image_path: /assets/images/tutorials/randomized_satin/random_satin.jpg
+    alt: "text: Tutorials und Beispieldateien"
+    title: "Tutorials und Beispieldateien"
+    excerpt: "Lerne anhand von Beispieldateien oder lese detailierte Tutorials."
+    url: "/de/tutorials/"
+    btn_class: "btn--primary"
+social:
+  - image_path: /assets/images/galleries/fonts/chicken_little/chickenlittle.jpg
+    alt: "text: Kontakte knüpfen und Hilfe bekommen"
+    title: "Unterstützung bekommen"
+    excerpt: 'Ink/Stitch hat eine große Gemeinschaft, die dich bei deinen ersten Schritten mit Ink/Stitch unterstützen kann.
+              Kontaktiere uns über verschiedene Kanäle und starte deine Reise in die Welt des Stickens.'
+    url: " /de/docs/faq/"
+    btn_class: "btn--primary"
+develope:
+  - image_path: /assets/images/galleries/fonts/cats/no_ordinary_cat.jpg
+    alt: "text: Beteiligen"
+    title: "Beteiligen"
+    excerpt: 'Ink/Stitch ist ein Gemeinschaftsprojekt und es gibt viel zu tun.
+              Wir benötigen Unterstützung bei der Dokumentation, dem Bereitstellen und Beispieldateien und Tutorials und beim Programmieren.
+              Auch das Berichten von Fehlern ist eine große Hilfe.'
+    url: "/de/developers/introduction/"
+    btn_class: "btn--primary"
+
+---
 <img src="/assets/images/index-inkstitch-logo.png" alt="Ink/Stitch" style="margin-bottom: 1em;">
 
-<p>Ink/Stitch hat es sich zum Ziel gesetzt, sowohl Hobbyisten, als auch professionellen Designern alle Funktionen zu bieten,
-die sie für die Erstellung von Dateien für das Maschinensticken benötigen.</p>
-<p>Ink/Stitch basiert komplett auf freier, quelloffener Software und steht für verschiedene Betriebssysteme (Linux, Windows
-und macOS) kostenlos zur Verfügung.</p>
-
-<p><a href="/de/docs/install/" class="btn btn--primary btn--large">Ink/Stitch installieren</a></p>
-
 <h2>Neuigkeiten</h2>
+
 {% assign posts = site.posts | where: "lang", "de"  %}
 <ul>{% for post in posts offset: 0 limit: 5 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>
 <p><a href="{{ site.url }}/de/news/" class="btn btn--primary">{{ site.data.ui-text[page.lang].more_label | default: "Read more" }}</a></p>
+
+<hr>
+
+{% include feature_row id="feature_page" type="left" %}
+
+{% include feature_row id="user_manual" type="right" %}
+
+{% include feature_row id="font_library" type="left" %}
+
+{% include feature_row id="tutorials" type="right" %}
+
+{% include feature_row id="social" type="left" %}
+
+{% include feature_row id="develope" type="right" %}

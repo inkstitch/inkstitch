@@ -27,6 +27,5 @@
     {%- if page.collection == "lettering" or page.collection == "fonts" %}
         {% include font_link_list %}
     {% endif %}
-    {% include language_switcher %}
   </ul>
 </nav>
