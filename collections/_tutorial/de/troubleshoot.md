@@ -1,7 +1,7 @@
 ---
 title: Fehlerbehebung in Ink/Stitch
 permalink: /tutorials/troubleshoot/
-last_modified_at: 2024-06-13
+last_modified_at: 2024-09-09
 language: de
 excerpt: "Fehlermeldungen gekonnt meistern"
 image: /assets/images/posts/de/troubleshoot.png
@@ -18,12 +18,12 @@ toc: true
 
 Keine Scheu einen Fehler oder nerviges Programm-Verhalten zu melden.
 Entwickler sind auf eure Berichte angewiesen und freuen sich über jede Rückmeldung.
-{: .info--notice}
+{: .notice--info }
 
 ## Element identifizieren
 
 Tritt ein Fehler auf, ist es zunächst wichtig, das problematische Element ausfindig zu machen.
-Dafür kann gut die Stickplan-Vorschau genutzt werden. Mit einem Tastenkürzel versehen, können
+Dafür kann gut die Stickplan-Vorschau genutzt werden. Mit einem [Tastenkürzel](/de/docs/customize/#tastenkürzel) versehen, können
 kleinere Gruppen oder einzelne Elemente schnell gerendert werden, bis das defekte Element genau
 bestimmt worden ist.
 
@@ -52,8 +52,7 @@ Für das weitere Vorgehen ist die Art des aufgetretenen Fehlers entscheidend.
   (<https://github.com/inkstitch/inkstitch/issues>).
 
 Fällt es auf Englisch schwer, geht das auch auf Deutsch. Sogar über eine wortlose Meldung
-mit dem kopierten Fehlerbericht und der SVG-Datei ist hilfreich. Alternativ kann auch eine
-Mail an mich gesendet werden (kaalleen@inkstitch.org).
+mit dem kopierten Fehlerbericht und der SVG-Datei ist hilfreich.
 
 ### Ink/Stitch-Werkzeuge zur Problemlösung
 
@@ -95,7 +94,7 @@ geben lassen (mit deaktiviertem Testlauf).
 
 #### Element Info
 
-`Erweiterungen > Ink/Stitch > Fehlerbehebung > Dokument bereinigen`
+`Erweiterungen > Ink/Stitch > Fehlerbehebung > Element Info`
 
 Ein Werkzeug für die Stickanalytiker unter euch. Hiermit können Maße und Stiche genauer
 untersucht werden.
@@ -107,7 +106,7 @@ kontaktieren oder auf GitHub eure Wünsche äußern.
 
 #### Füllobjekte aufspalten
 
-`Erweiterungen > Ink/Stitch > Fehlerbehebung > Dokument bereinigen`
+`Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Füllobjekte aufspalten...`
 
 Wer Ink/Stitch schon mehrere Jahre nutzt weiß, dass sich kreuzende Linien eine nervige
 Angelegenheit waren. Aus dieser Situation heraus ist dieses Werkzeug entstanden, das
@@ -138,7 +137,7 @@ ein zu großes Mäandermuster für ein zu kleines Füllobjekt.
 
 #### Stickparameter entfernen
 
-`Erweiterungen > Ink/Stitch Fehlerbehebung > Stickeinstellungen entfernen`
+`Erweiterungen > Ink/Stitch > Fehlerbehebung > Stickeinstellungen entfernen`
 
 Wenn nichts mehr hilft, kann es vielleicht sinnvoll sein auf Null zurück zu gehen und neu
 anzufangen.

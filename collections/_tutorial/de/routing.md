@@ -37,7 +37,7 @@ Beim Drucken spielt die Reihenfolge und die Verbindung der Elemente untereinande
   * Registrierungsprobleme verhinden
   * Knittern im Stoff verhindern
 
-* **Sprungstiche vermieden werde**
+* **Sprungstiche vermieden werden**
 
   In der gesamten Stickdatei sollten keine unnätigen Sprungstiche vorhanden sein. Versuche nicht, sie durch Fadenschnittbefehle zu verstecken,
   sondern versuche lieber duch geschickte Unterpfade eine bessere Lösung zu finden. Fadenschnitte verursachen Chaos auf der Rückseite der Stickerei und
