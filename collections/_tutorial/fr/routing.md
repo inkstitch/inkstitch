@@ -51,7 +51,7 @@ Chaque  fichier est un cas particulier, et vous êtes le concepteur qui doit dé
 ### Réordonner des éléments par leur ordre de sélection
 
 Déplacer les éléments dans le panneau Calque et Objet peut être pénible. Sélectionnez les éléments dans l'ordre où vous désirez les broder et lancez l'extension Ink/Stitch [Édition > Réempiler les objets dans l'ordre de leur sélection](/fr/docs/edit/#re-stack-objects-in-order-of-selection) pour accomplir cette tâche.
-### Convertir des sauts en trait
+### Convertir des sauts en traits
 
 Après avoir mis vos éléments dans le bon ordre et vous être assuré qu'ils commencent  et terminent bien là où vous le souhaitez,
 exécutez  [Outils Trait > Saut en trait](/fr/docs/stroke-tools/#jump-to-Stroke) pour créer un chemin droit qui relie la position finale du premier élément à la position de départ du deuxième élément.
