@@ -33,9 +33,9 @@ Dieses Werkzeug ersetzt deine Satinsäulen mit einem Set von neuen Satinsäulen 
 
 ### Optionen
 
-* Aktiviere **Trim jump stitches** um anstelle von Sprungstichen den Faden zu trennen. Jeder Sprungstich über einem Milimeter wird getrennt. Fadenschneide-Befehle werden der SVG-Datei hinzugefügt, somit ist es auch nachträglich noch möglich sie zu modifizieren.
+* Aktiviere **Schneide Faden bei Sprungstichen** um anstelle von Sprungstichen den Faden zu trennen. Jeder Sprungstich über einem Milimeter wird getrennt. Fadenschneide-Befehle werden der SVG-Datei hinzugefügt, somit ist es auch nachträglich noch möglich sie zu modifizieren.
 
-* Solltest du es bevorzugen die vorher gesetzte Objekt-Reihenfolge beizubehalten (das könnte der Fall sein, wenn sich die Satinsäulen überschneiden), benutze die Option **Preserve order of Satin Columns**.
+* Solltest du es bevorzugen die vorher gesetzte Objekt-Reihenfolge beizubehalten (das könnte der Fall sein, wenn sich die Satinsäulen überschneiden), benutze die Option **Behalte Reihenfolge der Satinsäulen bei**.
 
 
 ## Mehrfarbige Satinsäule

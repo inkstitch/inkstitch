@@ -89,13 +89,13 @@ Satin columns also run from the beginning of the rails to the end, just like a s
 
 ### Auto-route satin
 
-Same as with the stroke type elements, Ink/Stitch has a [routing extension for satins](/docs/satin-tools/#auto-route-satin-columns). It may need some care though as it has one option (preserve oder of running stitches). If you enable it, it will do it's best to route your satins, but doesn't generate running stitches which could connect the satins underneath unrenedered columns. If you enable it, you do not have control of which parts of the satins are on top and which ones are underneath.
+Same as with the stroke type elements, Ink/Stitch has a [routing extension for satins](/docs/satin-tools/#auto-route-satin-columns). It may need some care though as with the enabled option `preserve oder`, no running stitches are generated which could connect the satins underneath unrenedered columns. If you disable it, you do not have control of which parts of the satins are on top and which ones are underneath.
 
 Best option so far would be to prepare the order carefully (use the above mentioned extension to order elements) and run auto-route satin with the preserve order option checked. Then with all routed elements selected, run the above mentioned jump to stroke extension to remove all left over jumps. Push the running stitches into a good shape, so that they are hidden when possible.
 
 ### Cut Satin
 
-When you cut a satin column for better routing, you may lose the param settings. So it's better to use the Ink/Stitch [extension to cut the satin](/docs/satin-tools/#cut-satin-column) and keep the previous setup.
+When you manually cut a satin column for better routing, you may lose the param settings. So it's better to use the Ink/Stitch [extension to cut the satin](/docs/satin-tools/#cut-satin-column) and keep the previous setup.
 
 ### Params: swap rails
 
