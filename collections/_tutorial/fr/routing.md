@@ -1,9 +1,9 @@
 ---
-title: Stitch Path Optimization
+title: Optimisation du chemin de broderie
 permalink: /fr/tutorials/routing/
-last_modified_at: 2024-06-12
+last_modified_at: 2024-09-09
 language: fr
-excerpt: "Optimising the stitch path is one of the most important subjects in embroidery. Learn how Ink/Stitch can assist you with the task."
+excerpt: "L'optimisation du chemin de broderie est un élément  très important du processus de digitalisation. Apprenez comment  Ink/Stitch peut vous assister dans cette tâche"
 image: /assets/images/tutorials/routing/routing.png
 
 tutorial-type:
@@ -24,93 +24,110 @@ user-level:
 
 toc: true
 ---
-Optimising the stitch path is one of the most important subjects in embroidery. Learn how Ink/Stitch can assist you with the task.
+L'optimisation du chemin de broderie est un élément  très important du processus de digitalisation. 
 
-Embroidery is not only a setup of various elements printed on a piece of paper. When you create embroidery it is essential to
+Apprenez ici comment  Ink/Stitch peut vous assister dans cette tâche.
 
-* **Put elements into a logical order**
-  * To avoid color changes where possible
+Une broderie diffère complètement d'un ensemble de divers éléments à imprimer sur une feuille de papier. 
 
-    It is still sometimes necessary to add an extra color change when either one color goes both - underneath AND on top of an other color
-    or when push and pull on the fabric during the stitch out demands us to do so.
-  * To avoid registration problems
-  * To avoid puckering
-* **Avoid jump stitches**
+Lorsque vous créez une broderie, il est essentiel de:
+* **Donner un ordre logique aux éléments**
+  * Pour éviter les changements de couleurs inutiles
+  
+    Il peut parfois être nécessaire d'ajouter un changement de couleur supplémentaire par exemple si une couleur se trouve à la fois au dessous et en dessous d'une autre couleur ou pour éviter des problèmes d'étirements.
+   
+  * Pour éviter les problèmes de décalage
+  * Pour éviter les plissements du support de broderie
+* **Éviter les sauts**
 
-  There should be no unneccessary jump stitches in your file. Do not just try to hide them by adding trim commands.
-  Trims produce chaos on the backside of the embroidery and slow down the machine quite a bit.
+  Il ne devrait pas y avoir de sauts inutiles dans votre fichier. La solution n'est pas de les remplacer systématiquement par des commandes de coupe.
+  Des coupes inutiles (et les points d'arrêts qui vont avec) risquent de provoquer des horreurs au dos de votre broderie et  ralentissent fortement la machine.
+  
+Chaque  fichier est un cas particulier, et vous êtes le concepteur qui doit décider de la manière d'organiser vos chemins de points de broderie. Mais Ink/Stitch dispose de quelques outils pour vous aider dans cette tâche.
 
-Each file is individual and you are the designer who has to decide on how to route your stitch paths. But Ink/Stitch has some tools to assist you with the task.
 
-## General Routing Options
+## Options de routage générales à tous les points de broderie
 
-### Order elements in selected order
+### Réordonner des éléments par leur ordre de sélection
 
-Moving the elements in the Layers and Objects panel up and down can be tiresome. Select the elements in desired stitch order and run the Ink/Stitch extension [Re-stack elements in selected order](/docs/edit/#re-stack-objects-in-order-of-selection) and have it doing the task.
+Déplacer les éléments dans le panneau Calque et Objet peut être pénible. Sélectionnez les éléments dans l'ordre où vous désirez les broder et lancez l'extension Ink/Stitch [Édition > Réempiler les objets dans l'ordre de leur sélection](/fr/docs/edit/#re-stack-objects-in-order-of-selection) pour accomplir cette tâche.
+### Convertir des sauts en trait
 
-### Jump to Stroke
+Après avoir mis vos éléments dans le bon ordre et vous être assuré qu'ils commencent  et terminent bien là où vous le souhaitez,
+exécutez  [Outils Trait > Saut en trait](/fr/docs/stroke-tools/#jump-to-Stroke) pour créer un chemin droit qui relie la position finale du premier élément à la position de départ du deuxième élément.
 
-After you've prepared the correct order of your elements and made sure where they are supposed to start and end,
-run the [jump to stroke](/docs/stroke-tools/#jump-to-stroke) to create a running stitch from the end position of the first element to the start position of the second element.
+Vous pouvez ensuite modifier ce chemin pour qu'il soit masqué sous d'autres éléments. 
 
-You can then alter the stroke to be hidden under other elements. If the distance is short, you can also use it to make the connection stitch sink into the fabric while avoiding an additional jump.
+Si la distance est courte (par exemple du petit lettrage) vous pouvez également utiliser ce chemin tel quel pour faire s'enfoncer le point de raccordement dans le tissu et ainsi le masquer tout en évitant un saut supplémentaire.
+
 
 ![Jump to stroke process](/assets/images/docs/jump_to_stroke.png)
 
-*1: Original 2: Jump to Stroke 3: Manually adjusted stroke*
+*1: Avant Saut en Trait 2: Après Saut en Trait 3: Après ajustement manuel*
 
-## Stroke Routing Options
+## Options de routages  spécifiques aux points droits
 
-Strokes elements start at the beginning of the path and run til the end.
 
-### Make path directions visible
+Par défaut les éléments de type point droit sont brodés du début du chemin à sa fin.
+
+### Activez l'affichage de la direction des chemins.
 
 ![Stroke with visible path direction](/assets/images/tutorials/routing/path_direction.png)
 
-In our [customize](/docs/customize/#enabling-path-outlines--direction) article we described, how you can setup Inkscape so that you can see the path direction right away and know where your stroke type stitches will begin and end.
+La manière de customiser Inkscape pour que  la direction des chemins soit visible rendant facile la détection du point de départ et du point final d'un chemin est  décrite dans la section  [customiser](/fr/docs/customize/#activation-de-la-direction-des-chemins) 
 
-### Adapt stroke direction
+### Modifiez si nécessaire la direction d'un chemin
 
-You now already made sure, that you can see the path direction. When you select a path and run `Path > Reverse`, Inkscape will reverse the path and the stitching goes the other way around. You may need this function a lot. We recommend to set a shortcut key on it. In the [customize section](/docs/customize/#shortcut-keys) we describe, how that works.
+Lorsque  vous sélectionnez un chemin et lancez  `Chemin > Inverser`,  Inkscape inverse la direction du chemin et la broderie se fait donc dans l'ordre inverse.
+Vous risquez d'utiliser beaucoup cette fonction, et il est intéressant d'avoir un raccourci clavier pour cela. Pour plus de détails, voir la section
+[customiser](/fr/docs/customize/#raccourcis-clavier)
 
-### Params: adapt repeats
+### Paramètres: adapter le nombre de répétitions 
 
-When you need to start and end at the same spot of a stroke. You have several options to achieve it. In the [params dialog](/docs/params/), set the number for repeats to an odd number. If you don't want to do that (maybe because you have a bean stitch applied), duplicate the stroke and the direction of the copy.
+Si vous avez besoin que la broderie d'un chemin commence et termine au même endroit vous pouvez dans le [dialogue de paramétrage](/fr/docs/params/) choisir un nombre de répétitions pairs. Alternativement, si vous ne voulez pas de cela (par exemple parce que vous avez choisi un point multiple, vous  pouvez aussi  dupliquer le chemin et changer la direction de la copie.
 
-### Auto-route running stitch / Redwork
+### Agencement automatique de points droits / Redwork
 
-When you have a bunch of strokes, it can be a tidious job to route them correctly.
-Ink/Stitch now has two tools for it. [Redwork](/docs/stroke-tools/#redwork) is definitely the one to prefer in most cases, since it will take care, that you'll receive exactly two passes for each line. You can set a start position. Redwork will always start and end at the same. If you do not wish that and want to define a start- and end position, then maybe [auto-route running stitch](/docs/stroke-tools/#autoroute-running-stitch) may be the better option for you.
+Lorsqu'il y a  beaucoup de chemins,  il  peut  être long et  difficile de les agencer correctement.
+
+Ink/Stitch  a maintenant deux outils pour cela. Dans la plupart des cas, il vaut mieux choisir l'outil [Redwork](/fr/docs/stroke-tools/#redwork) qui assurera qu'il y a exactement deux passages sur chaque chemin.  Vous pouvez choisir le point de départ, qui sera  aussi le point final. Si vous souhaitez terminer et commencer la broderie à deux endroits différents, alors il se peut que [l'agencement automatique  de points droits](/fr/docs/stroke-tools/#autoroute-running-stitch) soit une meilleure  option pour vous.
 
 
-## Satin Routing Options
+## Options de routages  spécifiques aux colonnes satin
 
-Satin columns also run from the beginning of the rails to the end, just like a stroke path. Make sure they are no closed paths. Ink/Stitch can handle loops (closed paths), but it may end up in funny results and you cannot control the starting and enting point if there isn't a definite start and end position.
+Les colonnes satins sont brodées depuis le début d'un de ses rails vers la fin de l'autre rail.
+Evitez d'utiliser des chemins fermés pour les rails. Ink/Stitch accepte un chemin fermé pour un rail,  mais vous n'avez alors aucun contrôle sur les points de départ et d'arrivée et vous risquez d'obtenir des résultats inattendus.
 
-### Auto-route satin
+### Agencement automatique de colonnes satin
 
-Same as with the stroke type elements, Ink/Stitch has a [routing extension for satins](/docs/satin-tools/#auto-route-satin-columns). It may need some care though as with the enabled option `preserve oder`, no running stitches are generated which could connect the satins underneath unrenedered columns. If you disable it, you do not have control of which parts of the satins are on top and which ones are underneath.
+De même que pour les points droits, Ink/Stitch possède [une  extension d'agencement des colonnes satins](/fr/docs/satin-tools/#auto-route-satin-columns).
 
-Best option so far would be to prepare the order carefully (use the above mentioned extension to order elements) and run auto-route satin with the preserve order option checked. Then with all routed elements selected, run the above mentioned jump to stroke extension to remove all left over jumps. Push the running stitches into a good shape, so that they are hidden when possible.
+Il faut faire attention à ce que si  vous choisissez l'option `préserver l'ordre des colonnes satin` alors il n'y aura pas de points  droits générés pour passer d'une colonne à la suivante si elles ne se touchent pas (mais vous pouvez ajouter vous même  des chemins qui seront cachées par la broderie  de colonnes placées plus loin  dans l'ordre de broderie).
+Si vous  désactivez cette option des chemins de  dessous seront générés, mais si des colonnes intersectent vous ne contrôlez plus qui  vient au dessus  de l'autre.
 
-### Cut Satin
+Vous obtiendrez un résultat optimal si vous préparez soigneusement l'ordre de broderie (utilisez l'extension mentionnée plus haut pour cela) et lancez l'agencement automatique  de colonnes satin avec l'option `préserver l'ordre des colonnes satin`. Puis après avoir sélectionnés tous les éléments de l'agencement automatique, lancez l'extension   `Saut en Trait ` puis chaque fois que  possible cachez les chemins de liaison créés par cette extension sous  des éléments brodés ultérieurement. Lorsque ce n'est  pas possible, supprimez le chemin de liaison.
 
-When you cut a satin column for better routing, you may lose the param settings. So it's better to use the Ink/Stitch [extension to cut the satin](/docs/satin-tools/#cut-satin-column) and keep the previous setup.
 
-### Params: swap rails
+### Scinder une colonne satin
 
-In the [params dialog](/docs/params/) it is possible to swap the rail on which the stitches will start and on which stitches will end. Be aware that all sided properties with be swapped, so you may need to adjust a few of them if you only want to swap the start position. A default satin column doesn't have any other sided property except for the start and end position.
+Si vous voulez découper  une colonne satin en deux  parties pour améliorer votre  ordre de broderie sans  perdre  vos  paramétrages vous pouvez utiliser l'extension  [Ink/Stitch > Outils Satin > Scinder colonne satin](/fr/docs/satin-tools/#scinder-une-colonne-satin).
 
-### Params: reverse rails
+### Paramètres: Échanger les rails
 
-In the [params dialog](/docs/params/) you can also switch the stitch direction of the whole satin.
+Dans le [dialogue de paramétrage](/fr/docs/params/), il est possible d' échanger le rôle des deux rails. En conséquence le rail où les points de broderie commence et le rail où ils terminent  sont échangés. Attention  toutefois, toutes  les propriétés asymétriques seront elles aussi échangées. Par exemple, si vous avez ajouté une  compensation d'étirement unilatérale elle changera de coté. Par défaut  une colonne satin n'a pas de propriétés asymétriques.
 
-### Params: adapt centerline underlay repeats
+### Paramètres: Inverser la direction des rails
 
-When you adapt the repeat value for the centerline underlay in the [params dialog](/docs/params/) to an odd value, the satin column will start and end at the same side. This can be an easy option to avoid manual running stitches for routing.
+Dans le  [dialogue de paramétrage](/fr/docs/params/),  vous pouvez  aussi échanger la direction de  la colonne satin.
 
-## Fill Routing Options
+### Paramètres: adapter le nombre de répétitions de la sous couche  centrale 
 
-### Start- and Stop commands
+Si vous donnez une valeur  impaire  au nombre de répétition de la sous-couche centrale, alors la colonne satin commence et termine sur le même rail.
+Dans certains  cas  c'est une manière simple d'éviter de devoir ajouter manuellement  un point droit.
 
-The start and end position of fill elements can be defined with [visual commands](/docs/commands/) (Fill stitch starting / ending position). If you set a lot of these commands the canvas can become a bit crowded. So it might be good to know, that commands will still work, even when invisible.
+## Options de routage spécifiques aux remplissages
+
+### Commandes Position de départ/fin de remplissage
+
+Les positions de départ et de fin de remplissages peuvent être définies à l'aide  des  [commandes visuelles](/fr/docs/commands/). 
+Si vous avez ajouté de nombreuses commandes cela  peut encombrer quelque peu le canevas il est donc bon de savoir que ces commandes sont actives même lorsque qu'elles sont masquées.
