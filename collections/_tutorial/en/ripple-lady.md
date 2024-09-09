@@ -18,15 +18,14 @@ user-level:
 
 ## Tinkerbell woman as sample of Pattern Stitch and Ripple Stitch
 
-Cup flower is Pattern Stitch
+* Cup flower is Pattern Stitch
 
-Flower Hat is Ripple  Stitch : 5 copies of the same path simply rotated and resized
+* Flower Hat is Ripple  Stitch : 5 copies of the same path simply rotated and resized
 
-Face is Bean  Stitch
-
+* Face is Bean  Stitch
 
 ![SVG](/assets/images/tutorials/samples/ripple-lady.svg)
 
 ![Embroidered](/assets/images/tutorials/tutorial-preview-images/ripple-lady.jpg)
 
-[Télécharger](/assets/images/tutorials/samples/ripple-lady.svg){: download="ripple-lady.svg" }
+[Download](/assets/images/tutorials/samples/ripple-lady.svg){: download="ripple-lady.svg" }

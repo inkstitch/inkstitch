@@ -17,8 +17,7 @@ user-level:
 
 ##  Monochrome Flower
 
-![Brodé](/assets/images/tutorials/tutorial-preview-images/ripple_monochrome.jpg)
-
+![Embroidered](/assets/images/tutorials/tutorial-preview-images/ripple_monochrome.jpg)
 
 - Step 1 Layer contains
   - the heart of the flower is a nine-pointed star with contour fill parameters set to  "from interior towards exterior"
@@ -29,15 +28,13 @@ user-level:
    -  Path /Split path  was applied to the petal, then the paths were combined two by two to obtain the 9 petals.
    -  Group the petals
   -  All petals are simple ripple.
-   
- All runing stitch have  a 3mm length .
- 
- Yhe embroidery uses a single grey rayon thread.
+
+All runing stitch have  a 3mm length .
+
+The embroidery uses a single grey rayon thread.
 
 Remark : intermediare layers were only kept for demonstration purpose
 
 ![SVG](/assets/images/tutorials/samples/ripple_monochrome.svg)
 
-
-
-[Télécharger](/assets/images/tutorials/samples/ripple_monochrome.svg){: download="ripple_monochrome.svg" }
+[Download](/assets/images/tutorials/samples/ripple_monochrome.svg){: download="ripple_monochrome.svg" }

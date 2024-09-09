@@ -72,7 +72,6 @@ that are even more useful that their name suggest.
 
 You may also benefit from simpliflying the paths.
 
-
 ![SVG](/assets/images/tutorials/samples/autoroute_unicorn.svg)
 
-[Télécharger](/assets/images/tutorials/samples/autoroute_unicorn.svg){: download="autoroute_unicorn.svg" }
+[Download](/assets/images/tutorials/samples/autoroute_unicorn.svg){: download="autoroute_unicorn.svg" }

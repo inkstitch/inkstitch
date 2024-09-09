@@ -18,15 +18,6 @@ Contour fill sunflower
  
 ![Contour Fill](/assets/images/tutorials/tutorial-preview-images/sunflower.jpg)
 
-
-<hr>
-Télécharger le [fichier exemple](/assets/images/tutorials/samples/contour-fill-sunflower.svg){: download="Inkstitch-Contour-Fill-Sunflower.svg" }. 
+Download the [sample file](/assets/images/tutorials/samples/contour-fill-sunflower.svg){: download="Inkstitch-Contour-Fill-Sunflower.svg" }. 
 
 ![Contour Fill File](/assets/images/tutorials/samples/contour-fill-sunflower.svg)
-
-
-
-
-<hr>
-
-<hr>

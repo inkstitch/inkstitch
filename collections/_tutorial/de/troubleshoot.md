@@ -1,6 +1,6 @@
 ---
 title: Fehlerbehebung in Ink/Stitch
-permalink: /tutorials/troubleshoot/
+permalink: /de/tutorials/troubleshoot/
 last_modified_at: 2024-09-09
 language: de
 excerpt: "Fehlermeldungen gekonnt meistern"

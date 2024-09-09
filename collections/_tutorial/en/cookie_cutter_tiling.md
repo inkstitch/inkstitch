@@ -88,8 +88,6 @@ Each step of this tutorail corresponds to a layer of the file, proceed from bott
 [download cloth_line.svg](/assets/images/tutorials/cookie_cutter_tiling/cloth_line.svg){: download="cloth_line.svg" }
 
 
-
-
 ## Covering each shape with a tiling
 
 Next step is simply chose a tiling per shape to cover.
@@ -103,7 +101,9 @@ This is what was chosen (this is layer "Clothline preparing pattern fill" in the
 ![cloth_line](/assets/images/tutorials/cookie_cutter_tiling/tiled_cloths.png) 
 
 ## Pattern filling
+
 This is our goal
+
 ![final](/assets/images/tutorials/cookie_cutter_tiling/final_embroidery.png) 
 
 This is easy to achieve: just follow the following steps, respecting the ordering of the steps.
@@ -113,8 +113,9 @@ For each future pattern filled shape we have a group containing :
  * Details: a group containing stuff to be embroidered over the filled shape. We want to embroider that after patterned fill is stitched.
  * Tiling: the tiling group that contains all the paths of the tiling. The LPE Tiling is carried by this group
  
- ###  Tiling LPE overview
- Let's have a look at the Tiling LPE  applied on the Tiling group of the T Shirt
+###  Tiling LPE overview
+
+Let's have a look at the Tiling LPE  applied on the Tiling group of the T Shirt
 
 
 ![starting_point](/assets/images/tutorials/cookie_cutter_tiling/T-shirt-1.jpg)
@@ -148,10 +149,10 @@ Breaking  apart this path would create  plenty of triangles. Don't.
 In the general case you may need an additional step before flattening : 
 
 ### Combine  paths in Tiling groups and flatten the effect
+
 For each Tiling:
 * If there is more than a single path in a Tiling group, combine all paths together.
 * Select Tiling group and from the LPE panner flatten the effect.
-
 
 If you look at the canvas, nothing is different.
 
@@ -197,12 +198,9 @@ For each Tiling:
   * Select the path in the Tiling group and the shape
   *  Run `Extensions > Ink/Stitch > Tools : Stroke> Autoroute Running Stitch` only checking add node at intersections
 
-
-
 One Cloth at a time :
   *  Select the whole group
   *  Run `Extensions > Ink/Stitch > Visualise and Export > Stitch Plan Preview`
-
 
 and  you will see that the jumps stitches are almost all gone. 
 
@@ -223,16 +221,3 @@ You may either :
   
   You may use `Extensions > Ink/Stitch > Tools : Stroke >  Jump Stitch to Stroke` to help you : if you chose two consecutive paths with a jump in between and run this extension, it will create a straight  path from 
 the end of the first  path to the begining of the second. No need to guess where the fill is ending.... But it is up to you to camouflage it (see example in the dress belt)
- 
-
-
-
-
-
-
-
-
-
-
-
-

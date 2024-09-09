@@ -26,9 +26,6 @@ user-level:
 - Stem is split satin column.
 - Lettering is simple ripple stitch applied to paths with two subpaths.
 
-
 ![SVG](/assets/images/tutorials/samples/ripple-iris.svg)
 
-
-
-[Télécharger](/assets/images/tutorials/samples/ripple-iris.svg){: download="ripple-iris.svg" }
+[Download](/assets/images/tutorials/samples/ripple-iris.svg){: download="ripple-iris.svg" }
