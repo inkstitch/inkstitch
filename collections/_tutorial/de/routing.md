@@ -77,7 +77,7 @@ Nun hast du bereits sichergestellt, dass die Pfadrichtungen sichtbar sind. Zeigt
 
 ### Parameter: Wiederholungen anpassen
 
-Soll die Stickerei am gleichen Punkt der Linie enden wo sie gestartet ist, gibt es mehrere Optionen dies zu erreichen. Im [Parameterdialog](/de/docs/params/) kann die Anzahl der Wiederholungen auf eine ungerade Zahl gesetzt werden. Dies empfiehlt sich jedoch nicht, wenn beispielsweise ein Mehrfachgeradstich genutzt wurde. In diesem Fall sollte der Pfad dupliziert und in umgekehrter Richtung als einfacher Geradstich ausgestickt werden.
+Soll die Stickerei am gleichen Punkt der Linie enden wo sie gestartet ist, gibt es mehrere Optionen dies zu erreichen. Im [Parameterdialog](/de/docs/params/) kann die Anzahl der Wiederholungen auf eine gerade Zahl gesetzt werden. Dies empfiehlt sich jedoch nicht, wenn beispielsweise ein Mehrfachgeradstich genutzt wurde. In diesem Fall sollte der Pfad dupliziert und in umgekehrter Richtung als einfacher Geradstich ausgestickt werden.
 
 ### Automatisch geführter Geradstich / Redwork
 
