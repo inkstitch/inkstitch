@@ -18,7 +18,7 @@ Mais dans les paramètres choisissez la méthode `"S" stitch`.
 Si vous activez  la longeur maximum de points, vous pourrez chosir entre trois méthodes de découpage. 
 Si vous choisissez la méhode décalage,  vous  pourrez, comme pour un remplissage, choisir la valeur de "Décaler les découpages autant de fois avant de répéter".
 
-## Paramétres
+## Paramètres
 
 ### Couche supérieure du satin
 
