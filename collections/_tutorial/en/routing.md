@@ -75,7 +75,7 @@ You now already made sure, that you can see the path direction. When you select 
 
 ### Params: adapt repeats
 
-When you need to start and end at the same spot of a stroke. You have several options to achieve it. In the [params dialog](/docs/params/), set the number for repeats to an odd number. If you don't want to do that (maybe because you have a bean stitch applied), duplicate the stroke and the direction of the copy.
+When you need to start and end at the same spot of a stroke. You have several options to achieve it. In the [params dialog](/docs/params/), set the number for repeats to an even number. If you don't want to do that (maybe because you have a bean stitch applied), duplicate the stroke and the direction of the copy.
 
 ### Auto-route running stitch / Redwork
 
