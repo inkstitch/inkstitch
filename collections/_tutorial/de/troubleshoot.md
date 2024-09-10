@@ -1,7 +1,7 @@
 ---
 title: Fehlerbehebung in Ink/Stitch
 permalink: /de/tutorials/troubleshoot/
-last_modified_at: 2024-09-09
+last_modified_at: 2024-09-10
 language: de
 excerpt: "Fehlermeldungen gekonnt meistern"
 image: /assets/images/posts/de/troubleshoot.png
