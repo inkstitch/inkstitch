@@ -1,7 +1,7 @@
 ---
 title: "Outil lettrage"
 permalink: /fr/docs/lettering/
-last_modified_at: 2024-05-29
+last_modified_at: 2024-09-10
 toc: true
 ---
 L'outil de lettrage génère un texte multilignes sous la forme de colonnes satin et génère de manière dynamique les points, divisant éventuellement les points satins et ajoutant du point droit.
@@ -13,6 +13,7 @@ L'outil de lettrage génère un texte multilignes sous la forme de colonnes sati
 * Faire `Extensions > Ink/Stitch  > Lettrage`
 * Entrez votre texte (multi-ligne possible)
 * Définir la police et l'échelle
+    **⚠ Attention**: Pour des résultats optimaux, tenir compte des limites de redimensionement mentionnées dans le descriptif des fontes.
 * Cliquer sur `Appliquer et Quitter`
 
 
