@@ -99,8 +99,7 @@ geben lassen (mit deaktiviertem Testlauf).
 Ein Werkzeug für die Stickanalytiker unter euch. Hiermit können Maße und Stiche genauer
 untersucht werden.
 
-Noch ist dies eine recht einfache Liste. Fehlen euch bestimmte Angaben, könnt ihr mich gerne
-kontaktieren oder auf GitHub eure Wünsche äußern.
+Noch ist dies eine recht einfache Liste. Fehlen euch bestimmte Angaben, könnt ihr gerne auf [GitHub](https://github.com/inkstitch/inkstitch/issues) eure Wünsche äußern.
 
 [Mehr Infos](/de/docs/troubleshoot/#element-info)
 
