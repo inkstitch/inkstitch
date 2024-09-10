@@ -67,7 +67,7 @@ Si la distance est courte (par exemple du petit lettrage) vous pouvez également
 ## Options de routage  spécifiques aux points droits
 
 
-Par défaut les éléments de type point droit sont brodés du début du chemin à sa fin.
+Par défaut les éléments de type point droit sont brodés du début du chemin vers sa fin. Il est préférable d'ouvrir les chemins fermés afin de décider d'où commence et termine la broderie.
 
 ### Activez l'affichage de la direction des chemins.
 
