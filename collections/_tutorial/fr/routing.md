@@ -126,7 +126,7 @@ Dans le  [dialogue de paramétrage](/fr/docs/params/),  vous pouvez  aussi inver
 
 ### Paramètres: adapter le nombre de répétitions de la sous-couche  centrale 
 
-Si vous donnez une valeur  impaire  au nombre de répétitions de la sous-couche centrale, alors la colonne satin commence sur la ligne centrale entre les débuts des deux rails et termine au **début** de l'autre rail (et non à la fin).
+Si vous donnez une valeur  impaire  au nombre de répétitions de la sous-couche centrale, alors la colonne satin commence sur la ligne centrale entre les débuts des deux rails et termine au **début** d'un des rails (et non à la fin).
 Dans certains  cas  c'est une manière simple d'éviter de devoir ajouter manuellement  un point droit.
 
 ## Options de routage spécifiques aux remplissages
