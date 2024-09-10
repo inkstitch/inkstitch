@@ -28,7 +28,7 @@ Choisissez le format de fichier ZIP Ink/Stitch. Cliquez sur `Enregistrer`. On vo
 
 ![Export par lot](/assets/images/docs/en/export-batch.jpg)
 
-Si vous souhaitez que les fichiers de l'archive ZIP aient un nom différent du fichier svg originel, inserrez le nouveau nom dans le champs ` Nom de fichier personnalisé`.
+Si vous souhaitez que les fichiers de l'archive ZIP aient un nom différent du fichier svg originel, insérez le nouveau nom dans le champs ` Nom de fichier personnalisé`.
 
 ![Options d'export par lot](/assets/images/docs/fr/zip-export1.png)
 
