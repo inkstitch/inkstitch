@@ -73,7 +73,7 @@ Par défaut les éléments de type point droit sont brodés du début du chemin 
 
 ![Stroke with visible path direction](/assets/images/tutorials/routing/path_direction.png)
 
-La manière de customiser Inkscape pour que  la direction des chemins soit visible rendant facile la détection du point de départ et du point final d'un chemin est  décrite dans la section  [Personnaliser Ink/Stitch](/fr/docs/customize/#activation-de-la-direction-des-chemins) 
+La manière de personnaliser Inkscape pour que  la direction des chemins soit visible rendant facile la détection du point de départ et du point final d'un chemin est  décrite dans la section  [Personnaliser Ink/Stitch](/fr/docs/customize/#activation-de-la-direction-des-chemins) 
 
 ### Modifier si nécessaire la direction d'un chemin
 
@@ -83,7 +83,7 @@ Vous risquez d'utiliser beaucoup cette fonction, et il est intéressant d'avoir 
 
 ### Paramètres: adapter le nombre de répétitions 
 
-Si vous avez besoin que la broderie d'un chemin commence et termine au même endroit vous pouvez dans le [dialogue de paramétrage](/fr/docs/params/) choisir un nombre de répétitions pairs. Alternativement, si vous ne voulez pas de cela (par exemple parce que vous avez choisi un point triple et que vous ne voulez pas qu'il se repète deux fois ce qui conduirait à 6 répétitions de chaque oint), vous  pouvez aussi  dupliquer le chemin, changer la direction de la copie et si necessaire la paramétrer en point droit simple.
+Si vous avez besoin que la broderie d'un chemin commence et termine au même endroit vous pouvez dans le [dialogue de paramétrage](/fr/docs/params/) choisir un nombre de répétitions pair. Alternativement, si vous ne voulez pas de cela (par exemple parce que vous avez choisi un point triple et que vous ne voulez pas qu'il se repète deux fois ce qui conduirait à 6 répétitions de chaque oint), vous  pouvez aussi  dupliquer le chemin, changer la direction de la copie et si necessaire la paramétrer en point droit simple.
 
 ### Agencement automatique de points droits / Redwork
 
@@ -94,13 +94,13 @@ Ink/Stitch  a maintenant deux outils pour cela. Dans la plupart des cas, il vaut
 
 ## Options de routage  spécifiques aux colonnes satin
 
-Les colonnes satins sont brodées depuis le début d'un de ses rails vers la fin de l'autre rail.
+Les colonnes satin sont brodées depuis le début d'un de ses rails vers la fin de l'autre rail.
 
 Evitez d'utiliser des chemins fermés pour les rails. Ink/Stitch accepte un chemin fermé pour un rail,  mais vous n'avez alors aucun contrôle sur les points de départ et d'arrivée et vous risquez d'obtenir des résultats inattendus.
 
 ### Agencement automatique de colonnes satin
 
-De même que pour les points droits, Ink/Stitch possède [une  extension d'agencement des colonnes satins](/fr/docs/satin-tools/#auto-route-satin-columns).
+De même que pour les points droits, Ink/Stitch possède [une  extension d'agencement des colonnes satin](/fr/docs/satin-tools/#auto-route-satin-columns).
 
 Avant de lancer cette extension, vous pouvez ajouter des [commandes visuelles](/fr/docs/commands/) pour définir le point de départ et le point  d'arrivée de l'agencement automatique de colonnes satin.
 Attention : 
