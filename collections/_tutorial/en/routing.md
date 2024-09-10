@@ -1,7 +1,7 @@
 ---
 title: Stitch Path Optimization
 permalink: /tutorials/routing/
-last_modified_at: 2024-06-13
+last_modified_at: 2024-09-08
 language: en
 excerpt: "Optimising the stitch path is one of the most important subjects in embroidery. Learn how Ink/Stitch can assist you with the task."
 image: /assets/images/tutorials/routing/routing.png
@@ -111,7 +111,7 @@ When you adapt the repeat value for the centerline underlay in the [params dialo
 
 ## Fill Routing Options
 
-Ink/Stitch  is quite tolerant with open path fills. It is still better to close the paths with a fill color.
+Ink/Stitch  is quite tolerant with open path fills. Still you may avoid problems by  closing paths with a fill color.
 
 ### Start- and Stop commands
 
