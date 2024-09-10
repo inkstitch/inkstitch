@@ -1,7 +1,7 @@
 ---
 title: "Commandes visuelles"
 permalink: /fr/docs/commands/
-last_modified_at: 2024-05-05
+last_modified_at: 2024-09-10
 toc: true
 ---
 Les commandes visuelles peuvent être utilisées pour spécifier des informations complémentaires sur la manière de broder. Elles peuvent par exemple être utilisées pour dire à la machine de couper le fil après avoir brodé un élément ou pour spécifier un arrêt par exemple pour ajouter le tissu d'un appliqué plus facilement.
@@ -12,12 +12,15 @@ Toutes les machines à broder ne sont pas capable de comprendre ces commandes. S
 
 Cette extension insère des commandes de coupe à la place des sauts.
 
+**Info**:Ne pas utiliser cette extension avant d'avoir optimisé le chemin de broderie: il faut éviter au maximum les coupes de fil. Vous trouverez dans 
+[optimisation du chemin de broderie](/tutorials/routing/) l'ensemble des outils qu'Ink/Stitch mets à votre disposition pour vous aider dans votre tâche d'optimisation.
+{: .notice--info }
+
+
 ## Ajouter des Commandes ...
 
 Ces commandes affectent l’ensemble du motif de broderie.
 
-**Info**: Do not to use this option when you can optimize routing instead. Cutting threads should be avoided as much as possible. Learn about the options Ink/Stitch has to offer for a [better routing](/tutorials/routing/).
-{: .notice--info }
 
 ### ![origine](/assets/images/docs/visual-commands-origin.jpg) Origine
 
