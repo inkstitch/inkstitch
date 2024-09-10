@@ -1,16 +1,17 @@
 ---
 title: "Gestion des couleurs de fil"
 permalink: /fr/docs/thread-color/
-last_modified_at: 2024-04-29
+last_modified_at: 2024-09-10
 toc: true
 ---
-Inkscape supports the usage of color palettes. Color palettes help Ink/Stitch to define color names and save additional information such as thread manufacturer name and the thread catalog number into the exported embroidery file.
 
-Depending on the capabilities of your embroidery machine you will be able to read color names from the display. Please note, that some embroidery formats (for example DST) do not store color information. Other file formats use a mutliple file system to store color information. For EXP files for example it is common to save the color format INF along with the EXP file to transmit the color information to your machine.
+Inkscape prend en charge l'utilisation de palettes de couleurs. Les palettes de couleurs aident Ink/Stitch à définir les noms de couleurs et à enregistrer des informations supplémentaires telles que le nom du fabricant de fil et le numéro de catalogue de fil dans le fichier de broderie exporté.
 
-Color definitions are shown in the [pdf output](/fr/docs/print-pdf/). It is also possible to [export threadlist information](/fr/docs/threadlist/) into a simple textfile.
+En fonction des capacités de votre machine à broder, vous pourrez lire les noms des couleurs sur l'écran. Veuillez noter que certains formats de broderie (par exemple DST) ne stockent pas d'informations sur les couleurs. D'autres formats de fichiers utilisent un système de fichiers multiples pour stocker les informations de couleur. Pour les fichiers EXP, par exemple, il est courant d'enregistrer le format de couleur INF avec le fichier EXP pour transmettre les informations de couleur à votre machine.
 
-Before you can use thread color features you need to install color palettes. You can either [define your own custom palette(s)](/docs/thread-color/#install-custom-palette) or [install the ones delivered with Ink/Stitch](/docs/thread-color/#install-thread-color-palettes-for-inkscape). Whichever method you choose, restart Inkscape after installing color palettes.
+Les définitions des couleurs sont affichées dans la [sortie pdf](/fr/docs/print-pdf/). Il est également possible d'[exporter les informations de la liste de fils](/fr/docs/threadlist/) dans un simple fichier texte.
+
+Avant de pouvoir utiliser les fonctionnalités de couleur de fil, vous devez installer des palettes de couleurs. Vous pouvez soit [définir votre ou vos propres palettes personnalisées](/fr/docs/thread-color/#install-custom-palette) soit [installer celles livrées avec Ink/Stitch](/fr/docs/thread-color/#apply-threadlist). Quelle que soit la méthode que vous choisissez, redémarrez Inkscape après avoir installé les palettes de couleurs.
 
 ## Installer des palettes
 
@@ -57,9 +58,9 @@ Ink/Stitch peut éditer des palettes existantes comme du texte.
 - Exporter votre pallette avec  `Extensions > Ink/Stitch >  Gestion des couleurs de fil > Generer palette > Generate palette de couleurs...`
 - Redémarrer Inkscape
 
-## Working With Palettes
+## Travailler avec des palettes
 
-### General Usage
+###  Usage General
 
 Une fois installées, les palettes Inkscape se trouvent dans la partie inférieure droite des nuanciers.
 
@@ -67,7 +68,7 @@ Une fois installées, les palettes Inkscape se trouvent dans la partie inférieu
 
 Cliquez sur la petite flèche pour ouvrir une liste des palettes installées et choisissez la palette de couleurs du fabricant en fonction du fil que vous souhaitez utiliser.
 
-To apply a color to an element, select the element and click on the color swatches at the bottom. Use `left click` for a fill color and `shift + left click` for a stroke color. Use the X on the left side to remove colors.
+Pour appliquer une couleur à un élément, sélectionner l'élément et cliquer sur l'échantillon de couleur en bas de la fenêtre. Utiliser un  simple clic pour une couleur de remplissage et un Majuscule clic pour une couleur de contour. Utiliser le X à gauche pour supprimer contour ou remplissage.
 
 ### Appliquer une palette {#apply-palette}
 
@@ -89,8 +90,8 @@ Ink/Stitch peut appliquer des listes de fil personnalisées à une broderie. Cec
 
 Ce peut être aussi utile si vous souhaitez essayer différents réglages de couleurs. Vous pouvez exporter et importer ces listes de fils à votre convenance, mais faites attention à ne changer ni le nombre ni l'ordre des couleurs. Si vous souhaitez les changer, faites le dans une copie du fichier svg.
 
-* Run `Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist`
-* Choose a file with the thread color information to match the elements in the current document
-* Define wether the color infomration file has been generated with Ink/Stitch or otherwise.
-  If otherwise: Select the Ink/Stitch color palette to match colors to.
-* Click on Apply
+* Lancez `Extensions > Ink/Stitch > Gestion des couleurs de fil > Appliquer la liste de fils`
+* Choisir un fichier qui contient les information de couleur de fils qui correspondent aux éléments du document courant
+* Choisir si ce fichier a été généré par Ink/Stitch ou pas.
+ Si pas: selectionner la palette de couleur Ink/Stitch avec laquelle établir la correspondance de couleurs.
+* Cliquez sur Appliquer
