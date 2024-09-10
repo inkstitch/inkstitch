@@ -1,7 +1,7 @@
 ---
 title: "Personnaliser Ink/Stitch"
 permalink: /fr/docs/customize/
-last_modified_at: 2022-01-16
+last_modified_at: 2024-09-10
 toc: true
 ---
 ## Raccourcis Clavier
@@ -76,9 +76,9 @@ Vérifier aussi que **Afficher le contour du chemin** est activé dans la  `Barr
 
 ## Travailler avec des modèles
 
-Si vous décidez d'utiliser plus fréquemment Ink/Stitch pour vos travaux de broderie, vous en aurez peut-être assez de mettre tout en scène à chaque fois. Dans ce cas, vous êtes prêt à créer un modèle pour votre configuration de broderie de base. Une fois que vous avez tout organisé comme vous le souhaitez, simply save your file in your templates folder (`File > Save template...`). You can now access it by `File > New from template > Custom`.
+Si vous décidez d'utiliser plus fréquemment Ink/Stitch pour vos travaux de broderie, vous en aurez peut-être assez de mettre tout en scène à chaque fois. Dans ce cas, vous êtes prêt à créer un modèle pour votre configuration de broderie de base. Une fois que vous avez tout organisé comme vous le souhaitez, sauvegardez simplement votre fichier dans votre repertoire de modèles  (`Fichiers > Enregistrer un modèle...`). Vous pouvez maintenant accéder à ce modèle par `Fichier > Nouveau à partir d'un modèle  > Personnalisé `.
 
-If you are going to use Inkscape mainly for embroidery, you may wish to check the option `Set as default template` when saving.
+Si vous utilisez Inkscape principalement pour la broderie, vous pouvez cocher l'option  `définir comme modèle par défaut` lors de l'enregistrement du modèle.
 
 **Astuce:** Obtenez des [modèles prédéfinis](/fr/tutorials/resources/templates/) dans notre section tutoriel.
 {: .notice--info }
