@@ -61,7 +61,7 @@ You can then alter the stroke to be hidden under other elements. If the distance
 
 ## Stroke Routing Options
 
-Strokes elements start at the beginning of the path and run til the end.
+Strokes elements start at the beginning of the path and run til the end. Closed paths should be  opened to allow you to decide where the embroidery starts (and ends).
 
 ### Make path directions visible
 
@@ -99,7 +99,7 @@ When you manually cut a satin column for better routing, you may lose the param 
 
 ### Params: swap rails
 
-In the [params dialog](/docs/params/) it is possible to swap the rail on which the stitches will start and on which stitches will end. Be aware that all sided properties with be swapped, so you may need to adjust a few of them if you only want to swap the start position. A default satin column doesn't have any other sided property except for the start and end position.
+In the [params dialog](/docs/params/) it is possible to swap the rail on which the stitches will start and on which stitches will end. Be aware that all sided properties with be swapped, so you may need to adjust a few of them if you only want to swap the start position. A default satin column doesn't have any other sided property except for the start and end position. 
 
 ### Params: reverse rails
 
@@ -110,6 +110,8 @@ In the [params dialog](/docs/params/) you can also switch the stitch direction o
 When you adapt the repeat value for the centerline underlay in the [params dialog](/docs/params/) to an odd value, the satin column will start and end at the same side. This can be an easy option to avoid manual running stitches for routing.
 
 ## Fill Routing Options
+
+Ink/Stitch  is quite tolerant with open path fills. It is still better to close the paths with a fill color.
 
 ### Start- and Stop commands
 
