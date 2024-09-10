@@ -105,9 +105,9 @@ De même que pour les points droits, Ink/Stitch possède [une  extension d'agenc
 Avant de lancer cette extension, vous pouvez ajouter des [commandes visuelles](/fr/docs/commands/) pour définir le point de départ et le point  d'arrivée de l'agencement automatique de colonnes satin.
 Attention : 
 
-* Si  vous activez l'option `préserver l'ordre des colonnes satin` alors il n'y aura pas de points  droits générés pour passer d'une colonne à la suivante si elles ne se touchent pas (mais vous pouvez ajouter vous même  des chemins qui seront cachées par la broderie  de colonnes placées plus loin  dans l'ordre de broderie).
+* Si  vous activez l'option `préserver l'ordre des colonnes satin` alors il n'y aura pas de points  droits générés pour passer d'une colonne à la suivante si elles ne se touchent pas (mais vous pouvez ajouter vous même  des chemins qui seront cachés par la broderie  de colonnes brodées ultérieurement).
 
-* Si vous  désactivez cette option des chemins de  dessous seront générés, mais si des colonnes intersectent vous ne contrôlez plus qui  vient au dessus  de l'autre.
+* Si vous  désactivez cette option des chemins de  dessous seront générés, mais si des colonnes se croisent vous ne contrôlez plus laquelle  vient au dessus  de l'autre.
 
 Vous obtiendrez un résultat optimal si vous préparez soigneusement l'ordre de broderie (utilisez l'extension mentionnée plus haut pour cela) et lancez l'agencement automatique  de colonnes satin avec l'option `préserver l'ordre des colonnes satin`. Puis après avoir sélectionnés tous les éléments de l'agencement automatique, lancez l'extension   `Saut en Trait ` puis chaque fois que  possible cachez les chemins de liaison créés par cette extension sous  des éléments brodés ultérieurement. Lorsque ce n'est  pas possible, supprimez le chemin de liaison.
 
