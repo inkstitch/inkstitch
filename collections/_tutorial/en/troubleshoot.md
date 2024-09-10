@@ -78,8 +78,11 @@ and number of elements to be removed beforehand or get a preview using the Live 
 Ein Werkzeug für die Stickanalytiker unter euch. Hiermit können Maße und Stiche genauer
 untersucht werden.
 
-Noch ist dies eine recht einfache Liste. Fehlen euch bestimmte Angaben, könnt ihr mich gerne
-kontaktieren oder auf GitHub eure Wünsche äußern.
+A tool for the embroidery analysts among you. This allows to easily access accurate measurements and stitches information. 
+
+This is still a pretty simple list. If you are missing certain information, please feel free to express your wishes on [GitHub](https://github.com/inkstitch/inkstitch/issues).
+
+
 
 [Read more](/docs/troubleshoot/#element-info)
 
