@@ -113,7 +113,7 @@ Vous obtiendrez un résultat optimal si vous préparez soigneusement l'ordre de 
 
 ### Paramètres: Échanger les rails
 Les deux rails d'une colonne satin n'ont pas tout à fait le même role : par défaut,la broderie commence au début d'un des rails et termine à la fin de l'autre  rail.
-Dans le [dialogue de paramétrage](/fr/docs/params/), il est possible d'échanger le rôle des deux rails. En conséquence de cette échange, le rail où les points de broderie commence et le rail où ils terminent  sont échangés. Attention  toutefois, toutes  les propriétés asymétriques seront elles aussi échangées. Par exemple, si vous avez ajouté une  compensation d'étirement unilatérale elle changera de coté. Par défaut  une colonne satin n'a pas de propriétés asymétriques.
+Dans le [dialogue de paramétrage](/fr/docs/params/), il est possible d'échanger le rôle des deux rails. En conséquence de cet échange, le rail où les points de broderie commencent et le rail où ils terminent  sont échangés. Attention  toutefois, toutes  les propriétés asymétriques seront elles aussi échangées. Par exemple, si vous avez ajouté une  compensation d'étirement unilatérale elle changera de coté. Par défaut  une colonne satin n'a pas de propriété asymétrique.
 
 ### Paramètres: Scinder une colonne satin
 Si vous souhaitez commencer ou finir votre broderie au milieu d'une rail et non à l'extrémité d'un rail, alors il vous faudra en fait découper votre
