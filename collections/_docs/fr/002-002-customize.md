@@ -48,9 +48,6 @@ Si vous voulez définir vos propres raccourcis, entrez simplement la combinaison
 Utiliser la fonction de recherche pour trouver les extensions plus rapidement. [Plus d'informations](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 {: .notice--info }
 
-Dans Ink/Stitch la [simulation](/fr/docs/visualize/) inclut ses propres raccourcis.
-
-![Raccourcis Simulation](/assets/images/docs/fr/raccourcis_simulateur.png)
 
 ## Correction du facteur de zoom
 
@@ -82,3 +79,11 @@ Si vous utilisez Inkscape principalement pour la broderie, vous pouvez cocher l'
 
 **Astuce:** Obtenez des [modèles prédéfinis](/fr/tutorials/resources/templates/) dans notre section tutoriel.
 {: .notice--info }
+
+## Installer des palettes de fils 
+
+Ink/Stitch est livré avec de nombreuses palettes de couleurs de fils des fabricants qui peuvent être installées dans Inkscape. Cela permet de créer les designs en gardant à l’esprit les bonnes couleurs.
+Les couleurs apparaîtront dans la sortie PDF et seront également incluses dans votre fichier de broderie, si votre format de fichier le prend en charge.
+
+[En savoir plus](/fr/docs/thread-color/#installer-des-palettes-de-couleurs-de-fils-%C3%A0-broder-pour-inkscape)
+
