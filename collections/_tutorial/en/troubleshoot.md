@@ -1,5 +1,5 @@
 ---
-title: Fehlerbehebung in Ink/Stitch
+title: Troubleshooting in Ink/Stitch
 permalink: /tutorials/troubleshoot/
 last_modified_at: 2024-09-09
 language: en
