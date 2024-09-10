@@ -112,21 +112,21 @@ Attention :
 Vous obtiendrez un résultat optimal si vous préparez soigneusement l'ordre de broderie (utilisez l'extension mentionnée plus haut pour cela) et lancez l'agencement automatique  de colonnes satin avec l'option `préserver l'ordre des colonnes satin`. Puis après avoir sélectionnés tous les éléments de l'agencement automatique, lancez l'extension   `Saut en Trait ` puis chaque fois que  possible cachez les chemins de liaison créés par cette extension sous  des éléments brodés ultérieurement. Lorsque ce n'est  pas possible, supprimez le chemin de liaison.
 
 ### Paramètres: Échanger les rails
-Les deux rails d'une colonne satin n'ont pas tout à fait le même role : par défaut,la broderie commence au début d'un des rails et termine à la fin de l'autre  rail.
+Les deux rails d'une colonne satin n'ont pas tout à fait le même role : par défaut,la broderie commence au début d'un des rails et termine à la fin de l'autre  rail. 
 Dans le [dialogue de paramétrage](/fr/docs/params/), il est possible d'échanger le rôle des deux rails. En conséquence de cet échange, le rail où les points de broderie commencent et le rail où ils terminent  sont échangés. Attention  toutefois, toutes  les propriétés asymétriques seront elles aussi échangées. Par exemple, si vous avez ajouté une  compensation d'étirement unilatérale elle changera de coté. Par défaut  une colonne satin n'a pas de propriété asymétrique.
 
 ### Paramètres: Scinder une colonne satin
-Si vous souhaitez commencer ou finir votre broderie au milieu d'une rail et non à l'extrémité d'un rail, alors il vous faudra en fait découper votre
+Si vous souhaitez commencer ou finir votre broderie au milieu d'un rail et non à l'extrémité d'un rail, alors il vous faudra en fait découper votre
 colonne satin en deux.  Il est possible de le faire  sans  perdre  le  paramétrages en utilisant l'extension  [Ink/Stitch > Outils Satin > Scinder colonne satin](/fr/docs/satin-tools/#scinder-une-colonne-satin).
 
 
 ### Paramètres: Inverser la direction des rails
 
-Dans le  [dialogue de paramétrage](/fr/docs/params/),  vous pouvez  aussi inverser la direction de  la colonne satin. Cela ne modifie pas le rôle des rails, la broderie commence toujours sur le même rail, mais a son autre extrémité
+Dans le  [dialogue de paramétrage](/fr/docs/params/),  vous pouvez  aussi inverser la direction de  la colonne satin. Cela ne modifie pas le rôle des rails, la broderie commence toujours sur le même rail, mais à son autre extrémité
 
-### Paramètres: adapter le nombre de répétitions de la sous couche  centrale 
+### Paramètres: adapter le nombre de répétitions de la sous-couche  centrale 
 
-Si vous donnez une valeur  impaire  au nombre de répétition de la sous-couche centrale, alors la colonne satin commence et termine du même coté de la colonne satin (mais pas sur le même rail toutefois).
+Si vous donnez une valeur  impaire  au nombre de répétitions de la sous-couche centrale, alors la colonne satin commence sur la ligne centrale entre les débuts des deux rails et termine au **début** de l'autre rail (et non à la fin).
 Dans certains  cas  c'est une manière simple d'éviter de devoir ajouter manuellement  un point droit.
 
 ## Options de routage spécifiques aux remplissages
