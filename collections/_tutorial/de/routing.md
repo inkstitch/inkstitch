@@ -63,8 +63,8 @@ Gibt es einen kurzen Abstand ohne die Möglichkeit den Geradstich zu verdecken, 
 
 ## Pfadoptimisierung für linienartige Sticharten
 
-Linienartige Sticharten starten am Anfang des Pfades und laufen am Pfad entlang. Closed paths should be opened to allow you to decide where the embroidery starts (and ends).
-
+Linienartige Sticharten starten am Anfang des Pfades und laufen am Pfad entlang. 
+Geschlossene Pfade sollten geöffnet werden um Anfang und Ende klar zu definieren.
 
 ### Pfadrichtung sichtbar machen
 
@@ -115,7 +115,8 @@ Im [Parameterdialog](/de/docs/params/) kann die gesammte Stickrichtung angepasst
 Wird im [Parameterdialog](/de/docs/params/) die Anzahl der Wiederholungen der Mittellinien-Unterlage auf einen ungerade Wert gesetzt, wird die Satinsäule an der gleichen Seite starten und enden. Dies kann hilfreich sein, um das manuelle digitalisieren von Geradtsichen unter der Stainsäule zu vermeiden.
 
 ## Routing Optionen für Füllstiche
-Ink/Stitch  is quite tolerant with open path fills. Still you may avoid problems by  closing paths with a fill color.
+
+Ink/Stitch erlaubt offene Pfade für Füllungen. Um Probleme zu vermeiden, empfiehlt es sich aber, die Pfade als geschlossene Pfade anzulegen.
 
 ### Start- und Endbefehle
 

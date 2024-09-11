@@ -75,14 +75,9 @@ and number of elements to be removed beforehand or get a preview using the Live 
 
 `Extensions > Ink/Stitch > Troubleshoot > Element info`
 
-Ein Werkzeug für die Stickanalytiker unter euch. Hiermit können Maße und Stiche genauer
-untersucht werden.
-
 A tool for the embroidery analysts among you. This allows to easily access accurate measurements and stitches information. 
 
 This is still a pretty simple list. If you are missing certain information, please feel free to express your wishes on [GitHub](https://github.com/inkstitch/inkstitch/issues).
-
-
 
 [Read more](/docs/troubleshoot/#element-info)
 
