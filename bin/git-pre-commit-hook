@@ -7,11 +7,18 @@
 # DO NOT SYMLINK
 # DO NOT SYMLINK (why? security risk)
 
+check_errors() {
+    errors="$("$@")"
+
+    if [ "$?" != "0" ]; then
+        echo "$errors"
+        exit 1
+    fi
+}
+
 cd $(dirname "$0")/../..
 
-errors=$(git diff --cached | bin/style-check --diff 2>&1)
+check_errors git stash --keep-index
+check_errors git diff --cached | bin/style-check 2>&1
+check_errors git stash pop
 
-if [ "$?" != "0" ]; then
-    echo "$errors"
-    exit 1
-fi
