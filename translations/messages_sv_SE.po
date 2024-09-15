@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-08-29 01:18+0000\n"
-"PO-Revision-Date: 2024-08-29 01:19\n"
+"POT-Creation-Date: 2024-09-15 01:28+0000\n"
+"PO-Revision-Date: 2024-09-15 01:28\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 01:18+0000\n"
+"POT-Creation-Date: 2024-09-15 01:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -144,7 +144,7 @@ msgstr ""
 
 #. description of font in fonts/cooper_marif
 #: inkstitch-fonts-metadata.py:46
-msgid "CooperMarif is a large and airy font. Lower case letters  are 60mm high and upper case M is 90  mm high. It can be scaled between 60% and  300%"
+msgid "CooperMarif is a large and airy font. Lower case letters  are 60mm high and upper case M is 90  mm high. It can be scaled between 50% and  300%"
 msgstr ""
 
 #. description of font in fonts/coronaviral
@@ -367,7 +367,7 @@ msgstr ""
 
 #. description of font in fonts/perspective_tricolore_KOR
 #: inkstitch-fonts-metadata.py:132
-msgid "Shaded tricolor font with capital letters only, numbers and ponctuation,  approximatively 36mm high. It can be scaled up to 250% and down to 80%"
+msgid "police ombrée en tartan tricolore, elle peut être agrandie d'environ 250%"
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR
