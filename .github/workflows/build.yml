@@ -295,22 +295,22 @@ jobs:
           submodules: recursive
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.9.x'
+          python-version: '3.11.x'
           cache: 'pip'
       - name: install dependencies
         shell: bash
         run: |
           brew update
 
-          brew install gtk+3 pkg-config gobject-introspection libffi gettext jq gnu-getopt || true
+          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt || true
 
-          export LDFLAGS="-L/usr/local/opt/libffi/lib"
-          export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+          export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
+          export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
 
           # for msgfmt
-          echo "/usr/local/opt/gettext/bin" >> $GITHUB_PATH
+          echo "/opt/homebrew/opt/gettext/bin" >> $GITHUB_PATH
 
-          echo "GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/" >> $GITHUB_ENV
+          echo "GI_TYPELIB_PATH=/opt/homebrew/lib/girepository-1.0/" >> $GITHUB_ENV
 
           pip install --upgrade pip
           pip --version
@@ -322,9 +322,9 @@ jobs:
           pip install pandas
           pip install pyarrow
           # remove and build shapely with brew geos version
-          # pip uninstall -y shapely
-          # pip cache remove shapely
-          # pip install -v shapely --no-binary shapely
+          pip uninstall -y shapely
+          pip cache remove shapely
+          pip install -v shapely --no-binary shapely
 
           pip install pyinstaller
 
