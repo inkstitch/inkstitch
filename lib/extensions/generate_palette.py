@@ -84,4 +84,4 @@ class GeneratePalette(InkstitchExtension):
 
 if __name__ == '__main__':
     e = GeneratePalette()
-    e.affect()
+    e.effect()

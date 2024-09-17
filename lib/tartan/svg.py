@@ -7,7 +7,7 @@ import time
 from collections import defaultdict
 from copy import copy
 from itertools import chain
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, cast
 
 from inkex import BaseElement, Group, Path, PathElement
 from networkx import MultiGraph, is_empty
@@ -68,12 +68,12 @@ class TartanSvgGroup:
         :param outline: the outline to be filled with the tartan pattern
         """
         parent_group = outline.getparent()
-        if parent_group.get_id().startswith('inkstitch-tartan'):
+        if parent_group is not None and parent_group.get_id().startswith('inkstitch-tartan'):
             # remove everything but the tartan outline
             for child in parent_group.iterchildren():
                 if child != outline:
                     parent_group.remove(child)
-            group = parent_group
+            group = cast(Group, parent_group)
         else:
             group = Group()
             group.set('id', f'inkstitch-tartan-{int(time.time())}')
@@ -88,6 +88,7 @@ class TartanSvgGroup:
         # set outline invisible
         outline.style['display'] = 'none'
         group.append(outline)
+        return group
 
     def _generate_tartan_group_elements(self, group, outline_shape, transform):
         dimensions, rotation_center = self._get_dimensions(outline_shape)

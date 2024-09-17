@@ -136,7 +136,7 @@ class CutworkSegmentation(InkstitchExtension):
 
         d = "M "
         for point in point_list:
-            d += f"{ point.x }, { point.y } "
+            d += f"{point.x}, {point.y} "
 
         stroke_element = inkex.PathElement(attrib={
             "style": color,
@@ -188,4 +188,4 @@ class CutworkSegmentation(InkstitchExtension):
 
     def path_style(self, element, color):
         # set stroke color and make it a running stitch - they don't want to cut zigzags
-        return inkex.Style(element.node.get('style', '')) + inkex.Style(f'stroke-width:1;stroke:{ color };')
+        return inkex.Style(element.node.get('style', '')) + inkex.Style(f'stroke-width:1;stroke:{color};')

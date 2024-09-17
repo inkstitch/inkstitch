@@ -48,7 +48,7 @@ class ElementInfo(InkstitchExtension):
         )
 
         self.list_items.append(ListItem(
-            name=f"{ element.node.label } ({ element.node.get_id() })",
+            name=f"{element.node.label} ({element.node.get_id()})",
             value=stitch_groups[0].color,
             headline=True
         ))
@@ -116,7 +116,7 @@ class ElementInfo(InkstitchExtension):
 
         stitches_per_group = ""
         if len(stitch_groups) > 1:
-            stitches_per_group = f" ({', '.join([str(len(group.stitches)) for group in stitch_groups]) })"
+            stitches_per_group = f" ({', '.join([str(len(group.stitches)) for group in stitch_groups])})"
 
         self.list_items.append(ListItem(
             name=_("Stitches"),
@@ -200,7 +200,7 @@ class ElementInfo(InkstitchExtension):
 
 
 class ListItem:
-    def __init__(self, name="", value="", headline=False, warning=False):
+    def __init__(self, name="", value="", headline=False, warning=False) -> None:
         self.name: str = name
         self.value: str = value
         self.headline: bool = headline

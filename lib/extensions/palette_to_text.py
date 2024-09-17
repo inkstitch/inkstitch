@@ -55,4 +55,4 @@ class PaletteToText(InkstitchExtension):
 
 if __name__ == '__main__':
     e = PaletteToText()
-    e.affect()
+    e.effect()

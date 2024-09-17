@@ -1,5 +1,5 @@
 import wx
-from wx.lib.mixins.listctrl import TextEditMixin
+from wx.lib.mixins.listctrl import TextEditMixin  # type: ignore[import-untyped]
 
 
 class EditableListCtrl(wx.ListCtrl, TextEditMixin):
