@@ -346,7 +346,7 @@ class DrawingPanel(wx.Panel):
             try:
                 self.animating = True
                 self.last_frame_start = 0
-                self.timer.Start(self.target_frame_period * 1000)
+                self.timer.Start(int(self.target_frame_period * 1000))
                 self.animate()
                 self.control_panel.on_start()
             except RuntimeError:
