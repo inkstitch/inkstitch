@@ -229,7 +229,7 @@ class Clone(EmbroideryElement):
 
 
 def is_clone(node):
-    if node.tag == SVG_USE_TAG and node.get(XLINK_HREF) and not is_command_symbol(node):
+    if node.tag == SVG_USE_TAG and node.href is not None and not is_command_symbol(node):
         return True
     return False
 
