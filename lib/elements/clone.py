@@ -5,7 +5,7 @@
 
 from contextlib import contextmanager
 from math import degrees
-from typing import Dict, Generator, List
+from typing import Dict, Generator, List, Optional
 
 from inkex import BaseElement, Title, Transform
 from lxml.etree import _Comment
@@ -162,9 +162,12 @@ class Clone(EmbroideryElement):
         :param recursive: Recursively "resolve" all child clones in the same manner
         :returns: A list where the first element is the "resolved" node, and zero or more commands attached to that node
         """
-        parent: BaseElement = self.node.getparent()
-        source_node: BaseElement = self.node.href
-        source_parent: BaseElement = source_node.getparent()
+        parent: Optional[BaseElement] = self.node.getparent()
+        assert parent is not None
+        source_node: Optional[BaseElement] = self.node.href
+        assert source_node is not None
+        source_parent: Optional[BaseElement] = source_node.getparent()
+        assert source_parent is not None
         cloned_node = clone_with_fixup(parent, source_node)
 
         if recursive:
@@ -201,7 +204,7 @@ class Clone(EmbroideryElement):
         if cloned_node.tag == SVG_SYMBOL_TAG:
             source_transform: Transform = parent.composed_transform()
         else:
-            source_transform: Transform = source_parent.composed_transform()
+            source_transform = source_parent.composed_transform()
         clone_transform: Transform = self.node.composed_transform()
         angle_transform = clone_transform @ -source_transform
         self.apply_angles(cloned_node, angle_transform)
@@ -242,7 +245,7 @@ class Clone(EmbroideryElement):
                 # We have to negate the angle because SVG/Inkscape's definition of rotation is clockwise, while Inkstitch uses counter-clockwise
                 fill_vector = (angle_transform @ Transform(f"rotate(${-element_angle})")).apply_to_point((1, 0))
                 # Same reason for negation here.
-                element_angle = -degrees(fill_vector.angle)
+                element_angle = -degrees(fill_vector.angle or 0)  # Fallback to 0 if an insane transform is used.
             else:  # If clone_fill_angle is specified, override the angle instead.
                 element_angle = self.clone_fill_angle
 

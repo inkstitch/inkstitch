@@ -41,7 +41,7 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
         return [MarkerObject(node)]
 
     elif node.tag in EMBROIDERABLE_TAGS or is_clone(node):
-        elements = []
+        elements: List[EmbroideryElement] = []
 
         from ..sew_stack import SewStack
         sew_stack = SewStack(node)

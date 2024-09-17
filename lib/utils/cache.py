@@ -8,16 +8,12 @@ import os
 import pickle
 import sqlite3
 
-import diskcache
+import diskcache  # type: ignore[import-untyped]
 
 from lib.utils.settings import global_settings
 
 from .paths import get_user_dir
-
-try:
-    from functools import lru_cache
-except ImportError:
-    from backports.functools_lru_cache import lru_cache
+from functools import lru_cache
 
 
 # simplify use of lru_cache decorator

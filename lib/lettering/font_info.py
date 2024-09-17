@@ -5,7 +5,7 @@
 
 from collections import defaultdict
 
-from fontTools.agl import toUnicode
+from fontTools.agl import toUnicode  # type:ignore[import-untyped]
 from inkex import NSS
 from lxml import etree
 

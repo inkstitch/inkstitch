@@ -148,11 +148,11 @@ def init_debugger(debug_type:str,  ini: dict):
 
     try:
         if debugger == 'vscode':
-            import debugpy
+            import debugpy  # type: ignore[import-untyped, import-not-found]
         elif debugger == 'pycharm':
-            import pydevd_pycharm
+            import pydevd_pycharm  # type: ignore[import-untyped, import-not-found]
         elif debugger == 'pydev':
-            import pydevd
+            import pydevd  # type: ignore[import-untyped, import-not-found]
         elif debugger == 'file':
             pass
         else:

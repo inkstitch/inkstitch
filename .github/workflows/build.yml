@@ -66,9 +66,16 @@ jobs:
       - shell: bash
         run: |
           bin/build-linux
-      - shell: bash
+      - name: Tests
+        shell: bash
         run: |
           pytest
+      - name: Mypy Type Checking
+        shell: bash
+        run: |
+          python -m pip install mypy
+          python -m mypy --output json | python .github/mypy-github-formatter
+        continue-on-error: true
       - shell: bash
         run: |
           make dist
@@ -131,9 +138,16 @@ jobs:
           python -m pip install pyinstaller
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
-      - shell: bash
+      - name: Tests
+        shell: bash
         run: |
           pytest
+      - name: Mypy Type Checking
+        shell: bash
+        run: |
+          python -m pip install mypy
+          python -m mypy --output json | python .github/mypy-github-formatter
+        continue-on-error: true
       - shell: bash
         run: |
           make dist
@@ -286,9 +300,16 @@ jobs:
         run: |
           SET BUILD32="1"
           bin\build-geos-win.cmd
-      - shell: bash
+      - name: Tests
+        shell: bash
         run: |
           pytest
+      - name: Mypy Type Checking
+        shell: bash
+        run: |
+          python -m pip install mypy
+          python -m mypy --output json | python .github/mypy-github-formatter
+        continue-on-error: true
       - shell: bash
         run: |
           make dist
@@ -345,9 +366,16 @@ jobs:
         shell: cmd
         run: |
           bin\build-geos-win.cmd
-      - shell: bash
+      - name: Tests
+        shell: bash
         run: |
           pytest
+      - name: Mypy Type Checking
+        shell: bash
+        run: |
+          python -m pip install mypy
+          python -m mypy --output json | python .github/mypy-github-formatter
+        continue-on-error: true
       - shell: bash
         run: |
           make dist
@@ -404,9 +432,16 @@ jobs:
           pip install pyinstaller
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
-      - shell: bash
+      - name: Tests
+        shell: bash
         run: |
           pytest
+      - name: Mypy Type Checking
+        shell: bash
+        run: |
+          python -m pip install mypy
+          python -m mypy --output json | python .github/mypy-github-formatter
+        continue-on-error: true
       - shell: bash
         run: |
           make dist
@@ -466,9 +501,16 @@ jobs:
           pip install pyinstaller
 
           echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
-      - shell: bash
+      - name: Tests
+        shell: bash
         run: |
           pytest
+      - name: Mypy Type Checking
+        shell: bash
+        run: |
+          python -m pip install mypy
+          python -m mypy --output json | python .github/mypy-github-formatter
+        continue-on-error: true
       - shell: bash
         run: |
           make dist
