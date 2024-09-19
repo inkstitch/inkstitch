@@ -158,10 +158,10 @@ class EmbroideryElement(object):
         return params
 
     def get_json_param(self, param, default=None):
-        json_value = self.get_param(param, "{}")
+        json_value = self.get_param(param, None)
         try:
             return json.loads(json_value, object_hook=DotDict)
-        except json.JSONDecodeError:
+        except (json.JSONDecodeError, TypeError):
             if default is None:
                 return DotDict()
             else:
