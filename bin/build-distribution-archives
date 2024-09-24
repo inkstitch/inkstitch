@@ -105,13 +105,6 @@ if [ "$BUILD" = "windows" ]; then
 fi
 
 if [ "$BUILD" = "linux" ]; then
-	# set local home and paths to avoid (Gem::FilePermissionError)
-	echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
-	echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-	source ~/.bashrc
-    gem update
-	gem install fpm
-
     if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
         VERSION=${VERSION#v}
     else
