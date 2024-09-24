@@ -8,7 +8,7 @@
   <select name="style-filter" id="style-filter" size="14" multiple>
     <option></option>
     <option value="applique">{{ page.font_filter_category_applique | default: site.data.ui-text[page.lang].font_filter_category_applique | default: "Applique" }}</option>
-    <option value="crossstitch">{{ page.font_filter_category_crossstitch | default: site.data.ui-text[page.lang].font_filter_category_crossstitch | default: "Crossstitch" }}Crossstitch</option>
+    <option value="crossstitch">{{ page.font_filter_category_crossstitch | default: site.data.ui-text[page.lang].font_filter_category_crossstitch | default: "Crossstitch" }}</option>
     <option value="display">{{ page.font_filter_category_display | default: site.data.ui-text[page.lang].font_filter_category_display | default: "Display" }}</option>
     <option value="handwriting">{{ page.font_filter_category_handwriting | default: site.data.ui-text[page.lang].font_filter_category_handwriting | default: "Handwriting" }}</option>
     <option value="italic">{{ page.font_filter_category_ italic| default: site.data.ui-text[page.lang].font_filter_category_italic | default: "Italic" }}</option>
