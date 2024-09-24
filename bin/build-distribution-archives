@@ -109,7 +109,8 @@ if [ "$BUILD" = "linux" ]; then
 	echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 	echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 	source ~/.bashrc
-    gem install fpm
+    gem update
+	gem install fpm
 
     if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
         VERSION=${VERSION#v}
