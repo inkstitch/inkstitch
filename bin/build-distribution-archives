@@ -105,8 +105,6 @@ if [ "$BUILD" = "windows" ]; then
 fi
 
 if [ "$BUILD" = "linux" ]; then
-    gem install fpm
-
     if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
         VERSION=${VERSION#v}
     else

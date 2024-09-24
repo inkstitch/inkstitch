@@ -29,6 +29,7 @@ jobs:
         shell: bash
         run: |
           sudo apt-get update
+          sudo gem install fpm
           python -m pip install --upgrade pip
           python -m pip install wheel
 
