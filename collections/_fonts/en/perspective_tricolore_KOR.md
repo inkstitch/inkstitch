@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/perspective_tricolore_KOR.png
     height: 14
+data_title:
+  - perspective_tricolore_KOR
 ---
 {%- assign font = site.data.fonts.perspective_tricolore_KOR.font -%}
 ![Abecedaire](/assets/images/fonts/perspective_tricolore_KOR.png)
@@ -29,5 +31,7 @@ up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max
 ## In real life
 
 {% include folder-galleries path="fonts/perspective_tricolore_KOR/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/perspective_tricolore_KOR/LICENSE)

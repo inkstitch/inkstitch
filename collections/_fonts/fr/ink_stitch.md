@@ -10,6 +10,9 @@ preview_image:
   - url: /assets/images/fonts/inkstitch_medium.jpg
     height: 19
     title: "Ink/Stitch Medium"
+data_title:
+  - small_font
+  - medium_font
 ---
 {%- assign font = site.data.fonts.small_font.font -%}
 ![Ink/Stitch Small](/assets/images/fonts/inkstitch_small.jpg)

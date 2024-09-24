@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/glacial_tiny_60_AGS.jpg
     height: 8
+data_title:
+  - glacial_tiny
 ---
 {%- assign font = site.data.fonts.glacial_tiny.font -%}
 ![glacial_tiny](/assets/images/fonts/glacial_tiny_60_AGS.jpg)
@@ -45,5 +47,7 @@ It can be scaled up to 140% (approx 11 mm, 0.4 inch) or scaled down to 60% (appr
 On a cushion, a T shirt and  in conjunction with Grand Hotel Marif on an apron 
 
 {% include folder-galleries path="fonts/glacial_tiny/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/glacial_tiny/LICENSE)

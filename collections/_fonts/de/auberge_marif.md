@@ -7,13 +7,17 @@ preview_image:
   - url: /assets/images/fonts/auberge_small.jpg
     height: 20
   - url: /assets/images/fonts/auberge_marif.jpg
-    height: 53
+    height: 50
+data_title:
+  - auberge_marif
+  - auberge_small
 ---
 {%- assign font = site.data.fonts.auberge_marif.font -%}
 ![grand_hotel_marif](/assets/images/fonts/auberge_marif.jpg)
 
 ![grand_hotel_marif](/assets/images/fonts/auberge_small.jpg)
 
+![auberge_small](/assets/images/fonts/auberge_small.jpg)
 
 ## Schriftzeichen
 
@@ -23,7 +27,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 
@@ -46,7 +49,6 @@ Im Gegensatz zu Auberge Marif, **MUSS** diese verkleinerte Schrift mit einem dü
 Von 25% auf dem T-Shirt zu voller Größe auf der Schürze und dem Label
 
 {% include folder-galleries path="fonts/grand_hotel_marif/" %}
-
 
 ## Lizenz
 

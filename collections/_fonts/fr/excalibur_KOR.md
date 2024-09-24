@@ -8,6 +8,9 @@ preview_image:
     height: 19
   - url: /assets/images/fonts/excalibur_small.jpg
     height: 7
+data_title:
+  - excalibur_KOR
+  - excalibur_small
 ---
 {%- assign font = site.data.fonts.excalibur_KOR.font -%}
 ![ExcaliburKOR](/assets/images/fonts/excalibur_KOR.jpg)

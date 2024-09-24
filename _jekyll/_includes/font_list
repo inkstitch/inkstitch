@@ -1,7 +1,46 @@
 {% assign fonts = site.fonts | where: "lang", page.lang %}
 
+<button id="toggle-font-filter">🔧 {{ page.font_filter_label | default: site.data.ui-text[page.lang].font_filter_label | default: "Font Filter" }}</button>
+<form id="font-filter" style="display:none;">
+  <label for="size-filter">{{ page.font_filter_size_label | default: site.data.ui-text[page.lang].font_filter_size_label | default: "Size (height in mm)" }}</label>
+  <input type="number" step="0.5" min="0" id="size-filter" name="size-filter">
+  <label for="style-filter">Category</label>
+  <select name="style-filter" id="style-filter" size="14" multiple>
+    <option></option>
+    <option value="applique">{{ page.font_filter_category_applique | default: site.data.ui-text[page.lang].font_filter_category_applique | default: "Applique" }}</option>
+    <option value="crossstitch">{{ page.font_filter_category_crossstitch | default: site.data.ui-text[page.lang].font_filter_category_crossstitch | default: "Crossstitch" }}Crossstitch</option>
+    <option value="display">{{ page.font_filter_category_display | default: site.data.ui-text[page.lang].font_filter_category_display | default: "Display" }}</option>
+    <option value="handwriting">{{ page.font_filter_category_handwriting | default: site.data.ui-text[page.lang].font_filter_category_handwriting | default: "Handwriting" }}</option>
+    <option value="italic">{{ page.font_filter_category_ italic| default: site.data.ui-text[page.lang].font_filter_category_italic | default: "Italic" }}</option>
+    <option value="monogram">{{ page.font_filter_category_monogram | default: site.data.ui-text[page.lang].font_filter_category_monogram | default: "Monogram" }}</option>
+    <option value="multicolor">{{ page.font_filter_category_multicolor | default: site.data.ui-text[page.lang].font_filter_category_multicolor | default: "Multicolor" }}</option>
+    <option value="ripple">{{ page.font_filter_category_ripple | default: site.data.ui-text[page.lang].font_filter_category_ripple | default: "Ripple Stitch" }}</option>
+    <option value="running_stitch">{{ page.font_filter_category_running | default: site.data.ui-text[page.lang].font_filter_category_running | default: "Running Stitch" }}</option>
+    <option value="sans_serif">{{ page.font_filter_category_sans_serif | default: site.data.ui-text[page.lang].font_filter_category_sans_serif | default: "Sans Serif }}</option>
+    <option value="serif">{{ page.font_filter_category_serif | default: site.data.ui-text[page.lang].font_filter_category_serif | default: "Serif" }}</option>
+    <option value="tartan">{{ page.font_filter_category_tartan | default: site.data.ui-text[page.lang].font_filter_category_tartan | default: "Tartan" }}</option>
+    <option value="tiny">{{ page.font_filter_category_tiny | default: site.data.ui-text[page.lang].font_filter_category_tiny | default: "Tiny" }}</option>
+  </select>
+</form>
+
 {%- for font in fonts -%}
-<div class="font-separator">
+{%- assign min_size = 99999999 -%}
+{%- assign max_size = 0 -%}
+{%- assign categories = "" | split: ',' -%}
+{%- for sub_font in font.data_title -%}
+  {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
+  {% assign categories = categories | push: sub_font_data.keywords %}
+  {%- assign min_scale = sub_font_data.min_scale | times: sub_font_data.size -%}
+  {%- assign max_scale = sub_font_data.max_scale | times: sub_font_data.size -%}
+  {%- if min_scale < min_size -%}
+      {%- assign min_size = min_scale -%}
+  {%- endif -%}
+  {%- if max_scale > max_size -%}
+      {%- assign max_size = max_scale -%}
+  {%- endif -%}
+{% endfor %}
+
+<div class="font-separator" data-max_size="{{ max_size }}" data-min_size="{{ min_size }}" data-keywords="{{ categories | uniq | join: ',' }}">
   {%- for image in font.preview_image -%}
   {%- assign urlsize = image.url | size -%}
   {%- if urlsize < 15 -%}
@@ -15,3 +54,52 @@
   <p><a href="{{ font.permalink }}">{{ font.title }}</a></p>
 </div>
 {% endfor %}
+
+<script>
+var fontFilterForm = document.getElementById('font-filter');
+var sizeFilter = document.getElementById("size-filter")
+var categoryFilter = document.getElementById("style-filter")
+
+fontFilterForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    updateFontList();
+    return true;
+}, false);
+
+sizeFilter.addEventListener('change', updateFontList);
+categoryFilter.addEventListener('change', updateFontList);
+
+function updateFontList(){
+  let font_data = document.querySelectorAll('[data-max_size]');
+  for (var font of font_data) {
+    let max_size = parseFloat(font.getAttribute('data-max_size'));
+    let min_size = parseFloat(font.getAttribute('data-min_size'));
+
+    let keywords = font.getAttribute('data-keywords').split(",")
+    let selectedCategories = categoryFilter.selectedOptions;
+    selectedCategories = Array.from(selectedCategories).map(({ value }) => value);
+    selectedCategories = selectedCategories.filter(n => n)
+    let activeKeys = keywords.filter(key => selectedCategories.includes(key));
+
+    if ((sizeFilter.value && (max_size < sizeFilter.value || min_size > sizeFilter.value)) ||
+        (selectedCategories.length > 0 && activeKeys.length == 0)) {
+      font.style.display = 'none';
+    } else {
+      font.style.display = 'block';
+    }
+  }
+}
+
+document.getElementById('toggle-font-filter').addEventListener('click', toggleFilterForm);
+function toggleFilterForm() {
+if (fontFilterForm.style.display === "none") {
+    fontFilterForm.style.display = "block";
+  } else {
+    fontFilterForm.style.display = "none";
+  }
+}
+
+</script>
+<noscript>
+  Font filters deactivated. There is no JavaScript available.
+</noscript>

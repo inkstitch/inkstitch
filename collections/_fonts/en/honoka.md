@@ -6,8 +6,9 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/honoka.jpg
     height: 20
+data_title:
+  - honoka
 ---
-
 {%- assign font = site.data.fonts.honoka.font -%}
 
 ![Honoka](/assets/images/fonts/honoka.jpg)
@@ -36,6 +37,6 @@ up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max
 
 {% include folder-galleries path="fonts/honoka/" %}
 
-
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/honoka/LICENSE)

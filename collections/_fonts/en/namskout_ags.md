@@ -10,6 +10,8 @@ preview_image:
     height: 90
   - url: /assets/images/fonts/namskout_relief.png
     height: 90
+data_title:
+  - namskout_AGS
 ---
 {%- assign font = site.data.fonts.namskout_AGS.font -%}
 {%- assign font2 = site.data.fonts.namskout_relief.font -%}
@@ -18,7 +20,6 @@ preview_image:
 ![Namskout_relief](/assets/images/fonts/namskout_relief.png)
 
 ![NamskoutTartan](/assets/images/fonts/namskout_tartan.png)
-
 
 ## Glyphs
 
@@ -37,8 +38,11 @@ Namskout AGS and Namskout Tartan may be scaled up to 150% (approx. 150mm , 6 inc
 Namskout Relief  is more tolerant and  may  be scaled from 20% (approx 18mm 3/4 inch) to as big as your hoop can contain.
 
 ## How to use them
+
 ### Namskout  AGS
+
 Namskout AGS is  an appliqué font:
+
 * First color (red) is a placement stitch
 * Add your fabric to cover  the placement stitch
 * Second color (green) is a tack down
@@ -46,6 +50,7 @@ Namskout AGS is  an appliqué font:
 * Third color (black) stitches the satin  columns
 
 ### Namskout Relief
+
 As is, Namskout Relief is to be used this way :
 
 *  hoop some lining fabric
@@ -54,9 +59,7 @@ As is, Namskout Relief is to be used this way :
 * remove excess foam and install the “final” fabric.
 *  embroider the last color (blue): A quintuple stitch is embroidered around the letters.
 
-
-If you embroider several letters, it is possible to color sort. [Here is a way to do it](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
-
+If you embroider several letters, it is possible to color sort. [Here is a way to do it](/docs/lettering/#color-sorting)
 
 If you remove the stroke color from the green paths and replace it with a fill color, you can also use the font in the following way:
 * hoop the final fabric with the stabilizer.
@@ -68,14 +71,14 @@ If you remove the stroke color from the green paths and replace it with a fill c
 
 [More details (in  French) on using this font can be found here.](https://lyogau.over-blog.com/2024/06/broderie-en-relief-mousse-puffy-ou-autre.html)
 
-
-
 ###  Namskout Tartan
-Namskout Tartan is a  tartan font. Each letter has its own tartan, therefore embroidering it as is is not for the faint of heart ! Quite a few threads changes are required. However for a less work intense (but also less colorful) variation with only one tartan shared by all leters, see  [this](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) 
 
+Namskout Tartan is a  tartan font. Each letter has its own tartan, therefore embroidering it as is is not for the faint of heart ! Quite a few threads changes are required. However for a less work intense (but also less colorful) variation with only one tartan shared by all leters, see  [this](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) 
 
 ## In real life:
 
 {% include folder-galleries path="fonts/namskout_ags/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/namskout_AGS/LICENSE)

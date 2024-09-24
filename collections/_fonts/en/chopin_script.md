@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/chopin_script.jpg
     height: 59
+data_title:
+  - chopin
 ---
 {%- assign font = site.data.fonts.chopin.font -%}
 ![Chopin Script](/assets/images/fonts/chopin_script.jpg)
@@ -30,5 +32,7 @@ It can be scaled up to 120% (approx. 60 mm, 2.4 inches) or scaled down to 80% (a
 On cushions, towels, T shirt, fleece
 
 {% include folder-galleries path="fonts/chopin/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/chopin/LICENSE)

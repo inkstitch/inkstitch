@@ -6,7 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/milli_marif.jpg
     height: 20
-
+data_title:
+  - milli_marif_bold
 ---
 {%- assign font = site.data.fonts.milli_marif_bold.font -%}
 
@@ -29,10 +30,8 @@ It can be scaled up to 140% (approx 28 mm, 1.1 inches ) or scaled down to 75% (a
 
 ## In real life
 
-
-
-
-
 {% include folder-galleries path="fonts/milli_marif_bold/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/milli_marif_bold/LICENSE.txt)

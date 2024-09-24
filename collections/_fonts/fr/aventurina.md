@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/aventurina.jpg
     height: 20
+data_title:
+  - aventurina
 ---
 {%- assign font = site.data.fonts.aventurina.font -%}
 ![Aventurina](/assets/images/fonts/aventurina.jpg)

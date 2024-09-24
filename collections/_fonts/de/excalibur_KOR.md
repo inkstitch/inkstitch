@@ -8,11 +8,13 @@ preview_image:
     height: 19
   - url: /assets/images/fonts/excalibur_small.jpg
     height: 7
+data_title:
+  - excalibur_KOR
+  - excalibur_small
 ---
 {%- assign font = site.data.fonts.excalibur_KOR.font -%}
 ![ExcaliburKOR](/assets/images/fonts/excalibur_KOR.jpg)
 ![Excalibursmall](/assets/images/fonts/excalibur_small.jpg)
-
 
 ## Schriftzeichen
 
@@ -22,7 +24,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 
@@ -35,11 +36,9 @@ Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Excali
 
 Im Gegensatz zu Excalibur KOR **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-
 ## Impressionen
 
 {% include folder-galleries path="fonts/excalibur_KOR/" %}
-
 
 ## Lizenz
 

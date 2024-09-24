@@ -8,7 +8,9 @@ preview_image:
     height: 9
   - url: /assets/images/fonts/espresso_KOR.jpg
     height: 22
-
+data_title:
+  - espresso_KOR
+  - espresso_tiny
 ---
 {%- assign font = site.data.fonts.espresso_KOR.font -%}
 ![Espresso KOR](/assets/images/fonts/espresso_KOR.jpg)
@@ -49,5 +51,7 @@ A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 Espresso KOR used  on a child T shirt
 
 {% include folder-galleries path="fonts/espresso_KOR/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/espresso_KOR/LICENSE)

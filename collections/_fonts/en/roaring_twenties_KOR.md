@@ -8,6 +8,9 @@ preview_image:
     height: 20
   - url: /assets/images/fonts/roaring_twenties_KOR_small.jpg
     height: 11
+data_title:
+  - roaring_twenties_KOR
+  - roaring_twenties_KOR_small
 ---
 {%- assign font = site.data.fonts.roaring_twenties_KOR.font -%}
 
@@ -19,7 +22,6 @@ preview_image:
      src="/assets/images/fonts/roaring_twenties_KOR_small.jpg"
      alt="Roaring Twenties KOR Small" height="55">
 
-
 ## Glyphs
 
 This font contains  {{ font.glyphs.size }} glyphs:
@@ -28,7 +30,6 @@ This font contains  {{ font.glyphs.size }} glyphs:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 # Dimensions
 
@@ -46,11 +47,10 @@ That's why in the lettering dialog window, if using Roaring Twenties KOR Small, 
 Contrarily to Roaring Twenties KOR, ARoaring Twenties KOR Small font **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
-
 ## In real life
 
 {% include folder-galleries path="fonts/roaring_twenties_KOR/" %}
 
-
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roaring_twenties_KOR/LICENSE)

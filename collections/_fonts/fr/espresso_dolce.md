@@ -8,6 +8,9 @@ preview_image:
     height: 9
   - url: /assets/images/fonts/espresso_KOR.jpg
     height: 22
+data_title:
+  - espresso_KOR
+  - espresso_tiny
 ---
 {%- assign font = site.data.fonts.espresso_KOR.font -%}
 ![Espresso KOR](/assets/images/fonts/espresso_KOR.jpg)

@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/perspective_tricolore_KOR.png
     height: 14
+data_title:
+  - perspective_tricolore_KOR
 ---
 {%- assign font = site.data.fonts.perspective_tricolore_KOR.font -%}
 ![Perspective_Tricolore_KOR](/assets/images/fonts/perspective_tricolore_KOR.png)

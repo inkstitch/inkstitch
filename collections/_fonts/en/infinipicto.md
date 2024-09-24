@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/infinipicto.png
     height: 70
+data_title:
+  - infinipicto
 ---
 {%- assign font = site.data.fonts.infinipicto.font -%}
 ![InfiniPicto](/assets/images/fonts/infinipicto.png)
@@ -41,5 +43,7 @@ Beware, from the diversity of the drawings, no guarantee that colors appear in t
 InfiniPicto used on a T shirt :
 
 {% include folder-galleries path="fonts/infinipicto/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/infinipicto/LICENSE)

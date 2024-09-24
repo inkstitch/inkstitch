@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/dejavu_serif.jpg
     height: 22
+data_title:
+  - dejavufont
 ---
 {%- assign font = site.data.fonts.dejavufont.font -%}
 ## Serif Semi-condensed
@@ -36,5 +38,7 @@ Déja Vu may be embroidered left to right, right to left,  top to bottom orbotto
 Used by itself or with Amitaclo  and Magnolia KOR on conserve jars
 
 {% include folder-galleries path="fonts/dejavu/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/dejavufont/LICENSE)

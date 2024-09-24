@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/coronaviral.jpg
     height: 27
+data_title:
+  - coronaviral
 ---
 {%- assign font = site.data.fonts.coronaviral.font -%}
 ![Coronaviral](/assets/images/fonts/coronaviral.jpg)

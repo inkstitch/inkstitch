@@ -7,7 +7,10 @@ preview_image:
   - url: /assets/images/fonts/auberge_small.jpg
     height: 20
   - url: /assets/images/fonts/auberge_marif.jpg
-    height: 53
+    height: 50
+data_title:
+  - auberge_marif
+  - auberge_small
 ---
 {%- assign font = site.data.fonts.auberge_marif.font -%}
 ![auberge_marif](/assets/images/fonts/auberge_marif.jpg)

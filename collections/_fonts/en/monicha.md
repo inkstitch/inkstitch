@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/monicha.jpg
     height: 24
+data_title:
+  - monicha
 ---
 {%- assign font = site.data.fonts.monicha.font -%}
 ![monicha](/assets/images/fonts/monicha.jpg)
@@ -153,5 +155,7 @@ To access use this code:<br>
 ## In real life
 
 {% include folder-galleries path="fonts/monicha/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/monicha/LICENSE)

@@ -8,6 +8,8 @@ preview_image:
     height: 150
   - url: /assets/images/fonts/sortefax_medium.jpg
     height: 90
+data_title:
+  - sortefaxXL
 ---
 {%- assign font = site.data.fonts.sortefaxXL.font -%}
 ![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg)
@@ -74,5 +76,8 @@ Frame|Key
 ## In real life 
 
 {% include folder-galleries path="fonts/sortefax/" %}
+
+## License
+
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/sortefaxXL/LICENSE)

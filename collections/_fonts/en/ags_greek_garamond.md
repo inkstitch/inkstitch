@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/garamond.png
     height: 20
+data_title:
+  - ags_garamond_latin_grec
 ---
 {%- assign font = site.data.fonts.ags_garamond_latin_grec.font -%}
 ![AGS garamond](/assets/images/fonts/garamond.png)
@@ -29,6 +31,6 @@ It can be scaled up to 150%  (30mm, 1.25 inches) and scaled down to 80% (16mm  5
 
 {% include folder-galleries path="fonts/ags_greek_garamond/" %}
 
-
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/ags_greek_garamond/LICENSE)

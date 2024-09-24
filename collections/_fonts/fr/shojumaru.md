@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/shojumaru.png
     height: 20
+data_title:
+  - shojumaru
 ---
 {%- assign font = site.data.fonts.shojumaru.font -%}
 

@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/manuscript_gothisch.jpg
     height: 30
+data_title:
+  - manuskript_gotisch
 ---
 {%- assign font = site.data.fonts.manuskript_gotisch.font -%}
 ![ManuscriptGothisch](/assets/images/fonts/manuscript_gothisch.jpg)
@@ -28,5 +30,7 @@ It can be scaled up to 140% (approx. 42 mm, 1 2/3  inches) or scaled down to  70
 ## In real life
 
 {% include folder-galleries path="fonts/manuscript_gothisch/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/manuskript_gotisch/LICENSE)

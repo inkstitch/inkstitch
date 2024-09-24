@@ -5,7 +5,9 @@ last_modified_at: 2022-05-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/sacramarif.jpg
-    height: 28
+    height: 26
+data_title:
+  - sacramarif
 ---
 {%- assign font = site.data.fonts.sacramarif.font -%}
 ![Sacramarif](/assets/images/fonts/sacramarif.jpg)

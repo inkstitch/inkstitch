@@ -8,6 +8,8 @@ preview_image:
     height: 28
   - url: /assets/images/fonts/roman_AGS_bicolor.jpg
     height: 28
+data_title:
+  - roman_ags
 ---
 {%- assign font1 = site.data.fonts.roman_ags.font -%}
 {%- assign font2 = site.data.fonts.roman_ags_bicolor.font -%}

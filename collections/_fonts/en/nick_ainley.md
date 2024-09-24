@@ -5,6 +5,8 @@ last_modified_at: 2022-05-05
 preview_image:
   - url: /assets/images/fonts/nick_ainley.png
     height: 7
+data_title:
+  - nick_ainley
 ---
 {%- assign font = site.data.fonts.nick_ainley.font -%}
 ![Nick Ainley](/assets/images/fonts/nick_ainley.png)
@@ -27,5 +29,7 @@ It may be scaled  up to  300% (approx. 21 mm, 3/4 inch ) but should not be scale
 ## In real life
 
 {% include folder-galleries path="fonts/nick_ainley/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/nick_ainley/LICENSE)

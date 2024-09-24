@@ -10,6 +10,8 @@ preview_image:
     height: 90
   - url: /assets/images/fonts/namskout_relief.png
     height: 90
+data_title:
+  - namskout_AGS
 ---
 {%- assign font = site.data.fonts.namskout_AGS.font -%}
 {%- assign font2 = site.data.fonts.namskout_relief.font -%}

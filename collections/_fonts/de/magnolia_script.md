@@ -3,25 +3,27 @@ title: "Magnolia KOR"
 permalink: /de/fonts/magnolia-script/
 last_modified_at: 2024-04-21
 toc: false
-
 preview_image:
   - url: /assets/images/fonts/magnolia_small.jpg
-    height: 11
+    height: 15
   - url: /assets/images/fonts/magnolia_KOR.jpg
     height: 31
   - url: /assets/images/fonts/magnolia_bicolor.png
     height: 47
-
+data_title:
+  - magnolia_KOR
+  - magnolia_small
+  - magnolia_bicolor
 ---
 {%- assign font = site.data.fonts.magnolia_KOR.font -%}
 
 <img 
      src="/assets/images/fonts/magnolia_small.jpg"
-     alt="Emilio20" height="50">
+     alt="Magnolia KOR" height="50">
 
 <img 
      src="/assets/images/fonts/magnolia_KOR.jpg"
-     alt="Emilio20" height="100">
+     alt="Magnolia KOR" height="100">
 
 <img 
      src="/assets/images/fonts/magnolia_bicolor.png"
@@ -35,7 +37,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 

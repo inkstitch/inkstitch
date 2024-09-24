@@ -6,11 +6,12 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/cats.jpg
     height: 40
+data_title:
+  - cats
 ---
 {%- assign font = site.data.fonts.cats.font -%}
 
 ![Cats](/assets/images/fonts/cats.jpg)
-
 
 ## Schriftzeichen
 
@@ -20,7 +21,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 
@@ -32,7 +32,6 @@ Die aufgestellten Haare der Katze werden durch randomisierte Parameter in den Sa
 ## Impressionen
 
 {% include folder-galleries path="fonts/cats/" %}
-
 
 ## Lizenz
 

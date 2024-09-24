@@ -1,7 +1,7 @@
 ---
 title: "Namskout AGS"
 permalink: /de/fonts/namskout_ags/
-last_modified_at: 2023-05-25
+last_modified_at: 2024-06-22
 toc: false
 preview_image:
   - url: /assets/images/fonts/namskout_AGS.jpg
@@ -10,6 +10,8 @@ preview_image:
     height: 90
   - url: /assets/images/fonts/namskout_relief.png
     height: 90
+data_title:
+  - namskout_AGS
 ---
 {%- assign font = site.data.fonts.namskout_AGS.font -%}
 {%- assign font2 = site.data.fonts.namskout_relief.font -%}
@@ -19,7 +21,6 @@ preview_image:
 
 ![NamskoutTartan](/assets/images/fonts/namskout_tartan.png)
 
-
 ## Schriftzeichen
 
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
@@ -28,7 +29,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 ### Namskout AGS und Namskout Tartan
@@ -51,39 +51,34 @@ Namskout AGS ist eine Applikationsschrift:
 * dritte Farbe (schwarz) ist die Satinsäule für einen schönen Randabschluss
 
 ### Namskout Relief
-As is, Namskout Relief is to be used this way :
 
-*  hoop some lining fabric
-* embroider the first color (red). It is a positioning running stitch which indicates where to place the foam to obtain a relief effect.
-* place the foam on top and then embroider the second color (green): this triple stitch will cut out the foam.
-* remove excess foam and install the “final” fabric.
-*  embroider the last color (blue): A quintuple stitch is embroidered around the letters.
+Namskout Relief kann folgendermaßen verwendet werden:
 
+* Spanne den Stoff ein
+* Die erste Farbe (rot) sticken. Dieser Stich gibt die Position vor, an welche das 3D Vlies platziert werden soll.
+  Nun kann die zweite Farbe (grün) gestickt werden: Durch diesen Dreifachstich wird das 3D Vlies ausgeschnitten.
+* Überschüssiges Vlies entfernen und den Deckstoff auflegen
+* letzte Farbe (blau) sticken: Ein Fünffachstich wird um die Buchstaben gestickt.
 
-If you embroider several letters, it is possible to color sort. [Here is a way to do it](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
+Wenn mehrere Buchstaben gestickt werden, ist eine farbliche Sortierung möglich. [Anleitung](/de/docs/lettering/#farben-sortieren)
 
+Ersetzt man die Konturfarbe aus den grünen Pfaden durch eine Füllfarbe, kann die Schriftart auch folgendermaßen verwendendet werden:
+* den Stoff mit dem Vlies einspannen
+* die Füllstiche (z. B. eine Schottenmusterfüllung oder eine Füllung mit linearem Farbverlauf) sticken
+* 3D Vlies auf der Rückseite des Stabilisators ankleben
+* die zweite Farbe (Rot) sticken: durch diesen Dreifachstich wird das 3D Vlies durchtrennt
+* Überschüssigs 3D Vlies entfernen und eine Folie unter den 3D Vlies legen
+* Die letzte Farbe (blau) sticken: Ein Fünffachstich wird um die Buchstaben herum gestickt, sodass das 3D-Vlies zwischen dem Futter und dem fertigen Stoff liegt.
 
-If you remove the stroke color from the green paths and replace it with a fill color, you can also use the font in the following way:
-* hoop the final fabric with the stabilizer.
-* embroider the fill stitches(for example a tartan filling or a linear gradient filling).
-* tape the foam to the back of the stabilizer.
-* embroider the second color (red): this triple stitch will cut the foam.
-* remove excess foam and place a liner under the foam.
-* embroider the last color (blue): A quintuple stitch is embroidered around the letters, sandwiching the foam between the lining and the final fabric.
-
-[More details (in  French) on using this font can be found here.](https://lyogau.over-blog.com/2024/06/broderie-en-relief-mousse-puffy-ou-autre.html)
-
-
+[Weitere Details (auf Französisch) zur Verwendung dieser Schriftart gibt es hier.](https://lyogau.over-blog.com/2024/06/broderie-en-relief-mousse-puffy-ou-autre.html)
 
 ###  Namskout Tartan
 
 Namskout Tartan ist eine Tartan-Schrift. Jeder Buchstabe hat ein eigenes Tartan-Muster. Daher ist das Sticken dieser Schrift nichts für schwache Nerven, denn es gibt sehr viele Farbwechsel. Durch eine Variation mit nur einem Tartan-Muster, kann dieser Prozess kann erheblich vereinfacht werden - allerdings wird das Stockergebnis dadurch auch weniger farbenfroh. Mehr Informationen wie das geht gibt es im Tutorial [Farbwechsel bei Tartan-Schriften reduzieren](https://inkstitch.org/de/tutorials/make_tartan_font_easier/)
 
-
 ## Impressionen
 
 {% include folder-galleries path="fonts/namskout_ags/" %}
-
 
 ## Lizenz
 

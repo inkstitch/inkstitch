@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/nick_ainley.png
     height: 7
+data_title:
+  - nick_ainley
 ---
 {%- assign font = site.data.fonts.nick_ainley.font -%}
 ![Nick Ainley](/assets/images/fonts/nick_ainley.png)

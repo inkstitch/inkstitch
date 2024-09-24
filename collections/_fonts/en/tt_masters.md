@@ -6,9 +6,10 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/tt_masters.jpg
     height: 20
+data_title:
+  - tt_masters
 ---
 {%- assign font = site.data.fonts.tt_masters.font -%}
-
 ![TT Masters](/assets/images/fonts/tt_masters.jpg)
 
 ## Glyphs
@@ -35,5 +36,7 @@ It is possible to stitch lines of text back and forth.
 ## In real life 
 
 {% include folder-galleries path="fonts/TT_masters/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/tt_masters/LICENSE)

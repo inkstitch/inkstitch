@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/fold_inkstitch.jpg
     height: 63
+data_title:
+  - fold_inkstitch
 ---
 {%- assign font = site.data.fonts.fold_inkstitch.font -%}
 ![FoldInkstitch](/assets/images/fonts/fold_inkstitch.jpg)

@@ -3,12 +3,16 @@ title: "Ondulamarif"
 permalink: /de/fonts/ondulamarif/
 last_modified_at: 2024-05-25
 preview_image:
-  - url: /assets/images/fonts/ondulamarif_XL.png
+  - url: /assets/images/fonts/ondulamarif_xl.png
     height: 110
-  - url: /assets/images/fonts/ondulamarif_Medium.png
+  - url: /assets/images/fonts/ondulamarif_medium.png
     height: 82
   - url: /assets/images/fonts/ondulamarif_small.png
     height: 44
+data_title:
+  - ondulamarif_S
+  - ondulamarif_Medium
+  - ondulamarif_XL
 ---
 {%- assign font3 = site.data.fonts.ondulamarif_S.font -%}
 {%- assign font2 = site.data.fonts.ondulamarif_Medium.font -%}
@@ -30,7 +34,6 @@ Diese Schrift umfasst  {{ font1.glyphs.size }} Zeichen:
 {{ font1.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ### Maße
 
@@ -60,7 +63,6 @@ Diese Schrift umfasst {{ font2.glyphs.size }} Zeichen:
 Diese Variante kann von {{ font2.min_scale | times: 100 | floor }}% ({{ font1.size | times: font2.min_scale }} mm)
 bis zu {{ font2.max_scale | times: 100 | floor }}% ({{ font1.size | times: font2.max_scale }} mm) skaliert werdens.
 
-
 ## Ondulamarif Small
 
 <img 
@@ -83,7 +85,6 @@ Diese Schrift umfasst {{ font3.glyphs.size }} Zeichen:
 Diese Variante kann von {{ font3.min_scale | times: 100 | floor }}% ({{ font1.size | times: font3.min_scale }} mm)
 bis zu {{ font3.max_scale | times: 100 | floor }}% ({{ font1.size | times: fon3.max_scale }} mm) skaliert werden.
 
-
 ## Farben sortieren
 
 In der zweifarbigen Variante ist es sinnvoll die Farben zu sortieren. Dabei sollte die Objekt-Reihenfolge innerhalb einer Farbe eines Zeichens unbedingt beibehalten werden. Eine genauere Beschreibung gibt es beim Text-Modul im Abschnitt [Farben sortieren](/de/docs/lettering/#farben-sortieren).
@@ -99,7 +100,6 @@ Mit mehrfarbigem Garn kann diese Schrift trotzdem farbenfroh sein.
 ## Impressionen
 
 {% include folder-galleries path="fonts/ondulamarif/" %}
-
 
 ## Lizenz
 

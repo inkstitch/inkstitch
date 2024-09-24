@@ -8,6 +8,9 @@ preview_image:
     height: 12
   - url: /assets/images/fonts/amitaclo.jpg
     height: 30
+data_title:
+  - amitaclo
+  - amitaclo_small
 ---
 {%- assign font = site.data.fonts.amitaclo.font -%}
 ![Amitaclo](/assets/images/fonts/amitaclo.jpg)

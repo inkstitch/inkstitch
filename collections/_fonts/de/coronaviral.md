@@ -6,10 +6,11 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/coronaviral.jpg
     height: 27
+data_title:
+  - coronaviral
 ---
 {%- assign font = site.data.fonts.coronaviral.font -%}
 ![Coronaviral](/assets/images/fonts/coronaviral.jpg)
-
 
 ## Schriftzeichen
 
@@ -20,12 +21,10 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-
 ## Maße
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 27 mm hoch (1 Zoll).
 Da diese Schriftart manuelle Stichpositionierung nutzt, sollte sie nicht oder nur geringfügig skaliert werden.
-
 
 ## Impressionen
 

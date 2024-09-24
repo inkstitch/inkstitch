@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/kaushan_script_MAM.jpg
     height: 36
+data_title:
+  - kaushan_script_MAM
 ---
 {%- assign font = site.data.fonts.kaushan_script_MAM.font -%}
 ![KaushanScript](/assets/images/fonts/kaushan_script_MAM.jpg)

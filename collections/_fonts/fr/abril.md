@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/abril_en_fleur.jpg
     height: 100
+data_title:
+  - abril
 ---
 {%- assign font = site.data.fonts.abril.font -%}
 ![April En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)

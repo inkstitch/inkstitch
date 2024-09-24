@@ -8,11 +8,12 @@ preview_image:
     height: 32
   - url: /assets/images/fonts/baumans_FI_small.jpg
     height: 10
+data_title:
+  - baumans_FI
 ---
 {%- assign font = site.data.fonts.baumans_FI.font -%}
 ![Baumans](/assets/images/fonts/baumans_fi.jpg)
 ![Baumans](/assets/images/fonts/baumans_FI_small.jpg)
-
 
 ## Schriftzeichen
 
@@ -22,12 +23,10 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
  
 ## Besonderheiten
 
 Baumans FI kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts, rechts nach links usw. gestickt werden.
-
 
 ## Maße
 
@@ -40,11 +39,9 @@ Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Bauman
 
 Im Gegensatz zu Baumans FI **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-
 ## Impressionen
 
 {% include folder-galleries path="fonts/baumans/" %}
-
 
 ## Lizenz
 

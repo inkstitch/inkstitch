@@ -9,6 +9,10 @@ preview_image:
     height: 82
   - url: /assets/images/fonts/ondulamarif_small.png
     height: 44
+data_title:
+  - ondulamarif_S
+  - ondulamarif_Medium
+  - ondulamarif_XL
 ---
 {%- assign font3 = site.data.fonts.ondulamarif_S.font -%}
 {%- assign font2 = site.data.fonts.ondulamarif_Medium.font -%}

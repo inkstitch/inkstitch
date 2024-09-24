@@ -8,6 +8,8 @@ preview_image:
     height: 150
   - url: /assets/images/fonts/sortefax_medium.jpg
     height: 90
+data_title:
+  - sortefaxXL
 ---
 {%- assign font = site.data.fonts.sortefax_medium.font -%}
 

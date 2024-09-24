@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/violin_serif.jpg
     height: 19
+data_title:
+  - violin_serif
 ---
 {%- assign font = site.data.fonts.violin_serif.font -%}
 

@@ -6,11 +6,12 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/invercelia.png
     height: 90
+data_title:
+  - invercelia
 ---
 {%- assign font = site.data.fonts.invercelia.font -%}
 
 ![Invercellia](/assets/images/fonts/invercelia.png)
-
 
 ## Schriftzeichen
 
@@ -21,7 +22,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-
 ## Maße
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr {{ font.size }} mm groß.
@@ -29,11 +29,9 @@ Bei einer Skalierung auf 100 % ist diese Schrift ungefähr {{ font.size }} mm gr
 Sie kann bis auf {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm) hochskaliert 
 und bis zu {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm) herunterskaliert werden.
 
-
 ## Impressionen
 
 {% include folder-galleries path="fonts/invercelia/" %}
-
 
 ## Lizenz
 

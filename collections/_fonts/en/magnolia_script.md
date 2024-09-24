@@ -10,6 +10,10 @@ preview_image:
     height: 31
   - url: /assets/images/fonts/magnolia_bicolor.png
     height: 47
+data_title:
+  - magnolia_KOR
+  - magnolia_small
+  - magnolia_bicolor
 ---
 {%- assign font = site.data.fonts.magnolia_KOR.font -%}
 
@@ -24,7 +28,6 @@ preview_image:
 <img 
      src="/assets/images/fonts/magnolia_bicolor.png"
      alt="Magnolia KOR" height="150">
-
 
 ## Glyphs
 
@@ -61,5 +64,7 @@ If you use Magnolia bicolor , you may wish to color sort. It is possible, provid
 ## In real life
 
 {% include folder-galleries path="fonts/magnolia_KOR/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/magnolia_%20KOR/LICENSE)

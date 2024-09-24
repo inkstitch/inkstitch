@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/brockscript.jpg
     height: 45
+data_title:
+  - Brockscript
 ---
 {%- assign font = site.data.fonts.Brockscript.font -%}
 ![Brockscript](/assets/images/fonts/brockscript.jpg)

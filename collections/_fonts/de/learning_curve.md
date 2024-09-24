@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/learning_curve.jpg
     height: 25
+data_title:
+  - learning_curve
 ---
 {%- assign font = site.data.fonts.learning_curve.font -%}
 ![LearningCurve](/assets/images/fonts/learning_curve.jpg)
@@ -18,7 +20,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 

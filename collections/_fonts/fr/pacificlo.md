@@ -8,6 +8,9 @@ preview_image:
     height: 8
   - url: /assets/images/fonts/pacificlo.jpg
     height: 20
+data_title:
+  - pacificlo
+  - pacificlo_tiny
 ---
 {%- assign font = site.data.fonts.pacificlo.font -%}
 ![Pacificlo](/assets/images/fonts/pacificlo.jpg)

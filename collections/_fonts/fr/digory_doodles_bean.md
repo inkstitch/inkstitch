@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/digory_doodles_bean.jpg
     height: 28
+data_title:
+  - digory_doodles_bean
 ---
 {%- assign font = site.data.fonts.digory_doodles_bean.font -%}
 ![Digory Doodles Bean](/assets/images/fonts/digory_doodles_bean.jpg)

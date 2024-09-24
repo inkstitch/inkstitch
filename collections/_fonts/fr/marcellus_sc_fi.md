@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/marcellus_sc_fi.jpg
     height: 29
+data_title:
+  - marcelusSC_FI
 ---
 {%- assign font = site.data.fonts.marcelusSC_FI.font -%}
 ![MarcellusSCFI](/assets/images/fonts/marcellus_sc_fi.jpg)

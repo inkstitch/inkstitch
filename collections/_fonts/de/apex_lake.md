@@ -8,10 +8,12 @@ preview_image:
    height: 60
  - url: /assets/images/fonts/apex_simple_AGS.jpg
    height: 35
+data_title:
+  - apex_lake
+  - apex_simple_AGS
 ---
 {%- assign font1 = site.data.fonts.apex_lake.font -%}
 {%- assign font2 = site.data.fonts.apex_simple_AGS.font -%}
-
 
 ![Apex Lake](/assets/images/fonts/apex_lake.jpg)
 
@@ -20,7 +22,6 @@ preview_image:
 ## Schriftzeichen
 
 Glyphen sind identisch (bis auf die Dekoration)
-
 
 
 ### Apex Lake
@@ -32,7 +33,6 @@ Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-
 ### Apex Simple AGS
 
 Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
@@ -41,7 +41,6 @@ Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 {{ font2.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Besonderheiten
 
@@ -57,7 +56,6 @@ Die beiden Versionen passen gut zusammen. Es bietet sich an für den ersten Buch
 
 ![Both_Apex](/assets/images/fonts/both_apex.png)
 
-
 ## Maße
 
 ### Apex Lake
@@ -69,18 +67,15 @@ Mit einer Skalierung von 100% ist sie ca. 60 mm hoch. Sie kann bis zu 80% verkle
 
 Mit einer Skalierung von 100% ist sie ca. 35 mm hoch. Sie kann bis zu 75% verkleinert (25mm) und bis zu 300% vergrößert (100mm) werden.
 
-
 ## Farben sortieren
 
 Wenn man mehrere Buchstaben sticken möchte, kann man die Farben sortieren. Das ist möglich, man muss aber die relative Reihenfolge innerhalb der einzelnen Buchstaben beachten. [So geht's](https://inkstitch.org/de/docs/lettering/#sortierung-von-farben)
-
 
 ## Impressionen
 
 Wie wäre es auf einem schicken T-Shirt? Oder auf einem Stoffkorb?
 
 {%include folder-galleries path="fonts/apex-lake/" %}
-
 
 ## Lizenz
 

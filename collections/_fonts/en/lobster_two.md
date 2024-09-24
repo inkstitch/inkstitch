@@ -6,9 +6,10 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/lobster_AGS.jpg
     height: 27
+data_title:
+  - lobster_AGS
 ---
 {%- assign font = site.data.fonts.lobster_AGS.font -%}
-
 ## Bold Italic
 
 ![Lobster AGS](/assets/images/fonts/lobster_AGS.jpg)
@@ -31,5 +32,7 @@ It can be scaled up to 150% (approx. 33 mm, 1 1/4 inches) or scaled down to  80%
 ## In real life
 
 {% include folder-galleries path="fonts/lobster_ags/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/lobster_AGS/LICENSE)

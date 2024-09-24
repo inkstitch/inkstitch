@@ -8,12 +8,14 @@ preview_image:
     height: 12
   - url: /assets/images/fonts/amitaclo.jpg
     height: 30
+data_title:
+  - amitaclo
+  - amitaclo_small
 ---
 {%- assign font = site.data.fonts.amitaclo.font -%}
 ![Amitaclo](/assets/images/fonts/amitaclo.jpg)
 
 ![Amitaclo small](/assets/images/fonts/amitaclo-small.jpg)
-
 
 ## Schriftzeichen
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
@@ -22,7 +24,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 
@@ -40,13 +41,11 @@ Wenn Sie Amitaclo small wählen, werden Sie im Dialogfenster für die Beschriftu
 
 Im Gegensatz zu Amitaclo **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-
 ## Impressionen
 
 Gemeinsam mit Déjà Vu und Magnolia KOR auf Einmachgläsern verwendet
 
 {%include folder-galleries path="fonts/amitaclo/" %}
-
 
 ## Lizenz
 

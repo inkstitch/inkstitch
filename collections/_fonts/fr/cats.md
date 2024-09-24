@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/cats.jpg
     height: 40
+data_title:
+  - cats
 ---
 {%- assign font = site.data.fonts.cats.font -%}
 

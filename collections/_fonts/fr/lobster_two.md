@@ -7,6 +7,8 @@ preview_image: /assets/images/fonts/lobster_two_bold_italic.png
 preview_image:
   - url: /assets/images/fonts/lobster_AGS.jpg
     height: 27
+data_title:
+  - lobster_AGS
 ---
 {%- assign font = site.data.fonts.lobster_AGS.font -%}
 ## Bold Italic

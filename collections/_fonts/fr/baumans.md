@@ -8,6 +8,8 @@ preview_image:
     height: 32
   - url: /assets/images/fonts/baumans_FI_small.jpg
     height: 10
+data_title:
+  - baumans_FI
 ---
 {%- assign font = site.data.fonts.baumans_FI.font -%}
 ![Baumans](/assets/images/fonts/baumans_fi.jpg)

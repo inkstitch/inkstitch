@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/sacramarif.jpg
     height: 26
+data_title:
+  - sacramarif
 ---
 {%- assign font = site.data.fonts.sacramarif.font -%}
 ![Sacramarif](/assets/images/fonts/sacramarif.jpg)
@@ -27,5 +29,7 @@ it can be scaled up to 150% (approx 42 mm, 1.5 inch) or down  to  80% (approx 22
 ## In real life
 
 {% include folder-galleries path="fonts/sacramarif/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/sacramarif/LICENSE)

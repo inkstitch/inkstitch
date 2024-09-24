@@ -6,10 +6,11 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/digory_doodles_bean.jpg
     height: 28
+data_title:
+  - digory_doodles_bean
 ---
 {%- assign font = site.data.fonts.digory_doodles_bean.font -%}
 ![Digory Doodles Bean](/assets/images/fonts/digory_doodles_bean.jpg)
-
 
 ## Schriftzeichen
 
@@ -22,17 +23,14 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-
 ## Maße
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 22 mm hoch (1 Zoll)
 Sie kann bis auf 200% (~44mm, 2 Zoll) hochskaliert, aber NICHT herunterskaliert werden.
 
-
 ## Impressionen
 
 {% include folder-galleries path="fonts/digory-doodles-bean/" %}
-
 
 ## Lizenz
 

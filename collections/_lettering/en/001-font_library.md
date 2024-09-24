@@ -9,7 +9,6 @@ toc: false
 ---
 {% include font_list %}
 
-
-
 ## Ink/Stitch fonts in action
+
 {% include folder-galleries path="fonts/multiple/" %}

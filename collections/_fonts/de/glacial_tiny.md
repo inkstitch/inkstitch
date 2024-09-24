@@ -6,10 +6,11 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/glacial_tiny_60_AGS.jpg
     height: 8
+data_title:
+  - glacial_tiny
 ---
 {%- assign font = site.data.fonts.glacial_tiny.font -%}
 ![glacial_tiny](/assets/images/fonts/glacial_tiny_60_AGS.jpg)
-
 
 ## Schriftzeichen
 
@@ -20,11 +21,9 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-
 ## Besonderheiten
 
 Diese Schrift kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts oder von rechts nach links gestickt werden.
-
 
 ## Maße
 
@@ -48,7 +47,6 @@ Im Gegensatz zu Espresso KOR **MUSS** diese verkleinerte Schrift mit einem dünn
 Auf einem Kissen, einem T-Shirt und gemeinsam mit Grand Hotel Marif auf einer Schürze
 
 {% include folder-galleries path="fonts/glacial_tiny/" %}
-
 
 ## Lizenz
 

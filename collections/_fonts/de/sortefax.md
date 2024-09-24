@@ -8,12 +8,13 @@ preview_image:
     height: 150
   - url: /assets/images/fonts/sortefax_medium.jpg
     height: 90
+data_title:
+  - sortefaxXL
 ---
 {%- assign font = site.data.fonts.sortefaxXL.font -%}
 ![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg)
 
 ![Sortefax_medium](/assets/images/fonts/sortefax_medium.jpg)
-
 
 ## Schriftzeichen
 
@@ -22,7 +23,6 @@ Diese Schrift enthält folgende 47 Schriftzeichen:
 ?.:;,([{)]}&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 
 Anmerkung: Diese Schriftzeichen :;,.(){}[] werden genutzt um die Rahmen zu speichern.
-
 
 ## Maße
 
@@ -72,11 +72,9 @@ Rahmen|Zeichen
 ![DeuxPoints](/assets/images/fonts/sortefax/deuxpoints.png)|<key>:</key>
 ![PointVirgule](/assets/images/fonts/sortefax/pointvirgule.png)|<key>;</key>
 
-
 ## Impressionen
 
 {% include folder-galleries path="fonts/sortefax/" %}
-
 
 ## Lizenz
 

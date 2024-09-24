@@ -8,6 +8,9 @@ preview_image:
     height: 20
   - url: /assets/images/fonts/roaring_twenties_KOR_small.jpg
     height: 11
+data_title:
+  - roaring_twenties_KOR
+  - roaring_twenties_KOR_small
 ---
 {%- assign font = site.data.fonts.roaring_twenties_KOR.font -%}
 

@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/dinomouse72.png
     height: 20
+data_title:
+  - dinomouse72
 ---
 {%- assign font = site.data.fonts.dinomouse72.font -%}
 ![DinoMouse 72](/assets/images/fonts/dinomouse72.png)
@@ -28,5 +30,7 @@ It may be scaled  up to 300% (approx. 60 mm, 2.5 inches ) or down to  50% (appro
 ## In real life
 
 {% include folder-galleries path="fonts/dinomouse72/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/dinomouse72/LICENSE)

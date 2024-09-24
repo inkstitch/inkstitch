@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/colorful.png
     height: 35
+data_title:
+  - colorful
 ---
 {%- assign font = site.data.fonts.colorful.font -%}
 

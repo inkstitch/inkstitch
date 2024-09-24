@@ -6,12 +6,12 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/milli_marif.jpg
     height: 20
-
+data_title:
+  - milli_marif_bold
 ---
 {%- assign font = site.data.fonts.milli_marif_bold.font -%}
 
 ![Milli_Marif](/assets/images/fonts/milli_marif.jpg)
-
 
 ## Schriftzeichen
 
@@ -21,7 +21,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 
@@ -34,4 +33,5 @@ Sie kann bis auf 140% (~28 mm, 1 1/! Zoll) hochskaliert und bis zu 75% (~15 mm, 
 {% include folder-galleries path="fonts/milli_marif_bold/" %}
 
 ## Lizenz
+
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/milli_marif_bold/LICENSE.txt)

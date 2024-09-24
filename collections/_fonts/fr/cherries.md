@@ -8,6 +8,9 @@ preview_image:
     height: 65
   - url: /assets/images/fonts/cherry_for_kaalleen.png
     height: 75
+data_title:
+  - cherryforinkstitch
+  - cherryforkaalleen
 ---
 {%- assign font1 = site.data.fonts.cherryforinkstitch.font -%}
 {%- assign font2 = site.data.fonts.cherryforkaalleen.font -%}

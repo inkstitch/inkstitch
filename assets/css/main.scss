@@ -554,6 +554,7 @@ a img:hover {
 div.font-separator {
     border-bottom: 2px solid lightgrey;
     margin-bottom: 1em;
+    overflow: hidden;
 }
 
 div.font-separator img {
@@ -589,6 +590,27 @@ div.font-separator-test {
 .font-glyphs pre {
     white-space: break-spaces;
     padding: 0 !important;
+}
+
+/* Font filter */
+
+button#toggle-font-filter {
+    background: #003399;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 16pt;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+form#font-filter {
+    margin-bottom: 1em;
+    margin-top: -1em;
+}
+
+form#font-filter select {
+    width: 100%;
 }
 
 /* Machine Database */

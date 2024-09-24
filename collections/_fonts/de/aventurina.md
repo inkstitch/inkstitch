@@ -6,11 +6,11 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/aventurina.jpg
     height: 20
+data_title:
+  - aventurina
 ---
 {%- assign font = site.data.fonts.aventurina.font -%}
 ![Aventurina](/assets/images/fonts/aventurina.jpg)
-
-Dies ist Teil einer kommenden Ink/Stitch-Version und nicht in Ink/Stitch v2.1.2 verfügbar.
 
 
 ## Schriftzeichen
@@ -22,12 +22,10 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-
 ## Maße
 
 Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 20 mm hoch (3/4 Zoll)
 Sie kann bis zu 150% (~30mm, 1.25 Zoll) und bis zu 60% (~12mm, 0.5 Zoll) skaliert werden.
-
 
 ## Impressionen
 

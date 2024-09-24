@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/infinipicto.png
     height: 70
+data_title:
+  - infinipicto
 ---
 {%- assign font = site.data.fonts.infinipicto.font -%}
 ![InfiniPicto](/assets/images/fonts/infinipicto.png)

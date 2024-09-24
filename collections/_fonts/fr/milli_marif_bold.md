@@ -6,7 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/milli_marif.jpg
     height: 20
-
+data_title:
+  - milli_marif_bold
 ---
 {%- assign font = site.data.fonts.milli_marif_bold.font -%}
 

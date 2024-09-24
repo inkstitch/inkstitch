@@ -5,7 +5,9 @@ last_modified_at: 2022-05-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/monicha.jpg
-    height: 20
+    height: 24
+data_title:
+  - monicha
 ---
 {%- assign font = site.data.fonts.monicha.font -%}
 ![monicha](/assets/images/fonts/monicha.jpg)

@@ -6,10 +6,11 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/abril_en_fleur.jpg
     height: 100
+data_title:
+  - abril
 ---
 {%- assign font = site.data.fonts.abril.font -%}
 ![April En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)
-
 
 ## Schriftzeichen
 
@@ -20,7 +21,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-
 ## Maße
 
 Bei einer Skalierung von 100% ist die Schrift ungefährt 100 mm (4 inch) hoch.
@@ -30,7 +30,6 @@ Sie kann bis zu 150% vergrößert (150 mm, 6 inch), bzw. auf 80% verkleinert wer
 ## Impressionen
 
 {% include folder-galleries path="fonts/abril/" %}
-
 
 ## Lizenz
 

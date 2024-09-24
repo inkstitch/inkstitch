@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/marcellus_sc_fi.jpg
     height: 29
+data_title:
+  - marcelusSC_FI
 ---
 {%- assign font = site.data.fonts.marcelusSC_FI.font -%}
 ![MarcellusSCFI](/assets/images/fonts/marcellus_sc_fi.jpg)
@@ -32,5 +34,7 @@ The embroidering parameters allow you to scale up further, but then too long sti
 ## In real life
 
 {% include folder-galleries path="fonts/marcellus/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/marcelusSC_FI/LICENSE)

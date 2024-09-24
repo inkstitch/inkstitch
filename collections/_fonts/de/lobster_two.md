@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/lobster_AGS.jpg
     height: 27
+data_title:
+  - lobster_AGS
 ---
 {%- assign font = site.data.fonts.lobster_AGS.font -%}
 ## Bold Italic
@@ -20,7 +22,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 

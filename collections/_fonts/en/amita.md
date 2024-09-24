@@ -8,6 +8,9 @@ preview_image:
     height: 12
   - url: /assets/images/fonts/amitaclo.jpg
     height: 30
+data_title:
+  - amitaclo
+  - amitaclo_small
 ---
 {%- assign font = site.data.fonts.amitaclo.font -%}
 ![Amitaclo](/assets/images/fonts/amitaclo.jpg)
@@ -31,10 +34,9 @@ It can be scaled up to 200% (approx 60 mm, 2.4 inches ) or scaled down to 80% (a
 
 ![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
 
-Don't try to scale it further down. 
+Don't try to scale it further down.
 
-Amitaclo small  is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (16mm,2/3 inch) and 25% (7mm ,1/4 inch). 
-
+Amitaclo small is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 55% (16mm,2/3 inch) and 25% (7mm ,1/4 inch). 
 
 That's why in the lettering dialog window, if using amitaclo small, you will have to pick up a scale between 25 and 55%. 
 
@@ -46,5 +48,7 @@ A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 Used in conjunction with  Déjà Vu and  Magnolia KOR on the preserve jars
 
 {%include folder-galleries path="fonts/amitaclo/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/amitaclo/LICENSE)

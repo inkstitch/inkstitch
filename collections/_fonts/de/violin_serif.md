@@ -6,11 +6,11 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/violin_serif.jpg
     height: 19
+data_title:
+  - violin_serif
 ---
 {%- assign font = site.data.fonts.violin_serif.font -%}
-
 ![violin serif](/assets/images/fonts/violin_serif.jpg)
-
 
 ## Schriftzeichen
 
@@ -21,16 +21,13 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-
 ## Maße
 
 Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 19mm (0.75 in) hoch. Sie kann bis auf 120% (~ 23mm, 1 Zoll) hochskaliert und bis zu 80% (~ 15 mm, 2/3 Zoll) herunterskaliert werden.
 
-
 ## Impressionen
 
 {%include folder-galleries path="fonts/violin_serif/" %}
-
 
 ## Lizenz
 

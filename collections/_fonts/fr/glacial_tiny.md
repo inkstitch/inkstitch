@@ -5,6 +5,8 @@ last_modified_at: 2022-06-12
 preview_image:
   - url: /assets/images/fonts/glacial_tiny_60_AGS.jpg
     height: 8
+data_title:
+  - glacial_tiny
 ---
 {%- assign font = site.data.fonts.glacial_tiny.font -%}
 ![glacial_tiny](/assets/images/fonts/glacial_tiny_60_AGS.jpg)

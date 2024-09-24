@@ -16,6 +16,16 @@ preview_image:
    height: 100
  - url: /assets/images/fonts/emilio_20_simple_small.jpg
    height: 17
+ - url: /assets/images/fonts/emilio_tartan.png
+   height: 45
+data_title:
+  - emilio_20
+  - emilio_20_bold
+  - emilio_20_simple
+  - emilio_20_tartan
+  - emilio_20_applique
+  - emilio_20_tricolore
+  - emilio_20_simple_small
 ---
 {%- assign font = site.data.fonts.emilio_20.font -%}
 
@@ -50,7 +60,7 @@ preview_image:
      
  <img 
      src="/assets/images/fonts/emilio_20_all_versions_english.png"
-     alt="Comparaison des Emilio 20" >
+     alt="Comparison Emilio 20 fonts" >
      
 ## Glyphs
 
@@ -115,6 +125,8 @@ If you embroider several letters and are not using the tartan variation you may 
 ## In real life
 
 {% include folder-galleries path="fonts/emilio-20/" %}
+
+## License
 
 [Download Emilio Simple Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/emilio_20_simple/LICENSE)
 

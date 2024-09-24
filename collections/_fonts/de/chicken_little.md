@@ -8,12 +8,14 @@ preview_image:
     height: 20
   - url: /assets/images/fonts/chicken_little_KOR.jpg
     height: 53
+data_title:
+  - chicken_little
+  - chicken_little_small
 ---
 {%- assign font = site.data.fonts.chicken_little.font -%}
 ![Chicken Little KOR](/assets/images/fonts/chicken_little_KOR.jpg)
 
 ![Chicken Little](/assets/images/fonts/chicken_little_KOR_small.jpg)
-
 
 ## Schriftzeichen
 
@@ -23,7 +25,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 
@@ -38,11 +39,9 @@ Deshalb muss man im Dialogfenster des Text-Moduls für die Nutzung von Chicken L
 
 Im Gegensatz zu Chicken Little KOR, **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-
 ## Impressionen
 
 {% include folder-galleries path="fonts/chicken_little/" %}
-
 
 ## Lizenz
 

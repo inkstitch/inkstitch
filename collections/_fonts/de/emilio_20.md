@@ -16,8 +16,17 @@ preview_image:
    height: 100
  - url: /assets/images/fonts/emilio_20_simple_small.jpg
    height: 17
+ - url: /assets/images/fonts/emilio_tartan.png
+   height: 45
+data_title:
+  - emilio_20
+  - emilio_20_bold
+  - emilio_20_simple
+  - emilio_20_tartan
+  - emilio_20_applique
+  - emilio_20_tricolore
+  - emilio_20_simple_small
 ---
-
 {%- assign font = site.data.fonts.emilio_20.font -%}
 
 <img 
@@ -44,15 +53,14 @@ preview_image:
      src="/assets/images/fonts/emilio_tricolore.jpg"
      alt="Emilio 20 Tricolore" height="50">
 
- <img 
+<img 
      src="/assets/images/fonts/emilio_tartan.png"
      alt="Emilio 20 Tartan" height="45">
 
      
  <img 
      src="/assets/images/fonts/emilio_20_all_versions_english.png"
-     alt="Comparaison des Emilio 20" >
-
+     alt="Vergleich der Emilio 20 Schriftfamilie" >
 
 ## Schriftzeichen
 
@@ -62,7 +70,6 @@ Jeweils fünf  Schriften enthalten  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 
@@ -110,7 +117,6 @@ Sie kann von 150 % (ca. 66 mm, 2.5 zoll) bis zu 65 % (ca. 30 mm, 1.25 zoll). ska
 
 Emilio 20 Tartan ist eine weitere Emilio Varante, die aussieht wie eine Applikation aber voll gestickt wird. Die Satinsäule ist deutlich leichter als die der anderen Emilio Variationen. Jeder Buchstabe hat ein eigenes Tartan-Muster - das ist, aufgrund der vielen Farbwechsel, nichts für Svhwache Nerven! Durch eine Variation mit nur einem Tartan-Muster, kann dieser Prozess kann erheblich vereinfacht werden - allerdings wird das Stockergebnis dadurch auch weniger farbenfroh. Mehr Informationen wie das geht gibt es im Tutorial [Farbwechsel bei Tartan-Schriften reduzieren](https://inkstitch.org/de/tutorials/make_tartan_font_easier/)
 
-
 ## Farben sortieren
 
 Dieser Abschnitt gilt nicht für die Tartan-Variante.
@@ -121,7 +127,6 @@ Wenn man mehrere Buchstaben sticken möchte, kann man die Farben sortieren. Das 
 ## Impressionen
 
 {% include folder-galleries path="fonts/emilio-20/" %}
-
 
 ## Lizenz
 

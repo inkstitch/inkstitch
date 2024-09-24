@@ -10,11 +10,15 @@ preview_image:
   - url: /assets/images/fonts/inkstitch_medium.jpg
     height: 19
     title: "Ink/Stitch Medium"
+data_title:
+  - small_font
+  - medium_font
 ---
-{%- assign font = site.data.fonts.small_font.font -%}
+{%- assign font1 = site.data.fonts.small_font.font -%}
+{%- assign font2 = site.data.fonts.medium_font.font -%}
+
 ![Ink/Stitch Small](/assets/images/fonts/inkstitch_small.jpg)
 ![Ink/Stitch Medium](/assets/images/fonts/inkstitch_medium.jpg)
-
 
 ## Schriftzeichen
 
@@ -24,7 +28,6 @@ Beide Schriften umfassen {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 
@@ -40,7 +43,6 @@ Bei einer Skalierung von 100% ist die Schrift ca. 19 mm (3/4 Zoll) hoch.
 
 Sie kann bis auf 150% (~ 29 mm, 1 1/8 Zoll) hochskaliert und bis zu 75% (~14 mm, 1/2 Zoll) verkleinert werden.
 
-
 ## Besonderheiten
 
 Beide Schriften sind in beide Richtungen stickbar. Bei mehrzeiligen Texten kann die Richtung variieren.
@@ -49,7 +51,6 @@ Beide Schriften sind in beide Richtungen stickbar. Bei mehrzeiligen Texten kann 
 ## Impressionen
 
 {% include folder-galleries path="fonts/inkstitch/" %}
-
 
 ## Lizenz
 

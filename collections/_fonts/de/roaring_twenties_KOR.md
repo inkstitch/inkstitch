@@ -8,6 +8,9 @@ preview_image:
     height: 20
   - url: /assets/images/fonts/roaring_twenties_KOR_small.jpg
     height: 11
+data_title:
+  - roaring_twenties_KOR
+  - roaring_twenties_KOR_small
 ---
 {%- assign font = site.data.fonts.roaring_twenties_KOR.font -%}
 
@@ -19,7 +22,6 @@ preview_image:
      src="/assets/images/fonts/roaring_twenties_KOR_small.jpg"
      alt="Roaring Twenties KOR Small" height="55">
 
-
 ## Schriftzeichen
 
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
@@ -29,13 +31,11 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-
 ## Maße
 
 Wenn man die Schrift auf 100% nutzt, ist sie ca. 20 mm groß.
 
 Man kann sie bis zu 150% (ca. 30 mm) vergrößern oder auf 75% (ca. 15  mm) verkleinern.
-
 
 Bitte nicht versuchen die Schrift kleiner zu Sticken, dass kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
 

@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/brockscript.jpg
     height: 45
+data_title:
+  - Brockscript
 ---
 {%- assign font = site.data.fonts.Brockscript.font -%}
 ![Brockscript](/assets/images/fonts/brockscript.jpg)
@@ -26,6 +28,7 @@ At 100%, this font  is  approximatively 40 mm (1.5  inch) high.
 It may be  scaled up to 250% (approx:  100 mm 4 inches)  but may not be scaled down.
 
 ## Too  christmassy for you ?
+
 The µ  glyph has been hacked to store this embroidery ![Brockscript](/assets/images/fonts/brockscriptmu.png)
 that contain 4 alternatives to the holly. 
 
@@ -41,5 +44,6 @@ Brockscript may be used on a Towel ,or a  T shirt, or as an ornament:
 
 {% include folder-galleries path="fonts/brockscript/" %}
 
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/Brockscript/LICENSE)

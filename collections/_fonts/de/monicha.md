@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/monicha.jpg
     height: 24
+data_title:
+  - monicha
 ---
 {%- assign font = site.data.fonts.monicha.font -%}
 ![monicha](/assets/images/fonts/monicha.jpg)
@@ -18,7 +20,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 

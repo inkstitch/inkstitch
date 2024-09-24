@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/cats.jpg
     height: 40
+data_title:
+  - cats
 ---
 {%- assign font = site.data.fonts.cats.font -%}
 
@@ -30,6 +32,9 @@ up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max
 The cats' ruffled hairs are due to the addition of randomness parameters on the satin columns. For more relaxed cats, copy the setting of a non  random satin  to all the random satins.
 
 ## In real life
+
 {% include folder-galleries path="fonts/cats/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/cats/LICENSE)

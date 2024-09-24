@@ -8,6 +8,8 @@ preview_image:
     height: 28
   - url: /assets/images/fonts/roman_AGS_bicolor.jpg
     height: 28
+data_title:
+  - roman_ags
 ---
 {%- assign font1 = site.data.fonts.roman_ags.font -%}
 {%- assign font2 = site.data.fonts.roman_ags_bicolor.font -%}
@@ -19,7 +21,6 @@ preview_image:
 <img 
      src="/assets/images/fonts/roman_AGS_bicolor.jpg"
      alt="Roman AGS_bicolor" height="60">
-
 
 ## Glyphs
 
@@ -62,6 +63,8 @@ If you use bicolor  letters, you may wish to color sort. It is possible, providi
 ## In real life
 
 {% include folder-galleries path="fonts/roman_AGS/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roman_ags_bicolor/LICENSE)
 

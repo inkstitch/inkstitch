@@ -6,10 +6,11 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/dinomouse72.png
     height: 20
+data_title:
+  - dinomouse72
 ---
 {%- assign font = site.data.fonts.dinomouse72.font -%}
 ![DinoMouse 72](/assets/images/fonts/dinomouse72.png)
-
 
 ## Schriftzeichen
 
@@ -19,7 +20,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 

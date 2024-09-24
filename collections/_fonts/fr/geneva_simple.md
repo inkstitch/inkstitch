@@ -8,6 +8,9 @@ preview_image:
     height: 13
   - url: /assets/images/fonts/geneva_simple_sans_rounded.jpg
     height: 13
+data_title:
+  - geneva_rounded
+  - geneva_simple
 ---
 {%- assign font2 = site.data.fonts.geneva_rounded.font -%}
 {%- assign font1 = site.data.fonts.geneva_simple.font -%}

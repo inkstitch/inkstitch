@@ -8,15 +8,16 @@ preview_image:
     height: 13
   - url: /assets/images/fonts/geneva_simple_sans_rounded.jpg
     height: 13
+data_title:
+  - geneva_rounded
+  - geneva_simple
 ---
 {%- assign font2 = site.data.fonts.geneva_rounded.font -%}
 {%- assign font1 = site.data.fonts.geneva_simple.font -%}
 
-
 ## Sans
 
 ![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans.jpg)
-
 
 ### Schriftzeichen
 
@@ -26,7 +27,6 @@ Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
 {{ font1.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Sans Rounded
 
@@ -40,7 +40,6 @@ Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 {{ font2.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Maße
 

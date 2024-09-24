@@ -4,8 +4,6 @@ permalink: /fr/fonts/emilio-20/
 last_modified_at: 2024-04-29
 toc: false
 preview_image:
- - url: /assets/images/fonts/emilio_20_simple_small.jpg
-   height: 17
  - url: /assets/images/fonts/emilio_simple.png
    height: 42
  - url: /assets/images/fonts/emilio_20_bold.png
@@ -16,8 +14,18 @@ preview_image:
    height: 48
  - url: /assets/images/fonts/emilio_tricolore.jpg
    height: 100
+ - url: /assets/images/fonts/emilio_20_simple_small.jpg
+   height: 17
  - url: /assets/images/fonts/emilio_tartan.png
    height: 45
+data_title:
+  - emilio_20
+  - emilio_20_bold
+  - emilio_20_simple
+  - emilio_20_tartan
+  - emilio_20_applique
+  - emilio_20_tricolore
+  - emilio_20_simple_small
 ---
 {%- assign font = site.data.fonts.emilio_20.font -%}
 

@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/chopin_script.jpg
     height: 59
+data_title:
+  - chopin
 ---
 {%- assign font = site.data.fonts.chopin.font -%} 
 ![Chopin Script](/assets/images/fonts/chopin_script.jpg)

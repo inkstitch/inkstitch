@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/tt_masters.jpg
     height: 20
+data_title:
+  - tt_masters
 ---
 {%- assign font = site.data.fonts.tt_masters.font -%}
 ![TT Masters](/assets/images/fonts/tt_masters.jpg)

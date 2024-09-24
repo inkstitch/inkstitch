@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/honoka.jpg
     height: 20
+data_title:
+  - honoka
 ---
 
 {%- assign font = site.data.fonts.honoka.font -%}

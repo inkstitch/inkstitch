@@ -8,6 +8,9 @@ preview_image:
     height: 8
   - url: /assets/images/fonts/pacificlo.jpg
     height: 20
+data_title:
+  - pacificlo
+  - pacificlo_tiny
 ---
 {%- assign font = site.data.fonts.pacificlo.font -%}
 ![Pacificlo](/assets/images/fonts/pacificlo.jpg)
@@ -43,5 +46,7 @@ A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 ## In real life
 
 {% include folder-galleries path="fonts/pacificlo/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/pacificlo/LICENSE)

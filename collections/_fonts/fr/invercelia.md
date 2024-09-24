@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/invercelia.png
     height: 90
+data_title:
+  - invercelia
 ---
 {%- assign font = site.data.fonts.invercelia.font -%}
 

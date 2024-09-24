@@ -8,6 +8,9 @@ preview_image:
     height: 20
   - url: /assets/images/fonts/chicken_little_KOR.jpg
     height: 53
+data_title:
+  - chicken_little
+  - chicken_little_small
 ---
 {%- assign font = site.data.fonts.chicken_little.font -%}
 ![Chicken Little KOR](/assets/images/fonts/chicken_little_KOR.jpg)

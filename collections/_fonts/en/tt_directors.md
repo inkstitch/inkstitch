@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/tt_directors.jpg
     height: 20
+data_title:
+  - tt_directors
 ---
 {%- assign font = site.data.fonts.tt_directors.font -%}
 ![TT Directors](/assets/images/fonts/tt_directors.jpg)
@@ -30,5 +32,7 @@ It may be scaled up to  500% (approx 100 mm 4 inch ) but should not be scaled do
 This font use Auto Route Satin.
 
 It is possible to stitch lines of text back and forth.
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/tt_directors/LICENSE)

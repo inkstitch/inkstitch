@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/abecedaire.jpg
     height: 14
+data_title:
+  - abecedaire
 ---
 {%- assign font = site.data.fonts.abecedaire.font -%}
 

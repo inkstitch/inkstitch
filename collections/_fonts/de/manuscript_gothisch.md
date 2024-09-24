@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/manuscript_gothisch.jpg
     height: 30
+data_title:
+  - manuskript_gotisch
 ---
 {%- assign font = site.data.fonts.manuskript_gotisch.font -%}
 ![ManuscriptGothisch](/assets/images/fonts/manuscript_gothisch.jpg)

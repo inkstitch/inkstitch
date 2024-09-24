@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/dejavu_serif.jpg
     height: 22
+data_title:
+  - dejavufont
 ---
 {%- assign font = site.data.fonts.dejavufont.font -%}
 ## Serif Semi-condensed

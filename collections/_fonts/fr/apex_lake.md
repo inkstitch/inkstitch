@@ -8,6 +8,9 @@ preview_image:
    height: 60
  - url: /assets/images/fonts/apex_simple_AGS.jpg
    height: 35
+data_title:
+  - apex_lake
+  - apex_simple_AGS
 ---
 {%- assign font1 = site.data.fonts.apex_lake.font -%}
 {%- assign font2 = site.data.fonts.apex_simple_AGS.font -%}

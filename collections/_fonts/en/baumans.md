@@ -8,8 +8,9 @@ preview_image:
     height: 32
   - url: /assets/images/fonts/baumans_FI_small.jpg
     height: 10
+data_title:
+  - baumans_FI
 ---
-
 {%- assign font = site.data.fonts.baumans_FI.font -%}
 ![Baumans](/assets/images/fonts/baumans_fi.jpg)
 ![Baumans](/assets/images/fonts/baumans_FI_small.jpg)
@@ -28,6 +29,7 @@ This font contains  {{ font.glyphs.size }} glyphs:
 Baumans FI is reversible : a multi line embroidery  may be  embroidered in alternate directions
 
 ## Dimensions
+
 At a scale of 100% this font has an approximate height of {{ font.size }} mm. 
 
 It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
@@ -39,9 +41,10 @@ That's why in the lettering dialog window, if using Baumans FI Small, you will h
 Contrarly to Baumans FI, Baumans FI Small  **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
-
 ## In real life
 
 {% include folder-galleries path="fonts/baumans/" %}
+
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/baumans_FI/LICENSE)

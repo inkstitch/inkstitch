@@ -6,6 +6,8 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/cooper_marif.png
     height: 90
+data_title:
+  - cooper_marif
 ---
 {%- assign font = site.data.fonts.cooper_marif.font -%}
 ![Cooper Marif](/assets/images/fonts/cooper_marif.png)
