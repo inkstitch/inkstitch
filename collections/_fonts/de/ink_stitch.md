@@ -25,7 +25,7 @@ data_title:
 Beide Schriften umfassen {{ font.glyphs.size }} Schriftzeichen:
 
 ```
-{{ font.glyphs | sort | join: ' ' }}
+{{ font1.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
