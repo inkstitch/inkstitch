@@ -70,6 +70,8 @@ en: &DEFAULT_EN
   font_filter_category_serif: "Serif"
   font_filter_category_tartan: "Tartan"
   font_filter_category_tiny: "Tiny"
+  font_filter_glyph_label:   "Glyphs"
+  font_filter_counter_label: "fonts"
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -208,6 +210,8 @@ fr: &DEFAULT_FR
   font_filter_category_serif: "Serif"
   font_filter_category_tartan: "Tartan"
   font_filter_category_tiny: "Petite"
+  font_filter_glyph_label:   "Glyphes"
+  font_filter_counter_label: "polices"
 fr-FR:
   <<: *DEFAULT_FR
 fr-BE:
@@ -611,6 +615,8 @@ de: &DEFAULT_DE
   font_filter_category_serif: "Serifen"
   font_filter_category_tartan: "Tartan"
   font_filter_category_tiny: "Kleine Schriftgrößen"
+  font_filter_glyph_label:   "Zeichen"
+  font_filter_counter_label: "Schriftarten"
 de-DE:
   <<: *DEFAULT_DE
 de-AT:

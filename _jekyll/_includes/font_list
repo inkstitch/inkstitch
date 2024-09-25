@@ -21,8 +21,9 @@
     <option value="tartan">{{ page.font_filter_category_tartan | default: site.data.ui-text[page.lang].font_filter_category_tartan | default: "Tartan" }}</option>
     <option value="tiny">{{ page.font_filter_category_tiny | default: site.data.ui-text[page.lang].font_filter_category_tiny | default: "Tiny" }}</option>
   </select>
-  <label for="glyph-filter">{{ page.font_filter_glyph_label | default: site.data.ui-text[page.lang].font_filter_glyph_label | default: "Glyph" }}</label>
+  <label for="glyph-filter">{{ page.font_filter_glyph_label | default: site.data.ui-text[page.lang].font_filter_glyph_label | default: "Glyphs" }}</label>
   <input type="text" id="glyph-filter" name="glyph-filter">
+  <p class="font-counter"><span id="font-counter"></span> {{ page.font_filter_counter_label | default: site.data.ui-text[page.lang].font_filter_counter_label | default: "fonts" }}</p>
 </form>
 
 {%- for font in fonts -%}
@@ -71,9 +72,19 @@ fontFilterForm.addEventListener('submit', function(event) {
     return true;
 }, false);
 
+document.getElementById('toggle-font-filter').addEventListener('click', toggleFilterForm);
 sizeFilter.addEventListener('change', updateFontList);
 categoryFilter.addEventListener('change', updateFontList);
 glyphFilter.addEventListener('change', updateFontList);
+document.addEventListener("DOMContentLoaded", updateFontList);
+
+function toggleFilterForm() {
+if (fontFilterForm.style.display === "none") {
+    fontFilterForm.style.display = "block";
+  } else {
+    fontFilterForm.style.display = "none";
+  }
+}
 
 function updateFontList(){
   let font_data = document.querySelectorAll('[data-max_size]');
@@ -99,17 +110,9 @@ function updateFontList(){
       font.style.display = 'block';
     }
   }
+  let countVisible = document.querySelectorAll(".font-separator:not([style='display: none;'])").length;
+  document.getElementById('font-counter').innerHTML = countVisible
 }
-
-document.getElementById('toggle-font-filter').addEventListener('click', toggleFilterForm);
-function toggleFilterForm() {
-if (fontFilterForm.style.display === "none") {
-    fontFilterForm.style.display = "block";
-  } else {
-    fontFilterForm.style.display = "none";
-  }
-}
-
 </script>
 <noscript>
   Font filters deactivated. There is no JavaScript available.
