@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch on Linux"
 permalink: /docs/install-linux/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2023-10-22
+last_modified_at: 2024-09-25
 toc: true
 ---
 {% comment %}
@@ -95,6 +95,13 @@ A version for **NixOS** is externally maintained and available at [https://codeb
 Arch Linux users can use an AUR package: [https://aur.archlinux.org/packages/inkstitch](https://aur.archlinux.org/packages/inkstitch)
 
 ## Run Ink/Stitch
+
+<div class="notice--warning">The current Ink/Stitch version has known issues with **wayland**. If you use wayland, start Inkscape with the following command
+  <div class="language-plaintext highlighter-rouge" style="margin-top: 1em;">
+    <div class="highlight"><pre class="highlight"><code>export GDK_BACKEND=x11 && inkscape</code></pre></div>
+  </div>
+</div>
+
 Restart Inkscape.
 
 You will then find Ink/Stitch under `Extensions > Ink/Stitch`.
@@ -145,11 +152,23 @@ Some users report false ownership/permissions can cause this issue.
 This error has been reported to us by users who have installed Inkscape through snap. Snap is known to cause issues for Ink/Stitch to run with Inkscape.
 Please try an other installing method. Any described on [https://inkscape.org/](https://inkscape.org/releases/latest/) will be fine. 
 
-### Ink/Stitch dialogs disappear after a few seconds
+### Some Ink/Stitch dialogs disappear after a few seconds or don't show up at all
 
-This issue can be caused by wayland. Start Inkscape with the following command: `export GDK_BACKEND=x11 && inkscape`.
+This issue can be caused by wayland. Start Inkscape with the following command:
+
+```export GDK_BACKEND=x11 && inkscape```
 
 This workaround has to be used until we moved all Ink/Stitch applications to the electron environment. 
+
+### ImportError: libnsl.so.1: cannot open shared object file. No such file or directory
+
+Install the missing library.
+
+For example on **Fedora** install libnsl with the following command
+
+```
+sudo dnf install libnsl
+```
 
 ### I installed Ink/Stitch in my native language, but the dialogue windows are displayed in English
 

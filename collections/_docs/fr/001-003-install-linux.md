@@ -91,6 +91,12 @@ Les utilisateurs d'Arch Linux peuvent utiliser un paquet AUR: [https://aur.archl
 
 ## Exécuter Ink/Stitch
 
+<div class="notice--warning">The current Ink/Stitch version has known issues with **wayland**. If you use wayland, start Inkscape with the following command
+  <div class="language-plaintext highlighter-rouge" style="margin-top: 1em;">
+    <div class="highlight"><pre class="highlight"><code>export GDK_BACKEND=x11 && inkscape</code></pre></div>
+  </div>
+</div>
+
 Redémarrez Inkscape.
 
 Vous trouverez alors Ink/Stitch sous `Extensions > Ink/Stitch`.
@@ -153,12 +159,21 @@ Certains utilisateurs ont signaler des problèmes dus à un mauvais propriétair
 
 Cette erreur a été signalée par des utilisateurs qui ont installé Inkscape via snap. Snap est connu pour causer des problèmes d'installation d'Ink/Stitch dans Inkscape. Merci d'essayer une autre méthode d'installation. N'importe quelle méthode décrite ici [https://inkscape.org/](https://inkscape.org/releases/latest/) convient. 
 
-### Les dialogues Ink/Stitch disparaissent après quelques secondes
+### Some dialogues Ink/Stitch disparaissent après quelques secondes or don't show up at all
 
 Ce problème peut être causé par wayland. Démarrez Inkscape avec la commande suivante: `export GDK_BACKEND=x11 && inkscape`.
 
 Cette solution de contournement doit être utilisé jusqu'à ce que nous ayons déployées toutes les applications Ink/Stitch dans l'environnement electron.
 
+### ImportError: libnsl.so.1: cannot open shared object file. No such file or directory
+
+Install the missing library.
+
+For example on **Fedora** install libnsl with the following command
+
+```
+sudo dnf install libnsl
+```
 
 ### J'ai installé Ink/Stitch dans ma langue maternelle, mais les fenêtres de dialogue sont affichées en anglais!
 

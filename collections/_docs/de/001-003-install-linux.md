@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch für Linux"
 permalink: /de/docs/install-linux/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2023-10-22
+last_modified_at: 2024-09-25
 toc: true
 ---
 {% comment %}
@@ -95,6 +95,13 @@ Eine Version für NixOS wird extern betreut und kann unter [https://codeberg.org
 ArchLinux-Nutzer können ein AUR-Packet nutzen: [https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch](https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch)
 
 ## Ink/Stitch öffnen
+
+<div class="notice--warning">Die aktuelle Ink/Stitch Version hat bekannte Probleme mit **Wayland**. Wenn du Wayland benutzt, starte Inkscape mit dem folgenden Befehlt
+  <div class="language-plaintext highlighter-rouge" style="margin-top: 1em;">
+    <div class="highlight"><pre class="highlight"><code>export GDK_BACKEND=x11 && inkscape</code></pre></div>
+  </div>
+</div>
+
 Starte Inkscape neu.
 
 Ink/Stitch befindet sich nun unter `Erweiterungen > Ink/Stitch`.
@@ -139,11 +146,25 @@ Für Linux findest du den Download-Link unter [Herunterladen](#herunterladen) ob
 
 Einige Nutzer berichten, dass falsche Nutzereinstellungen, bzw. Nutzerrechte der Ink/Stitch-Dateien dieses Problem herbeiführen.
 
-### Ink/Stitch Fenster verschwinden kurz nach dem Aufruf wieder
+### Einige Ink/Stitch Dialoge verschwinden kurz nach dem Aufruf wieder oder erscheinen gar nicht
 
-Dieser Fehler kann durch wayland verursacht werden. Starte Inkscape mit folgendem Befehl: `export GDK_BACKEND=x11 && inkscape`
+Dieser Fehler kann durch wayland verursacht werden. Starte Inkscape mit folgendem Befehl:
+
+```
+export GDK_BACKEND=x11 && inkscape
+```
 
 Nutze diesen Workaround bis wir die gesamte Oberfläche auf electron umgestellt haben.
+
+### ImportError: libnsl.so.1: cannot open shared object file. No such file or directory
+
+Install the missing library.
+
+For example on **Fedora** install libnsl with the following command
+
+```
+sudo dnf install libnsl
+```
 
 ### AttributeError: 'NoneType' object has no attribute 'title' in inkstitch.py
 
