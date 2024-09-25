@@ -72,6 +72,12 @@ html[lang="ru"] body{
     }
 }
 
+p.btn a {
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 nobr {
   white-space: nowrap;
 }
@@ -377,6 +383,10 @@ table.inline-table {
     border-radius: unset;
     margin-top: 0;
     margin-bottom: 1em;
+}
+
+div.text-left {
+    text-align: left;
 }
 
 /* Gallery */

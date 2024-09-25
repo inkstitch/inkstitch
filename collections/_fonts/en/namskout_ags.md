@@ -12,6 +12,8 @@ preview_image:
     height: 90
 data_title:
   - namskout_AGS
+  - namskout_relief
+  - namskout_tartan
 ---
 {%- assign font = site.data.fonts.namskout_AGS.font -%}
 {%- assign font2 = site.data.fonts.namskout_relief.font -%}
