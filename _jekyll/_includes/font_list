@@ -21,15 +21,19 @@
     <option value="tartan">{{ page.font_filter_category_tartan | default: site.data.ui-text[page.lang].font_filter_category_tartan | default: "Tartan" }}</option>
     <option value="tiny">{{ page.font_filter_category_tiny | default: site.data.ui-text[page.lang].font_filter_category_tiny | default: "Tiny" }}</option>
   </select>
+  <label for="glyph-filter">{{ page.font_filter_glyph_label | default: site.data.ui-text[page.lang].font_filter_glyph_label | default: "Glyph" }}</label>
+  <input type="text" id="glyph-filter" name="glyph-filter">
 </form>
 
 {%- for font in fonts -%}
 {%- assign min_size = 99999999 -%}
 {%- assign max_size = 0 -%}
 {%- assign categories = "" | split: ',' -%}
+{%- assign glyphs = "" | split: ',' -%}
 {%- for sub_font in font.data_title -%}
   {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
-  {% assign categories = categories | push: sub_font_data.keywords %}
+  {%- assign categories = categories | push: sub_font_data.keywords -%}
+  {%- assign glyphs = glyphs | push: sub_font_data.glyphs -%}
   {%- assign min_scale = sub_font_data.min_scale | times: sub_font_data.size -%}
   {%- assign max_scale = sub_font_data.max_scale | times: sub_font_data.size -%}
   {%- if min_scale < min_size -%}
@@ -40,7 +44,7 @@
   {%- endif -%}
 {% endfor %}
 
-<div class="font-separator" data-max_size="{{ max_size }}" data-min_size="{{ min_size }}" data-keywords="{{ categories | uniq | join: ',' }}">
+<div class="font-separator" data-max_size="{{ max_size }}" data-min_size="{{ min_size }}" data-keywords="{{ categories | uniq | join: ',' }}" data-glyphs="{{ glyphs | uniq | join: ' ' | escape}}">
   {%- for image in font.preview_image -%}
   {%- assign urlsize = image.url | size -%}
   {%- if urlsize < 15 -%}
@@ -57,8 +61,9 @@
 
 <script>
 var fontFilterForm = document.getElementById('font-filter');
-var sizeFilter = document.getElementById("size-filter")
-var categoryFilter = document.getElementById("style-filter")
+var sizeFilter = document.getElementById("size-filter");
+var categoryFilter = document.getElementById("style-filter");
+var glyphFilter = document.getElementById("glyph-filter");
 
 fontFilterForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -68,6 +73,7 @@ fontFilterForm.addEventListener('submit', function(event) {
 
 sizeFilter.addEventListener('change', updateFontList);
 categoryFilter.addEventListener('change', updateFontList);
+glyphFilter.addEventListener('change', updateFontList);
 
 function updateFontList(){
   let font_data = document.querySelectorAll('[data-max_size]');
@@ -75,14 +81,19 @@ function updateFontList(){
     let max_size = parseFloat(font.getAttribute('data-max_size'));
     let min_size = parseFloat(font.getAttribute('data-min_size'));
 
-    let keywords = font.getAttribute('data-keywords').split(",")
+    let keywords = font.getAttribute('data-keywords').split(",");
     let selectedCategories = categoryFilter.selectedOptions;
     selectedCategories = Array.from(selectedCategories).map(({ value }) => value);
-    selectedCategories = selectedCategories.filter(n => n)
+    selectedCategories = selectedCategories.filter(n => n);
     let activeKeys = keywords.filter(key => selectedCategories.includes(key));
 
+    let glyphs = font.getAttribute('data-glyphs').split(" ");
+    let selectedGlyphs = Array.from(new Set(glyphFilter.value.replace(/\s/g, "").split("")));
+
     if ((sizeFilter.value && (max_size < sizeFilter.value || min_size > sizeFilter.value)) ||
-        (selectedCategories.length > 0 && activeKeys.length == 0)) {
+        (selectedCategories.length > 0 && activeKeys.length == 0) ||
+        (selectedGlyphs.length > 0 && !selectedGlyphs.every(glyph => glyphs.includes(glyph)))
+       ) {
       font.style.display = 'none';
     } else {
       font.style.display = 'block';

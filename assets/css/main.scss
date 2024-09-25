@@ -561,6 +561,11 @@ a img:hover {
     }
 }
 
+div.font-separator:first-of-type {
+    padding-top: 1em;
+    border-top: 2px solid lightgray;
+}
+
 div.font-separator {
     border-bottom: 2px solid lightgrey;
     margin-bottom: 1em;
