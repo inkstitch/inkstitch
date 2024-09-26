@@ -1,7 +1,7 @@
 ---
 title: "Magnolia KOR"
 permalink: /de/fonts/magnolia-script/
-last_modified_at: 2024-04-21
+last_modified_at: 2024-05-29
 toc: false
 preview_image:
   - url: /assets/images/fonts/magnolia_small.jpg
@@ -10,16 +10,19 @@ preview_image:
     height: 31
   - url: /assets/images/fonts/magnolia_bicolor.png
     height: 47
+  - url: /assets/images/fonts/magnolia_tamed.png
+    height: 47
 data_title:
   - magnolia_KOR
   - magnolia_small
   - magnolia_bicolor
+  - magnolia_tamed
 ---
 {%- assign font = site.data.fonts.magnolia_KOR.font -%}
 
 <img 
      src="/assets/images/fonts/magnolia_small.jpg"
-     alt="Magnolia KOR" height="50">
+     alt="Magnolia small" height="50">
 
 <img 
      src="/assets/images/fonts/magnolia_KOR.jpg"
@@ -27,7 +30,13 @@ data_title:
 
 <img 
      src="/assets/images/fonts/magnolia_bicolor.png"
-     alt="Magnolia KOR" height="150">
+     alt="Magnolia bicolor" height="150">
+
+{% include upcoming_release.html %}
+
+<img 
+     src="/assets/images/fonts/magnolia_tamed.png"
+     alt="Magnolia tamed" height="150">
 
 ## Schriftzeichen
 
@@ -54,13 +63,13 @@ Deshalb müssen Sie im Dialogfenster des Text-Moduls für die Nutzung von Magnol
 
 Im Gegensatz zu Magnolia KOR  **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-### Magnolia Bicolor
+### Magnolia Bicolor / Magnolia tamed
 
-Magnolia Bicolor is approximatively 45 mm (2 inches) tall.  It can be scaled up to 150% (approx. 67 mm, 3  inches) or scaled down to  70% (approx.  31 mm, 1.25 inch).
+Magnolia bicolor / Magnolia tamed sind ungefähr 45 mm (2 inch) hoch und können von 70% (ca. 31 mm, 1.25 inc) bis zu 150 % (ca. 67 mm, 3 inch) skaliert werden.
 
-## Color sorting
+## Farben sortieren
 
-If you use Magnolia bicolor , you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
+Wenn du Magnolia bicolor oder Magnolia tamed nutzt, kann es Sinn machen die einzelnen Elemente nach Farben zu sortieren. Dies ist möglich sofern die relative Reihenfolge der Elemente beibehalten wird. [Mehr Infos zur Farbsortierung](/de/docs/lettering/#farben-sortieren)
 
 ## Impressionen
 

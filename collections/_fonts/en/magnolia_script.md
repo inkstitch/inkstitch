@@ -10,16 +10,19 @@ preview_image:
     height: 31
   - url: /assets/images/fonts/magnolia_bicolor.png
     height: 47
+  - url: /assets/images/fonts/magnolia_tamed.png
+    height: 47
 data_title:
   - magnolia_KOR
   - magnolia_small
   - magnolia_bicolor
+  - magnolia_tamed
 ---
 {%- assign font = site.data.fonts.magnolia_KOR.font -%}
 
 <img 
      src="/assets/images/fonts/magnolia_small.jpg"
-     alt="Magnolia KOR" height="50">
+     alt="Magnolia small" height="50">
 
 <img 
      src="/assets/images/fonts/magnolia_KOR.jpg"
@@ -27,7 +30,13 @@ data_title:
 
 <img 
      src="/assets/images/fonts/magnolia_bicolor.png"
-     alt="Magnolia KOR" height="150">
+     alt="Magnolia bicolor" height="150">
+
+{% include upcoming_release.html %}
+
+<img 
+     src="/assets/images/fonts/magnolia_tamed.png"
+     alt="Magnolia tamed" height="150">
 
 ## Glyphs
 
@@ -53,13 +62,13 @@ Magnolia Small is a variation of this font with different embroidery settings. P
 Contrarly to Magnolia KOR, Magnolia  Small  **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
-### Magnolia Bicolor
+### Magnolia Bicolor and Magnolia tamed
 
-Magnolia Bicolor is approximatively 45 mm (2 inches) tall.  It can be scaled up to 150% (approx. 67 mm, 3  inches) or scaled down to  70% (approx.  31 mm, 1.25 inch).
+Magnolia Bicolor/Mangnolia tamed are approximatively 45 mm (2 inches) tall. They can be scaled up to 150% (approx. 67 mm, 3 inches) or scaled down to 70% (approx. 31 mm, 1.25 inch).
 
 ## Color sorting
 
-If you use Magnolia bicolor , you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
+If you use Magnolia bicolor or Magnolia tamed, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
 
 ## In real life
 
