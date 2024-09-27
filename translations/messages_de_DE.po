@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-09-26 01:23+0000\n"
-"PO-Revision-Date: 2024-09-26 01:23\n"
+"PO-Revision-Date: 2024-09-27 01:24\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -295,7 +295,7 @@ msgstr "Diese Schrift ist eine abgewandelte Version von Magnolia KOR, die eine k
 #. description of font in fonts/magnolia_tamed
 #: inkstitch-fonts-metadata.py:104
 msgid "This is a  less wild   bicolor variation of Magnolia font"
-msgstr ""
+msgstr "Dies ist eine gezähmte zweifarbige Variante der Magnolia-Schriftart."
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:106
