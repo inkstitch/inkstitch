@@ -10,6 +10,9 @@ toc: true
 
 ### New Fonts
 
+* [Cogs_KOR](/fonts/cogs_KOR)
+
+  ![Cogs_KOR](/assets/images/fonts/cogs_KOR.png)
 * [Magnolia tamed](/fonts/magnolia-script/)
 
   ![Magnolia tamed preview](/assets/images/fonts/magnolia_tamed.png)
@@ -22,27 +25,26 @@ toc: true
 * Update →.svg [#3129](https://github.com/inkstitch/inkstitch/pull/3129)
 * add some punctuation signs [#3123](https://github.com/inkstitch/inkstitch/pull/3123)
 
-## Extensions
 
-### New Extensions
+## New Extensions
 
-#### Remove duplicated points
+### Remove duplicated points
 
 `Edit > Remove duplicated points` [#3117](https://github.com/inkstitch/inkstitch/pull/3117)
 
 Helps (for example) to remove bean stitches from stitch plans and turn them into simple lines.
 
-### Extension Updates
+## Extension Updates
 
-#### Auto-route satin
+### Auto-route satin
 
-* transfer object based min jump length (if present) from satins on auto-generated strokes (#3154)
+* transfer object based min jump length (if present) from satins on auto-generated strokes [#3154](https://github.com/inkstitch/inkstitch/pull/3154)
 
-#### Multicolor Satin
+### Multicolor Satin
 
 * option to adjust underlay [#3152](https://github.com/inkstitch/inkstitch/pull/3152)
 
-#### Simulator
+### Simulator
 
 * Show page in simulator [#3120](https://github.com/inkstitch/inkstitch/pull/3120)
 
@@ -52,7 +54,7 @@ Helps (for example) to remove bean stitches from stitch plans and turn them into
 
 #### Clones
 
-* Clones now also clone commands attached to element and its children. (#3032, #3121) (#3086)
+* Clones now also clone commands attached to element and its children. (#3032, #3121) [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
 
 ## Developer and Build Stuff
 

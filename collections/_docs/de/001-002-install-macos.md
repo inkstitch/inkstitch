@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch für macOS"
 permalink: /de/docs/install-macos/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2024-08-04
+last_modified_at: 2024-09-28
 toc: true
 ---
 {% comment %}
@@ -16,9 +16,11 @@ Schaue den Installationsprozess für <i class="fab fa-apple"></i> [macOS](https:
 ## Herunterladen
 Lade die aktuelle Version für dein macOS System herunter.
 
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-x86_64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;"> Monterey und höher (Intel)</span></a></p>
+<!-- <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-x86_64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;"> Monterey und höher (Intel)</span></a></p>
 
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-arm64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;"> Monterey und höher (Arm)</span></a></p>
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-arm64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;"> Monterey und höher (Arm)</span></a></p> -->
+
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-x86_64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;"> Monterey und höher</span></a></p>
 
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-high-sierra-catalina-osx-x86_64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for macOS<br><span style="color:lightblue;">High Sierra / Mojave / Catalina / Big Sur</span></a></p>
 
@@ -28,6 +30,9 @@ Lade die aktuelle Version für dein macOS System herunter.
 
 Ink/Stitch ist eine Inkscape Erweiterung, deshalb **muss <span style="text-decoration:underline;">vor</span> der Ink/Stitch-Installation [Inkscape](https://inkscape.org/release/) Version 1.0.2 oder höher <span style="text-decoration:underline;">installiert und mindestens einmal geöffnet</span> worden sein**. Sonst schlägt die Installation fehl.
 {: .notice--warning .bold--warning }
+
+Wenn du einen Arm-Prozessor nutzt, stelle sicher, dass Rosetta installiert ist: `softwareupdate --install-rosetta --agree-to-license`
+{: .notice--warning }
 
 **Monterey und höher:** Öffne die heruntergeladene Datei
 
@@ -106,7 +111,9 @@ Diese Meldung wird für ältere macOS Betriebssysteme als auch für Entwicklerve
 
 We also provide a zip download file which can be extraced in the the user extensions folder (see below: confirm installation path).
 
-Für Monterey und höher [dowload ZIP (intel)]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-x86_64.zip), [dowload ZIP (arm)]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-arm64.zip)
+<!-- Für Monterey und höher [dowload ZIP (intel)]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-x86_64.zip), [dowload ZIP (arm)]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-arm64.zip) -->
+
+Für Monterey und höher [dowload ZIP]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-x86_64.zip)
 
 Für ältere macOS Betriebssysteme [download ZIP]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-high-sierra-catalina-osx-x86_64.zip)
 
