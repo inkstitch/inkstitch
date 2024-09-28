@@ -1,0 +1,9 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+{%- assign tax = site.posts | where: "lang", page.lang | group_by: "categories" -%}
+
+{% include posts-taxonomy.html taxonomies=tax %}

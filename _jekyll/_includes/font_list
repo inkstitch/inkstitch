@@ -1,29 +1,29 @@
 {% assign fonts = site.fonts | where: "lang", page.lang %}
 
-<button id="toggle-font-filter">🔧 {{ page.font_filter_label | default: site.data.ui-text[page.lang].font_filter_label | default: "Font Filter" }}</button>
+<button id="toggle-font-filter">🔧 {{ site.data.ui-text[page.lang].font_filter_label | default: "Font Filter" }}</button>
 <form id="font-filter" style="display:none;">
-  <label for="size-filter">{{ page.font_filter_size_label | default: site.data.ui-text[page.lang].font_filter_size_label | default: "Size (height in mm)" }}</label>
+  <label for="size-filter">{{ site.data.ui-text[page.lang].font_filter_size_label | default: "Size (height in mm)" }}</label>
   <input type="number" step="0.5" min="0" id="size-filter" name="size-filter">
-  <label for="style-filter">Category</label>
+  <label for="style-filter">{{ site.data.ui-text[page.lang].font_filter_category_label | default: "Category" }}</label>
   <select name="style-filter" id="style-filter" size="14" multiple>
     <option></option>
-    <option value="applique">{{ page.font_filter_category_applique | default: site.data.ui-text[page.lang].font_filter_category_applique | default: "Applique" }}</option>
-    <option value="crossstitch">{{ page.font_filter_category_crossstitch | default: site.data.ui-text[page.lang].font_filter_category_crossstitch | default: "Crossstitch" }}</option>
-    <option value="display">{{ page.font_filter_category_display | default: site.data.ui-text[page.lang].font_filter_category_display | default: "Display" }}</option>
-    <option value="handwriting">{{ page.font_filter_category_handwriting | default: site.data.ui-text[page.lang].font_filter_category_handwriting | default: "Handwriting" }}</option>
-    <option value="italic">{{ page.font_filter_category_ italic| default: site.data.ui-text[page.lang].font_filter_category_italic | default: "Italic" }}</option>
-    <option value="monogram">{{ page.font_filter_category_monogram | default: site.data.ui-text[page.lang].font_filter_category_monogram | default: "Monogram" }}</option>
-    <option value="multicolor">{{ page.font_filter_category_multicolor | default: site.data.ui-text[page.lang].font_filter_category_multicolor | default: "Multicolor" }}</option>
-    <option value="ripple">{{ page.font_filter_category_ripple | default: site.data.ui-text[page.lang].font_filter_category_ripple | default: "Ripple Stitch" }}</option>
-    <option value="running_stitch">{{ page.font_filter_category_running | default: site.data.ui-text[page.lang].font_filter_category_running | default: "Running Stitch" }}</option>
-    <option value="sans_serif">{{ page.font_filter_category_sans_serif | default: site.data.ui-text[page.lang].font_filter_category_sans_serif | default: "Sans Serif }}</option>
-    <option value="serif">{{ page.font_filter_category_serif | default: site.data.ui-text[page.lang].font_filter_category_serif | default: "Serif" }}</option>
-    <option value="tartan">{{ page.font_filter_category_tartan | default: site.data.ui-text[page.lang].font_filter_category_tartan | default: "Tartan" }}</option>
-    <option value="tiny">{{ page.font_filter_category_tiny | default: site.data.ui-text[page.lang].font_filter_category_tiny | default: "Tiny" }}</option>
+    <option value="applique">{{ site.data.ui-text[page.lang].font_filter_category_applique | default: "Applique" }}</option>
+    <option value="crossstitch">{{ site.data.ui-text[page.lang].font_filter_category_crossstitch | default: "Crossstitch" }}</option>
+    <option value="display">{{ site.data.ui-text[page.lang].font_filter_category_display | default: "Display" }}</option>
+    <option value="handwriting">{{ site.data.ui-text[page.lang].font_filter_category_handwriting | default: "Handwriting" }}</option>
+    <option value="italic">{{ site.data.ui-text[page.lang].font_filter_category_italic | default: "Italic" }}</option>
+    <option value="monogram">{{ site.data.ui-text[page.lang].font_filter_category_monogram | default: "Monogram" }}</option>
+    <option value="multicolor">{{ site.data.ui-text[page.lang].font_filter_category_multicolor | default: "Multicolor" }}</option>
+    <option value="ripple">{{ site.data.ui-text[page.lang].font_filter_category_ripple | default: "Ripple Stitch" }}</option>
+    <option value="running_stitch">{{ site.data.ui-text[page.lang].font_filter_category_running | default: "Running Stitch" }}</option>
+    <option value="sans_serif">{{ site.data.ui-text[page.lang].font_filter_category_sans_serif | default: "Sans Serif }}</option>
+    <option value="serif">{{ site.data.ui-text[page.lang].font_filter_category_serif | default: "Serif" }}</option>
+    <option value="tartan">{{ site.data.ui-text[page.lang].font_filter_category_tartan | default: "Tartan" }}</option>
+    <option value="tiny">{{ site.data.ui-text[page.lang].font_filter_category_tiny | default: "Tiny" }}</option>
   </select>
-  <label for="glyph-filter">{{ page.font_filter_glyph_label | default: site.data.ui-text[page.lang].font_filter_glyph_label | default: "Glyphs" }}</label>
+  <label for="glyph-filter">{{ site.data.ui-text[page.lang].font_filter_glyph_label | default: "Glyphs" }}</label>
   <input type="text" id="glyph-filter" name="glyph-filter">
-  <p class="font-counter"><span id="font-counter"></span> {{ page.font_filter_counter_label | default: site.data.ui-text[page.lang].font_filter_counter_label | default: "fonts" }}</p>
+  <p class="font-counter"><span id="font-counter"></span> {{ site.data.ui-text[page.lang].font_filter_counter_label | default: "fonts" }}</p>
 </form>
 
 {%- for font in fonts -%}

@@ -374,6 +374,16 @@ table.inline-table {
     margin-bottom: 5px !important;
   }
 
+.archive__subtitle {
+  border-bottom: 3px solid #ccc;
+  background: #f2f3f3;
+  padding: 10px;
+}
+
+.taxonomy__section .archive__item-title {
+  font-size: 1em;
+}
+
 /* Feature */
 .feature__wrapper {
     border-bottom: 1px solid #ccc;
