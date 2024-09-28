@@ -3,18 +3,130 @@ title: "Ink/Stitch"
 permalink: /ru/
 locale: ru-RU
 lang: ru
-sidebar:
-  nav: "pages"
+layout: splash
+
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/thread_banner_dark.jpg
+  actions:
+    - label: "Установка"
+      url: "/docs/install/"
+excerpt: "Платформа для разработки дизайнов вышивки с открытым исходным кодом основаная на [Inkscape](https://inkscape.org/>).<br><br>
+          Ink/Stitch стремится быть полноценной, кроссплатформенной средой для создания цифровой вишивки, онснованой исключительно на бесплатном
+          ПО с открытым исходным кодом. Наша цель быть доступными для энтузиастов и предоставлять широкие возможности для профессионалов машинной вышивки."
+feature_page:
+  - image_path: /assets/images/galleries/fonts/apex-lake/apex_set.jpg
+    alt: "text: Features"
+    title: "Features"
+    excerpt: 'Great features for everyone.
+
+              * Numerous stitch types and variants to choose from. From manual stitch placement to sophisticated stitch types such as tartan patterns.
+
+              * Easy to use lettering system with a long list of fonts ready to use. Add text directly with your keyboard.
+
+              * Tools to optimize stitch path routing.
+
+              * Output files in many formats and even for self made embroidery machines.'
+    url: "/features/"
+    btn_class: "btn--primary btn--large btn--large"
+user_manual:
+  - image_path: /assets/images/galleries/fonts/abril/abril_collage.jpg
+    alt: "text: user manual"
+    title: "User manual"
+    excerpt: 'Detailed description for every feature und tool.
+
+
+              From the installation process and Inkscape customization for embroidery to in-depth descriptions on every tool and feature,
+              the user manual is a good knowledge base for your designing process. It contains everything you need to know about Ink/Stitch.'
+    url: "/docs/install/"
+    btn_class: "btn--primary btn--large"
+stitch_library:
+  - image_path: /assets/images/tutorials/multicolor_satin/snake.jpg
+    alt: "text: Stitch library"
+    title: "Stitch library"
+    excerpt: "Countless possibilities for your creativity.
+
+
+              Stitch types are the foundation for the digitizing process.
+              Unleash your creativity and combine the stitch types that Ink/Stitch has to offer to achieve beautiful results."
+    url: "/docs/stitch-library/"
+    btn_class: "btn--primary btn--large"
+font_library:
+  - image_path: /assets/images/galleries/fonts/multiple/multifont3.jpg
+    alt: "text: Font library"
+    title: "Font library"
+    excerpt: "Enhance your design with a beautiful font.
+
+
+              Ink/Stitch comes with numerous pre-digitized fonts ready to use. Simply open the lettering tool,
+              choose a font and type directly with your keyboard. The font library showcases each available font and displays
+              design samples at the bottom of each page."
+    url: "/fonts/font-library/"
+    btn_class: "btn--primary btn--large"
+tutorials:
+  - image_path: /assets/images/tutorials/randomized_satin/random_satin.jpg
+    alt: "text: Tutorials and Sample Files"
+    title: "Tutorials and Sample Files"
+    excerpt: "Get started with ready to use files or read detailed tutorials.
+
+              * Sample files for various embroidery methods: appliqué, free standing lace, fringe, etc.
+
+              * Basic digitizing knowledge: push/pull compensation, satin edges, stitch path optimization, etc.
+
+              * Hardware projects and resources: DIY embroidery machine, socks hoop
+
+              * Create fonts for Ink/Stitch
+
+              * ..."
+    url: "/tutorials/"
+    btn_class: "btn--primary btn--large"
+social:
+  - image_path: /assets/images/galleries/fonts/chicken_little/chickenlittle.jpg
+    alt: "text: Socialize and Get Help"
+    title: "Socialize and Get Help"
+    excerpt: 'Ink/Stitch has a broad community willing to help you to get started. Get in contact and start your embroidery journey.'
+    url: "/docs/faq/"
+    btn_class: "btn--primary btn--large"
+develope:
+  - image_path: /assets/images/galleries/fonts/cats/no_ordinary_cat.jpg
+    alt: "text: Get involved"
+    title: "Get involved"
+    excerpt: 'Ink/Stitch is a community project and there are lots of ways to help to improve the programm.
+
+              * Report bugs and give feedback for new features
+
+              * Write tutorials or provide sample files
+
+              * Help with the documentation
+
+              * Help with translations
+
+              * Do some programming'
+    url: "/developers/introduction/"
+    btn_class: "btn--primary btn--large"
 ---
-<p>Платформа для разработки дизайнов вышивки с открытым исходным кодом основаная на <a href="https://inkscape.org/">Inkscape</a>.</p>
 
 <img src="/assets/images/index-inkstitch-logo.png" alt="Ink/Stitch" style="margin-bottom: 1em;">
 
-<p>Ink/Stitch стремится быть полноценной, кроссплатформенной средой для создания цифровой вишивки, онснованой исключительно на бесплатном ПО с открытым исходным кодом. Наша цель быть доступными для энтузиастов и предоставлять широкие возможности для профессионалов машинной вышивки.</p>
-
-<p><a href="/ru/docs/install/" class="btn btn--primary btn--large">Установка Ink/Stitch</a></p>
-
 <h2>Новости</h2>
-{% assign posts = site.posts | where: "lang", "ru"  %}
-<ul>{% for post in posts offset: 0 limit: 5 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>
-<p><a href="{{ site.url }}/news/" class="btn btn--primary">{{ site.data.ui-text[page.lang].more_label | default: "Read more" }}</a></p>
+
+{% assign posts = site.posts | where: "lang", "en"  %}
+<p><ul>{% for post in posts offset: 0 limit: 5 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul></p>
+<p><a href="{{ site.url }}/news/" class="btn btn--primary btn--large">{{ site.data.ui-text[page.lang].more_label | default: "Read more" }}</a></p>
+
+<hr>
+
+{% include feature_row id="feature_page" type="left" %}
+
+{% include feature_row id="user_manual" type="right" %}
+
+{% include feature_row id="stitch_library" type="left" %}
+
+{% include feature_row id="font_library" type="right" %}
+
+{% include feature_row id="tutorials" type="left" %}
+
+{% include feature_row id="social" type="right" %}
+
+{% include feature_row id="develope" type="left" %}

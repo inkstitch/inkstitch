@@ -1,55 +1,55 @@
 # main links
 main:
   - title: "Возможности"
-    url: /ru/features/
+    url: /features/
   - title: "Руководство"
-    url: /ru/docs/install/
+    url: /docs/install/
   - title: "Fonts"
-    url: /ru/fonts/font-library/
+    url: /fonts/font-library/
   - title: "Уроки"
-    url: /ru/tutorials/
+    url: /tutorials/
   - title: "FAQ"
-    url: /ru/docs/faq/
+    url: /docs/faq/
   - title: "Принять участие"
-    url: /ru/developers/introduction/
+    url: /developers/introduction/
     
 # index + specific pages which have the sidebar option in the header
 pages:
   - title: "Возможности"
-    url: /ru/features/
+    url: /features/
   - title: "Руководство"
     url: /ru/docs/install/
     children:
       - title: "Установка"
         url: /ru/docs/install/
       - title: "Рабочий процесс"
-        url: /ru/docs/workflow/
+        url: /docs/workflow/
       - title: Виды стежков
-        url: /ru/docs/stitch-library/
+        url: /docs/stitch-library/
       - title: "FAQ"
-        url: /ru/docs/faq/
+        url: /docs/faq/
   - title: "Уроки"
-    url: /ru/tutorials/
+    url: /tutorials/
     children:
       - title: "Галерея работ"
-        url: /ru/tutorials/inspiration/
+        url: /tutorials/inspiration/
       - title: "Файлы образцов"
-        url: /ru/tutorials/resources/samples/
+        url: /tutorials/resources/samples/
       - title: "Шаблоны"
-        url: /ru/tutorials/resources/templates/
+        url: /tutorials/resources/templates/
       - title: "Уроки"
-        url: /ru/tutorials/
+        url: /tutorials/
       - title: "Самодельная машина"
-        url: /ru/tutorials/embroidery-machine/
+        url: /tutorials/embroidery-machine/
   - title: "Принять участие"
-    url: /ru/developers/introduction/
+    url: /developers/introduction/
   - title: "Новости"
-    url: /ru/news/
+    url: /news/
 
 # documentation links
 docs:
   - title: Установка
-    url: /ru/docs/install/
+    url: /docs/install/
     children:
       - title: "Windows"
         url: /ru/docs/install-windows/
@@ -64,88 +64,88 @@ docs:
       - title: "Основы"
         url: /ru/docs/basic-usage/
       - title: "Рабочий процесс"
-        url: /ru/docs/workflow/
+        url: /docs/workflow/
   - title: "Виды стежков"
-    url: /ru/docs/stitch-library/
+    url: /docs/stitch-library/
     children:
       - title: "Ручной стежок"
-        url: /ru/docs/stitches/manual-stitch/
+        url: /docs/stitches/manual-stitch/
       - title: "Строчка"
-        url: /ru/docs/stitches/running-stitch/
+        url: /docs/stitchesnning-stitch/
       - title: "Многопроходная строчка"
-        url: /ru/docs/stitches/bean-stitch/
+        url: /docs/stitches/bean-stitch/
       - title: "Ripple Stitch"
         url: /docs/stitches/ripple-stitch/
       - title: "Зигзаг (Простой сатин)"
-        url: /ru/docs/stitches/zigzag-stitch/
+        url: /docs/stitches/zigzag-stitch/
       - title: "Сатин"
-        url: /ru/docs/stitches/satin-column/
+        url: /docs/stitches/satin-column/
       - title: "E-стежок"
-        url: /ru/docs/stitches/e-stitch/
+        url: /docs/stitches/e-stitch/
       - title: "Заполнение"
-        url: /ru/docs/stitches/fill-stitch/
+        url: /docs/stitches/fill-stitch/
       - title: "Contour Fill"
-        url: /ru/docs/stitches/contour-fill/
+        url: /docs/stitches/contour-fill/
       - title: "Guided Fill"
-        url: /ru/docs/stitches/guided-fill/
+        url: /docs/stitches/guided-fill/
       - title: "Meander Fill"
-        url: /ru/docs/stitches/meander-fill/
+        url: /docs/stitches/meander-fill/
       - title: "Circular Fill"
-        url: /ru/docs/stitches/circular-fill/
+        url: /docs/stitches/circular-fill/
       - title: "Lock stitches"
-        url: /ru/docs/stitches/lock-stitches/
+        url: /docs/stitches/lock-stitches/
       - title: "Stitch patterns"
-        url: /ru/docs/stitches/patterns/
+        url: /docs/stitches/patterns/
   - title: Интерфейс
     children:
     - title: "Команды"
-      url: /ru/docs/commands/
+      url: /docs/commands/
     - title: "Cutwork"
-      url: /ru/docs/cutwork/
+      url: /docs/cutwork/
     - title: "Правка"
-      url: /ru/docs/edit/
+      url: /docs/edit/
     - title: "Инструменты Заполнения"
-      url: /ru/docs/fill-tools/
+      url: /docs/fill-tools/
     - title: "Управление шрифтами"
-      url: /ru/docs/font-tools/
+      url: /docs/font-tools/
     - title: "Надписи"
-      url: /ru/docs/lettering/
+      url: /docs/lettering/
     - title: "Параметры"
-      url: /ru/docs/params/
+      url: /docs/params/
     - title: "Настройка"
-      url: /ru/docs/preferences/
+      url: /docs/preferences/
     - title: "Инструменты Сатина"
-      url: /ru/docs/satin-tools/
+      url: /docs/satin-tools/
     - title: "Управление цветами нитей"
       url: /docs/thread-color/
     - title: "Решение проблем"
-      url: /ru/docs/troubleshoot/
+      url: /docs/troubleshoot/
     - title: "Визуализация"
-      url: /ru/docs/visualize/
+      url: /docs/visualize/
   - title: "Работа с файлами"
     children:
     - title: Поддежка форматов файлов
-      url: /ru/docs/file-formats/
+      url: /docs/file-formats/
     - title: Экспорт и импорт файлов
-      url: /ru/docs/import-export/
+      url: /docs/import-export/
     - title: Печать в PDF
-      url: /ru/docs/print-pdf/
+      url: /docs/print-pdf/
     - title: Список ниток
-      url: /ru/docs/threadlist/
+      url: /docs/threadlist/
   - title: Советы
     children:
       - title: "Шрифты"
-        url: /ru/docs/fonts/
+        url: /docs/fonts/
       - title: Советы для Inkscape
-        url: /ru/docs/inkscape-tips/
+        url: /docs/inkscape-tips/
       - title: Список вышивальных машин
-        url: /ru/docs/machine-database/
+        url: /docs/machine-database/
   - title: Решение проблем
     children:
       - title: "F.A.Q."
-        url: /ru/docs/faq/
+        url: /docs/faq/
       - title: Сообщения об ошибках
-        url: /ru/docs/error-messages/
+        url: /docs/error-messages/
       - title: "Отсутствие перевода"
         url: /ru/docs/localization/
 
@@ -154,65 +154,65 @@ fonts:
   - title: Уроки по шрифтам
     children:
       - title: Создание новых шрифтов
-        url: /ru/tutorials/font-creation
+        url: /tutorials/font-creation
   - title: Библиотека шрифтов
-    url: /ru/fonts/font-library/
+    url: /fonts/font-library/
     
 # tutorial links
 tutorials:
   - title: Вдохновение
     children:
       - title: "Галерея работ"
-        url: /ru/tutorials/inspiration/
+        url: /tutorials/inspiration/
   - title: Очумелые ручки 
     children:
       - title: "Самодельная машина"
-        url: /ru/tutorials/embroidery-machine/
+        url: /tutorials/embroidery-machine/
       - title: "Пяльце для носков"
-        url: /ru/tutorials/sock-hoop/
+        url: /tutorials/sock-hoop/
   - title: Ресурсы
     children:
     - title: "Брендинг"
-      url: /ru/tutorials/resources/branding-guide/
+      url: /tutorials/resources/branding-guide/
     - title: "Файлы образцов"
-      url: /ru/tutorials/resources/samples/
+      url: /tutorials/resources/samples/
     - title: "Шаблоны"
-      url: /ru/tutorials/resources/templates/
+      url: /tutorials/resources/templates/
   - title: Уроки
-    url: /ru/tutorials/
+    url: /tutorials/
     children:
     - title: "Уроки А - Я"
-      url: /ru/tutorials/
+      url: /tutorials/
     - title: "Видеоуроки"
-      url: /ru/tutorials/video/
+      url: /tutorials/video/
     - title: Уроки из интернета
-      url: /ru/tutorials/external-tutorials/
+      url: /tutorials/external-tutorials/
   
 # developers links
 developers:
   - title: Принять участие
-    url: /ru/developers/introduction/
+    url: /developers/introduction/
   - title: Ink/Stitch
-    url: /ru/developers/inkstitch/
+    url: /developers/inkstitch/
     children:
     - title: Ручная установка (Linux/macOS)
-      url: /ru/developers/inkstitch/manual-setup/
+      url: /developers/inkstitch/manual-setup/
     - title: Ручная установка (Windows)
-      url: /ru/developers/inkstitch/windows-manual-setup/
+      url: /developers/inkstitch/windows-manual-setup/
     - title: Debugging and Profiling
-      url: /ru/developers/inkstitch/debug/
+      url: /developers/inkstitch/debug/
     - title: Coding Style
-      url: /ru/developers/inkstitch/coding-style/
+      url: /developers/inkstitch/coding-style/
     - title: Namespace
-      url: /ru/developers/inkstitch/namespace/
+      url: /developers/inkstitch/namespace/
   - title: Pyembroidery
-    url: /ru/developers/pyembroidery
+    url: /developers/pyembroidery
   - title: Документация
-    url: /ru/developers/documentation/
+    url: /developers/documentation/
   - title: Локализация
-    url: /ru/developers/localize/
+    url: /developers/localize/
   - title: "Сообщения об ошибках"
-    url: /ru/developers/report-bugs/
+    url: /developers/report-bugs/
   - title: "Статистика"
-    url: /ru/statistics/
+    url: /statistics/
       
