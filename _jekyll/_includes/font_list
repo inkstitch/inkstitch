@@ -1,5 +1,7 @@
 {% assign fonts = site.fonts | where: "lang", page.lang %}
 
+<input type="checkbox" name="font-display-size" id="font-display-size" checked> <label for="font-display-size" style="display:inline;">{{ site.data.ui-text[page.lang].font_filter_font_display_size_label | default: "Display fonts in size comparison" }}</label>
+
 <button id="toggle-font-filter">🔧 {{ site.data.ui-text[page.lang].font_filter_label | default: "Font Filter" }}</button>
 <form id="font-filter" style="display:none;">
   <label for="size-filter">{{ site.data.ui-text[page.lang].font_filter_size_label | default: "Size (height in mm)" }}</label>
@@ -52,7 +54,7 @@
   <p><a href="{{ font.permalink }}"><img src="{{ font.preview_image }}" alt="{{font.title}} Preview"></a></p>
   {%- else -%}
   <p>
-      <a href="{{ font.permalink }}"><img src="{{ image.url }}" alt="{{font.title}} Preview" style="height:{{ image.height }}mm"></a>
+      <a href="{{ font.permalink }}"><img src="{{ image.url }}" alt="{{font.title}} Preview" style="height:{{ image.height }}mm" data-image_height="{{ image.height }}mm"></a>
   </p>
   {%- endif -%}
   {% endfor %}
@@ -61,6 +63,7 @@
 {% endfor %}
 
 <script>
+var fontDisplaySize = document.getElementById('font-display-size')
 var fontFilterForm = document.getElementById('font-filter');
 var sizeFilter = document.getElementById("size-filter");
 var categoryFilter = document.getElementById("style-filter");
@@ -112,6 +115,18 @@ function updateFontList(){
   }
   let countVisible = document.querySelectorAll(".font-separator:not([style='display: none;'])").length;
   document.getElementById('font-counter').innerHTML = countVisible
+
+  fontDisplaySize.addEventListener('change', updateFontDisplaySize);
+  function updateFontDisplaySize() {
+      let font_images = document.querySelectorAll('div.font-separator img');
+      for (var image of font_images) {
+          if (fontDisplaySize.checked) {
+            image.style.height = image.getAttribute('data-image_height');
+          } else {
+            image.style.height = '5em';
+          }
+      }
+  }
 }
 </script>
 <noscript>
