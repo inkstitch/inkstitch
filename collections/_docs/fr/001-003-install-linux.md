@@ -5,7 +5,7 @@ excerpt: "Comment installer rapidement Ink/Stitch."
 last_modified_at: 2024-04-29
 toc: true
 after_footer_scripts:
-  - /assets/js/copy_code.jss
+  - /assets/js/copy_code.js
 ---
 
 ## Prérequis

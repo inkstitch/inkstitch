@@ -4,6 +4,8 @@ permalink: /docs/install-linux/
 excerpt: "How to quickly install Ink/Stitch."
 last_modified_at: 2024-09-25
 toc: true
+after_footer_scripts:
+  - /assets/js/copy_code.js
 ---
 {% comment %}
 ## Video Guide
