@@ -6,6 +6,8 @@ classes:
     - wide
     - fonts
 toc: false
+after_footer_scripts:
+    - /assets/js/font_filter.js
 ---
 {% include font_list %}
 
