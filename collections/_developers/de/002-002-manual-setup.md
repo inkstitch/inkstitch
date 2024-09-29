@@ -3,6 +3,8 @@ title: "Manuelle Installation"
 permalink: /de/developers/inkstitch/manual-setup/
 last_modified_at: 2021-10-23
 toc: false
+after_footer_scripts:
+  - /assets/js/copy_code.js
 ---
 Eine manuelle Installation ermöglicht es am Quellcode zu arbeiten und die Änderungen
 

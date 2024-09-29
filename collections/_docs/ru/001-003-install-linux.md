@@ -4,6 +4,8 @@ permalink: /ru/docs/install-linux/
 excerpt: "Быстрая установка Ink/Stitch."
 last_modified_at: 2021-12-02
 toc: true
+after_footer_scripts:
+  - /assets/js/copy_code.js
 ---
 ## Видео урок
 

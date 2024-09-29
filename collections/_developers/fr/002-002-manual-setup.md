@@ -3,6 +3,8 @@ title: "Manual Setup"
 permalink: /fr/developers/inkstitch/manual-setup/
 last_modified_at: 2021-10-14
 toc: true
+after_footer_scripts:
+  - /assets/js/copy_code.js
 ---
 A manual setup will allow you to edit the code while running the extension.
 

@@ -3,6 +3,8 @@ title: "Windows Manual Install and Manual Build"
 permalink: /de/developers/inkstitch/windows-manual-build/
 last_modified_at: 2024-01-16
 toc: true
+after_footer_scripts:
+  - /assets/js/copy_code.js
 ---
 **Info:** For this description we use **`foo`** as a user name. Whenever it occures **replace it** with your personal windows user name.
 {: .notice--warning }

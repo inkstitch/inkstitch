@@ -1,5 +1,3 @@
-{{ Huhu ?!? }}
-
 {% if site.footer_scripts %}
   {% for script in site.footer_scripts %}
     <script src="{{ script | relative_url }}"></script>
@@ -23,7 +21,6 @@
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
 
-{{ page.after_footer_scripts }}
 {% if page.after_footer_scripts %}
    {% for script in page.after_footer_scripts %}
     <script src="{{ script | relative_url }}"></script>

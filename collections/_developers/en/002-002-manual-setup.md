@@ -3,6 +3,8 @@ title: "Manual Setup for Linux and macOS"
 permalink: /developers/inkstitch/manual-setup/
 last_modified_at: 2024-01-17
 toc: true
+after_footer_scripts:
+  - /assets/js/copy_code.js
 ---
 A manual setup will allow you to edit the code while running the extension.
 

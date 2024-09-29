@@ -617,6 +617,29 @@ div.font-separator-test {
     padding: 0 !important;
 }
 
+/* Code blocks */
+
+pre.highlight > button {
+opacity: 0;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background: none;
+  background: rgba(200, 200, 200, 0.2);
+  color: lightgray;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+pre.highlight:hover > button {
+  opacity: 1;
+}
+
+pre.highlight > button:active,
+pre.highlight > button:focus {
+  opacity: 1;
+}
+
 /* Font filter */
 
 button#toggle-font-filter {
