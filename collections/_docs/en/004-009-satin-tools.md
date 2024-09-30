@@ -90,7 +90,7 @@ This extension creates copies of selected satins to mimic a multicolor satin
 
 ![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
 
-If you want to understand how this extension works internally, [read this](/tutorials/multicolor_satin.md).
+If you want to understand how this extension works internally, [read this](/tutorials/multicolor_satin).
 
 ### Usage
 
