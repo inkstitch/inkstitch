@@ -80,7 +80,7 @@ Si vous voyez quelque chose comme le dessin ci-dessous, vous avez probablement c
 Cette extension crée des copies des satins  sélectionnés pour imiter une colone satin multicolore.
 ![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
 
-Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin.md), si vous souhaitez comprendre comment cette extension fonctionne.
+Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin), si vous souhaitez comprendre comment cette extension fonctionne.
 
 ### Usage
 
