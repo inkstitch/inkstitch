@@ -6,6 +6,7 @@ last_modified_at: 2023-05-11
 excerpt: "Using Tiling LPE, clipping path and autorouting to achieve Pattern Fill"
 image: "/assets/images/tutorials/tutorial-preview-images/cookie_cutter_tiling.jpg"
 tutorial-type:
+  - Text
 stitch-type:
   - "Running Stitch"
   - "Bean Stitch"

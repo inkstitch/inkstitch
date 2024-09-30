@@ -18,14 +18,16 @@
 <div class="tutorial__wrapper">
 <div class="tutorial__group">
 {% for value in values %}
-  {% unless include.value or value=='a-z'  %} <h3><span>{{ value }}</span></h3>{% endunless %}
-  
+
   {% unless include.key %}
     {% assign items_grouped = site.tutorial | where: "language", page.lang | where_exp:"include", "include.exclude-from-tutorial-list != true" | sort: 'title' %}
   {% else %}
     {% assign items_grouped = site.tutorial | where: "language", page.lang | where_exp: 'item', 'item[key] contains value' | sort: 'title' %}
   {% endunless %}
-  
+
+  {%- if items_grouped.size > 0 -%}
+
+  {% unless value=='a-z'  %} <h3><span>{{ value }}</span></h3>{% endunless %}
   {% for f in items_grouped %}
   
     {% comment %}Display first letters of the title if alpabetical order{% endcomment %}
@@ -37,7 +39,7 @@
       {% assign old_letter = f.title | split: '' | first %}
     {% endunless %}
     
-  <div class="tutorial__item">
+  <div class="tutorial__item"><a href="{{ f_url }}">
     <div class="tutorial__item-teaser">
     {% if f.image %}
       <img src=
@@ -52,19 +54,16 @@
     <div class="tutorial__description-wrapper">
     {% if f.url contains "://" %}{% capture f_url %}{{ f.url }}{% endcapture %}{% else %}{% capture f_url %}{{ f.url | relative_url }}{% endcapture %}{% endif %}
     {% if f.title %}<p class="archive__item-title">{% if f.tutorial-type contains 'Video' %} <i class="fa fa-play-circle" aria-hidden="true" title="video tutorial"></i>
-    {% endif %}<a href="{{ f_url }}">{{ f.title }}</a></p>{% endif %}
+    {% endif %}{{ f.title }}</p>{% endif %}
     {% if f.excerpt %}
       <div class="archive__item-excerpt">
         {{ f.excerpt | markdownify }}
       </div>
     {% endif %}
     </div><!-- /tutorial description-wrapper -->
-    {% if f.url %}
-      {% if f.url contains "://" %}{% capture f_url %}{{ f.url }}{% endcapture %}{% else %}{% capture f_url %}{{ f.url | relative_url }}{% endcapture %}{% endif %}
-      <p><a href="{{ f_url }}" class="btn btn--primary">{{ f.btn_label | default: site.data.ui-text[page.lang].more_label }}</a></p>
-    {% endif %}
-  </div><!-- /tutorial item -->
+  </a></div><!-- /tutorial item -->
   {% endfor %}
+{%- endif -%}
 {% endfor %}
 </div><!-- /tutorial group -->
 </div><!-- /tutorial wrapper -->

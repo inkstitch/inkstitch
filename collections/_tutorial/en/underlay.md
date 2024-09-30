@@ -7,7 +7,7 @@ excerpt: "Underlays are important for the quality of the embroidery"
 image: "/assets/images/docs/params-contour-underlay-example.jpg"
 
 tutorial-type:
-  - text
+  - Text
 ---
 An embroidery design is interaction between the stitches. Each stitch influences the following stitches in terms of stabilization and distortion.
 {: .notice--info}

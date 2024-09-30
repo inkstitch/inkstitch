@@ -7,7 +7,7 @@ excerpt: "Beginner Tutorial Series on our YouTube-Channel"
 image: "/assets/images/tutorials/video-preview-images/beginner-tutorial-series.png"
 
 tutorial-type: Video
-stitch-type: 
+stitch-type:
 techniques:
 field-of-use:
 user-level: Beginner

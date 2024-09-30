@@ -6,12 +6,12 @@ language: en
 excerpt: "Template for multiple hoop sizes"
 image: "https://user-images.githubusercontent.com/11083514/40359689-87495ec8-5dbb-11e8-8ef9-80d4fac89d72.png"
 
-tutorial-typ:
+tutorial-type:
   - Template
-stitch-type: 
+stitch-type:
 techniques:
 field-of-use:
-user-level: 
+user-level:
 ---
 [![Hoop template](https://user-images.githubusercontent.com/11083514/40359689-87495ec8-5dbb-11e8-8ef9-80d4fac89d72.png){: width="250"}](/assets/images/tutorials/templates/hoop-template.svg)
 {: .text-center}

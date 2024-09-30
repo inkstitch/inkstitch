@@ -6,6 +6,7 @@ last_modified_at: 2023-04-25
 excerpt: "Writing using Meander Fill"
 image: "/assets/images/tutorials/tutorial-preview-images/meandering_writing.jpg"
 tutorial-type:
+  - Text
 stitch-type:
   - "Meander Fill"
   - "Bean Stitch"
@@ -40,12 +41,9 @@ create very large letters that will embroider quickly.
   * You can also configure letter by letter and choose different meanders for each letter. Sometimes a letter is more difficult to fill because of its shape, parametring  it separately may help.
   * The meandering filling contains a part of randomness, you can also try to reroll the dice (at the bottom of the setting) if an area has been forgotten. Reducing the size of the meander also helps to visit everywhere
 
-
 ![Params](/assets/images/tutorials/meandering_writing/meandering-parameter.jpg)
 
 * Click Apply and Quit and your embroidery is ready.
-
-
 
 ## Negative space writing
 
@@ -58,8 +56,6 @@ Draw a rectangle (or another shape) around your text where you want  meandering.
 Lower the opacity if you wish, it won't change the result.
 
 Before you turn your text object into a path, duplicate it, you will need both copies.
-
-
 
 ### Triple stitch 
 
@@ -88,9 +84,6 @@ Before you turn your text object into a path, duplicate it, you will need both c
 
 "Apply and Quit" and you are all set.
 
-
-
 ## How to choose the font
+
 Choose a plump font, you want to avoid narrow areas. If possible at least in bold.
-
-

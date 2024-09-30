@@ -7,7 +7,7 @@ excerpt: "Mastering error messages"
 image: /assets/images/posts/de/troubleshoot.png
 
 tutorial-type:
-  - text
+  - Text
 
 toc: true
 ---

@@ -11,7 +11,7 @@ tutorial-type:
 stitch-type: 
   - Satin Stitch
 techniques:
-   -Lettering
+   - Lettering
 field-of-use:
 user-level: 
 ---

@@ -6,7 +6,7 @@ last_modified_at: 2022-06-11
 excerpt: "Auto route running stitches"
 image: "/assets/images/tutorials/life_flower/flower-of-life-two-digitalisation.svg"
 tutorial-type:
-  - 
+  - Sample File
 stitch-type:
   - "Bean Stitch"
   - "Running Stitch"

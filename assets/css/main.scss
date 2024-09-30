@@ -442,15 +442,18 @@ div.text-left {
 #tutorial-list .tutorial-orderby section { display: none; }
 #tutorial-list .tutorial-orderby input:checked + label + section { display: block; width: 100%; }
 
-.tutorial__wrapper { overflow-x:auto; }
-.tutorial__group { display: table; border-collapse: separate; border-spacing: 0 1em; width: 100%; }
-.tutorial__group h3 { height: 1.5em }
-.tutorial__group h3 span { position: absolute; display: inline-block; width: 100%; border-bottom: 1px solid #f2f3f3; }
-.tutorial__group .archive__item-title a::before { display: none; }
+.tutorial__group { display: flex; width: 100%; flex-wrap: wrap}
+.tutorial__group h3 { height: 1.5em; width: 100%; }
+.tutorial__group h3 span { display: inline-block; width: 100%; }
+/*.tutorial__group .archive__item-title a::before { display: none; }*/
+.tutorial__group a, .tutorial__group a:hover { text-decoration: none !important; }
+
+.tutorial__item { width: 30%; padding: 0.5em; margin: 0.5em; border: 1px solid lightgray; min-width: 12em; }
+.tutorial__item div.archive__item-excerpt p { color: black; }
+.tutorial__item:hover { background-image: linear-gradient(to top, #eee, transparent 45px); }
+.tutorial__item:hover img { box-shadow: none !important; }
 .tutorial__item-teaser img { max-width: 10em; max-height: 5em; }
-.tutorial__item, .tutorial__group h3 { display: table-row; }
-.tutorial__group h3 > span, .tutorial__item > h4, .tutorial__item > div, .tutorial__item > p { display: table-cell; vertical-align: top; padding-right: 1em; }
-.tutorial__item > p { min-width: 7em; }
+.tutorial__item > p { min-width: 7em;}
 
 /* Mobile Tutorials */
 
@@ -458,7 +461,7 @@ div.text-left {
     .tutorial__group { display: block; }
     .tutorial__item, .tutorial__group h3 { display: block; background-image: linear-gradient(to top, #eee, transparent 45px);}
     .tutorial__group h3 > span, .tutorial__item > h4, .tutorial__item > div { display: block; text-align: center; }
-    .tutorial__group .tutorial__item { padding: 1em 0; }
+    .tutorial__group .tutorial__item { padding: 1em 0; width: 100%; margin: 0; border: none;}
     .tutorial__item-teaser img { max-width: 400px; }
     .tutorial__group h3 { border-top: 1px solid gray; }
     .tutorial__item > p { display: none; }
