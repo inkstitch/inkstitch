@@ -44,7 +44,7 @@ Diese Erweiterung generiert Kopien der ausgewählten Satinsäule um einen mehrfa
 
 ![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
 
-Für nähere Infos über die Funktionsweise dieser Erweiterung gibt es im [Tutorial für mehrfarbige Satinsäulen](/de/tutorials/multicolor_satin.md).
+Für nähere Infos über die Funktionsweise dieser Erweiterung gibt es im [Tutorial für mehrfarbige Satinsäulen](/de/tutorials/multicolor_satin).
 
 ### Funktionsweise
 
