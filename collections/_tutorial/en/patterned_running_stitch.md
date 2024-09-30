@@ -22,7 +22,7 @@ So if we want to create a patterned running stitch we can make use of the LPE `P
 
    ![Target path](/assets/images/tutorials/pattern-along-path/target-path.png)
 2. Press `Ctrl+&` to open the LPE-dialog. Alternatively go to `Path > Path effects...`.
-3. Click on the `+` sign in the LPE-dialog and select `Pattern Along Path`
+3. Click on the search field in the LPE-dialog and start writing `Pattern Along Path`. Select it from the dropdown list.
 
    ![pattern along path](/assets/images/tutorials/pattern-along-path/pattern-along-path.png)
 4. In the LPE-dialog chose "Repeated" or "Repeated stretched" for `Pattern copies`

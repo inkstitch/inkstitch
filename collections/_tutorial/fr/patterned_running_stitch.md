@@ -25,7 +25,8 @@ Donc, si vous souhaitez créer un motif sur point droit, vous pouvez utiliser l'
    
 2.Faites `Ctrl+&` pour ouvrir le dialogue "Effets de chemins". Ou faites 'Chemin > Effets de chemins`.
 
-3. Cliquez sur le signe '+' dans le dialogue "Effets de chemins" et selectionnez `Motif suivant un chemin`
+3. Cliquez sur le champ de recherche dans le dialogue "Effets de chemins" et commencez à écrire "Motif suivant un chemin".
+   Sélectionnez-le dans la liste déroulante.
 
    ![pattern along path](/assets/images/tutorials/pattern-along-path/pattern-along-path.png)
   

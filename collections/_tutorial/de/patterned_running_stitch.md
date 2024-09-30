@@ -22,7 +22,7 @@ Wenn wir also einen gemusterten Geradstich erstellen wollen, können wir ganz ei
 
    ![Target path](/assets/images/tutorials/pattern-along-path/target-path.png)
 2. Drücke `Ctrl+&` um den Pfadeffekt-Dialog zu öffnen. Alternativ geht das z.B. auch über `Pfad > Pfadeffekte...`.
-3. Click on the `+` sign in the LPE-dialog and select `Pattern Along Path`
+3. Klicke in das Suchfeld im Pfadeffekt-Fenster und schreibe `Muster entlang Pfad`. Wähle den entsprechenden Pfadeffekt aus der angezeigten Liste aus.
 
    ![pattern along path](/assets/images/tutorials/pattern-along-path/pattern-along-path.png)
 4. In dem LPE-Dialog wähle Bei `Musterkopien` "Wiederholt" oder "Wiederholt, gestreckt" aus.
