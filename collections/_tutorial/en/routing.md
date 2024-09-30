@@ -9,15 +9,6 @@ image: /assets/images/tutorials/routing/routing.png
 tutorial-type:
   - Text
 stitch-type:
-  - Fill stitch
-  - Guided Fill
-  - Circular Fill
-  - Meander Fill
-  - Satin
-  - E-Stitch
-  - S-Stitch
-  - Running Stitch
-  - Bean Stitch
 techniques:
 field-of-use:
 user-level: 

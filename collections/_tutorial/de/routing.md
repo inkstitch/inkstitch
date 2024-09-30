@@ -9,15 +9,6 @@ image: /assets/images/tutorials/routing/routing.png
 tutorial-typ:
   - Text
 stichart:
-  - Füllung
-  - Kurvenfüllung
-  - Spiralfüllung
-  - Mäanderfüllung
-  - Satinsäule
-  - E-Stich
-  - S-Stich
-  - Geradstich
-  - Mehrfachgeradstich
 techniques:
 field-of-use:
 user-level: 
