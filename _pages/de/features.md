@@ -1,6 +1,6 @@
 ---
 title: "Besondere Ink/Stitch Features"
-permalink: /features/
+permalink: /de/features/
 last_modified_at: 2024-09-30
 toc: false
 layout: splash
