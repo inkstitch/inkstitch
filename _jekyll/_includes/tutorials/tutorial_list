@@ -38,7 +38,8 @@
       {% endif %}
       {% assign old_letter = f.title | split: '' | first %}
     {% endunless %}
-    
+
+  {% if f.url contains "://" %}{% capture f_url %}{{ f.url }}{% endcapture %}{% else %}{% capture f_url %}{{ f.url | relative_url }}{% endcapture %}{% endif %}
   <a class="tutorial__item" href="{{ f_url }}">
     <div class="tutorial__item-teaser">
     {% if f.image %}
@@ -52,7 +53,6 @@
     {% endif %}
     </div><!-- /tutorial item-teaser -->
     <div class="tutorial__description-wrapper">
-    {% if f.url contains "://" %}{% capture f_url %}{{ f.url }}{% endcapture %}{% else %}{% capture f_url %}{{ f.url | relative_url }}{% endcapture %}{% endif %}
     {% if f.title %}<p class="archive__item-title">{% if f.tutorial-type contains 'Video' %} <i class="fa fa-play-circle" aria-hidden="true" title="video tutorial"></i>
     {% endif %}{{ f.title }}</p>{% endif %}
     {% if f.excerpt %}
