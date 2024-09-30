@@ -39,7 +39,7 @@
       {% assign old_letter = f.title | split: '' | first %}
     {% endunless %}
     
-  <div class="tutorial__item"><a href="{{ f_url }}">
+  <a class="tutorial__item" href="{{ f_url }}">
     <div class="tutorial__item-teaser">
     {% if f.image %}
       <img src=
@@ -61,7 +61,7 @@
       </div>
     {% endif %}
     </div><!-- /tutorial description-wrapper -->
-  </a></div><!-- /tutorial item -->
+  </a><!-- /tutorial item -->
   {% endfor %}
 {%- endif -%}
 {% endfor %}
