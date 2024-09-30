@@ -1,12 +1,12 @@
 ---
 title: "Noticeable Ink/Stitch Features"
 permalink: /features/
-last_modified_at: 2023-04-18
+last_modified_at: 2024-09-30
 toc: false
 layout: splash
 accessibility:
   - image_path: /assets/images/features/gnu.jpg
-    alt: "text: Multilingual, Cross Platform, Free and Open Source"
+    alt: "Embroidered GNU and Penguin"
     title: "Multilingual, Cross Platform, Free and Open Source"
     excerpt: "The goal of the Ink/Stitch project is to put free, high-quality embroidery design tools in the hands of folks that might normally not have access to such tools.
               Therefore we want to make it easy for everyone to use:
@@ -24,7 +24,7 @@ accessibility:
              "
 lettering:
   - image_path: /assets/images/galleries/fonts/sortefax/sortefax3.jpg
-    alt: "text: Lettering"
+    alt: "Four pillows with embroidered letters"
     title: "Lettering"
     excerpt: "With Ink/Stitch you have access to an easy to use lettering system with a long list of fonts ready to use.
 
@@ -52,7 +52,7 @@ lettering:
             "
 stitches:
   - image_path: /assets/images/galleries/fonts/abril/WAbril.jpg
-    alt: "text: Manual Stitch Placement to Complex Patterns"
+    alt: "embroidered letter with various stitch types"
     title: "Manual Stitch Placement and Complex Stitch Patterns"
     excerpt: "Explore the [stitch types](/docs/stitch-library/) available in Ink/Stitch and open up a world of creative possibilities.
 
@@ -72,7 +72,7 @@ stitches:
                 A special highlight is the possibility to easily generate [multicolor satins](/docs/satin-tools/#multicolor-satin).
 
               * **Fill stitch types**:
-                [fill]((/docs/stitches/fill-stitch/)),
+                [fill](/docs/stitches/fill-stitch/),
                 [circular fill](/docs/stitches/circular-fill/),
                 [contour fill](/docs/stitches/contour-fill/),
                 [guided fill](/docs/stitches/guided-fill/),
@@ -94,7 +94,7 @@ stitches:
 
 tools:
   - image_path: /assets/images/tutorials/cookie_cutter_tiling/Tshirt.png
-    alt: "text: Tools"
+    alt: "A shirt in four iterations from a fill outline with no fill to a stroke outline and a fill"
     title: "Tools"
     excerpt: "Inkscape is a powerful vector grafic editor.
               This means that there are plenty of tools and other extensions that you can use - beside of the tools delivered by the Ink/Stitch plugin.
@@ -105,7 +105,7 @@ tools:
 
 preview:
   - image_path: /assets/images/galleries/fonts/namskout_ags/namskout_tartan_encours.jpg
-    alt: "text: Stitch Preview"
+    alt: "Embroidery machine stitches a tartan pattern"
     title: "Stitch Preview"
     excerpt: "* Animated stitch-out preview (including live-preview as you adjust settings like row spacing underlay, etc.)
 
@@ -113,12 +113,12 @@ preview:
 
               * Highly customizable [print to PDF](/docs/print-pdf/) output with realistic rendering and line-drawing mode<br>
                 embroidery **machine operator layout** with color blocks, thread names, stitch counts, and custom notes<br>
-                **client-oriented layout** designed for you to send to your customer<br>
+                **client-oriented layout** designed for you to send to your customer
              "
 
 thread:
   - image_path: /assets/images/docs/zigzagmeander_grumpycat.jpg
-    alt: "text: Thread management"
+    alt: "Cat in zig-zag meander style embroidered with variegated thread"
     title: "Thread management"
     excerpt: "Ink/Stitch has a [thread management](/docs/thread-color/) section in the menu.
 
@@ -133,7 +133,7 @@ thread:
 
 import_export:
   - image_path: /assets/images/galleries/augusa/01-butterfly.jpg
-    alt: "text: Import and Export"
+    alt: "Embroidered butterfly on a shirt"
     title: "Import and Export"
     excerpt: "[Import and Export](/docs/import-export/) many popular machine embroidery formats (including batch export)
 
@@ -144,14 +144,14 @@ import_export:
 
 resources:
   - image_path: /assets/images/galleries/fonts/magnolia_KOR/bicolor2.jpg
-    alt: "text: Learning Resources and the Ink/Stitch-Community"
+    alt: "Multicolor satin font. Text: La vie est belle."
     title: "Learning Resources and the Ink/Stitch-Community"
     excerpt: "Ink/Stitch is a community project. Community members can provide helpful information and tutorials.
 
 
               Therefore you can find a growing amount of [tutorials](/tutorials/) about various topics on the Ink/Stitch website.
               Learn about special use cases for specific stitch types or embroidery techniques. Learn how to optimize your embroidery design
-              or how to make bestuse of Inkscape features for embroidery.
+              or how to make best use of Inkscape features for embroidery.
 
 
               The [community](/docs/faq/) is always happy to help when there is trouble or just simple beginner questions.
