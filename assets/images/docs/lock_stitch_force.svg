@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800mm"
+   height="200mm"
+   viewBox="0 0 800.00006 200"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="lock_stitch_force.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview14"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.35034498"
+     inkscape:cx="1201.6727"
+     inkscape:cy="750.68865"
+     inkscape:window-width="1920"
+     inkscape:window-height="1131"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="description" />
+  <defs
+     id="defs1" />
+  <g
+     id="description"
+     transform="matrix(6.6012069,0,0,6.6012069,-224.44741,-232.11141)">
+    <rect
+       style="opacity:0.2;fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.05587"
+       id="rect17"
+       width="34.641525"
+       height="3.7731588"
+       x="77.179932"
+       y="58.05426"
+       rx="0.81564569" />
+    <switch
+       id="switch2">
+      <text
+         systemLanguage="en"
+         style="font-size:3.175px;font-family:Barlow;fill:#009d0f"
+         x="121.66576"
+         y="52.324272"
+         id="text19"><tspan
+           id="tspan19"
+           style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
+           x="121.66576"
+           y="52.324272">☑ Lock stitches</tspan></text>
+      <text
+         systemLanguage="de"
+         style="font-size:3.175px;font-family:Barlow;fill:#009d0f"
+         x="123.83014"
+         y="52.324272"
+         id="text1"><tspan
+           id="tspan1"
+           style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
+           x="123.83014"
+           y="52.324272">☑ Verstecher</tspan></text>
+      <text
+         systemLanguage="fr"
+         style="font-size:3.175px;font-family:Barlow;fill:#009d0f"
+         x="121.66576"
+         y="52.324272"
+         id="text2"><tspan
+           id="tspan2"
+           style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
+           x="121.66576"
+           y="52.324272">☑ Point d’arrêt final</tspan></text>
+    </switch>
+    <switch
+       id="switch4">
+      <text
+         systemLanguage="de"
+         style="font-size:3.175px;font-family:Barlow;fill:#009d0f"
+         x="123.83014"
+         y="47.443893"
+         id="text3"><tspan
+           id="tspan3"
+           style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
+           x="123.83014"
+           y="47.443893">☑ Anstecher</tspan></text>
+      <text
+         systemLanguage="fr"
+         style="font-size:3.175px;font-family:Barlow;fill:#009d0f"
+         x="121.66576"
+         y="47.443893"
+         id="text4"><tspan
+           id="tspan4"
+           style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
+           x="121.66576"
+           y="47.443893">☑ Point d’arrêt initial</tspan></text>
+      <text
+         style="font-size:3.175px;font-family:Barlow;fill:#009d0f"
+         x="121.66576"
+         y="47.443893"
+         id="text15-6"><tspan
+           id="tspan15-2"
+           style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
+           x="121.66576"
+           y="47.443893">☑ Tack stitches</tspan></text>
+    </switch>
+    <switch
+       id="switch6">
+      <text
+         systemLanguage="de"
+         style="font-size:3.175px;font-family:Barlow;fill:#009d0f"
+         x="77.565018"
+         y="52.324272"
+         id="text5"><tspan
+           id="tspan5"
+           style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
+           x="77.565018"
+           y="52.324272">☑ Verstecher</tspan></text>
+      <text
+         systemLanguage="fr"
+         style="font-size:3.175px;font-family:Barlow;fill:#009d0f"
+         x="77.565018"
+         y="52.324272"
+         id="text6"><tspan
+           id="tspan6"
+           style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
+           x="77.565018"
+           y="52.324272">☑ Point d’arrêt final</tspan></text>
+      <text
+         style="font-size:3.175px;font-family:Barlow;fill:#009d0f"
+         x="77.565018"
+         y="52.324272"
+         id="text17-8"><tspan
+           id="tspan17-7"
+           style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
+           x="77.565018"
+           y="52.324272">☑ Lock stitches</tspan></text>
+    </switch>
+    <switch
+       id="switch8">
+      <text
+         systemLanguage="de"
+         style="font-size:3.175px;font-family:Barlow;fill:#ff0000"
+         x="77.565018"
+         y="47.443893"
+         id="text7"><tspan
+           style="font-family:Barlow;stroke-width:0.3"
+           x="77.565018"
+           y="47.443893"
+           id="tspan7">☒ Keine Anstecher</tspan></text>
+      <text
+         systemLanguage="fr"
+         style="font-size:3.175px;font-family:Barlow;fill:#ff0000"
+         x="77.565018"
+         y="47.443893"
+         id="text8"><tspan
+           style="font-family:Barlow;stroke-width:0.3"
+           x="77.565018"
+           y="47.443893"
+           id="tspan8">☒ No point d’arrêt initial</tspan></text>
+      <text
+         style="font-size:3.175px;font-family:Barlow;fill:#ff0000"
+         x="77.565018"
+         y="47.443893"
+         id="text13-6"><tspan
+           style="font-family:Barlow;stroke-width:0.3"
+           x="77.565018"
+           y="47.443893"
+           id="tspan14-0">☒ No tack stitches</tspan></text>
+    </switch>
+    <switch
+       id="switch10">
+      <text
+         systemLanguage="de"
+         style="font-size:3.175px;font-family:Barlow;fill:#ff0000"
+         x="36.403015"
+         y="52.324272"
+         id="text9"><tspan
+           style="font-family:Barlow;stroke-width:0.3"
+           x="36.403015"
+           y="52.324272"
+           id="tspan9">☒ Keine Verstecher</tspan></text>
+      <text
+         systemLanguage="fr"
+         style="font-size:3.175px;font-family:Barlow;fill:#ff0000"
+         x="36.403015"
+         y="52.324272"
+         id="text10"><tspan
+           style="font-family:Barlow;stroke-width:0.3"
+           x="36.403015"
+           y="52.324272"
+           id="tspan10">☒ No point d’arrêt final</tspan></text>
+      <text
+         style="font-size:3.175px;font-family:Barlow;fill:#ff0000"
+         x="36.403015"
+         y="52.324272"
+         id="text16-6"><tspan
+           style="font-family:Barlow;stroke-width:0.3"
+           x="36.403015"
+           y="52.324272"
+           id="tspan16-1">☒ No lock stitches</tspan></text>
+    </switch>
+    <switch
+       id="switch14">
+      <text
+         systemLanguage="de"
+         style="font-size:3.175px;font-family:Barlow;fill:#000000"
+         x="36.828083"
+         y="39.750504"
+         id="text13"><tspan
+           id="tspan13"
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+           x="36.828083"
+           y="39.750504">Minimale Sprungstichlänge: 2 mm</tspan></text>
+      <text
+         systemLanguage="fr"
+         style="font-size:3.175px;font-family:Barlow;fill:#000000"
+         x="36.828083"
+         y="39.750504"
+         id="text14"><tspan
+           id="tspan14"
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+           x="36.828083"
+           y="39.750504">Longueur minimum de saut: 2 mm</tspan></text>
+      <text
+         style="font-size:3.175px;font-family:Barlow;fill:#000000"
+         x="36.828083"
+         y="39.750504"
+         id="text18-9"><tspan
+           id="tspan18-2"
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+           x="36.828083"
+           y="39.750504">Minimum jump stitch length: 2 mm</tspan></text>
+    </switch>
+    <switch
+       id="switch17"
+       transform="translate(57.734522,21.185074)">
+      <text
+         systemLanguage="de"
+         style="font-size:3.175px;font-family:Barlow;text-align:center;text-anchor:middle;fill:#000000"
+         x="59.743645"
+         y="39.750504"
+         id="text16"><tspan
+           id="tspan16"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+           x="36.828083"
+           y="39.750504">Vernähstiche erzwingen</tspan></text>
+      <text
+         systemLanguage="fr"
+         style="font-size:3.175px;font-family:Barlow;text-align:center;text-anchor:middle;fill:#000000"
+         x="59.934147"
+         y="39.750504"
+         id="text17"><tspan
+           id="tspan17"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+           x="36.828083"
+           y="39.750504">Forcer les points d’arrêt</tspan></text>
+      <text
+         style="font-size:3.175px;font-family:Barlow;text-align:center;text-anchor:middle;fill:#000000"
+         x="60.200848"
+         y="39.750504"
+         id="text15"><tspan
+           id="tspan15"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3"
+           x="36.828083"
+           y="39.750504">Force lock stitches</tspan></text>
+    </switch>
+    <switch
+       id="switch18"
+       transform="translate(-85.262741)">
+      <text
+         systemLanguage="de"
+         style="font-size:3.175px;font-family:Barlow;fill:#009d0f"
+         x="121.66576"
+         y="47.443893"
+         id="text12"><tspan
+           id="tspan12"
+           style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
+           x="121.66576"
+           y="47.443893">☑ Anstecher</tspan></text>
+      <text
+         systemLanguage="fr"
+         style="font-size:3.175px;font-family:Barlow;fill:#009d0f"
+         x="121.66576"
+         y="47.443893"
+         id="text18"><tspan
+           id="tspan18"
+           style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
+           x="121.66576"
+           y="47.443893">☑ Point d’arrêt initial</tspan></text>
+      <text
+         style="font-size:3.175px;font-family:Barlow;fill:#009d0f"
+         x="121.66576"
+         y="47.443893"
+         id="text11"><tspan
+           id="tspan11"
+           style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
+           x="121.66576"
+           y="47.443893">☑ Tack stitches</tspan></text>
+    </switch>
+  </g>
+  <g
+     id="line-setup"
+     transform="translate(-31.582446,-32.432971)">
+    <g
+       id="lines"
+       transform="matrix(6.6012069,0,0,6.6012069,-159.8597,-166.67384)">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1"
+         d="M 31.582446,50.364811 H 59.036061"
+         id="path2-5"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1"
+         d="M 69.522834,50.364811 H 108.62718"
+         id="path3-3"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1"
+         d="M 119.11396,50.364811 H 147.60968"
+         id="path4-5"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       id="distance"
+       transform="translate(4.9998832,4.9997817)">
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:1.98036"
+         d="M 224.84967,190.97657 V 212.08694"
+         id="path7-6"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:1.98036"
+         d="M 294.07503,188.85679 V 209.96716"
+         id="path8-2"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:1.98036"
+         d="M 552.21091,188.85679 V 209.96716"
+         id="path9-9"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:1.98036"
+         d="M 621.43631,188.85679 V 209.96716"
+         id="path10-1"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:1.98036"
+         d="M 225.37884,201.53174 294.68992,201.116 M 552.21499,199.91709 620.90712,199.41196"
+         id="path11-2"
+         sodipodi:nodetypes="cccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:20.9588px;font-family:Barlow;fill:#ff0000;stroke-width:6.6012"
+         x="238.46939"
+         y="194.73897"
+         id="text11-7"><tspan
+           id="tspan11-0"
+           style="font-family:Barlow;fill:#ff0000;stroke:none;stroke-width:1.98036"
+           x="238.46939"
+           y="194.73897">1 mm</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:20.9588px;font-family:Barlow;fill:#ff0000;stroke-width:6.6012"
+         x="561.03607"
+         y="194.73897"
+         id="text12-9"><tspan
+           id="tspan12-3"
+           style="font-family:Barlow;fill:#ff0000;stroke:none;stroke-width:1.98036"
+           x="561.03607"
+           y="194.73897">1 mm</tspan></text>
+    </g>
+  </g>
+</svg>
