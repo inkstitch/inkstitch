@@ -108,4 +108,4 @@ To clean inkstitch directory run:
 
 ```
 make distclean
-
+```
