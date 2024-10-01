@@ -115,17 +115,17 @@ class BaseCommand(object):
 
 
 class Command(BaseCommand):
-    def __init__(self, connector):
-        self.connector: inkex.Path = connector
+    def __init__(self, connector: inkex.PathElement) -> None:
+        self.connector = connector
         self.svg = self.connector.getroottree().getroot()
 
         self.parse_command()
 
-    def parse_connector_path(self):
+    def parse_connector_path(self) -> inkex.Path:
         path = inkex.paths.Path(self.connector.get('d')).to_superpath()
         return apply_transforms(path, self.connector)
 
-    def parse_command(self):
+    def parse_command(self) -> None:
         path = self.parse_connector_path()
         if len(path) == 0:
             raise CommandParseError("connector has no path information")
@@ -201,7 +201,7 @@ class StandaloneCommand(BaseCommand):
 
     @property
     @cache
-    def point(self):
+    def point(self) -> Point:
         pos = [float(self.node.get("x", 0)), float(self.node.get("y", 0))]
         transform = get_node_transform(self.node)
         pos = inkex.transforms.Transform(transform).apply_to_point(pos)

@@ -9,7 +9,7 @@ from .tags import SVG_GROUP_TAG, SVG_LINK_TAG
 from .units import get_viewbox_transform
 
 
-def apply_transforms(path, node):
+def apply_transforms(path: inkex.Path, node: inkex.BaseElement) -> inkex.Path:
     transform = get_node_transform(node)
 
     # apply the combined transform to this node's path
@@ -18,20 +18,21 @@ def apply_transforms(path, node):
     return path
 
 
-def compose_parent_transforms(node, mat):
+def compose_parent_transforms(node: inkex.BaseElement, mat: inkex.Transform) -> inkex.Transform:
     # This is adapted from Inkscape's simpletransform.py's composeParents()
     # function.  That one can't handle nodes that are detached from a DOM.
 
     trans = node.get('transform')
     if trans:
         mat = inkex.transforms.Transform(trans) @ mat
-    if node.getparent() is not None:
-        if node.getparent().tag in [SVG_GROUP_TAG, SVG_LINK_TAG]:
-            mat = compose_parent_transforms(node.getparent(), mat)
+    parent = node.getparent()
+    if parent is not None:
+        if parent.tag in [SVG_GROUP_TAG, SVG_LINK_TAG]:
+            mat = compose_parent_transforms(parent, mat)
     return mat
 
 
-def get_node_transform(node: inkex.BaseElement):
+def get_node_transform(node: inkex.BaseElement) -> inkex.Transform:
     """
     if getattr(node, "composed_transform", None):
         return node.composed_transform()
@@ -52,7 +53,7 @@ def get_node_transform(node: inkex.BaseElement):
     return transform
 
 
-def get_correction_transform(node, child=False):
+def get_correction_transform(node: inkex.BaseElement, child=False) -> str:
     """Get a transform to apply to new siblings or children of this SVG node
 
     Arguments:

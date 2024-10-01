@@ -34,4 +34,4 @@ class Reorder(InkstitchExtension):
 
 if __name__ == '__main__':
     e = Reorder()
-    e.affect()
+    e.effect()

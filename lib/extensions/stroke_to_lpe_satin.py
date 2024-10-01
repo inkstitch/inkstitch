@@ -163,7 +163,7 @@ class StrokeToLpeSatin(InkstitchExtension):
 
 
 class SatinPattern:
-    def __init__(self, path=None, node_types=None, flip=True, rung_node=1):
+    def __init__(self, path=None, node_types=None, flip=True, rung_node=1) -> None:
         self.path: str = path
         self.node_types: str = node_types
         self.flip: bool = flip

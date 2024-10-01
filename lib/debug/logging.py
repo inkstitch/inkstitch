@@ -69,6 +69,7 @@
 import os
 import sys
 from pathlib import Path
+from typing import Dict, Any
 
 if sys.version_info >= (3, 11):
     import tomllib      # built-in in Python 3.11+
@@ -139,7 +140,7 @@ def disable_warnings():
 # in development mode we want to use configuration from some LOGGING.toml file
 def activate_for_development(ini: dict, SCRIPTDIR: Path):
     logging_config_file = safe_get(ini, "LOGGING", "log_config_file", default=None)
-    vars = {'SCRIPTDIR': SCRIPTDIR}        # dynamic data for logging configuration
+    vars: Dict[str, Any] = {'SCRIPTDIR': SCRIPTDIR}        # dynamic data for logging configuration
 
     if logging_config_file is not None:
         logging_config_file = Path(logging_config_file)

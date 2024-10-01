@@ -197,7 +197,7 @@ class ElementInfo(InkstitchExtension):
 
 
 class ListItem:
-    def __init__(self, name="", value="", headline=False, warning=False):
+    def __init__(self, name="", value="", headline=False, warning=False) -> None:
         self.name: str = name
         self.value: str = value
         self.headline: bool = headline
