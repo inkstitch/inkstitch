@@ -79,13 +79,13 @@ def generate_realistic_filter() -> inkex.BaseElement:
         }),
         inkex.Filter.SpecularLighting(
             inkex.Filter.DistantLight(attrib={
-                "azimuth": "-125",
-                "elevation": "20",
+                "azimuth": "154",
+                "elevation": "112",
             }), attrib={
                 "result": "result2",
-                "surfaceScale": "1.5",
-                "specularConstant": "0.78",
-                "specularExponent": "2.5",
+                "surfaceScale": "4.29",
+                "specularConstant": "0.65",
+                "specularExponent": "1.6",
             }
         ),
         inkex.Filter.Composite(attrib={
