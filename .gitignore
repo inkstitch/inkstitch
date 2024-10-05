@@ -27,6 +27,7 @@ logs/
 /LOGGING[0-9]*.toml
 /debug*
 /.debug*
+/inkstitch_debug*
 
 # old debug files - to be removed
 /DEBUG*.ini
