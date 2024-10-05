@@ -1,7 +1,7 @@
 ---
 title: "Manual Build: Older macOS systems"
 permalink: /fr/developers/inkstitch/manual-build-old-macos/
-last_modified_at: 2023-02-11
+last_modified_at: 2024-09-30
 toc: true
 ---
 This is an instructional guide how to build Ink/Stitch locally. The manual install for developers is described in the [manual setup section](/developers/inkstitch/manual-setup/).
@@ -18,7 +18,7 @@ This is an instructional guide how to build Ink/Stitch locally. The manual insta
 Additionally in the build process you will need to install the following packages:
 
 ```
-sudo port -v -b install gtk-devel libffi geos gettext gobject-introspection pkgconfig tcl curl sqlite3 readline nodejs16 yarn
+sudo port -v -b install gtk-devel libffi geos gettext gobject-introspection pkgconfig tcl curl sqlite3 readline
 ```
 
 ### Install pyenv
@@ -76,54 +76,36 @@ Update the pip manager
 python -m pip install -v —-upgrade pip
 ```
 
-Install pip packages
+Install pip packages get inkstitch from github
 
 ```
-python -m pip install -v wheel PyGObject pyinstaller 
-
-python -m pip install -v https://files.pythonhosted.org/packages/31/9a/92b7be406a506177ab5ba079b67b7790f65b0d8e0091d0879978098f7d86/wxPython-4.1.1-cp38-cp38-macosx_10_9_x86_64.whl 
-python -m pip install -v https://files.pythonhosted.org/packages/84/86/4f38fa30c112c3590954420f85d95b8cd23811ecc5cfc4bfd4d988d4db44/scipy-1.9.3-cp38-cp38-macosx_10_9_x86_64.whl
-
-python -m pip install -v lxml==4.5.0 --no-binary lxml
-
-python -m pip install -v Shapely==1.8.5 --no-binary Shapely
-```
-
-Install pyembroidery
-
-```
+git clone https://github.com/inkstitch/inkstitch
 git clone https://github.com/inkstitch/pyembroidery.git
-python -m pip install -e pyembroidery/
-```
-
-Edit the requirements.txt to delete the pyembroidery entry then run
-
-```
-python -m pip install -v -r reqirements.txt
+python -m pip install -r inkstitch/requirements.txt
+python -m pip uninstall -y shapely
+python -m pip cache remove shapely
+python -m pip install -v shapely --no-binary shapely
+python -m pip install pyinstaller
 ```
 
 ## Manual Install
 
 From this point a manual install is possible. Check the [manual setup guide](/developers/inkstitch/manual-setup/) on the website. Continue from step 4.
 
-## Build packages
+## Build Ink/Stitch
 
-In order to build and create a package the following must be done.
+Now Ink/Stitch is ready to be built.
 
-Open the Makefile in the inkstitch main folder and add the following entries to the begining of the file.
-
-```
-export BUILD=osx
-export VERSION=localbuild
-```
-
-Then to `bin/build-distribution-archives` and comment out the first line with `#` and save.
-
-From the inkstitch main folder run:
+In the inkstitch folder run:
 
 ```
-make dist
+make distlocal
 ```
 
-To rebuild run `make distclean` before rebuilding.
+When successful the Ink/Stitch installer package will be located in inkstitch/artifacts.
 
+To clean inkstitch directory run:
+
+```
+make distclean
+```
