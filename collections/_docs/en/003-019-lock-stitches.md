@@ -8,7 +8,7 @@ toc: true
 
 Tack and lock stitches are small stitches at the beginning (tack) or the end (lock) of a color block or before and after jump stitches or trim commands. They help to secure the thread.
 
-## When Lock Stitches Apply
+## Influencing Factors (When Lock Stitches Apply)
 
 The embroidery file contains several embroidery objects which will be embroidered one after another. Lock stitches are set when between objects there is either a color change, a trim command or a long distance. `Allow lock stitches` can prevent the usage of lock stitches, while `force lock stitches` will ensure that they are present.
 
@@ -26,7 +26,7 @@ But there are more parameters which can influence the question wheter tack- and 
 
 ### Color Changes
 
-Lock and tack stitches are applied before and after a color change.
+Lock and tack stitchesVerriegelungs- und Heftstiche werden vor und nach einem Farbwechsel angewendet.are applied before and after a color change.
 
 ### Trim Commands
 
