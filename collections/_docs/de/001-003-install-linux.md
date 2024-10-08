@@ -98,7 +98,7 @@ ArchLinux-Nutzer können ein AUR-Packet nutzen: [https://aur.archlinux.org/packa
 
 ## Ink/Stitch öffnen
 
-<div class="notice--warning">Die aktuelle Ink/Stitch Version hat bekannte Probleme mit **Wayland**. Wenn du Wayland benutzt, starte Inkscape mit dem folgenden Befehlt
+<div class="notice--warning">Die aktuelle Ink/Stitch Version hat bekannte Probleme mit <b>Wayland</b>. Wenn bei dir das Problem auftritt, dass das Parameterfenster nicht richtig geladen wird, starte Inkscape über den folgenden Befehl
   <div class="language-plaintext highlighter-rouge" style="margin-top: 1em;">
     <div class="highlight"><pre class="highlight"><code>export GDK_BACKEND=x11 && inkscape</code></pre></div>
   </div>

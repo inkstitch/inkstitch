@@ -111,8 +111,8 @@ develope:
 
 <h2>Neuigkeiten</h2>
 
-{% assign posts = site.posts | where: "lang", "de"  %}
-<ul>{% for post in posts offset: 0 limit: 5 %}<li>{{ post.date  | date: "%B %-d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}</ul>
+{%- assign posts = site.posts | where: "lang", "de" -%}
+<ul>{% for post in posts offset: 0 limit: 5 %}<li class="news-link"><a href="{{ post.url }}">{{ post.title }}</a> <span class="news-date">{{ post.date | date: "%d.%m.%Y" }}</span></li>{% endfor %}</ul>
 <p><a href="{{ site.url }}/de/news/" class="btn btn--primary btn--large">{{ site.data.ui-text[page.lang].more_label | default: "Read more" }}</a></p>
 
 <hr>
