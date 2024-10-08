@@ -27,7 +27,7 @@
 
   {%- if items_grouped.size > 0 -%}
 
-  {% unless value=='a-z'  %} <h3><span>{{ value }}</span></h3>{% endunless %}
+  {% unless include.value or value=='a-z'  %} <h3><span>{{ value }}</span></h3>{% endunless %}
   {% for f in items_grouped %}
   
     {% comment %}Display first letters of the title if alpabetical order{% endcomment %}
