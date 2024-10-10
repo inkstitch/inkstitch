@@ -1,6 +1,12 @@
+# Authors: see git history
+#
+# Copyright (c) 2024 Authors
+# Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+
 from inkex import errormsg
 
 from .elements import EmbroideryElement
+from .gui.request_update_svg_version import RequestUpdate
 from .i18n import _
 from .metadata import InkStitchMetadata
 from .svg import PIXELS_PER_MM
@@ -47,10 +53,21 @@ def update_inkstitch_document(svg, selection=None):
                 update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
         else:
             # this is the automatic update when a legacy inkstitch svg version was recognized
-            for element in document.iterdescendants():
-                if element.tag in EMBROIDERABLE_TAGS:
-                    update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
+            automatic_version_update(document, file_version, INKSTITCH_SVG_VERSION)
+
         _update_inkstitch_svg_version(svg)
+
+
+def automatic_version_update(document, file_version, INKSTITCH_SVG_VERSION):
+    # make sure the user really wants to update
+    if file_version == 0:
+        do_update = RequestUpdate()
+        if do_update.cancelled is True:
+            return
+    # well then, let's update legeacy params
+    for element in document.iterdescendants():
+        if element.tag in EMBROIDERABLE_TAGS:
+            update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
 
 
 def _update_inkstitch_svg_version(svg):
