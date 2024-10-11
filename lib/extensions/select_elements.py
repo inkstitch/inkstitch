@@ -163,7 +163,7 @@ class SelectElements(InkstitchExtension):
         element_id = element.node.get_id() or ''
         conditions = {
             'all': True,
-            'autorun-top': element_id.startswith('autorun'),
+            'autorun-top': element_id.startswith('autorun') or element_id.startswith('redwork'),
             'autorun-underpath': element_id.startswith('underpath'),
             'autosatin-underpath': element_id.startswith('autosatinrun')}
         return conditions[self.options.running_stitch_condition]
