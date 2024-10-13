@@ -39,7 +39,6 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
 
         from ..sew_stack import SewStack
         sew_stack = SewStack(node)
-        elements.append(sew_stack)
 
         if not sew_stack.sew_stack_only:
             element = EmbroideryElement(node)
@@ -52,6 +51,8 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
                     elements.append(Stroke(node))
             if element.get_boolean_param("stroke_first", False):
                 elements.reverse()
+
+        elements.append(sew_stack)
 
         return elements
 
