@@ -7,14 +7,13 @@ toc: false
 classes:
     - wide
 ---
-<i class="fab fa-linux"></i> [Linux](/docs/install-linux/)
-{: .btn .btn--info btn--large }
+<div>
+    <a href="/docs/install-linux/" class="btn btn--info btn--large"><i class="fab fa-linux " ></i> Linux</a>
 
-<i class="fab fa-apple"></i> [macOS](/docs/install-macos/)
-{: .btn .btn--info btn--large }
+    <a href="/docs/install-macos/" class="btn btn--info btn--large"><i class="fab fa-apple " ></i> macOS</a>
 
-<i class="fab fa-windows"></i> [Windows](/docs/install-windows/)
-{: .btn .btn--info btn--large }
+    <a href="/docs/install-windows/" class="btn btn--info btn--large"><i class="fab fa-windows " ></i> Windows</a>
+</div>
 
 ## Manual Setup
 

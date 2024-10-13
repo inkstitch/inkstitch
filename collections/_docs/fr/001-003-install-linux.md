@@ -93,15 +93,15 @@ Les utilisateurs d'Arch Linux peuvent utiliser un paquet AUR: [https://aur.archl
 
 ## Exécuter Ink/Stitch
 
-<div class="notice--warning">The current Ink/Stitch version has known issues with the <b>wayland</b>. If you see issues like the params window not showing, start Inkscape with the following command
+Redémarrez Inkscape.
+
+Vous trouverez alors Ink/Stitch sous `Extensions > Ink/Stitch`.
+
+<div class="notice--warning">If you see issues like the params window not showing up, then this is because you are using <b>wayland</b>. Start Inkscape with the following command
   <div class="language-plaintext highlighter-rouge" style="margin-top: 1em;">
     <div class="highlight"><pre class="highlight"><code>export GDK_BACKEND=x11 && inkscape</code></pre></div>
   </div>
 </div>
-
-Redémarrez Inkscape.
-
-Vous trouverez alors Ink/Stitch sous `Extensions > Ink/Stitch`.
 
 ## Mettre à jour Ink/Stitch
 
