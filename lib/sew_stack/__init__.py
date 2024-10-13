@@ -11,17 +11,13 @@ class SewStack(EmbroideryElement):
         super().__init__(*args, **kwargs)
 
         self.config = DotDict(self.get_json_param('sew_stack', default=dict(layers=list())))
+        self.sew_stack_only = self.get_boolean_param('sew_stack_only', False)
 
         self.layers = []
         for layer_config in self.config.layers:
             layer_class = stitch_layers.by_id[layer_config.layer_id]
             self.layers.append(layer_class(sew_stack=self, config=layer_config))
             debug.log(f"layer name: {self.layers[-1].name}")
-
-    @property
-    def sew_stack_only(self):
-        """Should we only process the SewStack for this object and skip legacy Params-based EmbroideryElements?"""
-        return self.get_boolean_param('sew_stack_only', False)
 
     def move_layer(self, from_index, to_index):
         layer = self.layers.pop(from_index)
@@ -39,6 +35,7 @@ class SewStack(EmbroideryElement):
         """Save current configuration of layers to sew_stack SVG attribute"""
         self.config.layers = [layer.config for layer in self.layers]
         self.set_json_param("sew_stack", self.config)
+        self.set_param("sew_stack_only", self.sew_stack_only)
 
     def uses_previous_stitch(self):
         if self.config.layers:

@@ -90,8 +90,13 @@ class SewStackPanel(wx.Panel):
         self.update_layer_list()
         layer_list_sizer.Add(self.layer_list, 1, wx.BOTTOM | wx.EXPAND, 2)
         layer_list_sizer.Add(self.create_layer_buttons(), 0, wx.EXPAND | wx.BOTTOM, 10)
+        self.sew_stack_only_checkbox = wx.CheckBox(self.layer_list_wrapper, label=_("Sew stack only"), style=wx.CHK_3STATE)
+        self.sew_stack_only_checkbox.Set3StateValue(self.get_sew_stack_only_checkbox_value())
+        self.sew_stack_only_checkbox.SetToolTip(_("Only sew the Sew Stack layers, and ignore settings from Params"))
+        layer_list_sizer.Add(self.sew_stack_only_checkbox, 0, wx.EXPAND | wx.BOTTOM, 10)
         self.layer_list_wrapper.SetSizer(layer_list_sizer)
-        self.splitter.AppendWindow(self.layer_list_wrapper, 250)
+        self.splitter.AppendWindow(self.layer_list_wrapper, 300)
+
         self.splitter.SizeWindows()
 
         self._dragging_row = None
@@ -119,6 +124,15 @@ class SewStackPanel(wx.Panel):
 
         self.__do_layout()
         self.update_preview()
+
+    def get_sew_stack_only_checkbox_value(self):
+        values = [sew_stack.sew_stack_only for sew_stack in self.sew_stacks]
+        if all(values):
+            return wx.CHK_CHECKED
+        elif all(value is False for value in values):
+            return wx.CHK_UNCHECKED
+        else:
+            return wx.CHK_UNDETERMINED
 
     def get_layer_types(self):
         sew_stacks_layer_types = []
@@ -322,11 +336,16 @@ class SewStackPanel(wx.Panel):
             self.update_preview()
 
     def on_checkbox(self, event):
-        row = self._checkbox_to_row.get(event.GetEventObject())
-        if row is not None:
+        checkbox = event.GetEventObject()
+        if checkbox is self.sew_stack_only_checkbox:
             for sew_stack in self.sew_stacks:
-                sew_stack.layers[row].enable(event.IsChecked())
-                self.update_preview()
+                sew_stack.sew_stack_only = event.IsChecked()
+        else:
+            row = self._checkbox_to_row.get(checkbox)
+            if row is not None:
+                for sew_stack in self.sew_stacks:
+                    sew_stack.layers[row].enable(event.IsChecked())
+                    self.update_preview()
 
     def on_splitter_sash_pos_changing(self, event):
         # MultiSplitterWindow doesn't enforce the minimum pane size on the lower
