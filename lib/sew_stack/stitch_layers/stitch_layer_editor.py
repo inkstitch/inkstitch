@@ -319,7 +319,6 @@ class StitchLayerEditor:
                 wx.ID_ANY,
                 style=wx.propgrid.PG_SPLITTER_AUTO_CENTER | wx.propgrid.PG_BOLD_MODIFIED | wx.propgrid.PG_DESCRIPTION
             )
-            # self.property_grid.SetColumnCount(3)
             self.properties.generate(self.property_grid, self.config)
             self.property_grid.ResetColumnSizes(enableAutoResizing=True)
             self.property_grid.Bind(wx.propgrid.EVT_PG_CHANGED, self.on_property_changed)
@@ -377,9 +376,9 @@ class StitchLayerEditor:
 
         if property is None:
             enable = False
-            self.show_help(property)
         else:
             enable = not property.IsCategory()
+            self.show_help(property)
 
         self.undo_button.Enable(enable)
         self.reset_button.Enable(enable)
