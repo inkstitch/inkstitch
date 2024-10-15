@@ -19,6 +19,13 @@ check_errors() {
 cd $(dirname "$0")/../..
 
 check_errors git stash --keep-index
-check_errors git diff --cached | bin/style-check 2>&1
+
+errors="$(git diff --cached | bin/style-check 2>&1)"
+status=$?
+if [ "$status" != "0" ]; then
+    echo "$errors"
+fi
+
 check_errors git stash pop
 
+exit $status
