@@ -7,6 +7,7 @@ import wx.propgrid
 from ...debug.debug import debug
 from ...gui.windows import SimpleBox
 from ...i18n import _
+from ...utils.settings import global_settings
 
 
 class CheckBoxProperty(wx.propgrid.BoolProperty):
@@ -311,9 +312,14 @@ class StitchLayerEditor:
 
     def get_panel(self, parent):
         if self.property_grid_panel is None:
-            self.property_grid_panel = wx.Panel(parent, wx.ID_ANY)
-            main_sizer = wx.BoxSizer(wx.VERTICAL)
+            self.layer_editor_panel = wx.Panel(parent, wx.ID_ANY)
 
+            main_sizer = wx.BoxSizer(wx.VERTICAL)
+            self.splitter = wx.SplitterWindow(self.layer_editor_panel, style=wx.SP_LIVE_UPDATE)
+            self.splitter.Bind(wx.EVT_SPLITTER_SASH_POS_CHANGED, self.on_sash_position_changed)
+
+            self.property_grid_panel = wx.Panel(self.splitter, wx.ID_ANY)
+            property_grid_sizer = wx.BoxSizer(wx.VERTICAL)
             self.property_grid = SewStackPropertyGrid(
                 self.property_grid_panel,
                 wx.ID_ANY,
@@ -345,14 +351,23 @@ class StitchLayerEditor:
             self.reset_button.Bind(wx.EVT_BUTTON, self.on_reset)
             buttons_sizer.Add(self.reset_button, 0, wx.LEFT, 5)
 
-            self.help_box = wx.html.HtmlWindow(self.property_grid_panel, wx.ID_ANY, style=wx.html.HW_SCROLLBAR_AUTO)
-            self.help_box_box = SimpleBox(self.property_grid_panel, self.help_box)
+            self.help_panel = wx.Panel(self.splitter, wx.ID_ANY)
+            self.help_box = wx.html.HtmlWindow(self.help_panel, wx.ID_ANY, style=wx.html.HW_SCROLLBAR_AUTO)
+            self.help_box_box = SimpleBox(self.help_panel, self.help_box)
+            help_sizer = wx.BoxSizer(wx.VERTICAL)
+            help_sizer.Add(self.help_box_box, 1, wx.EXPAND | wx.TOP, 10)
+            self.help_panel.SetSizer(help_sizer)
             self.show_help(self.property_grid.GetFirst(wx.propgrid.PG_ITERATE_CATEGORIES))
 
-            main_sizer.Add(self.property_grid_box, 2, wx.EXPAND | wx.TOP, 10)
-            main_sizer.Add(buttons_sizer, 0, wx.EXPAND | wx.TOP, 2)
-            main_sizer.Add(self.help_box_box, 1, wx.EXPAND | wx.TOP, 10)
-            self.property_grid_panel.SetSizer(main_sizer)
+            property_grid_sizer.Add(self.property_grid_box, 1, wx.EXPAND | wx.TOP, 10)
+            property_grid_sizer.Add(buttons_sizer, 0, wx.EXPAND | wx.TOP, 2)
+            property_grid_sizer.Add((0, 0), 0, wx.BOTTOM, 10)
+            self.property_grid_panel.SetSizer(property_grid_sizer)
+
+            main_sizer.Add(self.splitter, 1, wx.EXPAND)
+            self.layer_editor_panel.SetSizer(main_sizer)
+            self.splitter.SplitHorizontally(self.property_grid_panel, self.help_panel, global_settings['stitch_layer_editor_sash_position'])
+            self.splitter.SetMinimumPaneSize(1)
 
             for property_name, hint in self.hints.items():
                 if property := self.property_grid.GetPropertyByName(property_name):
@@ -361,7 +376,7 @@ class StitchLayerEditor:
 
             main_sizer.Layout()
 
-        return self.property_grid_panel
+        return self.layer_editor_panel
 
     def on_property_changed(self, event):
         # override in subclass if needed but always call super().on_property_changed(event)!
@@ -409,6 +424,9 @@ class StitchLayerEditor:
                     property.SetModifiedStatus(False)
 
                 self.property_grid.RefreshEditor()
+
+    def on_sash_position_changed(self, event):
+        global_settings['stitch_layer_editor_sash_position'] = event.GetSashPosition()
 
     def show_help(self, property):
         if property:
