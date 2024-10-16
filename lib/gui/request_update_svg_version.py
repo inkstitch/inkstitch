@@ -66,7 +66,7 @@ class RequestUpdateFrame(wx.Frame):
         self.Destroy()
 
 
-class RequestUpdate():
+class RequestUpdate:
     def __init__(self):
         self.cancelled = False
 
