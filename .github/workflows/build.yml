@@ -86,7 +86,18 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: linuxmintd/lmde6-i386
+      volumes:
+      - ${{ github.workspace }}:/__e/node20
     steps:
+      - name: Try to replace `node` with an i386 version
+        shell: bash
+        run: |
+          ls -lar /__e/node20 &&
+          apt-get update &&
+          apt-get install -y curl &&
+          curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
+          cd /__e/node20 &&
+          tar -x --strip-components=1 -f /tmp/node.tar.gz
       - uses: actions/checkout@v4
         with:
           submodules: recursive
@@ -158,7 +169,7 @@ jobs:
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
       - uses: actions/upload-artifact@v4
         with:
-          name: inkstitch-linux
+          name: inkstitch-lmde6-32
           path: artifacts          
   windows32:
     runs-on: windows-2019
