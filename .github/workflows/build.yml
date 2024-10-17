@@ -2,10 +2,6 @@ name: Build
 on:
   pull_request:
     branches: [ main ]
-  push:
-    branches-ignore:
-      - master
-      - main
     tags:
       - "v*"
 jobs:
@@ -89,7 +85,7 @@ jobs:
   lmde6-32:
     runs-on: ubuntu-latest
     container:
-      image: linuxmintd:lmde6-i386
+      image: linuxmintd/lmde6-i386
     steps:
       - uses: actions/checkout@v4
         with:
