@@ -113,6 +113,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.9.0'
+          architecture: 'x86'
           cache: 'pip'
       - name: Try to replace `node` with an i386 version
         shell: bash
