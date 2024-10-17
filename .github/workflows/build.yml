@@ -1,5 +1,7 @@
 name: Build
 on:
+  pull_request:
+    branches: [ main ]
   push:
     branches-ignore:
       - master
