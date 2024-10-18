@@ -130,8 +130,8 @@ jobs:
         shell: bash
         run: |
           apt-get update
-          apt-get install -y python3 python3-pip pipx
-          sudo gem install fpm
+          apt-get install -y python3 python3-pip pipx ruby-full
+          gem install fpm
           python -m pip install --upgrade pip
           python -m pip install wheel
 
