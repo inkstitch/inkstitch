@@ -110,20 +110,6 @@ jobs:
           curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
           cd /__e/node20 &&
           tar -x --strip-components=1 -f /tmp/node.tar.gz
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.9.0'
-          architecture: 'x86'
-          cache: 'pip'
-      - name: Try to replace `node` with an i386 version
-        shell: bash
-        run: |
-          ls -lar /__e/node20 &&
-          apt-get update &&
-          apt-get install -y curl &&
-          curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
-          cd /__e/node20 &&
-          tar -x --strip-components=1 -f /tmp/node.tar.gz
       - uses: actions/cache@v4
         id: geos-build-cache
         with:
@@ -144,6 +130,7 @@ jobs:
         shell: bash
         run: |
           sudo apt-get update
+          sudo apt install python-dev pipx
           sudo gem install fpm
           python -m pip install --upgrade pip
           python -m pip install wheel
