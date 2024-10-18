@@ -83,13 +83,15 @@ jobs:
           name: inkstitch-linux
           path: artifacts
   lmde6-32:
+    # Node required for actions, install follows 
+    # https://github.com/actions/upload-artifact/issues/616
     runs-on: ubuntu-latest
     container:
       image: linuxmintd/lmde6-i386
       volumes:
       - ${{ github.workspace }}:/__e/node20
     steps:
-      - name: Try to replace `node` with an i386 version
+      - name: Checkout repository
         shell: bash
         run: |
           ls -lar /__e/node20 &&
@@ -101,7 +103,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Try to replace `node` with an i386 version
+      - name: Replace `node` with an i386 version
         shell: bash
         run: |
           ls -lar /__e/node20 &&
@@ -110,7 +112,7 @@ jobs:
           curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
           cd /__e/node20 &&
           tar -x --strip-components=1 -f /tmp/node.tar.gz
-      - name: install dependencies
+      - name: install dependencies and build
         shell: bash
         run: |
           apt-get update
@@ -157,12 +159,14 @@ jobs:
           
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
           deactivate
-      - shell: bash
+      - name: test    
+        shell: bash
         run: |
           source virtualenv/bin/activate
           pytest
-          deactivate
-      - shell: bash
+          deactivate 
+      - name: Package distributable    
+        shell: bash
         run: |
           source virtualenv/bin/activate
           make dist
@@ -170,7 +174,7 @@ jobs:
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - name: Try to replace `node` with an i386 version
+      - name: Upload artifact
         shell: bash
         run: |
           ls -lar /__e/node20 &&
