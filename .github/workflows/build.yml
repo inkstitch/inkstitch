@@ -144,7 +144,8 @@ jobs:
           apt-get install -y libgirepository1.0-dev libcairo2-dev
 
           # for shapely
-          apt-get install -y build-essential libgtk-3-dev
+          apt-get install -y build-essential libgtk-3-dev 
+          apt-get install -y gcc g++ gfortran libopenblas-dev liblapack-dev
 
           uname -a
           python3 --version
@@ -154,7 +155,6 @@ jobs:
           apt-get install -y python3-cairo
           apt-get install -y python3-gi
 
-          pipx install wxPython
           apt-get install -y python3-networkx python3-shapely python3-lxml
           apt-get install -y python3-appdirs python3-numpy python3-jinja2
           apt-get install -y python3-requests python3-tomli python3-
@@ -169,9 +169,6 @@ jobs:
           pipx install pyarrow
 
           pipx install pyinstaller
-
-          # scipy gives us a ELF error when stripped
-          apt-get install -y gcc g++ gfortran libopenblas-dev liblapack-dev
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
