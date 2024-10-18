@@ -160,15 +160,16 @@ jobs:
           apt-get install -y python3-requests python3-tomli python3-cachetools
           apt-get install -y python3-flask python3-fonttools python3-scipy
           apt-get install -y python3-diskcache python3-flask-cors python3-pytest
-          pipx install inkex
-          pipx install trimesh
-          pipx install colormath @ git+https://github.com/gtaylor/python-colormath.git@4a076831fd5136f685aa7143db81eba27b2cd19a
-          pipx install wxPython
+          apt-get install -y python3-mf2py python3-scour 
+          pip install --user inkex
+          pip install --user trimesh
+          pip install --user colormath @ git+https://github.com/gtaylor/python-colormath.git@4a076831fd5136f685aa7143db81eba27b2cd19a
+          pip install --user wxPython
           # for networkx
           apt-get install -y python3-pandas
-          pipx install pyarrow
+          pip install --user pyarrow
 
-          pipx install pyinstaller
+          pip install --user pyinstaller
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
