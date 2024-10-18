@@ -56,6 +56,7 @@ jobs:
           python -m pip install -r requirements.txt
           # for networkx
           python -m pip install pandas
+          python -m pip install pyarrow
           
           python -m pip install pyinstaller
 
@@ -147,8 +148,7 @@ jobs:
           virtualenv/bin/pip install -r requirements.txt
           # for networkx
           virtualenv/bin/pip install pandas
-          virtualenv/bin/pip install pyarrow
-
+         
           virtualenv/bin/pip install pyinstaller
 
           # scipy gives us a ELF error when stripped
