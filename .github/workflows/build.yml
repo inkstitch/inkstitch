@@ -152,25 +152,26 @@ jobs:
           python3 -m pip --version
           python3 -m pip debug
 
-          apt-get install -y python3-cairo
-          apt-get install -y python3-gi
-
-          apt-get install -y python3-networkx python3-shapely python3-lxml
-          apt-get install -y python3-appdirs python3-numpy python3-jinja2
-          apt-get install -y python3-requests python3-tomli python3-cachetools
-          apt-get install -y python3-flask python3-fonttools python3-scipy
-          apt-get install -y python3-diskcache python3-flask-cors python3-pytest
-          apt-get install -y python3-mf2py python3-scour
-          apt-get install -y python3-pandas python3-networkx
           python3 -m venv virtualenv
           source virtualenv/bin/activate
-          virtualenv/bin/pip install inkex
-          virtualenv/bin/pip install trimesh
-          virtualenv/bin/pip install colormath @ git+https://github.com/gtaylor/python-colormath.git@4a076831fd5136f685aa7143db81eba27b2cd19a
+          
+          virtualenv/bin/pip debug
+          virtualenv/bin/pip install pycairo
+          virtualenv/bin/pip install PyGObject
+
           virtualenv/bin/pip install wxPython
+          
+          virtualenv/bin/pip install -r requirements.txt
+          # for networkx
+          virtualenv/bin/pip install pandas
           virtualenv/bin/pip install pyarrow
+
           virtualenv/bin/pip install pyinstaller
 
+          # scipy gives us a ELF error when stripped
+          virtualenv/bin/pip uninstall --yes scipy
+          virtualenv/bin/pip install scipy --no-binary scipy
+          
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
         run: |
