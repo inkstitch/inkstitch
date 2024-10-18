@@ -148,25 +148,25 @@ jobs:
           apt-get install -y build-essential libgtk-3-dev
 
           uname -a
-          python --version
-          python -m pip --version
-          python -m pip debug
+          python3 --version
+          python3 -m pip --version
+          python3 -m pip debug
 
-          python -m pip install pycairo
-          python -m pip install PyGObject
+          python3 -m pip install pycairo
+          python3 -m pip install PyGObject
 
-          python -m pip install wxPython
-          python -m pip install -r requirements.txt
+          python3 -m pip install wxPython
+          python3 -m pip install -r requirements.txt
           # for networkx
-          python -m pip install pandas
-          python -m pip install pyarrow
+          python3 -m pip install pandas
+          python3 -m pip install pyarrow
 
-          python -m pip install pyinstaller
+          python3 -m pip install pyinstaller
 
           # scipy gives us a ELF error when stripped
           apt-get install -y gcc g++ gfortran python3-dev libopenblas-dev liblapack-dev
-          python -m pip uninstall --yes scipy
-          python -m pip install scipy --no-binary scipy
+          python3 -m pip uninstall --yes scipy
+          python3 -m pip install scipy --no-binary scipy
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
