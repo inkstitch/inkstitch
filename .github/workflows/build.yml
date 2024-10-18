@@ -110,22 +110,6 @@ jobs:
           curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
           cd /__e/node20 &&
           tar -x --strip-components=1 -f /tmp/node.tar.gz
-      - uses: actions/cache@v4
-        id: geos-build-cache
-        with:
-          path: geos/build
-          key: ${{ runner.os }}-6-i386-geos-build-${{ hashFiles('**/bin/build-linux') }}
-          restore-keys: |
-            ${{ runner.os }}-6-i386-geos-build-
-      - name: Try to replace `node` with an i386 version
-        shell: bash
-        run: |
-          ls -lar /__e/node20 &&
-          apt-get update &&
-          apt-get install -y curl &&
-          curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
-          cd /__e/node20 &&
-          tar -x --strip-components=1 -f /tmp/node.tar.gz
       - name: install dependencies
         shell: bash
         run: |
@@ -173,15 +157,17 @@ jobs:
           virtualenv/bin/pip install scipy --no-binary scipy
           
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+          deactivate
       - shell: bash
         run: |
-          bin/build-linux
-      - shell: bash
-        run: |
+          source virtualenv/bin/activate
           pytest
+          deactivate
       - shell: bash
         run: |
+          source virtualenv/bin/activate
           make dist
+          deactivate
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
