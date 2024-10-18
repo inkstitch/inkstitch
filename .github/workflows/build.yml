@@ -157,7 +157,7 @@ jobs:
 
           apt-get install -y python3-networkx python3-shapely python3-lxml
           apt-get install -y python3-appdirs python3-numpy python3-jinja2
-          apt-get install -y python3-requests python3-tomli python3-
+          apt-get install -y python3-requests python3-tomli python-backports.functools-lru-cache
           apt-get install -y python3-flask python3-fonttools python3-scipy
           apt-get install -y python3-diskcache python3-flask-cors python3-pytest
           pipx install inkex
