@@ -88,6 +88,7 @@ class TartanSvgGroup:
         # set outline invisible
         outline.style['display'] = 'none'
         group.append(outline)
+        return group
 
     def _generate_tartan_group_elements(self, group, outline_shape, transform):
         dimensions, rotation_center = self._get_dimensions(outline_shape)

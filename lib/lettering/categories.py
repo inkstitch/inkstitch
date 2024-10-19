@@ -7,7 +7,7 @@ from ..i18n import _
 
 
 class FontCategory:
-    def __init__(self, cat_id=None, name=None):
+    def __init__(self, cat_id=None, name=None) -> None:
         self.id: str = cat_id
         self.name: str = name
 

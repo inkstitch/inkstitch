@@ -3,6 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from typing import Union, Optional
 from shapely import geometry as shgeo
 
 from ..utils.geometry import Point
@@ -10,10 +11,13 @@ from ..utils.geometry import Point
 
 class Stitch(Point):
     """A stitch is a Point with extra information telling how to sew it."""
+    x: float
+    y: float
 
     def __init__(
         self,
-        x, y=None,
+        x: Union["Stitch", shgeo.Point, float],
+        y: Optional[float] = None,
         color=None,
         jump=False,
         stop=False,
@@ -32,14 +36,15 @@ class Stitch(Point):
             # Allow creating a Stitch from another Stitch.  Attributes passed as
             # arguments will override any existing attributes.
             base_stitch = x
-            self.x: float = base_stitch.x
-            self.y: float = base_stitch.y
+            self.x = base_stitch.x
+            self.y = base_stitch.y
         elif isinstance(x, (Point, shgeo.Point)):
             # Allow creating a Stitch from a Point
             point = x
-            self.x: float = point.x
-            self.y: float = point.y
+            self.x = point.x
+            self.y = point.y
         else:
+            assert y is not None
             Point.__init__(self, x, y)
 
         self._set('color', color, base_stitch)

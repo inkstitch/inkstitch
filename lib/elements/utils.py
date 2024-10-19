@@ -37,7 +37,7 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
     elif node.tag in EMBROIDERABLE_TAGS or is_clone(node):
         element = EmbroideryElement(node)
 
-        elements = []
+        elements: List[EmbroideryElement] = []
         if element.get_style("fill", "black") and not element.get_style('fill-opacity', 1) == "0":
             elements.append(FillStitch(node))
         if element.get_style("stroke"):

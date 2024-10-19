@@ -4,7 +4,8 @@
 ./pyembroidery
 
 # get up to date inkex version (Febuary 10, 2024)
-inkex @ git+https://gitlab.com/inkscape/extensions.git@618fe5e1e431d4b28a078660bf17afc65335fe39
+# inkex @ git+https://gitlab.com/inkscape/extensions.git@618fe5e1e431d4b28a078660bf17afc65335fe39
+inkex @ git+https://gitlab.com/CapellanCitizen/extensions.git@219effaf5f307a2d49296204056544a1652b56b9
 
 # for linux user it may be tricky to install wxPython from sources
 # prebuilt packages: https://wxpython.org/pages/downloads/index.html

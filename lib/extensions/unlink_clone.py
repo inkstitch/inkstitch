@@ -19,7 +19,7 @@ class UnlinkClone(InkstitchExtension):
         self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-r", "--recursive", dest="recursive", type=Boolean, default=True)
 
-    def effect(self):
+    def effect(self) -> None:
         recursive: bool = self.options.recursive
 
         if not self.get_elements():
@@ -34,8 +34,8 @@ class UnlinkClone(InkstitchExtension):
         clones_resolved: List[Tuple[BaseElement, BaseElement]] = []
         for element in self.elements:
             if isinstance(element, Clone):
-                resolved = element.resolve_clone(recursive=recursive)
-                clones_resolved.append((element.node, resolved[0]))
+                element_resolved = element.resolve_clone(recursive=recursive)
+                clones_resolved.append((element.node, element_resolved[0]))
 
         for (clone, resolved) in clones_resolved:
             clone.delete()
