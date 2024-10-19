@@ -174,7 +174,7 @@ class EmbroideryElement(object):
     def get_style(self, style_name, default=None):
         element_style = self._get_specified_style()
         style = element_style.get(style_name, default)
-        if style == 'none':
+        if style in ['none', 'None']:
             style = None
         elif style == 'currentColor':
             style = element_style(style_name)
