@@ -9,6 +9,10 @@
     "leading": 165,
     "auto_satin": false,
     "reversible": false,
+    "sortable": true,
+    "combine_at_sort_indices": [
+        0
+    ],
     "letter_case": "",
     "default_glyph": "�",
     "size": 35,

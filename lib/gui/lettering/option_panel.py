@@ -57,13 +57,15 @@ class LetteringOptionsPanel(wx.Panel):
         outer_sizer.Add(filter_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
         # options
-        self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
-
         self.scale_spinner = wx.SpinCtrl(self, wx.ID_ANY, min=0, max=1000, initial=100)
         self.scale_spinner.Bind(wx.EVT_SPINCTRL, lambda event: self.panel.on_change("scale", event))
 
         self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
         self.back_and_forth_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.panel.on_change("back_and_forth", event))
+
+        self.color_sort_checkbox = wx.CheckBox(self, label=_("Color sort"))
+        self.color_sort_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.panel.on_change("color_sort", event))
+        self.color_sort_checkbox.SetToolTip(_("Sort multicolor fonts. Unifies tartan patterns."))
 
         self.trim_option_choice = wx.Choice(self, choices=[_("Never"), _("after each line"), _("after each word"), _("after each letter")],
                                             name=_("Add trim command"))
@@ -74,22 +76,26 @@ class LetteringOptionsPanel(wx.Panel):
         self.use_trim_symbols.SetToolTip(_('Uses command symbols if enabled. When disabled inserts trim commands as params.'))
 
         left_option_sizer = wx.BoxSizer(wx.VERTICAL)
-        left_option_sizer.Add(self.back_and_forth_checkbox, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 5)
-
-        trim_option_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        trim_option_sizer.Add(wx.StaticText(self, wx.ID_ANY, _("Add trims")), 0, wx.LEFT | wx.ALIGN_TOP, 5)
-        trim_option_sizer.Add(self.trim_option_choice, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
-        trim_option_sizer.Add(self.use_trim_symbols, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
-        left_option_sizer.Add(trim_option_sizer, 0, wx.ALIGN_LEFT, 5)
 
         font_scale_sizer = wx.BoxSizer(wx.HORIZONTAL)
         font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, _("Scale")), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 0)
         font_scale_sizer.Add(self.scale_spinner, 0, wx.LEFT, 10)
         font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, "%"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 3)
+        left_option_sizer.Add(font_scale_sizer, 0, wx.ALIGN_LEFT, 5)
 
+        left_option_sizer.Add(self.back_and_forth_checkbox, 1, wx.LEFT | wx.TOP | wx.RIGHT, 5)
+        left_option_sizer.Add(self.color_sort_checkbox, 1, wx.LEFT | wx.TOP | wx.RIGHT, 5)
+
+        right_option_sizer = wx.BoxSizer(wx.VERTICAL)
+
+        right_option_sizer.Add(wx.StaticText(self, wx.ID_ANY, _("Add trims")), 0, wx.LEFT | wx.ALIGN_TOP, 5)
+        right_option_sizer.Add(self.trim_option_choice, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
+        right_option_sizer.Add(self.use_trim_symbols, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT | wx.BOTTOM, 5)
+
+        self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
         options_sizer = wx.StaticBoxSizer(self.options_box, wx.HORIZONTAL)
-        options_sizer.Add(left_option_sizer, 1, wx.EXPAND, 10)
-        options_sizer.Add(font_scale_sizer, 0, wx.RIGHT, 10)
+        options_sizer.Add(left_option_sizer, 1, wx.LEFT | wx.RIGHT, 10)
+        options_sizer.Add(right_option_sizer, 0, wx.RIGHT, 10)
         outer_sizer.Add(options_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
         # text input

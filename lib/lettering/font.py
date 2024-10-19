@@ -15,13 +15,14 @@ from ..elements import SatinColumn, Stroke, nodes_to_elements
 from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
-from ..marker import MARKER, ensure_marker, has_marker
+from ..marker import MARKER, ensure_marker, has_marker, is_grouped_with_marker
 from ..stitches.auto_satin import auto_satin
 from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
                         INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_GROUP_TAG,
                         SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
 from ..utils import Point
 from .font_variant import FontVariant
+from collections import defaultdict
 
 
 class FontError(InkstitchException):
@@ -147,6 +148,8 @@ class Font(object):
     word_spacing = font_metadata('horiz_adv_x_space', 20)
 
     reversible = font_metadata('reversible', True)
+    sortable = font_metadata('sortable', False)
+    combine_at_sort_indices = font_metadata('combine_at_sort_indices', [])
 
     @property
     def id(self):
@@ -201,7 +204,7 @@ class Font(object):
             return False
         return custom_dir in self.path
 
-    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim_option=0, use_trim_symbols=False):
+    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim_option=0, use_trim_symbols=False, color_sort=False):
 
         """Render text into an SVG group element."""
         self._load_variants()
@@ -230,6 +233,20 @@ class Font(object):
         if self.auto_satin and len(destination_group) > 0:
             self._apply_auto_satin(destination_group)
 
+        self._set_style(destination_group)
+
+        # add trims
+        self._add_trims(destination_group, text, trim_option, use_trim_symbols, back_and_forth)
+        # make sure necessary marker and command symbols are in the defs section
+        self._ensure_command_symbols(destination_group)
+        self._ensure_marker_symbols(destination_group)
+
+        if color_sort and self.sortable:
+            self.do_color_sort(destination_group)
+
+        return destination_group
+
+    def _set_style(self, destination_group):
         # make sure font stroke styles have always a similar look
         for element in destination_group.iterdescendants(SVG_PATH_TAG):
             style = inkex.Style(element.get('style'))
@@ -241,14 +258,6 @@ class Font(object):
                     if self.auto_satin or element.get_id().startswith("autosatinrun"):
                         style += inkex.Style("stroke-width:0.5px")
                 element.set('style', '%s' % style.to_str())
-
-        # add trims
-        self._add_trims(destination_group, text, trim_option, use_trim_symbols, back_and_forth)
-        # make sure necessary marker and command symbols are in the defs section
-        self._ensure_command_symbols(destination_group)
-        self._ensure_marker_symbols(destination_group)
-
-        return destination_group
 
     def get_variant(self, variant):
         return self.variants.get(variant, self.variants[self.default_variant])
@@ -441,3 +450,66 @@ class Font(object):
 
         if elements:
             auto_satin(elements, preserve_order=True, trim=False)
+
+    def do_color_sort(self, group):
+        """Sort elements by their color sort index as defined by font author"""
+        elements_by_color = self._get_color_sorted_elements(group)
+
+        # there are no sort indexes defined, abort color sorting and return to normal
+        if not elements_by_color:
+            return
+
+        group.remove_all()
+        for index, grouped_elements in sorted(elements_by_color.items()):
+            color_group = inkex.Group(attrib={
+                INKSCAPE_LABEL: _("Color Group") + f' {index}'
+            })
+
+            # combined indices
+            if index in self.combine_at_sort_indices:
+                path = ""
+                for element_list in grouped_elements:
+                    for element in element_list:
+                        path += element.get("d", "")
+                grouped_elements[0][0].set("d", path)
+                color_group.append(grouped_elements[0][0])
+                group.append(color_group)
+                continue
+
+            # everything else, create marker groups if applicable
+            for element_list in grouped_elements:
+                if len(element_list) == 1:
+                    color_group.append(element_list[0])
+                    continue
+                elements_group = inkex.Group()
+                for element in element_list:
+                    elements_group.append(element)
+                color_group.append(elements_group)
+
+            group.append(color_group)
+
+    def _get_color_sorted_elements(self, group):
+        elements_by_color = defaultdict(list)
+        last_parent = None
+        for element in group.iterdescendants(SVG_PATH_TAG):
+            sort_index = element.get('inkstitch:color_sort_index', None)
+
+            # get glyph group to calculate transform
+            for ancestor in element.ancestors(group):
+                if ancestor.get_id().startswith("glyph"):
+                    glyph_group = ancestor
+                    break
+            element.transform = element.composed_transform(glyph_group.getparent())
+            element.apply_transform()
+
+            if not sort_index:
+                elements_by_color[404].append([element])
+                continue
+
+            parent = element.getparent()
+            if last_parent != parent or int(sort_index) not in elements_by_color or not is_grouped_with_marker(element):
+                elements_by_color[int(sort_index)].append([element])
+            else:
+                elements_by_color[int(sort_index)][-1].append(element)
+            last_parent = element.getparent()
+        return elements_by_color

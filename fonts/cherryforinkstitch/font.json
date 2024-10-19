@@ -8,6 +8,7 @@
     "leading": 227,
     "auto_satin": false,
     "reversible": false,
+    "sortable": true,
     "letter_case": "",
     "default_glyph": "�",
     "min_scale": 0.8,
