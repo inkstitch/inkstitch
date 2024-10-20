@@ -5,9 +5,8 @@
 
 import json
 import os
-from inkex import errormsg
 
-from inkex import Boolean
+from inkex import Boolean, errormsg
 
 from ..i18n import _
 from ..lettering.categories import FONT_CATEGORIES
