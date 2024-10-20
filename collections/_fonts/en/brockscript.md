@@ -29,8 +29,9 @@ It may be  scaled up to 250% (approx:  100 mm 4 inches)  but may not be scaled d
 
 ## Too  christmassy for you ?
 
-The µ  glyph has been hacked to store this embroidery ![Brockscript](/assets/images/fonts/brockscriptmu.png)
-that contain 4 alternatives to the holly. 
+The µ  glyph has been hacked to store this embroidery that contain 4 alternatives to the holly.
+
+![Brockscript](/assets/images/fonts/brockscriptmu.png)
 
 The replacement is up to you, but it is easy in inkscape.
 

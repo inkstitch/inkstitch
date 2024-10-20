@@ -28,7 +28,9 @@ Sie kann bis auf 250% (~100mm, 4 Zoll) hochskaliert werden, aber NICHT herunters
 
 ## Zu Weihnachtlich?
 
-Das µ-Zeichen wurde gehackt, um diese 4 Alternativen Mini-Motive zur Stechpalme zu speichern ![Brockscript](/assets/images/fonts/brockscriptmu.png). 
+Das µ-Zeichen wurde gehackt, um diese 4 Alternativen Mini-Motive zur Stechpalme zu speichern.
+
+![Brockscript](/assets/images/fonts/brockscriptmu.png)
 
 Der Austausch ist beliebig möglich, und mit etwas Inkscape-Übung gut zu meistern.
 
