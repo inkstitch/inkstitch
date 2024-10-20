@@ -1,22 +1,13 @@
 ---
 title: "Visuelle Befehle"
 permalink: /de/docs/commands/
-last_modified_at: 2024-07-13
+last_modified_at: 2024-10-20
 toc: true
 ---
 Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber festzulegen, wie das Design gestickt werden soll. Sie können z.B. der Maschine mitteilen, dass der Faden nach einem Stickobjekt geschnitten werden soll oder definieren, wann und wo die Maschine pausieren soll, so dass man für eine Applikation bequem ein Stück Stoff hinzufügen kann.
 
 Nicht jede Maschine kann diese zusätzliche Informationen umsetzen und verstehen. In diesem Fall wird ein Befehl einfach ignoriert.
 {: .notice--warning }
-
-## Sprungstich zu Fadenschnitt-Befehl
-
-`Befehle > Sprungstich zu Fadenschnitt-Befehl` 
-
-Fügt Fadenschnitt-Befehle ein um Sprungstiche zu vermeiden
-
-**Info**: Nutze diese Option nicht, wenn es die Möglichkeit gibt den Stickpfad weiter zu optimisieren. Das Fadenschneiden sollte so gut wie möglich vermieden werden. Lerne über Funktionen die Ink/Stitch für eine bessere [Pfadoptimisierung](/de/tutorials/routing/) bereithält.
-{: .notice--info }
 
 ## Dokumentbefehle hinzufügen ...
 
@@ -93,6 +84,26 @@ Definiert (1) die Start- und (2) die Endposition für automatish geführte Satin
 
 Nutze immer nur einen Anfangs- und einen Endpunkt für jede Auto-Route Operation.
 
+## Befehle entfernen
+
+### Einzelne Befehle entfernen
+
+Wähle die Gruppe mit dem Befehl und entferne sie.
+
+### Alle Befehle entfernen
+
+* Öffne `Erweiterungen > Ink/Stitch > Fehlerbehebung > Stickeinstellungen entfernen`
+* Wähle ob alle Befehle oder nur Befehle eines bestimmten Typs entfernt werden sollen
+* Klicke auf `Anwenden`
+
+## Sprungstich zu Fadenschnitt-Befehl
+
+`Befehle > Sprungstich zu Fadenschnitt-Befehl` 
+
+Fügt Fadenschnitt-Befehle ein um Sprungstiche zu vermeiden
+
+**Info**: Nutze diese Option nicht, wenn es die Möglichkeit gibt den Stickpfad weiter zu optimisieren. Das Fadenschneiden sollte so gut wie möglich vermieden werden. Lerne über Funktionen die Ink/Stitch für eine bessere [Pfadoptimisierung](/de/tutorials/routing/) bereithält.
+{: .notice--info }
 
 ## Ansicht
 

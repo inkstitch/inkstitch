@@ -1,72 +1,57 @@
 ---
 title: "Manual Setup"
 permalink: /fr/developers/inkstitch/manual-setup/
-last_modified_at: 2021-10-14
+last_modified_at: 2024-10-19
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
 ---
 A manual setup will allow you to edit the code while running the extension.
 
-If you are aiming to debug extensions, and are running on Windows, some supplementary instructions are available at [windows-manual-setup](/developers/inkstitch/windows-manual-setup/)
-
 ## How to Install Ink/Stich Manually
+
+We recommend to use `pyenv` with python 3.8.
 
 ### 1. Clone the extension source
 
 ```
 git clone https://github.com/inkstitch/inkstitch
+git clone https://github.com/inkstitch/pyembroidery
 ```
 
-### 2. Install Pyembroidery
-
-```
-git clone https://github.com/inkstitch/pyembroidery.git
-pip install -e pyembroidery/
-```
-
-We recommend to use `pyenv` to avoid the need of root privileges for `pip`.
-
-### 3. Python Dependencies
+### 2. Python Dependencies
 
 A few python more modules are needed.
 In some cases this extension uses features that aren’t available in the versions of the modules pre-packaged in distributions, so we recommend installing them directly with pip.
 
-Since we already installed pyembroidery just temporarely comment it out before you run these commands.
+```
+cd inkstitch
+pip install -r inkstitch/requirements.txt
+```
+
+### 3. Prepare INX files
+
+Now we need to create the files for the Inkscape menu
 
 ```
 cd inkstitch
-pip install -r requirements.txt
+make manual
 ```
 
-### 4. Install Electron dependencies
-
-The Ink/Stitch GUI uses Electron.  You'll need a working NodeJS installation of version 10 or greater.  If you don't have the `yarn` command, install it with `npm install yarn`.
-
-Install Electron and its dependencies:
-
-```
-cd electron
-yarn install
-cd ..
-```
-
-### 5. Prepare INX files
-
-Now we need to create the files for the Inkscape menu.
+When you later add or change a template file for Ink/Stitch extensions, simply run
 
 ```
 make inx
 ```
 
-### 6. Symbolically link into the Inkscape extensions directory
+### 4. Symbolically link into the Inkscape extensions directory
 
 ```
 cd ~/.config/inkscape/extensions
 ln -s /path/to/inkstitch
 ```
 
-### 7. Run Inkscape.
+### 5. Run Inkscape.
 
 Changes to the Python code take effect the next time the extension is run. Changes to the extension description files (`*.inx`) take effect the next time Inkscape is restarted.
 

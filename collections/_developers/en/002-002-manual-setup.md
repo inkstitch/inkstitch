@@ -10,9 +10,9 @@ A manual setup will allow you to edit the code while running the extension.
 
 ## How to Install Ink/Stich Manually
 
-### 1. Clone the extension source
-
 We recommend to use `pyenv` with python 3.8.
+
+### 1. Clone the extension source
 
 ```
 git clone https://github.com/inkstitch/inkstitch
@@ -24,9 +24,8 @@ git clone https://github.com/inkstitch/pyembroidery
 A few python more modules are needed.
 In some cases this extension uses features that aren’t available in the versions of the modules pre-packaged in distributions, so we recommend installing them directly with pip.
 
-Since we already installed pyembroidery just temporarely comment it out before you run these commands.
-
 ```
+cd inkstitch
 pip install -r inkstitch/requirements.txt
 ```
 

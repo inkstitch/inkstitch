@@ -8,15 +8,6 @@ Les commandes visuelles peuvent être utilisées pour spécifier des information
 
 Toutes les machines à broder ne sont pas capable de comprendre ces commandes. Si ça ne fonctionne pas bien pour vous, lisez le manuel de vos machines pour vérifier leur capacités.{: .notice--warning }
 
-## Saut en Coupe {#jump-to-trim}
-
-Cette extension insère des commandes de coupe à la place des sauts.
-
-**Info**:Ne pas utiliser cette extension avant d'avoir optimisé le chemin de broderie: il faut éviter au maximum les coupes de fil. Vous trouverez dans 
-[optimisation du chemin de broderie](/tutorials/routing/) l'ensemble des outils qu'Ink/Stitch mets à votre disposition pour vous aider dans votre tâche d'optimisation.
-{: .notice--info }
-
-
 ## Ajouter des Commandes ...
 
 Ces commandes affectent l’ensemble du motif de broderie.
@@ -93,6 +84,27 @@ Les objets auxquels cette commande est associée seront exclus du plan de broder
 ### ![Point de partage de colonne satin](/assets/images/docs/visual-commands-satin-cut-point.jpg) Point de partage de la colonne satin
 
 Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Scinder une colonne satin](/fr/docs/satin-tools/#scinder-une-colonne-satin)".
+
+## Delete Commands
+
+### Delete single commands
+
+Select the command-group and delete.
+
+### Delete all commands in the document
+
+* Run `Extensions > Ink/Stitch > Troubleshoot > Remove embroidery settings`
+* Choose to remove all or specific command types to remove from the document
+* Click on `Apply`
+
+
+## Saut en Coupe {#jump-to-trim}
+
+Cette extension insère des commandes de coupe à la place des sauts.
+
+**Info**:Ne pas utiliser cette extension avant d'avoir optimisé le chemin de broderie: il faut éviter au maximum les coupes de fil. Vous trouverez dans 
+[optimisation du chemin de broderie](/tutorials/routing/) l'ensemble des outils qu'Ink/Stitch mets à votre disposition pour vous aider dans votre tâche d'optimisation.
+{: .notice--info }
 
 ## Affichage
 

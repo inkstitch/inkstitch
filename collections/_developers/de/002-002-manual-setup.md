@@ -1,53 +1,32 @@
 ---
 title: "Manuelle Installation"
 permalink: /de/developers/inkstitch/manual-setup/
-last_modified_at: 2021-10-23
+last_modified_at: 2024-10-20
 toc: false
 after_footer_scripts:
   - /assets/js/copy_code.js
 ---
 Eine manuelle Installation ermöglicht es am Quellcode zu arbeiten und die Änderungen
 
-Wenn du die Erweiterung unter **Windows** debuggen willst, sind ein paar [zusätzliche Schritte](/developers/inkstitch/windows-manual-setup/) nötig (englisch).
+## Ink/Stitch manuell installieren
 
-## How to Install Ink/Stich Manually
+Wir empfehlen die Nutung von `pyenv` mit python 3.8.
 
 ### 1. Ink/Stitch herunterladen
 
 ```
 git clone https://github.com/inkstitch/inkstitch
+git clone https://github.com/inkstitch/pyembroidery
 ```
 
-### 2. Install Pyembroidery
-
-```
-git clone https://github.com/inkstitch/pyembroidery.git
-pip install -e pyembroidery/
-```
-
-We recommend to use `pyenv` to avoid the need of root privileges for `pip`.
-
-### 3.  Installiere Python Abhängigkeiten
+### 2. Installiere Python Abhängigkeiten
 
 Es werden ein paar Python Module gebraucht. In einigen Fällen benutzt Ink/Stitch Funktionen, die nicht automatisch durch die Distributionen mit Python mitgeliefert werden.
 Deshalb empfehlen wir sie mit pip zu installieren.
 
-Da wir pyembroidery bereits installiert haben, diese Zeile für die Installation der Abhängigkeiten in `requirements.txt` bitte auskommentieren.
-
 ```
+cd inkstitch
 pip install -r requirements.txt
-```
-
-### 4.  Installiere Abhängigkeiten für Electron
-
-Die grafische Oberfläche von Ink/Stitch nutzt Electron.  Dazu brauchst du eine funktionsfähige Installation von NodeJS (Version 10 oder höher).  Sofern nicht vorhanden, installiere yarn mit `npm install yarn`.
-
-Installiere Electron mit den dazugehörigen Abhängigkeiten wie folgt:
-
-```
-cd electron
-yarn install
-cd ..
 ```
 
 ### 4.  INX-Dateien vorbereiten
@@ -55,10 +34,17 @@ cd ..
 Jetzt werden die Dateien für das Inkscape-Menü erstellt.
 
 ```
+cd inkstitch
+make manual
+```
+
+Für spätere Updates der Templates kann folgender Befehl ausgeführt werden:
+
+```
 make inx
 ```
 
-### 5.  Symbolische Links in den Inkscape extensions-Order setzen
+### 5. Symbolische Links in den Inkscape extensions-Order setzen
 
 ```
 cd ~/.config/inkscape/extensions
