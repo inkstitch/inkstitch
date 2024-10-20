@@ -1,7 +1,7 @@
 ---
 title: "Manual Setup for Linux and macOS"
 permalink: /developers/inkstitch/manual-setup/
-last_modified_at: 2024-01-17
+last_modified_at: 2024-10-20
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -30,9 +30,9 @@ Since we already installed pyembroidery just temporarely comment it out before y
 pip install -r inkstitch/requirements.txt
 ```
 
-### 3. Prepare INX files and electron
+### 3. Prepare INX files
 
-Now we need to create the files for the Inkscape menu and setup the electron extensions
+Now we need to create the files for the Inkscape menu
 
 ```
 cd inkstitch
