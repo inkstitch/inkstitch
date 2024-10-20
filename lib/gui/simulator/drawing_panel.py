@@ -283,7 +283,7 @@ class DrawingPanel(wx.Panel):
         )
         self.loaded = True
         self.go()
-        if hasattr(self.view_panel, 'info_panel'):
+        if hasattr(self.view_panel, 'info_panel') and self.view_panel.info_panel is not None:
             self.view_panel.info_panel.update()
 
     def set_page_specs(self, page_specs):
