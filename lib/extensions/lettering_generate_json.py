@@ -5,7 +5,7 @@
 
 import json
 import os
-import sys
+from inkex import errormsg
 
 from inkex import Boolean
 
@@ -47,7 +47,7 @@ class LetteringGenerateJson(InkstitchExtension):
         # file paths
         path = self.options.path
         if not os.path.isfile(path):
-            print(_("Please specify a font file."), file=sys.stderr)
+            errormsg(_("Please specify a font file."))
             return
         output_path = os.path.join(os.path.dirname(path), 'font.json')
 
@@ -81,9 +81,6 @@ class LetteringGenerateJson(InkstitchExtension):
 
         combine_at_sort_indices = self.options.combine_at_sort_indices.split(',')
         combine_at_sort_indices = set([index.strip() for index in combine_at_sort_indices if index.strip()])
-
-        import sys
-        print(combine_at_sort_indices, file=sys.stderr)
 
         # collect data
         data = {'name': self.options.font_name,
