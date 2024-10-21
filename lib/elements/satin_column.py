@@ -556,7 +556,7 @@ class SatinColumn(EmbroideryElement):
     def csp(self):
         paths = self.parse_path()
         # exclude subpaths which are just a point
-        paths = [path for path in paths if shgeo.LineString(self.flatten_subpath(path)).length > 0]
+        paths = [path for path in paths if len(self.flatten_subpath(path)) > 1]
         return paths
 
     @property
@@ -641,7 +641,7 @@ class SatinColumn(EmbroideryElement):
     @cache
     def rail_indices(self):
         paths = [self.flatten_subpath(subpath) for subpath in self.csp]
-        paths = [shgeo.LineString(path) for path in paths]
+        paths = [shgeo.LineString(path) for path in paths if len(path) > 1]
         num_paths = len(paths)
 
         # Imagine a satin column as a curvy ladder.
