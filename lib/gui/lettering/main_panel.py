@@ -81,7 +81,8 @@ class LetteringPanel(wx.Panel):
             "font": None,
             "scale": 100,
             "trim_option": 0,
-            "use_trim_symbols": False
+            "use_trim_symbols": False,
+            "color_sort": False
         })
 
         if INKSTITCH_LETTERING in self.group.attrib:
@@ -98,6 +99,7 @@ class LetteringPanel(wx.Panel):
 
     def apply_settings(self):
         """Make the settings in self.settings visible in the UI."""
+        self.options_panel.color_sort_checkbox.SetValue(bool(self.settings.color_sort))
         self.options_panel.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
         self.options_panel.trim_option_choice.SetSelection(self.settings.trim_option)
         self.options_panel.use_trim_symbols.SetValue(bool(self.settings.use_trim_symbols))
@@ -230,6 +232,14 @@ class LetteringPanel(wx.Panel):
             self.options_panel.back_and_forth_checkbox.Disable()
             self.options_panel.back_and_forth_checkbox.SetValue(False)
 
+        if font.sortable:
+            # The creator of the font allowed color sorting: "sortable": false
+            self.options_panel.color_sort_checkbox.Enable()
+            self.options_panel.color_sort_checkbox.SetValue(bool(self.settings.color_sort))
+        else:
+            self.options_panel.color_sort_checkbox.Disable()
+            self.options_panel.color_sort_checkbox.SetValue(False)
+
         self.options_panel.Layout()
         self.update_preview()
 
@@ -279,15 +289,17 @@ class LetteringPanel(wx.Panel):
                 # L10N The user has chosen to scale the text by some percentage
                 # (50%, 200%, etc).  If you need to use the percentage symbol,
                 # make sure to double it (%%).
-                INKSCAPE_LABEL: _("Text scale %s%%") % self.settings.scale
+                INKSCAPE_LABEL: _("Text scale") + f' {self.settings.scale}%'
             })
             self.group.append(destination_group)
 
         font = self.fonts.get(self.options_panel.font_chooser.GetValue(), self.default_font)
         try:
-            font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth,
-                             trim_option=self.settings.trim_option, use_trim_symbols=self.settings.use_trim_symbols)
-
+            font.render_text(
+                self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth,
+                trim_option=self.settings.trim_option, use_trim_symbols=self.settings.use_trim_symbols,
+                color_sort=self.settings.color_sort
+            )
         except FontError as e:
             if raise_error:
                 inkex.errormsg(_("Error: Text cannot be applied to the document.\n%s") % e)

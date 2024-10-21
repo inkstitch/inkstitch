@@ -11,6 +11,7 @@
     "leading": 400,
     "auto_satin": false,
     "reversible": false,
+    "sortable": true,
     "letter_case": "",
     "default_glyph": "�",
     "size": 44,

@@ -93,3 +93,10 @@ def has_marker(node, marker=list()):
         if "marker-start:url(#inkstitch-%s-marker" % m in style:
             return True
     return False
+
+
+def is_grouped_with_marker(node):
+    for element in node.getparent().iterchildren():
+        if has_marker(element):
+            return True
+    return False
