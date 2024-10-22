@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-09-28 01:23+0000\n"
-"PO-Revision-Date: 2024-09-28 01:23\n"
+"POT-Creation-Date: 2024-10-22 01:25+0000\n"
+"PO-Revision-Date: 2024-10-22 01:25\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-28 01:23+0000\n"
+"POT-Creation-Date: 2024-10-22 01:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2291,7 +2291,7 @@ msgstr ""
 msgid "point"
 msgstr ""
 
-#: lib/elements/text.py:13 lib/gui/lettering/option_panel.py:96
+#: lib/elements/text.py:13 lib/gui/lettering/option_panel.py:102
 msgid "Text"
 msgstr ""
 
@@ -2641,7 +2641,7 @@ msgstr ""
 msgid "The maximum value is smaller than the minimum value."
 msgstr ""
 
-#: lib/extensions/lettering_generate_json.py:48
+#: lib/extensions/lettering_generate_json.py:49
 msgid "Please specify a font file."
 msgstr ""
 
@@ -2739,7 +2739,7 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
 #: lib/extensions/params.py:529 lib/gui/lettering/main_panel.py:58
-#: lib/gui/lettering_font_sample.py:57
+#: lib/gui/lettering_font_sample.py:60
 #: lib/gui/satin_multicolor/main_panel.py:54
 #: lib/gui/simulator/simulator_preferences.py:44
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
@@ -2871,7 +2871,7 @@ msgstr ""
 
 #: lib/extensions/thread_list.py:51 lib/gui/lettering/option_panel.py:50
 #: inx/inkstitch_commands_scale_symbols.inx:6
-#: inx/inkstitch_lettering_generate_json.inx:77
+#: inx/inkstitch_lettering_generate_json.inx:82
 msgid "Size"
 msgstr ""
 
@@ -2961,7 +2961,7 @@ msgid "threadlist"
 msgstr ""
 
 #: lib/gui/abort_message.py:38 lib/gui/element_info.py:56
-#: lib/gui/lettering_font_sample.py:85
+#: lib/gui/lettering_font_sample.py:88
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr ""
@@ -3003,7 +3003,7 @@ msgid "Value"
 msgstr ""
 
 #: lib/gui/element_info.py:41 lib/gui/lettering/main_panel.py:48
-#: lib/gui/lettering_font_sample.py:70
+#: lib/gui/lettering_font_sample.py:73
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_palette.inx:84
 #: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
@@ -3018,8 +3018,9 @@ msgstr ""
 #: inx/inkstitch_lettering_along_path.inx:17
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
 #: inx/inkstitch_lettering_force_lock_stitches.inx:16
-#: inx/inkstitch_lettering_generate_json.inx:111
+#: inx/inkstitch_lettering_generate_json.inx:116
 #: inx/inkstitch_lettering_remove_kerning.inx:12
+#: inx/inkstitch_lettering_set_color_sort_index.inx:11
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:12
 #: inx/inkstitch_letters_to_font.inx:54 inx/inkstitch_outline.inx:25
 #: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_png_realistic.inx:17
@@ -3054,19 +3055,18 @@ msgstr ""
 msgid "https://inkstitch.org/fonts/font-library/"
 msgstr ""
 
-#: lib/gui/lettering/main_panel.py:220
+#: lib/gui/lettering/main_panel.py:222
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr ""
 
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/gui/lettering/main_panel.py:282
-#, python-format
-msgid "Text scale %s%%"
+#: lib/gui/lettering/main_panel.py:292
+msgid "Text scale"
 msgstr ""
 
-#: lib/gui/lettering/main_panel.py:293
+#: lib/gui/lettering/main_panel.py:305
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
@@ -3096,45 +3096,49 @@ msgstr ""
 msgid "Font Filter"
 msgstr ""
 
-#: lib/gui/lettering/option_panel.py:65
+#: lib/gui/lettering/option_panel.py:63
 msgid "Stitch lines of text back and forth"
 msgstr ""
 
 #: lib/gui/lettering/option_panel.py:68
+msgid "Sort multicolor fonts. Unifies tartan patterns."
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:70
 msgid "Never"
 msgstr ""
 
-#: lib/gui/lettering/option_panel.py:68
+#: lib/gui/lettering/option_panel.py:70
 msgid "after each line"
 msgstr ""
 
-#: lib/gui/lettering/option_panel.py:68
+#: lib/gui/lettering/option_panel.py:70
 msgid "after each word"
 msgstr ""
 
-#: lib/gui/lettering/option_panel.py:68
+#: lib/gui/lettering/option_panel.py:70
 msgid "after each letter"
 msgstr ""
 
-#: lib/gui/lettering/option_panel.py:69
+#: lib/gui/lettering/option_panel.py:71
 msgid "Add trim command"
 msgstr ""
 
-#: lib/gui/lettering/option_panel.py:72
+#: lib/gui/lettering/option_panel.py:74
 msgid "Use command symbols"
 msgstr ""
 
-#: lib/gui/lettering/option_panel.py:74
+#: lib/gui/lettering/option_panel.py:76
 msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
 msgstr ""
 
-#: lib/gui/lettering/option_panel.py:80
-msgid "Add trims"
-msgstr ""
-
-#: lib/gui/lettering/option_panel.py:86
+#: lib/gui/lettering/option_panel.py:81
 #: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:91
+msgid "Add trims"
 msgstr ""
 
 #: lib/gui/lettering_font_sample.py:18
@@ -3161,29 +3165,33 @@ msgstr ""
 msgid "Max. line width"
 msgstr ""
 
-#: lib/gui/lettering_font_sample.py:59
+#: lib/gui/lettering/option_panel.py:66 lib/gui/lettering_font_sample.py:48
+msgid "Color sort"
+msgstr ""
+
+#: lib/gui/lettering_font_sample.py:62
 #: lib/gui/satin_multicolor/main_panel.py:56
 #: lib/gui/simulator/simulator_preferences.py:46
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr ""
 
-#: lib/gui/lettering_font_sample.py:77
+#: lib/gui/lettering_font_sample.py:80
 msgid "    This extension helps font creators to generate an output of every glyph from a selected font."
 msgstr ""
 
-#: lib/gui/lettering_font_sample.py:91 lib/gui/lettering_font_sample.py:92
+#: lib/gui/lettering_font_sample.py:94 lib/gui/lettering_font_sample.py:95
 msgid "https://inkstitch.org/docs/font-tools/#font-sampling"
 msgstr ""
 
-#: lib/gui/lettering_font_sample.py:154
+#: lib/gui/lettering_font_sample.py:162
 #, python-format
 msgid "The glyphlist for this font seems to be outdated.\n\n"
 "Please update the glyph list for %s:\n"
 "Extensions > Ink/Stitch > Font Management > Update Glyphlist"
 msgstr ""
 
-#: lib/gui/lettering_font_sample.py:204
+#: lib/gui/lettering_font_sample.py:218
 msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
 msgstr ""
 
@@ -3266,6 +3274,20 @@ msgstr ""
 #: lib/gui/presets.py:148
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
+msgstr ""
+
+#: lib/gui/request_update_svg_version.py:29
+msgid "Unversioned Ink/Stitch SVG file detected.\n\n"
+"* If you opened an old design file, please update.\n"
+"* If you copy pasted objects into an empty file, please cancel."
+msgstr ""
+
+#: lib/gui/request_update_svg_version.py:37
+msgid "Update"
+msgstr ""
+
+#: lib/gui/request_update_svg_version.py:75
+msgid "Ink/Stitch"
 msgstr ""
 
 #: lib/gui/satin_multicolor/color_panel.py:19 lib/gui/tartan/stripe_panel.py:19
@@ -3667,7 +3689,7 @@ msgstr ""
 msgid "Generate Swatches"
 msgstr ""
 
-#: lib/gui/lettering/main_panel.py:46 lib/gui/lettering/option_panel.py:60
+#: lib/gui/lettering/main_panel.py:46 lib/gui/lettering/option_panel.py:95
 #: lib/gui/test_swatches.py:33 inx/inkstitch_apply_palette.inx:7
 #: inx/inkstitch_apply_threadlist.inx:7 inx/inkstitch_auto_satin.inx:7
 #: inx/inkstitch_break_apart.inx:8 inx/inkstitch_cleanup.inx:8
@@ -3680,6 +3702,7 @@ msgstr ""
 #: inx/inkstitch_lettering_custom_font_dir.inx:8
 #: inx/inkstitch_lettering_force_lock_stitches.inx:8
 #: inx/inkstitch_lettering_remove_kerning.inx:9
+#: inx/inkstitch_lettering_set_color_sort_index.inx:8
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:8
 #: inx/inkstitch_letters_to_font.inx:8 inx/inkstitch_outline.inx:8
 #: inx/inkstitch_palette_to_text.inx:15 inx/inkstitch_redwork.inx:8
@@ -3788,27 +3811,31 @@ msgstr ""
 msgid "Tiny"
 msgstr ""
 
-#: lib/lettering/font.py:95
+#: lib/lettering/font.py:96
 msgid "JSON file missing. Expected a JSON file at the following location:"
 msgstr ""
 
-#: lib/lettering/font.py:97
+#: lib/lettering/font.py:98
 msgid "Generate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr ""
 
-#: lib/lettering/font.py:102
+#: lib/lettering/font.py:103
 msgid "Corrupt JSON file"
 msgstr ""
 
-#: lib/lettering/font.py:104
+#: lib/lettering/font.py:105
 msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr ""
 
-#: lib/lettering/font.py:181
+#: lib/lettering/font.py:184
 #, python-format
 msgid "The font '%s' has no variants."
+msgstr ""
+
+#: lib/lettering/font.py:465
+msgid "Color Group"
 msgstr ""
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
@@ -3916,7 +3943,7 @@ msgstr ""
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr ""
 
-#: lib/update.py:26
+#: lib/update.py:32
 msgid "This document was created with a newer Version of Ink/Stitch. It is possible that not everything works as expected.\n\n"
 "Please update your Ink/Stitch version: https://inkstitch.org/docs/install/"
 msgstr ""
@@ -4297,7 +4324,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:71
+#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:76
 #: inx/inkstitch_letters_to_font.inx:51
 msgid "No"
 msgstr ""
@@ -4667,8 +4694,9 @@ msgstr ""
 #: inx/inkstitch_lettering_along_path.inx:27
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:27
-#: inx/inkstitch_lettering_generate_json.inx:115
+#: inx/inkstitch_lettering_generate_json.inx:120
 #: inx/inkstitch_lettering_remove_kerning.inx:22
+#: inx/inkstitch_lettering_set_color_sort_index.inx:19
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:15
 #: inx/inkstitch_letters_to_font.inx:69 inx/inkstitch_outline.inx:28
 #: inx/inkstitch_redwork.inx:26 inx/inkstitch_remove_duplicated_points.inx:24
@@ -5835,6 +5863,7 @@ msgstr ""
 #: inx/inkstitch_lettering_force_lock_stitches.inx:36
 #: inx/inkstitch_lettering_generate_json.inx:10
 #: inx/inkstitch_lettering_remove_kerning.inx:31
+#: inx/inkstitch_lettering_set_color_sort_index.inx:28
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:24
 #: inx/inkstitch_letters_to_font.inx:78
 msgid "Font Management"
@@ -5905,73 +5934,89 @@ msgstr ""
 msgid "If disabled back and forth stitching will not be possile for this font."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:70
-msgid "Force letter case"
+#: inx/inkstitch_lettering_generate_json.inx:72
+msgid "Sortable"
 msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:72
+msgid "If disabled color sorting will be disabled for this font. Color sorting needs color_sort_index indicators within the font."
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:74
+msgid "Combine indices"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:74
+msgid "When color sorting, combine elements with this color indices (comma separated)"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:75
+msgid "Force letter case"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:77
 msgid "Upper"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:73
+#: inx/inkstitch_lettering_generate_json.inx:78
 msgid "Lower"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:78
+#: inx/inkstitch_lettering_generate_json.inx:83
 msgid "Min Scale"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:79
+#: inx/inkstitch_lettering_generate_json.inx:84
 msgid "Max Scale"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:84
-#: inx/inkstitch_lettering_generate_json.inx:85
+#: inx/inkstitch_lettering_generate_json.inx:89
+#: inx/inkstitch_lettering_generate_json.inx:90
 msgid "Kerning"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:86
+#: inx/inkstitch_lettering_generate_json.inx:91
 msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them). If the kerning information cannot be found, these values will apply automatically."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:94
-#: inx/inkstitch_lettering_generate_json.inx:102
+#: inx/inkstitch_lettering_generate_json.inx:99
+#: inx/inkstitch_lettering_generate_json.inx:107
 msgid "Force"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:94
+#: inx/inkstitch_lettering_generate_json.inx:99
 msgid "Overwrite leading information from font file."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:96
+#: inx/inkstitch_lettering_generate_json.inx:101
 msgid "Leading (px)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:96
+#: inx/inkstitch_lettering_generate_json.inx:101
 msgid "Line height (default: 100)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:102
+#: inx/inkstitch_lettering_generate_json.inx:107
 msgid "Overwrite word spacing information from font file."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:104
+#: inx/inkstitch_lettering_generate_json.inx:109
 msgid "Word spacing (px)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:104
+#: inx/inkstitch_lettering_generate_json.inx:109
 msgid "Space character width (default: 20)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:112
+#: inx/inkstitch_lettering_generate_json.inx:117
 msgid "Generates font.json which can be used by the lettering tool."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:113
+#: inx/inkstitch_lettering_generate_json.inx:118
 msgid "The generated file can be viewed and updated with a standard text editor tool."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:116
+#: inx/inkstitch_lettering_generate_json.inx:121
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
 msgstr ""
 
@@ -5993,6 +6038,26 @@ msgstr ""
 
 #: inx/inkstitch_lettering_remove_kerning.inx:23
 msgid "https://inkstitch.org/docs/font-tools/#remove-kerning"
+msgstr ""
+
+#: inx/inkstitch_lettering_set_color_sort_index.inx:3
+msgid "Set color sort index"
+msgstr ""
+
+#: inx/inkstitch_lettering_set_color_sort_index.inx:9
+msgid "Color sort index"
+msgstr ""
+
+#: inx/inkstitch_lettering_set_color_sort_index.inx:12
+msgid "Sets given color sort index on selected elements"
+msgstr ""
+
+#: inx/inkstitch_lettering_set_color_sort_index.inx:14
+msgid "This sets the order of elements for multicolor fonts when color sorted."
+msgstr ""
+
+#: inx/inkstitch_lettering_set_color_sort_index.inx:20
+msgid "https://inkstitch.org/docs/font-tools/#set-color-sort-index"
 msgstr ""
 
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:3
