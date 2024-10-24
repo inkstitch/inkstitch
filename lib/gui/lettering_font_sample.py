@@ -45,7 +45,7 @@ class FontSampleFrame(wx.Frame):
         self.scale_spinner = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=1000, initial=100)
         max_line_width_label = wx.StaticText(self.settings, label=_("Max. line width"))
         self.max_line_width = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=5000, initial=180)
-        color_sort_label = wx.StaticText(self.settings, label=_("Color sort"))
+        self.color_sort_label = wx.StaticText(self.settings, label=_("Color sort"))
         self.color_sort_checkbox = wx.CheckBox(self.settings)
 
         grid_settings_sizer.Add(direction_label, 0, wx.ALIGN_LEFT, 0)
@@ -54,7 +54,7 @@ class FontSampleFrame(wx.Frame):
         grid_settings_sizer.Add(self.scale_spinner, 0, wx.EXPAND, 0)
         grid_settings_sizer.Add(max_line_width_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.max_line_width, 0, wx.EXPAND, 0)
-        grid_settings_sizer.Add(color_sort_label, 0, wx.ALIGN_LEFT, 0)
+        grid_settings_sizer.Add(self.color_sort_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.color_sort_checkbox, 0, wx.EXPAND, 0)
 
         apply_sizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -132,8 +132,10 @@ class FontSampleFrame(wx.Frame):
             self.direction.Append(variant)
         self.direction.SetSelection(0)
         if font.sortable:
+            self.color_sort_label.Enable()
             self.color_sort_checkbox.Enable()
         else:
+            self.color_sort_label.Disable()
             self.color_sort_checkbox.Disable()
 
     def apply(self, event):
