@@ -104,6 +104,18 @@ class Stroke(EmbroideryElement):
         return self.get_multiple_int_param("bean_stitch_repeats", "0")
 
     @property
+    @param('manual_pattern_placement',
+           _('Manual stitch placement'),
+           tooltip=_('No extra stitches will be added to the original ripple pattern '
+                     'and the running stitch length value will be ignored.'),
+           type='boolean',
+           select_items=[('stroke_method', 'ripple_stitch')],
+           default=False,
+           sort_index=3)
+    def manual_pattern_placement(self):
+        return self.get_boolean_param('manual_pattern_placement', False)
+
+    @property
     @param('running_stitch_length_mm',
            _('Running stitch length'),
            tooltip=_('Length of stitches. Stitches can be shorter according to the stitch tolerance setting.'),
@@ -128,18 +140,6 @@ class Stroke(EmbroideryElement):
            sort_index=4)
     def running_stitch_tolerance(self):
         return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
-
-    @property
-    @param('manual_pattern_placement',
-           _('Manual stitch placement'),
-           tooltip=_('No extra stitches will be added to the original ripple pattern '
-                     'and the running stitch length value will be ignored.'),
-           type='boolean',
-           select_items=[('stroke_method', 'ripple_stitch')],
-           default=False,
-           sort_index=5)
-    def manual_pattern_placement(self):
-        return self.get_boolean_param('manual_pattern_placement', False)
 
     @property
     @param('enable_random_stitch_length',
@@ -273,13 +273,24 @@ class Stroke(EmbroideryElement):
         return abs(self.get_int_param("skip_end", 0))
 
     @property
+    @param('flip_copies',
+           _('Flip every second line'),
+           tooltip=_('Linear ripple: wether to flip the pattern every second line or not.'),
+           type='boolean',
+           select_items=[('stroke_method', 'ripple_stitch')],
+           default=True,
+           sort_index=12)
+    def flip_copies(self):
+        return self.get_boolean_param('flip_copies', True)
+
+    @property
     @param('exponent',
            _('Line distance exponent'),
            tooltip=_('Increase density towards one side.'),
            type='float',
            default=1,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=12)
+           sort_index=13)
     @cache
     def exponent(self):
         return max(self.get_float_param("exponent", 1), 0.1)
@@ -291,7 +302,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=False,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=13)
+           sort_index=14)
     @cache
     def flip_exponent(self):
         return self.get_boolean_param("flip_exponent", False)
@@ -303,7 +314,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=False,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=14)
+           sort_index=15)
     @cache
     def reverse(self):
         return self.get_boolean_param("reverse", False)
@@ -325,7 +336,7 @@ class Stroke(EmbroideryElement):
         options=_reverse_rails_options,
         default='automatic',
         select_items=[('stroke_method', 'ripple_stitch')],
-        sort_index=15)
+        sort_index=16)
     def reverse_rails(self):
         return self.get_param('reverse_rails', 'automatic')
 
@@ -351,7 +362,7 @@ class Stroke(EmbroideryElement):
            # 0: xy, 1: x, 2: y, 3: none
            options=["X Y", "X", "Y", _("None")],
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=17)
+           sort_index=18)
     def scale_axis(self):
         return self.get_int_param('scale_axis', 0)
 

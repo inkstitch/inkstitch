@@ -47,6 +47,14 @@ def ripple_stitch(stroke):
 
 def _get_stitches(stroke, is_linear, lines, skip_start):
     if stroke.manual_pattern_placement:
+        if stroke.flip_copies:
+            stitches = []
+            for i, line in enumerate(lines):
+                if i % 2 == 0:
+                    stitches.extend(line[::-1])
+                else:
+                    stitches.extend(line)
+            return stitches
         return [point for line in lines for point in line]
     if is_linear:
         return _get_staggered_stitches(stroke, lines, skip_start)
@@ -71,7 +79,7 @@ def _get_staggered_stitches(stroke, lines, skip_start):
     for i, line in enumerate(lines):
         connector = []
         if i != 0 and stroke.join_style == 0:
-            if i % 2 == 0:
+            if i % 2 == 0 or stroke.flip_copies is False:
                 first_point = line[0]
             else:
                 first_point = line[-1]
@@ -83,7 +91,7 @@ def _get_staggered_stitches(stroke, lines, skip_start):
             should_reverse = (i + skip_start) % 2 == 1
 
         if enable_random_stitch_length or stroke.staggers == 0:
-            if should_reverse:
+            if should_reverse and stroke.flip_copies is not False:
                 line.reverse()
             points = running_stitch(line, stitch_length, tolerance, enable_random_stitch_length, length_sigma, prng.join_args(random_seed, i))
             stitched_line = connector + points
@@ -91,7 +99,7 @@ def _get_staggered_stitches(stroke, lines, skip_start):
             # uses the guided fill alforithm to stagger rows of stitches
             points = list(apply_stitches(LineString(line), stitch_length, stroke.staggers, 0.5, i, tolerance).coords)
             stitched_line = [InkstitchPoint(*point) for point in points]
-            if should_reverse:
+            if should_reverse and stroke.flip_copies is not False:
                 stitched_line.reverse()
             stitched_line = connector + stitched_line
 

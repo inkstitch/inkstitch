@@ -119,6 +119,7 @@ inkstitch_attribs = [
     'zigzag_width_mm',
     # ripples
     'manual_pattern_placement',
+    'flip_copies',
     'line_count',
     'min_line_dist_mm',
     'exponent',
