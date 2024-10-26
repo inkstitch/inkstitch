@@ -118,6 +118,7 @@ inkstitch_attribs = [
     'cutwork_needle',
     'zigzag_width_mm',
     # ripples
+    'manual_pattern_placement',
     'line_count',
     'min_line_dist_mm',
     'exponent',

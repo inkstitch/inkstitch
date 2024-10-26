@@ -130,6 +130,18 @@ class Stroke(EmbroideryElement):
         return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
 
     @property
+    @param('manual_pattern_placement',
+           _('Manual stitch placement'),
+           tooltip=_('No extra stitches will be added to the original ripple pattern '
+                     'and the running stitch length value will be ignored.'),
+           type='boolean',
+           select_items=[('stroke_method', 'ripple_stitch')],
+           default=False,
+           sort_index=5)
+    def manual_pattern_placement(self):
+        return self.get_boolean_param('manual_pattern_placement', False)
+
+    @property
     @param('enable_random_stitch_length',
            _('Randomize stitch length'),
            tooltip=_('Randomize stitch length and phase instead of dividing evenly or staggering. '
