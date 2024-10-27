@@ -26,7 +26,7 @@ In some cases this extension uses features that aren’t available in the versio
 
 ```
 cd inkstitch
-pip install -r inkstitch/requirements.txt
+python -m pip install -r inkstitch/requirements.txt
 ```
 
 ### 3. Prepare INX files

@@ -26,7 +26,7 @@ Deshalb empfehlen wir sie mit pip zu installieren.
 
 ```
 cd inkstitch
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ### 4.  INX-Dateien vorbereiten
