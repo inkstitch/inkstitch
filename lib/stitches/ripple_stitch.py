@@ -56,7 +56,7 @@ def _get_stitches(stroke, is_linear, lines, skip_start):
                     stitches.extend(line)
             return stitches
         return [point for line in lines for point in line]
-    if is_linear:
+    if is_linear and stroke.flip_copies is True:
         return _get_staggered_stitches(stroke, lines, skip_start)
     else:
         points = [point for line in lines for point in line]
@@ -206,13 +206,13 @@ def _get_satin_ripple_helper_lines(stroke):
         for step in steps:
             helper_lines[-1].append(InkstitchPoint.from_shapely_point(helper_line.interpolate(step, normalized=True)))
 
-    if stroke.join_style == 1:
-        helper_lines = _converge_helper_line_points(helper_lines, True)
+    if stroke.join_style == 1 or stroke.flip_copies is False:
+        helper_lines = _converge_helper_line_points(helper_lines, True, stroke.flip_copies)
 
     return helper_lines
 
 
-def _converge_helper_line_points(helper_lines, point_edge=False):
+def _converge_helper_line_points(helper_lines, point_edge=False, flip_copies=True):
     num_lines = len(helper_lines)
     steps = _get_steps(num_lines)
     for i, line in enumerate(helper_lines):
@@ -220,7 +220,7 @@ def _converge_helper_line_points(helper_lines, point_edge=False):
 
         points = []
         for j in range(len(line) - 1):
-            if point_edge and j % 2 == 1:
+            if point_edge and j % 2 == 1 and flip_copies is not False:
                 k = num_lines - 1 - i
                 points.append(line[j] * (1 - steps[k]) + line[j + 1] * steps[k])
             else:
@@ -277,6 +277,9 @@ def _adjust_helper_lines_for_grid(stroke, helper_lines, skip_start, skip_end, is
                                       (not stroke.reverse and skip_start % 2 != 0))):
         count += 1
 
+    if is_linear and stroke.flip_copies is False:
+        count = 0
+
     if not is_linear:
         count = 1
         if stroke.reverse:
@@ -293,6 +296,11 @@ def _do_grid(stroke, helper_lines, skip_start, skip_end, is_linear):
     for i, helper in enumerate(helper_lines):
         end = len(helper) - skip_end
         points = helper[skip_start:end]
+
+        # the path is continuos when flip_copies are off, but we want the grid lines to follow the join style
+        if i % 2 != 0 and is_linear and stroke.flip_copies is False and stroke.join_style == 0:
+            points.reverse()
+
         if stroke.reverse:
             points.reverse()
         if len(helper_lines) - skip_start - skip_end % 2 != 0:
