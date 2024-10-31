@@ -359,7 +359,7 @@ class Print(InkstitchExtension):
         # corresponding to each individual color block and a final one
         # for all color blocks together.
 
-        layers_and_groups = svg.findall("./g")
+        layers_and_groups = svg.xpath("./g|./path|./circle|./ellipse|./rect")
         stitch_plan_layer = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
 
         # Make sure there is no leftover translation from stitch plan preview
