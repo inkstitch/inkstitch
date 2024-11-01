@@ -509,7 +509,8 @@ class Font(object):
                     glyph_group = ancestor
                     break
             element.transform = element.composed_transform(glyph_group.getparent())
-            # element.apply_transform()
+            if sort_index is not None and int(sort_index) in self.combine_at_sort_indices:
+                element.apply_transform()
 
             if not sort_index:
                 elements_by_color[404].append([element])
