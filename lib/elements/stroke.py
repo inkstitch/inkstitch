@@ -447,10 +447,10 @@ class Stroke(EmbroideryElement):
         return shgeo.MultiLineString(line_strings)
 
     def _get_clipped_path(self, paths):
-        if self.node.clip is None:
+        clip_path = get_clip_path(self.node)
+        if clip_path is None:
             return paths
 
-        clip_path = get_clip_path(self.node)
         # path to linestrings
         line_strings = [shgeo.LineString(path) for path in paths]
         try:

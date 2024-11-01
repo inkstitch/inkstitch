@@ -782,10 +782,9 @@ class FillStitch(EmbroideryElement):
         return ensure_multi_polygon(set_precision(shape, 0.00000000001), 3)
 
     def _get_clipped_path(self):
-        if self.node.clip is None:
-            return self.original_shape
-
         clip_path = get_clip_path(self.node)
+        if clip_path is None:
+            return self.original_shape
 
         # make sure clip path and shape are valid
         clip_path = make_valid(clip_path)
