@@ -1,8 +1,8 @@
-<a href="https://user-images.githubusercontent.com/11083514/41197881-e862e07a-6c62-11e8-89d6-32915e52bece.png"><img align=right src="images/examples/inkstitch_logo_screenshot.png"></a>
-
 # Ink/Stitch: An open source machine embroidery design platform based on Inkscape
 
 Want to design embroidery pattern files (PES, DST, and many more) using **free, open source software?**
+
+![Ink/Stitch Logo](images/logos/inkstitch_colour_logo.svg)
 
 Ink/Stitch aims to be a full-fledged embroidery digitizing platform based entirely on free, open source software.  Our goal is to be approachable for hobbyists while also providing the power needed by professional digitizers.  We also aim to provide a welcoming open source environment where contributing is fun and easy.
 
