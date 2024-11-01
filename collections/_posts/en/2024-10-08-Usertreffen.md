@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "&#51;. Ink/Stitch Meeting on May 5, 2025 in Essen (Germany)"
+title: "&#51;. Ink/Stitch Meeting on May 17, 2025 in Essen (Germany)"
 date: 2024-10-08
 categories: Meeting
 toc: true
@@ -11,7 +11,7 @@ Of course, both embroidery beginners and advanced users are welcome.
 
 ## Where and when?
 
-**May 7, 2025**<br>
+**May 17, 2025**<br>
 10 a.m. - 6 p.m.
 
 **Unperfekthaus**<br>
