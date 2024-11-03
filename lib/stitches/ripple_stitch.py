@@ -56,7 +56,7 @@ def _get_stitches(stroke, is_linear, lines, skip_start):
                     stitches.extend(line)
             return stitches
         return [point for line in lines for point in line]
-    if is_linear and stroke.flip_copies is True:
+    if is_linear and stroke.flip_copies:
         return _get_staggered_stitches(stroke, lines, skip_start)
     else:
         points = [point for line in lines for point in line]
@@ -79,7 +79,7 @@ def _get_staggered_stitches(stroke, lines, skip_start):
     for i, line in enumerate(lines):
         connector = []
         if i != 0 and stroke.join_style == 0:
-            if i % 2 == 0 or stroke.flip_copies is False:
+            if i % 2 == 0 or not stroke.flip_copies:
                 first_point = line[0]
             else:
                 first_point = line[-1]
@@ -91,7 +91,7 @@ def _get_staggered_stitches(stroke, lines, skip_start):
             should_reverse = (i + skip_start) % 2 == 1
 
         if enable_random_stitch_length or stroke.staggers == 0:
-            if should_reverse and stroke.flip_copies is not False:
+            if should_reverse and stroke.flip_copies:
                 line.reverse()
             points = running_stitch(line, stitch_length, tolerance, enable_random_stitch_length, length_sigma, prng.join_args(random_seed, i))
             stitched_line = connector + points
@@ -99,7 +99,7 @@ def _get_staggered_stitches(stroke, lines, skip_start):
             # uses the guided fill alforithm to stagger rows of stitches
             points = list(apply_stitches(LineString(line), stitch_length, stroke.staggers, 0.5, i, tolerance).coords)
             stitched_line = [InkstitchPoint(*point) for point in points]
-            if should_reverse and stroke.flip_copies is not False:
+            if should_reverse and stroke.flip_copies:
                 stitched_line.reverse()
             stitched_line = connector + stitched_line
 
@@ -206,7 +206,7 @@ def _get_satin_ripple_helper_lines(stroke):
         for step in steps:
             helper_lines[-1].append(InkstitchPoint.from_shapely_point(helper_line.interpolate(step, normalized=True)))
 
-    if stroke.join_style == 1 or stroke.flip_copies is False:
+    if stroke.join_style == 1 or not stroke.flip_copies:
         helper_lines = _converge_helper_line_points(helper_lines, True, stroke.flip_copies)
 
     return helper_lines
@@ -220,7 +220,7 @@ def _converge_helper_line_points(helper_lines, point_edge=False, flip_copies=Tru
 
         points = []
         for j in range(len(line) - 1):
-            if point_edge and j % 2 == 1 and flip_copies is not False:
+            if point_edge and j % 2 == 1 and flip_copies:
                 k = num_lines - 1 - i
                 points.append(line[j] * (1 - steps[k]) + line[j + 1] * steps[k])
             else:
@@ -277,7 +277,7 @@ def _adjust_helper_lines_for_grid(stroke, helper_lines, skip_start, skip_end, is
                                       (not stroke.reverse and skip_start % 2 != 0))):
         count += 1
 
-    if is_linear and stroke.flip_copies is False:
+    if is_linear and not stroke.flip_copies:
         count = 0
 
     if not is_linear:
@@ -298,7 +298,7 @@ def _do_grid(stroke, helper_lines, skip_start, skip_end, is_linear):
         points = helper[skip_start:end]
 
         # the path is continuos when flip_copies are off, but we want the grid lines to follow the join style
-        if i % 2 != 0 and is_linear and stroke.flip_copies is False and stroke.join_style == 0:
+        if i % 2 != 0 and is_linear and not stroke.flip_copies and stroke.join_style == 0:
             points.reverse()
 
         if stroke.reverse:
