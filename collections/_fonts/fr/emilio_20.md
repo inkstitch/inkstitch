@@ -111,9 +111,8 @@ Elle peut être agrandie jusqu'à 150% (env 67 mm) ou diminuée jusqu'à 65% (en
 Il s'agit là aussi d'une variation autour d'Emilio. Elle tente de ressembler à un appliqué de tissus écossais (tartan). Le tartan est encadré par un satin beaucoup plus léger que pour les autres variations.  Elle utilise un tartan différent par lettre, ce qui induit un grand nombre de changements de fils.  Il existe [une technique](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) pour utiliser le même tartan pour toutes les lettres et ainsi réduire très fortement le nombre de changements de fils.
 
 
-## Tri des couleurs pour la version tricolore ou pour la version appliquée
+## Tri des couleurs pour la version tricolore ou pour la version appliquée ou pour  la version tartan
 Si vous brodez plusieurs lettes, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
-
 
 ## Dans la vraie vie
 {% include folder-galleries path="fonts/emilio-20/" %}
