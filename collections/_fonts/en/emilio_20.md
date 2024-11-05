@@ -120,7 +120,7 @@ This is yet another Emilio variation. It aims at looking liking  like a Tartan A
 
 ## Color sorting
 
-If you embroider several letters and are not using the tartan variation you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
+If you embroider several letters and are not using the tartan variation you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/docs/lettering/#color-sorting)
 
 ## In real life
 
