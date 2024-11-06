@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-22 01:25+0000\n"
-"PO-Revision-Date: 2024-10-22 01:25\n"
+"POT-Creation-Date: 2024-10-25 01:24+0000\n"
+"PO-Revision-Date: 2024-10-25 01:25\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-22 01:25+0000\n"
+"POT-Creation-Date: 2024-10-25 01:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2748,7 +2748,7 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Dieser Parameter wird gespeichert, wenn man auf \"Übernehmen und beenden\" klickt"
 
 #: lib/extensions/params.py:529 lib/gui/lettering/main_panel.py:58
-#: lib/gui/lettering_font_sample.py:60
+#: lib/gui/lettering_font_sample.py:61
 #: lib/gui/satin_multicolor/main_panel.py:54
 #: lib/gui/simulator/simulator_preferences.py:44
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
@@ -2971,7 +2971,7 @@ msgid "threadlist"
 msgstr "Garnliste"
 
 #: lib/gui/abort_message.py:38 lib/gui/element_info.py:56
-#: lib/gui/lettering_font_sample.py:88
+#: lib/gui/lettering_font_sample.py:89
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr "Mehr Informationen auf unserer Webseite:"
@@ -3013,7 +3013,7 @@ msgid "Value"
 msgstr "Wert"
 
 #: lib/gui/element_info.py:41 lib/gui/lettering/main_panel.py:48
-#: lib/gui/lettering_font_sample.py:73
+#: lib/gui/lettering_font_sample.py:74
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_palette.inx:84
 #: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
@@ -3180,22 +3180,22 @@ msgstr "Maximale Zeilenlänge"
 msgid "Color sort"
 msgstr ""
 
-#: lib/gui/lettering_font_sample.py:62
+#: lib/gui/lettering_font_sample.py:63
 #: lib/gui/satin_multicolor/main_panel.py:56
 #: lib/gui/simulator/simulator_preferences.py:46
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr "Anwenden"
 
-#: lib/gui/lettering_font_sample.py:80
+#: lib/gui/lettering_font_sample.py:81
 msgid "    This extension helps font creators to generate an output of every glyph from a selected font."
 msgstr "Diese Erweiterung hilft Schriftart-Entwicklern eine Zeichentabelle für die ausgewählte Schriftart zu erstellen."
 
-#: lib/gui/lettering_font_sample.py:94 lib/gui/lettering_font_sample.py:95
+#: lib/gui/lettering_font_sample.py:95 lib/gui/lettering_font_sample.py:96
 msgid "https://inkstitch.org/docs/font-tools/#font-sampling"
 msgstr "https://inkstitch.org/docs/font-tools/#zeichentabelle"
 
-#: lib/gui/lettering_font_sample.py:162
+#: lib/gui/lettering_font_sample.py:165
 #, python-format
 msgid "The glyphlist for this font seems to be outdated.\n\n"
 "Please update the glyph list for %s:\n"
@@ -3204,7 +3204,7 @@ msgstr "Die Liste der Zeichen scheint veraltet zu sein.\n\n"
 "Bitte aktualisiere die Liste für die Schrift %s:\n"
 "Erweiterungen > Ink/Stith > Schriftverwaltung > Liste verfügbarer Zeichen aktualisieren ..."
 
-#: lib/gui/lettering_font_sample.py:218
+#: lib/gui/lettering_font_sample.py:221
 msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
 msgstr "Doppelte Schriftzeichen in Schriftdatei gefunden: {duplicated_glyphs}"
 

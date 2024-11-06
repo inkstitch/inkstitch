@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-22 01:25+0000\n"
-"PO-Revision-Date: 2024-10-22 01:25\n"
+"POT-Creation-Date: 2024-10-25 01:24+0000\n"
+"PO-Revision-Date: 2024-11-06 01:22\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-22 01:25+0000\n"
+"POT-Creation-Date: 2024-10-25 01:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2749,7 +2749,7 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et quitter »"
 
 #: lib/extensions/params.py:529 lib/gui/lettering/main_panel.py:58
-#: lib/gui/lettering_font_sample.py:60
+#: lib/gui/lettering_font_sample.py:61
 #: lib/gui/satin_multicolor/main_panel.py:54
 #: lib/gui/simulator/simulator_preferences.py:44
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
@@ -2972,7 +2972,7 @@ msgid "threadlist"
 msgstr "liste de fils"
 
 #: lib/gui/abort_message.py:38 lib/gui/element_info.py:56
-#: lib/gui/lettering_font_sample.py:88
+#: lib/gui/lettering_font_sample.py:89
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr "Plus d'information sur notre site web :"
@@ -3014,7 +3014,7 @@ msgid "Value"
 msgstr "Valeur"
 
 #: lib/gui/element_info.py:41 lib/gui/lettering/main_panel.py:48
-#: lib/gui/lettering_font_sample.py:73
+#: lib/gui/lettering_font_sample.py:74
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_palette.inx:84
 #: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
@@ -3075,7 +3075,7 @@ msgstr "Cette police n'a pas de variante de police disponible. Veuillez mettre �
 #. make sure to double it (%%).
 #: lib/gui/lettering/main_panel.py:292
 msgid "Text scale"
-msgstr ""
+msgstr "Echelle du texte"
 
 #: lib/gui/lettering/main_panel.py:305
 #, python-format
@@ -3114,7 +3114,7 @@ msgstr "Broder les lignes de texte en aller-retour"
 
 #: lib/gui/lettering/option_panel.py:68
 msgid "Sort multicolor fonts. Unifies tartan patterns."
-msgstr ""
+msgstr "Tri les fontes multicolore. Uniformise les motifs tartan."
 
 #: lib/gui/lettering/option_panel.py:70
 msgid "Never"
@@ -3179,24 +3179,24 @@ msgstr "Largeur du texte"
 
 #: lib/gui/lettering/option_panel.py:66 lib/gui/lettering_font_sample.py:48
 msgid "Color sort"
-msgstr ""
+msgstr "Tri des couleurs"
 
-#: lib/gui/lettering_font_sample.py:62
+#: lib/gui/lettering_font_sample.py:63
 #: lib/gui/satin_multicolor/main_panel.py:56
 #: lib/gui/simulator/simulator_preferences.py:46
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr "Appliquer"
 
-#: lib/gui/lettering_font_sample.py:80
+#: lib/gui/lettering_font_sample.py:81
 msgid "    This extension helps font creators to generate an output of every glyph from a selected font."
 msgstr "    Cette extension aide les créateurs de fontes en générant une sortie avec tous les glyphes de la fonte sélectionnée."
 
-#: lib/gui/lettering_font_sample.py:94 lib/gui/lettering_font_sample.py:95
+#: lib/gui/lettering_font_sample.py:95 lib/gui/lettering_font_sample.py:96
 msgid "https://inkstitch.org/docs/font-tools/#font-sampling"
 msgstr "https://inkstitch.org/fr/docs/font-tools/#font-sampling"
 
-#: lib/gui/lettering_font_sample.py:162
+#: lib/gui/lettering_font_sample.py:165
 #, python-format
 msgid "The glyphlist for this font seems to be outdated.\n\n"
 "Please update the glyph list for %s:\n"
@@ -3205,7 +3205,7 @@ msgstr "La liste des glyphes de cette fonte ne semble pas à jour.\n\n"
 "Merci de mettre a jour la liste des glyphes de %s:\n"
 "Extensions > Ink/Stitch >Gestion des polices > Mettre à jour la liste des glyphes"
 
-#: lib/gui/lettering_font_sample.py:218
+#: lib/gui/lettering_font_sample.py:221
 msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
 msgstr "Il y a des glyphes dupliqués dans ce fichier de fonte : {duplicated_glyphs}"
 
@@ -3856,7 +3856,7 @@ msgstr "Aucun fichier variant trouvé pour la police '%s'."
 
 #: lib/lettering/font.py:465
 msgid "Color Group"
-msgstr ""
+msgstr "Groupe de couleur"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
@@ -5958,19 +5958,19 @@ msgstr "Si désactivé, la broderie en aller-retour ne sera pas possible pour ce
 
 #: inx/inkstitch_lettering_generate_json.inx:72
 msgid "Sortable"
-msgstr ""
+msgstr "Triable"
 
 #: inx/inkstitch_lettering_generate_json.inx:72
 msgid "If disabled color sorting will be disabled for this font. Color sorting needs color_sort_index indicators within the font."
-msgstr ""
+msgstr "Si désactivé, le tri des couleurs sera désactivé pour cette fonte. Nécessite la présence des indicateurs color_sort_index dans la fonte."
 
 #: inx/inkstitch_lettering_generate_json.inx:74
 msgid "Combine indices"
-msgstr ""
+msgstr "Combine les indices"
 
 #: inx/inkstitch_lettering_generate_json.inx:74
 msgid "When color sorting, combine elements with this color indices (comma separated)"
-msgstr ""
+msgstr "Lors du tri des couleurs, combine les éléments avec ces indices de couleur (virgule comme séparateur)"
 
 #: inx/inkstitch_lettering_generate_json.inx:75
 msgid "Force letter case"
@@ -6064,23 +6064,23 @@ msgstr "https://inkstitch.org/fr/docs/font-tools/#remove-kerning"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:3
 msgid "Set color sort index"
-msgstr ""
+msgstr "Définir l'index de tri des couleurs"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:9
 msgid "Color sort index"
-msgstr ""
+msgstr "Index de tri des couleurs"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:12
 msgid "Sets given color sort index on selected elements"
-msgstr ""
+msgstr "Défini cet index de tri des couleurs pour les éléments sélectionnés"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:14
 msgid "This sets the order of elements for multicolor fonts when color sorted."
-msgstr ""
+msgstr "Ceci définit l'ordre des éléments pour les polices multicolores lors du tri par couleur."
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:20
 msgid "https://inkstitch.org/docs/font-tools/#set-color-sort-index"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/font-tools/#set-color-sort-index"
 
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:3
 msgid "Update Glyphlist"
