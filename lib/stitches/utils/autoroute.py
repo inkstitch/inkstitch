@@ -230,11 +230,12 @@ def remove_from_parent(node):
         node.getparent().remove(node)
 
 
-def create_new_group(parent, insert_index, label):
+def create_new_group(parent, insert_index, label, correction_transform=True):
     group = inkex.Group(attrib={
         INKSCAPE_LABEL: label,
-        "transform": get_correction_transform(parent, child=True)
     })
+    if correction_transform:
+        group.transform = get_correction_transform(parent, child=True)
     parent.insert(insert_index, group)
 
     return group

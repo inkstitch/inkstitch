@@ -148,6 +148,7 @@ class Redwork(InkstitchExtension):
             transform=transform,
             d=path
         )
+        element.apply_transform()
 
         element.label = label
         element.set('inkstitch:running_stitch_length_mm', self.options.redwork_running_stitch_length_mm)
