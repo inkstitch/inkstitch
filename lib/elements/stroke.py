@@ -426,6 +426,8 @@ class Stroke(EmbroideryElement):
         path = self.parse_path()
         flattened = self.flatten(path)
         flattened = self._get_clipped_path(flattened)
+        if flattened is None:
+            return []
 
         # manipulate invalid path
         if len(flattened[0]) == 1:
@@ -460,7 +462,7 @@ class Stroke(EmbroideryElement):
 
         coords = []
         if intersection.is_empty:
-            return paths
+            return None
         elif isinstance(intersection, shgeo.MultiLineString):
             for c in [intersection for intersection in intersection.geoms if isinstance(intersection, shgeo.LineString)]:
                 coords.append(c.coords)
