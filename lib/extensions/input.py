@@ -10,7 +10,9 @@ from inkex import errormsg
 from lxml import etree
 
 from ..i18n import _
+from ..metadata import InkStitchMetadata
 from ..stitch_plan import generate_stitch_plan
+from ..update import INKSTITCH_SVG_VERSION
 
 
 class Input(object):
@@ -22,6 +24,11 @@ class Input(object):
             errormsg(msg)
             exit(0)
         stitch_plan = generate_stitch_plan(embroidery_file)
+
+        # Set SVG Version so we do request the user to update the document later on
+        metadata = InkStitchMetadata(stitch_plan)
+        metadata['inkstitch_svg_version'] = INKSTITCH_SVG_VERSION
+
         out = etree.tostring(stitch_plan).decode('utf-8')
         if platform == "win32":
             print(out)
