@@ -262,7 +262,6 @@ def clone_with_fixup(parent: BaseElement, node: BaseElement) -> BaseElement:
             node.set(attr, id_map.get(val, val))
 
     for n in ret.iter():
-        fixup_id_attr(n, XLINK_HREF)
         fixup_id_attr(n, CONNECTION_START)
         fixup_id_attr(n, CONNECTION_END)
 
