@@ -235,6 +235,17 @@ class Stroke(EmbroideryElement):
         return max(min_dist, 0.01)
 
     @property
+    @param('render_at_rungs',
+           _('Render at rungs'),
+           tooltip=_('Position satin guided pattern at rungs.'),
+           type='boolean',
+           select_items=[('stroke_method', 'ripple_stitch')],
+           default=False,
+           sort_index=9)
+    def render_at_rungs(self):
+        return self.get_boolean_param('render_at_rungs', False)
+
+    @property
     @param('staggers',
            _('Stagger lines this many times before repeating'),
            tooltip=_('Length of the cycle by which successive stitch lines are staggered. '
