@@ -21,13 +21,14 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from lxml import etree
 from werkzeug.serving import make_server
 
-from .base import InkstitchExtension
 from ..debug.debug import debug
 from ..i18n import _, get_languages
 from ..i18n import translation as inkstitch_translation
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import render_stitch_plan
 from ..threads import ThreadCatalog
+from ..utils import get_bundled_dir
+from .base import InkstitchExtension
 
 
 def datetimeformat(value, format='%Y/%m/%d'):
@@ -111,13 +112,7 @@ class PrintPreviewServer(Thread):
         self.__setup_app()
 
     def __set_resources_path(self):
-        if getattr(sys, 'frozen', False):
-            if sys.platform == "darwin":
-                self.resources_path = os.path.join(sys._MEIPASS, "..", 'Resources', 'print', 'resources')
-            else:
-                self.resources_path = os.path.join(sys._MEIPASS, 'print', 'resources')
-        else:
-            self.resources_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', '..', 'print', 'resources'))
+        self.resources_path = os.path.join(get_bundled_dir('print'), 'resources')
 
     def __setup_app(self):  # noqa: C901
         self.__set_resources_path()
