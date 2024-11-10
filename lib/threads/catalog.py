@@ -4,10 +4,8 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import os
-import sys
 from collections.abc import Sequence
 from glob import glob
-from os.path import dirname, realpath
 
 from ..utils import get_bundled_dir, guess_inkscape_config_path
 from .palette import ThreadPalette
