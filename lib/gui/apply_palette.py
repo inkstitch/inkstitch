@@ -8,6 +8,7 @@ import wx.adv
 
 from ..i18n import _
 from ..threads import ThreadCatalog
+from ..utils.settings import global_settings
 
 
 class ApplyPaletteFrame(wx.Frame):
@@ -31,8 +32,8 @@ class ApplyPaletteFrame(wx.Frame):
         palette_sizer = wx.BoxSizer(wx.VERTICAL)
         palette_text = wx.StaticText(self.palettes, -1, _("Select color palette"))
         self.palette_list = wx.Choice(self.palettes, choices=ThreadCatalog().palette_names())
-        # TODO: select last time selected
-        self.palette_list.SetSelection(0)
+        last_selected_pallete = self.palette_list.FindString(global_settings['last_applied_palette'])
+        self.palette_list.SetSelection(last_selected_pallete)
 
         palette_sizer.Add(palette_text, 0, wx.ALL | wx.EXPAND, 10)
         palette_sizer.Add(self.palette_list, 0, wx.ALL | wx.EXPAND, 10)
@@ -98,4 +99,7 @@ class ApplyPaletteApp(wx.App):
         app.MainLoop()
 
     def set_palette(self):
+        if self.frame.palette_list.GetSelection() == -1:
+            return
         self.palette = self.frame.palette_list.GetString(self.frame.palette_list.GetSelection())
+        global_settings['last_applied_palette'] = self.palette
