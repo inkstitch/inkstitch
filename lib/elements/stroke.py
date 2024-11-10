@@ -423,9 +423,17 @@ class Stroke(EmbroideryElement):
 
     @property
     def paths(self):
+        return self._get_paths()
+
+    @property
+    def unclipped_paths(self):
+        return self._get_paths(False)
+
+    def _get_paths(self, clipped=True):
         path = self.parse_path()
         flattened = self.flatten(path)
-        flattened = self._get_clipped_path(flattened)
+        if clipped:
+            flattened = self._get_clipped_path(flattened)
         if flattened is None:
             return []
 
