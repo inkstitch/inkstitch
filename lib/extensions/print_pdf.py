@@ -27,7 +27,7 @@ from ..i18n import translation as inkstitch_translation
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import render_stitch_plan
 from ..threads import ThreadCatalog
-from ..utils import get_bundled_dir
+from ..utils import get_resource_dir
 from .base import InkstitchExtension
 
 
@@ -112,7 +112,7 @@ class PrintPreviewServer(Thread):
         self.__setup_app()
 
     def __set_resources_path(self):
-        self.resources_path = os.path.join(get_bundled_dir('print'), 'resources')
+        self.resources_path = os.path.join(get_resource_dir('print'), 'resources')
 
     def __setup_app(self):  # noqa: C901
         self.__set_resources_path()
@@ -308,7 +308,7 @@ class PrintInfoFrame(wx.Frame):
 
 class Print(InkstitchExtension):
     def build_environment(self):
-        print_dir = get_bundled_dir('print')
+        print_dir = get_resource_dir('print')
         template_dir = os.path.join(print_dir, "templates")
 
         env = Environment(
