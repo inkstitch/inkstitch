@@ -308,14 +308,7 @@ class PrintInfoFrame(wx.Frame):
 
 class Print(InkstitchExtension):
     def build_environment(self):
-        if getattr(sys, 'frozen', False):
-            if sys.platform == "darwin":
-                print_dir = os.path.join(sys._MEIPASS, "..", 'Resources', "print")
-            else:
-                print_dir = os.path.join(sys._MEIPASS, "print")
-        else:
-            print_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", "..", "print"))
-
+        print_dir = get_bundled_dir('print')
         template_dir = os.path.join(print_dir, "templates")
 
         env = Environment(
