@@ -21,15 +21,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="true"
-     inkscape:zoom="1.5622593"
-     inkscape:cx="63.049713"
-     inkscape:cy="154.90386"
+     inkscape:zoom="4.4187366"
+     inkscape:cx="145.2904"
+     inkscape:cy="127.41199"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1216"
+     inkscape:current-layer="g1204"
      inkscape:document-units="mm"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-global="false"
@@ -463,7 +463,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-0"
-     style="display:inline"
+     style="display:none"
      id="g1216">
     <path
        style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.944882;stroke-miterlimit:4;stroke-dasharray:0.500785, 0.500785;stroke-dashoffset:0"
@@ -17117,7 +17117,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-V"
-     style="display:none"
+     style="display:inline"
      id="g1204">
     <path
        style="display:inline;fill:none;stroke:#ed171f;stroke-width:0.944882;stroke-dasharray:2, 1;stroke-dashoffset:0"
@@ -17766,7 +17766,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin470"
        style="display:inline;fill:none;stroke:#000000"
-       d="M 156.5,48.5 150,42 H 138 L 98.3877,170.049 M 163,55 h -16 l -36.87,119.186 m 38.8432,-136.674048 0.27804,20.480776 M 144.448,69.2357 129.093,64.526 m 34.131,-9.1975 -7.118,-7.2277"
+       d="M 156.5,48.5 150,42 H 138 L 98.3877,170.049 M 163,55 h -16 l -36.87,119.186 m 38.8432,-136.674048 0.27804,20.480776 M 144.448,69.2357 129.093,64.526 m -32.12592,91.3072 23.37146,6.40715"
        sodipodi:nodetypes="ccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="8"
