@@ -222,7 +222,7 @@ class Font(object):
             glyph_set = glyph_sets[i % 2]
             line = line.strip()
 
-            letter_group = self._render_line(line, position, glyph_set)
+            letter_group = self._render_line(destination_group, line, position, glyph_set)
             if (back_and_forth and self.reversible and i % 2 == 1) or variant == '←':
                 letter_group[:] = reversed(letter_group)
             destination_group.append(letter_group)
@@ -262,7 +262,7 @@ class Font(object):
     def get_variant(self, variant):
         return self.variants.get(variant, self.variants[self.default_variant])
 
-    def _render_line(self, line, position, glyph_set):
+    def _render_line(self, destination_group, line, position, glyph_set):
         """Render a line of text.
 
         An SVG XML node tree will be returned, with an svg:g at its root.  If
@@ -299,14 +299,14 @@ class Font(object):
                     glyph = glyph_set[self.default_glyph]
 
                 if glyph is not None:
-                    node = self._render_glyph(glyph, position, character, last_character)
+                    node = self._render_glyph(destination_group, glyph, position, character, last_character)
                     group.append(node)
 
                 last_character = character
 
         return group
 
-    def _render_glyph(self, glyph, position, character, last_character):
+    def _render_glyph(self, destination_group, glyph, position, character, last_character):
         """Render a single glyph.
 
         An SVG XML node tree will be returned, with an svg:g at its root.
@@ -341,6 +341,7 @@ class Font(object):
         position.x += self.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
 
         self._update_commands(node, glyph)
+        self._update_clips(destination_group, node, glyph)
 
         # this is used to recognize a glyph layer later in the process
         # because this is not unique it will be overwritten by inkscape when inserted into the document
@@ -365,6 +366,14 @@ class Font(object):
                 c = node.find(".//*[@id='%s']" % connector)
                 c.set(CONNECTION_END, "#%s" % new_element_id)
                 c.set(CONNECTION_START, "#%s" % new_symbol_id)
+
+    def _update_clips(self, destination_group, node, glyph):
+        svg = destination_group.getroottree().getroot()
+        for node_id, clip in glyph.clips.items():
+            if clip not in svg.defs:
+                svg.defs.append(clip)
+            el = node.find(f".//*[@id='{node_id}']")
+            el.clip = clip
 
     def _add_trims(self, destination_group, text, trim_option, use_trim_symbols, back_and_forth):
         """
@@ -500,16 +509,19 @@ class Font(object):
                     glyph_group = ancestor
                     break
             element.transform = element.composed_transform(glyph_group.getparent())
-            element.apply_transform()
+            if sort_index is not None and int(sort_index) in self.combine_at_sort_indices:
+                element.apply_transform()
 
             if not sort_index:
                 elements_by_color[404].append([element])
                 continue
 
             parent = element.getparent()
+            if element.clip is None and parent.clip is not None:
+                element.clip = parent.clip
             if last_parent != parent or int(sort_index) not in elements_by_color or not is_grouped_with_marker(element):
                 elements_by_color[int(sort_index)].append([element])
             else:
                 elements_by_color[int(sort_index)][-1].append(element)
-            last_parent = element.getparent()
+            last_parent = parent
         return elements_by_color

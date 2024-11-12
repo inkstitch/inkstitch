@@ -423,9 +423,19 @@ class Stroke(EmbroideryElement):
 
     @property
     def paths(self):
+        return self._get_paths()
+
+    @property
+    def unclipped_paths(self):
+        return self._get_paths(False)
+
+    def _get_paths(self, clipped=True):
         path = self.parse_path()
         flattened = self.flatten(path)
-        flattened = self._get_clipped_path(flattened)
+        if clipped:
+            flattened = self._get_clipped_path(flattened)
+        if flattened is None:
+            return []
 
         # manipulate invalid path
         if len(flattened[0]) == 1:
@@ -447,10 +457,10 @@ class Stroke(EmbroideryElement):
         return shgeo.MultiLineString(line_strings)
 
     def _get_clipped_path(self, paths):
-        if self.node.clip is None:
+        clip_path = get_clip_path(self.node)
+        if clip_path is None:
             return paths
 
-        clip_path = get_clip_path(self.node)
         # path to linestrings
         line_strings = [shgeo.LineString(path) for path in paths]
         try:
@@ -460,7 +470,7 @@ class Stroke(EmbroideryElement):
 
         coords = []
         if intersection.is_empty:
-            return paths
+            return None
         elif isinstance(intersection, shgeo.MultiLineString):
             for c in [intersection for intersection in intersection.geoms if isinstance(intersection, shgeo.LineString)]:
                 coords.append(c.coords)

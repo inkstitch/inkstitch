@@ -3,6 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from collections import defaultdict
 from copy import copy
 
 from inkex import paths, transforms, units
@@ -36,10 +37,19 @@ class Glyph(object):
         """
 
         self._process_baseline(group.getroottree().getroot())
+        self.clips = self._process_clips(group)
         self.node = self._process_group(group)
         self._process_bbox()
         self._move_to_origin()
         self._process_commands()
+
+    def _process_clips(self, group):
+        clips = defaultdict(list)
+        for node in group.iterdescendants():
+            if node.clip:
+                node_id = node.get_id()
+                clips[node_id] = node.clip
+        return clips
 
     def _process_group(self, group):
         new_group = copy(group)
@@ -124,3 +134,11 @@ class Glyph(object):
             x, y = transform.apply_to_point((oldx, oldy))
             node.set('x', x)
             node.set('y', y)
+
+        # transform clips
+        for node in self.node.iterdescendants():
+            node_id = node.get_id()
+            if node_id in self.clips:
+                clip = self.clips[node_id]
+                for childnode in clip.iterchildren():
+                    childnode.transform @= transform
