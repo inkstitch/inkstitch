@@ -303,6 +303,8 @@ class Point:
 
     def unit(self):
         length = self.length()
+        if length == 0:
+            return self.__class__(0, 0)
         return self.__class__(self.x / length, self.y / length)
 
     def angle(self):
