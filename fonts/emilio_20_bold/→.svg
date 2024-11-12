@@ -6,7 +6,7 @@
    width="52.916668mm"
    height="52.916668mm"
    viewBox="0 0 200 200"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   inkscape:version="1.4-rc1 (61ec3f24, 2024-09-26)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -22,14 +22,14 @@
      inkscape:pagecheckerboard="0"
      showgrid="true"
      inkscape:zoom="2.7657619"
-     inkscape:cx="58.392589"
-     inkscape:cy="179.33575"
+     inkscape:cx="113.5311"
+     inkscape:cy="88.221622"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1160"
+     inkscape:current-layer="g1204"
      inkscape:document-units="mm"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-global="false"
@@ -12764,7 +12764,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-V"
-     style="display:none"
+     style="display:inline"
      id="g1204">
     <path
        d="M 60.1758,165.123 C 48.404933,126.66088 36.675299,88.186123 24.8731,49.7336 21.694602,48.029294 17.709685,48.116921 14.349133,49.072174 11.899404,49.964732 9.4497339,50.857454 7,51.75"
@@ -13292,7 +13292,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
     <path
        id="autosatin470"
        style="display:inline;fill:none;stroke:#000000"
-       d="M 156.5,48.5 150,42 H 138 L 98.3877,170.049 M 163,55 h -16 l -36.87,119.186 m 38.8432,-136.674048 0.27804,20.480776 M 144.448,69.2357 129.093,64.526 m 34.131,-9.1975 -7.118,-7.2277"
+       d="M 156.5,48.5 150,42 H 138 L 98.3877,170.049 M 163,55 h -16 l -36.87,119.186 m 38.8432,-136.674048 0.27804,20.480776 M 144.448,69.2357 129.093,64.526 m -34.72479,97.50978 24.22479,7.23128"
        sodipodi:nodetypes="ccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:max_stitch_length_mm="8"
@@ -15232,7 +15232,7 @@ Created by FontForge 20190801 at Tue Aug 24 22:20:47 2021
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Z"
-     style="display:inline"
+     style="display:none"
      id="g1160">
     <path
        d="M 20,176.278 V 187.5 h 108 v -29.334"

@@ -4,11 +4,13 @@
     "keywords": [
         "handwriting",
         "display",
-        "italic"
+        "italic",
+        "multicolor"
     ],
     "leading": 200,
     "auto_satin": false,
     "reversible": false,
+    "sortable": true,
     "letter_case": "",
     "default_glyph": "�",
     "min_scale": 1,
