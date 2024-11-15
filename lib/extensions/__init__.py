@@ -59,6 +59,7 @@ from .satin_multicolor import SatinMulticolor
 from .select_elements import SelectElements
 from .selection_to_guide_line import SelectionToGuideLine
 from .selection_to_pattern import SelectionToPattern
+from .sew_stack_editor import SewStackEditor
 from .simulator import Simulator
 from .stitch_plan_preview import StitchPlanPreview
 from .stitch_plan_preview_undo import StitchPlanPreviewUndo
@@ -128,6 +129,7 @@ __all__ = extensions = [About,
                         SelectElements,
                         SelectionToGuideLine,
                         SelectionToPattern,
+                        SewStackEditor,
                         Simulator,
                         StitchPlanPreview,
                         StitchPlanPreviewUndo,
