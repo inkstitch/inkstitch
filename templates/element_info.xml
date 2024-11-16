@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">element_info</param>
     <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/element_info.svg</icon>
+        <menu-tip>Display embroidery info for selected elements</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Troubleshoot" />

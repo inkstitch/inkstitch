@@ -20,6 +20,8 @@
     </param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/color_management.svg</icon>
+        <menu-tip>Matches colors of all elements in the document to a specified palette</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Thread Color Management" />

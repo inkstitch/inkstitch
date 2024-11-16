@@ -9,6 +9,8 @@
     <param name="extension" type="string" gui-hidden="true">global_commands</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/commands.svg</icon>
+        <menu-tip>Add commands which affect the entire document</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 {# L10N Inkscape submenu under Extensions -> Ink/Stitch #}

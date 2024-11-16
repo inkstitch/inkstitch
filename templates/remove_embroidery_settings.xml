@@ -140,6 +140,8 @@
 
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/remove_embroidery_settings.svg</icon>
+        <menu-tip>Remove specific or all embroidery settings from the document</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Troubleshoot" />
