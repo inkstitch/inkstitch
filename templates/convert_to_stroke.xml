@@ -19,7 +19,7 @@
 
     <effect>
         <object-type>all</object-type>
-        <icon>{{ icon_path }}inkstitch_colour_logo.svg</icon>
+        <icon>{{ icon_path }}inx/satin_to_stroke.svg</icon>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Tools: Stroke" />
