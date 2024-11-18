@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">lettering_font_sample</param>
     <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/font_management.svg</icon>
+        <menu-tip>Inserts all glyphs of a specified font into the document</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Font Management" />

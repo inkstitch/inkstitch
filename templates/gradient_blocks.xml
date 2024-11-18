@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">gradient_blocks</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/gradient_blocks.svg</icon>
+        <menu-tip>Split a fill with a gradient into single colored blocks</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Tools: Fill" />

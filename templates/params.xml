@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">params</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/preferences.svg</icon>
+        <menu-tip>Adapt embroidery settings</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no" />
         </effects-menu>

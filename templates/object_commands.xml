@@ -8,6 +8,8 @@
     <param name="extension" type="string" gui-hidden="true">object_commands</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/commands.svg</icon>
+        <menu-tip>Add commands which affect selected elememts</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Commands" />

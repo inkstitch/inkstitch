@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">satin_multicolor</param>
     <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/multicolor_satin.svg</icon>
+        <menu-tip>Generates a multicolor satin</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Tools: Satin" />

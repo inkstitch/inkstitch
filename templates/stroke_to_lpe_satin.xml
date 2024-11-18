@@ -35,6 +35,7 @@
     </param>
     <effect needs-live-preview="false">
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/to_satin.svg</icon>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Tools: Satin" />

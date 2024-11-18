@@ -5,6 +5,7 @@
     <param name="extension" type="string" gui-hidden="true">reorder</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/reorder.svg</icon>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Edit" />

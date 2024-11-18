@@ -19,6 +19,8 @@
 
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/troubleshoot.svg</icon>
+        <menu-tip>Marks problematic or possibly problematic spots in the document or selection</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Troubleshoot" />

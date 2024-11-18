@@ -29,6 +29,8 @@
 
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/cleanup_document.svg</icon>
+        <menu-tip>Remove small unstitchable elements</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Troubleshoot" />

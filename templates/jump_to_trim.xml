@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">jump_to_trim</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/jump_to_trim.svg</icon>
+        <menu-tip>Sets a trim command on elements which are followed by a jump stitch</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Commands" />

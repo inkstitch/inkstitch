@@ -33,6 +33,8 @@
 
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/density_map.svg</icon>
+        <menu-tip>Displays a colored dot at each stitch position</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Visualize and Export" />

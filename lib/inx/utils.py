@@ -26,13 +26,17 @@ def build_environment():
         # Command tag and icons path
         if sys.platform == "win32":
             env.globals["command_tag"] = '<command location="inx">../bin/inkstitch.exe</command>'
+            env.globals["icon_path"] = '../bin/icons/'
         elif sys.platform == "darwin":
             env.globals["command_tag"] = '<command location="inx">../../MacOS/inkstitch</command>'
+            env.globals["icon_path"] = '../icons/'
         else:
             env.globals["command_tag"] = '<command location="inx">../bin/inkstitch</command>'
+            env.globals["icon_path"] = '../bin/icons/'
     else:
         # user is running inkstitch.py directly as a developer
         env.globals["command_tag"] = '<command location="inx" interpreter="python">../inkstitch.py</command>'
+        env.globals["icon_path"] = '../icons/'
     return env
 
 

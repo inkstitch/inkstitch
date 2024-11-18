@@ -3,22 +3,21 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from math import degrees
 from contextlib import contextmanager
-from typing import Generator, List, Dict
+from math import degrees
+from typing import Dict, Generator, List
 
-from inkex import Transform, BaseElement
+from inkex import BaseElement, Transform
 from shapely import MultiLineString
 
-from ..stitch_plan.stitch_group import StitchGroup
-
-from ..commands import is_command_symbol, find_commands, point_command_symbols_up
+from ..commands import (find_commands, is_command_symbol,
+                        point_command_symbols_up)
 from ..i18n import _
-from ..svg.svg import copy_no_children
+from ..stitch_plan.stitch_group import StitchGroup
 from ..svg.path import get_node_transform
-from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
-                        XLINK_HREF, CONNECTION_START, CONNECTION_END,
-                        SVG_GROUP_TAG)
+from ..svg.svg import copy_no_children
+from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
+                        INKSTITCH_ATTRIBS, SVG_GROUP_TAG, SVG_USE_TAG)
 from ..utils import cache
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
@@ -108,7 +107,7 @@ class Clone(EmbroideryElement):
         Could possibly be refactored into just a generator - being a context manager is mainly to control the lifecycle of the elements
         that are cloned (again, for testing convenience primarily)
         """
-        from .utils import nodes_to_elements, iterate_nodes
+        from .utils import iterate_nodes, nodes_to_elements
 
         cloned_nodes = self.resolve_clone()
         try:

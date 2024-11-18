@@ -19,6 +19,7 @@
     <its:translateRule selector="/inx:inkscape-extension" translate="no"/>
 
     <its:translateRule selector="//inx:name" translate="yes"/>
+    <its:translateRule selector="//inx:menu-tip" translate="yes"/>
 
     <its:translateRule selector="//*[not(@translatable='no')]/@gui-text" translate="yes"/>
     <its:translateRule selector="//*[not(@translatable='no')]/@gui-description" translate="yes"/>
@@ -37,4 +38,8 @@
     <its:translateRule selector="//inkscape:templateinfo/inkscape:shortdesc" translate="yes"/>
     <its:translateRule selector="//inkscape:templateinfo/inkscape:keywords" translate="yes"/>
 
+    <!-- currently templates use those elements -->
+    <its:translateRule selector="//inx:preset/@name" translate="yes"/>
+    <its:translateRule selector="//inx:preset/@label" translate="yes"/>
+    <its:translateRule selector="//inx:category" translate="yes"/>
 </its:rules>

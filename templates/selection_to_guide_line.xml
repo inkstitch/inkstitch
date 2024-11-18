@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">selection_to_guide_line</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/guide_line.svg</icon>
+        <menu-tip>Marks selected elements as guide lines</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Edit" />

@@ -21,6 +21,8 @@
 
     <effect needs-live-preview="false">
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/color_management.svg</icon>
+        <menu-tip>Installs a custom color palette into Inkscape</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Thread Color Management" />

@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">duplicate_params</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/duplicate_params.svg</icon>
+        <menu-tip>Applies params from first selected element to the rest of the selection</menu-tip>
         <effects-menu>
         <submenu name="{{ menu_inkstitch }}" translatable="no">
             <submenu name="Edit" />

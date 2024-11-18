@@ -33,6 +33,8 @@
     </param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/color_management.svg</icon>
+        <menu-tip>Applies colors from a specified color file onto the objects in this document.</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Thread Color Management" />

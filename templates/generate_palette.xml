@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">generate_palette</param>
     <effect needs-live-preview="false">
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/color_management.svg</icon>
+        <menu-tip>Generate a custom color palette from colored text elements</menu-tip>
         <effects-menu>
           <submenu name="{{ menu_inkstitch }}" translatable="no">
             <submenu name="Thread Color Management">

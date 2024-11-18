@@ -5,6 +5,7 @@
     <param name="extension" type="string" gui-hidden="true">preferences</param>
     <effect implements-custom-gui="true">
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/preferences.svg</icon>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no"/>
         </effects-menu>

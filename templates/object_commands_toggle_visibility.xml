@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>Display|Hide Object Commands</name>
+    <name>Show|Hide Object Commands</name>
     <id>org.{{ id_inkstitch }}.object_commands_toggle_visibility</id>
     <param name="extension" type="string" gui-hidden="true">object_commands_toggle_visibility</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/commands_visibility.svg</icon>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Commands">

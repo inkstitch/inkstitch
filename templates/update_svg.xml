@@ -5,6 +5,7 @@
     <param name="extension" type="string" gui-hidden="true">update_svg</param>
     <effect needs-live-preview="false">
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/update_svg.svg</icon>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Troubleshoot" />

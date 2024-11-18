@@ -5,6 +5,7 @@
     <param name="extension" type="string" gui-hidden="true">simulator</param>
     <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/simulator.svg</icon>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Visualize and Export" />

@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">selection_to_pattern</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/pattern.svg</icon>
+        <menu-tip>Marks selected elements as patterns</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Edit" />

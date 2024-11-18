@@ -24,6 +24,8 @@
 
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/break_apart_fill.svg</icon>
+        <menu-tip>Break apart and repair (broken) fill shapes</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Tools: Fill" />

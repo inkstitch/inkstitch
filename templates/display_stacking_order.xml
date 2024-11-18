@@ -18,6 +18,8 @@
 
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/stacking_order.svg</icon>
+        <menu-tip>Generates numbered labels to indicate the stitching order</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Visualize and Export" />
