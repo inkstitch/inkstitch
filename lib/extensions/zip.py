@@ -10,7 +10,6 @@ from copy import deepcopy
 from zipfile import ZipFile
 
 from inkex import Boolean, errormsg
-from inkex.units import convert_unit
 from lxml import etree
 
 import pyembroidery
@@ -136,7 +135,7 @@ class Zip(InkstitchExtension):
                     self.generate_png_output(output_file, layer, self.options.dpi_realistic)
                 elif format == 'png_simple':
                     output_file = os.path.join(path, f"{base_file_name}_simple.png")
-                    line_width = convert_unit(f"{self.options.line_width}mm", self.svg.document_unit)
+                    line_width = self.options.line_width * PIXELS_PER_MM
                     layer = render_stitch_plan(self.svg, stitch_plan, False, visual_commands=False,
                                                render_jumps=False, line_width=line_width)
                     self.generate_png_output(output_file, layer, self.options.dpi_simple)
