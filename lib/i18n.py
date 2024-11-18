@@ -5,10 +5,8 @@
 
 import gettext
 import os
-import sys
-from os.path import dirname, realpath
 
-from .utils import cache
+from .utils import cache, get_resource_dir
 
 _ = translation = None
 locale_dir = None
@@ -23,17 +21,7 @@ def N_(message): return message
 
 def _set_locale_dir():
     global locale_dir
-
-    if getattr(sys, 'frozen', False):
-        # we are in a pyinstaller installation
-        locale_dir = sys._MEIPASS
-    else:
-        locale_dir = dirname(dirname(realpath(__file__)))
-
-    if sys.platform == "darwin" and getattr(sys, 'frozen', False):
-        locale_dir = os.path.join(locale_dir, "..", 'Resources', 'locales')
-    else:
-        locale_dir = os.path.join(locale_dir, 'locales')
+    locale_dir = get_resource_dir('locales')
 
 
 def localize(languages=None):
