@@ -10,14 +10,19 @@ from os.path import dirname, realpath
 import appdirs
 
 
-def get_bundled_dir(name):
+def get_bundled_dir(name=None):
     if getattr(sys, 'frozen', None) is not None:
         if sys.platform == "darwin":
-            return realpath(os.path.join(sys._MEIPASS, "..", 'Resources', name))
+            path = os.path.join(sys._MEIPASS, "..", 'Resources')
         else:
-            return realpath(os.path.join(sys._MEIPASS, "..", name))
+            path = os.path.join(sys._MEIPASS, "..")
     else:
-        return realpath(os.path.join(dirname(realpath(__file__)), '..', '..', name))
+        path = os.path.join(dirname(realpath(__file__)), '..', '..')
+
+    if name is not None:
+        path = os.path.join(path, name)
+
+    return realpath(path)
 
 
 def get_resource_dir(name):

@@ -3,14 +3,14 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import sys
-from os.path import isfile, join, realpath
+from os.path import isfile, join
 
 from ..i18n import _
+from ..utils import get_bundled_dir
 
 
 def get_inkstitch_version():
-    version = _get_source_file("VERSION")
+    version = join(get_bundled_dir(), "VERSION")
     if isfile(version):
         with open(version, 'r') as v:
             inkstitch_version = _("Ink/Stitch Version: %s") % v.readline()
@@ -20,21 +20,10 @@ def get_inkstitch_version():
 
 
 def get_inkstitch_license():
-    license = _get_source_file("LICENSE")
+    license = join(get_bundled_dir(), "LICENSE")
     if isfile(license):
         with open(license, 'r') as lcs:
             license = lcs.read()
     else:
         license = "License: GNU GENERAL PUBLIC LICENSE\nVersion 3, 29 June 2007"
     return license
-
-
-def _get_source_file(filename):
-    if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
-        if sys.platform == "darwin":
-            source_file = realpath(join(sys._MEIPASS, "..", 'Resources', filename))
-        else:
-            source_file = realpath(join(sys._MEIPASS, "..", filename))
-    else:
-        source_file = realpath(join(realpath(__file__), "..", "..", "..", filename))
-    return source_file
