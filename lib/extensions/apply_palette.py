@@ -4,6 +4,9 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from ..elements import Clone, FillStitch
+from ..gui.abort_message import AbortMessageApp
+from ..gui.apply_palette import ApplyPaletteApp
+from ..i18n import _
 from ..threads import ThreadCatalog, ThreadColor
 from .base import InkstitchExtension
 
@@ -12,19 +15,24 @@ class ApplyPalette(InkstitchExtension):
     '''
     Applies colors of a color palette to elements
     '''
-    def __init__(self, *args, **kwargs):
-        InkstitchExtension.__init__(self, *args, **kwargs)
-        self.arg_parser.add_argument("-o", "--tabs")
-        self.arg_parser.add_argument("-t", "--palette", type=str, default=None, dest="palette")
 
     def effect(self):
         # Remove selection, we want all the elements in the document
         self.svg.selection.clear()
 
         if not self.get_elements():
+            app = AbortMessageApp(
+                _("There is no stitchable element in the document."),
+                _("https://inkstitch.org/")
+            )
+            app.MainLoop()
             return
 
-        palette_name = self.options.palette
+        palette_choice = ApplyPaletteApp()
+        if palette_choice.palette:
+            self.apply_palette(palette_choice.palette)
+
+    def apply_palette(self, palette_name):
         palette = ThreadCatalog().get_palette_by_name(palette_name)
 
         # Iterate through the color blocks to apply colors
