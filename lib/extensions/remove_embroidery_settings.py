@@ -5,7 +5,7 @@
 
 from inkex import NSS, Boolean, ShapeElement
 
-from ..commands import OBJECT_COMMANDS, find_commands
+from ..commands import OBJECT_COMMANDS, find_commands, is_command_symbol
 from ..svg.svg import find_elements
 from .base import InkstitchExtension
 
@@ -77,10 +77,19 @@ class RemoveEmbroiderySettings(InkstitchExtension):
         self.remove_elements(symbols)
 
     def remove_selected_commands(self):
+        del_option = self.options.del_commands
         elements = self.get_selected_elements()
         for element in elements:
+            if is_command_symbol(element) and (del_option in element.get('xlink:href') or del_option == 'all'):
+                group = element.getparent()
+                if group.getparent() is not None:
+                    if group.get_id().startswith("command_group"):
+                        group.getparent().remove(group)
+                    else:
+                        group.remove(element)
+                continue
             for command in find_commands(element):
-                if self.options.del_commands in ('all', command.command):
+                if del_option in ('all', command.command):
                     group = command.connector.getparent()
                     group.getparent().remove(group)
 
