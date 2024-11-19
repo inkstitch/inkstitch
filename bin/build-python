@@ -27,6 +27,8 @@ fi
 
 if [ "$BUILD" = "linux" ]; then
     pyinstaller_args+="--hidden-import gi.repository.Gtk "
+    pyinstaller_args+="--add-binary /lib/x86_64-linux-gnu/libcrypt.so.1:. "
+    pyinstaller_args+="--add-binary /lib/x86_64-linux-gnu/libnsl.so.1:. "
 fi
 
 
