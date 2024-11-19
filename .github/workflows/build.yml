@@ -53,7 +53,7 @@ jobs:
           python -m pip install pycairo
           python -m pip install PyGObject
 
-          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.1-cp39-cp39-linux_x86_64.whl
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.2-cp39-cp39-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
           # for networkx
@@ -227,7 +227,7 @@ jobs:
           name: inkstitch-windows64
           path: artifacts
   macx86:
-    runs-on: macos-12
+    runs-on: macos-13
     steps:
       - uses: actions/checkout@v4
         with:
