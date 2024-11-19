@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-25 01:24+0000\n"
-"PO-Revision-Date: 2024-10-25 01:25\n"
+"POT-Creation-Date: 2024-11-19 01:28+0000\n"
+"PO-Revision-Date: 2024-11-19 01:29\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-25 01:24+0000\n"
+"POT-Creation-Date: 2024-11-19 01:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -953,44 +953,44 @@ msgstr ""
 msgid "Please select a layer to include layer commands."
 msgstr ""
 
-#: lib/elements/clone.py:28
+#: lib/elements/clone.py:27
 msgid "Clone Object"
 msgstr ""
 
-#: lib/elements/clone.py:29
+#: lib/elements/clone.py:28
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with clones, but you are limited to set a very few parameters. "
 msgstr ""
 
-#: lib/elements/clone.py:32
+#: lib/elements/clone.py:31
 msgid "If you want to convert the clone into a real element, follow these steps:"
 msgstr ""
 
-#: lib/elements/clone.py:33
+#: lib/elements/clone.py:32
 msgid "* Select the clone"
 msgstr ""
 
-#: lib/elements/clone.py:34
+#: lib/elements/clone.py:33
 msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
 msgstr ""
 
-#: lib/elements/clone.py:45 inx/inkstitch_select_elements.inx:74
+#: lib/elements/clone.py:44 inx/inkstitch_select_elements.inx:74
 #: inx/inkstitch_select_elements.inx:75
 msgid "Clone"
 msgstr ""
 
-#: lib/elements/clone.py:51
+#: lib/elements/clone.py:50
 msgid "Custom fill angle"
 msgstr ""
 
-#: lib/elements/clone.py:52
+#: lib/elements/clone.py:51
 msgid "This setting will apply a custom fill angle for the clone."
 msgstr ""
 
-#: lib/elements/clone.py:61
+#: lib/elements/clone.py:60
 msgid "Flip angle"
 msgstr ""
 
-#: lib/elements/clone.py:62
+#: lib/elements/clone.py:61
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr ""
 
@@ -1460,7 +1460,7 @@ msgstr ""
 msgid "Distance between rows of stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:355 inx/inkstitch_gradient_blocks.inx:22
+#: lib/elements/fill_stitch.py:355 inx/inkstitch_gradient_blocks.inx:24
 msgid "End row spacing"
 msgstr ""
 
@@ -1516,7 +1516,7 @@ msgstr ""
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:454 lib/elements/stroke.py:108
+#: lib/elements/fill_stitch.py:454 lib/elements/stroke.py:120
 msgid "Running stitch length"
 msgstr ""
 
@@ -1532,19 +1532,19 @@ msgstr ""
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:491 lib/elements/stroke.py:134
+#: lib/elements/fill_stitch.py:491 lib/elements/stroke.py:146
 msgid "Randomize stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:492 lib/elements/stroke.py:135
+#: lib/elements/fill_stitch.py:492 lib/elements/stroke.py:147
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:507 lib/elements/stroke.py:147
+#: lib/elements/fill_stitch.py:507 lib/elements/stroke.py:159
 msgid "Random stitch length jitter"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:508 lib/elements/stroke.py:148
+#: lib/elements/fill_stitch.py:508 lib/elements/stroke.py:160
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr ""
 
@@ -1567,11 +1567,11 @@ msgid "Backtrack each stitch this many times.  A value of 1 would triple each st
 msgstr ""
 
 #: lib/elements/fill_stitch.py:550 lib/elements/satin_column.py:249
-#: lib/elements/stroke.py:173
+#: lib/elements/stroke.py:185
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:551 lib/elements/stroke.py:174
+#: lib/elements/fill_stitch.py:551 lib/elements/stroke.py:186
 msgid "Length of stitches in zig-zag mode."
 msgstr ""
 
@@ -1600,7 +1600,7 @@ msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr ""
 
 #: lib/elements/fill_stitch.py:602 lib/elements/satin_column.py:277
-#: lib/elements/stroke.py:186
+#: lib/elements/stroke.py:198
 msgid "Pull compensation"
 msgstr ""
 
@@ -1656,7 +1656,7 @@ msgstr ""
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:687 lib/elements/stroke.py:159
+#: lib/elements/fill_stitch.py:687 lib/elements/stroke.py:171
 #: lib/extensions/element_info.py:131 lib/extensions/element_info.py:187
 msgid "Max stitch length"
 msgstr ""
@@ -1670,12 +1670,12 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr ""
 
 #: lib/elements/fill_stitch.py:733 lib/elements/satin_column.py:532
-#: lib/elements/stroke.py:397 lib/gui/satin_multicolor/colorize_panel.py:57
+#: lib/elements/stroke.py:431 lib/gui/satin_multicolor/colorize_panel.py:57
 msgid "Random seed"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:734 lib/elements/satin_column.py:533
-#: lib/elements/stroke.py:398
+#: lib/elements/stroke.py:432
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr ""
 
@@ -1967,27 +1967,27 @@ msgstr ""
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr ""
 
-#: lib/elements/satin_column.py:292 lib/elements/stroke.py:299
+#: lib/elements/satin_column.py:292 lib/elements/stroke.py:333
 msgid "Automatic"
 msgstr ""
 
-#: lib/elements/satin_column.py:293 lib/elements/stroke.py:300
+#: lib/elements/satin_column.py:293 lib/elements/stroke.py:334
 msgid "Don't reverse"
 msgstr ""
 
-#: lib/elements/satin_column.py:294 lib/elements/stroke.py:301
+#: lib/elements/satin_column.py:294 lib/elements/stroke.py:335
 msgid "Reverse first rail"
 msgstr ""
 
-#: lib/elements/satin_column.py:295 lib/elements/stroke.py:302
+#: lib/elements/satin_column.py:295 lib/elements/stroke.py:336
 msgid "Reverse second rail"
 msgstr ""
 
-#: lib/elements/satin_column.py:296 lib/elements/stroke.py:303
+#: lib/elements/satin_column.py:296 lib/elements/stroke.py:337
 msgid "Reverse both rails"
 msgstr ""
 
-#: lib/elements/satin_column.py:302 lib/elements/stroke.py:309
+#: lib/elements/satin_column.py:302 lib/elements/stroke.py:343
 msgid "Reverse rails"
 msgstr ""
 
@@ -2018,7 +2018,7 @@ msgid "Stitch length"
 msgstr ""
 
 #: lib/elements/satin_column.py:376 lib/elements/satin_column.py:433
-#: lib/elements/stroke.py:120
+#: lib/elements/stroke.py:132
 msgid "Stitch tolerance"
 msgstr ""
 
@@ -2129,7 +2129,7 @@ msgid "Running Stitch / Bean Stitch"
 msgstr ""
 
 #: lib/elements/stroke.py:66 lib/lettering/categories.py:26
-#: inx/inkstitch_lettering_generate_json.inx:46
+#: inx/inkstitch_lettering_generate_json.inx:48
 msgid "Ripple Stitch"
 msgstr ""
 
@@ -2141,153 +2141,177 @@ msgstr ""
 msgid "Manual Stitch"
 msgstr ""
 
+#: lib/elements/stroke.py:108
+msgid "Manual stitch placement"
+msgstr ""
+
 #: lib/elements/stroke.py:109
-msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
+msgid "No extra stitches will be added to the original ripple pattern and the running stitch length value will be ignored."
 msgstr ""
 
 #: lib/elements/stroke.py:121
+msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
+msgstr ""
+
+#: lib/elements/stroke.py:133
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr ""
 
-#: lib/elements/stroke.py:160
+#: lib/elements/stroke.py:172
 msgid "Split stitches longer than this."
 msgstr ""
 
-#: lib/elements/stroke.py:187
+#: lib/elements/stroke.py:199
 msgid "Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This widens the zigzag line width."
 msgstr ""
 
-#: lib/elements/stroke.py:200
+#: lib/elements/stroke.py:212
 msgid "Number of lines"
 msgstr ""
 
-#: lib/elements/stroke.py:201
+#: lib/elements/stroke.py:213
 msgid "Number of lines from start to finish"
 msgstr ""
 
-#: lib/elements/stroke.py:212
+#: lib/elements/stroke.py:224
 msgid "Minimum line distance"
 msgstr ""
 
-#: lib/elements/stroke.py:213
+#: lib/elements/stroke.py:225
 msgid "Overrides the number of lines setting."
 msgstr ""
 
-#: lib/elements/stroke.py:227
+#: lib/elements/stroke.py:239
+msgid "Render at rungs"
+msgstr ""
+
+#: lib/elements/stroke.py:240
+msgid "Position satin guided pattern at rungs."
+msgstr ""
+
+#: lib/elements/stroke.py:250
 msgid "Stagger lines this many times before repeating"
 msgstr ""
 
-#: lib/elements/stroke.py:228
+#: lib/elements/stroke.py:251
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. A value of 0 (default) disables staggering and instead stitches evenly.For linear ripples only."
 msgstr ""
 
-#: lib/elements/stroke.py:241
+#: lib/elements/stroke.py:264
 msgid "Skip first lines"
 msgstr ""
 
-#: lib/elements/stroke.py:242
+#: lib/elements/stroke.py:265
 msgid "Skip this number of lines at the beginning."
 msgstr ""
 
-#: lib/elements/stroke.py:253
+#: lib/elements/stroke.py:276
 msgid "Skip last lines"
 msgstr ""
 
-#: lib/elements/stroke.py:254
+#: lib/elements/stroke.py:277
 msgid "Skip this number of lines at the end"
 msgstr ""
 
-#: lib/elements/stroke.py:265
-msgid "Line distance exponent"
-msgstr ""
-
-#: lib/elements/stroke.py:266
-msgid "Increase density towards one side."
-msgstr ""
-
-#: lib/elements/stroke.py:277
-msgid "Flip exponent"
-msgstr ""
-
-#: lib/elements/stroke.py:278
-msgid "Reverse exponent effect."
+#: lib/elements/stroke.py:288
+msgid "Flip every second line"
 msgstr ""
 
 #: lib/elements/stroke.py:289
-msgid "Reverse"
+msgid "Linear ripple: wether to flip the pattern every second line or not."
 msgstr ""
 
-#: lib/elements/stroke.py:290
-msgid "Flip start and end point"
+#: lib/elements/stroke.py:299
+msgid "Line distance exponent"
 msgstr ""
 
-#: lib/elements/stroke.py:310
-msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
+#: lib/elements/stroke.py:300
+msgid "Increase density towards one side."
 msgstr ""
 
-#: lib/elements/stroke.py:322
-msgid "Grid size"
+#: lib/elements/stroke.py:311
+msgid "Flip exponent"
+msgstr ""
+
+#: lib/elements/stroke.py:312
+msgid "Reverse exponent effect."
 msgstr ""
 
 #: lib/elements/stroke.py:323
+msgid "Reverse"
+msgstr ""
+
+#: lib/elements/stroke.py:324
+msgid "Flip start and end point"
+msgstr ""
+
+#: lib/elements/stroke.py:344
+msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
+msgstr ""
+
+#: lib/elements/stroke.py:356
+msgid "Grid size"
+msgstr ""
+
+#: lib/elements/stroke.py:357
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr ""
 
-#: lib/elements/stroke.py:335
+#: lib/elements/stroke.py:369
 msgid "Scale axis"
 msgstr ""
 
-#: lib/elements/stroke.py:336
+#: lib/elements/stroke.py:370
 msgid "Scale axis for satin guided ripple stitches."
 msgstr ""
 
-#: lib/elements/stroke.py:340 print/templates/ui.html:180
+#: lib/elements/stroke.py:374 print/templates/ui.html:180
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr ""
 
-#: lib/elements/stroke.py:348
+#: lib/elements/stroke.py:382
 msgid "Starting scale"
 msgstr ""
 
-#: lib/elements/stroke.py:349
+#: lib/elements/stroke.py:383
 msgid "How big the first copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:349 lib/elements/stroke.py:361
+#: lib/elements/stroke.py:383 lib/elements/stroke.py:395
 msgid "Used only for ripple stitch with a guide line."
 msgstr ""
 
-#: lib/elements/stroke.py:360
+#: lib/elements/stroke.py:394
 msgid "Ending scale"
 msgstr ""
 
-#: lib/elements/stroke.py:361
+#: lib/elements/stroke.py:395
 msgid "How big the last copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:372 lib/gui/tartan/customize_panel.py:43
+#: lib/elements/stroke.py:406 lib/gui/tartan/customize_panel.py:43
 msgid "Rotate"
 msgstr ""
 
-#: lib/elements/stroke.py:373
+#: lib/elements/stroke.py:407
 msgid "Rotate satin guided ripple stitches"
 msgstr ""
 
-#: lib/elements/stroke.py:384
+#: lib/elements/stroke.py:418
 msgid "Join style"
 msgstr ""
 
-#: lib/elements/stroke.py:385
+#: lib/elements/stroke.py:419
 msgid "Join style for non circular ripples."
 msgstr ""
 
-#: lib/elements/stroke.py:388
+#: lib/elements/stroke.py:422
 msgid "flat"
 msgstr ""
 
-#: lib/elements/stroke.py:388
+#: lib/elements/stroke.py:422
 msgid "point"
 msgstr ""
 
@@ -2322,6 +2346,14 @@ msgstr ""
 
 #: lib/exceptions.py:61
 msgid "Include the error description and also (if possible) the svg file."
+msgstr ""
+
+#: lib/extensions/apply_palette.py:25
+msgid "There is no stitchable element in the document."
+msgstr ""
+
+#: lib/extensions/apply_palette.py:26
+msgid "https://inkstitch.org/"
 msgstr ""
 
 #: lib/extensions/apply_threadlist.py:77
@@ -2578,7 +2610,7 @@ msgstr ""
 msgid "Please select at least one object with a gradient fill."
 msgstr ""
 
-#: lib/extensions/input.py:20
+#: lib/extensions/input.py:22
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
 msgstr ""
 
@@ -2761,20 +2793,20 @@ msgstr ""
 msgid "Embroidery Params"
 msgstr ""
 
-#: lib/extensions/print_pdf.py:146
+#: lib/extensions/print_pdf.py:141
 msgid "Closing..."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:146
+#: lib/extensions/print_pdf.py:141
 msgid "It is safe to close this window now."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:278
+#: lib/extensions/print_pdf.py:273
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr ""
 
-#: lib/extensions/print_pdf.py:467
+#: lib/extensions/print_pdf.py:455
 msgid "Ink/Stitch Print"
 msgstr ""
 
@@ -2871,7 +2903,7 @@ msgstr ""
 
 #: lib/extensions/thread_list.py:51 lib/gui/lettering/option_panel.py:50
 #: inx/inkstitch_commands_scale_symbols.inx:6
-#: inx/inkstitch_lettering_generate_json.inx:82
+#: inx/inkstitch_lettering_generate_json.inx:84
 msgid "Size"
 msgstr ""
 
@@ -2896,15 +2928,15 @@ msgid "Invalid Pointer"
 msgstr ""
 
 #: lib/extensions/troubleshoot.py:86
-#: inx/inkstitch_lettering_generate_json.inx:19
+#: inx/inkstitch_lettering_generate_json.inx:21
 msgid "Description"
 msgstr ""
 
 #: lib/extensions/troubleshoot.py:112 lib/extensions/troubleshoot.py:158
-#: inx/inkstitch_cleanup.inx:34 inx/inkstitch_element_info.inx:10
-#: inx/inkstitch_remove_embroidery_settings.inx:155
-#: inx/inkstitch_select_elements.inx:91 inx/inkstitch_troubleshoot.inx:24
-#: inx/inkstitch_update_svg.inx:10
+#: inx/inkstitch_cleanup.inx:36 inx/inkstitch_element_info.inx:12
+#: inx/inkstitch_remove_embroidery_settings.inx:157
+#: inx/inkstitch_select_elements.inx:91 inx/inkstitch_troubleshoot.inx:26
+#: inx/inkstitch_update_svg.inx:11
 msgid "Troubleshoot"
 msgstr ""
 
@@ -2960,8 +2992,8 @@ msgstr ""
 msgid "threadlist"
 msgstr ""
 
-#: lib/gui/abort_message.py:38 lib/gui/element_info.py:56
-#: lib/gui/lettering_font_sample.py:89
+#: lib/gui/abort_message.py:38 lib/gui/apply_palette.py:64
+#: lib/gui/element_info.py:56 lib/gui/lettering_font_sample.py:89
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr ""
@@ -2986,44 +3018,43 @@ msgstr ""
 msgid "License"
 msgstr ""
 
-#: lib/gui/element_info.py:17 inx/inkstitch_element_info.inx:3
-msgid "Element Info"
+#: lib/gui/apply_palette.py:30
+msgid "Palettes"
 msgstr ""
 
-#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:92
-msgid "Info"
+#: lib/gui/apply_palette.py:33
+msgid "Select color palette"
 msgstr ""
 
-#: lib/gui/element_info.py:33 inx/inkstitch_lettering_generate_json.inx:18
-msgid "Name"
+#: lib/gui/apply_palette.py:44 lib/gui/lettering_font_sample.py:63
+#: lib/gui/satin_multicolor/main_panel.py:56
+#: lib/gui/simulator/simulator_preferences.py:46
+#: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
+msgid "Apply"
 msgstr ""
 
-#: lib/gui/element_info.py:34
-msgid "Value"
-msgstr ""
-
-#: lib/gui/element_info.py:41 lib/gui/lettering/main_panel.py:48
-#: lib/gui/lettering_font_sample.py:74
+#: lib/gui/apply_palette.py:49 lib/gui/element_info.py:41
+#: lib/gui/lettering/main_panel.py:48 lib/gui/lettering_font_sample.py:74
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
-#: lib/gui/test_swatches.py:83 inx/inkstitch_apply_palette.inx:84
-#: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:23
-#: inx/inkstitch_auto_satin.inx:12 inx/inkstitch_break_apart.inx:14
-#: inx/inkstitch_cleanup.inx:22 inx/inkstitch_convert_to_stroke.inx:12
-#: inx/inkstitch_cutwork_segmentation.inx:42 inx/inkstitch_density_map.inx:26
+#: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
+#: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:12
+#: inx/inkstitch_break_apart.inx:14 inx/inkstitch_cleanup.inx:22
+#: inx/inkstitch_convert_to_stroke.inx:12
+#: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
 #: inx/inkstitch_display_stacking_order.inx:11
-#: inx/inkstitch_fill_to_stroke.inx:23 inx/inkstitch_generate_palette.inx:24
-#: inx/inkstitch_gradient_blocks.inx:24
+#: inx/inkstitch_fill_to_stroke.inx:24 inx/inkstitch_generate_palette.inx:26
+#: inx/inkstitch_gradient_blocks.inx:26
 #: inx/inkstitch_install_custom_palette.inx:14
-#: inx/inkstitch_jump_to_stroke.inx:40 inx/inkstitch_jump_to_trim.inx:25
-#: inx/inkstitch_lettering_along_path.inx:17
+#: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:27
+#: inx/inkstitch_lettering_along_path.inx:19
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
 #: inx/inkstitch_lettering_force_lock_stitches.inx:16
-#: inx/inkstitch_lettering_generate_json.inx:116
+#: inx/inkstitch_lettering_generate_json.inx:118
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:12
 #: inx/inkstitch_letters_to_font.inx:54 inx/inkstitch_outline.inx:25
-#: inx/inkstitch_palette_to_text.inx:19 inx/inkstitch_png_realistic.inx:17
+#: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_png_realistic.inx:17
 #: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:23
 #: inx/inkstitch_remove_duplicated_points.inx:14
 #: inx/inkstitch_remove_embroidery_settings.inx:142
@@ -3033,6 +3064,34 @@ msgstr ""
 #: inx/inkstitch_unlink_clone.inx:10 inx/inkstitch_zigzag_line_to_satin.inx:18
 #: inx/inkstitch_zip.inx:62
 msgid "Help"
+msgstr ""
+
+#: lib/gui/apply_palette.py:56
+msgid "This extension applies nearest colors from chosen color palette to the elements in this document."
+msgstr ""
+
+#: lib/gui/apply_palette.py:70 lib/gui/apply_palette.py:71
+msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
+msgstr ""
+
+#: lib/gui/apply_palette.py:95 lib/gui/request_update_svg_version.py:75
+msgid "Ink/Stitch"
+msgstr ""
+
+#: lib/gui/element_info.py:17 inx/inkstitch_element_info.inx:3
+msgid "Element Info"
+msgstr ""
+
+#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:92
+msgid "Info"
+msgstr ""
+
+#: lib/gui/element_info.py:33 inx/inkstitch_lettering_generate_json.inx:20
+msgid "Name"
+msgstr ""
+
+#: lib/gui/element_info.py:34
+msgid "Value"
 msgstr ""
 
 #: lib/gui/element_info.py:48
@@ -3148,7 +3207,7 @@ msgstr ""
 
 #: lib/gui/lettering_font_sample.py:31 lib/gui/simulator/view_panel.py:101
 #: print/templates/ui.html:5 print/templates/ui.html:15
-#: inx/inkstitch_lettering_generate_json.inx:58
+#: inx/inkstitch_lettering_generate_json.inx:60
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
 msgstr ""
@@ -3167,13 +3226,6 @@ msgstr ""
 
 #: lib/gui/lettering/option_panel.py:66 lib/gui/lettering_font_sample.py:48
 msgid "Color sort"
-msgstr ""
-
-#: lib/gui/lettering_font_sample.py:63
-#: lib/gui/satin_multicolor/main_panel.py:56
-#: lib/gui/simulator/simulator_preferences.py:46
-#: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
-msgid "Apply"
 msgstr ""
 
 #: lib/gui/lettering_font_sample.py:81
@@ -3284,10 +3336,6 @@ msgstr ""
 
 #: lib/gui/request_update_svg_version.py:37
 msgid "Update"
-msgstr ""
-
-#: lib/gui/request_update_svg_version.py:75
-msgid "Ink/Stitch"
 msgstr ""
 
 #: lib/gui/satin_multicolor/color_panel.py:19 lib/gui/tartan/stripe_panel.py:19
@@ -3479,7 +3527,7 @@ msgid "Command: %s"
 msgstr ""
 
 #: lib/gui/simulator/simulator_preferences.py:28
-#: inx/inkstitch_fill_to_stroke.inx:20 inx/inkstitch_png_simple.inx:15
+#: inx/inkstitch_fill_to_stroke.inx:21 inx/inkstitch_png_simple.inx:15
 #: inx/inkstitch_zip.inx:49
 msgid "Line width (mm)"
 msgstr ""
@@ -3690,22 +3738,21 @@ msgid "Generate Swatches"
 msgstr ""
 
 #: lib/gui/lettering/main_panel.py:46 lib/gui/lettering/option_panel.py:95
-#: lib/gui/test_swatches.py:33 inx/inkstitch_apply_palette.inx:7
-#: inx/inkstitch_apply_threadlist.inx:7 inx/inkstitch_auto_satin.inx:7
-#: inx/inkstitch_break_apart.inx:8 inx/inkstitch_cleanup.inx:8
-#: inx/inkstitch_convert_to_stroke.inx:8 inx/inkstitch_density_map.inx:8
-#: inx/inkstitch_display_stacking_order.inx:8
-#: inx/inkstitch_fill_to_stroke.inx:15 inx/inkstitch_gradient_blocks.inx:15
+#: lib/gui/test_swatches.py:33 inx/inkstitch_apply_threadlist.inx:7
+#: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_break_apart.inx:8
+#: inx/inkstitch_cleanup.inx:8 inx/inkstitch_convert_to_stroke.inx:8
+#: inx/inkstitch_density_map.inx:8 inx/inkstitch_display_stacking_order.inx:8
+#: inx/inkstitch_fill_to_stroke.inx:16 inx/inkstitch_gradient_blocks.inx:17
 #: inx/inkstitch_install_custom_palette.inx:8
-#: inx/inkstitch_jump_to_stroke.inx:15 inx/inkstitch_jump_to_trim.inx:15
-#: inx/inkstitch_lettering_along_path.inx:13
+#: inx/inkstitch_jump_to_stroke.inx:17 inx/inkstitch_jump_to_trim.inx:17
+#: inx/inkstitch_lettering_along_path.inx:15
 #: inx/inkstitch_lettering_custom_font_dir.inx:8
 #: inx/inkstitch_lettering_force_lock_stitches.inx:8
 #: inx/inkstitch_lettering_remove_kerning.inx:9
 #: inx/inkstitch_lettering_set_color_sort_index.inx:8
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:8
 #: inx/inkstitch_letters_to_font.inx:8 inx/inkstitch_outline.inx:8
-#: inx/inkstitch_palette_to_text.inx:15 inx/inkstitch_redwork.inx:8
+#: inx/inkstitch_palette_to_text.inx:17 inx/inkstitch_redwork.inx:8
 #: inx/inkstitch_remove_duplicated_points.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:8
 #: inx/inkstitch_stitch_plan_preview.inx:8
@@ -3744,9 +3791,9 @@ msgid "This extension generates test swatches from a selection.\n"
 "Sew them out with the same thread and fabric as the final designs."
 msgstr ""
 
-#: lib/gui/test_swatches.py:100 inx/inkstitch_apply_palette.inx:87
-#: inx/inkstitch_apply_threadlist.inx:100 inx/inkstitch_fill_to_stroke.inx:32
-#: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:27
+#: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:100
+#: inx/inkstitch_fill_to_stroke.inx:33 inx/inkstitch_jump_to_stroke.inx:44
+#: inx/inkstitch_jump_to_trim.inx:29
 #: inx/inkstitch_remove_embroidery_settings.inx:145
 #: inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
@@ -3761,53 +3808,53 @@ msgstr ""
 msgid "An error occurred while rendering the stitch plan:"
 msgstr ""
 
-#: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:35
+#: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:37
 msgid "Applique"
 msgstr ""
 
-#: lib/lettering/categories.py:20 inx/inkstitch_lettering_generate_json.inx:36
+#: lib/lettering/categories.py:20 inx/inkstitch_lettering_generate_json.inx:38
 msgid "Crossstitch"
 msgstr ""
 
-#: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:37
+#: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:39
 msgid "Display"
 msgstr ""
 
-#: lib/lettering/categories.py:22 inx/inkstitch_lettering_generate_json.inx:40
+#: lib/lettering/categories.py:22 inx/inkstitch_lettering_generate_json.inx:42
 msgid "Handwriting"
 msgstr ""
 
-#: lib/lettering/categories.py:23 inx/inkstitch_lettering_generate_json.inx:41
+#: lib/lettering/categories.py:23 inx/inkstitch_lettering_generate_json.inx:43
 msgid "Italic"
 msgstr ""
 
-#: lib/lettering/categories.py:24 inx/inkstitch_lettering_generate_json.inx:42
+#: lib/lettering/categories.py:24 inx/inkstitch_lettering_generate_json.inx:44
 msgid "Monogram"
 msgstr ""
 
-#: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:43
+#: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:45
 msgid "Multicolor"
 msgstr ""
 
-#: lib/lettering/categories.py:27 inx/inkstitch_lettering_generate_json.inx:47
+#: lib/lettering/categories.py:27 inx/inkstitch_lettering_generate_json.inx:49
 #: inx/inkstitch_select_elements.inx:13
 msgid "Running Stitch"
 msgstr ""
 
-#: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:48
+#: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:50
 msgid "Sans Serif"
 msgstr ""
 
-#: lib/lettering/categories.py:29 inx/inkstitch_lettering_generate_json.inx:49
+#: lib/lettering/categories.py:29 inx/inkstitch_lettering_generate_json.inx:51
 msgid "Serif"
 msgstr ""
 
-#: lib/lettering/categories.py:30 inx/inkstitch_lettering_generate_json.inx:52
+#: lib/lettering/categories.py:30 inx/inkstitch_lettering_generate_json.inx:54
 #: inx/inkstitch_tartan.inx:3
 msgid "Tartan"
 msgstr ""
 
-#: lib/lettering/categories.py:31 inx/inkstitch_lettering_generate_json.inx:53
+#: lib/lettering/categories.py:31 inx/inkstitch_lettering_generate_json.inx:55
 msgid "Tiny"
 msgstr ""
 
@@ -3834,7 +3881,7 @@ msgstr ""
 msgid "The font '%s' has no variants."
 msgstr ""
 
-#: lib/lettering/font.py:465
+#: lib/lettering/font.py:474
 msgid "Color Group"
 msgstr ""
 
@@ -4324,7 +4371,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:76
+#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:78
 #: inx/inkstitch_letters_to_font.inx:51
 msgid "No"
 msgstr ""
@@ -4552,22 +4599,14 @@ msgstr ""
 msgid "Apply Palette"
 msgstr ""
 
-#: inx/inkstitch_apply_palette.inx:8
-msgid "Select color palette"
+#: inx/inkstitch_apply_palette.inx:9
+msgid "Matches colors of all elements in the document to a specified palette"
 msgstr ""
 
-#: inx/inkstitch_apply_palette.inx:85
-msgid "This extension applies nearest colors from chosen color palette to the elements in this document."
-msgstr ""
-
-#: inx/inkstitch_apply_palette.inx:88
-msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
-msgstr ""
-
-#: inx/inkstitch_apply_palette.inx:95 inx/inkstitch_apply_threadlist.inx:108
-#: inx/inkstitch_generate_palette.inx:10 inx/inkstitch_install.inx:10
-#: inx/inkstitch_install_custom_palette.inx:26
-#: inx/inkstitch_palette_split_text.inx:10 inx/inkstitch_palette_to_text.inx:9
+#: inx/inkstitch_apply_palette.inx:12 inx/inkstitch_apply_threadlist.inx:110
+#: inx/inkstitch_generate_palette.inx:12 inx/inkstitch_install.inx:12
+#: inx/inkstitch_install_custom_palette.inx:28
+#: inx/inkstitch_palette_split_text.inx:11 inx/inkstitch_palette_to_text.inx:11
 msgid "Thread Color Management"
 msgstr ""
 
@@ -4577,7 +4616,7 @@ msgstr ""
 
 #: inx/inkstitch_apply_threadlist.inx:8
 #: inx/inkstitch_install_custom_palette.inx:12
-#: inx/inkstitch_palette_to_text.inx:17
+#: inx/inkstitch_palette_to_text.inx:19
 msgid "Choose file"
 msgstr ""
 
@@ -4625,53 +4664,61 @@ msgstr ""
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:3 inx/inkstitch_auto_run.inx:24
+#: inx/inkstitch_apply_threadlist.inx:107
+msgid "Applies colors from a specified color file onto the objects in this document."
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:3 inx/inkstitch_auto_run.inx:26
 msgid "Auto-Route Running Stitch"
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:10 inx/inkstitch_convert_to_stroke.inx:24
-#: inx/inkstitch_fill_to_stroke.inx:10 inx/inkstitch_jump_to_stroke.inx:10
-#: inx/inkstitch_outline.inx:37 inx/inkstitch_redwork.inx:35
+#: inx/inkstitch_auto_run.inx:9
+msgid "Generates a continuous path through all selected elements"
+msgstr ""
+
+#: inx/inkstitch_auto_run.inx:12 inx/inkstitch_convert_to_stroke.inx:25
+#: inx/inkstitch_fill_to_stroke.inx:11 inx/inkstitch_jump_to_stroke.inx:12
+#: inx/inkstitch_outline.inx:39 inx/inkstitch_redwork.inx:37
 msgid "Tools: Stroke"
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:15
+#: inx/inkstitch_auto_run.inx:17
 msgid "Auto-Route Running Stitch Options"
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:17
+#: inx/inkstitch_auto_run.inx:19
 msgid "Add nodes at intersections"
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:19
+#: inx/inkstitch_auto_run.inx:21
 msgid "Preserve order of running stitches"
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:21 inx/inkstitch_auto_satin.inx:8
+#: inx/inkstitch_auto_run.inx:23 inx/inkstitch_auto_satin.inx:8
 msgid "Trim jump stitches"
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:25
+#: inx/inkstitch_auto_run.inx:27
 msgid "Add nodes at intersections:"
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:27
+#: inx/inkstitch_auto_run.inx:29
 msgid "- Enabled (automatic). Ink/Stitch will add some nodes for better routing. This is the default setting."
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:29
+#: inx/inkstitch_auto_run.inx:31
 msgid "- Disabled (manual). Choose this option if you have manually set nodes at crucial spots."
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:32
+#: inx/inkstitch_auto_run.inx:34
 msgid "Use Start- end end commands to define where auto-routing for running stitch should start and end."
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:34
+#: inx/inkstitch_auto_run.inx:36
 msgid "More info on our website:"
 msgstr ""
 
-#: inx/inkstitch_auto_run.inx:35
+#: inx/inkstitch_auto_run.inx:37
 msgid "https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch"
 msgstr ""
 
@@ -4691,10 +4738,10 @@ msgstr ""
 #: inx/inkstitch_cleanup.inx:25 inx/inkstitch_convert_to_stroke.inx:15
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_install_custom_palette.inx:17
-#: inx/inkstitch_lettering_along_path.inx:27
+#: inx/inkstitch_lettering_along_path.inx:29
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:27
-#: inx/inkstitch_lettering_generate_json.inx:120
+#: inx/inkstitch_lettering_generate_json.inx:122
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:15
@@ -4709,11 +4756,15 @@ msgstr ""
 msgid "https://inkstitch.org/docs/satin-tools/#auto-route-satin-columns"
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:24 inx/inkstitch_convert_to_satin.inx:10
-#: inx/inkstitch_cut_satin.inx:10 inx/inkstitch_flip.inx:10
-#: inx/inkstitch_satin_multicolor.inx:10
-#: inx/inkstitch_stroke_to_lpe_satin.inx:40
-#: inx/inkstitch_zigzag_line_to_satin.inx:36
+#: inx/inkstitch_auto_satin.inx:23
+msgid "Generates a continuous path through selected satin elements"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:26 inx/inkstitch_convert_to_satin.inx:11
+#: inx/inkstitch_cut_satin.inx:12 inx/inkstitch_flip.inx:11
+#: inx/inkstitch_satin_multicolor.inx:12
+#: inx/inkstitch_stroke_to_lpe_satin.inx:41
+#: inx/inkstitch_zigzag_line_to_satin.inx:37
 msgid "Tools: Satin"
 msgstr ""
 
@@ -4733,8 +4784,12 @@ msgstr ""
 msgid "https://inkstitch.org/docs/fill-tools/#break-apart-fill-objects"
 msgstr ""
 
-#: inx/inkstitch_break_apart.inx:29 inx/inkstitch_gradient_blocks.inx:10
-#: inx/inkstitch_tartan.inx:10
+#: inx/inkstitch_break_apart.inx:28
+msgid "Break apart and repair (broken) fill shapes"
+msgstr ""
+
+#: inx/inkstitch_break_apart.inx:31 inx/inkstitch_gradient_blocks.inx:12
+#: inx/inkstitch_tartan.inx:12
 msgid "Tools: Fill"
 msgstr ""
 
@@ -4786,19 +4841,27 @@ msgstr ""
 msgid "https://inkstitch.org/docs/troubleshoot/#cleanup-document"
 msgstr ""
 
+#: inx/inkstitch_cleanup.inx:33
+msgid "Remove small unstitchable elements"
+msgstr ""
+
 #: inx/inkstitch_commands_scale_symbols.inx:3
 msgid "Scale Command Symbols"
 msgstr ""
 
-#: inx/inkstitch_commands_scale_symbols.inx:11
-#: inx/inkstitch_global_commands.inx:17 inx/inkstitch_jump_to_trim.inx:10
-#: inx/inkstitch_layer_commands.inx:14 inx/inkstitch_object_commands.inx:21
-#: inx/inkstitch_object_commands_toggle_visibility.inx:10
+#: inx/inkstitch_commands_scale_symbols.inx:10
+msgid "Adjust all command symbol sizes at once"
+msgstr ""
+
+#: inx/inkstitch_commands_scale_symbols.inx:13
+#: inx/inkstitch_global_commands.inx:19 inx/inkstitch_jump_to_trim.inx:12
+#: inx/inkstitch_layer_commands.inx:16 inx/inkstitch_object_commands.inx:23
+#: inx/inkstitch_object_commands_toggle_visibility.inx:11
 msgid "Commands"
 msgstr ""
 
-#: inx/inkstitch_commands_scale_symbols.inx:12
-#: inx/inkstitch_object_commands_toggle_visibility.inx:11
+#: inx/inkstitch_commands_scale_symbols.inx:14
+#: inx/inkstitch_object_commands_toggle_visibility.inx:12
 msgid "View"
 msgstr ""
 
@@ -4830,85 +4893,93 @@ msgstr ""
 msgid "Cut Satin Column"
 msgstr ""
 
+#: inx/inkstitch_cut_satin.inx:9
+msgid "Split a satin column and keep Ink/Stitch settings"
+msgstr ""
+
 #: inx/inkstitch_cutwork_segmentation.inx:3
 msgid "Cutwork segmentation"
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:13
-msgid "Cutwork Options"
+#: inx/inkstitch_cutwork_segmentation.inx:9
+msgid "Splits a path into cutwork segments according to cut angle"
 msgstr ""
 
 #: inx/inkstitch_cutwork_segmentation.inx:15
-msgid "#1"
-msgstr ""
-
-#: inx/inkstitch_cutwork_segmentation.inx:16
-#: inx/inkstitch_cutwork_segmentation.inx:22
-#: inx/inkstitch_cutwork_segmentation.inx:28
-#: inx/inkstitch_cutwork_segmentation.inx:34
-msgid "start"
+msgid "Cutwork Options"
 msgstr ""
 
 #: inx/inkstitch_cutwork_segmentation.inx:17
-#: inx/inkstitch_cutwork_segmentation.inx:23
-#: inx/inkstitch_cutwork_segmentation.inx:29
-#: inx/inkstitch_cutwork_segmentation.inx:35
-msgid "end"
+msgid "#1"
 msgstr ""
 
 #: inx/inkstitch_cutwork_segmentation.inx:18
 #: inx/inkstitch_cutwork_segmentation.inx:24
 #: inx/inkstitch_cutwork_segmentation.inx:30
 #: inx/inkstitch_cutwork_segmentation.inx:36
+msgid "start"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:19
+#: inx/inkstitch_cutwork_segmentation.inx:25
+#: inx/inkstitch_cutwork_segmentation.inx:31
+#: inx/inkstitch_cutwork_segmentation.inx:37
+msgid "end"
+msgstr ""
+
+#: inx/inkstitch_cutwork_segmentation.inx:20
+#: inx/inkstitch_cutwork_segmentation.inx:26
+#: inx/inkstitch_cutwork_segmentation.inx:32
+#: inx/inkstitch_cutwork_segmentation.inx:38
 msgid "color"
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:21
+#: inx/inkstitch_cutwork_segmentation.inx:23
 msgid "#2"
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:27
+#: inx/inkstitch_cutwork_segmentation.inx:29
 msgid "#3"
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:33
+#: inx/inkstitch_cutwork_segmentation.inx:35
 msgid "#4"
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:39
+#: inx/inkstitch_cutwork_segmentation.inx:41
 msgid "Sort elements by color"
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:40
-#: inx/inkstitch_fill_to_stroke.inx:16
+#: inx/inkstitch_cutwork_segmentation.inx:42
+#: inx/inkstitch_fill_to_stroke.inx:17
 msgid "Keep original"
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:43
+#: inx/inkstitch_cutwork_segmentation.inx:45
 msgid "This extension separates a path depending on the angle."
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:44
+#: inx/inkstitch_cutwork_segmentation.inx:46
 msgid "* If you don't want to use 4 needles, set both angle values to 0 for the rest of the rows."
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:45
+#: inx/inkstitch_cutwork_segmentation.inx:47
 msgid "* A horizontal line has an angle of 0 degrees."
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:46
+#: inx/inkstitch_cutwork_segmentation.inx:48
 msgid "* After the conversion through this extension, don't rotate your design again."
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:48
+#: inx/inkstitch_cutwork_segmentation.inx:50
 msgid "Please adjust angle and color options to your specific needle kit."
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:49
+#: inx/inkstitch_cutwork_segmentation.inx:51
 msgid "On our website we have collected some common setups."
 msgstr ""
 
-#: inx/inkstitch_cutwork_segmentation.inx:50
+#: inx/inkstitch_cutwork_segmentation.inx:52
 msgid "https://inkstitch.org/docs/cutwork/"
 msgstr ""
 
@@ -4964,10 +5035,14 @@ msgstr ""
 msgid "https://inkstitch.org/docs/visualize/#density-map"
 msgstr ""
 
-#: inx/inkstitch_density_map.inx:38 inx/inkstitch_display_stacking_order.inx:23
-#: inx/inkstitch_print.inx:10 inx/inkstitch_simulator.inx:10
-#: inx/inkstitch_stitch_plan_preview.inx:54
-#: inx/inkstitch_stitch_plan_preview_undo.inx:10
+#: inx/inkstitch_density_map.inx:37
+msgid "Displays a colored dot at each stitch position"
+msgstr ""
+
+#: inx/inkstitch_density_map.inx:40 inx/inkstitch_display_stacking_order.inx:25
+#: inx/inkstitch_print.inx:11 inx/inkstitch_simulator.inx:11
+#: inx/inkstitch_stitch_plan_preview.inx:55
+#: inx/inkstitch_stitch_plan_preview_undo.inx:11
 msgid "Visualize and Export"
 msgstr ""
 
@@ -4987,48 +5062,60 @@ msgstr ""
 msgid "https://inkstitch.org/docs/visualize/#display-stacking-order"
 msgstr ""
 
+#: inx/inkstitch_display_stacking_order.inx:22
+msgid "Generates numbered labels to indicate the stitching order"
+msgstr ""
+
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
 msgstr ""
 
-#: inx/inkstitch_duplicate_params.inx:10
-#: inx/inkstitch_remove_duplicated_points.inx:33 inx/inkstitch_reorder.inx:10
-#: inx/inkstitch_select_elements.inx:106
-#: inx/inkstitch_selection_to_guide_line.inx:10
-#: inx/inkstitch_selection_to_pattern.inx:10 inx/inkstitch_test_swatches.inx:10
-#: inx/inkstitch_unlink_clone.inx:21
+#: inx/inkstitch_duplicate_params.inx:9
+msgid "Applies params from first selected element to the rest of the selection"
+msgstr ""
+
+#: inx/inkstitch_duplicate_params.inx:12
+#: inx/inkstitch_remove_duplicated_points.inx:34 inx/inkstitch_reorder.inx:11
+#: inx/inkstitch_select_elements.inx:107
+#: inx/inkstitch_selection_to_guide_line.inx:12
+#: inx/inkstitch_selection_to_pattern.inx:12 inx/inkstitch_test_swatches.inx:11
+#: inx/inkstitch_unlink_clone.inx:23
 msgid "Edit"
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:24
+#: inx/inkstitch_element_info.inx:9
+msgid "Display embroidery info for selected elements"
+msgstr ""
+
+#: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:25
 msgid "Fill to Stroke"
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:19
+#: inx/inkstitch_fill_to_stroke.inx:20
 msgid "Threshold for dead ends (mm)"
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:19
+#: inx/inkstitch_fill_to_stroke.inx:20
 msgid "Deletes small lines. A good value in most cases is the approximate line width of the original shape"
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:21
+#: inx/inkstitch_fill_to_stroke.inx:22
 msgid "Cut lines: close gaps"
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:25
+#: inx/inkstitch_fill_to_stroke.inx:26
 msgid "Fill outlines never look nice when embroidered - but it is a lot of work to convert a fill outline to a satin column or a running stitch. This tool helps you with this operation."
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:27
+#: inx/inkstitch_fill_to_stroke.inx:28
 msgid "It is comparable to the Inkscape functionality of Path > Trace bitmap > Centerline tracing (- and has similar issues.) But instead of converting raster graphics, it will find the centerline of vector based objects with a fill."
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:30
+#: inx/inkstitch_fill_to_stroke.inx:31
 msgid "You can improve the result by defining cut lines."
 msgstr ""
 
-#: inx/inkstitch_fill_to_stroke.inx:33
+#: inx/inkstitch_fill_to_stroke.inx:34
 msgid "https://inkstitch.org/docs/stroke-tools/#fill-to-stroke"
 msgstr ""
 
@@ -5040,40 +5127,44 @@ msgstr ""
 msgid "Generate Color Palette"
 msgstr ""
 
-#: inx/inkstitch_generate_palette.inx:11
-#: inx/inkstitch_palette_split_text.inx:11
+#: inx/inkstitch_generate_palette.inx:9
+msgid "Generate a custom color palette from colored text elements"
+msgstr ""
+
+#: inx/inkstitch_generate_palette.inx:13
+#: inx/inkstitch_palette_split_text.inx:12
 msgid "Generate Palette"
 msgstr ""
 
-#: inx/inkstitch_generate_palette.inx:17
+#: inx/inkstitch_generate_palette.inx:19
 msgid "Generate Palette Options"
 msgstr ""
 
-#: inx/inkstitch_generate_palette.inx:18
+#: inx/inkstitch_generate_palette.inx:20
 msgid "Palette name"
 msgstr ""
 
-#: inx/inkstitch_generate_palette.inx:20
+#: inx/inkstitch_generate_palette.inx:22
 msgid "Folder (optional):"
 msgstr ""
 
-#: inx/inkstitch_generate_palette.inx:22
+#: inx/inkstitch_generate_palette.inx:24
 msgid "⚠ Restart Inkscape to use your color palette."
 msgstr ""
 
-#: inx/inkstitch_generate_palette.inx:25
+#: inx/inkstitch_generate_palette.inx:27
 msgid "Generate a custom color palette for Ink/Stitch"
 msgstr ""
 
-#: inx/inkstitch_generate_palette.inx:26
+#: inx/inkstitch_generate_palette.inx:28
 msgid "Sadly we can not sort color swatches in Inkscape. With this extension you can export colors from text elements in their stacking order. The text will be used as the color name and number."
 msgstr ""
 
-#: inx/inkstitch_generate_palette.inx:30
+#: inx/inkstitch_generate_palette.inx:32
 msgid "On our website we describe all necessary steps to generate a color palette for Ink/Stitch."
 msgstr ""
 
-#: inx/inkstitch_generate_palette.inx:31
+#: inx/inkstitch_generate_palette.inx:33
 msgid "https://inkstitch.org/docs/thread-color#generate-color-palette"
 msgstr ""
 
@@ -5085,27 +5176,35 @@ msgstr ""
 msgid "These commands affect the entire embroidery design."
 msgstr ""
 
+#: inx/inkstitch_global_commands.inx:15
+msgid "Add commands which affect the entire document"
+msgstr ""
+
 #: inx/inkstitch_gradient_blocks.inx:3
 msgid "Convert to gradient blocks"
 msgstr ""
 
-#: inx/inkstitch_gradient_blocks.inx:22
+#: inx/inkstitch_gradient_blocks.inx:9
+msgid "Split a fill with a gradient into single colored blocks"
+msgstr ""
+
+#: inx/inkstitch_gradient_blocks.inx:24
 msgid "Set to zero to use twice the row spacing value"
 msgstr ""
 
-#: inx/inkstitch_gradient_blocks.inx:25
+#: inx/inkstitch_gradient_blocks.inx:27
 msgid "Converts a fill with a linear color gradient into color blocks with variable row spacing."
 msgstr ""
 
-#: inx/inkstitch_gradient_blocks.inx:27
+#: inx/inkstitch_gradient_blocks.inx:29
 msgid "This may add density at the center."
 msgstr ""
 
-#: inx/inkstitch_gradient_blocks.inx:29
+#: inx/inkstitch_gradient_blocks.inx:31
 msgid "If necessary adapt the end row spacing value after the conversion with the params dialog."
 msgstr ""
 
-#: inx/inkstitch_gradient_blocks.inx:31
+#: inx/inkstitch_gradient_blocks.inx:33
 msgid "https://inkstitch.org/docs/fill-tools/#convert-to-gradient-blocks"
 msgstr ""
 
@@ -5677,6 +5776,10 @@ msgstr ""
 msgid "Install thread color palettes for Inkscape"
 msgstr ""
 
+#: inx/inkstitch_install.inx:9
+msgid "Installs color palettes for various thread brands into Inkscape"
+msgstr ""
+
 #: inx/inkstitch_install_custom_palette.inx:3
 msgid "Install custom palette"
 msgstr ""
@@ -5697,79 +5800,87 @@ msgstr ""
 msgid "https://inkstitch.org/docs/thread-color/#install-custom-palette"
 msgstr ""
 
+#: inx/inkstitch_install_custom_palette.inx:25
+msgid "Installs a custom color palette into Inkscape"
+msgstr ""
+
 #: inx/inkstitch_jump_to_stroke.inx:3
 msgid "Jump Stitch to Stroke"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:17 inx/inkstitch_jump_to_trim.inx:17
-msgid "Convert jumps not shorter than (mm)"
+#: inx/inkstitch_jump_to_stroke.inx:9
+msgid "Converts a jump stitch between selected elements into a running stitch"
 msgstr ""
 
 #: inx/inkstitch_jump_to_stroke.inx:19 inx/inkstitch_jump_to_trim.inx:19
+msgid "Convert jumps not shorter than (mm)"
+msgstr ""
+
+#: inx/inkstitch_jump_to_stroke.inx:21 inx/inkstitch_jump_to_trim.inx:21
 msgid "Convert jumps not longer than (mm)"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:20
+#: inx/inkstitch_jump_to_stroke.inx:22
 msgid "Connect"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:21
+#: inx/inkstitch_jump_to_stroke.inx:23
 msgid "all"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:22
+#: inx/inkstitch_jump_to_stroke.inx:24
 msgid "in same layer"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:23
+#: inx/inkstitch_jump_to_stroke.inx:25
 msgid "in same group"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:25
+#: inx/inkstitch_jump_to_stroke.inx:27
 msgid "Do not connect after"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:26
+#: inx/inkstitch_jump_to_stroke.inx:28
 msgid "Trim"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:27
+#: inx/inkstitch_jump_to_stroke.inx:29
 msgid "Stop"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:28
+#: inx/inkstitch_jump_to_stroke.inx:30
 msgid "Force lock stitch"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:30
+#: inx/inkstitch_jump_to_stroke.inx:32
 msgid "Output settings"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:31
+#: inx/inkstitch_jump_to_stroke.inx:33
 msgid "Merge consecutive strokes of same type"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:32
+#: inx/inkstitch_jump_to_stroke.inx:34
 msgid "Merge subpaths of stroke elements"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:36
+#: inx/inkstitch_jump_to_stroke.inx:38
 msgid "These settings only apply for unmerged connectors"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:37
+#: inx/inkstitch_jump_to_stroke.inx:39
 msgid "Running stitch length (mm)"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:38
+#: inx/inkstitch_jump_to_stroke.inx:40
 msgid "Running stitch tolerance (mm)"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:41
+#: inx/inkstitch_jump_to_stroke.inx:43
 msgid "This extension converts jump stitches to running stitches."
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:43
+#: inx/inkstitch_jump_to_stroke.inx:45
 msgid "https://inkstitch.org/docs/stroke-tools/#jump-to-stroke"
 msgstr ""
 
@@ -5777,15 +5888,19 @@ msgstr ""
 msgid "Jump Stitch to Trim Command"
 msgstr ""
 
-#: inx/inkstitch_jump_to_trim.inx:23
+#: inx/inkstitch_jump_to_trim.inx:9
+msgid "Sets a trim command on elements which are followed by a jump stitch"
+msgstr ""
+
+#: inx/inkstitch_jump_to_trim.inx:25
 msgid "Use command symbol"
 msgstr ""
 
-#: inx/inkstitch_jump_to_trim.inx:26
+#: inx/inkstitch_jump_to_trim.inx:28
 msgid "This extension inserts trim commands to avoid jump stitches."
 msgstr ""
 
-#: inx/inkstitch_jump_to_trim.inx:28
+#: inx/inkstitch_jump_to_trim.inx:30
 msgid "https://inkstitch.org/docs/commands/#jump-to-trim"
 msgstr ""
 
@@ -5797,6 +5912,10 @@ msgstr ""
 msgid "Commands will be added to the currently-selected layer."
 msgstr ""
 
+#: inx/inkstitch_layer_commands.inx:13
+msgid "Add commands which affect the containing layer"
+msgstr ""
+
 #: inx/inkstitch_lettering.inx:3
 msgid "Lettering"
 msgstr ""
@@ -5805,39 +5924,43 @@ msgstr ""
 msgid "Lettering along path"
 msgstr ""
 
-#: inx/inkstitch_lettering_along_path.inx:15
+#: inx/inkstitch_lettering_along_path.inx:9
+msgid "Shapes a line of text onto a path"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:17
 msgid "Stretch"
 msgstr ""
 
-#: inx/inkstitch_lettering_along_path.inx:15
+#: inx/inkstitch_lettering_along_path.inx:17
 msgid "Expand glyph and word spacing to stretch lettering over the entire path"
 msgstr ""
 
-#: inx/inkstitch_lettering_along_path.inx:18
+#: inx/inkstitch_lettering_along_path.inx:20
 msgid "This extension bends an Ink/Stitch text to a path."
 msgstr ""
 
-#: inx/inkstitch_lettering_along_path.inx:19
+#: inx/inkstitch_lettering_along_path.inx:21
 msgid "Select Ink/Stitch text and a path before running this extension."
 msgstr ""
 
-#: inx/inkstitch_lettering_along_path.inx:21
+#: inx/inkstitch_lettering_along_path.inx:23
 msgid "The text needs to meet these conditions:"
 msgstr ""
 
-#: inx/inkstitch_lettering_along_path.inx:22
+#: inx/inkstitch_lettering_along_path.inx:24
 msgid "* The text consists of only one line of text"
 msgstr ""
 
-#: inx/inkstitch_lettering_along_path.inx:23
+#: inx/inkstitch_lettering_along_path.inx:25
 msgid "* The text should not be too large for the given path"
 msgstr ""
 
-#: inx/inkstitch_lettering_along_path.inx:25
+#: inx/inkstitch_lettering_along_path.inx:27
 msgid "The stretch option defines whether the spaces between glyphs should be expanded so that the text stretches over the entire path."
 msgstr ""
 
-#: inx/inkstitch_lettering_along_path.inx:28
+#: inx/inkstitch_lettering_along_path.inx:30
 msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
 msgstr ""
 
@@ -5858,15 +5981,23 @@ msgstr ""
 msgid "https://inkstitch.org/docs/font-tools/#custom-font-directory"
 msgstr ""
 
-#: inx/inkstitch_lettering_custom_font_dir.inx:25
-#: inx/inkstitch_lettering_font_sample.inx:10
-#: inx/inkstitch_lettering_force_lock_stitches.inx:36
-#: inx/inkstitch_lettering_generate_json.inx:10
-#: inx/inkstitch_lettering_remove_kerning.inx:31
-#: inx/inkstitch_lettering_set_color_sort_index.inx:28
-#: inx/inkstitch_lettering_update_json_glyphlist.inx:24
-#: inx/inkstitch_letters_to_font.inx:78
+#: inx/inkstitch_lettering_custom_font_dir.inx:24
+msgid "Define a directory with custom fonts for the lettering tool"
+msgstr ""
+
+#: inx/inkstitch_lettering_custom_font_dir.inx:27
+#: inx/inkstitch_lettering_font_sample.inx:12
+#: inx/inkstitch_lettering_force_lock_stitches.inx:38
+#: inx/inkstitch_lettering_generate_json.inx:12
+#: inx/inkstitch_lettering_remove_kerning.inx:33
+#: inx/inkstitch_lettering_set_color_sort_index.inx:30
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:26
+#: inx/inkstitch_letters_to_font.inx:80
 msgid "Font Management"
+msgstr ""
+
+#: inx/inkstitch_lettering_font_sample.inx:9
+msgid "Inserts all glyphs of a specified font into the document"
 msgstr ""
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:9
@@ -5897,126 +6028,134 @@ msgstr ""
 msgid "https://inkstitch.org/docs/font-tools/#force-lock-stitches"
 msgstr ""
 
+#: inx/inkstitch_lettering_force_lock_stitches.inx:35
+msgid "Sets the forces lock stitch attribute on elements when the next element lies within a specified distance"
+msgstr ""
+
 #: inx/inkstitch_lettering_generate_json.inx:3
 msgid "Generate JSON"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:16
+#: inx/inkstitch_lettering_generate_json.inx:9
+msgid "Generates the json file for a font so it can be used with the lettering tool"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:18
 msgid "Font info"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:25
+#: inx/inkstitch_lettering_generate_json.inx:27
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:9
 msgid "SVG Font File"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:31
+#: inx/inkstitch_lettering_generate_json.inx:33
 msgid "Keywords"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:61
+#: inx/inkstitch_lettering_generate_json.inx:63
 msgid "Default Glyph"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:67
+#: inx/inkstitch_lettering_generate_json.inx:69
 msgid "Autoroute Satin"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:67
+#: inx/inkstitch_lettering_generate_json.inx:69
 msgid "Disable if you defined manual routing in your font."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:69
+#: inx/inkstitch_lettering_generate_json.inx:71
 msgid "Reversible"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:69
+#: inx/inkstitch_lettering_generate_json.inx:71
 msgid "If disabled back and forth stitching will not be possile for this font."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:72
+#: inx/inkstitch_lettering_generate_json.inx:74
 msgid "Sortable"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:72
+#: inx/inkstitch_lettering_generate_json.inx:74
 msgid "If disabled color sorting will be disabled for this font. Color sorting needs color_sort_index indicators within the font."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:74
+#: inx/inkstitch_lettering_generate_json.inx:76
 msgid "Combine indices"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:74
+#: inx/inkstitch_lettering_generate_json.inx:76
 msgid "When color sorting, combine elements with this color indices (comma separated)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:75
+#: inx/inkstitch_lettering_generate_json.inx:77
 msgid "Force letter case"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:77
+#: inx/inkstitch_lettering_generate_json.inx:79
 msgid "Upper"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:78
+#: inx/inkstitch_lettering_generate_json.inx:80
 msgid "Lower"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:83
+#: inx/inkstitch_lettering_generate_json.inx:85
 msgid "Min Scale"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:84
+#: inx/inkstitch_lettering_generate_json.inx:86
 msgid "Max Scale"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:89
-#: inx/inkstitch_lettering_generate_json.inx:90
+#: inx/inkstitch_lettering_generate_json.inx:91
+#: inx/inkstitch_lettering_generate_json.inx:92
 msgid "Kerning"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:91
+#: inx/inkstitch_lettering_generate_json.inx:93
 msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them). If the kerning information cannot be found, these values will apply automatically."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:99
-#: inx/inkstitch_lettering_generate_json.inx:107
+#: inx/inkstitch_lettering_generate_json.inx:101
+#: inx/inkstitch_lettering_generate_json.inx:109
 msgid "Force"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:99
+#: inx/inkstitch_lettering_generate_json.inx:101
 msgid "Overwrite leading information from font file."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:101
+#: inx/inkstitch_lettering_generate_json.inx:103
 msgid "Leading (px)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:101
+#: inx/inkstitch_lettering_generate_json.inx:103
 msgid "Line height (default: 100)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:107
+#: inx/inkstitch_lettering_generate_json.inx:109
 msgid "Overwrite word spacing information from font file."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:109
+#: inx/inkstitch_lettering_generate_json.inx:111
 msgid "Word spacing (px)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:109
+#: inx/inkstitch_lettering_generate_json.inx:111
 msgid "Space character width (default: 20)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:117
+#: inx/inkstitch_lettering_generate_json.inx:119
 msgid "Generates font.json which can be used by the lettering tool."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:118
+#: inx/inkstitch_lettering_generate_json.inx:120
 msgid "The generated file can be viewed and updated with a standard text editor tool."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:121
+#: inx/inkstitch_lettering_generate_json.inx:123
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
 msgstr ""
 
@@ -6040,6 +6179,10 @@ msgstr ""
 msgid "https://inkstitch.org/docs/font-tools/#remove-kerning"
 msgstr ""
 
+#: inx/inkstitch_lettering_remove_kerning.inx:30
+msgid "Removes Kerning information from specified SVG files"
+msgstr ""
+
 #: inx/inkstitch_lettering_set_color_sort_index.inx:3
 msgid "Set color sort index"
 msgstr ""
@@ -6060,6 +6203,10 @@ msgstr ""
 msgid "https://inkstitch.org/docs/font-tools/#set-color-sort-index"
 msgstr ""
 
+#: inx/inkstitch_lettering_set_color_sort_index.inx:27
+msgid "Sets a color sort index on selected elements to define the stacking order for multicolor fonts"
+msgstr ""
+
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:3
 msgid "Update Glyphlist"
 msgstr ""
@@ -6074,6 +6221,10 @@ msgstr ""
 
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:16
 msgid "https://inkstitch.org/docs/font-tools/#update-glyph-list"
+msgstr ""
+
+#: inx/inkstitch_lettering_update_json_glyphlist.inx:23
+msgid "Updates the glyphlist in the json file"
 msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:3
@@ -6116,12 +6267,20 @@ msgstr ""
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
 msgstr ""
 
+#: inx/inkstitch_letters_to_font.inx:77
+msgid "Inserts all available glyphs of a pre-digitized font into the document to make them available for the lettering tool"
+msgstr ""
+
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
 msgstr ""
 
+#: inx/inkstitch_object_commands.inx:20
+msgid "Add commands which affect selected elememts"
+msgstr ""
+
 #: inx/inkstitch_object_commands_toggle_visibility.inx:3
-msgid "Display|Hide Object Commands"
+msgid "Show|Hide Object Commands"
 msgstr ""
 
 #: inx/inkstitch_outline.inx:3
@@ -6170,6 +6329,10 @@ msgstr ""
 
 #: inx/inkstitch_outline.inx:29
 msgid "https://inkstitch.org/docs/stroke-tools/#outline"
+msgstr ""
+
+#: inx/inkstitch_outline.inx:36
+msgid "Generates an outline around stitch paths"
 msgstr ""
 
 #: inx/inkstitch_output_COL.inx:3
@@ -6460,28 +6623,36 @@ msgstr ""
 msgid "Split text"
 msgstr ""
 
-#: inx/inkstitch_palette_to_text.inx:3 inx/inkstitch_palette_to_text.inx:20
+#: inx/inkstitch_palette_to_text.inx:3 inx/inkstitch_palette_to_text.inx:22
 msgid "Palette to text"
 msgstr ""
 
-#: inx/inkstitch_palette_to_text.inx:16
+#: inx/inkstitch_palette_to_text.inx:8
+msgid "Imports a thread color palette as colored text"
+msgstr ""
+
+#: inx/inkstitch_palette_to_text.inx:18
 msgid "Choose a .gpl color palette file to import colors as text elements."
 msgstr ""
 
-#: inx/inkstitch_palette_to_text.inx:21
+#: inx/inkstitch_palette_to_text.inx:23
 msgid "Import a .gpl palette into Inkscape as text elements to edit color entries."
 msgstr ""
 
-#: inx/inkstitch_palette_to_text.inx:23
+#: inx/inkstitch_palette_to_text.inx:25
 msgid "Read more on our webiste:"
 msgstr ""
 
-#: inx/inkstitch_palette_to_text.inx:24
+#: inx/inkstitch_palette_to_text.inx:26
 msgid "https://inkstitch.org/docs/thread-color#palette-to-text"
 msgstr ""
 
 #: inx/inkstitch_params.inx:3
 msgid "Params"
+msgstr ""
+
+#: inx/inkstitch_params.inx:9
+msgid "Adapt embroidery settings"
 msgstr ""
 
 #: inx/inkstitch_png_realistic.inx:3
@@ -6569,6 +6740,10 @@ msgstr ""
 msgid "https://inkstitch.org/docs/stroke-tools/#redwork"
 msgstr ""
 
+#: inx/inkstitch_redwork.inx:34
+msgid "Generates a path through all selected elements, passing each element exactly twice"
+msgstr ""
+
 #: inx/inkstitch_remove_duplicated_points.inx:3
 msgid "Remove duplicated points"
 msgstr ""
@@ -6630,12 +6805,20 @@ msgstr ""
 msgid "https://inkstitch.org/docs/troubleshoot/#remove-embroidery-settings"
 msgstr ""
 
+#: inx/inkstitch_remove_embroidery_settings.inx:154
+msgid "Remove specific or all embroidery settings from the document"
+msgstr ""
+
 #: inx/inkstitch_reorder.inx:3
 msgid "Re-stack objects in order of selection"
 msgstr ""
 
 #: inx/inkstitch_satin_multicolor.inx:3
 msgid "Multicolor Satin"
+msgstr ""
+
+#: inx/inkstitch_satin_multicolor.inx:9
+msgid "Generates a multicolor satin"
 msgstr ""
 
 #: inx/inkstitch_select_elements.inx:3
@@ -6784,8 +6967,16 @@ msgstr ""
 msgid "Selection to guide line"
 msgstr ""
 
+#: inx/inkstitch_selection_to_guide_line.inx:9
+msgid "Marks selected elements as guide lines"
+msgstr ""
+
 #: inx/inkstitch_selection_to_pattern.inx:3
 msgid "Selection to pattern"
+msgstr ""
+
+#: inx/inkstitch_selection_to_pattern.inx:9
+msgid "Marks selected elements as patterns"
 msgstr ""
 
 #: inx/inkstitch_simulator.inx:3
@@ -6949,6 +7140,10 @@ msgstr ""
 msgid "https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin"
 msgstr ""
 
+#: inx/inkstitch_tartan.inx:9
+msgid "Tartan stripe editor"
+msgstr ""
+
 #: inx/inkstitch_test_swatches.inx:3
 msgid "Generate Test Swatches from Selection"
 msgstr ""
@@ -6985,6 +7180,10 @@ msgstr ""
 msgid "https://inkstitch.org/docs/troubleshoot/#troubleshoot-objects"
 msgstr ""
 
+#: inx/inkstitch_troubleshoot.inx:23
+msgid "Marks problematic or possibly problematic spots in the document or selection"
+msgstr ""
+
 #: inx/inkstitch_unlink_clone.inx:3
 msgid "Unlink Clone"
 msgstr ""
@@ -7001,23 +7200,27 @@ msgstr ""
 msgid "https://inkstitch.org/docs/edit/#unlink-clone/"
 msgstr ""
 
+#: inx/inkstitch_unlink_clone.inx:20
+msgid "Unlink clones and apply the fill stitch angle"
+msgstr ""
+
 #: inx/inkstitch_update_svg.inx:3
 msgid "Update inkstitch svg"
 msgstr ""
 
-#: inx/inkstitch_update_svg.inx:14
+#: inx/inkstitch_update_svg.inx:15
 msgid "Usually there is no need to run this extension: Ink/Stitch automatically updates old designs once."
 msgstr ""
 
-#: inx/inkstitch_update_svg.inx:16
+#: inx/inkstitch_update_svg.inx:17
 msgid "However, when you copy and paste parts from old files into a new design, you may see for example, that a former contour fill renders as a standard fill, etc."
 msgstr ""
 
-#: inx/inkstitch_update_svg.inx:18
+#: inx/inkstitch_update_svg.inx:19
 msgid "Tip: You can prevent inserting legacy designs into new files by running any Ink/Stitch extension before you copy the design parts (for example open and re-apply parameters on a single element in the document)."
 msgstr ""
 
-#: inx/inkstitch_update_svg.inx:20
+#: inx/inkstitch_update_svg.inx:21
 msgid "This extension only updates selected elements."
 msgstr ""
 
