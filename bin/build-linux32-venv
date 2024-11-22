@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -e
+uname -a
+python3 --version
+python3 -m pip --version
+python3 -m pip debug
+
+python3 -m venv virtualenv
+source virtualenv/bin/activate
+          
+virtualenv/bin/pip debug
+virtualenv/bin/pip install pycairo
+virtualenv/bin/pip install PyGObject
+
+virtualenv/bin/pip install wxPython
+          
+virtualenv/bin/pip install -r requirements.txt
+# for networkx
+virtualenv/bin/pip install pandas
+
+virtualenv/bin/pip install pyinstaller
+# scipy gives us an ELF error when stripped
+virtualenv/bin/pip uninstall --yes scipy
+virtualenv/bin/pip install scipy --no-binary scipy
+deactivate
