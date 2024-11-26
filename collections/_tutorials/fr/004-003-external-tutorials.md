@@ -24,3 +24,14 @@ classes: wide
 ### Russian
 
 * [Ink/Stitch forum by Сергей Демин](https://inkstitch.ru/)
+
+## Sources des fichiers images
+
+* <https://freesvg.org/>
+* <https://thenounproject.com/>
+* <https://svgsilh.com/>
+* <https://openclipart.org/>
+* <https://commons.m.wikimedia.org/wiki/Main_Page>
+* <http://www.biolib.de/>
+* <https://pixabay.com/de/images/search/clipart/>
+* <https://ian.umces.edu/media-library/symbols/>

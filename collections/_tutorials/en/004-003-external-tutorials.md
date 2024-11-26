@@ -32,3 +32,15 @@ classes: wide
 ### German
 
 * Arbores: [Ink/Stitch - mit dicken Garnen sticken](https://w.arbores.tech/wiki/InkStitch_-_mit_dicken_Garnen_sticken)
+
+
+## Image Sources
+
+* <https://freesvg.org/>
+* <https://thenounproject.com/>
+* <https://svgsilh.com/>
+* <https://openclipart.org/>
+* <https://commons.m.wikimedia.org/wiki/Main_Page>
+* <http://www.biolib.de/>
+* <https://pixabay.com/de/images/search/clipart/>
+* <https://ian.umces.edu/media-library/symbols/>
