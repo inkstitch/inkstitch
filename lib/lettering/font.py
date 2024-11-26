@@ -514,8 +514,14 @@ class Font(object):
     def _get_color_sorted_elements(self, group):
         elements_by_color = defaultdict(list)
         last_parent = None
-        for element in group.iterdescendants(EMBROIDERABLE_TAGS, SVG_USE_TAG):
+        for element in group.iterdescendants(EMBROIDERABLE_TAGS, SVG_GROUP_TAG):
             sort_index = element.get('inkstitch:color_sort_index', None)
+
+            # Skip command connectors, we only aim for command groups
+            # Skip command connectors as well, they will be included with the command group
+            if (element.TAG == 'g' and not element.get_id().startswith('command_group')
+                    or element.get_id().startswith('command_connector')):
+                continue
 
             # get glyph group to calculate transform
             for ancestor in element.ancestors(group):
@@ -528,6 +534,10 @@ class Font(object):
 
             if not sort_index:
                 elements_by_color[404].append([element])
+                continue
+
+            if element.get_id().startswith('command_group'):
+                elements_by_color[int(sort_index)].append([element])
                 continue
 
             parent = element.getparent()

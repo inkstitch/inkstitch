@@ -25,4 +25,7 @@ class LetteringSetColorSortIndex(InkstitchExtension):
             if element.TAG == "path":
                 element.set('inkstitch:color_sort_index', self.options.color_sort_index)
             elif element.TAG == "g":
-                self.set_index(element.getchildren())
+                if element.get_id().startswith('command_group'):
+                    element.set('inkstitch:color_sort_index', self.options.color_sort_index)
+                else:
+                    self.set_index(element.getchildren())
