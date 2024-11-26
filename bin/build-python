@@ -31,6 +31,11 @@ if [ "$BUILD" = "linux" ]; then
     pyinstaller_args+="--add-binary /lib/x86_64-linux-gnu/libnsl.so.1:. "
 fi
 
+if [ "$BUILD" = "linux32" ]; then
+    pyinstaller_args+="--hidden-import gi.repository.Gtk "
+    pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libcrypt.so.1:. "
+    pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libnsl.so.1:. "
+fi
 
 if [ "$BUILD" = "windows" ]; then
 	if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
