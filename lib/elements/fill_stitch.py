@@ -496,7 +496,8 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
-                         ('fill_method', 'circular_fill')],
+                         ('fill_method', 'circular_fill'),
+                         ('fill_method', 'linear_gradient_fill'),],
            default=False,
            sort_index=44)
     def enable_random_stitch_length(self):
@@ -511,7 +512,8 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
-                         ('fill_method', 'circular_fill')],
+                         ('fill_method', 'circular_fill'),
+                         ('fill_method', 'linear_gradient_fill'),],
            default=10,
            sort_index=46)
     def random_stitch_length_jitter(self):
@@ -736,7 +738,8 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'circular_fill'),
-                         ('fill_method', 'meander_fill')],
+                         ('fill_method', 'meander_fill'),
+                         ('fill_method', 'linear_gradient_fill')],
            type='random_seed',
            default='',
            sort_index=100)
