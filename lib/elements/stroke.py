@@ -97,7 +97,7 @@ class Stroke(EmbroideryElement):
                   'A value of 2 would quintuple each stitch, etc.\n\n'
                   'A pattern with various repeats can be created with a list of values separated by a space.'),
         type='str',
-        select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch')],
+        select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch'), ('stroke_method', 'manual_stitch')],
         default=0,
         sort_index=3)
     def bean_stitch_repeats(self):
@@ -612,6 +612,9 @@ class Stroke(EmbroideryElement):
                         lock_stitches=lock_stitches,
                         force_lock_stitches=self.force_lock_stitches
                     )
+                    # apply bean stitch settings
+                    if any(self.bean_stitch_repeats):
+                        stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
                 # simple satin
                 elif self.stroke_method == 'zigzag_stitch':
                     stitch_group = self.simple_satin(path, self.zigzag_spacing, self.stroke_width, self.pull_compensation)
