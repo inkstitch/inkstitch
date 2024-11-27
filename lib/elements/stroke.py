@@ -515,7 +515,7 @@ class Stroke(EmbroideryElement):
         return coords
 
     def get_ripple_target(self):
-        command = self.get_command('ripple_target')
+        command = self.get_command('target_point')
         if command:
             pos = [float(command.use.get("x", 0)), float(command.use.get("y", 0))]
             transform = get_node_transform(command.use)

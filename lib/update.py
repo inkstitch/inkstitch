@@ -12,7 +12,7 @@ from .metadata import InkStitchMetadata
 from .svg import PIXELS_PER_MM
 from .svg.tags import EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS
 
-INKSTITCH_SVG_VERSION = 2
+INKSTITCH_SVG_VERSION = 3
 
 
 def update_inkstitch_document(svg, selection=None):
@@ -68,6 +68,8 @@ def automatic_version_update(document, file_version, INKSTITCH_SVG_VERSION):
     for element in document.iterdescendants():
         if element.tag in EMBROIDERABLE_TAGS:
             update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
+    if file_version < 3:
+        update_legacy_commands(document)
 
 
 def _update_inkstitch_svg_version(svg):
@@ -173,3 +175,44 @@ def _replace_legacy_embroider_param(element, param):
         value = element.node.get(param, "").strip()
         element.set_param(param[10:], value)
     del element.node.attrib[param]
+
+
+'''
+Update legacy commands
+======================
+'''
+
+
+def update_legacy_commands(document):
+    '''
+    Changes for svg version 3
+    '''
+    search_string = "//svg:symbol"
+    symbols = document.xpath(search_string)
+    for symbol in symbols:
+        _rename_command(document, symbol, 'inkstitch_fill_start', 'inkstitch_starting_point')
+        _rename_command(document, symbol, 'inkstitch_fill_end', 'inkstitch_ending_point')
+        _rename_command(document, symbol, 'inkstitch_satin_start', 'inkstitch_autoroute_start')
+        _rename_command(document, symbol, 'inkstitch_satin_end', 'inkstitch_autoroute_end')
+        _rename_command(document, symbol, 'inkstitch_run_start', 'inkstitch_autoroute_start')
+        _rename_command(document, symbol, 'inkstitch_run_end', 'inkstitch_autoroute_end')
+        _rename_command(document, symbol, 'inkstitch_ripple_target', 'inkstitch_target_point')
+
+
+def _rename_command(document, symbol, old_name, new_name):
+    symbol_id = symbol.get_id()
+    if symbol_id.startswith(old_name):
+        new_symbol_id = symbol_id.replace(old_name, new_name)
+        symbol.set('id', new_symbol_id)
+        _update_command(document, symbol_id, new_symbol_id)
+
+
+def _update_command(document, old_id, new_id):
+    xpath1 = f"//svg:path[@inkscape:connection-start='#{old_id}']"
+    elements = document.xpath(xpath1)
+    for element in elements:
+        element.set('inkscape:connection-start', f'#{new_id}')
+    xpath2 = f"//svg:use[@xlink:href='#{old_id}']"
+    elements = document.xpath(xpath2)
+    for element in elements:
+        element.set('xlink:href', f'#{new_id}')
