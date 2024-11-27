@@ -5,6 +5,7 @@
 
 from inkex import errormsg
 
+from .commands import ensure_symbol
 from .elements import EmbroideryElement
 from .gui.request_update_svg_version import RequestUpdate
 from .i18n import _
@@ -190,29 +191,25 @@ def update_legacy_commands(document):
     search_string = "//svg:symbol"
     symbols = document.xpath(search_string)
     for symbol in symbols:
-        _rename_command(document, symbol, 'inkstitch_fill_start', 'inkstitch_starting_point')
-        _rename_command(document, symbol, 'inkstitch_fill_end', 'inkstitch_ending_point')
-        _rename_command(document, symbol, 'inkstitch_satin_start', 'inkstitch_autoroute_start')
-        _rename_command(document, symbol, 'inkstitch_satin_end', 'inkstitch_autoroute_end')
-        _rename_command(document, symbol, 'inkstitch_run_start', 'inkstitch_autoroute_start')
-        _rename_command(document, symbol, 'inkstitch_run_end', 'inkstitch_autoroute_end')
-        _rename_command(document, symbol, 'inkstitch_ripple_target', 'inkstitch_target_point')
+        _rename_command(document, symbol, 'inkstitch_fill_start', 'starting_point')
+        _rename_command(document, symbol, 'inkstitch_fill_end', 'ending_point')
+        _rename_command(document, symbol, 'inkstitch_satin_start', 'autoroute_start')
+        _rename_command(document, symbol, 'inkstitch_satin_end', 'autoroute_end')
+        _rename_command(document, symbol, 'inkstitch_run_start', 'autoroute_start')
+        _rename_command(document, symbol, 'inkstitch_run_end', 'autoroute_end')
+        _rename_command(document, symbol, 'inkstitch_ripple_target', 'target_point')
 
 
 def _rename_command(document, symbol, old_name, new_name):
     symbol_id = symbol.get_id()
     if symbol_id.startswith(old_name):
-        new_symbol_id = symbol_id.replace(old_name, new_name)
-        symbol.set('id', new_symbol_id)
-        _update_command(document, symbol_id, new_symbol_id)
+        symbol.getparent().remove(symbol)
+        ensure_symbol(document, new_name)
+        _update_command(document, symbol_id, new_name)
 
 
-def _update_command(document, old_id, new_id):
-    xpath1 = f"//svg:path[@inkscape:connection-start='#{old_id}']"
-    elements = document.xpath(xpath1)
-    for element in elements:
-        element.set('inkscape:connection-start', f'#{new_id}')
+def _update_command(document, old_id, new_name):
     xpath2 = f"//svg:use[@xlink:href='#{old_id}']"
     elements = document.xpath(xpath2)
     for element in elements:
-        element.set('xlink:href', f'#{new_id}')
+        element.set('xlink:href', f'#inkstitch_{new_name}')
