@@ -24,25 +24,19 @@ from .utils import Point, cache, get_bundled_dir
 
 COMMANDS = {
     # L10N command attached to an object
-    "fill_start": N_("Fill stitch starting position"),
+    "starting_point": N_("Starting position"),
 
     # L10N command attached to an object
-    "fill_end": N_("Fill stitch ending position"),
+    "ending_point": N_("Ending position"),
 
     # L10N command attached to an object
-    "ripple_target": N_("Target position"),
+    "target_point": N_("Target position"),
 
     # L10N command attached to an object
-    "run_start": N_("Auto-route running stitch starting position"),
+    "autoroute_start": N_("Auto-route starting position"),
 
     # L10N command attached to an object
-    "run_end": N_("Auto-route running stitch ending position"),
-
-    # L10N command attached to an object
-    "satin_start": N_("Auto-route satin stitch starting position"),
-
-    # L10N command attached to an object
-    "satin_end": N_("Auto-route satin stitch ending position"),
+    "autoroute_end": N_("Auto-route ending position"),
 
     # L10N command attached to an object
     "stop": N_("Stop (pause machine) after sewing this object"),
@@ -66,9 +60,9 @@ COMMANDS = {
     "stop_position": N_("Jump destination for Stop commands (a.k.a. \"Frame Out position\")."),
 }
 
-OBJECT_COMMANDS = ["fill_start", "fill_end", "ripple_target", "run_start", "run_end", "satin_start", "satin_end",
+OBJECT_COMMANDS = ["starting_point", "ending_point", "target_point", "autoroute_start", "autoroute_end",
                    "stop", "trim", "ignore_object", "satin_cut_point"]
-FREE_MOVEMENT_OBJECT_COMMANDS = ["run_start", "run_end", "satin_start", "satin_end"]
+FREE_MOVEMENT_OBJECT_COMMANDS = ["autoroute_start", "autoroute_end"]
 LAYER_COMMANDS = ["ignore_layer"]
 GLOBAL_COMMANDS = ["origin", "stop_position"]
 

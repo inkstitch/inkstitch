@@ -35,10 +35,10 @@ class AutoRun(CommandsExtension):
         autorun(elements, self.options.preserve_order, break_up, starting_point, ending_point, self.options.trim)
 
     def get_starting_point(self):
-        return self.get_command_point("run_start")
+        return self.get_command_point("autoroute_start")
 
     def get_ending_point(self):
-        return self.get_command_point("run_end")
+        return self.get_command_point("autoroute_end")
 
     def get_command_point(self, command_type):
         command = None

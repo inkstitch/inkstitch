@@ -26,7 +26,7 @@ class GradientBlocks(CommandsExtension):
     This will break apart fill objects with a gradient fill into solid color blocks with end_row_spacing.
     '''
 
-    COMMANDS = ['fill_start', 'fill_end']
+    COMMANDS = ['starting_point', 'ending_point']
 
     def __init__(self, *args, **kwargs):
         CommandsExtension.__init__(self, *args, **kwargs)
@@ -112,8 +112,8 @@ class GradientBlocks(CommandsExtension):
         nearest = nearest_points(current.shape, previous.shape)
         pos_current = self._get_command_postion(current, nearest[0])
         pos_previous = self._get_command_postion(previous, nearest[1])
-        add_commands(current, ['fill_end'], pos_current)
-        add_commands(previous, ['fill_start'], pos_previous)
+        add_commands(current, ['ending_point'], pos_current)
+        add_commands(previous, ['starting_point'], pos_previous)
 
     def _get_command_postion(self, fill, point):
         center = fill.shape.centroid

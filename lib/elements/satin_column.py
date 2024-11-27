@@ -1191,7 +1191,7 @@ class SatinColumn(EmbroideryElement):
         return pairs
 
     def do_start_path(self):
-        start_point = self.get_command('fill_start').target_point
+        start_point = self.get_command('starting_point').target_point
         split_line = shgeo.LineString(self.find_cut_points(start_point))
         start = self.center_line.project(nearest_points(split_line, self.center_line)[1])
         if self.has_end_point and self._center_walk_is_odd():
@@ -1676,11 +1676,11 @@ class SatinColumn(EmbroideryElement):
 
     @property
     def end_point(self):
-        return self.get_command('fill_end').target_point
+        return self.get_command('ending_point').target_point
 
     @cache
     def _split_satin(self):
-        if self.has_command('fill_end'):
+        if self.has_command('ending_point'):
             satins = self.split(self.end_point)
             if satins[0] is None:
                 satins = [self.reverse()]
@@ -1715,7 +1715,7 @@ class SatinColumn(EmbroideryElement):
             lock_stitches=self.lock_stitches
         )
 
-        if self.has_command('fill_start'):
+        if self.has_command('starting_point'):
             start_path = self.do_start_path()
             stitch_group = self.connect_and_add(stitch_group, start_path)
 

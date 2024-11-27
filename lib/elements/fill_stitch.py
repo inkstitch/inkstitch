@@ -888,25 +888,25 @@ class FillStitch(EmbroideryElement):
         return self.shrink_or_grow_shape(shape, self.expand)
 
     def get_starting_point(self, previous_stitch_group):
-        # If there is a "fill_start" Command, then use that; otherwise pick
+        # If there is a "starting_point" Command, then use that; otherwise pick
         # the point closest to the end of the last stitch_group.
 
-        if self.get_command('fill_start'):
-            return self.get_command('fill_start').target_point
+        if self.get_command('starting_point'):
+            return self.get_command('starting_point').target_point
         elif previous_stitch_group:
             return previous_stitch_group.stitches[-1]
         else:
             return None
 
     def uses_previous_stitch(self):
-        if self.get_command('fill_start'):
+        if self.get_command('starting_point'):
             return False
         else:
             return True
 
     def get_ending_point(self):
-        if self.get_command('fill_end'):
-            return self.get_command('fill_end').target_point
+        if self.get_command('ending_point'):
+            return self.get_command('ending_point').target_point
         else:
             return None
 
@@ -1174,7 +1174,7 @@ class FillStitch(EmbroideryElement):
 
     def do_circular_fill(self, shape, last_stitch_group, starting_point, ending_point):
         # get target position
-        command = self.get_command('ripple_target')
+        command = self.get_command('target_point')
         if command:
             pos = [float(command.use.get("x", 0)), float(command.use.get("y", 0))]
             transform = get_node_transform(command.use)
