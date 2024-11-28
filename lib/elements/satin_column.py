@@ -1688,9 +1688,22 @@ class SatinColumn(EmbroideryElement):
                 if self._center_walk_is_odd():
                     satins[0] = satins[0].reverse()
                 else:
+                    if self.reverse_rails == 'automatic':
+                        if self._get_rails_to_reverse() == (False, False):
+                            satins[0].set_param('reverse_rails', 'none')
+                            satins[1].set_param('reverse_rails', 'none')
+                        elif self._get_rails_to_reverse() == (True, False):
+                            satins[0].set_param('reverse_rails', 'first')
+                            satins[1].set_param('reverse_rails', 'first')
+                        elif self._get_rails_to_reverse() == (False, True):
+                            satins[0].set_param('reverse_rails', 'second')
+                            satins[1].set_param('reverse_rails', 'second')
+                        elif self._get_rails_to_reverse() == (True, True):
+                            satins[0].set_param('reverse_rails', 'both')
+                            satins[1].set_param('reverse_rails', 'both')
                     satins[1] = satins[1].reverse()
                 if self.swap_rails:
-                    satins[1] = satins[1].flip()
+                    satins[0] = satins[0].flip()
             else:
                 satins = [self]
         else:
@@ -1725,7 +1738,7 @@ class SatinColumn(EmbroideryElement):
             stitch_group = self.connect_and_add(stitch_group, end_point_connection)
 
         for i, satin in enumerate(satins):
-            if i > 0:
+            if i > 0 and not self._center_walk_is_odd():
                 end_point_connection = satin.do_end_point_connection()
                 stitch_group = self.connect_and_add(stitch_group, end_point_connection)
 
