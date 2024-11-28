@@ -18,7 +18,7 @@ from shapely.ops import nearest_points, substring
 from ..debug.debug import debug
 from ..i18n import _
 from ..metadata import InkStitchMetadata
-from ..stitch_plan import Stitch, StitchGroup
+from ..stitch_plan import StitchGroup
 from ..stitches import running_stitch
 from ..svg import line_strings_to_csp, point_lists_to_csp
 from ..utils import Point, cache, cut, cut_multiple, offset_points, prng
@@ -1051,7 +1051,7 @@ class SatinColumn(EmbroideryElement):
     @cache
     def center_line(self):
         # similar technique to do_center_walk()
-        return self.offset_center_line(-0.5)
+        return self.offset_center_line(50)
 
     def offset_center_line(self, offset):
         inset_prop = -np.array([offset, 100-offset]) / 100
@@ -1214,7 +1214,7 @@ class SatinColumn(EmbroideryElement):
         )
 
     def do_end_point_connection(self):
-        center_line = self.center_line.reverse()
+        center_line = self.offset_center_line(self.center_walk_underlay_position).reverse()
         points = [Point(*coord) for coord in center_line.coords]
         stitches = running_stitch.even_running_stitch(points, self.center_walk_underlay_stitch_length, self.center_walk_underlay_stitch_tolerance)
         if self._center_walk_is_odd():
@@ -1361,19 +1361,14 @@ class SatinColumn(EmbroideryElement):
         return stitch_group
 
     def _split_top_layer(self, stitch_group):
-        top_layer = shgeo.LineString(stitch_group.stitches)
+        top_layer_stitches = shgeo.MultiPoint(stitch_group.stitches)
+        split_point = nearest_points(top_layer_stitches, shgeo.Point(self.end_point))[0]
+        index = list(top_layer_stitches.geoms).index(split_point)
+        stitch_group1 = deepcopy(stitch_group)
+        stitch_group1.stitches = list(reversed(stitch_group1.stitches[index:]))
+        stitch_group.stitches = stitch_group.stitches[:index-len(stitch_group.stitches)+1]
 
-        split_point = nearest_points(top_layer, shgeo.Point(self.end_point))[0]
-        project = top_layer.project(split_point, normalized=True)
-        start = substring(top_layer, 0, project, normalized=True)
-        end = substring(top_layer, project, 1, normalized=True)
-
-        stitch_group2 = deepcopy(stitch_group)
-        stitch_group2.stitches = [Stitch(*point) for point in end.reverse().coords]
-        stitch_group1 = stitch_group
-        stitch_group1.stitches = [Stitch(*point) for point in start.coords]
-
-        top_layer_stitch_groups = [stitch_group1, stitch_group2]
+        top_layer_stitch_groups = [stitch_group, stitch_group1]
         return top_layer_stitch_groups
 
     def do_satin(self):
