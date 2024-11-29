@@ -1360,19 +1360,6 @@ class SatinColumn(EmbroideryElement):
             stitch_group = satin.do_satin()
         return stitch_group
 
-    def _split_top_layer(self, stitch_group):
-        if self._center_walk_is_odd():
-            stitch_group.stitches = list(reversed(stitch_group.stitches))
-        top_layer_stitches = shgeo.MultiPoint(stitch_group.stitches)
-        split_point = nearest_points(top_layer_stitches, shgeo.Point(self.end_point))[0]
-        index = list(top_layer_stitches.geoms).index(split_point)
-        stitch_group1 = deepcopy(stitch_group)
-        stitch_group1.stitches = list(reversed(stitch_group1.stitches[index:]))
-        stitch_group.stitches = stitch_group.stitches[:index-len(stitch_group.stitches)+1]
-
-        top_layer_stitch_groups = [stitch_group, stitch_group1]
-        return top_layer_stitch_groups
-
     def do_satin(self):
         # satin: do a zigzag pattern, alternating between the paths.  The
         # zigzag looks like this to make the satin stitches look perpendicular
@@ -1738,13 +1725,6 @@ class SatinColumn(EmbroideryElement):
         # allowing the user to control how the zigzags flow around corners.
 
         satins = self._split_satin()
-        # split top layer at stitch level to avoid additional thread bulk at the split point
-        if len(satins) > 1:
-            top_layer_stitch_group = self._do_top_layer_stitch_group(self)
-            top_layer_stitch_groups = self._split_top_layer(top_layer_stitch_group)
-        else:
-            top_layer_stitch_group = self._do_top_layer_stitch_group(satins[0])
-            top_layer_stitch_groups = [top_layer_stitch_group]
 
         stitch_group = StitchGroup(
             color=self.color,
@@ -1766,7 +1746,7 @@ class SatinColumn(EmbroideryElement):
                 stitch_group = self.connect_and_add(stitch_group, end_point_connection)
 
             stitch_group = self._do_underlay_stitch_groups(i, satin, stitch_group)
-            final_stitch_group = top_layer_stitch_groups[i]
+            final_stitch_group = self._do_top_layer_stitch_group(satin)
             stitch_group = self.connect_and_add(stitch_group, final_stitch_group)
 
         if not stitch_group.stitches:
