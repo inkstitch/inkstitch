@@ -1361,6 +1361,8 @@ class SatinColumn(EmbroideryElement):
         return stitch_group
 
     def _split_top_layer(self, stitch_group):
+        if self._center_walk_is_odd():
+            stitch_group.stitches = list(reversed(stitch_group.stitches))
         top_layer_stitches = shgeo.MultiPoint(stitch_group.stitches)
         split_point = nearest_points(top_layer_stitches, shgeo.Point(self.end_point))[0]
         index = list(top_layer_stitches.geoms).index(split_point)
@@ -1735,6 +1737,15 @@ class SatinColumn(EmbroideryElement):
         # beziers.  The boundary points between beziers serve as "checkpoints",
         # allowing the user to control how the zigzags flow around corners.
 
+        satins = self._split_satin()
+        # split top layer at stitch level to avoid additional thread bulk at the split point
+        if len(satins) > 1:
+            top_layer_stitch_group = self._do_top_layer_stitch_group(self)
+            top_layer_stitch_groups = self._split_top_layer(top_layer_stitch_group)
+        else:
+            top_layer_stitch_group = self._do_top_layer_stitch_group(satins[0])
+            top_layer_stitch_groups = [top_layer_stitch_group]
+
         stitch_group = StitchGroup(
             color=self.color,
             force_lock_stitches=self.force_lock_stitches,
@@ -1745,17 +1756,9 @@ class SatinColumn(EmbroideryElement):
             start_path = self.do_start_path()
             stitch_group = self.connect_and_add(stitch_group, start_path)
 
-        satins = self._split_satin()
         if len(satins) == 1 and satins[0] != self:
             end_point_connection = satins[0].do_end_point_connection()
             stitch_group = self.connect_and_add(stitch_group, end_point_connection)
-
-        top_layer_stitch_group = self._do_top_layer_stitch_group(self)
-        if len(satins) > 1:
-            # split top layer at stitch level to avoid additional thread bulk at the split point
-            top_layer_stitch_groups = self._split_top_layer(top_layer_stitch_group)
-        else:
-            top_layer_stitch_groups = [top_layer_stitch_group]
 
         for i, satin in enumerate(satins):
             if i > 0 and not self._center_walk_is_odd():
