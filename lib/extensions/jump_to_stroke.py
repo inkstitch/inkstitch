@@ -157,7 +157,7 @@ class JumpToStroke(InkstitchExtension):
         # option: merge line with paths
         merged = False
         if self._is_mergable(last_element, element):
-            path.transform(Transform(get_correction_transform(last_element.node)), True)
+            path.transform(Transform(get_correction_transform(last_element.node, True)), True)
             path = last_element.node.get_path() + path[1:]
             last_element.node.set('d', str(path))
             path.transform(-Transform(get_correction_transform(last_element.node)), True)
