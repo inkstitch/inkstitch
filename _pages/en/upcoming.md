@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2024-11-18
+last_modified_at: 2024-11-30
 sidebar:
   nav: pages
 toc: true
@@ -19,6 +19,7 @@ toc: true
 
 ### Font updates
 
+* Remove unwanted jumps in ink/stitch medium font [#3295](https://github.com/inkstitch/inkstitch/pull/3295)
 * Make more fonts sortable [#3280](https://github.com/inkstitch/inkstitch/pull/3280)
 * Make most multicolor fonts sortable [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
 * Update dinomouse [#3272](https://github.com/inkstitch/inkstitch/pull/3272)
@@ -48,7 +49,7 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ### General
 
-* Request permission to update if inkstitch svg version is not specified in the svg file [#3228](https://github.com/inkstitch/inkstitch/pull/3228)
+* Request permission to update if inkstitch svg version is not specified in the svg file. [#3228](https://github.com/inkstitch/inkstitch/pull/3228)
 * Adapt paths of clipped groups to clip [#3261](https://github.com/inkstitch/inkstitch/pull/3261)
 * Add icons and descriptions for extension gallery [#3287](https://github.com/inkstitch/inkstitch/pull/3287)
 
@@ -66,7 +67,7 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ### Multicolor Satin
 
-* option to adjust underlay [#3152](https://github.com/inkstitch/inkstitch/pull/3152)
+* Option to adjust underlay [#3152](https://github.com/inkstitch/inkstitch/pull/3152)
 
 ### Select elements
 
@@ -88,6 +89,14 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 * Clones now also clone commands attached to element and its children. (#3032, #3121) [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
 
+### Linear gradient fill
+
+* Add randomization options to linear gradient fill [#3311](https://github.com/inkstitch/inkstitch/pull/3311)
+
+### Manual stitch
+
+* Add bean stitch option to manual stitch [#3312](https://github.com/inkstitch/inkstitch/pull/3312)
+
 ### Ripple Stitch
 
 * Manual ripple pattern [#3256](https://github.com/inkstitch/inkstitch/pull/3256)
@@ -98,6 +107,8 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ## Developer and Build Stuff
 
+* Add lmde6 32bit build [#3298](https://github.com/inkstitch/inkstitch/pull/3298)
+* Update macos cloud build [#3291](https://github.com/inkstitch/inkstitch/pull/3291)
 * Use colormath2 instead of colormath [#3266](https://github.com/inkstitch/inkstitch/pull/3266)
 * make hook actually cancel the commit [#3235](https://github.com/inkstitch/inkstitch/pull/3235)
 * linux package fix [#3210](https://github.com/inkstitch/inkstitch/pull/3210)
@@ -108,6 +119,8 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ## Bug Fixes
 
+* Fix jump to stroke transform glitch [#3306](https://github.com/inkstitch/inkstitch/pull/3306)
+* Make remove commands more robust for broken commands with active selection [#3288](https://github.com/inkstitch/inkstitch/pull/3288)
 * Avoid code repetition in paths detection [#3282](https://github.com/inkstitch/inkstitch/pull/3282)
 * Thread catalog: fix broken path [#3281](https://github.com/inkstitch/inkstitch/pull/3281)
 * Clone: do not fixup href [#3277](https://github.com/inkstitch/inkstitch/pull/3277)
