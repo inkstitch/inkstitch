@@ -12,14 +12,18 @@ from shapely import segmentize
 from shapely.affinity import rotate
 from shapely.geometry import LineString, MultiLineString, Point, Polygon
 
+from lib.utils import prng
+
 from ..stitch_plan import StitchGroup
 from ..svg import get_node_transform
+from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import ensure_multi_line_string
 from ..utils.threading import check_stop_flag
 from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
                         find_stitch_path, graph_make_valid)
 from .circular_fill import path_to_stitches
 from .guided_fill import apply_stitches
+from .running_stitch import random_running_stitch
 
 
 def linear_gradient_fill(fill, shape, starting_point, ending_point):
@@ -117,7 +121,12 @@ def _get_lines(fill, shape, bounding_box, angle):
     # stagger stitched lines according to user settings
     staggered_lines = []
     for i, line in enumerate(lines):
-        staggered_line = apply_stitches(LineString(line), fill.max_stitch_length, fill.staggers, fill.row_spacing, i)
+        if fill.enable_random_stitch_length:
+            points = [InkstitchPoint(*x) for x in line]
+            staggered_line = LineString(random_running_stitch(
+                points, fill.max_stitch_length, fill.running_stitch_tolerance, fill.random_stitch_length_jitter, prng.join_args(fill.random_seed, i)))
+        else:
+            staggered_line = apply_stitches(LineString(line), fill.max_stitch_length, fill.staggers, fill.row_spacing, i)
         staggered_lines.append(staggered_line)
     return staggered_lines, bottom_line
 
