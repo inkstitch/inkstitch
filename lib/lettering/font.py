@@ -236,7 +236,7 @@ class Font(object):
         self._set_style(destination_group)
 
         # add trims
-        self._add_trims(destination_group, text, trim_option, use_trim_symbols, back_and_forth)
+        self._add_trims(destination_group, text, trim_option, use_trim_symbols, back_and_forth, color_sort)
         # make sure necessary marker and command symbols are in the defs section
         self._ensure_command_symbols(destination_group)
         self._ensure_marker_symbols(destination_group)
@@ -375,7 +375,7 @@ class Font(object):
             el = node.find(f".//*[@id='{node_id}']")
             el.clip = clip
 
-    def _add_trims(self, destination_group, text, trim_option, use_trim_symbols, back_and_forth):
+    def _add_trims(self, destination_group, text, trim_option, use_trim_symbols, back_and_forth, color_sort):
         """
         trim_option == 0  --> no trims
         trim_option == 1  --> trim at the end of each line
@@ -404,21 +404,35 @@ class Font(object):
 
             # letter
             if trim_option == 3:
-                self._process_trim(group, use_trim_symbols)
+                self._process_trim(group, use_trim_symbols, color_sort)
             # word
             elif trim_option == 2 and i+1 in space_indices + line_break_indices:
-                self._process_trim(group, use_trim_symbols)
+                self._process_trim(group, use_trim_symbols, color_sort)
             # line
             elif trim_option == 1 and i+1 in line_break_indices:
-                self._process_trim(group, use_trim_symbols)
+                self._process_trim(group, use_trim_symbols, color_sort)
 
-    def _process_trim(self, group, use_trim_symbols):
-        # find the last path that does not carry a marker and add a trim there
-        for path_child in group.iterdescendants(EMBROIDERABLE_TAGS):
-            if not has_marker(path_child):
-                path = path_child
-            element = Stroke(path)
+    def _process_trim(self, group, use_trim_symbols, color_sort):
+        if color_sort and self.sortable:
+            elements = defaultdict(list)
+            for path_child in group.iterdescendants(EMBROIDERABLE_TAGS):
+                if not has_marker(path_child):
+                    sort_index = path_child.get('inkstitch:color_sort_index', None)
+                    if sort_index is not None:
+                        elements[sort_index] = path_child
+                    else:
+                        elements[404] = path_child
+            for value in elements.values():
+                self._add_trim_to_element(Stroke(value), use_trim_symbols)
+        else:
+            # find the last path that does not carry a marker and add a trim there
+            for path_child in group.iterdescendants(EMBROIDERABLE_TAGS):
+                if not has_marker(path_child):
+                    path = path_child
+                element = Stroke(path)
+                self._add_trim_to_element(element, use_trim_symbols)
 
+    def _add_trim_to_element(self, element, use_trim_symbols):
         if element.shape:
             element_id = "%s_%s" % (element.node.get('id'), randint(0, 9999))
             element.node.set("id", element_id)
@@ -500,8 +514,14 @@ class Font(object):
     def _get_color_sorted_elements(self, group):
         elements_by_color = defaultdict(list)
         last_parent = None
-        for element in group.iterdescendants(SVG_PATH_TAG):
+        for element in group.iterdescendants(EMBROIDERABLE_TAGS, SVG_GROUP_TAG):
             sort_index = element.get('inkstitch:color_sort_index', None)
+
+            # Skip command connectors, we only aim for command groups
+            # Skip command connectors as well, they will be included with the command group
+            if (element.TAG == 'g' and not element.get_id().startswith('command_group')
+                    or element.get_id().startswith('command_connector')):
+                continue
 
             # get glyph group to calculate transform
             for ancestor in element.ancestors(group):
@@ -514,6 +534,10 @@ class Font(object):
 
             if not sort_index:
                 elements_by_color[404].append([element])
+                continue
+
+            if element.get_id().startswith('command_group'):
+                elements_by_color[int(sort_index)].append([element])
                 continue
 
             parent = element.getparent()
