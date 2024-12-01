@@ -1,7 +1,7 @@
 ---
 title: "Sticharten-Bibliothek"
 permalink: /de/docs/stitch-library/
-last_modified_at: 2024-05-22
+last_modified_at: 2024-12-02
 toc: true
 ---
 Ink/Stitch-Sticharten können grob in drei Gruppen eingeteilt werden: Linien, Satin- und Füllstich.
@@ -117,7 +117,7 @@ Konturfüllung füllt eine Fläche mit kleiner werdenden Kopien ihrer Kontur.
 
 ![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
 
-[Mehr lesen](/de/docs/stitches/contour-stitch){: .btn .btn--primary}
+[Mehr lesen](/de/docs/stitches/contour-fill){: .btn .btn--primary}
 
 ### Kurvenfüllung
 

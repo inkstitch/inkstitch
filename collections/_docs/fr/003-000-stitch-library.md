@@ -1,7 +1,7 @@
 ---
 title: "Bibliothèque de points"
 permalink: /fr/docs/stitch-library/
-last_modified_at: 2024-05-22
+last_modified_at: 2024-12-02
 toc: true
 ---
 Les types de points Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
@@ -109,7 +109,7 @@ Le remplissage selon contour recouvre des zones en suivant leur contours.
 
 ![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
 
-[En savoir plus](/fr/docs/stitches/contour-stitch){: .btn .btn--primary}
+[En savoir plus](/fr/docs/stitches/contour-fill){: .btn .btn--primary}
 
 ### Remplissage guidé
 
