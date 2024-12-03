@@ -282,16 +282,13 @@ class LetteringPanel(wx.Panel):
 
         del self.group[:]
 
-        if self.settings.scale == 100:
-            destination_group = self.group
-        else:
-            destination_group = inkex.Group(attrib={
-                # L10N The user has chosen to scale the text by some percentage
-                # (50%, 200%, etc).  If you need to use the percentage symbol,
-                # make sure to double it (%%).
-                INKSCAPE_LABEL: _("Text scale") + f' {self.settings.scale}%'
-            })
-            self.group.append(destination_group)
+        destination_group = inkex.Group(attrib={
+            # L10N The user has chosen to scale the text by some percentage
+            # (50%, 200%, etc).  If you need to use the percentage symbol,
+            # make sure to double it (%%).
+            INKSCAPE_LABEL: _("Text scale") + f' {self.settings.scale}%'
+        })
+        self.group.append(destination_group)
 
         font = self.fonts.get(self.options_panel.font_chooser.GetValue(), self.default_font)
         try:
@@ -307,10 +304,9 @@ class LetteringPanel(wx.Panel):
             else:
                 pass
 
-        # destination_group isn't always the text scaling group (but also the parent group)
         # the text scaling group label is dependend on the user language, so it would break in international file exchange if we used it
         # scaling (correction transform) on the parent group is already applied, so let's use that for recognition
-        if self.settings.scale != 100 and not destination_group.get('transform', None):
+        if destination_group.get('transform', None) is None:
             destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
 
     def render_stitch_plan(self):
