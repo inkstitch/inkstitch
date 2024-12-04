@@ -7,7 +7,7 @@ on:
     tags:
       - "v*"
 jobs:
-  linux:
+  linux64-old:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
@@ -82,8 +82,81 @@ jobs:
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
       - uses: actions/upload-artifact@v4
         with:
-          name: inkstitch-linux
+          name: inkstitch-linux64-old
           path: artifacts
+
+  linux64-new:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.x'
+          cache: 'pip'
+      - name: install dependencies
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo gem install fpm
+          python -m pip install --upgrade pip
+          python -m pip install wheel
+
+          sudo apt-get install gettext
+
+          # for wxPython
+          sudo apt install libnotify4
+          sudo apt install glib-networking libsdl2-dev libsdl2-2.0-0
+
+          # for PyGObject
+          sudo apt install libgirepository1.0-dev libcairo2-dev
+
+          # for shapely
+          sudo apt install build-essential libgtk-3-dev libgeos-dev cmake
+          sudo apt install gcc g++ gfortran libopenblas-dev liblapack-dev
+  
+          # for sigining
+          sudo apt install rpm
+
+          # for GUI
+          sudo apt install python-wxgtk3.0-dev wxpython-tools
+
+          uname -a
+          python --version
+          python -m pip --version
+          python -m pip debug
+
+          python -m pip install pycairo
+          python -m pip install PyGObject
+
+          python -m pip install -r requirements.txt
+          # for networkx
+          python -m pip install pandas
+          python -m pip install pyarrow
+
+          python -m pip install pyinstaller
+
+          # scipy gives us a ELF error when stripped
+          sudo apt-get install gcc g++ gfortran python3-dev libopenblas-dev liblapack-dev
+          python -m pip uninstall --yes scipy
+          python -m pip install scipy --no-binary scipy
+
+          echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+      - shell: bash
+        run: |
+          pytest
+      - shell: bash
+        run: |
+          make dist
+        env:
+          BUILD: linux
+          INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inkstitch-linux64-new
+          path: artifacts
+
   linux32:
     # Node required for actions, install follows 
     # https://github.com/actions/upload-artifact/issues/616
