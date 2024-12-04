@@ -61,7 +61,7 @@ class DrawingPanel(wx.Panel):
         self.height = 0
         self.loaded = False
         self.page_specs = {}
-        self.show_page = True
+        self.show_page = global_settings['toggle_page_button_status']
         self.background_color = None
 
         # desired simulation speed in stitches per second

@@ -9,6 +9,7 @@ from ...debug.debug import debug
 from ...i18n import _
 from . import SimulatorPreferenceDialog
 from . import DesignInfoDialog
+from ...utils.settings import global_settings
 
 
 class ViewPanel(ScrolledPanel):
@@ -26,26 +27,46 @@ class ViewPanel(ScrolledPanel):
 
         self.control_panel = parent.cp
 
+        self.npp_button_status = global_settings['npp_button_status']
+        self.jump_button_status = global_settings['jump_button_status']
+        self.trim_button_status = global_settings['trim_button_status']
+        self.stop_button_status = global_settings['stop_button_status']
+        self.color_change_button_status = global_settings['color_change_button_status']
+        self.toggle_page_button_status = global_settings['toggle_page_button_status']
+
         self.btnNpp = wx.BitmapToggleButton(self, -1, style=self.button_style)
-        self.btnNpp.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
         self.btnNpp.SetBitmap(self.control_panel.load_icon('npp'))
         self.btnNpp.SetToolTip(_('Display needle penetration point (O)'))
+        self.btnNpp.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_npp)
+        self.btnNpp.SetValue(self.npp_button_status)
         self.btnJump = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnJump.SetToolTip(_('Show jump stitches'))
         self.btnJump.SetBitmap(self.control_panel.load_icon('jump'))
         self.btnJump.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('jump', event))
+        self.btnJump.SetValue(self.jump_button_status)
+        if self.jump_button_status:
+            self.control_panel.slider.enable_marker_list('jump')
         self.btnTrim = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnTrim.SetToolTip(_('Show trims'))
         self.btnTrim.SetBitmap(self.control_panel.load_icon('trim'))
         self.btnTrim.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('trim', event))
+        self.btnTrim.SetValue(self.trim_button_status)
+        if self.trim_button_status:
+            self.control_panel.slider.enable_marker_list('trim')
         self.btnStop = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnStop.SetToolTip(_('Show stops'))
         self.btnStop.SetBitmap(self.control_panel.load_icon('stop'))
         self.btnStop.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('stop', event))
+        self.btnStop.SetValue(self.stop_button_status)
+        if self.stop_button_status:
+            self.control_panel.slider.enable_marker_list('stop')
         self.btnColorChange = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnColorChange.SetToolTip(_('Show color changes'))
         self.btnColorChange.SetBitmap(self.control_panel.load_icon('color_change'))
         self.btnColorChange.Bind(wx.EVT_TOGGLEBUTTON, lambda event: self.on_marker_button('color_change', event))
+        self.btnColorChange.SetValue(self.color_change_button_status)
+        if self.color_change_button_status:
+            self.control_panel.slider.enable_marker_list('color_change')
 
         self.btnInfo = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnInfo.SetToolTip(_('Open info dialog'))
@@ -59,7 +80,7 @@ class ViewPanel(ScrolledPanel):
         if not self.detach_callback:
             self.btnPage = wx.BitmapToggleButton(self, -1, style=self.button_style)
             self.btnPage.Bind(wx.EVT_TOGGLEBUTTON, self.toggle_page)
-            self.btnPage.SetValue(True)
+            self.btnPage.SetValue(self.toggle_page_button_status)
             self.btnPage.SetBitmap(self.control_panel.load_icon('page'))
             self.btnPage.SetToolTip(_('Show page'))
 
@@ -129,16 +150,21 @@ class ViewPanel(ScrolledPanel):
 
     def toggle_npp(self, event):
         self.drawing_panel.Refresh()
+        global_settings['npp_button_status'] = self.btnNpp.GetValue()
 
     def toggle_page(self, event):
         debug.log("toggle page")
-        self.drawing_panel.set_show_page(self.btnPage.GetValue())
+        value = self.btnPage.GetValue()
+        self.drawing_panel.set_show_page(value)
         self.drawing_panel.Refresh()
+        global_settings['toggle_page_button_status'] = value
 
     def on_marker_button(self, marker_type, event):
-        self.control_panel.slider.enable_marker_list(marker_type, event.GetEventObject().GetValue())
+        value = event.GetEventObject().GetValue()
+        self.control_panel.slider.enable_marker_list(marker_type, value)
         if marker_type == 'jump':
             self.drawing_panel.Refresh()
+        global_settings[f'{marker_type}_button_status'] = value
 
     def on_settings_button(self, event):
         if event.GetEventObject().GetValue():

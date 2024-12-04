@@ -12,10 +12,19 @@ DEFAULT_METADATA = {
 }
 
 DEFAULT_SETTINGS = {
+    # Ink/Stitch preferences
     "cache_size": 100,
     "pop_out_simulator": False,
+    # simulator
     "simulator_line_width": 0.1,
     "simulator_npp_size": 0.5,
+    "npp_button_status": False,
+    "jump_button_status": False,
+    "trim_button_status": False,
+    "stop_button_status": False,
+    "color_change_button_status": False,
+    "toggle_page_button_status": True,
+    # apply palette
     "last_applied_palette": ""
 }
 
