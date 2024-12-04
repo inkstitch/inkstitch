@@ -1,7 +1,7 @@
 ---
 title: "Stitch Library"
 permalink: /docs/stitch-library/
-last_modified_at: 2024-05-22
+last_modified_at: 2024-12-02
 toc: true
 ---
 Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
@@ -106,13 +106,13 @@ Circular fill fills a shape with an embroidered spiral. The center of the spiral
 
 [Learn more](/docs/stitches/circular-fill){: .btn .btn--primary}
 
-### Contour Stitch
+### Contour Fill
 
 Contour fill covers areas with stitches following the contour of an object.
 
 ![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
 
-[Learn more](/docs/stitches/contour-stitch){: .btn .btn--primary}
+[Learn more](/docs/stitches/contour-fill){: .btn .btn--primary}
 
 ### Guided Fill
 
