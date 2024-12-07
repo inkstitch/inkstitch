@@ -5,6 +5,7 @@
 
 from inkex import errormsg
 
+from .commands import ensure_symbol
 from .elements import EmbroideryElement
 from .gui.request_update_svg_version import RequestUpdate
 from .i18n import _
@@ -12,7 +13,7 @@ from .metadata import InkStitchMetadata
 from .svg import PIXELS_PER_MM
 from .svg.tags import EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS
 
-INKSTITCH_SVG_VERSION = 2
+INKSTITCH_SVG_VERSION = 3
 
 
 def update_inkstitch_document(svg, selection=None):
@@ -68,6 +69,8 @@ def automatic_version_update(document, file_version, INKSTITCH_SVG_VERSION):
     for element in document.iterdescendants():
         if element.tag in EMBROIDERABLE_TAGS:
             update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
+    if file_version < 3:
+        update_legacy_commands(document)
 
 
 def _update_inkstitch_svg_version(svg):
@@ -173,3 +176,40 @@ def _replace_legacy_embroider_param(element, param):
         value = element.node.get(param, "").strip()
         element.set_param(param[10:], value)
     del element.node.attrib[param]
+
+
+'''
+Update legacy commands
+======================
+'''
+
+
+def update_legacy_commands(document):
+    '''
+    Changes for svg version 3
+    '''
+    search_string = "//svg:symbol"
+    symbols = document.xpath(search_string)
+    for symbol in symbols:
+        _rename_command(document, symbol, 'inkstitch_fill_start', 'starting_point')
+        _rename_command(document, symbol, 'inkstitch_fill_end', 'ending_point')
+        _rename_command(document, symbol, 'inkstitch_satin_start', 'autoroute_start')
+        _rename_command(document, symbol, 'inkstitch_satin_end', 'autoroute_end')
+        _rename_command(document, symbol, 'inkstitch_run_start', 'autoroute_start')
+        _rename_command(document, symbol, 'inkstitch_run_end', 'autoroute_end')
+        _rename_command(document, symbol, 'inkstitch_ripple_target', 'target_point')
+
+
+def _rename_command(document, symbol, old_name, new_name):
+    symbol_id = symbol.get_id()
+    if symbol_id.startswith(old_name):
+        symbol.getparent().remove(symbol)
+        ensure_symbol(document, new_name)
+        _update_command(document, symbol_id, new_name)
+
+
+def _update_command(document, old_id, new_name):
+    xpath2 = f"//svg:use[@xlink:href='#{old_id}']"
+    elements = document.xpath(xpath2)
+    for element in elements:
+        element.set('xlink:href', f'#inkstitch_{new_name}')

@@ -167,6 +167,8 @@ inkstitch_attribs = [
     'random_split_phase',
     'random_split_jitter_percent',
     'min_random_split_length_mm',
+    'running_stitch_position',
+    'start_at_nearest_point',
     # stitch_plan
     'invisible_layers',
     'layer_visibility',

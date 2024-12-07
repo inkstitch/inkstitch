@@ -166,11 +166,11 @@ class TartanSvgGroup:
         end = element.get('inkstitch:end')
         if start:
             start = start[1:-1].split(',')
-            add_commands(fill, ['fill_start'], self._get_command_position(fill, (float(start[0]), float(start[1]))))
+            add_commands(fill, ['starting_point'], self._get_command_position(fill, (float(start[0]), float(start[1]))))
             element.pop('inkstitch:start')
         if end:
             end = end[1:-1].split(',')
-            add_commands(fill, ['fill_end'], self._get_command_position(fill, (float(end[0]), float(end[1]))))
+            add_commands(fill, ['ending_point'], self._get_command_position(fill, (float(end[0]), float(end[1]))))
             element.pop('inkstitch:end')
 
     def _route_shapes(self, routing_lines: defaultdict, outline_shape: MultiPolygon, shapes: defaultdict, weft: bool = False) -> defaultdict:

@@ -22,10 +22,10 @@ class AutoSatin(CommandsExtension):
         self.arg_parser.add_argument("-p", "--preserve_order", dest="preserve_order", type=inkex.Boolean, default=False)
 
     def get_starting_point(self):
-        return self.get_point("satin_start")
+        return self.get_point("autoroute_start")
 
     def get_ending_point(self):
-        return self.get_point("satin_end")
+        return self.get_point("autoroute_end")
 
     def get_point(self, command_type):
         command = None

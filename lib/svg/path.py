@@ -87,6 +87,9 @@ def line_strings_to_csp(line_strings):
     except AttributeError:
         pass
 
+    if line_strings is None:
+        return None
+
     return point_lists_to_csp(ls.coords for ls in line_strings)
 
 
