@@ -58,14 +58,16 @@ class SimulatorPreferenceDialog(wx.Dialog):
             self.drawing_panel.update_pen_size()
         self.drawing_panel.Refresh()
 
-    def on_apply(self, event):
+    def save_settings(self):
         global_settings['simulator_line_width'] = self.line_width.GetValue()
         global_settings['simulator_npp_size'] = self.npp_size.GetValue()
+
+    def on_apply(self, event):
+        self.save_settings()
         self.Close()
 
     def on_cancel(self, event):
-        global_settings['simulator_line_width'] = self.line_width_value
-        global_settings['simulator_npp_size'] = self.npp_size_value
+        self.save_settings()
         if self.drawing_panel.loaded:
             self.drawing_panel.update_pen_size()
             self.drawing_panel.Refresh()
