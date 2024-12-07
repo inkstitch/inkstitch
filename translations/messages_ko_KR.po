@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-11-19 01:28+0000\n"
-"PO-Revision-Date: 2024-11-19 01:29\n"
+"POT-Creation-Date: 2024-12-01 01:51+0000\n"
+"PO-Revision-Date: 2024-12-01 01:51\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-19 01:28+0000\n"
+"POT-Creation-Date: 2024-12-01 01:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1145,7 +1145,7 @@ msgstr ""
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:50 lib/elements/fill_stitch.py:697
+#: lib/elements/fill_stitch.py:50 lib/elements/fill_stitch.py:699
 msgid "Inset"
 msgstr ""
 
@@ -1476,11 +1476,11 @@ msgstr ""
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:387 lib/elements/fill_stitch.py:709
+#: lib/elements/fill_stitch.py:387 lib/elements/fill_stitch.py:711
 msgid "Skip last stitch in each row"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:388 lib/elements/fill_stitch.py:710
+#: lib/elements/fill_stitch.py:388 lib/elements/fill_stitch.py:712
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr ""
 
@@ -1508,11 +1508,11 @@ msgstr ""
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:441 lib/elements/fill_stitch.py:721
+#: lib/elements/fill_stitch.py:441 lib/elements/fill_stitch.py:723
 msgid "Underpath"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:442 lib/elements/fill_stitch.py:722
+#: lib/elements/fill_stitch.py:442 lib/elements/fill_stitch.py:724
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr ""
 
@@ -1540,141 +1540,141 @@ msgstr ""
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:507 lib/elements/stroke.py:159
+#: lib/elements/fill_stitch.py:508 lib/elements/stroke.py:159
 msgid "Random stitch length jitter"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:508 lib/elements/stroke.py:160
+#: lib/elements/fill_stitch.py:509 lib/elements/stroke.py:160
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:522 lib/elements/satin_column.py:451
+#: lib/elements/fill_stitch.py:524 lib/elements/satin_column.py:451
 #: lib/elements/stroke.py:82
 msgid "Repeats"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:523 lib/elements/stroke.py:83
+#: lib/elements/fill_stitch.py:525 lib/elements/stroke.py:83
 msgid "Defines how many times to run down and back along the path."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:534 lib/elements/stroke.py:94
+#: lib/elements/fill_stitch.py:536 lib/elements/stroke.py:94
 msgid "Bean stitch number of repeats"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:535 lib/elements/stroke.py:95
+#: lib/elements/fill_stitch.py:537 lib/elements/stroke.py:95
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:550 lib/elements/satin_column.py:249
+#: lib/elements/fill_stitch.py:552 lib/elements/satin_column.py:249
 #: lib/elements/stroke.py:185
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:551 lib/elements/stroke.py:186
+#: lib/elements/fill_stitch.py:553 lib/elements/stroke.py:186
 msgid "Length of stitches in zig-zag mode."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:563
+#: lib/elements/fill_stitch.py:565
 msgid "Zig-zag width"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:564
+#: lib/elements/fill_stitch.py:566
 msgid "Width of the zig-zag line."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:577 lib/gui/tartan/embroidery_panel.py:42
+#: lib/elements/fill_stitch.py:579 lib/gui/tartan/embroidery_panel.py:42
 msgid "Rows per tartan thread"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:578 lib/gui/tartan/embroidery_panel.py:44
+#: lib/elements/fill_stitch.py:580 lib/gui/tartan/embroidery_panel.py:44
 msgid "Consecutive rows of the same color"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:589
+#: lib/elements/fill_stitch.py:591
 msgid "Herringbone width"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:590
+#: lib/elements/fill_stitch.py:592
 msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:602 lib/elements/satin_column.py:277
+#: lib/elements/fill_stitch.py:604 lib/elements/satin_column.py:277
 #: lib/elements/stroke.py:198
 msgid "Pull compensation"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:603
+#: lib/elements/fill_stitch.py:605
 msgid "Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. This setting expands each row of stitches outward from the center of the row by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:607 lib/elements/satin_column.py:281
+#: lib/elements/fill_stitch.py:609 lib/elements/satin_column.py:281
 #: lib/elements/satin_column.py:396 lib/elements/satin_column.py:490
 msgid "mm (each side)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:618 lib/elements/satin_column.py:262
+#: lib/elements/fill_stitch.py:620 lib/elements/satin_column.py:262
 msgid "Pull compensation percentage"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:619
+#: lib/elements/fill_stitch.py:621
 msgid "Additional pull compensation which varies as a percentage of row width. Two values separated by a space may be used for an asymmetric effect."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:622 lib/elements/satin_column.py:131
+#: lib/elements/fill_stitch.py:624 lib/elements/satin_column.py:131
 #: lib/elements/satin_column.py:141 lib/elements/satin_column.py:265
 #: lib/elements/satin_column.py:411 lib/elements/satin_column.py:510
 msgid "% (each side)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:643 lib/elements/fill_stitch.py:652
-#: lib/elements/fill_stitch.py:679 lib/elements/fill_stitch.py:690
-#: lib/elements/fill_stitch.py:700 lib/elements/fill_stitch.py:712
-#: lib/elements/fill_stitch.py:725
+#: lib/elements/fill_stitch.py:645 lib/elements/fill_stitch.py:654
+#: lib/elements/fill_stitch.py:681 lib/elements/fill_stitch.py:692
+#: lib/elements/fill_stitch.py:702 lib/elements/fill_stitch.py:714
+#: lib/elements/fill_stitch.py:727
 msgid "Fill Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:643 lib/gui/tartan/embroidery_panel.py:55
+#: lib/elements/fill_stitch.py:645 lib/gui/tartan/embroidery_panel.py:55
 #: inx/inkstitch_select_elements.inx:36 inx/inkstitch_select_elements.inx:64
 #: inx/inkstitch_select_elements.inx:66
 msgid "Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:649
+#: lib/elements/fill_stitch.py:651
 msgid "Fill angle"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:650
+#: lib/elements/fill_stitch.py:652
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:676 lib/gui/tartan/embroidery_panel.py:77
+#: lib/elements/fill_stitch.py:678 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:677
+#: lib/elements/fill_stitch.py:679
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:687 lib/elements/stroke.py:171
+#: lib/elements/fill_stitch.py:689 lib/elements/stroke.py:171
 #: lib/extensions/element_info.py:131 lib/extensions/element_info.py:187
 msgid "Max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:688
+#: lib/elements/fill_stitch.py:690
 msgid "default: equal to fill max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:698
+#: lib/elements/fill_stitch.py:700
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:733 lib/elements/satin_column.py:532
+#: lib/elements/fill_stitch.py:735 lib/elements/satin_column.py:532
 #: lib/elements/stroke.py:431 lib/gui/satin_multicolor/colorize_panel.py:57
 msgid "Random seed"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:734 lib/elements/satin_column.py:533
+#: lib/elements/fill_stitch.py:736 lib/elements/satin_column.py:533
 #: lib/elements/stroke.py:432
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr ""
@@ -3881,7 +3881,7 @@ msgstr ""
 msgid "The font '%s' has no variants."
 msgstr ""
 
-#: lib/lettering/font.py:474
+#: lib/lettering/font.py:488
 msgid "Color Group"
 msgstr ""
 
