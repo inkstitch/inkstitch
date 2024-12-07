@@ -518,7 +518,7 @@ jobs:
 
   release:
     runs-on: ubuntu-latest
-    needs: [linux32, linux, windows32, windows64, macx86, macarm64]
+    needs: [linux32, linux64-old, linux64-new, windows32, windows64, macx86, macarm64]
     if: always()
     steps:
       - name: determine release info
@@ -536,10 +536,15 @@ jobs:
             echo "prerelease=true" >> $GITHUB_ENV
             echo "title=development build of $branch" >> $GITHUB_ENV
           fi
-      - name: download linux
+      - name: download linux64-old
         uses: actions/download-artifact@v4
         with:
-          name: 'inkstitch-linux'
+          name: 'inkstitch-linux64-old'
+          path: 'artifacts/'
+      - name: download linux64-new
+        uses: actions/download-artifact@v4
+        with:
+          name: 'inkstitch-linux64-new'
           path: 'artifacts/'
       - name: download linux32
         uses: actions/download-artifact@v4
