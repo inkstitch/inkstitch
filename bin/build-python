@@ -22,22 +22,19 @@ if [ "$BUILD" = "osx" ]; then
         echo "Dev or Local Build"
     else
         bash bin/import-macos-keys
+    python -m PyInstaller $pyinstaller_args inkstitch.py;
     fi
-fi
-
-if [ "$BUILD" = "linux" ]; then
+elif [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux-new" ] || [ "$BUILD" = "linux-old" ]; then
     pyinstaller_args+="--hidden-import gi.repository.Gtk "
     pyinstaller_args+="--add-binary /lib/x86_64-linux-gnu/libcrypt.so.1:. "
     pyinstaller_args+="--add-binary /lib/x86_64-linux-gnu/libnsl.so.1:. "
-fi
-
-if [ "$BUILD" = "linux32" ]; then
+    python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
+elif [ "$BUILD" = "linux32" ]; then
     pyinstaller_args+="--hidden-import gi.repository.Gtk "
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libcrypt.so.1:. "
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libnsl.so.1:. "
-fi
-
-if [ "$BUILD" = "windows" ]; then
+    python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
+elif [ "$BUILD" = "windows" ]; then
 	if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
 		# setting the file and product version for release
 		# Code to remove the periods in the version number
@@ -57,10 +54,6 @@ if [ "$BUILD" = "windows" ]; then
   pyinstaller_args+="-i images/inkstitch/win/inkstitch.ico "
 	pyinstaller_args+="--version-file  installer_scripts/file_version_info.txt "
     python -m PyInstaller $pyinstaller_args inkstitch.py
-elif [ "$BUILD" = "osx" ]; then
-    python -m PyInstaller $pyinstaller_args inkstitch.py;
-else
-    python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
 fi
 
 # pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like

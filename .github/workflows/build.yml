@@ -78,7 +78,7 @@ jobs:
         run: |
           make dist
         env:
-          BUILD: linux
+          BUILD: linux-old
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
       - uses: actions/upload-artifact@v4
         with:
@@ -149,7 +149,7 @@ jobs:
         run: |
           make dist
         env:
-          BUILD: linux
+          BUILD: linux-new
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
       - uses: actions/upload-artifact@v4
         with:
@@ -247,7 +247,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: inkstitch-linux32
-          path: artifacts          
+          path: artifacts
   windows32:
     runs-on: windows-2019
     steps:
