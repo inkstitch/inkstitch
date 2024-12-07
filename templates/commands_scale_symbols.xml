@@ -3,7 +3,7 @@
     <name>Scale Command Symbols</name>
     <id>org.{{ id_inkstitch }}.commands_scale_symbols</id>
     <param name="extension" type="string" gui-hidden="true">commands_scale_symbols</param>
-    <param name="size" type="float" precision="1" min="0" max="2" gui-text="Size" appearance="full">1.0</param>
+    <param name="size" type="int" min="0" max="200" gui-text="Size (%)" appearance="full">100</param>
     <effect>
         <object-type>all</object-type>
         <icon>{{ icon_path }}inx/commands_scale.svg</icon>

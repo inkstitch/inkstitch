@@ -11,18 +11,19 @@ from .base import InkstitchExtension
 class CommandsScaleSymbols(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
-        self.arg_parser.add_argument("-s", "--size", dest="size", type=float, default=1)
+        self.arg_parser.add_argument("-s", "--size", dest="size", type=int, default=100)
 
     def effect(self):
-        size = self.options.size
+        size = self.options.size / 100
 
+        # scale symbols
         svg = self.document.getroot()
         command_symbols = svg.xpath(".//svg:symbol[starts-with(@id,'inkstitch_')]", namespaces=NSS)
         for symbol in command_symbols:
-            transform = Transform(symbol.get('transform')).add_scale(size)
+            transform = Transform(f'scale({size})')
             symbol.set('transform', str(transform))
 
+        # scale markers
         markers = svg.xpath(".//svg:marker[starts-with(@id, 'inkstitch')]", namespaces=NSS)
         for marker in markers:
-            marker_size = float(marker.get('markerWidth', 0.5)) * size
-            marker.set('markerWidth', marker_size)
+            marker.set('markerWidth', str(size / 2))

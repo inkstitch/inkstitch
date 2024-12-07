@@ -72,7 +72,7 @@ class RequestUpdate:
 
         app = wx.App()
         frame = RequestUpdateFrame(
-            title=_("Ink/Stitch"),
+            title="Ink/Stitch",
             on_cancel=self.cancel_update,
         )
         frame.Show()
