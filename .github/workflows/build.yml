@@ -119,9 +119,6 @@ jobs:
           # for sigining
           sudo apt install rpm
 
-          # for GUI
-          sudo apt install python-wxgtk3.0-dev wxpython-tools
-
           uname -a
           python --version
           python -m pip --version
@@ -129,6 +126,8 @@ jobs:
 
           python -m pip install pycairo
           python -m pip install PyGObject
+
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04/wxPython-4.2.2-cp312-cp312-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
           # for networkx
