@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-01 01:51+0000\n"
-"PO-Revision-Date: 2024-12-01 01:51\n"
+"POT-Creation-Date: 2024-12-08 01:45+0000\n"
+"PO-Revision-Date: 2024-12-08 01:45\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 01:51+0000\n"
+"POT-Creation-Date: 2024-12-08 01:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -826,15 +826,15 @@ msgstr "Versuche die Datei über 'Datei > Importieren...' (Strg+I) in Inkscape z
 #. command attached to an object
 #: lib/commands.py:27 inx/inkstitch_object_commands.inx:4
 #: inx/inkstitch_remove_embroidery_settings.inx:118
-msgid "Fill stitch starting position"
-msgstr "Füllstich Startposition"
+msgid "Starting position"
+msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:5
 #: inx/inkstitch_remove_embroidery_settings.inx:119
-msgid "Fill stitch ending position"
-msgstr "Füllstich Endposition"
+msgid "Ending position"
+msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -847,80 +847,66 @@ msgstr "Zielposition"
 #. command attached to an object
 #: lib/commands.py:36 inx/inkstitch_object_commands.inx:7
 #: inx/inkstitch_remove_embroidery_settings.inx:121
-msgid "Auto-route running stitch starting position"
-msgstr "Automatisch geführter Geradstich: Startposition"
+msgid "Auto-route starting position"
+msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:39 inx/inkstitch_object_commands.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:122
-msgid "Auto-route running stitch ending position"
-msgstr "Automatisch geführter Geradstich: Endposition"
+msgid "Auto-route ending position"
+msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:42 inx/inkstitch_object_commands.inx:9
 #: inx/inkstitch_remove_embroidery_settings.inx:123
-msgid "Auto-route satin stitch starting position"
-msgstr "Startposition für automatisch geführte Satinsäulen"
-
-#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
-#. command attached to an object
-#: lib/commands.py:45 inx/inkstitch_object_commands.inx:10
-#: inx/inkstitch_remove_embroidery_settings.inx:124
-msgid "Auto-route satin stitch ending position"
-msgstr "Endposition für automatisch geführte Satinsäulen"
-
-#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
-#. command attached to an object
-#: lib/commands.py:48 inx/inkstitch_object_commands.inx:11
-#: inx/inkstitch_remove_embroidery_settings.inx:125
 msgid "Stop (pause machine) after sewing this object"
 msgstr "Stoppen (Pause) nach dem Nähen diesem Objekts"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:51 inx/inkstitch_object_commands.inx:12
-#: inx/inkstitch_remove_embroidery_settings.inx:126
+#: lib/commands.py:45 inx/inkstitch_object_commands.inx:10
+#: inx/inkstitch_remove_embroidery_settings.inx:124
 msgid "Trim thread after sewing this object"
 msgstr "Faden abschneiden nach diesem Objekt"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:54 inx/inkstitch_object_commands.inx:13
-#: inx/inkstitch_remove_embroidery_settings.inx:127
+#: lib/commands.py:48 inx/inkstitch_object_commands.inx:11
+#: inx/inkstitch_remove_embroidery_settings.inx:125
 msgid "Ignore this object (do not stitch)"
 msgstr "Ignoriere dieses Objekt (nicht nähen)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:57 inx/inkstitch_object_commands.inx:14
-#: inx/inkstitch_remove_embroidery_settings.inx:128
+#: lib/commands.py:51 inx/inkstitch_object_commands.inx:12
+#: inx/inkstitch_remove_embroidery_settings.inx:126
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr "Satin Schnittpunkt (mit \"Satinsäule schneiden\" benutzen)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects a layer
-#: lib/commands.py:60 inx/inkstitch_layer_commands.inx:7
-#: inx/inkstitch_remove_embroidery_settings.inx:131
+#: lib/commands.py:54 inx/inkstitch_layer_commands.inx:7
+#: inx/inkstitch_remove_embroidery_settings.inx:129
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr "Ebene ignorieren (keine Objekte in dieser Ebene nähen)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
-#: lib/commands.py:63 inx/inkstitch_global_commands.inx:7
-#: inx/inkstitch_remove_embroidery_settings.inx:134
+#: lib/commands.py:57 inx/inkstitch_global_commands.inx:7
+#: inx/inkstitch_remove_embroidery_settings.inx:132
 msgid "Origin for exported embroidery files"
 msgstr "Nullpunkt für exportierte Stickdateien"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
-#: lib/commands.py:66 inx/inkstitch_global_commands.inx:9
-#: inx/inkstitch_remove_embroidery_settings.inx:136
+#: lib/commands.py:60 inx/inkstitch_global_commands.inx:9
+#: inx/inkstitch_remove_embroidery_settings.inx:134
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Rahmenposition nach Stop-Befehlen."
 
-#: lib/commands.py:275
+#: lib/commands.py:269
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr "Fehler: Es gibt mehr als einen %(command)s-Befehl in dem Dokument, aber es darf nur einen geben. Bitte alle bis auf einen entfernen."
@@ -930,26 +916,26 @@ msgstr "Fehler: Es gibt mehr als einen %(command)s-Befehl in dem Dokument, aber 
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:282
+#: lib/commands.py:276
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:348 lib/commands.py:498
+#: lib/commands.py:342 lib/commands.py:492
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch Befehl"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:387
+#: lib/commands.py:381
 msgid "connector"
 msgstr "Verknüpfung"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:406
+#: lib/commands.py:400
 msgid "command marker"
 msgstr "Befehlszeichen"
 
-#: lib/commands.py:487
+#: lib/commands.py:481
 msgid "Please select a layer to include layer commands."
 msgstr "Für Befehle, die sich auf eine Ebene beziehen, bitte eine Ebene auswählen."
 
@@ -1516,7 +1502,8 @@ msgstr "Unterpfad"
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Stiche zum Verbinden der Teilbereiche verlaufen innerhalb des Objektes. Unterpfade vermeiden im Winkel des Füllmusters zu verlaufen."
 
-#: lib/elements/fill_stitch.py:454 lib/elements/stroke.py:120
+#: lib/elements/fill_stitch.py:454 lib/elements/satin_column.py:363
+#: lib/elements/stroke.py:120
 msgid "Running stitch length"
 msgstr "Stichlänge"
 
@@ -1524,11 +1511,11 @@ msgstr "Stichlänge"
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
 msgstr "Stichlänge um den Umriss des Füllbereichs, der beim Übergang von Abschnitt zu Abschnitt verwendet wird. Wird auch für Mäander- und Spiralfüllung verwendet."
 
-#: lib/elements/fill_stitch.py:472
+#: lib/elements/fill_stitch.py:472 lib/elements/satin_column.py:374
 msgid "Running stitch tolerance"
 msgstr "Geradstich-Toleranz"
 
-#: lib/elements/fill_stitch.py:473
+#: lib/elements/fill_stitch.py:473 lib/elements/satin_column.py:375
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Kleinere Werte benötigen mehr Stiche, aber vermeiden mit höherer Wahrscheinlichkeit Stiche außerhalb der Form."
 
@@ -1548,7 +1535,7 @@ msgstr "Zufallsabweichung von der Stichlänge"
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr "Betrag (%), um den die Länge jedes Stichs zufällig variiert werden soll."
 
-#: lib/elements/fill_stitch.py:524 lib/elements/satin_column.py:451
+#: lib/elements/fill_stitch.py:524 lib/elements/satin_column.py:491
 #: lib/elements/stroke.py:82
 msgid "Repeats"
 msgstr "Wiederholungen"
@@ -1610,7 +1597,7 @@ msgid "Fill stitch can pull the fabric together, resulting in a shape narrower t
 msgstr "Füllstitche ziehen den Stoff zusammen. Dadurch wird das Stickbild schmaler, als die in Inkscape gezeichnete Form. Diese Einstellung erweitert jede Reihe um einen festen Wert, um diesen Effekt auszugleichen. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt genutzt werden."
 
 #: lib/elements/fill_stitch.py:609 lib/elements/satin_column.py:281
-#: lib/elements/satin_column.py:396 lib/elements/satin_column.py:490
+#: lib/elements/satin_column.py:436 lib/elements/satin_column.py:530
 msgid "mm (each side)"
 msgstr "mm (pro Seite)"
 
@@ -1624,7 +1611,7 @@ msgstr "Zusätzliche Zugkompensation, die als Prozentwert der ursprünglichen L�
 
 #: lib/elements/fill_stitch.py:624 lib/elements/satin_column.py:131
 #: lib/elements/satin_column.py:141 lib/elements/satin_column.py:265
-#: lib/elements/satin_column.py:411 lib/elements/satin_column.py:510
+#: lib/elements/satin_column.py:451 lib/elements/satin_column.py:550
 msgid "% (each side)"
 msgstr "% (pro Seite)"
 
@@ -1670,12 +1657,12 @@ msgstr "Standard: entspricht der maximalen Stichlänge"
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Verkleinern Sie die Unterlage, um zu verhindern, dass die Unterlage an der Außenseite der Füllstiche sichtbar wird."
 
-#: lib/elements/fill_stitch.py:735 lib/elements/satin_column.py:532
+#: lib/elements/fill_stitch.py:735 lib/elements/satin_column.py:572
 #: lib/elements/stroke.py:431 lib/gui/satin_multicolor/colorize_panel.py:57
 msgid "Random seed"
 msgstr "Zufallszahl"
 
-#: lib/elements/fill_stitch.py:736 lib/elements/satin_column.py:533
+#: lib/elements/fill_stitch.py:736 lib/elements/satin_column.py:573
 #: lib/elements/stroke.py:432
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer."
@@ -1904,7 +1891,7 @@ msgstr "Zwischenstich-Methode"
 msgid "Display needle penetration points in simulator to see the effect of each split method."
 msgstr "Aktiviere die Anzeige der Nadeleinstichstellen im Simulator um den Effekt der Zwischenstiche sehen können."
 
-#: lib/elements/satin_column.py:172 lib/elements/satin_column.py:521
+#: lib/elements/satin_column.py:172 lib/elements/satin_column.py:561
 msgid "Maximum stitch length"
 msgstr "Maximale Stichlänge"
 
@@ -2004,103 +1991,124 @@ msgstr "Seiten umkehren"
 msgid "Swaps the first and second rails of the satin column, affecting which side the thread finished on as well as any sided properties"
 msgstr "Diese Einstellung beeinflusst, ob der Startpunkt der Satinsäule auf der linken oder rechten Seite liegt."
 
-#: lib/elements/satin_column.py:362
+#: lib/elements/satin_column.py:364
+msgid "Length of stitches for start and end point connections."
+msgstr ""
+
+#: lib/elements/satin_column.py:386
+msgid "Running Stitch Position"
+msgstr ""
+
+#: lib/elements/satin_column.py:387
+#, python-format
+msgid "Position of running stitches between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
+msgstr ""
+
+#: lib/elements/satin_column.py:395
+msgid "Start at nearest point"
+msgstr ""
+
+#: lib/elements/satin_column.py:396
+msgid "Start at nearest point to previous element. A start position command will overwrite this setting."
+msgstr ""
+
+#: lib/elements/satin_column.py:402
 msgid "Contour underlay"
 msgstr "Konturunterlage"
 
-#: lib/elements/satin_column.py:362 lib/elements/satin_column.py:369
-#: lib/elements/satin_column.py:383 lib/elements/satin_column.py:395
-#: lib/elements/satin_column.py:410
+#: lib/elements/satin_column.py:402 lib/elements/satin_column.py:409
+#: lib/elements/satin_column.py:423 lib/elements/satin_column.py:435
+#: lib/elements/satin_column.py:450
 msgid "Contour Underlay"
 msgstr "Konturunterlage"
 
-#: lib/elements/satin_column.py:369 lib/elements/satin_column.py:426
+#: lib/elements/satin_column.py:409 lib/elements/satin_column.py:466
 msgid "Stitch length"
 msgstr "Stichlänge"
 
-#: lib/elements/satin_column.py:376 lib/elements/satin_column.py:433
+#: lib/elements/satin_column.py:416 lib/elements/satin_column.py:473
 #: lib/elements/stroke.py:132
 msgid "Stitch tolerance"
 msgstr "Stichtoleranz"
 
-#: lib/elements/satin_column.py:377
+#: lib/elements/satin_column.py:417
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. "
 msgstr "Alle Stiche müssen innerhalb dieser Toleranzgrenze zum Pfad liegen. Eine niedrigere Toleranz bedeutet, dass sich die Stichlänge mehr reduziert. Eine größere Toleranz kann zur Abrundung scharfer Ecken führen."
 
-#: lib/elements/satin_column.py:393
+#: lib/elements/satin_column.py:433
 msgid "Inset distance (fixed)"
 msgstr "Einzug (fest)"
 
-#: lib/elements/satin_column.py:394
+#: lib/elements/satin_column.py:434
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Verkleinert die Umrandung um eine feste Breite, um zu verhindern, dass die Unterlage an der Außenseite der Satinsäule sichtbar wird."
 
-#: lib/elements/satin_column.py:407
+#: lib/elements/satin_column.py:447
 msgid "Inset distance (proportional)"
 msgstr "Einzug (proportional)"
 
-#: lib/elements/satin_column.py:408
+#: lib/elements/satin_column.py:448
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Verkleinert die Breite der Satinsäule proportional im Verhältnis zur Ursprungsbreite. Dies verhindert, dass die Unterlage an der Außenseite der Satinsäule sichtbar wird."
 
-#: lib/elements/satin_column.py:419
+#: lib/elements/satin_column.py:459
 msgid "Center-walk underlay"
 msgstr "Mittellinien Unterlage"
 
-#: lib/elements/satin_column.py:419 lib/elements/satin_column.py:426
-#: lib/elements/satin_column.py:441 lib/elements/satin_column.py:454
-#: lib/elements/satin_column.py:464
+#: lib/elements/satin_column.py:459 lib/elements/satin_column.py:466
+#: lib/elements/satin_column.py:481 lib/elements/satin_column.py:494
+#: lib/elements/satin_column.py:504
 msgid "Center-Walk Underlay"
 msgstr "Mittellinien Unterlage"
 
-#: lib/elements/satin_column.py:434
+#: lib/elements/satin_column.py:474
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
 msgstr "Alle Stiche müssen innerhalb dieser Toleranzgrenze zum Pfad liegen. Eine niedrigere Toleranz bedeutet, dass sich die Stichlänge mehr reduziert. Eine größere Toleranz kann zur Abrundung scharfer Ecken führen. Der Standardwert ist die Stichlänge."
 
-#: lib/elements/satin_column.py:452
+#: lib/elements/satin_column.py:492
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr "Bei einer ungeraden Anzahl an Wiederholungen wird die Richtung, in die die Satinsäule verläuft, umgekehrt. Sie endet dementsprechend wieder am Startpunkt."
 
-#: lib/elements/satin_column.py:462 lib/gui/tartan/customize_panel.py:38
+#: lib/elements/satin_column.py:502 lib/gui/tartan/customize_panel.py:38
 msgid "Position"
 msgstr "Position"
 
-#: lib/elements/satin_column.py:463
+#: lib/elements/satin_column.py:503
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr "Position der Unterlage zwischen den Außenseiten. 0% liegt genau auf der ersten Seite, 50% in der Mitte, 100% auf der zweiten Seite."
 
-#: lib/elements/satin_column.py:471
+#: lib/elements/satin_column.py:511
 msgid "Zig-zag underlay"
 msgstr "Zick-Zack Unterlage"
 
-#: lib/elements/satin_column.py:471 lib/elements/satin_column.py:480
-#: lib/elements/satin_column.py:491 lib/elements/satin_column.py:511
-#: lib/elements/satin_column.py:524
+#: lib/elements/satin_column.py:511 lib/elements/satin_column.py:520
+#: lib/elements/satin_column.py:531 lib/elements/satin_column.py:551
+#: lib/elements/satin_column.py:564
 msgid "Zig-zag Underlay"
 msgstr "Zick-Zack Unterlage"
 
-#: lib/elements/satin_column.py:477
+#: lib/elements/satin_column.py:517
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Zick-Zack Abstand (Spitze zu Spitze)"
 
-#: lib/elements/satin_column.py:478
+#: lib/elements/satin_column.py:518
 msgid "Distance between peaks of the zig-zags."
 msgstr "Abstand zwischen den Spitzen der Zick-Zacks."
 
-#: lib/elements/satin_column.py:488
+#: lib/elements/satin_column.py:528
 msgid "Inset amount (fixed)"
 msgstr "Einzug (fest)"
 
-#: lib/elements/satin_column.py:489 lib/elements/satin_column.py:509
+#: lib/elements/satin_column.py:529 lib/elements/satin_column.py:549
 msgid "default: half of contour underlay inset"
 msgstr "Voreinstellung: Hälfte des Einzuges der Konturunterlage"
 
-#: lib/elements/satin_column.py:508
+#: lib/elements/satin_column.py:548
 msgid "Inset amount (proportional)"
 msgstr "Einzug (proportional)"
 
-#: lib/elements/satin_column.py:522
+#: lib/elements/satin_column.py:562
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Stich unterteilen, wenn maximale Stichlänge überschritten ist"
 
@@ -2144,11 +2152,11 @@ msgstr "Manuelle Stichpositionierung"
 
 #: lib/elements/stroke.py:108
 msgid "Manual stitch placement"
-msgstr ""
+msgstr "Manuelle Stichpositionierung"
 
 #: lib/elements/stroke.py:109
 msgid "No extra stitches will be added to the original ripple pattern and the running stitch length value will be ignored."
-msgstr ""
+msgstr "Es werden keine zusätzlichen Stiche zum ursprünglichen Muster hinzugefügt. Dies überschreibt den Wert für die Stichlänge."
 
 #: lib/elements/stroke.py:121
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
@@ -2184,11 +2192,11 @@ msgstr "Diese Einstellung überschreibt den Wert \"Anzahl der Linien\""
 
 #: lib/elements/stroke.py:239
 msgid "Render at rungs"
-msgstr ""
+msgstr "Muster an Richtungsvektoren positionieren"
 
 #: lib/elements/stroke.py:240
 msgid "Position satin guided pattern at rungs."
-msgstr ""
+msgstr "Positioniert das durch eine Satinsäule geführte Muster über den Richtungsvektoren."
 
 #: lib/elements/stroke.py:250
 msgid "Stagger lines this many times before repeating"
@@ -2216,11 +2224,11 @@ msgstr "Diese Anzahl an Linien am Ende überspringen"
 
 #: lib/elements/stroke.py:288
 msgid "Flip every second line"
-msgstr ""
+msgstr "Jede zweite Reihe umkehren"
 
 #: lib/elements/stroke.py:289
 msgid "Linear ripple: wether to flip the pattern every second line or not."
-msgstr ""
+msgstr "Lineare Ripple: bestimmt ob jede zweite Reihe in umgekehrter oder gleicher Richtung verläuft."
 
 #: lib/elements/stroke.py:299
 msgid "Line distance exponent"
@@ -2354,11 +2362,11 @@ msgstr "Sende die Fehlerbeschreibung und (wenn möglich) auch die SVG-Datei."
 
 #: lib/extensions/apply_palette.py:25
 msgid "There is no stitchable element in the document."
-msgstr ""
+msgstr "Es gibt kein stickbares Element im Dokument."
 
 #: lib/extensions/apply_palette.py:26
 msgid "https://inkstitch.org/"
-msgstr ""
+msgstr "https://inkstitch.org/de/"
 
 #: lib/extensions/apply_threadlist.py:77
 msgid "File not found."
@@ -2912,7 +2920,6 @@ msgid "Title"
 msgstr "Titel"
 
 #: lib/extensions/thread_list.py:51 lib/gui/lettering/option_panel.py:50
-#: inx/inkstitch_commands_scale_symbols.inx:6
 #: inx/inkstitch_lettering_generate_json.inx:84
 msgid "Size"
 msgstr "Größe"
@@ -2944,7 +2951,7 @@ msgstr "Beschreibung"
 
 #: lib/extensions/troubleshoot.py:112 lib/extensions/troubleshoot.py:158
 #: inx/inkstitch_cleanup.inx:36 inx/inkstitch_element_info.inx:12
-#: inx/inkstitch_remove_embroidery_settings.inx:157
+#: inx/inkstitch_remove_embroidery_settings.inx:155
 #: inx/inkstitch_select_elements.inx:91 inx/inkstitch_troubleshoot.inx:26
 #: inx/inkstitch_update_svg.inx:11
 msgid "Troubleshoot"
@@ -3030,7 +3037,7 @@ msgstr "Lizenz"
 
 #: lib/gui/apply_palette.py:30
 msgid "Palettes"
-msgstr ""
+msgstr "Garnpaletten"
 
 #: lib/gui/apply_palette.py:33
 msgid "Select color palette"
@@ -3067,7 +3074,7 @@ msgstr "Anwenden"
 #: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_png_realistic.inx:17
 #: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:23
 #: inx/inkstitch_remove_duplicated_points.inx:14
-#: inx/inkstitch_remove_embroidery_settings.inx:142
+#: inx/inkstitch_remove_embroidery_settings.inx:140
 #: inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stitch_plan_preview.inx:37
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26 inx/inkstitch_troubleshoot.inx:12
@@ -3084,7 +3091,7 @@ msgstr "Diese Erweiterung wendet die ähnlichsten Farben aus der ausgewählten F
 msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
 msgstr "https://inkstitch.org/de/docs/thread-color/#farbpalette-anwenden"
 
-#: lib/gui/apply_palette.py:95 lib/gui/request_update_svg_version.py:75
+#: lib/gui/apply_palette.py:95
 msgid "Ink/Stitch"
 msgstr ""
 
@@ -3092,7 +3099,7 @@ msgstr ""
 msgid "Element Info"
 msgstr "Element Info"
 
-#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:92
+#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:113
 msgid "Info"
 msgstr "Info"
 
@@ -3133,7 +3140,7 @@ msgstr "Diese Schriftart hat keine verfügbare Schriftvariante. Bitte aktualisie
 #. make sure to double it (%%).
 #: lib/gui/lettering/main_panel.py:292
 msgid "Text scale"
-msgstr ""
+msgstr "Text-Skalierung"
 
 #: lib/gui/lettering/main_panel.py:305
 #, python-format
@@ -3172,7 +3179,7 @@ msgstr "Sticke Textzeilen vor und zurück"
 
 #: lib/gui/lettering/option_panel.py:68
 msgid "Sort multicolor fonts. Unifies tartan patterns."
-msgstr ""
+msgstr "Sortiert mehrfarbige Schriften. Tartan-Schriften werden dabei auf ein Muster reduziert."
 
 #: lib/gui/lettering/option_panel.py:70
 msgid "Never"
@@ -3216,7 +3223,7 @@ msgstr "Fadenschnittbefehle hinzufügen"
 msgid "Font Sampling"
 msgstr "Zeichentabelle"
 
-#: lib/gui/lettering_font_sample.py:31 lib/gui/simulator/view_panel.py:101
+#: lib/gui/lettering_font_sample.py:31 lib/gui/simulator/view_panel.py:122
 #: print/templates/ui.html:5 print/templates/ui.html:15
 #: inx/inkstitch_lettering_generate_json.inx:60
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
@@ -3237,7 +3244,7 @@ msgstr "Maximale Zeilenlänge"
 
 #: lib/gui/lettering/option_panel.py:66 lib/gui/lettering_font_sample.py:48
 msgid "Color sort"
-msgstr ""
+msgstr "Farbsortierung"
 
 #: lib/gui/lettering_font_sample.py:81
 msgid "    This extension helps font creators to generate an output of every glyph from a selected font."
@@ -3346,11 +3353,13 @@ msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen 
 msgid "Unversioned Ink/Stitch SVG file detected.\n\n"
 "* If you opened an old design file, please update.\n"
 "* If you copy pasted objects into an empty file, please cancel."
-msgstr ""
+msgstr "Unversionierte Ink/Stitch SVG-Datei erkannt.\n\n"
+"* Wenn du eine alte Design-Datei geöffnet hast, klicke auf Update.\n"
+"* Hast du einzelne Elemente aus einer Datei in eine neue Datei kopiert, klicke auf Abbrechen."
 
 #: lib/gui/request_update_svg_version.py:37
 msgid "Update"
-msgstr ""
+msgstr "Aktualisieren"
 
 #: lib/gui/satin_multicolor/color_panel.py:19 lib/gui/tartan/stripe_panel.py:19
 msgid "Click to move color up."
@@ -3554,55 +3563,55 @@ msgstr "Punktgröße für Nadeleinstichstellen (mm)"
 msgid "Embroidery Simulation"
 msgstr "Stick Simulation"
 
-#: lib/gui/simulator/view_panel.py:32
+#: lib/gui/simulator/view_panel.py:39
 msgid "Display needle penetration point (O)"
 msgstr "Zeige Nadeleinstichpositionen (O)"
 
-#: lib/gui/simulator/view_panel.py:34
+#: lib/gui/simulator/view_panel.py:43
 msgid "Show jump stitches"
 msgstr "Sprungstiche anzeigen"
 
-#: lib/gui/simulator/view_panel.py:38
+#: lib/gui/simulator/view_panel.py:50
 msgid "Show trims"
 msgstr "Fadenschnittbefehle anzeigen"
 
-#: lib/gui/simulator/view_panel.py:42
+#: lib/gui/simulator/view_panel.py:57
 msgid "Show stops"
 msgstr "Stoppbefehle anzeigen"
 
-#: lib/gui/simulator/view_panel.py:46
+#: lib/gui/simulator/view_panel.py:64
 msgid "Show color changes"
 msgstr "Farbwechsel anzeigen"
 
-#: lib/gui/simulator/view_panel.py:51
+#: lib/gui/simulator/view_panel.py:72
 msgid "Open info dialog"
 msgstr "Info-Box öffnen"
 
-#: lib/gui/simulator/view_panel.py:56
+#: lib/gui/simulator/view_panel.py:77
 msgid "Change background color"
 msgstr "Hintergrundfarbe ändern"
 
-#: lib/gui/simulator/view_panel.py:64
+#: lib/gui/simulator/view_panel.py:85
 msgid "Show page"
 msgstr "Seite anzeigen"
 
-#: lib/gui/simulator/view_panel.py:67
+#: lib/gui/simulator/view_panel.py:88
 msgid "Open settings dialog"
 msgstr "Einstellungen öffnen"
 
-#: lib/gui/simulator/view_panel.py:73
+#: lib/gui/simulator/view_panel.py:94
 msgid "Detach/attach simulator window"
 msgstr "Simulator-Fenster loslösen/anhängen"
 
-#: lib/gui/simulator/view_panel.py:79
+#: lib/gui/simulator/view_panel.py:100
 msgid "Show"
 msgstr "Zeige"
 
-#: lib/gui/simulator/view_panel.py:145
+#: lib/gui/simulator/view_panel.py:171
 msgid "Simulator Preferences"
 msgstr "Simulator Einstellungen"
 
-#: lib/gui/simulator/view_panel.py:153
+#: lib/gui/simulator/view_panel.py:179
 msgid "Design Info"
 msgstr "Design Info"
 
@@ -3810,7 +3819,7 @@ msgstr "Diese Erweiterung generiert Testmuster von einer Auswahl.\n"
 #: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:100
 #: inx/inkstitch_fill_to_stroke.inx:33 inx/inkstitch_jump_to_stroke.inx:44
 #: inx/inkstitch_jump_to_trim.inx:29
-#: inx/inkstitch_remove_embroidery_settings.inx:145
+#: inx/inkstitch_remove_embroidery_settings.inx:143
 #: inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
 msgid "Get more information on our website"
@@ -3901,7 +3910,7 @@ msgstr "Die Schrift '%s' hat keine Varianten."
 
 #: lib/lettering/font.py:488
 msgid "Color Group"
-msgstr ""
+msgstr "Farbgruppe"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
@@ -4008,7 +4017,7 @@ msgstr "Stichplan"
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr "AnalysiereLängeMitEinheiten: Unbekannte Einheit %s"
 
-#: lib/update.py:32
+#: lib/update.py:33
 msgid "This document was created with a newer Version of Ink/Stitch. It is possible that not everything works as expected.\n\n"
 "Please update your Ink/Stitch version: https://inkstitch.org/docs/install/"
 msgstr "Dieses Dokument wurde mit einer neueren Version von Ink/Stitch erstellt. Es ist möglich, dass nicht alles so funktioniert wie erwartet.\n\n"
@@ -4620,7 +4629,7 @@ msgstr "Farbpalette anwenden"
 
 #: inx/inkstitch_apply_palette.inx:9
 msgid "Matches colors of all elements in the document to a specified palette"
-msgstr ""
+msgstr "Passt die Farben aller Elemente im Dokument an die ausgewählte Garnpalette an"
 
 #: inx/inkstitch_apply_palette.inx:12 inx/inkstitch_apply_threadlist.inx:110
 #: inx/inkstitch_generate_palette.inx:12 inx/inkstitch_install.inx:12
@@ -4685,7 +4694,7 @@ msgstr "https://inkstitch.org/de/docs/thread-color/#garnfarben-liste-anwenden"
 
 #: inx/inkstitch_apply_threadlist.inx:107
 msgid "Applies colors from a specified color file onto the objects in this document."
-msgstr ""
+msgstr "Wendet Farben aus der ausgewählten Garnfarbendatei auf die Objekte in diesem Dokument an."
 
 #: inx/inkstitch_auto_run.inx:3 inx/inkstitch_auto_run.inx:26
 msgid "Auto-Route Running Stitch"
@@ -4693,7 +4702,7 @@ msgstr "Automatisch geführter Geradstich"
 
 #: inx/inkstitch_auto_run.inx:9
 msgid "Generates a continuous path through all selected elements"
-msgstr ""
+msgstr "Erzeugt einen durchgehenden Pfad durch alle ausgewählten Elemente"
 
 #: inx/inkstitch_auto_run.inx:12 inx/inkstitch_convert_to_stroke.inx:25
 #: inx/inkstitch_fill_to_stroke.inx:11 inx/inkstitch_jump_to_stroke.inx:12
@@ -4777,7 +4786,7 @@ msgstr "https://inkstitch.org/de/docs/satin-tools/#automatisch-geführte-satins�
 
 #: inx/inkstitch_auto_satin.inx:23
 msgid "Generates a continuous path through selected satin elements"
-msgstr ""
+msgstr "Erzeugt einen durchgehenden Pfad durch die ausgewählten Satinsäulen"
 
 #: inx/inkstitch_auto_satin.inx:26 inx/inkstitch_convert_to_satin.inx:11
 #: inx/inkstitch_cut_satin.inx:12 inx/inkstitch_flip.inx:11
@@ -4805,7 +4814,7 @@ msgstr "https://inkstitch.org/de/docs/fill-tools/#farbverlauf-in-blöcke-aufteil
 
 #: inx/inkstitch_break_apart.inx:28
 msgid "Break apart and repair (broken) fill shapes"
-msgstr ""
+msgstr "Repariert Füllelemente und teilt sie in einzelne stickbare Bereiche auf"
 
 #: inx/inkstitch_break_apart.inx:31 inx/inkstitch_gradient_blocks.inx:12
 #: inx/inkstitch_tartan.inx:12
@@ -4862,19 +4871,23 @@ msgstr "https://inkstitch.org/de/docs/troubleshoot/#dokument-bereinigen"
 
 #: inx/inkstitch_cleanup.inx:33
 msgid "Remove small unstitchable elements"
-msgstr ""
+msgstr "Kleine, nicht stickbare Elemente entfernen"
 
 #: inx/inkstitch_commands_scale_symbols.inx:3
 msgid "Scale Command Symbols"
 msgstr "Befehlsymbole skalieren"
 
+#: inx/inkstitch_commands_scale_symbols.inx:6
+msgid "Size (%)"
+msgstr ""
+
 #: inx/inkstitch_commands_scale_symbols.inx:10
 msgid "Adjust all command symbol sizes at once"
-msgstr ""
+msgstr "Die Größe aller Befehlssymbole auf einmal anpassen"
 
 #: inx/inkstitch_commands_scale_symbols.inx:13
 #: inx/inkstitch_global_commands.inx:19 inx/inkstitch_jump_to_trim.inx:12
-#: inx/inkstitch_layer_commands.inx:16 inx/inkstitch_object_commands.inx:23
+#: inx/inkstitch_layer_commands.inx:16 inx/inkstitch_object_commands.inx:21
 #: inx/inkstitch_object_commands_toggle_visibility.inx:11
 msgid "Commands"
 msgstr "Befehle"
@@ -4914,7 +4927,7 @@ msgstr "Satinsäule schneiden"
 
 #: inx/inkstitch_cut_satin.inx:9
 msgid "Split a satin column and keep Ink/Stitch settings"
-msgstr ""
+msgstr "Teilt Satinsäulen an vordefinierter Stelle auf, ohne die Ink/Stitch Einstellungen zu verlieren"
 
 #: inx/inkstitch_cutwork_segmentation.inx:3
 msgid "Cutwork segmentation"
@@ -4922,7 +4935,7 @@ msgstr "Cutwork Segmentierung"
 
 #: inx/inkstitch_cutwork_segmentation.inx:9
 msgid "Splits a path into cutwork segments according to cut angle"
-msgstr ""
+msgstr "Teilt einen Pfad nach Schnittwinkel in Cutwork-Segmente auf"
 
 #: inx/inkstitch_cutwork_segmentation.inx:15
 msgid "Cutwork Options"
@@ -5056,7 +5069,7 @@ msgstr "https://inkstitch.org/de/docs/visualize/#dichte-indikator"
 
 #: inx/inkstitch_density_map.inx:37
 msgid "Displays a colored dot at each stitch position"
-msgstr ""
+msgstr "Zeigt an jeder Stichposition einen farbigen Punkt an"
 
 #: inx/inkstitch_density_map.inx:40 inx/inkstitch_display_stacking_order.inx:25
 #: inx/inkstitch_print.inx:11 inx/inkstitch_simulator.inx:11
@@ -5083,7 +5096,7 @@ msgstr "https://inkstitch.org/de/docs/visualize/#stickreihenfolge-anzeigen"
 
 #: inx/inkstitch_display_stacking_order.inx:22
 msgid "Generates numbered labels to indicate the stitching order"
-msgstr ""
+msgstr "Erzeugt nummerierte Beschriftungen zur Anzeige der Nähreihenfolge"
 
 #: inx/inkstitch_duplicate_params.inx:3
 msgid "Duplicate Params"
@@ -5091,7 +5104,7 @@ msgstr "Parameter duplizieren"
 
 #: inx/inkstitch_duplicate_params.inx:9
 msgid "Applies params from first selected element to the rest of the selection"
-msgstr ""
+msgstr "Wendet Parameter vom ersten ausgewählten Element auf den Rest der Auswahl an"
 
 #: inx/inkstitch_duplicate_params.inx:12
 #: inx/inkstitch_remove_duplicated_points.inx:34 inx/inkstitch_reorder.inx:11
@@ -5104,7 +5117,7 @@ msgstr "Bearbeiten"
 
 #: inx/inkstitch_element_info.inx:9
 msgid "Display embroidery info for selected elements"
-msgstr ""
+msgstr "Stickinformationen für ausgewählte Elemente anzeigen"
 
 #: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:25
 msgid "Fill to Stroke"
@@ -5148,7 +5161,7 @@ msgstr "Farbpalette erstellen"
 
 #: inx/inkstitch_generate_palette.inx:9
 msgid "Generate a custom color palette from colored text elements"
-msgstr ""
+msgstr "Benutzerdefinierte Farbpalette aus farbigen Textelementen generieren"
 
 #: inx/inkstitch_generate_palette.inx:13
 #: inx/inkstitch_palette_split_text.inx:12
@@ -5197,7 +5210,7 @@ msgstr "Diese Befehle wirken sich auf das gesamte Stickdesign aus."
 
 #: inx/inkstitch_global_commands.inx:15
 msgid "Add commands which affect the entire document"
-msgstr ""
+msgstr "Befehle hinzufügen, die sich auf das gesamte Dokument auswirken"
 
 #: inx/inkstitch_gradient_blocks.inx:3
 msgid "Convert to gradient blocks"
@@ -5205,7 +5218,7 @@ msgstr "Farbverlauf in Blöcke aufteilen"
 
 #: inx/inkstitch_gradient_blocks.inx:9
 msgid "Split a fill with a gradient into single colored blocks"
-msgstr ""
+msgstr "Eine Füllung mit einem Farbverlauf in einzelne farbige Blöcke aufteilen"
 
 #: inx/inkstitch_gradient_blocks.inx:24
 msgid "Set to zero to use twice the row spacing value"
@@ -5797,7 +5810,7 @@ msgstr "Garnfarbpaletten für Inkscape installieren"
 
 #: inx/inkstitch_install.inx:9
 msgid "Installs color palettes for various thread brands into Inkscape"
-msgstr ""
+msgstr "Installiert Farbpaletten verschiedener Garnhersteller in Inkscape"
 
 #: inx/inkstitch_install_custom_palette.inx:3
 msgid "Install custom palette"
@@ -5821,7 +5834,7 @@ msgstr "https://inkstitch.org/de/docs/thread-color/#benutzerdefinierte-farbpalet
 
 #: inx/inkstitch_install_custom_palette.inx:25
 msgid "Installs a custom color palette into Inkscape"
-msgstr ""
+msgstr "Installiert eine benutzerdefinierte Farbpalette in Inkscape"
 
 #: inx/inkstitch_jump_to_stroke.inx:3
 msgid "Jump Stitch to Stroke"
@@ -5829,7 +5842,7 @@ msgstr "Sprungstich zu Linie"
 
 #: inx/inkstitch_jump_to_stroke.inx:9
 msgid "Converts a jump stitch between selected elements into a running stitch"
-msgstr ""
+msgstr "Wandelt Sprungstiche zwischen den ausgewählten Elementen in Geradstiche um"
 
 #: inx/inkstitch_jump_to_stroke.inx:19 inx/inkstitch_jump_to_trim.inx:19
 msgid "Convert jumps not shorter than (mm)"
@@ -5909,7 +5922,7 @@ msgstr "Sprungstich zu Fadenschnitt-Befehl"
 
 #: inx/inkstitch_jump_to_trim.inx:9
 msgid "Sets a trim command on elements which are followed by a jump stitch"
-msgstr ""
+msgstr "Setzt einen Fadenschnittbefehl auf Elemente, denen ein Sprungstich folgt"
 
 #: inx/inkstitch_jump_to_trim.inx:25
 msgid "Use command symbol"
@@ -5933,7 +5946,7 @@ msgstr "Befehle werden zur aktuell ausgewählten Ebene hinzugefügt."
 
 #: inx/inkstitch_layer_commands.inx:13
 msgid "Add commands which affect the containing layer"
-msgstr ""
+msgstr "Befehle hinzufügen, die sich auf eine Ebene auswirken"
 
 #: inx/inkstitch_lettering.inx:3
 msgid "Lettering"
@@ -5945,7 +5958,7 @@ msgstr "Text entlang Pfad"
 
 #: inx/inkstitch_lettering_along_path.inx:9
 msgid "Shapes a line of text onto a path"
-msgstr ""
+msgstr "Formt eine Ink/Stitch Textzeile auf einen Pfad"
 
 #: inx/inkstitch_lettering_along_path.inx:17
 msgid "Stretch"
@@ -6002,7 +6015,7 @@ msgstr "https://inkstitch.org/de/docs/font-tools/#benutzerdefinierter-ordner-fü
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:24
 msgid "Define a directory with custom fonts for the lettering tool"
-msgstr ""
+msgstr "Definiere ein Verzeichnis mit benutzerdefinierten Schriftarten für das Textwerkzeug"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:27
 #: inx/inkstitch_lettering_font_sample.inx:12
@@ -6017,7 +6030,7 @@ msgstr "Schriftverwaltung"
 
 #: inx/inkstitch_lettering_font_sample.inx:9
 msgid "Inserts all glyphs of a specified font into the document"
-msgstr ""
+msgstr "Fügt alle Glyphen einer angegebenen Schriftart in das Dokument ein"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:9
 msgid "Restrict to Satin"
@@ -6049,7 +6062,7 @@ msgstr "https://inkstitch.org/de/docs/font-tools/#vernähstiche-erzwingen"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:35
 msgid "Sets the forces lock stitch attribute on elements when the next element lies within a specified distance"
-msgstr ""
+msgstr "Legt das Attribut \"Vernähstiche erzwingen\" für Elemente fest, wenn das nächste Element innerhalb der angegebenen Entfernung liegt"
 
 #: inx/inkstitch_lettering_generate_json.inx:3
 msgid "Generate JSON"
@@ -6057,7 +6070,7 @@ msgstr "JSON erstellen"
 
 #: inx/inkstitch_lettering_generate_json.inx:9
 msgid "Generates the json file for a font so it can be used with the lettering tool"
-msgstr ""
+msgstr "Generiert die Json-Datei für eine Schriftart, damit diese mit dem Textwerkzeug verwendet werden kann"
 
 #: inx/inkstitch_lettering_generate_json.inx:18
 msgid "Font info"
@@ -6094,19 +6107,19 @@ msgstr "Wenn diese Funktion deaktiviert ist, ist die Option \"Sticke Textzeilen 
 
 #: inx/inkstitch_lettering_generate_json.inx:74
 msgid "Sortable"
-msgstr ""
+msgstr "Sortierbar"
 
 #: inx/inkstitch_lettering_generate_json.inx:74
 msgid "If disabled color sorting will be disabled for this font. Color sorting needs color_sort_index indicators within the font."
-msgstr ""
+msgstr "Wenn deaktiviert, wird die Farbsortierung für diese Schriftart deaktiviert. Die Farbsortierung erfordert Farbsortierindizes in der Schriftart."
 
 #: inx/inkstitch_lettering_generate_json.inx:76
 msgid "Combine indices"
-msgstr ""
+msgstr "Indizes kombinieren"
 
 #: inx/inkstitch_lettering_generate_json.inx:76
 msgid "When color sorting, combine elements with this color indices (comma separated)"
-msgstr ""
+msgstr "Bei der Farbsortierung Elemente mit diesen Farbindizes (durch Komma getrennt) kombinieren"
 
 #: inx/inkstitch_lettering_generate_json.inx:77
 msgid "Force letter case"
@@ -6200,23 +6213,23 @@ msgstr "https://inkstitch.org/de/docs/font-tools/#kerning-entfernen"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:30
 msgid "Removes Kerning information from specified SVG files"
-msgstr ""
+msgstr "Entfernt Kerning-Informationen aus angegebenen SVG-Dateien"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:3
 msgid "Set color sort index"
-msgstr ""
+msgstr "Farbsortierindex festlegen"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:9
 msgid "Color sort index"
-msgstr ""
+msgstr "Farbsortierindex"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:12
 msgid "Sets given color sort index on selected elements"
-msgstr ""
+msgstr "Legt den angegebenen Farbsortierindex für ausgewählte Elemente fest"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:14
 msgid "This sets the order of elements for multicolor fonts when color sorted."
-msgstr ""
+msgstr "Hierdurch wird die Reihenfolge der Elemente für mehrfarbige Schriftarten bei der Farbsortierung festgelegt."
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:20
 msgid "https://inkstitch.org/docs/font-tools/#set-color-sort-index"
@@ -6224,7 +6237,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:27
 msgid "Sets a color sort index on selected elements to define the stacking order for multicolor fonts"
-msgstr ""
+msgstr "Setzt einen Farbsortierindex auf ausgewählte Elemente, um die Reihenfolge für mehrfarbige Schriftarten festzulegen"
 
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:3
 msgid "Update Glyphlist"
@@ -6244,7 +6257,7 @@ msgstr "https://inkstitch.org/de/docs/font-tools/#liste-verfügbarer-zeichen-akt
 
 #: inx/inkstitch_lettering_update_json_glyphlist.inx:23
 msgid "Updates the glyphlist in the json file"
-msgstr ""
+msgstr "Aktualisiert die Zeichenliste in der json-Datei"
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
@@ -6288,19 +6301,19 @@ msgstr "https://inkstitch.org/de/docs/font-tools/#buchstaben-zu-schrift"
 
 #: inx/inkstitch_letters_to_font.inx:77
 msgid "Inserts all available glyphs of a pre-digitized font into the document to make them available for the lettering tool"
-msgstr ""
+msgstr "Fügt alle verfügbaren Glyphen einer vordigitalisierten Schriftart in das Dokument ein, um sie für das Textwerkzeug verfügbar zu machen"
 
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
 msgstr "Objektbefehle hinzufügen"
 
-#: inx/inkstitch_object_commands.inx:20
+#: inx/inkstitch_object_commands.inx:18
 msgid "Add commands which affect selected elememts"
-msgstr ""
+msgstr "Befehle hinzufügen, die sich auf die ausgewählten Elemente auswirken"
 
 #: inx/inkstitch_object_commands_toggle_visibility.inx:3
 msgid "Show|Hide Object Commands"
-msgstr ""
+msgstr "Objektbefehle anzeigen|verbergen"
 
 #: inx/inkstitch_outline.inx:3
 msgid "Outline"
@@ -6352,7 +6365,7 @@ msgstr "https://inkstitch.org/de/docs/stroke-tools/#außenkontur"
 
 #: inx/inkstitch_outline.inx:36
 msgid "Generates an outline around stitch paths"
-msgstr ""
+msgstr "Erzeugt einen Umriss um Stichpfade"
 
 #: inx/inkstitch_output_COL.inx:3
 msgid "COL file output"
@@ -6648,7 +6661,7 @@ msgstr "Palette zu Text"
 
 #: inx/inkstitch_palette_to_text.inx:8
 msgid "Imports a thread color palette as colored text"
-msgstr ""
+msgstr "Importiert eine Garnfarbpalette als farbigen Text"
 
 #: inx/inkstitch_palette_to_text.inx:18
 msgid "Choose a .gpl color palette file to import colors as text elements."
@@ -6672,7 +6685,7 @@ msgstr "Parameter"
 
 #: inx/inkstitch_params.inx:9
 msgid "Adapt embroidery settings"
-msgstr ""
+msgstr "Stickeinstellungen anpassen"
 
 #: inx/inkstitch_png_realistic.inx:3
 msgid "PNG file output (realistic)"
@@ -6761,7 +6774,7 @@ msgstr "https://inkstitch.org/de/docs/stroke-tools/#redwork"
 
 #: inx/inkstitch_redwork.inx:34
 msgid "Generates a path through all selected elements, passing each element exactly twice"
-msgstr ""
+msgstr "Erzeugt einen Pfad durch alle ausgewählten Elemente, wobei jedes Element genau zweimal durchlaufen wird"
 
 #: inx/inkstitch_remove_duplicated_points.inx:3
 msgid "Remove duplicated points"
@@ -6812,21 +6825,21 @@ msgstr "Befehle entfernen"
 msgid "Removes visual commands from selected objects or all objects if nothing is selected."
 msgstr "Entferne Befehle von ausgewählten Objekten oder allen Objekten, wenn keines ausgewählt ist."
 
-#: inx/inkstitch_remove_embroidery_settings.inx:139
+#: inx/inkstitch_remove_embroidery_settings.inx:137
 msgid "Remove Print Settings from SVG metadata"
 msgstr "Druckeinstellungen aus den SVG Metadaten entfernen"
 
-#: inx/inkstitch_remove_embroidery_settings.inx:143
+#: inx/inkstitch_remove_embroidery_settings.inx:141
 msgid "Use this extension to remove the information Ink/Stitch has stored in your document. This can be especially useful if you copy and paste objects from an embroidery design into another document."
 msgstr "Entfernt Informationen, die Ink/Stitch in diesem Dokument gespeichert hat. Das kann besonders dann hilfreich sein, wenn du Objekte aus einem Stickdesign in ein anderes Dokument kopierst."
 
-#: inx/inkstitch_remove_embroidery_settings.inx:146
+#: inx/inkstitch_remove_embroidery_settings.inx:144
 msgid "https://inkstitch.org/docs/troubleshoot/#remove-embroidery-settings"
 msgstr "https://inkstitch.org/de/docs/troubleshoot/#stickeinstellungen-entfernen"
 
-#: inx/inkstitch_remove_embroidery_settings.inx:154
+#: inx/inkstitch_remove_embroidery_settings.inx:152
 msgid "Remove specific or all embroidery settings from the document"
-msgstr ""
+msgstr "Bestimmte oder alle Stickeinstellungen aus dem Dokument entfernen"
 
 #: inx/inkstitch_reorder.inx:3
 msgid "Re-stack objects in order of selection"
@@ -6838,7 +6851,7 @@ msgstr "Mehrfarbige Satinsäule"
 
 #: inx/inkstitch_satin_multicolor.inx:9
 msgid "Generates a multicolor satin"
-msgstr ""
+msgstr "Erzeugt eine mehrfarbige Satinsäule"
 
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
@@ -6988,7 +7001,7 @@ msgstr "Auswahl zu Führungslinie"
 
 #: inx/inkstitch_selection_to_guide_line.inx:9
 msgid "Marks selected elements as guide lines"
-msgstr ""
+msgstr "Markiert ausgewählte Elemente als Führungslinien"
 
 #: inx/inkstitch_selection_to_pattern.inx:3
 msgid "Selection to pattern"
@@ -6996,7 +7009,7 @@ msgstr "Auswahl zu Muster"
 
 #: inx/inkstitch_selection_to_pattern.inx:9
 msgid "Marks selected elements as patterns"
-msgstr ""
+msgstr "Markiert ausgewählte Elemente als Muster"
 
 #: inx/inkstitch_simulator.inx:3
 msgid "Simulator"
@@ -7161,7 +7174,7 @@ msgstr "https://inkstitch.org/de/docs/satin-tools/#linie-zu-pfadeffekt-satin"
 
 #: inx/inkstitch_tartan.inx:9
 msgid "Tartan stripe editor"
-msgstr ""
+msgstr "Tartanmuster-Editor"
 
 #: inx/inkstitch_test_swatches.inx:3
 msgid "Generate Test Swatches from Selection"
@@ -7201,7 +7214,7 @@ msgstr "https://inkstitch.org/de/docs/troubleshoot/#fehlerbehebung"
 
 #: inx/inkstitch_troubleshoot.inx:23
 msgid "Marks problematic or possibly problematic spots in the document or selection"
-msgstr ""
+msgstr "Markiert problematische oder möglicherweise problematische Stellen im Dokument oder in der Auswahl"
 
 #: inx/inkstitch_unlink_clone.inx:3
 msgid "Unlink Clone"
@@ -7221,7 +7234,7 @@ msgstr "https://inkstitch.org/de/docs/edit/#klonverbindung-auftrennen"
 
 #: inx/inkstitch_unlink_clone.inx:20
 msgid "Unlink clones and apply the fill stitch angle"
-msgstr ""
+msgstr "Klonverbindung auftrennen und Füllstichwinkel anwenden"
 
 #: inx/inkstitch_update_svg.inx:3
 msgid "Update inkstitch svg"

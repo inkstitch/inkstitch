@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-01 01:51+0000\n"
-"PO-Revision-Date: 2024-12-07 01:38\n"
+"POT-Creation-Date: 2024-12-08 01:45+0000\n"
+"PO-Revision-Date: 2024-12-08 01:45\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 01:51+0000\n"
+"POT-Creation-Date: 2024-12-08 01:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -826,15 +826,15 @@ msgstr "Zkuste soubor importovat do Inkscape přes 'Soubor > Importovat...' (Ctr
 #. command attached to an object
 #: lib/commands.py:27 inx/inkstitch_object_commands.inx:4
 #: inx/inkstitch_remove_embroidery_settings.inx:118
-msgid "Fill stitch starting position"
-msgstr "Výchozí pozice vyplňovacího stehu"
+msgid "Starting position"
+msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:5
 #: inx/inkstitch_remove_embroidery_settings.inx:119
-msgid "Fill stitch ending position"
-msgstr "Konečná pozice výplňového stehu"
+msgid "Ending position"
+msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -847,80 +847,66 @@ msgstr "Cílová pozice"
 #. command attached to an object
 #: lib/commands.py:36 inx/inkstitch_object_commands.inx:7
 #: inx/inkstitch_remove_embroidery_settings.inx:121
-msgid "Auto-route running stitch starting position"
-msgstr "Výchozí poloha automatického vedení předního stehu"
+msgid "Auto-route starting position"
+msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:39 inx/inkstitch_object_commands.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:122
-msgid "Auto-route running stitch ending position"
-msgstr "Konečná poloha automatického vedení předního stehu"
+msgid "Auto-route ending position"
+msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:42 inx/inkstitch_object_commands.inx:9
 #: inx/inkstitch_remove_embroidery_settings.inx:123
-msgid "Auto-route satin stitch starting position"
-msgstr "Výchozí pozice saténového stehu automaticky"
-
-#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
-#. command attached to an object
-#: lib/commands.py:45 inx/inkstitch_object_commands.inx:10
-#: inx/inkstitch_remove_embroidery_settings.inx:124
-msgid "Auto-route satin stitch ending position"
-msgstr "Konečná pozice saténového stehu automaticky"
-
-#. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
-#. command attached to an object
-#: lib/commands.py:48 inx/inkstitch_object_commands.inx:11
-#: inx/inkstitch_remove_embroidery_settings.inx:125
 msgid "Stop (pause machine) after sewing this object"
 msgstr "Po vyšití tohoto předmětu zastavte (pauza stroje)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:51 inx/inkstitch_object_commands.inx:12
-#: inx/inkstitch_remove_embroidery_settings.inx:126
+#: lib/commands.py:45 inx/inkstitch_object_commands.inx:10
+#: inx/inkstitch_remove_embroidery_settings.inx:124
 msgid "Trim thread after sewing this object"
 msgstr "Po ušití tohoto předmětu odstřihněte nit"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:54 inx/inkstitch_object_commands.inx:13
-#: inx/inkstitch_remove_embroidery_settings.inx:127
+#: lib/commands.py:48 inx/inkstitch_object_commands.inx:11
+#: inx/inkstitch_remove_embroidery_settings.inx:125
 msgid "Ignore this object (do not stitch)"
 msgstr "Ignorovat tento objekt (nepřišívat)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
-#: lib/commands.py:57 inx/inkstitch_object_commands.inx:14
-#: inx/inkstitch_remove_embroidery_settings.inx:128
+#: lib/commands.py:51 inx/inkstitch_object_commands.inx:12
+#: inx/inkstitch_remove_embroidery_settings.inx:126
 msgid "Satin cut point (use with Cut Satin Column)"
 msgstr "Satinový řezný bod (použijte s Řez saténového sloupu)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects a layer
-#: lib/commands.py:60 inx/inkstitch_layer_commands.inx:7
-#: inx/inkstitch_remove_embroidery_settings.inx:131
+#: lib/commands.py:54 inx/inkstitch_layer_commands.inx:7
+#: inx/inkstitch_remove_embroidery_settings.inx:129
 msgid "Ignore layer (do not stitch any objects in this layer)"
 msgstr "Ignorovat vrstvu (nešít žádné objekty v této vrstvě)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
-#: lib/commands.py:63 inx/inkstitch_global_commands.inx:7
-#: inx/inkstitch_remove_embroidery_settings.inx:134
+#: lib/commands.py:57 inx/inkstitch_global_commands.inx:7
+#: inx/inkstitch_remove_embroidery_settings.inx:132
 msgid "Origin for exported embroidery files"
 msgstr "Původ exportovaných souborů výšivek"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command that affects entire document
-#: lib/commands.py:66 inx/inkstitch_global_commands.inx:9
-#: inx/inkstitch_remove_embroidery_settings.inx:136
+#: lib/commands.py:60 inx/inkstitch_global_commands.inx:9
+#: inx/inkstitch_remove_embroidery_settings.inx:134
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Cíl skoku pro příkazy zastavení (\"pozice mimo rám\")."
 
-#: lib/commands.py:275
+#: lib/commands.py:269
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr "Chyba: v dokumentu je více než jeden příkaz %(command)s, ale může být pouze jeden. Odstraňte prosím všechny kromě jednoho."
@@ -930,26 +916,26 @@ msgstr "Chyba: v dokumentu je více než jeden příkaz %(command)s, ale může 
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:282
+#: lib/commands.py:276
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:348 lib/commands.py:498
+#: lib/commands.py:342 lib/commands.py:492
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch příkaz"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:387
+#: lib/commands.py:381
 msgid "connector"
 msgstr "konektor"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:406
+#: lib/commands.py:400
 msgid "command marker"
 msgstr "tvůrce příkazů"
 
-#: lib/commands.py:487
+#: lib/commands.py:481
 msgid "Please select a layer to include layer commands."
 msgstr "Vyberte vrstvu, do které chcete zahrnout příkazy vrstvy."
 
@@ -1516,7 +1502,8 @@ msgstr "Podšívka"
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Při přesunu ze sekce do sekce se pohybujte uvnitř tvaru. Spodní stehy se vyhýbají pohybu ve směru úhlu řádku, takže nejsou viditelné. To jim dává zubatý vzhled."
 
-#: lib/elements/fill_stitch.py:454 lib/elements/stroke.py:120
+#: lib/elements/fill_stitch.py:454 lib/elements/satin_column.py:363
+#: lib/elements/stroke.py:120
 msgid "Running stitch length"
 msgstr "Délka předního stehu"
 
@@ -1524,11 +1511,11 @@ msgstr "Délka předního stehu"
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
 msgstr "Délka stehů kolem obrysu výplňové oblasti použité při přechodu ze sekce do sekce. Používá se také pro meandrové a kruhové výplně."
 
-#: lib/elements/fill_stitch.py:472
+#: lib/elements/fill_stitch.py:472 lib/elements/satin_column.py:374
 msgid "Running stitch tolerance"
 msgstr "Tolerance předního stehu"
 
-#: lib/elements/fill_stitch.py:473
+#: lib/elements/fill_stitch.py:473 lib/elements/satin_column.py:375
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Určuje, jak silně se Ink/Stitch snaží vyhnout sešívání mimo tvar. U nižších čísel je méně pravděpodobné, že sešívají mimo tvar, ale vyžadují více stehů."
 
@@ -1548,7 +1535,7 @@ msgstr "Nahodilý pohyb délky stehu"
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr "Maximální procento odchylky v délce použitého stehu, pokud je délka náhodná."
 
-#: lib/elements/fill_stitch.py:524 lib/elements/satin_column.py:451
+#: lib/elements/fill_stitch.py:524 lib/elements/satin_column.py:491
 #: lib/elements/stroke.py:82
 msgid "Repeats"
 msgstr "Opakování"
@@ -1610,7 +1597,7 @@ msgid "Fill stitch can pull the fabric together, resulting in a shape narrower t
 msgstr "Výplňový steh může přitáhnout látku k sobě, což má za následek užší tvar, než jaký kreslíte v Inkscape. Toto nastavení rozšíří každou řadu stehů směrem ven ze středu řady o pevnou délku. Dvě hodnoty oddělené mezerou lze použít pro asymetrický efekt."
 
 #: lib/elements/fill_stitch.py:609 lib/elements/satin_column.py:281
-#: lib/elements/satin_column.py:396 lib/elements/satin_column.py:490
+#: lib/elements/satin_column.py:436 lib/elements/satin_column.py:530
 msgid "mm (each side)"
 msgstr "mm (každá strana)"
 
@@ -1624,7 +1611,7 @@ msgstr "Dodatečná kompenzace tahu, která se mění jako procento šířky ř�
 
 #: lib/elements/fill_stitch.py:624 lib/elements/satin_column.py:131
 #: lib/elements/satin_column.py:141 lib/elements/satin_column.py:265
-#: lib/elements/satin_column.py:411 lib/elements/satin_column.py:510
+#: lib/elements/satin_column.py:451 lib/elements/satin_column.py:550
 msgid "% (each side)"
 msgstr "% (každá strana)"
 
@@ -1670,12 +1657,12 @@ msgstr "výchozí: rovná se maximální délce stehu výplně"
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Zmenší tvar před vytvořením podkladu, aby se zabránilo zobrazení podkladu mimo výplň."
 
-#: lib/elements/fill_stitch.py:735 lib/elements/satin_column.py:532
+#: lib/elements/fill_stitch.py:735 lib/elements/satin_column.py:572
 #: lib/elements/stroke.py:431 lib/gui/satin_multicolor/colorize_panel.py:57
 msgid "Random seed"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:736 lib/elements/satin_column.py:533
+#: lib/elements/fill_stitch.py:736 lib/elements/satin_column.py:573
 #: lib/elements/stroke.py:432
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Toto nastavte, když potřebujete opravit vzor pro náhodně určené atributy. Pokud je prázdné, použije se ID prvku."
@@ -1904,7 +1891,7 @@ msgstr "Metoda rozdělení"
 msgid "Display needle penetration points in simulator to see the effect of each split method."
 msgstr "Zobrazte body průniku jehly v simulátoru, abyste viděli účinek každé metody rozdělení."
 
-#: lib/elements/satin_column.py:172 lib/elements/satin_column.py:521
+#: lib/elements/satin_column.py:172 lib/elements/satin_column.py:561
 msgid "Maximum stitch length"
 msgstr "Maximální délka stehu"
 
@@ -2004,103 +1991,124 @@ msgstr "Vyměnit obrysové čáry"
 msgid "Swaps the first and second rails of the satin column, affecting which side the thread finished on as well as any sided properties"
 msgstr "Prohodí první a druhou obrysovou čáru saténového sloupku a ovlivní, na které straně je nit ukončena, stejně jako případné stranové vlastnosti"
 
-#: lib/elements/satin_column.py:362
+#: lib/elements/satin_column.py:364
+msgid "Length of stitches for start and end point connections."
+msgstr ""
+
+#: lib/elements/satin_column.py:386
+msgid "Running Stitch Position"
+msgstr ""
+
+#: lib/elements/satin_column.py:387
+#, python-format
+msgid "Position of running stitches between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
+msgstr ""
+
+#: lib/elements/satin_column.py:395
+msgid "Start at nearest point"
+msgstr ""
+
+#: lib/elements/satin_column.py:396
+msgid "Start at nearest point to previous element. A start position command will overwrite this setting."
+msgstr ""
+
+#: lib/elements/satin_column.py:402
 msgid "Contour underlay"
 msgstr "Konturová podšívka"
 
-#: lib/elements/satin_column.py:362 lib/elements/satin_column.py:369
-#: lib/elements/satin_column.py:383 lib/elements/satin_column.py:395
-#: lib/elements/satin_column.py:410
+#: lib/elements/satin_column.py:402 lib/elements/satin_column.py:409
+#: lib/elements/satin_column.py:423 lib/elements/satin_column.py:435
+#: lib/elements/satin_column.py:450
 msgid "Contour Underlay"
 msgstr "Konturová Podšívka"
 
-#: lib/elements/satin_column.py:369 lib/elements/satin_column.py:426
+#: lib/elements/satin_column.py:409 lib/elements/satin_column.py:466
 msgid "Stitch length"
 msgstr "Délka stehu"
 
-#: lib/elements/satin_column.py:376 lib/elements/satin_column.py:433
+#: lib/elements/satin_column.py:416 lib/elements/satin_column.py:473
 #: lib/elements/stroke.py:132
 msgid "Stitch tolerance"
 msgstr "Tolerance stehu"
 
-#: lib/elements/satin_column.py:377
+#: lib/elements/satin_column.py:417
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. "
 msgstr "Všechny stehy se musí nacházet v této vzdálenosti od cesty. Nižší tolerance znamená, že stehy budou blíže k sobě. Vyšší tolerance znamená, že ostré rohy mohou být zaoblené. "
 
-#: lib/elements/satin_column.py:393
+#: lib/elements/satin_column.py:433
 msgid "Inset distance (fixed)"
 msgstr "Vzdálenost vsazení (pevná)"
 
-#: lib/elements/satin_column.py:394
+#: lib/elements/satin_column.py:434
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Zkraťte obrys o pevnou délku, aby se podložka neobjevila na vnější straně saténového sloupku."
 
-#: lib/elements/satin_column.py:407
+#: lib/elements/satin_column.py:447
 msgid "Inset distance (proportional)"
 msgstr "Vzdálenost vsazení (proporcionální)"
 
-#: lib/elements/satin_column.py:408
+#: lib/elements/satin_column.py:448
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Zmenšete obrys o poměrnou část šířky sloupku, aby se podložka neobjevila kolem vnější strany saténového sloupku."
 
-#: lib/elements/satin_column.py:419
+#: lib/elements/satin_column.py:459
 msgid "Center-walk underlay"
 msgstr "Středová podšívka"
 
-#: lib/elements/satin_column.py:419 lib/elements/satin_column.py:426
-#: lib/elements/satin_column.py:441 lib/elements/satin_column.py:454
-#: lib/elements/satin_column.py:464
+#: lib/elements/satin_column.py:459 lib/elements/satin_column.py:466
+#: lib/elements/satin_column.py:481 lib/elements/satin_column.py:494
+#: lib/elements/satin_column.py:504
 msgid "Center-Walk Underlay"
 msgstr "Středová podšívka"
 
-#: lib/elements/satin_column.py:434
+#: lib/elements/satin_column.py:474
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
 msgstr "Všechny stehy musí být v této vzdálenosti od cesty. Nižší tolerance znamená, že stehy budou blíže k sobě. Vyšší tolerance znamená, že ostré rohy mohou být zaoblené. Výchozí délka stehu."
 
-#: lib/elements/satin_column.py:452
+#: lib/elements/satin_column.py:492
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr "Pro lichý počet opakování se tím obrátí směr prošívání saténového sloupku, což způsobí, že šití začíná i končí v počátečním bodě."
 
-#: lib/elements/satin_column.py:462 lib/gui/tartan/customize_panel.py:38
+#: lib/elements/satin_column.py:502 lib/gui/tartan/customize_panel.py:38
 msgid "Position"
 msgstr "Poloha"
 
-#: lib/elements/satin_column.py:463
+#: lib/elements/satin_column.py:503
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr "Poloha podšívky mezi kolejnicemi. 0 % je podél první kolejnice, 50 % je vystředěno, 100 % je podél druhé kolejnice."
 
-#: lib/elements/satin_column.py:471
+#: lib/elements/satin_column.py:511
 msgid "Zig-zag underlay"
 msgstr "Cik-cak podšívka"
 
-#: lib/elements/satin_column.py:471 lib/elements/satin_column.py:480
-#: lib/elements/satin_column.py:491 lib/elements/satin_column.py:511
-#: lib/elements/satin_column.py:524
+#: lib/elements/satin_column.py:511 lib/elements/satin_column.py:520
+#: lib/elements/satin_column.py:531 lib/elements/satin_column.py:551
+#: lib/elements/satin_column.py:564
 msgid "Zig-zag Underlay"
 msgstr "Cik-cak Podšívka"
 
-#: lib/elements/satin_column.py:477
+#: lib/elements/satin_column.py:517
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Rozestup cik-cak (od vrcholu k vrcholu)"
 
-#: lib/elements/satin_column.py:478
+#: lib/elements/satin_column.py:518
 msgid "Distance between peaks of the zig-zags."
 msgstr "Vzdálenost mezi vrcholy cik-cak bodů."
 
-#: lib/elements/satin_column.py:488
+#: lib/elements/satin_column.py:528
 msgid "Inset amount (fixed)"
 msgstr "Odsazení (pevné)"
 
-#: lib/elements/satin_column.py:489 lib/elements/satin_column.py:509
+#: lib/elements/satin_column.py:529 lib/elements/satin_column.py:549
 msgid "default: half of contour underlay inset"
 msgstr "výchozí: polovina odsazení obrysu podložení"
 
-#: lib/elements/satin_column.py:508
+#: lib/elements/satin_column.py:548
 msgid "Inset amount (proportional)"
 msgstr "Odsazení (proporcionální)"
 
-#: lib/elements/satin_column.py:522
+#: lib/elements/satin_column.py:562
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Rozdělte steh, pokud je překročena vzdálenost maximální délky stehu"
 
@@ -2911,7 +2919,6 @@ msgid "Title"
 msgstr "Název"
 
 #: lib/extensions/thread_list.py:51 lib/gui/lettering/option_panel.py:50
-#: inx/inkstitch_commands_scale_symbols.inx:6
 #: inx/inkstitch_lettering_generate_json.inx:84
 msgid "Size"
 msgstr "Velikost"
@@ -2943,7 +2950,7 @@ msgstr "Popis"
 
 #: lib/extensions/troubleshoot.py:112 lib/extensions/troubleshoot.py:158
 #: inx/inkstitch_cleanup.inx:36 inx/inkstitch_element_info.inx:12
-#: inx/inkstitch_remove_embroidery_settings.inx:157
+#: inx/inkstitch_remove_embroidery_settings.inx:155
 #: inx/inkstitch_select_elements.inx:91 inx/inkstitch_troubleshoot.inx:26
 #: inx/inkstitch_update_svg.inx:11
 msgid "Troubleshoot"
@@ -3066,7 +3073,7 @@ msgstr "Použít"
 #: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_png_realistic.inx:17
 #: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:23
 #: inx/inkstitch_remove_duplicated_points.inx:14
-#: inx/inkstitch_remove_embroidery_settings.inx:142
+#: inx/inkstitch_remove_embroidery_settings.inx:140
 #: inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stitch_plan_preview.inx:37
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26 inx/inkstitch_troubleshoot.inx:12
@@ -3083,7 +3090,7 @@ msgstr "Toto rozšíření aplikuje nejbližší barvy z vybrané palety barev n
 msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
 msgstr ""
 
-#: lib/gui/apply_palette.py:95 lib/gui/request_update_svg_version.py:75
+#: lib/gui/apply_palette.py:95
 msgid "Ink/Stitch"
 msgstr "Ink/Stitch"
 
@@ -3091,7 +3098,7 @@ msgstr "Ink/Stitch"
 msgid "Element Info"
 msgstr "Informace o prvku"
 
-#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:92
+#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:113
 msgid "Info"
 msgstr "Info"
 
@@ -3215,7 +3222,7 @@ msgstr "Přidejte ořezy"
 msgid "Font Sampling"
 msgstr "Test písma"
 
-#: lib/gui/lettering_font_sample.py:31 lib/gui/simulator/view_panel.py:101
+#: lib/gui/lettering_font_sample.py:31 lib/gui/simulator/view_panel.py:122
 #: print/templates/ui.html:5 print/templates/ui.html:15
 #: inx/inkstitch_lettering_generate_json.inx:60
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
@@ -3554,55 +3561,55 @@ msgstr "Velikost bodu pronikání jehly (mm)"
 msgid "Embroidery Simulation"
 msgstr "Simulace vyšívání"
 
-#: lib/gui/simulator/view_panel.py:32
+#: lib/gui/simulator/view_panel.py:39
 msgid "Display needle penetration point (O)"
 msgstr "Zobrazit bod průniku jehly (O)"
 
-#: lib/gui/simulator/view_panel.py:34
+#: lib/gui/simulator/view_panel.py:43
 msgid "Show jump stitches"
 msgstr "Ukázat skokové stehy"
 
-#: lib/gui/simulator/view_panel.py:38
+#: lib/gui/simulator/view_panel.py:50
 msgid "Show trims"
 msgstr "Ukázat střihy"
 
-#: lib/gui/simulator/view_panel.py:42
+#: lib/gui/simulator/view_panel.py:57
 msgid "Show stops"
 msgstr "Ukázat zastavení"
 
-#: lib/gui/simulator/view_panel.py:46
+#: lib/gui/simulator/view_panel.py:64
 msgid "Show color changes"
 msgstr "Ukázat změny barvy"
 
-#: lib/gui/simulator/view_panel.py:51
+#: lib/gui/simulator/view_panel.py:72
 msgid "Open info dialog"
 msgstr "Otevřít informační dialog"
 
-#: lib/gui/simulator/view_panel.py:56
+#: lib/gui/simulator/view_panel.py:77
 msgid "Change background color"
 msgstr "Změna barvy pozadí"
 
-#: lib/gui/simulator/view_panel.py:64
+#: lib/gui/simulator/view_panel.py:85
 msgid "Show page"
 msgstr "Další stránka"
 
-#: lib/gui/simulator/view_panel.py:67
+#: lib/gui/simulator/view_panel.py:88
 msgid "Open settings dialog"
 msgstr "Otevřete dialogové okno nastavení"
 
-#: lib/gui/simulator/view_panel.py:73
+#: lib/gui/simulator/view_panel.py:94
 msgid "Detach/attach simulator window"
 msgstr "Okno simulátoru odpojit/připojit"
 
-#: lib/gui/simulator/view_panel.py:79
+#: lib/gui/simulator/view_panel.py:100
 msgid "Show"
 msgstr "Zobrazit"
 
-#: lib/gui/simulator/view_panel.py:145
+#: lib/gui/simulator/view_panel.py:171
 msgid "Simulator Preferences"
 msgstr "Nastavení simulátoru"
 
-#: lib/gui/simulator/view_panel.py:153
+#: lib/gui/simulator/view_panel.py:179
 msgid "Design Info"
 msgstr "Design Info"
 
@@ -3810,7 +3817,7 @@ msgstr "Toto rozšíření generuje testovací vzorky z výběru.\n"
 #: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:100
 #: inx/inkstitch_fill_to_stroke.inx:33 inx/inkstitch_jump_to_stroke.inx:44
 #: inx/inkstitch_jump_to_trim.inx:29
-#: inx/inkstitch_remove_embroidery_settings.inx:145
+#: inx/inkstitch_remove_embroidery_settings.inx:143
 #: inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
 msgid "Get more information on our website"
@@ -4008,7 +4015,7 @@ msgstr "Plán stehů"
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr "parseLengthWithUnits: neznámá jednotka %s"
 
-#: lib/update.py:32
+#: lib/update.py:33
 msgid "This document was created with a newer Version of Ink/Stitch. It is possible that not everything works as expected.\n\n"
 "Please update your Ink/Stitch version: https://inkstitch.org/docs/install/"
 msgstr "Tento dokument byl vytvořen s novější verzí Ink/Stitch. Je možné, že ne vše funguje podle očekávání.\n\n"
@@ -4869,13 +4876,17 @@ msgstr "Odstraňte prvky příliš malé na vyšívání"
 msgid "Scale Command Symbols"
 msgstr "Měřítko příkazových symbolů"
 
+#: inx/inkstitch_commands_scale_symbols.inx:6
+msgid "Size (%)"
+msgstr ""
+
 #: inx/inkstitch_commands_scale_symbols.inx:10
 msgid "Adjust all command symbol sizes at once"
 msgstr "Upraví velikost všech ovládacích symbolů v jedné operaci"
 
 #: inx/inkstitch_commands_scale_symbols.inx:13
 #: inx/inkstitch_global_commands.inx:19 inx/inkstitch_jump_to_trim.inx:12
-#: inx/inkstitch_layer_commands.inx:16 inx/inkstitch_object_commands.inx:23
+#: inx/inkstitch_layer_commands.inx:16 inx/inkstitch_object_commands.inx:21
 #: inx/inkstitch_object_commands_toggle_visibility.inx:11
 msgid "Commands"
 msgstr "Příkazy"
@@ -6295,7 +6306,7 @@ msgstr "Vloží do dokumentu všechny dostupné znaky předem digitalizovaného 
 msgid "Attach Commands to Selected Objects"
 msgstr "Připojit příkazy k vybraným objektům"
 
-#: inx/inkstitch_object_commands.inx:20
+#: inx/inkstitch_object_commands.inx:18
 msgid "Add commands which affect selected elememts"
 msgstr "Přidejte příkazy, které ovlivňují vybrané prvky"
 
@@ -6813,19 +6824,19 @@ msgstr "Odstranění příkazů"
 msgid "Removes visual commands from selected objects or all objects if nothing is selected."
 msgstr "Odebere vizuální příkazy z vybraných objektů nebo všech objektů, pokud není nic vybráno."
 
-#: inx/inkstitch_remove_embroidery_settings.inx:139
+#: inx/inkstitch_remove_embroidery_settings.inx:137
 msgid "Remove Print Settings from SVG metadata"
 msgstr "Odebrat nastavení tisku z metadat SVG"
 
-#: inx/inkstitch_remove_embroidery_settings.inx:143
+#: inx/inkstitch_remove_embroidery_settings.inx:141
 msgid "Use this extension to remove the information Ink/Stitch has stored in your document. This can be especially useful if you copy and paste objects from an embroidery design into another document."
 msgstr "Toto rozšíření použijte k odstranění informací, které Ink/Stitch uložil ve vašem dokumentu. To může být zvláště užitečné, pokud kopírujete a vkládáte objekty z vyšívacího návrhu do jiného dokumentu."
 
-#: inx/inkstitch_remove_embroidery_settings.inx:146
+#: inx/inkstitch_remove_embroidery_settings.inx:144
 msgid "https://inkstitch.org/docs/troubleshoot/#remove-embroidery-settings"
 msgstr ""
 
-#: inx/inkstitch_remove_embroidery_settings.inx:154
+#: inx/inkstitch_remove_embroidery_settings.inx:152
 msgid "Remove specific or all embroidery settings from the document"
 msgstr "Odstraňte z dokumentu konkrétní nebo všechna nastavení vyšívání"
 
