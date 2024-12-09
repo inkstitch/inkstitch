@@ -877,7 +877,7 @@ class SatinColumn(EmbroideryElement):
         ends. Finds corresponding point on the other rail (taking into account
         the rungs) and breaks the rails at these points.
 
-        split_point can also be a noramlized projection of a distance along the
+        split_point can also be a normalized projection of a distance along the
         satin, in the range 0.0 to 1.0.
 
         Returns two new SatinColumn instances: the part before and the part
@@ -1247,74 +1247,55 @@ class SatinColumn(EmbroideryElement):
 
         return pairs
 
-    def do_start_path(self, satins, start_point):
+    def _connect_stitch_group_with_point(self, first_stitch_group, start_point):
         start_stitch_group = StitchGroup(
             color=self.color,
-            tags=("satin_column", "satin_column_underlay"),
             stitches=[Stitch(*start_point)]
         )
         connector = self.offset_center_line
         split_line = shgeo.LineString(self.find_cut_points(start_point))
         start = connector.project(nearest_points(split_line, connector)[1])
-
-        if self.end_point is None:
-            end = 0
-        elif satins[0] is None:
-            if self._center_walk_is_odd():
-                end = 0
-            else:
-                end = connector.length
-        elif satins[1] is None:
-            if self._center_walk_is_odd():
-                end = connector.length
-            else:
-                end = 0
-        else:
-            if not self._center_walk_is_odd():
-                end = 0
-            else:
-                split_line = shgeo.LineString(self.find_cut_points(self.end_point))
-                end = connector.project(nearest_points(split_line, connector)[1])
-
+        split_line = shgeo.LineString(self.find_cut_points(first_stitch_group.stitches[0]))
+        end = connector.project(nearest_points(split_line, connector)[1])
         start_path = substring(connector, start, end)
+
         stitches = [Stitch(*coord) for coord in start_path.coords]
         stitch_group = StitchGroup(
             color=self.color,
-            tags=("satin_column", "satin_column_underlay"),
             stitches=stitches
         )
         stitch_group = self.connect_and_add(start_stitch_group, stitch_group)
+        stitch_group.add_tags(("satin_column", "satin_column_underlay"))
         return stitch_group
 
-    def do_end_point_connection(self):
-        if self._center_walk_is_odd():
-            return StitchGroup()
-        center_line = self.offset_center_line.reverse()
-        stitches = [Stitch(*coord) for coord in center_line.coords]
-        stitch_group = StitchGroup(
+    def do_end_path(self):
+        return StitchGroup(
             color=self.color,
-            tags=("satin_column", "satin_column_underlay"),
-            stitches=stitches
+            tags=("satin_column",),
+            stitches=[Point(*self.end_point)]
         )
-        return stitch_group
 
-    def _do_underlay_stitch_groups(self, i, satin, stitch_group):
+    def _do_underlay_stitch_groups(self):
+        stitch_groups = []
         if self.center_walk_underlay:
-            center_walk = satin.do_center_walk()
-            stitch_group = self.connect_and_add(stitch_group, center_walk)
+            stitch_groups.extend(self.do_center_walk())
 
-        # if they just went one stitch back, it's not really necessary to add all the underlays
-        if i == 0 or satin.center_line.length > self.zigzag_spacing:
-            if self.contour_underlay:
-                contour = satin.do_contour_underlay()
-                stitch_group = self.connect_and_add(stitch_group, contour)
+        if self.contour_underlay:
+            stitch_groups.extend(self.do_contour_underlay())
 
-            if self.zigzag_underlay:
-                # zigzag underlay comes after contour walk underlay, so that the
-                # zigzags sit on the contour walk underlay like rail ties on rails.
-                zigzag = satin.do_zigzag_underlay()
-                stitch_group = self.connect_and_add(stitch_group, zigzag)
-        return stitch_group
+        if self.zigzag_underlay:
+            stitch_groups.extend(self.do_zigzag_underlay())
+
+        return stitch_groups
+
+    def _to_stitch_group(self, linestring, tags, reverse=False):
+        if reverse:
+            linestring = linestring.reverse()
+        return StitchGroup(
+                color=self.color,
+                tags=tags,
+                stitches=[Stitch(*coord) for coord in linestring.coords]
+            )
 
     def do_contour_underlay(self):
         # "contour walk" underlay: do stitches up one side and down the
@@ -1341,6 +1322,19 @@ class SatinColumn(EmbroideryElement):
         else:
             second_side.reverse()
 
+        if self.end_point:
+            stitch_groups = []
+            tags = ("satin_column", "satin_column_underlay", "satin_contour_underlay")
+            first_linestring = shgeo.LineString(first_side)
+            first_start, first_end = self._split_linestring_at_end_point(first_linestring)
+            second_linestring = shgeo.LineString(second_side)
+            second_end, second_start = self._split_linestring_at_end_point(second_linestring)
+            stitch_groups.append(self._to_stitch_group(first_start, tags))
+            stitch_groups.append(self._to_stitch_group(second_end, tags))
+            stitch_groups.append(self._to_stitch_group(second_start, tags))
+            stitch_groups.append(self._to_stitch_group(first_end, tags))
+            return stitch_groups
+
         stitch_group = StitchGroup(
             color=self.color,
             tags=("satin_column", "satin_column_underlay", "satin_contour_underlay"),
@@ -1349,28 +1343,39 @@ class SatinColumn(EmbroideryElement):
 
         self.add_running_stitches(first_side[-1], second_side[0], stitch_group)
         stitch_group.stitches += second_side
-        return stitch_group
+        return [stitch_group]
 
     def do_center_walk(self):
         # Center walk underlay is just a running stitch down and back on the
         # center line between the bezier curves.
         repeats = self.center_walk_underlay_repeats
 
+        stitch_groups = []
         stitches = self._get_center_line_stitches()
+        if self.end_point:
+            tags = ("satin_column", "satin_column_underlay", "satin_center_walk")
+            stitches = shgeo.LineString(stitches)
+            start, end = self._split_linestring_at_end_point(stitches)
+            if self._center_walk_is_odd():
+                end, start = start, end
+            stitch_groups.append(self._to_stitch_group(start, tags))
+            stitch_groups.append(self._to_stitch_group(end, tags, True))
+        else:
+            stitch_group = StitchGroup(
+                color=self.color,
+                tags=("satin_column", "satin_column_underlay", "satin_center_walk"),
+                stitches=stitches
+            )
+            stitch_groups.append(stitch_group)
 
-        repeated_stitches = []
-        for i in range(repeats - 1):
-            if i % 2 == 0:
-                repeated_stitches.extend(reversed(stitches))
-            else:
-                repeated_stitches.extend(stitches)
-        stitches.extend(repeated_stitches)
-
-        return StitchGroup(
-            color=self.color,
-            tags=("satin_column", "satin_column_underlay", "satin_center_walk"),
-            stitches=stitches
-        )
+        for stitch_group in stitch_groups:
+            stitch_count = len(stitch_group.stitches)
+            for i in range(repeats - 1):
+                if i % 2 == 0:
+                    stitch_group.stitches += reversed(stitch_group.stitches[:stitch_count])
+                else:
+                    stitch_group.stitches += stitch_group.stitches[:stitch_count]
+        return stitch_groups
 
     def do_zigzag_underlay(self):
         # zigzag underlay, usually done at a much lower density than the
@@ -1383,7 +1388,7 @@ class SatinColumn(EmbroideryElement):
         # "German underlay" described here:
         #   http://www.mrxstitch.com/underlay-what-lies-beneath-machine-embroidery/
 
-        stitch_group = StitchGroup(color=self.color)
+        stitch_groups = []
 
         pairs = self.plot_points_on_rails(self.zigzag_underlay_spacing / 2.0,
                                           -self.zigzag_underlay_inset_px,
@@ -1392,35 +1397,72 @@ class SatinColumn(EmbroideryElement):
         if self._center_walk_is_odd():
             pairs = list(reversed(pairs))
 
-        # This organizes the points in each side in the order that they'll be
-        # visited.
-        # take a points, from each side in turn, then go backed over the other points
-        points = [p[i % 2] for i, p in enumerate(pairs)] + list(reversed([p[i % 2] for i, p in enumerate(pairs, 1)]))
+        # This organizes the points in each side in the order that they'll be visited.
+        # take a point, from each side in turn, then go backed over the other points
+        point_groups = [p[i % 2] for i, p in enumerate(pairs)], list(reversed([p[i % 2] for i, p in enumerate(pairs, 1)]))
 
+        start_groups = []
+        end_groups = []
+        for points in point_groups:
+            if not self.end_point:
+                stitch_groups.append(self._generate_zigzag_stitch_group(points))
+                continue
+            zigzag_line = shgeo.LineString(points)
+            start, end = self._split_linestring_at_end_point(zigzag_line)
+            start_groups.append(self._generate_zigzag_stitch_group([Stitch(*point) for point in start.coords]))
+            end_groups.append(self._generate_zigzag_stitch_group([Stitch(*point) for point in end.coords]))
+        if start_groups:
+            stitch_groups.append(self.connect_and_add(start_groups[0], end_groups[-1]))
+            stitch_groups.append(self.connect_and_add(start_groups[-1], end_groups[0]))
+
+        return stitch_groups
+
+    def _generate_zigzag_stitch_group(self, points):
         max_len = self.zigzag_underlay_max_stitch_length
         last_point = None
+        stitch_group = StitchGroup(color=self.color)
         for point in points:
             if last_point and max_len:
                 if last_point.distance(point) > max_len:
                     split_points = running_stitch.split_segment_even_dist(last_point, point, max_len)
                     for p in split_points:
-                        stitch_group.add_stitch(p)
+                        stitch_group.add_stitch(p, ("split_stitch",))
             last_point = point
-            stitch_group.add_stitch(point)
-
+            stitch_group.add_stitch(point, ("edge",))
         stitch_group.add_tags(("satin_column", "satin_column_underlay", "satin_zigzag_underlay"))
         return stitch_group
 
-    def _do_top_layer_stitch_group(self, satin):
+    def _do_top_layer_stitch_group(self):
         if self.satin_method == 'e_stitch':
-            stitch_group = satin.do_e_stitch()
+            stitch_group = self.do_e_stitch()
         elif self.satin_method == 's_stitch':
-            stitch_group = satin.do_s_stitch()
+            stitch_group = self.do_s_stitch()
         elif self.satin_method == 'zigzag':
-            stitch_group = satin.do_zigzag()
+            stitch_group = self.do_zigzag()
         else:
-            stitch_group = satin.do_satin()
-        return stitch_group
+            stitch_group = self.do_satin()
+
+        if self.end_point:
+            return self._split_top_layer(stitch_group)
+        return [stitch_group]
+
+    def _split_linestring_at_end_point(self, linestring):
+        split_line = shgeo.LineString(self.find_cut_points(self.end_point))
+        split_point = nearest_points(linestring, split_line)[0]
+        project = linestring.project(split_point)
+        start = substring(linestring, 0, project)
+        end = substring(linestring, project, linestring.length)
+        return start, end
+
+    def _split_top_layer(self, stitch_group):
+        top_layer = shgeo.LineString(stitch_group.stitches)
+        start, end = self._split_linestring_at_end_point(top_layer)
+        stitch_group2 = deepcopy(stitch_group)
+        stitch_group2.stitches = [Stitch(*point) for point in end.reverse().coords]
+        stitch_group1 = stitch_group
+        stitch_group1.stitches = [Stitch(*point) for point in start.coords]
+        top_layer_stitch_groups = [stitch_group1, stitch_group2]
+        return top_layer_stitch_groups
 
     def do_satin(self):
         # satin: do a zigzag pattern, alternating between the paths.  The
@@ -1750,54 +1792,14 @@ class SatinColumn(EmbroideryElement):
             point = point.target_point
         return point
 
-    def _split_satin(self):
-        if self.end_point is not None:
-            satins = self.split(self.end_point)
-            if self.reverse_rails == 'automatic':
-                self._adapt_automatic_rail_swapping(satins)
-            if satins[0] is None:
-                if not self._center_walk_is_odd():
-                    satins[1] = satins[1].reverse()
-                if self.swap_rails:
-                    satins[1] = satins[1].flip()
-                satins = [None, satins[1]]
-            elif satins[1] is not None:
-                if self._center_walk_is_odd():
-                    satins[0] = satins[0].reverse()
-                else:
-                    satins[1] = satins[1].reverse()
-                if self.swap_rails:
-                    satins[0] = satins[0].flip()
-            else:
-                if self._center_walk_is_odd():
-                    satins[0] = satins[0].reverse()
-                satins = [satins[0], None]
-        else:
-            satins = [self, None]
-        return satins
-
-    def _adapt_automatic_rail_swapping(self, satins):  # noqa: C901
-        reverse_rails = self._get_rails_to_reverse()
-        if reverse_rails == (False, False):
-            if satins[0] is not None:
-                satins[0].set_param('reverse_rails', 'none')
-            if satins[1] is not None:
-                satins[1].set_param('reverse_rails', 'none')
-        elif reverse_rails == (True, False):
-            if satins[0] is not None:
-                satins[0].set_param('reverse_rails', 'first')
-            if satins[1] is not None:
-                satins[1].set_param('reverse_rails', 'first')
-        elif reverse_rails == (False, True):
-            if satins[0] is not None:
-                satins[0].set_param('reverse_rails', 'second')
-            if satins[1] is not None:
-                satins[1].set_param('reverse_rails', 'second')
-        elif reverse_rails == (True, True):
-            if satins[0] is not None:
-                satins[0].set_param('reverse_rails', 'both')
-            if satins[1] is not None:
-                satins[1].set_param('reverse_rails', 'both')
+    def _sort_stitch_groups(self, stitch_groups):
+        if self.end_point:
+            ordered_stitch_groups = []
+            ordered_stitch_groups.extend(stitch_groups[::2])
+            ordered_stitch_groups.append(self._connect_stitch_group_with_point(stitch_groups[1], ordered_stitch_groups[-1].stitches[-1]))
+            ordered_stitch_groups.extend(stitch_groups[1::2])
+            return ordered_stitch_groups
+        return stitch_groups
 
     def to_stitch_groups(self, last_stitch_group=None):
         # Stitch a variable-width satin column, zig-zagging between two paths.
@@ -1805,44 +1807,41 @@ class SatinColumn(EmbroideryElement):
         # beziers.  The boundary points between beziers serve as "checkpoints",
         # allowing the user to control how the zigzags flow around corners.
 
-        satins = self._split_satin()
+        stitch_groups = []
 
+        start_point = self.start_point
+        if start_point is None and last_stitch_group is not None and self.start_at_nearest_point:
+            start_point = nearest_points(shgeo.Point(*last_stitch_group.stitches[-1]), self.center_line)[1]
+            start_point = Point(*list(start_point.coords[0]))
+
+        # underlays
+        stitch_groups.extend(self._do_underlay_stitch_groups())
+
+        # top layer
+        stitch_groups.extend(self._do_top_layer_stitch_group())
+
+        # order stitch groups
+        stitch_groups = self._sort_stitch_groups(stitch_groups)
+
+        # start and end
+        if start_point is not None:
+            stitch_groups = [self._connect_stitch_group_with_point(stitch_groups[0], start_point)] + stitch_groups
+        if self.end_point:
+            stitch_groups.append(self.do_end_path())
+
+        # assemble stitch groups
         stitch_group = StitchGroup(
             color=self.color,
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches
         )
 
-        start_point = self.start_point
-        if start_point is None and last_stitch_group is not None and self.start_at_nearest_point:
-            start_point = nearest_points(shgeo.Point(*last_stitch_group.stitches[-1]), self.center_line)[1]
-            start_point = Point(*list(start_point.coords[0]))
-        if start_point is not None:
-            start_path = self.do_start_path(satins, start_point)
-            stitch_group = self.connect_and_add(stitch_group, start_path)
-
-        for i, satin in enumerate(satins):
-            if satin is None:
-                continue
-
-            if i > 0 and None not in satins:
-                end_point_connection = satin.do_end_point_connection()
-                stitch_group = self.connect_and_add(stitch_group, end_point_connection)
-
-            stitch_group = self._do_underlay_stitch_groups(i, satin, stitch_group)
-            final_stitch_group = self._do_top_layer_stitch_group(satin)
-            stitch_group = self.connect_and_add(stitch_group, final_stitch_group)
+        for satin_layer in stitch_groups:
+            if satin_layer and satin_layer.stitches:
+                stitch_group = self.connect_and_add(stitch_group, satin_layer)
 
         if not stitch_group.stitches:
             return []
-
-        if self.end_point:
-            ending_point_stitch_group = StitchGroup(
-                color=self.color,
-                tags=("satin_column"),
-                stitches=[Point(*self.end_point)]
-            )
-            stitch_group = self.connect_and_add(stitch_group, ending_point_stitch_group)
 
         return [stitch_group]
 
