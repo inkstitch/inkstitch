@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-12-08 01:45+0000\n"
-"PO-Revision-Date: 2024-12-08 01:45\n"
+"PO-Revision-Date: 2024-12-11 01:39\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -987,7 +987,7 @@ msgstr ""
 
 #: lib/elements/element.py:230
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
-msgstr ""
+msgstr "设置短针迹长度，小于该长度的针迹将被清除。"
 
 #: lib/elements/element.py:240 lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
@@ -1053,7 +1053,7 @@ msgstr "起绣锁缝缩放"
 
 #: lib/elements/element.py:302
 msgid "Set stitch length. A 1 in a custom path equals this values."
-msgstr ""
+msgstr "设置针迹长度。自定义路径中的等于1或以下值\n\n"
 
 #: lib/elements/element.py:314
 msgid "Scale tack stitch by this percentage."
@@ -1351,7 +1351,7 @@ msgstr "双螺旋"
 
 #: lib/elements/fill_stitch.py:188
 msgid "Join Style"
-msgstr ""
+msgstr "加入样式"
 
 #: lib/elements/fill_stitch.py:189
 msgid "Round"
@@ -2097,7 +2097,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:528
 msgid "Inset amount (fixed)"
-msgstr ""
+msgstr "插入量(数值)"
 
 #: lib/elements/satin_column.py:529 lib/elements/satin_column.py:549
 msgid "default: half of contour underlay inset"
@@ -2105,11 +2105,11 @@ msgstr ""
 
 #: lib/elements/satin_column.py:548
 msgid "Inset amount (proportional)"
-msgstr ""
+msgstr "偏移量(比例)"
 
 #: lib/elements/satin_column.py:562
 msgid "Split stitch if distance of maximum stitch length is exceeded"
-msgstr ""
+msgstr "如果超过最大针迹长度的距离，则拆分为多个针迹"
 
 #: lib/elements/stroke.py:36
 msgid "This element renders as running stitch while it has a satin column parameter."
@@ -2187,7 +2187,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:225
 msgid "Overrides the number of lines setting."
-msgstr ""
+msgstr "设置重叠行数"
 
 #: lib/elements/stroke.py:239
 msgid "Render at rungs"
