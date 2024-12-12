@@ -1099,12 +1099,12 @@ class SatinColumn(EmbroideryElement):
     @property
     @cache
     def offset_center_line(self):
-        stitches = self._get_center_line_stitches()
+        stitches = self._get_center_line_stitches(self.running_stitch_position)
         linestring = shgeo.LineString(stitches)
         return linestring
 
-    def _get_center_line_stitches(self):
-        inset_prop = -np.array([self.running_stitch_position, 100-self.running_stitch_position]) / 100
+    def _get_center_line_stitches(self, position):
+        inset_prop = -np.array([position, 100-position]) / 100
 
         # Do it like contour underlay, but inset all the way to the center.
         pairs = self.plot_points_on_rails(self.running_stitch_tolerance, (0, 0), inset_prop)
@@ -1247,7 +1247,7 @@ class SatinColumn(EmbroideryElement):
 
         return pairs
 
-    def _connect_stitch_group_with_point(self, first_stitch_group, start_point):
+    def _connect_stitch_group_with_point(self, first_stitch_group, start_point, connect_to_satin_end=False):
         start_stitch_group = StitchGroup(
             color=self.color,
             stitches=[Stitch(*start_point)]
@@ -1255,8 +1255,11 @@ class SatinColumn(EmbroideryElement):
         connector = self.offset_center_line
         split_line = shgeo.LineString(self.find_cut_points(start_point))
         start = connector.project(nearest_points(split_line, connector)[1])
-        split_line = shgeo.LineString(self.find_cut_points(first_stitch_group.stitches[0]))
-        end = connector.project(nearest_points(split_line, connector)[1])
+        if connect_to_satin_end and not self._center_walk_is_odd():
+            end = connector.length
+        else:
+            split_line = shgeo.LineString(self.find_cut_points(first_stitch_group.stitches[0]))
+            end = connector.project(nearest_points(split_line, connector)[1])
         start_path = substring(connector, start, end)
 
         stitches = [Stitch(*coord) for coord in start_path.coords]
@@ -1351,7 +1354,7 @@ class SatinColumn(EmbroideryElement):
         repeats = self.center_walk_underlay_repeats
 
         stitch_groups = []
-        stitches = self._get_center_line_stitches()
+        stitches = self._get_center_line_stitches(self.center_walk_underlay_position)
         if self.end_point:
             tags = ("satin_column", "satin_column_underlay", "satin_center_walk")
             stitches = shgeo.LineString(stitches)
@@ -1796,7 +1799,7 @@ class SatinColumn(EmbroideryElement):
         if self.end_point:
             ordered_stitch_groups = []
             ordered_stitch_groups.extend(stitch_groups[::2])
-            ordered_stitch_groups.append(self._connect_stitch_group_with_point(stitch_groups[1], ordered_stitch_groups[-1].stitches[-1]))
+            ordered_stitch_groups.append(self._connect_stitch_group_with_point(stitch_groups[1], ordered_stitch_groups[-1].stitches[-1], True))
             ordered_stitch_groups.extend(stitch_groups[1::2])
             return ordered_stitch_groups
         return stitch_groups
