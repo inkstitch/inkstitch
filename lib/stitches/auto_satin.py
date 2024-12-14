@@ -293,7 +293,7 @@ class RunningStitch(object):
         return RunningStitch(new_path, self.original_element)
 
 
-def auto_satin(elements, preserve_order=False, starting_point=None, ending_point=None, trim=False):
+def auto_satin(elements, preserve_order=False, starting_point=None, ending_point=None, trim=False, keep_originals=False, parent=None, index=None):
     """Find an optimal order to stitch a list of SatinColumns.
 
     Add running stitch and jump stitches as necessary to construct a stitch
@@ -340,8 +340,10 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
     """
 
     # save these for create_new_group() call below
-    parent = elements[0].node.getparent()
-    index = parent.index(elements[0].node)
+    if parent is None:
+        parent = elements[-1].node.getparent()
+    if index is None:
+        index = parent.index(elements[-1].node) + 1
 
     # apply live path effects
     # It would be nice if we could preserve them, but this could have unwanted side effects
@@ -360,12 +362,15 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
     operations = collapse_sequential_segments(operations)
     new_elements, trims, original_parents = operations_to_elements_and_trims(operations, preserve_order)
 
-    remove_original_elements(elements)
+    if not keep_originals:
+        remove_original_elements(elements)
 
-    if preserve_order:
+    if preserve_order and not keep_originals:
         preserve_original_groups(new_elements, original_parents)
     else:
         group = create_new_group(parent, index, _("Auto-Route"))
+        if keep_originals and parent.TAG == "svg":
+            group.set('inkscape:groupmode', "layer")
         add_elements_to_group(new_elements, group)
 
     name_elements(new_elements, preserve_order)
