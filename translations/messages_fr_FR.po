@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-12-08 01:45+0000\n"
-"PO-Revision-Date: 2024-12-08 01:45\n"
+"PO-Revision-Date: 2024-12-14 01:29\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -828,14 +828,14 @@ msgstr "Essayez d'importer le fichier dans Inkscape avec 'Ficher > Import...' (C
 #: lib/commands.py:27 inx/inkstitch_object_commands.inx:4
 #: inx/inkstitch_remove_embroidery_settings.inx:118
 msgid "Starting position"
-msgstr ""
+msgstr "Position de départ"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:5
 #: inx/inkstitch_remove_embroidery_settings.inx:119
 msgid "Ending position"
-msgstr ""
+msgstr "Position de fin"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -849,14 +849,14 @@ msgstr "Position de la cible"
 #: lib/commands.py:36 inx/inkstitch_object_commands.inx:7
 #: inx/inkstitch_remove_embroidery_settings.inx:121
 msgid "Auto-route starting position"
-msgstr ""
+msgstr "Position de départ de l'agencement automatique"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:39 inx/inkstitch_object_commands.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:122
 msgid "Auto-route ending position"
-msgstr ""
+msgstr "Position de fin de l'agencement automatique"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -1995,24 +1995,24 @@ msgstr "Échange les deux rails de la colonne satin, ce qui affecte le côté de
 
 #: lib/elements/satin_column.py:364
 msgid "Length of stitches for start and end point connections."
-msgstr ""
+msgstr "Longueur des points pour les connexions de début et de fin."
 
 #: lib/elements/satin_column.py:386
 msgid "Running Stitch Position"
-msgstr ""
+msgstr "Position du point droit"
 
 #: lib/elements/satin_column.py:387
 #, python-format
 msgid "Position of running stitches between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
-msgstr ""
+msgstr "Position des point droits entre les rails. 0% : le long du premier rail, 50% : centré, 100% le long du second rail."
 
 #: lib/elements/satin_column.py:395
 msgid "Start at nearest point"
-msgstr ""
+msgstr "Départ au point le plus proche"
 
 #: lib/elements/satin_column.py:396
 msgid "Start at nearest point to previous element. A start position command will overwrite this setting."
-msgstr ""
+msgstr "Commence au point le plus proche de l'élément précédent. Une commande position de début sera prioritaire sur ce réglage."
 
 #: lib/elements/satin_column.py:402
 msgid "Contour underlay"
@@ -4880,7 +4880,7 @@ msgstr "Mise à l'échelle des symboles de commande"
 
 #: inx/inkstitch_commands_scale_symbols.inx:6
 msgid "Size (%)"
-msgstr ""
+msgstr "Taille (%)"
 
 #: inx/inkstitch_commands_scale_symbols.inx:10
 msgid "Adjust all command symbol sizes at once"
