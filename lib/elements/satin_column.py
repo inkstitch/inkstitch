@@ -1003,23 +1003,34 @@ class SatinColumn(EmbroideryElement):
         """
 
         for path_list in path_lists:
+            num_paths = len(path_list)
             if path_list is None:
                 continue
-            if len(path_list) in (2, 4):
+            if num_paths in (2, 4):
                 # Add the rung just after the start of the satin.
                 # If the rails have opposite directions it may end up at the end of the satin.
-                rung_start = path_list[0].interpolate(0.3)
-                rails_to_reverse = self._get_rails_to_reverse()
-                if rails_to_reverse[0] == rails_to_reverse[1]:
-                    rung_end = path_list[1].interpolate(0.3)
-                else:
-                    rung_end = path_list[1].interpolate(-0.3)
-                rung = shgeo.LineString((rung_start, rung_end))
+                self._add_rung(path_list, 0.3)
+            # When rails are intersecting, add two more rung to prevent bad rail detection
+            if num_paths == 2 and path_list[0].intersects(path_list[1]):
+                self._add_rung(path_list, 0.5, True)
+                self._add_rung(path_list, -0.3)
 
-                # make it a bit bigger so that it definitely intersects
-                rung = shaffinity.scale(rung, 1.1, 1.1)
+    def _add_rung(self, path_list, position, normalized=False):
+        rung_start = path_list[0].interpolate(position, normalized=normalized)
+        rails_to_reverse = self._get_rails_to_reverse()
+        if rails_to_reverse[0] == rails_to_reverse[1]:
+            rung_end = path_list[1].interpolate(position, normalized=normalized)
+        else:
+            rung_end = path_list[1].interpolate(-position, normalized=normalized)
+        rung = shgeo.LineString((rung_start, rung_end))
 
-                path_list.append(rung)
+        # make it a bit bigger so that it definitely intersects
+        rung = shaffinity.scale(rung, 1.1, 1.1)
+
+        if rung.length < 5:
+            rung = shaffinity.scale(rung, 3, 3)
+
+        path_list.append(rung)
 
     def _path_list_to_satins(self, path_list):
         linestrings = line_strings_to_csp(path_list)
