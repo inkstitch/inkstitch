@@ -209,6 +209,15 @@ class Troubleshoot(InkstitchExtension):
             tspan.text = text_line[0]
             text_container.append(tspan)
 
+        # we cannot really detect the text boudning_box. So we have to make a bad guesses
+        self.troubleshoot_layer.insert(
+            0,
+            inkex.PathElement(
+                d=f"M {float(text_x) - 5} {-5}, {float(text_x) + 160} {-5}, {float(text_x) + 160} {600}, {float(text_x) - 5} {600} Z",
+                style="fill: #51a888; stroke: red;"
+            )
+        )
+
     def split_text(self, text):
         splitted_text = []
         for text_part, style in text:
