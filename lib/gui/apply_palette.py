@@ -92,7 +92,7 @@ class ApplyPaletteApp(wx.App):
 
         app = wx.App()
         self.frame = ApplyPaletteFrame(
-            title=_("Ink/Stitch"),
+            title="Ink/Stitch",
             on_apply=self.set_palette,
         )
         self.frame.Show()
