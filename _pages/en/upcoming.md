@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2024-11-30
+last_modified_at: 2024-12-15
 sidebar:
   nav: pages
 toc: true
@@ -55,7 +55,12 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ### Auto-route satin
 
+* add option to keep original path elements [#3332](https://github.com/inkstitch/inkstitch/pull/3332)
 * transfer object based min jump length (if present) from satins on auto-generated strokes [#3154](https://github.com/inkstitch/inkstitch/pull/3154)
+
+### Commands
+
+* Set all commands to unique size at once (reset previous transform) [#3329](https://github.com/inkstitch/inkstitch/pull/3329)
 
 ### Font sampling
 
@@ -75,6 +80,7 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ### Simulator
 
+* Save and reload more simulator settings (status for buttons: jump, trim, color change, stop, needle penetration point, page border) [#3323](https://github.com/inkstitch/inkstitch/pull/3323)
 * Show page in simulator [#3120](https://github.com/inkstitch/inkstitch/pull/3120)
 
 ### Stitch plan preview
@@ -101,12 +107,17 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 * Manual ripple pattern [#3256](https://github.com/inkstitch/inkstitch/pull/3256)
 
+### Satin Columns
+
+* Enable start end commands for satins [#3315](https://github.com/inkstitch/inkstitch/pull/3315)
+
 ## Palettes
 
 * Isacord polyester: added 0713 Lemon color [#3225](https://github.com/inkstitch/inkstitch/pull/3225)
 
 ## Developer and Build Stuff
 
+* Add build for ubuntu 24.04 [#3299](https://github.com/inkstitch/inkstitch/pull/3299)[#3330](https://github.com/inkstitch/inkstitch/pull/3330)
 * Add lmde6 32bit build [#3298](https://github.com/inkstitch/inkstitch/pull/3298)
 * Update macos cloud build [#3291](https://github.com/inkstitch/inkstitch/pull/3291)
 * Use colormath2 instead of colormath [#3266](https://github.com/inkstitch/inkstitch/pull/3266)
