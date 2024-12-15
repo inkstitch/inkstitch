@@ -223,6 +223,9 @@ class LetteringPanel(wx.Panel):
         self.options_panel.font_description.SetLabel(description)
         self.options_panel.font_description.SetForegroundColour(color)
         self.options_panel.font_description.Wrap(self.options_panel.GetSize().width - 50)
+        self.options_panel.size_info.SetLabel(str(font.size))
+        self.options_panel.min_scale_info.SetLabel(str(int(font.min_scale * 100)))
+        self.options_panel.max_scale_info.SetLabel(str(int(font.max_scale * 100)))
 
         if font.reversible:
             self.options_panel.back_and_forth_checkbox.Enable()
