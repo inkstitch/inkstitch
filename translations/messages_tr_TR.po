@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-08 01:45+0000\n"
-"PO-Revision-Date: 2024-12-08 01:45\n"
+"POT-Creation-Date: 2024-12-15 01:45+0000\n"
+"PO-Revision-Date: 2024-12-15 01:46\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-08 01:45+0000\n"
+"POT-Creation-Date: 2024-12-15 01:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2394,16 +2394,16 @@ msgstr ""
 msgid "Please select at least one stroke element."
 msgstr ""
 
-#: lib/extensions/auto_satin.py:35
+#: lib/extensions/auto_satin.py:36
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
 msgstr ""
 
 #. auto-route satin columns extension
-#: lib/extensions/auto_satin.py:49
+#: lib/extensions/auto_satin.py:50
 msgid "Please select one or more satin columns."
 msgstr "Lütfen bir veya birden fazla saten sütun seçiniz."
 
-#: lib/extensions/auto_satin.py:54 lib/extensions/satin_multicolor.py:34
+#: lib/extensions/auto_satin.py:55 lib/extensions/satin_multicolor.py:34
 msgid "Please select at least one satin column."
 msgstr ""
 
@@ -3044,7 +3044,7 @@ msgstr ""
 #: lib/gui/lettering/main_panel.py:48 lib/gui/lettering_font_sample.py:74
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
-#: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:12
+#: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:16
 #: inx/inkstitch_break_apart.inx:14 inx/inkstitch_cleanup.inx:22
 #: inx/inkstitch_convert_to_stroke.inx:12
 #: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
@@ -3956,7 +3956,7 @@ msgstr ""
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr ""
 
-#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:368
+#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:371
 msgid "Auto-Route"
 msgstr ""
 
@@ -3972,14 +3972,14 @@ msgstr ""
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:541
+#: lib/stitches/auto_satin.py:546
 #, python-format
 msgid "AutoSatin %d"
 msgstr ""
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:544
+#: lib/stitches/auto_satin.py:549
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr ""
@@ -4737,11 +4737,15 @@ msgstr ""
 msgid "Preserve order of satin columns"
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:13
+#: inx/inkstitch_auto_satin.inx:14
+msgid "Keep original paths"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:17
 msgid "This extension tries to create a single stitch path through all selected satin columns."
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:15 inx/inkstitch_break_apart.inx:20
+#: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_break_apart.inx:20
 #: inx/inkstitch_cleanup.inx:25 inx/inkstitch_convert_to_stroke.inx:15
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_install_custom_palette.inx:17
@@ -4759,15 +4763,15 @@ msgstr ""
 msgid "More information on our website"
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:16
+#: inx/inkstitch_auto_satin.inx:20
 msgid "https://inkstitch.org/docs/satin-tools/#auto-route-satin-columns"
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:23
+#: inx/inkstitch_auto_satin.inx:27
 msgid "Generates a continuous path through selected satin elements"
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:26 inx/inkstitch_convert_to_satin.inx:11
+#: inx/inkstitch_auto_satin.inx:30 inx/inkstitch_convert_to_satin.inx:11
 #: inx/inkstitch_cut_satin.inx:12 inx/inkstitch_flip.inx:11
 #: inx/inkstitch_satin_multicolor.inx:12
 #: inx/inkstitch_stroke_to_lpe_satin.inx:41

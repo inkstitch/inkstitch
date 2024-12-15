@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-08 01:45+0000\n"
-"PO-Revision-Date: 2024-12-14 01:29\n"
+"POT-Creation-Date: 2024-12-15 01:45+0000\n"
+"PO-Revision-Date: 2024-12-15 01:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-08 01:45+0000\n"
+"POT-Creation-Date: 2024-12-15 01:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1053,7 +1053,7 @@ msgstr "起绣锁缝缩放"
 
 #: lib/elements/element.py:302
 msgid "Set stitch length. A 1 in a custom path equals this values."
-msgstr "设置针迹长度。自定义路径中的等于1或以下值\n\n"
+msgstr "设置针迹长度。自定义路径中的等于1或以下值"
 
 #: lib/elements/element.py:314
 msgid "Scale tack stitch by this percentage."
@@ -2395,16 +2395,16 @@ msgstr "请选择一个或多个笔画元素。"
 msgid "Please select at least one stroke element."
 msgstr "请至少选择一个笔画元素。"
 
-#: lib/extensions/auto_satin.py:35
+#: lib/extensions/auto_satin.py:36
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
 msgstr "请确保最多有一个开始和结束命令附加到选定的缎面柱。"
 
 #. auto-route satin columns extension
-#: lib/extensions/auto_satin.py:49
+#: lib/extensions/auto_satin.py:50
 msgid "Please select one or more satin columns."
 msgstr "请选择一段或多段缎面柱。"
 
-#: lib/extensions/auto_satin.py:54 lib/extensions/satin_multicolor.py:34
+#: lib/extensions/auto_satin.py:55 lib/extensions/satin_multicolor.py:34
 msgid "Please select at least one satin column."
 msgstr "请至少选择一段缎面柱。"
 
@@ -3046,7 +3046,7 @@ msgstr "应用"
 #: lib/gui/lettering/main_panel.py:48 lib/gui/lettering_font_sample.py:74
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
-#: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:12
+#: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:16
 #: inx/inkstitch_break_apart.inx:14 inx/inkstitch_cleanup.inx:22
 #: inx/inkstitch_convert_to_stroke.inx:12
 #: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
@@ -3958,7 +3958,7 @@ msgstr "三角形"
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr "没有选择可缝合的元素。请运行扩展 > Ink/Stitch >疑难解答>疑难解答对象，以防您期望一个缝线。"
 
-#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:368
+#: lib/stitches/auto_run.py:139 lib/stitches/auto_satin.py:371
 msgid "Auto-Route"
 msgstr "自动路线"
 
@@ -3974,14 +3974,14 @@ msgstr "自动下缝 %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:541
+#: lib/stitches/auto_satin.py:546
 #, python-format
 msgid "AutoSatin %d"
 msgstr "自动平包针 %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:544
+#: lib/stitches/auto_satin.py:549
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "自动平包针运行针迹 %d"
@@ -4740,11 +4740,15 @@ msgstr ""
 msgid "Preserve order of satin columns"
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:13
+#: inx/inkstitch_auto_satin.inx:14
+msgid "Keep original paths"
+msgstr ""
+
+#: inx/inkstitch_auto_satin.inx:17
 msgid "This extension tries to create a single stitch path through all selected satin columns."
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:15 inx/inkstitch_break_apart.inx:20
+#: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_break_apart.inx:20
 #: inx/inkstitch_cleanup.inx:25 inx/inkstitch_convert_to_stroke.inx:15
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_install_custom_palette.inx:17
@@ -4762,15 +4766,15 @@ msgstr ""
 msgid "More information on our website"
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:16
+#: inx/inkstitch_auto_satin.inx:20
 msgid "https://inkstitch.org/docs/satin-tools/#auto-route-satin-columns"
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:23
+#: inx/inkstitch_auto_satin.inx:27
 msgid "Generates a continuous path through selected satin elements"
 msgstr ""
 
-#: inx/inkstitch_auto_satin.inx:26 inx/inkstitch_convert_to_satin.inx:11
+#: inx/inkstitch_auto_satin.inx:30 inx/inkstitch_convert_to_satin.inx:11
 #: inx/inkstitch_cut_satin.inx:12 inx/inkstitch_flip.inx:11
 #: inx/inkstitch_satin_multicolor.inx:12
 #: inx/inkstitch_stroke_to_lpe_satin.inx:41
