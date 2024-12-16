@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-15 01:45+0000\n"
-"PO-Revision-Date: 2024-12-15 01:46\n"
+"POT-Creation-Date: 2024-12-16 01:42+0000\n"
+"PO-Revision-Date: 2024-12-16 01:43\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-15 01:45+0000\n"
+"POT-Creation-Date: 2024-12-16 01:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -827,14 +827,14 @@ msgstr "Versuche die Datei über 'Datei > Importieren...' (Strg+I) in Inkscape z
 #: lib/commands.py:27 inx/inkstitch_object_commands.inx:4
 #: inx/inkstitch_remove_embroidery_settings.inx:118
 msgid "Starting position"
-msgstr ""
+msgstr "Startposition"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:5
 #: inx/inkstitch_remove_embroidery_settings.inx:119
 msgid "Ending position"
-msgstr ""
+msgstr "Endposition"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -848,14 +848,14 @@ msgstr "Zielposition"
 #: lib/commands.py:36 inx/inkstitch_object_commands.inx:7
 #: inx/inkstitch_remove_embroidery_settings.inx:121
 msgid "Auto-route starting position"
-msgstr ""
+msgstr "Startposition für eine automatische Führung"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:39 inx/inkstitch_object_commands.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:122
 msgid "Auto-route ending position"
-msgstr ""
+msgstr "Endposition für eine automatische Führung"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -1993,24 +1993,24 @@ msgstr "Diese Einstellung beeinflusst, ob der Startpunkt der Satinsäule auf der
 
 #: lib/elements/satin_column.py:364
 msgid "Length of stitches for start and end point connections."
-msgstr ""
+msgstr "Länge der Stiche für die Verbindungslinien zu Start- und Endpunkten."
 
 #: lib/elements/satin_column.py:386
 msgid "Running Stitch Position"
-msgstr ""
+msgstr "Geradstich-Position"
 
 #: lib/elements/satin_column.py:387
 #, python-format
 msgid "Position of running stitches between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
-msgstr ""
+msgstr "Position der Geradstiche zwischen den Außenseiten. 0% liegt genau auf der ersten Seite, 50% in der Mitte, 100% auf der zweiten Seite."
 
 #: lib/elements/satin_column.py:395
 msgid "Start at nearest point"
-msgstr ""
+msgstr "Automatischer Startpunkt"
 
 #: lib/elements/satin_column.py:396
 msgid "Start at nearest point to previous element. A start position command will overwrite this setting."
-msgstr ""
+msgstr "Beginne am nächstgelegenen Punkt zum vorherigen Element. Diese Einstellung überschreibt den manuellen Startpositions-Befehl."
 
 #: lib/elements/satin_column.py:402
 msgid "Contour underlay"
@@ -3090,10 +3090,6 @@ msgstr "Diese Erweiterung wendet die ähnlichsten Farben aus der ausgewählten F
 #: lib/gui/apply_palette.py:70 lib/gui/apply_palette.py:71
 msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
 msgstr "https://inkstitch.org/de/docs/thread-color/#farbpalette-anwenden"
-
-#: lib/gui/apply_palette.py:95
-msgid "Ink/Stitch"
-msgstr ""
 
 #: lib/gui/element_info.py:17 inx/inkstitch_element_info.inx:3
 msgid "Element Info"
@@ -4760,7 +4756,7 @@ msgstr "Behalte Reihenfolge der Satinsäulen bei"
 
 #: inx/inkstitch_auto_satin.inx:14
 msgid "Keep original paths"
-msgstr ""
+msgstr "Satinsäulen behalten"
 
 #: inx/inkstitch_auto_satin.inx:17
 msgid "This extension tries to create a single stitch path through all selected satin columns."
@@ -4883,7 +4879,7 @@ msgstr "Befehlsymbole skalieren"
 
 #: inx/inkstitch_commands_scale_symbols.inx:6
 msgid "Size (%)"
-msgstr ""
+msgstr "Größe (%)"
 
 #: inx/inkstitch_commands_scale_symbols.inx:10
 msgid "Adjust all command symbol sizes at once"
@@ -6237,7 +6233,7 @@ msgstr "Hierdurch wird die Reihenfolge der Elemente für mehrfarbige Schriftarte
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:20
 msgid "https://inkstitch.org/docs/font-tools/#set-color-sort-index"
-msgstr ""
+msgstr "https://inkstitch.org/de/docs/font-tools/#farbsortierindex-festlegen"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:27
 msgid "Sets a color sort index on selected elements to define the stacking order for multicolor fonts"

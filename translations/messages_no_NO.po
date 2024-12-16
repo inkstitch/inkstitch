@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-15 01:45+0000\n"
-"PO-Revision-Date: 2024-12-15 01:46\n"
+"POT-Creation-Date: 2024-12-16 01:42+0000\n"
+"PO-Revision-Date: 2024-12-16 01:43\n"
 "Last-Translator: \n"
 "Language-Team: Norwegian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-15 01:45+0000\n"
+"POT-Creation-Date: 2024-12-16 01:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3080,10 +3080,6 @@ msgstr ""
 
 #: lib/gui/apply_palette.py:70 lib/gui/apply_palette.py:71
 msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
-msgstr ""
-
-#: lib/gui/apply_palette.py:95
-msgid "Ink/Stitch"
 msgstr ""
 
 #: lib/gui/element_info.py:17 inx/inkstitch_element_info.inx:3
