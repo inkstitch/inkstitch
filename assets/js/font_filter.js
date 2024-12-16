@@ -50,16 +50,16 @@ function updateFontList(){
   }
   let countVisible = document.querySelectorAll(".font-separator:not([style='display: none;'])").length;
   document.getElementById('font-counter').innerHTML = countVisible
+}
 
-  fontDisplaySize.addEventListener('change', updateFontDisplaySize);
-  function updateFontDisplaySize() {
-      let font_images = document.querySelectorAll('div.font-separator img');
-      for (var image of font_images) {
-          if (fontDisplaySize.checked) {
-            image.style.height = image.getAttribute('data-image_height');
-          } else {
-            image.style.height = '5em';
-          }
+fontDisplaySize.addEventListener('change', updateFontDisplaySize);
+function updateFontDisplaySize() {
+  let font_images = document.querySelectorAll('div.font-separator img');
+  for (var image of font_images) {
+      if (fontDisplaySize.checked) {
+        image.style.height = image.getAttribute('data-image_height');
+      } else {
+        image.style.height = '5em';
       }
   }
 }
@@ -86,4 +86,20 @@ function sortFontList(){
         sorted = sorted.reverse()
     }
     sorted.forEach(e => document.querySelector("#font-list").appendChild(e))
+}
+
+displayIcons = document.getElementById('font-display-icons')
+displayIcons.addEventListener('change', showHidePreviewImages)
+
+function showHidePreviewImages() {
+    let images = document.querySelectorAll('.font-library-preview-image')
+    images.forEach(function(image) {
+        if (displayIcons.checked) {
+            image.style.display = 'inline';
+            fontDisplaySize.disabled = false;
+        } else {
+            image.style.display = 'none';
+            fontDisplaySize.disabled = true;
+        }
+    });
 }

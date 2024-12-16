@@ -1,7 +1,8 @@
 {% assign fonts = site.fonts | where: "lang", page.lang %}
 
 <div style="font-size: 0.8em;">
-    <input type="checkbox" name="font-display-size" id="font-display-size" checked> <label for="font-display-size" style="display:inline;">{{ site.data.ui-text[page.lang].font_filter_font_display_size_label | default: "Display fonts in size comparison" }}</label>
+    <input type="checkbox" name="font-display-icons" id="font-display-icons" checked> <label for="font-display-icons" style="display:inline;">{{ site.data.ui-text[page.lang].font_filter_display_icon_label | default: "Dhow preview images" }}</label><br>
+    <input type="checkbox" name="font-display-size" id="font-display-size" checked style="margin-left: 2em;"> <label for="font-display-size" style="display:inline;">{{ site.data.ui-text[page.lang].font_filter_display_size_label | default: "Preview images in size comparison" }}</label>
     <p style="float:right;">
         <span style="padding-left: 3em;">{{ site.data.ui-text[page.lang].font_list_sortby | default: "Sort by" }}</span>
         <select name="sortby" id="sort-by-min-size" style="border: 1px solid #ececec;">
@@ -65,13 +66,13 @@
 <div class="font-separator" data-title="{{ font.title }}" data-max_size="{{ max_size }}" data-min_size="{{ min_size }}" data-keywords="{{ categories | uniq | join: ',' }}" data-glyphs="{{ glyphs | uniq | join: ' ' | escape}}">
   {%- for image in font.preview_image -%}
   {%- assign urlsize = image.url | size -%}
+  <p class="font-library-preview-image">
   {%- if urlsize < 15 -%}
-  <p><a href="{{ font.permalink }}"><img src="{{ font.preview_image }}" alt="{{font.title}} Preview"></a></p>
+  <a href="{{ font.permalink }}"><img src="{{ font.preview_image }}" alt="{{font.title}} Preview"></a></p>
   {%- else -%}
-  <p>
       <a href="{{ font.permalink }}"><img src="{{ image.url }}" alt="{{font.title}} Preview" style="height:{{ image.height }}mm" data-image_height="{{ image.height }}mm"></a>
-  </p>
   {%- endif -%}
+  </p>
   {% endfor %}
   <p><a href="{{ font.permalink }}">{{ font.title }}</a> <span style="color:#b9b9b9;"> | {{ min_size }}mm - {{ max_size }}mm</span></p>
 </div>
