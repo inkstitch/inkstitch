@@ -4,12 +4,12 @@
     <input type="checkbox" name="font-display-size" id="font-display-size" checked> <label for="font-display-size" style="display:inline;">{{ site.data.ui-text[page.lang].font_filter_font_display_size_label | default: "Display fonts in size comparison" }}</label>
     <p style="float:right;">
         <span style="padding-left: 3em;">{{ site.data.ui-text[page.lang].font_list_sortby | default: "Sort by" }}</span>
-        <select name="sortby" id="sort-by-min-size">
+        <select name="sortby" id="sort-by-min-size" style="border: 1px solid #ececec;">
             <option value="title">A-Z</option>
             <option value="min_size">{{ site.data.ui-text[page.lang].min_size | default: "Minimum Size" }}</option>
             <option value="max_size">{{ site.data.ui-text[page.lang].max_size | default: "Maximum Size" }}</option>
         </select>
-        <select name="sort" id="sort-asc-desc">
+        <select name="sort" id="sort-asc-desc" style="border: 1px solid #ececec;">
             <option value="asc">↑</option>
             <option value="desc">↓</option>
         </select>
