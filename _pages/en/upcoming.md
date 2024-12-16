@@ -130,6 +130,7 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ## Bug Fixes
 
+* Cut satin column: add more rungs when rails are intersecting [#3344](https://github.com/inkstitch/inkstitch/pull/3344)
 * Fix jump to stroke transform glitch [#3306](https://github.com/inkstitch/inkstitch/pull/3306)
 * Make remove commands more robust for broken commands with active selection [#3288](https://github.com/inkstitch/inkstitch/pull/3288)
 * Avoid code repetition in paths detection [#3282](https://github.com/inkstitch/inkstitch/pull/3282)
@@ -151,6 +152,7 @@ A tool for font authors which sets a specified color sort index on selected elem
 * fix fills without underpath and bad start-end positions [#3141](https://github.com/inkstitch/inkstitch/pull/3141)
 * satin troubleshoot: do not fail on satins without rails [#3148](https://github.com/inkstitch/inkstitch/pull/3148)
 * auto satin: filter zero length strokes as well [#3139](https://github.com/inkstitch/inkstitch/pull/3139)
-* Disable darkmode symbols for windows (darkmode in windows doesn't work as excepted) (#3144), fix slider dark theme issue [#3147](https://github.com/inkstitch/inkstitch/pull/3147)
+* Disable darkmode symbols for windows (darkmode in windows doesn't work as excepted) (#3144)
+* Fix simulator slider dark theme issue [#3147](https://github.com/inkstitch/inkstitch/pull/3147)
 * skip empty gradient blocks [#3142](https://github.com/inkstitch/inkstitch/pull/3142)
 * Simulator: toggle info and preferences dialog [#3115](https://github.com/inkstitch/inkstitch/pull/3115)

@@ -63,3 +63,27 @@ function updateFontList(){
       }
   }
 }
+
+sortbySelect = document.getElementById('sort-by-min-size')
+sortbySelect.addEventListener('change', sortFontList);
+sortDirect = document.getElementById('sort-asc-desc')
+sortDirect.addEventListener('change', sortFontList);
+
+function sortFontList(){
+    let font_data = document.querySelectorAll("[data-max_size]");
+    let fontSizeArray = Array.from(font_data);
+
+    let sortby = sortbySelect.value;
+    var sorted = fontSizeArray
+    if (sortby == "title") {
+        sorted = fontSizeArray.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
+    } else if (sortby == "min_size") {
+        sorted = fontSizeArray.sort((a, b) => parseFloat(a.dataset.min_size) - parseFloat(b.dataset.min_size));
+    } else {
+        sorted = fontSizeArray.sort((a, b) => parseFloat(a.dataset.max_size) - parseFloat(b.dataset.max_size));
+    }
+    if (sortDirect.value == 'desc') {
+        sorted = sorted.reverse()
+    }
+    sorted.forEach(e => document.querySelector("#font-list").appendChild(e))
+}
