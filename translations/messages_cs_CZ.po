@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-12-16 01:42+0000\n"
-"PO-Revision-Date: 2024-12-16 01:43\n"
+"PO-Revision-Date: 2024-12-18 01:28\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -827,14 +827,14 @@ msgstr "Zkuste soubor importovat do Inkscape přes 'Soubor > Importovat...' (Ctr
 #: lib/commands.py:27 inx/inkstitch_object_commands.inx:4
 #: inx/inkstitch_remove_embroidery_settings.inx:118
 msgid "Starting position"
-msgstr ""
+msgstr "Výchozí pozice"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:5
 #: inx/inkstitch_remove_embroidery_settings.inx:119
 msgid "Ending position"
-msgstr ""
+msgstr "Koncová pozice"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -848,14 +848,14 @@ msgstr "Cílová pozice"
 #: lib/commands.py:36 inx/inkstitch_object_commands.inx:7
 #: inx/inkstitch_remove_embroidery_settings.inx:121
 msgid "Auto-route starting position"
-msgstr ""
+msgstr "Počáteční pozice automatické trasy"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:39 inx/inkstitch_object_commands.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:122
 msgid "Auto-route ending position"
-msgstr ""
+msgstr "Konečná pozice automatické trasy"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -1993,7 +1993,7 @@ msgstr "Prohodí první a druhou obrysovou čáru saténového sloupku a ovlivn�
 
 #: lib/elements/satin_column.py:364
 msgid "Length of stitches for start and end point connections."
-msgstr ""
+msgstr "Délka stehů pro spojení počátečního a koncového bodu."
 
 #: lib/elements/satin_column.py:386
 msgid "Running Stitch Position"
@@ -2006,11 +2006,11 @@ msgstr ""
 
 #: lib/elements/satin_column.py:395
 msgid "Start at nearest point"
-msgstr ""
+msgstr "Začněte v nejbližším bodě"
 
 #: lib/elements/satin_column.py:396
 msgid "Start at nearest point to previous element. A start position command will overwrite this setting."
-msgstr ""
+msgstr "Začněte v nejbližším bodě k předchozímu prvku. Příkaz počáteční pozice toto nastavení přepíše."
 
 #: lib/elements/satin_column.py:402
 msgid "Contour underlay"
@@ -4878,7 +4878,7 @@ msgstr "Měřítko příkazových symbolů"
 
 #: inx/inkstitch_commands_scale_symbols.inx:6
 msgid "Size (%)"
-msgstr ""
+msgstr "Velikost (%)"
 
 #: inx/inkstitch_commands_scale_symbols.inx:10
 msgid "Adjust all command symbol sizes at once"
