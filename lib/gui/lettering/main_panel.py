@@ -323,10 +323,13 @@ class LetteringPanel(wx.Panel):
             self.update_lettering()
             elements = nodes_to_elements(self.group.iterdescendants(SVG_PATH_TAG))
 
+            last_stitch_group = None
             for element in elements:
                 check_stop_flag()
 
-                stitch_groups.extend(element.embroider(None))
+                stitch_groups.extend(element.embroider(last_stitch_group))
+                if stitch_groups:
+                    last_stitch_group = stitch_groups[-1]
 
             if stitch_groups:
                 return stitch_groups_to_stitch_plan(
