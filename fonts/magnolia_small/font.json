@@ -1,6 +1,6 @@
 {
-    "name": "Magnolia small",
-    "description": "This font is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory. The altered embroidery parameters of this font allow to scale down the original Magnolia KOR font between 25% (for a 5mm font ) and 50 % (for a 10mm font).", 
+    "name": "Magnolia Small",
+    "description": "Magnolia Small is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory.", 
     "keywords": [ 
             "sans_serif",
             "tiny"
