@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-16 01:42+0000\n"
-"PO-Revision-Date: 2024-12-18 01:28\n"
+"POT-Creation-Date: 2024-12-19 01:29+0000\n"
+"PO-Revision-Date: 2024-12-19 01:29\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-16 01:42+0000\n"
+"POT-Creation-Date: 2024-12-19 01:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2324,7 +2324,7 @@ msgstr "plochý"
 msgid "point"
 msgstr "bod"
 
-#: lib/elements/text.py:13 lib/gui/lettering/option_panel.py:102
+#: lib/elements/text.py:13 lib/gui/lettering/option_panel.py:126
 msgid "Text"
 msgstr "Text"
 
@@ -2918,7 +2918,7 @@ msgstr "Detaily designu"
 msgid "Title"
 msgstr "Název"
 
-#: lib/extensions/thread_list.py:51 lib/gui/lettering/option_panel.py:50
+#: lib/extensions/thread_list.py:51 lib/gui/lettering/option_panel.py:74
 #: inx/inkstitch_lettering_generate_json.inx:84
 msgid "Size"
 msgstr "Velikost"
@@ -3133,83 +3133,91 @@ msgstr "Tento font nemá k dispozici žádnou variantu písma. Aktualizujte nebo
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/gui/lettering/main_panel.py:292
+#: lib/gui/lettering/main_panel.py:295
 msgid "Text scale"
 msgstr "Měřítko textu"
 
-#: lib/gui/lettering/main_panel.py:305
+#: lib/gui/lettering/main_panel.py:308
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr "Chyba: Text nelze použít na dokument.\n"
 "%s"
 
-#: lib/gui/lettering/option_panel.py:21
+#: lib/gui/lettering/option_panel.py:24
+msgid "Height: "
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:28
+msgid "Scale:"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:44
 msgid "Font"
 msgstr "Písmo"
 
-#: lib/gui/lettering/option_panel.py:33
+#: lib/gui/lettering/option_panel.py:57
 msgid "Font size filter (mm). 0 for all sizes."
 msgstr "Filtr velikosti písma (mm). 0 pro všechny velikosti."
 
-#: lib/gui/lettering/option_panel.py:35
+#: lib/gui/lettering/option_panel.py:59
 msgid "Glyphs"
 msgstr "Znaky"
 
-#: lib/gui/lettering/option_panel.py:37
+#: lib/gui/lettering/option_panel.py:61
 msgid "Filter fonts by available glyphs."
 msgstr "Filtrujte písma podle dostupných znaků."
 
-#: lib/gui/lettering/option_panel.py:44
+#: lib/gui/lettering/option_panel.py:68
 msgid "Filter fonts by category."
 msgstr "Filtrujte písma podle kategorie."
 
-#: lib/gui/lettering/option_panel.py:48
+#: lib/gui/lettering/option_panel.py:72
 msgid "Font Filter"
 msgstr "Filtr písem"
 
-#: lib/gui/lettering/option_panel.py:63
+#: lib/gui/lettering/option_panel.py:87
 msgid "Stitch lines of text back and forth"
 msgstr "Vyšívejte řádky textu tam a zpět"
 
-#: lib/gui/lettering/option_panel.py:68
+#: lib/gui/lettering/option_panel.py:92
 msgid "Sort multicolor fonts. Unifies tartan patterns."
 msgstr "Řazení vícebarevných písem. Sjednocuje tartanové vzory."
 
-#: lib/gui/lettering/option_panel.py:70
+#: lib/gui/lettering/option_panel.py:94
 msgid "Never"
 msgstr "Nikdy"
 
-#: lib/gui/lettering/option_panel.py:70
+#: lib/gui/lettering/option_panel.py:94
 msgid "after each line"
 msgstr "po každém řádku"
 
-#: lib/gui/lettering/option_panel.py:70
+#: lib/gui/lettering/option_panel.py:94
 msgid "after each word"
 msgstr "po každém slově"
 
-#: lib/gui/lettering/option_panel.py:70
+#: lib/gui/lettering/option_panel.py:94
 msgid "after each letter"
 msgstr "po každém písmenu"
 
-#: lib/gui/lettering/option_panel.py:71
+#: lib/gui/lettering/option_panel.py:95
 msgid "Add trim command"
 msgstr "Přidat příkaz oříznutí"
 
-#: lib/gui/lettering/option_panel.py:74
+#: lib/gui/lettering/option_panel.py:98
 msgid "Use command symbols"
 msgstr "Používejte příkazové symboly"
 
-#: lib/gui/lettering/option_panel.py:76
+#: lib/gui/lettering/option_panel.py:100
 msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
 msgstr "Pokud je povoleno, používá příkazové symboly. Když je zakázáno, vloží příkazy oříznutí jako parametry."
 
-#: lib/gui/lettering/option_panel.py:81
+#: lib/gui/lettering/option_panel.py:105
 #: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
 msgstr "Měřítko"
 
-#: lib/gui/lettering/option_panel.py:91
+#: lib/gui/lettering/option_panel.py:115
 msgid "Add trims"
 msgstr "Přidejte ořezy"
 
@@ -3237,7 +3245,7 @@ msgstr "Měřítko (%)"
 msgid "Max. line width"
 msgstr "Max. šířka čáry"
 
-#: lib/gui/lettering/option_panel.py:66 lib/gui/lettering_font_sample.py:48
+#: lib/gui/lettering/option_panel.py:90 lib/gui/lettering_font_sample.py:48
 msgid "Color sort"
 msgstr "Barevné řazení"
 
@@ -3754,7 +3762,7 @@ msgstr "Odstranit pruh"
 msgid "Generate Swatches"
 msgstr "Generovat vzorníky"
 
-#: lib/gui/lettering/main_panel.py:46 lib/gui/lettering/option_panel.py:95
+#: lib/gui/lettering/main_panel.py:46 lib/gui/lettering/option_panel.py:119
 #: lib/gui/test_swatches.py:33 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_break_apart.inx:8
 #: inx/inkstitch_cleanup.inx:8 inx/inkstitch_convert_to_stroke.inx:8

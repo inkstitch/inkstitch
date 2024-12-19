@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-16 01:42+0000\n"
-"PO-Revision-Date: 2024-12-16 01:43\n"
+"POT-Creation-Date: 2024-12-19 01:29+0000\n"
+"PO-Revision-Date: 2024-12-19 01:29\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-16 01:42+0000\n"
+"POT-Creation-Date: 2024-12-19 01:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2324,7 +2324,7 @@ msgstr "flach"
 msgid "point"
 msgstr "spitz"
 
-#: lib/elements/text.py:13 lib/gui/lettering/option_panel.py:102
+#: lib/elements/text.py:13 lib/gui/lettering/option_panel.py:126
 msgid "Text"
 msgstr "Text"
 
@@ -2919,7 +2919,7 @@ msgstr "Design Details"
 msgid "Title"
 msgstr "Titel"
 
-#: lib/extensions/thread_list.py:51 lib/gui/lettering/option_panel.py:50
+#: lib/extensions/thread_list.py:51 lib/gui/lettering/option_panel.py:74
 #: inx/inkstitch_lettering_generate_json.inx:84
 msgid "Size"
 msgstr "Größe"
@@ -3134,83 +3134,91 @@ msgstr "Diese Schriftart hat keine verfügbare Schriftvariante. Bitte aktualisie
 #. The user has chosen to scale the text by some percentage
 #. (50%, 200%, etc).  If you need to use the percentage symbol,
 #. make sure to double it (%%).
-#: lib/gui/lettering/main_panel.py:292
+#: lib/gui/lettering/main_panel.py:295
 msgid "Text scale"
 msgstr "Text-Skalierung"
 
-#: lib/gui/lettering/main_panel.py:305
+#: lib/gui/lettering/main_panel.py:308
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
 msgstr "Fehler: Der Text kann nicht in das Dokument eingefügt werden.\n"
 "%s"
 
-#: lib/gui/lettering/option_panel.py:21
+#: lib/gui/lettering/option_panel.py:24
+msgid "Height: "
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:28
+msgid "Scale:"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:44
 msgid "Font"
 msgstr "Schriftart"
 
-#: lib/gui/lettering/option_panel.py:33
+#: lib/gui/lettering/option_panel.py:57
 msgid "Font size filter (mm). 0 for all sizes."
 msgstr "Schriftgrößenfilter (mm). 0 für alle Größen."
 
-#: lib/gui/lettering/option_panel.py:35
+#: lib/gui/lettering/option_panel.py:59
 msgid "Glyphs"
 msgstr "Zeichen"
 
-#: lib/gui/lettering/option_panel.py:37
+#: lib/gui/lettering/option_panel.py:61
 msgid "Filter fonts by available glyphs."
 msgstr "Filtert die Schriften nach verfügbaren Zeichen."
 
-#: lib/gui/lettering/option_panel.py:44
+#: lib/gui/lettering/option_panel.py:68
 msgid "Filter fonts by category."
 msgstr "Filtert die Schriften nach Kategorie."
 
-#: lib/gui/lettering/option_panel.py:48
+#: lib/gui/lettering/option_panel.py:72
 msgid "Font Filter"
 msgstr "Schriftfilter"
 
-#: lib/gui/lettering/option_panel.py:63
+#: lib/gui/lettering/option_panel.py:87
 msgid "Stitch lines of text back and forth"
 msgstr "Sticke Textzeilen vor und zurück"
 
-#: lib/gui/lettering/option_panel.py:68
+#: lib/gui/lettering/option_panel.py:92
 msgid "Sort multicolor fonts. Unifies tartan patterns."
 msgstr "Sortiert mehrfarbige Schriften. Tartan-Schriften werden dabei auf ein Muster reduziert."
 
-#: lib/gui/lettering/option_panel.py:70
+#: lib/gui/lettering/option_panel.py:94
 msgid "Never"
 msgstr "nie"
 
-#: lib/gui/lettering/option_panel.py:70
+#: lib/gui/lettering/option_panel.py:94
 msgid "after each line"
 msgstr "nach jeder Reihe"
 
-#: lib/gui/lettering/option_panel.py:70
+#: lib/gui/lettering/option_panel.py:94
 msgid "after each word"
 msgstr "nach jedem Wort"
 
-#: lib/gui/lettering/option_panel.py:70
+#: lib/gui/lettering/option_panel.py:94
 msgid "after each letter"
 msgstr "nach jedem Buchstaben"
 
-#: lib/gui/lettering/option_panel.py:71
+#: lib/gui/lettering/option_panel.py:95
 msgid "Add trim command"
 msgstr "Fadenschnitt-Befehl hinzufügen"
 
-#: lib/gui/lettering/option_panel.py:74
+#: lib/gui/lettering/option_panel.py:98
 msgid "Use command symbols"
 msgstr "Visuelle Befehle verwenden"
 
-#: lib/gui/lettering/option_panel.py:76
+#: lib/gui/lettering/option_panel.py:100
 msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
 msgstr "Wenn aktiviert, werden visuelle Befehle (Symbole) eingefügt. Wenn deaktiviert, wird der Fadenschnitt über die Parametereinstellungen bestimmt."
 
-#: lib/gui/lettering/option_panel.py:81
+#: lib/gui/lettering/option_panel.py:105
 #: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
 msgstr "Maßstab"
 
-#: lib/gui/lettering/option_panel.py:91
+#: lib/gui/lettering/option_panel.py:115
 msgid "Add trims"
 msgstr "Fadenschnittbefehle hinzufügen"
 
@@ -3238,7 +3246,7 @@ msgstr "Maßstab (%)"
 msgid "Max. line width"
 msgstr "Maximale Zeilenlänge"
 
-#: lib/gui/lettering/option_panel.py:66 lib/gui/lettering_font_sample.py:48
+#: lib/gui/lettering/option_panel.py:90 lib/gui/lettering_font_sample.py:48
 msgid "Color sort"
 msgstr "Farbsortierung"
 
@@ -3756,7 +3764,7 @@ msgstr "Streifen entfernen"
 msgid "Generate Swatches"
 msgstr "Testmuster erstellen"
 
-#: lib/gui/lettering/main_panel.py:46 lib/gui/lettering/option_panel.py:95
+#: lib/gui/lettering/main_panel.py:46 lib/gui/lettering/option_panel.py:119
 #: lib/gui/test_swatches.py:33 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_break_apart.inx:8
 #: inx/inkstitch_cleanup.inx:8 inx/inkstitch_convert_to_stroke.inx:8
