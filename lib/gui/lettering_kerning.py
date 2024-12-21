@@ -4,7 +4,6 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import json
-from collections import defaultdict
 from copy import deepcopy
 from itertools import combinations_with_replacement
 from os import path
@@ -12,7 +11,7 @@ from os import path
 import wx
 import wx.adv
 from inkex import errormsg
-from wx.lib.mixins.listctrl import TextEditMixin, getListCtrlSelection
+from wx.lib.mixins.listctrl import TextEditMixin
 
 from ..elements import nodes_to_elements
 from ..i18n import _
@@ -31,7 +30,6 @@ class LetteringKerningPanel(wx.Panel):
         self.layer = layer
         self.metadata = metadata or dict()
         self.background_color = background_color
-        self.output_groups = []
 
         super().__init__(parent, wx.ID_ANY)
 
@@ -41,6 +39,8 @@ class LetteringKerningPanel(wx.Panel):
         self.font = None
         self.kerning_pairs = None
         self.kerning_combinations = []
+        self.text_before = ''
+        self.text_after = ''
 
         # preview
         self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
@@ -58,6 +58,21 @@ class LetteringKerningPanel(wx.Panel):
         self.font_chooser = wx.adv.BitmapComboBox(self.settings, wx.ID_ANY, style=wx.CB_READONLY | wx.CB_SORT, size=(600, 40))
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
 
+        text_before_label = wx.StaticText(self.settings, label=_("Text before"))
+        text_before = wx.TextCtrl(self.settings)
+        text_before.Bind(wx.EVT_TEXT, self.on_text_before_changed)
+        text_after_label = wx.StaticText(self.settings, label=_("Text after"))
+        text_after = wx.TextCtrl(self.settings)
+        text_after.Bind(wx.EVT_TEXT, self.on_text_after_changed)
+        grid_text_sizer = wx.FlexGridSizer(2, 2, 10, 10)
+        grid_text_sizer.AddGrowableCol(1)
+        grid_text_sizer.AddMany([
+            (text_before_label, 1, wx.ALL, 0),
+            (text_before, 1, wx.EXPAND, 0),
+            (text_after_label, 1, wx.ALL, 0),
+            (text_after, 1, wx.EXPAND, 0)
+        ])
+
         self.kerning_list = EditableListCtrl(self.settings, style=wx.LC_REPORT | wx.SUNKEN_BORDER)
         self.kerning_list.Bind(wx.EVT_LIST_ITEM_FOCUSED, self.on_kerning_list_focus)
         self.kerning_list.Bind(wx.EVT_LIST_END_LABEL_EDIT, self.on_kerning_update)
@@ -71,6 +86,7 @@ class LetteringKerningPanel(wx.Panel):
         apply_sizer.Add(self.apply_button, 0, wx.RIGHT | wx.BOTTOM, 10)
 
         settings_sizer.Add(self.font_chooser, 0, wx.ALL | wx.EXPAND, 10)
+        settings_sizer.Add(grid_text_sizer, 0, wx.ALL | wx.EXPAND, 10)
         settings_sizer.Add(self.kerning_list, 2, wx.ALL | wx.EXPAND, 10)
         settings_sizer.Add(apply_sizer, 0, wx.ALIGN_RIGHT | wx.ALL, 10)
 
@@ -113,6 +129,14 @@ class LetteringKerningPanel(wx.Panel):
         self.SetSizeHints(notebook_sizer.CalcMin())
         self.Layout()
 
+    def on_text_before_changed(self, event):
+        self.text_before = event.GetEventObject().GetValue()
+        self.update_preview()
+
+    def on_text_after_changed(self, event):
+        self.text_after = event.GetEventObject().GetValue()
+        self.update_preview()
+
     def on_kerning_update(self, event=None):
         self.preview_renderer.update()
 
@@ -134,15 +158,18 @@ class LetteringKerningPanel(wx.Panel):
         self.preview_renderer.update()
 
     def get_active_kerning_pair(self):
-        try:
-            selection = getListCtrlSelection(self.kerning_list)[0]
-            kerning_pair = self.kerning_list.GetItem(selection, 0).Text
-            kerning = int(self.kerning_list.GetItem(selection, 1).Text)
-            if self.kerning_list.GetItem(selection, 2).Text:
-                kerning = int(self.kerning_list.GetItem(selection, 2).Text)
-            return kerning_pair, kerning
-        except (IndexError, ValueError, RuntimeError):
-            return '', 0
+        selection = self.kerning_list.GetFirstSelected()
+        if selection == -1:
+            return ''
+        kerning_pair = self.kerning_list.GetItem(selection, 0).Text
+        kerning = float(self.kerning_list.GetItem(selection, 1).Text)
+        if self.kerning_list.GetItem(selection, 2).Text:
+            try:
+                kerning = float(self.kerning_list.GetItem(selection, 2).Text)
+            except ValueError:
+                pass
+        self.kerning_pairs[kerning_pair] = float(kerning)
+        return kerning_pair
 
     def on_font_changed(self, event=None):
         self.font = self.fonts.get(self.font_chooser.GetValue(), list(self.fonts.values())[0].marked_custom_font_name)
@@ -167,9 +194,10 @@ class LetteringKerningPanel(wx.Panel):
         for kerning_pair in self.kerning_combinations:
             index = self.kerning_list.InsertItem(self.kerning_list.GetItemCount(), kerning_pair)
             self.kerning_list.SetItem(index, 0, kerning_pair)
-            self.kerning_list.SetItem(index, 1, str(self.kerning_pairs.get(kerning_pair, 0)))
+            self.kerning_list.SetItem(index, 1, str(self.kerning_pairs.get(kerning_pair, 0.0)))
         if self.kerning_list.GetItemCount() != 0:
             self.kerning_list.Focus(0)
+            self.kerning_list.Select(0)
 
         self.update_preview()
 
@@ -180,19 +208,11 @@ class LetteringKerningPanel(wx.Panel):
             errormsg(_("Could not read json file."))
             return
 
-        kerning_dict = defaultdict(list)
-
-        count = self.kerning_list.GetItemCount()
-        for row in range(count):
-            kerning_pair = self.kerning_list.GetItem(row, col=0).Text
-            kerning = self.kerning_list.GetItem(row, col=2).Text or self.kerning_list.GetItem(row, col=1).Text
-            if kerning and kerning != '0':
-                kerning_dict[kerning_pair] = int(kerning)
-
         with open(json_file, 'r') as font_data:
             data = json.load(font_data)
 
-        data['kerning_pairs'] = kerning_dict
+        kerning_pairs = {key: val for key, val in self.kerning_pairs.items() if val != 0}
+        data['kerning_pairs'] = kerning_pairs
 
         # write data to font.json into the same directory as the font file
         with open(json_file, 'w', encoding="utf8") as font_data:
@@ -218,36 +238,45 @@ class LetteringKerningPanel(wx.Panel):
         del self.layer[:]
 
         variant = self.font.variants[self.font.default_variant]
-        text, kerning = self.get_active_kerning_pair()
+        text = self.get_active_kerning_pair()
         if not text:
             return
+
+        text = self.text_before + text + self.text_after
 
         last_character = None
         position_x = 0
         for character in text:
             glyph = variant[character]
-            node = deepcopy(glyph.node)
+            if character == " " or (glyph is None and self.font.default_glyph == " "):
+                position_x += self.font.word_spacing
+                last_character = None
+            else:
+                if glyph is None:
+                    glyph = variant[self.font.default_glyph]
 
-            if last_character is not None:
-                position_x += glyph.min_x - kerning
+                if glyph is not None:
+                    node = deepcopy(glyph.node)
+                    if last_character is not None:
+                        position_x += glyph.min_x - self.kerning_pairs.get(last_character + character, 0)
 
-            transform = f"translate({position_x}, 0)"
-            node.set('transform', transform)
+                    transform = f"translate({position_x}, 0)"
+                    node.set('transform', transform)
 
-            horiz_adv_x_default = self.font.horiz_adv_x_default
-            if horiz_adv_x_default is None:
-                horiz_adv_x_default = glyph.width + glyph.min_x
+                    horiz_adv_x_default = self.font.horiz_adv_x_default
+                    if horiz_adv_x_default is None:
+                        horiz_adv_x_default = glyph.width + glyph.min_x
 
-            position_x += self.font.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
+                    position_x += self.font.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
 
-            # self.font._update_commands(node, glyph)
-            # self.font._update_clips(self.layer, node, glyph)
+                    self.font._update_commands(node, glyph)
+                    self.font._update_clips(self.layer, node, glyph)
 
-            # this is used to recognize a glyph layer later in the process
-            # because this is not unique it will be overwritten by inkscape when inserted into the document
-            node.set("id", "glyph")
-            self.layer.add(node)
-            last_character = character
+                    # this is used to recognize a glyph layer later in the process
+                    # because this is not unique it will be overwritten by inkscape when inserted into the document
+                    node.set("id", "glyph")
+                    self.layer.add(node)
+                    last_character = character
 
     def render_stitch_plan(self):
         stitch_groups = []
@@ -310,7 +339,7 @@ class EditableListCtrl(wx.ListCtrl, TextEditMixin):
 
         if text:
             try:
-                int(text)
+                float(text)
             except ValueError:
                 swap = True
 
