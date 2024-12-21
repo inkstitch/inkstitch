@@ -158,7 +158,10 @@ class LetteringKerningPanel(wx.Panel):
         self.preview_renderer.update()
 
     def get_active_kerning_pair(self):
-        selection = self.kerning_list.GetFirstSelected()
+        try:
+            selection = self.kerning_list.GetFirstSelected()
+        except RuntimeError:
+            return ''
         if selection == -1:
             return ''
         kerning_pair = self.kerning_list.GetItem(selection, 0).Text
@@ -166,15 +169,16 @@ class LetteringKerningPanel(wx.Panel):
         if self.kerning_list.GetItem(selection, 2).Text:
             try:
                 kerning = float(self.kerning_list.GetItem(selection, 2).Text)
-            except ValueError:
+                self.kerning_pairs[kerning_pair] = float(kerning)
+            except (ValueError, IndexError):
                 pass
-        self.kerning_pairs[kerning_pair] = float(kerning)
         return kerning_pair
 
     def on_font_changed(self, event=None):
         self.font = self.fonts.get(self.font_chooser.GetValue(), list(self.fonts.values())[0].marked_custom_font_name)
         self.kerning_pairs = self.font.kerning_pairs
         self.font._load_variants()
+
         kerning_combinations = combinations_with_replacement(self.font.available_glyphs, 2)
         self.kerning_combinations = [''.join(combination) for combination in kerning_combinations]
         self.kerning_combinations.extend([combination[1] + combination[0] for combination in self.kerning_combinations])
