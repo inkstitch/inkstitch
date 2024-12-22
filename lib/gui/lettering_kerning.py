@@ -99,11 +99,11 @@ class LetteringKerningPanel(wx.Panel):
         help_text = wx.StaticText(
             self.help,
             wx.ID_ANY,
-            _("    This extension helps font creators to generate an output of every glyph from a selected font."),
+            _("Feature to verify or update kerning information for an existing font."),
             style=wx.ALIGN_LEFT
         )
         help_text.Wrap(500)
-        help_sizer.Add(help_text, 0, wx.ALL, 8)
+        help_sizer.Add(help_text, 0, wx.ALL, 20)
 
         help_sizer.Add((20, 20), 0, 0, 0)
 
@@ -113,8 +113,8 @@ class LetteringKerningPanel(wx.Panel):
         self.website_link = wx.adv.HyperlinkCtrl(
             self.help,
             wx.ID_ANY,
-            _("https://inkstitch.org/docs/font-tools/#font-sampling"),
-            _("https://inkstitch.org/docs/font-tools/#font-sampling")
+            _("https://inkstitch.org/docs/font-tools/#kerning-tool"),
+            _("https://inkstitch.org/docs/font-tools/#kerning-tool")
         )
         help_sizer.Add(self.website_link, 0, wx.ALL, 8)
 
