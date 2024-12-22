@@ -74,7 +74,7 @@ class LetteringKerningPanel(wx.Panel):
         ])
 
         self.kerning_list = EditableListCtrl(self.settings, style=wx.LC_REPORT | wx.SUNKEN_BORDER)
-        self.kerning_list.Bind(wx.EVT_LIST_ITEM_FOCUSED, self.on_kerning_list_focus)
+        self.kerning_list.Bind(wx.EVT_LIST_ITEM_SELECTED, self.on_kerning_list_select)
         self.kerning_list.Bind(wx.EVT_LIST_END_LABEL_EDIT, self.on_kerning_update)
 
         apply_sizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -138,7 +138,11 @@ class LetteringKerningPanel(wx.Panel):
         self.update_preview()
 
     def on_kerning_update(self, event=None):
-        self.preview_renderer.update()
+        self.update_preview()
+
+    def on_kerning_list_select(self, event=None):
+        self.update_preview()
+        event.Skip()
 
     def set_font_list(self):
         self.fonts = {}
@@ -154,14 +158,8 @@ class LetteringKerningPanel(wx.Panel):
             else:
                 self.font_chooser.Append(font.marked_custom_font_name)
 
-    def on_kerning_list_focus(self, event=None):
-        self.preview_renderer.update()
-
     def get_active_kerning_pair(self):
-        try:
-            selection = self.kerning_list.GetFirstSelected()
-        except RuntimeError:
-            return ''
+        selection = self.kerning_list.GetFirstSelected()
         if selection == -1:
             return ''
         kerning_pair = self.kerning_list.GetItem(selection, 0).Text
@@ -200,8 +198,8 @@ class LetteringKerningPanel(wx.Panel):
             self.kerning_list.SetItem(index, 0, kerning_pair)
             self.kerning_list.SetItem(index, 1, str(self.kerning_pairs.get(kerning_pair, 0.0)))
         if self.kerning_list.GetItemCount() != 0:
-            self.kerning_list.Focus(0)
             self.kerning_list.Select(0)
+            self.kerning_list.Focus(0)
 
         self.update_preview()
 
