@@ -8,7 +8,7 @@ from shapely.validation import make_valid
 
 from ..elements import EmbroideryElement
 from ..utils import ensure_multi_polygon
-from .tags import SVG_GROUP_TAG
+from .tags import SVG_GROUP_TAG, SVG_PATH_TAG
 
 
 def get_clip_path(node):
@@ -31,7 +31,43 @@ def _clip_paths(node_or_group):
     transform = node_or_group.composed_transform()
     clip.transform = transform
     clip_element = EmbroideryElement(clip)
-    clip_paths = [path for path in clip_element.paths if len(path) > 3]
+    inverse_effect = _get_path_effects(node_or_group)
+    clip_paths = None
+    if inverse_effect == 'ignore':
+        return
+    elif inverse_effect == 'inverse':
+        for path in clip.iterdescendants(SVG_PATH_TAG):
+            if path.get('class', None) == 'powerclip':
+                original_transform = path.transform
+                path.transform @= transform
+                clip_element = EmbroideryElement(path)
+                clip_paths = [path for path in clip_element.paths if len(path) > 3]
+                path.transform = original_transform
+                break
+    else:
+        clip_paths = [path for path in clip_element.paths if len(path) > 3]
+
     if clip_paths:
         clip_paths.sort(key=lambda point_list: Polygon(point_list).area, reverse=True)
         return make_valid(MultiPolygon([(clip_paths[0], clip_paths[1:])]))
+
+
+def _get_path_effects(node):
+    path_effects = node.get('inkscape:path-effect', None)
+    if path_effects is not None:
+        path_effects = path_effects.split(';')
+        for path_effect in path_effects:
+            effect = node.getroottree().getroot().getElementById(path_effect[1:])
+            if effect.get('effect', None) == 'powerclip':
+                if effect.get('hide_clip', 'false') in ['1', 'true', 'True']:
+                    # The clip is inactive
+                    return 'ignore'
+                elif effect.get('flatten', 'false') in ['1', 'true', 'True']:
+                    # Clipping is already calculated into the path.
+                    # This means we can ignore the clip.
+                    return 'ignore'
+                elif effect.get('inverse', 'false') in ['1', 'true', 'True']:
+                    return 'inverse'
+                else:
+                    return 'effect'
+    return 'standard'
