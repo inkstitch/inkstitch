@@ -31,11 +31,11 @@ def _clip_paths(node_or_group):
     transform = node_or_group.composed_transform()
     clip.transform = transform
     clip_element = EmbroideryElement(clip)
-    inverse_effect = _get_path_effects(node_or_group)
+    path_effect = _get_path_effects(node_or_group)
     clip_paths = None
-    if inverse_effect == 'ignore':
+    if path_effect == 'ignore':
         return
-    elif inverse_effect == 'inverse':
+    elif path_effect == 'inverse':
         for path in clip.iterdescendants(SVG_PATH_TAG):
             if path.get('class', None) == 'powerclip':
                 original_transform = path.transform
