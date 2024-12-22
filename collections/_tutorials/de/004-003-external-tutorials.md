@@ -1,5 +1,5 @@
 ---
-title: "Externe Tutorials"
+title: "Externe Ressourcen"
 permalink: /de/tutorials/external-tutorials/
 read_time: false
 
@@ -38,3 +38,5 @@ Kennt ihr deutsche Tutorials? Immer her damit. Wir setzen gerne einen Link.
 * <http://www.biolib.de/>
 * <https://pixabay.com/de/images/search/clipart/>
 * <https://ian.umces.edu/media-library/symbols/>
+* <https://www.getty.edu/art/collection/search?open_content=true>
+* <https://publicdomainreview.org/collections/images/>
