@@ -5,10 +5,11 @@
 
 import json
 import os
-import sys
+
+from inkex import errormsg
 
 from ..i18n import _
-from ..lettering.font_info import FontFileInfo
+from ..lettering import Font
 from .base import InkstitchExtension
 
 
@@ -19,18 +20,24 @@ class LetteringUpdateJsonGlyphlist(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--notebook")
-        self.arg_parser.add_argument("-f", "--font-file", type=str, default="", dest="font_file")
-        self.arg_parser.add_argument("-j", "--json-file", type=str, default="", dest="json_file")
+        self.arg_parser.add_argument("-d", "--font-dir", type=str, default="", dest="font_dir")
 
     def effect(self):
         # file paths
-        font_file = self.options.font_file
-        json_file = self.options.json_file
-        if not os.path.isfile(font_file) or not os.path.isfile(json_file):
-            print(_("Please verify file locations."), file=sys.stderr)
+        font_dir = self.options.font_dir
+        if not os.path.isdir(font_dir):
+            errormsg(_("Please verify font folder path."))
             return
+        json_file = self._get_json_file(font_dir)
 
-        glyphs = FontFileInfo(font_file).glyph_list()
+        font = Font(font_dir)
+        # get svg files for default variant of this font
+        font._load_variants()
+        glyphs = font.get_variant(font.default_variant).glyphs
+        glyphs = list(glyphs.keys())
+
+        if not glyphs:
+            return
 
         with open(json_file, 'r') as font_data:
             data = json.load(font_data)
@@ -40,3 +47,9 @@ class LetteringUpdateJsonGlyphlist(InkstitchExtension):
         # write data to font.json into the same directory as the font file
         with open(json_file, 'w', encoding="utf8") as font_data:
             json.dump(data, font_data, indent=4, ensure_ascii=False)
+
+    def _get_json_file(self, font_dir):
+        json_file = os.path.join(font_dir, "font.json")
+        if not os.path.isfile(json_file):
+            errormsg(_("Could not find json file. Please create one with Extensions > Ink/Stitch > Font Management > Generate JSON..."))
+        return json_file
