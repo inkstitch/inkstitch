@@ -30,8 +30,8 @@ class LetteringUpdateJsonGlyphlist(InkstitchExtension):
             return
         json_file = self._get_json_file(font_dir)
 
+        # glyphs
         font = Font(font_dir)
-        # get svg files for default variant of this font
         font._load_variants()
         glyphs = font.get_variant(font.default_variant).glyphs
         glyphs = list(glyphs.keys())
@@ -39,12 +39,13 @@ class LetteringUpdateJsonGlyphlist(InkstitchExtension):
         if not glyphs:
             return
 
+        # read json file
         with open(json_file, 'r') as font_data:
             data = json.load(font_data)
 
         data['glyphs'] = glyphs
 
-        # write data to font.json into the same directory as the font file
+        # write data to the.json file
         with open(json_file, 'w', encoding="utf8") as font_data:
             json.dump(data, font_data, indent=4, ensure_ascii=False)
 
