@@ -518,7 +518,7 @@ class EmbroideryElement(object):
             # we don't care about the previous stitch
             previous_stitch = None
 
-        cache_key = self.get_cache_key(previous_stitch)
+        cache_key = self.get_cache_key(previous_stitch, next_element)
         stitch_groups = get_stitch_plan_cache().get(cache_key)
 
         if stitch_groups:
@@ -548,14 +548,14 @@ class EmbroideryElement(object):
             return
 
         stitch_plan_cache = get_stitch_plan_cache()
-        cache_key = self.get_cache_key(previous_stitch)
+        cache_key = self.get_cache_key(previous_stitch, next_element)
         if cache_key not in stitch_plan_cache:
             stitch_plan_cache[cache_key] = stitch_groups
 
         if previous_stitch is not None:
             # Also store it with None as the previous stitch, so that it can be used next time
             # if we don't care about the previous stitch
-            cache_key = self.get_cache_key(None)
+            cache_key = self.get_cache_key(None, None)
             if cache_key not in stitch_plan_cache:
                 stitch_plan_cache[cache_key] = stitch_groups
 
@@ -585,10 +585,10 @@ class EmbroideryElement(object):
     def _get_tartan_key_data(self):
         return (self.node.get('inkstitch:tartan', None))
 
-    def get_cache_key_data(self, previous_stitch):
+    def get_cache_key_data(self, previous_stitch, next_element):
         return []
 
-    def get_cache_key(self, previous_stitch):
+    def get_cache_key(self, previous_stitch, next_element):
         cache_key_generator = CacheKeyGenerator()
         cache_key_generator.update(self.__class__.__name__)
         cache_key_generator.update(self.get_params_and_values())
@@ -596,14 +596,16 @@ class EmbroideryElement(object):
         cache_key_generator.update(list(self._get_specified_style().items()))
         cache_key_generator.update(self._get_gradient_cache_key_data())
         cache_key_generator.update(previous_stitch)
+        if next_element is not None:
+            cache_key_generator.update(next_element.get_cache_key(None, None))
         cache_key_generator.update([(c.command, c.target_point) for c in self.commands])
         cache_key_generator.update(self._get_patterns_cache_key_data())
         cache_key_generator.update(self._get_guides_cache_key_data())
-        cache_key_generator.update(self.get_cache_key_data(previous_stitch))
+        cache_key_generator.update(self.get_cache_key_data(previous_stitch, next_element))
         cache_key_generator.update(self._get_tartan_key_data())
 
         cache_key = cache_key_generator.get_cache_key()
-        debug.log(f"cache key for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)} {previous_stitch}: {cache_key}")
+        debug.log(f"cache key for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)} {previous_stitch} {next_element}: {cache_key}")
 
         return cache_key
 
