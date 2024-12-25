@@ -37,8 +37,11 @@ class LetteringKerningPanel(wx.Panel):
 
         self.fonts = None
         self.font = None
+        self.default_variant = None
+        self.glyphs = None
         self.kerning_pairs = None
         self.kerning_combinations = []
+
         self.text_before = ''
         self.text_after = ''
 
@@ -176,8 +179,10 @@ class LetteringKerningPanel(wx.Panel):
         self.font = self.fonts.get(self.font_chooser.GetValue(), list(self.fonts.values())[0].marked_custom_font_name)
         self.kerning_pairs = self.font.kerning_pairs
         self.font._load_variants()
+        self.default_variant = self.font.variants[self.font.default_variant]
+        self.glyphs = list(self.default_variant.glyphs.keys())
 
-        kerning_combinations = combinations_with_replacement(self.font.available_glyphs, 2)
+        kerning_combinations = combinations_with_replacement(self.glyphs, 2)
         self.kerning_combinations = [''.join(combination) for combination in kerning_combinations]
         self.kerning_combinations.extend([combination[1] + combination[0] for combination in self.kerning_combinations])
         self.kerning_combinations = list(set(self.kerning_combinations))
@@ -215,20 +220,13 @@ class LetteringKerningPanel(wx.Panel):
 
         kerning_pairs = {key: val for key, val in self.kerning_pairs.items() if val != 0}
         data['kerning_pairs'] = kerning_pairs
+        data['glyphs'] = self.glyphs
 
         # write data to font.json into the same directory as the font file
         with open(json_file, 'w', encoding="utf8") as font_data:
             json.dump(data, font_data, indent=4, ensure_ascii=False)
 
         self.GetTopLevelParent().Close()
-
-    def duplicate_warning(self):
-        # warn about duplicated glyphs
-        if len(set(self.font.available_glyphs)) != len(self.font.available_glyphs):
-            duplicated_glyphs = " ".join(
-                [glyph for glyph in set(self.font.available_glyphs) if self.font.available_glyphs.count(glyph) > 1]
-            )
-            errormsg(_("Found duplicated glyphs in font file: {duplicated_glyphs}").format(duplicated_glyphs=duplicated_glyphs))
 
     def cancel(self, event):
         self.GetTopLevelParent().Close()
@@ -239,7 +237,6 @@ class LetteringKerningPanel(wx.Panel):
     def update_lettering(self):
         del self.layer[:]
 
-        variant = self.font.variants[self.font.default_variant]
         text = self.get_active_kerning_pair()
         if not text:
             return
@@ -249,13 +246,13 @@ class LetteringKerningPanel(wx.Panel):
         last_character = None
         position_x = 0
         for character in text:
-            glyph = variant[character]
+            glyph = self.default_variant[character]
             if character == " " or (glyph is None and self.font.default_glyph == " "):
                 position_x += self.font.word_spacing
                 last_character = None
             else:
                 if glyph is None:
-                    glyph = variant[self.font.default_glyph]
+                    glyph = self.default_variant[self.font.default_glyph]
 
                 if glyph is not None:
                     node = deepcopy(glyph.node)

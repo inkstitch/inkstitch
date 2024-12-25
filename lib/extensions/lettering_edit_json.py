@@ -6,7 +6,7 @@
 import wx
 from inkex import Layer
 
-from ..gui.lettering_kerning import LetteringKerningPanel
+from ..gui.edit_json import LetteringEditJsonPanel
 from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
 from ..svg import get_correction_transform
@@ -14,7 +14,7 @@ from ..utils.svg_data import get_pagecolor
 from .base import InkstitchExtension
 
 
-class LetteringKerning(InkstitchExtension):
+class LetteringEditJson(InkstitchExtension):
     '''
     This extension helps font creators to generate an output of every glyph from a selected font
     '''
@@ -29,8 +29,8 @@ class LetteringKerning(InkstitchExtension):
 
         app = wx.App()
         frame = SplitSimulatorWindow(
-            title=_("Ink/Stitch Font Kerning Tool"),
-            panel_class=LetteringKerningPanel,
+            title=_("Ink/Stitch Edit JSON"),
+            panel_class=LetteringEditJsonPanel,
             layer=layer,
             metadata=metadata,
             background_color=background_color,

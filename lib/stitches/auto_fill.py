@@ -706,7 +706,7 @@ def pick_edge(edges):
     # Prefer a segment if one is available.  This has the effect of
     # creating long sections of back-and-forth row traversal.
     for source, node, key in edges:
-        if key == 'segment':
+        if key.startswith('segment'):
             return source, node, key
 
     return list(edges)[0]
