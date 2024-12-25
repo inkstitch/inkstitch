@@ -187,6 +187,11 @@ class MultiColorSatinPanel(wx.Panel):
                     new_satin.set('inkstitch:contour_underlay', False)
                     new_satin.set('inkstitch:zigzag_underlay', False)
 
+                # TODO: adapt start and end position, as well as running_stitch_position
+                # For now, turn start and end points off as they may produce bad looking output
+                new_satin.set('inkstitch:start_at_nearest_point', False)
+                new_satin.set('inkstitch:end_at_nearest_point', False)
+
                 previous_margin = margin
                 current_position += width + margin
 

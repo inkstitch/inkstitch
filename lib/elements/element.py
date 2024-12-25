@@ -5,26 +5,29 @@
 import sys
 from contextlib import contextmanager
 from copy import deepcopy
+from typing import List, Optional
 
 import inkex
 import numpy as np
-from inkex import bezier, BaseElement
-from typing import List, Optional
+from inkex import BaseElement, bezier
+from shapely import Point as ShapelyPoint
+from shapely.ops import nearest_points
 
 from ..commands import Command, find_commands
-from ..stitch_plan import StitchGroup
 from ..debug.debug import debug
 from ..exceptions import InkstitchException, format_uncaught_exception
 from ..i18n import _
 from ..marker import get_marker_elements_cache_key_data
 from ..patterns import apply_patterns, get_patterns_cache_key_data
+from ..stitch_plan import StitchGroup
 from ..stitch_plan.lock_stitch import (LOCK_DEFAULTS, AbsoluteLock, CustomLock,
                                        LockStitch, SVGLock)
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import Point, cache
-from ..utils.cache import get_stitch_plan_cache, is_cache_disabled, CacheKeyGenerator
+from ..utils.cache import (CacheKeyGenerator, get_stitch_plan_cache,
+                           is_cache_disabled)
 
 
 class Param(object):
@@ -437,6 +440,12 @@ class EmbroideryElement(object):
         raise NotImplementedError("INTERNAL ERROR: %s must implement shape()", self.__class__)
 
     @property
+    def first_stitch(self):
+        # first stitch is an approximation to where the first stitch may possibly be
+        # if not defined through commands or repositioned by the previous element
+        raise NotImplementedError("INTERNAL ERROR: %s must implement first_stitch()", self.__class__)
+
+    @property
     @cache
     def commands(self) -> List[Command]:
         return find_commands(self.node)
@@ -497,11 +506,11 @@ class EmbroideryElement(object):
 
         return lock_start, lock_end
 
-    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup]) -> List[StitchGroup]:
+    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup], next_element: Optional[ShapelyPoint] = None) -> List[StitchGroup]:
         raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
     @debug.time
-    def _load_cached_stitch_groups(self, previous_stitch):
+    def _load_cached_stitch_groups(self, previous_stitch, next_element):
         if is_cache_disabled():
             return None
 
@@ -526,8 +535,15 @@ class EmbroideryElement(object):
         """
         return False
 
+    def uses_next_element(self) -> bool:
+        """Returns True if the shape of the next element can affect this Element's stitches.
+
+        This function may be overridden in a subclass.
+        """
+        return False
+
     @debug.time
-    def _save_cached_stitch_groups(self, stitch_groups, previous_stitch):
+    def _save_cached_stitch_groups(self, stitch_groups, previous_stitch, next_element):
         if is_cache_disabled():
             return
 
@@ -591,7 +607,7 @@ class EmbroideryElement(object):
 
         return cache_key
 
-    def embroider(self, last_stitch_group: Optional[StitchGroup]) -> List[StitchGroup]:
+    def embroider(self, last_stitch_group: Optional[StitchGroup], next_element=None) -> List[StitchGroup]:
         debug.log(f"starting {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
 
         with self.handle_unexpected_exceptions():
@@ -599,12 +615,13 @@ class EmbroideryElement(object):
                 previous_stitch = last_stitch_group.stitches[-1]
             else:
                 previous_stitch = None
-            stitch_groups = self._load_cached_stitch_groups(previous_stitch)
+
+            stitch_groups = self._load_cached_stitch_groups(previous_stitch, next_element)
 
             if not stitch_groups:
                 self.validate()
 
-                stitch_groups = self.to_stitch_groups(last_stitch_group)
+                stitch_groups = self.to_stitch_groups(last_stitch_group, next_element)
                 apply_patterns(stitch_groups, self.node)
 
                 if stitch_groups:
@@ -617,10 +634,26 @@ class EmbroideryElement(object):
                     stitch_group.min_jump_stitch_length = self.min_jump_stitch_length
                     stitch_group.set_minimum_stitch_length(self.min_stitch_length)
 
-                self._save_cached_stitch_groups(stitch_groups, previous_stitch)
+                self._save_cached_stitch_groups(stitch_groups, previous_stitch, next_element)
 
         debug.log(f"ending {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
         return stitch_groups
+
+    def next_stitch(self, next_element):
+        next_stitch = None
+        if next_element is not None and self.uses_next_element():
+            # in fact we really only try an approximation to the next stitch
+            if next_element.uses_previous_stitch():
+                try:
+                    next_stitch = nearest_points(next_element.shape, self.shape)[1]
+                except (ValueError, AttributeError):
+                    pass
+            else:
+                try:
+                    next_stitch = nearest_points(next_element.first_stitch, self.shape)[1]
+                except (ValueError, AttributeError):
+                    pass
+        return next_stitch
 
     def fatal(self, message, point_to_troubleshoot=False):
         label = self.node.get(INKSCAPE_LABEL)

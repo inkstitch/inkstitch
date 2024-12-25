@@ -169,6 +169,7 @@ inkstitch_attribs = [
     'min_random_split_length_mm',
     'running_stitch_position',
     'start_at_nearest_point',
+    'end_at_nearest_point',
     # stitch_plan
     'invisible_layers',
     'layer_visibility',

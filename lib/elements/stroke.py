@@ -13,11 +13,13 @@ from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches.ripple_stitch import ripple_stitch
-from ..stitches.running_stitch import (bean_stitch, running_stitch, zigzag_stitch)
+from ..stitches.running_stitch import (bean_stitch, running_stitch,
+                                       zigzag_stitch)
 from ..svg import get_node_transform, parse_length_with_units
 from ..svg.clip import get_clip_path
 from ..threads import ThreadColor
 from ..utils import Point, cache
+from ..utils.geometry import ensure_multi_line_string
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
@@ -41,6 +43,7 @@ class TooFewSubpathsWarning(ValidationWarning):
 
 
 class Stroke(EmbroideryElement):
+    name = "Stroke"
     element_name = _("Stroke")
 
     @property
@@ -483,12 +486,16 @@ class Stroke(EmbroideryElement):
     @property
     @cache
     def shape(self):
-        return self.as_multi_line_string().convex_hull
+        return ensure_multi_line_string(self.as_multi_line_string().convex_hull)
 
     @cache
     def as_multi_line_string(self):
         line_strings = [shgeo.LineString(path) for path in self.paths]
         return shgeo.MultiLineString(line_strings)
+
+    @property
+    def first_stitch(self):
+        return shgeo.Point(self.as_multi_line_string().geoms[0].coords[0])
 
     def _get_clipped_path(self, paths):
         clip_path = get_clip_path(self.node)
@@ -583,7 +590,7 @@ class Stroke(EmbroideryElement):
     def do_bean_repeats(self, stitches):
         return bean_stitch(stitches, self.bean_stitch_repeats)
 
-    def to_stitch_groups(self, last_stitch_group):  # noqa: C901
+    def to_stitch_groups(self, last_stitch_group, next_element=None):  # noqa: C901
         stitch_groups = []
 
         # ripple stitch

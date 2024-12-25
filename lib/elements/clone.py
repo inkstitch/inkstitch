@@ -35,7 +35,8 @@ class CloneWarning(ValidationWarning):
 
 
 class Clone(EmbroideryElement):
-    element_name = "Clone"
+    name = "Clone"
+    element_name = _("Clone")
 
     def __init__(self, *args, **kwargs):
         super(Clone, self).__init__(*args, **kwargs)
@@ -82,21 +83,52 @@ class Clone(EmbroideryElement):
                 elements.extend(node_to_elements(child, True))
         return elements
 
-    def to_stitch_groups(self, last_stitch_group=None) -> List[StitchGroup]:
+    def to_stitch_groups(self, last_stitch_group=None, next_element=None) -> List[StitchGroup]:
         if not self.clone:
             return []
 
         with self.clone_elements() as elements:
+            if not elements:
+                return []
             stitch_groups = []
 
-            for element in elements:
+            next_elements = [next_element]
+            if len(elements) > 1:
+                next_elements = elements[1:] + next_elements
+            for element, next_element in zip(elements, next_elements):
                 # Using `embroider` here to get trim/stop after commands, etc.
-                element_stitch_groups = element.embroider(last_stitch_group)
+                element_stitch_groups = element.embroider(last_stitch_group, next_element)
                 if len(element_stitch_groups):
                     last_stitch_group = element_stitch_groups[-1]
                     stitch_groups.extend(element_stitch_groups)
 
             return stitch_groups
+
+    @property
+    def first_stitch(self):
+        first, last = self.first_and_last_element()
+        if first:
+            return first.first_stitch
+        return None
+
+    def uses_previous_stitch(self):
+        first, last = self.first_and_last_element()
+        if first:
+            return first.uses_previous_stitch()
+        return None
+
+    def uses_next_element(self):
+        first, last = self.first_and_last_element()
+        if last:
+            return last.uses_next_element()
+        return None
+
+    @cache
+    def first_and_last_element(self):
+        with self.clone_elements() as elements:
+            if len(elements):
+                return elements[0], elements[-1]
+        return None, None
 
     @contextmanager
     def clone_elements(self) -> Generator[List[EmbroideryElement], None, None]:
