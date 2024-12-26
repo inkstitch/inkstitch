@@ -6,8 +6,7 @@
 
     <param name="notebook" type="notebook">
         <page name="options" gui-text="Options">
-            <param type="path" name="font-file" gui-text="SVG Font File" mode="file" filetypes="svg"/>
-            <param type="path" name="json-file" gui-text="JSON File" mode="file" filetypes="json"/>
+            <param type="path" name="font-dir" gui-text="Font Folder" mode="folder"/>
         </page>
         <page name="info" gui-text="Help">
             <label appearance="header">Updates the glyphlist in the json file.</label>
