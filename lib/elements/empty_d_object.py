@@ -27,5 +27,9 @@ class EmptyDObject(EmbroideryElement):
     def shape(self):
         return
 
-    def to_stitch_groups(self, last_stitch_group):
+    @property
+    def first_stitch(self):
+        return
+
+    def to_stitch_groups(self, last_stitch_group, next_element=None):
         return []

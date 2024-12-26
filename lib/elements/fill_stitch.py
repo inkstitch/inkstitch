@@ -143,6 +143,7 @@ class InvalidShapeError(ValidationError):
 
 
 class FillStitch(EmbroideryElement):
+    name = "FillStitch"
     element_name = _("FillStitch")
 
     @property
@@ -890,6 +891,12 @@ class FillStitch(EmbroideryElement):
     def fill_shape(self, shape):
         return self.shrink_or_grow_shape(shape, self.expand)
 
+    @property
+    def first_stitch(self):
+        # Serves as a reverence point for the end point of the previous element
+        # This isn't really used for fill stitches as they always make their first stitch point dependent on the previous element itself
+        return None
+
     def get_starting_point(self, previous_stitch_group):
         # If there is a "starting_point" Command, then use that; otherwise pick
         # the point closest to the end of the last stitch_group.
@@ -901,19 +908,27 @@ class FillStitch(EmbroideryElement):
         else:
             return None
 
+    def get_ending_point(self, next_stitch):
+        if self.get_command('ending_point'):
+            return self.get_command('ending_point').target_point
+        elif next_stitch:
+            return next_stitch.coords
+        else:
+            return None
+
     def uses_previous_stitch(self):
         if self.get_command('starting_point'):
             return False
         else:
             return True
 
-    def get_ending_point(self):
+    def uses_next_element(self):
         if self.get_command('ending_point'):
-            return self.get_command('ending_point').target_point
+            return False
         else:
-            return None
+            return True
 
-    def to_stitch_groups(self, previous_stitch_group):  # noqa: C901
+    def to_stitch_groups(self, previous_stitch_group, next_element=None):  # noqa: C901
         # backwards compatibility: legacy_fill used to be inkstitch:auto_fill == False
         if not self.auto_fill or self.fill_method == 'legacy_fill':
             return self.do_legacy_fill()
@@ -922,7 +937,7 @@ class FillStitch(EmbroideryElement):
 
             # start and end points
             start = self.get_starting_point(previous_stitch_group)
-            final_end = self.get_ending_point()
+            final_end = self.get_ending_point(self.next_stitch(next_element))
 
             # sort shapes to get a nicer routing
             shapes = list(self.shape.geoms)

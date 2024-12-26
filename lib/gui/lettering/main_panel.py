@@ -320,10 +320,14 @@ class LetteringPanel(wx.Panel):
             elements = nodes_to_elements(self.group.iterdescendants(SVG_PATH_TAG))
 
             last_stitch_group = None
-            for element in elements:
+            next_elements = [None]
+            if len(elements) > 1:
+                next_elements = elements[1:] + next_elements
+            for element, next_element in zip(elements, next_elements):
                 check_stop_flag()
 
-                stitch_groups.extend(element.embroider(last_stitch_group))
+                stitch_groups.extend(element.embroider(last_stitch_group, next_element))
+
                 if stitch_groups:
                     last_stitch_group = stitch_groups[-1]
 
