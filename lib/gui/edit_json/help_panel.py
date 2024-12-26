@@ -16,7 +16,7 @@ class HelpPanel(wx.Panel):
         help_text = wx.StaticText(
             self,
             wx.ID_ANY,
-            _("Feature to verify or update kerning information for an existing font."),
+            _("Feature to verify or update font information for an existing font."),
             style=wx.ALIGN_LEFT
         )
         help_text.Wrap(500)
@@ -30,8 +30,8 @@ class HelpPanel(wx.Panel):
         self.website_link = wx.adv.HyperlinkCtrl(
             self,
             wx.ID_ANY,
-            _("https://inkstitch.org/docs/font-tools/#kerning-tool"),
-            _("https://inkstitch.org/docs/font-tools/#kerning-tool")
+            _("https://inkstitch.org/docs/font-tools/#edit-json"),
+            _("https://inkstitch.org/docs/font-tools/#edit-json")
         )
         self.website_link.Bind(wx.adv.EVT_HYPERLINK, self.on_link_clicked)
         help_sizer.Add(self.website_link, 0, wx.ALL, 8)
