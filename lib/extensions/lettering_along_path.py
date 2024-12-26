@@ -54,11 +54,10 @@ class LetteringAlongPath(InkstitchExtension):
     def _reset_glyph_transforms(self, text_group, glyphs):
         font = get_font_by_id(self.settings.font)
         if font is not None:
-            if self.settings.scale != 100:
-                try:
-                    text_group = list(text_group.iterchildren(SVG_GROUP_TAG))[0]
-                except IndexError:
-                    pass
+            try:
+                text_group = list(text_group.iterchildren(SVG_GROUP_TAG))[0]
+            except IndexError:
+                pass
             for glyph in text_group.iterchildren():
                 text_group.remove(glyph)
             text = font.render_text(
