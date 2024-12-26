@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2024-12-15
+last_modified_at: 2024-12-26
 sidebar:
   nav: pages
 toc: true
@@ -19,6 +19,7 @@ toc: true
 
 ### Font updates
 
+* Namskout: fix Z [#3362](https://github.com/inkstitch/inkstitch/pull/3362)
 * Remove unwanted jumps in ink/stitch medium font [#3295](https://github.com/inkstitch/inkstitch/pull/3295)
 * Make more fonts sortable [#3280](https://github.com/inkstitch/inkstitch/pull/3280)
 * Make most multicolor fonts sortable [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
@@ -32,6 +33,10 @@ toc: true
 
 
 ## New Extensions
+
+### Edit JSON
+
+`Font Management > Edit JSON` [#3371](https://github.com/inkstitch/inkstitch/pull/3371)
 
 ### Remove duplicated points
 
@@ -68,6 +73,8 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ### Lettering
 
+* Lettering simulator: show more accurate start points [#3358](https://github.com/inkstitch/inkstitch/pull/3358)
+* lettering: automated size info (% and mm) [#3346](https://github.com/inkstitch/inkstitch/pull/3346)
 * Add color sort option for multicolor fonts [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
 
 ### Multicolor Satin
@@ -83,13 +90,23 @@ A tool for font authors which sets a specified color sort index on selected elem
 * Save and reload more simulator settings (status for buttons: jump, trim, color change, stop, needle penetration point, page border) [#3323](https://github.com/inkstitch/inkstitch/pull/3323)
 * Show page in simulator [#3120](https://github.com/inkstitch/inkstitch/pull/3120)
 
+### Update Glyphlist
+
+* Include all files of default variant for glyph list update (#3368)
+
 ### Stitch plan preview
 
 * Update realistic filter [#3222](https://github.com/inkstitch/inkstitch/pull/3222)
 
+### Troubleshoot
+
+* Add background to troubleshoot text [#3357](https://github.com/inkstitch/inkstitch/pull/3357)
+
 ## Stitch types
 
 ### Stitch type updates
+
+* Automated end point calculation for fill and satin (ends at nearest point) [#3370](https://github.com/inkstitch/inkstitch/pull/3370)
 
 #### Clones
 
@@ -130,6 +147,8 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ## Bug Fixes
 
+* Lettering: prevent duplicated output [#3365](https://github.com/inkstitch/inkstitch/pull/3365)
+* Fix path effect clips (couldn't be used before) [#3364](https://github.com/inkstitch/inkstitch/pull/3364)
 * Cut satin column: add more rungs when rails are intersecting [#3344](https://github.com/inkstitch/inkstitch/pull/3344)
 * Fix jump to stroke transform glitch [#3306](https://github.com/inkstitch/inkstitch/pull/3306)
 * Make remove commands more robust for broken commands with active selection [#3288](https://github.com/inkstitch/inkstitch/pull/3288)
