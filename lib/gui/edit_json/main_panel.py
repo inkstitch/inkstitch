@@ -89,8 +89,6 @@ class LetteringEditJsonPanel(wx.Panel):
 
     def on_font_meta_value_changed(self, name, needs_update, event=None):
         self.font_meta[name] = event.GetEventObject().GetValue()
-        import sys
-        print(self.font_meta[name], file=sys.stderr)
         if needs_update:
             self.update_preview()
 
