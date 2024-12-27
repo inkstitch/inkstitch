@@ -1,8 +1,8 @@
 ---
-permalink: /tutorials/inkscape-splash/
+permalink: /fr/tutorials/inkscape-splash/
 title: "Stitching the Inkscape 1.4 Splash Screen Logo"
-language: en
-last_modified_at: 2024-12-27
+language: fr
+last_modified_at: 2024-12-26
 excerpt: "Original design by Inkonic"
 image: "/assets/images/tutorials/inkscape-splash-1.4/icon.jpg"
 classes: wide
