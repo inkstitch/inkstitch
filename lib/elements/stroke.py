@@ -19,7 +19,6 @@ from ..svg import get_node_transform, parse_length_with_units
 from ..svg.clip import get_clip_path
 from ..threads import ThreadColor
 from ..utils import Point, cache
-from ..utils.geometry import ensure_multi_line_string
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
