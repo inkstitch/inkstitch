@@ -181,7 +181,7 @@ class JumpToStroke(InkstitchExtension):
         # add simple stroke to connect elements
         path.transform(Transform(get_correction_transform(node)), True)
         color = element.color
-        style = f'stroke:{color};stroke-width:1px;stroke-dasharray:3, 1;fill:none;'
+        style = f'stroke:{color};stroke-width:{self.svg.viewport_to_unit("1px")};stroke-dasharray:3, 1;fill:none;'
 
         line = PathElement(d=str(path), style=style)
         line.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.options.running_stitch_length_mm)

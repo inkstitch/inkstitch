@@ -598,7 +598,7 @@ class SatinColumn(EmbroideryElement):
         # This isn't used for satins at all, but other parts of the code
         # may need to know the general shape of a satin column.
 
-        return shgeo.MultiLineString(self.flattened_rails).convex_hull
+        return shgeo.MultiLineString(self.flattened_rails)
 
     @property
     @cache
@@ -1349,9 +1349,9 @@ class SatinColumn(EmbroideryElement):
             stitch_groups = []
             tags = ("satin_column", "satin_column_underlay", "satin_contour_underlay")
             first_linestring = shgeo.LineString(first_side)
-            first_start, first_end = self._split_linestring_at_end_point(first_linestring)
+            first_start, first_end = self._split_linestring_at_end_point(first_linestring, end_point)
             second_linestring = shgeo.LineString(second_side)
-            second_end, second_start = self._split_linestring_at_end_point(second_linestring)
+            second_end, second_start = self._split_linestring_at_end_point(second_linestring, end_point)
             stitch_groups.append(self._to_stitch_group(first_start, tags))
             stitch_groups.append(self._to_stitch_group(second_end, tags))
             stitch_groups.append(self._to_stitch_group(second_start, tags))
@@ -1378,7 +1378,7 @@ class SatinColumn(EmbroideryElement):
         if end_point:
             tags = ("satin_column", "satin_column_underlay", "satin_center_walk")
             stitches = shgeo.LineString(stitches)
-            start, end = self._split_linestring_at_end_point(stitches)
+            start, end = self._split_linestring_at_end_point(stitches, end_point)
             if self._center_walk_is_odd():
                 end, start = start, end
             stitch_groups.append(self._to_stitch_group(start, tags))
@@ -1431,7 +1431,7 @@ class SatinColumn(EmbroideryElement):
                 stitch_groups.append(self._generate_zigzag_stitch_group(points))
                 continue
             zigzag_line = shgeo.LineString(points)
-            start, end = self._split_linestring_at_end_point(zigzag_line)
+            start, end = self._split_linestring_at_end_point(zigzag_line, end_point)
             start_groups.append(self._generate_zigzag_stitch_group([Stitch(*point) for point in start.coords]))
             end_groups.append(self._generate_zigzag_stitch_group([Stitch(*point) for point in end.coords]))
         if start_groups:
@@ -1813,7 +1813,7 @@ class SatinColumn(EmbroideryElement):
     def end_point(self, next_stitch):
         end_point = self._get_command_point('ending_point')
         if end_point is None and self.end_at_nearest_point and next_stitch is not None:
-            end_point = nearest_points(next_stitch, self.center_line)[1]
+            end_point = nearest_points(next_stitch, self.shape)[1]
             end_point = Point(*list(end_point.coords[0]))
         return end_point
 
@@ -1872,6 +1872,7 @@ class SatinColumn(EmbroideryElement):
             stitch_groups = [self._connect_stitch_group_with_point(stitch_groups[0], start_point)] + stitch_groups
         if end_point:
             stitch_groups.append(self.do_end_path(end_point))
+            pass
 
         # assemble stitch groups
         stitch_group = StitchGroup(

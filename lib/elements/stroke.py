@@ -486,7 +486,7 @@ class Stroke(EmbroideryElement):
     @property
     @cache
     def shape(self):
-        return ensure_multi_line_string(self.as_multi_line_string().convex_hull)
+        return self.as_multi_line_string().convex_hull
 
     @cache
     def as_multi_line_string(self):
