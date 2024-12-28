@@ -9,6 +9,31 @@ Un ensemble d'outils adaptés aux créateurs de polices ou à ceux qui souhaiten
 Lisez le [Tutoriel de création de police pour Ink/Stitch](/fr/tutorials/font-creation) pour des instructions approfondies.
 {: .notice--info }
 
+## Répertoire personnalisé de polices {#custom-font-directory}
+
+Cette extension vous permet de définir un répertoire dans votre système de fichiers dans lequel vous souhaitez stocker les polices supplémentaires pour l'outil de lettrage.
+
+Placez chaque police dans un sous-répertoire de votre répertoire personnalisé de polices. Chaque dossier de polices doit contenir au moins une variante de police et un fichier json.
+De plus, il est recommandé d'enregistrer également un fichier de licence. 
+
+Les variantes de police doivent être nommées avec une flèche, indiquant la direction de broderie pour laquelle elles ont été créées (`→.svg`, `←.svg`, etc.). 
+Il est aussi possible pour une direction donnée de créer un repertoire dont le nom est la flêche de direction et de répartir les glyphes de cette direction dans plusieurs fichiers dont le nom est alors quelconque.
+
+Le fichier json doit inclure au minimum le nom des polices.
+
+## Edit JSON
+
+{% include upcoming_release.html %}
+
+This extension allows you do edit an existing font information file. If the font doesn't have a json file file, create one with generated with [generate JSON](#generate-json)
+
+### Usage
+
+* Run `Extensions > Ink/Stitch > Font Management > Edit JSON`
+* Chose a font from the font list
+* Update font details such as name, description, keywords or kerning information
+* Click on apply
+
 ## Test de police {#font-sampling}
 
 Cette extension crée un calque qui contient toutes les lettres d'une fonte. Elle aide les créateurs de fontes à tester leurs nouvelles fonte.
@@ -43,18 +68,6 @@ Pour la même raison, lorsque les lettres sont détachées, il peut être utile 
 * Maximum distance (mm)
 * Restreindre au satin
 * Ajouter l'attribut "forcer les points d'arrêts" au dernier élément de chaque glyphe
-
-## Répertoire personnalisé de polices {#custom-font-directory}
-
-Cette extension vous permet de définir un répertoire dans votre système de fichiers dans lequel vous souhaitez stocker les polices supplémentaires pour l'outil de lettrage.
-
-Placez chaque police dans un sous-répertoire de votre répertoire personnalisé de polices. Chaque dossier de polices doit contenir au moins une variante de police et un fichier json.
-De plus, il est recommandé d'enregistrer également un fichier de licence. 
-
-Les variantes de police doivent être nommées avec une flèche, indiquant la direction de broderie pour laquelle elles ont été créées (`→.svg`, `←.svg`, etc.). 
-Il est aussi possible pour une direction donnée de créer un repertoire dont le nom est la flêche de direction et de répartir les glyphes de cette direction dans plusieurs fichiers dont le nom est alors quelconque.
-
-Le fichier json doit inclure au minimum le nom des polices.
 
 ## Générer  le fichier JSON {#generate-json}
 
@@ -112,10 +125,6 @@ Souvent les fontes de broderie achetées sont organisées en sous dossiers car c
 * Sauvegardez votre fonte dans un fichier  `→.svg` dans un nouveau répertoire de votre  [répertoire personnalisé de polices](#custom-font-directory)
 * Exécutez  [`Génerer JSON`](#generate-json) pour rendre la police disponible dans l'outil de Lettrage et sauvegarder le fichier json dans le même dossier que votre fonte.  Ne pas cocher  "Agencement automatique de colonnes satin" pour les fontes pré-digitalisées et laisser l'échelle à 1.
 
-## Mettre à jour la liste des glyphes  {#update-glyph-list}
-
-Permet d'insérer dans le fichier json la liste des glyphes définis . Cette opération doit être effectuée une première fois, puis chaque fois que la liste des glyphes effectivement programmés est modifiée.
-
 ## Supprimer les informations de crénage {#remove-kerning}
 
 **⚠ Attention**: Les modifications effectuées par cet outil sont irréversibles. N'oubliez pas de faire **une copie** de votre fichier svg avant d'utiliser cet outil.
@@ -130,3 +139,21 @@ Ink/Stitch contient un outil de nettoyage de votre fichier de fonte.
 3. Sélectionnez votre fichier de fonte
 4. Cliquez sur `Appliquer`
 
+
+## Set color index
+
+{% include upcoming_release.html %}
+
+Sets an index to inform the lettering tool on where to position the selected elements when color sorting is enabled.
+
+* In a font file select elements of the same color
+* Open the extension `Extensions > Ink/Stitch > Font Management > Set color index`
+* Set the index number
+* Apply
+
+The JSON-file must specify if a font is color sortable. Use [Edit JSON](#edit-json) and enable the option `Sortable` in the `Font Settings` tab.
+{: .notice--warning }
+
+## Mettre à jour la liste des glyphes  {#update-glyph-list}
+
+Permet d'insérer dans le fichier json la liste des glyphes définis . Cette opération doit être effectuée une première fois, puis chaque fois que la liste des glyphes effectivement programmés est modifiée.

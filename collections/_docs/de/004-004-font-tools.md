@@ -9,6 +9,23 @@ Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem
 Ein Blick in das [Schriften für Ink/Stitch erstellen Tutorial](/de/tutorials/font-creation) lohnt sich auf jeden Fall, wenn du neue Schriften erstellen willst.
 {: .notice--info }
 
+## Benutzerdefinierter Ordner für Schriften
+
+Diese Erweiterung erlaubt dir, einen Ordner zu definieren, in dem du zusätzliche Schriften für das Text-Werkzeug speichern willst.
+
+Jede Schriftart sollte in einem eigenen Unterordner gespeichert werden und sollte mindestens folgende Dateien enthalten: eine Schriftdatei (svg) und eine json-Datei.
+Zusätzlich empfehlen wir eine Lizenz-Datei.
+
+Die Schriftdatei muss nach der Stichrichtung für die sie erstellt wurde benannt werden (`→.svg`, `←.svg`, etc.). Es gibt auch die Möglichkeit Ordner mit den Pfeilnamen (`→`, `←`, etc.) anzulegen und darin mehrere Dateien für die Stickrichtung abzuspeichern.
+
+Die JSON-Datei muss als minimale Bedingung den Namen der Schrift enthalten.
+
+## JSON bearbeiten
+
+{% include upcoming_release.html %}
+
+This extension allows you do edit an existing font information file. If the font doesn't have a json file file, create one with generated with [generate JSON](#generate-json)
+
 ## Zeichentabelle
 
 Diese Erweiterung generiert eine Liste aller Zeichen einer Schrift.
@@ -41,17 +58,6 @@ Diese Erweiterung soll dabei helfen, die Stickobjekte entsprechend zu bearbeiten
 * Maximaler Abstand (mm)
 * Auf Satinsäulen beschränken
 * Füge das Attribut "Vernähen erzwingen" dem jeweils letzten Element eines Schriftzeichens hinzu
-
-## Benutzerdefinierter Ordner für Schriften
-
-Diese Erweiterung erlaubt dir, einen Ordner zu definieren, in dem du zusätzliche Schriften für das Text-Werkzeug speichern willst.
-
-Jede Schriftart sollte in einem eigenen Unterordner gespeichert werden und sollte mindestens folgende Dateien enthalten: eine Schriftdatei (svg) und eine json-Datei.
-Zusätzlich empfehlen wir eine Lizenz-Datei.
-
-Die Schriftdatei muss nach der Stichrichtung für die sie erstellt wurde benannt werden (`→.svg`, `←.svg`, etc.). Es gibt auch die Möglichkeit Ordner mit den Pfeilnamen (`→`, `←`, etc.) anzulegen und darin mehrere Dateien für die Stickrichtung abzuspeichern.
-
-Die JSON-Datei muss als minimale Bedingung den Namen der Schrift enthalten.
 
 ## JSON-Datei erstellen
 
@@ -109,10 +115,6 @@ Bei gekauften Schriften kommt es häufig vor, dass die Buchstaben in Unterordner
 * Speichere die Datei als `→.svg` in einem neuen Ordner in dem [Benutzerdefinierten Ordner für Schriften](#benutzerdefinierter-ordner-für-schriften)
 * Erstelle mit [JSON-Datei erstellen](#json-datei-erstellen) eine JSON-Datei, die die Schrift für das Textwerkzeug von Ink/Stitch nutzbar macht. "Automatisch geführte Satinsäulen" sollte für digitalisierte Schriften nicht ausgewählt sein. Die Skalierung bleibt bei 1.
 
-## Liste verfügbarer Zeichen aktualisieren
-
-Diese Erweiterun aktualisiert die Liste der verfügbaren Zeichen in der JSON-Datei. Diese Funktion sollte das erste Mal ausgeführt werden, wenn alle Zeichen in der SVG-Datei eingefügt wurden. Werden Zeicchen hinzugefügt oder entfernt, muss der Vorgang wiederholt werden.
-
 ## Kerning entfernen
 
 **⚠ Warnung**: Änderungen die von diesem Werkzeug durchgeführt werden, können nicht rückgängig gemacht werden. Speichere auf jeden Fall eine **Kopie** deiner Datei ab, bevor du die hier beschriebenen Schritte durchführst.
@@ -125,3 +127,21 @@ Deine Schrift ist bereits einsatzbereit. Aber wenn du sie mit FontForge erstellt
 2. Öffne `Erweiterungen > Ink/Stitch > Font Tools > Remove Kerning`
 3. Die die zu bereinigende(n) Datei(en)
 4. Klicke auf `Anwenden`
+
+## Set color index
+
+{% include upcoming_release.html %}
+
+Sets an index to inform the lettering tool on where to position the selected elements when color sorting is enabled.
+
+* In a font file select elements of the same color
+* Open the extension `Extensions > Ink/Stitch > Font Management > Set color index`
+* Set the index number
+* Apply
+
+The JSON-file must specify if a font is color sortable. Use [Edit JSON](#edit-json) and enable the option `Sortable` in the `Font Settings` tab.
+{: .notice--warning }
+
+## Liste verfügbarer Zeichen aktualisieren
+
+Diese Erweiterun aktualisiert die Liste der verfügbaren Zeichen in der JSON-Datei. Diese Funktion sollte das erste Mal ausgeführt werden, wenn alle Zeichen in der SVG-Datei eingefügt wurden. Werden Zeicchen hinzugefügt oder entfernt, muss der Vorgang wiederholt werden.

@@ -38,6 +38,10 @@ toc: true
 
 `Font Management > Edit JSON` [#3371](https://github.com/inkstitch/inkstitch/pull/3371)
 
+Edit JSON is part of the Font Management and helps font authors to easily correct data in the json file. It is especially useful for kerning corrections as it simulates a custom text as you update the kerning.
+
+[Read more](/docs/font-tools/#edit-json)
+
 ### Remove duplicated points
 
 `Edit > Remove duplicated points` [#3117](https://github.com/inkstitch/inkstitch/pull/3117)
@@ -49,6 +53,8 @@ Helps (for example) to remove bean stitches from stitch plans and turn them into
 `Font management Set color sort index` [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
 
 A tool for font authors which sets a specified color sort index on selected elements to control element grouping when the color sorting option is enabled in the lettering tool.
+
+[Read more](/docs/font-tools/#set-color-index)
 
 ## Extension Updates
 

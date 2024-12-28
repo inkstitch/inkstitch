@@ -1,13 +1,36 @@
 ---
 title: "Font Tools"
 permalink: /docs/font-tools/
-last_modified_at: 2024-05-05
+last_modified_at: 2024-12-28
 toc: true
 ---
 A collection of tools suitable for font creators or those who want to add additional fonts to the Ink/Stitch [lettering tool](/docs/lettering).
 
 Read the [Ink/Stitch font creation tutorial](/tutorials/font-creation) for in-depth instrustions.
 {: .notice--info }
+
+## Custom Font Directory
+
+This extension allows you to define a directory in your file system where you want to store additional fonts to be used with the lettering tool.
+
+Place each font in a subdiretory of your custom font directory. Each font folder should contain at least one font variant and one json file.
+Additionally it is recommended to save a license file as well.
+
+**Font variants** have to be named with an arrow, indicating the stitch direction it has been created for (`→.svg`, `←.svg`, etc.). It is also possible to create a folder named with an arrow name instead and insert multiple font files for a specific direction.
+
+The json file has to include as a minimum requirement the fonts name.
+
+## Edit JSON
+
+{% include upcoming_release.html %}
+
+This extension allows you do edit an existing font information file. If the font doesn't have a json file file, create one with generated with [generate JSON](#generate-json)
+
+### Usage
+
+* Run `Extensions > Ink/Stitch > Font Management > Edit JSON`
+* Finetune your font details such as name, description, keywords and kerning information
+* Click on apply
 
 ## Font Sampling
 
@@ -40,17 +63,6 @@ This extension helps adding forced lock stitches. One may chose to restrict the 
 * Maximum distance (mm)
 * Restrict to satin
 * Add force lock stitches attribute to the last element of each glyph
-
-## Custom Font Directory
-
-This extension allows you to define a directory in your file system where you want to store additional fonts to be used with the lettering tool.
-
-Place each font in a subdiretory of your custom font directory. Each font folder should contain at least one font variant and one json file.
-Additionally it is recommended to save a license file as well.
-
-**Font variants** have to be named with an arrow, indicating the stitch direction it has been created for (`→.svg`, `←.svg`, etc.). It is also possible to create a folder named with an arrow name instead and insert multiple font files for a specific direction.
-
-The json file has to include as a minimum requirement the fonts name.
 
 ## Generate JSON
 
@@ -103,10 +115,6 @@ You will often see, that bought fonts are organized in subfolders, because each 
 * Save your font as `→.svg` in a new folder within your [custom font directory](#custom-font-directory)
 * Run [`Generate JSON`](#generate-json) to make the font available for the lettering tool and save the json file into the same folder as your font. Do not check "AutoRoute Satin" for predigitized fonts and leave scaling to 1.
 
-## Update glyph list
-
-This extension insert the list of the glyphs into the json file. Must be done a first time when all the glyphs are present in the  svg file, and must be redone if glyphs are added or deleted.
-
 ## Remove Kerning
 
 **⚠ Warning**: Changes made by this tool cannot be reverted. Make sure to save a **copy** of your file before performing these steps.
@@ -119,3 +127,21 @@ Ink/Stitch comes with a tool to clean up your svg font.
 2. Run `Extensions > Ink/Stitch > Font Tools > Remove Kerning`
 3. Choose your font file(s)
 4. Click on apply
+
+## Set color index
+
+{% include upcoming_release.html %}
+
+Sets an index to inform the lettering tool on where to position the selected elements when color sorting is enabled.
+
+* In a font file select elements of the same color
+* Open the extension `Extensions > Ink/Stitch > Font Management > Set color index`
+* Set the index number
+* Apply
+
+The JSON-file must specify if a font is color sortable. Use [Edit JSON](#edit-json) and enable the option `Sortable` in the `Font Settings` tab.
+{: .notice--warning }
+
+## Update glyph list
+
+This extension insert the list of the glyphs into the json file. Must be done a first time when all the glyphs are present in the  svg file, and must be redone if glyphs are added or deleted.
