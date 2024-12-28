@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-27 01:24+0000\n"
-"PO-Revision-Date: 2024-12-27 01:24\n"
+"POT-Creation-Date: 2024-12-28 01:22+0000\n"
+"PO-Revision-Date: 2024-12-28 01:23\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-27 01:24+0000\n"
+"POT-Creation-Date: 2024-12-28 01:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1167,15 +1167,15 @@ msgstr ""
 msgid "* Move the guide line into the element"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:74 lib/elements/stroke.py:29
+#: lib/elements/fill_stitch.py:74 lib/elements/stroke.py:28
 msgid "Multiple Guide Lines"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:75 lib/elements/stroke.py:30
+#: lib/elements/fill_stitch.py:75 lib/elements/stroke.py:29
 msgid "This object has multiple guide lines, but only the first one will be used."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:77 lib/elements/stroke.py:32
+#: lib/elements/fill_stitch.py:77 lib/elements/stroke.py:31
 msgid "* Remove all guide lines, except for one."
 msgstr ""
 
@@ -1503,7 +1503,7 @@ msgid "Travel inside the shape when moving from section to section.  Underpath s
 msgstr ""
 
 #: lib/elements/fill_stitch.py:455 lib/elements/satin_column.py:364
-#: lib/elements/stroke.py:123
+#: lib/elements/stroke.py:122
 msgid "Running stitch length"
 msgstr ""
 
@@ -1519,46 +1519,46 @@ msgstr ""
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:492 lib/elements/stroke.py:149
+#: lib/elements/fill_stitch.py:492 lib/elements/stroke.py:148
 msgid "Randomize stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:493 lib/elements/stroke.py:150
+#: lib/elements/fill_stitch.py:493 lib/elements/stroke.py:149
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:509 lib/elements/stroke.py:162
+#: lib/elements/fill_stitch.py:509 lib/elements/stroke.py:161
 msgid "Random stitch length jitter"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:510 lib/elements/stroke.py:163
+#: lib/elements/fill_stitch.py:510 lib/elements/stroke.py:162
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr ""
 
 #: lib/elements/fill_stitch.py:525 lib/elements/satin_column.py:500
-#: lib/elements/stroke.py:85
+#: lib/elements/stroke.py:84
 msgid "Repeats"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:526 lib/elements/stroke.py:86
+#: lib/elements/fill_stitch.py:526 lib/elements/stroke.py:85
 msgid "Defines how many times to run down and back along the path."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:537 lib/elements/stroke.py:97
+#: lib/elements/fill_stitch.py:537 lib/elements/stroke.py:96
 msgid "Bean stitch number of repeats"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:538 lib/elements/stroke.py:98
+#: lib/elements/fill_stitch.py:538 lib/elements/stroke.py:97
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr ""
 
 #: lib/elements/fill_stitch.py:553 lib/elements/satin_column.py:250
-#: lib/elements/stroke.py:188
+#: lib/elements/stroke.py:187
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:554 lib/elements/stroke.py:189
+#: lib/elements/fill_stitch.py:554 lib/elements/stroke.py:188
 msgid "Length of stitches in zig-zag mode."
 msgstr ""
 
@@ -1587,7 +1587,7 @@ msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr ""
 
 #: lib/elements/fill_stitch.py:605 lib/elements/satin_column.py:278
-#: lib/elements/stroke.py:201
+#: lib/elements/stroke.py:200
 msgid "Pull compensation"
 msgstr ""
 
@@ -1643,7 +1643,7 @@ msgstr ""
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:690 lib/elements/stroke.py:174
+#: lib/elements/fill_stitch.py:690 lib/elements/stroke.py:173
 #: lib/extensions/element_info.py:131 lib/extensions/element_info.py:187
 msgid "Max stitch length"
 msgstr ""
@@ -1657,12 +1657,12 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr ""
 
 #: lib/elements/fill_stitch.py:736 lib/elements/satin_column.py:581
-#: lib/elements/stroke.py:434 lib/gui/satin_multicolor/colorize_panel.py:57
+#: lib/elements/stroke.py:433 lib/gui/satin_multicolor/colorize_panel.py:57
 msgid "Random seed"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:737 lib/elements/satin_column.py:582
-#: lib/elements/stroke.py:435
+#: lib/elements/stroke.py:434
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr ""
 
@@ -1706,7 +1706,7 @@ msgstr ""
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
 msgstr ""
 
-#: lib/elements/satin_column.py:32 lib/elements/stroke.py:37
+#: lib/elements/satin_column.py:32 lib/elements/stroke.py:36
 msgid "Too few subpaths"
 msgstr ""
 
@@ -1840,7 +1840,7 @@ msgstr ""
 msgid "Zig-zag"
 msgstr ""
 
-#: lib/elements/satin_column.py:119 lib/elements/stroke.py:75
+#: lib/elements/satin_column.py:119 lib/elements/stroke.py:74
 #: inx/inkstitch_break_apart.inx:9
 msgid "Method"
 msgstr ""
@@ -1954,27 +1954,27 @@ msgstr ""
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr ""
 
-#: lib/elements/satin_column.py:293 lib/elements/stroke.py:336
+#: lib/elements/satin_column.py:293 lib/elements/stroke.py:335
 msgid "Automatic"
 msgstr ""
 
-#: lib/elements/satin_column.py:294 lib/elements/stroke.py:337
+#: lib/elements/satin_column.py:294 lib/elements/stroke.py:336
 msgid "Don't reverse"
 msgstr ""
 
-#: lib/elements/satin_column.py:295 lib/elements/stroke.py:338
+#: lib/elements/satin_column.py:295 lib/elements/stroke.py:337
 msgid "Reverse first rail"
 msgstr ""
 
-#: lib/elements/satin_column.py:296 lib/elements/stroke.py:339
+#: lib/elements/satin_column.py:296 lib/elements/stroke.py:338
 msgid "Reverse second rail"
 msgstr ""
 
-#: lib/elements/satin_column.py:297 lib/elements/stroke.py:340
+#: lib/elements/satin_column.py:297 lib/elements/stroke.py:339
 msgid "Reverse both rails"
 msgstr ""
 
-#: lib/elements/satin_column.py:303 lib/elements/stroke.py:346
+#: lib/elements/satin_column.py:303 lib/elements/stroke.py:345
 msgid "Reverse rails"
 msgstr ""
 
@@ -2034,7 +2034,7 @@ msgid "Stitch length"
 msgstr ""
 
 #: lib/elements/satin_column.py:425 lib/elements/satin_column.py:482
-#: lib/elements/stroke.py:135
+#: lib/elements/stroke.py:134
 msgid "Stitch tolerance"
 msgstr ""
 
@@ -2119,215 +2119,215 @@ msgstr ""
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr ""
 
-#: lib/elements/stroke.py:38
+#: lib/elements/stroke.py:37
 msgid "This element renders as running stitch while it has a satin column parameter."
 msgstr ""
 
-#: lib/elements/stroke.py:40
+#: lib/elements/stroke.py:39
 msgid "* Convert to stroke: select the element and open the parameter dialog. Enable running stitch along path."
 msgstr ""
 
-#: lib/elements/stroke.py:41
+#: lib/elements/stroke.py:40
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr ""
 
-#: lib/elements/stroke.py:47 lib/extensions/params.py:597
+#: lib/elements/stroke.py:46 lib/extensions/params.py:597
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr ""
 
-#: lib/elements/stroke.py:50 lib/extensions/params.py:271
+#: lib/elements/stroke.py:49 lib/extensions/params.py:271
 msgid "Running stitch along paths"
 msgstr ""
 
-#: lib/elements/stroke.py:68
+#: lib/elements/stroke.py:67
 msgid "Running Stitch / Bean Stitch"
 msgstr ""
 
-#: lib/elements/stroke.py:69 lib/lettering/categories.py:26
+#: lib/elements/stroke.py:68 lib/lettering/categories.py:26
 #: inx/inkstitch_lettering_generate_json.inx:48
 msgid "Ripple Stitch"
 msgstr ""
 
-#: lib/elements/stroke.py:70 inx/inkstitch_select_elements.inx:23
+#: lib/elements/stroke.py:69 inx/inkstitch_select_elements.inx:23
 msgid "ZigZag Stitch"
 msgstr ""
 
-#: lib/elements/stroke.py:71 inx/inkstitch_select_elements.inx:24
+#: lib/elements/stroke.py:70 inx/inkstitch_select_elements.inx:24
 msgid "Manual Stitch"
 msgstr ""
 
-#: lib/elements/stroke.py:111
+#: lib/elements/stroke.py:110
 msgid "Manual stitch placement"
 msgstr ""
 
-#: lib/elements/stroke.py:112
+#: lib/elements/stroke.py:111
 msgid "No extra stitches will be added to the original ripple pattern and the running stitch length value will be ignored."
 msgstr ""
 
-#: lib/elements/stroke.py:124
+#: lib/elements/stroke.py:123
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
 msgstr ""
 
-#: lib/elements/stroke.py:136
+#: lib/elements/stroke.py:135
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr ""
 
-#: lib/elements/stroke.py:175
+#: lib/elements/stroke.py:174
 msgid "Split stitches longer than this."
 msgstr ""
 
-#: lib/elements/stroke.py:202
+#: lib/elements/stroke.py:201
 msgid "Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This widens the zigzag line width."
 msgstr ""
 
-#: lib/elements/stroke.py:215
+#: lib/elements/stroke.py:214
 msgid "Number of lines"
 msgstr ""
 
-#: lib/elements/stroke.py:216
+#: lib/elements/stroke.py:215
 msgid "Number of lines from start to finish"
 msgstr ""
 
-#: lib/elements/stroke.py:227
+#: lib/elements/stroke.py:226
 msgid "Minimum line distance"
 msgstr ""
 
-#: lib/elements/stroke.py:228
+#: lib/elements/stroke.py:227
 msgid "Overrides the number of lines setting."
 msgstr ""
 
-#: lib/elements/stroke.py:242
+#: lib/elements/stroke.py:241
 msgid "Render at rungs"
 msgstr ""
 
-#: lib/elements/stroke.py:243
+#: lib/elements/stroke.py:242
 msgid "Position satin guided pattern at rungs."
 msgstr ""
 
-#: lib/elements/stroke.py:253
+#: lib/elements/stroke.py:252
 msgid "Stagger lines this many times before repeating"
 msgstr ""
 
-#: lib/elements/stroke.py:254
+#: lib/elements/stroke.py:253
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. A value of 0 (default) disables staggering and instead stitches evenly.For linear ripples only."
 msgstr ""
 
-#: lib/elements/stroke.py:267
+#: lib/elements/stroke.py:266
 msgid "Skip first lines"
 msgstr ""
 
-#: lib/elements/stroke.py:268
+#: lib/elements/stroke.py:267
 msgid "Skip this number of lines at the beginning."
 msgstr ""
 
-#: lib/elements/stroke.py:279
+#: lib/elements/stroke.py:278
 msgid "Skip last lines"
 msgstr ""
 
-#: lib/elements/stroke.py:280
+#: lib/elements/stroke.py:279
 msgid "Skip this number of lines at the end"
 msgstr ""
 
-#: lib/elements/stroke.py:291
+#: lib/elements/stroke.py:290
 msgid "Flip every second line"
 msgstr ""
 
-#: lib/elements/stroke.py:292
+#: lib/elements/stroke.py:291
 msgid "Linear ripple: wether to flip the pattern every second line or not."
 msgstr ""
 
-#: lib/elements/stroke.py:302
+#: lib/elements/stroke.py:301
 msgid "Line distance exponent"
 msgstr ""
 
-#: lib/elements/stroke.py:303
+#: lib/elements/stroke.py:302
 msgid "Increase density towards one side."
 msgstr ""
 
-#: lib/elements/stroke.py:314
+#: lib/elements/stroke.py:313
 msgid "Flip exponent"
 msgstr ""
 
-#: lib/elements/stroke.py:315
+#: lib/elements/stroke.py:314
 msgid "Reverse exponent effect."
 msgstr ""
 
-#: lib/elements/stroke.py:326
+#: lib/elements/stroke.py:325
 msgid "Reverse"
 msgstr ""
 
-#: lib/elements/stroke.py:327
+#: lib/elements/stroke.py:326
 msgid "Flip start and end point"
 msgstr ""
 
-#: lib/elements/stroke.py:347
+#: lib/elements/stroke.py:346
 msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
 msgstr ""
 
-#: lib/elements/stroke.py:359
+#: lib/elements/stroke.py:358
 msgid "Grid size"
 msgstr ""
 
-#: lib/elements/stroke.py:360
+#: lib/elements/stroke.py:359
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr ""
 
-#: lib/elements/stroke.py:372
+#: lib/elements/stroke.py:371
 msgid "Scale axis"
 msgstr ""
 
-#: lib/elements/stroke.py:373
+#: lib/elements/stroke.py:372
 msgid "Scale axis for satin guided ripple stitches."
 msgstr ""
 
-#: lib/elements/stroke.py:377 lib/gui/edit_json/settings_panel.py:145
+#: lib/elements/stroke.py:376 lib/gui/edit_json/settings_panel.py:145
 #: print/templates/ui.html:180 inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr ""
 
-#: lib/elements/stroke.py:385
+#: lib/elements/stroke.py:384
 msgid "Starting scale"
 msgstr ""
 
-#: lib/elements/stroke.py:386
+#: lib/elements/stroke.py:385
 msgid "How big the first copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:386 lib/elements/stroke.py:398
+#: lib/elements/stroke.py:385 lib/elements/stroke.py:397
 msgid "Used only for ripple stitch with a guide line."
 msgstr ""
 
-#: lib/elements/stroke.py:397
+#: lib/elements/stroke.py:396
 msgid "Ending scale"
 msgstr ""
 
-#: lib/elements/stroke.py:398
+#: lib/elements/stroke.py:397
 msgid "How big the last copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:409 lib/gui/tartan/customize_panel.py:43
+#: lib/elements/stroke.py:408 lib/gui/tartan/customize_panel.py:43
 msgid "Rotate"
 msgstr ""
 
-#: lib/elements/stroke.py:410
+#: lib/elements/stroke.py:409
 msgid "Rotate satin guided ripple stitches"
 msgstr ""
 
-#: lib/elements/stroke.py:421
+#: lib/elements/stroke.py:420
 msgid "Join style"
 msgstr ""
 
-#: lib/elements/stroke.py:422
+#: lib/elements/stroke.py:421
 msgid "Join style for non circular ripples."
 msgstr ""
 
-#: lib/elements/stroke.py:425
+#: lib/elements/stroke.py:424
 msgid "flat"
 msgstr ""
 
-#: lib/elements/stroke.py:425
+#: lib/elements/stroke.py:424
 msgid "point"
 msgstr ""
 
@@ -2796,7 +2796,7 @@ msgstr ""
 
 #: lib/extensions/params.py:529 lib/gui/edit_json/settings_panel.py:61
 #: lib/gui/lettering/main_panel.py:58 lib/gui/lettering_font_sample.py:61
-#: lib/gui/lettering_kerning.py:84 lib/gui/satin_multicolor/main_panel.py:54
+#: lib/gui/satin_multicolor/main_panel.py:54
 #: lib/gui/simulator/simulator_preferences.py:44
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
 #: print/templates/custom-page.html:27 print/templates/custom-page.html:33
@@ -3018,7 +3018,7 @@ msgstr ""
 
 #: lib/gui/abort_message.py:38 lib/gui/apply_palette.py:64
 #: lib/gui/edit_json/help_panel.py:27 lib/gui/element_info.py:56
-#: lib/gui/lettering_font_sample.py:89 lib/gui/lettering_kerning.py:113
+#: lib/gui/lettering_font_sample.py:89
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr ""
@@ -3052,7 +3052,7 @@ msgid "Select color palette"
 msgstr ""
 
 #: lib/gui/apply_palette.py:44 lib/gui/edit_json/settings_panel.py:63
-#: lib/gui/lettering_font_sample.py:63 lib/gui/lettering_kerning.py:86
+#: lib/gui/lettering_font_sample.py:63
 #: lib/gui/satin_multicolor/main_panel.py:56
 #: lib/gui/simulator/simulator_preferences.py:46
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
@@ -3061,7 +3061,7 @@ msgstr ""
 
 #: lib/gui/apply_palette.py:49 lib/gui/edit_json/main_panel.py:64
 #: lib/gui/element_info.py:41 lib/gui/lettering/main_panel.py:48
-#: lib/gui/lettering_font_sample.py:74 lib/gui/lettering_kerning.py:98
+#: lib/gui/lettering_font_sample.py:74
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
 #: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:16
@@ -3107,6 +3107,18 @@ msgstr ""
 
 #: lib/gui/edit_json/help_panel.py:33 lib/gui/edit_json/help_panel.py:34
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
+msgstr ""
+
+#: lib/gui/edit_json/main_panel.py:278
+msgid "Could not read json file."
+msgstr ""
+
+#: lib/gui/edit_json/settings_panel.py:23
+msgid "Text before"
+msgstr ""
+
+#: lib/gui/edit_json/settings_panel.py:26
+msgid "Text after"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:44
@@ -3329,9 +3341,8 @@ msgid "Font Sampling"
 msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:63 lib/gui/lettering_font_sample.py:31
-#: lib/gui/lettering_kerning.py:56 lib/gui/simulator/view_panel.py:122
-#: print/templates/ui.html:5 print/templates/ui.html:15
-#: inx/inkstitch_lettering_generate_json.inx:60
+#: lib/gui/simulator/view_panel.py:122 print/templates/ui.html:5
+#: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:60
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
 msgstr ""
@@ -3369,26 +3380,6 @@ msgstr ""
 
 #: lib/gui/lettering_font_sample.py:221
 msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
-msgstr ""
-
-#: lib/gui/edit_json/settings_panel.py:23 lib/gui/lettering_kerning.py:64
-msgid "Text before"
-msgstr ""
-
-#: lib/gui/edit_json/settings_panel.py:26 lib/gui/lettering_kerning.py:67
-msgid "Text after"
-msgstr ""
-
-#: lib/gui/lettering_kerning.py:105
-msgid "Feature to verify or update kerning information for an existing font."
-msgstr ""
-
-#: lib/gui/lettering_kerning.py:119 lib/gui/lettering_kerning.py:120
-msgid "https://inkstitch.org/docs/font-tools/#kerning-tool"
-msgstr ""
-
-#: lib/gui/edit_json/main_panel.py:280 lib/gui/lettering_kerning.py:215
-msgid "Could not read json file."
 msgstr ""
 
 #: lib/gui/preferences.py:16 lib/gui/preferences.py:17
