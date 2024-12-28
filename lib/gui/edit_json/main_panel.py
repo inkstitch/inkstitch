@@ -47,6 +47,8 @@ class LetteringEditJsonPanel(wx.Panel):
         self.text_before = ''
         self.text_after = ''
 
+        self.last_notebook_selection = 4
+
         super().__init__(parent, wx.ID_ANY)
 
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
@@ -82,10 +84,21 @@ class LetteringEditJsonPanel(wx.Panel):
 
     def on_kerning_update(self, event=None):
         self.update_preview()
+        event.Skip()
 
     def on_kerning_list_select(self, event=None):
         self.update_preview()
         event.Skip()
+
+    def on_horiz_adv_x_default_changed(self, event=None):
+        self.font_meta['horiz_adv_x_default'] = event.GetValue()
+        glyph_list = self.settings_panel.glyph_list
+        for i in range(glyph_list.ItemCount):
+            selected = glyph_list.IsItemChecked(i)
+            glyph = glyph_list.GetItem(i, 1).Text
+            if selected:
+                self.horiz_adv_x[glyph] = self.font_meta['horiz_adv_x_default']
+            self.update_preview()
 
     def on_font_meta_value_changed(self, name, needs_update, event=None):
         self.font_meta[name] = event.GetEventObject().GetValue()
@@ -154,16 +167,26 @@ class LetteringEditJsonPanel(wx.Panel):
                 pass
         return kerning_pair
 
-    def get_active_glyph(self):
+    def on_glyph_item_checked(self, event=None):
+        self.get_active_glyph(event.Index)
+        self.update_preview()
+
+    def get_active_glyph(self, index=None):
         glyph_list = self.settings_panel.glyph_list
-        selection = glyph_list.GetFirstSelected()
+        if index is not None:
+            selection = index
+        else:
+            selection = glyph_list.GetFirstSelected()
         if selection == -1:
             return ''
-        glyph = glyph_list.GetItem(selection, 0).Text
-        horiz_adv_x = float(glyph_list.GetItem(selection, 1).Text)
-        if glyph_list.GetItem(selection, 2).Text:
+        glyph = glyph_list.GetItem(selection, 1).Text
+        if glyph_list.IsItemChecked(selection):
+            self.horiz_adv_x[glyph] = self.font_meta['horiz_adv_x_default']
+            return glyph
+        horiz_adv_x = float(glyph_list.GetItem(selection, 2).Text)
+        if glyph_list.GetItem(selection, 3).Text:
             try:
-                horiz_adv_x = float(glyph_list.GetItem(selection, 2).Text)
+                horiz_adv_x = float(glyph_list.GetItem(selection, 3).Text)
                 self.horiz_adv_x[glyph] = float(horiz_adv_x)
             except (ValueError, IndexError):
                 pass
@@ -175,6 +198,7 @@ class LetteringEditJsonPanel(wx.Panel):
         self.font._load_variants()
         self.default_variant = self.font.variants[self.font.default_variant]
         self.glyphs = list(self.default_variant.glyphs.keys())
+        self.glyphs.sort()
         self.horiz_adv_x = self.font.horiz_adv_x
 
         kerning_combinations = combinations_with_replacement(self.glyphs, 2)
@@ -235,13 +259,9 @@ class LetteringEditJsonPanel(wx.Panel):
         # Add the rows
         kerning_list.ClearAll()
         # Add some columns
-        kerning_list.InsertColumn(0, "Kerning pair")
-        kerning_list.InsertColumn(1, "Current kerning")
-        kerning_list.InsertColumn(2, "New kerning")
-        # Set the width of the columns
-        kerning_list.SetColumnWidth(0, 120)
-        kerning_list.SetColumnWidth(1, 120)
-        kerning_list.SetColumnWidth(2, 120)
+        kerning_list.AppendColumn("Kerning pair", width=wx.LIST_AUTOSIZE_USEHEADER)
+        kerning_list.AppendColumn("Current kerning", width=wx.LIST_AUTOSIZE_USEHEADER)
+        kerning_list.AppendColumn("New kerning", width=wx.LIST_AUTOSIZE_USEHEADER)
         for kerning_pair in self.kerning_combinations:
             index = kerning_list.InsertItem(kerning_list.GetItemCount(), kerning_pair)
             kerning_list.SetItem(index, 0, kerning_pair)
@@ -255,18 +275,18 @@ class LetteringEditJsonPanel(wx.Panel):
         # Add the rows
         glyph_list.ClearAll()
         # Add some columns
-        glyph_list.InsertColumn(0, "Glyph")
-        glyph_list.InsertColumn(1, "Current horizontal advance")
-        glyph_list.InsertColumn(2, "New horizontal advance")
-        # Set the width of the columns
-        glyph_list.SetColumnWidth(0, 120)
-        glyph_list.SetColumnWidth(1, 120)
-        glyph_list.SetColumnWidth(2, 120)
+        glyph_list.AppendColumn("Use default", width=wx.LIST_AUTOSIZE_USEHEADER)
+        glyph_list.AppendColumn("Glyph", width=wx.LIST_AUTOSIZE_USEHEADER)
+        glyph_list.AppendColumn("Current horizontal advance", width=wx.LIST_AUTOSIZE_USEHEADER)
+        glyph_list.AppendColumn("New horizontal advance", width=wx.LIST_AUTOSIZE_USEHEADER)
         horiz_adv_x_default = self.font.horiz_adv_x_default
         for glyph in self.glyphs:
-            index = glyph_list.InsertItem(glyph_list.GetItemCount(), glyph)
-            glyph_list.SetItem(index, 0, glyph)
-            glyph_list.SetItem(index, 1, str(self.font.horiz_adv_x.get(glyph, horiz_adv_x_default)))
+            index = glyph_list.InsertItem(glyph_list.GetItemCount(), '')
+            horiz_adv = self.font.horiz_adv_x.get(glyph, horiz_adv_x_default)
+            if horiz_adv == horiz_adv_x_default:
+                glyph_list.CheckItem(index)
+            glyph_list.SetItem(index, 1, glyph)
+            glyph_list.SetItem(index, 2, str(horiz_adv))
         if glyph_list.GetItemCount() != 0:
             glyph_list.Select(0)
             glyph_list.Focus(0)
@@ -283,7 +303,7 @@ class LetteringEditJsonPanel(wx.Panel):
 
         for key, val in self.font_meta.items():
             data[key] = val
-        horiz_adv_x = {key: val for key, val in self.horiz_adv_x.items() if val != self.font.horiz_adv_x_default}
+        horiz_adv_x = {key: val for key, val in self.horiz_adv_x.items() if val != self.font_meta['horiz_adv_x_default']}
         kerning_pairs = {key: val for key, val in self.kerning_pairs.items() if val != 0}
         data['horiz_adv_x'] = horiz_adv_x
         data['kerning_pairs'] = kerning_pairs
@@ -304,7 +324,10 @@ class LetteringEditJsonPanel(wx.Panel):
     def update_lettering(self):
         del self.layer[:]
 
-        if self.settings_panel.notebook.GetSelection() == 3:
+        if self.settings_panel.notebook.GetSelection() in [3, 4]:
+            self.last_notebook_selection = self.settings_panel.notebook.GetSelection()
+
+        if self.last_notebook_selection == 3:
             text = self.get_active_glyph()
         else:
             text = self.get_active_kerning_pair()
