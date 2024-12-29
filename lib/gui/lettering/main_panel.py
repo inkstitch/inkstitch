@@ -82,7 +82,7 @@ class LetteringPanel(wx.Panel):
             "scale": 100,
             "trim_option": 0,
             "use_trim_symbols": False,
-            "color_sort": False
+            "color_sort": 0
         })
 
         if INKSTITCH_LETTERING in self.group.attrib:
@@ -99,7 +99,7 @@ class LetteringPanel(wx.Panel):
 
     def apply_settings(self):
         """Make the settings in self.settings visible in the UI."""
-        self.options_panel.color_sort_checkbox.SetValue(bool(self.settings.color_sort))
+        self.options_panel.color_sort_choice.SetSelection(self.settings.color_sort)
         self.options_panel.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
         self.options_panel.trim_option_choice.SetSelection(self.settings.trim_option)
         self.options_panel.use_trim_symbols.SetValue(bool(self.settings.use_trim_symbols))
@@ -192,11 +192,18 @@ class LetteringPanel(wx.Panel):
         self.settings[attribute] = event.GetEventObject().GetValue()
         if attribute == "text" and self.options_panel.font_glyph_filter.GetValue() is True:
             self.on_filter_changed()
-        self.preview_renderer.update()
+        self.update_preview()
+
+    def on_color_sort_change(self, event=None):
+        if self.options_panel.color_sort_choice.IsEnabled():
+            self.settings.color_sort = self.options_panel.color_sort_choice.GetCurrentSelection()
+        else:
+            self.settings.color_sort = 0
+        self.update_preview()
 
     def on_trim_option_change(self, event=None):
         self.settings.trim_option = self.options_panel.trim_option_choice.GetCurrentSelection()
-        self.preview_renderer.update()
+        self.update_preview()
 
     def on_font_changed(self, event=None):
         font = self.fonts.get(self.options_panel.font_chooser.GetValue(), self.default_font)
@@ -236,12 +243,10 @@ class LetteringPanel(wx.Panel):
             self.options_panel.back_and_forth_checkbox.SetValue(False)
 
         if font.sortable:
-            # The creator of the font allowed color sorting: "sortable": false
-            self.options_panel.color_sort_checkbox.Enable()
-            self.options_panel.color_sort_checkbox.SetValue(bool(self.settings.color_sort))
+            # The creator of the font allowed color sorting: "sortable": true
+            self.options_panel.color_sort_choice.Enable()
         else:
-            self.options_panel.color_sort_checkbox.Disable()
-            self.options_panel.color_sort_checkbox.SetValue(False)
+            self.options_panel.color_sort_choice.Disable()
 
         self.options_panel.Layout()
         self.update_preview()
