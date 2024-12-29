@@ -983,7 +983,7 @@ msgstr ""
 #: lib/elements/element.py:232 lib/gui/preferences.py:59
 #: lib/gui/preferences.py:106
 msgid "Minimum stitch length"
-msgstr ""
+msgstr "最小针迹长度"
 
 #: lib/elements/element.py:233
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
@@ -991,7 +991,7 @@ msgstr "设置短针迹长度，小于该长度的针迹将被清除。"
 
 #: lib/elements/element.py:243 lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
-msgstr ""
+msgstr "最小跳针长度"
 
 #: lib/elements/element.py:244
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
@@ -1306,7 +1306,7 @@ msgstr "蜿蜒填充"
 
 #: lib/elements/fill_stitch.py:160 inx/inkstitch_select_elements.inx:61
 msgid "Tartan Fill"
-msgstr ""
+msgstr "方格花纹"
 
 #: lib/elements/fill_stitch.py:161 lib/gui/tartan/embroidery_panel.py:202
 #: inx/inkstitch_select_elements.inx:62
@@ -1411,20 +1411,20 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:281
 msgid "Gap Filling"
-msgstr ""
+msgstr "间隙填充"
 
 #: lib/elements/fill_stitch.py:282
 msgid "Add extra rows to compensate for gaps between sections caused by distortion.Rows are always added in pairs, so this number will be rounded up to the nearest multiple of 2."
-msgstr ""
+msgstr "添加额外的行以补偿由扭曲引起的部分之间的间隙。行总是成对添加，因此此数字将四舍五入到最接近的 2 的倍数。"
 
 #: lib/elements/fill_stitch.py:294 lib/elements/fill_stitch.py:307
 #: lib/gui/tartan/embroidery_panel.py:35
 msgid "Angle of lines of stitches"
-msgstr ""
+msgstr "线迹角度"
 
 #: lib/elements/fill_stitch.py:295
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
-msgstr ""
+msgstr "线迹沿度数逆时针旋转，0度为水平，度数值允许为负数。"
 
 #: lib/elements/fill_stitch.py:308 lib/gui/tartan/embroidery_panel.py:36
 msgid "Relative to the tartan stripe direction."
@@ -1521,7 +1521,7 @@ msgstr "容许沿轮廓运行时偏离多远距离。"
 
 #: lib/elements/fill_stitch.py:492 lib/elements/stroke.py:148
 msgid "Randomize stitch length"
-msgstr ""
+msgstr "随机线长"
 
 #: lib/elements/fill_stitch.py:493 lib/elements/stroke.py:149
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
@@ -1529,7 +1529,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:509 lib/elements/stroke.py:161
 msgid "Random stitch length jitter"
-msgstr ""
+msgstr "随机线长抖动"
 
 #: lib/elements/fill_stitch.py:510 lib/elements/stroke.py:162
 msgid "Amount to vary the length of each stitch by when randomizing."
@@ -1590,30 +1590,30 @@ msgstr ""
 #: lib/elements/fill_stitch.py:605 lib/elements/satin_column.py:278
 #: lib/elements/stroke.py:200
 msgid "Pull compensation"
-msgstr ""
+msgstr "收缩补偿"
 
 #: lib/elements/fill_stitch.py:606
 msgid "Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. This setting expands each row of stitches outward from the center of the row by a fixed length. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "填充针迹可以将织物拉在一起，导致形状比您在 Inkscape 中绘制的形状更窄。此设置将每行针迹从行中心向外扩展固定长度。用空格分隔的两个值可用于非对称效果。"
 
 #: lib/elements/fill_stitch.py:610 lib/elements/satin_column.py:282
 #: lib/elements/satin_column.py:445 lib/elements/satin_column.py:539
 msgid "mm (each side)"
-msgstr ""
+msgstr "毫米 (一侧)"
 
 #: lib/elements/fill_stitch.py:621 lib/elements/satin_column.py:263
 msgid "Pull compensation percentage"
-msgstr ""
+msgstr "收缩补偿百分比"
 
 #: lib/elements/fill_stitch.py:622
 msgid "Additional pull compensation which varies as a percentage of row width. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "额外的拉动补偿，随行宽的百分比而变化。用空格分隔的两个值可用于非对称效果。"
 
 #: lib/elements/fill_stitch.py:625 lib/elements/satin_column.py:132
 #: lib/elements/satin_column.py:142 lib/elements/satin_column.py:266
 #: lib/elements/satin_column.py:460 lib/elements/satin_column.py:559
 msgid "% (each side)"
-msgstr ""
+msgstr "% (一侧)"
 
 #: lib/elements/fill_stitch.py:646 lib/elements/fill_stitch.py:655
 #: lib/elements/fill_stitch.py:682 lib/elements/fill_stitch.py:693
@@ -1660,7 +1660,7 @@ msgstr "收缩打底范围避免线迹外露。"
 #: lib/elements/fill_stitch.py:736 lib/elements/satin_column.py:581
 #: lib/elements/stroke.py:433 lib/gui/satin_multicolor/colorize_panel.py:57
 msgid "Random seed"
-msgstr ""
+msgstr "随机数种子"
 
 #: lib/elements/fill_stitch.py:737 lib/elements/satin_column.py:582
 #: lib/elements/stroke.py:434
@@ -1949,7 +1949,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:264
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "额外的拉力补偿，随针距的百分比而变化。用空格分隔的两个值可用于非对称效果。"
 
 #: lib/elements/satin_column.py:279
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
@@ -4819,7 +4819,7 @@ msgstr ""
 #: inx/inkstitch_fill_to_stroke.inx:11 inx/inkstitch_jump_to_stroke.inx:12
 #: inx/inkstitch_outline.inx:39 inx/inkstitch_redwork.inx:37
 msgid "Tools: Stroke"
-msgstr ""
+msgstr "工具：轮廓线"
 
 #: inx/inkstitch_auto_run.inx:17
 msgid "Auto-Route Running Stitch Options"
@@ -4909,7 +4909,7 @@ msgstr ""
 #: inx/inkstitch_stroke_to_lpe_satin.inx:41
 #: inx/inkstitch_zigzag_line_to_satin.inx:37
 msgid "Tools: Satin"
-msgstr ""
+msgstr "工具：缎纹"
 
 #: inx/inkstitch_break_apart.inx:3
 msgid "Break Apart Fill Objects"
@@ -4934,7 +4934,7 @@ msgstr ""
 #: inx/inkstitch_break_apart.inx:31 inx/inkstitch_gradient_blocks.inx:12
 #: inx/inkstitch_tartan.inx:12
 msgid "Tools: Fill"
-msgstr ""
+msgstr "工具：填针"
 
 #: inx/inkstitch_cleanup.inx:3
 msgid "Cleanup Document"
@@ -6776,7 +6776,7 @@ msgstr ""
 
 #: inx/inkstitch_params.inx:3
 msgid "Params"
-msgstr ""
+msgstr "参数设定"
 
 #: inx/inkstitch_params.inx:9
 msgid "Adapt embroidery settings"
