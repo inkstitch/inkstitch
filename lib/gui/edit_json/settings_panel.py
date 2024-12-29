@@ -49,9 +49,9 @@ class SettingsPanel(wx.Panel):
         self.font_kerning = GeneralKerning(self.notebook)
         self.notebook.AddPage(self.font_kerning, _("General Kerning"))
 
-        glyph_list = KerningPairs(self.notebook)
+        glyph_list = GlyphList(self.notebook)
         self.notebook.AddPage(glyph_list, _("Horizontal advance"))
-        self.glyph_list = glyph_list.kerning_list
+        self.glyph_list = glyph_list.glyph_list
 
         kerning_pairs = KerningPairs(self.notebook)
         self.notebook.AddPage(kerning_pairs, _("Kerning pairs"))
@@ -218,7 +218,7 @@ class GeneralKerning(wx.Panel):
         self.horiz_adv_x_default = wx.SpinCtrlDouble(self, min=0, max=10000, inc=0.1, initial=50, style=wx.SP_WRAP)
         self.horiz_adv_x_default.Bind(
             wx.EVT_SPINCTRLDOUBLE,
-            lambda event: self.parent.on_font_meta_value_changed("horiz_adv_x_default", True, event)
+            self.parent.on_horiz_adv_x_default_changed
         )
         horiz_adv_x_space_label = wx.StaticText(self, label=_("Horizontal advance x space"))
         self.horiz_adv_x_space = wx.SpinCtrlDouble(self, min=0, max=10000, inc=0.1, initial=50, style=wx.SP_WRAP)
@@ -253,9 +253,12 @@ class GlyphList(wx.Panel):
 
         sizer = wx.BoxSizer(wx.VERTICAL)
 
-        self.glyph_list = EditableListCtrl(self, style=wx.LC_REPORT | wx.SUNKEN_BORDER)
+        self.glyph_list = EditableListCtrl(self, style=wx.LC_REPORT | wx.SUNKEN_BORDER, editable_column=3)
         self.glyph_list.Bind(wx.EVT_LIST_ITEM_SELECTED, self.parent.on_kerning_list_select)
         self.glyph_list.Bind(wx.EVT_LIST_END_LABEL_EDIT, self.parent.on_kerning_update)
+        self.glyph_list.Bind(wx.EVT_LIST_ITEM_CHECKED, self.parent.on_glyph_item_checked)
+        self.glyph_list.Bind(wx.EVT_LIST_ITEM_UNCHECKED, self.parent.on_glyph_item_checked)
+        self.glyph_list.EnableCheckBoxes()
 
         sizer.Add(self.glyph_list, 1, wx.EXPAND, 0)
         self.SetSizer(sizer)
