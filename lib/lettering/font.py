@@ -204,7 +204,8 @@ class Font(object):
             return False
         return custom_dir in self.path
 
-    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim_option=0, use_trim_symbols=False, color_sort=0):
+    def render_text(self, text, destination_group, variant=None, back_and_forth=True,  # noqa: C901
+                    trim_option=0, use_trim_symbols=False, color_sort=0, text_align=0):
 
         """Render text into an SVG group element."""
         self._load_variants()
@@ -217,6 +218,7 @@ class Font(object):
         else:
             glyph_sets = [self.get_variant(variant)] * 2
 
+        max_line_width = 0
         position = Point(0, 0)
         for i, line in enumerate(text.splitlines()):
             glyph_set = glyph_sets[i % 2]
@@ -225,10 +227,37 @@ class Font(object):
             letter_group = self._render_line(destination_group, line, position, glyph_set)
             if (back_and_forth and self.reversible and i % 2 == 1) or variant == '←':
                 letter_group[:] = reversed(letter_group)
-            destination_group.append(letter_group)
 
             position.x = 0
             position.y += self.leading
+
+            bounding_box = letter_group.bounding_box()
+            if not bounding_box:
+                continue
+
+            line_width = bounding_box.width
+            max_line_width = max(max_line_width, line_width)
+            if text_align == 1:
+                # align center
+                letter_group.transform = f'translate({-line_width/2}, 0)'
+            if text_align == 2:
+                letter_group.transform = f'translate({-line_width}, 0)'
+
+            destination_group.append(letter_group)
+
+        if text_align in [3, 4]:
+            for line_group in destination_group.iterchildren():
+                # print(line_group.label, len(line_group), file=sys.stderr)
+                # print(line_group.bounding_box().width, max_line_width, file=sys.stderr)
+                if text_align == 4 and len(line_group) == 1:
+                    line_group = line_group[0]
+                if len(line_group) > 1:
+                    distance = max_line_width - line_group.bounding_box().width
+                    distance_per_space = distance / (len(line_group) - 1)
+                    for i, word in enumerate(line_group.getchildren()[1:]):
+                        transform = word.transform
+                        translate = distance_per_space * (i + 1)
+                        transform.add_translate(translate, 0)
 
         if self.auto_satin and len(destination_group) > 0:
             self._apply_auto_satin(destination_group)

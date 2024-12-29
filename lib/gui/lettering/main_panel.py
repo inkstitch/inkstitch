@@ -77,6 +77,7 @@ class LetteringPanel(wx.Panel):
 
         self.settings = DotDict({
             "text": "",
+            "text_align": 0,
             "back_and_forth": False,
             "font": None,
             "scale": 100,
@@ -99,6 +100,7 @@ class LetteringPanel(wx.Panel):
 
     def apply_settings(self):
         """Make the settings in self.settings visible in the UI."""
+        self.options_panel.align_text_choice.SetSelection(self.settings.text_align)
         self.options_panel.color_sort_choice.SetSelection(self.settings.color_sort)
         self.options_panel.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
         self.options_panel.trim_option_choice.SetSelection(self.settings.trim_option)
@@ -201,8 +203,8 @@ class LetteringPanel(wx.Panel):
             self.settings.color_sort = 0
         self.update_preview()
 
-    def on_trim_option_change(self, event=None):
-        self.settings.trim_option = self.options_panel.trim_option_choice.GetCurrentSelection()
+    def on_choice_change(self, attribute, event=None):
+        self.settings[attribute] = event.GetEventObject().GetCurrentSelection()
         self.update_preview()
 
     def on_font_changed(self, event=None):
@@ -303,7 +305,7 @@ class LetteringPanel(wx.Panel):
             font.render_text(
                 self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth,
                 trim_option=self.settings.trim_option, use_trim_symbols=self.settings.use_trim_symbols,
-                color_sort=self.settings.color_sort
+                color_sort=self.settings.color_sort, text_align=self.settings.text_align
             )
         except FontError as e:
             if raise_error:
