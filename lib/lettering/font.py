@@ -231,8 +231,18 @@ class Font(object):
             position.x = 0
             position.y += self.leading
 
-            bounding_box = letter_group.bounding_box()
+            # We need to insert the destination_group now, even though it is possibly empty
+            # otherwise we could run into a FragmentError in case a glyph contains commands
+            destination_group.append(letter_group)
+            bounding_box = None
+            try:
+                bounding_box = letter_group.bounding_box()
+            except AttributeError:
+                # letter group is None
+                continue
+            # remove destination_group if it is empty
             if not bounding_box:
+                destination_group.remove(letter_group)
                 continue
 
             line_width = bounding_box.width
@@ -242,8 +252,6 @@ class Font(object):
                 letter_group.transform = f'translate({-line_width/2}, 0)'
             if text_align == 2:
                 letter_group.transform = f'translate({-line_width}, 0)'
-
-            destination_group.append(letter_group)
 
         if text_align in [3, 4]:
             for line_group in destination_group.iterchildren():
