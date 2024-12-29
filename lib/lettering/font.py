@@ -204,7 +204,7 @@ class Font(object):
             return False
         return custom_dir in self.path
 
-    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim_option=0, use_trim_symbols=False, color_sort=False):
+    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim_option=0, use_trim_symbols=False, color_sort=0):
 
         """Render text into an SVG group element."""
         self._load_variants()
@@ -241,8 +241,8 @@ class Font(object):
         self._ensure_command_symbols(destination_group)
         self._ensure_marker_symbols(destination_group)
 
-        if color_sort and self.sortable:
-            self.do_color_sort(destination_group)
+        if color_sort != 0 and self.sortable:
+            self.do_color_sort(destination_group, color_sort)
 
         return destination_group
 
@@ -281,28 +281,36 @@ class Font(object):
         group = inkex.Group(attrib={
             INKSCAPE_LABEL: line
         })
-
         last_character = None
-        for character in line:
-            if self.letter_case == "upper":
-                character = character.upper()
-            elif self.letter_case == "lower":
-                character = character.lower()
 
-            glyph = glyph_set[character]
+        words = line.split(" ")
+        for word in words:
+            word_group = inkex.Group()
+            word_group.label = word
 
-            if character == " " or (glyph is None and self.default_glyph == " "):
-                position.x += self.word_spacing
-                last_character = None
-            else:
-                if glyph is None:
-                    glyph = glyph_set[self.default_glyph]
+            for character in word:
+                if self.letter_case == "upper":
+                    character = character.upper()
+                elif self.letter_case == "lower":
+                    character = character.lower()
 
-                if glyph is not None:
-                    node = self._render_glyph(destination_group, glyph, position, character, last_character)
-                    group.append(node)
+                glyph = glyph_set[character]
 
-                last_character = character
+                if glyph is None and self.default_glyph == " ":
+                    position.x += self.word_spacing
+                    last_character = None
+                else:
+                    if glyph is None:
+                        glyph = glyph_set[self.default_glyph]
+
+                    if glyph is not None:
+                        node = self._render_glyph(destination_group, glyph, position, character, last_character)
+                        word_group.append(node)
+
+                    last_character = character
+            position.x += self.word_spacing
+            last_character = None
+            group.append(word_group)
 
         return group
 
@@ -413,7 +421,7 @@ class Font(object):
                 self._process_trim(group, use_trim_symbols, color_sort)
 
     def _process_trim(self, group, use_trim_symbols, color_sort):
-        if color_sort and self.sortable:
+        if color_sort != 0 and self.sortable:
             elements = defaultdict(list)
             for path_child in group.iterdescendants(EMBROIDERABLE_TAGS):
                 if not has_marker(path_child):
@@ -474,8 +482,25 @@ class Font(object):
         if elements:
             auto_satin(elements, preserve_order=True, trim=False)
 
-    def do_color_sort(self, group):
+    def do_color_sort(self, group, color_sort):
         """Sort elements by their color sort index as defined by font author"""
+
+        if color_sort == 1:
+            # Whole text
+            self._color_sort_group(group)
+        elif color_sort == 2:
+            # per line
+            groups = group.getchildren()
+            for group in groups:
+                self._color_sort_group(group)
+        elif color_sort == 3:
+            # per word
+            line_groups = group.getchildren()
+            for line_group in line_groups:
+                for group in line_group.iterchildren():
+                    self._color_sort_group(group)
+
+    def _color_sort_group(self, group):
         elements_by_color = self._get_color_sorted_elements(group)
 
         # there are no sort indexes defined, abort color sorting and return to normal
@@ -514,6 +539,7 @@ class Font(object):
     def _get_color_sorted_elements(self, group):
         elements_by_color = defaultdict(list)
         last_parent = None
+
         for element in group.iterdescendants(EMBROIDERABLE_TAGS, SVG_GROUP_TAG):
             sort_index = element.get('inkstitch:color_sort_index', None)
 
