@@ -549,6 +549,8 @@ class Font(object):
                     for element in element_list:
                         path += element.get("d", "")
                 grouped_elements[0][0].set("d", path)
+                if grouped_elements[0][0].get("inkstitch:fill_method", False) in ['tartan_fill', 'linear_gradient_fill']:
+                    grouped_elements[0][0].set('inkstitch:stop_at_ending_point', True)
                 color_group.append(grouped_elements[0][0])
                 group.append(color_group)
                 continue

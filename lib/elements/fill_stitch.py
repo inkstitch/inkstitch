@@ -431,7 +431,7 @@ class FillStitch(EmbroideryElement):
                   'stitch routing. When enabled the last section will end at the defined spot.'),
         type='boolean',
         sort_index=33,
-        select_items=[('fill_method', 'linear_gradient_fill')],
+        select_items=[('fill_method', 'linear_gradient_fill'), ('fill_method', 'tartan_fill')],
         default=False
      )
     def stop_at_ending_point(self):
@@ -962,20 +962,20 @@ class FillStitch(EmbroideryElement):
                 fill_shapes = self.fill_shape(shape)
                 for i, fill_shape in enumerate(fill_shapes.geoms):
                     if self.fill_method == 'contour_fill':
-                        stitch_groups.extend(self.do_contour_fill(fill_shape, previous_stitch_group, start))
+                        stitch_groups.extend(self.do_contour_fill(fill_shape, start))
                     elif self.fill_method == 'guided_fill':
-                        stitch_groups.extend(self.do_guided_fill(fill_shape, previous_stitch_group, start, end))
+                        stitch_groups.extend(self.do_guided_fill(fill_shape, start, end))
                     elif self.fill_method == 'meander_fill':
                         stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
                     elif self.fill_method == 'circular_fill':
-                        stitch_groups.extend(self.do_circular_fill(fill_shape, previous_stitch_group, start, end))
+                        stitch_groups.extend(self.do_circular_fill(fill_shape, start, end))
                     elif self.fill_method == 'linear_gradient_fill':
-                        stitch_groups.extend(self.do_linear_gradient_fill(fill_shape, previous_stitch_group, start, end))
+                        stitch_groups.extend(self.do_linear_gradient_fill(fill_shape, start, end))
                     elif self.fill_method == 'tartan_fill':
-                        stitch_groups.extend(self.do_tartan_fill(fill_shape, previous_stitch_group, start, end))
+                        stitch_groups.extend(self.do_tartan_fill(fill_shape, start, end))
                     else:
                         # auto_fill
-                        stitch_groups.extend(self.do_auto_fill(fill_shape, previous_stitch_group, start, end))
+                        stitch_groups.extend(self.do_auto_fill(fill_shape, start, end))
                     if stitch_groups:
                         previous_stitch_group = stitch_groups[-1]
 
@@ -1052,7 +1052,7 @@ class FillStitch(EmbroideryElement):
             starting_point = underlay.stitches[-1]
         return [stitch_groups, starting_point]
 
-    def do_auto_fill(self, shape, last_stitch_group, starting_point, ending_point):
+    def do_auto_fill(self, shape, starting_point, ending_point):
         stitch_group = StitchGroup(
             color=self.color,
             tags=("auto_fill", "auto_fill_top"),
@@ -1081,7 +1081,7 @@ class FillStitch(EmbroideryElement):
         )
         return [stitch_group]
 
-    def do_contour_fill(self, polygon, last_stitch_group, starting_point):
+    def do_contour_fill(self, polygon, starting_point):
         if not starting_point:
             starting_point = (0, 0)
         starting_point = shgeo.Point(starting_point)
@@ -1135,12 +1135,12 @@ class FillStitch(EmbroideryElement):
 
         return stitch_groups
 
-    def do_guided_fill(self, shape, last_stitch_group, starting_point, ending_point):
+    def do_guided_fill(self, shape, starting_point, ending_point):
         guide_line = self._get_guide_lines()
 
         # No guide line: fallback to normal autofill
         if not guide_line:
-            return self.do_auto_fill(shape, last_stitch_group, starting_point, ending_point)
+            return self.do_auto_fill(shape, starting_point, ending_point)
 
         stitch_group = StitchGroup(
             color=self.color,
@@ -1190,7 +1190,7 @@ class FillStitch(EmbroideryElement):
         )
         return [stitch_group]
 
-    def do_circular_fill(self, shape, last_stitch_group, starting_point, ending_point):
+    def do_circular_fill(self, shape, starting_point, ending_point):
         # get target position
         command = self.get_command('target_point')
         if command:
@@ -1229,8 +1229,8 @@ class FillStitch(EmbroideryElement):
         )
         return [stitch_group]
 
-    def do_linear_gradient_fill(self, shape, last_stitch_group, start, end):
+    def do_linear_gradient_fill(self, shape, start, end):
         return linear_gradient_fill(self, shape, start, end)
 
-    def do_tartan_fill(self, shape, last_stitch_group, start, end):
+    def do_tartan_fill(self, shape, start, end):
         return tartan_fill(self, shape, start, end)
