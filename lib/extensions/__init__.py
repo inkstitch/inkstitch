@@ -39,7 +39,6 @@ from .lettering_generate_json import LetteringGenerateJson
 from .lettering_edit_json import LetteringEditJson
 from .lettering_remove_kerning import LetteringRemoveKerning
 from .lettering_set_color_sort_index import LetteringSetColorSortIndex
-from .lettering_update_json_glyphlist import LetteringUpdateJsonGlyphlist
 from .letters_to_font import LettersToFont
 from .object_commands import ObjectCommands
 from .object_commands_toggle_visibility import ObjectCommandsToggleVisibility
@@ -109,7 +108,6 @@ __all__ = extensions = [About,
                         LetteringGenerateJson,
                         LetteringRemoveKerning,
                         LetteringSetColorSortIndex,
-                        LetteringUpdateJsonGlyphlist,
                         LettersToFont,
                         ObjectCommands,
                         ObjectCommandsToggleVisibility,
