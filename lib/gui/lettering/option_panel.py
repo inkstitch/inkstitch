@@ -72,8 +72,8 @@ class LetteringOptionsPanel(wx.Panel):
         font_selector_box = wx.BoxSizer(wx.HORIZONTAL)
         font_selector_box.Add(self.font_chooser, 4, wx.EXPAND | wx.TOP | wx.BOTTOM | wx.RIGHT, 10)
         font_selector_sizer.Add(font_selector_box, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
-        font_selector_sizer.Add(self.font_description, 1, wx.EXPAND | wx.ALL, 10)
-        font_selector_sizer.Add(font_description_sizer, 1, wx.EXPAND | wx.ALL, 10)
+        font_selector_sizer.Add(self.font_description, 0, wx.EXPAND | wx.ALL, 10)
+        font_selector_sizer.Add(font_description_sizer, 0, wx.EXPAND | wx.ALL, 10)
         outer_sizer.Add(font_selector_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
         # options
