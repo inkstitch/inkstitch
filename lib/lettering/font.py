@@ -236,7 +236,7 @@ class Font(object):
             destination_group.append(letter_group)
             bounding_box = None
             try:
-                bounding_box = letter_group.shape_box()
+                bounding_box = letter_group.bounding_box()
             except AttributeError:
                 # letter group is None
                 continue
