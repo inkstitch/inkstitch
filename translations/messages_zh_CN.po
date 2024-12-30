@@ -5329,7 +5329,7 @@ msgstr ""
 
 #: inx/inkstitch_gradient_blocks.inx:3
 msgid "Convert to gradient blocks"
-msgstr ""
+msgstr "转换为渐变块"
 
 #: inx/inkstitch_gradient_blocks.inx:9
 msgid "Split a fill with a gradient into single colored blocks"
