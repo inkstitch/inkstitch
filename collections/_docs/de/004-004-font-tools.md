@@ -1,7 +1,7 @@
 ---
 title: "Schriftverwaltung"
 permalink: /de/docs/font-tools/
-last_modified_at: 2024-05-26
+last_modified_at: 2024-12-30
 toc: true
 ---
 Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem [Text-Werkzeug](/de/docs/lettering/) von Ink/Stitch zusätzliche Schriften hinzufügen wollen.
@@ -24,7 +24,7 @@ Die JSON-Datei muss als minimale Bedingung den Namen der Schrift enthalten.
 
 {% include upcoming_release.html %}
 
-This extension allows you do edit an existing font information file. If the font doesn't have a json file file, create one with generated with [generate JSON](#generate-json)
+Diese Erweiterung erlaubt das bearbeiten von Schriftinformationen. Hat die Schrift noch keine JSON-Datei, erstelle sie zunächst mit [JSON-Datei erstellen](#json-datei-erstellen)
 
 ## Zeichentabelle
 
@@ -68,30 +68,37 @@ Lese nach [**wie man eine SVG-Schrift mit Kerning Information erstellt**](/de/tu
 
 Wenn du deine Schrift ohne Kerning erstellt hast, kannst du mit diesem Werkzeug immer noch eine JSON-Datei mit den Grundinformationen erstellen.
 
-* **Name** Pflichfeld. Der Name der Schrift.
-* **Beschreibung** eine kurze Beschreibung deiner Schrift (wie z.B. Informationen zur Größe der Schrift, etc.)
-* **Schriftdatei** Pflichtfeld. Wenn du deine Schrift mit Hilfe von FontForge erstellt hast, wird Ink/Stitch die Kerning informationen aus dieser Datei lesen und in die JSON-Datei einfügen.
- Außerdem legt der Dateipfad den Speicherort für die neue JSON-Datei fest.
-* **Automatisch geführte Satinsäulen**:
-    * aktiviert: Ink/Stitch generiert automatisch geführte Satinsäulen, wenn die Schrift mit dem Text Werkzeug von Ink/Stitch benutzt wird. [Mehr Informationen über automatisch geführte Satinsäulen](/de/docs/satin-tools/#automatisch-geführte-satinsäulen)
-    * deaktiviert: Ink/Stitch benutzt die Buchstaben so wie du sie digitalisiert hast. Wennn du selbst schon für einen optimalen Stichpfad gesorgt hast, kannst du diese Funktion deaktivieren.
-* **Klein-/Großbuchstaben erzwingen**:
-    * Nein: Wähle diese Option, wenn deine Schrift sowohl Klein- als auch Großbuchstaben enthält (Standard)
-    * Großbuchstaben: Wähle diese Option, wenn deine Schrift nur Großbuchstaben enthält.
-    * Kleinbuchstaben: Wähle diese Option, wenn deine Schrift nur Kleinbuchstaben enthält.
-* **Umkehrbar**: definiere, ob deine Schrift vorwärts und rückwärts gestickt werden kann.  Wähle diese Option nur, wenn du verschiedene Schriftvarianten (bzw. Richtungen) erstellt hast.
-* **Standard-Glyphe**: das Zeichen/der Buchstabe der ausgegeben werden soll, wenn der eingegebene Buchstabe nicht in der Schriftdatei vorhanden ist
-* **Minimale Skalierung / Maximale Skalierung**: definiert, wie weit die Schrift maximal skaliert werden darf ohne beim Sticken an Qualität zu verlieren 
+### Schriftinformationen
+
+|Option                          |Beschreibung
+|--------------------------------|---------------------------------
+|Name                            |Pflichfeld. Der Name der Schrift.
+|Beschreibung                    |Eine kurze Beschreibung deiner Schrift
+|Schriftdatei                    |Pflichtfeld. Wenn du deine Schrift mit Hilfe von FontForge erstellt hast, wird Ink/Stitch die Kerning informationen aus dieser Datei lesen und in die JSON-Datei einfügen.<br>Außerdem legt der Dateipfad den Speicherort für die neue JSON-Datei fest.<br/><br/>Die Datei `font.json` wird in demselben Ordner erstellt, in dem deine SVG-Schriftdatei liegt.
+|Stichwörter                     |Aktiviere die Kategorien, die für die Schrift zutreffend sind
+
+### Einstellungen
+
+|Option                          |Beschreibung
+|--------------------------------|---------------------------------
+|Automatisch geführte Satinsäulen|▸ aktiviert<br/>Ink/Stitch generiert automatisch geführte Satinsäulen, wenn die Schrift mit dem Text Werkzeug von Ink/Stitch benutzt wird. [Mehr Informationen über automatisch geführte Satinsäulen](/de/docs/satin-tools/#automatisch-geführte-satinsäulen)<br/><br/>▸ deaktiviert<br/>Ink/Stitch benutzt die Buchstaben so wie du sie digitalisiert hast. Wennn du selbst schon für einen optimalen Stichpfad gesorgt hast, kannst du diese Funktion deaktivieren.
+|Umkehrbar                      | definiere, ob deine Schrift vorwärts und rückwärts gestickt werden kann.  Wähle diese Option nur, wenn du verschiedene Schriftvarianten (bzw. Richtungen) erstellt hast.
+|Sortierbar                     | legt fest, ob die Farbsortier-Option für diese Schrift aktiviert werden soll. Diese Option funktioniert nur, wenn in der Schriftdatei der [Farbsortierindex](#farbsortierindex-festlegen) festgelegt wurde.
+|Indizes kombinieren| Komma getrennte Liste von Farbsortierindexen. Elemente mit dem gleichen in dieser Liste aufgeführten Farbsortierindex werden zu einem Element zusammengefügt. Dies ist hilfreich um Farbwechsel für Sitcharten mit mehreren Farben zu vermeiden (z.B. Tartan).
+|Klein-/Großbuchstaben erzwingen|▸ Nein<br/>Wähle diese Option, wenn deine Schrift sowohl Großbuchstaben, als auch Kleinbuchstaben enthält.<br/><br/>▸ Großbuchstaben<br/>Wähle diese Option, wenn die Schrift nur Großbuchstaben enthält.<br/><br/>▸ Kleinbuchstaben<br/>Wähle diese Option, wenn die Schrift nur Kleinbuchstaben enthält.
+|Standard-Glyphe| das Zeichen/der Buchstabe der ausgegeben werden soll, wenn der eingegebene Buchstabe nicht in der Schriftdatei vorhanden ist
+|Minimale Skalierung / Maximale Skalierung| definiert, wie weit die Schrift maximal skaliert werden darf ohne beim Sticken an Qualität zu verlieren 
+
+### Kerning
 
 Die folgenden Felder sind nur notwendig, wenn die SVG-Schriftdatei keine Kerning Information enthält.
 Wenn keine Kerning Information vorhanden ist, werden die unten stehenden Werte automatisch genutzt.
 
-* **Erzwinge nutzerdefinierte Werte**: Benutze nicht die Kerning Information aus der Schriftdatei, sondern die unten definierten Werte.
-
-* **Zeilenhöhe (px)**: Abstand zur nächsten Zeile
-* **Wortabstand (px)**: Die Breite des Leerzeichens
-
-Die Datei `font.json` wird in demselben Ordner erstellt, in dem deine SVG-Schriftdatei liegt.
+|Option                          |Beschreibung
+|--------------------------------|---------------------------------
+|Erzwinge nutzerdefinierte Werte | Benutze nicht die Kerning-Information aus der Schriftdatei, sondern die unten definierten Werte.
+|Zeilenhöhe (px)                 | Abstand zur nächsten Zeile
+|Wortabstand (px)                | Die Breite des Leerzeichens
 
 
 ## Buchstaben zu Schrift
@@ -128,18 +135,18 @@ Deine Schrift ist bereits einsatzbereit. Aber wenn du sie mit FontForge erstellt
 3. Die die zu bereinigende(n) Datei(en)
 4. Klicke auf `Anwenden`
 
-## Set color index
+## Farbsortierindex festlegen
 
 {% include upcoming_release.html %}
 
-Sets an index to inform the lettering tool on where to position the selected elements when color sorting is enabled.
+Legt den angebebenen Farbsortierindex für ausgewählte Elemente fest. Hierdurch wirdie Reihenfolge der Elemente für mehrfarbige Schriftarten bei der Farbsortierung festgelegt.
 
-* In a font file select elements of the same color
-* Open the extension `Extensions > Ink/Stitch > Font Management > Set color index`
-* Set the index number
-* Apply
+* Wähle einer einer Schriftdatei die Elemente mit einer bestimmten Farbe aus
+* Öffne die Erweiterung `Erweiterungen > Ink/Stitch > Schriftverwaltung > Farbsortierindex festlegen`
+* Stelle den Index-Wert ein
+* Anwenden
 
-The JSON-file must specify if a font is color sortable. Use [Edit JSON](#edit-json) and enable the option `Sortable` in the `Font Settings` tab.
+In der JSON-Datei muss die Option `Sortierbar` aktiviert sein. Nutze die Erweiterung [JSON bearbeiten](#edit-json) und aktiviere die Option in den `Schrifteinstellungen`.
 {: .notice--warning }
 
 ## Liste verfügbarer Zeichen aktualisieren

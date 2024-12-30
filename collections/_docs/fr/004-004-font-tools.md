@@ -77,31 +77,37 @@ Lire [**comment générer une police svg avec des informations de crénage**](/t
 
 Si vous avez généré votre fichier svg sans informations de crénage, cette extension peut quand même vous aider à configurer votre fichier json avec des informations de base.
 
-* **Nom**: le nom de votre police (obligatoire).
-* **Description**: informations supplémentaires sur votre police (telles que des informations de taille, etc.)
-* **Fichier de police** (obligatoire): Si vous avez utilisé FontForge pour générer votre fichier de police svg, Ink/Stitch lira les informations de crénage de votre police pour les inclure dans le fichier json.
-De plus, le fichier de police sera utilisé pour déterminer le chemin de sortie.
-* **Agencement automatique des colonnes Satin**:
-    * activé: Ink/Stitch générera une organisation raisonnable pour les colonnes de satin de votre police lorsqu'elle est utilisée dans l'outil de lettrage. [Plus d'information sur Agencement automatique des colonnes Satin](/fr/docs/satin-tools/#auto-route-satin-columns)
-    * désactivé: Ink/Stitch utilisera les glyphes tels quels. Désactivez l'option, si vous vous avez créé vous-même l'agencement des colonnes satin dans votre police.
-* **Réversible**: si votre police peut être brodée vers l'avant et vers l'arrière ou seulement vers l'avant. Ne cocher cette case que si vous avez effectivement créé plusieurs variantes de la police pour des directions différentes.
-* **Forcer la casse**:
-  * Non: choisissez cette option si votre police contient des lettres majuscules et minuscules (par défaut).
-  * Majuscule: Choisissez cette option si votre police ne contient que des majuscules.
-  * Minuscule: Choisissez cette option si votre police ne contient que des minuscules.
-* **Glyphe par défaut**: le glyphe à afficher si le glyphe demandé par l'utilisateur n'est pas disponible dans le fichier de police (glyphe manquant)
-* **Echelle minimum /Echelle maximum**: Défini dans quelle mesure vos glyphes peuvent être agrandis ou diminués sans perdre en qualité une fois brodés
+### Information sur la police
+
+|Options                            |Description        |
+|-----------------------------------|-------------------|
+|Nom (obligatoire)                  |le nom de votre police (obligatoire).
+|Description                        |informations supplémentaires sur votre police (telles que des informations de taille, etc.)
+|Fichier de police (obligatoire)    | Si vous avez utilisé FontForge pour générer votre fichier de police svg, Ink/Stitch lira les informations de crénage de votre police pour les inclure dans le fichier json.<br/>De plus, le fichier de police sera utilisé pour déterminer le chemin de sortie.<br/><br/>Un fichier `font.json` sera enregistré dans le dossier de votre fichier de fonte svg.
+|Keywords                           |Enable the categories that apply to your font
+
+### Paramètres de la police
+
+|Options                            |Description        |
+|-----------------------------------|-------------------|
+|Agencement automatique des colonnes Satin|▸ activé<br/>Ink/Stitch générera une organisation raisonnable pour les colonnes de satin de votre police lorsqu'elle est utilisée dans l'outil de lettrage. [Plus d'information sur Agencement automatique des colonnes Satin](/fr/docs/satin-tools/#auto-route-satin-columns)<br/><br/>▸ désactivé<br/>Ink/Stitch utilisera les glyphes tels quels. Désactivez l'option, si vous vous avez créé vous-même l'agencement des colonnes satin dans votre police.
+|Réversible                         |si votre police peut être brodée vers l'avant et vers l'arrière ou seulement vers l'avant. Ne cocher cette case que si vous avez effectivement créé plusieurs variantes de la police pour des directions différentes.
+|Sortable                           |wether your font can be color sorted or not. This only works, when the elements in your font carry a [color sort index](#set-color-index)
+|Combine indices                    |a comma separated list of of color sort indices. Elements with this index will be combined into a single element. Useful to reduce color changes for multi-color stitch types such as tartan.
+|Forcer la casse                    |▸ Non<br/>choisissez cette option si votre police contient des lettres majuscules et minuscules (par défaut).<br/<<br/>▸ Majuscule: Choisissez cette option si votre police ne contient que des majuscules.<br/><br/>▸ Minuscule: Choisissez cette option si votre police ne contient que des minuscules.
+|Glyphe par défaut                  |le glyphe à afficher si le glyphe demandé par l'utilisateur n'est pas disponible dans le fichier de police (glyphe manquant)
+|Echelle minimum /Echelle maximum   |Défini dans quelle mesure vos glyphes peuvent être agrandis ou diminués sans perdre en qualité une fois brodés
+
+### Crénage
 
 Les champs suivants sont facultatifs, uniquement nécessaires lorsque votre fichier svg ne contient pas d'informations de crénage.
 Si les informations de crénage ne peuvent être trouvées, ces valeurs seront utilisées en remplacement.
 
-* **Forcer des valeurs de crénage**:  Ne pas utiliser l'information de crénage du fichier svg, mais utiliser plutôt ces valeurs:
-
-* **Hauteur de ligne (px)**:  Défini la hauteur d'une ligne de votre fonte. Si vous laissez à 0, Ink/Stitch lit la valeur dans votre fichier de fonte svg (si aucune info ne peut être trouvé,  100 est la valeur par défaut).
-* **Espacement des mots (px)**: La largeur du caractère "espace"
-
-Un fichier `font.json` sera enregistré dans le dossier de votre fichier de fonte svg.
-
+|Options                      |Description        |
+|-----------------------------|-------------------|
+|Forcer des valeurs de crénage| Ne pas utiliser l'information de crénage du fichier svg, mais utiliser plutôt ces valeurs:
+|Hauteur de ligne (px)        | Défini la hauteur d'une ligne de votre fonte. Si vous laissez à 0, Ink/Stitch lit la valeur dans votre fichier de fonte svg (si aucune info ne peut être trouvé,  100 est la valeur par défaut).
+|Espacement des mots (px)     |La largeur du caractère "espace"
 
 ## Lettres vers police {#letters-to-font}
 

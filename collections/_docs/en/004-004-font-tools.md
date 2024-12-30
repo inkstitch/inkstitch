@@ -71,28 +71,40 @@ Depending on the way you generated your font file it can include additional kern
 Read [**how to generate a svg font with kerning information**](/tutorials/font-creation).
 If you generated your svg file without kerning information this extension can still help you to set up your json file with basic information.
 
-* **Name**: the name of your font (mandatory).
-* **Description**: additional information about your font (such as sizing information, etc)
-* **Font File** (mandatory): When you have been using FontForge to generate your svg font file, Ink/Stitch will read the kerning information from your font to include it into the json file.
- Additionally the font file will be used to determine the output path.
-* **AutoRoute Satin**:
-    * enabled: Ink/Stitch will generate a reasonable routing for satin columns in your font when used in the lettering tool. [More information about AutoRoute Satin](/docs/satin-tools/#auto-route-satin-columns)
-    * disabled: Ink/Stitch will use the glyphs as is. Disable this option, if you took care for the routing in your font by yourself.
-* **Reversible**: wether your font can be stitch forwards and backwards or only forwards. Check this only if you do have created font variants.
-* **Force letter case**:
-  * No: Choose this option if your font contains upper and lower case letters (default).
-  * Upper: Choose this option if your font only contains upper case letters.
-  * Lower: Choose this option if your font only contains lower case letters.
-* **Default Glyph**: the glyph to be shown if the user requested glyph isn't available in the font file (missing glyph)
-* **Min Scale / Max Scale**: Define how much can your glyphs can be scaled without loosing quality when stitched out
+### Font Info
+
+|Option                 |Description|
+|-----------------------|-------------------------------------|
+|Name (mandatory)       |The name of your font 
+|Description            |Additional information about your font
+|Font File (mandatory)  |When you have been using FontForge to generate your svg font file, Ink/Stitch will read the kerning information from your font to include it into the json file.<br />Additionally the font file will be used to determine the output path.<br/><br/>A file `font.json` will be saved into the folder of your svg font file.
+|Keywords               |Enable the categories that apply to your font
+
+### Font Settings
+
+|Option                 |Description|
+|-----------------------|-------------------------------------|
+|Default Glyph          |the glyph to be shown if the user requested glyph isn't available in the font file (missing glyph)
+|AutoRoute Satin        |▸ Enabled<br/>Ink/Stitch will generate a reasonable [routing for satin columns](/docs/satin-tools/#auto-route-satin-columns) in your font when used in the lettering tool.<br/><br/>▸ Disabled<br/>Ink/Stitch will use the glyphs as is. Disable this option, if you took care for the routing in your font by yourself.
+|Reversible             |wether your font can be stitch forwards and backwards or only forwards. Check this only if you do have created font variants.
+|Sortable               |wether your font can be color sorted or not. This only works, when the elements in your font carry a [color sort index](#set-color-index)
+|Combine indices        |a comma separated list of of color sort indices. Elements with this index will be combined into a single element. Useful to reduce color changes for multi-color stitch types such as tartan.
+|Force letter case      |▸ No<br/>Choose this option if your font contains upper and lower case letters (default).<br/><br/>▸ Upper<br/>Choose this option if your font only contains upper case letters.<br/><br/>▸ Lower<br/>Choose this option if your font only contains lower case letters.
+|Min Scale / Max Scale  |Define how much can your glyphs can be scaled without loosing quality when stitched out
+
+
+### Kerning
 
 The following fields are optional only necessary, when your svg file doesn't contain kerning information.
-If kerning information cannot be found, these values will be used instead.
 
-* **Leading (px)**: Defines the line height of your font. Leave to `0` to let Ink/Stitch read it from your font file (defaults to 100 if the information cannot be found).
-* **Word spacing (px)**: The width of the "space" character
+If the kerning information cannot be found, these values will be used instead.
 
-A file `font.json` will be saved into the folder of your svg font file.
+|Option                 |Description|
+|-----------------------|-------------------------------------|
+|Force defined values   |Do not use the font file information, but the values defined below.
+|Leading (px)           |Defines the line height of your font. Leave to `0` to let Ink/Stitch read it from your font file (defaults to 100 if the information cannot be found).
+|Word spacing (px)      |The width of the "space" character
+
 
 ## Letters to font
 
