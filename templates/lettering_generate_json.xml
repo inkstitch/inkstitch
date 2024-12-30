@@ -105,10 +105,11 @@
       </page>
       <page name="info" gui-text="Help">
           <label appearance="header">Generates font.json which can be used by the lettering tool.</label>
-          <label>The generated file can be viewed and updated with a standard text editor tool.</label>
+          <label>The generated file can be updated with Extensions > Ink/Stitch > Font Management > Edit JSON.</label>
           <spacer />
           <label>More information on our website</label>
           <label appearance="url">https://inkstitch.org/docs/font-tools/#generate-json</label>
+          <label appearance="url">https://inkstitch.org/docs/font-tools/#edit-json</label>
       </page>
     </param>
 
