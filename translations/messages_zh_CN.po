@@ -995,7 +995,7 @@ msgstr "最小跳针长度"
 
 #: lib/elements/element.py:244
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
-msgstr ""
+msgstr "覆盖设置全局最小跳线长度。与下一对象相距短则不进行结束锁针。"
 
 #: lib/elements/element.py:254
 msgid "Allow lock stitches"
@@ -1029,7 +1029,7 @@ msgstr "强制锁缝"
 
 #: lib/elements/element.py:270
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
-msgstr ""
+msgstr "此设定将无视最小跳针距离而强制对象进行结束锁针。"
 
 #: lib/elements/element.py:282
 msgid "Tack stitch"
@@ -1061,11 +1061,11 @@ msgstr ""
 
 #: lib/elements/element.py:328
 msgid "Lock stitch"
-msgstr "锁缝样式"
+msgstr "结束锁缝样式"
 
 #: lib/elements/element.py:329
 msgid "Lock stitch type"
-msgstr "选择锁缝样式"
+msgstr "选择结束锁缝样式"
 
 #: lib/elements/element.py:340
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
@@ -1599,7 +1599,7 @@ msgstr "填充针迹可以将织物拉在一起，导致形状比您在 Inkscape
 #: lib/elements/fill_stitch.py:610 lib/elements/satin_column.py:282
 #: lib/elements/satin_column.py:445 lib/elements/satin_column.py:539
 msgid "mm (each side)"
-msgstr "毫米 (一侧)"
+msgstr "mm (单侧)"
 
 #: lib/elements/fill_stitch.py:621 lib/elements/satin_column.py:263
 msgid "Pull compensation percentage"
@@ -1613,7 +1613,7 @@ msgstr "额外的拉动补偿，随行宽的百分比而变化。用空格分隔
 #: lib/elements/satin_column.py:142 lib/elements/satin_column.py:266
 #: lib/elements/satin_column.py:460 lib/elements/satin_column.py:559
 msgid "% (each side)"
-msgstr "% (一侧)"
+msgstr "% (单侧)"
 
 #: lib/elements/fill_stitch.py:646 lib/elements/fill_stitch.py:655
 #: lib/elements/fill_stitch.py:682 lib/elements/fill_stitch.py:693
@@ -2787,7 +2787,7 @@ msgstr "没用可用选项"
 
 #: lib/extensions/params.py:463
 msgid "Re-roll"
-msgstr ""
+msgstr "刷新"
 
 #: lib/extensions/params.py:492
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
