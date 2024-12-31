@@ -315,15 +315,16 @@ class Font(object):
             An svg:g element containing the rendered text.
         """
 
-        group = inkex.Group(attrib={
-            INKSCAPE_LABEL: line
-        })
+        group = inkex.Group()
+        group.label = line
+        group.set("inkstitch:letter-group", "line")
         last_character = None
 
         words = line.split(" ")
         for word in words:
             word_group = inkex.Group()
             word_group.label = word
+            word_group.set("inkstitch:letter-group", "word")
 
             for character in word:
                 if self.letter_case == "upper":
@@ -391,6 +392,7 @@ class Font(object):
         # this is used to recognize a glyph layer later in the process
         # because this is not unique it will be overwritten by inkscape when inserted into the document
         node.set("id", "glyph")
+        node.set("inkstitch:letter-group", "glyph")
 
         return node
 
@@ -524,21 +526,21 @@ class Font(object):
 
         if color_sort == 1:
             # Whole text
-            self._color_sort_group(group)
+            self._color_sort_group(group, 'line')
         elif color_sort == 2:
             # per line
             groups = group.getchildren()
             for group in groups:
-                self._color_sort_group(group)
+                self._color_sort_group(group, 'word')
         elif color_sort == 3:
             # per word
             line_groups = group.getchildren()
             for line_group in line_groups:
                 for group in line_group.iterchildren():
-                    self._color_sort_group(group)
+                    self._color_sort_group(group, 'glyph')
 
-    def _color_sort_group(self, group):
-        elements_by_color = self._get_color_sorted_elements(group)
+    def _color_sort_group(self, group, transform_key):
+        elements_by_color = self._get_color_sorted_elements(group, transform_key)
 
         # there are no sort indexes defined, abort color sorting and return to normal
         if not elements_by_color:
@@ -575,7 +577,7 @@ class Font(object):
 
             group.append(color_group)
 
-    def _get_color_sorted_elements(self, group):
+    def _get_color_sorted_elements(self, group, transform_key):
         elements_by_color = defaultdict(list)
         last_parent = None
 
@@ -589,10 +591,15 @@ class Font(object):
                 continue
 
             # get glyph group to calculate transform
+            glyph_group = None
             for ancestor in element.ancestors(group):
-                if ancestor.get_id().startswith("glyph"):
+                if ancestor.get("inkstitch:letter-group", '') == transform_key:
                     glyph_group = ancestor
                     break
+            if glyph_group is None:
+                # this should never happen
+                continue
+
             element.transform = element.composed_transform(glyph_group.getparent())
             if sort_index is not None and int(sort_index) in self.combine_at_sort_indices:
                 element.apply_transform()
