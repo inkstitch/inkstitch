@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-30 01:26+0000\n"
-"PO-Revision-Date: 2024-12-30 01:26\n"
+"POT-Creation-Date: 2024-12-31 01:23+0000\n"
+"PO-Revision-Date: 2024-12-31 01:24\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-30 01:26+0000\n"
+"POT-Creation-Date: 2024-12-31 01:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3107,6 +3107,7 @@ msgid "Feature to verify or update font information for an existing font."
 msgstr "Funktion zum Überprüfen oder Aktualisieren der Schriftartinformationsdatei für eine vorhandene Schriftart."
 
 #: lib/gui/edit_json/help_panel.py:33 lib/gui/edit_json/help_panel.py:34
+#: inx/inkstitch_lettering_generate_json.inx:124
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr "https://inkstitch.org/docs/font-tools/#json-bearbeiten"
 
@@ -3298,27 +3299,27 @@ msgstr "Sticke Textzeilen vor und zurück"
 
 #: lib/gui/lettering/option_panel.py:86
 msgid "Align Text"
-msgstr ""
+msgstr "Text ausrichten"
 
 #: lib/gui/lettering/option_panel.py:89
 msgid "Left"
-msgstr ""
+msgstr "Links"
 
 #: lib/gui/lettering/option_panel.py:89
 msgid "Center"
-msgstr ""
+msgstr "Mitte"
 
 #: lib/gui/lettering/option_panel.py:89
 msgid "Right"
-msgstr ""
+msgstr "Rechts"
 
 #: lib/gui/lettering/option_panel.py:89
 msgid "Block (default)"
-msgstr ""
+msgstr "Block (Standard)"
 
 #: lib/gui/lettering/option_panel.py:89
 msgid "Block (letterspacing)"
-msgstr ""
+msgstr "Block (Buchstabenabstand)"
 
 #: lib/gui/lettering/option_panel.py:94 lib/gui/lettering/option_panel.py:96
 msgid "Sort multicolor fonts. Unifies tartan patterns."
@@ -3326,19 +3327,19 @@ msgstr "Sortiert mehrfarbige Schriften. Tartan-Schriften werden dabei auf ein Mu
 
 #: lib/gui/lettering/option_panel.py:95
 msgid "Off"
-msgstr ""
+msgstr "Aus"
 
 #: lib/gui/lettering/option_panel.py:95
 msgid "Whole text"
-msgstr ""
+msgstr "Ganzer Text"
 
 #: lib/gui/lettering/option_panel.py:95
 msgid "Line"
-msgstr ""
+msgstr "Zeile"
 
 #: lib/gui/lettering/option_panel.py:95
 msgid "Word"
-msgstr ""
+msgstr "Wort"
 
 #: lib/gui/lettering/option_panel.py:99
 msgid "Add trims"
@@ -6325,8 +6326,8 @@ msgid "Generates font.json which can be used by the lettering tool."
 msgstr "Erstellt die font.json-Datei, um die Schrift für das Textwerkzeug nutzbar zu machen."
 
 #: inx/inkstitch_lettering_generate_json.inx:120
-msgid "The generated file can be viewed and updated with a standard text editor tool."
-msgstr "Die erstellte Datei kann mit einem Standard-Texteditor angeschaut und bearbeitet werden."
+msgid "The generated file can be updated with Extensions > Ink/Stitch > Font Management > Edit JSON."
+msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:123
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"

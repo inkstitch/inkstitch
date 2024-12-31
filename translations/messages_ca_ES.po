@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-30 01:26+0000\n"
-"PO-Revision-Date: 2024-12-30 01:26\n"
+"POT-Creation-Date: 2024-12-31 01:23+0000\n"
+"PO-Revision-Date: 2024-12-31 01:24\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-30 01:26+0000\n"
+"POT-Creation-Date: 2024-12-31 01:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3097,6 +3097,7 @@ msgid "Feature to verify or update font information for an existing font."
 msgstr ""
 
 #: lib/gui/edit_json/help_panel.py:33 lib/gui/edit_json/help_panel.py:34
+#: inx/inkstitch_lettering_generate_json.inx:124
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr ""
 
@@ -6304,7 +6305,7 @@ msgid "Generates font.json which can be used by the lettering tool."
 msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:120
-msgid "The generated file can be viewed and updated with a standard text editor tool."
+msgid "The generated file can be updated with Extensions > Ink/Stitch > Font Management > Edit JSON."
 msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:123
