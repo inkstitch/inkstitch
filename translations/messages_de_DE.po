@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-31 01:23+0000\n"
-"PO-Revision-Date: 2024-12-31 01:24\n"
+"POT-Creation-Date: 2025-01-01 01:38+0000\n"
+"PO-Revision-Date: 2025-01-01 01:39\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-31 01:23+0000\n"
+"POT-Creation-Date: 2025-01-01 01:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4068,7 +4068,7 @@ msgstr "Die JSON-Datei kann über folgende Ink/Stitch Funktion neu erstellt werd
 msgid "The font '%s' has no variants."
 msgstr "Die Schrift '%s' hat keine Varianten."
 
-#: lib/lettering/font.py:550
+#: lib/lettering/font.py:552
 msgid "Color Group"
 msgstr "Farbgruppe"
 
@@ -6327,7 +6327,7 @@ msgstr "Erstellt die font.json-Datei, um die Schrift für das Textwerkzeug nutzb
 
 #: inx/inkstitch_lettering_generate_json.inx:120
 msgid "The generated file can be updated with Extensions > Ink/Stitch > Font Management > Edit JSON."
-msgstr ""
+msgstr "Die erstellte Datei kann über \"Erweiterungen > Ink/Stitch > Schriftverwaltung > JSON bearbeiten\" angepasst werden."
 
 #: inx/inkstitch_lettering_generate_json.inx:123
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
