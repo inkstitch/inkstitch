@@ -577,7 +577,7 @@ class Font(object):
 
             group.append(color_group)
 
-    def _get_color_sorted_elements(self, group, transform_key):
+    def _get_color_sorted_elements(self, group, transform_key):  # noqa: C901
         elements_by_color = defaultdict(list)
         last_parent = None
 
