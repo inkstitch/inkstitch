@@ -38,7 +38,7 @@ class RunningStitchLayerEditor(StitchLayerEditor, RandomizationPropertiesMixin, 
                         min=1,
                     ),
                     Property(
-                        "repeat_stitches", _("Repeat stitches"),
+                        "repeat_stitches", _("Repeat exact stitches"),
                         type=bool,
                         help=_('Should the exact same stitches be repeated in each pass?  ' +
                                'If not, different randomization settings are applied on each pass.'),
