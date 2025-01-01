@@ -47,10 +47,10 @@ class Redwork(InkstitchExtension):
         self.merge_distance = self.options.merge_distance * PIXELS_PER_MM
         self.minimum_path_length = self.options.minimum_path_length * PIXELS_PER_MM
 
-        starting_point = self._get_starting_point('run_start')
+        starting_point = self._get_starting_point('autoroute_start')
         # as the resulting path starts and ends at same place we can also use ending point
         if not starting_point:
-            starting_point = self._get_starting_point('run_end')
+            starting_point = self._get_starting_point('autoroute_end')
 
         multi_line_string = self._elements_to_multi_line_string(elements)
         if starting_point:
@@ -148,6 +148,7 @@ class Redwork(InkstitchExtension):
             transform=transform,
             d=path
         )
+        element.apply_transform()
 
         element.label = label
         element.set('inkstitch:running_stitch_length_mm', self.options.redwork_running_stitch_length_mm)

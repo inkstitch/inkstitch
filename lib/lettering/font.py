@@ -15,13 +15,14 @@ from ..elements import SatinColumn, Stroke, nodes_to_elements
 from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
-from ..marker import MARKER, ensure_marker, has_marker
+from ..marker import MARKER, ensure_marker, has_marker, is_grouped_with_marker
 from ..stitches.auto_satin import auto_satin
 from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
                         INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_GROUP_TAG,
                         SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
 from ..utils import Point
 from .font_variant import FontVariant
+from collections import defaultdict
 
 
 class FontError(InkstitchException):
@@ -147,6 +148,8 @@ class Font(object):
     word_spacing = font_metadata('horiz_adv_x_space', 20)
 
     reversible = font_metadata('reversible', True)
+    sortable = font_metadata('sortable', False)
+    combine_at_sort_indices = font_metadata('combine_at_sort_indices', [])
 
     @property
     def id(self):
@@ -201,7 +204,8 @@ class Font(object):
             return False
         return custom_dir in self.path
 
-    def render_text(self, text, destination_group, variant=None, back_and_forth=True, trim_option=0, use_trim_symbols=False):
+    def render_text(self, text, destination_group, variant=None, back_and_forth=True,  # noqa: C901
+                    trim_option=0, use_trim_symbols=False, color_sort=0, text_align=0):
 
         """Render text into an SVG group element."""
         self._load_variants()
@@ -214,22 +218,72 @@ class Font(object):
         else:
             glyph_sets = [self.get_variant(variant)] * 2
 
+        max_line_width = 0
         position = Point(0, 0)
         for i, line in enumerate(text.splitlines()):
             glyph_set = glyph_sets[i % 2]
             line = line.strip()
 
-            letter_group = self._render_line(line, position, glyph_set)
+            letter_group = self._render_line(destination_group, line, position, glyph_set)
             if (back_and_forth and self.reversible and i % 2 == 1) or variant == '←':
                 letter_group[:] = reversed(letter_group)
-            destination_group.append(letter_group)
 
             position.x = 0
             position.y += self.leading
 
+            # We need to insert the destination_group now, even though it is possibly empty
+            # otherwise we could run into a FragmentError in case a glyph contains commands
+            destination_group.append(letter_group)
+            bounding_box = None
+            try:
+                bounding_box = letter_group.bounding_box()
+            except AttributeError:
+                # letter group is None
+                continue
+            # remove destination_group if it is empty
+            if not bounding_box:
+                destination_group.remove(letter_group)
+                continue
+
+            line_width = bounding_box.width
+            max_line_width = max(max_line_width, line_width)
+            if text_align == 1:
+                # align center
+                letter_group.transform = f'translate({-line_width/2}, 0)'
+            if text_align == 2:
+                letter_group.transform = f'translate({-line_width}, 0)'
+
+        if text_align in [3, 4]:
+            for line_group in destination_group.iterchildren():
+                # print(line_group.label, len(line_group), file=sys.stderr)
+                # print(line_group.bounding_box().width, max_line_width, file=sys.stderr)
+                if text_align == 4 and len(line_group) == 1:
+                    line_group = line_group[0]
+                if len(line_group) > 1:
+                    distance = max_line_width - line_group.bounding_box().width
+                    distance_per_space = distance / (len(line_group) - 1)
+                    for i, word in enumerate(line_group.getchildren()[1:]):
+                        transform = word.transform
+                        translate = distance_per_space * (i + 1)
+                        transform.add_translate(translate, 0)
+
         if self.auto_satin and len(destination_group) > 0:
             self._apply_auto_satin(destination_group)
 
+        self._set_style(destination_group)
+
+        # add trims
+        self._add_trims(destination_group, text, trim_option, use_trim_symbols, back_and_forth, color_sort)
+        # make sure necessary marker and command symbols are in the defs section
+        self._ensure_command_symbols(destination_group)
+        self._ensure_marker_symbols(destination_group)
+
+        if color_sort != 0 and self.sortable:
+            self.do_color_sort(destination_group, color_sort)
+
+        return destination_group
+
+    def _set_style(self, destination_group):
         # make sure font stroke styles have always a similar look
         for element in destination_group.iterdescendants(SVG_PATH_TAG):
             style = inkex.Style(element.get('style'))
@@ -242,18 +296,10 @@ class Font(object):
                         style += inkex.Style("stroke-width:0.5px")
                 element.set('style', '%s' % style.to_str())
 
-        # add trims
-        self._add_trims(destination_group, text, trim_option, use_trim_symbols, back_and_forth)
-        # make sure necessary marker and command symbols are in the defs section
-        self._ensure_command_symbols(destination_group)
-        self._ensure_marker_symbols(destination_group)
-
-        return destination_group
-
     def get_variant(self, variant):
         return self.variants.get(variant, self.variants[self.default_variant])
 
-    def _render_line(self, line, position, glyph_set):
+    def _render_line(self, destination_group, line, position, glyph_set):
         """Render a line of text.
 
         An SVG XML node tree will be returned, with an svg:g at its root.  If
@@ -269,35 +315,44 @@ class Font(object):
             An svg:g element containing the rendered text.
         """
 
-        group = inkex.Group(attrib={
-            INKSCAPE_LABEL: line
-        })
-
+        group = inkex.Group()
+        group.label = line
+        group.set("inkstitch:letter-group", "line")
         last_character = None
-        for character in line:
-            if self.letter_case == "upper":
-                character = character.upper()
-            elif self.letter_case == "lower":
-                character = character.lower()
 
-            glyph = glyph_set[character]
+        words = line.split(" ")
+        for word in words:
+            word_group = inkex.Group()
+            word_group.label = word
+            word_group.set("inkstitch:letter-group", "word")
 
-            if character == " " or (glyph is None and self.default_glyph == " "):
-                position.x += self.word_spacing
-                last_character = None
-            else:
-                if glyph is None:
-                    glyph = glyph_set[self.default_glyph]
+            for character in word:
+                if self.letter_case == "upper":
+                    character = character.upper()
+                elif self.letter_case == "lower":
+                    character = character.lower()
 
-                if glyph is not None:
-                    node = self._render_glyph(glyph, position, character, last_character)
-                    group.append(node)
+                glyph = glyph_set[character]
 
-                last_character = character
+                if glyph is None and self.default_glyph == " ":
+                    position.x += self.word_spacing
+                    last_character = None
+                else:
+                    if glyph is None:
+                        glyph = glyph_set[self.default_glyph]
+
+                    if glyph is not None:
+                        node = self._render_glyph(destination_group, glyph, position, character, last_character)
+                        word_group.append(node)
+
+                    last_character = character
+            position.x += self.word_spacing
+            last_character = None
+            group.append(word_group)
 
         return group
 
-    def _render_glyph(self, glyph, position, character, last_character):
+    def _render_glyph(self, destination_group, glyph, position, character, last_character):
         """Render a single glyph.
 
         An SVG XML node tree will be returned, with an svg:g at its root.
@@ -332,10 +387,12 @@ class Font(object):
         position.x += self.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
 
         self._update_commands(node, glyph)
+        self._update_clips(destination_group, node, glyph)
 
         # this is used to recognize a glyph layer later in the process
         # because this is not unique it will be overwritten by inkscape when inserted into the document
         node.set("id", "glyph")
+        node.set("inkstitch:letter-group", "glyph")
 
         return node
 
@@ -357,7 +414,15 @@ class Font(object):
                 c.set(CONNECTION_END, "#%s" % new_element_id)
                 c.set(CONNECTION_START, "#%s" % new_symbol_id)
 
-    def _add_trims(self, destination_group, text, trim_option, use_trim_symbols, back_and_forth):
+    def _update_clips(self, destination_group, node, glyph):
+        svg = destination_group.getroottree().getroot()
+        for node_id, clip in glyph.clips.items():
+            if clip not in svg.defs:
+                svg.defs.append(clip)
+            el = node.find(f".//*[@id='{node_id}']")
+            el.clip = clip
+
+    def _add_trims(self, destination_group, text, trim_option, use_trim_symbols, back_and_forth, color_sort):
         """
         trim_option == 0  --> no trims
         trim_option == 1  --> trim at the end of each line
@@ -386,21 +451,35 @@ class Font(object):
 
             # letter
             if trim_option == 3:
-                self._process_trim(group, use_trim_symbols)
+                self._process_trim(group, use_trim_symbols, color_sort)
             # word
             elif trim_option == 2 and i+1 in space_indices + line_break_indices:
-                self._process_trim(group, use_trim_symbols)
+                self._process_trim(group, use_trim_symbols, color_sort)
             # line
             elif trim_option == 1 and i+1 in line_break_indices:
-                self._process_trim(group, use_trim_symbols)
+                self._process_trim(group, use_trim_symbols, color_sort)
 
-    def _process_trim(self, group, use_trim_symbols):
-        # find the last path that does not carry a marker and add a trim there
-        for path_child in group.iterdescendants(EMBROIDERABLE_TAGS):
-            if not has_marker(path_child):
-                path = path_child
-            element = Stroke(path)
+    def _process_trim(self, group, use_trim_symbols, color_sort):
+        if color_sort != 0 and self.sortable:
+            elements = defaultdict(list)
+            for path_child in group.iterdescendants(EMBROIDERABLE_TAGS):
+                if not has_marker(path_child):
+                    sort_index = path_child.get('inkstitch:color_sort_index', None)
+                    if sort_index is not None:
+                        elements[sort_index] = path_child
+                    else:
+                        elements[404] = path_child
+            for value in elements.values():
+                self._add_trim_to_element(Stroke(value), use_trim_symbols)
+        else:
+            # find the last path that does not carry a marker and add a trim there
+            for path_child in group.iterdescendants(EMBROIDERABLE_TAGS):
+                if not has_marker(path_child):
+                    path = path_child
+                element = Stroke(path)
+                self._add_trim_to_element(element, use_trim_symbols)
 
+    def _add_trim_to_element(self, element, use_trim_symbols):
         if element.shape:
             element_id = "%s_%s" % (element.node.get('id'), randint(0, 9999))
             element.node.set("id", element_id)
@@ -441,3 +520,104 @@ class Font(object):
 
         if elements:
             auto_satin(elements, preserve_order=True, trim=False)
+
+    def do_color_sort(self, group, color_sort):
+        """Sort elements by their color sort index as defined by font author"""
+
+        if color_sort == 1:
+            # Whole text
+            self._color_sort_group(group, 'line')
+        elif color_sort == 2:
+            # per line
+            groups = group.getchildren()
+            for group in groups:
+                self._color_sort_group(group, 'word')
+        elif color_sort == 3:
+            # per word
+            line_groups = group.getchildren()
+            for line_group in line_groups:
+                for group in line_group.iterchildren():
+                    self._color_sort_group(group, 'glyph')
+
+    def _color_sort_group(self, group, transform_key):
+        elements_by_color = self._get_color_sorted_elements(group, transform_key)
+
+        # there are no sort indexes defined, abort color sorting and return to normal
+        if not elements_by_color:
+            return
+
+        group.remove_all()
+        for index, grouped_elements in sorted(elements_by_color.items()):
+            color_group = inkex.Group(attrib={
+                INKSCAPE_LABEL: _("Color Group") + f' {index}'
+            })
+
+            # combined indices
+            if index in self.combine_at_sort_indices:
+                path = ""
+                for element_list in grouped_elements:
+                    for element in element_list:
+                        path += element.get("d", "")
+                grouped_elements[0][0].set("d", path)
+                if grouped_elements[0][0].get("inkstitch:fill_method", False) in ['tartan_fill', 'linear_gradient_fill']:
+                    grouped_elements[0][0].set('inkstitch:stop_at_ending_point', True)
+                color_group.append(grouped_elements[0][0])
+                group.append(color_group)
+                continue
+
+            # everything else, create marker groups if applicable
+            for element_list in grouped_elements:
+                if len(element_list) == 1:
+                    color_group.append(element_list[0])
+                    continue
+                elements_group = inkex.Group()
+                for element in element_list:
+                    elements_group.append(element)
+                color_group.append(elements_group)
+
+            group.append(color_group)
+
+    def _get_color_sorted_elements(self, group, transform_key):
+        elements_by_color = defaultdict(list)
+        last_parent = None
+
+        for element in group.iterdescendants(EMBROIDERABLE_TAGS, SVG_GROUP_TAG):
+            sort_index = element.get('inkstitch:color_sort_index', None)
+
+            # Skip command connectors, we only aim for command groups
+            # Skip command connectors as well, they will be included with the command group
+            if (element.TAG == 'g' and not element.get_id().startswith('command_group')
+                    or element.get_id().startswith('command_connector')):
+                continue
+
+            # get glyph group to calculate transform
+            glyph_group = None
+            for ancestor in element.ancestors(group):
+                if ancestor.get("inkstitch:letter-group", '') == transform_key:
+                    glyph_group = ancestor
+                    break
+            if glyph_group is None:
+                # this should never happen
+                continue
+
+            element.transform = element.composed_transform(glyph_group.getparent())
+            if sort_index is not None and int(sort_index) in self.combine_at_sort_indices:
+                element.apply_transform()
+
+            if not sort_index:
+                elements_by_color[404].append([element])
+                continue
+
+            if element.get_id().startswith('command_group'):
+                elements_by_color[int(sort_index)].append([element])
+                continue
+
+            parent = element.getparent()
+            if element.clip is None and parent.clip is not None:
+                element.clip = parent.clip
+            if last_parent != parent or int(sort_index) not in elements_by_color or not is_grouped_with_marker(element):
+                elements_by_color[int(sort_index)].append([element])
+            else:
+                elements_by_color[int(sort_index)][-1].append(element)
+            last_parent = parent
+        return elements_by_color

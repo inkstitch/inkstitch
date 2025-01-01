@@ -4,9 +4,9 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from ..i18n import _
+from ..svg.path import get_node_transform
 from .element import EmbroideryElement
 from .validation import ObjectTypeWarning
-from ..svg.path import get_node_transform
 
 
 class TextTypeWarning(ObjectTypeWarning):
@@ -29,5 +29,5 @@ class TextObject(EmbroideryElement):
     def validation_warnings(self):
         yield TextTypeWarning(self.pointer())
 
-    def to_stitch_groups(self, last_stitch_group):
+    def to_stitch_groups(self, last_stitch_group, next_element=None):
         return []

@@ -30,6 +30,8 @@
 
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/auto_route.svg</icon>
+        <menu-tip>Generates a path through all selected elements, passing each element exactly twice</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Tools: Stroke" />

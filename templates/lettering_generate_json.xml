@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">lettering_generate_json</param>
     <effect needs-live-preview="false">
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/font_management.svg</icon>
+        <menu-tip>Generates the json file for a font so it can be used with the lettering tool</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Font Management" />
@@ -55,6 +57,11 @@
                    gui-description="Disable if you defined manual routing in your font." indent="1">true</param>
             <param type="bool" name="reversible" gui-text="Reversible"
                   gui-description='If disabled back and forth stitching will not be possile for this font.' indent="1">true</param>
+            <param type="bool" name="sortable" gui-text="Sortable"
+                  gui-description='If disabled color sorting will be disabled for this font. 
+                  Color sorting needs color_sort_index indicators within the font.' indent="1">false</param>
+            <param type="string" name="combine-at-sort-indices" gui-text="Combine indices"
+                  gui-description="When color sorting, combine elements with this color indices (comma separated)" indent="1" />
             <param name="letter-case" type="optiongroup" appearance="combo" gui-text="Force letter case" indent="1">
                      <option value="">No</option>
                      <option value="upper">Upper</option>
@@ -98,10 +105,11 @@
       </page>
       <page name="info" gui-text="Help">
           <label appearance="header">Generates font.json which can be used by the lettering tool.</label>
-          <label>The generated file can be viewed and updated with a standard text editor tool.</label>
+          <label>The generated file can be updated with Extensions > Ink/Stitch > Font Management > Edit JSON.</label>
           <spacer />
           <label>More information on our website</label>
           <label appearance="url">https://inkstitch.org/docs/font-tools/#generate-json</label>
+          <label appearance="url">https://inkstitch.org/docs/font-tools/#edit-json</label>
       </page>
     </param>
 

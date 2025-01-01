@@ -5,9 +5,8 @@
 
 import json
 import os
-import sys
 
-from inkex import Boolean
+from inkex import Boolean, errormsg
 
 from ..i18n import _
 from ..lettering.categories import FONT_CATEGORIES
@@ -27,6 +26,8 @@ class LetteringGenerateJson(InkstitchExtension):
         self.arg_parser.add_argument("-d", "--font-description", type=str, default="Description", dest="font_description")
         self.arg_parser.add_argument("-s", "--auto-satin", type=Boolean, default="true", dest="auto_satin")
         self.arg_parser.add_argument("-r", "--reversible", type=Boolean, default="true", dest="reversible")
+        self.arg_parser.add_argument("-o", "--combine-at-sort-indices", type=str, default="", dest="combine_at_sort_indices")
+        self.arg_parser.add_argument("-t", "--sortable", type=Boolean, default="false", dest="sortable")
         self.arg_parser.add_argument("-u", "--letter-case", type=str, default="", dest="letter_case")
         self.arg_parser.add_argument("-g", "--default-glyph", type=str, default="", dest="default_glyph")
         self.arg_parser.add_argument("-z", "--size", type=float, default=15, dest="size")
@@ -45,7 +46,7 @@ class LetteringGenerateJson(InkstitchExtension):
         # file paths
         path = self.options.path
         if not os.path.isfile(path):
-            print(_("Please specify a font file."), file=sys.stderr)
+            errormsg(_("Please specify a font file."))
             return
         output_path = os.path.join(os.path.dirname(path), 'font.json')
 
@@ -77,6 +78,9 @@ class LetteringGenerateJson(InkstitchExtension):
             if getattr(self.options, category.id):
                 keywords.append(category.id)
 
+        combine_at_sort_indices = self.options.combine_at_sort_indices.split(',')
+        combine_at_sort_indices = set([index.strip() for index in combine_at_sort_indices if index.strip()])
+
         # collect data
         data = {'name': self.options.font_name,
                 'description': self.options.font_description,
@@ -84,6 +88,8 @@ class LetteringGenerateJson(InkstitchExtension):
                 'leading': leading,
                 'auto_satin': self.options.auto_satin,
                 'reversible': self.options.reversible,
+                'sortable': self.options.sortable,
+                'combine_at_sort_indices': list(combine_at_sort_indices),
                 'letter_case': self.options.letter_case,
                 'default_glyph': self.options.default_glyph,
                 'size': self.options.size,

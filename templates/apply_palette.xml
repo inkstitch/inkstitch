@@ -3,23 +3,10 @@
     <name>Apply Palette</name>
     <id>org.{{ id_inkstitch }}.apply_palette</id>
     <param name="extension" type="string" gui-hidden="true">apply_palette</param>
-    <param name="tabs" type="notebook">
-      <page name="options" gui-text="Options">
-        <param name="palette" type="optiongroup" appearance="combo" gui-text="Select color palette">
-        {%- for item in threadcatalog %}
-           <item value="{{ item }}">{{ item }}</item>
-        {%- endfor %}
-        </param>
-      </page>
-      <page name="info" gui-text="Help">
-        <label>This extension applies nearest colors from chosen color palette to the elements in this document.</label>
-        <spacer />
-        <label>Get more information on our website</label>
-        <label appearance="url">https://inkstitch.org/docs/thread-color/#apply-palette</label>
-      </page>
-    </param>
-    <effect>
+    <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/color_management.svg</icon>
+        <menu-tip>Matches colors of all elements in the document to a specified palette</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Thread Color Management" />

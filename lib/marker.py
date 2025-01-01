@@ -63,7 +63,7 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_sati
             fills.append(fill)
 
         if get_strokes and stroke is not None:
-            stroke = Stroke(marker).paths
+            stroke = Stroke(marker).unclipped_paths
             line_strings = [shgeo.LineString(path) for path in stroke]
             strokes.append(shgeo.MultiLineString(line_strings))
 
@@ -91,5 +91,12 @@ def has_marker(node, marker=list()):
     for m in marker:
         style = node.get('style') or ''
         if "marker-start:url(#inkstitch-%s-marker" % m in style:
+            return True
+    return False
+
+
+def is_grouped_with_marker(node):
+    for element in node.getparent().iterchildren():
+        if has_marker(element):
             return True
     return False

@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">lettering_along_path</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/lettering_along_path.svg</icon>
+        <menu-tip>Shapes a line of text onto a path</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no" />
         </effects-menu>

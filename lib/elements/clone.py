@@ -3,22 +3,21 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from math import degrees
 from contextlib import contextmanager
-from typing import Generator, List, Dict
+from math import degrees
+from typing import Dict, Generator, List
 
-from inkex import Transform, BaseElement
+from inkex import BaseElement, Transform
 from shapely import MultiLineString
 
-from ..stitch_plan.stitch_group import StitchGroup
-
-from ..commands import is_command_symbol, find_commands, point_command_symbols_up
+from ..commands import (find_commands, is_command_symbol,
+                        point_command_symbols_up)
 from ..i18n import _
-from ..svg.svg import copy_no_children
+from ..stitch_plan.stitch_group import StitchGroup
 from ..svg.path import get_node_transform
-from ..svg.tags import (EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS, SVG_USE_TAG,
-                        XLINK_HREF, CONNECTION_START, CONNECTION_END,
-                        SVG_GROUP_TAG)
+from ..svg.svg import copy_no_children
+from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
+                        INKSTITCH_ATTRIBS, SVG_GROUP_TAG, SVG_USE_TAG)
 from ..utils import cache
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
@@ -36,7 +35,8 @@ class CloneWarning(ValidationWarning):
 
 
 class Clone(EmbroideryElement):
-    element_name = "Clone"
+    name = "Clone"
+    element_name = _("Clone")
 
     def __init__(self, *args, **kwargs):
         super(Clone, self).__init__(*args, **kwargs)
@@ -67,10 +67,10 @@ class Clone(EmbroideryElement):
     def flip_angle(self):
         return self.get_boolean_param('flip_angle', False)
 
-    def get_cache_key_data(self, previous_stitch):
+    def get_cache_key_data(self, previous_stitch, next_element):
         source_node = self.node.href
         source_elements = self.clone_to_elements(source_node)
-        return [element.get_cache_key(previous_stitch) for element in source_elements]
+        return [element.get_cache_key(previous_stitch, next_element) for element in source_elements]
 
     def clone_to_elements(self, node) -> List[EmbroideryElement]:
         # Only used in get_cache_key_data, actual embroidery uses nodes_to_elements+iterate_nodes
@@ -83,21 +83,52 @@ class Clone(EmbroideryElement):
                 elements.extend(node_to_elements(child, True))
         return elements
 
-    def to_stitch_groups(self, last_stitch_group=None) -> List[StitchGroup]:
+    def to_stitch_groups(self, last_stitch_group=None, next_element=None) -> List[StitchGroup]:
         if not self.clone:
             return []
 
         with self.clone_elements() as elements:
+            if not elements:
+                return []
             stitch_groups = []
 
-            for element in elements:
+            next_elements = [next_element]
+            if len(elements) > 1:
+                next_elements = elements[1:] + next_elements
+            for element, next_element in zip(elements, next_elements):
                 # Using `embroider` here to get trim/stop after commands, etc.
-                element_stitch_groups = element.embroider(last_stitch_group)
+                element_stitch_groups = element.embroider(last_stitch_group, next_element)
                 if len(element_stitch_groups):
                     last_stitch_group = element_stitch_groups[-1]
                     stitch_groups.extend(element_stitch_groups)
 
             return stitch_groups
+
+    @property
+    def first_stitch(self):
+        first, last = self.first_and_last_element()
+        if first:
+            return first.first_stitch
+        return None
+
+    def uses_previous_stitch(self):
+        first, last = self.first_and_last_element()
+        if first:
+            return first.uses_previous_stitch()
+        return None
+
+    def uses_next_element(self):
+        first, last = self.first_and_last_element()
+        if last:
+            return last.uses_next_element()
+        return None
+
+    @cache
+    def first_and_last_element(self):
+        with self.clone_elements() as elements:
+            if len(elements):
+                return elements[0], elements[-1]
+        return None, None
 
     @contextmanager
     def clone_elements(self) -> Generator[List[EmbroideryElement], None, None]:
@@ -108,7 +139,7 @@ class Clone(EmbroideryElement):
         Could possibly be refactored into just a generator - being a context manager is mainly to control the lifecycle of the elements
         that are cloned (again, for testing convenience primarily)
         """
-        from .utils import nodes_to_elements, iterate_nodes
+        from .utils import iterate_nodes, nodes_to_elements
 
         cloned_nodes = self.resolve_clone()
         try:
@@ -262,7 +293,6 @@ def clone_with_fixup(parent: BaseElement, node: BaseElement) -> BaseElement:
             node.set(attr, id_map.get(val, val))
 
     for n in ret.iter():
-        fixup_id_attr(n, XLINK_HREF)
         fixup_id_attr(n, CONNECTION_START)
         fixup_id_attr(n, CONNECTION_END)
 

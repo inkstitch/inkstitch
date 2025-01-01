@@ -36,8 +36,9 @@ from .lettering_custom_font_dir import LetteringCustomFontDir
 from .lettering_font_sample import LetteringFontSample
 from .lettering_force_lock_stitches import LetteringForceLockStitches
 from .lettering_generate_json import LetteringGenerateJson
+from .lettering_edit_json import LetteringEditJson
 from .lettering_remove_kerning import LetteringRemoveKerning
-from .lettering_update_json_glyphlist import LetteringUpdateJsonGlyphlist
+from .lettering_set_color_sort_index import LetteringSetColorSortIndex
 from .letters_to_font import LettersToFont
 from .object_commands import ObjectCommands
 from .object_commands_toggle_visibility import ObjectCommandsToggleVisibility
@@ -102,11 +103,12 @@ __all__ = extensions = [About,
                         Lettering,
                         LetteringAlongPath,
                         LetteringCustomFontDir,
+                        LetteringEditJson,
                         LetteringFontSample,
                         LetteringForceLockStitches,
                         LetteringGenerateJson,
                         LetteringRemoveKerning,
-                        LetteringUpdateJsonGlyphlist,
+                        LetteringSetColorSortIndex,
                         LettersToFont,
                         ObjectCommands,
                         ObjectCommandsToggleVisibility,

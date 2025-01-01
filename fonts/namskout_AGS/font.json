@@ -9,6 +9,7 @@
     "leading": 350,
     "auto_satin": false,
     "reversible": false,
+    "sortable": true,
     "letter_case": "upper",
     "default_glyph": "�",
     "min_scale": 0.5,

@@ -77,11 +77,13 @@ class LetteringPanel(wx.Panel):
 
         self.settings = DotDict({
             "text": "",
+            "text_align": 0,
             "back_and_forth": False,
             "font": None,
             "scale": 100,
             "trim_option": 0,
-            "use_trim_symbols": False
+            "use_trim_symbols": False,
+            "color_sort": 0
         })
 
         if INKSTITCH_LETTERING in self.group.attrib:
@@ -98,6 +100,8 @@ class LetteringPanel(wx.Panel):
 
     def apply_settings(self):
         """Make the settings in self.settings visible in the UI."""
+        self.options_panel.align_text_choice.SetSelection(self.settings.text_align)
+        self.options_panel.color_sort_choice.SetSelection(self.settings.color_sort)
         self.options_panel.back_and_forth_checkbox.SetValue(bool(self.settings.back_and_forth))
         self.options_panel.trim_option_choice.SetSelection(self.settings.trim_option)
         self.options_panel.use_trim_symbols.SetValue(bool(self.settings.use_trim_symbols))
@@ -190,11 +194,18 @@ class LetteringPanel(wx.Panel):
         self.settings[attribute] = event.GetEventObject().GetValue()
         if attribute == "text" and self.options_panel.font_glyph_filter.GetValue() is True:
             self.on_filter_changed()
-        self.preview_renderer.update()
+        self.update_preview()
 
-    def on_trim_option_change(self, event=None):
-        self.settings.trim_option = self.options_panel.trim_option_choice.GetCurrentSelection()
-        self.preview_renderer.update()
+    def on_color_sort_change(self, event=None):
+        if self.options_panel.color_sort_choice.IsEnabled():
+            self.settings.color_sort = self.options_panel.color_sort_choice.GetCurrentSelection()
+        else:
+            self.settings.color_sort = 0
+        self.update_preview()
+
+    def on_choice_change(self, attribute, event=None):
+        self.settings[attribute] = event.GetEventObject().GetCurrentSelection()
+        self.update_preview()
 
     def on_font_changed(self, event=None):
         font = self.fonts.get(self.options_panel.font_chooser.GetValue(), self.default_font)
@@ -221,6 +232,9 @@ class LetteringPanel(wx.Panel):
         self.options_panel.font_description.SetLabel(description)
         self.options_panel.font_description.SetForegroundColour(color)
         self.options_panel.font_description.Wrap(self.options_panel.GetSize().width - 50)
+        self.options_panel.size_info.SetLabel(str(font.size))
+        self.options_panel.scale_info_percent.SetLabel(f'{int(font.min_scale * 100)}% - {int(font.max_scale * 100)}%')
+        self.options_panel.scale_info_mm.SetLabel(f' ({round(font.size * font.min_scale, 2)}mm - {round(font.size * font.max_scale, 2)}mm)')
 
         if font.reversible:
             self.options_panel.back_and_forth_checkbox.Enable()
@@ -229,6 +243,12 @@ class LetteringPanel(wx.Panel):
             # The creator of the font banned the possibility of writing in reverse with json file: "reversible": false
             self.options_panel.back_and_forth_checkbox.Disable()
             self.options_panel.back_and_forth_checkbox.SetValue(False)
+
+        if font.sortable:
+            # The creator of the font allowed color sorting: "sortable": true
+            self.options_panel.color_sort_choice.Enable()
+        else:
+            self.options_panel.color_sort_choice.Disable()
 
         self.options_panel.Layout()
         self.update_preview()
@@ -272,22 +292,21 @@ class LetteringPanel(wx.Panel):
 
         del self.group[:]
 
-        if self.settings.scale == 100:
-            destination_group = self.group
-        else:
-            destination_group = inkex.Group(attrib={
-                # L10N The user has chosen to scale the text by some percentage
-                # (50%, 200%, etc).  If you need to use the percentage symbol,
-                # make sure to double it (%%).
-                INKSCAPE_LABEL: _("Text scale %s%%") % self.settings.scale
-            })
-            self.group.append(destination_group)
+        destination_group = inkex.Group(attrib={
+            # L10N The user has chosen to scale the text by some percentage
+            # (50%, 200%, etc).  If you need to use the percentage symbol,
+            # make sure to double it (%%).
+            INKSCAPE_LABEL: _("Text scale") + f' {self.settings.scale}%'
+        })
+        self.group.append(destination_group)
 
         font = self.fonts.get(self.options_panel.font_chooser.GetValue(), self.default_font)
         try:
-            font.render_text(self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth,
-                             trim_option=self.settings.trim_option, use_trim_symbols=self.settings.use_trim_symbols)
-
+            font.render_text(
+                self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth,
+                trim_option=self.settings.trim_option, use_trim_symbols=self.settings.use_trim_symbols,
+                color_sort=self.settings.color_sort, text_align=self.settings.text_align
+            )
         except FontError as e:
             if raise_error:
                 inkex.errormsg(_("Error: Text cannot be applied to the document.\n%s") % e)
@@ -295,10 +314,9 @@ class LetteringPanel(wx.Panel):
             else:
                 pass
 
-        # destination_group isn't always the text scaling group (but also the parent group)
         # the text scaling group label is dependend on the user language, so it would break in international file exchange if we used it
         # scaling (correction transform) on the parent group is already applied, so let's use that for recognition
-        if self.settings.scale != 100 and not destination_group.get('transform', None):
+        if destination_group.get('transform', None) is None:
             destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
 
     def render_stitch_plan(self):
@@ -308,10 +326,17 @@ class LetteringPanel(wx.Panel):
             self.update_lettering()
             elements = nodes_to_elements(self.group.iterdescendants(SVG_PATH_TAG))
 
-            for element in elements:
+            last_stitch_group = None
+            next_elements = [None]
+            if len(elements) > 1:
+                next_elements = elements[1:] + next_elements
+            for element, next_element in zip(elements, next_elements):
                 check_stop_flag()
 
-                stitch_groups.extend(element.embroider(None))
+                stitch_groups.extend(element.embroider(last_stitch_group, next_element))
+
+                if stitch_groups:
+                    last_stitch_group = stitch_groups[-1]
 
             if stitch_groups:
                 return stitch_groups_to_stitch_plan(

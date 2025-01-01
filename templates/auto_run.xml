@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">auto_run</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/auto_route.svg</icon>
+        <menu-tip>Generates a continuous path through all selected elements</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Tools: Stroke" />

@@ -13,7 +13,8 @@ from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches.ripple_stitch import ripple_stitch
-from ..stitches.running_stitch import (bean_stitch, running_stitch, zigzag_stitch)
+from ..stitches.running_stitch import (bean_stitch, running_stitch,
+                                       zigzag_stitch)
 from ..svg import get_node_transform, parse_length_with_units
 from ..svg.clip import get_clip_path
 from ..threads import ThreadColor
@@ -41,6 +42,7 @@ class TooFewSubpathsWarning(ValidationWarning):
 
 
 class Stroke(EmbroideryElement):
+    name = "Stroke"
     element_name = _("Stroke")
 
     @property
@@ -97,11 +99,23 @@ class Stroke(EmbroideryElement):
                   'A value of 2 would quintuple each stitch, etc.\n\n'
                   'A pattern with various repeats can be created with a list of values separated by a space.'),
         type='str',
-        select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch')],
+        select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch'), ('stroke_method', 'manual_stitch')],
         default=0,
         sort_index=3)
     def bean_stitch_repeats(self):
         return self.get_multiple_int_param("bean_stitch_repeats", "0")
+
+    @property
+    @param('manual_pattern_placement',
+           _('Manual stitch placement'),
+           tooltip=_('No extra stitches will be added to the original ripple pattern '
+                     'and the running stitch length value will be ignored.'),
+           type='boolean',
+           select_items=[('stroke_method', 'ripple_stitch')],
+           default=False,
+           sort_index=3)
+    def manual_pattern_placement(self):
+        return self.get_boolean_param('manual_pattern_placement', False)
 
     @property
     @param('running_stitch_length_mm',
@@ -223,6 +237,17 @@ class Stroke(EmbroideryElement):
         return max(min_dist, 0.01)
 
     @property
+    @param('render_at_rungs',
+           _('Render at rungs'),
+           tooltip=_('Position satin guided pattern at rungs.'),
+           type='boolean',
+           select_items=[('stroke_method', 'ripple_stitch')],
+           default=False,
+           sort_index=9)
+    def render_at_rungs(self):
+        return self.get_boolean_param('render_at_rungs', False)
+
+    @property
     @param('staggers',
            _('Stagger lines this many times before repeating'),
            tooltip=_('Length of the cycle by which successive stitch lines are staggered. '
@@ -261,13 +286,24 @@ class Stroke(EmbroideryElement):
         return abs(self.get_int_param("skip_end", 0))
 
     @property
+    @param('flip_copies',
+           _('Flip every second line'),
+           tooltip=_('Linear ripple: wether to flip the pattern every second line or not.'),
+           type='boolean',
+           select_items=[('stroke_method', 'ripple_stitch')],
+           default=True,
+           sort_index=12)
+    def flip_copies(self):
+        return self.get_boolean_param('flip_copies', True)
+
+    @property
     @param('exponent',
            _('Line distance exponent'),
            tooltip=_('Increase density towards one side.'),
            type='float',
            default=1,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=12)
+           sort_index=13)
     @cache
     def exponent(self):
         return max(self.get_float_param("exponent", 1), 0.1)
@@ -279,7 +315,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=False,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=13)
+           sort_index=14)
     @cache
     def flip_exponent(self):
         return self.get_boolean_param("flip_exponent", False)
@@ -291,7 +327,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=False,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=14)
+           sort_index=15)
     @cache
     def reverse(self):
         return self.get_boolean_param("reverse", False)
@@ -313,7 +349,7 @@ class Stroke(EmbroideryElement):
         options=_reverse_rails_options,
         default='automatic',
         select_items=[('stroke_method', 'ripple_stitch')],
-        sort_index=15)
+        sort_index=16)
     def reverse_rails(self):
         return self.get_param('reverse_rails', 'automatic')
 
@@ -339,7 +375,7 @@ class Stroke(EmbroideryElement):
            # 0: xy, 1: x, 2: y, 3: none
            options=["X Y", "X", "Y", _("None")],
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=17)
+           sort_index=18)
     def scale_axis(self):
         return self.get_int_param('scale_axis', 0)
 
@@ -423,9 +459,19 @@ class Stroke(EmbroideryElement):
 
     @property
     def paths(self):
+        return self._get_paths()
+
+    @property
+    def unclipped_paths(self):
+        return self._get_paths(False)
+
+    def _get_paths(self, clipped=True):
         path = self.parse_path()
         flattened = self.flatten(path)
-        flattened = self._get_clipped_path(flattened)
+        if clipped:
+            flattened = self._get_clipped_path(flattened)
+        if flattened is None:
+            return []
 
         # manipulate invalid path
         if len(flattened[0]) == 1:
@@ -446,11 +492,15 @@ class Stroke(EmbroideryElement):
         line_strings = [shgeo.LineString(path) for path in self.paths]
         return shgeo.MultiLineString(line_strings)
 
+    @property
+    def first_stitch(self):
+        return shgeo.Point(self.as_multi_line_string().geoms[0].coords[0])
+
     def _get_clipped_path(self, paths):
-        if self.node.clip is None:
+        clip_path = get_clip_path(self.node)
+        if clip_path is None:
             return paths
 
-        clip_path = get_clip_path(self.node)
         # path to linestrings
         line_strings = [shgeo.LineString(path) for path in paths]
         try:
@@ -460,7 +510,7 @@ class Stroke(EmbroideryElement):
 
         coords = []
         if intersection.is_empty:
-            return paths
+            return None
         elif isinstance(intersection, shgeo.MultiLineString):
             for c in [intersection for intersection in intersection.geoms if isinstance(intersection, shgeo.LineString)]:
                 coords.append(c.coords)
@@ -471,7 +521,7 @@ class Stroke(EmbroideryElement):
         return coords
 
     def get_ripple_target(self):
-        command = self.get_command('ripple_target')
+        command = self.get_command('target_point')
         if command:
             pos = [float(command.use.get("x", 0)), float(command.use.get("y", 0))]
             transform = get_node_transform(command.use)
@@ -539,7 +589,7 @@ class Stroke(EmbroideryElement):
     def do_bean_repeats(self, stitches):
         return bean_stitch(stitches, self.bean_stitch_repeats)
 
-    def to_stitch_groups(self, last_stitch_group):  # noqa: C901
+    def to_stitch_groups(self, last_stitch_group, next_element=None):  # noqa: C901
         stitch_groups = []
 
         # ripple stitch
@@ -568,6 +618,9 @@ class Stroke(EmbroideryElement):
                         lock_stitches=lock_stitches,
                         force_lock_stitches=self.force_lock_stitches
                     )
+                    # apply bean stitch settings
+                    if any(self.bean_stitch_repeats):
+                        stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
                 # simple satin
                 elif self.stroke_method == 'zigzag_stitch':
                     stitch_group = self.simple_satin(path, self.zigzag_spacing, self.stroke_width, self.pull_compensation)

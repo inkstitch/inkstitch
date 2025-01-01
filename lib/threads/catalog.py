@@ -4,12 +4,10 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import os
-import sys
 from collections.abc import Sequence
 from glob import glob
-from os.path import dirname, realpath
 
-from ..utils import guess_inkscape_config_path
+from ..utils import get_bundled_dir, guess_inkscape_config_path
 from .palette import ThreadPalette
 
 
@@ -26,13 +24,8 @@ class _ThreadCatalog(Sequence):
         2. Palette directory of inkstitch
         """
         path = [os.path.join(guess_inkscape_config_path(), 'palettes')]
-
-        if getattr(sys, 'frozen', None) is not None:
-            inkstitch_path = os.path.join(sys._MEIPASS, "..")
-        else:
-            inkstitch_path = dirname(dirname(dirname(realpath(__file__))))
-
-        path.append(os.path.join(inkstitch_path, 'palettes'))
+        inkstitch_path = get_bundled_dir('palettes')
+        path.append(inkstitch_path)
 
         return path
 

@@ -20,12 +20,13 @@ class AutoSatin(CommandsExtension):
         CommandsExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-p", "--preserve_order", dest="preserve_order", type=inkex.Boolean, default=False)
+        self.arg_parser.add_argument("-k", "--keep_originals", dest="keep_originals", type=inkex.Boolean, default=False)
 
     def get_starting_point(self):
-        return self.get_point("satin_start")
+        return self.get_point("autoroute_start")
 
     def get_ending_point(self):
-        return self.get_point("satin_end")
+        return self.get_point("autoroute_end")
 
     def get_point(self, command_type):
         command = None
@@ -56,6 +57,13 @@ class AutoSatin(CommandsExtension):
 
         return True
 
+    def _get_parent_and_index(self):
+        last_element = self.svg.selection[-1]
+        if last_element.TAG == 'g':
+            parent = last_element.getparent()
+            return parent, parent.index(last_element) + 1
+        return None, None
+
     def effect(self):
         if not self.check_selection():
             return
@@ -71,4 +79,5 @@ class AutoSatin(CommandsExtension):
         if not elements:
             return
 
-        auto_satin(elements, self.options.preserve_order, starting_point, ending_point, self.options.trim)
+        parent, index = self._get_parent_and_index()
+        auto_satin(elements, self.options.preserve_order, starting_point, ending_point, self.options.trim, self.options.keep_originals, parent, index)

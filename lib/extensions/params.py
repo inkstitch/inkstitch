@@ -563,12 +563,12 @@ class SettingsPanel(wx.Panel):
         try:
             wx.CallAfter(self._hide_warning)
             last_stitch_group = None
-            for node in nodes:
+            for node, next_node in zip_longest(nodes, self._get_next_nodes(nodes)):
                 # Making a copy of the embroidery element is an easy
                 # way to drop the cache in the @cache decorators used
                 # for many params in embroider.py.
 
-                stitch_groups.extend(copy(node).embroider(last_stitch_group))
+                stitch_groups.extend(copy(node).embroider(last_stitch_group, next_node))
                 if stitch_groups:
                     last_stitch_group = stitch_groups[-1]
 
@@ -586,6 +586,11 @@ class SettingsPanel(wx.Panel):
             wx.CallAfter(self._show_warning, str(exc))
         except Exception:
             wx.CallAfter(self._show_warning, format_uncaught_exception())
+
+    def _get_next_nodes(self, nodes):
+        if len(nodes) > 1:
+            return nodes[1:]
+        return []
 
     def get_stroke_last_tabs(self):
         tabs = self.tabs

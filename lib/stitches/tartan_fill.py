@@ -104,8 +104,8 @@ def tartan_fill(fill: 'FillStitch', outline: Polygon, starting_point: Union[tupl
 
     color_lines, color_runs = sort_fills_and_strokes(color_lines, color_runs)
 
-    stitch_groups = _get_fill_stitch_groups(fill, outline, color_lines)
-    if stitch_groups:
+    stitch_groups = _get_fill_stitch_groups(fill, outline, color_lines, starting_point, ending_point)
+    if stitch_groups and not fill.stop_at_ending_point:
         starting_point = stitch_groups[-1].stitches[-1]
     stitch_groups += _get_run_stitch_groups(fill, outline, color_runs, starting_point, ending_point)
     return stitch_groups
@@ -694,6 +694,8 @@ def _get_fill_stitch_groups(
     fill: 'FillStitch',
     shape: Polygon,
     color_lines: defaultdict,
+    starting_point: Union[tuple, Stitch, None],
+    ending_point: Union[tuple, Stitch, None]
 ) -> List[StitchGroup]:
     """
     Route fill stitches
@@ -701,17 +703,22 @@ def _get_fill_stitch_groups(
     :param fill: the FillStitch element
     :param shape: the shape to be filled
     :param color_lines: lines grouped by color
+    :param starting_point: the starting_point
+    :paramt ending_point: the ending_point
     :returns: a list with StitchGroup objects
     """
     stitch_groups: List[StitchGroup] = []
     i = 0
     for color, lines in color_lines.items():
-        i += 1
-        if stitch_groups:
-            starting_point = stitch_groups[-1].stitches[-1]
-        else:
+        if not fill.stop_at_ending_point:
+            i += 1
+            if stitch_groups:
+                starting_point = stitch_groups[-1].stitches[-1]
+        if starting_point is None:
             starting_point = ensure_multi_line_string(shape.boundary).geoms[0].coords[1]
-        ending_point = ensure_multi_line_string(shape.boundary).geoms[0].coords[1]
+        if ending_point is None:
+            ending_point = ensure_multi_line_string(shape.boundary).geoms[0].coords[1]
+
         segments = [list(line.coords) for line in lines if len(line.coords) > 1]
         if len(segments) == 0:
             continue
@@ -739,14 +746,15 @@ def _get_run_stitch_groups(
     :param ending_point: the ending point
     :returns: a list with StitchGroup objects
     """
-
     stitch_groups: List[StitchGroup] = []
     for color, lines in color_lines.items():
+        if not fill.stop_at_ending_point and stitch_groups:
+            starting_point = stitch_groups[-1].stitches[-1]
         # get segments and ignore lines smaller than 0.5 mm
         segments = [list(line.coords) for line in lines if line.length > 0.5 * PIXELS_PER_MM]
         if len(segments) == 0:
             continue
-        stitch_group = _segments_to_stitch_group(fill, shape, segments, None, color, starting_point, ending_point, True)
+        stitch_group = _segments_to_stitch_group(fill, shape, segments, 0, color, starting_point, ending_point, True)
         if stitch_group is not None:
             stitch_groups.append(stitch_group)
         check_stop_flag()
@@ -757,7 +765,7 @@ def _segments_to_stitch_group(
     fill: 'FillStitch',
     shape: Polygon,
     segments: List[List[Tuple[float, float]]],
-    iteration: Optional[int],
+    iteration: int,
     color: str,
     starting_point: Optional[Union[tuple, Stitch]],
     ending_point: Optional[Union[tuple, Stitch]],

@@ -39,6 +39,8 @@ class CutSatin(InkstitchExtension):
                     command.connector.getparent().remove(command.connector)
 
                 new_satins = satin.split(split_point)
+                if None in new_satins:
+                    continue
                 transform = get_correction_transform(satin.node)
                 parent = satin.node.getparent()
                 index = parent.index(satin.node)

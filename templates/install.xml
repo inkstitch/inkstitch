@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">install</param>
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/color_management.svg</icon>
+        <menu-tip>Installs color palettes for various thread brands into Inkscape</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Thread Color Management" />

@@ -5,9 +5,9 @@
 
 from collections.abc import Set
 
-from colormath.color_conversions import convert_color
-from colormath.color_diff import delta_e_cie1994
-from colormath.color_objects import LabColor, sRGBColor
+from colormath2.color_conversions import convert_color
+from colormath2.color_diff import delta_e_cie1994
+from colormath2.color_objects import LabColor, sRGBColor
 
 from .color import ThreadColor
 

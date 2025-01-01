@@ -157,7 +157,7 @@ class JumpToStroke(InkstitchExtension):
         # option: merge line with paths
         merged = False
         if self._is_mergable(last_element, element):
-            path.transform(Transform(get_correction_transform(last_element.node)), True)
+            path.transform(Transform(get_correction_transform(last_element.node, True)), True)
             path = last_element.node.get_path() + path[1:]
             last_element.node.set('d', str(path))
             path.transform(-Transform(get_correction_transform(last_element.node)), True)
@@ -181,7 +181,7 @@ class JumpToStroke(InkstitchExtension):
         # add simple stroke to connect elements
         path.transform(Transform(get_correction_transform(node)), True)
         color = element.color
-        style = f'stroke:{color};stroke-width:1px;stroke-dasharray:3, 1;fill:none;'
+        style = f'stroke:{color};stroke-width:{self.svg.viewport_to_unit("1px")};stroke-dasharray:3, 1;fill:none;'
 
         line = PathElement(d=str(path), style=style)
         line.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.options.running_stitch_length_mm)

@@ -5,9 +5,13 @@
 
     <param name="notebook" type="notebook">
         <page name="options" gui-text="Options">
-        <param name="trim" type="boolean" gui-text="Trim jump stitches">true</param>
-        <param name="preserve_order" type="boolean" gui-text="Preserve order of satin columns">false</param>
-        <param name="extension" type="string" gui-hidden="true">auto_satin</param>
+            <param name="trim" type="boolean" gui-text="Trim jump stitches">true</param>
+            <param name="preserve_order" type="boolean" gui-text="Preserve order of satin columns">false</param>
+            <param name="extension" type="string" gui-hidden="true">auto_satin</param>
+            <spacer />
+            <separator />
+            <spacer />
+            <param name="keep_originals" type="boolean" gui-text="Keep original paths">false</param>
         </page>
         <page name="info" gui-text="Help">
             <label>This extension tries to create a single stitch path through all selected satin columns.</label>
@@ -19,6 +23,8 @@
 
     <effect>
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/auto_route.svg</icon>
+        <menu-tip>Generates a continuous path through selected satin elements</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Tools: Satin" />

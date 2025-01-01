@@ -7,11 +7,11 @@ import os
 
 import inkex
 
+from ..elements.utils import iterate_nodes, nodes_to_elements
 from ..i18n import _
 from ..metadata import InkStitchMetadata
 from ..svg import generate_unique_id
 from ..svg.tags import INKSCAPE_GROUPMODE, SVG_GROUP_TAG
-from ..elements.utils import iterate_nodes, nodes_to_elements
 from ..update import update_inkstitch_document
 
 
@@ -75,14 +75,17 @@ class InkstitchExtension(inkex.EffectExtension):
         return False
 
     def elements_to_stitch_groups(self, elements):
+        next_elements = [None]
+        if len(elements) > 1:
+            next_elements = elements[1:] + next_elements
         stitch_groups = []
-        for element in elements:
+        for element, next_element in zip(elements, next_elements):
             if stitch_groups:
                 last_stitch_group = stitch_groups[-1]
             else:
                 last_stitch_group = None
 
-            stitch_groups.extend(element.embroider(last_stitch_group))
+            stitch_groups.extend(element.embroider(last_stitch_group, next_element))
 
         return stitch_groups
 

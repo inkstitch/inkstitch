@@ -13,7 +13,7 @@ from shapely.ops import nearest_points, substring, unary_union
 from ..commands import add_commands
 from ..elements import Stroke
 from ..i18n import _
-from ..svg import PIXELS_PER_MM, generate_unique_id
+from ..svg import PIXELS_PER_MM, generate_unique_id, get_correction_transform
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils.threading import check_stop_flag
 from .utils.autoroute import (add_elements_to_group, add_jumps,
@@ -136,7 +136,7 @@ def autorun(elements, preserve_order=False, break_up=None, starting_point=None, 
     else:
         parent = elements[0].node.getparent()
         insert_index = parent.index(elements[0].node)
-        group = create_new_group(parent, insert_index, _("Auto-Route"))
+        group = create_new_group(parent, insert_index, _("Auto-Route"), False)
         add_elements_to_group(new_elements, group)
 
     if trim:
@@ -240,9 +240,9 @@ def path_to_elements(graph, path, trim):  # noqa: C901
                 path_direction = direction
 
             if d == "":
-                d = "M %s %s, %s %s" % (start_coord.x, start_coord.y, end_coord.x, end_coord.y)
+                d = f"M {start_coord.x} {start_coord.y}, {end_coord.x} {end_coord.y}"
             else:
-                d += ", %s %s" % (end_coord.x, end_coord.y)
+                d += f", {end_coord.x} {end_coord.y}"
         elif el and d:
             # this is a jump, so complete the element whose path we've been building
             element_list.append(create_element(d, position, path_direction, el))
@@ -266,7 +266,7 @@ def create_element(path, position, direction, element):
     if not path:
         return
 
-    el_id = "%s_%s_" % (direction, position)
+    el_id = f"{direction}_{position}_"
 
     index = position + 1
     if direction == "autorun":
@@ -283,6 +283,8 @@ def create_element(path, position, direction, element):
     node.set("style", element.node.style)
     node.style["fill"] = 'none'
     node.style["stroke-dasharray"] = dasharray
+    node.transform = get_correction_transform(element.node.getparent(), child=True)
+    node.apply_transform()
 
     # Set Ink/Stitch attributes
     stitch_length = element.node.get(INKSTITCH_ATTRIBS['running_stitch_length_mm'], '')

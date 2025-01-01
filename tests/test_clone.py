@@ -522,13 +522,13 @@ class CloneElementTest(TestCase):
         use.set('transform', Transform().add_translate(10, 10))
 
         original = FillStitch(rect)
-        add_commands(original, ["fill_end"])
+        add_commands(original, ["ending_point"])
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
             self.assertEqual(len(elements), 2)
-            cmd_orig = original.get_command("fill_end")
-            cmd_clone = elements[0].get_command("fill_end")
+            cmd_orig = original.get_command("ending_point")
+            cmd_clone = elements[0].get_command("ending_point")
             self.assertIsNotNone(cmd_clone)
             self.assertAlmostEqual(cmd_orig.target_point[0]+10, cmd_clone.target_point[0], 4)
             self.assertAlmostEqual(cmd_orig.target_point[1]+10, cmd_clone.target_point[1], 4)
@@ -549,13 +549,13 @@ class CloneElementTest(TestCase):
         use.set('transform', Transform().add_translate(10, 10))
 
         original = FillStitch(rect)
-        add_commands(original, ["fill_end"])
+        add_commands(original, ["ending_point"])
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
             self.assertEqual(len(elements), 2)
-            cmd_orig = original.get_command("fill_end")
-            cmd_clone = elements[0].get_command("fill_end")
+            cmd_orig = original.get_command("ending_point")
+            cmd_clone = elements[0].get_command("ending_point")
             self.assertIsNotNone(cmd_clone)
             self.assertAlmostEqual(cmd_orig.target_point[0]+10, cmd_clone.target_point[0], 4)
             self.assertAlmostEqual(cmd_orig.target_point[1]+10, cmd_clone.target_point[1], 4)

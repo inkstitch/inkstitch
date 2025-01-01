@@ -36,7 +36,7 @@ class FontSampleFrame(wx.Frame):
         self.font_chooser = wx.adv.BitmapComboBox(self.settings, wx.ID_ANY, style=wx.CB_READONLY | wx.CB_SORT, size=((800, 20)))
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
 
-        grid_settings_sizer = wx.FlexGridSizer(6, 2, 5, 5)
+        grid_settings_sizer = wx.FlexGridSizer(7, 2, 5, 5)
         grid_settings_sizer.AddGrowableCol(1)
 
         direction_label = wx.StaticText(self.settings, label=_("Stitch direction"))
@@ -45,6 +45,8 @@ class FontSampleFrame(wx.Frame):
         self.scale_spinner = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=1000, initial=100)
         max_line_width_label = wx.StaticText(self.settings, label=_("Max. line width"))
         self.max_line_width = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=5000, initial=180)
+        self.color_sort_label = wx.StaticText(self.settings, label=_("Color sort"))
+        self.color_sort_checkbox = wx.CheckBox(self.settings)
 
         grid_settings_sizer.Add(direction_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.direction, 0, wx.EXPAND, 0)
@@ -52,6 +54,8 @@ class FontSampleFrame(wx.Frame):
         grid_settings_sizer.Add(self.scale_spinner, 0, wx.EXPAND, 0)
         grid_settings_sizer.Add(max_line_width_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.max_line_width, 0, wx.EXPAND, 0)
+        grid_settings_sizer.Add(self.color_sort_label, 0, wx.ALIGN_LEFT, 0)
+        grid_settings_sizer.Add(self.color_sort_checkbox, 0, wx.EXPAND, 0)
 
         apply_sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.cancel_button = wx.Button(self.settings, label=_("Cancel"))
@@ -127,6 +131,12 @@ class FontSampleFrame(wx.Frame):
         for variant in font.has_variants():
             self.direction.Append(variant)
         self.direction.SetSelection(0)
+        if font.sortable:
+            self.color_sort_label.Enable()
+            self.color_sort_checkbox.Enable()
+        else:
+            self.color_sort_label.Disable()
+            self.color_sort_checkbox.Disable()
 
     def apply(self, event):
         # apply scale to layer and extract for later use
@@ -142,6 +152,7 @@ class FontSampleFrame(wx.Frame):
         # parameters
         line_width = self.max_line_width.GetValue()
         direction = self.direction.GetValue()
+        color_sort = self.sortable(font)
 
         font._load_variants()
         font_variant = font.variants[direction]
@@ -192,8 +203,14 @@ class FontSampleFrame(wx.Frame):
             width += width_to_add
 
         # render text and close
-        font.render_text(text, self.layer, variant=direction, back_and_forth=False)
+        font.render_text(text, self.layer, variant=direction, back_and_forth=False, color_sort=color_sort)
         self.GetTopLevelParent().Close()
+
+    def sortable(self, font):
+        color_sort = self.color_sort_checkbox.GetValue()
+        if color_sort and not font.sortable:
+            color_sort = False
+        return color_sort
 
     def duplicate_warning(self, font):
         # warn about duplicated glyphs

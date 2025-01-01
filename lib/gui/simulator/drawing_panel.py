@@ -62,7 +62,7 @@ class DrawingPanel(wx.Panel):
         self.height = 0
         self.loaded = False
         self.page_specs = {}
-        self.show_page = True
+        self.show_page = global_settings['toggle_page_button_status']
         self.background_color = None
 
         # desired simulation speed in stitches per second
@@ -292,7 +292,7 @@ class DrawingPanel(wx.Panel):
         )
         self.loaded = True
         self.go()
-        if hasattr(self.view_panel, 'info_panel'):
+        if hasattr(self.view_panel, 'info_panel') and self.view_panel.info_panel is not None:
             self.view_panel.info_panel.update()
 
     def set_page_specs(self, page_specs):

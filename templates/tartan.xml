@@ -5,6 +5,8 @@
     <param name="extension" type="string" gui-hidden="true">tartan</param>
     <effect implements-custom-gui="true">
         <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/tartan.svg</icon>
+        <menu-tip>Tartan stripe editor</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
                 <submenu name="Tools: Fill" />
