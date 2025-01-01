@@ -1,7 +1,7 @@
 ---
 title: "Tools: Satin"
 permalink: /docs/satin-tools/
-last_modified_at: 2023-06-09
+last_modified_at: 2025-01-01
 toc: true
 ---
 `Extensions > Ink/Stitch  > Tools: Satin` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
@@ -24,12 +24,12 @@ This tool will replace your satins with a new set of satin columns in logical st
 
 ### Usage
 
+**Tip:** By default, it will choose the left-most extreme as the starting point and the right-most extreme as the ending point (even if these occur partway through a satin such as the left edge of a letter "o"). You can override this by attaching the ["Auto-route satin stitch starting/ending position" commands](/docs/commands/#--startingending-position-for-auto-route-satin).
+{: .notice--info }
+
 1. Select satin columns (prepared with underlay, etc.)
 2. Run `Extensions > Ink/Stitch  > Satin Tools > Auto-Route Satin Columns...`
 3. Enable desired options and click apply
-
-**Tip:** By default, it will choose the left-most extreme as the starting point and the right-most extreme as the ending point (even if these occur partway through a satin such as the left edge of a letter "o"). You can override this by attaching the ["Auto-route satin stitch starting/ending position" commands](/docs/commands/#--startingending-position-for-auto-route-satin).
-{: .notice--info }
 
 ### Options
 
@@ -37,6 +37,9 @@ This tool will replace your satins with a new set of satin columns in logical st
 
 * If you prefer to keep your previous order (which might be the case if you have overlaying satins), enable the option **Preserve order of Satin Columns**.
 
+* {% include upcoming_release.html %}
+
+  **Keep original paths** will indicate if the original elements will be removed or kept.
 
 ## Flip Satin Column Rails
 

@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2024-12-26
+last_modified_at: 2025-01-01
 sidebar:
   nav: pages
 toc: true
@@ -48,6 +48,8 @@ Edit JSON is part of the Font Management and helps font authors to easily correc
 
 Helps (for example) to remove bean stitches from stitch plans and turn them into simple lines.
 
+[Read more](/docs/edit/#remove-duplicated-points)
+
 ### Set color sort index
 
 `Font management Set color sort index` [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
@@ -66,22 +68,35 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ### Auto-route satin
 
+`Tools: Satin > AutoRoute Satin`
+
 * add option to keep original path elements [#3332](https://github.com/inkstitch/inkstitch/pull/3332)
 * transfer object based min jump length (if present) from satins on auto-generated strokes [#3154](https://github.com/inkstitch/inkstitch/pull/3154)
 
-### Commands
+### Attach commands to selected objects
+
+* Unified start and stop commands for various stitch types (will automatically update older files)
+
+### Scale Command Symbols
+
+`Commands > View > Scale Command Symbols`
 
 * Set all commands to unique size at once (reset previous transform) [#3329](https://github.com/inkstitch/inkstitch/pull/3329)
 
 ### Font sampling
 
+`Font Management > Font Sampling`
+
 * Add color sort option [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
 
 ### Lettering
 
+`Lettering`
+
 * Lettering simulator: show more accurate start points [#3358](https://github.com/inkstitch/inkstitch/pull/3358)
-* lettering: automated size info (% and mm) [#3346](https://github.com/inkstitch/inkstitch/pull/3346)
-* Add color sort option for multicolor fonts [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
+* Uniformed size info (% and mm) [#3346](https://github.com/inkstitch/inkstitch/pull/3346)
+* Add color sort option for multicolor fonts [#3242](https://github.com/inkstitch/inkstitch/pull/3242), [#3381](https://github.com/inkstitch/inkstitch/pull/3381)
+* Options for text alignment [#3382](https://github.com/inkstitch/inkstitch/pull/3382)
 
 ### Multicolor Satin
 
@@ -107,6 +122,13 @@ A tool for font authors which sets a specified color sort index on selected elem
 ### Troubleshoot
 
 * Add background to troubleshoot text [#3357](https://github.com/inkstitch/inkstitch/pull/3357)
+
+## Removed extensions
+
+### Glyphlist update
+
+Glyphlist update has been part of the font management and was replaced by the much more powerful
+[Edit JSON extension](/docs/font-tools/#edit-json)  [#3380](https://github.com/inkstitch/inkstitch/pull/3380)
 
 ## Stitch types
 
@@ -153,6 +175,7 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ## Bug Fixes
 
+* Minimize multi shape tartan jumps [#3386](https://github.com/inkstitch/inkstitch/pull/3386)
 * Lettering: prevent duplicated output [#3365](https://github.com/inkstitch/inkstitch/pull/3365)
 * Fix path effect clips (couldn't be used before) [#3364](https://github.com/inkstitch/inkstitch/pull/3364)
 * Cut satin column: add more rungs when rails are intersecting [#3344](https://github.com/inkstitch/inkstitch/pull/3344)

@@ -37,6 +37,9 @@ Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin
 
 * Si vous préférez conserver votre ordre initial (ce qui pourrait être le cas si vous avez superposé des satins), activez l'option ** **Préserver l'ordre des colonnes satin**.
 
+* {% include upcoming_release.html %}
+
+  **Keep original paths** will indicate if the original elements will be removed or kept.
 
 ## Intervertir les rails des colonnes satin
 

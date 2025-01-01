@@ -1,7 +1,7 @@
 ---
 title: "Satin Werkzeuge"
 permalink: /de/docs/satin-tools/
-last_modified_at: 2023-06-09
+last_modified_at: 2025-01-01
 toc: true
 ---
 Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinsäulen](/docs/stitches/satin-column/) erleichtern sollen.
@@ -37,6 +37,9 @@ Dieses Werkzeug ersetzt deine Satinsäulen mit einem Set von neuen Satinsäulen 
 
 * Solltest du es bevorzugen die vorher gesetzte Objekt-Reihenfolge beizubehalten (das könnte der Fall sein, wenn sich die Satinsäulen überschneiden), benutze die Option **Behalte Reihenfolge der Satinsäulen bei**.
 
+* {% include upcoming_release.html %}
+
+  **Satinsäulen behalten** definiert, ob die ausgewählten Elemente nach der Umwandlnug gelöscht werden oder für spätere Korrekturen erhalten bleiben.
 
 ## Mehrfarbige Satinsäule
 
