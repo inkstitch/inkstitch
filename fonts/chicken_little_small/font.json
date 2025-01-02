@@ -1,6 +1,6 @@
 {
     "name": "Chicken Little KOR Small",
-    "description": "This font is an altered version  of Chicken Little KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory.  Parameters of this font allow to scale down the original Chicken Little KOR font between 25% (for a 10 mm font ) and 45 % (for a 19mm font).",
+    "description": "This font is an altered version  of Chicken Little KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory.",
     "leading": 150,
     "auto_satin": false,
     "reversible": false,
