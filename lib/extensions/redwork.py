@@ -60,7 +60,7 @@ class Redwork(InkstitchExtension):
             multi_line_string = self._ensure_starting_point(multi_line_string, starting_point)
         self._build_graph(multi_line_string)
 
-        redwork_group = self._create_redwork_group(elements[0])
+        redwork_group = self._create_redwork_group()
         self._generate_strongly_connected_components()
         self._generate_eulerian_circuits()
         self._eulerian_circuits_to_elements(redwork_group, elements)
@@ -101,7 +101,7 @@ class Redwork(InkstitchExtension):
                 # return the first occurence directly
                 return command.target_point
 
-    def _create_redwork_group(self, element):
+    def _create_redwork_group(self):
         node = self.svg.selection.rendering_order()[-1]
         parent = node.getparent()
         index = parent.index(node) + 1
