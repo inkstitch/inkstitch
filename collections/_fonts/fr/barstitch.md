@@ -28,7 +28,7 @@ data_title:
 
 ## Glyphes
 
-Ces fontes comportent  {{ font.glyphs.size }} glyphes:
+Ces fontes comportent  {{ font1.glyphs.size }} glyphes:
 
 ```
 {{ font1.glyphs | sort | join: ' ' }}
