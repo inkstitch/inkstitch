@@ -1,8 +1,8 @@
 ---
-title: "Installer Ink/Stitch"
+title: "Installer Ink/Stitch sur macos"
 permalink: /fr/docs/install-macos/
 excerpt: "Comment installer rapidement Ink/Stitch."
-last_modified_at: 2024-08-04
+last_modified_at: 2025-01-04
 toc: true
 ---
 ## Télécharger
@@ -24,7 +24,7 @@ Téléchargez la dernière version d'Ink/Stitch pour votre version de macOS :
 Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure avant d'installer Ink/Stitch. Vérifiez que vous avez bien **installé et lancé Inkscape** avant d'installer Ink/Stitch. Sinon l'installation va échouer.
 {: .notice--warning .bold--warning }
 
-If you have an arm processor make sure that Rosetta is installed with `softwareupdate --install-rosetta --agree-to-license`
+Si vous avez un processeur arm, vérifiez que Rosetta est installée  (avec `softwareupdate --install-rosetta --agree-to-license`).
 {: .notice--warning }
 
 **Monterey ou plus récent:** Lancez l'installateur en cliquant sur le fichier que vous avez téléchargé.
