@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    sodipodi:docname="lock_stitch_allow.svg"
-   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   inkscape:version="1.4-rc1 (61ec3f24, 2024-09-26)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.35034497"
-     inkscape:cx="1469.9797"
-     inkscape:cy="296.85027"
+     inkscape:cx="1823.9166"
+     inkscape:cy="433.85809"
      inkscape:window-width="1920"
      inkscape:window-height="1131"
      inkscape:window-x="0"
@@ -164,7 +164,7 @@
            style="font-family:Barlow;stroke-width:0.3"
            x="77.565018"
            y="47.443893"
-           id="tspan8">☒ No point d’arrêt initial</tspan></text>
+           id="tspan8">☒ Pas de point d’arrêt initial</tspan></text>
       <text
          style="font-size:3.175px;font-family:Barlow;fill:#ff0000"
          x="77.565018"
