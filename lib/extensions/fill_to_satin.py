@@ -27,7 +27,15 @@ class FillToSatin(InkstitchExtension):
         self.arg_parser.add_argument("--keep_originals", dest="keep_originals", type=Boolean, default=False)
 
         self.fill_element = None
+        # geometries
+        self.line_sections = []
         self.rungs = []
+
+        # relations
+        self.rung_sections = defaultdict(list)
+        self.section_rungs = defaultdict(list)
+        self.bridged_sections = []
+
         self.rung_segments = {}
 
     def effect(self):
@@ -44,17 +52,17 @@ class FillToSatin(InkstitchExtension):
         fill_linestrings = self._fill_to_linestrings(fill_shape)
         intersection_points, bridges = self._validate_rungs(fill_linestrings)
 
-        line_sections = self._get_line_sections(fill_linestrings)
-        rung_sections, section_rungs, bridged_sections = self._get_connections(line_sections, bridges)
+        self._generate_line_sections(fill_linestrings)
+        self._define_relations(bridges)
 
-        rung_segments, satin_segments = self._get_segments(line_sections, rung_sections, section_rungs, bridged_sections, intersection_points)
-
+        rung_segments, satin_segments = self._get_segments(intersection_points)
         combined_satins = self._get_satin_geoms(rung_segments, satin_segments)
 
         self._insert_satins(combined_satins)
         self._remove_originals()
 
     def _insert_satins(self, combined_satins):
+        '''Insert satin elements into the document'''
         if not combined_satins:
             return
         group = self.fill_element.node.getparent()
@@ -86,11 +94,13 @@ class FillToSatin(InkstitchExtension):
             group.append(node)
 
     def _remove_originals(self):
+        '''Remove original elements - if requested'''
         if not self.options.keep_originals:
             for element in self.elements:
                 element.node.getparent().remove(element.node)
 
     def _get_satin_geoms(self, rung_segments, satin_segments):
+        '''Combine segments and return satin geometries'''
         self.rung_segments = {rung: segments for rung, segments in rung_segments.items() if len(segments) == 2}
         finished_rungs = []
         finished_segments = []
@@ -120,17 +130,18 @@ class FillToSatin(InkstitchExtension):
             combined_satins.append(satin_rails + segment_geoms)
         return combined_satins
 
-    def _get_segments(self, line_sections, rung_sections, section_rungs, bridged_sections, intersection_points):  # noqa: C901
-        line_section_multi = MultiLineString(line_sections)
+    def _get_segments(self, intersection_points):  # noqa: C901
+        '''Combine line sections to satin segments (find the rails that belong together)'''
+        line_section_multi = MultiLineString(self.line_sections)
         rung_segments = defaultdict(list)
         satin_segments = []
 
         segment_index = 0
         finished_sections = []
-        for i, section in enumerate(line_sections):
+        for i, section in enumerate(self.line_sections):
             if i in finished_sections:
                 continue
-            s_rungs = section_rungs[i]
+            s_rungs = self.section_rungs[i]
             if len(s_rungs) == 1:
                 segment = self._get_end_segment(section)
                 satin_segments.append(segment)
@@ -139,9 +150,9 @@ class FillToSatin(InkstitchExtension):
                 segment_index += 1
 
             elif len(s_rungs) == 2:
-                connected_section = self._get_connected_section(i, s_rungs, rung_sections)
+                connected_section = self._get_connected_section(i, s_rungs)
                 if connected_section:
-                    segment = self._get_standard_segment(line_sections, connected_section, s_rungs, section)
+                    segment = self._get_standard_segment(connected_section, s_rungs, section)
                     if segment is None:
                         continue
                     satin_segments.append(segment)
@@ -152,7 +163,7 @@ class FillToSatin(InkstitchExtension):
                     # mark sections as finished
                     finished_sections.append(connected_section[0])
 
-                elif i in bridged_sections:
+                elif i in self.bridged_sections:
                     segment = self._get_bridged_segment(section, s_rungs, intersection_points, line_section_multi)
                     if segment:
                         satin_segments.append(segment)
@@ -178,17 +189,17 @@ class FillToSatin(InkstitchExtension):
         segment = MultiLineString([LineString(rail1), LineString(rail2)])
         return segment
 
-    def _get_standard_segment(self, line_sections, connected_section, s_rungs, section):
+    def _get_standard_segment(self, connected_section, s_rungs, section):
         section2 = None
         segment = None
         if len(connected_section) == 1:
-            section2 = line_sections[connected_section[0]]
+            section2 = self.line_sections[connected_section[0]]
         else:
             for connect in connected_section:
-                test_rung = self.rungs[s_rungs[0]].offset_curve(0.01)
-                test_section = line_sections[connect]
-                if test_rung.intersects(section) == test_rung.intersects(test_section):
-                    section2 = test_section
+                offset_rung = self.rungs[s_rungs[0]].offset_curve(0.01)
+                section_candidate = self.line_sections[connect]
+                if offset_rung.intersects(section) == offset_rung.intersects(section_candidate):
+                    section2 = section_candidate
                     break
         if section2 is not None:
             segment = MultiLineString([section, section2])
@@ -210,10 +221,10 @@ class FillToSatin(InkstitchExtension):
             segment = MultiLineString([section, bridge])
         return segment
 
-    def _get_connected_section(self, index, s_rungs, rung_sections):
+    def _get_connected_section(self, index, s_rungs):
         rung_section_list = []
         for rung in s_rungs:
-            connections = rung_sections[rung]
+            connections = self.rung_sections[rung]
             rung_section_list.append(connections)
         connected_section = list(set(rung_section_list[0]) & set(rung_section_list[1]))
         connected_section.remove(index)
@@ -240,6 +251,7 @@ class FillToSatin(InkstitchExtension):
         return MultiLineString(rails)
 
     def _find_connected(self, rung, segments, first_rung, finished_rungs, finished_segments, combined, combined_rungs):
+        '''Group combinable segments'''
         if rung in finished_rungs:
             return
         finished_rungs.append(rung)
@@ -254,41 +266,36 @@ class FillToSatin(InkstitchExtension):
                 self._find_connected(connected_rung, connected_segments, first_rung, finished_rungs, finished_segments, combined, combined_rungs)
 
     def _get_combinable_segments(self, segment, segments_in):
+        '''Finds the segments which are neighboring this segment'''
         return {rung: segments for rung, segments in self.rung_segments.items() if segment in segments and segments_in != segments}
 
-    def _get_line_sections(self, linestrings):
+    def _generate_line_sections(self, fill_linestrings):
         '''Splits the fill outline into sections. Splitter is a MultiLineString with all available rungs'''
         rungs = MultiLineString(self.rungs)
-        line_sections = []
-        for line in linestrings:
+        for line in fill_linestrings:
             sections = list(ensure_multi_line_string(split(line, rungs)).geoms)
             if len(sections) > 1:
                 # merge end and start section
                 sections[0] = linemerge(MultiLineString([sections[0], sections[-1]]))
                 del sections[-1]
-            line_sections.extend(sections)
-        return line_sections
+            self.line_sections.extend(sections)
 
-    def _get_connections(self, line_sections, bridges):
+    def _define_relations(self, bridges):
         ''' Defines information about the relations between line_sections and rungs
-            Returns:
-                rung_sections: dictionary with rung_index: neighboring sections
-                section_rungs: dictionary with section_id: neighboring rungs
-                bridged_sections: list of sections which the user marked for bridging
+            rung_sections: dictionary with rung_index: neighboring sections
+            section_rungs: dictionary with section_id: neighboring rungs
+            bridged_sections: list of sections which the user marked for bridging
         '''
-        rung_sections = defaultdict(list)
-        section_rungs = defaultdict(list)
-        bridged_sections = []
-        for i, section in enumerate(line_sections):
+        for i, section in enumerate(self.line_sections):
             if not section.intersection(bridges).is_empty:
-                bridged_sections.append(i)
+                self.bridged_sections.append(i)
             for j, rung in enumerate(self.rungs):
                 if section.distance(rung) < 0.01:
-                    section_rungs[i].append(j)
-                    rung_sections[j].append(i)
-        return rung_sections, section_rungs, bridged_sections
+                    self.section_rungs[i].append(j)
+                    self.rung_sections[j].append(i)
 
     def _validate_rungs(self, fill_linestrings):
+        ''' Returns only valid rungs and bridge section markers'''
         multi_line_string = MultiLineString(fill_linestrings)
         valid_rungs = []
         bridge_indicators = []
@@ -305,6 +312,7 @@ class FillToSatin(InkstitchExtension):
         return intersection_points, MultiLineString(bridge_indicators)
 
     def _fill_to_linestrings(self, fill_shape):
+        '''Takes a fill shape (Multipolygon) and returns the shape as a list of linestrings'''
         fill_linestrings = []
         for polygon in fill_shape.geoms:
             linestrings = ensure_multi_line_string(polygon.boundary)
@@ -312,6 +320,7 @@ class FillToSatin(InkstitchExtension):
         return fill_linestrings
 
     def _get_shapes(self):
+        '''Filter selected elements. We can only use rungs (strokes) and one fill element'''
         for element in self.elements:
             if isinstance(element, FillStitch):
                 # we take only one fill element at a time (the last one in the list)
@@ -320,6 +329,7 @@ class FillToSatin(InkstitchExtension):
                 self.rungs.extend(list(element.as_multi_line_string().geoms))
 
     def print_error(self):
+        '''We did not receive the rigth elements, inform user'''
         app = AbortMessageApp(
             _("Please select a fill object and rungs."),
             _("https://inkstitch.org/satin-tools#fill-to-satin")
