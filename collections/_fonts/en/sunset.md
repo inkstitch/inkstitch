@@ -7,7 +7,7 @@ preview_image:
   - url: /assets/images/fonts/sunset.png
     height: 55
 data_title:
-  - western_light
+  - sunset
 ---
 {%- assign font = site.data.fonts.sunset.font -%}
 
