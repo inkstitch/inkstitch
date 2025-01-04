@@ -85,17 +85,16 @@ Les objets auxquels cette commande est associée seront exclus du plan de broder
 
 Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Scinder une colonne satin](/fr/docs/satin-tools/#scinder-une-colonne-satin)".
 
-## Delete Commands
+## Supprimer les commandes
 
-### Delete single commands
+### Supprimer une commande particulière.
 
-Select the command-group and delete.
+Séléctionnez le groupe de command et supprimez le. 
+### Supprimer toutes les commandes du document
 
-### Delete all commands in the document
-
-* Run `Extensions > Ink/Stitch > Troubleshoot > Remove embroidery settings`
-* Choose to remove all or specific command types to remove from the document
-* Click on `Apply`
+*L ancez `Extensions > Ink/Stitch > Résolution des problèmes > Supprimer tous les paramètres de broderie`
+* Choisissez tout ou les types de commandes spécifiques que vous souhaitez supprimer du document
+* Cliquez sur  `Appliquer`
 
 
 ## Saut en Coupe {#jump-to-trim}
