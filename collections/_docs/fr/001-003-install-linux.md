@@ -2,7 +2,7 @@
 title: "Installer Ink/Stitch pour linux"
 permalink: /fr/docs/install-linux/
 excerpt: "Comment installer rapidement Ink/Stitch."
-last_modified_at: 2024-04-29
+last_modified_at: 2025-01-04
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -85,7 +85,7 @@ $ tar -xvf ~/Downloads/inkstitch-{{ tag_name }}-linux.tar.xz</code></pre></div><
 
 ### NixOS
 
-Il existe une version pour  NixOS qui est maintenue en externe et disponible sur [https://codeberg.org/tropf/nix-inkstitch](https://codeberg.org/tropf/nix-inkstitch)
+Il existe une version pour NixOS qui est maintenue en externe et disponible sur [https://codeberg.org/tropf/nix-inkstitch](https://codeberg.org/tropf/nix-inkstitch)
 
 ### Arch Linux
 
@@ -169,9 +169,9 @@ Cette solution de contournement doit être utilisé jusqu'à ce que nous ayons d
 
 ### ImportError: libnsl.so.1: cannot open shared object file. No such file or directory
 
-Install the missing library.
+Installez la bibliothèque manquante. 
 
-For example on **Fedora** install libnsl with the following command
+Par exemple sous Fedora **Fedora** installez libnsl avec la commande suivante.
 
 ```
 sudo dnf install libnsl
