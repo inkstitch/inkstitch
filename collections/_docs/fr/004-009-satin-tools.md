@@ -1,7 +1,7 @@
 ---
 title: "Outils Satin"
 permalink: /fr/docs/satin-tools/
-last_modified_at: 2024-05-05
+last_modified_at: 2025-01-054
 toc: true
 ---
 `Extensions > Ink/Stitch  > Outils :  Satin` inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/fr/docs/stitches/satin-column/).
@@ -39,7 +39,8 @@ Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin
 
 * {% include upcoming_release.html %}
 
-  **Keep original paths** will indicate if the original elements will be removed or kept.
+  **Garder les chemins originels**  indique si les éléments originels doivent être gardés ou pas.
+  
 
 ## Intervertir les rails des colonnes satin
 
@@ -89,27 +90,29 @@ Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin), si vous souhaitez comp
 
 * Sélectionnez  une ou plusieurs colonnes satin
 * `Extensions > Ink/Stitch > Outils: Satin > Satin Multicolore`
-* Set the desired options dans l'onglet `Colorer`
-* Click on `Apply`
+* Choisir les options dans l'onglet `Colorer`
+* Cliquer  sur  `Appliquer`
 
 ## Options
 
 * Choisir si les couleurs sont équidistantes ou si elles ont des largeurs différentes.
 
-  If checked the color width and margins are defined for all colors by the `monochrome color width` value.
-
+ Si cettte  option est cochée, la largeur des  couleurs et des marges sont définies  pour toutes les couleurs par la valeur de `Largeur de la zone monochrome` .
+ 
   Si la case est décochée il devient possible de choisir individuellement la largeur de chaque couleur **ET** d'ajouter une zone où deux couleurs se mélangent.
+  
 * Ajouter un  dépassement à gauche  (en pourcentage)
 
-  Adds a jagged edge to the left side of the satin
-* Ajouter un dépassement à droite (en pourcentage)
+ Ajoute un bord irrégulier sur le côté gauche du satin
+ * Ajouter un dépassement à droite (en pourcentage)
 
-  Adds a jagged edge to the right side of the satin
+  Ajoute un bord irrégulier sur le côté droit du satin
 * Ajouter des couleurs
 
-  Width values are given in percentages. Make sure all numbers for all colors add up to 100%.
+  Les valeurs des largeurs sont données en pourcentage. Faites attention que la somme des valeurs soit bien égale à 100%.
 
-  Please note that the first input field in each color definition sets the width of the area with only one color. The second input box defines the margin to the next color. This is the width of the area with the "color transition". When `equidistant colors` colors is checked, reduce the value for `monochrome color width` to receive a wider field of bicolor sections.
+  Notez que le premier champ des définitions des couleurs définie la largeur de la zone mononchrome, le second champ défini la marge avec la couleur  suivante. Ceci est la  largeur qui sera  partagée par les  deux  couleurs. Lorsque `Couleurs équidistantes` est coché, réduire la valeur de la 'Largeur de la zone monochrome' augmentera la taille des zones bicolores.
+
   {: .notice--info}
 
   ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
