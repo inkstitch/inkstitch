@@ -3,7 +3,7 @@ last_modified_at: 2025-01-04
 toc: false
 preview_image:
   - url: /assets/images/fonts/western_light.png
-    height: 14
+    height: 53
 data_title:
   - western_light
 ---
