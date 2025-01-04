@@ -1,7 +1,7 @@
 ---
 title: "Outils de police"
 permalink: /fr/docs/font-tools/
-last_modified_at: 2024-05-05
+last_modified_at: 2025-01-04
 toc: true
 ---
 Un ensemble d'outils adaptés aux créateurs de polices ou à ceux qui souhaitent ajouter des polices supplémentaires dans [l'outil de lettrage](/docs/lettering) d'Ink/Stitch.
@@ -21,18 +21,18 @@ Il est aussi possible pour une direction donnée de créer un repertoire dont le
 
 Le fichier json doit inclure au minimum le nom des polices.
 
-## Edit JSON
+## Editer JSON
 
 {% include upcoming_release.html %}
 
-This extension allows you do edit an existing font information file. If the font doesn't have a json file file, create one with generated with [generate JSON](#generate-json)
+Cette extension permet d'éditer les informations existantes sur une police.  Si la police n'a pas encore de fichier json, il faut en créer un avec  [generer le fichier JSON](#generate-json)
 
 ### Usage
 
-* Run `Extensions > Ink/Stitch > Font Management > Edit JSON`
-* Chose a font from the font list
-* Update font details such as name, description, keywords or kerning information
-* Click on apply
+* Lancez `Extensions > Ink/Stitch > Gestion des polices > Editer JSON`
+* Choisir une police dans la liste des polices
+* Metttre à jour les information tels que le nom, la description, les mots clés ou les information de crénage.
+* Cliquez sur `Appliquer`
 
 ## Test de police {#font-sampling}
 
@@ -69,7 +69,7 @@ Pour la même raison, lorsque les lettres sont détachées, il peut être utile 
 * Restreindre au satin
 * Ajouter l'attribut "forcer les points d'arrêts" au dernier élément de chaque glyphe
 
-## Générer  le fichier JSON {#generate-json}
+## Générer le fichier JSON {#generate-json}
 
 Cette extension est destinée à vous aider à créer le fichier json.
 Selon la façon dont vous avez généré votre fichier de police, il peut permettre d'inclure des informations de crénage supplémentaires dans le fichier json.
@@ -92,8 +92,8 @@ Si vous avez généré votre fichier svg sans informations de crénage, cette ex
 |-----------------------------------|-------------------|
 |Agencement automatique des colonnes Satin|▸ activé<br/>Ink/Stitch générera une organisation raisonnable pour les colonnes de satin de votre police lorsqu'elle est utilisée dans l'outil de lettrage. [Plus d'information sur Agencement automatique des colonnes Satin](/fr/docs/satin-tools/#auto-route-satin-columns)<br/><br/>▸ désactivé<br/>Ink/Stitch utilisera les glyphes tels quels. Désactivez l'option, si vous vous avez créé vous-même l'agencement des colonnes satin dans votre police.
 |Réversible                         |si votre police peut être brodée vers l'avant et vers l'arrière ou seulement vers l'avant. Ne cocher cette case que si vous avez effectivement créé plusieurs variantes de la police pour des directions différentes.
-|Sortable                           |wether your font can be color sorted or not. This only works, when the elements in your font carry a [color sort index](#set-color-index)
-|Combine indices                    |a comma separated list of of color sort indices. Elements with this index will be combined into a single element. Useful to reduce color changes for multi-color stitch types such as tartan.
+|Triable                       |si les couleurs de votre police sont triables. Pour fonctionner, cela necessite que les éléments de votre police portent un  [indice de tri des couleurs ](#set-color-index)
+|Combiner des  indices                    |une liste d'indice de tri des couleurs séparés par des virgules. Les élements porteurs d'un de ces indices seront regroupés. Utile pour réduire le nombre de couleurs des polices multicolores comme les polices tartan.
 |Forcer la casse                    |▸ Non<br/>choisissez cette option si votre police contient des lettres majuscules et minuscules (par défaut).<br/<<br/>▸ Majuscule: Choisissez cette option si votre police ne contient que des majuscules.<br/><br/>▸ Minuscule: Choisissez cette option si votre police ne contient que des minuscules.
 |Glyphe par défaut                  |le glyphe à afficher si le glyphe demandé par l'utilisateur n'est pas disponible dans le fichier de police (glyphe manquant)
 |Echelle minimum /Echelle maximum   |Défini dans quelle mesure vos glyphes peuvent être agrandis ou diminués sans perdre en qualité une fois brodés
@@ -146,18 +146,18 @@ Ink/Stitch contient un outil de nettoyage de votre fichier de fonte.
 4. Cliquez sur `Appliquer`
 
 
-## Set color index
+## Définir l'indice de tri des couleurs {#set-color-index}
 
 {% include upcoming_release.html %}
 
-Sets an index to inform the lettering tool on where to position the selected elements when color sorting is enabled.
+Défini un indice qui permet à l'outil de lettrage de savoir où positionner les éléments lorsque tri des couleurs est activé.
 
-* In a font file select elements of the same color
-* Open the extension `Extensions > Ink/Stitch > Font Management > Set color index`
-* Set the index number
-* Apply
+* Dans un ficier de police, séléctionner les éléments d'une même couleur
+* Lancez `Extensions > Ink/Stitch > Gestion des police > Définir l'indice de tri des couleurs`
+* Choisir la valeur de l'indice
+* `Appliquer`
 
-The JSON-file must specify if a font is color sortable. Use [Edit JSON](#edit-json) and enable the option `Sortable` in the `Font Settings` tab.
+Le fichier json doit spécifier que la police est triable. Utilisez  [Editer JSON](#edit-json) and cochez l'option `Triable` dans l'onglet `Paramètres dela font`.
 {: .notice--warning }
 
 ## Mettre à jour la liste des glyphes  {#update-glyph-list}
