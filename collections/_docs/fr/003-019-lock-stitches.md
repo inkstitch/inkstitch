@@ -1,7 +1,7 @@
 ---
 title: "Points d'arrêt"
 permalink: /fr/docs/stitches/lock-stitches/
-last_modified_at: 2024-02-26
+last_modified_at: 2025-01-04
 toc: true
 ---
 Les points d'arrêt sont des petits points au début (point d'arrêt initial) ou à la fin (point d'arrêt final)  d'une couleur ou d'un saut de fil ou d'une commande de coupe.Ils aident à sécuriser le fil.
