@@ -76,7 +76,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             self.assertAlmostEqual(element_fill_angle(elements[0]), 30)
 
     def test_hidden_cloned_elements_not_embroidered(self):
@@ -107,7 +107,7 @@ class CloneElementTest(TestCase):
         clone = Clone(use)
 
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             self.assertEqual(elements[0].node.get(INKSCAPE_LABEL), "NotHidden")
 
     def test_angle_rotated(self):
@@ -123,7 +123,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), 10)
 
     def test_angle_flipped(self):
@@ -139,7 +139,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -30)
 
     def test_angle_flipped_rotated(self):
@@ -155,7 +155,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             # Fill angle goes from 30 -> -30 after flip -> -50 after rotate
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -50)
 
@@ -175,7 +175,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             # Slope of the stitching goes from tan(30deg) = 1/sqrt(3) to -sqrt(3)/sqrt(3) = tan(-45deg),
             # then rotated another -10 degrees to -55
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -55)
@@ -200,7 +200,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             # Angle goes from 30 -> 40 (g1 -> g2) -> 29 (use)
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), 29)
 
@@ -218,7 +218,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 2)  # One for the stroke, one for the fill
+            self.assertEqual(len(elements), 3)  # One for the stroke, one for the fill, one for the SewStack
             self.assertEqual(elements[0].node, elements[1].node)
             # Angle goes from 0 -> -30
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -30)
@@ -237,7 +237,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)  # One for the stroke, one for the fill
+            self.assertEqual(len(elements), 2)  # One for the stroke, one for the fill, one for the SewStack
             self.assertIsNone(elements[0].get_param("angle", None))  # Angle as not set, as this isn't a fill
 
     def test_style_inherits(self):
@@ -253,7 +253,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             style = elements[0].node.cascaded_style()
             # Source style takes precedence over any attributes specified in the clone
             self.assertEqual(style["stroke"], "skyblue")
@@ -276,7 +276,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             self.assertTransformEqual(
                 elements[0].node.composed_transform(),
                 Transform().add_translate((5, 10)).add_scale(2, 2))
@@ -297,7 +297,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             self.assertTransformEqual(
                 elements[0].node.composed_transform(),
                 Transform().add_translate((5, 10))  # use
@@ -325,7 +325,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 2)
+            self.assertEqual(len(elements), 4)  # FillStitch, SewStack, FillStitch, SewStack
             self.assertTransformEqual(
                 elements[0].node.composed_transform(),
                 Transform().add_translate((1, 2)).add_scale(0.5, 1)  # g2
@@ -334,7 +334,7 @@ class CloneElementTest(TestCase):
                 .add_scale(2, 2),  # rect
                 5)
             self.assertTransformEqual(
-                elements[1].node.composed_transform(),
+                elements[2].node.composed_transform(),
                 Transform().add_translate((1, 2)).add_scale(0.5, 1)  # g2
                 .add_translate((5, 10))  # use
                 .add_translate((0, 5)).add_rotate(5),  # g1
@@ -370,7 +370,7 @@ class CloneElementTest(TestCase):
         self.assertEqual(clone.clone_fill_angle, 42)
 
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), 42)
 
     def test_angle_manually_flipped(self):
@@ -388,7 +388,7 @@ class CloneElementTest(TestCase):
         clone = Clone(use)
         self.assertTrue(clone.flip_angle)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -10)
 
     # Recursive use tests
@@ -414,15 +414,17 @@ class CloneElementTest(TestCase):
         with clone.clone_elements() as elements:
             # There should be two elements cloned from u3, two rects, one corresponding to rect and one corresponding to u1.
             # Their transforms should derive from the elements they href.
-            self.assertEqual(len(elements), 2)
+            self.assertEqual(len(elements), 4)
+            self.assertEqual(type(elements[0]), FillStitch)
             self.assertEqual(elements[0].node.tag, SVG_RECT_TAG)
             self.assertTransformEqual(elements[0].node.composed_transform(),
                                       Transform().add_translate((0, 30))  # u3
                                       .add_translate(0, 20).add_scale(0.5, 0.5)  # u2
                                       )
 
-            self.assertEqual(elements[1].node.tag, SVG_RECT_TAG)
-            self.assertTransformEqual(elements[1].node.composed_transform(),
+            self.assertEqual(type(elements[2]), FillStitch)
+            self.assertEqual(elements[2].node.tag, SVG_RECT_TAG)
+            self.assertTransformEqual(elements[2].node.composed_transform(),
                                       Transform().add_translate((0, 30))  # u3
                                       .add_translate((0, 20)).add_scale(0.5, 0.5)  # u2
                                       .add_translate((20, 0))  # u1
@@ -441,7 +443,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(u1)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             # Angle goes from 30 -> -30
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -30)
 
@@ -452,7 +454,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(u2)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             # Angle goes from -30 -> -20 (u1 -> g)
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -20)
 
@@ -462,7 +464,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(u3)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             # Angle goes from -20 -> -27
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -27)
 
@@ -473,7 +475,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(u4)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             # Angle goes from -30 -> -37
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -37)
 
@@ -499,7 +501,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(u3)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             # Angle goes from 0 (g -> u2) -> -7 (u3)
             self.assertAngleAlmostEqual(element_fill_angle(elements[0]), -7)
 
@@ -524,7 +526,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             cmd_orig = original.get_command("ending_point")
             cmd_clone = elements[0].get_command("ending_point")
             self.assertIsNotNone(cmd_clone)
@@ -551,7 +553,7 @@ class CloneElementTest(TestCase):
 
         clone = Clone(use)
         with clone.clone_elements() as elements:
-            self.assertEqual(len(elements), 1)
+            self.assertEqual(len(elements), 2)
             cmd_orig = original.get_command("ending_point")
             cmd_clone = elements[0].get_command("ending_point")
             self.assertIsNotNone(cmd_clone)
