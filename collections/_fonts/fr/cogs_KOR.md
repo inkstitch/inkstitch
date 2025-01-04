@@ -1,7 +1,7 @@
 ---
 title: "Cogs_KOR"
 permalink: /fr/fonts/cogs_KOR/
-last_modified_at: 2024-09-27
+last_modified_at: 2024-09-29
 toc: false
 preview_image:
   - url: /assets/images/fonts/cogs_KOR.png
