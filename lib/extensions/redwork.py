@@ -102,11 +102,9 @@ class Redwork(InkstitchExtension):
                 return command.target_point
 
     def _create_redwork_group(self, element):
-        node = element.node
+        node = self.svg.selection.rendering_order()[-1]
         parent = node.getparent()
-        index = parent.index(node)
-        if self.options.keep_originals:
-            index = len(parent)
+        index = parent.index(node) + 1
         # create redwork group
         redwork_group = Group()
         redwork_group.label = _("Redwork Group")
