@@ -5,7 +5,7 @@ last_modified_at: 2025-01-04
 toc: false
 preview_image:
   - url: /assets/images/fonts/pixel_10.png
-    height: 53
+    height: 50
 data_title:
   - pixel10
 ---
