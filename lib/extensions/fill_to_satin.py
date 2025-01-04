@@ -5,7 +5,7 @@
 
 from collections import defaultdict
 
-from inkex import Group, Path, PathElement
+from inkex import Boolean, Group, Path, PathElement
 from shapely.geometry import LineString, MultiLineString
 from shapely.ops import linemerge, snap, split, substring
 
@@ -20,6 +20,12 @@ from .base import InkstitchExtension
 class FillToSatin(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
+        self.arg_parser.add_argument("--center", dest="center", type=Boolean, default=False)
+        self.arg_parser.add_argument("--contour", dest="contour", type=Boolean, default=False)
+        self.arg_parser.add_argument("--zigzag", dest="zigzag", type=Boolean, default=False)
+        self.arg_parser.add_argument("--keep_originals", dest="keep_originals", type=Boolean, default=False)
+
         self.fill_element = None
         self.rungs = []
         self.rung_segments = {}
@@ -46,6 +52,7 @@ class FillToSatin(InkstitchExtension):
         combined_satins = self._get_satin_geoms(rung_segments, satin_segments)
 
         self._insert_satins(combined_satins)
+        self._remove_originals()
 
     def _insert_satins(self, combined_satins):
         if not combined_satins:
@@ -67,10 +74,21 @@ class FillToSatin(InkstitchExtension):
             node.set('d', d)
             node.set('style', style)
             node.set('inkstitch:satin_column', True)
+            if self.options.center:
+                node.set('inkstitch:center_walk_underlay', True)
+            if self.options.contour:
+                node.set('inkstitch:contour_underlay', True)
+            if self.options.zigzag:
+                node.set('inkstitch:zigzag_underlay', True)
             node.transform = transform
             node.apply_transform()
             node.label = _("Satin") + f" {i+1}"
             group.append(node)
+
+    def _remove_originals(self):
+        if not self.options.keep_originals:
+            for element in self.elements:
+                element.node.getparent().remove(element.node)
 
     def _get_satin_geoms(self, rung_segments, satin_segments):
         self.rung_segments = {rung: segments for rung, segments in rung_segments.items() if len(segments) == 2}
