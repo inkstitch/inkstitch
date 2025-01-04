@@ -1,7 +1,7 @@
 ---
 title: "Commandes visuelles"
 permalink: /fr/docs/commands/
-last_modified_at: 2024-09-10
+last_modified_at: 2025-01-04
 toc: true
 ---
 Les commandes visuelles peuvent être utilisées pour spécifier des informations complémentaires sur la manière de broder. Elles peuvent par exemple être utilisées pour dire à la machine de couper le fil après avoir brodé un élément ou pour spécifier un arrêt par exemple pour ajouter le tissu d'un appliqué plus facilement.
