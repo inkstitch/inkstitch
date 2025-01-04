@@ -26,10 +26,10 @@ class FillToSatin(InkstitchExtension):
         self.arg_parser.add_argument("--zigzag", dest="zigzag", type=Boolean, default=False)
         self.arg_parser.add_argument("--keep_originals", dest="keep_originals", type=Boolean, default=False)
 
-        self.fill_element = None
         # geometries
         self.line_sections = []
-        self.rungs = []
+        self.selected_rungs = []
+        self.rungs = []  # selection of valid rungs for the specific fill
 
         # relations
         self.rung_sections = defaultdict(list)
@@ -43,31 +43,41 @@ class FillToSatin(InkstitchExtension):
             self.print_error()
             return
 
-        self._get_shapes()
-        if self.fill_element is None or len(self.rungs) < 1:
+        fill_elements = self._get_shapes()
+        if not fill_elements or not self.selected_rungs:
             self.print_error()
             return
 
-        fill_shape = self.fill_element.shape
-        fill_linestrings = self._fill_to_linestrings(fill_shape)
-        intersection_points, bridges = self._validate_rungs(fill_linestrings)
+        for fill_element in fill_elements:
+            # Reset variables
+            self.rungs = []
+            self.line_sections = []
+            self.rung_sections = defaultdict(list)
+            self.section_rungs = defaultdict(list)
+            self.bridged_sections = []
+            self.rung_segments = {}
 
-        self._generate_line_sections(fill_linestrings)
-        self._define_relations(bridges)
+            fill_shape = fill_element.shape
+            fill_linestrings = self._fill_to_linestrings(fill_shape)
+            intersection_points, bridges = self._validate_rungs(fill_linestrings)
 
-        rung_segments, satin_segments = self._get_segments(intersection_points)
-        combined_satins = self._get_satin_geoms(rung_segments, satin_segments)
+            self._generate_line_sections(fill_linestrings)
+            self._define_relations(bridges)
 
-        self._insert_satins(combined_satins)
+            rung_segments, satin_segments = self._get_segments(intersection_points)
+            combined_satins = self._get_satin_geoms(rung_segments, satin_segments)
+
+            self._insert_satins(fill_element, combined_satins)
+
         self._remove_originals()
 
-    def _insert_satins(self, combined_satins):
+    def _insert_satins(self, fill_element, combined_satins):
         '''Insert satin elements into the document'''
         if not combined_satins:
             return
-        group = self.fill_element.node.getparent()
-        transform = get_correction_transform(self.elements[0].node)
-        style = f'stroke: {self.fill_element.color}; fill: none; stroke-width: {self.svg.viewport_to_unit("1px")};'
+        group = fill_element.node.getparent()
+        transform = get_correction_transform(fill_element.node)
+        style = f'stroke: {fill_element.color}; fill: none; stroke-width: {self.svg.viewport_to_unit("1px")};'
         if len(combined_satins) > 1:
             new_group = Group()
             group.append(new_group)
@@ -300,7 +310,7 @@ class FillToSatin(InkstitchExtension):
         valid_rungs = []
         bridge_indicators = []
         intersection_points = []
-        for rung in self.rungs:
+        for rung in self.selected_rungs:
             intersection = multi_line_string.intersection(rung)
             if intersection.geom_type == 'MultiPoint' and len(intersection.geoms) == 2:
                 valid_rungs.append(rung)
@@ -320,13 +330,14 @@ class FillToSatin(InkstitchExtension):
         return fill_linestrings
 
     def _get_shapes(self):
-        '''Filter selected elements. We can only use rungs (strokes) and one fill element'''
+        '''Filter selected elements. Take rungs and fills.'''
+        fill_elements = []
         for element in self.elements:
             if isinstance(element, FillStitch):
-                # we take only one fill element at a time (the last one in the list)
-                self.fill_element = element
+                fill_elements.append(element)
             elif isinstance(element, Stroke):
-                self.rungs.extend(list(element.as_multi_line_string().geoms))
+                self.selected_rungs.extend(list(element.as_multi_line_string().geoms))
+        return fill_elements
 
     def print_error(self):
         '''We did not receive the rigth elements, inform user'''
