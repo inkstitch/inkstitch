@@ -26,7 +26,7 @@ But there are more parameters which can influence the question wheter tack- and 
 
 ### Color Changes
 
-Lock and tack stitchesVerriegelungs- und Heftstiche werden vor und nach einem Farbwechsel angewendet.are applied before and after a color change.
+Lock and tack stitches are applied before and after a color change.
 
 ### Trim Commands
 
