@@ -1,6 +1,6 @@
 ---
 title: "Western light"
-permalink: /fonts/western_light/
+permalink: /de/fonts/western_light/
 last_modified_at: 2025-01-04
 toc: false
 preview_image:
