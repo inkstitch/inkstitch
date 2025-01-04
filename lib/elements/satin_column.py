@@ -1468,7 +1468,7 @@ class SatinColumn(EmbroideryElement):
         return stitch_group
 
     def _split_linestring_at_end_point(self, linestring, end_point):
-        split_line = shgeo.LineString(self.find_cut_points(end_point))
+        split_line = set_precision(shgeo.LineString(self.find_cut_points(end_point)), 0.00001)
         split_point = nearest_points(linestring, split_line)[0]
         project = linestring.project(split_point)
         start = substring(linestring, 0, project)
