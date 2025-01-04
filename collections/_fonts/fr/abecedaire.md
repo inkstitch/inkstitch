@@ -37,4 +37,4 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/abecedaire/LICENSE)
+[Télécharger la license de la police](https://github.com/inkstitch/inkstitch/tree/main/fonts/abecedaire/LICENSE)
