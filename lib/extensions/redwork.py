@@ -4,7 +4,8 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import networkx as nx
-from inkex import Group, Path, PathElement, errormsg
+from inkex import Boolean, Group, Path, PathElement, errormsg
+from inkex.paths.lines import Line
 from shapely import length, unary_union
 from shapely.geometry import LineString, MultiLineString, Point
 from shapely.ops import linemerge, nearest_points, substring
@@ -24,10 +25,12 @@ class Redwork(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
 
         self.arg_parser.add_argument("--notebook")
+        self.arg_parser.add_argument("-c", "--combine", dest="combine", type=Boolean, default=False)
         self.arg_parser.add_argument("-m", "--merge_distance", dest="merge_distance", type=float, default=0.5)
         self.arg_parser.add_argument("-p", "--minimum_path_length", dest="minimum_path_length", type=float, default=0.5)
         self.arg_parser.add_argument("-s", "--redwork_running_stitch_length_mm", dest="redwork_running_stitch_length_mm", type=float, default=2.5)
         self.arg_parser.add_argument("-b", "--redwork_bean_stitch_repeats", dest="redwork_bean_stitch_repeats", type=str, default='0')
+        self.arg_parser.add_argument("-k", "--keep_originals", dest="keep_originals", type=Boolean, default=False)
 
         self.elements = None
         self.graph = None
@@ -57,9 +60,15 @@ class Redwork(InkstitchExtension):
             multi_line_string = self._ensure_starting_point(multi_line_string, starting_point)
         self._build_graph(multi_line_string)
 
+        redwork_group = self._create_redwork_group(elements[0])
         self._generate_strongly_connected_components()
         self._generate_eulerian_circuits()
-        self._eulerian_circuits_to_elements(elements)
+        self._eulerian_circuits_to_elements(redwork_group, elements)
+
+        # remove input elements
+        if not self.options.keep_originals:
+            for element in elements:
+                element.node.getparent().remove(element.node)
 
     def _ensure_starting_point(self, multi_line_string, starting_point):
         # returns a MultiLineString whose first  LineString starts close to  starting_point
@@ -92,55 +101,71 @@ class Redwork(InkstitchExtension):
                 # return the first occurence directly
                 return command.target_point
 
-    def _eulerian_circuits_to_elements(self, elements):
-        node = elements[0].node
-        index = node.getparent().index(node)
-        style = node.style
-        transform = get_correction_transform(node)
-        nb_circuits = len(self.eulerian_circuit)
+    def _create_redwork_group(self, element):
+        node = element.node
+        parent = node.getparent()
+        index = parent.index(node)
+        if self.options.keep_originals:
+            index = len(parent)
         # create redwork group
         redwork_group = Group()
         redwork_group.label = _("Redwork Group")
-        node.getparent().insert(index, redwork_group)
+        parent.insert(index, redwork_group)
+        return redwork_group
+
+    def _eulerian_circuits_to_elements(self, redwork_group, elements):
+        combine_all = self.options.combine and self.options.redwork_bean_stitch_repeats == '0'
+        node = elements[0].node
+        style = node.style
+        transform = get_correction_transform(node)
 
         # insert lines grouped by underpath and top layer
         visited_lines = []
         i = 1
 
         for circuit in self.eulerian_circuit:
+            previous_element_type = False
             connected_group = Group()
             connected_group.label = _("Connected Group")
+            if len(self.eulerian_circuit) > 1:
+                redwork_group.insert(i, connected_group)
+                group = connected_group
+            else:
+                group = redwork_group
 
+            path = ''
             for edge in circuit:
                 linestring = self.graph.get_edge_data(edge[0], edge[1], edge[2])['path']
+                if length(linestring) < self.minimum_path_length:
+                    continue
 
-                if length(linestring) > self.minimum_path_length:
-                    current_line = linestring
-                    if current_line in visited_lines:
-                        path_id = self.svg.get_unique_id('redwork_')
-                        label = _("Redwork") + f' {i}'
-                        redwork = True
+                if linestring in visited_lines:
+                    redwork = True
+                else:
+                    redwork = False
+                visited_lines.append(linestring.reverse())
 
-                    else:
-                        path_id = self.svg.get_unique_id('underpath_')
-                        label = _("Redwork Underpath") + f' {i}'
-                        visited_lines.append(current_line.reverse())
-                        redwork = False
+                current_path = Path(list(linestring.coords))
+                if not self.options.combine or (not combine_all and previous_element_type != redwork):
+                    if path:
+                        self._insert_element(i, path, group, style, transform, previous_element_type)
+                        i += 1
+                    path = str(current_path)
+                else:
+                    if path:
+                        current_path[0] = Line(current_path[0].x, current_path[0].y)
+                    path += str(current_path)
+                previous_element_type = redwork
+            if path:
+                self._insert_element(i, path, group, style, transform, redwork)
 
-                    path = str(Path(list(current_line.coords)))
-                    if nb_circuits > 1:
-                        redwork_group.insert(i, connected_group)
-                        self._insert_element(path, connected_group, style, transform, label, path_id, redwork)
-                    else:
-                        self._insert_element(path, redwork_group, style, transform, label, path_id, redwork)
-
-                    i += 1
-
-        # remove input elements
-        for element in elements:
-            element.node.getparent().remove(element.node)
-
-    def _insert_element(self, path, group, style, transform, label, path_id, redwork=True):
+    def _insert_element(self, index, path, group, style, transform, redwork=True):
+        if redwork:
+            path_id = self.svg.get_unique_id('redwork_')
+            label = _("Redwork") + f' {index}'
+        else:
+            path_id = self.svg.get_unique_id('underpath_')
+            label = _("Redwork Underpath") + f' {index}'
 
         element = PathElement(
             id=path_id,
