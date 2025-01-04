@@ -13,7 +13,7 @@ data_title:
 
 {% include upcoming_release.html %}
 
-![Abecedaire](/assets/images/fonts/western_light.png)
+![Western light](/assets/images/fonts/western_light.png)
 
 ## Glyphs
 
