@@ -1,7 +1,7 @@
 ---
 title: "Import et Export de Fichiers"
 permalink: /fr/docs/import-export/
-last_modified_at: 2021-09-10
+last_modified_at: 2025-01-04
 toc: true
 ---
 ## Importation de fichiers de broderie
