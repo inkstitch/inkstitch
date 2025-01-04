@@ -31,7 +31,7 @@ data_title:
 Ces fontes comportent  {{ font.glyphs.size }} glyphes:
 
 ```
-{{ font.glyphs | sort | join: ' ' }}
+{{ font1.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
