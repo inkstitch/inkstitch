@@ -227,7 +227,7 @@ class FillToStroke(InkstitchExtension):
                 continue
 
     def _close_gaps(self, lines, cut_lines):
-        snaped_lines = []
+        snapped_lines = []
         lines = MultiLineString(lines)
         for i, line in enumerate(lines.geoms):
             # for each cutline check if a line starts or ends close to it
@@ -239,16 +239,16 @@ class FillToStroke(InkstitchExtension):
             l_l = lines.difference(line)
             for cut_line in cut_lines:
                 distance = start.distance(l_l)
-                if cut_line.distance(start) < 0.6:
+                if cut_line.distance(start) < 1:
                     distance = start.distance(l_l)
                     new_start_point = self._extend_line(line.coords[0], line.coords[1], distance)
                     coords[0] = nearest_points(Point(list(new_start_point)), l_l)[1]
-                if cut_line.distance(end) < 0.6:
+                if cut_line.distance(end) < 1:
                     distance = end.distance(l_l)
                     new_end_point = self._extend_line(line.coords[-1], line.coords[-2], distance)
                     coords[-1] = nearest_points(Point(list(new_end_point)), l_l)[1]
-            snaped_lines.append(LineString(coords))
-        return snaped_lines
+            snapped_lines.append(LineString(coords))
+        return snapped_lines
 
     def _extend_line(self, p1, p2, distance):
         start_point = InkstitchPoint.from_tuple(p1)
