@@ -9,7 +9,7 @@ Ink/Stitch aims to be a full-fledged embroidery digitizing platform based entire
 Want to learn more?
 
 * Check out our list of [features](https://inkstitch.org/features/)
-* [Quick Install](https://inkstitch.org/docs/install/) on Linux and Windows (Mac support in the works!)
+* [Quick Install](https://inkstitch.org/docs/install/) on Linux, Windows and Mac
 * See some [photos](https://inkstitch.org/tutorials/inspiration/) showing what Ink/Stitch can do
 * Watch some [videos](https://inkstitch.org/tutorials/video/) of Ink/Stitch in action
 * ...and lots more on our [website](https://inkstitch.org)
@@ -18,7 +18,7 @@ Want to learn more?
 
 _by @lexelby, an Ink/Stitch programmer_
 
-I received a really wonderful christmas gift for a geeky programmer hacker: an [embroidery machine](http://www.brother-usa.com/homesewing/ModelDetail.aspx?ProductID=SE400).  It's pretty much a CNC thread-bot... I just had to figure out how to design programs for it.  The problem is, **all free embroidery design software seemed to be terrible**, especially when you add in the requirement of being able to run in Linux, my OS of choice.
+I received a really wonderful christmas gift for a geeky programmer hacker: an embroidery machine.  It's pretty much a CNC thread-bot... I just had to figure out how to design programs for it.  The problem is, **all free embroidery design software seemed to be terrible**, especially when you add in the requirement of being able to run in Linux, my OS of choice.
 
 I started off hacking on [inkscape-embroidery](http://www.jonh.net/~jonh/inkscape-embroidery/).  It had some of the basic capabilities I needed, and I saw a lot of potential.  I love the idea of using an existing, ultra-powerful SVG editor as the basis for an embroidery design suite.
 
