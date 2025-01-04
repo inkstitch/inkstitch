@@ -1,6 +1,6 @@
 ---
 title: "Barstitch"
-permalink: /fonts/barstitch_bold/
+permalink: /fr/fonts/barstitch_bold/
 last_modified_at: 2025-01-04
 toc: false
 preview_image:
