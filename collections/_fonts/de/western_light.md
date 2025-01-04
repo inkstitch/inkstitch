@@ -7,7 +7,7 @@ preview_image:
   - url: /assets/images/fonts/western_light.png
     height: 14
 data_title:
-  - abecedaire
+  - western_light
 ---
 {%- assign font = site.data.fonts.western_light.font -%}
 
