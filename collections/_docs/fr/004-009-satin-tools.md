@@ -1,7 +1,7 @@
 ---
 title: "Outils Satin"
 permalink: /fr/docs/satin-tools/
-last_modified_at: 2025-01-04
+last_modified_at: 2025-01-05
 toc: true
 ---
 `Extensions > Ink/Stitch  > Outils :  Satin` inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/fr/docs/stitches/satin-column/).
@@ -64,48 +64,54 @@ Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'
 5. Faire `Extensions > Ink/Stitch  > Outils de Satin > Scinder colonne Satin`.
 6. La commande de point de partage et la ligne de connexion disparaissent et il semble que rien ne s'être passé. Sélectionnez votre satin et vous verrez qu'il a été divisé.
 
-## Fill to Satin
+## Remplissage en Satin {#fill-to-satin}
+
 
 {% include upcoming_release.html %}
 
-Fill to satin can be used to convert a fill into a satin. It is a semi-automatic function and requires a little manual work.
+Le [Fichier d'exemple](#sample-file) vous aidera à comprendre le fonctionnement.
 
-### Usage
+Remplissage en satin peut être utilisé pour convertir un remplissage en satin. C'est une fonction semi-automatique qui nécessite un peu de travail manuel.
 
-* Prepare your fill objects. It can be necessary that you need to split up your fill to simpler shapes with the shape
-  builder tool or with other path editing tools in Inkscape.
-* Make sure the fill has only a fill and not a stroke color
-* Create rungs with a stroke color (and no fill color). Rungs help define how the fill shape is going to be converted.
+Le [Fichier d'exemple](#sample-file) vous aidera à comprendre le fonctionnement.
 
-  Make sure to add a sufficient number of rungs.
-  Especially when you want to enable the option `start/end at rung` which will remove a portion from the open ends.
-  {: .notice--warning }
-* Select fill and rungs
-* Run `Extensions > Ink/Stitch > Tools: Satin > Fill to Satin...`
-* Enable desired options
-* Click `Apply`
+### Utilisation
+
+* Préparez vos objets de remplissage. Il peut être nécessaire de diviser votre remplissage en formes plus simples avec l'outil de création de formes ou avec d'autres outils d'édition de chemins dans Inkscape.
+* Assurez-vous que le remplissage n'a qu'une couleur de remplissage et pas de couleur de contour.
+* Dans un objet à part, créez des traverses avec une couleur de contour (et aucune couleur de remplissage). Les traverses aident à définir comment la forme de remplissage va être convertie.
+
+Assurez-vous d'ajouter un nombre suffisant de traverses, en particulier lorsque vous souhaitez activer l'option `début/fin à la traverse` qui supprime une partie des extrémités ouvertes.
+{: .notice--warning }
+* Sélectionnez le remplissage et les traverses
+* Exécutez `Extensions > Ink/Stitch > Outis: Satin > Remplissage en Satin...`
+* Activez les options souhaitées
+* Cliquez sur `Appliquer`
 
 ### Options
 
-Option               | Descprition
+Option               | Description
 ---------------------|-------------
-Start / end at rung  | When enabled open end sections will be removed from the satin. Please note, that you need to define a sufficient number of rungs or you will see missing parts. This option is useful, as in most cases you won't want your satin to end short as it pushes towards the ends when you stitch it out.
-Center-walk underlay | Adds a default center-walk underlay to the satin(s)
-Contour underlay     | Adds a default contour underlay to the satin(s)
-Zig-zag underlay     | Adds a default zig-zag underlay to the satin(s)
-Keep original paths  | Keep or remove selected paths
+Début / fin à la traverse | Lorsque cette option est activée, les sections d'extrémité ouvertes seront supprimées du satin. Veuillez noter que vous devez définir un nombre suffisant de traverses faute de quoi vous aurez des parties manquantes. Cette option est utile, car dans la plupart des cas, vous ne voudrez pas que votre satin se termine trop étroitement court car il pousse vers les extrémités lorsque vous le cousez.
+Sous-couche de passage central | Ajoute une sous-couche centrale par défaut au(x) satin(s)
+Sous-couche de contour | Ajoute une sous-couche de contour par défaut au(x) satin(s)
+Sous-couche en zigzag | Ajoute une sous-couche zigzag par défaut au(x) satin(s)
+Conserver les chemins originels | Conserver ou supprimer les chemins sélectionnés
 
-### Rungs and intersections
+### Traverses et intersections
 
-Rungs define the satin sections and also the direction of stitching (as with every satin columns).
-A specialty for this extension is the bridge rung (half rung) which only intersects with one of the rails. It can inform Ink/Stitch, that you wish to bridge this section at intersection points.
-Unbridged intersections simply leave a gap.
+Les traverses définissent les découpages en colonnes de satin ainsi que la direction de la broderie (comme pour toutes les colonnes de satin).
+Une spécialité de cette extension est la traverse pont (demi-traverse) qui ne croise qu'un des rails. Elle sert à informer Ink/Stitch que vous souhaitez relier cette section aux points d'intersection.
+Les intersections non reliées laissent simplement un espace vide.
 
-![Convert to satin with and without bridge](/assets/images/docs/fill_to_satin_bridge.png)
 
-### Sample file
 
-[Download the fill to satin playground file](/assets/images/docs/fill_to_satin_playground.svg){: title="Download SVG File" download="fill_to_satin_playground.svg" }
+
+![Conversion en satin avec  et sans traverse pont](/assets/images/docs/fill_to_satin_bridge.png)
+
+### Fichier d'exemple {#sample-file}
+
+[Téléchargez le fichier d'exemple](/assets/images/docs/fill_to_satin_playground.svg){: title="Download SVG File" download="fill_to_satin_playground.svg" }
 
 ## Intervertir les rails des colonnes satin
 
