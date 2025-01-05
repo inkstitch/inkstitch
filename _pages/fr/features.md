@@ -68,7 +68,7 @@ stitches:
               Créez des motifs de points  avec l'effet de chemin Inkscape [Motif suivant chemin](/fr/tutorials/patterned-unning-stitch/).<br>
               Générez un motif en [Richelieu](/fr/docs/cutwork/) ou  en [Redwork](/fr/docs/stroke-tools/#redwork).
 
-              * **Types de colonnes satin** : [satin](/fr/docs/stitches/satin-column/), [point en E](/fr/docs/stitches/e-stitch/), [point en S](/fr/docs/stitches/s-stitch/), [zigzag sati](/fr/docs/stitches/zigzag-satin-stitch/), etc.<br>
+              * **Types de colonnes satin** : [satin](/fr/docs/stitches/satin-column/), [point en E](/fr/docs/stitches/e-stitch/), [point en S](/fr/docs/stitches/s-stitch/), [zigzag satin](/fr/docs/stitches/zigzag-satin-stitch/), etc.<br>
     
                 Utilisez différentes méthodes pour générer des colonnes satin. Ajoutez une sous-couche si nécessaire. Définissez des options de randomisation ou personnalisez le découpage des points pour les colonnes larges.<br>
     
@@ -140,9 +140,9 @@ import_export:
     title: "Import et Export"
     excerpt: "[Import et Export](/docs/import-export/) beaucoup de formats populaires  de broderie machine (incluant des exports en masse)
 
-              * ***Ecriture***: CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
+              * ***Ecriture***: CSV, **DST**, **EXP** (et INF), **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 
-              * ***Lecture***: 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
+              * ***Lecture***: 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP** (et INF), EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
              "
 
 resources:
