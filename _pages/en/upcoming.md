@@ -159,13 +159,11 @@ A tool for font authors which sets a specified color sort index on selected elem
 Glyphlist update has been part of the font management and was replaced by the much more powerful
 [Edit JSON extension](/docs/font-tools/#edit-json)  [#3380](https://github.com/inkstitch/inkstitch/pull/3380)
 
-## Stitch types
-
-### Stitch type updates
+## Stitch type Updates
 
 * Automated end point calculation for fill and satin (ends at nearest point) [#3370](https://github.com/inkstitch/inkstitch/pull/3370)
 
-#### Clones
+### Clones
 
 * Clones now also clone commands attached to element and its children. (#3032, #3121) [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
 

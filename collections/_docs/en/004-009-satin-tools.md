@@ -89,7 +89,7 @@ Fill to satin can be used to convert a fill into a satin. It is a semi-automatic
 
 Option               | Descprition
 ---------------------|-------------
-Start / end at rung  | When enabled open end sections will be removed from the satin. Please note, that you need to define a sufficient number of rungs or you will see missing parts. This option is useful, as in most cases you won't want your satin to end short as it pushes towards the ends when you stitch it out.
+Start / end at rung  | When enabled open end sections will be removed from the satin. Please note, that you need to define a sufficient number of rungs or you will see missing parts. This option is useful, as in most cases you want your satin to cut short as it pushes out towards the ends when you stitch it out.
 Center-walk underlay | Adds a default center-walk underlay to the satin(s)
 Contour underlay     | Adds a default contour underlay to the satin(s)
 Zig-zag underlay     | Adds a default zig-zag underlay to the satin(s)
