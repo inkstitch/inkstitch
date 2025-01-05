@@ -103,7 +103,7 @@ tools:
               Cela signifie qu'au delà des outils proposés par Ink/Stitch il y a énormément d'outils inclus dans Inkscape ou dans d'autres extensions.
               
 
-              Soyez créatifs et racontez nous vos trouvailles. Même nous ne ne connaissons pas encore toutes les possibilités.
+              Soyez créatifs et racontez nous vos trouvailles. Même nous, nous ne ne connaissons pas encore toutes les possibilités.
              "
     
 preview:
@@ -115,53 +115,50 @@ preview:
               * [Simulateur et aperçu du plan de broderie sur le canevas](/fr/docs/visualize/)
 
               * Sortie hautement personnalisable [impression au format PDF](/fr/docs/print-pdf/) avec rendu réaliste et mode de dessin au trait<br>
-                **Mise en page orientée opérateur de la machine**  avec blocs de couleur, noms des fils, nombres de points et notes personnalisées<br>
-                **Mise en page orientée client** conçue pour être envoyée à votre client
+                * **Mise en page orientée opérateur de la machine**  avec blocs de couleur, noms des fils, nombres de points et notes personnalisées<br>
+                * **Mise en page orientée client** conçue pour être envoyée à votre client
              "
     
 thread:
   - image_path: /assets/images/docs/zigzagmeander_grumpycat.jpg
     alt: "Chat en remplissage en méandres brodé avec un fil multicolore"
     title: "Gestion des fils"
-    excerpt: "Ink/Stitch has a [thread management](/docs/thread-color/) section in the menu.
+    excerpt: "Ink/Stitch a une section [gestion des fils](/fr/docs/thread-color/) dans son menu.
 
-              * Install thread palettes from over 60 manufacturers
+              * Installez des palettes de fils de plus de 60 fabricants
 
-              * Generate your own thread palettes easily
-
-              * Export and apply thread lists for embroidery files or match colors of a design to selected thread palettes
-
-              * Thread names and catalog numbers included in pdf outputs and in embroidery file formats which are capable to store color inoformation
-             "
+              * Générez facilement vos propres palettes de fils
+                
+              * Exportez et appliquez des listes de fils pour les fichiers de broderie ou faites correspondre les couleurs d'un motif aux palettes de fils sélectionnées
+                
+              * Noms de fils et numéros de catalogue inclus dans les sorties PDF et dans les formats de fichiers de broderie capables de stocker des informations sur les couleurs
+           "
 
 import_export:
   - image_path: /assets/images/galleries/augusa/01-butterfly.jpg
-    alt: "Embroidered butterfly on a shirt"
-    title: "Import and Export"
-    excerpt: "[Import and Export](/docs/import-export/) many popular machine embroidery formats (including batch export)
+    alt: "Papillon brodé sur un support"
+    title: "Import et Export"
+    excerpt: "[Import et Export](/docs/import-export/) beaucoup de formats populaires  de broderie machine (incluant des exports en masse)
 
-              * ***Writing***: CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
+              * ***Ecriture***: CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
 
-              * ***Reading***: 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
+              * ***Lecture***: 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
              "
 
 resources:
   - image_path: /assets/images/galleries/fonts/magnolia_KOR/bicolor2.jpg
-    alt: "Multicolor satin font. Text: La vie est belle."
-    title: "Learning Resources and the Ink/Stitch-Community"
-    excerpt: "Ink/Stitch is a community project. Community members can provide helpful information and tutorials.
+    alt: "Police satin multicolore. Text: La vie est belle."
+    title: "Ressources d'apprentissage et communauté Ink/Stitch"
+    excerpt: "Ink/Stitch est un projet communautaire. Les membres de la communauté peuvent fournir des informations utiles et des tutoriels.
 
+              Vous pouvez donc trouver un nombre croissant de [tutoriels](/tutorials/) sur divers sujets sur le site Web Ink/Stitch.
+              Découvrez des cas d'utilisation spéciaux pour des types de points ou des techniques de broderie spécifiques. Apprenez à optimiser votre conception de broderie
+              ou à tirer le meilleur parti des fonctionnalités d'Inkscape pour la broderie.
 
-              Therefore you can find a growing amount of [tutorials](/tutorials/) about various topics on the Ink/Stitch website.
-              Learn about special use cases for specific stitch types or embroidery techniques. Learn how to optimize your embroidery design
-              or how to make best use of Inkscape features for embroidery.
+              La [communauté](/fr/docs/faq/) est toujours heureuse de vous aider en cas de problème ou de questions simples de débutant.
 
-
-              The [community](/docs/faq/) is always happy to help when there is trouble or just simple beginner questions.
-
-
-              Of course you are welcome to [get involved](/developers/introduction/) and see what you can do to bring Ink/Stitch forward.
-             "
+              Bien sûr, vous êtes les bienvenus pour [vous impliquer](/fr/developers/introduction/) et voir ce que vous pouvez faire pour faire avancer Ink/Stitch.
+         "
 ---
 ## Caractéristiques notables d'Ink/Stitch 
 
