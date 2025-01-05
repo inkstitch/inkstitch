@@ -34,7 +34,7 @@ lettering:
 
               * Ajoutez du texte directement avec votre clavier
               
-              * Choisissez parmi de nombreuses [polices] pré-numérisées (/fr/fonts/font-library/)
+              * Choisissez parmi de nombreuses [polices](/fr/fonts/font-library/) pré-numérisées
               
               * Numérisez vos propres polices et intégrez-les dans l'outil de lettrage (ou partagez-les avec tout le monde)
               
@@ -44,7 +44,7 @@ lettering:
     
                 **Filtre de catégorie** : Vous recherchez un type de police spécifique ? Le filtre de catégorie de police vous aide à trouver des polices avec des types ou des styles de points spécifiques.<br>
                 **Filtre de taille de police** : Trouvez les polices qui correspondent à votre conception. La police choisie s'adaptera automatiquement à la valeur de taille saisie dans le filtre.<br>
-                **Filtre de glyphe** : Affichez uniquement les polices avec tous les glyphes nécessaires pour le texte donné
+                **Filtre de glyphe** : Affichez uniquement les polices avec tous les glyphes nécessaires pour le texte donné.
 
 
                 Une fois le texte inséré dans le document, vous pouvez modifier les chemins et les paramètres de broderie comme vous le souhaitez.
@@ -63,7 +63,7 @@ stitches:
               * **Types de points droits** :
                 [point droit](/fr/docs/stitches/running-stitch/),
                 [point multiple](/fr/docs/stitches/bean-stitch/),
-                [broderie ondulé](/fr/docs/stitches/ripple-stitch/),
+                [broderie ondulée](/fr/docs/stitches/ripple-stitch/),
                 etc.<br>
               Créez des motifs de points  avec l'effet de chemin Inkscape [Motif suivant chemin](/fr/tutorials/patterned-unning-stitch/).<br>
               Générez un motif en [Richelieu](/fr/docs/cutwork/) ou  en [Redwork](/fr/docs/stroke-tools/#redwork).
