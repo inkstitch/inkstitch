@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-01-01
+last_modified_at: 2025-01-05
 sidebar:
   nav: pages
 toc: true
@@ -10,15 +10,31 @@ toc: true
 
 ### New Fonts
 
+* Barstitch bold
+
+  ![Barstitch bold](/assets/images/fonts/barstitch_bold.png)
+* Barstitch textured
+
+  ![Barstitch textured](/assets/images/fonts/barstitch_textured.png)
 * [Cogs_KOR](/fonts/cogs_KOR)
 
   ![Cogs_KOR](/assets/images/fonts/cogs_KOR.png)
 * [Magnolia tamed](/fonts/magnolia-script/)
 
   ![Magnolia tamed preview](/assets/images/fonts/magnolia_tamed.png)
+* Pixel 10
+
+  ![Pixel 10](/assets/images/fonts/pixel_10.png)
+* Sunset
+
+  ![Sunset](/assets/images/fonts/sunset.png)
+* Western light
+
+  ![Wetern light](/assets/images/fonts/western_light.png)
 
 ### Font updates
 
+* Simplify font description [#3350](https://github.com/inkstitch/inkstitch/pull/3350)
 * Namskout: fix Z [#3362](https://github.com/inkstitch/inkstitch/pull/3362)
 * Remove unwanted jumps in ink/stitch medium font [#3295](https://github.com/inkstitch/inkstitch/pull/3295)
 * Make more fonts sortable [#3280](https://github.com/inkstitch/inkstitch/pull/3280)
@@ -41,6 +57,14 @@ toc: true
 Edit JSON is part of the Font Management and helps font authors to easily correct data in the json file. It is especially useful for kerning corrections as it simulates a custom text as you update the kerning.
 
 [Read more](/docs/font-tools/#edit-json)
+
+### Fill to Satin
+
+`Tools: Satin > Fill to Satin...` [#3406](https://github.com/inkstitch/inkstitch/pull/3406)
+
+Converts a fill to a satin. Manual setting of rungs is required.
+
+[Read more](/docs/satin-tools/#fill-to-satin)
 
 ### Remove duplicated points
 
@@ -101,6 +125,11 @@ A tool for font authors which sets a specified color sort index on selected elem
 ### Multicolor Satin
 
 * Option to adjust underlay [#3152](https://github.com/inkstitch/inkstitch/pull/3152)
+
+### Redwork
+
+* Add combine option [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
+* Add keep originals option [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
 
 ### Select elements
 
@@ -175,6 +204,8 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ## Bug Fixes
 
+* Update README [#3405](https://github.com/inkstitch/inkstitch/pull/3405)
+* Fix an other FloatingPointError [#3404](https://github.com/inkstitch/inkstitch/pull/3404)
 * Minimize multi shape tartan jumps [#3386](https://github.com/inkstitch/inkstitch/pull/3386)
 * Lettering: prevent duplicated output [#3365](https://github.com/inkstitch/inkstitch/pull/3365)
 * Fix path effect clips (couldn't be used before) [#3364](https://github.com/inkstitch/inkstitch/pull/3364)
