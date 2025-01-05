@@ -151,9 +151,12 @@ resources:
     title: "Ressources d'apprentissage et communauté Ink/Stitch"
     excerpt: "Ink/Stitch est un projet communautaire. Les membres de la communauté peuvent fournir des informations utiles et des tutoriels.
 
+
               Vous pouvez donc trouver un nombre croissant de [tutoriels](/tutorials/) sur divers sujets sur le site Web Ink/Stitch.
-              Découvrez des cas d'utilisation spéciaux pour des types de points ou des techniques de broderie spécifiques. Apprenez à optimiser votre conception de broderie
-              ou à tirer le meilleur parti des fonctionnalités d'Inkscape pour la broderie.
+    
+              Découvrez des cas d'utilisation spéciaux pour des types de points ou des techniques de broderie spécifiques.
+
+              Apprenez à optimiser votre conception de broderie ou à tirer le meilleur parti des fonctionnalités d'Inkscape pour la broderie.
 
               La [communauté](/fr/docs/faq/) est toujours heureuse de vous aider en cas de problème ou de questions simples de débutant.
 
