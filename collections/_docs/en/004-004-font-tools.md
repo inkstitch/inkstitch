@@ -24,7 +24,7 @@ The json file has to include as a minimum requirement the fonts name.
 
 {% include upcoming_release.html %}
 
-This extension allows you do edit an existing font information file. If the font doesn't have a json file file, create one with generated with [generate JSON](#generate-json)
+This extension allows you do edit an existing font information file. If the font doesn't have a json file, create one with generated with [generate JSON](#generate-json)
 
 ### Usage
 
