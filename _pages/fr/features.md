@@ -154,11 +154,15 @@ resources:
 
               Vous pouvez donc trouver un nombre croissant de [tutoriels](/tutorials/) sur divers sujets sur le site Web Ink/Stitch.
     
+    
               Découvrez des cas d'utilisation spéciaux pour des types de points ou des techniques de broderie spécifiques.
+    
 
               Apprenez à optimiser votre conception de broderie ou à tirer le meilleur parti des fonctionnalités d'Inkscape pour la broderie.
+    
 
               La [communauté](/fr/docs/faq/) est toujours heureuse de vous aider en cas de problème ou de questions simples de débutant.
+    
 
               Bien sûr, vous êtes les bienvenus pour [vous impliquer](/fr/developers/introduction/) et voir ce que vous pouvez faire pour faire avancer Ink/Stitch.
          "
