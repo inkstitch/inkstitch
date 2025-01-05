@@ -95,7 +95,7 @@ stitches:
               pour la conversion, l'optimisation et le routage.
              "
     
-Outils:
+tools:
   - image_path: /assets/images/tutorials/cookie_cutter_tiling/Tshirt.png
     alt: "4 itérations de chemise, depuis un contour en remplissage jusqu'à un remplissage sans contour associé à un contour sans remplissage"
     title: "Outils"
@@ -106,7 +106,7 @@ Outils:
               Soyez créatifs et racontez nous vos trouvailles. Même nous ne ne connaissons pas encore toutes les possibilités.
              "
     
-Prévisualisation:
+preview:
   - image_path: /assets/images/galleries/fonts/namskout_ags/namskout_tartan_encours.jpg
     alt: "Une brodeuse brode un motif tartan"
     title: "Prévisualisation des points"
@@ -119,7 +119,7 @@ Prévisualisation:
                 **Mise en page orientée client** conçue pour être envoyée à votre client
              "
     
-Fils:
+thread:
   - image_path: /assets/images/docs/zigzagmeander_grumpycat.jpg
     alt: "Chat en remplissage en méandres brodé avec un fil multicolore"
     title: "Gestion des fils"
