@@ -90,7 +90,7 @@ Füllung zu Satin hilft bei der Umwandlung von Füllflächen zu Satinsäulen. Es
 
 Option                             | Beschreibung
 -----------------------------------|-------------
-Beginne / Ende an Richtungsvektor  | Ist diese Funktion aktiviert, werden offene Enden von der Satinsäule entfernt. Hierfür ist es wichtig, dass ausreichend Richtungsvektoren für jeden Teilabschnitt gesetzt wurden. Ansonsten kann es zu fehlenden Bereichen führen. Diese Option ist ein gutes Mittel, die Satinsäulen zu verkürzen, da sie beim Sticken wieder nach außen drückt.
+Beginne / Ende an Richtungsvektor  | Ist diese Funktion aktiviert, werden offene Enden von der Satinsäule entfernt. Hierfür ist es wichtig, dass ausreichend Richtungsvektoren für jeden Teilabschnitt gesetzt wurden. Ansonsten kann es zu fehlenden Bereichen führen. Diese Option ist ein gutes Mittel, die Satinsäulen zu verkürzen, da sie sich beim Aussticken wieder verlängern.
 Mittellinien Unterlage             | Fügt eine Mittellinien-Unterlage hinzu
 Konturunterlage                    | Fügt eine Konturunterlage hinzu
 Zick-Zack Unterlage                | Fügt eine Zick-Zack-Unterlage hizu
