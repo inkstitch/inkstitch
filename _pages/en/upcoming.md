@@ -10,10 +10,10 @@ toc: true
 
 ### New Fonts
 
-* Barstitch bold
+* [Barstitch bold](/fonts/barstitch_bold//)
 
   ![Barstitch bold](/assets/images/fonts/barstitch_bold.png)
-* Barstitch textured
+* [Barstitch textured](/fonts/barstitch_bold//)
 
   ![Barstitch textured](/assets/images/fonts/barstitch_textured.png)
 * [Cogs_KOR](/fonts/cogs_KOR)
@@ -22,13 +22,13 @@ toc: true
 * [Magnolia tamed](/fonts/magnolia-script/)
 
   ![Magnolia tamed preview](/assets/images/fonts/magnolia_tamed.png)
-* Pixel 10
+* [Pixel 10](/fonts/pixel10/)
 
   ![Pixel 10](/assets/images/fonts/pixel_10.png)
-* Sunset
+* [Sunset](/fonts/sunset/)
 
   ![Sunset](/assets/images/fonts/sunset.png)
-* Western light
+* [Western light](/fonts/western_light/)
 
   ![Wetern light](/assets/images/fonts/western_light.png)
 
