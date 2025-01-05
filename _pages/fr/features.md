@@ -47,48 +47,45 @@ lettering:
 
                 Une fois le texte inséré dans le document, vous pouvez modifier les chemins et les paramètres de broderie comme vous le souhaitez.
 
-                Créez des résultats intéressants avec les outils disponibles, par exemple [Lettrage le long du chemin](/docs/lettering/#lettering-along-path) ou Inkscape [effets de chemin](/tutorials/distort/) tels que la déformation d'enveloppe.
+                Créez des résultats intéressants avec les outils d'Inkscape disponibles, par exemple [Lettrage le long du chemin](/docs/lettering/#lettering-along-path) ou la déformation d'enveloppe [effets de chemin](/tutorials/distort/).
             "
 stitches:
   - image_path: /assets/images/galleries/fonts/abril/WAbril.jpg
-    alt: "embroidered letter with various stitch types"
-    title: "Manual Stitch Placement and Complex Stitch Patterns"
-    excerpt: "Explore the [stitch types](/docs/stitch-library/) available in Ink/Stitch and open up a world of creative possibilities.
+    alt: "Lettre brodée avec divers type de points"
+    title: "Point manuel et motifs de points complexes"
+    excerpt: "Explorez les [types de points](/fr/docs/stitch-library/) disponibles dans Ink/Stitch et ouvrez vous un monde de possibilités créatives.
+    
+              * **[Placement manuel des points]((/docs/stitches/manual-stitch/))** : placez chaque point exactement où vous le souhaitez
 
-
-              * **[Manual stitch placement]((/docs/stitches/manual-stitch/))**: place each stitch exactly where you want it
-
-              * **Stroke stitch types**:
-                [running stitch](/docs/stitches/running-stitch/),
-                [bean stitch](/docs/stitches/bean-stitch/),
-                [ripple stitch](/docs/stitches/ripple-stitch/),
+              * **Types de points droitst** :
+                [point droit](/fr/docs/stitches/running-stitch/),
+                [point multiple](/fr/docs/stitches/bean-stitch/),
+                [broderie ondulé](/fr/docs/stitches/ripple-stitch/),
                 etc.<br>
-                Create patterned lines with the Inkscape path effect [pattern along line](/tutorials/patterned-unning-stitch/).<br>
-                Generate a [cutwork](/docs/cutwork/) or [redwork](/docs/stroke-tools/#redwork) pattern.
+              Créez des mmotifs de p oint  avec l'effet de chemin Inkscape [Motif suivant chemin](/fr/tutorials/patterned-unning-stitch/).<br>
+              Générez un motif en [Richelieu](/fr/docs/cutwork/) ou  en [redwork](/fr/docs/stroke-tools/#redwork).
 
-              * **Satin stitch types**: [satin](/docs/stitches/satin-column/), [E-stitch](/docs/stitches/e-stitch/), [S-stitch](/docs/stitches/s-stitch/), [zig-zag satin](/stitches/zigzag-satin-stitch/), etc.<br>
-                Use various routines to generate satin stitches. Add underlay as necessary. Define randomization options or customize split stitches.<br>
-                A special highlight is the possibility to easily generate [multicolor satins](/docs/satin-tools/#multicolor-satin).
+              * **Types de colonnes satin** : [satin](/fr/docs/stitches/satin-column/), [point en E](/fr/docs/stitches/e-stitch/), [point en S](/fr/docs/stitches/s-stitch/), [satin zigzag](/fr/docs/stitches/zigzag-satin-stitch/), etc.<br>
+                Utilisez différentes méthodes pour générer des colonnes satin. Ajoutez une sous-couche si nécessaire. Définissez des options de randomisation ou personnalisez le découpage des points pour les colonnes larges.<br>
+                Un point fort particulier est la possibilité de générer facilement des [satins multicolores](/docs/satin-tools/#multicolor-satin).
 
-              * **Fill stitch types**:
-                [fill](/docs/stitches/fill-stitch/),
-                [circular fill](/docs/stitches/circular-fill/),
-                [contour fill](/docs/stitches/contour-fill/),
-                [guided fill](/docs/stitches/guided-fill/),
-                [linear gradient fill](/docs/stitches/linear-gradient-fill/),
-                [meander fill](/docs/stitches/meander-fill/),
-                [tartan fill](/docs/stitches/tartan-fill/),
+               * **Types de points de remplissage** :
+                [remplissage](/fr/docs/stitches/fill-stitch/),
+                [remplissage circulaire](/fr/docs/stitches/circular-fill/),
+                [remplissage selon contour](/fr/docs/stitches/contour-fill/),
+                [remplissage guidé](/fr/docs/stitches/guided-fill/),
+                [remplissage en dégadé linéaire](/fr/docs/stitches/linear-gradient-fill/),
+                [remplissage en méandres](/fr/docs/stitches/meander-fill/),
+                [remplissage tartan](/fr/docs/stitches/tartan-fill/),
                 etc.<br>
-                Adjust stitch length, row spacing and row angle among other options.
-                Use underlay as necessary.
+                Ajustez la longueur du point, l'espacement des rangéess et leur angle parmi d'autres options.
+                Ajoutez une (ou des) sous-couche si nécessaire.
+             
+               Les [textures](/fr/docs/stitches/patterns/) personnalisées peuvent être appliquées à tous les types de points disponibles.
 
-
-              Custom [Patterns](/docs/stitches/patterns/) can be applied to all available stitch types.
-
-
-              Each stitch type comes with it's own set of tools ([stroke tools](/docs/stroke-tools/),
-              [satin tools](/docs/satin-tools/), [fill tools](/docs/fill-tools/))
-              for conversion, optimization and routing.
+              Chaque type de point est livré avec son propre ensemble d'outils ([outils: trait](/fr/docs/stroke-tools/),
+              [outils: satin](/fr/docs/satin-tools/), [outils: remplissage](/fr/docs/fill-tools/))
+              pour la conversion, l'optimisation et le routage.
              "
 
 tools:
