@@ -1,7 +1,7 @@
 ---
 title: "Satin Werkzeuge"
 permalink: /de/docs/satin-tools/
-last_modified_at: 2025-01-01
+last_modified_at: 2025-01-05
 toc: true
 ---
 Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinsäulen](/docs/stitches/satin-column/) erleichtern sollen.
@@ -16,7 +16,6 @@ Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anza
 
 **Tip:** Setze [Tastenkürzel](/docs/customize/) um die einzelnen Satin-Werkzeuge schneller ausführen zu können.
 {: .notice--info}
-
 
 ## Automatisch geführte Satinsäulen...
 
@@ -40,6 +39,85 @@ Dieses Werkzeug ersetzt deine Satinsäulen mit einem Set von neuen Satinsäulen 
 * {% include upcoming_release.html %}
 
   **Satinsäulen behalten** definiert, ob die ausgewählten Elemente nach der Umwandlnug gelöscht werden oder für spätere Korrekturen erhalten bleiben.
+
+## Linie zu Satin
+
+Diese Erweiterung konvertiert einen einfachen Pfad in eine Satinsäulen. Dabei wird die Linienbreite übernommen. Nach der Konvertierung wirst du zwei "Holme" und (möglicherweise) viele Sprossen (wie bei einer Leiter). Wieviele Sprossen es gibt hängt ganz von der Form der Linie ab.
+
+### Funktionsweise
+
+1. Zeichne eine Beziér-Kurve (`B`)
+2. Stelle die Linienbreite ein (`Ctrl+Shift+F)
+2. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Linie zu Satin` aus
+
+
+## Satinsäule schneiden
+
+Diese Option schneidet eine Satinsäule an einem vordefiniertem Punkt. Alle Parameter die der Säule zuvor zugewiesen wurden werden auf beide Teile übertragen. Auch alle Sprossen bleiben erhalten. Sollte eine der beiden Säulen keine Sprossen beinhalten, wird eine Neue hinzugefügt.
+
+### Funktionsweise
+
+1. Wähle eine Satinsäule an (eine Zick-Zack-Linie funktioniert hier nicht)
+2. Füge über `Erweiterungen > Ink/Stitch  > Befehle > Befehle mit gewählten Objekten verknüpfen > Satin cut point` einen "Satin-Schnittstelle"-Befehl ein
+3. Bewege das Symbol zur gewünschten Stelle. Der Zeiger muss genau auf die Stelle treffen, wo die Satinsäule geschnitten werden soll
+4. Wähle die Satinsäule erneut an
+5. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Satinsäule schneiden` aus
+6. Der Satin-Schnittstelle-Befehl und sein Zeiger sind verschwunden. Wähle die Satinsäule aus: es sind jetzt zwei.
+
+## Füllung zu Satin
+
+{% include upcoming_release.html %}
+
+Füllung zu Satin hilft bei der Umwandlung von Füllflächen zu Satinsäulen. Es ist eine halbautomatische Funktion und benötigt ein wenig Handarbeit.
+
+### Funktionsweise
+
+* Bereite die Füllobjekte vor. Es kann nötig sein, die Füllflächen mit dem Shape-Builder
+  Werkzeug oder anderen Pfadbearbeitungswerkzeugen in Inkscape in einfachere Formen aufzuteilen.
+* Überprüfe, ob die Füllfläche nur eine Füllfarbe hat (keine Konturfarbe)
+* Erstelle die Richtungsvektoren. Die Richtungsvektoren haben keine Füllfarbe und nur eine Konturfarbe.
+  Sie zerteilen die Füllfläche in Teilbereiche und legen außerdem später den Stichwinkel fest.
+
+  Es ist wichtig, dass eine ausreichende Anzahl an Richtnugsvektoren gesetzt ist.
+  Besonders dann, wenn die Funktion `Beginne / Ende an Richtungsvektor` aktiviert ist, da diese Option die Enden der Satinsäule auslässt.
+  {: .notice--warning }
+* Wähle sowohl die Füllung als auch die Richtungsvektoren aus
+* Öffne den Dialog `Erweiterungen > Ink/Stitch > Werkzeuge: Satin > Füllung zu Satin...`
+* Aktiviere die gewünschten Optionen
+* Klicke auf `Anwenden`
+
+### Optionen
+
+Option                             | Beschreibung
+-----------------------------------|-------------
+Beginne / Ende an Richtungsvektor  | Ist diese Funktion aktiviert, werden offene Enden von der Satinsäule entfernt. Hierfür ist es wichtig, dass ausreichend Richtungsvektoren für jeden Teilabschnitt gesetzt wurden. Ansonsten kann es zu fehlenden Bereichen führen. Diese Option ist ein gutes Mittel, die Satinsäulen zu verkürzen, da sie beim Sticken wieder nach außen drückt.
+Mittellinien Unterlage             | Fügt eine Mittellinien-Unterlage hinzu
+Konturunterlage                    | Fügt eine Konturunterlage hinzu
+Zick-Zack Unterlage                | Fügt eine Zick-Zack-Unterlage hizu
+Original behalten                  | Behalte oder verwerfe die ausgewählten Original-Pfade
+
+### Richtungsvektoren und Kreuzungspunkte
+
+Richtungsvektoren definieren die Teilbereiche der Satinsäule und geben später beim Sticken den Stichwinkel an (wie bei allen Satinsäulen).
+Eine Besonderheit dieser Erweiterung sind die Brücken (halbe Richtungsvektoren). Sie definieren, ob die Säule an Kreuzungspunkten weiter geführt werden soll oder nicht. Ist eine Kreuzung nicht überbrückt, entsteht hier einfach eine Lücke.
+
+![Convert to satin with and without bridge](/assets/images/docs/fill_to_satin_bridge.png)
+
+### Beispieldatei
+
+[Füllung zu Satin Playground herunterladen](/assets/images/docs/fill_to_satin_playground.svg){: title="Download SVG File" download="fill_to_satin_playground.svg" }
+
+## Satinsäule umkehren
+
+Dies ist ein kleines Werkzeug, mit dem der Stichpfad genau geplant werden kann. Bei Anwendung kehrt es eine Satinsäule, die auf der linken Seite beginnt und auf der rechten Seite endet, um. Diese wird nun auf der rechten Seite beginnen und auf der linken Seite enden.
+Sonst wird nichts an der Satinsäule verändert.
+
+![Flip Satin Columns](/assets/images/docs/en/flip-satin-column.jpg)
+
+### Funktionsweise
+
+* Wähle eine oder mehrere Satinsäule(n) aus
+* Starte `Erweiterungen -> Ink/Stitch -> Satinsäule umkehren`
 
 ## Mehrfarbige Satinsäule
 
@@ -82,45 +160,6 @@ Für nähere Infos über die Funktionsweise dieser Erweiterung gibt es im [Tutor
   ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
 
   ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
-
-
-## Linie zu Satin
-
-Diese Erweiterung konvertiert einen einfachen Pfad in eine Satinsäulen. Dabei wird die Linienbreite übernommen. Nach der Konvertierung wirst du zwei "Holme" und (möglicherweise) viele Sprossen (wie bei einer Leiter). Wieviele Sprossen es gibt hängt ganz von der Form der Linie ab.
-
-### Funktionsweise
-
-1. Zeichne eine Beziér-Kurve (`B`)
-2. Stelle die Linienbreite ein (`Ctrl+Shift+F)
-2. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Linie zu Satin` aus
-
-
-## Satinsäule schneiden
-
-Diese Option schneidet eine Satinsäule an einem vordefiniertem Punkt. Alle Parameter die der Säule zuvor zugewiesen wurden werden auf beide Teile übertragen. Auch alle Sprossen bleiben erhalten. Sollte eine der beiden Säulen keine Sprossen beinhalten, wird eine Neue hinzugefügt.
-
-### Funktionsweise
-
-1. Wähle eine Satinsäule an (eine Zick-Zack-Linie funktioniert hier nicht)
-2. Füge über `Erweiterungen > Ink/Stitch  > Befehle > Befehle mit gewählten Objekten verknüpfen > Satin cut point` einen "Satin-Schnittstelle"-Befehl ein
-3. Bewege das Symbol zur gewünschten Stelle. Der Zeiger muss genau auf die Stelle treffen, wo die Satinsäule geschnitten werden soll
-4. Wähle die Satinsäule erneut an
-5. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Satinsäule schneiden` aus
-6. Der Satin-Schnittstelle-Befehl und sein Zeiger sind verschwunden. Wähle die Satinsäule aus: es sind jetzt zwei.
-
-
-## Satinsäule umkehren
-
-Dies ist ein kleines Werkzeug, mit dem der Stichpfad genau geplant werden kann. Bei Anwendung kehrt es eine Satinsäule, die auf der linken Seite beginnt und auf der rechten Seite endet, um. Diese wird nun auf der rechten Seite beginnen und auf der linken Seite enden.
-Sonst wird nichts an der Satinsäule verändert.
-
-![Flip Satin Columns](/assets/images/docs/en/flip-satin-column.jpg)
-
-### Funktionsweise
-
-* Wähle eine oder mehrere Satinsäule(n) aus
-* Starte `Erweiterungen -> Ink/Stitch -> Satinsäule umkehren`
-
 
 ## Linie zu Pfadeffekt-Satin
 

@@ -1,7 +1,7 @@
 ---
 title: "Tools: Satin"
 permalink: /docs/satin-tools/
-last_modified_at: 2025-01-01
+last_modified_at: 2025-01-05
 toc: true
 ---
 `Extensions > Ink/Stitch  > Tools: Satin` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
@@ -41,6 +41,72 @@ This tool will replace your satins with a new set of satin columns in logical st
 
   **Keep original paths** will indicate if the original elements will be removed or kept.
 
+## Convert Line to Satin
+
+This extension will convert a stroke into a satin column with a specified width. After the conversion you will see the two rails and (possibly) lots of rungs, depending on the shape of your line.
+
+### Usage
+
+1. Draw a bezier curve (`B`)
+2. Set the stroke width in the "Fill and Stroke" panel ("Stroke style" tab), which you can access with `Shift+Ctrl+F`
+2. Run `Extensions > Ink/Stitch  >  Tools: Satin > Convert Line to Satin`
+
+## Cut Satin Column
+
+Split a satin column at a specified point. The split happens at a stitch boundary to ensure that the two resulting satins sew just like the original. All parameters set on the original satin remain on the two new satins, and all rungs are retained. If one of the satins would have no rungs left, a new rung is added.
+
+### Usage
+
+1. Select a satin column (simple satin doesn't work)
+2. Attach the "Satin split point" command using `Extensions > Ink/Stitch  > Commands > Attach Commands to Selected Objects`.
+3. Move the symbol (or just the connector line's endpoint) to point to the exact spot you want the satin to be split at.
+4. Select the satin column again.
+5. Run `Extensions > Ink/Stitch  > Tools: Satin > Split Satin Column`.
+6. The split point command and connector line disappear, and nothing else appears to have happened. Select your satin and you'll see that it's been split.
+
+## Fill to Satin
+
+{% include upcoming_release.html %}
+
+Fill to satin can be used to convert a fill into a satin. It is a semi-automatic function and requires a little manual work.
+
+### Usage
+
+* Prepare your fill objects. It can be necessary that you need to split up your fill to simpler shapes with the shape
+  builder tool or with other path editing tools in Inkscape.
+* Make sure the fill has only a fill and not a stroke color
+* Create rungs with a stroke color (and no fill color). Rungs help define how the fill shape is going to be converted.
+
+  Make sure to add a sufficient number of rungs.
+  Especially when you want to enable the option `start/end at rung` which will remove a portion from the open ends.
+  {: .notice--warning }
+* Select fill and rungs
+* Run `Extensions > Ink/Stitch > Tools: Satin > Fill to Satin...`
+* Enable desired options
+* Click `Apply`
+
+### Options
+
+Option               | Descprition
+---------------------|-------------
+Start / end at rung  | When enabled open end sections will be removed from the satin. Please note, that you need to define a sufficient number of rungs or you will see missing parts. This option is useful, as in most cases you won't want your satin to end short as it pushes towards the ends when you stitch it out.
+Center-walk underlay | Adds a default center-walk underlay to the satin(s)
+Contour underlay     | Adds a default contour underlay to the satin(s)
+Zig-zag underlay     | Adds a default zig-zag underlay to the satin(s)
+Keep original paths  | Keep or remove selected paths
+
+### Rungs and intersections
+
+Rungs define the satin sections and also the direction of stitching (as with every satin columns).
+A specialty for this extension is the bridge rung (half rung) which only intersects with one of the rails. It can inform Ink/Stitch, that you wish to bridge this section at intersection points.
+Unbridged intersections simply leave a gap.
+
+![Convert to satin with and without bridge](/assets/images/docs/fill_to_satin_bridge.png)
+
+### Sample file
+
+[Download the fill to satin playground file](/assets/images/docs/fill_to_satin_playground.svg){: title="Download SVG File" download="fill_to_satin_playground.svg" }
+
 ## Flip Satin Column Rails
 
 This is a little tool to help you to plan your stitch path precisely. E.g. flip satin columns to shorten connections between two sections.
@@ -53,39 +119,6 @@ A satin column which originally starts on the left rail and ends on the right, w
 
 * Select one or more satin column(s)
 * Run `Extensions > Ink/Stitch  > Tools: Satin > Flip Satin Columns`
-
-
-## Zigzag Line to Satin
-
-When you trace a pattern manually this tool can be helpful to do it all in one run.
-Instead of drawing first the two rails and then several rungs, this tool allows to draw a square- or zigzag line which then can be converted into the satin column style.
-
-### Usage
-
-* Draw you shape with your prefered pattern style.
-* Select the shape and run `Extensions > Ink/Stitch > Tools: Satin > Zigzag Line to Satin`
-  * Select your path style (pattern)
-  * Chose wether the resulting path should be smoothed out or straight lines
-  * Chose if rungs should be inserted or not. The resulting path will always have the same amount of nodes on both rails.
-
-### Pattern styles
-
-* All patterns start and end with a rung.
-* For **square (1)** and **sawtooth (2)** style pattern draw one rung after the other.
-* The **zigzag (3)** style creates rungs from each peak on each rail to the midpoint between the peaks of the other rail.
-
-![Zigzag Line to Satin Patterns](/assets/images/docs/zigzag-line-to-satin.png)
-
-If you see something like in the image below, you most likely chose the wrong pattern for your stroke setup.
-
-![Zigzag Line wrong pattern](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
-
-### Sharp edges with smoothed option on
-
-When you are using the smooth option it is still possible to quickly produce sharper edges (please be reasonable in terms of the satin column rules).
-
-Sharp edges are indicated by two points that are close together.
-
 
 ## Multicolor Satin
 
@@ -129,20 +162,6 @@ If you want to understand how this extension works internally, [read this](/tuto
   ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
 
 
-## Cut Satin Column
-
-Split a satin column at a specified point. The split happens at a stitch boundary to ensure that the two resulting satins sew just like the original. All parameters set on the original satin remain on the two new satins, and all rungs are retained. If one of the satins would have no rungs left, a new rung is added.
-
-### Usage
-
-1. Select a satin column (simple satin doesn't work)
-2. Attach the "Satin split point" command using `Extensions > Ink/Stitch  > Commands > Attach Commands to Selected Objects`.
-3. Move the symbol (or just the connector line's endpoint) to point to the exact spot you want the satin to be split at.
-4. Select the satin column again.
-5. Run `Extensions > Ink/Stitch  > Tools: Satin > Split Satin Column`.
-6. The split point command and connector line disappear, and nothing else appears to have happened. Select your satin and you'll see that it's been split.
-
-
 ## Stroke to Live Path Effect Satin
 
 Converts a stroke into a satin using a live path effect. This makes it more adaptable in width and shape as a normal satin column.
@@ -182,17 +201,36 @@ Now you can change the pattern in the following ways.
 
 Use `Path > Object to path` to convert this to a standard satin column.
 
+## Zigzag Line to Satin
 
-## Convert Line to Satin
-
-This extension will convert a stroke into a satin column with a specified width. After the conversion you will see the two rails and (possibly) lots of rungs, depending on the shape of your line.
+When you trace a pattern manually this tool can be helpful to do it all in one run.
+Instead of drawing first the two rails and then several rungs, this tool allows to draw a square- or zigzag line which then can be converted into the satin column style.
 
 ### Usage
 
-1. Draw a bezier curve (`B`)
-2. Set the stroke width in the "Fill and Stroke" panel ("Stroke style" tab), which you can access with `Shift+Ctrl+F`
-2. Run `Extensions > Ink/Stitch  >  Tools: Satin > Convert Line to Satin`
+* Draw you shape with your prefered pattern style.
+* Select the shape and run `Extensions > Ink/Stitch > Tools: Satin > Zigzag Line to Satin`
+  * Select your path style (pattern)
+  * Chose wether the resulting path should be smoothed out or straight lines
+  * Chose if rungs should be inserted or not. The resulting path will always have the same amount of nodes on both rails.
 
+### Pattern styles
+
+* All patterns start and end with a rung.
+* For **square (1)** and **sawtooth (2)** style pattern draw one rung after the other.
+* The **zigzag (3)** style creates rungs from each peak on each rail to the midpoint between the peaks of the other rail.
+
+![Zigzag Line to Satin Patterns](/assets/images/docs/zigzag-line-to-satin.png)
+
+If you see something like in the image below, you most likely chose the wrong pattern for your stroke setup.
+
+![Zigzag Line wrong pattern](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
+
+### Sharp edges with smoothed option on
+
+When you are using the smooth option it is still possible to quickly produce sharper edges (please be reasonable in terms of the satin column rules).
+
+Sharp edges are indicated by two points that are close together.
 
 ## Tutorials using Tools: Satin
 

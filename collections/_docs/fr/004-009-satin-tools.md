@@ -40,7 +40,72 @@ Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin
 * {% include upcoming_release.html %}
 
   **Garder les chemins originels**  indique si les éléments originels doivent être gardés ou pas.
-  
+
+## Trait en Satin
+
+Cette extension convertira un trait en une (ou plusieurs) colonne satin avec une largeur spécifiée. Après la conversion, vous verrez les deux rails et (éventuellement) de nombreuses traverses de direction, en fonction de la forme de votre ligne.
+
+### Usage
+
+1. Tracer une courbe de Bézier (`B`)
+2. Définir une largeur de trait
+2. Lancer `Extensions > Ink/Stitch  > Outils: Satin > Trait en Satin`
+
+## Scinder une colonne Satin
+
+Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'un point pour que les deux satins résultants soient cousus exactement comme l'original. Tous les paramètres définis sur le satin d'origine restent sur les deux nouveaux satins et toutes les traverses sont conservées. Si l'un des satins n'a plus de traverse, de nouvelles sont ajoutées.
+
+### Usage
+
+1. Sélectionnez une colonne satin (le satin simple ne fonctionne pas)
+2. Ajouter la commande "Point de partage..." avec `Extensions > Ink/Stitch  > Commandes > Attacher des Commandes à un objet sélectionné`.
+3. Déplacez le symbole (ou simplement l'extrémité de la ligne de connexion) pour pointer sur l'endroit exact où vous souhaitez diviser le satin.
+4. Sélectionnez à nouveau la colonne satin.
+5. Faire `Extensions > Ink/Stitch  > Outils de Satin > Scinder colonne Satin`.
+6. La commande de point de partage et la ligne de connexion disparaissent et il semble que rien ne s'être passé. Sélectionnez votre satin et vous verrez qu'il a été divisé.
+
+## Fill to Satin
+
+{% include upcoming_release.html %}
+
+Fill to satin can be used to convert a fill into a satin. It is a semi-automatic function and requires a little manual work.
+
+### Usage
+
+* Prepare your fill objects. It can be necessary that you need to split up your fill to simpler shapes with the shape
+  builder tool or with other path editing tools in Inkscape.
+* Make sure the fill has only a fill and not a stroke color
+* Create rungs with a stroke color (and no fill color). Rungs help define how the fill shape is going to be converted.
+
+  Make sure to add a sufficient number of rungs.
+  Especially when you want to enable the option `start/end at rung` which will remove a portion from the open ends.
+  {: .notice--warning }
+* Select fill and rungs
+* Run `Extensions > Ink/Stitch > Tools: Satin > Fill to Satin...`
+* Enable desired options
+* Click `Apply`
+
+### Options
+
+Option               | Descprition
+---------------------|-------------
+Start / end at rung  | When enabled open end sections will be removed from the satin. Please note, that you need to define a sufficient number of rungs or you will see missing parts. This option is useful, as in most cases you won't want your satin to end short as it pushes towards the ends when you stitch it out.
+Center-walk underlay | Adds a default center-walk underlay to the satin(s)
+Contour underlay     | Adds a default contour underlay to the satin(s)
+Zig-zag underlay     | Adds a default zig-zag underlay to the satin(s)
+Keep original paths  | Keep or remove selected paths
+
+### Rungs and intersections
+
+Rungs define the satin sections and also the direction of stitching (as with every satin columns).
+A specialty for this extension is the bridge rung (half rung) which only intersects with one of the rails. It can inform Ink/Stitch, that you wish to bridge this section at intersection points.
+Unbridged intersections simply leave a gap.
+
+![Convert to satin with and without bridge](/assets/images/docs/fill_to_satin_bridge.png)
+
+### Sample file
+
+[Download the fill to satin playground file](/assets/images/docs/fill_to_satin_playground.svg){: title="Download SVG File" download="fill_to_satin_playground.svg" }
 
 ## Intervertir les rails des colonnes satin
 
@@ -55,29 +120,6 @@ Il est aussi possible de faire la même opération à partir du paramètrage.
 
 * Sélectionnez une ou plusieurs colonnes satin
 * Lancez `Extensions > Ink/Stitch  > Outils Satin > Intervertir les rails satin`
-
-## "Ligne  Zigzag" en Satin {#zigzag-line-to-satin}
-
-Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le faire en une seule étape : au lieu de dessiner d'abord deux rails puis des traverses, cet outil vous permet de dessiner une ligne en zigzag ( ou en dents de scie, ou en carrés) qui pourra ensuite être convertie en colonne satin normale.
-
-### Usage
-
-* Dessinez votre forme avec votre style de zigzag préféré.
-* Sélectionnez la forme et lancez  `Extensions > Ink/Stitch > Outis: Satin > "Ligne  Zigzag" en Satin`
-  * Sélectionnez votre style de zigzag 
-  * Choisissez si votre chemin doit être adouci ou constitué de segments de droites
-  * Choisissez si les traverses doivent être inserrées ou non. Les colonnes satin créées auront toujours autant de noeuds sur les deux rails.
-
-### Style de zigzag
-
-* Toutes les lignes de zigzag commencent et se terminent par une traverse.
-* Pour **Carré (1)** et **dents de scie (2)** dessinez les traverses les unes après les autres.
-*  **zigzag (3)** crée des traverses de chaque pic d'un rail vers le milieu d'un pic sur l'autre rail.
-![Styles de zigzags](/assets/images/docs/zigzag-line-to-satin.png)
-
-Si vous voyez quelque chose comme le dessin ci-dessous, vous avez probablement choisi le mauvais style de zigzag pour votre dessin.
-![Mauvais choix de style de zigzag](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
-
 
 ## Satin Multicolore {#multicolor-satin}
 
@@ -119,21 +161,6 @@ Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin), si vous souhaitez comp
 
   ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
 
-
-## Scinder une colonne Satin
-
-Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'un point pour que les deux satins résultants soient cousus exactement comme l'original. Tous les paramètres définis sur le satin d'origine restent sur les deux nouveaux satins et toutes les traverses sont conservées. Si l'un des satins n'a plus de traverse, de nouvelles sont ajoutées.
-
-### Usage
-
-1. Sélectionnez une colonne satin (le satin simple ne fonctionne pas)
-2. Ajouter la commande "Point de partage..." avec `Extensions > Ink/Stitch  > Commandes > Attacher des Commandes à un objet sélectionné`.
-3. Déplacez le symbole (ou simplement l'extrémité de la ligne de connexion) pour pointer sur l'endroit exact où vous souhaitez diviser le satin.
-4. Sélectionnez à nouveau la colonne satin.
-5. Faire `Extensions > Ink/Stitch  > Outils de Satin > Scinder colonne Satin`.
-6. La commande de point de partage et la ligne de connexion disparaissent et il semble que rien ne s'être passé. Sélectionnez votre satin et vous verrez qu'il a été divisé.
-
-
 ## Trait en Effet de Chemin Satin {#stroke-to-live-path-effect-satin}
 
 Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend le satin plus adaptable en forme et en largeur qu'une conversion en colonne satin normale. La ligne reste une ligne, mais un effet de chemin lui est appliqué. Si vous utilisez l'éditeur de noeud, vous pourrez agir sur les noeuds de la ligne, même après application de l'effet.
@@ -145,7 +172,7 @@ Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend 
 3. Choisir les paramètres qui vous conviennent
 5. Cliquez sur Appliquer
 
-## Options
+### Options
 
 --|--|--
 Motif                  | ![LPE-Patterns](/assets/images/docs/lpe_patterns.png) | Choix du motif à appliquer repétivement à la colonne satin
@@ -173,17 +200,27 @@ Vous pouvez changer le motif de plusieurs manières :
 * Changer de motif en relançant à nouveau `Convertir Ligne en Effet de Chemin Satin`.
 * Convertir en chemin normal  (`Shift + Ctrl + C`)  et raffiner manuellement le chemin (ceci perdra la fonctionnalité Effet de Chemin)
 
+## "Ligne  Zigzag" en Satin {#zigzag-line-to-satin}
 
-## Trait en Satin
-
-Cette extension convertira un trait en une (ou plusieurs) colonne satin avec une largeur spécifiée. Après la conversion, vous verrez les deux rails et (éventuellement) de nombreuses traverses de direction, en fonction de la forme de votre ligne.
+Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le faire en une seule étape : au lieu de dessiner d'abord deux rails puis des traverses, cet outil vous permet de dessiner une ligne en zigzag ( ou en dents de scie, ou en carrés) qui pourra ensuite être convertie en colonne satin normale.
 
 ### Usage
 
-1. Tracer une courbe de Bézier (`B`)
-2. Définir une largeur de trait
-2. Lancer `Extensions > Ink/Stitch  > Outils: Satin > Trait en Satin`
+* Dessinez votre forme avec votre style de zigzag préféré.
+* Sélectionnez la forme et lancez  `Extensions > Ink/Stitch > Outis: Satin > "Ligne  Zigzag" en Satin`
+  * Sélectionnez votre style de zigzag 
+  * Choisissez si votre chemin doit être adouci ou constitué de segments de droites
+  * Choisissez si les traverses doivent être inserrées ou non. Les colonnes satin créées auront toujours autant de noeuds sur les deux rails.
 
+### Style de zigzag
+
+* Toutes les lignes de zigzag commencent et se terminent par une traverse.
+* Pour **Carré (1)** et **dents de scie (2)** dessinez les traverses les unes après les autres.
+*  **zigzag (3)** crée des traverses de chaque pic d'un rail vers le milieu d'un pic sur l'autre rail.
+![Styles de zigzags](/assets/images/docs/zigzag-line-to-satin.png)
+
+Si vous voyez quelque chose comme le dessin ci-dessous, vous avez probablement choisi le mauvais style de zigzag pour votre dessin.
+![Mauvais choix de style de zigzag](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
 
 ## Tutoriaux utilisant Outils: Satin
 
