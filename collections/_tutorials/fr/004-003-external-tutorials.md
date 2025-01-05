@@ -1,18 +1,18 @@
 ---
-title: "External Resources"
+title: "Resources Externes"
 permalink: /fr/tutorials/external-tutorials/
 read_time: false
 
 classes: wide
 ---
-## French Tutorials
+## Tutoriels en français
 
 * [Augusa](http://lyogau.over-blog.com/tag/inkscape%20inkstitch/)
 * [Daniel K. Schneider](https://edutechwiki.unige.ch/fr/InkStitch)
 
-## Foreign Languages
+## Autres langues
 
-### English
+### anglais
 
 * [EduTech Wiki](https://edutechwiki.unige.ch/en/InkStitch)
 
@@ -21,7 +21,7 @@ classes: wide
     * [Color sorting](https://silverseams.com/2020/07/color-sorting-with-ink-stitch/)
     * [Adding die lines](https://silverseams.com/2020/08/adding-die-lines-to-embroidery-designs-with-ink-stitch/)
  
-### Russian
+### Russe
 
 * [Ink/Stitch forum by Сергей Демин](https://inkstitch.ru/)
 
