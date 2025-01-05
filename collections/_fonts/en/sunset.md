@@ -9,7 +9,7 @@ preview_image:
 data_title:
   - sunset
 ---
-{%- assign font = site.data.fonts.western_light.font -%}
+{%- assign font = site.data.fonts.sunset.font -%}
 
 {% include upcoming_release.html %}
 
