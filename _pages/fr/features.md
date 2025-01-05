@@ -1,54 +1,53 @@
 ---
-title: "Noticeable Ink/Stitch Features"
+title: "Caractéristiques notables d'Ink/Stitch."
 permalink: /fr/features/
-last_modified_at: 2024-09-29
+last_modified_at: 2025-01-05
 toc: false
 layout: splash
 accessibility:
   - image_path: /assets/images/features/gnu.jpg
     alt: "Embroidered GNU and Penguin"
-    title: "Multilingual, Cross Platform, Free and Open Source"
-    excerpt: "The goal of the Ink/Stitch project is to put free, high-quality embroidery design tools in the hands of folks that might normally not have access to such tools.
-              Therefore we want to make it easy for everyone to use:
+    title: "Multilingue, multiplateforme, gratuit et open source"
+    excerpt: "L'objectif du projet Ink/Stitch est de mettre des outils de conception de broderie gratuits et de haute qualité entre les mains de personnes qui n'auraient normalement pas accès à de tels outils.
 
-              * Multilingual: user interface in several languages ([Help appreciated](https://translate.inkstitch.org))
+              Nous voulons donc le rendre facile à utiliser pour tout le monde :
 
-              * Cross platform: Ink/Stitch is available for Linux, Windows and macOS.
+              * Multilingue : interface utilisateur en plusieurs langues ([Aide appréciée](https://translate.inkstitch.org))
 
-              * Licensed under the [GNU GPL version 3.0 or later](https://www.gnu.org/licenses/gpl-3.0).
-                This means it will always be free for everyone to use, share and contribute.<br><br>
+              * Multiplateforme : Ink/Stitch est disponible pour Linux, Windows et macOS.
 
-                It doesn't mean that it goes without cost for contributors.
-                Donations for the work and expenses we've put into the programm will be welcome -
-                once we've figured out how finances can be organized.
+              * Sous licence [GNU GPL version 3.0 ou ultérieure](https://www.gnu.org/licenses/gpl-3.0).
+                Cela signifie qu'il sera toujours gratuit pour tout le monde d'utiliser, de partager et de contribuer.<br><br>
+    
+                Cela ne signifie pas que cela n'entraîne aucun coût pour les contributeurs.
+                Les dons pour le travail et les dépenses que nous avons consacrés au programme seront les bienvenus -
+                une fois que nous aurons compris comment organiser les finances....
              "
 lettering:
   - image_path: /assets/images/galleries/fonts/sortefax/sortefax3.jpg
-    alt: "Four pillows with embroidered letters"
-    title: "Lettering"
-    excerpt: "With Ink/Stitch you have access to an easy to use lettering system with a long list of fonts ready to use.
+    alt: "Quatre coussins avec des lettres  brodées"
+    title: "Lettrage"
+    excerpt: "Avec Ink/Stitch vous avez un accès  à un système de lettrage facile à utiliser avec une longue liste de polices prêtes à l'emploi.
 
 
-              The [lettering system](/docs/lettering/) has lots of interesting features:
+              Le [système de lettrage](/fr/docs/lettering/) a de nombreuses fonctionnalités intéressantes :
+
+              * Ajoutez du texte directement avec votre clavier
               
-              * Add text directly with your keyboard
+              * Choisissez parmi de nombreuses [polices] pré-numérisées (/fr/fonts/font-library/)
+              
+              * Numérisez vos propres polices et intégrez-les dans l'outil de lettrage (ou partagez-les avec tout le monde)
+              
+              * L'outil de lettrage vous permet de mettre à l'échelle les polices dans les limites définies par l'auteur 
 
-              * Choose from numerous pre-digitized [fonts](/fonts/font-library/)
+              *Trouvez des polices adaptées avec des filtres de polices pouvant être utilisés simultanément :<br>
+                **Filtre de catégorie** : Vous recherchez un type de police spécifique ? Le filtre de catégorie de police vous aide à trouver des polices avec des types ou des styles de points spécifiques.<br>
+                **Filtre de taille de police** : Trouvez les polices qui correspondent à votre conception. La police choisie s'adaptera automatiquement à la valeur de taille saisie dans le filtre.<br>
+                **Filtre de glyphe** : Affichez uniquement les polices avec tous les glyphes nécessaires pour le texte donné
 
-              * Digitize your own fonts and integrate them into the lettering tool (or share with everyone)
+                Une fois le texte inséré dans le document, vous pouvez modifier les chemins et les paramètres de broderie comme vous le souhaitez.
 
-              * The lettering tool lets you scale the fonts within the limits the font author has defined
-
-              * Find suitable fonts with font filters which can be used simultaneously:<br>
-                **Category filter**: Searching for a specific type of font? The font category filter helps you to find fonts with specific stitch types or styles.<br>
-                **Font size filter**: Find the fonts that fit into your design. The chosen font will automatically adapt to the size value entered into the filter.<br>
-                **Glyph filter**: Show only fonts with all the necessary glyphs for the given text
-
-
-             Once the text has been inserted into the document you can modify the paths and embroidery parameters just as you wish.
-
-
-             Create interesting results with the available tools, for example [Lettering along path](/docs/lettering/#lettering-along-path) or Inkscape [path effects](/tutorials/distort/) such as envelope deformation.
+                Créez des résultats intéressants avec les outils disponibles, par exemple [Lettrage le long du chemin](/docs/lettering/#lettering-along-path) ou Inkscape [effets de chemin](/tutorials/distort/) tels que la déformation d'enveloppe.
             "
 stitches:
   - image_path: /assets/images/galleries/fonts/abril/WAbril.jpg
