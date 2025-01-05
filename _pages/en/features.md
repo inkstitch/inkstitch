@@ -67,7 +67,7 @@ stitches:
                 Create patterned lines with the Inkscape path effect [pattern along line](/tutorials/patterned-unning-stitch/).<br>
                 Generate a [cutwork](/docs/cutwork/) or [redwork](/docs/stroke-tools/#redwork) pattern.
 
-              * **Satin stitch types**: [satin](/docs/stitches/satin-column/), [E-stitch](/docs/stitches/e-stitch/), [S-stitch](/docs/stitches/s-stitch/), [zig-zag satin](/stitches/zigzag-satin-stitch/), etc.<br>
+              * **Satin stitch types**: [satin](/docs/stitches/satin-column/), [E-stitch](/docs/stitches/e-stitch/), [S-stitch](/docs/stitches/s-stitch/), [zig-zag satin](/docs/stitches/zigzag-satin-stitch/), etc.<br>
                 Use various routines to generate satin stitches. Add underlay as necessary. Define randomization options or customize split stitches.<br>
                 A special highlight is the possibility to easily generate [multicolor satins](/docs/satin-tools/#multicolor-satin).
 
@@ -146,15 +146,15 @@ resources:
   - image_path: /assets/images/galleries/fonts/magnolia_KOR/bicolor2.jpg
     alt: "Multicolor satin font. Text: La vie est belle."
     title: "Learning Resources and the Ink/Stitch-Community"
-    excerpt: "Ink/Stitch is a community project. Community members can provide helpful information and tutorials.
+    excerpt: "Ink/Stitch is a community project. Community members can provide helpful information and tutorials.<br>
 
 
               Therefore you can find a growing amount of [tutorials](/tutorials/) about various topics on the Ink/Stitch website.
               Learn about special use cases for specific stitch types or embroidery techniques. Learn how to optimize your embroidery design
-              or how to make best use of Inkscape features for embroidery.
+              or how to make best use of Inkscape features for embroidery.<br>
 
 
-              The [community](/docs/faq/) is always happy to help when there is trouble or just simple beginner questions.
+              The [community](/docs/faq/) is always happy to help when there is trouble or just simple beginner questions.<br>
 
 
               Of course you are welcome to [get involved](/developers/introduction/) and see what you can do to bring Ink/Stitch forward.
