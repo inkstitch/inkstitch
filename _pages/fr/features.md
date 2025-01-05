@@ -40,7 +40,8 @@ lettering:
               
               * L'outil de lettrage vous permet de mettre à l'échelle les polices dans les limites définies par l'auteur 
 
-              *Trouvez des polices adaptées avec des filtres de polices pouvant être utilisés simultanément :<br>
+              * Trouvez des polices adaptées avec des filtres de polices pouvant être utilisés simultanément :<br>
+    
                 **Filtre de catégorie** : Vous recherchez un type de police spécifique ? Le filtre de catégorie de police vous aide à trouver des polices avec des types ou des styles de points spécifiques.<br>
                 **Filtre de taille de police** : Trouvez les polices qui correspondent à votre conception. La police choisie s'adaptera automatiquement à la valeur de taille saisie dans le filtre.<br>
                 **Filtre de glyphe** : Affichez uniquement les polices avec tous les glyphes nécessaires pour le texte donné
@@ -57,7 +58,7 @@ stitches:
     
               * **[Placement manuel des points]((/docs/stitches/manual-stitch/))** : placez chaque point exactement où vous le souhaitez
 
-              * **Types de points droitst** :
+              * **Types de points droits** :
                 [point droit](/fr/docs/stitches/running-stitch/),
                 [point multiple](/fr/docs/stitches/bean-stitch/),
                 [broderie ondulé](/fr/docs/stitches/ripple-stitch/),
@@ -66,7 +67,9 @@ stitches:
               Générez un motif en [Richelieu](/fr/docs/cutwork/) ou  en [redwork](/fr/docs/stroke-tools/#redwork).
 
               * **Types de colonnes satin** : [satin](/fr/docs/stitches/satin-column/), [point en E](/fr/docs/stitches/e-stitch/), [point en S](/fr/docs/stitches/s-stitch/), [satin zigzag](/fr/docs/stitches/zigzag-satin-stitch/), etc.<br>
+    
                 Utilisez différentes méthodes pour générer des colonnes satin. Ajoutez une sous-couche si nécessaire. Définissez des options de randomisation ou personnalisez le découpage des points pour les colonnes larges.<br>
+    
                 Un point fort particulier est la possibilité de générer facilement des [satins multicolores](/docs/satin-tools/#multicolor-satin).
 
                * **Types de points de remplissage** :
@@ -80,42 +83,44 @@ stitches:
                 etc.<br>
                 Ajustez la longueur du point, l'espacement des rangéess et leur angle parmi d'autres options.
                 Ajoutez une (ou des) sous-couche si nécessaire.
-             
+
+
                Les [textures](/fr/docs/stitches/patterns/) personnalisées peuvent être appliquées à tous les types de points disponibles.
+
 
               Chaque type de point est livré avec son propre ensemble d'outils ([outils: trait](/fr/docs/stroke-tools/),
               [outils: satin](/fr/docs/satin-tools/), [outils: remplissage](/fr/docs/fill-tools/))
               pour la conversion, l'optimisation et le routage.
              "
 
-tools:
+Outils:
   - image_path: /assets/images/tutorials/cookie_cutter_tiling/Tshirt.png
-    alt: "A shirt in four iterations from a fill outline with no fill to a stroke outline and a fill"
-    title: "Tools"
-    excerpt: "Inkscape is a powerful vector grafic editor.
-              This means that there are plenty of tools and other extensions that you can use - beside of the tools delivered by the Ink/Stitch plugin.
+    alt: "4 itérations de chemise, depuis un contour en remplissage jusqu'à un remplissage sans contour associé à un contour sans remplissage"
+    title: "Outils"
+    excerpt: "Inkscape est un éditeur graphhique puissant.
+              Cela signifie qu'au delà des outils proposés par Ink/Stitch il y a énormément d'outils inclus dans Inkscape ou dans d'autres extensions.
+              
 
-
-              Get creative and report your findings back to us. Even we haven't seen everything that is possible yet.
+              Soyez créatifs et racontez nous vos trouvailles. Même nous ne ne connaissons pas encore toutes les possibilités.
              "
 
-preview:
+Prévisualisation:
   - image_path: /assets/images/galleries/fonts/namskout_ags/namskout_tartan_encours.jpg
-    alt: "Embroidery machine stitches a tartan pattern"
-    title: "Stitch Preview"
-    excerpt: "* Animated stitch-out preview (including live-preview as you adjust settings like row spacing underlay, etc.)
+    alt: "Une brodeuse brode un motif tarta"
+    title: "Prévisualisation des points"
+    excerpt: "* Aperçu animé de la broderie (y compris l'aperçu en direct lorsque vous ajustez les paramètres tels que l'espacement des rangs, etc.)
 
-              * [Simulator and in canvas stitch plan preview](/docs/visualize/)
+              * [Simulateur et aperçu du plan de broderie sur le canevas](/fr/docs/visualize/)
 
-              * Highly customizable [print to PDF](/docs/print-pdf/) output with realistic rendering and line-drawing mode<br>
-                embroidery **machine operator layout** with color blocks, thread names, stitch counts, and custom notes<br>
-                **client-oriented layout** designed for you to send to your customer
+              * Sortie hautement personnalisable [impression au format PDF](/fr/docs/print-pdf/) avec rendu réaliste et mode de dessin au trait<br>
+                **Mise en page orientée opérateur de la machine**  avec blocs de couleur, noms des fils, nombres de points et notes personnalisées<br>
+                **Mise en page orientée client** conçue pour être envoyée à votre client
              "
 
-thread:
+Fils:
   - image_path: /assets/images/docs/zigzagmeander_grumpycat.jpg
-    alt: "Cat in zig-zag meander style embroidered with variegated thread"
-    title: "Thread management"
+    alt: "Chat en remplissage selon méandre brodé avec un fil multicolore"
+    title: "Gestion des fils"
     excerpt: "Ink/Stitch has a [thread management](/docs/thread-color/) section in the menu.
 
               * Install thread palettes from over 60 manufacturers
@@ -156,9 +161,9 @@ resources:
               Of course you are welcome to [get involved](/developers/introduction/) and see what you can do to bring Ink/Stitch forward.
              "
 ---
-## Noticeable Ink/Stitch Features
+## Caractéristiques notables d'Ink/Stitch 
 
-Ink/Stitch: digitize machine embroidery designs using Inkscape (SVG)
+Ink/Stitch: digitaliser des motifs de broderie machine en utilisant Inkscape (SVG)
 {: .notice--info }
 
 {% include feature_row id="accessibility" type="left" %}
