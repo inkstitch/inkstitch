@@ -46,7 +46,9 @@ lettering:
                 **Filtre de taille de police** : Trouvez les polices qui correspondent à votre conception. La police choisie s'adaptera automatiquement à la valeur de taille saisie dans le filtre.<br>
                 **Filtre de glyphe** : Affichez uniquement les polices avec tous les glyphes nécessaires pour le texte donné
 
+
                 Une fois le texte inséré dans le document, vous pouvez modifier les chemins et les paramètres de broderie comme vous le souhaitez.
+
 
                 Créez des résultats intéressants avec les outils d'Inkscape disponibles, par exemple [Lettrage le long du chemin](/docs/lettering/#lettering-along-path) ou la déformation d'enveloppe [effets de chemin](/tutorials/distort/).
             "
@@ -63,10 +65,10 @@ stitches:
                 [point multiple](/fr/docs/stitches/bean-stitch/),
                 [broderie ondulé](/fr/docs/stitches/ripple-stitch/),
                 etc.<br>
-              Créez des mmotifs de p oint  avec l'effet de chemin Inkscape [Motif suivant chemin](/fr/tutorials/patterned-unning-stitch/).<br>
-              Générez un motif en [Richelieu](/fr/docs/cutwork/) ou  en [redwork](/fr/docs/stroke-tools/#redwork).
+              Créez des motifs de points  avec l'effet de chemin Inkscape [Motif suivant chemin](/fr/tutorials/patterned-unning-stitch/).<br>
+              Générez un motif en [Richelieu](/fr/docs/cutwork/) ou  en [Redwork](/fr/docs/stroke-tools/#redwork).
 
-              * **Types de colonnes satin** : [satin](/fr/docs/stitches/satin-column/), [point en E](/fr/docs/stitches/e-stitch/), [point en S](/fr/docs/stitches/s-stitch/), [satin zigzag](/fr/docs/stitches/zigzag-satin-stitch/), etc.<br>
+              * **Types de colonnes satin** : [satin](/fr/docs/stitches/satin-column/), [point en E](/fr/docs/stitches/e-stitch/), [point en S](/fr/docs/stitches/s-stitch/), [zigzag sati](/fr/docs/stitches/zigzag-satin-stitch/), etc.<br>
     
                 Utilisez différentes méthodes pour générer des colonnes satin. Ajoutez une sous-couche si nécessaire. Définissez des options de randomisation ou personnalisez le découpage des points pour les colonnes larges.<br>
     
@@ -81,7 +83,7 @@ stitches:
                 [remplissage en méandres](/fr/docs/stitches/meander-fill/),
                 [remplissage tartan](/fr/docs/stitches/tartan-fill/),
                 etc.<br>
-                Ajustez la longueur du point, l'espacement des rangéess et leur angle parmi d'autres options.
+                Ajustez la longueur du point, l'espacement des rangées et leur angle parmi d'autres options.
                 Ajoutez une (ou des) sous-couche si nécessaire.
 
 
@@ -92,21 +94,21 @@ stitches:
               [outils: satin](/fr/docs/satin-tools/), [outils: remplissage](/fr/docs/fill-tools/))
               pour la conversion, l'optimisation et le routage.
              "
-
+    
 Outils:
   - image_path: /assets/images/tutorials/cookie_cutter_tiling/Tshirt.png
     alt: "4 itérations de chemise, depuis un contour en remplissage jusqu'à un remplissage sans contour associé à un contour sans remplissage"
     title: "Outils"
-    excerpt: "Inkscape est un éditeur graphhique puissant.
+    excerpt: "Inkscape est un éditeur graphique puissant.
               Cela signifie qu'au delà des outils proposés par Ink/Stitch il y a énormément d'outils inclus dans Inkscape ou dans d'autres extensions.
               
 
               Soyez créatifs et racontez nous vos trouvailles. Même nous ne ne connaissons pas encore toutes les possibilités.
              "
-
+    
 Prévisualisation:
   - image_path: /assets/images/galleries/fonts/namskout_ags/namskout_tartan_encours.jpg
-    alt: "Une brodeuse brode un motif tarta"
+    alt: "Une brodeuse brode un motif tartan"
     title: "Prévisualisation des points"
     excerpt: "* Aperçu animé de la broderie (y compris l'aperçu en direct lorsque vous ajustez les paramètres tels que l'espacement des rangs, etc.)
 
@@ -116,10 +118,10 @@ Prévisualisation:
                 **Mise en page orientée opérateur de la machine**  avec blocs de couleur, noms des fils, nombres de points et notes personnalisées<br>
                 **Mise en page orientée client** conçue pour être envoyée à votre client
              "
-
+    
 Fils:
   - image_path: /assets/images/docs/zigzagmeander_grumpycat.jpg
-    alt: "Chat en remplissage selon méandre brodé avec un fil multicolore"
+    alt: "Chat en remplissage en méandres brodé avec un fil multicolore"
     title: "Gestion des fils"
     excerpt: "Ink/Stitch has a [thread management](/docs/thread-color/) section in the menu.
 
