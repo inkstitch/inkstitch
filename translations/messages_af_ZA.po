@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-03 01:24+0000\n"
-"PO-Revision-Date: 2025-01-03 01:24\n"
+"POT-Creation-Date: 2025-01-05 01:37+0000\n"
+"PO-Revision-Date: 2025-01-05 01:37\n"
 "Last-Translator: \n"
 "Language-Team: Afrikaans\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-03 01:24+0000\n"
+"POT-Creation-Date: 2025-01-05 01:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,7 +94,7 @@ msgstr ""
 
 #. description of font in fonts/barstitch_textured
 #: inkstitch-fonts-metadata.py:28
-msgid "Barstitch Texture is a highly textured font with capital letters approximatively 40 mm tall. It can be scaled from 70% to 200%."
+msgid "Barstitch textured is a highly textured font with the help of meander fills"
 msgstr ""
 
 #. description of font in fonts/baumans_FI
@@ -378,59 +378,74 @@ msgstr ""
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
 msgstr ""
 
-#. description of font in fonts/roaring_twenties_KOR
+#. description of font in fonts/pixel10
 #: inkstitch-fonts-metadata.py:142
+msgid "Pixel 10 is a satin pixel font."
+msgstr ""
+
+#. description of font in fonts/roaring_twenties_KOR
+#: inkstitch-fonts-metadata.py:144
 msgid "Roaring Twenties KOR is a satin font."
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:144
+#: inkstitch-fonts-metadata.py:146
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:146
-msgid "Roman AGS is baseded on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
+#: inkstitch-fonts-metadata.py:148
+msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:148
+#: inkstitch-fonts-metadata.py:150
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
 msgstr ""
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:150
+#: inkstitch-fonts-metadata.py:152
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
 msgstr ""
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:152
+#: inkstitch-fonts-metadata.py:154
 msgid "Ink/Stitch Small Font is suited for small characters."
 msgstr ""
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:154
+#: inkstitch-fonts-metadata.py:156
 msgid " Sortefax XL Initials is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
 msgstr ""
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:156
+#: inkstitch-fonts-metadata.py:158
 msgid "Sortefax  Medium Initials is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
 msgstr ""
 
+#. description of font in fonts/sunset
+#: inkstitch-fonts-metadata.py:160
+msgid "3 colors satin column font"
+msgstr ""
+
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:158
-msgid "TT  Directores is a satin font suited for directing."
+#: inkstitch-fonts-metadata.py:162
+msgid "TT  Directors is a satin font suited for directing."
 msgstr ""
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:160
+#: inkstitch-fonts-metadata.py:164
 msgid "TT Masters is a satin font suited for heavy typing :)"
 msgstr ""
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:162
+#: inkstitch-fonts-metadata.py:166
 msgid "Violin Serif is a condensed serif satin font."
+msgstr ""
+
+#. description of font in fonts/western_light
+#: inkstitch-fonts-metadata.py:168
+msgid "Western light is a light fill western style font."
 msgstr ""
 
 #. name of tile in tiles/N3-11a
