@@ -15,10 +15,15 @@
            <param name="redwork_running_stitch_length_mm" type="float" precision="2" min="0" max="500"
                  gui-text="Redwork stitch length (mm)"
                  gui-description="set  redwork  stitch length">2.5</param>
-           <param name="redwork_bean_stitch_repeats" type="string" precision="0" min="0" max="500"
+           <param name="redwork_bean_stitch_repeats" type="string"
                  gui-text="Redwork bean stitch number of repeats"
                  gui-description="Redwork bean stitch number of repeats">0</param>
-    
+            <spacer />
+            <separator />
+            <spacer />
+            <param name="combine" type="boolean" gui-text="Combine elements"
+                 gui-description="Combine consecutive elements of same type">false</param>
+            <param name="keep_originals" type="boolean" gui-text="Keep original paths">false</param>
       </page>
       <page name="info" gui-text="Help">
           <label>Redwork embroidery is a stroke art embroidery which passes every line exactly twice.</label>
