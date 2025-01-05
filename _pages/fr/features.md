@@ -79,7 +79,7 @@ stitches:
                 [remplissage circulaire](/fr/docs/stitches/circular-fill/),
                 [remplissage selon contour](/fr/docs/stitches/contour-fill/),
                 [remplissage guidé](/fr/docs/stitches/guided-fill/),
-                [remplissage en dégadé linéaire](/fr/docs/stitches/linear-gradient-fill/),
+                [remplissage en dégradé linéaire](/fr/docs/stitches/linear-gradient-fill/),
                 [remplissage en méandres](/fr/docs/stitches/meander-fill/),
                 [remplissage tartan](/fr/docs/stitches/tartan-fill/),
                 etc.<br>
