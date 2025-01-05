@@ -19,6 +19,7 @@ from .density_map import DensityMap
 from .display_stacking_order import DisplayStackingOrder
 from .duplicate_params import DuplicateParams
 from .element_info import ElementInfo
+from .fill_to_satin import FillToSatin
 from .fill_to_stroke import FillToStroke
 from .flip import Flip
 from .generate_palette import GeneratePalette
@@ -33,10 +34,10 @@ from .layer_commands import LayerCommands
 from .lettering import Lettering
 from .lettering_along_path import LetteringAlongPath
 from .lettering_custom_font_dir import LetteringCustomFontDir
+from .lettering_edit_json import LetteringEditJson
 from .lettering_font_sample import LetteringFontSample
 from .lettering_force_lock_stitches import LetteringForceLockStitches
 from .lettering_generate_json import LetteringGenerateJson
-from .lettering_edit_json import LetteringEditJson
 from .lettering_remove_kerning import LetteringRemoveKerning
 from .lettering_set_color_sort_index import LetteringSetColorSortIndex
 from .letters_to_font import LettersToFont
@@ -88,6 +89,7 @@ __all__ = extensions = [About,
                         DisplayStackingOrder,
                         DuplicateParams,
                         ElementInfo,
+                        FillToSatin,
                         FillToStroke,
                         Flip,
                         GeneratePalette,

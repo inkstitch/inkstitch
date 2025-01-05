@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Fill to satin</name>
+    <id>org.{{ id_inkstitch }}.fill_to_satin</id>
+    <param name="extension" type="string" gui-hidden="true">fill_to_satin</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <param name="skip_end_section" type="boolean" gui-text="Start / end at rung"
+                gui-description="Needs at least 2 rungs">false</param>
+            <spacer />
+            <separator />
+            <spacer />
+            <param name="center" type="boolean" gui-text="Center-walk underlay">false</param>
+            <param name="contour" type="boolean" gui-text="Contour underlay">false</param>
+            <param name="zigzag" type="boolean" gui-text="Zig-zag underlay">false</param>
+            <spacer />
+            <separator />
+            <spacer />
+            <param name="keep_originals" type="boolean" gui-text="Keep original paths">false</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>This extension takes in a fill and rung elements and converts them into satin(s).</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/satin-tools/#fill-to-satin</label>
+        </page>
+    </param>
+
+    <effect>
+        <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/fill_to_satin.svg</icon>
+        <menu-tip>Convert fill elements to satin</menu-tip>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Tools: Satin" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
