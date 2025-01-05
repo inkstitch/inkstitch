@@ -6,6 +6,11 @@
 
     <param name="notebook" type="notebook">
         <page name="options" gui-text="Options">
+            <param name="skip_end_section" type="boolean" gui-text="Start / end at rung"
+                gui-description="Needs at least 2 rungs">false</param>
+            <spacer />
+            <separator />
+            <spacer />
             <param name="center" type="boolean" gui-text="Center-walk underlay">false</param>
             <param name="contour" type="boolean" gui-text="Contour underlay">false</param>
             <param name="zigzag" type="boolean" gui-text="Zig-zag underlay">false</param>
