@@ -8,7 +8,7 @@ toc: true
 
 Wähle die Objekte aus, die in der simulierten Vorschau angezeigt werden sollen. Wenn das gesamtes Design simuliert werden soll, wähle alles (`Strg + A`) oder nichts aus.
 
-Dann starte `Erweiterungen -> Ink/Stitch -> Simulation` und lehne dich zurück.
+Dann starte `Erweiterungen -> Ink/Stitch -> Simulation -> Visualisieren und Exportieren` und lehne dich zurück.
 
 ![Simulator](/assets/images/docs/en/simulator.jpg)
 {: style="border: 2px solid gray; padding: 5px;"}
