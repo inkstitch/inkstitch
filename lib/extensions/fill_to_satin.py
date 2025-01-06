@@ -210,8 +210,9 @@ class FillElementToSatin:
             for segment_index in set(segments):
                 segment_geoms.extend(list(satin_segments[segment_index].geoms))
             satin_rails = ensure_multi_line_string(linemerge(segment_geoms))
+            if len(satin_rails.geoms) != 2:
+                continue
             satin_rails = [self._adjust_rail_direction(satin_rails)]
-
             segment_geoms = []
             for rung_index in set(combined_rungs[i]):
                 rung = self.rungs[rung_index]
@@ -266,10 +267,12 @@ class FillElementToSatin:
                         finished_sections.append(i)
                 else:
                     for bridge, rung_list in self.bridged_rungs.items():
-                        if bridge in used_bridges or len(rung_list) > 2:
+                        if len(rung_list) != 2:
                             continue
                         for rung in s_rungs:
                             if rung in rung_list:
+                                if bridge in used_bridges:
+                                    continue
                                 points1 = intersection_points[rung_list[0]].geoms
                                 points2 = intersection_points[rung_list[1]].geoms
                                 segment1 = LineString([points1[0], points2[0]])
@@ -400,6 +403,7 @@ class FillElementToSatin:
     def _generate_line_sections(self):
         '''Splits the fill outline into sections. Splitter is a MultiLineString with all available rungs'''
         rungs = MultiLineString(self.rungs)
+
         for line in self.linestrings:
             sections = list(ensure_multi_line_string(split(line, rungs)).geoms)
             if len(sections) > 1:
@@ -432,10 +436,11 @@ class FillElementToSatin:
         half_rung_bridges = []
         centerline_bridges = []
         intersection_points = []
+        rungs = []
         for rung in self.selected_rungs:
             intersection = multi_line_string.intersection(rung)
             if intersection.geom_type == 'MultiPoint' and len(intersection.geoms) == 2:
-                self.rungs.append(rung)
+                rungs.append(rung)
                 intersection_points.append(intersection)
             elif intersection.geom_type == 'Point':
                 # these rungs help to indicate how the satin section should be connected
@@ -443,4 +448,10 @@ class FillElementToSatin:
             elif intersection.is_empty and rung.within(self.fill_shape):
                 # these rungs (possibly) connect two rungs
                 centerline_bridges.append(rung)
+        # filter rungs when they are crossing other rungs. They could possibly produce bad line sections
+        for i, rung in enumerate(rungs):
+            multi_rung = MultiLineString([r for j, r in enumerate(rungs) if j != i])
+            intersection = rung.intersection(multi_rung)
+            if not rung.intersects(multi_rung) or not rung.intersection(multi_rung).intersects(self.fill_shape):
+                self.rungs.append(rung)
         return intersection_points, MultiLineString(half_rung_bridges), centerline_bridges
