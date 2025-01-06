@@ -1,9 +1,9 @@
 ---
-title: Install Ink/Stitch on an Android Phone or Tablet
+title: Installer Ink/Stitch  sur un téléphone ou une tablette Android 
 permalink: /fr/tutorials/inkstistch-on-android/
-last_modified_at: 2024-09-28
+last_modified_at: 2025-01-06
 language: fr
-excerpt: "Install Ink/Stitch on Android with Termux"
+excerpt: "Installer Ink/Stitch sous Android avecTermux"
 image: "/assets/images/tutorials/android/android_inkstitch.png"
 
 tutorial-type:
@@ -13,125 +13,125 @@ after_footer_scripts:
 classes:
   - wide
 ---
-![The simulator on a phone screen](/assets/images/tutorials/android/android_inkstitch_full.png)
+![Le simulateur sur un ecran de  telephone](/assets/images/tutorials/android/android_inkstitch_full.png)
 
-Please note, that this is a fun tutorial. It is questionable how useful it is to use Ink/Stitch on a phone. The installation may crash often. We do not offer special support for it.
+Notez que  ce tutoriel est pour le fun. On peut douter de l'utilité d'utiliser Ink/Stitch sur un téléphone. Il se peut qu'il y ait des crashs fréquents et nous ne fournissons pas d'assistance pour cela.
 {: .notice--warning }
 
-This tutorial is a bit technical and directed to experienced users. We will use Termux to setup a Linux Desktop on which we can use Inkscape and Ink/Stitch.
+Ce tutoriel est un peu technique et à destination des utilisateurs expérimentés. Nous utiliseront Termux
+This tutorial is a bit technical and directed to experienced users. Nous utiliserons Termux pour configurer un bureau Linux sur lequel nous pourrons utiliser Inkscape et Ink/Stitch.
+Sur cette page, vous trouverez une procédure d'installation simple. Des informations plus détaillées peuvent être trouvées ici : [Termux](https://github.com/LinuxDroidMaster/Termux-Desktops), [Termux X11](https://github.com/termux/termux-x11)
 
-On this page you can find a simple installation walkthrough. More in depth information can be found here: [Termux](https://github.com/LinuxDroidMaster/Termux-Desktops), [Termux X11](https://github.com/termux/termux-x11)
+Nous tenons à remercier [LinuxDroidMaster](https://github.com/LinuxDroidMaster) pour le travail acharné sur le script qui nous permet de réaliser ce travail.
+## Installation
 
-We want to thank [LinuxDroidMaster](https://github.com/LinuxDroidMaster) for the hard work on the script which enables us to make this work.
-
-## Install
-
-In our example we are going to use proot, arch linux and xfce desktop. Read through the above mentioned documentation to decide what you want to use.
+Dans notre exemple, nous allons utiliser proot, arch linux et xfce desktop. Lisez la documentation mentionnée ci-dessus pour décider ce que vous souhaitez utiliser.
 {: .notice--info }
 
-* We start by installing [Termux](https://termux.dev/), if not already in use.
+* Nous commençons par installer [Termux](https://termux.dev/), s'il n'est pas déjà utilisé.
 
-* In Termux install packages to run Linux for Termux and Android. Run these commands in Termux command line
+* Dans Termux, installez les packages pour exécuter Linux pour Termux et Android. Exécutez ces commandes dans la ligne de commande Termux
 
-  ```
-  pkg update
-  pkg upgrade
-  ```
+```
+pkg update
+pkg upgrade
+```
 
-  ```
-  pkg install x11-repo termux-x11-nightly tur-repo pulseaudio proot-distro wget git vim
-  ```
+```
+pkg install x11-repo termux-x11-nightly tur-repo pulseaudio proot-distro wget git vim
+```
 
-* Download and install the termux-x11 app for Android from [termux-x11 nightly release](https://github.com/termux/termux-x11/releases/tag/nightly). Use the file `debug-universal.apk`.
+* Téléchargez et installez l'application termux-x11 pour Android à partir de [termux-x11 nightly release](https://github.com/termux/termux-x11/releases/tag/nightly). Utilisez le fichier `debug-universal.apk`.
 
-* To install linux with proot-distro use the following command
+* Pour installer Linux avec proot-distro, utilisez la commande suivante
 
-  ```
-  proot-distro install archlinux
-  ```
+```
+proot-distro install archlinux
+```
 
-* Login to archlinux container
+* Connexion au conteneur archlinux
 
-  ```
-  proot-distro login archlinux
-  ```
+```
+proot-distro login archlinux
+```
+* Nous sommes maintenant à l'intérieur de l'installation d'Arch. Mettons à jour le système
 
-* Now we are inside of the arch installation. Let's update the system
+```
+pacman -Syu
+```
 
-  ```
-  pacman -Syu
-  ```
+* Installer sudo
 
-* Install sudo
+```
+pacman -S sudo
+```
 
-  ```
-  pacman -S sudo
-  ```
+* Créer un utilisateur
 
-* Create user
+```
+useradd -m -G wheel username
+passwd username
+```
 
-  ```
-  useradd -m -G wheel username
-  passwd username
-  ```
+Insérer la ligne suivante dans `/etc/sudoers`
 
-  Insert the following line into `/etc/sudoers`
+```
+username ALL=(ALL) ALL
+```
 
-  ```
-  username ALL=(ALL) ALL
-  ```
+* Installer xfce et inkscape. Vous pouvez bien sûr choisir un autre environnement de bureau si vous le souhaitez.
 
-* Install xfce and inkscape. You can of course choose an other desktop environment if you want.
+```
+pacman -S xfce4 inkscape
+```
 
-  ```
-  pacman -S xfce4 inkscape
-  ```
 
-* Leave arch linux container
 
-  ```
-  exit
-  ```
+* Quitter le conteneur Arch Linux
 
-* Back in termux get the script to run the xfce
+```
+exit
+```
 
-  ```
-  wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_arch/startxfce4_arch.sh
-  ```
+* De retour dans termux, récupérez le script pour exécuter le xfce
 
-  Make the script executable
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_arch/startxfce4_arch.sh
+```
 
-  ```
-  chmod +x startxfce4_arch.sh
-  ```
+Rendre le script exécutable
 
-  Edit the script to adapt it to your username
+```
+chmod +x startxfce4_arch.sh
+```
 
-  ```
-  vim startxfce4_arch.sh
-  ```
+Modifiez le script pour l'adapter à votre nom d'utilisateur
 
-  Replace the username `droidmaster` to your own username in this line
+```
+vim startxfce4_arch.sh
+```
 
-  ```
-  proot-distro login archlinux --shared-tmp -- /bin/bash -c  'export PULSE_SERVER=127.0.0.1 && export XDG_RUNTIME_DIR=${TMPDIR} && su - droidmaster -c "env DISPLAY=:0 startxfce4"'
-  ```
+Remplacez le nom d'utilisateur `droidmaster` par votre propre nom d'utilisateur dans cette ligne
 
-  On many phones you might encounter a black screen when the script is running.
-  If this happens to you, replace `termux-x11 :0 >/dev/null &` with
+```
+proot-distro login archlinux --shared-tmp -- /bin/bash -c 'export PULSE_SERVER=127.0.0.1 && export XDG_RUNTIME_DIR=${TMPDIR} && su - droidmaster -c "env DISPLAY=:0 startxfce4"'
+```
 
-  ```
-  termux-x11 :0 -legacy-drawing >/dev/null &
-  ```
+Sur de nombreux téléphones, vous pouvez rencontrer un écran noir lorsque le script est en cours d'exécution.
+Si cela vous arrive, remplacez `termux-x11 :0 >/dev/null &` par
 
-  Save and exit vim
+```
+termux-x11 :0 -legacy-drawing >/dev/null &
+```
 
-* Run the script and it will start up the xfce
+Enregistrez et quittez vim
 
-  ```
-  ./startxfce4_arch.sh
-  ```
+* Exécutez le script et il démarrera le xfce
 
-* We already installed Inkscape. So open it once, then close again.
+```
+./startxfce4_arch.sh
+```
 
-  [Download Ink/Stitch for arm64](https://github.com/inkstitch/inkstitch-linux-arm64/releases/latest) and install as usual (copy to extensions folder).
+* Nous avons déjà installé Inkscape.Ouvrez-le  puis fermez-le à nouveau.
+
+  [Téléchargez Ink/Stitch for arm64](https://github.com/inkstitch/inkstitch-linux-arm64/releases/latest) et installez comme d'habitude  (copie dans le dossier des extensions).
