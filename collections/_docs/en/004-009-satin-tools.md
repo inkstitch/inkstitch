@@ -97,8 +97,8 @@ Keep original paths  | Keep or remove selected paths
 
 ### Rungs and intersections
 
-Rungs define the satin sections and also the direction of stitching (as with every satin columns).
-A specialty for this extension is the bridge rung (half rung) which only intersects with one of the rails. It can inform Ink/Stitch, that you wish to bridge this section at intersection points.
+Rungs define the satin sections and also the direction of stitching (as with every satin column).
+A specialty for this extension is the bridge rung (half rung) which only intersects with one of the rails. It informs Ink/Stitch, that you wish to bridge this section at intersection points.
 Unbridged intersections simply leave a gap.
 
 ![Convert to satin with and without bridge](/assets/images/docs/fill_to_satin_bridge.png)
