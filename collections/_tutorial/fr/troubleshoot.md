@@ -1,7 +1,7 @@
 ---
 title: Résolution de problèmes dans Ink/Stitch
 permalink: /fr/tutorials/troubleshoot/
-last_modified_at: 2024-09-08
+last_modified_at: 2025-01-06
 language: fr
 excerpt: "Maîtriser  les messages d'erreur"
 image: /assets/images/posts/de/troubleshoot.png
@@ -21,8 +21,8 @@ N'ayez pas peur de signaler un bug ou un comportement ennuyeux du programme. Les
 
 Si une erreur se produit, il est important de localiser l'élément problématique.
 
-L'aperçu du plan de points peut être utilisé à cet effet. Avec un [raccourci clavier](/fr/docs/customize/#shortcut-keys) des petits groupes
-ou des éléments individuels peuvent être rendus rapidement jusqu'à ce que l'élément défectueux soit identifié.
+L'aperçu du plan de broderie peut être utilisé à cet effet. Avec un [raccourci clavier](/fr/docs/customize/#shortcut-keys) la broderie des petits groupes
+ou des éléments individuels peuvent être visualisés rapidement jusqu'à ce que l'élément défectueux soit identifié.
 
 ## Résolution de problèmes
 
@@ -57,7 +57,7 @@ Messages d'erreur et suggestion de solutions.
 Des suggestions de solutions sont données. Elles conduisent normalement à un fichier fonctionnel.
 
 Les erreurs et avertissements affichés dans l'image ci-dessus sont désormais obsolètes ou révisés. Heureusement,  les frontières qui se croisent ne sont plus un si gros problème.
-Au lieu de cela, un avertissement est émis, car les chemins de broderie peuvent  être mieux optimisés si l'élément a été décomposé manuellement.
+Au lieu de cela, un avertissement est émis, car les chemins de broderie peuvent être mieux optimisés si l'élément a été décomposé manuellement.
 (Exceptions confirment la règle : voir réduction des changements de couleurs pour les motifs tartan ou les dégradés de couleurs).
 
 C'est de fait une bonne idée d'utiliser cette extension pour les avertissements, même si aucune erreur ne s'est produite!
@@ -67,7 +67,7 @@ C'est de fait une bonne idée d'utiliser cette extension pour les avertissements
 `Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document...`
 
 Des éléments trop petits sont des causes fréquentes d'erreur. Ils ne produisent jamais de bon résultat  et peuvent même déclencher des messages d'erreurs.
-lIs peuvent être supprimés assez facilement avec cet outil. Les calques et groupes vides peuvent également être supprimés simplement.
+Ils peuvent être supprimés assez facilement avec cet outil. Les calques et groupes vides peuvent également être supprimés simplement.
 Si vous ne savez pas quelles valeurs doivent être saisies ici, vous pouvez également lancer un test et consulter les noms et le nombre d'éléments à supprimer au préalable ou obtenez un aperçu à l'aide du Live Preview (cette fois avec le test désactivé).
 
 [En savoir plus](/fr/docs/troubleshoot/#cleanup-document)
@@ -112,9 +112,9 @@ Les deux points  en E présentés dans l'image ont les mêmes paramètres, mais 
 D'autres paramètres peuvent même conduire à ce qu'un élément ne puisse plus être rendu.
 Un bon exemple de ceci est un motif en méandre avec une echelle trop grande pour un objet de remplissage trop petit.
 
-#### Remove embroidery parameters
+#### Supprimer tous les paramètres de broderie
 
-`Extensions > Ink/Stitch >  Résolution de problèmes > Supprimer les paramètres de broderie`
+`Extensions > Ink/Stitch >  Résolution de problèmes > Supprimer tous les paramètres de broderie`
 
 Si rien n'y fait, c'est peut être une bonne idée de repartir de zéro et de recommencer.
 
