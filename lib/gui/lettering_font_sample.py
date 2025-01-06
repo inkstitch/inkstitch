@@ -165,7 +165,8 @@ class FontSampleFrame(wx.Frame):
         update_glyphlist_warning = _(
             "The glyphlist for this font seems to be outdated.\n\n"
             "Please update the glyph list for %s:\n"
-            "Extensions > Ink/Stitch > Font Management > Update Glyphlist"
+            "open Extensions > Ink/Stitch > Font Management > Edit JSON "
+            "select this font and apply. No other changes necessary."
             % font.marked_custom_font_name
         )
 
