@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-05 01:37+0000\n"
-"PO-Revision-Date: 2025-01-05 01:37\n"
+"POT-Creation-Date: 2025-01-06 01:27+0000\n"
+"PO-Revision-Date: 2025-01-06 01:28\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-05 01:37+0000\n"
+"POT-Creation-Date: 2025-01-06 01:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,7 +95,7 @@ msgstr "Barstitch Bold est une police en colonne satin."
 #. description of font in fonts/barstitch_textured
 #: inkstitch-fonts-metadata.py:28
 msgid "Barstitch textured is a highly textured font with the help of meander fills"
-msgstr ""
+msgstr "Barstitch texture est une police très texturée à l'aide de remplissages en méandres"
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:30
@@ -381,7 +381,7 @@ msgstr "Perspective tricolore KOR est une police tricolore ombrée qui ne contie
 #. description of font in fonts/pixel10
 #: inkstitch-fonts-metadata.py:142
 msgid "Pixel 10 is a satin pixel font."
-msgstr ""
+msgstr "Pixel 10 est une police pixelisée en colonne satin."
 
 #. description of font in fonts/roaring_twenties_KOR
 #: inkstitch-fonts-metadata.py:144
@@ -396,7 +396,7 @@ msgstr "Roaring Twenties KOR Small est une  version  modifiée de Roaring Twenti
 #. description of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:148
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Raman AGS est basée sur Latin Modern Roman 10 Gras italique. Chaque satin a une sous-couche zig-zag."
 
 #. description of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:150
@@ -426,12 +426,12 @@ msgstr "Sortefax Medium Initials est une  police de majuscules en colonnes satin
 #. description of font in fonts/sunset
 #: inkstitch-fonts-metadata.py:160
 msgid "3 colors satin column font"
-msgstr ""
+msgstr "Sunset est une police tricolore en colonnes satin"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:162
 msgid "TT  Directors is a satin font suited for directing."
-msgstr ""
+msgstr "TT Directors est une police en colonne satin."
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:164
@@ -446,7 +446,7 @@ msgstr "Violin Serif est une police serif condensée en colonne satin."
 #. description of font in fonts/western_light
 #: inkstitch-fonts-metadata.py:168
 msgid "Western light is a light fill western style font."
-msgstr ""
+msgstr "Western light est une police en remplissage léger dans le style western."
 
 #. name of tile in tiles/N3-11a
 #: inkstitch-tiles-metadata.py:2
@@ -2030,7 +2030,7 @@ msgstr "Terminer au point le plus proche"
 msgid "End at nearest point to the next element. An end position command will overwrite this setting."
 msgstr "Termine au point le plus proche de l'élément suivant. Une commande position de fin sera prioritaire sur ce réglage."
 
-#: lib/elements/satin_column.py:411
+#: lib/elements/satin_column.py:411 inx/inkstitch_fill_to_satin.inx:15
 msgid "Contour underlay"
 msgstr "Sous-couche de contour"
 
@@ -2069,7 +2069,7 @@ msgstr "Décalage (proportionnel)"
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Rétrécir le contour proportionnellement à la largeur de la colonne pour empêcher que la sous-couche ne se voit autour de la colonne satin."
 
-#: lib/elements/satin_column.py:468
+#: lib/elements/satin_column.py:468 inx/inkstitch_fill_to_satin.inx:14
 msgid "Center-walk underlay"
 msgstr "Sous-couche centrale"
 
@@ -2096,7 +2096,7 @@ msgstr "Position"
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr "Position de la sous-couche entre les rails. A 0% la sous couche est le long du premier rail, à 50% centrée, à 100% le long du second rail."
 
-#: lib/elements/satin_column.py:520
+#: lib/elements/satin_column.py:520 inx/inkstitch_fill_to_satin.inx:16
 msgid "Zig-zag underlay"
 msgstr "Sous-couche Zig-Zag"
 
@@ -2608,6 +2608,27 @@ msgstr "Stops"
 msgid "Filter stitches smaller than (mm)"
 msgstr "Filtrer les points plus petits que (mm)"
 
+#: lib/extensions/fill_to_satin.py:101
+msgid "Satin Group"
+msgstr ""
+
+#: lib/extensions/fill_to_satin.py:120 inx/inkstitch_select_elements.inx:30
+msgid "Satin"
+msgstr "Colonne satin"
+
+#: lib/extensions/fill_to_satin.py:388
+msgid "This element has a fill and a stroke.\n\n"
+"Rungs only have a stroke color and fill elements a fill color."
+msgstr ""
+
+#: lib/extensions/fill_to_satin.py:399
+msgid "Please select a fill object and rungs."
+msgstr ""
+
+#: lib/extensions/fill_to_satin.py:403
+msgid "https://inkstitch.org/satin-tools#fill-to-satin"
+msgstr ""
+
 #: lib/extensions/fill_to_stroke.py:33 lib/extensions/fill_to_stroke.py:39
 msgid "Please select one or more fill objects to render the centerline."
 msgstr "Merci de sélectionner un ou plusieurs objets de remplissage pour déterminer leur ligne centrale."
@@ -2845,23 +2866,23 @@ msgstr "Un  aperçu de l'impression a été ouvert dans votre navigateur. Cette 
 msgid "Ink/Stitch Print"
 msgstr "Impression Ink/Stitch"
 
-#: lib/extensions/redwork.py:44 lib/extensions/remove_duplicated_points.py:32
+#: lib/extensions/redwork.py:47 lib/extensions/remove_duplicated_points.py:32
 msgid "Please select one or more strokes."
 msgstr "Merci de sélectionner un ou plusieurs traits."
 
-#: lib/extensions/redwork.py:103
+#: lib/extensions/redwork.py:110
 msgid "Redwork Group"
 msgstr "Groupe de redwork"
 
-#: lib/extensions/redwork.py:112
+#: lib/extensions/redwork.py:127
 msgid "Connected Group"
 msgstr "Groupe connecté"
 
-#: lib/extensions/redwork.py:121 inx/inkstitch_redwork.inx:3
+#: lib/extensions/redwork.py:163 inx/inkstitch_redwork.inx:3
 msgid "Redwork"
 msgstr "Redwork"
 
-#: lib/extensions/redwork.py:126
+#: lib/extensions/redwork.py:166
 msgid "Redwork Underpath"
 msgstr "Chemin de dessous redwork"
 
@@ -3080,8 +3101,8 @@ msgstr "Appliquer"
 #: inx/inkstitch_convert_to_stroke.inx:12
 #: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
 #: inx/inkstitch_display_stacking_order.inx:11
-#: inx/inkstitch_fill_to_stroke.inx:24 inx/inkstitch_generate_palette.inx:26
-#: inx/inkstitch_gradient_blocks.inx:26
+#: inx/inkstitch_fill_to_satin.inx:22 inx/inkstitch_fill_to_stroke.inx:24
+#: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
 #: inx/inkstitch_install_custom_palette.inx:14
 #: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:27
 #: inx/inkstitch_lettering_along_path.inx:19
@@ -3092,7 +3113,7 @@ msgstr "Appliquer"
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
 #: inx/inkstitch_letters_to_font.inx:54 inx/inkstitch_outline.inx:25
 #: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_png_realistic.inx:17
-#: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:23
+#: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:28
 #: inx/inkstitch_remove_duplicated_points.inx:14
 #: inx/inkstitch_remove_embroidery_settings.inx:140
 #: inx/inkstitch_select_elements.inx:80
@@ -3934,7 +3955,8 @@ msgstr "Générer des échantillons"
 #: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_break_apart.inx:8
 #: inx/inkstitch_cleanup.inx:8 inx/inkstitch_convert_to_stroke.inx:8
 #: inx/inkstitch_density_map.inx:8 inx/inkstitch_display_stacking_order.inx:8
-#: inx/inkstitch_fill_to_stroke.inx:16 inx/inkstitch_gradient_blocks.inx:17
+#: inx/inkstitch_fill_to_satin.inx:8 inx/inkstitch_fill_to_stroke.inx:16
+#: inx/inkstitch_gradient_blocks.inx:17
 #: inx/inkstitch_install_custom_palette.inx:8
 #: inx/inkstitch_jump_to_stroke.inx:17 inx/inkstitch_jump_to_trim.inx:17
 #: inx/inkstitch_lettering_along_path.inx:15
@@ -4875,7 +4897,7 @@ msgstr "Génère un chemin continu pour broder tous les éléments sélectionné
 
 #: inx/inkstitch_auto_run.inx:12 inx/inkstitch_convert_to_stroke.inx:25
 #: inx/inkstitch_fill_to_stroke.inx:11 inx/inkstitch_jump_to_stroke.inx:12
-#: inx/inkstitch_outline.inx:39 inx/inkstitch_redwork.inx:37
+#: inx/inkstitch_outline.inx:39 inx/inkstitch_redwork.inx:42
 msgid "Tools: Stroke"
 msgstr "Outils : Trait"
 
@@ -4927,7 +4949,8 @@ msgstr "Agencement automatique de colonnes satin"
 msgid "Preserve order of satin columns"
 msgstr "Préserver l’ordre des colonnes satin"
 
-#: inx/inkstitch_auto_satin.inx:14
+#: inx/inkstitch_auto_satin.inx:14 inx/inkstitch_fill_to_satin.inx:20
+#: inx/inkstitch_redwork.inx:26
 msgid "Keep original paths"
 msgstr "Garder les chemins originels"
 
@@ -4938,6 +4961,7 @@ msgstr "Cette extension tente de créer un chemin de broderie unique qui parcour
 #: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_break_apart.inx:20
 #: inx/inkstitch_cleanup.inx:25 inx/inkstitch_convert_to_stroke.inx:15
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
+#: inx/inkstitch_fill_to_satin.inx:25
 #: inx/inkstitch_install_custom_palette.inx:17
 #: inx/inkstitch_lettering_along_path.inx:29
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
@@ -4946,7 +4970,7 @@ msgstr "Cette extension tente de créer un chemin de broderie unique qui parcour
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
 #: inx/inkstitch_letters_to_font.inx:69 inx/inkstitch_outline.inx:28
-#: inx/inkstitch_redwork.inx:26 inx/inkstitch_remove_duplicated_points.inx:24
+#: inx/inkstitch_redwork.inx:31 inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_stitch_plan_preview.inx:45 inx/inkstitch_troubleshoot.inx:15
 #: inx/inkstitch_unlink_clone.inx:13
 msgid "More information on our website"
@@ -4961,8 +4985,8 @@ msgid "Generates a continuous path through selected satin elements"
 msgstr "Génère un chemin continu pour broder toutes les colonnes satin sélectionnées"
 
 #: inx/inkstitch_auto_satin.inx:30 inx/inkstitch_convert_to_satin.inx:11
-#: inx/inkstitch_cut_satin.inx:12 inx/inkstitch_flip.inx:11
-#: inx/inkstitch_satin_multicolor.inx:12
+#: inx/inkstitch_cut_satin.inx:12 inx/inkstitch_fill_to_satin.inx:36
+#: inx/inkstitch_flip.inx:11 inx/inkstitch_satin_multicolor.inx:12
 #: inx/inkstitch_stroke_to_lpe_satin.inx:41
 #: inx/inkstitch_zigzag_line_to_satin.inx:37
 msgid "Tools: Satin"
@@ -5290,6 +5314,30 @@ msgstr "Édition"
 #: inx/inkstitch_element_info.inx:9
 msgid "Display embroidery info for selected elements"
 msgstr "Affiche les informations de broderie des éléments selectionnés"
+
+#: inx/inkstitch_fill_to_satin.inx:3
+msgid "Fill to satin"
+msgstr ""
+
+#: inx/inkstitch_fill_to_satin.inx:10
+msgid "Start / end at rung"
+msgstr ""
+
+#: inx/inkstitch_fill_to_satin.inx:10
+msgid "Needs at least 2 rungs"
+msgstr ""
+
+#: inx/inkstitch_fill_to_satin.inx:23
+msgid "This extension takes in a fill and rung elements and converts them into satin(s)."
+msgstr ""
+
+#: inx/inkstitch_fill_to_satin.inx:26
+msgid "https://inkstitch.org/docs/satin-tools/#fill-to-satin"
+msgstr ""
+
+#: inx/inkstitch_fill_to_satin.inx:33
+msgid "Convert fill elements to satin"
+msgstr ""
 
 #: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:25
 msgid "Fill to Stroke"
@@ -6895,15 +6943,23 @@ msgstr "Défini la longueur de point du redwork"
 msgid "Redwork bean stitch number of repeats"
 msgstr "Nombre de répétitions du point multiple (bean stitch)"
 
-#: inx/inkstitch_redwork.inx:24
+#: inx/inkstitch_redwork.inx:25
+msgid "Combine elements"
+msgstr ""
+
+#: inx/inkstitch_redwork.inx:25
+msgid "Combine consecutive elements of same type"
+msgstr ""
+
+#: inx/inkstitch_redwork.inx:29
 msgid "Redwork embroidery is a stroke art embroidery which passes every line exactly twice."
 msgstr "Une broderie redwork est une broderie à base de traits où chaque trait est brodé exactement deux fois."
 
-#: inx/inkstitch_redwork.inx:27
+#: inx/inkstitch_redwork.inx:32
 msgid "https://inkstitch.org/docs/stroke-tools/#redwork"
 msgstr "https://inkstitch.org/fr/docs/stroke-tools/#redwork"
 
-#: inx/inkstitch_redwork.inx:34
+#: inx/inkstitch_redwork.inx:39
 msgid "Generates a path through all selected elements, passing each element exactly twice"
 msgstr "Génère un chemin à travers tous les éléments sélectionnés en passant exactement deux fois par chaque élément"
 
@@ -7020,10 +7076,6 @@ msgstr "Chemin de dessous ( Agencement Automatique de Satins)"
 #: inx/inkstitch_select_elements.inx:22
 msgid "Ripples"
 msgstr "Ondulations"
-
-#: inx/inkstitch_select_elements.inx:30
-msgid "Satin"
-msgstr "Colonne satin"
 
 #: inx/inkstitch_select_elements.inx:32
 msgid "E-Stitch"
