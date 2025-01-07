@@ -127,7 +127,7 @@ class FillToSatin(InkstitchExtension):
         '''We did not receive the rigth elements, inform user'''
         app = AbortMessageApp(
             message,
-            _("https://inkstitch.org/satin-tools#fill-to-satin")
+            _("https://inkstitch.org/docs/satin-tools/#fill-to-satin")
         )
         app.MainLoop()
 
