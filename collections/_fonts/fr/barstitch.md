@@ -1,7 +1,7 @@
 ---
 title: "Barstitch"
 permalink: /fr/fonts/barstitch_bold/
-last_modified_at: 2025-01-04
+last_modified_at: 2025-01-07
 toc: false
 preview_image:
   - url: /assets/images/fonts/barstitch_bold.png
