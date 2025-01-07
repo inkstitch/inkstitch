@@ -27,6 +27,8 @@ class FillToSatin(InkstitchExtension):
         self.arg_parser.add_argument("--zigzag", dest="zigzag", type=Boolean, default=False)
         self.arg_parser.add_argument("--keep_originals", dest="keep_originals", type=Boolean, default=False)
 
+        self.satin_index = 0
+
     def effect(self):
         if not self.svg.selected or not self.get_elements():
             self.print_error()
@@ -39,9 +41,6 @@ class FillToSatin(InkstitchExtension):
 
         settings = {
             'skip_end_section': self.options.skip_end_section,
-            'center': self.options.center,
-            'contour': self.options.contour,
-            'zigzag': self.options.zigzag,
         }
 
         for fill_element in fill_elements:
@@ -50,7 +49,8 @@ class FillToSatin(InkstitchExtension):
             fill_linestrings = self._fill_to_linestrings(fill_shape)
             for linestrings in fill_linestrings:
                 fill_to_satin = FillElementToSatin(self.svg, settings, fill_element, fill_shape, linestrings, selected_rungs)
-                fill_to_satin.convert_to_satin()
+                satins = fill_to_satin.convert_to_satin()
+                self._insert_satins(fill_element, satins)
 
         self._remove_originals()
 
@@ -82,6 +82,41 @@ class FillToSatin(InkstitchExtension):
             fill_linestrings.append(list(linestrings.geoms))
         return fill_linestrings
 
+    def _insert_satins(self, fill_element, satins):
+        '''Insert satin elements into the document'''
+        if not satins:
+            return
+        group = fill_element.node.getparent()
+        index = group.index(fill_element.node) + 1
+        transform = get_correction_transform(fill_element.node)
+        style = f'stroke: {fill_element.color}; fill: none; stroke-width: {self.svg.viewport_to_unit("1px")};'
+        if len(satins) > 1:
+            new_group = Group()
+            group.insert(index, new_group)
+            group = new_group
+            group.label = _("Satin Group")
+            index = 0
+        for i, satin in enumerate(satins):
+            node = PathElement()
+            d = ""
+            for segment in satin:
+                for geom in segment.geoms:
+                    d += str(Path(list(geom.coords)))
+            node.set('d', d)
+            node.set('style', style)
+            node.set('inkstitch:satin_column', True)
+            if self.options.center:
+                node.set('inkstitch:center_walk_underlay', True)
+            if self.options.contour:
+                node.set('inkstitch:contour_underlay', True)
+            if self.options.zigzag:
+                node.set('inkstitch:zigzag_underlay', True)
+            node.transform = transform
+            node.apply_transform()
+            node.label = _("Satin") + f" {self.satin_index}"
+            group.insert(index, node)
+            self.satin_index += 1
+
     def _remove_originals(self):
         '''Remove original elements - if requested'''
         if not self.options.keep_originals:
@@ -110,18 +145,15 @@ class FillElementToSatin:
         self.line_sections = []
         self.rung_sections = defaultdict(list)
         self.section_rungs = defaultdict(list)
-        self.bridged_sections = []
         self.bridged_rungs = defaultdict(list)
         self.used_bridged_rungs = []
         self.rung_segments = {}
 
-        self.satin_index = 0
-
     def convert_to_satin(self):
-        intersection_points, half_rung_bridges, centerline_bridges = self._validate_rungs()
+        intersection_points, bridges = self._validate_rungs()
 
         self._generate_line_sections()
-        self._define_relations(half_rung_bridges, centerline_bridges)
+        self._define_relations(bridges)
 
         if len(self.line_sections) == 2 and self.line_sections[0].distance(self.line_sections[1]) > 0:
             # there is only one segment, add it directly
@@ -137,42 +169,7 @@ class FillElementToSatin:
         else:
             combined_satins = self._get_satin_geoms(rung_segments, satin_segments)
 
-        self._insert_satins(combined_satins)
-
-    def _insert_satins(self, combined_satins):
-        '''Insert satin elements into the document'''
-        if not combined_satins:
-            return
-        group = self.fill_element.node.getparent()
-        index = group.index(self.fill_element.node) + 1
-        transform = get_correction_transform(self.fill_element.node)
-        style = f'stroke: {self.fill_element.color}; fill: none; stroke-width: {self.svg.viewport_to_unit("1px")};'
-        if len(combined_satins) > 1:
-            new_group = Group()
-            group.insert(index, new_group)
-            group = new_group
-            group.label = _("Satin Group")
-            index = 0
-        for i, satin in enumerate(combined_satins):
-            node = PathElement()
-            d = ""
-            for segment in satin:
-                for geom in segment.geoms:
-                    d += str(Path(list(geom.coords)))
-            node.set('d', d)
-            node.set('style', style)
-            node.set('inkstitch:satin_column', True)
-            if self.settings['center']:
-                node.set('inkstitch:center_walk_underlay', True)
-            if self.settings['contour']:
-                node.set('inkstitch:contour_underlay', True)
-            if self.settings['zigzag']:
-                node.set('inkstitch:zigzag_underlay', True)
-            node.transform = transform
-            node.apply_transform()
-            node.label = _("Satin") + f" {self.satin_index}"
-            group.insert(index, node)
-            self.satin_index += 1
+        return combined_satins
 
     def _get_two_rung_circle_geoms(self, rung_segments, satin_segments):
         '''Imagine a donut with two rungs: this is a special case where all segments connect to the very same two rungs'''
@@ -256,15 +253,6 @@ class FillElementToSatin:
                         rung_segments[rung].append(segment_index)
                     segment_index += 1
                     finished_sections.extend([i, connect_index])
-
-                elif i in self.bridged_sections:
-                    segment = self._get_bridged_segment(section, s_rungs, intersection_points, line_section_multi)
-                    if segment:
-                        satin_segments.append(segment)
-                        for rung in s_rungs:
-                            rung_segments[rung].append(segment_index)
-                        segment_index += 1
-                        finished_sections.append(i)
                 else:
                     for bridge, rung_list in self.bridged_rungs.items():
                         if len(rung_list) != 2:
@@ -328,22 +316,6 @@ class FillElementToSatin:
         if section2 is not None:
             segment = MultiLineString([section, section2])
         return connect_index, segment
-
-    def _get_bridged_segment(self, section, s_rungs, intersection_points, line_section_multi):
-        segment = None
-        bridge_points = []
-        # create bridge
-        for rung in s_rungs:
-            rung_points = intersection_points[rung].geoms
-            for point in rung_points:
-                if point.distance(section) > 0.01:
-                    bridge_points.append(point)
-        if len(bridge_points) == 2:
-            rung = self.rungs[s_rungs[0]]
-            bridge = LineString(bridge_points)
-            bridge = snap(bridge, line_section_multi, 0.0001)
-            segment = MultiLineString([section, bridge])
-        return segment
 
     def _get_connected_section(self, index, s_rungs):
         rung_section_list = []
@@ -412,20 +384,18 @@ class FillElementToSatin:
                 del sections[-1]
             self.line_sections.extend(sections)
 
-    def _define_relations(self, half_rung_bridges, centerline_bridges):
+    def _define_relations(self, bridges):
         ''' Defines information about the relations between line_sections and rungs
             rung_sections: dictionary with rung_index: neighboring sections
             section_rungs: dictionary with section_id: neighboring rungs
-            bridged_sections: list of sections which the user marked for bridging
+            bridged_rungs: lines which define which segments are to be bridged at intersection points
         '''
         for i, section in enumerate(self.line_sections):
-            if not section.intersection(half_rung_bridges).is_empty:
-                self.bridged_sections.append(i)
             for j, rung in enumerate(self.rungs):
                 if section.distance(rung) < 0.01:
                     self.section_rungs[i].append(j)
                     self.rung_sections[j].append(i)
-        for i, bridge in enumerate(centerline_bridges):
+        for i, bridge in enumerate(bridges):
             for j, rung in enumerate(self.rungs):
                 if bridge.intersects(rung):
                     self.bridged_rungs[i].append(j)
@@ -433,8 +403,7 @@ class FillElementToSatin:
     def _validate_rungs(self):
         ''' Returns only valid rungs and bridge section markers'''
         multi_line_string = MultiLineString(self.linestrings)
-        half_rung_bridges = []
-        centerline_bridges = []
+        bridges = []
         intersection_points = []
         rungs = []
         for rung in self.selected_rungs:
@@ -442,16 +411,13 @@ class FillElementToSatin:
             if intersection.geom_type == 'MultiPoint' and len(intersection.geoms) == 2:
                 rungs.append(rung)
                 intersection_points.append(intersection)
-            elif intersection.geom_type == 'Point':
-                # these rungs help to indicate how the satin section should be connected
-                half_rung_bridges.append(rung)
             elif intersection.is_empty and rung.within(self.fill_shape):
                 # these rungs (possibly) connect two rungs
-                centerline_bridges.append(rung)
+                bridges.append(rung)
         # filter rungs when they are crossing other rungs. They could possibly produce bad line sections
         for i, rung in enumerate(rungs):
             multi_rung = MultiLineString([r for j, r in enumerate(rungs) if j != i])
             intersection = rung.intersection(multi_rung)
             if not rung.intersects(multi_rung) or not rung.intersection(multi_rung).intersects(self.fill_shape):
                 self.rungs.append(rung)
-        return intersection_points, MultiLineString(half_rung_bridges), centerline_bridges
+        return intersection_points, bridges
