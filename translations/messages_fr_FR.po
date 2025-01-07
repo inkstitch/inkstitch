@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-06 01:27+0000\n"
-"PO-Revision-Date: 2025-01-06 01:28\n"
+"POT-Creation-Date: 2025-01-07 01:25+0000\n"
+"PO-Revision-Date: 2025-01-07 01:25\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-06 01:27+0000\n"
+"POT-Creation-Date: 2025-01-07 01:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2610,7 +2610,7 @@ msgstr "Filtrer les points plus petits que (mm)"
 
 #: lib/extensions/fill_to_satin.py:101
 msgid "Satin Group"
-msgstr ""
+msgstr "Groupe de Satins"
 
 #: lib/extensions/fill_to_satin.py:120 inx/inkstitch_select_elements.inx:30
 msgid "Satin"
@@ -2619,15 +2619,16 @@ msgstr "Colonne satin"
 #: lib/extensions/fill_to_satin.py:388
 msgid "This element has a fill and a stroke.\n\n"
 "Rungs only have a stroke color and fill elements a fill color."
-msgstr ""
+msgstr "Cet élément a un remplissage et un contour.\n\n"
+"Les traverses doivent avoir seulement un contour, et les remplissages seulement un remplissage."
 
 #: lib/extensions/fill_to_satin.py:399
 msgid "Please select a fill object and rungs."
-msgstr ""
+msgstr "Merci de sélectionner un remplissage et des traverses."
 
 #: lib/extensions/fill_to_satin.py:403
 msgid "https://inkstitch.org/satin-tools#fill-to-satin"
-msgstr ""
+msgstr "https://inkstitch.org/fr/satin-tools#fill-to-satin"
 
 #: lib/extensions/fill_to_stroke.py:33 lib/extensions/fill_to_stroke.py:39
 msgid "Please select one or more fill objects to render the centerline."
@@ -3449,12 +3450,10 @@ msgstr "https://inkstitch.org/fr/docs/font-tools/#font-sampling"
 #, python-format
 msgid "The glyphlist for this font seems to be outdated.\n\n"
 "Please update the glyph list for %s:\n"
-"Extensions > Ink/Stitch > Font Management > Update Glyphlist"
-msgstr "La liste des glyphes de cette fonte ne semble pas à jour.\n\n"
-"Merci de mettre a jour la liste des glyphes de %s:\n"
-"Extensions > Ink/Stitch >Gestion des polices > Mettre à jour la liste des glyphes"
+"open Extensions > Ink/Stitch > Font Management > Edit JSON select this font and apply. No other changes necessary."
+msgstr ""
 
-#: lib/gui/lettering_font_sample.py:221
+#: lib/gui/lettering_font_sample.py:222
 msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
 msgstr "Il y a des glyphes dupliqués dans ce fichier de fonte : {duplicated_glyphs}"
 
@@ -5317,27 +5316,27 @@ msgstr "Affiche les informations de broderie des éléments selectionnés"
 
 #: inx/inkstitch_fill_to_satin.inx:3
 msgid "Fill to satin"
-msgstr ""
+msgstr "Remplissage en Satin"
 
 #: inx/inkstitch_fill_to_satin.inx:10
 msgid "Start / end at rung"
-msgstr ""
+msgstr "Début/Fin à la traverse"
 
 #: inx/inkstitch_fill_to_satin.inx:10
 msgid "Needs at least 2 rungs"
-msgstr ""
+msgstr "Nécessite au moins deux traverses"
 
 #: inx/inkstitch_fill_to_satin.inx:23
 msgid "This extension takes in a fill and rung elements and converts them into satin(s)."
-msgstr ""
+msgstr "Cette extension prend un remplissage et des traverses et convertit le tout en une ou plusieurs colonnes satin."
 
 #: inx/inkstitch_fill_to_satin.inx:26
 msgid "https://inkstitch.org/docs/satin-tools/#fill-to-satin"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/satin-tools/#fill-to-satin"
 
 #: inx/inkstitch_fill_to_satin.inx:33
 msgid "Convert fill elements to satin"
-msgstr ""
+msgstr "Convertit des remplissages en colonne satin"
 
 #: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:25
 msgid "Fill to Stroke"
@@ -6945,11 +6944,11 @@ msgstr "Nombre de répétitions du point multiple (bean stitch)"
 
 #: inx/inkstitch_redwork.inx:25
 msgid "Combine elements"
-msgstr ""
+msgstr "Combiner les chemins"
 
 #: inx/inkstitch_redwork.inx:25
 msgid "Combine consecutive elements of same type"
-msgstr ""
+msgstr "Combine les chemins de même type consécutifs"
 
 #: inx/inkstitch_redwork.inx:29
 msgid "Redwork embroidery is a stroke art embroidery which passes every line exactly twice."
