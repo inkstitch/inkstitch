@@ -96,10 +96,10 @@ Konturunterlage                    | Fügt eine Konturunterlage hinzu
 Zick-Zack Unterlage                | Fügt eine Zick-Zack-Unterlage hizu
 Original behalten                  | Behalte oder verwerfe die ausgewählten Original-Pfade
 
-### Richtungsvektoren und Kreuzungspunkte
+### Brücken
 
-Richtungsvektoren definieren die Teilbereiche der Satinsäule und geben später beim Sticken den Stichwinkel an (wie bei allen Satinsäulen).
-Eine Besonderheit dieser Erweiterung sind die Brücken (halbe Richtungsvektoren). Sie definieren, ob die Säule an Kreuzungspunkten weiter geführt werden soll oder nicht. Ist eine Kreuzung nicht überbrückt, entsteht hier einfach eine Lücke.
+Definiere die Verbindungen zwischen den Satinsäulen mit Hilfe von Brücken.
+Ist eine Kreuzung nicht überbrückt, entsteht hier einfach eine Lücke.
 
 ![Convert to satin with and without bridge](/assets/images/docs/fill_to_satin_bridge.png)
 

@@ -98,14 +98,10 @@ Sous-couche de contour | Ajoute une sous-couche de contour par défaut au(x) sat
 Sous-couche en zigzag | Ajoute une sous-couche zigzag par défaut au(x) satin(s)
 Conserver les chemins originels | Conserver ou supprimer les chemins sélectionnés
 
-### Traverses et intersections
+### Intersections
 
-Les traverses définissent les découpages en colonnes de satin ainsi que la direction de la broderie (comme pour toutes les colonnes de satin).
-Une spécialité de cette extension est la traverse pont (demi-traverse) qui ne croise qu'un des rails. Elle sert à informer Ink/Stitch que vous souhaitez relier cette section aux points d'intersection.
+Use bridges at intersections to inform Ink/Stitch how to connect the satin columns.
 Les intersections non reliées laissent simplement un espace vide.
-
-
-
 
 ![Conversion en satin avec  et sans traverse pont](/assets/images/docs/fill_to_satin_bridge.png)
 
