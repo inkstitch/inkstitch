@@ -227,6 +227,8 @@ class Font(object):
             letter_group = self._render_line(destination_group, line, position, glyph_set)
             if (back_and_forth and self.reversible and i % 2 == 1) or variant == '←':
                 letter_group[:] = reversed(letter_group)
+                for group in letter_group:
+                    group[:] = reversed(group)
 
             position.x = 0
             position.y += self.leading
