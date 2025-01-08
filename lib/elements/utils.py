@@ -24,6 +24,8 @@ from .text import TextObject
 
 
 def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  # noqa: C901
+    if node.style('display') == 'none':
+        return []
     if is_clone(node) and not clone_to_element:
         # clone_to_element: get an actual embroiderable element once a clone has been defined as a clone
         return [Clone(node)]
