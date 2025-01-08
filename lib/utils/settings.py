@@ -16,6 +16,8 @@ DEFAULT_SETTINGS = {
     "cache_size": 100,
     "pop_out_simulator": False,
     # simulator
+    "simulator_adaptive_speed": True,
+    "simulator_speed": 16,
     "simulator_line_width": 0.1,
     "simulator_npp_size": 0.5,
     "npp_button_status": False,

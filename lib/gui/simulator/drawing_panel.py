@@ -65,7 +65,7 @@ class DrawingPanel(wx.Panel):
         self.background_color = None
 
         # desired simulation speed in stitches per second
-        self.speed = 16
+        self.speed = global_settings['simulator_speed']
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)
         self.Bind(wx.EVT_SIZE, self.choose_zoom_and_pan)
@@ -399,6 +399,7 @@ class DrawingPanel(wx.Panel):
 
     def set_speed(self, speed):
         self.speed = speed
+        global_settings['simulator_speed'] = speed
 
     def forward(self):
         self.direction = 1

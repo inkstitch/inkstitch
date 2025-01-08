@@ -11,6 +11,7 @@ from wx.lib.intctrl import IntCtrl
 from ...debug.debug import debug
 from ...i18n import _
 from ...utils import get_resource_dir
+from ...utils.settings import global_settings
 from . import SimulatorSlider
 
 
@@ -31,7 +32,7 @@ class ControlPanel(wx.Panel):
         self.drawing_panel = None
         self.num_stitches = 0
         self.current_stitch = 0
-        self.speed = 1
+        self.speed = global_settings['simulator_speed']
         self.direction = 1
         self._last_color_block_end = 0
 
@@ -203,6 +204,9 @@ class ControlPanel(wx.Panel):
         return icon.ConvertToBitmap()
 
     def choose_speed(self):
+        if not global_settings['simulator_adaptive_speed']:
+            self.set_speed(global_settings['simulator_speed'])
+            return
         if self.target_duration:
             self.set_speed(int(self.num_stitches / float(self.target_duration)))
         else:
@@ -225,6 +229,7 @@ class ControlPanel(wx.Panel):
             self.animation_reverse()
 
     def set_speed(self, speed):
+        global_settings['simulator_speed'] = speed
         self.speed = int(max(speed, 1))
         self.update_speed_text()
 
@@ -251,6 +256,7 @@ class ControlPanel(wx.Panel):
         if self.current_stitch != stitch:
             self.current_stitch = stitch
             self.slider.SetValue(stitch)
+            stitch = min(self.stitchBox.GetMax(), stitch)
             self.stitchBox.SetValue(stitch)
 
     def on_stitch_box_focus(self, event):
