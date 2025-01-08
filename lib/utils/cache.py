@@ -35,7 +35,7 @@ def get_stitch_plan_cache():
         size_limit = global_settings['cache_size'] * 1024 * 1024
         try:
             __stitch_plan_cache = diskcache.Cache(cache_dir, size=size_limit)
-        except sqlite3.DatabaseError:
+        except (sqlite3.DatabaseError, sqlite3.OperationalError):
             # reset cache database file if it couldn't parse correctly
             cache_file = os.path.join(appdirs.user_config_dir('inkstitch'), 'cache', 'stitch_plan', 'cache.db')
             if os.path.exists(cache_file):
