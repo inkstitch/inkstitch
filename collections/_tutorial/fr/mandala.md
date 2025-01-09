@@ -16,12 +16,15 @@ field-of-use:
 user-level: 
 ---
 
- <img 
-     src="/assets/images/tutorials/mandala/Fullmandala.png"
-     alt="Full Mandala" height="200">     
- <img 
-     src="/assets/images/tutorials/mandala/whaletail.png"
-     alt="Whale tail" height="200">
+<table>
+        <tr>
+            <td> <img src="/assets/images/tutorials/mandala/Fullmandala.png" alt="Full Mandala" height="200"/>    </td>
+            <td> <img src="/assets/images/tutorials/mandala/whaletail.png" alt="Whale tail" height="200" /></td>
+        </tr>
+</table>
+
+ 
+
 
 
 Inkscape permet de construire rapidement et simplement des mandalas. Si l'on prend soin de construire des mandalas avec très peu d'objets isolés,  mais plutot des 
@@ -37,16 +40,17 @@ Les outils d'Inkscape qui vont nous permettre de construire facilement des manda
 Commençons par construire un mandala assez simple. Comme tout mandala, il est plein de symmétries.
 
 
-
-<img  src="/assets/images/tutorials/mandala/nopatheffect.png"
-     alt="Mirror path  effect" height="200"/>
-<img 
-     src="/assets/images/tutorials/mandala/jusmirror.png"
-     alt="Mirror path  effect" height="200"/>
-<img 
+<table>
+        <tr>
+            <td> <img  src="/assets/images/tutorials/mandala/nopatheffect.png"
+     alt="Mirror path  effect" height="200"/> </td>
+    <td><img src="/assets/images/tutorials/mandala/jusmirror.png"
+     alt="Mirror path  effect" height="200"/> </td>
+    <td>   <img 
      src="/assets/images/tutorials/mandala/2patheffect.png"
-     alt="Mirror and Rotate" height="200"/>
-
+     alt="Mirror and Rotate" height="200"/></td>
+        </tr>
+</table>
 
 Ce mandala est composé de:
 * en rouge : deux cercles et un genre d'étoile qui sont dessinés une fois et qui n'ont besoin d'aucun  effet de chemin
