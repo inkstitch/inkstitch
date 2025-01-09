@@ -65,7 +65,7 @@ Voyons en un peu plus de détails comment s'y prendre, rien de tout cela n'est o
 
 * Créer d'abord les objets qui ne nécessitent pas d'effet de chemin, et utiliser "Aligner et Distribuer" pour les centrer horizontalement et verticalement par rapport à la page. Verrouiller ces chemins. Ajouter plusieurs cercles concentriques que l'on est pas obligé de garder ensuite peut aider à dessiner.
 * Dessiner un chemin dans le triangle entre l'horizontale et le guide des 30°.
-* Créer un groupe autour de ce chemin.
+* Grouper les chemins tracés entre les deux guides.
 * Sélectionner le groupe et ajouter les  deux effets  de chemins sur le  groupe. De cette manière les effets de chemins agiront sur tous les chemins que vous ajouterez  dans le  groupe.
 
 #### Effet de chemin  Reflet miroir
