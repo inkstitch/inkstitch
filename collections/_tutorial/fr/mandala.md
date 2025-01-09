@@ -102,7 +102,7 @@ Pour un mandala plus complexe, ajoutez des chemins. Attention si vous voulez ajo
 
 ### Complexifier encore
 
-Rien n'oblige a utiliser toujours le même nombre de copies. La nouvelle partie du mandala utilise 9 copies et non plus 6 copies.
+Rien n'oblige à utiliser toujours le même nombre de copies. La nouvelle partie du mandala utilise 9 copies et non plus 6 copies.
 
 ![Mandala complexe](/assets/images/tutorials/mandala/complexmandala.svg) 
 
