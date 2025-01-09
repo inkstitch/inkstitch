@@ -89,6 +89,14 @@ def _update_to(version, element):
         _update_to_one(element)
     elif version == 2:
         _update_to_two(element)
+    elif version == 3:
+        _update_to_three(element)
+
+
+def _update_to_three(element):
+    if element.get_boolean_param('satin_column', False):
+        element.set_param('start_at_nearest_point', False)
+        element.set_param('end_at_nearest_point', False)
 
 
 def _update_to_two(element):
