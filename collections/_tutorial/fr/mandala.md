@@ -95,7 +95,7 @@ Faites en sorte que chaque objet en touche au moins un autre (une petite approxi
 ### Complexifier le mandala
 ![Mandala moins simple](/assets/images/tutorials/mandala/lesssimplemandala.svg) 
 
-[Télécharger le fichier exemple mandala moins simple ](/assets/images/tutorials/mandala/simplemandala.svg){: download="lessimplemandala.svg" }
+[Télécharger le fichier exemple mandala moins simple ](/assets/images/tutorials/mandala/lesssimplemandala.svg){: download="lessimplemandala.svg" }
 
 
 Pour un mandala plus complexe, ajoutez des chemins. Attention si vous voulez ajoutez des chemins qui comme les chemins verts de l'exemple ci-dessus sont soit sur un des guides (traits verts) ou traversent les guides (rond verts), il ne faut pas leur appliquer d'effet miroir, seulement la rotation. Le nouvel exemple comporte donc un groupe supplémentaire avec le seul effet de chemin tourner les copies.
