@@ -80,14 +80,24 @@ Choisir le mode centre horizontal de la page , le reste des paramètres est sans
 * cocher distribuer régulièrement
 * Avec l'effet de chemin sélectionné, sélectionner l'outil noeud pour afficher les poignées de la rotation et aller placer le centre de la rotation exactement au centre de la page
 
-### Construire le mandala
+#### Construire le mandala
 
 Ajoutez des chemins dans ce groupe pour construire votre mandala. Je commence par des objets dont les extrémités sont sur les guides à 0° et 60°, si tout est bien réglé vous devez  voir les copies bien jointives.
 Faites en sorte que chaque objet en touche au moins un autre (une petite approximation de moins de 0.5 mm est possible)
 
 
 ![Mandala simple](/assets/images/tutorials/mandala/simplemandala.svg) 
+
 [Télécharger le fichier exemple mandala simple ](/assets/images/tutorials/mandala/simplemandala.svg){: download="simplemandala.svg" }
+
+
+### Complexifier le mandala
+![Mandala moins simple](/assets/images/tutorials/mandala/lesssimplemandala.svg) 
+
+[Télécharger le fichier exemple mandala moins simple ](/assets/images/tutorials/mandala/simplemandala.svg){: download="lessimplemandala.svg" }
+
+
+Pour un mandala plus complexe, ajoutez des chemins. Attention si vous voulez ajoutez des chemins qui comme les chemins verts de l'exemple ci-dessus sont soit sur un des guides (traits verts) ou traversent les guides (rond verts), il ne faut pas leur appliquer d'effet mirroir, seulement la rotation. Le nouvel exemple comporte donnc un groupe supplémentaire avec le seul effet de chemin tourner les copies.
 
 
 
