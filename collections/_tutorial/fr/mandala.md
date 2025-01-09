@@ -26,3 +26,16 @@ On peut soit broder un mandala entier, soit l'utiliser pour créer un remplissag
 
 Les outils d'Inkscape qui vont nous permettre de construire facilement des mandalas sont les deux effets de chemin  "Reflet mirroir"  et "Tourner les copies".
 
+## Construction d'un mandala
+
+### Première version
+Commençons par construire un mandala assez simple. Comme tout mandala, il est plein de symmétries.
+
+![Sample](/assets/images/tutorials/mandala/nopatheffect.png)
+![Sample](/assets/images/tutorials/mandala/jusmirror.png)
+![Sample](/assets/images/tutorials/mandala/2patheffect.png)
+
+Ce mandala est composé de:
+* en rouge : deux cercles et un genre d'étoile qui sont dessinés une fois et qui n'ont besoin d'aucun  effet de chemin
+* en violet : un groupe de chemins  sur lesquels sont appliqués d'une part un effet de chemin Reflet Mirroir et d'autre part un effet Tourner les copies avec 6 copies.
+  
