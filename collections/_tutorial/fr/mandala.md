@@ -1,6 +1,6 @@
 ---
 permalink: /fr/tutorials/mandala/
-title: Mandala "
+title: Mandala
 language: fr
 last_modified_at: 2022-06-12
 excerpt: "Mandala et Broderie"
@@ -16,8 +16,13 @@ field-of-use:
 user-level: 
 ---
 
-![Sample](/assets/images/tutorials/mandala/Fullmandala.png)
-![Sample](/assets/images/tutorials/mandala/whaletail.png)
+ <img 
+     src="/assets/images/tutorials/mandala/Fullmandala.png"
+     alt="Full Mandala" height="200">     
+ <img 
+     src="/assets/images/tutorials/mandala/whaletail.png"
+     alt="Whale tail" height="200">
+
 
 Inkscape permet de construire rapidement et simplement des mandalas. Si l'on prend soin de construire des mandalas avec très peu d'objets isolés,  mais plutot des 
 objets connectés,alors l'outil redwork d'Ink/Stitch permet de les transformer en  une broderie qui se brode avec pas (ou peu) de sauts de fils. 
@@ -31,11 +36,32 @@ Les outils d'Inkscape qui vont nous permettre de construire facilement des manda
 ### Première version
 Commençons par construire un mandala assez simple. Comme tout mandala, il est plein de symmétries.
 
-![Sample](/assets/images/tutorials/mandala/nopatheffect.png)
-![Sample](/assets/images/tutorials/mandala/jusmirror.png)
-![Sample](/assets/images/tutorials/mandala/2patheffect.png)
+
+
+<img  src="/assets/images/tutorials/mandala/nopatheffect.png"
+     alt="Mirror path  effect" height="200"/>
+<img 
+     src="/assets/images/tutorials/mandala/jusmirror.png"
+     alt="Mirror path  effect" height="200"/>
+<img 
+     src="/assets/images/tutorials/mandala/2patheffect.png"
+     alt="Mirror and Rotate" height="200"/>
+
 
 Ce mandala est composé de:
 * en rouge : deux cercles et un genre d'étoile qui sont dessinés une fois et qui n'ont besoin d'aucun  effet de chemin
 * en violet : un groupe de chemins  sur lesquels sont appliqués d'une part un effet de chemin Reflet Mirroir et d'autre part un effet Tourner les copies avec 6 copies.
+
+Voyons en un peu plus de détails comment s'y prendre, rien de tout cela n'est obligatoire, mais cela simplifie le processus:
+
+* Créer un nouveau document inkscape, dans les propriétés du document lui donner une dimension carrée
+* Créer au moins 3 guides. Je les fais tous passer par le point (0,0), et  je leur donne les angles 0°, 90° pour avoir des repères horizontaux et  verticaux et 30° parce que je vais dessiner mes chemins violets entre l'horizonal et ce guide (6 copies et le mirroir font qu'ils seront reproduits 12 fois et 30=360/12)
+* Activer le magnetisme, uniquement pour les guides et les noeuds
+
+* Créer d'abord les objets qui ne necessitent pas d'effet de chemin, et utiliser "Aligner et Distribuer" pour les centrer horizontalement et verticalement par rapport à la page
+* Dessiner un chemin dans le triangle entre l'horizontale et le guide des 30 degrés
+* Créer un groupe autour de ce chemin
+* Sélectionner le groupe et ajouter les  deux effets  de chemins sur le  groupe.De cette manière les effets de chemins agiront sur tous les chemins que vous ajouterez  dans le  groupe 
+
+  
   
