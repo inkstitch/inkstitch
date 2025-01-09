@@ -4,6 +4,7 @@ title: Mandala
 language: fr
 last_modified_at: 2022-06-12
 excerpt: "Mandala et Broderie"
+read_time: false
 image: "/assets/images/tutorials/mandala/whaletail.png"
 tutorial-type:
   - 
@@ -98,6 +99,11 @@ Faites en sorte que chaque objet en touche au moins un autre (une petite approxi
 
 
 Pour un mandala plus complexe, ajoutez des chemins. Attention si vous voulez ajoutez des chemins qui comme les chemins verts de l'exemple ci-dessus sont soit sur un des guides (traits verts) ou traversent les guides (rond verts), il ne faut pas leur appliquer d'effet mirroir, seulement la rotation. Le nouvel exemple comporte donnc un groupe supplémentaire avec le seul effet de chemin tourner les copies.
+
+### Complexifier encore
+
+Rien n'oblige a utiliser toujours le même nombre de copies. Ici on complète le mandala cette fois ci 9 copies
+
 
 
 
