@@ -2,7 +2,7 @@
 permalink: /fr/tutorials/mandala/
 title: Mandala
 language: fr
-last_modified_at: 2022-06-12
+last_modified_at: 2025-01-09
 excerpt: "Mandala et Broderie"
 read_time: false
 image: "/assets/images/tutorials/mandala/whaletail.png"
