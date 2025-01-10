@@ -35,6 +35,7 @@ On peut soit broder un mandala entier, soit l'utiliser pour créer un remplissag
 
 Les outils d'Inkscape qui vont nous permettre de construire facilement des mandalas sont les deux effets de chemin  "Reflet miroir"  et "Tourner les copies".
 
+si vous préferrez les images aux textes,    [Gus Visser](https://youtu.be/LS6lgspQkbM)   a une video sur le même sujet. 
 ## Construction d'un mandala
 
 ### Premières étapes, version simple
@@ -112,7 +113,7 @@ Rien n'oblige à utiliser toujours le même nombre de copies. La nouvelle partie
 
 Il suffit de 
 * tout sélectionner 
-* Inkscape > Chemins > Objets en chemin
+* Inkscape > Chemins > Objets en chemin . Si en plus des effets de chemin vous avez des objets qui ne sont pas déjà des chemins (par exemple des spirales ou des objets porteurs eux mêmes d'effet de chemin, procedez groupe par groupe, masquez temporairement les effets de chemin du groupe,  transformez chaque objet du groupe en chemin, reaffichez les effets de chemin du groupe selectionnez tout le groupe et objet en chemin (ou aplanir chaque effet de chemin a partir du dialogue des effets de chemin)
 * Extensions > Ink/Stitch > Outils: Trait > Redwork choisir 0,5 mm pour "Connecter si la longueur est inférieure à " et pour "longueur mininmum d'un chemin"
 * Allez faire un tour ou boire un café ou passer un coup de fil
 * Et admirez le résultat. Si vous obtenez plusieurs groupes connectés c'est que certains objets n'en touchent aucun autre, rectifiez si vous le souhaitez...
