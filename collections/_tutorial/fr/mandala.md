@@ -35,11 +35,11 @@ On peut soit broder un mandala entier, soit l'utiliser pour créer un remplissag
 
 Les outils d'Inkscape qui vont nous permettre de construire facilement des mandalas sont les deux effets de chemin  "Reflet miroir"  et "Tourner les copies".
 
-si vous préferrez les images aux textes,    [Gus Visser](https://youtu.be/LS6lgspQkbM)   a une video sur le même sujet. 
+si vous préferrez les images aux textes, ou souhaitez plus de  détails,  [Gus Visser](https://youtu.be/LS6lgspQkbM)   a une video sur le même sujet. 
 ## Construction d'un mandala
 
 ### Premières étapes, version simple
-Commençons par construire un mandala assez simple. Comme tout mandala, il est plein de symétries
+Commençons par construire un mandala assez simple. Comme tout mandala, il est plein de symétries.
 
 
 <table>
@@ -61,12 +61,12 @@ Ce mandala est composé de:
 Voyons en un peu plus de détails comment s'y prendre, rien de tout cela n'est obligatoire, mais cela simplifie le processus:
 
 * Créer un nouveau document inkscape, dans les propriétés du document lui donner une dimension carrée, 200mm par 200 mm pour moi
-* Créer au moins 3 guides. Je les fais tous passer par le centre de la page  [(100,100) pour moi], et  je leur donne les angles 0°, 90° pour avoir des repères horizontaux et  verticaux et 30° parce que je vais dessiner mes chemins violets entre le guide horizontal et le guide  à 30° (6 copies et le miroir font qu'ils seront reproduits 12 fois et 30=360/12). Un 4-ième guide  à -30° sans être indispensable permet de mieux visualiser. Verrouiller les guides.
+* Créer au moins 3 guides. Je les fais tous passer par le centre de la page  [(100,100) pour moi], et  je leur donne les angles 0°, 90° pour avoir des repères horizontaux et  verticaux et 30° parce que je vais dessiner mes chemins violets entre le guide horizontal et le guide  à 30° (6 copies et le miroir font qu'ils seront reproduits 12 fois et 30=360/12). Un 4-ième guide  à -30° sans être indispensable permet de mieux visualiser. Verrouiller les guides. Vous pouvez acceder a ces paramètres en double cliquant sur le guide
 * Activer le  magnétisme, uniquement avec les guides et les noeuds.
 
 * Créer d'abord les objets qui ne nécessitent pas d'effet de chemin, et utiliser "Aligner et Distribuer" pour les centrer horizontalement et verticalement par rapport à la page. Verrouiller ces chemins. Ajouter plusieurs cercles concentriques que l'on est pas obligé de garder ensuite peut aider à dessiner.
-* Dessiner un chemin dans le triangle entre l'horizontale et le guide des 30°.
-* Grouper les chemins tracés entre les deux guides.
+* Dessiner un premier chemin dans le triangle entre l'horizontale et le guide des 30°.
+* Grouper ce chemin avec lui même.
 * Sélectionner le groupe et ajouter les  deux effets  de chemins sur le  groupe. De cette manière les effets de chemins agiront sur tous les chemins que vous ajouterez  dans le  groupe.
 
 #### Effet de chemin  Reflet miroir
