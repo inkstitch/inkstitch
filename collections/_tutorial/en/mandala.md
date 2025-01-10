@@ -2,7 +2,7 @@
 permalink: /tutorials/mandala/
 title: Mandala
 language: en
-last_modified_at: 2022-06-10
+last_modified_at: 2025-01-10
 excerpt: "Mandala and Embroidery"
 read_time: false
 image: "/assets/images/tutorials/mandala/whaletail.png"
