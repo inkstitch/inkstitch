@@ -25,9 +25,12 @@ class JumpToTrim(InkstitchExtension):
         self._set_selection()
         self.get_elements()
 
+        next_elements = [None]
+        if len(self.elements) > 1:
+            next_elements = self.elements[1:] + next_elements
         last_element = None
         last_stitch_group = None
-        for element in self.elements:
+        for element, next_element in zip(self.elements, next_elements):
             stitch_groups = element.to_stitch_groups(last_stitch_group)
 
             for stitch_group in stitch_groups:
