@@ -11,6 +11,7 @@
             <spacer />
             <separator />
             <spacer />
+            <param name="pull_compensation_mm" type="float" gui-text="Pull compensation (mm)"  precision="2" min="-10" max="10">0.0</param>
             <param name="center" type="boolean" gui-text="Center-walk underlay">false</param>
             <param name="contour" type="boolean" gui-text="Contour underlay">false</param>
             <param name="zigzag" type="boolean" gui-text="Zig-zag underlay">false</param>

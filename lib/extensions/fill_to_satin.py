@@ -22,6 +22,7 @@ class FillToSatin(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("--skip_end_section", dest="skip_end_section", type=Boolean, default=False)
+        self.arg_parser.add_argument("--pull_compensation_mm", dest="pull_compensation_mm", type=float, default=0)
         self.arg_parser.add_argument("--center", dest="center", type=Boolean, default=False)
         self.arg_parser.add_argument("--contour", dest="contour", type=Boolean, default=False)
         self.arg_parser.add_argument("--zigzag", dest="zigzag", type=Boolean, default=False)
@@ -40,7 +41,7 @@ class FillToSatin(InkstitchExtension):
             return
 
         settings = {
-            'skip_end_section': self.options.skip_end_section,
+            'skip_end_section': self.options.skip_end_section
         }
 
         for fill_element in fill_elements:
@@ -59,19 +60,29 @@ class FillToSatin(InkstitchExtension):
         fill_elements = []
         selected_rungs = []
         nodes = []
-        warned = False
+        fill_and_stroke_elements = []
         for element in self.elements:
-            if element.node in nodes and not warned:
-                self.print_error(
-                    (f'{element.node.label} ({element.node.get_id()}): ' + _("This element has a fill and a stroke.\n\n"
-                     "Rungs only have a stroke color and fill elements a fill color."))
-                )
-                warned = True
-            nodes.append(element.node)
-            if isinstance(element, FillStitch):
+            if element.node in nodes:
+                fill_and_stroke_elements.append(element)
+            if isinstance(element, FillStitch) and element.shape.area > 0.1:
                 fill_elements.append(element)
             elif isinstance(element, Stroke):
                 selected_rungs.extend(list(element.as_multi_line_string().geoms))
+            else:
+                continue
+            nodes.append(element.node)
+
+        if fill_and_stroke_elements:
+            elements = [f'{element.node.label} ({element.node.get_id()})' for element in fill_and_stroke_elements]
+            if len(elements) > 15:
+                elements = elements[:14]
+                elements.append('...')
+            self.print_error(
+                    (_("The selection contains elements with both, a fill and a stroke.\n\n"
+                     "Rungs only have a stroke color and fill elements a fill color.") +
+                     "\n\n- " + '\n- '.join(elements))
+                )
+
         return fill_elements, selected_rungs
 
     def _fill_to_linestrings(self, fill_shape):
@@ -111,6 +122,8 @@ class FillToSatin(InkstitchExtension):
                 node.set('inkstitch:contour_underlay', True)
             if self.options.zigzag:
                 node.set('inkstitch:zigzag_underlay', True)
+            if self.options.pull_compensation_mm != 0:
+                node.set('inkstitch:pull_compensation_mm', str(self.options.pull_compensation_mm))
             node.transform = transform
             node.apply_transform()
             node.label = _("Satin") + f" {self.satin_index}"
@@ -121,7 +134,10 @@ class FillToSatin(InkstitchExtension):
         '''Remove original elements - if requested'''
         if not self.options.keep_originals:
             for element in self.elements:
-                element.node.getparent().remove(element.node)
+                try:
+                    element.node.getparent().remove(element.node)
+                except AttributeError:
+                    pass
 
     def print_error(self, message=_("Please select a fill object and rungs.")):
         '''We did not receive the rigth elements, inform user'''
