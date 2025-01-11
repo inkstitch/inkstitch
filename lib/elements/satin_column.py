@@ -395,17 +395,17 @@ class SatinColumn(EmbroideryElement):
     @param('start_at_nearest_point',
            _('Start at nearest point'),
            tooltip=_('Start at nearest point to previous element. A start position command will overwrite this setting.'),
-           default=False, type='boolean', sort_index=23)
+           default=True, type='boolean', sort_index=23)
     def start_at_nearest_point(self):
-        return self.get_boolean_param('start_at_nearest_point')
+        return self.get_boolean_param('start_at_nearest_point', True)
 
     @property
     @param('end_at_nearest_point',
            _('End at nearest point'),
            tooltip=_('End at nearest point to the next element. An end position command will overwrite this setting.'),
-           default=False, type='boolean', sort_index=24)
+           default=True, type='boolean', sort_index=24)
     def end_at_nearest_point(self):
-        return self.get_boolean_param('end_at_nearest_point')
+        return self.get_boolean_param('end_at_nearest_point', True)
 
     @property
     @param('contour_underlay', _('Contour underlay'), type='toggle', group=_('Contour Underlay'))
