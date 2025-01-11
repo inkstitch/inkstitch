@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-01-05
+last_modified_at: 2025-01-11
 sidebar:
   nav: pages
 toc: true
@@ -10,10 +10,13 @@ toc: true
 
 ### New Fonts
 
-* [Barstitch bold](/fonts/barstitch_bold//)
+* [Barstitch bold](/fonts/barstitch_bold/)
 
   ![Barstitch bold](/assets/images/fonts/barstitch_bold.png)
-* [Barstitch textured](/fonts/barstitch_bold//)
+* [Barstitch mandala](/fonts/barstitch/bold/)
+
+  ![Barstitch mandala](/assets/images/fonts/barstitch_mandala.png)
+* [Barstitch textured](/fonts/barstitch_bold/)
 
   ![Barstitch textured](/assets/images/fonts/barstitch_textured.png)
 * [Cogs_KOR](/fonts/cogs_KOR)
@@ -30,7 +33,7 @@ toc: true
   ![Sunset](/assets/images/fonts/sunset.png)
 * [Western light](/fonts/western_light/)
 
-  ![Wetern light](/assets/images/fonts/western_light.png)
+  ![Western light](/assets/images/fonts/western_light.png)
 
 ### Font updates
 
@@ -137,6 +140,7 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ### Simulator
 
+* Option to save and reload simulator speed (optionally) [#3420](https://github.com/inkstitch/inkstitch/pull/3420)
 * Save and reload more simulator settings (status for buttons: jump, trim, color change, stop, needle penetration point, page border) [#3323](https://github.com/inkstitch/inkstitch/pull/3323)
 * Show page in simulator [#3120](https://github.com/inkstitch/inkstitch/pull/3120)
 
@@ -181,6 +185,7 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ### Satin Columns
 
+* Starts and ends at nearest points by default [#3423](https://github.com/inkstitch/inkstitch/pull/3423)
 * Enable start end commands for satins [#3315](https://github.com/inkstitch/inkstitch/pull/3315)
 
 ## Palettes
@@ -202,6 +207,8 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ## Bug Fixes
 
+* Exclude invisible from node_to_elements directly [#3424](https://github.com/inkstitch/inkstitch/pull/3424)
+* Cache: reset on operational error [#3421](https://github.com/inkstitch/inkstitch/pull/3421)
 * Update README [#3405](https://github.com/inkstitch/inkstitch/pull/3405)
 * Fix an other FloatingPointError [#3404](https://github.com/inkstitch/inkstitch/pull/3404)
 * Minimize multi shape tartan jumps [#3386](https://github.com/inkstitch/inkstitch/pull/3386)
