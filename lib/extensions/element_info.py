@@ -28,15 +28,18 @@ class ElementInfo(InkstitchExtension):
         self.max_stitch_lengths = []
         self.min_stitch_lengths = []
 
+        next_elements = [None]
+        if len(self.elements) > 1:
+            next_elements = self.elements[1:] + next_elements
         previous_stitch_group = None
-        for element in self.elements:
-            previous_stitch_group = self._element_info(element, previous_stitch_group)
+        for element, next_element in zip(self.elements, next_elements):
+            previous_stitch_group = self._element_info(element, previous_stitch_group, next_element)
         self._general_info()
 
         app = ElementInfoApp(self.list_items)
         app.MainLoop()
 
-    def _element_info(self, element, previous_stitch_group):
+    def _element_info(self, element, previous_stitch_group, next_element):
         stitch_groups = element.to_stitch_groups(previous_stitch_group)
         stitch_plan = stitch_groups_to_stitch_plan(
             stitch_groups,
