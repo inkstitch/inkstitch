@@ -44,7 +44,7 @@ class PreferencesFrame(wx.Frame):
 
         self.minimum_jump_stitch_length = wx.SpinCtrlDouble(
             self.this_svg_page, wx.ID_ANY, inc=0.1,
-            value=str(metadata['collapse_len_mm'] or global_settings['default_collapse_len_mm']),
+            value=str(metadata['collapse_len_mm']) or str(global_settings['default_collapse_len_mm']),
             style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
         )
         self.minimum_jump_stitch_length.SetDigits(2)
@@ -61,7 +61,7 @@ class PreferencesFrame(wx.Frame):
 
         self.minimum_stitch_length = wx.SpinCtrlDouble(
             self.this_svg_page, wx.ID_ANY, inc=0.1,
-            value=str(metadata['min_stitch_len_mm'] or global_settings['default_min_stitch_len_mm']),
+            value=str(metadata['min_stitch_len_mm']) or str(global_settings['default_min_stitch_len_mm']),
             style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
         )
         self.minimum_stitch_length.SetDigits(2)
