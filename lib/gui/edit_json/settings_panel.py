@@ -202,12 +202,14 @@ class GeneralKerning(wx.Panel):
             wx.EVT_SPINCTRLDOUBLE,
             lambda event: self.parent.on_font_meta_value_changed("min_scale", True, event)
         )
+        self.min_scale.SetDigits(2)
         max_scale_label = wx.StaticText(self, label=_("Max Scale"))
         self.max_scale = wx.SpinCtrlDouble(self, min=0, max=100, inc=0.1, initial=1, style=wx.SP_WRAP)
         self.max_scale.Bind(
             wx.EVT_SPINCTRLDOUBLE,
             lambda event: self.parent.on_font_meta_value_changed("max_scale", True, event)
         )
+        self.max_scale.SetDigits(2)
         leading_label = wx.StaticText(self, label=_("Leading"))
         self.leading = wx.SpinCtrlDouble(self, min=0, max=10000, inc=1, initial=0, style=wx.SP_WRAP)
         self.leading.Bind(
