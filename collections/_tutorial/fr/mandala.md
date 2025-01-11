@@ -113,7 +113,6 @@ Rien n'oblige à utiliser toujours le même nombre de copies. La nouvelle partie
 
 Il suffit de 
 * tout sélectionner 
-* Inkscape > Chemins > Objets en chemin . Si en plus des effets de chemin vous avez des objets qui ne sont pas déjà des chemins (par exemple des spirales ou des objets porteurs eux mêmes d'effet de chemin, procedez groupe par groupe, masquez temporairement les effets de chemin du groupe,  transformez chaque objet du groupe en chemin, reaffichez les effets de chemin du groupe selectionnez tout le groupe et objet en chemin (ou aplanir chaque effet de chemin a partir du dialogue des effets de chemin)
 * Extensions > Ink/Stitch > Outils: Trait > Redwork choisir 0,5 mm pour "Connecter si la longueur est inférieure à " et pour "longueur mininmum d'un chemin"
 * Allez faire un tour ou boire un café ou passer un coup de fil
 * Et admirez le résultat. Si vous obtenez plusieurs groupes connectés c'est que certains objets n'en touchent aucun autre, rectifiez si vous le souhaitez...
