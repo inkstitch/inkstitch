@@ -119,9 +119,6 @@ You don't need to have the same number of copies everywhere. Here i switched to 
 
 You only have to
 * Select everything.
-* Inkscape > Paths> Objet to path .  However if some of your objects are not paths (for instance spirals or object  carrying themself some additionnal path effect),
-then temporarily hide the group path effects and turn these objects to paths. Then  reshow the group path effects and either flatten  them from  the path effect dialog
-or select everything and apply again object to path.
 * Extensions > Ink/Stitch > Tools: Stroke > Redwork Chose 0,5 mm for "Connect lines below this distance " and "minimum path length".
 * Go for a nice  promenade, or have a coffee, or ring someone for a nice talk.... when you come back, you will be able to
 * Admire the result.  If you get several connected groups it is become  some object has no  intersection with any other object (being closer than .5mm is like intersecting), you may want to correct that.
