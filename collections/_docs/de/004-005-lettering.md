@@ -48,7 +48,7 @@ Hier kann eine Liste mit den beliebtesten Schriftarten gespeichert und wieder ge
 
 ## Schrift entlang Pfad
 
-Ink/Stitch Schriften sind liebevoll designed. Wenn sie mit Inkscape tools verformt werden (z.B. um sie in eine Kurve zu bringen) verliert das Ergebnis womöglich an Qualität. Auf der anderen Seite ist es ein langwieriger Prozess, die Buchstaben einzelnd an eine Linie anzupassen. Dieses Werkzeug hilft die, eine Schrift auf einen Pfad zu legen - ohne die Buchstaben zu verzerren.
+Ink/Stitch Schriften sind liebevoll designed. Wenn sie mit Inkscape Tools verformt werden (z.B. um sie in eine Kurve zu bringen) verliert das Ergebnis womöglich an Qualität. Auf der anderen Seite ist es ein langwieriger Prozess, die Buchstaben einzelnd an eine Linie anzupassen. Dieses Werkzeug hilft dir, eine Schrift auf einen Pfad zu legen - ohne die Buchstaben zu verzerren.
 
 ### Anwendung
 
