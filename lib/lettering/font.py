@@ -125,6 +125,8 @@ class Font(object):
     name = font_metadata('name', '')
     description = localized_font_metadata('description', '')
     keywords = font_metadata('keywords', '')
+    json_default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
+    text_direction = font_metadata('text_direction', 'ltr')
     letter_case = font_metadata('letter_case', '')
     default_glyph = font_metadata('default_glyph', "�")
     leading = font_metadata('leading', 100)
@@ -158,7 +160,7 @@ class Font(object):
     @property
     def default_variant(self):
         # Set default variant to any existing variant if default font file is missing
-        default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
+        default_variant = self.json_default_variant
         font_variants = self.has_variants()
         if default_variant not in font_variants and len(font_variants) > 0:
             default_variant = font_variants[0]
@@ -224,8 +226,12 @@ class Font(object):
             glyph_set = glyph_sets[i % 2]
             line = line.strip()
 
+            if self.text_direction == "rtl":
+                line = line[::-1]
+
             letter_group = self._render_line(destination_group, line, position, glyph_set)
-            if (back_and_forth and self.reversible and i % 2 == 1) or variant == '←':
+            if ((variant == '→' and back_and_forth and self.reversible and i % 2 == 1) or
+                    (variant == '←' and not (back_and_forth and self.reversible and i % 2 == 1))):
                 letter_group[:] = reversed(letter_group)
                 for group in letter_group:
                     group[:] = reversed(group)
@@ -257,8 +263,6 @@ class Font(object):
 
         if text_align in [3, 4]:
             for line_group in destination_group.iterchildren():
-                # print(line_group.label, len(line_group), file=sys.stderr)
-                # print(line_group.bounding_box().width, max_line_width, file=sys.stderr)
                 if text_align == 4 and len(line_group) == 1:
                     line_group = line_group[0]
                 if len(line_group) > 1:
@@ -377,7 +381,10 @@ class Font(object):
 
         node = deepcopy(glyph.node)
         if last_character is not None:
-            position.x += glyph.min_x - self.kerning_pairs.get(last_character + character, 0)
+            if self.text_direction != "rtl":
+                position.x += glyph.min_x - self.kerning_pairs.get(last_character + character, 0)
+            else:
+                position.x += glyph.min_x - self.kerning_pairs.get(character + last_character, 0)
 
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)
