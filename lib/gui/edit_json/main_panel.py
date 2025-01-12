@@ -16,6 +16,7 @@ from inkex import errormsg
 from ...elements import nodes_to_elements
 from ...i18n import _
 from ...lettering import get_font_list
+from ...lettering.font_variant import FontVariant
 from ...lettering.categories import FONT_CATEGORIES
 from ...stitch_plan import stitch_groups_to_stitch_plan
 from ...svg.tags import SVG_PATH_TAG
@@ -129,6 +130,26 @@ class LetteringEditJsonPanel(wx.Panel):
         self.settings_panel.font_settings.combine_at_sort_indices.SetForegroundColour(wx.NullColour)
         self.font_meta['combine_at_sort_indices'] = indices
 
+    def on_default_variant_change(self, event=None):
+        selection = self.settings_panel.font_info.default_variant.GetSelection()
+        value = '→'
+        if selection == 1:
+            value = '←'
+        elif selection == 2:
+            value = '↓'
+        elif selection == 3:
+            value = '↑'
+        self.font_meta['default_variant'] = value
+        self.update_preview()
+
+    def on_text_direction_changed(self, event=None):
+        selection = self.settings_panel.font_info.text_direction.GetSelection()
+        value = 'ltr'
+        if selection == 1:
+            value = 'rtl'
+        self.font_meta['text_direction'] = value
+        self.update_preview()
+
     def on_letter_case_change(self, event=None):
         selection = self.settings_panel.font_settings.letter_case.GetSelection()
         value = ''
@@ -196,7 +217,7 @@ class LetteringEditJsonPanel(wx.Panel):
         self.font = self.fonts.get(self.settings_panel.font_chooser.GetValue(), list(self.fonts.values())[0].marked_custom_font_name)
         self.kerning_pairs = self.font.kerning_pairs
         self.font._load_variants()
-        self.default_variant = self.font.variants[self.font.default_variant]
+        self.default_variant = self.font.variants[self.font.json_default_variant]
         self.glyphs = list(self.default_variant.glyphs.keys())
         self.glyphs.sort()
         self.horiz_adv_x = self.font.horiz_adv_x
@@ -217,6 +238,8 @@ class LetteringEditJsonPanel(wx.Panel):
         self.font_meta = defaultdict(list)
         self.font_meta['name'] = self.font.name
         self.font_meta['description'] = self.font.metadata['description']  # untranslated description
+        self.font_meta['default_variant'] = self.font.json_default_variant
+        self.font_meta['text_direction'] = self.font.text_direction
         self.font_meta['keywords'] = self.font.keywords
         self.font_meta['default_glyph'] = self.font.default_glyph
         self.font_meta['auto_satin'] = self.font.auto_satin
@@ -234,6 +257,10 @@ class LetteringEditJsonPanel(wx.Panel):
         # update ctrl
         self.settings_panel.font_info.name.ChangeValue(self.font.name)
         self.settings_panel.font_info.description.ChangeValue(self.font.metadata['description'])
+        selection = ['→', '←', '↓', '↑'].index(self.font.json_default_variant)
+        self.settings_panel.font_info.default_variant.SetSelection(selection)
+        selection = ['ltr', 'rtl'].index(self.font.text_direction)
+        self.settings_panel.font_info.text_direction.SetSelection(selection)
         self.settings_panel.font_info.keywords.SetSelection(-1)
         for category in FONT_CATEGORIES:
             if category.id in self.font.keywords:
@@ -263,8 +290,10 @@ class LetteringEditJsonPanel(wx.Panel):
         kerning_list.AppendColumn("Current kerning", width=wx.LIST_AUTOSIZE_USEHEADER)
         kerning_list.AppendColumn("New kerning", width=wx.LIST_AUTOSIZE_USEHEADER)
         for kerning_pair in self.kerning_combinations:
+            if self.font_meta['text_direction'] == 'rtl':
+                kerning_pair = kerning_pair[::-1]
             index = kerning_list.InsertItem(kerning_list.GetItemCount(), kerning_pair)
-            kerning_list.SetItem(index, 0, kerning_pair)
+            # kerning_list.SetItem(index, 0, kerning_pair)
             kerning_list.SetItem(index, 1, str(self.kerning_pairs.get(kerning_pair, 0.0)))
         if kerning_list.GetItemCount() != 0:
             kerning_list.Select(0)
@@ -335,7 +364,17 @@ class LetteringEditJsonPanel(wx.Panel):
             return
 
         text = self.text_before + text + self.text_after
+        if self.font_meta['text_direction'] == 'rtl':
+            text = text[::-1]
 
+        self._render_text(text)
+
+        if self.default_variant.variant == FontVariant.RIGHT_TO_LEFT:
+            self.layer[:] = reversed(self.layer)
+            for group in self.layer:
+                group[:] = reversed(group)
+
+    def _render_text(self, text):
         last_character = None
         position_x = 0
         for character in text:
@@ -348,27 +387,33 @@ class LetteringEditJsonPanel(wx.Panel):
                     glyph = self.default_variant[self.font_meta['default_glyph']]
 
                 if glyph is not None:
-                    node = deepcopy(glyph.node)
-                    if last_character is not None:
-                        position_x += glyph.min_x - self.kerning_pairs.get(last_character + character, 0)
+                    position_x, last_character = self._render_glyph(glyph, position_x, character, last_character)
 
-                    transform = f"translate({position_x}, 0)"
-                    node.set('transform', transform)
+    def _render_glyph(self, glyph, position_x, character, last_character):
+        node = deepcopy(glyph.node)
+        if last_character is not None:
+            if self.font_meta['text_direction'] != 'rtl':
+                position_x += glyph.min_x - self.kerning_pairs.get(last_character + character, 0)
+            else:
+                position_x += glyph.min_x - self.kerning_pairs.get(character + last_character, 0)
 
-                    horiz_adv_x_default = self.font_meta['horiz_adv_x_default']
-                    if horiz_adv_x_default is None:
-                        horiz_adv_x_default = glyph.width + glyph.min_x
+        transform = f"translate({position_x}, 0)"
+        node.set('transform', transform)
 
-                    position_x += self.font.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
+        horiz_adv_x_default = self.font_meta['horiz_adv_x_default']
+        if horiz_adv_x_default is None:
+            horiz_adv_x_default = glyph.width + glyph.min_x
 
-                    self.font._update_commands(node, glyph)
-                    self.font._update_clips(self.layer, node, glyph)
+        position_x += self.font.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
 
-                    # this is used to recognize a glyph layer later in the process
-                    # because this is not unique it will be overwritten by inkscape when inserted into the document
-                    node.set("id", "glyph")
-                    self.layer.add(node)
-                    last_character = character
+        self.font._update_commands(node, glyph)
+        self.font._update_clips(self.layer, node, glyph)
+
+        # this is used to recognize a glyph layer later in the process
+        # because this is not unique it will be overwritten by inkscape when inserted into the document
+        node.set("id", "glyph")
+        self.layer.add(node)
+        return position_x, character
 
     def render_stitch_plan(self):
         stitch_groups = []

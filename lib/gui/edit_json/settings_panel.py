@@ -96,6 +96,14 @@ class FontInfo(wx.Panel):
             lambda event: self.parent.on_font_meta_value_changed("description", False, event)
         )
 
+        default_variant_label = wx.StaticText(self, label=_("Default Variant"))
+        self.default_variant = wx.Choice(self, choices=[_("→"), _("←"), _("↓"), ("↑")])
+        self.default_variant.Bind(wx.EVT_CHOICE, self.parent.on_default_variant_change)
+
+        text_direction_label = wx.StaticText(self, label=_("Text direction"))
+        self.text_direction = wx.Choice(self, choices=[_("Left to Right"), _("Right to Left")])
+        self.text_direction.Bind(wx.EVT_CHOICE, self.parent.on_text_direction_changed)
+
         keywords_label = wx.StaticText(self, label=_("Keywords"))
         self.keywords = wx.ListBox(
             self,
@@ -110,6 +118,10 @@ class FontInfo(wx.Panel):
             (self.name, 0, wx.ALL | wx.EXPAND, 0),
             (description_label, 0, wx.ALL, 0),
             (self.description, 1, wx.ALL | wx.EXPAND, 0),
+            (default_variant_label, 0, wx.ALL, 0),
+            (self.default_variant, 1, wx.ALL | wx.EXPAND, 0),
+            (text_direction_label, 0, wx.ALL, 0),
+            (self.text_direction, 1, wx.ALL | wx.EXPAND, 0),
             (keywords_label, 0, wx.ALL, 0),
             (self.keywords, 1, wx.ALL | wx.EXPAND, 0)
         ])

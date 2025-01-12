@@ -24,6 +24,8 @@ class LetteringGenerateJson(InkstitchExtension):
 
         self.arg_parser.add_argument("-n", "--font-name", type=str, default="Font", dest="font_name")
         self.arg_parser.add_argument("-d", "--font-description", type=str, default="Description", dest="font_description")
+        self.arg_parser.add_argument("-v", "--default_variant", type=int, default=0, dest="default_variant")
+        self.arg_parser.add_argument("-x", "--text_direction", type=str, default="ltr", dest="text_direction")
         self.arg_parser.add_argument("-s", "--auto-satin", type=Boolean, default="true", dest="auto_satin")
         self.arg_parser.add_argument("-r", "--reversible", type=Boolean, default="true", dest="reversible")
         self.arg_parser.add_argument("-o", "--combine-at-sort-indices", type=str, default="", dest="combine_at_sort_indices")
@@ -81,9 +83,21 @@ class LetteringGenerateJson(InkstitchExtension):
         combine_at_sort_indices = self.options.combine_at_sort_indices.split(',')
         combine_at_sort_indices = set([index.strip() for index in combine_at_sort_indices if index.strip()])
 
+        # The inx gui doesn't seem to be able to remember the arrow values,
+        # therefore we used numbers which we need to convert now
+        default_variant = "→"
+        if self.options.default_variant == 1:
+            default_variant = "←"
+        elif self.options.default_variant == 2:
+            default_variant = "↓"
+        elif self.options.default_variant == 3:
+            default_variant = "↑"
+
         # collect data
         data = {'name': self.options.font_name,
                 'description': self.options.font_description,
+                'default_variant': default_variant,
+                'text_direction': self.options.text_direction,
                 'keywords': keywords,
                 'leading': leading,
                 'auto_satin': self.options.auto_satin,
