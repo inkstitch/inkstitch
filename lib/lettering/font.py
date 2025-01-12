@@ -479,7 +479,7 @@ class Font(object):
                 if not has_marker(path_child):
                     path = path_child
                 element = Stroke(path)
-                self._add_trim_to_element(element, use_trim_symbols)
+            self._add_trim_to_element(element, use_trim_symbols)
 
     def _add_trim_to_element(self, element, use_trim_symbols):
         if element.shape:
