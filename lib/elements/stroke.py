@@ -361,10 +361,22 @@ class Stroke(EmbroideryElement):
            default=0,
            unit='mm',
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=16)
+           sort_index=17)
     @cache
     def grid_size(self):
         return abs(self.get_float_param("grid_size_mm", 0))
+
+    @property
+    @param('grid_first',
+           _('Stitch grid first'),
+           tooltip=_('Reverts the stitch paths, so that the grid will be stitched first'),
+           type='boolean',
+           default=False,
+           select_items=[('stroke_method', 'ripple_stitch')],
+           sort_index=18)
+    @cache
+    def grid_first(self):
+        return self.get_boolean_param("grid_first", False)
 
     @property
     @param('scale_axis',
@@ -375,7 +387,7 @@ class Stroke(EmbroideryElement):
            # 0: xy, 1: x, 2: y, 3: none
            options=["X Y", "X", "Y", _("None")],
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=18)
+           sort_index=19)
     def scale_axis(self):
         return self.get_int_param('scale_axis', 0)
 
@@ -387,7 +399,7 @@ class Stroke(EmbroideryElement):
            unit='%',
            default=100,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=18)
+           sort_index=20)
     def scale_start(self):
         return self.get_float_param('scale_start', 100.0)
 
@@ -399,7 +411,7 @@ class Stroke(EmbroideryElement):
            unit='%',
            default=0.0,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=19)
+           sort_index=21)
     def scale_end(self):
         return self.get_float_param('scale_end', 0.0)
 
@@ -410,7 +422,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=True,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=20)
+           sort_index=30)
     @cache
     def rotate_ripples(self):
         return self.get_boolean_param("rotate_ripples", True)
@@ -423,7 +435,7 @@ class Stroke(EmbroideryElement):
            default=0,
            options=(_("flat"), _("point")),
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=21)
+           sort_index=31)
     @cache
     def join_style(self):
         return self.get_int_param('join_style', 0)

@@ -132,6 +132,7 @@ inkstitch_attribs = [
     'scale_end',
     'rotate_ripples',
     'grid_size_mm',
+    'grid_first',
     # satin column
     'satin_column',
     'satin_method',

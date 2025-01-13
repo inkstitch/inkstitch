@@ -41,6 +41,8 @@ def ripple_stitch(stroke):
 
     if stitches and stroke.grid_size != 0:
         stitches.extend(_do_grid(stroke, helper_lines, skip_start, skip_end, is_linear, stitches[-1]))
+        if stroke.grid_first:
+            stitches = stitches[::-1]
 
     return _repeat_coords(stitches, stroke.repeats)
 
