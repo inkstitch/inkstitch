@@ -59,6 +59,8 @@ toc: true
 
 Edit JSON is part of the Font Management and helps font authors to easily correct data in the json file. It is especially useful for kerning corrections as it simulates a custom text as you update the kerning.
 
+![Edit Kerning (distance between letters](/assets/images/upcoming/3.2.0/edit_json.png)
+
 [Read more](/docs/font-tools/#edit-json)
 
 ### Fill to Satin
@@ -66,6 +68,8 @@ Edit JSON is part of the Font Management and helps font authors to easily correc
 `Tools: Satin > Fill to Satin...` [#3406](https://github.com/inkstitch/inkstitch/pull/3406)
 
 Converts a fill to a satin. Manual setting of rungs is required.
+
+![Fill to satin](/assets/images/docs/fill_to_satin_bridge.png)
 
 [Read more](/docs/satin-tools/#fill-to-satin)
 
@@ -75,6 +79,8 @@ Converts a fill to a satin. Manual setting of rungs is required.
 
 Helps (for example) to remove bean stitches from stitch plans and turn them into simple lines.
 
+![Remove duplicated points](/assets/images/upcoming/3.2.0/remove_duplicated_points.png)
+
 [Read more](/docs/edit/#remove-duplicated-points)
 
 ### Set color sort index
@@ -83,6 +89,8 @@ Helps (for example) to remove bean stitches from stitch plans and turn them into
 
 A tool for font authors which sets a specified color sort index on selected elements to control element grouping when the color sorting option is enabled in the lettering tool.
 
+![Color sort index](/assets/images/upcoming/3.2.0/color_sort_index.png)
+
 [Read more](/docs/font-tools/#set-color-index)
 
 ## Extension Updates
@@ -90,8 +98,13 @@ A tool for font authors which sets a specified color sort index on selected elem
 ### General
 
 * Request permission to update if inkstitch svg version is not specified in the svg file. [#3228](https://github.com/inkstitch/inkstitch/pull/3228)
-* Adapt paths of clipped groups to clip [#3261](https://github.com/inkstitch/inkstitch/pull/3261)
+* Ink/Stitch can read now read the clipped path of groups correctly [#3261](https://github.com/inkstitch/inkstitch/pull/3261)<br>
+  This works well together with the redwork tool.
+
+  ![cliped groups](/assets/images/tutorials/mandala/lettremandala.svg)
 * Add icons and descriptions for extension gallery [#3287](https://github.com/inkstitch/inkstitch/pull/3287)
+
+  ![Extension gallery](/assets/images/upcoming/3.2.0/extension_gallery.png)
 
 ### Auto-route satin
 
@@ -120,10 +133,12 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 `Lettering`
 
-* Lettering simulator: show more accurate start points [#3358](https://github.com/inkstitch/inkstitch/pull/3358)
+* Lettering simulator: show accurate start and end points [#3358](https://github.com/inkstitch/inkstitch/pull/3358)
 * Uniformed size info (% and mm) [#3346](https://github.com/inkstitch/inkstitch/pull/3346)
 * Add color sort option for multicolor fonts [#3242](https://github.com/inkstitch/inkstitch/pull/3242), [#3381](https://github.com/inkstitch/inkstitch/pull/3381)
 * Options for text alignment [#3382](https://github.com/inkstitch/inkstitch/pull/3382)
+
+![Lettering: more options](/assets/images/upcoming/3.2.0/lettering.png)
 
 ### Multicolor Satin
 
@@ -143,10 +158,6 @@ A tool for font authors which sets a specified color sort index on selected elem
 * Option to save and reload simulator speed (optionally) [#3420](https://github.com/inkstitch/inkstitch/pull/3420)
 * Save and reload more simulator settings (status for buttons: jump, trim, color change, stop, needle penetration point, page border) [#3323](https://github.com/inkstitch/inkstitch/pull/3323)
 * Show page in simulator [#3120](https://github.com/inkstitch/inkstitch/pull/3120)
-
-### Update Glyphlist
-
-* Include all files of default variant for glyph list update (#3368)
 
 ### Stitch plan preview
 
@@ -186,7 +197,11 @@ Glyphlist update has been part of the font management and was replaced by the mu
 ### Satin Columns
 
 * Starts and ends at nearest points by default [#3423](https://github.com/inkstitch/inkstitch/pull/3423)
+
+  ![Automated start and end point for satin column](/assets/images/upcoming/3.2.0/satin_start_end.png)
 * Enable start end commands for satins [#3315](https://github.com/inkstitch/inkstitch/pull/3315)
+
+  ![Start/end command for satin columns](/assets/images/upcoming/3.2.0/satin_start_end_command.png)
 
 ## Palettes
 
