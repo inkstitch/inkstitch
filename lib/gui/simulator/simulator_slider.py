@@ -23,13 +23,17 @@ class SimulatorSlider(wx.Panel):
         self._height = self.GetTextExtent("M").y * 6
         self.SetMinSize((self._height, self._height))
 
+        dark_theme = self.control_panel.is_dark_theme() and sys.platform != "win32"
         self.marker_lists = {
-            "trim": MarkerList("trim"),
-            "jump": MarkerList("jump", 0.17),
-            "stop": MarkerList("stop", 0.34),
-            "color_change": MarkerList("color_change", 0.34),
+            "stop": MarkerList("stop", dark_theme, 0.34),
+            "color_change": MarkerList("color_change", dark_theme, 0.34),
+            "jump": MarkerList("jump", dark_theme, 0.17),
+            "trim": MarkerList("trim", dark_theme)
         }
-        self.marker_pen = wx.Pen(wx.Colour(0, 0, 0))
+        if dark_theme:
+            self.marker_pen = wx.Pen(wx.Colour(155, 155, 155))
+        else:
+            self.marker_pen = wx.Pen(wx.Colour(0, 0, 0))
         self.color_sections = []
         self.margin = 15
         self.tab_start = 0
@@ -213,11 +217,14 @@ class SimulatorSlider(wx.Panel):
 
 
 class MarkerList(list):
-    def __init__(self, icon_name, offset=0, stitch_numbers=()):
+    def __init__(self, icon_name, dark_theme, offset=0, stitch_numbers=()):
         super().__init__(self)
         icons_dir = get_resource_dir("icons")
         self.icon_name = icon_name
-        self.icon = wx.Image(os.path.join(icons_dir, f"{icon_name}.png")).ConvertToBitmap()
+        if dark_theme:
+            self.icon = wx.Image(os.path.join(icons_dir, f"{icon_name}_dark.png")).ConvertToBitmap()
+        else:
+            self.icon = wx.Image(os.path.join(self.icons_dir, f"{icon_name}.png")).ConvertToBitmap()
         self.offset = offset
         self.enabled = False
         self.extend(stitch_numbers)
