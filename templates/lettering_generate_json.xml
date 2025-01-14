@@ -20,10 +20,10 @@
         <param type="string" name="font-name" gui-text="Name" indent="1" />
         <param type="string" name="font-description" gui-text="Description" indent="1" />
         <param name="default_variant" type="optiongroup" appearance="combo" gui-text="Default variant" indent="1">
-             <option value="0">→</option>
-             <option value="1">←</option>
-             <option value="2">↓</option>
-             <option value="3">↑</option>
+             <option value="0" translatable="no">→</option>
+             <option value="1" translatable="no">←</option>
+             <option value="2" translatable="no">↓</option>
+             <option value="3" translatable="no">↑</option>
         </param>
         <param name="text_direction" type="optiongroup" appearance="combo" gui-text="Text direction" indent="1">
              <option value="ltr">Left to right</option>
