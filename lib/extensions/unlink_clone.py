@@ -3,14 +3,14 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import Boolean, errormsg, BaseElement
+from typing import List, Tuple
+
+from inkex import BaseElement, Boolean, Group, errormsg
 
 from ..elements import Clone, EmbroideryElement
 from ..i18n import _
+from ..svg.tags import CONNECTION_END, CONNECTION_START, SVG_SYMBOL_TAG
 from .base import InkstitchExtension
-from ..svg.tags import CONNECTION_END, CONNECTION_START
-
-from typing import List, Tuple
 
 
 class UnlinkClone(InkstitchExtension):
@@ -35,6 +35,11 @@ class UnlinkClone(InkstitchExtension):
         for element in self.elements:
             if isinstance(element, Clone):
                 resolved = element.resolve_clone(recursive=recursive)
+                if resolved[0].tag in SVG_SYMBOL_TAG:
+                    group = Group()
+                    for child in resolved[0]:
+                        group.append(child)
+                    resolved[0].getparent().replace(resolved[0], group)
                 clones_resolved.append((element.node, resolved[0]))
 
         for (clone, resolved) in clones_resolved:
