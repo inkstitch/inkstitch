@@ -269,7 +269,7 @@ class GlyphList(wx.Panel):
 
         self.glyph_list = EditableListCtrl(self, style=wx.LC_REPORT | wx.SUNKEN_BORDER, editable_column=3)
         self.glyph_list.Bind(wx.EVT_LIST_ITEM_SELECTED, self.parent.on_kerning_list_select)
-        self.glyph_list.Bind(wx.EVT_LIST_END_LABEL_EDIT, self.parent.on_kerning_update)
+        self.glyph_list.Bind(wx.EVT_LIST_END_LABEL_EDIT, self.parent.on_glyphlist_update)
         self.glyph_list.Bind(wx.EVT_LIST_ITEM_CHECKED, self.parent.on_glyph_item_checked)
         self.glyph_list.Bind(wx.EVT_LIST_ITEM_UNCHECKED, self.parent.on_glyph_item_checked)
         self.glyph_list.EnableCheckBoxes()

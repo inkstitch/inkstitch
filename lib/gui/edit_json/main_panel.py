@@ -83,6 +83,20 @@ class LetteringEditJsonPanel(wx.Panel):
         self.text_after = event.GetEventObject().GetValue()
         self.update_preview()
 
+    def on_glyphlist_update(self, event=None):
+        item = event.GetItem()
+        value = None
+        try:
+            value = float(item.GetText())
+        except ValueError:
+            pass
+        if value == self.font_meta['horiz_adv_x_default']:
+            self.settings_panel.glyph_list.CheckItem(event.Index)
+        else:
+            self.settings_panel.glyph_list.CheckItem(event.Index, False)
+        self.update_preview()
+        event.Skip()
+
     def on_kerning_update(self, event=None):
         self.update_preview()
         event.Skip()
