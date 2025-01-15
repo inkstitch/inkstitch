@@ -1,5 +1,5 @@
 ---
-title: "Ambigue"
+title: "Ambigüe"
 permalink: /fonts/ambigue/
 last_modified_at: 2025-01-15
 toc: false
