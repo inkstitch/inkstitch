@@ -9,7 +9,7 @@ preview_image:
 data_title:
   - ambigue
 ---
-{%- assign font = site.data.fonts.sunset.font -%}
+{%- assign font = site.data.fonts.ambigue.font -%}
 
 {% include upcoming_release.html %}
 
