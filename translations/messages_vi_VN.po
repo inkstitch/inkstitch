@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-13 01:28+0000\n"
-"PO-Revision-Date: 2025-01-13 01:29\n"
+"POT-Creation-Date: 2025-01-15 01:23+0000\n"
+"PO-Revision-Date: 2025-01-15 01:23\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-13 01:28+0000\n"
+"POT-Creation-Date: 2025-01-15 01:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3177,17 +3177,14 @@ msgid "Default Variant"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:100
-#: inx/inkstitch_lettering_generate_json.inx:23
 msgid "→"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:100
-#: inx/inkstitch_lettering_generate_json.inx:24
 msgid "←"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:100
-#: inx/inkstitch_lettering_generate_json.inx:25
 msgid "↓"
 msgstr ""
 
@@ -6331,10 +6328,6 @@ msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:22
 msgid "Default variant"
-msgstr ""
-
-#: inx/inkstitch_lettering_generate_json.inx:26
-msgid "↑"
 msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:29

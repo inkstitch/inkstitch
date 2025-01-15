@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-13 01:28+0000\n"
-"PO-Revision-Date: 2025-01-13 01:29\n"
+"POT-Creation-Date: 2025-01-15 01:23+0000\n"
+"PO-Revision-Date: 2025-01-15 01:23\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-13 01:28+0000\n"
+"POT-Creation-Date: 2025-01-15 01:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,7 +95,7 @@ msgstr "Barstitch Bold ist eine Satin-Schrift."
 #. description of font in fonts/barstitch_mandala
 #: inkstitch-fonts-metadata.py:28
 msgid "A large Mandala font. Redwork versions of the four mandalas  used to design the font are stored in the $,<,>,^ glyphs"
-msgstr ""
+msgstr "Eine große Mandala-Schrift. Die vier gesamten Mandalas die für diese Schrift verwendet wurden, befinden sich als Redwork-Version in den Zeichen $ < > ^"
 
 #. description of font in fonts/barstitch_textured
 #: inkstitch-fonts-metadata.py:30
@@ -2615,7 +2615,8 @@ msgstr "Filtert Stiche kleiner als (mm)"
 #: lib/extensions/fill_to_satin.py:81
 msgid "The selection contains elements with both, a fill and a stroke.\n\n"
 "Rungs only have a stroke color and fill elements a fill color."
-msgstr ""
+msgstr "Die Auswahl enthält Elemente die sowohl eine Füllfarbe als auch eine Konturfarbe haben.\n\n"
+"Richtungsvektoren haben nur eine Konturfarbe und Füllelemente nur eine Füllfarbe."
 
 #: lib/extensions/fill_to_satin.py:108
 msgid "Satin Group"
@@ -2639,7 +2640,7 @@ msgstr "Bitte ein oder mehrere Füllobjekte auswählen, um die Mittellinie zu ze
 
 #: lib/extensions/fill_to_stroke.py:70
 msgid "center line"
-msgstr ""
+msgstr "Mittellinie"
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
@@ -3184,35 +3185,32 @@ msgstr "Kerning-Paare"
 
 #: lib/gui/edit_json/settings_panel.py:99
 msgid "Default Variant"
-msgstr ""
+msgstr "Standardvariante"
 
 #: lib/gui/edit_json/settings_panel.py:100
-#: inx/inkstitch_lettering_generate_json.inx:23
 msgid "→"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:100
-#: inx/inkstitch_lettering_generate_json.inx:24
 msgid "←"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:100
-#: inx/inkstitch_lettering_generate_json.inx:25
 msgid "↓"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:103
 #: inx/inkstitch_lettering_generate_json.inx:28
 msgid "Text direction"
-msgstr ""
+msgstr "Textrichtung"
 
 #: lib/gui/edit_json/settings_panel.py:104
 msgid "Left to Right"
-msgstr ""
+msgstr "Links nach rechts"
 
 #: lib/gui/edit_json/settings_panel.py:104
 msgid "Right to Left"
-msgstr ""
+msgstr "Rechts nach links"
 
 #: lib/gui/edit_json/settings_panel.py:107
 #: inx/inkstitch_lettering_generate_json.inx:42
@@ -3784,11 +3782,11 @@ msgstr "Befehl: %s"
 
 #: lib/gui/simulator/simulator_preferences.py:30
 msgid "Adapt speed to stitch count"
-msgstr ""
+msgstr "Geschwindigkeit dynamisch an die Sitchanzahl anpassen"
 
 #: lib/gui/simulator/simulator_preferences.py:32
 msgid "When enabled simulation speed adapts itself to the stitch count."
-msgstr ""
+msgstr "Ist dies aktiviert, passt sich die Wiedergabe-Geschwindigkeit an die Anzahl der Stiche an."
 
 #: lib/gui/simulator/simulator_preferences.py:35
 #: inx/inkstitch_fill_to_stroke.inx:21 inx/inkstitch_png_simple.inx:15
@@ -6352,19 +6350,15 @@ msgstr "Schriftinformation"
 
 #: inx/inkstitch_lettering_generate_json.inx:22
 msgid "Default variant"
-msgstr ""
-
-#: inx/inkstitch_lettering_generate_json.inx:26
-msgid "↑"
-msgstr ""
+msgstr "Standardvariante"
 
 #: inx/inkstitch_lettering_generate_json.inx:29
 msgid "Left to right"
-msgstr ""
+msgstr "Links nach rechts"
 
 #: inx/inkstitch_lettering_generate_json.inx:30
 msgid "Right to left"
-msgstr ""
+msgstr "Rechts nach links"
 
 #: inx/inkstitch_lettering_generate_json.inx:36
 msgid "SVG Font File"
