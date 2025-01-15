@@ -1,7 +1,7 @@
 ---
 title: "Ambigüe"
 permalink: /fr/fonts/ambigue/
-last_modified_at: 2025-01-15
+last_modified_at: 2025-01-16
 toc: false
 preview_image:
   - url: /assets/images/fonts/ambigue.png
@@ -13,7 +13,7 @@ data_title:
 
 {% include upcoming_release.html %}
 
-![Sunset](/assets/images/fonts/ambigue.png)
+![Ambigue](/assets/images/fonts/ambigue.png)
 
 ## Glyphes
 
@@ -35,13 +35,7 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 ## Dans la vraie vie 
 
-
-
-
-[Télécharger la license de la police](https://github.com/inkstitch/inkstitch/tree/main/fonts/abecedaire/LICENSE)
-
-
-
+{% include folder-galleries path="fonts/ambigue/" %}
 ## License
 
 [Télécharger la license de la police](https://github.com/inkstitch/inkstitch/tree/main/fonts/ambigue/LICENSE)
