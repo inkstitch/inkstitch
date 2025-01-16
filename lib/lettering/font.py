@@ -527,7 +527,7 @@ class Font(object):
         elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
         elements = [element for element in elements if isinstance(element, SatinColumn) or isinstance(element, Stroke)]
 
-        if elements:
+        if elements and any(isinstance(element, SatinColumn) for element in elements):
             auto_satin(elements, preserve_order=True, trim=False)
 
     def do_color_sort(self, group, color_sort):
