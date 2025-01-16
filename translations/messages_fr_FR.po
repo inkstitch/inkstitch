@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-15 01:23+0000\n"
-"PO-Revision-Date: 2025-01-15 01:23\n"
+"PO-Revision-Date: 2025-01-16 01:22\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -95,7 +95,7 @@ msgstr "Barstitch Bold est une police en colonne satin."
 #. description of font in fonts/barstitch_mandala
 #: inkstitch-fonts-metadata.py:28
 msgid "A large Mandala font. Redwork versions of the four mandalas  used to design the font are stored in the $,<,>,^ glyphs"
-msgstr ""
+msgstr "Barstitch Mandala  est une grande fonte fabriquée à  base de mandalas. Une version redwork des quatre mandalas utilisés se trouve dans les glyphes $, <, >, ^"
 
 #. description of font in fonts/barstitch_textured
 #: inkstitch-fonts-metadata.py:30
@@ -2616,7 +2616,8 @@ msgstr "Filtrer les points plus petits que (mm)"
 #: lib/extensions/fill_to_satin.py:81
 msgid "The selection contains elements with both, a fill and a stroke.\n\n"
 "Rungs only have a stroke color and fill elements a fill color."
-msgstr ""
+msgstr "La sélection contient des éléments ayant un fond et un contour.\n\n"
+"Les traverses doivent avoir uniquement une couleur de contour et les remplissages seulement une couleur de fond."
 
 #: lib/extensions/fill_to_satin.py:108
 msgid "Satin Group"
@@ -2640,7 +2641,7 @@ msgstr "Merci de sélectionner un ou plusieurs objets de remplissage pour déter
 
 #: lib/extensions/fill_to_stroke.py:70
 msgid "center line"
-msgstr ""
+msgstr "ligne centrale"
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
@@ -3184,32 +3185,32 @@ msgstr "Paires de crénage"
 
 #: lib/gui/edit_json/settings_panel.py:99
 msgid "Default Variant"
-msgstr ""
+msgstr "Variante par défaut"
 
 #: lib/gui/edit_json/settings_panel.py:100
 msgid "→"
-msgstr ""
+msgstr "→"
 
 #: lib/gui/edit_json/settings_panel.py:100
 msgid "←"
-msgstr ""
+msgstr "←"
 
 #: lib/gui/edit_json/settings_panel.py:100
 msgid "↓"
-msgstr ""
+msgstr "↓"
 
 #: lib/gui/edit_json/settings_panel.py:103
 #: inx/inkstitch_lettering_generate_json.inx:28
 msgid "Text direction"
-msgstr ""
+msgstr "Direction du texte"
 
 #: lib/gui/edit_json/settings_panel.py:104
 msgid "Left to Right"
-msgstr ""
+msgstr "De gauche à droite"
 
 #: lib/gui/edit_json/settings_panel.py:104
 msgid "Right to Left"
-msgstr ""
+msgstr "De droite à gauche"
 
 #: lib/gui/edit_json/settings_panel.py:107
 #: inx/inkstitch_lettering_generate_json.inx:42
@@ -3780,11 +3781,11 @@ msgstr "Commande : %s"
 
 #: lib/gui/simulator/simulator_preferences.py:30
 msgid "Adapt speed to stitch count"
-msgstr ""
+msgstr "Adapter la vitesse au nombre de points"
 
 #: lib/gui/simulator/simulator_preferences.py:32
 msgid "When enabled simulation speed adapts itself to the stitch count."
-msgstr ""
+msgstr "Si activé, la vitesse de la simulation s'adapte au nombre de points."
 
 #: lib/gui/simulator/simulator_preferences.py:35
 #: inx/inkstitch_fill_to_stroke.inx:21 inx/inkstitch_png_simple.inx:15
@@ -6349,15 +6350,15 @@ msgstr "Information sur la fonte"
 
 #: inx/inkstitch_lettering_generate_json.inx:22
 msgid "Default variant"
-msgstr ""
+msgstr "Variante par défaut"
 
 #: inx/inkstitch_lettering_generate_json.inx:29
 msgid "Left to right"
-msgstr ""
+msgstr "De gauche à droite"
 
 #: inx/inkstitch_lettering_generate_json.inx:30
 msgid "Right to left"
-msgstr ""
+msgstr "De droite à gauche"
 
 #: inx/inkstitch_lettering_generate_json.inx:36
 msgid "SVG Font File"
