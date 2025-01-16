@@ -7,7 +7,8 @@ from contextlib import contextmanager
 from math import degrees
 from typing import Dict, Generator, List
 
-from inkex import BaseElement, Transform
+from inkex import BaseElement, Title, Transform
+from lxml.etree import _Comment
 from shapely import MultiLineString
 
 from ..commands import (find_commands, is_command_symbol,
@@ -17,7 +18,8 @@ from ..stitch_plan.stitch_group import StitchGroup
 from ..svg.path import get_node_transform
 from ..svg.svg import copy_no_children
 from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
-                        INKSTITCH_ATTRIBS, SVG_GROUP_TAG, SVG_USE_TAG)
+                        INKSTITCH_ATTRIBS, SVG_GROUP_TAG, SVG_SYMBOL_TAG,
+                        SVG_USE_TAG)
 from ..utils import cache
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
@@ -182,7 +184,13 @@ class Clone(EmbroideryElement):
         parent.add(cloned_node)
         # The transform of a resolved clone is based on the clone's transform as well as the source element's transform.
         # This makes intuitive sense: The clone of a scaled item is also scaled, the clone of a rotated item is also rotated, etc.
-        cloned_node.transform = self.node.transform @ cloned_node.transform
+        clone_translate = Transform(f"translate({float(self.node.get('x', '0'))}, {float(self.node.get('y', '0'))})")
+
+        if cloned_node.tag == SVG_SYMBOL_TAG:
+            for child in cloned_node:
+                child.transform = self.node.transform @ clone_translate @ child.transform
+        else:
+            cloned_node.transform = self.node.transform @ clone_translate @ cloned_node.transform
 
         # Merge the style, if any: Note that the source node's style applies on top of the use's, not the other way around.
         cloned_node.style = self.node.style + cloned_node.style
@@ -190,7 +198,10 @@ class Clone(EmbroideryElement):
         # Compute angle transform:
         # Effectively, this is (local clone transform) * (to parent space) * (from clone's parent space)
         # There is a translation component here that will be ignored.
-        source_transform: Transform = source_parent.composed_transform()
+        if cloned_node.tag == SVG_SYMBOL_TAG:
+            source_transform: Transform = parent.composed_transform()
+        else:
+            source_transform: Transform = source_parent.composed_transform()
         clone_transform: Transform = self.node.composed_transform()
         angle_transform = clone_transform @ -source_transform
         self.apply_angles(cloned_node, angle_transform)
@@ -249,7 +260,8 @@ class Clone(EmbroideryElement):
         return MultiLineString(path[0])
 
     def center(self, source_node):
-        transform = get_node_transform(self.node.getparent())
+        translate = Transform(f"translate({float(self.node.get('x', '0'))}, {float(self.node.get('y', '0'))})")
+        transform = get_node_transform(self.node.getparent()) @ translate
         center = self.node.bounding_box(transform).center
         return center
 
@@ -280,7 +292,8 @@ def clone_with_fixup(parent: BaseElement, node: BaseElement) -> BaseElement:
         id_map[f"#{node.get_id()}"] = f"#{cloned.get_id()}"
 
         for child in node:
-            clone_children(cloned, child)
+            if not isinstance(child, _Comment) and not isinstance(child, Title):
+                clone_children(cloned, child)
 
         return cloned
 
