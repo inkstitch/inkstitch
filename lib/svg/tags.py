@@ -122,7 +122,7 @@ inkstitch_attribs = [
     'flip_copies',
     'line_count',
     'min_line_dist_mm',
-    'render_at_rungs',
+    'satin_guide_pattern_position',
     'exponent',
     'flip_exponent',
     'skip_start',
