@@ -7,7 +7,7 @@ import sys
 import os
 from os.path import dirname, realpath
 
-import appdirs
+import platformdirs
 
 
 def get_bundled_dir(name=None):
@@ -36,7 +36,7 @@ def get_resource_dir(name):
 
 
 def get_user_dir(name=None):
-    path = appdirs.user_config_dir("inkstitch")
+    path = platformdirs.user_config_dir("inkstitch")
 
     if name is not None:
         path = os.path.join(path, name)

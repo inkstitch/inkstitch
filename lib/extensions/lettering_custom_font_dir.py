@@ -6,7 +6,7 @@
 import json
 import os
 
-import appdirs
+import platformdirs
 from inkex import errormsg
 
 from ..i18n import _
@@ -31,7 +31,7 @@ class LetteringCustomFontDir(InkstitchExtension):
         data = {'custom_font_dir': '%s' % path}
 
         try:
-            config_path = appdirs.user_config_dir('inkstitch')
+            config_path = platformdirs.user_config_dir('inkstitch')
         except ImportError:
             config_path = os.path.expanduser('~/.inkstitch')
         if not os.path.exists(config_path):
@@ -43,7 +43,7 @@ class LetteringCustomFontDir(InkstitchExtension):
 
 
 def get_custom_font_dir():
-    custom_font_dir_path = os.path.join(appdirs.user_config_dir('inkstitch'), 'custom_dirs.json')
+    custom_font_dir_path = os.path.join(platformdirs.user_config_dir('inkstitch'), 'custom_dirs.json')
     try:
         with open(custom_font_dir_path, 'r') as custom_dirs:
             custom_dir = json.load(custom_dirs)
