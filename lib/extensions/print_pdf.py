@@ -14,7 +14,7 @@ from copy import deepcopy
 from datetime import date
 from threading import Thread
 
-import appdirs
+import platformdirs
 import wx
 from flask import Flask, Response, jsonify, request, send_from_directory
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -36,7 +36,7 @@ def datetimeformat(value, format='%Y/%m/%d'):
 
 
 def defaults_path():
-    defaults_dir = appdirs.user_config_dir('inkstitch')
+    defaults_dir = platformdirs.user_config_dir('inkstitch')
 
     if not os.path.exists(defaults_dir):
         os.makedirs(defaults_dir)
