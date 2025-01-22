@@ -64,7 +64,7 @@ class FontVariant(object):
         variant_file_paths = self._get_variant_file_paths()
         for svg_path in variant_file_paths:
             document = inkex.load_svg(svg_path)
-            update_inkstitch_document(document)
+            update_inkstitch_document(document, warn_unversioned=False)
             svg = document.getroot()
             svg = self._apply_transforms(svg)
 
