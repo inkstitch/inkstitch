@@ -121,6 +121,7 @@ class LineSegments:
 
 def autorun(elements, preserve_order=False, break_up=None, starting_point=None, ending_point=None, trim=False):
     graph = build_graph(elements, preserve_order, break_up)
+
     graph = add_jumps(graph, elements, preserve_order)
 
     starting_point, ending_point = get_starting_and_ending_nodes(

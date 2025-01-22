@@ -30,7 +30,7 @@ def find_path(graph, starting_node, ending_node):
     #
     # Visiting the edges again on the way back allows us to set up
     # "underpathing".
-    path = nx.shortest_path(graph, starting_node, ending_node)
+    path = _get_shortest_path(graph, starting_node, ending_node)
 
     check_stop_flag()
 
@@ -77,6 +77,17 @@ def find_path(graph, starting_node, ending_node):
     return final_path
 
 
+def _get_shortest_path(graph, starting_node, ending_node):
+    try:
+        path = nx.shortest_path(graph, starting_node, ending_node)
+    except nx.exception.NetworkXNoPath:
+        # They did something strange, let's add a jump from start to end
+        # so at least we don't have to end with an error
+        _insert_jump(graph, graph.nodes[starting_node]['point'], graph.nodes[ending_node]['point'])
+        path = nx.shortest_path(graph, starting_node, ending_node)
+    return path
+
+
 def add_jumps(graph, elements, preserve_order):
     """Add jump stitches between elements as necessary.
 
@@ -94,9 +105,18 @@ def _add_ordered_jumps(graph, elements):
     # For each sequential pair of elements, find the shortest possible jump
     # stitch between them and add it.  The directions of these new edges
     # will enforce stitching the elements in order.
+    last_element = None
     for element1, element2 in zip(elements[:-1], elements[1:]):
+        # Try to fix missing links
+        if last_element is not None:
+            success = _insert_smallest_jump(graph, last_element, element2)
+            if success:
+                last_element = None
+
         check_stop_flag()
-        _insert_smallest_jump(graph, element1, element2)
+        success = _insert_smallest_jump(graph, element1, element2)
+        if not success:
+            last_element = element1
 
     # add jumps between subpath too, we do not care about directions here
     for element in elements:
@@ -130,6 +150,11 @@ def _insert_smallest_jump(graph, element1, element2):
     if potential_edges:
         edge = min(potential_edges, key=lambda p1_p2: p1_p2[0].distance(p1_p2[1]))
         graph.add_edge(str(edge[0]), str(edge[1]), jump=True)
+        return True
+    else:
+        # return False if we haven't successfully inserted a jump
+        # so we can try again later
+        return False
 
 
 def _insert_jump(graph, node1, node2):
@@ -194,6 +219,9 @@ def find_node(graph, point, extreme_function, constrain_to_satin=False, satin=No
         nodes = get_nodes_on_element(graph, satin)
     else:
         nodes = graph.nodes()
+
+    if not nodes:
+        return list(graph.nodes)[0]
 
     if point is None:
         return extreme_function(nodes, key=lambda node: graph.nodes[node]['point'].x)
