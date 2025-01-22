@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-17 01:23+0000\n"
-"PO-Revision-Date: 2025-01-17 01:23\n"
+"PO-Revision-Date: 2025-01-22 01:24\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr "AGS Γαραμου Garamond enthält alle Zeichen aus dem lateinischen u
 #. description of font in fonts/ambigue
 #: inkstitch-fonts-metadata.py:12
 msgid "Ambigüe is a mix of satin and bean stitch font with a subtle harmony of disorder."
-msgstr ""
+msgstr "Ambigüe ist eine Schriftart mit einer subtilen Harmonie der Unordnung. Sie wird aus einer Mischung von Satin- und Mehrfach-Geradstichen gebildet."
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:14
