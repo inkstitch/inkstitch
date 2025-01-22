@@ -16,7 +16,7 @@ from .svg.tags import EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS
 INKSTITCH_SVG_VERSION = 3
 
 
-def update_inkstitch_document(svg, selection=None):
+def update_inkstitch_document(svg, selection=None, warn_unversioned=True):
     document = svg.getroot()
     # get the inkstitch svg version from the document
     search_string = "//*[local-name()='inkstitch_svg_version']//text()"
@@ -54,17 +54,18 @@ def update_inkstitch_document(svg, selection=None):
                 update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
         else:
             # this is the automatic update when a legacy inkstitch svg version was recognized
-            automatic_version_update(document, file_version, INKSTITCH_SVG_VERSION)
+            automatic_version_update(document, file_version, INKSTITCH_SVG_VERSION, warn_unversioned)
 
         _update_inkstitch_svg_version(svg)
 
 
-def automatic_version_update(document, file_version, INKSTITCH_SVG_VERSION):
+def automatic_version_update(document, file_version, INKSTITCH_SVG_VERSION, warn_unversioned):
     # make sure the user really wants to update
     if file_version == 0:
-        do_update = RequestUpdate()
-        if do_update.cancelled is True:
-            return
+        if warn_unversioned:
+            do_update = RequestUpdate()
+            if do_update.cancelled is True:
+                return
     # well then, let's update legeacy params
     for element in document.iterdescendants():
         if element.tag in EMBROIDERABLE_TAGS:
