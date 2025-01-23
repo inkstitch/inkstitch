@@ -269,7 +269,7 @@ def create_new_group(parent, insert_index, label, correction_transform=True):
     return group
 
 
-def preserve_original_groups(elements, original_parent_nodes):
+def preserve_original_groups(elements, original_parent_nodes, transform=True):
     """Ensure that all elements are contained in the original SVG group elements.
 
     When preserve_order is True, no elements will be reordered in the XML tree.
@@ -279,9 +279,12 @@ def preserve_original_groups(elements, original_parent_nodes):
     """
 
     for element, parent in zip(elements, original_parent_nodes):
+        transform = ''
+        if transform:
+            transform = get_correction_transform(parent, child=True)
         if parent is not None:
             parent.append(element.node)
-            element.node.set('transform', get_correction_transform(parent, child=True))
+            element.node.set('transform', transform)
 
 
 def add_elements_to_group(elements, group):
