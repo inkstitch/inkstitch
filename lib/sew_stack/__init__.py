@@ -43,16 +43,35 @@ class SewStack(EmbroideryElement):
         else:
             return False
 
-    def get_cache_key_data(self, previous_stitch):
+    @property
+    def first_stitch(self):
+        # For now, we'll return None, but later on we might let the first
+        # StitchLayer set the first_stitch.
+        return None
+
+    def uses_next_element(self):
+        return True
+
+    def get_cache_key_data(self, previous_stitch, next_element):
         return self.config.layers
 
     def get_default_random_seed(self):
         return self.node.get_id() or ""
 
-    def to_stitch_groups(self, previous_stitch_group):
+    def to_stitch_groups(self, previous_stitch_group=None, next_element=None):
         stitch_groups = []
         for layer in self.layers:
             if layer.enabled:
-                stitch_groups.extend(layer.embroider(stitch_groups[-1] if stitch_groups else None))
+                this_layer_previous_stitch_group = this_layer_next_element = None
+
+                if layer is self.layers[0]:
+                    this_layer_previous_stitch_group = previous_stitch_group
+                else:
+                    this_layer_previous_stitch_group = stitch_groups[-1]
+
+                if layer is self.layers[-1]:
+                    this_layer_next_element = next_element
+
+                stitch_groups.extend(layer.embroider(this_layer_previous_stitch_group, this_layer_next_element))
 
         return stitch_groups

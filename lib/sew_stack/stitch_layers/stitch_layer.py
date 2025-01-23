@@ -6,9 +6,6 @@ class StitchLayer:
     # must be overridden in child classes and set to a subclass of StitchLayerEditor
     editor_class = None
 
-    # can be overridden in child class
-    uses_last_stitch_group = False
-
     # not to be overridden in child classes
     _defaults = None
 
@@ -84,8 +81,5 @@ class StitchLayer:
     def to_stitch_groups(self, *args):
         raise NotImplementedError(f"{self.__class__.__name__} must implement to_stitch_groups()!")
 
-    def embroider(self, last_stitch_group):
-        if self.uses_last_stitch_group:
-            return self.to_stitch_groups(last_stitch_group)
-        else:
-            return self.to_stitch_groups()
+    def embroider(self, last_stitch_group, next_element):
+        return self.to_stitch_groups(last_stitch_group, next_element)

@@ -77,8 +77,6 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
 
         return defaults
 
-    uses_previous_stitch_group = False
-
     @property
     def layer_type_name(self):
         return _("Running Stitch")
@@ -124,5 +122,5 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
 
         return StitchGroup(stitches=stitches, color=self.stroke_color)
 
-    def to_stitch_groups(self):
+    def to_stitch_groups(self, previous_stitch_group, next_element):
         return [self.running_stitch(path) for path in self.get_paths()]
