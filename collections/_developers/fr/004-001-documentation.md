@@ -19,7 +19,7 @@ Si vous souhaitez aider avec la documentation, déposez un rapport d'erreur (iss
 ## Travailler sur les pages Github
 
 Les pages Github utilisent [Jekyll](https://jekyllrb.com/), un générateur de pages statiques. Il est également possible de l'installer localement à des fins de test. Pour obtenir des instructions, consultez leur site Web.
-Nous utilisons le [Thème Minimal Mistake] (https://mmistakes.github.io/minimal-mistakes/), avec très peu de personnalisation.
+Nous utilisons le [Thème Minimal Mistake](https://mmistakes.github.io/minimal-mistakes/), avec très peu de personnalisation.
 
 ### Structure de base des fichiers 
 * `_collections/_posts/langue`   actualités

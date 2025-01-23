@@ -53,7 +53,7 @@ Ripples with only **one subpath** (closed shape or a simple bezier curve) can be
 
 ### Target point
 
-Define a ripple target position with [visual command] (/docs/commands/):
+Define a ripple target position with [visual command](/docs/commands/):
 
 * Open `Extensions > Ink/Stitch > Commands  > Attach Commands to selected objects ...`
 * Select `Target position` and apply
