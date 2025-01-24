@@ -121,6 +121,7 @@ class LineSegments:
 
 def autorun(elements, preserve_order=False, break_up=None, starting_point=None, ending_point=None, trim=False):
     graph = build_graph(elements, preserve_order, break_up)
+
     graph = add_jumps(graph, elements, preserve_order)
 
     starting_point, ending_point = get_starting_and_ending_nodes(
@@ -132,7 +133,7 @@ def autorun(elements, preserve_order=False, break_up=None, starting_point=None, 
     new_elements, trims, original_parents = path_to_elements(graph, path, trim)
 
     if preserve_order:
-        preserve_original_groups(new_elements, original_parents)
+        preserve_original_groups(new_elements, original_parents, transform=False)
     else:
         parent = elements[0].node.getparent()
         insert_index = parent.index(elements[0].node)
