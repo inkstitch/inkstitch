@@ -376,7 +376,7 @@ class Stroke(EmbroideryElement):
     @property
     @param('grid_first',
            _('Stitch grid first'),
-           tooltip=_('Reverts the stitch paths, so that the grid will be stitched first'),
+           tooltip=_('Reverse the stitch paths, so that the grid will be stitched first'),
            type='boolean',
            default=False,
            select_items=[('stroke_method', 'ripple_stitch')],
