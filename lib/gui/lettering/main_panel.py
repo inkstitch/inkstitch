@@ -15,7 +15,7 @@ from ...i18n import _
 from ...lettering import FontError, get_font_list
 from ...lettering.categories import FONT_CATEGORIES
 from ...stitch_plan import stitch_groups_to_stitch_plan
-from ...svg.tags import INKSCAPE_LABEL, INKSTITCH_LETTERING
+from ...svg.tags import INKSTITCH_LETTERING
 from ...utils import DotDict, cache
 from ...utils.threading import ExitThread, check_stop_flag
 from .. import PresetsPanel, PreviewRenderer, info_dialog
@@ -292,15 +292,11 @@ class LetteringPanel(wx.Panel):
 
         del self.group[:]
 
-        destination_group = inkex.Group(attrib={
-            # L10N The user has chosen to scale the text by some percentage
-            # (50%, 200%, etc).  If you need to use the percentage symbol,
-            # make sure to double it (%%).
-            INKSCAPE_LABEL: _("Text scale") + f' {self.settings.scale}%'
-        })
+        destination_group = inkex.Group()
         self.group.append(destination_group)
 
         font = self.fonts.get(self.options_panel.font_chooser.GetValue(), self.default_font)
+        destination_group.label = f"{font.name} {_('scale')} {self.settings.scale}%"
         try:
             font.render_text(
                 self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth,

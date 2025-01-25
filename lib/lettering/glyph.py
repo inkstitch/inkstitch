@@ -36,6 +36,9 @@ class Glyph(object):
             this Glyph.  Nested groups are allowed.
         """
 
+        self.name = group.label
+        if len(self.name) > 11:
+            self.name = self.name[11:]
         self._process_baseline(group.getroottree().getroot())
         self.clips = self._process_clips(group)
         self.node = self._process_group(group)

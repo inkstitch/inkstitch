@@ -134,6 +134,32 @@ class FontVariant(object):
 
         return svg
 
+    def glyphs_start_with(self, character):
+        glyph_selection = [glyph_name for glyph_name, glyph_layer in self.glyphs.items() if glyph_name.startswith(character)]
+        return sorted(glyph_selection, key=len, reverse=True)
+
+    def get_glyph(self, character, word, character_position):
+        glyph_selection = self.glyphs_start_with(character)
+        for glyph in glyph_selection:
+            glyph_name = glyph.split('.')
+            if character_position is not None and len(glyph_name) == 2 and glyph_name[1] in ['isol', 'init', 'medi', 'fina']:
+                glyph_len = len(glyph_name[0])
+
+                position = character_position
+                if character_position != 'isol' and len(word) == glyph_len:
+                    position = 'fina'
+
+                if glyph_name[1] != position:
+                    continue
+                elif word.startswith(glyph_name[0]):
+                    return self.glyphs[glyph], glyph_len
+            elif word.startswith(glyph):
+                return self.glyphs[glyph], len(glyph)
+        if character in glyph_selection:
+            # we got a position, but no positional glyph. Let's try if we have the glyph in a simple form
+            return self.glyphs[glyph], len(glyph)
+        return self.glyphs.get(self.default_glyph, None), 1
+
     def __getitem__(self, character):
         if character in self.glyphs:
             return self.glyphs[character]
