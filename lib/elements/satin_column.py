@@ -1821,6 +1821,9 @@ class SatinColumn(EmbroideryElement):
         if end_point is None and self.end_at_nearest_point and next_stitch is not None:
             end_point = nearest_points(next_stitch, self.shape)[1]
             end_point = Point(*list(end_point.coords[0]))
+        # if we are already near to the end, we won't need to specify an ending point
+        if end_point and shgeo.Point(self.center_line.coords[-1]).distance(shgeo.Point(end_point)) < 5:
+            end_point = None
         return end_point
 
     def uses_previous_stitch(self):
