@@ -90,7 +90,7 @@ $ tar -xvf ~/Downloads/inkstitch-{{ tag_name }}-linux.tar.xz</code></pre></div><
 
 ### NixOS
 
-Eine Version für NixOS wird extern betreut und kann unter [https://codeberg.org/tropf/nix-inkstitch](https://codeberg.org/tropf/nix-inkstitch) heruntergeladen werden.
+nixOS-Nutzer können Ink/Stitch direkt über die nix-shell installieren <https://search.nixos.org/packages?channel=unstable&show=inkscape-extensions.inkstitch>
 
 ### Arch Linux
 

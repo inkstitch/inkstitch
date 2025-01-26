@@ -18,7 +18,7 @@ Natürlich sind sowohl Stickanfänger als auch fortgeschrittene Nutzer herzlich 
 Friedrich-Ebert-Str. 18-26<br>
 45127 Essen
 
-**Raum 304**
+**Raum 402**
 
 ## Kosten
 

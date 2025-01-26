@@ -18,7 +18,7 @@ Of course, both embroidery beginners and advanced users are welcome.
 Friedrich-Ebert-Str. 18-26<br>
 45127 Essen
 
-**Room 304**
+**Room 402**
 
 The meeting will be held in German.
 
