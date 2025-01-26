@@ -271,6 +271,7 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'meander_fill'),
                          ('fill_method', 'circular_fill'),
+                         ('fill_method', 'contour_fill'),
                          ('fill_method', 'tartan_fill'),
                          ('fill_method', 'linear_gradient_fill')])
     def expand(self):
