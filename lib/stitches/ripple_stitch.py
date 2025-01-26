@@ -41,6 +41,8 @@ def ripple_stitch(stroke):
 
     if stitches and stroke.grid_size != 0:
         stitches.extend(_do_grid(stroke, helper_lines, skip_start, skip_end, is_linear, stitches[-1]))
+        if stroke.grid_first:
+            stitches = stitches[::-1]
 
     return _repeat_coords(stitches, stroke.repeats)
 
@@ -306,7 +308,7 @@ def _get_guided_helper_lines(stroke, outline, max_distance):
     guide_line = stroke.get_guide_line()
     if isinstance(guide_line, SatinColumn):
         # satin type guide line
-        return _generate_satin_guide_helper_lines(stroke, outline, guide_line)
+        return generate_satin_guide_helper_lines(stroke, outline, guide_line)
     else:
         # simple guide line
         return _generate_guided_helper_lines(stroke, outline, max_distance, guide_line.geoms[0])
@@ -325,7 +327,7 @@ def _generate_guided_helper_lines(stroke, outline, max_distance, guide_line):
     center = outline.centroid
     center = InkstitchPoint(center.x, center.y)
 
-    if stroke.render_at_rungs:
+    if stroke.satin_guide_pattern_position == "render_at_rungs":
         count = len(guide_line.coords)
     else:
         count = _get_guided_line_count(stroke, guide_line)
@@ -340,7 +342,7 @@ def _generate_guided_helper_lines(stroke, outline, max_distance, guide_line):
     for i in range(count):
         check_stop_flag()
 
-        if stroke.render_at_rungs:
+        if stroke.satin_guide_pattern_position == "render_at_rungs":
             # Requires the guide line to be defined as manual stitch
             guide_point = InkstitchPoint(*guide_line.coords[i])
         else:
@@ -369,11 +371,38 @@ def _get_start_rotation(line):
     return atan2(point1.y - point0.y, point1.x - point0.x)
 
 
-def _generate_satin_guide_helper_lines(stroke, outline, guide_line):
+def generate_satin_guide_helper_lines(stroke, outline, guide_line):
+    anchor_line = stroke.get_anchor_line()
+    if anchor_line:
+        # position, rotation and scale defined by anchor line
+        outline0 = InkstitchPoint(*anchor_line.coords[0])
+        outline1 = InkstitchPoint(*anchor_line.coords[-1])
+    else:
+        # position rotation and scale defined by line end points
+        outline_coords = outline.coords
+        outline0 = InkstitchPoint(*outline_coords[0])
+        outline1 = InkstitchPoint(*outline_coords[-1])
+        if outline0 == outline1:
+            return _generate_simple_satin_guide_helper_lines(stroke, outline, guide_line)
+
+    outline_width = (outline1 - outline0).length()
+    outline_rotation = atan2(outline1.y - outline0.y, outline1.x - outline0.x)
+
+    if stroke.satin_guide_pattern_position == "adaptive":
+        return _generate_satin_guide_helper_lines_with_varying_pattern_distance(
+            stroke, guide_line, outline, outline0, outline_width, outline_rotation
+        )
+    else:
+        return _generate_satin_guide_helper_lines_with_constant_pattern_distance(
+            stroke, guide_line, outline, outline0, outline_width, outline_rotation
+        )
+
+
+def _generate_simple_satin_guide_helper_lines(stroke, outline, guide_line):
     count = _get_guided_line_count(stroke, guide_line.center_line)
 
     spacing = guide_line.center_line.length / max(1, count - 1)
-    if stroke.render_at_rungs:
+    if stroke.satin_guide_pattern_position == "render_at_rungs":
         sections = guide_line.flattened_sections
         pairs = []
         for (rail0, rail1) in sections:
@@ -405,6 +434,70 @@ def _generate_satin_guide_helper_lines(stroke, outline, guide_line):
         scaling = (point1 - point0).length() / start_scale
 
         transformed_outline = _transform_outline(translation, rotation, scaling, outline, Point(guide_center), stroke.scale_axis)
+
+        # outline to helper line points
+        for j, point in enumerate(transformed_outline.coords):
+            line_point_dict[j].append(InkstitchPoint(point[0], point[1]))
+
+    return _point_dict_to_helper_lines(len(outline.coords), line_point_dict)
+
+
+def _generate_satin_guide_helper_lines_with_constant_pattern_distance(stroke, guide_line, outline, outline0, outline_width, outline_rotation):
+    # add scaled and rotated outlines along the satin column guide line
+    if stroke.satin_guide_pattern_position == "render_at_rungs":
+        sections = guide_line.flattened_sections
+        pairs = []
+        for (rail0, rail1) in sections:
+            pairs.append((rail0[-1], rail1[-1]))
+    else:
+        count = _get_guided_line_count(stroke, guide_line.center_line)
+        spacing = guide_line.center_line.length / max(1, count - 1)
+        pairs = guide_line.plot_points_on_rails(spacing)
+
+    if pairs[0] == pairs[-1]:
+        pairs = pairs[:-1]
+
+    line_point_dict = defaultdict(list)
+    for i, (point0, point1) in enumerate(pairs):
+        check_stop_flag()
+
+        # move to point0, rotate and scale so the other point hits point1
+        scaling = (point1 - point0).length() / outline_width
+        rotation = atan2(point1.y - point0.y, point1.x - point0.x)
+        rotation = rotation - outline_rotation
+        translation = point0 - outline0
+        transformed_outline = _transform_outline(translation, rotation, scaling, outline, Point(point0), 0)
+
+        # outline to helper line points
+        for j, point in enumerate(transformed_outline.coords):
+            line_point_dict[j].append(InkstitchPoint(point[0], point[1]))
+
+    return _point_dict_to_helper_lines(len(outline.coords), line_point_dict)
+
+
+def _generate_satin_guide_helper_lines_with_varying_pattern_distance(stroke, guide_line, outline, outline0, outline_width, outline_rotation):
+    # rotate pattern and get the pattern width
+    minx, miny, maxx, maxy = _transform_outline(Point([0, 0]), outline_rotation, 1, outline, Point(outline0), 0).bounds
+    pattern_width = maxx - minx
+
+    distance = 0
+    line_point_dict = defaultdict(list)
+    while True:
+        if distance > guide_line.center_line.length:
+            break
+        check_stop_flag()
+        cut_point = guide_line.center_line.interpolate(distance)
+        point0, point1 = guide_line.find_cut_points(*cut_point.coords)
+
+        # move to point0, rotate and scale so the other point hits point1
+        scaling = (point1 - point0).length() / outline_width
+        rotation = atan2(point1.y - point0.y, point1.x - point0.x)
+        rotation = rotation - outline_rotation
+        translation = point0 - outline0
+        transformed_outline = _transform_outline(translation, rotation, scaling, outline, Point(point0), 0)
+
+        min_distance = stroke.min_line_dist or 0
+        distance += max(1, (pattern_width * scaling) + min_distance)
 
         # outline to helper line points
         for j, point in enumerate(transformed_outline.coords):

@@ -122,7 +122,7 @@ inkstitch_attribs = [
     'flip_copies',
     'line_count',
     'min_line_dist_mm',
-    'render_at_rungs',
+    'satin_guide_pattern_position',
     'exponent',
     'flip_exponent',
     'skip_start',
@@ -132,6 +132,7 @@ inkstitch_attribs = [
     'scale_end',
     'rotate_ripples',
     'grid_size_mm',
+    'grid_first',
     # satin column
     'satin_column',
     'satin_method',

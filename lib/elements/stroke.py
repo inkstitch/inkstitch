@@ -236,16 +236,23 @@ class Stroke(EmbroideryElement):
             return
         return max(min_dist, 0.01)
 
+    _satin_guided_pattern_options = [
+        ParamOption('default', _('Line count / Minimum line distance')),
+        ParamOption('render_at_rungs', _('Render at rungs')),
+        ParamOption('adaptive', _('Adaptive + minimum line distance')),
+    ]
+
     @property
-    @param('render_at_rungs',
-           _('Render at rungs'),
-           tooltip=_('Position satin guided pattern at rungs.'),
-           type='boolean',
+    @param('satin_guide_pattern_position',
+           _('Pattern position'),
+           tooltip=_('Pattern position for satin guided ripples.'),
+           type='combo',
+           options=_satin_guided_pattern_options,
+           default='default',
            select_items=[('stroke_method', 'ripple_stitch')],
-           default=False,
            sort_index=9)
-    def render_at_rungs(self):
-        return self.get_boolean_param('render_at_rungs', False)
+    def satin_guide_pattern_position(self):
+        return self.get_param('satin_guide_pattern_position', 'line_count')
 
     @property
     @param('staggers',
@@ -257,7 +264,7 @@ class Stroke(EmbroideryElement):
            type='int',
            select_items=[('stroke_method', 'ripple_stitch')],
            default=0,
-           sort_index=9)
+           sort_index=15)
     def staggers(self):
         return self.get_float_param("staggers", 1)
 
@@ -268,7 +275,7 @@ class Stroke(EmbroideryElement):
            type='int',
            default=0,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=10)
+           sort_index=16)
     @cache
     def skip_start(self):
         return abs(self.get_int_param("skip_start", 0))
@@ -280,7 +287,7 @@ class Stroke(EmbroideryElement):
            type='int',
            default=0,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=11)
+           sort_index=17)
     @cache
     def skip_end(self):
         return abs(self.get_int_param("skip_end", 0))
@@ -292,7 +299,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            select_items=[('stroke_method', 'ripple_stitch')],
            default=True,
-           sort_index=12)
+           sort_index=18)
     def flip_copies(self):
         return self.get_boolean_param('flip_copies', True)
 
@@ -303,7 +310,7 @@ class Stroke(EmbroideryElement):
            type='float',
            default=1,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=13)
+           sort_index=19)
     @cache
     def exponent(self):
         return max(self.get_float_param("exponent", 1), 0.1)
@@ -315,7 +322,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=False,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=14)
+           sort_index=20)
     @cache
     def flip_exponent(self):
         return self.get_boolean_param("flip_exponent", False)
@@ -327,7 +334,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=False,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=15)
+           sort_index=21)
     @cache
     def reverse(self):
         return self.get_boolean_param("reverse", False)
@@ -349,7 +356,7 @@ class Stroke(EmbroideryElement):
         options=_reverse_rails_options,
         default='automatic',
         select_items=[('stroke_method', 'ripple_stitch')],
-        sort_index=16)
+        sort_index=22)
     def reverse_rails(self):
         return self.get_param('reverse_rails', 'automatic')
 
@@ -361,10 +368,22 @@ class Stroke(EmbroideryElement):
            default=0,
            unit='mm',
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=16)
+           sort_index=23)
     @cache
     def grid_size(self):
         return abs(self.get_float_param("grid_size_mm", 0))
+
+    @property
+    @param('grid_first',
+           _('Stitch grid first'),
+           tooltip=_('Reverse the stitch paths, so that the grid will be stitched first'),
+           type='boolean',
+           default=False,
+           select_items=[('stroke_method', 'ripple_stitch')],
+           sort_index=24)
+    @cache
+    def grid_first(self):
+        return self.get_boolean_param("grid_first", False)
 
     @property
     @param('scale_axis',
@@ -375,7 +394,7 @@ class Stroke(EmbroideryElement):
            # 0: xy, 1: x, 2: y, 3: none
            options=["X Y", "X", "Y", _("None")],
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=18)
+           sort_index=25)
     def scale_axis(self):
         return self.get_int_param('scale_axis', 0)
 
@@ -387,7 +406,7 @@ class Stroke(EmbroideryElement):
            unit='%',
            default=100,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=18)
+           sort_index=26)
     def scale_start(self):
         return self.get_float_param('scale_start', 100.0)
 
@@ -399,7 +418,7 @@ class Stroke(EmbroideryElement):
            unit='%',
            default=0.0,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=19)
+           sort_index=27)
     def scale_end(self):
         return self.get_float_param('scale_end', 0.0)
 
@@ -410,7 +429,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=True,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=20)
+           sort_index=30)
     @cache
     def rotate_ripples(self):
         return self.get_boolean_param("rotate_ripples", True)
@@ -423,7 +442,7 @@ class Stroke(EmbroideryElement):
            default=0,
            options=(_("flat"), _("point")),
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=21)
+           sort_index=31)
     @cache
     def join_style(self):
         return self.get_int_param('join_style', 0)
@@ -650,6 +669,16 @@ class Stroke(EmbroideryElement):
         if len(guide_lines['satin']) >= 1:
             return guide_lines['satin'][0]
         return guide_lines['stroke'][0]
+
+    @cache
+    def get_anchor_line(self):
+        anchor_lines = get_marker_elements(self.node, "anchor-line", False, True, False)
+        # No or empty guide line
+        if not anchor_lines or not anchor_lines['stroke']:
+            return None
+
+        # ignore multiple anchor lines
+        return anchor_lines['stroke'][0].geoms[0]
 
     def _representative_point(self):
         # if we just take the center of a line string we could end up on some point far away from the actual line

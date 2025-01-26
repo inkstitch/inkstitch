@@ -12,7 +12,7 @@ from shapely import geometry as shgeo
 from .svg.tags import EMBROIDERABLE_TAGS
 from .utils import cache, get_bundled_dir
 
-MARKER = ['pattern', 'guide-line']
+MARKER = ['anchor-line', 'pattern', 'guide-line']
 
 
 def ensure_marker(svg, marker):
