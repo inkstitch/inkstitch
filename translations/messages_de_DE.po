@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-25 01:19+0000\n"
-"PO-Revision-Date: 2025-01-25 01:20\n"
+"POT-Creation-Date: 2025-01-27 01:25+0000\n"
+"PO-Revision-Date: 2025-01-27 01:25\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-25 01:19+0000\n"
+"POT-Creation-Date: 2025-01-27 01:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,7 +119,7 @@ msgstr "Baumans FI Small ist eine abgewandelte, kleinere Form von Baumans FI. Di
 
 #. description of font in fonts/califragilistic
 #: inkstitch-fonts-metadata.py:38
-msgid "Caalifragilistic is a tricolor running stitch font that was constructed using  mmandalas"
+msgid "Califragilistic is a tricolor running stitch font that was constructed using mandalas"
 msgstr ""
 
 #. description of font in fonts/cats
@@ -1682,12 +1682,12 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr "Verkleinern Sie die Unterlage, um zu verhindern, dass die Unterlage an der Außenseite der Füllstiche sichtbar wird."
 
 #: lib/elements/fill_stitch.py:736 lib/elements/satin_column.py:581
-#: lib/elements/stroke.py:433 lib/gui/satin_multicolor/colorize_panel.py:57
+#: lib/elements/stroke.py:452 lib/gui/satin_multicolor/colorize_panel.py:57
 msgid "Random seed"
 msgstr "Zufallszahl"
 
 #: lib/elements/fill_stitch.py:737 lib/elements/satin_column.py:582
-#: lib/elements/stroke.py:434
+#: lib/elements/stroke.py:453
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer."
 
@@ -1979,27 +1979,27 @@ msgstr "Zusätzliche Zugkompensation, die als Prozentwert der ursprünglichen Br
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Satinstiche ziehen den Stoff zusammen. Dadurch wird das Stickbild schmaler, als die in Inkscape gezeichnete Form. Diese Einstellung erweitert die Satinsäule um einen festen Wert, um diesen Effekt auszugleichen. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt genutzt werden."
 
-#: lib/elements/satin_column.py:293 lib/elements/stroke.py:335
+#: lib/elements/satin_column.py:293 lib/elements/stroke.py:342
 msgid "Automatic"
 msgstr "Automatisch"
 
-#: lib/elements/satin_column.py:294 lib/elements/stroke.py:336
+#: lib/elements/satin_column.py:294 lib/elements/stroke.py:343
 msgid "Don't reverse"
 msgstr "Beibehalten"
 
-#: lib/elements/satin_column.py:295 lib/elements/stroke.py:337
+#: lib/elements/satin_column.py:295 lib/elements/stroke.py:344
 msgid "Reverse first rail"
 msgstr "Erste Konturlinie umkehren"
 
-#: lib/elements/satin_column.py:296 lib/elements/stroke.py:338
+#: lib/elements/satin_column.py:296 lib/elements/stroke.py:345
 msgid "Reverse second rail"
 msgstr "Zweite Konturlinie umkehren"
 
-#: lib/elements/satin_column.py:297 lib/elements/stroke.py:339
+#: lib/elements/satin_column.py:297 lib/elements/stroke.py:346
 msgid "Reverse both rails"
 msgstr "Beide Konturlinien umkehren"
 
-#: lib/elements/satin_column.py:303 lib/elements/stroke.py:345
+#: lib/elements/satin_column.py:303 lib/elements/stroke.py:352
 msgid "Reverse rails"
 msgstr "Konturlinien umkehren"
 
@@ -2222,137 +2222,157 @@ msgstr "Minimaler Linienabstand"
 msgid "Overrides the number of lines setting."
 msgstr "Diese Einstellung überschreibt den Wert \"Anzahl der Linien\""
 
+#: lib/elements/stroke.py:240
+msgid "Line count / Minimum line distance"
+msgstr ""
+
 #: lib/elements/stroke.py:241
 msgid "Render at rungs"
 msgstr "Muster an Richtungsvektoren positionieren"
 
 #: lib/elements/stroke.py:242
-msgid "Position satin guided pattern at rungs."
-msgstr "Positioniert das durch eine Satinsäule geführte Muster über den Richtungsvektoren."
+msgid "Adaptive + minimum line distance"
+msgstr ""
 
-#: lib/elements/stroke.py:252
+#: lib/elements/stroke.py:247
+msgid "Pattern position"
+msgstr ""
+
+#: lib/elements/stroke.py:248
+msgid "Pattern position for satin guided ripples."
+msgstr ""
+
+#: lib/elements/stroke.py:259
 msgid "Stagger lines this many times before repeating"
 msgstr "Stichversatz"
 
-#: lib/elements/stroke.py:253
+#: lib/elements/stroke.py:260
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. A value of 0 (default) disables staggering and instead stitches evenly.For linear ripples only."
 msgstr "Dieser Wert beschreibt, nach wie vielen Reihen die Einstichstellen übereinander liegen. Dezimalwerte sind zulässig und zeigen weniger deutliche Diagonalen im Stickbild. Ein Wert von 0 (Standardeinstellung) deaktiviert den Versatz und produziert gleich verteilte Stiche. Nur für lineare Ripples."
 
-#: lib/elements/stroke.py:266
+#: lib/elements/stroke.py:273
 msgid "Skip first lines"
 msgstr "Erste Linien überspringen"
 
-#: lib/elements/stroke.py:267
+#: lib/elements/stroke.py:274
 msgid "Skip this number of lines at the beginning."
 msgstr "Diese Anzahl an Linien am Anfang überspringen."
 
-#: lib/elements/stroke.py:278
+#: lib/elements/stroke.py:285
 msgid "Skip last lines"
 msgstr "Letzte Linien überspringen"
 
-#: lib/elements/stroke.py:279
+#: lib/elements/stroke.py:286
 msgid "Skip this number of lines at the end"
 msgstr "Diese Anzahl an Linien am Ende überspringen"
 
-#: lib/elements/stroke.py:290
+#: lib/elements/stroke.py:297
 msgid "Flip every second line"
 msgstr "Jede zweite Reihe umkehren"
 
-#: lib/elements/stroke.py:291
+#: lib/elements/stroke.py:298
 msgid "Linear ripple: wether to flip the pattern every second line or not."
 msgstr "Lineare Ripple: bestimmt ob jede zweite Reihe in umgekehrter oder gleicher Richtung verläuft."
 
-#: lib/elements/stroke.py:301
+#: lib/elements/stroke.py:308
 msgid "Line distance exponent"
 msgstr "Linienabstand Exponent"
 
-#: lib/elements/stroke.py:302
+#: lib/elements/stroke.py:309
 msgid "Increase density towards one side."
 msgstr "Dichte zu einer Seite hin erhöhen."
 
-#: lib/elements/stroke.py:313
+#: lib/elements/stroke.py:320
 msgid "Flip exponent"
 msgstr "Exponent umkehren"
 
-#: lib/elements/stroke.py:314
+#: lib/elements/stroke.py:321
 msgid "Reverse exponent effect."
 msgstr "Effekt des Exponenten umkehren."
 
-#: lib/elements/stroke.py:325
+#: lib/elements/stroke.py:332
 msgid "Reverse"
 msgstr "Umkehren"
 
-#: lib/elements/stroke.py:326
+#: lib/elements/stroke.py:333
 msgid "Flip start and end point"
 msgstr "Start- und Endpunkt vertauschen"
 
-#: lib/elements/stroke.py:346
+#: lib/elements/stroke.py:353
 msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
 msgstr "Außenkonturen der Satin-Führungslinie umkehren. In der Standardeinstellung werden gegenläufig verlaufende Linien automatisch korrigiert."
 
-#: lib/elements/stroke.py:358
+#: lib/elements/stroke.py:365
 msgid "Grid size"
 msgstr "Größe des Gitters"
 
-#: lib/elements/stroke.py:359
+#: lib/elements/stroke.py:366
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr "Als Gitter rendern. Dabei bitte unbedingt auf die Stichdichte achten."
 
-#: lib/elements/stroke.py:371
+#: lib/elements/stroke.py:378
+msgid "Stitch grid first"
+msgstr ""
+
+#: lib/elements/stroke.py:379
+msgid "Reverse the stitch paths, so that the grid will be stitched first"
+msgstr ""
+
+#: lib/elements/stroke.py:390
 msgid "Scale axis"
 msgstr "Skalieren"
 
-#: lib/elements/stroke.py:372
+#: lib/elements/stroke.py:391
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Achse für Satin-geführte Ripplestiche."
 
-#: lib/elements/stroke.py:376 lib/gui/edit_json/settings_panel.py:157
+#: lib/elements/stroke.py:395 lib/gui/edit_json/settings_panel.py:157
 #: print/templates/ui.html:180 inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr "Keine"
 
-#: lib/elements/stroke.py:384
+#: lib/elements/stroke.py:403
 msgid "Starting scale"
 msgstr "Start-Skalierung"
 
-#: lib/elements/stroke.py:385
+#: lib/elements/stroke.py:404
 msgid "How big the first copy of the line should be, in percent."
 msgstr "Größe der ersten Kopie der Ursprungsform in Prozent."
 
-#: lib/elements/stroke.py:385 lib/elements/stroke.py:397
+#: lib/elements/stroke.py:404 lib/elements/stroke.py:416
 msgid "Used only for ripple stitch with a guide line."
 msgstr "Kann nur auf Ripplestiche mit einer Führungslinie angewandt werden."
 
-#: lib/elements/stroke.py:396
+#: lib/elements/stroke.py:415
 msgid "Ending scale"
 msgstr "End-Skalierung"
 
-#: lib/elements/stroke.py:397
+#: lib/elements/stroke.py:416
 msgid "How big the last copy of the line should be, in percent."
 msgstr "Größe der letzten Kopie der Ursprungsform in Prozent."
 
-#: lib/elements/stroke.py:408 lib/gui/tartan/customize_panel.py:43
+#: lib/elements/stroke.py:427 lib/gui/tartan/customize_panel.py:43
 msgid "Rotate"
 msgstr "Rotieren"
 
-#: lib/elements/stroke.py:409
+#: lib/elements/stroke.py:428
 msgid "Rotate satin guided ripple stitches"
 msgstr "Satin-geführte Ripplestiche rotieren"
 
-#: lib/elements/stroke.py:420
+#: lib/elements/stroke.py:439
 msgid "Join style"
 msgstr "Kantenstil"
 
-#: lib/elements/stroke.py:421
+#: lib/elements/stroke.py:440
 msgid "Join style for non circular ripples."
 msgstr "Kantenstil für nicht kreisförmigen Ripplestich."
 
-#: lib/elements/stroke.py:424
+#: lib/elements/stroke.py:443
 msgid "flat"
 msgstr "flach"
 
-#: lib/elements/stroke.py:424
+#: lib/elements/stroke.py:443
 msgid "point"
 msgstr "spitz"
 
@@ -2923,6 +2943,10 @@ msgstr "Ink/Stitch - Mehrfarbige Satinsäulen"
 #: lib/extensions/select_elements.py:102
 msgid "Could not detect python path. Please insert python path manually as described in the help tab of the select elements dialog."
 msgstr "Der Python-Pfad konnte nicht erkannt werden. Bitte füge den Python-Pfad manuell wie im Hilfe-Reiter dieser Erweiterung beschrieben hinzu."
+
+#: lib/extensions/selection_to_anchor_line.py:21
+msgid "Please select at least one object to be marked as a anchor line."
+msgstr ""
 
 #: lib/extensions/selection_to_guide_line.py:21
 msgid "Please select at least one object to be marked as a guide line."
@@ -5363,6 +5387,7 @@ msgstr "Wendet Parameter vom ersten ausgewählten Element auf den Rest der Auswa
 #: inx/inkstitch_duplicate_params.inx:12
 #: inx/inkstitch_remove_duplicated_points.inx:34 inx/inkstitch_reorder.inx:11
 #: inx/inkstitch_select_elements.inx:107
+#: inx/inkstitch_selection_to_anchor_line.inx:12
 #: inx/inkstitch_selection_to_guide_line.inx:12
 #: inx/inkstitch_selection_to_pattern.inx:12 inx/inkstitch_test_swatches.inx:11
 #: inx/inkstitch_unlink_clone.inx:23
@@ -7243,6 +7268,14 @@ msgstr "* macOS: nicht funktionsfähig, sorry"
 #: inx/inkstitch_select_elements.inx:98
 msgid "Python Path"
 msgstr "Python Pfad"
+
+#: inx/inkstitch_selection_to_anchor_line.inx:3
+msgid "Selection to anchor line"
+msgstr ""
+
+#: inx/inkstitch_selection_to_anchor_line.inx:9
+msgid "Marks selected elements as anchor lines"
+msgstr ""
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
