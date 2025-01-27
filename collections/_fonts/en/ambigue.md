@@ -13,7 +13,7 @@ data_title:
 
 {% include upcoming_release.html %}
 
-![Sunset](/assets/images/fonts/ambigue.png)
+![ambigue](/assets/images/fonts/ambigue.png)
 
 ## Glyphs
 
