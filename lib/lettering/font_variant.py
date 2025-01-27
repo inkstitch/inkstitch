@@ -148,7 +148,10 @@ class FontVariant(object):
 
                 position = character_position
                 if character_position != 'isol' and len(word) == glyph_len:
-                    position = 'fina'
+                    if character_position == 'init':
+                        position = 'isol'
+                    else:
+                        position = 'fina'
 
                 if glyph_name[1] != position:
                     continue
