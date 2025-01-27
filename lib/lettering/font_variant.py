@@ -137,7 +137,7 @@ class FontVariant(object):
 
     def glyphs_start_with(self, character):
         glyph_selection = [glyph_name for glyph_name, glyph_layer in self.glyphs.items() if glyph_name.startswith(character)]
-        return sorted(glyph_selection, key=len, reverse=True)
+        return sorted(glyph_selection, key=lambda glyph: (len(glyph.split('.')[0]), len(glyph)), reverse=True)
 
     def get_glyph(self, character, word, character_position):
         glyph_selection = self.glyphs_start_with(character)
