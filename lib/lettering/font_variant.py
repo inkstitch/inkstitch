@@ -5,6 +5,7 @@
 
 import os
 from collections import defaultdict
+from unicodedata import normalize
 
 import inkex
 
@@ -73,7 +74,7 @@ class FontVariant(object):
             for layer in glyph_layers:
                 self._clean_group(layer)
                 layer.attrib[INKSCAPE_LABEL] = layer.attrib[INKSCAPE_LABEL].replace("GlyphLayer-", "", 1)
-                glyph_name = layer.attrib[INKSCAPE_LABEL]
+                glyph_name = normalize('NFKC', layer.attrib[INKSCAPE_LABEL])
                 try:
                     self.glyphs[glyph_name] = Glyph(layer)
                 except (AttributeError, ValueError):
