@@ -531,6 +531,8 @@ class SewStackPanel(wx.Panel):
 
 
 class SewStackEditor(InkstitchExtension):
+    DEVELOPMENT_ONLY = True
+
     def __init__(self, *args, **kwargs):
         self.cancelled = False
         InkstitchExtension.__init__(self, *args, **kwargs)
