@@ -52,8 +52,9 @@ class DrawingPanel(wx.Panel):
         self.SetDoubleBuffered(True)
 
         self.animating = False
+        self.timer = wx.Timer(self)
+        self.last_frame_start = 0
         self.target_frame_period = 1.0 / self.TARGET_FPS
-        self.last_frame_duration = 0
         self.direction = 1
         self.current_stitch = 0
         self.black_pen = wx.Pen((128, 128, 128))
@@ -72,6 +73,7 @@ class DrawingPanel(wx.Panel):
         self.Bind(wx.EVT_LEFT_DOWN, self.on_left_mouse_button_down)
         self.Bind(wx.EVT_MOUSEWHEEL, self.on_mouse_wheel)
         self.Bind(wx.EVT_SIZE, self.on_resize)
+        self.Bind(wx.EVT_TIMER, self.animate)
 
         # wait for layouts so that panel size is set
         if self.stitch_plan:
@@ -99,20 +101,30 @@ class DrawingPanel(wx.Panel):
         elif self.direction == 1 and self.current_stitch < self.num_stitches:
             self.go()
 
-    def animate(self):
+    def animate(self, event=None):
         if not self.animating:
             return
 
-        frame_time = max(self.target_frame_period, self.last_frame_duration)
+        # Each frame, we need to advance forward some number of stitches to
+        # match the speed setting.  The tricky thing is that with bigger
+        # designs, it may take a long time to render a frame.  That might
+        # mean that we'll fall behind.  Even if we set our Timer to 30 FPS,
+        # we may only actually manage to render 20 FPS or fewer, and the
+        # duration of each frame may vary.
+        #
+        # To deal with that, we'll figure out how many stitches to advance
+        # based on how long it took to render the last frame.  We'll always
+        # be behind by one frame, but it should work out fine.
 
-        # No sense in rendering more frames per second than our desired stitches
-        # per second.
-        frame_time = max(frame_time, 1.0 / self.speed)
+        now = time.time()
+        if self.last_frame_start:
+            frame_time = now - self.last_frame_start
+        else:
+            frame_time = self.target_frame_period
+        self.last_frame_start = now
 
-        stitch_increment = int(self.speed * frame_time)
-
+        stitch_increment = self.speed * frame_time
         self.set_current_stitch(self.current_stitch + self.direction * stitch_increment)
-        wx.CallLater(int(1000 * frame_time), self.animate)
 
     def OnPaint(self, e):
         dc = wx.PaintDC(self)
@@ -167,7 +179,6 @@ class DrawingPanel(wx.Panel):
         stitch = 0
         last_stitch = None
 
-        start = time.time()
         for pen, stitches, jumps in zip(self.pens, self.stitch_blocks, self.jumps):
             canvas.SetPen(pen)
             if stitch + len(stitches) < self.current_stitch:
@@ -177,13 +188,12 @@ class DrawingPanel(wx.Panel):
                     self.draw_needle_penetration_points(canvas, pen, stitches)
                 last_stitch = stitches[-1]
             else:
-                stitches = stitches[:self.current_stitch - stitch]
+                stitches = stitches[:int(self.current_stitch) - stitch]
                 if len(stitches) > 1:
                     self.draw_stitch_lines(canvas, pen, stitches, jumps)
                     self.draw_needle_penetration_points(canvas, pen, stitches)
                 last_stitch = stitches[-1]
                 break
-        self.last_frame_duration = time.time() - start
 
         if last_stitch:
             self.draw_crosshair(last_stitch[0], last_stitch[1], canvas, transform)
@@ -260,7 +270,6 @@ class DrawingPanel(wx.Panel):
     def load(self, stitch_plan):
         self.current_stitch = 1
         self.direction = 1
-        self.last_frame_duration = 0
         self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
         self.width = self.maxx - self.minx
         self.height = self.maxy - self.miny
@@ -326,6 +335,7 @@ class DrawingPanel(wx.Panel):
 
     def stop(self):
         self.animating = False
+        self.timer.Stop()
         self.control_panel.on_stop()
 
     def go(self):
@@ -335,6 +345,8 @@ class DrawingPanel(wx.Panel):
         if not self.animating:
             try:
                 self.animating = True
+                self.last_frame_start = 0
+                self.timer.Start(int(self.target_frame_period * 1000))
                 self.animate()
                 self.control_panel.on_start()
             except RuntimeError:
@@ -412,8 +424,8 @@ class DrawingPanel(wx.Panel):
     def set_current_stitch(self, stitch):
         self.current_stitch = stitch
         self.clamp_current_stitch()
-        command = self.commands[self.current_stitch]
-        self.control_panel.on_current_stitch(self.current_stitch, command)
+        command = self.commands[int(self.current_stitch)]
+        self.control_panel.on_current_stitch(int(self.current_stitch), command)
         statusbar = self.GetTopLevelParent().statusbar
         statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command], 2)
         self.stop_if_at_end()

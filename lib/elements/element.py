@@ -2,6 +2,7 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+import json
 import sys
 from contextlib import contextmanager
 from copy import deepcopy
@@ -25,7 +26,7 @@ from ..stitch_plan.lock_stitch import (LOCK_DEFAULTS, AbsoluteLock, CustomLock,
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
-from ..utils import Point, cache
+from ..utils import DotDict, Point, cache
 from ..utils.cache import (CacheKeyGenerator, get_stitch_plan_cache,
                            is_cache_disabled)
 
@@ -158,6 +159,20 @@ class EmbroideryElement(object):
         except (TypeError, ValueError):
             return [int(default)]
         return params
+
+    def get_json_param(self, param, default=None):
+        json_value = self.get_param(param, None)
+        try:
+            return json.loads(json_value, object_hook=DotDict)
+        except (json.JSONDecodeError, TypeError):
+            if default is None:
+                return DotDict()
+            else:
+                return DotDict(default)
+
+    def set_json_param(self, param, value):
+        json_value = json.dumps(value)
+        self.set_param(param, json_value)
 
     def set_param(self, name, value):
         # Sets a param on the node backing this element. Used by params dialog.

@@ -208,7 +208,11 @@ class ControlPanel(wx.Panel):
             self.set_speed(global_settings['simulator_speed'])
             return
         if self.target_duration:
-            self.set_speed(int(self.num_stitches / float(self.target_duration)))
+            stitches_per_second = round(self.num_stitches / float(self.target_duration))
+            if stitches_per_second < 10:
+                # otherwise it just looks weirdly slow
+                stitches_per_second = 10
+            self.set_speed(stitches_per_second)
         else:
             self.set_speed(self.target_stitches_per_second)
 

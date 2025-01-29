@@ -27,7 +27,9 @@ DEFAULT_SETTINGS = {
     "color_change_button_status": False,
     "toggle_page_button_status": True,
     # apply palette
-    "last_applied_palette": ""
+    "last_applied_palette": "",
+    # sew stack editor
+    "stitch_layer_editor_sash_position": -200,
 }
 
 
