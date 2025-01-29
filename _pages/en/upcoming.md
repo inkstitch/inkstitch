@@ -93,12 +93,6 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 [Read more](/docs/font-tools/#set-color-index)
 
-### Sew Stack
-
-The Sew Stack is the next-generation system to tell Ink/Stitch how to stitch an object.  The Sew Stack will ultimately replace Params and contain its functionality.
-
-For now, Sew Stack system is currently under development and is available as a preview feature with limited functionality.
-
 ## Extension Updates
 
 ### General
