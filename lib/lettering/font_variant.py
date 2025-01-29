@@ -141,6 +141,12 @@ class FontVariant(object):
 
     def get_glyph(self, character, word, character_position):
         glyph_selection = self.glyphs_start_with(character)
+
+        # these arabic characters only exist in the form isol or fina.
+        # Following glyphs will be in isol or init form.
+        if character_position != 'isol' and character in ['ا','د','ذ','ر','ز','و'] or (character == 'ل' and len(word) > 1 and word[1] == 'ا'):
+            character_position = 'fina'
+
         for glyph in glyph_selection:
             glyph_name = glyph.split('.')
             if character_position is not None and len(glyph_name) == 2 and glyph_name[1] in ['isol', 'init', 'medi', 'fina']:
