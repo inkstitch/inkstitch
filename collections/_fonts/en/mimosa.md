@@ -26,7 +26,7 @@ data_title:
      alt="Mimosa Large" height="64">
 ## Glyphs
 
-These fonts contain  {{ font1.glyphs.size }} glyphes:
+These fonts contain  {{ font1.glyphs.size }} glyphs:
 
 ```
 {{ font1.glyphs | sort | join: ' ' }}
@@ -52,6 +52,8 @@ up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.
 
 
 {%include folder-galleries path="fonts/mimosa/" %}
+
+## License
 
 [Download Mimosa Medium license](https://github.com/inkstitch/inkstitch/tree/main/fonts/mimosa_medium/LICENSE)
 
