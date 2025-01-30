@@ -23,14 +23,15 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-## Special features
-Each glyph contains the outline of the original letter, in the form of a hidden black path. These paths are not intended to be embroidered as is, but to help anyone who wants to modify this font, for example to create embossing. They can be ignored without worry.
 
 ## Maße
 
 Bei einer Skalierung von 100 % ist diese Schrift {{ font.size }} mm groß.
 
 Sie kann bis auf {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm) herunterskaliert und bis zu {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm) hochskaliert  werden.
+
+## Special features
+Each glyph contains the outline of the original letter, in the form of a hidden black path. These paths are not intended to be embroidered as is, but to help anyone who wants to modify this font, for example to create embossing. They can be ignored without worry.
 
 ## Impressionen
 {% include folder-galleries path="fonts/ambigue/" %}
