@@ -15,6 +15,8 @@ data_title:
 {%- assign font1 = site.data.fonts.mimosa_medium.font -%}
 {%- assign font2 = site.data.fonts.mimosa_large.font -%}
 
+{% include upcoming_release.html %}
+
 <img 
      src="/assets/images/fonts/mimosa_medium.png"
      alt="Mimosa Medium" height="32">
@@ -43,7 +45,7 @@ Elle peut être redimensionnée  de {{ font1.min_scale | times: 100 | floor }}% 
 A une échelle de  100% cette fonte a une hauteur approximative de  {{ font2.size }} mm. 
 
 Elle peut être redimensionnée  de {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
-à {{ font2.max_scale | times: 100 | floor }}% ({{ fon2t.size | times: font2.max_scale }} mm).
+à {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm).
 
 
 ## Dans la vraie vie
