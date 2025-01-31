@@ -612,3 +612,5 @@ jobs:
             artifacts/*.tar.xz
             artifacts/*.sh
             artifacts/*.zip
+            signed-artifacts/*.exe
+            signed-artifacts/*.zip
