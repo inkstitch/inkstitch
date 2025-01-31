@@ -304,15 +304,49 @@ jobs:
           make dist
         env:
           BUILD: windows
+      - name: upload-unsigned-exe
+        id: upload-unsigned-exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: inkstitch-windows32
+          path: |
+            dist/inkstitch/bin/inkstitch.exe
+      - name: Sign-exe
+        id: Sign-exe
+        uses: signpath/github-action-submit-signing-request@v1.1
+        with:
+          api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
+          organization-id: '6b880880-2af8-4cf3-a8e7-1b4977c593df'
+          project-slug: 'inkstitch'
+          signing-policy-slug: 'test-signing'
+          github-artifact-id: '${{ steps.upload-unsigned-exe.outputs.artifact-id }}'
+          wait-for-completion: true
+          output-artifact-directory: 'signed-artifacts'
+      - name: Copy signed exe to dist
+        run: |
+            mv  signed-artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
       - shell: bash
         run: |
           bash bin/build-windows-installer
         env:
           BUILD: windows
-      - uses: actions/upload-artifact@v4
+      - name: upload-unsigned-installer
+        id: upload-unsigned-installer
+        uses: actions/upload-artifact@v4
         with:
           name: inkstitch-windows32
           path: artifacts
+      - name: Sign-installer
+        id: Sign-installer
+        uses: signpath/github-action-submit-signing-request@v1.1
+        with:
+          api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
+          organization-id: '6b880880-2af8-4cf3-a8e7-1b4977c593df'
+          project-slug: 'inkstitch'
+          signing-policy-slug: 'test-signing'
+          github-artifact-id: '${{ steps.upload-unsigned-installer.outputs.artifact-id }}'
+          wait-for-completion: true
+          output-artifact-directory: 'signed-artifacts'
   windows64:
     runs-on: windows-2019
     steps:
