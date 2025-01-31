@@ -349,6 +349,10 @@ jobs:
           github-artifact-id: '${{ steps.upload-unsigned-installer.outputs.artifact-id }}'
           wait-for-completion: true
           output-artifact-directory: 'signed-artifacts'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inkstitch-windows32
+          path: signed-artifacts
   windows64:
     runs-on: windows-2019
     steps:
