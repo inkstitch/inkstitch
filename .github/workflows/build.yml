@@ -321,11 +321,11 @@ jobs:
           signing-policy-slug: 'test-signing'
           github-artifact-id: '${{ steps.upload-unsigned-exe.outputs.artifact-id }}'
           wait-for-completion: true
-          output-artifact-directory: 'signed-artifacts'
+          output-artifact-directory: 'rtifacts'
       - name: Copy signed exe to dist
         shell: bash
         run: |
-            mv  -f signed-artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
+            mv  -f artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
       - shell: bash
         run: |
           bash bin/build-windows-installer
