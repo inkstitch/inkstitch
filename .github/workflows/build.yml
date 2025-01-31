@@ -323,8 +323,9 @@ jobs:
           wait-for-completion: true
           output-artifact-directory: 'signed-artifacts'
       - name: Copy signed exe to dist
+        shell: bash
         run: |
-            mv  signed-artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
+            mv  -f signed-artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
       - shell: bash
         run: |
           bash bin/build-windows-installer
