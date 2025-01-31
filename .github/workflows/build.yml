@@ -572,7 +572,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: 'inkstitch-windows32'
-          path: 'artifacts/'
+          path: 'signed-artifacts/'
         if: always()
       - name: download windows64
         uses: actions/download-artifact@v4
