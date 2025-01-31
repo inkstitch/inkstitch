@@ -345,7 +345,7 @@ jobs:
           organization-id: '6b880880-2af8-4cf3-a8e7-1b4977c593df'
           project-slug: 'inkstitch'
           signing-policy-slug: 'inkstitch-installer-testing'
-          artifact-configuration-slug: 'inkstitch-installer-testing'
+          artifact-configuration-slug: 'Windows 64bit exe'
           github-artifact-id: '${{ steps.upload-unsigned-installer.outputs.artifact-id }}'
           wait-for-completion: true
           output-artifact-directory: 'signed-artifacts'
