@@ -39,7 +39,7 @@ user-level:
 
 ## Iron-on the applique
 
-* [Download SVG (embroidery)](/assets/images/tutorials/inkscape-splash-1.4/inkscape-logo.svg){: download="inkscape-14-embroider.svg" } -
+* [Download SVG (embroidery)](/assets/images/tutorials/inkscape-splash-1.4/inkscape_logo.svg){: download="inkscape-14-embroider.svg" } -
   *Original design by Inkonic*
 * Convert to your specific embroidery file format and load it to your machine
 * Stitch the first color. This is the placement line for your applique

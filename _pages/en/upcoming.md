@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-01-11
+last_modified_at: 2025-02-01
 sidebar:
   nav: pages
 toc: true
@@ -10,6 +10,9 @@ toc: true
 
 ### New Fonts
 
+* [Ambigüe](/fonts/ambigue/)
+
+  ![Ambigüe](/assets/images/fonts/ambigue.png)
 * [Barstitch bold](/fonts/barstitch_bold/)
 
   ![Barstitch bold](/assets/images/fonts/barstitch_bold.png)
@@ -19,12 +22,20 @@ toc: true
 * [Barstitch textured](/fonts/barstitch_bold/)
 
   ![Barstitch textured](/assets/images/fonts/barstitch_textured.png)
+* [Califragilistic tamed](/fonts/califragilistic/)
+
+  ![Califragilistic](/assets/images/fonts/califragilistic.png)
 * [Cogs_KOR](/fonts/cogs_KOR)
 
   ![Cogs_KOR](/assets/images/fonts/cogs_KOR.png)
 * [Magnolia tamed](/fonts/magnolia-script/)
 
   ![Magnolia tamed preview](/assets/images/fonts/magnolia_tamed.png)
+* [Mimosa](/fonts/mimosa/)
+
+  ![Mimosa medium](/assets/images/fonts/mimosa_medium.png)
+
+  ![Mimosa large](/assets/images/fonts/mimosa_large.png)
 * [Pixel 10](/fonts/pixel10/)
 
   ![Pixel 10](/assets/images/fonts/pixel_10.png)
@@ -133,6 +144,7 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 `Lettering`
 
+* Add right to left font capabilities to support more languages [#3432](https://github.com/inkstitch/inkstitch/pull/3358)
 * Lettering simulator: show accurate start and end points [#3358](https://github.com/inkstitch/inkstitch/pull/3358)
 * Uniformed size info (% and mm) [#3346](https://github.com/inkstitch/inkstitch/pull/3346)
 * Add color sort option for multicolor fonts [#3242](https://github.com/inkstitch/inkstitch/pull/3242), [#3381](https://github.com/inkstitch/inkstitch/pull/3381)
@@ -177,10 +189,16 @@ Glyphlist update has been part of the font management and was replaced by the mu
 ## Stitch type Updates
 
 * Automated end point calculation for fill and satin (ends at nearest point) [#3370](https://github.com/inkstitch/inkstitch/pull/3370)
+* Improve handling of symbols [#3440](https://github.com/inkstitch/inkstitch/pull/3440)
+* Make effect clips available for embroidery (couldn't be used before) [#3364](https://github.com/inkstitch/inkstitch/pull/3364)
 
 ### Clones
 
 * Clones now also clone commands attached to element and its children. (#3032, #3121) [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
+
+### Contour Fill
+
+* Enable expand option [#3462](https://github.com/inkstitch/inkstitch/pull/3462)
 
 ### Linear gradient fill
 
@@ -192,6 +210,8 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ### Ripple Stitch
 
+* Improve satin guided ripple stitch and introduce use of anchor line to align ripple patterns [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
+* Add stitch grid first option [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
 * Manual ripple pattern [#3256](https://github.com/inkstitch/inkstitch/pull/3256)
 
 ### Satin Columns
@@ -205,10 +225,12 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ## Palettes
 
+* Update InkStitch Madeira Rayon.gpl [#3444](https://github.com/inkstitch/inkstitch/pull/3444)
 * Isacord polyester: added 0713 Lemon color [#3225](https://github.com/inkstitch/inkstitch/pull/3225)
 
 ## Developer and Build Stuff
 
+* Update translations workflow [#3435](https://github.com/inkstitch/inkstitch/pull/3435)
 * Add build for ubuntu 24.04 [#3299](https://github.com/inkstitch/inkstitch/pull/3299)[#3330](https://github.com/inkstitch/inkstitch/pull/3330)
 * Add lmde6 32bit build [#3298](https://github.com/inkstitch/inkstitch/pull/3298)
 * Update macos cloud build [#3291](https://github.com/inkstitch/inkstitch/pull/3291)
@@ -222,13 +244,15 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ## Bug Fixes
 
+* Auto-run: try harder to avoid networkx issues [#3457](https://github.com/inkstitch/inkstitch/pull/3457)
+* Lettering: ignore auto-satin setting in the json file when there is no satin [#3434](https://github.com/inkstitch/inkstitch/pull/3434)
+* Fix issue in preferences when value is 0.0 [#3430](https://github.com/inkstitch/inkstitch/pull/3430)
 * Exclude invisible from node_to_elements directly [#3424](https://github.com/inkstitch/inkstitch/pull/3424)
 * Cache: reset on operational error [#3421](https://github.com/inkstitch/inkstitch/pull/3421)
 * Update README [#3405](https://github.com/inkstitch/inkstitch/pull/3405)
 * Fix an other FloatingPointError [#3404](https://github.com/inkstitch/inkstitch/pull/3404)
 * Minimize multi shape tartan jumps [#3386](https://github.com/inkstitch/inkstitch/pull/3386)
 * Lettering: prevent duplicated output [#3365](https://github.com/inkstitch/inkstitch/pull/3365)
-* Fix path effect clips (couldn't be used before) [#3364](https://github.com/inkstitch/inkstitch/pull/3364)
 * Cut satin column: add more rungs when rails are intersecting [#3344](https://github.com/inkstitch/inkstitch/pull/3344)
 * Fix jump to stroke transform glitch [#3306](https://github.com/inkstitch/inkstitch/pull/3306)
 * Make remove commands more robust for broken commands with active selection [#3288](https://github.com/inkstitch/inkstitch/pull/3288)

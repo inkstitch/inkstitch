@@ -38,7 +38,7 @@ user-level:
 
 ## Applikationsstoff aufbringen
 
-* [Download SVG (Stickmuster)](/assets/images/tutorials/inkscape-splash-1.4/inkscape-logo.svg){: download="inkscape-14-embroider.svg" } -
+* [Download SVG (Stickmuster)](/assets/images/tutorials/inkscape-splash-1.4/inkscape_logo.svg){: download="inkscape-14-embroider.svg" } -
   *Originaldesign von Inkonic*
 * Konvertiere die Datei in das richtige Format für deine Stickmaschine und lese es dort ein
 * Sticke die erste Farbe. Dies ist die Positionslinie für den Applikationsstoff
