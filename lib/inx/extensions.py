@@ -3,6 +3,8 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+import os
+
 import pyembroidery
 
 from ..commands import (COMMANDS, GLOBAL_COMMANDS, LAYER_COMMANDS,
@@ -45,6 +47,9 @@ def generate_extension_inx_files(alter_data):
 
     for extension in extensions:
         if extension is Input or extension is Output:
+            continue
+
+        if extension.DEVELOPMENT_ONLY and 'BUILD' in os.environ:
             continue
 
         name = extension.name()

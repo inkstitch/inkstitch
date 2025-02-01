@@ -18,6 +18,10 @@ from ..update import update_inkstitch_document
 class InkstitchExtension(inkex.EffectExtension):
     """Base class for Inkstitch extensions.  Not intended for direct use."""
 
+    # Set to True to hide this extension from release builds of Ink/Stitch.  It will
+    # only be available in development installations.
+    DEVELOPMENT_ONLY = False
+
     def load(self, *args, **kwargs):
         document = super().load(*args, **kwargs)
         update_inkstitch_document(document)
