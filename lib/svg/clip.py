@@ -11,6 +11,14 @@ from ..utils import ensure_multi_polygon
 from .tags import SVG_GROUP_TAG, SVG_PATH_TAG
 
 
+def get_clips(node):
+    clips = []
+    for element in node.iterancestors(SVG_GROUP_TAG):
+        if element.clip is not None:
+            clips.append(element.clip)
+    return clips
+
+
 def get_clip_path(node):
     # get clip and apply node transform
     clip = _clip_paths(node)
