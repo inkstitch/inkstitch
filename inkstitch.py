@@ -8,16 +8,11 @@ import sys
 from pathlib import Path  # to work with paths as objects
 from argparse import ArgumentParser  # to parse arguments and remove --extension
 
-if sys.version_info >= (3, 11):
-    import tomllib      # built-in in Python 3.11+
-else:
-    import tomli as tomllib
-
 import logging
 
 import lib.debug.utils as debug_utils
 import lib.debug.logging as debug_logging
-from lib.debug.utils import safe_get    # mimic get method of dict with default value
+from lib.debug.utils import get_ini, safe_get    # mimic get method of dict with default value
 
 # --------------------------------------------------------------------------------------------
 
@@ -25,19 +20,7 @@ SCRIPTDIR = Path(__file__).parent.absolute()
 
 logger = logging.getLogger("inkstitch")   # create module logger with name 'inkstitch'
 
-# TODO --- temporary --- catch old DEBUG.ini file and inform user to reformat it to DEBUG.toml
-old_debug_ini = SCRIPTDIR / "DEBUG.ini"
-if old_debug_ini.exists():
-    print("ERROR: old DEBUG.ini exists, please reformat it to DEBUG.toml and remove DEBUG.ini file", file=sys.stderr)
-    exit(1)
-# --- end of temporary ---
-
-debug_toml = SCRIPTDIR / "DEBUG.toml"
-if debug_toml.exists():
-    with debug_toml.open("rb") as f:
-        ini = tomllib.load(f)  # read DEBUG.toml file if exists, otherwise use default values in ini object
-else:
-    ini = {}
+ini = get_ini()
 # --------------------------------------------------------------------------------------------
 
 running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle

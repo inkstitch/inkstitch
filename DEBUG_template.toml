@@ -37,6 +37,9 @@
 ### base name for bash script, default: "debug_inkstitch"
 # bash_file_base = "debug_inkstitch"
 
+### enable sew_stack elements, default: false
+# enable_sew_stack = true
+
 [PROFILE]
 ### select one active profiler_type, default: "none"
 # profiler_type = "cprofile"

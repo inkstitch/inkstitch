@@ -3,15 +3,18 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from lxml.etree import Comment
 from typing import List, Optional
+
 from inkex import BaseElement
+from lxml.etree import Comment
 
 from ..commands import is_command, layer_commands
+from ..debug.utils import get_ini, safe_get
 from ..marker import has_marker
 from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
                         NOT_EMBROIDERABLE_TAGS, SVG_CLIPPATH_TAG, SVG_DEFS_TAG,
-                        SVG_GROUP_TAG, SVG_MASK_TAG, SVG_IMAGE_TAG, SVG_TEXT_TAG)
+                        SVG_GROUP_TAG, SVG_IMAGE_TAG, SVG_MASK_TAG,
+                        SVG_TEXT_TAG)
 from .clone import Clone, is_clone
 from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
@@ -54,7 +57,8 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
             if element.get_boolean_param("stroke_first", False):
                 elements.reverse()
 
-        elements.append(sew_stack)
+        if safe_get(get_ini(), "DEBUG", "sew_stack_enable", default=False):
+            elements.append(sew_stack)
 
         return elements
 
