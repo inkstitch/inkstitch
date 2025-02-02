@@ -1,10 +1,12 @@
 ---
 title: "Barstitch"
 permalink: /fr/fonts/barstitch_bold/
-last_modified_at: 2025-01-07
+last_modified_at: 2025-02-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/barstitch_bold.png
+    height: 12
+  - url: /assets/images/fonts/barstitch_regular.png
     height: 12
   - url: /assets/images/fonts/barstitch_textured.png
     height: 20
@@ -19,7 +21,6 @@ data_title:
 {%- assign font1 = site.data.fonts.barstitch_bold.font -%}
 {%- assign font2 = site.data.fonts.barstitch_textured.font -%}
 {%- assign font3 = site.data.fonts.barstitch_mandala.font -%}
-{%- assign font4 = site.data.fonts.barstitch_regulat.font -%}
 {% include upcoming_release.html %}
 
 <img 
