@@ -9,13 +9,13 @@ from inkex import BaseElement
 from lxml.etree import Comment
 
 from ..commands import is_command, layer_commands
-from ..utils.paths import get_ini
 from ..debug.utils import safe_get
 from ..marker import has_marker
 from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
                         NOT_EMBROIDERABLE_TAGS, SVG_CLIPPATH_TAG, SVG_DEFS_TAG,
                         SVG_GROUP_TAG, SVG_IMAGE_TAG, SVG_MASK_TAG,
                         SVG_TEXT_TAG)
+from ..utils.paths import get_ini
 from .clone import Clone, is_clone
 from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject

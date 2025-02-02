@@ -1,7 +1,9 @@
-from lib.elements import utils, FillStitch
-from inkex import Rectangle, Group, Style
+from inkex import Group, Rectangle, Style
 from inkex.tester import TestCase
 from inkex.tester.svg import svg
+
+from lib.elements import FillStitch, utils
+
 from .utils import element_count
 
 

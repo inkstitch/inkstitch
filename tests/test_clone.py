@@ -1,15 +1,17 @@
-from lib.elements import Clone, EmbroideryElement, FillStitch
-from lib.commands import add_commands
-from lib.svg.tags import INKSTITCH_ATTRIBS, SVG_RECT_TAG, INKSCAPE_LABEL
-from lib.utils import cache_module
-from inkex import SvgDocumentElement, Rectangle, Circle, Group, Use, Transform, TextElement
-from inkex.tester import TestCase
-from inkex.tester.svg import svg
-from .utils import element_count
-
+from math import sqrt
 from typing import Optional
 
-from math import sqrt
+from inkex import (Circle, Group, Rectangle, SvgDocumentElement, TextElement,
+                   Transform, Use)
+from inkex.tester import TestCase
+from inkex.tester.svg import svg
+
+from lib.commands import add_commands
+from lib.elements import Clone, EmbroideryElement, FillStitch
+from lib.svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_RECT_TAG
+from lib.utils import cache_module
+
+from .utils import element_count
 
 
 def element_fill_angle(element: EmbroideryElement) -> Optional[float]:

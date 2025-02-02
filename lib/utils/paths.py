@@ -3,16 +3,15 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import sys
 import os
+import sys
 from os.path import dirname, realpath
+from pathlib import Path
 
 import appdirs
 
-from pathlib import Path
-
 if sys.version_info >= (3, 11):
-    import tomllib      # built-in in Python 3.11+
+    import tomllib  # built-in in Python 3.11+
 else:
     import tomli as tomllib
 

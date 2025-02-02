@@ -1,5 +1,5 @@
-from lib.utils.paths import get_ini
 from lib.debug.utils import safe_get
+from lib.utils.paths import get_ini
 
 
 def element_count():
