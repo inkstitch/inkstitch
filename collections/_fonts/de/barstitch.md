@@ -1,10 +1,12 @@
 ---
 title: "Barstitch"
 permalink: /de/fonts/barstitch_bold/
-last_modified_at: 2025-01-07
+last_modified_at: 2025-02-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/barstitch_bold.png
+    height: 12
+  - url: /assets/images/fonts/barstitch_regular.png
     height: 12
   - url: /assets/images/fonts/barstitch_textured.png
     height: 20
@@ -12,16 +14,22 @@ preview_image:
     height: 45
 data_title:
   - barstitch_bold
+  - barstitch_regular
   - barstitch_textured
   - barstitch_mandala
 ---
 {%- assign font1 = site.data.fonts.barstitch_bold.font -%}
 {%- assign font2 = site.data.fonts.barstitch_textured.font -%}
 {%- assign font3 = site.data.fonts.barstitch_mandala.font -%}
+
 {% include upcoming_release.html %}
 
 <img 
      src="/assets/images/fonts/barstitch_bold.png"
+     alt="Barstitch Bold" height="23">
+     
+<img 
+     src="/assets/images/fonts/barstitch_regular.png"
      alt="Barstitch Bold" height="23">
 
 <img 
@@ -42,7 +50,7 @@ Diese Schriften enthalten {{ font1.glyphs.size }} Schriftzeichen:
 {: .font-glyphs }
 
 ## Maße
-### Barstitch bold
+### Barstitch bold und Barstitch regular
 
 Bei einer Skalierung von 100 % ist diese Schrift {{ font1.size }} mm groß.
 
