@@ -12,30 +12,7 @@ import sys
 from pathlib import Path  # to work with paths as objects
 import logging
 
-if sys.version_info >= (3, 11):
-    import tomllib      # built-in in Python 3.11+
-else:
-    import tomli as tomllib
-from ..utils import get_bundled_dir
-
 logger = logging.getLogger("inkstitch")
-
-
-def get_ini():
-    # TODO --- temporary --- catch old DEBUG.ini file and inform user to reformat it to DEBUG.toml
-    old_debug_ini = Path(get_bundled_dir("DEBUG.ini"))
-    if old_debug_ini.exists():
-        print("ERROR: old DEBUG.ini exists, please reformat it to DEBUG.toml and remove DEBUG.ini file", file=sys.stderr)
-        exit(1)
-    # --- end of temporary ---
-
-    debug_toml = Path(get_bundled_dir("DEBUG.toml"))
-    if debug_toml.exists():
-        with debug_toml.open("rb") as f:
-            ini = tomllib.load(f)  # read DEBUG.toml file if exists, otherwise use default values in ini object
-    else:
-        ini = {}
-    return ini
 
 
 # safe_get - get value from nested dictionary, return default if key does not exist

@@ -9,7 +9,8 @@ from inkex import BaseElement
 from lxml.etree import Comment
 
 from ..commands import is_command, layer_commands
-from ..debug.utils import get_ini, safe_get
+from ..utils.paths import get_ini
+from ..debug.utils import safe_get
 from ..marker import has_marker
 from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
                         NOT_EMBROIDERABLE_TAGS, SVG_CLIPPATH_TAG, SVG_DEFS_TAG,
