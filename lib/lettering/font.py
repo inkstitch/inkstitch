@@ -360,15 +360,12 @@ class Font(object):
 
     def _get_word_glyphs(self, glyph_set, word):
         glyphs = []
-        word_glyph_count = len(word)
         skip = []
-        previous_character = None
+        previous_is_binding = True
+
         for i, character in enumerate(word):
-            # print("character: ", character, file=sys.stderr)
             if i in skip:
                 continue
-            # define character position within the word
-            character_position = self._get_character_position(word_glyph_count, i, previous_character)
 
             # forced letter case
             if self.letter_case == "upper":
@@ -376,8 +373,9 @@ class Font(object):
             elif self.letter_case == "lower":
                 character = character.lower()
 
-            rest = word[i:]
-            glyph, glyph_len = glyph_set.get_glyph(character, rest, character_position)
+            glyph, glyph_len, binding = glyph_set.get_next_glyph(word, i, previous_is_binding)
+            previous_is_binding = binding
+
             skip = list(range(i, i+glyph_len))
 
             if glyph is None and self.default_glyph == " ":
@@ -387,28 +385,8 @@ class Font(object):
                     glyphs.append(glyph_set[self.default_glyph])
                 if glyph is not None:
                     glyphs.append(glyph)
-            previous_character = character
-            if glyph_len > 1:
-                previous_character = glyph.name.split('.')[0]
 
         return glyphs
-
-    def _get_character_position(self, word_glyph_count, i, previous_character):
-        character_position = 'medi'
-
-        # arabic has special glyphs which will mark the following letter as init or isol
-        if previous_character in ['ا','د','ذ','ر','ز','و','ﻠﺎ','لا']:
-            character_position = 'init'
-            if i == word_glyph_count - 1:
-                character_position = 'isol'
-
-        elif word_glyph_count == 1:
-            character_position = 'isol'
-        elif i == 0:
-            character_position = 'init'
-        elif i == word_glyph_count - 1:
-            character_position = 'fina'
-        return character_position
 
     def _render_glyph(self, destination_group, glyph, position, character, last_character):
         """Render a single glyph.
