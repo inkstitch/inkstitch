@@ -23,6 +23,7 @@ class MarkerWarning(ObjectTypeWarning):
 
 
 class MarkerObject(EmbroideryElement):
+    name = "Marker"
 
     def validation_warnings(self):
         repr_point = next(inkex.Path(self.parse_path()).end_points)
@@ -30,3 +31,6 @@ class MarkerObject(EmbroideryElement):
 
     def to_stitch_groups(self, last_stitch_group, next_element=None):
         return []
+
+    def first_stitch(self):
+        return None

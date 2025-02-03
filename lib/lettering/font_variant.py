@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import os
+from collections import defaultdict
 
 import inkex
 
@@ -99,21 +100,33 @@ class FontVariant(object):
         group.attrib.pop('display', None)
 
     def _apply_transforms(self, svg):
+        self.clip_transforms = defaultdict(list)
         # apply transforms to paths and use tags
-        for element in svg.iterdescendants((SVG_PATH_TAG, SVG_USE_TAG)):
+        for element in svg.iterdescendants((SVG_PATH_TAG, SVG_USE_TAG, SVG_GROUP_TAG)):
             transform = element.composed_transform()
+
+            if element.clip is not None:
+                self.clip_transforms[element.clip] = element.composed_transform()
+            if element.tag == SVG_GROUP_TAG:
+                continue
             if element.tag == SVG_PATH_TAG:
                 path = element.path.transform(transform)
                 element.set_path(path)
                 element.attrib.pop("transform", None)
-
-            if element.tag == SVG_USE_TAG:
+            elif element.tag == SVG_USE_TAG:
                 oldx = element.get('x', 0)
                 oldy = element.get('y', 0)
                 newx, newy = transform.apply_to_point((oldx, oldy))
                 element.set('x', newx)
                 element.set('y', newy)
                 element.attrib.pop("transform", None)
+
+        for clip, transform in self.clip_transforms.items():
+            for element in clip.iterdescendants():
+                if element.tag == SVG_PATH_TAG:
+                    path = element.path.transform(transform)
+                    element.set_path(path)
+                    element.attrib.pop("transform", None)
 
         # remove transforms after they have been applied
         for group in svg.iterdescendants(SVG_GROUP_TAG):
