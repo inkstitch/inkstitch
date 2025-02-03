@@ -103,19 +103,17 @@ class FontVariant(object):
         self.clip_transforms = defaultdict(list)
         # apply transforms to paths and use tags
         for element in svg.iterdescendants((SVG_PATH_TAG, SVG_USE_TAG, SVG_GROUP_TAG)):
+            transform = element.composed_transform()
+
             if element.clip is not None:
                 self.clip_transforms[element.clip] = element.composed_transform()
             if element.tag == SVG_GROUP_TAG:
                 continue
-            if any([ancestor.TAG == 'clipPath' for ancestor in element.ancestors()]):
-                continue
-            transform = element.composed_transform()
             if element.tag == SVG_PATH_TAG:
                 path = element.path.transform(transform)
                 element.set_path(path)
                 element.attrib.pop("transform", None)
-
-            if element.tag == SVG_USE_TAG:
+            elif element.tag == SVG_USE_TAG:
                 oldx = element.get('x', 0)
                 oldy = element.get('y', 0)
                 newx, newy = transform.apply_to_point((oldx, oldy))
@@ -123,13 +121,16 @@ class FontVariant(object):
                 element.set('y', newy)
                 element.attrib.pop("transform", None)
 
+        for clip, transform in self.clip_transforms.items():
+            for element in clip.iterdescendants():
+                if element.tag == SVG_PATH_TAG:
+                    path = element.path.transform(transform)
+                    element.set_path(path)
+                    element.attrib.pop("transform", None)
+
         # remove transforms after they have been applied
         for group in svg.iterdescendants(SVG_GROUP_TAG):
             group.attrib.pop('transform', None)
-
-        for clip, transform in self.clip_transforms.items():
-            for element in clip.iterdescendants():
-                element.transform @= transform
 
         return svg
 
