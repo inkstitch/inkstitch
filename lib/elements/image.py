@@ -20,6 +20,7 @@ class ImageTypeWarning(ObjectTypeWarning):
 
 
 class ImageObject(EmbroideryElement):
+    name = "Image"
 
     def center(self):
         transform = get_node_transform(self.node.getparent())
@@ -31,3 +32,6 @@ class ImageObject(EmbroideryElement):
 
     def to_stitch_groups(self, last_stitch_group):
         return []
+
+    def first_stitch(self):
+        return None

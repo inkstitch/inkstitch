@@ -1,7 +1,10 @@
-from lib.elements import utils, FillStitch
-from inkex import Rectangle, Group, Style
+from inkex import Group, Rectangle, Style
 from inkex.tester import TestCase
 from inkex.tester.svg import svg
+
+from lib.elements import FillStitch, utils
+
+from .utils import element_count
 
 
 class ElementsUtilsTest(TestCase):
@@ -28,7 +31,7 @@ class ElementsUtilsTest(TestCase):
         }))
 
         elements = utils.nodes_to_elements(utils.iterate_nodes(g))
-        self.assertEqual(len(elements), 2)
+        self.assertEqual(len(elements), element_count())
         self.assertEqual(type(elements[0]), FillStitch)
         self.assertEqual(elements[0].node, rect)
 
@@ -41,7 +44,7 @@ class ElementsUtilsTest(TestCase):
         }))
 
         elements = utils.nodes_to_elements(utils.iterate_nodes(rect))
-        self.assertEqual(len(elements), 2)
+        self.assertEqual(len(elements), element_count())
         self.assertEqual(type(elements[0]), FillStitch)
         self.assertEqual(elements[0].node, rect)
 

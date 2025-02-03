@@ -3,11 +3,17 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import sys
 import os
+import sys
 from os.path import dirname, realpath
+from pathlib import Path
 
 import appdirs
+
+if sys.version_info >= (3, 11):
+    import tomllib  # built-in in Python 3.11+
+else:
+    import tomli as tomllib
 
 
 def get_bundled_dir(name=None):
@@ -42,3 +48,13 @@ def get_user_dir(name=None):
         path = os.path.join(path, name)
 
     return path
+
+
+def get_ini():
+    debug_toml = Path(get_bundled_dir("DEBUG.toml"))
+    if debug_toml.exists():
+        with debug_toml.open("rb") as f:
+            ini = tomllib.load(f)  # read DEBUG.toml file if exists, otherwise use default values in ini object
+    else:
+        ini = {}
+    return ini

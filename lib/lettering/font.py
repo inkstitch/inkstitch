@@ -5,6 +5,7 @@
 
 import json
 import os
+from collections import defaultdict
 from copy import deepcopy
 from random import randint
 
@@ -17,12 +18,12 @@ from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
 from ..marker import MARKER, ensure_marker, has_marker, is_grouped_with_marker
 from ..stitches.auto_satin import auto_satin
+from ..svg.clip import get_clips
 from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
                         INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_GROUP_TAG,
                         SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
 from ..utils import Point
 from .font_variant import FontVariant
-from collections import defaultdict
 
 
 class FontError(InkstitchException):
@@ -598,6 +599,21 @@ class Font(object):
             if (element.TAG == 'g' and not element.get_id().startswith('command_group')
                     or element.get_id().startswith('command_connector')):
                 continue
+
+            clips = get_clips(element)
+            if len(clips) > 1:
+                # multiple clips: wrap the element into clipped groups
+                parent = element.getparent()
+                index = parent.index(element)
+                for clip in clips:
+                    new_group = inkex.Group()
+                    new_group.clip = clip
+                    parent.insert(index, new_group)
+                    new_group.append(element)
+                    element = new_group
+            elif len(clips) == 1:
+                # only one clip: we can apply the clip directly to the element
+                element.clip = clips[0]
 
             # get glyph group to calculate transform
             glyph_group = None

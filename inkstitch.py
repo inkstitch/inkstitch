@@ -86,7 +86,7 @@ if not running_as_frozen:  # debugging/profiling only in development mode
     profiler_type = debug_utils.resolve_profiler_type(ini)  # read profile type from ini file or cmd line
 
     if running_from_inkscape:
-        # process creation of the Bash script - should be done before sys.path is modified, see below in prefere_pip_inkex
+        # process creation of the Bash script - should be done before sys.path is modified, see below in prefer_pip_inkex
         if safe_get(ini, "DEBUG", "create_bash_script", default=False):  # create script only if enabled in DEBUG.toml
             debug_utils.write_offline_debug_script(SCRIPTDIR, ini)
 
@@ -97,8 +97,8 @@ if not running_as_frozen:  # debugging/profiling only in development mode
 
     # prefer pip installed inkex over inkscape bundled inkex, pip version is bundled with Inkstitch
     # - must be be done before importing inkex
-    prefere_pip_inkex = safe_get(ini, "LIBRARY", "prefer_pip_inkex", default=True)
-    if prefere_pip_inkex and 'PYTHONPATH' in os.environ:
+    prefer_pip_inkex = safe_get(ini, "LIBRARY", "prefer_pip_inkex", default=True)
+    if prefer_pip_inkex and 'PYTHONPATH' in os.environ:
         debug_utils.reorder_sys_path()
 
 # enabling of debug depends on value of debug_type in DEBUG.toml file

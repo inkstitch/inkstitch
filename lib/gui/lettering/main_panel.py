@@ -10,12 +10,12 @@ import inkex
 import wx
 import wx.adv
 
-from ...elements import nodes_to_elements
+from ...elements.utils import iterate_nodes, nodes_to_elements
 from ...i18n import _
 from ...lettering import FontError, get_font_list
 from ...lettering.categories import FONT_CATEGORIES
 from ...stitch_plan import stitch_groups_to_stitch_plan
-from ...svg.tags import INKSCAPE_LABEL, INKSTITCH_LETTERING, SVG_PATH_TAG
+from ...svg.tags import INKSCAPE_LABEL, INKSTITCH_LETTERING
 from ...utils import DotDict, cache
 from ...utils.threading import ExitThread, check_stop_flag
 from .. import PresetsPanel, PreviewRenderer, info_dialog
@@ -324,7 +324,8 @@ class LetteringPanel(wx.Panel):
 
         try:
             self.update_lettering()
-            elements = nodes_to_elements(self.group.iterdescendants(SVG_PATH_TAG))
+            nodes = iterate_nodes(self.group)
+            elements = nodes_to_elements(nodes)
 
             last_stitch_group = None
             next_elements = [None]
