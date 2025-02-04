@@ -59,10 +59,8 @@ jobs:
           # for networkx
           python -m pip install pandas
           python -m pip install pyarrow
-          
-          python -m pip install pyinstaller
 
-          sudo apt-get install gcc g++ gfortran python3-dev libopenblas-dev liblapack-dev
+          python -m pip install pyinstaller
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
@@ -111,8 +109,7 @@ jobs:
 
           # for shapely
           sudo apt install build-essential libgtk-3-dev libgeos-dev cmake
-          sudo apt install gcc g++ gfortran libopenblas-dev liblapack-dev
-  
+
           # for sigining
           sudo apt install rpm
 
@@ -132,8 +129,6 @@ jobs:
           python -m pip install pyarrow
 
           python -m pip install pyinstaller
-
-          sudo apt-get install gcc g++ gfortran python3-dev libopenblas-dev liblapack-dev
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
@@ -206,7 +201,6 @@ jobs:
 
           # for shapely
           apt-get install -y build-essential libgtk-3-dev libgeos-dev cmake
-          apt-get install -y gcc g++ gfortran libopenblas-dev liblapack-dev
 
           # for signing rpm
           apt-get install -y rpm
