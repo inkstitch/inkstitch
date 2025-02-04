@@ -4,8 +4,8 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import inkex
-import numpy as np
-from scipy.spatial import KDTree
+from shapely import STRtree
+from shapely.geometry import Point
 
 from ..commands import add_layer_commands
 from ..i18n import _
@@ -102,7 +102,7 @@ def color_block_to_density_markers(svg, groups, stitch_plan, density_options, in
         num_neighbors.append(get_stitch_density(stitch_plan, radius))
 
     red_group, yellow_group, green_group = groups
-    for red_neighbors, yellow_neighbors, coord in zip(num_neighbors[0][0], num_neighbors[1][0], num_neighbors[0][1]):
+    for red_neighbors, yellow_neighbors, point in zip(num_neighbors[0][0], num_neighbors[1][0], num_neighbors[0][1]):
         color = "green"  # green
         group = green_group
         if density_options[0]['max_neighbors'] <= red_neighbors:
@@ -114,8 +114,8 @@ def color_block_to_density_markers(svg, groups, stitch_plan, density_options, in
         density_marker = inkex.Circle(attrib={
             'id': svg.get_unique_id("density_marker"),
             'style': "fill: %s; stroke: #7e7e7e; stroke-width: 0.02%%;" % color,
-            'cx': "%s" % coord[0],
-            'cy': "%s" % coord[1],
+            'cx': str(point.coords[0][0]),
+            'cy': str(point.coords[0][1]),
             'r': str(indicator_size * 2),
             'transform': get_correction_transform(svg)
         })
@@ -126,12 +126,10 @@ def get_stitch_density(stitch_plan, radius):
     stitches = []
     for color_block in stitch_plan:
         for stitch in color_block:
-            stitches.append((stitch.x, stitch.y))
+            stitches.append(Point(stitch.x, stitch.y))
 
-    # get density per stitch
-    tree = KDTree(np.array(stitches))
-    neighbors = tree.query_ball_tree(tree, radius)
-    density = [len(i) for i in neighbors], stitches
+    points = STRtree(stitches)
+    density = [len(points.query(stitch, 'dwithin', radius)) for stitch in stitches], stitches
 
     return density
 
