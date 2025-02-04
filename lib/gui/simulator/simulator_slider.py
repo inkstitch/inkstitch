@@ -224,7 +224,7 @@ class MarkerList(list):
         if dark_theme:
             self.icon = wx.Image(os.path.join(icons_dir, f"{icon_name}_dark.png")).ConvertToBitmap()
         else:
-            self.icon = wx.Image(os.path.join(self.icons_dir, f"{icon_name}.png")).ConvertToBitmap()
+            self.icon = wx.Image(os.path.join(icons_dir, f"{icon_name}.png")).ConvertToBitmap()
         self.offset = offset
         self.enabled = False
         self.extend(stitch_numbers)
