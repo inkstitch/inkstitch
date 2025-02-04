@@ -19,7 +19,5 @@ virtualenv/bin/pip install -r requirements.txt
 virtualenv/bin/pip install pandas
 
 virtualenv/bin/pip install pyinstaller
-# scipy gives us an ELF error when stripped
-virtualenv/bin/pip uninstall --yes scipy
-virtualenv/bin/pip install scipy --no-binary scipy
+
 deactivate
