@@ -141,8 +141,8 @@ class FontVariant(object):
 
     def isbinding(self, character):
         # after  a non binding letter a letter can only be in isol or fina shape.
-        # binding glyph only have  two shapes, isol and fina
-        non_binding_char = ['ا', 'أ', 'ﺇ', 'د', 'ذ', 'ر', 'ز', 'و']
+        # binding glyph only have  two shapes, isol and fina  
+        non_binding_char = ['ا', 'أ', 'ﺇ', 'آ', 'د', 'ذ', 'ر', 'ز', 'و']
         normalized_non_binding_char = [normalize('NFKC', letter) for letter in non_binding_char]
         return not (character in normalized_non_binding_char)
 
