@@ -3,9 +3,11 @@
 # Copyright (c) 2023 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from copy import deepcopy
+
 import wx
 import wx.adv
-from inkex import errormsg
+from inkex import Group, errormsg
 
 from ..i18n import _
 from ..lettering import get_font_list
@@ -20,6 +22,8 @@ class FontSampleFrame(wx.Frame):
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
         self.fonts = None
+        self.font = None
+        self.font_variant = None
 
         self.main_panel = wx.Panel(self, wx.ID_ANY)
 
@@ -124,14 +128,14 @@ class FontSampleFrame(wx.Frame):
                 self.font_chooser.Append(font.marked_custom_font_name)
 
     def on_font_changed(self, event=None):
-        font = self.fonts.get(self.font_chooser.GetValue(), list(self.fonts.values())[0].marked_custom_font_name)
-        self.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
+        self.font = self.fonts.get(self.font_chooser.GetValue(), list(self.fonts.values())[0].marked_custom_font_name)
+        self.scale_spinner.SetRange(int(self.font.min_scale * 100), int(self.font.max_scale * 100))
         # font._load_variants()
         self.direction.Clear()
-        for variant in font.has_variants():
+        for variant in self.font.has_variants():
             self.direction.Append(variant)
         self.direction.SetSelection(0)
-        if font.sortable:
+        if self.font.sortable:
             self.color_sort_label.Enable()
             self.color_sort_checkbox.Enable()
         else:
@@ -143,19 +147,16 @@ class FontSampleFrame(wx.Frame):
         self.layer.transform.add_scale(self.scale_spinner.GetValue() / 100)
         scale = self.layer.transform.a
 
-        # set font
-        font = self.fonts.get(self.font_chooser.GetValue())
-        if font is None:
+        if self.font is None:
             self.GetTopLevelParent().Close()
             return
 
         # parameters
         line_width = self.max_line_width.GetValue()
         direction = self.direction.GetValue()
-        color_sort = self.sortable(font)
 
-        font._load_variants()
-        font_variant = font.variants[direction]
+        self.font._load_variants()
+        self.font_variant = self.font.variants[direction]
 
         # setup lines of text
         text = ''
@@ -164,33 +165,32 @@ class FontSampleFrame(wx.Frame):
         printed_warning = False
         update_glyphlist_warning = _(
             "The glyphlist for this font seems to be outdated.\n\n"
-            "Please update the glyph list for %s:\n"
-            "open Extensions > Ink/Stitch > Font Management > Edit JSON "
-            "select this font and apply. No other changes necessary."
-            % font.marked_custom_font_name
-        )
+            "Please update the glyph list for {font_name}:\n"
+            "* Open Extensions > Ink/Stitch > Font Management > Edit JSON\n"
+            "* Select this font and apply."
+        ).format(font_name=self.font.marked_custom_font_name)
 
-        self.duplicate_warning(font)
+        self.duplicate_warning()
 
         # font variant glyph list length falls short if a single quote sign is available
         # let's add it in the length comparison
-        if len(set(font.available_glyphs)) != len(font_variant.glyphs):
+        if len(set(self.font.available_glyphs)) != len(self.font_variant.glyphs):
             errormsg(update_glyphlist_warning)
             printed_warning = True
 
-        for glyph in font.available_glyphs:
-            glyph_obj = font_variant[glyph]
+        for glyph in self.font.available_glyphs:
+            glyph_obj = self.font_variant[glyph]
             if glyph_obj is None:
                 if not printed_warning:
                     errormsg(update_glyphlist_warning)
                 printed_warning = True
                 continue
             if last_glyph is not None:
-                width_to_add = (glyph_obj.min_x - font.kerning_pairs.get(last_glyph + glyph, 0)) * scale
+                width_to_add = (glyph_obj.min_x - self.font.kerning_pairs.get(f'{last_glyph} {glyph}', 0)) * scale
                 width += width_to_add
 
             try:
-                width_to_add = (font.horiz_adv_x.get(glyph, font.horiz_adv_x_default) - glyph_obj.min_x) * scale
+                width_to_add = (self.font.horiz_adv_x.get(glyph, self.font.horiz_adv_x_default) - glyph_obj.min_x) * scale
             except TypeError:
                 width_to_add = glyph_obj.width
 
@@ -203,23 +203,83 @@ class FontSampleFrame(wx.Frame):
             text += glyph
             width += width_to_add
 
-        # render text and close
-        font.render_text(text, self.layer, variant=direction, back_and_forth=False, color_sort=color_sort)
+        self._render_text(text)
+
         self.GetTopLevelParent().Close()
 
-    def sortable(self, font):
+    def sortable(self):
         color_sort = self.color_sort_checkbox.GetValue()
-        if color_sort and not font.sortable:
+        if color_sort and not self.font.sortable:
             color_sort = False
         return color_sort
 
-    def duplicate_warning(self, font):
+    def duplicate_warning(self):
         # warn about duplicated glyphs
-        if len(set(font.available_glyphs)) != len(font.available_glyphs):
+        if len(set(self.font.available_glyphs)) != len(self.font.available_glyphs):
             duplicated_glyphs = " ".join(
-                [glyph for glyph in set(font.available_glyphs) if font.available_glyphs.count(glyph) > 1]
+                [glyph for glyph in set(self.font.available_glyphs) if self.font.available_glyphs.count(glyph) > 1]
             )
             errormsg(_("Found duplicated glyphs in font file: {duplicated_glyphs}").format(duplicated_glyphs=duplicated_glyphs))
+
+    def _render_text(self, text):
+        lines = text.splitlines()
+        position = {'x': 0, 'y': 0}
+        for line in lines:
+            group = Group()
+            group.label = line
+            group.set("inkstitch:letter-group", "line")
+            glyphs = []
+            skip = []
+            for i, character in enumerate(line):
+                if i in skip:
+                    continue
+                default_variant = self.font.variants[self.font.json_default_variant]
+                glyph, glyph_len = default_variant.get_glyph(character, line[i:])
+                glyphs.append(glyph)
+                skip = list(range(i, i+glyph_len))
+
+            last_character = None
+            for glyph in glyphs:
+                if glyph is None:
+                    position['x'] += self.font.horiz_adv_x_space
+                    last_character = None
+                    continue
+
+                position = self._render_glyph(group, glyph, position, glyph.name, last_character)
+                last_character = glyph.name
+            self.layer.add(group)
+            position['x'] = 0
+            position['y'] += self.font.leading
+
+        if self.sortable():
+            self.font.do_color_sort(self.layer, 1)
+
+    def _render_glyph(self, group, glyph, position, character, last_character):
+        node = deepcopy(glyph.node)
+        if last_character is not None:
+            if self.font.text_direction != 'rtl':
+                position['x'] += glyph.min_x - self.font.kerning_pairs.get(f'{last_character} {character}', 0)
+            else:
+                position['x'] += glyph.min_x - self.font.kerning_pairs.get(f'{character} {last_character}', 0)
+
+        transform = f"translate({position['x']}, {position['y']})"
+        node.set('transform', transform)
+
+        horiz_adv_x_default = self.font.horiz_adv_x_default
+        if horiz_adv_x_default is None:
+            horiz_adv_x_default = glyph.width + glyph.min_x
+
+        position['x'] += self.font.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
+
+        self.font._update_commands(node, glyph)
+        self.font._update_clips(group, node, glyph)
+
+        # this is used to recognize a glyph layer later in the process
+        # because this is not unique it will be overwritten by inkscape when inserted into the document
+        node.set("id", "glyph")
+        node.set("inkstitch:letter-group", "glyph")
+        group.add(node)
+        return position
 
     def cancel(self, event):
         self.GetTopLevelParent().Close()

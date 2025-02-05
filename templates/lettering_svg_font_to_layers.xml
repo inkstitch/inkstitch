@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Convert SVG Font to Glyph Layers</name>
+  <id>org.{{ id_inkstitch }}.lettering_svg_font_to_layers</id>
+  <param name="extension" type="string" gui-hidden="true">lettering_svg_font_to_layers</param>
+  <param name="count" type="int" min="1" max="65535" gui-text="Stop after">100</param>
+
+  <effect needs-live-preview="false">
+    <object-type>all</object-type>
+    <icon>{{ icon_path }}inx/font_management.svg</icon>
+    <menu-tip>Converts a svg font to glyph layers</menu-tip>
+    <effects-menu>
+      <submenu name="{{ menu_inkstitch }}" translatable="no">
+        <submenu name="Font Management" />
+      </submenu>
+    </effects-menu>
+  </effect>
+  <script>
+    {{ command_tag | safe }}
+  </script>
+</inkscape-extension>

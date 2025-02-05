@@ -324,40 +324,69 @@ class Font(object):
 
         group = inkex.Group()
         group.label = line
+        if self.text_direction == 'rtl':
+            group.label = line[::-1]
         group.set("inkstitch:letter-group", "line")
         last_character = None
 
         words = line.split(" ")
         for word in words:
+
             word_group = inkex.Group()
-            word_group.label = word
+            label = word
+            if self.text_direction == 'rtl':
+                label = word[::-1]
+            word_group.label = label
             word_group.set("inkstitch:letter-group", "word")
 
-            for character in word:
-                if self.letter_case == "upper":
-                    character = character.upper()
-                elif self.letter_case == "lower":
-                    character = character.lower()
+            if self.text_direction == 'rtl':
+                glyphs = self._get_word_glyphs(glyph_set, word[::-1])
+                glyphs = glyphs[::-1]
+            else:
+                glyphs = self._get_word_glyphs(glyph_set, word)
 
-                glyph = glyph_set[character]
-
-                if glyph is None and self.default_glyph == " ":
+            last_character = None
+            for glyph in glyphs:
+                if glyph is None:
                     position.x += self.word_spacing
                     last_character = None
-                else:
-                    if glyph is None:
-                        glyph = glyph_set[self.default_glyph]
-
-                    if glyph is not None:
-                        node = self._render_glyph(destination_group, glyph, position, character, last_character)
-                        word_group.append(node)
-
-                    last_character = character
-            position.x += self.word_spacing
-            last_character = None
+                    continue
+                node = self._render_glyph(destination_group, glyph, position, glyph.name, last_character)
+                word_group.append(node)
+                last_character = glyph.name
             group.append(word_group)
-
+            position.x += self.word_spacing
         return group
+
+    def _get_word_glyphs(self, glyph_set, word):
+        glyphs = []
+        skip = []
+        previous_is_binding = True
+
+        for i, character in enumerate(word):
+            if i in skip:
+                continue
+
+            # forced letter case
+            if self.letter_case == "upper":
+                character = character.upper()
+            elif self.letter_case == "lower":
+                character = character.lower()
+
+            glyph, glyph_len, binding = glyph_set.get_next_glyph(word, i, previous_is_binding)
+            previous_is_binding = binding
+
+            skip = list(range(i, i+glyph_len))
+
+            if glyph is None and self.default_glyph == " ":
+                glyphs.append(None)
+            else:
+                if glyph is None:
+                    glyphs.append(glyph_set[self.default_glyph])
+                if glyph is not None:
+                    glyphs.append(glyph)
+
+        return glyphs
 
     def _render_glyph(self, destination_group, glyph, position, character, last_character):
         """Render a single glyph.
@@ -383,9 +412,17 @@ class Font(object):
         node = deepcopy(glyph.node)
         if last_character is not None:
             if self.text_direction != "rtl":
-                position.x += glyph.min_x - self.kerning_pairs.get(last_character + character, 0)
+                kerning = self.kerning_pairs.get(f'{last_character} {character}', None)
+                if kerning is None:
+                    # legacy kerning without space
+                    kerning = self.kerning_pairs.get(last_character + character, 0)
+                position.x += glyph.min_x - kerning
             else:
-                position.x += glyph.min_x - self.kerning_pairs.get(character + last_character, 0)
+                kerning = self.kerning_pairs.get(f'{character} {last_character}', None)
+                if kerning is None:
+                    # legacy kerning without space
+                    kerning = self.kerning_pairs.get(character + last_character, 0)
+                position.x += glyph.min_x - kerning
 
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)

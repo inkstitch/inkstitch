@@ -3,6 +3,8 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from collections import defaultdict
+
 from fontTools.agl import toUnicode
 from inkex import NSS
 from lxml import etree
@@ -21,11 +23,35 @@ class FontFileInfo(object):
     # horiz_adv_x defines the width of specific letters (distance to next letter)
     def horiz_adv_x(self):
         # In XPath 2.0 we could use ".//svg:glyph/(@unicode|@horiz-adv-x)"
-        xpath = ".//svg:glyph[@unicode and @horiz-adv-x]/@*[name()='unicode' or name()='horiz-adv-x']"
-        hax = self.svg.xpath(xpath, namespaces=NSS)
-        if len(hax) == 0:
+        xpath = ".//svg:glyph"  # [@unicode and @horiz-adv-x and @glyph-name]/@*[name()='unicode' or name()='horiz-adv-x' or name()='glyph-name']"
+        glyph_definitions = self.svg.xpath(xpath, namespaces=NSS)
+        if len(glyph_definitions) == 0:
             return {}
-        return dict(zip(hax[0::2], [float(x) for x in hax[1::2]]))
+
+        horiz_adv_x_dict = defaultdict(list)
+        for glyph in glyph_definitions:
+            unicode_char = glyph.get('unicode', None)
+            if unicode_char is None:
+                continue
+            hax = glyph.get('horiz-adv-x', None)
+            if hax is None:
+                continue
+            else:
+                hax = float(hax)
+
+            glyph_name = glyph.get('glyph-name', None)
+            if glyph_name is not None:
+                glyph_name = glyph_name.split('.')
+                if len(glyph_name) == 2:
+                    typographic_feature = glyph_name[1]
+                    unicode_char += f'.{typographic_feature}'
+                else:
+                    arabic_form = glyph.get('arabic-form', None)
+                    if arabic_form is not None and len(arabic_form) > 4:
+                        typographic_feature = arabic_form[:4]
+                        unicode_char += f'.{typographic_feature}'
+            horiz_adv_x_dict[unicode_char] = hax
+        return horiz_adv_x_dict
 
     # kerning (specific distances of two specified letters)
     def hkern(self):
@@ -54,7 +80,7 @@ class FontFileInfo(object):
         for first, second, key in kern_list:
             for f in first:
                 for s in second:
-                    hkern[f+s] = key
+                    hkern[f'{f} {s}'] = key
         return hkern
 
     def split_glyph_list(self, glyph):
@@ -62,7 +88,7 @@ class FontFileInfo(object):
         if len(glyph) > 1:
             # glyph names need to be converted to unicode
             # we need to take into account, that there can be more than one first/second letter in the very same hkern element
-            # in this case they will be commas separated and each first letter needs to be combined with each next letter
+            # in this case they will be comma separated and each first letter needs to be combined with each next letter
             # e.g. <hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Amacron,Abreve,Aogonek" g2="T,Tcaron" k="5" />
             glyph_names = glyph.split(",")
             for glyph_name in glyph_names:
@@ -73,11 +99,12 @@ class FontFileInfo(object):
                 separators = [".", "_"]
                 used_separator = False
                 for separator in separators:
+                    if used_separator:
+                        continue
                     glyph_with_separator = glyph_name.split(separator)
                     if len(glyph_with_separator) == 2:
-                        glyphs.append("%s%s%s" % (toUnicode(glyph_with_separator[0]), separator, glyph_with_separator[1]))
+                        glyphs.append(f"{toUnicode(glyph_with_separator[0])}{separator}{glyph_with_separator[1]}")
                         used_separator = True
-                        continue
                 # there is no extra separator
                 if not used_separator:
                     glyphs.append(toUnicode(glyph_name))

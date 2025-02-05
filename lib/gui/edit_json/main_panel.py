@@ -237,15 +237,28 @@ class LetteringEditJsonPanel(wx.Panel):
         self.horiz_adv_x = self.font.horiz_adv_x
 
         kerning_combinations = combinations_with_replacement(self.glyphs, 2)
-        self.kerning_combinations = [''.join(combination) for combination in kerning_combinations]
-        self.kerning_combinations.extend([combination[1] + combination[0] for combination in self.kerning_combinations])
+        self.kerning_combinations = [' '.join(combination) for combination in kerning_combinations]
+        self.kerning_combinations.extend([f'{combination[1]} {combination[0]}' for combination in kerning_combinations])
         self.kerning_combinations = list(set(self.kerning_combinations))
         self.kerning_combinations.sort()
 
+        self.update_legacy_kerning_pairs()
         self.update_settings()
         self.update_kerning_list()
         self.update_glyph_list()
         self.update_preview()
+
+    def update_legacy_kerning_pairs(self):
+        new_list = defaultdict(list)
+        for kerning_pair, value in self.kerning_pairs.items():
+            if " " in kerning_pair:
+                # legacy kerning pairs do not use a space
+                return
+            if len(kerning_pair) < 2:
+                continue
+            pair = f'{kerning_pair[0]} {kerning_pair[1]}'
+            new_list[pair] = value
+        self.kerning_pairs = new_list
 
     def update_settings(self):
         # reset font_meta
@@ -305,7 +318,8 @@ class LetteringEditJsonPanel(wx.Panel):
         kerning_list.AppendColumn("New kerning", width=wx.LIST_AUTOSIZE_USEHEADER)
         for kerning_pair in self.kerning_combinations:
             if self.font_meta['text_direction'] == 'rtl':
-                kerning_pair = kerning_pair[::-1]
+                pair = kerning_pair.split()
+                kerning_pair = ' '.join(pair[::-1])
             index = kerning_list.InsertItem(kerning_list.GetItemCount(), kerning_pair)
             # kerning_list.SetItem(index, 0, kerning_pair)
             kerning_list.SetItem(index, 1, str(self.kerning_pairs.get(kerning_pair, 0.0)))
@@ -373,43 +387,59 @@ class LetteringEditJsonPanel(wx.Panel):
         if self.last_notebook_selection == 3:
             text = self.get_active_glyph()
         else:
-            text = self.get_active_kerning_pair()
+            kerning = self.get_active_kerning_pair()
+            kerning = kerning.split()
+            text = ''.join(kerning)
+            if self.font_meta['text_direction'] == 'rtl':
+                text = ''.join(kerning[::-1])
         if not text:
             return
 
-        text = self.text_before + text + self.text_after
-        if self.font_meta['text_direction'] == 'rtl':
-            text = text[::-1]
-
-        self._render_text(text)
+        position_x = self._render_text(self.text_before, 0, True)
+        position_x = self._render_text(text, position_x, False)
+        self._render_text(self.text_after, position_x, True)
 
         if self.default_variant.variant == FontVariant.RIGHT_TO_LEFT:
             self.layer[:] = reversed(self.layer)
             for group in self.layer:
                 group[:] = reversed(group)
 
-    def _render_text(self, text):
-        last_character = None
-        position_x = 0
-        for character in text:
-            glyph = self.default_variant[character]
-            if character == " " or (glyph is None and self.font_meta['default_glyph'] == " "):
-                position_x += self.font_meta['horiz_adv_x_space']
-                last_character = None
-            else:
-                if glyph is None:
-                    glyph = self.default_variant[self.font_meta['default_glyph']]
+    def _render_text(self, text, position_x, use_character_position):
+        words = text.split()
+        for i, word in enumerate(words):
+            glyphs = []
+            skip = []
+            previous_is_binding = False
+            for i, character in enumerate(word):
+                if i in skip:
+                    continue
+                if use_character_position:
+                    glyph, glyph_len, previous_is_binding = self.default_variant.get_next_glyph(word, i, previous_is_binding)
+                else:
+                    glyph, glyph_len = self.default_variant.get_glyph(character, word[i:])
+                glyphs.append(glyph)
+                skip = list(range(i, i+glyph_len))
 
-                if glyph is not None:
-                    position_x, last_character = self._render_glyph(glyph, position_x, character, last_character)
+            last_character = None
+            for glyph in glyphs:
+                if glyph is None:
+                    position_x += self.font_meta['horiz_adv_x_space']
+                    last_character = None
+                    continue
+
+                position_x = self._render_glyph(glyph, position_x, glyph.name, last_character)
+                last_character = glyph.name
+            position_x += self.font_meta['horiz_adv_x_space']
+        position_x -= self.font_meta['horiz_adv_x_space']
+        return position_x
 
     def _render_glyph(self, glyph, position_x, character, last_character):
         node = deepcopy(glyph.node)
         if last_character is not None:
             if self.font_meta['text_direction'] != 'rtl':
-                position_x += glyph.min_x - self.kerning_pairs.get(last_character + character, 0)
+                position_x += glyph.min_x - self.kerning_pairs.get(f'{last_character} {character}', 0)
             else:
-                position_x += glyph.min_x - self.kerning_pairs.get(character + last_character, 0)
+                position_x += glyph.min_x - self.kerning_pairs.get(f'{character} {last_character}', 0)
 
         transform = f"translate({position_x}, 0)"
         node.set('transform', transform)
@@ -427,7 +457,7 @@ class LetteringEditJsonPanel(wx.Panel):
         # because this is not unique it will be overwritten by inkscape when inserted into the document
         node.set("id", "glyph")
         self.layer.add(node)
-        return position_x, character
+        return position_x
 
     def render_stitch_plan(self):
         stitch_groups = []

@@ -40,6 +40,7 @@ from .lettering_force_lock_stitches import LetteringForceLockStitches
 from .lettering_generate_json import LetteringGenerateJson
 from .lettering_remove_kerning import LetteringRemoveKerning
 from .lettering_set_color_sort_index import LetteringSetColorSortIndex
+from .lettering_svg_font_to_layers import LetteringSvgFontToLayers
 from .letters_to_font import LettersToFont
 from .object_commands import ObjectCommands
 from .object_commands_toggle_visibility import ObjectCommandsToggleVisibility
@@ -112,6 +113,7 @@ __all__ = extensions = [About,
                         LetteringGenerateJson,
                         LetteringRemoveKerning,
                         LetteringSetColorSortIndex,
+                        LetteringSvgFontToLayers,
                         LettersToFont,
                         ObjectCommands,
                         ObjectCommandsToggleVisibility,

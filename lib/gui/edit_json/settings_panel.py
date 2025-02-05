@@ -97,7 +97,7 @@ class FontInfo(wx.Panel):
         )
 
         default_variant_label = wx.StaticText(self, label=_("Default Variant"))
-        self.default_variant = wx.Choice(self, choices=[_("→"), _("←"), _("↓"), ("↑")])
+        self.default_variant = wx.Choice(self, choices=["→", "←", "↓", "↑"])
         self.default_variant.Bind(wx.EVT_CHOICE, self.parent.on_default_variant_change)
 
         text_direction_label = wx.StaticText(self, label=_("Text direction"))

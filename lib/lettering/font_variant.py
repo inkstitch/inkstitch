@@ -5,6 +5,7 @@
 
 import os
 from collections import defaultdict
+from unicodedata import normalize
 
 import inkex
 
@@ -73,7 +74,7 @@ class FontVariant(object):
             for layer in glyph_layers:
                 self._clean_group(layer)
                 layer.attrib[INKSCAPE_LABEL] = layer.attrib[INKSCAPE_LABEL].replace("GlyphLayer-", "", 1)
-                glyph_name = layer.attrib[INKSCAPE_LABEL]
+                glyph_name = normalize('NFKC', layer.attrib[INKSCAPE_LABEL])
                 try:
                     self.glyphs[glyph_name] = Glyph(layer)
                 except (AttributeError, ValueError):
@@ -133,6 +134,93 @@ class FontVariant(object):
             group.attrib.pop('transform', None)
 
         return svg
+
+    def glyphs_start_with(self, character):
+        glyph_selection = [glyph_name for glyph_name, glyph_layer in self.glyphs.items() if glyph_name.startswith(character)]
+        return sorted(glyph_selection, key=lambda glyph: (len(glyph.split('.')[0]), len(glyph)), reverse=True)
+
+    def isbinding(self, character):
+        # after  a non binding letter a letter can only be in isol or fina shape.
+        # binding glyph only have  two shapes, isol and fina
+        non_binding_char = ['ا', 'أ', 'ﺇ', 'آ', 'د', 'ذ', 'ر', 'ز', 'و']
+        normalized_non_binding_char = [normalize('NFKC', letter) for letter in non_binding_char]
+        return not (character in normalized_non_binding_char)
+
+    def ispunctuation(self, character):
+        # punctuation sign  are  not considered as part of the word. They onnly have one shape
+        punctuation_signs = ['؟', '،', '.', ',', ';', '.', '!', ':', '؛']
+        normalized_punctuation_signs = [normalize('NFKC', letter) for letter in punctuation_signs]
+        return (character in normalized_punctuation_signs)
+
+    def get_glyph(self, character, word):
+        """
+        Returns the glyph for the given character, searching for combined glyphs first
+        This expects glyph annotations to be within the given word, for example: a.init
+
+        Returns glyph node and length of the glyph name
+        """
+        glyph_selection = self.glyphs_start_with(character)
+        for glyph in glyph_selection:
+            if word.startswith(glyph):
+                return self.glyphs[glyph], len(glyph)
+        return self.glyphs.get(self.default_glyph, None), 1
+
+    def get_next_glyph_shape(self, word, starting, ending, previous_is_binding):
+        # in arabic each letter (or ligature) may have up to 4 different shapes, hence 4 glyphs
+        # this computes the shape of the glyph that represents word[starting:ending+1]
+
+        # punctuation is not really part of the word
+        # they may appear at begining or end of words
+        # computes where the actual word begins and ends up
+        last_char_index = len(word)-1
+        first_char_index = 0
+
+        while self.ispunctuation(word[last_char_index]):
+            last_char_index = last_char_index - 1
+        while self.ispunctuation(word[first_char_index]):
+            first_char_index = first_char_index + 1
+
+        # first glyph is eithher isol or init depending wether it is also the last glyph of the actual word
+        if starting == first_char_index:
+            if not self.isbinding(word[ending]) or len(word) == 1:
+                shape = 'isol'
+            else:
+                shape = 'init'
+        # last glyph  is  final if previous is binding, isol otherwise
+        # a non binding  glyph behaves like the last glyph
+        elif ending == last_char_index or not self.isbinding(word[ending]):
+            if previous_is_binding:
+                shape = 'fina'
+            else:
+                shape = 'isol'
+        # in the middle of the actual word, the shape of a glyph is medi if previous glyph is bendinng,  init otherwise
+        elif previous_is_binding:
+            shape = 'medi'
+        else:
+            shape = 'init'
+
+        return shape
+
+    def get_next_glyph(self, word, i, previous_is_binding):
+        # search for the glyph of word that starts at i,taking  into acount the previous glyph binding status
+
+        # find  all the glyphs in tthe font that start with first letter of the glyph
+        glyph_selection = self.glyphs_start_with(word[i])
+
+        # find the longest glyph that match
+        for glyph in glyph_selection:
+            glyph_name = glyph.split('.')
+            if len(glyph_name) == 2 and glyph_name[1] in ['isol', 'init', 'medi', 'fina']:
+                is_binding = self.isbinding(glyph_name[0][-1])
+                if len(word) < i + len(glyph_name[0]):
+                    continue
+                shape = self.get_next_glyph_shape(word, i, i + len(glyph_name[0]) - 1, previous_is_binding)
+                if glyph_name[1] == shape and word[i:].startswith(glyph_name[0]):
+                    return self.glyphs[glyph], len(glyph_name[0]),  is_binding
+            elif word[i:].startswith(glyph):
+                return self.glyphs[glyph], len(glyph), True
+        # nothing was found
+        return self.glyphs.get(self.default_glyph, None), 1, True
 
     def __getitem__(self, character):
         if character in self.glyphs:
