@@ -13,7 +13,8 @@ from ..elements.validation import (ObjectTypeWarning, ValidationError,
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
 from ..svg.path import get_correction_transform
-from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SODIPODI_ROLE
+from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SODIPODI_ROLE,
+                        SVG_GROUP_TAG)
 from .base import InkstitchExtension
 
 
@@ -43,6 +44,7 @@ class Troubleshoot(InkstitchExtension):
 
         if any(problem_types.values()):
             self.add_descriptions(problem_types)
+            self.remove_empty_layers()
         else:
             svg = self.document.getroot()
             svg.remove(self.troubleshoot_layer)
@@ -68,6 +70,8 @@ class Troubleshoot(InkstitchExtension):
             fill_color = "#ff9900"
             layer = self.type_warning_group
 
+        group = self._get_or_create_group(layer, problem.name)
+
         pointer_style = f'stroke:#000000;stroke-width:0.1;fill:{ fill_color }'
         text_style = f'fill:{ fill_color };stroke:#000000;stroke-width:0.1;font-size:{ font_size }px;text-align:center;text-anchor:middle'
         pointer_path = f'm {problem.position.x},{problem.position.y} {pointer_size / 5},{pointer_size} ' \
@@ -80,22 +84,33 @@ class Troubleshoot(InkstitchExtension):
             INKSCAPE_LABEL: _('Invalid Pointer'),
             "transform": correction_transform
         })
-        layer.insert(0, path)
+        group.insert(0, path)
 
         text = inkex.TextElement(attrib={
-            INKSCAPE_LABEL: _('Description'),
             "x": str(problem.position.x),
             "y": str(float(problem.position.y) + pointer_size + font_size),
             "transform": correction_transform,
             "style": text_style
         })
-        layer.append(text)
+        text.label = _("Description")
+        group.append(text)
 
         tspan = inkex.Tspan()
         tspan.text = problem.name
         if problem.label:
             tspan.text += " (%s)" % problem.label
         text.append(tspan)
+
+    def _get_or_create_group(self, layer, label):
+        group = layer.xpath(f".//*[@inkscape:label='{label}']")
+
+        if not group:
+            group = inkex.Group()
+            group.label = label
+            layer.add(group)
+        else:
+            group = group[0]
+        return group
 
     def create_troubleshoot_layer(self):
         svg = self.document.getroot()
@@ -147,12 +162,15 @@ class Troubleshoot(InkstitchExtension):
         # viewbox values are either separated through white space or commas
         text_x = str(float(svg.get('viewBox', '0 0 800 0').replace(",", " ").split()[2]) + 5.0)
 
+        group = inkex.Group()
+        group.label = _("Problem descriptions")
+
         text_container = inkex.TextElement(attrib={
             "x": text_x,
             "y": str(5),
             "style": "fill:#000000;font-size:5px;line-height:1;"
         })
-        self.troubleshoot_layer.append(text_container)
+        group.append(text_container)
 
         text = [
             [_("Troubleshoot"), "font-weight: bold; font-size: 8px;"],
@@ -210,13 +228,14 @@ class Troubleshoot(InkstitchExtension):
             text_container.append(tspan)
 
         # we cannot really detect the text boudning_box. So we have to make a bad guesses
-        self.troubleshoot_layer.insert(
+        group.insert(
             0,
             inkex.PathElement(
                 d=f"M {float(text_x) - 5} {-5}, {float(text_x) + 160} {-5}, {float(text_x) + 160} {600}, {float(text_x) - 5} {600} Z",
                 style="fill: #51a888; stroke: red;"
             )
         )
+        self.troubleshoot_layer.add(group)
 
     def split_text(self, text):
         splitted_text = []
@@ -228,3 +247,8 @@ class Troubleshoot(InkstitchExtension):
             else:
                 splitted_text.append(["", ""])
         return splitted_text
+
+    def remove_empty_layers(self):
+        for layer in self.troubleshoot_layer.iterchildren(SVG_GROUP_TAG):
+            if len(layer) == 0:
+                self.troubleshoot_layer.remove(layer)
