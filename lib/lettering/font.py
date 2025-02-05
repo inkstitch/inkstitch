@@ -525,7 +525,7 @@ class Font(object):
         satin operation.  Any nested svg:g elements will be removed.
         """
 
-        elements = nodes_to_elements(group.iterdescendants(SVG_PATH_TAG))
+        elements = nodes_to_elements(group.iterdescendants(EMBROIDERABLE_TAGS))
         elements = [element for element in elements if isinstance(element, SatinColumn) or isinstance(element, Stroke)]
 
         if elements and any(isinstance(element, SatinColumn) for element in elements):
