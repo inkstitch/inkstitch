@@ -279,12 +279,13 @@ def preserve_original_groups(elements, original_parent_nodes, transform=True):
     """
 
     for element, parent in zip(elements, original_parent_nodes):
-        transform = ''
+        if parent is None:
+            continue
+        element_transform = ''
         if transform:
-            transform = get_correction_transform(parent, child=True)
-        if parent is not None:
-            parent.append(element.node)
-            element.node.set('transform', transform)
+            element_transform = get_correction_transform(parent, child=True)
+        parent.append(element.node)
+        element.node.set('transform', element_transform)
 
 
 def add_elements_to_group(elements, group):
