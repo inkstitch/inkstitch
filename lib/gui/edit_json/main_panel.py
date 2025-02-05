@@ -386,7 +386,6 @@ class LetteringEditJsonPanel(wx.Panel):
 
         if self.last_notebook_selection == 3:
             text = self.get_active_glyph()
-            # text = self.remove_typographic_information(kern)
         else:
             kerning = self.get_active_kerning_pair()
             kerning = kerning.split()
@@ -414,7 +413,7 @@ class LetteringEditJsonPanel(wx.Panel):
             for i, character in enumerate(word):
                 if i in skip:
                     continue
-                glyph, glyph_len = self.default_variant.get_glyph(character, word[i:], None)
+                glyph, glyph_len = self.default_variant.get_glyph(character, word[i:])
                 glyphs.append(glyph)
                 skip = list(range(i, i+glyph_len))
 

@@ -136,7 +136,6 @@ class FontVariant(object):
         return svg
 
     def glyphs_start_with(self, character):
-
         glyph_selection = [glyph_name for glyph_name, glyph_layer in self.glyphs.items() if glyph_name.startswith(character)]
         return sorted(glyph_selection, key=lambda glyph: (len(glyph.split('.')[0]), len(glyph)), reverse=True)
 
@@ -152,6 +151,19 @@ class FontVariant(object):
         punctuation_signs = ['؟', '،', '.', ',', ';', '.', '!', ':', '؛']
         normalized_punctuation_signs = [normalize('NFKC', letter) for letter in punctuation_signs]
         return (character in normalized_punctuation_signs)
+
+    def get_glyph(self, character, word):
+        """
+        Returns the glyph for the given character, searching for combined glyphs first
+        This expects glyph annotations to be within the given word, for example: a.init
+
+        Returns glyph node and length of the glyph name
+        """
+        glyph_selection = self.glyphs_start_with(character)
+        for glyph in glyph_selection:
+            if word.startswith(glyph):
+                return self.glyphs[glyph], len(glyph)
+        return self.glyphs.get(self.default_glyph, None), 1
 
     def get_next_glyph_shape(self, word, starting, ending, previous_is_binding):
         # in arabic each letter (or ligature) may have up to 4 different shapes, hence 4 glyphs
@@ -200,6 +212,8 @@ class FontVariant(object):
             glyph_name = glyph.split('.')
             if len(glyph_name) == 2 and glyph_name[1] in ['isol', 'init', 'medi', 'fina']:
                 is_binding = self.isbinding(glyph_name[0][-1])
+                if len(word) < i + len(glyph_name[0]):
+                    continue
                 shape = self.get_next_glyph_shape(word, i, i + len(glyph_name[0]) - 1, previous_is_binding)
                 if glyph_name[1] == shape and word[i:].startswith(glyph_name[0]):
                     return self.glyphs[glyph], len(glyph_name[0]),  is_binding
