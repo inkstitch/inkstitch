@@ -395,25 +395,28 @@ class LetteringEditJsonPanel(wx.Panel):
         if not text:
             return
 
-        text = self.text_before + text + self.text_after
-
-        self._render_text(text)
+        position_x = self._render_text(self.text_before, 0, True)
+        position_x = self._render_text(text, position_x, False)
+        self._render_text(self.text_after, position_x, True)
 
         if self.default_variant.variant == FontVariant.RIGHT_TO_LEFT:
             self.layer[:] = reversed(self.layer)
             for group in self.layer:
                 group[:] = reversed(group)
 
-    def _render_text(self, text):
+    def _render_text(self, text, position_x, use_character_position):
         words = text.split()
-        position_x = 0
-        for word in words:
+        for i, word in enumerate(words):
             glyphs = []
             skip = []
+            previous_is_binding = False
             for i, character in enumerate(word):
                 if i in skip:
                     continue
-                glyph, glyph_len = self.default_variant.get_glyph(character, word[i:])
+                if use_character_position:
+                    glyph, glyph_len, previous_is_binding = self.default_variant.get_next_glyph(word, i, previous_is_binding)
+                else:
+                    glyph, glyph_len = self.default_variant.get_glyph(character, word[i:])
                 glyphs.append(glyph)
                 skip = list(range(i, i+glyph_len))
 
@@ -427,6 +430,8 @@ class LetteringEditJsonPanel(wx.Panel):
                 position_x = self._render_glyph(glyph, position_x, glyph.name, last_character)
                 last_character = glyph.name
             position_x += self.font_meta['horiz_adv_x_space']
+        position_x -= self.font_meta['horiz_adv_x_space']
+        return position_x
 
     def _render_glyph(self, glyph, position_x, character, last_character):
         node = deepcopy(glyph.node)
