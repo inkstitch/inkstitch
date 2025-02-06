@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-02-01 01:28+0000\n"
-"PO-Revision-Date: 2025-02-01 01:28\n"
+"POT-Creation-Date: 2025-02-06 01:25+0000\n"
+"PO-Revision-Date: 2025-02-06 01:25\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-01 01:28+0000\n"
+"POT-Creation-Date: 2025-02-06 01:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,7 +55,7 @@ msgstr "AGS Γαραμου Garamond est une police en colonne satin qui contient
 #. description of font in fonts/ambigue
 #: inkstitch-fonts-metadata.py:12
 msgid "Ambigüe is a mix of satin and bean stitch font with a subtle harmony of disorder. You may ignore the hidden black running stitches (they are the original letters) or use them to customize this font as you like."
-msgstr ""
+msgstr "Ambigüe est un mélange de colonnes satin et de points multiples dans un désordre subtilement harmonieux. Vous pouvez ignorer les contours noirs en points droits cachés (ce sont les lettres de la fonte originelle) ou les utiliser pour customiser cette police à votre guise."
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:14
@@ -102,374 +102,381 @@ msgstr "Barstitch Bold est une police en colonne satin."
 msgid "A large Mandala font. Redwork versions of the four mandalas  used to design the font are stored in the $,<,>,^ glyphs"
 msgstr "Barstitch Mandala  est une grande fonte fabriquée à  base de mandalas. Une version redwork des quatre mandalas utilisés se trouve dans les glyphes $, <, >, ^"
 
-#. description of font in fonts/barstitch_textured
+#. description of font in fonts/barstitch_regular
 #: inkstitch-fonts-metadata.py:32
+msgid "Barstitch regular is a satin font. "
+msgstr "Barstitch regular est une fonte en colonnes satin. "
+
+#. description of font in fonts/barstitch_textured
+#: inkstitch-fonts-metadata.py:34
 msgid "Barstitch textured is a highly textured font with the help of meander fills"
 msgstr "Barstitch texture est une police très texturée à l'aide de remplissages en méandres"
 
 #. description of font in fonts/baumans_FI
-#: inkstitch-fonts-metadata.py:34
+#: inkstitch-fonts-metadata.py:36
 msgid "Baumans FI is a satin font. Every satin has zigzag underlay."
 msgstr "Baumans FI est une police en colonne satin. Chaque satin a une sous-couche zig-zag."
 
 #. description of font in fonts/baumans_FI_Small
-#: inkstitch-fonts-metadata.py:36
+#: inkstitch-fonts-metadata.py:38
 msgid "Baumans FI Small is an altered version of Baumans FI, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
 msgstr "Baumans FI Small est une version modifiée de Baumans FI pour permettre une plus forte réduction. L'usage d'un fil fin (60) et d'une aiguille fine (60) est indispensable."
 
 #. description of font in fonts/califragilistic
-#: inkstitch-fonts-metadata.py:38
+#: inkstitch-fonts-metadata.py:40
 msgid "Califragilistic is a tricolor running stitch font that was constructed using mandalas"
-msgstr ""
+msgstr "Califragilistic est une fonte tricolore en points droits. Elle a été construite à base de mandalas."
 
 #. description of font in fonts/cats
-#: inkstitch-fonts-metadata.py:40
+#: inkstitch-fonts-metadata.py:42
 msgid "Cats is a silly font that makes use of satin random parameters."
 msgstr "Cats est une police rigolote qui utilise les paramètres aléatoires des colonnes satin."
 
 #. description of font in fonts/cherryforinkstitch
-#: inkstitch-fonts-metadata.py:42
+#: inkstitch-fonts-metadata.py:44
 msgid "Cherry for inkstitch is a decorative satin column font. It contains 74 glyphs."
 msgstr "Cherry for inkstitch est une police décorative en colonne satin. Elle contient 74 glyphes."
 
 #. description of font in fonts/cherryforkaalleen
-#: inkstitch-fonts-metadata.py:44
+#: inkstitch-fonts-metadata.py:46
 msgid "Cherry for Kaalleen is a large decorative font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
 msgstr "Cherry for Kaalleen  est une grande police décorative en colonne satin. Elle contient seulement 36 glyphes, les majuscules A-Z et les chiffres."
 
 #. description of font in fonts/chicken_little
-#: inkstitch-fonts-metadata.py:46
+#: inkstitch-fonts-metadata.py:48
 #, python-format
 msgid "Chicken Little  is a  playful decorative display font with loads of personality. There is no common baseline, no common character size and no common slope of the letters. Beyond 110% some satin columns will split."
 msgstr "Chicken Little KOR est une police décorative ludique avec beaucoup de personnalité. Il n'y a pas de ligne de base commune, pas de taille de caractère commune et pas d'inclinaison commune des lettres. Au-delà de 110 %, certaines colonnes satin se diviseront."
 
 #. description of font in fonts/chicken_little_small
-#: inkstitch-fonts-metadata.py:48
+#: inkstitch-fonts-metadata.py:50
 msgid "This font is an altered version  of Chicken Little KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Chicken Little Small est une  version  modifiée de Chicken Little KOR pour permettre une plus forte  réduction. L'usage d'un fil fin (60)  et d'une aiguille fine (60) est indispensable."
 
 #. description of font in fonts/chicken_scratch
-#: inkstitch-fonts-metadata.py:50
+#: inkstitch-fonts-metadata.py:52
 msgid "A handwritten font."
 msgstr "Chicken Scratch est une fonte manuscrite en colonne satin."
 
 #. description of font in fonts/chopin
-#: inkstitch-fonts-metadata.py:52
+#: inkstitch-fonts-metadata.py:54
 msgid "Chopin Script is a script satin font. Every satin has zigzag underlay."
 msgstr "Chopin Script est une police manuscrite en colonne satin. Chaque satin a une sous-couche zig-zag."
 
 #. description of font in fonts/cogs_KOR
-#: inkstitch-fonts-metadata.py:54
+#: inkstitch-fonts-metadata.py:56
 msgid "Cogs KOR is a Steampunk  satin font."
 msgstr "Cogs KOR est une police Steampunk en colonne satin."
 
 #. description of font in fonts/colorful
-#: inkstitch-fonts-metadata.py:56
+#: inkstitch-fonts-metadata.py:58
 msgid "Colorful is a tartan fill font."
 msgstr "Colorful est une police en remplissage tartan."
 
 #. description of font in fonts/cooper_marif
-#: inkstitch-fonts-metadata.py:58
+#: inkstitch-fonts-metadata.py:60
 msgid "CooperMarif is a large and airy font."
 msgstr "CooperMarif est une police large et aérée."
 
 #. description of font in fonts/coronaviral
-#: inkstitch-fonts-metadata.py:60
+#: inkstitch-fonts-metadata.py:62
 msgid "Coronaviral font is created with manual sitch. Do not change the size or very little."
 msgstr "Coronaviral est une police créée en point manuel. Ne pas changer la taille ou alors très peu."
 
 #. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:62
+#: inkstitch-fonts-metadata.py:64
 msgid "DejaVu Serif Condensed is a satin font. Every satin has center-walk underlay."
 msgstr "DejaVu Serif Condensed est une police en colonne satin. Chaque satin a une sous-couche centrale."
 
 #. description of font in fonts/digory_doodles_bean
-#: inkstitch-fonts-metadata.py:64
+#: inkstitch-fonts-metadata.py:66
 msgid "All letters of Digory Doodles Bean mix satin and bean stitch."
 msgstr "Toutes les lettres de Digory Doodles Bean mélangent colonnes satin et points triples."
 
 #. description of font in fonts/dinomouse72
-#: inkstitch-fonts-metadata.py:66
+#: inkstitch-fonts-metadata.py:68
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
 msgstr "Le satin mesure 2,5 mm de large sur les majuscules de 18 mm"
 
 #. description of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:68
+#: inkstitch-fonts-metadata.py:70
 msgid "Emilio 20 contains only capitals and numbers. Every satin has zigzag underlay."
 msgstr "Emilio 20 est une police en colonne satin. Chaque satin a une sous-couche zig-zag. Cette police ne contient que les majuscules A-Z et les chiffres."
 
 #. description of font in fonts/emilio_20_applique
-#: inkstitch-fonts-metadata.py:70
+#: inkstitch-fonts-metadata.py:72
 msgid "Emilio 20 Applique is an Applique font. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique."
 msgstr "Emilio 20 Applique est une police d'appliqués. Cette police est une version modifiée (satins plus larges) d'Emilio 20 tandis qu'Emilio 20 Bold est Emilio 20 Applique sans l'appliqué."
 
 #. description of font in fonts/emilio_20_bold
-#: inkstitch-fonts-metadata.py:72
+#: inkstitch-fonts-metadata.py:74
 msgid "Emilio_20_Bold is an altered version of Emilio_20."
 msgstr "Emilio 20 Bold est une version modifiée d'Emilio 20."
 
 #. description of font in fonts/emilio_20_simple
-#: inkstitch-fonts-metadata.py:74
+#: inkstitch-fonts-metadata.py:76
 msgid "Emilio is a font with capital only and numbers. Every satin has zigzag underlay."
 msgstr "Emilio Simple est une police en colonne satin. Chaque satin a une sous-couche zig-zag. Cette police ne contient que les majuscules A-Z et les chiffres."
 
 #. description of font in fonts/emilio_20_simple_small
-#: inkstitch-fonts-metadata.py:76
+#: inkstitch-fonts-metadata.py:78
 msgid "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Emilio Simple Small est une  version  modifiée d'Emilio 20 simple pour permettre une plus forte  réduction. L'usage d'un fil fin (60)  et d'une aiguille fine (60) est indispensable."
 
 #. description of font in fonts/emilio_20_tartan
-#: inkstitch-fonts-metadata.py:78
+#: inkstitch-fonts-metadata.py:80
 msgid "Emilio 20 Tartan uses tartan fill for a colorful font."
 msgstr "Emiio 20 Tartan utilise le remplissage tartan pour une police très colorée."
 
 #. description of font in fonts/emilio_20_tricolore
-#: inkstitch-fonts-metadata.py:80
+#: inkstitch-fonts-metadata.py:82
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
 msgstr "Emilio 20 tricolore est une large police de colonne satin et de remplissage. Cette police ne contient que les majuscules A-Z et les chiffres."
 
 #. description of font in fonts/espresso_KOR
-#: inkstitch-fonts-metadata.py:82
+#: inkstitch-fonts-metadata.py:84
 msgid "Espresso KOR is a satin font. Every satin has zigzag underlay."
 msgstr "Espresso KOR est une police en colonne satin. Chaque satin a une sous-couche zig-zag."
 
 #. description of font in fonts/espresso_tiny
-#: inkstitch-fonts-metadata.py:84
+#: inkstitch-fonts-metadata.py:86
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Espresso  Small est une  version  modifiée de Espresso KOR pour permettre une plus forte  réduction. L'usage d'un fil fin (60)  et d'une aiguille fine (60) est indispensable."
 
 #. description of font in fonts/excalibur_KOR
-#: inkstitch-fonts-metadata.py:86
+#: inkstitch-fonts-metadata.py:88
 msgid "Excalibur KOR is a small satin column manuscript font. It contains 144 glyphs, covering most western European languages needs."
 msgstr "Excalibur KOR est une petite police en colonne satin. Chaque satin a une sous-couche zig-zag. Elle contient 144 glyphes couvrant la plupart des langages d'Europe de l'Ouest."
 
 #. description of font in fonts/excalibur_small
-#: inkstitch-fonts-metadata.py:88
+#: inkstitch-fonts-metadata.py:90
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Excalibur  Small est une  version  modifiée d'Excalibur  KOR pour permettre une plus forte  réduction. L'usage d'un fil fin (60)  et d'une aiguille fine (60) est indispensable."
 
 #. description of font in fonts/fold_inkstitch
-#: inkstitch-fonts-metadata.py:90
+#: inkstitch-fonts-metadata.py:92
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font. It contains 40 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr "Fold Ink/Stitchest une large police de majuscules en points triples et quintuples. Elle contient 40 glyphes dont les majuscules A-Z et les chiffres."
 
 #. description of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:92
+#: inkstitch-fonts-metadata.py:94
 msgid "Geneva Simple Sans Rounded is a satin font."
 msgstr "Geneva Simple Sans Rounded est une police en colonne satin."
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:94
+#: inkstitch-fonts-metadata.py:96
 msgid "Geneva Simple Sans is a satin font."
 msgstr "Geneva Simple Sans est une police en colonne satin."
 
 #. description of font in fonts/glacial_tiny
-#: inkstitch-fonts-metadata.py:96
+#: inkstitch-fonts-metadata.py:98
 msgid "Glacial is a very tiny font. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages."
 msgstr "Glacial est une toute petite police. L'usage d'un fil fin (60) et d'une aiguille fine (8/60) est indispensable. Les glyphes couvrent la plupart des langages d'Europe de l'Ouest."
 
 #. description of font in fonts/honoka
-#: inkstitch-fonts-metadata.py:98
+#: inkstitch-fonts-metadata.py:100
 msgid "コルの書きこも is a satin column japanese script font. It contains all hiragana, katakana and punctuation glyphs plus 80 kanjis."
 msgstr "コルの書きこも est une police manuscrite japonaise en colonne satin. Elle contient tous les hiragana, katakana, signes de ponctuations ainsi que plus 80 kanjis."
 
 #. description of font in fonts/infinipicto
-#: inkstitch-fonts-metadata.py:100
+#: inkstitch-fonts-metadata.py:102
 msgid "InfiniPicto is a fun font containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
 msgstr "InfiniPicto est une police amusante contenant uniquement les 26 glyphes A-Z. Chaque lettre est le pictogramme d'un objet dont le nom commence par cette même lettre..... en français"
 
 #. description of font in fonts/invercelia
-#: inkstitch-fonts-metadata.py:102
+#: inkstitch-fonts-metadata.py:104
 msgid "Invercelia is a modern two letters monogram font. Enter an upper case letter followed by a lower case letter (for example 'Ac') to get a simple monogram.  Add a ')' at the end and the monogram is framed with a circle (for example 'Ac)'), add an '(' to start (for example '(Ac)' and your monogram is ready for applique, or  try something like '!Ac)' to replace the appliqué by knockdown stitches."
 msgstr "Invercelia est une police moderne de monogrammes  à deux lettres. Pour obtenir un simple monogramme, entrez  une  majuscule suivie d'une minuscule  (par exemple 'Ac' ). Ajoutez  une  parenthèse fermante  ')' à la fin et le monogramme sera encerclé (par exemple 'Ac)'), ajoutez une parenthèse ouvrante '(' au début (par exemple '(Ac)') et votre monogramme est prêt pour un appliqué , ou essayez quelque chose comme '!Ac)' pour remplacer l'appliqué par des  points d'embossage pour \"mater\" un tissu à poils tel que de l'éponge."
 
 #. description of font in fonts/kaushan_script_MAM
-#: inkstitch-fonts-metadata.py:104
+#: inkstitch-fonts-metadata.py:106
 msgid "Kaushan Script MAM is a script satin font. Every satin has zigzag underlay."
 msgstr "Kaushan Script MAM est une police manuscrite en colonne satin. Chaque satin a une sous-couche zig-zag."
 
 #. description of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:106
+#: inkstitch-fonts-metadata.py:108
 msgid "Learning curve is a small running stitch script font."
 msgstr "Learning curve est une petite police en point droit."
 
 #. description of font in fonts/lobster_AGS
-#: inkstitch-fonts-metadata.py:108
+#: inkstitch-fonts-metadata.py:110
 msgid " Lobster AGS is a script satin font. Every satin has zigzag underlay."
 msgstr " Lobster AGS est une police manuscrite en colonne satin. Chaque satin a une sous-couche zig-zag."
 
 #. description of font in fonts/magnolia_KOR
-#: inkstitch-fonts-metadata.py:110
+#: inkstitch-fonts-metadata.py:112
 msgid "Magnolia KOR is a script satin font."
 msgstr "Magnolia KOR est une police manuscrite en colonne satin."
 
 #. description of font in fonts/magnolia_bicolor
-#: inkstitch-fonts-metadata.py:112
+#: inkstitch-fonts-metadata.py:114
 msgid "Magnolia bicolor is a  larger  bicolor variation of Magnolia font."
 msgstr "Magnolia bicolor est une variation plus grande et bicolore de la police Magnolia KOR."
 
 #. description of font in fonts/magnolia_small
-#: inkstitch-fonts-metadata.py:114
+#: inkstitch-fonts-metadata.py:116
 msgid "Magnolia Small is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Magnolia Small est une  version  modifiée de Magnolia  KOR pour permettre une plus forte  réduction. L'usage d'un fil fin (60)  et d'une aiguille fine (60) est indispensable."
 
 #. description of font in fonts/magnolia_tamed
-#: inkstitch-fonts-metadata.py:116
+#: inkstitch-fonts-metadata.py:118
 msgid "This is a less wild bicolor variation of Magnolia font"
 msgstr "Magnolia Tamed est une version moins sauvage de Magnolia bicolor"
 
 #. description of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:118
+#: inkstitch-fonts-metadata.py:120
 msgid "Manuskript Gothisch is a satin font. Every satin has zigzag underlay."
 msgstr "Manuskript Gothisch est une police en colonne satin. Chaque satin a une sous-couche zig-zag."
 
 #. description of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:120
+#: inkstitch-fonts-metadata.py:122
 msgid "MarcellusSC-FI is a small capital satin font. It contains 107 glyphs covering most Western European languages."
 msgstr "MarcellusSC-FI est une police de petites majuscules en colonne satin. Chaque satin a une sous-couche zig-zag. Elle contient 107 glyphes couvrant la plupart des langages d'Europe de l'Ouest."
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:122
+#: inkstitch-fonts-metadata.py:124
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
 msgstr "Ink/Stitch Medium est une fonte basique en colonne satin destinée à des caractères de taille intermédiaire. Chaque satin a une sous-couche de contour."
 
 #. description of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:124
+#: inkstitch-fonts-metadata.py:126
 msgid "Millimarif-bold20 is a  bold satin font."
 msgstr "Millimarif bold 20 est une police bold en colonne satin."
 
 #. description of font in fonts/mimosa_large
-#: inkstitch-fonts-metadata.py:126
+#: inkstitch-fonts-metadata.py:128
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
-msgstr ""
+msgstr "Mimosa Large est une fonte de colonnes satin qui semble être à pois."
 
 #. description of font in fonts/mimosa_medium
-#: inkstitch-fonts-metadata.py:128
+#: inkstitch-fonts-metadata.py:130
 msgid "Mimosa Medium is a satin font that looks dotty."
-msgstr ""
+msgstr "Mimosa Medium est une fonte de colonnes satin qui semble être à pois."
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:130
+#: inkstitch-fonts-metadata.py:132
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
 msgstr "Monicha est une police manuscrite en colonne satin. En plus des glyphes couvrant la plupart des langages d'Europe de l'Ouest, elle contient des lettres ornementales à écharpe. Ces lettres ornementales doivent être utilisées avec précaution pour éviter les surépaisseurs. Merci de consulter la documentation pour les informations sur l'accès à ces lettres ornementales."
 
 #. description of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:132
+#: inkstitch-fonts-metadata.py:134
 msgid "Namskout AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr "Namskout AGS est une grande police d'appliqué. Elle contient seulement 43 glyphes, dont les majuscules A-Z et les chiffres."
 
 #. description of font in fonts/namskout_relief
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:136
 msgid "Namskout relief is an altered version of Namskout AGS for embossed letters."
 msgstr "Namskout relief est une version modifiée de Namskout AGS pour des lettres embossées."
 
 #. description of font in fonts/namskout_tartan
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:138
 msgid "Namskout Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals."
 msgstr "Namskout tartan est une police en remplissage tartan. Elle contient 43 glyphes dont les chiffres et les 26 majuscules A-Z."
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:140
 msgid "NickAinley is a tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn."
 msgstr "Un petit alphabet en point triple de 1 mm, basé sur une fonte de Senior Studio en 24 pt."
 
 #. description of font in fonts/ondulamarif_Medium
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:142
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
 msgstr "Ondulamarif M  est une version modifiée d'Ondulamarif XL qui permet des caractères plus petits."
 
 #. description of font in fonts/ondulamarif_S
-#: inkstitch-fonts-metadata.py:142
+#: inkstitch-fonts-metadata.py:144
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
 msgstr "Ondulamarif S est une version modifiée d'Ondulamarif XL qui permet des caractères encore  plus petits que Ondulamarif M."
 
 #. description of font in fonts/ondulamarif_XL
-#: inkstitch-fonts-metadata.py:144
+#: inkstitch-fonts-metadata.py:146
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
 msgstr "Ondulamarif XL est une police en broderie ondulée. Utilisez-la aussi grande que vous le souhaitez, mais ne la réduisez pas."
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:148
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr "Pacificlo est une petite police en colonne satin. Chaque satin a une sous-couche zig-zag. Elle contient 120 glyphes couvrant la plupart des langages d'Europe de l'Ouest. "
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:148
+#: inkstitch-fonts-metadata.py:150
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr "Pacificlo tiny  est une  version  modifiée de Pacificlo  pour permettre une plus forte  réduction. L'usage d'un fil fin (60)  et d'une aiguille fine (60) est indispensable."
 
 #. description of font in fonts/perspective_tricolore_KOR
-#: inkstitch-fonts-metadata.py:150
+#: inkstitch-fonts-metadata.py:152
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
 msgstr "Perspective tricolore KOR est une police tricolore ombrée qui ne contient que des majuscules, les chiffres et de la ponctuation."
 
 #. description of font in fonts/pixel10
-#: inkstitch-fonts-metadata.py:152
+#: inkstitch-fonts-metadata.py:154
 msgid "Pixel 10 is a satin pixel font."
 msgstr "Pixel 10 est une police pixelisée en colonne satin."
 
 #. description of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:154
+#: inkstitch-fonts-metadata.py:156
 msgid "Roaring Twenties KOR is a satin font."
 msgstr "Roaring Twenties KOR est une police en colonne satin."
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:156
+#: inkstitch-fonts-metadata.py:158
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr "Roaring Twenties KOR Small est une  version  modifiée de Roaring Twenties KOR  pour permettre une plus forte  réduction. L'usage d'un fil fin (60)  et d'une aiguille fine (60) est indispensable."
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:158
+#: inkstitch-fonts-metadata.py:160
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
 msgstr "Raman AGS est basée sur Latin Modern Roman 10 Gras italique. Chaque satin a une sous-couche zig-zag."
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:160
+#: inkstitch-fonts-metadata.py:162
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
 msgstr "Roman bicolor AGS est une version modifiée de Roman AGS où chaque majuscule est bicolore."
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:162
+#: inkstitch-fonts-metadata.py:164
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
 msgstr "Sacramarif est une très petite police en point droit basée sur Sacramento."
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:164
+#: inkstitch-fonts-metadata.py:166
 msgid "Ink/Stitch Small Font is suited for small characters."
 msgstr "La police Ink/Stitch Small est prévue pour de petits caractères."
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:166
+#: inkstitch-fonts-metadata.py:168
+#, python-brace-format
 msgid " Sortefax XL Initials is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
 msgstr "Sortefax XL est une très grande police de majuscules en colonnes satin. Elle contient les 37 glyphes : A-Z, 0-9 et le ampersand. De plus les 10 glyphes  (){}[],;.: sont utilisés pour stocker des cadres. Tapper n'importe quelle lettre suivie par n'importe quel cadre (par exemple A( ou B; ) pour obtenir  la lettre encadrée. Attention: pour quelques très grandes lettres vous devrez élargir manuellement le cadre."
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:168
+#: inkstitch-fonts-metadata.py:170
+#, python-brace-format
 msgid "Sortefax  Medium Initials is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
 msgstr "Sortefax Medium Initials est une  police de majuscules en colonnes satin. Elle contient les 37 glyphes : A-Z, 0-9 et le ampersand. De plus les 10 glyphes  (){}[],;.: sont utilisés pour stocker des cadres. Tapper n'importe quelle lettre suivie par n'importe quel cadre (par exemple A( ou B; ou 7,) pour obtenir  la lettre encadrée.  Il est possible qu'un ajustement manuel du cadre autour de la lettre soit requis."
 
 #. description of font in fonts/sunset
-#: inkstitch-fonts-metadata.py:170
+#: inkstitch-fonts-metadata.py:172
 msgid "3 colors satin column font"
 msgstr "Sunset est une police tricolore en colonnes satin"
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:172
+#: inkstitch-fonts-metadata.py:174
 msgid "TT  Directors is a satin font suited for directing."
 msgstr "TT Directors est une police en colonne satin."
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:174
+#: inkstitch-fonts-metadata.py:176
 msgid "TT Masters is a satin font suited for heavy typing :)"
 msgstr "TT Masters est une police en colonne satin adaptée à la frappe lourde :)"
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:176
+#: inkstitch-fonts-metadata.py:178
 msgid "Violin Serif is a condensed serif satin font."
 msgstr "Violin Serif est une police serif condensée en colonne satin."
 
 #. description of font in fonts/western_light
-#: inkstitch-fonts-metadata.py:178
+#: inkstitch-fonts-metadata.py:180
 msgid "Western light is a light fill western style font."
 msgstr "Western light est une police en remplissage léger dans le style western."
 
@@ -1010,7 +1017,7 @@ msgstr "Ce paramètre appliquera un angle de remplissage personnalisé pour le c
 msgid "Flip angle"
 msgstr "Inverser l'angle"
 
-#: lib/elements/clone.py:64
+#: lib/elements/clone.py:65
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr "Inverse automatiquement l'angle calculé s'il semble faux."
 
@@ -1435,7 +1442,7 @@ msgstr "Contraint le chemin à rester dans la forme. Utile quand lissage et éte
 msgid "Smoothness"
 msgstr "Lissage"
 
-#: lib/elements/fill_stitch.py:249
+#: lib/elements/fill_stitch.py:250
 msgid "Smooth the stitch path.  Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path.  Try low numbers like 0.2.  Hint: a lower running stitch tolerance may be needed too."
 msgstr "Lisse la broderie. Le lissage détermine la mesure dans laquelle le chemin lissé peut s'éloigner du chemin originel. Essayez de petites valeurs comme 0.2. Attention, il est possible qu'il faille aussi modifier la tolérance du point droit."
 
@@ -1468,7 +1475,7 @@ msgstr "Relativement à la direction des bandes du tartan."
 msgid "Maximum fill stitch length"
 msgstr "Longueur maximale du point de remplissage"
 
-#: lib/elements/fill_stitch.py:322
+#: lib/elements/fill_stitch.py:323
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "La longueur de points dans une rangée.  Des point plus courts peuvent être utilisés au début ou à la fin d’une rangée."
 
@@ -2079,7 +2086,7 @@ msgstr "Longueur de point"
 msgid "Stitch tolerance"
 msgstr "Tolérance"
 
-#: lib/elements/satin_column.py:426
+#: lib/elements/satin_column.py:427
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. "
 msgstr "Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible signifie que les points seront plus rapprochés. Une tolérance plus élevée signifie que les angles vifs peuvent être arrondis. "
 
@@ -2109,7 +2116,7 @@ msgstr "Sous-couche centrale"
 msgid "Center-Walk Underlay"
 msgstr "Sous-couche centrale"
 
-#: lib/elements/satin_column.py:483
+#: lib/elements/satin_column.py:484
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
 msgstr "Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible signifie que les points seront plus rapprochés. Une tolérance plus élevée signifie que les angles vifs peuvent être arrondis. Prend par défaut la valeur de la longueur du point."
 
@@ -2241,7 +2248,7 @@ msgstr "Est prioritaire sur le réglage nombre de lignes."
 
 #: lib/elements/stroke.py:240
 msgid "Line count / Minimum line distance"
-msgstr ""
+msgstr "Nombre de lignes/ Distance minimum entre les lignes"
 
 #: lib/elements/stroke.py:241
 msgid "Render at rungs"
@@ -2249,15 +2256,15 @@ msgstr "Rendu aux traverses"
 
 #: lib/elements/stroke.py:242
 msgid "Adaptive + minimum line distance"
-msgstr ""
+msgstr "Adaptatif et distance minimum entre les lignes"
 
 #: lib/elements/stroke.py:247
 msgid "Pattern position"
-msgstr ""
+msgstr "Position du motif"
 
 #: lib/elements/stroke.py:248
 msgid "Pattern position for satin guided ripples."
-msgstr ""
+msgstr "Position du motif pour la broderie ondulée guidée par un satin."
 
 #: lib/elements/stroke.py:259
 msgid "Stagger lines this many times before repeating"
@@ -2329,11 +2336,11 @@ msgstr "Rendu en grille. Utilisez avec précaution et surveillez la densité de 
 
 #: lib/elements/stroke.py:378
 msgid "Stitch grid first"
-msgstr ""
+msgstr "Commencer par la grille"
 
 #: lib/elements/stroke.py:379
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
-msgstr ""
+msgstr "Inverse le chemin de broderie afin que la grille soit brodée en premier"
 
 #: lib/elements/stroke.py:390
 msgid "Scale axis"
@@ -2482,15 +2489,15 @@ msgid "Please select at least one satin column."
 msgstr "Veuillez sélectionner une ou plusieurs colonnes satin."
 
 #. This was previously: "No embroiderable paths selected."
-#: lib/extensions/base.py:52
+#: lib/extensions/base.py:56
 msgid "Ink/Stitch doesn't know how to work with any of the objects you've selected. Please check if selected elements are visible."
 msgstr "Ink/Stitch ne sait pas travailler avec les objets sélectionnés. Vérifier que les éléments sélectionnés sont bien visibles."
 
-#: lib/extensions/base.py:55
+#: lib/extensions/base.py:59
 msgid "There are no objects in the entire document that Ink/Stitch knows how to work with."
 msgstr "Il n'y a aucun objet dans tout le document sur lequel Ink/Stitch sait quoi faire."
 
-#: lib/extensions/base.py:57
+#: lib/extensions/base.py:61
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "Conseil : Exécutez Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets"
 
@@ -2509,10 +2516,12 @@ msgid "%s groups/layers to remove:"
 msgstr "%s groupes/calques à supprimer :"
 
 #: lib/extensions/cleanup.py:74
+#, python-brace-format
 msgid "{num_elements_removed} elements removed"
 msgstr "{num_elements_removed} éléments supprimés"
 
 #: lib/extensions/cleanup.py:78
+#, python-brace-format
 msgid "{num_groups_removed} groups/layers removed"
 msgstr "{num_groups_removed} groupes/calques supprimés"
 
@@ -2803,7 +2812,8 @@ msgstr "Veuillez sélectionner un ou plusieurs objets pour y attacher des comman
 msgid "Please choose one or more commands to attach."
 msgstr "Veuillez choisir une ou plusieurs commandes à attacher."
 
-#: lib/extensions/object_commands.py:36
+#: lib/extensions/object_commands.py:37
+#, python-brace-format
 msgid "Cannot attach commands to Clone element(s) {clones}. They must be unlinked to add commands.\n"
 "* Select the clone(s)\n"
 "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
@@ -2816,10 +2826,12 @@ msgid "Please select one or more shapes to convert to their outline."
 msgstr "Merci de sélection au moins une forme pour la convertir en contour."
 
 #: lib/extensions/outline.py:70
+#, python-brace-format
 msgid "{element_id} is not a path element. This extension is designed to generate an outline of an embroidery pattern."
 msgstr "{element_id} n'est pas un chemin. Cette extension est prévue pour générer le contour d'un motif de broderie."
 
 #: lib/extensions/outline.py:76
+#, python-brace-format
 msgid "Could not generate path from element {element_id} with the given settings."
 msgstr "Impossible de générer un chemin à partir de l'élément {element_id} avec ce paramétrage."
 
@@ -2839,7 +2851,7 @@ msgstr "Palette de fil"
 msgid "These settings will be applied to 1 object."
 msgstr "Ces paramètres seront appliqués à 1 objet."
 
-#: lib/extensions/params.py:285
+#: lib/extensions/params.py:286
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr "Ces paramètres seront appliqués aux %d objets."
@@ -2885,7 +2897,7 @@ msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et
 
 #: lib/extensions/params.py:529 lib/extensions/sew_stack_editor.py:118
 #: lib/gui/edit_json/settings_panel.py:61 lib/gui/lettering/main_panel.py:58
-#: lib/gui/lettering_font_sample.py:61
+#: lib/gui/lettering_font_sample.py:65
 #: lib/gui/satin_multicolor/main_panel.py:54
 #: lib/gui/simulator/simulator_preferences.py:53
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
@@ -2904,7 +2916,7 @@ msgstr "Utiliser les derniers paramètres"
 msgid "Apply and Quit"
 msgstr "Appliquer et Quitter"
 
-#: lib/extensions/params.py:837 lib/extensions/sew_stack_editor.py:550
+#: lib/extensions/params.py:837 lib/extensions/sew_stack_editor.py:552
 msgid "Embroidery Params"
 msgstr "Paramètres de broderie"
 
@@ -2916,7 +2928,7 @@ msgstr "En cours de fermeture..."
 msgid "It is safe to close this window now."
 msgstr "Vous pouvez maintenant fermer cette fenêtre."
 
-#: lib/extensions/print_pdf.py:273
+#: lib/extensions/print_pdf.py:274
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr "Un  aperçu de l'impression a été ouvert dans votre navigateur. Cette fenêtre reste ouverte afin  de communiuer avec le code javascript qui s'excécute dans votre navigateur.\n\n"
@@ -2966,7 +2978,7 @@ msgstr "Impossible de detecter le chemin vers python. Merci d'ajouter le chemin 
 
 #: lib/extensions/selection_to_anchor_line.py:21
 msgid "Please select at least one object to be marked as a anchor line."
-msgstr ""
+msgstr "Merci de sélectionner au moins un objet comme ligne d'ancrage."
 
 #: lib/extensions/selection_to_guide_line.py:21
 msgid "Please select at least one object to be marked as a guide line."
@@ -2978,31 +2990,31 @@ msgstr "Veuillez sélectionner au moins un objet à marquer comme texture."
 
 #: lib/extensions/sew_stack_editor.py:93
 msgid "Sew stack only"
-msgstr ""
+msgstr "Broder seulement la pile"
 
 #: lib/extensions/sew_stack_editor.py:95
 msgid "Only sew the Sew Stack layers, and ignore settings from Params"
-msgstr ""
+msgstr "Ne broder que les couches de la pile, et ignorer les réglages du paramétrage"
 
 #: lib/extensions/sew_stack_editor.py:195
 msgid "Preview selected layer"
-msgstr ""
+msgstr "Prévisualisation de la couche sélectionnée"
 
 #: lib/extensions/sew_stack_editor.py:201
 msgid "Preview all layers"
-msgstr ""
+msgstr "Prévisualisation de toutes les couches"
 
 #: lib/extensions/sew_stack_editor.py:224
 msgid "Layer Name"
-msgstr ""
+msgstr "Nom de la couche"
 
 #: lib/extensions/sew_stack_editor.py:374
 msgid "Are you sure you want to delete this layer?"
-msgstr ""
+msgstr "Êtes-vous sûr de vouloir supprimer cette couche ?"
 
 #: lib/extensions/sew_stack_editor.py:514
 msgid "Are you sure you want to quit without saving changes?"
-msgstr ""
+msgstr "Êtes-vous sûr de vouloir quitter sans sauvegarder les changements ?"
 
 #: lib/extensions/stroke_to_lpe_satin.py:33
 msgid "Please select at least one stroke."
@@ -3063,24 +3075,24 @@ msgstr "Ordre des fils"
 msgid "Thread Used"
 msgstr "Fils utilisés"
 
-#: lib/extensions/troubleshoot.py:50
+#: lib/extensions/troubleshoot.py:52
 msgid "All selected shapes are valid! "
 msgstr "Toutes les formes sélectionnées sont valides! "
 
-#: lib/extensions/troubleshoot.py:52
+#: lib/extensions/troubleshoot.py:54
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
 msgstr "Si vous avez toujours des difficultés avec une forme qui n'est pas brodée, vérifiez si elle se trouve dans un calque avec une commande «ignorer»."
 
-#: lib/extensions/troubleshoot.py:80
+#: lib/extensions/troubleshoot.py:84
 msgid "Invalid Pointer"
 msgstr "Pointeur invalide"
 
-#: lib/extensions/troubleshoot.py:86 lib/gui/edit_json/settings_panel.py:92
+#: lib/extensions/troubleshoot.py:95 lib/gui/edit_json/settings_panel.py:92
 #: inx/inkstitch_lettering_generate_json.inx:21
 msgid "Description"
 msgstr "Description"
 
-#: lib/extensions/troubleshoot.py:112 lib/extensions/troubleshoot.py:158
+#: lib/extensions/troubleshoot.py:127 lib/extensions/troubleshoot.py:176
 #: inx/inkstitch_cleanup.inx:36 inx/inkstitch_element_info.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:155
 #: inx/inkstitch_select_elements.inx:91 inx/inkstitch_troubleshoot.inx:26
@@ -3088,39 +3100,43 @@ msgstr "Description"
 msgid "Troubleshoot"
 msgstr "Résolution de problèmes"
 
-#: lib/extensions/troubleshoot.py:121 lib/extensions/troubleshoot.py:165
+#: lib/extensions/troubleshoot.py:136 lib/extensions/troubleshoot.py:183
 msgid "Errors"
 msgstr "Erreurs"
 
-#: lib/extensions/troubleshoot.py:127 lib/extensions/troubleshoot.py:169
+#: lib/extensions/troubleshoot.py:142 lib/extensions/troubleshoot.py:187
 msgid "Warnings"
 msgstr "Avertissements"
 
-#: lib/extensions/troubleshoot.py:133
+#: lib/extensions/troubleshoot.py:148
 msgid "Type Warnings"
 msgstr "Avertissements sur le type"
 
 #: lib/extensions/troubleshoot.py:166
+msgid "Problem descriptions"
+msgstr ""
+
+#: lib/extensions/troubleshoot.py:184
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr "Problèmes qui empêcheront la broderie de la forme."
 
-#: lib/extensions/troubleshoot.py:170
+#: lib/extensions/troubleshoot.py:188
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr "Ce sont des problèmes qui n'empêcheront pas la forme d'être brodée. Vous devriez envisager de corriger l'avertissement, mais si vous ne le faites pas, Ink/Stitch fera de son mieux pour traiter l'objet."
 
-#: lib/extensions/troubleshoot.py:175
+#: lib/extensions/troubleshoot.py:193
 msgid "Object Type Warnings"
 msgstr "Avertissements sur les types d'objets"
 
-#: lib/extensions/troubleshoot.py:176
+#: lib/extensions/troubleshoot.py:194
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr "Ces objets peuvent ne pas fonctionner correctement avec Ink/Stitch. Suivez les instructions pour corriger le comportement indésirable."
 
-#: lib/extensions/troubleshoot.py:189
+#: lib/extensions/troubleshoot.py:207
 msgid "Possible solutions"
 msgstr "Solutions possibles"
 
-#: lib/extensions/troubleshoot.py:194
+#: lib/extensions/troubleshoot.py:212
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Il est possible qu'un objet contienne plus d'une erreur, même s'il n'y a qu'un conseil par objet. Relancer cette fonction quand il y a plus d'erreurs. Enlever les conseils en supprimant le calque \"Résolution de problèmes\" dans le dialogue objets (Objet -> Objets...)."
 
@@ -3142,7 +3158,7 @@ msgstr "liste de fils"
 
 #: lib/gui/abort_message.py:38 lib/gui/apply_palette.py:64
 #: lib/gui/edit_json/help_panel.py:27 lib/gui/element_info.py:56
-#: lib/gui/lettering_font_sample.py:89
+#: lib/gui/lettering_font_sample.py:93
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr "Plus d'information sur notre site web :"
@@ -3176,7 +3192,7 @@ msgid "Select color palette"
 msgstr "Sélectionner une palette de couleur"
 
 #: lib/gui/apply_palette.py:44 lib/gui/edit_json/settings_panel.py:63
-#: lib/gui/lettering_font_sample.py:63
+#: lib/gui/lettering_font_sample.py:67
 #: lib/gui/satin_multicolor/main_panel.py:56
 #: lib/gui/simulator/simulator_preferences.py:55
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
@@ -3185,7 +3201,7 @@ msgstr "Appliquer"
 
 #: lib/gui/apply_palette.py:49 lib/gui/edit_json/main_panel.py:67
 #: lib/gui/element_info.py:41 lib/gui/lettering/main_panel.py:48
-#: lib/gui/lettering_font_sample.py:74
+#: lib/gui/lettering_font_sample.py:78
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
 #: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:16
@@ -3233,7 +3249,7 @@ msgstr "Permet de vérifier ou de mettre à jour les informations sur une police
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr "https://inkstitch.org/fr/docs/font-tools/#edit-json"
 
-#: lib/gui/edit_json/main_panel.py:341
+#: lib/gui/edit_json/main_panel.py:355
 msgid "Could not read json file."
 msgstr "Impossible de lire le fichier json."
 
@@ -3268,18 +3284,6 @@ msgstr "Paires de crénage"
 #: lib/gui/edit_json/settings_panel.py:99
 msgid "Default Variant"
 msgstr "Variante par défaut"
-
-#: lib/gui/edit_json/settings_panel.py:100
-msgid "→"
-msgstr "→"
-
-#: lib/gui/edit_json/settings_panel.py:100
-msgid "←"
-msgstr "←"
-
-#: lib/gui/edit_json/settings_panel.py:100
-msgid "↓"
-msgstr "↓"
 
 #: lib/gui/edit_json/settings_panel.py:103
 #: inx/inkstitch_lettering_generate_json.inx:28
@@ -3398,14 +3402,11 @@ msgstr "https://inkstitch.org/fr/fonts/font-library/"
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Cette police n'a pas de variante de police disponible. Veuillez mettre à jour ou supprimer la police."
 
-#. The user has chosen to scale the text by some percentage
-#. (50%, 200%, etc).  If you need to use the percentage symbol,
-#. make sure to double it (%%).
 #: lib/gui/lettering/main_panel.py:299
-msgid "Text scale"
-msgstr "Echelle du texte"
+msgid "scale"
+msgstr ""
 
-#: lib/gui/lettering/main_panel.py:312
+#: lib/gui/lettering/main_panel.py:308
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
@@ -3529,53 +3530,53 @@ msgstr "Utilises les symboles de commande si coché. Sinon insère les commandes
 msgid "Scale"
 msgstr "Échelle"
 
-#: lib/gui/lettering_font_sample.py:18
+#: lib/gui/lettering_font_sample.py:20
 #: inx/inkstitch_lettering_font_sample.inx:3
 msgid "Font Sampling"
 msgstr "Test de police"
 
-#: lib/gui/edit_json/main_panel.py:66 lib/gui/lettering_font_sample.py:31
+#: lib/gui/edit_json/main_panel.py:66 lib/gui/lettering_font_sample.py:35
 #: lib/gui/simulator/view_panel.py:122 print/templates/ui.html:5
 #: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:69
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
 msgstr "Paramètres"
 
-#: lib/gui/lettering_font_sample.py:42
+#: lib/gui/lettering_font_sample.py:46
 msgid "Stitch direction"
 msgstr "Direction du texte"
 
-#: lib/gui/lettering_font_sample.py:44 lib/gui/tartan/customize_panel.py:46
+#: lib/gui/lettering_font_sample.py:48 lib/gui/tartan/customize_panel.py:46
 msgid "Scale (%)"
 msgstr "Echelle (%)"
 
-#: lib/gui/lettering_font_sample.py:46
+#: lib/gui/lettering_font_sample.py:50
 msgid "Max. line width"
 msgstr "Largeur du texte"
 
 #: lib/gui/lettering/option_panel.py:93 lib/gui/lettering/option_panel.py:95
-#: lib/gui/lettering_font_sample.py:48
+#: lib/gui/lettering_font_sample.py:52
 msgid "Color sort"
 msgstr "Tri des couleurs"
 
-#: lib/gui/lettering_font_sample.py:81
+#: lib/gui/lettering_font_sample.py:85
 msgid "    This extension helps font creators to generate an output of every glyph from a selected font."
 msgstr "    Cette extension aide les créateurs de fontes en générant une sortie avec tous les glyphes de la fonte sélectionnée."
 
-#: lib/gui/lettering_font_sample.py:95 lib/gui/lettering_font_sample.py:96
+#: lib/gui/lettering_font_sample.py:99 lib/gui/lettering_font_sample.py:100
 msgid "https://inkstitch.org/docs/font-tools/#font-sampling"
 msgstr "https://inkstitch.org/fr/docs/font-tools/#font-sampling"
 
-#: lib/gui/lettering_font_sample.py:165
-#, python-format
+#: lib/gui/lettering_font_sample.py:167
+#, python-brace-format
 msgid "The glyphlist for this font seems to be outdated.\n\n"
-"Please update the glyph list for %s:\n"
-"open Extensions > Ink/Stitch > Font Management > Edit JSON select this font and apply. No other changes necessary."
-msgstr "La liste des glyphes de cette police ne semble pas être à jour\n"
-"Merci de mettre à jour la liste des glyphes pour %s:\n"
-"ouvrir Extensions > Ink/Stitch >Gestion des polices > Éditer JSON, sélectionnez cette fonte et cliquez sur appliquer. Aucun autre changement n'est nécessaire."
+"Please update the glyph list for {font_name}:\n"
+"* Open Extensions > Ink/Stitch > Font Management > Edit JSON\n"
+"* Select this font and apply."
+msgstr ""
 
 #: lib/gui/lettering_font_sample.py:222
+#, python-brace-format
 msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
 msgstr "Il y a des glyphes dupliqués dans ce fichier de fonte : {duplicated_glyphs}"
 
@@ -3742,6 +3743,7 @@ msgid "Overflow excluded"
 msgstr "Sans débordement"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:227
+#, python-brace-format
 msgid "Total width: {width}%"
 msgstr "Largeur totale : {width}%"
 
@@ -3853,6 +3855,7 @@ msgid "COLOR CHANGE"
 msgstr "CHANGEMENT COULEUR"
 
 #: lib/gui/simulator/drawing_panel.py:287
+#, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr "Dimensions: {:.2f} x {:.2f}"
 
@@ -4208,32 +4211,32 @@ msgstr "Tartan"
 msgid "Tiny"
 msgstr "Petite"
 
-#: lib/lettering/font.py:96
+#: lib/lettering/font.py:97
 msgid "JSON file missing. Expected a JSON file at the following location:"
 msgstr "Il manque le fichier JSON. Un fichier JSO est attendu à cet endroit :"
 
-#: lib/lettering/font.py:98
+#: lib/lettering/font.py:99
 msgid "Generate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr "Générez le fichier JSON avec\n"
 "Extensions > Ink/Stitch >Gestion des polices > Générer JSON..."
 
-#: lib/lettering/font.py:103
+#: lib/lettering/font.py:104
 msgid "Corrupt JSON file"
 msgstr "Fichier JSON corrompu"
 
-#: lib/lettering/font.py:105
+#: lib/lettering/font.py:106
 msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr "Re-générez le fichier JSON avec\n"
 "Extensions > Ink/Stitch >Gestion des polices > Générer JSON..."
 
-#: lib/lettering/font.py:186
+#: lib/lettering/font.py:187
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Aucun fichier variant trouvé pour la police '%s'."
 
-#: lib/lettering/font.py:561
+#: lib/lettering/font.py:599
 msgid "Color Group"
 msgstr "Groupe de couleur"
 
@@ -4249,6 +4252,7 @@ msgid "Couldn't save embrodiery file."
 msgstr "Impossible de sauver le fichier de broderie."
 
 #: lib/output.py:120
+#, python-brace-format
 msgid "There are {num_color_changes} color changes in your design. This is way too many."
 msgstr "Il y a {num_color_changes} changements de couleur dans votre dessin. C'est beaucoup trop."
 
@@ -4262,76 +4266,77 @@ msgstr "http://inkstitch.org/fr/docs/faq/#too-many-color-changes"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:9
 msgid "Path"
-msgstr ""
+msgstr "Chemin"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:10
 msgid "Reverse path"
-msgstr ""
+msgstr "Inverser le chemin"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:11
 msgid "Reverse the path when stitching this layer."
-msgstr ""
+msgstr "Inverser le chemin lorsque cette couche est brodée."
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:58
 msgid "Randomization"
-msgstr ""
+msgstr "Randomisation"
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:61
 msgid "The random seed is used when handling randomization settings.  Click the button to choose a new random seed, which will generate random features differently. Alternatively, you can enter your own random seed.  If you reuse a random seed, random features will look the same."
-msgstr ""
+msgstr "La graine aléatoire est utilisée pour les paramètres  aléatoires. Cliquez sur le  bouton pour choisir une nouvelle graine qui générera différement les valeurs des paramètres aléatoires. Vous pouvez aussi entrer votre  propre valeur. Si vous réutilisez la même valeur de graine, les paramètres aléatoires seront calculés de la même façon."
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:65
 msgid "Offset stitches"
-msgstr ""
+msgstr "Décaler les points"
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:66
 msgid "Move stitches randomly by up to this many millimeters in any direction."
-msgstr ""
+msgstr "Déplacer les points aléatoirement jusqu'à ce nombre de millimètres dans n'importe quelle direction."
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:67
 msgid "Offset stitch path"
-msgstr ""
+msgstr "Décaler le chemin de broderie"
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:68
 msgid "Move stitches randomly by up to this many millimeters perpendicular to the stitch path.\n\n"
 "If <b>Offset stitches</b> is also specified, then this one is processed first."
-msgstr ""
+msgstr "Déplacez les points de manière aléatoire jusqu'à ce nombre de millimètres perpendiculairement au chemin de broderie\n\n"
+"Si <b>Décaler les points</b> est également spécifié, alors c'est traité en premier."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
 msgid "Stitch along a path using evenly-spaced stitches."
-msgstr ""
+msgstr "Brode le long d'un chemin en utillisant des points espacés régulièrement."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:25
 msgid "Tolerance"
-msgstr ""
+msgstr "Tolérance"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:26
 msgid "Determines how closely the stitch path matches the SVG path.  A lower tolerance means stitches will be closer together and fit the SVG path more precisely.  A higher tolerance means some corners may be rounded and fewer stitches are needed."
-msgstr ""
+msgstr "Détermine dans quelle mesure le chemin de broderie correspond au chemin SVG.  Une tolérance inférieure signifie que les points seront plus rapprochés et s'adapteront plus précisément au chemin SVG.  Une tolérance plus élevée signifie que certains angles peuvent être arrondis et que moins de points sont nécessaires."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:41
 msgid "Repeat exact stitches"
-msgstr ""
+msgstr "Répéter exactement les points."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:43
 msgid "Should the exact same stitches be repeated in each pass?  If not, different randomization settings are applied on each pass."
-msgstr ""
+msgstr "Les  mêmes  points doivent ils être répétés à chaque passage ? Si la réponse est non, les paramètres aléatoires auront des valeurs différentes à chaque passage."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:51
 msgid "Stitch length variance"
-msgstr ""
+msgstr "Variation de la longueur de point"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:52
 msgid "Enter a percentage.  Stitch length will vary randomly by up to this percentage."
-msgstr ""
+msgstr "Entrez un pourcentage. La  longueur de point variera aléatoirement jusqu'à ce pourcentage."
 
 #: lib/sew_stack/stitch_layers/stitch_layer_editor.py:339
 msgid "Undo changes"
-msgstr ""
+msgstr "Annuler les changements"
 
 #: lib/sew_stack/stitch_layers/stitch_layer_editor.py:349
 msgid "Reset to default"
-msgstr ""
+msgstr "Rétablir les valeurs par défaut"
 
 #: lib/stitch_plan/generate_stitch_plan.py:76
 #, python-format
@@ -6449,6 +6454,7 @@ msgstr "Définit un répertoire pour les fontes personnes de l'outil de lettrage
 #: inx/inkstitch_lettering_generate_json.inx:12
 #: inx/inkstitch_lettering_remove_kerning.inx:33
 #: inx/inkstitch_lettering_set_color_sort_index.inx:30
+#: inx/inkstitch_lettering_svg_font_to_layers.inx:14
 #: inx/inkstitch_letters_to_font.inx:80
 msgid "Font Management"
 msgstr "Gestion des polices"
@@ -6654,6 +6660,18 @@ msgstr "https://inkstitch.org/fr/docs/font-tools/#set-color-sort-index"
 #: inx/inkstitch_lettering_set_color_sort_index.inx:27
 msgid "Sets a color sort index on selected elements to define the stacking order for multicolor fonts"
 msgstr "Ajoute un indice de coloration pour les éléments spécifier afin de définir l'ordre d'empilage pour les fontes multicolores"
+
+#: inx/inkstitch_lettering_svg_font_to_layers.inx:3
+msgid "Convert SVG Font to Glyph Layers"
+msgstr ""
+
+#: inx/inkstitch_lettering_svg_font_to_layers.inx:6
+msgid "Stop after"
+msgstr ""
+
+#: inx/inkstitch_lettering_svg_font_to_layers.inx:11
+msgid "Converts a svg font to glyph layers"
+msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
@@ -7397,11 +7415,11 @@ msgstr "Chemin vers python"
 
 #: inx/inkstitch_selection_to_anchor_line.inx:3
 msgid "Selection to anchor line"
-msgstr ""
+msgstr "Sélection vers ligne d'ancrage"
 
 #: inx/inkstitch_selection_to_anchor_line.inx:9
 msgid "Marks selected elements as anchor lines"
-msgstr ""
+msgstr "Marquer les éléments sélectionnés comme des lignes d'ancrage"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
@@ -7421,7 +7439,7 @@ msgstr "Marque les éléments sélectionnés comme des textures"
 
 #: inx/inkstitch_sew_stack_editor.inx:3
 msgid "Sew Stack (preview)..."
-msgstr ""
+msgstr "Pile de broderie (preview)..."
 
 #: inx/inkstitch_simulator.inx:3
 msgid "Simulator"
