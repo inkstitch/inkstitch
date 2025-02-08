@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-02-06 01:25+0000\n"
-"PO-Revision-Date: 2025-02-06 01:25\n"
+"PO-Revision-Date: 2025-02-08 01:22\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -3114,7 +3114,7 @@ msgstr "Avertissements sur le type"
 
 #: lib/extensions/troubleshoot.py:166
 msgid "Problem descriptions"
-msgstr ""
+msgstr "Descriptions des problèmes"
 
 #: lib/extensions/troubleshoot.py:184
 msgid "Problems that will prevent the shape from being embroidered."
@@ -3404,7 +3404,7 @@ msgstr "Cette police n'a pas de variante de police disponible. Veuillez mettre �
 
 #: lib/gui/lettering/main_panel.py:299
 msgid "scale"
-msgstr ""
+msgstr "Échelle"
 
 #: lib/gui/lettering/main_panel.py:308
 #, python-format
@@ -3573,7 +3573,10 @@ msgid "The glyphlist for this font seems to be outdated.\n\n"
 "Please update the glyph list for {font_name}:\n"
 "* Open Extensions > Ink/Stitch > Font Management > Edit JSON\n"
 "* Select this font and apply."
-msgstr ""
+msgstr "La liste de glyphes de cette police semble obsolète.\n\n"
+"Veuillez mettre à jour la liste des glyphes pour {font_name} :\n"
+"* Ouvrez Extensions > Ink/Stitch > Gestion des polices > Modifier JSON\n"
+"* Sélectionnez cette police et appliquez."
 
 #: lib/gui/lettering_font_sample.py:222
 #, python-brace-format
@@ -6320,7 +6323,7 @@ msgstr "Options de sortie"
 
 #: inx/inkstitch_jump_to_stroke.inx:33
 msgid "Merge consecutive strokes of same type"
-msgstr "Fusionner deux triaits consécutifs de style identique"
+msgstr "Fusionner deux traits consécutifs de style identique"
 
 #: inx/inkstitch_jump_to_stroke.inx:34
 msgid "Merge subpaths of stroke elements"
@@ -6663,15 +6666,15 @@ msgstr "Ajoute un indice de coloration pour les éléments spécifier afin de d�
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:3
 msgid "Convert SVG Font to Glyph Layers"
-msgstr ""
+msgstr "Convertir une fonte svg en calques de glyphes"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:6
 msgid "Stop after"
-msgstr ""
+msgstr "Stopper après"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:11
 msgid "Converts a svg font to glyph layers"
-msgstr ""
+msgstr "Converti une fonte svg en calques de glyphes"
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
