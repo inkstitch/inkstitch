@@ -1,7 +1,6 @@
 import numpy as np
-from shapely.geometry import LineString
 
-from ..stitches.running_stitch import even_running_stitch
+from ..stitches.running_stitch import stitch_curve_evenly
 from .geometry import Point, coordinate_list_to_point_list
 
 
@@ -22,7 +21,7 @@ def _remove_duplicate_coordinates(coords_array):
     return coords_array[keepers]
 
 
-def smooth_path(path, smoothness=1.0):
+def smooth_path(path, smoothness=1.0, iterations=5):
     """Smooth a path of coordinates.
 
     Arguments:
@@ -33,8 +32,9 @@ def smooth_path(path, smoothness=1.0):
     Returns:
         A list of Points.
     """
+    points = coordinate_list_to_point_list(path)
     if smoothness == 0:
-        return [Point(x, y) for x, y in path]
+        return points
 
     # Smoothing seems to look nicer if the line segments in the path are mostly
     # similar in length.  If we have some especially long segments, then the
@@ -44,17 +44,17 @@ def smooth_path(path, smoothness=1.0):
     #
     # Fortunately, we can convert the path to segments that are mostly the same
     # length by using the running stitch algorithm.
-    coords = even_running_stitch(coordinate_list_to_point_list(path), 5 * smoothness, smoothness / 2)
-    for _ in range(5):
-        line = LineString(coords)
-        line = line.simplify(smoothness/4, preserve_topology=False)
-        coords = np.array(line.coords)
-        ll = coords.repeat(2, axis=0)
+    points = stitch_curve_evenly(points, smoothness * 5, smoothness * 2)
+    points = np.array(points)
+    for _ in range(iterations):
+        ll = points.repeat(2, axis=0)
         r = np.empty_like(ll)
+        if len(r) == 0:
+            continue
         r[0] = ll[0]
         r[2::2] = ll[1:-1:2]
         r[1:-1:2] = ll[2::2]
         r[-1] = ll[-1]
-        coords = ll * 0.75 + r * 0.25
+        points = ll * 0.75 + r * 0.25
 
-    return [Point(*coord) for coord in coords]
+    return [Point(*coord) for coord in points]
