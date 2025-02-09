@@ -2,7 +2,7 @@
 permalink: /tutorials/autoroute_sashiko/
 title: "Sashiko "
 language: en
-last_modified_at: 2024-02-14
+last_modified_at: 2025-02-9
 excerpt: "Using Sashiko extension  with autoroute  runningstitch"
 image: "/assets/images/tutorials/sashiko/sashiko.jpg"
 tutorial-type:
@@ -20,10 +20,12 @@ user-level:
 ![Sample](/assets/images/tutorials/sashiko/sashiko.jpg)
 
 
-[Sashiko Inkscape extension](https://inkscape.org/~FractalLotus/%E2%98%85sashiko-stitching-patterns) combined with "Auto-Route Running Stitch"  
-makes it possible to produce sashiko style triple stitch embroidery files in a way so easy it's almost indecent.
+[Sashiko Inkscape extension for ink/stitch ](https://gitlab.com/kaalleen/sashiko-inkscape-extension) combined with "Auto-Route Running Stitch"  or "Tools: Stroke > Redwork" makes it possible to produce sashiko style  embroidery files in a very easy way.
 
-First install the Sashiko extension.
+Note that this extension is different for  the  original [Sashiko Inkscape extension](https://inkscape.org/~FractalLotus/%E2%98%85sashiko-stitching-patterns), as it never generates two copies of the same path on top of each other.
+
+
+First install the Sashiko for ink/stitch extension.
 
 Once this extension is installed, run it:
 
@@ -38,6 +40,8 @@ Then click 'Apply'.
 
 You can now close the Sashiko extension dialog window.
 
+## If you have chosen a pattern that yields a non conected result (for instance Offset Crosses) you should now use the "Auto-Route Running Stitch"  extension :
+
 To change from design to triple stitch embroidery
 * Select all the paths that the extension just created (there are many)
   * `Extensions > Ink/Stitch > Params'
@@ -48,13 +52,25 @@ To change from design to triple stitch embroidery
     * Disable "Preserve order of running stitch"
    * Click Apply
 
-**and that's all !!!!**
+
 
 Instead of the paths created by the Sashiko extension you now have a group  "Auto-Route" that contains a mix of:
 * bean stitch paths called  "Auto-Route xyz"
 * simple running stitch path  calles "Auto-Route underpath yzt" 
 
 simple running stitch  paths hidden under triple stitch path to allow the design to have as few jumps as possible.
+
+## If you have chosen a pattern that yields a connected result (for instance Blue Ocean Weaves) you should now use the "Redwork"  extension :
+
+Chose your  parameters (0.5mm for the first two parameters is usually a good choice).
+
+{% include upcoming_release.html %}
+
+If you chose  to combine  and no  bean stitches repeat then you will get a single path that travel everything twice.
+If you chose to combine  and have a non null bean stitches repeat value, you will get an alternate sequence of underpath and beaan stitch path.
+
+If you do not combine you will get more paths, this should only be done if you want to manipulate the result.
+
 
 
 You may wish to also try with other extensions such as :
