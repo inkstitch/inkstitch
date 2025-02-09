@@ -508,7 +508,7 @@ class Stroke(EmbroideryElement):
 
     @cache
     def as_multi_line_string(self):
-        line_strings = [shgeo.LineString(path) for path in self.paths]
+        line_strings = [shgeo.LineString(path) for path in self.paths if len(path) > 1]
         return shgeo.MultiLineString(line_strings)
 
     @property
