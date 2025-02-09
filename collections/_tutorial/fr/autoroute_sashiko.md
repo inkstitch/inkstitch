@@ -66,7 +66,7 @@ Choisissez vos paramètres (0.5mm est un bon choix pour les deux premiers  param
 
 {% include upcoming_release.html %}
 
-Si vous choisissez l'option combiner et 0 repetition de point multiple, vous obtiendrez un unique chemin qui passe partout exactement deux fois.
+Si vous choisissez l'option combiner et 0 répétition de point multiple, vous obtiendrez un unique chemin qui passe partout exactement deux fois.
 
 Si vous choisissez l'option combiner et un point multiple, vous obtiendrez une alternance de chemin de dessous au point droit  et  de chemin en point multiple. Chaque  chemin original est inclus dans exactement un chemin  de dessous et un chemin en point multiple.
 
