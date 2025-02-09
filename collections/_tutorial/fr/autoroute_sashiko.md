@@ -56,7 +56,7 @@ Pour passer du dessin à une broderie en point triple
    
       Vous avez maintenant un groupe Agencement automatique qui contient un mélange de:
 * chemins en  point triple dont les noms commencent par "Agencement automatique", qui correspondent au dessin choisi
-* chemins en point droit simple dont les noms commencent par "Chemin de dessous", qui ont été ajouté pour vous permettre d'obtenir un résultat sans sauts de fils
+* chemins en point droit simple dont les noms commencent par "Chemin de dessous", qui ont été ajoutés pour vous permettre d'obtenir un résultat sans sauts de fils
 
 ## Si vous aves choisi un motif qui donne  un resultat connecté  (ou très peu disconnecté) (par exemple Blue Ocean Weaves) 
 
