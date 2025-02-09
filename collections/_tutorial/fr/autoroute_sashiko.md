@@ -68,7 +68,7 @@ Choisissez vos paramètres (0.5mm est un bon choix pour les deux premiers  param
 
 Si vous choisissez l'option combiner et 0 répétition de point multiple, vous obtiendrez un unique chemin qui passe partout exactement deux fois.
 
-Si vous choisissez l'option combiner et un point multiple, vous obtiendrez une alternance de chemin de dessous au point droit  et  de chemin en point multiple. Chaque  chemin original est inclus dans exactement un chemin  de dessous et un chemin en point multiple.
+Si vous choisissez l'option combiner et un point multiple, vous obtiendrez une alternance de chemin de dessous au point droit  et  de chemin en point multiple. Pour un rendu uniforme, chaque chemin sera brodé une fois en point droit simple dessous et une fois en point multiple dessus
 
 Si vous choisissez de ne pas  combiner vous obtiendrez une multitude de chemins. Cette option n'est à utiliser que si vous souhaitez manipuler le résultat.
 
