@@ -7,6 +7,7 @@ import wx
 
 from ...i18n import _
 from ...lettering.categories import FONT_CATEGORIES
+from .combo_prompt import PromptingComboBox
 from .editable_list import EditableListCtrl
 
 
@@ -56,6 +57,7 @@ class SettingsPanel(wx.Panel):
         kerning_pairs = KerningPairs(self.notebook)
         self.notebook.AddPage(kerning_pairs, _("Kerning pairs"))
         self.kerning_list = kerning_pairs.kerning_list
+        self.kerning_filter = kerning_pairs.filter_kerning
 
         apply_sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.cancel_button = wx.Button(self, label=_("Cancel"))
@@ -285,9 +287,21 @@ class KerningPairs(wx.Panel):
 
         sizer = wx.BoxSizer(wx.VERTICAL)
 
+        choices = [' '] + self.parent.glyphs
+        self.filter_kerning = PromptingComboBox(self, choices=choices, style=wx.TE_PROCESS_ENTER)
+        sizer.Add(self.filter_kerning, 0, wx.EXPAND | wx.TOP | wx.BOTTOM, 5)
+
         self.kerning_list = EditableListCtrl(self, style=wx.LC_REPORT | wx.SUNKEN_BORDER)
         self.kerning_list.Bind(wx.EVT_LIST_ITEM_SELECTED, self.parent.on_kerning_list_select)
         self.kerning_list.Bind(wx.EVT_LIST_END_LABEL_EDIT, self.parent.on_kerning_update)
 
         sizer.Add(self.kerning_list, 1, wx.EXPAND, 0)
         self.SetSizer(sizer)
+
+    def on_combobox_change(self, event):
+        combobox = event.GetEventObject()
+        value = combobox.GetValue().strip()
+        if value and value != " ":
+            self.parent.update_kerning_list(value)
+        else:
+            self.parent.update_kerning_list()

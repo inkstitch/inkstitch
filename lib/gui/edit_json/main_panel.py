@@ -1,6 +1,6 @@
 # Authors: see git history
 #
-# Copyright (c) 2023 Authors
+# Copyright (c) 2025 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import json
@@ -40,7 +40,7 @@ class LetteringEditJsonPanel(wx.Panel):
         self.font = None
         self.default_variant = None
         self.font_meta = defaultdict(list)
-        self.glyphs = None
+        self.glyphs = []
         self.kerning_pairs = None
         self.kerning_combinations = []
         self.horiz_adv_x = {}
@@ -245,6 +245,7 @@ class LetteringEditJsonPanel(wx.Panel):
         self.update_legacy_kerning_pairs()
         self.update_settings()
         self.update_kerning_list()
+        self.update_filter_list()
         self.update_glyph_list()
         self.update_preview()
 
@@ -308,7 +309,14 @@ class LetteringEditJsonPanel(wx.Panel):
         self.settings_panel.font_kerning.horiz_adv_x_default.SetValue(self.font.horiz_adv_x_default)
         self.settings_panel.font_kerning.horiz_adv_x_space.SetValue(self.font.word_spacing)
 
-    def update_kerning_list(self):
+    def update_filter_list(self):
+        # Update filter list
+        self.settings_panel.kerning_filter.Clear()
+        choices = [' '] + self.glyphs
+        self.settings_panel.kerning_filter.AppendItems(choices)
+        self.settings_panel.kerning_filter.update_choices(choices)
+
+    def update_kerning_list(self, filter_value=None):
         kerning_list = self.settings_panel.kerning_list
         # Add the rows
         kerning_list.ClearAll()
@@ -317,6 +325,8 @@ class LetteringEditJsonPanel(wx.Panel):
         kerning_list.AppendColumn("Current kerning", width=wx.LIST_AUTOSIZE_USEHEADER)
         kerning_list.AppendColumn("New kerning", width=wx.LIST_AUTOSIZE_USEHEADER)
         for kerning_pair in self.kerning_combinations:
+            if filter_value is not None and filter_value.strip() not in kerning_pair:
+                continue
             if self.font_meta['text_direction'] == 'rtl':
                 pair = kerning_pair.split()
                 kerning_pair = ' '.join(pair[::-1])
