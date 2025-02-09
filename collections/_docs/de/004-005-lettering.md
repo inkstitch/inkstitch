@@ -1,12 +1,12 @@
 ---
 title: "Text"
 permalink: /de/docs/lettering/
-last_modified_at: 2024-09-01
+last_modified_at: 2025-02-09
 toc: true
 ---
 ## Text-Werkzeug
 
-Das Text-Modul erzeugt mehrzeiligen Text. Die hinterlegten Schriftarten wurden von Community-Mitgliedern zur direkten Verwendung digitalisiert. Es gibt bereits Schriftarten die auf Satinsäulen beruhen, Applikations-, Füllstichschriften und Geradstichschriften. 
+Das Text-Modul erzeugt mehrzeiligen Text. Wähle aus einer großen Vielfalt vordigitalisierter Schriftarten die richtige Schrift für dein Projekt aus.
 
 ![Lettrage Extensions](/assets/images/docs/de/lettering.png)
 

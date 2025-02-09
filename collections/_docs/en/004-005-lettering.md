@@ -1,12 +1,12 @@
 ---
 title: "Lettering"
 permalink: /docs/lettering/
-last_modified_at: 2024-09-01
+last_modified_at: 2025-02-09
 toc: true
 ---
 ## Lettering Tool
 
-The lettering tool generates multi-line text as satin columns and dynamically routes stitching, breaking up satins if necessary and adding running stitch.
+The text module creates multi-line text. Choose the right font for your project from a wide variety of pre-digitized fonts.
 
 ![Lettering Extensions](/assets/images/docs/en/lettering.png)
 

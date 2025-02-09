@@ -1,10 +1,10 @@
 ---
 title: "Outil lettrage"
 permalink: /fr/docs/lettering/
-last_modified_at: 2024-09-10
+last_modified_at: 2025-02-08
 toc: true
 ---
-L'outil de lettrage génère un texte multilignes sous la forme de colonnes satin et génère de manière dynamique les points, divisant éventuellement les points satins et ajoutant du point droit.
+The text module creates multi-line text. Choose the right font for your project from a wide variety of pre-digitized fonts.
 
 ![Lettrage Extensions](/assets/images/docs/fr/lettering.png)
 
