@@ -186,13 +186,13 @@ class DrawingPanel(wx.Panel):
                 if len(stitches) > 1:
                     self.draw_stitch_lines(canvas, pen, stitches, jumps)
                     self.draw_needle_penetration_points(canvas, pen, stitches)
-                last_stitch = stitches[-1]
+                    last_stitch = stitches[-1]
             else:
                 stitches = stitches[:int(self.current_stitch) - stitch]
                 if len(stitches) > 1:
                     self.draw_stitch_lines(canvas, pen, stitches, jumps)
                     self.draw_needle_penetration_points(canvas, pen, stitches)
-                last_stitch = stitches[-1]
+                    last_stitch = stitches[-1]
                 break
 
         if last_stitch:

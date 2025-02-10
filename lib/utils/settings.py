@@ -30,6 +30,10 @@ DEFAULT_SETTINGS = {
     "last_applied_palette": "",
     # sew stack editor
     "stitch_layer_editor_sash_position": -200,
+    # lettering (all lettering applications)
+    "last_font": "Ink/Stitch Small Font",
+    # font sampling
+    "font_sampling_max_line_width": 180
 }
 
 

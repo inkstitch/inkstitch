@@ -17,14 +17,13 @@ from ...lettering.categories import FONT_CATEGORIES
 from ...stitch_plan import stitch_groups_to_stitch_plan
 from ...svg.tags import INKSTITCH_LETTERING
 from ...utils import DotDict, cache
+from ...utils.settings import global_settings
 from ...utils.threading import ExitThread, check_stop_flag
 from .. import PresetsPanel, PreviewRenderer, info_dialog
 from . import LetteringHelpPanel, LetteringOptionsPanel
 
 
 class LetteringPanel(wx.Panel):
-    DEFAULT_FONT = "small_font"
-
     def __init__(self, parent, simulator, group, metadata=None, background_color='white'):
         self.parent = parent
         self.simulator = simulator
@@ -186,7 +185,7 @@ class LetteringPanel(wx.Panel):
     @property
     def default_font(self):
         try:
-            return self.fonts_by_id[self.DEFAULT_FONT]
+            return self.fonts[global_settings['last_font']]
         except KeyError:
             return list(self.fonts.values())[0]
 
@@ -210,6 +209,7 @@ class LetteringPanel(wx.Panel):
     def on_font_changed(self, event=None):
         font = self.fonts.get(self.options_panel.font_chooser.GetValue(), self.default_font)
         self.settings.font = font.marked_custom_font_id
+        global_settings['last_font'] = font.marked_custom_font_name
 
         filter_size = self.options_panel.font_size_filter.GetValue()
         self.options_panel.scale_spinner.SetRange(int(font.min_scale * 100), int(font.max_scale * 100))
