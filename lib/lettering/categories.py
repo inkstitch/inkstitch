@@ -28,5 +28,12 @@ FONT_CATEGORIES = [
     FontCategory('sans_serif', _("Sans Serif")),
     FontCategory('serif', _("Serif")),
     FontCategory('tartan', _("Tartan")),
-    FontCategory('tiny', _("Tiny"))
+    FontCategory('tiny', _("Tiny")),
+    FontCategory('arabic', _("Script: arabic")),
+    FontCategory('cyrillic', _("Script: cyrillic")),
+    FontCategory('greek', _("Script: greek")),
+    FontCategory('hebrew', _("Script: hebrew")),
+    FontCategory('japanese', _("Script: japanese")),
+    FontCategory('latin', _("Script: latin"))
+
 ]
