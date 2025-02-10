@@ -61,7 +61,7 @@ Ces fontes comportent  {{ font1.glyphs.size }} glyphes:
 
 
 ## Dimensions
-### Barstitch Bold etBarstitch Regular
+### Barstitch Bold et Barstitch Regular
 
 A une échelle de  100% ces fontes ont une hauteur approximative de { {{ font1.size }} mm. 
 
