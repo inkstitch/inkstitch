@@ -62,6 +62,8 @@ class StrokeToLpeSatin(InkstitchExtension):
 
         for element in self.elements:
             if self.options.path_specific:
+                element_transform = element.node.composed_transform()
+                pattern_path = str(inkex.Path(pattern_path).transform(-element_transform, True))
                 lpe = self._create_lpe_element(pattern, pattern_path, pattern_node_type, copy_type, element)
             if isinstance(element, SatinColumn):
                 self._process_satin_column(element, lpe, pattern_path, copy_type)
