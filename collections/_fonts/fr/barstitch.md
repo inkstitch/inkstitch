@@ -1,7 +1,7 @@
 ---
 title: "Barstitch"
 permalink: /fr/fonts/barstitch_bold/
-last_modified_at: 2025-02-01
+last_modified_at: 2025-02-10
 toc: false
 preview_image:
   - url: /assets/images/fonts/barstitch_bold.png
@@ -12,15 +12,19 @@ preview_image:
     height: 20
   - url: /assets/images/fonts/barstitch_mandala.png
     height: 45
+  - url: /assets/images/fonts/barstitch_cloudy.png
+    height: 45
 data_title:
   - barstitch_bold
   - barstitch_regular
   - barstitch_textured
   - barstitch_mandala
+  - barstitch_cloudy
 ---
 {%- assign font1 = site.data.fonts.barstitch_bold.font -%}
 {%- assign font2 = site.data.fonts.barstitch_textured.font -%}
 {%- assign font3 = site.data.fonts.barstitch_mandala.font -%}
+
 {% include upcoming_release.html %}
 
 <img 
@@ -38,6 +42,11 @@ data_title:
 <img 
      src="/assets/images/fonts/barstitch_mandala.png"
      alt="Barstitch textured" height="90">
+    
+<img 
+     src="/assets/images/fonts/barstitch_cloudy.png"
+     alt="Barstitch textured" height="90">
+     
      
 
 
@@ -52,11 +61,11 @@ Ces fontes comportent  {{ font1.glyphs.size }} glyphes:
 
 
 ## Dimensions
-### Barstitch Bold and Barstitch Regular
+### Barstitch Bold etBarstitch Regular
 
-A une échelle de  100% cette fonte a une hauteur approximative de { {{ font1.size }} mm. 
+A une échelle de  100% ces fontes ont une hauteur approximative de { {{ font1.size }} mm. 
 
-Elle peut être redimensionnée de {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
+Elle peuvent être redimensionnées de {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
 à {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
 
 ### Barstitch textured
@@ -66,11 +75,11 @@ A une échelle de  100% cette fonte a une hauteur approximative de  {{ font2.siz
 Elle peut être redimensionnée de {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
 à  {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm).
 
-### Barstitch Mandala
+### Barstitch Mandala et Barstitch Cloudy
 
-A une échelle de  100% cette fonte a une hauteur approximative de  {{ font3.size }} mm. 
+A une échelle de  100% ces fontes ont une hauteur approximative de  {{ font3.size }} mm. 
 
-Elle peut être redimensionnée de {{ font3.min_scale | times: 100 | floor }}% ({{ font3.size | times: font3.min_scale }} mm)
+Elle peuvent être redimensionnées de {{ font3.min_scale | times: 100 | floor }}% ({{ font3.size | times: font3.min_scale }} mm)
 à  {{ font3.max_scale | times: 100 | floor }}% ({{ font3.size | times: font3.max_scale }} mm).
 
 
