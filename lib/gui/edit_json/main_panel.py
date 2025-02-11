@@ -237,8 +237,10 @@ class LetteringEditJsonPanel(wx.Panel):
         self.horiz_adv_x = self.font.horiz_adv_x
 
         kerning_combinations = combinations_with_replacement(self.glyphs, 2)
-        self.kerning_combinations = [' '.join(combination) for combination in kerning_combinations]
-        self.kerning_combinations.extend([f'{combination[1]} {combination[0]}' for combination in kerning_combinations])
+        self.kerning_combinations = []
+        for combination in kerning_combinations:
+            self.kerning_combinations.append(f'{combination[0]} {combination[1]}')
+            self.kerning_combinations.append(f'{combination[1]} {combination[0]}')
         self.kerning_combinations = list(set(self.kerning_combinations))
         self.kerning_combinations.sort()
 
