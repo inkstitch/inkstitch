@@ -5,7 +5,7 @@
 
 import os
 from collections import defaultdict
-from unicodedata import normalize
+from unicodedata import normalize, category
 
 import inkex
 
@@ -148,10 +148,15 @@ class FontVariant(object):
 
     def ispunctuation(self, character):
         # punctuation sign  are  not considered as part of the word. They onnly have one shape
-        punctuation_signs = ['؟', '،', '.', ',', ';', '.', '!', ':', '؛']
-        normalized_punctuation_signs = [normalize('NFKC', letter) for letter in punctuation_signs]
-        return (character in normalized_punctuation_signs)
+        # punctuation_signs = ['؟', '،', '.', ',', ';', '.', '!', ':', '؛']
+        # normalized_punctuation_signs = [normalize('NFKC', letter) for letter in punctuation_signs]
+        # return (character in normalized_punctuation_signs)
+        return (category(character)[0] == 'P')
 
+    def isvoyelmark(self, character):
+        
+        return (category(character)[0] == 'M')
+    
     def get_glyph(self, character, word):
         """
         Returns the glyph for the given character, searching for combined glyphs first
@@ -218,7 +223,10 @@ class FontVariant(object):
                 if glyph_name[1] == shape and word[i:].startswith(glyph_name[0]):
                     return self.glyphs[glyph], len(glyph_name[0]),  is_binding
             elif word[i:].startswith(glyph):
-                return self.glyphs[glyph], len(glyph), True
+                if self.isvoyelmark(word[i]):
+                    return self.glyphs[glyph], len(glyph), previous_is_binding  
+                else:
+                    return self.glyphs[glyph], len(glyph), True
         # nothing was found
         return self.glyphs.get(self.default_glyph, None), 1, True
 
