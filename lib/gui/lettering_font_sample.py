@@ -11,6 +11,7 @@ from inkex import Group, errormsg
 
 from ..i18n import _
 from ..lettering import get_font_list
+from ..utils.settings import global_settings
 
 
 class FontSampleFrame(wx.Frame):
@@ -106,7 +107,10 @@ class FontSampleFrame(wx.Frame):
         self.main_panel.SetSizer(notebook_sizer)
 
         self.set_font_list()
-        self.font_chooser.SetValue(list(self.fonts.values())[0].marked_custom_font_name)
+        select_font = global_settings['last_font']
+        self.font_chooser.SetValue(select_font)
+        max_line_width = global_settings['font_sampling_max_line_width']
+        self.max_line_width.SetValue(max_line_width)
         self.on_font_changed()
 
         self.SetSizeHints(notebook_sizer.CalcMin())
@@ -129,6 +133,7 @@ class FontSampleFrame(wx.Frame):
 
     def on_font_changed(self, event=None):
         self.font = self.fonts.get(self.font_chooser.GetValue(), list(self.fonts.values())[0].marked_custom_font_name)
+        global_settings['last_font'] = self.font.marked_custom_font_name
         self.scale_spinner.SetRange(int(self.font.min_scale * 100), int(self.font.max_scale * 100))
         # font._load_variants()
         self.direction.Clear()
@@ -154,6 +159,8 @@ class FontSampleFrame(wx.Frame):
         # parameters
         line_width = self.max_line_width.GetValue()
         direction = self.direction.GetValue()
+
+        global_settings['font_sampling_max_line_width'] = line_width
 
         self.font._load_variants()
         self.font_variant = self.font.variants[direction]

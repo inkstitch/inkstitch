@@ -20,6 +20,7 @@ from ...lettering.font_variant import FontVariant
 from ...lettering.categories import FONT_CATEGORIES
 from ...stitch_plan import stitch_groups_to_stitch_plan
 from ...svg.tags import SVG_PATH_TAG
+from ...utils.settings import global_settings
 from ...utils.threading import ExitThread, check_stop_flag
 from .. import PreviewRenderer
 from . import HelpPanel, SettingsPanel
@@ -69,7 +70,8 @@ class LetteringEditJsonPanel(wx.Panel):
         self.SetSizer(notebook_sizer)
 
         self.set_font_list()
-        self.settings_panel.font_chooser.SetValue(list(self.fonts.values())[0].marked_custom_font_name)
+        select_font = global_settings['last_font']
+        self.settings_panel.font_chooser.SetValue(select_font)
         self.on_font_changed()
 
         self.SetSizeHints(notebook_sizer.CalcMin())
@@ -229,6 +231,7 @@ class LetteringEditJsonPanel(wx.Panel):
 
     def on_font_changed(self, event=None):
         self.font = self.fonts.get(self.settings_panel.font_chooser.GetValue(), list(self.fonts.values())[0].marked_custom_font_name)
+        global_settings['last_font'] = self.font.marked_custom_font_name
         self.kerning_pairs = self.font.kerning_pairs
         self.font._load_variants()
         self.default_variant = self.font.variants[self.font.json_default_variant]
@@ -305,7 +308,10 @@ class LetteringEditJsonPanel(wx.Panel):
         self.settings_panel.font_kerning.size.SetValue(self.font.size)
         self.settings_panel.font_kerning.max_scale.SetValue(self.font.max_scale)
         self.settings_panel.font_kerning.min_scale.SetValue(self.font.min_scale)
-        self.settings_panel.font_kerning.horiz_adv_x_default.SetValue(self.font.horiz_adv_x_default)
+        if self.font.horiz_adv_x_default is None:
+            self.settings_panel.font_kerning.horiz_adv_x_default.SetValue(0.0)
+        else:
+            self.settings_panel.font_kerning.horiz_adv_x_default.SetValue(self.font.horiz_adv_x_default)
         self.settings_panel.font_kerning.horiz_adv_x_space.SetValue(self.font.word_spacing)
 
     def update_kerning_list(self):
@@ -357,6 +363,10 @@ class LetteringEditJsonPanel(wx.Panel):
 
         with open(json_file, 'r') as font_data:
             data = json.load(font_data)
+
+        horiz_adv_x_default = self.font_meta['horiz_adv_x_default']
+        if horiz_adv_x_default == 0:
+            horiz_adv_x_default = None
 
         for key, val in self.font_meta.items():
             data[key] = val
@@ -445,7 +455,7 @@ class LetteringEditJsonPanel(wx.Panel):
         node.set('transform', transform)
 
         horiz_adv_x_default = self.font_meta['horiz_adv_x_default']
-        if horiz_adv_x_default is None:
+        if horiz_adv_x_default in [0, None]:
             horiz_adv_x_default = glyph.width + glyph.min_x
 
         position_x += self.font.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
