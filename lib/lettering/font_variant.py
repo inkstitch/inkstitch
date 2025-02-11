@@ -155,7 +155,11 @@ class FontVariant(object):
 
     def isvoyelmark(self, character):
         
-        return (category(character)[0] == 'M')
+        return (category(character)[0] == 'M') 
+    
+    def is_letter(self, character):
+        
+        return (category(character)[0] == 'L')
     
     def get_glyph(self, character, word):
         """
@@ -174,18 +178,19 @@ class FontVariant(object):
         # in arabic each letter (or ligature) may have up to 4 different shapes, hence 4 glyphs
         # this computes the shape of the glyph that represents word[starting:ending+1]
 
-        # punctuation is not really part of the word
+        # punctuation   or a combining accent is not really part of the word
         # they may appear at begining or end of words
         # computes where the actual word begins and ends up
         last_char_index = len(word)-1
         first_char_index = 0
 
-        while self.ispunctuation(word[last_char_index]):
+        while not self.is_letter(word[last_char_index]):
             last_char_index = last_char_index - 1
-        while self.ispunctuation(word[first_char_index]):
+            
+        while not self.is_letter(word[first_char_index]):
             first_char_index = first_char_index + 1
 
-        # first glyph is eithher isol or init depending wether it is also the last glyph of the actual word
+        # first glyph is either isol or init depending if it is also the last glyph of the actual word
         if starting == first_char_index:
             if not self.isbinding(word[ending]) or len(word) == 1:
                 shape = 'isol'
