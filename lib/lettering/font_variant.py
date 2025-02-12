@@ -139,28 +139,23 @@ class FontVariant(object):
         glyph_selection = [glyph_name for glyph_name, glyph_layer in self.glyphs.items() if glyph_name.startswith(character)]
         return sorted(glyph_selection, key=lambda glyph: (len(glyph.split('.')[0]), len(glyph)), reverse=True)
 
-    def isbinding(self, character):
+    def is_binding(self, character):
         # after  a non binding letter a letter can only be in isol or fina shape.
         # binding glyph only have  two shapes, isol and fina
+
         non_binding_char = ['ا', 'أ', 'ﺇ', 'آ', 'ٱ', 'د', 'ذ', 'ر', 'ز', 'و']
         normalized_non_binding_char = [normalize('NFKC', letter) for letter in non_binding_char]
         return not (character in normalized_non_binding_char)
 
-    def ispunctuation(self, character):
-        # punctuation sign  are  not considered as part of the word. They onnly have one shape
-        # punctuation_signs = ['؟', '،', '.', ',', ';', '.', '!', ':', '؛']
-        # normalized_punctuation_signs = [normalize('NFKC', letter) for letter in punctuation_signs]
-        # return (character in normalized_punctuation_signs)
-        return (category(character)[0] == 'P')
+    def is_mark(self, character):
+        # this category includes all the combining diacritics.
 
-    def isvoyelmark(self, character):
-        
-        return (category(character)[0] == 'M') 
-    
+        return (category(character)[0] == 'M')
+
     def is_letter(self, character):
-        
+
         return (category(character)[0] == 'L')
-    
+
     def get_glyph(self, character, word):
         """
         Returns the glyph for the given character, searching for combined glyphs first
@@ -186,19 +181,19 @@ class FontVariant(object):
 
         while not self.is_letter(word[last_char_index]):
             last_char_index = last_char_index - 1
-            
+
         while not self.is_letter(word[first_char_index]):
             first_char_index = first_char_index + 1
 
         # first glyph is either isol or init depending if it is also the last glyph of the actual word
         if starting == first_char_index:
-            if not self.isbinding(word[ending]) or len(word) == 1:
+            if not self.is_binding(word[ending]) or len(word) == 1:
                 shape = 'isol'
             else:
                 shape = 'init'
         # last glyph  is  final if previous is binding, isol otherwise
         # a non binding  glyph behaves like the last glyph
-        elif ending == last_char_index or not self.isbinding(word[ending]):
+        elif ending == last_char_index or not self.is_binding(word[ending]):
             if previous_is_binding:
                 shape = 'fina'
             else:
@@ -221,15 +216,15 @@ class FontVariant(object):
         for glyph in glyph_selection:
             glyph_name = glyph.split('.')
             if len(glyph_name) == 2 and glyph_name[1] in ['isol', 'init', 'medi', 'fina']:
-                is_binding = self.isbinding(glyph_name[0][-1])
+                is_binding = self.is_binding(glyph_name[0][-1])
                 if len(word) < i + len(glyph_name[0]):
                     continue
                 shape = self.get_next_glyph_shape(word, i, i + len(glyph_name[0]) - 1, previous_is_binding)
                 if glyph_name[1] == shape and word[i:].startswith(glyph_name[0]):
                     return self.glyphs[glyph], len(glyph_name[0]),  is_binding
             elif word[i:].startswith(glyph):
-                if self.isvoyelmark(word[i]):
-                    return self.glyphs[glyph], len(glyph), previous_is_binding  
+                if self.is_mark(word[i]):
+                    return self.glyphs[glyph], len(glyph), previous_is_binding
                 else:
                     return self.glyphs[glyph], len(glyph), True
         # nothing was found
