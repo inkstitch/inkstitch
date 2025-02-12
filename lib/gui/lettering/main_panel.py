@@ -76,12 +76,12 @@ class LetteringPanel(wx.Panel):
 
         self.settings = DotDict({
             "text": "",
-            "text_align": 0,
+            "text_align": global_settings['lettering_align_text'],
             "back_and_forth": False,
             "font": None,
             "scale": 100,
-            "trim_option": 0,
-            "use_trim_symbols": False,
+            "trim_option": global_settings['lettering_trim_option'],
+            "use_trim_symbols": global_settings['lettering_use_command_symbols'],
             "color_sort": 0
         })
 
@@ -190,9 +190,12 @@ class LetteringPanel(wx.Panel):
             return list(self.fonts.values())[0]
 
     def on_change(self, attribute, event):
-        self.settings[attribute] = event.GetEventObject().GetValue()
+        value = event.GetEventObject().GetValue()
+        self.settings[attribute] = value
         if attribute == "text" and self.options_panel.font_glyph_filter.GetValue() is True:
             self.on_filter_changed()
+        if attribute == "use_trim_symbols":
+            global_settings['lettering_use_command_symbols'] = value
         self.update_preview()
 
     def on_color_sort_change(self, event=None):
@@ -203,7 +206,12 @@ class LetteringPanel(wx.Panel):
         self.update_preview()
 
     def on_choice_change(self, attribute, event=None):
-        self.settings[attribute] = event.GetEventObject().GetCurrentSelection()
+        value = event.GetEventObject().GetCurrentSelection()
+        self.settings[attribute] = value
+        if attribute == 'trim_option':
+            global_settings['lettering_trim_option'] = value
+        elif attribute == 'text_align':
+            global_settings['lettering_align_text'] = value
         self.update_preview()
 
     def on_font_changed(self, event=None):

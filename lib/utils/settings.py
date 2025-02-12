@@ -32,6 +32,10 @@ DEFAULT_SETTINGS = {
     "stitch_layer_editor_sash_position": -200,
     # lettering (all lettering applications)
     "last_font": "Ink/Stitch Small Font",
+    # lettering
+    "lettering_align_text": 0,
+    "lettering_trim_option": 0,
+    "lettering_use_command_symbols": False,
     # font sampling
     "font_sampling_max_line_width": 180
 }
