@@ -230,7 +230,13 @@ class LetteringEditJsonPanel(wx.Panel):
         return glyph
 
     def on_font_changed(self, event=None):
-        self.font = self.fonts.get(self.settings_panel.font_chooser.GetValue(), list(self.fonts.values())[0].marked_custom_font_name)
+        selected_font = self.settings_panel.font_chooser.GetValue()
+        if selected_font:
+            self.font = self.fonts[selected_font]
+        else:
+            first = list(self.fonts.values())[0].marked_custom_font_name
+            self.font = self.fonts[first]
+            self.settings_panel.font_chooser.SetValue(first)
         global_settings['last_font'] = self.font.marked_custom_font_name
         self.kerning_pairs = self.font.kerning_pairs
         self.font._load_variants()

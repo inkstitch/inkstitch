@@ -106,11 +106,12 @@ class FontSampleFrame(wx.Frame):
         self.settings.SetSizer(settings_sizer)
         self.main_panel.SetSizer(notebook_sizer)
 
+        max_line_width = global_settings['font_sampling_max_line_width']
+        self.max_line_width.SetValue(max_line_width)
+
         self.set_font_list()
         select_font = global_settings['last_font']
         self.font_chooser.SetValue(select_font)
-        max_line_width = global_settings['font_sampling_max_line_width']
-        self.max_line_width.SetValue(max_line_width)
         self.on_font_changed()
 
         self.SetSizeHints(notebook_sizer.CalcMin())
@@ -132,7 +133,13 @@ class FontSampleFrame(wx.Frame):
                 self.font_chooser.Append(font.marked_custom_font_name)
 
     def on_font_changed(self, event=None):
-        self.font = self.fonts.get(self.font_chooser.GetValue(), list(self.fonts.values())[0].marked_custom_font_name)
+        selected_font = self.font_chooser.GetValue()
+        if selected_font:
+            self.font = self.fonts[selected_font]
+        else:
+            first = list(self.fonts.values())[0].marked_custom_font_name
+            self.font = self.fonts[first]
+            self.font_chooser.SetValue(first)
         global_settings['last_font'] = self.font.marked_custom_font_name
         self.scale_spinner.SetRange(int(self.font.min_scale * 100), int(self.font.max_scale * 100))
         # font._load_variants()
