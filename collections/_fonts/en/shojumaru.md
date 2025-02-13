@@ -34,4 +34,4 @@ up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max
 
 ## License
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/shojumaru/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/Shojumaru/LICENSE)
