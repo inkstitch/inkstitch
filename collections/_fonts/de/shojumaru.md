@@ -32,4 +32,4 @@ Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 19mm (0.75 in) hoch
 
 ## Lizenz
 
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/shojumaru/LICENSE))
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/Shojumaru/LICENSE))
