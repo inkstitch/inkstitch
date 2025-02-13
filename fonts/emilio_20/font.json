@@ -4,7 +4,8 @@
     "keywords": [
         "display",
         "monogram",
-        "serif"
+        "serif",
+        "latin"
     ],
     "leading": 200,
     "auto_satin": false,
@@ -118,5 +119,9 @@
         "X",
         "Y",
         "Z"
-    ]
+    ],
+    "default_variant": "→",
+    "text_direction": "ltr",
+    "sortable": false,
+    "combine_at_sort_indices": []
 }

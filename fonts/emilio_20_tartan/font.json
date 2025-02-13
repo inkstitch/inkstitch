@@ -1,12 +1,13 @@
 {
     "name": "EMILIO_20_Tartan",
-   
- "description": "Emilio 20 Tartan uses tartan fill for a colorful font.",
-  "keywords": [
+    "description": "Emilio 20 Tartan uses tartan fill for a colorful font.",
+    "keywords": [
         "display",
-        "serif",
+        "monogram",
         "multicolor",
-        "tartan"
+        "serif",
+        "tartan",
+        "latin"
     ],
     "leading": 200,
     "auto_satin": false,
@@ -96,5 +97,7 @@
         "X",
         "Y",
         "Z"
-    ]
+    ],
+    "default_variant": "→",
+    "text_direction": "ltr"
 }
