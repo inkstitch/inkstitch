@@ -2,7 +2,8 @@
     "name": "Baumans FI Small",
     "description": "Baumans FI Small is an altered version of Baumans FI, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory.",
     "keywords": [
-        "tiny"
+        "tiny",
+        "latin"
     ],
     "leading": 162,
     "auto_satin": false,
@@ -218,9 +219,11 @@
     },
     "kerning_pairs": {},
     "glyphs": [
+        " ́",
+        " ̈",
+        "!",
         "&",
         "'",
-        "‘",
         "(",
         ")",
         "+",
@@ -241,17 +244,12 @@
         ";",
         "=",
         "?",
-        "!",
         "@",
         "A",
         "B",
         "C",
         "D",
         "E",
-        "È",
-        "É",
-        "Ê",
-        "Ë",
         "F",
         "G",
         "H",
@@ -300,12 +298,13 @@
         "x",
         "y",
         "z",
-        "¨",
         "«",
-        "´",
-        "’",
         "»",
         "Ä",
+        "È",
+        "É",
+        "Ê",
+        "Ë",
         "Ö",
         "Ü",
         "ß",
@@ -325,6 +324,13 @@
         "ù",
         "û",
         "ü",
-        "ˆ"
-    ]
+        "ˆ",
+        "‘",
+        "’"
+    ],
+    "default_variant": "→",
+    "text_direction": "ltr",
+    "letter_case": "",
+    "sortable": false,
+    "combine_at_sort_indices": []
 }
