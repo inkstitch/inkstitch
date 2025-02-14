@@ -5,7 +5,8 @@
         "display",
         "monogram",
         "multicolor",
-        "sans_serif"
+        "sans_serif",
+        "latin"
     ],
     "leading": 276.0,
     "auto_satin": false,
@@ -60554,5 +60555,7 @@
         "Ÿ",
         "‘",
         "’"
-    ]
+    ],
+    "default_variant": "→",
+    "text_direction": "ltr"
 }
