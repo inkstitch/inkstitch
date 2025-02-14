@@ -8,7 +8,7 @@ import os
 import pickle
 import sqlite3
 
-import appdirs
+import platformdirs
 import diskcache
 
 from lib.utils.settings import global_settings
@@ -31,13 +31,13 @@ def get_stitch_plan_cache():
     global __stitch_plan_cache
 
     if __stitch_plan_cache is None:
-        cache_dir = os.path.join(appdirs.user_config_dir('inkstitch'), 'cache', 'stitch_plan')
+        cache_dir = os.path.join(platformdirs.user_config_dir('inkstitch'), 'cache', 'stitch_plan')
         size_limit = global_settings['cache_size'] * 1024 * 1024
         try:
             __stitch_plan_cache = diskcache.Cache(cache_dir, size=size_limit)
         except (sqlite3.DatabaseError, sqlite3.OperationalError):
             # reset cache database file if it couldn't parse correctly
-            cache_file = os.path.join(appdirs.user_config_dir('inkstitch'), 'cache', 'stitch_plan', 'cache.db')
+            cache_file = os.path.join(platformdirs.user_config_dir('inkstitch'), 'cache', 'stitch_plan', 'cache.db')
             if os.path.exists(cache_file):
                 os.remove(cache_file)
                 __stitch_plan_cache = diskcache.Cache(cache_dir, size=size_limit)

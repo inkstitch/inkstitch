@@ -8,7 +8,7 @@ import sys
 from os.path import dirname, realpath
 from pathlib import Path
 
-import appdirs
+import platformdirs
 
 if sys.version_info >= (3, 11):
     import tomllib  # built-in in Python 3.11+
@@ -42,7 +42,7 @@ def get_resource_dir(name):
 
 
 def get_user_dir(name=None):
-    path = appdirs.user_config_dir("inkstitch")
+    path = platformdirs.user_config_dir("inkstitch")
 
     if name is not None:
         path = os.path.join(path, name)
