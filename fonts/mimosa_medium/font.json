@@ -4,7 +4,8 @@
     "default_variant": "→",
     "text_direction": "ltr",
     "keywords": [
-        "display"
+        "display",
+        "latin"
     ],
     "leading": 150.0,
     "auto_satin": false,
