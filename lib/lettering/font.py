@@ -363,15 +363,15 @@ class Font(object):
         skip = []
         previous_is_binding = True
 
+        # forced letter case
+        if self.letter_case == "upper":
+            word = word.upper()
+        elif self.letter_case == "lower":
+            word = word.lower()
+
         for i, character in enumerate(word):
             if i in skip:
                 continue
-
-            # forced letter case
-            if self.letter_case == "upper":
-                character = character.upper()
-            elif self.letter_case == "lower":
-                character = character.lower()
 
             glyph, glyph_len, binding = glyph_set.get_next_glyph(word, i, previous_is_binding)
             previous_is_binding = binding
