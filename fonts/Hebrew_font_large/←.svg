@@ -21,9 +21,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="3.0783251"
-     inkscape:cx="24.526324"
-     inkscape:cy="85.760922"
-     inkscape:current-layer="g143"
+     inkscape:cx="61.072172"
+     inkscape:cy="93.882222"
+     inkscape:current-layer="g145"
      inkscape:lockguides="true"
      showgrid="false">
     <sodipodi:guide
@@ -607,7 +607,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
     <path
        d="m 71.37542,81.8746 q 0,7.2501 -4.06252,14.1876 -3.43752,4.3125 -5.68753,4.3125 -1.125,0 -1.125,-1.8125 0,-0.25 0.5,-1.5 0.5,-1.25 0.5,-2.1875 0,-1.1875 -3.50002,-5.875 L 51.62532,82.6246 20.31267,51.312 q -3.50001,3.3125 -3.50001,7.3125 0,4.1876 7.68753,12.1564 7.68754,7.9687 7.68754,14.6563 0,3.1875 -3.37502,8.0313 -3.37501,4.8437 -8.25004,4.8437 H 3.87509 L 4.5626,95.1247 q 3.18751,-1.0625 3.18751,-5.5 0,-2.1875 -1.21875,-9.1563 Q 5.3126,73.4996 5.3126,67.3746 q 0,-9.8126 8.06254,-22.9376 l 0.0625,-0.125 Q 8.50012,39.4994 6.56261,35.8744 4.3126,31.4994 4.3126,25.3119 q 0,-6.0001 3.93752,-12.9376 3.37501,-4.3125 5.62502,-4.3125 1.18751,0 1.18751,1.8125 0,0.1875 -0.53125,0.8125 -0.53126,0.625 -0.53126,1.5 0,1.25 3.50002,5.875 3.18752,3.1876 6.37503,6.3126 L 49.81282,48.687 53.50033,36.9369 q -6.62503,-1.75 -8.18754,-3.5625 -1.0625,-2.1875 -1.0625,-5.6875 0,-6.0625 4.43752,-15.7501 3.56252,-3.875 6.06253,-3.875 1.125,0 1.125,1.1875 0,0.25 -0.3125,0.5625 -0.3125,0.3125 -0.3125,1.1875 0,3.0625 6.75003,3.5625 9.31255,0.25 9.31255,12.3751 -0.625,8.75 -2.75001,10.25 -2.12501,2.625 -4.62503,2.625 -0.75,0 -1.25,-0.25 -1.25001,-0.3125 -1.43751,-0.062 l -3.37502,16.4376 3.50002,4.875 q 5.62503,6.9376 7.62504,10.5001 2.37501,4.375 2.37501,10.5625 z"
        id="path142"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-opacity:0.5;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 63.068182,95.241477 64.772727,75.639204 47.301136,60.085227 60.298296,28.764204 v 0"
@@ -621,7 +621,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path359"
        sodipodi:nodetypes="cccccccccccccccccccccccccc"
@@ -632,11 +632,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 61.1641,39.918 57.1787,38.9588"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -650,7 +653,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path361"
        sodipodi:nodetypes="ccccccc"
@@ -661,11 +664,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 59.8652,58.709 51.519,66.4508"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -679,7 +685,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path360"
        sodipodi:nodetypes="ccccccccccccccccccccccccc"
@@ -690,11 +696,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 20.2575,51.3751 16.3028,48.6958"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -708,7 +717,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path358"
        sodipodi:nodetypes="ccccccccccccccccccc"
@@ -719,21 +728,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ב"
-     style="display:none"
+     style="display:inline"
      id="g143">
     <path
        d="M 79.43796,71.9996 70.43791,98.3122 H 3.00009 l 10.50005,-26.3751 49.06274,-0.125 0.1875,-25.8126 q 0,-6.1876 -10.50005,-4.9376 H 13.81264 q -5.31252,-4.5 -5.31252,-12.25 0.125,-16.8751 0.125,-18.8126 0,-1.9375 3.56251,-1.9375 0.75001,0 1.84376,2.6875 1.09376,2.6875 4.40627,2.6875 h 35.37517 q 17.56259,0 17.56259,18.5626 L 70.43791,51.687 q -0.5,9.875 -2.25001,20.3751 z"
        id="path143"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-opacity:0.5;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 69.377238,94.874676 64.268061,74.975778 65.612581,58.841537"
@@ -747,7 +759,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path369"
        sodipodi:nodetypes="ccccccccccccccccccc"
@@ -758,11 +770,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 62.3267,72.1262 0.0171,13.087"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -776,7 +791,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path366"
        sodipodi:nodetypes="cccccc"
@@ -787,21 +802,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ג"
-     style="display:none"
+     style="display:inline"
      id="g144">
     <path
        d="m 42.81278,82.8121 q 0,15.5001 -1.81251,15.5001 -1.25,0 -1.375,-1.6875 -0.31251,-2.9375 -3.93752,-14.5001 -3.37502,-10.5625 -4.81253,-19.3125 -0.4375,1.9375 -0.65625,-7.4063 -0.21875,-9.3438 -0.34375,-11.9063 0.5,-3.1876 -8.56254,-3.6876 l -6.25003,-0.625 q -6.06253,0.125 -7.81254,-7.25 -1.125,-3.125 -1.125,-10.6875 1.25,-13.1876 4.81252,-13.1876 0.75,0 1.84376,2.6875 1.09375,2.6875 4.40627,2.6875 h 3.87502 q 17.37508,0 17.37508,18.5626 0,3.1875 -0.625,6.4688 -0.62501,3.2812 -0.62501,8.4063 0,3.6875 1.03126,7.1563 1.03125,3.4687 4.90627,12.9063 -0.3125,10.1875 -0.3125,15.875 z M 31.00023,60.812 Q 23.12519,77.4996 21.43768,94.1872 L 0.25008,98.3122 4.6251,69.0621 q 14.75007,6.8125 26.37513,-8.2501 z"
        id="path144"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 40.604507,91.647828 38.991083,72.286738"
@@ -812,7 +830,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path2"
        inkstitch:max_stitch_length_mm="5"
@@ -822,17 +840,20 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 29.6932,63.4338 C 27.357179,69.336657 25.089975,75.291653 23.642219,81.485778 22.610048,85.661852 21.90543,89.912629 21.4375,94.1875 14.375,95.5625 7.3125121,96.937562 0.25,98.3125 M 30.4414,61.498 c -2.066364,1.973818 -3.933721,4.170965 -6.154703,5.973843 -3.932663,2.919769 -9.028157,4.352878 -13.883769,3.422876 C 8.3818662,70.617447 6.526711,69.746157 4.625,69.0625 3.2245596,78.425399 1.8241384,87.788301 0.423695,97.1512 M -2.95794,88.9588 c 4.1231933,4.3024 8.2463867,8.6048 12.36958,12.9072 M 1.07562,64.7574 C 9.4116467,76.141 17.747673,87.5246 26.0837,98.9082 M 20.7056,60.7239 c 2.8683,3.585367 5.7366,7.170733 8.6049,10.7561"
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path1"
        inkstitch:max_stitch_length_mm="5"
@@ -842,21 +863,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ד"
-     style="display:none"
+     style="display:inline"
      id="g145">
     <path
        d="m 79.93796,24.6869 q 0,4.5 -0.78125,9.8438 -0.78126,5.3437 -6.90629,5.7812 -7.31253,8.6251 -4.43752,19.6876 2.62501,9.1876 4.25002,13.7814 1.62501,4.5937 -1.25,14.2813 -0.56251,1.375 -4.06252,5.8125 -3.50002,4.4375 -4.50002,4.4375 -2.93752,0 -2.93752,-2.6875 0,-7 -2.06251,-37.4377 -0.1875,-4.875 4.43752,-18.0001 l -46.50022,-0.125 q -5.93753,-2.125 -6.87503,-8.125 -1.75001,-2.5 -1.75001,-10.6875 0,-13.1876 3.62502,-13.1876 0.625,0 1.78125,2.6875 1.15626,2.6875 4.46878,2.6875 h 55.06276 q 3.68752,0 6.06253,2.9375 2.37501,2.9375 2.37501,8.3126 z"
        id="path145"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <g
        id="g14">
       <path
@@ -872,7 +896,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
          style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
-         inkstitch:pull_compensation_mm=""
+         inkstitch:pull_compensation_mm="0.3"
          inkscape:label="Colonne satin 0"
          id="path12"
          sodipodi:nodetypes="cccccccccccccc"
@@ -883,11 +907,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:zigzag_underlay_inset_mm=".5"
-         inkstitch:zigzag_spacing_mm="0"
+         inkstitch:zigzag_underlay_inset_mm=".3"
+         inkstitch:zigzag_spacing_mm="0.55"
          inkstitch:short_stitch_distance_mm="0"
          inkstitch:split_staggers="2.5"
-         inkstitch:pull_compensation_percent="10" />
+         inkstitch:contour_underlay="True"
+         inkstitch:contour_underlay_inset_mm="0.10"
+         inkstitch:contour_underlay_stitch_length_mm="1.50"
+         inkstitch:pull_compensation_percent="" />
       <path
          d="M 61.6738,40.2305 61.6935,26.81"
          style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -901,7 +928,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
          style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
-         inkstitch:pull_compensation_mm=""
+         inkstitch:pull_compensation_mm="0.3"
          inkscape:label="Colonne satin 1"
          id="path13"
          sodipodi:nodetypes="cccccccccccccccc"
@@ -912,22 +939,25 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:zigzag_underlay_inset_mm=".5"
-         inkstitch:zigzag_spacing_mm="0"
+         inkstitch:zigzag_underlay_inset_mm=".3"
+         inkstitch:zigzag_spacing_mm="0.55"
          inkstitch:short_stitch_distance_mm="0"
          inkstitch:split_staggers="2.5"
-         inkstitch:pull_compensation_percent="10" />
+         inkstitch:contour_underlay="True"
+         inkstitch:contour_underlay_inset_mm="0.10"
+         inkstitch:contour_underlay_stitch_length_mm="1.50"
+         inkstitch:pull_compensation_percent="" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ה"
-     style="display:none"
+     style="display:inline"
      id="g146">
     <path
        d="m 79.93796,25.3119 q 0,4.6875 -2.59376,9.7813 -2.59376,5.0937 -5.46878,5.0937 l -0.25,0.125 1.75001,17.6876 q 2.93751,15.7501 1.1875,30.0627 0.0625,1.375 -3.43751,5.8125 -3.50002,4.4375 -4.50002,4.4375 -2.31252,0 -2.31252,-2.6875 0,-11 -2.0625,-55.1878 l -47.31273,-0.25 q -4.93753,0 -6.62503,-7.625 -1.75001,-3.125 -1.75001,-10.6875 0,-13.8126 3.62502,-13.8126 0.625,0 1.78125,2.6875 1.15626,2.6875 4.46878,2.6875 h 55.06276 q 3.68752,0 6.06253,2.9375 2.37501,2.9375 2.37501,8.9376 z M 19.81267,77.8746 q -0.5,11.1876 -3.68752,14.4376 -0.6875,1.375 -2.43751,3.25 -0.8125,1.5 -4.00002,2.75 -2.43751,0 -0.5625,-1.9375 0,-2.1875 -0.28125,-3.9062 -0.28125,-1.7188 -0.46875,-3.4063 -1.06251,-2.75 -1.06251,-10.1876 0,-2.1875 0.125,-6 0.125,-3.8125 1.12501,-7.3125 0.875,-4.4376 5.31252,-8.5001 2.43751,-3.5625 4.12502,-4.1875 3.50002,-1.25 3.50002,-0.125 -1.25001,1.75 -1.81251,3.6563 -0.5625,1.9062 0.0625,4.2812 0,1.875 0.21875,6.5001 0.21875,4.625 -0.15625,10.6875 z"
        id="path146"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="m 65.312857,94.563721 4.46039,-11.469574"
@@ -941,7 +971,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path25"
        inkstitch:max_stitch_length_mm="5"
@@ -951,11 +981,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 72.4161,40.663 65.3129,38.1716 65.6315,27.3393"
@@ -969,7 +1002,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 2"
        id="path26"
        inkstitch:max_stitch_length_mm="5"
@@ -979,11 +1012,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <g
        id="g28">
       <path
@@ -999,7 +1035,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
          style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
-         inkstitch:pull_compensation_mm=""
+         inkstitch:pull_compensation_mm="0.3"
          inkscape:label="Colonne satin 0"
          id="path24"
          sodipodi:nodetypes="cccccccccccccccc"
@@ -1010,28 +1046,31 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:zigzag_underlay_inset_mm=".5"
-         inkstitch:zigzag_spacing_mm="0"
+         inkstitch:zigzag_underlay_inset_mm=".3"
+         inkstitch:zigzag_spacing_mm="0.55"
          inkstitch:short_stitch_distance_mm="0"
          inkstitch:split_staggers="2.5"
-         inkstitch:pull_compensation_percent="10" />
+         inkstitch:contour_underlay="True"
+         inkstitch:contour_underlay_inset_mm="0.10"
+         inkstitch:contour_underlay_stitch_length_mm="1.50"
+         inkstitch:pull_compensation_percent="" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ו"
-     style="display:none"
+     style="display:inline"
      id="g147">
     <path
        d="m 35.37525,88.0622 q 0,1.4375 -2.28126,5.8438 -2.28127,4.4062 -3.90627,4.4062 -2.75002,0 -2.75002,-2.6875 0,-1.6875 0.28125,-23.0938 0.28126,-21.4064 0.28126,-24.9064 0,-7.3126 -5.43753,-7.3126 h -7.93754 q -4.93752,0 -6.81253,-3.375 -1.75001,-5 -1.75001,-12.5625 0,-16.3126 3.43752,-16.3126 0.75,0 1.87501,2.6875 1.125,2.6875 4.43752,2.6875 h 7.93754 q 12.50006,0 12.50006,18.5626 l 0.6875,28.0001 q 1.31251,12.8126 -0.5625,28.0627 z"
        id="path147"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        d="m 26.6096,96.8005 c -0.26735,-11.093002 0.184233,-22.190081 0.214335,-33.284568 -0.0131,-5.945405 0.2942,-11.902949 0.04922,-17.841148 C 26.722071,43.155139 25.035104,40.450112 22.280021,40.370763 18.212318,40.015327 13.98761,40.903171 10.032611,39.669065 7.5465694,38.865722 6.295216,36.354101 5.9931391,33.915624 4.6558481,27.569111 5.0311067,21.013877 5.5404343,14.597688 5.8025531,12.690896 5.9374787,10.544882 7.4989549,9.2155271 7.7096333,8.972748 7.9203116,8.729969 8.13099,8.48719 M 29.1877,98.3122 c 2.294136,-0.923064 3.095635,-3.393335 4.330568,-5.330041 1.287434,-2.244562 2.063016,-4.739734 2.098652,-7.337451 0.980858,-8.523675 1.060429,-17.13389 0.342034,-25.680152 C 35.567173,49.19166 35.570901,38.401207 35.021413,27.63546 34.526864,22.706698 33.046045,17.050557 28.265284,14.625334 23.64128,12.478629 18.429643,13.935852 13.549995,13.283631 11.097983,13.075036 10.530509,10.490146 9.1921537,8.9136477 8.9614758,8.6296985 8.7307979,8.3457492 8.50012,8.0618 M 23.2577,56.0132 c 5.7348,0.1062 11.4696,0.2124 17.2044,0.3186 M 23.2577,91.0591 c 4.6728,1.062 9.3456,2.124 14.0184,3.186 M 19.7532,8.86051 C 13.3812,17.037907 7.0091993,25.215303 0.637199,33.3927 M 2.54879,11.4093 C 6.6905933,10.453503 10.832397,9.4977067 14.9742,8.54191 M 16.8858,41.3576 C 24.001167,35.198033 31.116533,29.038467 38.2319,22.8789"
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path32"
        inkstitch:max_stitch_length_mm="5"
@@ -1041,21 +1080,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ז"
-     style="display:none"
+     style="display:inline"
      id="g148">
     <path
        d="m 39.75027,30.9994 q 0,5.375 -2.37501,9.9375 -2.12501,4.0001 -3.75002,4.0001 -0.1875,0 -0.1875,-0.375 -0.125,-0.3125 -0.25,-0.7187 -0.12501,-0.4063 -0.12501,-0.4688 0,-0.75 -1.71875,-1.1875 -1.71876,-0.4376 -5.21878,-1.2501 -3.06251,-0.125 -3.06251,3.9376 0,1.125 3.50001,12.3438 3.50002,11.2188 1.62501,17.4063 0,7.0625 -3.37501,15.5626 -1.43751,8.125 -3.31252,8.125 -3.25002,0 -3.25002,-1.4375 0,0.125 -0.21875,-3.0625 -0.21875,-3.1875 -0.21875,-5.5 0,-1.3125 -0.625,-11.0626 -0.625,-9.75 -3.75002,-19.5001 -0.625,-4.5625 0,-8.375 0.625,-3.8125 1.50001,-10.0626 l -0.93751,-0.125 Q 10.75013,38.7494 8.21887,35.5619 5.6876,32.3744 5.6876,24.8744 q 0,-6.5001 2.09376,-11.6563 2.09376,-5.1563 4.03127,-5.1563 1.31251,0 1.31251,1.3125 0,0.375 -0.1875,0.7188 -0.1875,0.3437 -0.1875,0.6562 0,1.75 12.37506,2.6875 14.62507,1.125 14.62507,17.5626 z"
        id="path148"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 21.73988,86.357347 18.877991,42.086328 25.119135,30.37434"
@@ -1070,7 +1112,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path40"
        sodipodi:nodetypes="cccccccccccccccccccccc"
@@ -1081,11 +1123,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 14.7792,40.3986 4.3951,1.0413"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -1099,7 +1144,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path39"
        sodipodi:nodetypes="cccccccccccccc"
@@ -1110,21 +1155,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ח"
-     style="display:none"
+     style="display:inline"
      id="g149">
     <path
        d="m 79.93796,23.4369 q 0,10.3125 -2.46876,13.2813 -2.46876,2.9687 -3.21877,3.5937 h -0.5 l 0.4375,24.1877 q 0.81251,11.125 0.375,23.5626 0.0625,1.375 -3.43751,5.8125 -3.50002,4.4375 -4.50002,4.4375 -3.56252,0 -3.56252,-2.6875 0,-11 -0.4375,-55.3128 H 28.31271 q -2.87501,0.062 -5.37502,7.4376 -1.25001,2.5625 -1.81251,13.5 -0.56251,10.9376 -0.25,14.3439 0.3125,3.4062 0,7.5 -0.31251,4.0938 -0.37501,5.4688 -0.6875,1.375 -3.68751,6.375 -3.31252,3.375 -7.12504,3.375 -2.43751,0 -2.43751,-2.5625 0,-1.5625 0.87501,-3.3125 0.1875,-4.125 0.1875,-14.5001 0,-2.0625 -0.31251,-10.4687 Q 7.68761,59.062 8.93762,55.562 12.68764,42.3745 16.81266,40.3119 h -3.50002 q -3.06251,0 -5.00002,-3.375 -1.75001,-8.75 -1.75001,-16.3126 0,-12.5625 3.62502,-12.5625 0.625,0 1.78125,2.6875 1.15626,2.6875 4.46878,2.6875 h 55.06276 q 3.68752,0 6.06253,2.9375 2.37501,2.9375 2.37501,7.0626 z"
        id="path149"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="m 65.312857,94.563721 4.46039,-11.469574"
@@ -1138,7 +1186,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path25-0"
        inkstitch:max_stitch_length_mm="5"
@@ -1148,11 +1196,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 72.4161,40.663 65.3129,38.1716 65.6315,27.3393"
@@ -1166,7 +1217,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 2"
        id="path26-3"
        inkstitch:max_stitch_length_mm="5"
@@ -1176,11 +1227,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 26.6884,40.2181 -5.5282,0.8444"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -1194,7 +1248,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path46"
        sodipodi:nodetypes="ccccccccccccccccc"
@@ -1205,21 +1259,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ט"
-     style="display:none"
+     style="display:inline"
      id="g150">
     <path
        d="m 79.50046,53.3745 q 0,9.375 -10.56255,44.9377 H 10.31263 Q 9.81262,89.6872 8.31262,77.7496 6.75011,65.3746 6.75011,57.9995 q 0,-12.5 6.43753,-17.5626 -4.18752,-2.0625 -4.56252,-5.125 -1.37501,-2.5 -1.37501,-9.1875 0,-8.1251 2.62501,-14.8126 2.18751,-3.25 3.50002,-3.25 1.31251,0 1.31251,1.3125 0,0.375 -0.21875,0.7188 -0.21876,0.3437 -0.21876,0.6562 0,0.8125 2.93752,1.75 5.37502,1.875 8.25004,3.125 4.31252,1.9375 5.71878,4.0938 1.40625,2.1563 1.53125,12.6563 0,5.125 -2.81251,10.3751 -2.37501,4.375 -3.31252,4.375 -0.8125,-0.062 -0.875,-0.062 l 0.125,-0.094 q 0,0 0.25,-1.2813 0,-0.875 -5.43752,-2.3125 -5.62503,2 -5.62503,8.625 -1.25001,5.4375 1.125,13.7501 1.93751,5.3125 2.12501,6.3125 h 47.18773 q 4.75002,-9.4376 4.75002,-11.7501 1.87501,-12 -2.43751,-14.8125 -4.93752,-5.3126 -12.37506,-5.3126 -6.87503,0 -9.06254,5.4376 -2.12501,2.375 -2.12501,8.6875 0,0.9375 -0.125,0.625 -0.125,-0.3125 0.5,0.875 0,1.125 -0.8125,2.2813 -0.81251,1.1562 -3.62502,1.1562 -3.56252,0 -3.56252,-8.8125 0,-3.9375 2.62501,-12.1876 3.00002,-9.375 3.62502,-14.6875 0.1875,-1.3125 0.1875,-2.7501 0,-1.5625 -0.25,-3.8437 -0.25,-2.2813 -0.25,-2.9688 0,-1.4375 0.5625,-2.0625 0.43751,-0.4375 2.43751,-0.4375 4.81253,0 10.81256,1.9375 7.56253,2.375 11.87505,6.5625 6.25003,6.1251 8.50004,12.9376 1.68751,4.9375 2.93752,12.7501 0,1.25 -0.0625,3.7813 -0.0625,2.5312 -0.0625,3.9062 z"
        id="path150"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 61.477221,95.353581 73.499434,63.385426"
@@ -1233,7 +1290,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path58"
        inkstitch:max_stitch_length_mm="5"
@@ -1243,11 +1300,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 64.6816,72.0559 70.2611,72.5116 43.7236,84.5785 14.3758,74.1516 C 14.4588,60.3432 6.22031,43.8212 23.16645,35.5117"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -1262,7 +1322,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path60"
        sodipodi:nodetypes="cscccsccccccc"
@@ -1273,17 +1333,20 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 12.7129,40.8398 C 4.362802,48.835144 6.8585012,62.062953 7.6875,72.377 M 19.0859,44.0723 C 10.795408,48.519301 15.976562,65.68692 18.25,72.0625 M 16.3939,57.3743 3.27879,56.8279"
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path59"
        sodipodi:nodetypes="cccccc"
@@ -1294,11 +1357,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 7.6875,72.377 9.575503,12.817564"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -1313,7 +1379,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path56"
        sodipodi:nodetypes="cccccccccc"
@@ -1324,21 +1390,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-י"
-     style="display:none"
+     style="display:inline"
      id="g151">
     <path
        d="m 36.18775,33.8744 q 0,9.1876 -2.50001,18.8751 -3.81252,7.5625 -7.62504,7.5625 -1.75001,0 -2.06251,-0.9375 v -2 q 3.75002,-4.75 3.46877,-8.2812 -0.28125,-3.5313 -0.28125,-3.3438 0,-5.3126 -8.50004,-5.4376 h -4.31252 q -4.93753,0 -6.87504,-3.375 -1.81251,-5.625 -1.81251,-13.1875 0,-15.6876 3.75002,-15.6876 0.625,0 1.78126,2.6875 1.15626,2.6875 4.46877,2.6875 h 3.68752 q 16.68758,0 16.81258,20.4376 z"
        id="path151"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="m 25.990643,56.969998 5.156874,-6.807073"
@@ -1352,7 +1421,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path64"
        sodipodi:nodetypes="cccccccccccccc"
@@ -1363,21 +1432,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ך"
-     style="display:none"
+     style="display:inline"
      id="g152">
     <path
        d="m 79.93796,25.9369 q 0,8.25 -2.34376,11.2188 -2.34376,2.9687 -5.46878,3.1562 l 1.81251,60.6878 q 1.56251,10.3751 0.625,21.9376 0.0625,1.3125 -3.43751,5.6876 -3.50002,4.375 -4.50002,4.375 -4.18752,0 -4.18752,-2.6875 0,-3.25 0.9375,-33.6252 -0.875,-52.3752 -1.125,-56.3753 H 19.56267 q -4.93752,0 -6.87503,-3.375 -1.75001,-3.125 -1.75001,-16.3126 0,-12.5625 3.62502,-12.5625 0.625,0 1.78125,2.6875 1.15626,2.6875 4.46878,2.6875 h 50.68774 q 3.68752,0 6.06253,2.9375 2.37501,2.9375 2.37501,9.5626 z"
        id="path152"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 69.190026,98.289559 67.005078,25.457953"
@@ -1392,7 +1464,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path70"
        sodipodi:nodetypes="ccccccccccccccccccc"
@@ -1403,11 +1475,14 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 62.2668,40.6857 4.9354,0.075"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -1421,7 +1496,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path69"
        sodipodi:nodetypes="cccccccccccccc"
@@ -1432,21 +1507,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-כ"
-     style="display:none"
+     style="display:inline"
      id="g153">
     <path
        d="m 74.81294,55.937 q 0,24.5001 -10.50006,34.0002 -9.25004,8.375 -31.25015,8.375 H 1.75008 L 12.00013,72.0621 h 31.81266 q 10.68755,0 17.81258,-3.375 4.87503,-7.3751 4.87503,-13.3751 0,-15.0001 -22.68761,-15.0001 H 15.93765 q -4.93752,0 -6.81253,-3.375 -1.75001,-3.125 -1.75001,-13.8125 0,-15.0626 3.56252,-15.0626 0.75,0 1.84376,2.6875 1.09375,2.6875 4.40627,2.6875 H 45.8753 q 15.37507,0 22.0001,9.3751 6.93754,9.75 6.93754,33.1251 z"
        id="path153"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 37.872435,94.283821 53.531231,82.266606"
@@ -1460,7 +1538,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path72"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccc"
@@ -1468,24 +1546,27 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ל"
-     style="display:none"
+     style="display:inline"
      id="g154">
     <path
        d="m 76.50044,49.437 q 0,13.8751 -13.68756,23.8126 -11.43756,8.9375 -10.06255,13.6251 0.625,4.625 -5.62503,9.25 -5.06252,3.4375 -8.37504,3.4375 -2.31251,0 -4.00002,-1.6875 -1.93751,-1.875 -1.93751,-4.8125 -1.25,-4.3125 2.93752,-9.3125 4.62502,-5.7501 12.56256,-10.5001 11.18755,-6 15.81257,-11.0001 1.37501,-3.6875 2.00001,-6.75 -0.625,-4.3125 -0.25,-10.1875 -2.87501,-4.8751 -8.68754,-4.8751 H 18.87517 q -7.93754,0 -10.75005,-3.125 Q 5.6876,34.5619 5.6876,27.3744 L 7.56261,11.0618 q 1.25001,-9 1.87501,-11.2813 0.625,-2.2813 2.56251,-7.4688 1.00001,-3.375 1.00001,-5.125 0.0625,-1.8125 0.0625,-2.375 0,-2.1875 -3.68752,-3.3437 -3.68752,-1.1563 -3.68752,-4.3439 0,-6.125 2.12501,-9.375 1.81251,-2.75 2.75002,-2.75 1,0 1,0.625 0,0.125 -0.125,0.5313 -0.125,0.4062 -0.125,0.5312 0,0.5625 2.75001,1.5 3.50002,1.1875 7.00004,2.5 2.75001,2.1875 2.75001,5.6875 0,2.5 -1.56251,4.8126 -2.12501,3.0625 -3.00001,5.6875 -2.18751,5.4375 -2.18751,12.9375 v 2.0001 q 0,9.25 2.68751,10.3125 1.06251,1.3125 4.31252,1.3125 h 38.87519 q 9.50004,0 10.75005,7.9376 l 2.31251,14.625 q 0.5,3.25 0.5,13.4376 z"
        id="path154"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 36.564803,96.440288 45.577255,82.792862"
@@ -1499,7 +1580,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path74"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccc"
@@ -1510,21 +1591,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ם"
-     style="display:none"
+     style="display:inline"
      id="g155">
     <path
        d="M 23.56269,40.5619 Q 16.18765,43.062 16.43766,51.187 l 0.75,20.8751 H 68.87541 L 67.8129,47.2495 Q 67.6879,42.937 65.37539,41.4994 63.50038,40.3119 58.75036,40.3119 Z M 76.87545,98.3122 H 7.87511 V 53.6245 q 0,-10.1875 5.56253,-13.3126 -2.68751,-0.1875 -4.43752,-2.9375 -1.62501,-3.75 -1.62501,-11.125 0,-18.1876 3.56252,-18.1876 0.75,0 1.84376,2.6875 1.09375,2.6875 4.40627,2.6875 h 42.2502 q 17.43759,0 17.43759,18.5626 z"
        id="path155"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 71.327116,94.895297 72.614609,70.432928"
@@ -1538,7 +1622,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path79"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccc"
@@ -1549,21 +1633,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_underlay_inset_mm=".3"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-מ"
-     style="display:none"
+     style="display:inline"
      id="g156">
     <path
        d="m 76.75044,53.3745 q 0,13.0626 -7.81253,44.9377 h -40.9377 l 4.68752,-26.2501 h 31.50015 q 2.31252,-5.1875 2.31252,-9.4376 1.875,-9.125 -4.56253,-15.7812 -6.43753,-6.6564 -18.62509,-6.6564 -9.87504,0 -18.25008,7.8126 -8.37504,7.8125 -7.75004,16.3751 -0.625,0.375 -0.0937,5.3125 0.53125,4.9375 0.53125,8.6875 0,12.3126 -2.06251,14.5626 -5.50002,5.375 -6.00003,5.375 -2.43751,0 -2.43751,-2.5625 0,-1.5625 0.87501,-3.3125 -0.43751,-4.125 -0.43751,-14.5001 0,-2 -0.3125,-7.6562 -0.3125,-5.6563 0.3125,-9.2189 0.62501,-9.625 8.93755,-17.9375 1.0625,-1.125 3.93751,-3.5001 l -4.43752,-0.5 q -1.93751,-0.3125 -4.25002,-1.3125 -3.18751,-2 -4.18752,-4.875 -0.8125,-2.375 -0.8125,-8.0625 1.25001,-9.3126 5.18752,-13.5626 3.00002,-3.25 4.62503,-3.25 1.1875,0 1.1875,1.3125 0,0.375 -0.125,0.7188 -0.125,0.3437 -0.125,0.6562 0,1.5625 8.56254,4.5 4.43752,1.5 6.00003,3.8125 1.56251,2.3126 1.56251,7.6876 0,2.6875 -4.68752,7.375 6.81253,-3.1875 9.68754,-4 3.43752,-1.375 4.06252,-3.5 1.25001,-2.75 2.28126,-7.0626 1.03126,-4.3125 1.65626,-5.75 0.625,-4.125 5.18753,-4.125 2.68751,0 9.31254,2.75 5.56253,3.125 8.50004,7.6875 7.06253,9.5626 7.06253,27.9377 0,1.125 -0.0625,2.9375 z"
        id="path156"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 66.899401,86.882897 43.260037,85.228142 43.49643,85.464535"
@@ -1577,7 +1664,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path16"
        sodipodi:nodetypes="cccccccc"
@@ -1585,14 +1672,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 74.4961,72.7559 69.5929,71.4687"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -1602,25 +1692,29 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
     <path
-       d="m 64.2129,71.998 c 1.281846,-3.103962 2.25916,-6.387706 2.371221,-9.764154 C 67.923824,55.971261 65.314307,49.102555 60.187074,45.272843 54.782447,40.9565 47.533362,39.787347 40.795341,40.352804 c -0.882511,0.259552 -1.240437,0.07021 -0.883456,-0.775067 0.847071,-4.052613 1.694143,-8.105227 2.541215,-12.15784 m 32.043,45.336 C 76.59648,61.704725 77.466927,50.3578 76.329774,39.143805 75.488737,31.460857 73.0719,23.670707 67.912512,17.759408 65.347872,14.72974 61.909774,12.549996 58.194424,11.207981 55.948433,10.455082 53.604407,9.5798313 51.197087,9.7905997 c -1.43642,0.114215 -2.786169,0.8410953 -3.644876,1.9994613 l -0.119807,0.111085 -0.123804,0.106651 m 14.8629,56.2 c 5.358267,0.1576 10.716533,0.3152 16.0748,0.4728"
+       d="m 64.2129,71.998 c 1.281846,-3.103962 2.25916,-6.387706 2.371221,-9.764154 C 67.923824,55.971261 65.314307,49.102555 60.187074,45.272843 54.782447,40.9565 47.533362,39.787347 40.795341,40.352804 39.91283,40.612356 39.554904,40.423014 39.911885,39.577737 L 40.179136,26.120489 M 74.4961,72.755897 C 76.59648,61.704725 77.466927,50.3578 76.329774,39.143805 75.488737,31.460857 73.0719,23.670707 67.912512,17.759408 65.347872,14.72974 61.909774,12.549996 58.194424,11.207981 55.948433,10.455082 53.604407,9.5798313 51.197087,9.7905997 c -1.43642,0.114215 -2.786169,0.8410953 -3.644876,1.9994613 l -0.119807,0.111085 -4.022028,6.928543 m 18.761124,49.378108 16.0748,0.4728"
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path17"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       sodipodi:nodetypes="cccccccccccccccc"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 42.1367,28.9338 31.494412,39.486727 24.6924,36.8614"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -1635,7 +1729,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path15"
        sodipodi:nodetypes="ccccccccccccccccc"
@@ -1643,14 +1737,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 29.0625,34.125 2.2272,4.1357"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -1664,7 +1761,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path11"
        sodipodi:nodetypes="cccccccccccccccccc"
@@ -1672,24 +1769,27 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ן"
-     style="display:none"
+     style="display:inline"
      id="g157">
     <path
        d="m 35.37525,29.1869 c 0,2.541667 -1.50001,6.833367 -4.50003,12.8751 -2.91668,5.875 -4.270853,10.791667 -4.06252,14.75 l 1.87501,29.9377 c 1.833347,11.208333 2.437517,23.27087 1.81251,36.1876 0.08333,0.875 -1.052087,2.77087 -3.40626,5.6876 -2.35418,2.91667 -3.864607,4.375 -4.53128,4.375 -1.83334,0 -2.75001,-0.89583 -2.75001,-2.6875 l -1.25,-70.4379 c -0.416673,-4.833333 -0.166673,-8.5625 0.75,-11.1875 0.916673,-2.625 1.37501,-3.833333 1.37501,-3.625 0,-1.583333 -1.50001,-2.7292 -4.50003,-3.4376 -1.58334,-0.5 -2.541677,-0.8125 -2.87501,-0.9375 -3.9166867,-0.875 -6.4583667,-2.479167 -7.62504,-4.8125 -0.375,-2.5 -0.5625,-5.666667 -0.5625,-9.5 0,-6.7084 0.7500033,-11.458433 2.25001,-14.2501 1.20834,-2.2083333 2.2083467,-3.3125 3.00002,-3.3125 0.75,0 1.215866,0.2557688 1.215866,1.1307688 0,0.2500002 -0.132533,0.6817312 -0.215866,0.9317312 -0.08333,0.25 -0.125,0.458333 -0.125,0.625 0,0.541667 1.729177,1.166667 5.18753,1.875 6.20836,1.041667 9.770877,1.916667 10.68755,2.625 3.91668,0.916667 6.35419,2.625033 7.31253,5.1251 0.625007,1.791667 0.93751,4.479167 0.93751,8.0625 z"
        id="path157"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1"
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1"
        sodipodi:nodetypes="scccccsccsccccscsssscccs" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
@@ -1704,7 +1804,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path20"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccc"
@@ -1712,24 +1812,27 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-נ"
-     style="display:none"
+     style="display:inline"
      id="g158">
     <path
        d="m 41.31277,81.3121 q 0,7.7501 -2.56251,17.0001 H 3.37509 L 7.25011,72.0621 h 22.93761 q -0.375,-6.75 -0.375,-12.6876 0,-4.5625 0.0937,-7.3125 0.0937,-2.75 0.0937,-4.8125 -0.625,-8.1876 -10.93755,-6.9376 h -3.12502 q -4.93752,0 -6.81253,-3.375 -1.75001,-3.125 -1.75001,-10.6875 0,-18.1876 3.56252,-18.1876 0.75,0 1.84376,2.6875 1.09375,2.6875 4.40627,2.6875 h 3.87502 q 17.37508,0 17.37508,18.5626 0,3.1875 -0.75,7.2813 -0.75001,4.0938 -0.75001,9.2188 0,3.9375 2.18751,15.7814 2.18751,11.8437 2.18751,17.0312 z"
        id="path158"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 35.511786,94.734783 33.736197,83.193453 35.511786,71.874071"
@@ -1743,7 +1846,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path33"
        sodipodi:nodetypes="cccccccccccccccccccccc"
@@ -1751,14 +1854,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 40.3867,71.875 -7.527,13.2216"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -1772,7 +1878,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path31"
        sodipodi:nodetypes="ccccccccccc"
@@ -1780,24 +1886,27 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ס"
-     style="display:none"
+     style="display:inline"
      id="g159">
     <path
        d="m 32.62523,40.3119 q -8.12504,0.25 -13.43756,7.1876 -1.31251,2.4375 -1.93751,3.9375 -1.87501,10.875 2.68751,16.2501 6.06253,5.0625 16.43758,5.0625 h 7.43754 q 10.12505,0 12.68756,-2.1875 6.25003,-3.25 7.81253,-6.75 1.56251,-3.5001 2.18752,-7.8751 0,-9.75 -3.37502,-11.4375 Q 57.93785,39.6869 45.6878,40.3119 Z M 74.81294,55.937 q 0,19.5001 -7.93754,30.9377 -9.06255,13.125 -27.12513,13.125 -15.93758,0 -23.87512,-10.75 -7.12503,-9.5001 -7.12503,-26.1251 0,-18.3126 7.62503,-23.4377 h -1.1875 q -4.93752,0 -6.87503,-3.375 -1.75001,-3.125 -1.75001,-9.4375 0,-18.8126 3.62502,-18.8126 0.625,0 1.78125,2.6875 1.15626,2.6875 4.46878,2.6875 H 45.8753 q 14.25006,0 21.6876,11.1251 7.25004,10.875 7.25004,31.3751 z"
        id="path159"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="m 47.275065,96.288424 1.109743,-13.094971 v 0"
@@ -1811,7 +1920,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path37"
        sodipodi:nodetypes="cccccccccccccccccccccccccc"
@@ -1819,24 +1928,27 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ע"
-     style="display:none"
+     style="display:inline"
      id="g160">
     <path
        d="m 71.81292,27.4994 q 0,4.125 -2.56251,10.25 -3.93752,9.4376 -5.37503,14.2501 -1.81251,6.0625 -2.75001,15.0626 -0.9375,8.5625 -1.75001,10.875 -2.18751,6.3751 -5.31252,9.0001 -4.62503,5.75 -15.93758,7.625 L 4.1876,100.1872 7.31261,75.9371 25.3127,72.9996 q 2.00001,-0.062 2.62501,-1 0.625,-5.5625 -6.06253,-11.3438 -6.68753,-5.7813 -4.81252,-12.1563 0.625,-6.3125 1.25,-8.4376 -5.81252,-1.375 -6.87503,-4.875 -1.1875,-2.5 -1.1875,-11.3125 0,-7.6251 2.25001,-11.7501 1.75,-3.3125 3.00001,-3.3125 1.12501,0 1.12501,1.3125 0,0.375 -0.125,0.75 -0.12501,0.375 -0.12501,0.625 0,0.875 3.62502,1.875 7.50004,2.125 9.06255,2.625 4.25002,1.4375 5.81252,3.9375 1.31251,2.1876 1.31251,11.1876 0,5.125 -2.06251,9.25 -1.68751,4.5626 -2.50001,4.5626 -1.43751,0 -1.43751,-1.5 v 0.75 q 0,-1.25 -2.56251,-1.75 -3.00002,-0.5626 -4.12502,-1.0626 -0.93751,0 -0.93751,2.1251 -1.25,2.5625 5.06253,7.7188 6.31253,5.1562 6.18753,13.3438 -1.25001,6.5625 -0.625,7.375 l 5.81252,-1.125 q 8.50004,-1 11.50006,-1.75 2.18751,-1.875 4.31252,-9.3751 l 2.68751,-9.375 q 0.1875,-0.1875 0.75001,-1.3125 0.75,-3 0.75,-3.1875 0.625,-1.4375 -2.12501,-3.375 -0.5625,-0.8126 -5.25003,-2.2501 -4.68752,-1.4375 -6.25003,-3.875 -0.8125,-2.75 -0.8125,-8.6875 0,-11.3126 2.68751,-15.5001 2.12501,-3.3125 3.43752,-3.3125 1.125,0 1.125,1.3125 0,0.375 -0.125,0.75 -0.125,0.375 -0.125,0.625 0,1.625 8.56254,4.5 11.68756,3.9375 11.68756,11.5001 z"
        id="path160"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 30.628915,92.515297 31.072813,68.988738 21.52902,54.118178 C 21.45504,45.706768 21.381055,37.275021 21.307072,27.706287"
@@ -1851,27 +1963,30 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 2"
        id="path50"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 18.232395,40.4023 c -0.116969,0.580211 -0.228551,1.161521 -0.332615,1.74419 -0.518678,2.557192 -0.560023,5.179119 -1.111616,7.7298 -0.616403,3.505202 1.192852,6.928788 3.598644,9.358696 2.416231,2.321141 5.119152,4.512017 6.56888,7.620803 0.84926,1.570132 1.020502,3.366283 0.983812,5.122711 M 22.939492,41.6641 c -0.351724,1.270109 -0.840699,2.765671 -0.275284,4.046218 1.408985,2.74954 4.024255,4.548471 6.207739,6.632284 3.30481,3.13614 5.142612,7.729684 4.889724,12.277832 -0.281924,2.161697 -0.750306,4.308712 -0.767576,6.500666 m 2.739597,-2.5763 -10.8754,1.7756"
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path49"
        sodipodi:nodetypes="ccccccccccccc"
@@ -1879,14 +1994,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 33.7394,70.9947 2.0914,12.2106"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -1900,7 +2018,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path48"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
@@ -1908,24 +2026,27 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ף"
-     style="display:none"
+     style="display:inline"
      id="g161">
     <path
        d="m 74.43793,122.9373 q 0,1.3125 -3.87502,5.6876 -3.87501,4.375 -4.81252,4.375 -1.56251,0 -2.81251,-2.6875 0,-1.6875 1.25,-39.8127 1.25001,-38.1252 1.25001,-42.8752 0,-7.3126 -11.12505,-7.3126 H 21.68768 q -5.93753,3.0001 -6.56253,17.9376 0,2.25 1.62501,2.8125 0.9375,0.3125 4.06252,0.3125 1.1875,0 4.59377,0.094 3.40626,0.094 6.78128,0.094 3.06252,0 5.50003,1.6876 2.81251,2.5625 2.81251,6.0625 0,4.0625 -2.87501,6.5625 -2.43751,2.125 -5.43753,2.125 H 15.18765 q -3.43752,0 -5.37503,2.6875 -1.93751,2.6875 -2.43751,2.6875 -1.0625,0 -1.0625,-1.25 0,-0.6875 0.84375,-4.3125 0.84375,-3.625 0.84375,-7 0,-1.875 0.56251,-10.6876 0.5625,-8.8125 0.5625,-9.5 0,-3.375 4.06252,-10.3126 -2.31251,-0.062 -4.18752,-3.5 -1.62501,-3.0625 -1.62501,-10.5625 0,-18.1876 3.56252,-18.1876 0.75,0 1.84376,2.6875 1.09375,2.6875 4.40627,2.6875 h 39.06269 q 18.00008,0 18.06258,18.5626 l 0.0625,36.0627 0.68751,30.5626 q 1.25,11.5626 -0.62501,24.3126 z"
        id="path161"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 69.4699,98.286 69.248,126.83786"
@@ -1940,7 +2061,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path68"
        sodipodi:nodetypes="cccccccccccccccccccccccc"
@@ -1948,20 +2069,23 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 13.1035,40.4648 C 9.355083,47.378395 9.30695,47.621672 8.8458025,55.173854 8.3398338,63.98226 7.4111533,71.271071 5.5460468,79.897803 5.3519774,80.795437 7.2108909,83.75261 8.0657515,82.710247 9.7667854,81.391993 10.59653,79.00306 12.793715,78.348582 17.261703,77.712107 21.792941,78.075196 26.289585,78.019936 29.690826,78.277021 33.10749,77.753163 36.3711,76.8047 M 20.849602,40.8242 c -4.561351,4.063724 -5.23115,10.49926 -5.679402,16.269064 -0.199015,1.430338 0.05382,3.283245 1.530006,3.945079 2.466576,0.417133 4.976573,0.351963 7.468218,0.399063 3.692713,0.300153 7.477082,-0.370079 11.097214,0.637398 2.609529,0.667968 4.211418,3.146909 5.058562,5.546296 M 5.54872,86.7446 17.5339,57.2255"
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path67"
        sodipodi:nodetypes="ccscccccccccccc"
@@ -1969,24 +2093,27 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-פ"
-     style="display:none"
+     style="display:inline"
      id="g162">
     <path
        d="m 40.50027,59.312 q 0,-0.3125 -2.87501,2.8125 -2.43751,1.5001 -5.43753,1.5001 H 15.18765 q -2.81251,0 -4.75002,1.75 -1.93751,1.75 -2.43752,1.75 -1.0625,0 -1.0625,-1.25 0,-0.6875 0.84375,-4.3126 0.84376,-3.625 0.21875,-7 0,0.625 -0.375,-1.3125 -0.375,-1.9375 -0.375,-2.625 0,-6.5 5.31253,-10.3126 -1.68751,-0.062 -3.56252,-3.5 -1.62501,-3.0625 -1.62501,-10.5625 0,-18.1876 3.56252,-18.1876 0.75,0 1.84376,2.6875 1.09375,2.6875 4.40627,2.6875 H 46.1253 q 16.12508,0 22.3126,9.7501 5.75003,9.0625 5.75003,32.0001 V 72.4996 L 67.2504,98.3122 H 3.25009 L 8.75012,72.0621 h 56.81277 l 0.625,-5.75 Q 67.4379,48.8745 63.62538,46.7495 60.12536,40.3119 42.18778,40.3119 h -20.5001 q -5.93753,2.3751 -7.18753,7.9376 0,1 1,1.5625 0.93751,0.3125 5.31253,0.3125 1.1875,0 4.59377,0.094 3.40626,0.094 6.78128,0.094 3.06252,0 5.50003,2.3125 2.81251,2.5625 2.81251,6.6875 z"
        id="path162"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="m 63.7168,92.848 6.75784,-26.259 v 0 C 68.398151,48.739431 75.095479,16.051083 16.499387,39.258736"
@@ -2001,7 +2128,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path84"
        sodipodi:nodetypes="ccccccccccccccccc"
@@ -2009,14 +2136,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 21.5307,40.7583 0.192,-13.7135"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -2030,7 +2160,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path85"
        sodipodi:nodetypes="cccccccccccccccccccc"
@@ -2038,14 +2168,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 74.9428,71.4846 -4.224,13.5701"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -2059,7 +2192,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 2"
        id="path86"
        sodipodi:nodetypes="cccccccc"
@@ -2067,24 +2200,27 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ץ"
-     style="display:none"
+     style="display:inline"
      id="g163">
     <path
        d="m 35.12524,29.1869 q 0,3.8125 -4.50002,12.8751 -3.75001,8.8125 -3.43751,14.75 l 0.125,14.8751 q 2.93751,-9.2501 9.56254,-20.0001 6.62504,-9.8126 9.37505,-13.1876 -1.31251,-1.625 -1.81251,-2.3125 -2.00001,-2.0625 -2.00001,-4.875 0,-1.9375 1,-8.8125 1.50001,-7.4376 4.56253,-11.5626 2.50001,-3.375 3.50001,-3.25 1.31251,0.1875 1.06251,1.5625 -0.1875,0.3125 -0.5,1.25 -0.25001,1.1875 10.37505,7.1875 6.93753,3 7.56253,8.1876 0,1.5 0.0937,3.4063 0.0937,1.9062 -1.03125,5.1562 -1.43751,5.125 -4.37502,10.6251 -1.93751,4.75 -3.31252,4.625 -0.6875,-0.25 -1.125,-0.375 0,-0.125 0.125,-0.5625 0.125,-1.6875 -7.00004,-5.8125 -4.06252,3.4375 -12.31256,17.25 -8.50004,15.3126 -11.06255,27.5002 l 2.31251,12.875 q 2.06251,12.7501 1.00001,25.4377 0.0625,1.3125 -4.96878,5.7188 -5.03127,4.4062 -6.03128,4.4062 -1.0625,0 -1.375,-0.875 -0.125,-0.5 -0.125,-1.6875 V 57.9995 q -1.25001,-4.75 -0.81251,-9 0.4375,-4.25 0.4375,-4.5625 0,-2.375 -3.87501,-4.0626 -0.50001,-0.125 -1.62501,-0.3125 -5.25003,-1.3125 -7.00004,-4.8125 -1.1875,-1.875 -1.1875,-7.625 0,-9.4376 2.25001,-15.5001 1.81251,-3.3125 3.00001,-3.3125 1.25001,0 1.25001,1.3125 0,0.375 -0.1875,0.75 -0.1875,0.375 -0.1875,0.625 0,0.8125 5.18752,1.875 7.43754,1.5625 10.68755,2.625 4.00002,1.375 5.37503,5.1251 1,2.6875 1,8.0625 z"
        id="path163"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 24.7144,98.254226 23.942075,81.456157 56.958968,30.675789"
@@ -2098,27 +2234,30 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path181"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 45.6152,37.6914 c 0.11519,0.277954 0.761759,0.679982 0.531361,0.947252 -3.098363,4.026878 -5.95497,8.228027 -8.839382,12.408265 -3.793496,6.059241 -7.13527,12.4415 -9.483259,19.20707 -0.497108,1.661271 0.12115,3.476095 0.09078,5.198813 m 23.6649,-34.0678 1.537007,1.329065 c 0.414548,0.706878 -1.295015,1.507686 -1.705598,2.251031 -3.105878,3.672143 -5.711145,7.734255 -8.246843,11.811951 -2.130758,3.244583 -3.822946,6.738508 -5.618881,10.17242 -1.630857,3.531719 -3.307972,7.055323 -4.562377,10.743446 -1.244153,3.106683 -2.015509,6.362784 -2.885208,9.586387 M 53.6766,46.8946 42.671,38.0129 m -0.3862,23.1697 v 0.1931 L 33.4031,51.3355 M 32.2446,86.8624 27.4175,64.0788"
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path180"
        sodipodi:nodetypes="ccccccccccccccccccc"
@@ -2126,20 +2265,23 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 9.86719,10.6758 C 8.3102043,13.69756 7.5177127,17.052693 7.1397022,20.413987 6.978701,25.636539 5.7391558,31.333073 8.4859186,36.128715 10.856538,40.137444 16.410186,39.277333 19.517348,42.334085 21.459091,47.386125 20.390443,52.789687 20.8125,58 v 47.89741 c 0.196645,9.70227 -0.505592,19.43647 0.4928,29.11059 M 13.1719,9.55078 c -0.750054,2.347835 1.794969,3.476374 3.652296,3.756937 2.930803,0.441268 5.907771,0.776428 8.709702,1.663515 4.885668,0.677281 9.570036,4.783689 9.407106,9.981989 1.005661,5.994801 -1.736568,11.707233 -4.202949,16.989022 -3.38545,6.454307 -3.810059,13.918327 -3.533473,21.062342 -0.08701,5.224185 0.447192,10.425686 1.108447,15.602274 1.884479,10.863073 4.433752,21.652691 5.166166,32.684581 -0.02611,5.14648 0.665598,10.39683 -0.545718,15.46311 -3.159948,3.72554 -6.501986,7.96425 -11.495977,9.15145 M 16.7981,11.3677 6.1786,14.2639 M 37.4578,21.7941 7.72325,39.1714 m 24.90745,4.4408 c -4.955733,0.06437 -9.911467,0.12873 -14.8672,0.1931 m 10.4264,92.4857 c -3.282402,-2.05933 -6.564798,-4.11867 -9.8472,-6.178 M 33.4031,91.8825 C 27.9968,91.81817 22.5905,91.75383 17.1842,91.6895"
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 2"
        id="path182"
        sodipodi:nodetypes="ccccccccccccccccccccccccccc"
@@ -2147,24 +2289,27 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-צ"
-     style="display:none"
+     style="display:inline"
      id="g164">
     <path
        d="m 75.56294,75.1871 q 0,3.8125 -3.31252,12.1876 -1.75001,3.875 -3.43751,10.9375 H 6.56261 l 6.56253,-25.6251 h 47.50023 q 1.0625,0 1.0625,-0.5625 0,0.625 -1.0625,0 L 36.68775,61.687 q -8.56254,-1.625 -8.56254,-8.625 l -0.625,-10.75 q 0,-2.0001 -2.81252,-2.0001 h -8.75004 q -4.93752,0 -6.81253,-3.375 -1.75001,-3.125 -1.75001,-10.6875 0,-18.1876 3.56252,-18.1876 0.6875,0 1.78126,2.6875 1.09375,2.6875 4.46877,2.6875 h 6.68753 q 10.37505,0 10.37505,12.8126 v 13.5625 q -0.625,8.9376 6.50003,10.1251 l 12.75006,4.875 1.68751,-13.3126 q -5.93753,-2 -6.65628,-4.5312 -0.71875,-2.5313 -0.71875,-9.3438 0,-11.3126 2.31251,-15.5001 1.75001,-3.3125 2.93751,-3.3125 1.12501,0 1.12501,1.3125 0,0.375 -0.125,0.75 -0.125,0.375 -0.125,0.625 0,0.875 3.62501,1.875 7.50004,2.125 9.06255,2.625 4.25002,1.4375 5.81252,3.9375 1.37501,2.1876 1.37501,12.4376 0,5.1875 -2.06251,11.0626 -1.81251,5.0625 -2.56251,5.0625 -0.6875,0 -1.31251,-0.125 V 47.812 q 0,-2.875 -7.50003,-4.4375 l 0.4375,14.4375 q 7.37503,3.5625 11.62505,7.4376 3.12502,3.875 3.12502,9.9375 z"
        id="path164"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="m 63.569222,90.562777 1.907077,-22.88492 -10.171076,-3.814153 5.72123,-36.552303"
@@ -2178,41 +2323,47 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path191"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 51.4336,54.0234 2.0664,0.7891 0.2634,-2.0783 1.2497,-9.8584 -0.3022,-1.5496 M 62.793,58.834 60.8125,57.8125 60.7181,54.7047 60.4125,44.641 60.3828,43.6621 m -9.0232,-1.9807 10.0402,3.2824 m -9.8471,7.144 11.5849,3.2824"
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path192"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 51.4336,54.0234 -3.204,5.7574"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -2226,21 +2377,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 2"
        id="path193"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 75.3535,72.2188 69.614,85.2665"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -2254,31 +2408,34 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 3"
        id="path194"
        inkstitch:reverse_rails="none"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ק"
-     style="display:none"
+     style="display:inline"
      id="g165">
     <path
        d="m 73.93793,50.937 q -0.625,16.2501 -5.37502,21.6876 -4.37503,3 -18.9376,8.125 -9.43754,3.3126 -13.93756,6.3751 -0.0625,2.5 -0.75001,6.875 -1.5625,4.4375 -8.37504,4.4375 -2.68751,0 -2.68751,-3.8125 -1.25001,-5.4375 3.62502,-11.6876 6.00003,-7.125 22.50011,-11.25 7.18753,-2.875 9.68754,-4.1875 5.12503,-2 5.12503,-8.8751 0,-11.25 -4.18752,-13.9375 -3.93752,-4.3751 -10.37505,-4.3751 H 15.93765 q -4.93752,0 -6.81253,-3.375 -1.75001,-3.125 -1.75001,-10.6875 0,-18.1876 3.56252,-18.1876 0.75,0 1.84376,2.6875 1.09375,2.6875 4.40627,2.6875 h 35.87517 q 10.31255,0 14.81257,6.3125 6.06253,8.4376 6.06253,31.1877 z m -56.06277,0.125 q 0,0.3125 -1.25,4.3438 -1.25001,4.0312 -1.87501,10.2813 0,11.75 1.375,22.3439 1.37501,10.5937 1.37501,17.7188 0,12.875 -1.81251,21.6251 -4.68752,8.125 -6.25003,8.125 -3.31251,0 -3.31251,-3.75 0.625,-4 1.375,-11.9688 0.75001,-7.9688 0.75001,-17.5939 0,-4.1875 -0.75001,-17.375 -0.75,-13.1876 -0.75,-15.1876 0,-8.3751 4.50002,-15.0001 3.87502,-5.75 5.12502,-5.75 1.50001,0 1.50001,2.1875 z"
        id="path165"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 27.016919,95.012623 34.645226,82.298778"
@@ -2292,7 +2449,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path196"
        sodipodi:nodetypes="cccccccccccccccccccccccccccc"
@@ -2300,14 +2457,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <g
        id="g281">
       <path
@@ -2324,7 +2484,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
          style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
-         inkstitch:pull_compensation_mm=""
+         inkstitch:pull_compensation_mm="0.3"
          inkscape:label="Colonne satin 1"
          id="path195"
          sodipodi:nodetypes="cccccccccccccc"
@@ -2332,25 +2492,28 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:zigzag_underlay_inset_mm=".5"
+         inkstitch:zigzag_underlay_inset_mm=".3"
          inkstitch:random_split_phase="False"
          inkstitch:max_stitch_length_mm="5"
-         inkstitch:zigzag_spacing_mm="0"
+         inkstitch:zigzag_spacing_mm="0.55"
          inkstitch:short_stitch_distance_mm="0"
          inkstitch:split_method="staggered"
          inkstitch:split_staggers="2.5"
-         inkstitch:pull_compensation_percent="10" />
+         inkstitch:contour_underlay="True"
+         inkstitch:contour_underlay_inset_mm="0.10"
+         inkstitch:contour_underlay_stitch_length_mm="1.50"
+         inkstitch:pull_compensation_percent="" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ר"
-     style="display:none"
+     style="display:inline"
      id="g166">
     <path
        d="m 76.25044,88.0622 q 0,1.4375 -2.93751,5.8438 -2.93752,4.4062 -4.50002,4.4062 -3.43752,0 -3.43752,-2.6875 0,-1.6875 0.875,-21.5313 0.87501,-19.8439 0.87501,-26.4689 0,-7.3126 -11.18756,-7.3126 H 15.18765 q -4.93752,0 -6.87503,-3.375 -1.75001,-3.125 -1.75001,-10.6875 0,-18.1876 3.62502,-18.1876 0.625,0 1.78125,2.6875 1.15626,2.6875 4.46878,2.6875 h 42.2502 q 17.37508,0 17.43758,18.5626 l 0.0625,28.0001 0.68751,14.0626 q 0.625,6.375 -0.62501,14.0001 z"
        id="path166"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 69.290452,92.7877 72.468913,67.995703"
@@ -2364,7 +2527,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path201"
        sodipodi:nodetypes="ccccccccccccccccccccccc"
@@ -2372,24 +2535,27 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ש"
-     style="display:none"
+     style="display:inline"
      id="g167">
     <path
        d="m 83.75048,26.7494 q 0,9.5625 -5.43753,24.7501 Q 76.06294,57.812 67.6254,77.4371 61.25037,92.1872 60.12536,98.3122 H 9.87512 q -1,-7.6875 -1.81251,-22.8126 Q 8.81262,61.187 8.18762,53.1245 7.56261,42.8745 8.50012,39.6869 5.9376,38.3119 5.0001,36.0619 q -0.8125,-3 -0.8125,-8.6875 0,-11.8751 2.68751,-16.0626 2.06251,-3.25 3.43752,-3.25 1.125,0 1.125,1.3125 0,0.375 -0.1875,0.7188 -0.1875,0.3437 -0.1875,0.6562 0,1.5625 8.68754,4.5 4.62502,1.5625 6.06253,4.1875 1.12501,2.1251 1.12501,12.3126 0,5.125 -2.81252,10.3751 -2.37501,4.375 -3.31251,4.375 -0.75001,0 -0.75001,-0.4375 0,-0.1875 0.125,-0.3125 0.125,-0.125 0.125,-0.6875 0,-0.25 -0.78125,-0.625 -0.78125,-0.375 -2.53126,-1.5625 -0.375,-0.125 -1.62501,-1.0626 0.8125,0.5626 0.1875,6.3126 0,4.875 1.18751,15.0001 -0.1875,9 2.75001,8.9375 h 1.93751 q 9.18754,-13.8126 16.00008,-32.0002 -2.87502,-1.3125 -4.00002,-5.3125 -0.87501,-1.8125 -0.87501,-7.375 0,-11.8751 2.68752,-16.0626 2.12501,-3.25 3.50001,-3.25 1.12501,0 1.12501,1.3125 0,0.375 -0.125,0.7188 -0.125,0.3437 -0.125,0.6562 0,1.5625 8.56254,4.5 4.50002,1.5 5.93753,4.25 1.25,2.1876 1.25,12.2501 0,5.125 -2.87501,10.3751 -2.37501,4.375 -3.31252,4.375 -0.75,0 -0.75,-0.4375 0,-0.1875 0.125,-0.3125 0.125,-0.125 0.125,-0.062 0,-0.8125 -0.8125,-1.25 Q 47.3128,44.1875 44.68779,42.5 36.18775,60.9375 31.12523,72.0626 h 27.62513 q 1.56251,-0.9375 9.31254,-16.9376 3.06252,-5.3125 3.06252,-8.625 0,-1.3125 -1.62501,-1.6875 -1.43751,0.062 -3.18752,-1.125 -1.875,-1.4375 -3.50001,-4.4376 -1.43751,-2.125 -1.43751,-8.125 0,-15.6251 2.68751,-19.8126 2.06251,-3.25 3.31252,-3.25 1.31251,0 1.31251,1.3125 0,0.375 -0.1875,0.7188 -0.18751,0.3437 -0.18751,0.6562 0,1.5625 8.68755,4.5 4.18752,1.4375 5.68752,4.4375 1.06251,2.3126 1.06251,7.0626 z"
        id="path167"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 57.08679,89.317192 69.897605,61.44805"
@@ -2403,7 +2569,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 2"
        id="path216"
        sodipodi:nodetypes="cccccccccccccccccccccc"
@@ -2411,14 +2577,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 68.4774,71.8376 59.3671,71.1749 24.0986,77.5243 44.3563,32.1763"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -2433,7 +2602,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path220"
        sodipodi:nodetypes="ccccccccccccccccccc"
@@ -2441,14 +2610,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 37.1543,40.0323 3.7217,1.5151"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -2462,7 +2634,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path215"
        sodipodi:nodetypes="cccccccccc"
@@ -2470,14 +2642,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 30.646,71.9643 22.1382,71.0552 13.734,76.255 11.9202,34.6278 21.0649,42.8667"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -2492,7 +2667,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 2"
        id="path223"
        sodipodi:nodetypes="cccccccccccccccccc"
@@ -2500,14 +2675,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 15.7994,42.2526 11.8075,42.327"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -2521,7 +2699,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path214"
        sodipodi:nodetypes="cccccccccccc"
@@ -2529,14 +2707,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 18.5997,70.9923 18.5403,84.6518"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -2550,7 +2731,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path219"
        sodipodi:nodetypes="cccccc"
@@ -2558,24 +2739,27 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-ת"
-     style="display:none"
+     style="display:inline"
      id="g168">
     <path
        d="m 77.75045,88.0622 q 0.125,1.4375 -2.65626,5.8438 -2.78127,4.4062 -3.71877,4.4062 -3.43752,0 -3.43752,-2.6875 0,-1 -1.125,-22.3126 -1.12501,-21.3126 -1.12501,-25.6876 0,-7.3126 -11.87506,-7.3126 H 24.31269 q -2.62501,2.0626 -4.50002,12.7501 -0.625,5.375 4.81252,14.3126 5.43753,8.9375 4.81253,13.0625 0,9.4376 -2.87502,13.8126 -2.68751,4.0625 -6.81253,4.0625 H 1.37508 L 5.0626,72.0621 h 9.00004 q -1.93751,-1.5 -1.8125,-5.375 -1.56251,-5.4376 -1.56251,-8.2501 0.625,-5.5 2.18751,-13.9375 0.0625,-0.75 0.5625,-2.3125 l 1.12501,-2.5001 q -3.68752,0 -6.25003,-2.75 -1.75001,-3.125 -1.75001,-10.6875 0,-18.1876 3.62502,-18.1876 0.625,0 1.78125,2.6875 1.15626,2.6875 4.46878,2.6875 h 40.56269 q 16.00008,0 17.18758,18.5626 l 1.81251,28.0001 1.50001,14.0626 q 1.0625,5.75 0.25,14.0001 z"
        id="path168"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#4e2990;stroke-width:1.00001;stroke-dasharray:2, 1;-inkscape-stroke:none"
        d="M 70.090267,94.83805 71.910793,78.817417"
@@ -2589,7 +2773,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 2"
        id="path232"
        sodipodi:nodetypes="ccccccccccccccccccccccccc"
@@ -2597,14 +2781,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="m 14.4337,39.8851 4.0653,1.8164"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -2618,7 +2805,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 1"
        id="path231"
        sodipodi:nodetypes="cccccccccccccc"
@@ -2626,14 +2813,17 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
     <path
        d="M 13.6699,71.7031 13.4111,85.0509"
        style="fill:none;stroke:#4e2990;stroke-width:1;stroke-dasharray:3, 1"
@@ -2647,7 +2837,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:pull_compensation_mm=""
+       inkstitch:pull_compensation_mm="0.3"
        inkscape:label="Colonne satin 0"
        id="path230"
        sodipodi:nodetypes="ccccccccccccc"
@@ -2655,24 +2845,27 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-       inkstitch:zigzag_underlay_inset_mm=".5"
+       inkstitch:zigzag_underlay_inset_mm=".3"
        inkstitch:random_split_phase="False"
        inkstitch:max_stitch_length_mm="5"
-       inkstitch:zigzag_spacing_mm="0"
+       inkstitch:zigzag_spacing_mm="0.55"
        inkstitch:short_stitch_distance_mm="0"
        inkstitch:split_method="staggered"
        inkstitch:split_staggers="2.5"
-       inkstitch:pull_compensation_percent="10" />
+       inkstitch:contour_underlay="True"
+       inkstitch:contour_underlay_inset_mm="0.10"
+       inkstitch:contour_underlay_stitch_length_mm="1.50"
+       inkstitch:pull_compensation_percent="" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-׳"
-     style="display:none"
+     style="display:inline"
      id="g172">
     <path
        d="m 33.06273,18.3118 q 0,3.0626 -2.93751,5.7501 L 8.75012,43.687 H -0.06242 L 16.18765,19.0618 q 3.87502,-5.875 9.25005,-5.875 7.62503,0 7.62503,5.125 z"
        id="path172"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <g
        id="g235">
       <path
@@ -2688,32 +2881,35 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
          style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
-         inkstitch:pull_compensation_mm=""
+         inkstitch:pull_compensation_mm="0.3"
          inkscape:label="Colonne satin 0"
          id="path234"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:zigzag_underlay_inset_mm=".5"
+         inkstitch:zigzag_underlay_inset_mm=".3"
          inkstitch:random_split_phase="False"
          inkstitch:max_stitch_length_mm="5"
-         inkstitch:zigzag_spacing_mm="0"
+         inkstitch:zigzag_spacing_mm="0.55"
          inkstitch:short_stitch_distance_mm="0"
          inkstitch:split_method="staggered"
          inkstitch:split_staggers="2.5"
-         inkstitch:pull_compensation_percent="10" />
+         inkstitch:contour_underlay="True"
+         inkstitch:contour_underlay_inset_mm="0.10"
+         inkstitch:contour_underlay_stitch_length_mm="1.50"
+         inkstitch:pull_compensation_percent="" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-״"
-     style="display:none"
+     style="display:inline"
      id="g173">
     <path
        d="m 59.06286,18.3118 q 0,3.0626 -2.93751,5.7501 L 34.75024,43.687 H 25.9377 L 42.18778,19.0618 q 3.87502,-5.875 9.18754,-5.875 7.68754,0 7.68754,5.125 z m -26.00013,0 q 0,3.0626 -2.93751,5.7501 L 8.75012,43.687 H -0.06242 L 16.18765,19.0618 q 3.87502,-5.875 9.25005,-5.875 7.62503,0 7.62503,5.125 z"
        id="path173"
-       style="display:none;fill:#ed171f;fill-opacity:0.5;stroke-width:1" />
+       style="display:none;fill:#4e2990;fill-opacity:0.5;stroke-width:1" />
     <g
        id="g235-6"
        style="display:inline"
@@ -2731,21 +2927,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
          style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
-         inkstitch:pull_compensation_mm=""
+         inkstitch:pull_compensation_mm="0.3"
          inkscape:label="Colonne satin 0"
          id="path234-5"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:zigzag_underlay_inset_mm=".5"
+         inkstitch:zigzag_underlay_inset_mm=".3"
          inkstitch:random_split_phase="False"
          inkstitch:max_stitch_length_mm="5"
-         inkstitch:zigzag_spacing_mm="0"
+         inkstitch:zigzag_spacing_mm="0.55"
          inkstitch:short_stitch_distance_mm="0"
          inkstitch:split_method="staggered"
          inkstitch:split_staggers="2.5"
-         inkstitch:pull_compensation_percent="10" />
+         inkstitch:contour_underlay="True"
+         inkstitch:contour_underlay_inset_mm="0.10"
+         inkstitch:contour_underlay_stitch_length_mm="1.50"
+         inkstitch:pull_compensation_percent="" />
     </g>
     <g
        id="g235-9"
@@ -2763,21 +2962,24 @@ This Font Software is licensed under the SIL Open Font License, Version 1.0. See
          style="display:inline;fill:none;stroke:#4e2990;stroke-width:1"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
-         inkstitch:pull_compensation_mm=""
+         inkstitch:pull_compensation_mm="0.3"
          inkscape:label="Colonne satin 0"
          id="path234-7"
          inkstitch:reverse_rails="none"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:zigzag_underlay_max_stitch_length_mm="5"
-         inkstitch:zigzag_underlay_inset_mm=".5"
+         inkstitch:zigzag_underlay_inset_mm=".3"
          inkstitch:random_split_phase="False"
          inkstitch:max_stitch_length_mm="5"
-         inkstitch:zigzag_spacing_mm="0"
+         inkstitch:zigzag_spacing_mm="0.55"
          inkstitch:short_stitch_distance_mm="0"
          inkstitch:split_method="staggered"
          inkstitch:split_staggers="2.5"
-         inkstitch:pull_compensation_percent="10" />
+         inkstitch:contour_underlay="True"
+         inkstitch:contour_underlay_inset_mm="0.10"
+         inkstitch:contour_underlay_stitch_length_mm="1.50"
+         inkstitch:pull_compensation_percent="" />
     </g>
   </g>
 </svg>
