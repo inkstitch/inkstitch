@@ -1,16 +1,17 @@
 {
-    "name": "גופן בינוני Large",
+    "name": "חוכמה Large",
     "description": "Large size Hebrew satin font",
     "default_variant": "←",
     "text_direction": "rtl",
     "keywords": [
         "handwriting",
+        "multicolor",
         "hebrew"
     ],
     "leading": 128.0,
     "auto_satin": false,
     "reversible": false,
-    "sortable": false,
+    "sortable": true,
     "combine_at_sort_indices": [],
     "letter_case": "",
     "default_glyph": "?",
