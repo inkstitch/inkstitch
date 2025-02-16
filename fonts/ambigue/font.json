@@ -3,7 +3,8 @@
     "description": "Ambigüe is a mix of satin and bean stitch font with a subtle harmony of disorder. You may ignore the hidden black running stitches (they are the original letters) or use them to customize this font as you like.",
     "keywords": [
         "display",
-        "sans_serif"
+        "sans_serif",
+        "latin"
     ],
     "leading": 128.0,
     "auto_satin": false,

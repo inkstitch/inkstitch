@@ -2,7 +2,8 @@
     "name": "Manuskript Gothisch",
     "description": "Manuskript Gothisch is a satin font. Every satin has zigzag underlay.",
     "keywords": [
-        "display"
+        "display",
+        "latin"
     ],
     "leading": 125,
     "auto_satin": false,
@@ -257,8 +258,6 @@
         "\"",
         "&",
         "'",
-        "‘",
-        "’",
         "(",
         ")",
         ",",
@@ -283,14 +282,10 @@
         "?",
         "@",
         "A",
-        "C",
         "B",
+        "C",
         "D",
         "E",
-        "É",
-        "È",
-        "Ê",
-        "Ë",
         "F",
         "G",
         "H",
@@ -324,6 +319,7 @@
         "i",
         "j",
         "k",
+        "l",
         "m",
         "n",
         "o",
@@ -340,6 +336,10 @@
         "z",
         "Ä",
         "Æ",
+        "È",
+        "É",
+        "Ê",
+        "Ë",
         "Ô",
         "Ö",
         "Ü",
@@ -362,6 +362,12 @@
         "ü",
         "Œ",
         "œ",
-        "l"
-    ]
+        "‘",
+        "’"
+    ],
+    "default_variant": "→",
+    "text_direction": "ltr",
+    "letter_case": "",
+    "sortable": false,
+    "combine_at_sort_indices": []
 }

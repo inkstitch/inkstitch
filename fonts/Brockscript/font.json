@@ -2,10 +2,11 @@
     "name": "Brock Script",
     "description": "Brock Script is a decorative satin column manuscript font. It contains 118 glyphs, covering most western european languages needs. More decorative options are hidden in the µ glyph.",
     "keywords": [
-        "handwriting",
         "display",
+        "handwriting",
         "italic",
-        "multicolor"
+        "multicolor",
+        "latin"
     ],
     "leading": 200,
     "auto_satin": false,
@@ -172,12 +173,12 @@
     },
     "kerning_pairs": {},
     "glyphs": [
+        " ́",
+        " ̈",
         "!",
         "\"",
         "&",
         "'",
-        "’",
-        "‘",
         "(",
         ")",
         ",",
@@ -204,10 +205,6 @@
         "C",
         "D",
         "E",
-        "É",
-        "È",
-        "Ê",
-        "Ë",
         "F",
         "G",
         "H",
@@ -258,14 +255,15 @@
         "{",
         "}",
         "~",
-        "œ",
         "¡",
-        "¨",
-        "´",
         "¿",
         "À",
         "Á",
         "Ä",
+        "È",
+        "É",
+        "Ê",
+        "Ë",
         "Ñ",
         "Ö",
         "Ü",
@@ -295,6 +293,12 @@
         "ú",
         "û",
         "ü",
-        "µ"
-    ]
+        "œ",
+        "μ",
+        "‘",
+        "’"
+    ],
+    "default_variant": "→",
+    "text_direction": "ltr",
+    "combine_at_sort_indices": []
 }

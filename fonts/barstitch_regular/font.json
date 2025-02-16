@@ -2,7 +2,8 @@
     "name": "Barstitch regular",
     "description": "Barstitch regular is a satin font. ",
     "keywords": [
-        "sans_serif"
+        "sans_serif",
+        "latin"
     ],
     "leading": 110.0,
     "auto_satin": false,

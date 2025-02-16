@@ -2,9 +2,10 @@
     "name": "EMILIO_20_Applique",
     "description": "Emilio 20 Applique is an Applique font. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique.",
     "keywords": [
-        "display",
         "applique",
-        "serif"
+        "display",
+        "serif",
+        "latin"
     ],
     "leading": 200,
     "auto_satin": false,
@@ -91,5 +92,8 @@
         "X",
         "Y",
         "Z"
-    ]
+    ],
+    "default_variant": "→",
+    "text_direction": "ltr",
+    "combine_at_sort_indices": []
 }
