@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-02-14 01:25+0000\n"
-"PO-Revision-Date: 2025-02-14 01:25\n"
+"PO-Revision-Date: 2025-02-16 01:38\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr ""
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script is a decorative satin column manuscript font. It contains 118 glyphs, covering most western european languages needs. More decorative options are hidden in the µ glyph."
-msgstr ""
+msgstr "Brock Script è un è un carattere decorativo per manoscritti con colonne satinate. Contiene 118 glifi, che coprono la maggior parte delle esigenze delle lingue dell'Europa occidentale. Ulteriori opzioni decorative sono nascoste nel glifo µ."
 
 #. description of font in fonts/Shojumaru
 #: inkstitch-fonts-metadata.py:4
@@ -40,22 +40,22 @@ msgstr ""
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
 msgid "Abécédaire AGS is a crossstitch font."
-msgstr ""
+msgstr "Abécédaire AGS è un font a punto croce."
 
 #. description of font in fonts/abril
 #: inkstitch-fonts-metadata.py:8
 msgid "Abril En Fleur AGS is a monogram font."
-msgstr ""
+msgstr "Abril En Fleur AGS è un font monogramma."
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:10
 msgid "AGS Γαραμου Garamond contains all the letters of the latin and greek alphabets and cover most european languages."
-msgstr ""
+msgstr "AGS Γαραμου Garamond contiene tutte le lettere dell'alfabeto greco e latino e comprende la maggior parte delle lingue Europee."
 
 #. description of font in fonts/ambigue
 #: inkstitch-fonts-metadata.py:12
 msgid "Ambigüe is a mix of satin and bean stitch font with a subtle harmony of disorder. You may ignore the hidden black running stitches (they are the original letters) or use them to customize this font as you like."
-msgstr ""
+msgstr "Ambigüe è un misto di font a punto raso e a punto fagiolo con una sottile armonia di disordine. Bisognerebbe ignorare i punti neri nascosti (che sono le lettere originali) o usarli per personalizzare questo font come più ci piacerebbe."
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:14
@@ -65,843 +65,843 @@ msgstr ""
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:16
 msgid "This font is an altered version of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Questo font è una versione modificata di Amitaclo per permette una maggior riduzione in scala. È obbligatorio l'uso sia di filo sottile (60) che di ago sottile (60)."
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:18
 msgid "Apex Lake is a large ornate capital letters font. It contains only 38 glyphs : A-Z,0-9,! and ?."
-msgstr ""
+msgstr "Apex Lake è un font a con lettere maiuscole grandi e ornate. Contiene solo 38 glifi: A-Z, 0-9,! e ?."
 
 #. description of font in fonts/apex_simple_AGS
 #: inkstitch-fonts-metadata.py:20
 msgid "Apex Simple AGS is a satin companion font for Apex Lake AGS."
-msgstr ""
+msgstr "Apex Simple AGS è un font a punto raso complementare per Apex Lake AGS."
 
 #. description of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:22
 msgid "Auberge Marif is a script satin font. The glyphs cover most Western European languages."
-msgstr ""
+msgstr "Auberge Marif è un font a punto raso. I glifi comprendono la maggior parte delle lingue dell'Europa occidentale."
 
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:24
 msgid "Auberge Small is an altered version of Auberge Marif to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Auberge Small è una versione modificata di Auberge Marif per consentire una maggiore riduzione in scala. L'uso di filo sottile (60) e ago sottile (60) è obbligatorio."
 
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:26
 msgid "Aventurina is a script satin font. The glyphs cover most Western European languages."
-msgstr ""
+msgstr "Aventurina è un font a punto raso. I glifi comprendono la maggior parte delle lingue dell'Europa occidentale."
 
 #. description of font in fonts/barstitch_bold
 #: inkstitch-fonts-metadata.py:28
 msgid "Barstitch  Bold is a satin font."
-msgstr ""
+msgstr "Barstitch Bold è un font a punto raso."
 
 #. description of font in fonts/barstitch_cloudy
 #: inkstitch-fonts-metadata.py:30
 msgid "This is a guided fill version of Barstitch fill. Each letter is used to clip a group of guided fills and  then  a bean stitch contour is stitched. "
-msgstr ""
+msgstr "Questa è una versione di riempimento guidato di riempimento con il font Barstitch. Ogni lettera viene utilizzata per ritagliare un gruppo di riempimenti guidati e poi viene cucito un contorno di punto fagiolo. "
 
 #. description of font in fonts/barstitch_mandala
 #: inkstitch-fonts-metadata.py:32
 msgid "A large Mandala font. Redwork versions of the four mandalas  used to design the font are stored in the $,<,>,^ glyphs"
-msgstr ""
+msgstr "Un grande font Mandala. Le versioni Redwork dei quattro mandala utilizzati per progettare il font sono archiviate nei glifi $,<,>,^. "
 
 #. description of font in fonts/barstitch_regular
 #: inkstitch-fonts-metadata.py:34
 msgid "Barstitch regular is a satin font. "
-msgstr ""
+msgstr "Barstitch regular è un font a punto raso. "
 
 #. description of font in fonts/barstitch_textured
 #: inkstitch-fonts-metadata.py:36
 msgid "Barstitch textured is a highly textured font with the help of meander fills"
-msgstr ""
+msgstr "Barstitch textured è un font altamente strutturato con l'aiuto di riempimenti a zigzag. "
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:38
 msgid "Baumans FI is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Chopin Script è un font a punto raso. Ogni punto raso ha una base a zigzag."
 
 #. description of font in fonts/baumans_FI_Small
 #: inkstitch-fonts-metadata.py:40
 msgid "Baumans FI Small is an altered version of Baumans FI, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Questo font è una versione modificata di Amitaclo per permette una maggior riduzione in scala. L'uso sia di filo sottile (60) che di ago sottile (60) è obbligatorio."
 
 #. description of font in fonts/califragilistic
 #: inkstitch-fonts-metadata.py:42
 msgid "Califragilistic is a tricolor running stitch font that was constructed using mandalas"
-msgstr ""
+msgstr "Califragilistic è un font a punto filza tricolore costruito utilizzando i mandala. "
 
 #. description of font in fonts/cats
 #: inkstitch-fonts-metadata.py:44
 msgid "Cats is a silly font that makes use of satin random parameters."
-msgstr ""
+msgstr "Cats è un font un po' bizzarro che sfrutta parametri casuali satinati."
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:46
 msgid "Cherry for inkstitch is a decorative satin column font. It contains 74 glyphs."
-msgstr ""
+msgstr "Cherry per Inkstitch è un font decorativo a colonna satinata. Contiene 74 glifi."
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:48
 msgid "Cherry for Kaalleen is a large decorative font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Cherry for Kaalleen è un font decorativo di grandi dimensioni. Contiene 36 glifi, inclusi i numeri e le 26 maiuscole dalla A alla Z."
 
 #. description of font in fonts/chicken_little
 #: inkstitch-fonts-metadata.py:50
 #, python-format
 msgid "Chicken Little  is a  playful decorative display font with loads of personality. There is no common baseline, no common character size and no common slope of the letters. Beyond 110% some satin columns will split."
-msgstr ""
+msgstr "Chicken Little è un font decorativo giocoso con molta personalità. Non c'è una linea di base comune, nessuna dimensione comune del carattere e nessuna pendenza comune delle lettere. Oltre il 110% alcune colonne satinate si divideranno."
 
 #. description of font in fonts/chicken_little_small
 #: inkstitch-fonts-metadata.py:52
 msgid "This font is an altered version  of Chicken Little KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Questo font è una versione modificata di Chicken Little KOR per consentire una maggiore riduzione in scala. L'uso di filo sottile (60) e ago sottile (60) è obbligatorio."
 
 #. description of font in fonts/chicken_scratch
 #: inkstitch-fonts-metadata.py:54
 msgid "A handwritten font."
-msgstr ""
+msgstr "Un font scritto a mano."
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:56
 msgid "Chopin Script is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Chopin Script è un font a punto raso. Ogni punto raso ha una base a zigzag."
 
 #. description of font in fonts/cogs_KOR
 #: inkstitch-fonts-metadata.py:58
 msgid "Cogs KOR is a Steampunk  satin font."
-msgstr ""
+msgstr "Cogs KOR è un font Steampunk a punto ricamo."
 
 #. description of font in fonts/colorful
 #: inkstitch-fonts-metadata.py:60
 msgid "Colorful is a tartan fill font."
-msgstr ""
+msgstr "Colorful è un font a riempimento tartan."
 
 #. description of font in fonts/cooper_marif
 #: inkstitch-fonts-metadata.py:62
 msgid "CooperMarif is a large and airy font."
-msgstr ""
+msgstr "Cooper Marif è un font ampio e arioso."
 
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:64
 msgid "Coronaviral font is created with manual sitch. Do not change the size or very little."
-msgstr ""
+msgstr "Il font Coronaviral è creato con punti a mano. Non bisogna modificare le dimensioni o se si modificano, si dovrebbe modificarle poco."
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:66
 msgid "DejaVu Serif Condensed is a satin font. Every satin has center-walk underlay."
-msgstr ""
+msgstr "DejaVu Serif Condensed è un font a punto raso. Ogni punto raso è dotato di un supporto centrale."
 
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:68
 msgid "All letters of Digory Doodles Bean mix satin and bean stitch."
-msgstr ""
+msgstr "Tutte le lettere di Digory Doodles Bean sono realizzate in un misto di punto raso e punto fagioli."
 
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:70
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
-msgstr ""
+msgstr "Un font Grove jawn. La larghezza del punto raso è di 2,5 mm con maiuscole da 18 mm."
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:72
 msgid "Emilio 20 contains only capitals and numbers. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Emilio 20 contiene solo lettere maiuscole e numeri. Ogni punto raso ha una base a zigzag."
 
 #. description of font in fonts/emilio_20_applique
 #: inkstitch-fonts-metadata.py:74
 msgid "Emilio 20 Applique is an Applique font. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique."
-msgstr ""
+msgstr "Emilio 20 Applique è un font applique. Questo font è una versione modificata (colonne satinate più grandi) di Emilio_20 mentre Emilio_20_Bold è Emilio_20_applique senza applique."
 
 #. description of font in fonts/emilio_20_bold
 #: inkstitch-fonts-metadata.py:76
 msgid "Emilio_20_Bold is an altered version of Emilio_20."
-msgstr ""
+msgstr "Emilio_20_Bold è una versione modificata di Emilio_20."
 
 #. description of font in fonts/emilio_20_simple
 #: inkstitch-fonts-metadata.py:78
 msgid "Emilio is a font with capital only and numbers. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Emilio contiene solo lettere maiuscole e numeri. Ogni punto raso ha una base a zigzag."
 
 #. description of font in fonts/emilio_20_simple_small
 #: inkstitch-fonts-metadata.py:80
 msgid "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Questo font è una versione modificata di Emilio 20 semplice per permette una maggior riduzione in scala. È obbligatorio l'uso sia di filo sottile (60) che di ago sottile (60)."
 
 #. description of font in fonts/emilio_20_tartan
 #: inkstitch-fonts-metadata.py:82
 msgid "Emilio 20 Tartan uses tartan fill for a colorful font."
-msgstr ""
+msgstr "Emilio 20 Tartan utilizza riempimento tartan per un font colorato."
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:84
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Emilio 20 tricolore è un font di grandi dimensioni con punti di riempimento tricolore e colonne satinate. Contiene 36 glifi, inclusi i numeri e le 26 maiuscole dalla A alla Z."
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:86
 msgid "Espresso KOR is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Espresso KOR è un font a punto raso. Ogni punto raso ha una base a zigzag."
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:88
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Questo font è una versione modificata di Espresso KOR per consentire una maggiore riduzione in scala. L'uso di filo sottile (60) e ago sottile (60) è obbligatorio."
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:90
 msgid "Excalibur KOR is a small satin column manuscript font. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Excalibur KOR è un piccolo font da manoscritto  a colonna satinata. Contiene 144 glifi, che coprono la maggior parte delle esigenze delle lingue dell'Europa occidentale."
 
 #. description of font in fonts/excalibur_small
 #: inkstitch-fonts-metadata.py:92
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Questo font è una versione modificata di Excalibur KOR per consentire una maggiore riduzione in scala. L'uso di filo sottile (60) e ago sottile (60) è obbligatorio."
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:94
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font. It contains 40 glyphs including all numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Fold Ink/Stitch è un font grande con punti filza tripli e quintupli in maiuscolo. Contiene 40 glifi, inclusi tutti i numeri e le 26 maiuscole dalla A alla Z."
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:96
 msgid "Geneva Simple Sans Rounded is a satin font."
-msgstr ""
+msgstr "Geneva Simple Sans Rounded è un font a punto raso."
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:98
 msgid "Geneva Simple Sans is a satin font."
-msgstr ""
+msgstr "Geneva Simple Sans è un font a punto raso."
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:100
 msgid "Glacial is a very tiny font. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages."
-msgstr ""
+msgstr "Glacial è un font veramente piccolo. L'uso di filo sottile (60) e ago sottile (60) è obbligatorio. I caratteri comprendono la maggior parte delle lingue Europee."
 
 #. description of font in fonts/honoka
 #: inkstitch-fonts-metadata.py:102
 msgid "コルの書きこも is a satin column japanese script font. It contains all hiragana, katakana and punctuation glyphs plus 80 kanjis."
-msgstr ""
+msgstr "コルの書きこも è un font in giapponese a colonne satinate. Contiene tutti i caratteri hiragana, katakana e di punteggiatura più 80 kanji."
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:104
 msgid "InfiniPicto is a fun font containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "InfiniPicto è un font divertente che contiene solo i 26 caratteri dalla A alla Z. Ogni lettera è un pittogramma di un oggetto il cui nome inizia con quella lettera..... in francese"
 
 #. description of font in fonts/invercelia
 #: inkstitch-fonts-metadata.py:106
 msgid "Invercelia is a modern two letters monogram font. Enter an upper case letter followed by a lower case letter (for example 'Ac') to get a simple monogram.  Add a ')' at the end and the monogram is framed with a circle (for example 'Ac)'), add an '(' to start (for example '(Ac)' and your monogram is ready for applique, or  try something like '!Ac)' to replace the appliqué by knockdown stitches."
-msgstr ""
+msgstr "Invercelia è un font moderno per monogrammi a due lettere. Inserisci una lettera maiuscola seguita da una minuscola (ad esempio 'Ac') per ottenere un monogramma semplice. Aggiungi un ')' alla fine e il monogramma verrà incorniciato da un cerchio (ad esempio 'Ac)'), aggiungi un '(' per iniziare (ad esempio '(Ac)' e il tuo monogramma sarà pronto per l'applicazione, oppure prova qualcosa come '!Ac)' per sostituire l'applicazione con punti abbattuti."
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:108
 msgid "Kaushan Script MAM is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Kaushan Script MAM è un font a punto raso. Ogni punto raso ha una base a zigzag."
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:110
 msgid "Learning curve is a small running stitch script font."
-msgstr ""
+msgstr "Lerning curve è un piccolo font con punti filza."
 
 #. description of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:112
 msgid " Lobster AGS is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr " Lobster AGS è un font script a punto raso. Ogni punto raso ha una base a zigzag."
 
 #. description of font in fonts/magnolia_KOR
 #: inkstitch-fonts-metadata.py:114
 msgid "Magnolia KOR is a script satin font."
-msgstr ""
+msgstr "Magnolia KOR è un font script a punto raso."
 
 #. description of font in fonts/magnolia_bicolor
 #: inkstitch-fonts-metadata.py:116
 msgid "Magnolia bicolor is a  larger  bicolor variation of Magnolia font."
-msgstr ""
+msgstr "Magnolia bicolor è variante bicolore di maggiori dimensioni rispetto a Magnolia."
 
 #. description of font in fonts/magnolia_small
 #: inkstitch-fonts-metadata.py:118
 msgid "Magnolia Small is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Magnolia Small è una versione modificata di Magnolia KOR, per consentire una maggiore riduzione in scala. È obbligatorio l'uso sia di filo sottile (60) che di ago sottile (60)."
 
 #. description of font in fonts/magnolia_tamed
 #: inkstitch-fonts-metadata.py:120
 msgid "This is a less wild bicolor variation of Magnolia font"
-msgstr ""
+msgstr "Questa è una variante bicolore meno stravagante del font Magnolia"
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:122
 msgid "Manuskript Gothisch is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Manuskript Gothisch è un font a punto raso. Ogni punto raso ha una base a zigzag."
 
 #. description of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:124
 msgid "MarcellusSC-FI is a small capital satin font. It contains 107 glyphs covering most Western European languages."
-msgstr ""
+msgstr "MarcellusSC-FI è un font a punto raso in maiuscoletto. Contiene 107 caratteri che coprono la maggior parte delle lingue dell'Europa occidentale."
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:126
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
-msgstr ""
+msgstr "Ink/Stitch Medium Font è un font a punto raso adatto a caratteri di medie dimensioni. Ogni satin ha un contorno sottostante."
 
 #. description of font in fonts/milli_marif_bold
 #: inkstitch-fonts-metadata.py:128
 msgid "Millimarif-bold20 is a  bold satin font."
-msgstr ""
+msgstr "Millimarif-bold20 è un font a punto raso in grassetto."
 
 #. description of font in fonts/mimosa_large
 #: inkstitch-fonts-metadata.py:130
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
-msgstr ""
+msgstr "Mimosa Large è un font a punto raso che assomiglia a un font a puntini."
 
 #. description of font in fonts/mimosa_medium
 #: inkstitch-fonts-metadata.py:132
 msgid "Mimosa Medium is a satin font that looks dotty."
-msgstr ""
+msgstr "Mimosa Medium è un font a punto raso che sembra un font a puntini."
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:134
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
-msgstr ""
+msgstr "Monicha è un font script a punto raso. Oltre ai caratteri che comprendono la maggior parte delle lingue dell'Europa occidentale, contiene lettere ornamentali aggiuntive con svolazzi. Queste lettere ornamentali devono essere utilizzate con cautela per evitare sovrapposizioni. In particolare, non utilizzare due lettere ornamentali di seguito. Consultare la documentazione per informazioni su come accedere alle lettere ornamentali."
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:136
 msgid "Namskout AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Namskout AGS è un font grande per applicazioni. Contiene 43 caratteri, inclusi tutti i numeri e le 26 maiuscole dalla A alla Z."
 
 #. description of font in fonts/namskout_relief
 #: inkstitch-fonts-metadata.py:138
 msgid "Namskout relief is an altered version of Namskout AGS for embossed letters."
-msgstr ""
+msgstr "Il rilievo Namskout è una versione modificata del Namskout AGS per le lettere in rilievo."
 
 #. description of font in fonts/namskout_tartan
 #: inkstitch-fonts-metadata.py:140
 msgid "Namskout Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals."
-msgstr ""
+msgstr "Namskout Tartan è un font di riempimento tartan. Contiene 43 caratteri, inclusi tutti i numeri e le 26 maiuscole."
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:142
 msgid "NickAinley is a tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn."
-msgstr ""
+msgstr "NickAinley è un minuscolo alfabeto a forma di fagiolo da 1 millimetro basato su un Seniors Studio jawn da 24 punti."
 
 #. description of font in fonts/ondulamarif_Medium
 #: inkstitch-fonts-metadata.py:144
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
-msgstr ""
+msgstr "Ondulamarif M è una versione modificata di Ondulamarif XL. I parametri di ricamo modificati di questo font consentono un font più piccolo."
 
 #. description of font in fonts/ondulamarif_S
 #: inkstitch-fonts-metadata.py:146
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
-msgstr ""
+msgstr "Ondulamarif S è una versione modificata di Ondulamarif XL, per consentire una maggiore riduzione delle dimensioni."
 
 #. description of font in fonts/ondulamarif_XL
 #: inkstitch-fonts-metadata.py:148
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
-msgstr ""
+msgstr "Ondulamarif XL è un font con motivo ondulato: usatelo il più grande possibile, ma non ridurlo."
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:150
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr ""
+msgstr "Pacificlo è un piccolo font manoscritto a colonna satinata. Contiene 120 caratteri, che coprono la maggior parte delle esigenze delle lingue dell'Europa occidentale."
 
 #. description of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:152
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Pacificlo tiny è una versione modificata di Pacificlo, per consentire una maggiore riduzione in scala. Sono obbligatori sia il filo sottile (60) che l'ago sottile (60)."
 
 #. description of font in fonts/perspective_tricolore_KOR
 #: inkstitch-fonts-metadata.py:154
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
-msgstr ""
+msgstr "Perspective tricolore KOR è un font tricolore ombreggiato con solo lettere maiuscole, numeri e punteggiatura."
 
 #. description of font in fonts/pixel10
 #: inkstitch-fonts-metadata.py:156
 msgid "Pixel 10 is a satin pixel font."
-msgstr ""
+msgstr "Pixel 10 è un font a punto raso pixellato."
 
 #. description of font in fonts/roaring_twenties_KOR
 #: inkstitch-fonts-metadata.py:158
 msgid "Roaring Twenties KOR is a satin font."
-msgstr ""
+msgstr "Roaring Twenties KOR è un font a punto raso."
 
 #. description of font in fonts/roaring_twenties_KOR_small
 #: inkstitch-fonts-metadata.py:160
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Roaring Twenties KOR Small è una versione modificata di Roaring Twenties KOR, per consentire una maggiore riduzione in scala. È obbligatorio l'uso sia di filo sottile (60) che di ago sottile (60)."
 
 #. description of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:162
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Roman AGS è basato su Latin Modern Roman 10 Bold italic. Ogni punto raso ha una base a zigzag."
 
 #. description of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:164
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
-msgstr ""
+msgstr "Roman bicolor AGS è una versione modificata di Roman AGS. Le lettere maiuscole sono bicolori."
 
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:166
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
-msgstr ""
+msgstr "Sacramarif è un font a punto filza molto piccolo basato su Sacramento."
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:168
 msgid "Ink/Stitch Small Font is suited for small characters."
-msgstr ""
+msgstr "Il font Ink/Stitch Small è adatto per caratteri di piccole dimensioni."
 
 #. description of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:170
 #, python-brace-format
 msgid " Sortefax XL Initials is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
-msgstr ""
+msgstr "Sortefax XL Initials è un font maiuscolo molto grande a punto raso. Contiene i 37 caratteri &, A-Z e 0-9. Inoltre, i dieci caratteri (){}[],;.: sono usati per memorizzare le cornici. Digita una lettera qualsiasi seguita da una cornice (ad esempio A( o B; ) per ottenere una maiuscola o un numero con cornice. Attenzione: per alcune lettere grandi dovrai ingrandire manualmente la cornice."
 
 #. description of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:172
 #, python-brace-format
 msgid "Sortefax  Medium Initials is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
-msgstr ""
+msgstr "Sortefax Medium Initials è un font maiuscolo a punto raso. Contiene i 37 caratteri &, A-Z e 0-9. Inoltre, i dieci caratteri (){}[],;.: sono usati per memorizzare le cornici. Digita una lettera qualsiasi seguita da una cornice (ad esempio A( o B; o 7, ) per ottenere una maiuscola o un numero con cornice. Potrebbe essere necessario disporre manualmente la cornice attorno alla lettera."
 
 #. description of font in fonts/sunset
 #: inkstitch-fonts-metadata.py:174
 msgid "3 colors satin column font"
-msgstr ""
+msgstr "Font a punto raso a colonna a 3 colori"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:176
 msgid "TT  Directors is a satin font suited for directing."
-msgstr ""
+msgstr "TT Directors è un font a punto raso adatto per essere indirizzato."
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:178
 msgid "TT Masters is a satin font suited for heavy typing :)"
-msgstr ""
+msgstr "TT Masters è un font a punto raso adatto a battiture intense."
 
 #. description of font in fonts/violin_serif
 #: inkstitch-fonts-metadata.py:180
 msgid "Violin Serif is a condensed serif satin font."
-msgstr ""
+msgstr "Violin Serif è un font compresso a punto raso."
 
 #. description of font in fonts/western_light
 #: inkstitch-fonts-metadata.py:182
 msgid "Western light is a light fill western style font."
-msgstr ""
+msgstr "Western light è un font in stile occidentale con riempimento leggero."
 
 #. name of tile in tiles/N3-11a
 #: inkstitch-tiles-metadata.py:2
 msgid "N3-11a"
-msgstr ""
+msgstr "N3-11a"
 
 #. name of tile in tiles/N3-12
 #: inkstitch-tiles-metadata.py:4
 msgid "N3-12"
-msgstr ""
+msgstr "N3-12"
 
 #. name of tile in tiles/N3-16a
 #: inkstitch-tiles-metadata.py:6
 msgid "N3-16a"
-msgstr ""
+msgstr "N3-16a"
 
 #. name of tile in tiles/N3-17
 #: inkstitch-tiles-metadata.py:8
 msgid "N3-17"
-msgstr ""
+msgstr "N3-17"
 
 #. name of tile in tiles/N3-18
 #: inkstitch-tiles-metadata.py:10
 msgid "N3-18"
-msgstr ""
+msgstr "N3-18"
 
 #. name of tile in tiles/N3-18-modified
 #: inkstitch-tiles-metadata.py:12
 msgid "N3-18-modified"
-msgstr ""
+msgstr "N3-18 modificato"
 
 #. name of tile in tiles/N3-20
 #: inkstitch-tiles-metadata.py:14
 msgid "N3-20"
-msgstr ""
+msgstr "N3-20"
 
 #. name of tile in tiles/N3-23b
 #: inkstitch-tiles-metadata.py:16
 msgid "N3-23b"
-msgstr ""
+msgstr "N3-23b"
 
 #. name of tile in tiles/N3-25c
 #: inkstitch-tiles-metadata.py:18
 msgid "N3-25c"
-msgstr ""
+msgstr "N3-25c"
 
 #. name of tile in tiles/N3-26b
 #: inkstitch-tiles-metadata.py:20
 msgid "N3-26b"
-msgstr ""
+msgstr "N3-26b"
 
 #. name of tile in tiles/N3-27
 #: inkstitch-tiles-metadata.py:22
 msgid "N3-27"
-msgstr ""
+msgstr "N3-27"
 
 #. name of tile in tiles/N3-30a
 #: inkstitch-tiles-metadata.py:24
 msgid "N3-30a"
-msgstr ""
+msgstr "N3-30a"
 
 #. name of tile in tiles/N3-51b
 #: inkstitch-tiles-metadata.py:26
 msgid "N3-51b"
-msgstr ""
+msgstr "N3-51b"
 
 #. name of tile in tiles/N3-57f-modified
 #: inkstitch-tiles-metadata.py:28
 msgid "N3-57f-modified"
-msgstr ""
+msgstr "N3-57f modificato"
 
 #. name of tile in tiles/N3-58b
 #: inkstitch-tiles-metadata.py:30
 msgid "N3-58b"
-msgstr ""
+msgstr "N3-58b"
 
 #. name of tile in tiles/N3-6
 #: inkstitch-tiles-metadata.py:32
 msgid "N3-6"
-msgstr ""
+msgstr "N3-6"
 
 #. name of tile in tiles/N3-7
 #: inkstitch-tiles-metadata.py:34
 msgid "N3-7"
-msgstr ""
+msgstr "N3-7"
 
 #. name of tile in tiles/N3-8a
 #: inkstitch-tiles-metadata.py:36
 msgid "N3-8a"
-msgstr ""
+msgstr "N3-8a"
 
 #. name of tile in tiles/N3-8a-modified
 #: inkstitch-tiles-metadata.py:38
 msgid "N3-8a-modified"
-msgstr ""
+msgstr "N3-8a-modificato"
 
 #. name of tile in tiles/N3-8b
 #: inkstitch-tiles-metadata.py:40
 msgid "N3-8b"
-msgstr ""
+msgstr "N3-8b"
 
 #. name of tile in tiles/N4-13b
 #: inkstitch-tiles-metadata.py:42
 msgid "N4-13b"
-msgstr ""
+msgstr "N4-13b"
 
 #. name of tile in tiles/N4-13c
 #: inkstitch-tiles-metadata.py:44
 msgid "N4-13c"
-msgstr ""
+msgstr "N4-13c"
 
 #. name of tile in tiles/N4-13d
 #: inkstitch-tiles-metadata.py:46
 msgid "N4-13d"
-msgstr ""
+msgstr "N4-13d"
 
 #. name of tile in tiles/N4-13e
 #: inkstitch-tiles-metadata.py:48
 msgid "N4-13e"
-msgstr ""
+msgstr "N4-13e"
 
 #. name of tile in tiles/N4-13f
 #: inkstitch-tiles-metadata.py:50
 msgid "N4-13f"
-msgstr ""
+msgstr "N4-13f"
 
 #. name of tile in tiles/N4-16a
 #: inkstitch-tiles-metadata.py:52
 msgid "N4-16a"
-msgstr ""
+msgstr "N4-16a"
 
 #. name of tile in tiles/N4-19
 #: inkstitch-tiles-metadata.py:54
 msgid "N4-19"
-msgstr ""
+msgstr "N4-19"
 
 #. name of tile in tiles/N4-20
 #: inkstitch-tiles-metadata.py:56
 msgid "N4-20"
-msgstr ""
+msgstr "N4-20"
 
 #. name of tile in tiles/N4-21c
 #: inkstitch-tiles-metadata.py:58
 msgid "N4-21c"
-msgstr ""
+msgstr "N4-21c"
 
 #. name of tile in tiles/N4-22
 #: inkstitch-tiles-metadata.py:60
 msgid "N4-22"
-msgstr ""
+msgstr "N4-22"
 
 #. name of tile in tiles/N4-23a
 #: inkstitch-tiles-metadata.py:62
 msgid "N4-23a"
-msgstr ""
+msgstr "N4-23a"
 
 #. name of tile in tiles/N4-23c
 #: inkstitch-tiles-metadata.py:64
 msgid "N4-23c"
-msgstr ""
+msgstr "N4-23c"
 
 #. name of tile in tiles/N4-27
 #: inkstitch-tiles-metadata.py:66
 msgid "N4-27"
-msgstr ""
+msgstr "N4-27"
 
 #. name of tile in tiles/N4-29e
 #: inkstitch-tiles-metadata.py:68
 msgid "N4-29e"
-msgstr ""
+msgstr "N4-29e"
 
 #. name of tile in tiles/N4-29f
 #: inkstitch-tiles-metadata.py:70
 msgid "N4-29f"
-msgstr ""
+msgstr "N4-29f"
 
 #. name of tile in tiles/N4-31
 #: inkstitch-tiles-metadata.py:72
 msgid "N4-31"
-msgstr ""
+msgstr "N4-31"
 
 #. name of tile in tiles/N4-38
 #: inkstitch-tiles-metadata.py:74
 msgid "N4-38"
-msgstr ""
+msgstr "N4-38"
 
 #. name of tile in tiles/N4-42e
 #: inkstitch-tiles-metadata.py:76
 msgid "N4-42e"
-msgstr ""
+msgstr "N4-42e"
 
 #. name of tile in tiles/N4-44
 #: inkstitch-tiles-metadata.py:78
 msgid "N4-44"
-msgstr ""
+msgstr "N4-44"
 
 #. name of tile in tiles/N4-52
 #: inkstitch-tiles-metadata.py:80
 msgid "N4-52"
-msgstr ""
+msgstr "N4-52"
 
 #. name of tile in tiles/N4-54d
 #: inkstitch-tiles-metadata.py:82
 msgid "N4-54d"
-msgstr ""
+msgstr "N4-54d"
 
 #. name of tile in tiles/N4-5a
 #: inkstitch-tiles-metadata.py:84
 msgid "N4-5a"
-msgstr ""
+msgstr "N4-5a"
 
 #. name of tile in tiles/N4-5a-2
 #: inkstitch-tiles-metadata.py:86
 msgid "N4-5a-2"
-msgstr ""
+msgstr "N4-5a-2"
 
 #. name of tile in tiles/N4-82
 #: inkstitch-tiles-metadata.py:88
 msgid "N4-82"
-msgstr ""
+msgstr "N4-82"
 
 #. name of tile in tiles/N4-85d
 #: inkstitch-tiles-metadata.py:90
 msgid "N4-85d"
-msgstr ""
+msgstr "N4-85d"
 
 #. name of tile in tiles/N5-1e1
 #: inkstitch-tiles-metadata.py:92
 msgid "N5-1e1"
-msgstr ""
+msgstr "N5-1e1"
 
 #. name of tile in tiles/N5-1q2
 #: inkstitch-tiles-metadata.py:94
 msgid "N5-1q2"
-msgstr ""
+msgstr "N5-1q2"
 
 #. name of tile in tiles/N5-1t
 #: inkstitch-tiles-metadata.py:96
 msgid "N5-1t"
-msgstr ""
+msgstr "N5-1t"
 
 #. name of tile in tiles/N6-1
 #: inkstitch-tiles-metadata.py:98
 msgid "N6-1"
-msgstr ""
+msgstr "N6-1"
 
 #. name of tile in tiles/N6-2
 #: inkstitch-tiles-metadata.py:100
 msgid "N6-2"
-msgstr ""
+msgstr "N6-2"
 
 #. name of tile in tiles/N6-5b
 #: inkstitch-tiles-metadata.py:102
 msgid "N6-5b"
-msgstr ""
+msgstr "N6-5b"
 
 #. name of tile in tiles/N6-6a
 #: inkstitch-tiles-metadata.py:104
 msgid "N6-6a"
-msgstr ""
+msgstr "N6-6a"
 
 #. name of tile in tiles/N6-6c
 #: inkstitch-tiles-metadata.py:106
 msgid "N6-6c"
-msgstr ""
+msgstr "N6-6c"
 
 #. name of tile in tiles/NC5-11a
 #: inkstitch-tiles-metadata.py:108
 msgid "NC5-11a"
-msgstr ""
+msgstr "NC5-11a"
 
 #. name of tile in tiles/NC5-20a
 #: inkstitch-tiles-metadata.py:110
 msgid "NC5-20a"
-msgstr ""
+msgstr "NC5-20a"
 
 #. name of tile in tiles/P3-1
 #: inkstitch-tiles-metadata.py:112
 msgid "P3-1"
-msgstr ""
+msgstr "P3-1"
 
 #. name of tile in tiles/P3-12
 #: inkstitch-tiles-metadata.py:114
 msgid "P3-12"
-msgstr ""
+msgstr "P3-12"
 
 #. name of tile in tiles/P4-1
 #: inkstitch-tiles-metadata.py:116
 msgid "P4-1"
-msgstr ""
+msgstr "P4-1"
 
 #. name of tile in tiles/P4-10
 #: inkstitch-tiles-metadata.py:118
 msgid "P4-10"
-msgstr ""
+msgstr "P4-10"
 
 #. name of tile in tiles/P4-15
 #: inkstitch-tiles-metadata.py:120
 msgid "P4-15"
-msgstr ""
+msgstr "P4-15"
 
 #. name of tile in tiles/P4-19
 #: inkstitch-tiles-metadata.py:122
 msgid "P4-19"
-msgstr ""
+msgstr "P4-19"
 
 #. name of tile in tiles/P4-23
 #: inkstitch-tiles-metadata.py:124
 msgid "P4-23"
-msgstr ""
+msgstr "P4-23"
 
 #. name of tile in tiles/P4-24
 #: inkstitch-tiles-metadata.py:126
 msgid "P4-24"
-msgstr ""
+msgstr "P4-24"
 
 #. name of tile in tiles/P4-25
 #: inkstitch-tiles-metadata.py:128
 msgid "P4-25"
-msgstr ""
+msgstr "P4-25"
 
 #. name of tile in tiles/P4-43
 #: inkstitch-tiles-metadata.py:130
 msgid "P4-43"
-msgstr ""
+msgstr "P4-43"
 
 #. name of tile in tiles/P4-43-modified
 #: inkstitch-tiles-metadata.py:132
 msgid "P4-43-modified"
-msgstr ""
+msgstr "P4-43-modificato"
 
 #. name of tile in tiles/P4-47
 #: inkstitch-tiles-metadata.py:134
 msgid "P4-47"
-msgstr ""
+msgstr "P4-47"
 
 #. name of tile in tiles/P5-10_11
 #: inkstitch-tiles-metadata.py:136
 msgid "P5-10_11"
-msgstr ""
+msgstr "P5-10_11"
 
 #. name of tile in tiles/P5-19
 #: inkstitch-tiles-metadata.py:138
 msgid "P5-19"
-msgstr ""
+msgstr "P5-19"
 
 #. name of tile in tiles/P5-23_24
 #: inkstitch-tiles-metadata.py:140
 msgid "P5-23_24"
-msgstr ""
+msgstr "P5-23_24"
 
 #. name of tile in tiles/P5-4
 #: inkstitch-tiles-metadata.py:142
 msgid "P5-4"
-msgstr ""
+msgstr "P5-4"
 
 #. name of tile in tiles/P6-6_11
 #: inkstitch-tiles-metadata.py:144
 msgid "P6-6_11"
-msgstr ""
+msgstr "P6-6_11"
 
 #. name of tile in tiles/diamond-square
 #: inkstitch-tiles-metadata.py:146
 msgid "diamonds and squares"
-msgstr ""
+msgstr "diamanti e quadrati"
 
 #. name of tile in tiles/hexagon
 #: inkstitch-tiles-metadata.py:148
 msgid "hexagonal lattice"
-msgstr ""
+msgstr "reticolo esagonale"
 
 #. name of tile in tiles/weird-one
 #: inkstitch-tiles-metadata.py:150
 msgid "weird one"
-msgstr ""
+msgstr "quello strano"
 
 #: inkstitch.py:166
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
-msgstr ""
+msgstr "Ink/Stitch non può leggere i file SVG. Questo accade spesso quando si utilizza un file creato con Adobe Illustrator."
 
 #: inkstitch.py:169
 msgid "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
-msgstr ""
+msgstr "Prova ad importare un file in Inkscape attraverso \"File > Importa...\" (Ctrl+I)"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:27 inx/inkstitch_object_commands.inx:4
 #: inx/inkstitch_remove_embroidery_settings.inx:118
 msgid "Starting position"
-msgstr ""
+msgstr "Posizione iniziale"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:5
 #: inx/inkstitch_remove_embroidery_settings.inx:119
 msgid "Ending position"
-msgstr ""
+msgstr "Posizione finale"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:33 inx/inkstitch_object_commands.inx:6
 #: inx/inkstitch_remove_embroidery_settings.inx:120
 msgid "Target position"
-msgstr ""
+msgstr "Posizione di destinazione"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:36 inx/inkstitch_object_commands.inx:7
 #: inx/inkstitch_remove_embroidery_settings.inx:121
 msgid "Auto-route starting position"
-msgstr ""
+msgstr "Posizione di partenza del percorso automatico"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:39 inx/inkstitch_object_commands.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:122
 msgid "Auto-route ending position"
-msgstr ""
+msgstr "Posizione di fine del percorso automatico"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -983,183 +983,183 @@ msgstr "indicatore di comando"
 
 #: lib/commands.py:481
 msgid "Please select a layer to include layer commands."
-msgstr ""
+msgstr "Selezionare un livello in cui includere i comandi del livello."
 
 #: lib/elements/clone.py:29
 msgid "Clone Object"
-msgstr ""
+msgstr "Clona oggetto"
 
 #: lib/elements/clone.py:30
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with clones, but you are limited to set a very few parameters. "
-msgstr ""
+msgstr "Ci sono uno o più oggetti clone in questo documento. Ink/Stitch può funzionare con i cloni, ma sei limitato a impostare pochissimi parametri."
 
 #: lib/elements/clone.py:33
 msgid "If you want to convert the clone into a real element, follow these steps:"
-msgstr ""
+msgstr "Se vuoi convertire il clone in un elemento reale, segui questi passaggi:"
 
 #: lib/elements/clone.py:34
 msgid "* Select the clone"
-msgstr ""
+msgstr "*Selezionare il clone"
 
 #: lib/elements/clone.py:35
 msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
-msgstr ""
+msgstr "* Esegui: Estensioni > Ink/Stitch > Modifica > Scollega clone"
 
 #: lib/elements/clone.py:41 lib/elements/clone.py:47
 #: inx/inkstitch_select_elements.inx:74 inx/inkstitch_select_elements.inx:75
 msgid "Clone"
-msgstr ""
+msgstr "Clone"
 
 #: lib/elements/clone.py:53
 msgid "Custom fill angle"
-msgstr ""
+msgstr "Riempimento dell'angolo personalizzato"
 
 #: lib/elements/clone.py:54
 msgid "This setting will apply a custom fill angle for the clone."
-msgstr ""
+msgstr "Questa impostazione applicherà un riempimento dell'angolo personalizzato per il clone."
 
 #: lib/elements/clone.py:63
 msgid "Flip angle"
-msgstr ""
+msgstr "Capovolgimento dell'angolo"
 
 #: lib/elements/clone.py:65
 msgid "Flip automatically calculated angle if it appears to be wrong."
-msgstr ""
+msgstr "Inverti l'angolo calcolato automaticamente se sembra sbagliato."
 
 #: lib/elements/element.py:247 lib/gui/preferences.py:59
 #: lib/gui/preferences.py:106
 msgid "Minimum stitch length"
-msgstr ""
+msgstr "Lunghezza minima del punto"
 
 #: lib/elements/element.py:248
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
-msgstr ""
+msgstr "Sovrascrivi l'impostazione minima globale della lunghezza del punto. I punti più corti saranno rimossi."
 
 #: lib/elements/element.py:258 lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
-msgstr ""
+msgstr "Lunghezza minima del punto saltato"
 
 #: lib/elements/element.py:259
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
-msgstr ""
+msgstr "Sovrascrivi l'impostazione globale minima della lunghezza del punto saltato. Le distanze più brevi all'oggetto successivo non avranno punti di blocco."
 
 #: lib/elements/element.py:269
 msgid "Allow lock stitches"
-msgstr ""
+msgstr "Consentire punti di blocco"
 
 #: lib/elements/element.py:270
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
-msgstr ""
+msgstr "Annoda il filo all'inizio e/o alla fine di questo oggetto. Il punto manuale aggiungerà punti di bloccaggio solo se è selezionata la funzione forza punto annodato."
 
 #. options to allow lock stitch before and after objects
 #: lib/elements/element.py:275
 msgid "Both"
-msgstr ""
+msgstr "Entrambi"
 
 #: lib/elements/element.py:275
 msgid "Before"
-msgstr ""
+msgstr "Prima"
 
 #: lib/elements/element.py:275
 msgid "After"
-msgstr ""
+msgstr "Dopo"
 
 #: lib/elements/element.py:275
 msgid "Neither"
-msgstr ""
+msgstr "Nessuno dei due"
 
 #: lib/elements/element.py:284
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
-msgstr ""
+msgstr "Forza il punto annodato"
 
 #: lib/elements/element.py:285
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
-msgstr ""
+msgstr "Cucire punti annodato dopo aver cucito questo elemento, anche se la distanza dall'oggetto successivo è inferiore a quella definita dal valore minimo della lunghezza del punto saltato nelle preferenze Ink/Stitch."
 
 #: lib/elements/element.py:297
 msgid "Tack stitch"
-msgstr ""
+msgstr "Imbastitura"
 
 #: lib/elements/element.py:298
 msgid "Tack down stitch type"
-msgstr ""
+msgstr "Tipo di imbastitura"
 
 #: lib/elements/element.py:308 lib/elements/element.py:354
 msgid "Custom path"
-msgstr ""
+msgstr "Percorso personalizzato"
 
 #: lib/elements/element.py:309
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
-msgstr ""
+msgstr "Inserisci un percorso personalizzato. Per i percorsi svg l'ultimo nodo non verrà ricamato, ma rappresenta il primo punto dell'elemento."
 
 #: lib/elements/element.py:319 lib/elements/element.py:331
 msgid "Scale tack stitch"
-msgstr ""
+msgstr "Scalare l'imbastitura"
 
 #: lib/elements/element.py:320
 msgid "Set stitch length. A 1 in a custom path equals this values."
-msgstr ""
+msgstr "Imposta la lunghezza del punto. Un 1 in un percorso personalizzato equivale a questi valori."
 
 #: lib/elements/element.py:332
 msgid "Scale tack stitch by this percentage."
-msgstr ""
+msgstr "Imposta l'imbastitura in base a questa percentuale."
 
 #: lib/elements/element.py:343
 msgid "Lock stitch"
-msgstr ""
+msgstr "Punto annodato"
 
 #: lib/elements/element.py:344
 msgid "Lock stitch type"
-msgstr ""
+msgstr "Tipo di punto annodato"
 
 #: lib/elements/element.py:355
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
-msgstr ""
+msgstr "Inserisci un percorso personalizzato. Per i percorsi svg il primo nodo non verrà ricamato, ma rappresenta l'ultimo punto dell'elemento."
 
 #: lib/elements/element.py:365 lib/elements/element.py:377
 msgid "Scale lock stitch"
-msgstr ""
+msgstr "Imposta il punto annodato"
 
 #: lib/elements/element.py:366
 msgid "Set length of lock stitches (mm)."
-msgstr ""
+msgstr "Imposta la lunghezza del punto annodato (mm)."
 
 #: lib/elements/element.py:378
 msgid "Scale lock stitch by this percentage."
-msgstr ""
+msgstr "Imposta il punto annodato in base a questa percentuale."
 
 #: lib/elements/element.py:390
 msgid "Trim After"
-msgstr ""
+msgstr "Dopo rifilare"
 
 #: lib/elements/element.py:391
 msgid "Add a TRIM command after stitching this object."
-msgstr ""
+msgstr "Aggiungere il comando TRIM/RIFILARE dopo aver cucito questo oggetto."
 
 #: lib/elements/element.py:400
 msgid "Stop After"
-msgstr ""
+msgstr "Dopo fermarsi"
 
 #: lib/elements/element.py:401
 msgid "Add a STOP command after stitching this object."
-msgstr ""
+msgstr "Aggiungi il comando STOP dopo aver cucito questo oggetto."
 
 #: lib/elements/element.py:685
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
-msgstr ""
+msgstr "Esegui Estensioni > Ink/Stitch > Risoluzione dei problemi > Risoluzione dei problemi oggetti. Questo ti mostrerà la posizione esatta del problema."
 
 #: lib/elements/empty_d_object.py:13
 msgid "Empty Path"
-msgstr ""
+msgstr "Svuotare il percorso"
 
 #: lib/elements/empty_d_object.py:14
 msgid "There is an invalid object in the document without geometry information."
-msgstr ""
+msgstr "C'è un oggetto non valido nel documento senza informazione geometriche."
 
 #: lib/elements/empty_d_object.py:16
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
-msgstr ""
+msgstr "*Esegui estensioni > Ink/Stitch > Risoluzione dei problemi > Pulizia dei documenti..."
 
 #: lib/elements/fill_stitch.py:37
 msgid "Small Fill"
@@ -1175,7 +1175,7 @@ msgstr "Espandi"
 
 #: lib/elements/fill_stitch.py:45
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
-msgstr ""
+msgstr "L'espansione del parametro per questo riempimento dell'oggetto non può essere applicato. Ink/Stitch lo ignorerà e utilizzerà invece le dimensioni originali."
 
 #: lib/elements/fill_stitch.py:50 lib/elements/fill_stitch.py:701
 msgid "Inset"
@@ -1183,31 +1183,31 @@ msgstr "Intarsio"
 
 #: lib/elements/fill_stitch.py:51
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
-msgstr ""
+msgstr "Il parametro dell'inserimento della base per questo oggetto di riempimento non può essere applicato. Ink/Stitch lo ignorerà e utilizzerà invece la dimensione originale."
 
 #: lib/elements/fill_stitch.py:56
 msgid "Missing Guideline"
-msgstr ""
+msgstr "Linea guida mancante"
 
 #: lib/elements/fill_stitch.py:57
 msgid "This object is set to \"Guided Fill\", but has no guide line."
-msgstr ""
+msgstr "Questo oggetto è impostato su \"Riempimento guidato\", ma non ha alcuna linea guida."
 
 #: lib/elements/fill_stitch.py:59
 msgid "* Create a stroke object"
-msgstr ""
+msgstr "* Crea un oggetto tratteggiato"
 
 #: lib/elements/fill_stitch.py:60
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
-msgstr ""
+msgstr "* Seleziona questo oggetto ed esegui Estensioni > Ink/Stitch > Modifica > Selezione linea guida"
 
 #: lib/elements/fill_stitch.py:65
 msgid "Disjointed Guide Line"
-msgstr ""
+msgstr "Linea guida disgiunta"
 
 #: lib/elements/fill_stitch.py:66
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
-msgstr ""
+msgstr "La linea guida di questo oggetto non è all'interno dei bordi dell'oggetto. La linea guida funziona meglio se è all'interno dell'elemento di destinazione."
 
 #: lib/elements/fill_stitch.py:69
 msgid "* Move the guide line into the element"
@@ -1328,11 +1328,11 @@ msgstr "Riempimento impunture indirizzato automaticamente"
 
 #: lib/elements/fill_stitch.py:154
 msgid "Auto Fill"
-msgstr ""
+msgstr "Riempimento automatico"
 
 #: lib/elements/fill_stitch.py:155 inx/inkstitch_select_elements.inx:56
 msgid "Circular Fill"
-msgstr ""
+msgstr "Riempimento circolare"
 
 #: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:57
 msgid "Contour Fill"
@@ -1433,35 +1433,35 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:228
 msgid "Percentage to stretch or compress the meander pattern.  You can scale horizontally and vertically individually by giving two percentages separated by a space. "
-msgstr ""
+msgstr "Percentuale per allungare o comprimere il pattern dello zigzag. Puoi scalare orizzontalmente e verticalmente individualmente specificando due percentuali separate da uno spazio."
 
 #: lib/elements/fill_stitch.py:238
 msgid "Clip path"
-msgstr ""
+msgstr "Percorso di ritaglio"
 
 #: lib/elements/fill_stitch.py:239
 msgid "Constrain stitching to the shape.  Useful when smoothing and expand are used."
-msgstr ""
+msgstr "Vincola la cucitura alla forma. Utile quando si usano uniformità e espansione."
 
 #: lib/elements/fill_stitch.py:248
 msgid "Smoothness"
-msgstr ""
+msgstr "Uniformità"
 
 #: lib/elements/fill_stitch.py:250
 msgid "Smooth the stitch path.  Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path.  Try low numbers like 0.2.  Hint: a lower running stitch tolerance may be needed too."
-msgstr ""
+msgstr "Uniforma il percorso del punto. L'uniformità limita quanto il percorso del punto levigato può deviare dal percorso originale. Prova numeri bassi come 0,2. Suggerimento: potrebbe essere necessaria anche una tolleranza del punto filza inferiore."
 
 #: lib/elements/fill_stitch.py:265
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
-msgstr ""
+msgstr "Espandi la forma prima di riempire le cuciture, per compensare gli spazi vuoti tra le forme. I valori negativi invece contraggono."
 
 #: lib/elements/fill_stitch.py:282
 msgid "Gap Filling"
-msgstr ""
+msgstr "Riempimento del buco"
 
 #: lib/elements/fill_stitch.py:283
 msgid "Add extra rows to compensate for gaps between sections caused by distortion.Rows are always added in pairs, so this number will be rounded up to the nearest multiple of 2."
-msgstr ""
+msgstr "Aggiungere righe extra per compensare gli spazi vuoti tra le sezioni causati dalla distorsione. Le righe vengono sempre aggiunte in coppia, quindi questo numero verrà arrotondato al multiplo più vicino di 2."
 
 #: lib/elements/fill_stitch.py:295 lib/elements/fill_stitch.py:308
 #: lib/gui/tartan/embroidery_panel.py:35
@@ -1474,7 +1474,7 @@ msgstr "L'angolo si incrementa in senso anti-orario. Zero è orizzontale. Sono a
 
 #: lib/elements/fill_stitch.py:309 lib/gui/tartan/embroidery_panel.py:36
 msgid "Relative to the tartan stripe direction."
-msgstr ""
+msgstr "Rispetto alla direzione delle strisce del tartan."
 
 #: lib/elements/fill_stitch.py:321
 msgid "Maximum fill stitch length"
@@ -1494,11 +1494,11 @@ msgstr "Distanza tra righe di cucitura."
 
 #: lib/elements/fill_stitch.py:357 inx/inkstitch_gradient_blocks.inx:24
 msgid "End row spacing"
-msgstr ""
+msgstr "Distanza tra le righe finali"
 
 #: lib/elements/fill_stitch.py:358
 msgid "Increases or decreases the row spacing towards the end."
-msgstr ""
+msgstr "Aumenta o diminuisce la spaziatura tra le righe verso la fine."
 
 #: lib/elements/fill_stitch.py:372
 msgid "Stagger rows this many times before repeating"
@@ -1506,7 +1506,7 @@ msgstr "Scorri le file questo tanto di volte prima di ripetere"
 
 #: lib/elements/fill_stitch.py:373 lib/elements/satin_column.py:215
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
-msgstr ""
+msgstr "Lunghezza del ciclo in base al quale le righe di punti successive vengono sfalsate. Sono consentiti valori frazionari e possono avere diagonali meno visibili rispetto ai valori interi."
 
 #: lib/elements/fill_stitch.py:389 lib/elements/fill_stitch.py:713
 msgid "Skip last stitch in each row"
@@ -1526,19 +1526,19 @@ msgstr "L'opzione di inversione può facilitare l'instradamento del percorso di 
 
 #: lib/elements/fill_stitch.py:418
 msgid "Reverse fill"
-msgstr ""
+msgstr "Riempimento inverso"
 
 #: lib/elements/fill_stitch.py:419
 msgid "Reverses fill path."
-msgstr ""
+msgstr "Percorso di riempimento inverso."
 
 #: lib/elements/fill_stitch.py:430
 msgid "Stop at ending point"
-msgstr ""
+msgstr "Fermarsi al punto finale"
 
 #: lib/elements/fill_stitch.py:431
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
-msgstr ""
+msgstr "Se questa opzione è disabilitata, il punto finale verrà utilizzato solo per definire una direzione generale per trovare un percorso ai punti. Quando è abilitata, l'ultima sezione terminerà nel punto definito."
 
 #: lib/elements/fill_stitch.py:443 lib/elements/fill_stitch.py:725
 msgid "Underpath"
@@ -1555,19 +1555,19 @@ msgstr "Lunghezza progressiva dei punti"
 
 #: lib/elements/fill_stitch.py:457
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
-msgstr ""
+msgstr "Lunghezza dei punti attorno al contorno della regione di riempimento utilizzata quando ci si sposta da una sezione all'altra. Utilizzata anche per il riempimento a zigzag e circolare."
 
 #: lib/elements/fill_stitch.py:474 lib/elements/satin_column.py:375
 msgid "Running stitch tolerance"
-msgstr ""
+msgstr "Tolleranza del punto filza"
 
 #: lib/elements/fill_stitch.py:475 lib/elements/satin_column.py:376
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
-msgstr ""
+msgstr "Determina il grado di impegno con cui Ink/Stitch cerca di evitare di cucire all'esterno della forma. I numeri più bassi hanno meno probabilità di cucire all'esterno della forma, ma richiedono più punti."
 
 #: lib/elements/fill_stitch.py:493 lib/elements/stroke.py:148
 msgid "Randomize stitch length"
-msgstr ""
+msgstr "Lunghezza del punto casuale"
 
 #: lib/elements/fill_stitch.py:494 lib/elements/stroke.py:149
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
@@ -1718,7 +1718,7 @@ msgstr ""
 
 #: lib/elements/image.py:13
 msgid "Image"
-msgstr ""
+msgstr "Immagine"
 
 #: lib/elements/image.py:14
 msgid "Ink/Stitch can't work with objects like images."
@@ -3366,7 +3366,7 @@ msgstr ""
 #: lib/gui/edit_json/settings_panel.py:87 lib/gui/element_info.py:33
 #: inx/inkstitch_lettering_generate_json.inx:20
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: lib/gui/element_info.py:34
 msgid "Value"
@@ -5531,7 +5531,7 @@ msgstr ""
 #: inx/inkstitch_selection_to_pattern.inx:12 inx/inkstitch_test_swatches.inx:11
 #: inx/inkstitch_unlink_clone.inx:23
 msgid "Edit"
-msgstr ""
+msgstr "Modifica"
 
 #: inx/inkstitch_element_info.inx:9
 msgid "Display embroidery info for selected elements"

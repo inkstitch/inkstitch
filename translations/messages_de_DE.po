@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-02-14 01:25+0000\n"
-"PO-Revision-Date: 2025-02-14 01:25\n"
+"PO-Revision-Date: 2025-02-16 01:38\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr "AGS Γαραμου Garamond enthält alle Zeichen aus dem lateinischen u
 #. description of font in fonts/ambigue
 #: inkstitch-fonts-metadata.py:12
 msgid "Ambigüe is a mix of satin and bean stitch font with a subtle harmony of disorder. You may ignore the hidden black running stitches (they are the original letters) or use them to customize this font as you like."
-msgstr ""
+msgstr "Ambigüe ist eine Schrift, in der Satinsäulen mit Mehrfachgeradstichen in einer subtilen Harmonie der Unordnung kombiniert werden. Die versteckten, schwarzen Laufstiche sind die Originalpfade der Buchstaben. Sie können einfach ignoriert oder aber für Schriftanpassungen verwendet werden."
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:14
@@ -100,7 +100,7 @@ msgstr "Barstitch Bold ist eine Satin-Schrift."
 #. description of font in fonts/barstitch_cloudy
 #: inkstitch-fonts-metadata.py:30
 msgid "This is a guided fill version of Barstitch fill. Each letter is used to clip a group of guided fills and  then  a bean stitch contour is stitched. "
-msgstr ""
+msgstr "Dies ist eine Version von Barstitch mit Kurvenfüllung. Jedes Zeichen nutzt eine Ausschneidemaske, um die locker gestickte Füllung auf die Buchstabenform zu begrenzen. Ein Mehrfachgeradstich sorgt für eine ordentliche Absclhusskante."
 
 #. description of font in fonts/barstitch_mandala
 #: inkstitch-fonts-metadata.py:32
@@ -110,7 +110,7 @@ msgstr "Eine große Mandala-Schrift. Die vier gesamten Mandalas die für diese S
 #. description of font in fonts/barstitch_regular
 #: inkstitch-fonts-metadata.py:34
 msgid "Barstitch regular is a satin font. "
-msgstr ""
+msgstr "Barstitch ist eine Satin-Schrift."
 
 #. description of font in fonts/barstitch_textured
 #: inkstitch-fonts-metadata.py:36
@@ -130,7 +130,7 @@ msgstr "Baumans FI Small ist eine abgewandelte, kleinere Form von Baumans FI. Di
 #. description of font in fonts/califragilistic
 #: inkstitch-fonts-metadata.py:42
 msgid "Califragilistic is a tricolor running stitch font that was constructed using mandalas"
-msgstr ""
+msgstr "Califragilistic ist eine dreifarbige Schrift aus Geradestichen, die unter Verwendung von Mandalas konstruiert wurde."
 
 #. description of font in fonts/cats
 #: inkstitch-fonts-metadata.py:44
@@ -351,12 +351,12 @@ msgstr "Millimarif-bold20 ist eine breite Satin-Schrift."
 #. description of font in fonts/mimosa_large
 #: inkstitch-fonts-metadata.py:130
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
-msgstr ""
+msgstr "Mimosa Large ist eine gepunktete Satin-Schrift."
 
 #. description of font in fonts/mimosa_medium
 #: inkstitch-fonts-metadata.py:132
 msgid "Mimosa Medium is a satin font that looks dotty."
-msgstr ""
+msgstr "Mimosa Medium ist eine gepunktete Satin-Schrift."
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:134
@@ -2252,7 +2252,7 @@ msgstr "Diese Einstellung überschreibt den Wert \"Anzahl der Linien\""
 
 #: lib/elements/stroke.py:240
 msgid "Line count / Minimum line distance"
-msgstr ""
+msgstr "Anzahl der Linien / Minimaler Linienabstand"
 
 #: lib/elements/stroke.py:241
 msgid "Render at rungs"
@@ -2260,15 +2260,15 @@ msgstr "Muster an Richtungsvektoren positionieren"
 
 #: lib/elements/stroke.py:242
 msgid "Adaptive + minimum line distance"
-msgstr ""
+msgstr "Adaptiv + minimaler Linienabstand"
 
 #: lib/elements/stroke.py:247
 msgid "Pattern position"
-msgstr ""
+msgstr "Musterposition"
 
 #: lib/elements/stroke.py:248
 msgid "Pattern position for satin guided ripples."
-msgstr ""
+msgstr "Musterposition für Satinsäulen-geführte Ripplestiche."
 
 #: lib/elements/stroke.py:259
 msgid "Stagger lines this many times before repeating"
@@ -2340,11 +2340,11 @@ msgstr "Als Gitter rendern. Dabei bitte unbedingt auf die Stichdichte achten."
 
 #: lib/elements/stroke.py:378
 msgid "Stitch grid first"
-msgstr ""
+msgstr "Gitter zuerst sticken"
 
 #: lib/elements/stroke.py:379
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
-msgstr ""
+msgstr "Dreht den Stichpfad um, sodass das Gitter zuerst gestickt wird."
 
 #: lib/elements/stroke.py:390
 msgid "Scale axis"
@@ -2983,7 +2983,7 @@ msgstr "Der Python-Pfad konnte nicht erkannt werden. Bitte füge den Python-Pfad
 
 #: lib/extensions/selection_to_anchor_line.py:21
 msgid "Please select at least one object to be marked as a anchor line."
-msgstr ""
+msgstr "Bitte mindestens ein Objekt auswählen, um es als Ankerlinie zu markieren."
 
 #: lib/extensions/selection_to_guide_line.py:21
 msgid "Please select at least one object to be marked as a guide line."
@@ -2995,31 +2995,31 @@ msgstr "Wähle mindestens ein Objekt, dass als Muster markiert werden soll."
 
 #: lib/extensions/sew_stack_editor.py:93
 msgid "Sew stack only"
-msgstr ""
+msgstr "Nur Stickebenen"
 
 #: lib/extensions/sew_stack_editor.py:95
 msgid "Only sew the Sew Stack layers, and ignore settings from Params"
-msgstr ""
+msgstr "Sticke nur Stickebenen und ignoriere die Parametereinstellungen"
 
 #: lib/extensions/sew_stack_editor.py:195
 msgid "Preview selected layer"
-msgstr ""
+msgstr "Vorschau (ausgewählte Ebenen)"
 
 #: lib/extensions/sew_stack_editor.py:201
 msgid "Preview all layers"
-msgstr ""
+msgstr "Vorschau (alle Ebenen)"
 
 #: lib/extensions/sew_stack_editor.py:224
 msgid "Layer Name"
-msgstr ""
+msgstr "Ebenen-Name"
 
 #: lib/extensions/sew_stack_editor.py:374
 msgid "Are you sure you want to delete this layer?"
-msgstr ""
+msgstr "Bist du sicher, dass diese Ebene gelöscht werden soll?"
 
 #: lib/extensions/sew_stack_editor.py:514
 msgid "Are you sure you want to quit without saving changes?"
-msgstr ""
+msgstr "Bearbeitung beenden, ohne die Änderungen zu speichern?"
 
 #: lib/extensions/stroke_to_lpe_satin.py:33
 msgid "Please select at least one stroke."
@@ -3119,7 +3119,7 @@ msgstr "Typ Warnungen"
 
 #: lib/extensions/troubleshoot.py:166
 msgid "Problem descriptions"
-msgstr ""
+msgstr "Problembeschreibungen"
 
 #: lib/extensions/troubleshoot.py:184
 msgid "Problems that will prevent the shape from being embroidered."
@@ -3409,7 +3409,7 @@ msgstr "Diese Schriftart hat keine verfügbare Schriftvariante. Bitte aktualisie
 
 #: lib/gui/lettering/main_panel.py:307
 msgid "scale"
-msgstr ""
+msgstr "Skalierung"
 
 #: lib/gui/lettering/main_panel.py:316
 #, python-format
@@ -3578,7 +3578,10 @@ msgid "The glyphlist for this font seems to be outdated.\n\n"
 "Please update the glyph list for {font_name}:\n"
 "* Open Extensions > Ink/Stitch > Font Management > Edit JSON\n"
 "* Select this font and apply."
-msgstr ""
+msgstr "Die Zeichentabelle für diese Schriftart scheint veraltet zu sein.\n\n"
+"Bitte aktualisiere die Zeichentabele für {font_name}:\n"
+"* Öffne Erweiterungen > Ink/Stitch > Schriftartenverwaltung > JSON bearbeiten\n"
+"* Wähle diese Schriftart aus und klicke auf Anwenden."
 
 #: lib/gui/lettering_font_sample.py:236
 #, python-brace-format
@@ -4219,27 +4222,27 @@ msgstr "Kleine Schriftgrößen"
 
 #: lib/lettering/categories.py:32 inx/inkstitch_lettering_generate_json.inx:65
 msgid "Script: arabic"
-msgstr ""
+msgstr "Schrift: Arabisch"
 
 #: lib/lettering/categories.py:33 inx/inkstitch_lettering_generate_json.inx:66
 msgid "Script: cyrillic"
-msgstr ""
+msgstr "Schrift: Kyrillisch"
 
 #: lib/lettering/categories.py:34 inx/inkstitch_lettering_generate_json.inx:69
 msgid "Script: greek"
-msgstr ""
+msgstr "Schrift: Griechisch"
 
 #: lib/lettering/categories.py:35 inx/inkstitch_lettering_generate_json.inx:70
 msgid "Script: hebrew"
-msgstr ""
+msgstr "Schrift: Hebräisch"
 
 #: lib/lettering/categories.py:36 inx/inkstitch_lettering_generate_json.inx:71
 msgid "Script: japanese"
-msgstr ""
+msgstr "Schrift: Japanisch"
 
 #: lib/lettering/categories.py:37 inx/inkstitch_lettering_generate_json.inx:72
 msgid "Script: latin"
-msgstr ""
+msgstr "Schrift: Latein"
 
 #: lib/lettering/font.py:97
 msgid "JSON file missing. Expected a JSON file at the following location:"
@@ -4296,76 +4299,77 @@ msgstr "https://inkstitch.org/de/docs/faq/#zu-viele-farbwechsel"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:9
 msgid "Path"
-msgstr ""
+msgstr "Pfad"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:10
 msgid "Reverse path"
-msgstr ""
+msgstr "Pfad umkehren"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:11
 msgid "Reverse the path when stitching this layer."
-msgstr ""
+msgstr "Pfad für diese Ebene umkehren."
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:58
 msgid "Randomization"
-msgstr ""
+msgstr "Randomisierung"
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:61
 msgid "The random seed is used when handling randomization settings.  Click the button to choose a new random seed, which will generate random features differently. Alternatively, you can enter your own random seed.  If you reuse a random seed, random features will look the same."
-msgstr ""
+msgstr "Die Zufallszahl wird für alle Randomisierugsprozesse genutzt. Ein Klick auf diese Schaltfläche generiert eine neue Zufallszahl und ändert somit das Stickbild. Alternativ kann auch manuell eine Zeichenfolge festgelegt werden. Wird der gleiche Wert mehrfach verwendet, führt dies zu gleichen Ergebnissen."
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:65
 msgid "Offset stitches"
-msgstr ""
+msgstr "Versatz (Stiche)"
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:66
 msgid "Move stitches randomly by up to this many millimeters in any direction."
-msgstr ""
+msgstr "Verschiebt Stiche zufällig bis zu dieser Anzahl an Millimetern in jede Richtung."
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:67
 msgid "Offset stitch path"
-msgstr ""
+msgstr "Versatz (Stichpfad)"
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:68
 msgid "Move stitches randomly by up to this many millimeters perpendicular to the stitch path.\n\n"
 "If <b>Offset stitches</b> is also specified, then this one is processed first."
-msgstr ""
+msgstr "Verschiebt Stiche zufällig um bis zu dieser Anzahl an Millimetern senkrecht zum Stichpfad.\n\n"
+"Ist <b>Versatz (Stiche)</b> ebenfalls aktiviert, so wird dies zuerst durchgeführt."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
 msgid "Stitch along a path using evenly-spaced stitches."
-msgstr ""
+msgstr "Stickt entlang eines Pfades mit gleichmäßig verteilten Stichen."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:25
 msgid "Tolerance"
-msgstr ""
+msgstr "Toleranz"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:26
 msgid "Determines how closely the stitch path matches the SVG path.  A lower tolerance means stitches will be closer together and fit the SVG path more precisely.  A higher tolerance means some corners may be rounded and fewer stitches are needed."
-msgstr ""
+msgstr "Bestimmt, wie genau der Stichpfad mit dem SVG-Pfad übereinstimmt. Eine niedrigere Toleranz bedeutet, dass die Stiche dichter beieinander liegen und genauer in den SVG-Pfad passen. Eine höhere Toleranz bedeutet, dass einige Ecken abgerundet sein können und weniger Stiche erforderlich sind."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:41
 msgid "Repeat exact stitches"
-msgstr ""
+msgstr "Stiche exakt wiederholen"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:43
 msgid "Should the exact same stitches be repeated in each pass?  If not, different randomization settings are applied on each pass."
-msgstr ""
+msgstr "Sollen bei jedem Durchgang genau dieselben Stiche wiederholt werden? Falls nicht, werden bei jedem Durchgang unterschiedliche Zufallseinstellungen angewendet."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:51
 msgid "Stitch length variance"
-msgstr ""
+msgstr "Stichlängenvarianz"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:52
 msgid "Enter a percentage.  Stitch length will vary randomly by up to this percentage."
-msgstr ""
+msgstr "Die Stichlänge variiert zufällig bis zu diesem Prozentsatz."
 
 #: lib/sew_stack/stitch_layers/stitch_layer_editor.py:339
 msgid "Undo changes"
-msgstr ""
+msgstr "Änderungen rückgängig machen"
 
 #: lib/sew_stack/stitch_layers/stitch_layer_editor.py:349
 msgid "Reset to default"
-msgstr ""
+msgstr "Auf Standard zurücksetzen"
 
 #: lib/stitch_plan/generate_stitch_plan.py:76
 #, python-format
@@ -6691,15 +6695,15 @@ msgstr "Setzt einen Farbsortierindex auf ausgewählte Elemente, um die Reihenfol
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:3
 msgid "Convert SVG Font to Glyph Layers"
-msgstr ""
+msgstr "SVG-Schriftart in Glyphenebenen konvertieren"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:6
 msgid "Stop after"
-msgstr ""
+msgstr "Stopp"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:11
 msgid "Converts a svg font to glyph layers"
-msgstr ""
+msgstr "Konvertiert eine SVG-Schriftart in Glyphenebenen"
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
@@ -7443,11 +7447,11 @@ msgstr "Python Pfad"
 
 #: inx/inkstitch_selection_to_anchor_line.inx:3
 msgid "Selection to anchor line"
-msgstr ""
+msgstr "Auswahl zur Ankerlinie"
 
 #: inx/inkstitch_selection_to_anchor_line.inx:9
 msgid "Marks selected elements as anchor lines"
-msgstr ""
+msgstr "Markiert ausgewählte Elemente als Ankerlinien"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
@@ -7467,7 +7471,7 @@ msgstr "Markiert ausgewählte Elemente als Muster"
 
 #: inx/inkstitch_sew_stack_editor.inx:3
 msgid "Sew Stack (preview)..."
-msgstr ""
+msgstr "Stickebenen (Vorschau)..."
 
 #: inx/inkstitch_simulator.inx:3
 msgid "Simulator"
