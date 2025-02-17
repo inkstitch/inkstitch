@@ -33,7 +33,7 @@ Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
 ```
 {: .font-glyphs }
 
-## Dimensions
+## Maße
 
 ### Computer
 
@@ -45,6 +45,9 @@ bis zu {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1
 ### Computer Small
 Sie kann bis auf {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm) herunterskaliert und 
 bis zu {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font1.max_scale }} mm) hochskaliert  werden.
+
+Im Gegensatz zu Computer MUSS diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es MUSS eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
+
 
 ## Special features
 Each glyph contains the  original letter, in the form of a hidden black fill. These fills are not intended to be embroidered as is, but to help anyone who wants to modify this font. They can be ignored safely.
