@@ -13,9 +13,9 @@ data_title:
   - hebrew_simple_rounded
   - hebrew_simple_rounded_small
 ---
-{%- assign font1 = site.data.fonts.simple_rounded.font -%}
+{%- assign font1 = site.data.fonts.hebrew_simple_rounded.font -%}
 
-{%- assign font2 = site.data.fonts.simple_rounded_small.font -%}
+{%- assign font2 = site.data.fonts.hebrew_simple_rounded_small.font -%}
 
 {% include upcoming_release.html %}
 
