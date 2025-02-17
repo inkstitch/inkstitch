@@ -46,7 +46,7 @@ up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.
 It can be scaled from {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
 up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm).
 
-This font **requires thin thread (60) and thin needle (60)
+This font **requires thin thread (60) and thin needle (60)**
 
 
 ## Special features
