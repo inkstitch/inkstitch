@@ -54,7 +54,7 @@ up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.
 
 
 ## Special features
-Each glyph contains the  original letter, in the form of a hidden black fill. These fills are not intended to be embroidered as is, but to help anyone who wants to modify this font. They can be ignored safely.
+Each glyph contains the  original letter, in the form of a hidden path with red fill. These fills are not intended to be embroidered as is, but to help anyone who wants to modify this font. They can be ignored safely.
 
 ## In real life
 
