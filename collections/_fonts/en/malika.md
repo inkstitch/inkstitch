@@ -32,7 +32,7 @@ It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size |
 up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 ## Special features
-Each glyph contains the outline of the original letter, in the form of a hidden black path. These paths are not intended to be embroidered as is, but to help anyone who wants to modify this font, for example to create embossing. They can be ignored without worry.
+Each glyph contains the outline of the original letter, in the form of a hidden path with a red fill. These paths are not intended to be embroidered as is, but to help anyone who wants to modify this font. They can be ignored without worry.
 
 ## In real life
 
