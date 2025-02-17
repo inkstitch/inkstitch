@@ -100,7 +100,8 @@ Conserver les chemins originels | Conserver ou supprimer les chemins sélectionn
 
 ### Intersections
 
-Use bridges at intersections to inform Ink/Stitch how to connect the satin columns.
+Utilisez des ponts aux intersecttions pour expliquer à Ink/Stitch la manière  de connecter les colonnes satins.
+
 Les intersections non reliées laissent simplement un espace vide.
 
 ![Conversion en satin avec  et sans traverse pont](/assets/images/docs/fill_to_satin_bridge.png)
