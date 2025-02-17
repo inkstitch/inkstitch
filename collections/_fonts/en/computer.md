@@ -23,9 +23,6 @@ data_title:
      src="/assets/images/fonts/computer.png"
      alt="Emilio20" height="23">
      
-<img 
-     src="/assets/images/fonts/computer.png"
-     alt="Emilio20" height="6">
 
 ## Glyphs
 
@@ -39,6 +36,9 @@ These fonts contain  {{ font1.glyphs.size }} glyphs:
 ## Dimensions
 
 ### Computer
+
+At a scale of 100% this font has an approximate height of {{ font1.size }} mm.
+
 It can be scaled from {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
 up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
 
