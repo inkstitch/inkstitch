@@ -35,14 +35,14 @@ These fonts contain  {{ font1.glyphs.size }} glyphs:
 
 ## Dimensions
 
-### Computer
 
+### Hebrew simple rounded font
 At a scale of 100% this font has an approximate height of {{ font1.size }} mm.
 
 It can be scaled from {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
 up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
 
-### Computer Small
+### Small simple rounded font
 It can be scaled from {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
 up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm).
 
