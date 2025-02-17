@@ -11,6 +11,7 @@ preview_image:
 
 data_title:
   - computer
+  - computer_small
 ---
 {%- assign font1 = site.data.fonts.computer.font -%}
 
