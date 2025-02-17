@@ -10,8 +10,8 @@ preview_image:
     height: 23
 
 data_title:
-  - computer
-  - computer_small
+  - hebrew_font_large
+  - hebrew_font_medium
 ---
 {%- assign font1 = site.data.fonts.hebrew_font_large.font -%}
 
