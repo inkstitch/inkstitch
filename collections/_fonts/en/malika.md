@@ -13,7 +13,7 @@ data_title:
 
 {% include upcoming_release.html %}
 
-![ambigue](/assets/images/fonts/malika.png)
+![malika](/assets/images/fonts/malika.png)
 
 ## Glyphs
 
