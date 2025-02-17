@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-02-01
+last_modified_at: 2025-02-17
 sidebar:
   nav: pages
 toc: true
@@ -16,9 +16,15 @@ toc: true
 * [Barstitch bold](/fonts/barstitch_bold/)
 
   ![Barstitch bold](/assets/images/fonts/barstitch_bold.png)
+* [Barstitch cloudy](/fonts/barstitch_bold/)
+
+  ![Barstitch cloudy](/assets/images/fonts/barstitch_cloudy.png)
 * [Barstitch mandala](/fonts/barstitch/bold/)
 
   ![Barstitch mandala](/assets/images/fonts/barstitch_mandala.png)
+* [Barstitch regular](/fonts/barstitch_bold)
+
+  ![Barstitch regular](/assets/images/fonts/barstitch_regular.png)
 * [Barstitch textured](/fonts/barstitch_bold/)
 
   ![Barstitch textured](/assets/images/fonts/barstitch_textured.png)
@@ -28,9 +34,22 @@ toc: true
 * [Cogs_KOR](/fonts/cogs_KOR)
 
   ![Cogs_KOR](/assets/images/fonts/cogs_KOR.png)
+* [Computer](/fonts/computer/)
+
+  ![Copmuter](/assets/images/fonts/computer.png)
+* [גופן בינוני](/fonts/hebrew_font/)
+
+  ![גופן בינוני](/assets/images/fonts/hebrew_font_medium.png)
+  ![גופן בינוני](/assets/images/fonts/hebrew_font_large.png)
+* [פשוט מעוגל](/fonts/hebrew_font/)
+
+  ![פשוט מעוגל](/assets/images/fonts/hebrew_simple_rounded.png)
 * [Magnolia tamed](/fonts/magnolia-script/)
 
   ![Magnolia tamed preview](/assets/images/fonts/magnolia_tamed.png)
+* [Malika](/fonts/malika/)
+
+  ![Malika](/assets/images/fonts/malika.png)
 * [Mimosa](/fonts/mimosa/)
 
   ![Mimosa medium](/assets/images/fonts/mimosa_medium.png)
@@ -142,9 +161,11 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ### Lettering
 
+* Load with last selected font and some other settings [#3498](https://github.com/inkstitch/inkstitch/pull/3498) [#3504](https://github.com/inkstitch/inkstitch/pull/3504)
+
 `Lettering`
 
-* Add right to left font capabilities to support more languages [#3432](https://github.com/inkstitch/inkstitch/pull/3358)
+* Add support for more languages (right to left) [#3432](https://github.com/inkstitch/inkstitch/pull/3358) [#3466](https://github.com/inkstitch/inkstitch/pull/3466)
 * Lettering simulator: show accurate start and end points [#3358](https://github.com/inkstitch/inkstitch/pull/3358)
 * Uniformed size info (% and mm) [#3346](https://github.com/inkstitch/inkstitch/pull/3346)
 * Add color sort option for multicolor fonts [#3242](https://github.com/inkstitch/inkstitch/pull/3242), [#3381](https://github.com/inkstitch/inkstitch/pull/3381)
@@ -175,8 +196,13 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 * Update realistic filter [#3222](https://github.com/inkstitch/inkstitch/pull/3222)
 
+### Stroke to LPE-Satin
+
+* Take transforms into account (for path specific lpe satins only) [#3500](https://github.com/inkstitch/inkstitch/pull/3500)
+
 ### Troubleshoot
 
+* Group pointers, so specific error/warning types can be easily toggled on and off [#3486](https://github.com/inkstitch/inkstitch/pull/3486)
 * Add background to troubleshoot text [#3357](https://github.com/inkstitch/inkstitch/pull/3357)
 
 ## Removed extensions
@@ -230,6 +256,16 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ## Developer and Build Stuff
 
+* Sew Stack first steps [#3133](https://github.com/inkstitch/inkstitch/pull/3133)
+
+  The Sew Stack will ultimately replace Params and contain its functionality. For now, it is invisible in our releases.
+  The params dialog as it is now suffers from all the options, we've added over the years. It is now hard to find a specific setting in there
+  and even harder if you are not yet familiar with the program. Sew Stack will help to organize parameter settings.
+
+  It is only visible in manual installs and will not render, unless `enable_sew_stack` is enabled in the debug config file.
+  Please note, that this will alter the start and end points of the elements and should only be used for development purposes.
+
+* Do not use scipy for density map [#3481](https://github.com/inkstitch/inkstitch/pull/3481)
 * Update translations workflow [#3435](https://github.com/inkstitch/inkstitch/pull/3435)
 * Add build for ubuntu 24.04 [#3299](https://github.com/inkstitch/inkstitch/pull/3299)[#3330](https://github.com/inkstitch/inkstitch/pull/3330)
 * Add lmde6 32bit build [#3298](https://github.com/inkstitch/inkstitch/pull/3298)
@@ -244,6 +280,8 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ## Bug Fixes
 
+* stroke: as_multi_line_string ignore single point paths [#3491](https://github.com/inkstitch/inkstitch/pull/3491)
+* Adapt simulator slider symbols to dark theme [#3475](https://github.com/inkstitch/inkstitch/pull/3475)
 * Auto-run: try harder to avoid networkx issues [#3457](https://github.com/inkstitch/inkstitch/pull/3457)
 * Lettering: ignore auto-satin setting in the json file when there is no satin [#3434](https://github.com/inkstitch/inkstitch/pull/3434)
 * Fix issue in preferences when value is 0.0 [#3430](https://github.com/inkstitch/inkstitch/pull/3430)
