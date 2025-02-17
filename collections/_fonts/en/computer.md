@@ -20,11 +20,11 @@ data_title:
 
 <img 
      src="/assets/images/fonts/computer.png"
-     alt="Emilio20" height="100">
+     alt="Emilio20" height="23">
      
 <img 
      src="/assets/images/fonts/computer.png"
-     alt="Emilio20" height="25">
+     alt="Emilio20" height="6">
 
 ## Glyphs
 
