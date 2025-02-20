@@ -49,7 +49,8 @@ class JumpToTrim(InkstitchExtension):
                 # do not add a running stitch if the distance is longer than max_jump setting
                 if self.options.max_jump > 0 and line.length > self.options.max_jump * PIXELS_PER_MM:
                     continue
-                self._add_trim(last_element)
+                if last_element is not None:
+                    self._add_trim(last_element)
             last_element = element
 
     def _add_trim(self, element):
