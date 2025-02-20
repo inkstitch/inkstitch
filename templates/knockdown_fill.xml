@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Selection to Knockdown Fill</name>
+    <id>org.{{ id_inkstitch }}.knockdown_fill</id>
+    <param name="extension" type="string" gui-hidden="true">knockdown_fill</param>
+    <effect>
+        <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/fill_knockdown.svg</icon>
+        <menu-tip>Generates a knockdown stitch with a specified offset around selection</menu-tip>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Tools: Fill" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <param name="notebook" type="notebook">
+      <page name="options" gui-text="Options">
+        <param name="keep-holes" type="bool" gui-text="Keep holes">true</param>
+        <param name="offset" type="float" gui-text="Offset">1</param>
+        <param name="join-style" type="optiongroup" gui-text="Method">
+           <option value="1">Round</option>
+           <option value="2">Mitre</option>
+           <option value="3">Bevel</option>
+        </param>
+        <param name="mitre-limit" type="float" gui-text="Mitre limit">5.0</param>
+      </page>
+      <page name="info" gui-text="Help">
+        <label appearance="header">This extension generates a knockdown fill area with a specified offset around selected elements.</label>
+        <label>* Select elements of any kind</label>
+        <label>* Open this extension and apply with desired settings</label>
+        <label>* Adapt fill settings in the params dialog</label>
+        <spacer />
+        <label>More information on our website</label>
+        <label appearance="url">https://inkstitch.org/docs/fill-tools/#knockdown-fill</label>
+      </page>
+    </param>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
