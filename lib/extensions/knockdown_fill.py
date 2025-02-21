@@ -37,7 +37,7 @@ class KnockdownFill(InkstitchExtension):
                     polygons.append(polygon)
             elif element.name == "SatinColumn":
                 rails = element.flattened_rails
-                polygon = Polygon(list(rails[0].coords) + list(rails[1].reverse().coords))
+                polygon = Polygon(list(rails[0].coords) + list(rails[1].reverse().coords)).buffer(0)
                 polygons.append(polygon)
             elif element.name == "Stroke":
                 polygons.append(element.as_multi_line_string().buffer(0.15 * PIXELS_PER_MM))
