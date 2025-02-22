@@ -30,6 +30,7 @@ from .install import Install
 from .install_custom_palette import InstallCustomPalette
 from .jump_to_stroke import JumpToStroke
 from .jump_to_trim import JumpToTrim
+from .knockdown_fill import KnockdownFill
 from .layer_commands import LayerCommands
 from .lettering import Lettering
 from .lettering_along_path import LetteringAlongPath
@@ -103,6 +104,7 @@ __all__ = extensions = [About,
                         InstallCustomPalette,
                         JumpToStroke,
                         JumpToTrim,
+                        KnockdownFill,
                         LayerCommands,
                         Lettering,
                         LetteringAlongPath,
