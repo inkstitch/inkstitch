@@ -2,7 +2,7 @@
     "name": "Ink/Stitch Masego",
     "description": "Masego is a display san-serif typeface.",
     "leading": 100,
-    "auto_satin": true,
+    "auto_satin": false,
     "reversible": false,
     "letter_case": "",
     "default_glyph": "o",

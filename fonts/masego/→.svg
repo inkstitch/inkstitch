@@ -25,14 +25,14 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="8.3736328"
-     inkscape:cx="20.898934"
-     inkscape:cy="54.098384"
+     inkscape:cx="20.839223"
+     inkscape:cy="11.106291"
      inkscape:window-width="1596"
      inkscape:window-height="841"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g1188"
+     inkscape:current-layer="g1164"
      inkscape:document-units="px"
      showguides="true">
     <sodipodi:guide
@@ -570,7 +570,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="2" />
     <path
        d="m 228.63333,474.23277 -0.001,597.73703"
@@ -583,7 +583,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="2" />
     <path
        d="m 228.63333,474.23277 56.6,-0.17222"
@@ -715,7 +715,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:ties="3"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="M 284.72222,473.55796 285,495 l -0.002,198.67537 -0.0533,42.91231 M 384.15556,474.06055 C 413.99598,474.68464 430.71151,492.01683 430,518 l -0.002,173.67537 c 1.00003,24.41749 -11.67363,46.67076 -45,45 M 247.60744,601.34445 H 459.563"
@@ -739,7 +739,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="m 74.998005,736.81837 c -27.403048,-1.00003 -45.476542,18.24187 -45,45 L 30,955 M 174.81357,736.51981 174.99801,779.81837 175,958 M 10.318548,840.32223 H 200.31855"
@@ -770,7 +770,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.2"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 75,1000 C 66.570776,999.40312 52.860353,993.79121 45.0059,986.05288 36.816569,977.98461 29.629139,970.58558 30,955 m 144.5,45 0.25,-11 0.25,-31 m -162.148119,25.87779 173.955559,0.84445"
        id="path255277"
@@ -815,7 +815,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="M 285.21124,474.06055 285,515 284.999,735.56028 M 385,474.06055 c 20.88373,0.62409 46.30862,19.74762 45,43.93945 V 734.32168 M 256.05189,580.23334 452.80745,578.54445"
@@ -840,7 +840,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.2"
        inkstitch:ties="3"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 284.99876,735.49999 285,958 l 0.21124,42.4988 M 430,734.32168 V 955 c 0.14461,18.03468 -17.39353,45.0005 -45,45 M 255.20744,847.07779 449.42967,845.3889"
        id="path59068"
@@ -863,7 +863,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="m 75,1000 c -27.00936,5e-4 -43.950384,-25.17398 -45,-45 V 944 933 M 174.90546,1000.5035 175,958 V 944.25 933.05699 M 4.4074368,948.41112 202.85189,947.56668"
@@ -926,7 +926,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
@@ -986,7 +986,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.2"
        inkstitch:ties="3"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 74.155556,473.5 C 58.048721,472.92987 28.691377,495.59951 30,518 l 0.0023,174.02515 c 0.194198,14.26657 18.241871,45.47654 45,45 M 174.75,474 l 0.25,41 0.002,179.02515 0.24773,42.72309 M 6.9407702,609.7889 202.85189,608.94445"
        id="path33594"
@@ -1008,7 +1008,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="m 284.89928,736.5 0.0985,42.4532 L 285,958 l -0.0873,42 M 384.99773,735.9532 c 17.84925,0.1942 47.86499,26.60144 45,45 L 430,955 c -0.4525,18.63179 -20.37909,45.0005 -45,45 m -137.39256,-145.32221 215.33334,0.84444"
@@ -1032,7 +1032,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="M 55,1000 C 35.753101,998.80623 27.466942,972.43757 30,955 V 944 933 M 175.10339,1000 175,958 V 944.25 932.58989 M 8.6296591,952.63335 189.34077,951.7889"
@@ -1086,7 +1086,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:ties="3"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
        d="m 301.65189,483.12223 42.22222,96.26666"
@@ -1109,7 +1109,7 @@ Created by Adegoke Adebowale
        d="M 285.05906,474.52286 174.59326,474.2243"
        id="path199"
        inkstitch:ties="3"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 74.155556,474.06055 C 49.689147,474.68464 30.482714,491.41972 30,518 V 724.5 M 175.13046,474.29818 175,515 V 725 M 6.9407702,581.92223 192.71855,579.38889"
        id="path14884"
@@ -1132,7 +1132,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:ties="3"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 30,724.5 V 955 c 0.452503,20.42313 17.99064,44.40334 45,45 M 175,725 v 233 l 0.0945,42 M 9.4741036,838.63334 192.71855,837.7889"
        id="path32535"
@@ -1154,7 +1154,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:ties="3"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="M 285.19165,1000 285,958 V 768 m 100,232 c 29.39781,0.5976 45.74172,-26.36821 45,-45 V 770 m -166.34811,104.94446 187.46667,0.84444"
@@ -1221,7 +1221,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.2"
        inkstitch:ties="3"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 385,474.06055 C 415.75493,472.86633 430,503.81721 430,518 V 955 M 285.5,474.06055 285.25,484 285,515 v 439.98194 m -45.837,-419.50416 216.17778,1.68889 m -202.66667,200.97778 200.13334,-0.84444 m -207.73334,196.75556 204.35556,-1.68889"
        id="path1134"
@@ -1273,7 +1273,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:ties="3"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="2" />
     <path
        d="M 30.969313,736.25 30,955 c 0.452503,18.03468 19.184865,48.5831 45,45 M 174.41456,736.25 174.5,959 l -0.29999,41 M 12.851881,862.27779 190.18522,860.5889"
@@ -1296,7 +1296,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
@@ -1316,7 +1316,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="2" />
     <path
        id="path1138"
@@ -1377,7 +1377,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:ties="3"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
@@ -1396,7 +1396,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        id="path791"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -1666,7 +1666,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:ties="3"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="M 285.01667,474.06055 285,495 l -0.0789,218.64637 0.0959,22.92375 M 385,473 c 26.25774,0.62409 45.1144,19.01683 45,45 l -0.0789,173.64637 c -0.1942,21.43192 -8.09096,45.47654 -45,45 M 267.02966,611.47778 H 444.363"
@@ -1689,7 +1689,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="m 75.01701,736.57012 c -22.863273,-0.34523 -46.390226,7.6176 -44.553067,39.13673 l 0.03888,12.16125 M 174.98299,736.42989 175.0085,753.78506 175,788 M 12.851881,777.83334 188.49633,778.67779"
@@ -1798,7 +1798,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
@@ -1820,7 +1820,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:ties="3"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        id="path4916"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -1879,7 +1879,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:zigzag_spacing_mm="0.6"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 182,736.75 V 978 l 0.37778,22.4787 M 37,736.75 V 975 l -7,25 M 24.674104,852.9889 197.78522,851.30001"
        id="path39320"
@@ -1899,7 +1899,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:ties="3"
        inkstitch:zigzag_spacing_mm="0.6"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
@@ -1921,7 +1921,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        id="path23893"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -1973,7 +1973,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:ties="3"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -1998,7 +1998,7 @@ Created by Adegoke Adebowale
        id="path198"
        transform="matrix(10,0,0,10,-0.65923,334.5)"
        sodipodi:nodetypes="cc"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:ties="3" />
     <path
        d="M 83,1000 C 53.60219,1001.1947 37.258279,977.81158 38,955 V 518 C 37.288489,492.61394 58.533591,472.99042 83,473.56055 M 182.77778,1000.4988 183,958 V 515 l -0.0111,-41.43945 M 10.318548,525.34445 205.38522,524.5 M 16.229659,738.9889 197.78522,739.83334 M 20.451882,955.16668 198.13499,954.0749"
@@ -2022,7 +2022,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:zigzag_spacing_mm="0.6"
        inkstitch:ties="3"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="M 292.92222,1000.4988 293,958 V 839.03532 M 393,1000 c 28.20359,1.1947 43.35327,-22.18842 45,-45 V 839 m -165.05922,73.94446 h 178.17778"
@@ -2086,7 +2086,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:ties="1"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
@@ -2105,7 +2105,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 298.76667,474.06055 299,495 V 938 M 377.73333,474.06055 C 403.99107,477.07309 442.32306,503.06014 444,538 V 935 M 273.78522,532.94445 h 184.93334 m -178.17778,194.22223 180.71111,0.84444 M 279.69633,909.56668 458.86344,907.6729"
        id="path20915"
@@ -2157,7 +2157,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="1" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -2185,7 +2185,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="1" />
     <path
        d="M 189.03189,474.06055 189,495 189.0997,736.5 M 37,474.06055 44,498 V 736.50021 M 31.42966,581.92223 h 165.51111"
@@ -2210,7 +2210,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.2"
        inkstitch:ties="3"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 189.09967,736.5 189,978 l 0.0445,22.4988 M 44,736.50021 V 975 l -7,25 M 30.585215,831.87779 H 202.85189"
        id="path18836"
@@ -2232,7 +2232,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="M 298.76667,1000.4998 C 299.21303,964.25243 298.91272,947.9995 299,911.75 M 399,1000 c 29.08367,1.03 45.48294,-20.66211 45,-52.71152 V 908 m -160.92589,34.50001 c 56.2963,0.28148 112.59259,0.56297 168.88889,0.84445"
@@ -2285,7 +2285,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="1" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -2315,7 +2315,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="1" />
     <path
        d="M 182.09127,473.56055 182,495 182.51911,736.50021 M 30,473 37,498 36.16944,736.50021 M 25.518548,590.36667 H 196.94077"
@@ -2340,7 +2340,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.2"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 182.51911,736.50021 182.5,974.28156 M 36.16944,736.50021 36.402888,974.40289 M 17.074104,836.10001 198.62966,834.41112"
        id="path13233"
@@ -2394,7 +2394,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_spacing_mm="0.6"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.1;stroke-dasharray:0.1, 0.1;stroke-dashoffset:0;stroke-opacity:1"
        d="m 30.930423,15.047233 4.538054,12.06167"
@@ -2424,7 +2424,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:center_walk_underlay="False"
        inkstitch:zigzag_spacing_mm="0.6"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 83,473.81051 C 58.533591,473.24038 39.676939,493.21106 38,518 v 437 c -0.741721,17.43757 23.364652,45.0005 45,45 M 182.62223,474.31051 183,515 v 443 42.5 M 17.074104,542.23334 H 201.163 M 24.674104,718.72223 194.40744,717.87779 M 22.985215,947.83335 193.91277,947.33868"
        id="path16342"
@@ -2447,7 +2447,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:zigzag_spacing_mm="0.6"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        id="path96630"
@@ -2475,7 +2475,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        id="path81268"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -2538,7 +2538,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:zigzag_spacing_mm="0.6"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
@@ -2645,7 +2645,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="M 285,1000.5 C 284.87989,833.04676 284.65969,665.59355 284.50069,498.14033 M 385,1000 c 32.93726,0.3288 45.73946,-30.32788 45,-51.50202 V 498 M 257.74078,956.01112 H 458.71856 M 261.11855,775.30001 c 66.42963,-1.12593 132.85927,-2.25185 199.2889,-3.37778 M 257.74078,532.1 453.65189,530.41112"
@@ -2675,7 +2675,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="2" />
     <path
        d="m 284.46944,474.06055 0.0312,24.07978 M 437,474.06055 430,498 M 271.25189,483.96667 h 174.8"
@@ -2738,7 +2738,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
@@ -2809,7 +2809,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:zigzag_spacing_mm="0.6"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="m 392,1000 c 28.4772,-0.92562 44.83484,-23.19157 44.88281,-42.3125 L 437,910.97593 M 291.62073,1000 291.40862,958.0202 291.5,909.81169 m -25.31478,40.28832 195.06667,-0.84444"
@@ -2867,7 +2867,7 @@ Created by Adegoke Adebowale
        d="m 195.5629,472.86519 54.05263,-0.009"
        id="path23994"
        sodipodi:nodetypes="cc"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:ties="3"
        inkstitch:repeats="1" />
     <path
@@ -2908,7 +2908,7 @@ Created by Adegoke Adebowale
        id="path23992"
        sodipodi:nodetypes="cc"
        inkstitch:ties="3"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="3" />
     <path
        id="path10960"
@@ -2961,7 +2961,7 @@ Created by Adegoke Adebowale
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 186.72407,472.91266 42.58495,1.14789"
        id="path17062"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:ties="3"
        sodipodi:nodetypes="cc"
        inkstitch:repeats="1" />
@@ -2979,7 +2979,7 @@ Created by Adegoke Adebowale
        d="m 402.82376,1000.1401 44.18517,-0.013"
        id="path17060"
        inkstitch:ties="3"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        sodipodi:nodetypes="cc"
        inkstitch:repeats="1" />
     <path
@@ -3046,7 +3046,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
@@ -3068,7 +3068,7 @@ Created by Adegoke Adebowale
        inkstitch:zigzag_spacing_mm="0.6"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 447,474.06055 440,498 V 975 M 295.39592,474.06055 295,495 V 978 M 270.40744,548.98889 456.18522,548.14445 M 278.85189,716.1889 H 451.963 M 283.07411,946.72224 h 165.51111"
        id="path1218"
@@ -3146,7 +3146,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
@@ -3167,7 +3167,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:ties="3" />
     <path
        d="m 392,473 c 26.75813,-2.86499 46.59714,22.37385 45,45 V 703 M 292.3125,474.06055 292,515 v 190 m -19.90367,-96.89999 h 182.40001"
@@ -3231,7 +3231,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="m 384,474.99982 c 25.83508,-0.70017 43.61251,25.47738 44,45 V 956 c 0.13496,21.08172 -17.25778,50.2363 -44.88388,48.9868 M 286.5,474.50249 287,516.99982 V 958 l 0.19203,47.0078 m -23.54014,-477.97446 193.37778,0.84444 M 273.78522,744.05556 h 167.2 M 277.163,902.81112 l 163.82222,0.84445"
@@ -3255,7 +3255,7 @@ Created by Adegoke Adebowale
        inkstitch:zigzag_spacing_mm="0.6"
        inkstitch:ties="3"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
        d="m 227.34078,1010.0556 54.88889,32.9333"
@@ -3328,7 +3328,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:ties="3"
        inkstitch:contour_underlay_inset_mm="0.0"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
@@ -3350,7 +3350,7 @@ Created by Adegoke Adebowale
        inkstitch:swap_satin_rails="False"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        id="path1522"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -3413,7 +3413,7 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="m 385,1000 c 28.18559,-0.4525 45.00045,-25.15599 45,-45 l 0.25,-173.25177 c -0.1942,-24.41749 -22.42166,-45.47654 -45,-45 M 283.86728,1000.4889 285,958 l 0.25,-178.25177 -0.5,-43.49647 m -24.47589,133.62603 h 187.46667"
        id="path6342"
@@ -3438,7 +3438,7 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="m 175.25,736.74824 0.002,-43 L 175,515 174.998,472.50185 M 75.25227,736.74824 c -22.029036,0.40291 -45.476542,-23.01877 -45,-45 L 30,518 C 29.417945,499.40898 51.384401,474.419 75,473 M 6.9407702,598.81112 H 192.71855"
        id="path6346"
@@ -3463,7 +3463,7 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="m 385,473 c 30.20035,0.71821 46.94741,18.5521 45.17671,38.73521 L 430,519.75 V 565 M 284.50227,472.51268 c 0.95248,36.23438 0.3114,52.49344 0.49773,88.73732 m -39.92589,-37.59444 218.71111,-0.84444"
        id="path6350"
@@ -3531,7 +3531,7 @@ Created by Adegoke Adebowale
        d="M 157.7494,473 H 30"
        sodipodi:nodetypes="cc"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:ties="3" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
@@ -3546,7 +3546,7 @@ Created by Adegoke Adebowale
        d="M 302.23754,473 H 430"
        sodipodi:nodetypes="cc"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:ties="3" />
     <path
        d="m 157,472.57219 v 57.64438 m 145,-57.64438 v 57.64438 M 146.27411,494.06108 h 160.44444"
@@ -3596,7 +3596,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="M 367.98995,981.50271 V 498.90232"
@@ -3666,7 +3666,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="M 323.35168,987.68941 354.48558,492.6906"
@@ -3736,7 +3736,7 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        id="path29918"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -3782,7 +3782,7 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="m 678.09077,985.75 25,-485"
@@ -3871,7 +3871,7 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="M 348.23591,712.625 367.11085,487"
@@ -3944,7 +3944,7 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="m 354.6109,752.49999 14.72985,-235.5"
@@ -4016,7 +4016,7 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="M 248.03108,474.06055 248,515 164,951 c -3.96591,26.58648 22.99868,49.5405 45,49 M 350.23223,474.06055 C 364.42148,473.52699 397.6773,492.54171 393,518 l -85,440 v 41.93238 M 180.89633,695.07779 377.65189,695.92223 M 229.02966,521.96667 402.50814,524.10779 M 166.54077,917.16668 h 168.04445"
        id="path3196"
@@ -4041,7 +4041,7 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="M 376.00116,999.75502 C 375.99892,963.75335 376.00045,947.75167 376,911.75 M 476,1000 c 25.75154,-0.2653 46.04409,-24.51219 45,-53.11722 V 908 m -159.39256,40.41112 168.8889,-0.84444"
        id="path1262"
@@ -4232,7 +4232,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.3"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        id="path16623"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -4256,7 +4256,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
        d="m 296.58522,648.63334 93.31111,154.11111 -95,194.64445"
@@ -4278,7 +4278,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:e_stitch="True"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
        d="M 173.29633,645.25556 98.985217,743.21112"
@@ -4308,7 +4308,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.0"
        inkstitch:e_stitch="True"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        id="path103621"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -4379,7 +4379,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="m 30,1000 6.998522,-21.81186 0.01028,-334.04551 M 182.5,1000.4829 l -0.50148,-22.79484 10e-4,-334.26605 m -167.45875,249.25576 190,-0.84444 M 17.074103,766.01111 H 205.38521 M 19.607437,670.58889 H 201.16299"
        id="path6923"
@@ -4403,7 +4403,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="m 392,643 c 25.96657,1.13357 44.38501,20.85999 44.88281,42 V 957.56782 M 292.625,642.01446 292.35156,683.15625 292,957.6875 M 275.4741,691.43333 h 187.46667 m -200.97778,79.64444 197.6,-0.84444 m -191.68889,131.73333 190,-0.84445"
        id="path653"
@@ -4463,7 +4463,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:e_stitch="True"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkscape:label="path166" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1;stroke-opacity:1"
@@ -4496,7 +4496,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:e_stitch="True"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 76.883883,1001.2205 C 51.841001,1001.8782 35.457791,976.35884 36.833759,958.82694 L 36.132018,685.31715 c 0.315439,-22.56964 14.987787,-42.98472 39.949876,-42.39356 m 108.058146,358.29941 -2e-4,-42.39695 c -9.5e-4,-104.51908 -0.002,-169.03816 -0.003,-273.55724 l -2e-4,-42.39695 M 9.4741033,814.98889 207.91855,814.14444 M 12.007437,708.58889 207.0741,706.05555 M 10.318548,923.92222 208.76299,921.38888"
        id="path14761"
@@ -4513,7 +4513,7 @@ Created by Adegoke Adebowale
        id="path40031"
        sodipodi:nodetypes="cc"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:ties="3" />
     <path
        d="m 292.44003,642.87186 -0.27204,53.63647 m 145.24085,-53.54674 -0.1098,57.13211 m -173.64716,-16.83815 191.68889,-0.84444"
@@ -4569,7 +4569,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 77.136173,640.86253 C 52.602353,640.28318 29.484489,656.303 29.499999,683.65625 L 30.255249,958 C 30.164625,980.0499 40.615,999.21505 75,1000 M 176.25602,640.37537 175.75525,683.65504 175.14587,957.6875 175,1000 M 16.229659,696.5 194.40744,694.81111 m -179.022226,124.4 H 187.65188 M 17.074103,945.03333 187.65188,944.18888"
        id="path14231"
@@ -4593,7 +4593,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        id="path93143"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -4644,7 +4644,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:ties="3" />
     <path
        d="m 392,843 c 22.12985,0.40786 46.46551,-26.72862 45.5,-42 l -0.0581,-112 c -0.14661,-18.30808 -21.58538,-46.25005 -43.89515,-46.5 M 292,843.48822 V 801 688.4994 l 0.002,-46.47929 m -22.43901,112.16878 h 187.46667"
@@ -4669,7 +4669,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        id="path90825"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -4684,7 +4684,7 @@ Created by Adegoke Adebowale
        id="path37067"
        sodipodi:nodetypes="cc"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:ties="3" />
     <path
        d="M 291.28764,999.78756 292,945 m 146.00004,55.2876 0.71334,-56.07807 m -169.15039,11.80158 204.35555,0.84444"
@@ -4750,7 +4750,7 @@ Created by Adegoke Adebowale
        inkstitch:line_count="3"
        inkstitch:repeats="2"
        inkstitch:e_stitch="True"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="m 30.426381,641.30536 -1.17437,-128.47054 c 0.719992,-23.17908 22.036427,-38.29443 49.447398,-38.7804 m 96.974431,167.56951 -0.35777,-129.28911 -0.1594,-38.77427 M 14.54077,613.16666 H 185.96299 M 12.007437,543.92222 H 185.11855 M 15.385214,512.41111 H 180.89632"
        id="path4975"
@@ -4775,7 +4775,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:e_stitch="True"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="m 376.20069,474.05644 0.50123,53.69955 M 230.21486,473.55631 231,528 m -15.48145,-15.32222 181.55555,-0.84445"
        id="path13193"
@@ -4839,7 +4839,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:e_stitch="True"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="m 285.17296,1170 -10e-4,-169.5 M 433.34981,1170.1643 433.36528,1001 m -179.84673,92.6555 h 201.82222"
        id="path2211"
@@ -4863,7 +4863,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        id="path11921"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
@@ -4884,7 +4884,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="M 437,643 433.4117,666.03906 433.36528,1001 m -148.40212,-359.43875 0.2098,24.47781 -0.97528,335.55044 m -14.63469,-52.33395 183.24444,1.68889 M 266.18521,755.87777 452.80743,755.03333 m -185.77777,-92.88889 186.62222,-1.68889"
        id="path32614"
@@ -4947,7 +4947,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="m 392,643 c 22.90688,-0.34716 46.04762,27.28903 45,45 V 955 M 292.46796,642.62445 292.11846,684.74891 292,955 M 272.94077,679.61111 442.6741,677.92222 m -169.73333,101.6 170.57777,-1.68889 M 278.00743,941.65555 h 165.51111"
        id="path11177"
@@ -5086,7 +5086,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:e_stitch="True"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="m 318.30343,1170.042 c 23.69518,0.7276 31.38299,-25.6265 30.57938,-42.3545 L 349,668 M 203.57146,1170.5358 204,1128 V 668 m -17.19256,426.5 182.39999,-1.6889 M 191.8741,852.14444 363.29632,850.45555 m -168.88888,-167.2 168.88889,-0.84444"
        id="path60026"
@@ -5200,7 +5200,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="M 343.8741,731.38889 363.29632,537.16667"
@@ -5310,7 +5310,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:e_stitch="True"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 263.65188,648.63333 33.77778,342"
@@ -5333,7 +5333,7 @@ Created by Adegoke Adebowale
        id="path28620"
        sodipodi:nodetypes="cc"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:ties="3" />
     <path
        d="M 420.06688,642.32587 420,685 l 0.8125,11.40625 23.35097,265.18107 m 46.82142,-319.47627 c 0,0 49.41109,5.3444 54.1128,41.22364 l 0.58981,3.85281 25.01394,278.55726 M 402.98521,677.92222 560.05188,676.23333 m -146.93334,126.93333 154.53334,-1.68889 m -136.8,149.46667 h 147.77777"
@@ -5399,7 +5399,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:e_stitch="True"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="M 291.21575,641.99831 291.8125,682.25 292,954.125 M 406.3999,642.4997 c 0,0 29.46223,10.92876 30.6001,40.2503 -1.00501,320.6121 0,272.25 0,272.25 m -167.43701,-275.38889 178.17778,0.84444 m -177.33334,118.48889 175.64445,-1.68889 m -172.26667,129.46667 169.73333,-1.68889"
        id="path10683"
@@ -5454,7 +5454,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 75,1000 C 49.518301,999.66687 29.727142,974.54898 30,955 L 30.371286,682.94189 C 31.132671,663.00186 57.125753,641.40235 74.375,642 m 100.55682,358.5 0.001,-48.5 -0.35604,-269.59376 0.13715,-39.82577 M 17.918548,954.58888 H 187.65188 M 17.074103,801.47777 185.96299,800.63333 M 18.762992,688.05555 H 184.2741"
        id="path9945"
@@ -5478,7 +5478,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="m 285.59873,642 -0.003,41.06564 -0.6003,269.18436 M 383.75,642 c 22.62964,0.69069 47.65871,23.15908 46.25,46 V 955 M 270.40744,690.58888 436.76299,688.9 M 266.18521,806.54444 448.58521,805.7 M 267.02966,933.21111 h 179.02222"
        id="path1330"
@@ -5540,7 +5540,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.4"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        id="path64823"
@@ -5564,7 +5564,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="m 292.625,642 v 43 l -0.66646,272.95952 M 392,643 c 0.0781,0.80729 44.30787,6.71892 44.88281,42.53906 V 957.6875 M 268.71855,685.52222 H 449.42966 M 267.8741,819.21111 447.74077,816.67777 m -174.8,115.95556 172.26666,0.84444"
        id="path8252"
@@ -5629,7 +5629,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="m 437,643 -7,25 -0.25,333.0186 M 285.05902,642.5 284.5,668 v 333.3117 M 272.09632,665.52222 H 441.82965 M 274.62966,781.21111 445.20743,780.36666 M 274.62966,966.14444 h 162.97777"
@@ -5654,7 +5654,7 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="3"
        inkstitch:repeats="2"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="M 429.75,1001.0186 430,1081 m -145.5,-79.6883 0.5,80.2745 m -23.03701,-32.6862 186.62222,-0.8444"
        id="path61361"
@@ -5721,7 +5721,7 @@ Created by Adegoke Adebowale
        inkstitch:stroke_method="running_stitch"
        inkstitch:min_line_dist_mm="0.15"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="m 438.50181,640.90546 7e-5,55.37057 m -146.36803,-54.67147 -0.0245,57.85638 m -25.92414,-25.49428 196.75556,-0.84444"
        id="path7060"
@@ -5790,7 +5790,7 @@ Created by Adegoke Adebowale
        inkstitch:zigzag_underlay="False"
        inkstitch:stroke_method="running_stitch"
        inkstitch:min_line_dist_mm="0.15"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="m 390.33028,1000.5719 c 28.1094,0.1501 40.59188,-18.89854 40.02121,-39.65416 L 430.5,863.33859 c 2.91392,-18.52524 -4.03614,-41.8247 -25.5,-42 m -120.52006,179.41521 0.065,-39.6769 L 285,863.33859 284.47746,820.84841 M 256.89632,960.5 456.18521,961.34444 M 260.2741,917.16666 451.86909,916.43862 m -190.75054,-53.58307 186.62222,-0.84444"
@@ -5817,7 +5817,7 @@ Created by Adegoke Adebowale
        inkstitch:zigzag_underlay="False"
        inkstitch:stroke_method="running_stitch"
        inkstitch:min_line_dist_mm="0.15"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="m 75,820.66141 c -27.004051,0.003 -45.708909,-22.90433 -45,-44 l 0.239259,-96.68176 c -0.853014,-19.60523 14.770443,-39.43759 40.03418,-39.52597 m 105.373911,180.69773 -0.64759,-42.49 -0.002,-98.04212 -2.8e-4,-39.7203 M 5.2518811,768.81111 193.56299,766.27777 m -182.399998,-40.8 180.711108,-0.84444 M 9.4741033,688.9 H 193.56299"
@@ -5847,7 +5847,7 @@ Created by Adegoke Adebowale
        inkstitch:stroke_method="running_stitch"
        inkstitch:min_line_dist_mm="0.15"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        id="path51359"
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -5915,7 +5915,7 @@ Created by Adegoke Adebowale
        inkstitch:repeats="2"
        inkstitch:e_stitch="True"
        inkstitch:min_line_dist_mm="0.15"
-       inkstitch:bean_stitch_repeats="2" />
+       inkstitch:bean_stitch_repeats="1" />
     <path
        d="m 38.153849,643.75109 0.575548,314.21454 c -1.667045,20.44564 15.315089,41.8433 40.03837,42.28097 M 182,643 v 315.38744 42.35916 M 12.007437,705.21111 204.54077,703.52222 M 12.007437,820.05555 196.94077,817.52222 M 16.229659,957.96666 200.56588,957.82178"
        id="path13574"
@@ -5944,7 +5944,7 @@ Created by Adegoke Adebowale
        inkstitch:stroke_method="running_stitch"
        inkstitch:min_line_dist_mm="0.15"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="m 384.56948,1000.5 -0.5,-55.01444 M 238.5726,1000.5 238.00314,945.83101 m -17.41793,20.31343 178.32266,-1.68889"
        id="path11346"
@@ -6014,7 +6014,7 @@ Created by Adegoke Adebowale
        inkstitch:stroke_method="running_stitch"
        inkstitch:min_line_dist_mm="0.15"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 314.31855,939.12222 45.6,-291.33333"
@@ -6087,7 +6087,7 @@ Created by Adegoke Adebowale
        inkstitch:stroke_method="running_stitch"
        inkstitch:min_line_dist_mm="0.15"
        inkstitch:repeats="1"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="M 236.68421,999.51611 236.65165,954.5 274.77838,684.83644 m 64.63226,314.18011 C 359.37291,999.15648 376.92966,974.98273 380,955 L 420.01444,685.91338 M 233.25188,940.81111 402.14077,939.12222 M 240.00743,821.74444 415.65188,820.9 m -159.6,-120.17778 176.48889,0.84444"
        id="path1000"
@@ -6142,7 +6142,7 @@ Created by Adegoke Adebowale
        d="m 182.38388,1000.5016 h 44.84153"
        id="path11397"
        sodipodi:nodetypes="cc"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:ties="3" />
     <path
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
@@ -6166,7 +6166,7 @@ Created by Adegoke Adebowale
        d="m 372.4946,1000.5869 h 44.12363"
        id="path11395"
        sodipodi:nodetypes="cc"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1"
        inkstitch:ties="3" />
     <path
@@ -6253,7 +6253,7 @@ Created by Adegoke Adebowale
        inkstitch:zigzag_underlay="False"
        inkstitch:stroke_method="running_stitch"
        inkstitch:min_line_dist_mm="0.15"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
@@ -6326,7 +6326,7 @@ Created by Adegoke Adebowale
        inkstitch:stroke_method="running_stitch"
        inkstitch:min_line_dist_mm="0.15"
        inkstitch:line_count=""
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1;stroke-opacity:1"
@@ -6366,7 +6366,7 @@ Created by Adegoke Adebowale
        inkstitch:zigzag_underlay="False"
        inkstitch:stroke_method="running_stitch"
        inkstitch:min_line_dist_mm="0.2"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="1"
        inkscape:label="path6744" />
     <path
@@ -6397,7 +6397,7 @@ Created by Adegoke Adebowale
        inkstitch:zigzag_underlay="False"
        inkstitch:stroke_method="running_stitch"
        inkstitch:min_line_dist_mm="0.2"
-       inkstitch:bean_stitch_repeats="2"
+       inkstitch:bean_stitch_repeats="1"
        inkstitch:repeats="1"
        inkscape:label="path6744" />
     <path
@@ -6451,7 +6451,7 @@ Created by Adegoke Adebowale
        inkstitch:running_stitch_tolerance_mm="0.2"
        inkstitch:line_count="4"
        inkstitch:min_line_dist_mm="0.15"
-       inkstitch:bean_stitch_repeats="4" />
+       inkstitch:bean_stitch_repeats="2" />
     <path
        d="M 359.00054,642.51334 359,668 304.65311,967.72734 v 33.24996 m -90.31235,-358.46396 0.85588,24.70541 -55.68596,300.50859 -0.35298,32.75576 m -31.46138,-18.29422 190.84445,-0.84444 M 162.31855,790.5 H 356.54077 M 191.8741,656.23333 h 182.4"
        id="path610"
@@ -6477,7 +6477,7 @@ Created by Adegoke Adebowale
        inkstitch:zigzag_underlay="False"
        inkstitch:stroke_method="running_stitch"
        inkstitch:min_line_dist_mm="0.15"
-       inkstitch:bean_stitch_repeats="4"
+       inkstitch:bean_stitch_repeats="2"
        inkstitch:repeats="1" />
     <path
        d="m 486.00195,1000.5 0.002,-61.24747 m -145.92851,61.72437 0.041,-59.51243 m -13.97567,18.76886 173.11111,-0.84445"
