@@ -161,10 +161,9 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ### Lettering
 
-* Load with last selected font and some other settings [#3498](https://github.com/inkstitch/inkstitch/pull/3498) [#3504](https://github.com/inkstitch/inkstitch/pull/3504)
-
 `Lettering`
 
+* Load with last selected font and some other settings [#3498](https://github.com/inkstitch/inkstitch/pull/3498) [#3504](https://github.com/inkstitch/inkstitch/pull/3504)
 * Add support for more languages (right to left) [#3432](https://github.com/inkstitch/inkstitch/pull/3358) [#3466](https://github.com/inkstitch/inkstitch/pull/3466)
 * Lettering simulator: show accurate start and end points [#3358](https://github.com/inkstitch/inkstitch/pull/3358)
 * Uniformed size info (% and mm) [#3346](https://github.com/inkstitch/inkstitch/pull/3346)
