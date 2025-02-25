@@ -24,15 +24,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="8.3736328"
-     inkscape:cx="20.839223"
-     inkscape:cy="11.106291"
+     inkscape:zoom="16.747266"
+     inkscape:cx="20.809367"
+     inkscape:cy="18.27164"
      inkscape:window-width="1596"
      inkscape:window-height="841"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g1164"
+     inkscape:current-layer="svg187"
      inkscape:document-units="px"
      showguides="true">
     <sodipodi:guide
@@ -2001,12 +2001,12 @@ Created by Adegoke Adebowale
        inkstitch:bean_stitch_repeats="1"
        inkstitch:ties="3" />
     <path
-       d="M 83,1000 C 53.60219,1001.1947 37.258279,977.81158 38,955 V 518 C 37.288489,492.61394 58.533591,472.99042 83,473.56055 M 182.77778,1000.4988 183,958 V 515 l -0.0111,-41.43945 M 10.318548,525.34445 205.38522,524.5 M 16.229659,738.9889 197.78522,739.83334 M 20.451882,955.16668 198.13499,954.0749"
+       d="M 83,473.56055 C 58.533591,472.99042 37.288489,492.61394 38,518 v 437 c -0.741721,22.81158 15.60219,46.1947 45,45 M 182.9889,473.56055 183,515 v 443 l -0.22222,42.4988 M 10.318548,525.34445 205.38522,524.5 M 16.229659,738.9889 197.78522,739.83334 M 20.451882,955.16668 198.13499,954.0749"
        id="path193"
        style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        sodipodi:nodetypes="cccccccccccccc"
        inkstitch:satin_column="True"
-       inkstitch:reverse_rails="none"
+       inkstitch:reverse_rails="automatic"
        inkstitch:ties="3"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True" />
