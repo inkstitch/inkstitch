@@ -286,8 +286,21 @@ def preserve_original_groups(elements, original_parent_nodes, transform=True):
             element_transform = get_correction_transform(parent, child=True)
         parent.append(element.node)
         element.node.set('transform', element_transform)
+        element.node.apply_transform()
 
 
 def add_elements_to_group(elements, group):
     for element in elements:
         group.append(element.node)
+
+
+def apply_transform_recursivley(element, group_transform=inkex.Transform()):
+    """Apply transform, helps to keep the stroke width"""
+    if element.TAG == 'g':
+        group_transform = group_transform @ element.transform
+        element.pop('transform')
+        for child in element:
+            apply_transform_recursivley(child, group_transform)
+    else:
+        element.transform = group_transform @ element.transform
+        element.apply_transform()

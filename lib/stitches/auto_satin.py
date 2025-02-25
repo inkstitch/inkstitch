@@ -22,8 +22,8 @@ from ..utils import Point as InkstitchPoint
 from ..utils import cache, cut
 from ..utils.threading import check_stop_flag
 from .utils.autoroute import (add_elements_to_group, add_jumps,
-                              create_new_group, find_path,
-                              get_starting_and_ending_nodes,
+                              apply_transform_recursivley, create_new_group,
+                              find_path, get_starting_and_ending_nodes,
                               preserve_original_groups,
                               remove_original_elements)
 
@@ -244,6 +244,7 @@ class RunningStitch(object):
             original_element.node.get(INKSTITCH_ATTRIBS['contour_underlay_stitch_length_mm'], '')
 
         self.min_jump_stitch_length = original_element.node.get('inkstitch:min_jump_stitch_length_mm', None)
+        self.bean_stitch_repeats = original_element.node.get('inkstitch:bean_stitch_repeats', None)
 
     def to_element(self):
         node = inkex.PathElement()
@@ -253,9 +254,12 @@ class RunningStitch(object):
         dasharray = inkex.Style("stroke-dasharray:0.5,0.5;")
         style = inkex.Style(self.original_element.node.get('style', '')) + dasharray
         node.set("style", str(style))
-        node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.running_stitch_length)
+        if self.running_stitch_length != '':
+            node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.running_stitch_length)
         if self.min_jump_stitch_length is not None:
             node.set('inkstitch:min_jump_stitch_length_mm', self.min_jump_stitch_length)
+        if self.bean_stitch_repeats is not None:
+            node.set('inkstitch:bean_stitch_repeats', self.bean_stitch_repeats)
 
         stroke = Stroke(node)
 
@@ -284,6 +288,14 @@ class RunningStitch(object):
             return False
 
         if self.original_element is not other.original_element:
+            return False
+
+        if self.start_point == other.end_point and self.end_point == other.start_point:
+            # do not create a closed path
+            return False
+
+        if self.bean_stitch_repeats != other.bean_stitch_repeats:
+            # do not combine if bean stitch number of repeats differs
             return False
 
         return self.path.distance(other.path) < 0.5
@@ -372,7 +384,7 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
         if keep_originals and parent.TAG == "svg":
             group.set('inkscape:groupmode', "layer")
         add_elements_to_group(new_elements, group)
-
+        apply_transform_recursivley(group)
     name_elements(new_elements, preserve_order)
 
     if trim:
@@ -406,15 +418,13 @@ def build_graph(elements, preserve_order=False):
             # can't be used as nodes directly.
             graph.add_node(str(segment.start_point), point=segment.start_point, element=element)
             graph.add_node(str(segment.end_point), point=segment.end_point, element=element)
-            graph.add_edge(str(segment.start_point), str(
-                segment.end_point), segment=segment, element=element)
+            graph.add_edge(str(segment.start_point), str(segment.end_point), segment=segment, element=element)
 
             if preserve_order:
                 # The graph is a directed graph, but we want to allow travel in
                 # any direction in a satin, so we add the edge in the opposite
                 # direction too.
-                graph.add_edge(str(segment.end_point), str(
-                    segment.start_point), segment=segment, element=element)
+                graph.add_edge(str(segment.end_point), str(segment.start_point), segment=segment, element=element)
 
     return graph
 
