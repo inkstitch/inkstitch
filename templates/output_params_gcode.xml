@@ -14,10 +14,11 @@
         <param name="custom_stitch" type="string" appearance="multiline" gui-text="STITCH"
             gui-description="Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate."></param>
         <param name="custom_color_change" type="string" appearance="multiline" gui-text="COLOR CHANGE"
-            gui-description="Leave empty to use default value. Use 'none' to remove."></param>
+            gui-description="Leave empty to use default value. Use 'none' to remove. Use %R %G %B for thread color values"></param>
         <param name="custom_stop" type="string" appearance="multiline" gui-text="STOP"
             gui-description="Leave empty to use default value. Use 'none' to remove."></param>
-        <param name="custom_start" type="string" appearance="multiline" gui-text="START"></param>
+        <param name="custom_start" type="string" appearance="multiline" gui-text="START"
+            gui-description="Use %R %G %B for inital color thread color values"></param>
         <param name="custom_end" type="string" appearance="multiline" gui-text="END"></param>
     </page>
     <page name="laser" gui-text="Laser Settings">
