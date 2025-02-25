@@ -66,7 +66,7 @@ class KnockdownFill(InkstitchExtension):
             self.options.offset * PIXELS_PER_MM,
             cap_style=int(self.options.join_style),
             join_style=int(self.options.join_style),
-            mitre_limit=int(self.options.mitre_limit)
+            mitre_limit=float(max(self.options.mitre_limit, 0.1))
         )
         combined_shape = combined_shape.simplify(0.3)
         combined_shape = ensure_multi_polygon(combined_shape)
