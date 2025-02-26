@@ -18,8 +18,7 @@ from .svg import (apply_transforms, generate_unique_id,
                   get_correction_transform, get_document, get_node_transform)
 from .svg.svg import copy_no_children, point_upwards
 from .svg.tags import (CONNECTION_END, CONNECTION_START, CONNECTOR_TYPE,
-                       INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_SYMBOL_TAG,
-                       SVG_USE_TAG, XLINK_HREF)
+                       INKSCAPE_LABEL, SVG_SYMBOL_TAG, SVG_USE_TAG, XLINK_HREF)
 from .utils import Point, cache, get_bundled_dir
 
 COMMANDS = {
@@ -331,7 +330,9 @@ def ensure_symbol(svg, command):
     path = "./*[@id='inkstitch_%s']" % command
     defs = svg.defs
     if defs.find(path) is None:
-        defs.append(deepcopy(symbol_defs().find(path)))
+        symbol = deepcopy(symbol_defs().find(path))
+        symbol.transform = 'scale(0.2)'
+        defs.append(symbol)
 
 
 def add_group(document, node, command):
@@ -405,26 +406,19 @@ def add_symbol(document, group, command, pos):
 
 
 def get_command_pos(element, index, total):
-    # Put command symbols 30 pixels out from the shape, spaced evenly around it.
+    # Put command symbols on the outline of the shape, spaced evenly around it.
 
-    # get a line running 30 pixels out from the shape
-
-    if not isinstance(element.shape.buffer(30), shgeo.MultiPolygon):
-        outline = element.shape.buffer(30).exterior
+    if not isinstance(element.shape.buffer(0), shgeo.MultiPolygon):
+        outline = element.shape.buffer(0).exterior
     else:
-        polygons = element.shape.buffer(30).geoms
+        polygons = element.shape.buffer(0).geoms
         polygon = polygons[len(polygons)-1]
         outline = polygon.exterior
-
-    # find the top center point on the outline and start there
-    top_center = shgeo.Point(outline.centroid.x, outline.bounds[1])
-    start_position = outline.project(top_center, normalized=True)
 
     # pick this item's spot around the outline and perturb it a bit to avoid
     # stacking up commands if they add commands multiple times
     position = index / float(total)
     position += random() * 0.05
-    position += start_position
 
     return outline.interpolate(position, normalized=True)
 
