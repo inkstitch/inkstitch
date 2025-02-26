@@ -6,7 +6,6 @@
 from math import ceil
 
 import shapely.geometry as shgeo
-from inkex import Transform
 from shapely.errors import GEOSException
 
 from ..i18n import _
@@ -15,7 +14,7 @@ from ..stitch_plan import StitchGroup
 from ..stitches.ripple_stitch import ripple_stitch
 from ..stitches.running_stitch import (bean_stitch, running_stitch,
                                        zigzag_stitch)
-from ..svg import get_node_transform, parse_length_with_units
+from ..svg import parse_length_with_units
 from ..svg.clip import get_clip_path
 from ..threads import ThreadColor
 from ..utils import Point, cache
@@ -542,10 +541,7 @@ class Stroke(EmbroideryElement):
     def get_ripple_target(self):
         command = self.get_command('target_point')
         if command:
-            pos = [float(command.use.get("x", 0)), float(command.use.get("y", 0))]
-            transform = get_node_transform(command.use)
-            pos = Transform(transform).apply_to_point(pos)
-            return Point(*pos)
+            return shgeo.Point(*command.target_point)
         else:
             return self.shape.centroid
 

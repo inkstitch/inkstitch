@@ -7,7 +7,7 @@ import math
 import re
 
 import numpy as np
-from inkex import LinearGradient, Transform
+from inkex import LinearGradient
 from shapely import geometry as shgeo
 from shapely import set_precision
 from shapely.errors import GEOSException
@@ -22,7 +22,7 @@ from ..stitches import (auto_fill, circular_fill, contour_fill, guided_fill,
                         legacy_fill, linear_gradient_fill, meander_fill,
                         tartan_fill)
 from ..stitches.linear_gradient_fill import gradient_angle
-from ..svg import PIXELS_PER_MM, get_node_transform
+from ..svg import PIXELS_PER_MM
 from ..svg.clip import get_clip_path
 from ..svg.tags import INKSCAPE_LABEL
 from ..tartan.utils import get_tartan_settings, get_tartan_stripes
@@ -1196,10 +1196,7 @@ class FillStitch(EmbroideryElement):
         # get target position
         command = self.get_command('target_point')
         if command:
-            pos = [float(command.use.get("x", 0)), float(command.use.get("y", 0))]
-            transform = get_node_transform(command.use)
-            pos = Transform(transform).apply_to_point(pos)
-            target = shgeo.Point(*pos)
+            target = shgeo.Point(*command.target_point)
         else:
             target = shape.centroid
         stitches = circular_fill(
