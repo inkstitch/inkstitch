@@ -20,6 +20,7 @@ from .svg.svg import copy_no_children, point_upwards
 from .svg.tags import (CONNECTION_END, CONNECTION_START, CONNECTOR_TYPE,
                        INKSCAPE_LABEL, SVG_SYMBOL_TAG, SVG_USE_TAG, XLINK_HREF)
 from .utils import Point, cache, get_bundled_dir
+from .utils.geometry import ensure_multi_polygon
 
 COMMANDS = {
     # L10N command attached to an object
@@ -124,24 +125,28 @@ class Command(BaseCommand):
             raise CommandParseError("connector has no path information")
 
         neighbors = [
-            (self.get_node_by_url(self.connector.get(CONNECTION_START)), path[0][0][1]),
-            (self.get_node_by_url(self.connector.get(CONNECTION_END)), path[0][-1][1])
+            self.get_node_by_url(self.connector.get(CONNECTION_START)),
+            self.get_node_by_url(self.connector.get(CONNECTION_END))
         ]
 
-        self.symbol_is_end = neighbors[0][0].tag != SVG_USE_TAG
+        self.symbol_is_end = neighbors[0].tag != SVG_USE_TAG
         if self.symbol_is_end:
             neighbors.reverse()
 
-        if neighbors[0][0].tag != SVG_USE_TAG:
+        if neighbors[0].tag != SVG_USE_TAG:
             raise CommandParseError("connector does not point to a use tag")
 
-        self.use = neighbors[0][0]
+        self.use = neighbors[0]
 
-        self.symbol = self.get_node_by_url(neighbors[0][0].get(XLINK_HREF))
+        self.symbol = self.get_node_by_url(neighbors[0].get(XLINK_HREF))
         self.parse_symbol()
 
-        self.target: inkex.BaseElement = neighbors[1][0]
-        self.target_point = neighbors[1][1]
+        self.target: inkex.BaseElement = neighbors[1]
+
+        pos = [float(self.use.get("x", 0)), float(self.use.get("y", 0))]
+        transform = get_node_transform(self.use)
+        pos = inkex.Transform(transform).apply_to_point(pos)
+        self.target_point = pos
 
     def __repr__(self):
         return "Command('%s', %s)" % (self.command, self.target_point)
@@ -408,12 +413,12 @@ def add_symbol(document, group, command, pos):
 def get_command_pos(element, index, total):
     # Put command symbols on the outline of the shape, spaced evenly around it.
 
-    if not isinstance(element.shape.buffer(0), shgeo.MultiPolygon):
-        outline = element.shape.buffer(0).exterior
+    if element.name == "Stroke":
+        shape = element.as_multi_line_string()
     else:
-        polygons = element.shape.buffer(0).geoms
-        polygon = polygons[len(polygons)-1]
-        outline = polygon.exterior
+        shape = element.shape
+    polygon = ensure_multi_polygon(shape.buffer(0.01)).geoms[-1]
+    outline = polygon.exterior
 
     # pick this item's spot around the outline and perturb it a bit to avoid
     # stacking up commands if they add commands multiple times
