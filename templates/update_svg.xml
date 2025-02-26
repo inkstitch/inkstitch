@@ -18,7 +18,7 @@
     <spacer />
     <label>Tip: You can prevent inserting legacy designs into new files by running any Ink/Stitch extension before you copy the design parts (for example open and re-apply parameters on a single element in the document).</label>
     <spacer />
-    <label appearance="header">This extension only updates selected elements.</label>
+    <label appearance="header">When there is an active selection, only selected elements will be updated.</label>
     <spacer />
     <param name="update-from" type="int" min="0" max="2" gui-text="Update from version" appearance="full">0</param>
     <script>
