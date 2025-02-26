@@ -429,36 +429,11 @@ def get_command_pos(element, index, total):
     return outline.interpolate(position, normalized=True)
 
 
-def remove_legacy_param(element, command):
-    if command == "trim" or command == "stop":
-        # If they had the old "TRIM after" or "STOP after" attributes set,
-        # automatically delete them.  The new commands will do the same
-        # thing.
-        #
-        # If we didn't delete these here, then things would get confusing.
-        # If the user were to delete a "trim" symbol added by this extension
-        # but the "embroider_trim_after" attribute is still set, then the
-        # trim would keep happening.
-
-        attribute = "embroider_%s_after" % command
-
-        if attribute in element.node.attrib:
-            del element.node.attrib[attribute]
-
-        # Attributes have changed to be namespaced.
-        # Let's check for them as well, they might have automatically changed.
-        attribute = INKSTITCH_ATTRIBS["%s_after" % command]
-
-        if attribute in element.node.attrib:
-            del element.node.attrib[attribute]
-
-
 def add_commands(element, commands, pos=None):
     svg = get_document(element.node)
 
     for i, command in enumerate(commands):
         ensure_symbol(svg, command)
-        remove_legacy_param(element, command)
 
         group = add_group(svg, element.node, command)
         position = pos
