@@ -50,8 +50,8 @@ def update_inkstitch_document(svg, selection=None, warn_unversioned=True):
             return
 
         # update elements
-        if selection:
-            # this comes from the updater extension where we only update selected elements
+        if selection is not None:
+            # the updater extension might want to only update selected elements
             for element in selection:
                 update_legacy_params(document, EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
         else:
