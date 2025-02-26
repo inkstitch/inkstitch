@@ -379,7 +379,7 @@ def add_connector(document, symbol, command, element):
     path = inkex.PathElement(attrib={
         "id": generate_unique_id(document, "command_connector"),
         "d": f"M {start_pos[0]},{start_pos[1]} {end_pos[0]},{end_pos[1]}",
-        "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
+        "style": "fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;vector-effect: non-scaling-stroke;-inkscape-stroke: hairline;",
         CONNECTION_START: f"#{symbol.get('id')}",
         CONNECTION_END: f"#{element.node.get('id')}",
 
