@@ -13,10 +13,8 @@ from inkex import BaseElement, Group, Path, PathElement
 from networkx import MultiGraph, is_empty
 from shapely import (LineString, MultiLineString, MultiPolygon, Point, Polygon,
                      dwithin, minimum_bounding_radius, reverse)
-from shapely.affinity import scale
 from shapely.ops import linemerge, substring
 
-from ..commands import add_commands
 from ..elements import FillStitch
 from ..stitches.auto_fill import (PathEdge, build_fill_stitch_graph,
                                   build_travel_graph, find_stitch_path,
@@ -127,51 +125,12 @@ class TartanSvgGroup:
         for color, fill_elements in fills.items():
             for element in fill_elements:
                 group.append(element)
-                if self.stitch_type == "auto_fill":
-                    self._add_command(element)
-                else:
-                    element.pop('inkstitch:start')
-                    element.pop('inkstitch:end')
+                element.pop('inkstitch:start')
+                element.pop('inkstitch:end')
 
         for color, stroke_elements in strokes.items():
             for element in stroke_elements:
                 group.append(element)
-
-    def _get_command_position(self, fill: FillStitch, point: Tuple[float, float]) -> Point:
-        """
-        Shift command position out of the element shape
-
-        :param fill: the fill element to which to attach the command
-        :param point: position where the command should point to
-        """
-        dimensions, center = self._get_dimensions(fill.shape)
-        line = LineString([center, point])
-        fact = 20 / line.length
-        line = scale(line, xfact=1+fact, yfact=1+fact, origin=center)
-        pos = line.coords[-1]
-        return Point(pos)
-
-    def _add_command(self, element: BaseElement) -> None:
-        """
-        Add a command to given svg element
-
-        :param element: svg element to which to attach the command
-        """
-        if not element.style('fill'):
-            return
-        fill = FillStitch(element)
-        if fill.shape.is_empty:
-            return
-        start = element.get('inkstitch:start')
-        end = element.get('inkstitch:end')
-        if start:
-            start = start[1:-1].split(',')
-            add_commands(fill, ['starting_point'], self._get_command_position(fill, (float(start[0]), float(start[1]))))
-            element.pop('inkstitch:start')
-        if end:
-            end = end[1:-1].split(',')
-            add_commands(fill, ['ending_point'], self._get_command_position(fill, (float(end[0]), float(end[1]))))
-            element.pop('inkstitch:end')
 
     def _route_shapes(self, routing_lines: defaultdict, outline_shape: MultiPolygon, shapes: defaultdict, weft: bool = False) -> defaultdict:
         """
