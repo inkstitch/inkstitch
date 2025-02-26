@@ -5,13 +5,15 @@
 
 from inkex import errormsg
 
-from .commands import ensure_symbol
-from .elements import EmbroideryElement
+from .commands import Command, add_commands, ensure_symbol
+from .elements import EmbroideryElement, Stroke
 from .gui.request_update_svg_version import RequestUpdate
 from .i18n import _
 from .metadata import InkStitchMetadata
 from .svg import PIXELS_PER_MM
-from .svg.tags import EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS
+from .svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
+                       INKSTITCH_ATTRIBS, SVG_PATH_TAG, SVG_USE_TAG)
+from .utils import Point as InkstitchPoint
 
 INKSTITCH_SVG_VERSION = 3
 
@@ -207,6 +209,40 @@ def update_legacy_commands(document):
         _rename_command(document, symbol, 'inkstitch_run_start', 'autoroute_start')
         _rename_command(document, symbol, 'inkstitch_run_end', 'autoroute_end')
         _rename_command(document, symbol, 'inkstitch_ripple_target', 'target_point')
+
+    # reposition commands
+    search_string = "//svg:use"
+    use_tags = document.xpath(search_string)
+    for command_symbol in use_tags:
+        xlink = command_symbol.get('xlink:href', '')
+        if not xlink.startswith('#inkstitch'):
+            continue
+        if not any(command in xlink for command in ['starting_point', 'ending_point']):
+            continue
+        command_group = command_symbol.getparent()
+        connector = list(command_group.iterchildren(SVG_PATH_TAG))[0]
+
+        command = Command(connector)
+        element = command.target
+        command_name = command.command
+
+        # get new target position
+        path = command.parse_connector_path()
+        if len(path) == 0:
+            pass
+        neighbors = [
+            (command.get_node_by_url(command.connector.get(CONNECTION_START)), path[0][0][1]),
+            (command.get_node_by_url(command.connector.get(CONNECTION_END)), path[0][-1][1])
+        ]
+        symbol_is_end = neighbors[0][0].tag != SVG_USE_TAG
+        if symbol_is_end:
+            neighbors.reverse()
+        target_point = neighbors[1][1]
+
+        # instead of calculating the transform for the new position, we take the easy route and remove
+        # the old commands and set new ones
+        add_commands(Stroke(element), [command_name], InkstitchPoint(*target_point))
+        command_group.getparent().remove(command_group)
 
 
 def _rename_command(document, symbol, old_name, new_name):
