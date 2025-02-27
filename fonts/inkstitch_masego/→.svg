@@ -24,15 +24,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="16.747266"
-     inkscape:cx="20.809367"
-     inkscape:cy="18.27164"
+     inkscape:zoom="8.373633"
+     inkscape:cx="2.0301821"
+     inkscape:cy="26.0341"
      inkscape:window-width="1596"
      inkscape:window-height="841"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg187"
+     inkscape:current-layer="g41"
      inkscape:document-units="px"
      showguides="true">
     <sodipodi:guide
@@ -141,6 +141,45 @@ Created by Adegoke Adebowale
       </g>
     </symbol>
   </defs>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-/"
+     style="display:none;stroke:#000000;stroke-opacity:1"
+     id="g41"
+     transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.936909;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.936909, 0.936909;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 92.041307,1023.6001 439.57926,351.66253"
+       id="path17"
+       inkscape:label="Start"
+       inkstitch:ties="1"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path30"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.953426;stroke-opacity:1"
+       d="m 487.48583,336.01627 -188.3198,378.26621 -94.15991,189.1331 -47.07994,94.56654 M 405.48204,336.01627 216.91223,714.28248 122.62732,903.41558 75.484866,997.98212 m -31.389845,-10.0568 155.962759,0.7676 m -31.7348,-226.43656 135.11735,-1.53517 m 19.82313,-323.15185 h 136.80632"
+       sodipodi:nodetypes="cccccccccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:ties="3" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.953426;stroke-dasharray:0.953426, 0.953426;stroke-opacity:1"
+       d="m 121.90252,1002.5639 -43.662778,83.3352"
+       id="path40"
+       inkscape:label="jump"
+       inkstitch:ties="3"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path41"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.953426;stroke-opacity:1"
+       d="m 110.84622,1092.5487 47.07996,-94.56658 M 28.342413,1092.5487 75.484866,997.98212 m -51.390768,44.48178 155.962762,0.7677"
+       sodipodi:nodetypes="cccccc"
+       inkstitch:satin_column="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:ties="2" />
+  </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-!"
