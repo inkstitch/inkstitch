@@ -172,7 +172,7 @@ class StitchPlan(object):
 
     @property
     def num_stops(self):
-        return sum(1 for block in self if block.stop_after)
+        return sum(block.num_stops for block in self)
 
     @property
     def num_trims(self):

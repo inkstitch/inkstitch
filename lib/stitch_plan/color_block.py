@@ -74,6 +74,12 @@ class ColorBlock(object):
         return length
 
     @property
+    def num_stops(self):
+        """Number of stops in this color block."""
+
+        return sum(1 for stitch in self if stitch.stop)
+
+    @property
     def num_trims(self):
         """Number of trims in this color block."""
 
@@ -87,6 +93,8 @@ class ColorBlock(object):
 
     @property
     def stop_after(self):
+        # TODO: we do not add the stop command necessarily as the last stitch
+        # also we do not necessarily start a new color block when a stop command appears
         if self.last_stitch is not None:
             return self.last_stitch.stop
         else:
