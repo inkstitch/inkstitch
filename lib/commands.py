@@ -62,6 +62,7 @@ COMMANDS = {
 
 OBJECT_COMMANDS = ["starting_point", "ending_point", "target_point", "autoroute_start", "autoroute_end",
                    "stop", "trim", "ignore_object", "satin_cut_point"]
+HIDDEN_CONNECTOR_COMMANDS = ["starting_point", "ending_point", "autoroute_start", "autoroute_end"]
 FREE_MOVEMENT_OBJECT_COMMANDS = ["autoroute_start", "autoroute_end"]
 LAYER_COMMANDS = ["ignore_layer"]
 GLOBAL_COMMANDS = ["origin", "stop_position"]
@@ -389,6 +390,8 @@ def add_connector(document, symbol, command, element):
 
     if command not in FREE_MOVEMENT_OBJECT_COMMANDS:
         path.attrib[CONNECTOR_TYPE] = "polyline"
+    if command in HIDDEN_CONNECTOR_COMMANDS:
+        path.style['display'] = 'none'
 
     symbol.getparent().insert(0, path)
 
