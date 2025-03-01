@@ -772,7 +772,10 @@ class FillStitch(EmbroideryElement):
         # biggest path.
         paths = self.paths
         paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
-        return shgeo.MultiPolygon([(paths[0], paths[1:])])
+        shape = shgeo.MultiPolygon([(paths[0], paths[1:])])
+        if self.node.style('fill-rule') == 'nonzero':
+            shape = shape.buffer(0)
+        return shape
 
     @property
     @cache
