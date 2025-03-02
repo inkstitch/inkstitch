@@ -89,8 +89,8 @@ class PresetsPanel(wx.Panel):
     @cache
     def presets_path(self):
         try:
-            import appdirs
-            config_path = appdirs.user_config_dir('inkstitch')
+            import platformdirs
+            config_path = platformdirs.user_config_dir('inkstitch')
         except ImportError:
             config_path = os.path.expanduser('~/.inkstitch')
 
