@@ -157,13 +157,14 @@ class FillElementToSatin:
         self.linestrings = linestrings
         self.selected_rungs = selected_rungs
 
-        self.rungs = []
-        self.line_sections = []
-        self.rung_sections = defaultdict(list)
-        self.section_rungs = defaultdict(list)
-        self.bridged_rungs = defaultdict(list)
-        self.used_bridged_rungs = []
-        self.rung_segments = {}
+        self.rungs = []  # rung geometries
+        self.half_rungs = []  # index half rungs in self.rungs
+        self.line_sections = []  # sections of the outline. LineStrings between the rungs
+        self.rung_segments = {}  # assembled satin segments
+        self.rung_sections = defaultdict(list)  # rung_index: section indices
+        self.section_rungs = defaultdict(list)  # section index: rung indices
+        self.bridged_rungs = defaultdict(list)  # bridge index: rung indices
+        self.rung_bridges = defaultdict(list)  # rung index: bridge indices
 
     def convert_to_satin(self):
         intersection_points, bridges = self._validate_rungs()
@@ -248,7 +249,9 @@ class FillElementToSatin:
             if i in finished_sections:
                 continue
             s_rungs = self.section_rungs[i]
+
             if len(s_rungs) == 1:
+                # end section
                 if self.settings['skip_end_section'] and len(self.rungs) > 1:
                     continue
                 segment = self._get_end_segment(section)
@@ -277,16 +280,9 @@ class FillElementToSatin:
                             if rung in rung_list:
                                 if bridge in used_bridges:
                                     continue
-                                points1 = intersection_points[rung_list[0]].geoms
-                                points2 = intersection_points[rung_list[1]].geoms
-                                segment1 = LineString([points1[0], points2[0]])
-                                segment2 = LineString([points1[1], points2[1]])
-                                if segment1.intersects(segment2):
-                                    segment1 = LineString([points1[0], points2[1]])
-                                    segment2 = LineString([points1[1], points2[0]])
-                                segment1 = snap(segment1, line_section_multi, 0.0001)
-                                segment2 = snap(segment2, line_section_multi, 0.0001)
-                                segment = MultiLineString([segment1, segment2])
+                                rung1 = rung_list[0]
+                                rung2 = rung_list[1]
+                                segment = self._get_segment(rung1, rung2, intersection_points, line_section_multi)
                                 satin_segments.append(segment)
                                 rung_segments[rung_list[0]].append(segment_index)
                                 rung_segments[rung_list[1]].append(segment_index)
@@ -299,6 +295,50 @@ class FillElementToSatin:
                 # otherwise they will see some sort of gap, they can close it manually if they want
                 pass
         return rung_segments, satin_segments
+
+    def _get_segment(self, rung1, rung2, intersection_points, line_section_multi):
+        rung_sections1 = self.rung_sections[rung1]
+        rung_sections2 = self.rung_sections[rung2]
+        points1 = self._get_rung_points(rung1, intersection_points)
+        points2 = self._get_rung_points(rung2, intersection_points)
+
+        connected_section = list(set(rung_sections1) & set(rung_sections2))
+        if len(connected_section) == 1:
+            # do not bridge a segment side if there is an actual section we could use
+            segment1 = self.line_sections[connected_section[0]]
+
+            points1 = sorted(points1, key=lambda point: segment1.distance(point), reverse=True)
+            points2 = sorted(points2, key=lambda point: segment1.distance(point), reverse=True)
+            segment2 = LineString([points1[0], points2[0]])
+
+            segment1 = snap(segment1, line_section_multi, 0.0001)
+            segment2 = snap(segment2, line_section_multi, 0.0001)
+
+            segment = MultiLineString([segment1, segment2])
+            return segment
+
+        segment1 = LineString([points1[0], points2[0]])
+        segment2 = LineString([points1[1], points2[1]])
+        if segment1.intersects(segment2):
+            segment1 = LineString([points1[0], points2[1]])
+            segment2 = LineString([points1[1], points2[0]])
+        segment1 = snap(segment1, line_section_multi, 0.0001)
+        segment2 = snap(segment2, line_section_multi, 0.0001)
+        segment = MultiLineString([segment1, segment2])
+        return segment
+
+    def _get_rung_points(self, rung, intersection_points):
+        rung_geom = self.rungs[rung]
+        intersections = intersection_points[rung]
+        if not intersections:
+            return [rung_geom.interpolate(0.3), rung_geom.interpolate(rung_geom.length - 0.3)]
+        if intersections.geom_type == 'MultiPoint':
+            return intersections.geoms
+        if rung_geom.project(intersections, normalized=True) > 0.5:
+            point1 = rung_geom.interpolate(0.3)
+        else:  # Point
+            point1 = rung_geom.interpolate(rung_geom.length - 0.3)
+        return [intersections, point1]
 
     def _get_end_segment(self, section):
         section = section.simplify(0.5)
@@ -415,6 +455,7 @@ class FillElementToSatin:
             for j, rung in enumerate(self.rungs):
                 if bridge.intersects(rung):
                     self.bridged_rungs[i].append(j)
+                    self.rung_bridges[j].append(i)
 
     def _validate_rungs(self):
         ''' Returns only valid rungs and bridge section markers'''
@@ -422,18 +463,60 @@ class FillElementToSatin:
         bridges = []
         intersection_points = []
         rungs = []
+        half_rungs = []
         for rung in self.selected_rungs:
             intersection = multi_line_string.intersection(rung)
             if intersection.geom_type == 'MultiPoint' and len(intersection.geoms) == 2:
                 rungs.append(rung)
-                intersection_points.append(intersection)
+                # intersection_points.append(intersection)
             elif intersection.is_empty and rung.within(self.fill_shape):
                 # these rungs (possibly) connect two rungs
                 bridges.append(rung)
+            elif intersection.geom_type == 'Point':
+                # half rungs will can mark a bridge endpoint at an open end within the shape
+                # intersection_points.append(intersection)
+                half_rungs.append(rung)
         # filter rungs when they are crossing other rungs. They could possibly produce bad line sections
         for i, rung in enumerate(rungs):
             multi_rung = MultiLineString([r for j, r in enumerate(rungs) if j != i])
             intersection = rung.intersection(multi_rung)
             if not rung.intersects(multi_rung) or not rung.intersection(multi_rung).intersects(self.fill_shape):
                 self.rungs.append(rung)
+                intersection_points.append(multi_line_string.intersection(rung))
+        # filter half rungs if they are not bridged
+        bridges_linestring = MultiLineString(bridges)
+        for rung in half_rungs:
+            if rung.intersects(bridges_linestring):
+                self.half_rungs.append(len(self.rungs))
+                self.rungs.append(rung)
+                intersection_points.append(multi_line_string.intersection(rung))
+        # filter bridges
+        bridges = self._validate_bridges(bridges, intersection_points)
         return intersection_points, bridges
+
+    def _validate_bridges(self, bridges, intersection_points):
+        validated_bridges = []
+        multi_rung = MultiLineString(self.rungs)
+        for bridge in bridges:
+            rung_intersections = bridge.intersection(multi_rung)
+            if rung_intersections.is_empty:
+                # doesn't intersect with any rungs, so it is a rung itself (when bridged)
+                self.half_rungs.append(len(self.rungs))
+                self.rungs.append(bridge)
+                intersection_points.append(Point())
+            elif rung_intersections.geom_type == "MultiPoint":
+                if len(rung_intersections.geoms) == 2:
+                    validated_bridges.append(bridge)
+                elif len(rung_intersections.geoms) > 2:
+                    # bridges multiple rungs
+                    points = list(rung_intersections.geoms)
+                    points = sorted(points, key=lambda point: bridge.project(point))
+                    for point1, point2 in zip(points[:-1], points[1:]):
+                        distance1 = bridge.project(point1) - 0.1
+                        distance2 = bridge.project(point2) + 0.1
+                        validated_bridges.append(substring(bridge, distance1, distance2))
+                    validated_bridges.append(bridge)
+            elif rung_intersections.geom_type == "Point":
+                # bridges a rung within the shape
+                validated_bridges.append(bridge)
+        return validated_bridges
