@@ -1,8 +1,7 @@
 import numpy as np
-from scipy.interpolate import splprep, splev
 
+from ..stitches.running_stitch import stitch_curve_evenly
 from .geometry import Point, coordinate_list_to_point_list
-from ..stitches.running_stitch import even_running_stitch
 
 
 def _remove_duplicate_coordinates(coords_array):
@@ -22,7 +21,7 @@ def _remove_duplicate_coordinates(coords_array):
     return coords_array[keepers]
 
 
-def smooth_path(path, smoothness=1.0):
+def smooth_path(path, smoothness=1.0, iterations=5):
     """Smooth a path of coordinates.
 
     Arguments:
@@ -33,12 +32,9 @@ def smooth_path(path, smoothness=1.0):
     Returns:
         A list of Points.
     """
-    from ..debug.debug import debug
-
+    points = coordinate_list_to_point_list(path)
     if smoothness == 0:
-        # s of exactly zero seems to indicate a default level of smoothing
-        # in splprep, so we'll just exit instead.
-        return path
+        return points
 
     # Smoothing seems to look nicer if the line segments in the path are mostly
     # similar in length.  If we have some especially long segments, then the
@@ -48,35 +44,17 @@ def smooth_path(path, smoothness=1.0):
     #
     # Fortunately, we can convert the path to segments that are mostly the same
     # length by using the running stitch algorithm.
-    path = even_running_stitch(coordinate_list_to_point_list(path), 5 * smoothness, smoothness / 2)
+    points = stitch_curve_evenly(points, smoothness * 5, smoothness * 2)
+    points = np.array(points)
+    for _ in range(iterations):
+        ll = points.repeat(2, axis=0)
+        r = np.empty_like(ll)
+        if len(r) == 0:
+            continue
+        r[0] = ll[0]
+        r[2::2] = ll[1:-1:2]
+        r[1:-1:2] = ll[2::2]
+        r[-1] = ll[-1]
+        points = ll * 0.75 + r * 0.25
 
-    # splprep blows up on duplicated consecutive points with "Invalid inputs"
-    coords = _remove_duplicate_coordinates(np.array(path))
-    num_points = len(coords)
-
-    if num_points <= 3:
-        # splprep throws an error unless num_points > k
-        return path
-
-    # s is explained in this issue: https://github.com/scipy/scipy/issues/11916
-    # the smoothness parameter limits how much the smoothed path can deviate
-    # from the original path.  The standard deviation of the distance between
-    # the smoothed path and the original path is equal to the smoothness.
-    # In practical terms, if smoothness is 1mm, then the smoothed path can be
-    # up to 1mm away from the original path.
-    s = num_points * (smoothness ** 2)
-
-    # .T transposes the array (for some reason splprep expects
-    # [[x1, x2, ...], [y1, y2, ...]]
-    tck, fp, ier, msg = splprep(coords.T, s=s, k=3, nest=-1, full_output=1)
-    if ier > 0:
-        debug.log(f"error {ier} smoothing path: {msg}")
-        return path
-
-    # Evaluate the spline curve at many points along its length to produce the
-    # smoothed point list.  2 * num_points seems to be a good number, but it
-    # does produce a lot of points.
-    smoothed_x_values, smoothed_y_values = splev(np.linspace(0, 1, int(num_points * 2)), tck[0])
-    coords = np.array([smoothed_x_values, smoothed_y_values]).T
-
-    return [Point(x, y) for x, y in coords]
+    return [Point(*coord) for coord in points]

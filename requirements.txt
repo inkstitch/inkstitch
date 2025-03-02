@@ -28,7 +28,6 @@ colormath2
 flask>=2.2.0
 fonttools
 trimesh>=3.15.2
-scipy
 diskcache
 flask-cors
 pywinutils ; sys_platform == 'win32'

@@ -59,13 +59,8 @@ jobs:
           # for networkx
           python -m pip install pandas
           python -m pip install pyarrow
-          
-          python -m pip install pyinstaller
 
-          # scipy gives us a ELF error when stripped
-          sudo apt-get install gcc g++ gfortran python3-dev libopenblas-dev liblapack-dev
-          python -m pip uninstall --yes scipy
-          python -m pip install scipy --no-binary scipy
+          python -m pip install pyinstaller
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
@@ -114,8 +109,7 @@ jobs:
 
           # for shapely
           sudo apt install build-essential libgtk-3-dev libgeos-dev cmake
-          sudo apt install gcc g++ gfortran libopenblas-dev liblapack-dev
-  
+
           # for sigining
           sudo apt install rpm
 
@@ -135,11 +129,6 @@ jobs:
           python -m pip install pyarrow
 
           python -m pip install pyinstaller
-
-          # scipy gives us a ELF error when stripped
-          sudo apt-get install gcc g++ gfortran python3-dev libopenblas-dev liblapack-dev
-          python -m pip uninstall --yes scipy
-          python -m pip install scipy --no-binary scipy
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - shell: bash
@@ -212,7 +201,9 @@ jobs:
 
           # for shapely
           apt-get install -y build-essential libgtk-3-dev libgeos-dev cmake
-          apt-get install -y gcc g++ gfortran libopenblas-dev liblapack-dev
+
+          # for numpy
+          apt-get install -y libopenblas-dev liblapack-dev
 
           # for signing rpm
           apt-get install -y rpm
@@ -280,9 +271,8 @@ jobs:
           # inkex has pillow as a requirement and defaults to the latest release.
           # for windows we need to pin to the latest possible version for 32 bit
           python -m pip install pillow==9.5.0
-          # Numpy and Scipy version for older cpu compatibility
+          # Numpy version for older cpu compatibility
           python -m pip install numpy==1.23.1
-          python -m pip install scipy==1.9.0
           pip install wxPython
           python -m pip install -r requirements.txt
           # for networkx
