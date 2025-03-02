@@ -1,5 +1,5 @@
 import numpy as np
-from scipy.interpolate import splprep, splev
+from scipy.interpolate import splprep, splev  # type:ignore[import-untyped]
 
 from .geometry import Point, coordinate_list_to_point_list
 from ..stitches.running_stitch import even_running_stitch

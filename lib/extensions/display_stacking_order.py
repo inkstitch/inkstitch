@@ -38,7 +38,7 @@ class DisplayStackingOrder(InkstitchExtension):
             'x': str(position[0]),
             'y': str(position[1])
         })
-        text.style = inkex.Style(f"text-anchor: middle;text-align: center;dominant-baseline: middle;font-size: { self.options.font_size }")
+        text.style = inkex.Style(f"text-anchor: middle;text-align: center;dominant-baseline: middle;font-size: {self.options.font_size}")
         tspan = inkex.Tspan()
         tspan.text = str(num)
         text.add(tspan)

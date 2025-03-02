@@ -5,12 +5,14 @@
 # Additional credits to: https://github.com/clsn/pyTartan
 
 import re
-from typing import List
+from typing import TYPE_CHECKING, List, cast
 
 import wx
 from inkex import Color
 
 from .colors import string_to_color
+if TYPE_CHECKING:
+    from ..gui.tartan.stripe_panel import StripePanel
 
 
 class Palette:
@@ -59,7 +61,7 @@ class Palette:
             stripes = []
             for stripe_sizer in outer_sizer.Children:
                 stripe = {'render': 1, 'color': '#000000', 'width': '5'}
-                stripe_panel = stripe_sizer.GetWindow()
+                stripe_panel = cast('StripePanel', stripe_sizer.GetWindow())
                 stripe['render'] = stripe_panel.visibility.Get3StateValue()
                 stripe['color'] = stripe_panel.colorpicker.GetColour().GetAsString(wx.C2S_HTML_SYNTAX)
                 stripe['width'] = stripe_panel.stripe_width.GetValue()

@@ -67,7 +67,7 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict):
 
         # environment PATH
         f.write('# PATH:\n')
-        f.write(f'#   {os.environ.get("PATH","")}\n')
+        f.write(f'#   {os.environ.get("PATH", "")}\n')
         # for p in os.environ.get("PATH", '').split(os.pathsep): # PATH to list
         #     f.write(f'#   {p}\n')
 
@@ -265,7 +265,7 @@ def with_pyinstrument(extension, remaining_args, profile_file_path: Path):
     '''
     profile with pyinstrument
     '''
-    import pyinstrument
+    import pyinstrument  # type: ignore[import-untyped,import-not-found]
     profiler = pyinstrument.Profiler()
 
     profiler.start()

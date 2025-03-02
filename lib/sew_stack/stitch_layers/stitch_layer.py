@@ -1,10 +1,12 @@
+from typing import Type
 from ...utils import coordinate_list_to_point_list
 from ...utils.dotdict import DotDict
+from .stitch_layer_editor import StitchLayerEditor
 
 
 class StitchLayer:
     # must be overridden in child classes and set to a subclass of StitchLayerEditor
-    editor_class = None
+    editor_class: Type[StitchLayerEditor] = None  # type:ignore[assignment]
 
     # not to be overridden in child classes
     _defaults = None
