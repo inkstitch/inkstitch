@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-02-20 01:25+0000\n"
-"PO-Revision-Date: 2025-02-20 01:25\n"
+"POT-Creation-Date: 2025-03-02 01:38+0000\n"
+"PO-Revision-Date: 2025-03-02 01:39\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-20 01:25+0000\n"
+"POT-Creation-Date: 2025-03-02 01:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1434,7 +1434,7 @@ msgstr "Dvojitá spirála"
 msgid "Join Style"
 msgstr "Styl připojení"
 
-#: lib/elements/fill_stitch.py:190
+#: lib/elements/fill_stitch.py:190 inx/inkstitch_knockdown_fill.inx:21
 msgid "Round"
 msgstr "Kulatý"
 
@@ -1927,7 +1927,7 @@ msgid "Zig-zag"
 msgstr "Cik-Cak"
 
 #: lib/elements/satin_column.py:119 lib/elements/stroke.py:74
-#: inx/inkstitch_break_apart.inx:9
+#: inx/inkstitch_break_apart.inx:9 inx/inkstitch_knockdown_fill.inx:20
 msgid "Method"
 msgstr "Metoda"
 
@@ -3251,6 +3251,7 @@ msgstr "Použít"
 #: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
 #: inx/inkstitch_install_custom_palette.inx:14
 #: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:27
+#: inx/inkstitch_knockdown_fill.inx:27
 #: inx/inkstitch_lettering_along_path.inx:19
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
 #: inx/inkstitch_lettering_force_lock_stitches.inx:16
@@ -4130,6 +4131,7 @@ msgstr "Generovat vzorníky"
 #: inx/inkstitch_gradient_blocks.inx:17
 #: inx/inkstitch_install_custom_palette.inx:8
 #: inx/inkstitch_jump_to_stroke.inx:17 inx/inkstitch_jump_to_trim.inx:17
+#: inx/inkstitch_knockdown_fill.inx:17
 #: inx/inkstitch_lettering_along_path.inx:15
 #: inx/inkstitch_lettering_custom_font_dir.inx:8
 #: inx/inkstitch_lettering_force_lock_stitches.inx:8
@@ -4440,7 +4442,7 @@ msgstr "Trojúhelník"
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr "Není vybrán žádný sešívací prvek. V případě, že jste očekávali sešití, spusťte Rozšíření > Ink/Stitch > Odstraňování problémů > Odstraňování problémů s objekty."
 
-#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:371
+#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:383
 msgid "Auto-Route"
 msgstr "Automatická trasa"
 
@@ -4456,14 +4458,14 @@ msgstr "Automatická trasa podšívky %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:546
+#: lib/stitches/auto_satin.py:556
 #, python-format
 msgid "AutoSatin %d"
 msgstr "Automaticky vyplnit satén %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:549
+#: lib/stitches/auto_satin.py:559
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "AutoSatén předního stehu %d"
@@ -4518,26 +4520,27 @@ msgstr "# stehů"
 msgid "# trims"
 msgstr "# ořezů"
 
-#: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
-#: print/templates/operator_detailedview.html:68
-msgid "stop after?"
-msgstr "zastavit po?"
-
-#: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
-#: print/templates/operator_detailedview.html:68
-msgid "yes"
-msgstr "ano"
-
-#: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
-#: print/templates/operator_detailedview.html:68
-msgid "no"
-msgstr "ne"
+#: print/templates/color_swatch.html:24
+msgid "# stops"
+msgstr ""
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
 #: print/templates/print_detail.html:6
 msgid "Enter thread name..."
 msgstr "Zadejte název nítě..."
+
+#: print/templates/color_swatch.html:45
+msgid "stop after?"
+msgstr "zastavit po?"
+
+#: print/templates/color_swatch.html:45
+msgid "yes"
+msgstr "ano"
+
+#: print/templates/color_swatch.html:45
+msgid "no"
+msgstr "ne"
 
 #: print/templates/custom-page.html:22 print/templates/ui.html:100
 msgid "Enter URL"
@@ -4679,6 +4682,10 @@ msgstr "odhadovaný čas"
 #: print/templates/operator_detailedview.html:67
 msgid "trims"
 msgstr "ořezy"
+
+#: print/templates/operator_detailedview.html:68
+msgid "stops"
+msgstr ""
 
 #: print/templates/operator_detailedview.html:72
 msgid "Enter operator notes..."
@@ -5237,6 +5244,7 @@ msgstr "Toto rozšíření se pokusí vytvořit jednu stehovou cestu přes všec
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_fill_to_satin.inx:26
 #: inx/inkstitch_install_custom_palette.inx:17
+#: inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_lettering_along_path.inx:29
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:27
@@ -5287,7 +5295,7 @@ msgid "Break apart and repair (broken) fill shapes"
 msgstr "Odděluje a opravuje problematické tvary výplní"
 
 #: inx/inkstitch_break_apart.inx:31 inx/inkstitch_gradient_blocks.inx:12
-#: inx/inkstitch_tartan.inx:12
+#: inx/inkstitch_knockdown_fill.inx:12 inx/inkstitch_tartan.inx:12
 msgid "Tools: Fill"
 msgstr "Nástroje: Výplň"
 
@@ -6427,6 +6435,54 @@ msgstr "Toto rozšíření vkládá příkazy oříznutí, aby se zabránilo sko
 msgid "https://inkstitch.org/docs/commands/#jump-to-trim"
 msgstr ""
 
+#: inx/inkstitch_knockdown_fill.inx:3
+msgid "Selection to Knockdown Fill"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:9
+msgid "Generates a knockdown stitch with a specified offset around selection"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:18
+msgid "Keep holes"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:19
+msgid "Offset"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:22
+msgid "Mitre"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:23
+msgid "Bevel"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:25
+msgid "Mitre limit"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:28
+msgid "This extension generates a knockdown fill area with a specified offset around selected elements."
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:29
+msgid "* Select elements of any kind"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:30
+msgid "* Open this extension and apply with desired settings"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:31
+msgid "* Adapt fill settings in the params dialog"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:34
+msgid "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
+msgstr ""
+
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
 msgstr "Přidat příkazy vrstvy"
@@ -6950,71 +7006,79 @@ msgstr "Vlastní příkazy"
 msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate."
 msgstr "Použijte '%X' pro x-ovou souřadnici. Použijte '%Y' pro y-souřadnici a '%Z' pro z-souřadnici."
 
-#: inx/inkstitch_output_GCODE.inx:31 inx/inkstitch_output_GCODE.inx:33
+#: inx/inkstitch_output_GCODE.inx:31
+msgid "Leave empty to use default value. Use 'none' to remove. Use %R %G %B for thread color values"
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:33
 msgid "Leave empty to use default value. Use 'none' to remove."
 msgstr "Chcete-li použít výchozí hodnotu, ponechte prázdné. K odstranění použijte 'none'."
 
-#: inx/inkstitch_output_GCODE.inx:34
+#: inx/inkstitch_output_GCODE.inx:35
 msgid "START"
 msgstr "START"
 
 #: inx/inkstitch_output_GCODE.inx:35
+msgid "Use %R %G %B for inital color thread color values"
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:36
 msgid "END"
 msgstr "KONEC"
 
-#: inx/inkstitch_output_GCODE.inx:37
+#: inx/inkstitch_output_GCODE.inx:38
 msgid "Laser Settings"
 msgstr "Nastavení laseru"
 
-#: inx/inkstitch_output_GCODE.inx:39
+#: inx/inkstitch_output_GCODE.inx:40
 msgid "laser mode"
 msgstr "laser mód"
 
-#: inx/inkstitch_output_GCODE.inx:39
+#: inx/inkstitch_output_GCODE.inx:40
 msgid "Laser mode (generate g-code for grbl laser mode)"
 msgstr "Laserový režim (vygenerujte g-kód pro grbl laserový režim)"
 
-#: inx/inkstitch_output_GCODE.inx:42
+#: inx/inkstitch_output_GCODE.inx:43
 msgid "dynamic laser power"
 msgstr "dynamický výkon laseru"
 
-#: inx/inkstitch_output_GCODE.inx:42
+#: inx/inkstitch_output_GCODE.inx:43
 msgid "Use Grbl's M4 dynamic laser power mode. Ensures consistent laser cutting power regardless of motor speed. Only for PWM-capable lasers."
 msgstr "Použijte režim dynamického výkonu laseru Grbl M4. Zajišťuje konzistentní řezací výkon laserem bez ohledu na otáčky motoru. Pouze pro lasery schopné PWM."
 
-#: inx/inkstitch_output_GCODE.inx:44
+#: inx/inkstitch_output_GCODE.inx:45
 msgid "laser warm-up time"
 msgstr "doba zahřívání laseru"
 
-#: inx/inkstitch_output_GCODE.inx:44
+#: inx/inkstitch_output_GCODE.inx:45
 msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
 msgstr "Při zapínání laseru počkejte tolik sekund, než se laser zahřeje (příkaz G4)"
 
-#: inx/inkstitch_output_GCODE.inx:46
+#: inx/inkstitch_output_GCODE.inx:47
 msgid "spindle speed"
 msgstr "otáčky vřetena"
 
-#: inx/inkstitch_output_GCODE.inx:46
+#: inx/inkstitch_output_GCODE.inx:47
 msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
 msgstr "rychlost vřetena (výkon laseru pro režim laseru, nastavte na -1 pro vynechání)"
 
-#: inx/inkstitch_output_GCODE.inx:48
+#: inx/inkstitch_output_GCODE.inx:49
 msgid "min spindle speed"
 msgstr "min. otáčky vřetena"
 
-#: inx/inkstitch_output_GCODE.inx:48
+#: inx/inkstitch_output_GCODE.inx:49
 msgid "minimum spindle speed value (grbl $31 setting)"
 msgstr "minimální hodnota otáček vřetena (grbl $31 nastavení)"
 
-#: inx/inkstitch_output_GCODE.inx:50
+#: inx/inkstitch_output_GCODE.inx:51
 msgid "max spindle speed"
 msgstr "max. otáčky vřetena"
 
-#: inx/inkstitch_output_GCODE.inx:50
+#: inx/inkstitch_output_GCODE.inx:51
 msgid "minimum spindle speed value (grbl $30 setting)"
 msgstr "minimální hodnota otáček vřetena (grbl $30 nastavení)"
 
-#: inx/inkstitch_output_GCODE.inx:51
+#: inx/inkstitch_output_GCODE.inx:52
 msgid "feed rate (in mm/min, set to -1 to omit)"
 msgstr "rychlost posuvu (v mm/min, nastavte na -1 pro vynechání)"
 

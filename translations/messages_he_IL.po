@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-02-20 01:25+0000\n"
-"PO-Revision-Date: 2025-02-20 01:25\n"
+"POT-Creation-Date: 2025-03-02 01:38+0000\n"
+"PO-Revision-Date: 2025-03-02 01:39\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-20 01:25+0000\n"
+"POT-Creation-Date: 2025-03-02 01:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1434,7 +1434,7 @@ msgstr ""
 msgid "Join Style"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:190
+#: lib/elements/fill_stitch.py:190 inx/inkstitch_knockdown_fill.inx:21
 msgid "Round"
 msgstr ""
 
@@ -1926,7 +1926,7 @@ msgid "Zig-zag"
 msgstr ""
 
 #: lib/elements/satin_column.py:119 lib/elements/stroke.py:74
-#: inx/inkstitch_break_apart.inx:9
+#: inx/inkstitch_break_apart.inx:9 inx/inkstitch_knockdown_fill.inx:20
 msgid "Method"
 msgstr ""
 
@@ -3242,6 +3242,7 @@ msgstr ""
 #: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
 #: inx/inkstitch_install_custom_palette.inx:14
 #: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:27
+#: inx/inkstitch_knockdown_fill.inx:27
 #: inx/inkstitch_lettering_along_path.inx:19
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
 #: inx/inkstitch_lettering_force_lock_stitches.inx:16
@@ -4118,6 +4119,7 @@ msgstr ""
 #: inx/inkstitch_gradient_blocks.inx:17
 #: inx/inkstitch_install_custom_palette.inx:8
 #: inx/inkstitch_jump_to_stroke.inx:17 inx/inkstitch_jump_to_trim.inx:17
+#: inx/inkstitch_knockdown_fill.inx:17
 #: inx/inkstitch_lettering_along_path.inx:15
 #: inx/inkstitch_lettering_custom_font_dir.inx:8
 #: inx/inkstitch_lettering_force_lock_stitches.inx:8
@@ -4424,7 +4426,7 @@ msgstr ""
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr ""
 
-#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:371
+#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:383
 msgid "Auto-Route"
 msgstr ""
 
@@ -4440,14 +4442,14 @@ msgstr ""
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:546
+#: lib/stitches/auto_satin.py:556
 #, python-format
 msgid "AutoSatin %d"
 msgstr ""
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:549
+#: lib/stitches/auto_satin.py:559
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr ""
@@ -4501,25 +4503,26 @@ msgstr ""
 msgid "# trims"
 msgstr ""
 
-#: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
-#: print/templates/operator_detailedview.html:68
-msgid "stop after?"
-msgstr ""
-
-#: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
-#: print/templates/operator_detailedview.html:68
-msgid "yes"
-msgstr ""
-
-#: print/templates/color_swatch.html:24 print/templates/color_swatch.html:45
-#: print/templates/operator_detailedview.html:68
-msgid "no"
+#: print/templates/color_swatch.html:24
+msgid "# stops"
 msgstr ""
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
 #: print/templates/print_detail.html:6
 msgid "Enter thread name..."
+msgstr ""
+
+#: print/templates/color_swatch.html:45
+msgid "stop after?"
+msgstr ""
+
+#: print/templates/color_swatch.html:45
+msgid "yes"
+msgstr ""
+
+#: print/templates/color_swatch.html:45
+msgid "no"
 msgstr ""
 
 #: print/templates/custom-page.html:22 print/templates/ui.html:100
@@ -4661,6 +4664,10 @@ msgstr ""
 
 #: print/templates/operator_detailedview.html:67
 msgid "trims"
+msgstr ""
+
+#: print/templates/operator_detailedview.html:68
+msgid "stops"
 msgstr ""
 
 #: print/templates/operator_detailedview.html:72
@@ -5219,6 +5226,7 @@ msgstr ""
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_fill_to_satin.inx:26
 #: inx/inkstitch_install_custom_palette.inx:17
+#: inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_lettering_along_path.inx:29
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:27
@@ -5269,7 +5277,7 @@ msgid "Break apart and repair (broken) fill shapes"
 msgstr ""
 
 #: inx/inkstitch_break_apart.inx:31 inx/inkstitch_gradient_blocks.inx:12
-#: inx/inkstitch_tartan.inx:12
+#: inx/inkstitch_knockdown_fill.inx:12 inx/inkstitch_tartan.inx:12
 msgid "Tools: Fill"
 msgstr ""
 
@@ -6409,6 +6417,54 @@ msgstr ""
 msgid "https://inkstitch.org/docs/commands/#jump-to-trim"
 msgstr ""
 
+#: inx/inkstitch_knockdown_fill.inx:3
+msgid "Selection to Knockdown Fill"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:9
+msgid "Generates a knockdown stitch with a specified offset around selection"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:18
+msgid "Keep holes"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:19
+msgid "Offset"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:22
+msgid "Mitre"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:23
+msgid "Bevel"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:25
+msgid "Mitre limit"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:28
+msgid "This extension generates a knockdown fill area with a specified offset around selected elements."
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:29
+msgid "* Select elements of any kind"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:30
+msgid "* Open this extension and apply with desired settings"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:31
+msgid "* Adapt fill settings in the params dialog"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:34
+msgid "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
+msgstr ""
+
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
 msgstr ""
@@ -6932,71 +6988,79 @@ msgstr ""
 msgid "Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate."
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:31 inx/inkstitch_output_GCODE.inx:33
+#: inx/inkstitch_output_GCODE.inx:31
+msgid "Leave empty to use default value. Use 'none' to remove. Use %R %G %B for thread color values"
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:33
 msgid "Leave empty to use default value. Use 'none' to remove."
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:34
+#: inx/inkstitch_output_GCODE.inx:35
 msgid "START"
 msgstr ""
 
 #: inx/inkstitch_output_GCODE.inx:35
+msgid "Use %R %G %B for inital color thread color values"
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:36
 msgid "END"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:37
+#: inx/inkstitch_output_GCODE.inx:38
 msgid "Laser Settings"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:39
+#: inx/inkstitch_output_GCODE.inx:40
 msgid "laser mode"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:39
+#: inx/inkstitch_output_GCODE.inx:40
 msgid "Laser mode (generate g-code for grbl laser mode)"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:42
+#: inx/inkstitch_output_GCODE.inx:43
 msgid "dynamic laser power"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:42
+#: inx/inkstitch_output_GCODE.inx:43
 msgid "Use Grbl's M4 dynamic laser power mode. Ensures consistent laser cutting power regardless of motor speed. Only for PWM-capable lasers."
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:44
+#: inx/inkstitch_output_GCODE.inx:45
 msgid "laser warm-up time"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:44
+#: inx/inkstitch_output_GCODE.inx:45
 msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:46
+#: inx/inkstitch_output_GCODE.inx:47
 msgid "spindle speed"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:46
+#: inx/inkstitch_output_GCODE.inx:47
 msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:48
+#: inx/inkstitch_output_GCODE.inx:49
 msgid "min spindle speed"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:48
+#: inx/inkstitch_output_GCODE.inx:49
 msgid "minimum spindle speed value (grbl $31 setting)"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:50
+#: inx/inkstitch_output_GCODE.inx:51
 msgid "max spindle speed"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:50
+#: inx/inkstitch_output_GCODE.inx:51
 msgid "minimum spindle speed value (grbl $30 setting)"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:51
+#: inx/inkstitch_output_GCODE.inx:52
 msgid "feed rate (in mm/min, set to -1 to omit)"
 msgstr ""
 
