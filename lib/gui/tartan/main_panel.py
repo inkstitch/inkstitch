@@ -215,10 +215,14 @@ class TartanMainPanel(wx.Panel):
             self.save_settings()
             stitch_groups = []
             previous_stitch_group = None
-            for element in self.elements:
+            next_elements = [None]
+            if len(self.elements) > 1:
+                next_elements = self.elements[1:] + next_elements
+            for element, next_element in zip(self.elements, next_elements):
+                check_stop_flag()
                 try:
                     # copy the embroidery element to drop the cache
-                    stitch_groups.extend(copy(FillStitch(element)).embroider(previous_stitch_group))
+                    stitch_groups.extend(copy(FillStitch(element)).embroider(previous_stitch_group, next_element))
                     if stitch_groups:
                         previous_stitch_group = stitch_groups[-1]
                 except (SystemExit, ExitThread):
@@ -241,13 +245,16 @@ class TartanMainPanel(wx.Panel):
         for element in self.elements:
             parent = element.getparent()
             embroidery_elements = nodes_to_elements(parent.iterdescendants())
-            for embroidery_element in embroidery_elements:
+            next_elements = [None]
+            if len(embroidery_elements) > 1:
+                next_elements = embroidery_elements[1:] + next_elements
+            for embroidery_element, next_element in zip(embroidery_elements, next_elements):
                 check_stop_flag()
                 if embroidery_element.node == element:
                     continue
                 try:
                     # copy the embroidery element to drop the cache
-                    stitch_groups.extend(copy(embroidery_element).embroider(previous_stitch_group))
+                    stitch_groups.extend(copy(embroidery_element).embroider(previous_stitch_group, next_element))
                     if stitch_groups:
                         previous_stitch_group = stitch_groups[-1]
                 except InkstitchException:

@@ -5,13 +5,15 @@
 
 from inkex import errormsg
 
-from .commands import ensure_symbol
-from .elements import EmbroideryElement
+from .commands import add_commands, ensure_symbol
+from .elements import EmbroideryElement, Stroke
 from .gui.request_update_svg_version import RequestUpdate
 from .i18n import _
 from .metadata import InkStitchMetadata
 from .svg import PIXELS_PER_MM
-from .svg.tags import EMBROIDERABLE_TAGS, INKSTITCH_ATTRIBS
+from .svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
+                       INKSTITCH_ATTRIBS, SVG_USE_TAG)
+from .utils import Point as InkstitchPoint
 
 INKSTITCH_SVG_VERSION = 3
 
@@ -48,10 +50,10 @@ def update_inkstitch_document(svg, selection=None, warn_unversioned=True):
             return
 
         # update elements
-        if selection:
-            # this comes from the updater extension where we only update selected elements
+        if selection is not None:
+            # the updater extension might want to only update selected elements
             for element in selection:
-                update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
+                update_legacy_params(document, EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
         else:
             # this is the automatic update when a legacy inkstitch svg version was recognized
             automatic_version_update(document, file_version, INKSTITCH_SVG_VERSION, warn_unversioned)
@@ -69,9 +71,7 @@ def automatic_version_update(document, file_version, INKSTITCH_SVG_VERSION, warn
     # well then, let's update legeacy params
     for element in document.iterdescendants():
         if element.tag in EMBROIDERABLE_TAGS:
-            update_legacy_params(EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
-    if file_version < 3:
-        update_legacy_commands(document)
+            update_legacy_params(document, EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
 
 
 def _update_inkstitch_svg_version(svg):
@@ -80,24 +80,25 @@ def _update_inkstitch_svg_version(svg):
     metadata['inkstitch_svg_version'] = INKSTITCH_SVG_VERSION
 
 
-def update_legacy_params(element, file_version, inkstitch_svg_version):
+def update_legacy_params(document, element, file_version, inkstitch_svg_version):
     for version in range(file_version + 1, inkstitch_svg_version + 1):
-        _update_to(version, element)
+        _update_to(document, version, element)
 
 
-def _update_to(version, element):
+def _update_to(document, version, element):
     if version == 1:
         _update_to_one(element)
     elif version == 2:
         _update_to_two(element)
     elif version == 3:
-        _update_to_three(element)
+        _update_to_three(document, element)
 
 
-def _update_to_three(element):
+def _update_to_three(document, element):
     if element.get_boolean_param('satin_column', False):
         element.set_param('start_at_nearest_point', False)
         element.set_param('end_at_nearest_point', False)
+    update_legacy_commands(document, element)
 
 
 def _update_to_two(element):
@@ -193,7 +194,7 @@ Update legacy commands
 '''
 
 
-def update_legacy_commands(document):
+def update_legacy_commands(document, element):
     '''
     Changes for svg version 3
     '''
@@ -207,6 +208,39 @@ def update_legacy_commands(document):
         _rename_command(document, symbol, 'inkstitch_run_start', 'autoroute_start')
         _rename_command(document, symbol, 'inkstitch_run_end', 'autoroute_end')
         _rename_command(document, symbol, 'inkstitch_ripple_target', 'target_point')
+
+    # reposition commands
+    start = element.get_command('starting_point')
+    if start:
+        reposition_legacy_command(start)
+    end = element.get_command('ending_point')
+    if end:
+        reposition_legacy_command(end)
+
+
+def reposition_legacy_command(command):
+    connector = command.connector
+    command_group = connector.getparent()
+    element = command.target
+    command_name = command.command
+
+    # get new target position
+    path = command.parse_connector_path()
+    if len(path) == 0:
+        pass
+    neighbors = [
+        (command.get_node_by_url(command.connector.get(CONNECTION_START)), path[0][0][1]),
+        (command.get_node_by_url(command.connector.get(CONNECTION_END)), path[0][-1][1])
+    ]
+    symbol_is_end = neighbors[0][0].tag != SVG_USE_TAG
+    if symbol_is_end:
+        neighbors.reverse()
+    target_point = neighbors[1][1]
+
+    # instead of calculating the transform for the new position, we take the easy route and remove
+    # the old commands and set new ones
+    add_commands(Stroke(element), [command_name], InkstitchPoint(*target_point))
+    command_group.getparent().remove(command_group)
 
 
 def _rename_command(document, symbol, old_name, new_name):

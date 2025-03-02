@@ -18,9 +18,9 @@ from .svg import (apply_transforms, generate_unique_id,
                   get_correction_transform, get_document, get_node_transform)
 from .svg.svg import copy_no_children, point_upwards
 from .svg.tags import (CONNECTION_END, CONNECTION_START, CONNECTOR_TYPE,
-                       INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_SYMBOL_TAG,
-                       SVG_USE_TAG, XLINK_HREF)
+                       INKSCAPE_LABEL, SVG_SYMBOL_TAG, SVG_USE_TAG, XLINK_HREF)
 from .utils import Point, cache, get_bundled_dir
+from .utils.geometry import ensure_multi_polygon
 
 COMMANDS = {
     # L10N command attached to an object
@@ -62,6 +62,7 @@ COMMANDS = {
 
 OBJECT_COMMANDS = ["starting_point", "ending_point", "target_point", "autoroute_start", "autoroute_end",
                    "stop", "trim", "ignore_object", "satin_cut_point"]
+HIDDEN_CONNECTOR_COMMANDS = ["starting_point", "ending_point", "autoroute_start", "autoroute_end"]
 FREE_MOVEMENT_OBJECT_COMMANDS = ["autoroute_start", "autoroute_end"]
 LAYER_COMMANDS = ["ignore_layer"]
 GLOBAL_COMMANDS = ["origin", "stop_position"]
@@ -125,24 +126,28 @@ class Command(BaseCommand):
             raise CommandParseError("connector has no path information")
 
         neighbors = [
-            (self.get_node_by_url(self.connector.get(CONNECTION_START)), path[0][0][1]),
-            (self.get_node_by_url(self.connector.get(CONNECTION_END)), path[0][-1][1])
+            self.get_node_by_url(self.connector.get(CONNECTION_START)),
+            self.get_node_by_url(self.connector.get(CONNECTION_END))
         ]
 
-        self.symbol_is_end = neighbors[0][0].tag != SVG_USE_TAG
+        self.symbol_is_end = neighbors[0].tag != SVG_USE_TAG
         if self.symbol_is_end:
             neighbors.reverse()
 
-        if neighbors[0][0].tag != SVG_USE_TAG:
+        if neighbors[0].tag != SVG_USE_TAG:
             raise CommandParseError("connector does not point to a use tag")
 
-        self.use = neighbors[0][0]
+        self.use = neighbors[0]
 
-        self.symbol = self.get_node_by_url(neighbors[0][0].get(XLINK_HREF))
+        self.symbol = self.get_node_by_url(neighbors[0].get(XLINK_HREF))
         self.parse_symbol()
 
-        self.target: inkex.BaseElement = neighbors[1][0]
-        self.target_point = neighbors[1][1]
+        self.target: inkex.BaseElement = neighbors[1]
+
+        pos = [float(self.use.get("x", 0)), float(self.use.get("y", 0))]
+        transform = get_node_transform(self.use)
+        pos = inkex.Transform(transform).apply_to_point(pos)
+        self.target_point = pos
 
     def __repr__(self):
         return "Command('%s', %s)" % (self.command, self.target_point)
@@ -331,7 +336,9 @@ def ensure_symbol(svg, command):
     path = "./*[@id='inkstitch_%s']" % command
     defs = svg.defs
     if defs.find(path) is None:
-        defs.append(deepcopy(symbol_defs().find(path)))
+        symbol = deepcopy(symbol_defs().find(path))
+        symbol.transform = 'scale(0.2)'
+        defs.append(symbol)
 
 
 def add_group(document, node, command):
@@ -373,7 +380,7 @@ def add_connector(document, symbol, command, element):
     path = inkex.PathElement(attrib={
         "id": generate_unique_id(document, "command_connector"),
         "d": f"M {start_pos[0]},{start_pos[1]} {end_pos[0]},{end_pos[1]}",
-        "style": "stroke:#000000;stroke-width:1px;stroke-opacity:0.5;fill:none;",
+        "style": "fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;vector-effect: non-scaling-stroke;-inkscape-stroke: hairline;",
         CONNECTION_START: f"#{symbol.get('id')}",
         CONNECTION_END: f"#{element.node.get('id')}",
 
@@ -383,6 +390,8 @@ def add_connector(document, symbol, command, element):
 
     if command not in FREE_MOVEMENT_OBJECT_COMMANDS:
         path.attrib[CONNECTOR_TYPE] = "polyline"
+    if command in HIDDEN_CONNECTOR_COMMANDS:
+        path.style['display'] = 'none'
 
     symbol.getparent().insert(0, path)
 
@@ -405,52 +414,21 @@ def add_symbol(document, group, command, pos):
 
 
 def get_command_pos(element, index, total):
-    # Put command symbols 30 pixels out from the shape, spaced evenly around it.
+    # Put command symbols on the outline of the shape, spaced evenly around it.
 
-    # get a line running 30 pixels out from the shape
-
-    if not isinstance(element.shape.buffer(30), shgeo.MultiPolygon):
-        outline = element.shape.buffer(30).exterior
+    if element.name == "Stroke":
+        shape = element.as_multi_line_string()
     else:
-        polygons = element.shape.buffer(30).geoms
-        polygon = polygons[len(polygons)-1]
-        outline = polygon.exterior
-
-    # find the top center point on the outline and start there
-    top_center = shgeo.Point(outline.centroid.x, outline.bounds[1])
-    start_position = outline.project(top_center, normalized=True)
+        shape = element.shape
+    polygon = ensure_multi_polygon(shape.buffer(0.01)).geoms[-1]
+    outline = polygon.exterior
 
     # pick this item's spot around the outline and perturb it a bit to avoid
     # stacking up commands if they add commands multiple times
     position = index / float(total)
     position += random() * 0.05
-    position += start_position
 
     return outline.interpolate(position, normalized=True)
-
-
-def remove_legacy_param(element, command):
-    if command == "trim" or command == "stop":
-        # If they had the old "TRIM after" or "STOP after" attributes set,
-        # automatically delete them.  The new commands will do the same
-        # thing.
-        #
-        # If we didn't delete these here, then things would get confusing.
-        # If the user were to delete a "trim" symbol added by this extension
-        # but the "embroider_trim_after" attribute is still set, then the
-        # trim would keep happening.
-
-        attribute = "embroider_%s_after" % command
-
-        if attribute in element.node.attrib:
-            del element.node.attrib[attribute]
-
-        # Attributes have changed to be namespaced.
-        # Let's check for them as well, they might have automatically changed.
-        attribute = INKSTITCH_ATTRIBS["%s_after" % command]
-
-        if attribute in element.node.attrib:
-            del element.node.attrib[attribute]
 
 
 def add_commands(element, commands, pos=None):
@@ -458,7 +436,6 @@ def add_commands(element, commands, pos=None):
 
     for i, command in enumerate(commands):
         ensure_symbol(svg, command)
-        remove_legacy_param(element, command)
 
         group = add_group(svg, element.node, command)
         position = pos

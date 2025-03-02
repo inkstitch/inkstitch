@@ -9,27 +9,23 @@ from inkex import (DirectedLineSegment, LinearGradient, PathElement, Transform,
                    errormsg)
 from shapely import geometry as shgeo
 from shapely.affinity import rotate
-from shapely.geometry import Point
-from shapely.ops import nearest_points, split
+from shapely.ops import split
 
-from ..commands import add_commands
 from ..elements import FillStitch
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..svg.tags import INKSTITCH_ATTRIBS
-from .commands import CommandsExtension
 from .duplicate_params import get_inkstitch_attributes
+from .base import InkstitchExtension
 
 
-class GradientBlocks(CommandsExtension):
+class GradientBlocks(InkstitchExtension):
     '''
     This will break apart fill objects with a gradient fill into solid color blocks with end_row_spacing.
     '''
 
-    COMMANDS = ['starting_point', 'ending_point']
-
     def __init__(self, *args, **kwargs):
-        CommandsExtension.__init__(self, *args, **kwargs)
+        InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--notebook", type=str, default=0.0)
         self.arg_parser.add_argument("--options", type=str, default=0.0)
         self.arg_parser.add_argument("--info", type=str, default=0.0)
@@ -64,8 +60,6 @@ class GradientBlocks(CommandsExtension):
                 end_row_spacing = element.row_spacing / PIXELS_PER_MM * 2
             end_row_spacing = f'{end_row_spacing: .2f}'
 
-            previous_color = None
-            previous_element = None
             for i, shape in enumerate(fill_shapes):
                 color = attributes[i]['color']
                 style['fill'] = color
@@ -98,28 +92,7 @@ class GradientBlocks(CommandsExtension):
                     block.set('inkstitch:fill_underlay_row_spacing_mm', end_row_spacing)
 
                 parent.insert(index, block)
-                if previous_color == color:
-                    self._add_block_commands(block, previous_element)
-                previous_color = color
-                previous_element = block
             parent.remove(element.node)
-
-    def _add_block_commands(self, block, previous_element):
-        current = FillStitch(block)
-        previous = FillStitch(previous_element)
-        if previous.shape.is_empty or current.shape.is_empty:
-            return
-        nearest = nearest_points(current.shape, previous.shape)
-        pos_current = self._get_command_postion(current, nearest[0])
-        pos_previous = self._get_command_postion(previous, nearest[1])
-        add_commands(current, ['ending_point'], pos_current)
-        add_commands(previous, ['starting_point'], pos_previous)
-
-    def _get_command_postion(self, fill, point):
-        center = fill.shape.centroid
-        line = DirectedLineSegment((center.x, center.y), (point.x, point.y))
-        pos = line.point_at_length(line.length + 20)
-        return Point(pos)
 
     def _element_to_path(self, shape):
         coords = list(shape.exterior.coords)

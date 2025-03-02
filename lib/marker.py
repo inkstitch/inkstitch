@@ -18,7 +18,9 @@ MARKER = ['anchor-line', 'pattern', 'guide-line']
 def ensure_marker(svg, marker):
     marker_path = ".//*[@id='inkstitch-%s-marker']" % marker
     if svg.defs.find(marker_path) is None:
-        svg.defs.append(deepcopy(_marker_svg().defs.find(marker_path)))
+        marker = deepcopy(_marker_svg().defs.find(marker_path))
+        marker.set('markerWidth', str(0.1))
+        svg.defs.append(marker)
 
 
 @cache
