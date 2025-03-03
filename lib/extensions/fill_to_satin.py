@@ -497,6 +497,8 @@ class FillElementToSatin:
     def _validate_bridges(self, bridges, intersection_points):
         validated_bridges = []
         multi_rung = MultiLineString(self.rungs)
+        # find elements marked as bridges, but don't intersect with any other rung.
+        # they may be rungs drawn inside of a shape, so let's add them to the rungs and see if they are helpful
         for bridge in bridges:
             rung_intersections = bridge.intersection(multi_rung)
             if rung_intersections.is_empty:
@@ -504,7 +506,12 @@ class FillElementToSatin:
                 self.half_rungs.append(len(self.rungs))
                 self.rungs.append(bridge)
                 intersection_points.append(Point())
-            elif rung_intersections.geom_type == "MultiPoint":
+
+        # now validate bridges and split them up if necessary
+        multi_rung = MultiLineString(self.rungs)
+        for bridge in bridges:
+            rung_intersections = bridge.intersection(multi_rung)
+            if rung_intersections.geom_type == "MultiPoint":
                 if len(rung_intersections.geoms) == 2:
                     validated_bridges.append(bridge)
                 elif len(rung_intersections.geoms) > 2:
