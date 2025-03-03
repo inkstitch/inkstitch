@@ -132,8 +132,8 @@ class FillToSatin(InkstitchExtension):
 
     def _remove_originals(self):
         '''Remove original elements - if requested'''
-        if not self.options.keep_originals:
-            for element in self.elements:
+        for element in self.elements:
+            if not self.options.keep_originals or element.name == "Stroke":
                 try:
                     element.node.getparent().remove(element.node)
                 except AttributeError:
