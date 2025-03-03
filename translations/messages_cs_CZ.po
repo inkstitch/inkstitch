@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-02 01:38+0000\n"
-"PO-Revision-Date: 2025-03-02 01:39\n"
+"POT-Creation-Date: 2025-03-03 01:29+0000\n"
+"PO-Revision-Date: 2025-03-03 01:29\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-02 01:38+0000\n"
+"POT-Creation-Date: 2025-03-03 01:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -987,7 +987,7 @@ msgstr "Původ exportovaných souborů výšivek"
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr "Cíl skoku pro příkazy zastavení (\"pozice mimo rám\")."
 
-#: lib/commands.py:269
+#: lib/commands.py:274
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr "Chyba: v dokumentu je více než jeden příkaz %(command)s, ale může být pouze jeden. Odstraňte prosím všechny kromě jednoho."
@@ -997,26 +997,26 @@ msgstr "Chyba: v dokumentu je více než jeden příkaz %(command)s, ale může 
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:276
+#: lib/commands.py:281
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:342 lib/commands.py:492
+#: lib/commands.py:349 lib/commands.py:469
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch příkaz"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:381
+#: lib/commands.py:388
 msgid "connector"
 msgstr "konektor"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:400
+#: lib/commands.py:409
 msgid "command marker"
 msgstr "tvůrce příkazů"
 
-#: lib/commands.py:481
+#: lib/commands.py:458
 msgid "Please select a layer to include layer commands."
 msgstr "Vyberte vrstvu, do které chcete zahrnout příkazy vrstvy."
 
@@ -1248,15 +1248,15 @@ msgstr "Vodicí čára tohoto objektu není uvnitř hranic objektu. Vodicí čá
 msgid "* Move the guide line into the element"
 msgstr "* Přesuňte vodicí čáru do prvku"
 
-#: lib/elements/fill_stitch.py:74 lib/elements/stroke.py:28
+#: lib/elements/fill_stitch.py:74 lib/elements/stroke.py:27
 msgid "Multiple Guide Lines"
 msgstr "Více vodicích linek"
 
-#: lib/elements/fill_stitch.py:75 lib/elements/stroke.py:29
+#: lib/elements/fill_stitch.py:75 lib/elements/stroke.py:28
 msgid "This object has multiple guide lines, but only the first one will be used."
 msgstr "Tento objekt má více vodicích čar, ale použije se pouze první z nich."
 
-#: lib/elements/fill_stitch.py:77 lib/elements/stroke.py:31
+#: lib/elements/fill_stitch.py:77 lib/elements/stroke.py:30
 msgid "* Remove all guide lines, except for one."
 msgstr "* Odstraňte všechny vodicí čáry kromě jedné."
 
@@ -1584,7 +1584,7 @@ msgid "Travel inside the shape when moving from section to section.  Underpath s
 msgstr "Při přesunu ze sekce do sekce se pohybujte uvnitř tvaru. Spodní stehy se vyhýbají pohybu ve směru úhlu řádku, takže nejsou viditelné. To jim dává zubatý vzhled."
 
 #: lib/elements/fill_stitch.py:456 lib/elements/satin_column.py:364
-#: lib/elements/stroke.py:122
+#: lib/elements/stroke.py:121
 msgid "Running stitch length"
 msgstr "Délka předního stehu"
 
@@ -1600,50 +1600,50 @@ msgstr "Tolerance předního stehu"
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Určuje, jak silně se Ink/Stitch snaží vyhnout sešívání mimo tvar. U nižších čísel je méně pravděpodobné, že sešívají mimo tvar, ale vyžadují více stehů."
 
-#: lib/elements/fill_stitch.py:493 lib/elements/stroke.py:148
+#: lib/elements/fill_stitch.py:493 lib/elements/stroke.py:147
 msgid "Randomize stitch length"
 msgstr "Náhodná délka stehu"
 
-#: lib/elements/fill_stitch.py:494 lib/elements/stroke.py:149
+#: lib/elements/fill_stitch.py:494 lib/elements/stroke.py:148
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
 msgstr "Délku stehu raději náhodně upravte, než abyste pravidelně stříhali nebo odsazovali. To se doporučuje, když je výplň hustá, aby se předešlo moaré efektu."
 
-#: lib/elements/fill_stitch.py:510 lib/elements/stroke.py:161
+#: lib/elements/fill_stitch.py:510 lib/elements/stroke.py:160
 msgid "Random stitch length jitter"
 msgstr "Nahodilý pohyb délky stehu"
 
-#: lib/elements/fill_stitch.py:511 lib/elements/stroke.py:162
+#: lib/elements/fill_stitch.py:511 lib/elements/stroke.py:161
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr "Maximální procento odchylky v délce použitého stehu, pokud je délka náhodná."
 
 #: lib/elements/fill_stitch.py:526 lib/elements/satin_column.py:500
-#: lib/elements/stroke.py:84
+#: lib/elements/stroke.py:83
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:33
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:35
 msgid "Repeats"
 msgstr "Opakování"
 
-#: lib/elements/fill_stitch.py:527 lib/elements/stroke.py:85
+#: lib/elements/fill_stitch.py:527 lib/elements/stroke.py:84
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:36
 msgid "Defines how many times to run down and back along the path."
 msgstr "Definuje, kolikrát se má šít vpřed a vzad podél cesty."
 
-#: lib/elements/fill_stitch.py:538 lib/elements/stroke.py:96
+#: lib/elements/fill_stitch.py:538 lib/elements/stroke.py:95
 msgid "Bean stitch number of repeats"
 msgstr "Počet opakování řetízkového stehu"
 
-#: lib/elements/fill_stitch.py:539 lib/elements/stroke.py:97
+#: lib/elements/fill_stitch.py:539 lib/elements/stroke.py:96
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr "Tento krok opakujte mnohokrát. Hodnota 1 by ztrojnásobila každý steh (dopředu, dozadu, dopředu). Hodnota 2 by pětinásobila každý steh atd.\n\n"
 "Vzor s různým opakováním lze vytvořit se seznamem hodnot oddělených mezerou."
 
 #: lib/elements/fill_stitch.py:554 lib/elements/satin_column.py:250
-#: lib/elements/stroke.py:187
+#: lib/elements/stroke.py:186
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Cik-cak mezery (od vrcholu k vrcholu)"
 
-#: lib/elements/fill_stitch.py:555 lib/elements/stroke.py:188
+#: lib/elements/fill_stitch.py:555 lib/elements/stroke.py:187
 msgid "Length of stitches in zig-zag mode."
 msgstr "Délka stehů v režimu cik-cak."
 
@@ -1672,7 +1672,7 @@ msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr "Definuje šířku vzoru rybí kosti. Pro běžné řádky použijte 0."
 
 #: lib/elements/fill_stitch.py:606 lib/elements/satin_column.py:278
-#: lib/elements/stroke.py:200
+#: lib/elements/stroke.py:199
 msgid "Pull compensation"
 msgstr "Kompenzace tahu"
 
@@ -1728,7 +1728,7 @@ msgstr "Řádkování"
 msgid "default: 3x fill row spacing"
 msgstr "výchozí: 3x výplň mezi řádky"
 
-#: lib/elements/fill_stitch.py:691 lib/elements/stroke.py:173
+#: lib/elements/fill_stitch.py:691 lib/elements/stroke.py:172
 #: lib/extensions/element_info.py:134 lib/extensions/element_info.py:190
 msgid "Max stitch length"
 msgstr "Maximální délka stehu"
@@ -1742,13 +1742,13 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr "Zmenší tvar před vytvořením podkladu, aby se zabránilo zobrazení podkladu mimo výplň."
 
 #: lib/elements/fill_stitch.py:737 lib/elements/satin_column.py:581
-#: lib/elements/stroke.py:452 lib/gui/satin_multicolor/colorize_panel.py:57
+#: lib/elements/stroke.py:451 lib/gui/satin_multicolor/colorize_panel.py:57
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:59
 msgid "Random seed"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:738 lib/elements/satin_column.py:582
-#: lib/elements/stroke.py:453
+#: lib/elements/stroke.py:452
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Toto nastavte, když potřebujete opravit vzor pro náhodně určené atributy. Pokud je prázdné, použije se ID prvku."
 
@@ -1792,7 +1792,7 @@ msgstr "* Přejděte na kartu Styl tahu"
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
 msgstr "* V části \"Značky\" vyberte první (prázdnou) možnost v prvním rozevíracím seznamu."
 
-#: lib/elements/satin_column.py:32 lib/elements/stroke.py:36
+#: lib/elements/satin_column.py:32 lib/elements/stroke.py:35
 msgid "Too few subpaths"
 msgstr "Příliš málo podcest"
 
@@ -1926,7 +1926,7 @@ msgstr "\"S\" Steh"
 msgid "Zig-zag"
 msgstr "Cik-Cak"
 
-#: lib/elements/satin_column.py:119 lib/elements/stroke.py:74
+#: lib/elements/satin_column.py:119 lib/elements/stroke.py:73
 #: inx/inkstitch_break_apart.inx:9 inx/inkstitch_knockdown_fill.inx:20
 msgid "Method"
 msgstr "Metoda"
@@ -2040,27 +2040,27 @@ msgstr "Dodatečná kompenzace tahu, která se mění v procentech šířky steh
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Saténové stehy přitahují látku k sobě, což má za následek užší sloupec, než jaký kreslíte v Inkscape. Toto nastavení rozšiřuje každý pár průniků jehel směrem ven ze středu saténového sloupce o pevnou délku. Pro asymetrický efekt lze použít dvě hodnoty oddělené mezerou."
 
-#: lib/elements/satin_column.py:293 lib/elements/stroke.py:342
+#: lib/elements/satin_column.py:293 lib/elements/stroke.py:341
 msgid "Automatic"
 msgstr "Automaticky"
 
-#: lib/elements/satin_column.py:294 lib/elements/stroke.py:343
+#: lib/elements/satin_column.py:294 lib/elements/stroke.py:342
 msgid "Don't reverse"
 msgstr "Nevracet"
 
-#: lib/elements/satin_column.py:295 lib/elements/stroke.py:344
+#: lib/elements/satin_column.py:295 lib/elements/stroke.py:343
 msgid "Reverse first rail"
 msgstr "Otočit první obrysovou čáru"
 
-#: lib/elements/satin_column.py:296 lib/elements/stroke.py:345
+#: lib/elements/satin_column.py:296 lib/elements/stroke.py:344
 msgid "Reverse second rail"
 msgstr "Otočit druhou obrysovou čáru"
 
-#: lib/elements/satin_column.py:297 lib/elements/stroke.py:346
+#: lib/elements/satin_column.py:297 lib/elements/stroke.py:345
 msgid "Reverse both rails"
 msgstr "Otočit obě obrysové čáry"
 
-#: lib/elements/satin_column.py:303 lib/elements/stroke.py:352
+#: lib/elements/satin_column.py:303 lib/elements/stroke.py:351
 msgid "Reverse rails"
 msgstr "Otočit obrysové čáry"
 
@@ -2121,7 +2121,7 @@ msgid "Stitch length"
 msgstr "Délka stehu"
 
 #: lib/elements/satin_column.py:425 lib/elements/satin_column.py:482
-#: lib/elements/stroke.py:134
+#: lib/elements/stroke.py:133
 msgid "Stitch tolerance"
 msgstr "Tolerance stehu"
 
@@ -2206,236 +2206,236 @@ msgstr "Odsazení (proporcionální)"
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Rozdělte steh, pokud je překročena vzdálenost maximální délky stehu"
 
-#: lib/elements/stroke.py:37
+#: lib/elements/stroke.py:36
 msgid "This element renders as running stitch while it has a satin column parameter."
 msgstr "Tento prvek se vykresluje jako přední steh, zatímco má parametr saténový sloupec."
 
-#: lib/elements/stroke.py:39
+#: lib/elements/stroke.py:38
 msgid "* Convert to stroke: select the element and open the parameter dialog. Enable running stitch along path."
 msgstr "* Převést na tah: vyberte prvek a otevřete dialog parametrů. Povolit přední steh podél cesty."
 
-#: lib/elements/stroke.py:40
+#: lib/elements/stroke.py:39
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr "* Použijte jako saténový sloupec: přidejte další vnější obrysovou čáru a v případě potřeby směrové vektory."
 
-#: lib/elements/stroke.py:46 lib/extensions/params.py:597
+#: lib/elements/stroke.py:45 lib/extensions/params.py:597
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "Tah"
 
-#: lib/elements/stroke.py:49 lib/extensions/params.py:271
+#: lib/elements/stroke.py:48 lib/extensions/params.py:271
 msgid "Running stitch along paths"
 msgstr "Přední stehy podél cesty"
 
-#: lib/elements/stroke.py:67
+#: lib/elements/stroke.py:66
 msgid "Running Stitch / Bean Stitch"
 msgstr "Přední steh / řetízkový steh"
 
-#: lib/elements/stroke.py:68 lib/lettering/categories.py:26
+#: lib/elements/stroke.py:67 lib/lettering/categories.py:26
 #: inx/inkstitch_lettering_generate_json.inx:57
 msgid "Ripple Stitch"
 msgstr "Vlnitý steh"
 
-#: lib/elements/stroke.py:69 inx/inkstitch_select_elements.inx:23
+#: lib/elements/stroke.py:68 inx/inkstitch_select_elements.inx:23
 msgid "ZigZag Stitch"
 msgstr "CikCak Steh"
 
-#: lib/elements/stroke.py:70 inx/inkstitch_select_elements.inx:24
+#: lib/elements/stroke.py:69 inx/inkstitch_select_elements.inx:24
 msgid "Manual Stitch"
 msgstr "Manuální Steh"
 
-#: lib/elements/stroke.py:110
+#: lib/elements/stroke.py:109
 msgid "Manual stitch placement"
 msgstr "Ruční umístění stehu"
 
-#: lib/elements/stroke.py:111
+#: lib/elements/stroke.py:110
 msgid "No extra stitches will be added to the original ripple pattern and the running stitch length value will be ignored."
 msgstr "K původnímu vzoru zvlnění nebudou přidány žádné další stehy a hodnota délky probíhajícího stehu bude ignorována."
 
-#: lib/elements/stroke.py:123
+#: lib/elements/stroke.py:122
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:21
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
 msgstr "Délka stehů. Stehy mohou být kratší v závislosti na nastavení tolerance stehu."
 
-#: lib/elements/stroke.py:135
+#: lib/elements/stroke.py:134
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr "Všechny stehy se musí nacházet v této vzdálenosti od cesty. Nižší tolerance znamená, že stehy budou těsnější u sebe. Vyšší tolerance znamená, že ostré rohy mohou být zaoblené."
 
-#: lib/elements/stroke.py:174
+#: lib/elements/stroke.py:173
 msgid "Split stitches longer than this."
 msgstr "Rozdělte stehy, které jsou kratší než tato hodnota."
 
-#: lib/elements/stroke.py:201
+#: lib/elements/stroke.py:200
 msgid "Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This widens the zigzag line width."
 msgstr "Cikcak stehy přitahují látku k sobě, což má za následek užší šířku, než je nakresleno v Inkscape. Tato možnost rozšiřuje šířku klikaté čáry."
 
-#: lib/elements/stroke.py:214
+#: lib/elements/stroke.py:213
 msgid "Number of lines"
 msgstr "Počet řádků"
 
-#: lib/elements/stroke.py:215
+#: lib/elements/stroke.py:214
 msgid "Number of lines from start to finish"
 msgstr "Počet řádků od začátku do konce"
 
-#: lib/elements/stroke.py:226
+#: lib/elements/stroke.py:225
 msgid "Minimum line distance"
 msgstr "Minimální vzdálenost mezi řádky"
 
-#: lib/elements/stroke.py:227
+#: lib/elements/stroke.py:226
 msgid "Overrides the number of lines setting."
 msgstr "Přepíše nastavení počtu řádků."
 
-#: lib/elements/stroke.py:240
+#: lib/elements/stroke.py:239
 msgid "Line count / Minimum line distance"
 msgstr ""
 
-#: lib/elements/stroke.py:241
+#: lib/elements/stroke.py:240
 msgid "Render at rungs"
 msgstr "Render na příčkách"
 
-#: lib/elements/stroke.py:242
+#: lib/elements/stroke.py:241
 msgid "Adaptive + minimum line distance"
 msgstr ""
 
-#: lib/elements/stroke.py:247
+#: lib/elements/stroke.py:246
 msgid "Pattern position"
 msgstr ""
 
-#: lib/elements/stroke.py:248
+#: lib/elements/stroke.py:247
 msgid "Pattern position for satin guided ripples."
 msgstr ""
 
-#: lib/elements/stroke.py:259
+#: lib/elements/stroke.py:258
 msgid "Stagger lines this many times before repeating"
 msgstr "Před opakováním několikrát posuňte řádky"
 
-#: lib/elements/stroke.py:260
+#: lib/elements/stroke.py:259
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. A value of 0 (default) disables staggering and instead stitches evenly.For linear ripples only."
 msgstr "Tato hodnota popisuje, kolik řad leží body vpichu na sobě. Desetinné hodnoty jsou povoleny a zobrazují méně zřetelné úhlopříčky na obrázku výšivky. Hodnota 0 (výchozí nastavení) deaktivuje odsazení a vytvoří rovnoměrně rozmístěné stehy. Pouze pro lineární zvlnění."
 
-#: lib/elements/stroke.py:273
+#: lib/elements/stroke.py:272
 msgid "Skip first lines"
 msgstr "Vynechat první řádky"
 
-#: lib/elements/stroke.py:274
+#: lib/elements/stroke.py:273
 msgid "Skip this number of lines at the beginning."
 msgstr "Na začátku tento počet řádků vynechejte."
 
-#: lib/elements/stroke.py:285
+#: lib/elements/stroke.py:284
 msgid "Skip last lines"
 msgstr "Vynechat poslední řádky"
 
-#: lib/elements/stroke.py:286
+#: lib/elements/stroke.py:285
 msgid "Skip this number of lines at the end"
 msgstr "Na konci tento počet řádků vynechejte"
 
-#: lib/elements/stroke.py:297
+#: lib/elements/stroke.py:296
 msgid "Flip every second line"
 msgstr "Obrátit každý druhý řádek"
 
-#: lib/elements/stroke.py:298
+#: lib/elements/stroke.py:297
 msgid "Linear ripple: wether to flip the pattern every second line or not."
 msgstr "Lineární vlnitá výšivka: zvolte, zda chcete invertovat každý druhý řádek."
 
-#: lib/elements/stroke.py:308
+#: lib/elements/stroke.py:307
 msgid "Line distance exponent"
 msgstr "Exponent vzdálenosti úsečky"
 
-#: lib/elements/stroke.py:309
+#: lib/elements/stroke.py:308
 msgid "Increase density towards one side."
 msgstr "Zvyšte hustotu na jednu stranu."
 
-#: lib/elements/stroke.py:320
+#: lib/elements/stroke.py:319
 msgid "Flip exponent"
 msgstr "Otočit exponent"
 
-#: lib/elements/stroke.py:321
+#: lib/elements/stroke.py:320
 msgid "Reverse exponent effect."
 msgstr "Efekt obráceného exponentu."
 
-#: lib/elements/stroke.py:332
+#: lib/elements/stroke.py:331
 msgid "Reverse"
 msgstr "Naopak"
 
-#: lib/elements/stroke.py:333
+#: lib/elements/stroke.py:332
 msgid "Flip start and end point"
 msgstr "Překlopit počáteční a koncový bod"
 
-#: lib/elements/stroke.py:353
+#: lib/elements/stroke.py:352
 msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
 msgstr "Reverzní saténové vlnité lišty. Výchozí: automaticky detekuje a opraví obrácenou kolejnici."
 
-#: lib/elements/stroke.py:365
+#: lib/elements/stroke.py:364
 msgid "Grid size"
 msgstr "Velikost mřížky"
 
-#: lib/elements/stroke.py:366
+#: lib/elements/stroke.py:365
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr "Vykreslit jako mřížku. Používejte opatrně a sledujte hustotu stehu."
 
-#: lib/elements/stroke.py:378
+#: lib/elements/stroke.py:377
 msgid "Stitch grid first"
 msgstr ""
 
-#: lib/elements/stroke.py:379
+#: lib/elements/stroke.py:378
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
 msgstr ""
 
-#: lib/elements/stroke.py:390
+#: lib/elements/stroke.py:389
 msgid "Scale axis"
 msgstr "Měřítko osy"
 
-#: lib/elements/stroke.py:391
+#: lib/elements/stroke.py:390
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Osa měřítka pro saténové vedené vlnkové stehy."
 
-#: lib/elements/stroke.py:395 lib/gui/edit_json/settings_panel.py:159
+#: lib/elements/stroke.py:394 lib/gui/edit_json/settings_panel.py:159
 #: print/templates/ui.html:180 inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr "Žádný"
 
-#: lib/elements/stroke.py:403
+#: lib/elements/stroke.py:402
 msgid "Starting scale"
 msgstr "Startovní měřítko"
 
-#: lib/elements/stroke.py:404
+#: lib/elements/stroke.py:403
 msgid "How big the first copy of the line should be, in percent."
 msgstr "Jak velká má být první kopie řádku, v procentech."
 
-#: lib/elements/stroke.py:404 lib/elements/stroke.py:416
+#: lib/elements/stroke.py:403 lib/elements/stroke.py:415
 msgid "Used only for ripple stitch with a guide line."
 msgstr "Používá se pouze pro zvlněný steh s vodicí linií."
 
-#: lib/elements/stroke.py:415
+#: lib/elements/stroke.py:414
 msgid "Ending scale"
 msgstr "Konečné měřítko"
 
-#: lib/elements/stroke.py:416
+#: lib/elements/stroke.py:415
 msgid "How big the last copy of the line should be, in percent."
 msgstr "Jak velká má být poslední kopie řádku, v procentech."
 
-#: lib/elements/stroke.py:427 lib/gui/tartan/customize_panel.py:43
+#: lib/elements/stroke.py:426 lib/gui/tartan/customize_panel.py:43
 msgid "Rotate"
 msgstr "Otáčení"
 
-#: lib/elements/stroke.py:428
+#: lib/elements/stroke.py:427
 msgid "Rotate satin guided ripple stitches"
 msgstr "Otočte saténové vedené vlnkové stehy"
 
-#: lib/elements/stroke.py:439
+#: lib/elements/stroke.py:438
 msgid "Join style"
 msgstr "Styl připojení"
 
-#: lib/elements/stroke.py:440
+#: lib/elements/stroke.py:439
 msgid "Join style for non circular ripples."
 msgstr "Styl spojení pro nekruhové zvlnění."
 
-#: lib/elements/stroke.py:443
+#: lib/elements/stroke.py:442
 msgid "flat"
 msgstr "plochý"
 
-#: lib/elements/stroke.py:443
+#: lib/elements/stroke.py:442
 msgid "point"
 msgstr "bod"
 
@@ -2763,7 +2763,7 @@ msgstr "Nebyl vybrán žádný prvek.\n\n"
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
 msgstr "Na vašich textových prvcích jsme nenašli žádné barvy výplně. Přečtěte si prosím pokyny na našich webových stránkách."
 
-#: lib/extensions/gradient_blocks.py:40 lib/extensions/gradient_blocks.py:48
+#: lib/extensions/gradient_blocks.py:36 lib/extensions/gradient_blocks.py:44
 msgid "Please select at least one object with a gradient fill."
 msgstr "Vyberte prosím alespoň jeden objekt s přechodovou výplní."
 
@@ -3181,10 +3181,6 @@ msgstr "Je možné, že jeden objekt obsahuje více než jednu chybu, přesto bu
 #: lib/extensions/unlink_clone.py:29
 msgid "Please select one or more clones to unlink."
 msgstr "Vyberte prosím jeden nebo více klonů, které chcete odpojit."
-
-#: lib/extensions/update_svg.py:26
-msgid "Please select at least one element to update. This extension is designed to help you update copy and pasted elements from old designs."
-msgstr "Vyberte prosím alespoň jeden prvek, který chcete aktualizovat. Toto rozšíření je navrženo tak, aby vám pomohlo aktualizovat zkopírované a vložené prvky ze starých návrhů."
 
 #: lib/extensions/zip.py:80
 msgid "No embroidery file formats selected."
@@ -4483,7 +4479,7 @@ msgstr "Plán stehů"
 msgid "parseLengthWithUnits: unknown unit %s"
 msgstr "parseLengthWithUnits: neznámá jednotka %s"
 
-#: lib/update.py:33
+#: lib/update.py:35
 msgid "This document was created with a newer Version of Ink/Stitch. It is possible that not everything works as expected.\n\n"
 "Please update your Ink/Stitch version: https://inkstitch.org/docs/install/"
 msgstr "Tento dokument byl vytvořen s novější verzí Ink/Stitch. Je možné, že ne vše funguje podle očekávání.\n\n"
@@ -7808,8 +7804,12 @@ msgid "Tip: You can prevent inserting legacy designs into new files by running a
 msgstr "Tip: Vkládání starších návrhů do nových souborů můžete zabránit spuštěním libovolného rozšíření Ink/Stitch předtím, než zkopírujete části návrhu (například otevřete a znovu použijete parametry na jeden prvek v dokumentu)."
 
 #: inx/inkstitch_update_svg.inx:21
-msgid "This extension only updates selected elements."
-msgstr "Toto rozšíření aktualizuje pouze vybrané prvky."
+msgid "When there is an active selection, only selected elements will be updated."
+msgstr ""
+
+#: inx/inkstitch_update_svg.inx:23
+msgid "Update from version"
+msgstr ""
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:3
 msgid "Zig-Zag Line to Satin"
