@@ -18,7 +18,8 @@
             <spacer />
             <separator />
             <spacer />
-            <param name="keep_originals" type="boolean" gui-text="Keep original paths">false</param>
+            <param name="keep_originals" type="boolean" gui-text="Keep original fills"
+                   gui-description="Deletes the original paths for rungs, but keeps the fill elements">false</param>
         </page>
         <page name="info" gui-text="Help">
             <label>This extension takes in a fill and rung elements and converts them into satin(s).</label>
