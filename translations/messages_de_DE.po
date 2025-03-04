@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-03 01:29+0000\n"
-"PO-Revision-Date: 2025-03-03 01:29\n"
+"PO-Revision-Date: 2025-03-04 01:29\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -3769,7 +3769,7 @@ msgstr "Zugausgleich (mm)"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:63
 msgid "Keep original satin"
-msgstr "Originalsäule behalten"
+msgstr "Satinsäulen behalten"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:67
 msgid "Adjust underlay per color"
@@ -5235,7 +5235,7 @@ msgstr "Behalte Reihenfolge der Satinsäulen bei"
 #: inx/inkstitch_auto_satin.inx:14 inx/inkstitch_fill_to_satin.inx:21
 #: inx/inkstitch_redwork.inx:26
 msgid "Keep original paths"
-msgstr "Satinsäulen behalten"
+msgstr "Originalpfade behalten"
 
 #: inx/inkstitch_auto_satin.inx:17
 msgid "This extension tries to create a single stitch path through all selected satin columns."
@@ -7811,11 +7811,11 @@ msgstr "Tipp: Ink/Stitch aktualisiert alte Designs automatisch. D. h. wurde eine
 
 #: inx/inkstitch_update_svg.inx:21
 msgid "When there is an active selection, only selected elements will be updated."
-msgstr ""
+msgstr "Sind Elemente ausgewählt, so werden nur diese aktualisiert."
 
 #: inx/inkstitch_update_svg.inx:23
 msgid "Update from version"
-msgstr ""
+msgstr "Aktualisierungen ab Version"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:3
 msgid "Zig-Zag Line to Satin"
