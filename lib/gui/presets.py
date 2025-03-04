@@ -4,13 +4,12 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import json
-import os
 import re
 
 import wx
 
 from ..i18n import _
-from ..utils import cache
+from ..utils import cache, get_user_dir
 from .dialogs import info_dialog
 
 
@@ -88,15 +87,7 @@ class PresetsPanel(wx.Panel):
 
     @cache
     def presets_path(self):
-        try:
-            import platformdirs
-            config_path = platformdirs.user_config_dir('inkstitch')
-        except ImportError:
-            config_path = os.path.expanduser('~/.inkstitch')
-
-        if not os.path.exists(config_path):
-            os.makedirs(config_path)
-        return os.path.join(config_path, '%s.json' % self.suite_name)
+        return get_user_dir(f'{self.suite_name}.json')
 
     def _load_presets(self):
         try:

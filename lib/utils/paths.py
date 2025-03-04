@@ -42,7 +42,12 @@ def get_resource_dir(name):
 
 
 def get_user_dir(name=None):
-    path = platformdirs.user_config_dir("inkstitch")
+    try:
+        path = platformdirs.user_config_dir('inkstitch')
+    except ImportError:
+        path = os.path.expanduser('~/.inkstitch')
+    if not os.path.exists(path):
+        os.makedirs(path)
 
     if name is not None:
         path = os.path.join(path, name)

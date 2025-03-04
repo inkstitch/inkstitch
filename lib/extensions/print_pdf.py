@@ -14,7 +14,6 @@ from copy import deepcopy
 from datetime import date
 from threading import Thread
 
-import platformdirs
 import wx
 from flask import Flask, Response, jsonify, request, send_from_directory
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -27,7 +26,7 @@ from ..i18n import translation as inkstitch_translation
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import render_stitch_plan
 from ..threads import ThreadCatalog
-from ..utils import get_resource_dir
+from ..utils import get_resource_dir, get_user_dir
 from .base import InkstitchExtension
 
 
@@ -36,12 +35,7 @@ def datetimeformat(value, format='%Y/%m/%d'):
 
 
 def defaults_path():
-    defaults_dir = platformdirs.user_config_dir('inkstitch')
-
-    if not os.path.exists(defaults_dir):
-        os.makedirs(defaults_dir)
-
-    return os.path.join(defaults_dir, 'print_settings.json')
+    return get_user_dir('print_settings.json')
 
 
 def load_defaults():

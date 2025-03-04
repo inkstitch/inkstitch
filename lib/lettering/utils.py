@@ -5,11 +5,9 @@
 
 import os
 
-import platformdirs
-
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..lettering import Font
-from ..utils import get_bundled_dir
+from ..utils import get_bundled_dir, get_user_dir
 
 
 def get_font_list():
@@ -36,7 +34,7 @@ def get_font_paths():
     font_paths = {
         get_bundled_dir("fonts"),
         os.path.expanduser("~/.inkstitch/fonts"),
-        os.path.join(platformdirs.user_config_dir('inkstitch'), 'fonts'),
+        get_user_dir('fonts'),
         get_custom_font_dir()
     }
     return font_paths
