@@ -15,7 +15,7 @@ backports.functools_lru_cache
 networkx
 shapely>=2.0.0
 lxml
-appdirs
+platformdirs
 numpy
 jinja2>2.9
 requests
