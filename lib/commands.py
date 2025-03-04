@@ -338,6 +338,7 @@ def ensure_symbol(svg, command):
     if defs.find(path) is None:
         symbol = deepcopy(symbol_defs().find(path))
         symbol.transform = 'scale(0.25)'
+        symbol.style['opacity'] = 0.7
         defs.append(symbol)
 
 
