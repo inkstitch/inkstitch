@@ -15,7 +15,7 @@ class CommandsScaleSymbols(InkstitchExtension):
 
     def effect(self):
         # by default commands are scaled down to 0.2
-        size = 0.2 * self.options.size / 100
+        size = 0.25 * self.options.size / 100
 
         # scale symbols
         svg = self.document.getroot()
