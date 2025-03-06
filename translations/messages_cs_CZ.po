@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-03 01:29+0000\n"
-"PO-Revision-Date: 2025-03-03 01:29\n"
+"POT-Creation-Date: 2025-03-05 01:27+0000\n"
+"PO-Revision-Date: 2025-03-05 01:28\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-03 01:29+0000\n"
+"POT-Creation-Date: 2025-03-05 01:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1002,21 +1002,21 @@ msgstr "Chyba: v dokumentu je více než jeden příkaz %(command)s, ale může 
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:349 lib/commands.py:469
+#: lib/commands.py:350 lib/commands.py:470
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch příkaz"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:388
+#: lib/commands.py:389
 msgid "connector"
 msgstr "konektor"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:409
+#: lib/commands.py:410
 msgid "command marker"
 msgstr "tvůrce příkazů"
 
-#: lib/commands.py:458
+#: lib/commands.py:459
 msgid "Please select a layer to include layer commands."
 msgstr "Vyberte vrstvu, do které chcete zahrnout příkazy vrstvy."
 
@@ -2725,7 +2725,7 @@ msgstr "Satén"
 msgid "Please select a fill object and rungs."
 msgstr ""
 
-#: lib/extensions/fill_to_satin.py:146 inx/inkstitch_fill_to_satin.inx:27
+#: lib/extensions/fill_to_satin.py:146 inx/inkstitch_fill_to_satin.inx:28
 msgid "https://inkstitch.org/docs/satin-tools/#fill-to-satin"
 msgstr ""
 
@@ -2958,21 +2958,21 @@ msgstr "Použít a odejít"
 msgid "Embroidery Params"
 msgstr "Parametry výšivky"
 
-#: lib/extensions/print_pdf.py:141
+#: lib/extensions/print_pdf.py:135
 msgid "Closing..."
 msgstr "Zavírám..."
 
-#: lib/extensions/print_pdf.py:141
+#: lib/extensions/print_pdf.py:135
 msgid "It is safe to close this window now."
 msgstr "Nyní je bezpečné toto okno zavřít."
 
-#: lib/extensions/print_pdf.py:274
+#: lib/extensions/print_pdf.py:268
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
 msgstr "Ve vašem webovém prohlížeči byl otevřen náhled tisku. Toto okno zůstane otevřené, aby bylo možné komunikovat s kódem JavaScript spuštěným ve vašem prohlížeči.\n\n"
 "Toto okno se zavře po zavření náhledu tisku v prohlížeči nebo jej můžete v případě potřeby zavřít ručně."
 
-#: lib/extensions/print_pdf.py:455
+#: lib/extensions/print_pdf.py:449
 msgid "Ink/Stitch Print"
 msgstr "Ink/Stitch Tisk"
 
@@ -3243,7 +3243,7 @@ msgstr "Použít"
 #: inx/inkstitch_convert_to_stroke.inx:12
 #: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
 #: inx/inkstitch_display_stacking_order.inx:11
-#: inx/inkstitch_fill_to_satin.inx:23 inx/inkstitch_fill_to_stroke.inx:24
+#: inx/inkstitch_fill_to_satin.inx:24 inx/inkstitch_fill_to_stroke.inx:24
 #: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
 #: inx/inkstitch_install_custom_palette.inx:14
 #: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:27
@@ -3657,41 +3657,41 @@ msgstr "MB"
 msgid "Clear Stitch Plan Cache"
 msgstr "Vymažte mezipaměť plánu stehů"
 
-#: lib/gui/presets.py:52
+#: lib/gui/presets.py:51
 msgid "Presets"
 msgstr "Předvolby"
 
-#: lib/gui/presets.py:58
+#: lib/gui/presets.py:57
 msgid "Load"
 msgstr "Nahrát"
 
-#: lib/gui/presets.py:61 lib/gui/satin_multicolor/colorize_panel.py:79
+#: lib/gui/presets.py:60 lib/gui/satin_multicolor/colorize_panel.py:79
 #: lib/gui/tartan/customize_panel.py:64 lib/gui/tartan/customize_panel.py:66
 msgid "Add"
 msgstr "Přidat"
 
-#: lib/gui/presets.py:64
+#: lib/gui/presets.py:63
 msgid "Overwrite"
 msgstr "Přepsat"
 
-#: lib/gui/presets.py:67
+#: lib/gui/presets.py:66
 msgid "Delete"
 msgstr "Smazat"
 
-#: lib/gui/presets.py:126
+#: lib/gui/presets.py:117
 msgid "Please enter or select a preset name first."
 msgstr "Nejprve zadejte nebo vyberte název předvolby."
 
-#: lib/gui/presets.py:126 lib/gui/presets.py:132 lib/gui/presets.py:148
+#: lib/gui/presets.py:117 lib/gui/presets.py:123 lib/gui/presets.py:139
 msgid "Preset"
 msgstr "Předvolby"
 
-#: lib/gui/presets.py:132
+#: lib/gui/presets.py:123
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr "Předvolba \"%s\" nebyla nalezena."
 
-#: lib/gui/presets.py:148
+#: lib/gui/presets.py:139
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
 msgstr "Předvolba \"%s\" již existuje. Použijte prosím jiné jméno nebo stiskněte \"Přepsat\""
@@ -5226,8 +5226,7 @@ msgstr "Automaticky směrovat saténové sloupce"
 msgid "Preserve order of satin columns"
 msgstr "Zachovat pořadí saténových sloupců"
 
-#: inx/inkstitch_auto_satin.inx:14 inx/inkstitch_fill_to_satin.inx:21
-#: inx/inkstitch_redwork.inx:26
+#: inx/inkstitch_auto_satin.inx:14 inx/inkstitch_redwork.inx:26
 msgid "Keep original paths"
 msgstr ""
 
@@ -5238,7 +5237,7 @@ msgstr "Toto rozšíření se pokusí vytvořit jednu stehovou cestu přes všec
 #: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_break_apart.inx:20
 #: inx/inkstitch_cleanup.inx:25 inx/inkstitch_convert_to_stroke.inx:15
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
-#: inx/inkstitch_fill_to_satin.inx:26
+#: inx/inkstitch_fill_to_satin.inx:27
 #: inx/inkstitch_install_custom_palette.inx:17
 #: inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_lettering_along_path.inx:29
@@ -5263,7 +5262,7 @@ msgid "Generates a continuous path through selected satin elements"
 msgstr "Generuje souvislou cestu pro vyšívání všech vybraných saténových sloupků"
 
 #: inx/inkstitch_auto_satin.inx:30 inx/inkstitch_convert_to_satin.inx:11
-#: inx/inkstitch_cut_satin.inx:12 inx/inkstitch_fill_to_satin.inx:37
+#: inx/inkstitch_cut_satin.inx:12 inx/inkstitch_fill_to_satin.inx:38
 #: inx/inkstitch_flip.inx:11 inx/inkstitch_satin_multicolor.inx:12
 #: inx/inkstitch_stroke_to_lpe_satin.inx:41
 #: inx/inkstitch_zigzag_line_to_satin.inx:37
@@ -5606,11 +5605,19 @@ msgstr ""
 msgid "Needs at least 2 rungs"
 msgstr ""
 
-#: inx/inkstitch_fill_to_satin.inx:24
+#: inx/inkstitch_fill_to_satin.inx:22
+msgid "Keep original fills"
+msgstr ""
+
+#: inx/inkstitch_fill_to_satin.inx:22
+msgid "Deletes the original paths for rungs, but keeps the fill elements"
+msgstr ""
+
+#: inx/inkstitch_fill_to_satin.inx:25
 msgid "This extension takes in a fill and rung elements and converts them into satin(s)."
 msgstr ""
 
-#: inx/inkstitch_fill_to_satin.inx:34
+#: inx/inkstitch_fill_to_satin.inx:35
 msgid "Convert fill elements to satin"
 msgstr ""
 
