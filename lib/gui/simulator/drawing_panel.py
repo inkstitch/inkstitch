@@ -233,6 +233,7 @@ class DrawingPanel(wx.Panel):
         scale_lower_left_x = 20
         scale_lower_left_y = canvas_height - 30
 
+        canvas.SetPen(self.black_pen)
         canvas.StrokeLines(((scale_lower_left_x, scale_lower_left_y - 6),
                             (scale_lower_left_x, scale_lower_left_y),
                             (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y),
