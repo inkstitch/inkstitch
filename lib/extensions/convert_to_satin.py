@@ -28,6 +28,12 @@ class SelfIntersectionError(Exception):
 class ConvertToSatin(InkstitchExtension):
     """Convert a line to a satin column of the same width."""
 
+    def __init__(self, *args, **kwargs):
+        InkstitchExtension.__init__(self, *args, **kwargs)
+        self.arg_parser.add_argument("--notebook")
+        self.arg_parser.add_argument("--rung-rendering", type=str, default="auto-detect", dest="rung_rendering")
+        self.arg_parser.add_argument("--rung-distance", type=float, default=0, dest="rung_distance")
+
     def effect(self):
         if not self.get_elements():
             return
@@ -61,18 +67,26 @@ class ConvertToSatin(InkstitchExtension):
                 satins = list(self.convert_path_to_satins(path, element.stroke_width, style_args, path_style))
 
                 if satins:
-                    joined_satin = satins[0]
-                    for satin in satins[1:]:
-                        joined_satin = joined_satin.merge(satin)
-
-                    joined_satin.node.set('transform', correction_transform)
-                    parent.insert(index, joined_satin.node)
+                    self.insert_satin(satins, index, parent, correction_transform, path_style)
 
             parent.remove(element.node)
 
+    def insert_satin(self, satins, index, parent, correction_transform, path_style):
+        joined_satin = satins[0]
+        for satin in satins[1:]:
+            joined_satin = joined_satin.merge(satin)
+        if self.options.rung_rendering != 'none':
+            node = joined_satin.node
+        else:
+            rails = (list(joined_satin.flattened_rails[0].coords), list(joined_satin.flattened_rails[1].coords))
+            node = self.satin_to_svg_node(rails, [], path_style)
+        node.set('transform', correction_transform)
+        parent.insert(index, node)
+
     def convert_path_to_satins(self, path, stroke_width, style_args, path_style, depth=0):
         try:
-            rails, rungs = self.path_to_satin(path, stroke_width, style_args)
+            rails = self.path_to_satin(path, stroke_width, style_args)
+            rungs = self.generate_rungs(path, stroke_width, rails)
             yield SatinColumn(self.satin_to_svg_node(rails, rungs, path_style))
         except SelfIntersectionError:
             # The path intersects itself.  Split it in two and try doing the halves
@@ -159,12 +173,10 @@ class ConvertToSatin(InkstitchExtension):
             # path intersects itself, when taking its stroke width into consideration.
             raise SelfIntersectionError()
 
-        rungs = self.generate_rungs(path, stroke_width, left_rail, right_rail)
-
         left_rail = list(left_rail.coords)
         right_rail = list(right_rail.coords)
 
-        return (left_rail, right_rail), rungs
+        return (left_rail, right_rail)
 
     def get_scores(self, path):
         """Generate an array of "scores" of the sharpness of corners in a path
@@ -230,9 +242,78 @@ class ConvertToSatin(InkstitchExtension):
         # 5% before and after a sharp corner such as in a square.
         return (diff(sign(diff(array))) > 0).nonzero()[0] + 1
 
-    def generate_rungs(self, path, stroke_width, left_rail, right_rail):
-        """Create rungs for a satin column.
+    def generate_rungs(self, path, stroke_width, rails):
+        """Create rungs for a satin column."""
+        path = shgeo.LineString(path)
+        rails = [shgeo.LineString(rail) for rail in rails]
+        if self.options.rung_rendering == "distance":
+            rung_locations = self.get_rung_locations_by_distance(path)
+        else:
+            rung_locations = self.get_rung_locations_by_angle(path)
 
+        if len(rung_locations) == 0:
+            # add a rung in the center.
+            rung_locations = [50]
+
+        rungs = self.get_rungs(path, rung_locations, stroke_width, rails)
+
+        return rungs
+
+    def get_rungs(self, path, rung_locations, stroke_width, rails, depth=0):
+        rungs = []
+        last_rung_center = None
+        for location in rung_locations:
+            if depth > 0:
+                location += depth
+            # Convert percentage to a fraction so that we can use interpolate's
+            # normalized parameter.
+            location = location / 100.0
+
+            rung_center = path.interpolate(location, normalized=True)
+            rung_center = Point(rung_center.x, rung_center.y)
+
+            # Avoid placing rungs too close together.  This somewhat
+            # arbitrarily rejects the rung if there was one less than 2
+            # millimeters before this one.
+            if last_rung_center is not None and (rung_center - last_rung_center).length() < 2 * PIXELS_PER_MM:
+                continue
+            else:
+                last_rung_center = rung_center
+
+            # We need to know the tangent of the path's curve at this point.
+            # Pick another point just after this one and subtract them to
+            # approximate a tangent vector.
+            tangent_end = path.interpolate(location + 0.001, normalized=True)
+            tangent_end = Point(tangent_end.x, tangent_end.y)
+            tangent = (tangent_end - rung_center).unit()
+
+            # Rotate 90 degrees left to make a normal vector.
+            normal = tangent.rotate_left()
+
+            # Extend the rungs by an offset value to make sure they will cross the rails
+            offset = normal * (stroke_width / 2) * 1.2
+            rung_start = rung_center + offset
+            rung_end = rung_center - offset
+
+            rung_tuple = (rung_start.as_tuple(), rung_end.as_tuple())
+            rung_linestring = shgeo.LineString(rung_tuple)
+            if (isinstance(rung_linestring.intersection(rails[0]), shgeo.Point) and
+                    isinstance(rung_linestring.intersection(rails[1]), shgeo.Point)):
+                rungs.append(rung_tuple)
+        if len(rungs) == 0 and depth < 10:
+            rungs = self.get_rungs(path, rung_locations, stroke_width, rails, depth+5)
+        return rungs
+
+    def get_rung_locations_by_distance(self, path):
+        distance = max(2, self.options.rung_distance)
+        rung_count = round(path.length / (distance * PIXELS_PER_MM)) + 1
+        if rung_count < 2:
+            return []
+        rung_locations = numpy.linspace(0, 100, num=rung_count)
+        return rung_locations[1:-1]
+
+    def get_rung_locations_by_angle(self, path):
+        """
         Where should we put the rungs along a path?  We want to ensure that the
         resulting satin matches the original path as closely as possible.  We
         want to avoid having a ton of rungs that will annoy the user.  We want
@@ -274,52 +355,7 @@ class ConvertToSatin(InkstitchExtension):
         # Remove the start and end, because we can't stick a rung there.
         rung_locations = setdiff1d(rung_locations, [0, 100])
 
-        if len(rung_locations) == 0:
-            # Straight lines won't have local minima, so add a rung in the center.
-            rung_locations = [50]
-
-        rungs = []
-        last_rung_center = None
-
-        for location in rung_locations:
-            # Convert percentage to a fraction so that we can use interpolate's
-            # normalized parameter.
-            location = location / 100.0
-
-            rung_center = path.interpolate(location, normalized=True)
-            rung_center = Point(rung_center.x, rung_center.y)
-
-            # Avoid placing rungs too close together.  This somewhat
-            # arbitrarily rejects the rung if there was one less than 2
-            # millimeters before this one.
-            if last_rung_center is not None and \
-                    (rung_center - last_rung_center).length() < 2 * PIXELS_PER_MM:
-                continue
-            else:
-                last_rung_center = rung_center
-
-            # We need to know the tangent of the path's curve at this point.
-            # Pick another point just after this one and subtract them to
-            # approximate a tangent vector.
-            tangent_end = path.interpolate(location + 0.001, normalized=True)
-            tangent_end = Point(tangent_end.x, tangent_end.y)
-            tangent = (tangent_end - rung_center).unit()
-
-            # Rotate 90 degrees left to make a normal vector.
-            normal = tangent.rotate_left()
-
-            # Extend the rungs by an offset value to make sure they will cross the rails
-            offset = normal * (stroke_width / 2) * 1.2
-            rung_start = rung_center + offset
-            rung_end = rung_center - offset
-
-            rung_tuple = (rung_start.as_tuple(), rung_end.as_tuple())
-            rung_linestring = shgeo.LineString(rung_tuple)
-            if (isinstance(rung_linestring.intersection(left_rail), shgeo.Point) and
-                    isinstance(rung_linestring.intersection(right_rail), shgeo.Point)):
-                rungs.append(rung_tuple)
-
-        return rungs
+        return rung_locations
 
     def path_style(self, element):
         color = element.get_style('stroke', '#000000')

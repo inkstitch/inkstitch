@@ -3,6 +3,28 @@
     <name>Convert Line to Satin</name>
     <id>org.{{ id_inkstitch }}.convert_to_satin</id>
     <param name="extension" type="string" gui-hidden="true">convert_to_satin</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+        <param name="rung-rendering" type="optiongroup" appearance="combo"
+          gui-text="Rung insertion method">
+           <option value="auto-detect" default="true">Auto-Detect path angles</option>
+           <option value="distance">Use a specified distance</option>
+           <option value="none">Do not insert rungs</option>
+        </param>
+        <param name="rung-distance" type="float" min="2" max="200"
+           gui-text="Approximate rung distance (mm)"
+           gui-description="Only applies if rung insertion is set to distance. Defines an approcimate distance between the rungs.">10</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>Converts a stroke into a satin column.</label>
+            <label>Please note that if no rungs are inserted, you will have to manually ensure good stitch directions.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/satin-tools/#convert-line-to-satin</label>
+        </page>
+    </param>
+
     <effect>
         <object-type>all</object-type>
         <icon>{{ icon_path }}inx/to_satin.svg</icon>
