@@ -173,4 +173,4 @@ def gradient_shapes_and_attributes(element, shape, unit_multiplier):
 
 if __name__ == '__main__':
     e = GradientBlocks()
-    e.effect()
+    e.run()

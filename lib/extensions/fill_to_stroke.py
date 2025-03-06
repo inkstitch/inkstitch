@@ -67,7 +67,7 @@ class FillToStroke(InkstitchExtension):
         element_label = element.node.label
         group_name = element_label or element_id
 
-        centerline_group = Group.new(f'{ group_name } { _("center line") }', id=self.uniqueId("centerline_group_"))
+        centerline_group = Group.new(f'{group_name} { _("center line") }', id=self.uniqueId("centerline_group_"))
         parent = element.node.getparent()
         index = parent.index(element.node) + 1
         parent.insert(index, centerline_group)
@@ -75,7 +75,7 @@ class FillToStroke(InkstitchExtension):
         transform = Transform(get_correction_transform(parent, child=True))
         stroke_width = convert_unit(self.options.line_width_mm, 'px', 'mm')
         color = element.node.style('fill')
-        style = f"fill:none;stroke:{ color };stroke-width:{ stroke_width }"
+        style = f"fill:none;stroke:{color};stroke-width:{stroke_width}"
 
         multipolygon = element.shape
         multipolygon = self._apply_cut_lines(cut_lines, multipolygon)

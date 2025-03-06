@@ -67,7 +67,7 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict):
 
         # environment PATH
         f.write('# PATH:\n')
-        f.write(f'#   {os.environ.get("PATH","")}\n')
+        f.write(f'#   {os.environ.get("PATH", "")}\n')
         # for p in os.environ.get("PATH", '').split(os.pathsep): # PATH to list
         #     f.write(f'#   {p}\n')
 
@@ -217,6 +217,8 @@ def profile(profiler_type, profile_dir: Path, ini: dict, extension, remaining_ar
         with_profile(extension, remaining_args, profile_file_path)
     elif profiler_type == 'pyinstrument':
         with_pyinstrument(extension, remaining_args, profile_file_path)
+    elif profiler_type == 'monkeytype':
+        with_monkeytype(extension, remaining_args, profile_file_path)
     else:
         raise ValueError(f"unknown profiler type: '{profiler_type}'")
 
@@ -265,7 +267,7 @@ def with_pyinstrument(extension, remaining_args, profile_file_path: Path):
     '''
     profile with pyinstrument
     '''
-    import pyinstrument
+    import pyinstrument  # type: ignore[import-untyped,import-not-found]
     profiler = pyinstrument.Profiler()
 
     profiler.start()
@@ -276,3 +278,17 @@ def with_pyinstrument(extension, remaining_args, profile_file_path: Path):
     with open(profile_file_path, 'w') as stats_file:
         stats_file.write(profiler.output_html())
     print(f"Profiler: pyinstrument, stats written to '{profile_file_path.name}'. Use browser to see it.", file=sys.stderr)
+
+def with_monkeytype(extension, remaining_args, profile_file_path: Path) -> None:
+    '''
+    'profile' with monkeytype to get some class information
+    '''
+    import monkeytype  # type: ignore[import-untyped,import-not-found]
+
+    class CustomMonkeyConfig(monkeytype.config.DefaultConfig):
+        def trace_store(self):
+            return monkeytype.db.sqlite.SQLiteStore.make_store(str(profile_file_path))
+
+    with monkeytype.trace(CustomMonkeyConfig()):
+        extension.run(args=remaining_args)
+

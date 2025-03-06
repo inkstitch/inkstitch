@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from typing import List, Tuple
+from typing import List, Tuple, cast
 
 from inkex import BaseElement, Boolean, Group, errormsg
 
@@ -19,7 +19,7 @@ class UnlinkClone(InkstitchExtension):
         self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-r", "--recursive", dest="recursive", type=Boolean, default=True)
 
-    def effect(self):
+    def effect(self) -> None:
         recursive: bool = self.options.recursive
 
         if not self.get_elements():
@@ -39,15 +39,16 @@ class UnlinkClone(InkstitchExtension):
                     group = Group()
                     for child in resolved[0]:
                         group.append(child)
-                    resolved[0].getparent().replace(resolved[0], group)
+                    parent = cast(BaseElement, resolved[0].getparent())  # Safe assumption that this has a parent.
+                    parent.replace(resolved[0], group)
                 clones_resolved.append((element.node, resolved[0]))
 
-        for (clone, resolved) in clones_resolved:
+        for (clone, resolved_clone) in clones_resolved:
             clone.delete()
-            orig_id = resolved.get_id()
+            orig_id = resolved_clone.get_id()
             new_id = clone.get_id()
             # Fix up command backlinks - note this has to happen before we rename so they can actually be found.
-            for command in EmbroideryElement(resolved).commands:
+            for command in EmbroideryElement(resolved_clone).commands:
                 backlink_attrib = CONNECTION_START if command.connector.get(CONNECTION_START) == ("#"+orig_id) else CONNECTION_END
                 command.connector.set(backlink_attrib, "#"+new_id)
-            resolved.set_id(new_id)
+            resolved_clone.set_id(new_id)

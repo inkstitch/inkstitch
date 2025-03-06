@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+
+# A helper script that you can pipe the output of `mypy --output json` into Github actions workflow message commands
+# so they show up in the code review panel and job output as warnings.
+# (https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions#about-workflow-commands)
+
+import json
+
+had_errors = False
+
+while True:
+    try:
+        line = input()
+    except EOFError:
+        break
+    if len(line) == 0:
+        break
+
+    had_errors = True
+    
+    line = json.loads(line)
+
+    # Format the line into a github command that will show up in the code review panel,
+    # as well as a note about the file and line so that it's clear to readers of the build log where
+    # errors were found
+
+    # Could use line["severity"] to change the message type, but for now we just
+    # want to use these to flag potential commit issues rather than reject commits outright.
+    github_out = '::warning title=Type Checking,file={file},line={line},col={column}::{message} [{code}]'.format(**line)
+    hint = line["hint"]
+    if hint is not None:
+        github_out += f". HINT: {hint}"
+
+    print(github_out)
+    print('(in {file}:{line})'.format(**line))
+
+if not had_errors:
+    print("No type errors found!")
