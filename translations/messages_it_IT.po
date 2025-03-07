@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-05 01:27+0000\n"
-"PO-Revision-Date: 2025-03-07 01:29\n"
+"POT-Creation-Date: 2025-03-07 12:43+0000\n"
+"PO-Revision-Date: 2025-03-07 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-05 01:27+0000\n"
+"POT-Creation-Date: 2025-03-07 12:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -360,8 +360,8 @@ msgstr "Questa è una variante bicolore meno stravagante del font Magnolia"
 
 #. description of font in fonts/malika
 #: inkstitch-fonts-metadata.py:134
-msgid "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch.\n"
-msgstr "Malika è un font a punto raso arabo. I segni diacritici non obbligatori non devono essere digitati all'interno del testo, ma separatamente e poi spostati manualmente nella posizione corretta. I tre set di supporti ospitano abbellimenti se si desidera aggiungere un tocco ornamentale extra."
+msgid "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch."
+msgstr ""
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:136
