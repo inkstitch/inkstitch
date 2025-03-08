@@ -286,13 +286,20 @@ def with_pyinstrument(extension, remaining_args, profile_file_path: Path):
 
 def with_monkeytype(extension, remaining_args, profile_file_path: Path) -> None:
     '''
-    'profile' with monkeytype to get some class information
+    'profile' with monkeytype to get type information. This may be handy for anyone who wants to
+    add type annotations to older parts of our code that don't have them.
+
+    See https://monkeytype.readthedocs.io/en/stable/generation.html for usage instructions.
     '''
     import monkeytype  # type: ignore[import-untyped,import-not-found]
 
-    class CustomMonkeyConfig(monkeytype.config.DefaultConfig):
-        def trace_store(self):
-            return monkeytype.db.sqlite.SQLiteStore.make_store(str(profile_file_path))
+    # Monkeytype will use these environment variables for the db path and to filter the modules respectively.
+    # This is easier than using monkeytype's actual config API, anyway.
+    os.environ["MT_DB_PATH"] = str(profile_file_path)
+    os.environ["MONKEYTYPE_TRACE_MODULES"] = str(Path(__file__).parents[2].name)
 
-    with monkeytype.trace(CustomMonkeyConfig()):
+    with monkeytype.trace():
         extension.run(args=remaining_args)
+
+    print(f"Profiler: monkeytype, db written to '{profile_file_path}'.\n\
+          Run 'MT_DB_PATH={profile_file_path} monkeytype ...' from the inkstitch repo directory.", file=sys.stderr)

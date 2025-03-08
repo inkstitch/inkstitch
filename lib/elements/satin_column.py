@@ -747,7 +747,7 @@ class SatinColumn(EmbroideryElement):
 
         rails = list(self.flattened_rails)
         rungs = self.flattened_rungs
-        cut_points: typing.List[typing.List[float]] = [[], []]
+        cut_points = [[], []]
         for rung in rungs:
             intersections = rung.intersection(shgeo.MultiLineString(rails))
             # ignore the rungs that are cutting a rail multiple times
@@ -961,7 +961,7 @@ class SatinColumn(EmbroideryElement):
 
         rails = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
 
-        path_lists: typing.List[typing.List[shgeo.LineString]] = [[], []]  # List of list of linestrings
+        path_lists = [[], []]
 
         rails_to_reverse = self._get_rails_to_reverse()
 

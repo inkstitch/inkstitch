@@ -2,6 +2,7 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+from __future__ import annotations
 import json
 import sys
 from contextlib import contextmanager
@@ -456,7 +457,7 @@ class EmbroideryElement(object):
         raise NotImplementedError("INTERNAL ERROR: %s must implement shape()", self.__class__)
 
     @property
-    def first_stitch(self):
+    def first_stitch(self) -> Optional[ShapelyPoint]:
         # first stitch is an approximation to where the first stitch may possibly be
         # if not defined through commands or repositioned by the previous element
         raise NotImplementedError("INTERNAL ERROR: %s must implement first_stitch()", self.__class__)
@@ -522,7 +523,7 @@ class EmbroideryElement(object):
 
         return lock_start, lock_end
 
-    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup], next_element: Optional[ShapelyPoint] = None) -> List[StitchGroup]:
+    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup], next_element: Optional[EmbroideryElement] = None) -> List[StitchGroup]:
         raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
     @debug.time

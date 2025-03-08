@@ -5,11 +5,11 @@
 
 from contextlib import contextmanager
 from math import degrees
-from typing import Dict, Generator, List, Optional
+from typing import Dict, Generator, List, Optional, Tuple, Any, override, cast
 
-from inkex import BaseElement, Title, Transform
+from inkex import BaseElement, Title, Transform, Vector2d
 from lxml.etree import _Comment
-from shapely import MultiLineString
+from shapely import Geometry, MultiLineString, Point as ShapelyPoint
 
 from ..commands import (find_commands, is_command_symbol,
                         point_command_symbols_up)
@@ -40,12 +40,13 @@ class Clone(EmbroideryElement):
     name = "Clone"
     element_name = _("Clone")
 
-    def __init__(self, *args, **kwargs):
-        super(Clone, self).__init__(*args, **kwargs)
+    @override
+    def __init__(self, node: BaseElement) -> None:
+        super(Clone, self).__init__(node)
 
     @property
     @param('clone', _("Clone"), type='toggle', inverse=False, default=True)
-    def clone(self):
+    def clone(self) -> bool:
         return self.get_boolean_param("clone", True)
 
     @property
@@ -55,7 +56,7 @@ class Clone(EmbroideryElement):
            unit='deg',
            type='float')
     @cache
-    def clone_fill_angle(self):
+    def clone_fill_angle(self) -> float:
         return self.get_float_param('angle')
 
     @property
@@ -66,15 +67,16 @@ class Clone(EmbroideryElement):
            type='boolean',
            default=False)
     @cache
-    def flip_angle(self):
+    def flip_angle(self) -> bool:
         return self.get_boolean_param('flip_angle', False)
 
-    def get_cache_key_data(self, previous_stitch, next_element):
+    @override
+    def get_cache_key_data(self, previous_stitch: Any, next_element: EmbroideryElement) -> List[str]:
         source_node = self.node.href
         source_elements = self.clone_to_elements(source_node)
         return [element.get_cache_key(previous_stitch, next_element) for element in source_elements]
 
-    def clone_to_elements(self, node) -> List[EmbroideryElement]:
+    def clone_to_elements(self, node: BaseElement) -> List[EmbroideryElement]:
         # Only used in get_cache_key_data, actual embroidery uses nodes_to_elements+iterate_nodes
         from .utils import node_to_elements
         elements = []
@@ -85,7 +87,8 @@ class Clone(EmbroideryElement):
                 elements.extend(node_to_elements(child, True))
         return elements
 
-    def to_stitch_groups(self, last_stitch_group=None, next_element=None) -> List[StitchGroup]:
+    @override
+    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup], next_element: Optional[EmbroideryElement] = None) -> List[StitchGroup]:
         if not self.clone:
             return []
 
@@ -96,7 +99,7 @@ class Clone(EmbroideryElement):
 
             next_elements = [next_element]
             if len(elements) > 1:
-                next_elements = elements[1:] + next_elements
+                next_elements = cast(List[Optional[EmbroideryElement]], elements[1:]) + next_elements
             for element, next_element in zip(elements, next_elements):
                 # Using `embroider` here to get trim/stop after commands, etc.
                 element_stitch_groups = element.embroider(last_stitch_group, next_element)
@@ -107,26 +110,28 @@ class Clone(EmbroideryElement):
             return stitch_groups
 
     @property
-    def first_stitch(self):
+    def first_stitch(self) -> Optional[ShapelyPoint]:
         first, last = self.first_and_last_element()
         if first:
             return first.first_stitch
         return None
 
-    def uses_previous_stitch(self):
+    @override
+    def uses_previous_stitch(self) -> bool:
         first, last = self.first_and_last_element()
         if first:
             return first.uses_previous_stitch()
-        return None
+        return False
 
-    def uses_next_element(self):
+    @override
+    def uses_next_element(self) -> bool:
         first, last = self.first_and_last_element()
         if last:
             return last.uses_next_element()
-        return None
+        return False
 
     @cache
-    def first_and_last_element(self):
+    def first_and_last_element(self) -> Tuple[Optional[EmbroideryElement], Optional[EmbroideryElement]]:
         with self.clone_elements() as elements:
             if len(elements):
                 return elements[0], elements[-1]
@@ -153,7 +158,7 @@ class Clone(EmbroideryElement):
             for cloned_node in cloned_nodes:
                 cloned_node.delete()
 
-    def resolve_clone(self, recursive=True) -> List[BaseElement]:
+    def resolve_clone(self, recursive: bool = True) -> List[BaseElement]:
         """
         "Resolve" this clone element by copying the node it hrefs as if unlinking the clone in Inkscape.
         The node will be added as a sibling of this element's node, with its transform and style applied.
@@ -255,14 +260,14 @@ class Clone(EmbroideryElement):
             node.set(INKSTITCH_ATTRIBS['angle'], round(element_angle, 6))
 
     @property
-    def shape(self):
+    def shape(self) -> Geometry:
         path = self.node.get_path()
         transform = Transform(self.node.composed_transform())
         path = path.transform(transform)
         path = path.to_superpath()
         return MultiLineString(path[0])
 
-    def center(self, source_node):
+    def center(self, source_node: BaseElement) -> Vector2d:
         translate = Transform(f"translate({float(self.node.get('x', '0'))}, {float(self.node.get('y', '0'))})")
         parent = self.node.getparent()
         assert parent is not None, "This should be part of a tree and therefore have a parent"
@@ -270,13 +275,13 @@ class Clone(EmbroideryElement):
         center = self.node.bounding_box(transform).center
         return center
 
-    def validation_warnings(self):
+    def validation_warnings(self) -> Generator[CloneWarning, Any, None]:
         source_node = self.node.href
         point = self.center(source_node)
         yield CloneWarning(point)
 
 
-def is_clone(node):
+def is_clone(node: BaseElement) -> bool:
     if node.tag == SVG_USE_TAG and node.href is not None and not is_command_symbol(node):
         return True
     return False
@@ -304,7 +309,7 @@ def clone_with_fixup(parent: BaseElement, node: BaseElement) -> BaseElement:
 
     ret = clone_children(parent, node)
 
-    def fixup_id_attr(node: BaseElement, attr: str):
+    def fixup_id_attr(node: BaseElement, attr: str) -> None:
         # Replace the id value for this attrib with the corresponding one in the clone subtree, if applicable.
         val = node.get(attr)
         if val is not None:

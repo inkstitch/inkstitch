@@ -300,11 +300,11 @@ def _standalone_commands(svg):
             pass
 
 
-def is_command(node):
+def is_command(node: inkex.BaseElement) -> bool:
     return CONNECTION_START in node.attrib or CONNECTION_END in node.attrib
 
 
-def is_command_symbol(node):
+def is_command_symbol(node: inkex.BaseElement) -> bool:
     symbol = None
     xlink = node.get(XLINK_HREF, "")
     if xlink.startswith("#inkstitch_"):
@@ -313,23 +313,23 @@ def is_command_symbol(node):
 
 
 @cache
-def symbols_path():
+def symbols_path() -> str:
     return os.path.join(get_bundled_dir("symbols"), "inkstitch.svg")
 
 
 @cache
-def symbols_svg():
+def symbols_svg() -> inkex.BaseElement:
     with open(symbols_path()) as symbols_file:
         return inkex.load_svg(symbols_file).getroot()
 
 
 @cache
-def symbol_defs():
+def symbol_defs() -> inkex.BaseElement:
     return symbols_svg().defs
 
 
 @cache
-def ensure_symbol(svg, command):
+def ensure_symbol(svg, command) -> None:
     """Make sure the command's symbol definition exists in the <svg:defs> tag."""
 
     # using @cache really just makes sure that we don't bother ensuring the
