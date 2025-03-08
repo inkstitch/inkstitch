@@ -176,8 +176,7 @@ class FillElementToSatin:
             # there is only one segment, add it directly
             rails = [MultiLineString([self.line_sections[0], self.line_sections[1]])]
             rungs = [ensure_multi_line_string(self.rungs[0])]
-            self._insert_satins([rails + rungs])
-            return
+            return ([rails + rungs])
         else:
             rung_segments, satin_segments = self._get_segments(intersection_points)
 
