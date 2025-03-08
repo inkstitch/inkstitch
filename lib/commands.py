@@ -144,7 +144,7 @@ class Command(BaseCommand):
 
         self.target: inkex.BaseElement = neighbors[1]
 
-        pos = [float(self.use.get("x", 0)), float(self.use.get("y", 0))]
+        pos = (float(self.use.get("x", 0)), float(self.use.get("y", 0)))
         transform = get_node_transform(self.use)
         pos = inkex.Transform(transform).apply_to_point(pos)
         self.target_point = pos
@@ -157,14 +157,14 @@ class Command(BaseCommand):
         Clone this command and point it to the new target, positioning it relative to the new target the same as the target
         """
         group: Optional[inkex.BaseElement] = cast(Optional[inkex.BaseElement], self.connector.getparent())
-        assert group is not None  # The connector should be part of a group.
+        assert group is not None, "The connector should be part of a group."
         transform_relative_to_target: inkex.Transform = -self.target.composed_transform() @ group.composed_transform()
 
         # Clone group
         cloned_group = copy_no_children(group)
         cloned_group.transform = new_target.transform @ transform_relative_to_target
         new_target_parent = new_target.getparent()
-        assert new_target_parent is not None  # The target should be a non-root element.
+        assert new_target_parent is not None, "The target should be a non-root element."
         new_target_parent.append(cloned_group)
 
         symbol = copy_no_children(self.use)

@@ -14,6 +14,10 @@ import logging
 
 logger = logging.getLogger("inkstitch")
 
+# We have some ignores so you don't see errors if you don't have one or more of the profiling libraries installed.
+# But in turn those ignores will cause unused-ignore errors if those libraries aren't installed...
+# mypy: disable-error-code="unused-ignore"
+
 
 # safe_get - get value from nested dictionary, return default if key does not exist
 # - to read nested values from dict - mimic get method of dict with default value
@@ -279,6 +283,7 @@ def with_pyinstrument(extension, remaining_args, profile_file_path: Path):
         stats_file.write(profiler.output_html())
     print(f"Profiler: pyinstrument, stats written to '{profile_file_path.name}'. Use browser to see it.", file=sys.stderr)
 
+
 def with_monkeytype(extension, remaining_args, profile_file_path: Path) -> None:
     '''
     'profile' with monkeytype to get some class information
@@ -291,4 +296,3 @@ def with_monkeytype(extension, remaining_args, profile_file_path: Path) -> None:
 
     with monkeytype.trace(CustomMonkeyConfig()):
         extension.run(args=remaining_args)
-

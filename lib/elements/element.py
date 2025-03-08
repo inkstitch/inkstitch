@@ -79,8 +79,9 @@ class EmbroideryElement(object):
             prop = getattr(cls, attr)
             if isinstance(prop, property):
                 # The 'param' attribute is set by the 'param' decorator defined above.
-                if hasattr(prop.fget, 'param'):
-                    params.append(prop.fget.param)
+                fget = prop.fget
+                if fget is not None and hasattr(fget, 'param'):
+                    params.append(fget.param)
         return params
 
     @cache
@@ -215,18 +216,18 @@ class EmbroideryElement(object):
 
         # First, figure out the translation component of the transform.  Using a zero
         # vector completely cancels out the rotation, scale, and skew components.
-        zero = [0, 0]
+        zero = (0, 0)
         zero = inkex.Transform.apply_to_point(node_transform, zero)
         translate = Point(*zero)
 
         # Next, see how the transform affects unit vectors in the X and Y axes.  We
         # need to subtract off the translation or it will affect the magnitude of
         # the resulting vector, which we don't want.
-        unit_x = [1, 0]
+        unit_x = (1, 0)
         unit_x = inkex.Transform.apply_to_point(node_transform, unit_x)
         sx = (Point(*unit_x) - translate).length()
 
-        unit_y = [0, 1]
+        unit_y = (0, 1)
         unit_y = inkex.Transform.apply_to_point(node_transform, unit_y)
         sy = (Point(*unit_y) - translate).length()
 

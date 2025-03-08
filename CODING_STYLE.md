@@ -45,7 +45,6 @@ The project's mypy.ini file sets all of the relevant configuration, so no other 
 Mypy is also run as part of this project's builds on Github.
 Errors that Mypy picks up won't cause your build to fail, but will appear on Pull Requests so both you and reviewers can see the potential issues.
 
-
 Guidance and Comments
 =====================
 

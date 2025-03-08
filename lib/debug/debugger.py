@@ -125,6 +125,10 @@
 #   to see flask server url routes:
 #      - comment out the line self.disable_logging() in run() of lib/api/server.py
 
+# We have some ignores so you don't see errors if you don't have one or more of the debugger libraries installed.
+# But in turn those ignores will cause unused-ignore errors if those libraries aren't installed...
+# mypy: disable-error-code="unused-ignore"
+
 import os
 import sys
 

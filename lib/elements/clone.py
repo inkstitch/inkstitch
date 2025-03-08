@@ -163,11 +163,11 @@ class Clone(EmbroideryElement):
         :returns: A list where the first element is the "resolved" node, and zero or more commands attached to that node
         """
         parent: Optional[BaseElement] = self.node.getparent()
-        assert parent is not None
+        assert parent is not None, f"Element {self.node.get_id()} should have a parent"
         source_node: Optional[BaseElement] = self.node.href
-        assert source_node is not None
+        assert source_node is not None, f"Target of {self.node.get_id()} was None!"
         source_parent: Optional[BaseElement] = source_node.getparent()
-        assert source_parent is not None
+        assert source_parent is not None, f"Target {source_node.get_id()} of {self.node.get_id()} should have a parent"
         cloned_node = clone_with_fixup(parent, source_node)
 
         if recursive:
@@ -264,7 +264,9 @@ class Clone(EmbroideryElement):
 
     def center(self, source_node):
         translate = Transform(f"translate({float(self.node.get('x', '0'))}, {float(self.node.get('y', '0'))})")
-        transform = get_node_transform(self.node.getparent()) @ translate
+        parent = self.node.getparent()
+        assert parent is not None, "This should be part of a tree and therefore have a parent"
+        transform = get_node_transform(parent) @ translate
         center = self.node.bounding_box(transform).center
         return center
 

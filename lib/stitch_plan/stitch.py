@@ -4,11 +4,10 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from __future__ import annotations  # Needed for using the Stitch type as a constructor arg
-from typing import Dict, List, Type, Union, Optional, Set, Any, Iterable, overload
+from typing import Dict, Type, Union, Optional, Set, Any, Iterable, overload
 from shapely import geometry as shgeo
 
 from ..utils.geometry import Point
-from lib.utils.geometry import Point
 
 
 class Stitch(Point):
@@ -23,55 +22,57 @@ class Stitch(Point):
     min_stitch_length: Optional[float]
     tags: Set[str]
 
-    
     @overload
     def __init__(
         self,
         x: Stitch,
-        color: Optional[Any]=None,
+        color: Optional[Any] = None,
         jump=False,
         stop=False,
         trim=False,
         color_change=False,
-        min_stitch_length: Optional[float]=None,
-        tags: Optional[Iterable[str]]=None
+        min_stitch_length: Optional[float] = None,
+        tags: Optional[Iterable[str]] = None
     ): ...
+
     @overload
     def __init__(
         self,
         x: shgeo.Point,
-        color: Optional[Any]=None,
+        color: Optional[Any] = None,
         jump=False,
         stop=False,
         trim=False,
         color_change=False,
-        min_stitch_length: Optional[float]=None,
-        tags: Optional[Iterable[str]]=None
+        min_stitch_length: Optional[float] = None,
+        tags: Optional[Iterable[str]] = None
     ): ...
+
     @overload
     def __init__(
         self,
         x: float,
         y: float,
-        color: Optional[Any]=None,
-        jump: bool=False,
-        stop: bool=False,
-        trim: bool=False,
-        color_change: bool=False,
-        min_stitch_length: Optional[float]=None,
-        tags: Optional[Iterable[str]]=None
+        color: Optional[Any] = None,
+        jump: bool = False,
+        stop: bool = False,
+        trim: bool = False,
+        color_change: bool = False,
+        min_stitch_length: Optional[float] = None,
+        tags: Optional[Iterable[str]] = None
     ): ...
+
     def __init__(
         self,
         x: Union[Stitch, float, Point],
-        y: Optional[float]=None,
-        color: Optional[Any]=None,
-        jump: bool=False,
-        stop: bool=False,
-        trim: bool=False,
-        color_change: bool=False,
-        min_stitch_length: Optional[float]=None,
-        tags: Optional[Iterable[str]]=None
+        y: Optional[float] = None,
+        color: Optional[Any] = None,
+        jump: bool = False,
+        stop: bool = False,
+        trim: bool = False,
+        color_change: bool = False,
+        min_stitch_length: Optional[float] = None,
+        tags: Optional[Iterable[str]] = None
     ):
         # DANGER: if you add new attributes, you MUST also set their default
         # values in __new__() below.  Otherwise, cached stitch plans can be
@@ -91,7 +92,7 @@ class Stitch(Point):
             self.x = point.x
             self.y = point.y
         else:
-            assert y is not None
+            assert y is not None, "Bad stitch constructor use: No y component?"
             Point.__init__(self, x, y)
 
         self._set('color', color, base_stitch)
@@ -189,6 +190,6 @@ class Stitch(Point):
         # pickled representation is stable, since it's used to generate cache
         # keys.
         state = self.__json__()
-        state['tags'].sort()  # type:ignore[union-attr]
+        state['tags'].sort()
 
         return state

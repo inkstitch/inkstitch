@@ -7,6 +7,7 @@ from ..i18n import _
 from ..svg.path import get_node_transform
 from .element import EmbroideryElement
 from .validation import ObjectTypeWarning
+from typing import override
 
 
 class ImageTypeWarning(ObjectTypeWarning):
@@ -23,14 +24,17 @@ class ImageObject(EmbroideryElement):
     name = "Image"
 
     def center(self):
-        transform = get_node_transform(self.node.getparent())
+        parent = self.node.getparent()
+        assert parent is not None, "This should be part of a tree and therefore have a parent"
+        transform = get_node_transform(parent)
         center = self.node.bounding_box(transform).center
         return center
 
     def validation_warnings(self):
         yield ImageTypeWarning(self.center())
 
-    def to_stitch_groups(self, last_stitch_group):
+    @override
+    def to_stitch_groups(self, last_stitch_group, next_element):
         return []
 
     def first_stitch(self):
