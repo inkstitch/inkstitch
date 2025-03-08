@@ -5,7 +5,7 @@
 
 from contextlib import contextmanager
 from math import degrees
-from typing import Dict, Generator, List, Optional, Tuple, Any, override, cast
+from typing import Dict, Generator, List, Optional, Tuple, Any, cast
 
 from inkex import BaseElement, Title, Transform, Vector2d
 from lxml.etree import _Comment
@@ -40,7 +40,6 @@ class Clone(EmbroideryElement):
     name = "Clone"
     element_name = _("Clone")
 
-    @override
     def __init__(self, node: BaseElement) -> None:
         super(Clone, self).__init__(node)
 
@@ -70,7 +69,6 @@ class Clone(EmbroideryElement):
     def flip_angle(self) -> bool:
         return self.get_boolean_param('flip_angle', False)
 
-    @override
     def get_cache_key_data(self, previous_stitch: Any, next_element: EmbroideryElement) -> List[str]:
         source_node = self.node.href
         source_elements = self.clone_to_elements(source_node)
@@ -87,7 +85,6 @@ class Clone(EmbroideryElement):
                 elements.extend(node_to_elements(child, True))
         return elements
 
-    @override
     def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup], next_element: Optional[EmbroideryElement] = None) -> List[StitchGroup]:
         if not self.clone:
             return []
@@ -116,14 +113,12 @@ class Clone(EmbroideryElement):
             return first.first_stitch
         return None
 
-    @override
     def uses_previous_stitch(self) -> bool:
         first, last = self.first_and_last_element()
         if first:
             return first.uses_previous_stitch()
         return False
 
-    @override
     def uses_next_element(self) -> bool:
         first, last = self.first_and_last_element()
         if last:

@@ -7,7 +7,6 @@ from ..i18n import _
 from ..svg.path import get_node_transform
 from .element import EmbroideryElement
 from .validation import ObjectTypeWarning
-from typing import override
 
 
 class ImageTypeWarning(ObjectTypeWarning):
@@ -33,7 +32,6 @@ class ImageObject(EmbroideryElement):
     def validation_warnings(self):
         yield ImageTypeWarning(self.center())
 
-    @override
     def to_stitch_groups(self, last_stitch_group, next_element):
         return []
 
