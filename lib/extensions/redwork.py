@@ -115,7 +115,7 @@ class Redwork(InkstitchExtension):
         combine_all = self.options.combine and self.options.redwork_bean_stitch_repeats == '0'
         node = elements[0].node
         style = node.style
-        transform = get_correction_transform(self.svg.selection.rendering_order()[0])
+        transform = get_correction_transform(self.svg.selection.rendering_order()[-1], False)
 
         # insert lines grouped by underpath and top layer
         visited_lines = []
