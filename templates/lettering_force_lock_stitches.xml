@@ -7,11 +7,17 @@
     <param name="notebook" type="notebook">
         <page name="options" gui-text="Options">
             <param name="satin_only" type="boolean" gui-text="Restrict to Satin">false</param>
+            <spacer />
             <separator />
-            <param name="min_distance" type="float" gui-text="Minimum distance (mm)" min="0" max="20">1</param>
-            <param name="max_distance" type="float" gui-text="Maximum distance (mm)" min="1" max="20">3</param>
+            <spacer />
+            <param name="distance" type="boolean" gui-text="Add forced lock stitches by distance"
+                   gui-description="Add lock stitches when the following jump stitch is in the specified size range">false</param>
+            <param name="min_distance" type="float" gui-text="Minimum distance (mm)" min="0" max="50">1</param>
+            <param name="max_distance" type="float" gui-text="Maximum distance (mm)" min="0.1" max="500">3</param>
+            <spacer />
             <separator />
-            <param name="last_element" type="boolean" gui-text="Add force lock stitches attribute to the last element of each glyph">false</param>
+            <spacer />
+            <param name="last_element" type="boolean" gui-text="Add forced lock stitches to the last element of each glyph">false</param>
         </page>
         <page name="info" gui-text="Help">
             <label >

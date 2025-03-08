@@ -1807,6 +1807,8 @@ class SatinColumn(EmbroideryElement):
 
     @property
     def first_stitch(self):
+        if self.start_at_nearest_point:
+            return None
         return shgeo.Point(self.flattened_rails[0].coords[0])
 
     def start_point(self, last_stitch_group):
