@@ -26,13 +26,13 @@
      showgrid="false"
      inkscape:zoom="8.373633"
      inkscape:cx="24.541319"
-     inkscape:cy="61.502576"
+     inkscape:cy="47.171879"
      inkscape:window-width="1596"
      inkscape:window-height="841"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g1328"
+     inkscape:current-layer="g1308"
      inkscape:document-units="px"
      showguides="true">
     <sodipodi:guide
@@ -144,7 +144,7 @@ Created by Adegoke Adebowale
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-/"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g41"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -181,13 +181,14 @@ Created by Adegoke Adebowale
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-!"
      id="g1080"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
@@ -225,7 +226,8 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="m 83.294812,947 6.016263,-37.43334"
@@ -263,12 +265,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&quot;"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1084"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -307,7 +310,8 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="False" />
+       inkstitch:swap_satin_rails="False"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="m 231.56299,538.02038 6.75555,-44.76483"
@@ -346,12 +350,13 @@ Created by Adegoke Adebowale
        inkstitch:ties="2"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
-       inkstitch:swap_satin_rails="False" />
+       inkstitch:swap_satin_rails="False"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1088"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -389,12 +394,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="False"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-+"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1092"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -470,12 +476,13 @@ Created by Adegoke Adebowale
        inkstitch:ties="2"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-,"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1096"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -512,12 +519,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:ties="2"
        inkstitch:center_walk_underlay="False"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer--"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1100"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -555,12 +563,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:swap_satin_rails="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-."
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1104"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -599,12 +608,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:swap_satin_rails="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-0"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1108"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -725,12 +735,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-1"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1112"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -769,12 +780,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-2"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1116"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -923,12 +935,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-3"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1120"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -1072,12 +1085,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="False" />
+       inkstitch:swap_satin_rails="False"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-4"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1124"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -1169,12 +1183,13 @@ Created by Adegoke Adebowale
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-5"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1128"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -1308,12 +1323,13 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="False" />
+       inkstitch:swap_satin_rails="False"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-6"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1132"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -1449,12 +1465,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="False" />
+       inkstitch:swap_satin_rails="False"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-7"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1136"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -1508,12 +1525,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-8"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1140"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -1615,12 +1633,13 @@ Created by Adegoke Adebowale
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-9"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1144"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -1696,12 +1715,13 @@ Created by Adegoke Adebowale
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-:"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1148"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -1736,7 +1756,8 @@ Created by Adegoke Adebowale
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:ties="2"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="M 102.03701,944.18888 98.659231,910.83333"
@@ -1770,12 +1791,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:swap_satin_rails="True"
        inkstitch:ties="2"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-;"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1152"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -1814,7 +1836,8 @@ Created by Adegoke Adebowale
        inkstitch:ties="2"
        inkstitch:swap_satin_rails="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="M 73.65188,934.89999 V 905.76666"
@@ -1848,12 +1871,13 @@ Created by Adegoke Adebowale
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
        inkstitch:ties="2"
-       inkstitch:center_walk_underlay="False" />
+       inkstitch:center_walk_underlay="False"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-="
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1156"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -1891,7 +1915,8 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="M 64.785213,709.5 H 35.229658"
@@ -1928,12 +1953,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-?"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1160"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -1971,7 +1997,8 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="m 101.30578,813.77157 -1.791341,-70.20679 65.085251,-8.10709"
@@ -2104,12 +2131,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-A"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1164"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -2200,12 +2228,13 @@ Created by Adegoke Adebowale
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-B"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1168"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -2310,12 +2339,13 @@ Created by Adegoke Adebowale
        inkstitch:ties="2"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:satin_column="True" />
+       inkstitch:satin_column="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-C"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1172"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -2424,12 +2454,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-D"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1176"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -2507,12 +2538,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:ties="2"
        inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-E"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1180"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -2650,12 +2682,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:ties="2"
        inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-F"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1184"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -2768,12 +2801,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-G"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1188"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -2904,12 +2938,13 @@ Created by Adegoke Adebowale
        inkstitch:ties="2"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:swap_satin_rails="False" />
+       inkstitch:swap_satin_rails="False"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-H"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1192"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -3001,12 +3036,13 @@ Created by Adegoke Adebowale
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-I"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1196"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -3045,12 +3081,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-J"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1200"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -3133,12 +3170,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:swap_satin_rails="False"
-       sodipodi:nodetypes="ccccss" />
+       sodipodi:nodetypes="ccccss"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-K"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1204"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -3230,12 +3268,13 @@ Created by Adegoke Adebowale
        inkstitch:ties="2"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-L"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1208"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -3301,12 +3340,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-M"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1212"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -3412,12 +3452,13 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
        inkstitch:swap_satin_rails="True"
-       inkstitch:reverse_rails="first" />
+       inkstitch:reverse_rails="first"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-N"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1216"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -3500,16 +3541,17 @@ Created by Adegoke Adebowale
        inkscape:transform-center-y="-1.076978"
        d="M 592.19701,961.768 599,1000 M 447.00893,1000.1274 446,960.42199 m -30.08144,25.76691 h 207.2"
        sodipodi:nodetypes="cccccc"
-       inkstitch:ties="3"
+       inkstitch:ties="2"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-O"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1220"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -3589,12 +3631,13 @@ Created by Adegoke Adebowale
        inkstitch:ties="2"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-P"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1224"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -3684,12 +3727,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Q"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1228"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -3780,12 +3824,13 @@ Created by Adegoke Adebowale
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-R"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1232"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -3889,12 +3934,13 @@ Created by Adegoke Adebowale
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-S"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1236"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -4067,12 +4113,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-T"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1240"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -4138,12 +4185,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:swap_satin_rails="False" />
+       inkstitch:swap_satin_rails="False"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-U"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1244"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -4217,12 +4265,13 @@ Created by Adegoke Adebowale
        inkstitch:zigzag_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="False" />
+       inkstitch:center_walk_underlay="False"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-V"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1248"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -4291,12 +4340,13 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
        inkstitch:swap_satin_rails="True"
-       sodipodi:nodetypes="cccccc" />
+       sodipodi:nodetypes="cccccc"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-W"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1252"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -4424,12 +4474,13 @@ Created by Adegoke Adebowale
        inkstitch:zigzag_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay="True"
-       inkstitch:center_walk_underlay="False" />
+       inkstitch:center_walk_underlay="False"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-X"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1256"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -4521,12 +4572,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Y"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1260"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -4626,12 +4678,13 @@ Created by Adegoke Adebowale
        inkstitch:zigzag_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Z"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1264"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -4751,12 +4804,13 @@ Created by Adegoke Adebowale
        inkstitch:zigzag_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-["
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1268"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -4812,12 +4866,13 @@ Created by Adegoke Adebowale
        inkstitch:satin_column="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-]"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1272"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -4866,12 +4921,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-a"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1276"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -5007,12 +5063,13 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
        inkstitch:swap_satin_rails="True"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-b"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1280"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -5117,12 +5174,13 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:contour_underlay_inset_mm="0.4"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-c"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1284"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -5227,12 +5285,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-d"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1288"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -5318,12 +5377,13 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
        inkstitch:swap_satin_rails="True"
-       inkstitch:reverse_rails="second" />
+       inkstitch:reverse_rails="second"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-e"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1292"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -5406,7 +5466,7 @@ Created by Adegoke Adebowale
        inkstitch:swap_satin_rails="True"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:none;stroke-opacity:1"
        d="m 345.56299,923.92222 25.33333,-20.26667"
        id="path95"
        inkscape:label="jump"
@@ -5421,12 +5481,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-f"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1296"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -5542,7 +5603,8 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -5643,12 +5705,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-h"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1304"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -5671,7 +5734,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 115.02966,631.74444 -8.44445,-152"
        id="path87"
        inkscape:label="jump"
@@ -5716,7 +5779,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 365.33499,955.77105 9.78355,44.15117"
        id="path86"
        inkscape:label="jump"
@@ -5733,12 +5796,13 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-i"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1308"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -5747,7 +5811,8 @@ Created by Adegoke Adebowale
        id="path67601"
        inkscape:label="Start"
        inkstitch:ties="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="m 133.74672,474.18379 -7.6,31.93811"
@@ -5768,7 +5833,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="M 107.63456,523.58825 95.607437,570.94444"
        id="path85"
        inkscape:label="jump"
@@ -5784,7 +5849,8 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="m 115.83335,664.06553 -0.43465,29.54966"
@@ -5803,7 +5869,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 126.00744,961.07778 2.53333,33.77777"
        id="path84"
        inkscape:label="jump"
@@ -5819,12 +5885,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-j"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1312"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -5862,12 +5929,13 @@ Created by Adegoke Adebowale
        inkstitch:bean_stitch_repeats="2"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="M 256.89632,1162.9 277.16299,647.78889"
        id="path67"
        inkscape:label="jump"
        inkstitch:ties="2"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkstitch:force_lock_stitches="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="m 292.95424,503.93957 2.12354,-26.98647"
@@ -5889,7 +5957,7 @@ Created by Adegoke Adebowale
        inkstitch:swap_satin_rails="True"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 273.78521,519.43332 -4.22222,52.35557"
        id="path68"
        inkscape:label="jump"
@@ -5906,7 +5974,8 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:ties="2"
-       inkstitch:min_jump_stitch_length_mm="" />
+       inkstitch:min_jump_stitch_length_mm=""
+       inkstitch:force_lock_stitches="True" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.982677;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.982677, 0.982677;stroke-dashoffset:0;stroke-opacity:1"
        d="M 288.32222,675.52727 V 650.90865"
@@ -5925,7 +5994,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 289.82966,1133.3445 -10.13334,32.9333"
        id="path57"
        inkscape:label="jump"
@@ -5942,12 +6011,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-k"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1316"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -5970,7 +6040,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 117.56299,755.03333 1.68889,234.75555"
        id="path64"
        inkscape:label="jump"
@@ -6004,7 +6074,7 @@ Created by Adegoke Adebowale
        inkstitch:bean_stitch_repeats="2"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="M 343.8741,731.38889 363.29632,537.16667"
        id="path65"
        inkscape:label="jump"
@@ -6020,7 +6090,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 359.91855,981.34444 12.66666,19.42226"
        id="path66"
        inkscape:label="jump"
@@ -6036,12 +6106,13 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-l"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1320"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -6064,7 +6135,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 104.75144,943.47903 12.81155,53.90985"
        id="path63"
        inkscape:label="jump"
@@ -6081,12 +6152,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:swap_satin_rails="False"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-m"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1324"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -6165,7 +6237,7 @@ Created by Adegoke Adebowale
        inkstitch:swap_satin_rails="True"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 493.34077,976.27777 8.44444,20.26667"
        id="path62"
        inkscape:label="jump"
@@ -6180,12 +6252,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-n"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1328"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -6236,7 +6309,7 @@ Created by Adegoke Adebowale
        inkstitch:swap_satin_rails="True"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:none;stroke-opacity:1"
        d="m 356.54077,975.43333 2.53333,25.33337"
        id="path54"
        inkscape:label="jump"
@@ -6251,7 +6324,8 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -6336,12 +6410,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-p"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1336"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -6416,7 +6491,7 @@ Created by Adegoke Adebowale
        inkscape:label="path8252"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 359.17655,968.20797 -0.10245,29.18091"
        id="path38"
        inkscape:label="jump"
@@ -6432,12 +6507,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-q"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1340"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -6500,7 +6576,7 @@ Created by Adegoke Adebowale
        inkstitch:swap_satin_rails="True"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 344.71855,1088.5889 19.42222,77.6889"
        id="path37"
        inkscape:label="jump"
@@ -6516,12 +6592,13 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-r"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1344"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -6617,12 +6694,13 @@ Created by Adegoke Adebowale
        inkstitch:ties="2"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-s"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1348"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -6811,8 +6889,9 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="3"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:ties="2"
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -6901,7 +6980,7 @@ Created by Adegoke Adebowale
        inkstitch:swap_satin_rails="True"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 305.14968,940.39403 10.01331,-39.27181"
        id="path34"
        inkscape:label="jump"
@@ -6918,12 +6997,13 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-u"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1356"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -6986,7 +7066,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 354.00743,930.67777 24.48889,68.4"
        id="path33"
        inkscape:label="jump"
@@ -7004,12 +7084,13 @@ Created by Adegoke Adebowale
        inkstitch:ties="2"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-v"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1360"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -7066,7 +7147,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 315.37216,964.58338 -3.58695,32.8055"
        id="path44"
        inkscape:label="jump"
@@ -7083,12 +7164,13 @@ Created by Adegoke Adebowale
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="False" />
+       inkstitch:swap_satin_rails="False"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-w"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1364"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -7166,7 +7248,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 481.5434,959.71131 -13.34136,38.54011"
        id="path42"
        inkscape:label="jump"
@@ -7183,12 +7265,13 @@ Created by Adegoke Adebowale
        inkstitch:ties="2"
        inkstitch:contour_underlay="True"
        inkstitch:center_walk_underlay="False"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-x"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1368"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -7212,7 +7295,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.098;stroke-dasharray:0.098, 0.098;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.098;stroke-dasharray:0.098, 0.098;stroke-dashoffset:0;stroke-opacity:1"
        d="M 14.579912,46.787194 10.660489,31.493482"
        id="path3"
        transform="matrix(10,0,0,10,-0.65923,334.5)"
@@ -7251,7 +7334,7 @@ Created by Adegoke Adebowale
        inkstitch:repeats="1"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="M 333.74077,820.05555 373.42966,655.38889"
        id="path5"
        inkscape:label="jump"
@@ -7267,7 +7350,7 @@ Created by Adegoke Adebowale
        inkstitch:ties="3"
        inkstitch:min_jump_stitch_length_mm="6" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.98;stroke-dasharray:0.98, 0.98;stroke-dashoffset:0;stroke-opacity:1"
        d="m 358.22966,964.03333 10.13333,35.04444"
        id="path6"
        inkscape:label="jump"
@@ -7283,12 +7366,13 @@ Created by Adegoke Adebowale
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:ties="2" />
+       inkstitch:ties="2"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-y"
-     style="display:none;stroke:#000000;stroke-opacity:1"
+     style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
      id="g1372"
      transform="matrix(0.1,0,0,0.1,0.065923,-33.45)">
     <path
@@ -7430,7 +7514,8 @@ Created by Adegoke Adebowale
        inkstitch:ties="2"
        inkstitch:zigzag_underlay="False"
        inkstitch:contour_underlay="True"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -7565,6 +7650,7 @@ Created by Adegoke Adebowale
        inkstitch:center_walk_underlay="False"
        inkstitch:contour_underlay="True"
        inkstitch:ties="2"
-       inkstitch:swap_satin_rails="True" />
+       inkstitch:swap_satin_rails="True"
+       inkstitch:force_lock_stitches="True" />
   </g>
 </svg>
