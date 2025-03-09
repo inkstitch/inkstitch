@@ -12,11 +12,13 @@ from inkex.units import convert_unit
 from shapely import geometry as shgeo
 from shapely import set_precision
 from shapely.geometry import Point as ShapelyPoint
+from shapely.ops import substring
 
 from ..commands import add_commands
 from ..elements import SatinColumn, Stroke
 from ..i18n import _
-from ..svg import PIXELS_PER_MM, generate_unique_id, line_strings_to_csp
+from ..svg import (PIXELS_PER_MM, generate_unique_id, get_correction_transform,
+                   line_strings_to_csp)
 from ..svg.tags import (INKSCAPE_LABEL, INKSTITCH_ATTRIBS, ORIGINAL_D,
                         PATH_EFFECT)
 from ..utils import Point as InkstitchPoint
@@ -256,7 +258,7 @@ class RunningStitch(object):
         node.set("d", d)
 
         stroke_width = convert_stroke_width(self.original_element)
-        dasharray = inkex.Style(f"stroke-width:{stroke_width};stroke-dasharray:0.5,0.5;")
+        dasharray = inkex.Style(f"stroke-width:{stroke_width};stroke-dasharray:1,0.2;")
         style = inkex.Style(self.original_element.node.get('style', '')) + dasharray
         node.set("style", str(style))
         if self.running_stitch_length != '':
@@ -355,6 +357,29 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
       Jumps between objects are implied if they are not right next to each
       other.
     """
+
+    if len(elements) == 1 and ending_point is None and starting_point is not None:
+        # they just used this method to lazily create running stitch to start the satin
+        # generate a line from starting point to the actual start of the satin
+        satin = elements[0]
+        parent = satin.node.getparent()
+        index = parent.index(satin.node)
+
+        project = satin.center_line.project(ShapelyPoint(starting_point))
+        path = substring(satin.center_line, project, 0)
+
+        run = RunningStitch(path, satin)
+        run_element = run.to_element()
+
+        transform = get_correction_transform(satin.node, False)
+        run_element.node.set('transform', transform)
+        run_element.node.apply_transform()
+
+        stroke_width = convert_stroke_width(satin)
+        run_element.node.style['stroke-width'] = stroke_width
+
+        parent.insert(index, run_element.node)
+        return
 
     # save these for create_new_group() call below
     if parent is None:
