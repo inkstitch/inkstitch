@@ -14,6 +14,10 @@ import logging
 
 logger = logging.getLogger("inkstitch")
 
+# We have some ignores so you don't see errors if you don't have one or more of the profiling libraries installed.
+# But in turn those ignores will cause unused-ignore errors if those libraries aren't installed...
+# mypy: disable-error-code="unused-ignore"
+
 
 # safe_get - get value from nested dictionary, return default if key does not exist
 # - to read nested values from dict - mimic get method of dict with default value
@@ -67,7 +71,7 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict):
 
         # environment PATH
         f.write('# PATH:\n')
-        f.write(f'#   {os.environ.get("PATH","")}\n')
+        f.write(f'#   {os.environ.get("PATH", "")}\n')
         # for p in os.environ.get("PATH", '').split(os.pathsep): # PATH to list
         #     f.write(f'#   {p}\n')
 
@@ -217,6 +221,8 @@ def profile(profiler_type, profile_dir: Path, ini: dict, extension, remaining_ar
         with_profile(extension, remaining_args, profile_file_path)
     elif profiler_type == 'pyinstrument':
         with_pyinstrument(extension, remaining_args, profile_file_path)
+    elif profiler_type == 'monkeytype':
+        with_monkeytype(extension, remaining_args, profile_file_path)
     else:
         raise ValueError(f"unknown profiler type: '{profiler_type}'")
 
@@ -265,7 +271,7 @@ def with_pyinstrument(extension, remaining_args, profile_file_path: Path):
     '''
     profile with pyinstrument
     '''
-    import pyinstrument
+    import pyinstrument  # type: ignore[import-untyped,import-not-found]
     profiler = pyinstrument.Profiler()
 
     profiler.start()
@@ -276,3 +282,25 @@ def with_pyinstrument(extension, remaining_args, profile_file_path: Path):
     with open(profile_file_path, 'w') as stats_file:
         stats_file.write(profiler.output_html())
     print(f"Profiler: pyinstrument, stats written to '{profile_file_path.name}'. Use browser to see it.", file=sys.stderr)
+
+
+def with_monkeytype(extension, remaining_args, profile_file_path: Path) -> None:
+    '''
+    'profile' with monkeytype to get type information. This may be handy for anyone who wants to
+    add type annotations to older parts of our code that don't have them.
+
+    See https://monkeytype.readthedocs.io/en/stable/generation.html for usage instructions.
+    '''
+    import monkeytype  # type: ignore[import-not-found]
+
+    # Monkeytype will use these environment variables for the db path and to filter the modules respectively.
+    # This is easier than using monkeytype's actual config API, anyway.
+    dbpath = profile_file_path.with_suffix('.sqlite')
+    os.environ["MT_DB_PATH"] = str(dbpath)
+    os.environ["MONKEYTYPE_TRACE_MODULES"] = str(Path(__file__).parents[2].name)
+
+    with monkeytype.trace():
+        extension.run(args=remaining_args)
+
+    print(f"Profiler: monkeytype, db written to '{dbpath}'.\n\n" +
+          f"Run 'MT_DB_PATH={dbpath} monkeytype ...' from the inkstitch repo directory.", file=sys.stderr)

@@ -21,7 +21,9 @@ class TextTypeWarning(ObjectTypeWarning):
 class TextObject(EmbroideryElement):
 
     def pointer(self):
-        transform = get_node_transform(self.node.getparent())
+        parent = self.node.getparent()
+        assert parent is not None, "This should be part of a tree and therefore have a parent"
+        transform = get_node_transform(parent)
         point = self.node.bounding_box(transform).center
 
         return point

@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from typing import List, Optional
+from typing import List, Optional, Iterable
 
 from inkex import BaseElement
 from lxml.etree import Comment
@@ -41,7 +41,7 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
         return [MarkerObject(node)]
 
     elif node.tag in EMBROIDERABLE_TAGS or is_clone(node):
-        elements = []
+        elements: List[EmbroideryElement] = []
 
         from ..sew_stack import SewStack
         sew_stack = SewStack(node)
@@ -73,7 +73,7 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
         return []
 
 
-def nodes_to_elements(nodes):
+def nodes_to_elements(nodes: Iterable[BaseElement]) -> List[EmbroideryElement]:
     elements = []
     for node in nodes:
         elements.extend(node_to_elements(node))
@@ -89,7 +89,8 @@ def iterate_nodes(node: BaseElement,  # noqa: C901
     def walk(node: BaseElement, selected: bool) -> List[BaseElement]:
         nodes = []
 
-        if node.tag == Comment:
+        # lxml-stubs types are wrong, node.tag can be Comment.
+        if node.tag is Comment:  # type:ignore[comparison-overlap]
             return []
 
         element = EmbroideryElement(node)

@@ -7,7 +7,7 @@ import os
 import sys
 from copy import deepcopy
 from random import random
-from typing import List
+from typing import List, Optional, cast
 
 import inkex
 from shapely import geometry as shgeo
@@ -110,17 +110,17 @@ class BaseCommand(object):
 
 
 class Command(BaseCommand):
-    def __init__(self, connector):
-        self.connector: inkex.Path = connector
+    def __init__(self, connector: inkex.PathElement) -> None:
+        self.connector = connector
         self.svg = self.connector.getroottree().getroot()
 
         self.parse_command()
 
-    def parse_connector_path(self):
+    def parse_connector_path(self) -> inkex.Path:
         path = inkex.paths.Path(self.connector.get('d')).to_superpath()
         return apply_transforms(path, self.connector)
 
-    def parse_command(self):
+    def parse_command(self) -> None:
         path = self.parse_connector_path()
         if len(path) == 0:
             raise CommandParseError("connector has no path information")
@@ -144,7 +144,7 @@ class Command(BaseCommand):
 
         self.target: inkex.BaseElement = neighbors[1]
 
-        pos = [float(self.use.get("x", 0)), float(self.use.get("y", 0))]
+        pos = (float(self.use.get("x", 0)), float(self.use.get("y", 0)))
         transform = get_node_transform(self.use)
         pos = inkex.Transform(transform).apply_to_point(pos)
         self.target_point = pos
@@ -156,13 +156,16 @@ class Command(BaseCommand):
         """
         Clone this command and point it to the new target, positioning it relative to the new target the same as the target
         """
-        group: inkex.BaseElement = self.connector.getparent()
-        transform_relative_to_target = -self.target.composed_transform() @ group.composed_transform()
+        group: Optional[inkex.BaseElement] = cast(Optional[inkex.BaseElement], self.connector.getparent())
+        assert group is not None, "The connector should be part of a group."
+        transform_relative_to_target: inkex.Transform = -self.target.composed_transform() @ group.composed_transform()
 
         # Clone group
-        cloned_group = copy_no_children(self.connector.getparent())
+        cloned_group = copy_no_children(group)
         cloned_group.transform = new_target.transform @ transform_relative_to_target
-        new_target.getparent().append(cloned_group)
+        new_target_parent = new_target.getparent()
+        assert new_target_parent is not None, "The target should be a non-root element."
+        new_target_parent.append(cloned_group)
 
         symbol = copy_no_children(self.use)
         cloned_group.append(symbol)
@@ -200,12 +203,11 @@ class StandaloneCommand(BaseCommand):
 
     @property
     @cache
-    def point(self):
-        pos = [float(self.node.get("x", 0)), float(self.node.get("y", 0))]
+    def point(self) -> Point:
+        pos = (float(self.node.get("x", 0)), float(self.node.get("y", 0)))
         transform = get_node_transform(self.node)
-        pos = inkex.transforms.Transform(transform).apply_to_point(pos)
 
-        return Point(*pos)
+        return Point(*inkex.transforms.Transform(transform).apply_to_point(pos))
 
 
 def get_command_description(command: str) -> str:
@@ -298,11 +300,11 @@ def _standalone_commands(svg):
             pass
 
 
-def is_command(node):
+def is_command(node: inkex.BaseElement) -> bool:
     return CONNECTION_START in node.attrib or CONNECTION_END in node.attrib
 
 
-def is_command_symbol(node):
+def is_command_symbol(node: inkex.BaseElement) -> bool:
     symbol = None
     xlink = node.get(XLINK_HREF, "")
     if xlink.startswith("#inkstitch_"):
@@ -311,23 +313,23 @@ def is_command_symbol(node):
 
 
 @cache
-def symbols_path():
+def symbols_path() -> str:
     return os.path.join(get_bundled_dir("symbols"), "inkstitch.svg")
 
 
 @cache
-def symbols_svg():
+def symbols_svg() -> inkex.BaseElement:
     with open(symbols_path()) as symbols_file:
         return inkex.load_svg(symbols_file).getroot()
 
 
 @cache
-def symbol_defs():
+def symbol_defs() -> inkex.BaseElement:
     return symbols_svg().defs
 
 
 @cache
-def ensure_symbol(svg, command):
+def ensure_symbol(svg, command) -> None:
     """Make sure the command's symbol definition exists in the <svg:defs> tag."""
 
     # using @cache really just makes sure that we don't bother ensuring the

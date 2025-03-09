@@ -7,9 +7,9 @@ from ..i18n import _
 
 
 class FontCategory:
-    def __init__(self, cat_id=None, name=None):
-        self.id: str = cat_id
-        self.name: str = name
+    def __init__(self, cat_id: str, name: str) -> None:
+        self.id = cat_id
+        self.name = name
 
     def __repr__(self):
         return "FontCategory(%s, %s)" % (self.id, self.name)
@@ -35,5 +35,4 @@ FONT_CATEGORIES = [
     FontCategory('hebrew', _("Script: hebrew")),
     FontCategory('japanese', _("Script: japanese")),
     FontCategory('latin', _("Script: latin"))
-
 ]

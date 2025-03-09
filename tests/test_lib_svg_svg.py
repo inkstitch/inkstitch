@@ -6,7 +6,7 @@ from inkex.tester.svg import svg
 
 
 class LibSvgSvgTest(TestCase):
-    def test_point_upwards(self):
+    def test_point_upwards(self) -> None:
         root = svg()
         rect = root.add(Rectangle(attrib={
             "width": "10",
@@ -24,7 +24,7 @@ class LibSvgSvgTest(TestCase):
             4
         )
 
-    def test_point_upwards_mirrored(self):
+    def test_point_upwards_mirrored(self) -> None:
         root = svg()
         rect = root.add(PathElement(attrib={
             "d": "M 0,0 L 10,0 0,5 Z",
