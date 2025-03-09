@@ -8,6 +8,7 @@ from itertools import chain
 
 import inkex
 import networkx as nx
+from inkex.units import convert_unit
 from shapely import geometry as shgeo
 from shapely import set_precision
 from shapely.geometry import Point as ShapelyPoint
@@ -86,6 +87,9 @@ class SatinSegment(object):
 
         if self.reverse:
             satin = satin.reverse()
+
+        stroke_width = convert_stroke_width(self.original_satin)
+        satin.node.style['stroke-width'] = stroke_width
 
         satin = satin.apply_transform()
 
@@ -251,7 +255,8 @@ class RunningStitch(object):
         d = str(inkex.paths.CubicSuperPath(line_strings_to_csp([self.path])))
         node.set("d", d)
 
-        dasharray = inkex.Style("stroke-dasharray:0.5,0.5;")
+        stroke_width = convert_stroke_width(self.original_element)
+        dasharray = inkex.Style(f"stroke-width:{stroke_width};stroke-dasharray:0.5,0.5;")
         style = inkex.Style(self.original_element.node.get('style', '')) + dasharray
         node.set("style", str(style))
         if self.running_stitch_length != '':
@@ -391,6 +396,12 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
         new_elements = add_trims(new_elements, trims)
 
     return new_elements
+
+
+def convert_stroke_width(element):
+    document_unit = element.node.getroottree().getroot().document_unit
+    stroke_width = convert_unit(element.stroke_width, document_unit)
+    return stroke_width
 
 
 def build_graph(elements, preserve_order=False):
