@@ -31,6 +31,9 @@ if [ "$?" != "0" ]; then
 fi
 ```
 
+Type Annotations
+================
+
 We encourage the use of type annotations in Python code. 
 Type annotations make the code easier to read and understand, for example by making it clear what kinds of data functions accept as arguments and return.
 Editors and IDEs can also read this type information to power features like autocomplete.

@@ -291,7 +291,7 @@ def with_monkeytype(extension, remaining_args, profile_file_path: Path) -> None:
 
     See https://monkeytype.readthedocs.io/en/stable/generation.html for usage instructions.
     '''
-    import monkeytype  # type: ignore[import-untyped,import-not-found]
+    import monkeytype  # type: ignore[import-not-found]
 
     # Monkeytype will use these environment variables for the db path and to filter the modules respectively.
     # This is easier than using monkeytype's actual config API, anyway.
@@ -302,5 +302,5 @@ def with_monkeytype(extension, remaining_args, profile_file_path: Path) -> None:
     with monkeytype.trace():
         extension.run(args=remaining_args)
 
-    print(f"Profiler: monkeytype, db written to '{dbpath}'.\n\
-          Run 'MT_DB_PATH={dbpath} monkeytype ...' from the inkstitch repo directory.", file=sys.stderr)
+    print(f"Profiler: monkeytype, db written to '{dbpath}'.\n\n" +
+          f"Run 'MT_DB_PATH={dbpath} monkeytype ...' from the inkstitch repo directory.", file=sys.stderr)
