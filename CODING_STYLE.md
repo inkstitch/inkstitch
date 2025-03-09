@@ -39,11 +39,20 @@ Type annotations also allow us to use the typechecker [Mypy](https://mypy.readth
 A great reference for how to use annotations is the [Mypy cheat sheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html).
 It covers most of the common uses and patterns.
 [Mypy's Common Issues page](https://mypy.readthedocs.io/en/stable/common_issues.html) is also useful for understanding the common pitfalls with type-checking you may encounter.
+Notably, Mypy does not perform type-checking on functions that don't have type annotations, but as we introduce new code with annotations we'll have better coverage as time goes on.
 
 You can run Mypy against your changes yourself simply by [installing Mypy](https://mypy.readthedocs.io/en/stable/getting_started.html#installing-and-running-mypy) running `mypy` in the project root.
 The project's mypy.ini file sets all of the relevant configuration, so no other arguments are needed.
 Mypy is also run as part of this project's builds on Github.
 Errors that Mypy picks up won't cause your build to fail, but will appear on Pull Requests so both you and reviewers can see the potential issues.
+
+Much of our code, especially older code, lacks type annotations.
+If you want to add type annotations to older code, or learn what types are used in a part of the codebase without type annotations, you my find [MonkeyType](https://monkeytype.readthedocs.io/en/stable/) useful.
+You can easily have MonkeyType collect type information from Ink/Stitch in a similar way to how you can use one of several profilers with Ink/Stitch.
+Simply copy `DEBUG_template.toml` to `DEBUG.toml`, and uncomment lines so that the `profiler_type = "monkeytype"`
+and `profile_enable = True` options are set.
+After running Ink/Stitch command, a window will pop up telling you how to run Monkeytype and use your newly-collected type information.
+Multiple command runs will all add to the type information database.
 
 Guidance and Comments
 =====================

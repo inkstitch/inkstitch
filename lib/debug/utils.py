@@ -295,11 +295,12 @@ def with_monkeytype(extension, remaining_args, profile_file_path: Path) -> None:
 
     # Monkeytype will use these environment variables for the db path and to filter the modules respectively.
     # This is easier than using monkeytype's actual config API, anyway.
-    os.environ["MT_DB_PATH"] = str(profile_file_path)
+    dbpath = profile_file_path.with_suffix('.sqlite')
+    os.environ["MT_DB_PATH"] = str(dbpath)
     os.environ["MONKEYTYPE_TRACE_MODULES"] = str(Path(__file__).parents[2].name)
 
     with monkeytype.trace():
         extension.run(args=remaining_args)
 
-    print(f"Profiler: monkeytype, db written to '{profile_file_path}'.\n\
-          Run 'MT_DB_PATH={profile_file_path} monkeytype ...' from the inkstitch repo directory.", file=sys.stderr)
+    print(f"Profiler: monkeytype, db written to '{dbpath}'.\n\
+          Run 'MT_DB_PATH={dbpath} monkeytype ...' from the inkstitch repo directory.", file=sys.stderr)
