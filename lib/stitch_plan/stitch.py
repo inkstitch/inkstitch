@@ -38,6 +38,19 @@ class Stitch(Point):
     @overload
     def __init__(
         self,
+        x: Point,
+        color: Optional[Any] = None,
+        jump=False,
+        stop=False,
+        trim=False,
+        color_change=False,
+        min_stitch_length: Optional[float] = None,
+        tags: Optional[Iterable[str]] = None
+    ): ...
+
+    @overload
+    def __init__(
+        self,
         x: shgeo.Point,
         color: Optional[Any] = None,
         jump=False,
