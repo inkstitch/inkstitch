@@ -23,14 +23,16 @@ class ImageObject(EmbroideryElement):
     name = "Image"
 
     def center(self):
-        transform = get_node_transform(self.node.getparent())
+        parent = self.node.getparent()
+        assert parent is not None, "This should be part of a tree and therefore have a parent"
+        transform = get_node_transform(parent)
         center = self.node.bounding_box(transform).center
         return center
 
     def validation_warnings(self):
         yield ImageTypeWarning(self.center())
 
-    def to_stitch_groups(self, last_stitch_group):
+    def to_stitch_groups(self, last_stitch_group, next_element):
         return []
 
     def first_stitch(self):

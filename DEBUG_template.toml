@@ -45,6 +45,7 @@
 # profiler_type = "cprofile"
 # profiler_type = "profile"
 # profiler_type = "pyinstrument"
+# profiler_type = "monkeytype"
 
 ### enable profiler, see cmd line arg -p, default: false
 # profile_enable = true

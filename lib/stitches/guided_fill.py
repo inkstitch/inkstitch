@@ -172,7 +172,7 @@ def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, 
 
     if len(points) < 2:
         coords = line.coords
-        points = [coords[0], coords[-1]]
+        points = np.array([coords[0], coords[-1]])
 
     stitched_line = shgeo.LineString(points)
 

@@ -3,6 +3,8 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from __future__ import annotations  # Needed for using the Stitch type as a constructor arg
+from typing import Dict, Type, Union, Optional, Set, Any, Iterable, overload
 from shapely import geometry as shgeo
 
 from ..utils.geometry import Point
@@ -10,17 +12,80 @@ from ..utils.geometry import Point
 
 class Stitch(Point):
     """A stitch is a Point with extra information telling how to sew it."""
+    x: float
+    y: float
+    color: Any  # Todo: What is this
+    jump: bool
+    stop: bool
+    trim: bool
+    color_change: bool
+    min_stitch_length: Optional[float]
+    tags: Set[str]
 
+    @overload
     def __init__(
         self,
-        x, y=None,
-        color=None,
+        x: Stitch,
+        color: Optional[Any] = None,
         jump=False,
         stop=False,
         trim=False,
         color_change=False,
-        min_stitch_length=None,
-        tags=None
+        min_stitch_length: Optional[float] = None,
+        tags: Optional[Iterable[str]] = None
+    ): ...
+
+    @overload
+    def __init__(
+        self,
+        x: Point,
+        color: Optional[Any] = None,
+        jump=False,
+        stop=False,
+        trim=False,
+        color_change=False,
+        min_stitch_length: Optional[float] = None,
+        tags: Optional[Iterable[str]] = None
+    ): ...
+
+    @overload
+    def __init__(
+        self,
+        x: shgeo.Point,
+        color: Optional[Any] = None,
+        jump=False,
+        stop=False,
+        trim=False,
+        color_change=False,
+        min_stitch_length: Optional[float] = None,
+        tags: Optional[Iterable[str]] = None
+    ): ...
+
+    @overload
+    def __init__(
+        self,
+        x: float,
+        y: float,
+        color: Optional[Any] = None,
+        jump: bool = False,
+        stop: bool = False,
+        trim: bool = False,
+        color_change: bool = False,
+        min_stitch_length: Optional[float] = None,
+        tags: Optional[Iterable[str]] = None
+    ): ...
+
+    def __init__(
+        self,
+        x: Union[Stitch, float, Point],
+        y: Optional[float] = None,
+        color: Optional[Any] = None,
+        jump: bool = False,
+        stop: bool = False,
+        trim: bool = False,
+        color_change: bool = False,
+        min_stitch_length: Optional[float] = None,
+        tags: Optional[Iterable[str]] = None
     ):
         # DANGER: if you add new attributes, you MUST also set their default
         # values in __new__() below.  Otherwise, cached stitch plans can be
@@ -32,14 +97,15 @@ class Stitch(Point):
             # Allow creating a Stitch from another Stitch.  Attributes passed as
             # arguments will override any existing attributes.
             base_stitch = x
-            self.x: float = base_stitch.x
-            self.y: float = base_stitch.y
+            self.x = base_stitch.x
+            self.y = base_stitch.y
         elif isinstance(x, (Point, shgeo.Point)):
             # Allow creating a Stitch from a Point
             point = x
-            self.x: float = point.x
-            self.y: float = point.y
+            self.x = point.x
+            self.y = point.y
         else:
+            assert y is not None, "Bad stitch constructor use: No y component?"
             Point.__init__(self, x, y)
 
         self._set('color', color, base_stitch)
@@ -54,7 +120,7 @@ class Stitch(Point):
         if base_stitch is not None:
             self.add_tags(base_stitch.tags)
 
-    def __new__(cls, *args, **kwargs):
+    def __new__(cls: Type[Stitch], *args, **kwargs) -> Stitch:
         instance = super().__new__(cls)
 
         # Set default values for any new attributes here (see note in __init__() above)
@@ -74,7 +140,7 @@ class Stitch(Point):
             "COLOR CHANGE" if self.color_change else " "
         )
 
-    def _set(self, attribute, value, base_stitch):
+    def _set(self, attribute: str, value: Optional[Any], base_stitch: Optional[Stitch]) -> None:
         # Set an attribute.  If the caller passed a Stitch object, use its value, unless
         # they overrode it with arguments.
         if base_stitch is not None:
@@ -86,11 +152,11 @@ class Stitch(Point):
     def is_terminator(self) -> bool:
         return self.trim or self.stop or self.color_change
 
-    def add_tags(self, tags):
+    def add_tags(self, tags: Iterable[str]) -> None:
         for tag in tags:
             self.add_tag(tag)
 
-    def add_tag(self, tag):
+    def add_tag(self, tag: str) -> None:
         """Store arbitrary information about a stitch.
 
         Tags can be used to store any information about a stitch.  This can be
@@ -105,10 +171,10 @@ class Stitch(Point):
         """
         self.tags.add(tag)
 
-    def has_tag(self, tag):
+    def has_tag(self, tag: str) -> bool:
         return tag in self.tags
 
-    def copy(self):
+    def copy(self) -> Stitch:
         return Stitch(
             self.x,
             self.y,
@@ -121,18 +187,18 @@ class Stitch(Point):
             self.tags
         )
 
-    def offset(self, offset: Point):
+    def offset(self, offset: Point) -> Stitch:
         out = self.copy()
         out.x += offset.x
         out.y += offset.y
         return out
 
-    def __json__(self):
+    def __json__(self) -> Dict[str, Any]:
         attributes = dict(vars(self))
         attributes['tags'] = list(attributes['tags'])
         return attributes
 
-    def __getstate__(self):
+    def __getstate__(self) -> Dict[str, Any]:
         # This is used by pickle.  We want to sort the tag list so that the
         # pickled representation is stable, since it's used to generate cache
         # keys.

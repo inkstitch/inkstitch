@@ -11,8 +11,6 @@ from pyembroidery.EmbThread import EmbThread
 
 
 class ThreadColor(object):
-    hex_str_re = re.compile('#([0-9a-z]{3}|[0-9a-z]{6})', re.I)
-
     def __init__(self, color, name=None, number=None, manufacturer=None, description=None, chart=None):
         '''
         avoid error messages:
@@ -36,11 +34,9 @@ class ThreadColor(object):
             self.rgb = (color.get_red(), color.get_green(), color.get_blue())
             return
         elif isinstance(color, str):
-            self.rgb = Color.parse_str(color)[1]
+            self.rgb = Color(color).to('rgb').get_values(False)
         elif isinstance(color, (list, tuple)):
             self.rgb = tuple(color)
-        elif self.hex_str_re.match(color):
-            self.rgb = Color.parse_str(color)[1]
         else:
             raise ValueError("Invalid color: " + repr(color))
 

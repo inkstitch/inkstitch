@@ -10,7 +10,7 @@ from .utils import element_count
 class ElementsUtilsTest(TestCase):
     # These tests test two functions at once, but they're sort of complimentary.
     # Might suggest that they could be combined in a later refactor?
-    def test_iterate_nodes_to_elements(self):
+    def test_iterate_nodes_to_elements(self) -> None:
         root = svg()
         g = root.add(Group())
         rect = g.add(Rectangle(attrib={
@@ -35,7 +35,7 @@ class ElementsUtilsTest(TestCase):
         self.assertEqual(type(elements[0]), FillStitch)
         self.assertEqual(elements[0].node, rect)
 
-    def test_iterate_nodes_to_elements_root_embroiderable(self):
+    def test_iterate_nodes_to_elements_root_embroiderable(self) -> None:
         """ Case where the root node is directly embroiderable """
         root = svg()
         rect = root.add(Rectangle(attrib={

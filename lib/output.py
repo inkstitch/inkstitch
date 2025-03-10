@@ -32,11 +32,6 @@ def get_command(stitch):
         return pyembroidery.NEEDLE_AT
 
 
-def _string_to_floats(string):
-    floats = string.split(',')
-    return [float(num) for num in floats]
-
-
 def get_origin(svg, bounding_box):
     (minx, miny, maxx, maxy) = bounding_box
     origin_command = global_command(svg, "origin")

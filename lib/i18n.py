@@ -5,30 +5,27 @@
 
 import gettext
 import os
+from typing import Callable, Tuple
 
 from .utils import cache, get_resource_dir
-
-_ = translation = None
-locale_dir = None
 
 # Use N_ to mark a string for translation but _not_ immediately translate it.
 # reference: https://docs.python.org/3/library/gettext.html#deferred-translations
 # Makefile configures pybabel to treat N_() the same as _()
 
 
-def N_(message): return message
+def N_(message: str) -> str:
+    return message
 
 
-def _set_locale_dir():
-    global locale_dir
+def localize(languages=None) -> Tuple[Callable[[str], str], gettext.NullTranslations]:
     locale_dir = get_resource_dir('locales')
 
-
-def localize(languages=None):
     global translation, _
 
     translation = gettext.translation("inkstitch", locale_dir, fallback=True)
     _ = translation.gettext
+    return (_, translation)
 
 
 @cache
@@ -53,5 +50,4 @@ def get_languages():
     return languages
 
 
-_set_locale_dir()
-localize()
+_, translation = localize()

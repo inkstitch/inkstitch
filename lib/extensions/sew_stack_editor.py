@@ -6,8 +6,8 @@ import sys
 
 import wx
 from wx.lib.agw import ultimatelistctrl as ulc
-from wx.lib.checkbox import GenCheckBox
-from wx.lib.splitter import MultiSplitterWindow
+from wx.lib.checkbox import GenCheckBox  # type:ignore[import-untyped]
+from wx.lib.splitter import MultiSplitterWindow  # type:ignore[import-untyped]
 
 from .base import InkstitchExtension
 from ..debug.debug import debug

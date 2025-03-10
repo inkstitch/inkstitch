@@ -33,7 +33,9 @@ def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_
         splits = splits + jitters * (jitter_sigma / segments)
 
     # sort the splits in case a bad roll transposes any of them
-    return [line.interpolate(x, normalized=True) for x in sorted(splits)]
+    splits.sort()
+
+    return [line.interpolate(x, normalized=True) for x in splits]
 
 
 def split_segment_even_dist(a, b, max_length: float, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
@@ -80,7 +82,7 @@ class AngleInterval():
     # partially based on https://fgiesen.wordpress.com/2015/09/24/intervals-in-modular-arithmetic/
 
     def __init__(self, a: float, b: float, all: bool = False):
-        self.all = all
+        self.isAll = all
         self.a = a
         self.b = b
 
@@ -111,7 +113,7 @@ class AngleInterval():
             return AngleInterval(angleB - 1e-6, angleA + 1e-6)
 
     def containsAngle(self, angle: float):
-        if self.all:
+        if self.isAll:
             return True
         return (angle - self.a) % tau <= (self.b - self.a) % tau
 
@@ -122,9 +124,9 @@ class AngleInterval():
         # assume that each interval contains less than half the circle (or all of it)
         if other is None:
             return None
-        elif self.all:
+        elif self.isAll:
             return other
-        elif other.all:
+        elif other.isAll:
             return self
         elif self.containsAngle(other.a):
             if other.containsAngle(self.b):
@@ -140,7 +142,7 @@ class AngleInterval():
             return None
 
     def cutSegment(self, origin: Point, a: Point, b: Point):
-        if self.all:
+        if self.isAll:
             return None
         segArc = AngleInterval.fromSegment(a - origin, b - origin)
         if segArc is None:
@@ -180,7 +182,8 @@ def cut_segment_with_circle(origin: Point, r: float, a: Point, b: Point) -> Poin
     return a + d*t
 
 
-def take_stitch(start: Point, points: typing.Sequence[Point], idx: int, stitch_length: float, tolerance: float):
+def take_stitch(start: Point, points: typing.Sequence[Point], idx: int, stitch_length: float, tolerance: float) -> \
+        typing.Tuple[typing.Optional[Point], typing.Optional[int]]:
     # Based on a single step of the Zhao-Saalfeld curve simplification algorithm.
     # https://cartogis.org/docs/proceedings/archive/auto-carto-13/pdf/linear-time-sleeve-fitting-polyline-simplification-algorithms.pdf
     # Adds early termination condition based on stitch length.
@@ -207,7 +210,7 @@ def take_stitch(start: Point, points: typing.Sequence[Point], idx: int, stitch_l
     return points[-1], None
 
 
-def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: float, tolerance: float):
+def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: float, tolerance: float) -> typing.List[Point]:
     # Will split a straight line into even-length stitches while still handling curves correctly.
     # Includes end point but not start point.
     if len(points) < 2:
@@ -216,9 +219,9 @@ def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: float, to
     for i in reversed(range(0, len(points) - 1)):
         distLeft[i] = distLeft[i + 1] + points[i].distance(points[i+1])
 
-    i = 1
+    i: typing.Optional[int] = 1
     last = points[0]
-    stitches = []
+    stitches: typing.List[Point] = []
     while i is not None and i < len(points):
         d = last.distance(points[i]) + distLeft[i]
         if d == 0:
@@ -233,7 +236,8 @@ def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: float, to
     return stitches
 
 
-def stitch_curve_randomly(points: typing.Sequence[Point], stitch_length: float, tolerance: float, stitch_length_sigma: float, random_seed: str):
+def stitch_curve_randomly(points: typing.Sequence[Point], stitch_length: float, tolerance: float, stitch_length_sigma: float, random_seed: str) ->\
+      typing.List[Point]:
     min_stitch_length = max(0, stitch_length * (1 - stitch_length_sigma))
     max_stitch_length = stitch_length * (1 + stitch_length_sigma)
     # Will split a straight line into stitches of random length within the range.
@@ -242,7 +246,7 @@ def stitch_curve_randomly(points: typing.Sequence[Point], stitch_length: float, 
     if len(points) < 2:
         return []
 
-    i = 1
+    i: typing.Optional[int] = 1
     last = points[0]
     last_shortened = 0.0
     stitches = []

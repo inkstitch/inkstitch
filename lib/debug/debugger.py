@@ -125,6 +125,10 @@
 #   to see flask server url routes:
 #      - comment out the line self.disable_logging() in run() of lib/api/server.py
 
+# We have some ignores so you don't see errors if you don't have one or more of the debugger libraries installed.
+# But in turn those ignores will cause unused-ignore errors if those libraries aren't installed...
+# mypy: disable-error-code="unused-ignore"
+
 import os
 import sys
 
@@ -148,11 +152,11 @@ def init_debugger(debug_type:str,  ini: dict):
 
     try:
         if debugger == 'vscode':
-            import debugpy
+            import debugpy  # type: ignore[import-untyped, import-not-found]
         elif debugger == 'pycharm':
-            import pydevd_pycharm
+            import pydevd_pycharm  # type: ignore[import-untyped, import-not-found]
         elif debugger == 'pydev':
-            import pydevd
+            import pydevd  # type: ignore[import-untyped, import-not-found]
         elif debugger == 'file':
             pass
         else:
