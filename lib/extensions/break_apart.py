@@ -6,7 +6,7 @@
 from copy import copy
 from typing import List, Tuple, Union
 
-from inkex import errormsg
+from inkex import Path, errormsg
 from shapely.geometry import LinearRing, MultiPolygon, Polygon
 from shapely.ops import polygonize, unary_union
 
@@ -151,14 +151,12 @@ class BreakApart(InkstitchExtension):
                 el.set('id', node_id)
 
             # Set path
-            d = ""
+            d = Path()
             for polygon in polygons:
-                d += "M"
-                for x, y in polygon.exterior.coords:
-                    d += "%s,%s " % (x, y)
-                    d += " "
-                d += "Z"
-            el.set('d', d)
+                path = Path(polygon.exterior.coords)
+                path.close()
+                d += path
+            el.set('d', str(d))
             el.set('transform', get_correction_transform(element.node))
             parent.insert(index, el)
         parent.remove(element.node)
