@@ -85,6 +85,9 @@ class LetteringForceLockStitches(InkstitchExtension):
             if next_element is not None:
                 last_stitch = stitch_groups[-1].stitches[-1]
                 next_stitch = next_element.first_stitch
+                if stitch_groups[-1].color != next_element.color:
+                    last_stitch_group = stitch_groups[-1]
+                    continue
                 if next_stitch is None:
                     # get nearest point
                     shape = next_element.shape
