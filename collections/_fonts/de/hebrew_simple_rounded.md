@@ -1,7 +1,7 @@
 ---
 title: "פשוט מעוגל"
 permalink: /de/fonts/hebrew_simple_rounded/
-last_modified_at: 2025-02-16
+last_modified_at: 2025-03-10
 toc: false
 preview_image:
   - url: /assets/images/fonts/hebrew_simple_rounded.png
@@ -23,8 +23,6 @@ data_title:
      src="/assets/images/fonts/hebrew_simple_rounded.png"
      alt="Hebrew simple  rounded " height="23">
      
-
-
 ## Schriftzeichen
 
 Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
@@ -35,8 +33,6 @@ Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
 {: .font-glyphs }
 
 ## Maße
-
-
 
 ### Hebrew simple rounded font
 Bei einer Skalierung von 100 % ist diese Schrift {{ font1.size }} mm groß.
@@ -51,10 +47,9 @@ bis zu {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font1
 Im Gegensatz zu Hebrew sinple rounded font MUSS diese verkleinerte Schrift mit einem dünneren Faden und 
 einer dünneren Nadel als üblich gestickt werden. Es MUSS eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
+## Besonderheiten
 
-
-## Special features
-Each glyph contains the  original letter, in the form of a hidden black path. These paths are not intended to be embroidered as is, but to help anyone who wants to modify this font. They can be ignored safely.
+Jedes Zeichen enthält die ursprünglichen Pfadinformationen in einem versteckten Pfad. Diese Pfade sind nicht zum Sticken vorgesehen, aber sie können bei einer späteren Schrift-Modifikation behilflich sein. Sie können ohne Weiteres ignoriert werden.
 
 ## Impressionen
 

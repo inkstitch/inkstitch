@@ -6,6 +6,8 @@ sidebar:
   nav: pages
 toc: true
 ---
+Ink/Stitch is in constant development. Here you can see all the changes made after the last official release.
+
 ## [Fonts](/fonts/font-library)
 
 ### New Fonts
