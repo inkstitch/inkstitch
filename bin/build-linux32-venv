@@ -10,7 +10,7 @@ source virtualenv/bin/activate
           
 virtualenv/bin/pip debug
 virtualenv/bin/pip install pycairo
-virtualenv/bin/pip install PyGObject
+virtualenv/bin/pip install PyGObject==3.50.0
 
 virtualenv/bin/pip install wxPython
           
