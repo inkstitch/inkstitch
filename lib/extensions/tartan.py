@@ -7,6 +7,7 @@ import sys
 
 import wx
 import wx.adv
+from inkex import PathElement
 
 from ..gui.abort_message import AbortMessageApp
 from ..gui.simulator import SplitSimulatorWindow
@@ -26,12 +27,12 @@ class Tartan(InkstitchExtension):
     def cancel(self):
         self.cancelled = True
 
-    def get_tartan_elements(self):
+    def get_tartan_elements(self) -> None:
         if self.svg.selection:
             for node in self.svg.selection:
                 self.get_selection(node)
 
-    def get_selection(self, node):
+    def get_selection(self, node: PathElement) -> None:
         if node.TAG == 'g' and not node.get_id().startswith('inkstitch-tartan'):
             for child_node in node.iterchildren():
                 self.get_selection(child_node)
@@ -40,7 +41,7 @@ class Tartan(InkstitchExtension):
             if node.tag in EMBROIDERABLE_TAGS and node.style('fill') is not None:
                 self.elements.add(node)
 
-    def get_outline(self, node):
+    def get_outline(self, node: PathElement) -> PathElement:
         # existing tartans are marked through their outline element
         # we have either selected the element itself or some other element within a tartan group
         if node.get(INKSTITCH_TARTAN, None) is not None:
@@ -57,15 +58,15 @@ class Tartan(InkstitchExtension):
         # if we don't find an existing tartan, return node
         return node
 
-    def effect(self):
+    def effect(self) -> None:
         self.get_tartan_elements()
 
         if not self.elements:
-            app = AbortMessageApp(
+            abort = AbortMessageApp(
                 _("To create a tartan pattern please select at least one element with a fill color."),
                 _("https://inkstitch.org/docs/fill-tools/#tartan")
             )
-            app.MainLoop()
+            abort.MainLoop()
             return
 
         metadata = self.get_inkstitch_metadata()

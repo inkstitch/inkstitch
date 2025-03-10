@@ -4,7 +4,6 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import colorsys
-import re
 
 from inkex import Color
 from pyembroidery.EmbThread import EmbThread
