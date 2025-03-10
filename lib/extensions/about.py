@@ -9,6 +9,6 @@ from .base import InkstitchExtension
 
 class About(InkstitchExtension):
 
-    def effect(self):
+    def effect(self) -> None:
         app = AboutInkstitchApp()
         app.MainLoop()

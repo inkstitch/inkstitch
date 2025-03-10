@@ -4,7 +4,6 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import colorsys
-import re
 
 from inkex import Color
 from pyembroidery.EmbThread import EmbThread
@@ -34,7 +33,7 @@ class ThreadColor(object):
             self.rgb = (color.get_red(), color.get_green(), color.get_blue())
             return
         elif isinstance(color, str):
-            self.rgb = Color(color).to('rgb').get_values(False)
+            self.rgb = tuple(Color(color).to('rgb').get_values(False))
         elif isinstance(color, (list, tuple)):
             self.rgb = tuple(color)
         else:
