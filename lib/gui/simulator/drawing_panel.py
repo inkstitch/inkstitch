@@ -3,6 +3,7 @@
 # Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import time
+from sys import platform
 
 import wx
 from numpy import split
@@ -136,7 +137,11 @@ class DrawingPanel(wx.Panel):
         canvas = wx.GraphicsContext.Create(dc)
 
         self.draw_stitches(canvas)
-        self.draw_scale(canvas)
+
+        if platform != "win32" or self.current_stitch >= 2:
+            # on Windows the positioning of the ruler is a bit problematic
+            # when current_stitch is smaller than 2
+            self.draw_scale(canvas)
 
     def draw_page(self, canvas):
         self._update_background_color()
@@ -233,6 +238,7 @@ class DrawingPanel(wx.Panel):
         scale_lower_left_x = 20
         scale_lower_left_y = canvas_height - 30
 
+        canvas.SetPen(self.black_pen)
         canvas.StrokeLines(((scale_lower_left_x, scale_lower_left_y - 6),
                             (scale_lower_left_x, scale_lower_left_y),
                             (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y),
