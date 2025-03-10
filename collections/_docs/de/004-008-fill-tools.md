@@ -1,7 +1,7 @@
 ---
 title: Füllstich Werkzeuge
 permalink: /de/docs/fill-tools/
-last_modified_at: 2024-05-09
+last_modified_at: 2025-03-10
 toc: true
 ---
 ## Füllstich-Objekte zerlegen
@@ -38,6 +38,23 @@ Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrer
    ![color blocks](/assets/images/docs/color_blocks.png)
 3. Setze einen Wert für den Reihenabstand am Ende der Füllung. Bei einem Wert von 0.00 wird der doppelte Wert des ursprünglichen Reihenabstandes angenommen.
 
+## Knockdown Füllung
+
+Hilfsmethode zum Erzeugen eines Füllbereichs unterhalb aller ausgewählten Elemente, optional mit einem Versatz. Dies kann bei der Arbeit mit hochflorigen Stoffen sehr nützlich sein.
+
+* Elemente auswählen
+* `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Auswahl zu Knockdown-Stich`
+* Einstellungen anpassen
+* Auf `Anwenden` klicken
+* Füllparameter im Parameterdialog anpassen (`Erweiterungen > Ink/Stitch > Parameter`)
+
+### Einstellungen
+
+* Löcher erhalten: bestimmt ob die neue Füllfläche Löcher enthält
+* Versatz: der Versatz (mm) um die Auswahl
+* Methode (rund, Gehrung, Abschrägung): Beeinflusst das Ergebnis um die Ecken herum
+* Gehrungslimit: Beeinflusst das Ergebnis um die Ecken herum
+
 ## Tartan
 
 Der Farbeditor ist unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Tartan` zu finden.
@@ -62,10 +79,6 @@ Das Muster kann als Ganzes rotiert, skaliert (%) und verschoben (mm) werden.
 
 * Farben können über die Schaltfläche `Hinzufügen` hinzugefügt werden
 * Hinter jedem Farbstreifen befindet sich ein `X` mit dem Farben gelöscht werden können
-* 
-
-* Add colors with the `Add` button
-* Remove colors by clicking on `X` behind a stripe
 * Die Streifenpositionen kann durch Klicken und Ziehen auf der Schaltfläche `⁝` geändert werden (mit Vorsicht verwenden).
 * Soll eine Farbe nur als Platzhalter dienen, kann die Ausgabe als Stickpfad über das Kontrollkästchen deaktiviert werden (☑)
 * Soll Kette und Schuss nicht gleich sein, so werden die Farben für die Kettfäden vertikal und für Schussfäden horiztonal ausgegeben

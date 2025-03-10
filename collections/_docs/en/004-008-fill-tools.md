@@ -1,7 +1,7 @@
 ---
 title: "Tools: Fill"
 permalink: /docs/fill-tools/
-last_modified_at: 2024-03-11
+last_modified_at: 2025-03-10
 toc: true
 ---
 ## Break Apart Fill Objects
@@ -46,6 +46,23 @@ Convert to gradient blocks will split a fill with a linear gradient into multipl
 2. Run `Extensions > Ink/Stitch > Tools: Fill > Convert to gradient blocks
 
    ![color blocks](/assets/images/docs/color_blocks.png)
+
+## Knockdown Fill
+
+Helper method to generate a fill area underneath of all selected elements, optionally with an offset. This can be very useful when working with high pile fabric.
+
+* Select elements
+* Open `Extensions > Ink/Stitch > Tools: Fill > Selection to Knockdown Fill`
+* Adapt settings
+* Click apply
+* Adapt fill settings in the params dialog (`Extensions > Ink/Stitch > Params`)
+
+### Settings
+
+* Keep holes: Wether or not the shape should contain holes
+* Offset: The offset (mm) around the selection
+* Method (round, mitre, bevel): Influences how edges will look like
+* Mitre limit:  Influences how edges will look like
 
 ## Tartan
 

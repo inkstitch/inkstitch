@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-02-17
+last_modified_at: 2025-03-10
 sidebar:
   nav: pages
 toc: true
@@ -46,6 +46,9 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [פשוט מעוגל](/fonts/hebrew_font/)
 
   ![פשוט מעוגל](/assets/images/fonts/hebrew_simple_rounded.png)
+* [Ink/Stitch Masego](/fonts/inkstitch-masego/)
+
+  ![Ink/Stitch Masego](/assets/images/fonts/inkstitch_masego.png)
 * [Magnolia tamed](/fonts/magnolia-script/)
 
   ![Magnolia tamed preview](/assets/images/fonts/magnolia_tamed.png)
@@ -69,19 +72,7 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 
 ### Font updates
 
-* Simplify font description [#3350](https://github.com/inkstitch/inkstitch/pull/3350)
-* Namskout: fix Z [#3362](https://github.com/inkstitch/inkstitch/pull/3362)
-* Remove unwanted jumps in ink/stitch medium font [#3295](https://github.com/inkstitch/inkstitch/pull/3295)
-* Make more fonts sortable [#3280](https://github.com/inkstitch/inkstitch/pull/3280)
-* Make most multicolor fonts sortable [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
-* Update dinomouse [#3272](https://github.com/inkstitch/inkstitch/pull/3272)
-* Shojumaru: make the font more robust in case of deformation [#3234](https://github.com/inkstitch/inkstitch/pull/3234)
-* perspective_tricolore_KOR: update font.json [#3202](https://github.com/inkstitch/inkstitch/pull/3202)
-* Cooper marif: json corrections [#3194](https://github.com/inkstitch/inkstitch/pull/3194)
-* roaring_twenties_KOR: improve kerning [#3136](https://github.com/inkstitch/inkstitch/pull/3136)
-* Violin serif: change one rail orientation on capital A [#3129](https://github.com/inkstitch/inkstitch/pull/3129)
-* add some punctuation signs to dejavu, learning curve, milli marif and Kaushan script [#3123](https://github.com/inkstitch/inkstitch/pull/3123)
-
+Numerous updates to existing fonts were made. Thanks to everyone involved!
 
 ## New Extensions
 
@@ -115,6 +106,14 @@ Helps (for example) to remove bean stitches from stitch plans and turn them into
 
 [Read more](/docs/edit/#remove-duplicated-points)
 
+### Selection to Knockdown Fill
+
+`Tools: Fill > Selection to Knockdown Fill` [#3526](https://github.com/inkstitch/inkstitch/pull/3526)
+
+Helper method to generate a fill area underneath of all selected elements, optionally with an offset. This can be very useful when working with high pile fabric.
+
+[Read more](/docs/fill-tools/#knockdown-fill)
+
 ### Set color sort index
 
 `Font management Set color sort index` [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
@@ -147,6 +146,9 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ### Attach commands to selected objects
 
+* We had a lot of complaints that positioning command symbol is rather difficult.
+  So up from now visual commands are directed towards the symbol rather than the touching point of the command connector [#3542](https://github.com/inkstitch/inkstitch/pull/3542).
+  This means, when you position a start symbol, the starting point of the element will be directly at the symbols center (will automatically update older files)
 * Unified start and stop commands for various stitch types (will automatically update older files)
 
 ### Scale Command Symbols
@@ -160,6 +162,13 @@ A tool for font authors which sets a specified color sort index on selected elem
 `Font Management > Font Sampling`
 
 * Add color sort option [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
+
+### Force lock stitches
+
+`Font Management > Force lock stitches`
+
+* Add option to disable lock stitch insertion by distance
+  (for example to add lock stitches only after the last element of the glyph) [#3559](https://github.com/inkstitch/inkstitch/pull/3559)
 
 ### Lettering
 
@@ -227,6 +236,10 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 * Enable expand option [#3462](https://github.com/inkstitch/inkstitch/pull/3462)
 
+### Fill stitch
+
+* Respects the fill-rule setting (behavior at self-intersections of the fill shape) [#3561](https://github.com/inkstitch/inkstitch/pull/3561)
+
 ### Linear gradient fill
 
 * Add randomization options to linear gradient fill [#3311](https://github.com/inkstitch/inkstitch/pull/3311)
@@ -255,6 +268,10 @@ Glyphlist update has been part of the font management and was replaced by the mu
 * Update InkStitch Madeira Rayon.gpl [#3444](https://github.com/inkstitch/inkstitch/pull/3444)
 * Isacord polyester: added 0713 Lemon color [#3225](https://github.com/inkstitch/inkstitch/pull/3225)
 
+## Export / Import
+
+* Update pyembroidery (gcode) to allow customized setting for rgb values [#3530](https://github.com/inkstitch/inkstitch/pull/3530)
+
 ## Developer and Build Stuff
 
 * Sew Stack first steps [#3133](https://github.com/inkstitch/inkstitch/pull/3133)
@@ -266,7 +283,10 @@ Glyphlist update has been part of the font management and was replaced by the mu
   It is only visible in manual installs and will not render, unless `enable_sew_stack` is enabled in the debug config file.
   Please note, that this will alter the start and end points of the elements and should only be used for development purposes.
 
-* Do not use scipy for density map [#3481](https://github.com/inkstitch/inkstitch/pull/3481)
+* Mypy type correctness [#3199](https://github.com/inkstitch/inkstitch/pull/3199)
+* use get_user_dir [#3549](https://github.com/inkstitch/inkstitch/pull/3549)
+* Migrate from appdirs to platformdirs [#3450](https://github.com/inkstitch/inkstitch/pull/3450)
+* remove scipy dependency [#3483](https://github.com/inkstitch/inkstitch/pull/3483) [#3481](https://github.com/inkstitch/inkstitch/pull/3481)
 * Update translations workflow [#3435](https://github.com/inkstitch/inkstitch/pull/3435)
 * Add build for ubuntu 24.04 [#3299](https://github.com/inkstitch/inkstitch/pull/3299)[#3330](https://github.com/inkstitch/inkstitch/pull/3330)
 * Add lmde6 32bit build [#3298](https://github.com/inkstitch/inkstitch/pull/3298)
@@ -281,6 +301,11 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ## Bug Fixes
 
+* Autosatin: more efforts to keep the stroke width consistant [#3563](https://github.com/inkstitch/inkstitch/pull/3563)
+* display stop commands in simulator and print preview [#3545](https://github.com/inkstitch/inkstitch/pull/3545)
+* auto-route: apply transforms to ensure stroke width being unchanged [#3538](https://github.com/inkstitch/inkstitch/pull/3538)
+* lettering: do not add commands on top of command connectors [#3528](https://github.com/inkstitch/inkstitch/pull/3528)
+* Fix jump to trim: NoneType element error [#3525](https://github.com/inkstitch/inkstitch/pull/3525)
 * stroke: as_multi_line_string ignore single point paths [#3491](https://github.com/inkstitch/inkstitch/pull/3491)
 * Adapt simulator slider symbols to dark theme [#3475](https://github.com/inkstitch/inkstitch/pull/3475)
 * Auto-run: try harder to avoid networkx issues [#3457](https://github.com/inkstitch/inkstitch/pull/3457)
@@ -314,7 +339,7 @@ Glyphlist update has been part of the font management and was replaced by the mu
 * fix fills without underpath and bad start-end positions [#3141](https://github.com/inkstitch/inkstitch/pull/3141)
 * satin troubleshoot: do not fail on satins without rails [#3148](https://github.com/inkstitch/inkstitch/pull/3148)
 * auto satin: filter zero length strokes as well [#3139](https://github.com/inkstitch/inkstitch/pull/3139)
-* Disable darkmode symbols for windows (darkmode in windows doesn't work as excepted) (#3144)
+* Disable darkmode symbols for windows (darkmode in windows doesn't work as excepted) [#3144](https://github.com/inkstitch/inkstitch/pull/3144)
 * Fix simulator slider dark theme issue [#3147](https://github.com/inkstitch/inkstitch/pull/3147)
 * skip empty gradient blocks [#3142](https://github.com/inkstitch/inkstitch/pull/3142)
 * Simulator: toggle info and preferences dialog [#3115](https://github.com/inkstitch/inkstitch/pull/3115)

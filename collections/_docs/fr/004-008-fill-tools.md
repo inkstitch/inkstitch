@@ -55,6 +55,23 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 
    Choisir l'espacement final des rangées
 
+## Knockdown Fill
+
+Helper method to generate a fill area underneath of all selected elements, optionally with an offset. This can be very useful when working with high pile fabric.
+
+* Select elements
+* Open `Extensions > Ink/Stitch > Tools: Fill > Selection to Knockdown Fill`
+* Adapt settings
+* Click apply
+* Adapt fill settings in the params dialog (`Extensions > Ink/Stitch > Params`)
+
+### Settings
+
+* Keep holes: Wether or not the shape should contain holes
+* Offset: The offset (mm) around the selection
+* Method (round, mitre, bevel): Influences how edges will look like
+* Mitre limit:  Influences how edges will look like
+
 ## Tartan
 
 L'éditeur de bandes du tartan se trouve dans   `Extensions > Ink/Stitch > Outils: remplissage > Tartan`
