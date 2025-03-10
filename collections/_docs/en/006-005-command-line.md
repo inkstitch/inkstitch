@@ -21,7 +21,7 @@ For example if you want to do export your file into a zip-archive (with a dst, p
 Here an example of outputting a stitch svg for two specific elements, which will hide the original design layers, display the needle points and is positioned right on top of the original design.
 
 ```
-./inkstitch --extension=stitch_plan_preview --id=path1 id=path2 --move-to-side=False --layer-visibility=hidden --needle-points=True input.svg > output.svg
+./inkstitch --extension=stitch_plan_preview --id=path1 --id=path2 --move-to-side=False --layer-visibility=hidden --needle-points=True input.svg > output.svg
 ```
 
 ## Inkscape command line options
