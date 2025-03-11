@@ -416,14 +416,14 @@ def add_symbol(document, group, command, pos):
     return symbol
 
 
-def get_command_pos(element, index, total):
+def get_command_pos(element, index, total, distance=10):
     # Put command symbols on the outline of the shape, spaced evenly around it.
 
     if element.name == "Stroke":
         shape = element.as_multi_line_string()
     else:
         shape = element.shape
-    polygon = ensure_multi_polygon(shape.buffer(0.01)).geoms[-1]
+    polygon = ensure_multi_polygon(shape.buffer(distance)).geoms[-1]
     outline = polygon.exterior
 
     # pick this item's spot around the outline and perturb it a bit to avoid
@@ -443,7 +443,10 @@ def add_commands(element, commands, pos=None):
         group = add_group(svg, element.node, command)
         position = pos
         if position is None:
-            position = get_command_pos(element, i, len(commands))
+            if command in HIDDEN_CONNECTOR_COMMANDS:
+                position = get_command_pos(element, i, len(commands), 0.1)
+            else:
+                position = get_command_pos(element, i, len(commands))
 
         symbol = add_symbol(svg, group, command, position)
         add_connector(svg, symbol, command, element)
