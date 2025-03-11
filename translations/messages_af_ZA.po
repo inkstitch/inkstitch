@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-07 12:43+0000\n"
-"PO-Revision-Date: 2025-03-07 12:43\n"
+"POT-Creation-Date: 2025-03-11 01:29+0000\n"
+"PO-Revision-Date: 2025-03-11 01:29\n"
 "Last-Translator: \n"
 "Language-Team: Afrikaans\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-07 12:43+0000\n"
+"POT-Creation-Date: 2025-03-11 01:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -318,205 +318,210 @@ msgstr ""
 msgid "InfiniPicto is a fun font containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
 msgstr ""
 
-#. description of font in fonts/invercelia
+#. description of font in fonts/inkstitch_masego
 #: inkstitch-fonts-metadata.py:118
+msgid "Masego is a display san-serif typeface."
+msgstr ""
+
+#. description of font in fonts/invercelia
+#: inkstitch-fonts-metadata.py:120
 msgid "Invercelia is a modern two letters monogram font. Enter an upper case letter followed by a lower case letter (for example 'Ac') to get a simple monogram.  Add a ')' at the end and the monogram is framed with a circle (for example 'Ac)'), add an '(' to start (for example '(Ac)' and your monogram is ready for applique, or  try something like '!Ac)' to replace the appliqué by knockdown stitches."
 msgstr ""
 
 #. description of font in fonts/kaushan_script_MAM
-#: inkstitch-fonts-metadata.py:120
+#: inkstitch-fonts-metadata.py:122
 msgid "Kaushan Script MAM is a script satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:122
+#: inkstitch-fonts-metadata.py:124
 msgid "Learning curve is a small running stitch script font."
 msgstr ""
 
 #. description of font in fonts/lobster_AGS
-#: inkstitch-fonts-metadata.py:124
+#: inkstitch-fonts-metadata.py:126
 msgid " Lobster AGS is a script satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/magnolia_KOR
-#: inkstitch-fonts-metadata.py:126
+#: inkstitch-fonts-metadata.py:128
 msgid "Magnolia KOR is a script satin font."
 msgstr ""
 
 #. description of font in fonts/magnolia_bicolor
-#: inkstitch-fonts-metadata.py:128
+#: inkstitch-fonts-metadata.py:130
 msgid "Magnolia bicolor is a  larger  bicolor variation of Magnolia font."
 msgstr ""
 
 #. description of font in fonts/magnolia_small
-#: inkstitch-fonts-metadata.py:130
+#: inkstitch-fonts-metadata.py:132
 msgid "Magnolia Small is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/magnolia_tamed
-#: inkstitch-fonts-metadata.py:132
+#: inkstitch-fonts-metadata.py:134
 msgid "This is a less wild bicolor variation of Magnolia font"
 msgstr ""
 
 #. description of font in fonts/malika
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:136
 msgid "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch."
 msgstr ""
 
 #. description of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:138
 msgid "Manuskript Gothisch is a satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:140
 msgid "MarcellusSC-FI is a small capital satin font. It contains 107 glyphs covering most Western European languages."
 msgstr ""
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:142
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
 msgstr ""
 
 #. description of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:142
+#: inkstitch-fonts-metadata.py:144
 msgid "Millimarif-bold20 is a  bold satin font."
 msgstr ""
 
 #. description of font in fonts/mimosa_large
-#: inkstitch-fonts-metadata.py:144
+#: inkstitch-fonts-metadata.py:146
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
 msgstr ""
 
 #. description of font in fonts/mimosa_medium
-#: inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:148
 msgid "Mimosa Medium is a satin font that looks dotty."
 msgstr ""
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:148
+#: inkstitch-fonts-metadata.py:150
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
 msgstr ""
 
 #. description of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:150
+#: inkstitch-fonts-metadata.py:152
 msgid "Namskout AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr ""
 
 #. description of font in fonts/namskout_relief
-#: inkstitch-fonts-metadata.py:152
+#: inkstitch-fonts-metadata.py:154
 msgid "Namskout relief is an altered version of Namskout AGS for embossed letters."
 msgstr ""
 
 #. description of font in fonts/namskout_tartan
-#: inkstitch-fonts-metadata.py:154
+#: inkstitch-fonts-metadata.py:156
 msgid "Namskout Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals."
 msgstr ""
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:156
+#: inkstitch-fonts-metadata.py:158
 msgid "NickAinley is a tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn."
 msgstr ""
 
 #. description of font in fonts/ondulamarif_Medium
-#: inkstitch-fonts-metadata.py:158
+#: inkstitch-fonts-metadata.py:160
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
 msgstr ""
 
 #. description of font in fonts/ondulamarif_S
-#: inkstitch-fonts-metadata.py:160
+#: inkstitch-fonts-metadata.py:162
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
 msgstr ""
 
 #. description of font in fonts/ondulamarif_XL
-#: inkstitch-fonts-metadata.py:162
+#: inkstitch-fonts-metadata.py:164
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
 msgstr ""
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:164
+#: inkstitch-fonts-metadata.py:166
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr ""
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:166
+#: inkstitch-fonts-metadata.py:168
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr ""
 
 #. description of font in fonts/perspective_tricolore_KOR
-#: inkstitch-fonts-metadata.py:168
+#: inkstitch-fonts-metadata.py:170
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
 msgstr ""
 
 #. description of font in fonts/pixel10
-#: inkstitch-fonts-metadata.py:170
+#: inkstitch-fonts-metadata.py:172
 msgid "Pixel 10 is a satin pixel font."
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:172
+#: inkstitch-fonts-metadata.py:174
 msgid "Roaring Twenties KOR is a mix of satin and bean stitches."
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:174
+#: inkstitch-fonts-metadata.py:176
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:176
+#: inkstitch-fonts-metadata.py:178
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:178
+#: inkstitch-fonts-metadata.py:180
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
 msgstr ""
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:180
+#: inkstitch-fonts-metadata.py:182
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
 msgstr ""
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:182
+#: inkstitch-fonts-metadata.py:184
 msgid "Ink/Stitch Small Font is suited for small characters."
 msgstr ""
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:184
+#: inkstitch-fonts-metadata.py:186
 #, python-brace-format
 msgid " Sortefax XL Initials is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
 msgstr ""
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:186
+#: inkstitch-fonts-metadata.py:188
 #, python-brace-format
 msgid "Sortefax  Medium Initials is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
 msgstr ""
 
 #. description of font in fonts/sunset
-#: inkstitch-fonts-metadata.py:188
+#: inkstitch-fonts-metadata.py:190
 msgid "3 colors satin column font"
 msgstr ""
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:190
+#: inkstitch-fonts-metadata.py:192
 msgid "TT  Directors is a satin font suited for directing."
 msgstr ""
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:192
+#: inkstitch-fonts-metadata.py:194
 msgid "TT Masters is a satin font suited for heavy typing :)"
 msgstr ""
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:194
+#: inkstitch-fonts-metadata.py:196
 msgid "Violin Serif is a condensed serif satin font."
 msgstr ""
 
 #. description of font in fonts/western_light
-#: inkstitch-fonts-metadata.py:196
+#: inkstitch-fonts-metadata.py:198
 msgid "Western light is a light fill western style font."
 msgstr ""
 
@@ -987,7 +992,7 @@ msgstr ""
 msgid "Jump destination for Stop commands (a.k.a. \"Frame Out position\")."
 msgstr ""
 
-#: lib/commands.py:274
+#: lib/commands.py:276
 #, python-format
 msgid "Error: there is more than one %(command)s command in the document, but there can only be one.  Please remove all but one."
 msgstr ""
@@ -997,26 +1002,26 @@ msgstr ""
 #. command name to them.  Contents of %(description)s are in a separate
 #. translation
 #. string.
-#: lib/commands.py:281
+#: lib/commands.py:283
 #, python-format
 msgid "%(command)s: %(description)s"
 msgstr ""
 
-#: lib/commands.py:350 lib/commands.py:470
+#: lib/commands.py:352 lib/commands.py:472
 msgid "Ink/Stitch Command"
 msgstr ""
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:389
+#: lib/commands.py:391
 msgid "connector"
 msgstr ""
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:410
+#: lib/commands.py:412
 msgid "command marker"
 msgstr ""
 
-#: lib/commands.py:459
+#: lib/commands.py:461
 msgid "Please select a layer to include layer commands."
 msgstr ""
 
@@ -1061,126 +1066,126 @@ msgstr ""
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr ""
 
-#: lib/elements/element.py:247 lib/gui/preferences.py:59
+#: lib/elements/element.py:249 lib/gui/preferences.py:59
 #: lib/gui/preferences.py:106
 msgid "Minimum stitch length"
 msgstr ""
 
-#: lib/elements/element.py:248
+#: lib/elements/element.py:250
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
 msgstr ""
 
-#: lib/elements/element.py:258 lib/gui/preferences.py:41
+#: lib/elements/element.py:260 lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
 msgstr ""
 
-#: lib/elements/element.py:259
+#: lib/elements/element.py:261
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
 msgstr ""
 
-#: lib/elements/element.py:269
+#: lib/elements/element.py:271
 msgid "Allow lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:270
+#: lib/elements/element.py:272
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr ""
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:275
+#: lib/elements/element.py:277
 msgid "Both"
 msgstr ""
 
-#: lib/elements/element.py:275
+#: lib/elements/element.py:277
 msgid "Before"
 msgstr ""
 
-#: lib/elements/element.py:275
+#: lib/elements/element.py:277
 msgid "After"
 msgstr ""
 
-#: lib/elements/element.py:275
+#: lib/elements/element.py:277
 msgid "Neither"
 msgstr ""
 
-#: lib/elements/element.py:284
+#: lib/elements/element.py:286
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:285
+#: lib/elements/element.py:287
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr ""
 
-#: lib/elements/element.py:297
+#: lib/elements/element.py:299
 msgid "Tack stitch"
 msgstr ""
 
-#: lib/elements/element.py:298
+#: lib/elements/element.py:300
 msgid "Tack down stitch type"
 msgstr ""
 
-#: lib/elements/element.py:308 lib/elements/element.py:354
+#: lib/elements/element.py:310 lib/elements/element.py:356
 msgid "Custom path"
 msgstr ""
 
-#: lib/elements/element.py:309
+#: lib/elements/element.py:311
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr ""
 
-#: lib/elements/element.py:319 lib/elements/element.py:331
+#: lib/elements/element.py:321 lib/elements/element.py:333
 msgid "Scale tack stitch"
 msgstr ""
 
-#: lib/elements/element.py:320
+#: lib/elements/element.py:322
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr ""
 
-#: lib/elements/element.py:332
+#: lib/elements/element.py:334
 msgid "Scale tack stitch by this percentage."
 msgstr ""
 
-#: lib/elements/element.py:343
+#: lib/elements/element.py:345
 msgid "Lock stitch"
 msgstr ""
 
-#: lib/elements/element.py:344
+#: lib/elements/element.py:346
 msgid "Lock stitch type"
 msgstr ""
 
-#: lib/elements/element.py:355
+#: lib/elements/element.py:357
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr ""
 
-#: lib/elements/element.py:365 lib/elements/element.py:377
+#: lib/elements/element.py:367 lib/elements/element.py:379
 msgid "Scale lock stitch"
 msgstr ""
 
-#: lib/elements/element.py:366
+#: lib/elements/element.py:368
 msgid "Set length of lock stitches (mm)."
 msgstr ""
 
-#: lib/elements/element.py:378
+#: lib/elements/element.py:380
 msgid "Scale lock stitch by this percentage."
 msgstr ""
 
-#: lib/elements/element.py:390
+#: lib/elements/element.py:392
 msgid "Trim After"
 msgstr ""
 
-#: lib/elements/element.py:391
+#: lib/elements/element.py:393
 msgid "Add a TRIM command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:400
+#: lib/elements/element.py:402
 msgid "Stop After"
 msgstr ""
 
-#: lib/elements/element.py:401
+#: lib/elements/element.py:403
 msgid "Add a STOP command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:685
+#: lib/elements/element.py:687
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr ""
 
@@ -1921,7 +1926,7 @@ msgstr ""
 msgid "\"S\" Stitch"
 msgstr ""
 
-#: lib/elements/satin_column.py:115 lib/stitch_plan/lock_stitch.py:219
+#: lib/elements/satin_column.py:115 lib/stitch_plan/lock_stitch.py:220
 msgid "Zig-zag"
 msgstr ""
 
@@ -1958,7 +1963,7 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: lib/elements/satin_column.py:157 lib/stitch_plan/lock_stitch.py:217
+#: lib/elements/satin_column.py:157 lib/stitch_plan/lock_stitch.py:218
 #: inx/inkstitch_break_apart.inx:10
 msgid "Simple"
 msgstr ""
@@ -2824,7 +2829,7 @@ msgstr ""
 msgid "Font Sample"
 msgstr ""
 
-#: lib/extensions/lettering_force_lock_stitches.py:31
+#: lib/extensions/lettering_force_lock_stitches.py:34
 msgid "The maximum value is smaller than the minimum value."
 msgstr ""
 
@@ -3241,7 +3246,7 @@ msgstr ""
 #: inx/inkstitch_knockdown_fill.inx:27
 #: inx/inkstitch_lettering_along_path.inx:19
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
-#: inx/inkstitch_lettering_force_lock_stitches.inx:16
+#: inx/inkstitch_lettering_force_lock_stitches.inx:22
 #: inx/inkstitch_lettering_generate_json.inx:135
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
@@ -3857,32 +3862,32 @@ msgstr ""
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator/drawing_panel.py:16 inx/inkstitch_output_GCODE.inx:29
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:16
+#: lib/gui/simulator/drawing_panel.py:17
 msgid "JUMP"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:16
+#: lib/gui/simulator/drawing_panel.py:17
 msgid "TRIM"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:16 inx/inkstitch_output_GCODE.inx:33
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:33
 msgid "STOP"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:16 inx/inkstitch_output_GCODE.inx:31
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:287
+#: lib/gui/simulator/drawing_panel.py:293
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:430
+#: lib/gui/simulator/drawing_panel.py:436
 #, python-format
 msgid "Command: %s"
 msgstr ""
@@ -4286,25 +4291,25 @@ msgstr ""
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:113
+#: lib/output.py:108
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr ""
 
-#: lib/output.py:118
+#: lib/output.py:113
 msgid "Couldn't save embrodiery file."
 msgstr ""
 
-#: lib/output.py:120
+#: lib/output.py:115
 #, python-brace-format
 msgid "There are {num_color_changes} color changes in your design. This is way too many."
 msgstr ""
 
-#: lib/output.py:122
+#: lib/output.py:117
 msgid "Please reduce color changes. Find more information on our website:"
 msgstr ""
 
-#: lib/output.py:124
+#: lib/output.py:119
 msgid "https://inkstitch.org/docs/faq/#too-many-color-changes"
 msgstr ""
 
@@ -4386,35 +4391,35 @@ msgstr ""
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:34 lib/stitch_plan/lock_stitch.py:220
+#: lib/stitch_plan/lock_stitch.py:35 lib/stitch_plan/lock_stitch.py:221
 msgid "Custom"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:211
+#: lib/stitch_plan/lock_stitch.py:212
 msgid "Half Stitch"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:212
+#: lib/stitch_plan/lock_stitch.py:213
 msgid "Arrow"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:213
+#: lib/stitch_plan/lock_stitch.py:214
 msgid "Back and forth"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:214
+#: lib/stitch_plan/lock_stitch.py:215
 msgid "Bowtie"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:215
+#: lib/stitch_plan/lock_stitch.py:216
 msgid "Cross"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:216
+#: lib/stitch_plan/lock_stitch.py:217
 msgid "Star"
 msgstr ""
 
-#: lib/stitch_plan/lock_stitch.py:218
+#: lib/stitch_plan/lock_stitch.py:219
 msgid "Triangle"
 msgstr ""
 
@@ -4422,7 +4427,7 @@ msgstr ""
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr ""
 
-#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:383
+#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:413
 msgid "Auto-Route"
 msgstr ""
 
@@ -4438,14 +4443,14 @@ msgstr ""
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:556
+#: lib/stitches/auto_satin.py:592
 #, python-format
 msgid "AutoSatin %d"
 msgstr ""
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:559
+#: lib/stitches/auto_satin.py:595
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr ""
@@ -5224,7 +5229,7 @@ msgstr ""
 #: inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_lettering_along_path.inx:29
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
-#: inx/inkstitch_lettering_force_lock_stitches.inx:27
+#: inx/inkstitch_lettering_force_lock_stitches.inx:33
 #: inx/inkstitch_lettering_generate_json.inx:139
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
@@ -6552,7 +6557,7 @@ msgstr ""
 #: inx/inkstitch_lettering_custom_font_dir.inx:27
 #: inx/inkstitch_lettering_edit_json.inx:12
 #: inx/inkstitch_lettering_font_sample.inx:12
-#: inx/inkstitch_lettering_force_lock_stitches.inx:38
+#: inx/inkstitch_lettering_force_lock_stitches.inx:44
 #: inx/inkstitch_lettering_generate_json.inx:12
 #: inx/inkstitch_lettering_remove_kerning.inx:33
 #: inx/inkstitch_lettering_set_color_sort_index.inx:30
@@ -6577,31 +6582,39 @@ msgstr ""
 msgid "Restrict to Satin"
 msgstr ""
 
-#: inx/inkstitch_lettering_force_lock_stitches.inx:11
-msgid "Minimum distance (mm)"
-msgstr ""
-
-#: inx/inkstitch_lettering_force_lock_stitches.inx:12
-msgid "Maximum distance (mm)"
+#: inx/inkstitch_lettering_force_lock_stitches.inx:14
+msgid "Add forced lock stitches by distance"
 msgstr ""
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:14
-msgid "Add force lock stitches attribute to the last element of each glyph"
+msgid "Add lock stitches when the following jump stitch is in the specified size range"
 msgstr ""
 
-#: inx/inkstitch_lettering_force_lock_stitches.inx:17
-msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
+#: inx/inkstitch_lettering_force_lock_stitches.inx:15
+msgid "Minimum distance (mm)"
+msgstr ""
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:16
+msgid "Maximum distance (mm)"
+msgstr ""
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:20
+msgid "Add forced lock stitches to the last element of each glyph"
 msgstr ""
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
+msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
+msgstr ""
+
+#: inx/inkstitch_lettering_force_lock_stitches.inx:29
 msgid "This extension has been build to help font authors to define \"force lock stitches\"-attributes automatically if they are placed in a predefined distance to the next object."
 msgstr ""
 
-#: inx/inkstitch_lettering_force_lock_stitches.inx:28
+#: inx/inkstitch_lettering_force_lock_stitches.inx:34
 msgid "https://inkstitch.org/docs/font-tools/#force-lock-stitches"
 msgstr ""
 
-#: inx/inkstitch_lettering_force_lock_stitches.inx:35
+#: inx/inkstitch_lettering_force_lock_stitches.inx:41
 msgid "Sets the forces lock stitch attribute on elements when the next element lies within a specified distance"
 msgstr ""
 
