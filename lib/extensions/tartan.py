@@ -7,7 +7,7 @@ import sys
 
 import wx
 import wx.adv
-from inkex import PathElement
+from inkex import ShapeElement
 
 from ..gui.abort_message import AbortMessageApp
 from ..gui.simulator import SplitSimulatorWindow
@@ -24,7 +24,7 @@ class Tartan(InkstitchExtension):
         self.cancelled = False
         InkstitchExtension.__init__(self, *args, **kwargs)
 
-    def cancel(self):
+    def cancel(self) -> None:
         self.cancelled = True
 
     def get_tartan_elements(self) -> None:
@@ -32,7 +32,7 @@ class Tartan(InkstitchExtension):
             for node in self.svg.selection:
                 self.get_selection(node)
 
-    def get_selection(self, node: PathElement) -> None:
+    def get_selection(self, node: ShapeElement) -> None:
         if node.TAG == 'g' and not node.get_id().startswith('inkstitch-tartan'):
             for child_node in node.iterchildren():
                 self.get_selection(child_node)
@@ -41,7 +41,7 @@ class Tartan(InkstitchExtension):
             if node.tag in EMBROIDERABLE_TAGS and node.style('fill') is not None:
                 self.elements.add(node)
 
-    def get_outline(self, node: PathElement) -> PathElement:
+    def get_outline(self, node: ShapeElement) -> ShapeElement:
         # existing tartans are marked through their outline element
         # we have either selected the element itself or some other element within a tartan group
         if node.get(INKSTITCH_TARTAN, None) is not None:

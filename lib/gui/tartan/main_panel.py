@@ -9,7 +9,7 @@ from copy import copy
 import wx
 import wx.adv
 
-from ...elements import FillStitch, nodes_to_elements
+from ...elements import nodes_to_elements
 from ...exceptions import InkstitchException, format_uncaught_exception
 from ...i18n import _
 from ...stitch_plan import stitch_groups_to_stitch_plan
@@ -213,16 +213,17 @@ class TartanMainPanel(wx.Panel):
             stitch_groups = self._get_svg_stitch_groups()
         else:
             self.save_settings()
+            elements = nodes_to_elements(self.elements)
             stitch_groups = []
             previous_stitch_group = None
             next_elements = [None]
-            if len(self.elements) > 1:
-                next_elements = self.elements[1:] + next_elements
-            for element, next_element in zip(self.elements, next_elements):
+            if len(elements) > 1:
+                next_elements = elements[1:] + next_elements
+            for element, next_element in zip(elements, next_elements):
                 check_stop_flag()
                 try:
                     # copy the embroidery element to drop the cache
-                    stitch_groups.extend(copy(FillStitch(element)).embroider(previous_stitch_group, next_element))
+                    stitch_groups.extend(element.embroider(previous_stitch_group, next_element))
                     if stitch_groups:
                         previous_stitch_group = stitch_groups[-1]
                 except (SystemExit, ExitThread):

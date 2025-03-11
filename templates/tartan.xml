@@ -3,7 +3,7 @@
     <name>Tartan</name>
     <id>org.{{ id_inkstitch }}.tartan</id>
     <param name="extension" type="string" gui-hidden="true">tartan</param>
-    <effect implements-custom-gui="true">
+    <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
         <icon>{{ icon_path }}inx/tartan.svg</icon>
         <menu-tip>Tartan stripe editor</menu-tip>
