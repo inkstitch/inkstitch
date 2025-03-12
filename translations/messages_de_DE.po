@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-11 01:29+0000\n"
-"PO-Revision-Date: 2025-03-11 01:29\n"
+"POT-Creation-Date: 2025-03-12 01:27+0000\n"
+"PO-Revision-Date: 2025-03-12 01:28\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-11 01:29+0000\n"
+"POT-Creation-Date: 2025-03-12 01:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1007,7 +1007,7 @@ msgstr "Fehler: Es gibt mehr als einen %(command)s-Befehl in dem Dokument, aber 
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:352 lib/commands.py:472
+#: lib/commands.py:352 lib/commands.py:475
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch Befehl"
 
@@ -1021,7 +1021,7 @@ msgstr "Verknüpfung"
 msgid "command marker"
 msgstr "Befehlszeichen"
 
-#: lib/commands.py:461
+#: lib/commands.py:464
 msgid "Please select a layer to include layer commands."
 msgstr "Für Befehle, die sich auf eine Ebene beziehen, bitte eine Ebene auswählen."
 
@@ -6608,11 +6608,11 @@ msgstr "Auf Satinsäulen beschränken"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:14
 msgid "Add forced lock stitches by distance"
-msgstr ""
+msgstr "\"Vernähen erzwingen\" nach Abstandsparametern einfügen"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:14
 msgid "Add lock stitches when the following jump stitch is in the specified size range"
-msgstr ""
+msgstr "Füge das Attribut \"vernähen erzwingen\" abhängig vom Abstand zum nächsten Element hinzu"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:15
 msgid "Minimum distance (mm)"
@@ -6624,7 +6624,7 @@ msgstr "Maximaler Abstand (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:20
 msgid "Add forced lock stitches to the last element of each glyph"
-msgstr ""
+msgstr "Füge das Attribut \"vernähen erzwingen\" dem jeweils letzten Element eines Schriftzeichens hinzu"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."

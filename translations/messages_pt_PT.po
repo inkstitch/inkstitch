@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-11 01:29+0000\n"
-"PO-Revision-Date: 2025-03-11 01:29\n"
+"POT-Creation-Date: 2025-03-12 01:27+0000\n"
+"PO-Revision-Date: 2025-03-12 01:28\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-11 01:29+0000\n"
+"POT-Creation-Date: 2025-03-12 01:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1007,7 +1007,7 @@ msgstr ""
 msgid "%(command)s: %(description)s"
 msgstr ""
 
-#: lib/commands.py:352 lib/commands.py:472
+#: lib/commands.py:352 lib/commands.py:475
 msgid "Ink/Stitch Command"
 msgstr ""
 
@@ -1021,7 +1021,7 @@ msgstr ""
 msgid "command marker"
 msgstr ""
 
-#: lib/commands.py:461
+#: lib/commands.py:464
 msgid "Please select a layer to include layer commands."
 msgstr ""
 
