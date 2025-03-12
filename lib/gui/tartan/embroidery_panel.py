@@ -181,8 +181,8 @@ class EmbroideryPanel(wx.Panel):
         self.panel.update_preview()
 
     def on_param_change(self, attribute, event):
-        for element in self.panel.nodes:
-            element.set(f'inkstitch:{attribute}', str(event.GetEventObject().GetValue()))
+        for node in self.panel.nodes:
+            node.set(f'inkstitch:{attribute}', str(event.GetEventObject().GetValue()))
         self.panel.update_preview()
 
     def set_stitch_type(self, choice):
