@@ -20,14 +20,14 @@ from .base import InkstitchExtension
 
 class Tartan(InkstitchExtension):
     def __init__(self, *args, **kwargs):
-        self.elements = set()
+        self.nodes = set()
         self.cancelled = False
         InkstitchExtension.__init__(self, *args, **kwargs)
 
     def cancel(self) -> None:
         self.cancelled = True
 
-    def get_tartan_elements(self) -> None:
+    def get_tartan_nodes(self) -> None:
         if self.svg.selection:
             for node in self.svg.selection:
                 self.get_selection(node)
@@ -39,7 +39,7 @@ class Tartan(InkstitchExtension):
         else:
             node = self.get_outline(node)
             if node.tag in EMBROIDERABLE_TAGS and node.style('fill') is not None:
-                self.elements.add(node)
+                self.nodes.add(node)
 
     def get_outline(self, node: ShapeElement) -> ShapeElement:
         # existing tartans are marked through their outline element
@@ -59,9 +59,9 @@ class Tartan(InkstitchExtension):
         return node
 
     def effect(self) -> None:
-        self.get_tartan_elements()
+        self.get_tartan_nodes()
 
-        if not self.elements:
+        if not self.nodes:
             abort = AbortMessageApp(
                 _("To create a tartan pattern please select at least one element with a fill color."),
                 _("https://inkstitch.org/docs/fill-tools/#tartan")
@@ -76,7 +76,7 @@ class Tartan(InkstitchExtension):
         frame = SplitSimulatorWindow(
             title=_("Ink/Stitch Tartan"),
             panel_class=TartanMainPanel,
-            elements=list(self.elements),
+            nodes=list(self.nodes),
             on_cancel=self.cancel,
             metadata=metadata,
             background_color=background_color,

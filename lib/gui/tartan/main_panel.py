@@ -25,10 +25,10 @@ from . import CodePanel, CustomizePanel, EmbroideryPanel, HelpPanel
 
 class TartanMainPanel(wx.Panel):
 
-    def __init__(self, parent, simulator, elements, metadata=None, background_color='white'):
+    def __init__(self, parent, simulator, nodes, metadata=None, background_color='white'):
         self.parent = parent
         self.simulator = simulator
-        self.elements = elements
+        self.nodes = nodes
         self.palette = Palette()
         self.metadata = metadata or dict()
         self.background_color = background_color
@@ -129,7 +129,7 @@ class TartanMainPanel(wx.Panel):
         })
 
         try:
-            self.settings.update(json.loads(self.elements[0].get(INKSTITCH_TARTAN)))
+            self.settings.update(json.loads(self.nodes[0].get(INKSTITCH_TARTAN)))
         except (TypeError, ValueError, IndexError):
             pass
 
@@ -147,13 +147,13 @@ class TartanMainPanel(wx.Panel):
         self.embroidery_panel.angle_weft.SetValue(self.settings.angle_weft)
         self.embroidery_panel.min_stripe_width.SetValue(self.settings.min_stripe_width)
         self.embroidery_panel.svg_bean_stitch_repeats.SetValue(self.settings.bean_stitch_repeats)
-        self.embroidery_panel.stitch_angle.SetValue(self.elements[0].get('inkstitch:tartan_angle', -45))
-        self.embroidery_panel.rows_per_thread.SetValue(self.elements[0].get('inkstitch:rows_per_thread', 2))
-        self.embroidery_panel.row_spacing.SetValue(self.elements[0].get('inkstitch:row_spacing_mm', 0.25))
-        underlay = self.elements[0].get('inkstitch:fill_underlay', "True").lower() in ('yes', 'y', 'true', 't', '1')
+        self.embroidery_panel.stitch_angle.SetValue(self.nodes[0].get('inkstitch:tartan_angle', -45))
+        self.embroidery_panel.rows_per_thread.SetValue(self.nodes[0].get('inkstitch:rows_per_thread', 2))
+        self.embroidery_panel.row_spacing.SetValue(self.nodes[0].get('inkstitch:row_spacing_mm', 0.25))
+        underlay = self.nodes[0].get('inkstitch:fill_underlay', "True").lower() in ('yes', 'y', 'true', 't', '1')
         self.embroidery_panel.underlay.SetValue(underlay)
-        self.embroidery_panel.herringbone.SetValue(self.elements[0].get('inkstitch:herringbone_width_mm', 0))
-        self.embroidery_panel.bean_stitch_repeats.SetValue(self.elements[0].get('inkstitch:bean_stitch_repeats', '0'))
+        self.embroidery_panel.herringbone.SetValue(self.nodes[0].get('inkstitch:herringbone_width_mm', 0))
+        self.embroidery_panel.bean_stitch_repeats.SetValue(self.nodes[0].get('inkstitch:bean_stitch_repeats', '0'))
 
         self.update_from_code()
 
@@ -163,9 +163,9 @@ class TartanMainPanel(wx.Panel):
         self.customize_panel.update_warp_weft()
 
     def save_settings(self):
-        """Save the settings into the SVG elements."""
-        for element in self.elements:
-            element.set(INKSTITCH_TARTAN, json.dumps(self.settings))
+        """Save the settings into the SVG nodes."""
+        for node in self.nodes:
+            node.set(INKSTITCH_TARTAN, json.dumps(self.settings))
 
     def get_preset_data(self):
         # called by self.presets_panel
@@ -213,7 +213,7 @@ class TartanMainPanel(wx.Panel):
             stitch_groups = self._get_svg_stitch_groups()
         else:
             self.save_settings()
-            elements = nodes_to_elements(self.elements)
+            elements = nodes_to_elements(self.nodes)
             stitch_groups = []
             previous_stitch_group = None
             next_elements = [None]
@@ -223,7 +223,7 @@ class TartanMainPanel(wx.Panel):
                 check_stop_flag()
                 try:
                     # copy the embroidery element to drop the cache
-                    stitch_groups.extend(element.embroider(previous_stitch_group, next_element))
+                    stitch_groups.extend(copy(element).embroider(previous_stitch_group, next_element))
                     if stitch_groups:
                         previous_stitch_group = stitch_groups[-1]
                 except (SystemExit, ExitThread):
@@ -243,19 +243,19 @@ class TartanMainPanel(wx.Panel):
     def _get_svg_stitch_groups(self):
         stitch_groups = []
         previous_stitch_group = None
-        for element in self.elements:
-            parent = element.getparent()
-            embroidery_elements = nodes_to_elements(parent.iterdescendants())
+        for node in self.nodes:
+            parent = node.getparent()
+            elements = nodes_to_elements(parent.iterdescendants())
             next_elements = [None]
-            if len(embroidery_elements) > 1:
-                next_elements = embroidery_elements[1:] + next_elements
-            for embroidery_element, next_element in zip(embroidery_elements, next_elements):
+            if len(elements) > 1:
+                next_elements = elements[1:] + next_elements
+            for element, next_element in zip(elements, next_elements):
                 check_stop_flag()
-                if embroidery_element.node == element:
+                if element.node == node:
                     continue
                 try:
                     # copy the embroidery element to drop the cache
-                    stitch_groups.extend(copy(embroidery_element).embroider(previous_stitch_group, next_element))
+                    stitch_groups.extend(copy(element).embroider(previous_stitch_group, next_element))
                     if stitch_groups:
                         previous_stitch_group = stitch_groups[-1]
                 except InkstitchException:
@@ -265,12 +265,12 @@ class TartanMainPanel(wx.Panel):
         return stitch_groups
 
     def update_tartan(self):
-        for element in self.elements:
+        for node in self.nodes:
             check_stop_flag()
             if self.settings['output'] == 'svg':
-                TartanSvgGroup(self.settings).generate(element)
+                TartanSvgGroup(self.settings).generate(node)
             else:
-                prepare_tartan_fill_element(element)
+                prepare_tartan_fill_element(node)
 
     def on_stitch_plan_rendered(self, stitch_plan):
         self.simulator.stop()

@@ -147,13 +147,14 @@ class EmbroideryPanel(wx.Panel):
         if output == "svg":
             self.embroidery_sizer.Show(self.svg_elements_sizer)
             self.embroidery_sizer.Hide(self.embroidery_element_sizer)
-            for element in self.panel.elements:
-                element.pop('inkstitch:fill_method')
+            for node in self.panel.nodes:
+                node.pop('inkstitch:fill_method')
         else:
             self.embroidery_sizer.Show(self.embroidery_element_sizer)
             self.embroidery_sizer.Hide(self.svg_elements_sizer)
-            for element in self.panel.elements:
-                element.set('inkstitch:fill_method', 'tartan_fill')
+            for node in self.panel.nodes:
+                node.set('inkstitch:fill_method', 'tartan_fill')
+                node.style['display'] = "inline"
         self.panel.settings['output'] = output
         self.Layout()
         self.panel.update_preview()
@@ -180,7 +181,7 @@ class EmbroideryPanel(wx.Panel):
         self.panel.update_preview()
 
     def on_param_change(self, attribute, event):
-        for element in self.panel.elements:
+        for element in self.panel.nodes:
             element.set(f'inkstitch:{attribute}', str(event.GetEventObject().GetValue()))
         self.panel.update_preview()
 
