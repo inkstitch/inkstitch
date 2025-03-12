@@ -16,7 +16,7 @@ class ApplyPalette(InkstitchExtension):
     Applies colors of a color palette to elements
     '''
 
-    def effect(self):
+    def effect(self) -> None:
         # Remove selection, we want all the elements in the document
         self.svg.selection.clear()
 
@@ -32,7 +32,7 @@ class ApplyPalette(InkstitchExtension):
         if palette_choice.palette:
             self.apply_palette(palette_choice.palette)
 
-    def apply_palette(self, palette_name):
+    def apply_palette(self, palette_name: str) -> None:
         palette = ThreadCatalog().get_palette_by_name(palette_name)
 
         # Iterate through the color blocks to apply colors

@@ -4,8 +4,9 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from copy import copy
+from typing import List, Tuple, Union
 
-import inkex
+from inkex import Path, errormsg
 from shapely.geometry import LinearRing, MultiPolygon, Polygon
 from shapely.ops import polygonize, unary_union
 
@@ -26,9 +27,9 @@ class BreakApart(InkstitchExtension):
         self.arg_parser.add_argument("-m", "--method", type=int, default=1, dest="method")
         self.minimum_size = 5
 
-    def effect(self):  # noqa: C901
+    def effect(self) -> None:  # noqa: C901
         if not self.svg.selection:
-            inkex.errormsg(_("Please select one or more fill areas to break apart."))
+            errormsg(_("Please select one or more fill areas to break apart."))
             return
 
         elements = []
@@ -58,29 +59,29 @@ class BreakApart(InkstitchExtension):
             if polygons:
                 self.polygons_to_nodes(polygons, element)
 
-    def break_apart_paths(self, paths):
+    def break_apart_paths(self, paths: List[List[Union[List[float], Tuple[float, float]]]]) -> List[Polygon]:
         polygons = []
         for path in paths:
             if len(path) < 3:
                 continue
             linearring = LinearRing(path)
             if not linearring.is_simple:
-                linearring = unary_union(linearring)
-                for polygon in polygonize(linearring):
+                union = unary_union(linearring)
+                for polygon in polygonize(union):
                     polygons.append(polygon)
             else:
                 polygon = Polygon(path).buffer(0)
                 polygons.append(polygon)
         return polygons
 
-    def combine_overlapping_polygons(self, polygons):
+    def combine_overlapping_polygons(self, polygons: List[Polygon]) -> List[Polygon]:
         for polygon in polygons:
             for other in polygons:
                 if polygon == other:
                     continue
                 if polygon.overlaps(other):
                     diff = polygon.symmetric_difference(other)
-                    if diff.geom_type == 'MultiPolygon':
+                    if isinstance(diff, MultiPolygon):
                         polygons.remove(other)
                         polygons.remove(polygon)
                         for p in diff.geoms:
@@ -91,17 +92,17 @@ class BreakApart(InkstitchExtension):
                         return polygons
         return polygons
 
-    def geom_is_valid(self, geom):
+    def geom_is_valid(self, geom: MultiPolygon) -> bool:
         valid = geom.is_valid
         return valid
 
-    def ensure_minimum_size(self, polygons, size):
+    def ensure_minimum_size(self, polygons: List[Polygon], size: int) -> List[Polygon]:
         for polygon in polygons:
             if polygon.area < size:
                 polygons.remove(polygon)
         return polygons
 
-    def recombine_polygons(self, polygons):
+    def recombine_polygons(self, polygons: List[Polygon]) -> List[List[Polygon]]:
         polygons.sort(key=lambda polygon: polygon.area, reverse=True)
         multipolygons = []
         holes = []
@@ -126,10 +127,12 @@ class BreakApart(InkstitchExtension):
             multipolygons.append(polygon_list)
         return multipolygons
 
-    def polygons_to_nodes(self, polygon_list, element):
+    def polygons_to_nodes(self, polygon_list: List[List[Polygon]], element: EmbroideryElement) -> None:
         # reverse the list of polygons, we don't want to cover smaller shapes
         polygon_list = polygon_list[::-1]
-        index = element.node.getparent().index(element.node)
+        parent = element.node.getparent()
+        assert parent is not None, "The element should be part of a group."
+        index = parent.index(element.node)
         for polygons in polygon_list:
             if polygons[0].area < 5:
                 continue
@@ -148,14 +151,12 @@ class BreakApart(InkstitchExtension):
                 el.set('id', node_id)
 
             # Set path
-            d = ""
+            d = Path()
             for polygon in polygons:
-                d += "M"
-                for x, y in polygon.exterior.coords:
-                    d += "%s,%s " % (x, y)
-                    d += " "
-                d += "Z"
-            el.set('d', d)
+                path = Path(polygon.exterior.coords)
+                path.close()
+                d += path
+            el.set('d', str(d))
             el.set('transform', get_correction_transform(element.node))
-            element.node.getparent().insert(index, el)
-        element.node.getparent().remove(element.node)
+            parent.insert(index, el)
+        parent.remove(element.node)

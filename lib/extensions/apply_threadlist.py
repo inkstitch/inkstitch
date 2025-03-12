@@ -6,6 +6,7 @@
 import os
 import re
 import sys
+from typing import List, Optional
 
 import inkex
 
@@ -31,7 +32,7 @@ class ApplyThreadlist(InkstitchExtension):
         self.arg_parser.add_argument("-m", "--method", type=int, default=1, dest="method")
         self.arg_parser.add_argument("-t", "--palette", type=str, default=None, dest="palette")
 
-    def effect(self):
+    def effect(self) -> None:
         # Remove selection, we want all the elements in the document
         self.svg.selection.clear()
 
@@ -72,7 +73,7 @@ class ApplyThreadlist(InkstitchExtension):
             if colors[i][1] is not None:
                 element.node.set(INKSTITCH_ATTRIBS['cutwork_needle'], colors[i][1])
 
-    def verify_path(self, path):
+    def verify_path(self, path: str) -> None:
         if not os.path.exists(path):
             inkex.errormsg(_("File not found."))
             sys.exit(1)
@@ -80,7 +81,7 @@ class ApplyThreadlist(InkstitchExtension):
             inkex.errormsg(_("The filepath specified is not a file but a dictionary.\nPlease choose a threadlist file to import."))
             sys.exit(1)
 
-    def verify_colors(self, colors, method):
+    def verify_colors(self, colors: List[List[Optional[str]]], method: int) -> None:
         if all(c is None for c in colors):
             inkex.errormsg(_("Couldn't find any matching colors in the file."))
             if method == 1:
@@ -89,7 +90,7 @@ class ApplyThreadlist(InkstitchExtension):
                 inkex.errormsg(_("Please chose an other color palette for your design."))
             sys.exit(1)
 
-    def parse_inkstitch_threadlist(self, path):
+    def parse_inkstitch_threadlist(self, path: str) -> List[List[Optional[str]]]:
         colors = []
         with open(path) as threadlist:
             for line in threadlist:
@@ -102,7 +103,7 @@ class ApplyThreadlist(InkstitchExtension):
                         colors.append([None, None])
         return colors
 
-    def parse_color_format(self, path):
+    def parse_color_format(self, path: str) -> List[List[Optional[str]]]:
         colors = []
         threads = pyembroidery.read(path).threadlist
         for color in threads:
@@ -113,7 +114,7 @@ class ApplyThreadlist(InkstitchExtension):
                 colors.append([color.hex_color(), None])
         return colors
 
-    def parse_threadlist_by_catalog_number(self, path):
+    def parse_threadlist_by_catalog_number(self, path: str) -> List[List[Optional[str]]]:
         palette_name = self.options.palette
         palette = ThreadCatalog().get_palette_by_name(palette_name)
 
