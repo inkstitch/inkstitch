@@ -49,6 +49,8 @@ Convert to gradient blocks will split a fill with a linear gradient into multipl
 
 ## Knockdown Fill
 
+{% include upcoming_release.html %}
+
 Helper method to generate a fill area underneath of all selected elements, optionally with an offset. This can be very useful when working with high pile fabric.
 
 * Select elements

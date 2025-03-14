@@ -40,6 +40,8 @@ Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrer
 
 ## Knockdown Füllung
 
+{% include upcoming_release.html %}
+
 Hilfsmethode zum Erzeugen eines Füllbereichs unterhalb aller ausgewählten Elemente, optional mit einem Versatz. Dies kann bei der Arbeit mit hochflorigen Stoffen sehr nützlich sein.
 
 * Elemente auswählen

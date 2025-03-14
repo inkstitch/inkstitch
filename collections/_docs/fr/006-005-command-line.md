@@ -21,7 +21,7 @@ Par exemple si vous souhaitez exporter votre fichier dans une archive zip (avec 
 Voici un exemple dont la sortie est un fichier de points de broderie svg, pour deux éléments spécifiés, qui cachera les calques de dessin, montrera les points d'aiguilles et sera positionné exactement au dessus du dessin originel.
 
 ```
-./inkstitch --extension=stitch_plan_preview --id=path1 id=path2 --move-to-side=False --layer-visibility=hidden --needle-points=True input.svg > output.svg
+./inkstitch --extension=stitch_plan_preview --id=path1 --id=path2 --move-to-side=False --layer-visibility=hidden --needle-points=True input.svg > output.svg
 ```
 
 ## Options des lignes de commandes pour Inkscape 

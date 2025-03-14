@@ -20,7 +20,7 @@ Um ein Zip-Archiv (mit dst, pes und Garnliste) zu erstellen, führe folgenden Be
 Hier ein Beispiel für die Erstellung eines SVG mit dem Stichplan für zwei spezifische Objekte. Das Original-Design wird versteckt, die Nadelpunkte werden angezeigt und der Stichplan direkt über dem Originaldeisgn platziert.
 
 ```
-./inkstitch --extension=stitch_plan_preview --id=path1 id=path2 --move-to-side=False --layer-visibility=hidden --needle-points=True input.svg > output.svg
+./inkstitch --extension=stitch_plan_preview --id=path1 --id=path2 --move-to-side=False --layer-visibility=hidden --needle-points=True input.svg > output.svg
 ```
 
 ## Inkscape Optionen für die Befehlszeile
