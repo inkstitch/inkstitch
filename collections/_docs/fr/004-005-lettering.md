@@ -1,10 +1,11 @@
 ---
 title: "Outil lettrage"
 permalink: /fr/docs/lettering/
-last_modified_at: 2025-02-08
+last_modified_at: 2025-03-14
 toc: true
 ---
-The text module creates multi-line text. Choose the right font for your project from a wide variety of pre-digitized fonts.
+
+Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne police pour votre projet dans une grande variété de polices déjà digitalisées.
 
 ![Lettrage Extensions](/assets/images/docs/fr/lettering.png)
 
