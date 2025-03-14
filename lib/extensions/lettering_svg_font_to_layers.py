@@ -62,10 +62,10 @@ class LetteringSvgFontToLayers(InkstitchExtension):
         emsize = fontface.get("units-per-em")
 
         # TODO: should we guarantee that <svg:font horiz-adv-x> equals <svg:font-face units-per-em> ?
-        caps = int(fontface.get("cap-height", 0))
-        xheight = int(fontface.get("x-height", 0))
-        ascender = int(fontface.get("ascent", 0))
-        descender = int(fontface.get("descent", 0))
+        caps = float(fontface.get("cap-height", 0))
+        xheight = float(fontface.get("x-height", 0))
+        ascender = float(fontface.get("ascent", 0))
+        descender = float(fontface.get("descent", 0))
 
         self.svg.set("width", emsize)
         self.svg.namedview.add_guide(guidebase, True, "baseline")
