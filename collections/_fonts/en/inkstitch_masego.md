@@ -9,7 +9,7 @@ preview_image:
 data_title:
   - inkstitch_masego
 ---
-{%- assign font = site.data.fonts.invercelia.font -%}
+{%- assign font = site.data.fonts.inkstitch_masego.font -%}
 
 {% include upcoming_release.html %}
 
