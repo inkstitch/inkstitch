@@ -1,7 +1,7 @@
 ---
 title: "Outils Remplissage"
 permalink: /fr/docs/fill-tools/
-last_modified_at: 2024-04-29
+last_modified_at: 2025-03-14
 toc: true
 ---
 ## Briser les objets de remplissage {#break-apart-fill-objects}
@@ -55,24 +55,24 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 
    Choisir l'espacement final des rangées
 
-## Knockdown Fill
+## Knockdown Fill {#knockdown-fill}
 
 {% include upcoming_release.html %}
+Permet de générer un remplissage  sous tous les éléments sélectionnés, optionellement avec un décalage. Cela peut s'avérer très utile lorsque vous travaillez avec des tissus à poils longs comme de l'éponge.
 
-Helper method to generate a fill area underneath of all selected elements, optionally with an offset. This can be very useful when working with high pile fabric.
 
-* Select elements
-* Open `Extensions > Ink/Stitch > Tools: Fill > Selection to Knockdown Fill`
-* Adapt settings
-* Click apply
-* Adapt fill settings in the params dialog (`Extensions > Ink/Stitch > Params`)
+* Sélectionner des éléments
+* Ouvrir  `Extensions > Ink/Stitch > Outils : Remplissage > Sélection vers remplissage en points couchés` 
+* Adapter les paramètres
+* Cliquer sur 'Appliquer'
+* Adaptez les paramètres de remplissage dans la boîte de dialogue du paramètrage (`Extensions > Ink/Stitch > Paramètres`).
 
-### Settings
+### Paramètres
 
-* Keep holes: Wether or not the shape should contain holes
-* Offset: The offset (mm) around the selection
-* Method (round, mitre, bevel): Influences how edges will look like
-* Mitre limit:  Influences how edges will look like
+* Conserver les trous : Indique si la forme doit contenir des trous ou non.
+* Décalage : Le décalage (mm) autour de la sélection.
+* Méthode (arrondi, onglet, biseau) : Influence l'aspect des bords.
+* Limite d'onglet : Influence l'aspect des bords.
 
 ## Tartan
 
