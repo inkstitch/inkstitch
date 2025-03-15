@@ -774,7 +774,7 @@ class FillStitch(EmbroideryElement):
         paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
         shape = shgeo.MultiPolygon([(paths[0], paths[1:])])
         if self.node.style('fill-rule') == 'nonzero':
-            shape = shape.buffer(0)
+            shape = ensure_multi_polygon(shape.buffer(0))
         return shape
 
     @property

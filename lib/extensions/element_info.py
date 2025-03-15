@@ -40,7 +40,7 @@ class ElementInfo(InkstitchExtension):
         app.MainLoop()
 
     def _element_info(self, element, previous_stitch_group, next_element):
-        stitch_groups = element.to_stitch_groups(previous_stitch_group)
+        stitch_groups = element.embroider(previous_stitch_group, next_element)
         stitch_plan = stitch_groups_to_stitch_plan(
             stitch_groups,
             collapse_len=self.metadata['collapse_len_mm'],
