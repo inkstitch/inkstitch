@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-12 01:27+0000\n"
-"PO-Revision-Date: 2025-03-12 01:28\n"
+"POT-Creation-Date: 2025-03-13 01:29+0000\n"
+"PO-Revision-Date: 2025-03-15 01:28\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-12 01:27+0000\n"
+"POT-Creation-Date: 2025-03-13 01:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +45,7 @@ msgstr "Shojumaru est une police manga en colonne satin."
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
 msgid "Abécédaire AGS is a crossstitch font."
-msgstr ""
+msgstr "Abécédaire AGS est une police au point de croix."
 
 #. description of font in fonts/abril
 #: inkstitch-fonts-metadata.py:10
@@ -321,7 +321,7 @@ msgstr "InfiniPicto est une police amusante contenant uniquement les 26 glyphes 
 #. description of font in fonts/inkstitch_masego
 #: inkstitch-fonts-metadata.py:118
 msgid "Masego is a display san-serif typeface."
-msgstr ""
+msgstr "Masego est une police sans empattement."
 
 #. description of font in fonts/invercelia
 #: inkstitch-fonts-metadata.py:120
@@ -366,7 +366,7 @@ msgstr "Magnolia Tamed est une version moins sauvage de Magnolia bicolor"
 #. description of font in fonts/malika
 #: inkstitch-fonts-metadata.py:136
 msgid "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch."
-msgstr ""
+msgstr "Malika  est  une fonte  de  caractères arabes en colonnes satin. Les signes diacritiques non  obligatoires ne doivent  pas  être tappés  dans le texte, mais indépendament puis déplacés  vers leur position  finale. Les trois couples  de parenthèses vous permettent d'ajouter des embellissement pour une touche ornementale  supplémentaire."
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:138
@@ -1394,7 +1394,7 @@ msgstr "Remplissage en méandres"
 msgid "Tartan Fill"
 msgstr "Remplissage tartan"
 
-#: lib/elements/fill_stitch.py:161 lib/gui/tartan/embroidery_panel.py:202
+#: lib/elements/fill_stitch.py:161 lib/gui/tartan/embroidery_panel.py:203
 #: inx/inkstitch_select_elements.inx:62
 msgid "Legacy Fill"
 msgstr "Remplissage legacy (ancien)"
@@ -2489,25 +2489,25 @@ msgstr "Il n'y a rien de brodable dans le document."
 msgid "https://inkstitch.org/"
 msgstr "https://inkstitch.org/"
 
-#: lib/extensions/apply_threadlist.py:77
+#: lib/extensions/apply_threadlist.py:78
 msgid "File not found."
 msgstr "Fichier non trouvé."
 
-#: lib/extensions/apply_threadlist.py:80
+#: lib/extensions/apply_threadlist.py:81
 msgid "The filepath specified is not a file but a dictionary.\n"
 "Please choose a threadlist file to import."
 msgstr "Le chemin de fichier spécifié n'est pas un fichier mais un dictionnaire.\n"
 "Veuillez choisir un fichier de liste de fils à importer."
 
-#: lib/extensions/apply_threadlist.py:85
+#: lib/extensions/apply_threadlist.py:86
 msgid "Couldn't find any matching colors in the file."
 msgstr "Il n'y a aucune couleur correspondante dans le fichier."
 
-#: lib/extensions/apply_threadlist.py:87
+#: lib/extensions/apply_threadlist.py:88
 msgid "Please try to import as \"other threadlist\" and specify a color palette below."
 msgstr "Veuillez essayer d'importer comme \"autre liste de fils\" et spécifier une palette de couleurs ci-dessous."
 
-#: lib/extensions/apply_threadlist.py:89
+#: lib/extensions/apply_threadlist.py:90
 msgid "Please chose an other color palette for your design."
 msgstr "Veuillez choisir une autre palette de couleurs pour votre dessin."
 
@@ -2546,7 +2546,7 @@ msgstr "Il n'y a aucun objet dans tout le document sur lequel Ink/Stitch sait qu
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "Conseil : Exécutez Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets"
 
-#: lib/extensions/break_apart.py:31
+#: lib/extensions/break_apart.py:32
 msgid "Please select one or more fill areas to break apart."
 msgstr "Veuillez sélectionner une ou plusieurs zones de remplissage à séparer."
 
@@ -3082,15 +3082,15 @@ msgstr "Impossible de trouver le motif spécifié."
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr "Impossible d'appliquer l'effet de chemin satin à une colonne satin. Merci de sélectionner une ligne."
 
-#: lib/extensions/tartan.py:65
+#: lib/extensions/tartan.py:66
 msgid "To create a tartan pattern please select at least one element with a fill color."
 msgstr "Pour créer un motif de tartan, sélectionner au moins un élément avec une couleur de remplissage."
 
-#: lib/extensions/tartan.py:66
+#: lib/extensions/tartan.py:67
 msgid "https://inkstitch.org/docs/fill-tools/#tartan"
 msgstr "https://inkstitch.org/fr/docs/fill-tools/#tartan"
 
-#: lib/extensions/tartan.py:76
+#: lib/extensions/tartan.py:77
 msgid "Ink/Stitch Tartan"
 msgstr "Tartan Ink/Stitch"
 
@@ -4076,15 +4076,15 @@ msgstr "Largeur minimum de bande pour le remplissage"
 msgid "Stripes smaller than this will be stitched as a running stitch"
 msgstr "Les bandes plus étroites que cela seront brodées comme des points droits"
 
-#: lib/gui/tartan/embroidery_panel.py:195
+#: lib/gui/tartan/embroidery_panel.py:196
 msgid "Embroidery Element"
 msgstr "Element de broderie"
 
-#: lib/gui/tartan/embroidery_panel.py:196
+#: lib/gui/tartan/embroidery_panel.py:197
 msgid "SVG Elements"
 msgstr "Elements SVG"
 
-#: lib/gui/tartan/embroidery_panel.py:201
+#: lib/gui/tartan/embroidery_panel.py:202
 msgid "AutoFill"
 msgstr "Remplissage automatique"
 
@@ -4529,7 +4529,7 @@ msgstr "# coupures"
 
 #: print/templates/color_swatch.html:24
 msgid "# stops"
-msgstr ""
+msgstr "# stops"
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
@@ -4692,7 +4692,7 @@ msgstr "coupures"
 
 #: print/templates/operator_detailedview.html:68
 msgid "stops"
-msgstr ""
+msgstr "stops"
 
 #: print/templates/operator_detailedview.html:72
 msgid "Enter operator notes..."
@@ -5618,11 +5618,11 @@ msgstr "Nécessite au moins deux traverses"
 
 #: inx/inkstitch_fill_to_satin.inx:22
 msgid "Keep original fills"
-msgstr ""
+msgstr "Garder les remplissages originels"
 
 #: inx/inkstitch_fill_to_satin.inx:22
 msgid "Deletes the original paths for rungs, but keeps the fill elements"
-msgstr ""
+msgstr "Supprime les chemins qui définissent les traverses, mais conserve les remplissages"
 
 #: inx/inkstitch_fill_to_satin.inx:25
 msgid "This extension takes in a fill and rung elements and converts them into satin(s)."
@@ -6451,51 +6451,51 @@ msgstr "https://inkstitch.org/fr/docs/commands/#jump-to-trim"
 
 #: inx/inkstitch_knockdown_fill.inx:3
 msgid "Selection to Knockdown Fill"
-msgstr ""
+msgstr "Sélection vers remplissage en points couchants"
 
 #: inx/inkstitch_knockdown_fill.inx:9
 msgid "Generates a knockdown stitch with a specified offset around selection"
-msgstr ""
+msgstr "Génère un remplissage en point couchant avec un décalage à spécifier autour de la sélection"
 
 #: inx/inkstitch_knockdown_fill.inx:18
 msgid "Keep holes"
-msgstr ""
+msgstr "Conserver les trous"
 
 #: inx/inkstitch_knockdown_fill.inx:19
 msgid "Offset"
-msgstr ""
+msgstr "Décalage"
 
 #: inx/inkstitch_knockdown_fill.inx:22
 msgid "Mitre"
-msgstr ""
+msgstr "Onglet"
 
 #: inx/inkstitch_knockdown_fill.inx:23
 msgid "Bevel"
-msgstr ""
+msgstr "Biseau"
 
 #: inx/inkstitch_knockdown_fill.inx:25
 msgid "Mitre limit"
-msgstr ""
+msgstr "Limite de l'onglet"
 
 #: inx/inkstitch_knockdown_fill.inx:28
 msgid "This extension generates a knockdown fill area with a specified offset around selected elements."
-msgstr ""
+msgstr "Cette extension génère une zone de remplissage en points couchants avec un décalage spécifié autour des éléments sélectionnés."
 
 #: inx/inkstitch_knockdown_fill.inx:29
 msgid "* Select elements of any kind"
-msgstr ""
+msgstr "* Sélectionnez des éléments de n'importe quelle nature"
 
 #: inx/inkstitch_knockdown_fill.inx:30
 msgid "* Open this extension and apply with desired settings"
-msgstr ""
+msgstr "* Ouvrez cette extension et appliquez-la avec les paramètres souhaités"
 
 #: inx/inkstitch_knockdown_fill.inx:31
 msgid "* Adapt fill settings in the params dialog"
-msgstr ""
+msgstr "* Adapter les paramètres de remplissage dans le dialogue de paramétrage"
 
 #: inx/inkstitch_knockdown_fill.inx:34
 msgid "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/fill-tools/#knockdown-fill"
 
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -6608,11 +6608,11 @@ msgstr "Restreindre aux satins"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:14
 msgid "Add forced lock stitches by distance"
-msgstr ""
+msgstr "Ajouter des points d'arrêt forcés par la distance"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:14
 msgid "Add lock stitches when the following jump stitch is in the specified size range"
-msgstr ""
+msgstr "Ajouter des points d'arrêt quand le saut suivant est dans un intervalle de taille donné"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:15
 msgid "Minimum distance (mm)"
@@ -6624,7 +6624,7 @@ msgstr "Distance maximum (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:20
 msgid "Add forced lock stitches to the last element of each glyph"
-msgstr ""
+msgstr "Ajouter un point d'arrêt forcé au dernier élément de chaque glyphe"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
@@ -7030,7 +7030,7 @@ msgstr "Utilisez '%X' pour la coordonnée x. Utilisez '%Y' pour la coordonnée y
 
 #: inx/inkstitch_output_GCODE.inx:31
 msgid "Leave empty to use default value. Use 'none' to remove. Use %R %G %B for thread color values"
-msgstr ""
+msgstr "Laisser vide pour utiliser la valeur par défaut. Utiliser \"aucun\" pour supprimer. Utiliser %R %G %B pour les valeurs de couleur de fil"
 
 #: inx/inkstitch_output_GCODE.inx:33
 msgid "Leave empty to use default value. Use 'none' to remove."
@@ -7042,7 +7042,7 @@ msgstr "DEBUT"
 
 #: inx/inkstitch_output_GCODE.inx:35
 msgid "Use %R %G %B for inital color thread color values"
-msgstr ""
+msgstr "Utiliser %R %G %B pour les valeurs initiales de couleur de fil"
 
 #: inx/inkstitch_output_GCODE.inx:36
 msgid "END"
@@ -7831,11 +7831,11 @@ msgstr "Aide: vous pouvez évitez d'insérrer des parties à l'ancienne dans des
 
 #: inx/inkstitch_update_svg.inx:21
 msgid "When there is an active selection, only selected elements will be updated."
-msgstr ""
+msgstr "Lorsque des éléments sont sélectionnés, eux seuls seront mis à jour."
 
 #: inx/inkstitch_update_svg.inx:23
 msgid "Update from version"
-msgstr ""
+msgstr "Mise à jour à partir de la version"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:3
 msgid "Zig-Zag Line to Satin"

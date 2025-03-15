@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-12 01:27+0000\n"
-"PO-Revision-Date: 2025-03-12 01:28\n"
+"POT-Creation-Date: 2025-03-13 01:29+0000\n"
+"PO-Revision-Date: 2025-03-13 01:30\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-12 01:27+0000\n"
+"POT-Creation-Date: 2025-03-13 01:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1394,7 +1394,7 @@ msgstr ""
 msgid "Tartan Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:161 lib/gui/tartan/embroidery_panel.py:202
+#: lib/elements/fill_stitch.py:161 lib/gui/tartan/embroidery_panel.py:203
 #: inx/inkstitch_select_elements.inx:62
 msgid "Legacy Fill"
 msgstr ""
@@ -2484,24 +2484,24 @@ msgstr ""
 msgid "https://inkstitch.org/"
 msgstr ""
 
-#: lib/extensions/apply_threadlist.py:77
+#: lib/extensions/apply_threadlist.py:78
 msgid "File not found."
 msgstr "Файл не найден."
 
-#: lib/extensions/apply_threadlist.py:80
+#: lib/extensions/apply_threadlist.py:81
 msgid "The filepath specified is not a file but a dictionary.\n"
 "Please choose a threadlist file to import."
 msgstr "Указанный файл является словарем. Пожалуйста укажите файл списка нитей для импорта."
 
-#: lib/extensions/apply_threadlist.py:85
+#: lib/extensions/apply_threadlist.py:86
 msgid "Couldn't find any matching colors in the file."
 msgstr "В файле нет ни одного подходящего цвета."
 
-#: lib/extensions/apply_threadlist.py:87
+#: lib/extensions/apply_threadlist.py:88
 msgid "Please try to import as \"other threadlist\" and specify a color palette below."
 msgstr "Попробуйте импортировать как \"другой список ниток\" и укажите палитру ниже."
 
-#: lib/extensions/apply_threadlist.py:89
+#: lib/extensions/apply_threadlist.py:90
 msgid "Please chose an other color palette for your design."
 msgstr "Выберите другую палитру для вашего дизайна."
 
@@ -2540,7 +2540,7 @@ msgstr "Во всем дизайне нет ни одного объекта с 
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "Совет: Попробуйте Расширения > Ink/Stitch > Решение ппроблем > Решение проблем с объектами"
 
-#: lib/extensions/break_apart.py:31
+#: lib/extensions/break_apart.py:32
 msgid "Please select one or more fill areas to break apart."
 msgstr "Выберите одну или несколько заливок для их разделения."
 
@@ -3071,15 +3071,15 @@ msgstr ""
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr ""
 
-#: lib/extensions/tartan.py:65
+#: lib/extensions/tartan.py:66
 msgid "To create a tartan pattern please select at least one element with a fill color."
 msgstr ""
 
-#: lib/extensions/tartan.py:66
+#: lib/extensions/tartan.py:67
 msgid "https://inkstitch.org/docs/fill-tools/#tartan"
 msgstr ""
 
-#: lib/extensions/tartan.py:76
+#: lib/extensions/tartan.py:77
 msgid "Ink/Stitch Tartan"
 msgstr ""
 
@@ -4059,15 +4059,15 @@ msgstr ""
 msgid "Stripes smaller than this will be stitched as a running stitch"
 msgstr ""
 
-#: lib/gui/tartan/embroidery_panel.py:195
+#: lib/gui/tartan/embroidery_panel.py:196
 msgid "Embroidery Element"
 msgstr ""
 
-#: lib/gui/tartan/embroidery_panel.py:196
+#: lib/gui/tartan/embroidery_panel.py:197
 msgid "SVG Elements"
 msgstr ""
 
-#: lib/gui/tartan/embroidery_panel.py:201
+#: lib/gui/tartan/embroidery_panel.py:202
 msgid "AutoFill"
 msgstr ""
 
