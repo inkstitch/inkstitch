@@ -18,15 +18,15 @@ class UpdateSvg(InkstitchExtension):
         # 3 -> v.3.2.0 May2025
 
     def effect(self):
+        # set the file version to the update_from value, so that the updater knows where to start from
+        # the updater will then reset it to the current version after the update has finished
+        metadata = self.get_inkstitch_metadata()
+        metadata['inkstitch_svg_version'] = self.options.update_from
+
         if not self.svg.selection:
             update_inkstitch_document(self.document, warn_unversioned=False)
         else:
-            # set the file version to the update_from value, so that the updater knows where to start from
-            # the updater will then reset it to the current version after the update has finished
-            metadata = self.get_inkstitch_metadata()
-            metadata['inkstitch_svg_version'] = self.options.update_from
-
-        update_inkstitch_document(self.document, self.get_selection(), warn_unversioned=False)
+            update_inkstitch_document(self.document, self.get_selection(), warn_unversioned=False)
 
     def get_selection(self):
         selection = []
