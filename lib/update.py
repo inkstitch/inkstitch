@@ -69,9 +69,9 @@ def automatic_version_update(document, file_version, INKSTITCH_SVG_VERSION, warn
             if do_update.cancelled is True:
                 return
     # well then, let's update legeacy params
-    for element in document.iterdescendants():
-        if element.tag in EMBROIDERABLE_TAGS:
-            update_legacy_params(document, EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
+    # oddly we have to convert this into a list, otherwise a bunch of elements is missing
+    for node in list(document.iterdescendants(EMBROIDERABLE_TAGS)):
+        update_legacy_params(document, EmbroideryElement(node), file_version, INKSTITCH_SVG_VERSION)
 
 
 def _update_inkstitch_svg_version(svg):
