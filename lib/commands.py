@@ -370,7 +370,8 @@ def add_connector(document, symbol, command, element):
     start_pos = (symbol.get('x'), symbol.get('y'))
     centroid_pos = element.node.bounding_box(inkex.Transform(get_node_transform(element.node.getparent()))).center
     connector_line = shgeo.LineString([start_pos, centroid_pos])
-    if connector_line.intersects(element.shape):
+    intersection = connector_line.intersection(element.shape)
+    if not intersection.is_empty:
         end_pos = get_coordinates(connector_line.intersection(element.shape))[0]
     else:
         # Sometimes the line won't intersect anything and will go straight to the centroid.
