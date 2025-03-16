@@ -22,9 +22,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="2.6798108"
-     inkscape:cx="127.80753"
-     inkscape:cy="157.10064"
-     inkscape:current-layer="g181-4-4-3-1-6-7"
+     inkscape:cx="97.954675"
+     inkscape:cy="117.54561"
+     inkscape:current-layer="g255"
      showgrid="false">
     <sodipodi:guide
        position="89.797066,53.335841"
@@ -4968,7 +4968,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-à"
-     style="display:none"
+     style="display:inline"
      id="g256"
      transform="translate(22, 0)">
     <g
@@ -5022,8 +5022,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
            xlink:href="#inkstitch_ending_point"
            height="100%"
            width="100%"
-           x="87.407739"
-           y="59.312262000000004"
+           x="87.407738"
+           y="59.312263"
            inkscape:label="marqueur de commande" />
       </g>
     </g>
@@ -5069,29 +5069,25 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:split_method="staggered"
          inkstitch:lock_start="half_stitch" />
       <g
-         id="g235"
+         id="command_group12919"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-0.145755, 97.2356)"
-         inkstitch:color_sort_index="1"
-         style="display:inline;opacity:0.75">
+         transform="translate(-20.507357,12.314302)">
         <path
-           id="path235"
-           d="M 72.739487,162.26351 66.674141,134.22914"
-           style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-           inkscape:connection-start="#command_use93805"
-           inkscape:connection-end="#path106"
+           id="command_connector54770"
+           d="m 96.07618,199.22328 -2.155701,-0.49024"
+           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use42589"
+           inkscape:connection-end="#path233"
            inkscape:label="connecteur"
            inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0"
-           inkstitch:color_sort_index="1"
-           inkstitch:running_stitch_length_mm="1.5" />
+           inkscape:connector-curvature="0" />
         <use
-           id="use235"
+           id="command_use42589"
            xlink:href="#inkstitch_ending_point"
            height="100%"
            width="100%"
-           x="72.763306"
-           y="162.14865"
+           x="96.099998"
+           y="199.10843"
            inkscape:label="marqueur de commande" />
       </g>
     </g>
@@ -5146,8 +5142,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
            xlink:href="#inkstitch_ending_point"
            height="100%"
            width="100%"
-           x="71.388279"
-           y="60.772737"
+           x="71.388283"
+           y="60.772736"
            inkscape:label="marqueur de commande" />
       </g>
     </g>
@@ -5192,31 +5188,26 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:split_method="staggered"
          inkstitch:lock_start="half_stitch" />
       <g
-         id="g248"
+         id="command_group35250"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22, 0)"
-         inkstitch:color_sort_index="2"
-         style="display:inline;opacity:0.75">
+         transform="translate(-11.924662,51.496172)">
         <path
-           id="path248"
-           d="M 83.094459,266.50475 80.586374,246.37587"
-           style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-           inkscape:connection-start="#command_use99530"
-           inkscape:connection-end="#path119"
+           id="command_connector51354"
+           d="m 88.236435,181.9487 -0.961818,-1.01262"
+           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use62647"
+           inkscape:connection-end="#path247"
            inkscape:label="connecteur"
            inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0"
-           inkstitch:color_sort_index="2"
-           inkstitch:running_stitch_length_mm="1.5" />
+           inkscape:connector-curvature="0" />
         <use
-           id="use248"
+           id="command_use62647"
            xlink:href="#inkstitch_ending_point"
            height="100%"
            width="100%"
-           x="68.865509"
-           y="149.83392"
-           inkscape:label="marqueur de commande"
-           transform="translate(14.252769,116.55597)" />
+           x="88.260254"
+           y="181.83385"
+           inkscape:label="marqueur de commande" />
       </g>
     </g>
     <g
@@ -5270,8 +5261,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
            xlink:href="#inkstitch_ending_point"
            height="100%"
            width="100%"
-           x="56.312891"
-           y="61.700191000000004"
+           x="56.312889"
+           y="61.700191"
            inkscape:label="marqueur de commande" />
       </g>
     </g>
@@ -5298,31 +5289,26 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:split_method="staggered"
          inkstitch:lock_start="half_stitch" />
       <g
-         id="g254"
+         id="command_group57883"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(50.9048, 167.271)"
-         inkstitch:color_sort_index="3"
-         style="display:inline;opacity:0.75">
+         transform="translate(-22, 0)">
         <path
-           id="path254"
-           d="M -3.4851691,108.00027 -4.0906068,91.728164"
-           style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-           inkscape:connection-start="#command_use99994"
-           inkscape:connection-end="#path146"
+           id="command_connector93679"
+           d="m 85.081383,257.47493 -1.67652,-5.89762"
+           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use43677"
+           inkscape:connection-end="#path252"
            inkscape:label="connecteur"
            inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0"
-           inkstitch:color_sort_index="3"
-           inkstitch:running_stitch_length_mm="1.5" />
+           inkscape:connector-curvature="0" />
         <use
-           id="use254"
+           id="command_use43677"
            xlink:href="#inkstitch_ending_point"
            height="100%"
            width="100%"
-           x="51.870255"
-           y="105.41005"
-           inkscape:label="marqueur de commande"
-           transform="translate(-55.331605,2.4753613)" />
+           x="85.10520111407128"
+           y="257.36008374387796"
+           inkscape:label="marqueur de commande" />
       </g>
     </g>
   </g>
@@ -18925,7 +18911,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-z"
-     style="display:inline"
+     style="display:none"
      id="g767"
      transform="translate(22)">
     <g
