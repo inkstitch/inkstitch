@@ -22,9 +22,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="3.319887"
-     inkscape:cx="108.58803"
-     inkscape:cy="218.07971"
-     inkscape:current-layer="g807"
+     inkscape:cx="66.116708"
+     inkscape:cy="225.00766"
+     inkscape:current-layer="g799"
      showgrid="false"
      inkscape:document-units="mm">
     <sodipodi:guide
@@ -3531,9 +3531,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-0"
-     style="display:none"
+     style="display:inline"
      id="g768"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g189"
        inkscape:label="orange">
@@ -3545,8 +3545,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -3565,8 +3565,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -3584,8 +3584,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccccccccccsccccccsccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -3598,9 +3598,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-1"
-     style="display:none"
+     style="display:inline"
      id="g769"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g192"
        inkscape:label="orange">
@@ -3621,8 +3621,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -3632,7 +3632,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group82781"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector43554"
@@ -3673,8 +3673,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -3684,7 +3684,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group89882"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector76614"
@@ -3726,8 +3726,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -3737,7 +3737,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group32650"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector67248"
@@ -3762,9 +3762,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-2"
-     style="display:none"
+     style="display:inline"
      id="g770"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g195"
        inkscape:label="orange">
@@ -3776,8 +3776,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -3787,7 +3787,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group52211"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector91526"
@@ -3819,8 +3819,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -3830,7 +3830,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group79814"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector74305"
@@ -3862,8 +3862,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -3873,7 +3873,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group31226"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector25500"
@@ -3898,9 +3898,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-3"
-     style="display:none"
+     style="display:inline"
      id="g771"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g223"
        inkscape:label="orange">
@@ -3912,8 +3912,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -3923,7 +3923,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group71211"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector93084"
@@ -3955,8 +3955,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -3966,7 +3966,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group95245"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector81120"
@@ -3999,8 +3999,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4010,7 +4010,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group50136"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector64845"
@@ -4035,9 +4035,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-4"
-     style="display:none"
+     style="display:inline"
      id="g772"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g226"
        inkscape:label="orange">
@@ -4058,8 +4058,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4069,7 +4069,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group50897"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector17583"
@@ -4110,8 +4110,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4125,8 +4125,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4136,7 +4136,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group2589"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector24794"
@@ -4168,8 +4168,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4184,8 +4184,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4195,7 +4195,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group11136"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector89961"
@@ -4220,9 +4220,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-5"
-     style="display:none"
+     style="display:inline"
      id="g773"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g235"
        inkscape:label="orange">
@@ -4234,8 +4234,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4245,7 +4245,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group63079"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector4925"
@@ -4277,8 +4277,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4288,7 +4288,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group19461"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector37681"
@@ -4320,8 +4320,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4331,7 +4331,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group8404"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector98854"
@@ -4356,9 +4356,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-6"
-     style="display:none"
+     style="display:inline"
      id="g774"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g233"
        inkscape:label="orange">
@@ -4370,8 +4370,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4381,7 +4381,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group81770"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector29324"
@@ -4413,8 +4413,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4424,7 +4424,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group58295"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector10160"
@@ -4456,8 +4456,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4469,9 +4469,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-7"
-     style="display:none"
+     style="display:inline"
      id="g775"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g239"
        inkscape:label="orange">
@@ -4494,8 +4494,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4505,7 +4505,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group26745"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector43193"
@@ -4548,8 +4548,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4559,7 +4559,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group7035"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector64923"
@@ -4602,8 +4602,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4613,7 +4613,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group61942"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector9274"
@@ -4638,9 +4638,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-8"
-     style="display:none"
+     style="display:inline"
      id="g776"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g243"
        inkscape:label="orange">
@@ -4652,8 +4652,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4663,7 +4663,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group58963"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector36514"
@@ -4694,8 +4694,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4705,7 +4705,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group14830"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector91775"
@@ -4737,8 +4737,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4753,8 +4753,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4766,9 +4766,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-9"
-     style="display:none"
+     style="display:inline"
      id="g777"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g247"
        inkscape:label="orange">
@@ -4780,8 +4780,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4791,7 +4791,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group75058"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector49951"
@@ -4823,8 +4823,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4834,7 +4834,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group63619"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector26496"
@@ -4866,8 +4866,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4879,9 +4879,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-."
-     style="display:none"
+     style="display:inline"
      id="g778"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g261"
        inkscape:label="orange">
@@ -4902,8 +4902,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4913,7 +4913,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group20983"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector55379"
@@ -4954,8 +4954,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -4965,7 +4965,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group88840"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector32988"
@@ -5006,8 +5006,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5017,7 +5017,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group89200"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector79962"
@@ -5042,9 +5042,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-,"
-     style="display:none"
+     style="display:inline"
      id="g779"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g283"
        inkscape:label="orange">
@@ -5066,8 +5066,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5077,7 +5077,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group74917"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector27502"
@@ -5118,8 +5118,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5129,7 +5129,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group56854"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector76977"
@@ -5170,8 +5170,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5181,7 +5181,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group69651"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector47754"
@@ -5206,13 +5206,13 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-:"
-     style="display:none"
+     style="display:inline"
      id="g780"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g271"
        inkscape:label="orange"
-       transform="translate(0,-76)">
+       transform="translate(0, -76)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 16.014971,251.80526 h 9.232207"
@@ -5228,8 +5228,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          id="path271"
          sodipodi:nodetypes="cccc"
          inkstitch:color_sort_index="1"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:pull_compensation_mm="0.3"
          inkstitch:satin_column="True"
          inkstitch:contour_underlay="True"
@@ -5257,8 +5257,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          id="path265"
          sodipodi:nodetypes="cccc"
          inkstitch:color_sort_index="1"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:pull_compensation_mm="0.3"
          inkstitch:satin_column="True"
          inkstitch:contour_underlay="True"
@@ -5270,7 +5270,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group75894"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector95675"
@@ -5294,7 +5294,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g273"
        inkscape:label="pink"
-       transform="translate(0,-76)">
+       transform="translate(0, -76)">
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 24.161036,238.77155 -9.775278,-0.54307"
@@ -5310,8 +5310,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          id="path273"
          sodipodi:nodetypes="cccc"
          inkstitch:color_sort_index="2"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:pull_compensation_mm="0.3"
          inkstitch:satin_column="True"
          inkstitch:contour_underlay="True"
@@ -5339,8 +5339,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          id="path267"
          sodipodi:nodetypes="cccc"
          inkstitch:color_sort_index="2"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:pull_compensation_mm="0.3"
          inkstitch:satin_column="True"
          inkstitch:contour_underlay="True"
@@ -5352,7 +5352,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group86139"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector3490"
@@ -5376,7 +5376,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g275"
        inkscape:label="violet"
-       transform="translate(0,-76)">
+       transform="translate(0, -76)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#913697;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 26.333321,225.73785 -9.232208,-1.08614"
@@ -5392,8 +5392,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          id="path275"
          sodipodi:nodetypes="cccc"
          inkstitch:color_sort_index="3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:pull_compensation_mm="0.3"
          inkstitch:satin_column="True"
          inkstitch:contour_underlay="True"
@@ -5421,8 +5421,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          id="path269"
          sodipodi:nodetypes="cccc"
          inkstitch:color_sort_index="3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:pull_compensation_mm="0.3"
          inkstitch:satin_column="True"
          inkstitch:contour_underlay="True"
@@ -5434,7 +5434,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group95655"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector43323"
@@ -5459,13 +5459,13 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-;"
-     style="display:none"
+     style="display:inline"
      id="g781"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g277"
        inkscape:label="orange"
-       transform="translate(0,-77)">
+       transform="translate(0, -77)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 16.014971,251.80526 h 9.232207"
@@ -5483,8 +5483,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.30"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5513,8 +5513,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.30"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5524,7 +5524,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group26737"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector5020"
@@ -5548,7 +5548,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g279"
        inkscape:label="pink"
-       transform="translate(0,-77)">
+       transform="translate(0, -77)">
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 24.161036,238.77155 -9.775278,-0.54307"
@@ -5566,8 +5566,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.30"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5595,8 +5595,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.30"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5606,7 +5606,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group64494"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector3145"
@@ -5630,7 +5630,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g281"
        inkscape:label="violet"
-       transform="translate(0,-77)">
+       transform="translate(0, -77)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#913697;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 26.333321,225.73785 -9.232208,-1.08614"
@@ -5648,8 +5648,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.30"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5677,8 +5677,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.30"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5688,7 +5688,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group77833"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector89986"
@@ -5713,9 +5713,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-!"
-     style="display:none"
+     style="display:inline"
      id="g782"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g302"
        inkscape:label="orange">
@@ -5736,8 +5736,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -5753,8 +5753,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5764,7 +5764,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group62980"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector47611"
@@ -5805,8 +5805,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -5822,8 +5822,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5833,7 +5833,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group83108"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector74079"
@@ -5874,8 +5874,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -5891,8 +5891,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5902,7 +5902,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group35737"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector76120"
@@ -5927,13 +5927,13 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-¡"
-     style="display:none"
+     style="display:inline"
      id="g783"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g316"
        inkscape:label="orange"
-       transform="translate(0.284594,-120.115)">
+       transform="translate(0.284594, -120.115)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 16.014971,251.80526 h 9.232207"
@@ -5951,8 +5951,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -5964,11 +5964,11 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 20,307 v -83 l 3,-65 M 13,307 v -83 l 5,-65 M 7.8824139,224.1987 24.38889,224.4833"
          id="path338"
          sodipodi:nodetypes="cccccc"
-         transform="translate(-0.284594,120.115)"
+         transform="translate(-0.284594, 120.115)"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -5979,7 +5979,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group50697"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22.2846,120.115)"
+         transform="translate(-22.2846, 120.115)"
          style="opacity:0.5">
         <path
            id="command_connector30089"
@@ -6003,7 +6003,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g325"
        inkscape:label="pink"
-       transform="translate(0.284594,-120.115)">
+       transform="translate(0.284594, -120.115)">
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 24.161036,238.77155 -9.775278,-0.54307"
@@ -6021,8 +6021,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -6034,11 +6034,11 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 36,307 v -83 l -1,-65 m -7,148 v -83 l 1,-65 m -5.749488,65.4833 16.506477,0.28459"
          id="path339"
          sodipodi:nodetypes="cccccc"
-         transform="translate(-0.284594,120.115)"
+         transform="translate(-0.284594, 120.115)"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -6049,7 +6049,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group29457"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22.2846,120.115)"
+         transform="translate(-22.2846, 120.115)"
          style="opacity:0.5">
         <path
            id="command_connector548"
@@ -6073,7 +6073,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g334"
        inkscape:label="violet"
-       transform="translate(0.284594,-120.115)">
+       transform="translate(0.284594, -120.115)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#913697;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 26.333321,225.73785 -9.232208,-1.08614"
@@ -6091,8 +6091,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -6104,11 +6104,11 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 51,307 v -83 l -5,-65 m -3,148 v -83 l -3,-65 m -0.243011,66.05249 14.798909,-0.2846"
          id="path337"
          sodipodi:nodetypes="cccccc"
-         transform="translate(-0.284594,120.115)"
+         transform="translate(-0.284594, 120.115)"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -6119,7 +6119,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group79089"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22.2846,120.115)"
+         transform="translate(-22.2846, 120.115)"
          style="opacity:0.5">
         <path
            id="command_connector5267"
@@ -6144,13 +6144,13 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-?"
-     style="display:none"
+     style="display:inline"
      id="g784"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g363"
        inkscape:label="orange"
-       transform="translate(30)">
+       transform="translate(30, 0)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 17.061615,189.42086 1.182661,7.04335"
@@ -6166,11 +6166,11 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 47,128 c 0,-7 -1,-18 -1,-27 1,-15 5,-22 15,-22 12,0 15,6 16,21 v 19 c 0,12 -3,16 -6,19 -17.594308,16.17778 -27.489132,24.21017 -27,50 l 1,11 m -6,-71 v -27 c 1,-20 7,-28 22,-28 17,0 22,8 23,27 v 19 c 0,13 -2,19 -8,24 -16.727146,13.065 -25.237427,22.30662 -25,45 v 11 M 53.665729,89.838731 36.560445,89.235011 m 32.60066,-1.811143 15.696614,-0.603716 m -12.074318,31.191988 15.294137,-0.60371 m -27.368456,22.73996 9.458216,10.86689 m -30.588273,30.1858 15.092898,-0.60372 M 69.96606,71.123538 67.551196,82.392902 M 51.653343,70.519822 53.66573,82.996618"
          id="path369"
          sodipodi:nodetypes="ccscssccccscsscccccccccccc"
-         transform="translate(-30)"
+         transform="translate(-30, 0)"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -6186,8 +6186,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -6197,7 +6197,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group29187"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-52)"
+         transform="translate(-52, 0)"
          style="opacity:0.5">
         <path
            id="command_connector66295"
@@ -6221,7 +6221,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g365"
        inkscape:label="pink"
-       transform="translate(30)">
+       transform="translate(30, 0)">
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 31.00315,187.25446 0.286654,9.7201"
@@ -6237,11 +6237,11 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 31,128 c 0,-7 -1,-17 0,-28 1,-24 10,-33 30,-33 22,0 30,10 31,33 v 19 c 0,14 -4,22 -13,29 l -6,6 c -10,9 -16,15 -16,34 l 1,11 M 23,128 v -28 c 1,-28 12,-39 38,-39 28,0 38,11 39,39 v 19 c 0,17 -7,26 -17,35 l -6,5 c -6,5 -13,11 -13,29 v 11 m -9.126838,-19.81131 10.866886,0.80495 m 5.030966,-28.17341 8.854501,8.45203 m 9.659454,-43.26631 13.684231,-0.40248 M 85.260197,86.618913 100.75557,86.015197 M 34.548059,89.838732 19.253922,89.436254 M 38.77407,61.061606 43.000082,72.129731 m 33.204376,-13.28175 -4.628489,12.074318"
          id="path368"
          sodipodi:nodetypes="ccscsccccccscscssc"
-         transform="translate(-30)"
+         transform="translate(-30, 0)"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -6257,8 +6257,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -6268,7 +6268,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group23156"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-52)"
+         transform="translate(-52, 0)"
          style="opacity:0.5">
         <path
            id="command_connector17952"
@@ -6292,7 +6292,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g367"
        inkscape:label="violet"
-       transform="translate(30)"
+       transform="translate(30, 0)"
        style="display:inline">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#913697;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
@@ -6309,11 +6309,11 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 16,128 c 0,-7 -1,-17 0,-28 1,-32 14,-45 45,-45 33,0 45,13 46,45 v 19 c 0,17 -6,29 -20,41 l -6,5 c -7,6 -11,11 -11,23 v 11 M 8,128 v -28 c 2,-37 17,-52 53,-52 39,0 53,15 54,52 v 19 c 0,21 -10,33 -25,46 l -6,5 c -3,3 -6,6 -7,18 l -1,11 M 18.650206,92.857311 3.356069,93.05855 M 39.579025,60.860367 37.767877,45.364992 m 40.04649,13.080511 0.603716,-13.080511 M 101.963,85.813959 118.46457,84.20405 m -14.89166,31.99694 h 16.90405 v -0.80495 m -39.644014,44.87622 8.452023,9.86069 m -22.337489,9.65945 17.105285,2.01239"
          id="path784"
          sodipodi:nodetypes="ccscsccscccscscccc"
-         transform="translate(-30)"
+         transform="translate(-30, 0)"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -6329,8 +6329,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -6340,7 +6340,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group812"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-52)"
+         transform="translate(-52, 0)"
          style="opacity:0.5">
         <path
            id="command_connector92622"
@@ -6365,13 +6365,13 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-¿"
-     style="display:none"
+     style="display:inline"
      id="g785"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g343"
        inkscape:label="orange"
-       transform="translate(28.3746,-119.938)">
+       transform="translate(28.3746, -119.938)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 16.014971,251.80526 h 9.232207"
@@ -6389,8 +6389,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="1"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -6402,11 +6402,11 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 70,199 v -11 c 0,-12 4,-17 11,-23 l 6,-5 c 14,-12 20,-24 20,-41 V 100 C 106,68 94,55 61,55 30,55 17,68 16,100 c -1,11 0,21 0,28 m 60,71 1,-11 c 1,-12 4,-15 7,-18 l 6,-5 c 15,-13 25,-25 25,-46 V 100 C 114,63 100,48 61,48 25,48 10,63 8,100 v 28 M 3.356069,93.05855 18.650206,92.857311 M 37.767877,45.364992 39.579025,60.860367 M 78.418083,45.364992 77.814367,58.445503 M 118.46457,84.20405 101.963,85.813959 m 18.51396,29.582081 v 0.80495 h -16.90405 m -14.287941,53.93196 -8.452023,-9.86069 m 3.219819,21.53253 -17.105285,-2.01239"
          id="path379"
          sodipodi:nodetypes="csccscsccccccscsccccccccccccccccc"
-         transform="rotate(180,47.62855,238.901)"
+         transform="matrix(-1 1.22465e-16 -1.22465e-16 -1 95.2571 477.802)"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -6418,7 +6418,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g352"
        inkscape:label="pink"
-       transform="translate(28.3746,-119.938)">
+       transform="translate(28.3746, -119.938)">
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 24.161036,238.77155 -9.775278,-0.54307"
@@ -6436,8 +6436,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="2"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -6449,11 +6449,11 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 58,199 -1,-11 c 0,-19 6,-25 16,-34 l 6,-6 c 9,-7 13,-15 13,-29 V 100 C 91,77 83,67 61,67 c -20,0 -29,9 -30,33 -1,11 0,21 0,28 m 33,71 v -11 c 0,-18 7,-24 13,-29 l 6,-5 c 10,-9 17,-18 17,-35 V 100 C 99,72 89,61 61,61 35,61 24,72 23,100 v 28 m 42.740048,51.99364 -10.866886,-0.80495 m 24.752353,-18.91643 -8.854501,-8.45203 M 102.9692,116.60347 89.284969,117.00595 M 100.75557,86.015197 85.260197,86.618913 m -66.006275,2.817341 15.294137,0.402478 M 43.000082,72.129731 38.77407,61.061606 m 32.801899,9.860693 4.628489,-12.074318"
          id="path378"
          sodipodi:nodetypes="ccccscscccsscscscccccccccccccccc"
-         transform="rotate(180,47.62855,238.901)"
+         transform="matrix(-1 1.22465e-16 -1.22465e-16 -1 95.2571 477.802)"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -6465,7 +6465,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g361"
        inkscape:label="violet"
-       transform="translate(28.3746,-119.938)">
+       transform="translate(28.3746, -119.938)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#913697;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 26.333321,225.73785 -9.232208,-1.08614"
@@ -6483,8 +6483,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:color_sort_index="3"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -6496,11 +6496,11 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 45,199 -1,-11 c -0.489132,-25.78983 9.405692,-33.82222 27,-50 3,-3 6,-7 6,-19 V 100 C 76,85 73,79 61,79 c -10,0 -14,7 -15,22 0,9 1,20 1,27 m 4,71 v -11 c -0.237427,-22.69338 8.272854,-31.935 25,-45 6,-5 8,-11 8,-24 V 100 C 83,81 78,73 61,73 46,73 40,81 39,101 v 27 m -2.439555,-38.764989 17.105284,0.60372 m 31.19199,-3.018579 -15.696614,0.603716 m 18.916433,29.984562 -15.294137,0.60371 m -2.616103,33.00314 -9.458216,-10.86689 m -6.037159,40.44897 -15.092898,0.60372 M 67.551196,82.392902 69.96606,71.123538 M 53.66573,82.996618 51.653343,70.519822"
          id="path377"
          sodipodi:nodetypes="ccsscsccccsscscccccccccccccccc"
-         transform="rotate(180,47.62855,238.901)"
+         transform="matrix(-1 1.22465e-16 -1.22465e-16 -1 95.2571 477.802)"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -6513,9 +6513,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-#"
-     style="display:none"
+     style="display:inline"
      id="g786"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g390"
        inkscape:label="orange">
@@ -6535,8 +6535,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -6561,8 +6561,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -6587,8 +6587,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -6603,8 +6603,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -6629,8 +6629,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -6655,8 +6655,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -6667,7 +6667,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group9218"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector85719"
@@ -6708,8 +6708,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -6733,8 +6733,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 23,122 h 40 m -38,-6 h 39 m -21.604559,-6.49541 -4.154544,17.03363"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -6748,8 +6748,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="M 42,256 85.373141,51.526619 M 34,256 77.33992,51.683236 M 50.704531,150.21912 h 16.202724"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -6764,8 +6764,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -6790,8 +6790,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -6814,8 +6814,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 172,122 h -39 m 40,-6 h -38 m 17.07542,-5.24905 -4.15455,16.20272"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -6830,8 +6830,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -6845,8 +6845,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 160,183 h -40 m 39,7 h -40 m 20.01645,-12.28854 -3.89163,17.99881"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -6857,7 +6857,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group35116"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector43523"
@@ -6888,8 +6888,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -6904,8 +6904,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -6920,8 +6920,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -6932,7 +6932,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group7532"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector21106"
@@ -6957,9 +6957,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-/"
-     style="display:none"
+     style="display:inline"
      id="g787"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g429"
        inkscape:label="orange">
@@ -6983,8 +6983,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -6994,7 +6994,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group18748"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector98690"
@@ -7038,8 +7038,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -7049,7 +7049,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group68852"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector55408"
@@ -7093,8 +7093,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -7104,7 +7104,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group41159"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector59791"
@@ -7129,13 +7129,13 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-\"
-     style="display:none"
+     style="display:inline"
      id="g788"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g430"
        inkscape:label="orange"
-       transform="matrix(-1,0,0,1,110,0)">
+       transform="matrix(-1 0 0 1 110 0)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 16.637265,284.41091 -2.908181,14.95637"
@@ -7156,8 +7156,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -7167,7 +7167,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group93097"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,132,0)"
+         transform="matrix(-1 0 0 1 132 0)"
          style="opacity:0.5">
         <path
            id="command_connector43730"
@@ -7191,7 +7191,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g432"
        inkscape:label="pink"
-       transform="matrix(-1,0,0,1,110,0)">
+       transform="matrix(-1 0 0 1 110 0)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 31.178171,286.07273 -2.492727,13.71"
@@ -7212,8 +7212,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -7223,7 +7223,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group80340"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,132,0)"
+         transform="matrix(-1 0 0 1 132 0)"
          style="opacity:0.5">
         <path
            id="command_connector43050"
@@ -7267,8 +7267,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -7278,7 +7278,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group77277"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector91472"
@@ -7303,9 +7303,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-("
-     style="display:none"
+     style="display:inline"
      id="g789"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g440"
        inkscape:label="orange">
@@ -7329,8 +7329,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -7340,7 +7340,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group65558"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector36090"
@@ -7384,8 +7384,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -7395,7 +7395,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group32160"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector22447"
@@ -7439,8 +7439,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
          inkstitch:max_stitch_length_mm="8"
@@ -7450,7 +7450,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group25280"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector87528"
@@ -7475,13 +7475,13 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-)"
-     style="display:none"
+     style="display:inline"
      id="g790"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g443"
        inkscape:label="orange"
-       transform="matrix(-1,0,0,1,80,0)">
+       transform="matrix(-1 0 0 1 80 0)">
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 38.691402,294.21275 6.403566,10.3005"
@@ -7499,8 +7499,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csccsc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
          inkstitch:center_walk_underlay="False"
@@ -7513,7 +7513,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group50544"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,102,0)"
+         transform="matrix(-1 0 0 1 102 0)"
          style="opacity:0.5">
         <path
            id="command_connector98621"
@@ -7537,7 +7537,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g445"
        inkscape:label="pink"
-       transform="matrix(-1,0,0,1,80,0)">
+       transform="matrix(-1 0 0 1 80 0)">
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 45.635883,285.58264 10.004618,16.8956"
@@ -7555,8 +7555,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csccsc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
          inkstitch:center_walk_underlay="False"
@@ -7569,7 +7569,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group40822"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,102,0)"
+         transform="matrix(-1 0 0 1 102 0)"
          style="opacity:0.5">
         <path
            id="command_connector32592"
@@ -7593,7 +7593,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g447"
        inkscape:label="violet"
-       transform="matrix(-1,0,0,1,80,0)">
+       transform="matrix(-1 0 0 1 80 0)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#913697;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 59.952877,290.7286 8.438571,13.97618"
@@ -7611,8 +7611,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csccsc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="False"
          inkstitch:center_walk_underlay="False"
@@ -7625,7 +7625,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group36226"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,102,0)"
+         transform="matrix(-1 0 0 1 102 0)"
          style="opacity:0.5">
         <path
            id="command_connector82592"
@@ -7650,9 +7650,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-{"
-     style="display:none"
+     style="display:inline"
      id="g791"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g473"
        inkscape:label="orange">
@@ -7672,8 +7672,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csssccsssc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -7698,8 +7698,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csssccsssccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -7710,7 +7710,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group24417"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector82298"
@@ -7751,8 +7751,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csscccsssccsssccsssc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -7763,7 +7763,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group33653"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector49023"
@@ -7804,8 +7804,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cssccssccssccssc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -7816,7 +7816,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group66353"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector73131"
@@ -7841,13 +7841,13 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-}"
-     style="display:none"
+     style="display:inline"
      id="g792"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g479"
        inkscape:label="orange"
-       transform="matrix(-1,0,0,1,100.086,0)">
+       transform="matrix(-1 0 0 1 100.086 0)">
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 24.100464,165.96483 -12.690577,1.81294"
@@ -7864,8 +7864,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csssccsssc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -7890,8 +7890,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csssccsssccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -7902,7 +7902,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group78471"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,122.086,0)"
+         transform="matrix(-1 0 0 1 122.086 0)"
          style="opacity:0.5">
         <path
            id="command_connector67176"
@@ -7926,7 +7926,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g475"
        inkscape:label="pink"
-       transform="matrix(-1,0,0,1,100.086,0)">
+       transform="matrix(-1 0 0 1 100.086 0)">
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 74.603782,296.23749 c 3.539549,2.04339 7.079099,2.87608 10.618648,2.84891"
@@ -7944,8 +7944,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csscccsssccsssccsssc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -7956,7 +7956,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group87394"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,122.086,0)"
+         transform="matrix(-1 0 0 1 122.086 0)"
          style="opacity:0.5">
         <path
            id="command_connector34877"
@@ -7980,7 +7980,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g481"
        inkscape:label="violet"
-       transform="matrix(-1,0,0,1,100.086,0)">
+       transform="matrix(-1 0 0 1 100.086 0)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#913697;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 72.790842,284.32389 c 3.039788,2.09015 6.123761,4.22448 9.841677,6.99276"
@@ -7998,8 +7998,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cssccssccssccssc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -8010,7 +8010,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group43263"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,122.086,0)"
+         transform="matrix(-1 0 0 1 122.086 0)"
          style="opacity:0.5">
         <path
            id="command_connector22021"
@@ -8035,9 +8035,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-["
-     style="display:none"
+     style="display:inline"
      id="g793"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g483"
        inkscape:label="orange">
@@ -8048,8 +8048,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -8060,7 +8060,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group12460"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector28400"
@@ -8091,8 +8091,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -8103,7 +8103,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group38603"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector88751"
@@ -8134,8 +8134,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -8146,7 +8146,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group50568"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector35053"
@@ -8171,13 +8171,13 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-]"
-     style="display:none"
+     style="display:inline"
      id="g794"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g487"
        inkscape:label="orange"
-       transform="matrix(-1,0,0,1,98.8272,0)">
+       transform="matrix(-1 0 0 1 98.8272 0)">
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 29.798275,303.48925 -13.726543,0.25899"
@@ -8195,8 +8195,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -8207,7 +8207,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group20960"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,120.827,0)"
+         transform="matrix(-1 0 0 1 120.827 0)"
          style="opacity:0.5">
         <path
            id="command_connector35122"
@@ -8231,7 +8231,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g488"
        inkscape:label="pink"
-       transform="matrix(-1,0,0,1,98.8272,0)">
+       transform="matrix(-1 0 0 1 98.8272 0)">
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="m 25.13643,290.0217 -12.172595,0.25899 v 0"
@@ -8249,8 +8249,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -8261,7 +8261,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group98117"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,120.827,0)"
+         transform="matrix(-1 0 0 1 120.827 0)"
          style="opacity:0.5">
         <path
            id="command_connector36041"
@@ -8285,7 +8285,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
     <g
        id="g486"
        inkscape:label="violet"
-       transform="matrix(-1,0,0,1,98.8272,0)">
+       transform="matrix(-1 0 0 1 98.8272 0)">
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#913697;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
          d="M 23.064499,277.33112 H 12.963835"
@@ -8303,8 +8303,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -8315,7 +8315,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group18256"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,120.827,0)"
+         transform="matrix(-1 0 0 1 120.827 0)"
          style="opacity:0.5">
         <path
            id="command_connector25289"
@@ -8340,9 +8340,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer--"
-     style="display:none"
+     style="display:inline"
      id="g795"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g496"
        inkscape:label="orange">
@@ -8363,8 +8363,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -8375,7 +8375,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group65535"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector96391"
@@ -8416,8 +8416,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -8428,7 +8428,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group30988"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector10060"
@@ -8469,8 +8469,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -8481,7 +8481,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group91883"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector61179"
@@ -8506,9 +8506,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-_"
-     style="display:none"
+     style="display:inline"
      id="g797"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g502"
        inkscape:label="orange">
@@ -8529,8 +8529,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -8541,7 +8541,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group9894"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector36789"
@@ -8582,8 +8582,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -8594,7 +8594,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group49995"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector52106"
@@ -8635,8 +8635,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -8647,7 +8647,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group70314"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector44343"
@@ -8672,9 +8672,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&quot;"
-     style="display:none"
+     style="display:inline"
      id="g798"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g505"
        inkscape:label="orange">
@@ -8694,8 +8694,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -8719,8 +8719,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -8731,7 +8731,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group66006"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector13927"
@@ -8771,8 +8771,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -8796,8 +8796,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -8808,7 +8808,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group67020"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector34837"
@@ -8848,8 +8848,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -8873,8 +8873,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -8885,7 +8885,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group8245"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector92745"
@@ -8910,9 +8910,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-'"
-     style="display:none"
+     style="display:inline"
      id="g799"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g468"
        inkscape:label="orange">
@@ -8932,8 +8932,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -8944,7 +8944,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group30646"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector65355"
@@ -8984,8 +8984,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -8996,7 +8996,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group95953"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector71485"
@@ -9036,8 +9036,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -9048,7 +9048,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group19544"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector45030"
@@ -9073,9 +9073,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-$"
-     style="display:none"
+     style="display:inline"
      id="g800"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g545"
        inkscape:label="orange">
@@ -9086,8 +9086,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="ccscsccccccccscscccccccccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -9111,8 +9111,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -9123,7 +9123,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group7476"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector55611"
@@ -9164,8 +9164,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -9190,8 +9190,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -9206,8 +9206,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="ccsccccccccccccccccssscscccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -9218,7 +9218,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group53444"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector61905"
@@ -9259,8 +9259,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -9284,8 +9284,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="ccscsccccccccscccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -9296,7 +9296,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group16379"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector97615"
@@ -9321,9 +9321,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-÷"
-     style="display:none"
+     style="display:inline"
      id="g801"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g565"
        inkscape:label="orange">
@@ -9344,8 +9344,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -9370,8 +9370,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -9396,8 +9396,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -9408,7 +9408,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group62353"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector97926"
@@ -9449,8 +9449,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -9475,8 +9475,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -9501,8 +9501,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -9513,7 +9513,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group65248"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector88520"
@@ -9554,8 +9554,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -9580,8 +9580,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -9606,8 +9606,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -9618,7 +9618,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group31611"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector7707"
@@ -9643,9 +9643,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-%"
-     style="display:none"
+     style="display:inline"
      id="g805"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g568"
        inkscape:label="orange">
@@ -9656,8 +9656,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccsccccccsccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -9672,8 +9672,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -9688,8 +9688,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccsccccccsccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -9708,8 +9708,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="M 11.992709,116.51007 H 33.076794 M 17.156158,70.8996 32.216219,71.329888 m 21.94466,0 H 71.372378 M 44,136 C 29,136 21,127 20,111 V 84 c 1,-17 10,-25 24,-25 15,0 24,9 25,25 1,10 1,18 0,27 -1,16 -10,25 -25,25 m 0,-5 C 33,131 27,124 26,111 V 84 c 1,-13 7,-20 18,-20 11,0 18,7 19,20 1,10 1,17 0,27 -1,13 -8,20 -19,20 m 12.742604,-14.48993 14.199486,-0.43029"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -9724,8 +9724,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -9739,8 +9739,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          d="m 107.08624,228.38481 h 21.08408 m -15.92063,-45.61047 15.06006,0.43029 m 21.94466,0 h 17.2115 m -27.37238,64.67011 c -15,0 -23,-9 -24,-25 v -27 c 1,-17 10,-25 24,-25 15,0 24,9 25,25 1,10 1,18 0,27 -1,16 -10,25 -25,25 m 0,-5 c -11,0 -17,-7 -18,-20 v -27 c 1,-13 7,-20 18,-20 11,0 18,7 19,20 1,10 1,17 0,27 -1,13 -8,20 -19,20 m 12.7426,-14.48993 14.19949,-0.43029"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -9759,8 +9759,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csssscccsssccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -9775,8 +9775,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -9791,8 +9791,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csssscccsssccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -9805,9 +9805,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-@"
-     style="display:none"
+     style="display:inline"
      id="g806"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g584"
        inkscape:label="orange">
@@ -9818,8 +9818,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="ccsccscsccsccscccsccscsccsccsccccccccccccccccccccccccccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -9830,7 +9830,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group28143"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector44915"
@@ -9861,8 +9861,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csccsccsccsccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -9877,8 +9877,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="ccccccsccsccssccsccsccccccccccccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -9889,10 +9889,10 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group96798"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-20.79514,45.784691)">
+         transform="translate(-20.7951, 45.7847)">
         <path
            id="command_connector71531"
-           d="m 176.63374,209.72205 -2.74835,-3.3052"
+           d="m 176.63374,209.72205 -2.74839,-3.30524"
            style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
            inkscape:connection-start="#command_use90192"
            inkscape:connection-end="#path533"
@@ -9919,8 +9919,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="csssccccsssccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -9935,8 +9935,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cssccsccsccssccsccsccccccccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -9947,7 +9947,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group44530"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector65504"
@@ -9972,9 +9972,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-&amp;"
-     style="display:none"
+     style="display:inline"
      id="g807"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g574"
        inkscape:label="orange">
@@ -9985,8 +9985,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cssccsccccssccssccsccccsssccccccccccccccccccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -9997,7 +9997,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group51446"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector66571"
@@ -10028,8 +10028,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="ccscccccscccscccccsccccccccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -10044,8 +10044,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -10060,8 +10060,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -10072,7 +10072,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group20141"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector66669"
@@ -10103,8 +10103,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccsccccsccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -10119,8 +10119,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="ccsccccssccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -10135,8 +10135,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -10147,7 +10147,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group27187"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector72583"
@@ -10172,9 +10172,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-’"
-     style="display:none"
+     style="display:inline"
      id="g11"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g4"
        inkscape:label="orange">
@@ -10194,8 +10194,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -10206,7 +10206,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group66300"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector12839"
@@ -10246,8 +10246,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -10258,7 +10258,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group76410"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector55597"
@@ -10298,8 +10298,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -10310,7 +10310,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group3949"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector96926"
@@ -10335,9 +10335,9 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-‘"
-     style="display:none"
+     style="display:inline"
      id="g21"
-     transform="translate(22)">
+     transform="translate(22, 0)">
     <g
        id="g14"
        inkscape:label="orange">
@@ -10357,8 +10357,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="1"
          inkstitch:reverse_rails="none"
@@ -10369,7 +10369,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group87589"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector97500"
@@ -10409,8 +10409,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="2"
          inkstitch:reverse_rails="none"
@@ -10421,7 +10421,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group62702"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector44660"
@@ -10461,8 +10461,8 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="False"
-         inkstitch:end_at_nearest_point="False"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
          inkstitch:contour_underlay="True"
          inkstitch:color_sort_index="3"
          inkstitch:reverse_rails="none"
@@ -10473,7 +10473,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
       <g
          id="command_group33133"
          inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-22)"
+         transform="translate(-22, 0)"
          style="opacity:0.5">
         <path
            id="command_connector35584"
