@@ -9,7 +9,6 @@
    inkscape:version="1.4-rc1 (61ec3f24, 2024-09-26)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:inkstitch="http://inkstitch.org/namespace">
@@ -23,7 +22,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="2.7630767"
-     inkscape:cx="-7.4192656"
+     inkscape:cx="-7.2383079"
      inkscape:cy="102.78397"
      inkscape:current-layer="g207"
      inkscape:document-units="mm"
@@ -3362,27 +3361,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
        inkstitch:random_seed="59821652"
        inkstitch:color_sort_index="1" />
     <g
-       id="command_group60370"
-       inkscape:label="Commande Ink/Stitch: Position de fin">
-      <path
-         id="command_connector33379"
-         d="m 127.78984,199.76016 -0.0173,-0.0199"
-         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-         inkscape:connection-start="#command_use6873"
-         inkscape:connection-end="#path599"
-         inkscape:label="connecteur"
-         inkscape:connector-type="polyline"
-         inkscape:connector-curvature="0" />
-      <use
-         id="command_use6873"
-         xlink:href="#inkstitch_ending_point"
-         height="100%"
-         width="100%"
-         x="127.79579"
-         y="199.73145"
-         inkscape:label="marqueur de commande" />
-    </g>
-    <g
        id="g273"
        inkscape:label="satin">
       <path
@@ -3477,27 +3455,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:smoothness_mm=""
          inkstitch:random_seed="59821652"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group93008"
-         inkscape:label="Commande Ink/Stitch: Position de fin">
-        <path
-           id="command_connector60101"
-           d="m 128.78537,198.94458 -0.006,-0.007"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use19559"
-           inkscape:connection-end="#path274"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use19559"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="128.79132"
-           y="198.91586"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g278"
@@ -3649,27 +3606,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          sodipodi:nodetypes="cccsccsssccssccssscssccsccs"
          inkstitch:random_seed="77729263"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group17277"
-         inkscape:label="Commande Ink/Stitch: Position de fin">
-        <path
-           id="command_connector4627"
-           d="m 128.87187,198.7545 -0.004,-0.004"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use89903"
-           inkscape:connection-end="#path310"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use89903"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="128.87782"
-           y="198.72578"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g314"
@@ -3835,27 +3771,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          sodipodi:nodetypes="cccsccsssccssccssscssccsccs"
          inkstitch:random_seed="77729263"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group28105"
-         inkscape:label="Commande Ink/Stitch: Position de fin">
-        <path
-           id="command_connector69134"
-           d="M 128.98864,198.19476 84.355928,148.89472"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use43360"
-           inkscape:connection-end="#path373"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use43360"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="128.9946"
-           y="198.16605"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g372"
@@ -4031,27 +3946,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          sodipodi:nodetypes="cccsccsssccssccssscssccsccs"
          inkstitch:random_seed="77729263"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group11101"
-         inkscape:label="Commande Ink/Stitch: Position de fin">
-        <path
-           id="command_connector64420"
-           d="m 127.86923,199.72813 -0.0168,-0.0193"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use47424"
-           inkscape:connection-end="#path397"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use47424"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="127.87518"
-           y="199.69942"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g387"
@@ -4197,27 +4091,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          sodipodi:nodetypes="cccsccsssccssccssscssccsccs"
          inkstitch:random_seed="77729263"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group8153"
-         inkscape:label="Commande Ink/Stitch: Position de fin">
-        <path
-           id="command_connector80255"
-           d="M 128.99405,197.9263 84.318011,148.77698"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use21380"
-           inkscape:connection-end="#path399"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use21380"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="129"
-           y="197.89758"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g396"
@@ -4347,27 +4220,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group29905"
-         inkscape:label="Commande Ink/Stitch: Position de fin">
-        <path
-           id="command_connector8053"
-           d="M 183.99405,192.46565 160.60154,176"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use63944"
-           inkscape:connection-end="#path605"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use63944"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="184"
-           y="192.43694"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g1"
@@ -4443,27 +4295,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group35890"
-         inkscape:label="Commande Ink/Stitch: Position de fin">
-        <path
-           id="command_connector67063"
-           d="m 93.09885,194.80265 -0.0099,-0.0213"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use76053"
-           inkscape:connection-end="#path606"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use76053"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="93.104805"
-           y="194.77394"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g32"
@@ -4613,27 +4444,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group18329"
-         inkscape:label="Commande Ink/Stitch: Position de fin">
-        <path
-           id="command_connector48198"
-           d="m 94.467457,192.36943 -0.0094,-0.0178"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use48531"
-           inkscape:connection-end="#path607"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use48531"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="94.473412"
-           y="192.34071"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g67"
@@ -4685,28 +4495,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group53549"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector46707"
-           d="m 86.627758,196.56784 -0.01087,-0.0212"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use99033"
-           inkscape:connection-end="#path608"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use99033"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="86.6337134"
-           y="196.53913"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g153"
@@ -4759,28 +4547,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group51733"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector25782"
-           d="m 91.315205,194.88128 -0.0094,-0.0216"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use98995"
-           inkscape:connection-end="#path609"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use98995"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="91.32115900000001"
-           y="194.852563"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g154"
@@ -4906,28 +4672,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group61856"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector4428"
-           d="M 106.32828,200.02871 106.3097,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use28993"
-           inkscape:connection-end="#path610"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use28993"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="106.334233"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g419"
@@ -5030,28 +4774,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ssscssssssssccsssscssssscsscssccs"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group53511"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector95227"
-           d="m 109.83345,198.74992 -0.005,-0.007"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use53344"
-           inkscape:connection-end="#path261"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use53344"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="109.839399"
-           y="198.72120999999999"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g291"
@@ -5184,28 +4906,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ssscssssssssccsssscssssscsscssccs"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group7216"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector58833"
-           d="m 107.61705,199.98019 -0.0168,-0.0252"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use25129"
-           inkscape:connection-end="#path262"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use25129"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="107.62301200000002"
-           y="199.95148"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g296"
@@ -5352,28 +5052,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="cssccssscssssssssccsssscssscsscsscc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group82620"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector91302"
-           d="m 107.76532,199.95436 -0.0164,-0.0245"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use35558"
-           inkscape:connection-end="#path613"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use35558"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="107.771277"
-           y="199.925645"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g287"
@@ -5521,28 +5199,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
            inkstitch:fill_underlay_angle="45 135"
            sodipodi:nodetypes="cssccscsscc"
            inkstitch:color_sort_index="1" />
-        <g
-           id="command_group75390"
-           inkscape:label="Commande Ink/Stitch: Position de fin"
-           transform="translate(0, 4)">
-          <path
-             id="command_connector33532"
-             d="M 58.539883,44.028714 58.526222,44"
-             style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-             inkscape:connection-start="#command_use67398"
-             inkscape:connection-end="#path614"
-             inkscape:label="connecteur"
-             inkscape:connector-type="polyline"
-             inkscape:connector-curvature="0" />
-          <use
-             id="command_use67398"
-             xlink:href="#inkstitch_ending_point"
-             height="100%"
-             width="100%"
-             x="58.545838"
-             y="43.99999999999999"
-             inkscape:label="marqueur de commande" />
-        </g>
       </g>
       <path
          d="m 109,83 c -0.66667,0.666667 -1.33333,1 -2,1 H 42 c -0.666667,0 -1.333333,0.333333 -2,1 v 31 c 0,0.66667 0.666667,1 2,1 h 42 c 0.666667,0 1.333333,0.16667 2,0.5 0.666667,0.33333 1,1.16667 1,2.5 v 19 c 0,0.66667 -0.166667,1.33333 -0.5,2 -0.333333,0.66667 -1.166667,1 -2.5,1 H 42 40 v 33 c 0,0.66667 0.666667,1 2,1 h 65 c 0.66667,0 1.33333,0.33333 2,1 l 1,1 v 20 c 0,0.66667 -0.33333,1.16667 -1,1.5 -0.66667,0.33333 -1.33333,0.5 -2,0.5 H 14 c -0.666667,0 -1.166667,-0.33333 -1.5,-1 L 12,198 V 62 c 0,-0.666667 0.333333,-1.166667 1,-1.5 L 14,60 h 93 c 0.66667,0 1.33333,0.333333 2,1 l 1,1 v 20 z"
@@ -5559,28 +5215,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ssscssssssssccsssscssssscsscssccs"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group32168"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector97876"
-           d="m 109.78214,198.84343 -0.006,-0.009"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use89018"
-           inkscape:connection-end="#path287"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use89018"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="109.78809199999999"
-           y="198.81472"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g315"
@@ -5692,28 +5326,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group19404"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector2948"
-           d="M 34.708469,200.02871 34.719147,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use16044"
-           inkscape:connection-end="#path615"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use16044"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="34.714425999999996"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g448"
@@ -5766,28 +5378,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1"
          inkstitch:meander_angle="45" />
-      <g
-         id="command_group88605"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector86356"
-           d="m 91.362103,194.39891 -0.009,-0.0195"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use40400"
-           inkscape:connection-end="#path616"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use40400"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="91.368054"
-           y="194.3702"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g320"
@@ -5841,28 +5431,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:random_seed="86737939"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group62591"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector24818"
-           d="M 114.99405,196.11581 86,158.88889"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use88891"
-           inkscape:connection-end="#path617"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use88891"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="115.0"
-           y="196.087095"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g321"
@@ -5915,28 +5483,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group18549"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector43828"
-           d="m 38.724587,199.94606 -0.0047,-0.026"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use90583"
-           inkscape:connection-end="#path618"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use90583"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="38.730542"
-           y="199.91734000000002"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g322"
@@ -6008,28 +5554,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccsscsscssscc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group98919"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector87191"
-           d="m 39.661045,199.32789 -0.0031,-0.0157"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use16894"
-           inkscape:connection-end="#path322"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use16894"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="39.666999000000004"
-           y="199.29918"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g337"
@@ -6135,28 +5659,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccsscsscssscc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group63658"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector91850"
-           d="M 39.994045,197.63795 26,130"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use78429"
-           inkscape:connection-end="#path620"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use78429"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="40.0"
-           y="197.60924"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g341"
@@ -6279,28 +5781,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group14128"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector67556"
-           d="M 39.994045,196.46684 26,130"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use26482"
-           inkscape:connection-end="#path621"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use26482"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="40.0"
-           y="196.43813"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g347"
@@ -6439,28 +5919,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccsscsscssscc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group1642"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(0, 4)">
-        <path
-           id="command_connector35208"
-           d="M 39.994045,195.54359 26,130"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use19097"
-           inkscape:connection-end="#path333"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use19097"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="40.0"
-           y="195.51488"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g355"
@@ -6548,28 +6006,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group4396"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector69034"
-           d="m 20.617151,191.71911 0.01291,-0.0235"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use65245"
-           inkscape:connection-end="#path623"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use65245"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="20.6231058"
-           y="191.690397"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g7"
@@ -6621,28 +6057,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group34897"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector13857"
-           d="M 118.63623,200.02871 118.61505,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use52471"
-           inkscape:connection-end="#path624"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use52471"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="118.642182"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g11"
@@ -6695,28 +6109,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group4374"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector86703"
-           d="M 108.99405,197.98648 93.31132,176"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use54028"
-           inkscape:connection-end="#path625"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use54028"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="109.0"
-           y="197.95776"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g12"
@@ -6768,28 +6160,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group63079"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector24425"
-           d="M 130.99405,196.96501 102,164.33004"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use72816"
-           inkscape:connection-end="#path626"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use72816"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="131.0"
-           y="196.93630000000002"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g13"
@@ -6843,28 +6213,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group42819"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector16198"
-           d="m 120.87996,198.6472 -0.004,-0.005"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use8809"
-           inkscape:connection-end="#path627"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use8809"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="120.88591600000001"
-           y="198.61848"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g14"
@@ -6939,29 +6287,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
            inkstitch:min_jump_stitch_length_mm="3"
            inkstitch:fill_underlay_angle="45 135"
            inkstitch:color_sort_index="1" />
-        <g
-           id="g18"
-           inkscape:label="Commande Ink/Stitch: Position de fin de remplissage"
-           transform="translate(75.7922, 13.2636)">
-          <path
-             id="path18"
-             d="M 66.605866,212.49668 45.093715,185.35489"
-             style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-             inkscape:connection-start="#command_use72336"
-             inkscape:connection-end="#path627"
-             inkscape:label="connecteur"
-             inkscape:connector-type="polyline"
-             inkscape:connector-curvature="0"
-             inkstitch:color_sort_index="1" />
-          <use
-             id="use18"
-             xlink:href="#inkstitch_ending_point"
-             height="100%"
-             width="100%"
-             x="66.629684"
-             y="212.38182"
-             inkscape:label="marqueur de commande" />
-        </g>
       </g>
     </g>
     <g
@@ -7049,28 +6374,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group96450"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector98161"
-           d="m 96.646854,191.92799 -0.0095,-0.0171"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use50306"
-           inkscape:connection-end="#path629"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use50306"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="96.652806"
-           y="191.89927"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g24"
@@ -7218,28 +6521,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ssssssssssssssssssssssssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group37632"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector38842"
-           d="m 97.465847,191.29663 -0.0094,-0.0165"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use48425"
-           inkscape:connection-end="#path630"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use48425"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="97.4718055"
-           y="191.267916"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g257"
@@ -7423,28 +6704,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ssssssssssssssssssssssssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group58674"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector13383"
-           d="m 95.109959,193.02882 -0.0094,-0.0182"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use10687"
-           inkscape:connection-end="#path631"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use10687"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="95.11591030000001"
-           y="193.00010999999998"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g293"
@@ -7640,28 +6899,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group22566"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector15603"
-           d="m 94.111332,193.69006 -0.0094,-0.0189"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use12175"
-           inkscape:connection-end="#path632"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use12175"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="94.117287"
-           y="193.66135"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g349"
@@ -7875,28 +7112,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ssssssssssssssssssssssssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group65975"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector62607"
-           d="m 97.32909,191.40434 -0.0094,-0.0166"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use13416"
-           inkscape:connection-end="#path633"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use13416"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="97.335048"
-           y="191.375628"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g380"
@@ -8061,28 +7276,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccccssscscccsccscccssssscccccccsssssssssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group36244"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector13605"
-           d="m 96.666546,190.37539 -0.0095,-0.0158"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use48918"
-           inkscape:connection-end="#path634"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use48918"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="96.672502"
-           y="190.34668000000002"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g410"
@@ -8220,28 +7413,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ssssssssssssssssssssssssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group53888"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector48920"
-           d="m 97.12785,191.56115 -0.0094,-0.0168"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use68897"
-           inkscape:connection-end="#path635"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use68897"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="97.133804"
-           y="191.532442"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g407"
@@ -8405,28 +7576,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group1172"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector57785"
-           d="M 172.09538,200.02871 172.06346,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use60736"
-           inkscape:connection-end="#path636"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use60736"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="172.101333"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g17"
@@ -8503,28 +7652,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ssssssccccssscssssssssssssscss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group65756"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector84329"
-           d="M 36.375481,200.02871 36.386193,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use18004"
-           inkscape:connection-end="#path637"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use18004"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="36.381436"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g25"
@@ -8601,28 +7728,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group86111"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector66116"
-           d="m 85.911846,195.79322 -0.0099,-0.0208"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use34134"
-           inkscape:connection-end="#path638"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use34134"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="85.9178041"
-           y="195.764507"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g33"
@@ -8699,28 +7804,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group49311"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector99908"
-           d="M 112.7715,200.02871 112.7515,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use31665"
-           inkscape:connection-end="#path639"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use31665"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="112.77744700000001"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g35"
@@ -8799,28 +7882,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group38825"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector88697"
-           d="m 91.368107,195.15968 -0.0099,-0.0199"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use15289"
-           inkscape:connection-end="#path640"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use15289"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="91.37406"
-           y="195.130965"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g26"
@@ -8873,28 +7934,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group56319"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector74392"
-           d="m 71.855846,198.703 -0.0022,-0.0112"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use68806"
-           inkscape:connection-end="#path12-8"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use68806"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="71.86179976"
-           y="198.674281"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g37"
@@ -8946,28 +7985,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group38090"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector20157"
-           d="m 94.816876,193.35403 -0.0094,-0.0184"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use56273"
-           inkscape:connection-end="#path642"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use56273"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="94.82282699999999"
-           y="193.32532"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g38"
@@ -9035,28 +8052,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="sssssssscssscsssssscsssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group33212"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector49751"
-           d="m 91.407406,195.2944 -0.0091,-0.0206"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use18588"
-           inkscape:connection-end="#path643"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use18588"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="91.41335799999999"
-           y="195.2656928"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g259"
@@ -9186,28 +8181,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="sssssssscssscsssssscsssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group95996"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector64809"
-           d="m 89.312023,196.36371 -0.0087,-0.0216"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use42118"
-           inkscape:connection-end="#path644"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use42118"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="89.31797800000001"
-           y="196.334997"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g390"
@@ -9350,28 +8323,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group38621"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector70493"
-           d="m 97.653515,191.26748 -0.0096,-0.0168"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use38328"
-           inkscape:connection-end="#path645"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use38328"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="97.65946600000001"
-           y="191.23877"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g427"
@@ -9533,28 +8484,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="sssssssscssscsssssscsssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group77442"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector80045"
-           d="m 95.546467,192.78686 -0.0096,-0.0182"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use94466"
-           inkscape:connection-end="#path646"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use94466"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="95.552418"
-           y="192.758141"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g435"
@@ -9667,28 +8596,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccsssccsccsssccssc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group73630"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector66129"
-           d="m 76.711727,198.52325 -0.0031,-0.0149"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use22248"
-           inkscape:connection-end="#path647"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use22248"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="76.717679"
-           y="198.49453"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g36"
@@ -9742,28 +8649,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccssscccssccsccssccssccsccssc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group92755"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector31417"
-           d="m 136.10235,199.84932 -0.0149,-0.0215"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use90383"
-           inkscape:connection-end="#path648"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use90383"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="136.10830199999998"
-           y="199.820597"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g39"
@@ -9816,28 +8701,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group36231"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector34486"
-           d="m 119.69954,199.26916 -0.007,-0.008"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use48605"
-           inkscape:connection-end="#path649"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use48605"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="119.705488"
-           y="199.24045"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g42"
@@ -9891,28 +8754,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group32453"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector76265"
-           d="m 74.038937,199.89224 -0.0045,-0.026"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use129"
-           inkscape:connection-end="#path650"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use129"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="74.044891"
-           y="199.8635253"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g43"
@@ -9984,28 +8825,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scscccssccccssccccsssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group248"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector94854"
-           d="m 75.672756,199.00172 -0.0034,-0.017"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use61588"
-           inkscape:connection-end="#path44"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use61588"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="75.67871400000001"
-           y="198.9730012"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g458"
@@ -10151,28 +8970,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group50690"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector80745"
-           d="M 75.994045,188.48359 62,130"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use2856"
-           inkscape:connection-end="#path652"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use2856"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="76.0"
-           y="188.454885"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g459"
@@ -10317,28 +9114,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group29386"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector87528"
-           d="M 98.800457,200.02871 98.782498,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use67825"
-           inkscape:connection-end="#path653"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use67825"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="98.806414"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g44"
@@ -10391,28 +9166,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="csssccssccsccssssssssssscccssccssssssssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group61502"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector13231"
-           d="M 95.994045,197.20042 67.675896,167.14579"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use89081"
-           inkscape:connection-end="#path654"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use89081"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="96.0"
-           y="197.17171"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g481"
@@ -10512,28 +9265,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="csssccssccsccsssssssssscccssccssssssssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group888"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector91898"
-           d="m 94.34016,199.6826 -0.01055,-0.0122"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use94130"
-           inkscape:connection-end="#path655"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use94130"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="94.34611199999999"
-           y="199.65389"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g516"
@@ -10666,28 +9397,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="csssccssccsccssssssssssscccssccssssssssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group80677"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector92722"
-           d="M 95.994045,191.83795 67.940779,165.37114"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use51090"
-           inkscape:connection-end="#path656"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use51090"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="96.0"
-           y="191.80924"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g542"
@@ -10835,28 +9544,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1"
          sodipodi:nodetypes="csssccssccsccssssssssssscccssccssssssssss" />
-      <g
-         id="command_group65824"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector85354"
-           d="M 91.210865,200.02871 91.187995,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use97950"
-           inkscape:connection-end="#path657"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use97950"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="91.21681999999998"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g543"
@@ -11022,28 +9709,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="csssccssccsccssssssssssscccssccssssssssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group1296"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector32941"
-           d="m 94.870564,199.15219 -0.01067,-0.0121"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use39946"
-           inkscape:connection-end="#path658"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use39946"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="94.87651600000001"
-           y="199.12348"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g553"
@@ -11176,28 +9841,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="csssccssccsccssssssssssscccssccssssssssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group5572"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(0, 4)">
-        <path
-           id="command_connector39010"
-           d="M 95.994045,194.19647 67.847332,166.18231"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use73579"
-           inkscape:connection-end="#path659"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use73579"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="96.0"
-           y="194.16775"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g560"
@@ -11310,28 +9953,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group81127"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector19242"
-           d="m 134.74139,199.06186 -0.02,-0.0193"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use52904"
-           inkscape:connection-end="#path660"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use52904"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="134.747341"
-           y="199.03314"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g561"
@@ -11512,28 +10133,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group26054"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector36689"
-           d="m 87.393993,193.70471 -0.0081,-0.0172"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use93243"
-           inkscape:connection-end="#path661"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use93243"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="87.399946"
-           y="193.67600000000002"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g566"
@@ -11626,28 +10225,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group38255"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector74459"
-           d="m 79.151569,196.8717 -0.01049,-0.0208"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use75485"
-           inkscape:connection-end="#path662"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use75485"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="79.15752257"
-           y="196.84299000000001"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g568"
@@ -11701,28 +10278,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="csccscscsccsscccsccsccscscssscssccscccsssscssccc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group14768"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector342"
-           d="m 74.211125,198.66813 -0.01304,-0.0218"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use3457"
-           inkscape:connection-end="#path663"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use3457"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="74.2170819"
-           y="198.63942"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g567"
@@ -11800,28 +10355,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group26055"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector15066"
-           d="M 101.99405,197.60646 73.52403,157.25482"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use51074"
-           inkscape:connection-end="#path664"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use51074"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="102.0"
-           y="197.577741"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g569"
@@ -11942,28 +10475,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccccccsssccssscscscscccsssccssc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group23144"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector44075"
-           d="m 81.276798,197.1315 -0.01108,-0.0207"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use43037"
-           inkscape:connection-end="#path666"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use43037"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="81.28275"
-           y="197.10279"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g570"
@@ -12103,28 +10614,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccccccsssccssscscscscccsssccssc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group8651"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector40447"
-           d="m 88.990307,192.67897 -0.01217,-0.0159"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use58222"
-           inkscape:connection-end="#path667"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use58222"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="88.99625900000001"
-           y="192.65025"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g582"
@@ -12309,28 +10798,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccccccsssccssscscscscccsssccssc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group55175"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector25565"
-           d="m 73.280926,200.07191 -0.0086,-0.0247"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use2999"
-           inkscape:connection-end="#path668"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use2999"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="73.286878"
-           y="200.0432"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g800"
@@ -12530,28 +10997,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccccccsssccssscscscscccsssccssc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group28579"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(0, 4)">
-        <path
-           id="command_connector53440"
-           d="m 56.486904,202.01277 -6.67e-4,-0.0289"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use57590"
-           inkscape:connection-end="#path669"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use57590"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="56.49286"
-           y="201.98405"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g802"
@@ -12768,28 +11213,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccccccsssccssscscscscccsssccssc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group39020"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector31761"
-           d="m 97.004887,185.28994 -0.01021,-0.009"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use83428"
-           inkscape:connection-end="#path804"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use83428"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="97.010841"
-           y="185.261238"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g804"
@@ -12956,28 +11379,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scccsssssssscsssssssssssssssscssscssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group76427"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector38595"
-           d="m 48.709179,198.95373 -0.0026,-0.0171"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use26497"
-           inkscape:connection-end="#path671"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use26497"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="48.715135000000004"
-           y="198.92502000000002"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g815"
@@ -13056,28 +11457,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group39228"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector65531"
-           d="M 101.74817,197.34002 64.630297,173.89788"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use56631"
-           inkscape:connection-end="#path672"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use56631"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="101.754128"
-           y="197.31131"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g816"
@@ -13196,28 +11575,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group86370"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector4943"
-           d="m 97.465595,200.00091 -0.01589,-0.0262"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use77005"
-           inkscape:connection-end="#path673"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use77005"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="97.471553"
-           y="199.9722"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g818"
@@ -13310,28 +11667,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scssssssccsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group32826"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector20468"
-           d="M 35.79966,200.02871 35.793642,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use28936"
-           inkscape:connection-end="#path808"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use28936"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="35.805616"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g820"
@@ -13487,28 +11822,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scssssccscsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group17733"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector19566"
-           d="m 36.836357,199.18019 -0.0048,-0.0189"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use84038"
-           inkscape:connection-end="#path805"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use84038"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="36.842312"
-           y="199.15147"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g834"
@@ -13641,28 +11954,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scssssccscsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group52273"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector34400"
-           d="M 31.141131,200.02871 31.137151,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use44812"
-           inkscape:connection-end="#path809"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use44812"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="31.147086"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g845"
@@ -13808,28 +12099,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group92570"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector63440"
-           d="m 37.52121,198.93113 -0.0062,-0.0233"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use78600"
-           inkscape:connection-end="#path677"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use78600"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="37.527165999999994"
-           y="198.90242"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g853"
@@ -13993,28 +12262,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scssssccscsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group79375"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector59058"
-           d="M 33.040115,200.02871 33.035078,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use79521"
-           inkscape:connection-end="#path810"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use79521"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="33.046071"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g862"
@@ -14143,28 +12390,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ssssccsssssssscs"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group95696"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector87917"
-           d="M 39.994045,193.58664 14,169"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use31985"
-           inkscape:connection-end="#path866"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use31985"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="39.99999999999999"
-           y="193.55792000000002"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g894"
@@ -14304,28 +12529,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scssssscsscccscccsscsccccccccsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group69934"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector19331"
-           d="M 99.189449,200.02871 99.171741,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use54740"
-           inkscape:connection-end="#path680"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use54740"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="99.195402"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g895"
@@ -14403,28 +12606,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group60728"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector91292"
-           d="M 35.64193,200.02871 35.637156,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use43040"
-           inkscape:connection-end="#path681"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use43040"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="35.647885"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g896"
@@ -14503,28 +12684,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group47580"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector10358"
-           d="M 150.87132,200.02871 150.83441,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use54435"
-           inkscape:connection-end="#path682"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use54435"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="150.877274"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g897"
@@ -14602,28 +12761,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group53522"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector44222"
-           d="m 97.665852,199.9723 -0.02004,-0.0244"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use18330"
-           inkscape:connection-end="#path683"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use18330"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="97.67181"
-           y="199.943584"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g898"
@@ -14721,28 +12858,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ssssssscsssssccssscssssssssccs"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group64862"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(0, 4)">
-        <path
-           id="command_connector64743"
-           d="m 99.046284,199.50189 -0.01514,-0.0177"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use12025"
-           inkscape:connection-end="#path684"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use12025"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="99.052242"
-           y="199.473178"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g901"
@@ -14879,28 +12994,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group29712"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector9529"
-           d="m 83.018505,194.42683 -0.01054,-0.0177"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use7304"
-           inkscape:connection-end="#path685"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use7304"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="83.0244604"
-           y="194.39811"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g902"
@@ -15049,28 +13142,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scscssscccsssscccssscscsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group73591"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector35983"
-           d="m 79.577923,196.49618 -0.01,-0.0201"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use80897"
-           inkscape:connection-end="#path686"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use80897"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="79.58388"
-           y="196.46747"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g923"
@@ -15253,28 +13324,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scscssscccsssscccssscscsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group17632"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector34128"
-           d="m 80.958355,195.71821 -0.01025,-0.0192"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use12880"
-           inkscape:connection-end="#path687"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use12880"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="80.964306"
-           y="195.68949999999998"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g931"
@@ -15470,28 +13519,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group54203"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector75232"
-           d="m 88.792866,189.81421 -0.01048,-0.013"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use54545"
-           inkscape:connection-end="#path688"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use54545"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="88.798818"
-           y="189.78549"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g939"
@@ -15705,28 +13732,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scscssscccsssscccssscscsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group50835"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector66396"
-           d="m 80.32864,196.08145 -0.01014,-0.0196"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use68191"
-           inkscape:connection-end="#path689"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use68191"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="80.334595"
-           y="196.05273"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g947"
@@ -15889,28 +13894,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group40224"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector71637"
-           d="m 79.956593,196.45875 -0.0099,-0.0204"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use79278"
-           inkscape:connection-end="#path690"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use79278"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="79.962547"
-           y="196.43004"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g46"
@@ -16051,28 +14034,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scscssscccsssscccssscscsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group81379"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector27103"
-           d="m 71.390751,199.88679 -0.0075,-0.0247"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use6299"
-           inkscape:connection-end="#path691"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use6299"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="71.396707"
-           y="199.85808"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g955"
@@ -16236,28 +14197,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1"
          sodipodi:nodetypes="sccccsscccssscsccccccsssccssscsssssssssccsscssccssccsss" />
-      <g
-         id="command_group58888"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector60835"
-           d="m 140.27082,199.15413 -0.0205,-0.0197"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use96818"
-           inkscape:connection-end="#path692"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use96818"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="140.276774"
-           y="199.125409"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g87"
@@ -16417,28 +14356,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccssccscsssssssssssccscscsccssccsccc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group25883"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector29886"
-           d="m 79.808987,199.0397 -0.01348,-0.0206"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use50695"
-           inkscape:connection-end="#path693"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use50695"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="79.814945"
-           y="199.01098"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g89"
@@ -16555,28 +14472,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group73376"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector86758"
-           d="M 101.99405,202.28056 65.841769,174.75476"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use92279"
-           inkscape:connection-end="#path694"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use92279"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="102.0"
-           y="202.25184"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g91"
@@ -16714,28 +14609,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group52861"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector85782"
-           d="m 37.271675,199.62062 0.0025,-0.0265"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use13452"
-           inkscape:connection-end="#path695"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use13452"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="37.277631"
-           y="199.59191"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g92"
@@ -16813,28 +14686,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1"
          sodipodi:nodetypes="sssssssssssssssccssssscsssccsssssscscsssss" />
-      <g
-         id="command_group59450"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector76352"
-           d="m 77.474125,196.62977 -0.01127,-0.0199"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use89182"
-           inkscape:connection-end="#path696"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use89182"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="77.480077"
-           y="196.60106000000002"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g94"
@@ -16912,28 +14763,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1"
          sodipodi:nodetypes="scssssssccsssssscssssscsssscsssssssssssssss" />
-      <g
-         id="command_group15097"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector66587"
-           d="m 70.926418,198.92775 -0.0046,-0.027"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use98769"
-           inkscape:connection-end="#path697"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use98769"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="70.93236999999999"
-           y="198.899031"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g102"
@@ -17012,28 +14841,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group81994"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector35703"
-           d="m 66.409229,199.60688 -0.0078,-0.0172"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use41539"
-           inkscape:connection-end="#path698"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use41539"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="66.41518500000001"
-           y="199.57817"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g103"
@@ -17112,28 +14919,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group5391"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector22230"
-           d="M 97.994045,197.58264 69.330965,166.25575"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use26451"
-           inkscape:connection-end="#path699"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use26451"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="98.0"
-           y="197.553927"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g105"
@@ -17231,28 +15016,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="sssssccssscccccssssssssssscsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group7854"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector48768"
-           d="M 97.994045,197.92682 69.30204,166.34385"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use93682"
-           inkscape:connection-end="#path700"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use93682"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="98.0"
-           y="197.89810699999998"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g110"
@@ -17386,28 +15149,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="sssssccssscccccssssssssssscsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group86220"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector22551"
-           d="M 53.994045,149.52871 54,149.5"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use29966"
-           inkscape:connection-end="#path701"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use29966"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="54.0"
-           y="149.5"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g122"
@@ -17553,27 +15294,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group54596"
-         inkscape:label="Commande Ink/Stitch: Position de fin">
-        <path
-           id="command_connector83099"
-           d="M 97.994045,193.68905 69.628286,165.19756"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use28305"
-           inkscape:connection-end="#path702"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use28305"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="98"
-           y="193.66034"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g792"
@@ -17733,28 +15453,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="sssssccssscccccssssssssssscsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group21870"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector36476"
-           d="M 97.994045,196.11837 69.449627,165.87123"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use88108"
-           inkscape:connection-end="#path703"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use88108"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="98.0"
-           y="196.089668"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g188"
@@ -17867,28 +15565,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group29855"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector50074"
-           d="m 68.385616,196.82953 -0.0017,-0.005"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use26158"
-           inkscape:connection-end="#path704"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use26158"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="68.3915727"
-           y="196.80080999999998"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g190"
@@ -17968,28 +15644,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group43942"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector65554"
-           d="M 118.75444,200.02871 118.73173,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use45818"
-           inkscape:connection-end="#path705"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use45818"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="118.76039600000001"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g193"
@@ -18068,28 +15722,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group2624"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector38078"
-           d="m 102.3243,199.6737 -0.0139,-0.0145"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use89194"
-           inkscape:connection-end="#path706"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use89194"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="102.33025"
-           y="199.64499"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g194"
@@ -18168,28 +15800,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group84716"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector37183"
-           d="m 68.195774,185.60074 -0.0028,-0.003"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use12576"
-           inkscape:connection-end="#path707"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use12576"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="68.201726"
-           y="185.572015"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g195"
@@ -18284,28 +15894,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scsssssccccsscccccsssccsssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group85300"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector44665"
-           d="m 64.832958,195.59309 -0.0023,-0.004"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use36503"
-           inkscape:connection-end="#path708"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use36503"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="64.83891299999999"
-           y="195.564372"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g196"
@@ -18455,28 +16043,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group2809"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector58029"
-           d="m 68.514317,184.65419 -0.0029,-0.003"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use602"
-           inkscape:connection-end="#path709"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use602"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="68.52027399999999"
-           y="184.625471"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g799"
@@ -18619,28 +16185,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group10916"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector51746"
-           d="M 72.99165,200.02871 72.97633,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use73133"
-           inkscape:connection-end="#path710"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use73133"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="72.997603"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g197"
@@ -18720,28 +16264,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group19933"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector98640"
-           d="m 70.025089,200.77519 -0.0049,-0.0265"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use46779"
-           inkscape:connection-end="#path711"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use46779"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="70.03104710000001"
-           y="200.74648"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g30"
@@ -18868,28 +16390,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group11973"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector98277"
-           d="M 48.789272,200.02871 48.783003,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use34668"
-           inkscape:connection-end="#path712"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use34668"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="48.795227"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g45"
@@ -18969,28 +16469,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ssccsscsscssccccsscssssssscssssssscss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group62985"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector57862"
-           d="M 103.99405,190.26213 92.783565,175.95248"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use64524"
-           inkscape:connection-end="#path713"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use64524"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="104.0"
-           y="190.23342"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g85"
@@ -19068,28 +16546,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group10974"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector19779"
-           d="m 91.397846,182.9386 -0.007,-0.009"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use1991"
-           inkscape:connection-end="#path714"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use1991"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="91.40380399999998"
-           y="182.909877"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g198"
@@ -19168,28 +16624,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group90233"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector43754"
-           d="M 99.994045,180.54295 66.299661,139"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use12624"
-           inkscape:connection-end="#path715"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use12624"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="100.0"
-           y="180.51423"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g199"
@@ -19271,28 +16705,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:color_sort_index="1"
          inkstitch:meander_angle="45"
          inkstitch:random_seed="26625629" />
-      <g
-         id="command_group46421"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector37202"
-           d="m 92.215603,184.56468 -0.0075,-0.0108"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use99099"
-           inkscape:connection-end="#path716"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use99099"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="92.22155599999999"
-           y="184.53596"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g200"
@@ -19372,28 +16784,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1"
          sodipodi:nodetypes="scssscsssssscsssssssssscssscsscsscscscscs" />
-      <g
-         id="command_group99964"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector57393"
-           d="m 68.355091,200.4459 -0.0051,-0.0259"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use28521"
-           inkscape:connection-end="#path717"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use28521"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="68.361045"
-           y="200.41719"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g202"
@@ -19521,28 +16911,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group52241"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector40918"
-           d="M 45.866863,200.02871 45.868558,200"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use68166"
-           inkscape:connection-end="#path718"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use68166"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="45.8728175"
-           y="200.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g203"
@@ -19621,28 +16989,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group10376"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector48188"
-           d="m 82.158917,194.77339 -0.0086,-0.0198"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use74525"
-           inkscape:connection-end="#path719"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use74525"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="82.164874"
-           y="194.74468000000002"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g86"
@@ -19820,28 +17166,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1"
          sodipodi:nodetypes="ssssssccccsssssscssscsscscssccscccscccsc" />
-      <g
-         id="command_group81705"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector69103"
-           d="m 79.907383,195.52636 -0.0088,-0.0202"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use41866"
-           inkscape:connection-end="#path720"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use41866"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="79.91333800000001"
-           y="195.49765000000002"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g88"
@@ -19969,28 +17293,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group73766"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector18915"
-           d="m 38.165928,194.98184 -0.01253,-0.0103"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use52480"
-           inkscape:connection-end="#path721"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use52480"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="38.171882"
-           y="194.95311999999998"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g234"
@@ -20066,28 +17368,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group59813"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector48572"
-           d="m 31.329815,202.35324 -0.0015,-0.002"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use32812"
-           inkscape:connection-end="#path722"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use32812"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="31.335769000000006"
-           y="202.32452999999998"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g468"
@@ -20182,28 +17462,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="cscscscsc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group62041"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector20413"
-           d="M 51.268227,187.11676 35.772727,183"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use10089"
-           inkscape:connection-end="#path972"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use10089"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="51.27418"
-           y="187.08804"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g236"
@@ -20344,28 +17602,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkscape:label="path973"
          sodipodi:nodetypes="cccssccccc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group28940"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector69468"
-           d="m 37.618656,202.54174 -6.11e-4,-6.6e-4"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use66560"
-           inkscape:connection-end="#path973"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use66560"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="37.624609"
-           y="202.51303000000001"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g246"
@@ -20515,28 +17751,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="sssssssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group35184"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector39096"
-           d="m 44.892487,195.11592 -0.01091,-0.0106"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use68264"
-           inkscape:connection-end="#path725"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use68264"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="44.898439999999994"
-           y="195.0872"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g262"
@@ -20679,28 +17893,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ssssccssssccs"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group28540"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector44120"
-           d="M 47.905903,164.47262 35,152"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use15056"
-           inkscape:connection-end="#path726"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use15056"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="47.91185900000001"
-           y="164.44390600000003"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g330"
@@ -20843,28 +18035,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="sssscsssssssccssssssssssscssccsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group45576"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector45898"
-           d="m 68.033192,137.80623 -0.0087,-0.0167"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use96491"
-           inkscape:connection-end="#path727"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use96491"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="68.039148"
-           y="137.777508"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g31"
@@ -21128,28 +18298,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group4302"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector54490"
-           d="m 66.643482,110.46727 -0.05883,-0.0535"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use85960"
-           inkscape:connection-end="#path729"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use85960"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="66.649438"
-           y="110.43855299999998"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g95"
@@ -21228,28 +18376,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scsccssssssssccssccssccssccssscccsscccssssssssccssccssccssccsscsssccssccssc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group82464"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector84103"
-           d="M 101.4944,169.27646 77.728984,140.77017"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use65513"
-           inkscape:connection-end="#path730"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use65513"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="101.500348"
-           y="169.24774"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g98"
@@ -21378,28 +18504,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group18987"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector63791"
-           d="m 47.936218,158.4759 -0.0012,-0.01"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use17019"
-           inkscape:connection-end="#path731"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use17019"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="47.942173"
-           y="158.44718999999998"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g106"
@@ -21476,28 +18580,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group50845"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector2663"
-           d="M 85.01749,184.10881 50,130"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use42892"
-           inkscape:connection-end="#path732"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use42892"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="85.02344400000001"
-           y="184.0801"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g117"
@@ -21574,28 +18656,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group75633"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector94624"
-           d="M 43.761067,218.02871 43.755395,218"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use81379"
-           inkscape:connection-end="#path733"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use81379"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="43.767022999999995"
-           y="218.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g123"
@@ -21672,28 +18732,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group87507"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector21804"
-           d="M 35.291039,218.02871 35.293562,218"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use96178"
-           inkscape:connection-end="#path734"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use96178"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="35.296992"
-           y="218.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g186"
@@ -21770,28 +18808,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group82095"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector58425"
-           d="M 67.994045,215.25363 64.097965,205"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use93201"
-           inkscape:connection-end="#path735"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use93201"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="68.0"
-           y="215.22491200000002"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g205"
@@ -21868,28 +18884,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group87174"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector57191"
-           d="m 53.164894,212.57798 -4.64e-4,-0.002"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use8058"
-           inkscape:connection-end="#path736"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use8058"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="53.17085"
-           y="212.54927800000002"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g268"
@@ -21964,28 +18958,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group48997"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector50435"
-           d="M 53.797897,230.02871 53.791613,230"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use2837"
-           inkscape:connection-end="#path737"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use2837"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="53.80385299999999"
-           y="230.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g338"
@@ -22061,28 +19033,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group7187"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector50680"
-           d="M 75.994045,217.65818 50,135"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use47541"
-           inkscape:connection-end="#path738"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use47541"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="76.0"
-           y="217.62947100000002"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g361"
@@ -22158,28 +19108,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group47341"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector74683"
-           d="M 75.994045,140.44133 40.75,141"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use95974"
-           inkscape:connection-end="#path739"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use95974"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="75.99999999999999"
-           y="140.41262"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g362"
@@ -22257,28 +19185,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group59217"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector4133"
-           d="M 100.78099,180.10556 52.5,189"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use55949"
-           inkscape:connection-end="#path740"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use55949"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="100.78694200000001"
-           y="180.07683600000001"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g391"
@@ -22373,28 +19279,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="cssccccccssccccc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group55506"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-4, 0)">
-        <path
-           id="command_connector68747"
-           d="M 78.723248,178.02871 78.720398,178"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use25018"
-           inkscape:connection-end="#path977"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use25018"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="78.729199"
-           y="178.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g421"
@@ -22545,28 +19429,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="ccccccccccccc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group78799"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector34122"
-           d="M 99.591053,144.81982 77.541101,143.41803"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use38308"
-           inkscape:connection-end="#path742"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use38308"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="99.5970045"
-           y="144.79111"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g428"
@@ -22720,28 +19582,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scccsccssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group95177"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector51363"
-           d="M 66.803776,92.23235 55.5,83"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use82774"
-           inkscape:connection-end="#path979"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use82774"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="66.80972700000001"
-           y="92.203635"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g430"
@@ -22879,28 +19719,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:color_sort_index="1"
          inkstitch:random_seed="29372796"
          inkstitch:meander_angle="45" />
-      <g
-         id="command_group93021"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector53429"
-           d="m 96.366695,187.66876 -0.0087,-0.0127"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use1299"
-           inkscape:connection-end="#path745"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use1299"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="96.372651"
-           y="187.64004999999997"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g439"
@@ -22979,28 +19797,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group98605"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector63141"
-           d="M 55.935585,182.02871 55.930734,182"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use55298"
-           inkscape:connection-end="#path746"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use55298"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="55.94154121"
-           y="182.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g440"
@@ -23110,28 +19906,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="sssssssss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group80738"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector74132"
-           d="m 58.894627,182.82164 -0.01065,-0.009"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use78823"
-           inkscape:connection-end="#path981"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use78823"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="58.900581700000004"
-           y="182.79291999999998"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g467"
@@ -23325,28 +20099,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="scssscccccsss"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group79927"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector14211"
-           d="M 70.903706,172.02871 70.850226,172"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use63429"
-           inkscape:connection-end="#path982"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use63429"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="70.909662"
-           y="172.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g482"
@@ -23472,28 +20224,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group39581"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector62627"
-           d="m 61.609833,170.64392 -0.01086,-0.0212"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use51861"
-           inkscape:connection-end="#path749"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use51861"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="61.615788"
-           y="170.61521"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g486"
@@ -23570,28 +20300,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group35132"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector63261"
-           d="m 64.68111,183.22296 -0.01614,-0.0385"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use25530"
-           inkscape:connection-end="#path750"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use25530"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="64.687064"
-           y="183.19425"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g487"
@@ -23701,28 +20409,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          sodipodi:nodetypes="ssssssssssccssscssssss"
          inkstitch:color_sort_index="1"
          inkstitch:meander_angle="90" />
-      <g
-         id="command_group35443"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector1755"
-           d="m 153.77882,174.09646 -16.82917,-2.16937"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use58031"
-           inkscape:connection-end="#path984"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use58031"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="153.78476999999998"
-           y="174.06775"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g492"
@@ -24001,28 +20687,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:random_seed="97217514"
          inkstitch:color_sort_index="1"
          inkstitch:meander_angle="90" />
-      <g
-         id="command_group53053"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector43986"
-           d="m 86.935162,216.87202 -0.0019,-0.0275"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use82511"
-           inkscape:connection-end="#path754"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use82511"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="86.941117"
-           y="216.8433"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g96"
@@ -24153,28 +20817,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:fill_underlay_angle="45 135"
          sodipodi:nodetypes="sssccssssccsssssssssccccccccccssssccssssscccccscsssc"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group42275"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector21702"
-           d="m 111.33315,173.65449 -0.0103,-0.0107"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use12989"
-           inkscape:connection-end="#path755"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use12989"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="111.33910000000002"
-           y="173.62577800000003"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g339"
@@ -24353,28 +20995,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group87978"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector38674"
-           d="M 31.95921,85.028714 31.940968,85"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use16527"
-           inkscape:connection-end="#path757"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use16527"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="31.965164"
-           y="85.0"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g363"
@@ -24453,28 +21073,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group6298"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector84633"
-           d="M 29.34759,95.781033 17,83"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use17096"
-           inkscape:connection-end="#path151"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use17096"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="29.353545000000004"
-           y="95.752322"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g162"
@@ -24553,28 +21151,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="command_group33641"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="">
-        <path
-           id="command_connector16177"
-           d="M 29.34759,95.781033 17,83"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use55306"
-           inkscape:connection-end="#path744"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use55306"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="29.353545000000004"
-           y="95.752322"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g438"
@@ -24653,31 +21229,6 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:fill_underlay_angle="45 135"
          inkstitch:color_sort_index="1" />
-      <g
-         id="g164"
-         inkscape:label="Commande Ink/Stitch: Position de fin de remplissage"
-         transform="translate(80.5156, 7.03534)"
-         style="display:inline"
-         inkstitch:color_sort_index="1">
-        <path
-           id="path164"
-           d="M -15.945456,125.07038 -51.162055,88.716981"
-           style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-           inkscape:connection-start="#command_use94568"
-           inkscape:connection-end="#path163"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0"
-           inkstitch:color_sort_index="1" />
-        <use
-           id="use164"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="-15.921638"
-           y="124.95553"
-           inkscape:label="marqueur de commande" />
-      </g>
     </g>
     <g
        id="g169"
