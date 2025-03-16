@@ -5,8 +5,8 @@
 
 from math import degrees, pi
 
-from inkex import (DirectedLineSegment, LinearGradient, PathElement, Transform,
-                   errormsg)
+from inkex import (DirectedLineSegment, Group, LinearGradient, Path,
+                   PathElement, Transform, errormsg)
 from shapely import geometry as shgeo
 from shapely.affinity import rotate
 from shapely.ops import split
@@ -15,8 +15,8 @@ from ..elements import FillStitch
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..svg.tags import INKSTITCH_ATTRIBS
-from .duplicate_params import get_inkstitch_attributes
 from .base import InkstitchExtension
+from .duplicate_params import get_inkstitch_attributes
 
 
 class GradientBlocks(InkstitchExtension):
@@ -60,7 +60,13 @@ class GradientBlocks(InkstitchExtension):
                 end_row_spacing = element.row_spacing / PIXELS_PER_MM * 2
             end_row_spacing = f'{end_row_spacing: .2f}'
 
+            color_block_group = Group()
+            color_block_group.label = _("Color Gradient Blocks")
+            parent.insert(index, color_block_group)
+
             for i, shape in enumerate(fill_shapes):
+                if shape.area < 15:
+                    continue
                 color = attributes[i]['color']
                 style['fill'] = color
                 is_gradient = attributes[i]['is_gradient']
@@ -91,15 +97,16 @@ class GradientBlocks(InkstitchExtension):
                     block.set('inkstitch:fill_underlay_angle', angle)
                     block.set('inkstitch:fill_underlay_row_spacing_mm', end_row_spacing)
 
-                parent.insert(index, block)
+                color_block_group.append(block)
             parent.remove(element.node)
 
     def _element_to_path(self, shape):
         coords = list(shape.exterior.coords)
         for interior in shape.interiors:
             coords.extend(interior.coords)
-        path = "M " + " ".join([f'{x}, {y}' for x, y in coords]) + " Z"
-        return path
+        path = Path(coords)
+        path.close()
+        return str(path)
 
 
 def gradient_shapes_and_attributes(element, shape, unit_multiplier):
