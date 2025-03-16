@@ -5,7 +5,7 @@
    sodipodi:docname="mono.svg"
    width="180"
    height="180"
-   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   inkscape:version="1.4-rc1 (61ec3f24, 2024-09-26)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,8 +28,8 @@
      id="namedview1755"
      showgrid="true"
      inkscape:zoom="1.78"
-     inkscape:cx="34.831461"
-     inkscape:cy="105.89888"
+     inkscape:cx="35.393258"
+     inkscape:cy="106.17978"
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
@@ -18841,9 +18841,6 @@ Copyright 2003, 2008 B. Jackowski and J. M. Nowacki (on behalf of TeX users grou
        inkstitch:zigzag_underlay_inset_mm="0.0"
        inkstitch:short_stitch_distance_mm="0.22"
        inkstitch:color_sort_index="2" />
-    <g
-       id="command_group1"
-       inkscape:label="Commande Ink/Stitch: Satin cut point (use with Cut Satin Column)" />
   </g>
   <g
      inkscape:groupmode="layer"
