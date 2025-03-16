@@ -21,10 +21,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="3.5337816"
-     inkscape:cx="83.479975"
-     inkscape:cy="171.20469"
-     inkscape:current-layer="g659"
+     inkscape:zoom="2.5110615"
+     inkscape:cx="57.147147"
+     inkscape:cy="173.23351"
+     inkscape:current-layer="g710"
      showgrid="false">
     <sodipodi:guide
        position="84.015821,53.254123"
@@ -3530,7 +3530,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-A"
-     style="display:inline"
+     style="display:none"
      id="g659"
      transform="translate(22)">
     <g
@@ -14751,6 +14751,352 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   </g>
   <g
      inkscape:groupmode="layer"
+     inkscape:label="GlyphLayer-Ù"
+     style="display:none"
+     id="g705"
+     transform="translate(22)">
+    <g
+       id="g226-15"
+       inkscape:label="grave orange"
+       transform="matrix(-1,0,0,1,126.84,-50.7066)"
+       style="display:inline">
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
+         d="M 65.100252,69.65312 73.651913,59.20109"
+         id="path215-4"
+         inkscape:label="debut"
+         sodipodi:nodetypes="cc"
+         inkstitch:color_sort_index="1"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_length_mm="1.5" />
+      <path
+         style="display:inline;fill:none;stroke:#feb343"
+         d="M 73,51 49,91 M 81,51 56,91 M 80.487781,59.312262 H 62.339519"
+         id="path217-2"
+         sodipodi:nodetypes="cccc"
+         inkstitch:color_sort_index="1"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
+         inkstitch:contour_underlay="True"
+         inkstitch:max_stitch_length_mm="8"
+         inkstitch:split_method="staggered"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:contour_underlay_inset_mm="0.20"
+         inkstitch:reverse_rails="none" />
+      <g
+         id="command_group55885"
+         inkscape:label="Commande Ink/Stitch: Position de fin"
+         transform="matrix(-1,0,0,1,148.84,50.7066)">
+        <path
+           id="command_connector33185"
+           d="m 82.18792,8.7205173 0.40402,2.8261167"
+           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use66475"
+           inkscape:connection-end="#path217-2"
+           inkscape:label="connecteur"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0" />
+        <use
+           id="command_use66475"
+           xlink:href="#inkstitch_ending_point"
+           height="100%"
+           width="100%"
+           x="82.211739"
+           y="8.6056623"
+           inkscape:label="marqueur de commande" />
+      </g>
+    </g>
+    <g
+       id="g155-6-3-3-5"
+       inkscape:label="orange"
+       style="display:inline"
+       transform="translate(-1.00049,-0.710996)">
+      <path
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882"
+         d="M 13.595378,74.887559 12.122367,59.482145"
+         id="path212-3-5-7-9"
+         inkstitch:color_sort_index="1"
+         inkscape:label="debut"
+         sodipodi:nodetypes="cc"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_length_mm="1.5" />
+      <path
+         id="path701-4-9-3-8"
+         style="display:inline;fill:none;stroke:#feb343"
+         d="m 16,51 c -1,51 -1,105 0,156 1,32 14,45 47,45 32,0 45,-13 46,-45 1,-51 1,-105 0,-156 M 9,51 c -1,51 -1,105 0,156 1,37 16,52 54,52 38,0 52,-15 53,-52 1,-51 1,-105 0,-156 m -77.130848,193.40553 -8.437308,13.25863 m 50.021184,-11.45063 9.341306,14.46395 m 14.463956,-54.8425 h 18.38128 m -119.6289778,0 H 18.981212"
+         sodipodi:nodetypes="ccsccccscccccccccc"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:reverse_rails="none"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
+         inkstitch:contour_underlay="True"
+         inkstitch:contour_underlay_inset_mm="0.20"
+         inkstitch:color_sort_index="1"
+         inkstitch:split_method="staggered"
+         inkstitch:pull_compensation_percent="0.0"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:max_stitch_length_mm="8"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <g
+         id="command_group29509"
+         inkscape:label="Commande Ink/Stitch: Position de fin"
+         transform="translate(-20.9995,0.710996)">
+        <path
+           id="command_connector99587"
+           d="m 104.08878,256.52489 -0.021,-0.10504"
+           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use77494"
+           inkscape:connection-end="#path701-4-9-3-8"
+           inkscape:label="connecteur"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0" />
+        <use
+           id="command_use77494"
+           xlink:href="#inkstitch_ending_point"
+           height="100%"
+           width="100%"
+           x="104.1126"
+           y="256.41003"
+           inkscape:label="marqueur de commande" />
+      </g>
+    </g>
+    <g
+       id="g246-58"
+       inkscape:label="grave pink"
+       transform="matrix(-1,0,0,1,126.84,-50.7066)"
+       style="display:inline">
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
+         d="m 79.986477,69.019664 8.551661,-10.45203"
+         id="path241-80"
+         inkscape:label="debut"
+         sodipodi:nodetypes="cc"
+         inkstitch:color_sort_index="2"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_length_mm="1.5" />
+      <path
+         style="display:inline;fill:none;stroke:#f64a8a"
+         d="M 89,51 63,91 M 98,51 70,91 M 96.725699,61.222605 77.14468,60.74502"
+         id="path243-4"
+         sodipodi:nodetypes="cccc"
+         inkstitch:color_sort_index="2"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
+         inkstitch:contour_underlay="True"
+         inkstitch:max_stitch_length_mm="8"
+         inkstitch:split_method="staggered"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:contour_underlay_inset_mm="0.20"
+         inkstitch:reverse_rails="none" />
+      <g
+         id="command_group28770"
+         inkscape:label="Commande Ink/Stitch: Position de fin"
+         transform="matrix(-1,0,0,1,148.84,50.7066)">
+        <path
+           id="command_connector20640"
+           d="M 66.168457,10.180992 68.344803,20.2934"
+           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use33457"
+           inkscape:connection-end="#path243-4"
+           inkscape:label="connecteur"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0" />
+        <use
+           id="command_use33457"
+           xlink:href="#inkstitch_ending_point"
+           height="100%"
+           width="100%"
+           x="66.192276"
+           y="10.066137"
+           inkscape:label="marqueur de commande" />
+      </g>
+    </g>
+    <g
+       id="g157-6-2-8-3"
+       inkscape:label="pink"
+       style="display:inline"
+       transform="translate(-1.00049,-0.710996)">
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882"
+         d="M 27.019772,76.056531 28.300545,62.205532"
+         id="path211-9-8-4-8"
+         inkstitch:color_sort_index="2"
+         inkscape:label="debut"
+         sodipodi:nodetypes="cc"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_length_mm="1.5" />
+      <path
+         id="path151-7-4-0-8"
+         style="display:inline;fill:none;stroke:#f64a8a"
+         d="m 32,51 c -1,58 -1,104 0,156 0,24 9,33 31,33 22,0 30,-9 30,-33 1,-51 1,-105 0,-156 m -69,0 c -1,58 -1,100 0,156 0,28 11,39 39,39 27,0 38,-11 38,-39 1,-52 1,-97 0,-156 m -57.309529,180.44824 -6.629314,11.1493 m 38.26922,-7.83465 7.231978,9.94397 M 89.191669,199.507 h 15.669291 m -85.277084,0 H 34.95183"
+         sodipodi:nodetypes="ccsccccscccccccccc"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:reverse_rails="none"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
+         inkstitch:contour_underlay="True"
+         inkstitch:contour_underlay_inset_mm="0.20"
+         inkstitch:color_sort_index="2"
+         inkstitch:split_method="staggered"
+         inkstitch:pull_compensation_percent="0.0"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:max_stitch_length_mm="8"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <g
+         id="command_group91717"
+         inkscape:label="Commande Ink/Stitch: Position de fin"
+         transform="translate(-20.9995,0.710996)">
+        <path
+           id="command_connector30998"
+           d="m 99.104935,243.84732 -0.01738,-0.10485"
+           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use89511"
+           inkscape:connection-end="#path151-7-4-0-8"
+           inkscape:label="connecteur"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0" />
+        <use
+           id="command_use89511"
+           xlink:href="#inkstitch_ending_point"
+           height="100%"
+           width="100%"
+           x="99.128754"
+           y="243.73247"
+           inkscape:label="marqueur de commande" />
+      </g>
+    </g>
+    <g
+       id="g252-7"
+       inkscape:label="grave violet"
+       transform="matrix(-1,0,0,1,126.84,-50.7066)"
+       style="display:inline">
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#913697;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
+         d="m 93.289061,72.820402 8.551659,-10.45203"
+         id="path249-73"
+         inkscape:label="debut"
+         sodipodi:nodetypes="cc"
+         inkstitch:color_sort_index="3"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_length_mm="1.5" />
+      <path
+         style="display:inline;fill:none;stroke:#913697"
+         d="M 106,51 77,91 M 114,51 84,91 M 114.39638,61.700191 H 90.517083"
+         id="path250-8-76"
+         sodipodi:nodetypes="cccc"
+         inkstitch:color_sort_index="3"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
+         inkstitch:contour_underlay="True"
+         inkstitch:max_stitch_length_mm="8"
+         inkstitch:split_method="staggered"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:contour_underlay_inset_mm="0.20"
+         inkstitch:reverse_rails="none" />
+      <g
+         id="command_group77444"
+         inkscape:label="Commande Ink/Stitch: Position de fin"
+         transform="matrix(-1,0,0,1,148.84,50.7066)">
+        <path
+           id="command_connector46063"
+           d="m 51.093071,11.108446 0.210236,0.858481"
+           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use35686"
+           inkscape:connection-end="#path250-8-76"
+           inkscape:label="connecteur"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0" />
+        <use
+           id="command_use35686"
+           xlink:href="#inkstitch_ending_point"
+           height="100%"
+           width="100%"
+           x="51.11689"
+           y="10.993591"
+           inkscape:label="marqueur de commande" />
+      </g>
+    </g>
+    <g
+       id="g156-4-8-8-6"
+       inkscape:label="violet"
+       style="display:inline"
+       transform="translate(-1.00049,-0.710996)">
+      <path
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#913697;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882"
+         d="M 41.704353,71.539603 43.179274,58.361302"
+         id="path210-9-1-2-9"
+         inkstitch:color_sort_index="3"
+         inkscape:label="debut"
+         sodipodi:nodetypes="cc"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:running_stitch_length_mm="1.5" />
+      <path
+         id="path153-4-4-3-5"
+         style="display:inline;fill:none;stroke:#913697"
+         d="m 47,51 c -1,49 -1,103 0,156 0,16 6,21 16,21 10,0 15,-5 15,-21 1,-51 1,-105 0,-156 m -39,0 c -1,51 -1,105 0,156 0,20 8,27 24,27 16,0 23,-7 23,-27 1,-51 1,-105 0,-156 M 33.746501,195.89101 H 49.71712 m 22.2986,1.20533 h 17.778614 m -33.146568,26.21592 -8.437308,10.84797 m 21.394602,-11.75197 8.135976,10.54664"
+         sodipodi:nodetypes="ccsccccscccccccccc"
+         inkstitch:satin_column="True"
+         inkstitch:pull_compensation_mm="0.3"
+         inkstitch:reverse_rails="none"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
+         inkstitch:contour_underlay="True"
+         inkstitch:contour_underlay_inset_mm="0.20"
+         inkstitch:color_sort_index="3"
+         inkstitch:split_method="staggered"
+         inkstitch:pull_compensation_percent="0.0"
+         inkstitch:lock_start="half_stitch"
+         inkstitch:max_stitch_length_mm="8"
+         inkstitch:min_stitch_length_mm=".5"
+         inkstitch:min_jump_stitch_length_mm="3" />
+      <g
+         id="command_group51295"
+         inkscape:label="Commande Ink/Stitch: Position de fin"
+         transform="translate(-20.9995,0.710996)">
+        <path
+           id="command_connector83912"
+           d="m 94.683853,231.87236 -0.01349,-0.10168"
+           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use60638"
+           inkscape:connection-end="#path153-4-4-3-5"
+           inkscape:label="connecteur"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0" />
+        <use
+           id="command_use60638"
+           xlink:href="#inkstitch_ending_point"
+           height="100%"
+           width="100%"
+           x="94.707672"
+           y="231.75751"
+           inkscape:label="marqueur de commande" />
+      </g>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Û"
      style="display:none"
      id="g703"
@@ -15825,352 +16171,6 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   </g>
   <g
      inkscape:groupmode="layer"
-     inkscape:label="GlyphLayer-Ù"
-     style="display:none"
-     id="g705"
-     transform="translate(22)">
-    <g
-       id="g226-15"
-       inkscape:label="grave orange"
-       transform="matrix(-1,0,0,1,126.84,-50.7066)"
-       style="display:inline">
-      <path
-         style="fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
-         d="M 65.100252,69.65312 73.651913,59.20109"
-         id="path215-4"
-         inkscape:label="debut"
-         sodipodi:nodetypes="cc"
-         inkstitch:color_sort_index="1"
-         inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         style="display:inline;fill:none;stroke:#feb343"
-         d="M 73,51 49,91 M 81,51 56,91 M 80.487781,59.312262 H 62.339519"
-         id="path217-2"
-         sodipodi:nodetypes="cccc"
-         inkstitch:color_sort_index="1"
-         inkstitch:satin_column="True"
-         inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="True"
-         inkstitch:end_at_nearest_point="True"
-         inkstitch:contour_underlay="True"
-         inkstitch:max_stitch_length_mm="8"
-         inkstitch:split_method="staggered"
-         inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:lock_start="half_stitch"
-         inkstitch:contour_underlay_inset_mm="0.20"
-         inkstitch:reverse_rails="none" />
-      <g
-         id="command_group55885"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,148.84,50.7066)">
-        <path
-           id="command_connector33185"
-           d="m 82.18792,8.7205173 0.40402,2.8261167"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use66475"
-           inkscape:connection-end="#path217-2"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use66475"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="82.211739"
-           y="8.6056623"
-           inkscape:label="marqueur de commande" />
-      </g>
-    </g>
-    <g
-       id="g155-6-3-3-5"
-       inkscape:label="orange"
-       style="display:inline"
-       transform="translate(-1.00049,-0.710996)">
-      <path
-         style="display:inline;fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882"
-         d="M 13.595378,74.887559 12.122367,59.482145"
-         id="path212-3-5-7-9"
-         inkstitch:color_sort_index="1"
-         inkscape:label="debut"
-         sodipodi:nodetypes="cc"
-         inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         id="path701-4-9-3-8"
-         style="display:inline;fill:none;stroke:#feb343"
-         d="m 16,51 c -1,51 -1,105 0,156 1,32 14,45 47,45 32,0 45,-13 46,-45 1,-51 1,-105 0,-156 M 9,51 c -1,51 -1,105 0,156 1,37 16,52 54,52 38,0 52,-15 53,-52 1,-51 1,-105 0,-156 m -77.130848,193.40553 -8.437308,13.25863 m 50.021184,-11.45063 9.341306,14.46395 m 14.463956,-54.8425 h 18.38128 m -119.6289778,0 H 18.981212"
-         sodipodi:nodetypes="ccsccccscccccccccc"
-         inkstitch:satin_column="True"
-         inkstitch:pull_compensation_mm="0.3"
-         inkstitch:reverse_rails="none"
-         inkstitch:start_at_nearest_point="True"
-         inkstitch:end_at_nearest_point="True"
-         inkstitch:contour_underlay="True"
-         inkstitch:contour_underlay_inset_mm="0.20"
-         inkstitch:color_sort_index="1"
-         inkstitch:split_method="staggered"
-         inkstitch:pull_compensation_percent="0.0"
-         inkstitch:lock_start="half_stitch"
-         inkstitch:max_stitch_length_mm="8"
-         inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
-      <g
-         id="command_group29509"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-20.9995,0.710996)">
-        <path
-           id="command_connector99587"
-           d="m 104.08878,256.52489 -0.021,-0.10504"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use77494"
-           inkscape:connection-end="#path701-4-9-3-8"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use77494"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="104.1126"
-           y="256.41003"
-           inkscape:label="marqueur de commande" />
-      </g>
-    </g>
-    <g
-       id="g157-6-2-8-3"
-       inkscape:label="pink"
-       style="display:inline"
-       transform="translate(-1.00049,-0.710996)">
-      <path
-         style="fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882"
-         d="M 27.019772,76.056531 28.300545,62.205532"
-         id="path211-9-8-4-8"
-         inkstitch:color_sort_index="2"
-         inkscape:label="debut"
-         sodipodi:nodetypes="cc"
-         inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         id="path151-7-4-0-8"
-         style="display:inline;fill:none;stroke:#f64a8a"
-         d="m 32,51 c -1,58 -1,104 0,156 0,24 9,33 31,33 22,0 30,-9 30,-33 1,-51 1,-105 0,-156 m -69,0 c -1,58 -1,100 0,156 0,28 11,39 39,39 27,0 38,-11 38,-39 1,-52 1,-97 0,-156 m -57.309529,180.44824 -6.629314,11.1493 m 38.26922,-7.83465 7.231978,9.94397 M 89.191669,199.507 h 15.669291 m -85.277084,0 H 34.95183"
-         sodipodi:nodetypes="ccsccccscccccccccc"
-         inkstitch:satin_column="True"
-         inkstitch:pull_compensation_mm="0.3"
-         inkstitch:reverse_rails="none"
-         inkstitch:start_at_nearest_point="True"
-         inkstitch:end_at_nearest_point="True"
-         inkstitch:contour_underlay="True"
-         inkstitch:contour_underlay_inset_mm="0.20"
-         inkstitch:color_sort_index="2"
-         inkstitch:split_method="staggered"
-         inkstitch:pull_compensation_percent="0.0"
-         inkstitch:lock_start="half_stitch"
-         inkstitch:max_stitch_length_mm="8"
-         inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
-      <g
-         id="command_group91717"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-20.9995,0.710996)">
-        <path
-           id="command_connector30998"
-           d="m 99.104935,243.84732 -0.01738,-0.10485"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use89511"
-           inkscape:connection-end="#path151-7-4-0-8"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use89511"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="99.128754"
-           y="243.73247"
-           inkscape:label="marqueur de commande" />
-      </g>
-    </g>
-    <g
-       id="g246-58"
-       inkscape:label="grave pink"
-       transform="matrix(-1,0,0,1,126.84,-50.7066)"
-       style="display:inline">
-      <path
-         style="fill:none;fill-rule:evenodd;stroke:#f64a8a;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
-         d="m 79.986477,69.019664 8.551661,-10.45203"
-         id="path241-80"
-         inkscape:label="debut"
-         sodipodi:nodetypes="cc"
-         inkstitch:color_sort_index="2"
-         inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         style="display:inline;fill:none;stroke:#f64a8a"
-         d="M 89,51 63,91 M 98,51 70,91 M 96.725699,61.222605 77.14468,60.74502"
-         id="path243-4"
-         sodipodi:nodetypes="cccc"
-         inkstitch:color_sort_index="2"
-         inkstitch:satin_column="True"
-         inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="True"
-         inkstitch:end_at_nearest_point="True"
-         inkstitch:contour_underlay="True"
-         inkstitch:max_stitch_length_mm="8"
-         inkstitch:split_method="staggered"
-         inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:lock_start="half_stitch"
-         inkstitch:contour_underlay_inset_mm="0.20"
-         inkstitch:reverse_rails="none" />
-      <g
-         id="command_group28770"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,148.84,50.7066)">
-        <path
-           id="command_connector20640"
-           d="M 66.168457,10.180992 68.344803,20.2934"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use33457"
-           inkscape:connection-end="#path243-4"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use33457"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="66.192276"
-           y="10.066137"
-           inkscape:label="marqueur de commande" />
-      </g>
-    </g>
-    <g
-       id="g252-7"
-       inkscape:label="grave violet"
-       transform="matrix(-1,0,0,1,126.84,-50.7066)"
-       style="display:inline">
-      <path
-         style="fill:none;fill-rule:evenodd;stroke:#913697;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882;stroke-dashoffset:0"
-         d="m 93.289061,72.820402 8.551659,-10.45203"
-         id="path249-73"
-         inkscape:label="debut"
-         sodipodi:nodetypes="cc"
-         inkstitch:color_sort_index="3"
-         inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         style="display:inline;fill:none;stroke:#913697"
-         d="M 106,51 77,91 M 114,51 84,91 M 114.39638,61.700191 H 90.517083"
-         id="path250-8-76"
-         sodipodi:nodetypes="cccc"
-         inkstitch:color_sort_index="3"
-         inkstitch:satin_column="True"
-         inkstitch:pull_compensation_mm="0.3"
-         inkstitch:start_at_nearest_point="True"
-         inkstitch:end_at_nearest_point="True"
-         inkstitch:contour_underlay="True"
-         inkstitch:max_stitch_length_mm="8"
-         inkstitch:split_method="staggered"
-         inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:lock_start="half_stitch"
-         inkstitch:contour_underlay_inset_mm="0.20"
-         inkstitch:reverse_rails="none" />
-      <g
-         id="command_group77444"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="matrix(-1,0,0,1,148.84,50.7066)">
-        <path
-           id="command_connector46063"
-           d="m 51.093071,11.108446 0.210236,0.858481"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use35686"
-           inkscape:connection-end="#path250-8-76"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use35686"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="51.11689"
-           y="10.993591"
-           inkscape:label="marqueur de commande" />
-      </g>
-    </g>
-    <g
-       id="g156-4-8-8-6"
-       inkscape:label="violet"
-       style="display:inline"
-       transform="translate(-1.00049,-0.710996)">
-      <path
-         style="display:inline;fill:none;fill-rule:evenodd;stroke:#913697;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882"
-         d="M 41.704353,71.539603 43.179274,58.361302"
-         id="path210-9-1-2-9"
-         inkstitch:color_sort_index="3"
-         inkscape:label="debut"
-         sodipodi:nodetypes="cc"
-         inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         id="path153-4-4-3-5"
-         style="display:inline;fill:none;stroke:#913697"
-         d="m 47,51 c -1,49 -1,103 0,156 0,16 6,21 16,21 10,0 15,-5 15,-21 1,-51 1,-105 0,-156 m -39,0 c -1,51 -1,105 0,156 0,20 8,27 24,27 16,0 23,-7 23,-27 1,-51 1,-105 0,-156 M 33.746501,195.89101 H 49.71712 m 22.2986,1.20533 h 17.778614 m -33.146568,26.21592 -8.437308,10.84797 m 21.394602,-11.75197 8.135976,10.54664"
-         sodipodi:nodetypes="ccsccccscccccccccc"
-         inkstitch:satin_column="True"
-         inkstitch:pull_compensation_mm="0.3"
-         inkstitch:reverse_rails="none"
-         inkstitch:start_at_nearest_point="True"
-         inkstitch:end_at_nearest_point="True"
-         inkstitch:contour_underlay="True"
-         inkstitch:contour_underlay_inset_mm="0.20"
-         inkstitch:color_sort_index="3"
-         inkstitch:split_method="staggered"
-         inkstitch:pull_compensation_percent="0.0"
-         inkstitch:lock_start="half_stitch"
-         inkstitch:max_stitch_length_mm="8"
-         inkstitch:min_stitch_length_mm=".5"
-         inkstitch:min_jump_stitch_length_mm="3" />
-      <g
-         id="command_group51295"
-         inkscape:label="Commande Ink/Stitch: Position de fin"
-         transform="translate(-20.9995,0.710996)">
-        <path
-           id="command_connector83912"
-           d="m 94.683853,231.87236 -0.01349,-0.10168"
-           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
-           inkscape:connection-start="#command_use60638"
-           inkscape:connection-end="#path153-4-4-3-5"
-           inkscape:label="connecteur"
-           inkscape:connector-type="polyline"
-           inkscape:connector-curvature="0" />
-        <use
-           id="command_use60638"
-           xlink:href="#inkstitch_ending_point"
-           height="100%"
-           width="100%"
-           x="94.707672"
-           y="231.75751"
-           inkscape:label="marqueur de commande" />
-      </g>
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-X"
      style="display:none"
      id="g708"
@@ -16593,7 +16593,7 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ý"
-     style="display:none"
+     style="display:inline"
      id="g710"
      transform="translate(22)">
     <g
@@ -16659,12 +16659,13 @@ Copyright 2019 The Big Shoulders Project Authors https:github.comxotypecobig_sho
        transform="translate(-0.262786,-0.922325)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#feb343;stroke-width:0.944882;stroke-dasharray:1.88976, 0.944882"
-         d="M 47.996345,234.37001 46.852614,253.1272"
+         d="M 9.7655013,67.508307 5.4358667,54.804698"
          id="path194-7"
          inkstitch:color_sort_index="1"
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:running_stitch_length_mm="1.5" />
+         inkstitch:running_stitch_length_mm="1.5"
+         sodipodi:nodetypes="cc" />
       <path
          id="path188-6"
          style="display:inline;fill:none;stroke:#feb343"
