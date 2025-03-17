@@ -21,10 +21,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="2.7630767"
-     inkscape:cx="-7.4192656"
-     inkscape:cy="33.296216"
-     inkscape:current-layer="g695"
+     inkscape:zoom="1.7834008"
+     inkscape:cx="-2.523269"
+     inkscape:cy="24.671964"
+     inkscape:current-layer="g258"
      inkscape:document-units="mm"
      showgrid="false"
      showguides="true">
@@ -6665,30 +6665,26 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-Ô"
-     style="display:none"
+     style="display:inline"
      id="g631">
     <g
        id="g258"
        inkscape:label="fill">
-      <g
-         id="g112"
-         transform="translate(0,-4)">
-        <path
-           d="M 31,46 46,24 c 0.666667,-1.333333 1.333333,-1.666667 2,-1 h 27 c 1.333333,0 2.333333,0.333333 3,1 l 15,22 c 0,0 0,2.666667 -2,2 H 74 c -1.333333,0 -2.666667,-0.333333 -4,-1 L 62,34 c -0.666667,-1.333333 -0.666667,-1.333333 0,0 l -8,13 c -0.666667,1.333333 -2,1.666667 -4,1 H 33 c -2.219755,1.184612 -2,-0.227866 -2,-2 z"
-           id="path447"
-           style="display:inline;fill:#a8deeb;stroke:none"
-           inkstitch:fill_method="meander_fill"
-           inkstitch:meander_pattern="N3-17"
-           inkstitch:meander_scale_percent="50"
-           inkstitch:running_stitch_length_mm="4"
-           inkstitch:zigzag_spacing_mm="1"
-           inkstitch:zigzag_width_mm="2.5"
-           inkstitch:min_stitch_length_mm="1.5"
-           inkstitch:min_jump_stitch_length_mm="3"
-           inkstitch:fill_underlay_angle="45 135"
-           sodipodi:nodetypes="cccscccsccccccc"
-           inkstitch:color_sort_index="1" />
-      </g>
+      <path
+         d="M 31,42 46,20 c 0.666667,-1.333333 1.333333,-1.666667 2,-1 h 27 c 1.333333,0 2.333333,0.333333 3,1 l 15,22 c 0,0 0,2.666667 -2,2 H 74 c -1.333333,0 -2.666667,-0.333333 -4,-1 L 62,30 c -0.666667,-1.333333 -0.666667,-1.333333 0,0 l -8,13 c -0.666667,1.333333 -2,1.666667 -4,1 H 33 c -2.219755,1.184612 -2,-0.227866 -2,-2 z"
+         id="path447"
+         style="display:inline;fill:#a8deeb;stroke:none"
+         inkstitch:fill_method="meander_fill"
+         inkstitch:meander_pattern="N3-17"
+         inkstitch:meander_scale_percent="50"
+         inkstitch:running_stitch_length_mm="4"
+         inkstitch:zigzag_spacing_mm="1"
+         inkstitch:zigzag_width_mm="2.5"
+         inkstitch:min_stitch_length_mm="1.5"
+         inkstitch:min_jump_stitch_length_mm="3"
+         inkstitch:fill_underlay_angle="45 135"
+         sodipodi:nodetypes="cccscccsccccccc"
+         inkstitch:color_sort_index="1" />
       <path
          d="m 34,196 c -8,-4 -14,-10 -18,-18 -4,-8 -6,-17 -6,-27 v -42 c 0,-10 2,-18.833333 6,-26.5 4,-7.666667 10,-13.666667 18,-18 8,-4.333333 17.333333,-6.5 28,-6.5 10.666667,0 20,2.166667 28,6.5 8,4.333333 14.16667,10.333333 18.5,18 4.33333,7.666667 6.5,16.5 6.5,26.5 v 42 c 0,10 -2.16667,19 -6.5,27 -4.33333,8 -10.5,14 -18.5,18 -8,4 -17.333333,6 -28,6 -10.666667,0 -20,-2 -28,-6 z M 79.5,171 C 83.833333,166.33333 86,160 86,152 V 108 C 86,100 83.833333,93.666667 79.5,89 75.166667,84.333333 69.333333,82 62,82 54.666667,82 48.833333,84.5 44.5,89.5 40.166667,94.5 38,100.66667 38,108 v 44 c 0,8 2.166667,14.33333 6.5,19 4.333333,4.66667 10.166667,7 17.5,7 7.333333,0 13.166667,-2.33333 17.5,-7 z"
          id="path631"
@@ -14590,7 +14586,7 @@ Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-r"
-     style="display:inline"
+     style="display:none"
      id="g695">
     <g
        id="g60"
