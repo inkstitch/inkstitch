@@ -52,3 +52,17 @@ def get_font_by_id(font_id):
             if font.id == font_id:
                 return font
     return None
+
+
+def get_font_by_name(font_name):
+    font_paths = get_font_paths()
+    for font_path in font_paths:
+        try:
+            font_dirs = os.listdir(font_path)
+        except OSError:
+            continue
+        for font_dir in font_dirs:
+            font = Font(os.path.join(font_path, font_dir))
+            if font.name == font_name:
+                return font
+    return None
