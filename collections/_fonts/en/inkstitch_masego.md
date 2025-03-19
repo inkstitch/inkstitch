@@ -1,5 +1,5 @@
 ---
-title: "Ink/Stitch masego"
+title: "Ink/Stitch Masego"
 permalink: /fonts/inkstitch-masego/
 last_modified_at: 2025-03-14
 toc: false

@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-03-10
+last_modified_at: 2025-03-19
 sidebar:
   nav: pages
 toc: true
@@ -39,6 +39,9 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Computer](/fonts/computer/)
 
   ![Copmuter](/assets/images/fonts/computer.png)
+* [Decadent Flower Monogram](/fonts/decadent_flowers_monogram/)
+
+  ![Decadent flower monogram](/assets/images/fonts/decadent_flowers_monogram.png)
 * [גופן בינוני](/fonts/hebrew_font/)
 
   ![גופן בינוני](/assets/images/fonts/hebrew_font_medium.png)
@@ -150,6 +153,10 @@ A tool for font authors which sets a specified color sort index on selected elem
   So up from now visual commands are directed towards the symbol rather than the touching point of the command connector [#3542](https://github.com/inkstitch/inkstitch/pull/3542).
   This means, when you position a start symbol, the starting point of the element will be directly at the symbols center (will automatically update older files)
 * Unified start and stop commands for various stitch types (will automatically update older files)
+
+### Convert to gradient blocks
+
+* Insert color blocks into a group and skip small elements [#3584](https://github.com/inkstitch/inkstitch/pull/3584)
 
 ### Scale Command Symbols
 
@@ -301,6 +308,8 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ## Bug Fixes
 
+* fix updater [#3583](https://github.com/inkstitch/inkstitch/pull/3583)
+* Element info: take pattern into account [#3581](https://github.com/inkstitch/inkstitch/pull/3581)
 * Autosatin: more efforts to keep the stroke width consistant [#3563](https://github.com/inkstitch/inkstitch/pull/3563)
 * display stop commands in simulator and print preview [#3545](https://github.com/inkstitch/inkstitch/pull/3545)
 * auto-route: apply transforms to ensure stroke width being unchanged [#3538](https://github.com/inkstitch/inkstitch/pull/3538)
