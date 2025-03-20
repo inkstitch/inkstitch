@@ -49,12 +49,12 @@ class BatchLettering(InkstitchExtension):
     def effect(self):
         separator = self.options.separator
         if not separator:
-            separator = '\\n'
+            separator = '\n'
         text_input = self.options.text
         if not text_input:
             errormsg(_("Please specify a text"))
             return
-        texts = text_input.split(separator)
+        texts = text_input.replace('\\n', '\n').split(separator)
 
         if not self.options.font:
             errormsg(_("Please specify a font"))
@@ -115,24 +115,28 @@ class BatchLettering(InkstitchExtension):
 
     def setup_scale(self):
         self.scale = self.options.scale / 100
-        if self.font.min_scale > self.scale or self.scale > self.font.max_scale:
-            self.scale = 1
+        if self.scale < self.font.min_scale:
+            self.scale = self.font.min_scale
+        elif self.scale > self.font.max_scale:
+            self.scale = self.font.max_scale
 
     def generate_output_files(self, texts, file_formats):
         self.metadata = self.get_inkstitch_metadata()
         self.collapse_len = self.metadata['collapse_len_mm']
         self.min_stitch_len = self.metadata['min_stitch_len_mm']
 
-        # The user can specify a frame to adapt the position of the text or influence it's scaling
-        # if the path is a closed path it will try to adapt the width of the text (if the scaling input was 0) or simply use it for text positioning
-        # if it is an open path, it will use the text along path method
+        # The user can specify a path which can be use for the text along path method.
+        # The path should be labeled as "batch lettering"
         text_positioning_path = self.svg.findone(".//*[@inkscape:label='batch lettering']")
 
         path = tempfile.mkdtemp()
         files = []
         for text in texts:
+            stitch_plan, lettering_group = self.generate_stitch_plan(text, text_positioning_path)
             for file_format in file_formats:
-                files.append(self.generate_text_file(path, text, text_positioning_path, file_format))
+                files.append(self.generate_output_file(file_format, path, text, stitch_plan))
+
+            self.reset_document(lettering_group, text_positioning_path)
 
         temp_file = tempfile.NamedTemporaryFile(suffix=".zip", delete=False)
 
@@ -153,8 +157,28 @@ class BatchLettering(InkstitchExtension):
             os.remove(output)
         os.rmdir(path)
 
-    def generate_text_file(self, path, text, text_positioning_path, file_format):
+    def reset_document(self, lettering_group, text_positioning_path):
+        # reset document for the next iteration
+        parent = lettering_group.getparent()
+        index = parent.index(lettering_group)
+        if text_positioning_path is not None:
+            parent.insert(index, text_positioning_path)
+        parent.remove(lettering_group)
+
+    def generate_output_file(self, file_format, path, text, stitch_plan):
+        text = text.replace('\n', '')
         output_file = os.path.join(path, f"{text}.{file_format}")
+
+        if file_format == 'svg':
+            document = deepcopy(self.document.getroot())
+            with open(output_file, 'w', encoding='utf-8') as svg:
+                svg.write(etree.tostring(document).decode('utf-8'))
+        else:
+            write_embroidery_file(output_file, stitch_plan, self.document.getroot())
+
+        return output_file
+
+    def generate_stitch_plan(self, text, text_positioning_path):
 
         self.settings = DotDict({
             "text": text,
@@ -195,23 +219,12 @@ class BatchLettering(InkstitchExtension):
             TextAlongPath(self.svg, lettering_group, text_positioning_path, self.options.text_position)
             parent.remove(text_positioning_path)
 
-        if file_format == 'svg':
-            document = deepcopy(self.document.getroot())
-            with open(output_file, 'w', encoding='utf-8') as svg:
-                svg.write(etree.tostring(document).decode('utf-8'))
-        else:
-            self.get_elements()
-            stitch_groups = self.elements_to_stitch_groups(self.elements)
-            stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=self.collapse_len, min_stitch_len=self.min_stitch_len)
-            ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
-            write_embroidery_file(output_file, stitch_plan, self.document.getroot())
+        self.get_elements()
+        stitch_groups = self.elements_to_stitch_groups(self.elements)
+        stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=self.collapse_len, min_stitch_len=self.min_stitch_len)
+        ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
 
-        # reset document for the next iteration
-        if text_positioning_path is not None:
-            parent.insert(index, text_positioning_path)
-        lettering_group.getparent().remove(lettering_group)
-
-        return output_file
+        return stitch_plan, lettering_group
 
 
 if __name__ == '__main__':

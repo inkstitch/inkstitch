@@ -16,7 +16,7 @@
                 <spacer />
                 <separator />
                 <spacer />
-                <param name="font" type="string" gui-text="Font name" gui-text="Font folder name"></param>
+                <param name="font" type="string" gui-text="Font name"></param>
                 <param name="scale" type="int" gui-text="Scale (%)" min="1" max="800"
                        gui-text="The scale value must be within the scale range of the specified font.">100</param>
                 <param name="color-sort" type="optiongroup" appearance="combo" gui-text="Color sort">
