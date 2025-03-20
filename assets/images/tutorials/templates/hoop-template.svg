@@ -2,31 +2,21 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="360mm"
    height="360mm"
    viewBox="0 0 360 360"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="default.svg">
-  <title
-     id="title1023">inkStitch - Embroidery Hoops Template</title>
-  <defs
-     id="defs2">
-    <style
-       id="style824"
-       type="text/css"><![CDATA[
-    .fil0 {fill:none}
-    .fil1 {fill:#003399}
-   ]]></style>
-  </defs>
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="hoop-template.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:inkstitch="http://inkstitch.org/namespace">
   <sodipodi:namedview
      id="base"
      pagecolor="#fafafa"
@@ -35,15 +25,15 @@
      inkscape:pageopacity="0.78431373"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49168403"
-     inkscape:cx="680.31496"
+     inkscape:cx="681.33187"
      inkscape:cy="680.31496"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="true"
-     inkscape:window-width="1600"
-     inkscape:window-height="838"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1131"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
      objecttolerance="3"
      gridtolerance="3"
@@ -57,7 +47,8 @@
      fit-margin-top="10"
      fit-margin-left="10"
      fit-margin-right="10"
-     fit-margin-bottom="10">
+     fit-margin-bottom="10"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid3702"
@@ -69,10 +60,21 @@
        originy="0"
        empspacing="20"
        color="#ff7300"
-       opacity="0.09803922"
+       opacity="0.0980392"
        empcolor="#0000ff"
        empopacity="0.09803922" />
   </sodipodi:namedview>
+  <title
+     id="title1023">inkStitch - Embroidery Hoops Template</title>
+  <defs
+     id="defs2">
+    <style
+       id="style824"
+       type="text/css"><![CDATA[
+    .fil0 {fill:none}
+    .fil1 {fill:#003399}
+   ]]></style>
+  </defs>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -106,6 +108,9 @@
            rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
       </cc:License>
     </rdf:RDF>
+    <inkstitch:min_stitch_len_mm>0.3</inkstitch:min_stitch_len_mm>
+    <inkstitch:collapse_len_mm>3.0</inkstitch:collapse_len_mm>
+    <inkstitch:inkstitch_svg_version>3</inkstitch:inkstitch_svg_version>
   </metadata>
   <g
      inkscape:label="HOOPS REF"

@@ -3,7 +3,7 @@
 
 <svg
    sodipodi:docname="True_Blend.svg"
-   inkscape:version="1.3-alpha (95f74fb, 2023-03-31)"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    id="svg13258"
    version="1.1"
    viewBox="0 0 100 100"
@@ -22,16 +22,16 @@
      inkscape:guide-bbox="true"
      showguides="true"
      inkscape:window-maximized="1"
-     inkscape:window-y="8"
+     inkscape:window-y="32"
      inkscape:window-x="0"
-     inkscape:window-height="1052"
+     inkscape:window-height="1131"
      inkscape:window-width="1920"
      inkscape:snap-global="false"
      showgrid="false"
      inkscape:current-layer="__inkstitch_stitch_plan_"
      inkscape:document-units="mm"
-     inkscape:cy="476.42857"
-     inkscape:cx="367.14286"
+     inkscape:cy="516.42857"
+     inkscape:cx="361.42857"
      inkscape:zoom="0.7"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -44,36 +44,6 @@
      inkscape:deskcolor="#d1d1d1" />
   <defs
      id="defs13252">
-    <symbol
-       id="inkstitch_fill_start">
-      <title
-         id="inkstitch_title9432">Fill stitch starting point</title>
-      <path
-         id="inkstitch_circle13166-6"
-         d="m 9.2465269,-2.6e-6 c -1.9e-6,5.106729 -4.1398247,9.24655 -9.246554026709,9.24655 C -5.106756,9.2465474 -9.2465782,5.1067264 -9.2465801,-2.6e-6 c 2e-7,-5.10673 4.1398229,-9.246553 9.246552973291,-9.246553 2.452338526709,0 4.804235626709,0.974187 6.538300926709,2.708252 1.7340652,1.734066 2.708253,4.085963 2.7082531,6.538301 0,0 0,0 0,0"
-         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#003399;stroke-width:1.06501234;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19503705, 3.19503705;stroke-dashoffset:0;stroke-opacity:1"
-         inkscape:connector-curvature="0" />
-      <path
-         style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.74180555;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 6.5728129,0.0035574 c 0,0 -10.4514,6.03412 -10.4514,6.03412 0,0 0,-12.06823 0,-12.06823 0,0 10.4514,6.03411 10.4514,6.03411"
-         id="inkstitch_path4183"
-         inkscape:connector-curvature="0" />
-    </symbol>
-    <symbol
-       id="inkstitch_fill_end">
-      <title
-         id="inkstitch_title9427">Fill stitch ending point</title>
-      <path
-         id="inkstitch_circle13166"
-         d="m 9.220113,0.0792309 c -1.9e-6,5.106729 -4.1398241,9.24655 -9.246553,9.24655 -5.1067293,0 -9.2465521,-4.139821 -9.246554,-9.24655 1e-7,-2.452338 0.9741879,-4.804235 2.7082531,-6.538301 1.7340653,-1.734065 4.0859624,-2.708252 6.5383009,-2.708252 5.1067301,0 9.2465528,4.139823 9.246553,9.246553 0,0 0,0 0,0"
-         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#003399;stroke-width:1.06500006;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19500017, 3.19500017;stroke-dashoffset:0;stroke-opacity:1"
-         inkscape:connector-curvature="0" />
-      <path
-         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.27154255;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4.81866985, 4.81866985;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-         d="m -4.570439,-4.5704391 c 0,0 9.140878,0 9.140878,0 0,0 0,9.14087 0,9.14087 0,0 -9.140878,0 -9.140878,0 0,0 0,-9.14087 0,-9.14087"
-         id="inkstitch_rect5371-2"
-         inkscape:connector-curvature="0" />
-    </symbol>
     <symbol
        id="inkstitch_ignore_layer">
       <title
@@ -120,6 +90,40 @@
            inkstitch:stroke_method="zigzag_stitch" />
       </g>
     </symbol>
+    <symbol
+       id="inkstitch_starting_point"
+       transform="scale(0.25, 0.25)"
+       style="opacity:0.7">
+      <title
+         id="inkstitch_title9432">Starting point</title>
+      <path
+         id="inkstitch_circle13166-6"
+         d="m 9.2465269,-2.6e-6 c -1.9e-6,5.106729 -4.1398247,9.24655 -9.246554026709,9.24655 C -5.106756,9.2465474 -9.2465782,5.1067264 -9.2465801,-2.6e-6 c 2e-7,-5.10673 4.1398229,-9.246553 9.246552973291,-9.246553 2.452338526709,0 4.804235626709,0.974187 6.538300926709,2.708252 1.7340652,1.734066 2.708253,4.085963 2.7082531,6.538301 0,0 0,0 0,0"
+         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#003399;stroke-width:1.06501234;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19503705, 3.19503705;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.74180555;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 6.5728129,0.0035574 c 0,0 -10.4514,6.03412 -10.4514,6.03412 0,0 0,-12.06823 0,-12.06823 0,0 10.4514,6.03411 10.4514,6.03411"
+         id="inkstitch_path4183"
+         inkscape:connector-curvature="0" />
+    </symbol>
+    <symbol
+       id="inkstitch_ending_point"
+       transform="scale(0.25, 0.25)"
+       style="opacity:0.7">
+      <title
+         id="inkstitch_title9427">Ending point</title>
+      <path
+         id="inkstitch_circle13166"
+         d="m 9.220113,0.0792309 c -1.9e-6,5.106729 -4.1398241,9.24655 -9.246553,9.24655 -5.1067293,0 -9.2465521,-4.139821 -9.246554,-9.24655 1e-7,-2.452338 0.9741879,-4.804235 2.7082531,-6.538301 1.7340653,-1.734065 4.0859624,-2.708252 6.5383009,-2.708252 5.1067301,0 9.2465528,4.139823 9.246553,9.246553 0,0 0,0 0,0"
+         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#003399;stroke-width:1.06500006;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19500017, 3.19500017;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.27154255;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4.81866985, 4.81866985;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m -4.570439,-4.5704391 c 0,0 9.140878,0 9.140878,0 0,0 0,9.14087 0,9.14087 0,0 -9.140878,0 -9.140878,0 0,0 0,-9.14087 0,-9.14087"
+         id="inkstitch_rect5371-2"
+         inkscape:connector-curvature="0" />
+    </symbol>
   </defs>
   <metadata
      id="metadata13255">
@@ -149,7 +153,7 @@
     </rdf:RDF>
     <inkstitch:min_stitch_len_mm>1</inkstitch:min_stitch_len_mm>
     <inkstitch:collapse_len_mm>3</inkstitch:collapse_len_mm>
-    <inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
+    <inkstitch:inkstitch_svg_version>3</inkstitch:inkstitch_svg_version>
   </metadata>
   <g
      sodipodi:insensitive="true"
@@ -444,49 +448,47 @@
        inkstitch:underpath="False"
        inkstitch:fill_underlay="False" />
     <g
-       id="command_group2"
-       inkscape:label="Ink/Stitch Command: Fill stitch ending position"
-       transform="matrix(0.264583 0 0 0.264583 47.1731 213.704)"
-       style="display:inline">
+       id="command_group6628"
+       inkscape:label="Ink/Stitch Command: Ending position"
+       transform="matrix(0.264583 0 0 0.264583 0 197)">
       <path
-         id="command_connector2"
-         d="M 65.690483,85.210474 27.422291,68.931063"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use7698"
+         id="command_connector7711"
+         d="M 205.70836,132.09294 150.71448,108.66717"
+         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         inkscape:connection-start="#command_use9124"
          inkscape:connection-end="#rect17768-2"
          inkscape:label="connector"
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="0" />
       <use
-         id="command_use7698"
-         xlink:href="#inkstitch_fill_end"
+         id="command_use9124"
+         xlink:href="#inkstitch_ending_point"
          height="100%"
          width="100%"
-         x="65.714302"
-         y="85.095619"
+         x="205.71431194829506"
+         y="132.06421991166314"
          inkscape:label="command marker" />
     </g>
     <g
-       id="command_group1"
-       inkscape:label="Ink/Stitch Command: Fill stitch starting position"
-       transform="matrix(0.264583 0 0 0.264583 -21.2479 201.944)"
-       style="display:inline">
+       id="command_group3584"
+       inkscape:label="Ink/Stitch Command: Starting position"
+       transform="matrix(0.264583 0 0 0.264583 0 197)">
       <path
-         id="command_connector1"
-         d="m 141.51724,55.131518 34.5043,13.434679"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use2805"
+         id="command_connector5535"
+         d="M 95.714949,87.26108 150.71448,108.66717"
+         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         inkscape:connection-start="#command_use8410"
          inkscape:connection-end="#rect17768-2"
          inkscape:label="connector"
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="0" />
       <use
-         id="command_use2805"
-         xlink:href="#inkstitch_fill_start"
+         id="command_use8410"
+         xlink:href="#inkstitch_starting_point"
          height="100%"
          width="100%"
-         x="141.51465"
-         y="55.095619"
+         x="95.71430578519997"
+         y="87.25210504876915"
          inkscape:label="command marker" />
     </g>
     <path
@@ -498,49 +500,47 @@
        inkstitch:underpath="False"
        inkstitch:fill_underlay="False" />
     <g
-       id="command_group4"
-       inkscape:label="Ink/Stitch Command: Fill stitch ending position"
-       transform="matrix(0.264583 0 0 0.264583 -1.20271 213.036)"
-       style="display:inline">
+       id="command_group5615"
+       inkscape:label="Ink/Stitch Command: Ending position"
+       transform="matrix(0.264583 0 0 0.264583 0 197)">
       <path
-         id="command_connector4"
-         d="M 65.690468,132.35337 100.26008,118.01453"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use2501"
+         id="command_connector1873"
+         d="M 95.708332,178.65162 95.714396,178.64911"
+         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         inkscape:connection-start="#command_use6611"
          inkscape:connection-end="#rect17768-3-7"
          inkscape:label="connector"
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="0" />
       <use
-         id="command_use2501"
-         xlink:href="#inkstitch_fill_end"
+         id="command_use6611"
+         xlink:href="#inkstitch_ending_point"
          height="100%"
          width="100%"
-         x="65.714287"
-         y="132.23851"
+         x="95.71428926420279"
+         y="178.62290609662165"
          inkscape:label="command marker" />
     </g>
     <g
-       id="command_group3"
-       inkscape:label="Ink/Stitch Command: Fill stitch starting position"
-       transform="matrix(0.264583 0 0 0.264583 29.8006 200.742)"
-       style="display:inline">
+       id="command_group5900"
+       inkscape:label="Ink/Stitch Command: Starting position"
+       transform="matrix(0.264583 0 0 0.264583 0 197)">
       <path
-         id="command_connector3"
-         d="M 130.8753,102.2744 93.082201,118.31838"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use9824"
+         id="command_connector6446"
+         d="M 205.71494,132.47022 205.71453,132.47039"
+         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         inkscape:connection-start="#command_use5416"
          inkscape:connection-end="#rect17768-3-7"
          inkscape:label="connector"
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="0" />
       <use
-         id="command_use9824"
-         xlink:href="#inkstitch_fill_start"
+         id="command_use5416"
+         xlink:href="#inkstitch_starting_point"
          height="100%"
          width="100%"
-         x="130.87271"
-         y="102.2385"
+         x="205.7142967074618"
+         y="132.4612385172676"
          inkscape:label="command marker" />
     </g>
     <path
@@ -552,49 +552,47 @@
        inkstitch:underpath="False"
        inkstitch:fill_underlay="False" />
     <g
-       id="command_group6"
-       inkscape:label="Ink/Stitch Command: Fill stitch ending position"
-       transform="matrix(0.264583 0 0 0.264583 47.3067 213.437)"
-       style="display:inline">
+       id="command_group916"
+       inkscape:label="Ink/Stitch Command: Ending position"
+       transform="matrix(0.264583 0 0 0.264583 0 197)">
       <path
-         id="command_connector6"
-         d="M 65.690438,179.49617 26.9173,163.50808"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use8497"
+         id="command_connector5336"
+         d="M 205.70831,225.6607 150.71443,202.95299"
+         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         inkscape:connection-start="#command_use5754"
          inkscape:connection-end="#rect17768-6-0"
          inkscape:label="connector"
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="0" />
       <use
-         id="command_use8497"
-         xlink:href="#inkstitch_fill_end"
+         id="command_use5754"
+         xlink:href="#inkstitch_ending_point"
          height="100%"
          width="100%"
-         x="65.714256"
-         y="179.38132"
+         x="205.71426646638866"
+         y="225.63199481748717"
          inkscape:label="command marker" />
     </g>
     <g
-       id="command_group5"
-       inkscape:label="Ink/Stitch Command: Fill stitch starting position"
-       transform="matrix(0.264583 0 0 0.264583 -25.1233 200.608)"
-       style="display:inline">
+       id="command_group4177"
+       inkscape:label="Ink/Stitch Command: Starting position"
+       transform="matrix(0.264583 0 0 0.264583 0 197)">
       <path
-         id="command_connector5"
-         d="m 149.06404,149.41722 41.60465,17.18335"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use6590"
+         id="command_connector3895"
+         d="M 95.714904,180.2459 150.71443,202.95299"
+         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         inkscape:connection-start="#command_use5875"
          inkscape:connection-end="#rect17768-6-0"
          inkscape:label="connector"
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="0" />
       <use
-         id="command_use6590"
-         xlink:href="#inkstitch_fill_start"
+         id="command_use5875"
+         xlink:href="#inkstitch_starting_point"
          height="100%"
          width="100%"
-         x="149.06145"
-         y="149.38132"
+         x="95.71425622972964"
+         y="180.2369165702268"
          inkscape:label="command marker" />
     </g>
   </g>
@@ -612,49 +610,47 @@
        inkstitch:underpath="False"
        inkstitch:fill_underlay="False" />
     <g
-       id="command_group8"
-       inkscape:label="Ink/Stitch Command: Fill stitch ending position"
-       transform="matrix(0.264583 0 0 0.264583 45.4358 16.3034)"
-       style="display:inline">
+       id="command_group7778"
+       inkscape:label="Ink/Stitch Command: Ending position"
+       transform="scale(0.264583, 0.264583)">
       <path
-         id="command_connector8"
-         d="M 65.690483,132.35335 32.540868,117.76234"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use4590"
+         id="command_connector5552"
+         d="M 204.26075,179.41008 204.19606,179.38156"
+         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         inkscape:connection-start="#command_use8080"
          inkscape:connection-end="#rect17768-62-9"
          inkscape:label="connector"
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="0" />
       <use
-         id="command_use4590"
-         xlink:href="#inkstitch_fill_end"
+         id="command_use8080"
+         xlink:href="#inkstitch_ending_point"
          height="100%"
          width="100%"
-         x="65.714302"
-         y="132.23849"
+         x="204.26670910246068"
+         y="179.38136217211922"
          inkscape:label="command marker" />
     </g>
     <g
-       id="command_group7"
-       inkscape:label="Ink/Stitch Command: Fill stitch starting position"
-       transform="matrix(0.264583 0 0 0.264583 -21.6488 3.34087)"
-       style="display:inline">
+       id="command_group4002"
+       inkscape:label="Ink/Stitch Command: Starting position"
+       transform="scale(0.264583, 0.264583)">
       <path
-         id="command_connector7"
-         d="m 132.36918,102.27439 45.16757,18.44658"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use8014"
+         id="command_connector3784"
+         d="M 95.714949,133.35672 150.71448,155.8101"
+         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         inkscape:connection-start="#command_use4278"
          inkscape:connection-end="#rect17768-62-9"
          inkscape:label="connector"
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="0" />
       <use
-         id="command_use8014"
-         xlink:href="#inkstitch_fill_start"
+         id="command_use4278"
+         xlink:href="#inkstitch_starting_point"
          height="100%"
          width="100%"
-         x="132.36659"
-         y="102.23849"
+         x="95.71430127784829"
+         y="133.3477437040444"
          inkscape:label="command marker" />
     </g>
     <path
@@ -666,49 +662,47 @@
        inkstitch:underpath="False"
        inkstitch:fill_underlay="False" />
     <g
-       id="command_group10"
-       inkscape:label="Ink/Stitch Command: Fill stitch ending position"
-       transform="matrix(0.264583 0 0 0.264583 -4.27631 17.9071)"
-       style="display:inline">
+       id="command_group6284"
+       inkscape:label="Ink/Stitch Command: Ending position"
+       transform="scale(0.264583, 0.264583)">
       <path
-         id="command_connector10"
-         d="M 65.690468,179.4962 112.94396,158.84401"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use7037"
+         id="command_connector5767"
+         d="M 96.77544,226.55293 96.840476,226.52447"
+         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         inkscape:connection-start="#command_use88"
          inkscape:connection-end="#rect17768-3-9-3"
          inkscape:label="connector"
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="0" />
       <use
-         id="command_use7037"
-         xlink:href="#inkstitch_fill_end"
+         id="command_use88"
+         xlink:href="#inkstitch_ending_point"
          height="100%"
          width="100%"
-         x="65.714287"
-         y="179.38135"
+         x="96.78139750349558"
+         y="226.52421426214002"
          inkscape:label="command marker" />
     </g>
     <g
-       id="command_group9"
-       inkscape:label="Ink/Stitch Command: Fill stitch starting position"
-       transform="matrix(0.264583 0 0 0.264583 33.8096 0.26727)"
-       style="display:inline">
+       id="command_group6176"
+       inkscape:label="Ink/Stitch Command: Starting position"
+       transform="scale(0.264583, 0.264583)">
       <path
-         id="command_connector9"
-         d="M 144.65986,149.41725 77.557632,178.3714"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use2809"
+         id="command_connector7574"
+         d="M 205.34252,179.39032 150.71446,202.95302"
+         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         inkscape:connection-start="#command_use1588"
          inkscape:connection-end="#rect17768-3-9-3"
          inkscape:label="connector"
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="0" />
       <use
-         id="command_use2809"
-         xlink:href="#inkstitch_fill_start"
+         id="command_use1588"
+         xlink:href="#inkstitch_starting_point"
          height="100%"
          width="100%"
-         x="144.65727"
-         y="149.38135"
+         x="205.34187320677648"
+         y="179.38135053865642"
          inkscape:label="command marker" />
     </g>
     <path
@@ -719,47 +713,47 @@
        inkstitch:underpath="False"
        inkstitch:fill_underlay="False" />
     <g
-       id="command_group12"
-       inkscape:label="Ink/Stitch Command: Fill stitch ending position"
-       transform="matrix(0.264583 0 0 0.264583 47.4403 16.5707)">
+       id="command_group904"
+       inkscape:label="Ink/Stitch Command: Ending position"
+       transform="scale(0.264583, 0.264583)">
       <path
-         id="command_connector12"
-         d="M 65.690438,226.63907 26.412355,210.319"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use7802"
+         id="command_connector61"
+         d="M 205.70831,272.97689 150.71443,250.09593"
+         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         inkscape:connection-start="#command_use2234"
          inkscape:connection-end="#rect17768-6-1-6"
          inkscape:label="connector"
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="0" />
       <use
-         id="command_use7802"
-         xlink:href="#inkstitch_fill_end"
+         id="command_use2234"
+         xlink:href="#inkstitch_ending_point"
          height="100%"
          width="100%"
-         x="65.714256"
-         y="226.52422"
+         x="205.71426698442966"
+         y="272.94818419796684"
          inkscape:label="command marker" />
     </g>
     <g
-       id="command_group11"
-       inkscape:label="Ink/Stitch Command: Fill stitch starting position"
-       transform="matrix(0.264583 0 0 0.264583 -22.7179 1.73725)">
+       id="command_group8875"
+       inkscape:label="Ink/Stitch Command: Starting position"
+       transform="scale(0.264583, 0.264583)">
       <path
-         id="command_connector11"
-         d="m 126.70902,196.56011 54.86838,23.45677"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-opacity:0.5"
-         inkscape:connection-start="#command_use7715"
+         id="command_connector9842"
+         d="M 95.714904,226.59159 150.71443,250.09593"
+         style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         inkscape:connection-start="#command_use5081"
          inkscape:connection-end="#rect17768-6-1-6"
          inkscape:label="connector"
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="0" />
       <use
-         id="command_use7715"
-         xlink:href="#inkstitch_fill_start"
+         id="command_use5081"
+         xlink:href="#inkstitch_starting_point"
          height="100%"
          width="100%"
-         x="126.70643"
-         y="196.52422"
+         x="95.7142532738742"
+         y="226.58261349998318"
          inkscape:label="command marker" />
     </g>
   </g>
