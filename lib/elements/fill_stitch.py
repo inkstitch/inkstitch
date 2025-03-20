@@ -773,8 +773,6 @@ class FillStitch(EmbroideryElement):
         paths = self.paths
         paths.sort(key=lambda point_list: shgeo.Polygon(point_list).area, reverse=True)
         shape = shgeo.MultiPolygon([(paths[0], paths[1:])])
-        if self.node.style('fill-rule') == 'nonzero':
-            shape = ensure_multi_polygon(shape.buffer(0))
         return shape
 
     @property
@@ -787,6 +785,7 @@ class FillStitch(EmbroideryElement):
             return ensure_multi_polygon(set_precision(shape, 0.0000000001), 3)
 
         shape = make_valid(shape)
+
         return ensure_multi_polygon(set_precision(shape, 0.00000000001), 3)
 
     def _get_clipped_path(self):
