@@ -1,7 +1,7 @@
 ---
 title: "Manual Setup for Linux and macOS"
 permalink: /developers/inkstitch/manual-setup/
-last_modified_at: 2024-10-20
+last_modified_at: 2025-03-20
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -25,7 +25,6 @@ A few python more modules are needed.
 In some cases this extension uses features that aren’t available in the versions of the modules pre-packaged in distributions, so we recommend installing them directly with pip.
 
 ```
-cd inkstitch
 python -m pip install -r inkstitch/requirements.txt
 ```
 
