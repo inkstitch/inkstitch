@@ -1,7 +1,7 @@
 ---
 title: "Manuelle Installation"
 permalink: /de/developers/inkstitch/manual-setup/
-last_modified_at: 2024-10-20
+last_modified_at: 2025-03-20
 toc: false
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -25,8 +25,7 @@ Es werden ein paar Python Module gebraucht. In einigen Fällen benutzt Ink/Stitc
 Deshalb empfehlen wir sie mit pip zu installieren.
 
 ```
-cd inkstitch
-python -m pip install -r requirements.txt
+python -m pip install -r inkstitch/requirements.txt
 ```
 
 ### 4.  INX-Dateien vorbereiten

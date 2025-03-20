@@ -243,10 +243,6 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 * Enable expand option [#3462](https://github.com/inkstitch/inkstitch/pull/3462)
 
-### Fill stitch
-
-* Respects the fill-rule setting (behavior at self-intersections of the fill shape) [#3561](https://github.com/inkstitch/inkstitch/pull/3561)
-
 ### Linear gradient fill
 
 * Add randomization options to linear gradient fill [#3311](https://github.com/inkstitch/inkstitch/pull/3311)
