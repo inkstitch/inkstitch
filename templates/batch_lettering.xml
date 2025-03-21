@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Batch Lettering</name>
+    <id>org.{{ id_inkstitch }}.output.batch_lettering</id>
+    <param name="extension" type="string" gui-hidden="true">batch_lettering</param>
+
+    <param name="notebook" type="notebook">
+
+        <page name="options" gui-text="Options">
+          <hbox>
+            <vbox>
+                <param name="text" type="string" gui-text="Text" appearance="multiline"
+                       gui-description="Enter the text. Each line of text will be exported to a separate file." />
+                <param name="separator" type="string" gui-text="Custom separator"
+                       gui-description="Set a custom separator for multiline text export. Leave empty for line break." />
+                <spacer />
+                <separator />
+                <spacer />
+                <param name="font" type="string" gui-text="Font name"></param>
+                <param name="scale" type="int" gui-text="Scale (%)" min="1" max="800"
+                       gui-text="The scale value must be within the scale range of the specified font.">100</param>
+                <param name="color-sort" type="optiongroup" appearance="combo" gui-text="Color sort">
+                   <option value="off">Off</option>
+                   <option value="all">Whole text</option>
+                   <option value="line" >Line</option>
+                   <option value="word" >Word</option>
+                </param>
+                <param name="trim" type="optiongroup" appearance="combo" gui-text="Add trims">
+                   <option value="off">Never</option>
+                   <option value="line">after each line</option>
+                   <option value="word">after each word</option>
+                   <option value="glyph">after each letter</option>
+                </param>
+                <param name="use-command-symbols" type="boolean" gui-text="Use command symbols">false</param>
+                <param name="text-align" type="optiongroup" appearance="combo" gui-text="Align Multiline Text">
+                   <option value="left">Left</option>
+                   <option value="center">Center</option>
+                   <option value="right">Right</option>
+                   <option value="block">Block (default)</option>
+                   <option value="letterspacing">Block (letterpacing)</option>
+                </param>
+              </vbox>
+              <spacer />
+              <separator />
+              <spacer />
+              <vbox>
+                <param name="text-position" type="optiongroup" appearance="combo" gui-text="Lettering along path: text position"
+                       gui-description="Uses this text position when using lettering along path">
+                   <option value="left">Left</option>
+                   <option value="center">Center</option>
+                   <option value="right">Right</option>
+                   <option value="stretch">Stretch</option>
+                </param>
+                <spacer />
+                <separator />
+                <spacer />
+                <param name="file-formats" type="string" gui-text="File formats" gui-description="Comma separated list of file formats" />
+              </vbox>
+            </hbox>
+        </page>
+
+        <page name="info" gui-text="Help">
+            <label>Use this extension to save multiple files with the given text.</label>
+            <spacer />
+            <label>When the document contains a path element labeled as "batch lettering" it will be used to place the text along this path. The path itself will be removed and won't be rendered.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/lettering/#batch-export</label>
+        </page>
+    </param>
+
+    <output>
+        <extension>.zip</extension>
+        <mimetype>application/zip</mimetype>
+        <filetypename>{{ menu_inkstitch }}: batch lettering (.zip)</filetypename>
+        <filetypetooltip>Create a zip with multiple files including embroidered text using Ink/Stitch</filetypetooltip>
+        <dataloss>true</dataloss>
+    </output>
+
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

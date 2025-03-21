@@ -8,13 +8,19 @@
         <icon>{{ icon_path }}inx/lettering_along_path.svg</icon>
         <menu-tip>Shapes a line of text onto a path</menu-tip>
         <effects-menu>
-            <submenu name="{{ menu_inkstitch }}" translatable="no" />
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Lettering" />
+            </submenu>
         </effects-menu>
     </effect>
     <param name="notebook" type="notebook">
       <page name="options" gui-text="Options">
-        <param name="stretch-spaces" type="bool" gui-text="Stretch"
-               gui-description="Expand glyph and word spacing to stretch lettering over the entire path">false</param>
+        <param name="text-position" type="optiongroup" appearance="combo" gui-text="Text position">
+           <option value="left">Left</option>
+           <option value="center">Center</option>
+           <option value="right">Right</option>
+           <option value="stretch">Stretch</option>
+        </param>
       </page>
       <page name="info" gui-text="Help">
         <label appearance="header">This extension bends an Ink/Stitch text to a path.</label>
@@ -24,7 +30,9 @@
         <label indent="1">* The text consists of only one line of text</label>
         <label indent="1">* The text should not be too large for the given path</label>
         <spacer />
-        <label>The stretch option defines whether the spaces between glyphs should be expanded so that the text stretches over the entire path.</label>
+        <label>In the text position dropdown menu, you can decide how the text will be placed on the path.
+               When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path.
+        </label>
         <spacer />
         <label>More information on our website</label>
         <label appearance="url">https://inkstitch.org/docs/lettering/#lettering-along-path</label>

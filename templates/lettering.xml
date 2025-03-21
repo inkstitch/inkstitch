@@ -6,8 +6,11 @@
     <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
         <icon>{{ icon_path }}inx/lettering.svg</icon>
+        <menu-tip>Insert ready-to-embroider text into the document</menu-tip>
         <effects-menu>
-            <submenu name="{{ menu_inkstitch }}" translatable="no" />
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Lettering" />
+            </submenu>
         </effects-menu>
     </effect>
     <script>
