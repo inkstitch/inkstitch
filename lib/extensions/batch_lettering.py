@@ -61,7 +61,8 @@ class BatchLettering(InkstitchExtension):
             return
         self.font = get_font_by_name(self.options.font)
         if self.font is None:
-            errormsg(_("Please specify a valid font name"))
+            errormsg(_("Please specify a valid font name."))
+            errormsg(_("You can find a list with all font names on our website: https://inkstitch.org/fonts/font-library/"))
             return
 
         if not self.options.formats:
@@ -71,7 +72,8 @@ class BatchLettering(InkstitchExtension):
         file_formats = self.options.formats.split(',')
         file_formats = [file_format.strip().lower() for file_format in file_formats if file_format.strip().lower() in available_formats]
         if not file_formats:
-            errormsg(_("Please specify at least one file format supported by pyembroidery"))
+            errormsg(_("Please specify at least one file format supported by Ink/Stitch"))
+            errormsg(_("You can find a list with all supported file formats our website: https://inkstitch.org/docs/file-formats/#writing"))
             return
 
         self.setup_trim()
