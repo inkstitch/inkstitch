@@ -28,6 +28,7 @@ logger_inkstich = logging.getLogger("inkstitch")   # create module logger with n
 
 sew_stack_enabled = safe_get(get_ini(), "DEBUG", "enable_sew_stack", default=False)
 
+
 # --------------------------------------------------------------------------------------------
 # decorator to check if debugging is enabled
 # - if debug is not enabled then decorated function is not called
