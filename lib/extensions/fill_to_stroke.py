@@ -87,12 +87,12 @@ class FillToStroke(InkstitchExtension):
 
         # do not use a group in case there is only one line
         if len(lines) <= 1:
-            parent.remove(centerline_group)
+            centerline_group.delete()
             centerline_group = parent
 
         # clean up
         if not self.options.keep_original:
-            parent.remove(element.node)
+            element.node.delete()
 
         # insert new elements
         self._insert_elements(lines, centerline_group, index, element_id, element_label, transform, style)
@@ -262,7 +262,7 @@ class FillToStroke(InkstitchExtension):
             # it is possible, that we get one element twice (if it has both, a fill and a stroke)
             # this means that we already removed it from the svg and we can ignore the error.
             try:
-                cut_line.getparent().remove(cut_line)
+                cut_line.delete()
             except AttributeError:
                 pass
 

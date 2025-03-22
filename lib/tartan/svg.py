@@ -70,7 +70,7 @@ class TartanSvgGroup:
             # remove everything but the tartan outline
             for child in parent_group.iterchildren():
                 if child != outline:
-                    parent_group.remove(child)
+                    child.delete()
             group = cast(Group, parent_group)
         else:
             group = Group()

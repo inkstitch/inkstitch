@@ -183,8 +183,7 @@ class CutworkSegmentation(InkstitchExtension):
 
         for element in self.elements:
             if isinstance(element, Stroke):
-                parent = element.node.getparent()
-                parent.remove(element.node)
+                element.node.delete()
 
     def path_style(self, element, color):
         # set stroke color and make it a running stitch - they don't want to cut zigzags

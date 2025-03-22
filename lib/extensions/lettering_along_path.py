@@ -97,7 +97,7 @@ class TextAlongPath:
             except IndexError:
                 pass
             for glyph in text_group.iterchildren():
-                text_group.remove(glyph)
+                glyph.delete()
             rendered_text = font.render_text(
                 self.settings.text,
                 text_group,

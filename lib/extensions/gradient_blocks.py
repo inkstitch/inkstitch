@@ -98,7 +98,7 @@ class GradientBlocks(InkstitchExtension):
                     block.set('inkstitch:fill_underlay_row_spacing_mm', end_row_spacing)
 
                 color_block_group.append(block)
-            parent.remove(element.node)
+            element.node.delete()
 
     def _element_to_path(self, shape):
         coords = list(shape.exterior.coords)

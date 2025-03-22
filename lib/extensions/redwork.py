@@ -68,7 +68,7 @@ class Redwork(InkstitchExtension):
         # remove input elements
         if not self.options.keep_originals:
             for element in elements:
-                element.node.getparent().remove(element.node)
+                element.node.delete()
 
     def _ensure_starting_point(self, multi_line_string, starting_point):
         # returns a MultiLineString whose first  LineString starts close to  starting_point
@@ -97,7 +97,7 @@ class Redwork(InkstitchExtension):
             if command:
                 # remove command symbol
                 command_group = command.connector.getparent()
-                command_group.getparent().remove(command_group)
+                command_group.delete()
                 # return the first occurence directly
                 return command.target_point
 

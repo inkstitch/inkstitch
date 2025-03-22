@@ -73,8 +73,8 @@ class Cleanup(InkstitchExtension):
 
         errormsg(_("{num_elements_removed} elements removed").format(num_elements_removed=num_elements_removed))
         for element in self.elements_to_remove:
-            element.getparent().remove(element)
+            element.delete()
 
         errormsg(_("{num_groups_removed} groups/layers removed").format(num_groups_removed=num_groups_removed))
         for group in self.groups_to_remove:
-            group.getparent().remove(group)
+            group.delete()

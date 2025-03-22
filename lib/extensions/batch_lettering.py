@@ -163,7 +163,7 @@ class BatchLettering(InkstitchExtension):
         index = parent.index(lettering_group)
         if text_positioning_path is not None:
             parent.insert(index, text_positioning_path)
-        parent.remove(lettering_group)
+        lettering_group.delete()
 
     def generate_output_file(self, file_format, path, text, stitch_plan):
         text = text.replace('\n', '')
@@ -217,7 +217,7 @@ class BatchLettering(InkstitchExtension):
             index = parent.index(text_positioning_path)
             parent.insert(index, lettering_group)
             TextAlongPath(self.svg, lettering_group, text_positioning_path, self.options.text_position)
-            parent.remove(text_positioning_path)
+            text_positioning_path.delete()
 
         self.get_elements()
         stitch_groups = self.elements_to_stitch_groups(self.elements)

@@ -223,7 +223,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands, line_wi
 def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True, render_jumps=True, line_width=0.4) -> inkex.Group:
     layer_or_image = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
     if layer_or_image is not None:
-        layer_or_image.getparent().remove(layer_or_image)
+        layer_or_image.delete()
 
     layer = inkex.Group(attrib={
         'id': '__inkstitch_stitch_plan__',

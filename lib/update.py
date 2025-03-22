@@ -240,13 +240,13 @@ def reposition_legacy_command(command):
     # instead of calculating the transform for the new position, we take the easy route and remove
     # the old commands and set new ones
     add_commands(Stroke(element), [command_name], InkstitchPoint(*target_point))
-    command_group.getparent().remove(command_group)
+    command_group.delete()
 
 
 def _rename_command(document, symbol, old_name, new_name):
     symbol_id = symbol.get_id()
     if symbol_id.startswith(old_name):
-        symbol.getparent().remove(symbol)
+        symbol.delete()
         ensure_symbol(document, new_name)
         _update_command(document, symbol_id, new_name)
 

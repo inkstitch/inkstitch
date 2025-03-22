@@ -31,7 +31,7 @@ class DisplayStackingOrder(InkstitchExtension):
 
         # remove layer if empty
         if len(layer) == 0:
-            self.svg.remove(layer)
+            layer.delete()
 
     def insert_stacking_num(self, layer, num, position):
         text = inkex.TextElement(attrib={
@@ -49,7 +49,7 @@ class DisplayStackingOrder(InkstitchExtension):
 
         # Remove the existing layer
         if layer is not None:
-            layer.getparent().remove(layer)
+            layer.delete()
 
         layer = inkex.Group(attrib={
             'id': '__inkstitch_stacking_order__',

@@ -24,4 +24,4 @@ class LetteringFontSample(InkstitchExtension):
         app = LetteringFontSampleApp(layer=layer)
         app.MainLoop()
         if len(layer) == 0:
-            self.svg.remove(layer)
+            layer.delete()

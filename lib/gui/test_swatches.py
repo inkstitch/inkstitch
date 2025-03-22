@@ -172,7 +172,7 @@ class GenerateSwatchesFrame(wx.Frame):
                         self._set_param(new_element, param, param_value)
                     param_value += step
             # remove old element
-            element.getparent().remove(element)
+            element.delete()
 
     def _set_param(self, element, param, value):
         element.set(f'inkstitch:{ param }', value)

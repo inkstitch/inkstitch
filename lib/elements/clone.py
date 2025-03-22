@@ -181,7 +181,7 @@ class Clone(EmbroideryElement):
                 for clone in clones:
                     clone.replace_with(Clone(clone).resolve_clone()[0])
 
-            source_parent.remove(cloned_node)
+            cloned_node.delete()
 
         # Add the cloned node to be a sibling of this node
         parent.add(cloned_node)

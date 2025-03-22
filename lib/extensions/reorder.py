@@ -10,28 +10,19 @@ from .base import InkstitchExtension
 
 
 class Reorder(InkstitchExtension):
-    # Remove selected objects from the document and re-add them in the order they
-    # were selected.
+    # Re-stack elements in the order they were selected.
 
     def effect(self):
         objects = self.svg.selection
-
-        if not objects:
+        if len(objects) < 2:
             errormsg(_("Please select at least two elements to reorder."))
             return
 
-        for obj in objects:
-            if not obj == objects.first():
-                obj.getparent().remove(obj)
-
         insert_parent = objects[0].getparent()
-        insert_pos = insert_parent.index(objects[0])
+        insert_pos = insert_parent.index(objects[0]) + 1
 
-        insert_parent.remove(objects[0])
-
-        insert_parent[insert_pos:insert_pos] = objects
+        insert_parent[insert_pos:insert_pos] = list(objects)[1:]
 
 
 if __name__ == '__main__':
-    e = Reorder()
-    e.run()
+    Reorder().run()

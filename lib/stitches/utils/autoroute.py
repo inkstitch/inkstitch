@@ -246,17 +246,12 @@ def remove_original_elements(elements, commands_only=False):
         for command in element.commands:
             command_group = command.use.getparent()
             if command_group is not None and command_group.get('id').startswith('command_group'):
-                remove_from_parent(command_group)
+                command_group.delete()
             else:
-                remove_from_parent(command.connector)
-                remove_from_parent(command.use)
+                command.connector.delete()
+                command.use.delete()
         if not commands_only:
-            remove_from_parent(element.node)
-
-
-def remove_from_parent(node):
-    if node.getparent() is not None:
-        node.getparent().remove(node)
+            element.node.delete()
 
 
 def create_new_group(parent, insert_index, label, correction_transform=True):

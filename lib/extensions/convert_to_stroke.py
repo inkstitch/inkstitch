@@ -49,7 +49,7 @@ class ConvertToStroke(InkstitchExtension):
             )
             parent.insert(parent.index(element.node), stroke_element)
             if not self.options.keep_satin:
-                parent.remove(element.node)
+                element.node.delete()
 
     def path_style(self, element):
         color = element.get_style('stroke', '#000000')

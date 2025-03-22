@@ -156,7 +156,7 @@ class StrokeToLpeSatin(InkstitchExtension):
                 old_effect_element.set('pattern', pattern_path)
                 old_effect_element.set('copytype', copy_type)
             else:
-                old_effect_element.getparent().remove(old_effect_element)
+                old_effect_element.delete()
 
         # update path effect link
         current_effects[inkstitch_effect_position] = lpe.get_id(as_url=1)
