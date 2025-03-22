@@ -26,6 +26,7 @@ logger = logging.getLogger("inkstitch.debug")   # create module logger with name
 # to log messages if previous debug logger is not enabled
 logger_inkstich = logging.getLogger("inkstitch")   # create module logger with name 'inkstitch'
 
+sew_stack_enabled = safe_get(get_ini(), "DEBUG", "enable_sew_stack", default=False)
 
 # --------------------------------------------------------------------------------------------
 # decorator to check if debugging is enabled
@@ -84,7 +85,6 @@ class Debug(object):
         self.current_layer = None
         self.group_stack = []
         self.svg_filename = None
-        self.sew_stack_enabled = safe_get(get_ini(), "DEBUG", "enable_sew_stack", default=False)
 
     def enable(self):
         # determine svg filename from logger
