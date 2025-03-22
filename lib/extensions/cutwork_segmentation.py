@@ -12,6 +12,7 @@ from ..elements import Stroke
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
+from ..threads import ThreadColor
 from .base import InkstitchExtension
 
 
@@ -47,11 +48,19 @@ class CutworkSegmentation(InkstitchExtension):
         if not self.get_elements():
             return
 
+        # older inkscape versions (< 1.5) don't render rgba values
+        # however new inkex versions don't seem to have a simple method to use rgb anymore
+        # so instead of parsing it here, let's use the color methods of our own thread color class
+        a_color = ThreadColor(self.options.a_color).to_hex_str()
+        b_color = ThreadColor(self.options.b_color).to_hex_str()
+        c_color = ThreadColor(self.options.c_color).to_hex_str()
+        d_color = ThreadColor(self.options.d_color).to_hex_str()
+
         self.sectors = {
-                        1: {'id': 1, 'start': self.options.a_start, 'end': self.options.a_end, 'color': self.options.a_color, 'point_list': []},
-                        2: {'id': 2, 'start': self.options.b_start, 'end': self.options.b_end, 'color': self.options.b_color, 'point_list': []},
-                        3: {'id': 3, 'start': self.options.c_start, 'end': self.options.c_end, 'color': self.options.c_color, 'point_list': []},
-                        4: {'id': 4, 'start': self.options.d_start, 'end': self.options.d_end, 'color': self.options.d_color, 'point_list': []}
+                        1: {'id': 1, 'start': self.options.a_start, 'end': self.options.a_end, 'color': a_color, 'point_list': []},
+                        2: {'id': 2, 'start': self.options.b_start, 'end': self.options.b_end, 'color': b_color, 'point_list': []},
+                        3: {'id': 3, 'start': self.options.c_start, 'end': self.options.c_end, 'color': c_color, 'point_list': []},
+                        4: {'id': 4, 'start': self.options.d_start, 'end': self.options.d_end, 'color': d_color, 'point_list': []}
                        }
 
         # remove sectors where the start angle equals the end angle (some setups only work with two needles instead of four)
