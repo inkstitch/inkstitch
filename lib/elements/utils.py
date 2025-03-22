@@ -9,13 +9,12 @@ from inkex import BaseElement
 from lxml.etree import Comment
 
 from ..commands import is_command, layer_commands
-from ..debug.utils import safe_get
+from ..debug.debug import debug
 from ..marker import has_marker
 from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
                         NOT_EMBROIDERABLE_TAGS, SVG_CLIPPATH_TAG, SVG_DEFS_TAG,
                         SVG_GROUP_TAG, SVG_IMAGE_TAG, SVG_MASK_TAG,
                         SVG_TEXT_TAG)
-from ..utils.paths import get_ini
 from .clone import Clone, is_clone
 from .element import EmbroideryElement
 from .empty_d_object import EmptyDObject
@@ -58,7 +57,7 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
             if element.get_boolean_param("stroke_first", False):
                 elements.reverse()
 
-        if safe_get(get_ini(), "DEBUG", "sew_stack_enable", default=False):
+        if debug.sew_stack_enabled:
             elements.append(sew_stack)
 
         return elements

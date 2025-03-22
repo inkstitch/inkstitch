@@ -17,6 +17,9 @@ from lxml import etree   # to create svg file
 from ..svg import line_strings_to_path
 from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 
+from .utils import safe_get
+from ..utils.paths import get_ini
+
 import logging
 logger = logging.getLogger("inkstitch.debug")   # create module logger with name 'inkstitch.debug'
 
@@ -81,6 +84,7 @@ class Debug(object):
         self.current_layer = None
         self.group_stack = []
         self.svg_filename = None
+        self.sew_stack_enabled = safe_get(get_ini(), "DEBUG", "enable_sew_stack", default=False)
 
     def enable(self):
         # determine svg filename from logger
