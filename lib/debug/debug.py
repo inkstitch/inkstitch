@@ -17,11 +17,16 @@ from lxml import etree   # to create svg file
 from ..svg import line_strings_to_path
 from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
 
+from .utils import safe_get
+from ..utils.paths import get_ini
+
 import logging
 logger = logging.getLogger("inkstitch.debug")   # create module logger with name 'inkstitch.debug'
 
 # to log messages if previous debug logger is not enabled
 logger_inkstich = logging.getLogger("inkstitch")   # create module logger with name 'inkstitch'
+
+sew_stack_enabled = safe_get(get_ini(), "DEBUG", "enable_sew_stack", default=False)
 
 
 # --------------------------------------------------------------------------------------------
