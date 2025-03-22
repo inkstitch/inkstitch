@@ -25,7 +25,7 @@ class SelfIntersectionError(Exception):
     pass
 
 
-class ConvertToSatin(InkstitchExtension):
+class StrokeToSatin(InkstitchExtension):
     """Convert a line to a satin column of the same width."""
 
     def effect(self):

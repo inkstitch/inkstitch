@@ -12,8 +12,6 @@ from .batch_lettering import BatchLettering
 from .break_apart import BreakApart
 from .cleanup import Cleanup
 from .commands_scale_symbols import CommandsScaleSymbols
-from .convert_to_satin import ConvertToSatin
-from .convert_to_stroke import ConvertToStroke
 from .cut_satin import CutSatin
 from .cutwork_segmentation import CutworkSegmentation
 from .density_map import DensityMap
@@ -60,6 +58,7 @@ from .remove_duplicated_points import RemoveDuplicatedPoints
 from .remove_embroidery_settings import RemoveEmbroiderySettings
 from .reorder import Reorder
 from .satin_multicolor import SatinMulticolor
+from .satin_to_stroke import SatinToStroke
 from .select_elements import SelectElements
 from .selection_to_anchor_line import SelectionToAnchorLine
 from .selection_to_guide_line import SelectionToGuideLine
@@ -69,6 +68,7 @@ from .simulator import Simulator
 from .stitch_plan_preview import StitchPlanPreview
 from .stitch_plan_preview_undo import StitchPlanPreviewUndo
 from .stroke_to_lpe_satin import StrokeToLpeSatin
+from .stroke_to_satin import StrokeToSatin
 from .tartan import Tartan
 from .test_swatches import TestSwatches
 from .thread_list import ThreadList
@@ -88,8 +88,6 @@ extensions = [
     BreakApart,
     Cleanup,
     CommandsScaleSymbols,
-    ConvertToSatin,
-    ConvertToStroke,
     CutSatin,
     CutworkSegmentation,
     DensityMap,
@@ -136,6 +134,7 @@ extensions = [
     RemoveEmbroiderySettings,
     Reorder,
     SatinMulticolor,
+    SatinToStroke,
     SelectElements,
     SelectionToAnchorLine,
     SelectionToGuideLine,
@@ -145,6 +144,7 @@ extensions = [
     StitchPlanPreview,
     StitchPlanPreviewUndo,
     StrokeToLpeSatin,
+    StrokeToSatin,
     Tartan,
     TestSwatches,
     ThreadList,
