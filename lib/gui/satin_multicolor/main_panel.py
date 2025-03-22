@@ -91,7 +91,7 @@ class MultiColorSatinPanel(wx.Panel):
         self.update_satin_elements()
         if not self.colorize_panel.keep_original.GetValue():
             for element in self.elements:
-                element.node.getparent().remove(element.node)
+                element.node.delete()
         self.close()
 
     def render_stitch_plan(self):
@@ -124,7 +124,7 @@ class MultiColorSatinPanel(wx.Panel):
     def update_satin_elements(self):
         # empty old groups
         for group in self.output_groups:
-            group.getparent().remove(group)
+            group.delete()
         self.output_groups = []
 
         overflow_left = self.colorize_panel.overflow_left.GetValue()

@@ -624,7 +624,7 @@ def add_trims(elements, trim_indices):
     just_trimmed = False
     for i, element in enumerate(elements):
         if just_trimmed and isinstance(element, Stroke):
-            element.node.getparent().remove(element.node)
+            element.node.delete()
             continue
 
         if i in trim_indices:

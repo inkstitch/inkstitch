@@ -33,10 +33,10 @@ class CutSatin(InkstitchExtension):
                 split_point = command.target_point
                 command_group = command.use.getparent()
                 if command_group is not None and command_group.get('id').startswith('command_group'):
-                    command_group.getparent().remove(command_group)
+                    command_group.delete()
                 else:
-                    command.use.getparent().remove(command.use)
-                    command.connector.getparent().remove(command.connector)
+                    command.use.delete()
+                    command.connector.delete()
 
                 new_satins = satin.split(split_point)
                 if None in new_satins:
@@ -44,7 +44,7 @@ class CutSatin(InkstitchExtension):
                 transform = get_correction_transform(satin.node)
                 parent = satin.node.getparent()
                 index = parent.index(satin.node)
-                parent.remove(satin.node)
+                satin.node.delete()
                 for new_satin in new_satins:
                     new_satin.node.set('transform', transform)
                     parent.insert(index, new_satin.node)

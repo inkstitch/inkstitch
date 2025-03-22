@@ -20,7 +20,7 @@ def reset_stitch_plan(svg, delete_stitch_plan=True):
         display_method = layer.get(INKSTITCH_ATTRIBS['layer_visibility'], 'unchanged')
         invisible_layers = layer.get(INKSTITCH_ATTRIBS['invisible_layers'], '').split(",")
         if delete_stitch_plan:
-            layer.getparent().remove(layer)
+            layer.delete()
 
         if display_method == "unchanged":
             return

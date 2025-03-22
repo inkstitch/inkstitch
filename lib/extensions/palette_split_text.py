@@ -58,4 +58,4 @@ class PaletteSplitText(InkstitchExtension):
 
                 y -= height
                 parent.insert(0, element)
-            parent.remove(text)
+            text.delete()

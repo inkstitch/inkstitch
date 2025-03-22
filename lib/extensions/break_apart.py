@@ -159,4 +159,4 @@ class BreakApart(InkstitchExtension):
             el.set('d', str(d))
             el.set('transform', get_correction_transform(element.node))
             parent.insert(index, el)
-        parent.remove(element.node)
+        element.node.delete()

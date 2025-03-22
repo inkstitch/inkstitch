@@ -32,7 +32,7 @@ class LetteringRemoveKerning(InkstitchExtension):
                 kerning = svg.xpath(xpath, namespaces=NSS)
                 if kerning:
                     kerning = kerning[0]
-                    kerning.getparent().remove(kerning)
+                    kerning.delete()
                     fontfile.seek(0)
                     fontfile.write(etree.tostring(svg).decode('utf-8'))
                     fontfile.truncate()

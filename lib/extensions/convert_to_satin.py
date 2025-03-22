@@ -68,7 +68,7 @@ class ConvertToSatin(InkstitchExtension):
                     joined_satin.node.set('transform', correction_transform)
                     parent.insert(index, joined_satin.node)
 
-            parent.remove(element.node)
+            element.node.delete()
 
     def convert_path_to_satins(self, path, stroke_width, style_args, path_style, depth=0):
         try:

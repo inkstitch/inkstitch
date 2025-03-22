@@ -124,7 +124,7 @@ class JumpToStroke(InkstitchExtension):
                     block_ids.append(subpath_id)
                     parent.insert(index, subpath_element)
                     elements.append(Stroke(subpath_element))
-                parent.remove(node)
+                node.delete()
             else:
                 elements.append(element)
         self.elements = elements
@@ -172,10 +172,10 @@ class JumpToStroke(InkstitchExtension):
             if merged:
                 # remove last element (since it is merged)
                 last_parent = last_element.node.getparent()
-                last_parent.remove(last_element.node)
+                last_element.node.delete()
                 # remove parent group if empty
                 if len(last_parent) == 0:
-                    last_parent.getparent().remove(last_parent)
+                    last_parent.delete()
             return
 
         if merged:

@@ -135,7 +135,7 @@ class FillToSatin(InkstitchExtension):
         for element in self.elements:
             if not self.options.keep_originals or element.name == "Stroke":
                 try:
-                    element.node.getparent().remove(element.node)
+                    element.node.delete()
                 except AttributeError:
                     pass
 

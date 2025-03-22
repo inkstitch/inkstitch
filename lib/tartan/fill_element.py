@@ -20,6 +20,6 @@ def prepare_tartan_fill_element(element: BaseElement) -> None:
         outer_group = parent_group.getparent()
         assert outer_group is not None, f"Tartan element {element.get_id()} should have a parent group"
         outer_group.insert(outer_group.index(parent_group), element)
-        outer_group.remove(parent_group)
+        parent_group.delete()
     # make sure the element is invisible
     element.style['display'] = 'inline'

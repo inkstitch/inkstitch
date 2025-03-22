@@ -356,7 +356,7 @@ class Print(InkstitchExtension):
         # just bulk up the SVG.
         for layer in layers_and_groups:
             if layer is not stitch_plan_layer:
-                svg.remove(layer)
+                layer.delete()
 
         overview_svg = etree.tostring(svg).decode('utf-8')
         color_block_groups = stitch_plan_layer.getchildren()

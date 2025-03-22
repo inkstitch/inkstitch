@@ -48,7 +48,7 @@ class RemoveEmbroiderySettings(InkstitchExtension):
         xpath = ".//svg:g[starts-with(@id,'command_group')]"
         groups = find_elements(self.svg, xpath)
         for group in groups:
-            group.getparent().remove(group)
+            group.delete()
 
         # remove standalone commands and ungrouped object commands
         standalone_commands = ".//svg:use[starts-with(@xlink:href, '#inkstitch_')]|.//svg:path[starts-with(@id, 'command_connector')]"
@@ -66,7 +66,7 @@ class RemoveEmbroiderySettings(InkstitchExtension):
             connectors = find_elements(self.svg, xpath)
             for connector in connectors:
                 group = connector.getparent()
-                group.getparent().remove(group)
+                group.delete()
 
         # remove standalone commands and ungrouped object commands
         standalone_commands = ".//svg:use[starts-with(@xlink:href, '#inkstitch_{command}')]"
@@ -84,14 +84,14 @@ class RemoveEmbroiderySettings(InkstitchExtension):
                 group = element.getparent()
                 if group.getparent() is not None:
                     if group.get_id().startswith("command_group"):
-                        group.getparent().remove(group)
+                        group.delete()
                     else:
-                        group.remove(element)
+                        element.delete()
                 continue
             for command in find_commands(element):
                 if del_option in ('all', command.command):
                     group = command.connector.getparent()
-                    group.getparent().remove(group)
+                    group.delete()
 
     def remove_commands(self):
         if self.svg.selection:
@@ -110,7 +110,7 @@ class RemoveEmbroiderySettings(InkstitchExtension):
             self.remove_element(element)
 
     def remove_element(self, element):
-        element.getparent().remove(element)
+        element.delete()
 
     def remove_inkstitch_attributes(self, elements):
         param_to_remove = self.options.del_params

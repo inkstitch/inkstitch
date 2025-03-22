@@ -251,7 +251,7 @@ class Font(object):
                 continue
             # remove destination_group if it is empty
             if not bounding_box:
-                destination_group.remove(letter_group)
+                letter_group.delete()
                 continue
 
             line_width = bounding_box.width

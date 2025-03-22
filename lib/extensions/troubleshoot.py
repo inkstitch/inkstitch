@@ -46,8 +46,7 @@ class Troubleshoot(InkstitchExtension):
             self.add_descriptions(problem_types)
             self.remove_empty_layers()
         else:
-            svg = self.document.getroot()
-            svg.remove(self.troubleshoot_layer)
+            self.troubleshoot_layer.delete()
 
             message = _("All selected shapes are valid! ")
             message += "\n\n"
@@ -120,7 +119,7 @@ class Troubleshoot(InkstitchExtension):
             # Remove the old layer - they may have used tranfsorms
             # or moved it into an other group (which could lead to more transforms)
             # We don't want to deal with it.
-            layer.getparent().remove(layer)
+            layer.delete()
 
         layer = inkex.Group(attrib={
             'id': '__validation_layer__',
@@ -251,4 +250,4 @@ class Troubleshoot(InkstitchExtension):
     def remove_empty_layers(self):
         for layer in self.troubleshoot_layer.iterchildren(SVG_GROUP_TAG):
             if len(layer) == 0:
-                self.troubleshoot_layer.remove(layer)
+                layer.delete()

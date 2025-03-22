@@ -40,4 +40,4 @@ class LetteringEditJson(InkstitchExtension):
         frame.Show()
         app.MainLoop()
 
-        self.svg.remove(layer)
+        layer.delete()
