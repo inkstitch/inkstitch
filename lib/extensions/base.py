@@ -17,6 +17,7 @@ from ..update import update_inkstitch_document
 
 class InkstitchExtension(inkex.EffectExtension):
     """Base class for Inkstitch extensions.  Not intended for direct use."""
+    document: inkex.SvgDocumentElement
 
     # Set to True to hide this extension from release builds of Ink/Stitch.  It will
     # only be available in development installations.

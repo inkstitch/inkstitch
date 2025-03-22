@@ -4,22 +4,21 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import json
-import os
 import sys
-import tempfile
-from copy import deepcopy
+import io
 from zipfile import ZipFile
 
 from inkex import Boolean, Group, errormsg
 from lxml import etree
+from sanitize_filename import sanitize
 
 import pyembroidery
 
 from ..extensions.lettering_along_path import TextAlongPath
 from ..i18n import _
 from ..lettering import get_font_by_name
-from ..output import write_embroidery_file
-from ..stitch_plan import stitch_groups_to_stitch_plan
+from ..output import write_embroidery_file_stream
+from ..stitch_plan import stitch_groups_to_stitch_plan, StitchPlan
 from ..svg import get_correction_transform
 from ..threads import ThreadCatalog
 from ..utils import DotDict
@@ -129,33 +128,15 @@ class BatchLettering(InkstitchExtension):
         # The path should be labeled as "batch lettering"
         text_positioning_path = self.svg.findone(".//*[@inkscape:label='batch lettering']")
 
-        path = tempfile.mkdtemp()
-        files = []
-        for text in texts:
-            stitch_plan, lettering_group = self.generate_stitch_plan(text, text_positioning_path)
-            for file_format in file_formats:
-                files.append(self.generate_output_file(file_format, path, text, stitch_plan))
+        with ZipFile(sys.stdout.buffer, "w") as zip_file:
+            for text in texts:
+                stitch_plan, lettering_group = self.generate_stitch_plan(text, text_positioning_path)
+                for file_format in file_formats:
+                    with zip_file.open(sanitize(f"{text}.{file_format}"), "w") as output_file:
+                        self.generate_output_file(output_file, file_format, stitch_plan)
 
-            self.reset_document(lettering_group, text_positioning_path)
-
-        temp_file = tempfile.NamedTemporaryFile(suffix=".zip", delete=False)
-
-        # in windows, failure to close here will keep the file locked
-        temp_file.close()
-
-        with ZipFile(temp_file.name, "w") as zip_file:
-            for output in files:
-                zip_file.write(output, os.path.basename(output))
-
-        # inkscape will read the file contents from stdout and copy
-        # to the destination file that the user chose
-        with open(temp_file.name, 'rb') as output_file:
-            sys.stdout.buffer.write(output_file.read())
-
-        os.remove(temp_file.name)
-        for output in files:
-            os.remove(output)
-        os.rmdir(path)
+                # Reset document for next text
+                self.reset_document(lettering_group, text_positioning_path)
 
     def reset_document(self, lettering_group, text_positioning_path):
         # reset document for the next iteration
@@ -163,20 +144,18 @@ class BatchLettering(InkstitchExtension):
         index = parent.index(lettering_group)
         if text_positioning_path is not None:
             parent.insert(index, text_positioning_path)
-        parent.remove(lettering_group)
+        lettering_group.delete()
 
-    def generate_output_file(self, file_format, path, text, stitch_plan):
-        text = text.replace('\n', '')
-        output_file = os.path.join(path, f"{text}.{file_format}")
-
+    def generate_output_file(self, output_file: io.IOBase, file_format: str, stitch_plan: StitchPlan) -> None:
         if file_format == 'svg':
-            document = deepcopy(self.document.getroot())
-            with open(output_file, 'w', encoding='utf-8') as svg:
-                svg.write(etree.tostring(document).decode('utf-8'))
+            output_file.write(etree.tostring(self.document.getroot()))
         else:
-            write_embroidery_file(output_file, stitch_plan, self.document.getroot())
-
-        return output_file
+            # Unfortunately some of pyembroidery's writers need `seek` and `tell`, which stdout doesn't support.
+            # Until that changes, we need to write this to an in-memory buffer that does support these, then
+            # write out the result to the stdout-backed zipfile
+            with io.BytesIO() as buf:
+                write_embroidery_file_stream(buf, file_format, stitch_plan, self.document.getroot())
+                output_file.write(buf.getvalue())
 
     def generate_stitch_plan(self, text, text_positioning_path):
 

@@ -311,7 +311,7 @@ def with_time(extension, remaining_args, profile_file_path: Path):
                 import resource
                 usage = resource.getrusage(resource.RUSAGE_SELF)
                 log(f"Max RSS: {usage.ru_maxrss}KB")
-            except:  # Resource isn't supported on all platforms
+            except Exception:  # Resource isn't supported on all platforms
                 pass
 
 
