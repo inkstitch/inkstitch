@@ -241,7 +241,7 @@ def get_nodes_on_element(graph, element):
     return nodes
 
 
-def remove_original_elements(elements):
+def remove_original_elements(elements, commands_only=False):
     for element in elements:
         for command in element.commands:
             command_group = command.use.getparent()
@@ -250,7 +250,8 @@ def remove_original_elements(elements):
             else:
                 remove_from_parent(command.connector)
                 remove_from_parent(command.use)
-        remove_from_parent(element.node)
+        if not commands_only:
+            remove_from_parent(element.node)
 
 
 def remove_from_parent(node):

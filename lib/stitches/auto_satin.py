@@ -359,26 +359,7 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
     """
 
     if len(elements) == 1 and ending_point is None and starting_point is not None:
-        # they just used this method to lazily create running stitch to start the satin
-        # generate a line from starting point to the actual start of the satin
-        satin = elements[0]
-        parent = satin.node.getparent()
-        index = parent.index(satin.node)
-
-        project = satin.center_line.project(ShapelyPoint(starting_point))
-        path = substring(satin.center_line, project, 0)
-
-        run = RunningStitch(path, satin)
-        run_element = run.to_element()
-
-        transform = get_correction_transform(satin.node, False)
-        run_element.node.set('transform', transform)
-        run_element.node.apply_transform()
-
-        stroke_width = convert_stroke_width(satin)
-        run_element.node.style['stroke-width'] = stroke_width
-
-        parent.insert(index, run_element.node)
+        _route_single_satin(elements, starting_point, keep_originals)
         return
 
     # save these for create_new_group() call below
@@ -421,6 +402,31 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
         new_elements = add_trims(new_elements, trims)
 
     return new_elements
+
+
+def _route_single_satin(elements, starting_point, keep_originals):
+    # they just used this method to lazily create running stitch to start the satin
+    # generate a line from starting point to the actual start of the satin
+    satin = elements[0]
+    parent = satin.node.getparent()
+    index = parent.index(satin.node)
+
+    project = satin.center_line.project(ShapelyPoint(starting_point))
+    path = substring(satin.center_line, project, 0)
+
+    run = RunningStitch(path, satin)
+    run_element = run.to_element()
+
+    transform = get_correction_transform(satin.node, False)
+    run_element.node.set('transform', transform)
+    run_element.node.apply_transform()
+
+    stroke_width = convert_stroke_width(satin)
+    run_element.node.style['stroke-width'] = stroke_width
+
+    parent.insert(index, run_element.node)
+    if not keep_originals:
+        remove_original_elements([satin], True)
 
 
 def convert_stroke_width(element):
