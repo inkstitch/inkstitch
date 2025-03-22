@@ -221,6 +221,8 @@ def profile(profiler_type, profile_dir: Path, ini: dict, extension, remaining_ar
         with_profile(extension, remaining_args, profile_file_path)
     elif profiler_type == 'pyinstrument':
         with_pyinstrument(extension, remaining_args, profile_file_path)
+    elif profiler_type == 'time':
+        with_time(extension, remaining_args, profile_file_path)
     elif profiler_type == 'monkeytype':
         with_monkeytype(extension, remaining_args, profile_file_path)
     else:
@@ -282,6 +284,35 @@ def with_pyinstrument(extension, remaining_args, profile_file_path: Path):
     with open(profile_file_path, 'w') as stats_file:
         stats_file.write(profiler.output_html())
     print(f"Profiler: pyinstrument, stats written to '{profile_file_path.name}'. Use browser to see it.", file=sys.stderr)
+
+
+def with_time(extension, remaining_args, profile_file_path: Path):
+    '''
+    'Profile' by logging elapsed wall and CPU time, and max Resident Set Size if available.
+    '''
+    import time
+
+    with open(profile_file_path, "w") as stats_file:
+        def log(msg: str):
+            stats_file.write(msg + "\n")
+            print(msg, file=sys.stderr)
+
+        start_wall = time.perf_counter()
+        start_proc = time.process_time()
+
+        try:
+            extension.run(args=remaining_args)
+        finally:
+            duration_wall = time.perf_counter() - start_wall
+            duration_proc = time.process_time() - start_proc
+            log(f"Profiler: wall {duration_wall}s, proc {duration_proc}s")
+
+            try:
+                import resource
+                usage = resource.getrusage(resource.RUSAGE_SELF)
+                log(f"Max RSS: {usage.ru_maxrss}KB")
+            except:  # Resource isn't supported on all platforms
+                pass
 
 
 def with_monkeytype(extension, remaining_args, profile_file_path: Path) -> None:
