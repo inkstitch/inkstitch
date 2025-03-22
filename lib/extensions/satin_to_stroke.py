@@ -11,7 +11,7 @@ from ..svg import get_correction_transform
 from .base import InkstitchExtension
 
 
-class ConvertToStroke(InkstitchExtension):
+class SatinToStroke(InkstitchExtension):
     """Convert a satin column into a running stitch."""
 
     def __init__(self, *args, **kwargs):
