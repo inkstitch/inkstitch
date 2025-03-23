@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>Install thread color palettes for Inkscape</name>
+    <name>Install Addons for Inkscape</name>
     <id>org.{{ id_inkstitch }}.install</id>
     <param name="extension" type="string" gui-hidden="true">install</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <param name="install-palettes" type="boolean" gui-text="Install thread color palettes"
+                   gui-description="Installs some default thread color palettes.">true</param>
+            <param name="install-symbol-libraries" type="boolean" gui-text="Install symbol libraries"
+                   gui-description="Installs symbol libraries with reusable motifs for embroidery">true</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>Installs color palettes or a motif stitch symbol library into Inkscape.</label>
+            <label>Please restart Inkscape after the installation is complete.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/install-addons</label>
+        </page>
+    </param>
+
     <effect>
         <object-type>all</object-type>
         <icon>{{ icon_path }}inx/color_management.svg</icon>
-        <menu-tip>Installs color palettes for various thread brands into Inkscape</menu-tip>
+        <menu-tip>Installs color palettes or a symbol library for motif stitches into Inkscape</menu-tip>
         <effects-menu>
-            <submenu name="{{ menu_inkstitch }}" translatable="no">
-                <submenu name="Thread Color Management" />
-            </submenu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no" />
         </effects-menu>
     </effect>
     <script>
