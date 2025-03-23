@@ -71,14 +71,14 @@ Here is a minimal example for command line usage of the batch lettering extensio
 
 #### Options
 
-Option           |Input Type|Values
------------------|----------|------
---text           |string    |cannot be empty
---separator      |string    |default: '\n'
---font           |string    |must be a valid font name
---scale          |integer   |default: 100
---color-sort     |string    |off, all, line, word<br>default: off
---trim           |string    |off, line, word, glyph<br>default: off 
---command_symbols|bool      |default: False
---text-align     |string    |left, center, right, block, letterspacing<br>default: left
---file-formats   |string    |must be at least one valid output format
+Option             |Input Type|Values
+---------- --------|----------|------
+`--text`           |string    |cannot be empty
+`--separator`      |string    |default: '\n'
+`--font`           |string    |must be a valid font name
+`--scale`          |integer   |default: 100
+`--color-sort`     |string    |off, all, line, word<br>default: off
+`--trim`           |string    |off, line, word, glyph<br>default: off 
+`--command_symbols`|bool      |default: False
+`--text-align`     |string    |left, center, right, block, letterspacing<br>default: left
+`--file-formats`   |string    |must be at least one valid output format
