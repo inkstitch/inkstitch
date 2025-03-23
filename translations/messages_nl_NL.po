@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-22 01:29+0000\n"
-"PO-Revision-Date: 2025-03-22 01:29\n"
+"POT-Creation-Date: 2025-03-23 01:43+0000\n"
+"PO-Revision-Date: 2025-03-23 01:43\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-22 01:29+0000\n"
+"POT-Creation-Date: 2025-03-23 01:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2555,23 +2555,31 @@ msgid "Please specify a font"
 msgstr ""
 
 #: lib/extensions/batch_lettering.py:64
-msgid "Please specify a valid font name"
+msgid "Please specify a valid font name."
 msgstr ""
 
-#: lib/extensions/batch_lettering.py:68
+#: lib/extensions/batch_lettering.py:65
+msgid "You can find a list with all font names on our website: https://inkstitch.org/fonts/font-library/"
+msgstr ""
+
+#: lib/extensions/batch_lettering.py:69
 msgid "Please specify at least one output file format"
 msgstr ""
 
-#: lib/extensions/batch_lettering.py:74
-msgid "Please specify at least one file format supported by pyembroidery"
+#: lib/extensions/batch_lettering.py:75
+msgid "Please specify at least one file format supported by Ink/Stitch"
 msgstr ""
 
-#: lib/extensions/batch_lettering.py:195 lib/extensions/lettering.py:60
+#: lib/extensions/batch_lettering.py:76
+msgid "You can find a list with all supported file formats our website: https://inkstitch.org/docs/file-formats/#writing"
+msgstr ""
+
+#: lib/extensions/batch_lettering.py:197 lib/extensions/lettering.py:60
 #: lib/extensions/lettering.py:71
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Belettering"
 
-#: lib/extensions/batch_lettering.py:201 lib/gui/lettering/main_panel.py:307
+#: lib/extensions/batch_lettering.py:203 lib/gui/lettering/main_panel.py:307
 msgid "scale"
 msgstr ""
 
@@ -3028,7 +3036,7 @@ msgstr ""
 msgid "Redwork Underpath"
 msgstr ""
 
-#: lib/extensions/reorder.py:20
+#: lib/extensions/reorder.py:18
 msgid "Please select at least two elements to reorder."
 msgstr "Selecteer ten minste twee elementen om te hergroeperen."
 
@@ -3145,24 +3153,24 @@ msgstr "Garen Volgorde"
 msgid "Thread Used"
 msgstr "Garen Gebruikt"
 
-#: lib/extensions/troubleshoot.py:52
+#: lib/extensions/troubleshoot.py:51
 msgid "All selected shapes are valid! "
 msgstr "Alle geselecteerde vormen zijn geldig! "
 
-#: lib/extensions/troubleshoot.py:54
+#: lib/extensions/troubleshoot.py:53
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
 msgstr "Als je nog steeds problemen hebt met een vorm die niet wordt geborduurd, controleer dan of er een laag is met een Negeer commando erin."
 
-#: lib/extensions/troubleshoot.py:84
+#: lib/extensions/troubleshoot.py:83
 msgid "Invalid Pointer"
 msgstr "Ongeldige Pointer"
 
-#: lib/extensions/troubleshoot.py:95 lib/gui/edit_json/settings_panel.py:94
+#: lib/extensions/troubleshoot.py:94 lib/gui/edit_json/settings_panel.py:94
 #: inx/inkstitch_lettering_generate_json.inx:21
 msgid "Description"
 msgstr "Beschrijving"
 
-#: lib/extensions/troubleshoot.py:127 lib/extensions/troubleshoot.py:176
+#: lib/extensions/troubleshoot.py:126 lib/extensions/troubleshoot.py:175
 #: inx/inkstitch_cleanup.inx:36 inx/inkstitch_element_info.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:155
 #: inx/inkstitch_select_elements.inx:91 inx/inkstitch_troubleshoot.inx:26
@@ -3170,43 +3178,43 @@ msgstr "Beschrijving"
 msgid "Troubleshoot"
 msgstr "Probleemoplossen"
 
-#: lib/extensions/troubleshoot.py:136 lib/extensions/troubleshoot.py:183
+#: lib/extensions/troubleshoot.py:135 lib/extensions/troubleshoot.py:182
 msgid "Errors"
 msgstr "Fouten"
 
-#: lib/extensions/troubleshoot.py:142 lib/extensions/troubleshoot.py:187
+#: lib/extensions/troubleshoot.py:141 lib/extensions/troubleshoot.py:186
 msgid "Warnings"
 msgstr "Waarschuwingen"
 
-#: lib/extensions/troubleshoot.py:148
+#: lib/extensions/troubleshoot.py:147
 msgid "Type Warnings"
 msgstr "Type Waarschuwingen"
 
-#: lib/extensions/troubleshoot.py:166
+#: lib/extensions/troubleshoot.py:165
 msgid "Problem descriptions"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:184
+#: lib/extensions/troubleshoot.py:183
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr "Problemen die zullen verhinderen dat de vorm geborduurd wordt."
 
-#: lib/extensions/troubleshoot.py:188
+#: lib/extensions/troubleshoot.py:187
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr "Dit zijn problemen die niet zullen verhinderen dat de vorm geborduurd wordt. Je kunt de waarschuwing proberen op te lossen, maar als dat niet lukt zal Ink/Stitch toch proberen het object te verwerken."
 
-#: lib/extensions/troubleshoot.py:193
+#: lib/extensions/troubleshoot.py:192
 msgid "Object Type Warnings"
 msgstr "Object Type Waarschuwingen"
 
-#: lib/extensions/troubleshoot.py:194
+#: lib/extensions/troubleshoot.py:193
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr "Deze objecten werken mogelijk niet goed met Ink/Stitch. Volg de instructies om ongewenst gedrag te corrigeren."
 
-#: lib/extensions/troubleshoot.py:207
+#: lib/extensions/troubleshoot.py:206
 msgid "Possible solutions"
 msgstr "Mogelijke oplossingen"
 
-#: lib/extensions/troubleshoot.py:212
+#: lib/extensions/troubleshoot.py:211
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Het is mogelijk dat een object meer dan één fout bevat, er is echter slechts éé'n pointer per object. Voer de functie opnieuw uit als er meer fouten optreden. Verwijder pointers door de laag met naam \"Probleemoplossen\" te verwijderen via het objecten paneel (Object -> Objecten...)."
 
@@ -4463,7 +4471,7 @@ msgstr ""
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr "Er is geen geselecteerd stitchable element. Voer Extensies > Inkt/Stik > Probleemoplossing > Objecten oplossen uit voor het geval u een stitchout verwachtte."
 
-#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:413
+#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:394
 msgid "Auto-Route"
 msgstr "Auto route"
 
@@ -4479,14 +4487,14 @@ msgstr "AutoRun Onderpad %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:592
+#: lib/stitches/auto_satin.py:598
 #, python-format
 msgid "AutoSatin %d"
 msgstr "AutoSatijn %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:595
+#: lib/stitches/auto_satin.py:601
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "AutoSatijn Doorlopende Steek %d"
