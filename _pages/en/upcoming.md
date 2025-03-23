@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-03-19
+last_modified_at: 2025-03-23
 sidebar:
   nav: pages
 toc: true
@@ -179,7 +179,7 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ### Lettering
 
-`Lettering`
+`Lettering > Lettering`
 
 * Load with last selected font and some other settings [#3498](https://github.com/inkstitch/inkstitch/pull/3498) [#3504](https://github.com/inkstitch/inkstitch/pull/3504)
 * Add support for more languages (right to left) [#3432](https://github.com/inkstitch/inkstitch/pull/3358) [#3466](https://github.com/inkstitch/inkstitch/pull/3466)
@@ -189,6 +189,12 @@ A tool for font authors which sets a specified color sort index on selected elem
 * Options for text alignment [#3382](https://github.com/inkstitch/inkstitch/pull/3382)
 
 ![Lettering: more options](/assets/images/upcoming/3.2.0/lettering.png)
+
+### Lettering Along Path
+
+`Lettering > Lettering Along Path`
+
+Add option for text position along the path (left, center, right, stretch)
 
 ### Multicolor Satin
 
@@ -273,7 +279,15 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ## Export / Import
 
-* Update pyembroidery (gcode) to allow customized setting for rgb values [#3530](https://github.com/inkstitch/inkstitch/pull/3530)
+### GCODE
+
+Update pyembroidery to allow customized setting for rgb values [#3530](https://github.com/inkstitch/inkstitch/pull/3530)
+
+### Batch Lettering
+
+Ink/Stitch can now export multiple files with text at once. A path with a specified label within the open document can be used to define text position.
+
+[More information](/docs/import-export/#batch-lettering)
 
 ## Developer and Build Stuff
 
