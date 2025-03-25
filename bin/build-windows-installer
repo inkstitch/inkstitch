@@ -24,7 +24,15 @@ iscc win/win_build.iss
 mv  win/inkstitch.exe artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.exe
 cd dist
 echo "Creating zip"
+if [[ -d "../signed-artifacts" ]]; then
+	DIRECTORY="signed-artifacts"
+	echo "Found signed artifacts"
+else
+	DIRECTORY="artifacts"
+	echo "No signed artifacts found, local build"
+fi
+
 # The python zipfile command line utility can't handle directories
 # containing files with UTF-8 names on Windows, so we use 7-zip instead.
-7z a ../artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.zip *
+7z a ../${DIRECTORY}/inkstitch-${VERSION}-${OS}-${ARCH}.zip *
 cd ..
