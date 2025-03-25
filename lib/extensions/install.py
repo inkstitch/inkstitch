@@ -40,8 +40,8 @@ class Install(InkstitchExtension):
         try:
             copy_files(glob(os.path.join(src_dir, "*")), path)
             return True
-        except IOError:
-            self.install_error_message(_("Could not install color palettes. Please file an issue on"))
+        except IOError as error:
+            self.install_error_message(_("Could not install color palettes. Please file an issue on"), error)
             return False
 
     def install_symbol_libraries(self):
@@ -50,15 +50,16 @@ class Install(InkstitchExtension):
         try:
             copy_files(glob(os.path.join(src_dir, "*")), path)
             return True
-        except IOError:
-            self.install_error_message(_("Could not install color palettes. Please file an issue on"))
+        except IOError as error:
+            self.install_error_message(_("Could not install color palettes. Please file an issue on"), error)
             return False
 
     def install_success_message(self):
         errormsg(_("Successfully installed Addons.\n\nPlease restart Inkscape."))
 
-    def install_error_message(self, text):
-        errormsg(text + "https://github.com/inkstitch/inkstitch/issues")
+    def install_error_message(self, text, error):
+        errormsg(text + " https://github.com/inkstitch/inkstitch/issues\n\n")
+        errormsg(error)
 
 
 if sys.platform == "win32":
