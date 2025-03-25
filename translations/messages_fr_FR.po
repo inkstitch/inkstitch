@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-23 01:43+0000\n"
-"PO-Revision-Date: 2025-03-23 01:43\n"
+"POT-Creation-Date: 2025-03-25 01:39+0000\n"
+"PO-Revision-Date: 2025-03-25 01:39\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-23 01:43+0000\n"
+"POT-Creation-Date: 2025-03-25 01:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -206,7 +206,7 @@ msgstr "Coronaviral est une police créée en point manuel. Ne pas changer la ta
 #. description of font in fonts/decadent_flowers_monogram
 #: inkstitch-fonts-metadata.py:72
 msgid "Each Decadent Flowers Monogram lettter  is composed of an optional knockdown fill (for high pile fabric embroidery)  and redwork flowers  with a negative space letter monogram"
-msgstr ""
+msgstr "Chaque  lettre de la  police  Decadent Flowers Monogram est composée d'un point couchant optionnel (utile pour les tissus poilus) et d'un bouquet de fleurs  en redwork avec la lettre en  négatif"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:74
@@ -2451,6 +2451,7 @@ msgid "point"
 msgstr "point"
 
 #: lib/elements/text.py:13 lib/gui/lettering/option_panel.py:144
+#: inx/inkstitch_batch_lettering.inx:13
 msgid "Text"
 msgstr "Texte"
 
@@ -2553,31 +2554,31 @@ msgstr "Conseil : Exécutez Extensions > Ink/Stitch > Résolution de problèmes 
 
 #: lib/extensions/batch_lettering.py:55
 msgid "Please specify a text"
-msgstr ""
+msgstr "Merci de spécifier un texte"
 
 #: lib/extensions/batch_lettering.py:60
 msgid "Please specify a font"
-msgstr ""
+msgstr "Merci de spécifier une police"
 
 #: lib/extensions/batch_lettering.py:64
 msgid "Please specify a valid font name."
-msgstr ""
+msgstr "Merci de spécifier un nom de police valide."
 
 #: lib/extensions/batch_lettering.py:65
 msgid "You can find a list with all font names on our website: https://inkstitch.org/fonts/font-library/"
-msgstr ""
+msgstr "Vous pouvez trouver la liste de tous les noms de polices sur notre site web : https://inkstitch.org/fr/fonts/font-library/"
 
 #: lib/extensions/batch_lettering.py:69
 msgid "Please specify at least one output file format"
-msgstr ""
+msgstr "Merci de spécifier au moins un format de fichier de sortie"
 
 #: lib/extensions/batch_lettering.py:75
 msgid "Please specify at least one file format supported by Ink/Stitch"
-msgstr ""
+msgstr "Merci de spécifier au moins un format de fichier supporté par Ink/Stitch"
 
 #: lib/extensions/batch_lettering.py:76
 msgid "You can find a list with all supported file formats our website: https://inkstitch.org/docs/file-formats/#writing"
-msgstr ""
+msgstr "Vous pouvez trouver la liste de tous les formats de fichier supportés sur notre site web : https://inkstitch.org/fr/docs/file-formats/#writing"
 
 #: lib/extensions/batch_lettering.py:197 lib/extensions/lettering.py:60
 #: lib/extensions/lettering.py:71
@@ -2818,7 +2819,7 @@ msgstr "Merci de sélectionner au moins un objet avec un remplissage en dégrad�
 
 #: lib/extensions/gradient_blocks.py:64
 msgid "Color Gradient Blocks"
-msgstr ""
+msgstr "Blocs de couleurs de dégradé"
 
 #: lib/extensions/input.py:22
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
@@ -3288,8 +3289,8 @@ msgstr "Appliquer"
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
 #: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:16
-#: inx/inkstitch_break_apart.inx:14 inx/inkstitch_cleanup.inx:22
-#: inx/inkstitch_convert_to_stroke.inx:12
+#: inx/inkstitch_batch_lettering.inx:62 inx/inkstitch_break_apart.inx:14
+#: inx/inkstitch_cleanup.inx:22 inx/inkstitch_convert_to_stroke.inx:12
 #: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
 #: inx/inkstitch_display_stacking_order.inx:11
 #: inx/inkstitch_fill_to_satin.inx:24 inx/inkstitch_fill_to_stroke.inx:24
@@ -3533,22 +3534,25 @@ msgstr "Broder les lignes de texte en aller-retour"
 msgid "Align Text"
 msgstr "Alignement du texte"
 
-#: lib/gui/lettering/option_panel.py:89
+#: lib/gui/lettering/option_panel.py:89 inx/inkstitch_batch_lettering.inx:36
+#: inx/inkstitch_batch_lettering.inx:49
 #: inx/inkstitch_lettering_along_path.inx:19
 msgid "Left"
 msgstr "Gauche"
 
-#: lib/gui/lettering/option_panel.py:89
+#: lib/gui/lettering/option_panel.py:89 inx/inkstitch_batch_lettering.inx:37
+#: inx/inkstitch_batch_lettering.inx:50
 #: inx/inkstitch_lettering_along_path.inx:20
 msgid "Center"
 msgstr "Centre"
 
-#: lib/gui/lettering/option_panel.py:89
+#: lib/gui/lettering/option_panel.py:89 inx/inkstitch_batch_lettering.inx:38
+#: inx/inkstitch_batch_lettering.inx:51
 #: inx/inkstitch_lettering_along_path.inx:21
 msgid "Right"
 msgstr "Droite"
 
-#: lib/gui/lettering/option_panel.py:89
+#: lib/gui/lettering/option_panel.py:89 inx/inkstitch_batch_lettering.inx:39
 msgid "Block (default)"
 msgstr "Justifié (mots)"
 
@@ -3560,39 +3564,39 @@ msgstr "Justifié (lettres)"
 msgid "Sort multicolor fonts. Unifies tartan patterns."
 msgstr "Tri les fontes multicolore. Uniformise les motifs tartan."
 
-#: lib/gui/lettering/option_panel.py:95
+#: lib/gui/lettering/option_panel.py:95 inx/inkstitch_batch_lettering.inx:23
 msgid "Off"
 msgstr "Sans"
 
-#: lib/gui/lettering/option_panel.py:95
+#: lib/gui/lettering/option_panel.py:95 inx/inkstitch_batch_lettering.inx:24
 msgid "Whole text"
 msgstr "Tout"
 
-#: lib/gui/lettering/option_panel.py:95
+#: lib/gui/lettering/option_panel.py:95 inx/inkstitch_batch_lettering.inx:25
 msgid "Line"
 msgstr "Ligne"
 
-#: lib/gui/lettering/option_panel.py:95
+#: lib/gui/lettering/option_panel.py:95 inx/inkstitch_batch_lettering.inx:26
 msgid "Word"
 msgstr "Mot"
 
-#: lib/gui/lettering/option_panel.py:99
+#: lib/gui/lettering/option_panel.py:99 inx/inkstitch_batch_lettering.inx:28
 msgid "Add trims"
 msgstr "Ajouter coupes"
 
-#: lib/gui/lettering/option_panel.py:100
+#: lib/gui/lettering/option_panel.py:100 inx/inkstitch_batch_lettering.inx:29
 msgid "Never"
 msgstr "Jamais"
 
-#: lib/gui/lettering/option_panel.py:100
+#: lib/gui/lettering/option_panel.py:100 inx/inkstitch_batch_lettering.inx:30
 msgid "after each line"
 msgstr "après chaque ligne"
 
-#: lib/gui/lettering/option_panel.py:100
+#: lib/gui/lettering/option_panel.py:100 inx/inkstitch_batch_lettering.inx:31
 msgid "after each word"
 msgstr "après chaque mot"
 
-#: lib/gui/lettering/option_panel.py:100
+#: lib/gui/lettering/option_panel.py:100 inx/inkstitch_batch_lettering.inx:32
 msgid "after each letter"
 msgstr "après chaque lettre"
 
@@ -3600,7 +3604,7 @@ msgstr "après chaque lettre"
 msgid "Add trim command"
 msgstr "Ajouter une commande de coupe"
 
-#: lib/gui/lettering/option_panel.py:104
+#: lib/gui/lettering/option_panel.py:104 inx/inkstitch_batch_lettering.inx:34
 msgid "Use command symbols"
 msgstr "Utiliser des symboles de commandes"
 
@@ -3630,6 +3634,7 @@ msgid "Stitch direction"
 msgstr "Direction du texte"
 
 #: lib/gui/lettering_font_sample.py:49 lib/gui/tartan/customize_panel.py:46
+#: inx/inkstitch_batch_lettering.inx:21
 msgid "Scale (%)"
 msgstr "Echelle (%)"
 
@@ -3638,7 +3643,7 @@ msgid "Max. line width"
 msgstr "Largeur du texte"
 
 #: lib/gui/lettering/option_panel.py:93 lib/gui/lettering/option_panel.py:95
-#: lib/gui/lettering_font_sample.py:53
+#: lib/gui/lettering_font_sample.py:53 inx/inkstitch_batch_lettering.inx:22
 msgid "Color sort"
 msgstr "Tri des couleurs"
 
@@ -4171,11 +4176,11 @@ msgstr "Générer des échantillons"
 
 #: lib/gui/lettering/main_panel.py:45 lib/gui/lettering/option_panel.py:137
 #: lib/gui/test_swatches.py:33 inx/inkstitch_apply_threadlist.inx:7
-#: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_break_apart.inx:8
-#: inx/inkstitch_cleanup.inx:8 inx/inkstitch_convert_to_stroke.inx:8
-#: inx/inkstitch_density_map.inx:8 inx/inkstitch_display_stacking_order.inx:8
-#: inx/inkstitch_fill_to_satin.inx:8 inx/inkstitch_fill_to_stroke.inx:16
-#: inx/inkstitch_gradient_blocks.inx:17
+#: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_batch_lettering.inx:9
+#: inx/inkstitch_break_apart.inx:8 inx/inkstitch_cleanup.inx:8
+#: inx/inkstitch_convert_to_stroke.inx:8 inx/inkstitch_density_map.inx:8
+#: inx/inkstitch_display_stacking_order.inx:8 inx/inkstitch_fill_to_satin.inx:8
+#: inx/inkstitch_fill_to_stroke.inx:16 inx/inkstitch_gradient_blocks.inx:17
 #: inx/inkstitch_install_custom_palette.inx:8
 #: inx/inkstitch_jump_to_stroke.inx:17 inx/inkstitch_jump_to_trim.inx:17
 #: inx/inkstitch_knockdown_fill.inx:17
@@ -5286,9 +5291,10 @@ msgstr "Garder les chemins originels"
 msgid "This extension tries to create a single stitch path through all selected satin columns."
 msgstr "Cette extension tente de créer un chemin de broderie unique qui parcourt toutes les colonnes satins sélectionnées."
 
-#: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_break_apart.inx:20
-#: inx/inkstitch_cleanup.inx:25 inx/inkstitch_convert_to_stroke.inx:15
-#: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
+#: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_batch_lettering.inx:67
+#: inx/inkstitch_break_apart.inx:20 inx/inkstitch_cleanup.inx:25
+#: inx/inkstitch_convert_to_stroke.inx:15 inx/inkstitch_density_map.inx:29
+#: inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_fill_to_satin.inx:27
 #: inx/inkstitch_install_custom_palette.inx:17
 #: inx/inkstitch_knockdown_fill.inx:33
@@ -5320,6 +5326,79 @@ msgstr "Génère un chemin continu pour broder toutes les colonnes satin sélect
 #: inx/inkstitch_zigzag_line_to_satin.inx:37
 msgid "Tools: Satin"
 msgstr "Outils : Satin"
+
+#: inx/inkstitch_batch_lettering.inx:3
+msgid "Batch Lettering"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:13
+msgid "Enter the text. Each line of text will be exported to a separate file."
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:15
+msgid "Custom separator"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:15
+msgid "Set a custom separator for multiline text export. Leave empty for line break."
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:19
+msgid "Font name"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:21
+msgid "The scale value must be within the scale range of the specified font."
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:35
+msgid "Align Multiline Text"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:40
+msgid "Block (letterpacing)"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:48
+msgid "Lettering along path: text position"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:48
+msgid "Uses this text position when using lettering along path"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:52
+#: inx/inkstitch_lettering_along_path.inx:22
+msgid "Stretch"
+msgstr "Étendre"
+
+#: inx/inkstitch_batch_lettering.inx:57
+msgid "File formats"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:57
+msgid "Comma separated list of file formats"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:63
+msgid "Use this extension to save multiple files with the given text."
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:65
+msgid "When the document contains a path element labeled as \"batch lettering\" it will be used to place the text along this path. The path itself will be removed and won't be rendered."
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:68
+msgid "https://inkstitch.org/docs/lettering/#batch-export"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:75
+msgid "Ink/Stitch: batch lettering (.zip)"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:76
+msgid "Create a zip with multiple files including embroidered text using Ink/Stitch"
+msgstr ""
 
 #: inx/inkstitch_break_apart.inx:3
 msgid "Break Apart Fill Objects"
@@ -6557,7 +6636,7 @@ msgstr "Lettrage"
 
 #: inx/inkstitch_lettering.inx:9
 msgid "Insert ready-to-embroider text into the document"
-msgstr ""
+msgstr "Insert un texte prêt à être brodé dans le document"
 
 #: inx/inkstitch_lettering_along_path.inx:3
 msgid "Lettering along path"
@@ -6569,11 +6648,7 @@ msgstr "Fait suivre un chemin à un texte"
 
 #: inx/inkstitch_lettering_along_path.inx:18
 msgid "Text position"
-msgstr ""
-
-#: inx/inkstitch_lettering_along_path.inx:22
-msgid "Stretch"
-msgstr "Étendre"
+msgstr "Position du texte"
 
 #: inx/inkstitch_lettering_along_path.inx:26
 msgid "This extension bends an Ink/Stitch text to a path."
@@ -6597,7 +6672,7 @@ msgstr "* Le texte ne doit pas être trop long pour le chemin"
 
 #: inx/inkstitch_lettering_along_path.inx:33
 msgid "In the text position dropdown menu, you can decide how the text will be placed on the path. When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path."
-msgstr ""
+msgstr "Dans le menu déroulant de position du texte, vous pouvez décider de la manière dont le texte sera placé sur le chemin. Lorsque étiré est sélectionné, les espaces entre les glyphes seront étendu afin que le texte soit étiré sur toute la longueur du chemin."
 
 #: inx/inkstitch_lettering_along_path.inx:38
 msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
