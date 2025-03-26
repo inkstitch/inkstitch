@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-25 01:39+0000\n"
-"PO-Revision-Date: 2025-03-25 01:39\n"
+"POT-Creation-Date: 2025-03-26 01:39+0000\n"
+"PO-Revision-Date: 2025-03-26 01:40\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-25 01:39+0000\n"
+"POT-Creation-Date: 2025-03-26 01:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2612,27 +2612,6 @@ msgstr "{num_elements_removed} Elemente entfernt"
 msgid "{num_groups_removed} groups/layers removed"
 msgstr "{num_groups_removed} Gruppen/Ebenen entfernt"
 
-#: lib/extensions/convert_to_satin.py:36
-msgid "Please select at least one line to convert to a satin column."
-msgstr "Bitte wähle mindestens eine Zeile aus, die in eine Satinsäule konvertiert werden soll."
-
-#. : Convert To Satin extension, user selected one or more objects that were
-#. not lines.
-#: lib/extensions/convert_to_satin.py:41
-msgid "Only simple lines may be converted to satin columns."
-msgstr "Nur einfache Linien können in Satinsäulen konvertiert werden."
-
-#: lib/extensions/convert_to_satin.py:153
-msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
-msgstr "Ink/Stitch kann die Linie nicht in eine Satinsäule umwandeln. Bitte diesen Pfad in Abschnitte zerlegen und erneut versuchen."
-
-#. : Convert To Satin extension, user selected one or more objects that were
-#. not lines.
-#: lib/extensions/convert_to_stroke.py:24
-#: lib/extensions/convert_to_stroke.py:29
-msgid "Please select at least one satin column to convert to a running stitch."
-msgstr "Für die Umwandlung in einen Geradstich bitte mindestens eine Satinsäule auswählen."
-
 #: lib/extensions/cut_satin.py:20
 msgid "Please select one or more satin columns to cut."
 msgstr "Bitte wähle eine oder mehrere Satinsäulen zum Zerteilen aus."
@@ -2824,14 +2803,14 @@ msgstr "Farbverlaufsblöcke"
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
 msgstr "Ink/Stitch kann Farbformate nicht direkt importieren. Aber du kannst eine Stickdatei öffnen und die Farben darauf anwenden (Erweiterungen > Ink/Stitch > Garn Farbenverwaltung > Garnfarben-Liste anwenden)"
 
-#: lib/extensions/install.py:24
-msgid "Successfully installed color palettes for Inkscape.\n\n"
-"Please restart Inkscape."
-msgstr "Farbpaletten für Inkscape erfolgreich installiert."
+#: lib/extensions/install.py:44 lib/extensions/install.py:54
+msgid "Could not install color palettes. Please file an issue on"
+msgstr ""
 
-#: lib/extensions/install.py:27
-msgid "Could not install color palettes. Please file an issue on https://github.com/inkstitch/inkstitch/issues"
-msgstr "Konnte Farbpaletten nicht installieren. Bitte informiere das Entwicklerteam über diesen Vorfall: https://github.com/inkstitch/inkstitch/issues"
+#: lib/extensions/install.py:58
+msgid "Successfully installed Addons.\n\n"
+"Please restart Inkscape."
+msgstr ""
 
 #: lib/extensions/install_custom_palette.py:25
 #: lib/extensions/palette_to_text.py:27
@@ -3060,6 +3039,12 @@ msgstr "https://inkstitch.org/de/docs/satin-tools/#mehrfarbige-satinsäule"
 msgid "Ink/Stitch Multicolor Satin"
 msgstr "Ink/Stitch - Mehrfarbige Satinsäulen"
 
+#. : Convert To Satin extension, user selected one or more objects that were
+#. not lines.
+#: lib/extensions/satin_to_stroke.py:24 lib/extensions/satin_to_stroke.py:29
+msgid "Please select at least one satin column to convert to a running stitch."
+msgstr "Für die Umwandlung in einen Geradstich bitte mindestens eine Satinsäule auswählen."
+
 #: lib/extensions/select_elements.py:102
 msgid "Could not detect python path. Please insert python path manually as described in the help tab of the select elements dialog."
 msgstr "Der Python-Pfad konnte nicht erkannt werden. Bitte füge den Python-Pfad manuell wie im Hilfe-Reiter dieser Erweiterung beschrieben hinzu."
@@ -3124,6 +3109,20 @@ msgstr "Konnte das gewählte Muster nicht finden."
 #: lib/extensions/stroke_to_lpe_satin.py:136
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr "Eine Satinsäule kann nicht in einen Pfadeffekt-Satinstich umgewandelt werden. Bitte eine Linie auswählen."
+
+#: lib/extensions/stroke_to_satin.py:36
+msgid "Please select at least one line to convert to a satin column."
+msgstr "Bitte wähle mindestens eine Zeile aus, die in eine Satinsäule konvertiert werden soll."
+
+#. : Convert To Satin extension, user selected one or more objects that were
+#. not lines.
+#: lib/extensions/stroke_to_satin.py:41
+msgid "Only simple lines may be converted to satin columns."
+msgstr "Nur einfache Linien können in Satinsäulen konvertiert werden."
+
+#: lib/extensions/stroke_to_satin.py:153
+msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
+msgstr "Ink/Stitch kann die Linie nicht in eine Satinsäule umwandeln. Bitte diesen Pfad in Abschnitte zerlegen und erneut versuchen."
 
 #: lib/extensions/tartan.py:66
 msgid "To create a tartan pattern please select at least one element with a fill color."
@@ -3290,12 +3289,11 @@ msgstr "Anwenden"
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
 #: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:16
 #: inx/inkstitch_batch_lettering.inx:62 inx/inkstitch_break_apart.inx:14
-#: inx/inkstitch_cleanup.inx:22 inx/inkstitch_convert_to_stroke.inx:12
-#: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
-#: inx/inkstitch_display_stacking_order.inx:11
+#: inx/inkstitch_cleanup.inx:22 inx/inkstitch_cutwork_segmentation.inx:44
+#: inx/inkstitch_density_map.inx:26 inx/inkstitch_display_stacking_order.inx:11
 #: inx/inkstitch_fill_to_satin.inx:24 inx/inkstitch_fill_to_stroke.inx:24
 #: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
-#: inx/inkstitch_install_custom_palette.inx:14
+#: inx/inkstitch_install.inx:14 inx/inkstitch_install_custom_palette.inx:14
 #: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:27
 #: inx/inkstitch_knockdown_fill.inx:27
 #: inx/inkstitch_lettering_along_path.inx:25
@@ -3309,7 +3307,7 @@ msgstr "Anwenden"
 #: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:28
 #: inx/inkstitch_remove_duplicated_points.inx:14
 #: inx/inkstitch_remove_embroidery_settings.inx:140
-#: inx/inkstitch_select_elements.inx:80
+#: inx/inkstitch_satin_to_stroke.inx:12 inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stitch_plan_preview.inx:37
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_unlink_clone.inx:10 inx/inkstitch_zigzag_line_to_satin.inx:18
@@ -4179,9 +4177,9 @@ msgstr "Testmuster erstellen"
 #: lib/gui/test_swatches.py:33 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_batch_lettering.inx:9
 #: inx/inkstitch_break_apart.inx:8 inx/inkstitch_cleanup.inx:8
-#: inx/inkstitch_convert_to_stroke.inx:8 inx/inkstitch_density_map.inx:8
-#: inx/inkstitch_display_stacking_order.inx:8 inx/inkstitch_fill_to_satin.inx:8
-#: inx/inkstitch_fill_to_stroke.inx:16 inx/inkstitch_gradient_blocks.inx:17
+#: inx/inkstitch_density_map.inx:8 inx/inkstitch_display_stacking_order.inx:8
+#: inx/inkstitch_fill_to_satin.inx:8 inx/inkstitch_fill_to_stroke.inx:16
+#: inx/inkstitch_gradient_blocks.inx:17 inx/inkstitch_install.inx:8
 #: inx/inkstitch_install_custom_palette.inx:8
 #: inx/inkstitch_jump_to_stroke.inx:17 inx/inkstitch_jump_to_trim.inx:17
 #: inx/inkstitch_knockdown_fill.inx:17
@@ -4194,7 +4192,7 @@ msgstr "Testmuster erstellen"
 #: inx/inkstitch_palette_to_text.inx:17 inx/inkstitch_redwork.inx:8
 #: inx/inkstitch_remove_duplicated_points.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:8
-#: inx/inkstitch_stitch_plan_preview.inx:8
+#: inx/inkstitch_satin_to_stroke.inx:8 inx/inkstitch_stitch_plan_preview.inx:8
 #: inx/inkstitch_stroke_to_lpe_satin.inx:7 inx/inkstitch_troubleshoot.inx:8
 #: inx/inkstitch_unlink_clone.inx:6 inx/inkstitch_zigzag_line_to_satin.inx:7
 msgid "Options"
@@ -5157,7 +5155,7 @@ msgid "Matches colors of all elements in the document to a specified palette"
 msgstr "Passt die Farben aller Elemente im Dokument an die ausgewählte Garnpalette an"
 
 #: inx/inkstitch_apply_palette.inx:12 inx/inkstitch_apply_threadlist.inx:110
-#: inx/inkstitch_generate_palette.inx:12 inx/inkstitch_install.inx:12
+#: inx/inkstitch_generate_palette.inx:12
 #: inx/inkstitch_install_custom_palette.inx:28
 #: inx/inkstitch_palette_split_text.inx:11 inx/inkstitch_palette_to_text.inx:11
 msgid "Thread Color Management"
@@ -5229,9 +5227,9 @@ msgstr "Automatisch geführter Geradstich"
 msgid "Generates a continuous path through all selected elements"
 msgstr "Erzeugt einen durchgehenden Pfad durch alle ausgewählten Elemente"
 
-#: inx/inkstitch_auto_run.inx:12 inx/inkstitch_convert_to_stroke.inx:25
-#: inx/inkstitch_fill_to_stroke.inx:11 inx/inkstitch_jump_to_stroke.inx:12
-#: inx/inkstitch_outline.inx:39 inx/inkstitch_redwork.inx:42
+#: inx/inkstitch_auto_run.inx:12 inx/inkstitch_fill_to_stroke.inx:11
+#: inx/inkstitch_jump_to_stroke.inx:12 inx/inkstitch_outline.inx:39
+#: inx/inkstitch_redwork.inx:42 inx/inkstitch_satin_to_stroke.inx:25
 msgid "Tools: Stroke"
 msgstr "Werkzeuge: Linie"
 
@@ -5293,9 +5291,8 @@ msgstr "Diese Erweiterung versucht, alle gewählten Satinsäulen ohne dazwischen
 
 #: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_batch_lettering.inx:67
 #: inx/inkstitch_break_apart.inx:20 inx/inkstitch_cleanup.inx:25
-#: inx/inkstitch_convert_to_stroke.inx:15 inx/inkstitch_density_map.inx:29
-#: inx/inkstitch_display_stacking_order.inx:14
-#: inx/inkstitch_fill_to_satin.inx:27
+#: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
+#: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
 #: inx/inkstitch_install_custom_palette.inx:17
 #: inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_lettering_along_path.inx:37
@@ -5306,6 +5303,7 @@ msgstr "Diese Erweiterung versucht, alle gewählten Satinsäulen ohne dazwischen
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
 #: inx/inkstitch_letters_to_font.inx:69 inx/inkstitch_outline.inx:28
 #: inx/inkstitch_redwork.inx:31 inx/inkstitch_remove_duplicated_points.inx:24
+#: inx/inkstitch_satin_to_stroke.inx:15
 #: inx/inkstitch_stitch_plan_preview.inx:45 inx/inkstitch_troubleshoot.inx:15
 #: inx/inkstitch_unlink_clone.inx:13
 msgid "More information on our website"
@@ -5319,10 +5317,11 @@ msgstr "https://inkstitch.org/de/docs/satin-tools/#automatisch-geführte-satins�
 msgid "Generates a continuous path through selected satin elements"
 msgstr "Erzeugt einen durchgehenden Pfad durch die ausgewählten Satinsäulen"
 
-#: inx/inkstitch_auto_satin.inx:30 inx/inkstitch_convert_to_satin.inx:11
-#: inx/inkstitch_cut_satin.inx:12 inx/inkstitch_fill_to_satin.inx:38
-#: inx/inkstitch_flip.inx:11 inx/inkstitch_satin_multicolor.inx:12
+#: inx/inkstitch_auto_satin.inx:30 inx/inkstitch_cut_satin.inx:12
+#: inx/inkstitch_fill_to_satin.inx:38 inx/inkstitch_flip.inx:11
+#: inx/inkstitch_satin_multicolor.inx:12
 #: inx/inkstitch_stroke_to_lpe_satin.inx:41
+#: inx/inkstitch_stroke_to_satin.inx:11
 #: inx/inkstitch_zigzag_line_to_satin.inx:37
 msgid "Tools: Satin"
 msgstr "Werkzeuge: Satin"
@@ -5500,30 +5499,6 @@ msgstr "Befehle"
 #: inx/inkstitch_object_commands_toggle_visibility.inx:12
 msgid "View"
 msgstr "Ansicht"
-
-#: inx/inkstitch_convert_to_satin.inx:3
-msgid "Convert Line to Satin"
-msgstr "Linie zu Satinsäule"
-
-#: inx/inkstitch_convert_to_stroke.inx:3
-msgid "Convert Satin to Stroke"
-msgstr "Satin zu Geradstich"
-
-#: inx/inkstitch_convert_to_stroke.inx:10
-msgid "Keep satin column"
-msgstr "Satinsäulen erhalten"
-
-#: inx/inkstitch_convert_to_stroke.inx:10
-msgid "Do not delete original satin column."
-msgstr "Originale Satinsäulen nicht löschen."
-
-#: inx/inkstitch_convert_to_stroke.inx:13
-msgid "Converts a satin column into a running stitch."
-msgstr "Konvertiert eine Satinsäule in einen Laufstich."
-
-#: inx/inkstitch_convert_to_stroke.inx:16
-msgid "https://inkstitch.org/docs/stroke-tools/#convert-satin-to-stroke"
-msgstr "https://inkstitch.org/de/docs/stroke-tools/#satin-zu-geradstich"
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
@@ -6438,12 +6413,40 @@ msgid "convert ZXY file to Ink/Stitch manual-stitch paths"
 msgstr "ZXY Datei mit Ink/Stitch in manuelle Stickpfade konvertieren"
 
 #: inx/inkstitch_install.inx:3
-msgid "Install thread color palettes for Inkscape"
-msgstr "Garnfarbpaletten für Inkscape installieren"
+msgid "Install Addons for Inkscape"
+msgstr ""
 
-#: inx/inkstitch_install.inx:9
-msgid "Installs color palettes for various thread brands into Inkscape"
-msgstr "Installiert Farbpaletten verschiedener Garnhersteller in Inkscape"
+#: inx/inkstitch_install.inx:10
+msgid "Install thread color palettes"
+msgstr ""
+
+#: inx/inkstitch_install.inx:10
+msgid "Installs some default thread color palettes."
+msgstr ""
+
+#: inx/inkstitch_install.inx:12
+msgid "Install symbol libraries"
+msgstr ""
+
+#: inx/inkstitch_install.inx:12
+msgid "Installs symbol libraries with reusable motifs for embroidery"
+msgstr ""
+
+#: inx/inkstitch_install.inx:15
+msgid "Installs color palettes or a motif stitch symbol library into Inkscape."
+msgstr ""
+
+#: inx/inkstitch_install.inx:16
+msgid "Please restart Inkscape after the installation is complete."
+msgstr ""
+
+#: inx/inkstitch_install.inx:19
+msgid "https://inkstitch.org/docs/install-addons"
+msgstr ""
+
+#: inx/inkstitch_install.inx:26
+msgid "Installs color palettes or a symbol library for motif stitches into Inkscape"
+msgstr ""
 
 #: inx/inkstitch_install_custom_palette.inx:3
 msgid "Install custom palette"
@@ -7543,6 +7546,26 @@ msgstr "Mehrfarbige Satinsäule"
 msgid "Generates a multicolor satin"
 msgstr "Erzeugt eine mehrfarbige Satinsäule"
 
+#: inx/inkstitch_satin_to_stroke.inx:3
+msgid "Satin to Stroke"
+msgstr ""
+
+#: inx/inkstitch_satin_to_stroke.inx:10
+msgid "Keep satin column"
+msgstr "Satinsäulen erhalten"
+
+#: inx/inkstitch_satin_to_stroke.inx:10
+msgid "Do not delete original satin column."
+msgstr "Originale Satinsäulen nicht löschen."
+
+#: inx/inkstitch_satin_to_stroke.inx:13
+msgid "Converts a satin column into a running stitch."
+msgstr "Konvertiert eine Satinsäule in einen Laufstich."
+
+#: inx/inkstitch_satin_to_stroke.inx:16
+msgid "https://inkstitch.org/docs/stroke-tools/#convert-satin-to-stroke"
+msgstr "https://inkstitch.org/de/docs/stroke-tools/#satin-zu-geradstich"
+
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
 msgstr "Stickobjekte auswählen"
@@ -7869,6 +7892,10 @@ msgstr "* Sollen manuelle Änderungen, wie bspw. das Hinzufügen von Richtungsve
 #: inx/inkstitch_stroke_to_lpe_satin.inx:33
 msgid "https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin"
 msgstr "https://inkstitch.org/de/docs/satin-tools/#linie-zu-pfadeffekt-satin"
+
+#: inx/inkstitch_stroke_to_satin.inx:3
+msgid "Stroke to Satin"
+msgstr ""
 
 #: inx/inkstitch_tartan.inx:9
 msgid "Tartan stripe editor"
