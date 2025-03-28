@@ -33,6 +33,7 @@ class ViewPanel(ScrolledPanel):
         self.stop_button_status = global_settings['stop_button_status']
         self.color_change_button_status = global_settings['color_change_button_status']
         self.toggle_page_button_status = global_settings['toggle_page_button_status']
+        self.display_crosshair_status = global_settings['display_crosshair']
 
         self.btnNpp = wx.BitmapToggleButton(self, -1, style=self.button_style)
         self.btnNpp.SetBitmap(self.control_panel.load_icon('npp'))
@@ -76,6 +77,12 @@ class ViewPanel(ScrolledPanel):
         self.btnBackgroundColor = wx.ColourPickerCtrl(self, -1, colour='white', size=((40, -1)))
         self.btnBackgroundColor.SetToolTip(_("Change background color"))
         self.btnBackgroundColor.Bind(wx.EVT_COLOURPICKER_CHANGED, self.on_update_background_color)
+
+        self.btnCursor = wx.BitmapToggleButton(self, -1, style=self.button_style)
+        self.btnCursor.SetToolTip(_('Show crosshair'))
+        self.btnCursor.SetBitmap(self.control_panel.load_icon('cursor'))
+        self.btnCursor.SetValue(self.display_crosshair_status)
+        self.btnCursor.Bind(wx.EVT_TOGGLEBUTTON, self.on_cursor_button)
 
         if not self.detach_callback:
             self.btnPage = wx.BitmapToggleButton(self, -1, style=self.button_style)
@@ -122,6 +129,7 @@ class ViewPanel(ScrolledPanel):
         settings_sizer = wx.StaticBoxSizer(wx.StaticBox(self, wx.ID_ANY, _("Settings")), wx.VERTICAL)
         settings_inner_sizer = wx.BoxSizer(wx.VERTICAL)
         settings_inner_sizer.Add(self.btnBackgroundColor, 0, wx.EXPAND | wx.ALL, 2)
+        settings_inner_sizer.Add(self.btnCursor, 0, wx.EXPAND | wx.ALL, 2)
         if not self.detach_callback:
             settings_inner_sizer.Add(self.btnPage, 0, wx.EXPAND | wx.ALL, 2)
         settings_inner_sizer.Add(self.btnSettings, 0, wx.EXPAND | wx.ALL, 2)
@@ -151,6 +159,10 @@ class ViewPanel(ScrolledPanel):
     def toggle_npp(self, event):
         self.drawing_panel.Refresh()
         global_settings['npp_button_status'] = self.btnNpp.GetValue()
+
+    def on_cursor_button(self, event):
+        self.drawing_panel.Refresh()
+        global_settings['display_crosshair'] = self.btnCursor.GetValue()
 
     def toggle_page(self, event):
         debug.log("toggle page")

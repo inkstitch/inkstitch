@@ -200,7 +200,7 @@ class DrawingPanel(wx.Panel):
                     last_stitch = stitches[-1]
                 break
 
-        if last_stitch:
+        if last_stitch and self.view_panel.btnCursor.GetValue():
             self.draw_crosshair(last_stitch[0], last_stitch[1], canvas, transform)
 
         canvas.EndLayer()
