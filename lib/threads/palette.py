@@ -39,7 +39,12 @@ class ThreadPalette(Set):
         """
 
         with open(palette_file, encoding='utf8') as palette:
-            line = palette.readline().strip()
+            try:
+                line = palette.readline().strip()
+            except UnicodeDecodeError:
+                # File has wrong encoding. Can't read this file
+                self.is_gimp_palette = False
+                return
 
             self.is_gimp_palette = True
             if line.lower() != "gimp palette":
