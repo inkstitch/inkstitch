@@ -47,6 +47,8 @@ Vous pouvez enregistrer et rouvrir vos paramètres de police préférés.
 
 Les lettres d'ink/stitch ont été soigneusement dessinées pour une broderie optimale. Si vous essayez de les modifier avec les outils usuels d'inkscape, il se peut que cela ne fonctionne pas comme vous le souhaitez. Placez les lettres le long  d'un chemin est un gros travail. Cet outil va vous aider à le faire.
 
+![A text aligned along a path while using the various options](/assets/images/docs/text_along_path_alignment.png)
+
 ### Usage
 
 * Sélectionnez un chemin et un groupe de lettrage 

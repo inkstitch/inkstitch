@@ -48,6 +48,8 @@ You can save and load your favourite font settings.
 
 Ink/Stitch letters are carefully designed. If you try to transform them with common tools, they may not work as expected. This means placing letters along a path will be a lot of work. Therefore we've created a tool to assist you with that.
 
+![A text aligned along a path while using the various options](/assets/images/docs/text_along_path_alignment.png)
+
 ### Usage
 
 * Select a path and a lettering group

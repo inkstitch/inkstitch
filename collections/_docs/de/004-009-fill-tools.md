@@ -44,6 +44,8 @@ Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrer
 
 Hilfsmethode zum Erzeugen eines Füllbereichs unterhalb aller ausgewählten Elemente, optional mit einem Versatz. Dies kann bei der Arbeit mit hochflorigen Stoffen sehr nützlich sein.
 
+![Eine Figure mit einem sie umgebenden Knockdown-Stich](/assets/images/docs/knockdown.png)
+
 * Elemente auswählen
 * `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Auswahl zu Knockdown-Stich`
 * Einstellungen anpassen
@@ -60,6 +62,8 @@ Hilfsmethode zum Erzeugen eines Füllbereichs unterhalb aller ausgewählten Elem
 ## Tartan
 
 Der Farbeditor ist unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Tartan` zu finden.
+
+![Ein Seepferdchen mit einem Tartan-Muster](/assets/images/docs/de/tartan_stripe_editor.png)
 
 ### Muster anpassen
 

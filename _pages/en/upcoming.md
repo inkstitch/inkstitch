@@ -105,6 +105,8 @@ Converts a fill to a satin. Manual setting of rungs is required.
 
 Installs color palettes or a symbol library for motif stitches into Inkscape. Please restart Inkscape after the installation.
 
+![Motif stitches](/assets/images/upcoming/3.2.0/motif-stitches.png)
+
 Replaces `Install thread color palettes for Inkscape`.
 
 [Read more](/docs/install-addons/)
@@ -130,6 +132,8 @@ Helps (for example) to remove bean stitches from stitch plans and turn them into
 `Tools: Fill > Selection to Knockdown Fill` [#3526](https://github.com/inkstitch/inkstitch/pull/3526)
 
 Helper method to generate a fill area underneath of all selected elements, optionally with an offset. This can be very useful when working with high pile fabric.
+
+![A figure with a surrounding knockdown stitch](/assets/images/docs/knockdown.png)
 
 [Read more](/docs/fill-tools/#knockdown-fill)
 
@@ -163,6 +167,8 @@ A tool for font authors which sets a specified color sort index on selected elem
 * add option to keep original path elements [#3332](https://github.com/inkstitch/inkstitch/pull/3332)
 * transfer object based min jump length (if present) from satins on auto-generated strokes [#3154](https://github.com/inkstitch/inkstitch/pull/3154)
 
+[Read more](/docs/satin-tools/#auto-route-satin-columns)
+
 ### Attach commands to selected objects
 
 * We had a lot of complaints that positioning command symbol is rather difficult.
@@ -170,9 +176,13 @@ A tool for font authors which sets a specified color sort index on selected elem
   This means, when you position a start symbol, the starting point of the element will be directly at the symbols center (will automatically update older files)
 * Unified start and stop commands for various stitch types (will automatically update older files)
 
+[Read more](/docs/commands/)
+
 ### Convert to gradient blocks
 
 * Insert color blocks into a group and skip small elements [#3584](https://github.com/inkstitch/inkstitch/pull/3584)
+
+[Read more](/docs/fill-tools/#convert-to-gradient-blocks)
 
 ### Scale Command Symbols
 
@@ -180,11 +190,15 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 * Set all commands to unique size at once (reset previous transform) [#3329](https://github.com/inkstitch/inkstitch/pull/3329)
 
+[Read more](/docs/commands/#scale-command-symbols)
+
 ### Font sampling
 
 `Font Management > Font Sampling`
 
 * Add color sort option [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
+
+[Read more](/docs/font-tools/#font-sampling)
 
 ### Force lock stitches
 
@@ -192,6 +206,8 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 * Add option to disable lock stitch insertion by distance
   (for example to add lock stitches only after the last element of the glyph) [#3559](https://github.com/inkstitch/inkstitch/pull/3559)
+
+[Read more](/docs/font-tools/#force-lock-stitches)
 
 ### Lettering
 
@@ -206,24 +222,36 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ![Lettering: more options](/assets/images/upcoming/3.2.0/lettering.png)
 
+[Read more](/docs/lettering/)
+
 ### Lettering Along Path
 
 `Lettering > Lettering Along Path`
 
 Add option for text position along the path (left, center, right, stretch)
 
+![A text aligned along a path while using the various options](/assets/images/docs/text_along_path_alignment.png)
+
+[Read more](/docs/lettering/#lettering-along-path)
+
 ### Multicolor Satin
 
 * Option to adjust underlay [#3152](https://github.com/inkstitch/inkstitch/pull/3152)
+
+[Read more](/docs/satin-tools/#multicolor-satin)
 
 ### Redwork
 
 * Add combine option [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
 * Add keep originals option [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
 
+[Read more](/docs/stroke-tools/#redwork)
+
 ### Select elements
 
 * Fix select redwork top layer [#3230](https://github.com/inkstitch/inkstitch/pull/3230)
+
+[Read more](/docs/edit/#select-embroidery-elements)
 
 ### Simulator
 
@@ -232,18 +260,26 @@ Add option for text position along the path (left, center, right, stretch)
 * Save and reload more simulator settings (status for buttons: jump, trim, color change, stop, needle penetration point, page border) [#3323](https://github.com/inkstitch/inkstitch/pull/3323)
 * Show page in simulator [#3120](https://github.com/inkstitch/inkstitch/pull/3120)
 
+[Read more](/docs/visualize/#simulator)
+
 ### Stitch plan preview
 
 * Update realistic filter [#3222](https://github.com/inkstitch/inkstitch/pull/3222)
+
+[Read more](/docs/visualize/#stitch-plan-preview)
 
 ### Stroke to LPE-Satin
 
 * Take transforms into account (for path specific lpe satins only) [#3500](https://github.com/inkstitch/inkstitch/pull/3500)
 
+[Read more](/docs/satin-tools/#stroke-to-live-path-effect-satin)
+
 ### Troubleshoot
 
 * Group pointers, so specific error/warning types can be easily toggled on and off [#3486](https://github.com/inkstitch/inkstitch/pull/3486)
 * Add background to troubleshoot text [#3357](https://github.com/inkstitch/inkstitch/pull/3357)
+
+[Read more](/docs/troubleshoot/#troubleshoot-objects)
 
 ## Removed extensions
 
@@ -254,8 +290,9 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ## Stitch type Updates
 
-* Automated end point calculation for fill and satin (ends at nearest point) [#3370](https://github.com/inkstitch/inkstitch/pull/3370)
-* Improve handling of symbols [#3440](https://github.com/inkstitch/inkstitch/pull/3440)
+* Automated start and end point calculation for fill and satin (starts/ends at nearest point) [#3370](https://github.com/inkstitch/inkstitch/pull/3370)
+
+  ![Two satins joining at one point, rendered without a jump stitch](/assets/images/upcoming/3.2.0/start_at_nearest_point.png)
 * Make effect clips available for embroidery (couldn't be used before) [#3364](https://github.com/inkstitch/inkstitch/pull/3364)
 
 ### Clones
@@ -345,6 +382,7 @@ Ink/Stitch can now export multiple files with text at once. A path with a specif
 * stroke: as_multi_line_string ignore single point paths [#3491](https://github.com/inkstitch/inkstitch/pull/3491)
 * Adapt simulator slider symbols to dark theme [#3475](https://github.com/inkstitch/inkstitch/pull/3475)
 * Auto-run: try harder to avoid networkx issues [#3457](https://github.com/inkstitch/inkstitch/pull/3457)
+* Improve handling of symbols [#3440](https://github.com/inkstitch/inkstitch/pull/3440)
 * Lettering: ignore auto-satin setting in the json file when there is no satin [#3434](https://github.com/inkstitch/inkstitch/pull/3434)
 * Fix issue in preferences when value is 0.0 [#3430](https://github.com/inkstitch/inkstitch/pull/3430)
 * Exclude invisible from node_to_elements directly [#3424](https://github.com/inkstitch/inkstitch/pull/3424)

@@ -53,6 +53,8 @@ Convert to gradient blocks will split a fill with a linear gradient into multipl
 
 Helper method to generate a fill area underneath of all selected elements, optionally with an offset. This can be very useful when working with high pile fabric.
 
+![A figure with a surrounding knockdown stitch](/assets/images/docs/knockdown.png)
+
 * Select elements
 * Open `Extensions > Ink/Stitch > Tools: Fill > Selection to Knockdown Fill`
 * Adapt settings
@@ -69,6 +71,8 @@ Helper method to generate a fill area underneath of all selected elements, optio
 ## Tartan
 
 The Stripe Editor can be found in `Extensions > Ink/Stitch > Tools: Fill > Tartan`
+
+![A seahorse rendered with tartan fill](/assets/images/docs/en/tartan_stripe_editor.png)
 
 ### Customize
 

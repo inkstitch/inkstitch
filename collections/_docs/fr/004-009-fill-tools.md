@@ -58,8 +58,10 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 ## Knockdown Fill {#knockdown-fill}
 
 {% include upcoming_release.html %}
+
 Permet de générer un remplissage  sous tous les éléments sélectionnés, optionellement avec un décalage. Cela peut s'avérer très utile lorsque vous travaillez avec des tissus à poils longs comme de l'éponge.
 
+![A figure with a surrounding knockdown stitch](/assets/images/docs/knockdown.png)
 
 * Sélectionner des éléments
 * Ouvrir  `Extensions > Ink/Stitch > Outils : Remplissage > Sélection vers remplissage en points couchés` 
@@ -77,6 +79,8 @@ Permet de générer un remplissage  sous tous les éléments sélectionnés, opt
 ## Tartan
 
 L'éditeur de bandes du tartan se trouve dans   `Extensions > Ink/Stitch > Outils: remplissage > Tartan`
+
+![A seahorse rendered with tartan fill](/assets/images/docs/fr/tartan_stripe_editor.png)
 
 ### Personnaliser
 
