@@ -5,6 +5,7 @@
 
 import json
 import os
+import string
 import sys
 import tempfile
 from copy import deepcopy
@@ -133,10 +134,10 @@ class BatchLettering(InkstitchExtension):
 
         path = tempfile.mkdtemp()
         files = []
-        for text in texts:
+        for i, text in enumerate(texts):
             stitch_plan, lettering_group = self.generate_stitch_plan(text, text_positioning_path)
             for file_format in file_formats:
-                files.append(self.generate_output_file(file_format, path, text, stitch_plan))
+                files.append(self.generate_output_file(file_format, path, text, stitch_plan, i))
 
             self.reset_document(lettering_group, text_positioning_path)
 
@@ -167,9 +168,13 @@ class BatchLettering(InkstitchExtension):
             parent.insert(index, text_positioning_path)
         lettering_group.delete()
 
-    def generate_output_file(self, file_format, path, text, stitch_plan):
-        text = text.replace('\n', '')
-        output_file = os.path.join(path, f"{text}.{file_format}")
+    def generate_output_file(self, file_format, path, text, stitch_plan, iteration):
+        allowed_characters = string.ascii_letters + string.digits
+        filtered_text = ''.join(x for x in text if x in allowed_characters)
+        if filtered_text:
+            filtered_text = f'-{filtered_text}'
+        file_name = f'{iteration:03d}{filtered_text:.8}'
+        output_file = os.path.join(path, f"{file_name}.{file_format}")
 
         if file_format == 'svg':
             document = deepcopy(self.document.getroot())
