@@ -307,8 +307,7 @@ class DrawingPanel(wx.Panel):
 
     def set_background_color(self, color):
         self.background_color = color
-        # this refresh is necessary for macOS
-        self.Refresh()
+        self._update_background_color()
 
     def _update_background_color(self):
         if not self.page_specs:

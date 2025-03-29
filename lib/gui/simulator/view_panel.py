@@ -146,8 +146,10 @@ class ViewPanel(ScrolledPanel):
         self.drawing_panel = drawing_panel
 
     def on_update_background_color(self, event):
-        self.set_background_color(event.Colour)
-        self.drawing_panel.set_background_color(event.Colour)
+        color = event.Colour
+        self.set_background_color(color)
+        self.drawing_panel.set_background_color(color)
+        self.drawing_panel.Refresh()
 
     def set_background_color(self, color):
         self.btnBackgroundColor.SetColour(color)
