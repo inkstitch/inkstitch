@@ -114,6 +114,8 @@ docs:
       url: /de/docs/font-tools/
     - title: Text-Modul
       url: /de/docs/lettering/
+    - title: "Addons für Inkscape installieren"
+      url: /de/docs/install-addons
     - title: Parameter
       url: /de/docs/params/
     - title: "Einstellungen"

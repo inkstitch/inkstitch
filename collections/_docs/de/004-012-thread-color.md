@@ -1,7 +1,7 @@
 ---
 title: "Garnfarben-Verwaltung"
 permalink: /de/docs/thread-color/
-last_modified_at: 2025-03-29
+last_modified_at: 2024-07-13
 toc: true
 ---
 Inkscape unterstützt den Gebrauch von Farbpaletten. Farbpaletten helfen Ink/Stitch Farbnamen zu definieren und zusätzliche Informationen wie den Namen des Garnherstellers und die Katalognummer in die Stickdatei abzuspeichern.

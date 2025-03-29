@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-03-23
+last_modified_at: 2025-03-29
 sidebar:
   nav: pages
 toc: true
@@ -98,6 +98,22 @@ Converts a fill to a satin. Manual setting of rungs is required.
 ![Fill to satin](/assets/images/docs/fill_to_satin_bridge.png)
 
 [Read more](/docs/satin-tools/#fill-to-satin)
+
+### Install Addons for Inkscape
+
+`Install Addons for Inkscape` [#3606](https://github.com/inkstitch/inkstitch/pull/3606)
+
+Installs color palettes or a symbol library for motif stitches into Inkscape. Please restart Inkscape after the installation.
+
+Replaces `Install thread color palettes for Inkscape`.
+
+[Read more](/docs/install-addons/)
+
+### Install Thread Color Palettes for Inkscape
+
+Has been moved to `Install Addons for Inkscape`
+
+[Read more](/docs/install-addons/)
 
 ### Remove duplicated points
 
@@ -211,6 +227,7 @@ Add option for text position along the path (left, center, right, stretch)
 
 ### Simulator
 
+* simulator: add button to toggle crosshair [#3616](https://github.com/inkstitch/inkstitch/pull/3616)
 * Option to save and reload simulator speed (optionally) [#3420](https://github.com/inkstitch/inkstitch/pull/3420)
 * Save and reload more simulator settings (status for buttons: jump, trim, color change, stop, needle penetration point, page border) [#3323](https://github.com/inkstitch/inkstitch/pull/3323)
 * Show page in simulator [#3120](https://github.com/inkstitch/inkstitch/pull/3120)

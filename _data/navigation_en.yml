@@ -116,6 +116,8 @@ docs:
       url: /docs/font-tools/
     - title: "Lettering"
       url: /docs/lettering/
+    - title: "Install Addons"
+      url: /docs/install-addons
     - title: "Params"
       url: /docs/params/
     - title: "Preferences"

@@ -1,7 +1,7 @@
 ---
 title: "Thread Color Management"
 permalink: /docs/thread-color/
-last_modified_at: 2024-07-13
+last_modified_at: 2025-03-29
 toc: true
 ---
 Inkscape supports the usage of color palettes. Color palettes help Ink/Stitch to define color names and save additional information such as thread manufacturer name and the thread catalog number into the exported embroidery file.
@@ -16,15 +16,13 @@ Before you can use thread color features you need to install color palettes. You
 
 ### Install Thread Color Palettes for Inkscape
 
-Ink/Stitch comes with a lot of thread manufacturer color palettes which can be installed into Inkscape. This allows to build the designs with the correct colors in mind.
-Colors will appear in the PDF-Output and will also be included into your embroidery file, if your file format supports it. 
+Ink/Stitch comes with many thread manufacturer color palettes which can be installed into Inkscape. This allows to build the designs with the correct colors in mind.
+Colors will appear in the PDF-Output and will also be included into your embroidery file, if your file format supports color representations. 
 
-* Go to `Extensions > Ink/Stitch  > Thread Color Management > Install thread color palettes for Inkscape`
-* Click `Install`
+* Go to `Extensions > Ink/Stitch > Install Addons for Inkscape`
+* Enable the option `Install thread color palettes`
+* Click `Apply`
 * Restart Inkscape
-
-**Info**: Just click install if you are not sure where to install the palettes. Ink/Stitch usually discoveres the correct path for your system by itself.
-{: .notice--info }
 
 ### Install Custom Palette
 
