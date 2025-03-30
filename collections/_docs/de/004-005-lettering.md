@@ -1,7 +1,7 @@
 ---
 title: "Text"
 permalink: /de/docs/lettering/
-last_modified_at: 2025-02-09
+last_modified_at: 2025-03-30
 toc: true
 ---
 ## Text-Werkzeug
@@ -12,7 +12,7 @@ Das Text-Modul erzeugt mehrzeiligen Text. Wähle aus einer großen Vielfalt vord
 
 ## Anwendung
 
-* Öffne `Erweiterungen > Ink/Stitch > Text`.
+* Öffne `Erweiterungen > Ink/Stitch > Text > Text`.
 * Gib deinen Text ein (mehrzeilig möglich).
 * Lege die Schriftart und die Skalierung fest.
 * **⚠ Warnung**: Beachte die angegebenen Limitierungen auch bei späteren manuellen Skalierungen.
@@ -35,12 +35,34 @@ Das Text-Modul erzeugt mehrzeiligen Text. Wähle aus einer großen Vielfalt vord
 
 ### Optionen
 
-* **Sticke Textzeilen vor und zurück**<br>
-  Wenn diese Option aktiviert ist, wird die erste Zeile von links nach rechts gestickt und die zweite von rechts nach links usw.
-  Dadurch muss die Stickmaschine weniger hin und herspringen, und die Laufzeit der Datei verkürzt sich.
+* **Maßstab**
 
-* **Schnittmarker hinzufügen**<br>
+  Definiert die Größe des Textes im Vergleich zur Originalschrift (%).
+  Es wird empfohlen Text mit dieser Option zu skalieren und nicht auf der Leinwandfläche in Inkscape.
+  Auf diese Weise kannst du sicher stellen, dass die Textgröße auf die Parameter abgestimmt ist, mit denen die Schrift digitalisiert wurde.
+
+* **Farbsortierung**
+
+  {% include upcoming_release.html %}
+  Sortiert Farben von mehrfarbigen Schriften und vermeidet so eine größere Anzahl an Farbwechseln.
+
+* **Sticke Textzeilen vor und zurück**
+
+  Wenn diese Option aktiviert ist, wird die erste Zeile von links nach rechts gestickt und die zweite von rechts nach links usw.
+  Dadurch muss die Stickmaschine weniger hin und herspringen und die Sprungstiche werden verkürzt.
+
+* **Text ausrichten**
+
+  {% include upcoming_release.html %}
+  Ausrichtung von mehrzeiligem Text: Links, Mitte, Rechts, Block (Standard), Block (Buchstabenabstand)
+
+* **Schnittmarker hinzufügen**
+
    Wenn diese Option aktiviert ist, fügt Ink/Stitch für jeden Buchstaben Schnittbefehle hinzu.
+
+* **Use command symbols**
+
+  When adding trims, use command symbols. Uses the trim param setting otherwise.
 
 ### Voreinstellungen
 
@@ -55,7 +77,7 @@ Ink/Stitch Schriften sind liebevoll designed. Wenn sie mit Inkscape Tools verfor
 ### Anwendung
 
 * Wähle eine Pfad und eine Ink/Stitch-Text-Gruppierung
-* Öffne `Erweiterungen > Ink/Stitch > Schrift entlang Pfad ...`
+* Öffne `Erweiterungen > Ink/Stitch > Text > Schrift entlang Pfad ...`
 * Ist `Strecken` aktiviert, wird Ink/Stitch die Buchstaben-Zwischenräume der Pfadlänge anpassen, so dass sich der Schriftzug über den gesamten Pfad erstreckt.
   Ist diese Option deaktiviert, bleiben die Buchstaben-Abstände unverändert.
 * Klicke auf `Anwenden`
@@ -79,6 +101,56 @@ Hier eine kurze Anleitung wie die Farben mehrfarbiger Ink/Stitch-Schriften schne
 * Verschiebe diese Gruppe nach oben
 
 Wiederhole diesen Prozess bis alle Farben gruppiert sind, wobei immer der zuerst zu stickende Pfad eines Buchstaben auszuwählen ist.
+
+## Batch Lettering
+
+{% include upcoming_release.html %}
+
+Mit `Batch Lettering` können mehrere Textdateien gleichzeitig erstellt werden.
+
+![A patch with four different names](/assets/images/docs/batch-lettering.png)
+
+* Bereite die Design-Datei vor.
+  Wenn die Datei einen Pfad mit dem label `batch lettering` enthält, wird dieser Pfad genutzt, um die Position des Textes festzulegen.
+  Dies funktioniert genauso, wie [Schrift entlang Pfad](/de/docs/lettering/#schrift-entlang-pfad)
+* Unter `Datei > Kopie speichern ...` wähle den kleinen Pfeil im Dateiformat-Auswahlfeld, um eine Liste der verfügbaren Dateiformate zu öffnen.
+* Wähle das Format `Ink/Stitch: batch lettering (.zip)`
+* Wähle den Speicherort und klicke auf `Speichern`
+
+### Optionen
+
+* **Text:** Gib einen Text ein. Standardmäßig wird pro Textzeile eine Datei erstellt.
+* **Benutzerdefiniertes Trennzeichen:** Standardmäßig wird der Text bei Zeilenumbrüchen getrennt. Für mehrzeilige Texte muss ein benutzerdefiniertes Trennzeichen definiert werden.
+* **Schriftname:** Der Name der Schrift, die verwendet werden soll. Eine Liste aller in Ink/Stitch verfügbaren Schriftarten gibt es in der [Schriftbibliothek](/de/fonts/font-library/)
+* **Skalierung (%):** Gibt an, wie die Schrift skaliert werden soll. Der Wert wird auf die für die jewielige Schrift zugelassenen Werte beschränkt.
+* **Farbsortierung:** Legt fest, ob mehrfarbige Schriften nach Farbe sortiert werden sollen
+* **Fadenschnittbefehle hinzufügen:** Legt fest, ob Fadenschnittbefehle verwendet werden sollen (nie, nach jeder Linie, jedem Word oder Buchstaben)
+* **Symbole verwenden:** Legt fest, ob die Fadenschnittbefehle als Parameter oder Symbol angelegt werden (nur bei Ausgabe als SVG relevant)
+* **Mehrzeiligen Text ausrichten:** Definiert wie mehrzeiliger Text ausgerichtet werden soll
+* **Schrift entlang Pfad: Textposition:** Die Ausrichtung des Textes entlang des Pfades mit dem Label `batch lettering`
+* **Dateiformate:** eine durch Kommata getrennte Liste von [Dateiformaten](/de/docs/file-formats/#schreiben)
+
+### Verwedung mit der Shell
+
+Hier ein minimales Beispiel für die Anwendung dieser Erweiterung in der Shell
+
+```
+./inkstitch --extension=batch_lettering --text="Hello\nworld" --font="Abecedaire" --file-formats="svg,dst" input_file.svg > output_file.zip
+```
+
+#### Optionen
+
+Option             |Eingabetyp|Wert
+---------- --------|----------|------
+`--text`           |string    |darf nicht leer bleiben
+`--separator`      |string    |default: '\n'
+`--font`           |string    |muss ein valider Schriftname sein
+`--scale`          |integer   |default: 100
+`--color-sort`     |string    |off, all, line, word<br>default: off
+`--trim`           |string    |off, line, word, glyph<br>default: off 
+`--command_symbols`|bool      |default: False
+`--text-align`     |string    |left, center, right, block, letterspacing<br>default: left
+`--file-formats`   |string    |muss mindestens ein valides Dateiformat enthalten (kommagetrennte Liste)
 
 ## Neue Schriftarten für Ink/Stitch erstellen
 

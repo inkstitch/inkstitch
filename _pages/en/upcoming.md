@@ -341,6 +341,8 @@ Update pyembroidery to allow customized setting for rgb values [#3530](https://g
 
 Ink/Stitch can now export multiple files with text at once. A path with a specified label within the open document can be used to define text position.
 
+![A patch with four different names](/assets/images/docs/batch-lettering.png)
+
 [More information](/docs/import-export/#batch-lettering)
 
 ## Developer and Build Stuff
