@@ -6,7 +6,7 @@
         <page name="options" gui-text="Options">
             <param name="extension" type="string" gui-hidden="true">unlink_clone</param>
             <param name="recursive" type="boolean" gui-text="Recursive">true</param>
-            <param name="add-group" type="boolean" gui-text="Group unlinked elements">true</param>
+            <param name="add-group" type="boolean" gui-text="Group unlinked symbols">true</param>
         </page>
         <page name="info" gui-text="Help">
             <label>Unlink clones and apply the fill stitch angle.</label>

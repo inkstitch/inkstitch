@@ -37,14 +37,7 @@ class UnlinkClone(InkstitchExtension):
             if isinstance(element, Clone):
                 resolved = element.resolve_clone(recursive=recursive)
                 if resolved[0].tag in SVG_SYMBOL_TAG:
-                    parent = cast(BaseElement, resolved[0].getparent())  # Safe assumption that this has a parent.
-                    group = self.get_group(parent)
-                    for child in resolved[0]:
-                        group.append(child)
-                    if self.options.add_group:
-                        parent.replace(resolved[0], group)
-                    else:
-                        resolved[0].delete()
+                    self._resolve_symbol(resolved)
                 clones_resolved.append((element.node, resolved[0]))
 
         for (clone, resolved_clone) in clones_resolved:
@@ -57,7 +50,15 @@ class UnlinkClone(InkstitchExtension):
                 command.connector.set(backlink_attrib, "#"+new_id)
             resolved_clone.set_id(new_id)
 
-    def get_group(self, parent):
+    def _resolve_symbol(self, resolved):
+        parent = cast(BaseElement, resolved[0].getparent())  # Safe assumption that this has a parent.
         if self.options.add_group:
-            return Group()
-        return parent
+            group = Group()
+        else:
+            group = parent
+        for child in resolved[0]:
+            group.append(child)
+        if self.options.add_group:
+            parent.replace(resolved[0], group)
+        else:
+            resolved[0].delete()
