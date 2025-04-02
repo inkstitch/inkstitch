@@ -322,6 +322,16 @@ jobs:
           name: inkstitch-windows32-exe
           path: |
             dist/inkstitch/bin/inkstitch.exe
+      - name: Set siging policy to release
+        if: ${{ startsWith(github.ref, 'refs/tags/v*') }}
+        shell: bash
+        run: |
+          echo release_policy="release-signing" >> cGITHUB_ENV
+      - name: Set siging policy to test
+        if: ${{ ! startsWith(github.ref, 'refs/tags/v*') }}
+        shell: bash
+        run: |
+          echo release_policy="test-signing" >> $GITHUB_ENV
       - name: Sign-exe
         id: Sign-exe
         uses: signpath/github-action-submit-signing-request@v1.1
@@ -329,7 +339,7 @@ jobs:
           api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
           organization-id: '6b880880-2af8-4cf3-a8e7-1b4977c593df'
           project-slug: 'inkstitch'
-          signing-policy-slug: 'release-signing'
+          signing-policy-slug: '${{ env.release_policy }}'
           github-artifact-id: '${{ steps.upload-unsigned-exe.outputs.artifact-id }}'
           wait-for-completion: true
           output-artifact-directory: 'signed-artifacts'
@@ -355,8 +365,8 @@ jobs:
           api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
           organization-id: '6b880880-2af8-4cf3-a8e7-1b4977c593df'
           project-slug: 'inkstitch'
-          signing-policy-slug: 'release-signing'
-          artifact-configuration-slug: 'windows-64bit-exe'
+          signing-policy-slug: '${{ env.release_policy }}'
+          artifact-configuration-slug: 'windows-installer-config'
           github-artifact-id: '${{ steps.upload-unsigned-installer.outputs.artifact-id }}'
           wait-for-completion: true
           output-artifact-directory: 'signed-artifacts'
@@ -421,6 +431,16 @@ jobs:
           make dist
         env:
           BUILD: windows
+      - name: Set siging policy to release
+        if: ${{ startsWith(github.ref, 'refs/tags/v*') }}
+        shell: bash
+        run: |
+          echo release_policy="release-signing" >> cGITHUB_ENV
+      - name: Set siging policy to test
+        if: ${{ ! startsWith(github.ref, 'refs/tags/v*') }}
+        shell: bash
+        run: |
+          echo release_policy="test-signing" >> $GITHUB_ENV
       - name: upload-unsigned-exe
         id: upload-unsigned-exe
         uses: actions/upload-artifact@v4
@@ -435,7 +455,7 @@ jobs:
           api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
           organization-id: '6b880880-2af8-4cf3-a8e7-1b4977c593df'
           project-slug: 'inkstitch'
-          signing-policy-slug: 'release-signing'
+          signing-policy-slug: '${{ env.release_policy }}'
           github-artifact-id: '${{ steps.upload-unsigned-exe.outputs.artifact-id }}'
           wait-for-completion: true
           output-artifact-directory: 'signed-artifacts'
@@ -461,8 +481,8 @@ jobs:
           api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
           organization-id: '6b880880-2af8-4cf3-a8e7-1b4977c593df'
           project-slug: 'inkstitch'
-          signing-policy-slug: 'release-signing'
-          artifact-configuration-slug: 'windows-64bit-exe'
+          signing-policy-slug: '${{ env.release_policy }}'
+          artifact-configuration-slug: 'windows-installer-config'
           github-artifact-id: '${{ steps.upload-unsigned-installer.outputs.artifact-id }}'
           wait-for-completion: true
           output-artifact-directory: 'signed-artifacts'
