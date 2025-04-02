@@ -326,7 +326,7 @@ jobs:
         if: ${{ startsWith(github.ref, 'refs/tags/v*') }}
         shell: bash
         run: |
-          echo release_policy="release-signing" >> cGITHUB_ENV
+          echo release_policy="release-signing" >> $GITHUB_ENV
       - name: Set siging policy to test
         if: ${{ ! startsWith(github.ref, 'refs/tags/v*') }}
         shell: bash
@@ -435,7 +435,7 @@ jobs:
         if: ${{ startsWith(github.ref, 'refs/tags/v*') }}
         shell: bash
         run: |
-          echo release_policy="release-signing" >> cGITHUB_ENV
+          echo release_policy="release-signing" >> $GITHUB_ENV
       - name: Set siging policy to test
         if: ${{ ! startsWith(github.ref, 'refs/tags/v*') }}
         shell: bash
