@@ -17,6 +17,7 @@ class UnlinkClone(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--notebook")
+        self.arg_parser.add_argument("-g", "--add-group", dest="add_group", type=Boolean, default=True)
         self.arg_parser.add_argument("-r", "--recursive", dest="recursive", type=Boolean, default=True)
 
     def effect(self) -> None:
@@ -36,11 +37,7 @@ class UnlinkClone(InkstitchExtension):
             if isinstance(element, Clone):
                 resolved = element.resolve_clone(recursive=recursive)
                 if resolved[0].tag in SVG_SYMBOL_TAG:
-                    group = Group()
-                    for child in resolved[0]:
-                        group.append(child)
-                    parent = cast(BaseElement, resolved[0].getparent())  # Safe assumption that this has a parent.
-                    parent.replace(resolved[0], group)
+                    self._resolve_symbol(resolved)
                 clones_resolved.append((element.node, resolved[0]))
 
         for (clone, resolved_clone) in clones_resolved:
@@ -52,3 +49,16 @@ class UnlinkClone(InkstitchExtension):
                 backlink_attrib = CONNECTION_START if command.connector.get(CONNECTION_START) == ("#"+orig_id) else CONNECTION_END
                 command.connector.set(backlink_attrib, "#"+new_id)
             resolved_clone.set_id(new_id)
+
+    def _resolve_symbol(self, resolved):
+        parent = cast(BaseElement, resolved[0].getparent())  # Safe assumption that this has a parent.
+        if self.options.add_group:
+            group = Group()
+        else:
+            group = parent
+        for child in resolved[0]:
+            group.append(child)
+        if self.options.add_group:
+            parent.replace(resolved[0], group)
+        else:
+            resolved[0].delete()
