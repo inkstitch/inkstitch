@@ -135,6 +135,8 @@ class BatchLettering(InkstitchExtension):
         path = tempfile.mkdtemp()
         files = []
         for i, text in enumerate(texts):
+            if not text:
+                continue
             stitch_plan, lettering_group = self.generate_stitch_plan(text, text_positioning_path)
             for file_format in file_formats:
                 files.append(self.generate_output_file(file_format, path, text, stitch_plan, i))
