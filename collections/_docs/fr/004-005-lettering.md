@@ -133,8 +133,9 @@ Here is a minimal example for command line usage of the batch lettering extensio
 
 #### Options
 
-Option             |Type d'entrée|Valeurs
-------------------|----------|------
+Option             | Type|Valeurs
+---------- --------|----------|------
+
 `--text`           |string  |ne peut pas être vide
 `--separator`      |string    |par défault: '\n'
 `--font`           |string    |doit être un nom de police valide
@@ -144,6 +145,8 @@ Option             |Type d'entrée|Valeurs
 `--command_symbols`|bool      |defaut: False
 `--text-align`     |string    |left, center, right, block, letterspacing<br>defaut: gauche
 `--file-formats`   |string    |au minimum un format de sortie valide
+
+
 ## Créer de nouvelle polices pour Ink/Stitch
 Lire le [tutoriel de création de police](/fr/tutorials/font-creation/).
 
