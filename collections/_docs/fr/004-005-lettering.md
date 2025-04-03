@@ -63,7 +63,7 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
 
 * **Utiliser des symboles de commandes**
 
-  Si cette option est cochée, les coupes sont ajoutées sous  forme de symboles de commandes, si non coché, elles sont ajoutées dans le paramètrage des objets concernés.
+  Si cette option est cochée, les coupes sont ajoutées sous  forme de symboles de commandes, si non coché, elles sont ajoutées dans le paramétrage des objets concernés.
 ### Préconfigurations
 
 Vous pouvez enregistrer et rouvrir vos paramètres de police préférés.
@@ -72,7 +72,7 @@ Vous pouvez enregistrer et rouvrir vos paramètres de police préférés.
 
 Les lettres d'ink/stitch ont été soigneusement dessinées pour une broderie optimale. Si vous essayez de les modifier avec les outils usuels d'inkscape, il se peut que cela ne fonctionne pas comme vous le souhaitez. Placez les lettres le long  d'un chemin est un gros travail. Cet outil va vous aider à le faire.
 
-![A text aligned along a path while using the various options](/assets/images/docs/text_along_path_alignment.png)
+![Alignement d'un texte sur un cheminn avec les diverses options](/assets/images/docs/text_along_path_alignment.png)
 
 ### Usage
 
@@ -81,7 +81,7 @@ Les lettres d'ink/stitch ont été soigneusement dessinées pour une broderie op
 * Si `Etendre` est coché Ink/Stitch va étendre les espaces entre les lettres pour que le texte utilise tout le chemin. Sinon il gardera les distances du texte original. 
 * Cliquez sur 'Appliquer'
 
-Lettering will follow the path direction. Reverse the path if needed (`Path > Reverse`).
+Le lettrage suivra  la direction du chemin. Inverser le sens du chemin si nécessaire (`Chemin > ReverseInverser`).
 {: .notice--info}
 
 ## Bibliothèque de polices
@@ -124,9 +124,6 @@ Le texte sera divisé et placé dans un nouveau fichier à chaque occurrence du 
 
 Voici un exemple minimal d'utilisation de l'extension de lettrage par lots en ligne de commande :
 
-
-Here is a minimal example for command line usage of the batch lettering extension
-
 ```
 ./inkstitch --extension=batch_lettering --text="Hello\nworld" --font="Abecedaire" --file-formats="svg,dst" input_file.svg > output_file.zip
 ```
@@ -152,6 +149,6 @@ Lire le [tutoriel de création de police](/fr/tutorials/font-creation/).
 
 Contactez nous  sur  [GitHub](https://github.com/inkstitch/inkstitch/issues) si vous souhaitez publier votre police dans l'outil de lettrage d'Ink/Stitch.
 
-## Fichiers example concernant  le lettrage
+## Fichiers exemple concernant  le lettrage
 
 {% include tutorials/tutorial_list key="techniques" value="Lettering" %}
