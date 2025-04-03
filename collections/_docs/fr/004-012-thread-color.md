@@ -1,7 +1,7 @@
 ---
 title: "Gestion des couleurs de fil"
 permalink: /fr/docs/thread-color/
-last_modified_at: 2024-09-10
+last_modified_at: 2025-04-03
 toc: true
 ---
 
@@ -31,7 +31,7 @@ Si vous disposez d'un fichier `.gpl` qui contient la liste des fils que vous uti
 
 Les fichiers `.gpl` de palettes peuvent être générés par GIMP.
 
-## Generate And Edit Custom Color Palettes
+## Generer et editer des Palettes personnalisées  
 
 ### Générer une palette {#generate-color-palette}
 
@@ -79,7 +79,7 @@ Ces changement seront pris en compte dans l'export pdf d'Ink/Stitcht.
 
 Exécutez `Extensions > Ink/Stitch  > Gestion des couleurs de fil > Appliquer une palette` 
 
-## Working with Threadlists
+## Travailler avec des listes de fil
 
 ### Exportation
 
