@@ -120,7 +120,7 @@ Le texte sera divisé et placé dans un nouveau fichier à chaque occurrence du 
 * **Formats de fichier :** Saisissez une liste de [formats de fichier] (/fr/docs/file-formats/#writing) séparés par des virgules.
 
 
-### Usaage en ligne de commande
+### Usage en ligne de commande
 
 Voici un exemple minimal d'utilisation de l'extension de lettrage par lots en ligne de commande :
 
