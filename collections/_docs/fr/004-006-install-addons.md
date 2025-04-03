@@ -31,7 +31,7 @@ Ink/Stitch propose une bibliothèque de symboles avec des points de motifs. Ils 
 ### Usage
 
 * Ouvrez la boîte de dialogue des symboles « Objet > Symboles » (Maj+Ctrl+Y).
-* Sélectionnez la bibliothèque de motifs Ink/Stitch(inkstitch-motif-library).
+* Sélectionnez la bibliothèque de motifs Ink/Stitch (inkstitch-motif-library).
 * Cliquez sur un motif et faites-le glisser sur le canevas
 
 
