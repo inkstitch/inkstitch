@@ -1,7 +1,7 @@
 ---
 title: "Outil lettrage"
 permalink: /fr/docs/lettering/
-last_modified_at: 2025-03-14
+last_modified_at: 2025-04-03
 toc: true
 ---
 ## Lettrage
@@ -25,7 +25,7 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
   Le filtrage par taille vous aide en réduisant la liste des fontes à uniquement les fontes qui peuvent être brodées dans les dimensions choisies.
   Un filtre actif (pas à 0) déterminera  automatiquement la bonne échelle pour que la fonte sélectionnée soit dans la dimension souhaitée.
 
-* **Glyphs**
+* **Glyphes**
 
   Si l'option est cochée, seules les fontes contenant tous les glyphes de votre texte apparaissent dans le menu déroulant des fontes
 
@@ -35,34 +35,35 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
 
 ### Options
 
-* **Scale**
+* **Echelle**
 
-  Defines the output size of the font compared to the original font size (%).
-  It is recommended to use the scale option, rather than resizing the font on canvas.
-  This way you can make sure, that you stay within the parameters the font has been designed for.
-
-* **Color sort**
+  Définit la taille de sortie de la police par rapport à la taille de police d'origine (%).
+  Il est recommandé d'utiliser l'option d'échelle plutôt que de redimensionner la police sur le canevas.
+  De cette façon, vous pouvez vous assurer que vous respectez les paramètres pour lesquels la police a été conçue.
+  
+* **Tri des couleurs**
 
  {% include upcoming_release.html %}
-  Sort colors of multicolor fonts to avoid a huge amount of color changes.
 
+  Option de tri des couleurs pour certaines fontes multicolores afin d'éviter de nombreux changement de couleur de fils. Attention toutefois au risque de décalage si le tri se fait sur un texte trop long. Il est possible de  trier tout le texte ou de trier ligne par ligne ou mot par  mot
+
+  
 * **Broder les lignes de texte en aller retour**
 
   Lorsque cette option est activée, la première ligne sera brodée de gauche à droite et la seconde de droite à gauche, etc.
   Cela donnera à votre machine des déplacements plus courts.
 
-* **Align Text**
+* **Alignement du Texte**
 
-  Align multiline text: left, center, right, block (default), block (letterspacing)
+  Alignement du texte sur plusieurs lignes: gauche, centre, droit, justifié (mots)- modifie uniquement les espaces entre les mots, justifié (lettres) - modifie aussi l'espacement inter lettres.
 
 * **Ajouter des commandes de coupes**
 
   Si cette option est activée, Ink/Stitch ajoutera des commandes de coupe  au choix pour chaque lettre, ou après chaque mot ou après chaque ligne.
 
-* **Use command symbols**
+* **Utiliser des symboles de commandes**
 
-  When adding trims, use command symbols. Uses the trim param setting otherwise.
-
+  Si cette option est cochée, les coupes sont ajoutées sous  forme de symboles de commandes, si non coché, elles sont ajoutées dans le paramètrage des objets concernés.
 ### Préconfigurations
 
 Vous pouvez enregistrer et rouvrir vos paramètres de police préférés.
@@ -87,49 +88,42 @@ Lettering will follow the path direction. Reverse the path if needed (`Path > Re
 
 Un aperçu de toutes les polices disponibles se trouve dans la [bibliothèque de polices](/fr/fonts/font-library/).
 
-## Tri des couleurs
-Si vous utilisez plusieurs lettres d'une police multicolore, vous pouvez trier les couleurs afin d'éviter de multiples changements de fil. Ce tri ne doit toutefois pas modifier l'ordre des couleurs d'une lettre pour ne pas modifier la broderie. 
-
-Lorsqu'à l'intérieur de chaque lettre les couleurs ne sont utilisées que sur des chemins consécutifs et toujours dans le même ordre (ce qui est le cas des polices multicolores actuellement présentes dans Ink/Stitch, sauf *Abril en Fleur* et peut-être *Infinipicto*), et que toutes les lettres utilisent toutes les couleurs  voici une manière rapide de trier si votre fichier ne contient que le lettrage :
-
-Dans la fenêtre objet, choisir une lettre (peu importe laquelle) :
-* Sélectionner le chemin qui sera brodé en premier (le dernier de la lettre dans cette fenêtre donc...)
-* Edition/Sélectionner même/Couleur de contour (ceci va sélectionner tout ce qui est de cette couleur dans toutes les lettres, il y a probablement beaucoup de chemins par lettre)
-* Grouper : ce groupe va se trouver dans ce qui était la dernière lettre à broder, éventuellement donner à ce groupe le nom de la couleur
-* Faites monter ce groupe le plus haut possible dans cette dernière lettre
-et recommencer jusqu'a qu'il n'y ait plus que des groupes de couleurs, en partant à chaque fois du dernier chemin d'une lettre
-
-## Batch Lettering
+## Lettrage par lots {#batch-lettering}
 
 {% include upcoming_release.html %}
 
-Batch lettering allows to easily create multiple text files.
+Le lettrage par lot permet de créer facilement des fichiers de texte multiples
 
-![A patch with four different names](/assets/images/docs/batch-lettering.png)
+###  Exemple
+![Un écusson avec 4 noms différents](/assets/images/docs/batch-lettering.png)
 
-* Prepare a design file.
-  If the file contains a path with the label `batch lettering` it will be used for the text position.
-  It will work the same say as [Lettering Along Path](/docs/lettering/#lettering-along-path).
-* Go to `File > Save a copy...` and click on the little arrow on the file format selection field to open a list of available file formats.
-* Choose `Ink/Stitch: batch lettering (.zip)`
-* Navigate to your desired output folder and click on Save
+* Préparez un fichier de broderie.
+   Si le fichier contient un chemin  avec le label  `batch lettering` , il sera utilisé pour la position du texte de manière similaire à celle 
+   de [Lettrage le long d'un chemin](/docs/lettering/#lettering-along-path).
+* Allez dans « Fichier > Enregistrer une copie... » et cliquez sur la petite flèche dans le champ de sélection du format de fichier pour ouvrir la liste des formats de fichier disponibles.
+* Choisissez « Ink/Stitch : Lettrage par lots (.zip) »
+* Accédez au dossier de sortie souhaité et cliquez sur « Enregistrer ».
+
 
 ### Options
 
-* **Text:** Enter the text, by default each new line will be placed in it's own file
-* **Custom Separator:** Defaults to new lines. Specify an other separator if you wish that your text file has multiline text.
-  The text will be split and placed into a new file with every occurence of the custom separator.
+* **Texte** : Saisissez le texte. Par défaut, chaque nouvelle ligne sera placée dans son propre fichier.
+* **Séparateur personnalisé** :  Spécifiez un autre séparateur que fin de ligne si vous souhaitez que votre fichier texte contienne du texte multiligne.
+Le texte sera divisé et placé dans un nouveau fichier à chaque occurrence du séparateur personnalisé.
+* **Nom de la police** : Nom de la police que vous souhaitez utiliser. Consultez la [bibliothèque de polices](/fr/fonts/font-library/) pour trouver la liste des polices disponibles.
+* **Échelle (%) :** Valeur d'échelle pour redimensionner une police. La valeur sera limitée à la plage d'échelle disponible pour la police concernée.
+* **Tri par couleur :** Indique si les polices multicolores doivent être triées par couleur ou non.
+* **Ajouter des coupes :** Indique si des coupes doivent être ajoutés ou non (jamais, après chaque ligne, mot ou lettre).
+* **Utiliser des symboles de commande :** Indique si les coupes doivent être ajoutés comme symboles de commande ou comme option de paramètre (pertinent uniquement pour la sortie SVG).
+* **Aligner le texte multiligne :** Définit l'alignement du texte multiligne.
+* **Lettrage le long du chemin : position du texte :** Position du texte sur le chemin `batch lettering`.
+* **Formats de fichier :** Saisissez une liste de [formats de fichier] (/fr/docs/file-formats/#writing) séparés par des virgules.
 
-* **Font name:** The name of the font you wish to use. Have a look at the [font library](/fonts/font-library/) to find a list of available fonts
-* **Scale (%):** Scale value to resize a font. The value will be clamped to the available scale range of the specific font.
-* **Color sort:** Wether multicolor fonts should be color sorted or not
-* **Add trims:** Wether trims should be added or not (never, after each line, word or letter)
-* **Use command symbols:** Wether the trims should be added as command symbols or as a param option (only relevant for svg output)
-* **Align Multiline Text:** Define how multiline text should be aligned
-* **Lettering along path: text position:** The text position on the `batch lettering` path
-* **File formats:** Enter a comma separated list of [file formats](/docs/file-formats/#writing)
 
-### Command line usage
+### Usaage en ligne de commande
+
+Voici un exemple minimal d'utilisation de l'extension de lettrage par lots en ligne de commande :
+
 
 Here is a minimal example for command line usage of the batch lettering extension
 
@@ -139,18 +133,17 @@ Here is a minimal example for command line usage of the batch lettering extensio
 
 #### Options
 
-Option             |Input Type|Values
----------- --------|----------|------
-`--text`           |string    |cannot be empty
-`--separator`      |string    |default: '\n'
-`--font`           |string    |must be a valid font name
+Option             |Type d'entrée|Valeurs
+------------------|----------|------
+`--text`           |sttring  |ne peut pas être vide
+`--separator`      |string    |par défault: '\n'
+`--font`           |string    |doit être un nom de police valide
 `--scale`          |integer   |default: 100
-`--color-sort`     |string    |off, all, line, word<br>default: off
-`--trim`           |string    |off, line, word, glyph<br>default: off 
-`--command_symbols`|bool      |default: False
-`--text-align`     |string    |left, center, right, block, letterspacing<br>default: left
-`--file-formats`   |string    |must be at least one valid output format
-
+`--color-sort`     |string    |off, all, line, word<br>  par défaut: off
+`--trim`           |string    |off, line, word, glyph<br> par défaut: off 
+`--command_symbols`|bool      |defaut: False
+`--text-align`     |string    |left, center, right, block, letterspacing<br>defaut: gauche
+`--file-formats`   |string    |au minimum un format de sortie valide
 ## Créer de nouvelle polices pour Ink/Stitch
 Lire le [tutoriel de création de police](/fr/tutorials/font-creation/).
 
