@@ -33,6 +33,6 @@ Si vous souhaitez que les fichiers de l'archive ZIP aient un nom différent du f
 
 L'export en format ZIP inkstitch offre aussi des options de panelisation pour broder plusieurs copies d'un petit motif dans un grand cadre.   Si l'une des options de  répétitions est supérieure à 1, Ink/Stitch va créer  plusieurs copies du plan de broderie et les placer à la distance  choisie dans les options. Les distances sont mesurées depuis le coin haut gauche du dessin originel. Les blocs de couleur sont réordonnés pour réduire les changement de couleurs.
 
-## Batch Lettering
+## Lettrage par lots
 
-Easily create multiple text files. [Read more](/docs/lettering/#batch-lettering)
+Créez facilement des fichiers texte multiples. [En savoir plus](/docs/lettering/#batch-lettering)
