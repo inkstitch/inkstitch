@@ -135,7 +135,7 @@ Here is a minimal example for command line usage of the batch lettering extensio
 
 Option             |Type d'entrée|Valeurs
 ------------------|----------|------
-`--text`           |sttring  |ne peut pas être vide
+`--text`           |string  |ne peut pas être vide
 `--separator`      |string    |par défault: '\n'
 `--font`           |string    |doit être un nom de police valide
 `--scale`          |integer   |default: 100
