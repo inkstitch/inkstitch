@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-26 01:39+0000\n"
-"PO-Revision-Date: 2025-03-26 01:40\n"
+"POT-Creation-Date: 2025-04-03 01:39+0000\n"
+"PO-Revision-Date: 2025-04-03 01:39\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-26 01:39+0000\n"
+"POT-Creation-Date: 2025-04-03 01:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2516,7 +2516,7 @@ msgid "Please chose an other color palette for your design."
 msgstr "Si selezioni un'altra palette di colori per il tuo design."
 
 #. auto-route running stitch columns extension
-#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:44
+#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:45
 msgid "Please select one or more stroke elements."
 msgstr "Si prega di selezionare uno o più elementi tratteggiati."
 
@@ -2550,40 +2550,40 @@ msgstr "In tutto il documento non ci sono oggetti con cui Ink/Stitch sia in grad
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "Suggerimento: esegui Estensioni > Ink/Stitch > Risoluzione dei problemi > Risoluzione dei problemi degli oggetti"
 
-#: lib/extensions/batch_lettering.py:55
+#: lib/extensions/batch_lettering.py:56
 msgid "Please specify a text"
 msgstr ""
 
-#: lib/extensions/batch_lettering.py:60
+#: lib/extensions/batch_lettering.py:61
 msgid "Please specify a font"
 msgstr ""
 
-#: lib/extensions/batch_lettering.py:64
+#: lib/extensions/batch_lettering.py:65
 msgid "Please specify a valid font name."
 msgstr ""
 
-#: lib/extensions/batch_lettering.py:65
+#: lib/extensions/batch_lettering.py:66
 msgid "You can find a list with all font names on our website: https://inkstitch.org/fonts/font-library/"
 msgstr ""
 
-#: lib/extensions/batch_lettering.py:69
+#: lib/extensions/batch_lettering.py:70
 msgid "Please specify at least one output file format"
 msgstr ""
 
-#: lib/extensions/batch_lettering.py:75
+#: lib/extensions/batch_lettering.py:76
 msgid "Please specify at least one file format supported by Ink/Stitch"
 msgstr ""
 
-#: lib/extensions/batch_lettering.py:76
+#: lib/extensions/batch_lettering.py:77
 msgid "You can find a list with all supported file formats our website: https://inkstitch.org/docs/file-formats/#writing"
 msgstr ""
 
-#: lib/extensions/batch_lettering.py:197 lib/extensions/lettering.py:60
+#: lib/extensions/batch_lettering.py:204 lib/extensions/lettering.py:60
 #: lib/extensions/lettering.py:71
 msgid "Ink/Stitch Lettering"
 msgstr "Caratteri Ink/Stitch"
 
-#: lib/extensions/batch_lettering.py:203 lib/gui/lettering/main_panel.py:307
+#: lib/extensions/batch_lettering.py:210 lib/gui/lettering/main_panel.py:307
 msgid "scale"
 msgstr "scala"
 
@@ -2621,15 +2621,15 @@ msgstr "Selezionare una o più colonne raso da tagliare."
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "questa colonna raso non ha un commando \"punto di taglio colonna raso\" collegato. Usare l'estensione \"Collega comandi\" e collegare il il comando \"Punto di taglio colonna raso\"."
 
-#: lib/extensions/cutwork_segmentation.py:74
+#: lib/extensions/cutwork_segmentation.py:83
 msgid "Please select at least one element with a stroke color."
 msgstr "Si prega di selezionare almeno un elemento con un colore tratteggiato."
 
-#: lib/extensions/cutwork_segmentation.py:158
+#: lib/extensions/cutwork_segmentation.py:167
 msgid "Cutwork Group"
 msgstr "Gruppo di taglio"
 
-#: lib/extensions/cutwork_segmentation.py:166
+#: lib/extensions/cutwork_segmentation.py:175
 #, python-format
 msgid "Needle #%s"
 msgstr "Ago #%s"
@@ -3221,7 +3221,7 @@ msgstr "Soluzioni possibili"
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Potrebbe accadere che un oggetto contenga più di un errore, ma ci sarà comunque un solo puntatore per oggetto. Eseguire questa funzione un'altra volta, se si verificano ulteriori errori. Rimuovere i puntatori cancellando il livello chiamato \"Risoluzione problemi\" attraverso il pannello degli oggetti (Oggetto -> Oggetti...)."
 
-#: lib/extensions/unlink_clone.py:29
+#: lib/extensions/unlink_clone.py:30
 msgid "Please select one or more clones to unlink."
 msgstr "Si prega di selezionare uno o più cloni da scollegare."
 
@@ -3304,7 +3304,7 @@ msgstr "Applica"
 #: inx/inkstitch_satin_to_stroke.inx:12 inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stitch_plan_preview.inx:37
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26 inx/inkstitch_troubleshoot.inx:12
-#: inx/inkstitch_unlink_clone.inx:10 inx/inkstitch_zigzag_line_to_satin.inx:18
+#: inx/inkstitch_unlink_clone.inx:11 inx/inkstitch_zigzag_line_to_satin.inx:18
 #: inx/inkstitch_zip.inx:62
 msgid "Help"
 msgstr "Aiuto"
@@ -3442,7 +3442,7 @@ msgstr ""
 msgid "Element Info"
 msgstr "Info sull'Elemento"
 
-#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:113
+#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:120
 msgid "Info"
 msgstr "Info"
 
@@ -3615,7 +3615,7 @@ msgid "Font Sampling"
 msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:67 lib/gui/lettering_font_sample.py:36
-#: lib/gui/simulator/view_panel.py:122 print/templates/ui.html:5
+#: lib/gui/simulator/view_panel.py:129 print/templates/ui.html:5
 #: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:77
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
@@ -3937,7 +3937,7 @@ msgstr "CAMBIO COLORE"
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:436
+#: lib/gui/simulator/drawing_panel.py:435
 #, python-format
 msgid "Command: %s"
 msgstr ""
@@ -3964,55 +3964,59 @@ msgstr ""
 msgid "Embroidery Simulation"
 msgstr "Simulazione di ricamo"
 
-#: lib/gui/simulator/view_panel.py:39
+#: lib/gui/simulator/view_panel.py:40
 msgid "Display needle penetration point (O)"
 msgstr "Visualizza il punti di entrata dell'ago (O)"
 
-#: lib/gui/simulator/view_panel.py:43
+#: lib/gui/simulator/view_panel.py:44
 msgid "Show jump stitches"
 msgstr ""
 
-#: lib/gui/simulator/view_panel.py:50
+#: lib/gui/simulator/view_panel.py:51
 msgid "Show trims"
 msgstr ""
 
-#: lib/gui/simulator/view_panel.py:57
+#: lib/gui/simulator/view_panel.py:58
 msgid "Show stops"
 msgstr "Mostra fermate"
 
-#: lib/gui/simulator/view_panel.py:64
+#: lib/gui/simulator/view_panel.py:65
 msgid "Show color changes"
 msgstr "Mostra cambiamenti di colore"
 
-#: lib/gui/simulator/view_panel.py:72
+#: lib/gui/simulator/view_panel.py:73
 msgid "Open info dialog"
 msgstr "Apri dialogo d'informazioni"
 
-#: lib/gui/simulator/view_panel.py:77
+#: lib/gui/simulator/view_panel.py:78
 msgid "Change background color"
 msgstr "Cambia colore di sfondo"
 
-#: lib/gui/simulator/view_panel.py:85
+#: lib/gui/simulator/view_panel.py:82
+msgid "Show crosshair"
+msgstr ""
+
+#: lib/gui/simulator/view_panel.py:92
 msgid "Show page"
 msgstr "Mostra pagina"
 
-#: lib/gui/simulator/view_panel.py:88
+#: lib/gui/simulator/view_panel.py:95
 msgid "Open settings dialog"
 msgstr "Api dialogo di opzioni"
 
-#: lib/gui/simulator/view_panel.py:94
+#: lib/gui/simulator/view_panel.py:101
 msgid "Detach/attach simulator window"
 msgstr ""
 
-#: lib/gui/simulator/view_panel.py:100
+#: lib/gui/simulator/view_panel.py:107
 msgid "Show"
 msgstr "Mostra"
 
-#: lib/gui/simulator/view_panel.py:171
+#: lib/gui/simulator/view_panel.py:185
 msgid "Simulator Preferences"
 msgstr "Preferenze Del Simulatore"
 
-#: lib/gui/simulator/view_panel.py:179
+#: lib/gui/simulator/view_panel.py:193
 msgid "Design Info"
 msgstr "Info Sul Progetto"
 
@@ -5287,7 +5291,7 @@ msgstr ""
 #: inx/inkstitch_redwork.inx:31 inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_satin_to_stroke.inx:15
 #: inx/inkstitch_stitch_plan_preview.inx:45 inx/inkstitch_troubleshoot.inx:15
-#: inx/inkstitch_unlink_clone.inx:13
+#: inx/inkstitch_unlink_clone.inx:14
 msgid "More information on our website"
 msgstr "Maggiori informazioni sul nostro sito"
 
@@ -5673,7 +5677,7 @@ msgstr "Applica i parametri del primo elemento selezionato al resto della selezi
 #: inx/inkstitch_selection_to_anchor_line.inx:12
 #: inx/inkstitch_selection_to_guide_line.inx:12
 #: inx/inkstitch_selection_to_pattern.inx:12 inx/inkstitch_test_swatches.inx:11
-#: inx/inkstitch_unlink_clone.inx:23
+#: inx/inkstitch_unlink_clone.inx:24
 msgid "Edit"
 msgstr "Modifica"
 
@@ -7931,15 +7935,19 @@ msgstr ""
 msgid "Recursive"
 msgstr ""
 
-#: inx/inkstitch_unlink_clone.inx:11
+#: inx/inkstitch_unlink_clone.inx:9
+msgid "Group unlinked symbols"
+msgstr ""
+
+#: inx/inkstitch_unlink_clone.inx:12
 msgid "Unlink clones and apply the fill stitch angle."
 msgstr ""
 
-#: inx/inkstitch_unlink_clone.inx:14
+#: inx/inkstitch_unlink_clone.inx:15
 msgid "https://inkstitch.org/docs/edit/#unlink-clone/"
 msgstr ""
 
-#: inx/inkstitch_unlink_clone.inx:20
+#: inx/inkstitch_unlink_clone.inx:21
 msgid "Unlink clones and apply the fill stitch angle"
 msgstr ""
 

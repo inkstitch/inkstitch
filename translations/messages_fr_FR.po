@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-26 01:39+0000\n"
-"PO-Revision-Date: 2025-03-26 01:40\n"
+"POT-Creation-Date: 2025-04-03 01:39+0000\n"
+"PO-Revision-Date: 2025-04-04 01:39\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-26 01:39+0000\n"
+"POT-Creation-Date: 2025-04-03 01:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2518,7 +2518,7 @@ msgid "Please chose an other color palette for your design."
 msgstr "Veuillez choisir une autre palette de couleurs pour votre dessin."
 
 #. auto-route running stitch columns extension
-#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:44
+#: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:45
 msgid "Please select one or more stroke elements."
 msgstr "Veuillez sélectionner un ou plusieurs traits."
 
@@ -2552,40 +2552,40 @@ msgstr "Il n'y a aucun objet dans tout le document sur lequel Ink/Stitch sait qu
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "Conseil : Exécutez Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets"
 
-#: lib/extensions/batch_lettering.py:55
+#: lib/extensions/batch_lettering.py:56
 msgid "Please specify a text"
 msgstr "Merci de spécifier un texte"
 
-#: lib/extensions/batch_lettering.py:60
+#: lib/extensions/batch_lettering.py:61
 msgid "Please specify a font"
 msgstr "Merci de spécifier une police"
 
-#: lib/extensions/batch_lettering.py:64
+#: lib/extensions/batch_lettering.py:65
 msgid "Please specify a valid font name."
 msgstr "Merci de spécifier un nom de police valide."
 
-#: lib/extensions/batch_lettering.py:65
+#: lib/extensions/batch_lettering.py:66
 msgid "You can find a list with all font names on our website: https://inkstitch.org/fonts/font-library/"
 msgstr "Vous pouvez trouver la liste de tous les noms de polices sur notre site web : https://inkstitch.org/fr/fonts/font-library/"
 
-#: lib/extensions/batch_lettering.py:69
+#: lib/extensions/batch_lettering.py:70
 msgid "Please specify at least one output file format"
 msgstr "Merci de spécifier au moins un format de fichier de sortie"
 
-#: lib/extensions/batch_lettering.py:75
+#: lib/extensions/batch_lettering.py:76
 msgid "Please specify at least one file format supported by Ink/Stitch"
 msgstr "Merci de spécifier au moins un format de fichier supporté par Ink/Stitch"
 
-#: lib/extensions/batch_lettering.py:76
+#: lib/extensions/batch_lettering.py:77
 msgid "You can find a list with all supported file formats our website: https://inkstitch.org/docs/file-formats/#writing"
 msgstr "Vous pouvez trouver la liste de tous les formats de fichier supportés sur notre site web : https://inkstitch.org/fr/docs/file-formats/#writing"
 
-#: lib/extensions/batch_lettering.py:197 lib/extensions/lettering.py:60
+#: lib/extensions/batch_lettering.py:204 lib/extensions/lettering.py:60
 #: lib/extensions/lettering.py:71
 msgid "Ink/Stitch Lettering"
 msgstr "Lettrage Ink/Stitch"
 
-#: lib/extensions/batch_lettering.py:203 lib/gui/lettering/main_panel.py:307
+#: lib/extensions/batch_lettering.py:210 lib/gui/lettering/main_panel.py:307
 msgid "scale"
 msgstr "Échelle"
 
@@ -2623,15 +2623,15 @@ msgstr "Veuillez sélectionner une ou plusieurs colonnes satin à scinder."
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "cette colonne satin n’a pas de commande « point de partage » attachée. Utilisez l’extension « ajouter des commandes » et attachez d’abord la commande « point de partage  »."
 
-#: lib/extensions/cutwork_segmentation.py:74
+#: lib/extensions/cutwork_segmentation.py:83
 msgid "Please select at least one element with a stroke color."
 msgstr "Merci de sélectionner au moins un élément ayant une couleur de contour."
 
-#: lib/extensions/cutwork_segmentation.py:158
+#: lib/extensions/cutwork_segmentation.py:167
 msgid "Cutwork Group"
 msgstr "Groupe Richelieu"
 
-#: lib/extensions/cutwork_segmentation.py:166
+#: lib/extensions/cutwork_segmentation.py:175
 #, python-format
 msgid "Needle #%s"
 msgstr "Aiguille #%s"
@@ -2806,12 +2806,13 @@ msgstr "Ink/Stitch ne peut pas importer directement les formats de couleur. Mais
 
 #: lib/extensions/install.py:44 lib/extensions/install.py:54
 msgid "Could not install color palettes. Please file an issue on"
-msgstr ""
+msgstr "Impossible d'installer les palettes de couleur. Merci de poster une \"issue\" sur"
 
 #: lib/extensions/install.py:58
 msgid "Successfully installed Addons.\n\n"
 "Please restart Inkscape."
-msgstr ""
+msgstr "Les compléments ont été installés avec succès.\n\n"
+"Merci de redémarrer Inkscape."
 
 #: lib/extensions/install_custom_palette.py:25
 #: lib/extensions/palette_to_text.py:27
@@ -3227,7 +3228,7 @@ msgstr "Solutions possibles"
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Il est possible qu'un objet contienne plus d'une erreur, même s'il n'y a qu'un conseil par objet. Relancer cette fonction quand il y a plus d'erreurs. Enlever les conseils en supprimant le calque \"Résolution de problèmes\" dans le dialogue objets (Objet -> Objets...)."
 
-#: lib/extensions/unlink_clone.py:29
+#: lib/extensions/unlink_clone.py:30
 msgid "Please select one or more clones to unlink."
 msgstr "Merci de sélectionner un ou plusieurs clones à délier."
 
@@ -3310,7 +3311,7 @@ msgstr "Appliquer"
 #: inx/inkstitch_satin_to_stroke.inx:12 inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stitch_plan_preview.inx:37
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26 inx/inkstitch_troubleshoot.inx:12
-#: inx/inkstitch_unlink_clone.inx:10 inx/inkstitch_zigzag_line_to_satin.inx:18
+#: inx/inkstitch_unlink_clone.inx:11 inx/inkstitch_zigzag_line_to_satin.inx:18
 #: inx/inkstitch_zip.inx:62
 msgid "Help"
 msgstr "Aide"
@@ -3448,7 +3449,7 @@ msgstr "Avancée horizontale de l'espace"
 msgid "Element Info"
 msgstr "Information sur l'élément"
 
-#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:113
+#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:120
 msgid "Info"
 msgstr "Information"
 
@@ -3621,7 +3622,7 @@ msgid "Font Sampling"
 msgstr "Test de police"
 
 #: lib/gui/edit_json/main_panel.py:67 lib/gui/lettering_font_sample.py:36
-#: lib/gui/simulator/view_panel.py:122 print/templates/ui.html:5
+#: lib/gui/simulator/view_panel.py:129 print/templates/ui.html:5
 #: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:77
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
@@ -3948,7 +3949,7 @@ msgstr "CHANGEMENT COULEUR"
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr "Dimensions: {:.2f} x {:.2f}"
 
-#: lib/gui/simulator/drawing_panel.py:436
+#: lib/gui/simulator/drawing_panel.py:435
 #, python-format
 msgid "Command: %s"
 msgstr "Commande : %s"
@@ -3975,55 +3976,59 @@ msgstr "Taille du point de pénétration de l'aiguille (mm)"
 msgid "Embroidery Simulation"
 msgstr "Simulation de broderie"
 
-#: lib/gui/simulator/view_panel.py:39
+#: lib/gui/simulator/view_panel.py:40
 msgid "Display needle penetration point (O)"
 msgstr "Afficher les points de pénétration de l'aiguille (O)"
 
-#: lib/gui/simulator/view_panel.py:43
+#: lib/gui/simulator/view_panel.py:44
 msgid "Show jump stitches"
 msgstr "Montrer les sauts de fil"
 
-#: lib/gui/simulator/view_panel.py:50
+#: lib/gui/simulator/view_panel.py:51
 msgid "Show trims"
 msgstr "Montrer les coupes de fil"
 
-#: lib/gui/simulator/view_panel.py:57
+#: lib/gui/simulator/view_panel.py:58
 msgid "Show stops"
 msgstr "Montrer les stops"
 
-#: lib/gui/simulator/view_panel.py:64
+#: lib/gui/simulator/view_panel.py:65
 msgid "Show color changes"
 msgstr "Montrer les changements de couleur"
 
-#: lib/gui/simulator/view_panel.py:72
+#: lib/gui/simulator/view_panel.py:73
 msgid "Open info dialog"
 msgstr "Ouvrir le dialogue Informations"
 
-#: lib/gui/simulator/view_panel.py:77
+#: lib/gui/simulator/view_panel.py:78
 msgid "Change background color"
 msgstr "Changer la couleur d'arrière fond"
 
-#: lib/gui/simulator/view_panel.py:85
+#: lib/gui/simulator/view_panel.py:82
+msgid "Show crosshair"
+msgstr "Montrer la position de l'aiguille"
+
+#: lib/gui/simulator/view_panel.py:92
 msgid "Show page"
 msgstr "Montrer la page"
 
-#: lib/gui/simulator/view_panel.py:88
+#: lib/gui/simulator/view_panel.py:95
 msgid "Open settings dialog"
 msgstr "Ouvrir le dialogue de paramétrage"
 
-#: lib/gui/simulator/view_panel.py:94
+#: lib/gui/simulator/view_panel.py:101
 msgid "Detach/attach simulator window"
 msgstr "Détacher/Attacher le simulateur"
 
-#: lib/gui/simulator/view_panel.py:100
+#: lib/gui/simulator/view_panel.py:107
 msgid "Show"
 msgstr "Montrer"
 
-#: lib/gui/simulator/view_panel.py:171
+#: lib/gui/simulator/view_panel.py:185
 msgid "Simulator Preferences"
 msgstr "Préférences du simulateur"
 
-#: lib/gui/simulator/view_panel.py:179
+#: lib/gui/simulator/view_panel.py:193
 msgid "Design Info"
 msgstr "Information sur la broderie"
 
@@ -4327,7 +4332,7 @@ msgstr "Écriture : latin"
 
 #: lib/lettering/font.py:97
 msgid "JSON file missing. Expected a JSON file at the following location:"
-msgstr "Il manque le fichier JSON. Un fichier JSO est attendu à cet endroit :"
+msgstr "Il manque le fichier JSON. Un fichier JSON est attendu à cet endroit :"
 
 #: lib/lettering/font.py:99
 msgid "Generate the JSON file through:\n"
@@ -5305,7 +5310,7 @@ msgstr "Cette extension tente de créer un chemin de broderie unique qui parcour
 #: inx/inkstitch_redwork.inx:31 inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_satin_to_stroke.inx:15
 #: inx/inkstitch_stitch_plan_preview.inx:45 inx/inkstitch_troubleshoot.inx:15
-#: inx/inkstitch_unlink_clone.inx:13
+#: inx/inkstitch_unlink_clone.inx:14
 msgid "More information on our website"
 msgstr "Plus d'information sur notre site web"
 
@@ -5328,31 +5333,31 @@ msgstr "Outils : Satin"
 
 #: inx/inkstitch_batch_lettering.inx:3
 msgid "Batch Lettering"
-msgstr ""
+msgstr "Lettrage par lot"
 
 #: inx/inkstitch_batch_lettering.inx:13
 msgid "Enter the text. Each line of text will be exported to a separate file."
-msgstr ""
+msgstr "Entrez le texte. Chaque ligne de texte sera exportée dans un fichier séparé."
 
 #: inx/inkstitch_batch_lettering.inx:15
 msgid "Custom separator"
-msgstr ""
+msgstr "Séparateur personnalisé"
 
 #: inx/inkstitch_batch_lettering.inx:15
 msgid "Set a custom separator for multiline text export. Leave empty for line break."
-msgstr ""
+msgstr "Choisir un séparateur personnalisé pour les exports de texte sur plusieurs lignes. Laisser vide pour fin de ligne."
 
 #: inx/inkstitch_batch_lettering.inx:19
 msgid "Font name"
-msgstr ""
+msgstr "Nom de la police"
 
 #: inx/inkstitch_batch_lettering.inx:21
 msgid "The scale value must be within the scale range of the specified font."
-msgstr ""
+msgstr "La valeur de l'échelle doit être dans l'intervalle spécifié pour la police."
 
 #: inx/inkstitch_batch_lettering.inx:35
 msgid "Align Multiline Text"
-msgstr ""
+msgstr "Alignement des lignes de texte"
 
 #: inx/inkstitch_batch_lettering.inx:40
 msgid "Block (letterpacing)"
@@ -5360,11 +5365,11 @@ msgstr ""
 
 #: inx/inkstitch_batch_lettering.inx:48
 msgid "Lettering along path: text position"
-msgstr ""
+msgstr "Lettrage le long d'un chemin : position du texte"
 
 #: inx/inkstitch_batch_lettering.inx:48
 msgid "Uses this text position when using lettering along path"
-msgstr ""
+msgstr "Utilise cette position du texte pour du lettrage le long d'un chemin"
 
 #: inx/inkstitch_batch_lettering.inx:52
 #: inx/inkstitch_lettering_along_path.inx:22
@@ -5373,31 +5378,31 @@ msgstr "Étendre"
 
 #: inx/inkstitch_batch_lettering.inx:57
 msgid "File formats"
-msgstr ""
+msgstr "Formats de fichier"
 
 #: inx/inkstitch_batch_lettering.inx:57
 msgid "Comma separated list of file formats"
-msgstr ""
+msgstr "Liste de formats de fichiers, séparés par des virgules"
 
 #: inx/inkstitch_batch_lettering.inx:63
 msgid "Use this extension to save multiple files with the given text."
-msgstr ""
+msgstr "Utiliser cette extension pour sauvegarder plusieurs fichiers avec le texte donné."
 
 #: inx/inkstitch_batch_lettering.inx:65
 msgid "When the document contains a path element labeled as \"batch lettering\" it will be used to place the text along this path. The path itself will be removed and won't be rendered."
-msgstr ""
+msgstr "Quand le document contient un chemin avec le label \"batch lettering\", il sera utilisé par lettrage sur chemin pour placer le texte. Le chemin lui-même sera supprimé et non rendu."
 
 #: inx/inkstitch_batch_lettering.inx:68
 msgid "https://inkstitch.org/docs/lettering/#batch-export"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/lettering/#batch-export"
 
 #: inx/inkstitch_batch_lettering.inx:75
 msgid "Ink/Stitch: batch lettering (.zip)"
-msgstr ""
+msgstr "Ink/Stitch : lettrage par lot (.zip)"
 
 #: inx/inkstitch_batch_lettering.inx:76
 msgid "Create a zip with multiple files including embroidered text using Ink/Stitch"
-msgstr ""
+msgstr "Crée un zip avec des fichiers multiples qui incluent du texte brodé en utilisant Ink/Stitch"
 
 #: inx/inkstitch_break_apart.inx:3
 msgid "Break Apart Fill Objects"
@@ -5691,7 +5696,7 @@ msgstr "Applique les paramètres du premier élément sélectionné au reste de 
 #: inx/inkstitch_selection_to_anchor_line.inx:12
 #: inx/inkstitch_selection_to_guide_line.inx:12
 #: inx/inkstitch_selection_to_pattern.inx:12 inx/inkstitch_test_swatches.inx:11
-#: inx/inkstitch_unlink_clone.inx:23
+#: inx/inkstitch_unlink_clone.inx:24
 msgid "Edit"
 msgstr "Édition"
 
@@ -6414,39 +6419,39 @@ msgstr "convertir un fichier ZXY en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_install.inx:3
 msgid "Install Addons for Inkscape"
-msgstr ""
+msgstr "Installer des compléments pour Inkscape"
 
 #: inx/inkstitch_install.inx:10
 msgid "Install thread color palettes"
-msgstr ""
+msgstr "Installer des palettes de couleur de fil"
 
 #: inx/inkstitch_install.inx:10
 msgid "Installs some default thread color palettes."
-msgstr ""
+msgstr "Installe certaines palettes de couleur de fils."
 
 #: inx/inkstitch_install.inx:12
 msgid "Install symbol libraries"
-msgstr ""
+msgstr "Installer des bibliothéques de symboles"
 
 #: inx/inkstitch_install.inx:12
 msgid "Installs symbol libraries with reusable motifs for embroidery"
-msgstr ""
+msgstr "Installe des bibliothèques de symboles avec des motifs réutilisables pour la broderie"
 
 #: inx/inkstitch_install.inx:15
 msgid "Installs color palettes or a motif stitch symbol library into Inkscape."
-msgstr ""
+msgstr "Installe des palettes de couleurs ou une bibliothèque de motif de points dans Inkscape."
 
 #: inx/inkstitch_install.inx:16
 msgid "Please restart Inkscape after the installation is complete."
-msgstr ""
+msgstr "Merci de redémarrer Inkscape après avoir terminé l'installation."
 
 #: inx/inkstitch_install.inx:19
 msgid "https://inkstitch.org/docs/install-addons"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/install-addons"
 
 #: inx/inkstitch_install.inx:26
 msgid "Installs color palettes or a symbol library for motif stitches into Inkscape"
-msgstr ""
+msgstr "Installe des palettes de couleur ou une bibliothèque de symboles (pour utiliser des motifs sur chemin) dans Inkscape"
 
 #: inx/inkstitch_install_custom_palette.inx:3
 msgid "Install custom palette"
@@ -6854,7 +6859,7 @@ msgstr "Hauteur de ligne (par défaut : 100)"
 
 #: inx/inkstitch_lettering_generate_json.inx:126
 msgid "Overwrite word spacing information from font file."
-msgstr "Surcharger la valeur d’espacement des mots du fichier."
+msgstr "Surcharge la valeur d’espacement des mots du fichier."
 
 #: inx/inkstitch_lettering_generate_json.inx:128
 msgid "Word spacing (px)"
@@ -7548,7 +7553,7 @@ msgstr "Génère un satin multicolore"
 
 #: inx/inkstitch_satin_to_stroke.inx:3
 msgid "Satin to Stroke"
-msgstr ""
+msgstr "Satin en Trait"
 
 #: inx/inkstitch_satin_to_stroke.inx:10
 msgid "Keep satin column"
@@ -7895,7 +7900,7 @@ msgstr "https://inkstitch.org/fr/docs/satin-tools/#stroke-to-live-path-effect-sa
 
 #: inx/inkstitch_stroke_to_satin.inx:3
 msgid "Stroke to Satin"
-msgstr ""
+msgstr "Trait en Satin"
 
 #: inx/inkstitch_tartan.inx:9
 msgid "Tartan stripe editor"
@@ -7949,15 +7954,19 @@ msgstr "Délier le clone"
 msgid "Recursive"
 msgstr "Récursivement"
 
-#: inx/inkstitch_unlink_clone.inx:11
+#: inx/inkstitch_unlink_clone.inx:9
+msgid "Group unlinked symbols"
+msgstr "Grouper les clones déliés"
+
+#: inx/inkstitch_unlink_clone.inx:12
 msgid "Unlink clones and apply the fill stitch angle."
 msgstr "Délier les clones et appliquer l'angle de broderie."
 
-#: inx/inkstitch_unlink_clone.inx:14
+#: inx/inkstitch_unlink_clone.inx:15
 msgid "https://inkstitch.org/docs/edit/#unlink-clone/"
 msgstr "https://inkstitch.org/fr/docs/edit/#unlink-clone/"
 
-#: inx/inkstitch_unlink_clone.inx:20
+#: inx/inkstitch_unlink_clone.inx:21
 msgid "Unlink clones and apply the fill stitch angle"
 msgstr "Délier les clones et appliquer l'angle de remplissage"
 
