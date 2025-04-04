@@ -48,6 +48,8 @@ def get_font_by_id(font_id):
         except OSError:
             continue
         for font_dir in font_dirs:
+            if not os.path.isdir(os.path.join(font_path, font_dir)) or font_dir.startswith('.'):
+                continue
             font = Font(os.path.join(font_path, font_dir))
             if font.id == font_id:
                 return font
