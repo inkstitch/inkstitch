@@ -37,7 +37,7 @@
                    <option value="center">Center</option>
                    <option value="right">Right</option>
                    <option value="block">Block (default)</option>
-                   <option value="letterspacing">Block (letterpacing)</option>
+                   <option value="letterspacing">Block (letterspacing)</option>
                 </param>
               </vbox>
               <spacer />
