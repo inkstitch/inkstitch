@@ -1267,19 +1267,25 @@ class SatinColumn(EmbroideryElement):
 
         return pairs
 
-    def _connect_stitch_group_with_point(self, first_stitch_group, start_point, connect_to_satin_end=False):
+    def _connect_stitch_group_with_point(self, first_stitch_group, start_point, end_point=None):
         start_stitch_group = StitchGroup(
             color=self.color,
             stitches=[Stitch(*start_point)]
         )
         connector = self.offset_center_line
-        split_line = shgeo.LineString(self.find_cut_points(start_point))
+
+        if end_point:
+            split_line = shgeo.LineString(self.find_cut_points(end_point))
+        else:
+            split_line = shgeo.LineString(self.find_cut_points(start_point))
         start = connector.project(nearest_points(split_line, connector)[1])
-        if connect_to_satin_end and not self._center_walk_is_odd():
+
+        if end_point and not self._center_walk_is_odd():
             end = connector.length
         else:
             split_line = shgeo.LineString(self.find_cut_points(first_stitch_group.stitches[0]))
             end = connector.project(nearest_points(split_line, connector)[1])
+
         start_path = substring(connector, start, end)
 
         stitches = [Stitch(*coord) for coord in start_path.coords]
@@ -1850,7 +1856,7 @@ class SatinColumn(EmbroideryElement):
         if end_point:
             ordered_stitch_groups = []
             ordered_stitch_groups.extend(stitch_groups[::2])
-            ordered_stitch_groups.append(self._connect_stitch_group_with_point(stitch_groups[1], ordered_stitch_groups[-1].stitches[-1], True))
+            ordered_stitch_groups.append(self._connect_stitch_group_with_point(stitch_groups[1], ordered_stitch_groups[-1].stitches[-1], end_point))
             ordered_stitch_groups.extend(stitch_groups[1::2])
             return ordered_stitch_groups
         return stitch_groups
