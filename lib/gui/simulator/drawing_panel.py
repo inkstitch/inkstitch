@@ -137,11 +137,7 @@ class DrawingPanel(wx.Panel):
         canvas = wx.GraphicsContext.Create(dc)
 
         self.draw_stitches(canvas)
-
-        if platform != "win32" or self.current_stitch >= 2:
-            # on Windows the positioning of the ruler is a bit problematic
-            # when current_stitch is smaller than 2
-            self.draw_scale(canvas)
+        self.draw_scale(canvas)
 
     def draw_page(self, canvas):
         self._update_background_color()
@@ -214,6 +210,7 @@ class DrawingPanel(wx.Panel):
         canvas.StrokeLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
 
     def draw_scale(self, canvas):
+        canvas.SetTransform(canvas.CreateMatrix())
         canvas.BeginLayer(1)
 
         canvas_width, canvas_height = self.GetClientSize()
