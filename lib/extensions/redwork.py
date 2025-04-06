@@ -97,7 +97,8 @@ class Redwork(InkstitchExtension):
             if command:
                 # remove command symbol
                 command_group = command.connector.getparent()
-                self.svg.selection.pop(command_group.get_id())
+                if command_group in self.svg.selection:
+                    self.svg.selection.pop(command_group.get_id())
                 command_group.delete()
                 # return the first occurence directly
                 return command.target_point
