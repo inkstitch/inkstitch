@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-03 01:39+0000\n"
-"PO-Revision-Date: 2025-04-03 01:39\n"
+"PO-Revision-Date: 2025-04-06 01:45\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -4006,7 +4006,7 @@ msgstr "Hintergrundfarbe ändern"
 
 #: lib/gui/simulator/view_panel.py:82
 msgid "Show crosshair"
-msgstr ""
+msgstr "Fadenkreuz anzeigen"
 
 #: lib/gui/simulator/view_panel.py:92
 msgid "Show page"
@@ -7955,7 +7955,7 @@ msgstr "Rekursiv"
 
 #: inx/inkstitch_unlink_clone.inx:9
 msgid "Group unlinked symbols"
-msgstr ""
+msgstr "Aufgelöste Symbole gruppieren"
 
 #: inx/inkstitch_unlink_clone.inx:12
 msgid "Unlink clones and apply the fill stitch angle."
