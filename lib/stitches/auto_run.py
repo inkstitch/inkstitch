@@ -273,14 +273,17 @@ def create_element(path, position, direction, element):
     if direction == "autorun":
         label = _("AutoRun %d") % index
         dasharray = 'none'
+        path_type = 'autorun-top'
     else:
         label = _("AutoRun Underpath %d") % index
         dasharray = '2 1.1'
+        path_type = 'autorun-underpath'
 
     node = inkex.PathElement()
     node.set("id", generate_unique_id(element.node, el_id))
     node.set(INKSCAPE_LABEL, label)
     node.set("d", path)
+    node.set("inkstitch:path_type", path_type)
     node.set("style", element.node.style)
     node.style["fill"] = 'none'
     node.style["stroke-dasharray"] = dasharray

@@ -160,9 +160,11 @@ class Redwork(InkstitchExtension):
     def _insert_element(self, index, path, group, style, transform, redwork=True):
         if redwork:
             path_id = self.svg.get_unique_id('redwork_')
+            path_type = 'redwork-top'
             label = _("Redwork") + f' {index}'
         else:
             path_id = self.svg.get_unique_id('underpath_')
+            path_type = 'redwork-underpath'
             label = _("Redwork Underpath") + f' {index}'
 
         element = PathElement(
@@ -175,6 +177,7 @@ class Redwork(InkstitchExtension):
 
         element.label = label
         element.set('inkstitch:running_stitch_length_mm', self.options.redwork_running_stitch_length_mm)
+        element.set('inkstitch:path_type', path_type)
 
         if redwork:
             element.set('inkstitch:bean_stitch_repeats', self.options.redwork_bean_stitch_repeats)

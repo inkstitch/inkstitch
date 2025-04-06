@@ -424,6 +424,8 @@ def _route_single_satin(elements, starting_point, keep_originals):
     stroke_width = convert_stroke_width(satin)
     run_element.node.style['stroke-width'] = stroke_width
 
+    run_element.node.set('inkstitch:path_type', 'satin-underpath')
+
     parent.insert(index, run_element.node)
     if not keep_originals:
         remove_original_elements([satin], True)
@@ -591,6 +593,7 @@ def name_elements(new_elements, preserve_order):
             element.node.set("id", generate_unique_id(element.node, "autosatin"))
         else:
             element.node.set("id", generate_unique_id(element.node, "autosatinrun"))
+            element.node.set("inkstitch:path_type", 'satin-underpath')
 
         if not (preserve_order and INKSCAPE_LABEL in element.node.attrib):
             if isinstance(element, SatinColumn):

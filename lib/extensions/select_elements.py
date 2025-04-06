@@ -163,9 +163,18 @@ class SelectElements(InkstitchExtension):
         element_id = element.node.get_id() or ''
         conditions = {
             'all': True,
-            'autorun-top': element_id.startswith('autorun') or element_id.startswith('redwork'),
-            'autorun-underpath': element_id.startswith('underpath'),
-            'autosatin-underpath': element_id.startswith('autosatinrun')}
+            'autorun-top': (
+                element_id.startswith('autorun') or  # legacy search, doesn't work when paths have been duplicated within Inkscape
+                element_id.startswith('redwork') or  # legacy search
+                element.node.get('inkstitch:path_type') == 'redwork-top' or
+                element.node.get('inkstitch:path_type') == 'autorun-top'),
+            'autorun-underpath': (
+                element_id.startswith('underpath') or  # legacy search
+                element.node.get('inkstitch:path_type') == 'redwork-underpath' or
+                element.node.get('inkstitch:path_type') == 'autorun-underpath'),
+            'autosatin-underpath': (
+                element_id.startswith('autosatinrun') or  # legacy search
+                element.node.get('inkstitch:path_type') == 'satin-underpath')}
         return conditions[self.options.running_stitch_condition]
 
     def _bean_stitch_repeats(self, element):
