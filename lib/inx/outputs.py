@@ -13,13 +13,15 @@ def pyembroidery_output_formats():
         if 'writer' in format:
             description = format['description']
             if format['category'] == "color":
-                description = "%s [COLOR]" % description
+                description = f"{description} [COLOR]"
             elif format['category'] == "image":
-                description = "%s [IMAGE]" % description
+                description = f"{description} [IMAGE]"
             elif format['category'] == "stitch":
-                description = "%s [STITCH]" % description
+                description = f"{description} [STITCH]"
+            elif format['category'] == "quilting":
+                description = f"{description} [QUILTING]"
             elif format['category'] != "embroidery":
-                description = "%s [DEBUG]" % description
+                description = f"{description} [DEBUG]"
             if not format['extension'] == 'png':
                 yield format['extension'], description, format['mimetype'], format['category']
 
