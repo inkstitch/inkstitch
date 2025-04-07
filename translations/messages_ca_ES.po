@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-03 01:39+0000\n"
-"PO-Revision-Date: 2025-04-03 01:39\n"
+"POT-Creation-Date: 2025-04-07 01:42+0000\n"
+"PO-Revision-Date: 2025-04-07 01:42\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-03 01:39+0000\n"
+"POT-Creation-Date: 2025-04-07 01:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3542,7 +3542,7 @@ msgstr ""
 msgid "Block (default)"
 msgstr ""
 
-#: lib/gui/lettering/option_panel.py:89
+#: lib/gui/lettering/option_panel.py:89 inx/inkstitch_batch_lettering.inx:40
 msgid "Block (letterspacing)"
 msgstr ""
 
@@ -5332,10 +5332,6 @@ msgstr ""
 
 #: inx/inkstitch_batch_lettering.inx:35
 msgid "Align Multiline Text"
-msgstr ""
-
-#: inx/inkstitch_batch_lettering.inx:40
-msgid "Block (letterpacing)"
 msgstr ""
 
 #: inx/inkstitch_batch_lettering.inx:48
