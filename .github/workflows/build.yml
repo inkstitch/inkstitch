@@ -211,7 +211,6 @@ jobs:
           # for signing rpm
           apt-get install -y rpm
       - name: install/build python dependencies
-        if: steps.build-venv-cache.outputs.cache-hit != 'true'
         shell: bash
         run: |
           bash bin/build-linux32-venv
