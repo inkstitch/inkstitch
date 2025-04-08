@@ -45,7 +45,7 @@ jobs:
           python -m pip install pycairo
           python -m pip install PyGObject==3.50.0
 
-          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.2-cp39-cp39-linux_x86_64.whl
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
           # for networkx
@@ -117,7 +117,7 @@ jobs:
           python -m pip install pycairo
           python -m pip install PyGObject==3.50.0
 
-          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04/wxPython-4.2.2-cp312-cp312-linux_x86_64.whl
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
           # for networkx

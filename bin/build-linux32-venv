@@ -15,6 +15,8 @@ virtualenv/bin/pip install PyGObject==3.50.0
 virtualenv/bin/pip install wxPython
 # build and install geos for shapely
 bash bin/build-linux
+virtualenv/bin/pip uninstall -y shapely
+virtualenv/bin/pip pip cache remove shapely
 virtualenv/bin/pip install -v shapely --no-binary shapely
 
 virtualenv/bin/pip install -r requirements.txt
