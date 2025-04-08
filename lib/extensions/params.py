@@ -97,6 +97,15 @@ class ParamsTab(ScrolledPanel):
 
         if self.toggle:
             self.update_toggle_state()
+            # when there is a selection with satin elements and elements the user wants to turn into satins,
+            # the satin checkbox will be activated and everything (except for running stitches with
+            # only one subpath) will show in the simulator as satin.
+            # It is highly confusing for users, when these elements are still running stitches when they click on apply.
+            # So let's add the satin column param to the list of changed_inputs right away - even when they didn't actively
+            # change it
+            if self.toggle and self.toggle.name == 'satin_column':
+                self.enable_change_indicator(self.toggle.name)
+                self.changed_inputs.add(self.toggle_checkbox)
 
         self.update_enable_widgets()
 
