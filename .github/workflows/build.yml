@@ -8,7 +8,7 @@ on:
       - "v*"
 jobs:
   linux64-old:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -45,7 +45,7 @@ jobs:
           python -m pip install pycairo
           python -m pip install PyGObject==3.50.0
 
-          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
           # for networkx
@@ -77,7 +77,7 @@ jobs:
           path: artifacts
 
   linux64-new:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
@@ -211,6 +211,7 @@ jobs:
           # for signing rpm
           apt-get install -y rpm
       - name: install/build python dependencies
+        if: steps.build-venv-cache.outputs.cache-hit != 'true'
         shell: bash
         run: |
           bash bin/build-linux32-venv
