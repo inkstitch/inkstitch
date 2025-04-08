@@ -203,7 +203,7 @@ jobs:
           apt-get install -y libgirepository1.0-dev libcairo2-dev
 
           # for shapely
-          apt-get install -y build-essential libgtk-3-dev libgeos-dev cmake
+          apt-get install -y build-essential libgtk-3-dev cmake
 
           # for numpy
           apt-get install -y libopenblas-dev liblapack-dev
