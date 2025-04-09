@@ -606,8 +606,9 @@ def name_elements(new_elements, preserve_order):
 def _ensure_even_repeats(element):
     # center underlay can have an odd number of repeats, this would cause jumps in auto route satin
     # so let's set it to an even number of repeats, but not lower than 2
-    if int(element.node.get(INKSTITCH_ATTRIBS['center_walk_underlay_repeats'], 2)) % 2 == 1:
-        repeats = max(int(element.node.get(INKSTITCH_ATTRIBS['center_walk_underlay_repeats'])) - 1, 2)
+    center_walk_underlay_repeats = element.get_int_param('center_walk_underlay_repeats', 2)
+    if center_walk_underlay_repeats % 2 == 1:
+        repeats = max(center_walk_underlay_repeats - 1, 2)
         element.node.set(INKSTITCH_ATTRIBS['center_walk_underlay_repeats'], repeats)
 
 
