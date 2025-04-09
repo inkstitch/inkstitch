@@ -218,8 +218,10 @@ jobs:
 
           # for signing rpm
           apt-get install -y rpm
-          # test install geos
-          ./bin/build-linux
+      - name: build shapely
+        shell: bash
+        run: |
+          bin/build-linux
       - name: install/build python dependencies
         if: steps.build-venv-cache.outputs.cache-hit != 'true'
         shell: bash
