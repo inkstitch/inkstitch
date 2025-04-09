@@ -13,8 +13,8 @@ virtualenv/bin/pip install pycairo
 virtualenv/bin/pip install PyGObject==3.50.0
 
 virtualenv/bin/pip install wxPython
-# build and install geos for shapely
-./bin/build-linux
+# install geos for shapely
+virtualenv/bin/pip install -v shapely
 
 virtualenv/bin/pip install -r requirements.txt
 

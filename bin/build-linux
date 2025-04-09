@@ -31,6 +31,6 @@ cd ../..
 #python -m pip uninstall -y shapely
 #python -m pip cache remove shapely
 #python -m pip install -v shapely --no-binary shapely
-virtualenv/bin/pip uninstall -y shapely
-virtualenv/bin/pip cache remove shapely
-virtualenv/bin/pip install -v shapely
+#virtualenv/bin/pip uninstall -y shapely
+#virtualenv/bin/pip cache remove shapely
+#virtualenv/bin/pip install -v shapely
