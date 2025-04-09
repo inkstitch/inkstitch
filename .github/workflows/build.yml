@@ -37,6 +37,9 @@ jobs:
           # for shapely
           sudo apt install build-essential libgtk-3-dev cmake
 
+          # for numpy
+          sudo apt install  gfortran libopenblas-dev liblapack-dev pkg-config
+
           uname -a
           python --version
           python -m pip --version
@@ -44,6 +47,7 @@ jobs:
 
           python -m pip install pycairo
           python -m pip install PyGObject==3.50.0
+          python -m pip install numpy --no-binary numpy
 
           python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
 
@@ -109,6 +113,9 @@ jobs:
           # for sigining
           sudo apt install rpm
 
+          # for numpy
+          sudo apt install  gfortran libopenblas-dev liblapack-dev pkg-config
+
           uname -a
           python --version
           python -m pip --version
@@ -116,6 +123,7 @@ jobs:
 
           python -m pip install pycairo
           python -m pip install PyGObject==3.50.0
+          python -m pip install numpy --no-binary numpy
 
           python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
 
