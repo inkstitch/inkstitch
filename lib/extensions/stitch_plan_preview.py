@@ -21,6 +21,7 @@ from ..svg.tags import (INKSCAPE_GROUPMODE, INKSTITCH_ATTRIBS,
 from .base import InkstitchExtension
 from .stitch_plan_preview_undo import reset_stitch_plan
 from .utils.inkex_command import inkscape
+from .utils.cancel_dialog import with_cancel_dialog
 
 
 class StitchPlanPreview(InkstitchExtension):
@@ -37,6 +38,7 @@ class StitchPlanPreview(InkstitchExtension):
         self.arg_parser.add_argument("-l", "--ignore-layer", type=Boolean, default=True, dest="ignore_layer")
         self.arg_parser.add_argument("-o", "--overwrite", type=Boolean, default=True, dest="overwrite")
 
+    @with_cancel_dialog('Stitch Plan Preview', 'Generating stitch plan preview...')
     def effect(self):
         realistic, dpi = self.parse_mode()
 
