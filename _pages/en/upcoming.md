@@ -152,7 +152,7 @@ A tool for font authors which sets a specified color sort index on selected elem
 ### General
 
 * Request permission to update if inkstitch svg version is not specified in the svg file. [#3228](https://github.com/inkstitch/inkstitch/pull/3228)
-* Ink/Stitch can read now read the clipped path of groups correctly [#3261](https://github.com/inkstitch/inkstitch/pull/3261)<br>
+* Ink/Stitch can now read the clipped path of groups correctly [#3261](https://github.com/inkstitch/inkstitch/pull/3261)<br>
   This works well together with the redwork tool.
 
   ![cliped groups](/assets/images/tutorials/mandala/lettremandala.svg)

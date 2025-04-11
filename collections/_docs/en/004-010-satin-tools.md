@@ -1,7 +1,7 @@
 ---
 title: "Tools: Satin"
 permalink: /docs/satin-tools/
-last_modified_at: 2025-01-05
+last_modified_at: 2025-04-11
 toc: true
 ---
 `Extensions > Ink/Stitch  > Tools: Satin` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
@@ -164,6 +164,9 @@ If you want to understand how this extension works internally, [read this](/tuto
 ## Stroke to Live Path Effect Satin
 
 Converts a stroke into a satin using a live path effect. This makes it more adaptable in width and shape as a normal satin column.
+
+**Please avoid sharp corners.** As with normal satins, it is better to split up the path at sharp corners. Sharp corners on path effect satins may also lead to an inconsistant width.
+{: .notice--warning }
 
 ### Usage
 

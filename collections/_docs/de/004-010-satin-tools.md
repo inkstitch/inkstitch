@@ -1,7 +1,7 @@
 ---
 title: "Satin Werkzeuge"
 permalink: /de/docs/satin-tools/
-last_modified_at: 2025-01-05
+last_modified_at: 2025-04-11
 toc: true
 ---
 Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinsäulen](/docs/stitches/satin-column/) erleichtern sollen.
@@ -164,6 +164,9 @@ Für nähere Infos über die Funktionsweise dieser Erweiterung gibt es im [Tutor
 ## Linie zu Pfadeffekt-Satin
 
 Konvertiert eine Linie in eine Satinsäule mit Hilfe von Pfadeffekten. Dies macht es einfacher Form und Breite auch im Nachhinein noch anzupassen.
+
+**Verwende keine spitzen Ecken.** Genauso wie bei normalen Satinsäulen, sollten spitze Ecken in verschiedene Pfade aufgespalten werden. Spitze Ecken bei Pfadeffekt-Satin kann außerdem zu einer inkonsistenten Breite führen.
+{: .notice--warning }
 
 ### Funktionsweise
 

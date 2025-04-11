@@ -168,6 +168,9 @@ Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin), si vous souhaitez comp
 
 Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend le satin plus adaptable en forme et en largeur qu'une conversion en colonne satin normale. La ligne reste une ligne, mais un effet de chemin lui est appliqué. Si vous utilisez l'éditeur de noeud, vous pourrez agir sur les noeuds de la ligne, même après application de l'effet.
 
+**Please avoid sharp corners.** As with normal satins, it is better to split up the path at sharp corners. Sharp corners on path effect satins may also lead to an inconsistant width.
+{: .notice--warning }
+
 ### Usage
 
 1. Sélectionner une ligne ou un Effect de Chemin Satin
