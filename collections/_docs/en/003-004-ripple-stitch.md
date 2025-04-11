@@ -1,7 +1,7 @@
 ---
 title: "Ripple Stitch"
 permalink: /docs/stitches/ripple-stitch/
-last_modified_at: 2024-04-27
+last_modified_at: 2025-04-11
 toc: true
 ---
 ## What it is
@@ -75,6 +75,15 @@ With satin guides you will have the ability to lead the ripples precisely using 
 * Select the newly created object and run `Extensions > Ink/Stitch > Edit > Selection to guide line`.
 * Select the ripple object and run params. Adapt parameters to your liking.
 
+The pattern for satin guided ripples can be adjusted in its direction with the help of a so-called anchor line.
+
+* Draw a line from top to bottom across the pattern. The positioning corresponds to the satin rungs.
+* Select the line and mark it as an anchor line via `Extensions > Ink/Stitch > Edit > Selection to anchor line`.
+
+![satin guided ripple](/lokal/assets/images/docs/ripple_satin_guide.svg)
+
+[Download](/lokal/assets/images/docs/ripple_satin_guide.svg){: download="satin_guided_ripples.svg" }
+
 ## Params
 
 Params||Description
@@ -83,23 +92,27 @@ Running stitch along paths    |  ☑ |Must be enabled for these settings to take
 Method                        || Chose Ripple stitch 
 Repeats                       ||◦ Defines how many times to run down and back along the final embroidery path<br />◦ Default: 1 (traveling once from the start to the end of the path)<br />◦ Odd number: stitches will end at the end of the path<br />◦ Even number: stitching will return to the start of the path
 Bean stitch number of repeats ||◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/) which also applies to ripple stitching<br>◦ Backtrack each stitch this many times.<br>◦ A value of 1 would triple each stitch (forward, back, forward).<br>◦ A value of 2 would quintuple each stitch, etc.<br>◦ It is possible to define a repeat pattern by entering multiple values separated by a space.
+Manual stitch placement       ||No extra stitches will be added to the original ripple pattern and the running stich length value will be ignored.
 Running stitch length         ||Length of stitches in [Running Stitch Mode](/docs/stitches/running-stitch/)
 Running stitch tolerance      ||All stitches must be within this distance of the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded.
-Randomize stitch length       |Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts.
-Random stitch length jitter   |Amount to vary the length of each stitch by when randomizing. Randomize stitch length must be activated.
-Number of lines|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Chose how many times the ripple replicates. Default value is 10.
-Minimum line distance || Overwrites the number of lines setting.
-Stagger rows this many times before repeating    ||  Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. For linear ripples only. 
+Randomize stitch length       ||Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts.
+Random stitch length jitter   ||Amount to vary the length of each stitch by when randomizing. Randomize stitch length must be activated.<br>Example: For a standard stitch length of 4mm a jitter value of 50% will add or remove up to 2mm (50% of 4mm = 2mm). This means the resulting stitch length will vary from 2mm - 6mm.
+Number of lines               |<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Chose how many times the ripple replicates. Default value is 10.
+Minimum line distance         ||Overwrites the number of lines setting.
+Pattern position              |◦ Line count / Minimum line distance (default): uses either the value for line count or minium line distance (if given)<br>◦ Render at rungs: render a pattern at each rung<br>◦ Adaptive + Minimum line count: adapts the pattern distance according to it's size|Pattern position for satin guided ripples.
+Stagger rows this many times before repeating ||Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. For linear ripples only. 
 ◦Skip first lines <br /> ◦Skip last lines  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Skip"/>| Skip (do not embroider)  that number of replications at start and/or end of the embroidery.
+Flip every second line        | ☑  or ▢|Linear ripple only: wether to flip the pattern every second line or not
 Line distance exponent        |<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>| ◦ With default value of 1 space between replications is constant<br />◦ With a value greater than 1, the space between two consecutive replications increases as one moves away from the original ripple   <br />◦ With a value smaller than 1, the space between two consecutive replications decreases as one moves away from the original ripple.
 Flip exponent                 |☑  or ▢| exchange role of first and last line in the computation of  line distance
 Reverse                       |☑  or ▢|  Reverse the final embroidery path.  Has no effect on the other  parameters.
 Reverse rails|| Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail.
-Grid  size                    |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| If the size is strictly positive a grid effect is added. The grid size controls how far apart the new  lines are. 
+Grid  size                    |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| If the size is strictly positive a grid effect is added. The grid size controls how far apart the new  lines are.
+Stitch grid first             | ☑  or ▢|Reverse the stitch path, so that the grid is stitched first.
 Scale axes                    |XY or X or Y or None | for guided ripple only
 Starting scale                | for guided ripple only|How big the first copy of the line should be, in percent. 
 Ending scale                  | for guided ripple only| How big the last copy of the line should be, in percent.
-Rotate                        | ☑  or ▢| for guided ripple only
+Rotate                        || for guided ripple only
 Join Style                    |<img src="/assets/images/docs/flat_or_point.svg" alt="Join Stile"/> |for non circular ripple, how the ripples are joined : Flat(top) or Point(bottom)
 Minimum stitch length         ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
 Minimum  jump stitch  length             ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
