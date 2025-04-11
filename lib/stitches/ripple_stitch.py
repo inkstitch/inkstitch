@@ -477,17 +477,18 @@ def _generate_satin_guide_helper_lines_with_constant_pattern_distance(stroke, gu
 
 def _generate_satin_guide_helper_lines_with_varying_pattern_distance(stroke, guide_line, outline, outline0, outline_width, outline_rotation):
     # rotate pattern and get the pattern width
-    minx, miny, maxx, maxy = _transform_outline(Point([0, 0]), outline_rotation, 1, outline, Point(outline0), 0).bounds
-    pattern_width = maxx - minx
+    transformed_outline = _transform_outline(Point([0, 0]), outline_rotation, 1, outline, Point(outline0), 0)
+    minx, miny, maxx, maxy = transformed_outline.bounds
+    pattern_height = maxy - miny
 
     distance = 0
+    min_distance = stroke.min_line_dist or 0
     line_point_dict = defaultdict(list)
     while True:
         if distance > guide_line.center_line.length:
             break
         check_stop_flag()
-        cut_point = guide_line.center_line.interpolate(distance)
-        point0, point1 = guide_line.find_cut_points(*cut_point.coords)
+        point0, point1 = get_cut_points(guide_line, distance)
 
         # move to point0, rotate and scale so the other point hits point1
         scaling = (point1 - point0).length() / outline_width
@@ -496,14 +497,18 @@ def _generate_satin_guide_helper_lines_with_varying_pattern_distance(stroke, gui
         translation = point0 - outline0
         transformed_outline = _transform_outline(translation, rotation, scaling, outline, Point(point0), 0)
 
-        min_distance = stroke.min_line_dist or 0
-        distance += max(1, (pattern_width * scaling) + min_distance)
+        distance += max(0.01, (pattern_height * scaling) + min_distance)
 
         # outline to helper line points
         for j, point in enumerate(transformed_outline.coords):
             line_point_dict[j].append(InkstitchPoint(point[0], point[1]))
 
     return _point_dict_to_helper_lines(len(outline.coords), line_point_dict)
+
+
+def get_cut_points(guide_line, distance):
+    cut_point = guide_line.center_line.interpolate(distance)
+    return guide_line.find_cut_points(*cut_point.coords)
 
 
 def _transform_outline(translation, rotation, scaling, outline, origin, scale_axis):
