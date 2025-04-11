@@ -49,7 +49,7 @@ def ripple_stitch(stroke):
 
 def _get_stitches(stroke, is_linear, lines, skip_start):
     if stroke.manual_pattern_placement:
-        if stroke.flip_copies:
+        if stroke.flip_copies and is_linear:
             stitches = []
             for i, line in enumerate(lines):
                 if i % 2 == 0:
