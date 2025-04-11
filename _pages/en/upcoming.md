@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-03-29
+last_modified_at: 2025-04-11
 sidebar:
   nav: pages
 toc: true
@@ -281,6 +281,10 @@ Add option for text position along the path (left, center, right, stretch)
 
 [Read more](/docs/troubleshoot/#troubleshoot-objects)
 
+### Unlink clones
+
+* add option to group / not group unlinked symbol elements [#3624](https://github.com/inkstitch/inkstitch/pull/3624)
+
 ## Removed extensions
 
 ### Glyphlist update
@@ -316,6 +320,7 @@ Glyphlist update has been part of the font management and was replaced by the mu
 * Manual stitch placement for ripple patterns [#3256](https://github.com/inkstitch/inkstitch/pull/3256)
 * Add stitch grid first option [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
 * Satin guided ripples:
+
   ![satin guided ripple](/assets/images/docs/ripple_satin_guide.svg)
 
   * Option wether to flip each second line of the pattern or not
@@ -362,6 +367,7 @@ Ink/Stitch can now export multiple files with text at once. A path with a specif
   It is only visible in manual installs and will not render, unless `enable_sew_stack` is enabled in the debug config file.
   Please note, that this will alter the start and end points of the elements and should only be used for development purposes.
 
+* sign windows release with release certificate [#3613](https://github.com/inkstitch/inkstitch/pull/3613)
 * Mypy type correctness [#3199](https://github.com/inkstitch/inkstitch/pull/3199)
 * use get_user_dir [#3549](https://github.com/inkstitch/inkstitch/pull/3549)
 * Migrate from appdirs to platformdirs [#3450](https://github.com/inkstitch/inkstitch/pull/3450)
@@ -380,6 +386,9 @@ Ink/Stitch can now export multiple files with text at once. A path with a specif
 
 ## Bug Fixes
 
+* Lettering, custom directories: do not try to read hidden directories [#3632](https://github.com/inkstitch/inkstitch/pull/3632)
+* Simulator on macOS Ventura: update background color correctly [#3621](https://github.com/inkstitch/inkstitch/pull/3621)
+* ignore palette files with wrong encoding [#3620](https://github.com/inkstitch/inkstitch/pull/3620)
 * fix updater [#3583](https://github.com/inkstitch/inkstitch/pull/3583)
 * Element info: take pattern into account [#3581](https://github.com/inkstitch/inkstitch/pull/3581)
 * Autosatin: more efforts to keep the stroke width consistant [#3563](https://github.com/inkstitch/inkstitch/pull/3563)
