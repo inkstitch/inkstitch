@@ -80,9 +80,9 @@ The pattern for satin guided ripples can be adjusted in its direction with the h
 * Draw a line from top to bottom across the pattern. The positioning corresponds to the satin rungs.
 * Select the line and mark it as an anchor line via `Extensions > Ink/Stitch > Edit > Selection to anchor line`.
 
-![satin guided ripple](/lokal/assets/images/docs/ripple_satin_guide.svg)
+![satin guided ripple](/assets/images/docs/ripple_satin_guide.svg)
 
-[Download](/lokal/assets/images/docs/ripple_satin_guide.svg){: download="satin_guided_ripples.svg" }
+[Download](/assets/images/docs/ripple_satin_guide.svg){: download="satin_guided_ripples.svg" }
 
 ## Params
 

@@ -80,9 +80,9 @@ Das Muster für Satinsäulen-geführte Ripples können mit Hilfe einer sogenannt
 * Zeichne eine Linie von oben nach unten über das Muster. Die Positionierung entspricht denen der Richtungsvektoren.
 * Wähle die Linie aus und markiere sie als Ankerlinie über `Erweiterungen > Ink/Stitch > Bearbeiten > Auswahl zu Ankerlinie`
 
-![satin guided ripple](/lokal/assets/images/docs/ripple_satin_guide.svg)
+![satin guided ripple](/assets/images/docs/ripple_satin_guide.svg)
 
-[Download](/lokal/assets/images/docs/ripple_satin_guide.svg){: download="satin_guided_ripples.svg" }
+[Download](/assets/images/docs/ripple_satin_guide.svg){: download="satin_guided_ripples.svg" }
 
 ## Parameter
 
