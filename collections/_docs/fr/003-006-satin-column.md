@@ -101,6 +101,16 @@ Cependant, il existe des situations dans lesquelles vous devez ajouter manuellem
 **Info:** Ink/Stitch examine chaque tronçon de rail, c'est à dire chaque paire de courbes de Bézier individuellement . Il choisit la plus longue des deux et détermine combien de zig-zags seront nécessaires pour satisfaire le réglage *espacement de zig-zag*. De sorte que le rail le plus long n'aura jamais des points clairsemés comme dans un zig-zag simple.<br /><br />Toutefois, cela signifie aussi que le rail le plus court aura une densité de points supérieure à celle spécifiée. Soyez prudent lorsque vous concevez des courbes prononcées, parce que *broder à une densité trop élevée peut faire un trou dans le tissu*!. Le paramètrage des points courts peut aider.
 {: .notice--info }
 
+## Start and end position
+
+{% include upcoming_release.html %}
+
+Satin columns automatically start at the nearest point to the next element.
+
+To disable this behavior open the [params dialog](/docs/params/) and disable one or both of the `start/end at nearest point` options.
+
+Alternatively add a start or end point manually by attaching a [command](/docs/commands/#attach-commands-to-selected-objects-) to the satin column.
+
 ## Paramètres
 
 `Extensions > Ink/Stitch  > Paramètres` vous donne la possibilité de parfaire votre colonne de satin et d’utiliser une sous-couche.
@@ -125,14 +135,11 @@ Certains de ces paramètres ne font pas partie de la version récente.
 |Compensation d'étirement      |![exemple de compensation d'étirement](/assets/images/docs/params-satin-pull_compensation.png)|Les points Satin [resserrent le tissu](/fr/tutorials/push-pull-compensation/),   il en résulte une colonne plus étroite que votre dessin dans Inkscape. Ce paramètre étend chaque paire de pénétrations d’aiguilles vers l’extérieur de la colonne satin. Vous devrez expérimentalement déterminer le montant de la compensation en tenant compte de votre tissu, de votre fil et de votre stabilisateur.<br /> Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.<br /> Une valeur négative contracte.|
 Inverser la direction des rails    |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) |Ceci peut aider si le rendu de votre satin est étrange. <br />Options:<br /> ◦ Automatique, valeur par défaut, cherche à détecter et corriger le cas des rails ayant des directions opposées.  <br />◦ Ne pas inverser désactive la détection automatique <br />◦ Inverser la direction du premier rail <br />◦ Inverser la direction du second rail <br />◦ Inverser la direction des deux rails
 |Échanger les rails            |☑ |Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques|
-|Longueur minimum de point||Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.|
-|Longueur minimum de saut||Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.|
-|Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
-|Forcer les points d'arrêts    | ☑ | Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch|
-|Point d'arrêt initial              | |Choisir le [style désiré](/fr/docs/stitches/lock-stitches/).|
-|Point d'arrêt final                 | |Choisir le [style désiré](/fr/docs/stitches/lock-stitches/).|
-|Arrêter après                 |☑ |Fait faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
-|Couper après                  |☑ | Coupe le fil après avoir brodé cet objet|
+Stitch length         | |Stitch length (in mm) of the underpaths (connecting lines to the start or end point)
+Tolerance             | |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.
+Running stitch position | |Position of underpath from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.
+Start at nearest point  | |Start at nearest point to the previous element. A start position command will overwrite this setting.
+End at nearest point    | |End at nearest point to the next element. A start position command will overwrite this setting.
 |Augmentation aléatoire de la largeur du satin (%)|![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Élargir le satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
 |Diminution aléatoire de la largeur du satin (%) |![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Réduire la largeur du satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
 |Pourcentage aléatoire pour l'espacement zigzag               |![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)|Pourcentage maximum d'augmentation à appliquer à  l'espacement zigzag.|
@@ -143,6 +150,14 @@ Inverser la direction des rails    |![Reverse Rung](/assets/images/docs/satin-re
 |Décaler les découpages de points autant de fois avant de répéter|![Décalage exemple](/assets/images/docs/params-fill-stagger.png) |Les points sont décalés de manière à ce que les rangées de points voisines ne tombent pas toutes dans la même colonne (ce qui créerait un effet de vallée). Ce paramètre détermine la longueur du cycle de décalage des rangées. N'est actif qu'avec l'option de découpage "décalé".|
 |Longueur minimum du point si découpage totalement aléatoire   |  | Par défaut, prend la valeur de la longueur maximum du point. Une valeur inférieure permet une meilleure transition entre les points découpés et les points non découpés.|
 |Graine Aléatoire              | | Utiliser cette graine aléatoire pour le calcul du plan de broderie. Si vide, utilise l'identificateur de l'élément. Relancer le dé si vous n'êtes pas satisfait du résultat.|
+|Longueur minimum de point||Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.|
+|Longueur minimum de saut||Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.|
+|Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
+|Forcer les points d'arrêts    | ☑ | Force un point d'arrêt après l'objet indépendament de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch|
+|Point d'arrêt initial              | |Choisir le [style désiré](/fr/docs/stitches/lock-stitches/).|
+|Point d'arrêt final                 | |Choisir le [style désiré](/fr/docs/stitches/lock-stitches/).|
+|Arrêter après                 |☑ |Fait faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
+|Couper après                  |☑ | Coupe le fil après avoir brodé cet objet|
 {: .params-table }
 
 

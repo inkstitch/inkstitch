@@ -9,6 +9,19 @@ Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber 
 Nicht jede Maschine kann diese zusätzliche Informationen umsetzen und verstehen. In diesem Fall wird ein Befehl einfach ignoriert.
 {: .notice--warning }
 
+Unter `Erweiterungen > Ink/stitch > Befehle` gibt es vier Optionen
+
+* [Dokumentbefehle hinzufügen...](#dokumentbefehle-hinzufügen-)
+* [Ebenenbefehle hinzufügen...](#ebenenbefehle-hinzufügen-)
+* [Objektbefehle...](#objektbefehle-hinzufügen-)
+* [Ansicht](#ansicht)
+
+**Befehle duplizieren?** In Inkscape ist es üblich Objekte über die Funktion duplizieren zu vervielfältigen. Das funktioniert allerdings für Objekte die Befehle angehängt haben nicht. Wir empfehlen daher, für Objekte mit Befehlen `Kopieren` und `Einfügen` zu verwenden. So bleiben die Befehle intakt.
+{: .notice--info }
+
+**Befehle positioneren** Befehle sind in den meisten Anwendungsfällen Zeiger auf eine bestimmte Position. Um einen Befehl zu positionieren, markiere nur das Symbol und verschiebe es mit der Maus oder den Pfeiltasten. Beim Verschieben mit den Pfeiltasten kann für schnelles Bewegen die Umschalttaste gedrückt werden, die Alt-Taste dient zur Feinjustierung.
+{: .notice--info }
+
 ## Dokumentbefehle hinzufügen ...
 
 Diese Befehle wirken sich auf das gesamte Motiv aus.
@@ -40,17 +53,21 @@ Diese Befehle hängen sich an ausgewählte Objekte.
 * Aktiviere die gewünschten Befehle und wenden sie an
 * Bei Befehlen wo die Positionierung wichtig ist: Der Endpunkt des Zeigers, der dem Objekt am nächsten ist, ist der Punkt, an dem der Befehl ausgeführt wird.
 
-Unter `Erweiterungen > Ink/stitch > Befehle` gibt es drei Optionen: `Dokumentbefehle hinzufügen...`, `Ebenenbefehle hinzufügen...` und `Objektbefehle...`.
+### ![starting point symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg) Anfangs- und Endposition
 
-**Befehle duplizieren?** In Inkscape ist es üblich Objekte über die Funktion duplizieren zu vervielfältigen. Das funktioniert allerdings für Objekte die Befehle angehängt haben nicht. Wir empfehlen daher, für Objekte mit Befehlen `Kopieren` und `Einfügen` zu verwenden. So bleiben die Befehle intakt.
-{: .notice--info }
+Definiert (1) die Start- und (2) die Endposition für Füllstiche oder Satinsäulen.
 
-**Befehle positioneren** Befehle sind in den meisten Anwendungsfällen Zeiger auf eine bestimmte Position. Um einen Befehl zu positionieren, markiere nur das Symbol und verschiebe es mit der Maus oder den Pfeiltasten. Beim Verschieben mit den Pfeiltasten kann für schnelles Bewegen die Umschalttaste gedrückt werden, die Alt-Taste dient zur Feinjustierung.
-{: .notice--info }
+###  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg) Start- und Endposition für Routing-Operationen
 
-### ![starting point symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg) Füllstich Anfangs- und Endposition
+Definiert (1) die Start- und (2) die Enposition für automatisch geführte Geradstiche.
 
-Definiert (1) die Start- und (2) die Endposition bei Objekten mit Füllstich.
+Benutze anschließend eine der Auto-Route Funktionen
+
+* [Werkzeuge: Linie > Automatisch geführter Geradstich ...]"(https://inkstitch.org/docs/stroke-tools/) oder
+* [Werkzeuge: Satin > Automatische Satinsäulenführung](/de/docs/satin-tools/#automatische-satinsäulenführung)
+
+Nutze immer nur einen Anfangs- und einen Endpunkt für jede Operation.
+{: .notice--warning}
 
 ### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Zielposition
 
@@ -71,18 +88,6 @@ Objekte mit diesem Befehl werden nicht exportiert.
 ### ![satin cut point symbol](/assets/images/docs/visual-commands-satin-cut-point.jpg) Satin-Schnittstelle
 
 Dieser Befehlt definiert an welchem Punkt die Satinsäule geschnitten werden soll. Benutze anschließend die Funktion “[Satinsäule schneiden](/de/docs/satin-tools/#satin-schnittstelle)”.
-
-###  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg) Start- und Endposition für automatisch geführten Laufstich
-
-Definiert (1) die Start- und (2) die Enposition für automatisch geführte Geradstiche. Benutze anschließend Die Funktion "[Werkzeuge: Linie > Automatisch geführter Geradstich ...]"(https://inkstitch.org/docs/stroke-tools/).
-
-Nutze immer nur einen Anfangs- und einen Endpunkt für jede Operation.
-
-###  ![auto route satin starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route satin ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Anfangs- und Endposition für automatische Satinsäulenführung
-
-Definiert (1) die Start- und (2) die Endposition für automatish geführte Satinsäulen. Benutze anschließend die Funktion “[Automatische Satinsäulenführung](/de/docs/satin-tools/#automatische-satinsäulenführung)”.
-
-Nutze immer nur einen Anfangs- und einen Endpunkt für jede Auto-Route Operation.
 
 ## Befehle entfernen
 

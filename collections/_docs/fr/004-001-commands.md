@@ -8,6 +8,19 @@ Les commandes visuelles peuvent être utilisées pour spécifier des information
 
 Toutes les machines à broder ne sont pas capable de comprendre ces commandes. Si ça ne fonctionne pas bien pour vous, lisez le manuel de vos machines pour vérifier leur capacités.{: .notice--warning }
 
+Dans `Extensions > Ink/Stitch  > Commandes` vous trouverez quatre options
+
+* [Ajouter des commandes](#ajouter-des-commandes-)
+* [Ajouter des commandes de calque](#ajouter-des-commandes-de-calque-)
+* [Attacher des commandes à l'objet sélectionné](#attacher-des-commandes-aux-objets-sélectionnés-)
+* [Vue](#affichage)
+
+Pour dupliquer un objet auquel sont attachées des commandes, ne pas utiliser Dupliquer, mais Copier puis Coller.
+{: .notice--info }
+
+Pour déplacer une commande, déplacer le marqueur seulement, le connecteur suivra.
+{: .notice--info }
+
 ## Ajouter des Commandes ...
 
 Ces commandes affectent l’ensemble du motif de broderie.
@@ -42,32 +55,29 @@ Il est recommandé d’ajouter des commandes via les extensions:
 * Activez les commandes souhaitées et cliquez sur appliquer
 * Commandes Départ/Stop/découpage: Le noeud final du connecteur le plus proche de l'objet est le point auquel l'effet sera appliqué.
 
-Dans `Extensions > Ink/Stitch  > Commandes` vous trouverez quatre options: ajouter des commandes, ajouter des commandes de calque,attacher des commandes à l'objet sélectionné et Vue.
+### ![starting-point-symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg) Position de départ/de fin
 
-Pour dupliquer un objet auquel sont attachées des commandes, ne pas utiliser Dupliquer, mais Copier puis Coller.
-{: .notice--info }
+Définit (1) le point de départ (2) le point d'arrivée d'un remplissage ou de colonnes satin.
 
-Pour déplacer une commande, déplacer le marqueur seulement, le connecteur suivra.
-{: .notice--info }
+###  ![auto-route-runing-starting-position-symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg)  Position de départ/de fin pour l'agencement automatique
 
-### ![starting-point-symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg)   Position de départ/de fin pour un remplissage
+Définit le point de départ (1) ou le point final (2) de l'agencement automatique.
 
-Définit  (1) le point de départ  (2) le point d'arrivée d'un remplissage.
+Exécutez ensuite
+
+* [Outils: Trait /Agencement automatique de points droits. ...](/fr/docs/strole-tools) ou
+* [Outils: Satin/ Agencement automatique de Colonne Satin](/fr/docs/satin-tools/#auto-route-satin-columns)
+
+N'utiliser qu'un point de départ et qu'un point d'arrivée par agencement automatique.
+{: .notice--warning}
 
 ### ![ripple-stitch-target-symbol](/assets/images/docs/visual-commands-ripple-target.png) Position de la cible
 
 Défini la position cible d'une broderie ondulée ou d'un remplissage circulaire.
 
-###  ![auto-route-runing-starting-position-symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg)  Position de départ/de fin pour l'agencement automatique de points droits
+### ![Point de partage de colonne satin](/assets/images/docs/visual-commands-satin-cut-point.jpg) Point de partage de la colonne satin
 
-Définit le point de départ (1) ou le point final (2) de l'agencement automatique. Exécutez ensuite "[Outils: Trait /Agencement automatique de points droits. ...](/fr/docs/strole-tools)"  
-N'utiliser qu'un point de départ et qu'un point d'arrivée par agencement automatique.
-
-###  ![auto-route-satin-starting-position-symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg)  Position de départ/de fin pour l'agencement automatique  de colonnes satin
-
-Définit le point de départ (1) ou le point final (2) de l'agencement automatique. Exécutez ensuite "[Outils: Satin/ Agencement automatique de Colonne Satin](/fr/docs/satin-tools/#auto-route-satin-columns)" 
-
-N'utiliser qu'un point de départ et qu'un point d'arrivée par agencement automatique.
+Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Scinder une colonne satin](/fr/docs/satin-tools/#scinder-une-colonne-satin)".
 
 ### ![stop-symbol](/assets/images/docs/visual-commands-stop.jpg) Stop (pause machine) après avoir brodé cet objet
 
@@ -80,10 +90,6 @@ Les machines à broder commerciales qui ont plusieurs aiguilles passent normalem
 ### ![ignore symbol](/assets/images/docs/visual-commands-ignore.jpg) Ignorer cet object (ne pas le broder)
 
 Les objets auxquels cette commande est associée seront exclus du plan de broderie.
-
-### ![Point de partage de colonne satin](/assets/images/docs/visual-commands-satin-cut-point.jpg) Point de partage de la colonne satin
-
-Fractionner une colonne satin au point spécifié par cette commande. Après le placement de la commande, exécutez la commande "[Scinder une colonne satin](/fr/docs/satin-tools/#scinder-une-colonne-satin)".
 
 ## Supprimer les commandes
 

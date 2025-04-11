@@ -71,6 +71,7 @@ Die Sprossenmethode gibt mehr Kontrolle darüber, wie die Satinsäule erstellt w
 * Spezielle Situationen, in denen die Stichrichtungen auf ausgefallene Weise gestaltet werden sollen
 
 **Manuelles Hinzufügen von Sprossen**
+
 * Stelle sicher, dass der vorhandene Satinpfad (mit den zwei Unterpfaden) mit dem Knoten-Werkzeug ausgewählt ist.
 * Drücke `P` oder wähle das Freihandlinien-Werkzeug.
 * Halte die Umschalttaste gedrückt.
@@ -86,6 +87,16 @@ Original Design von [Liv Iko](https://thenounproject.com/liv_iko/collection/bird
 **Info:** Wir empfehlen dringend mindestens drei "Sprossen" zu nutzen.
 Wenn du genau zwei Sprossen (und zwei Holme) nutzt, ist es schwer für Ink/Stitch zu entscheiden, was Sprosse und was Holm ist.
 {: .notice--warning }
+
+## Start- und Endposition
+
+{% include upcoming_release.html %}
+
+Satinsäulen beginnen und enden automatisch an den Positionen, die am nächsten zum vorangegangenen, bzw. folgenden Element liegen.
+
+Dieses Verhalten kann im [Parameterdialog](/docs/params/) deaktiviert durch eine oder beide der Optionen `Automatischer Startpunkt` oder `Automatischer Endpunkt` unterbunden werden. 
+
+Alternativ kann auch ein manueller Start- und/oder Enpunkt durch [Objektbefehle](/docs/commands/#attach-commands-to-selected-objects-) festgelegt werden.
 
 ## Parameter
 
@@ -111,6 +122,11 @@ Zugausgleich (%)                    |![Pull compensation example](/assets/images
 Zugausgleich (mm)                   |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Satinstiche [ziehen den Stoff zusammen](/tutorials/push-pull-compensation/), was zu einer Säule führt, die schmaler ist, als in Inkscape geplant. Diese Einstellung erweitert jedes Nadeleinstichpaar von der Mitte der Satinsäule nach außen. Es muss experimentell bestimmt werden, wie viel Kompensation für deine Kombination aus Stoff, Faden und Stabilisator benötigt wird. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt genutzt werden
 Konturlinien umkehren               |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) | Optionen:<br /> ◦ Automatisch, die Standardeinstellung dreht eigenständig gegenläufige Außenkonturen<br />◦ Nicht umkehren, deaktiviert automatisches drehen<br />◦ Erste Konturlinie umkehren<br />◦ Zweite Konturlinie umkehren <br />◦ Beide Konturlinien umkehren
 Seiten umkehren                     | | Kehrt die Seiten der Satinsäule um (links und rechts). Dies beeinflusst z.B. an welcher Seite der Faden startet und endet. Aber auch jede andere seitenbezogene Einstellung ist hiervon betroffen.
+Stichlänge                          | |Stichlänge (in mm) der Unterpfade (Verbindungslinien zum Start- oder Endpunkt)
+Stichtoleranz                       | |Alle Stiche müssen innerhalb dieser Toleranzgrenze zum Pfad liegen. Eine niedrigere Toleranz bedeutet, dass sich die Stichlänge reduziert. Eine größere Toleranz kann zur Abrundung scharfer Ecken führen.
+Geradstich Position                 | |Position der Verbindungslinien zwischen den Außenseiten. 0% liegt genau auf der ersten Seite, 50% in der Mitte, 100% auf der zweiten Seite.
+Automatischer Startpunkt            | |Beginne am nächstgelegenen Punkt zum vorherigen Element. Diese Einstellung überschreibt den manuellen Startpositions-Befehl.
+Automatischer Endpunkt              | |Ende am nächstgelegenen Punkt zum nächsten Element. Diese Einstellung überschreibt den manuellen Endpositions-Befehl.
 Zufälliger Prozentwert (Erweitern)  |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Lengthen stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
 Zufälliger Prozentwert (Schrumpfen) |![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
 Zufallswert Zick-Zack-Abstand (Prozent)|![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)| Maximale randomisierte Abweichung der Stichabstände in Prozent

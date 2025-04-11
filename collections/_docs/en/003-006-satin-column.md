@@ -1,7 +1,7 @@
 ---
 title: "Satin Column"
 permalink: /docs/stitches/satin-column/
-last_modified_at: 2024-04-30
+last_modified_at: 2025-04-11
 toc: true
 ---
 ## What it is
@@ -87,6 +87,16 @@ The rung method will give you more control over the way the satin column is rend
 **Info:** We strongly recommend to use at least three rungs. If you use exactly two rungs (and two rails) it is hard for Ink/stitch to decide which is which.
 {: .notice--warning }
 
+## Start and end position
+
+{% include upcoming_release.html %}
+
+Satin columns automatically start at the nearest point to the next element.
+
+To disable this behavior open the [params dialog](/docs/params/) and disable one or both of the `start/end at nearest point` options.
+
+Alternatively add a start or end point manually by attaching a [command](/docs/commands/#attach-commands-to-selected-objects-) to the satin column.
+
 ## Params
 
 Running `Extensions > Ink/Stitch  > Params` will give you the possibility to fine-tune your satin column and to use underlay.
@@ -111,14 +121,11 @@ Pull compensation percentage |![Pull compensation example](/assets/images/docs/p
 Pull compensation     |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Satin stitches [pull the fabric together](/tutorials/push-pull-compensation/), resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect.
 Reverse rails         |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) | Enabling this may help if your satin renders very strangely. <br />Options are :<br /> ◦ Automatic, the default value aims to detect and fix the problem <br />◦ Don't reverse , disable automatic detection <br />◦ Reverse first rail <br />◦ Reverse second rail <br />◦ Reverse both rails
 Swap rails            |☑ | Swaps the first and the second rails of a satin column. Affecting which side the thread finishes on as well as any other sided property.
-Minimum stitch length         ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
-Minimum  jump stitch  length             ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches
-Allow lock stitches   |☑ |Enables lock stitches in only desired positions
-Force lock stitches   |☑ | Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
-Tack stitch           | |Chose your [favorite style](/docs/stitches/lock-stitches/)
-Lock stitch           | |Chose your [favorite style](/docs/stitches/lock-stitches/)
-Stop After            |☑ | Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
-Trim After            |☑ | Trim the thread after sewing this object.
+Stitch length         | |Stitch length (in mm) of the underpaths (connecting lines to the start or end point)
+Tolerance             | |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.
+Running stitch position | |Position of underpath from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.
+Start at nearest point  | |Start at nearest point to the previous element. A start position command will overwrite this setting.
+End at nearest point    | |End at nearest point to the next element. A start position command will overwrite this setting.
 Random percentage of satin width increase |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Lengthen stitch across rails at most this percent. Two values separated by a space may be used for an asymetric effect.
 Random percentage of satin width decrease |![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
 Random zig-zag spacing percentage         |![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)|Amount of random jitter added to zigzag spacing
@@ -129,6 +136,14 @@ Random Phase for split stitches           |☑ | Controls whether split stitches
 Stagger this many times before repeating|![Stagger example](/assets/images/docs/params-fill-stagger.png) |Stitches are staggered so that neighboring rows of stitches don't all fall in the same column (which would create a distracting valley effect). Setting this dictates the length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values. **Active only when split method is staggered**
 Minimum length for random-phase split     |  | Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch.
 Random seed           | | Use a specific seed to compute stitch plan. If empty, the seed is the element ID . Re-roll if you are not happy with the result.
+Minimum stitch length | |Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
+Minimum  jump stitch  length             ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches
+Allow lock stitches   |☑ |Enables lock stitches in only desired positions
+Force lock stitches   |☑ | Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
+Tack stitch           | |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Lock stitch           | |Chose your [favorite style](/docs/stitches/lock-stitches/)
+Stop After            |☑ | Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+Trim After            |☑ | Trim the thread after sewing this object.
 {: .params-table }
 
 ### Center-Walk Underlay
@@ -140,7 +155,7 @@ This is a row of running stitch down the center of the column and back. This may
 Settings      |Description
 ---|---
 Stitch length |Length of stitches (in mm)
-Tolerance         |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.
+Tolerance     |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.
 Repeats       |Odd numbers of repeats will reverse the stitch direction of the satin column, causing it to start and end at the same position.
 Position      |Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.
 {: .table-full-width }

@@ -313,9 +313,15 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ### Ripple Stitch
 
-* Improve satin guided ripple stitch and introduce use of anchor line to align ripple patterns [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
+* Manual stitch placement for ripple patterns [#3256](https://github.com/inkstitch/inkstitch/pull/3256)
 * Add stitch grid first option [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
-* Manual ripple pattern [#3256](https://github.com/inkstitch/inkstitch/pull/3256)
+* Satin guided ripples:
+  ![satin guided ripple](/assets/images/docs/ripple_satin_guide.svg)
+
+  * Option wether to flip each second line of the pattern or not
+  * Anchor line to align ripple patterns [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
+
+  [Read more](/docs/stitches/ripple-stitch/#satin-guide)
 
 ### Satin Columns
 

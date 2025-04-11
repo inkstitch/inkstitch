@@ -9,6 +9,19 @@ Visual commands can be used to specify additional information on how to embroide
 Not every embroidery machine will be able to read and process the information given by some of these commands. If this is not working for you, read your machines manual to verify your machines capabilities.
 {: .notice--warning }
 
+In `Extensions > Ink/Stitch  > Commands` you will find four options:
+
+* [Add commands](#add-commands-)
+* [Add layer commands](#add-layer-commands-)
+* [Attach commands to selected objects](#attach-commands-to-selected-objects-)
+* [View](#view)
+
+**Need to duplicate objects with commands?** A common way to copy objects in Inkscape is duplicate. However this will break the commands. For objects with commands we recommend to use copy and paste, since this will preserve the command functionality.
+{: .notice--info }
+
+**Positioning of commands** Commands in most use cases are pointers to specific positions. To position a command, just select the symbol and move it with the mouse or arrow keys. When moving with the arrow keys, you can press the Shift key for quick movement, the Alt key is used for fine adjustment.
+{: .notice--info }
+
 ## Add Commands ...
 
 These commands effect the entire embroidery design.
@@ -20,7 +33,6 @@ Specifies the origin (0,0) point for embroidery files. Setting up origins is esp
 ### ![stop position](/assets/images/docs/visual-commands-stop-position.jpg) Stop position
 
 The embroidery machine jumps to this point before every stop command. This allows for pushing the embroidery frame out toward the user to make applique steps easier.
-
 
 ## Add Layer Commands ...
 
@@ -38,33 +50,31 @@ These commands will be attached to the currently selected objects.
 * Select one ore more objects
 * Run `Extensions > Ink/Stitch  > Commands > Attach commands ...`
 * Enable desired commands and apply
-* Start/Stop/Cut commands: The connector's endpoint nearest to the object is the point at which the effect will be performed.
+* Start/Stop/Cut commands: The center of the symbol marks the point at which the effect will be performed.
 
-In `Extensions > Ink/Stitch  > Commands` you will find four options: add commands, add layer commands, attach commands and view.
+### ![starting point symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg) Starting/Ending position
 
-**Need to duplicate objects with commands?** A common way to copy objects in Inkscape is duplicate. However this will break the commands. For objects with commands we recommend to use copy and paste, since this will preserve the command functionality.
-{: .notice--info }
+Defines the (1) starting or (2) ending point of an fill stitch area or a satin column.
 
-**Positioning of commands** Commands in most use cases are pointers to specific positions. To position a command, just select the symbol and move it with the mouse or arrow keys. When moving with the arrow keys, you can press the Shift key for quick movement, the Alt key is used for fine adjustment.
-{: .notice--info }
+###  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg) Starting/Ending position for auto-route operations
 
-### ![starting point symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg) Fill Stitch Starting/Ending Position
+Defines the (1) starting or (2) ending point for auto route.
 
-Defines the (1) starting or (2) ending point of an fill stitch area.
+Run afterwards
+
+* [Tools: Stroke > Auto-route running stitch](https://inkstitch.org/docs/stroke-tools/)" or
+* [Tools: Satin > Auto-route satin](/docs/satin-tools/#auto-route-satin-columns)
+
+Use only one starting and one ending point per auto-route operation.
+{: .notice--warning }
 
 ### ![Target symbol](/assets/images/docs/visual-commands-ripple-target.png) Target position
 
 Defines the target point of a ripple stitch area or of a circular fill.
 
-###  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg) Starting/Ending Position for Auto Route of running stitch 
+### ![satin cut point symbol](/assets/images/docs/visual-commands-satin-cut-point.jpg) Satin cut point
 
-Defines the (1) starting or (2) ending point for the auto route. Run  "[Tools: Stroke/ Auto-route running stitch](https://inkstitch.org/docs/stroke-tools/)" afterwards.
-Use only one starting and one ending point per auto-route operation.
-
-###  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-satin-stitch-end.jpg) Starting/Ending Position for Auto Route of satin stitch
-
-Defines the (1) starting or (2) ending point for the auto route. Run "[Tools: Satin/ Auto-route satin column ](/docs/satin-tools/#auto-route-satin-columns)" afterwards.
-Use only one starting and one ending point per auto-route operation.
+Split a Satin Column at the point specified by this command. After attaching run "[Cut Satin Column](/docs/satin-tools/#cut-satin-column)".
 
 ### ![stop symbol](/assets/images/docs/visual-commands-stop.jpg) Stop
 
@@ -77,10 +87,6 @@ Commercial embroidery machines that have multiple needles normally proceed from 
 ### ![ignore symbol](/assets/images/docs/visual-commands-ignore.jpg) Ignore object
 
 Objects with this command will be excluded from the stitch plan output.
-
-### ![satin cut point symbol](/assets/images/docs/visual-commands-satin-cut-point.jpg) Satin cut point
-
-Split a Satin Column at the point specified by this command. After attaching run "[Cut Satin Column](/docs/satin-tools/#cut-satin-column)".
 
 ## Delete Commands
 
