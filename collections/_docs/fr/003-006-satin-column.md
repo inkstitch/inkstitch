@@ -1,7 +1,7 @@
 ---
 title: "Colonne Satin"
 permalink: /fr/docs/stitches/satin-column/
-last_modified_at: 2024-05-13
+last_modified_at: 2025-04-12
 toc: true
 ---
 ## Qu’est-ce que c’est
@@ -12,14 +12,15 @@ Le point satin est principalement utilisé pour les bordures, les lettres ou les
 
 ## Méthodes de création
 
-Ink/Stitch offre plusieurs options pour créer des colonnes satin. Les trois premières méthodes permettent une conversion vers une colonne satin standard qui pourra ensuite être modifiée manuellement.
+Ink/Stitch offre plusieurs options pour créer des colonnes satin. Les quatre premières méthodes permettent une conversion vers une colonne satin standard qui pourra ensuite être modifiée manuellement.
 
 ![Méthodes](/assets/images/docs/satin_methods.svg)
 
-1. [Convertir ligne en satin](#1-convertir-ligne-en-satin): pour créer des colonnes satin de largeur constante
-2. [Convertir ligne en Effet de Chemin satin](#2-convertir-ligne-en-effet-de-chemin-satin): colonne satin facilement modifiable avec un motif de contour optionnel
+1. [Convertir trait en satin](#1-convertir-ligne-en-satin): pour créer des colonnes satin de largeur constante
+2. [Convertir trait en Effet de Chemin satin](#2-convertir-ligne-en-effet-de-chemin-satin): colonne satin facilement modifiable avec un motif de contour optionnel
 3. [Convertir "ligne en zigzag" en Satin](#3-convertir-ligne-en-zigzag-en-satin): une manière simple de créer les colonnes satin particulièrement bien adaptée aux tablettes graphiques et aux écrans tactiles.
-4. [Création manuelle de Colonne Satin ](#4-création-manuelle-de-colonne-satin): prendre tout le contrôle sur la colonne satin
+4. [Convertir remplissage en satin](#4-convertir-remplissage-en-satin): pour créer des colonnes satin à partir de remplissage
+5. [Création manuelle de Colonne Satin ](#5-création-manuelle-de-colonne-satin): prendre tout le contrôle sur la colonne satin
 
 ### 1. Convertir Ligne en Satin
 
@@ -51,7 +52,14 @@ Cette méthode est particulierement adaptée aux écrans tactiles et aux tablett
 
 Plus d'information  sur [Convertir "ligne en zigzag" en satin](/fr/docs/satin-tools/#zigzag-line-to-satin)
 
-### 4. Création manuelle de Colonne Satin
+{% include upcoming_release.html %}
+### 4. Convertir "Remplissage" en Satin
+
+Remplissage en satin peut être utilisé pour convertir un remplissage en satin. C'est une fonction semi-automatique qui nécessite un peu de travail manuel.
+
+Plus d'information  sur  [Convertir "Remplissage" en satin](/fr/docs/satin-tools/#fill-to-satin)
+
+### 5. Création manuelle de Colonne Satin
 
 * Commencez par définir les rails de votre colonne satin : dessinez  **deux traits presque parallèles**. La future colonne satin se brodera en zigzag entre les deux rails, vous pouvez faire varier l'épaisseur de la colonne à votre guise, en faisant varier la distance entre les deux rails.
 
@@ -101,11 +109,12 @@ Cependant, il existe des situations dans lesquelles vous devez ajouter manuellem
 **Info:** Ink/Stitch examine chaque tronçon de rail, c'est à dire chaque paire de courbes de Bézier individuellement . Il choisit la plus longue des deux et détermine combien de zig-zags seront nécessaires pour satisfaire le réglage *espacement de zig-zag*. De sorte que le rail le plus long n'aura jamais des points clairsemés comme dans un zig-zag simple.<br /><br />Toutefois, cela signifie aussi que le rail le plus court aura une densité de points supérieure à celle spécifiée. Soyez prudent lorsque vous concevez des courbes prononcées, parce que *broder à une densité trop élevée peut faire un trou dans le tissu*!. Le paramètrage des points courts peut aider.
 {: .notice--info }
 
-## Start and end position
+## Position de début et de fin
 
 {% include upcoming_release.html %}
 
-Satin columns automatically start at the nearest point to the next element.
+Les colonnes satin commencennt automatique 
+Satin columns automatically start at the nearest point to the previous element.
 
 To disable this behavior open the [params dialog](/docs/params/) and disable one or both of the `start/end at nearest point` options.
 
@@ -133,18 +142,18 @@ Certains de ces paramètres ne font pas partie de la version récente.
 |Espacement de Zig-zag         |![exemple d'espacement de zig-zag](/assets/images/docs/params-satin-zig-zag-spacing.png)|la distance de crête à crête entre les zig-zag|
 |Pourcentage de compensation d'étirement |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Compensation d'étirement proportionelle à la largeur du point satin. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
 |Compensation d'étirement      |![exemple de compensation d'étirement](/assets/images/docs/params-satin-pull_compensation.png)|Les points Satin [resserrent le tissu](/fr/tutorials/push-pull-compensation/),   il en résulte une colonne plus étroite que votre dessin dans Inkscape. Ce paramètre étend chaque paire de pénétrations d’aiguilles vers l’extérieur de la colonne satin. Vous devrez expérimentalement déterminer le montant de la compensation en tenant compte de votre tissu, de votre fil et de votre stabilisateur.<br /> Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.<br /> Une valeur négative contracte.|
-Inverser la direction des rails    |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) |Ceci peut aider si le rendu de votre satin est étrange. <br />Options:<br /> ◦ Automatique, valeur par défaut, cherche à détecter et corriger le cas des rails ayant des directions opposées.  <br />◦ Ne pas inverser désactive la détection automatique <br />◦ Inverser la direction du premier rail <br />◦ Inverser la direction du second rail <br />◦ Inverser la direction des deux rails
+|Inverser la direction des rails    |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) |Ceci peut aider si le rendu de votre satin est étrange. <br />Options:<br /> ◦ Automatique, valeur par défaut, cherche à détecter et corriger le cas des rails ayant des directions opposées.  <br />◦ Ne pas inverser désactive la détection automatique <br />◦ Inverser la direction du premier rail <br />◦ Inverser la direction du second rail <br />◦ Inverser la direction des deux rails|
 |Échanger les rails            |☑ |Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques|
-Stitch length         | |Stitch length (in mm) of the underpaths (connecting lines to the start or end point)
-Tolerance             | |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.
-Running stitch position | |Position of underpath from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.
-Start at nearest point  | |Start at nearest point to the previous element. A start position command will overwrite this setting.
-End at nearest point    | |End at nearest point to the next element. A start position command will overwrite this setting.
+|Longueur de point droit       | |Longueur du point (in mm) des chemins de dessous (connexions au point de debut ou de fin)
+|Tolérance             | |Décroitre la tolerance aide à maintenir les chemins de dessous cachées sous la couche supérieure. Toutefois une trop petite tolérance risque de créer des points très courts.|
+|Position du point droit | |Position du chemin de dessous vis à vis des rails. À 0% il suit le premier rail, à 50% il est centré, à 100% il suit le second rail.|
+|Départ au point le plus proche | |Commence le plus près possible de l'élément précédent. Une commande début de satin sera prioritaire par rapport à ce choix.|
+|Terminer au point le plus proche  | |Termine le plus près possible de l'élément suivant. Une commande fin de satin sera prioritaire par rapport à ce choix.|
 |Augmentation aléatoire de la largeur du satin (%)|![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Élargir le satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
 |Diminution aléatoire de la largeur du satin (%) |![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Réduire la largeur du satin d'au plus ce pourcentage. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
 |Pourcentage aléatoire pour l'espacement zigzag               |![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)|Pourcentage maximum d'augmentation à appliquer à  l'espacement zigzag.|
-|Méthode de découpage  | ![default](/assets/images/docs/param_split_satin_default.png) ![simple](/assets/images/docs/param_split_satin_simple.png) ![stager](/assets/images/docs/param_split_satin_stagered.png) | Options:<br /> ◦ Par défaut  <br />◦ Simple <br />◦ Décalé
-|Longueur maximale du point    | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Les points plus longs seront découpés en plusieurs points.
+|Méthode de découpage  | ![default](/assets/images/docs/param_split_satin_default.png) ![simple](/assets/images/docs/param_split_satin_simple.png) ![stager](/assets/images/docs/param_split_satin_stagered.png) | Options:<br /> ◦ Par défaut  <br />◦ Simple <br />◦ Décalé|
+|Longueur maximale du point    | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Les points plus longs seront découpés en plusieurs points.|
 |Déplacement aléatoire pour le découpage des points           |![Random split stitch jitter](/assets/images/docs/params-satin-random-split-stitch-jitter.png)| Si le découpage totalement aléatoire des points est activé, ce paramètre rend la longueur du point aléatoire, sinon, le déplacement aléatoire du découpage se fait autour de sa position normale|
 |Découpage totalement aléatoire des points                     | ☑ |Si activé, le découpage des points est totalement  aléatoire (ce qui risque de modifier le nombre de points par zig (ou par zag)), sinon, le nombre de points par zig est conservé, mais leur position sur le zig peut varier du déplacement aléatoire paramétré.|
 |Décaler les découpages de points autant de fois avant de répéter|![Décalage exemple](/assets/images/docs/params-fill-stagger.png) |Les points sont décalés de manière à ce que les rangées de points voisines ne tombent pas toutes dans la même colonne (ce qui créerait un effet de vallée). Ce paramètre détermine la longueur du cycle de décalage des rangées. N'est actif qu'avec l'option de découpage "décalé".|
