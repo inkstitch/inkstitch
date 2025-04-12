@@ -1,5 +1,5 @@
 ---
-title: "Outils de police"
+title: "Gestion des polices"
 permalink: /fr/docs/font-tools/
 last_modified_at: 2025-04-12
 toc: true
