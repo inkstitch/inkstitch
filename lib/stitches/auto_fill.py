@@ -894,6 +894,10 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
         path = [InkstitchPoint.from_tuple(point) for point in path]
     if len(path) > 1:
         path = clamp_path_to_polygon(path, shape)
+    elif not path:
+        # This may happen on very small shapes.
+        # Simply return nothing as we do not want to error out
+        return []
 
     points = even_running_stitch(path, running_stitch_length, running_stitch_tolerance)
     stitches = [Stitch(point) for point in points]
