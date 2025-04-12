@@ -102,11 +102,15 @@ Méthode                               || Choisir Broderie Ondulée
 Répétitions                           || Définir combien de fois le chemin final de broderie est exécuté en va et vient le long du parcours <br />◦ par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la couture va revenir au début du chemin
 Nombre de répétitions du point triple || Activer [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />
 Placement manuel de points           || Aucun  point ne sera ajouté au motif de départ, chaque motif sera traité comme un point manuel et la longueur du point droit sera ignoré.
+{: .params-table }
+
+Paramètres||Description
+---|---|---
 Longueur du point droit               ||Longueur des points dans le [Mode Point Droit](/fr/docs/stitches/running-stitch/)
 Tolérance du point droit              ||Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible signifie que les points seront plus rapprochés. Une tolérance plus élevée signifie que les angles vifs peuvent être arrondis.
 Nombre de lignes|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Choisir le nombre de réplications de l'ondulation dans la broderie. La valeur par défaut est 10.
 Distance minimum entre les lignes    || Est prioritaire sur le nombre de lignes.
-Position des ondulations           |◦ Nombre de lignes / Distance entre les lignes (valeur par défaut): utilise soit la valeur du nombre de lignes ou la distance minimum entre les lignes si elle a été définie. <br>◦ Rendu  aux traverses: une ondulation à chaque traverse seulement<br>◦ Adaptif et distance minimum entre les lignes: adapte la distance entre les ondulations selon  leur taille| Position des ondulations lorsque guidées par un satin.
+Position des ondulations           |◦ Nombre de lignes / Distance entre les lignes (valeur par défaut): utilise soit la valeur du nombre de lignes ou la distance minimum entre les lignes si elle a été définie. <br>◦ Rendu  aux traverses: une ondulation à chaque traverse seulement <br>◦ Adaptif et distance minimum entre les lignes: adapte la distance entre les ondulations selon  leur taille| Position des ondulations lorsque guidées par un satin.
 Rendre aléatoire                     ||Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré.
 Mouvement aléatoire de la longueur du point ||Pourcentage maximum de variation de la longueur du point appliqué si la longueur est rendue aléatoire.<br>Example: 
 Pour une  longueur de point standard de 4mm,un mmouvemmentt  aléatoire de 50% va ajouter ou supprimmer jusqu'à 2mm (50% de 4mm = 2mm).  Cela signifie que la longueur de point résultant variera entre 2 et 6 mm.
@@ -122,10 +126,6 @@ Inverser effet exposant       |☑  ou ▢| Échange le rôle de la  première e
 Changer le sens               |☑  ou ▢|  Change le sens du  chemin final de broderie . N'a pas d'effet sur les autres paramètres.
 Inverser la  direction des rails||Inverse les rails d'une ondulation satin. Par défaut détecte automatiquement, et corrige la direction d'un des rails.
 Taille de la  grille          |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Si une distance positive est spécifiée, les ondulations de la broderie sont complétées  en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir  n'a pas  d'influence sur ce paramètre.
-{: .params-table }
-
-Paramètres||Description
----|---|---
 Broder d'abord  la grille           |Brode en sens inverse de telle sorte que  la grille est brodée en premier.
 Mettre à l'echelle sur l'axe  |XY ou X ou Y ou rien|seulement pour des ondulations guidées.
 Démarrer à                    | seulement pour des ondulations guidées|Taille de la première ondulation en pourcentage.
