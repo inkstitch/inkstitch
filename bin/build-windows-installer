@@ -21,7 +21,7 @@ if [[ -d "../signed-artifacts" ]]; then
 	DIRECTORY="signed-artifacts"
 	echo "Found signed artifacts"
 else
-	if [[! -d "../signed-artifacts" ]]; then
+	if [[ ! -d "../signed-artifacts" ]]; then
 		DIRECTORY="signed-artifacts"
 		echo "Created signed artifacts"
 	else
