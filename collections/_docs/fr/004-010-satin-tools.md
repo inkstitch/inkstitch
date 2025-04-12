@@ -69,7 +69,7 @@ Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'
 
 {% include upcoming_release.html %}
 
-Le [Fichier d'exemple](#sample-file) vous aidera à comprendre le fonctionnement.
+
 
 Remplissage en satin peut être utilisé pour convertir un remplissage en satin. C'est une fonction semi-automatique qui nécessite un peu de travail manuel.
 
