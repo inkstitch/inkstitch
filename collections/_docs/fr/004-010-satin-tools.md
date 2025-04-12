@@ -1,7 +1,7 @@
 ---
 title: "Outils Satin"
 permalink: /fr/docs/satin-tools/
-last_modified_at: 2025-01-05
+last_modified_at: 2025-04-12
 toc: true
 ---
 `Extensions > Ink/Stitch  > Outils :  Satin` inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/fr/docs/stitches/satin-column/).
@@ -140,26 +140,24 @@ Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin), si vous souhaitez comp
 
 ### Options
 
-#### General Settings
+#### Réglages généraux
 
 * Choisir si les couleurs sont équidistantes ou si elles ont des largeurs différentes.
-  * Si cettte  option est cochée, la largeur des  couleurs et des marges sont définies  pour toutes les couleurs par la valeur de `Largeur de la zone monochrome` .
+  * Si cette  option est cochée, la largeur des  couleurs et des marges sont définies  pour toutes les couleurs par la valeur de `Largeur de la zone monochrome` .
   * Si la case est décochée il devient possible de choisir individuellement la largeur de chaque couleur **ET** d'ajouter une zone où deux couleurs se mélangent.
 * Ajouter un  dépassement à gauche (%): Ajoute un bord irrégulier sur le côté gauche du satin
 * Ajouter un dépassement à droite (%): Ajoute un bord irrégulier sur le côté droit du satin
-* Pull compensation (mm): Makes the satin columns wider and will overlap the color sections to avoid gaps
-* Random seed: Change the value to change the appearance of randomized params
-
-* Keep original satin: wether the original satin should be deleted or not
-* Adjust underlay per color: applies only when the original satin column has underlays
-  * If checked, the underlays will be applied to each color separately, excluding the multicolor sections
-  * If unchecked, only the first color will use an underlay, covering the whole area
-
+* Compensation d'étirement (mm): Élargit les colonnes satin et superpose les couleurs pour éviter les trous.
+* Graine aléatoire: Changez la valeur pour changer l'apparence des paramètres aléatoires 
+* Garder le satin originel : choisir de garder ou de supprimer le satin originel
+* Ajuster la sous-couche par couleur:  ne s'applique que si le satin originel a une ou des sous-couches
+  * Si coché, les sous-couches seront appliquées individuellement à chaque couleur en évitant les zones multicolores
+  * Sinon, seule la première couleur aura une sous-couche, couvrant toute la surface
 #### Couleurs
 
 Les valeurs des largeurs sont données en pourcentage. Faites attention que la somme des valeurs soit bien égale à 100%.
 
-Notez que le premier champ des définitions des couleurs définie la largeur de la zone mononchrome, le second champ défini la marge avec la couleur  suivante. Ceci est la  largeur qui sera  partagée par les  deux  couleurs. Lorsque `Couleurs équidistantes` est coché, réduire la valeur de la 'Largeur de la zone monochrome' augmentera la taille des zones bicolores.
+Notez que le premier champ des définitions des couleurs définie la largeur de la zone monochrome, le second champ défini la marge avec la couleur suivante. Ceci est la  largeur qui sera  partagée par les deux couleurs. Lorsque `Couleurs équidistantes` est coché, réduire la valeur de la 'Largeur de la zone monochrome' augmentera la taille des zones bicolores.
 {: .notice--info}
 
 ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
@@ -170,7 +168,7 @@ Notez que le premier champ des définitions des couleurs définie la largeur de 
 
 Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend le satin plus adaptable en forme et en largeur qu'une conversion en colonne satin normale. La ligne reste une ligne, mais un effet de chemin lui est appliqué. Si vous utilisez l'éditeur de noeud, vous pourrez agir sur les noeuds de la ligne, même après application de l'effet.
 
-**Please avoid sharp corners.** As with normal satins, it is better to split up the path at sharp corners. In some cases it may be necessary to stretch out node handles or to add more nodes to achieve a consistant width.
+** Évitez les angles aigus.**  Comme  pour les satins standards, il est préférable de découper le cheminn  aux angles aigus. Dans certains cas il pourra être nécessaire de tirer sur les poignées des noeuds ou d'ajouter des noeuds pour obtenir une largeur convenable. 
 {: .notice--warning }
 
 ### Usage
