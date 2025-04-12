@@ -1,7 +1,7 @@
 ---
 title: "Konturfüllung"
 permalink: /de/docs/stitches/contour-fill/
-last_modified_at: 2024-05-07
+last_modified_at: 2025-04-12
 toc: true
 ---
 ## Beschreibung
@@ -30,7 +30,8 @@ Methode                         | ![Von Innen nach Außen](/assets/images/docs/c
 Stil der Verbindungen           | rund, spitz, abgeschrägt|Method to handle the edges when the size the contour is reduced for the inner spirals
 Selbstüberschneidungen vermeiden| ![Avoid self crossing effect](/assets/images/docs/contour-fill-self-crossing.jpg)|Whether inner to outer is allowed to cross itself or not
 Uhrzeigersinn                   || Bestimmt die Richtung in der die Kontur gestickt wird
-Glätten||Glättet den Stichpfad. Diese Einstellung definiert, wie weit der geglättete Stichpfad vom ursprünglichen Pfad abweichen darf. Versuche niedrige Zahlen wie z.B. 0.2. Hinweis: Eventuell ist auch eine geringere Geradstich-Toleranz erforderlich.
+Glätten                         ||Glättet den Stichpfad. Diese Einstellung definiert, wie weit der geglättete Stichpfad vom ursprünglichen Pfad abweichen darf. Versuche niedrige Zahlen wie z.B. 0.2. Hinweis: Eventuell ist auch eine geringere Geradstich-Toleranz erforderlich.
+Erweitern                       ||Erweitert die Ursprungsform. Diese Option kann genutzt werden, um Lücken zwischen angrenzenden Objekten zu verringern. Negative Werte verkleinern die Form.
 Maximale Füllstichlänge         || Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden.
 Reihenabstand                   || Abstand zwischen den Stichreihen.
 Geradstich-Toleranz             || Alle Stiche müssen innerhalb dieses Abstandes zum Pfad befinden. Ein niedrigerer Toleranzwert führt zu kürzeren Stichen. Ein höherer Wert könnte Ecken abrunden.

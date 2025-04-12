@@ -1,7 +1,7 @@
 ---
 title: "Contour Fill"
 permalink: /docs/stitches/contour-fill/
-last_modified_at: 2024-05-06
+last_modified_at: 2025-04-12
 toc: true
 ---
 ## What it is
@@ -31,6 +31,7 @@ Join Style                         |Round, Mitered, Beveled |Method to handle th
 Avoid self-crossing                |![Avoid self crossing effect](/assets/images/docs/contour-fill-self-crossing.jpg)|Wheter inner to outer is allowed to cross itself or not
 Clockwise                          |☑ |Direction to move around the contour
 Smoothness                         ||Smooth the stitch path.  Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path.  Try low numbers like 0.2.  Hint: a lower running stitch tolerance may be needed too.
+Expand                             ||Expand the shape before fill stitching, to compensate for gaps between the shapes. Negative values contract instead.
 Maximum fill stitch length         ||The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
 Spacing between rows               ||Distance between rows of stitches
 Running Stitch tolerance           |![Tolerance Sample](/assets/images/docs/contourfilltolerance.svg) |All stitches must be within this distance of the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded.
