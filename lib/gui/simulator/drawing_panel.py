@@ -3,7 +3,6 @@
 # Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import time
-from sys import platform
 
 import wx
 from numpy import split
@@ -226,6 +225,8 @@ class DrawingPanel(wx.Panel):
             scale_width += one_mm
 
         scale_width_mm = int(scale_width / self.zoom / PIXELS_PER_MM)
+        if scale_width_mm == 0:
+            scale_width_mm = max(0.01, round(scale_width / self.zoom / PIXELS_PER_MM, 2))
 
         # The scale bar looks like this:
         #
