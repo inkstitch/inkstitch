@@ -11,14 +11,7 @@ copyright_year="#define COPYRIGHT \""${info_year}"\""
 version_block="#define VERSION \""${VERSION}"\""
 sed -i'' -e '/;inkstitch-year/ a\'$'\n'"${copyright_year}"'' win/win_build.iss
 sed -i'' -e '/;inkstitch-version/ a\'$'\n'"${version_block}"'' win/win_build.iss
-# set installer to stop 64bit version to be installed in 32bit Windows
-if [[ ${ARCH} == "64bit" ]]; then
-		echo "64"
-	sed -i'' -e '/;arch-allowed/ a\'$'\n'"ArchitecturesAllowed=x64 arm64"'' win/win_build.iss
-else
-		echo "32"
-	sed -i'' -e '/;arch-allowed/ a\'$'\n'"ArchitecturesAllowed=x86 x64 arm64"'' win/win_build.iss
-fi
+sed -i'' -e '/;arch-allowed/ a\'$'\n'"ArchitecturesAllowed=x64 arm64"'' win/win_build.iss
 
 iscc win/win_build.iss
 mv  win/inkstitch.exe artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.exe
@@ -28,8 +21,13 @@ if [[ -d "../signed-artifacts" ]]; then
 	DIRECTORY="signed-artifacts"
 	echo "Found signed artifacts"
 else
-	DIRECTORY="artifacts"
-	echo "No signed artifacts found, local build"
+	if [[! -d "../signed-artifacts" ]]; then
+		DIRECTORY="signed-artifacts"
+		echo "Created signed artifacts"
+	else
+		DIRECTORY="artifacts"
+		echo "No signed artifacts found, local build"
+	fi
 fi
 
 # The python zipfile command line utility can't handle directories
