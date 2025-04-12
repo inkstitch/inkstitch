@@ -15,6 +15,8 @@
             gui-description="Use '%X' for x-coordinate. Use '%Y' for y-coordinate and '%Z' for z-coordinate."></param>
         <param name="custom_color_change" type="string" appearance="multiline" gui-text="COLOR CHANGE"
             gui-description="Leave empty to use default value. Use 'none' to remove. Use %R %G %B for thread color values"></param>
+        <param name="custom_jump" type="string" appearance="multiline" gui-text="JUMP"
+            gui-description="Leave empty to ignore jumps. Use '%X' for x-coordinate and '%Y' for y-coordinate."></param>
         <param name="custom_stop" type="string" appearance="multiline" gui-text="STOP"
             gui-description="Leave empty to use default value. Use 'none' to remove."></param>
         <param name="custom_start" type="string" appearance="multiline" gui-text="START"
