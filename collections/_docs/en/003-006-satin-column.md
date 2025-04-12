@@ -20,7 +20,7 @@ Ink/Stitch offers several option to create satin columns. Methods 1-4 will conve
 2. [Line to Live Path Effect Satin](#2-line-to-live-path-effect-satin): easily modifiable satin column with optional patterned outline
 3. [Zigzag Line to Satin](#3-zigzag-line-to-satin): simple satin column creation for graphic tablets and touch screens
 4. [Fill to Satin](#4-fill-to-satin): create satin columns from fills
-5. [Manual Satin Column](#4-manual-satin-column): take full control over every part of the satin column
+5. [Manual Satin Column](#5-manual-satin-column): take full control over every part of the satin column
 
 ### 1. Line to Satin
 
