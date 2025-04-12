@@ -311,7 +311,7 @@ class FillStitch(EmbroideryElement):
            type='float',
            sort_index=21,
            select_items=[('fill_method', 'tartan_fill')],
-           default=45)
+           default=-45)
     @cache
     def tartan_angle(self):
         return self.get_float_param('tartan_angle', -45)
