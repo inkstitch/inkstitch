@@ -1,7 +1,7 @@
 ---
 title: "Outils: Trait"
 permalink: /fr/docs/stroke-tools/
-last_modified_at: 2024-06-16
+last_modified_at: 2025-04-12
 
 toc: true
 ---
@@ -91,7 +91,7 @@ Ceci crééra un point droit direct entre la fin du premier élément et le déb
 
 et pour les connexions non fusionnées:
 * Longueur minimum du point droit
-* Tolerance
+* Tolérance
 
 
 ## Redwork
@@ -137,9 +137,9 @@ Cet outil est à utiliser de préférence avec un dessin connexe ou avec peu de 
   
   Détermine [le nombre de répétitions du point multiple (bean stitch)](/docs/stitches/bean-stitch/) pour les chemins brodés au deuxime passage uniquement.
 
-* Combiner  les éléments: Combine  les éléments consécutifs de même type
+* Combiner les éléments: Combine  les éléments consécutifs de même type
   
-* Garder les  chemins originels: choisir de supprimer ou non les éléments originels
+* Garder les chemins originels: choisir de supprimer ou non les éléments originels
 
 ### Position de début et de fin
 
@@ -150,7 +150,7 @@ Le redwork commence et termine toujours au même endroit. Vous pouvez  définir 
 
 ![Fill to outline](/assets/images/docs/outline.png)
 
-Cette extensionn aide à reconstruire l'objet original à partir du fichier de points lorsqu'on ne dispose plus du fichier svg de départ. Sélectionner un ou plusieurs chemins de points (en general un remplissage) et cette extension va essayer de trouver leur contour.
+Cette extension aide à reconstruire l'objet original à partir du fichier de points lorsqu'on ne dispose plus du fichier svg de départ. Sélectionner un ou plusieurs chemins de points (en general un remplissage) et cette extension va essayer de trouver leur contour.
 
 ### Usage
 
