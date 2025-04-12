@@ -53,9 +53,15 @@ def _get_stitches(stroke, is_linear, lines, skip_start):
             stitches = []
             for i, line in enumerate(lines):
                 if i % 2 == 0:
-                    stitches.extend(line[::-1])
-                else:
-                    stitches.extend(line)
+                    line = line[::-1]
+                if stitches:
+                    # even though this is manual stitch placement, we do not want the
+                    # connector lines to exceed the running stitch length value
+                    # so let's add some points
+                    points = LineString([stitches[-1], line[0]]).segmentize(stroke.running_stitch_length).coords
+                    if len(points) > 2:
+                        stitches.extend([InkstitchPoint(coord[0], coord[1]) for coord in points[1:-1]])
+                stitches.extend(line)
             return stitches
         return [point for line in lines for point in line]
     if is_linear and stroke.flip_copies:
