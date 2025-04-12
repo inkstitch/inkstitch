@@ -110,6 +110,10 @@ Position des ondulations           |◦ Nombre de lignes / Distance entre les li
 Rendre aléatoire                     ||Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré.
 Mouvement aléatoire de la longueur du point ||Pourcentage maximum de variation de la longueur du point appliqué si la longueur est rendue aléatoire.<br>Example: 
 Pour une  longueur de point standard de 4mm,un mmouvemmentt  aléatoire de 50% va ajouter ou supprimmer jusqu'à 2mm (50% de 4mm = 2mm).  Cela signifie que la longueur de point résultant variera entre 2 et 6 mm.
+{: .params-table }
+
+Paramètres||Description
+---|---|---
 Décaler les lignes ce nombre de fois avant de répéter.    ||  Longueur du cycle de décalage des lignes successives. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières. La valeur par défaut (0) désactive le décalage. Ne concerne que les ondulations linéaires.
 ◦Sauter les premières lignes <br /> ◦Sauter les dernières lignes  |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Permet de sauter (ne pas broder)  ce nombre de réplications au début et/ou à la fin. Sans effet sur les ondulations circulaires.
 Inverser une ligne  sur deux     | ☑  or ▢|Seulement pour des ondulations linéaires: inverser les ondulations une fois sur deux ou pas.
