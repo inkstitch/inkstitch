@@ -1,7 +1,7 @@
 ---
 title: "Outils de police"
 permalink: /fr/docs/font-tools/
-last_modified_at: 2025-01-04
+last_modified_at: 2025-04-12
 toc: true
 ---
 Un ensemble d'outils adaptés aux créateurs de polices ou à ceux qui souhaitent ajouter des polices supplémentaires dans [l'outil de lettrage](/docs/lettering) d'Ink/Stitch.
@@ -41,16 +41,16 @@ Cette extension crée un calque qui contient toutes les lettres d'une fonte. Ell
 ### Usage
 
 * Lancer  `Extensions > Ink/Stitch > Gestion des polices  > Test de police...`
-* Pick a font and adjust settings
-* Click on apply
+* Choisir une fonte et ajuster les réglages
+* Cliquer sur Appliquer
 
 ### Options
 
 * Fonte: choisir la fonte à utiliser
 * Direction du texte:  par défaut de gauche à droite
 * Échelle:  en pourcentage
-* largeur du texte: des sauts de lignes seront ajoutés pour ne  pas dépasser cette largeur
-* Color sort: wether a multicolor font should be color sorted or not (font needs to set the [color sort index](#set-color-index) values)
+* Largeur du texte: des sauts de lignes seront ajoutés pour ne  pas dépasser cette largeur
+* Tri des couleurs: choisir si une fonte multicolore est triée ou nonn (la fonte doit utiliser [l'indice de tri des couleurs](#set-color-index))
 
 ## Forcer des points d'arrêt {#force-lock-stitches}
 
