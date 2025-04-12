@@ -127,7 +127,7 @@ Cet outil est à utiliser de préférence avec un dessin connexe ou avec peu de 
   Supprime du résultat les chemins plus court  que cette valeur
 
   Le résultat peut contenir des petits chemins (par exemple en cas de traits pas tout a fait jointif mais avec une  petite superposition). 
-  Des chemins plus court que  la [longeur minimum  de saut](/docs/preferences/#minimum-jump-stitch-length-mm) peuvent généralement être supprimés, mais s'ils sont consecutifs, il vaudra mieux diminuer cettte valeur.
+  Des chemins plus courts que  la [longeur minimum  de saut](/docs/preferences/#minimum-jump-stitch-length-mm) peuvent généralement être supprimés, mais s'ils sont consecutifs, il vaudra mieux diminuer cettte valeur.
 
 * Longueur du point Redwork  (mm)
 
@@ -137,12 +137,13 @@ Cet outil est à utiliser de préférence avec un dessin connexe ou avec peu de 
   
   Détermine [le nombre de répétitions du point multiple (bean stitch)](/docs/stitches/bean-stitch/) pour les chemins brodés au deuxime passage uniquement.
 
-* Combine elements: Combine consecutive elements of the same type
-* Keep original paths: wether to delete the original elements or not
+* Combiner  les éléments: Combine  les éléments consécutifs de même type
+  
+* Garder les  chemins originels: choisir de supprimer ou non les éléments originels
 
 ### Position de début et de fin
 
-Le redwork commence et termine toujours au même endroit. Vous pouvez  définir cet endroit à l'aide de la commande [Position de départ pour l'agencement automatique de point droit](/docs/commands/#--startingending-position-for-auto-route-of-running-stitch).
+Le redwork commence et termine toujours au même endroit. Vous pouvez  définir cet endroit à l'aide de la commande [Position de départ pour l'agencement automatique](/docs/commands/#--startingending-position-for-auto-route-of-running-stitch).
 
 
 ## Contour {#outline}
@@ -155,8 +156,8 @@ Cette extensionn aide à reconstruire l'objet original à partir du fichier de p
 
 - Sélectioner  les éléments que vous souhaitez convertir
 - Exécutez `Extensions > Ink/Stitch > Outils: Trait > Contour...`
-- Cochez  "live preview" to see the actual result
-- Adjust settings until you are happy with the outcome
+- Cochez  "live preview" pour prévisualiser le résultat
+- Ajuster les réglages jusqu'à être content du résultat
 - Cliquez "Appliquer"
 
 ## Tutoriaux utilisant Outils: Trait
