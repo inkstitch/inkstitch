@@ -1,7 +1,7 @@
 ---
 title: "Broderie Ondulée"
 permalink: /fr/docs/stitches/ripple-stitch/
-last_modified_at: 2024-04-28
+last_modified_at: 2025-04-12
 toc: true
 ---
 ## De quoi s'agit-il ?
