@@ -1,7 +1,7 @@
 ---
 title: "Satin Werkzeuge"
 permalink: /de/docs/satin-tools/
-last_modified_at: 2025-04-11
+last_modified_at: 2025-04-12
 toc: true
 ---
 Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinsäulen](/docs/stitches/satin-column/) erleichtern sollen.
@@ -136,30 +136,32 @@ Für nähere Infos über die Funktionsweise dieser Erweiterung gibt es im [Tutor
 
 ### Optionen
 
-* Gleichmäßige Abstände
+#### Allgemeine Einstellungen
 
-  Wähle ob die Farben gleiche Breiten und Abstände haben sollen oder nicht.
+* Gleichmäßige Abstände: Wähle ob die Farben gleiche Breiten und Abstände haben sollen oder nicht.
+  * Ist die Option aktiviert, kann die Breite aller Farben über die Option `Monochrome Farbbreite` eingestellt werden.
+  * Ist die Option deaktiviert, kann für jede Farbe sowohl die Breite der reinen Farbe als auch die Breite des darauf folgenden zweifarbigen Bereichs über die einzelnen Farben definiert werden.
+* Überlauf links (%): Fügt einen gezackten Rand links der Satinsäule hinzu
+* Überlauf rechts (%): Fügt einen gezackten Rand rechts der Satinsäule hinzu
+* Zugausgleich (mm): Verbreitert die Satinsäulen und überlappt sie. So können Lücken zwischen den Farben vermieden werden.
+* Zufallswert: Passe den Wert an, um das Erscheinungsbild der Zufallsparameter zu ändern
 
-  Ist die Option aktiviert, kann die Breite aller Farben über die Option `Monochrome Farbbreite` eingestellt werden.
+* Satinsäulen behalten: legt fest, ob die ursprüngliche Satinsäule gelöscht werden soll oder nicht
+* Unterlage pro Farbe anpassen: findet nur Anwendung, wenn die ursprüngliche Satinsäule Unterlagen enthält
+  * Ist die Option aktiviert, wird die Unterlagen auf die verschiedenen Farben aufgeteilt. Mehrfarbige Bereiche bleiben ohne Unterlage
+  * Ist die Option deaktiviert, erhält nur die erste Farbe eine Unterlage die den gesamten Bereich abdeckt
 
-  Ist die Option deaktiviert, kann für jede Farbe sowohl die Breite der reinen Farbe als auch die Breite des darauf folgenden zweifarbigen Bereichs über die einzelnen Farben definiert werden.
-* Überlauf links (Prozent)
+#### Farben
 
-  Fügt einen gezackten Rand links der Satinsäule hinzu
-- Überlauf rechts (Prozent)
+Width values are given in percentages. Make sure all numbers for all colors add up to 100%.
 
-  Fügt einen gezackten Rand rechts der Satinsäule hinzu
-- Füge Farben hinzu
+Bitte beachte, dass das erste Eingabefeld die Breite für die einfarbigen Bereiche definiert. Das zweite Eingabefeld definiert die Breite des zweifarbigen Abschnitts bis zur nächsten Farben.
+Ist die Option `Gleichmäßige Abstände` aktiviert, reduziere den Wert für `Monochrome Farbbreite` um ein breiteres zweifarbiges Feld zu erhalten.
+{: .notice--info}
 
-  Width values are given in percentages. Make sure all numbers for all colors add up to 100%.
+![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
 
-  Bitte beachte, dass das erste Eingabefeld die Breite für die einfarbigen Bereiche definiert. Das zweite Eingabefeld definiert die Breite des zweifarbigen Abschnitts bis zur nächsten Farben.
-  Ist die Option `Gleichmäßige Abstände` aktiviert, reduziere den Wert für `Monochrome Farbbreite` um ein breiteres zweifarbiges Feld zu erhalten.
-  {: .notice--info}
-
-  ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
-
-  ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
+![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
 
 ## Linie zu Pfadeffekt-Satin
 

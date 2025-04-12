@@ -1,7 +1,7 @@
 ---
 title: "Font Tools"
 permalink: /docs/font-tools/
-last_modified_at: 2024-12-28
+last_modified_at: 2025-04-12
 toc: true
 ---
 A collection of tools suitable for font creators or those who want to add additional fonts to the Ink/Stitch [lettering tool](/docs/lettering).
@@ -36,12 +36,19 @@ This extension allows you do edit an existing font information file. If the font
 
 This extension creates a list of all letters in a font. It helps font creators to test the outcome of a new font.
 
-Options are :
+### Usage
 
-* Font : the one you want to use
-* Stitch direction :  default is left to right
-* Scale : in percent
-* Max line width : line breaks will  be chosen accordingly
+* Run `Extensions > Ink/Stitch > Font Management > Font Sampling`
+* Pick a font, adjust settings
+* Click on apply
+
+### Options
+
+* Font: the one you want to use
+* Stitch direction:  default is left to right
+* Scale: in percent
+* Max line width: line breaks will  be chosen accordingly
+* Color sort: wether a multicolor font should be color sorted or not (font needs to set the [color sort index](#set-color-index) values)
 
 ## Force lock stitches
 
@@ -59,9 +66,12 @@ This extension helps adding forced lock stitches. One may chose to restrict the 
 
 ### Options
 
-* Mininum distance (mm)
-* Maximum distance (mm)
-* Restrict to satin
+* Restrict to Satin: add forced lock stitches only to satin columns
+
+* Add forced lock stitches by distance
+  * Mininum distance (mm): do not add lock stitches if the distance to the next element is smaller than this
+  * Maximum distance (mm): do not add lock stitches if the distance to the next element is larger than this
+
 * Add force lock stitches attribute to the last element of each glyph
 
 ## Generate JSON

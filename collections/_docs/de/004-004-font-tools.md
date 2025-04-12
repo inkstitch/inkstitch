@@ -1,7 +1,7 @@
 ---
 title: "Schriftverwaltung"
 permalink: /de/docs/font-tools/
-last_modified_at: 2024-12-30
+last_modified_at: 2025-04-12
 toc: true
 ---
 Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem [Text-Werkzeug](/de/docs/lettering/) von Ink/Stitch zusätzliche Schriften hinzufügen wollen.
@@ -31,12 +31,19 @@ Diese Erweiterung erlaubt das bearbeiten von Schriftinformationen. Hat die Schri
 Diese Erweiterung generiert eine Liste aller Zeichen einer Schrift.
 So können Schriftautoren schnell und einfach das Stickergebnis einer neuen Schrift prüfen.
 
+### Funktionsweise
+
+* Öffne `Erweiterungen > Ink/Stitch > Schriftverwaltung > Zeichentabelle`
+* Wähle eine Schrift und setze die gewünschten Einstellungen
+* Klicke auf Anwenden
+
 ### Optionen
 
 * Schrift: die Schrift die ausgegeben werden soll
 * Stickrichtung: Links nach rechts in der Standardeinstellung
 * Skalieren: in Prozent
 * Maximale Zeilenlänge: fügt Zeilenumbrüche entsprechend des gewählten Wertes ein
+* Farbsortierung: legt fest, ob mehrfarbige Schriften sortiert werden sollen (damit das funktioniert, muss die Schrift die entsprechenden [Farbsortierindices](#farbsortierindex-festlegen) festgelegt haben)
 
 ## Vernähstiche erzwingen
 
@@ -54,9 +61,12 @@ Diese Erweiterung soll dabei helfen, die Stickobjekte entsprechend zu bearbeiten
 
 ### Optionen
 
-* Minimaler Abstand (mm)
-* Maximaler Abstand (mm)
 * Auf Satinsäulen beschränken
+
+* "Vernähen erzwingen" nach Abstandsparametern einfügen
+  * Minimaler Abstand (mm): füge keinen Vernähstiche erzwingen Befehl ein, wenn der Abstand zum nächsten Element kleiner ist als dieser Wert
+  * Maximaler Abstand (mm): füge keinen Vernähstiche erzwingen Befehl ein, wenn der Abstand zum nächsten Element größer ist als dieser Wert
+
 * Füge das Attribut "Vernähen erzwingen" dem jeweils letzten Element eines Schriftzeichens hinzu
 
 ## JSON-Datei erstellen

@@ -285,6 +285,8 @@ Add option for text position along the path (left, center, right, stretch)
 
 * add option to group / not group unlinked symbol elements [#3624](https://github.com/inkstitch/inkstitch/pull/3624)
 
+[Read more](/docs/edit/#unlink-clone)
+
 ## Removed extensions
 
 ### Glyphlist update
@@ -307,13 +309,19 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 * Enable expand option [#3462](https://github.com/inkstitch/inkstitch/pull/3462)
 
+[Read more](/docs/stitches/contour-fill/)
+
 ### Linear gradient fill
 
 * Add randomization options to linear gradient fill [#3311](https://github.com/inkstitch/inkstitch/pull/3311)
 
+[Read more](/docs/stitches/linear-gradient-fill/)
+
 ### Manual stitch
 
 * Add bean stitch option to manual stitch [#3312](https://github.com/inkstitch/inkstitch/pull/3312)
+
+[Read more](/docs/stitches/manual-stitch/)
 
 ### Ripple Stitch
 
@@ -336,6 +344,8 @@ Glyphlist update has been part of the font management and was replaced by the mu
 * Enable start end commands for satins [#3315](https://github.com/inkstitch/inkstitch/pull/3315)
 
   ![Start/end command for satin columns](/assets/images/upcoming/3.2.0/satin_start_end_command.png)
+
+[Read more](/docs/stitches/satin-column/)
 
 ## Palettes
 

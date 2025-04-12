@@ -104,7 +104,6 @@ La différence principale avec  "l'agencement automatique" est qu'il assure que 
 
 Cet outil est à utiliser de préférence avec un dessin connexe ou avec peu de morceaux disjoints.
 
-
 ### Usage
 
 * Sélectionnez les chemins que vous désirez organiser
@@ -114,32 +113,35 @@ Cet outil est à utiliser de préférence avec un dessin connexe ou avec peu de 
 ### Options
 
 * Connectez les traits distants de  moins de (mm)
-  
-L'extension redwork peut travailler avec des groupes disconnectés de points droits.  Par contre certains de vos traits peuvent de ne pas s'enchainer les uns les autres ce qui laisse de petits espaces.
-Avec cette option, vous pouvez définir jusqu'à quelle distance ces espaces doivent être supprimés.
 
-Les  traits dont la distance est supérieure à cette valeur seront considérés comme non connectés.
+  L'extension redwork peut travailler avec des groupes disconnectés de points droits.  Par contre certains de vos traits peuvent de ne pas s'enchainer les uns les autres ce qui laisse de petits espaces.
+  Avec cette option, vous pouvez définir jusqu'à quelle distance ces espaces doivent être supprimés.
 
-L'extension brode  successivement chaque groupe connecté, avec un unique saut entre deux groupes connectés.
+  Les  traits dont la distance est supérieure à cette valeur seront considérés comme non connectés.
+
+  L'extension brode  successivement chaque groupe connecté, avec un unique saut entre deux groupes connectés.
 
 
 * Longueur minimale du chemin (mm)
 
-Supprime du résultat les chemins plus court  que cette valeur
+  Supprime du résultat les chemins plus court  que cette valeur
 
-Le résultat peut contenir des petits chemins (par exemple en cas de traits pas tout a fait jointif mais avec une  petite superposition). 
-Des chemins plus court que  la [longeur minimum  de saut](/docs/preferences/#minimum-jump-stitch-length-mm) peuvent généralement être supprimés, mais s'ils sont consecutifs, il vaudra mieux diminuer cettte valeur.
+  Le résultat peut contenir des petits chemins (par exemple en cas de traits pas tout a fait jointif mais avec une  petite superposition). 
+  Des chemins plus court que  la [longeur minimum  de saut](/docs/preferences/#minimum-jump-stitch-length-mm) peuvent généralement être supprimés, mais s'ils sont consecutifs, il vaudra mieux diminuer cettte valeur.
 
-  
 * Longueur du point Redwork  (mm)
-  
-Détermine la longueur du point pour tous les chemins du résultat.
+
+  Détermine la longueur du point pour tous les chemins du résultat.
   
 * Nombre de répétitions du point multiple (bean stitch)
   
-Détermine [le nombre de répétitions du point multiple (bean stitch)](/docs/stitches/bean-stitch/) pour les chemins brodés au deuxime passage uniquement.
+  Détermine [le nombre de répétitions du point multiple (bean stitch)](/docs/stitches/bean-stitch/) pour les chemins brodés au deuxime passage uniquement.
+
+* Combine elements: Combine consecutive elements of the same type
+* Keep original paths: wether to delete the original elements or not
 
 ### Position de début et de fin
+
 Le redwork commence et termine toujours au même endroit. Vous pouvez  définir cet endroit à l'aide de la commande [Position de départ pour l'agencement automatique de point droit](/docs/commands/#--startingending-position-for-auto-route-of-running-stitch).
 
 

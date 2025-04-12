@@ -1,7 +1,7 @@
 ---
 title: "Tools: Satin"
 permalink: /docs/satin-tools/
-last_modified_at: 2025-04-11
+last_modified_at: 2025-04-12
 toc: true
 ---
 `Extensions > Ink/Stitch  > Tools: Satin` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
@@ -136,29 +136,31 @@ If you want to understand how this extension works internally, [read this](/tuto
 
 ### Options
 
-* Equidistant colors
+#### General Settings
 
-  Choose  if the colors  are equidistant or not.
+* Equidistant colors: Choose if the colors  are equidistant or not.
+  * If checked the color width and margins are defined for all colors by the `monochrome color width` value.
+  * If unchecked you are able to independantly chose width and margins for each color.
+* Left overflow (%): Adds a jagged edge to the left side of the satin
+* Right overflow (%): Adds a jagged edge to the right side of the satin
+* Pull compensation (mm): Makes the satin columns wider and will overlap the color sections to avoid gaps
+* Random seed: Change the value to change the appearance of randomized params
 
-  If checked the color width and margins are defined for all colors by the `monochrome color width` value.
+* Keep original satin: wether the original satin should be deleted or not
+* Adjust underlay per color: applies only when the original satin column has underlays
+  * If checked, the underlays will be applied to each color separately, excluding the multicolor sections
+  * If unchecked, only the first color will use an underlay, covering the whole area
 
-  If unchecked you are able to independantly chose width and margins for each color.
-* Add a left overflow  (percent)
+#### Colors
 
-  Adds a jagged edge to the left side of the satin
-* Add a  right overflow (percent)
+Width values are given in percentages. Make sure all numbers for all colors add up to 100%.
 
-  Adds a jagged edge to the right side of the satin
-* Add more colors
+Please note that the first input field in each color definition sets the width of the area with only one color. The second input box defines the margin to the next color. This is the width of the area with the "color transition". When `equidistant colors` colors is checked, reduce the value for `monochrome color width` to receive a wider field of bicolor sections.
+{: .notice--info}
 
-  Width values are given in percentages. Make sure all numbers for all colors add up to 100%.
+![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
 
-  Please note that the first input field in each color definition sets the width of the area with only one color. The second input box defines the margin to the next color. This is the width of the area with the "color transition". When `equidistant colors` colors is checked, reduce the value for `monochrome color width` to receive a wider field of bicolor sections.
-  {: .notice--info}
-
-  ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_01.png)
-
-  ![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
+![Multicolor satin ui](/assets/images/docs/en/multicolor_satin_ui_02.png)
 
 
 ## Stroke to Live Path Effect Satin

@@ -38,13 +38,19 @@ Cette extension permet d'éditer les informations existantes sur une police.  Si
 
 Cette extension crée un calque qui contient toutes les lettres d'une fonte. Elle aide les créateurs de fontes à tester leurs nouvelles fonte.
 
-Lancer  `Extensions > Ink/Stitch > Gestion des polices  > Test de police...`
-Options  :
+### Usage
 
-* Fonte : choisir la fonte à utiliser
-* Direction du texte :  par défaut de gauche à droite
+* Lancer  `Extensions > Ink/Stitch > Gestion des polices  > Test de police...`
+* Pick a font and adjust settings
+* Click on apply
+
+### Options
+
+* Fonte: choisir la fonte à utiliser
+* Direction du texte:  par défaut de gauche à droite
 * Échelle:  en pourcentage
-* largeur du texte: des sauts de lignes seront ajoutés pour ne  pas dépasser cette largeur;
+* largeur du texte: des sauts de lignes seront ajoutés pour ne  pas dépasser cette largeur
+* Color sort: wether a multicolor font should be color sorted or not (font needs to set the [color sort index](#set-color-index) values)
 
 ## Forcer des points d'arrêt {#force-lock-stitches}
 
@@ -64,9 +70,12 @@ Pour la même raison, lorsque les lettres sont détachées, il peut être utile 
 
 ### Options
 
-* Mininum distance (mm)
-* Maximum distance (mm)
 * Restreindre au satin
+
+* Ajouter des points d'arrêt forcés par la distance
+  * Mininum distance (mm)
+  * Maximum distance (mm)
+
 * Ajouter l'attribut "forcer les points d'arrêts" au dernier élément de chaque glyphe
 
 ## Générer le fichier JSON {#generate-json}
