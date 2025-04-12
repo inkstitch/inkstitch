@@ -1,7 +1,7 @@
 ---
 title: "Satinsäule"
 permalink: /de/docs/stitches/satin-column/
-last_modified_at: 2024-05-22
+last_modified_at: 2025-04-12
 toc: true
 ---
 ## Beschreibung
@@ -19,7 +19,8 @@ Ink/Stitch bietet verschiedene Möglichkeiten Satinsäulen zu erstellen. Die Met
 1. [Linie zu Satin](#1-linie-zu-satin): für Satinsäule mit einheitlicher Breite
 2. [Linie zu Pfadeffekt-Satin](#2-linie-zu-pfadeffekt-satin): leicht modifizierbare Satinsäule mit optionalem Muster
 3. [Zickzack-Linie zu Satin](#3-zickzack-linie-zu-satin): für die einfache Erstellung mit Grafiktablets oder Touchscreens
-4. [Manuelle Satinsäule](#4-manuelle-satinsäule): volle Kontrolle über jeden Teil der Satinsäule
+4. [Füllung zu Satin](#4-füllung-linie-zu-satin): für die einfache Erstellung mit Grafiktablets oder Touchscreens
+5. [Manuelle Satinsäule](#5-manuelle-satinsäule): volle Kontrolle über jeden Teil der Satinsäule
 
 ### 1. Linie zu Satin
 
@@ -47,7 +48,14 @@ Diese Methode zur Erstellung von Satinsäulen ist besonders für Grafik-Tablets 
 
 Mehr Informationen über [Zickzack-Linie zu Satin](/de/docs/satin-tools/#zickzack-line-zu-satin)
 
-### 4. Manuelle Satinsäule
+### 4. Füllung zu Satin
+{% include upcoming_release.html %}
+
+Füllung zu Satin hilft bei der Umwandlung von Füllflächen zu Satinsäulen. Es ist eine halbautomatische Funktion und benötigt ein wenig Handarbeit.
+
+Mehr Informationen über [Füllung zu Satin](/de/docs/satin-tools/#füllung-line-zu-satin)
+
+### 5. Manuelle Satinsäule
 
 Eine Satinsäule wird aus zwei **meist parallel verlaufenden Linien** gebildet. Ink/Stitch zeichnet ein Zick-Zack Muster zwischen den beiden Linien hin und her. Die Breite der Säule kann beliebig variiert werden.
 
