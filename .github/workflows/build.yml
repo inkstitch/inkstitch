@@ -73,7 +73,7 @@ jobs:
         run: |
           make dist
         env:
-          BUILD: linux64
+          BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
       - uses: actions/upload-artifact@v4
         with:
