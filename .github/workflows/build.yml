@@ -445,7 +445,7 @@ jobs:
       - name: download linux64
         uses: actions/download-artifact@v4
         with:
-          name: 'inkstitch-linux64
+          name: 'inkstitch-linux64'
           path: 'artifacts/'
       - name: download linux32
         uses: actions/download-artifact@v4
