@@ -1,7 +1,7 @@
 ---
 title: "Formats de fichiers"
 permalink: /fr/docs/file-formats/
-last_modified_at: 2022-01-16
+last_modified_at: 2025-04-12
 ---
 
 Ink/Stitch prend en charge de nombreux formats de broderie. Il peut importer et exporter des fichiers aux formats énumérés ci-dessous.
@@ -10,15 +10,15 @@ Ink/Stitch prend en charge de nombreux formats de broderie. Il peut importer et 
 
 ### Ecriture
 
-#### Embroidery
+#### Broderie
 
 **DST**, **EXP**, G-CODE, **JEF**, PEC, **PES**, TBF, U01, **VP3**, XXX
 
-#### Color
+#### Couleur
 
 COL, EDR, INF
 
-#### Stitch Formats
+#### Formats de points
 
 PMV
 
@@ -26,21 +26,21 @@ PMV
 
 PLT, QCC
 
-#### Utility Formats
+####  Formats  utilitaires
 
 CSV, JSON, PNG, TXT, SVG
 
 ### Lecture
 
-#### Embroidery 
+#### Broderie
 
 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, G-CODE, GT, HUS, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, U01, **VP3**, XXX, ZHS, ZXY
 
-#### Color
+#### Couleur
 
 COL, EDR, INF
 
-#### Stitch Formats
+####  Formats de points
 
 PMV
 
@@ -48,7 +48,7 @@ PMV
 
 IQP, PLT, QCC
 
-#### Utility Formats
+####  Formats Utilitaires
 
 CSV, JSON
 
