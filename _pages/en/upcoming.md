@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-04-11
+last_modified_at: 2025-04-12
 sidebar:
   nav: pages
 toc: true
@@ -354,9 +354,20 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 ## Export / Import
 
+### New Export Formats
+
+TBF
+
+Longarm Quilting: PLT, QCC
+
+### New Import Formats
+
+Longarm Quilting: PLT, QCC, IQP
+
 ### GCODE
 
-Update pyembroidery to allow customized setting for rgb values [#3530](https://github.com/inkstitch/inkstitch/pull/3530)
+* Custom RGB values [#3530](https://github.com/inkstitch/inkstitch/pull/3530)
+* Custom JUMP
 
 ### Batch Lettering
 
@@ -396,6 +407,8 @@ Ink/Stitch can now export multiple files with text at once. A path with a specif
 
 ## Bug Fixes
 
+* Prevent unwanted simulator scale transforms [#3637](https://github.com/inkstitch/inkstitch/pull/3637)
+* Always update satin param to avoid actual param/rendering mismatch [#3647](https://github.com/inkstitch/inkstitch/pull/3647)
 * Lettering, custom directories: do not try to read hidden directories [#3632](https://github.com/inkstitch/inkstitch/pull/3632)
 * Simulator on macOS Ventura: update background color correctly [#3621](https://github.com/inkstitch/inkstitch/pull/3621)
 * ignore palette files with wrong encoding [#3620](https://github.com/inkstitch/inkstitch/pull/3620)

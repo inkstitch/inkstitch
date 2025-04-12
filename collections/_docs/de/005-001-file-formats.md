@@ -10,10 +10,48 @@ Ink/Stitch unterstützt viele Stickformate. Es kann Dateien in die unten aufgef�
 ## Unterstützte Stickdatei-Formate (A - Z):
 
 ### Schreiben
-CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
+
+#### Stickformate
+
+**DST**, **EXP**, G-CODE, **JEF**, PEC, **PES**, TBF, U01, **VP3**, XXX
+
+#### Farbe
+
+COL, EDR, INF
+
+#### Stitch Formats
+
+PMV
+
+#### Quilting
+
+PLT, QCC
+
+#### Utility Formate
+
+CSV, JSON, PNG, TXT, SVG
 
 ### Lesen
-100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
+
+#### Stickformate 
+
+100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, G-CODE, GT, HUS, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, U01, **VP3**, XXX, ZHS, ZXY
+
+#### Farbe
+
+COL, EDR, INF
+
+#### Stickformate
+
+PMV
+
+#### Quilting
+
+IQP, PLT, QCC
+
+#### Utility Formate
+
+CSV, JSON
 
 **Info:** Detaillierte Informationen zu Stickdateiformaten gibt es hier [EduTechWiki](http://edutechwiki.unige.ch/en/Embroidery_format).
 {: .notice--info }
