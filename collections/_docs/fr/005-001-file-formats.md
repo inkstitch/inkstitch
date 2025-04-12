@@ -40,7 +40,7 @@ CSV, JSON, PNG, TXT, SVG
 
 COL, EDR, INF
 
-#### Embroidery
+#### Stitch Formats
 
 PMV
 

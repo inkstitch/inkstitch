@@ -1,7 +1,7 @@
 ---
 title: "Unterstützte Dateiformate"
 permalink: /de/docs/file-formats/
-last_modified_at: 2020-10-01
+last_modified_at: 2025-04-12
 toc: true
 ---
 
@@ -19,7 +19,7 @@ Ink/Stitch unterstützt viele Stickformate. Es kann Dateien in die unten aufgef�
 
 COL, EDR, INF
 
-#### Stitch Formats
+#### Stich
 
 PMV
 
@@ -41,7 +41,7 @@ CSV, JSON, PNG, TXT, SVG
 
 COL, EDR, INF
 
-#### Stickformate
+#### Stich
 
 PMV
 

@@ -1,7 +1,7 @@
 ---
 title: "File Formats"
 permalink: /docs/file-formats/
-last_modified_at: 2020-05-12
+last_modified_at: 2025-04-12
 toc: true
 ---
 
@@ -41,7 +41,7 @@ CSV, JSON, PNG, TXT, SVG
 
 COL, EDR, INF
 
-#### Embroidery
+#### Stitch Formats
 
 PMV
 
