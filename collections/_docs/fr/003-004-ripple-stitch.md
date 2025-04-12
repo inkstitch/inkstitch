@@ -118,6 +118,10 @@ Inverser effet exposant       |☑  ou ▢| Échange le rôle de la  première e
 Changer le sens               |☑  ou ▢|  Change le sens du  chemin final de broderie . N'a pas d'effet sur les autres paramètres.
 Inverser la  direction des rails||Inverse les rails d'une ondulation satin. Par défaut détecte automatiquement, et corrige la direction d'un des rails.
 Taille de la  grille          |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Si une distance positive est spécifiée, les ondulations de la broderie sont complétées  en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir  n'a pas  d'influence sur ce paramètre.
+{: .params-table }
+
+Paramètres||Description
+---|---|---
 Broder d'abord  la grille           |Brode en sens inverse de telle sorte que  la grille est brodée en premier.
 Mettre à l'echelle sur l'axe  |XY ou X ou Y ou rien|seulement pour des ondulations guidées.
 Démarrer à                    | seulement pour des ondulations guidées|Taille de la première ondulation en pourcentage.
