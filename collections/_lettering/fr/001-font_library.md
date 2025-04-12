@@ -1,7 +1,7 @@
 ---
 title: "Bibliothèque de Polices"
 permalink: /fr/fonts/font-library/
-last_modified_at: 2022-05-27
+last_modified_at: 2025-04-12
 classes:
     - wide
     - fonts
@@ -9,11 +9,14 @@ toc: false
 after_footer_scripts:
     - /assets/js/font_filter.js
 ---
-This is a list of all fonts available in Ink/Stitch. They can be used with the [Lettering tool](/docs/lettering/).
 
-You can click on each font to gather more information and see lovely examples of real life usage for each particular font.
+Voici la liste de toutes les polices disponibles dans Ink/Stitch. Elles peuvent être utilisées avec
+[l'outil Lettrage](/fr/docs/lettering/).
 
-This library is kept up to date and may also include fonts which are only available in future releases. Please refer to the corresponding font page.
+Vous pouvez cliquer sur chaque police pour obtenir plus d'information et voir des exemples réels d'utilisation de chaque fonte.
+
+Cette bibliothèque est régulièrement mise à jour et peut inclure des fontes qui ne seront disponibles que dans  une version future. Merci de vous réferrer à la page
+de la fonte correspondante.
 {: .notice--info}
 
 {% include font_list %}
