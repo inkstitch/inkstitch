@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Transform</name>
+    <id>org.{{ id_inkstitch }}.transform_elements</id>
+    <param name="extension" type="string" gui-hidden="true">transform_elements</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <param name="rotate" type="float" precision="2" min="-180" max="180" appearance="full"
+                gui-text="Rotate">0</param>
+            <param name="flip-horizontally" type="bool" gui-text="Flip horizontally">false</param>
+            <param name="flip-vertically" type="bool" gui-text="Flip vertically">false</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>
+                This extension applies transformations while also adjusting the fill angles
+            </label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/edit/#transform</label>
+        </page>
+    </param>
+
+    <effect>
+        <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/break_apart_fill.svg</icon>
+        <menu-tip>Break apart and repair (broken) fill shapes</menu-tip>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Edit" />
+            </submenu>
+        </effects-menu>
+    </effect>
+
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

@@ -49,7 +49,7 @@ class JumpToStroke(InkstitchExtension):
             next_elements = self.elements[1:] + next_elements
         for element, next_element in zip(self.elements, next_elements):
             layer, group = self._get_element_layer_and_group(element)
-            stitch_groups = element.to_stitch_groups(last_stitch_group, next_element)
+            stitch_groups = element.embroider(last_stitch_group, next_element)
             multiple = not self.options.merge_subpaths and stitch_groups
 
             if multiple:
