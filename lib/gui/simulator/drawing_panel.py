@@ -3,6 +3,7 @@
 # Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import time
+import math
 
 import wx
 from numpy import split
@@ -216,17 +217,24 @@ class DrawingPanel(wx.Panel):
 
         one_mm = PIXELS_PER_MM * self.zoom
         scale_width = one_mm
+        scale_width_mm = 1
         max_width = min(canvas_width * 0.5, 300)
+        min_width = 50
 
-        while scale_width > max_width:
-            scale_width /= 2.0
+        if scale_width > max_width:
+            # max_width = one_mm * 2 ^ x
+            # x = log2(max_width/one_mm)
+            exponent = math.floor(math.log2(max_width/one_mm))
+            if exponent < -6:
+                canvas.EndLayer()
+                return
 
-        while scale_width < 50:
-            scale_width += one_mm
+            scale_width = one_mm * 2 ** exponent
+            scale_width_mm = round(2 ** exponent, 2)
 
-        scale_width_mm = int(scale_width / self.zoom / PIXELS_PER_MM)
-        if scale_width_mm == 0:
-            scale_width_mm = max(0.01, round(scale_width / self.zoom / PIXELS_PER_MM, 2))
+        if scale_width < min_width:
+            scale_width_mm = int(min_width / one_mm)
+            scale_width = one_mm * scale_width_mm
 
         # The scale bar looks like this:
         #
