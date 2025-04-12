@@ -167,7 +167,7 @@ Please note that the first input field in each color definition sets the width o
 
 Converts a stroke into a satin using a live path effect. This makes it more adaptable in width and shape as a normal satin column.
 
-**Please avoid sharp corners.** As with normal satins, it is better to split up the path at sharp corners. Sharp corners on path effect satins may also lead to an inconsistant width.
+**Please avoid sharp corners.** As with normal satins, it is better to split up the path at sharp corners. In some cases it may be necessary to stretch out node handles or to add more nodes to achieve a consistant width.
 {: .notice--warning }
 
 ### Usage
@@ -186,7 +186,7 @@ Max Width (mm)      | ![Max width](/assets/images/docs/lpe_max_width.png)   | Pa
 Pattern Length (mm) | ![Length](/assets/images/docs/lpe_length.png)         | Length of the pattern
 Stretched           | ![Stretched](/assets/images/docs/lpe_stretched.png)   | If checked the pattern will be stretched so that its pattern repeats occupy exactly the length of the line, otherwise there may be a gap at the end of the line
 Add rungs           | ![Rungs](/assets/images/docs/lpe_rungs.png)           | Since the patterns (usually) all have the same number of nodes on both rails, the rungs are optional.
-Path specific       |                                                       | If checked, the satin column has its own pattern. A modification of any option only influences this column. Otherwise, the pattern is common to all satin columns using this effect and pattern. Modifying the pattern for one of them modifies it for all of them.
+Path specific       |                                                       | ● If checked, the satin column has its own pattern. A modification of any option only influences this column. Element transforms can be applied<br>● If unchecked, the pattern is common to all satin columns using this effect and pattern. Modifying the pattern for one of them modifies it for all of them. Element transforms may lead to an unexpected column width.
 
 ### Update and change the pattern
 

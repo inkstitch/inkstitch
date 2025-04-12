@@ -167,7 +167,7 @@ Ist die Option `Gleichmäßige Abstände` aktiviert, reduziere den Wert für `Mo
 
 Konvertiert eine Linie in eine Satinsäule mit Hilfe von Pfadeffekten. Dies macht es einfacher Form und Breite auch im Nachhinein noch anzupassen.
 
-**Verwende keine spitzen Ecken.** Genauso wie bei normalen Satinsäulen, sollten spitze Ecken in verschiedene Pfade aufgespalten werden. Spitze Ecken bei Pfadeffekt-Satin kann außerdem zu einer inkonsistenten Breite führen.
+**Verwende keine spitzen Ecken.** Genauso wie bei normalen Satinsäulen, sollten spitze Ecken in verschiedene Pfade aufgespalten werden. Um eine konstante Breite zu erzielene, kann es nötig sein, die Anfasser der Knoten zu ziehen oder mehr Knoten hinzuzufügen.
 {: .notice--warning }
 
 ### Funktionsweise
@@ -186,7 +186,7 @@ Max Width (mm)      | ![Max width](/assets/images/docs/lpe_max_width.png)   | Mu
 Pattern Length (mm) | ![Length](/assets/images/docs/lpe_length.png)         | Länge des Musters
 Stretched           | ![Stretched](/assets/images/docs/lpe_stretched.png)   | Wenn diese Option aktiviert ist, wird das Muster so gestreckt, dass seine Musterwiederholungen genau die Länge der Linie einnehmen, andernfalls kann am Ende der Linie eine Lücke entstehen
 Add rungs           | ![Rungs](/assets/images/docs/lpe_rungs.png)           | Da die Muster (i.d.R.) alle die gleiche Knotenanzahl auf beiden Seiten der Außenkontur haben, sind die Richtungslinien optional.
-Path specific       |                                                       | Wenn diese Option aktiviert ist, hat die Satinsäule ein eigenes Muster. Eine Modifikation der Optionen beeinflusst nur diese Satinsäule. Ansonsten ist das Muster allen Satinsäulen gemeinsam, die diesen Effekt und dieses Muster verwenden. Wenn das Muster für eine Satinsäule geändert wird, wird es für alle geändert.
+Path specific       |                                                       | ● Wenn diese Option aktiviert ist, hat die Satinsäule ein eigenes Muster. Eine Modifikation der Optionen beeinflusst nur diese Satinsäule. Element-Transformationen können berücksichtigt werden.<br> ● Ist die Option deaktiviert, wird das gleiche Muster auf alle ausgewählten Pfade angewendet. Wenn das Muster für eine Satinsäule geändert wird, wird es für alle geändert. Element-Transformationen können zu unerwarteten Breiten führen.
 
 ### Muster anpassen
 

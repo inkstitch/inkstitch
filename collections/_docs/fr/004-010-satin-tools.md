@@ -170,7 +170,7 @@ Notez que le premier champ des définitions des couleurs définie la largeur de 
 
 Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend le satin plus adaptable en forme et en largeur qu'une conversion en colonne satin normale. La ligne reste une ligne, mais un effet de chemin lui est appliqué. Si vous utilisez l'éditeur de noeud, vous pourrez agir sur les noeuds de la ligne, même après application de l'effet.
 
-**Please avoid sharp corners.** As with normal satins, it is better to split up the path at sharp corners. Sharp corners on path effect satins may also lead to an inconsistant width.
+**Please avoid sharp corners.** As with normal satins, it is better to split up the path at sharp corners. In some cases it may be necessary to stretch out node handles or to add more nodes to achieve a consistant width.
 {: .notice--warning }
 
 ### Usage
@@ -189,7 +189,7 @@ Largeur maximum (mm)   | ![Max width](/assets/images/docs/lpe_max_width.png)   |
 Longueur du motif (mm) | ![Length](/assets/images/docs/lpe_length.png)         | Longueur du motif à répeter
 Étiré                  | ![Stretched](/assets/images/docs/lpe_stretched.png)   | Si coché le motif sera étiré pour que ses répétitions de motif occupent exactement la longueur de la ligne, sinon, il pourra rester un vide en fin de ligne
 Ajouter des traverses  | ![Rungs](/assets/images/docs/lpe_rungs.png)           | Les motifs ayant tous le même nombre de noeuds sur les deux rails, les traverses sont facultatives. Choisissez d'en ajouter ou non
-Chemin privé           |                                                       | Si coché, la colone satin dispose de son propre motif. Une modification du modif n'influence que cette colonne. Sinon, le motif est commun à toutes les colonnes satin utilisant cet effet et ce motif. Modifier le motif pour l'une d'elle le modifie pour toutes.
+Chemin privé           |                                                       | ● Si coché, la colone satin dispose de son propre motif. Une modification du modif n'influence que cette colonne. Element transforms can be applied.<br>● Sinon, le motif est commun à toutes les colonnes satin utilisant cet effet et ce motif. Modifier le motif pour l'une d'elle le modifie pour toutes. Element transforms may lead to an unexpected column width.
 
 ### Appliquer l'effet de chemin
 
