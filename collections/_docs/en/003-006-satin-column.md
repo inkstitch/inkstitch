@@ -12,14 +12,15 @@ Satin stitch is mostly used for borders, letters or small fill areas.
 
 ## How to create
 
-Ink/Stitch offers several option to create satin columns. Methods 1-3 will convert to a manual satin column which then can be modified as necessary.
+Ink/Stitch offers several option to create satin columns. Methods 1-4 will convert to a manual satin column which then can be modified as necessary.
 
 ![Methods](/assets/images/docs/satin_methods.svg)
 
 1. [Line to Satin](#1-line-to-satin): for equal width satin columns
 2. [Line to Live Path Effect Satin](#2-line-to-live-path-effect-satin): easily modifiable satin column with optional patterned outline
 3. [Zigzag Line to Satin](#3-zigzag-line-to-satin): simple satin column creation for graphic tablets and touch screens
-4. [Manual Satin Column](#4-manual-satin-column): take full control over every part of the satin column
+4. [Fill to Satin](#4-fill-to-satin): create satin columns from fills
+5. [Manual Satin Column](#4-manual-satin-column): take full control over every part of the satin column
 
 ### 1. Line to Satin
 
@@ -45,7 +46,15 @@ This method is most convenient in case you have a touch screen or graphic tablet
 
 Get more information about [Zigzag Line to Satin](/docs/satin-tools/#zigzag-line-to-satin)
 
-### 4. Manual Satin Column
+{% include upcoming_release.html %}
+
+### 4. Fill to Satin
+
+Fill to satin can be used to convert a set of fills into a set of satins. It is a semi-automatic function and requires a little manual work.
+
+Get more information about [Fill to Satin](/docs/satin-tools/#fill-to-satin)
+
+### 5. Manual Satin Column
 
 A satin column is defined by a shape made of **two mostly-parallel lines**. Ink/Stitch will draw zig-zags back and forth between the two lines. Vary the thickness of the column as you like.
 
@@ -91,7 +100,7 @@ The rung method will give you more control over the way the satin column is rend
 
 {% include upcoming_release.html %}
 
-Satin columns automatically start at the nearest point to the next element.
+Satin columns automatically start at the nearest point to the previous element and end at the nearest point to the next element.
 
 To disable this behavior open the [params dialog](/docs/params/) and disable one or both of the `start/end at nearest point` options.
 
