@@ -28,8 +28,7 @@ Mehrfachgeradstich oder "Bean stitch" beschreibt eine Wiederholung von Geradstic
 Einstellung|Beschreibung
 ---|---
 Geradstich                            | Muss aktiviert sein, damit diese Einstellungen wirksam werden.
-Methode                               | Der Mehrfachgeradstich kann sowohl auf Geradstiche als auch auf Ripple-Stiche angewendet werden
-Manuelle Stichpositionierung          | Aktiviert den [manuellen Stichmodus](#manuelle-füllung)
+Methode                               | Der Mehrfachgeradstich kann sowohl auf Geradstiche, Ripple-Stiche oder die manuelle Stichpositionierung angewendet werden
 Wiederholungen                        | ◦ Legt fest, wie oft der Pfad durchlaufen werden soll<br/>◦ Standard: 1 (einmal vom Anfang bis zum Ende des Pfades)<br/>◦ Ungerade Zahl: Stiche enden am Ende des Pfades<br/>◦ Gerade Zahl: Die Naht kehrt zum Anfang des Pfades zurück
 **Mehrfach Geradstitch Anzahl der Wiederholungen** | ◦ Jeden Stich vervielfachen.<br/>◦ Ein Wert von 1 verdreifacht jeden Stich (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 verfünffacht jeden Stich, usw.<br/>◦ Durch die Eingabe mehrerer durch ein Leerzeichen getrennter Werte, kann ein Wiederholungsmuster erstellt werden.
 Stichlänge                            | Länge der Stiche

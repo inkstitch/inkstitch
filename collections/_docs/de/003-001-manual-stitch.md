@@ -28,6 +28,7 @@ Einstellung|Beschreibung
 ---|---
 Geradstich                            | Muss aktiviert sein, damit diese Einstellungen wirksam werden.
 Methode                               | `Manuelle Stichpositionierung` auswählen
+Mehrfachgeradstich Anzahl der Wiederholungen | ◦ Jeden Stich vervielfachen.<br/>◦ Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 würde jeden Stich fünffach ausführen, usw.<br/>◦ Gilt nur für den Geradstich.
 Maximale Stitchlänge                  | Unterteilt Stiche die länger sind als dieser Wert. Leer lassen für keine Unterteilungen. Kurze Stiche werden gemäß den [Einstellungen](/docs/preferences/) herausgefiltert.
 Minimale Stichlänge                   | Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
 Minimale Länge für Sprungstiche       | Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
