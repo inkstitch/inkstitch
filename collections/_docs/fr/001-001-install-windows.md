@@ -28,6 +28,9 @@ Téléchargez la dernière version disponible pour windows.
 
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
+Free code signing provided by [SignPath.io](https://about.signpath.io) certificate by [SignPath Foundation](https://signpath.org).<br>See our [code signing policy](/fr/code-signing-policy).
+{: .notice--info }
+
 ## Installation
 
 Double cliquez  pour exécuter le fichier que vous avez téléchargé.
