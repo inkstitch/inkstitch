@@ -134,7 +134,7 @@ Stitch length         | |Stitch length (in mm) of the underpaths (connecting lin
 Tolerance             | |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.
 Running stitch position | |Position of underpath from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.
 Start at nearest point  | |Start at nearest point to the previous element. A start position command will overwrite this setting.
-End at nearest point    | |End at nearest point to the next element. A start position command will overwrite this setting.
+End at nearest point    | |End at nearest point to the next element. An end position command will overwrite this setting.
 Random percentage of satin width increase |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Lengthen stitch across rails at most this percent. Two values separated by a space may be used for an asymetric effect.
 Random percentage of satin width decrease |![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
 Random zig-zag spacing percentage         |![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)|Amount of random jitter added to zigzag spacing
