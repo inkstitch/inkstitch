@@ -163,6 +163,10 @@ p.notice--info, p.notice--warning {
   margin-bottom: 1em;
 }
 
+.notice--info {
+  background-color: #00339910;
+}
+
 .notice--info code {
   background-color: #d7e2e1;
 }
