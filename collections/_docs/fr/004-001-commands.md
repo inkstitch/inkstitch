@@ -63,13 +63,17 @@ Définit (1) le point de départ (2) le point d'arrivée d'un remplissage ou de 
 
 Définit le point de départ (1) ou le point final (2) de l'agencement automatique.
 
-Exécutez ensuite
-
-* [Outils: Trait /Agencement automatique de points droits. ...](/fr/docs/strole-tools) ou
-* [Outils: Satin/ Agencement automatique de Colonne Satin](/fr/docs/satin-tools/#auto-route-satin-columns)
-
 N'utiliser qu'un point de départ et qu'un point d'arrivée par agencement automatique.
 {: .notice--warning}
+
+Auto-route operations can be performed on satins ([Outils: Satin > Agencement automatique de Colonne Satin](/docs/satin-tools/#auto-route-satin-columns)) or strokes.
+
+Strokes have two different for automated routing:
+
+* [Outils: Trait > Agencement automatique de points droits. ...](/fr/docs/stroke-tools/#autoroute-running-stitch) (one or two passes per line section)
+* [Outils: Trait > Redwork](/fr/docs/stroke-tools/#redwork) (exactly two passes for each line section)
+
+Only the starting point is used for Redwork, as Redwork always ends at the starting point.
 
 ### ![ripple-stitch-target-symbol](/assets/images/docs/visual-commands-ripple-target.png) Position de la cible
 

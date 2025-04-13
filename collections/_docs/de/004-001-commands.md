@@ -59,15 +59,19 @@ Definiert (1) die Start- und (2) die Endposition für Füllstiche oder Satinsäu
 
 ###  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg) Start- und Endposition für Routing-Operationen
 
-Definiert (1) die Start- und (2) die Enposition für automatisch geführte Geradstiche.
+Definiert (1) die Start- und (2) die Enposition für automatisches Routing.
 
-Benutze anschließend eine der Auto-Route Funktionen
-
-* [Werkzeuge: Linie > Automatisch geführter Geradstich ...]"(https://inkstitch.org/docs/stroke-tools/) oder
-* [Werkzeuge: Satin > Automatische Satinsäulenführung](/de/docs/satin-tools/#automatische-satinsäulenführung)
-
-Nutze immer nur einen Anfangs- und einen Endpunkt für jede Operation.
+Nutze immer nur einen Anfangs- und einen Endpunkt für jede Routing-Operation.
 {: .notice--warning}
+
+Automatische Routing-Operationen git es für Satinsäulen ([Werkzeuge: Satin > Automatische Satinsäulenführung](/de/docs/satin-tools/#automatische-satinsäulenführung)) oder Geradstiche.
+
+Für Geradstiche wiederrum gibt es zwei verschiedene Routing-Optionen:
+
+* [Werkzeuge: Linie > Automatisch geführter Geradstich ...](/de/docs/stroke-tools/#automatisch-geführter-geradstich) (jeder Pfad wir ein oder zweimal durchlaufen)
+* [Werkzeuge: Linie > Redwork](/de/docs/stroke-tools/#redwork) (jeder Pfad wird genau zweimal durchlaufen)
+
+Für Redwork wird nur der Startpunkt genutzt, da Redwork immer am Startpunkt auch wieder ended.
 
 ### ![ripple stitch target symbol](/assets/images/docs/visual-commands-ripple-target.png) Zielposition
 

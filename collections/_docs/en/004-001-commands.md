@@ -54,19 +54,23 @@ These commands will be attached to the currently selected objects.
 
 ### ![starting point symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg) Starting/Ending position
 
-Defines the (1) starting or (2) ending point of an fill stitch area or a satin column.
+Defines the (1) starting or (2) ending point of a fill stitch area or a satin column.
 
 ###  ![auto route starting position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-start.jpg) ![auto route  ending position symbol](/assets/images/docs/visual-commands-auto-route-running-stitch-end.jpg) Starting/Ending position for auto-route operations
 
-Defines the (1) starting or (2) ending point for auto route.
-
-Run afterwards
-
-* [Tools: Stroke > Auto-route running stitch](https://inkstitch.org/docs/stroke-tools/)" or
-* [Tools: Satin > Auto-route satin](/docs/satin-tools/#auto-route-satin-columns)
+Defines the (1) starting or (2) ending point for an auto route operation.
 
 Use only one starting and one ending point per auto-route operation.
 {: .notice--warning }
+
+Auto-route operations can be performed on satins ([Tools: Satin > Auto-route satin](/docs/satin-tools/#auto-route-satin-columns)) or strokes.
+
+Strokes have two different for automated routing:
+
+* [Tools: Stroke > Auto-route running stitch](/docs/stroke-tools/#autoroute-running-stitch) (one or two passes per line section)
+* [Tools: Stroke > Redwork](/docs/stroke-tools/#redwork) (exactly two passes for each line section)
+
+Only the starting point is used for Redwork, as Redwork always ends at the starting point.
 
 ### ![Target symbol](/assets/images/docs/visual-commands-ripple-target.png) Target position
 
