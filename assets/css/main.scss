@@ -224,6 +224,12 @@ table.inline-table {
     background: #808080;
   }
 
+@media (min-width: 80em) {
+  #main {
+    max-width: 1640px;
+  }
+}
+
 /* Sidebar */
   /* sticky = not sticky */
   @media (min-width: 64em) {

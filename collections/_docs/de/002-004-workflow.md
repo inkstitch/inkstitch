@@ -1,7 +1,7 @@
 ---
 title: "Arbeitsablauf"
 permalink: /de/docs/workflow/
-last_modified_at: 2021-04-11
+last_modified_at: 2025-03-13
 toc: true
 ---
 ![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)

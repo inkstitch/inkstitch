@@ -1,7 +1,7 @@
 ---
 title: "Ink/Stitch personalisieren"
 permalink: /de/docs/customize/
-last_modified_at: 2022-05-24
+last_modified_at: 2025-04-13
 toc: true
 ---
 
@@ -87,4 +87,4 @@ Wenn man Ink/Stitch häufiger verwendet, möchte man nicht die gleichen Arbeitss
 Ink/Stitch enthält viele Farbpaletten der üblichen Garnhersteller. Diese können installiert werden, damit sie in Inkscape nutzbar sind.
 Das erlaubt dir dein Design mit den richtigen Farben zu planen. Die Farben werden in die PDF-Ausgabe übernommen und auch in der Stickdatei abgespeichert, sofern dein Stickformat dies unterstützt.
 
-[Mehr Informationen](/de/docs/thread-color/#farbpaletten-für-insckape-installieren)
+[Mehr Informationen](/de/docs/thread-color/#farbpaletten-installieren)
