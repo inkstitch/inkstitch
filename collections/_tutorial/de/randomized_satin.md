@@ -1,6 +1,6 @@
 ---
 title: Randomisierte Satinsäule
-permalink: /tutorials/random_satin/
+permalink: /de/tutorials/random_satin/
 last_modified_at: 2023-05-28
 language: de
 excerpt: "Eine Biene mit randomisierten Satinsäulen"

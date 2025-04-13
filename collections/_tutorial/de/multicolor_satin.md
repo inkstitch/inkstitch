@@ -1,7 +1,7 @@
 ---
 title: Mehrfarbige Satinsäulen
 permalink: /de/tutorials/multicolor_satin/
-last_modified_at: 2024-04-24
+last_modified_at: 2025-04-13
 language: de
 excerpt: "Mehrfarbige Satinsäulen simulieren"
 image: "assets/images/tutorials/multicolor_satin/snake.jpg"
@@ -277,7 +277,7 @@ In diesem Beispiel laufen die erste und letzte Farbe über
 
 ![Regenbogen](/assets/images/tutorials/multicolor_satin/arcenciel.svg)
 
-Download [the rainbow file](/assets/images/tutorials/multicolor_satin/arcenciel.svg){: download="arcenciel.svg" }
+[Regenbogendatei](/assets/images/tutorials/multicolor_satin/arcenciel.svg){: download="arcenciel.svg" } herunterladen
 
 **Hinweis** Für eine gute Stickqualität muss auch ein Zugausgleich hinzugefügt werden, um ... den Zug auszugleichen! Werden die Farben so gestickt wie beschrieben, können Lücken zwischen den einzelnen Farben entstehen, da die Stiche die Stickerei verzerren. Am einfachsten ist es, etwas Zugkompensation (mm) hinzuzufügen. Es wird empfohlen eine weitere Kopie der Satinsäule ohne negative Zugkompensation, ohne Zufallsparameter, aber mit einer maximalen Stichlänge von 4 mm und einem breiten Zickzackabstand als Unterlage hinzuzufügen. Wähle eine Farbe, die der Farbe des Stoffes ähnelt.
 {: .notice--info }
