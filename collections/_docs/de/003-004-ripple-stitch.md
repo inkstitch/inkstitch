@@ -22,9 +22,9 @@ Geschlossene Formen werden mit einer Spirale gefüllt (z.B. Kreis). Bei offenen 
 * Öffne die Parametereinstellungen (`Erweiterungen > Ink/Stitch > Parameter`) und setze die `Methode` auf `Ripple`.
 * Stelle die übrigen [Parameter](#parameter) nach deinen Wünschen ein und klicke auf Anwenden
 
-![Circular ripple examples](/assets/images/docs/en/circular-ripple.svg)
+![Circular ripple examples](/assets/images/docs/circular-ripple.svg)
 
-[Beispieldatei herunterladen](/assets/images/docs/en/circular-ripple.svg)
+[Beispieldatei herunterladen](/assets/images/docs/circular-ripple.svg){: download="circular-ripples.svg" }
 
 ## Offene Formen
 
@@ -35,17 +35,17 @@ Lineare Ripples können auf verschiedene Weise erstellt werden. Sie können aus 
 * Öffne die Parametereinstellungen (`Erweiterungen > Ink/Stitch > Parameter`) und setze die `Methode` auf `Ripple`.
 * Stelle die übrigen [Parameter](#parameter) nach deinen Wünschen ein und klicke auf Anwenden
 
-![Linear ripple examples](/assets/images/docs/en/linear-ripple.svg)
+![Linear ripple examples](/assets/images/docs/linear-ripple.svg)
 
-[Beispieldatei herunterladen](/assets/images/docs/en/linear-ripple.svg)
+[Beispieldatei herunterladen](/assets/images/docs/linear-ripple.svg){: download="linear-ripple.svg" }
 
 ## Schleifen
 
 Schleifen (also sich selbst kreuzende Pfade) sind bei Ripple-Stichen erlaubt und willkommen. Nutze Schleifen um besondere, interessante Effekte zu erzielen.
 
-![Looping ripple stitches](/assets/images/docs/en/ripple-loops.svg)
+![Looping ripple stitches](/assets/images/docs/ripple-loops.svg)
 
-[Beispieldatei herunterladen](/assets/images/docs/en/ripple-loops.svg)
+[Beispieldatei herunterladen](/assets/images/docs/ripple-loops.svg){: download="ripple-loops.svg" }
 
 ##  Ripple-Stiche führen
 

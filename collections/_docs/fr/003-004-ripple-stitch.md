@@ -21,9 +21,9 @@ Si  le chemin initial est fermé la forme sera remplie par une spirale (ondulati
 * Ouvrir le dialogue de paramètrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Broderie ondulée` comme méthode.
 * Définir les  [paramètres](#comment-la-paramètrer) à votre convenence et Appliquer
 
-![Exemples d'ondulations circulaires](/assets/images/docs/en/circular-ripple.svg)
+![Exemples d'ondulations circulaires](/assets/images/docs/circular-ripple.svg)
 
-[Télécharger les examples](/assets/images/docs/en/circular-ripple.svg)
+[Télécharger les examples](/assets/images/docs/circular-ripple.svg){: download="circular-ripples.svg" }
 
 ## Ondulations linéaires
 
@@ -36,18 +36,18 @@ Les ondulations linéaires peuvent être créées de différentes manières. Le 
 * Ouvrir le dialogue de paramètrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Broderie ondulée` comme méthode.
 * Définir les  [paramètres](#comment-la-paramètrer) à votre convenence et Appliquer
 
-![Exemples d'ondulations linéaires](/assets/images/docs/en/linear-ripple.svg)
+![Exemples d'ondulations linéaires](/assets/images/docs/linear-ripple.svg)
 
-[Télécharger les examples](/assets/images/docs/en/linear-ripple.svg)
+[Télécharger les examples](/assets/images/docs/en/linear-ripple.svg){: download="linear-ripple.svg" }
 
 ## Ondulations avec boucles
 
 Les boucles sont autorisées et bienvenues pour toutes les ondulations.
 Utilisez les pour toutes  sortes d'effets spéciaux....
 
-![Ondulations avec boucles](/assets/images/docs/en/ripple-loops.svg)
+![Ondulations avec boucles](/assets/images/docs/ripple-loops.svg)
 
-[Télécharger les examples](/assets/images/docs/en/ripple-loops.svg)
+[Télécharger les examples](/assets/images/docs/ripple-loops.svg){: download="ripple-loops.svg" }
 
 ##  Guider les ondulations
 

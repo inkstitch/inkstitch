@@ -22,9 +22,9 @@ Closed shapes will be filled with a spiral (circular ripples). Open shapes will 
 * Open params dialog (`Extensions > Ink/Stitch > Params`) and set the `method` to `Ripple`.
 * Set [params](#params) to your liking and apply
 
-![Circular ripple examples](/assets/images/docs/en/circular-ripple.svg)
+![Circular ripple examples](/assets/images/docs/circular-ripple.svg)
 
-[Download examples](/assets/images/docs/en/circular-ripple.svg)
+[Download examples](/assets/images/docs/circular-ripple.svg){: download="circular-ripples.svg" }
 
 ## Linear Ripples
 
@@ -35,17 +35,17 @@ Linear ripples can be created in various ways. It can be a simple curve or it ca
 * Open params dialog (`Extensions > Ink/Stitch > Params`) and set the `method` to `Ripple`.
 * Set [params](#params) to your liking and apply
 
-![Linear ripple examples](/assets/images/docs/en/linear-ripple.svg)
+![Linear ripple examples](/assets/images/docs/linear-ripple.svg)
 
-[Download examples](/assets/images/docs/en/linear-ripple.svg)
+[Download examples](/assets/images/docs/linear-ripple.svg){: download="linear-ripples.svg" }
 
 ## Looping ripples
 
 Loops are allowed and welcomed in any ripple path. Use loops to achieve special nice effects.
 
-![Looping ripple stitches](/assets/images/docs/en/ripple-loops.svg)
+![Looping ripple stitches](/assets/images/docs/ripple-loops.svg)
 
-[Download examples](/assets/images/docs/en/ripple-loops.svg)
+[Download examples](/assets/images/docs/ripple-loops.svg){: download="ripple-loop.svg" }
 
 ##  Guiding ripples
 
