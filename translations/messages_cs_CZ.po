@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-07 01:42+0000\n"
-"PO-Revision-Date: 2025-04-07 01:42\n"
+"POT-Creation-Date: 2025-04-13 02:59+0000\n"
+"PO-Revision-Date: 2025-04-13 02:59\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-07 01:42+0000\n"
+"POT-Creation-Date: 2025-04-13 02:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2228,12 +2228,12 @@ msgstr "* Převést na tah: vyberte prvek a otevřete dialog parametrů. Povolit
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr "* Použijte jako saténový sloupec: přidejte další vnější obrysovou čáru a v případě potřeby směrové vektory."
 
-#: lib/elements/stroke.py:45 lib/extensions/params.py:597
+#: lib/elements/stroke.py:45 lib/extensions/params.py:606
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "Tah"
 
-#: lib/elements/stroke.py:48 lib/extensions/params.py:271
+#: lib/elements/stroke.py:48 lib/extensions/params.py:280
 msgid "Running stitch along paths"
 msgstr "Přední stehy podél cesty"
 
@@ -2912,55 +2912,55 @@ msgstr "Nelze přečíst paletu: neplatná hlavička palety GIMP"
 msgid "Thread Palette"
 msgstr "Paleta nití"
 
-#: lib/extensions/params.py:283
+#: lib/extensions/params.py:292
 msgid "These settings will be applied to 1 object."
 msgstr "Tato nastavení budou použita na 1 objekt."
 
-#: lib/extensions/params.py:286
+#: lib/extensions/params.py:295
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr "Tato nastavení budou použita na %d objektů."
 
-#: lib/extensions/params.py:290
+#: lib/extensions/params.py:299
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr "Některá nastavení měla různé hodnoty mezi objekty. Vyberte hodnotu z rozbalovací nabídky nebo zadejte novou."
 
-#: lib/extensions/params.py:295
+#: lib/extensions/params.py:304
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr "Zakázáním této karty zakážete následující %d karty."
 
-#: lib/extensions/params.py:299
+#: lib/extensions/params.py:308
 msgid "Disabling this tab will disable the following tab."
 msgstr "Zakázáním této karty zakážete následující kartu."
 
-#: lib/extensions/params.py:303
+#: lib/extensions/params.py:312
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr "Povolením této karty zakážete %s a naopak."
 
-#: lib/extensions/params.py:383
+#: lib/extensions/params.py:392
 msgid "Inkscape objects"
 msgstr "Objekty Inscape"
 
-#: lib/extensions/params.py:443
+#: lib/extensions/params.py:452
 msgid "No options available"
 msgstr "Nejsou k dispozici žádné možnosti"
 
-#: lib/extensions/params.py:463
+#: lib/extensions/params.py:472
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:33
 msgid "Re-roll"
 msgstr "Náhodně"
 
-#: lib/extensions/params.py:492
+#: lib/extensions/params.py:501
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr "Kliknutím vynutíte uložení tohoto parametru, když klepnete na tlačítko \"Použít a ukončit\""
 
-#: lib/extensions/params.py:502
+#: lib/extensions/params.py:511
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Tento parametr se uloží, když kliknete na \"Použít a ukončit\""
 
-#: lib/extensions/params.py:529 lib/extensions/sew_stack_editor.py:118
+#: lib/extensions/params.py:538 lib/extensions/sew_stack_editor.py:118
 #: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:57
 #: lib/gui/lettering_font_sample.py:66
 #: lib/gui/satin_multicolor/main_panel.py:54
@@ -2972,16 +2972,16 @@ msgstr "Tento parametr se uloží, když kliknete na \"Použít a ukončit\""
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: lib/extensions/params.py:534
+#: lib/extensions/params.py:543
 msgid "Use Last Settings"
 msgstr "Použít poslední nastavení"
 
-#: lib/extensions/params.py:537 lib/extensions/sew_stack_editor.py:122
+#: lib/extensions/params.py:546 lib/extensions/sew_stack_editor.py:122
 #: lib/gui/lettering/main_panel.py:55
 msgid "Apply and Quit"
 msgstr "Použít a odejít"
 
-#: lib/extensions/params.py:837 lib/extensions/sew_stack_editor.py:552
+#: lib/extensions/params.py:846 lib/extensions/sew_stack_editor.py:552
 msgid "Embroidery Params"
 msgstr "Parametry výšivky"
 
@@ -3300,7 +3300,7 @@ msgstr "Použít"
 #: inx/inkstitch_lettering_generate_json.inx:135
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
-#: inx/inkstitch_letters_to_font.inx:54 inx/inkstitch_outline.inx:25
+#: inx/inkstitch_letters_to_font.inx:60 inx/inkstitch_outline.inx:25
 #: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_png_realistic.inx:17
 #: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:28
 #: inx/inkstitch_remove_duplicated_points.inx:14
@@ -3309,7 +3309,7 @@ msgstr "Použít"
 #: inx/inkstitch_stitch_plan_preview.inx:37
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_unlink_clone.inx:11 inx/inkstitch_zigzag_line_to_satin.inx:18
-#: inx/inkstitch_zip.inx:62
+#: inx/inkstitch_zip.inx:65
 msgid "Help"
 msgstr "Nápověda"
 
@@ -3922,7 +3922,7 @@ msgstr "# Zastavení"
 msgid "STITCH"
 msgstr "STEH"
 
-#: lib/gui/simulator/drawing_panel.py:17
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:33
 msgid "JUMP"
 msgstr "SKOK"
 
@@ -3930,7 +3930,7 @@ msgstr "SKOK"
 msgid "TRIM"
 msgstr "STŘIH"
 
-#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:33
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:35
 msgid "STOP"
 msgstr "STOP"
 
@@ -3938,12 +3938,12 @@ msgstr "STOP"
 msgid "COLOR CHANGE"
 msgstr "ZMĚNA BARVY"
 
-#: lib/gui/simulator/drawing_panel.py:293
+#: lib/gui/simulator/drawing_panel.py:290
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr "Rozměry: {:.2f} x {:.2f}"
 
-#: lib/gui/simulator/drawing_panel.py:435
+#: lib/gui/simulator/drawing_panel.py:432
 #, python-format
 msgid "Command: %s"
 msgstr "Příkaz: %s"
@@ -3958,7 +3958,7 @@ msgstr ""
 
 #: lib/gui/simulator/simulator_preferences.py:35
 #: inx/inkstitch_fill_to_stroke.inx:21 inx/inkstitch_png_simple.inx:15
-#: inx/inkstitch_zip.inx:49
+#: inx/inkstitch_zip.inx:52
 msgid "Line width (mm)"
 msgstr "Šířka řádku (mm)"
 
@@ -4921,7 +4921,7 @@ msgid "Yes"
 msgstr "Ano"
 
 #: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:95
-#: inx/inkstitch_letters_to_font.inx:51
+#: inx/inkstitch_letters_to_font.inx:57
 msgid "No"
 msgstr "Ne"
 
@@ -5124,23 +5124,38 @@ msgstr "Formát gcode, textový soubor"
 msgid "Husqvarna Embroidery Format"
 msgstr "Husqvarna Vyšívací Formát"
 
-#. description for pyembroidery file format: edr
+#. description for pyembroidery file format: iqp
 #: pyembroidery-format-descriptions.py:94
+msgid "Iqp - Intelliquilter Format"
+msgstr ""
+
+#. description for pyembroidery file format: plt
+#: pyembroidery-format-descriptions.py:96
+msgid "Plt - HPGL"
+msgstr ""
+
+#. description for pyembroidery file format: qcc
+#: pyembroidery-format-descriptions.py:98
+msgid "Qcc - QuiltEZ"
+msgstr ""
+
+#. description for pyembroidery file format: edr
+#: pyembroidery-format-descriptions.py:100
 msgid "Edr Color Format"
 msgstr "Barevný formát Edr"
 
 #. description for pyembroidery file format: col
-#: pyembroidery-format-descriptions.py:96
+#: pyembroidery-format-descriptions.py:102
 msgid "Col Color Format"
 msgstr "Barevný formát Col"
 
 #. description for pyembroidery file format: inf
-#: pyembroidery-format-descriptions.py:98
+#: pyembroidery-format-descriptions.py:104
 msgid "Inf Color Format"
 msgstr "Barevný formát Inf"
 
 #. description for pyembroidery file format: json
-#: pyembroidery-format-descriptions.py:100
+#: pyembroidery-format-descriptions.py:106
 msgid "Json Export"
 msgstr "Json Export"
 
@@ -5299,7 +5314,7 @@ msgstr "Toto rozšíření se pokusí vytvořit jednu stehovou cestu přes všec
 #: inx/inkstitch_lettering_generate_json.inx:139
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
-#: inx/inkstitch_letters_to_font.inx:69 inx/inkstitch_outline.inx:28
+#: inx/inkstitch_letters_to_font.inx:75 inx/inkstitch_outline.inx:28
 #: inx/inkstitch_redwork.inx:31 inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_satin_to_stroke.inx:15
 #: inx/inkstitch_stitch_plan_preview.inx:45 inx/inkstitch_troubleshoot.inx:15
@@ -6070,6 +6085,18 @@ msgstr "Ink/Stitch: Barevný formát Inf (.inf)"
 msgid "convert INF file to Ink/Stitch manual-stitch paths"
 msgstr "převést INF souborů do Ink/Stitch s ručním stehem"
 
+#: inx/inkstitch_input_IQP.inx:3
+msgid "IQP file input"
+msgstr ""
+
+#: inx/inkstitch_input_IQP.inx:8
+msgid "Ink/Stitch: Iqp - Intelliquilter Format (.iqp)"
+msgstr ""
+
+#: inx/inkstitch_input_IQP.inx:9
+msgid "convert IQP file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
 #: inx/inkstitch_input_JEF.inx:3
 msgid "JEF file input"
 msgstr "JEF vstupních souborů"
@@ -6250,6 +6277,18 @@ msgstr "Ink/Stitch: Brother Vyšívací Formát (.phc)"
 msgid "convert PHC file to Ink/Stitch manual-stitch paths"
 msgstr "převést PHC souborů do Ink/Stitch s ručním stehem"
 
+#: inx/inkstitch_input_PLT.inx:3
+msgid "PLT file input"
+msgstr ""
+
+#: inx/inkstitch_input_PLT.inx:8
+msgid "Ink/Stitch: Plt - HPGL (.plt)"
+msgstr ""
+
+#: inx/inkstitch_input_PLT.inx:9
+msgid "convert PLT file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
 #: inx/inkstitch_input_PMV.inx:3
 msgid "PMV file input"
 msgstr "PMV vstupních souborů"
@@ -6261,6 +6300,18 @@ msgstr "Ink/Stitch: Formát stehu Brother (.pmv)"
 #: inx/inkstitch_input_PMV.inx:9
 msgid "convert PMV file to Ink/Stitch manual-stitch paths"
 msgstr "převést PMV souborů do Ink/Stitch s ručním stehem\t"
+
+#: inx/inkstitch_input_QCC.inx:3
+msgid "QCC file input"
+msgstr ""
+
+#: inx/inkstitch_input_QCC.inx:8
+msgid "Ink/Stitch: Qcc - QuiltEZ (.qcc)"
+msgstr ""
+
+#: inx/inkstitch_input_QCC.inx:9
+msgid "convert QCC file to Ink/Stitch manual-stitch paths"
+msgstr ""
 
 #: inx/inkstitch_input_SEW.inx:3
 msgid "SEW file input"
@@ -6338,7 +6389,7 @@ msgstr "převést TAP souborů do Ink/Stitch s ručním stehem"
 msgid "TBF file input"
 msgstr "TBF vstupních souborů"
 
-#: inx/inkstitch_input_TBF.inx:8
+#: inx/inkstitch_input_TBF.inx:8 inx/inkstitch_output_TBF.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.tbf)"
 msgstr "Ink/Stitch: Tajima Vyšívací Formát (.tbf)"
 
@@ -6704,7 +6755,7 @@ msgstr "Definujte adresář s vlastními fonty pro nástroj pro psaní písma"
 #: inx/inkstitch_lettering_remove_kerning.inx:33
 #: inx/inkstitch_lettering_set_color_sort_index.inx:30
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:14
-#: inx/inkstitch_letters_to_font.inx:80
+#: inx/inkstitch_letters_to_font.inx:86
 msgid "Font Management"
 msgstr "Správa písem"
 
@@ -6938,39 +6989,39 @@ msgstr "Písmena do písma"
 msgid "File format"
 msgstr "Formát souboru"
 
-#: inx/inkstitch_letters_to_font.inx:46
+#: inx/inkstitch_letters_to_font.inx:52
 msgid "Font directory"
 msgstr "Adresář písem"
 
-#: inx/inkstitch_letters_to_font.inx:48
+#: inx/inkstitch_letters_to_font.inx:54
 msgid "Import commands"
 msgstr "Import příkazů"
 
-#: inx/inkstitch_letters_to_font.inx:49
+#: inx/inkstitch_letters_to_font.inx:55
 msgid "As param"
 msgstr "Jako parametr"
 
-#: inx/inkstitch_letters_to_font.inx:50
+#: inx/inkstitch_letters_to_font.inx:56
 msgid "As symbol"
 msgstr "Jako symbol"
 
-#: inx/inkstitch_letters_to_font.inx:55
+#: inx/inkstitch_letters_to_font.inx:61
 msgid "Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system."
 msgstr "Zahrnuje všechna písmena předem digitalizovaného vyšívacího písma (jeden soubor pro každé písmeno) do dokumentu, aby byl dostupný pro systém nápisů Ink/Stitch."
 
-#: inx/inkstitch_letters_to_font.inx:58
+#: inx/inkstitch_letters_to_font.inx:64
 msgid "Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A."
 msgstr "Soubory výšivek musí mít název písmene těsně před příponou souboru. Např. A.dst nebo Priklad_pisma_A.dst bude rozpoznáno jako písmeno A."
 
-#: inx/inkstitch_letters_to_font.inx:63
+#: inx/inkstitch_letters_to_font.inx:69
 msgid "⚠ After running this function, drag the baseline into the desired position and place the letters accordingly. Save your font in a separate folder. Then generate the json file (with \"Autoroute Satin\" unchecked)."
 msgstr "⚠ Po spuštění této funkce přetáhněte základní čáru do požadované polohy a umístěte písmena podle toho. Uložte písmo do samostatné složky. Poté vygenerujte soubor json (s nezaškrtnutým \"Autoroute Satin\")."
 
-#: inx/inkstitch_letters_to_font.inx:70
+#: inx/inkstitch_letters_to_font.inx:76
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:77
+#: inx/inkstitch_letters_to_font.inx:83
 msgid "Inserts all available glyphs of a pre-digitized font into the document to make them available for the lettering tool"
 msgstr "Vloží do dokumentu všechny dostupné znaky předem digitalizovaného písma, aby byly dostupné pro nástroj pro psaní písma"
 
@@ -7151,74 +7202,78 @@ msgid "Leave empty to use default value. Use 'none' to remove. Use %R %G %B for 
 msgstr ""
 
 #: inx/inkstitch_output_GCODE.inx:33
+msgid "Leave empty to ignore jumps. Use '%X' for x-coordinate and '%Y' for y-coordinate."
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:35
 msgid "Leave empty to use default value. Use 'none' to remove."
 msgstr "Chcete-li použít výchozí hodnotu, ponechte prázdné. K odstranění použijte 'none'."
 
-#: inx/inkstitch_output_GCODE.inx:35
+#: inx/inkstitch_output_GCODE.inx:37
 msgid "START"
 msgstr "START"
 
-#: inx/inkstitch_output_GCODE.inx:35
+#: inx/inkstitch_output_GCODE.inx:37
 msgid "Use %R %G %B for inital color thread color values"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:36
+#: inx/inkstitch_output_GCODE.inx:38
 msgid "END"
 msgstr "KONEC"
 
-#: inx/inkstitch_output_GCODE.inx:38
+#: inx/inkstitch_output_GCODE.inx:40
 msgid "Laser Settings"
 msgstr "Nastavení laseru"
 
-#: inx/inkstitch_output_GCODE.inx:40
+#: inx/inkstitch_output_GCODE.inx:42
 msgid "laser mode"
 msgstr "laser mód"
 
-#: inx/inkstitch_output_GCODE.inx:40
+#: inx/inkstitch_output_GCODE.inx:42
 msgid "Laser mode (generate g-code for grbl laser mode)"
 msgstr "Laserový režim (vygenerujte g-kód pro grbl laserový režim)"
 
-#: inx/inkstitch_output_GCODE.inx:43
+#: inx/inkstitch_output_GCODE.inx:45
 msgid "dynamic laser power"
 msgstr "dynamický výkon laseru"
 
-#: inx/inkstitch_output_GCODE.inx:43
+#: inx/inkstitch_output_GCODE.inx:45
 msgid "Use Grbl's M4 dynamic laser power mode. Ensures consistent laser cutting power regardless of motor speed. Only for PWM-capable lasers."
 msgstr "Použijte režim dynamického výkonu laseru Grbl M4. Zajišťuje konzistentní řezací výkon laserem bez ohledu na otáčky motoru. Pouze pro lasery schopné PWM."
 
-#: inx/inkstitch_output_GCODE.inx:45
+#: inx/inkstitch_output_GCODE.inx:47
 msgid "laser warm-up time"
 msgstr "doba zahřívání laseru"
 
-#: inx/inkstitch_output_GCODE.inx:45
+#: inx/inkstitch_output_GCODE.inx:47
 msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
 msgstr "Při zapínání laseru počkejte tolik sekund, než se laser zahřeje (příkaz G4)"
 
-#: inx/inkstitch_output_GCODE.inx:47
+#: inx/inkstitch_output_GCODE.inx:49
 msgid "spindle speed"
 msgstr "otáčky vřetena"
 
-#: inx/inkstitch_output_GCODE.inx:47
+#: inx/inkstitch_output_GCODE.inx:49
 msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
 msgstr "rychlost vřetena (výkon laseru pro režim laseru, nastavte na -1 pro vynechání)"
 
-#: inx/inkstitch_output_GCODE.inx:49
+#: inx/inkstitch_output_GCODE.inx:51
 msgid "min spindle speed"
 msgstr "min. otáčky vřetena"
 
-#: inx/inkstitch_output_GCODE.inx:49
+#: inx/inkstitch_output_GCODE.inx:51
 msgid "minimum spindle speed value (grbl $31 setting)"
 msgstr "minimální hodnota otáček vřetena (grbl $31 nastavení)"
 
-#: inx/inkstitch_output_GCODE.inx:51
+#: inx/inkstitch_output_GCODE.inx:53
 msgid "max spindle speed"
 msgstr "max. otáčky vřetena"
 
-#: inx/inkstitch_output_GCODE.inx:51
+#: inx/inkstitch_output_GCODE.inx:53
 msgid "minimum spindle speed value (grbl $30 setting)"
 msgstr "minimální hodnota otáček vřetena (grbl $30 nastavení)"
 
-#: inx/inkstitch_output_GCODE.inx:52
+#: inx/inkstitch_output_GCODE.inx:54
 msgid "feed rate (in mm/min, set to -1 to omit)"
 msgstr "rychlost posuvu (v mm/min, nastavte na -1 pro vynechání)"
 
@@ -7270,6 +7325,18 @@ msgstr "PES výstupních souborů"
 msgid "Save design in PES format using Ink/Stitch"
 msgstr "Uložení návrhu ve formátu PES pomocí funkce Ink/Stitch"
 
+#: inx/inkstitch_output_PLT.inx:3
+msgid "PLT file output"
+msgstr ""
+
+#: inx/inkstitch_output_PLT.inx:8
+msgid "Ink/Stitch: Plt - HPGL [QUILTING] (.plt)"
+msgstr ""
+
+#: inx/inkstitch_output_PLT.inx:9
+msgid "Save design in PLT format using Ink/Stitch"
+msgstr ""
+
 #: inx/inkstitch_output_PMV.inx:3
 msgid "PMV file output"
 msgstr "PMV výstupních souborů"
@@ -7282,6 +7349,18 @@ msgstr "Ink/Stitch: Formát stehu Brother [STITCH] (.pmv)"
 msgid "Save design in PMV format using Ink/Stitch"
 msgstr "Uložení návrhu ve formátu PMV pomocí funkce Ink/Stitch"
 
+#: inx/inkstitch_output_QCC.inx:3
+msgid "QCC file output"
+msgstr ""
+
+#: inx/inkstitch_output_QCC.inx:8
+msgid "Ink/Stitch: Qcc - QuiltEZ [QUILTING] (.qcc)"
+msgstr ""
+
+#: inx/inkstitch_output_QCC.inx:9
+msgid "Save design in QCC format using Ink/Stitch"
+msgstr ""
+
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
 msgstr "SVG výstupních souborů"
@@ -7293,6 +7372,14 @@ msgstr "Ink/Stitch: Škálovatelná vektorová grafika [DEBUG] (.svg)"
 #: inx/inkstitch_output_SVG.inx:9
 msgid "Save design in SVG format using Ink/Stitch"
 msgstr "Uložení návrhu ve formátu SVG pomocí funkce Ink/Stitch"
+
+#: inx/inkstitch_output_TBF.inx:3
+msgid "TBF file output"
+msgstr ""
+
+#: inx/inkstitch_output_TBF.inx:9
+msgid "Save design in TBF format using Ink/Stitch"
+msgstr ""
 
 #: inx/inkstitch_output_TXT.inx:3
 msgid "TXT file output"
@@ -7379,7 +7466,7 @@ msgid "Create a PNG file with a realistic embroidery representation using Ink/St
 msgstr "Vytvořte soubor PNG s realistickou reprezentací výšivky pomocí Ink/Stitch"
 
 #: inx/inkstitch_png_realistic.inx:15 inx/inkstitch_png_simple.inx:16
-#: inx/inkstitch_zip.inx:47 inx/inkstitch_zip.inx:50
+#: inx/inkstitch_zip.inx:50 inx/inkstitch_zip.inx:53
 msgid "DPI"
 msgstr "DPI"
 
@@ -8097,78 +8184,90 @@ msgid ".U01: Barudan Embroidery Format"
 msgstr ".U01: Barudan Vyšívací Formát"
 
 #: inx/inkstitch_zip.inx:29
+msgid ".TBF: Tajima Embroidery Format"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:30
 msgid ".PMV: Brother Stitch Format [STITCH]"
 msgstr ".PMV: Brother Formát stehu [STEH]"
 
-#: inx/inkstitch_zip.inx:30
+#: inx/inkstitch_zip.inx:36
 msgid ".GCODE: gcode Format, Text File"
 msgstr ".GCODE: gcode pro stroj, Textový soubor"
 
-#: inx/inkstitch_zip.inx:36
+#: inx/inkstitch_zip.inx:37
+msgid ".PLT: Plt - HPGL [QUILTING]"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:38
+msgid ".QCC: Qcc - QuiltEZ [QUILTING]"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:39
 msgid ".EDR: Edr Color Format [COLOR]"
 msgstr ".EDR: Edr Barevný formát [BARVY]"
 
-#: inx/inkstitch_zip.inx:37
+#: inx/inkstitch_zip.inx:40
 msgid ".COL: Col Color Format [COLOR]"
 msgstr ".COL: Col Barevný formát [BARVY]"
 
-#: inx/inkstitch_zip.inx:38
+#: inx/inkstitch_zip.inx:41
 msgid ".INF: Inf Color Format [COLOR]"
 msgstr ".INF: Inf Barevný formát [BARVY]"
 
-#: inx/inkstitch_zip.inx:39
+#: inx/inkstitch_zip.inx:42
 msgid ".TXT: Threadlist [COLOR]"
 msgstr ".TXT: Seznam příze [COLOR]"
 
-#: inx/inkstitch_zip.inx:45
+#: inx/inkstitch_zip.inx:48
 msgid ".SVG: Scalable Vector Graphic"
 msgstr ".SVG: Škálovatelná vektorová grafika"
 
-#: inx/inkstitch_zip.inx:46
+#: inx/inkstitch_zip.inx:49
 msgid ".PNG: Portable Network Graphics (Realistic) [IMAGE]"
 msgstr ".PNG: Portable Network Graphics (Realistický) [OBRÁZEK]"
 
-#: inx/inkstitch_zip.inx:48
+#: inx/inkstitch_zip.inx:51
 msgid ".PNG: Portable Network Graphics (Simple) [IMAGE]"
 msgstr ".PNG: Portable Network Graphics (Jednoduchý) [IMAGE]"
 
-#: inx/inkstitch_zip.inx:54
+#: inx/inkstitch_zip.inx:57
 msgid "Panelization Options"
 msgstr "Nastavení omezení"
 
-#: inx/inkstitch_zip.inx:55
+#: inx/inkstitch_zip.inx:58
 msgid "For single design set horizontal and vertical repeats to 1"
 msgstr "Pro jeden návrh nastavte horizontální a vertikální opakování na 1"
 
-#: inx/inkstitch_zip.inx:57
+#: inx/inkstitch_zip.inx:60
 msgid "Horizontal repeats"
 msgstr "Vodorovné opakování"
 
-#: inx/inkstitch_zip.inx:58
+#: inx/inkstitch_zip.inx:61
 msgid "Horizontal spacing (mm)"
 msgstr "Horizontální vzdálenost (mm)"
 
-#: inx/inkstitch_zip.inx:59
+#: inx/inkstitch_zip.inx:62
 msgid "Vertical repeats"
 msgstr "Vertikální opakování"
 
-#: inx/inkstitch_zip.inx:60
+#: inx/inkstitch_zip.inx:63
 msgid "Vertical spacing (mm)"
 msgstr "Svislá vzdálenost (mm)"
 
-#: inx/inkstitch_zip.inx:63
+#: inx/inkstitch_zip.inx:66
 msgid "Zip File Export"
 msgstr "Export Zip souboru"
 
-#: inx/inkstitch_zip.inx:64
+#: inx/inkstitch_zip.inx:67
 msgid "Export multiple embroidery file formats at once."
 msgstr "Exportujte více formátů souborů výšivek najednou."
 
-#: inx/inkstitch_zip.inx:66
+#: inx/inkstitch_zip.inx:69
 msgid "Read more on our website:"
 msgstr "Přečtěte si více na našem webu:"
 
-#: inx/inkstitch_zip.inx:67
+#: inx/inkstitch_zip.inx:70
 msgid "https://inkstitch.org/docs/import-export/#batch-export"
 msgstr ""
 

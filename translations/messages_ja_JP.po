@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-07 01:42+0000\n"
-"PO-Revision-Date: 2025-04-07 01:42\n"
+"POT-Creation-Date: 2025-04-13 02:59+0000\n"
+"PO-Revision-Date: 2025-04-13 02:59\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-07 01:42+0000\n"
+"POT-Creation-Date: 2025-04-13 02:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2229,12 +2229,12 @@ msgstr ""
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr ""
 
-#: lib/elements/stroke.py:45 lib/extensions/params.py:597
+#: lib/elements/stroke.py:45 lib/extensions/params.py:606
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "ストローク"
 
-#: lib/elements/stroke.py:48 lib/extensions/params.py:271
+#: lib/elements/stroke.py:48 lib/extensions/params.py:280
 msgid "Running stitch along paths"
 msgstr "パスに沿ってステッチを走らせる"
 
@@ -2907,55 +2907,55 @@ msgstr ""
 msgid "Thread Palette"
 msgstr "スレッドパレット"
 
-#: lib/extensions/params.py:283
+#: lib/extensions/params.py:292
 msgid "These settings will be applied to 1 object."
 msgstr "この設定は1つのオブジェクトに適用されます。"
 
-#: lib/extensions/params.py:286
+#: lib/extensions/params.py:295
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr "この設定は%d個のオブジェクトに適用されます。"
 
-#: lib/extensions/params.py:290
+#: lib/extensions/params.py:299
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr "一部の設定でオブジェクト間で異なる値が設定されています。 ドロップダウンから値を選択するか、新しい値を入力してください。"
 
-#: lib/extensions/params.py:295
+#: lib/extensions/params.py:304
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr "このタブを無効にすると、次の %d のタブが無効になります。"
 
-#: lib/extensions/params.py:299
+#: lib/extensions/params.py:308
 msgid "Disabling this tab will disable the following tab."
 msgstr "このタブを無効にすると、次のタブも無効になります。"
 
-#: lib/extensions/params.py:303
+#: lib/extensions/params.py:312
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr "このタブを有効にすると %s が無効になり、その逆も同様です。"
 
-#: lib/extensions/params.py:383
+#: lib/extensions/params.py:392
 msgid "Inkscape objects"
 msgstr "Inkscapeオブジェクト"
 
-#: lib/extensions/params.py:443
+#: lib/extensions/params.py:452
 msgid "No options available"
 msgstr ""
 
-#: lib/extensions/params.py:463
+#: lib/extensions/params.py:472
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:33
 msgid "Re-roll"
 msgstr ""
 
-#: lib/extensions/params.py:492
+#: lib/extensions/params.py:501
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr "適用して終了 \"をクリックしたときに、このパラメータを強制的に保存する場合は、クリックしてください。"
 
-#: lib/extensions/params.py:502
+#: lib/extensions/params.py:511
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "このパラメータは、\"適応して終了 \"をクリックしたときに保存されます。"
 
-#: lib/extensions/params.py:529 lib/extensions/sew_stack_editor.py:118
+#: lib/extensions/params.py:538 lib/extensions/sew_stack_editor.py:118
 #: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:57
 #: lib/gui/lettering_font_sample.py:66
 #: lib/gui/satin_multicolor/main_panel.py:54
@@ -2967,16 +2967,16 @@ msgstr "このパラメータは、\"適応して終了 \"をクリックした�
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: lib/extensions/params.py:534
+#: lib/extensions/params.py:543
 msgid "Use Last Settings"
 msgstr "前回の設定を使う"
 
-#: lib/extensions/params.py:537 lib/extensions/sew_stack_editor.py:122
+#: lib/extensions/params.py:546 lib/extensions/sew_stack_editor.py:122
 #: lib/gui/lettering/main_panel.py:55
 msgid "Apply and Quit"
 msgstr "適用して終了"
 
-#: lib/extensions/params.py:837 lib/extensions/sew_stack_editor.py:552
+#: lib/extensions/params.py:846 lib/extensions/sew_stack_editor.py:552
 msgid "Embroidery Params"
 msgstr "刺繍パラメータ"
 
@@ -3294,7 +3294,7 @@ msgstr ""
 #: inx/inkstitch_lettering_generate_json.inx:135
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
-#: inx/inkstitch_letters_to_font.inx:54 inx/inkstitch_outline.inx:25
+#: inx/inkstitch_letters_to_font.inx:60 inx/inkstitch_outline.inx:25
 #: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_png_realistic.inx:17
 #: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:28
 #: inx/inkstitch_remove_duplicated_points.inx:14
@@ -3303,7 +3303,7 @@ msgstr ""
 #: inx/inkstitch_stitch_plan_preview.inx:37
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_unlink_clone.inx:11 inx/inkstitch_zigzag_line_to_satin.inx:18
-#: inx/inkstitch_zip.inx:62
+#: inx/inkstitch_zip.inx:65
 msgid "Help"
 msgstr ""
 
@@ -3913,7 +3913,7 @@ msgstr ""
 msgid "STITCH"
 msgstr "ステッチ"
 
-#: lib/gui/simulator/drawing_panel.py:17
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:33
 msgid "JUMP"
 msgstr "ジャンプ"
 
@@ -3921,7 +3921,7 @@ msgstr "ジャンプ"
 msgid "TRIM"
 msgstr "トリム"
 
-#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:33
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:35
 msgid "STOP"
 msgstr "ストップ"
 
@@ -3929,12 +3929,12 @@ msgstr "ストップ"
 msgid "COLOR CHANGE"
 msgstr "色変更"
 
-#: lib/gui/simulator/drawing_panel.py:293
+#: lib/gui/simulator/drawing_panel.py:290
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:435
+#: lib/gui/simulator/drawing_panel.py:432
 #, python-format
 msgid "Command: %s"
 msgstr ""
@@ -3949,7 +3949,7 @@ msgstr ""
 
 #: lib/gui/simulator/simulator_preferences.py:35
 #: inx/inkstitch_fill_to_stroke.inx:21 inx/inkstitch_png_simple.inx:15
-#: inx/inkstitch_zip.inx:49
+#: inx/inkstitch_zip.inx:52
 msgid "Line width (mm)"
 msgstr ""
 
@@ -4906,7 +4906,7 @@ msgid "Yes"
 msgstr "はい"
 
 #: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:95
-#: inx/inkstitch_letters_to_font.inx:51
+#: inx/inkstitch_letters_to_font.inx:57
 msgid "No"
 msgstr "いいえ"
 
@@ -5109,23 +5109,38 @@ msgstr ""
 msgid "Husqvarna Embroidery Format"
 msgstr ""
 
-#. description for pyembroidery file format: edr
+#. description for pyembroidery file format: iqp
 #: pyembroidery-format-descriptions.py:94
+msgid "Iqp - Intelliquilter Format"
+msgstr ""
+
+#. description for pyembroidery file format: plt
+#: pyembroidery-format-descriptions.py:96
+msgid "Plt - HPGL"
+msgstr ""
+
+#. description for pyembroidery file format: qcc
+#: pyembroidery-format-descriptions.py:98
+msgid "Qcc - QuiltEZ"
+msgstr ""
+
+#. description for pyembroidery file format: edr
+#: pyembroidery-format-descriptions.py:100
 msgid "Edr Color Format"
 msgstr ""
 
 #. description for pyembroidery file format: col
-#: pyembroidery-format-descriptions.py:96
+#: pyembroidery-format-descriptions.py:102
 msgid "Col Color Format"
 msgstr ""
 
 #. description for pyembroidery file format: inf
-#: pyembroidery-format-descriptions.py:98
+#: pyembroidery-format-descriptions.py:104
 msgid "Inf Color Format"
 msgstr ""
 
 #. description for pyembroidery file format: json
-#: pyembroidery-format-descriptions.py:100
+#: pyembroidery-format-descriptions.py:106
 msgid "Json Export"
 msgstr ""
 
@@ -5284,7 +5299,7 @@ msgstr ""
 #: inx/inkstitch_lettering_generate_json.inx:139
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
-#: inx/inkstitch_letters_to_font.inx:69 inx/inkstitch_outline.inx:28
+#: inx/inkstitch_letters_to_font.inx:75 inx/inkstitch_outline.inx:28
 #: inx/inkstitch_redwork.inx:31 inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_satin_to_stroke.inx:15
 #: inx/inkstitch_stitch_plan_preview.inx:45 inx/inkstitch_troubleshoot.inx:15
@@ -6055,6 +6070,18 @@ msgstr ""
 msgid "convert INF file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
+#: inx/inkstitch_input_IQP.inx:3
+msgid "IQP file input"
+msgstr ""
+
+#: inx/inkstitch_input_IQP.inx:8
+msgid "Ink/Stitch: Iqp - Intelliquilter Format (.iqp)"
+msgstr ""
+
+#: inx/inkstitch_input_IQP.inx:9
+msgid "convert IQP file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
 #: inx/inkstitch_input_JEF.inx:3
 msgid "JEF file input"
 msgstr "JEFファイルのインプット"
@@ -6235,6 +6262,18 @@ msgstr ""
 msgid "convert PHC file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
+#: inx/inkstitch_input_PLT.inx:3
+msgid "PLT file input"
+msgstr ""
+
+#: inx/inkstitch_input_PLT.inx:8
+msgid "Ink/Stitch: Plt - HPGL (.plt)"
+msgstr ""
+
+#: inx/inkstitch_input_PLT.inx:9
+msgid "convert PLT file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
 #: inx/inkstitch_input_PMV.inx:3
 msgid "PMV file input"
 msgstr ""
@@ -6245,6 +6284,18 @@ msgstr ""
 
 #: inx/inkstitch_input_PMV.inx:9
 msgid "convert PMV file to Ink/Stitch manual-stitch paths"
+msgstr ""
+
+#: inx/inkstitch_input_QCC.inx:3
+msgid "QCC file input"
+msgstr ""
+
+#: inx/inkstitch_input_QCC.inx:8
+msgid "Ink/Stitch: Qcc - QuiltEZ (.qcc)"
+msgstr ""
+
+#: inx/inkstitch_input_QCC.inx:9
+msgid "convert QCC file to Ink/Stitch manual-stitch paths"
 msgstr ""
 
 #: inx/inkstitch_input_SEW.inx:3
@@ -6323,7 +6374,7 @@ msgstr ""
 msgid "TBF file input"
 msgstr ""
 
-#: inx/inkstitch_input_TBF.inx:8
+#: inx/inkstitch_input_TBF.inx:8 inx/inkstitch_output_TBF.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.tbf)"
 msgstr ""
 
@@ -6689,7 +6740,7 @@ msgstr ""
 #: inx/inkstitch_lettering_remove_kerning.inx:33
 #: inx/inkstitch_lettering_set_color_sort_index.inx:30
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:14
-#: inx/inkstitch_letters_to_font.inx:80
+#: inx/inkstitch_letters_to_font.inx:86
 msgid "Font Management"
 msgstr "フォント管理"
 
@@ -6923,39 +6974,39 @@ msgstr ""
 msgid "File format"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:46
+#: inx/inkstitch_letters_to_font.inx:52
 msgid "Font directory"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:48
+#: inx/inkstitch_letters_to_font.inx:54
 msgid "Import commands"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:49
+#: inx/inkstitch_letters_to_font.inx:55
 msgid "As param"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:50
+#: inx/inkstitch_letters_to_font.inx:56
 msgid "As symbol"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:55
+#: inx/inkstitch_letters_to_font.inx:61
 msgid "Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system."
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:58
+#: inx/inkstitch_letters_to_font.inx:64
 msgid "Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A."
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:63
+#: inx/inkstitch_letters_to_font.inx:69
 msgid "⚠ After running this function, drag the baseline into the desired position and place the letters accordingly. Save your font in a separate folder. Then generate the json file (with \"Autoroute Satin\" unchecked)."
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:70
+#: inx/inkstitch_letters_to_font.inx:76
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:77
+#: inx/inkstitch_letters_to_font.inx:83
 msgid "Inserts all available glyphs of a pre-digitized font into the document to make them available for the lettering tool"
 msgstr ""
 
@@ -7136,74 +7187,78 @@ msgid "Leave empty to use default value. Use 'none' to remove. Use %R %G %B for 
 msgstr ""
 
 #: inx/inkstitch_output_GCODE.inx:33
+msgid "Leave empty to ignore jumps. Use '%X' for x-coordinate and '%Y' for y-coordinate."
+msgstr ""
+
+#: inx/inkstitch_output_GCODE.inx:35
 msgid "Leave empty to use default value. Use 'none' to remove."
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:35
+#: inx/inkstitch_output_GCODE.inx:37
 msgid "START"
 msgstr "スタート"
 
-#: inx/inkstitch_output_GCODE.inx:35
+#: inx/inkstitch_output_GCODE.inx:37
 msgid "Use %R %G %B for inital color thread color values"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:36
+#: inx/inkstitch_output_GCODE.inx:38
 msgid "END"
 msgstr "終了"
 
-#: inx/inkstitch_output_GCODE.inx:38
+#: inx/inkstitch_output_GCODE.inx:40
 msgid "Laser Settings"
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:40
+#: inx/inkstitch_output_GCODE.inx:42
 msgid "laser mode"
 msgstr "レーザーモード"
 
-#: inx/inkstitch_output_GCODE.inx:40
+#: inx/inkstitch_output_GCODE.inx:42
 msgid "Laser mode (generate g-code for grbl laser mode)"
 msgstr "レーザーモード（grblレーザーモードのg-codeを生成)"
 
-#: inx/inkstitch_output_GCODE.inx:43
+#: inx/inkstitch_output_GCODE.inx:45
 msgid "dynamic laser power"
 msgstr "ダイナミックレーザーパワー"
 
-#: inx/inkstitch_output_GCODE.inx:43
+#: inx/inkstitch_output_GCODE.inx:45
 msgid "Use Grbl's M4 dynamic laser power mode. Ensures consistent laser cutting power regardless of motor speed. Only for PWM-capable lasers."
 msgstr ""
 
-#: inx/inkstitch_output_GCODE.inx:45
+#: inx/inkstitch_output_GCODE.inx:47
 msgid "laser warm-up time"
 msgstr "レーザーのウォームアップ時間"
 
-#: inx/inkstitch_output_GCODE.inx:45
+#: inx/inkstitch_output_GCODE.inx:47
 msgid "When turning on the laser, wait this many seconds for laser to warm up (G4 command)"
 msgstr "レーザー電源オン時、レーザーが温まるまでの秒数（G4コマンド）"
 
-#: inx/inkstitch_output_GCODE.inx:47
+#: inx/inkstitch_output_GCODE.inx:49
 msgid "spindle speed"
 msgstr "主軸回転数"
 
-#: inx/inkstitch_output_GCODE.inx:47
+#: inx/inkstitch_output_GCODE.inx:49
 msgid "spindle speed (laser power for laser mode, set to -1 to omit)"
 msgstr "主軸回転数（レーザーモードの場合はレーザー出力、省略する場合は-1を設定)"
 
-#: inx/inkstitch_output_GCODE.inx:49
+#: inx/inkstitch_output_GCODE.inx:51
 msgid "min spindle speed"
 msgstr "最小主軸回転数"
 
-#: inx/inkstitch_output_GCODE.inx:49
+#: inx/inkstitch_output_GCODE.inx:51
 msgid "minimum spindle speed value (grbl $31 setting)"
 msgstr "主軸回転数最小値（grbl $31設定)"
 
-#: inx/inkstitch_output_GCODE.inx:51
+#: inx/inkstitch_output_GCODE.inx:53
 msgid "max spindle speed"
 msgstr "主軸最高回転速度"
 
-#: inx/inkstitch_output_GCODE.inx:51
+#: inx/inkstitch_output_GCODE.inx:53
 msgid "minimum spindle speed value (grbl $30 setting)"
 msgstr "主軸回転速度の最小値（grbl $31設定)"
 
-#: inx/inkstitch_output_GCODE.inx:52
+#: inx/inkstitch_output_GCODE.inx:54
 msgid "feed rate (in mm/min, set to -1 to omit)"
 msgstr "送り速度（単位：mm/min、省略する場合は-1を設定)"
 
@@ -7255,6 +7310,18 @@ msgstr ""
 msgid "Save design in PES format using Ink/Stitch"
 msgstr ""
 
+#: inx/inkstitch_output_PLT.inx:3
+msgid "PLT file output"
+msgstr ""
+
+#: inx/inkstitch_output_PLT.inx:8
+msgid "Ink/Stitch: Plt - HPGL [QUILTING] (.plt)"
+msgstr ""
+
+#: inx/inkstitch_output_PLT.inx:9
+msgid "Save design in PLT format using Ink/Stitch"
+msgstr ""
+
 #: inx/inkstitch_output_PMV.inx:3
 msgid "PMV file output"
 msgstr ""
@@ -7267,6 +7334,18 @@ msgstr ""
 msgid "Save design in PMV format using Ink/Stitch"
 msgstr ""
 
+#: inx/inkstitch_output_QCC.inx:3
+msgid "QCC file output"
+msgstr ""
+
+#: inx/inkstitch_output_QCC.inx:8
+msgid "Ink/Stitch: Qcc - QuiltEZ [QUILTING] (.qcc)"
+msgstr ""
+
+#: inx/inkstitch_output_QCC.inx:9
+msgid "Save design in QCC format using Ink/Stitch"
+msgstr ""
+
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
 msgstr ""
@@ -7277,6 +7356,14 @@ msgstr ""
 
 #: inx/inkstitch_output_SVG.inx:9
 msgid "Save design in SVG format using Ink/Stitch"
+msgstr ""
+
+#: inx/inkstitch_output_TBF.inx:3
+msgid "TBF file output"
+msgstr ""
+
+#: inx/inkstitch_output_TBF.inx:9
+msgid "Save design in TBF format using Ink/Stitch"
 msgstr ""
 
 #: inx/inkstitch_output_TXT.inx:3
@@ -7364,7 +7451,7 @@ msgid "Create a PNG file with a realistic embroidery representation using Ink/St
 msgstr ""
 
 #: inx/inkstitch_png_realistic.inx:15 inx/inkstitch_png_simple.inx:16
-#: inx/inkstitch_zip.inx:47 inx/inkstitch_zip.inx:50
+#: inx/inkstitch_zip.inx:50 inx/inkstitch_zip.inx:53
 msgid "DPI"
 msgstr ""
 
@@ -8082,78 +8169,90 @@ msgid ".U01: Barudan Embroidery Format"
 msgstr ""
 
 #: inx/inkstitch_zip.inx:29
-msgid ".PMV: Brother Stitch Format [STITCH]"
+msgid ".TBF: Tajima Embroidery Format"
 msgstr ""
 
 #: inx/inkstitch_zip.inx:30
-msgid ".GCODE: gcode Format, Text File"
+msgid ".PMV: Brother Stitch Format [STITCH]"
 msgstr ""
 
 #: inx/inkstitch_zip.inx:36
-msgid ".EDR: Edr Color Format [COLOR]"
+msgid ".GCODE: gcode Format, Text File"
 msgstr ""
 
 #: inx/inkstitch_zip.inx:37
-msgid ".COL: Col Color Format [COLOR]"
+msgid ".PLT: Plt - HPGL [QUILTING]"
 msgstr ""
 
 #: inx/inkstitch_zip.inx:38
-msgid ".INF: Inf Color Format [COLOR]"
+msgid ".QCC: Qcc - QuiltEZ [QUILTING]"
 msgstr ""
 
 #: inx/inkstitch_zip.inx:39
+msgid ".EDR: Edr Color Format [COLOR]"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:40
+msgid ".COL: Col Color Format [COLOR]"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:41
+msgid ".INF: Inf Color Format [COLOR]"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:42
 msgid ".TXT: Threadlist [COLOR]"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:45
+#: inx/inkstitch_zip.inx:48
 msgid ".SVG: Scalable Vector Graphic"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:46
+#: inx/inkstitch_zip.inx:49
 msgid ".PNG: Portable Network Graphics (Realistic) [IMAGE]"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:48
+#: inx/inkstitch_zip.inx:51
 msgid ".PNG: Portable Network Graphics (Simple) [IMAGE]"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:54
+#: inx/inkstitch_zip.inx:57
 msgid "Panelization Options"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:55
+#: inx/inkstitch_zip.inx:58
 msgid "For single design set horizontal and vertical repeats to 1"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:57
+#: inx/inkstitch_zip.inx:60
 msgid "Horizontal repeats"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:58
+#: inx/inkstitch_zip.inx:61
 msgid "Horizontal spacing (mm)"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:59
+#: inx/inkstitch_zip.inx:62
 msgid "Vertical repeats"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:60
+#: inx/inkstitch_zip.inx:63
 msgid "Vertical spacing (mm)"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:63
+#: inx/inkstitch_zip.inx:66
 msgid "Zip File Export"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:64
+#: inx/inkstitch_zip.inx:67
 msgid "Export multiple embroidery file formats at once."
 msgstr ""
 
-#: inx/inkstitch_zip.inx:66
+#: inx/inkstitch_zip.inx:69
 msgid "Read more on our website:"
 msgstr ""
 
-#: inx/inkstitch_zip.inx:67
+#: inx/inkstitch_zip.inx:70
 msgid "https://inkstitch.org/docs/import-export/#batch-export"
 msgstr ""
 
