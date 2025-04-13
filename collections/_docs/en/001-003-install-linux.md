@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch on Linux"
 permalink: /docs/install-linux/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2024-09-25
+last_modified_at: 2025-04-13
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -156,11 +156,23 @@ Please try an other installing method. Any described on [https://inkscape.org/](
 
 ### Some Ink/Stitch dialogs disappear after a few seconds or don't show up at all
 
+#### Use X11
+
 This issue can be caused by wayland. Start Inkscape with the following command:
 
 ```export GDK_BACKEND=x11 && inkscape```
 
 This workaround has to be used until we moved all Ink/Stitch applications to the electron environment. 
+
+#### Extend timeout for mutter
+
+In versions of mutter ≥ 3.35.92, you can set the timeout used to check if a
+window is still alive. This is also useful for X-forwarding over ssh with
+high latency.
+
+For example, you can set the timeout to 60 s (60000 ms) using:
+
+```gsettings set org.gnome.mutter check-alive-timeout 60000```
 
 ### ImportError: libnsl.so.1: cannot open shared object file. No such file or directory
 

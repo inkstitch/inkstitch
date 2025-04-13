@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch für Linux"
 permalink: /de/docs/install-linux/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2024-09-25
+last_modified_at: 2025-04-13
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -150,6 +150,8 @@ Einige Nutzer berichten, dass falsche Nutzereinstellungen, bzw. Nutzerrechte der
 
 ### Einige Ink/Stitch Dialoge verschwinden kurz nach dem Aufruf wieder oder erscheinen gar nicht
 
+#### Nutze X11
+
 Dieser Fehler kann durch wayland verursacht werden. Starte Inkscape mit folgendem Befehl:
 
 ```
@@ -157,6 +159,15 @@ export GDK_BACKEND=x11 && inkscape
 ```
 
 Nutze diesen Workaround bis wir die gesamte Oberfläche auf electron umgestellt haben.
+
+#### Verlängere Timeout für mutter
+
+In den Versions von mutter ≥ 3.35.92 ist es möglich, die timeout-Zeit zu verlängern.
+Das ist auch für X-forwarding über ssh mit hoher Latenz hilfreich.
+
+Um den Timeout auf 60 s (60000 ms) zu setzen, nutze folgenden Befehl:
+
+```gsettings set org.gnome.mutter check-alive-timeout 60000```
 
 ### ImportError: libnsl.so.1: cannot open shared object file. No such file or directory
 

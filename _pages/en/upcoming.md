@@ -409,7 +409,6 @@ Ink/Stitch can now export multiple files with text at once. A path with a specif
   Please note, that this will alter the start and end points of the elements and should only be used for development purposes.
 
 * Update update build process [#3652](https://github.com/inkstitch/inkstitch/pull/3652)
-  * removed linux new build, linux old is now linux64
   * removed win32 build
   * use geos source build only for linux32
   * set python version to 3.11 for all builds
@@ -420,7 +419,6 @@ Ink/Stitch can now export multiple files with text at once. A path with a specif
 * Migrate from appdirs to platformdirs [#3450](https://github.com/inkstitch/inkstitch/pull/3450)
 * remove scipy dependency [#3483](https://github.com/inkstitch/inkstitch/pull/3483) [#3481](https://github.com/inkstitch/inkstitch/pull/3481)
 * Update translations workflow [#3435](https://github.com/inkstitch/inkstitch/pull/3435)
-* Add build for ubuntu 24.04 [#3299](https://github.com/inkstitch/inkstitch/pull/3299)[#3330](https://github.com/inkstitch/inkstitch/pull/3330)
 * Add lmde6 32bit build [#3298](https://github.com/inkstitch/inkstitch/pull/3298)
 * Update macos cloud build [#3291](https://github.com/inkstitch/inkstitch/pull/3291)
 * Use colormath2 instead of colormath [#3266](https://github.com/inkstitch/inkstitch/pull/3266)

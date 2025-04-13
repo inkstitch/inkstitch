@@ -163,9 +163,21 @@ Cette erreur a été signalée par des utilisateurs qui ont installé Inkscape v
 
 ### Some dialogues Ink/Stitch disparaissent après quelques secondes or don't show up at all
 
+#### Use X11
+
 Ce problème peut être causé par wayland. Démarrez Inkscape avec la commande suivante: `export GDK_BACKEND=x11 && inkscape`.
 
 Cette solution de contournement doit être utilisé jusqu'à ce que nous ayons déployées toutes les applications Ink/Stitch dans l'environnement electron.
+
+#### Extend timeout for mutter
+
+In versions of mutter ≥ 3.35.92, you can set the timeout used to check if a
+window is still alive. This is also useful for X-forwarding over ssh with
+high latency.
+
+For example, you can set the timeout to 60 s (60000 ms) using:
+
+```gsettings set org.gnome.mutter check-alive-timeout 60000```
 
 ### ImportError: libnsl.so.1: cannot open shared object file. No such file or directory
 
