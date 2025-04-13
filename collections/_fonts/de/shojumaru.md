@@ -1,7 +1,7 @@
 ---
 title: "Shojumaru"
-permalink: /fonts/shojumaru/
-last_modified_at: 2024-06-18
+permalink: /de/fonts/shojumaru/
+last_modified_at: 2025-04-13
 toc: false
 preview_image:
   - url: /assets/images/fonts/shojumaru.png
@@ -24,7 +24,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 ## Maße
 
 Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 19mm (0.75 in) hoch. Sie kann bis auf 120% (~ 23mm, 1 Zoll) hochskaliert und bis zu 80% (~ 15 mm, 2/3 Zoll) herunterskaliert werden.
-
 
 ## Impressionen
 

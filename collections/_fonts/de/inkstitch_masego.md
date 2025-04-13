@@ -1,7 +1,7 @@
 ---
 title: "Ink/Stitch Masego"
 permalink: /de/fonts/inkstitch-masego/
-last_modified_at: 2024-05-12
+last_modified_at: 2025-04-13
 toc: false
 preview_image:
   - url: /assets/images/fonts/inkstitch_masego.png

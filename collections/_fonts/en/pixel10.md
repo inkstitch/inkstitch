@@ -15,26 +15,26 @@ data_title:
 
 ![Pixel 10](/assets/images/fonts/pixel_10.png)
 
-## Schriftzeichen
+## Glyphs
 
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
+This font contains  {{ font.glyphs.size }} glyphs:
 
 ```
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
-## Maße
+## Dimensions
 
-Bei einer Skalierung von 100 % ist diese Schrift {{ font.size }} mm groß.
+At a scale of 100% this font has an approximate height of {{ font.size }} mm.
 
-Sie kann bis auf {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm) herunterskaliert und bis zu {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm) hochskaliert  werden.
+It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font1.min_scale }} mm)
+up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
-## Impressionen
+## In real life
 
 {% include folder-galleries path="fonts/pixel10/" %}
 
-## Lizenz
-
+## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/pixel10/LICENSE)
