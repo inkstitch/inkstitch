@@ -101,7 +101,8 @@ class Troubleshoot(InkstitchExtension):
         text.append(tspan)
 
     def _get_or_create_group(self, layer, label):
-        group = layer.xpath(f".//*[@inkscape:label='{label}']")
+
+        group = layer.xpath(f'.//*[@inkscape:label="{label}"]')
 
         if not group:
             group = inkex.Group()
