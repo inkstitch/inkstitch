@@ -4,11 +4,11 @@ set -e
 mkdir $HOME/geos-build
 GEOS_PATH=$HOME/geos-build
 # Downloading geos
-curl -L -O  https://github.com/libgeos/geos/releases/download/3.12.2/geos-3.12.2.tar.bz2
+curl -L -O  https://github.com/libgeos/geos/releases/download/3.13.1/geos-3.13.1.tar.bz2
 
 # uzipping geos into the geos directory
 mkdir -p geos && cd geos
-tar -xf ../geos-3.12.2.tar.bz2 --strip-components=1
+tar -xf ../geos-3.13.1.tar.bz2 --strip-components=1
 # Building geos
 mkdir -p build && cd build && cmake -DCMAKE_INSTALL_PREFIX:PATH=$GEOS_PATH -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF ..
 make && make install
@@ -27,6 +27,10 @@ if [ ! -z "$CI" ]; then
 fi
 
 cd ../..
-python -m pip uninstall -y shapely
-python -m pip cache remove shapely
-python -m pip install -v shapely --no-binary shapely
+# disabled for linux32 build to run virtualenv properly
+#python -m pip uninstall -y shapely
+#python -m pip cache remove shapely
+#python -m pip install -v shapely --no-binary shapely
+#virtualenv/bin/pip uninstall -y shapely
+#virtualenv/bin/pip cache remove shapely
+#virtualenv/bin/pip install -v shapely
