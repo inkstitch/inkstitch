@@ -63,3 +63,4 @@ shopt -s dotglob
 mkdir dist/bin
 mv dist/inkstitch/* dist/bin
 mv dist/bin dist/inkstitch
+mkdir artifacts

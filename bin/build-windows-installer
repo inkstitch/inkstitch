@@ -2,6 +2,20 @@
 VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
 OS="${BUILD:-$(uname)}"
 ARCH=$(python -c "import platform; n = platform.architecture()[0]; print(n)")
+# Check for signed directory
+if [[ -d "signed-artifacts" ]]; then
+	DIRECTORY="signed-artifacts"
+	echo "Found signed artifacts"
+else
+	if [[ ! -d "signed-artifacts" ]] && [[ ! -z "${GITHUB_REF}" ]]; then
+		mkdir signed-artifacts
+		DIRECTORY="signed-artifacts"
+		echo "Created signed artifacts"
+	else
+		DIRECTORY="artifacts"
+		echo "No signed artifacts found, local build"
+	fi
+fi
 # Create windows installer
 mkdir win
 cp installer_scripts/template.iss win/win_build.iss
@@ -14,21 +28,10 @@ sed -i'' -e '/;inkstitch-version/ a\'$'\n'"${version_block}"'' win/win_build.iss
 sed -i'' -e '/;arch-allowed/ a\'$'\n'"ArchitecturesAllowed=x64 arm64"'' win/win_build.iss
 
 iscc win/win_build.iss
-mv  win/inkstitch.exe artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.exe
+mv  win/inkstitch.exe ${DIRECTORY}/inkstitch-${VERSION}-${OS}-${ARCH}.exe
 cd dist
 echo "Creating zip"
-if [[ -d "../signed-artifacts" ]]; then
-	DIRECTORY="signed-artifacts"
-	echo "Found signed artifacts"
-else
-	if [[ ! -d "../signed-artifacts" ]]; then
-		DIRECTORY="signed-artifacts"
-		echo "Created signed artifacts"
-	else
-		DIRECTORY="artifacts"
-		echo "No signed artifacts found, local build"
-	fi
-fi
+
 
 # The python zipfile command line utility can't handle directories
 # containing files with UTF-8 names on Windows, so we use 7-zip instead.

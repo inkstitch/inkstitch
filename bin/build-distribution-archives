@@ -1,7 +1,6 @@
 VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
 OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
-mkdir artifacts
 
 if [ "$BUILD" = "osx" ]; then
     cp -a addons icons locales print LICENSE VERSION palettes symbols fonts tiles dbus inx dist/inkstitch.app/Contents/Resources
@@ -104,7 +103,7 @@ if [ "$BUILD" = "windows" ]; then
     fi
 fi
 
-if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux-new" ] || [ "$BUILD" = "linux-old" ] || [ "$BUILD" = "linux32" ]; then
+if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
     if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
         VERSION=${VERSION#v}
     else
