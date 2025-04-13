@@ -1,26 +1,26 @@
 ---
 title: "Multiversion Install"
 permalink: /de/developers/inkstitch/multiversion/
-last_modified_at: 2024-02-12
+last_modified_at: 2025-04-13
 toc: true
 ---
-Installing multiple versions of Ink/Stitch can become very handy while development.
+Die Möglichkeit mehrere Versionen von Ink/Stitch zu installieren, kann bei der Entwicklung des Programms hilfreich seind.
 
-It will make it easy to run tests and compase versions
+Es erleichtert das Testen und den Vergleich verschiedener Versionen.
 
-## Setup Ink/Stitch menu files
+## Ink/Stitch Menü-Dateien einrichten
 
-To achieve the installation if multiple Ink/Stitch versions the Inkscape menu files need a distinct ID.
+Um die Installation mehrerer Ink/Stitch Versionen zu ermöglichen, brauchen die Menü-Dateien eine eigene ID.
 
-Here's an example of how to use two Ink/Stitch extensions:
+Hier ist ein Beispiel wie dies erreicht werdeb kann:
 
-- install Inkstitch in two different locations (e.g. _inkstitch_ and _inkstitch-k_)
-- ensure `make inx` is executed in both locations (this will generate also `inx/locale/` files)
-- in the second location generate modified inx files: `generate-inx-files -a k`
-- install the inx files in Inkscape extensions directory
-  - symlink `.config/inkscape/extensions/inkstitch   -> inkstitch`
-  - symlink `.config/inkscape/extensions/inkstitch-k -> inkstitch-k`
-- modify `.config/inkscape/keys/default.xml` if necessary
-- run Inkscape with both Inkstitch extensions enabled
-  - first version:  `Extensions > Ink/Stitch`
-  - second version: `Extensions > Ink/Stitch-k`
+* Installiere Ink/Stitch in zwei unterschiedlichen Orten (z.B. _inkstitch_ und _inkstitch-k_)
+* Führe `make inx` für beide Installationen durch (dies generiert die `inx/locale/` Dateien)
+* In der zweiten Installation generiere nun die inx-Dateien mit `generate-inx-files -a k` 
+* Verlinke wie gewohnt die Ordner mit den Ink/Stitch Installationen in den Erweiterungsordner von Inkscape
+  * symlink `.config/inkscape/extensions/inkstitch   -> inkstitch`
+  * symlink `.config/inkscape/extensions/inkstitch-k -> inkstitch-k`
+* Modifiziere `.config/inkscape/keys/default.xml` falls nötig
+* Inkscape hat nun zwei Ink/Stitch Versionen im Erweiterungsmenü
+  * erste Version: `Erweiterungen > Ink/Stitch`
+  * zweite Version: `Erweiterungen > Ink/stitch-k`

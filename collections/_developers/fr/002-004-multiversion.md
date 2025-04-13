@@ -1,6 +1,6 @@
 ---
 title: "Multiversion Install"
-permalink: /de/developers/inkstitch/multiversion/
+permalink: /fr/developers/inkstitch/multiversion/
 last_modified_at: 2024-02-12
 toc: true
 ---
