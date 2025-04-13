@@ -97,14 +97,14 @@ docs:
       - title: "Spiralfüllung"
         url: /de/docs/stitches/circular-fill/
       - title: "Lineare Farbverlaufsfüllung"
-        url: /de/docs/stitches/linear-gradient-fill
+        url: /de/docs/stitches/linear-gradient-fill/
       - title: "Tartanfüllung"
-        url: /de/docs/stitches/tartan-fill
+        url: /de/docs/stitches/tartan-fill/
         class: menu-margin-after
       - title: "Vernähstiche"
         url: /de/docs/stitches/lock-stitches/
       - title: Stichmuster
-        url: /de/docs/stitches/patterns
+        url: /de/docs/stitches/patterns/
         class: menu-margin-after
       - title: "Klon"
         url: /de/docs/stitches/clone/

@@ -99,9 +99,9 @@ docs:
       - title: "Circular Fill"
         url: /docs/stitches/circular-fill/
       - title: "Linear Gradient Fill"
-        url: /docs/stitches/linear-gradient-fill
+        url: /docs/stitches/linear-gradient-fill/
       - title: "Tartan Fill"
-        url: /docs/stitches/tartan-fill
+        url: /docs/stitches/tartan-fill/
         class: menu-margin-after
       - title: "Lock stitches"
         url: /docs/stitches/lock-stitches/
