@@ -219,7 +219,7 @@ table.inline-table {
   .toc .nav__title {
     background: #808080;
   }
-  
+
 /* Sidebar */
   /* sticky = not sticky */
   @media (min-width: 64em) {
@@ -228,20 +228,27 @@ table.inline-table {
       overflow: visible;
       height: auto;
       top: 0;
+      background: #f4f4f4;
+      padding-left: 1em;
     }
   }
-  
+
   .nav__sub-title {
     padding: 0;
     border-bottom: none;
+    font-size: 0.8rem;
   }
-  
+
+  .nav__item {
+    font-size: 0.8rem;
+
+  }
   .nav__list .nav__items .active {
     background: grey;
     color: white;
     display: block;
   }
-  
+
   .menu-margin-after {
     margin-bottom: 1em;
     display:inline-block;
@@ -435,7 +442,7 @@ div.text-left {
   }
   
   .sidebar.sticky {
-      max-height: none;
+    max-height: none;
   }
 
   
