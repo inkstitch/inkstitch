@@ -18,6 +18,13 @@ class Reorder(InkstitchExtension):
             errormsg(_("Please select at least two elements to reorder."))
             return
 
+        # We need to delete the nodes from the document,
+        # otherwise the insertion index might get confused
+        # and we end up with an incorrect result
+        for node in objects:
+            if not node == objects.first():
+                node.delete()
+
         insert_parent = objects[0].getparent()
         insert_pos = insert_parent.index(objects[0]) + 1
 
