@@ -172,6 +172,8 @@ A tool for font authors which sets a specified color sort index on selected elem
 * We had a lot of complaints that positioning command symbol is rather difficult.
   So up from now visual commands are directed towards the symbol rather than the touching point of the command connector [#3542](https://github.com/inkstitch/inkstitch/pull/3542).
   This means, when you position a start symbol, the starting point of the element will be directly at the symbols center (will automatically update older files)
+
+  ![Hidden connector command](/assets/images/upcoming/3.2.0/hidden_connector_commands.png)
 * Unified start and stop commands for various stitch types (will automatically update older files)
 
 [Read more](/docs/commands/)
@@ -389,6 +391,12 @@ Ink/Stitch can now export multiple files with text at once. A path with a specif
 
 [More information](/docs/import-export/#batch-lettering)
 
+## Releases
+
+* Windows releases are now signed with [SignPath.io](https://about.signpath.io) certificate by [SignPath Foundation](https://signpath.org). We are very greatful for their support.
+* Windows 32bit version has been removed as it is no longer supported
+* Linux releases in 64bit and 32bit versions
+
 ## Developer and Build Stuff
 
 * Sew Stack first steps [#3133](https://github.com/inkstitch/inkstitch/pull/3133)
@@ -400,7 +408,13 @@ Ink/Stitch can now export multiple files with text at once. A path with a specif
   It is only visible in manual installs and will not render, unless `enable_sew_stack` is enabled in the debug config file.
   Please note, that this will alter the start and end points of the elements and should only be used for development purposes.
 
-* sign windows release with release certificate [#3613](https://github.com/inkstitch/inkstitch/pull/3613)
+* Update update build process [#3652](https://github.com/inkstitch/inkstitch/pull/3652)
+  * removed linux new build, linux old is now linux64
+  * removed win32 build
+  * use geos source build only for linux32
+  * set python version to 3.11 for all builds
+  * sign only releases for windows
+  * sign windows release with release certificate [#3613](https://github.com/inkstitch/inkstitch/pull/3613)
 * Mypy type correctness [#3199](https://github.com/inkstitch/inkstitch/pull/3199)
 * use get_user_dir [#3549](https://github.com/inkstitch/inkstitch/pull/3549)
 * Migrate from appdirs to platformdirs [#3450](https://github.com/inkstitch/inkstitch/pull/3450)

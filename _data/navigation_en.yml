@@ -78,6 +78,7 @@ docs:
         url: /docs/stitches/ripple-stitch/
       - title: "Zig-Zag (Simple Satin)"
         url: /docs/stitches/zigzag-stitch/
+        class: menu-margin-after
       - title: "Satin Column"
         url: /docs/stitches/satin-column/
       - title: "E-Stitch"
@@ -86,6 +87,7 @@ docs:
         url: /docs/stitches/s-stitch/
       - title: "Zigzag Satin"
         url: /docs/stitches/zigzag-satin-stitch/
+        class: menu-margin-after
       - title: "Fill Stitch"
         url: /docs/stitches/fill-stitch/
       - title: "Contour Fill"
@@ -100,10 +102,14 @@ docs:
         url: /docs/stitches/linear-gradient-fill
       - title: "Tartan Fill"
         url: /docs/stitches/tartan-fill
+        class: menu-margin-after
       - title: "Lock stitches"
         url: /docs/stitches/lock-stitches/
       - title: "Stitch patterns"
         url: /docs/stitches/patterns/
+        class: menu-margin-after
+      - title: "Clones"
+        url: /docs/stitches/clone/
   - title: Interface
     children:
     - title: "Commands"

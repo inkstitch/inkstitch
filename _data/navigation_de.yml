@@ -76,6 +76,7 @@ docs:
         url: /de/docs/stitches/ripple-stitch/
       - title: "Zick-Zack-Stich"
         url: /de/docs/stitches/zigzag-stitch/
+        class: menu-margin-after
       - title: "Satinsäule"
         url: /de/docs/stitches/satin-column/
       - title: "E-Stich"
@@ -84,6 +85,7 @@ docs:
         url: /de/docs/stitches/s-stitch/
       - title: "Zigzag Satin"
         url: /de/docs/stitches/zigzag-satin-stitch/
+        class: menu-margin-after
       - title: "Füllstich"
         url: /de/docs/stitches/fill-stitch/
       - title: "Konturfüllung"
@@ -94,14 +96,18 @@ docs:
         url: /de/docs/stitches/meander-fill/
       - title: "Spiralfüllung"
         url: /de/docs/stitches/circular-fill/
-      - title: "Tartanfüllung"
-        url: /de/docs/stitches/tartan-fill
       - title: "Lineare Farbverlaufsfüllung"
         url: /de/docs/stitches/linear-gradient-fill
+      - title: "Tartanfüllung"
+        url: /de/docs/stitches/tartan-fill
+        class: menu-margin-after
       - title: "Vernähstiche"
         url: /de/docs/stitches/lock-stitches/
       - title: Stichmuster
         url: /de/docs/stitches/patterns
+        class: menu-margin-after
+      - title: "Klon"
+        url: /de/docs/stitches/clone/
   - title: Benutzeroberfläche
     children:
     - title: "Befehle"
