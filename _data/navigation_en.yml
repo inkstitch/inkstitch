@@ -220,7 +220,7 @@ developers:
     - title: Manual Setup (Windows)
       url: /developers/inkstitch/windows-manual-build/
     - title: Multiversion
-      url: /developers/inkstitch/multiversion
+      url: /developers/inkstitch/multiversion/
     - title: Debugging and Profiling
       url: /developers/inkstitch/debug/
     - title: Coding Style

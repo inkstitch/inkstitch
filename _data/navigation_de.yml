@@ -216,7 +216,7 @@ developers:
     - title: Manuelle Installation (Windows)
       url: /developers/inkstitch/windows-manual-build/
     - title: Multiversion
-      url: /de/developers/inkstitch/multiversion
+      url: /de/developers/inkstitch/multiversion/
     - title: Debugging und Profiling
       url: /de/developers/inkstitch/debug/
     - title: Coding Style
