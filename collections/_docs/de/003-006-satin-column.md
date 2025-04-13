@@ -19,7 +19,7 @@ Ink/Stitch bietet verschiedene Möglichkeiten Satinsäulen zu erstellen. Die Met
 1. [Linie zu Satin](#1-linie-zu-satin): für Satinsäule mit einheitlicher Breite
 2. [Linie zu Pfadeffekt-Satin](#2-linie-zu-pfadeffekt-satin): leicht modifizierbare Satinsäule mit optionalem Muster
 3. [Zickzack-Linie zu Satin](#3-zickzack-linie-zu-satin): für die einfache Erstellung mit Grafiktablets oder Touchscreens
-4. [Füllung zu Satin](#4-füllung-linie-zu-satin): für die einfache Erstellung mit Grafiktablets oder Touchscreens
+4. [Füllung zu Satin](#4-füllung-linie-zu-satin): erstelle durch hinzufügen von Richtungsvektoren eine Satinsäule aus einer Füllung
 5. [Manuelle Satinsäule](#5-manuelle-satinsäule): volle Kontrolle über jeden Teil der Satinsäule
 
 ### 1. Linie zu Satin

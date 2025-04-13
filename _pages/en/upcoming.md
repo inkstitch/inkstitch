@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-04-12
+last_modified_at: 2025-04-13
 sidebar:
   nav: pages
 toc: true
@@ -151,12 +151,10 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 ### General
 
-* Request permission to update if inkstitch svg version is not specified in the svg file. [#3228](https://github.com/inkstitch/inkstitch/pull/3228)
-* Ink/Stitch can now read the clipped path of groups correctly [#3261](https://github.com/inkstitch/inkstitch/pull/3261)<br>
-  This works well together with the redwork tool.
+* Request permission to update old SVG files if the inkstitch svg version attribute is not specified in the file. [#3228](https://github.com/inkstitch/inkstitch/pull/3228)
 
-  ![cliped groups](/assets/images/tutorials/mandala/lettremandala.svg)
-* Add icons and descriptions for extension gallery [#3287](https://github.com/inkstitch/inkstitch/pull/3287)
+  This prevents to falsely update copy-pasted content in a new file.
+* Ink/Stitch extensions are now shown with icons and descriptions in the extension gallery for easy access [#3287](https://github.com/inkstitch/inkstitch/pull/3287)
 
   ![Extension gallery](/assets/images/upcoming/3.2.0/extension_gallery.png)
 
@@ -294,16 +292,30 @@ Add option for text position along the path (left, center, right, stretch)
 Glyphlist update has been part of the font management and was replaced by the much more powerful
 [Edit JSON extension](/docs/font-tools/#edit-json)  [#3380](https://github.com/inkstitch/inkstitch/pull/3380)
 
-## Stitch type Updates
+## Stitch Type Related Updates
 
-* Automated start and end point calculation for fill and satin (starts/ends at nearest point) [#3370](https://github.com/inkstitch/inkstitch/pull/3370)
+### Automatic Start- and Endpoints
 
-  ![Two satins joining at one point, rendered without a jump stitch](/assets/images/upcoming/3.2.0/start_at_nearest_point.png)
-* Make effect clips available for embroidery (couldn't be used before) [#3364](https://github.com/inkstitch/inkstitch/pull/3364)
+Fill elements and satin columns now start automatically at the nearest point to the previous element and end at the nearest point to the next element [#3370](https://github.com/inkstitch/inkstitch/pull/3370).
+
+The behaviour is adaptable and of course start- and end commands will still work.
+
+![Two satins joining at one point, rendered without a jump stitch](/assets/images/upcoming/3.2.0/start_at_nearest_point.png)
+
+### Clips
+
+Clips are now easy accessable to Ink/Stitch in all forms. They are especially useful in combination with the redwork tool.
+
+* **Groups:** Ink/Stitch can now also parse clips which are applied on groups [#3261](https://github.com/inkstitch/inkstitch/pull/3261).
+
+  ![cliped groups](/assets/images/tutorials/mandala/lettremandala.svg)
+* **Effect clips** allow to use an inverted clip ([#3364](https://github.com/inkstitch/inkstitch/pull/3364)).
+
+  ![interved clips](/assets/images/galleries/fonts/decadent_flowers_monogram/IMG_5211.jpg)
 
 ### Clones
 
-* Clones now also clone commands attached to element and its children. (#3032, #3121) [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
+* Clones now also clone commands attached to element and its children [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
 
 ### Contour Fill
 
@@ -407,6 +419,7 @@ Ink/Stitch can now export multiple files with text at once. A path with a specif
 
 ## Bug Fixes
 
+* fix ensure even center walk underlay repeats in auto_satin when value is empty [#3651](https://github.com/inkstitch/inkstitch/pull/3651)
 * Prevent unwanted simulator scale transforms [#3637](https://github.com/inkstitch/inkstitch/pull/3637)
 * Always update satin param to avoid actual param/rendering mismatch [#3647](https://github.com/inkstitch/inkstitch/pull/3647)
 * Lettering, custom directories: do not try to read hidden directories [#3632](https://github.com/inkstitch/inkstitch/pull/3632)
