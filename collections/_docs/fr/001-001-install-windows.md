@@ -31,6 +31,40 @@ Téléchargez la dernière version disponible pour windows.
 Free code signing provided by [SignPath.io](https://about.signpath.io) certificate by [SignPath Foundation](https://signpath.org).<br>See our [code signing policy](/fr/code-signing-policy).
 {: .notice--info }
 
+### Download with Microsoft Edge
+
+When you are using the Microsoft Edge Browser it may not download the File right away. Here are the steps necessary to convince your browser to download it anyway.
+
+* Click on the download link (above).
+
+* Your browser will show a warning sign. Click on it.
+
+  ![Download warning message](/assets/images/docs/en/windows-download/01-warning-message.png)
+
+  Then click on the message text.
+* The message will show a bin to dismiss the download and a menu button.
+
+  ![Download warning message with menu button](/assets/images/docs/en/windows-download/02-warning_message02.png)
+
+  Click on the menu button
+* A menu appears.
+
+  ![Download warnig message with menu](/assets/images/docs/en/windows-download/03-keep.png)
+
+  Click on `Keep`
+* It will give you an other warning.
+
+  ![An other warning](/assets/images/docs/en/windows-download/04-show-more.png)
+
+  Click on `Show more`
+* Now you have three more options.
+
+  If you want to help us out and make the download procedure easier for the next users, click on `Report this app as safe`.
+
+  Chose `Keep anyway` to finally download the file.
+
+  ![Keep anyway option finally shows up](/assets/images/docs/en/windows-download/05-keep_anyway.png)
+
 ## Installation
 
 Double cliquez  pour exécuter le fichier que vous avez téléchargé.

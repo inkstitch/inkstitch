@@ -28,6 +28,41 @@ Lade die neueste Ink/Stitch Version herunter.
 Kostenloses code signing durch [SignPath.io](https://about.signpath.io) Zertifikat von [SignPath Foundation](https://signpath.org).<br>Siehe unsere [Code signing policy](/de/code-signing-policy/)
 {: .notice--info }
 
+### Download mit Microsoft Edge
+
+Wenn du den Microsoft Edge Browser benutzt, kann es beim Download der Installationsdatei Probleme geben. Hier sind die Schritte gelistet, die nötig sind, den Browser dennoch zum Download zu bewegen.
+Die Übersetzung ist aus einem englischsprachigen Betriebssystem heraus entstanden. Daher kann es sein, dass manche Begriffe leicht abweichen.
+
+* Klicke auf den Downloadlink (oben).
+
+* Der Browser zeigt ein Warnsymbol. Klicke darauf.
+
+  ![Download warning message](/assets/images/docs/en/windows-download/01-warning-message.png)
+
+  Dann klicke auf die angezeigte Warnung.
+* Die Nachricht zeigt nun einen Papierkorb um den Download abzubrechen und ein Menü-Symbol.
+
+  ![Download warning message with menu button](/assets/images/docs/en/windows-download/02-warning_message02.png)
+
+  Klicke auf das Menüsymbol.
+* Ein Menü erscheint.
+
+  ![Download warnig message with menu](/assets/images/docs/en/windows-download/03-keep.png)
+
+  Klicke auf `Behalten`
+* Nun wird eine weitere Warnung angezeigt.
+
+  ![An other warning](/assets/images/docs/en/windows-download/04-show-more.png)
+
+  Klicke auf `Mehr anzeigen`
+* Nun gibt es drei Optionen.
+
+  Willst du uns helfen den Prozess für nachfolgende Nutzer zu vereinfachen, klicke auf `Anwendung als sicher melden`.
+
+  Wähle `Trotzdem behalten` um die Datei nun wirklich herunterladen.
+
+  ![Keep anyway option finally shows up](/assets/images/docs/en/windows-download/05-keep_anyway.png)
+
 ## Installation
 
 Öffne das Ink/Stitch Installationsprogramm mit einem Doppelklick.
