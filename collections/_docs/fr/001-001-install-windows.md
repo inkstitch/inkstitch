@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /fr/docs/install-windows/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2023-04-19
+last_modified_at: 2025-04-14
 toc: true
 ---
 {% comment %}
@@ -31,37 +31,39 @@ Téléchargez la dernière version disponible pour windows.
 Free code signing provided by [SignPath.io](https://about.signpath.io) certificate by [SignPath Foundation](https://signpath.org).<br>See our [code signing policy](/fr/code-signing-policy).
 {: .notice--info }
 
-### Download with Microsoft Edge
+### Téléchargement avec  Microsoft Edge
 
-When you are using the Microsoft Edge Browser it may not download the File right away. Here are the steps necessary to convince your browser to download it anyway.
+Si vous utilisez le navigateur Microsoft Edge, il se peut que le fichier ne soit pas téléchargé immédiatement. Voici les étapes à suivre pour que votre navigateur le télécharge quand même.
 
-* Click on the download link (above).
+Cliquez sur le lien de téléchargement (ci-dessus).
 
-* Your browser will show a warning sign. Click on it.
+* Votre navigateur affichera un message d'avertissement. Cliquez dessus.
 
   ![Download warning message](/assets/images/docs/en/windows-download/01-warning-message.png)
 
-  Then click on the message text.
-* The message will show a bin to dismiss the download and a menu button.
+Cliquez ensuite sur le texte du message.
+  
+* Le message affichera une corbeille pour annuler le téléchargement et un bouton de menu.
 
   ![Download warning message with menu button](/assets/images/docs/en/windows-download/02-warning_message02.png)
+  
+Cliquez sur le bouton « Menu »
 
-  Click on the menu button
-* A menu appears.
+* Un menu apparaît.
 
   ![Download warnig message with menu](/assets/images/docs/en/windows-download/03-keep.png)
 
-  Click on `Keep`
-* It will give you an other warning.
-
+Cliquez sur  `Keep` (Conserver)
+* Un autre avertissement s'affichera.
+  
   ![An other warning](/assets/images/docs/en/windows-download/04-show-more.png)
 
-  Click on `Show more`
-* Now you have three more options.
+Cliquez sur « Afficher plus »
+* Trois options supplémentaires s'offrent à vous.
 
-  If you want to help us out and make the download procedure easier for the next users, click on `Report this app as safe`.
+Pour nous aider et faciliter le téléchargement des prochains utilisateurs, cliquez sur `Report this app as safe` (Signaler cette application comme sûre).
 
-  Chose `Keep anyway` to finally download the file.
+Choisissez `Keep anyway` pour télécharger le fichier.
 
   ![Keep anyway option finally shows up](/assets/images/docs/en/windows-download/05-keep_anyway.png)
 
