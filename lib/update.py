@@ -95,6 +95,15 @@ def _update_to(document, version, element):
 
 
 def _update_to_three(document, element):
+    if element.get_param('stroke_method', None) == 'zigzag_stitch':
+        # pull_compensation_mm shares the same attribute with fills and satins.
+        # However the fill and satin param is a sided property, while the stroke property is a simple float.
+        # An element can additionally (not recommended) carry both, a fill and a stroke which may lead to
+        # confusions with this attribute.
+        # So let's establish a specified pull compensation attribute for strokes (in fact this is zigzag only).
+        pull_comp_as_string = element.get_param('pull_compensation_mm', None)
+        if pull_comp_as_string is not None:
+            element.set_param('stroke_pull_compensation_mm', pull_comp_as_string)
     if element.get_boolean_param('satin_column', False):
         element.set_param('start_at_nearest_point', False)
         element.set_param('end_at_nearest_point', False)

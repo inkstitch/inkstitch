@@ -195,7 +195,7 @@ class Stroke(EmbroideryElement):
         return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
 
     @property
-    @param('pull_compensation_mm',
+    @param('stroke_pull_compensation_mm',
            _('Pull compensation'),
            tooltip=_('Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. '
                      'This widens the zigzag line width.'),
@@ -206,7 +206,7 @@ class Stroke(EmbroideryElement):
            sort_index=6)
     @cache
     def pull_compensation(self):
-        return self.get_float_param("pull_compensation_mm", 0)
+        return self.get_float_param("stroke_pull_compensation_mm", 0)
 
     @property
     @param('line_count',
