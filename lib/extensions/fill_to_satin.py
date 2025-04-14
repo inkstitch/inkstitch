@@ -281,7 +281,9 @@ class FillElementToSatin:
                                     continue
                                 rung1 = rung_list[0]
                                 rung2 = rung_list[1]
-                                segment = self._get_segment(rung1, rung2, intersection_points, line_section_multi)
+                                segment = self._get_bridged_segment(rung1, rung2, intersection_points, line_section_multi)
+                                if not segment:
+                                    continue
                                 satin_segments.append(segment)
                                 rung_segments[rung_list[0]].append(segment_index)
                                 rung_segments[rung_list[1]].append(segment_index)
@@ -295,13 +297,16 @@ class FillElementToSatin:
                 pass
         return rung_segments, satin_segments
 
-    def _get_segment(self, rung1, rung2, intersection_points, line_section_multi):
+    def _get_bridged_segment(self, rung1, rung2, intersection_points, line_section_multi):
         rung_sections1 = self.rung_sections[rung1]
         rung_sections2 = self.rung_sections[rung2]
         points1 = self._get_rung_points(rung1, intersection_points)
         points2 = self._get_rung_points(rung2, intersection_points)
 
         connected_section = list(set(rung_sections1) & set(rung_sections2))
+        if len(connected_section) > 1:
+            # this is an unnecessarily bridged section, we can savely skip it
+            return
         if len(connected_section) == 1:
             # do not bridge a segment side if there is an actual section we could use
             segment1 = self.line_sections[connected_section[0]]
