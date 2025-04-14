@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-13 02:59+0000\n"
-"PO-Revision-Date: 2025-04-13 02:59\n"
+"POT-Creation-Date: 2025-04-14 01:44+0000\n"
+"PO-Revision-Date: 2025-04-14 01:44\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-13 02:59+0000\n"
+"POT-Creation-Date: 2025-04-14 01:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3180,7 +3180,7 @@ msgstr "Pointeur invalide"
 msgid "Description"
 msgstr "Description"
 
-#: lib/extensions/troubleshoot.py:126 lib/extensions/troubleshoot.py:175
+#: lib/extensions/troubleshoot.py:127 lib/extensions/troubleshoot.py:176
 #: inx/inkstitch_cleanup.inx:36 inx/inkstitch_element_info.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:155
 #: inx/inkstitch_select_elements.inx:91 inx/inkstitch_troubleshoot.inx:26
@@ -3188,43 +3188,43 @@ msgstr "Description"
 msgid "Troubleshoot"
 msgstr "Résolution de problèmes"
 
-#: lib/extensions/troubleshoot.py:135 lib/extensions/troubleshoot.py:182
+#: lib/extensions/troubleshoot.py:136 lib/extensions/troubleshoot.py:183
 msgid "Errors"
 msgstr "Erreurs"
 
-#: lib/extensions/troubleshoot.py:141 lib/extensions/troubleshoot.py:186
+#: lib/extensions/troubleshoot.py:142 lib/extensions/troubleshoot.py:187
 msgid "Warnings"
 msgstr "Avertissements"
 
-#: lib/extensions/troubleshoot.py:147
+#: lib/extensions/troubleshoot.py:148
 msgid "Type Warnings"
 msgstr "Avertissements sur le type"
 
-#: lib/extensions/troubleshoot.py:165
+#: lib/extensions/troubleshoot.py:166
 msgid "Problem descriptions"
 msgstr "Descriptions des problèmes"
 
-#: lib/extensions/troubleshoot.py:183
+#: lib/extensions/troubleshoot.py:184
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr "Problèmes qui empêcheront la broderie de la forme."
 
-#: lib/extensions/troubleshoot.py:187
+#: lib/extensions/troubleshoot.py:188
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr "Ce sont des problèmes qui n'empêcheront pas la forme d'être brodée. Vous devriez envisager de corriger l'avertissement, mais si vous ne le faites pas, Ink/Stitch fera de son mieux pour traiter l'objet."
 
-#: lib/extensions/troubleshoot.py:192
+#: lib/extensions/troubleshoot.py:193
 msgid "Object Type Warnings"
 msgstr "Avertissements sur les types d'objets"
 
-#: lib/extensions/troubleshoot.py:193
+#: lib/extensions/troubleshoot.py:194
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr "Ces objets peuvent ne pas fonctionner correctement avec Ink/Stitch. Suivez les instructions pour corriger le comportement indésirable."
 
-#: lib/extensions/troubleshoot.py:206
+#: lib/extensions/troubleshoot.py:207
 msgid "Possible solutions"
 msgstr "Solutions possibles"
 
-#: lib/extensions/troubleshoot.py:211
+#: lib/extensions/troubleshoot.py:212
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Il est possible qu'un objet contienne plus d'une erreur, même s'il n'y a qu'un conseil par objet. Relancer cette fonction quand il y a plus d'erreurs. Enlever les conseils en supprimant le calque \"Résolution de problèmes\" dans le dialogue objets (Objet -> Objets...)."
 
@@ -3944,12 +3944,12 @@ msgstr "STOP"
 msgid "COLOR CHANGE"
 msgstr "CHANGEMENT COULEUR"
 
-#: lib/gui/simulator/drawing_panel.py:290
+#: lib/gui/simulator/drawing_panel.py:299
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr "Dimensions: {:.2f} x {:.2f}"
 
-#: lib/gui/simulator/drawing_panel.py:432
+#: lib/gui/simulator/drawing_panel.py:441
 #, python-format
 msgid "Command: %s"
 msgstr "Commande : %s"
@@ -7210,7 +7210,7 @@ msgstr "Laisser vide pour utiliser la valeur par défaut. Utiliser \"aucun\" pou
 
 #: inx/inkstitch_output_GCODE.inx:33
 msgid "Leave empty to ignore jumps. Use '%X' for x-coordinate and '%Y' for y-coordinate."
-msgstr ""
+msgstr "Laisser vide pour ignorer les sauts. Utilisez '%X' pour les coordonnées en x et '%Y' pour les coordonnées en y."
 
 #: inx/inkstitch_output_GCODE.inx:35
 msgid "Leave empty to use default value. Use 'none' to remove."
@@ -7334,15 +7334,15 @@ msgstr "Enregistrez le dessin au format PES à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_PLT.inx:3
 msgid "PLT file output"
-msgstr ""
+msgstr "Sortie en fichier PLT"
 
 #: inx/inkstitch_output_PLT.inx:8
 msgid "Ink/Stitch: Plt - HPGL [QUILTING] (.plt)"
-msgstr ""
+msgstr "Ink/Stitch: Plt - HPGL [QUILTING] (.plt)"
 
 #: inx/inkstitch_output_PLT.inx:9
 msgid "Save design in PLT format using Ink/Stitch"
-msgstr ""
+msgstr "Enregistrez le dessin au format PLT à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_PMV.inx:3
 msgid "PMV file output"
@@ -7358,15 +7358,15 @@ msgstr "Enregistrez le dessin au format PMV à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_QCC.inx:3
 msgid "QCC file output"
-msgstr ""
+msgstr "Sortie en fichier QCC"
 
 #: inx/inkstitch_output_QCC.inx:8
 msgid "Ink/Stitch: Qcc - QuiltEZ [QUILTING] (.qcc)"
-msgstr ""
+msgstr "Ink/Stitch: Qcc - QuiltEZ [QUILTING] (.qcc)"
 
 #: inx/inkstitch_output_QCC.inx:9
 msgid "Save design in QCC format using Ink/Stitch"
-msgstr ""
+msgstr "Enregistrez le dessin au format QCC à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
@@ -7382,11 +7382,11 @@ msgstr "Enregistrez le dessin au format SVG à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_TBF.inx:3
 msgid "TBF file output"
-msgstr ""
+msgstr "Sortie en fichier TBF"
 
 #: inx/inkstitch_output_TBF.inx:9
 msgid "Save design in TBF format using Ink/Stitch"
-msgstr ""
+msgstr "Enregistrez le dessin au format TBF à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_TXT.inx:3
 msgid "TXT file output"

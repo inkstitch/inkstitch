@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-13 02:59+0000\n"
-"PO-Revision-Date: 2025-04-13 02:59\n"
+"POT-Creation-Date: 2025-04-14 01:44+0000\n"
+"PO-Revision-Date: 2025-04-14 01:44\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-13 02:59+0000\n"
+"POT-Creation-Date: 2025-04-14 01:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3168,7 +3168,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:126 lib/extensions/troubleshoot.py:175
+#: lib/extensions/troubleshoot.py:127 lib/extensions/troubleshoot.py:176
 #: inx/inkstitch_cleanup.inx:36 inx/inkstitch_element_info.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:155
 #: inx/inkstitch_select_elements.inx:91 inx/inkstitch_troubleshoot.inx:26
@@ -3176,43 +3176,43 @@ msgstr ""
 msgid "Troubleshoot"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:135 lib/extensions/troubleshoot.py:182
+#: lib/extensions/troubleshoot.py:136 lib/extensions/troubleshoot.py:183
 msgid "Errors"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:141 lib/extensions/troubleshoot.py:186
+#: lib/extensions/troubleshoot.py:142 lib/extensions/troubleshoot.py:187
 msgid "Warnings"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:147
+#: lib/extensions/troubleshoot.py:148
 msgid "Type Warnings"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:165
+#: lib/extensions/troubleshoot.py:166
 msgid "Problem descriptions"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:183
+#: lib/extensions/troubleshoot.py:184
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:187
+#: lib/extensions/troubleshoot.py:188
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:192
+#: lib/extensions/troubleshoot.py:193
 msgid "Object Type Warnings"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:193
+#: lib/extensions/troubleshoot.py:194
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:206
+#: lib/extensions/troubleshoot.py:207
 msgid "Possible solutions"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:211
+#: lib/extensions/troubleshoot.py:212
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr ""
 
@@ -3926,12 +3926,12 @@ msgstr ""
 msgid "COLOR CHANGE"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:290
+#: lib/gui/simulator/drawing_panel.py:299
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:432
+#: lib/gui/simulator/drawing_panel.py:441
 #, python-format
 msgid "Command: %s"
 msgstr ""

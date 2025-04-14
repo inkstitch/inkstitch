@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-13 02:59+0000\n"
-"PO-Revision-Date: 2025-04-13 02:59\n"
+"POT-Creation-Date: 2025-04-14 01:44+0000\n"
+"PO-Revision-Date: 2025-04-14 01:44\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-13 02:59+0000\n"
+"POT-Creation-Date: 2025-04-14 01:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3168,7 +3168,7 @@ msgstr "Неверный Указатель"
 msgid "Description"
 msgstr "Описание"
 
-#: lib/extensions/troubleshoot.py:126 lib/extensions/troubleshoot.py:175
+#: lib/extensions/troubleshoot.py:127 lib/extensions/troubleshoot.py:176
 #: inx/inkstitch_cleanup.inx:36 inx/inkstitch_element_info.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:155
 #: inx/inkstitch_select_elements.inx:91 inx/inkstitch_troubleshoot.inx:26
@@ -3176,43 +3176,43 @@ msgstr "Описание"
 msgid "Troubleshoot"
 msgstr "Решение проблем"
 
-#: lib/extensions/troubleshoot.py:135 lib/extensions/troubleshoot.py:182
+#: lib/extensions/troubleshoot.py:136 lib/extensions/troubleshoot.py:183
 msgid "Errors"
 msgstr "Ошибки"
 
-#: lib/extensions/troubleshoot.py:141 lib/extensions/troubleshoot.py:186
+#: lib/extensions/troubleshoot.py:142 lib/extensions/troubleshoot.py:187
 msgid "Warnings"
 msgstr "Предупреждения"
 
-#: lib/extensions/troubleshoot.py:147
+#: lib/extensions/troubleshoot.py:148
 msgid "Type Warnings"
 msgstr "Предупреждения о типе"
 
-#: lib/extensions/troubleshoot.py:165
+#: lib/extensions/troubleshoot.py:166
 msgid "Problem descriptions"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:183
+#: lib/extensions/troubleshoot.py:184
 msgid "Problems that will prevent the shape from being embroidered."
 msgstr "Проблемы которые не позволяют фигуре быть вышитой."
 
-#: lib/extensions/troubleshoot.py:187
+#: lib/extensions/troubleshoot.py:188
 msgid "These are problems that won't prevent the shape from being embroidered. You should consider to fix the warning, but if you don't, Ink/Stitch will do its best to process the object."
 msgstr "Эти проблемы не предотвратят вышивку фигуры. Вы можете исправить эти предупреждения, но если вы этого не сделаете - Ink/Stitch постарается обработать объект максимально лучшим образом."
 
-#: lib/extensions/troubleshoot.py:192
+#: lib/extensions/troubleshoot.py:193
 msgid "Object Type Warnings"
 msgstr "Предупреждения о типе объекта"
 
-#: lib/extensions/troubleshoot.py:193
+#: lib/extensions/troubleshoot.py:194
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
 msgstr "Эти объекты могут некоректно работать в Ink/Stitch. Следуйте инструкциям, чтобы исправить возможные проблемы."
 
-#: lib/extensions/troubleshoot.py:206
+#: lib/extensions/troubleshoot.py:207
 msgid "Possible solutions"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:211
+#: lib/extensions/troubleshoot.py:212
 msgid "It is possible, that one object contains more than one error, yet there will be only one pointer per object.  Run this function again, when further errors occur.  Remove pointers by deleting the layer named \"Troubleshoot\" through the objects panel (Object -> Objects...)."
 msgstr "Возможно, что один объект содержит более одной ошибки, но на каждый объект устанавливается только один указатель. Запустите эту функцию снова, когда будут возникать новые ошибки. Удалите указатели путём удаления слоя с именем \"Решение проблем\" через панель объектов  (Объект -> Объекты...)."
 
@@ -3926,12 +3926,12 @@ msgstr "СТОП"
 msgid "COLOR CHANGE"
 msgstr "СМЕНА ЦВЕТА"
 
-#: lib/gui/simulator/drawing_panel.py:290
+#: lib/gui/simulator/drawing_panel.py:299
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:432
+#: lib/gui/simulator/drawing_panel.py:441
 #, python-format
 msgid "Command: %s"
 msgstr ""
