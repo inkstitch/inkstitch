@@ -2,7 +2,7 @@
 title: "Installer Ink/Stitch pour linux"
 permalink: /fr/docs/install-linux/
 excerpt: "Comment installer rapidement Ink/Stitch."
-last_modified_at: 2025-01-04
+last_modified_at: 2025-04-14
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -85,7 +85,7 @@ $ tar -xvf ~/Downloads/inkstitch-{{ tag_name }}-linux.tar.xz</code></pre></div><
 
 ### NixOS
 
-nixOS users can install Ink/Stitch directly via the nix-shell <https://search.nixos.org/packages?channel=unstable&show=inkscape-extensions.inkstitch>
+Les utilisateurs de nixOS peuvent installer Ink/Stitch directement via le shell nix <https://search.nixos.org/packages?channel=unstable&show=inkscape-extensions.inkstitch>
 
 ### Arch Linux
 
@@ -161,7 +161,7 @@ Certains utilisateurs ont signaler des problèmes dus à un mauvais propriétair
 
 Cette erreur a été signalée par des utilisateurs qui ont installé Inkscape via snap. Snap est connu pour causer des problèmes d'installation d'Ink/Stitch dans Inkscape. Merci d'essayer une autre méthode d'installation. N'importe quelle méthode décrite ici [https://inkscape.org/](https://inkscape.org/releases/latest/) convient. 
 
-### Some dialogues Ink/Stitch disparaissent après quelques secondes or don't show up at all
+### Certains dialogues Ink/Stitch disparaissent après quelques secondes ou n'apparaissent paas
 
 #### Use X11
 
@@ -169,13 +169,11 @@ Ce problème peut être causé par wayland. Démarrez Inkscape avec la commande 
 
 Cette solution de contournement doit être utilisé jusqu'à ce que nous ayons déployées toutes les applications Ink/Stitch dans l'environnement electron.
 
-#### Extend timeout for mutter
+#### Extension du délai  d'expiration pour mutter
 
-In versions of mutter ≥ 3.35.92, you can set the timeout used to check if a
-window is still alive. This is also useful for X-forwarding over ssh with
-high latency.
+Dans les  versions de mutter ≥ 3.35.92, vous pouvez définir le délai d'expiration utilisé pour vérifier si une fenêtre est toujours active. Ceci est également utile pour le  X-forwarding via SSH avec une latence élevée.
 
-For example, you can set the timeout to 60 s (60000 ms) using:
+Par exemple, vous pouvez définir le délai d'attente à 60 s (60 000 ms) en utilisant :
 
 ```gsettings set org.gnome.mutter check-alive-timeout 60000```
 
