@@ -48,10 +48,9 @@ Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 
 ## Dimensions
 
-A une échelle de  100% ces fontes ont une hauteur approximative de  {{ font.size }} mm. 
+A une échelle de  100% ces fontes ont une hauteur approximative de  {{ font1.size }} mm. 
 
-Elles peuvet être redimensionnées  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
-à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
+Elles peuvent être redimensionnées de {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm) à {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
 
 
 ## Dans la vraie vie
