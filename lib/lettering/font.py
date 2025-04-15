@@ -519,12 +519,14 @@ class Font(object):
             for value in elements.values():
                 self._add_trim_to_element(Stroke(value), use_trim_symbols)
         else:
+            nodes = list(group.iterdescendants(EMBROIDERABLE_TAGS))[::-1]
             # find the last path that does not carry a marker or belongs to a visual command and add a trim there
-            for path_child in group.iterdescendants(EMBROIDERABLE_TAGS):
-                if not has_marker(path_child) and not path_child.get_id().startswith('command_connector'):
-                    path = path_child
-                element = Stroke(path)
-            self._add_trim_to_element(element, use_trim_symbols)
+            for path_child in nodes:
+                if has_marker(path_child) or path_child.get_id().startswith('command_connector'):
+                    continue
+                element = Stroke(path_child)
+                self._add_trim_to_element(element, use_trim_symbols)
+                break
 
     def _add_trim_to_element(self, element, use_trim_symbols):
         if element.shape:
