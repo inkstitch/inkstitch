@@ -164,7 +164,6 @@ class FillElementToSatin:
         self.rung_sections = defaultdict(list)  # rung_index: section indices
         self.section_rungs = defaultdict(list)  # section index: rung indices
         self.bridged_rungs = defaultdict(list)  # bridge index: rung indices
-        self.rung_bridges = defaultdict(list)  # rung index: bridge indices
 
     def convert_to_satin(self):
         intersection_points, bridges = self._validate_rungs()
@@ -455,11 +454,20 @@ class FillElementToSatin:
                 if section.distance(rung) < 0.01:
                     self.section_rungs[i].append(j)
                     self.rung_sections[j].append(i)
+
+        bridged_rungs = defaultdict(list)
         for i, bridge in enumerate(bridges):
             for j, rung in enumerate(self.rungs):
                 if bridge.intersects(rung):
-                    self.bridged_rungs[i].append(j)
-                    self.rung_bridges[j].append(i)
+                    bridged_rungs[i].append(j)
+
+        # for the case that they - for whatever reason -
+        # drew a bridge over the same rungs twice, clean up duplicated bridges
+        seen_bridged_rungs = []
+        for bridge, rungs in bridged_rungs.items():
+            if rungs not in seen_bridged_rungs:
+                self.bridged_rungs[bridge] = rungs
+            seen_bridged_rungs.append(rungs)
 
     def _validate_rungs(self):
         ''' Returns only valid rungs and bridge section markers'''
