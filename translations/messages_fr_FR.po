@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-14 01:44+0000\n"
-"PO-Revision-Date: 2025-04-14 01:44\n"
+"PO-Revision-Date: 2025-04-15 01:44\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -5134,17 +5134,17 @@ msgstr "Format de broderie Husqvarna"
 #. description for pyembroidery file format: iqp
 #: pyembroidery-format-descriptions.py:94
 msgid "Iqp - Intelliquilter Format"
-msgstr ""
+msgstr "Iqp - Format Intelliquilter"
 
 #. description for pyembroidery file format: plt
 #: pyembroidery-format-descriptions.py:96
 msgid "Plt - HPGL"
-msgstr ""
+msgstr "Plt - HPGL"
 
 #. description for pyembroidery file format: qcc
 #: pyembroidery-format-descriptions.py:98
 msgid "Qcc - QuiltEZ"
-msgstr ""
+msgstr "Qcc - QuiltEZ"
 
 #. description for pyembroidery file format: edr
 #: pyembroidery-format-descriptions.py:100
@@ -6094,15 +6094,15 @@ msgstr "convertir un fichier INF en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_IQP.inx:3
 msgid "IQP file input"
-msgstr ""
+msgstr "Importer un fichier IQP"
 
 #: inx/inkstitch_input_IQP.inx:8
 msgid "Ink/Stitch: Iqp - Intelliquilter Format (.iqp)"
-msgstr ""
+msgstr "Ink/Stitch: Iqp - Format Intelliquilter (.iqp)"
 
 #: inx/inkstitch_input_IQP.inx:9
 msgid "convert IQP file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier IQP en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_JEF.inx:3
 msgid "JEF file input"
@@ -6286,15 +6286,15 @@ msgstr "convertir un fichier PHC en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_PLT.inx:3
 msgid "PLT file input"
-msgstr ""
+msgstr "Importer un fichier PLT"
 
 #: inx/inkstitch_input_PLT.inx:8
 msgid "Ink/Stitch: Plt - HPGL (.plt)"
-msgstr ""
+msgstr "Ink/Stitch: Plt - HPGL (.plt)"
 
 #: inx/inkstitch_input_PLT.inx:9
 msgid "convert PLT file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier PLT en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_PMV.inx:3
 msgid "PMV file input"
@@ -6310,15 +6310,15 @@ msgstr "convertir un fichier PMV en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_QCC.inx:3
 msgid "QCC file input"
-msgstr ""
+msgstr "Importer un fichier QCC"
 
 #: inx/inkstitch_input_QCC.inx:8
 msgid "Ink/Stitch: Qcc - QuiltEZ (.qcc)"
-msgstr ""
+msgstr "Ink/Stitch: Qcc - QuiltEZ (.qcc)"
 
 #: inx/inkstitch_input_QCC.inx:9
 msgid "convert QCC file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "convertir un fichier QCC en chemins de points manuels Ink/Stitch"
 
 #: inx/inkstitch_input_SEW.inx:3
 msgid "SEW file input"
@@ -8192,7 +8192,7 @@ msgstr ".Uo1 : Format de broderie Barudan"
 
 #: inx/inkstitch_zip.inx:29
 msgid ".TBF: Tajima Embroidery Format"
-msgstr ""
+msgstr ".TBF : Format de broderie Tajima"
 
 #: inx/inkstitch_zip.inx:30
 msgid ".PMV: Brother Stitch Format [STITCH]"
@@ -8204,11 +8204,11 @@ msgstr ".GCODE : format gcode, fichier texte"
 
 #: inx/inkstitch_zip.inx:37
 msgid ".PLT: Plt - HPGL [QUILTING]"
-msgstr ""
+msgstr ".PLT: Plt - HPGL [QUILTING]"
 
 #: inx/inkstitch_zip.inx:38
 msgid ".QCC: Qcc - QuiltEZ [QUILTING]"
-msgstr ""
+msgstr ".QCC: Qcc - QuiltEZ [QUILTING]"
 
 #: inx/inkstitch_zip.inx:39
 msgid ".EDR: Edr Color Format [COLOR]"
