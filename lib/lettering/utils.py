@@ -21,10 +21,8 @@ def get_font_list():
             continue
 
         for font_dir in font_dirs:
-            if not os.path.isdir(os.path.join(font_path, font_dir)) or font_dir.startswith('.'):
-                continue
-            font = Font(os.path.join(font_path, font_dir))
-            if font.marked_custom_font_name == "" or font.marked_custom_font_id == "":
+            font = _get_font_from_path(font_path, font_dir)
+            if not font or font.marked_custom_font_name == "" or font.marked_custom_font_id == "":
                 continue
             fonts.append(font)
     return fonts
@@ -48,10 +46,8 @@ def get_font_by_id(font_id):
         except OSError:
             continue
         for font_dir in font_dirs:
-            if not os.path.isdir(os.path.join(font_path, font_dir)) or font_dir.startswith('.'):
-                continue
-            font = Font(os.path.join(font_path, font_dir))
-            if font.id == font_id:
+            font = _get_font_from_path(font_path, font_dir)
+            if font and font.id == font_id:
                 return font
     return None
 
@@ -64,7 +60,13 @@ def get_font_by_name(font_name):
         except OSError:
             continue
         for font_dir in font_dirs:
-            font = Font(os.path.join(font_path, font_dir))
-            if font.name == font_name:
+            font = _get_font_from_path(font_path, font_dir)
+            if font and font.name == font_name:
                 return font
     return None
+
+
+def _get_font_from_path(font_path, font_dir):
+    if not os.path.isdir(os.path.join(font_path, font_dir)) or font_dir.startswith('.'):
+        return
+    return Font(os.path.join(font_path, font_dir))
