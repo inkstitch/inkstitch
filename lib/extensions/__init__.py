@@ -72,6 +72,7 @@ from .stroke_to_satin import StrokeToSatin
 from .tartan import Tartan
 from .test_swatches import TestSwatches
 from .thread_list import ThreadList
+from .transform_elements import TransformElements
 from .troubleshoot import Troubleshoot
 from .unlink_clone import UnlinkClone
 from .update_svg import UpdateSvg
@@ -148,6 +149,7 @@ extensions = [
     Tartan,
     TestSwatches,
     ThreadList,
+    TransformElements,
     Troubleshoot,
     UnlinkClone,
     UpdateSvg,
