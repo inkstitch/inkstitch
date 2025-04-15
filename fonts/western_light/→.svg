@@ -22,9 +22,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.9168201"
-     inkscape:cx="106.94796"
-     inkscape:cy="145.55356"
-     inkscape:current-layer="g265"
+     inkscape:cx="107.20881"
+     inkscape:cy="145.55357"
+     inkscape:current-layer="g307"
      inkscape:document-units="mm"
      showgrid="false"
      showguides="true">
@@ -3323,7 +3323,6 @@ Copyright (c) 2011 by vernon adams (vern@newtypography.co.uk), with Reserved Fon
        inkstitch:color_sort_index="2"
        inkstitch:running_stitch_length_mm="3"
        inkstitch:bean_stitch_repeats="1"
-       inkstitch:trim_after="True"
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3" />
   </g>

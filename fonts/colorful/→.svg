@@ -6,7 +6,7 @@
    width="39.6875mm"
    height="39.6875mm"
    viewBox="0 0 150 150"
-   inkscape:version="1.4-beta (62f545ba, 2024-04-22)"
+   inkscape:version="1.4-rc1 (61ec3f24, 2024-09-26)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -22,9 +22,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="4.5003033"
-     inkscape:cx="49.330008"
-     inkscape:cy="38.997371"
-     inkscape:current-layer="g3954"
+     inkscape:cx="40.552822"
+     inkscape:cy="70.439697"
+     inkscape:current-layer="g3938"
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:window-width="1232"
@@ -71,7 +71,7 @@ Copyright (c) 2011 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astig
 Font Name &quot;Spicy Rice&quot;
 <inkstitch:min_stitch_len_mm>0.5</inkstitch:min_stitch_len_mm>
 <inkstitch:collapse_len_mm>2.0</inkstitch:collapse_len_mm>
-<inkstitch:inkstitch_svg_version>2</inkstitch:inkstitch_svg_version>
+<inkstitch:inkstitch_svg_version>3</inkstitch:inkstitch_svg_version>
 </metadata>
   <defs
      id="defs3892">
@@ -19997,7 +19997,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;display:inline;fill:none;stroke:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="M 51.783458,95.500887 C 52.123063,91.29061 49.605711,83.662282 44.835937,72.314453 l -7.21875,0.894531 c -0.784562,5.816846 -2.671602,11.394951 -3.987183,17.095183 -0.861071,4.236347 -0.452267,9.202525 2.727888,12.425533 2.299402,2.42982 6.085323,3.63411 9.231521,2.18434 3.746893,-1.54017 5.785184,-5.555854 6.194045,-9.413153 m -6.01935,-2.126125 c -0.683365,-4.115688 -2.943212,-7.423453 -3.359777,-11.575494 -0.714223,4.367334 -2.802102,6.817486 -2.583476,11.275291 0.08845,1.163026 1.604344,4.777427 2.94548,4.925203 1.087283,-0.896583 2.889709,-3.260519 2.997773,-4.625 M 41.813164,87.223597 V 68.526654 m -0.22663,23.796109 -11.898055,2.492926 m 12.238,0 0.906518,13.371151"
@@ -20013,9 +20015,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -20053,7 +20056,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;opacity:0.981;fill:none;stroke:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="m 48.65896,133.75893 c 3.045821,-0.8544 5.341203,-3.6047 5.779186,-6.71671 0.681841,-4.91558 -0.950984,-9.82959 -3.139019,-14.17301 -1.934316,-3.79587 -4.484533,-7.23564 -7.189752,-10.51179 -2.16276,0.4082 -4.325521,0.81641 -6.488281,1.22461 -1.781997,5.24456 -2.110358,10.86424 -1.880176,16.36092 0.267442,4.16444 1.073797,8.6999 4.196674,11.73429 2.25459,2.1492 5.743774,2.9678 8.721368,2.08169 m -1.665534,-4.72684 c 0.903002,-0.0408 4.90567,-11.81079 -5.444202,-19.63143 -3.11137,12.95485 4.639873,19.74766 5.444202,19.63143 m -2.5053,-10.18099 c -1.70646,-6.53742 -3.41292,-13.07485 -5.11938,-19.612268"
@@ -20071,14 +20076,16 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;opacity:0.981;fill:none;stroke:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="m 39.634913,89.915527 3.460784,1.533694 c 4.539881,-3.553288 8.764217,-7.970213 11.492188,-13.509766 l 0.02148,-0.04492 c 1.383988,-2.903621 2.305813,-6.957505 0.119141,-10.726562 l -0.01563,-0.02734 c -1.220155,-2.062754 -3.1284,-3.657476 -4.922093,-3.920658 -1.793692,-0.263181 -2.654429,-0.216149 -3.540783,-0.02857 -3.414033,0.600264 -5.23787,3.212223 -6.205078,5.154297 -2.031056,3.932292 -2.678494,8.102511 -2.996094,11.90625 v 0.01953 c -0.176098,2.250298 -0.294103,4.605831 -0.15625,7.042969 l 0.0039,0.06055 c 0.03322,0.45685 0.06638,0.91419 0.09961,1.371094 l 2.638825,1.169431 m 3.139307,-5.578045 c 1.078334,-1.390222 6.074154,-5.415054 6.8233,-9.143464 0.386381,-1.922967 0.221353,-4.186632 -1.4245,-5.709171 -4.453498,2.855883 -5.44017,10.065091 -5.3988,14.852635 m 4.670166,-13.363389 3.821509,-9.950342"
          id="path4"
          sodipodi:nodetypes="ccccccccccccccccacccc"
          inkstitch:color_sort_index="1"
-         inkstitch:satin_column="true"
+         inkstitch:satin_column="True"
          inkstitch:satin_method="s_stitch"
          inkstitch:zigzag_spacing_mm=".8"
          inkstitch:max_stitch_length_mm="4"
@@ -20087,9 +20094,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -20124,9 +20132,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20164,7 +20173,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;fill:none;stroke:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="m 56.3125,122.36328 c -0.636303,2.51202 -1.693176,5.21418 -3.091797,7.13281 -1.39862,1.91863 -3.710023,3.51758 -6.285156,3.51758 -2.257108,0 -4.526869,-1.12156 -6,-2.7539 -1.625481,-1.80134 -2.443549,-3.99165 -3.134766,-6.70118 -0.69731,-2.73348 -1.171254,-6.09674 -1.5,-10.21875 -0.330136,-4.13942 -0.490234,-9.20549 -0.490234,-15.24609 0,-5.755636 0.173484,-10.685264 0.529297,-14.828125 0.353948,-4.120913 0.857871,-7.556507 1.568359,-10.398438 0.70633,-2.825342 1.532018,-5.089648 3.009766,-6.966796 1.376687,-1.748793 3.604192,-3.167969 6.017578,-3.167969 2.242207,0 4.492498,1.017787 6.050781,2.576172 1.736531,1.736475 2.666788,3.933957 3.423828,6.597656 0.762773,2.683747 1.278794,5.945567 1.634766,9.912109 0.357779,3.986692 0.529297,8.856192 0.529297,14.660157 0,11.516804 -0.134993,17.488804 -2.261719,25.884764 m -7.296875,-1.97656 c -0.63966,2.36014 -0.779599,4.66915 -2.004314,4.96216 -1.317438,0.31519 -1.693921,-2.91293 -1.884358,-3.65943 -0.526769,-2.06496 -0.983254,-5.09229 -1.291016,-8.95117 -0.306371,-3.84146 -0.464843,-8.73818 -0.464843,-14.64453 0,-5.603587 0.17035,-10.343405 0.5,-14.181641 0.07896,-0.91931 1.167739,-13.201797 2.986328,-13.335937 2.301887,-0.169788 3.311741,8.057391 3.658203,11.917969 0.327704,3.651566 0.498047,8.331163 0.498047,13.984375 0,11.201844 -0.758536,19.334834 -1.998047,23.908204 m -1.80335,-46.660547 -0.10197,-18.558605 m -0.509852,67.096492 -0.407881,14.68373 v 0 0 m 0,-17.43693 -9.075362,7.95369 M 48.843801,78.008928 58.530985,71.176914 M 45.580749,77.703017 34.975832,70.871003"
@@ -20180,9 +20191,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -20217,9 +20229,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20253,9 +20266,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20289,9 +20303,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20325,9 +20340,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20361,9 +20377,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20396,9 +20413,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20432,9 +20450,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20469,9 +20488,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20504,9 +20524,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20540,9 +20561,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20579,7 +20601,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;fill:none;stroke:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="m 59.013672,94.640625 c 0.02521,-3.63799 -0.309296,-7.497186 -0.947266,-10.873047 -0.629213,-3.32964 -1.492475,-6.293557 -2.642578,-8.902344 -1.153055,-2.615359 -2.583864,-4.84046 -4.421875,-6.580078 -1.876722,-1.776111 -4.33688,-2.982422 -6.931641,-2.982422 -2.791642,0 -5.282536,1.56737 -7.054687,3.634766 -1.657457,1.933726 -2.998197,4.282403 -4.117188,7.011719 -1.113546,2.715946 -1.971767,5.697585 -2.599609,8.941406 -0.63149,3.262733 -0.951172,6.515524 -0.951172,9.75 0,3.11309 0.277734,6.052685 0.851563,8.812505 0.569161,2.7373 1.383682,5.20131 2.503906,7.38281 1.132889,2.20613 2.606673,4.10832 4.449219,5.54883 1.959404,1.53204 4.430299,2.38086 6.917968,2.38086 2.461464,-1e-5 4.894895,-0.85381 6.867188,-2.3418 1.896746,-1.43086 3.425662,-3.33442 4.59375,-5.55078 1.148776,-2.17972 1.991311,-4.64594 2.587891,-7.38477 0.603747,-2.77168 0.873989,-5.883473 0.894531,-8.847655 m -7.558594,0 c 0,-3.470624 -0.279272,-6.626467 -0.816406,-9.46875 -0.545891,-2.888715 -1.273487,-5.311076 -2.13086,-7.255859 -0.854122,-1.937321 -1.797557,-3.285065 -2.701171,-4.140625 -0.865194,-0.81881 -1.295419,-0.91211 -1.736329,-0.91211 -0.146138,0 -0.444573,-0.02489 -1.316406,0.992188 -0.986526,1.150962 -1.972843,2.793846 -2.861328,4.960937 -0.893909,2.180249 -1.624592,4.682162 -2.171875,7.509766 -0.543612,2.808692 -0.8125,5.575668 -0.8125,8.314453 0,2.664687 0.23702,5.088077 0.691406,7.273435 0.459076,2.20787 1.087784,4.02703 1.828125,5.46875 0.7277,1.41709 1.530445,2.38202 2.38086,3.04688 0.733534,0.57354 1.321988,0.77734 2.261718,0.77734 0.867983,0 1.495854,-0.20077 2.314454,-0.81836 0.894126,-0.6745 1.717528,-1.63415 2.458984,-3.04101 0.760768,-1.44351 1.410034,-3.26241 1.890625,-5.46875 0.473446,-2.173498 0.720703,-4.584278 0.720703,-7.238285 M 44.419404,76.572005 43.739516,61.161191 M 39.773497,91.869504 26.40235,91.416245 m 17.67711,16.204015 -0.113315,15.63745"
@@ -20595,9 +20619,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -20636,7 +20661,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;fill:none;stroke:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="m 54.5274,83.5703 c 2.013206,-4.331593 2.674469,-9.783982 -0.004,-13.988916 -2.266236,-3.58738 -7.083915,-5.650139 -11.137414,-3.98594 -3.857084,1.447819 -5.832459,5.536797 -6.873621,9.266565 -1.518804,5.908871 -1.713688,12.051765 -1.654919,18.124441 -0.02985,1.727412 0.03065,3.452563 0.152394,5.17565 l 6.3906,2.5119 c 5.179966,-5.006706 10.142296,-10.46224 13.127,-17.1037 z m -6.263878,-9.790716 c -0.996674,-2.04907 -4.114946,-2.454565 -4.512273,-0.570786 -5.338976,9.57853 -3.238618,21.565674 -2.046835,19.867351 4.480863,-5.150383 9.609408,-12.96927 6.559108,-19.296565 z M 44.30609,78.951616 32.29472,74.419024 m 11.218166,13.358946 -7.365463,16.44285 m 9.858389,-29.348537 5.43911,-11.218166"
@@ -20651,10 +20678,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          sodipodi:nodetypes="cscsscccccccccccscs"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -20693,7 +20721,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;fill:none;stroke:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="m 59.013702,94.642572 c 0,-8.685103 -1.52379,-16.305599 -4.953155,-22.449213 l -0.04297,-0.07227 C 53.07271,70.513353 51.801369,68.793142 49.962891,67.398437 48.584032,66.352409 46.748127,65.499546 44.710937,65.34375 44.031874,65.29182 43.329213,65.31738 42.615234,65.43945 L 42.3125,65.5039 c -5.06379,1.301773 -7.098109,5.777899 -8.46875,8.347656 l -0.09766,0.199219 c -3.693473,8.01993 -4.986275,16.97865 -4.134766,25.638672 0.510391,5.289473 2.232456,12.321913 7.460972,16.628903 4.654649,3.85899 11.389692,3.07521 15.339843,-1.1875 4.7404,-4.89932 5.978029,-11.44124 6.472657,-16.992184 l 0.128906,-3.496094 m -7.558624,0.01954 c -0.05007,-6.712948 -0.984055,-13.351199 -3.976562,-18.738281 -0.584273,-0.98566 -1.390284,-1.975699 -2.083985,-2.501953 -0.627851,-0.4763 -0.948509,-0.515383 -1.347656,-0.476563 l -3e-6,-2.1e-4 c -1.011032,0.371463 -2.174288,1.952305 -3.472656,4.369141 -3.033051,6.636348 -4.156325,14.225351 -3.44336,21.576172 0.544428,4.297672 1.678821,8.975522 4.763673,11.607652 1.247049,1.03526 3.818354,0.76535 4.990235,-0.50977 l 0.07422,-0.0801 c 2.792869,-2.86584 3.956685,-7.52806 4.394532,-12.427728 0.0676,-0.930478 0.10107,-1.8714 0.101562,-2.81836 m -8.168822,13.071468 -0.226629,14.05103 m 1.133148,-45.665864 -0.22663,-14.84424 M 39.320238,94.1358 26.289036,94.475745"
@@ -20709,9 +20739,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -20750,7 +20781,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;fill:none;stroke:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="m 54.742221,78.150391 c 0.999202,-2.060763 1.554688,-4.269465 1.554688,-6.496094 0,-2.295172 -0.775096,-4.669837 -2.363281,-6.386719 -1.435993,-1.552375 -3.600649,-2.681641 -5.822266,-2.681641 h -3.4e-5 c -2.728218,0 -5.470503,1.643934 -6.923828,3.900391 -1.179745,1.831695 -2.046208,3.912162 -2.644531,6.191406 -0.567458,2.161783 -0.948583,4.345231 -1.138672,6.544922 -0.176421,2.041412 -0.271485,3.638418 -0.271485,4.916016 v 1.873047 c 0.03259,0.765983 0.102093,1.530314 0.158238,2.294922 l 5.992187,2.78125 c 1.213433,-0.882511 2.510682,-1.948338 3.925781,-3.208985 1.509774,-1.345095 2.906926,-2.826076 4.1875,-4.433594 1.318107,-1.654646 2.438273,-3.423306 3.345703,-5.294921 m -4.57564,-2.789159 c 0.567608,-1.170646 0.566164,-4.991769 -0.690655,-5.522607 -1.660301,-0.701254 -4.509096,0.848875 -5.549887,4.813653 -0.40112,1.527998 -1.810097,8.850308 -1.126276,10.499321 1.881812,-1.201563 6.62626,-8.201327 7.36679,-9.790367 m -4.037108,1.50123 -7.659866,17.305624 m 10.042907,-23.320037 5.333537,-9.07836 m -7.546387,11.461429 -8.681182,-4.312221"
@@ -20766,9 +20799,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -20804,9 +20838,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20840,9 +20875,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20876,9 +20912,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20914,9 +20951,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20951,9 +20989,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -20987,9 +21026,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21023,9 +21063,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21058,9 +21099,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21100,7 +21142,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;fill:none;stroke:#000000;stroke-width:1.14259;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="m 59.013672,94.640625 c -0.05782,-8.043633 -1.22527,-16.449079 -5.543923,-23.393833 -2.408395,-3.907981 -7.215634,-7.134514 -11.915735,-5.51744 -5.157808,1.967533 -7.657518,7.464965 -9.443253,12.306589 -3.236467,9.822786 -4.01579,20.852029 -0.370126,30.672359 1.859201,5.04556 6.131421,9.90226 11.863556,10.04742 5.892479,0.31992 10.691551,-4.41056 12.732163,-9.57096 1.954787,-4.57765 2.642901,-9.596653 2.677318,-14.544135 z m -7.558594,0 C 51.373563,88.076804 50.618177,81.1701 47.175786,75.440043 c -0.994773,-2.32599 -4.04841,-3.684387 -5.16021,-0.628613 -3.651552,5.700863 -4.881836,12.644369 -5.104221,19.315339 0.03702,5.303112 0.584945,11.098801 3.962077,15.420341 1.663053,2.44574 5.313524,1.97212 6.798077,-0.40431 3.036187,-4.10746 3.713994,-9.533384 3.783569,-14.502175 z M 44.419404,76.572005 C 44.192775,71.435067 43.966145,66.298129 43.739516,61.161191 M 39.773497,91.869504 C 35.316448,91.718418 30.859399,91.567331 26.40235,91.416245 m 17.67711,16.204015 c -0.03777,5.21248 -0.07554,10.42497 -0.113315,15.63745"
@@ -21115,9 +21159,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_stitch_length_mm=".5"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -21150,9 +21195,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21183,10 +21229,11 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21219,9 +21266,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21256,7 +21304,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;fill:none;stroke:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="M 46.109375,92.826172 C 46.54625,85.491031 47.304164,77.614183 44.847656,68.802734 l -6.988281,-0.738281 c -5.1887,9.908611 -7.0502,20.635837 -9.232422,30.617188 l 3.361328,4.572269 c 3.380674,0.29801 6.737803,0.41381 10.052735,0.45507 l 3.826171,-3.80273 c -0.01406,-2.3357 0.09948,-4.683994 0.242188,-7.080078 m -4.652573,-0.658593 c 0.674309,-4.712872 0.329968,-9.468677 -0.954921,-14.465294 -2.816666,5.073184 -5.240309,13.222128 -6.198698,19.534163 l 5.766469,0.838875 c 0.644533,-1.971395 1.10501,-3.935811 1.38715,-5.907744 M 39.80546,82.392672 41.664081,66.671839"
@@ -21269,9 +21319,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -21303,9 +21354,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21340,7 +21392,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path57328"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -21352,9 +21406,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -21385,9 +21440,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21422,7 +21478,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path16193"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -21436,7 +21494,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path43411"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -21448,9 +21508,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -21487,7 +21548,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path67250"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -21500,9 +21563,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -21537,9 +21601,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21573,9 +21638,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21610,9 +21676,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21647,10 +21714,11 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        sodipodi:nodetypes="ccccccccccccccsccccccccccccccccccsscscccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21684,9 +21752,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21721,9 +21790,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21754,9 +21824,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21788,9 +21859,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21823,9 +21895,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21860,7 +21933,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:reverse_rails="none"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path42013"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -21872,9 +21947,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -21912,7 +21988,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:reverse_rails="none"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path83178"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -21924,9 +22002,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -21960,7 +22039,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:reverse_rails="none"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path87721"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -21972,9 +22053,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22006,9 +22088,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -22039,9 +22122,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -22071,10 +22155,11 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -22106,9 +22191,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -22143,7 +22229,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:reverse_rails="none"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path35340"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22155,9 +22243,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22189,7 +22278,9 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:reverse_rails="none"
        inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path66156"
        style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22201,9 +22292,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -22234,9 +22326,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -22270,7 +22363,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:reverse_rails="none"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path32235"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22283,9 +22378,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22316,9 +22412,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_jump_stitch_length_mm="3"
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -22352,7 +22449,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:reverse_rails="none"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;fill:none;stroke:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="m 47.343258,96.130897 c 1.964006,-2.038693 3.562559,-4.520589 3.993892,-7.334947 0.487972,-2.97904 -1.12377,-6.036124 -3.69362,-7.542054 -3.101582,-1.954845 -7.371667,-1.904385 -10.322412,0.326228 l -0.148459,0.109581 -0.147268,0.113029 c -4.50316,3.007664 -7.208055,8.075354 -8.354421,13.264864 -0.229756,1.010182 -0.408361,2.03184 -0.540111,3.059355 1.36263,1.414712 2.725261,2.829427 4.087891,4.244137 5.486601,-0.50856 11.143384,-2.26325 15.124508,-6.240193 m -4.340826,-3.667808 c 1.297063,-0.876076 2.446141,-3.98756 0.496466,-5.247651 -1.720316,-1.587226 -7.035695,4.107081 -8.996913,8.701136 2.219065,0.473935 6.712916,-2.43705 8.500447,-3.453485 m -0.502364,-3.955181 8.970174,-8.042226"
@@ -22365,9 +22464,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22404,7 +22504,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:reverse_rails="none"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path75897"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22416,9 +22518,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22454,9 +22557,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:min_stitch_length_mm=".5"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -22492,7 +22596,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:reverse_rails="none"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path34526"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22504,9 +22610,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22543,7 +22650,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path2161"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22554,10 +22663,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22594,7 +22704,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;fill:none;stroke:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="m 30.15332,100.25488 2.024414,2.12012 c 5.68589,-0.45132 11.734801,-2.501049 16.035157,-7.15625 l 0.002,0.002 c 0.0022,-0.0024 0.0037,-0.0054 0.0059,-0.0078 6.13e-4,-6.61e-4 0.0013,-0.0013 0.002,-0.002 1.308354,-1.411617 2.314805,-3.146919 2.806641,-5.185546 0.492891,-2.043001 0.395143,-4.545558 -0.949219,-6.726563 l -0.292969,-0.410156 c -1.85511,-2.267264 -4.692162,-3.083137 -7.044922,-2.976563 l -1.35e-4,-1.3e-5 c -2.352759,0.106575 -4.455125,0.914835 -6.220703,2.201172 L 36.5,82.126953 c -5.384548,3.978558 -7.655095,10.321141 -8.371094,16.007813 l 2.024414,2.120114 m 5.241827,-3.755129 8.787433,-4.37864 c 2.069045,-1.030973 -0.640856,-3.287252 -0.500937,-3.867205 0.0918,-0.380502 0.0164,-0.484884 -0.02344,-0.648437 -0.11099,-0.07059 -0.146378,-0.161958 -0.574219,-0.142578 l 1.4e-5,3.5e-5 c -0.634357,0.02873 -1.586416,0.381545 -2.105468,0.757812 -1.674132,1.242624 -5.630479,5.758705 -6.552038,7.956128 m 7.454515,-7.53899 9.299349,-6.58421 m -9.959777,9.448576 5.819191,7.86043 M 41.134344,89.180903 32.581659,80.288826"
@@ -22612,7 +22724,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path35926"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22627,9 +22741,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22665,7 +22780,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path64674"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22677,9 +22794,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22715,7 +22833,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="color:#000000;fill:none;stroke:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
          d="m 58.126148,95.422337 c 0.502554,-2.817185 0.457387,-5.824085 0.330697,-8.517886 -0.267894,-5.69621 -0.288469,-14.801767 -6.552548,-15.802889 -7.501367,5.239519 -12.446422,21.975026 -11.463693,28.207392 1.271122,5.462446 8.408766,8.184566 12.804045,4.500556 2.917637,-1.96855 4.285169,-5.044299 4.881499,-8.387173 m -6.293485,-1.921021 c 1.266252,-2.717941 1.709278,-6.39209 -0.351322,-9.098553 -2.508476,3.126949 -4.738526,9.484653 -3.10919,12.778251 1.153221,-0.199629 2.52942,-1.681159 3.460512,-3.679698 m -1.124776,-5.927873 2.628487,-19.93269"
@@ -22728,9 +22848,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22766,7 +22887,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path42729"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22780,7 +22903,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path33980"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22791,10 +22916,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22830,7 +22956,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path92684"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22844,7 +22972,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path15240"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22855,10 +22985,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22894,7 +23025,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path11128"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22908,7 +23041,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path40797"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22922,7 +23057,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path91686"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22933,10 +23070,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -22973,7 +23111,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path26271"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22988,7 +23128,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path17015"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -22999,10 +23141,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23039,7 +23182,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path18843"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23053,7 +23198,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path79754"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23067,7 +23214,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path47935"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23078,10 +23227,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23116,7 +23266,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path81223"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23130,7 +23282,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path26431"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23141,10 +23295,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23177,10 +23332,11 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:satin_method="s_stitch"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:max_stitch_length_mm="4"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -23215,7 +23371,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path59918"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23230,7 +23388,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path34548"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23241,10 +23401,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23282,7 +23443,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path89923"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23297,7 +23460,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path13142"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23309,10 +23474,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23348,7 +23514,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path60593"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23362,7 +23530,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path76749"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23376,7 +23546,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path44887"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23388,10 +23560,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23427,7 +23600,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path85035"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23438,11 +23613,12 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          sodipodi:nodetypes="ccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23480,7 +23656,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path11806"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23491,11 +23669,12 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          sodipodi:nodetypes="cccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23531,7 +23710,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path534"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23543,10 +23724,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23582,7 +23764,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path20590"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23596,7 +23780,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path64425"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23607,10 +23793,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23646,7 +23833,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path24530"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23657,10 +23846,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23696,7 +23886,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path82469"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23710,7 +23902,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path63544"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23721,10 +23915,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23759,7 +23954,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path305"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23773,7 +23970,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path13623"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23784,10 +23983,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23823,7 +24023,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path75194"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23837,7 +24039,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path19090"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23848,10 +24052,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23886,7 +24091,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path54849"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23900,7 +24107,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path62203"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23914,7 +24123,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path13526"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23925,10 +24136,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -23964,7 +24176,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path49835"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23979,7 +24193,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path14298"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -23991,10 +24207,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24030,7 +24247,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path25679"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24042,10 +24261,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24079,7 +24299,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path77944"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24090,10 +24312,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24129,7 +24352,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path86632"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24140,11 +24365,12 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          sodipodi:nodetypes="cccccccccccccccccccsccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24180,7 +24406,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path90485"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24194,7 +24422,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path70093"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24205,10 +24435,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:satin_method="s_stitch"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:max_stitch_length_mm="4"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24245,7 +24476,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path52647"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24259,7 +24492,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path77273"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24271,9 +24506,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24310,7 +24546,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path29228"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24325,7 +24563,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path81267"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24337,9 +24577,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24374,7 +24615,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path34877"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24389,7 +24632,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path91319"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24402,9 +24647,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24440,7 +24686,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path10333"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24454,7 +24702,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path72940"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24467,9 +24717,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24503,7 +24754,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path94523"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24518,7 +24771,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path49221"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24530,10 +24785,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          sodipodi:nodetypes="ccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24570,7 +24826,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path60184"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24583,9 +24841,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24622,7 +24881,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          sodipodi:nodetypes="ccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path49396"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24637,7 +24898,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path63004"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24650,9 +24913,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24690,7 +24954,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path80830"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24704,7 +24970,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path50034"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24716,9 +24984,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24755,7 +25024,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path40076"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24767,10 +25038,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          sodipodi:nodetypes="ccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24806,7 +25078,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path6767"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24818,10 +25092,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24857,7 +25132,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path97049"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24871,7 +25148,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path29326"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24883,9 +25162,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24921,7 +25201,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path26203"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24936,7 +25218,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path12207"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -24949,9 +25233,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -24988,7 +25273,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path90660"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25000,10 +25287,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -25040,7 +25328,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path85736"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25054,7 +25344,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path68121"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25066,9 +25358,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -25102,9 +25395,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -25138,7 +25432,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path82036"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25151,9 +25447,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -25190,7 +25487,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path54542"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25202,9 +25501,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -25239,7 +25539,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path90187"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25253,7 +25555,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path65977"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25267,7 +25571,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path30011"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25279,10 +25585,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -25317,7 +25624,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path68502"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25331,7 +25640,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path88209"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25343,9 +25654,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -25382,7 +25694,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path84663"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25395,9 +25709,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -25430,10 +25745,11 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -25468,7 +25784,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path48291"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25483,7 +25801,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path93233"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25496,9 +25816,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -25530,9 +25851,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -25567,7 +25889,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path61697"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25579,10 +25903,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -25619,7 +25944,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:trim_after="True"
          sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path74865"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25631,10 +25958,11 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccc"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -25665,9 +25993,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -25701,7 +26030,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path8996"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25713,9 +26044,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -25746,14 +26078,15 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-)"
-     style="display:inline"
+     style="display:none"
      id="g3954">
     <path
        d="m -2.419019,32.507918 c 21.462563,0.573191 41.198913,15.655713 49.134133,35.335755 6.791442,15.952177 7.147224,33.935177 4.335206,50.827527 -2.644123,15.36155 -10.365735,30.46838 -23.667362,39.17776 -8.132727,5.35744 -17.7616045,8.61638 -27.525206,8.84134 C 20.308281,144.82495 28.322371,113.1525 24.48851,83.836689 21.859303,64.346066 13.017181,45.114338 -2.419019,32.507918 Z"
@@ -25778,9 +26111,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -25810,9 +26144,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -25843,9 +26178,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -25876,9 +26212,10 @@ Font Name &quot;Spicy Rice&quot;
        inkstitch:max_stitch_length_mm="4"
        inkstitch:reverse_rails="none"
        inkstitch:min_jump_stitch_length_mm="3"
-       inkstitch:trim_after="True"
        inkstitch:pull_compensation_percent="-30"
-       inkstitch:pull_compensation_mm="0.75" />
+       inkstitch:pull_compensation_mm="0.75"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -25912,7 +26249,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path32772"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25924,9 +26263,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -25962,7 +26302,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path67694"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -25974,9 +26316,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -26012,7 +26355,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path80780"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -26024,9 +26369,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -26062,7 +26408,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path52730"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -26074,9 +26422,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -26112,7 +26461,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path52192"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -26125,9 +26476,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -26163,7 +26515,9 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:min_jump_stitch_length_mm="3"
          inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path30245"
          style="fill:none;stroke:#000000;stroke-width:1px"
@@ -26176,9 +26530,10 @@ Font Name &quot;Spicy Rice&quot;
          inkstitch:max_stitch_length_mm="4"
          inkstitch:reverse_rails="none"
          inkstitch:min_jump_stitch_length_mm="3"
-         inkstitch:trim_after="True"
          inkstitch:pull_compensation_percent="-30"
-         inkstitch:pull_compensation_mm="0.75" />
+         inkstitch:pull_compensation_mm="0.75"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
 </svg>
