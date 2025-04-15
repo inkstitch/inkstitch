@@ -1,7 +1,7 @@
 ---
 title: "Tools: Satin"
 permalink: /docs/satin-tools/
-last_modified_at: 2025-04-12
+last_modified_at: 2025-04-15
 toc: true
 ---
 `Extensions > Ink/Stitch  > Tools: Satin` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
@@ -99,6 +99,9 @@ Keep original paths  | Keep or remove selected paths
 
 Use bridges at intersections to inform Ink/Stitch how to connect the satin columns.
 Unbridged intersections simply leave a gap.
+
+Bridges have to be completely inside the fill element and cannot cross the outline.
+{: .notice--info}
 
 ![Convert to satin with and without bridge](/assets/images/docs/fill_to_satin_bridge.png)
 

@@ -1,7 +1,7 @@
 ---
 title: "Satin Werkzeuge"
 permalink: /de/docs/satin-tools/
-last_modified_at: 2025-04-12
+last_modified_at: 2025-04-15
 toc: true
 ---
 Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinsäulen](/docs/stitches/satin-column/) erleichtern sollen.
@@ -100,6 +100,9 @@ Original behalten                  | Behalte oder verwerfe die ausgewählten Ori
 
 Definiere die Verbindungen zwischen den Satinsäulen mit Hilfe von Brücken.
 Ist eine Kreuzung nicht überbrückt, entsteht hier einfach eine Lücke.
+
+Brücken müssen innerhalb des Füllelements verlaufen und dürfen die Außenlinie nicht überkreuzen.
+{: .notice--info}
 
 ![Convert to satin with and without bridge](/assets/images/docs/fill_to_satin_bridge.png)
 

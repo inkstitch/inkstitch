@@ -104,6 +104,9 @@ Utilisez des ponts aux intersecttions pour expliquer à Ink/Stitch la manière  
 
 Les intersections non reliées laissent simplement un espace vide.
 
+Bridges have to be completely inside the fill element and cannot cross the outline.
+{: .notice--info}
+
 ![Conversion en satin avec  et sans traverse pont](/assets/images/docs/fill_to_satin_bridge.png)
 
 ### Fichier d'exemple {#sample-file}
