@@ -130,6 +130,8 @@ Mit `Batch Lettering` können mehrere Textdateien gleichzeitig erstellt werden.
 * **Schrift entlang Pfad: Textposition:** Die Ausrichtung des Textes entlang des Pfades mit dem Label `batch lettering`
 * **Dateiformate:** eine durch Kommata getrennte Liste von [Dateiformaten](/de/docs/file-formats/#schreiben)
 
+[Beispieldatei herunterladen](/assets/images/docs/batch_lettering_template_example.svg){: title="Download SVG File" download="batch_lettering_template_example.svg" }
+
 ### Verwedung mit der Shell
 
 Hier ein minimales Beispiel für die Anwendung dieser Erweiterung in der Shell

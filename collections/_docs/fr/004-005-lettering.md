@@ -95,6 +95,7 @@ Un aperçu de toutes les polices disponibles se trouve dans la [bibliothèque de
 Le lettrage par lot permet de créer facilement des fichiers de texte multiples
 
 ###  Exemple
+
 ![Un écusson avec 4 noms différents](/assets/images/docs/batch-lettering.png)
 
 * Préparez un fichier de broderie.
@@ -103,7 +104,6 @@ Le lettrage par lot permet de créer facilement des fichiers de texte multiples
 * Allez dans « Fichier > Enregistrer une copie... » et cliquez sur la petite flèche dans le champ de sélection du format de fichier pour ouvrir la liste des formats de fichier disponibles.
 * Choisissez « Ink/Stitch : Lettrage par lots (.zip) »
 * Accédez au dossier de sortie souhaité et cliquez sur « Enregistrer ».
-
 
 ### Options
 
@@ -119,6 +119,7 @@ Le texte sera divisé et placé dans un nouveau fichier à chaque occurrence du 
 * **Lettrage le long du chemin : position du texte :** Position du texte sur le chemin `batch lettering`.
 * **Formats de fichier :** Saisissez une liste de [formats de fichier] (/fr/docs/file-formats/#writing) séparés par des virgules.
 
+[Télécharger le fichier d'exemple](/assets/images/docs/batch_lettering_template_example.svg){: title="Download SVG File" download="batch_lettering_template_example.svg" }
 
 ### Usage en ligne de commande
 

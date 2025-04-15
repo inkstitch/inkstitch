@@ -135,6 +135,8 @@ Batch lettering allows to easily create multiple text files.
 * **Lettering along path: text position:** The text position on the `batch lettering` path
 * **File formats:** Enter a comma separated list of [file formats](/docs/file-formats/#writing)
 
+[Download sample file](/assets/images/docs/batch_lettering_template_example.svg){: title="Download SVG File" download="batch_lettering_template_example.svg" }
+
 ### Command line usage
 
 Here is a minimal example for command line usage of the batch lettering extension

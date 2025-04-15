@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-04-13
+last_modified_at: 2025-04-15
 sidebar:
   nav: pages
 toc: true
@@ -111,12 +111,6 @@ Replaces `Install thread color palettes for Inkscape`.
 
 [Read more](/docs/install-addons/)
 
-### Install Thread Color Palettes for Inkscape
-
-Has been moved to `Install Addons for Inkscape`
-
-[Read more](/docs/install-addons/)
-
 ### Remove duplicated points
 
 `Edit > Remove duplicated points` [#3117](https://github.com/inkstitch/inkstitch/pull/3117)
@@ -139,13 +133,21 @@ Helper method to generate a fill area underneath of all selected elements, optio
 
 ### Set color sort index
 
-`Font management Set color sort index` [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
+`Font management > Set color sort index` [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
 
 A tool for font authors which sets a specified color sort index on selected elements to control element grouping when the color sorting option is enabled in the lettering tool.
 
 ![Color sort index](/assets/images/upcoming/3.2.0/color_sort_index.png)
 
 [Read more](/docs/font-tools/#set-color-index)
+
+### Transform
+
+`Edit > Transform...` [#3657](https://github.com/inkstitch/inkstitch/pull/3657)
+
+Applies transforms to elements (rotate / flip) while also adapting the fill angle.
+
+![Fill element transformed by 45 degrees, fill angle adapted](/lokal/assets/images/docs/transform.png)
 
 ## Extension Updates
 
@@ -162,19 +164,19 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 `Tools: Satin > AutoRoute Satin`
 
-* add option to keep original path elements [#3332](https://github.com/inkstitch/inkstitch/pull/3332)
-* transfer object based min jump length (if present) from satins on auto-generated strokes [#3154](https://github.com/inkstitch/inkstitch/pull/3154)
+* Add option to keep original path elements [#3332](https://github.com/inkstitch/inkstitch/pull/3332)
+* Transfer object based minimum jump length value (if present) from satins on auto-generated centerline strokes [#3154](https://github.com/inkstitch/inkstitch/pull/3154)
 
 [Read more](/docs/satin-tools/#auto-route-satin-columns)
 
 ### Attach commands to selected objects
 
-* We had a lot of complaints that positioning command symbol is rather difficult.
-  So up from now visual commands are directed towards the symbol rather than the touching point of the command connector [#3542](https://github.com/inkstitch/inkstitch/pull/3542).
-  This means, when you position a start symbol, the starting point of the element will be directly at the symbols center (will automatically update older files)
+* We had a lot of complaints that positioning command symbols is rather difficult. Therefore visual commands are now directed towards the symbol center, rather than the touching point of the command connector [#3542](https://github.com/inkstitch/inkstitch/pull/3542).
+
+  This means, when you position a start symbol, the starting point of the element will be directly at the symbols center. Old files will automatically update.
 
   ![Hidden connector command](/assets/images/upcoming/3.2.0/hidden_connector_commands.png)
-* Unified start and stop commands for various stitch types (will automatically update older files)
+* Unified start and stop commands for various stitch types. Old files will automatically updated.
 
 [Read more](/docs/commands/)
 
@@ -188,7 +190,9 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 `Commands > View > Scale Command Symbols`
 
-* Set all commands to unique size at once (reset previous transform) [#3329](https://github.com/inkstitch/inkstitch/pull/3329)
+* Set all commands to a unique size at once (reset previous transform) [#3329](https://github.com/inkstitch/inkstitch/pull/3329)
+
+  Please note that manual transforms on groups with a command may influence the actual size of a symbol.
 
 [Read more](/docs/commands/#scale-command-symbols)
 
@@ -196,7 +200,7 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 `Font Management > Font Sampling`
 
-* Add color sort option [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
+* Add color sort option for multicolor fonts [#3242](https://github.com/inkstitch/inkstitch/pull/3242). The font has to support color sorting.
 
 [Read more](/docs/font-tools/#font-sampling)
 
@@ -213,11 +217,11 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 `Lettering > Lettering`
 
-* Load with last selected font and some other settings [#3498](https://github.com/inkstitch/inkstitch/pull/3498) [#3504](https://github.com/inkstitch/inkstitch/pull/3504)
+* Load with last selected font and remember some other settings [#3498](https://github.com/inkstitch/inkstitch/pull/3498) [#3504](https://github.com/inkstitch/inkstitch/pull/3504)
 * Add support for more languages (right to left) [#3432](https://github.com/inkstitch/inkstitch/pull/3358) [#3466](https://github.com/inkstitch/inkstitch/pull/3466)
 * Lettering simulator: show accurate start and end points [#3358](https://github.com/inkstitch/inkstitch/pull/3358)
 * Uniformed size info (% and mm) [#3346](https://github.com/inkstitch/inkstitch/pull/3346)
-* Add color sort option for multicolor fonts [#3242](https://github.com/inkstitch/inkstitch/pull/3242), [#3381](https://github.com/inkstitch/inkstitch/pull/3381)
+* Add color sort option for multicolor fonts [#3242](https://github.com/inkstitch/inkstitch/pull/3242), [#3381](https://github.com/inkstitch/inkstitch/pull/3381). The font has to support color sorting.
 * Options for text alignment [#3382](https://github.com/inkstitch/inkstitch/pull/3382)
 
 ![Lettering: more options](/assets/images/upcoming/3.2.0/lettering.png)
@@ -247,15 +251,9 @@ Add option for text position along the path (left, center, right, stretch)
 
 [Read more](/docs/stroke-tools/#redwork)
 
-### Select elements
-
-* Fix select redwork top layer [#3230](https://github.com/inkstitch/inkstitch/pull/3230)
-
-[Read more](/docs/edit/#select-embroidery-elements)
-
 ### Simulator
 
-* simulator: add button to toggle crosshair [#3616](https://github.com/inkstitch/inkstitch/pull/3616)
+* Add button to toggle crosshair [#3616](https://github.com/inkstitch/inkstitch/pull/3616)
 * Option to save and reload simulator speed (optionally) [#3420](https://github.com/inkstitch/inkstitch/pull/3420)
 * Save and reload more simulator settings (status for buttons: jump, trim, color change, stop, needle penetration point, page border) [#3323](https://github.com/inkstitch/inkstitch/pull/3323)
 * Show page in simulator [#3120](https://github.com/inkstitch/inkstitch/pull/3120)
@@ -264,7 +262,7 @@ Add option for text position along the path (left, center, right, stretch)
 
 ### Stitch plan preview
 
-* Update realistic filter [#3222](https://github.com/inkstitch/inkstitch/pull/3222)
+* Improve realistic filter [#3222](https://github.com/inkstitch/inkstitch/pull/3222)
 
 [Read more](/docs/visualize/#stitch-plan-preview)
 
@@ -276,23 +274,35 @@ Add option for text position along the path (left, center, right, stretch)
 
 ### Troubleshoot
 
-* Group pointers, so specific error/warning types can be easily toggled on and off [#3486](https://github.com/inkstitch/inkstitch/pull/3486)
+* Group pointers. Specific error/warning types can be easily toggled on and off [#3486](https://github.com/inkstitch/inkstitch/pull/3486)
 * Add background to troubleshoot text [#3357](https://github.com/inkstitch/inkstitch/pull/3357)
 
 [Read more](/docs/troubleshoot/#troubleshoot-objects)
 
 ### Unlink clones
 
-* add option to group / not group unlinked symbol elements [#3624](https://github.com/inkstitch/inkstitch/pull/3624)
+* Add option to group / not group unlinked symbol elements [#3624](https://github.com/inkstitch/inkstitch/pull/3624)
 
 [Read more](/docs/edit/#unlink-clone)
 
 ## Removed extensions
 
+### Convert Line to Satin Column
+
+The name was simplified to `Stroke to Satin`.
+
+This is more in the line with the names of the other conversion methods in Ink/Stitch.
+
 ### Glyphlist update
 
 Glyphlist update has been part of the font management and was replaced by the much more powerful
 [Edit JSON extension](/docs/font-tools/#edit-json)  [#3380](https://github.com/inkstitch/inkstitch/pull/3380)
+
+### Install Thread Color Palettes for Inkscape
+
+Moved to `Install Addons for Inkscape`
+
+[Read more](/docs/install-addons/)
 
 ## Stitch Type Related Updates
 
@@ -317,11 +327,13 @@ Clips are now easy accessable to Ink/Stitch in all forms. They are especially us
 
 ### Clones
 
-* Clones now also clone commands attached to element and its children [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
+* Clones now also clone commands attached to the element and its children [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
+
+[Read more](/docs/stitches/clone/)
 
 ### Contour Fill
 
-* Enable expand option [#3462](https://github.com/inkstitch/inkstitch/pull/3462)
+* Add expand option [#3462](https://github.com/inkstitch/inkstitch/pull/3462)
 
 [Read more](/docs/stitches/contour-fill/)
 
@@ -341,7 +353,7 @@ Clips are now easy accessable to Ink/Stitch in all forms. They are especially us
 
 * Manual stitch placement for ripple patterns [#3256](https://github.com/inkstitch/inkstitch/pull/3256)
 * Add stitch grid first option [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
-* Satin guided ripples:
+* Satin guided ripples
 
   ![satin guided ripple](/assets/images/docs/ripple_satin_guide.svg)
 
@@ -363,10 +375,12 @@ Clips are now easy accessable to Ink/Stitch in all forms. They are especially us
 
 ## Palettes
 
-* Update InkStitch Madeira Rayon.gpl [#3444](https://github.com/inkstitch/inkstitch/pull/3444)
-* Isacord polyester: added 0713 Lemon color [#3225](https://github.com/inkstitch/inkstitch/pull/3225)
+* Update `InkStitch Madeira Rayon.gpl` [#3444](https://github.com/inkstitch/inkstitch/pull/3444)
+* Isacord polyester: added `0713 Lemon` color [#3225](https://github.com/inkstitch/inkstitch/pull/3225)
 
 ## Export / Import
+
+See full list of [supported file formats](/docs/file-formats/)
 
 ### New Export Formats
 
@@ -385,21 +399,21 @@ Longarm Quilting: PLT, QCC, IQP
 
 ### Batch Lettering
 
-Ink/Stitch can now export multiple files with text at once. A path with a specified label within the open document can be used to define text position.
+Ink/Stitch can now export multiple files with different texts at once. A path with a specified label within the open document can be used to define text position.
 
 ![A patch with four different names](/assets/images/docs/batch-lettering.png)
 
-[More information](/docs/import-export/#batch-lettering)
+[More information](/docs/lettering/#batch-lettering)
 
 ## Releases
 
-* Windows releases are now signed with [SignPath.io](https://about.signpath.io) certificate by [SignPath Foundation](https://signpath.org). We are very greatful for their support.
+* Windows releases are now signed for free with [SignPath.io](https://about.signpath.io) certificate by [SignPath Foundation](https://signpath.org). We are very greatful for their support.
 * Windows 32bit version has been removed as it is no longer supported
-* Linux releases in 64bit and 32bit versions
+* Linux releases available for 64bit and 32bit
 
 ## Developer and Build Stuff
 
-* Sew Stack first steps [#3133](https://github.com/inkstitch/inkstitch/pull/3133)
+* Sew Stack (first steps) [#3133](https://github.com/inkstitch/inkstitch/pull/3133)
 
   The Sew Stack will ultimately replace Params and contain its functionality. For now, it is invisible in our releases.
   The params dialog as it is now suffers from all the options, we've added over the years. It is now hard to find a specific setting in there
@@ -469,6 +483,7 @@ Ink/Stitch can now export multiple files with text at once. A path with a specif
 * Print pdf: prevent rendering original paths [#3262](https://github.com/inkstitch/inkstitch/pull/3262)
 * Avoid error message on info panel update [#3246](https://github.com/inkstitch/inkstitch/pull/3246)
 * Satin column: ignore single point paths [#3244](https://github.com/inkstitch/inkstitch/pull/3244)
+* Fix select redwork top layer [#3230](https://github.com/inkstitch/inkstitch/pull/3230)
 * Fix gradient style [#3200](https://github.com/inkstitch/inkstitch/pull/3200)
 * Fix clones with NoneType hrefs [#3196](https://github.com/inkstitch/inkstitch/pull/3196)
 * Fixed hidden objects being stitched out when cloned (Fix #3167) [#3171](https://github.com/inkstitch/inkstitch/pull/3171)
