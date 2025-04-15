@@ -8,7 +8,7 @@
     "auto_satin": true,
     "reversible": true,
     "default_glyph": "�",
-    "min_scale": 0.7,
+    "min_scale": 1.0,
     "max_scale": 2.0,
     "size": 10.5,
     "horiz_adv_x_default": null,
