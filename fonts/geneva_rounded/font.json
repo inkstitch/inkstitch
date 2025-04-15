@@ -6,7 +6,7 @@
         "latin"
     ],
     "leading": 60,
-    "auto_satin": true,
+    "auto_satin": false,
     "reversible": true,
     "default_glyph": "�",
     "min_scale": 1.0,
