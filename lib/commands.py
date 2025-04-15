@@ -62,7 +62,7 @@ COMMANDS = {
 
 OBJECT_COMMANDS = ["starting_point", "ending_point", "target_point", "autoroute_start", "autoroute_end",
                    "stop", "trim", "ignore_object", "satin_cut_point"]
-HIDDEN_CONNECTOR_COMMANDS = ["starting_point", "ending_point", "autoroute_start", "autoroute_end"]
+HIDDEN_CONNECTOR_COMMANDS = ["starting_point", "ending_point", "autoroute_start", "autoroute_end", "satin_cut_point"]
 FREE_MOVEMENT_OBJECT_COMMANDS = ["autoroute_start", "autoroute_end"]
 LAYER_COMMANDS = ["ignore_layer"]
 GLOBAL_COMMANDS = ["origin", "stop_position"]
