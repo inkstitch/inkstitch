@@ -28,7 +28,7 @@ Ces commandes affectent l’ensemble du motif de broderie.
 
 ### ![origine](/assets/images/docs/visual-commands-origin.jpg) Origine
 
-Spécifie l'origine (point (0,0)) du fichier de broderie. Particulièrement utile pour les personnes qui ont accès à tout l'espace de broderie possible pour leur machine, indépendement du cadre utilisé.
+Spécifie l'origine (point (0,0)) du fichier de broderie. Particulièrement utile pour les personnes qui ont accès à tout l'espace de broderie possible pour leur machine, indépendamment du cadre utilisé.
 
 ### ![stop position](/assets/images/docs/visual-commands-stop-position.jpg) Position d'arrêt
 
@@ -48,12 +48,12 @@ Aucun objet de ce calque ne sera exporté dans les fichiers de broderie. Cette c
 
 Ces commandes seront attachées aux objets actuellement sélectionnés.
 
-Il est recommandé d’ajouter des commandes via les extensions:
+Il est recommandé d’ajouter les commandes via les extensions:
 
 * Sélectionnez un ou plusieurs objets
 * Lancez `Extensions > Ink/Stitch  > Commandes > Attacher commandes ...`
 * Activez les commandes souhaitées et cliquez sur appliquer
-* Commandes Départ/Stop/découpage: Le noeud final du connecteur le plus proche de l'objet est le point auquel l'effet sera appliqué.
+* Commandes Départ/Stop/Coupe: Le centre du symbole est le point auquel l'effet sera appliqué.
 
 ### ![starting-point-symbol](/assets/images/docs/visual-commands-start.jpg) ![ending point symbol](/assets/images/docs/visual-commands-end.jpg) Position de départ/de fin
 
@@ -66,18 +66,18 @@ Définit le point de départ (1) ou le point final (2) de l'agencement automatiq
 N'utiliser qu'un point de départ et qu'un point d'arrivée par agencement automatique.
 {: .notice--warning}
 
-Auto-route operations can be performed on satins ([Outils: Satin > Agencement automatique de Colonne Satin](/docs/satin-tools/#auto-route-satin-columns)) or strokes.
+Les agencements automatiques peuvent être effectués sur les satins ([Outils: Satin > Agencement automatique de Colonne Satin](/docs/satin-tools/#auto-route-satin-columns)) ou sur les traits.
 
-Strokes have two different for automated routing:
+Les  traits ont deux formes différentes d'agencement automatique:
 
-* [Outils: Trait > Agencement automatique de points droits. ...](/fr/docs/stroke-tools/#autoroute-running-stitch) (one or two passes per line section)
-* [Outils: Trait > Redwork](/fr/docs/stroke-tools/#redwork) (exactly two passes for each line section)
+* [Outils: Trait > Agencement automatique de points droits. ...](/fr/docs/stroke-tools/#autoroute-running-stitch) (un ou deux passages par  trait)
+* [Outils: Trait > Redwork](/fr/docs/stroke-tools/#redwork) (exactement deux passages par trait)
 
-Only the starting point is used for Redwork, as Redwork always ends at the starting point.
+Redwork n'utilise  que le  point  de départ, car  Redwork commence et termine toujours au même endroit.
 
 ### ![ripple-stitch-target-symbol](/assets/images/docs/visual-commands-ripple-target.png) Position de la cible
 
-Défini la position cible d'une broderie ondulée ou d'un remplissage circulaire.
+Définit la position cible d'une broderie ondulée ou d'un remplissage circulaire.
 
 ### ![Point de partage de colonne satin](/assets/images/docs/visual-commands-satin-cut-point.jpg) Point de partage de la colonne satin
 
@@ -99,10 +99,10 @@ Les objets auxquels cette commande est associée seront exclus du plan de broder
 
 ### Supprimer une commande particulière.
 
-Séléctionnez le groupe de command et supprimez le. 
+Sélectionnez  le groupe de commande et supprimez le. 
 ### Supprimer toutes les commandes du document
 
-*L ancez `Extensions > Ink/Stitch > Résolution des problèmes > Supprimer tous les paramètres de broderie`
+*Lancez `Extensions > Ink/Stitch > Résolution des problèmes > Supprimer tous les paramètres de broderie`
 * Choisissez tout ou les types de commandes spécifiques que vous souhaitez supprimer du document
 * Cliquez sur  `Appliquer`
 
@@ -122,8 +122,8 @@ Cette extension insère des commandes de coupe à la place des sauts.
 Bascule la visibilité des commandes. Les commandes restent fonctionnelles même si elles sont masquées.
 `Extensions > Ink/Stitch > Commandes > Affichage > Afficher/Masquer les commandes  des objets`
 
-### Mise à l'echelle des symboles de commande
+### Mise à l'echelle des symboles de commande {#scale-command-symbols}
 
 Défini la taille des symboles de commande dans le document tout entier : `Extensions > Ink/Stitch > Commandes > Affichage> Mise à l'echelle des symboles de commande.`
 
-Il est possible d'utiliser le "live preview" pour visualiser la nouvelle  taille des symboles pendant la mise à l'echelle.
+Il est possible d'utiliser le "live preview" pour visualiser la nouvelle  taille des symboles pendant la mise à l'échelle.
