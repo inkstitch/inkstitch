@@ -23,10 +23,10 @@ Raccourci | Effet
 <key>←</key> | Reculer
 <key>↑</key> | Accélérer
 <key>↓</key> | Ralentir
-<key>+</key> | Une image en avant
-<key>-</key> | Une image en arrière
-<key>Page down</key> | Jump to previous command
-<key>Page up</key> | Jump to next command
+<key>+</key> | Un point en avant
+<key>-</key> | Un point en arrière
+<key>Page down</key> | revenir à  la  commande précédente
+<key>Page up</key> | sauter à la commande suivante
 
 C'est aussi possible de **zoomer** et de **déplacer** la simulation avec la souris.
 
@@ -42,8 +42,8 @@ En revanche,si vous appliquez le plan de broderie, vous aurez la possibilité de
 
 Utilisez l'extension "Annuler l'aperçu du plan de broderie" si vous souhaitez le supprimer.
 
-Vous disposez des options suivanes:
-* **Positionner le plan de broderie hors du canevas** Positionne le plan de broderie  à la droite du canevas. Si la case n'est pas cochée, le plan de broderie sera placé au dessus de vos objets. Dans ce cas vous pouvez choisir de modifier la visibilité de vos objets, soit en les cachant soit en nmodifiant l'opacité.
+Vous disposez des options suivantes:
+* **Positionner le plan de broderie hors du canevas** Positionne le plan de broderie  à la droite du canevas. Si la case n'est pas cochée, le plan de broderie sera placé au dessus de vos objets. Dans ce cas vous pouvez choisir de modifier la visibilité de vos objets, soit en les cachant soit en modifiant l'opacité.
 * **Visibilité du calque de conception** permet de choisir la visibilité du calque originel de conception.
   * **Inchangé** laisse l'opacité du calque de conception telle quelle
   * **Caché** cache le calque de conception
@@ -71,18 +71,18 @@ Pas très rigolo de devoir à chaque fois supprimer le calque du plan de broderi
 Cette extension le fait pour vous et vous aidera si vous utilisez cette méthode de travail.
 
 
-Lancez `Extensions > Ink/Stitch > Visualisr et Exporter > Annuler le plan de broderie`
+Lancez `Extensions > Ink/Stitch > Visualiser et Exporter > Annuler le plan de broderie`
 
 ## Carte de densité {#density-map}
 
 * Sélectionnez des objets si vous ne souhaitez la carte de densité que pour ces objets là, sinon lancez l'extension sans rien sélectionner
 * Lancez `Extensions > Ink/Stitch > Visualiser et Exporter > Carte de densité`
 * Choisissez les valeurs de densité associées aux couleurs et appliquez
-* Un nouveau calque non brodable est  créer
+* Un nouveau calque non brodable est créé
 * Inspectez (zoomez)
 * Vous pouvez annuler avec `Ctrl + Z`
 
-Ceci montrera des marqueurs rouges, jaunes et verts au dessus de vos éléments, pour vous permettre d'identifier facilement les zones à forte densité. Tous les marqueurss d'une même couleur sont dans un groupe du calque Densité, ce qui vous permet de masquer facilement tous les marqueurs d'une couleur donnée.
+Ceci montrera des marqueurs rouges, jaunes et verts au dessus de vos éléments, pour vous permettre d'identifier facilement les zones à forte densité. Tous les marqueurs d'une même couleur sont dans un groupe du calque Densité, ce qui vous permet de masquer facilement tous les marqueurs d'une couleur donnée.
 
 ### Options
 
