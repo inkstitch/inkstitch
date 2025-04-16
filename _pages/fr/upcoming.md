@@ -42,11 +42,11 @@ Ink/Stitch est en développement constant. Vous trouverez ici toutes les modific
 * [Decadent Flower Monogram](/fr/fonts/decadent_flowers_monogram/)
 
   ![Decadent flower monogram](/assets/images/fonts/decadent_flowers_monogram.png)
-* [גופן בינוני](/fonts/hebrew_font/)
+* [גופן בינוני](/fr/fonts/hebrew_font/)
 
   ![גופן בינוני](/assets/images/fonts/hebrew_font_medium.png)
   ![גופן בינוני](/assets/images/fonts/hebrew_font_large.png)
-* [פשוט מעוגל](/fonts/hebrew_font/)
+* [פשוט מעוגל](/fr/fonts/hebrew_font/)
 
   ![פשוט מעוגל](/assets/images/fonts/hebrew_simple_rounded.png)
 * [Ink/Stitch Masego](/fonts/inkstitch-masego/)
