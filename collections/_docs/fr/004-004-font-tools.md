@@ -21,7 +21,7 @@ Il est aussi possible pour une direction donnée de créer un repertoire dont le
 
 Le fichier json doit inclure au minimum le nom des polices.
 
-## Editer JSON
+## Editer le fichier JSON {#edit-json}
 
 {% include upcoming_release.html %}
 
