@@ -90,7 +90,7 @@ De nombreuses mises à jour des polices existantes ont été effectuées. Merci 
 
 `Outils: Satin > Remplissage en Satin...` [#3406](https://github.com/inkstitch/inkstitch/pull/3406)
 
-Convertit un remplissage  en  satin. Nécessite un positionnemen manuel des traverses
+Convertit un remplissage  en  satin. Nécessite un positionnement manuel des traverses
 
 ![Remplissage en satin](/assets/images/docs/fill_to_satin_bridge.png)
 
