@@ -16,10 +16,10 @@ Si  le chemin initial est fermé la forme sera remplie par une spirale (ondulati
 ## Ondulations  circulaires 
 
 * Créer **un chemin fermé simple avec une couleur de contour et sans couleur de remplissage** (pas une combinaison de sous-chemins)
-* Créer  [une  cible ou des guides](#guider-les-ondulations) (optionel)
+* Créer  [une  cible ou des guides](#guider-les-ondulations) (optionnel)
 * Sélectionner ce chemin
-* Ouvrir le dialogue de paramètrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Broderie ondulée` comme méthode.
-* Définir les  [paramètres](#comment-la-paramètrer) à votre convenence et Appliquer
+* Ouvrir le dialogue de paramétrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Broderie ondulée` comme méthode.
+* Définir les  [paramètres](#comment-la-paramètrer) à votre convenance et Appliquer
 
 ![Exemples d'ondulations circulaires](/assets/images/docs/circular-ripple.svg)
 
@@ -31,10 +31,10 @@ Les ondulations linéaires peuvent être créées de différentes manières. Le 
 
 
 * Créer une  forme ouverte ( un chemin simple, deux chemins combinés ou même une  colonne satin)
-* Créer   [une  cible ou des guides](#guider-les-ondulations) (optionel)
+* Créer   [une  cible ou des guides](#guider-les-ondulations) (optionnel)
 * Sélectionner ce chemin
-* Ouvrir le dialogue de paramètrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Broderie ondulée` comme méthode.
-* Définir les  [paramètres](#comment-la-paramètrer) à votre convenence et Appliquer
+* Ouvrir le dialogue de paramétrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Broderie ondulée` comme méthode.
+* Définir les  [paramètres](#comment-la-paramètrer) à votre convenance et Appliquer
 
 ![Exemples d'ondulations linéaires](/assets/images/docs/linear-ripple.svg)
 
@@ -57,7 +57,7 @@ Les ondulations construites à partir d'un chemin simple  (une forme fermée ou 
 
 Il est possible de définir le point cible de l'ondulation grace aux [commandes visuelles](/fr/docs/commands/).
 
-* Ouvrir `Extensions > Ink/Stitch > Commandes  > Attacher des  commandes à des objets selectionnés  ...`
+* Ouvrir `Extensions > Ink/Stitch > Commandes  > Attacher des  commandes à des objets sélectionnés  ...`
 * Sélectionner `Position de la cible` et appliquer.
 * Sélectionner le symbole et le déplacer à la position souhaitée.
 
@@ -66,10 +66,10 @@ En l'absence de  toute information de guidage, c'est le centre de l'ondulation i
 ###  Guidage selon un chemin
 
 * Directement dans le même groupe que la broderie ondulée (pas dans un sous-groupe), utilisez l'outil courbe de Beziers pour créer un chemin qui commence proche de l'ondulation puis s'en éloigne. 
-* Selectionner cette courbe et exécuter  `Extensions > Ink/Stitch > Edition > Sélection vers guide`.
+* Sélectionner cette courbe et exécuter  `Extensions > Ink/Stitch > Édition > Sélection vers guide`.
 * Sélectionner la broderie ondulée.
-* Ouvrir le dialogue de paramètrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Broderie ondulée` comme méthode.
-* Définir les  [paramètres](#params) à votre convenence et Appliquer.
+* Ouvrir le dialogue de paramétrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Broderie ondulée` comme méthode.
+* Définir les  [paramètres](#params) à votre convenance et Appliquer.
 
 La position des centres des réplications de l'ondulation initale est alors déterminée par le guide.
 
@@ -80,8 +80,8 @@ Avec le guidage satin, vous pouvez  guider précisément les réplications en ut
 * Directement dans le même groupe que la broderie ondulée (pas dans un sous-groupe), créez un objet similaire à une [colonne satin](/fr/docs/stitches/satin-column/) avec rails et traverses.
 * Sélectionner ce nouvel objet et exécutez  `Extensions > Ink/Stitch > Édition > Sélection vers guide`.
 * Sélectionner la broderie ondulée.
-* Ouvrir le dialogue de paramètrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Broderie ondulée` comme méthode.
-* Définir les  [paramètres](#params) à votre convenence et Appliquer.
+* Ouvrir le dialogue de paramétrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Broderie ondulée` comme méthode.
+* Définir les  [paramètres](#params) à votre convenance et Appliquer.
 
 
 Avec un guidage satin, il est aussi possible d'ajuster  la direction des réplications à l'aide d'une ligne de guidage.
