@@ -22,14 +22,14 @@ Chaque nœud d'un chemin représente un point de pénétration de l'aiguille. Ç
 ![Manual Stitch Placement](/assets/images/docs/manual-stitch-placement.png)
 
 Une représentation nette de votre chemin de point manuel peut être obtenue comme suit:
-1. Selectionner tous les noeuds (`F2` puis `Ctrl`+`A`)
+1. Sélectionner tous les noeuds (`F2` puis `Ctrl`+`A`)
 2. Cliquer sur ![Rendre durs les noeuds sélectionnés](/assets/images/docs/tool-controls-corner.jpg){: title="Make selected nodes corner" } in the `Tool Controls Bar`.
 
 ## Paramétres
 
 Ouvrir `Extensions > Ink/Stitch  > Paramétres` pour paramétrer selon vos besoins.
 
-Paramètre|Description
+Paramètre|Description     
 ---|---
 Points droits le long des chemins       |Doit être activé pour que ces paramètres prennent effet.
 Méthode                                 |Choisir le type "Point manuel"
