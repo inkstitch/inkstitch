@@ -15,7 +15,7 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
 * Faire `Extensions > Ink/Stitch > Lettrage > Lettrage`
 * Entrez votre texte (multi-ligne possible)
 * Définir la police et l'échelle
-    **⚠ Attention**: Pour des résultats optimaux, tenir compte des limites de redimensionement mentionnées dans le descriptif des fontes.
+    **⚠ Attention**: Pour des résultats optimaux, tenir compte des limites de edimensionnement mentionnées dans le descriptif des fontes.
 * Cliquer sur `Appliquer et Quitter`
 
 ### Filtres de fonte
@@ -35,7 +35,7 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
 
 ### Options
 
-* **Echelle**
+* **Échelle**
 
   Définit la taille de sortie de la police par rapport à la taille de police d'origine (%).
   Il est recommandé d'utiliser l'option d'échelle plutôt que de redimensionner la police sur le canevas.
@@ -78,7 +78,7 @@ Les lettres d'ink/stitch ont été soigneusement dessinées pour une broderie op
 
 * Sélectionnez un chemin et un groupe de lettrage 
 * Exécutez `Extensions > Ink/Stitch > Lettrage > Lettrage le long d'un chemin ...`
-* Si `Etendre` est coché Ink/Stitch va étendre les espaces entre les lettres pour que le texte utilise tout le chemin. Sinon il gardera les distances du texte original. 
+* Si `Étendre` est coché Ink/Stitch va étendre les espaces entre les lettres pour que le texte utilise tout le chemin. Sinon il gardera les distances du texte original. 
 * Cliquez sur 'Appliquer'
 
 Le lettrage suivra  la direction du chemin. Inverser le sens du chemin si nécessaire (`Chemin > ReverseInverser`).
