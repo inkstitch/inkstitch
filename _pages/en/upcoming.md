@@ -30,7 +30,7 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Barstitch textured](/fonts/barstitch_bold/)
 
   ![Barstitch textured](/assets/images/fonts/barstitch_textured.png)
-* [Califragilistic tamed](/fonts/califragilistic/)
+* [Califragilistic](/fonts/califragilistic/)
 
   ![Califragilistic](/assets/images/fonts/califragilistic.png)
 * [Cogs_KOR](/fonts/cogs_KOR)
@@ -357,7 +357,7 @@ Clips are now easy accessable to Ink/Stitch in all forms. They are especially us
 
   ![satin guided ripple](/assets/images/docs/ripple_satin_guide.svg)
 
-  * Option wether to flip each second line of the pattern or not
+  * Option whether to flip each second line of the pattern or not
   * Anchor line to align ripple patterns [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
 
   [Read more](/docs/stitches/ripple-stitch/#satin-guide)
