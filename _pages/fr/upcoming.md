@@ -373,7 +373,7 @@ Les découpes sont désormais facilement accessibles dans Ink/Stitch sous toutes
 
 ## Export / Import
 
-Voir la [liste complète des formats pris en compte](/docs/file-formats/)
+Voir la [liste complète des formats pris en compte](/fr/docs/file-formats/)
 
 ### Nouveaux formats d'export
 
@@ -400,7 +400,7 @@ Ink/Stitch permet maintenant d'exporter plusieurs fichiers avec des textes diff�
 
 ## Versions
 
-* Les versions Windows sont désormais signées gratuitement [SignPath.io](https://about.signpath.io) grace au certificat de la [SignPath Foundation](https://signpath.org). Nous leur sommes très reconnaissants de leur soutien.
+* Les versions Windows sont désormais signées gratuitement ([SignPath.io](https://about.signpath.io)) grace au certificat de la [SignPath Foundation](https://signpath.org). Nous leur sommes très reconnaissants de leur soutien.
 * La version Windows 32 bits a été supprimée, car elle n'est plus prise en charge.
 * Versions Linux disponibles pour 64 bits et 32 ​​bits.
 
