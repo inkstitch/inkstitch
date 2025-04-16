@@ -1,16 +1,16 @@
 ---
 title: "Changements, Mises à jour et Corrections pour la prochaine  version Ink/Stitch"
 permalink: /fr/upcoming/
-last_modified_at: 2024-07-21
+last_modified_at: 2025-04-16
 sidebar:
   nav: pages
 toc: true
 ---
-Ink/Stitch is in constant development. Here you can see all the changes made after the last official release.
+Ink/Stitch est en développement constant. Vous trouverez ici toutes les modifications apportées depuis la dernière version officielle.
 
-## [Fonts](/fonts/font-library)
+## [Polices](/fonts/font-library)
 
-### New Fonts
+### Nouvelles Polices
 
 * [Ambigüe](/fonts/ambigue/)
 
@@ -73,145 +73,143 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 
   ![Western light](/assets/images/fonts/western_light.png)
 
-### Font updates
+### Mises à jour des polices
 
-Numerous updates to existing fonts were made. Thanks to everyone involved!
+De nombreuses mises à jour des polices existantes ont été effectuées. Merci à tous !
 
-## New Extensions
+## Nouvelles extensions
+### Editer JSON
 
-### Edit JSON
+`Gestion des polices > Editer JSON` [#3371](https://github.com/inkstitch/inkstitch/pull/3371)
 
-`Font Management > Edit JSON` [#3371](https://github.com/inkstitch/inkstitch/pull/3371)
+`Editer JSON` fait partie de la gestion des polices et permet aux auteurs de polices de corriger facilement les données du fichier JSON. Cette fonctionnalité est particulièrement utile pour les corrections de crénage, car elle simule un texte personnalisé lors de la mise à jour du crénage.![Edition du Crénage (distance entre les lettres](/assets/images/upcoming/3.2.0/edit_json.png)
 
-Edit JSON is part of the Font Management and helps font authors to easily correct data in the json file. It is especially useful for kerning corrections as it simulates a custom text as you update the kerning.
+[En savoir plus](/ft/docs/font-tools/#edit-json)
 
-![Edit Kerning (distance between letters](/assets/images/upcoming/3.2.0/edit_json.png)
+### Remplissage en Satin
 
-[Read more](/docs/font-tools/#edit-json)
+`Outils: Satin > Remplissage en Satin...` [#3406](https://github.com/inkstitch/inkstitch/pull/3406)
 
-### Fill to Satin
-
-`Tools: Satin > Fill to Satin...` [#3406](https://github.com/inkstitch/inkstitch/pull/3406)
-
-Converts a fill to a satin. Manual setting of rungs is required.
+Convertit un remplissage  en  satin. Nécessite un positionement manuel des traverses
 
 ![Fill to satin](/assets/images/docs/fill_to_satin_bridge.png)
 
-[Read more](/docs/satin-tools/#fill-to-satin)
+[En savoir plus](/fr/docs/satin-tools/#fill-to-satin)
 
-### Install Addons for Inkscape
+### Installer des modules complémentaires pour Inkscape
 
-`Install Addons for Inkscape` [#3606](https://github.com/inkstitch/inkstitch/pull/3606)
+Installer des modules complémentaires pour Inkscape [#3606](https://github.com/inkstitch/inkstitch/pull/3606)
 
-Installs color palettes or a symbol library for motif stitches into Inkscape. Please restart Inkscape after the installation.
+Installe des palettes de couleurs ou une bibliothèque de symboles pour les points de motif dans Inkscape. Veuillez redémarrer Inkscape après l'installation.
 
-![Motif stitches](/assets/images/upcoming/3.2.0/motif-stitches.png)
+![Points de motif](/assets/images/upcoming/3.2.0/motif-stitches.png)
 
-Replaces `Install thread color palettes for Inkscape`.
+Remplace « Installer des palettes de couleurs de fil pour Inkscape ».
 
-[Read more](/docs/install-addons/)
+[En savoir plus](/fr/docs/install-addons/)
 
-### Remove duplicated points
+### Supprimer les points dupliqués
 
-`Edit > Remove duplicated points` [#3117](https://github.com/inkstitch/inkstitch/pull/3117)
+`Édition > Supprimer les points dupliqués` [#3117](https://github.com/inkstitch/inkstitch/pull/3117)
 
-Helps (for example) to remove bean stitches from stitch plans and turn them into simple lines.
+Permet, par exemple, de supprimer les répétitions des plans de broderie des points multiples et de les transformer en lignes simples.
 
-![Remove duplicated points](/assets/images/upcoming/3.2.0/remove_duplicated_points.png)
+![Supprimer les points dupliqués](/assets/images/upcoming/3.2.0/remove_duplicated_points.png)
 
-[Read more](/docs/edit/#remove-duplicated-points)
+[En savoir plus](/fr/docs/edit/#remove-duplicated-points)
 
-### Selection to Knockdown Fill
+### Sélection en remplissage en points couchants (Knockdown)
 
-`Tools: Fill > Selection to Knockdown Fill` [#3526](https://github.com/inkstitch/inkstitch/pull/3526)
+`Outils : Remplissage > Sélection en remplissage en points couchants` [#3526](https://github.com/inkstitch/inkstitch/pull/3526)
 
-Helper method to generate a fill area underneath of all selected elements, optionally with an offset. This can be very useful when working with high pile fabric.
+Méthode permettant de générer une zone de remplissage en point couchants sous tous les éléments sélectionnés, avec un décalage optionnel. Ceci peut s'avérer très utile pour les tissus à poils longs.
 
-![A figure with a surrounding knockdown stitch](/assets/images/docs/knockdown.png)
+![Une figure entourée d'un point couchant](/assets/images/docs/knockdown.png)
 
-[Read more](/docs/fill-tools/#knockdown-fill)
+[En savoir plus](/fr/docs/fill-tools/#knockdown-fill)
 
-### Set color sort index
+### Définir l'index de tri des couleurs
 
-`Font management > Set color sort index` [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
+`Gestion des polices > Définir l'index de tri des couleurs` [#3242](https://github.com/inkstitch/inkstitch/pull/3242)
 
-A tool for font authors which sets a specified color sort index on selected elements to control element grouping when the color sorting option is enabled in the lettering tool.
+Un outil pour les créateurs de polices qui définit un index de tri des couleurs sur les éléments sélectionnés afin de contrôler leur regroupement lorsque l'option de tri des couleurs est activée dans l'outil de lettrage.
 
-![Color sort index](/assets/images/upcoming/3.2.0/color_sort_index.png)
+![Index de tri des couleurs](/assets/images/upcoming/3.2.0/color_sort_index.png)
 
-[Read more](/docs/font-tools/#set-color-index)
+[En savoir plus](/fr/docs/font-tools/#set-color-index)
 
-### Transform
+### Transformation
 
-`Edit > Transform...` [#3657](https://github.com/inkstitch/inkstitch/pull/3657)
+`Edition > Transformation...` [#3657](https://github.com/inkstitch/inkstitch/pull/3657)
 
-Applies transforms to elements (rotate / flip) while also adapting the fill angle.
+Applique des transformations aux éléments (rotation/retournement) tout en adaptant l'angle de remplissage.
 
-![Fill element transformed by 45 degrees, fill angle adapted](/lokal/assets/images/docs/transform.png)
+![Élément de remplissage transformé à 45 degrés, angle de remplissage adapté](/lokal/assets/images/docs/transform.png)
 
-## Extension Updates
+## Mises à jour des extensions
 
-### General
+### Général
 
-* Request permission to update old SVG files if the inkstitch svg version attribute is not specified in the file. [#3228](https://github.com/inkstitch/inkstitch/pull/3228)
+* Demander l'autorisation de mettre à jour les anciens fichiers SVG si l'attribut de version SVG d'InkStitch n'est pas spécifié dans le fichier. [#3228](https://github.com/inkstitch/inkstitch/pull/3228)
 
-  This prevents to falsely update copy-pasted content in a new file.
-* Ink/Stitch extensions are now shown with icons and descriptions in the extension gallery for easy access [#3287](https://github.com/inkstitch/inkstitch/pull/3287)
+Cela empêche la mise à jour erronée du contenu copié-collé dans un nouveau fichier.
+* Les extensions Ink/Stitch sont désormais affichées avec des icônes et des descriptions dans la galerie d'extensions pour un accès facile [#3287](https://github.com/inkstitch/inkstitch/pull/3287)
 
   ![Extension gallery](/assets/images/upcoming/3.2.0/extension_gallery.png)
 
-### Auto-route satin
+### Agencement automatique de colonnes satin
 
-`Tools: Satin > AutoRoute Satin`
+`Outils: Satin > Agencement automatique de colonnes satin`
 
-* Add option to keep original path elements [#3332](https://github.com/inkstitch/inkstitch/pull/3332)
-* Transfer object based minimum jump length value (if present) from satins on auto-generated centerline strokes [#3154](https://github.com/inkstitch/inkstitch/pull/3154)
+* Ajout d'une option pour conserver les éléments de chemin d'origine [#3332](https://github.com/inkstitch/inkstitch/pull/3332)
+  
+* Transfert de la valeur de longueur de saut minimale basée sur l'objet (si présente) depuis les satins sur les traits centraux générés automatiquement [#3154](https://github.com/inkstitch/inkstitch/pull/3154)
 
-[Read more](/docs/satin-tools/#auto-route-satin-columns)
+[En savoir plus](/fr/docs/satin-tools/#auto-route-satin-columns)
 
-### Attach commands to selected objects
+### Attacher des commandes aux objets sélectionnés
 
-* We had a lot of complaints that positioning command symbols is rather difficult. Therefore visual commands are now directed towards the symbol center, rather than the touching point of the command connector [#3542](https://github.com/inkstitch/inkstitch/pull/3542).
+* Nous avons reçu de nombreuses plaintes concernant la difficulté de positionnement des symboles de commande.  Les commandes visuelles sont désormais dirigées par la position du centre du symbole, plutôt que par le point de contact du connecteur de commande [#3542](https://github.com/inkstitch/inkstitch/pull/3542).
 
-  This means, when you position a start symbol, the starting point of the element will be directly at the symbols center. Old files will automatically update.
+Cela signifie que lorsque vous positionnez un symbole de départ, le point de départ de l'élément sera directement au centre du symbole. Les anciens fichiers seront automatiquement mis à jour.
 
-  ![Hidden connector command](/assets/images/upcoming/3.2.0/hidden_connector_commands.png)
-* Unified start and stop commands for various stitch types. Old files will automatically updated.
+![Commande de connecteur masquée](/assets/images/upcoming/3.2.0/hidden_connector_commands.png)
 
-[Read more](/docs/commands/)
+* Commandes de démarrage et d'arrêt unifiées pour différents types de points. Les anciens fichiers seront automatiquement mis à jour.
 
-### Convert to gradient blocks
+[En savoir plus](/fr/docs/commands/)
 
-* Insert color blocks into a group and skip small elements [#3584](https://github.com/inkstitch/inkstitch/pull/3584)
+### Conversion en blocs de dégradé
 
-[Read more](/docs/fill-tools/#convert-to-gradient-blocks)
+* Insère des blocs de couleur dans un groupe et ignore les petits éléments [#3584](https://github.com/inkstitch/inkstitch/pull/3584)
 
-### Scale Command Symbols
+[En savoir plus](/fr/docs/fill-tools/#convert-to-gradient-blocks)
 
-`Commands > View > Scale Command Symbols`
+### Mise à l'échelle des symboles de commande
 
-* Set all commands to a unique size at once (reset previous transform) [#3329](https://github.com/inkstitch/inkstitch/pull/3329)
+`Commandes > Affichage > Mise à l'échelle des symboles de commande`
 
-  Please note that manual transforms on groups with a command may influence the actual size of a symbol.
+* Définir simultanément une taille unique pour toutes les commandes (réinitialiser la transformation précédente) [#3329](https://github.com/inkstitch/inkstitch/pull/3329)
 
-[Read more](/docs/commands/#scale-command-symbols)
+Veuillez noter que les transformations manuelles sur des groupes contenants des commandes peuvent influencer la taille réelle des symboles de commandes.
 
-### Font sampling
+[En savoir plus](/fr/docs/commands/#scale-command-symbols)
 
-`Font Management > Font Sampling`
+### Test de polices 
 
-* Add color sort option for multicolor fonts [#3242](https://github.com/inkstitch/inkstitch/pull/3242). The font has to support color sorting.
+`Gestion des polices > Test de police`
 
-[Read more](/docs/font-tools/#font-sampling)
+* Ajout d'une option  de tri des couleurs pour les polices multicolores [#3242](https://github.com/inkstitch/inkstitch/pull/3242).  Uniquement si la police prévoit le tri des couleurs.
 
-### Force lock stitches
+[En savoir plus](/fr/docs/font-tools/#font-sampling)
 
-`Font Management > Force lock stitches`
+### Forcer des points d'arrêt
 
-* Add option to disable lock stitch insertion by distance
-  (for example to add lock stitches only after the last element of the glyph) [#3559](https://github.com/inkstitch/inkstitch/pull/3559)
+`Gestion des polices > Forcer des points d'arrêts`
 
-[Read more](/docs/font-tools/#force-lock-stitches)
+* Ajout d'une option pour désactiver l'insertion de points d'arrête en fonction de la distance (par exemple, pour ajouter des points d'arrêt uniquement après le dernier élément du glyphe) [#3559](https://github.com/inkstitch/inkstitch/pull/3559)
+
+[En savoir plus](/fr/docs/font-tools/#force-lock-stitches)
 
 ### Lettering
 
@@ -226,7 +224,7 @@ Applies transforms to elements (rotate / flip) while also adapting the fill angl
 
 ![Lettering: more options](/assets/images/upcoming/3.2.0/lettering.png)
 
-[Read more](/docs/lettering/)
+[En savoir plus](/fr/docs/lettering/)
 
 ### Lettering Along Path
 
@@ -236,20 +234,20 @@ Add option for text position along the path (left, center, right, stretch)
 
 ![A text aligned along a path while using the various options](/assets/images/docs/text_along_path_alignment.png)
 
-[Read more](/docs/lettering/#lettering-along-path)
+[En savoir plus](/fr/docs/lettering/#lettering-along-path)
 
 ### Multicolor Satin
 
 * Option to adjust underlay [#3152](https://github.com/inkstitch/inkstitch/pull/3152)
 
-[Read more](/docs/satin-tools/#multicolor-satin)
+[En savoir plus](/fr/docs/satin-tools/#multicolor-satin)
 
 ### Redwork
 
 * Add combine option [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
 * Add keep originals option [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
 
-[Read more](/docs/stroke-tools/#redwork)
+[En savoir plus](/fr/docs/stroke-tools/#redwork)
 
 ### Simulator
 
@@ -258,19 +256,19 @@ Add option for text position along the path (left, center, right, stretch)
 * Save and reload more simulator settings (status for buttons: jump, trim, color change, stop, needle penetration point, page border) [#3323](https://github.com/inkstitch/inkstitch/pull/3323)
 * Show page in simulator [#3120](https://github.com/inkstitch/inkstitch/pull/3120)
 
-[Read more](/docs/visualize/#simulator)
+[En savoir plus](/fr/docs/visualize/#simulator)
 
 ### Stitch plan preview
 
 * Improve realistic filter [#3222](https://github.com/inkstitch/inkstitch/pull/3222)
 
-[Read more](/docs/visualize/#stitch-plan-preview)
+[En savoir plus](/fr/docs/visualize/#stitch-plan-preview)
 
 ### Stroke to LPE-Satin
 
 * Take transforms into account (for path specific lpe satins only) [#3500](https://github.com/inkstitch/inkstitch/pull/3500)
 
-[Read more](/docs/satin-tools/#stroke-to-live-path-effect-satin)
+[En savoir plus](/fr/docs/satin-tools/#stroke-to-live-path-effect-satin)
 
 ### Troubleshoot
 
@@ -283,15 +281,9 @@ Add option for text position along the path (left, center, right, stretch)
 
 * Add option to group / not group unlinked symbol elements [#3624](https://github.com/inkstitch/inkstitch/pull/3624)
 
-[Read more](/docs/edit/#unlink-clone)
+[En savoir plus](/fr/docs/edit/#unlink-clone)
 
 ## Removed extensions
-
-### Convert Line to Satin Column
-
-The name was simplified to `Stroke to Satin`.
-
-This is more in the line with the names of the other conversion methods in Ink/Stitch.
 
 ### Glyphlist update
 
@@ -302,7 +294,7 @@ Glyphlist update has been part of the font management and was replaced by the mu
 
 Moved to `Install Addons for Inkscape`
 
-[Read more](/docs/install-addons/)
+[En savoir plus](/fr/docs/install-addons/)
 
 ## Stitch Type Related Updates
 
@@ -329,7 +321,7 @@ Clips are now easy accessable to Ink/Stitch in all forms. They are especially us
 
 * Clones now also clone commands attached to the element and its children [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
 
-[Read more](/docs/stitches/clone/)
+[En savoir plus](/fr/docs/stitches/clone/)
 
 ### Contour Fill
 
@@ -360,7 +352,7 @@ Clips are now easy accessable to Ink/Stitch in all forms. They are especially us
   * Option wether to flip each second line of the pattern or not
   * Anchor line to align ripple patterns [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
 
-  [Read more](/docs/stitches/ripple-stitch/#satin-guide)
+  [En savoir plus](/fr/docs/stitches/ripple-stitch/#satin-guide)
 
 ### Satin Columns
 
@@ -371,7 +363,7 @@ Clips are now easy accessable to Ink/Stitch in all forms. They are especially us
 
   ![Start/end command for satin columns](/assets/images/upcoming/3.2.0/satin_start_end_command.png)
 
-[Read more](/docs/stitches/satin-column/)
+[En savoir plus](/fr/docs/stitches/satin-column/)
 
 ## Palettes
 
