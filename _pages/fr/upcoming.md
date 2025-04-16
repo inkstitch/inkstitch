@@ -279,7 +279,7 @@ Ajout d'une option pour le positionnement du texte le long du tracé (gauche, ce
 
 ### Délier les clones
 
-* Ajout d'une option pour grouper ou nous les éléments déliés [#3624](https://github.com/inkstitch/inkstitch/pull/3624)
+* Ajout d'une option pour grouper ou non les éléments déliés [#3624](https://github.com/inkstitch/inkstitch/pull/3624)
 
 [En savoir plus](/fr/docs/edit/#unlink-clone)
 
