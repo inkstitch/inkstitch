@@ -189,7 +189,7 @@ Cela signifie que lorsque vous positionnez un symbole de départ, le point de d�
 
 `Commandes > Affichage > Mise à l'échelle des symboles de commande`
 
-* Définir simultanément une taille unique pour toutes les commandes (réinitialiser la transformation précédente) [#3329](https://github.com/inkstitch/inkstitch/pull/3329)
+* Définit simultanément une taille unique pour toutes les commandes [#3329](https://github.com/inkstitch/inkstitch/pull/3329)
 
 Veuillez noter que les transformations manuelles sur des groupes contenants des commandes peuvent influencer la taille réelle des symboles de commandes.
 
