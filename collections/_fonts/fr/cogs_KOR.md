@@ -25,7 +25,7 @@ Cette fonte comporte  {{ font.glyphs.size }} glyphes:
  
 ## Particularités
 
-Cogs_KOR is a steampunk satin font.
+Cogs_KOR  est une police steampunk en colonnes satin.
 
 ## Dimensions
 
