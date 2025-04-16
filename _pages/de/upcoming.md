@@ -150,7 +150,7 @@ Es legt einen bestimmten Farbsortierindex für ausgewählte Elemente fest, um di
 
 Wendet Transformationen (Rotation / Spiegelung) an und passt zeitgleich ebenfalls den Füllwinkel an.
 
-![Fill element transformed by 45 degrees, fill angle adapted](/lokal/assets/images/docs/transform.png)
+![Fill element transformed by 45 degrees, fill angle adapted](/assets/images/docs/transform.png)
 
 ## Aktualisierungen für Erweiterungen
 
