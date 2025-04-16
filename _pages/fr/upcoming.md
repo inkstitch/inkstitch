@@ -78,11 +78,11 @@ Ink/Stitch est en développement constant. Vous trouverez ici toutes les modific
 De nombreuses mises à jour des polices existantes ont été effectuées. Merci à tous !
 
 ## Nouvelles extensions
-### Editer JSON
+### Éditer le fichier JSON
 
-`Gestion des polices > Editer JSON` [#3371](https://github.com/inkstitch/inkstitch/pull/3371)
+`Gestion des polices > Editer le fichier JSON` [#3371](https://github.com/inkstitch/inkstitch/pull/3371)
 
-`Editer JSON` fait partie de la gestion des polices et permet aux auteurs de polices de corriger facilement les données du fichier JSON. Cette fonctionnalité est particulièrement utile pour les corrections de crénage, car elle simule un texte personnalisé lors de la mise à jour du crénage.![Edition du Crénage (distance entre les lettres](/assets/images/upcoming/3.2.0/edit_json.png)
+`Editer le fichier JSON` fait partie de la gestion des polices et permet aux auteurs de polices de corriger facilement les données du fichier JSON. Cette fonctionnalité est particulièrement utile pour les corrections de crénage, car elle simule un texte personnalisé lors de la mise à jour du crénage.![Edition du Crénage (distance entre les lettres](/assets/images/upcoming/3.2.0/edit_json.png)
 
 [En savoir plus](/ft/docs/font-tools/#edit-json)
 
@@ -90,9 +90,9 @@ De nombreuses mises à jour des polices existantes ont été effectuées. Merci 
 
 `Outils: Satin > Remplissage en Satin...` [#3406](https://github.com/inkstitch/inkstitch/pull/3406)
 
-Convertit un remplissage  en  satin. Nécessite un positionement manuel des traverses
+Convertit un remplissage  en  satin. Nécessite un positionnemen manuel des traverses
 
-![Fill to satin](/assets/images/docs/fill_to_satin_bridge.png)
+![Remplissage en satin](/assets/images/docs/fill_to_satin_bridge.png)
 
 [En savoir plus](/fr/docs/satin-tools/#fill-to-satin)
 
@@ -140,7 +140,7 @@ Un outil pour les créateurs de polices qui définit un index de tri des couleur
 
 ### Transformation
 
-`Edition > Transformation...` [#3657](https://github.com/inkstitch/inkstitch/pull/3657)
+`Édition > Transformation...` [#3657](https://github.com/inkstitch/inkstitch/pull/3657)
 
 Applique des transformations aux éléments (rotation/retournement) tout en adaptant l'angle de remplissage.
 
@@ -150,7 +150,7 @@ Applique des transformations aux éléments (rotation/retournement) tout en adap
 
 ### Général
 
-* Demander l'autorisation de mettre à jour les anciens fichiers SVG si l'attribut de version SVG d'InkStitch n'est pas spécifié dans le fichier. [#3228](https://github.com/inkstitch/inkstitch/pull/3228)
+* Demander l'autorisation de mettre à jour les anciens fichiers SVG si l'attribut de version SVG d'Ink/Stitch n'est pas spécifié dans le fichier. [#3228](https://github.com/inkstitch/inkstitch/pull/3228)
 
 Cela empêche la mise à jour erronée du contenu copié-collé dans un nouveau fichier.
 * Les extensions Ink/Stitch sont désormais affichées avec des icônes et des descriptions dans la galerie d'extensions pour un accès facile [#3287](https://github.com/inkstitch/inkstitch/pull/3287)
@@ -199,7 +199,7 @@ Veuillez noter que les transformations manuelles sur des groupes contenants des 
 
 `Gestion des polices > Test de police`
 
-* Ajout d'une option  de tri des couleurs pour les polices multicolores [#3242](https://github.com/inkstitch/inkstitch/pull/3242).  Uniquement si la police prévoit le tri des couleurs.
+* Ajout d'une option  de tri des couleurs pour les polices multicolores [#3242](https://github.com/inkstitch/inkstitch/pull/3242).  Uniquement si la police prend en charge le tri des couleurs.
 
 [En savoir plus](/fr/docs/font-tools/#font-sampling)
 
@@ -207,159 +207,160 @@ Veuillez noter que les transformations manuelles sur des groupes contenants des 
 
 `Gestion des polices > Forcer des points d'arrêts`
 
-* Ajout d'une option pour désactiver l'insertion de points d'arrête en fonction de la distance (par exemple, pour ajouter des points d'arrêt uniquement après le dernier élément du glyphe) [#3559](https://github.com/inkstitch/inkstitch/pull/3559)
+* Ajout d'une option pour désactiver l'insertion de points d'arrêt en fonction de la distance (par exemple, pour ajouter des points d'arrêt uniquement après le dernier élément du glyphe) [#3559](https://github.com/inkstitch/inkstitch/pull/3559)
 
 [En savoir plus](/fr/docs/font-tools/#force-lock-stitches)
 
-### Lettering
+### Lettrage
 
-`Lettering > Lettering`
+`Lettrage> Lettrage`
 
-* Load with last selected font and remember some other settings [#3498](https://github.com/inkstitch/inkstitch/pull/3498) [#3504](https://github.com/inkstitch/inkstitch/pull/3504)
-* Add support for more languages (right to left) [#3432](https://github.com/inkstitch/inkstitch/pull/3358) [#3466](https://github.com/inkstitch/inkstitch/pull/3466)
-* Lettering simulator: show accurate start and end points [#3358](https://github.com/inkstitch/inkstitch/pull/3358)
-* Uniformed size info (% and mm) [#3346](https://github.com/inkstitch/inkstitch/pull/3346)
-* Add color sort option for multicolor fonts [#3242](https://github.com/inkstitch/inkstitch/pull/3242), [#3381](https://github.com/inkstitch/inkstitch/pull/3381). The font has to support color sorting.
-* Options for text alignment [#3382](https://github.com/inkstitch/inkstitch/pull/3382)
+* Charge la dernière police sélectionnée et mémorise d'autres paramètres [#3498](https://github.com/inkstitch/inkstitch/pull/3498) [#3504](https://github.com/inkstitch/inkstitch/pull/3504)
+* Prise en charge de plus de langues (écriture de droite à gauche) [#3432](https://github.com/inkstitch/inkstitch/pull/3358) [#3466](https://github.com/inkstitch/inkstitch/pull/3466)
+* Simulateur du lettrage : affichage précis des points de départ et d'arrivée [#3358](https://github.com/inkstitch/inkstitch/pull/3358)
+* Informations de taille uniformes (% et mm) [#3346](https://github.com/inkstitch/inkstitch/pull/3346)
+* Ajout d'une option de tri par couleur pour les polices multicolores [#3242](https://github.com/inkstitch/inkstitch/pull/3242), [#3381](https://github.com/inkstitch/inkstitch/pull/3381). La police doit prendre en charge le tri par couleur.
+* Options d'alignement du texte [#3382](https://github.com/inkstitch/inkstitch/pull/3382)
 
-![Lettering: more options](/assets/images/upcoming/3.2.0/lettering.png)
+![Lettrage: plus d' options](/assets/images/upcoming/3.2.0/lettering.png)
 
 [En savoir plus](/fr/docs/lettering/)
 
-### Lettering Along Path
+### Lettrage le long d'un chemin
 
-`Lettering > Lettering Along Path`
+`Lettrage > Lettrage le long d'un chemin`
 
-Add option for text position along the path (left, center, right, stretch)
+Ajout d'une option pour le positionnement du texte le long du tracé (gauche, centre, droite, étirer)
 
-![A text aligned along a path while using the various options](/assets/images/docs/text_along_path_alignment.png)
+![Texte aligné le long d'un tracé avec différentes options](/assets/images/docs/text_along_path_alignment.png)
 
 [En savoir plus](/fr/docs/lettering/#lettering-along-path)
 
-### Multicolor Satin
+### Satin Multicolore
 
-* Option to adjust underlay [#3152](https://github.com/inkstitch/inkstitch/pull/3152)
+* Option d'ajustement des sous-couches [#3152](https://github.com/inkstitch/inkstitch/pull/3152)
 
 [En savoir plus](/fr/docs/satin-tools/#multicolor-satin)
 
 ### Redwork
 
-* Add combine option [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
-* Add keep originals option [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
+* Ajout d'une  option `Combiner` [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
+* Ajout d'une option `Garder les chemins originel` [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
 
 [En savoir plus](/fr/docs/stroke-tools/#redwork)
 
-### Simulator
+### Simulateur
 
-* Add button to toggle crosshair [#3616](https://github.com/inkstitch/inkstitch/pull/3616)
-* Option to save and reload simulator speed (optionally) [#3420](https://github.com/inkstitch/inkstitch/pull/3420)
-* Save and reload more simulator settings (status for buttons: jump, trim, color change, stop, needle penetration point, page border) [#3323](https://github.com/inkstitch/inkstitch/pull/3323)
-* Show page in simulator [#3120](https://github.com/inkstitch/inkstitch/pull/3120)
+* Ajout d'un bouton pour montrer la position de l'aiguille [#3616](https://github.com/inkstitch/inkstitch/pull/3616)
+* Ajout d'une option permettant d'enregistrer et de recharger la vitesse du simulateur (facultatif) [#3420](https://github.com/inkstitch/inkstitch/pull/3420)
+* Enregistre et recharge certains paramètres du simulateur (état des boutons : saut, coupe, changement de couleur, arrêt, point de pénétration de l'aiguille, bordure de page) [#3323](https://github.com/inkstitch/inkstitch/pull/3323)
+* Afficher la page dans le simulateur [#3120](https://github.com/inkstitch/inkstitch/pull/3120)
 
 [En savoir plus](/fr/docs/visualize/#simulator)
 
-### Stitch plan preview
+### Prévisualisation du plan de broderie
 
-* Improve realistic filter [#3222](https://github.com/inkstitch/inkstitch/pull/3222)
+* Amélioration du filtre réaliste [#3222](https://github.com/inkstitch/inkstitch/pull/3222)
 
 [En savoir plus](/fr/docs/visualize/#stitch-plan-preview)
 
-### Stroke to LPE-Satin
+### Trait en Effet de chemin satin 
 
-* Take transforms into account (for path specific lpe satins only) [#3500](https://github.com/inkstitch/inkstitch/pull/3500)
+* Prend en compte les transformation  (seulement pour les effets de chemin satin avec chemin spécifique) [#3500](https://github.com/inkstitch/inkstitch/pull/3500)
 
 [En savoir plus](/fr/docs/satin-tools/#stroke-to-live-path-effect-satin)
 
-### Troubleshoot
+### Résolution de problèmes
 
-* Group pointers. Specific error/warning types can be easily toggled on and off [#3486](https://github.com/inkstitch/inkstitch/pull/3486)
-* Add background to troubleshoot text [#3357](https://github.com/inkstitch/inkstitch/pull/3357)
+* Le regroupement en groupes  permet d'afficher/désafficher des types d'erreur  ou d'avertissement [#3486](https://github.com/inkstitch/inkstitch/pull/3486)
+* Ajout d'un fond au texte de résolution des problèmes [#3357](https://github.com/inkstitch/inkstitch/pull/3357)
 
-[Read more](/docs/troubleshoot/#troubleshoot-objects)
+[En savoir plus](/fr/docs/troubleshoot/#troubleshoot-objects)
 
-### Unlink clones
+### Délier les clones
 
-* Add option to group / not group unlinked symbol elements [#3624](https://github.com/inkstitch/inkstitch/pull/3624)
+* Ajout d'une option pour grouper ou nous les éléments déliés [#3624](https://github.com/inkstitch/inkstitch/pull/3624)
 
 [En savoir plus](/fr/docs/edit/#unlink-clone)
 
-## Removed extensions
+## Extensions supprimées
 
-### Glyphlist update
+### Mise à jour de la liste des glyphes
 
-Glyphlist update has been part of the font management and was replaced by the much more powerful
-[Edit JSON extension](/docs/font-tools/#edit-json)  [#3380](https://github.com/inkstitch/inkstitch/pull/3380)
+A  été remplacé par l'extension bien plus puissante
+[Editer le fichier  JSON ](/docs/font-tools/#edit-json)  [#3380](https://github.com/inkstitch/inkstitch/pull/3380)
 
-### Install Thread Color Palettes for Inkscape
+### Installer des palettes de couleur de fil (pour Inkscape)
 
-Moved to `Install Addons for Inkscape`
+Déplacé vers  `Installer des modules complémentaires pour Inkscape`
 
 [En savoir plus](/fr/docs/install-addons/)
 
-## Stitch Type Related Updates
+## Mises a jour relatives aux types de points de broderie
 
-### Automatic Start- and Endpoints
+### Point de départ et d'arrivée automatiques
 
-Fill elements and satin columns now start automatically at the nearest point to the previous element and end at the nearest point to the next element [#3370](https://github.com/inkstitch/inkstitch/pull/3370).
+Les remplissages et les colonnes satin commencent désormais automatiquement au point le plus proche de l'élément précédent et se terminent au point le plus proche de l'élément suivant [#3370](https://github.com/inkstitch/inkstitch/pull/3370).
 
-The behaviour is adaptable and of course start- and end commands will still work.
+Le comportement est adaptable et, bien sûr, les commandes de début et de fin fonctionnent toujours.
 
-![Two satins joining at one point, rendered without a jump stitch](/assets/images/upcoming/3.2.0/start_at_nearest_point.png)
+![Deux satins se rejoignant en un point, rendu sans saut](/assets/images/upcoming/3.2.0/start_at_nearest_point.png)
 
-### Clips
+### Découpes
 
-Clips are now easy accessable to Ink/Stitch in all forms. They are especially useful in combination with the redwork tool.
+Les découpes sont désormais facilement accessibles dans Ink/Stitch sous toutes leurs formes. Elles sont particulièrement utiles en combinaison avec l'outil Redwork.
 
-* **Groups:** Ink/Stitch can now also parse clips which are applied on groups [#3261](https://github.com/inkstitch/inkstitch/pull/3261).
+* **Groupes :** Ink/Stitch peut désormais analyser les découpes appliqués aux groupes [#3261](https://github.com/inkstitch/inkstitch/pull/3261).
 
-  ![cliped groups](/assets/images/tutorials/mandala/lettremandala.svg)
-* **Effect clips** allow to use an inverted clip ([#3364](https://github.com/inkstitch/inkstitch/pull/3364)).
+![Groupes avec découpe](/assets/images/tutorials/mandala/lettremandala.svg)
 
-  ![interved clips](/assets/images/galleries/fonts/decadent_flowers_monogram/IMG_5211.jpg)
+* **Découpes d'effet** permettent d'utiliser une découpe inversée ([#3364](https://github.com/inkstitch/inkstitch/pull/3364)).
+
+  ![découpes inversées](/assets/images/galleries/fonts/decadent_flowers_monogram/IMG_5211.jpg)
 
 ### Clones
 
-* Clones now also clone commands attached to the element and its children [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
+* Les clones clonent désormais également les commandes attachées à l'élément et à ses enfants [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
 
 [En savoir plus](/fr/docs/stitches/clone/)
 
-### Contour Fill
+### Remplissage par contour
 
-* Add expand option [#3462](https://github.com/inkstitch/inkstitch/pull/3462)
+* Ajout d'une option Étendre [#3462](https://github.com/inkstitch/inkstitch/pull/3462)
 
-[Read more](/docs/stitches/contour-fill/)
+[En savoir plus](/fr/docs/stitches/contour-fill/)
 
-### Linear gradient fill
+### Remplissage en dégradé  linéaaire
 
-* Add randomization options to linear gradient fill [#3311](https://github.com/inkstitch/inkstitch/pull/3311)
+* Ajout d'une  option de randomisation au remplissage en dégradé linéaire[#3311](https://github.com/inkstitch/inkstitch/pull/3311)
 
-[Read more](/docs/stitches/linear-gradient-fill/)
+[En savoir plus](/fr/docs/stitches/linear-gradient-fill/)
 
-### Manual stitch
+### Point manuel
 
-* Add bean stitch option to manual stitch [#3312](https://github.com/inkstitch/inkstitch/pull/3312)
+* Ajout d'une option de répétitions au point manuel [#3312](https://github.com/inkstitch/inkstitch/pull/3312)
 
 [Read more](/docs/stitches/manual-stitch/)
 
-### Ripple Stitch
+### Broderie ondulée
 
-* Manual stitch placement for ripple patterns [#3256](https://github.com/inkstitch/inkstitch/pull/3256)
-* Add stitch grid first option [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
-* Satin guided ripples
+* Option de placement manuel des points pour les réplications [#3256](https://github.com/inkstitch/inkstitch/pull/3256)
+* Ajout  d'une option pour broder la grille en premier [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
+* Ondulations guidées par un satin
 
-  ![satin guided ripple](/assets/images/docs/ripple_satin_guide.svg)
+  ![Ondulations guidées par un satin](/assets/images/docs/ripple_satin_guide.svg)
 
-  * Option wether to flip each second line of the pattern or not
-  * Anchor line to align ripple patterns [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
+  * Option pour choisir ou non d'inverser une réplication sur deux 
+  * Ajout possible de lignes d'ancrage pour aligner les réplications sur les traverses du satin de guidage [#3436](https://github.com/inkstitch/inkstitch/pull/3436)
 
   [En savoir plus](/fr/docs/stitches/ripple-stitch/#satin-guide)
 
-### Satin Columns
+###  Colonnes Satin
 
-* Starts and ends at nearest points by default [#3423](https://github.com/inkstitch/inkstitch/pull/3423)
+* Par défaut elles commencent et terminent au point le plus proche [#3423](https://github.com/inkstitch/inkstitch/pull/3423)
 
   ![Automated start and end point for satin column](/assets/images/upcoming/3.2.0/satin_start_end.png)
-* Enable start end commands for satins [#3315](https://github.com/inkstitch/inkstitch/pull/3315)
+* Ajout des commandes de début et fin pour les satins [#3315](https://github.com/inkstitch/inkstitch/pull/3315)
 
   ![Start/end command for satin columns](/assets/images/upcoming/3.2.0/satin_start_end_command.png)
 
@@ -367,54 +368,54 @@ Clips are now easy accessable to Ink/Stitch in all forms. They are especially us
 
 ## Palettes
 
-* Update `InkStitch Madeira Rayon.gpl` [#3444](https://github.com/inkstitch/inkstitch/pull/3444)
-* Isacord polyester: added `0713 Lemon` color [#3225](https://github.com/inkstitch/inkstitch/pull/3225)
+* Mise à jour de `InkStitch Madeira Rayon.gpl` [#3444](https://github.com/inkstitch/inkstitch/pull/3444)
+* Isacord polyester: ajout de la couleur `0713 Lemon`  [#3225](https://github.com/inkstitch/inkstitch/pull/3225)
 
 ## Export / Import
 
-See full list of [supported file formats](/docs/file-formats/)
+Voir la [liste complète des formats pris en compte](/docs/file-formats/)
 
-### New Export Formats
+### Nouveaux formats d'export
 
 TBF
 
 Longarm Quilting: PLT, QCC
 
-### New Import Formats
+### Nouveaux formats d'import
 
 Longarm Quilting: PLT, QCC, IQP
 
 ### GCODE
 
-* Custom RGB values [#3530](https://github.com/inkstitch/inkstitch/pull/3530)
-* Custom JUMP
+* Valeurs RGB personnalisées [#3530](https://github.com/inkstitch/inkstitch/pull/3530)
+* JUMP personnalisé
 
-### Batch Lettering
+### Lettrage par lot
 
-Ink/Stitch can now export multiple files with different texts at once. A path with a specified label within the open document can be used to define text position.
+Ink/Stitch permet maintenant d'exporter plusieurs fichiers avec des textes différents en une seule fois. Pour un texte le long d'un tracé, il est possible d'utiliser un chemin avec un label spécifié pour définir le tracé.
 
-![A patch with four different names](/assets/images/docs/batch-lettering.png)
+![Un écusson avec 4 noms différents](/assets/images/docs/batch-lettering.png)
 
-[More information](/docs/lettering/#batch-lettering)
+[En savoir plus](/fr/docs/lettering/#batch-lettering)
 
-## Releases
+## Versions
 
-* Windows releases are now signed for free with [SignPath.io](https://about.signpath.io) certificate by [SignPath Foundation](https://signpath.org). We are very greatful for their support.
-* Windows 32bit version has been removed as it is no longer supported
-* Linux releases available for 64bit and 32bit
+* Les versions Windows sont désormais signées gratuitement [SignPath.io](https://about.signpath.io) grace au certificat de la [SignPath Foundation](https://signpath.org). Nous leur sommes très reconnaissants de leur soutien.
+* La version Windows 32 bits a été supprimée, car elle n'est plus prise en charge.
+* Versions Linux disponibles pour 64 bits et 32 ​​bits.
 
-## Developer and Build Stuff
+## Du coté des Développeurs 
 
-* Sew Stack (first steps) [#3133](https://github.com/inkstitch/inkstitch/pull/3133)
+* Sew Stack (premières étapes) [#3133](https://github.com/inkstitch/inkstitch/pull/3133)
 
-  The Sew Stack will ultimately replace Params and contain its functionality. For now, it is invisible in our releases.
-  The params dialog as it is now suffers from all the options, we've added over the years. It is now hard to find a specific setting in there
-  and even harder if you are not yet familiar with the program. Sew Stack will help to organize parameter settings.
+"Sew Stack" remplacera à terme "Paramètres" et contiendra ses fonctionnalités. Pour l'instant, il est invisible dans nos versions.
+La boîte de dialogue des paramètres actuelle souffre de toutes les options ajoutées au fil des ans. Il est désormais difficile d'y trouver un paramètre spécifique, et encore plus difficile si vous ne connaissez pas encore le programme. Sew Stack vous aidera à organiser les paramètres.
 
-  It is only visible in manual installs and will not render, unless `enable_sew_stack` is enabled in the debug config file.
-  Please note, that this will alter the start and end points of the elements and should only be used for development purposes.
+Il n'est visible que lors des installations manuelles et ne s'affichera pas, sauf si « enable_sew_stack » est activé dans le fichier de configuration de débogage.
+Veuillez noter que cela modifiera les points de début et de fin des éléments et ne doit être utilisé qu'à des fins de développement.
+  
 
-* Update update build process [#3652](https://github.com/inkstitch/inkstitch/pull/3652)
+* Mise à jour du processus de mises  à jour [#3652](https://github.com/inkstitch/inkstitch/pull/3652)
   * removed win32 build
   * use geos source build only for linux32
   * set python version to 3.11 for all builds
@@ -435,7 +436,7 @@ Ink/Stitch can now export multiple files with different texts at once. A path wi
 * Additional CI Improvements [#3174](https://github.com/inkstitch/inkstitch/pull/3174)
 * CI: Added pytest, some speed improvements [#3135](https://github.com/inkstitch/inkstitch/pull/3135)
 
-## Bug Fixes
+## Résolution de bugs
 
 * fix ensure even center walk underlay repeats in auto_satin when value is empty [#3651](https://github.com/inkstitch/inkstitch/pull/3651)
 * Prevent unwanted simulator scale transforms [#3637](https://github.com/inkstitch/inkstitch/pull/3637)
