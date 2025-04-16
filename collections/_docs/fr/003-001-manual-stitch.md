@@ -33,7 +33,7 @@ Paramètre|Description
 ---|---
 Points droits le long des chemins       |Doit être activé pour que ces paramètres prennent effet.
 Méthode                                 |Choisir le type "Point manuel"
-Nombre de répétitions du point triple   |Active le [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />
+Nombre de répétitions du point triple   |Active le [Mode point multiple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />
 Longueur maximum de point               |Les points plus longs  seront subdivisés. Laissez vide si vous ne souhaitez pas de subdivision.
 Longueur minimum de point               |Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.
 Longueur minimum de saut                |Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.
