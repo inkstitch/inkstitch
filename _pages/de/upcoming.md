@@ -30,7 +30,7 @@ Ink/Stitch befindet sich in ständiger Entwicklung. Hier kannst du alle Änderun
 * [Barstitch textured](/de/fonts/barstitch_bold/)
 
   ![Barstitch textured](/assets/images/fonts/barstitch_textured.png)
-* [Califragilistic tamed](/de/fonts/califragilistic/)
+* [Califragilistic](/de/fonts/califragilistic/)
 
   ![Califragilistic](/assets/images/fonts/califragilistic.png)
 * [Cogs_KOR](/de/fonts/cogs_KOR)
