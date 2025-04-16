@@ -35,24 +35,28 @@ class ColorizePanel(ScrolledPanel):
 
         self.monochrome_width_label = wx.StaticText(self, label=_("Monochrome color width"))
         self.monochrome_width_label.SetToolTip(_("Adapt color width here when equidistance is enabled."))
-        self.monochrome_width = wx.SpinCtrlDouble(self, min=0, max=100, initial=100, inc=1, style=wx.SP_WRAP)
+        self.monochrome_width = wx.SpinCtrlDouble(self, min=0, max=100, initial=100, inc=1, style=wx.SP_WRAP | wx.TE_PROCESS_ENTER)
         self.monochrome_width.SetDigits(2)
         self.monochrome_width.Bind(wx.EVT_SPINCTRLDOUBLE, self._on_update_monochrome_width)
+        self.monochrome_width.Bind(wx.EVT_TEXT_ENTER, self._on_update_monochrome_width)
 
         overflow_left_label = wx.StaticText(self, label=_("Overflow left"))
-        self.overflow_left = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP)
+        self.overflow_left = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP | wx.TE_PROCESS_ENTER)
         self.overflow_left.SetDigits(2)
         self.overflow_left.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
+        self.overflow_left.Bind(wx.EVT_TEXT_ENTER, self._update)
 
         overflow_right_label = wx.StaticText(self, label=_("Overflow right"))
-        self.overflow_right = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP)
+        self.overflow_right = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP | wx.TE_PROCESS_ENTER)
         self.overflow_right.SetDigits(2)
         self.overflow_right.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
+        self.overflow_left.Bind(wx.EVT_TEXT_ENTER, self._update)
 
         pull_compensation_label = wx.StaticText(self, label=_("Pull compensation (mm)"))
-        self.pull_compensation = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP)
+        self.pull_compensation = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP | wx.TE_PROCESS_ENTER)
         self.pull_compensation.SetDigits(2)
         self.pull_compensation.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
+        self.overflow_left.Bind(wx.EVT_TEXT_ENTER, self._update)
 
         seed_label = wx.StaticText(self, label=_("Random seed"))
         self.seed = wx.TextCtrl(self)
