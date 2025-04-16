@@ -1,5 +1,5 @@
 ---
-title: "Installer des compléments pour Inkscape"
+title: "Installer des module complémentaires pour Inkscape"
 permalink: /fr/docs/install-addons/
 last_modified_at: 2025-04-03
 toc: true
