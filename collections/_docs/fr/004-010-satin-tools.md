@@ -216,10 +216,10 @@ Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le fa
 ### Usage
 
 * Dessinez votre forme avec votre style de zigzag préféré.
-* Sélectionnez la forme et lancez  `Extensions > Ink/Stitch > Outis: Satin > "Ligne  Zigzag" en Satin`
+* Sélectionnez la forme et lancez  `Extensions > Ink/Stitch > Outils: Satin > "Ligne  Zigzag" en Satin`
   * Sélectionnez votre style de zigzag 
   * Choisissez si votre chemin doit être adouci ou constitué de segments de droites
-  * Choisissez si les traverses doivent être insérrées ou non. Les colonnes satin créées auront toujours autant de noeuds sur les deux rails.
+  * Choisissez si les traverses doivent être inserrées ou non. Les colonnes satin créées auront toujours autant de noeuds sur les deux rails.
 
 ### Style de zigzag
 
@@ -231,6 +231,6 @@ Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le fa
 Si vous voyez quelque chose comme le dessin ci-dessous, vous avez probablement choisi le mauvais style de zigzag pour votre dessin.
 ![Mauvais choix de style de zigzag](/assets/images/docs/zigzag-line-to-satin-wrong-pattern.png)
 
-## Tutoriaux utilisant Outils: Satin
+## Tutoriels utilisant Outils: Satin
 
 {% include tutorials/tutorial_list key="tool" value="Satin" %}
