@@ -4,7 +4,7 @@ permalink: /fr/docs/font-tools/
 last_modified_at: 2025-04-12
 toc: true
 ---
-Un ensemble d'outils adaptés aux créateurs de polices ou à ceux qui souhaitent ajouter des polices supplémentaires dans [l'outil de lettrage](/docs/lettering) d'Ink/Stitch.
+Un ensemble d'outils pour les créateurs de polices ou à ceux qui souhaitent ajouter des polices supplémentaires dans [l'outil de lettrage](/docs/lettering) d'Ink/Stitch.
 
 Lisez le [Tutoriel de création de police pour Ink/Stitch](/fr/tutorials/font-creation) pour des instructions approfondies.
 {: .notice--info }
@@ -17,7 +17,7 @@ Placez chaque police dans un sous-répertoire de votre répertoire personnalisé
 De plus, il est recommandé d'enregistrer également un fichier de licence. 
 
 Les variantes de police doivent être nommées avec une flèche, indiquant la direction de broderie pour laquelle elles ont été créées (`→.svg`, `←.svg`, etc.). 
-Il est aussi possible pour une direction donnée de créer unrépertoire dont le nom est la flèche de direction et de répartir les glyphes de cette direction dans plusieurs fichiers dont le nom est alors quelconque.
+Il est aussi possible pour une direction donnée de créer un répertoire dont le nom est la flèche de direction et de répartir les glyphes de cette direction dans plusieurs fichiers dont le nom est alors quelconque.
 
 Le fichier json doit inclure au minimum le nom des polices.
 
@@ -25,7 +25,7 @@ Le fichier json doit inclure au minimum le nom des polices.
 
 {% include upcoming_release.html %}
 
-Cette extension permet d'éditer les informations existantes sur une police.  Si la police n'a pas encore de fichier json, il faut en créer un avec  [generer le fichier JSON](#generate-json)
+Cette extension permet d'éditer les informations existantes sur une police.  Si la police n'a pas encore de fichier json, il faut en créer un avec  [generer le fichier JSON](#generate-json). Elle met à jour la liste des glyphes.
 
 ### Usage
 
@@ -168,7 +168,3 @@ Défini un indice qui permet à l'outil de lettrage de savoir où positionner le
 
 Le fichier json doit spécifier que la police est triable. Utilisez  [Editer fichier JSON](#edit-json) et cochez l'option `Triable` dans l'onglet `Paramètres de la police`.
 {: .notice--warning }
-
-## Mettre à jour la liste des glyphes  {#update-glyph-list}
-
-Permet d'insérer dans le fichier json la liste des glyphes définis . Cette opération doit être effectuée une première fois, puis chaque fois que la liste des glyphes effectivement programmés est modifiée.
