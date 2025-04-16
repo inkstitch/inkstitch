@@ -12,34 +12,34 @@ Ink/Stitch est en développement constant. Vous trouverez ici toutes les modific
 
 ### Nouvelles Polices
 
-* [Ambigüe](/fonts/ambigue/)
+* [Ambigüe](/fr/fonts/ambigue/)
 
   ![Ambigüe](/assets/images/fonts/ambigue.png)
-* [Barstitch bold](/fonts/barstitch_bold/)
+* [Barstitch bold](/fr/fonts/barstitch_bold/)
 
   ![Barstitch bold](/assets/images/fonts/barstitch_bold.png)
-* [Barstitch cloudy](/fonts/barstitch_bold/)
+* [Barstitch cloudy](/fr/fonts/barstitch_bold/)
 
   ![Barstitch cloudy](/assets/images/fonts/barstitch_cloudy.png)
-* [Barstitch mandala](/fonts/barstitch/bold/)
+* [Barstitch mandala](/fr/fonts/barstitch/bold/)
 
   ![Barstitch mandala](/assets/images/fonts/barstitch_mandala.png)
-* [Barstitch regular](/fonts/barstitch_bold)
+* [Barstitch regular](/fr/fonts/barstitch_bold)
 
   ![Barstitch regular](/assets/images/fonts/barstitch_regular.png)
-* [Barstitch textured](/fonts/barstitch_bold/)
+* [Barstitch textured](/fr/fonts/barstitch_bold/)
 
   ![Barstitch textured](/assets/images/fonts/barstitch_textured.png)
-* [Califragilistic tamed](/fonts/califragilistic/)
+* [Califragilistic tamed](/fr/fonts/califragilistic/)
 
   ![Califragilistic](/assets/images/fonts/califragilistic.png)
-* [Cogs_KOR](/fonts/cogs_KOR)
+* [Cogs_KOR](/fr/fonts/cogs_KOR)
 
   ![Cogs_KOR](/assets/images/fonts/cogs_KOR.png)
-* [Computer](/fonts/computer/)
+* [Computer](/fr/fonts/computer/)
 
   ![Copmuter](/assets/images/fonts/computer.png)
-* [Decadent Flower Monogram](/fonts/decadent_flowers_monogram/)
+* [Decadent Flower Monogram](/fr/fonts/decadent_flowers_monogram/)
 
   ![Decadent flower monogram](/assets/images/fonts/decadent_flowers_monogram.png)
 * [גופן בינוני](/fonts/hebrew_font/)
