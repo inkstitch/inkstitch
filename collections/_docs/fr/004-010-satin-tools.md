@@ -1,7 +1,7 @@
 ---
 title: "Outils Satin"
 permalink: /fr/docs/satin-tools/
-last_modified_at: 2025-04-12
+last_modified_at: 2025-04-16
 toc: true
 ---
 `Extensions > Ink/Stitch  > Outils :  Satin` inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/fr/docs/stitches/satin-column/).
@@ -92,7 +92,7 @@ Assurez-vous d'ajouter un nombre suffisant de traverses, en particulier lorsque 
 
 Option               | Description
 ---------------------|-------------
-Début / fin à la traverse | Lorsque cette option est activée, les sections d'extrémité ouvertes seront supprimées du satin. Veuillez noter que vous devez définir un nombre suffisant de traverses faute de quoi vous aurez des parties manquantes. Cette option est utile, car dans la plupart des cas, vous ne voudrez pas que votre satin se termine trop étroitement court car il pousse vers les extrémités lorsque vous le cousez.
+Début / fin à la traverse | Lorsque cette option est activée, les sections d'extrémité ouvertes seront supprimées du satin. Attention à définir un nombre suffisant de traverses faute de quoi il manquera des parties. Cette option est utile, car dans la plupart des cas, vous ne voudrez pas que votre satin se termine trop étroitement  car il pousse vers les extrémités lorsque vous le brodez.
 Sous-couche de passage central | Ajoute une sous-couche centrale par défaut au(x) satin(s)
 Sous-couche de contour | Ajoute une sous-couche de contour par défaut au(x) satin(s)
 Sous-couche en zigzag | Ajoute une sous-couche zigzag par défaut au(x) satin(s)
@@ -100,14 +100,14 @@ Conserver les chemins originels | Conserver ou supprimer les chemins sélectionn
 
 ### Intersections
 
-Utilisez des ponts aux intersecttions pour expliquer à Ink/Stitch la manière  de connecter les colonnes satins.
+Utilisez des ponts aux intersections pour expliquer à Ink/Stitch la manière de connecter les colonnes satins.
 
-Les intersections non reliées laissent simplement un espace vide.
+En l'absence de pont, il reste un espace vide aux intersections.
 
-Bridges have to be completely inside the fill element and cannot cross the outline.
+Les ponts doivent être **entièrement contenus** dans le remplissage et **ne peuvent pas  traverser sa frontiere.**
 {: .notice--info}
 
-![Conversion en satin avec  et sans traverse pont](/assets/images/docs/fill_to_satin_bridge.png)
+![Conversion en satin avec et sans pont](/assets/images/docs/fill_to_satin_bridge.png)
 
 ### Fichier d'exemple {#sample-file}
 
