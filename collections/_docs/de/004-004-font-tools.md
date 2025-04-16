@@ -24,9 +24,9 @@ Die JSON-Datei muss als minimale Bedingung den Namen der Schrift enthalten.
 
 {% include upcoming_release.html %}
 
-Diese Erweiterung erlaubt das bearbeiten von Schriftinformationen. Hat die Schrift noch keine JSON-Datei, erstelle sie zunächst mit [JSON-Datei erstellen](#json-datei-erstellen)
+Diese Erweiterung erlaubt das Bearbeiten von Schriftinformationen. Hat die Schrift noch keine JSON-Datei, erstelle sie zunächst mit [JSON-Datei erstellen](#json-datei-erstellen)
 
-Diese Erweiterun auch aktualisiert die Liste der verfügbaren Zeichen in der JSON-Datei.
+Außerdem wird bei Ausführung der Erweiterung die Liste der verfügbaren Zeichen in der JSON-Datei aktualisiert. Daher sollte sie nach dem Hinzfügen oder Löschen von Schriftzeichen auf die geänderte Schrift angewandt werden.
 
 ## Zeichentabelle
 

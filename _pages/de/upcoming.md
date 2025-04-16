@@ -1,5 +1,5 @@
 ---
-title: "Neue Funktionen, Aktualisierungen und Fehlerbehebungen für die nächste Ink/Stitch verison"
+title: "Neue Funktionen, Aktualisierungen und Fehlerbehebungen für die nächste Ink/Stitch Version"
 permalink: /de/upcoming/
 last_modified_at: 2025-04-15
 sidebar:
