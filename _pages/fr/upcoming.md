@@ -38,7 +38,7 @@ Ink/Stitch est en développement constant. Vous trouverez ici toutes les modific
   ![Cogs_KOR](/assets/images/fonts/cogs_KOR.png)
 * [Computer](/fr/fonts/computer/)
 
-  ![Copmuter](/assets/images/fonts/computer.png)
+  ![Cpmputer](/assets/images/fonts/computer.png)
 * [Decadent Flower Monogram](/fr/fonts/decadent_flowers_monogram/)
 
   ![Decadent flower monogram](/assets/images/fonts/decadent_flowers_monogram.png)
@@ -84,7 +84,7 @@ De nombreuses mises à jour des polices existantes ont été effectuées. Merci 
 
 `Editer le fichier JSON` fait partie de la gestion des polices et permet aux auteurs de polices de corriger facilement les données du fichier JSON. Cette fonctionnalité est particulièrement utile pour les corrections de crénage, car elle simule un texte personnalisé lors de la mise à jour du crénage.![Edition du Crénage (distance entre les lettres](/assets/images/upcoming/3.2.0/edit_json.png)
 
-[En savoir plus](/ft/docs/font-tools/#edit-json)
+[En savoir plus](/fr/docs/font-tools/#edit-json)
 
 ### Remplissage en Satin
 
