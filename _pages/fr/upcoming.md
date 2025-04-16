@@ -245,14 +245,14 @@ Ajout d'une option pour le positionnement du texte le long du tracé (gauche, ce
 ### Redwork
 
 * Ajout d'une  option `Combiner` [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
-* Ajout d'une option `Garder les chemins originel` [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
+* Ajout d'une option `Garder les chemins originels` [#3407](https://github.com/inkstitch/inkstitch/pull/3407)
 
 [En savoir plus](/fr/docs/stroke-tools/#redwork)
 
 ### Simulateur
 
 * Ajout d'un bouton pour montrer la position de l'aiguille [#3616](https://github.com/inkstitch/inkstitch/pull/3616)
-* Ajout d'une option permettant d'enregistrer et de recharger la vitesse du simulateur (facultatif) [#3420](https://github.com/inkstitch/inkstitch/pull/3420)
+* Ajout d'une option permettant d'enregistrer la vitesse et de réouvrir ultérieurement le simulateur avec cette même vitesse  (facultatif) [#3420](https://github.com/inkstitch/inkstitch/pull/3420)
 * Enregistre et recharge certains paramètres du simulateur (état des boutons : saut, coupe, changement de couleur, arrêt, point de pénétration de l'aiguille, bordure de page) [#3323](https://github.com/inkstitch/inkstitch/pull/3323)
 * Afficher la page dans le simulateur [#3120](https://github.com/inkstitch/inkstitch/pull/3120)
 
@@ -326,7 +326,7 @@ Les découpes sont désormais facilement accessibles dans Ink/Stitch sous toutes
 
 ### Remplissage par contour
 
-* Ajout d'une option Étendre [#3462](https://github.com/inkstitch/inkstitch/pull/3462)
+* Ajout d'une option Élargir [#3462](https://github.com/inkstitch/inkstitch/pull/3462)
 
 [En savoir plus](/fr/docs/stitches/contour-fill/)
 
@@ -340,7 +340,7 @@ Les découpes sont désormais facilement accessibles dans Ink/Stitch sous toutes
 
 * Ajout d'une option de répétitions au point manuel [#3312](https://github.com/inkstitch/inkstitch/pull/3312)
 
-[Read more](/docs/stitches/manual-stitch/)
+[En savoir plus](/fr/docs/stitches/manual-stitch/)
 
 ### Broderie ondulée
 
