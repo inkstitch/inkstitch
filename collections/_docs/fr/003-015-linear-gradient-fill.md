@@ -31,7 +31,7 @@ Exécutez « Extensions > Ink/Stitch > Paramètres » pour ajuster les paramètr
 |---|---|---|
 |Auto-remplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
 |Méthode de remplissage|Remplissage dégradé linéaire| Doit être sur Remplissage dégradé linéaire.|
-|Compensation d'étirement - Élargir|![Expand example](/assets/images/docs/params-fill-expand.png) |Etend la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu.|
+|Élargir|![Expand example](/assets/images/docs/params-fill-expand.png) |Etend la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu.|
 |Longueur maximale du point de remplissage|![Exemple de longueur de point](/assets/images/docs/params-fill-stitch_length.png) |La longueur de chaque point dans une rangée. "Max", c'est parce qu'un point plus court peut être utilisé au début ou à la fin d'une ligne.|
 |Espacement entre les rangées|![Exemple d'espacement](/assets/images/docs/params-fill-spacing_between_rows.png) |Espacement entre les rangées de points.|
 |Décaler les rangées autant de fois avant de répéter|![Décalage exemple](/assets/images/docs/params-fill-stagger.png) |Les points sont décalés de manière à ce que les rangées de points voisines ne tombent pas toutes dans la même colonne (ce qui créerait un effet de vallée). Ce paramètre détermine la longueur du cycle de décalage des rangées. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières.|
