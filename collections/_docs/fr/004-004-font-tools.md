@@ -17,7 +17,7 @@ Placez chaque police dans un sous-répertoire de votre répertoire personnalisé
 De plus, il est recommandé d'enregistrer également un fichier de licence. 
 
 Les variantes de police doivent être nommées avec une flèche, indiquant la direction de broderie pour laquelle elles ont été créées (`→.svg`, `←.svg`, etc.). 
-Il est aussi possible pour une direction donnée de créer un repertoire dont le nom est la flêche de direction et de répartir les glyphes de cette direction dans plusieurs fichiers dont le nom est alors quelconque.
+Il est aussi possible pour une direction donnée de créer unrépertoire dont le nom est la flèche de direction et de répartir les glyphes de cette direction dans plusieurs fichiers dont le nom est alors quelconque.
 
 Le fichier json doit inclure au minimum le nom des polices.
 
@@ -29,14 +29,14 @@ Cette extension permet d'éditer les informations existantes sur une police.  Si
 
 ### Usage
 
-* Lancez `Extensions > Ink/Stitch > Gestion des polices > Editer JSON`
+* Lancez `Extensions > Ink/Stitch > Gestion des polices > Éditer le fichierJSON`
 * Choisir une police dans la liste des polices
-* Metttre à jour les information tels que le nom, la description, les mots clés ou les information de crénage.
+* Mettre à jour les information tels que le nom, la description, les mots clés ou les information de crénage.
 * Cliquez sur `Appliquer`
 
 ## Test de police {#font-sampling}
 
-Cette extension crée un calque qui contient toutes les lettres d'une fonte. Elle aide les créateurs de fontes à tester leurs nouvelles fonte.
+Cette extension crée un calque qui contient toutes les lettres d'une fonte. Elle aide les créateurs de fontes à tester leurs nouvelles fontes.
 
 ### Usage
 
@@ -50,7 +50,7 @@ Cette extension crée un calque qui contient toutes les lettres d'une fonte. Ell
 * Direction du texte:  par défaut de gauche à droite
 * Échelle:  en pourcentage
 * Largeur du texte: des sauts de lignes seront ajoutés pour ne  pas dépasser cette largeur
-* Tri des couleurs: choisir si une fonte multicolore est triée ou nonn (la fonte doit utiliser [l'indice de tri des couleurs](#set-color-index))
+* Tri des couleurs: choisir si une fonte multicolore est triée ou non (la fonte doit utiliser [l'indice de tri des couleurs](#set-color-index))
 
 ## Forcer des points d'arrêt {#force-lock-stitches}
 
@@ -73,7 +73,7 @@ Pour la même raison, lorsque les lettres sont détachées, il peut être utile 
 * Restreindre au satin
 
 * Ajouter des points d'arrêt forcés par la distance
-  * Mininum distance (mm)
+  * Minimum distance (mm)
   * Maximum distance (mm)
 
 * Ajouter l'attribut "forcer les points d'arrêts" au dernier élément de chaque glyphe
@@ -82,7 +82,7 @@ Pour la même raison, lorsque les lettres sont détachées, il peut être utile 
 
 Cette extension est destinée à vous aider à créer le fichier json.
 Selon la façon dont vous avez généré votre fichier de police, il peut permettre d'inclure des informations de crénage supplémentaires dans le fichier json.
-Lire [**comment générer une police svg avec des informations de crénage**](/tutorials/font-creation).
+Lire [**comment générer une police svg avec des informations de crénage**](/fr/tutorials/font-creation).
 
 Si vous avez généré votre fichier svg sans informations de crénage, cette extension peut quand même vous aider à configurer votre fichier json avec des informations de base.
 
@@ -93,7 +93,7 @@ Si vous avez généré votre fichier svg sans informations de crénage, cette ex
 |Nom (obligatoire)                  |le nom de votre police (obligatoire).
 |Description                        |informations supplémentaires sur votre police (telles que des informations de taille, etc.)
 |Fichier de police (obligatoire)    | Si vous avez utilisé FontForge pour générer votre fichier de police svg, Ink/Stitch lira les informations de crénage de votre police pour les inclure dans le fichier json.<br/>De plus, le fichier de police sera utilisé pour déterminer le chemin de sortie.<br/><br/>Un fichier `font.json` sera enregistré dans le dossier de votre fichier de fonte svg.
-|Keywords                           |Enable the categories that apply to your font
+|Mots clés                          |Choisir les catégories applicables à votre police
 
 ### Paramètres de la police
 
@@ -101,11 +101,11 @@ Si vous avez généré votre fichier svg sans informations de crénage, cette ex
 |-----------------------------------|-------------------|
 |Agencement automatique des colonnes Satin|▸ activé<br/>Ink/Stitch générera une organisation raisonnable pour les colonnes de satin de votre police lorsqu'elle est utilisée dans l'outil de lettrage. [Plus d'information sur Agencement automatique des colonnes Satin](/fr/docs/satin-tools/#auto-route-satin-columns)<br/><br/>▸ désactivé<br/>Ink/Stitch utilisera les glyphes tels quels. Désactivez l'option, si vous vous avez créé vous-même l'agencement des colonnes satin dans votre police.
 |Réversible                         |si votre police peut être brodée vers l'avant et vers l'arrière ou seulement vers l'avant. Ne cocher cette case que si vous avez effectivement créé plusieurs variantes de la police pour des directions différentes.
-|Triable                       |si les couleurs de votre police sont triables. Pour fonctionner, cela necessite que les éléments de votre police portent un  [indice de tri des couleurs ](#set-color-index)
-|Combiner des  indices                    |une liste d'indice de tri des couleurs séparés par des virgules. Les élements porteurs d'un de ces indices seront regroupés. Utile pour réduire le nombre de couleurs des polices multicolores comme les polices tartan.
+|Triable                       |si les couleurs de votre police sont triables. Pour fonctionner, cela nécessite que les éléments de votre police portent un  [indice de tri des couleurs ](#set-color-index)
+|Combiner des  indices                    |une liste d'indice de tri des couleurs séparés par des virgules. Les éléments porteurs d'un de ces indices seront regroupés. Utile pour réduire le nombre de couleurs des polices multicolores comme les polices tartan.
 |Forcer la casse                    |▸ Non<br/>choisissez cette option si votre police contient des lettres majuscules et minuscules (par défaut).<br/<<br/>▸ Majuscule: Choisissez cette option si votre police ne contient que des majuscules.<br/><br/>▸ Minuscule: Choisissez cette option si votre police ne contient que des minuscules.
 |Glyphe par défaut                  |le glyphe à afficher si le glyphe demandé par l'utilisateur n'est pas disponible dans le fichier de police (glyphe manquant)
-|Echelle minimum /Echelle maximum   |Défini dans quelle mesure vos glyphes peuvent être agrandis ou diminués sans perdre en qualité une fois brodés
+|Échelle minimum /Échelle maximum   |Définit dans quelle mesure vos glyphes peuvent être agrandis ou diminués sans perdre en qualité une fois brodés
 
 ### Crénage
 
@@ -125,9 +125,9 @@ Si les informations de crénage ne peuvent être trouvées, ces valeurs seront u
 La fonte pré-digitalisée doit remplir certaines **conditions** pour être importée:
 
 * A chaque glyphe doit correspondre un fichier dans un format de broderie que Ink/Stitch peut lire
-* Le nom du fichier doit terminer par le nom du glyphe. Par exemple un nom de fichier valide pour la majuscule A pourrait être  `A.pes` ou `Example_Font_A.pes`.
+* Le nom du fichier doit terminer par le nom du glyphe. Par exemple un nom de fichier valide pour la majuscule A pourrait être  `A.pes` ou `Exemple_Font_A.pes`.
 
-Souvent les fontes de broderie achetées sont organisées en sous dossiers car chaque lettre est fournie dans différenst formats de broderie. Vous n'avez pas besoin de modifier la structure des fichiers. "Lettres vers police" cherchera les lettres dans les sous-dossiers.
+Souvent les fontes de broderie achetées sont organisées en sous dossiers car chaque lettre est fournie dans différents formats de broderie. Vous n'avez pas besoin de modifier la structure des fichiers. "Lettres vers police" cherchera les lettres dans les sous-dossiers.
 {: .notice--info }
 
 ### Usage
@@ -138,7 +138,7 @@ Souvent les fontes de broderie achetées sont organisées en sous dossiers car c
 * Cliquez sur "appliquer" et..... attendre.....
 * Après l'importation déplacez la ligne de base à un endroit correct et positionnez les lettres en fonction. La position des lettres par rapport au  bord gauche de la page influence aussi le positionnement des lettres par l'outil de lettrage.
 * Sauvegardez votre fonte dans un fichier  `→.svg` dans un nouveau répertoire de votre  [répertoire personnalisé de polices](#custom-font-directory)
-* Exécutez  [`Génerer JSON`](#generate-json) pour rendre la police disponible dans l'outil de Lettrage et sauvegarder le fichier json dans le même dossier que votre fonte.  Ne pas cocher  "Agencement automatique de colonnes satin" pour les fontes pré-digitalisées et laisser l'échelle à 1.
+* Exécutez  [`Générer JSON`](#generate-json) pour rendre la police disponible dans l'outil de Lettrage et sauvegarder le fichier json dans le même dossier que votre fonte.  Ne pas cocher  "Agencement automatique de colonnes satin" pour les fontes pré-digitalisées et laisser l'échelle à 1.
 
 ## Supprimer les informations de crénage {#remove-kerning}
 
@@ -161,7 +161,7 @@ Ink/Stitch contient un outil de nettoyage de votre fichier de fonte.
 
 Défini un indice qui permet à l'outil de lettrage de savoir où positionner les éléments lorsque tri des couleurs est activé.
 
-* Dans un fichier de police, séléctionner les éléments d'une même couleur
+* Dans un fichier de police, sélectionner les éléments d'une même couleur
 * Lancez `Extensions > Ink/Stitch > Gestion des police > Définir l'indice de tri des couleurs`
 * Choisir la valeur de l'indice
 * `Appliquer`
