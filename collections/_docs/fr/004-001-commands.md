@@ -21,7 +21,7 @@ Pour dupliquer un objet auquel sont attachées des commandes, ne pas utiliser Du
 Pour déplacer une commande, déplacer le marqueur seulement, le connecteur suivra.
 {: .notice--info }
 
-## Ajouter des Commandes ...
+## Ajouter des Commandes ...{#add-commands-}
 
 Ces commandes affectent l’ensemble du motif de broderie.
 
@@ -35,7 +35,7 @@ Spécifie l'origine (point (0,0)) du fichier de broderie. Particulièrement util
 La machine à broder déplace l'aiguille jusqu'à ce point avant chaque commande d'attêt. Cela permet entre autre de déplacer le cadre de broderie vers l'utilisateur pour faciliter les étapes d'un appliqué.
 
 
-## Ajouter des commandes de calque ...
+## Ajouter des commandes de calque ...{/#add-layer-commands-}
 
 Ces commandes seront ajoutées au calque sélectionné.
 
@@ -44,7 +44,7 @@ Ces commandes seront ajoutées au calque sélectionné.
 Aucun objet de ce calque ne sera exporté dans les fichiers de broderie. Cette commande est couramment utilisée dans les fichiers des tutoriels lorsqu'on ne veut pas que Ink/Stitch brode les textes explicatifs.
 
 
-## Attacher des commandes aux objets sélectionnés ...
+## Attacher des commandes aux objets sélectionnés ...{#attach-commands-to-selected-objects-}
 
 Ces commandes seront attachées aux objets actuellement sélectionnés.
 
@@ -95,7 +95,7 @@ Les machines à broder commerciales qui ont plusieurs aiguilles passent normalem
 
 Les objets auxquels cette commande est associée seront exclus du plan de broderie.
 
-## Supprimer les commandes
+## Supprimer les commandes {#delete-commands}
 
 ### Supprimer une commande particulière.
 
@@ -107,7 +107,7 @@ Sélectionnez  le groupe de commande et supprimez le.
 * Cliquez sur  `Appliquer`
 
 
-## Saut en Coupe {#jump-to-trim}
+## Saut en Coupe {#jump-to-trim-commannd}
 
 Cette extension insère des commandes de coupe à la place des sauts.
 
