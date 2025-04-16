@@ -147,7 +147,7 @@ A tool for font authors which sets a specified color sort index on selected elem
 
 Applies transforms to elements (rotate / flip) while also adapting the fill angle.
 
-![Fill element transformed by 45 degrees, fill angle adapted](/lokal/assets/images/docs/transform.png)
+![Fill element transformed by 45 degrees, fill angle adapted](/assets/images/docs/transform.png)
 
 ## Extension Updates
 
