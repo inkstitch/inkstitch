@@ -46,7 +46,7 @@ Ceci fonctionne d'autant mieux que la largeur de la colonne satin initiale est c
 
 Des contours paramétrés en remplissage ne donnent jamais rien de bon en broderie, mais convertir un tel contour en colonne satin ou en point droit nécessite beaucoup de travail. Cet outil aide à accomplir cette opération.
 
-Il est comparable à la fonctionalité d'Inkscape `Chemin > Vectoriser un objet matriciel > Traçage Centerline`  ( -et cause le même genre de prolème...). Mais au lieu de convertir un bitmap en lignes, il détermine une ligne centrale pour des objets de type remplissage.
+Il est comparable à la fonctionnalité d'Inkscape `Chemin > Vectoriser un objet matriciel > Traçage Centerline`  ( -et cause le même genre de problème...). Mais au lieu de convertir un bitmap en lignes, il détermine une ligne centrale pour des objets de type remplissage.
 
 Vous pouvez améliorer le résultat en définissant des lignes de découpage.
 ![Remplissage en trait](/assets/images/docs/en/fill_to_stroke.png)
@@ -71,7 +71,7 @@ Merci de noter que chaque trait doit découper le remplissage en deux.
 
 ## Saut en Trait {#jump-to-stroke}
 
-Ceci crééra un point droit direct entre la fin du premier élément et le début du second. Il ne vous reste plus qu'à le positionner là où il sera recouvert par des broderies ultérieures pour éviter un saut de fil. 
+Ceci créera un point droit direct entre la fin du premier élément et le début du second. Il ne vous reste plus qu'à le positionner là où il sera recouvert par des broderies ultérieures pour éviter un saut de fil. 
 
 ### Usage
 
@@ -114,7 +114,7 @@ Cet outil est à utiliser de préférence avec un dessin connexe ou avec peu de 
 
 * Connectez les traits distants de  moins de (mm)
 
-  L'extension redwork peut travailler avec des groupes disconnectés de points droits.  Par contre certains de vos traits peuvent de ne pas s'enchainer les uns les autres ce qui laisse de petits espaces.
+  L'extension redwork peut travailler avec des groupes déconnectés de points droits.  Par contre certains de vos traits peuvent de ne pas s'enchainer les uns les autres ce qui laisse de petits espaces.
   Avec cette option, vous pouvez définir jusqu'à quelle distance ces espaces doivent être supprimés.
 
   Les  traits dont la distance est supérieure à cette valeur seront considérés comme non connectés.
@@ -124,10 +124,10 @@ Cet outil est à utiliser de préférence avec un dessin connexe ou avec peu de 
 
 * Longueur minimale du chemin (mm)
 
-  Supprime du résultat les chemins plus court  que cette valeur
+  Supprime du résultat les chemins plus courts que cette valeur
 
   Le résultat peut contenir des petits chemins (par exemple en cas de traits pas tout a fait jointif mais avec une  petite superposition). 
-  Des chemins plus courts que  la [longeur minimum  de saut](/docs/preferences/#minimum-jump-stitch-length-mm) peuvent généralement être supprimés, mais s'ils sont consecutifs, il vaudra mieux diminuer cettte valeur.
+  Des chemins plus courts que  la [longueur minimum  de saut](/docs/preferences/#minimum-jump-stitch-length-mm) peuvent généralement être supprimés, mais s'ils sont consécutifs, il vaudra mieux diminuer cette valeur.
 
 * Longueur du point Redwork  (mm)
 
@@ -150,7 +150,7 @@ Le redwork commence et termine toujours au même endroit. Vous pouvez  définir 
 
 ![Fill to outline](/assets/images/docs/outline.png)
 
-Cette extension aide à reconstruire l'objet original à partir du fichier de points lorsqu'on ne dispose plus du fichier svg de départ. Sélectionner un ou plusieurs chemins de points (en general un remplissage) et cette extension va essayer de trouver leur contour.
+Cette extension aide à reconstruire l'objet original à partir du fichier de points lorsqu'on ne dispose plus du fichier svg de départ. Sélectionner un ou plusieurs chemins de points (en général un remplissage) et cette extension va essayer de trouver leur contour.
 
 ### Usage
 
@@ -160,6 +160,6 @@ Cette extension aide à reconstruire l'objet original à partir du fichier de po
 - Ajuster les réglages jusqu'à être content du résultat
 - Cliquez "Appliquer"
 
-## Tutoriaux utilisant Outils: Trait
+## Tutoriels utilisant Outils: Trait
 
 {% include tutorials/tutorial_list key="tool" value="Stroke" %}
