@@ -15,7 +15,7 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
 * Faire `Extensions > Ink/Stitch > Lettrage > Lettrage`
 * Entrez votre texte (multi-ligne possible)
 * Définir la police et l'échelle
-    **⚠ Attention**: Pour des résultats optimaux, tenir compte des limites de edimensionnement mentionnées dans le descriptif des fontes.
+    **⚠ Attention**: Pour des résultats optimaux, tenir compte des limites de redimensionnement mentionnées dans le descriptif des fontes.
 * Cliquer sur `Appliquer et Quitter`
 
 ### Filtres de fonte
@@ -70,7 +70,7 @@ Vous pouvez enregistrer et rouvrir vos paramètres de police préférés.
 
 ## Lettrage le long d'un chemin  {#lettering-along-path}
 
-Les lettres d'ink/stitch ont été soigneusement dessinées pour une broderie optimale. Si vous essayez de les modifier avec les outils usuels d'inkscape, il se peut que cela ne fonctionne pas comme vous le souhaitez. Placez les lettres le long  d'un chemin est un gros travail. Cet outil va vous aider à le faire.
+Les lettres d'Ink/Stitch ont été soigneusement dessinées pour une broderie optimale. Si vous essayez de les modifier avec les outils usuels d'inkscape, il se peut que cela ne fonctionne pas comme vous le souhaitez. Placez les lettres le long  d'un chemin est un gros travail. Cet outil va vous aider à le faire.
 
 ![Alignement d'un texte sur un cheminn avec les diverses options](/assets/images/docs/text_along_path_alignment.png)
 
@@ -108,14 +108,14 @@ Le lettrage par lot permet de créer facilement des fichiers de texte multiples
 ### Options
 
 * **Texte** : Saisissez le texte. Par défaut, chaque nouvelle ligne sera placée dans son propre fichier.
-* **Séparateur personnalisé** :  Spécifiez un autre séparateur que fin de ligne si vous souhaitez que votre fichier texte contienne du texte multiligne.
+* **Séparateur personnalisé** :  Spécifiez un autre séparateur que fin de ligne si vous souhaitez que votre fichier texte contienne du texte sur plusieurs lignes.
 Le texte sera divisé et placé dans un nouveau fichier à chaque occurrence du séparateur personnalisé.
 * **Nom de la police** : Nom de la police que vous souhaitez utiliser. Consultez la [bibliothèque de polices](/fr/fonts/font-library/) pour trouver la liste des polices disponibles.
 * **Échelle (%) :** Valeur d'échelle pour redimensionner une police. La valeur sera limitée à la plage d'échelle disponible pour la police concernée.
 * **Tri par couleur :** Indique si les polices multicolores doivent être triées par couleur ou non.
 * **Ajouter des coupes :** Indique si des coupes doivent être ajoutés ou non (jamais, après chaque ligne, mot ou lettre).
 * **Utiliser des symboles de commande :** Indique si les coupes doivent être ajoutés comme symboles de commande ou comme option de paramètre (pertinent uniquement pour la sortie SVG).
-* **Aligner le texte multiligne :** Définit l'alignement du texte multiligne.
+* **Aligner le texte multi-ligne :** Définit l'alignement du texte multi-ligne.
 * **Lettrage le long du chemin : position du texte :** Position du texte sur le chemin `batch lettering`.
 * **Formats de fichier :** Saisissez une liste de [formats de fichier] (/fr/docs/file-formats/#writing) séparés par des virgules.
 
