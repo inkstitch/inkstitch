@@ -161,12 +161,12 @@ Ink/Stitch contient un outil de nettoyage de votre fichier de fonte.
 
 Défini un indice qui permet à l'outil de lettrage de savoir où positionner les éléments lorsque tri des couleurs est activé.
 
-* Dans un ficier de police, séléctionner les éléments d'une même couleur
+* Dans un fichier de police, séléctionner les éléments d'une même couleur
 * Lancez `Extensions > Ink/Stitch > Gestion des police > Définir l'indice de tri des couleurs`
 * Choisir la valeur de l'indice
 * `Appliquer`
 
-Le fichier json doit spécifier que la police est triable. Utilisez  [Editer JSON](#edit-json) and cochez l'option `Triable` dans l'onglet `Paramètres dela font`.
+Le fichier json doit spécifier que la police est triable. Utilisez  [Editer fichier JSON](#edit-json) et cochez l'option `Triable` dans l'onglet `Paramètres de la police`.
 {: .notice--warning }
 
 ## Mettre à jour la liste des glyphes  {#update-glyph-list}
