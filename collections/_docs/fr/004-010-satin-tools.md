@@ -129,7 +129,7 @@ Il est aussi possible de faire la même opération à partir du paramètrage.
 
 ## Satin Multicolore {#multicolor-satin}
 
-Cette extension crée des copies des satins  sélectionnés pour imiter une colone satin multicolore.
+Cette extension crée des copies des satins  sélectionnés pour imiter une colonne satin multicolore.
 ![Multicolor Satin](/assets/images/tutorials/multicolor_satin/solution.png)
 
 Vous pouvez  lire [ceci](/fr/tutorials/multicolor_satin), si vous souhaitez comprendre comment cette extension fonctionne.
@@ -184,13 +184,13 @@ Converti une ligne en colonne satin, en utilisant un Effet de Chemin. Cela rend 
 ### Options
 
 --|--|--
-Motif                  | ![LPE-Patterns](/assets/images/docs/lpe_patterns.png) | Choix du motif à appliquer repétivement à la colonne satin
+Motif                  | ![LPE-Patterns](/assets/images/docs/lpe_patterns.png) | Choix du motif à appliquer répétitivement à la colonne satin
 Largeur minimum (mm)   | ![Min width](/assets/images/docs/lpe_min_width.png)   | Largeur du motif là où il est le plus étroit
 Largeur maximum (mm)   | ![Max width](/assets/images/docs/lpe_max_width.png)   | Largeur du motif là où il est le plus large
 Longueur du motif (mm) | ![Length](/assets/images/docs/lpe_length.png)         | Longueur du motif à répéter
 Étiré                  | ![Stretched](/assets/images/docs/lpe_stretched.png)   | Si coché le motif sera étiré pour que ses répétitions de motif occupent exactement la longueur de la ligne, sinon, il pourra rester un vide en fin de ligne
 Ajouter des traverses  | ![Rungs](/assets/images/docs/lpe_rungs.png)           | Les motifs ayant tous le même nombre de noeuds sur les deux rails, les traverses sont facultatives. Choisissez d'en ajouter ou non
-Chemin privé           |                                                       | ● Si coché, la colone satin dispose de son propre motif. Une modification du modif n'influence que cette colonne. Des transformations peuvent être  appliquées au motif.<br>● Sinon, le motif est commun à toutes les colonnes satin utilisant cet effet et ce motif. Modifier le motif pour l'une d'elle le modifie pour toutes. Des transformations du motif peuvent conduire à des largeurs de colonne inatendues.
+Chemin privé           |                                                       | ● Si coché, la colonne satin dispose de son propre motif. Une modification du modif n'influence que cette colonne. Des transformations peuvent être  appliquées au motif.<br>● Sinon, le motif est commun à toutes les colonnes satin utilisant cet effet et ce motif. Modifier le motif pour l'une d'elle le modifie pour toutes. Des transformations du motif peuvent conduire à des largeurs de colonne inattendues.
 
 ### Appliquer l'effet de chemin
 
@@ -219,7 +219,7 @@ Quand vous tracez manuellement une colonne satin, cet outil vous aidera à le fa
 * Sélectionnez la forme et lancez  `Extensions > Ink/Stitch > Outils: Satin > "Ligne  Zigzag" en Satin`
   * Sélectionnez votre style de zigzag 
   * Choisissez si votre chemin doit être adouci ou constitué de segments de droites
-  * Choisissez si les traverses doivent être inserrées ou non. Les colonnes satin créées auront toujours autant de noeuds sur les deux rails.
+  * Choisissez si les traverses doivent être insérées ou non. Les colonnes satin créées auront toujours autant de noeuds sur les deux rails.
 
 ### Style de zigzag
 
