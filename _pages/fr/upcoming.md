@@ -49,27 +49,27 @@ Ink/Stitch est en développement constant. Vous trouverez ici toutes les modific
 * [פשוט מעוגל](/fr/fonts/hebrew_font/)
 
   ![פשוט מעוגל](/assets/images/fonts/hebrew_simple_rounded.png)
-* [Ink/Stitch Masego](/fonts/inkstitch-masego/)
+* [Ink/Stitch Masego](/fr/fonts/inkstitch-masego/)
 
   ![Ink/Stitch Masego](/assets/images/fonts/inkstitch_masego.png)
-* [Magnolia tamed](/fonts/magnolia-script/)
+* [Magnolia tamed](/fr/fonts/magnolia-script/)
 
   ![Magnolia tamed preview](/assets/images/fonts/magnolia_tamed.png)
-* [Malika](/fonts/malika/)
+* [Malika](/fr/fonts/malika/)
 
   ![Malika](/assets/images/fonts/malika.png)
-* [Mimosa](/fonts/mimosa/)
+* [Mimosa](/fr/fonts/mimosa/)
 
   ![Mimosa medium](/assets/images/fonts/mimosa_medium.png)
 
   ![Mimosa large](/assets/images/fonts/mimosa_large.png)
-* [Pixel 10](/fonts/pixel10/)
+* [Pixel 10](/fr/fonts/pixel10/)
 
   ![Pixel 10](/assets/images/fonts/pixel_10.png)
-* [Sunset](/fonts/sunset/)
+* [Sunset](/fr/fonts/sunset/)
 
   ![Sunset](/assets/images/fonts/sunset.png)
-* [Western light](/fonts/western_light/)
+* [Western light](/fr/fonts/western_light/)
 
   ![Western light](/assets/images/fonts/western_light.png)
 
