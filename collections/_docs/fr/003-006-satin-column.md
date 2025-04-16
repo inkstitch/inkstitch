@@ -16,16 +16,16 @@ Ink/Stitch offre plusieurs options pour créer des colonnes satin. Les quatre pr
 
 ![Méthodes](/assets/images/docs/satin_methods.svg)
 
-1. [Convertir trait en satin](#1-convertir-ligne-en-satin): pour créer des colonnes satin de largeur constante
-2. [Convertir trait en Effet de Chemin satin](#2-convertir-ligne-en-effet-de-chemin-satin): colonne satin facilement modifiable avec un motif de contour optionnel
-3. [Convertir "ligne en zigzag" en Satin](#3-convertir-ligne-en-zigzag-en-satin): une manière simple de créer les colonnes satin particulièrement bien adaptée aux tablettes graphiques et aux écrans tactiles.
-4. [Convertir remplissage en satin](#4-convertir-remplissage-en-satin): pour créer des colonnes satin à partir de remplissage
+1. [Trait en satin](#1-convertir-ligne-en-satin): pour créer des colonnes satin de largeur constante
+2. [Trait en Effet de Chemin satin](#2-convertir-ligne-en-effet-de-chemin-satin): colonne satin facilement modifiable avec un motif de contour optionnel
+3. ["ligne en zigzag" en Satin](#3-convertir-ligne-en-zigzag-en-satin): une manière simple de créer les colonnes satin particulièrement bien adaptée aux tablettes graphiques et aux écrans tactiles.
+4. [Remplissage en satin](#4-convertir-remplissage-en-satin): pour créer des colonnes satin à partir de remplissage
 5. [Création manuelle de Colonne Satin ](#5-création-manuelle-de-colonne-satin): prendre tout le contrôle sur la colonne satin
 
-### 1. Convertir Ligne en Satin
+### 1. Trait en Satin
 
 * Choisir un trait (un objet avec une couleur de contour, mais pas de couleur de remplissage)
-* Définissez l'épaisseur du contour à  la largeursouhaitée pour votre colonne satin.
+* Définissez l'épaisseur du contour à  la largeur souhaitée pour votre colonne satin.
 * Lancer `Extensions > Ink/Stitch > Outils : Satin > Convertir Ligne en Satin`
 
 Vous obtenez un chemin composite composé de 
@@ -34,26 +34,29 @@ Vous obtenez un chemin composite composé de
 
 * Utilisez tel quel ou modifiez les traverses ou les rails en déplaçant leur noeuds
 
-* En option lancer `Extensions > Ink/stitch > Outils : Satin > Agencement automatique de colonnes satin...` après avoir sélectionné une ou plusieurs colonnes satins
+* En option lancer `Extensions > Ink/Stitch > Outils : Satin > Agencement automatique de colonnes satin...` après avoir sélectionné une ou plusieurs colonnes satins
 Plus d'informations sur [Convertir ligne en satin](/fr/docs/satin-tools/#convertir-ligne-en-satin)
 
-### 2. Convertir Ligne en Effet de Chemin Satin
+### 2. Trait en Effet de Chemin Satin
 
-Ceci peut être utilisé pour créer une colonne satin possédant  un motif sur son coutour ou dont la largeur est plus adaptable. Attention, si vous utilisez l'agencement automatique sur ce type de satin, l'effet de chemin sera appliqué et le chemin ne pourra plus être modifié que manuellement.
+Ceci peut être utilisé pour créer une colonne satin possédant  un motif sur son contour ou une colonne simple dont la largeur est plus adaptable. 
+
+Attention, si vous utilisez l'agencement automatique sur ce type de satin, l'effet de chemin sera appliqué et le chemin ne pourra plus être modifié que manuellement.
 
 
 Utilisez `Chemin > Objet en chemin` pour convertir en colonne satin standard (colonne satin manuelle).
-Notez que la largeur de la ligne n'a pas d'influence.
+
+Notez que l'épaisseur du trait n'a pas d'influence.
 Pour plus d'information sur l'[effet de chemin satin ](/fr/docs/satin-tools/#convertir-ligne-en-effet-de-chemin-satin)
 
-### 3. Convertir "Ligne en zigzag" en Satin
+### 3. "Ligne en zigzag" en Satin
 
-Cette méthode est particulierement adaptée aux écrans tactiles et aux tablettes graphiques
+Cette méthode est particulièrement adaptée aux écrans tactiles et aux tablettes graphiques
 
 Plus d'information  sur [Convertir "ligne en zigzag" en satin](/fr/docs/satin-tools/#zigzag-line-to-satin)
 
 {% include upcoming_release.html %}
-### 4. Convertir "Remplissage" en Satin
+### 4. "Remplissage" en Satin
 
 Remplissage en satin peut être utilisé pour convertir un remplissage en satin. C'est une fonction semi-automatique qui nécessite un peu de travail manuel.
 
@@ -67,7 +70,7 @@ Plus d'information  sur  [Convertir "Remplissage" en satin](/fr/docs/satin-tools
 
 * [Vérifier les directions de chemin](/fr/docs/customize/#activation-de-la-direction-des-chemins). Pour que la colonne satin fonctionne comme attendu, les deux rails doivent avoir la même direction.
 
-Si ce n'est pas le cas Sélectionnez avec l' *Outil Editer les noeuds* (`N`) un noeud d'un des deux rails et faites `Chemin > Inverser`. Cela n'inversera que le rail sélectionné. Vous pouvez aussi agir sur la direction des rails dans le paramètrage.
+Si ce n'est pas le cas Sélectionnez avec l' *Outil Éditer les noeuds* (`N`) un noeud d'un des deux rails et faites `Chemin > Inverser`. Cela n'inversera que le rail sélectionné. Vous pouvez aussi agir sur la direction des rails dans le paramétrage.
  
 * Ink/Stitch va dessiner des zig-zags entre les deux lignes : pour régler la direction des points de broderie, utilisez la méthode des noeuds ou la méthodes des traverses décrites ci-dessous.
 
@@ -77,7 +80,7 @@ Si ce n'est pas le cas Sélectionnez avec l' *Outil Editer les noeuds* (`N`) un 
 
 [![Bateau en colonne satin](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Télécharger le fichier SVG" .align-left download="satin-column.svg" }
 
-Chaque paire de noeuds (une paire de noeud est constituée d'un noeud sur chaque rail, en commençant par la paire des  noeuds initiaux des deux rails, puis la paire des deuxième noeuds de chaque rail, etc.... jusqu'à épuisement  des noeuds sur au  moins un des rails) agit comme un "point de contrôle": Ink/Stitch garantira qu'un "zag" finisse par aller d'un noeud  de chaque paire à l'autre noeud de la paire. Si les rails n'ont pas le même nombre de noeuds, les noeuds exédentaires sur l'un des rails sont ignorés. Attention en cas d'inégalité du nombre de noeuds sur les deux rails, l'inversion du sens des deux rails modifie  l'orientation des points, puisque les paires de noeuds sont constituées à partir de l'autre extrémité des rails.
+Chaque paire de noeuds (une paire de noeud est constituée d'un noeud sur chaque rail, en commençant par la paire des  noeuds initiaux des deux rails, puis la paire des deuxième noeuds de chaque rail, etc.... jusqu'à épuisement  des noeuds sur au  moins un des rails) agit comme un "point de contrôle": Ink/Stitch garantira qu'un "zag" finisse par aller d'un noeud  de chaque paire à l'autre noeud de la paire. Si les rails n'ont pas le même nombre de noeuds, les noeuds excédentaires sur l'un des rails sont ignorés. Attention en cas d'inégalité du nombre de noeuds sur les deux rails, l'inversion du sens des deux rails modifie  l'orientation des points, puisque les paires de noeuds sont constituées à partir de l'autre extrémité des rails.
 
 #### Méthode des traverses
 
@@ -95,7 +98,7 @@ Cependant, il existe des situations dans lesquelles vous devez ajouter manuellem
 
 * Assurez-vous que le chemin de la colonne satin existant (avec les deux rails comme sous-chemins) est sélectionné avec l'outil Éditer les noeuds.
 * Appuyez sur `P` ou sélectionnez l'outil Crayon.
-* Maintenir la touche `Maj`enfoncée.
+* Maintenir la touche `Maj` enfoncée.
 * Cliquez une fois là où vous souhaitez le début de la traverse.
 * Cliquez une seconde fois à la fin de la traverse.
   [![Traverse en Action](https://edutechwiki.unige.ch/mediawiki/images/thumb/6/68/InkStitch-round-bird-2.png/300px-InkStitch-round-bird-2.png)](https://edutechwiki.unige.ch/mediawiki/images/6/68/InkStitch-round-bird-2.png)
@@ -103,22 +106,21 @@ Cependant, il existe des situations dans lesquelles vous devez ajouter manuellem
   Dessin original de [Liv Iko](https://thenounproject.com/liv_iko/collection/birds/?i=898697) modifié par [EDUTECH Wiki](https://edutechwiki.unige.ch/en/InkStitch)
 {: style="font-size: 0.5rem;"}
 
-**Info:** Nous recommandons fortement d'utiliser au moins trois traverses. Si vous utilisez exactement deux traverses (et deux rails), il est difficile pour Ink/stitch de décider qui est qui.
+**Info:** Nous recommandons fortement d'utiliser au moins trois traverses. Si vous utilisez exactement deux traverses (et deux rails), il est difficile pour Ink/Stitch de décider qui est rail et qui est traverse.
 {: .notice--warning }
 
-**Info:** Ink/Stitch examine chaque tronçon de rail, c'est à dire chaque paire de courbes de Bézier individuellement . Il choisit la plus longue des deux et détermine combien de zig-zags seront nécessaires pour satisfaire le réglage *espacement de zig-zag*. De sorte que le rail le plus long n'aura jamais des points clairsemés comme dans un zig-zag simple.<br /><br />Toutefois, cela signifie aussi que le rail le plus court aura une densité de points supérieure à celle spécifiée. Soyez prudent lorsque vous concevez des courbes prononcées, parce que *broder à une densité trop élevée peut faire un trou dans le tissu*!. Le paramètrage des points courts peut aider.
+**Info:** Ink/Stitch examine chaque tronçon de rail, c'est à dire chaque paire de courbes de Bézier individuellement . Il choisit la plus longue des deux et détermine combien de zig-zags seront nécessaires pour satisfaire le réglage *espacement de zig-zag*. De sorte que le rail le plus long n'aura jamais des points clairsemés comme dans un zig-zag simple.<br /><br />Toutefois, cela signifie aussi que le rail le plus court aura une densité de points supérieure à celle spécifiée. Soyez prudent lorsque vous concevez des courbes prononcées, parce que *broder à une densité trop élevée peut faire un trou dans le tissu*!. Le paramétrage des points courts peut aider.
 {: .notice--info }
 
 ## Position de début et de fin
 
 {% include upcoming_release.html %}
 
-Les colonnes satin commencennt automatique 
-Satin columns automatically start at the nearest point to the previous element.
+Les colonnes satin commencent et terminent automatiquement au point le plus proche.
 
-To disable this behavior open the [params dialog](/docs/params/) and disable one or both of the `start/end at nearest point` options.
+Pour désactiver ce comportement, ouvrez le [dialogue de paramétrage](/fr/docs/params/) et désactivez une ou deux des options commencer/terminer au point le plus proche.
 
-Alternatively add a start or end point manually by attaching a [command](/docs/commands/#attach-commands-to-selected-objects-) to the satin column.
+Alternativementt, vous pouvez ajouter un point de départ ou d'arrivée manuellement en attachant une [commande](/fr/docs/commands/#attach-commands-to-selected-objects-) à la colonne satin.
 
 ## Paramètres
 
