@@ -13,7 +13,7 @@ Dans `Extensions > Ink/Stitch  > Commandes` vous trouverez quatre options
 * [Ajouter des commandes](#ajouter-des-commandes-)
 * [Ajouter des commandes de calque](#ajouter-des-commandes-de-calque-)
 * [Attacher des commandes à l'objet sélectionné](#attacher-des-commandes-aux-objets-sélectionnés-)
-* [Vue](#affichage)
+* [Affichage](#affichage)
 
 Pour dupliquer un objet auquel sont attachées des commandes, ne pas utiliser Dupliquer, mais Copier puis Coller.
 {: .notice--info }
@@ -115,7 +115,7 @@ Cette extension insère des commandes de coupe à la place des sauts.
 [optimisation du chemin de broderie](/tutorials/routing/) l'ensemble des outils qu'Ink/Stitch mets à votre disposition pour vous aider dans votre tâche d'optimisation.
 {: .notice--info }
 
-## Affichage
+## Affichage {#view}
 
 ### Afficher Masquer les commandes des objets 
 
