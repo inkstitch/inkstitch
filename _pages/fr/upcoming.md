@@ -144,7 +144,7 @@ Un outil pour les créateurs de polices qui définit un index de tri des couleur
 
 Applique des transformations aux éléments (rotation/retournement) tout en adaptant l'angle de remplissage.
 
-![Élément de remplissage transformé à 45 degrés, angle de remplissage adapté](/lokal/assets/images/docs/transform.png)
+![Élément de remplissage transformé à 45 degrés, angle de remplissage adapté](/assets/images/docs/transform.png)
 
 ## Mises à jour des extensions
 
