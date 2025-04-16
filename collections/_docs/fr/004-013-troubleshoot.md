@@ -38,7 +38,7 @@ Cette extension affiche des informations sur divers paramètres des éléments d
 ## Supprimer tous les paramètres de broderie {#remove-embroidery-settings}
 
 Utilisez cette fonction si vous souhaitez supprimer les informations qu'Ink/Stitch a enregistré dans votre document.
-Ceci peut être particulierement utile lorsque vous copier/coller des broderies en provenance d'un autre document.
+Ceci peut être particulièrement utile lorsque vous copier/coller des broderies en provenance d'un autre document.
 Cette extension supprimera les paramètres de broderie de votre broderie toute entière ou bien uniquement des objets sélectionnés:
 * Sélectionnez des objets (sautez cette étape si vous voulez supprimer toutes les informations de broderie)
 * Exécutez `Extensions > Ink/Stitch > Supprimez tous les paramètres de broderie...`
