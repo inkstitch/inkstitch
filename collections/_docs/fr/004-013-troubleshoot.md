@@ -12,7 +12,7 @@ Ink/Stitch est livré avec une extension de dépannage, conçue pour vous aider 
 
 ### Usage
 
-* (Optionel) Sélectionnez les objets que vous souhaitez tester. Si vous n'en sélectionnez aucun, l'ensemble du document sera testé.
+* (Optionnel) Sélectionnez les objets que vous souhaitez tester. Si vous n'en sélectionnez aucun, l'ensemble du document sera testé.
 * Lancer `Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets`
 
 Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée, soit un nouveau calque contenant les informations de dépannage sera ajouté à votre document SVG. Utilisez le panneau des objets(Ctrl + Shift + O) pour supprimer le calque une fois que vous avez terminé.
@@ -38,8 +38,8 @@ Cette extension affiche des informations sur divers paramètres des éléments d
 ## Supprimer tous les paramètres de broderie {#remove-embroidery-settings}
 
 Utilisez cette fonction si vous souhaitez supprimer les informations qu'Ink/Stitch a enregistré dans votre document.
-Ceci peut être particulierement utie lorsque vous copier/coller des broderies en provenance d'un autre document.
-Cette extension supprimera les paramètres de broderie de votre broderie toute entière ou bien uniquement des objets selectionnés:
+Ceci peut être particulierement utile lorsque vous copier/coller des broderies en provenance d'un autre document.
+Cette extension supprimera les paramètres de broderie de votre broderie toute entière ou bien uniquement des objets sélectionnés:
 * Sélectionnez des objets (sautez cette étape si vous voulez supprimer toutes les informations de broderie)
 * Exécutez `Extensions > Ink/Stitch > Supprimez tous les paramètres de broderie...`
 * Sélectionnez une ou plusieurs des options proposées et cliquez sur "Appliquer"
@@ -56,7 +56,7 @@ Ink/Stitch  offre une fonction de nettoyage de votre document qui empêche ces o
 * Choisissez quels types d'objets doivent être supprimés et définissez un seuil
 * Cliquez sur "Appliquer"
 * Il est aussi possible de choisir de supprimer les groupes et calques vides
-* Cochez l'option "essayer" pour obtenir la liste des noms des éléments qui seraient supprimés avec le paramètrage choisi, sans rien réellement supprimer
+* Cochez l'option "essayer" pour obtenir la liste des noms des éléments qui seraient supprimés avec le paramétrage choisi, sans rien réellement supprimer
 
 ## Mettre à jour le svg d'Ink/Stitch 
 
@@ -69,7 +69,7 @@ Dans ce cas, une mise à jour manuelle peut être effectués sur ces éléments
 * Sélectionnez les éléments à mettre à jour:
 * Lancez `Extensions > Ink/Stitch > Résolution de problèmes > Mettre à jour le svg d'Ink/Stitch`
 
-Remarque : Cette opération est inutile si n'importe quelle fonction Ink/Stitch a été préalablement exécutée dans le fichier d'origine des éléments. Il suffit par exemple de selectionner n'importe quoi dans l'ancien fichier, d'ouvrir le dialogue de paramètrage et de cliquer 'Appliquer et Fermer ' sans rien changer pour que l'ancien fichier soit mis à jour. 
+Remarque : Cette opération est inutile si n'importe quelle fonction Ink/Stitch a été préalablement exécutée dans le fichier d'origine des éléments. Il suffit par exemple de sélectionner n'importe quoi dans l'ancien fichier, d'ouvrir le dialogue de paramétrage et de cliquer 'Appliquer et Fermer ' sans rien changer pour que l'ancien fichier soit mis à jour. 
 {: .notice--info }
 
 
