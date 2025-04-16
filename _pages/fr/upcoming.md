@@ -161,9 +161,9 @@ Cela empêche la mise à jour erronée du contenu copié-collé dans un nouveau 
 
 `Outils: Satin > Agencement automatique de colonnes satin`
 
-* Ajout d'une option pour conserver les éléments de chemin d'origine [#3332](https://github.com/inkstitch/inkstitch/pull/3332)
+* Ajout d'une option pour conserver les chemins  originels [#3332](https://github.com/inkstitch/inkstitch/pull/3332)
   
-* Transfert de la valeur de longueur de saut minimale basée sur l'objet (si présente) depuis les satins sur les traits centraux générés automatiquement [#3154](https://github.com/inkstitch/inkstitch/pull/3154)
+* Transfert de la valeur de longueur minimal de saut basée sur l'objet (si présente) depuis les satins sur les traits centraux générés automatiquement [#3154](https://github.com/inkstitch/inkstitch/pull/3154)
 
 [En savoir plus](/fr/docs/satin-tools/#auto-route-satin-columns)
 
