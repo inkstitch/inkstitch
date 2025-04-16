@@ -26,6 +26,8 @@ Die JSON-Datei muss als minimale Bedingung den Namen der Schrift enthalten.
 
 Diese Erweiterung erlaubt das bearbeiten von Schriftinformationen. Hat die Schrift noch keine JSON-Datei, erstelle sie zunächst mit [JSON-Datei erstellen](#json-datei-erstellen)
 
+Diese Erweiterun auch aktualisiert die Liste der verfügbaren Zeichen in der JSON-Datei.
+
 ## Zeichentabelle
 
 Diese Erweiterung generiert eine Liste aller Zeichen einer Schrift.
@@ -158,7 +160,3 @@ Legt den angebebenen Farbsortierindex für ausgewählte Elemente fest. Hierdurch
 
 In der JSON-Datei muss die Option `Sortierbar` aktiviert sein. Nutze die Erweiterung [JSON bearbeiten](#edit-json) und aktiviere die Option in den `Schrifteinstellungen`.
 {: .notice--warning }
-
-## Liste verfügbarer Zeichen aktualisieren
-
-Diese Erweiterun aktualisiert die Liste der verfügbaren Zeichen in der JSON-Datei. Diese Funktion sollte das erste Mal ausgeführt werden, wenn alle Zeichen in der SVG-Datei eingefügt wurden. Werden Zeicchen hinzugefügt oder entfernt, muss der Vorgang wiederholt werden.
