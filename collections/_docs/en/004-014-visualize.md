@@ -24,8 +24,7 @@ Button  | Effect | Shortcut Keys
 |<img src="/assets/images/docs/icons/forward_stitch.png" >|Go forward one stitch| <key>→</key>
 |<img src="/assets/images/docs/icons/forward_command.png" >|Go to next command| <key>Page up</key> 
 |<img src="/assets/images/docs/icons/direction.png" >|Switch animation direction| 
-|![](/assets/images/docs/icons/play2.png) | start/pause animation |<key>space</key> /  <key>p</key>
-|<img src="/assets/images/docs/icons/play2.png"> | start/pause animation |<key>space</key> /  <key>p</key>
+|<img src="/assets/images/docs/icons/play.png"> | start/pause animation |<key>space</key> /  <key>p</key>
 |<img src="/assets/images/docs/icons/restart.png" >|restart| 
 **Speed**||
 |<img src="/assets/images/docs/icons/slower.png" >|render slower| <key>↓</key> 
@@ -42,7 +41,7 @@ Button  | Effect | Shortcut Keys
 ||Change background color| 
 |<img src="/assets/images/docs/icons/cursor.png" >|Show crosshair| 
 |<img src="/assets/images/docs/icons/page.png" >|Show page| 
-|<img src="/assets/images/docs/icons/settings.png" >|Open setting dialog to set speed, line width and needle point size| 
+|<img src="/assets/images/docs/icons/settings.png" >|Open setting dialog to set speed, </br>line width and needle point size| 
 
 
 
