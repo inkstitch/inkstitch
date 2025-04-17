@@ -13,20 +13,36 @@ Puis faites `Extensions > Ink/Stitch  > Visualiser et Exporter > Simulateur`.
 ![Simulator](/assets/images/docs/fr/simulateur.jpg)
 {: style="border: 2px solid gray; padding: 5px;"}
 
-### Raccourcis pour la Simulation 
+### Boutons et raccourcis du simulateur 
 
-Raccourci | Effet
--------- | --------
-<key>space</key> | start animation
-<key>p</key> | Pause animation
-<key>→</key> | Avancer
-<key>←</key> | Reculer
-<key>↑</key> | Accélérer
-<key>↓</key> | Ralentir
-<key>+</key> | Un point en avant
-<key>-</key> | Un point en arrière
-<key>Page down</key> | revenir à  la  commande précédente
-<key>Page up</key> | sauter à la commande suivante
+
+ 
+Bouton | Effet | Raccourci
+-------- | -------- | --------
+**Contrôles**||
+|<img src="/assets/images/docs/icons/backward_command.png" >|Retourner à la dernière commande| <key>Page down</key>
+|<img src="/assets/images/docs/icons/backward_stitch.png" >|Reculer d'un point| <key>←</key>
+|<img src="/assets/images/docs/icons/forward_stitch.png" >|Avancer d'un point| <key>→</key>
+|<img src="/assets/images/docs/icons/forward_command.png" >|Aller à la prochaine commande| <key>Page up</key> 
+|<img src="/assets/images/docs/icons/direction.png" >|Changer le sens de l'animation| 
+|<img src="/assets/images/docs/icons/play.png"> | Début/pause de l'animation |<key>space</key> /  <key>p</key>
+|<img src="/assets/images/docs/icons/restart.png" >|Redémarrer au début| 
+**Vitesse**||
+|<img src="/assets/images/docs/icons/slower.png" >|Moins vite| <key>↓</key> 
+|<img src="/assets/images/docs/icons/faster.png" >|Plus vite| <key>↑</key> 
+**Montrer**||
+|<img src="/assets/images/docs/icons/npp.png" >|Points de pénétration de l'aiguille| 
+|<img src="/assets/images/docs/icons/jump.png" >|Sauts| 
+|<img src="/assets/images/docs/icons/trim.png" >|Coupes| 
+|<img src="/assets/images/docs/icons/stop.png" >|Arrêts| 
+|<img src="/assets/images/docs/icons/color_change.png" >|Changements de couleur| 
+**Info**||
+|<img src="/assets/images/docs/icons/info.png" >|Information sur la broderie| 
+**Paramètres**||
+|<img src="/assets/images/docs/icons/change_background.png" >|Changer la couleur de l'arrière plan| 
+|<img src="/assets/images/docs/icons/cursor.png" >|Montrer la position courante de l'aiguille| 
+|<img src="/assets/images/docs/icons/page.png" >|Montrer les limites de la page| 
+|<img src="/assets/images/docs/icons/settings.png" >|Ouvrir le paramétrage pour choisir la vitesse, </br>l'épaisseur du trait et la taille des points de l'aiguille| 
 
 C'est aussi possible de **zoomer** et de **déplacer** la simulation avec la souris.
 
@@ -52,14 +68,14 @@ Vous disposez des options suivantes:
 * **Points de l'aiguille** si coché, montre les points de l'aiguille
 * **Verrouiller** rend le plan de broderie insensible aux interactions de la souris, facilitant le travail sur les objets de broderie quand le plan de broderie est actif.
 
-* **Écraser le dernier plan de broderie** si l'option est cochée, le nouveau plan de broderie écrase le présendant, décochez si vous souhaitez garder le plan de broderie précédent.f
+* **Écraser le dernier plan de broderie** si l'option est cochée, le nouveau plan de broderie écrase le précédent, décochez si vous souhaitez garder le plan de broderie précédent.
 Utiliser un plan de broderie verrouillé superposé au motif (rendu invisible ou avec visibilité abaissée) aidera à avoir une meilleure idée du rendu final.
 
-Si le plan est vérouillé, et le motif visible, le plan de broderie ne vous génera pas pour modifier le motif qui est sous lui.
+Si le plan est verrouillé, et le motif visible, le plan de broderie ne vous gênera pas pour modifier le motif.
 
 
 
-{% include folder-galleries path="stitch-plan/" captions="1:Positionner le plan de broderie hors du canevas;2:Visibilité du calque de conception cachée;3:Opacité du calque de conception baissée ;4:Points de l'aiguille activé | desactivé " caption="<i>Image en provenance de [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
+{% include folder-galleries path="stitch-plan/" captions="1:Positionner le plan de broderie hors du canevas;2:Visibilité du calque de conception cachée;3:Opacité du calque de conception baissée ;4:Points de l'aiguille activé | désactivé " caption="<i>Image en provenance de [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
 
 ## Annuler l'aperçu du plan de broderie
 Utiliser l'aperçu du plan de broderie au dessus d'objets de broderie cachés ou ayant une opacité amoindrie aide à se faire une idée visuelle de la broderie finale.
