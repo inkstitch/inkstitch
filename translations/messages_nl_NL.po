@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-14 01:44+0000\n"
-"PO-Revision-Date: 2025-04-14 01:44\n"
+"POT-Creation-Date: 2025-04-16 01:42+0000\n"
+"PO-Revision-Date: 2025-04-16 01:42\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-14 01:44+0000\n"
+"POT-Creation-Date: 2025-04-16 01:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2425,6 +2425,7 @@ msgid "How big the last copy of the line should be, in percent."
 msgstr "Hoe groot het laatste exemplaar van de regel moet zijn, in procenten."
 
 #: lib/elements/stroke.py:426 lib/gui/tartan/customize_panel.py:43
+#: inx/inkstitch_transform_elements.inx:10
 msgid "Rotate"
 msgstr "Draaien"
 
@@ -3127,7 +3128,7 @@ msgstr ""
 msgid "Ink/Stitch Tartan"
 msgstr ""
 
-#: lib/extensions/test_swatches.py:22
+#: lib/extensions/test_swatches.py:22 lib/extensions/transform_elements.py:30
 msgid "Please select one or more elements."
 msgstr ""
 
@@ -3300,7 +3301,8 @@ msgstr ""
 #: inx/inkstitch_remove_embroidery_settings.inx:140
 #: inx/inkstitch_satin_to_stroke.inx:12 inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stitch_plan_preview.inx:37
-#: inx/inkstitch_stroke_to_lpe_satin.inx:26 inx/inkstitch_troubleshoot.inx:12
+#: inx/inkstitch_stroke_to_lpe_satin.inx:26
+#: inx/inkstitch_transform_elements.inx:14 inx/inkstitch_troubleshoot.inx:12
 #: inx/inkstitch_unlink_clone.inx:11 inx/inkstitch_zigzag_line_to_satin.inx:18
 #: inx/inkstitch_zip.inx:65
 msgid "Help"
@@ -4182,7 +4184,8 @@ msgstr ""
 #: inx/inkstitch_remove_duplicated_points.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:8
 #: inx/inkstitch_satin_to_stroke.inx:8 inx/inkstitch_stitch_plan_preview.inx:8
-#: inx/inkstitch_stroke_to_lpe_satin.inx:7 inx/inkstitch_troubleshoot.inx:8
+#: inx/inkstitch_stroke_to_lpe_satin.inx:7
+#: inx/inkstitch_transform_elements.inx:8 inx/inkstitch_troubleshoot.inx:8
 #: inx/inkstitch_unlink_clone.inx:6 inx/inkstitch_zigzag_line_to_satin.inx:7
 msgid "Options"
 msgstr "Opties"
@@ -4336,7 +4339,7 @@ msgstr ""
 msgid "The font '%s' has no variants."
 msgstr "Het lettertype '%s' heeft geen varianten."
 
-#: lib/lettering/font.py:599
+#: lib/lettering/font.py:601
 msgid "Color Group"
 msgstr ""
 
@@ -5303,7 +5306,8 @@ msgstr ""
 #: inx/inkstitch_letters_to_font.inx:75 inx/inkstitch_outline.inx:28
 #: inx/inkstitch_redwork.inx:31 inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_satin_to_stroke.inx:15
-#: inx/inkstitch_stitch_plan_preview.inx:45 inx/inkstitch_troubleshoot.inx:15
+#: inx/inkstitch_stitch_plan_preview.inx:45
+#: inx/inkstitch_transform_elements.inx:19 inx/inkstitch_troubleshoot.inx:15
 #: inx/inkstitch_unlink_clone.inx:14
 msgid "More information on our website"
 msgstr ""
@@ -5410,7 +5414,7 @@ msgstr ""
 msgid "https://inkstitch.org/docs/fill-tools/#break-apart-fill-objects"
 msgstr ""
 
-#: inx/inkstitch_break_apart.inx:28
+#: inx/inkstitch_break_apart.inx:28 inx/inkstitch_transform_elements.inx:27
 msgid "Break apart and repair (broken) fill shapes"
 msgstr ""
 
@@ -5686,7 +5690,7 @@ msgstr ""
 #: inx/inkstitch_selection_to_anchor_line.inx:12
 #: inx/inkstitch_selection_to_guide_line.inx:12
 #: inx/inkstitch_selection_to_pattern.inx:12 inx/inkstitch_test_swatches.inx:11
-#: inx/inkstitch_unlink_clone.inx:24
+#: inx/inkstitch_transform_elements.inx:30 inx/inkstitch_unlink_clone.inx:24
 msgid "Edit"
 msgstr "Bewerken"
 
@@ -7982,6 +7986,26 @@ msgstr ""
 
 #: inx/inkstitch_thread_list.inx:9
 msgid "A list of thread colors"
+msgstr ""
+
+#: inx/inkstitch_transform_elements.inx:3
+msgid "Transform"
+msgstr ""
+
+#: inx/inkstitch_transform_elements.inx:11
+msgid "Flip horizontally"
+msgstr ""
+
+#: inx/inkstitch_transform_elements.inx:12
+msgid "Flip vertically"
+msgstr ""
+
+#: inx/inkstitch_transform_elements.inx:15
+msgid "This extension applies transformations while also adjusting the fill angles"
+msgstr ""
+
+#: inx/inkstitch_transform_elements.inx:20
+msgid "https://inkstitch.org/docs/edit/#transform"
 msgstr ""
 
 #: inx/inkstitch_troubleshoot.inx:3
