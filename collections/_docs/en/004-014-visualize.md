@@ -38,7 +38,7 @@ Button  | Effect | Shortcut Keys
 **Info**||
 |<img src="/assets/images/docs/icons/info.png" >|Design Information| 
 **Settings**||
-||Change background color| 
+|<img src="/assets/images/docs/icons/change_background.png" >|Change background color| 
 |<img src="/assets/images/docs/icons/cursor.png" >|Show crosshair| 
 |<img src="/assets/images/docs/icons/page.png" >|Show page| 
 |<img src="/assets/images/docs/icons/settings.png" >|Open setting dialog to set speed, </br>line width and needle point size| 
