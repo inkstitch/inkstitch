@@ -20,7 +20,7 @@ Si vous souhaitez importer une autre liste de fils en provenance d'un fichier tx
 
 ## Exportation
 
-Les listes de fils ne peuvent être exportées qu'en enregistrant une copie du fichier au format "Ink/Stitch: ZIP exporter plusieurs formats (.zip)" , puis après avoir cliqué sur "Enregistrer" selectionnez le format ".TXT: liste de fils".
+Les listes de fils ne peuvent être exportées qu'en enregistrant une copie du fichier au format "Ink/Stitch: ZIP exporter plusieurs formats (.zip)" , puis après avoir cliqué sur "Enregistrer" sélectionnez le format ".TXT: liste de fils".
 
 [Lire plus à propos de cette fonction](/fr/docs/threadlist/)
 
