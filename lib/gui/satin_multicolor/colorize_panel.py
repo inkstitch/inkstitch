@@ -227,7 +227,7 @@ class ColorizePanel(ScrolledPanel):
         return round(width, 2)
 
     def _update(self, event=None):
-        # Hack primarily for Windows: Make sure that the values of spin controls are updated 
+        # Hack primarily for Windows: Make sure that the values of spin controls are updated
         if event is not None and event.EventType == wx.EVT_TEXT_ENTER.typeId:
             try:
                 event.EventObject.SetValue(event.String)

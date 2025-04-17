@@ -602,6 +602,19 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @cache
+    def compensated_shape(self):
+        pairs = self.plot_points_on_rails(
+            self.zigzag_spacing,
+            self.pull_compensation_px,
+            self.pull_compensation_percent/100,
+            True,
+        )
+        rail1 = [point[0] for point in pairs]
+        rail2 = [point[1] for point in pairs]
+        return shgeo.MultiLineString((rail1, rail2))
+
+    @property
+    @cache
     def csp(self):
         paths = self.parse_path()
         # exclude subpaths which are just a point
@@ -1820,17 +1833,17 @@ class SatinColumn(EmbroideryElement):
     def start_point(self, last_stitch_group):
         start_point = self._get_command_point('starting_point')
         if start_point is None and self.start_at_nearest_point and last_stitch_group is not None:
-            start_point = nearest_points(shgeo.Point(*last_stitch_group.stitches[-1]), self.center_line)[1]
+            start_point = nearest_points(shgeo.Point(*last_stitch_group.stitches[-1]), self.offset_center_line)[1]
             start_point = Point(*list(start_point.coords[0]))
         return start_point
 
     def end_point(self, next_stitch):
         end_point = self._get_command_point('ending_point')
         if end_point is None and self.end_at_nearest_point and next_stitch is not None:
-            end_point = nearest_points(next_stitch, self.shape)[1]
+            end_point = nearest_points(next_stitch, self.compensated_shape)[1]
             end_point = Point(*list(end_point.coords[0]))
         # if we are already near to the end, we won't need to specify an ending point
-        if end_point and shgeo.Point(self.center_line.coords[-1]).distance(shgeo.Point(end_point)) < 5:
+        if end_point and shgeo.Point(self.offset_center_line.coords[-1]).distance(shgeo.Point(end_point)) < 5:
             end_point = None
         return end_point
 
