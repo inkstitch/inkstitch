@@ -1,7 +1,7 @@
 ---
 title: "Visualisierung"
 permalink: /de/docs/visualize/
-last_modified_at: 2024-03-13
+last_modified_at: 2025-04-17
 toc: true
 ---
 ## Simulator
@@ -13,39 +13,34 @@ Dann starte `Erweiterungen -> Ink/Stitch -> Simulation -> Visualisieren und Expo
 ![Simulator](/assets/images/docs/de/simulator_de.jpg)
 {: style="border: 2px solid gray; padding: 5px;"}
 
-###  der Simulation
-
 ### Schaltflächen und Tastenkombinationen
 
- 
 Schaltfläche  | Wirkung | Tastenkombinationen
 -------- | -------- | --------
 **Steuerung**||
-|<img src="/assets/images/docs/icons/backward_command.png" >|Gehe Einen Befehl zurück| <key>Page down</key>
-|<img src="/assets/images/docs/icons/backward_stitch.png" >|Gehe Einen Stick zurück| <key>←</key>
-|<img src="/assets/images/docs/icons/forward_stitch.png" >|Gehe einen Stick vor| <key>→</key>
-|<img src="/assets/images/docs/icons/forward_command.png" >|Gehe einen Befehl vor| <key>Page up</key> 
+|<img src="/assets/images/docs/icons/backward_command.png" >|Gehe einen Befehl zurück| <key>Bild ↓</key>
+|<img src="/assets/images/docs/icons/backward_stitch.png" >|Gehe einen Stich zurück| <key>←</key>
+|<img src="/assets/images/docs/icons/forward_stitch.png" >|Gehe einen Stich vor| <key>→</key>
+|<img src="/assets/images/docs/icons/forward_command.png" >|Gehe einen Befehl vor| <key>Bild ↑</key>
 |<img src="/assets/images/docs/icons/direction.png" >|Richtung wechseln| 
-|<img src="/assets/images/docs/icons/play.png"> | Abspielen/Pausieren |<key>space</key> /  <key>p</key>
-|<img src="/assets/images/docs/icons/restart.png" >|Neuestart| <key>r</key> 
+|<img src="/assets/images/docs/icons/play.png"> | Abspielen/Pausieren |<key>space</key> / <key>p</key>
+|<img src="/assets/images/docs/icons/restart.png" >|Neustart| <key>r</key>
 **Geschwindigkeit**||
-|<img src="/assets/images/docs/icons/slower.png" >|langsamerr| <key>↓</key> 
-|<img src="/assets/images/docs/icons/faster.png" >|schneller| <key>↑</key> 
+|<img src="/assets/images/docs/icons/slower.png" >|langsamer| <key>↓</key>
+|<img src="/assets/images/docs/icons/faster.png" >|schneller| <key>↑</key>
 **Zeige**||
-|<img src="/assets/images/docs/icons/npp.png" >|Nadeleinstickposition| <key>o</key>
-|<img src="/assets/images/docs/icons/jump.png" >|Sprungstiche| 
-|<img src="/assets/images/docs/icons/trim.png" >|Fadenschnittbefehle| 
-|<img src="/assets/images/docs/icons/stop.png" >|Stoppbefehle| 
-|<img src="/assets/images/docs/icons/color_change.png" >|Farbwechsels| 
+|<img src="/assets/images/docs/icons/npp.png" >|Nadeleinstichposition| <key>o</key>
+|<img src="/assets/images/docs/icons/jump.png" >|Sprungstiche|
+|<img src="/assets/images/docs/icons/trim.png" >|Fadenschnittbefehle|
+|<img src="/assets/images/docs/icons/stop.png" >|Stoppbefehle|
+|<img src="/assets/images/docs/icons/color_change.png" >|Farbwechsel|
 **Info**||
-|<img src="/assets/images/docs/icons/info.png" >|Info box öffnen| 
+|<img src="/assets/images/docs/icons/info.png" >|Infobox öffnen|
 **Einstellungen**||
-|<img src="/assets/images/docs/icons/change_background.png" >|Hintergrundfarbe wechseln| 
-|<img src="/assets/images/docs/icons/cursor.png" >|Fadenkreuz Zeigen| 
-|<img src="/assets/images/docs/icons/page.png" >|Seite  Zeigen| 
-|<img src="/assets/images/docs/icons/settings.png" >|Einstellungen  öffnen| 
-
-
+|<img src="/assets/images/docs/icons/change_background.png" >|Hintergrundfarbe wechseln|
+|<img src="/assets/images/docs/icons/cursor.png" >|Fadenkreuz aneigen|
+|<img src="/assets/images/docs/icons/page.png" >|Seite anzeigen|
+|<img src="/assets/images/docs/icons/settings.png" >|Einstellungen öffnen|
 
 Es ist auch möglich die Simulation mit der Maus zu **zoomen** und zu **verschieben**.
 
