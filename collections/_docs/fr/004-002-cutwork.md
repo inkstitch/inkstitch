@@ -17,7 +17,7 @@ Il sera parfois nécessaire de laisser des espaces sur le périmètre du trou, a
 
 Ink/Stitch contient un outil qui va vous aider à découper vos éléments selon les angles des aiguilles.
 
-* Selectionnez un ou plusieurs objets contour (sans remplissage). 
+* Sélectionnez un ou plusieurs objets contour (sans remplissage). 
 * Ouvrir `Extensions > Ink/Stitch > Segmentation Richelieu`
   ![Cutwork segmentation window](/assets/images/docs/fr/cutwork-segmentation.png)
 * Définir les angles et les couleurs selon les caractéristiques de votre ensemble d'aiguilles.
@@ -50,7 +50,7 @@ Janome                   | Red <span class="cwd" style="background: #ff3f7e;">&#
 
 Sauvegarder le fichier .inf avec votre fichier .exp (avec le même nom, seule l'extension différe) et la machine reconnaitra les lignes de coupe et montrera les bons numéros d'aiguilles (tels que défini dans l'outil de segmentation).
 
-Utilisez ce paramètrage (ce sont les couleurs classiques, mais elles n'influencent pas la reconaissance du richelieu):
+Utilisez ce paramétrage (ce sont les couleurs classiques, mais elles n'influencent pas la reconnaissance du richelieu):
 
 Aiguille|Couleur                                 |Début|Fin
 ------|-------------------------------------------|-----|---
