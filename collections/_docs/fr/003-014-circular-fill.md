@@ -18,7 +18,7 @@ Le remplissage circulaire remplit une forme avec une spirale. Le centre de la sp
  
 ## Définir le centre de la spirale
 
-Par défaut, le centre de la spiral est le centre géométrique de la forme.
+Par défaut, le centre de la spirale est le centre géométrique de la forme.
 
 Notez que ce n'est pas le centre de la boite englobante.
 
