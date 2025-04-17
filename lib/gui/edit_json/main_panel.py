@@ -220,7 +220,11 @@ class LetteringEditJsonPanel(wx.Panel):
         if glyph_list.IsItemChecked(selection):
             self.horiz_adv_x[glyph] = self.font_meta['horiz_adv_x_default']
             return glyph
-        horiz_adv_x = float(glyph_list.GetItem(selection, 2).Text)
+        horiz_adv_x = None
+        try:
+            horiz_adv_x = float(glyph_list.GetItem(selection, 2).Text)
+        except (ValueError, IndexError):
+            pass
         if glyph_list.GetItem(selection, 3).Text:
             try:
                 horiz_adv_x = float(glyph_list.GetItem(selection, 3).Text)
