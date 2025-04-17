@@ -19,30 +19,30 @@ Then  run `Extensions > Ink/Stitch  > Visualize and Export > Simulator` and enjo
 Button  | Effect | Shortcut Keys
 -------- | -------- | --------
 **Controls**||
-|<img src="/assets/images/docs/icons/backward_command.png" height="20">|Go back to previous command| <key>Page down</key>
-|<img src="/assets/images/docs/icons/backward_stitch.png" height="20">|Go back one stitch| <key>←</key>
-|<img src="/assets/images/docs/icons/forward_stitch.png" height="20">|Go forward one stitch| <key>→</key>
-|<img src="/assets/images/docs/icons/forward_command.png" height="20">|Go to next command| <key>Page up</key> 
-|<img src="/assets/images/docs/icons/direction.png" height="20">|Switch animation direction| 
+|<img src="/assets/images/docs/icons/backward_command.png" >|Go back to previous command| <key>Page down</key>
+|<img src="/assets/images/docs/icons/backward_stitch.png" >|Go back one stitch| <key>←</key>
+|<img src="/assets/images/docs/icons/forward_stitch.png" >|Go forward one stitch| <key>→</key>
+|<img src="/assets/images/docs/icons/forward_command.png" >|Go to next command| <key>Page up</key> 
+|<img src="/assets/images/docs/icons/direction.png" >|Switch animation direction| 
 |![](/assets/images/docs/icons/play2.png) | start/pause animation |<key>space</key> /  <key>p</key>
 |<img src="/assets/images/docs/icons/play2.png"> | start/pause animation |<key>space</key> /  <key>p</key>
-|<img src="/assets/images/docs/icons/restart.png" height="20">|restart| 
+|<img src="/assets/images/docs/icons/restart.png" >|restart| 
 **Speed**||
-|<img src="/assets/images/docs/icons/slower.png" height="20">|render slower| <key>↓</key> 
-|<img src="/assets/images/docs/icons/faster.png" height="20">|render faster| <key>↑</key> 
+|<img src="/assets/images/docs/icons/slower.png" >|render slower| <key>↓</key> 
+|<img src="/assets/images/docs/icons/faster.png" >|render faster| <key>↑</key> 
 **Show**||
-|<img src="/assets/images/docs/icons/npp.png" height="20">|Needle penetration point| 
-|<img src="/assets/images/docs/icons/jump.png" height="20">|Jumps| 
-|<img src="/assets/images/docs/icons/trim.png" height="20">|Trims| 
-|<img src="/assets/images/docs/icons/stop.png" height="20">|Stops| 
-|<img src="/assets/images/docs/icons/color_change.png" height="20">|Color Changes| 
+|<img src="/assets/images/docs/icons/npp.png" >|Needle penetration point| 
+|<img src="/assets/images/docs/icons/jump.png" >|Jumps| 
+|<img src="/assets/images/docs/icons/trim.png" >|Trims| 
+|<img src="/assets/images/docs/icons/stop.png" >|Stops| 
+|<img src="/assets/images/docs/icons/color_change.png" >|Color Changes| 
 **Info**||
-|<img src="/assets/images/docs/icons/info.png" height="20">|Design Information| 
+|<img src="/assets/images/docs/icons/info.png" >|Design Information| 
 **Settings**||
 ||Change background color| 
-|<img src="/assets/images/docs/icons/cursor.png" height="20">|Show crosshair| 
-|<img src="/assets/images/docs/icons/page.png" height="20">|Show page| 
-|<img src="/assets/images/docs/icons/settings.png" height="20">|Open setting dialog to set speed, line width and needle point size| 
+|<img src="/assets/images/docs/icons/cursor.png" >|Show crosshair| 
+|<img src="/assets/images/docs/icons/page.png" >|Show page| 
+|<img src="/assets/images/docs/icons/settings.png" >|Open setting dialog to set speed, line width and needle point size| 
 
 
 
