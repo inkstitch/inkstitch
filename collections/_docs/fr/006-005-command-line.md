@@ -1,5 +1,5 @@
 ---
-title: "Running Ink/Stitch from Command Line"
+title: "Utilliser Ink/Stitch en ligne de commande"
 permalink: /fr/docs/command-line/
 last_modified_at: 2024-09-10
 ---
@@ -28,7 +28,7 @@ Voici un exemple dont la sortie est un fichier de points de broderie svg, pour d
 
 Pour un manuel complet des options des lignes de commandes d'inkscape, vous pouvez consulter [leur page de manuel ](https://inkscape.org/doc/inkscape-man.html)
 
-Notez que vous pouvz aussi acceder combiner les actions d'Ink/Stitch à celles d'Inkscape. Pour voir la liste compléte des actions disponibles :
+Notez que vous pouvez aussi  combiner les actions d'Ink/Stitch à celles d'Inkscape. Pour voir la liste compléte des actions disponibles :
 
 ```
 inkscape --action-list
