@@ -42,7 +42,7 @@ Bouton | Effet | Raccourci
 |<img src="/assets/images/docs/icons/change_background.png" >|Changer la couleur de l'arrière plan| 
 |<img src="/assets/images/docs/icons/cursor.png" >|Montrer la position courante de l'aiguille| 
 |<img src="/assets/images/docs/icons/page.png" >|Montrer les limites de la page| 
-|<img src="/assets/images/docs/icons/settings.png" >|Ouvrir le paramétrage pour choisir la vitesse, </br>l'épaisseur du trait et la taille des points de l'aiguille| 
+|<img src="/assets/images/docs/icons/settings.png" >|Ouvrir le paramétrage pour choisir la vitesse, l'épaisseur du trait et la taille des points de l'aiguille| 
 
 C'est aussi possible de **zoomer** et de **déplacer** la simulation avec la souris.
 
