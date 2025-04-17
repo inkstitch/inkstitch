@@ -25,7 +25,7 @@ Button  | Effect | Shortcut Keys
 |<img src="/assets/images/docs/icons/forward_command.png" >|Go to next command| <key>Page up</key> 
 |<img src="/assets/images/docs/icons/direction.png" >|Switch animation direction| 
 |<img src="/assets/images/docs/icons/play.png"> | start/pause animation |<key>space</key> /  <key>p</key>
-|<img src="/assets/images/docs/icons/restart.png" >|restart| 
+|<img src="/assets/images/docs/icons/restart.png" >|restart| <key>r</key>
 **Speed**||
 |<img src="/assets/images/docs/icons/slower.png" >|render slower| <key>↓</key> 
 |<img src="/assets/images/docs/icons/faster.png" >|render faster| <key>↑</key> 
