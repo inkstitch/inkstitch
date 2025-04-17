@@ -30,7 +30,7 @@ Button  | Effect | Shortcut Keys
 |<img src="/assets/images/docs/icons/slower.png" >|render slower| <key>↓</key> 
 |<img src="/assets/images/docs/icons/faster.png" >|render faster| <key>↑</key> 
 **Show**||
-|<img src="/assets/images/docs/icons/npp.png" >|Needle penetration point| 
+|<img src="/assets/images/docs/icons/npp.png" >|Needle penetration point| <key>o</key>
 |<img src="/assets/images/docs/icons/jump.png" >|Jumps| 
 |<img src="/assets/images/docs/icons/trim.png" >|Trims| 
 |<img src="/assets/images/docs/icons/stop.png" >|Stops| 
