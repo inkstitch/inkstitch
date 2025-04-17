@@ -27,8 +27,8 @@ Einstellung                     ||Beschreibung
 Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
 Füllmethode                     | Konturfüllung | Hier bitte Konturfüllung auswählen
 Methode                         | ![Von Innen nach Außen](/assets/images/docs/contour-fill-innertoouter-bottlenecks.jpg)<br>![Konturspiralen](/assets/images/docs/contour-fill-spirals.jpg)|**Von Innen nach Außen** (Standard) kann auch Formen mit Engpässen füllen<br>**Einfach Spirale** füllt eine Fläche mit einer einfachen Spirale von außen nach innen<br>**Doppelte Spirale** füllt eine Fläche mit einer doppelten Spirale, die Außen beginnt und endet.
-Stil der Verbindungen           | rund, spitz, abgeschrägt|Method to handle the edges when the size the contour is reduced for the inner spirals
-Selbstüberschneidungen vermeiden| ![Avoid self crossing effect](/assets/images/docs/contour-fill-self-crossing.jpg)|Whether inner to outer is allowed to cross itself or not
+Stil der Verbindungen           | rund, spitz, abgeschrägt|Legt fest, wie Ecken beim Herunterskalieren der Kontur für die inneren Spiralen behandelt werden sollen
+Selbstüberschneidungen vermeiden| ![Avoid self crossing effect](/assets/images/docs/contour-fill-self-crossing.jpg)|Legt fest, ob die Pfade sich bei der Methode `Von Innen nach Außen` überkreuzen dürfen oder nicht
 Uhrzeigersinn                   || Bestimmt die Richtung in der die Kontur gestickt wird
 Glätten                         ||Glättet den Stichpfad. Diese Einstellung definiert, wie weit der geglättete Stichpfad vom ursprünglichen Pfad abweichen darf. Versuche niedrige Zahlen wie z.B. 0.2. Hinweis: Eventuell ist auch eine geringere Geradstich-Toleranz erforderlich.
 Erweitern                       ||Erweitert die Ursprungsform. Diese Option kann genutzt werden, um Lücken zwischen angrenzenden Objekten zu verringern. Negative Werte verkleinern die Form.
