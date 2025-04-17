@@ -32,7 +32,7 @@ Schaltfläche  | Wirkung | Tastenkombinationen
 |<img src="/assets/images/docs/icons/slower.png" >|langsamerr| <key>↓</key> 
 |<img src="/assets/images/docs/icons/faster.png" >|schneller| <key>↑</key> 
 **Zeige**||
-|<img src="/assets/images/docs/icons/npp.png" >|Nadeleinstickposition| 
+|<img src="/assets/images/docs/icons/npp.png" >|Nadeleinstickposition| <key>o</key>
 |<img src="/assets/images/docs/icons/jump.png" >|Sprungstiche| 
 |<img src="/assets/images/docs/icons/trim.png" >|Fadenschnittbefehle| 
 |<img src="/assets/images/docs/icons/stop.png" >|Stoppbefehle| 
