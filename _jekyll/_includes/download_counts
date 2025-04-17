@@ -39,36 +39,31 @@
 
 {%- assign linux = linuxtarxz | plus: linuxsh | plus: linuxrpm | plus: linuxdeb %}
 
-## Ink/Stitch {{ site.github.latest_release.name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})
+## Current Version - Ink/Stitch {{ site.github.latest_release.name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})
 
-<table class="inline-table">
-<thead>
-<tr>
-  <th>Linux</th>
-  <th style="color: grey; font-style: italic;">(DEB&nbsp;|&nbsp;RPM&nbsp;|&nbsp;SH&nbsp;|&nbsp;TAR.XZ)</th>
-  <th>macOS</th>
-  <th style="color: grey; font-style: italic;">(Monterey +&nbsp;|&nbsp;Catalina +)</th>
-  <th>Windows</th>
-</tr>
-<thead>
-<tbody>
-  <tr>
-    <td>{{ linux }}</td>
-    <td style="color: grey; font-style: italic;">({{ linuxdeb }} | {{ linuxrpm }} | {{ linuxsh }} | {{ linuxtarxz }})</td>
-    <td>{{ osx }}</td>
-    <td style="color: grey; font-style: italic;">({{ osx | minus: catalina }} | {{ catalina }})</td>
-    <td>{{ windows }}</td>
-  </tr>
+* **Linux: {{ linux | delimited }}**
+  * DEB: {{ linuxdeb | delimited }}
+  * RPM: {{ linuxrpm | delimited }}
+  * SH: {{ linuxsh | delimited }}
+  * TAR.XZ: {{ linuxtarxz }}
+* **macOS: {{ osx | delimited }}**
+  * Monterey +: {{ osx | minus: catalina | delimited }}
+  * Catalina +: {{ catalina | delimited }}
+* **Windows: {{ windows | delimited }}**
+{: .monospace }
 
-</tbody>
-<tfoot>
-  <tr>
-    <td ><b>{{ site.data.ui-text[page.lang].total_downloads }}</b></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td><b>{{ linux | plus: osx | plus: windows }}</b></td>
-  </tr>
+**Total Downloads**: {{ linux | plus: osx | plus: windows | delimited }}
+{: .monospace }
 
-</tfoot>
-<!-- </table> -->
+## Previous Ink/Stitch Versions
+
+{% assign release_ids = "167470890,110551039,104369751,71601622,56965572,56961429,56773344,42376616" | split: "," -%}
+{%- for release_id in release_ids -%}
+{%- assign release = site.github.releases | where: "id", release_id -%}
+{%- assign downloads = 0 -%}
+{%- for asset in release[0].assets -%}
+    {%- assign downloads = downloads | plus: asset.download_count %}
+{%- endfor -%}
+* {{ release[0].tag_name }} ({{ release[0].published_at | date: "%Y-%m-%d" }}): {{ downloads | delimited }}
+{% endfor -%}
+{: .monospace }

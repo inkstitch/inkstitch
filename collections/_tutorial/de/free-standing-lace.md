@@ -1,7 +1,7 @@
 ---
 title: Free Standing Lace - Schmetterling
 permalink: /de/tutorials/fsl/
-last_modified_at: 2018-08-05
+last_modified_at: 2018-08-06
 language: de
 excerpt: Free Standing Lace - Schmetterling
 image: "/assets/images/tutorials/samples/Bfly FSL.svg"
@@ -25,9 +25,8 @@ schwierigkeitsgrad:
 5. Befolge die Anweisungen des Herstellers zum Entfernen. Man kann einen kleinen Teil des Vlies übrig zu lassen und es nicht ganz entfernen. So bleibt eine gewisse Steifigkeit im fertigen Produkt erhalten.
 6. Viel Spaß mit deinem neuen FSL-Ornament.
 
-## Free Standing Lace (FSL) - Butterfly 
+## Free Standing Lace (FSL) - Butterfly (von Evan West)
 
-(von Evan West)
 ![FSL Schmetterling](/assets/images/tutorials/samples/Bfly FSL.svg)
 
 [Download](/assets/images/tutorials/samples/Bfly FSL.svg){: download="Bfly-FSL.svg" }

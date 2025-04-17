@@ -1,7 +1,7 @@
 ---
 title: "Mitmachen"
 permalink: /de/developers/introduction/
-last_modified_at: 2019-03-15
+last_modified_at: 2020-10-04
 toc: false
 ---
 Hier bieten wir Informationen für Entwickler, Übersetzer und Menschen, die bei der Dokumentation helfen wollen.
