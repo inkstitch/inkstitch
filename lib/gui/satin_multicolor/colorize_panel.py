@@ -120,11 +120,8 @@ class ColorizePanel(ScrolledPanel):
         equidistance = self.equististance.GetValue()
         if not equidistance:
             return
-        width = self.monochrome_width.GetValue()
-        num_colors = len(self.color_sizer.GetChildren())
-        margin = (100 - width * num_colors) / max(num_colors - 1, 1)
-        self._set_widget_width_value(width, margin)
-        self._update()
+        self._update(event)
+        self._update_colors()
 
     def _add_color_event(self, event):
         self.add_color()
