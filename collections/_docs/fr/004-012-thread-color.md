@@ -1,7 +1,7 @@
 ---
 title: "Gestion des couleurs de fil"
 permalink: /fr/docs/thread-color/
-last_modified_at: 2025-04-03
+last_modified_at: 2025-04-17
 toc: true
 ---
 
@@ -20,9 +20,9 @@ Avant de pouvoir utiliser les fonctionnalités de couleur de fil, vous devez ins
 Ink/Stitch est fourni avec de nombreuses palettes de fils de fabricants qui peuvent être installées dans Inkscape. Ceci permet de construire des broderies avec les bonnes couleurs à l'esprit.
 Les couleurs apparaîtront dans la sortie pdf et seront aussi incluses dans votre fichier de broderie si son format le permet.
 
-* Go to `Extensions > Ink/Stitch > Install Addons for Inkscape`
-* Enable the option `Install thread color palettes`
-* Click `Apply`
+* `Extensions > Ink/Stitch > Installer des compléments pour Inkscape`
+* Cochez l'option `Installer les palettes de couleur de fil`
+* Cliquez sur  `Appliquer`
 * Redémarrez Inkscape
 
 ### Installer une Palette personnalisée {#install-custom-palette}
@@ -31,7 +31,7 @@ Si vous disposez d'un fichier `.gpl` qui contient la liste des fils que vous uti
 
 Les fichiers `.gpl` de palettes peuvent être générés par GIMP.
 
-## Generer et editer des Palettes personnalisées  
+## Générer et éditer des Palettes personnalisées  
 
 ### Générer une palette {#generate-color-palette}
 
@@ -43,10 +43,10 @@ Cette extension exportera les couleurs d'éléments textuels tout en utilisant l
 2. Activez l'outil texte et copier/coller les noms de couleurs (si vous les avez) ou saisissez les.
    Utilisez une ligne par couleur.
    Si un nom de couleur se termine par un nombre, ce nombre sera utilisé pour cette couleur dans le catalogue.
-3. Utilisez `Extensions > Ink/Stitch > Gestion des couleurs de fil > Generer  palette  > Séparer le texte` pour séparer un bloc de texte avec plusieurs lignes en plusieurs éléments textuels séparés. 
+3. Utilisez `Extensions > Ink/Stitch > Gestion des couleurs de fil > Générer  palette  > Séparer le texte` pour séparer un bloc de texte avec plusieurs lignes en plusieurs éléments textuels séparés. 
 4. Activez l'outil pipette (D) et colorez les éléments textuels, en utilisant les tabulation pour passer de l'un à l'autre.
-5. Selectionnez les éléments textuels et  `Extensions > Ink/Stitch > Gestion des couleurs de fil > Generer palette  > Generer  palette de couleurs...`
-6. Specifiez le nom de votre palette de couleurs et cliquez sur Appliquer
+5. Sélectionnez les éléments textuels et  `Extensions > Ink/Stitch > Gestion des couleurs de fil > Générer palette  > Générer  palette de couleurs...`
+6. Spécifiez le nom de votre palette de couleurs et cliquez sur Appliquer
 
 {% include video id="4bcRVoKvzAw" provider="youtube" %}
 
@@ -55,13 +55,13 @@ Cette extension exportera les couleurs d'éléments textuels tout en utilisant l
 Ink/Stitch peut éditer des palettes existantes comme du texte.
 
 - Importer les couleurs et les noms de couleurs avec `Extensions > Ink/Stitch > Gestion des couleurs de fil > Palette vers Texte`
-- Changer les couleurs, mettre à jour les noms de couleurs ou les numeros de couleus ou ajouter des couleurs
-- Exporter votre pallette avec  `Extensions > Ink/Stitch >  Gestion des couleurs de fil > Generer palette > Generate palette de couleurs...`
+- Changer les couleurs, mettre à jour les noms de couleurs ou les numéros de couleurs ou ajouter des couleurs
+- Exporter votre palette avec  `Extensions > Ink/Stitch >  Gestion des couleurs de fil > Générer palette > Générer une palette de couleurs...`
 - Redémarrer Inkscape
 
 ## Travailler avec des palettes
 
-###  Usage General
+###  Usage Général
 
 Une fois installées, les palettes Inkscape se trouvent dans la partie inférieure droite des nuanciers.
 
@@ -83,7 +83,7 @@ Exécutez `Extensions > Ink/Stitch  > Gestion des couleurs de fil > Appliquer un
 
 ### Exportation
 
-Les listes de fils ne peuvent être exportées qu'en enregistrant une copie du fichier au format "Ink/Stitch: ZIP exporter plusieurs formats (.zip)" , puis après avoir cliqué sur "Enregistrer" selectionnez le format ".TXT: liste de fils".
+Les listes de fils ne peuvent être exportées qu'en enregistrant une copie du fichier au format "Ink/Stitch: ZIP exporter plusieurs formats (.zip)" , puis après avoir cliqué sur "Enregistrer" sélectionnez le format ".TXT: liste de fils".
 
 ### Appliquer une liste de fil {#apply-threadlist}
 
@@ -94,5 +94,5 @@ Ce peut être aussi utile si vous souhaitez essayer différents réglages de cou
 * Lancez `Extensions > Ink/Stitch > Gestion des couleurs de fil > Appliquer la liste de fils`
 * Choisir un fichier qui contient les information de couleur de fils qui correspondent aux éléments du document courant
 * Choisir si ce fichier a été généré par Ink/Stitch ou pas.
- Si pas: selectionner la palette de couleur Ink/Stitch avec laquelle établir la correspondance de couleurs.
+ Si pas: sélectionner la palette de couleur Ink/Stitch avec laquelle établir la correspondance de couleurs.
 * Cliquez sur Appliquer
