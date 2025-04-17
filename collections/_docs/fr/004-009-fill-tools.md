@@ -12,9 +12,9 @@ Par conséquent, les messages d'erreur pour les zones de remplissage sont souven
 
 ### Usage
 
-* Selectionner un remplissage ou plus
-* Exécutez: Extensions > Ink/Stitch  > Outils de remplissage > Briser les objets de remplissage
-* Pour la plupart des formes `simple` sera suffisant. Si vous avez encore des problèmes essayez `complex`.
+* Sélectionner un remplissage ou plus
+* Exécutez: Extensions > Ink/Stitch > Outils de remplissage > Briser les objets de remplissage
+* Pour la plupart des formes `simple` sera suffisant. Si vous avez encore des problèmes essayez `complexe`.
 
 ### Simple ou Complexe
 
@@ -39,35 +39,35 @@ Info: Pour les chemins qui se chevauchent, l'étape 1 n'est effectuée que par c
 
 ## Convertir en blocs de dégradés {#convert-to-gradient-blocks}
 
-Convertir en blocs de dégradé va découper un remplissage dont la couleur de fond est un dégradé linéaire en plusieurs blocs monochromes avec un espacement de ligne adequat pour rendre l'effet de dégradé.
+Convertir en blocs de dégradé va découper un remplissage dont la couleur de fond est un dégradé linéaire en plusieurs blocs monochromes avec un espacement de ligne adéquat pour rendre l'effet de dégradé.
 
 ### Usage
 
 1. Depuis Fond et Contour, appliquez un dégradé linéaire comme couleur de fond à un élement.
 
-   ![linear gradient](/assets/images/docs/en/linear-gradient.png)
+ ![linear gradient](/assets/images/docs/en/linear-gradient.png)
 
-   Choisir l'angle du dégradé à l'aide de  poignées du dégradé (passer en mode edition de noeud pour les voirs
+ Choisir l'angle du dégradé à l'aide de poignées du dégradé (passer en mode édition de  nœud pour les voir
 
 2. Lancez `Extensions > Ink/Stitch > Outils: Remplissage > Convertir en blocs de dégradé
 
-   ![color blocks](/assets/images/docs/color_blocks.png)
+ ![color blocks](/assets/images/docs/color_blocks.png)
 
-   Choisir l'espacement final des rangées
+ Choisir l'espacement final des rangées
 
 ## Knockdown Fill {#knockdown-fill}
 
 {% include upcoming_release.html %}
 
-Permet de générer un remplissage  sous tous les éléments sélectionnés, optionellement avec un décalage. Cela peut s'avérer très utile lorsque vous travaillez avec des tissus à poils longs comme de l'éponge.
+Permet de générer un remplissage sous tous les éléments sélectionnés, optionnellement avec un décalage. Cela peut s'avérer très utile lorsque vous travaillez avec des tissus à poils longs comme de l'éponge.
 
 ![A figure with a surrounding knockdown stitch](/assets/images/docs/knockdown.png)
 
 * Sélectionner des éléments
-* Ouvrir  `Extensions > Ink/Stitch > Outils : Remplissage > Sélection vers remplissage en points couchés` 
+* Ouvrir `Extensions > Ink/Stitch > Outils : Remplissage > Sélection vers remplissage en points couchés` 
 * Adapter les paramètres
 * Cliquer sur 'Appliquer'
-* Adaptez les paramètres de remplissage dans la boîte de dialogue du paramètrage (`Extensions > Ink/Stitch > Paramètres`).
+* Adaptez les paramètres de remplissage dans la boîte de dialogue du paramétrage (`Extensions > Ink/Stitch > Paramètres`).
 
 ### Paramètres
 
@@ -78,7 +78,7 @@ Permet de générer un remplissage  sous tous les éléments sélectionnés, opt
 
 ## Tartan
 
-L'éditeur de bandes du tartan se trouve dans   `Extensions > Ink/Stitch > Outils: remplissage > Tartan`
+L'éditeur de bandes du tartan se trouve dans `Extensions > Ink/Stitch > Outils: remplissage > Tartan`
 
 ![A seahorse rendered with tartan fill](/assets/images/docs/fr/tartan_stripe_editor.png)
 
@@ -88,28 +88,28 @@ L'éditeur de bandes du tartan se trouve dans   `Extensions > Ink/Stitch > Outil
 
 Le motif dans son ensemble peut être tourné, mis à l'échelle (%) et translaté (mm).
 
-#### Paramètrage du motif
+#### Paramétrage du motif
 
-* Symmetrie:  Les motifs peuvent être soit réfléchis soit répétés.
-  * Un motif réfléchi verra l'ordre de ses bandes inversé d'une fois sur l'autre (sans répétion des bandes pivots). Ceci signifie qu'un motif à trois couleurs (vert, noir, jaune) sera rendu de la manière suivante :
-    vert, noir, jaune, noir, vert, noir, jaune,....
-  * Un motif répété repète simplement toujours le même motif : vert, noir, jaune, vert, noir, jaune, vert, noir, jaune,...
+* Symétrie: Les motifs peuvent être soit réfléchis soit répétés.
+ * Un motif réfléchi verra l'ordre de ses bandes inversé d'une fois sur l'autre (sans répétition des bandes pivots). Ceci signifie qu'un motif à trois couleurs (vert, noir, jaune) sera rendu de la manière suivante :
+ vert, noir, jaune, noir, vert, noir, jaune,....
+ * Un motif répété répète simplement toujours le même motif : vert, noir, jaune, vert, noir, jaune, vert, noir, jaune,...
 
 * Même nombre de fils pour la chaine et la trame
-  *  si désactivé, vous pouvez définir deux motifs différents, l'un pour la chaîne, l'autre pour la trame
-  *  si activé, chaîne et trame suivent le même motif
+ * si désactivé, vous pouvez définir deux motifs différents, l'un pour la chaîne, l'autre pour la trame
+ * si activé, chaîne et trame suivent le même motif
  
-    
+ 
 #### Bandes
 
 * Ajouter des couleurs avec le bouton "Ajouter"
-* Supprimer des couleurs en cliquant sur le  X à droite de la couleur
-* Modifier l'ordre des bandes en glissant deposant  `⁝` (à utiliser avec beaucoup de précautions)
+* Supprimer des couleurs en cliquant sur le X à droite de la couleur
+* Modifier l'ordre des bandes en glissant déposant `⁝` (à utiliser avec beaucoup de précautions)
 * Autoriser ou non le rendu d'une bande avec la case à cocher (☑)
 * Lorsque "Même nombre de fils pour la chaîne et la trame" est désactivé : la chaîne définit les lignes verticales, la trame définit les lignes horizontales
 * Cliquez sur le champ coloré pour sélectionner une autre couleur
 * Lorsque vous souhaitez modifier une couleur dans plusieurs bandes à la fois, activez « Lier les couleurs » et les couleurs identiques seront mises à jour simultanément.
-  
+ 
 ### Code de Palette 
 Ce code de palette est ce que Ink/Stitch sauvegarde dans le svg, mais peut aussi être édité directement.
 
@@ -119,7 +119,7 @@ Un code de palette peut ressembler à ceci : `(#000000)/5.0 (#FFFFFF)/5.0`.
 * Chaque couleur est entourée par des parenthèses `(#000000)`
 * Une barre oblique (`/`) indique un motif symétrique/réfléchi, alors que trois points au début et à la fin du code (`...`) représentent un motif asymétrique/répété `...(#000000)5.0 (# FFFFFF)5.0...`.
 * Un pipe (`|`) est un séparateur pour la chaîne et la trame et ne doit être utilisé que s'ils ne suivent pas le même motif.
-* Une bande desactivé se traduit par un '?'
+* Une bande désactivée se traduit par un '?'
 
 **Info**:Le [Scottish Register of Tartans](https://www.tartanregister.gov.uk/) possède une vaste collection de motifs de tartan enregistrés. Ink/Stitch est capable d'utiliser leur code qu'ils envoient par courrier et de le convertir en code couleur Ink/Stitch. Veuillez respecter leurs réglementations particulières en matière de licence. Assurez-vous de définir la largeur d'un fil tartan avant de cliquer sur `Appliquer le code`.<br><br>Voici un exemple de code que vous pouvez essayer : `...B24 W4 B24 R2 K24 G24 W2...` ( [source](https://www.tartanregister.gov.uk/threadcount)) 
 {: .notice--info}
@@ -128,7 +128,7 @@ Un code de palette peut ressembler à ceci : `(#000000)/5.0 (#FFFFFF)/5.0`.
 
 Dans les paramètres de broderie, vous pouvez décider si vous souhaitez rendre le tartan comme un seul élément de broderie ou si vous souhaitez recevoir plusieurs éléments svg que vous pourrez ensuite modifier et transformer à votre guise.
 
-####  Elément de broderie
+#### Elément de broderie
 
 Le rendu d'un tartan comme élément de broderie se traduira par un aspect uniforme avec un placement de point optimal. Vous pouvez définir divers paramètres qui peuvent également être affinés dans la boîte de dialogue des paramètres.
 
@@ -145,6 +145,6 @@ Le seul paramètre qui n'apparaîtra qu'ici est la « Largeur minimale de bande
 {: .notice--info}
 
 
-## Tutoriaux utilisant Outils: Remplissage
+## Tutoriels utilisant Outils: Remplissage
 
 {% include tutorials/tutorial_list key="tool" value="Fill" %}
