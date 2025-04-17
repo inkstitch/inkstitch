@@ -128,9 +128,9 @@ Un code de palette peut ressembler à ceci : `(#000000)/5.0 (#FFFFFF)/5.0`.
 
 Dans les paramètres de broderie, vous pouvez décider si vous souhaitez rendre le tartan comme un seul élément de broderie ou si vous souhaitez recevoir plusieurs éléments svg que vous pourrez ensuite modifier et transformer à votre guise.
 
-#### Elément de broderie
+#### Éléments de broderie
 
-Le rendu d'un tartan comme élément de broderie se traduira par un aspect uniforme avec un placement de point optimal. Vous pouvez définir divers paramètres qui peuvent également être affinés dans la boîte de dialogue des paramètres.
+Le rendu d'un tartan comme éléments de broderie se traduira par un aspect uniforme avec un placement de point optimal. Vous pouvez définir divers paramètres qui peuvent également être affinés dans la boîte de dialogue des paramètres.
 
 Veuillez vous référer aux paramètres répertoriés sur la [page de remplissage tartan](/fr/docs/stitches/tartan-fill/).
 
