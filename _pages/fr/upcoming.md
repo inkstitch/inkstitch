@@ -321,7 +321,7 @@ Les découpes sont désormais facilement accessibles dans Ink/Stitch sous toutes
 
 ### Clones
 
-* Les clones clonent désormais également les commandes attachées à l'élément et à ses enfants [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
+* Les clones embarquent aussi désormais les commandes attachées à l'élément et à ses enfants [#3086](https://github.com/inkstitch/inkstitch/pull/3086)
 
 [En savoir plus](/fr/docs/stitches/clone/)
 
