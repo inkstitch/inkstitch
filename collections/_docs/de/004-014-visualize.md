@@ -10,23 +10,42 @@ Wähle die Objekte aus, die in der simulierten Vorschau angezeigt werden sollen.
 
 Dann starte `Erweiterungen -> Ink/Stitch -> Simulation -> Visualisieren und Exportieren` und lehne dich zurück.
 
-![Simulator](/assets/images/docs/en/simulator.jpg)
+![Simulator](/assets/images/docs/de/simulator_de.jpg)
 {: style="border: 2px solid gray; padding: 5px;"}
 
-### Tastenkombinationen der Simulation
+###  der Simulation
 
-tastenkombination | Beschreibung
--------- | --------
-<key>Leertaste</key> | Animation starten
-<key>p</key> | Animation pausieren
-<key>→</key> | vorwärts
-<key>←</key> | rückwärts
-<key>↑</key> | schneller
-<key>↓</key> | langsamer
-<key>+</key> | ein Frame vorwärts
-<key>-</key> | ein Frame rückwärts
-<key>Page down</key> | zum voherigen Befehl springen
-<key>Page up</key> | zum nächsten Befehl springen
+### Schaltflächen und Tastenkombinationen
+
+ 
+Schaltfläche  | Wirkung | Tastenkombinationen
+-------- | -------- | --------
+**Steuerung**||
+|<img src="/assets/images/docs/icons/backward_command.png" >|Gehe Einen Befehl zurück| <key>Page down</key>
+|<img src="/assets/images/docs/icons/backward_stitch.png" >|Gehe Einen Stick zurück| <key>←</key>
+|<img src="/assets/images/docs/icons/forward_stitch.png" >|Gehe einen Stick vor| <key>→</key>
+|<img src="/assets/images/docs/icons/forward_command.png" >|Gehe einen Befehl vor| <key>Page up</key> 
+|<img src="/assets/images/docs/icons/direction.png" >|Richtung wechseln| 
+|<img src="/assets/images/docs/icons/play.png"> | Abspielen/Pausieren |<key>space</key> /  <key>p</key>
+|<img src="/assets/images/docs/icons/restart.png" >|Neuestart| <key>r</key> 
+**Geschwindigkeit**||
+|<img src="/assets/images/docs/icons/slower.png" >|langsamerr| <key>↓</key> 
+|<img src="/assets/images/docs/icons/faster.png" >|schneller| <key>↑</key> 
+**Zeige**||
+|<img src="/assets/images/docs/icons/npp.png" >|Nadeleinstickposition| 
+|<img src="/assets/images/docs/icons/jump.png" >|Sprungstiche| 
+|<img src="/assets/images/docs/icons/trim.png" >|Fadenschnittbefehle| 
+|<img src="/assets/images/docs/icons/stop.png" >|Stoppbefehle| 
+|<img src="/assets/images/docs/icons/color_change.png" >|Farbwechsels| 
+**Info**||
+|<img src="/assets/images/docs/icons/info.png" >|Info box öffnen| 
+**Einstellungen**||
+|<img src="/assets/images/docs/icons/change_background.png" >|Hintergrundfarbe wechseln| 
+|<img src="/assets/images/docs/icons/cursor.png" >|Fadenkreuz Zeigen| 
+|<img src="/assets/images/docs/icons/page.png" >|Seite  Zeigen| 
+|<img src="/assets/images/docs/icons/settings.png" >|Einstellungen  öffnen| 
+
+
 
 Es ist auch möglich die Simulation mit der Maus zu **zoomen** und zu **verschieben**.
 
