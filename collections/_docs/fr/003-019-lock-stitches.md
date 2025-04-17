@@ -6,12 +6,12 @@ toc: true
 ---
 
 ## Qu'est ce que c'est
-Les points d'arrêt sont des petits points au début (point d'arrêt initial) ou à la fin (point d'arrêt final)  d'une couleur ou d'un saut de fil ou d'une commande de coupe. Ils aident à sécuriser le fil.
+Les points d'arrêt sont des petits points au début (point d'arrêt initial) ou à la fin (point d'arrêt final) d'une couleur ou d'un saut de fil ou d'une commande de coupe. Ils aident à sécuriser le fil.
 
 ## Facteurs d'influence (autrement dit quand y-a-t-il des points d'arrêt)
 
 
-Le fichier de broderie est composé de multiples objets brodés consécutivement. Il y aura des points d'arrêts entre deux objets consécutifs  parce qu'il y a un changement de couleur ou une commande de coupe  ou parce que les objets sont distants l'un de l'autre. `Autorisez les points d'arrêt`  permet  l'interdiction des points d'arrêts tandis que `forcer les points d'arrêts` permet de s'assurer de leur présence.
+Le fichier de broderie est composé de multiples objets brodés consécutivement. Il y aura des points d'arrêts entre deux objets consécutifs parce qu'il y a un changement de couleur ou une commande de coupe ou parce que les objets sont distants l'un de l'autre. `Autorisez les points d'arrêt` permet l'interdiction des points d'arrêts tandis que `forcer les points d'arrêts` permet de s'assurer de leur présence.
 
 
 ### Longueur minimum de saut
@@ -31,19 +31,19 @@ Mais d'autres paramètres peuvent influencer la question de savoir si des points
 
 ### Changements de couleur 
 
-Il y a toujours des points d'arrêts  avant et après un changement de couleur.
+Il y a toujours des points d'arrêts avant et après un changement de couleur.
 
 ### Commandes de coupe
 
-Ink/Stitch insert des points d'arrêt finaux  sur un objet porteur de la commande  "couper après" et des points d'arrêts initiaux sur l'objet suivant.
+Ink/Stitch insert des points d'arrêt finaux sur un objet porteur de la commande "couper après" et des points d'arrêts initiaux sur l'objet suivant.
 
-![Trois traits, les distances sont  de  1 mm, la longueur minimum de saut est à 2. Le trait central a une commande de coupe qui implique des points d'arrêt finaux pour lui et initiaux pour le trait suivant](/assets/images/docs/lock_stitch_trim.svg)
+![Trois traits, les distances sont de 1 mm, la longueur minimum de saut est à 2. Le trait central a une commande de coupe qui implique des points d'arrêt finaux pour lui et initiaux pour le trait suivant](/assets/images/docs/lock_stitch_trim.svg)
 {: .border-shadow }
 
 Ink/Stitch permet d'ajouter des commandes de coupe:
 
 * soit sous forme de commande visuelle en utilisant Extension < Ink/Stitch < Commandes < Attacher des commandes à des objets sélectionnés.
-* soit en cochant la case "couper après" dans le dialogue de paramètrage.
+* soit en cochant la case "couper après" dans le dialogue de paramétrage.
 
 
 ### Autoriser les points d'arrêt.
@@ -51,18 +51,18 @@ Ink/Stitch permet d'ajouter des commandes de coupe:
 `Autoriser les points d'arrêt` peut supprimer les points d'arrêt initiaux ou finaux qui devraient normalement être appliqués.
 {: .notice--info }
 
-![Trois traits, les distances sont  de  3 mm, la longueur minimum de saut est à 2. Le trait central est paramètré  pour n'autoriser les points d'arrêts qu'à la fin. De  ce  fait, il n'a pas de points d'arrêt initiaux.](/assets/images/docs/lock_stitch_allow.svg)
+![Trois traits, les distances sont de 3 mm, la longueur minimum de saut est à 2. Le trait central est paramètré pour n'autoriser les points d'arrêts qu'à la fin. De ce fait, il n'a pas de points d'arrêt initiaux.](/assets/images/docs/lock_stitch_allow.svg)
 {: .border-shadow }
 
-Le paramètre `Autoriser les points d'arrêt` peut empêcher les points d'arrêt initiaux et/ou finaux. Ainsi quand la distance  entre deux objets est suffisamment  grande  pour qu'il  y ait  un saut, mais que le paramètre `Autoriser les points d'arrêt` du premier objet est réglé  sur `Avant`, il n'y aura pas de points d'arrêts finaux pour lui.  
+Le paramètre `Autoriser les points d'arrêt` peut empêcher les points d'arrêt initiaux et/ou finaux. Ainsi quand la distance entre deux objets est suffisamment grande pour qu'il y ait un saut, mais que le paramètre `Autoriser les points d'arrêt` du premier objet est réglé sur `Avant`, il n'y aura pas de points d'arrêts finaux pour lui. 
 ### Forcer les points d'arrêt 
 
-Il est aussi possible de forcer  des points d'arrêts initiaux ou finaux pour  des objets très proches. Cocher le paramètre `forcer les  points d'arrêt` **du  premier objet** lui ajoutera des points d'arrêt terminaux ET des points d'arrêt initiaux pour  l'objet suivant.
+Il est aussi possible de forcer des points d'arrêts initiaux ou finaux pour des objets très proches. Cocher le paramètre `forcer les points d'arrêt` **du premier objet** lui ajoutera des points d'arrêt terminaux ET des points d'arrêt initiaux pour l'objet suivant.
 
-![Trois traits, les distances sont de 1 mm, la longueur minimum de saut est à 2. Le  paramètre  `forcer les  points d'arrêt`  est coché pour le trait central, ce qui  implique des points d'arrêt  finaux pour lui et des points d'arrêt initiaux pour l'objet suivant.](/assets/images/docs/lock_stitch_force.svg)
+![Trois traits, les distances sont de 1 mm, la longueur minimum de saut est à 2. Le paramètre `forcer les points d'arrêt` est coché pour le trait central, ce qui implique des points d'arrêt finaux pour lui et des points d'arrêt initiaux pour l'objet suivant.](/assets/images/docs/lock_stitch_force.svg)
 {: .border-shadow }
 
-Attention, ne cochez pas aussi ce paramètre pour l'objet situé après le saut, car alors en plus de son point d'arrêt initial, vous forcez un point d'arrêt final sur le deuxième  objet, et de plus un point d'arrêt initial sur l'objet suivant, quelque soit la distance entre les deux.
+Attention, ne cochez pas aussi ce paramètre pour l'objet situé après le saut, car alors en plus de son point d'arrêt initial, vous forcez un point d'arrêt final sur le deuxième objet, et de plus un point d'arrêt initial sur l'objet suivant, quelque soit la distance entre les deux.
 
 `Forcer les points d'arrêt ` forcera toujours les points d'arrêt est prioritaire sur le paramètre `autoriser les points d'arrêt`.
 {: .notice--info }
@@ -78,18 +78,18 @@ Ink/Stitch offre divers types pour les points d'arrêt et vous permet même de d
 {: .img-half }
 
 1. Demi-point. Ceci est le point par défaut, et le seul style disponible dans les versions précédentes d'Ink/Stitch. Il n'a pas d'option de redimensionnement, mais sa taille est relative à la longueur du point : deux demi points en arrière et deux demi points en avant.
-2. Flèche, se redimensionne  en %
-3. Arrière puis avant, se redimensionne  en mm
-5. Noeud papillon, se redimensionne  en %
-6. Croix, se redimensionne  en %
-7. Étoile, se redimensionne  en %
-8. Triangle, se redimensionne  en %
-9. Zigzag, se redimensionne  en %
-10. Personnalisé, se redimensionne  en % ou en mm selon le type de chemin.
+2. Flèche, se redimensionne en %
+3. Arrière puis avant, se redimensionne en mm
+5. Noeud papillon, se redimensionne en %
+6. Croix, se redimensionne en %
+7. Étoile, se redimensionne en %
+8. Triangle, se redimensionne en %
+9. Zigzag, se redimensionne en %
+10. Personnalisé, se redimensionne en % ou en mm selon le type de chemin.
 
 ## Points d'arrêt personnalisés
 
-Il est possible de définir des points d'arrêt personnalisés  dans le paramètre chemin personnalisé soit à l'aide d'un chemin svg avec comme unité le mm (échelle : %) soit avec des unités relatives au nombre de pas en avant ou en arrière (échelle :mm)
+Il est possible de définir des points d'arrêt personnalisés dans le paramètre chemin personnalisé soit à l'aide d'un chemin svg avec comme unité le mm (échelle : %) soit avec des unités relatives au nombre de pas en avant ou en arrière (échelle :mm)
 
 
 
@@ -111,5 +111,5 @@ Le chemin personnalisé est tourné de telle sorte que son dernier segment (le s
 ### Chemin personnalisé en mm
 
 Les valeurs personnalisées (positives ou négatives) en mm sont séparées par un espace. Par exemple un point d'arrêt personnalisé avec comme valeur de chemin
-1 1 -1 -1 , une échelle définie à 0.7 mm  fera deux points de 0.7 mm en avant puis deux points de 0.7mm en arrière.
+1 1 -1 -1 , une échelle définie à 0.7 mm fera deux points de 0.7 mm en avant puis deux points de 0.7mm en arrière.
 Il est possible d'utiliser des valeurs non entières, (par exemple 0.5 2.2 -0.5 -2.2), si l'utilisateur le souhaite.
