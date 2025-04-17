@@ -50,13 +50,13 @@ class ColorizePanel(ScrolledPanel):
         self.overflow_right = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP | wx.TE_PROCESS_ENTER)
         self.overflow_right.SetDigits(2)
         self.overflow_right.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
-        self.overflow_left.Bind(wx.EVT_TEXT_ENTER, self._update)
+        self.overflow_right.Bind(wx.EVT_TEXT_ENTER, self._update)
 
         pull_compensation_label = wx.StaticText(self, label=_("Pull compensation (mm)"))
         self.pull_compensation = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP | wx.TE_PROCESS_ENTER)
         self.pull_compensation.SetDigits(2)
         self.pull_compensation.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
-        self.overflow_left.Bind(wx.EVT_TEXT_ENTER, self._update)
+        self.pull_compensation.Bind(wx.EVT_TEXT_ENTER, self._update)
 
         seed_label = wx.StaticText(self, label=_("Random seed"))
         self.seed = wx.TextCtrl(self)
