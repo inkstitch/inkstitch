@@ -10,7 +10,7 @@ Sélectionnez les objets que vous souhaitez voir dans un aperçu simulé. Si vou
 
 Puis faites `Extensions > Ink/Stitch  > Visualiser et Exporter > Simulateur`.
 
-![Simulator](/assets/images/docs/en/simulator.jpg)
+![Simulator](/assets/images/docs/fr/simulateur.jpg)
 {: style="border: 2px solid gray; padding: 5px;"}
 
 ### Raccourcis pour la Simulation 
