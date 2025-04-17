@@ -15,7 +15,7 @@ Then  run `Extensions > Ink/Stitch  > Visualize and Export > Simulator` and enjo
 
 ### Simulation  Buttons and Shortcut Keys
 
-Button  | Effect| Shortcut Keys
+Button  | Effect | Shortcut Keys
 -------- | -------- | --------
 **Controls**||
 |<img src="/assets/images/docs/icons/backward_command.png" height="10">|Go back to previous command| <key>Page down</key>
