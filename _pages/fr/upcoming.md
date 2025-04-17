@@ -112,7 +112,8 @@ Remplace « Installer des palettes de couleurs de fil pour Inkscape ».
 
 `Édition > Supprimer les points dupliqués` [#3117](https://github.com/inkstitch/inkstitch/pull/3117)
 
-Permet, par exemple, de supprimer les répétitions des plans de broderie des points multiples et de les transformer en lignes simples.
+Permet, par exemple, dans un fichier dans un format machine de transformer un point triple en point simple. 
+
 
 ![Supprimer les points dupliqués](/assets/images/upcoming/3.2.0/remove_duplicated_points.png)
 
@@ -122,7 +123,7 @@ Permet, par exemple, de supprimer les répétitions des plans de broderie des po
 
 `Outils : Remplissage > Sélection en remplissage en points couchants` [#3526](https://github.com/inkstitch/inkstitch/pull/3526)
 
-Méthode permettant de générer une zone de remplissage en point couchants sous tous les éléments sélectionnés, avec un décalage optionnel. Ceci peut s'avérer très utile pour les tissus à poils longs.
+Méthode permettant de générer une zone de remplissage en points couchants sous tous les éléments sélectionnés, avec un décalage optionnel. Ceci peut s'avérer très utile pour les tissus à poils longs.
 
 ![Une figure entourée d'un point couchant](/assets/images/docs/knockdown.png)
 
@@ -272,7 +273,7 @@ Ajout d'une option pour le positionnement du texte le long du tracé (gauche, ce
 
 ### Résolution de problèmes
 
-* Le regroupement en groupes  permet d'afficher/désafficher des types d'erreur  ou d'avertissement [#3486](https://github.com/inkstitch/inkstitch/pull/3486)
+* Le regroupement selon les catégories permet d'afficher/désafficher des types d'erreur  ou d'avertissement [#3486](https://github.com/inkstitch/inkstitch/pull/3486)
 * Ajout d'un fond au texte de résolution des problèmes [#3357](https://github.com/inkstitch/inkstitch/pull/3357)
 
 [En savoir plus](/fr/docs/troubleshoot/#troubleshoot-objects)
