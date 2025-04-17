@@ -13,20 +13,36 @@ Then  run `Extensions > Ink/Stitch  > Visualize and Export > Simulator` and enjo
 ![Simulator](/assets/images/docs/en/simulator.jpg)
 {: style="border: 2px solid gray; padding: 5px;"}
 
-### Simulation Shortcut Keys
+### Simulation  Buttons and Shortcut Keys
 
-Shortcut Keys | Effect
--------- | --------
-<key>space</key> | start animation
-<key>p</key> | pause animation
-<key>→</key> | forward
-<key>←</key> | backward
-<key>↑</key> | speed up
-<key>↓</key> | slow down
-<key>+</key> | one frame forward
-<key>-</key> | one frame backward
-<key>Page down</key> | Jump to previous command
-<key>Page up</key> | Jump to next command
+Button  | Effect| Shortcut Keys
+-------- | -------- | --------
+**Controls**||
+|<img src="/assets/images/docs/icons/backward_command.png" height="20">|Go back to previous command| <key>Page down</key>
+|<img src="/assets/images/docs/icons/backward_stitch.png" height="20">|Go back one stitch| <key>←</key>
+|<img src="/assets/images/docs/icons/forward_stitch.png" height="20">|Go forward one stitch| <key>→</key>
+|<img src="/assets/images/docs/icons/forward_command.png" height="20">|Go to next command| <key>Page up</key> 
+|<img src="/assets/images/docs/icons/direction.png" height="20">|Switch animation direction| 
+|<img src="/assets/images/docs/icons/play.png" height="20"> | start/pause animation |<key>space</key> /  <key>p</key>
+|<img src="/assets/images/docs/icons/restart.png" height="20">|restart| 
+**Speed**||
+|<img src="/assets/images/docs/icons/slower.png" height="20">|render slower| <key>↓</key> 
+|<img src="/assets/images/docs/icons/faster.png" height="20">|render faster| <key>↑</key> 
+**Show**||
+|<img src="/assets/images/docs/icons/npp.png" height="20">|Needle penetration point| 
+|<img src="/assets/images/docs/icons/jump.png" height="20">|Jumps| 
+|<img src="/assets/images/docs/icons/trim.png" height="20">|Trims| 
+|<img src="/assets/images/docs/icons/stop.png" height="20">|Stops| 
+|<img src="/assets/images/docs/icons/color_change.png" height="20">|Color Changes| 
+**Info**||
+|<img src="/assets/images/docs/icons/info.png" height="20">|Design Information| 
+**Settings**||
+||Change background color| 
+|<img src="/assets/images/docs/icons/cursor.png" height="20">|Show crosshair| 
+|<img src="/assets/images/docs/icons/page.png" height="20">|Show page| 
+|<img src="/assets/images/docs/icons/settings.png" height="20">|Open setting dialog to set speed, line width and needle point size| 
+
+
 
 It is also possible to **zoom** and **pan** the simulation with the mouse.
 
@@ -105,4 +121,4 @@ This extension inserts numbered labels for selected elements into the document t
 
 ## Print PDF
 
-Information about the print pdf preview are collected in an other section: [more info about the pdf export](/docs/print-pdf)
+Information about the print pdf preview are collected in another section: [more info about the pdf export](/docs/print-pdf)
