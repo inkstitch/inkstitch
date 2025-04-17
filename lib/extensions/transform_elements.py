@@ -75,8 +75,6 @@ class TransformElements(InkstitchExtension):
 
         self._apply_angle(node, "inkstitch:fill_underlay_angle", None, multiplier, rotation)
         if node.get('inkstitch:fill_method', None) == "tartan_fill":
-            if rotation is None:
-                self._apply_angle(node, "inkstitch:tartan_angle", "-45", multiplier, rotation)
             # Also rotate tartan pattern rotation setting
             self._rotate_tartan_pattern(node, multiplier, rotation)
         elif node.get('inkstitch:fill_method', None) == "meander_fill":
