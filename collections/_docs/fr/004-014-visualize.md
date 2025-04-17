@@ -31,7 +31,7 @@ Bouton | Effet | Raccourci
 |<img src="/assets/images/docs/icons/slower.png" >|Moins vite| <key>↓</key> 
 |<img src="/assets/images/docs/icons/faster.png" >|Plus vite| <key>↑</key> 
 **Montrer**||
-|<img src="/assets/images/docs/icons/npp.png" >|Points de pénétration de l'aiguille| 
+|<img src="/assets/images/docs/icons/npp.png" >|Points de pénétration de l'aiguille| <key>o</key>
 |<img src="/assets/images/docs/icons/jump.png" >|Sauts| 
 |<img src="/assets/images/docs/icons/trim.png" >|Coupes| 
 |<img src="/assets/images/docs/icons/stop.png" >|Arrêts| 
