@@ -26,7 +26,7 @@ Bouton | Effet | Raccourci
 |<img src="/assets/images/docs/icons/forward_command.png" >|Aller à la prochaine commande| <key>Page up</key> 
 |<img src="/assets/images/docs/icons/direction.png" >|Changer le sens de l'animation| 
 |<img src="/assets/images/docs/icons/play.png"> | Début/pause de l'animation |<key>space</key> /  <key>p</key>
-|<img src="/assets/images/docs/icons/restart.png" >|Redémarrer au début| 
+|<img src="/assets/images/docs/icons/restart.png" >|Redémarrer au début| <key>r</key>
 **Vitesse**||
 |<img src="/assets/images/docs/icons/slower.png" >|Moins vite| <key>↓</key> 
 |<img src="/assets/images/docs/icons/faster.png" >|Plus vite| <key>↑</key> 
