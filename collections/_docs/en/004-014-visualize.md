@@ -24,6 +24,7 @@ Button  | Effect | Shortcut Keys
 |<img src="/assets/images/docs/icons/forward_stitch.png" height="20">|Go forward one stitch| <key>→</key>
 |<img src="/assets/images/docs/icons/forward_command.png" height="20">|Go to next command| <key>Page up</key> 
 |<img src="/assets/images/docs/icons/direction.png" height="20">|Switch animation direction| 
+|![](/assets/images/docs/icons/play2.png) | start/pause animation |<key>space</key> /  <key>p</key>
 |<img src="/assets/images/docs/icons/play2.png"> | start/pause animation |<key>space</key> /  <key>p</key>
 |<img src="/assets/images/docs/icons/restart.png" height="20">|restart| 
 **Speed**||
