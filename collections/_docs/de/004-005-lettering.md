@@ -60,9 +60,10 @@ Das Text-Modul erzeugt mehrzeiligen Text. Wähle aus einer großen Vielfalt vord
 
    Wenn diese Option aktiviert ist, fügt Ink/Stitch für jeden Buchstaben Schnittbefehle hinzu.
 
-* **Use command symbols**
+* **Befehlssymbole benutzen**
 
-  When adding trims, use command symbols. Uses the trim param setting otherwise.
+  Wenn Schnittbefehle hinzugefügt werden, nutze dafür die Darstellung der visuellen Symbole.
+  Ist die Option deaktiviert, wird der Fadenschnitt-Befehl über die Parameter realisiert.
 
 ### Voreinstellungen
 
@@ -72,7 +73,7 @@ Hier kann eine Liste mit den beliebtesten Schriftarten gespeichert und wieder ge
 
 Ink/Stitch Schriften sind liebevoll designed. Wenn sie mit Inkscape Tools verformt werden (z.B. um sie in eine Kurve zu bringen) verliert das Ergebnis womöglich an Qualität. Auf der anderen Seite ist es ein langwieriger Prozess, die Buchstaben einzelnd an eine Linie anzupassen. Dieses Werkzeug hilft dir, eine Schrift auf einen Pfad zu legen - ohne die Buchstaben zu verzerren.
 
-![A text aligned along a path while using the various options](/assets/images/docs/text_along_path_alignment.png)
+![Ein Text der mit den verschiedenen Optionen an einem Pfad ausgerichtet ist](/assets/images/docs/text_along_path_alignment.png)
 
 ### Anwendung
 

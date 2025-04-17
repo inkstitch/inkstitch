@@ -20,7 +20,7 @@ Ink/Stitch ist eine Inkscape Erweiterung. Installiere [Inkscape](https://inkscap
 ## Installation
 
 {% assign tag_name = site.github.latest_release.tag_name %}
-Download the latest release (Ink/Stitch {{ tag_name }}) for Linux
+Lade die neueste Version für Linux herunter (Ink/Stitch {{ tag_name }})
 
 {% assign tag_name = tag_name | slice: 1,tag_name.size %}
 
@@ -171,9 +171,9 @@ Um den Timeout auf 60 s (60000 ms) zu setzen, nutze folgenden Befehl:
 
 ### ImportError: libnsl.so.1: cannot open shared object file. No such file or directory
 
-Install the missing library.
+Installiere die fehlende Bibliothek.
 
-For example on **Fedora** install libnsl with the following command
+Für **Fedora** wird libnsl beispielsweise mit dem folgenden Befehl installiert
 
 ```
 sudo dnf install libnsl

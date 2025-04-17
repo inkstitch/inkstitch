@@ -135,8 +135,8 @@ Stichtoleranz                       | |Alle Stiche müssen innerhalb dieser Tole
 Geradstich Position                 | |Position der Verbindungslinien zwischen den Außenseiten. 0% liegt genau auf der ersten Seite, 50% in der Mitte, 100% auf der zweiten Seite.
 Automatischer Startpunkt            | |Beginne am nächstgelegenen Punkt zum vorherigen Element. Diese Einstellung überschreibt den manuellen Startpositions-Befehl.
 Automatischer Endpunkt              | |Ende am nächstgelegenen Punkt zum nächsten Element. Diese Einstellung überschreibt den manuellen Endpositions-Befehl.
-Zufälliger Prozentwert (Erweitern)  |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Lengthen stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
-Zufälliger Prozentwert (Schrumpfen) |![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
+Zufälliger Prozentwert (Erweitern)  |![Random width increase](/assets/images/docs/params-satin-random-width-increase.png)| Verlängert Stiche bis zu maximal diesem Prozentwert. Zwei, durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt genutzt werden.
+Zufälliger Prozentwert (Schrumpfen) |![Random width decrease](/assets/images/docs/params-satin-random-width-decrease.png)| Verkürzt Stiche bis zu maximal diesem Prozentwert. Zwei, durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt genutzt werden.
 Zufallswert Zick-Zack-Abstand (Prozent)|![Random zigzag spacing](/assets/images/docs/params-satin-random-zigzag-spacing.png)| Maximale randomisierte Abweichung der Stichabstände in Prozent
 Zwischenstich-Methode |![default](/assets/images/docs/param_split_satin_default.png) ![simple](/assets/images/docs/param_split_satin_simple.png) ![stager](/assets/images/docs/param_split_satin_stagered.png) | Optionen:<br /> ◦ Standard  <br />◦ Einfach <br />◦ Stichversatz
 Maximale Stichlänge                 | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stiche die diesen Wert übersteigen, werden geteilt.
@@ -180,8 +180,7 @@ Einstellung    |Beschreibung
 Stichlänge     |Stichlänge (in mm)
 Stichtoleranz  |Alle Stiche müssen innerhalb dieser Toleranzgrenze zum Pfad liegen. Eine niedrigere Toleranz bedeutet, dass sich die Stichlänge reduziert. Eine größere Toleranz kann zur Abrundung scharfer Ecken führen.
 Einzug (fest)  |Einrückung um die Unterlage vollständig von der obenliegenden Schicht zu überdecken. Negative Werte sind möglich.
-Inset distance (proportional |Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column. Negative values are possible.
-
+Einzug (proportional) |Rückt die Unterlage um einen Prozentwert der jeweiligen eigentlichen Länge ein. Dies verhindert das entstehen von Lücken um die Satinsäule herum. Negative Werte sind erlaubt.
 
 ### Zick-Zack Unterlage
 

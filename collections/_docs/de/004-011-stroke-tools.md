@@ -136,8 +136,8 @@ Der Hauptunterschied zum `Automatisch geführtem Laufstich` ist, dass jede Linie
 
   Wendet den Wert für [Mehrfach-Geradstitch Anzahl der Wiederholungen](/de/docs/stitches/bean-stitch/) auf die Deckstiche an (nicht auf die Unterpfade).
 
-* Combine elements: Combine consecutive elements of the same type
-* Keep original paths: wether to delete the original elements or not
+* Elemente kombinieren: Kombiniere aufeinanderfolgende Elemente desselben Typs
+* Originalpfade behalten: legt fest, ob Originalpfade gelöscht werden sollen oder nicht
 
 ### Anfangs- und Endposition
 

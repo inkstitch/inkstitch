@@ -87,16 +87,18 @@ Benutzerdefinierte Vernähstiche können entweder als SVG-Pfad definiert werden 
 
 #### Benutzerdefinierter SVG-Pfad
 
-Der SVG-Pfad wird immer so abgebildet, als ob er ein Pfad für einen Anstecher ist. Wird er als Verstecher genutzt dreht sich der Pfad automatisch um. Der letzte Knoten des Pfades wird nicht gestickt, sondern dient lediglich als Richtungsangabe wie sich der Pfad an den Ursprungspfad anschließen soll.
+Der SVG-Pfad wird immer so abgebildet, als ob er ein Pfad für einen Anstecher ist. Wird er als Verstecher genutzt dreht sich der Pfad automatisch um.
 
-or instance the triangle lock stitches corresponds to the custom path  M -0.26,0.33 H 0.55 L 0,0.84 V 0 L 0.34,0.82 (this is the d attribute of the path). 
-On next image, this are the black paths, on one copy its last segment is colored green for clarity.
+Der letzte Knoten des Pfades wird nicht gestickt, sondern dient lediglich als Richtungsangabe wie sich der Pfad an den Ursprungspfad anschließen soll.
+
+Zum Beispiel wird ein Vernähstich in Form eines Dreiecks mit folgendem Pfad realisiert M -0.26,0.33 H 0.55 L 0,0.84 V 0 L 0.34,0.82 (das ist das d-Attribute des Pfades)
+Auf dem Bild sind dies die schwarzen Pfade. In einer Kopie ist das letzte Segment grün markiert.
 
 ![Triangle lock stitch](/assets/images/docs/triangle_lock.png)
 
-Both red and blue path have a triangle tack down.
+Beide Pfade (rot und blau) haben einen Dreieck-Anstecher.
 
-The custom svg path is rotated in such away that its last segment (green) has the same direction as the begining of red and blue paths. It is only used to compute this rotation angle, and is not part of the actual tack down, and will not be embroidered.
+Der benutzerdefinierte SVG-Pfad wird so rotiert, dass das letzte Segment (grün) in die gleiche Richtung zeigt, in der der eigentliche Pfad (rot und blau) beginnt. Das letzte Segment dient nur dazu, die Richtung festzulegen. Es ist nicht teil des Vernähstichs und wird nicht gestickt.
 
 #### Benutzerdefinierter Pfad in mm
 
