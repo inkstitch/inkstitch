@@ -379,8 +379,8 @@ def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation):
     # of points in turn, and move perpendicular to them,
     # alternating left and right.
 
-    stroke_width = stroke_width + pull_compensation
-    offset = stroke_width / 2.0
+    offset1 = stroke_width / 2 + pull_compensation[0]
+    offset2 = stroke_width / 2 + pull_compensation[1]
 
     for i in range(len(stitches) - 1):
         start = stitches[i]
@@ -393,8 +393,8 @@ def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation):
         zigzag_direction = segment_direction.rotate_left()
 
         if i % 2 == 1:
-            zigzag_direction *= -1
-
-        stitches[i] += zigzag_direction * offset
+            stitches[i] += zigzag_direction * -offset1
+        else:
+            stitches[i] += zigzag_direction * offset2
 
     return stitches
