@@ -23,9 +23,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="9.817815"
-     inkscape:cx="27.144533"
-     inkscape:cy="48.07587"
+     inkscape:zoom="4.9183197"
+     inkscape:cx="10.064413"
+     inkscape:cy="68.519336"
      inkscape:document-units="mm"
      inkscape:current-layer="g24259"
      showgrid="false"
@@ -3892,7 +3892,7 @@
   <g
      inkscape:label="GlyphLayer-w"
      inkscape:groupmode="layer"
-     style="display:inline"
+     style="display:none"
      id="g18646">
     <path
        id="path1242"
@@ -4372,7 +4372,7 @@
   </g>
   <g
      id="g24259"
-     style="display:none"
+     style="display:inline"
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-6">
     <path
