@@ -1025,9 +1025,9 @@ class SatinColumn(EmbroideryElement):
         """
 
         for path_list in path_lists:
-            num_paths = len(path_list)
             if path_list is None:
                 continue
+            num_paths = len(path_list)
             if num_paths in (2, 4):
                 # Add the rung just after the start of the satin.
                 # If the rails have opposite directions it may end up at the end of the satin.
