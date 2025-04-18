@@ -9,7 +9,7 @@ import inkex
 import wx
 import wx.adv
 
-from ...elements import SatinColumn
+from ...elements.utils import nodes_to_elements
 from ...exceptions import InkstitchException, format_uncaught_exception
 from ...i18n import _
 from ...stitch_plan import stitch_groups_to_stitch_plan
@@ -107,12 +107,20 @@ class MultiColorSatinPanel(wx.Panel):
             return stitch_plan
 
     def _get_stitch_groups(self):
+        elements = nodes_to_elements(self.satin_elements)
+
         stitch_groups = []
-        for element in self.satin_elements:
+        last_stitch_group = None
+        next_elements = [None]
+        if len(elements) > 1:
+            next_elements = elements[1:] + next_elements
+        for element, next_element in zip(elements, next_elements):
             try:
-                # copy the embroidery element to drop the cache
-                stitch_group = copy(SatinColumn(element)).embroider(None)
+                stitch_group = element.embroider(last_stitch_group, next_element)
                 stitch_groups.extend(stitch_group)
+
+                if stitch_groups:
+                    last_stitch_group = stitch_groups[-1]
             except (SystemExit, ExitThread):
                 raise
             except InkstitchException as exc:
@@ -166,11 +174,13 @@ class MultiColorSatinPanel(wx.Panel):
                     new_satin.set('inkstitch:random_width_increase_percent', f'{ margin } 0')
                     new_satin.set('inkstitch:random_width_decrease_percent', f'0 { -previous_margin }')
                     new_satin.set('inkstitch:pull_compensation_percent', f'{ current_position + width - 100} { -current_position }')
+                    new_satin.set('inkstitch:running_stitch_position', f'{100 - current_position - width / 2}')
                 else:
                     new_satin.set('inkstitch:swap_satin_rails', True)
                     new_satin.set('inkstitch:random_width_increase_percent', f'0 { margin }')
                     new_satin.set('inkstitch:random_width_decrease_percent', f'{ -previous_margin } 0')
                     new_satin.set('inkstitch:pull_compensation_percent', f'{ -current_position } { current_position + width - 100}')
+                    new_satin.set('inkstitch:running_stitch_position', f'{current_position + width / 2}')
 
                 # underlay
                 if self.colorize_panel.adjust_underlay_per_color.GetValue():
@@ -186,11 +196,6 @@ class MultiColorSatinPanel(wx.Panel):
                     new_satin.set('inkstitch:center_walk_underlay', False)
                     new_satin.set('inkstitch:contour_underlay', False)
                     new_satin.set('inkstitch:zigzag_underlay', False)
-
-                # TODO: adapt start and end position, as well as running_stitch_position
-                # For now, turn start and end points off as they may produce bad looking output
-                new_satin.set('inkstitch:start_at_nearest_point', False)
-                new_satin.set('inkstitch:end_at_nearest_point', False)
 
                 previous_margin = margin
                 current_position += width + margin

@@ -35,24 +35,28 @@ class ColorizePanel(ScrolledPanel):
 
         self.monochrome_width_label = wx.StaticText(self, label=_("Monochrome color width"))
         self.monochrome_width_label.SetToolTip(_("Adapt color width here when equidistance is enabled."))
-        self.monochrome_width = wx.SpinCtrlDouble(self, min=0, max=100, initial=100, inc=1, style=wx.SP_WRAP)
+        self.monochrome_width = wx.SpinCtrlDouble(self, min=0, max=100, initial=100, inc=1, style=wx.SP_WRAP | wx.TE_PROCESS_ENTER)
         self.monochrome_width.SetDigits(2)
         self.monochrome_width.Bind(wx.EVT_SPINCTRLDOUBLE, self._on_update_monochrome_width)
+        self.monochrome_width.Bind(wx.EVT_TEXT_ENTER, self._on_update_monochrome_width)
 
         overflow_left_label = wx.StaticText(self, label=_("Overflow left"))
-        self.overflow_left = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP)
+        self.overflow_left = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP | wx.TE_PROCESS_ENTER)
         self.overflow_left.SetDigits(2)
         self.overflow_left.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
+        self.overflow_left.Bind(wx.EVT_TEXT_ENTER, self._update)
 
         overflow_right_label = wx.StaticText(self, label=_("Overflow right"))
-        self.overflow_right = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP)
+        self.overflow_right = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP | wx.TE_PROCESS_ENTER)
         self.overflow_right.SetDigits(2)
         self.overflow_right.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
+        self.overflow_right.Bind(wx.EVT_TEXT_ENTER, self._update)
 
         pull_compensation_label = wx.StaticText(self, label=_("Pull compensation (mm)"))
-        self.pull_compensation = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP)
+        self.pull_compensation = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, inc=0.1, style=wx.SP_WRAP | wx.TE_PROCESS_ENTER)
         self.pull_compensation.SetDigits(2)
         self.pull_compensation.Bind(wx.EVT_SPINCTRLDOUBLE, self._update)
+        self.pull_compensation.Bind(wx.EVT_TEXT_ENTER, self._update)
 
         seed_label = wx.StaticText(self, label=_("Random seed"))
         self.seed = wx.TextCtrl(self)
@@ -116,11 +120,8 @@ class ColorizePanel(ScrolledPanel):
         equidistance = self.equististance.GetValue()
         if not equidistance:
             return
-        width = self.monochrome_width.GetValue()
-        num_colors = len(self.color_sizer.GetChildren())
-        margin = (100 - width * num_colors) / max(num_colors - 1, 1)
-        self._set_widget_width_value(width, margin)
-        self._update()
+        self._update(event)
+        self._update_colors()
 
     def _add_color_event(self, event):
         self.add_color()
@@ -223,6 +224,13 @@ class ColorizePanel(ScrolledPanel):
         return round(width, 2)
 
     def _update(self, event=None):
+        # Hack primarily for Windows: Make sure that the values of spin controls are updated
+        if event is not None and event.EventType == wx.EVT_TEXT_ENTER.typeId:
+            try:
+                event.EventObject.SetValue(event.String)
+            except Exception:
+                return
+
         width = self.get_total_width()
         self.total_width.SetLabel(_("Total width: {width}%").format(width=width))
         if width > 100:

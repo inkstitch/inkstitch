@@ -23,15 +23,17 @@ class ColorPanel(wx.Panel):
         self.colorpicker.SetToolTip(_("Select color"))
         self.colorpicker.Bind(wx.EVT_COLOURPICKER_CHANGED, self.panel._update)
 
-        self.color_width = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, style=wx.SP_WRAP)
+        self.color_width = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, style=wx.SP_WRAP | wx.TE_PROCESS_ENTER)
         self.color_width.SetDigits(2)
         self.color_width.SetToolTip(_("Monochrome width. Can be changed individually when equidistance is disabled."))
         self.color_width.Bind(wx.EVT_SPINCTRLDOUBLE, self.panel._update)
+        self.color_width.Bind(wx.EVT_TEXT_ENTER, self.panel._update)
 
-        self.color_margin_right = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, style=wx.SP_WRAP)
+        self.color_margin_right = wx.SpinCtrlDouble(self, min=0, max=100, initial=0, style=wx.SP_WRAP | wx.TE_PROCESS_ENTER)
         self.color_margin_right.SetDigits(2)
         self.color_margin_right.SetToolTip(_("Margin right (bicolor section). Can be changed individually when equidistance is disabled."))
         self.color_margin_right.Bind(wx.EVT_SPINCTRLDOUBLE, self.panel._update)
+        self.color_margin_right.Bind(wx.EVT_TEXT_ENTER, self.panel._update)
 
         self.remove_button = wx.Button(self, label='X')
         self.remove_button.SetToolTip(_("Remove color"))
