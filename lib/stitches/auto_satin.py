@@ -87,6 +87,10 @@ class SatinSegment(object):
         if self.end < 1.0:
             satin, after = satin.split(None, cut_points=end)
 
+        # the cut operation can lead to a NoneType element
+        if satin is None:
+            return
+
         if self.reverse:
             satin = satin.reverse()
 
@@ -552,7 +556,10 @@ def operations_to_elements_and_trims(operations, preserve_order):
         # Ignore JumpStitch operations.  Jump stitches in Ink/Stitch are
         # implied and added by Embroider if needed.
         if isinstance(operation, (SatinSegment, RunningStitch)):
-            elements.append(operation.to_element())
+            element = operation.to_element()
+            if not element:
+                continue
+            elements.append(element)
             original_parent_nodes.append(operation.original_node.getparent())
         elif isinstance(operation, (JumpStitch)):
             if elements and operation.should_trim():
