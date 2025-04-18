@@ -230,7 +230,7 @@ class Font(object):
             if self.text_direction == "rtl":
                 line = line[::-1]
 
-            letter_group = self._render_line(destination_group, line, position, glyph_set)
+            letter_group = self._render_line(destination_group, line, position, glyph_set, i)
             if ((variant == '→' and back_and_forth and self.reversible and i % 2 == 1) or
                     (variant == '←' and not (back_and_forth and self.reversible and i % 2 == 1))):
                 letter_group[:] = reversed(letter_group)
@@ -306,7 +306,7 @@ class Font(object):
     def get_variant(self, variant):
         return self.variants.get(variant, self.variants[self.default_variant])
 
-    def _render_line(self, destination_group, line, position, glyph_set):
+    def _render_line(self, destination_group, line, position, glyph_set, line_number):
         """Render a line of text.
 
         An SVG XML node tree will be returned, with an svg:g at its root.  If
@@ -330,7 +330,7 @@ class Font(object):
         last_character = None
 
         words = line.split(" ")
-        for word in words:
+        for i, word in enumerate(words):
 
             word_group = inkex.Group()
             label = word
@@ -346,12 +346,12 @@ class Font(object):
                 glyphs = self._get_word_glyphs(glyph_set, word)
 
             last_character = None
-            for glyph in glyphs:
+            for j, glyph in enumerate(glyphs):
                 if glyph is None:
                     position.x += self.word_spacing
                     last_character = None
                     continue
-                node = self._render_glyph(destination_group, glyph, position, glyph.name, last_character)
+                node = self._render_glyph(destination_group, glyph, position, glyph.name, last_character, f'{line_number}-{i}-{j}')
                 word_group.append(node)
                 last_character = glyph.name
             group.append(word_group)
@@ -388,7 +388,7 @@ class Font(object):
 
         return glyphs
 
-    def _render_glyph(self, destination_group, glyph, position, character, last_character):
+    def _render_glyph(self, destination_group, glyph, position, character, last_character, id_extension):
         """Render a single glyph.
 
         An SVG XML node tree will be returned, with an svg:g at its root.
@@ -433,7 +433,7 @@ class Font(object):
 
         position.x += self.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
 
-        self._update_commands(node, glyph)
+        self._update_commands(node, glyph, id_extension)
         self._update_clips(destination_group, node, glyph)
 
         # this is used to recognize a glyph layer later in the process
@@ -443,17 +443,17 @@ class Font(object):
 
         return node
 
-    def _update_commands(self, node, glyph):
+    def _update_commands(self, node, glyph, id_extension):
         for element, connectors in glyph.commands.items():
             # update element
             el = node.find(".//*[@id='%s']" % element)
             # we cannot get a unique id from the document at this point
             # so let's create a random id which will most probably work as well
-            new_element_id = "%s_%s" % (element, randint(0, 9999))
+            new_element_id = f'{element}-{id_extension}-{randint(0, 9999)}'
             el.set_id(new_element_id)
             for connector, symbol in connectors:
                 # update symbol
-                new_symbol_id = "%s_%s" % (symbol, randint(0, 9999))
+                new_symbol_id = f'{symbol}-{id_extension}-{randint(0, 9999)}'
                 s = node.find(".//*[@id='%s']" % symbol)
                 s.set_id(new_symbol_id)
                 # update connector
