@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-16 01:42+0000\n"
-"PO-Revision-Date: 2025-04-17 01:41\n"
+"POT-Creation-Date: 2025-04-18 01:41+0000\n"
+"PO-Revision-Date: 2025-04-18 01:41\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-16 01:42+0000\n"
+"POT-Creation-Date: 2025-04-18 01:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3335,7 +3335,7 @@ msgstr "Permet de vérifier ou de mettre à jour les informations sur une police
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr "https://inkstitch.org/fr/docs/font-tools/#edit-json"
 
-#: lib/gui/edit_json/main_panel.py:379
+#: lib/gui/edit_json/main_panel.py:383
 msgid "Could not read json file."
 msgstr "Impossible de lire le fichier json."
 
@@ -7632,7 +7632,7 @@ msgstr "Réempiler les objets dans l'ordre de leur sélection"
 
 #: inx/inkstitch_satin_multicolor.inx:3
 msgid "Multicolor Satin"
-msgstr "Colonne Satin Multicollore"
+msgstr "Colonne Satin Multicolore"
 
 #: inx/inkstitch_satin_multicolor.inx:9
 msgid "Generates a multicolor satin"
