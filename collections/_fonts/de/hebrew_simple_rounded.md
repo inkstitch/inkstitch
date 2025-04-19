@@ -22,7 +22,10 @@ data_title:
 <img 
      src="/assets/images/fonts/hebrew_simple_rounded.png"
      alt="Hebrew simple  rounded " height="23">
-     
+<img 
+     src="/assets/images/fonts/hebrew_simple_rounded_small.png"
+     alt="Hebrew simple  rounded " height="10">     
+
 ## Schriftzeichen
 
 Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
