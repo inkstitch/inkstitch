@@ -1,7 +1,7 @@
 ---
 title: Füllstich Werkzeuge
 permalink: /de/docs/fill-tools/
-last_modified_at: 2025-03-10
+last_modified_at: 2025-03-19
 toc: true
 ---
 ## Füllstich-Objekte zerlegen
@@ -51,6 +51,11 @@ Hilfsmethode zum Erzeugen eines Füllbereichs unterhalb aller ausgewählten Elem
 * Einstellungen anpassen
 * Auf `Anwenden` klicken
 * Füllparameter im Parameterdialog anpassen (`Erweiterungen > Ink/Stitch > Parameter`)
+
+  Wenn du die gleiche Struktur behalten willst, das Muster aber skalieren möchtest,
+  aktualisiere den Reihenabstand für die Deckschicht, als auch für die Unterlage und berechne die maximale Stichlänge: `spacing / sin(60)`<br><br>
+  **Beispiel**: Wenn der Reihenabstand 1.8 mm beträgt, ist die maximale Stichlänge `1.8 / sin(60) ≈ 2.08`
+  {: .notice--info }
 
 ### Einstellungen
 

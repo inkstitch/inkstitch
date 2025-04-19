@@ -1,7 +1,7 @@
 ---
 title: "Tools: Fill"
 permalink: /docs/fill-tools/
-last_modified_at: 2025-03-10
+last_modified_at: 2025-03-19
 toc: true
 ---
 ## Break Apart Fill Objects
@@ -60,6 +60,11 @@ Helper method to generate a fill area underneath of all selected elements, optio
 * Adapt settings
 * Click apply
 * Adapt fill settings in the params dialog (`Extensions > Ink/Stitch > Params`)
+
+  When you want to keep the same structure, but want to scale the pattern up or down,
+  update the row spacing for both, top layer and underlay and then calculate the maximum stitch length: `spacing / sin(60)`<br><br>
+  **Example**: When the row spacing value is set to 1.8, the maximum stitch length will be `1.8 / sin(60) ≈ 2.08`.
+  {: .notice--info }
 
 ### Settings
 

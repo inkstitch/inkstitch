@@ -66,9 +66,13 @@ Permet de générer un remplissage sous tous les éléments sélectionnés, opti
 * Sélectionner des éléments
 * Ouvrir `Extensions > Ink/Stitch > Outils : Remplissage > Sélection vers remplissage en points couchés` 
 * Adapter les paramètres
-* Cliquer sur 'Appliquer'
-* Adaptez les paramètres de remplissage dans la boîte de dialogue du paramétrage (`Extensions > Ink/Stitch > Paramètres`).
+* Cliquer sur `Appliquer`
+* Adaptez les paramètres de remplissage dans la boîte de dialogue du paramétrage (`Extensions > Ink/Stitch > Paramètres`)
 
+  When you want to keep the same structure, but want to scale the pattern up or down,
+  update the row spacing for both, top layer and underlay and then calculate the maximum stitch length: `spacing / sin(60)`<br><br>
+  **Example**: When the row spacing value is set to 1.8, the maximum stitch length will be `1.8 / sin(60) ≈ 2.08`.
+  {: .notice--info }
 ### Paramètres
 
 * Conserver les trous : Indique si la forme doit contenir des trous ou non.
