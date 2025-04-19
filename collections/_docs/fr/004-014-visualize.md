@@ -1,7 +1,7 @@
 ---
 title: "Simulation"
 permalink: /fr/docs/visualize/
-last_modified_at: 2024-04-20
+last_modified_at: 2025-04-19
 toc: true
 ---
 ## Simulateur
