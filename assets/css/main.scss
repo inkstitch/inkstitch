@@ -267,7 +267,12 @@ table.inline-table {
     margin-bottom: 1em;
     display:inline-block;
   }
-  
+
+  .menu-margin-before {
+    margin-top: 1em;
+    display:inline-block;
+  }
+
   #language_switcher {
       position: relative;
       display: inline-block;

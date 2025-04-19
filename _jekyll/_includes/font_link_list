@@ -1,9 +1,15 @@
 {% assign fonts = site.fonts | where: "lang", page.lang %}
+{%- assign first = "A" -%}
 
 <li>
   <ul>
   {% for font in fonts %}
-    <li><a href="{{ font.permalink }}"{% if font.permalink == page.url %} class="active"{% endif %}>{{ font.title }}</a></li>
+    {%- assign title_first = font.title | slice: 0 -%}
+    <li><a href="{{ font.permalink }}"
+           class="{% if font.permalink == page.url %}active{% endif %} {% unless first == title_first %}menu-margin-before{% endunless %}">
+        {{ font.title }}
+    </a></li>
+    {%- assign first = title_first -%}
   {% endfor %}
   </ul>
 </li>
