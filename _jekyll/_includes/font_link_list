@@ -2,7 +2,7 @@
 {%- assign first = "A" -%}
 
 <li>
-  <ul>
+  <ul class="nav__items">
   {% for font in fonts %}
     {%- assign title_first = font.title | slice: 0 -%}
     <li><a href="{{ font.permalink }}"
