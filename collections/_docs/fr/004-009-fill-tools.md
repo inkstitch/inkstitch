@@ -1,7 +1,7 @@
 ---
 title: "Outils Remplissage"
 permalink: /fr/docs/fill-tools/
-last_modified_at: 2025-03-14
+last_modified_at: 2025-04-19
 toc: true
 ---
 ## Briser les objets de remplissage {#break-apart-fill-objects}
@@ -47,7 +47,7 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 
  ![linear gradient](/assets/images/docs/en/linear-gradient.png)
 
- Choisir l'angle du dégradé à l'aide de poignées du dégradé (passer en mode édition de  nœud pour les voir
+ Choisir l'angle du dégradé à l'aide de poignées du dégradé (passer en mode édition de nœud pour les voir
 
 2. Lancez `Extensions > Ink/Stitch > Outils: Remplissage > Convertir en blocs de dégradé
 
@@ -55,7 +55,7 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 
  Choisir l'espacement final des rangées
 
-## Knockdown Fill {#knockdown-fill}
+## Remplissage en points couchants {#knockdown-fill}
 
 {% include upcoming_release.html %}
 
@@ -64,15 +64,15 @@ Permet de générer un remplissage sous tous les éléments sélectionnés, opti
 ![A figure with a surrounding knockdown stitch](/assets/images/docs/knockdown.png)
 
 * Sélectionner des éléments
-* Ouvrir `Extensions > Ink/Stitch > Outils : Remplissage > Sélection vers remplissage en points couchés` 
+* Ouvrir `Extensions > Ink/Stitch > Outils : Remplissage > Sélection vers remplissage en points couchants` 
 * Adapter les paramètres
 * Cliquer sur `Appliquer`
 * Adaptez les paramètres de remplissage dans la boîte de dialogue du paramétrage (`Extensions > Ink/Stitch > Paramètres`)
 
-  When you want to keep the same structure, but want to scale the pattern up or down,
-  update the row spacing for both, top layer and underlay and then calculate the maximum stitch length: `spacing / sin(60)`<br><br>
-  **Example**: When the row spacing value is set to 1.8, the maximum stitch length will be `1.8 / sin(60) ≈ 2.08`.
-  {: .notice--info }
+
+ Si vous souhaitez garder le même style de remplissage, mais voulez agrandir ou réduire le motif, modifiez l'`espacement entre les rangées` du remplissage et de sa sous couche et calculez la `longueur maximumm du point` selon la formule `espacement entre les rangées / sinus(60°) `<br><br>
+ **Exemple**: Si vous souhaitez un `espacement entre les rangées` de 1,8 mm, la `longueur maximum du point` sera `1,8 / sin(60°) ≈ 1,8/0,866=2,08`
+ {: .notice--info }
 ### Paramètres
 
 * Conserver les trous : Indique si la forme doit contenir des trous ou non.
