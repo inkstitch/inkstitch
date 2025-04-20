@@ -630,9 +630,12 @@ def add_trims(elements, trim_indices):
     trim_indices = set(trim_indices)
     new_elements = []
     just_trimmed = False
+    just_removed = False
+
     for i, element in enumerate(elements):
         if just_trimmed and isinstance(element, Stroke):
             element.node.delete()
+            just_removed = True
             continue
 
         if i in trim_indices:
@@ -642,9 +645,10 @@ def add_trims(elements, trim_indices):
             just_trimmed = False
 
         new_elements.append(element)
+        just_removed = False
 
     # trim at the end, too
-    if i not in trim_indices:
+    if i not in trim_indices and not just_removed:
         add_commands(element, ["trim"])
 
     return new_elements
