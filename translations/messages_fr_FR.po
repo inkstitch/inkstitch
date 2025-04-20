@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-18 01:41+0000\n"
-"PO-Revision-Date: 2025-04-18 01:41\n"
+"POT-Creation-Date: 2025-04-20 01:47+0000\n"
+"PO-Revision-Date: 2025-04-20 01:48\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-18 01:41+0000\n"
+"POT-Creation-Date: 2025-04-20 01:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -425,8 +425,8 @@ msgstr "Namskout tartan est une police en remplissage tartan. Elle contient 43 g
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:160
-msgid "NickAinley is a tiny 1mm-bean alphabet based on a 24pt Seniors Studio jawn."
-msgstr "Un petit alphabet en point triple de 1 mm, basé sur une fonte de Senior Studio en 24 pt."
+msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
+msgstr ""
 
 #. description of font in fonts/ondulamarif_Medium
 #: inkstitch-fonts-metadata.py:162
@@ -1693,6 +1693,7 @@ msgstr "Les points de remplissage resserrent le tissu, ce qui entraîne une form
 
 #: lib/elements/fill_stitch.py:611 lib/elements/satin_column.py:282
 #: lib/elements/satin_column.py:445 lib/elements/satin_column.py:539
+#: lib/elements/stroke.py:202
 msgid "mm (each side)"
 msgstr "mm (de chaque côté)"
 
@@ -1753,7 +1754,7 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr "Rétrécit la forme avant de faire la sous-couche, pour empêcher que la sous-couche se montre en dehors du remplissage."
 
 #: lib/elements/fill_stitch.py:737 lib/elements/satin_column.py:581
-#: lib/elements/stroke.py:451 lib/gui/satin_multicolor/colorize_panel.py:57
+#: lib/elements/stroke.py:451 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:59
 msgid "Random seed"
 msgstr "Graine aléatoire"
@@ -2717,7 +2718,7 @@ msgid "All Selected Elements"
 msgstr "Tous les éléments sélectionnés"
 
 #: lib/extensions/element_info.py:162 lib/extensions/thread_list.py:57
-#: lib/gui/satin_multicolor/colorize_panel.py:73
+#: lib/gui/satin_multicolor/colorize_panel.py:77
 msgid "Colors"
 msgstr "Couleurs"
 
@@ -3011,19 +3012,19 @@ msgstr "Impression Ink/Stitch"
 msgid "Please select one or more strokes."
 msgstr "Merci de sélectionner un ou plusieurs traits."
 
-#: lib/extensions/redwork.py:110
+#: lib/extensions/redwork.py:112
 msgid "Redwork Group"
 msgstr "Groupe de redwork"
 
-#: lib/extensions/redwork.py:127
+#: lib/extensions/redwork.py:129
 msgid "Connected Group"
 msgstr "Groupe connecté"
 
-#: lib/extensions/redwork.py:163 inx/inkstitch_redwork.inx:3
+#: lib/extensions/redwork.py:166 inx/inkstitch_redwork.inx:3
 msgid "Redwork"
 msgstr "Redwork"
 
-#: lib/extensions/redwork.py:166
+#: lib/extensions/redwork.py:170
 msgid "Redwork Underpath"
 msgstr "Chemin de dessous redwork"
 
@@ -3722,7 +3723,7 @@ msgstr "Préréglage"
 msgid "Load"
 msgstr "Charger"
 
-#: lib/gui/presets.py:60 lib/gui/satin_multicolor/colorize_panel.py:79
+#: lib/gui/presets.py:60 lib/gui/satin_multicolor/colorize_panel.py:83
 #: lib/gui/tartan/customize_panel.py:64 lib/gui/tartan/customize_panel.py:66
 msgid "Add"
 msgstr "Ajouter"
@@ -3777,11 +3778,11 @@ msgstr "Sélectionner la couleur"
 msgid "Monochrome width. Can be changed individually when equidistance is disabled."
 msgstr "Largeur de la zone monochrome. Peuvent être modifiées individuellement lorsque équidistance est décochée."
 
-#: lib/gui/satin_multicolor/color_panel.py:33
+#: lib/gui/satin_multicolor/color_panel.py:34
 msgid "Margin right (bicolor section). Can be changed individually when equidistance is disabled."
 msgstr "Marge de droite (section bicolore). Peuvent être modifiées individuellement lorsque équidistance est décochée."
 
-#: lib/gui/satin_multicolor/color_panel.py:37
+#: lib/gui/satin_multicolor/color_panel.py:39
 msgid "Remove color"
 msgstr "Supprimer la couleur"
 
@@ -3805,36 +3806,36 @@ msgstr "Largeur de la zone monochrome"
 msgid "Adapt color width here when equidistance is enabled."
 msgstr "Adapter la largeur des colonnes ici lorsque équidistant est coché."
 
-#: lib/gui/satin_multicolor/colorize_panel.py:42
+#: lib/gui/satin_multicolor/colorize_panel.py:43
 msgid "Overflow left"
 msgstr "Débordement à gauche"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:47
+#: lib/gui/satin_multicolor/colorize_panel.py:49
 msgid "Overflow right"
 msgstr "Débordement à droite"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:52
+#: lib/gui/satin_multicolor/colorize_panel.py:55
 #: inx/inkstitch_fill_to_satin.inx:14
 msgid "Pull compensation (mm)"
 msgstr "Compensation d'étirement (mm)"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:63
+#: lib/gui/satin_multicolor/colorize_panel.py:67
 msgid "Keep original satin"
 msgstr "Garder le satin originel"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:67
+#: lib/gui/satin_multicolor/colorize_panel.py:71
 msgid "Adjust underlay per color"
 msgstr "Ajuster les sous-couches par couleur"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:70
+#: lib/gui/satin_multicolor/colorize_panel.py:74
 msgid "When disabled existing underlay is applied only to the first color."
 msgstr "Quand désactivé, la sous-couche existante est appliquée uniquement à la première couleur."
 
-#: lib/gui/satin_multicolor/colorize_panel.py:77
+#: lib/gui/satin_multicolor/colorize_panel.py:81
 msgid "Overflow excluded"
 msgstr "Sans débordement"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:227
+#: lib/gui/satin_multicolor/colorize_panel.py:235
 #, python-brace-format
 msgid "Total width: {width}%"
 msgstr "Largeur totale : {width}%"
@@ -3847,7 +3848,7 @@ msgstr "Cette extension simule une couleur satin multicolore en créant plusieur
 msgid "Colorize"
 msgstr "Colorer"
 
-#: lib/gui/satin_multicolor/main_panel.py:143
+#: lib/gui/satin_multicolor/main_panel.py:151
 msgid "Multicolor Satin Group"
 msgstr "Groupe de satins multicolores"
 
@@ -4501,7 +4502,7 @@ msgstr "Triangle"
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr "Aucun d'élément brodable est sélectionné. Veuillez exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage d'objets au cas où vous auriez attendu un résultat brodable."
 
-#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:394
+#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:398
 msgid "Auto-Route"
 msgstr "Agencement automatique"
 
@@ -4510,21 +4511,21 @@ msgstr "Agencement automatique"
 msgid "AutoRun %d"
 msgstr "Agencement automatique %d"
 
-#: lib/stitches/auto_run.py:277
+#: lib/stitches/auto_run.py:278
 #, python-format
 msgid "AutoRun Underpath %d"
 msgstr "Chemin de dessous %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:598
+#: lib/stitches/auto_satin.py:608
 #, python-format
 msgid "AutoSatin %d"
 msgstr "Auto-remplissage satin %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:601
+#: lib/stitches/auto_satin.py:611
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "Points droits pour auto-remplissage satin %d"
