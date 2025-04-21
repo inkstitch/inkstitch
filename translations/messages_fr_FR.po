@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-20 01:47+0000\n"
-"PO-Revision-Date: 2025-04-20 01:48\n"
+"PO-Revision-Date: 2025-04-21 01:46\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -426,7 +426,7 @@ msgstr "Namskout tartan est une police en remplissage tartan. Elle contient 43 g
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:160
 msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
-msgstr ""
+msgstr "Un petit alphabet en point triple, basé sur une fonte de Senior Studio en 24 pt."
 
 #. description of font in fonts/ondulamarif_Medium
 #: inkstitch-fonts-metadata.py:162
