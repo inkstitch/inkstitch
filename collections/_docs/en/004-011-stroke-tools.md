@@ -35,7 +35,7 @@ This works best on evenly spaced satin columns.
 
 1. Select the satin column(s) you want to convert into a running stitch
 2. Run `Extensions > Ink/Stitch > Tools: Stroke > Convert satin to stroke...`
-3. Choose wether you want to keep selected satin column(s) or if you want to replace them
+3. Choose whether you want to keep selected satin column(s) or if you want to replace them
 4. Click apply
 
 
@@ -127,7 +127,7 @@ The main difference to `Autoroute Running Stitch` is that it ensures that paths 
   Sets the [bean stitch number of repeats](/docs/stitches/bean-stitch/) for the top layer stitches (not on underpaths).
 
 * Combine elements: Combine consecutive elements of the same type
-* Keep original paths: wether to delete the original elements or not
+* Keep original paths: whether to delete the original elements or not
 
 ### Start- and end position
 

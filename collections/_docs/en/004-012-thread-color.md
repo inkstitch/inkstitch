@@ -94,7 +94,7 @@ It could also be helpful, if you are wanting to test different color settings. Y
 
 * Run `Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist`
 * Choose a file with the thread color information
-* Define wether the color infomration file has been generated with Ink/Stitch or otherwise.
+* Define whether the color infomration file has been generated with Ink/Stitch or otherwise.
 
   If otherwise: Select the Ink/Stitch color palette to match colors to.
 * Click on Apply

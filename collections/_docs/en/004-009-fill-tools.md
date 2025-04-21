@@ -68,7 +68,7 @@ Helper method to generate a fill area underneath of all selected elements, optio
 
 ### Settings
 
-* Keep holes: Wether or not the shape should contain holes
+* Keep holes: Whether or not the shape should contain holes
 * Offset: The offset (mm) around the selection
 * Method (round, mitre, bevel): Influences how edges will look like
 * Mitre limit:  Influences how edges will look like
