@@ -285,7 +285,7 @@ class FontSampleFrame(wx.Frame):
 
         position['x'] += self.font.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
 
-        self.font._update_commands(node, glyph)
+        self.font._update_commands(node, glyph,"")
         self.font._update_clips(group, node, glyph)
 
         # this is used to recognize a glyph layer later in the process
