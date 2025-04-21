@@ -71,7 +71,7 @@ Permet de générer un remplissage sous tous les éléments sélectionnés, opti
 
 
  Si vous souhaitez garder le même style de remplissage, mais voulez agrandir ou réduire le motif, modifiez l'`espacement entre les rangées` du remplissage et de sa sous couche et calculez la `longueur maximumm du point` selon la formule `espacement entre les rangées / sinus(60°) `<br><br>
- **Exemple**: Si vous souhaitez un `espacement entre les rangées` de 1,8 mm, la `longueur maximum du point` sera `1,8 / sin(60°) ≈ 1,8/0,866=2,08`
+ **Exemple**: Si vous souhaitez un `espacement entre les rangées` de 1,8 mm, la `longueur maximum du point` sera `1,8 / sin(60°) ≈ 1,8/0,866=2,08 mm`
  {: .notice--info }
 ### Paramètres
 
