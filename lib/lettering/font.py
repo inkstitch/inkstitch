@@ -443,7 +443,7 @@ class Font(object):
 
         return node
 
-    def _update_commands(self, node, glyph, id_extension):
+    def _update_commands(self, node, glyph, id_extension=""):
         for element, connectors in glyph.commands.items():
             # update element
             el = node.find(".//*[@id='%s']" % element)
