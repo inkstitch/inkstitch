@@ -149,7 +149,7 @@ If you want to understand how this extension works internally, [read this](/tuto
 * Pull compensation (mm): Makes the satin columns wider and will overlap the color sections to avoid gaps
 * Random seed: Change the value to change the appearance of randomized params
 
-* Keep original satin: wether the original satin should be deleted or not
+* Keep original satin: whether the original satin should be deleted or not
 * Adjust underlay per color: applies only when the original satin column has underlays
   * If checked, the underlays will be applied to each color separately, excluding the multicolor sections
   * If unchecked, only the first color will use an underlay, covering the whole area
@@ -218,7 +218,7 @@ Instead of drawing first the two rails and then several rungs, this tool allows 
 * Draw you shape with your prefered pattern style.
 * Select the shape and run `Extensions > Ink/Stitch > Tools: Satin > Zigzag Line to Satin`
   * Select your path style (pattern)
-  * Chose wether the resulting path should be smoothed out or straight lines
+  * Chose whether the resulting path should be smoothed out or straight lines
   * Chose if rungs should be inserted or not. The resulting path will always have the same amount of nodes on both rails.
 
 ### Pattern styles

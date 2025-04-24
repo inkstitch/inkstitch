@@ -128,9 +128,9 @@ Batch lettering allows to easily create multiple text files.
 
 * **Font name:** The name of the font you wish to use. Have a look at the [font library](/fonts/font-library/) to find a list of available fonts
 * **Scale (%):** Scale value to resize a font. The value will be clamped to the available scale range of the specific font.
-* **Color sort:** Wether multicolor fonts should be color sorted or not
-* **Add trims:** Wether trims should be added or not (never, after each line, word or letter)
-* **Use command symbols:** Wether the trims should be added as command symbols or as a param option (only relevant for svg output)
+* **Color sort:** Whether multicolor fonts should be color sorted or not
+* **Add trims:** Whether trims should be added or not (never, after each line, word or letter)
+* **Use command symbols:** Whether the trims should be added as command symbols or as a param option (only relevant for svg output)
 * **Align Multiline Text:** Define how multiline text should be aligned
 * **Lettering along path: text position:** The text position on the `batch lettering` path
 * **File formats:** Enter a comma separated list of [file formats](/docs/file-formats/#writing)

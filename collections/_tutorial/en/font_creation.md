@@ -148,7 +148,7 @@ Ink/Stitch offers a tool for you to create the json file with the correct kernin
    * **AutoRoute Satin**:
       * enabled: Ink/Stitch will generate a reasonable routing for satin columns in your font when used in the lettering tool. [More information about AutoRoute Satin](/docs/satin-tools/#auto-route-satin-columns)
       * disabled: Ink/Stitch will use the glyphs as is. Disable this option, if you took care for the routing in your font by yourself.
-   * **Reversible**: wether your font can be stitched forwards and backwards or only forwards
+   * **Reversible**: whether your font can be stitched forwards and backwards or only forwards
    * **Force letter case**:
       * No: Choose this option if your font contains upper and lower case letters (default).
       * Upper: Choose this option if your font only contains upper case letters.
