@@ -15,12 +15,27 @@ from .utils import cache, get_bundled_dir
 MARKER = ['anchor-line', 'pattern', 'guide-line']
 
 
+@cache
 def ensure_marker(svg, marker):
+    """Make sure a marker symbol is defined in the svg"""
+
     marker_path = ".//*[@id='inkstitch-%s-marker']" % marker
     if svg.defs.find(marker_path) is None:
         marker = deepcopy(_marker_svg().defs.find(marker_path))
         marker.set('markerWidth', str(0.1))
         svg.defs.append(marker)
+
+
+def ensure_marker_symbols(group):
+    """Make sure all marker symbols of an svg group is defined in the svg"""
+
+    for marker in MARKER:
+        xpath = ".//*[contains(@style, 'marker-start:url(#inkstitch-%s-marker')]" % marker
+        marked_elements = group.xpath(xpath, namespaces=NSS)
+        if marked_elements:
+            ensure_marker(group.getroottree().getroot(), marker)
+            for element in marked_elements:
+                element.style['marker-start'] = "url(#inkstitch-%s-marker)" % marker
 
 
 @cache

@@ -344,6 +344,19 @@ def ensure_symbol(svg, command) -> None:
         defs.append(symbol)
 
 
+def ensure_command_symbols(group):
+    """Make sure all commands used in a svg group exist in the <svg:defs> tag"""
+    # collect commands
+    commands = set()
+    for element in group.iterdescendants(SVG_USE_TAG):
+        xlink = element.get(XLINK_HREF, ' ')
+        if xlink.startswith('#inkstitch_'):
+            commands.add(xlink[11:])
+    # make sure all necessary command symbols are in the document
+    for command in commands:
+        ensure_symbol(group.getroottree().getroot(), command)
+
+
 def add_group(document, node, command):
     parent = node.getparent()
     description = _(get_command_description(command))
