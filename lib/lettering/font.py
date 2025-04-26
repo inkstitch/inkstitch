@@ -11,12 +11,13 @@ from random import randint
 
 import inkex
 
-from ..commands import add_commands, ensure_symbol
+from ..commands import add_commands, ensure_command_symbols
 from ..elements import SatinColumn, Stroke, nodes_to_elements
 from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
-from ..marker import MARKER, ensure_marker, has_marker, is_grouped_with_marker
+from ..marker import (MARKER, ensure_marker_symbols, has_marker,
+                      is_grouped_with_marker)
 from ..stitches.auto_satin import auto_satin
 from ..svg.clip import get_clips
 from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
@@ -282,8 +283,8 @@ class Font(object):
         # add trims
         self._add_trims(destination_group, text, trim_option, use_trim_symbols, back_and_forth, color_sort)
         # make sure necessary marker and command symbols are in the defs section
-        self._ensure_command_symbols(destination_group)
-        self._ensure_marker_symbols(destination_group)
+        ensure_command_symbols(destination_group)
+        ensure_marker_symbols(destination_group)
 
         if color_sort != 0 and self.sortable:
             self.do_color_sort(destination_group, color_sort)
@@ -443,7 +444,7 @@ class Font(object):
 
         return node
 
-    def _update_commands(self, node, glyph, id_extension):
+    def _update_commands(self, node, glyph, id_extension=""):
         for element, connectors in glyph.commands.items():
             # update element
             el = node.find(".//*[@id='%s']" % element)
@@ -536,26 +537,6 @@ class Font(object):
                 element.node.set(INKSTITCH_ATTRIBS['trim_after'], 'true')
             else:
                 add_commands(element, ['trim'])
-
-    def _ensure_command_symbols(self, group):
-        # collect commands
-        commands = set()
-        for element in group.iterdescendants(SVG_USE_TAG):
-            xlink = element.get(XLINK_HREF, ' ')
-            if xlink.startswith('#inkstitch_'):
-                commands.add(xlink[11:])
-        # make sure all necessary command symbols are in the document
-        for command in commands:
-            ensure_symbol(group.getroottree().getroot(), command)
-
-    def _ensure_marker_symbols(self, group):
-        for marker in MARKER:
-            xpath = ".//*[contains(@style, 'marker-start:url(#inkstitch-%s-marker')]" % marker
-            marked_elements = group.xpath(xpath, namespaces=inkex.NSS)
-            if marked_elements:
-                ensure_marker(group.getroottree().getroot(), marker)
-                for element in marked_elements:
-                    element.style['marker-start'] = "url(#inkstitch-%s-marker)" % marker
 
     def _apply_auto_satin(self, group):
         """Apply Auto-Satin to an SVG XML node tree with an svg:g at its root.

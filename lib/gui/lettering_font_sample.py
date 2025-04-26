@@ -9,8 +9,10 @@ import wx
 import wx.adv
 from inkex import Group, errormsg
 
+from ..commands import ensure_command_symbols
 from ..i18n import _
 from ..lettering import get_font_list
+from ..marker import ensure_marker_symbols
 from ..utils.settings import global_settings
 
 
@@ -267,6 +269,9 @@ class FontSampleFrame(wx.Frame):
 
         if self.sortable():
             self.font.do_color_sort(self.layer, 1)
+
+        ensure_command_symbols(group)
+        ensure_marker_symbols(group)
 
     def _render_glyph(self, group, glyph, position, character, last_character):
         node = deepcopy(glyph.node)
