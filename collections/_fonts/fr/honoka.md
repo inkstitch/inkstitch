@@ -23,7 +23,7 @@ Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 ```
 {: .font-glyphs }
 
-cette  fonte  contient tous  les  hiragana, les katakana et les symboles  de ponctuation. Elle contient aussi de nnnombreux kanjis.
+cette  fonte  contient tous  les  hiragana, les katakana et les symboles  de ponctuation. Elle contient aussi de nombreux kanjis.
 ## Dimensions
 
 A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
