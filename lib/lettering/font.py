@@ -16,13 +16,12 @@ from ..elements import SatinColumn, Stroke, nodes_to_elements
 from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
-from ..marker import (MARKER, ensure_marker_symbols, has_marker,
-                      is_grouped_with_marker)
+from ..marker import ensure_marker_symbols, has_marker, is_grouped_with_marker
 from ..stitches.auto_satin import auto_satin
 from ..svg.clip import get_clips
 from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
                         INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_GROUP_TAG,
-                        SVG_PATH_TAG, SVG_USE_TAG, XLINK_HREF)
+                        SVG_PATH_TAG)
 from ..utils import Point
 from .font_variant import FontVariant
 

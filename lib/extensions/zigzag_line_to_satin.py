@@ -150,24 +150,14 @@ class ZigzagLineToSatin(InkstitchExtension):
 
                     # get start handle positions
                     start = inkex.DirectedLineSegment(prev_prev, point)
-                    if prev in sharp_edges:
-                        start = prev
-                    elif not start.length == 0:
-                        start = start.parallel(*prev).point_at_length(start.length - length)
-                    else:
-                        start = start.start
+                    handle_position_start = self._get_handle_position(prev, start, sharp_edges, length)
 
                     # get end handle positions
                     end = inkex.DirectedLineSegment(next, prev)
-                    if point in sharp_edges:
-                        end = point
-                    elif not end.length == 0:
-                        end = end.parallel(*point).point_at_length(end.length - length)
-                    else:
-                        end = end.start
+                    handle_position_end = self._get_handle_position(point, end, sharp_edges, length)
 
                     # generate curves
-                    path_commands.append(inkex.paths.Curve(*start, *end, *point))
+                    path_commands.append(inkex.paths.Curve(*handle_position_start, *handle_position_end, *point))
 
                     # recalculate rungs for zigzag pattern
                     if self.options.pattern == 'zigzag' and i <= len(r) and (not self.options.reduce_rungs or j == 0):
@@ -178,7 +168,7 @@ class ZigzagLineToSatin(InkstitchExtension):
                         line = inkex.DirectedLineSegment(rung[0], rung[1])
                         point0 = line.point_at_length(-50)
                         point1 = line.point_at_length(line.length + 50)
-                        new_point = inkex.bezier.linebezierintersect((point0, point1), [prev, start, end, point])
+                        new_point = inkex.bezier.linebezierintersect((point0, point1), [prev, handle_position_start, handle_position_end, point])
                         if new_point:
                             new_rungs.append((rung[k[j]], new_point[0]))
                         else:
@@ -186,6 +176,15 @@ class ZigzagLineToSatin(InkstitchExtension):
 
         rungs = self._update_rungs(new_rungs, rungs, r, has_equal_rail_point_count)
         return str(inkex.Path(path_commands)), rungs
+
+    def _get_handle_position(self, point, segment, sharp_edges, length):
+        if point in sharp_edges:
+            handle_position = point
+        elif segment.length > 0.0001:
+            handle_position = segment.parallel(*point).point_at_length(segment.length - length)
+        else:
+            handle_position = segment.start
+        return handle_position
 
     def _update_rungs(self, new_rungs, rungs, r, has_equal_rail_point_count):
         if self.options.pattern == 'zigzag':
