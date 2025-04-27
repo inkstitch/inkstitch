@@ -98,7 +98,9 @@ class RelativeLock(LockStitchDefinition):
         return lock_stitches
 
     def get_direction_and_length(self, stitches, i=1):
-        if len(stitches) < i+1:
+        if len(stitches) < i+1 or i > 15:
+            # we exceeded the stitch length of the path or tried 15 times already
+            # we don't want to try any longer and return a default value
             return Stitch(1, 0), 0.5
 
         to_previous = stitches[i] - stitches[0]
