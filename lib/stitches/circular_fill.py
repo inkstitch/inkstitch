@@ -118,6 +118,8 @@ def _apply_bean_stitch_and_repeats(stitches, repeats, bean_stitch_repeats):
 def _apply_start_end_commands(shape, path, starting_point, ending_point):
     if starting_point or ending_point:
         outline = shape.boundary
+        if isinstance(outline, shgeo.MultiLineString):
+            outline = outline.geoms[0]
         if starting_point:
             start = _get_start_end_sequence(outline, shgeo.Point(*starting_point), shgeo.Point(*path[0]))
             path = list(start.coords) + path
