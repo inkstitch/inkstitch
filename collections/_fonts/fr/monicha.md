@@ -53,7 +53,7 @@ Mais Monicha contient aussi une ou des versions alternatives des lettres a-z et 
 
 Il y a 4 familles de lettres alternatives: alt1, alt2, alt3 et alt4. 
 
-Par exemple, on obtiendra deux versions alternatives du prénom Sasha en tappant dans le lettrage 
+Par exemple, on obtiendra deux versions alternatives du prénom Sasha en tapant dans le lettrage 
 (Sash.alt2a.alt3)  (c'est à dire S a s h.alt2 a.alt3 - mais on ne tappe pas les espaces) ou   Sa.alt3sh.alt3a.alt1
 
 
