@@ -1,7 +1,7 @@
 ---
 title: "Monicha"
 permalink: /fr/fonts/monicha/
-last_modified_at: 2022-05-27
+last_modified_at: 2025-04-23
 toc: false
 preview_image:
   - url: /assets/images/fonts/monicha.jpg
@@ -37,124 +37,62 @@ Par exemple, voici des variations sur le prénom Sasha :
 
 ![Alternatives](/assets/images/fonts/monicha7.jpg)
 
-Elle contient les majuscules, minuscules, lettres à accent, chiffres et ponctuations comme bon nombre des polices proposées jusqu'à présent. Les derniers glyphes de la liste servent à stocker les lettres alternatives.
+Elle contient les majuscules, minuscules, lettres à accent, chiffres et ponctuations comme bon nombre des polices proposées jusqu'à présent. 
 
 ### Les parentheses
 
 Les deux parentheses "(" et ")" permettent d'accéder à ces deux ornements :
 
-![monica parentheses](/assets/images/fonts/monicaparentheses.png)
+![monica parentheses](/assets/images/fonts/monicha/monicaparentheses.png)
+
+Mais Monicha contient aussi une ou des versions alternatives des lettres a-z et A-Z.
+
+**Il convient de respecter des restrictions sur l'usage de ces lettres pour éviter les superpositions de  colonnes satin.**
+
+### Comment accéder aux lettres alternatives
+
+Il y a 4 familles de lettres alternatives: alt1, alt2, alt3 et alt4. 
+
+Par exemple, on obtiendra deux versions alternatives du prénom Sasha en tappant dans le lettrage 
+(Sash.alt2a.alt3)  (c'est à dire S a s h.alt2 a.alt3 - mais on ne tappe pas les espaces) ou   Sa.alt3sh.alt3a.alt1
 
 
-Mais Monicha contient aussi 50 lettres minuscules à écharpes de plusieurs types stockées dans les derniers glyphes de la liste.
+#### alt1 :  Petites écharpes 
 
-### Comment utiliser les lettres alternatives
+Toutes les minuscules disposent d'une version à petite écharpe qui fonctionne particulièrement bien sur la dernière lettre d'un mot.
 
-Vous ne pouvez pas accéder directement à ces variations en utilisant une simple touche du clavier. Des caractères unicodes particuliers ont été utilisés pour stocker ces variations. Pour les utiliser il faut donc connaître leur code.
+<img src="/assets/images/fonts/monicha/alt1.png" alt="Petite Écharpe" title="Petite Écharpe"><br>
 
-Pour faciliter l'usage de ces lettres, ce mode d'emploi répertorie les codes et il suffira de copier le code et de le coller dans le module lettrage.
-
-####  Petite écharpe
-
-<details><summary>Toutes les minuscules disposent d'une version à petite écharpe</summary>
-
-
-<img src="/assets/images/fonts/monichasmallswash.jpg" alt="Petite Echarpe" title="Petite Echarpe"><br>
-
-Que l'on obtient en utilisant un de ces codes :<br><br>
-
-⒜	⒝	⒞	⒟	⒠	⒡<br>
-
-⒢	⒣	⒤	⒥	⒦	<br>
-
-⒧	⒨	⒩	⒪	⒫<br>
-
-⒬	⒭	⒮	⒯	⒰<br>
-
-⒱	⒲	⒳	⒴	⒵<br>
+Dans le lettrage, on tapera  par exemple a.alt1 à la place de a si l'on souhaite utiliser cette version alternative du a 
 	
-</details>
 
-####  Écharpe longue soulignante
-<details><summary>  a-d-h-i-k-l-m-n-r-t-u </summary>
-	
-<img src="/assets/images/fonts/monichalongswash.jpg" alt="Echarpe Longue Soulignante" title="Echarpe Longue Soulignante"><br>
+#### alt2 : Écharpe supérieure bouclée et rétrograde ou écharpe basse bouclée: b-d-h-k-l-t  i-j-o-r-y
 
-Ces  11 lettres disposent de surcroît d'une longue écharpe soulignante.<br><br>
+Les lettres montantes (b-d-h-k-l-t) ont ici une version altenative avec une écharpe bouclée vers l'arrière. Les deux lettres précédentes ne doivent être ni une majuscule ni une autre lettre montante. 
 
-Elles ne doivent pas être suivies, sur deux lettres, par des lettres à jambage descendant (comme g-j-p-q-y-z) 
-pour des raisons de superpositions de colonnes de satin.<br><br>
-
-On les obtient en utilisant ces codes :<br>
-
-<pre>Ⓐ			Ⓓ
-
-	Ⓗ	Ⓘ		Ⓚ
-	
-Ⓛ	Ⓜ	Ⓝ
-
-	Ⓡ		Ⓣ	Ⓤ</pre>
-
-</details>
-
-#### Écharpe soulignante moyenne 
-
-<details><summary>  g-j-y </summary>
-
-<img src="/assets/images/fonts/monichamediumswash.png" alt="Echarpe Moyenne Soulignante" title="Echarpe Moyenne Soulignante"><br>
-
-Ces trois lettres disposent d'une écharpe soulignante moyenne.<br><br>
-
-Elles ne doivent pas être suivies d'une lettre à jambage descendant.<br><br>
-
-On les obtient en utilisant ces codes :<br>
-
-Ⓖ	Ⓙ	Ⓨ
-
-</details>
-
-#### Écharpe basse bouclée 
-<details><summary>  g-j-y </summary>
-
-<img src="/assets/images/fonts/monichacurly.png" alt="Echarpe Basse Bouclée" title="Echarpe Basse Bouclée"><br>
-
-Ces trois lettres disposent aussi d'une version à écharpe basse bouclée.<br><br>
-
-Elles ne doivent pas, sur deux lettres, être suivies d'une lettre à jambage descendant.<br><br>
-
-On les obtient en utilisant ces codes :<br>
-
-ⓖ	ⓙ	ⓨ
-	
-</details>
-
-#### Écharpe supérieure bouclée et rétrograde
-<details><summary> b-d-h-k-l-t </summary>
-
-<img src="/assets/images/fonts/monichacurlyup.png" alt="Echarpe Superieure Bouclée" title="Echarpe Superieure Bouclée"><br>
-
-Il existe 6 lettres à écharpe supérieure bouclée et rétrograde b-d-h-k-l-t.<br><br>
-
-Les deux lettres précédentes ne doivent être ni une majuscule ni une lettre montante.<br><br>
-
-On les obtient en utilisant ces codes :<br>
+Les versions alternées de i,j,r et y ont une écharpe basse bouclée. Elles ne doivent pas, sur deux lettres, être suivies d'une lettre à jambage descendant.
 
 
-ⓑ	ⓓ	ⓗ	ⓚ	ⓛ	ⓣ
-	
-</details>
+<img src="/assets/images/fonts/monicha/alt2.png" alt="Écharpe Longue Soulignante" title="Écharpe Longue Soulignante"><br>
 
-#### Le petit dernier 
-<details><summary> o</summary>
 
-Il existe un o à queue droite<br>
+Exceptions aux restrictions : sur l'image ci dessus on voit aussi des ligatures  qui ont été ajoutées à la fonte: **l&l.alt2  r&i.alt2  t&h.alt2 t&t.alt2**
 
-<img src="/assets/images/fonts/monichao.png" alt="Echarpe Queue Droite" title="Echarpe Queue Droite"><br>
 
-On l'obtient en utilisant ce code :<br>
+#### alt3 : Écharpe longue soulignante ou Écharpe soulignante moyenne a-c-d-e-h-i-k-l-m-n-o-r-t-u g-j-y 
 
-ⓞ
-</details>
+Les lettres à écharpe soulignante ne doivent pas être suivies  d'une lettre à jambage descendant ou d'une autre lettre  à écharpe soulignante. Pour les écharpes longues, l'interdiction s'étend aux deux lettres suivantes.
+<img src="/assets/images/fonts/monicha/alt3.png" alt="Écharpe Moyenne Soulignante" title="Écharpe Moyenne Soulignante"><br>
+
+Exceptions aux restrictions : Sur l'image ci dessus on voit aussi des ligatures qui ont été ajoutées à la fonte: **a&f.alt3  a&g.alt3  a&j.alt3**
+
+### alt4 : Un coeur au début pour les majuscules, un coeur à la fin pour les minuscules
+
+Ces majuscules alternatives ne doivent être utilisées qu'en début de mot, les minuscules qu'en fin de mot.
+
+<img src="/assets/images/fonts/monicha/alt4.png" alt="Coeurs" title="Coeurs"><br>
+
+
 
 
 ##  Dans la vraie vie
