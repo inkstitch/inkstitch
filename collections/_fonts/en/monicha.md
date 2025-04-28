@@ -42,9 +42,9 @@ For instance, these are different ways to write the firstname Sasha.
 The two usual parentheses ( and ) are binded to 
 ![monica parentheses](/assets/images/fonts/monicha/monicaparentheses.png)
 
-Monicha contains also one more alternate versions of the letters a-z and A-Z.
+Monicha contains also one more alternative versions of the letters a-z and A-Z.
 
-**However, some restrictions on the use of these alternate letters should be observed to avoid overlapping satin columns.**
+**However, some restrictions on the use of these alternative letters should be observed to avoid overlapping satin columns.**
 
 ### How to access the alternative letters
 
@@ -63,9 +63,9 @@ In the lettering, for example, type a.alt1 instead of a if you want to use this 
 
 #### alt2: Curly swashes : b-d-h-k-l-t i-j-o-r-y
 
-The rising letters (b-d-h-k-l-t) have an alternate version with a backward curly upper swash. The two preceding letters can not be a capital letter or another rising letter.
+The rising letters (b-d-h-k-l-t) have an alternative version with a backward curly upper swash. The two preceding letters can not be a capital letter or another rising letter.
 
-The alternate versions of i, j, r, and y have a backward curly low swash. They must not, on two letters, be followed by a descending letter (d-g-p-q-y-z).
+The alternative versions of i, j, r, and y have a backward curly low swash. They must not, on two letters, be followed by a descending letter (d-g-p-q-y-z).
 
 <img src="/assets/images/fonts/monicha/alt2.png" alt="Long Scarf Underlining" title="Long Scarf Underlining"><br>
 
