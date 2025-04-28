@@ -25,7 +25,7 @@ This font contains  {{ font.glyphs.size }} glyphs:
 
 At 100%, this font is approximatively   {{ font.size }} tall. 
 
-It can be scaled up to  150% ({{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm)) but can not be scaled down.
+It can be scaled up to  ({{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm)) but can not be scaled down.
 
 
 ## Description
