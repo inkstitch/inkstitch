@@ -79,9 +79,9 @@ Letters with an underscore must not be followed by a descending letter or anothe
 
 Exceptions to the restrictions: The image above also shows ligatures that have been added to the font: **a&f.alt3 a&g.alt3 a&j.alt3**
 
-### alt4: Heart at the beginning for capital letters, heart at the end for lowercase letters.
+### alt4: Heart at the beginning for upper case letters, heart at the end for lowercase letters.
 
-These alternative capital letters should only be used at the beginning of a word, and lowercase letters only at the end.
+These alternative upper case letters should only be used at the beginning of a word, and lowercase letters only at the end.
 
 <img src="/assets/images/fonts/monicha/alt4.png" alt="Hearts" title="Hearts"><br>
 
