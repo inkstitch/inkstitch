@@ -78,6 +78,8 @@ Les versions alternées de i,j,r et y ont une écharpe basse bouclée. Elles ne 
 
 Exceptions aux restrictions : sur l'image ci dessus on voit aussi des ligatures  qui ont été ajoutées à la fonte: **l&l.alt2  r&i.alt2  t&h.alt2 t&t.alt2**
 
+Pour cette fonte  toutes les ligatures (un seul glyphe pour plusieurs caractères) s'ecrivent avec un "&" entre les caractères liés. 
+
 
 #### alt3 : Écharpe longue soulignante ou Écharpe soulignante moyenne a-c-d-e-h-i-k-l-m-n-o-r-t-u g-j-y 
 
