@@ -25,7 +25,7 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
 Bei einer Skalierung von 100 % ist diese Schrift ungefähr {{ font.size }} groß. 
 
-Sie kann bis auf 150% ({{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm))  hochskaliert werden, aber nicht herunterskaliert.
+Sie kann bis auf  ({{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm))  hochskaliert werden, aber nicht herunterskaliert.
 
 ## Beschreibung
 
