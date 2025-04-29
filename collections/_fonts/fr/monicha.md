@@ -54,7 +54,7 @@ Mais Monicha contient aussi une ou des versions alternatives des lettres a-z et 
 Il y a 4 familles de lettres alternatives: alt1, alt2, alt3 et alt4. 
 
 Par exemple, on obtiendra deux versions alternatives du prénom Sasha en tapant dans le lettrage 
-(Sash.alt2a.alt3)  (c'est à dire S a s h.alt2 a.alt3 - mais on ne tappe pas les espaces) ou   Sa.alt3sh.alt3a.alt1
+(Sash.alt2a.alt3)  (c'est à dire S a s h.alt2 a.alt3 - mais on ne tape pas les espaces) ou   Sa.alt3sh.alt3a.alt1
 
 
 #### alt1 :  Petites écharpes 
@@ -78,7 +78,7 @@ Les versions alternées de i,j,r et y ont une écharpe basse bouclée. Elles ne 
 
 Exceptions aux restrictions : sur l'image ci dessus on voit aussi des ligatures  qui ont été ajoutées à la fonte: **l&l.alt2  r&i.alt2  t&h.alt2 t&t.alt2**
 
-Pour cette fonte  toutes les ligatures (un seul glyphe pour plusieurs caractères) s'ecrivent avec un "&" entre les caractères liés. 
+**Pour cette fonte, toutes les ligatures (un seul glyphe pour plusieurs caractères) s'écrivent avec un "&" entre les caractères liés.**
 
 
 #### alt3 : Écharpe longue soulignante ou Écharpe soulignante moyenne a-c-d-e-h-i-k-l-m-n-o-r-t-u g-j-y 
