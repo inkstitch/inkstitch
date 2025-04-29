@@ -267,7 +267,11 @@ class Font(object):
                 if text_align == 4 and len(line_group) == 1:
                     line_group = line_group[0]
                 if len(line_group) > 1:
-                    distance = max_line_width - line_group.bounding_box().width
+                    try:
+                        distance = max_line_width - line_group.bounding_box().width
+                    except AttributeError:
+                        # line group bounding_box is None
+                        continue
                     distance_per_space = distance / (len(line_group) - 1)
                     for i, word in enumerate(line_group.getchildren()[1:]):
                         transform = word.transform
