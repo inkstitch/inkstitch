@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-20 01:47+0000\n"
-"PO-Revision-Date: 2025-04-20 01:48\n"
+"POT-Creation-Date: 2025-04-30 01:43+0000\n"
+"PO-Revision-Date: 2025-04-30 01:43\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-20 01:47+0000\n"
+"POT-Creation-Date: 2025-04-30 01:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -405,8 +405,8 @@ msgstr "Mimosa Medium ist eine gepunktete Satin-Schrift."
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:152
-msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains additional ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
-msgstr "Monicha ist eine Schreibschrift-Satin-Schrift. Zusätzlich zu den Buchstaben, die die meisten westeuropäischen Sprachen abdecken, enthält sie zusätzliche Zierbuchstaben. Diese Zierbchstaben sollten vorsichtig eingesetzt werden um Überlagerungen zu vermeiden. Nutze am Besten nicht mehr als einen Zierbuchstaben pro Reihe. Auf unserer Webseite gibt es genaue Informationen, wie auf die Zierbuchstaben zugegriffen werden kann."
+msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
+msgstr ""
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:154
@@ -1012,21 +1012,21 @@ msgstr "Fehler: Es gibt mehr als einen %(command)s-Befehl in dem Dokument, aber 
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:352 lib/commands.py:476
+#: lib/commands.py:365 lib/commands.py:489
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch Befehl"
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:392
+#: lib/commands.py:405
 msgid "connector"
 msgstr "Verknüpfung"
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:413
+#: lib/commands.py:426
 msgid "command marker"
 msgstr "Befehlszeichen"
 
-#: lib/commands.py:465
+#: lib/commands.py:478
 msgid "Please select a layer to include layer commands."
 msgstr "Für Befehle, die sich auf eine Ebene beziehen, bitte eine Ebene auswählen."
 
@@ -1933,7 +1933,7 @@ msgstr "\"E\"-Stich"
 msgid "\"S\" Stitch"
 msgstr "\"S\"-Stich"
 
-#: lib/elements/satin_column.py:115 lib/stitch_plan/lock_stitch.py:220
+#: lib/elements/satin_column.py:115 lib/stitch_plan/lock_stitch.py:222
 msgid "Zig-zag"
 msgstr "Zick-Zack"
 
@@ -1970,7 +1970,7 @@ msgstr "Maximale randomisierte Abweichung der Stichabstände in Prozent."
 msgid "Default"
 msgstr "Standard"
 
-#: lib/elements/satin_column.py:157 lib/stitch_plan/lock_stitch.py:218
+#: lib/elements/satin_column.py:157 lib/stitch_plan/lock_stitch.py:220
 #: inx/inkstitch_break_apart.inx:10
 msgid "Simple"
 msgstr "Einfach"
@@ -2966,7 +2966,7 @@ msgstr "Dieser Parameter wird gespeichert, wenn man auf \"Übernehmen und beende
 
 #: lib/extensions/params.py:538 lib/extensions/sew_stack_editor.py:118
 #: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:57
-#: lib/gui/lettering_font_sample.py:66
+#: lib/gui/lettering_font_sample.py:68
 #: lib/gui/satin_multicolor/main_panel.py:54
 #: lib/gui/simulator/simulator_preferences.py:53
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
@@ -3243,7 +3243,7 @@ msgstr "Garnliste"
 
 #: lib/gui/abort_message.py:38 lib/gui/apply_palette.py:64
 #: lib/gui/edit_json/help_panel.py:27 lib/gui/element_info.py:56
-#: lib/gui/lettering_font_sample.py:94
+#: lib/gui/lettering_font_sample.py:96
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr "Mehr Informationen auf unserer Webseite:"
@@ -3277,7 +3277,7 @@ msgid "Select color palette"
 msgstr "Farbpalette auswählen"
 
 #: lib/gui/apply_palette.py:44 lib/gui/edit_json/settings_panel.py:65
-#: lib/gui/lettering_font_sample.py:68
+#: lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:56
 #: lib/gui/simulator/simulator_preferences.py:55
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
@@ -3286,7 +3286,7 @@ msgstr "Anwenden"
 
 #: lib/gui/apply_palette.py:49 lib/gui/edit_json/main_panel.py:68
 #: lib/gui/element_info.py:41 lib/gui/lettering/main_panel.py:47
-#: lib/gui/lettering_font_sample.py:79
+#: lib/gui/lettering_font_sample.py:81
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
 #: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:16
@@ -3618,45 +3618,45 @@ msgstr "Wenn aktiviert, werden visuelle Befehle (Symbole) eingefügt. Wenn deakt
 msgid "Scale"
 msgstr "Maßstab"
 
-#: lib/gui/lettering_font_sample.py:21
+#: lib/gui/lettering_font_sample.py:23
 #: inx/inkstitch_lettering_font_sample.inx:3
 msgid "Font Sampling"
 msgstr "Zeichentabelle"
 
-#: lib/gui/edit_json/main_panel.py:67 lib/gui/lettering_font_sample.py:36
+#: lib/gui/edit_json/main_panel.py:67 lib/gui/lettering_font_sample.py:38
 #: lib/gui/simulator/view_panel.py:129 print/templates/ui.html:5
 #: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:77
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: lib/gui/lettering_font_sample.py:47
+#: lib/gui/lettering_font_sample.py:49
 msgid "Stitch direction"
 msgstr "Stickrichtung"
 
-#: lib/gui/lettering_font_sample.py:49 lib/gui/tartan/customize_panel.py:46
+#: lib/gui/lettering_font_sample.py:51 lib/gui/tartan/customize_panel.py:46
 #: inx/inkstitch_batch_lettering.inx:21
 msgid "Scale (%)"
 msgstr "Maßstab (%)"
 
-#: lib/gui/lettering_font_sample.py:51
+#: lib/gui/lettering_font_sample.py:53
 msgid "Max. line width"
 msgstr "Maximale Zeilenlänge"
 
 #: lib/gui/lettering/option_panel.py:93 lib/gui/lettering/option_panel.py:95
-#: lib/gui/lettering_font_sample.py:53 inx/inkstitch_batch_lettering.inx:22
+#: lib/gui/lettering_font_sample.py:55 inx/inkstitch_batch_lettering.inx:22
 msgid "Color sort"
 msgstr "Farbsortierung"
 
-#: lib/gui/lettering_font_sample.py:86
+#: lib/gui/lettering_font_sample.py:88
 msgid "    This extension helps font creators to generate an output of every glyph from a selected font."
 msgstr "Diese Erweiterung hilft Schriftart-Entwicklern eine Zeichentabelle für die ausgewählte Schriftart zu erstellen."
 
-#: lib/gui/lettering_font_sample.py:100 lib/gui/lettering_font_sample.py:101
+#: lib/gui/lettering_font_sample.py:102 lib/gui/lettering_font_sample.py:103
 msgid "https://inkstitch.org/docs/font-tools/#font-sampling"
 msgstr "https://inkstitch.org/docs/font-tools/#zeichentabelle"
 
-#: lib/gui/lettering_font_sample.py:181
+#: lib/gui/lettering_font_sample.py:183
 #, python-brace-format
 msgid "The glyphlist for this font seems to be outdated.\n\n"
 "Please update the glyph list for {font_name}:\n"
@@ -3667,7 +3667,7 @@ msgstr "Die Zeichentabelle für diese Schriftart scheint veraltet zu sein.\n\n"
 "* Öffne Erweiterungen > Ink/Stitch > Schriftartenverwaltung > JSON bearbeiten\n"
 "* Wähle diese Schriftart aus und klicke auf Anwenden."
 
-#: lib/gui/lettering_font_sample.py:236
+#: lib/gui/lettering_font_sample.py:238
 #, python-brace-format
 msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
 msgstr "Doppelte Schriftzeichen in Schriftdatei gefunden: {duplicated_glyphs}"
@@ -4359,7 +4359,7 @@ msgstr "Die JSON-Datei kann über folgende Ink/Stitch Funktion neu erstellt werd
 msgid "The font '%s' has no variants."
 msgstr "Die Schrift '%s' hat keine Varianten."
 
-#: lib/lettering/font.py:601
+#: lib/lettering/font.py:581
 msgid "Color Group"
 msgstr "Farbgruppe"
 
@@ -4466,35 +4466,35 @@ msgstr "Auf Standard zurücksetzen"
 msgid "File does not exist and cannot be opened. Please correct the file path and try again.\\r%s"
 msgstr "Die Datei kann nicht geöffnet werden. Bitte überprüfe den Dateipfad und versuche es erneut.\\r%s"
 
-#: lib/stitch_plan/lock_stitch.py:35 lib/stitch_plan/lock_stitch.py:221
+#: lib/stitch_plan/lock_stitch.py:35 lib/stitch_plan/lock_stitch.py:223
 msgid "Custom"
 msgstr "Benutzerdefiniert"
 
-#: lib/stitch_plan/lock_stitch.py:212
+#: lib/stitch_plan/lock_stitch.py:214
 msgid "Half Stitch"
 msgstr "Halbstich"
 
-#: lib/stitch_plan/lock_stitch.py:213
+#: lib/stitch_plan/lock_stitch.py:215
 msgid "Arrow"
 msgstr "Pfeil"
 
-#: lib/stitch_plan/lock_stitch.py:214
+#: lib/stitch_plan/lock_stitch.py:216
 msgid "Back and forth"
 msgstr "Vor und zurück"
 
-#: lib/stitch_plan/lock_stitch.py:215
+#: lib/stitch_plan/lock_stitch.py:217
 msgid "Bowtie"
 msgstr "Schleife"
 
-#: lib/stitch_plan/lock_stitch.py:216
+#: lib/stitch_plan/lock_stitch.py:218
 msgid "Cross"
 msgstr "Kreuz"
 
-#: lib/stitch_plan/lock_stitch.py:217
+#: lib/stitch_plan/lock_stitch.py:219
 msgid "Star"
 msgstr "Stern"
 
-#: lib/stitch_plan/lock_stitch.py:219
+#: lib/stitch_plan/lock_stitch.py:221
 msgid "Triangle"
 msgstr "Dreieck"
 
