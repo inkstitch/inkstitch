@@ -2,7 +2,7 @@
 title: "Monicha"
 permalink: /de/fonts/monicha/
 last_modified_at: 2023-04-24
-toc: false
+toc: true
 preview_image:
   - url: /assets/images/fonts/monicha.jpg
     height: 24
@@ -37,161 +37,54 @@ Hier ein Beispiel für mögliche Varianten für den Vornamen Sasha.
 
 ### Die Klammern
 
-Die beiden blichen Klammern ( und ) ergeben folgendes Bild
+Die beiden blichen Klammern `(` und `)` ergeben folgendes Bild
 
 ![monica parentheses](/assets/images/fonts/monicha/monicaparentheses.png)
 
-Monicha contains also one more alternative versions of the letters a-z and A-Z.
-
-**However, some restrictions on the use of these alternative letters should be observed to avoid overlapping satin columns.**
-
-
 ### Alternative Buchstaben sticken
-There are four alternative letter families: alt1, alt2, alt3, and alt4.
 
-For example, you'll get two alternative versions of the name Sasha by typing in the lettering
-(Sash.alt2a.alt3) (i.e., S a s h.alt2 a.alt3 - but don't type the spaces) or Sa.alt3sh.alt3a.alt1
+Monicha enthält alternative Versionen der Buchstaben a-z und A-Z.
 
-#### alt1: Small swashes
+Es gibt vier Familien mit alternativen Buchstaben: alt1, alt2, alt3 und alt4.
 
-All lowercase letters have a small swash version that works particularly well on the last letter of a word.
+Beispielsweise kann der Name Sasha in verschiedenen Formen dargestellt werden:
+`Sash.alt2a.alt3` (mit den geschwungenen Buchstaben `h.alt2` und `a.alt3`) oder `Sa.alt3sh.alt3a.alt1` (mit den geschwungenen Buchstaben `a.alt3`, `h.alt3` und `a.alt1`)
 
-<img src="/assets/images/fonts/monicha/alt1.png" alt="Little Scarf" title="Little Scarf"><br>
+Um überlappende Satinsäulen zu vermeiden, sollten die alternativen Versionen mit Vorsicht eingesetzt werden
+{: .notice--info }
 
-In the lettering, for example, type a.alt1 instead of a if you want to use this alternative version of a.
+#### alt1: Kleine Zierbuchstaben
 
-#### alt2: Curly swashes : b-d-h-k-l-t i-j-o-r-y
+Alle Kleinbuchstaben haben eine Variante mit einem kleinen verlängerten Schwung. Sie machen sich besonders gut bei dem letzten Buchstaben eines Wortes.
 
-The rising letters (b-d-h-k-l-t) have an alternative version with a backward curly upper swash. The two preceding letters can not be a capital letter or another rising letter.
+![Little Scarf](/assets/images/fonts/monicha/alt1.png)
 
-The alternative versions of i, j, r, and y have a backward curly low swash. They must not, on two letters, be followed by a descending letter (d-g-p-q-y-z).
+Um beispielsweise ein `geschwungenes a` zu nutzen, schreibe im Textwerkzeug `a.alt1` (anstelle von a).
 
-<img src="/assets/images/fonts/monicha/alt2.png" alt="Long Scarf Underlining" title="Long Scarf Underlining"><br>
+#### alt2: Rückwärtsgerichtete Schwünge: b-d-h-k-l-t i-j-o-r-y
 
-Exceptions to the restrictions: The image above also shows ligatures that have been added to the font: **l&l.alt2 r&i.alt2 t&h.alt2 t&t.alt2**
+Die aufsteigenden Buchstaben (b-d-h-k-l-t) haben eine alternative Version mit einem rückwärtsgerichteten Schwung. Bei der Verwendung dieser Versionen, sollten die zwei vorherigen Buchstaben keine Großbuchstaben oder aufsteigenden Buchstaben sein.
 
-#### alt3: Long  or Medium Underscore a-c-d-e-h-i-k-l-m-n-o-r-t-u g-j-y
+Die alternativen Versionen von i,j,r und y haben rückwärtsgerichtete Schwünge unter der Grundlinie. Sie sollten im Abstand von zwei Buchstaben nicht auf absteigende Schriftzeichen folgen (d-g-p-q-y-z).
 
-Letters with an underscore must not be followed by a descending letter or another letter with an underscore. For long underscores, the prohibition extends to the following two letters.
+![Long Scarf Underlining](/assets/images/fonts/monicha/alt2.png)
 
-<img src="/assets/images/fonts/monicha/alt3.png" alt="Medium Scarf Underlining" title="Medium Scarf Underlining"><br>
+**Ausnahmen von der Regel** Das obige Bild zeigt Ligaturen, die ebenfalls Teil dieser Schrift sind: `l&l.alt2 r&i.alt2 t&h.alt2 t&t.alt2`
 
-Exceptions to the restrictions: The image above also shows ligatures that have been added to the font: **a&f.alt3 a&g.alt3 a&j.alt3**
+#### alt3: Lange oder hslblange unterstreichende Bögen a-c-d-e-h-i-k-l-m-n-o-r-t-u g-j-y
 
-### alt4: Heart at the beginning for upper case letters, heart at the end for lowercase letters.
+Buchstaben mit unterstreichenden Bögen sollten nicht aufeinander folgen. Für lange Unterstreichungen wird diese Regel auf zwei Buchstaben erweitert.
 
-These alternative upper case  letters should only be used at the beginning of a word, and lowercase letters only at the end.
+![Medium Scarf Underlining](/assets/images/fonts/monicha/alt3.png)
 
-<img src="/assets/images/fonts/monicha/alt4.png" alt="Hearts" title="Hearts"><br>
-<!--
-Die Buchstaben können nicht direkt über die Tastatur eingegeben werden. Stattdessen können sie über Kopieren/Einfügen in das Schriftfeld in Ink/Stitch übertragen werden.
+**Ausnahmen von der Regel** Das obige Bild zeigt Ligaturen, die ebenfalls Teil dieser Schrift sind: `a&f.alt3 a&g.alt3 a&j.alt3`
 
-#### Kleine Zierbuchstaben
+### alt4: Herz vor Großbuchstaben oder nach Kleinbuchstaben
 
-<details> <summary>Alle Kleinbuchstaben</summary>
+Diese alternativen Großbuchstaben sollten nur am Wortanfang genutzt werden, die Kleinbuchtaben nur am Wortende.
 
-<img src="/assets/images/fonts/monichasmallswash.jpg" alt="Petite Echarpe" title="Petite Echarpe"><br>
+![Hearts](/assets/images/fonts/monicha/alt4.png)
 
-Um diese Buchstaben zu nutzen, kopiere die Zeichen von hier und füge sie in das Schriftfeld in Ink/Stitch ein<br><br>
-
-⒜	⒝	⒞	⒟	⒠	⒡<br>
-
-⒢	⒣	⒤	⒥	⒦	<br>
-
-⒧	⒨	⒩	⒪	⒫<br>
-
-⒬	⒭	⒮	⒯	⒰<br>
-
-⒱	⒲	⒳	⒴	⒵
-	
-</details>
-
-#### Lange unterstreichende Bögen
-
-<details> <summary> a-d-h-i-k-l-m-n-r-t-u </summary>
-
-<img src="/assets/images/fonts/monichalongswash.jpg" alt="Echarpe Longue Soulignante" title="Echarpe Longue Soulignante"><br>
-
-11 Kleinbuchstaben mit langen Bögen a-d-h-i-k-l-m-n-r-t-u.<br><br>
-
-Um Überlagerungen zu vermeiden, sollten ihnen über zwei Buchstaben hinweg keine Buchstaben mit Unterlänge folgen (wie z. B. g-j-p-q-y-z).<br><br>
-
-Sie können mit folgenden Zeichen erstellt werden:<br>
-
-<pre>Ⓐ			Ⓓ
-
-	Ⓗ	Ⓘ		Ⓚ
-	
-Ⓛ	Ⓜ	Ⓝ
-
-	Ⓡ		Ⓣ	Ⓤ</pre>
-
-</details>
-
-#### Halblange Bögen
-
-<details> <summary> g-j-y </summary>
-
-<img src="/assets/images/fonts/monichamediumswash.png" alt="Echarpe Moyenne Soulignante" title="Echarpe Moyenne Soulignante"><br>
-
-3 Zierbuchstaben mit halblangen Bögen: g-j-y.<br><br>
-
-Buchstaben mit Unterlänge sollten nicht auf diese Zeichen folgen.<br><br>
-
-Nutze folgende Zeichen:<br>
-
-Ⓖ	Ⓙ	Ⓨ
-	
-</details>
-
-####  Curly low swashes
-
-<details> <summary> g-j-y </summary>
-
-<img src="/assets/images/fonts/monichacurly.png" alt="Echarpe Basse Bouclée" title="Echarpe Basse Bouclée"><br>
-
-Für diese 3 Buchstaben gibt es eine Version mit einem geschwungen unteren Bogen.<br><br>
-
-Die folgenden zwei Buchstaben sollten keine Unterlänge haben.
-
-Nutze diese Zeichen:<br>
-
-ⓖ ⓙ ⓨ
-	
-</details>
-
-####  Rückwärtsgerichtete Schlaufen
-
-<details> <summary> b-d-h-k-l-t </summary>
-
-<img src="/assets/images/fonts/monichacurlyup.png" alt="Echarpe Superieure Bouclée" title="Echarpe Superieure Bouclée"><br>
-
-6 Buchstaben mit rückwärtsgerichteten Schlaufen.<br><br>
-
-Um Überlappungen zu vermeiden sollten die zwei nachfolgenden Buchstaben keine Oberlänge haben oder Großbuchstaben sein.<br>
-
-Nutze folgende Zeichen:<br><br>
-
-ⓑ	ⓓ	ⓗ	ⓚ	ⓛ	ⓣ
-	
-</details>
-
-#### Und der Letzte
-
-<details> <summary> o</summary>
-
-<img src="/assets/images/fonts/monichao.png" alt="Echarpe Queue Droite" title="Echarpe Queue Droite"><br>
-
-
-Schließlich ein besonderes `o` für den Wortabschluß:<br><br>
-
-Nutze folgendes Zeichen:<br>
-
-ⓞ
-
-</details>
--->
-	
 ## Impressionen
 
 {% include folder-galleries path="fonts/monicha/" %}

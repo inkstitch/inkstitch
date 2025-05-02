@@ -1,7 +1,7 @@
 ---
 title: "Neue Funktionen, Aktualisierungen und Fehlerbehebungen für die nächste Ink/Stitch Version"
 permalink: /de/upcoming/
-last_modified_at: 2025-04-15
+last_modified_at: 2025-05-02
 sidebar:
   nav: pages
 toc: true
@@ -375,6 +375,10 @@ Ausschneidemasken sind jetzt in allen Varianten direkt mit Ink/Stitch nutzbar. D
 
 [Mehr Informationen](/de/docs/stitches/satin-column/)
 
+### Zick-Zack Stich
+
+* Die Zugkompensation kann nun für jede Seite definiert werden (asymmetrisch, wie bei den Satinsäulen)
+
 ## Farbpaletten
 
 * `InkStitch Madeira Rayon.gpl` aktualisiert [#3444](https://github.com/inkstitch/inkstitch/pull/3444)
@@ -448,6 +452,16 @@ Ein Pfad mit einem speziellen Label kann genutzt werden, um den Text wie bei `Te
 
 ## Bug Fixes
 
+* Fix zerodivision error in zigzag to satin [#3696](https://github.com/inkstitch/inkstitch/pull/3696)
+* Circular fill: use first boundary linestring if outline is multilinestring [#3694](https://github.com/inkstitch/inkstitch/pull/3694)
+* Auto route satin: do not try to add a trim to a deleted element [#3683](https://github.com/inkstitch/inkstitch/pull/3683)
+* Prevent possbile RecursionError for relative lock stitches [#3695](https://github.com/inkstitch/inkstitch/pull/3695)
+* Ensure command symbols in font sampling [#3684](https://github.com/inkstitch/inkstitch/pull/3684)
+* Duplicate-consistant autoroute element selection [#3638](https://github.com/inkstitch/inkstitch/pull/3638)
+* Do not solely rely on random ids for commands in lettering [#3681](https://github.com/inkstitch/inkstitch/pull/3681)
+* Fix NoneType error in auto_fill travel [#3659](https://github.com/inkstitch/inkstitch/pull/3659)
+* Fix an issue when auto_satin produces NoneType satins [#3680](https://github.com/inkstitch/inkstitch/pull/3680)
+* Multicolor satin (windows): apply settings in spinctrldouble when they hit enter [#3677](https://github.com/inkstitch/inkstitch/pull/3677)
 * fix ensure even center walk underlay repeats in auto_satin when value is empty [#3651](https://github.com/inkstitch/inkstitch/pull/3651)
 * Prevent unwanted simulator scale transforms [#3637](https://github.com/inkstitch/inkstitch/pull/3637)
 * Always update satin param to avoid actual param/rendering mismatch [#3647](https://github.com/inkstitch/inkstitch/pull/3647)
