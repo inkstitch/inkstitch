@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-30 01:43+0000\n"
-"PO-Revision-Date: 2025-04-30 01:43\n"
+"POT-Creation-Date: 2025-05-02 01:43+0000\n"
+"PO-Revision-Date: 2025-05-02 01:43\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-30 01:43+0000\n"
+"POT-Creation-Date: 2025-05-02 01:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -406,7 +406,7 @@ msgstr "Mimosa Medium ist eine gepunktete Satin-Schrift."
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:152
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
-msgstr ""
+msgstr "Monicha ist eine Schreibschrift-Satin-Schrift. Zusätzlich zu den Buchstaben, die die meisten westeuropäischen Sprachen abdecken, enthält sie zusätzliche Zierbuchstaben. Diese Zierbchstaben sollten sparsam eingesetzt werden um Überlagerungen zu vermeiden. Nutze am Besten nicht mehr als einen Zierbuchstaben pro Reihe. Auf unserer Webseite gibt es genaue Informationen, wie auf die Zierbuchstaben zugegriffen werden kann."
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:154
@@ -426,7 +426,7 @@ msgstr "Namskout Tartan ist eine große Schrift mit Tartanmustern. Sie enthält 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:160
 msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
-msgstr ""
+msgstr "NickAinley ist ein Mehrfachgeradstich-Alphabet auf der Grundlage einer 24pt Schrift von Seniors Studio."
 
 #. description of font in fonts/ondulamarif_Medium
 #: inkstitch-fonts-metadata.py:162
@@ -4359,7 +4359,7 @@ msgstr "Die JSON-Datei kann über folgende Ink/Stitch Funktion neu erstellt werd
 msgid "The font '%s' has no variants."
 msgstr "Die Schrift '%s' hat keine Varianten."
 
-#: lib/lettering/font.py:581
+#: lib/lettering/font.py:585
 msgid "Color Group"
 msgstr "Farbgruppe"
 

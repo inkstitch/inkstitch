@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-30 01:43+0000\n"
-"PO-Revision-Date: 2025-04-30 01:43\n"
+"POT-Creation-Date: 2025-05-02 01:43+0000\n"
+"PO-Revision-Date: 2025-05-02 01:43\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-30 01:43+0000\n"
+"POT-Creation-Date: 2025-05-02 01:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -406,7 +406,7 @@ msgstr "Mimosa Medium est une fonte de colonnes satin qui semble être à pois."
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:152
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
-msgstr ""
+msgstr "Monicha est une police manuscrite en colonne satin. En plus des glyphes couvrant la plupart des langages d'Europe de l'Ouest, elle contient des lettres ornementales à écharpe. Ces lettres ornementales doivent être utilisées avec précaution pour éviter les surépaisseurs. Merci de consulter la documentation pour les informations sur l'accès à ces lettres ornementales."
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:154
@@ -4359,7 +4359,7 @@ msgstr "Re-générez le fichier JSON avec\n"
 msgid "The font '%s' has no variants."
 msgstr "Aucun fichier variant trouvé pour la police '%s'."
 
-#: lib/lettering/font.py:581
+#: lib/lettering/font.py:585
 msgid "Color Group"
 msgstr "Groupe de couleur"
 
