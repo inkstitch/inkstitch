@@ -367,9 +367,10 @@ Les découpes sont désormais facilement accessibles dans Ink/Stitch sous toutes
 
 [En savoir plus](/fr/docs/stitches/satin-column/)
 
-### Zigzag Stitch
+### Point Zigzag 
 
-* Pull compensation can now be defined for each side (asymmetric, same as in satin columns)
+
+* La compensation d'étirement est maintenant définie par coté (de même  que pour les colonnes satin, elle peut maintenant avoir une valeur différente de chaque côté)
 
 ## Palettes
 
