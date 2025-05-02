@@ -180,7 +180,7 @@ def post_process(points, shape, original_shape, fill):
 
     if fill.zigzag_spacing > 0:
         stitches = even_running_stitch(smoothed_points, fill.zigzag_spacing / 2, fill.running_stitch_tolerance)
-        stitches = zigzag_stitch(stitches, fill.zigzag_spacing, fill.zigzag_width, 0)
+        stitches = zigzag_stitch(stitches, fill.zigzag_spacing, fill.zigzag_width, (0, 0))
     else:
         stitches = even_running_stitch(smoothed_points, fill.running_stitch_length, fill.running_stitch_tolerance)
 
