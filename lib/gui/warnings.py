@@ -23,11 +23,11 @@ class WarningPanel(wx.Panel):
         self.main_sizer.Add(self.warning, 0, wx.LEFT | wx.BOTTOM | wx.EXPAND, 10)
 
         tc_style = wx.TE_MULTILINE | wx.TE_READONLY | wx.VSCROLL | wx.TE_RICH2
-        self.warning_text = wx.TextCtrl(self, size=(300, 300), style=tc_style)
+        self.warning_text = wx.TextCtrl(self, size=(300, 200), style=tc_style)
         font = self.warning_text.GetFont()
         font.SetFamily(wx.FONTFAMILY_TELETYPE)
         self.warning_text.SetFont(font)
-        self.main_sizer.Add(self.warning_text, 3, wx.LEFT | wx.BOTTOM | wx.EXPAND, 10)
+        self.main_sizer.Add(self.warning_text, 0, wx.LEFT | wx.BOTTOM | wx.EXPAND, 10)
 
         self.SetSizerAndFit(self.main_sizer)
         self.Layout()
