@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import json
+import os
 from collections import defaultdict
 from copy import deepcopy
 from itertools import combinations_with_replacement
@@ -14,15 +15,16 @@ import wx.adv
 from inkex import errormsg
 
 from ...elements import nodes_to_elements
+from ...exceptions import InkstitchException, format_uncaught_exception
 from ...i18n import _
 from ...lettering import get_font_list
-from ...lettering.font_variant import FontVariant
 from ...lettering.categories import FONT_CATEGORIES
+from ...lettering.font_variant import FontVariant
 from ...stitch_plan import stitch_groups_to_stitch_plan
 from ...svg.tags import SVG_PATH_TAG
 from ...utils.settings import global_settings
 from ...utils.threading import ExitThread, check_stop_flag
-from .. import PreviewRenderer
+from .. import PreviewRenderer, WarningPanel
 from . import HelpPanel, SettingsPanel
 
 LETTER_CASE = {0: '', 1: 'upper', 2: 'lower'}
@@ -58,7 +60,12 @@ class LetteringEditJsonPanel(wx.Panel):
         # preview
         self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
 
+        # warning
+        self.warning_panel = WarningPanel(self)
+        self.warning_panel.Hide()
+
         notebook_sizer = wx.BoxSizer(wx.VERTICAL)
+        notebook_sizer.Add(self.warning_panel, 0, wx.EXPAND | wx.ALL, 10)
         self.notebook = wx.Notebook(self, wx.ID_ANY)
         notebook_sizer.Add(self.notebook, 1, wx.EXPAND, 0)
 
@@ -75,6 +82,16 @@ class LetteringEditJsonPanel(wx.Panel):
         self.on_font_changed()
 
         self.SetSizeHints(notebook_sizer.CalcMin())
+        self.Layout()
+
+    def _hide_warning(self):
+        self.warning_panel.clear()
+        self.warning_panel.Hide()
+        self.Layout()
+
+    def _show_warning(self, warning_text):
+        self.warning_panel.set_warning_text(warning_text)
+        self.warning_panel.Show()
         self.Layout()
 
     def on_text_before_changed(self, event):
@@ -263,6 +280,7 @@ class LetteringEditJsonPanel(wx.Panel):
         self.update_filter_list()
         self.update_glyph_list()
         self.update_preview()
+        self.writability_warning()
 
     def update_legacy_kerning_pairs(self):
         new_list = defaultdict(list)
@@ -376,11 +394,30 @@ class LetteringEditJsonPanel(wx.Panel):
             glyph_list.Select(0)
             glyph_list.Focus(0)
 
+    def writability_warning(self):
+        json_file = path.join(self.font.path, 'font.json')
+
+        if not path.isfile(json_file) or not path.isfile(json_file):
+            self._show_warning(_("Could not read json file."))
+            return
+
+        if not os.access(json_file, os.W_OK):
+            self._show_warning(_("Changes will not be saved: cannot write to json file (permission denied)."))
+            return
+
+        self._hide_warning()
+
     def apply(self, event):
         json_file = path.join(self.font.path, 'font.json')
 
         if not path.isfile(json_file) or not path.isfile(json_file):
             errormsg(_("Could not read json file."))
+            self.cancel()
+            return
+
+        if not os.access(json_file, os.W_OK):
+            errormsg(_("Could not write to json file: permission denied."))
+            self.cancel()
             return
 
         with open(json_file, 'r') as font_data:
@@ -509,15 +546,12 @@ class LetteringEditJsonPanel(wx.Panel):
                     collapse_len=self.metadata['collapse_len_mm'],
                     min_stitch_len=self.metadata['min_stitch_len_mm']
                 )
-        except SystemExit:
+        except (SystemExit, ExitThread):
             raise
-        except ExitThread:
-            raise
+        except InkstitchException as exc:
+            wx.CallAfter(self._show_warning, str(exc))
         except Exception:
-            raise
-            # Ignore errors.  This can be things like incorrect paths for
-            # satins or division by zero caused by incorrect param values.
-            pass
+            wx.CallAfter(self._show_warning, format_uncaught_exception())
 
     def on_stitch_plan_rendered(self, stitch_plan):
         self.simulator.stop()
