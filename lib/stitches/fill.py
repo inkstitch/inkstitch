@@ -17,7 +17,7 @@ from .running_stitch import split_segment_random_phase
 
 def legacy_fill(shape, angle, row_spacing, end_row_spacing, max_stitch_length, flip, reverse, staggers, skip_last):
     rows_of_segments = intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing, flip)
-    groups_of_segments = pull_runs(rows_of_segments, shape, row_spacing)
+    groups_of_segments = pull_runs(rows_of_segments, shape, row_spacing, end_row_spacing)
 
     stitches = [section_to_stitches(group, angle, row_spacing, max_stitch_length, staggers, skip_last)
                 for group in groups_of_segments]
@@ -210,11 +210,15 @@ def make_quadrilateral(segment1, segment2):
     return shapely.geometry.Polygon((segment1[0], segment1[1], segment2[1], segment2[0], segment1[0]))
 
 
-def is_same_run(segment1, segment2, shape, row_spacing):
+def is_same_run(segment1, segment2, shape, row_spacing, end_row_spacing):
     line1 = shapely.geometry.LineString(segment1)
     line2 = shapely.geometry.LineString(segment2)
 
-    if line1.distance(line2) > row_spacing * 1.1:
+    spacing = row_spacing
+    if end_row_spacing is not None:
+        spacing = max(spacing, end_row_spacing)
+
+    if line1.distance(line2) > spacing * 1.1:
         return False
 
     quad = make_quadrilateral(segment1, segment2)
@@ -224,7 +228,7 @@ def is_same_run(segment1, segment2, shape, row_spacing):
     return (intersection_area / quad_area) >= 0.9
 
 
-def pull_runs(rows, shape, row_spacing):
+def pull_runs(rows, shape, row_spacing, end_row_spacing):
     # Given a list of rows, each containing a set of line segments,
     # break the area up into contiguous patches of line segments.
     #
@@ -247,7 +251,7 @@ def pull_runs(rows, shape, row_spacing):
             first, rest = row[0], row[1:]
 
             # TODO: only accept actually adjacent rows here
-            if prev is not None and not is_same_run(prev, first, shape, row_spacing):
+            if prev is not None and not is_same_run(prev, first, shape, row_spacing, end_row_spacing):
                 break
 
             run.append(first)
