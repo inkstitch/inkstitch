@@ -30,6 +30,10 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Barstitch textured](/fonts/barstitch_bold/)
 
   ![Barstitch textured](/assets/images/fonts/barstitch_textured.png)
+  * [Blunesia 72](/fr/fonts/blunesia/)
+
+  ![Blunesia_72](/assets/images/fonts/blunesia_72.png)
+
 * [Califragilistic](/fonts/califragilistic/)
 
   ![Califragilistic](/assets/images/fonts/califragilistic.png)
