@@ -1,7 +1,7 @@
 ---
 title: "Blunesia 72"
 permalink: /fr/fonts/blunesia/
-last_modified_at: 2025-05-O5
+last_modified_at: 2025-05-05
 toc: false
 preview_image:
   - url: /assets/images/fonts/blunesia_72.png
