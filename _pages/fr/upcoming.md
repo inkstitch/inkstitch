@@ -1,7 +1,7 @@
 ---
 title: "Changements, Mises à jour et Corrections pour la prochaine  version Ink/Stitch"
 permalink: /fr/upcoming/
-last_modified_at: 2025-04-16
+last_modified_at: 2025-05-06
 sidebar:
   nav: pages
 toc: true
