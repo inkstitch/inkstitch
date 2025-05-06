@@ -123,7 +123,7 @@ Il suffit de
 
 Il ne faut pas partir du mandala transformé en redwork mais des groupes avec effets de chemins
 
-* Groupez tout le monde ensemble, appelons ce groupe manadala
+* Groupez tout le monde ensemble, appelons ce groupe mandala
 * Groupez à nouveau, appelons ce groupe mandala_découpé 
 * Ici j'ai utilisé un texte écrit avec la police ojuju. Il faut d'abord transformer ce texte en chemin en le selectionant puis Inkscape > Chemins > Objets en chemin puis en faire une copie du texte.
 * Une des copies du texte doit être au dessus du groupe mandala_découpé, sélectionnez  le groupe mandala_découpé et  cette copie du texte,  puis Inkscape > Objet > Découpe > Définir une découpe
@@ -138,7 +138,7 @@ Il ne faut pas partir du mandala transformé en redwork mais des groupes avec ef
 
 ## Utilisation de découpe inversée
 
-Il est possible d'utiliser le texte pour non pas faire une découpe mais faire une découpe inversée.
+Il est possible d'utiliser le texte pour non pas faire une découpe mais faire une découpe inversée (Inkscape > Objet > Découpe > Découpe Inversée)
 On obtient alors 
 ![Texte mandala inversé](/assets/images/tutorials/mandala/lettremandala_reversed.svg) 
 
