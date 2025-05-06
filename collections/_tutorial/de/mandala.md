@@ -115,6 +115,10 @@ Dafür habe ich 2 neue Gruppen erstellt.
 
 [Komplexes Mandala herunterladen](/assets/images/tutorials/mandala/complexmandala.svg){: download="compleximplemandala.svg" }
 
+If you wish to see more samples you can also [download these samples ](/assets/images/tutorials/mandala/mandala_samples.svg){: download="mandala_samples.svg" }
+
+
+
 ## Mandala in Redwork umwandeln
 
 Du musst lediglich
@@ -130,10 +134,12 @@ Du musst lediglich
 Nutze hierfür nicht das Redwork-Mandala, sondern die Gruppen mit den Pfadeffekten
 
 * Gruppiere alle Gruppen und nenne die Gruppe "Mandala"
+* Group a second time, and name this group mandala_clipped
 * In diesem Beispiel nutze ich einen Text mit der Ojuju Schrift.
   Jeder Text muss zunächst in einen Pfad umgewandelt werden (`Pfad > Objekt in Pfad umwandeln`)
 * Erstelle eine Kopie des Texts. Die Kopie erhält nur eine Konturfarbe und keine Füllung)
-* Das Original mit einer Füllfarbe wird über die Mandala-Gruppe gelegt. Beide auswählen und `Objekt > Auschneidepfad > Ausschneidepfad setzen` ausführen
+* Das Original mit einer Füllfarbe wird über die mandala_clipped Gruppe gelegt. Beide auswählen und `Objekt > Auschneidepfad > Ausschneidepfad setzen` ausführen
+* By selecting the mandala group (not the mandala_clipped group) you can move the mandala  to fine tune what part of the mandala actually appears.
 * Wähle die Pfadkopie des Buchstabens zusammen mit der Mandala-Gruppe aus und wende die Redwork Funktion an: `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Redwork`
 * Wähle 0.5 mm für "Verbinde Linien deren Abstand geringer ist als (mm)" und "Minimal Pfadlänge (mm)"
 * Mache einen kurzen Spaziergang
@@ -142,4 +148,16 @@ Nutze hierfür nicht das Redwork-Mandala, sondern die Gruppen mit den Pfadeffekt
 ![Mandala text](/assets/images/tutorials/mandala/lettremandala.svg) 
 
 [Beispieldatei für Mandala-Text herunterladen](/assets/images/tutorials/mandala/lettremandala.svg){: download="lettremandala.svg" }
+
+## Using an inversed clip
+
+You may also use the text as an inversed clip (Inkscape > Objet > Clip  > Set Inversed Clip)
+
+You then get something like this : 
+
+![Texte mandala inversé](/assets/images/tutorials/mandala/lettremandala_reversed.svg) 
+
+[Download the inversed clip sample file](/assets/images/tutorials/mandala/lettremandala_reversed.svg){: download="lettremandala_reversed.svg" }
+
+
 
