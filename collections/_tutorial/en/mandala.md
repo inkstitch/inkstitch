@@ -2,7 +2,7 @@
 permalink: /tutorials/mandala/
 title: Mandala
 language: en
-last_modified_at: 2025-01-10
+last_modified_at: 2025-05-06
 excerpt: "Mandala and Embroidery"
 read_time: false
 image: "/assets/images/tutorials/mandala/whaletail.png"
@@ -115,6 +115,10 @@ You don't need to have the same number of copies everywhere. Here i switched to 
 
 [Download complex mandala sample file](/assets/images/tutorials/mandala/complexmandala.svg){: download="compleximplemandala.svg" }
 
+
+If you wish to see more samples you can also [download these samples ](/assets/images/tutorials/mandala/mandala_samples.svg){: download="mandala_samples.svg" }
+
+
 ## Make a redwork out of it
 
 You only have to
@@ -130,19 +134,33 @@ You only have to
 Do not use the redworked mandala  but the groups  with the path effects
 
 * Group everything together and let us name this group  mandala.
+* Group a second time, and name this group mandala_clipped
 * In this  sample i used a text with the ojuju font. Any text will need to be first transformed into a path (Inkscape > Paths > Object to path)
 * Make a copy of the text (the path version of it, that is)
-* In the object dialog,  put one of the copies above the mandala group, select both then Inkscape > Objet > Clip  > Set Clip
+* In the object dialog,  put one of the copies above the mandala_clipped group, select both then Inkscape > Objet > Clip  > Set Clip
+* By selecting the mandala group (not the mandala_clipped group) you can move the mandala  to fine tune what part of the mandala actually appears.
 * Move the second text copy above the clipped group, select both and Extensions > Ink/Stitch > Tools: Stroke > Redwork
-* Chose 0,5 mm for "Connect lines below this distance " and "minimum path length" and apply.
+* Chose 0,5 mm for "Connect lines below this distance " and "minimum path length" , check combine and apply.
 * Go for a walk, but a shorter one this time, it should be  quicker.
-* Of course this time I get three connected groups, one per letter.
+* Of course this time you get three connected groups, one per letter.
 
 
 
 ![Mandala text](/assets/images/tutorials/mandala/lettremandala.svg) 
 
 [Download the sample file for Mandala text](/assets/images/tutorials/mandala/lettremandala.svg){: download="lettremandala.svg" }
+
+## Using an inversed clip
+
+You may also use the text as an inversed clip (Inkscape > Objet > Clip  > Set Inversed Clip)
+
+You then get something like this : 
+
+![Texte mandala inversé](/assets/images/tutorials/mandala/lettremandala_reversed.svg) 
+
+[Download the inversed clip sample file](/assets/images/tutorials/mandala/lettremandala_reversed.svg){: download="lettremandala_reversed.svg" }
+
+
 
 
 
