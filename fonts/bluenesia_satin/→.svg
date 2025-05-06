@@ -2,8 +2,8 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   sodipodi:docname="ltr.svg"
-   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="→.svg"
+   inkscape:version="1.4-rc1 (61ec3f24, 2024-09-26)"
    id="svg3212"
    version="1.1"
    viewBox="0 0 50.800001 50.800001"
@@ -28,17 +28,17 @@
      inkscape:document-units="mm"
      showgrid="false"
      units="in"
-     showguides="false"
+     showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:zoom="6.4246791"
-     inkscape:cx="19.53405"
-     inkscape:cy="133.4697"
+     inkscape:zoom="5.6043492"
+     inkscape:cx="20.519778"
+     inkscape:cy="32.831645"
      inkscape:window-width="1920"
      inkscape:window-height="1144"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer51"
+     inkscape:current-layer="layer68"
      inkscape:snap-global="true"
      inkscape:snap-smooth-nodes="true"
      inkscape:showpageshadow="2"
@@ -55,6 +55,11 @@
        position="25.400001,0"
        orientation="0,-1"
        id="guide3275"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="10.460315,10.995686"
+       orientation="1,0"
+       id="guide6"
        inkscape:locked="false" />
   </sodipodi:namedview>
   <title
@@ -75,7 +80,7 @@
       </cc:Work>
     </rdf:RDF>
     <inkstitch:min_stitch_len_mm>0</inkstitch:min_stitch_len_mm>
-    <inkstitch:inkstitch_svg_version>2</inkstitch:inkstitch_svg_version>
+    <inkstitch:inkstitch_svg_version>3</inkstitch:inkstitch_svg_version>
   </metadata>
   <defs
      id="defs3209" />
@@ -84,25 +89,26 @@
      id="layer65"
      inkscape:label="GlyphLayer-!"
      style="display:none">
-    <g
-       id="g380433">
-      <path
-         id="path7156"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 0,50 h 5 m -2.3720834,1.683391 c -0.9144,0.0254 -1.72719997,-0.6858 -1.75259997,-1.5748 0,-0.889 0.78739997,-1.7018 1.72719997,-1.7272 m 0.0254,3.302 c 0.9144,-0.0254 1.6764,-0.762 1.6764,-1.651 0,-0.8636 -0.762,-1.651 -1.7018,-1.651"
-         inkstitch:satin_column="True"
-         inkstitch:zigzag_underlay="True"
-         inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
-      <path
-         id="path7240"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 0,30 H 5 M 0,45 h 5 m -2.5539957,0.908131 c -0.4905538,-0.07877 -0.9311446,-0.353712 -1.1642877,-0.803345 -0.1778,-0.3556 -0.254,-0.8128 -0.254,-1.2446 -0.0508,-3.7846 0.0254,-10.414 -0.20319997,-13.0048 -0.0254,-0.9398 0.53339997,-1.6764 1.44779997,-1.778 m 0.9652,16.789405 c 0.7874,-0.2032 1.2192,-0.8382 1.2192,-1.778 -0.0254,-4.1656 -0.0508,-7.6708 -0.0762,-11.8618 -0.0254,-0.5842 -0.0508,-1.1684 -0.127,-1.7526 -0.1778,-0.9398 -1.016,-1.524 -1.9812,-1.397"
-         inkstitch:satin_column="True"
-         inkstitch:zigzag_underlay="True"
-         inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
-    </g>
+    <path
+       id="path7156"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 0,50 h 5 m -2.3720834,1.683391 c -0.9144,0.0254 -1.72719997,-0.6858 -1.75259997,-1.5748 0,-0.889 0.78739997,-1.7018 1.72719997,-1.7272 m 0.0254,3.302 c 0.9144,-0.0254 1.6764,-0.762 1.6764,-1.651 0,-0.8636 -0.762,-1.651 -1.7018,-1.651"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       id="path7240"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0,30 H 5 M 0,45 h 5 m -2.5539957,0.908131 c -0.4905538,-0.07877 -0.9311446,-0.353712 -1.1642877,-0.803345 -0.1778,-0.3556 -0.254,-0.8128 -0.254,-1.2446 -0.0508,-3.7846 0.0254,-10.414 -0.20319997,-13.0048 -0.0254,-0.9398 0.53339997,-1.6764 1.44779997,-1.778 m 0.9652,16.789405 c 0.7874,-0.2032 1.2192,-0.8382 1.2192,-1.778 -0.0254,-4.1656 -0.0508,-7.6708 -0.0762,-11.8618 -0.0254,-0.5842 -0.0508,-1.1684 -0.127,-1.7526 -0.1778,-0.9398 -1.016,-1.524 -1.9812,-1.397 m -2.31349894,9.573818 H 5.0654281"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -118,7 +124,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path9034"
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
@@ -126,7 +134,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -134,137 +144,185 @@
      id="layer67"
      inkscape:label="GlyphLayer-#"
      style="display:none">
-    <g
-       id="g391798">
-      <path
-         id="path10717"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 3,47.999999 h 5.9999999 m -3.5780833,3.708787 c -0.9144,-0.0254 -1.6002,-0.7366 -1.524,-1.7018 0.0508,-1.27 0.2286,-2.4892 0.3556,-3.683 0.0254,-0.127 0.0254,-0.254 0.0254,-0.4572 m 1.143,5.842 c 0.9906,0.0762 1.6763999,-0.4826 1.8287999,-1.4986 0.127,-0.8382 0.2032,-1.651 0.3048,-2.5146 0.0762,-0.6096 0.1778,-1.2192 0.254,-1.8796"
-         inkstitch:satin_column="True"
-         inkstitch:zigzag_underlay="True"
-         inkstitch:center_walk_underlay="False"
-         inkstitch:contour_underlay="True"
-         inkstitch:reverse_rails="none" />
-      <path
-         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="M 5.9903079,45.845981 6.5162384,42.471377"
-         id="path381556"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         id="path10460"
-         style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="m 4.6853166,42.564786 c 0.1016,-0.7874 0.2032,-1.524 0.3302,-2.3876 m 3.1749999,2.286 c 0.1016,-0.7366 0.2032,-1.4732 0.3048,-2.286"
-         sodipodi:nodetypes="cccc"
-         inkstitch:satin_column="True"
-         inkstitch:zigzag_underlay="True"
-         inkstitch:center_walk_underlay="False"
-         inkstitch:contour_underlay="True"
-         inkstitch:reverse_rails="none" />
-      <path
-         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="M 6.7082071,40.190081 7.7211989,31.749015"
-         id="path381558"
-         sodipodi:nodetypes="cc"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         id="path11178"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 5,34 h 5 M 7.6571165,31.388786 c 0.9652,0.0254 1.7272,0.7112 1.7018,1.778 -0.0508,1.0414 -0.2032,2.1082 -0.3048,3.2258 0,0.127 0,0.2286 -0.0254,0.4064 m -1.3716,-5.4102 c -1.0414,-0.0254 -1.7271999,0.6604 -1.7779999,1.7526 -0.0508,0.6858 -0.1016,1.3462 -0.1778,2.032 -0.0762,0.5842 -0.1524,1.1684 -0.254,1.8034"
-         inkstitch:satin_column="True"
-         inkstitch:zigzag_underlay="True"
-         inkstitch:center_walk_underlay="False"
-         inkstitch:contour_underlay="True"
-         inkstitch:reverse_rails="none" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1"
-         d="M 7.9999998,38 H 13 l 1,-6"
-         id="path12286"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         id="path11866"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 11,34 h 5 m -1.637284,-2.941414 c 0.762,0.2286 1.2446,0.7874 1.2446,1.6002 -0.0254,0.7112 -0.1524,1.3716 -0.254,2.0574 -0.0762,0.6096 -0.1778,1.2192 -0.2794,1.9304 m -0.7112,-5.588 c -1.0668,-0.254 -2.0066,0.3556 -2.1844,1.4732 -0.2286,1.4478 -0.4572,2.8194 -0.6604,4.2672"
-         inkstitch:satin_column="True"
-         inkstitch:center_walk_underlay="False"
-         inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="True"
-         inkstitch:reverse_rails="none" />
-      <path
-         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="M 13.158029,36.77621 1.3788101,38.547108"
-         id="path381987"
-         sodipodi:nodetypes="cc"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         id="path382554"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 0.951517,38.069 c -0.2032,0.8128 0.228603,1.5748 1.092203,1.8796 0.3556,0.127 0.7874,0.1778 1.2192,0.2032 0.5334,0.0508 1.1176,0.0254 1.7526,0.0254 h 3.4798 c 0.8636,-0.0508 1.70178,-0.1016 2.59078,-0.127 M 0.951517,38.069 c 0.177803,-0.762 1.066803,-1.27 1.905003,-1.2192 0.8382,0.0508 1.6764,0.0762 2.5908,0.127 L 9.02872,36.799 H 11.5179 M 3,40.4095 v -4 m 4.47083,4.0301 v -4 m 2.80997,3.9007 v -4"
-         inkstitch:satin_column="True"
-         inkstitch:zigzag_underlay="True"
-         inkstitch:center_walk_underlay="False"
-         inkstitch:contour_underlay="True"
-         inkstitch:reverse_rails="none" />
-      <path
-         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="m 13.066641,38.415854 5.10696,-0.167405"
-         id="path388361"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         id="path382558"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 14.9886,36.2999 v 4 m -2.2565,-4 v 4 M 17,36.4095 v 4 m 1.5537,-1.8833 c 0.1016,-0.6858 -0.2794,-1.4224 -1.0414,-1.6764 -0.3302,-0.1524 -0.6858,-0.1778 -1.016,-0.2032 -0.4572,-0.0254 -0.889,0 -1.4224,0 l -3.556,0.1524 m 7.0358,1.7272 c -0.127,0.7366 -0.7366,1.27 -1.524,1.3208 -0.4826,0.0254 -0.9652,0 -1.4224,0 h -0.9398 l -3.5814,0.2032"
-         inkstitch:satin_column="True"
-         inkstitch:zigzag_underlay="True"
-         inkstitch:center_walk_underlay="False"
-         inkstitch:contour_underlay="True"
-         inkstitch:reverse_rails="none" />
-      <path
-         id="path10472"
-         style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="m 11.0861,40.0502 c 0.0508,0.8128 -0.1778,1.5748 -0.1524,2.413 m 3.7338,-2.6162 c -0.1016,0.8128 -0.1524,1.524 -0.2286,2.3368"
-         sodipodi:nodetypes="cccc"
-         inkstitch:satin_column="True"
-         inkstitch:center_walk_underlay="False"
-         inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="True"
-         inkstitch:reverse_rails="none" />
-      <path
-         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="m 12.552642,42.422947 -0.892521,8.887242"
-         id="path382145"
-         sodipodi:nodetypes="cc"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         id="path12152"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 8.9999999,47.999999 H 15 m -3.710684,3.607187 c -0.9144,-0.2286 -1.5239995,-1.0668 -1.3461995,-2.0574 0.1777995,-0.9144 0.3555995,-1.8796 0.5079995,-2.8194 0,-0.3048 0.0254,-0.5842 0.0508,-0.9144 m 0.7874,5.7912 c 0.9652,0.1778 1.778,-0.3556 2.032,-1.3208 0.1016,-0.4064 0.2032,-0.8636 0.254,-1.2954 0.1778,-1.1176 0.3556,-2.286 0.5334,-3.5052"
-         inkstitch:satin_column="True"
-         inkstitch:center_walk_underlay="False"
-         inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="True"
-         inkstitch:reverse_rails="none" />
-      <path
-         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="m 12.235867,45.323003 5.032495,-1.671974"
-         id="path389823"
-         inkstitch:running_stitch_length_mm="1.5" />
-      <path
-         id="path14155"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 16,42.028511 v 4 m -14,-4 v 4 m 15.664716,-2.473125 c 0.1016,0.6858 -0.2286,1.2446 -0.8382,1.5494 -0.4064,0.1778 -0.889,0.2286 -1.3462,0.3048 -0.4826,0.0508 -0.9144,0.0508 -1.3716,0.0762 l -3.6068,0.3302 H 7.8095165 l -3.5305999,0.0508 c -0.6096,0 -1.143,0.0254 -1.7272,-0.0254 -0.3302,0 -0.635,-0.0508 -0.9398,-0.1778 -0.5715,-0.254 -0.88264997,-0.762 -0.91439997,-1.28905 M 17.664716,43.555386 c -0.0762,-0.6858 -0.508,-1.0922 -1.1176,-1.2954 -0.2032,-0.0762 -0.4826,-0.0508 -0.7366,-0.0762 h -1.3716 l -3.5052,0.2794 H 8.1905165 l -3.5051999,0.1016 c -0.6858,0.0254 -1.2954,0.0254 -1.9304,0.0762 -0.4572,0.0508 -0.9144,0.127 -1.2954,0.3302 -0.54609998,0.3302 -0.79374997,0.8763 -0.76199997,1.40335"
-         inkstitch:satin_column="True"
-         inkstitch:center_walk_underlay="False"
-         inkstitch:contour_underlay="True"
-         inkstitch:zigzag_underlay="True"
-         sodipodi:nodetypes="cccccccccccccccccccccccc"
-         inkstitch:reverse_rails="none" />
-    </g>
+    <path
+       id="path10717"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 3,47.999999 h 5.9999999 m -3.5780833,3.708787 c -0.9144,-0.0254 -1.6002,-0.7366 -1.524,-1.7018 0.0508,-1.27 0.2286,-2.4892 0.3556,-3.683 0.0254,-0.127 0.0254,-0.254 0.0254,-0.4572 m 1.143,5.842 c 0.9906,0.0762 1.6763999,-0.4826 1.8287999,-1.4986 0.127,-0.8382 0.2032,-1.651 0.3048,-2.5146 0.0762,-0.6096 0.1778,-1.2192 0.254,-1.8796"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="M 7.8039,45.8574 6.5162384,42.471377"
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path1"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 6.51623,42.4713 5.08514,42.5531"
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path2" />
+    <path
+       id="path10460"
+       style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="m 4.6853166,42.564786 c 0.1016,-0.7874 0.2032,-1.524 0.3302,-2.3876 m 3.1749999,2.286 c 0.1016,-0.7366 0.2032,-1.4732 0.3048,-2.286 m -4.706541,1.109693 h 5.0654281"
+       sodipodi:nodetypes="cccc"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="M 8.4378655,40.107716 7.7211989,31.749015"
+       id="path381558"
+       sodipodi:nodetypes="cc"
+       inkstitch:running_stitch_length_mm="1.5" />
+    <path
+       id="path11178"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 5,34 h 5 M 7.6571165,31.388786 c 0.9652,0.0254 1.7272,0.7112 1.7018,1.778 -0.0508,1.0414 -0.2032,2.1082 -0.3048,3.2258 0,0.127 0,0.2286 -0.0254,0.4064 m -1.3716,-5.4102 c -1.0414,-0.0254 -1.7271999,0.6604 -1.7779999,1.7526 -0.0508,0.6858 -0.1016,1.3462 -0.1778,2.032 -0.0762,0.5842 -0.1524,1.1684 -0.254,1.8034"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="m 5.44966,36.96 2.55033,1.0399"
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path3" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 7.9999998,38 H 13 l 1,-6"
+       id="path12286"
+       inkstitch:running_stitch_length_mm="1.5" />
+    <path
+       id="path11866"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 11,34 h 5 m -1.637284,-2.941414 c 0.762,0.2286 1.2446,0.7874 1.2446,1.6002 -0.0254,0.7112 -0.1524,1.3716 -0.254,2.0574 -0.0762,0.6096 -0.1778,1.2192 -0.2794,1.9304 m -0.7112,-5.588 c -1.0668,-0.254 -2.0066,0.3556 -2.1844,1.4732 -0.2286,1.4478 -0.4572,2.8194 -0.6604,4.2672"
+       inkstitch:satin_column="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="M 12.0513,36.7761 C 8.7664554,39.033402 4.8486774,38.505797 0.951515,38.0689"
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path41"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path382554"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 0.951517,38.069 c -0.2032,0.8128 0.228603,1.5748 1.092203,1.8796 0.3556,0.127 0.7874,0.1778 1.2192,0.2032 0.5334,0.0508 1.1176,0.0254 1.7526,0.0254 h 3.4798 c 0.8636,-0.0508 1.70178,-0.1016 2.59078,-0.127 M 0.951517,38.069 c 0.177803,-0.762 1.066803,-1.27 1.905003,-1.2192 0.8382,0.0508 1.6764,0.0762 2.5908,0.127 L 9.02872,36.799 H 11.5179 M 3,40.4095 v -4 m 4.47083,4.0301 v -4 m 2.80997,3.9007 v -4"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="m 11.4931,36.7989 1.5735,1.6169"
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path4" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="m 13.066641,38.415854 5.10696,-0.167405"
+       id="path388361"
+       inkstitch:running_stitch_length_mm="1.5" />
+    <path
+       id="path382558"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 14.9886,36.2999 v 4 m -2.2565,-4 v 4 M 17,36.4095 v 4 m 1.5537,-1.8833 c 0.1016,-0.6858 -0.2794,-1.4224 -1.0414,-1.6764 -0.3302,-0.1524 -0.6858,-0.1778 -1.016,-0.2032 -0.4572,-0.0254 -0.889,0 -1.4224,0 l -3.556,0.1524 m 7.0358,1.7272 c -0.127,0.7366 -0.7366,1.27 -1.524,1.3208 -0.4826,0.0254 -0.9652,0 -1.4224,0 h -0.9398 l -3.5814,0.2032"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       id="path10472"
+       style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="m 11.0861,40.0502 c 0.0508,0.8128 -0.1778,1.5748 -0.1524,2.413 m 3.7338,-2.6162 c -0.1016,0.8128 -0.1524,1.524 -0.2286,2.3368 m -4.349226,-1.06165 h 5.477251"
+       sodipodi:nodetypes="cccc"
+       inkstitch:satin_column="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="m 13.9131,42.2257 -1.3605,0.1972"
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path5" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="m 12.552642,42.422947 -0.892521,8.887242"
+       id="path382145"
+       sodipodi:nodetypes="cc"
+       inkstitch:running_stitch_length_mm="1.5" />
+    <path
+       id="path12152"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 8.9999999,47.999999 H 15 m -3.710684,3.607187 c -0.9144,-0.2286 -1.5239995,-1.0668 -1.3461995,-2.0574 0.1777995,-0.9144 0.3555995,-1.8796 0.5079995,-2.8194 0,-0.3048 0.0254,-0.5842 0.0508,-0.9144 m 0.7874,5.7912 c 0.9652,0.1778 1.778,-0.3556 2.032,-1.3208 0.1016,-0.4064 0.2032,-0.8636 0.254,-1.2954 0.1778,-1.1176 0.3556,-2.286 0.5334,-3.5052"
+       inkstitch:satin_column="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:reverse_rails="none"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="M 14.1013,45.5341 12.2358,45.3229"
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path6" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="m 12.235867,45.323003 5.032495,-1.671974"
+       id="path389823"
+       inkstitch:running_stitch_length_mm="1.5" />
+    <path
+       id="path14155"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 16,42.028511 v 4 m -14,-4 v 4 m 15.664716,-2.473125 c 0.1016,0.6858 -0.2286,1.2446 -0.8382,1.5494 -0.4064,0.1778 -0.889,0.2286 -1.3462,0.3048 -0.4826,0.0508 -0.9144,0.0508 -1.3716,0.0762 l -3.6068,0.3302 H 7.8095165 l -3.5305999,0.0508 c -0.6096,0 -1.143,0.0254 -1.7272,-0.0254 -0.3302,0 -0.635,-0.0508 -0.9398,-0.1778 -0.5715,-0.254 -0.88264997,-0.762 -0.91439997,-1.28905 M 17.664716,43.555386 c -0.0762,-0.6858 -0.508,-1.0922 -1.1176,-1.2954 -0.2032,-0.0762 -0.4826,-0.0508 -0.7366,-0.0762 h -1.3716 l -3.5052,0.2794 H 8.1905165 l -3.5051999,0.1016 c -0.6858,0.0254 -1.2954,0.0254 -1.9304,0.0762 -0.4572,0.0508 -0.9144,0.127 -1.2954,0.3302 -0.54609998,0.3302 -0.79374997,0.8763 -0.76199997,1.40335 M 9.5131211,41.739885 v 4.653604 H 9.3483917"
+       inkstitch:satin_column="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:zigzag_underlay="True"
+       sodipodi:nodetypes="cccccccccccccccccccccccc"
+       inkstitch:reverse_rails="none"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer68"
      inkscape:label="GlyphLayer-$"
-     style="display:none">
+     style="display:inline">
     <g
        id="g394938">
       <path
@@ -274,15 +332,32 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 5.75081,31.6251 5.43153,28.9455"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path39" />
       <path
          id="path21532"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 3,30.999998 H 7.9999998 M 3,30 H 7.9999998 M 5.4727166,28.924986 c 1.2699999,0 1.9557999,0.9906 1.9557999,2.1082 0,0.264435 0.045756,0.460236 0.1498035,0.62501 m -2.1056034,-2.73321 c -0.8382,0.0762 -1.524,0.6858 -1.5748,1.5494 -0.0254,0.3556 0,0.7366 0.0254,1.1176"
+         d="M 3,30.999998 H 7.9999998 M 5.637446,28.966168 c 1.2699999,0 1.7910705,0.949418 1.7910705,2.067018 0,0.264435 0.045756,0.460236 0.1498035,0.62501 m -2.3526975,-2.73321 c -0.8382,0.0762 -1.2769059,0.6858 -1.3277059,1.5494 -0.0254,0.3556 0,0.7366 0.0254,1.1176"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False"
+         sodipodi:nodetypes="cccscccc" />
+      <path
+         d="m 3.92331,31.5919 1.84227,0.4329"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path40" />
       <path
          id="path22103"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -290,7 +365,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="m 5.7830185,48.787626 0.083607,3.031953"
@@ -303,16 +380,26 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 7.58091,48.6099 5.79362,48.329"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path42" />
       <path
          id="path19507"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 0,43.000001 h 5 m 0.4708331,1.999998 v 4 m 0.3289084,-0.27095 -1.7811749,0.119062 c -0.05715,-0.09843 -0.14605,-0.174625 -0.27305,-0.238125 -2.0828,-0.8382 -2.87019997,-2.5908 -2.97179996,-4.699 -0.0762,-1.2446 0.93979996,-2.2098 2.05739996,-2.2098 m 2.9207989,3.899297 c -0.2622201,2.1e-4 -0.5296671,-0.08299 -0.7617985,-0.267097 -0.5334,-0.4064 -0.7366,-0.9906 -0.5842,-1.7018 0.2286,-1.0922 -0.5334,-1.905 -1.5748,-1.9304"
+         d="m 0,43.000001 h 5 m 0.4708331,1.999998 v 4 m 0.3289084,-0.27095 -1.7811749,0.119062 c -0.05715,-0.09843 -0.14605,-0.174625 -0.27305,-0.238125 -2.0828,-0.8382 -2.833182,-2.5908 -2.93478199,-4.699 -0.0762,-1.2446 0.68067419,-2.2098 1.79827419,-2.2098 m 3.1429067,3.899297 c -0.2622201,2.1e-4 -0.5296671,-0.08299 -0.7617985,-0.267097 -0.5334,-0.4064 -0.7366,-0.9906 -0.5842,-1.7018 0.2286,-1.0922 -0.3112922,-1.867982 -1.3526922,-1.893382 M 0.29614377,42.211831 H 4.8123362"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          sodipodi:nodetypes="ccccccccccccc"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -327,7 +414,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path29688"
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -335,7 +424,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path29522"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -343,7 +434,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -354,13 +447,15 @@
        id="g399705">
       <path
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';vector-effect:none;fill:none;stroke:#000000;stroke-width:0.264583px;stop-color:#000000"
-         d="m 15.715663,51.61903 c -0.445655,0.568728 -1.30086,0.831768 -2.089547,0.496156 -0.2794,-0.127 -0.508,-0.3302 -0.7366,-0.508 -0.508,-0.381 -1.016,-0.7874 -1.4224,-1.0668 m 4.248547,1.078644 c 0.228913,-0.29213 0.349769,-0.664912 0.298053,-1.078644 -0.0508,-0.4826 -0.3556,-0.7874 -0.7366,-1.0922 -0.508,-0.4572 -1.0414,-0.8636 -1.6002,-1.3208"
+         d="m 15.468569,51.783759 c -0.445655,0.568728 -1.053766,0.667039 -1.842453,0.331427 -0.2794,-0.127 -0.508,-0.3302 -0.7366,-0.508 -0.508,-0.381 -1.016,-0.7874 -1.4224,-1.0668 m 4.372094,0.955097 c 0.228913,-0.29213 0.226222,-0.541365 0.174506,-0.955097 -0.0508,-0.4826 -0.3556,-0.7874 -0.7366,-1.0922 -0.508,-0.4572 -1.0414,-0.8636 -1.6002,-1.3208 m -1.322213,3.990449 3.294587,-3.747593"
          id="path34226"
          sodipodi:nodetypes="cccccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 13.525466,48.079524 11.103429,45.905898"
@@ -369,11 +464,13 @@
       <path
          id="path34220"
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';vector-effect:none;fill:none;stroke:#000000;stroke-width:0.264583px;stop-color:#000000"
-         d="m 10.984516,45.765186 c -1.6509995,-1.5494 -2.8955995,-3.175 -3.8099995,-5.1054 m 1.4986,7.5946 c -1.27,-1.4986 -2.5399999,-2.9718 -3.8353999,-4.5212"
+         d="m 10.984516,45.765186 c -1.6509995,-1.5494 -2.8955995,-3.175 -3.8099995,-5.1054 m 1.4986,7.5946 c -1.27,-1.4986 -2.5399999,-2.9718 -3.8353999,-4.5212 m 1.3808171,2.742668 3.4181344,-3.17104"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 4.7549254,43.278809 3.3748258,39.957289"
@@ -387,7 +484,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -402,7 +501,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -416,7 +517,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -430,7 +533,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -442,11 +547,13 @@
       <path
          id="path47201"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 3.0190924,32.603506 3.6141562,31.351069 M 0.98252617,32.350011 1.671002,30.486207 m -0.79568537,0.750179 c -0.10159999,0.3556 0.0508,0.7112 0.50799997,0.9144 0.3302,0.127 0.6604,0.254 1.0922,0.381 L 3.9508535,32.150609 M 0.87531663,31.236386 c 0.12699997,-0.3556 0.50799997,-0.5334 0.96519997,-0.4572 0.2032,0.0508 0.381,0.127 0.5842,0.2032 0.2032,0.0508 0.4064,0.1016 0.6858,0.2032 l 0.8403369,0.965023"
+         d="M 3.0190924,32.603506 3.6141562,31.351069 M 0.98252617,32.350011 1.671002,30.486207 m -0.79568537,0.750179 c -0.10159999,0.3556 0.0508,0.7112 0.50799997,0.9144 0.3302,0.127 0.6604,0.254 1.0922,0.381 L 3.9508535,32.150609 M 0.87531663,31.236386 c 0.12699997,-0.3556 0.50799997,-0.5334 0.96519997,-0.4572 0.2032,0.0508 0.381,0.127 0.5842,0.2032 0.2032,0.0508 0.4064,0.1016 0.6858,0.2032 l 0.8403369,0.965023 m -2.4065157,0.549752 0.8854204,-2.182665"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 3.9423859,31.833812 3.8930373,29.453549"
@@ -456,11 +563,13 @@
       <path
          id="path47211"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 2.9005495,29.774152 1.9040864,-0.08104 M 3.1288341,31.565413 4.7110427,31.452658 M 3.8979166,29.280586 c -0.4572,0 -0.762,0.3302 -0.7874,0.8636 -0.0254,0.3302 0,0.635 0,1.0414 l 0.8403369,0.965023 m -0.052937,-2.870023 c 0.4318,0 0.7366,0.3302 0.762,0.8636 0.0254,0.2794 0.0254,0.5334 0.0508,0.9144 l -0.759863,1.092023"
+         d="m 2.9005495,29.774152 1.9040864,-0.08104 M 3.1288341,31.565413 4.7110427,31.452658 M 3.8979166,29.280586 c -0.4572,0 -0.762,0.3302 -0.7874,0.8636 -0.0254,0.3302 0,0.635 0,1.0414 l 0.8403369,0.965023 m -0.052937,-2.870023 c 0.4318,0 0.7366,0.3302 0.762,0.8636 0.0254,0.2794 0.0254,0.5334 0.0508,0.9144 l -0.759863,1.092023 m -1.2945924,-1.715277 2.4915317,-0.16473"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 4.2322374,32.07512 6.4422996,31.312588"
@@ -470,11 +579,13 @@
       <path
          id="path47213"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 5.9766633,30.553673 0.6090817,1.56686 M 4.33828,31.179238 4.7972572,32.594552 m 1.9454593,-1.332766 c -0.0762,-0.3048 -0.3809999,-0.5334 -0.7619999,-0.5334 -0.1778,0.0254 -0.3556,0.0762 -0.5334,0.127 -0.254,0.0508 -0.4826,0.127 -0.7366,0.2032 l -0.7598631,1.092023 m 2.791863,-0.888823 c 0.0762,0.3302 -0.0508,0.635 -0.4317999,0.8128 -0.3302,0.1524 -0.6858,0.254 -1.1176,0.4064 l -1.242463,-0.330377"
+         d="m 5.9766633,30.553673 0.6090817,1.56686 M 4.33828,31.179238 4.7972572,32.594552 m 1.9454593,-1.332766 c -0.0762,-0.3048 -0.3809999,-0.5334 -0.7619999,-0.5334 -0.1778,0.0254 -0.3556,0.0762 -0.5334,0.127 -0.254,0.0508 -0.4826,0.127 -0.7366,0.2032 l -0.7598631,1.092023 m 2.791863,-0.888823 c 0.0762,0.3302 -0.0508,0.635 -0.4317999,0.8128 -0.3302,0.1524 -0.6858,0.254 -1.1176,0.4064 l -1.242463,-0.330377 m 1.1557568,-1.735868 0.8442381,2.265028"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="m 4.1261933,32.392787 1.4808288,1.938411"
@@ -484,19 +595,23 @@
       <path
          id="path47215"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 6.0637276,33.580477 4.565002,34.45034 m 0.306583,-2.343177 -1.2215368,0.641332 m 2.0654466,1.792979 c 0.2598383,-0.199572 0.3555363,-0.601906 0.1636218,-0.968288 -0.2032,-0.381 -0.4318,-0.7366 -0.6858,-1.0922 L 3.9508535,32.150609 m 1.7646413,2.390865 c -0.118449,0.09098 -0.2710072,0.139818 -0.4459782,0.123912 -0.2794,-0.0508 -0.508,-0.254 -0.7112,-0.4572 -0.254,-0.2286 -0.4318,-0.5334 -0.6858,-0.9144 l 0.078337,-1.143177"
+         d="M 6.0637276,33.580477 4.565002,34.45034 m 0.306583,-2.343177 -1.2215368,0.641332 m 2.0654466,1.792979 c 0.2598383,-0.199572 0.3555363,-0.601906 0.1636218,-0.968288 -0.2032,-0.381 -0.4318,-0.7366 -0.6858,-1.0922 L 3.9508535,32.150609 m 1.7646413,2.390865 c -0.118449,0.09098 -0.2710072,0.139818 -0.4459782,0.123912 -0.2794,-0.0508 -0.508,-0.254 -0.7112,-0.4572 -0.254,-0.2286 -0.4318,-0.5334 -0.6858,-0.9144 l 0.078337,-1.143177 m 0.023242,1.92936 2.038526,-1.194288"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path47217"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 3.9508536,32.150609 -1.475337,0.381177 c -0.3302,0.4318 -0.5842,0.762 -0.7874,1.1176 -0.2032,0.2794 -0.1778,0.5842 0.0762,0.8128 m 2.186537,-2.311577 -0.078337,1.143177 c -0.4064,0.4826 -0.7112,0.9652 -1.1938,1.3208 -0.3302,0.1778 -0.6858,0.1016 -0.9144,-0.1524 m 1.3532188,-2.324199 0.9759196,0.693026 m -2.5307401,0.665184 1.3578668,1.187619"
+         d="m 3.9508536,32.150609 -1.475337,0.381177 c -0.3302,0.4318 -0.5842,0.762 -0.7874,1.1176 -0.2032,0.2794 -0.1778,0.5842 0.0762,0.8128 m 2.186537,-2.311577 -0.078337,1.143177 c -0.4064,0.4826 -0.7112,0.9652 -1.1938,1.3208 -0.3302,0.1778 -0.6858,0.1016 -0.9144,-0.1524 m 1.3532188,-2.324199 0.9759196,0.693026 m -2.5307401,0.665184 1.3578668,1.187619 m -1.0879675,-1.983455 1.7708407,1.626702"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -508,13 +623,15 @@
        id="g407666">
       <path
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';vector-effect:none;fill:none;stroke:#000000;stroke-width:0.264583px;stop-color:#000000"
-         d="m 6.3109166,36.113186 c 0.9397999,0 1.6255999,0.6096 1.7525999,1.5494 0.0254,0.254 0.0254,0.5334 0.0508,0.8636 m -1.8033999,-2.413 c -0.9144,0 -1.5494,0.5842 -1.651,1.5494 -0.0508,0.3302 -0.0508,0.6096 -0.0762,0.9906"
+         d="m 6.4344636,36.133777 c 0.9397999,0 1.5020529,0.589009 1.6290529,1.528809 0.0254,0.254 0.0254,0.5334 0.0508,0.8636 M 6.1255961,36.133777 c -0.9144,0 -1.3640795,0.563609 -1.4656795,1.528809 -0.0508,0.3302 -0.0508,0.6096 -0.0762,0.9906 M 4.0770519,38.095247 8.6894742,37.930518"
          id="path48596"
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="m 4.5837165,38.653185 1.778,6.1468"
@@ -522,13 +639,15 @@
          inkstitch:running_stitch_length_mm="1.5" />
       <path
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';vector-effect:none;fill:none;stroke:#000000;stroke-width:0.264583px;stop-color:#000000"
-         d="m 6.3617166,44.799986 c -0.9906,0.0508 -1.651,-0.5842 -1.7272,-1.7018 -0.0254,-0.3302 0,-0.6604 0,-1.0922 m 1.7272,2.794 c 1.0159999,-0.0254 1.6509999,-0.6858 1.7017999,-1.7526 0.0254,-0.3302 0,-0.7366 0,-1.2192"
+         d="m 6.3617166,44.799986 c -0.9906,0.0508 -1.651,-0.5842 -1.7272,-1.7018 -0.0254,-0.3302 0,-0.6604 0,-1.0922 m 1.9948852,2.794 c 1.0159999,-0.0254 1.3833147,-0.6858 1.4341147,-1.7526 0.0254,-0.3302 0,-0.7366 0,-1.2192 M 4.0564607,42.584123 8.5865184,42.35762"
          id="path48600"
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="m 8.0635164,41.828185 -7.36599976,-1.524"
@@ -536,13 +655,15 @@
          inkstitch:running_stitch_length_mm="1.5" />
       <path
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';vector-effect:none;fill:none;stroke:#000000;stroke-width:0.264583px;stop-color:#000000"
-         d="m 0.69751664,40.304186 c 0.0508,-0.7874 0.76199996,-1.4732 1.67639996,-1.524 0.4318,-0.0254 0.889,0.0254 1.3208,0 0.3048,-0.0254 0.6096,-0.0762 0.889,-0.127 l 3.5305999,-0.127 c 0.4572,0 0.9144,-0.0254 1.3716,0 0.3556,0.0254 0.7365995,0.0254 1.0667995,0.127 0.8128,0.2032 1.2954,0.8636 1.2192,1.6256 m -11.07439936,0.0254 c -0.0508,0.8128 0.58419996,1.4986 1.44779996,1.651 0.254,0.0508 0.5334,0.0508 0.7874,0.0508 h 1.7018 l 3.4289999,-0.1778 c 0.3302,-0.0254 0.5334,-0.0508 0.762,-0.0508 0.508,-0.0254 1.0414,-0.0254 1.5493995,-0.1016 0.762,-0.1016 1.3462,-0.6604 1.397,-1.397"
+         d="m 0.69751664,40.304186 c 0.0508,-0.7874 0.76199996,-1.4732 1.67639996,-1.524 0.4318,-0.0254 0.889,0.0254 1.3208,0 0.3048,-0.0254 0.6096,-0.0762 0.889,-0.127 l 3.5305999,-0.127 c 0.4572,0 0.9144,-0.0254 1.3716,0 0.3556,0.0254 0.7365995,0.0254 1.0667995,0.127 0.8128,0.2032 1.2954,0.8636 1.2192,1.6256 M 0.71810781,40.448324 c -0.0508,0.8128 0.56360879,1.354462 1.42720879,1.506862 0.254,0.0508 0.5334,0.0508 0.7874,0.0508 h 1.7018 l 3.4289999,-0.1778 c 0.3302,-0.0254 0.5334,-0.0508 0.762,-0.0508 0.508,-0.0254 1.0414,-0.0254 1.5493995,-0.1016 0.762,-0.1016 1.3462,-0.6604 1.397,-1.397 M 3.6034549,38.13643 3.7681843,42.604714"
          id="path48598"
          sodipodi:nodetypes="cccccccccscccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -553,12 +674,14 @@
     <path
        id="path56906"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 1.4731121,51.532654 H 3.9731404 M 0.38849342,47.856732 H 4.8160344 m -2.4101042,4.605464 c 0.3049009,0.04554 0.6889786,-0.157718 0.9585864,-0.57561 0.6096,-0.9652 0.9398,-2.032 0.889,-3.2258 0,-0.2794 -0.1778,-0.6858 -0.4064,-0.889 C 3.4903974,47.427807 2.9036369,47.230798 2.3496512,47.302553 m 0.056279,5.159643 c -0.2695989,-0.04027 -0.4772936,-0.275065 -0.4892136,-0.72801 -0.0254,-1.397 -1.49859996,-1.397 -0.8636,-3.302 0.2278805,-0.721622 0.7460252,-1.058333 1.2965346,-1.129633"
+       d="M 1.4731121,51.532654 H 3.9731404 M 0.38849342,47.856732 H 4.8160344 m -2.4101042,4.605464 c 0.3049009,0.04554 0.6889786,-0.157718 0.9585864,-0.57561 0.6096,-0.9652 0.9398,-2.032 0.889,-3.2258 0,-0.2794 -0.1778,-0.6858 -0.4064,-0.889 C 3.4903974,47.427807 2.9036369,47.230798 2.3496512,47.302553 m 0.056279,5.159643 c -0.2695989,-0.04027 -0.4772936,-0.275065 -0.4892136,-0.72801 -0.0254,-1.397 -1.49859996,-1.397 -0.8636,-3.302 0.2278805,-0.721622 0.7460252,-1.058333 1.2965346,-1.129633 M 0.51477928,49.91458 H 4.6330135"
        sodipodi:nodetypes="ccccccccccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -572,7 +695,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -580,14 +705,16 @@
      inkscape:label="GlyphLayer-."
      style="display:none">
     <path
-       d="m 1.1293166,49.956186 c 0.0254,-0.9144 0.8128,-1.6764 1.8034,-1.651 0.9398,0 1.7018,0.762 1.7018,1.651 m -3.5052,0 c 0,0.889 0.762,1.651 1.7018,1.6764 0.9144,0.0254 1.778,-0.762 1.8034,-1.6764"
+       d="m 1.1293166,49.956186 c 0.0254,-0.9144 0.8128,-1.6764 1.8034,-1.651 0.9398,0 1.7018,0.762 1.7018,1.651 m -3.5052,0.185321 c 0,0.889 0.762,1.465679 1.7018,1.491079 0.9144,0.0254 1.778,-0.535497 1.8034,-1.449897 m -1.669388,-2.574321 -0.041182,4.57124"
        id="path58307"
        style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
        sodipodi:nodetypes="cccccc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -601,7 +728,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -613,20 +742,30 @@
       <path
          id="path61617"
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';vector-effect:none;fill:none;stroke:#000000;stroke-width:0.264583px;stop-color:#000000"
-         d="M 9.1557165,39.897786 H 4.4313166 m 4.6227999,3.0988 H 4.4313166"
+         d="M 9.1557165,39.897786 H 4.4313166 m 4.6227999,3.0988 H 4.4313166 m 2.3225875,-3.727642 v 4.22119"
          sodipodi:nodetypes="cccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 4.43131,42.9965 2.66947,43.1904"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path7" />
       <path
          id="path62444"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 6.51058,52.4015 V 47.846 M 7.16119,33.1324 V 28.5769 M 8.70055,41.179 H 13.256 M 0.22781,40.9442 h 4.55545 m -0.35194,2.0524 c 0.0762,1.8288 0.3556,3.5306 1.143,5.1054 0.0508,0.1016 0.127,0.2032 0.2032,0.3048 0.4064,0.508 0.9652,0.635 1.4478,0.1778 0.4064,-0.381 0.7366,-0.7874 0.9652,-1.2192 0.635,-1.3716 0.8128,-2.8448 0.8636,-4.3688 l 0.1016,-3.0988 c 0.0254,-1.651 0.0508,-3.2512 -0.254,-4.8514 -0.1016,-0.508 -0.254,-1.0922 -0.5334,-1.5748 -0.4826,-1.0668 -1.778,-1.1938 -2.5908,-0.2794 -0.2286,0.3048 -0.4064,0.6096 -0.5588,0.9398 -0.5842,1.4478 -0.6604,2.9972 -0.762,4.5212 -0.0508,0.381 -0.0254,0.8128 -0.0254,1.2446 z M 0.799117,42.6918 c 0.0508,1.905 0.355603,3.81 1.092203,5.6134 0.3048,0.8636 0.762,1.6256 1.4478,2.3368 0.8636,0.9144 2.0066,1.3208 3.3274,1.27 1.524,-0.0508 2.794,-0.7366 3.75918,-1.778 1.1176,-1.3208 1.6256,-2.8448 1.905,-4.4704 0.3556,-1.9304 0.3302,-3.9116 0.3048,-5.9182 0,-1.143 0.0508,-2.3114 0,-3.4798 C 12.5593,34.4114 12.0513,32.608 11.0607,30.957 9.33352,28.1884 5.14252,28.4678 3.51692,30.4236 c -1.27,1.397 -1.905,3.048 -2.2606,4.7752 -0.482603,2.5146 -0.558803,4.9784 -0.457203,7.493"
+         d="M 6.51058,52.4015 V 47.846 M 7.16119,33.1324 V 28.5769 M 8.70055,41.179 H 13.256 M 0.22781,40.9442 h 4.55545 m 3.40726,6.4212 c 0.635,-1.3716 0.8128,-2.8448 0.8636,-4.3688 l 0.1016,-3.0988 c 0.0254,-1.651 0.0508,-3.2512 -0.254,-4.8514 -0.1016,-0.508 -0.254,-1.0922 -0.5334,-1.5748 -0.4826,-1.0668 -1.778,-1.1938 -2.5908,-0.2794 -0.2286,0.3048 -0.4064,0.6096 -0.5588,0.9398 -0.5842,1.4478 -0.6604,2.9972 -0.762,4.5212 -0.0508,0.381 -0.0254,0.8128 -0.0254,1.2446 v 3.0988 c 0.0762,1.8288 0.3556,3.5306 1.143,5.1054 0.0508,0.1016 0.127,0.2032 0.2032,0.3048 0.4064,0.508 0.9652,0.635 1.4478,0.1778 0.4064,-0.381 0.7366,-0.7874 0.9652,-1.2192 m 2.23518,2.7686 c 1.1176,-1.3208 1.6256,-2.8448 1.905,-4.4704 0.3556,-1.9304 0.3302,-3.9116 0.3048,-5.9182 0,-1.143 0.0508,-2.3114 0,-3.4798 C 12.5593,34.4114 12.0513,32.608 11.0607,30.957 9.33352,28.1884 5.14252,28.4678 3.51692,30.4236 c -1.27,1.397 -1.905,3.048 -2.2606,4.7752 -0.482603,2.5146 -0.558803,4.9784 -0.457203,7.493 0.0508,1.905 0.355603,3.81 1.092203,5.6134 0.3048,0.8636 0.762,1.6256 1.4478,2.3368 0.8636,0.9144 2.0066,1.3208 3.3274,1.27 1.524,-0.0508 2.794,-0.7366 3.75918,-1.778"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True" />
     </g>
   </g>
   <g
@@ -641,7 +780,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -656,7 +797,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -670,7 +813,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -687,7 +832,9 @@
          inkstitch:zigzag_underlay="True"
          sodipodi:nodetypes="cccccccccccccccccc"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
          d="M 6.2347165,46.120785 8.1905164,51.93739"
@@ -696,12 +843,14 @@
       <path
          id="path69038"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 5.9743821,46.706875 H 9.9192545 M 6.000874,51.032431 h 3.9448724 m -1.7552299,0.90496 c -0.9652,0.127 -1.8033999,-0.6096 -1.8541999,-1.651 -0.0762,-1.4224 -0.0762,-1.905 -0.1016,-3.302 -0.0254,-0.3048 0,-0.5842 0,-0.8636 m 1.9557999,5.8166 c 1.0414,-0.1016 1.6764,-0.8636 1.5748,-1.8796 -0.101597,-1.336392 -0.1286517,-2.699234 -0.1151972,-4.07299"
+         d="M 5.9743821,46.706875 H 9.9192545 M 6.000874,51.032431 h 3.9448724 m -1.7552299,0.90496 c -0.9652,0.127 -1.8033999,-0.6096 -1.8541999,-1.651 -0.0762,-1.4224 -0.0762,-1.905 -0.1016,-3.302 -0.0254,-0.3048 0,-0.5842 0,-0.8636 m 1.9557999,5.8166 c 1.0414,-0.1016 1.6764,-0.8636 1.5748,-1.8796 -0.101597,-1.336392 -0.1286517,-2.699234 -0.1151972,-4.07299 M 5.6830668,48.977948 H 10.10805"
          sodipodi:nodetypes="ccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path69044"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -710,7 +859,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -725,7 +876,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -740,7 +893,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -756,7 +911,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="m 3.82286,42.335 1.62208,0.2338"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path8" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 5.4449508,42.568854 1.206668,44.113037"
@@ -770,7 +933,15 @@
          inkstitch:zigzag_underlay="True"
          sodipodi:nodetypes="cccccccccccc"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="m 3.56378,45.228 0.0997,-1.2015"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path9" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="m 3.6634824,44.026568 5.3663855,0.264269"
@@ -779,20 +950,24 @@
       <path
          id="path74908"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 7.8555725,41.703803 v 4.350422 M 4.7347489,41.894976 v 4.350422 m 4.295119,-1.954562 c 0.0254,-0.3302 -0.0508,-0.6858 -0.2032,-0.9906 -0.2794,-0.5334 -0.8382,-0.7112 -1.4986,-0.889 l -3.5051999,-0.0762 m 5.2069999,1.9558 c -0.0762,0.7874 -0.7112,1.2954 -2.0066,1.4986 l -3.5051999,-0.0508"
+         d="m 7.8555725,41.703803 v 4.350422 M 4.7347489,41.894976 v 4.350422 m 4.295119,-1.954562 c 0.0254,-0.3302 -0.0508,-0.6858 -0.2032,-0.9906 -0.2794,-0.5334 -0.8382,-0.7112 -1.4986,-0.889 l -3.5051999,-0.0762 m 5.2069999,1.9558 c -0.0762,0.7874 -0.7112,1.2954 -2.0066,1.4986 l -3.5051999,-0.0508 m 2.8591139,-3.875367 v 4.208072"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path74358"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 2.62218,51.3274 H 7.08302 M 3.0528,46.4015 H 7.51364 M 3.51807,45.7386 c 0,1.4986 -0.3048,2.9464 -0.381,4.5466 -0.0254,0.7366 0.4064,1.27 1.0668,1.524 0.14656,0.0546 0.29221,0.0908 0.43498,0.1099 m 2.38442,-6.1297 c -0.1778,1.651 -0.254,3.175 -0.508,4.6736 -0.15394,0.9897 -0.95526,1.5794 -1.87642,1.4561"
+         d="M 2.62218,51.3274 H 7.08302 M 3.0528,46.4015 H 7.51364 M 3.51807,45.7386 c 0,1.4986 -0.3048,2.9464 -0.381,4.5466 -0.0254,0.7366 0.4064,1.27 1.0668,1.524 0.14656,0.0546 0.29221,0.0908 0.43498,0.1099 m 2.38442,-6.1297 c -0.1778,1.651 -0.254,3.175 -0.508,4.6736 -0.15394,0.9897 -0.95526,1.5794 -1.87642,1.4561 M 2.5595492,48.674273 h 4.6418943"
          sodipodi:nodetypes="ccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -807,7 +982,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -821,7 +998,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -833,19 +1012,25 @@
       <path
          id="path85137"
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-         d="m 2.857668,49.396236 c 0.9144,0.0254 1.7779999,-0.762 1.8033999,-1.6764 0,-0.889 -0.7619999,-1.651 -1.7017999,-1.651 m -0.1016,3.3274 c -0.9398,-0.0254 -1.7018,-0.7874 -1.7018,-1.6764 0.0254,-0.9144 0.8128,-1.6764 1.8034,-1.651"
+         d="m 2.857668,49.396236 c 0.9144,0.0254 1.7779999,-0.762 1.8033999,-1.6764 0,-0.889 -0.7619999,-1.651 -1.7017999,-1.651 m -0.2751288,3.305709 c -0.9398,-0.0254 -1.5499623,-0.7874 -1.5499623,-1.6764 0.0254,-0.9144 0.6392712,-1.654709 1.6298712,-1.629309 M 0.65073284,47.698173 H 5.0974073"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False"
+         sodipodi:nodetypes="cccccc" />
       <path
          id="path84925"
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-         d="m 2.857668,42.970036 c 0.9144,0.0254 1.7779999,-0.762 1.8033999,-1.6764 0,-0.889 -0.7619999,-1.651 -1.7017999,-1.651 m -0.1016,3.3274 c -0.9398,-0.0254 -1.7018,-0.7874 -1.7018,-1.6764 0.0254,-0.9144 0.8128,-1.6764 1.8034,-1.651"
+         d="m 2.857668,42.970036 c 0.9144,0.0254 1.7779999,-0.762 1.8033999,-1.6764 0,-0.889 -0.7619999,-1.651 -1.7017999,-1.651 m -0.2534377,3.305709 c -0.9398,-0.0254 -1.5499623,-0.765709 -1.5499623,-1.654709 0.0254,-0.9144 0.7043445,-1.6764 1.6949445,-1.651 m -2.09162418,1.5699 H 4.9889518"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False"
+         sodipodi:nodetypes="cccccc" />
     </g>
   </g>
   <g
@@ -864,17 +1049,21 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="True"
-         inkstitch:reverse_rails="none" />
+         inkstitch:reverse_rails="none"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-         d="m 2.857668,42.970036 c 0.9144,0.0254 1.7779999,-0.762 1.8033999,-1.6764 0,-0.889 -0.7619999,-1.651 -1.7017999,-1.651 m -0.1016,3.3274 c -0.9398,-0.0254 -1.7018,-0.7874 -1.7018,-1.6764 0.0254,-0.9144 0.8128,-1.6764 1.8034,-1.651"
+         d="m 2.857668,42.970036 c 0.9144,0.0254 1.7779999,-0.762 1.8033999,-1.6764 0,-0.889 -0.7619999,-1.651 -1.7017999,-1.651 m -0.2317466,3.3274 c -0.9398,-0.0254 -1.5716534,-0.7874 -1.5716534,-1.6764 0.0254,-0.9144 0.4398405,-1.565839 1.6515623,-1.651 M 0.69411503,41.2993 H 4.9889518"
          id="path86146"
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="True"
-         inkstitch:reverse_rails="none" />
+         inkstitch:reverse_rails="none"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -890,7 +1079,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -906,7 +1097,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path90985"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -914,7 +1107,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -929,7 +1124,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -940,13 +1137,15 @@
        id="g433992">
       <path
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-         d="m 3.721268,51.707636 c 0.9651999,0 1.7779999,-0.7112 1.7525999,-1.6256 0,-0.8382 -0.8636,-1.6002 -1.7779999,-1.6002 m 0.0254,3.2258 c -0.9398,-0.0254 -1.6764,-0.7112 -1.651,-1.651 0,-0.8636 0.7366,-1.5748 1.6256,-1.5748"
+         d="m 3.721268,51.707636 c 0.9651999,0 1.7779999,-0.7112 1.7525999,-1.6256 0,-0.8382 -0.8636,-1.6002 -1.7779999,-1.6002 m -0.1264377,3.204109 c -0.9398,-0.0254 -1.5245623,-0.689509 -1.4991623,-1.629309 0,-0.8636 0.6281445,-1.5748 1.5171445,-1.5748 m -2.0473448,1.515593 h 4.3816012"
          id="path94314"
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path94737"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -954,7 +1153,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -969,7 +1170,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-A"
@@ -981,11 +1184,19 @@
       <path
          id="path101494"
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-         d="m 8.2170679,46.627636 c -1.2954,-0.1016 -2.5654,-0.0254 -3.8862,0.1778 m 3.937,-3.4798 h -3.8608"
+         d="m 8.2170679,46.627636 c -1.2954,-0.1016 -2.5654,-0.0254 -3.8862,0.1778 m 3.937,-3.4798 h -3.8608 m 1.7315119,-0.616414 v 4.35991"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 4.40706,43.3256 4.11189,44.7623"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path10" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 4.1119004,44.762401 2.933868,51.961637"
@@ -998,14 +1209,16 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="GlyphLayer-B"
-     style="display:inline">
+     style="display:none">
     <path
        id="path106083"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1014,7 +1227,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1029,7 +1244,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1043,7 +1260,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1060,7 +1279,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="m 3.98795,38.7637 0.40463,1.2386"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path11" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="m 4.3925818,40.002383 3.7387611,0.316529"
@@ -1074,7 +1301,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path115763"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1083,7 +1312,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1100,7 +1331,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 4.3880977,42.09636 8.1726999,40.673998"
@@ -1115,7 +1348,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path251065"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1123,7 +1358,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1139,7 +1376,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1156,7 +1395,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 4.53406,39.4902 2.61059,38.9114"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path12" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="m 2.6105939,38.911421 -0.0018,-9.378019"
@@ -1170,7 +1417,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path124163"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1179,7 +1428,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="m 9.0806679,42.741437 1.6764001,9.0932"
@@ -1193,7 +1444,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path124788"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1202,7 +1455,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1217,7 +1472,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1231,7 +1488,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1248,7 +1507,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 3.7213055,40.973748 2.629068,51.809237"
@@ -1262,7 +1523,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 4.4209964,39.846466 C 6.4655527,36.568652 8.1173051,33.082678 8.5472679,28.949237"
@@ -1277,7 +1540,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1292,7 +1557,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1308,7 +1575,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 0.698666,31.413 1.79086,29.1524"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path13" />
       <path
          id="path141458"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1316,7 +1591,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="m 6.92166,45.256 1.44045,1.5819"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path14" />
       <path
          id="path142239"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1324,7 +1607,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="m 12.841,30.0231 1.72,-1.1518"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path15" />
       <path
          id="path142457"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1332,7 +1623,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1350,7 +1643,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 0.597066,30.778 1.92867,29.0905"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path16" />
       <path
          id="path147921"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1359,7 +1660,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="m 7.63281,50.4442 1.85424,1.238"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path17" />
       <path
          id="path148420"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1367,7 +1676,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1382,7 +1693,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1397,7 +1710,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1415,7 +1730,9 @@
          inkstitch:zigzag_underlay="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
-         inkstitch:reverse_rails="none" />
+         inkstitch:reverse_rails="none"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 8.4431184,47.51474 11.4493,52.129398"
@@ -1423,14 +1740,16 @@
          inkstitch:running_stitch_length_mm="1.5" />
       <path
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';vector-effect:none;fill:none;stroke:#000000;stroke-width:0.264583px;stop-color:#000000"
-         d="m 11.4493,52.1294 c 0.7112,-0.4826 0.889,-1.2192 0.4064,-2.032 -0.2032,-0.3556 -0.4318,-0.7366 -0.6604,-1.143 m 0.254,3.175 C 10.7889,52.5612 9.8745,52.4596 9.2141,51.85 9.0109,51.6722 8.8585,51.4436 8.6807,51.2404"
+         d="m 11.4493,52.1294 c 0.7112,-0.4826 0.889,-1.2192 0.4064,-2.032 -0.2032,-0.3556 -0.4318,-0.7366 -0.6604,-1.143 m 0.123853,3.283455 C 10.658753,52.669655 9.8745,52.4596 9.2141,51.85 9.0109,51.6722 8.8585,51.4436 8.6807,51.2404 m -0.047644,0.644155 3.297046,-2.798151"
          id="path178831"
          sodipodi:nodetypes="cccccc"
          inkstitch:satin_column="True"
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="True"
-         inkstitch:reverse_rails="none" />
+         inkstitch:reverse_rails="none"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path181416"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1440,7 +1759,9 @@
          inkstitch:center_walk_underlay="False"
          inkstitch:contour_underlay="True"
          inkstitch:zigzag_underlay="True"
-         inkstitch:reverse_rails="none" />
+         inkstitch:reverse_rails="none"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1455,7 +1776,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1469,7 +1792,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1486,7 +1811,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 7.89329,32.0887 6.14971,31.8215"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path18" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 6.1497164,31.821538 0.60349775,30.513959"
@@ -1499,7 +1832,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1510,12 +1845,14 @@
     <path
        id="path186845"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 6.1796975,47.642699 v 4.261122 M 7.6366097,30.408557 H 11.897732 M 7.1411614,45.483762 h 4.2611226 m -10.60735068,0 H 5.0560555 M 0.36165451,30.348195 H 4.6227767 M 2.4830977,29.04076 c 0.9144,0 1.6256,0.6604 1.6764,1.6002 0.0508,0.7112 0.0254,1.4478 0.0508,2.2098 0.0508,3.5052 0.1778,6.6294 0.2286,10.1092 0.127,7.035799 3.1495999,6.756399 3.2257999,-0.0508 0.0508,-3.9878 0.1778,-7.874 0.2794,-11.8364 0,-0.2032 0,-0.4064 0.0508,-0.5842 0.127,-0.889 0.8382,-1.4732 1.7018,-1.4224 m -7.2135999,-0.0254 c -0.9144,0 -1.65099996,0.6858 -1.72719996,1.651 -0.0254,0.2286 -0.0254,0.4826 0,0.7366 0.0508,3.7084 0.0508,7.0358 0.1778,10.7696 0.0508,1.8288 0.17779996,3.708399 0.58419996,5.460999 0.5588,2.1082 2.3114,4.2672 4.7498,4.2672 2.7431999,0 3.9624003,-2.0828 4.4450003,-4.4704 0.1778,-1.016 0.2794,-2.032 0.3302,-3.073399 0.2286,-4.0132 0.3302,-8.0264 0.3302,-13.5128 0,-0.1016 0,-0.2286 -0.0254,-0.3556 -0.1016,-0.8382 -0.7874,-1.4224 -1.6510004,-1.4478"
+       d="m 6.1796975,47.642699 -0.065073,4.976928 M 7.6366097,30.408557 H 11.897732 M 7.1411614,45.483762 h 4.2611226 m -10.60735068,0 H 5.0560555 M 0.36165451,30.348195 H 4.6227767 M 2.4830977,29.04076 c 0.9144,0 1.6256,0.6604 1.6764,1.6002 0.0508,0.7112 0.0254,1.4478 0.0508,2.2098 0.0508,3.5052 0.1778,6.6294 0.2286,10.1092 0.127,7.035799 3.1495999,6.756399 3.2257999,-0.0508 0.0508,-3.9878 0.1778,-7.874 0.2794,-11.8364 0,-0.2032 0,-0.4064 0.0508,-0.5842 0.127,-0.889 0.8382,-1.4732 1.7018,-1.4224 m -7.2135999,-0.0254 c -0.9144,0 -1.65099996,0.6858 -1.72719996,1.651 -0.0254,0.2286 -0.0254,0.4826 0,0.7366 0.0508,3.7084 0.0508,7.0358 0.1778,10.7696 0.0508,1.8288 0.17779996,3.708399 0.58419996,5.460999 0.5588,2.1082 2.2246356,4.115362 4.6630356,4.115362 2.7431999,0 4.0491647,-1.930962 4.5317647,-4.318562 0.1778,-1.016 0.2794,-2.032 0.3302,-3.073399 0.2286,-4.0132 0.3302,-8.0264 0.3302,-13.5128 0,-0.1016 0,-0.2286 -0.0254,-0.3556 -0.1016,-0.8382 -0.7874,-1.4224 -1.6510004,-1.4478"
        sodipodi:nodetypes="cccccccccccccccccccccccsccscc"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1531,7 +1868,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="m 4.64983,50.8446 1.30173,1.0799"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path19" />
       <path
          id="path188972"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1539,7 +1884,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1556,7 +1903,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="m 2.20369,50.5799 1.07636,1.1605"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path20" />
       <path
          id="path192931"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1565,7 +1920,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 7.78238,35.0647 9.20262,33.4879"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path21" />
       <path
          id="path193904"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1573,7 +1936,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="m 13.7045,50.4817 1.5653,1.3684"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path22" />
       <path
          id="path194329"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1581,7 +1952,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1598,7 +1971,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 4.4669916,39.232908 11.093698,51.545159"
@@ -1611,7 +1986,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 7.9948975,38.743559 10.186364,28.864777"
@@ -1625,7 +2002,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path198868"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1634,7 +2013,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1651,7 +2032,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 5.0738976,42.782159 11.104195,29.460034"
@@ -1665,7 +2048,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1681,7 +2066,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1695,7 +2082,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1708,7 +2097,9 @@
        d="M 4.1859315,29.226894 0.34839981,30.655657 M 8.0038647,38.889378 4.1663322,40.318142 M 11.5352,49.070875 7.6976672,50.499638 m 2.5564948,1.084751 c 0.814606,-0.279622 1.308759,-1.24518 0.986329,-2.106502 C 10.217022,46.429475 9.5590768,44.371798 8.4868702,41.34879 7.3659271,38.046344 6.1718794,34.769302 4.8072529,31.619277 4.5392013,31.034999 4.3198863,30.45072 4.1005713,29.841038 3.856888,29.231355 3.4669947,28.774094 2.7846815,28.59627 2.4301294,28.492778 2.1003389,28.509748 1.8001134,28.632155 m 8.4540486,22.952234 c -0.170444,0.05851 -0.3549178,0.08698 -0.5488753,0.07819 C 8.9742368,51.637176 8.3893969,51.230721 8.096977,50.417811 7.7558203,49.452481 7.4146637,48.410941 7.0978754,47.394804 5.4895661,42.517346 4.1736763,38.706832 2.1998413,34.032601 1.7612123,32.91485 1.3225824,31.797099 0.88395239,30.704752 0.64026908,30.09507 0.76211074,29.510791 1.2007407,29.053529 c 0.1833525,-0.19114 0.383736,-0.333454 0.5993727,-0.421373"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
-       inkstitch:reverse_rails="none" />
+       inkstitch:reverse_rails="none"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1722,7 +2113,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1736,7 +2129,15 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="M 3.27049,29.7265 4.33151,28.9021"
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path23" />
     <path
        id="path213597"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1744,7 +2145,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1758,7 +2161,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1772,7 +2177,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1786,7 +2193,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1800,7 +2209,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1815,7 +2226,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1829,7 +2242,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1843,7 +2258,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1860,7 +2277,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="m 4.2292679,39.337836 4.0386,1.549401"
@@ -1870,21 +2289,25 @@
       <path
          id="path120880"
          style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 4.8718934,39.113414 v 3.884846 m 2.5094034,-3.950411 v 3.884846 m 0.8865711,-2.045459 c 0.0254,0.3556 -0.0508,0.7366 -0.1778,1.0668 -0.1778,0.508 -0.635,0.635 -1.143,0.6604 -0.8382,0.0254 -1.7272,0.0508 -2.6416,0.1016 m 3.9624,-1.8288 c -0.1016,-1.0922 -0.4826,-1.6256 -1.6764,-1.5748 -0.762,0.0508 -1.524,0.0254 -2.3621999,0.0254"
+         d="m 4.8718934,39.113414 v 3.884846 m 2.5094034,-3.950411 v 3.884846 m 0.8865711,-2.045459 c 0.0254,0.3556 -0.0508,0.7366 -0.1778,1.0668 -0.1778,0.508 -0.635,0.635 -1.143,0.6604 -0.8382,0.0254 -1.7272,0.0508 -2.6416,0.1016 m 3.9624,-1.8288 c -0.1016,-1.0922 -0.4826,-1.6256 -1.6764,-1.5748 -0.762,0.0508 -1.524,0.0254 -2.3621999,0.0254 m 1.8225474,-0.467938 v 4.251454"
          sodipodi:nodetypes="ccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path120876"
          style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 1.0070312,51.373916 h 3.884846 M 0.55099252,40.306118 H 4.4358385 m -0.2065706,-0.968282 0.0762,3.3782 c -0.0254,0.2286 -0.0508,0.4318 -0.0254,0.635 0.0508,1.9558 0.127,4.064 0.1778,5.969 0,0.2794 0.0254,0.5588 0,0.8636 -0.0508,0.9652 -0.7619999,1.6256 -1.7017999,1.6256 M 0.790616,39.414676 c 0.0125953,1.806939 0.032746,3.548706 0.0604519,5.917564 0,1.5748 0.127,3.302 0.1778,4.8514 0.0508,0.9652 0.8128,1.6256 1.7272,1.6256"
+         d="m 1.0070312,51.373916 h 3.884846 M 0.55099252,40.306118 H 4.4358385 m -0.2065706,-0.968282 0.0762,3.3782 c -0.0254,0.2286 -0.0508,0.4318 -0.0254,0.635 0.0508,1.9558 0.127,4.064 0.1778,5.969 0,0.2794 0.0254,0.5588 0,0.8636 -0.0508,0.9652 -0.7619999,1.6256 -1.7017999,1.6256 M 0.790616,39.414676 c 0.0125953,1.806939 0.032746,3.548706 0.0604519,5.917564 0,1.5748 0.127,3.302 0.1778,4.8514 0.0508,0.9652 0.8128,1.6256 1.7272,1.6256 M 0.4121308,46.917294 H 4.815423"
          sodipodi:nodetypes="cccccccccccccc"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1895,11 +2318,14 @@
     <path
        id="path261019"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 4.7713438,44.47323 H 0.46744783 M 5.3880158,48.091536 V 52.20694 M 10.525027,46.617559 H 6.221131 m 4.497906,-5.821464 H 6.4151405 M 10.40205,32.887816 H 6.0981539 m 0,-4.115404 v 4.115404 M 4.4642977,33.40956 H 0.16040186 M 4.8058173,37.449498 H 0.50192146 m 5.02897424,1.335174 v 4.115404 m 1.168602,-0.09252 c -0.7112,-0.0762 -1.3462,-0.1016 -2.0066,-0.2286 -2.159,-0.4064 -3.75919996,-2.1336 -3.88619996,-4.3688 -0.127,-2.1082 -0.0762,-3.6322 0.33019996,-5.7658 0.1524,-0.7112 0.381,-1.4478 0.889,-2.0828 0.6858,-0.8382 1.4732,-1.27 2.4892,-1.2954 1.2954,-0.0254 2.5907999,-0.0254 3.8607999,0 0.762,0 1.3716,0.4572 1.5494,1.2446 0.0762,0.2794 0.1270004,0.5588 0.1270004,0.8382 0.0762,5.1816 0.127,9.7282 0.1778,14.909799 0,0.7112 -0.0508,1.4224 -0.1524,2.0828 -0.0762,0.7112 -0.4064004,1.3462 -0.8128004,1.9558 -0.6858,1.143 -1.7272,1.6002 -3.0225999,1.6764 -0.5842,0.0254 -1.1684,0 -1.778,0 -1.778,-0.0254 -3.2258,-1.2192 -3.4544,-2.9972 -0.12699996,-1.0414 -0.15239996,-2.0828 -0.15239996,-3.175 0,-1.056722 0.74789296,-1.755756 1.63230996,-1.784915 m 4.23509,-4.641284 c -0.5588,0.2032 -1.1176,0.2032 -1.6002,0.1016 -0.6604,-0.1778 -0.889,-0.7874 -0.889,-1.4224 -0.0254,-0.889 0,-1.1938 0.0254,-2.1336 0.0508,-0.7874 0.1016,-1.5748 0.2032,-2.3114 0.1524,-0.8636 0.4318,-1.0668 1.2954,-1.0922 h 0.7874 c 0.0508,2.54 0.127,4.3688 0.1778,6.858 l -0.0254,3.6322 c 0.0254,0.1524 0.0762,0.3048 0.0762,0.4318 0,1.0668 0,2.209799 -0.0254,3.378199 0,0.3556 -0.0254,0.7112 -0.1016,1.0668 -0.127,0.6604 -0.4318,0.9144 -1.0414,0.9144 -0.635,0 -0.9906,-0.2286 -1.143,-0.9144 -0.0762,-0.381 -0.1016,-0.7874 -0.1016,-1.1938 -0.0508,-0.4572 -0.0508,-0.9144 -0.127,-1.320799 -0.1016,-0.635 -0.4826,-1.0414 -1.0668,-1.2446 -0.2285284,-0.08125 -0.4580723,-0.115802 -0.67909,-0.108516"
+       d="M 4.7713438,44.47323 H 0.46744783 M 5.3880158,48.091536 V 52.20694 M 10.525027,46.617559 H 6.221131 m 4.497906,-5.821464 H 6.4151405 M 10.40205,32.887816 H 6.0981539 m 0,-4.115404 v 4.115404 M 4.8860955,33.43768 H 0.58219962 M 4.8058173,37.449498 H 0.50192146 m 5.02897424,1.335174 v 4.115404 m 1.168602,-0.09252 c -0.7112,-0.0762 -1.3462,-0.1016 -2.0066,-0.2286 -2.159,-0.4064 -3.75919996,-2.1336 -3.88619996,-4.3688 -0.127,-2.1082 -0.0762,-3.6322 0.33019996,-5.7658 0.1524,-0.7112 0.381,-1.4478 0.889,-2.0828 0.6858,-0.8382 1.4732,-1.27 2.4892,-1.2954 1.2954,-0.0254 2.5907999,-0.0254 3.8607999,0 0.762,0 1.3716,0.4572 1.5494,1.2446 0.0762,0.2794 0.1270004,0.5588 0.1270004,0.8382 0.0762,5.1816 0.127,9.7282 0.1778,14.909799 0,0.7112 -0.0508,1.4224 -0.1524,2.0828 -0.0762,0.7112 -0.4064004,1.3462 -0.8128004,1.9558 -0.6858,1.143 -1.7272,1.6002 -3.0225999,1.6764 -0.5842,0.0254 -1.1684,0 -1.778,0 -1.778,-0.0254 -3.2258,-1.2192 -3.4544,-2.9972 -0.12699996,-1.0414 -0.15239996,-2.0828 -0.15239996,-3.175 0,-1.056722 0.74789296,-1.755756 1.63230996,-1.784915 m 4.23509,-4.641284 c -0.5588,0.2032 -1.1176,0.2032 -1.6002,0.1016 -0.6604,-0.1778 -0.889,-0.7874 -0.889,-1.4224 -0.0254,-0.889 0,-1.1938 0.0254,-2.1336 0.0508,-0.7874 0.1297199,-1.5748 0.2313199,-2.3114 0.1524,-0.8636 0.4036801,-1.0668 1.2672801,-1.0922 h 0.7874 c 0.0508,2.54 0.127,4.3688 0.1778,6.858 l -0.0254,3.6322 c 0.0254,0.1524 0.0762,0.3048 0.0762,0.4318 0,1.0668 0,2.209799 -0.0254,3.378199 0,0.3556 -0.0254,0.7112 -0.1016,1.0668 -0.127,0.6604 -0.4318,0.9144 -1.0414,0.9144 -0.635,0 -0.9906,-0.2286 -1.143,-0.9144 -0.0762,-0.381 -0.1016,-0.7874 -0.1016,-1.1938 -0.0508,-0.4572 -0.0508,-0.9144 -0.127,-1.320799 -0.1016,-0.635 -0.4826,-1.0414 -1.0668,-1.2446 -0.2285284,-0.08125 -0.4580723,-0.115802 -0.67909,-0.108516"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccsccccccccccsccsccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1916,7 +2342,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 4.3372976,36.660759 2.6609,28.939199"
@@ -1930,7 +2358,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path264265"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1939,7 +2369,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1956,7 +2388,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path268858"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1964,7 +2398,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -1982,7 +2418,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path269880"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1991,7 +2429,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -2009,7 +2449,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 4.38858,37.4341 2.53471,37.24"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path24" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 2.534715,37.240083 2.5084979,28.989959"
@@ -2023,7 +2471,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1"
          d="M 4.3880979,37.39736 C 8.7028215,37.167225 7.5618601,31.680139 8.275467,29.519948"
@@ -2038,7 +2488,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -2053,7 +2505,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2063,23 +2517,16 @@
     <g
        id="g504452">
       <path
-         id="path283063"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M -0.023812,31.8423 H 4.833 M 0.131253,42.3234 H 4.98806 M 0.0437937,51.0007 H 4.9006 m -2.41048,0.8084 c 0.25647,0.0084 0.52198,-0.0422 0.78038,-0.1623 0.8128,-0.3556 1.016,-1.016 1.016,-1.8542 0,-3.8354 0,-7.4168 0.0254,-11.3284 C 4.3373,36.864 4.1595,35.2384 4.4643,33.562 L 4.0325,29.8282 M 2.49012,51.8091 C 1.66254,51.782 0.929051,51.1417 0.832098,50.2498 c -0.0254,-0.3048 0,-0.5588 0,-0.8636 0,-4.2164 0.0254,-8.1026 -0.0254,-12.2936 0,-1.9304 -0.127,-3.8608 -0.2032,-5.7658 0,-0.3048 0,-0.6096 0.0254,-0.9398"
-         sodipodi:nodetypes="ccccccccscccccsccc"
-         inkstitch:satin_column="True"
-         inkstitch:zigzag_underlay="True"
-         inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
-      <path
          id="path281683"
          style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-         d="M 1.8481,28.7868 C 1.22543,28.98 0.838715,29.4092 0.687954,30.0283 0.660369,30.1416 0.640684,30.2612 0.628898,30.387 M 1.8481,28.7868 c 0.7112,-0.2032 1.4224,0.0254 1.9304,0.6858 0.1016,0.1016 0.1524,0.2032 0.254,0.3556"
-         sodipodi:nodetypes="ccccsc"
+         d="M 2.49012,51.8091 C 1.66254,51.782 0.929051,51.1417 0.832098,50.2498 c -0.0254,-0.3048 0,-0.5588 0,-0.8636 0,-4.2164 0.0254,-8.1026 -0.0254,-12.2936 0,-1.9304 -0.127,-3.8608 -0.2032,-5.7658 0,-0.3048 0,-0.6096 0.0254,-0.9398 C 0.640684,30.2612 0.660369,30.1416 0.687954,30.0283 0.838715,29.4092 1.22543,28.98 1.8481,28.7868 m -1.871912,3.0555 H 4.833 M 0.131253,42.3234 H 4.98806 M 0.0437937,51.0007 H 4.9006 m -2.41048,0.8084 c 0.25647,0.0084 0.52198,-0.0422 0.78038,-0.1623 0.8128,-0.3556 1.016,-1.016 1.016,-1.8542 0,-3.8354 0,-7.4168 0.0254,-11.3284 C 4.3373,36.864 4.1595,35.2384 4.4643,33.562 L 4.0325,29.8282 C 3.9309,29.6758 3.8801,29.5742 3.7785,29.4726 3.2705,28.8122 2.8539195,28.485393 2.1427195,28.688593"
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="True"
+         inkstitch:end_at_nearest_point="True"
+         sodipodi:nodetypes="ccscccccccccccccsccccc" />
       <path
          id="path292824"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2088,7 +2535,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 6.94894,35.5487 8.64765,35.829"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path25" />
       <path
          style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1"
          d="M 8.6476584,35.829065 9.0050278,50.737169"
@@ -2103,7 +2558,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path289961"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2111,7 +2568,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -2129,7 +2588,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 3.87038,35.966 2.69415,35.5342"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path26" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 2.694151,35.534248 2.4260403,29.001066"
@@ -2142,7 +2609,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path298797"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2150,7 +2619,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -2165,7 +2636,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2179,7 +2652,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2196,7 +2671,9 @@
          sodipodi:nodetypes="ccccccccccccccsccccccsccccccc"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path256517"
          style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2205,7 +2682,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -2223,7 +2702,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 0.933698,31.1489 1.81481,29.2851"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path27" />
       <path
          id="path305687"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2232,7 +2719,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -2243,11 +2732,14 @@
     <path
        id="path309328"
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 3.9837834,41.288894 6.9381224,38.13722 M 5.3899532,33.030907 v -4.302356 m 0.9689644,8.171263 H 10.661272 M 5.9931274,32.985737 h 4.3023546 m -9.95107834,0.0032 H 4.6467587 M 0.30481942,36.505262 H 4.6071745 m 1.4382894,6.929509 h 4.3023551 m -4.0439981,4.263084 h 4.3023551 m -4.9988783,0.672304 v 3.538276 M 0.97682188,47.404959 H 4.5150977 M 0.82149018,42.519568 H 4.359766 m -1.58088,-0.522453 c 0.2575533,0.0057 0.5205813,0.06967 0.7710117,0.200845 0.5842,0.3048 0.889,0.8128 0.889,1.4732 v 2.666999 c 0,0.3556 0.0254,0.7112 0.0762,1.0668 0.1016,0.6604 0.4572,0.9398 1.0922,0.9652 0.8128,0.0508 1.0414,-0.8382 1.0414,-1.4478 -0.0508,-0.889 -0.1016,-1.828799 -0.1778,-2.743199 -0.0762,-1.0414 -0.6096,-1.8542 -1.4478,-2.4892 -0.7112,-0.5842 -1.3462,-1.143 -2.0828,-1.6764 -1.651,-1.1684 -2.41299995,-2.7432 -2.31139995,-4.7752 0.0508,-0.6858 0.0508,-1.3716 0.12699999,-2.1082 0.1778,-2.0066 1.70179996,-4.0894 3.73379996,-4.191 0.8636,-0.0254 1.7526,-0.0254 2.5907999,0.2032 1.6256,0.4318 2.4384,1.6764 2.6924,3.2258 0.1778,1.143 0.1778,2.3622 0.1778,3.556 0,0.9398 -0.762,1.6256 -1.7018,1.6256 M 2.778886,41.997115 c -0.8395893,-0.0185 -1.6210014,0.582689 -1.7181883,1.496245 0.0254,1.6256 -0.0762,3.301999 0.0254,4.927599 0.127,1.6256 1.1684,3.0226 2.5908,3.2512 1.2954,0.254 2.6416,0.254 3.9623999,-0.1778 1.27,-0.4064 2.5654004,-1.6002 2.4892004,-3.5814 -0.0254,-1.1176 -0.1016,-2.1844 -0.127,-3.301999 -0.0762,-2.413 -1.0922004,-4.318 -3.0480003,-5.715 -0.7112,-0.5334 -1.4224,-1.0668 -2.0828,-1.6002 -0.2794,-0.254 -0.6096,-0.6096 -0.635,-0.9144 -0.0762,-1.0922 -0.0508,-2.1082 0.0508,-3.2004 0.0508,-0.5588 0.5842,-0.8128 1.2192,-0.7874 0.5334,0.0254 0.7874,0.3048 0.889,0.889 0.0254,0.1778 0.0254,0.381 0.0508,0.5842 0.0254,0.6858 0.0254,1.3716 0.1016,2.1082 0.0762,0.9398 0.8381999,1.5748 1.7017999,1.5748"
+       d="M 3.9837834,41.288894 6.9381224,38.13722 M 5.3899532,33.030907 v -4.302356 m 0.9689644,8.171263 H 10.661272 M 5.9931274,32.985737 h 4.3023546 m -9.95107834,0.0032 H 4.6467587 M 0.30481942,36.505262 H 4.6071745 m 1.4382894,6.929509 h 4.3023551 m -4.0439981,4.263084 h 4.3023551 m -4.9988783,0.214007 v 4.585812 M 0.38758279,47.404959 H 5.5298984 M 0.82149018,42.519568 H 4.359766 m -1.58088,-0.522453 c 0.2575533,0.0057 0.5205813,0.06967 0.7710117,0.200845 0.5842,0.3048 0.889,0.8128 0.889,1.4732 v 2.666999 c 0,0.3556 0.0254,0.7112 0.0762,1.0668 0.1016,0.6604 0.4572,0.9398 1.0922,0.9652 0.8128,0.0508 1.0414,-0.8382 1.0414,-1.4478 -0.0508,-0.889 -0.1016,-1.828799 -0.1778,-2.743199 -0.0762,-1.0414 -0.6096,-1.8542 -1.4478,-2.4892 -0.7112,-0.5842 -1.3462,-1.143 -2.0828,-1.6764 -1.651,-1.1684 -2.41299995,-2.7432 -2.31139995,-4.7752 0.0508,-0.6858 0.0508,-1.3716 0.12699999,-2.1082 0.1778,-2.0066 1.70179996,-4.0894 3.73379996,-4.191 0.8636,-0.0254 1.7526,-0.0254 2.5907999,0.2032 1.6256,0.4318 2.4384,1.6764 2.6924,3.2258 0.1778,1.143 0.1778,2.3622 0.1778,3.556 0,0.9398 -0.762,1.6256 -1.7018,1.6256 M 2.778886,41.997115 c -0.8395893,-0.0185 -1.6210014,0.582689 -1.7181883,1.496245 0.0254,1.6256 -0.0762,3.301999 0.0254,4.927599 0.127,1.6256 1.1684,3.0226 2.5908,3.2512 1.2954,0.254 2.6416,0.254 3.9623999,-0.1778 1.27,-0.4064 2.5654004,-1.6002 2.4892004,-3.5814 -0.0254,-1.1176 -0.1016,-2.1844 -0.127,-3.301999 -0.0762,-2.413 -1.0922004,-4.318 -3.0480003,-5.715 -0.7112,-0.5334 -1.4224,-1.0668 -2.0828,-1.6002 -0.2794,-0.254 -0.6096,-0.6096 -0.635,-0.9144 -0.0762,-1.0922 -0.0508,-2.1082 0.0508,-3.2004 0.0508,-0.5588 0.5842,-0.8128 1.2192,-0.7874 0.5334,0.0254 0.7874,0.3048 0.889,0.889 0.0254,0.1778 0.0254,0.381 0.0508,0.5842 0.0254,0.6858 0.0254,1.3716 0.1016,2.1082 0.0762,0.9398 0.8381999,1.5748 1.7017999,1.5748"
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False"
+       sodipodi:nodetypes="ccccccccccccccccccccccccsscccccccccccsccccccccccccccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2263,7 +2755,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 5.0910241,40.281857 11.804898,39.073759"
@@ -2276,7 +2770,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 8.24889,37.4735 7.60023,38.9038"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path28" />
       <path
          style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1"
          d="M 7.6002395,38.903891 6.3526,29.549651"
@@ -2289,7 +2791,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -2305,7 +2809,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2321,7 +2827,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="m 4.71829,50.8085 1.32722,1.2091"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path29" />
       <path
          id="path327088"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2329,7 +2843,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -2346,7 +2862,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="m 1.37019,50.1526 0.99084,1.4773"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path30" />
       <path
          id="path329617"
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2354,7 +2878,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="m 6.44549,39.0991 1.0414,-0.9906"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path31" />
       <path
          id="path331349"
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -2362,7 +2894,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          id="path331008"
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -2370,7 +2904,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -2388,7 +2924,9 @@
          sodipodi:nodetypes="ccccccccccccccccccc"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 5.5673029,40.513788 11.347698,51.773759"
@@ -2402,7 +2940,9 @@
          sodipodi:nodetypes="cccccccccccccccccc"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
       <path
          style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1"
          d="M 8.9483318,39.698642 2.6179301,51.218959"
@@ -2417,7 +2957,9 @@
          sodipodi:nodetypes="cccccccccccccccccccccccccc"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -2435,7 +2977,15 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
+      <path
+         d="M 6.95568,42.0201 7.516,39.823"
+         style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+         inkstitch:running_stitch_length_mm="2.0"
+         inkstitch:running_stitch_tolerance_mm="0.2"
+         id="path32" />
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="M 7.5160065,39.823011 8.8076975,28.862959"
@@ -2449,7 +2999,9 @@
          inkstitch:satin_column="True"
          inkstitch:zigzag_underlay="True"
          inkstitch:reverse_rails="none"
-         inkstitch:contour_underlay="True" />
+         inkstitch:contour_underlay="True"
+         inkstitch:start_at_nearest_point="False"
+         inkstitch:end_at_nearest_point="False" />
     </g>
   </g>
   <g
@@ -2464,7 +3016,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2478,7 +3032,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2492,7 +3048,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2506,7 +3064,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2521,21 +3081,31 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer64"
-     inkscape:label="GlyphLayer-Á"
+     inkscape:label="GlyphLayer-Â"
      style="display:none">
     <path
        id="path16086"
        style="font-size:25.4px;line-height:1.25;font-family:Bluenesia;-inkscape-font-specification:'Bluenesia, Normal';font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="m 8.2678679,44.732296 h -3.860795 m 3.809995,3.30199 c -1.295395,-0.1016 -2.565395,-0.0254 -3.886195,0.1778"
+       d="m 8.2678679,44.732296 h -3.860795 m 3.809995,3.30199 c -1.295395,-0.1016 -2.565395,-0.0254 -3.886195,0.1778 m 2.1834926,-4.352013 v 4.943061"
        inkstitch:zigzag_underlay="True"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="M 4.33087,48.212 3.81649,46.1052"
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path33" />
     <path
        style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.0264583, 0.0264583;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
        d="m 3.8164979,46.105266 -0.882626,5.85637"
@@ -2544,11 +3114,14 @@
     <path
        id="path16774"
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="m 7.7912409,49.719756 4.2890281,0.12075 m -4.2323971,-5.77852 3.5148261,-0.53303 m -4.4795571,-2.6165 0.564713,-3.743843 m -6.3552038,6.117423 3.8763438,0.82116 m -4.1963418,6.87768 4.0006238,-0.57524 m -1.839403,1.552 c -0.9398,0.0762 -1.7057788,-0.60908 -1.8287998,-1.5748 -0.448153,-3.47638 -0.486689,-10.20909 5.1748778,-12.668481 1.200858,-0.521654 2.701308,-0.0099 3.352795,1.1684 1.8809441,3.402041 1.9012921,5.382161 2.0133221,10.865081 0.0021,0.10158 0,0.2286 -0.0254,0.3302 -0.0762,1.143 -0.7874,1.8034 -1.8288001,1.778 m -6.857995,0.1016 c 0.9652,-0.1016 1.651,-0.8382 1.5748,-1.9304 -0.0743,-1.0762 -0.1778,-0.74081 -0.1778,-1.81915 l 0.0762,-3.47979 c 0.0148,-0.90998 1.301412,-3.1212 2.476069,-3.81984 0.738021,0.58328 1.271816,2.58464 1.384726,3.81984 l -0.0508,3.30199 c 0.01,1.14893 -0.0498,0.98354 -0.0508,1.97155 0,1.0922 0.6858,1.8034 1.6256,1.8542"
+       d="m 7.7912409,49.719756 4.2890281,0.12075 m -4.2323971,-5.77852 3.5148261,-0.53303 M 6.7085461,41.5668 7.4805894,36.448432 m -6.3879393,6.837604 3.8763438,0.82116 m -4.1963418,6.87768 4.0006238,-0.57524 m -1.839403,1.552 c -0.9398,0.0762 -1.7057788,-0.60908 -1.8287998,-1.5748 -0.448153,-3.47638 -0.486689,-10.20909 5.1748778,-12.668481 1.200858,-0.521654 2.701308,-0.0099 3.352795,1.1684 1.8809441,3.402041 1.9012921,5.382161 2.0133221,10.865081 0.0021,0.10158 0,0.2286 -0.0254,0.3302 -0.0762,1.143 -0.7874,1.8034 -1.8288001,1.778 m -6.857995,0.1016 c 0.9652,-0.1016 1.651,-0.8382 1.5748,-1.9304 -0.0743,-1.0762 -0.1778,-0.74081 -0.1778,-1.81915 l 0.0762,-3.47979 c 0.0148,-0.90998 1.301412,-3.186671 2.476069,-3.885311 0.738021,0.58328 1.271816,2.650111 1.384726,3.885311 l -0.0508,3.30199 c 0.01,1.14893 -0.0498,0.98354 -0.0508,1.97155 0,1.0922 0.6858,1.8034 1.6256,1.8542"
        inkstitch:zigzag_underlay="True"
        inkstitch:satin_column="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False"
+       sodipodi:nodetypes="ccccccccccccsccccccccccccc" />
     <path
        id="path21138"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2556,7 +3129,15 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="M 5.38716,29.7265 6.44817,28.9021"
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path35" />
     <path
        id="path21146"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2564,7 +3145,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2578,7 +3161,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path27203"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2586,7 +3171,15 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="M 4.32882,29.7265 5.38984,28.9021"
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path37" />
     <path
        id="path27211"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2594,7 +3187,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2608,7 +3203,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path44535"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -2616,7 +3213,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2630,7 +3229,15 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="M 4.32882,29.7265 5.38984,28.9021"
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:3, 1"
+       inkstitch:running_stitch_length_mm="2.0"
+       inkstitch:running_stitch_tolerance_mm="0.2"
+       id="path38" />
     <path
        id="path46625"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2638,7 +3245,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path46641"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2647,7 +3256,9 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2661,6 +3272,8 @@
        inkstitch:satin_column="True"
        inkstitch:zigzag_underlay="True"
        inkstitch:reverse_rails="none"
-       inkstitch:contour_underlay="True" />
+       inkstitch:contour_underlay="True"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
 </svg>
