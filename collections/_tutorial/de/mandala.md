@@ -2,7 +2,7 @@
 permalink: /de/tutorials/mandala/
 title: Mandala
 language: de
-last_modified_at: 2025-01-11
+last_modified_at: 2025-05-06
 excerpt: "Mandala-Stickerei"
 read_time: false
 image: "/assets/images/tutorials/mandala/whaletail.png"
@@ -115,9 +115,7 @@ Dafür habe ich 2 neue Gruppen erstellt.
 
 [Komplexes Mandala herunterladen](/assets/images/tutorials/mandala/complexmandala.svg){: download="compleximplemandala.svg" }
 
-If you wish to see more samples you can also [download these samples ](/assets/images/tutorials/mandala/mandala_samples.svg){: download="mandala_samples.svg" }
-
-
+[Mehr Beispiele herunterladen](/assets/images/tutorials/mandala/mandala_samples.svg){: download="mandala_samples.svg" }
 
 ## Mandala in Redwork umwandeln
 
@@ -134,12 +132,12 @@ Du musst lediglich
 Nutze hierfür nicht das Redwork-Mandala, sondern die Gruppen mit den Pfadeffekten
 
 * Gruppiere alle Gruppen und nenne die Gruppe "Mandala"
-* Group a second time, and name this group mandala_clipped
+* Gruppiere ein zweites Mal und nenne die Gruppe "mandala_clipped"
 * In diesem Beispiel nutze ich einen Text mit der Ojuju Schrift.
   Jeder Text muss zunächst in einen Pfad umgewandelt werden (`Pfad > Objekt in Pfad umwandeln`)
 * Erstelle eine Kopie des Texts. Die Kopie erhält nur eine Konturfarbe und keine Füllung)
 * Das Original mit einer Füllfarbe wird über die mandala_clipped Gruppe gelegt. Beide auswählen und `Objekt > Auschneidepfad > Ausschneidepfad setzen` ausführen
-* By selecting the mandala group (not the mandala_clipped group) you can move the mandala  to fine tune what part of the mandala actually appears.
+* Du kannst das Mandala mit der ausgewählten "Mandala"-Gruppe (nicht mandala_clipped) bewegen und bestimmen, wecher Teil des Mandalas tatsächlich sichtbar ist.
 * Wähle die Pfadkopie des Buchstabens zusammen mit der Mandala-Gruppe aus und wende die Redwork Funktion an: `Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Redwork`
 * Wähle 0.5 mm für "Verbinde Linien deren Abstand geringer ist als (mm)" und "Minimal Pfadlänge (mm)"
 * Mache einen kurzen Spaziergang
@@ -149,15 +147,15 @@ Nutze hierfür nicht das Redwork-Mandala, sondern die Gruppen mit den Pfadeffekt
 
 [Beispieldatei für Mandala-Text herunterladen](/assets/images/tutorials/mandala/lettremandala.svg){: download="lettremandala.svg" }
 
-## Using an inversed clip
+## Umgekehrte Auschneidemaske nutzen
 
-You may also use the text as an inversed clip (Inkscape > Objet > Clip  > Set Inversed Clip)
+Der Text kann auch als umgekehrte Auschneidemaske eingesetzt werden (Inkscape > Objekt > Ausschneidemaske > Umgekehrte Ausschneidemaske (LPE)
 
-You then get something like this : 
+Dann sieht das Ergebnis beispielsweise so aus:
 
-![Texte mandala inversé](/assets/images/tutorials/mandala/lettremandala_reversed.svg) 
+![Mandala mit umgekehrter Ausschneidemaske](/assets/images/tutorials/mandala/lettremandala_reversed.svg) 
 
-[Download the inversed clip sample file](/assets/images/tutorials/mandala/lettremandala_reversed.svg){: download="lettremandala_reversed.svg" }
+[Beispieldatei herunterladen](/assets/images/tutorials/mandala/lettremandala_reversed.svg){: download="lettremandala_reversed.svg" }
 
 
 
