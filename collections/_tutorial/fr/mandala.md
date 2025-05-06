@@ -2,7 +2,7 @@
 permalink: /fr/tutorials/mandala/
 title: Mandala
 language: fr
-last_modified_at: 2025-01-09
+last_modified_at: 2025-05-06
 excerpt: "Mandala et Broderie"
 read_time: false
 image: "/assets/images/tutorials/mandala/whaletail.png"
@@ -109,11 +109,13 @@ Rien n'oblige à utiliser toujours le même nombre de copies. La nouvelle partie
 
 [Télécharger le fichier exemple mandala complexe ](/assets/images/tutorials/mandala/complexmandala.svg){: download="compleximplemandala.svg" }
 
+Si vous souhaitez plus d'exemples, vous pouvez aussi [Télécharger ces examples ](/assets/images/tutorials/mandala/mandala_samples.svg){: download="mandala_samples.svg" }
+
 ## Transformer le mandala en redwork
 
 Il suffit de 
 * tout sélectionner 
-* Extensions > Ink/Stitch > Outils: Trait > Redwork choisir 0,5 mm pour "Connecter si la longueur est inférieure à " et pour "longueur mininmum d'un chemin"
+* Extensions > Ink/Stitch > Outils: Trait > Redwork choisir 0,5 mm pour "Connecter si la longueur est inférieure à " et pour "longueur mininmum d'un chemin". Cochez l'option combiner.
 * Allez faire un tour ou boire un café ou passer un coup de fil
 * Et admirez le résultat. Si vous obtenez plusieurs groupes connectés c'est que certains objets n'en touchent aucun autre, rectifiez si vous le souhaitez...
 
@@ -121,17 +123,27 @@ Il suffit de
 
 Il ne faut pas partir du mandala transformé en redwork mais des groupes avec effets de chemins
 
-* Groupez tout le monde ensemble, appelons ce groupe mandala
-* Ici j'ai utilisé un texte écrit avec la police ojuju. Il faut d'abord transformer ce texte en chemin en le selectionant puis Inkscape > Chemins > Objets en chemin
-* Faire une  copie du texte.
-* Une des copies du texte doit être au dessus du groupe mandala, sélectionnez  le groupe mandala et  cette copie,  puis Inkscape > Objet > Découpe > Définir une découpe
-* Placez la deuxième copie du texte au dessus du groupe mandala, sélectionnez les deux et Extensions > Ink/Stitch > Outils: Trait > Redwork
+* Groupez tout le monde ensemble, appelons ce groupe manadala
+* Groupez à nouveau, appelons ce groupe mandala_découpé 
+* Ici j'ai utilisé un texte écrit avec la police ojuju. Il faut d'abord transformer ce texte en chemin en le selectionant puis Inkscape > Chemins > Objets en chemin puis en faire une copie du texte.
+* Une des copies du texte doit être au dessus du groupe mandala_découpé, sélectionnez  le groupe mandala_découpé et  cette copie du texte,  puis Inkscape > Objet > Découpe > Définir une découpe
+* En selectionant le groupe mandala  (et non  le groupe mandala_découpé) vous pouvez déplacer le mandala pour choisir quelle partie apparait dans letexte
+* Placez la deuxième copie du texte au dessus du groupe mandala_découpé, sélectionnez les deux et Extensions > Ink/Stitch > Outils: Trait > Redwork. Même paramètrage que précédement.
 * Allez vous promenez, mais moins loin, ça devrait aller plus vite.
 * Cette fois-ci vous obtenez trois groupes connectés un par lettre
 
 ![Texte mandala](/assets/images/tutorials/mandala/lettremandala.svg) 
 
 [Télécharger le fichier exemple texte mandala ](/assets/images/tutorials/mandala/lettremandala.svg){: download="lettremandala.svg" }
+
+## Utilisation de découpe inversée
+
+Il est possible d'utiliser le texte pour non pas faire une découpe mais faire une découpe inversée.
+On obtient alors 
+![Texte mandala inversé](/assets/images/tutorials/mandala/lettremandala_reversed.svg) 
+
+[Télécharger le fichier exemple texte mandala inversé ](/assets/images/tutorials/mandala/lettremandala_reversed.svg){: download="lettremandala_reversed.svg" }
+
 
 
 
