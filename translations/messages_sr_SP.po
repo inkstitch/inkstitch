@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-02 01:43+0000\n"
-"PO-Revision-Date: 2025-05-02 01:43\n"
+"POT-Creation-Date: 2025-05-04 01:52+0000\n"
+"PO-Revision-Date: 2025-05-04 01:52\n"
 "Last-Translator: \n"
 "Language-Team: Serbian (Cyrillic)\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 01:43+0000\n"
+"POT-Creation-Date: 2025-05-04 01:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3273,7 +3273,7 @@ msgstr ""
 msgid "Apply"
 msgstr ""
 
-#: lib/gui/apply_palette.py:49 lib/gui/edit_json/main_panel.py:68
+#: lib/gui/apply_palette.py:49 lib/gui/edit_json/main_panel.py:75
 #: lib/gui/element_info.py:41 lib/gui/lettering/main_panel.py:47
 #: lib/gui/lettering_font_sample.py:81
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
@@ -3324,8 +3324,16 @@ msgstr ""
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr ""
 
-#: lib/gui/edit_json/main_panel.py:383
+#: lib/gui/edit_json/main_panel.py:401 lib/gui/edit_json/main_panel.py:414
 msgid "Could not read json file."
+msgstr ""
+
+#: lib/gui/edit_json/main_panel.py:405
+msgid "Changes will not be saved: cannot write to json file (permission denied)."
+msgstr ""
+
+#: lib/gui/edit_json/main_panel.py:419
+msgid "Could not write to json file: permission denied."
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:24
@@ -3611,7 +3619,7 @@ msgstr ""
 msgid "Font Sampling"
 msgstr ""
 
-#: lib/gui/edit_json/main_panel.py:67 lib/gui/lettering_font_sample.py:38
+#: lib/gui/edit_json/main_panel.py:74 lib/gui/lettering_font_sample.py:38
 #: lib/gui/simulator/view_panel.py:129 print/templates/ui.html:5
 #: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:77
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
