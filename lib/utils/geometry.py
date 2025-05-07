@@ -180,10 +180,12 @@ def ensure_multi_point(thing):
 
 
 def ensure_polygon(thing):
-    """Given a Polygon or a MultiPolygon
+    """Given a Polygon, a MultiPolygon or a GeometryCollection
 
    Returns the Polygon or the biggest Polygon of the MultiPolygon"""
 
+    if thing.geom_type == "GeometryCollection":
+        thing = ensure_multi_polygon(thing)
     if thing.geom_type == "MultiPolygon":
         thing = list(thing.geoms)
         thing.sort(key=lambda thing: thing.area, reverse=True)
