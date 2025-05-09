@@ -50,7 +50,7 @@ if [ "$BUILD" = "osx" ]; then
                         --scripts installer_scripts/scripts \
                         --install-location ${PKG_INSTALL_PATH}inkstitch.app \
                         artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.pkg
-        if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ || $NOTARIZE_DEVELOPMENT_BUILDS == true ]]; then
+        if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+ || $NOTARIZE_DEVELOPMENT_BUILDS == true ]]; then
             echo "Notary starting"
             echo "Adding keychain item for notarytool"
             xcrun notarytool store-credentials "inkstitch-profile"  \
