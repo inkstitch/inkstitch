@@ -1,13 +1,14 @@
 import wx
+from wx.lib.scrolledpanel import ScrolledPanel
 
 from ...i18n import _
 from ...lettering.categories import FONT_CATEGORIES, FontCategory
 
 
-class LetteringOptionsPanel(wx.Panel):
+class LetteringOptionsPanel(ScrolledPanel):
     def __init__(self, parent, panel):
         self.panel = panel
-        wx.Panel.__init__(self, parent)
+        ScrolledPanel.__init__(self, parent)
 
         outer_sizer = wx.BoxSizer(wx.VERTICAL)
 
@@ -70,7 +71,7 @@ class LetteringOptionsPanel(wx.Panel):
         self.font_selector_box = wx.StaticBox(self, wx.ID_ANY, label=_("Font"))
         font_selector_sizer = wx.StaticBoxSizer(self.font_selector_box, wx.VERTICAL)
         font_selector_box = wx.BoxSizer(wx.HORIZONTAL)
-        font_selector_box.Add(self.font_chooser, 4, wx.EXPAND | wx.TOP | wx.BOTTOM | wx.RIGHT, 10)
+        font_selector_box.Add(self.font_chooser, 1, wx.EXPAND | wx.TOP | wx.BOTTOM | wx.RIGHT, 10)
         font_selector_sizer.Add(font_selector_box, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
         font_selector_sizer.Add(self.font_description, 0, wx.EXPAND | wx.ALL, 10)
         font_selector_sizer.Add(font_description_sizer, 0, wx.EXPAND | wx.ALL, 10)
@@ -142,12 +143,13 @@ class LetteringOptionsPanel(wx.Panel):
 
         # text input
         self.text_input_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
-        self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP)
+        self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP, size=(50, 100))
         self.text_editor.Bind(wx.EVT_TEXT, lambda event: self.panel.on_change("text", event))
 
         text_input_sizer = wx.StaticBoxSizer(self.text_input_box, wx.VERTICAL)
-        text_input_sizer.Add(self.text_editor, 2, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 10)
-        outer_sizer.Add(text_input_sizer, 2, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
+        text_input_sizer.Add(self.text_editor, 1, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 10)
+        outer_sizer.Add(text_input_sizer, 1, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
         # set panel sizer
-        self.SetSizerAndFit(outer_sizer)
+        self.SetSizer(outer_sizer)
+        self.SetupScrolling()
