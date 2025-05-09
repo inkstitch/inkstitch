@@ -80,6 +80,9 @@ class TextAlongPath:
 
         self.load_settings()
         self.font = get_font_by_id(self.settings.font)
+        if self.font is None:
+            errormsg(_("Couldn't identify the font specified in the lettering group."))
+            return
 
         if self.glyphs[0].get('transform', None) is not None:
             self._reset_glyph_transforms()
