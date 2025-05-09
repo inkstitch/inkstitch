@@ -73,32 +73,33 @@ class TextAlongPath:
         self.path = Stroke(path).as_multi_line_string().geoms[0]
         self.text_position = text_position
 
-        self.glyphs = [glyph for glyph in self.text.iterdescendants(SVG_GROUP_TAG) if glyph.label and len(glyph.label) == 1]
+        self.glyphs = [glyph for glyph in self.text.iterdescendants(SVG_GROUP_TAG) if glyph.get('inkstitch:letter-group', '') == 'glyph']
         if not self.glyphs:
             errormsg(_("The text doesn't contain any glyphs."))
             return
 
         self.load_settings()
+        self.font = get_font_by_id(self.settings.font)
+        if self.font is None:
+            errormsg(_("Couldn't identify the font specified in the lettering group."))
+            return
 
         if self.glyphs[0].get('transform', None) is not None:
             self._reset_glyph_transforms()
 
         hidden_commands = self.hide_commands()
-        space_indices, stretch_space, text_baseline = self.get_position_and_stretch_values()
-        start_position = self.get_start_position()
-        self.transform_glyphs(start_position, stretch_space, space_indices, text_baseline)
+        self.glyphs_along_path()
         self.restore_commands(hidden_commands)
 
     def _reset_glyph_transforms(self):
-        font = get_font_by_id(self.settings.font)
-        if font is not None:
+        if self.font is not None:
             try:
                 text_group = list(self.text.iterchildren(SVG_GROUP_TAG))[0]
             except IndexError:
                 pass
             for glyph in text_group.iterchildren():
                 glyph.delete()
-            rendered_text = font.render_text(
+            rendered_text = self.font.render_text(
                 self.settings.text,
                 text_group,
                 None,  # we don't know the font variant (?)
@@ -106,41 +107,84 @@ class TextAlongPath:
                 self.settings.trim_option,
                 self.settings.use_trim_symbols
             )
-            self.glyphs = [glyph for glyph in rendered_text.iterdescendants(SVG_GROUP_TAG) if glyph.label and len(glyph.label) == 1]
+            self.glyphs = [glyph for glyph in rendered_text.iterdescendants(SVG_GROUP_TAG) if glyph.get('inkstitch:letter-group', '') == 'glyph']
 
-    def get_start_position(self):
+    def glyphs_along_path(self):
+        path = self.path
+        for text_line in self.text.getchildren()[0].iterchildren():
+            self.transform_glyphs(path, text_line)
+
+            # offset path for the next line
+            path = path.offset_curve(self.font.leading)
+
+    def transform_glyphs(self, path, line):
+        line_bbox = line.bounding_box()
+        text_baseline = line_bbox.bottom
+        text_width = line_bbox.width
+
+        if self.text_position == 'stretch':
+            num_spaces = len(line) - 1
+
+            line_glyphs = [glyph for glyph in line.iterdescendants(SVG_GROUP_TAG) if glyph.get('inkstitch:letter-group', '') == 'glyph']
+            total_stretch_spaces = len(line_glyphs) - 1 + num_spaces
+
+            stretch_space = (path.length - text_width) / total_stretch_spaces
+        else:
+            stretch_space = 0
+
+        start_position = self.get_start_position(text_width, path.length)
+        text_scale = Transform(f'scale({self.settings.scale / 100})')
+        distance = start_position
+        old_bbox = None
+
+        words = line.getchildren()
+        if self.font.text_direction == "rtl":
+            words.reverse()
+        for word in words:
+            glyphs = word.getchildren()
+            if self.font.text_direction == "rtl":
+                glyphs.reverse()
+            for glyph in glyphs:
+                # dimensions
+                bbox = glyph.bounding_box()
+                transformed_bbox = glyph.bounding_box(word.composed_transform())
+                left = bbox.left
+                transformed_left = transformed_bbox.left
+                width = convert_unit(transformed_bbox.width, 'px', self.svg.unit)
+
+                # adjust position
+                if old_bbox:
+                    distance += convert_unit(transformed_left - old_bbox.right, 'px', self.svg.unit) + stretch_space
+
+                new_distance = distance + width
+
+                # calculate and apply transform
+                first = path.interpolate(distance)
+                last = path.interpolate(new_distance)
+
+                angle = degrees(atan2(last.y - first.y, last.x - first.x)) % 360
+                translate = InkstitchPoint(first.x, first.y) - InkstitchPoint(left, text_baseline)
+
+                transform = Transform(f"rotate({angle}, {first.x}, {first.y}) translate({translate.x} {translate.y})")
+                correction_transform = Transform(get_correction_transform(glyph))
+                glyph.transform = correction_transform @ transform @ glyph.transform @ text_scale
+
+                # set values for next iteration
+                distance = new_distance
+                old_bbox = transformed_bbox
+
+            distance += stretch_space
+
+    def get_start_position(self, text_length, path_length):
         start_position = 0
-        text_length = self.text_length()
-        path_length = self.path.length
         if self.text_position == 'center':
             start_position = (path_length - text_length) / 2
         if self.text_position == 'right':
             start_position = path_length - text_length
         return start_position
 
-    def get_position_and_stretch_values(self):
-        text_bbox = self.glyphs[0].getparent().bounding_box()
-        text_baseline = text_bbox.bottom
-
-        if self.text_position == 'stretch':
-            text_content = self.settings.text
-            space_indices = [i for i, t in enumerate(text_content) if t == " "]
-            text_bbox = self.text.bounding_box()
-            text_width = convert_unit(text_bbox.width, 'px', self.svg.unit)
-
-            if len(text_content) - 1 != 0:
-                path_length = self.path.length
-                stretch_space = (path_length - text_width) / (len(text_content) - 1)
-            else:
-                stretch_space = 0
-        else:
-            stretch_space = 0
-            space_indices = []
-
-        return space_indices, stretch_space, text_baseline
-
-    def text_length(self):
-        return convert_unit(self.text.bounding_box().width, 'px', self.svg.unit)
+    def text_length(self, line):
+        return convert_unit(line.bounding_box().width, 'px', self.svg.unit)
 
     def hide_commands(self):
         # hide commmands for bounding box calculation
@@ -155,46 +199,6 @@ class TextAlongPath:
     def restore_commands(self, hidden_commands):
         for command in hidden_commands:
             command.style['display'] = "inline"
-
-    def transform_glyphs(self, start_position, stretch_space, space_indices, text_baseline):
-        text_scale = Transform(f'scale({self.settings.scale / 100})')
-        distance = start_position
-        old_bbox = None
-        i = 0
-
-        for glyph in self.glyphs:
-            # dimensions
-            bbox = glyph.bounding_box()
-            transformed_bbox = glyph.bounding_box(glyph.getparent().composed_transform())
-            left = bbox.left
-            transformed_left = transformed_bbox.left
-            width = convert_unit(transformed_bbox.width, 'px', self.svg.unit)
-
-            # adjust position
-            if old_bbox:
-                distance += convert_unit(transformed_left - old_bbox.right, 'px', self.svg.unit) + stretch_space
-
-            if self.text_position == 'stretch' and i in space_indices:
-                distance += stretch_space
-                i += 1
-
-            new_distance = distance + width
-
-            # calculate and apply transform
-            first = self.path.interpolate(distance)
-            last = self.path.interpolate(new_distance)
-
-            angle = degrees(atan2(last.y - first.y, last.x - first.x)) % 360
-            translate = InkstitchPoint(first.x, first.y) - InkstitchPoint(left, text_baseline)
-
-            transform = Transform(f"rotate({angle}, {first.x}, {first.y}) translate({translate.x} {translate.y})")
-            correction_transform = Transform(get_correction_transform(glyph))
-            glyph.transform = correction_transform @ transform @ glyph.transform @ text_scale
-
-            # set values for next iteration
-            distance = new_distance
-            old_bbox = transformed_bbox
-            i += 1
 
     def load_settings(self):
         """Load the settings saved into the text element"""

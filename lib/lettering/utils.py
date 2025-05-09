@@ -47,7 +47,7 @@ def get_font_by_id(font_id):
             continue
         for font_dir in font_dirs:
             font = _get_font_from_path(font_path, font_dir)
-            if font and font.id == font_id:
+            if font and font_id in [font.id, font.marked_custom_font_id]:
                 return font
     return None
 
@@ -61,7 +61,7 @@ def get_font_by_name(font_name):
             continue
         for font_dir in font_dirs:
             font = _get_font_from_path(font_path, font_dir)
-            if font and font.name == font_name:
+            if font and font_name in [font.name, font.marked_custom_font_name]:
                 return font
     return None
 
