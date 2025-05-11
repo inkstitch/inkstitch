@@ -409,6 +409,7 @@ class ParamsTab(ScrolledPanel):
         for param in self.params:
             col1 = self.create_change_indicator(param.name)
             description = wx.StaticText(self, label=param.description)
+            description.Wrap(150)
             description.SetToolTip(param.tooltip)
 
             if param.select_items is not None:
@@ -694,11 +695,8 @@ class SettingsPanel(wx.Panel):
         self.SetSizer(sizer_1)
         sizer_1.Fit(self)
 
-        # prevent the param dialog to become smaller than 500*400
-        # otherwise the scrollbar jumps to the side and produces a
-        # deprecation warning in wxpythons scrolledpanel.py line 225 -
-        # which is expecting an integer, but uses previously a division
-        # self.SetSizeHints(600, 400)
+        # prevent the param dialog to become smaller than 350*100
+        self.SetSizeHints(350, 100)
 
         self.Layout()
         # end wxGlade
