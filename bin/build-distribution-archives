@@ -115,6 +115,7 @@ if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
 
     echo -n "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import
     if [[ "$BUILD" = "linux32" ]]; then
+        which gpg
         export GPG_TTY=$(tty)
         cat <<EOF > $HOME/.rpmmacros
         %_gpg_name EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44
@@ -122,6 +123,8 @@ if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
         %_gpg_path /github/home/.gnupg
 EOF
     else
+        which gpg
+        export GPG_TTY=$(tty)
         cat <<EOF > $HOME/.rpmmacros
     %_gpg_name EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44
     %_signature gpg
