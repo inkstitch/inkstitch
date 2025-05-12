@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-05-12 01:48+0000\n"
-"PO-Revision-Date: 2025-05-12 01:48\n"
+"PO-Revision-Date: 2025-05-12 17:23\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -135,7 +135,7 @@ msgstr "Baumans FI Small ist eine abgewandelte, kleinere Form von Baumans FI. Di
 #. description of font in fonts/bluenesia_satin
 #: inkstitch-fonts-metadata.py:44
 msgid "A Syafrizal a.k.a. Khurasan jawn. 3.5mm satin at 100%, splits at higher sizes."
-msgstr ""
+msgstr "Eine abgewandelte Schriftart von Khurasan Studio. Bei 100% ist die Satinschrift 3,5 mm groß. Hochskaliert werden Zwischenstiche eingefügt."
 
 #. description of font in fonts/califragilistic
 #: inkstitch-fonts-metadata.py:46
@@ -2855,7 +2855,7 @@ msgstr "Der Text enthält keine Schriftzeichen."
 
 #: lib/extensions/lettering_along_path.py:84
 msgid "Couldn't identify the font specified in the lettering group."
-msgstr ""
+msgstr "Die Schrift konnte nicht gefunden werden."
 
 #: lib/extensions/lettering_custom_font_dir.py:28
 msgid "Please specify the directory of your custom fonts."
@@ -3350,11 +3350,11 @@ msgstr "JSON-Datei konnte nicht gelesen werden."
 
 #: lib/gui/edit_json/main_panel.py:405
 msgid "Changes will not be saved: cannot write to json file (permission denied)."
-msgstr ""
+msgstr "Veränderungen werden nicht gespeichert: die JSON-Datei ist nicht beschreibbar (permission denied)."
 
 #: lib/gui/edit_json/main_panel.py:419
 msgid "Could not write to json file: permission denied."
-msgstr ""
+msgstr "Die JSON-Datei ist nicht beschreibbar (permission denied)."
 
 #: lib/gui/edit_json/settings_panel.py:24
 msgid "Text before"
