@@ -112,6 +112,9 @@ if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
         VERSION="0.0.1-${VERSION}"
     fi
 
+    # fix for linux32 gpg issue
+    export GPG_TTY=$(tty)
+
     echo -n "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import
     cat <<EOF > $HOME/.rpmmacros
 %_gpg_name EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44
