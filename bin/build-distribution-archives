@@ -152,6 +152,6 @@ EOF
     rpmsign --addsign inkstitch*.rpm
     mv inkstitch*.deb inkstitch*.rpm artifacts/
 
-    tar -C dist -Jcf artifacts/inkstitch-${VERSION}-${OS}.tar.xz inkstitch
-    cat "$(dirname "$0")/linux-sh-installer" artifacts/inkstitch-${VERSION}-${OS}.tar.xz > artifacts/inkstitch-${VERSION}-${OS}.sh
+    tar -C dist -Jcf artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.tar.xz inkstitch
+    cat "$(dirname "$0")/linux-sh-installer" artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.tar.xz > artifacts/inkstitch-${VERSION}-${OS}.sh
 fi
