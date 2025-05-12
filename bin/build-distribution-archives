@@ -152,6 +152,7 @@ EOF
     rpmsign --addsign inkstitch*.rpm
     mv inkstitch*.deb inkstitch*.rpm artifacts/
 
+    # set file name for each cpu arch
     if [[ "$BUILD" = "linux32" ]]; then
         tar -C dist -Jcf artifacts/inkstitch-${VERSION}-${OS}-i386.tar.xz inkstitch
         cat "$(dirname "$0")/linux-sh-installer" artifacts/inkstitch-${VERSION}-${OS}-i386.tar.xz > artifacts/inkstitch-${VERSION}-${OS}-i386.sh
