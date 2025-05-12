@@ -34,7 +34,11 @@ Alkoholische Getränke und Speisen kosten extra.
 Ein Computerprogramm nur in der Theorie ist langweilig.
 Wir wollen gemeinsam Ausprobieren und Testen.
 
-Wir nutzen eine Entwicklerversion für das Treffen. Es wäre toll, wenn die bereits auf euren Laptops installiert ist. Ein Link hierzu wird kurz vor dem Treffen eingestellt.
+**Ink/Stitch Installation**
+
+Wir nutzen eine Entwicklerversion für das Treffen. Es wäre toll, wenn die bereits auf euren Laptops installiert ist.
+
+Hier geht es zu den Installationsdateien: <https://github.com/inkstitch/inkstitch/releases/tag/dev-build-treffen-in-essen>
 
 **Eure Ink/Stitch Kreationen**
 
