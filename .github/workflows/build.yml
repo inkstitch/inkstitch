@@ -26,6 +26,7 @@ jobs:
           python -m pip install wheel
 
           sudo apt-get install gettext
+          sudo apt-get install dpkg-sig
 
           # for wxPython
           sudo apt install libnotify4
@@ -98,6 +99,7 @@ jobs:
           python -m pip install wheel
 
           sudo apt-get install gettext
+          sudo apt-get install dpkg-sig
 
           # for wxPython
           sudo apt install libnotify4
@@ -195,6 +197,7 @@ jobs:
           gem install fpm
           apt-get install -y python3-wheel
           apt-get install -y gettext
+          apt-get install -y dpkg-sig
 
           # for wxPython
           apt-get install -y libnotify4

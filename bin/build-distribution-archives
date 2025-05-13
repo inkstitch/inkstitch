@@ -162,11 +162,11 @@ EOF
         --maintainer "maintainer@inkstitch.org" \
         --after-install bin/after-install \
         --before-remove bin/before-remove \
-        --rpm-sign \
         --verbose \
         dist/inkstitch=/opt
 
-    #rpmsign --addsign inkstitch*.rpm
+    dpkg-sig --sign "$INKSTITCH_GPG_KEY" inkstitch*.rpm
+    rpmsign --addsign inkstitch*.rpm
     mv inkstitch*.deb inkstitch*.rpm artifacts/
 
     # set file name for each cpu arch
