@@ -115,21 +115,21 @@ if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
 
     echo -n "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import
     if [[ "$BUILD" = "linux32" ]]; then
-        which gpg
         export GPG_TTY=$(tty)
         cat <<EOF > $HOME/.rpmmacros
         %_gpg_name EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44
         %_signature gpg
         %_gpg_path /github/home/.gnupg
+        %_gpgbin /usr/bin/gpg
 EOF
     else
-        which gpg
         export GPG_TTY=$(tty)
         cat <<EOF > $HOME/.rpmmacros
     %_gpg_name EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44
     %_signature gpg
 EOF
     fi
+    echo "Creating deb"
     deb_version="$(sed -E 's/[^a-zA-Z0-9.+]/./g' <<< "$VERSION")"
     fpm -s dir \
         -t deb \
@@ -146,6 +146,7 @@ EOF
         --verbose \
         dist/inkstitch=/opt
 
+    echo "Creating rpm"
     fpm -s dir \
         -t rpm \
         -n inkstitch \
@@ -161,6 +162,8 @@ EOF
         --verbose \
         dist/inkstitch=/opt
 
+    pwd
+    ls
     rpmsign --addsign inkstitch*.rpm
     mv inkstitch*.deb inkstitch*.rpm artifacts/
 
