@@ -116,6 +116,7 @@ if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
     echo -n "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import
     if [[ "$BUILD" = "linux32" ]]; then
         export GPG_TTY=$(tty)
+        linux_arch="i386"
         cat <<EOF > $HOME/.rpmmacros
         %_gpg_name EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44
         %_signature gpg
@@ -124,6 +125,7 @@ if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
 EOF
     else
         export GPG_TTY=$(tty)
+        linux_arch=${ARCH}
         cat <<EOF > $HOME/.rpmmacros
     %_gpg_name EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44
     %_signature gpg
@@ -152,6 +154,7 @@ EOF
         -n inkstitch \
         -v "$VERSION" \
         -d "inkscape >= 1.0.0" \
+        -a "$linux_arch" \
         --rpm-compression xz \
         --license "GPL-3.0" \
         --description "An open-source machine embroidery design platform based on Inkscape" \
