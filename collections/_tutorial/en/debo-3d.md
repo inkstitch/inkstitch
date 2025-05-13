@@ -4,7 +4,7 @@ permalink: /tutorials/debo-3d/
 last_modified_at: 2025-05-12
 language: en
 excerpt: "Raised embroidery on a cap example file"
-image: "/assets/images/tutorials/debo-3d/final.webp"
+image: "/assets/images/tutorials/debo-3d/Final.webp"
 
 tutorial-type:
   - Sample File
@@ -16,7 +16,7 @@ field-of-use:
 user-level: Intermediate
 ---
 
-![Cap with raised embroidery](/assets/images/tutorials/debo-3d/final.jpg)
+![Cap with raised embroidery](/assets/images/tutorials/debo-3d/Final.webp)
 
 ## Steps
 
@@ -48,7 +48,7 @@ user-level: Intermediate
    Hide the top layer.  Convert the middle layer to ensure a running stitch is
    used around each boundary of an area where there will be a satin stitch.
 
-   ![Screen shot of boundaries of satin stitch region](/assets/images/tutorials/debo-3d/SatinStitchBoundary.png)
+   ![Screen shot of boundaries of satin stitch region](/assets/images/tutorials/debo-3d/BoundaryStitch.png)
 
 6. Scale each boundary region in the middle layer by 90%.  Unhide the top layer.  Adjust
    individual nodes so that the spacing between the outer boundary in each satin stitch
@@ -94,7 +94,7 @@ user-level: Intermediate
 13. Embroider the bottom layer.  Place the foam on the cap. Embroider the
     middle layer.
 
-    |[Image of foam embroidered ontop the cap](/assets/images/tutorials/debo-3d/FoamMiddleLayer.webp)
+    ![Image of foam embroidered on top of the cap](/assets/images/tutorials/debo-3d/FoamMiddleLayer.webp)
 
 14. Carefully remove the excess foam.
 
