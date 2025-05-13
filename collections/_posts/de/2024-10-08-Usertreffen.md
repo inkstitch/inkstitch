@@ -40,6 +40,8 @@ Wir nutzen eine Entwicklerversion für das Treffen. Es wäre toll, wenn die bere
 
 Hier geht es zu den Installationsdateien: <https://github.com/inkstitch/inkstitch/releases/tag/dev-build-treffen-in-essen>
 
+Und noch eine Datei, die wir für unsere [Satinübungen](/assets/files/Satinvorlagen2025.svg){: download="Satinvorlagen.svg" } nutzen können.
+
 **Eure Ink/Stitch Kreationen**
 
 Wenn ihr bereits Erfahrung mit Ink/Stitch habt, bringt gerne mit, was ihr bereits Schönes mit Ink/Stitch gemacht habt.
