@@ -165,7 +165,9 @@ EOF
         --verbose \
         dist/inkstitch=/opt
 
-    dpkg-sig --sign "$INKSTITCH_GPG_KEY" inkstitch*.rpm
+    if [[ "$BUILD" = "linux" ]]; then
+        dpkg-sig --sign "$INKSTITCH_GPG_KEY" inkstitch*.deb
+    fi
     rpmsign --addsign inkstitch*.rpm
     mv inkstitch*.deb inkstitch*.rpm artifacts/
 

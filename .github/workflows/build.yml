@@ -197,7 +197,6 @@ jobs:
           gem install fpm
           apt-get install -y python3-wheel
           apt-get install -y gettext
-          apt-get install -y dpkg-sig
 
           # for wxPython
           apt-get install -y libnotify4
