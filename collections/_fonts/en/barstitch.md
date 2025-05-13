@@ -78,9 +78,6 @@ At a scale of 100% these fonts have an approximate height of {{ font3.size }} mm
 They can be scaled from {{ font3.min_scale | times: 100 | floor }}% ({{ font3.size | times: font3.min_scale }} mm)
 up to {{ font3.max_scale | times: 100 | floor }}% ({{ font3.size | times: font3.max_scale }} mm).
 
-
-
-
 ## In real life
 
 {% include folder-galleries path="fonts/barstitch/" %}

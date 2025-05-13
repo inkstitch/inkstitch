@@ -10,7 +10,7 @@ preview_image:
     height: 64
 data_title:
   - mimosa_large
-  - mimosa_small
+  - mimosa_medium
 ---
 {%- assign font1 = site.data.fonts.mimosa_medium.font -%}
 {%- assign font2 = site.data.fonts.mimosa_large.font -%}
