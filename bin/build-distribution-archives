@@ -162,8 +162,7 @@ EOF
         --verbose \
         dist/inkstitch=/opt
 
-    pwd
-    ls
+    echo $deb_version
     rpmsign --addsign inkstitch*.rpm
     mv inkstitch*.deb inkstitch*.rpm artifacts/
 
