@@ -29,7 +29,7 @@ logger = logging.getLogger("inkstitch")   # create module logger with name 'inks
 old_debug_ini = SCRIPTDIR / "DEBUG.ini"
 if old_debug_ini.exists():
     print("ERROR: old DEBUG.ini exists, please reformat it to DEBUG.toml and remove DEBUG.ini file", file=sys.stderr)
-    exit(1)
+    sys.exit(1)
 # --- end of temporary ---
 
 debug_toml = SCRIPTDIR / "DEBUG.toml"
@@ -49,6 +49,10 @@ if not running_as_frozen:  # override running_as_frozen from DEBUG.toml - for te
 if len(sys.argv) < 2:
     # no arguments - prevent accidentally running this script
     msg = "No arguments given, exiting!"  # without gettext localization see _()
+    msg += "\n\n"
+    msg += "Ink/Stitch is an Inkscape extension."
+    msg += "\n\n"
+    msg += "Please enter arguments or run Ink/Stitch through the Inkscape extensions menu."
     if running_as_frozen:  # we show dialog only when running from pyinstaller bundle - using wx
         try:
             import wx
@@ -60,7 +64,7 @@ if len(sys.argv) < 2:
             print(msg, file=sys.stderr)
     else:
         print(msg, file=sys.stderr)
-    exit(1)
+    sys.exit(1)
 
 # activate logging - must be done before any logging is done
 debug_logging.activate_logging(running_as_frozen, ini, SCRIPTDIR)
