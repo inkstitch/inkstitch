@@ -4,7 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from html import unescape
-from sys import platform
+from sys import exit, platform
 
 from inkex import errormsg
 from lxml import etree
