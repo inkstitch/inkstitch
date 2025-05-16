@@ -14,7 +14,8 @@ from ..commands import ensure_symbol
 from ..i18n import _
 from ..stitch_plan import generate_stitch_plan
 from ..svg import get_correction_transform
-from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SVG_PATH_TAG
+from ..svg.tags import (EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE, INKSCAPE_LABEL,
+                        SVG_GROUP_TAG, SVG_PATH_TAG)
 from .base import InkstitchExtension
 
 
@@ -79,15 +80,26 @@ class LettersToFont(InkstitchExtension):
         self.insert_baseline()
 
     def get_glyph_element(self, glyph):
-        stitch_plan = generate_stitch_plan(str(glyph), self.options.import_commands)
-        # we received a stitch plan wrapped in an svg document, we only need the stitch_plan group
-        # this group carries the name of the file, so we can search for it.
         label = os.path.basename(glyph)
-        search_string = f'.//*[@inkscape:label="{ escape(label) }"]'
-        stitch_plan = stitch_plan.xpath(search_string, namespaces=inkex.NSS)[0]
-        stitch_plan.attrib.pop(INKSCAPE_GROUPMODE)
+        if self.options.file_format.endswith('SVG'):
+            stitch_plan = self.get_svg_elements(glyph)
+        else:
+            stitch_plan = generate_stitch_plan(str(glyph), self.options.import_commands)
+            # we received a stitch plan wrapped in an svg document, we only need the stitch_plan group
+            # this group carries the name of the file, so we can search for it.
+            search_string = f'.//*[@inkscape:label="{ escape(label) }"]'
+            stitch_plan = stitch_plan.xpath(search_string, namespaces=inkex.NSS)[0]
+            stitch_plan.attrib.pop(INKSCAPE_GROUPMODE)
         stitch_plan.label = label
         return stitch_plan
+
+    def get_svg_elements(self, glyph):
+        glyph_svg = self.load(glyph).getroot()
+        glyph_group = inkex.Group()
+        # move all embroiderable child elements and groups of the svg file into a group
+        for child in glyph_svg.iterchildren((SVG_GROUP_TAG, EMBROIDERABLE_TAGS)):
+            glyph_group.add(child)
+        return glyph_group
 
     def insert_baseline(self):
         self.svg.namedview.add_guide(position=0.0, name="baseline")
