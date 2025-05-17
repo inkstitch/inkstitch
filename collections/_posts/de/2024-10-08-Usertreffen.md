@@ -127,3 +127,12 @@ Kaalleen
 
 
 P.S. Für diejenigen die sich einen Eindruck darüber verschaffen wollen, wie sich das Erstellen von Stickmustern mit Grafiktabletts anfühlt, bringen wir welche zum Ausprobieren mit.
+
+## Links
+
+* <https://w.arbores.tech/wiki/InkStitch_-_Textilien_flicken>
+* <https://w.arbores.tech/wiki/InkStitch_-_Knockdown_Stich_und_globale_Unterlagen>
+* <https://w.arbores.tech/wiki/Maschinenstickerei_auf_Socken>
+* <https://arbores.tech/.../essen-inkstitch-treffen-2025/>
+* <https://arbores.tech/e/sock-tool/>
+
