@@ -16,7 +16,7 @@
     <param name="notebook" type="notebook">
       <page name="options" gui-text="Options">
         <param name="keep-holes" type="bool" gui-text="Keep holes">true</param>
-        <param name="offset" type="float" gui-text="Offset" min="0" max="50">1</param>
+        <param name="offset" type="float" gui-text="Offset" min="-50" max="50">1</param>
         <param name="join-style" type="optiongroup" gui-text="Method">
            <option value="1">Round</option>
            <option value="2">Mitre</option>
