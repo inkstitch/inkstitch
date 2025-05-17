@@ -133,6 +133,6 @@ P.S. Für diejenigen die sich einen Eindruck darüber verschaffen wollen, wie si
 * <https://w.arbores.tech/wiki/InkStitch_-_Textilien_flicken>
 * <https://w.arbores.tech/wiki/InkStitch_-_Knockdown_Stich_und_globale_Unterlagen>
 * <https://w.arbores.tech/wiki/Maschinenstickerei_auf_Socken>
-* <https://arbores.tech/.../essen-inkstitch-treffen-2025/>
+* <https://arbores.tech/e/inkstitch/essen-inkstitch-treffen-2025>
 * <https://arbores.tech/e/sock-tool/>
 
