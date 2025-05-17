@@ -135,4 +135,5 @@ P.S. Für diejenigen die sich einen Eindruck darüber verschaffen wollen, wie si
 * <https://w.arbores.tech/wiki/Maschinenstickerei_auf_Socken>
 * <https://arbores.tech/e/inkstitch/essen-inkstitch-treffen-2025>
 * <https://arbores.tech/e/sock-tool/>
+* <https://edutechwiki.unige.ch/fr/Liste_des_emojis_à_broder>
 
