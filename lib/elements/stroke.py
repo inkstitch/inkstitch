@@ -496,7 +496,9 @@ class Stroke(EmbroideryElement):
             return [[[flattened[0][0][0], flattened[0][0][1]], [flattened[0][0][0] + 1.0, flattened[0][0][1]]]]
 
         if self.stroke_method == 'manual_stitch':
-            return [self.strip_control_points(subpath) for subpath in path]
+            coords = [shgeo.LineString(self.strip_control_points(subpath)).coords for subpath in path]
+            coords = self._get_clipped_path(coords)
+            return coords
         else:
             return flattened
 
