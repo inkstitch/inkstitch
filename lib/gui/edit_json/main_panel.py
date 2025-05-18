@@ -517,7 +517,10 @@ class LetteringEditJsonPanel(wx.Panel):
         if horiz_adv_x_default in [0, None]:
             horiz_adv_x_default = glyph.width + glyph.min_x
 
-        position_x += self.font.horiz_adv_x.get(character, horiz_adv_x_default) - glyph.min_x
+        # in some rare cases, horiz_adv_x for a character returns None
+        # so we need to really ensure that the default is used in this case
+        horiz_adv_x = self.font.horiz_adv_x.get(character, horiz_adv_x_default) or horiz_adv_x_default
+        position_x += horiz_adv_x - glyph.min_x
 
         self.font._update_commands(node, glyph)
         self.font._update_clips(self.layer, node, glyph)
