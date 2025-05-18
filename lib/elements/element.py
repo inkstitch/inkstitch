@@ -591,6 +591,10 @@ class EmbroideryElement(object):
     def _get_guides_cache_key_data(self):
         return get_marker_elements_cache_key_data(self.node, "guide-line")
 
+    @cache
+    def _get_ripple_cache_key_data(self):
+        return get_marker_elements_cache_key_data(self.node, "anchor-line")
+
     def _get_gradient_cache_key_data(self):
         gradient = {}
         if hasattr(self, 'gradient') and self.gradient is not None:
@@ -618,6 +622,7 @@ class EmbroideryElement(object):
         cache_key_generator.update([(c.command, c.target_point) for c in self.commands])
         cache_key_generator.update(self._get_patterns_cache_key_data())
         cache_key_generator.update(self._get_guides_cache_key_data())
+        cache_key_generator.update(self._get_ripple_cache_key_data())
         cache_key_generator.update(self.get_cache_key_data(previous_stitch, next_element))
         cache_key_generator.update(self._get_tartan_key_data())
 
