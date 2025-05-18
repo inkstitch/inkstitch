@@ -84,6 +84,8 @@ class TextAlongPath:
             errormsg(_("Couldn't identify the font specified in the lettering group."))
             return
 
+        self.font_scale = self.settings.scale / 100
+
         if self.glyphs[0].get('transform', None) is not None:
             self._reset_glyph_transforms()
 
@@ -128,12 +130,12 @@ class TextAlongPath:
             line_glyphs = [glyph for glyph in line.iterdescendants(SVG_GROUP_TAG) if glyph.get('inkstitch:letter-group', '') == 'glyph']
             total_stretch_spaces = len(line_glyphs) - 1 + num_spaces
 
-            stretch_space = (path.length - text_width) / total_stretch_spaces
+            stretch_space = (path.length - text_width * self.font_scale) / total_stretch_spaces
         else:
             stretch_space = 0
 
         start_position = self.get_start_position(text_width, path.length)
-        text_scale = Transform(f'scale({self.settings.scale / 100})')
+        text_scale = Transform(f'scale({self.font_scale})')
         distance = start_position
         old_bbox = None
 
@@ -176,6 +178,7 @@ class TextAlongPath:
             distance += stretch_space
 
     def get_start_position(self, text_length, path_length):
+        text_length = text_length * self.font_scale
         start_position = 0
         if self.text_position == 'center':
             start_position = (path_length - text_length) / 2
