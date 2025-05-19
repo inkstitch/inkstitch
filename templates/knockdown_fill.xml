@@ -17,12 +17,28 @@
       <page name="options" gui-text="Options">
         <param name="keep-holes" type="bool" gui-text="Keep holes">true</param>
         <param name="offset" type="float" gui-text="Offset" min="-50" max="50">1</param>
-        <param name="join-style" type="optiongroup" gui-text="Method">
+        <param name="join-style" type="optiongroup" appearance="combo" gui-text="Join style">
            <option value="1">Round</option>
            <option value="2">Mitre</option>
            <option value="3">Bevel</option>
         </param>
         <param name="mitre-limit" type="float" gui-text="Mitre limit" min="0.1" max="50">5.0</param>
+        <spacer />
+        <separator />
+        <spacer />
+      </page>
+      <page name="embossing" gui-text="Embossing">
+        <param name="shape" type="optiongroup" appearance="combo" gui-text="Shape">
+           <option value="">None</option>
+           <option value="square">Square</option>
+           <option value="circle">Circle</option>
+        </param>
+        <param name="shape-offset" type="float" gui-text="Offset" min="0" max="50">1</param>
+        <param name="shape-join-style" type="optiongroup" appearance="combo" gui-text="Join style">
+           <option value="1">Round</option>
+           <option value="2">Mitre</option>
+           <option value="3">Bevel</option>
+        </param>
       </page>
       <page name="info" gui-text="Help">
         <label appearance="header">This extension generates a knockdown fill area with a specified offset around selected elements.</label>
