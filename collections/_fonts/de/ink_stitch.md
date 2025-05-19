@@ -6,10 +6,10 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/inkstitch_small.jpg
     height: 6
-    title: "Ink/Stitch small"
+    title: "Ink/Stitch Small Font"
   - url: /assets/images/fonts/inkstitch_medium.jpg
     height: 19
-    title: "Ink/Stitch Medium"
+    title: "Ink/Stitch Medium Font"
 data_title:
   - small_font
   - medium_font
@@ -31,13 +31,13 @@ Beide Schriften umfassen {{ font.glyphs.size }} Schriftzeichen:
 
 ## Maße
 
-### Ink/Stitch Small
+### Ink/Stitch Small Font
 
 Bei einer Skalierung von 100% ist die Schrift ungefähr 6 mm hoch (1/4 Zoll).
 
 Sie kann bis auf 300% (~ 18 mm, 3/4 Zoll) hochskaliert werden. Von einer Verkleinerung wird abgeraten.
 
-### Ink/Stitch Medium
+### Ink/Stitch Medium Font
 
 Bei einer Skalierung von 100% ist die Schrift ca. 19 mm (3/4 Zoll) hoch.
 

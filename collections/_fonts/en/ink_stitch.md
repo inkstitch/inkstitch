@@ -6,10 +6,10 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/inkstitch_small.jpg
     height: 6
-    title: "Ink/Stitch small"
+    title: "Ink/Stitch Small Font"
   - url: /assets/images/fonts/inkstitch_medium.jpg
     height: 19
-    title: "Ink/Stitch Medium"
+    title: "Ink/Stitch Medium Font"
 data_title:
   - small_font
   - medium_font
@@ -31,7 +31,7 @@ Both fonts contain {{ font1.glyphs.size }} glyphs:
 
 ## Dimensions
 
-### Ink/Stitch Small
+### Ink/Stitch Small Font
 
 At 100%, Ink/Stitch Small is about 6 mm (1/4 inch) high.
 
@@ -39,7 +39,7 @@ It can be used  from {{ font2.min_scale | times: 100 | floor }}% ({{ font1.size 
 up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font2.max_scale }} mm)
 but should not be scaled down.
 
-### Ink/Stitch Medium
+### Ink/Stitch Medium Font
 
 At 100%, Ink/Stitch Medium is about  19 mm (3/4 inch) high.
 
