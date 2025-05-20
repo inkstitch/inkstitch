@@ -28,6 +28,8 @@ def ripple_stitch(stroke):
         return []
 
     is_linear, helper_lines = _get_helper_lines(stroke)
+    if not helper_lines:
+        return []
 
     num_lines = len(helper_lines[0])
     skip_start = _adjust_skip(stroke, num_lines, stroke.skip_start)
