@@ -2,6 +2,7 @@
 
 set -e
 info_year=$( date "+%Y" )
+ARCH="$(uname -m)"
 # PyInstaller v6.x rearranges folder configuration causing broken builds, This re-enables old onedir layout.
 pyinstaller_args+="--contents-directory . "
 
@@ -20,8 +21,8 @@ if [ "$BUILD" = "osx" ]; then
     fi
 elif [ "$BUILD" = "linux" ]; then
     pyinstaller_args+="--hidden-import gi.repository.Gtk "
-    pyinstaller_args+="--add-binary /lib/x86_64-linux-gnu/libcrypt.so.1:. "
-    pyinstaller_args+="--add-binary /lib/x86_64-linux-gnu/libnsl.so.1:. "
+    pyinstaller_args+="--add-binary /lib/${ARCH}-linux-gnu/libcrypt.so.1:. "
+    pyinstaller_args+="--add-binary /lib/${ARCH}-linux-gnu/libnsl.so.1:. "
 elif [ "$BUILD" = "linux32" ]; then
     pyinstaller_args+="--hidden-import gi.repository.Gtk "
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libcrypt.so.1:. "
