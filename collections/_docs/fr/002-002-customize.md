@@ -26,7 +26,7 @@ Raccourcis&nbsp;Clavier | Effet | Remplace
 <key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettrage (Q pour QWERTY) | Objet > Selecteurs et CSS
 <span style="white-space: nowrap;"><key>ctrl</key>+<key>shift</key>+<key>Del</key></span> | Dépistage de problèmes avec les objets
 <key>ctrl</key>+<key>shift</key>+<key>+</key> | Attacher des commandes aux objets selectionnés
-<key>ctrl</key>+<key>shift</key>+<key>U</key> | Convertir ligne en satin  (U ressemble à deux rails) | Objet > Grouper (utiliser Ctrl+G à la place)
+<key>ctrl</key>+<key>shift</key>+<key>U</key> | Trait en satin  (U ressemble à deux rails) | Objet > Grouper (utiliser Ctrl+G à la place)
 <key>ctrl</key>+<key>shift</key>+<key>J</key> | Intervertir les rails satin  (J ressemble à une flèche)
 <key>ctrl</key>+<key>shift</key>+<key>B</key> | Scinder colonne satin  (B est coupé en deux parties) | Chemin > Union (utiliser Ctrl++ à la place )
 <key>ctrl</key>+<key>shift</key>+<key>*</key> | Agencement automatique de colonnes satin (ordonne tout)
