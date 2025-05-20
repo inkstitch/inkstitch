@@ -4,7 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from inkex import Boolean, Path, PathElement
-from shapely import union_all
+from shapely import minimum_bounding_circle, union_all
 from shapely.geometry import LineString, Polygon
 
 from ..stitches.ripple_stitch import ripple_stitch
@@ -24,6 +24,10 @@ class KnockdownFill(InkstitchExtension):
         self.arg_parser.add_argument("-o", "--offset", type=float, default=0, dest="offset")
         self.arg_parser.add_argument("-j", "--join-style", type=str, default="1", dest="join_style")
         self.arg_parser.add_argument("-m", "--mitre-limit", type=float, default=5.0, dest="mitre_limit")
+
+        self.arg_parser.add_argument("-s", "--shape", type=str, default='', dest="shape")
+        self.arg_parser.add_argument("-f", "--shape-offset", type=float, default=0, dest="shape_offset")
+        self.arg_parser.add_argument("-p", "--shape-join-style", type=str, default="1", dest="shape_join_style")
         # TODO: Layer options: underlay, row spacing, angle
 
     def effect(self):
@@ -32,46 +36,59 @@ class KnockdownFill(InkstitchExtension):
 
         polygons = []
         for element in self.elements:
-            if element.name == "FillStitch":
-                # take expand value into account
-                shape = element.shrink_or_grow_shape(element.shape, element.expand)
-                # MultiPolygon
-                for polygon in shape.geoms:
-                    polygons.append(polygon)
-            elif element.name == "SatinColumn":
-                # plot points on rails, so we get the actual satin size (including pull compensation)
-                rail_pairs = zip(*element.plot_points_on_rails(
-                    0.3,
-                    element.pull_compensation_px,
-                    element.pull_compensation_percent / 100)
-                )
-                rails = []
-                for rail in rail_pairs:
-                    rails.append(LineString(rail))
-                polygon = Polygon(list(rails[0].coords) + list(rails[1].reverse().coords)).buffer(0)
-                polygons.append(polygon)
-            elif element.name == "Stroke":
-                if element.stroke_method == 'ripple_stitch':
-                    # for ripples this is going to be a bit complicated, so let's follow the stitch plan
-                    stitches = ripple_stitch(element)
-                    linestring = LineString(stitches)
-                    polygons.append(linestring.buffer(0.15 * PIXELS_PER_MM, cap_style='flat'))
-                elif element.stroke_method == 'zigzag_stitch':
-                    # zigzag stitch depends on the width of the stroke and pull compensation settings
-                    polygons.append(element.as_multi_line_string().buffer((element.stroke_width + element.pull_compensation) / 2, cap_style='flat'))
-                else:
-                    polygons.append(element.as_multi_line_string().buffer(0.15 * PIXELS_PER_MM, cap_style='flat'))
+            polygons.extend(self.element_outlines(element))
         combined_shape = union_all(polygons)
-        combined_shape = combined_shape.buffer(
-            self.options.offset * PIXELS_PER_MM,
-            cap_style=int(self.options.join_style),
-            join_style=int(self.options.join_style),
+
+        offset_shape = self._apply_offset(combined_shape, self.options.offset, self.options.join_style)
+        offset_shape = offset_shape.simplify(0.3)
+        offset_shape = ensure_multi_polygon(offset_shape)
+
+        self.insert_knockdown_elements(offset_shape)
+
+    def element_outlines(self, element):
+        polygons = []
+        if element.name == "FillStitch":
+            # take expand value into account
+            shape = element.shrink_or_grow_shape(element.shape, element.expand)
+            # MultiPolygon
+            for polygon in shape.geoms:
+                polygons.append(polygon)
+        elif element.name == "SatinColumn":
+            # plot points on rails, so we get the actual satin size (including pull compensation)
+            rail_pairs = zip(*element.plot_points_on_rails(
+                0.3,
+                element.pull_compensation_px,
+                element.pull_compensation_percent / 100)
+            )
+            rails = []
+            for rail in rail_pairs:
+                rails.append(LineString(rail))
+            polygon = Polygon(list(rails[0].coords) + list(rails[1].reverse().coords)).buffer(0)
+            polygons.append(polygon)
+        elif element.name == "Stroke":
+            if element.stroke_method == 'ripple_stitch':
+                # for ripples this is going to be a bit complicated, so let's follow the stitch plan
+                stitches = ripple_stitch(element)
+                linestring = LineString(stitches)
+                polygons.append(linestring.buffer(0.15 * PIXELS_PER_MM, cap_style='flat'))
+            elif element.stroke_method == 'zigzag_stitch':
+                # zigzag stitch depends on the width of the stroke and pull compensation settings
+                polygons.append(element.as_multi_line_string().buffer((element.stroke_width + element.pull_compensation) / 2, cap_style='flat'))
+            else:
+                polygons.append(element.as_multi_line_string().buffer(0.15 * PIXELS_PER_MM, cap_style='flat'))
+        elif element.name == "Clone":
+            with element.clone_elements() as elements:
+                for clone_child in elements:
+                    polygons.extend(self.element_outlines(clone_child))
+        return polygons
+
+    def _apply_offset(self, shape, offset_mm, join_style):
+        return shape.buffer(
+            offset_mm * PIXELS_PER_MM,
+            cap_style=int(join_style),
+            join_style=int(join_style),
             mitre_limit=float(max(self.options.mitre_limit, 0.1))
         )
-        combined_shape = combined_shape.simplify(0.3)
-        combined_shape = ensure_multi_polygon(combined_shape)
-
-        self.insert_knockdown_elements(combined_shape)
 
     def insert_knockdown_elements(self, combined_shape):
         first = self.svg.selection.rendering_order()[0]
@@ -88,6 +105,17 @@ class KnockdownFill(InkstitchExtension):
             if self.options.keep_holes:
                 for interior in polygon.interiors:
                     d += str(Path(interior.coords))
+
+            if self.options.shape == 'square':
+                square = polygon.envelope
+                offset_square = self._apply_offset(square, self.options.shape_offset, self.options.shape_join_style)
+                offset_square = offset_square.reverse()
+                d = str(Path(offset_square.exterior.coords)) + d
+            elif self.options.shape == 'circle':
+                circle = minimum_bounding_circle(polygon)
+                offset_circle = self._apply_offset(circle, self.options.shape_offset, self.options.shape_join_style)
+                offset_circle = offset_circle.reverse()
+                d = str(Path(offset_circle.exterior.coords)) + d
 
             path = PathElement()
             path.set('d', d)
