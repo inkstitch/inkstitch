@@ -107,8 +107,16 @@
           <param name="word-spacing" type="int" precision="1" min="-100" max="500" gui-text="Word spacing (px)"
                  gui-description="Space character width (default: 20)" indent="1">20</param>
          </hbox>
-
          <spacer />
+
+        <hbox indent="1">
+          <param name="use-custom-letter-spacing" type="bool" gui-text="Force" indent="1"
+                 gui-description="Overwrite letter spacing information from font file.">false</param>
+          <param name="letter-spacing" type="int" precision="1" min="-100" max="500" gui-text="Letter spacing (px)"
+                 gui-description="Letter spacing (default: 100)" indent="1">100</param>
+        </hbox>
+        <spacer />
+
          <separator indent="1"/>
 
       </page>

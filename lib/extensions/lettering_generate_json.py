@@ -35,10 +35,12 @@ class LetteringGenerateJson(InkstitchExtension):
         self.arg_parser.add_argument("-z", "--size", type=float, default=15, dest="size")
         self.arg_parser.add_argument("-i", "--min-scale", type=float, default=1.0, dest="min_scale")
         self.arg_parser.add_argument("-a", "--max-scale", type=float, default=1.0, dest="max_scale")
-        self.arg_parser.add_argument("-c", "--use-custom-leading", type=Boolean, default="false", dest="use_custom_leading")
-        self.arg_parser.add_argument("-b", "--use-custom-spacing", type=Boolean, default="false", dest="use_custom_spacing")
-        self.arg_parser.add_argument("-l", "--leading", type=int, default=0, dest="leading")
-        self.arg_parser.add_argument("-w", "--word-spacing", type=int, default=26, dest="word_spacing")
+        self.arg_parser.add_argument("--use-custom-leading", type=Boolean, default="false", dest="use_custom_leading")
+        self.arg_parser.add_argument("--use-custom-spacing", type=Boolean, default="false", dest="use_custom_spacing")
+        self.arg_parser.add_argument("--use-custom-letter-spacing", type=Boolean, default="false", dest="use_custom_letter_spacing")
+        self.arg_parser.add_argument("-l", "--leading", type=int, default=100, dest="leading")
+        self.arg_parser.add_argument("-w", "--word-spacing", type=int, default=20, dest="word_spacing")
+        self.arg_parser.add_argument("-b", "--letter-spacing", type=int, default=100, dest="letter_spacing")
         self.arg_parser.add_argument("-p", "--font-file", type=str, default="", dest="path")
 
         for category in FONT_CATEGORIES:
@@ -59,12 +61,17 @@ class LetteringGenerateJson(InkstitchExtension):
         hkern = font_info.hkern()
         custom_leading = self.options.use_custom_leading
         custom_spacing = self.options.use_custom_spacing
+        custom_letter_spacing = self.options.use_custom_letter_spacing
         word_spacing = font_info.word_spacing()
         # use user input in case that the default word spacing is not defined
         # in the svg file or the user forces custom values
         if custom_spacing or not word_spacing:
             word_spacing = self.options.word_spacing
         letter_spacing = font_info.letter_spacing()
+        # use user input in case that the default word spacing is not defined
+        # in the svg file or the user forces custom values
+        if custom_letter_spacing or not letter_spacing:
+            letter_spacing = self.options.letter_spacing
         units_per_em = font_info.units_per_em() or self.options.leading
         # use units_per_em for leading (line height) if defined in the font file,
         # unless the user wishes to overwrite the value
