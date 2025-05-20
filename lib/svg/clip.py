@@ -6,7 +6,6 @@
 from shapely.geometry import MultiPolygon, Polygon
 from shapely.validation import make_valid
 
-from ..elements import EmbroideryElement
 from ..utils import ensure_multi_polygon
 from .tags import SVG_GROUP_TAG, SVG_PATH_TAG
 
@@ -33,6 +32,9 @@ def get_clip_path(node):
 
 
 def _clip_paths(node_or_group):
+    # avoid circular import for EmbroideryElement
+    from ..elements import EmbroideryElement
+
     clip = node_or_group.clip
     if clip is None:
         return

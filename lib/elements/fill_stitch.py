@@ -23,7 +23,6 @@ from ..stitches import (auto_fill, circular_fill, contour_fill, guided_fill,
                         tartan_fill)
 from ..stitches.linear_gradient_fill import gradient_angle
 from ..svg import PIXELS_PER_MM
-from ..svg.clip import get_clip_path
 from ..svg.tags import INKSCAPE_LABEL
 from ..tartan.utils import get_tartan_settings, get_tartan_stripes
 from ..utils import cache
@@ -789,12 +788,11 @@ class FillStitch(EmbroideryElement):
         return ensure_multi_polygon(set_precision(shape, 0.00000000001), 3)
 
     def _get_clipped_path(self):
-        clip_path = get_clip_path(self.node)
-        if clip_path is None:
+        if self.clip_shape is None:
             return self.original_shape
 
         # make sure clip path and shape are valid
-        clip_path = make_valid(clip_path)
+        clip_path = make_valid(self.clip_shape)
         shape = make_valid(self.original_shape)
 
         try:

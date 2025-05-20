@@ -3,6 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 from __future__ import annotations
+
 import json
 import sys
 from contextlib import contextmanager
@@ -26,6 +27,7 @@ from ..stitch_plan.lock_stitch import (LOCK_DEFAULTS, AbsoluteLock, CustomLock,
                                        LockStitch, SVGLock)
 from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
                    get_node_transform)
+from ..svg.clip import get_clip_path
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import DotDict, Point, cache
 from ..utils.cache import (CacheKeyGenerator, get_stitch_plan_cache,
@@ -610,6 +612,7 @@ class EmbroideryElement(object):
         cache_key_generator.update(self.__class__.__name__)
         cache_key_generator.update(self.get_params_and_values())
         cache_key_generator.update(self.parse_path())
+        cache_key_generator.update(self.clip_shape)
         cache_key_generator.update(list(self._get_specified_style().items()))
         cache_key_generator.update(self._get_gradient_cache_key_data())
         cache_key_generator.update(previous_stitch)
@@ -673,6 +676,11 @@ class EmbroideryElement(object):
                 except (ValueError, AttributeError):
                     pass
         return next_stitch
+
+    @property
+    @cache
+    def clip_shape(self):
+        return get_clip_path(self.node)
 
     def fatal(self, message, point_to_troubleshoot=False):
         label = self.node.get(INKSCAPE_LABEL)

@@ -15,7 +15,6 @@ from ..stitches.ripple_stitch import ripple_stitch
 from ..stitches.running_stitch import (bean_stitch, running_stitch,
                                        zigzag_stitch)
 from ..svg import parse_length_with_units
-from ..svg.clip import get_clip_path
 from ..threads import ThreadColor
 from ..utils import Point, cache
 from ..utils.param import ParamOption
@@ -517,14 +516,13 @@ class Stroke(EmbroideryElement):
         return shgeo.Point(self.as_multi_line_string().geoms[0].coords[0])
 
     def _get_clipped_path(self, paths):
-        clip_path = get_clip_path(self.node)
-        if clip_path is None:
+        if self.clip_shape is None:
             return paths
 
         # path to linestrings
         line_strings = [shgeo.LineString(path) for path in paths]
         try:
-            intersection = clip_path.intersection(shgeo.MultiLineString(line_strings))
+            intersection = self.clip_shape.intersection(shgeo.MultiLineString(line_strings))
         except GEOSException:
             return paths
 
