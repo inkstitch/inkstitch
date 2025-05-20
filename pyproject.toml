@@ -1,0 +1,9 @@
+
+[project]
+name = "inkstitch"
+version = "0.1.0"
+description = "An open-source machine embroidery design platform based on Inkscape"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
