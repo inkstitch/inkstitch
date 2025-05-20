@@ -106,6 +106,11 @@ def _get_staggered_stitches(stroke, lines, skip_start):
         else:
             # uses the guided fill alforithm to stagger rows of stitches
             points = list(apply_stitches(LineString(line), stitch_length, stroke.staggers, 0.5, i, tolerance).coords)
+
+            # simplifying the path in apply_stitches could have removed the start or end point
+            # we can simply add it again, the minimum stitch length value will take care to remove possible duplicates
+            points = [line[0]] + points + [line[-1]]
+
             stitched_line = [InkstitchPoint(*point) for point in points]
             if should_reverse and stroke.flip_copies:
                 stitched_line.reverse()
