@@ -34,3 +34,6 @@ logs/
 /DEBUG
 /PROFILE
 /profile*
+
+# uv & pyproject.toml
+.python-version
