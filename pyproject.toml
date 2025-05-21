@@ -1,3 +1,5 @@
+### update packages
+### > uv sync -U
 
 [project]
 name = "inkstitch"
@@ -7,5 +9,46 @@ readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
     "pyembroidery @ git+https://github.com/inkstitch/pyembroidery",
+
+    ### get up to date inkex version (March 1, 2024)
+    "inkex @ git+https://gitlab.com/inkscape/extensions.git@1792934a09046fdef8aab20d05aad9c47f825bf5",
+
+    "networkx",
+    "shapely>=2.0.0",
+    "lxml",
+    "platformdirs",
+    "numpy",
+    "jinja2>2.9",
+    # "requests",
+
+    "tomli; python_version < '3.11'",
+
+    "colormath2",
+    "flask>=2.2.0",
+    "fonttools",
+    "trimesh>=3.15.2",
+    "diskcache",
+    # "flask-cors",
+
+    ### inkex dependency
+    "pygobject <= 3.50; python_version <= '3.11'",  ### <=3.50 ubuntu 22.04 pycairo
+
+    "pywinutils ; sys_platform == 'win32'",
+    "pywin32 ; sys_platform == 'win32'",
+    "types-pywin32; sys_platform == 'win32'",
+
+
+    ### Test dependencies.
+    ### It should be okay to include these here because this list isn't the one used for bundling dependencies.
+    ### Instead Pyinstaller finds what dependencies the project needs based on what inkstitch.py imports
+    "pytest",
+
+    # Misc dev dependencies
+    "types-wxpython",
+    "types-appdirs",
+    "types-shapely",
+    "types-networkx",
+    "types-lxml"
+
 ]
 
