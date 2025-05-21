@@ -1,5 +1,8 @@
-### update packages
-### > uv sync -U
+###
+### update packages: uv sync -U  # update all packages
+###                  uv sync     # removes all packages not in pyproject.toml
+###                  uv sync --inexact   # do not remove extraneous packages, as installed by uv pip install
+### as requirements.txt: uv pip install -r pyproject.toml | requirements.txt
 
 [project]
 name = "inkstitch"
@@ -8,47 +11,54 @@ description = "An open-source machine embroidery design platform based on Inksca
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
+    ### wxPython dependency
+    ###   linux users should install wia pip:
+    ###    - select correct version (distro, python version) on https://extras.wxpython.org/wxPython4/extras/linux/gtk3/
+    ###    - eg: uv pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.3-cp39-cp39-linux_x86_64.whl
+    "wxpython ; sys_platform != 'linux'",
+    ###
+    ### *** PyEmbroidery dependency ***
+    ### create package on the fly
     "pyembroidery @ git+https://github.com/inkstitch/pyembroidery",
-
+    ###
+    ### *** inkex dependency ***
     ### get up to date inkex version (March 1, 2024)
     "inkex @ git+https://gitlab.com/inkscape/extensions.git@1792934a09046fdef8aab20d05aad9c47f825bf5",
+    ###   Linux: pygobject > 3.50 depends on gir2
+    "pygobject <= 3.50; python_version <= '3.11' and sys_platform == 'linux'", ### eg ubuntu 22.04
+    ###   Windows: has binary wheels for pygobject
+    ###
+    "networkx", ### graphs library
+    "shapely~=2.0.0", ### geometry library
+    "lxml", ### XML library
+    "platformdirs", ### cross-platform directories
+    "numpy", ### array library
+    "jinja2>2.9", ### templating engine
+    # "requests", ### HTTP library
+    "tomli; python_version < '3.11'", ### TOML parser
+    "colormath2", ### color math library
+    "flask>=2.2.0", ### web framework
+    "fonttools", ### font library
+    "trimesh>=3.15.2", ### 3D mesh library
+    "diskcache", ### caching library
+    # "flask-cors", ### CORS support for Flask - Cross-Origin Resource Sharing)
+    ###
+    "pywinutils ; sys_platform == 'win32'", ### Windows utils
+    "pywin32 ; sys_platform == 'win32'", ### Windows utils
+]
 
-    "networkx",
-    "shapely>=2.0.0",
-    "lxml",
-    "platformdirs",
-    "numpy",
-    "jinja2>2.9",
-    # "requests",
-
-    "tomli; python_version < '3.11'",
-
-    "colormath2",
-    "flask>=2.2.0",
-    "fonttools",
-    "trimesh>=3.15.2",
-    "diskcache",
-    # "flask-cors",
-
-    ### inkex dependency
-    "pygobject <= 3.50; python_version <= '3.11'",  ### <=3.50 ubuntu 22.04 pycairo
-
-    "pywinutils ; sys_platform == 'win32'",
-    "pywin32 ; sys_platform == 'win32'",
-    "types-pywin32; sys_platform == 'win32'",
-
-
-    ### Test dependencies.
-    ### It should be okay to include these here because this list isn't the one used for bundling dependencies.
-    ### Instead Pyinstaller finds what dependencies the project needs based on what inkstitch.py imports
+[dependency-groups]
+### add by: uv add xxx --dev
+### remove by: uv remove xxx --dev
+dev = [
     "pytest",
-
     # Misc dev dependencies
     "types-wxpython",
     "types-appdirs",
     "types-shapely",
     "types-networkx",
-    "types-lxml"
-
+    "types-lxml",
+    "types-pywin32; sys_platform == 'win32'",
 ]
+
 
