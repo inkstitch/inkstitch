@@ -7,7 +7,7 @@
    viewBox="0 0 100 100"
    version="1.1"
    id="svg8"
-   inkscape:version="1.4-rc1 (61ec3f24, 2024-09-26)"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
    sodipodi:docname="→.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.3540334"
-     inkscape:cx="-46.515907"
-     inkscape:cy="-5.5224364"
+     inkscape:zoom="16.225743"
+     inkscape:cx="11.49408"
+     inkscape:cy="24.837075"
      inkscape:document-units="in"
-     inkscape:current-layer="g43"
+     inkscape:current-layer="g8946"
      showgrid="false"
      inkscape:snap-global="false"
      showguides="true"
@@ -2517,7 +2517,7 @@
      inkscape:groupmode="layer"
      id="g43"
      inkscape:label="GlyphLayer-ü"
-     style="display:inline">
+     style="display:none">
     <path
        id="path41"
        d="M 0.52893,93.35341 1.27884,91.35084"
@@ -2576,6 +2576,20 @@
        inkstitch:running_stitch_length_mm="2"
        inkstitch:ties="2"
        inkstitch:bean_stitch_repeats="1"
+       inkstitch:satin_column="False"
+       inkstitch:running_stitch_tolerance_mm="0.1" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer65"
+     inkscape:label="GlyphLayer-&amp;">
+    <path
+       style="display:inline;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ed171f;stroke-width:0.33;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.033, 0.033;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 3.2123591,95.776644 c 0,0 -0.8074597,-2.315714 -0.9783834,-3.522181 -0.072436,-0.511292 -0.2264194,-1.077387 -0.016306,-1.549106 0.1237902,-0.277918 0.3844484,-0.555272 0.6848682,-0.603338 0.2861279,-0.04578 0.6584095,0.08907 0.7990133,0.342435 0.138761,0.250047 0.00547,0.59633 -0.1304512,0.847931 -0.1390311,0.257353 -0.6522556,0.587031 -0.6522556,0.587031 0,0 -1.2292444,0.720972 -1.6795582,1.255594 -0.208282,0.247277 -0.36480942,0.54986 -0.44027261,0.864237 -0.0697783,0.290693 -0.13257508,0.628906 0,0.896853 0.11522361,0.232878 0.37280211,0.391779 0.61964291,0.472885 0.3047111,0.100121 0.6531742,0.07003 0.9620771,-0.0163 C 2.6716348,95.271391 2.925972,95.082767 3.16344,94.896108 3.4837979,94.644295 3.7636457,94.339089 4.0113725,94.015561 4.2040554,93.763919 4.500564,93.200243 4.500564,93.200243"
+       id="path3"
+       sodipodi:nodetypes="cssssscsssssssc"
+       inkstitch:bean_stitch_repeats="1"
+       inkstitch:running_stitch_length_mm="2"
        inkstitch:satin_column="False"
        inkstitch:running_stitch_tolerance_mm="0.1" />
   </g>

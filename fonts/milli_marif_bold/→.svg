@@ -4,7 +4,7 @@
    id="svg109"
    sodipodi:docname="→.svg"
    width="30.427084mm"
-   inkscape:version="1.4-rc1 (61ec3f24, 2024-09-26)"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
    height="39.6875mm"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -22,14 +22,14 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
      inkscape:zoom="3.6527052"
-     inkscape:cx="52.837552"
-     inkscape:cy="49.826085"
+     inkscape:cx="42.571188"
+     inkscape:cy="70.085043"
      inkscape:window-width="1632"
      inkscape:window-height="954"
      inkscape:window-x="78"
      inkscape:window-y="39"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g116"
+     inkscape:current-layer="layer5"
      showguides="true"
      inkscape:lockguides="false"
      inkscape:document-units="mm">
@@ -1147,7 +1147,7 @@ Jeremy Landes
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-D"
-     style="display:inline"
+     style="display:none"
      id="g116">
     <path
        style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.249449;stroke-dasharray:0.498898, 0.249449;stroke-dashoffset:0;paint-order:markers fill stroke"
@@ -1182,7 +1182,7 @@ Jeremy Landes
        inkstitch:end_at_nearest_point="False" />
     <path
        d="M 9.35604,39.2888 6.53024,35.4751"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.1;stroke-dasharray:3, 1;opacity:1"
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.1;stroke-dasharray:3, 1"
        inkstitch:running_stitch_length_mm="2.5"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path386"
@@ -12286,7 +12286,7 @@ Jeremy Landes
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="GlyphLayer-&amp;"
-     style="display:none">
+     style="display:inline">
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.77953, 0.944882;stroke-dashoffset:0;stroke-opacity:0.843137;-inkscape-stroke:none;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
        d="m 10.632518,104.7222 c 15.515573,3.6311 31.137238,6.43999 47.906062,0.3584 l 24.610097,7.76532"
