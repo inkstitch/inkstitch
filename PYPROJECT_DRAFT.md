@@ -39,11 +39,10 @@ Here, we will document the process for setting up alternative configurations for
 ## adding libraries
 * pyembroidery from inkstitch (latest version)
   * `pyembroidery @ git+https://github.com/inkstitch/pyembroidery`
-  * `uv sync` update packages
+  * `uv sync` or `uv sync -U` update packages
   * ignore `uv.lock` in `.gitignore` (depends on system used)
 
+## activate virtual environment
+* . .venv/bin.activate
 
-## TODO
-* pyembroidery will be added as library into project
-  * done
 
