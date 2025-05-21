@@ -13,6 +13,9 @@ Here, we will document the process for setting up alternative configurations for
 * **uv** project manager
   * https://github.com/astral-sh/uv
 
+* **uvr** uv run with project management
+  * https://github.com/karnigen/uvr
+
 ## No action commit on github:
 * commit message with **[no ci]** will skip action
 
@@ -36,7 +39,10 @@ Here, we will document the process for setting up alternative configurations for
 * `uv venv` - initialize .venv by python version as specified in `.python-version` (3.9)
   * run `uv venv` after each change of python version
 
-## adding libraries
+## Packages not maintained by `pyproject.toml`
+* use `uv pip install`  without explicitly telling `uv` to update based on pyproject.toml
+
+## Adding libraries
 * pyembroidery from inkstitch (latest version)
   * `pyembroidery @ git+https://github.com/inkstitch/pyembroidery`
   * `uv sync` or `uv sync -U` update packages
