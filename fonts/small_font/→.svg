@@ -5,7 +5,7 @@
    viewBox="0 0 30 30"
    id="svg8375"
    version="1.1"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
    sodipodi:docname="→.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,11 +23,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="6.0559692"
-     inkscape:cx="13.210107"
-     inkscape:cy="23.943319"
+     inkscape:zoom="12.111938"
+     inkscape:cx="11.682689"
+     inkscape:cy="18.163897"
      inkscape:document-units="px"
-     inkscape:current-layer="g47"
+     inkscape:current-layer="layer23"
      showgrid="false"
      units="px"
      inkscape:window-width="1621"
@@ -125,7 +125,7 @@
        id="min_stitch_len_mm10">0</inkstitch:min_stitch_len_mm>
     <inkstitch:collapse_len_mm
        id="collapse_len_mm7877">3</inkstitch:collapse_len_mm>
-    <inkstitch:inkstitch_svg_version>1</inkstitch:inkstitch_svg_version>
+    <inkstitch:inkstitch_svg_version>3</inkstitch:inkstitch_svg_version>
   </metadata>
   <g
      id="layer1"
@@ -152,7 +152,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="ccccccccc"
        inkscape:connector-curvature="0"
@@ -169,7 +171,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="ccccccc"
        inkscape:connector-curvature="0"
@@ -186,7 +190,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-Ä"
@@ -208,7 +214,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 8.5733955,25.02241 1.7680025,-4.758019 0.792998,-2.184 3.84207,-10.1974773 v -1.79027 M 5.8043989,25.02241 13.214397,6.0553637 M 8.8266135,15.025951 h 4.1142875"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -225,7 +233,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="M 16.1914,6.0553637 23.497503,25.011091 M 14.415784,6.1269237 v 1.72298 L 20.905547,24.999845 M 16.095188,14.991671 h 4.491426"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -242,7 +252,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path49890-2-0-0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -259,7 +271,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path49890-2-7-9-6"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -276,7 +290,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-B"
@@ -298,7 +314,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        d="m 8.480984,5.84671 c 0,0 4.027926,0 4.027926,0 2.001999,0 3.544665,0.416 4.627998,1.248 1.083333,0.832 1.625,2.015 1.625,3.54899 0,1.18734 -0.277332,2.132 -0.832001,2.83401 -0.554665,0.702 -1.369333,1.13966 -2.443999,1.313 m -7.058999,-6.786 c 0,0 3.886998,0 3.886998,0 1.282667,0 2.510288,0.10552 3.134288,0.59085 0.632667,0.48534 1.154715,1.21767 1.154715,2.19701 0,0.98799 -0.796335,1.8618 -1.429002,2.34713 -0.441915,0.33758 -1.049007,0.55562 -1.821274,0.65413"
@@ -316,7 +334,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        id="path9052"
@@ -332,7 +352,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-C"
@@ -355,7 +377,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g20639"
@@ -377,7 +401,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path13248"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -393,7 +419,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-E"
@@ -422,7 +450,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round"
        d="M 7.380427,7.2478445 7.5130096,15.291184"
@@ -444,7 +474,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 5.6892548,6.7571256 c 0,0 0,17.7368994 0,17.7368994 M 8.315268,6.8071156 c 0,0 0,17.6026194 0,17.6026194"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -460,7 +492,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path14011"
        d="m 18.195258,22.611665 c 0,0 -9.87999,0 -9.87999,0 m 9.87999,2.62143 c 0,0 -9.90028,0 -9.90028,0"
@@ -476,7 +510,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g20851"
@@ -498,7 +534,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 5.95756,6.69201 c 0,0 0,18.27026 0,18.27026 M 8.58357,6.742 c 0,0 0,18.13598 0,18.13598"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -514,7 +552,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path14019-6"
        d="m 17.1187,5.75899 c 0,0 -8.55543,0 -8.55543,0 m 8.55543,2.62142 c 0,0 -8.53513,0 -8.53513,0"
@@ -530,7 +570,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-G"
@@ -551,7 +593,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        d="m 22.77978,24.38676 c 0,0 0,-7.12957 0,-7.12957 m -2.6,7.02472 c 0,0 0,-6.99244 0,-6.99244"
@@ -567,7 +611,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        d="m 15.88978,14.75433 c 0,0 6.44429,0 6.44429,0 m -6.44429,2.53514 c 0,0 6.55286,0 6.55286,0"
@@ -583,7 +629,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-H"
@@ -606,7 +654,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 8.56829,16.015 c 0,0 9.542,0 9.542,0 m -9.542,-2.21 c 0,0 9.542,0 9.542,0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -622,7 +672,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 18.11029,6.06998 v 18.96705 m 2.626,-18.96705 v 18.96705"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -639,7 +691,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g21538"
@@ -662,7 +716,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g21746"
@@ -685,7 +741,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g22082"
@@ -708,7 +766,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccccccccc"
        inkscape:connector-curvature="0"
@@ -725,7 +785,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-L"
@@ -748,7 +810,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        d="m 6.20232,25.29992 c 0,0 11.802712,0 11.802712,0 m -11.851,-2.55286 c 0,0 11.851,0 11.851,0"
@@ -764,7 +828,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g22344"
@@ -787,7 +853,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 7.7792,6.16485 c 0,0 0,1.79403 0,1.79403 0,0 0.68846,0.45845 0.68846,0.45845 0,0 5.005,13.312 5.005,13.312 m -3.34907,-15.678 c 0,0 4.953,13.208 4.953,13.208 0,0 0,2.32449 0,2.32449 M 10.0581,14.06828 c 0,0 3.56382,0 3.56382,0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -803,7 +871,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 16.11166,21.72933 c 0,0 5.005,-13.312 5.005,-13.312 0,0 0.60264,-0.38572 0.60264,-0.38572 0,0 0,-1.86676 0,-1.86676 m -7.22456,15.41897 c 0,0 0,-2.32449 0,-2.32449 0,0 4.979,-13.208 4.979,-13.208 m -3.50019,8.01695 c 0,0 3.41836,0 3.41836,0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -819,7 +889,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 20.45863,6.21334 v 1.79403 l 0.65803,0.40996 v 16.60106 m 2.561,-18.96706 V 25.01839 M 20.74955,16.5169 h 3.39412"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -836,7 +908,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-N"
@@ -859,7 +933,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccccccccc"
        inkscape:connector-curvature="0"
@@ -876,7 +952,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccccccc"
        inkscape:connector-curvature="0"
@@ -893,7 +971,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g14481"
@@ -915,7 +995,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-Ö"
@@ -937,7 +1019,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path49890-2-0-0-2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -954,7 +1038,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path49890-2-7-9-6-0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -971,7 +1057,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g14770"
@@ -994,7 +1082,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cscccsccsccssc"
        inkscape:connector-curvature="0"
@@ -1011,7 +1101,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-Q"
@@ -1034,7 +1126,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        d="m 15.40504,20.83476 c 0,0 5.77481,6.28154 5.77481,6.28154 m -3.78727,-7.61334 c 0,0 5.65582,6.18738 5.65582,6.18738"
@@ -1050,7 +1144,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g15673"
@@ -1073,7 +1169,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 8.58649,7.90681 c 0,0 3.30198,0 3.30198,0 1.26534,0 2.21868,0.29033 2.86002,0.871 0.64999,0.572 1.24928,1.42566 1.24928,2.561 0,1.13533 -0.59929,1.99767 -1.24928,2.587 C 14.35806,14.2793 13.852,14.5252 13.2303,14.6635 M 8.53032,5.74881 c 0,0 3.35816,0 3.35816,0 2.21868,0 3.87401,0.46366 4.96601,1.391 1.092,0.92733 1.638,2.327 1.638,4.199 0,1.222 -0.286,2.236 -0.858,3.042 -0.56333,0.806 -1.38667,1.365 -2.47002,1.677"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1089,7 +1187,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 8.58649,14.79681 h 3.30198 c 0.49503,0 0.94231,-0.0444 1.34183,-0.13331 l 1.93417,1.39431 c 0.56335,0.19066 1.10935,0.598 1.63801,1.222 0.53733,0.624 1.07467,1.482 1.61201,2.574 l 2.665,5.1146 m -12.493,-8.0136 h 2.86 c 1.03999,0 1.859,0.21233 2.457,0.637 0.60667,0.42467 1.23067,1.287 1.872,2.587 l 2.483,4.7896 m -4.66742,-6.69333 1.84252,-3.00621"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1106,7 +1206,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-S"
@@ -1128,7 +1230,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-T"
@@ -1151,7 +1255,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="M 15.30951,25.02448 V 8.40505 M 12.670508,25.02448 V 8.40505"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1168,7 +1274,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 12.540037,5.71018 c 3.219824,0 6.439649,0 9.659473,0 m -9.612826,2.69487 c 3.204275,0 6.408551,0 9.612826,0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1185,7 +1293,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g16687"
@@ -1208,7 +1318,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-Ü"
@@ -1231,7 +1343,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path49890-2-0-0-23"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1248,7 +1362,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path49890-2-7-9-6-7"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1265,7 +1381,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-V"
@@ -1288,7 +1406,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccccccc"
        inkscape:connector-curvature="0"
@@ -1305,7 +1425,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g17062"
@@ -1328,7 +1450,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="M 14.1433,25.08853 18.27731,9.17335 18.84337,8.86147 V 6.72803 m -6.93369,18.0742 v -2.13344 l 0.56119,-0.58326 4.069,-15.47318 m -2.93313,7.87446 h 3.78201"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1345,7 +1469,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 17.43724,6.77651 v 1.9395 l 0.54914,0.45734 4.095,15.91518 m -2.39656,-18.47618 4.082,15.47318 0.55562,0.53477 v 2.18193 M 18.69791,14.48681 h 3.97596"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1362,7 +1488,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 25.52884,25.08853 4.875,-19.09332 m -7.43905,18.75854 v -2.18193 l 0.70505,-0.48629 4.069,-16.09032 m -2.98001,8.54009 h 4.12142"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1379,7 +1507,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-X"
@@ -1402,7 +1532,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
@@ -1419,7 +1551,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
@@ -1436,7 +1570,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
@@ -1453,7 +1589,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g17493"
@@ -1476,7 +1614,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path42255"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1493,7 +1633,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-Z"
@@ -1515,7 +1657,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        id="path43761"
@@ -1531,7 +1675,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        id="path43765"
@@ -1547,7 +1693,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g17946"
@@ -1569,7 +1717,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 6.925733,11.031903 c 0.875333,-0.338001 1.724668,-0.589333 2.548001,-0.754002 0.823333,-0.173332 1.624998,-0.259998 2.404998,-0.259998 2.106,0 3.678999,0.546 4.719,1.638 0.854261,0.896972 1.357674,2.267062 1.510243,3.957433 0.123434,3.075996 0.04976,6.299231 0.04976,9.453453 M 6.925733,13.517674 c 0.846852,-0.440362 1.73231,-0.830334 2.683274,-1.073138 0.641664,-0.163832 1.313151,-0.260659 2.022726,-0.260747 1.308665,0 2.322665,0.303334 3.042,0.91 0.613891,0.514932 1.110395,1.493504 1.092001,2.540698 l 2e-6,9.432302"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1586,7 +1736,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-ä"
@@ -1608,7 +1760,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="ccsscccscccc"
        inkscape:connector-curvature="0"
@@ -1625,7 +1779,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path49890-2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1642,7 +1798,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path49890-2-7"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1659,7 +1817,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-b"
@@ -1682,7 +1842,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path13834"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1696,7 +1858,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g18852"
@@ -1718,7 +1882,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-d"
@@ -1740,7 +1906,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
@@ -1757,7 +1925,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g19346"
@@ -1780,7 +1950,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="ccscscsccccsccccscccccc"
        d="M 19.393888,15.401243 C 19.21234,13.56331 18.662727,11.913677 17.74505,10.80629 16.60971,9.416275 15.06271,8.721268 13.10405,8.721268 c -2.184,0 -3.92167,0.771173 -5.213,2.313519 -1.28267,1.532824 -1.924,3.608329 -1.924,6.226509 0,2.532495 0.676,4.541353 2.028,6.026577 1.36067,1.485223 3.20233,2.227833 5.525,2.227833 0.92733,0 1.84166,-0.104728 2.743,-0.314181 0.90133,-0.209456 1.781,-0.514118 2.639,-0.913985 m -1.865431,-8.927771 c -0.105435,-1.218338 -0.46298,-2.399237 -1.072569,-3.125373 -0.71067,-0.856859 -1.65533,-1.285289 -2.834,-1.285289 -1.33467,0 -2.405,0.414149 -3.211,1.242446 -0.79734,0.828296 -1.25667,2.337432 -1.378,3.841696 l -0.078,2.042181 c 0.104,1.808924 0.598,2.846565 1.482,3.798631 0.89266,0.942544 2.132,1.413819 3.718,1.413819 0.91866,0 1.807,-0.123771 2.665,-0.371308 0.86667,-0.247538 1.72467,-0.618843 2.574,-1.113915 m -5.7746,-10.460113 -0.0487,-3.05256 m -1.73062,14.031069 -1.17,3.266776"
@@ -1797,7 +1969,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-f"
@@ -1817,7 +1991,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        d="m 15.00649,4.827162 h -2.262 c -1.638,0 -2.834,0.372666 -3.588,1.117998 -0.754,0.736668 -1.131,1.915336 -1.131,3.536001 v 2.0124 m 6.981,-4.677399 h -2.288 c -0.78303,0.06911 -1.32961,0.346417 -1.69212,0.751024 -0.38873,0.433862 -0.56583,1.014098 -0.59588,1.640975 v 2.2854 M 8.919643,5.5580359 11.375,7.9241073"
@@ -1831,7 +2007,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccccccc"
        inkscape:connector-curvature="0"
@@ -1848,7 +2026,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g20354"
@@ -1870,7 +2050,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="ccscccccscsccc"
        d="m 7.66045,30.618547 c 0.702,0.260003 1.42567,0.450666 2.171,0.572003 0.74533,0.129999 1.53833,0.194999 2.379,0.194999 2.27067,0 3.95633,-0.60667 5.057,-1.820003 0.94231,-1.031347 1.48125,-3.12773 1.61682,-5.264974 0.0228,-0.359167 0.0342,-0.719485 0.03419,-1.076098 l -10e-6,-12.753 M 7.66047,27.974673 c 0.702,0.381331 1.39533,0.565501 2.08,0.747498 0.68467,0.182 1.38233,0.273001 2.093,0.273001 1.56866,0 2.743,-0.314166 3.523,-1.137497 0.78,-0.814667 1.170014,-1.915119 1.17,-3.570451 l -10e-6,-1.153102 -10e-6,-12.662648"
@@ -1887,7 +2069,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-h"
@@ -1910,7 +2094,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        d="m 8.38221,15.932006 c 0.18607,-0.58843 0.64314,-1.291311 1.02999,-1.718646 0.32074,-0.3543 0.69203,-0.742865 1.11387,-1.082251 0.55845,-0.449287 1.20549,-0.812385 1.94113,-0.895699 1.06784,-0.120939 1.88067,0.269208 2.418,0.953873 0.53734,0.684669 0.806,1.716003 0.806,3.094002 0,0 0,8.71 0,8.71 M 8.2942,12.475909 c 0.25312,-0.387354 0.52576,-0.688471 0.81792,-0.941371 0.36806,-0.318602 0.76708,-0.560682 1.19708,-0.802254 0.78,-0.433334 1.67701,-0.649999 2.691,-0.649999 1.67267,0 2.938,0.52 3.796,1.56 0.858,1.031333 1.287,2.552332 1.287,4.562999 0,0 0,8.788001 0,8.788001"
@@ -1926,7 +2112,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g20904"
@@ -1948,7 +2136,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path9379"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1964,7 +2154,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-j"
@@ -1986,7 +2178,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        id="path7095"
@@ -2002,7 +2196,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g21481"
@@ -2025,7 +2221,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path9383"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2041,7 +2239,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-l"
@@ -2064,7 +2264,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g22083"
@@ -2087,7 +2289,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path9327"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2104,7 +2308,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 17.756668,15.391988 c 0.17799,-0.522036 0.56255,-1.1113 0.95869,-1.564708 0.71933,-0.823334 1.69866,-1.235001 2.938,-1.235001 1.01399,0 1.76799,0.338 2.26199,1.013998 0.494,0.676001 0.74101,1.298012 0.74101,2.693345 0,0 0,8.709999 0,8.709999 m -7.85326,-12.833614 c 1.7574,-1.665838 3.58218,-2.042234 5.51326,-2.077386 1.51666,0 2.68666,0.533004 3.50999,1.598999 0.82334,1.057337 1.235,2.565335 1.235,4.524 0,0 0,8.788001 0,8.788001 m -4.31561,-11.92692 c 0,0 0.58602,-3.18861 0.58602,-3.18861"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2120,7 +2326,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-n"
@@ -2143,7 +2351,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        d="m 8.3665,15.245337 c 0.52787,-1.039787 1.86425,-2.386456 3.99877,-2.866253 1.00623,-0.226179 1.794,0.0967 2.288,0.772701 0.49401,0.667334 0.74101,1.703001 0.74101,3.107001 0,0 0,8.709999 0,8.709999 m -7.02,-13.004029 c 0.85625,-0.582424 1.20034,-0.845303 1.963,-1.269972 0.76267,-0.424666 1.66833,-0.636999 2.717,-0.636999 1.96017,0.24404 2.84466,0.590738 3.91175,2.077386 0.70781,0.986116 0.87535,2.983972 0.84698,4.1496 -0.0693,2.847802 -0.0137,5.79903 -0.0137,8.684014 M 12.51546,12.754306 c 0,0 0.34125,-3.4125 0.34125,-3.4125"
@@ -2159,7 +2369,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g22701"
@@ -2181,7 +2393,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-ö"
@@ -2203,7 +2417,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path49890-2-0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2220,7 +2436,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path49890-2-7-9"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2237,7 +2455,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-p"
@@ -2258,7 +2478,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccscccccscscssccccc"
        inkscape:connector-curvature="0"
@@ -2275,7 +2497,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g15551"
@@ -2298,7 +2522,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccccc"
        inkscape:connector-curvature="0"
@@ -2313,7 +2539,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-r"
@@ -2334,7 +2562,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        id="path22967"
@@ -2350,7 +2580,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g16825"
@@ -2372,7 +2604,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g23221"
@@ -2392,7 +2626,9 @@
        inkstitch:reverse_rails="none"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-t"
@@ -2412,7 +2648,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path26331"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2426,7 +2664,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccccccc"
        inkscape:connector-curvature="0"
@@ -2443,7 +2683,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g17518"
@@ -2465,7 +2707,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 15.803207,25.00211 c 0,0 0,-14.55999 0,-14.55999 m 2.392001,14.55999 c 0,0 0,-14.55999 0,-14.55999"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2481,7 +2725,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-ü"
@@ -2504,7 +2750,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        id="path20426"
@@ -2520,7 +2768,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        id="path20428"
@@ -2536,7 +2786,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path49890-2-7-6"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2553,7 +2805,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-v"
@@ -2576,7 +2830,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccccccc"
        inkscape:connector-curvature="0"
@@ -2593,7 +2849,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-w"
@@ -2614,7 +2872,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path18117"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2629,7 +2889,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path18115"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2644,7 +2906,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path9407"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2659,7 +2923,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g19389"
@@ -2681,7 +2947,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 19.68948,10.47209 c 0,0 -5.265,7.085 -5.265,7.085 m 2.44401,-7.085 c 0,0 -3.86101,5.187 -3.86101,5.187"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2697,7 +2965,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 6.32548,10.47209 c 0,0 5.174,6.94199 5.174,6.94199 0,0 1.404,1.89801 1.404,1.89801 0,0 4.238,5.71999 4.238,5.71999 m -7.995,-14.55999 c 0,0 3.861,5.187 3.861,5.187 0,0 1.417,1.898 1.417,1.898 0,0 5.538,7.47499 5.538,7.47499"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2713,7 +2983,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-y"
@@ -2735,7 +3007,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        id="path31668"
@@ -2751,7 +3025,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g20153"
@@ -2773,7 +3049,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 16.49431,12.317 c 0,0 0,0.95857 0,0.95857 0,0 -8.37552,9.79345 -8.37552,9.79345 m 6.305,-10.738 c 0,0 -8.47893,10.01686 -8.47893,10.01686 0,0 0,0.73 0,0.73 m 3.66337,-6.00395 c 0,0 4.5069,0 4.5069,0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2789,7 +3067,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 5.92838,23.06902 c 0,0 11.18641,0 11.18641,0 M 5.91335,24.98001 c 0,0 11.20144,0 11.20144,0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2805,7 +3085,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-0"
@@ -2827,7 +3109,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g20941"
@@ -2849,7 +3133,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 13.046209,6.267 c 0,0 0,16.78756 0,16.78756 M 10.446206,6.25899 c 0,0 0,16.79557 0,16.79557"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2865,7 +3151,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 6.156208,25.26456 c 0,0 11.179999,0 11.179999,0 m -11.179999,-2.21 c 3.726667,0 7.453333,0 11.179999,0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2881,7 +3169,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-2"
@@ -2903,7 +3193,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        d="m 6.102394,25.29593 c 0,0 12.015428,0 12.015428,0 m -11.976433,-2.21 c 0,0 11.976433,0 11.976433,0"
@@ -2919,7 +3211,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g21752"
@@ -2941,7 +3235,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 6.2802,6.27407 c 0.99666,-0.27734 1.92833,-0.48534 2.795,-0.624 0.87533,-0.13867 1.69866,-0.208 2.47,-0.208 1.99333,0 3.57067,0.455 4.732,1.365 1.16133,0.90133 1.742,2.12333 1.742,3.66599 0,1.07467 -0.30767,1.98467 -0.923,2.73001 -0.53198,0.63687 -1.25828,1.10532 -2.1789,1.40536 M 6.2802,8.61407 c 0.988,-0.32934 1.89366,-0.57201 2.717,-0.72801 0.82333,-0.156 1.59466,-0.23399 2.314,-0.23399 1.31733,0 2.63557,0.063 3.33757,0.60028 0.71066,0.52867 1.13457,1.29133 1.13457,2.288 0,0.97067 -0.71948,1.92171 -1.40414,2.44172 -0.42984,0.32101 -0.97923,0.54126 -1.64817,0.66074"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2957,7 +3253,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-4"
@@ -2979,7 +3277,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        d="m 5.71,20.61538 c 0,0 8.762,0 8.762,0 M 7.84201,18.08852 c 0,0 6.62999,0 6.62999,0"
@@ -2995,7 +3295,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        d="m 19.85401,20.61538 c 0,0 -2.769,0 -2.769,0 m 2.769,-2.52686 c 0,0 -2.769,0 -2.769,0"
@@ -3011,7 +3313,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccccc"
        inkscape:connector-curvature="0"
@@ -3028,7 +3332,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g23013"
@@ -3050,7 +3356,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path74136"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3066,7 +3374,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g24259"
@@ -3089,7 +3399,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-7"
@@ -3111,7 +3423,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        id="path1142"
@@ -3127,7 +3441,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g25126"
@@ -3150,7 +3466,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-9"
@@ -3172,7 +3490,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-@"
@@ -3192,7 +3512,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 20.723724,18.01104 c -0.953206,0.98219 -1.738847,1.54746 -3.307106,1.6014 -1.074196,0 -1.918825,-0.35084 -2.533889,-1.05254 -0.615064,-0.71035 -0.922596,-1.68493 -0.922596,-2.92372 0,-1.22146 0.307532,-2.18737 0.922596,-2.89773 0.623727,-0.71035 1.459693,-1.06553 2.5079,-1.06553 1.170383,0.013 2.315595,0.4933 3.252689,1.38151 m 0.398711,6.95712 c -0.519771,0.66704 -1.117511,0.87124 -1.793214,1.19177 -0.667041,0.31186 -1.4467,0.26731 -2.338975,0.26731 -1.490014,0 -2.702815,-0.5371 -3.638405,-1.6113 -0.926927,-1.08286 -1.390391,-2.49057 -1.390391,-4.22315 0,-1.73257 0.467795,-3.14029 1.403385,-4.22315 0.93559,-1.08285 2.144061,-1.62428 3.625411,-1.62428 0.892275,0 1.899026,0.0978 2.351969,0.27102 0.675703,0.32053 1.157731,0.55603 1.78022,1.05848 m -6.648447,4.8168 c 0,0 -3.051806,0 -3.051806,0 m 5.686781,-6.8325808 0.315673,3.1882938"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3208,7 +3530,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g27781"
@@ -3230,7 +3554,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 5.768678,19.1353 c 0,0 10.832901,6.045 10.832901,6.045 M 5.910593,17.31977 c 0,0 1.305988,0 1.305988,0 0,0 9.384998,5.10663 9.384998,5.10663 m -2.133373,2.11142 c 0,0 0,-3.80571 0,-3.80571"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3246,7 +3572,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-&gt;"
@@ -3268,7 +3596,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        id="path60034-0"
@@ -3284,7 +3614,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g28695"
@@ -3306,7 +3638,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path49890"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3322,7 +3656,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-,"
@@ -3344,7 +3680,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g29625"
@@ -3366,7 +3704,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-&quot;"
@@ -3389,7 +3729,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccccc"
        d="M 15.674667,6.2097636 15.38834,10.369753 v 2.236 m -3.023653,-6.3959894 0.184175,4.1599894 v 2.236"
@@ -3406,7 +3748,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g34046"
@@ -3428,7 +3772,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 18.148176,6.2097632 c 0,0 -2.602,4.1599898 -2.602,4.1599898 0,0 0,2.236 0,2.236 m -0.70798,-6.3959898 c 0,0 -2.44717,4.1599898 -2.44717,4.1599898 0,0 0,2.236 0,2.236"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3444,7 +3790,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-”"
@@ -3466,7 +3814,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 12.29048,12.47318 c 0,0 2.602,-4.1599901 2.602,-4.1599901 0,0 0,-2.236 0,-2.236 m 0.70798,6.3959901 c 0,0 2.44717,-4.1599901 2.44717,-4.1599901 0,0 0,-2.236 0,-2.236"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3482,7 +3832,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g35054"
@@ -3504,7 +3856,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g36092"
@@ -3526,7 +3880,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
@@ -3543,7 +3899,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
@@ -3558,7 +3916,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer--"
@@ -3580,7 +3940,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g37137"
@@ -3602,7 +3964,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 5.62333,15.67389 c 0,0 12.05799,0 12.05799,0 m -12.05799,-2.952 c 0,0 12.05799,0 12.05799,0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3618,7 +3982,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-("
@@ -3640,7 +4006,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g38173"
@@ -3662,7 +4030,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-_"
@@ -3685,7 +4055,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-/"
@@ -3708,7 +4080,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-�"
@@ -3727,7 +4101,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g1102"
@@ -3751,7 +4127,9 @@
        inkstitch:ties="0"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkstitch:ties="3"
        sodipodi:nodetypes="cccc"
@@ -3769,7 +4147,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkstitch:ties="3"
        id="path1100"
@@ -3787,7 +4167,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkstitch:zigzag_spacing_mm="0.4"
        inkstitch:center_walk_underlay_stitch_length_mm="1.2"
@@ -3801,7 +4183,9 @@
        id="path2071"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkstitch:ties="3"
        id="path1102"
@@ -3819,7 +4203,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkstitch:ties="3"
        inkscape:connector-curvature="0"
@@ -3837,7 +4223,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkstitch:zigzag_spacing_mm="0.4"
        inkstitch:center_walk_underlay_stitch_length_mm="1.2"
@@ -3851,7 +4239,9 @@
        id="path1108"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkstitch:fill_underlay="False"
        inkstitch:zigzag_underlay="False"
@@ -3869,7 +4259,9 @@
        inkstitch:ties="0"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g11094"
@@ -3891,7 +4283,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        inkscape:connector-curvature="0"
        id="path49892-6"
@@ -3907,7 +4301,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g3"
@@ -3930,7 +4326,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path3"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3939,7 +4337,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path9"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round"
@@ -3949,7 +4349,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path4"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3958,7 +4360,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g13"
@@ -3981,7 +4385,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path11"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3990,7 +4396,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path12"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round"
@@ -4000,7 +4408,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path13"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -4009,7 +4419,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g17"
@@ -4032,7 +4444,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path15"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -4041,7 +4455,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path18"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round"
@@ -4051,7 +4467,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path17"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -4060,7 +4478,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      id="g22"
@@ -4083,7 +4503,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path20"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -4092,7 +4514,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path40"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -4109,7 +4533,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path41"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -4126,7 +4552,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path22"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -4135,7 +4563,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-Ë"
@@ -4165,7 +4595,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path39"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -4182,7 +4614,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path25"
        d="m 17.961258,5.8241056 c 0,0 -9.66628,0 -9.66628,0 m 9.66628,2.62142 c 0,0 -9.64599,0 -9.64599,0"
@@ -4198,7 +4632,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round"
        d="M 7.380427,7.2478445 7.5130096,15.291184"
@@ -4220,7 +4656,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 5.6892548,6.7571256 c 0,0 0,17.7368994 0,17.7368994 M 8.315268,6.8071156 c 0,0 0,17.6026194 0,17.6026194"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -4236,7 +4674,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path28"
        d="m 18.195258,22.611665 c 0,0 -9.87999,0 -9.87999,0 m 9.87999,2.62143 c 0,0 -9.90028,0 -9.90028,0"
@@ -4252,7 +4692,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-Ê"
@@ -4275,7 +4717,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path34"
        d="m 17.961258,5.8241056 c 0,0 -9.66628,0 -9.66628,0 m 9.66628,2.62142 c 0,0 -9.64599,0 -9.64599,0"
@@ -4291,7 +4735,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round"
        d="M 7.380427,7.2478445 7.5130096,15.291184"
@@ -4313,7 +4759,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 5.6892548,6.7571256 c 0,0 0,17.7368994 0,17.7368994 M 8.315268,6.8071156 c 0,0 0,17.6026194 0,17.6026194"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -4329,7 +4777,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path37"
        d="m 18.195258,22.611665 c 0,0 -9.87999,0 -9.87999,0 m 9.87999,2.62143 c 0,0 -9.90028,0 -9.90028,0"
@@ -4345,12 +4795,14 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-É"
      inkscape:groupmode="layer"
-     style="display:inline"
+     style="display:none"
      id="g47">
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round"
@@ -4368,7 +4820,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path44"
        d="m 17.961258,5.8241056 c 0,0 -9.66628,0 -9.66628,0 m 9.66628,2.62142 c 0,0 -9.64599,0 -9.64599,0"
@@ -4384,7 +4838,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round"
        d="M 7.380427,7.2478445 7.5130096,15.291184"
@@ -4406,7 +4862,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 5.6892548,6.7571256 c 0,0 0,17.7368994 0,17.7368994 M 8.315268,6.8071156 c 0,0 0,17.6026194 0,17.6026194"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -4422,7 +4880,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path47"
        d="m 18.195258,22.611665 c 0,0 -9.87999,0 -9.87999,0 m 9.87999,2.62143 c 0,0 -9.90028,0 -9.90028,0"
@@ -4438,7 +4898,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
   </g>
   <g
      inkscape:label="GlyphLayer-È"
@@ -4461,7 +4923,9 @@
        inkstitch:satin_column="True"
        inkstitch:pull_compensation_mm="0.2"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path50"
        d="m 17.961258,5.8241056 c 0,0 -9.66628,0 -9.66628,0 m 9.66628,2.62142 c 0,0 -9.64599,0 -9.64599,0"
@@ -4477,7 +4941,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round"
        d="M 7.380427,7.2478445 7.5130096,15.291184"
@@ -4499,7 +4965,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        d="m 5.6892548,6.7571256 c 0,0 0,17.7368994 0,17.7368994 M 8.315268,6.8071156 c 0,0 0,17.6026194 0,17.6026194"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:106.667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:50px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -4515,7 +4983,9 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
     <path
        id="path64"
        d="m 18.195258,22.611665 c 0,0 -9.87999,0 -9.87999,0 m 9.87999,2.62143 c 0,0 -9.90028,0 -9.90028,0"
@@ -4531,6 +5001,71 @@
        inkstitch:fill_underlay="False"
        inkstitch:reverse_rails="none"
        inkstitch:center_walk_underlay_stitch_tolerance_mm=".2"
-       inkstitch:min_stitch_length_mm=".3" />
+       inkstitch:min_stitch_length_mm=".3"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer23"
+     inkscape:label="GlyphLayer-&amp;"
+     transform="matrix(0.31264876,0,0,0.31264876,-0.35172151,1.3770861)"
+     style="stroke-width:1.20887">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.20887;stroke-dasharray:6.39696, 3.19848"
+       d="m 18.025865,65.1421 10.827134,8.714523 13.467899,-2.112613 11.09121,-7.922293 7.922293,7.922293 7.394141,0.528155"
+       id="path5" />
+    <path
+       d="m 69.7521,75.1175 c -3.132609,0.819176 -6.665181,1.208121 -9.631976,-0.384121 -3.209302,-1.716707 -5.440952,-4.698198 -7.980366,-7.222745 M 69.7521,69.9894 c -2.309553,0.230676 -4.869559,0.551815 -6.898179,-0.848534 -2.440625,-1.730055 -4.53435,-3.893374 -6.760736,-5.883407 -0.147559,-0.135767 -0.295117,-0.271534 -0.442676,-0.407301 M 68.3829,68.0658 c -0.215033,3.0966 -0.430067,6.1932 -0.6451,9.2898"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1.20887"
+       inkscape:label="Colonne satin 0"
+       id="path8"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.4"
+       inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+       inkstitch:fill_underlay="False"
+       inkstitch:reverse_rails="none"
+       inkstitch:min_jump_stitch_length_mm="5"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="M 49.682966,64.807117 C 44.131911,59.196145 38.580855,53.585172 33.0298,47.9742 M 53.069493,60.316191 C 48.173829,55.111794 43.278164,49.907397 38.3825,44.703"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1.20887"
+       inkscape:label="Colonne satin 2"
+       id="path6"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.4"
+       inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+       inkstitch:fill_underlay="False"
+       inkstitch:reverse_rails="none"
+       inkstitch:min_jump_stitch_length_mm="5"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False" />
+    <path
+       d="M 29.645042,44.614691 C 26.376437,40.95015 22.573953,37.34098 21.283916,32.433123 c -0.569946,-2.255525 -0.276687,-4.68817 0.502649,-6.854697 1.386728,-3.356096 4.491822,-5.738297 7.822115,-6.976036 3.57239,-1.331859 7.526588,-1.464295 11.260161,-0.821681 3.223992,0.630343 6.442137,2.162031 8.456197,4.829722 1.881208,2.549737 2.328738,6.010529 1.475457,9.032045 -1.29878,4.312318 -4.955732,7.353382 -8.576154,9.750815 -4.600709,3.084487 -9.34353,5.957221 -13.889736,9.121207 -3.005611,2.187064 -5.816801,5.281181 -6.02258,9.174827 -0.24188,2.87077 0.917747,5.796819 3.097254,7.687566 3.731949,3.543407 9.410658,4.279663 14.237874,2.937476 6.250113,-1.741838 10.996298,-6.940363 13.545464,-12.745727 0.985746,-2.308321 1.815182,-4.68303 3.087932,-6.858256 1.995449,-4.207881 6.009341,-7.661243 10.758134,-8.109901 0.867854,-0.116168 1.744322,-0.100298 2.616817,-0.149078 M 34.658669,40.788493 c -2.321438,-2.455909 -4.841566,-4.898726 -6.151425,-8.078146 -1.143433,-2.770765 -0.419661,-6.36131 2.170548,-8.067539 3.047724,-2.100369 7.285578,-2.397535 10.617807,-0.796672 2.028671,0.923028 3.409464,3.042563 3.308653,5.286483 0.06674,3.497186 -2.599454,6.219839 -5.250204,8.122144 -4.973,3.234985 -10.097067,6.236332 -15.07445,9.46586 -3.845937,2.613838 -7.80809,5.727115 -9.326891,10.306813 -1.561896,4.734517 0.01647,10.204887 3.659737,13.562223 3.952303,3.841357 9.472531,5.769867 14.930288,5.864667 5.675736,0.35279 11.536033,-1.352788 15.96131,-4.962262 4.673103,-4.762555 8.06419,-10.594592 11.062978,-16.510661 1.552717,-2.735019 3.494322,-5.618999 6.635736,-6.64121 C 67.994583,48.07066 68.82993,48.03897 69.6555,47.9833 m -1.5306,-7.5287 v 9.1608 M 56.1256,46.7768 63.48,53.228 M 34.1915,68.4529 v 10.58 M 23.3534,60.0663 12.1283,59.8083 m 13.2895,-16.2571 4.6449,7.6125 m 14.7088,14.8378 5.419,6.8383 m 2.9676,-20.2569 8.2575,7.4834 M 37.4171,35.8097 45.4166,42.9061 M 36.901,24.7136 37.9332,13.6175 M 41.8039,27.6812 53.1581,27.2941 52.9,26.778 m -23.7405,2.4515 -11.4832,0.5161"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1.20887"
+       inkscape:label="Colonne satin 1"
+       id="path7"
+       inkstitch:zigzag_underlay="False"
+       inkstitch:contour_underlay="True"
+       inkstitch:center_walk_underlay="False"
+       inkstitch:pull_compensation_mm="0.2"
+       inkstitch:satin_column="True"
+       inkstitch:zigzag_spacing_mm="0.4"
+       inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+       inkstitch:fill_underlay="False"
+       inkstitch:reverse_rails="none"
+       inkstitch:min_jump_stitch_length_mm="5"
+       inkstitch:start_at_nearest_point="False"
+       inkstitch:end_at_nearest_point="False"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
   </g>
 </svg>
