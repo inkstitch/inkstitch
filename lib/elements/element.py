@@ -600,9 +600,13 @@ class EmbroideryElement(object):
     def _get_gradient_cache_key_data(self):
         gradient = {}
         if hasattr(self, 'gradient') and self.gradient is not None:
-            gradient['stops'] = self.gradient.stop_offsets
-            gradient['orientation'] = [self.gradient.x1(), self.gradient.x2(), self.gradient.y1(), self.gradient.y2()]
-            gradient['styles'] = [(stop.style('stop-color'), stop.style('stop-opacity')) for stop in self.gradient.stops]
+            # prevent issue with color parsing: https://github.com/inkstitch/inkstitch/issues/3742
+            try:
+                gradient['stops'] = self.gradient.stop_offsets
+                gradient['orientation'] = [self.gradient.x1(), self.gradient.x2(), self.gradient.y1(), self.gradient.y2()]
+                gradient['styles'] = [(stop.style('stop-color'), stop.style('stop-opacity')) for stop in self.gradient.stops]
+            except ValueError:
+                pass
         return gradient
 
     def _get_tartan_key_data(self):
