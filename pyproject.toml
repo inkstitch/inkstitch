@@ -25,7 +25,8 @@ dependencies = [
     ### get up to date inkex version (March 1, 2024)
     "inkex @ git+https://gitlab.com/inkscape/extensions.git@1792934a09046fdef8aab20d05aad9c47f825bf5",
     ###   Linux: pygobject > 3.50 depends on gir2
-    "pygobject <= 3.50; python_version <= '3.11' and sys_platform == 'linux'", ### eg ubuntu 22.04
+    # "pygobject <= 3.50; python_version <= '3.11' and sys_platform == 'linux'", ### eg ubuntu 22.04
+    "pygobject",
     ###   Windows: has binary wheels for pygobject
     ###
     "networkx", ### graphs library
