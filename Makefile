@@ -1,6 +1,15 @@
 # Installation and build script for Ink/Stitch
-#   make manual - seems not needed anymore
-#   make inx    - need to run after each of templates
+#   make manual - seems not needed anymore, only alias for make inx
+#   make inx    - need to run after each change of templates
+
+# Windows:
+#   https://github.com/git-for-windows/git - with basic unix commands
+
+# Why we use make & makefile?
+#   - to avoid long command lines?
+# Why not to use python script instead of makefile?
+#   - maybe should be used instead of makefile?
+#   - see module rich
 
 # used for distlocal
 OS=$(shell uname)
@@ -10,7 +19,8 @@ dist: version locales inx
 	bash bin/build-distribution-archives
 
 distclean:
-	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip
+	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip VERSION
+	find . -type d -name "__pycache__" -exec rm -r {} +
 
 distlocal:
 	@case ${OS} in "Darwin") export BUILD=osx ;; "Linux")export BUILD=linux ;; *) export BUILD=windows ;; esac; export VERSION=local-build; make distclean && make dist;
@@ -19,11 +29,12 @@ manual:                  # now this is only alias for make inx
 	@echo "This target is deprecated. Use 'make inx' instead."
 	make inx
 
+#
 .PHONY: inx              # .PHONY means always run this target even if the files are up to date
 inx: version locales     # before running this target, run version and locales
 	python bin/generate-inx-files;
 
-# - why we need this? see crowdin.yml
+# - why we need this? see crowdin.yml - any suggestion?
 .PHONY: messages.po      # .PHONY means always run this target
 messages.po: inx         # run this target after inx
 	rm -f messages.po
@@ -50,7 +61,7 @@ clean:
 	rm -f messages.po pystitch-format-descriptions.py
 
 
-# generate:
+# generate locales (used by make inx):
 #   ./locales/* from ./translation/*.po
 # copy ./locales/* to ./inx/locale/ and shorten locale code (en_US to en, ...) but some langs has conflict
 .PHONY: locales         # .PHONY means always run this target
@@ -62,6 +73,17 @@ locales:
 version:
 	bash bin/generate-version-file
 
+### --------------------------------------------------------------
+# commands
+
+# flake8 - check python code style
 .PHONY: style           # .PHONY means always run this target
 style:
 	bash -x bin/style-check
+
+# show all files in the repo that are ignored by git
+# - skip .venv folder
+.PHONY: ignored
+ignored:
+	@git ls-files --others --ignored --exclude-standard | grep -v .venv
+
