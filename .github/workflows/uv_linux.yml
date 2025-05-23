@@ -1,0 +1,20 @@
+# .github/workflows/uv_linux.yml
+name: UV Linux
+
+# when the workflow should run
+on:
+  push:
+    branches:
+      - kgn/*
+
+# Jobs are steps that run on the same runner
+jobs:
+  linux64:
+    # define the OS of the runner
+    runs-on: ubuntu-22.04
+
+    # steps are a sequence of commands that will be executed
+    steps:
+      - name: Download source code # Download the source code
+        uses: actions/checkout@v4
+
