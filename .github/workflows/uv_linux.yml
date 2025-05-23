@@ -23,5 +23,9 @@ jobs:
 
       - name: uv
         run: |
-          uv python list
+          # uv python list
+          uv python pin 310
+          uv venv
+          pwd
+          ls -la
 
