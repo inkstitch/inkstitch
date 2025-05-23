@@ -27,8 +27,13 @@ function detect_distro() {
     if [[ -f /etc/os-release ]]; then
         source /etc/os-release
 
+        # Ubuntu native (has ID_LIKE='Debian')
+        if [[ "$ID" == "ubuntu" ]]; then
+            DISTRO_ID="ubuntu"
+            DISTRO_VER="$VERSION_ID"
+
         # Ubuntu and similar (Mint, Pop, Elementary, Zorin, atd.)
-        if [[ "$ID" != "ubuntu" && "$ID_LIKE" == *"ubuntu"* && -n "$UBUNTU_CODENAME" ]]; then
+        elif [[ "$ID_LIKE" == *"ubuntu"* && -n "$UBUNTU_CODENAME" ]]; then
             case "$UBUNTU_CODENAME" in
                 jammy)  DISTRO_ID="ubuntu"; DISTRO_VER="22.04" ;;
                 focal)  DISTRO_ID="ubuntu"; DISTRO_VER="20.04" ;;
@@ -50,11 +55,6 @@ function detect_distro() {
         # Debian and similar
         elif [[ "$ID_LIKE" == *"debian"* ]]; then
             DISTRO_ID="debian"
-            DISTRO_VER="$VERSION_ID"
-
-        # Ubuntu native
-        elif [[ "$ID" == "ubuntu" ]]; then
-            DISTRO_ID="ubuntu"
             DISTRO_VER="$VERSION_ID"
 
         # Fallback
