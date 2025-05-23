@@ -22,10 +22,8 @@ jobs:
         uses: astral-sh/setup-uv@v5
 
       - name: uv
-        run: |
+        run: |  # start direcory is the root of the inkstitch repo
           # uv python list
-          uv python pin 310
+          uv python pin 310  # pin to local python version
           uv venv
-          pwd
-          ls -la
-
+          bin/uv/generate_pyproject.sh
