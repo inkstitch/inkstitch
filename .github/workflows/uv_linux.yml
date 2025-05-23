@@ -32,8 +32,7 @@ jobs:
 
           bin/uv/generate_pyproject.sh
 
-          cat /etc/os-release
+          # cat /etc/os-release
+          # cat pyproject.toml
 
-          cat pyproject.toml
-
-          # uv sync
+          uv sync
