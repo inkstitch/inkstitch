@@ -33,7 +33,7 @@
            <option value="square">Square</option>
            <option value="circle">Circle</option>
         </param>
-        <param name="shape-offset" type="float" gui-text="Offset" min="0" max="50">1</param>
+        <param name="shape-offset" type="float" gui-text="Shape offset" min="0" max="50">1</param>
         <param name="shape-join-style" type="optiongroup" appearance="combo" gui-text="Join style">
            <option value="1">Round</option>
            <option value="2">Mitre</option>
