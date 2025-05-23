@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# linux install script for pygobject
 # - assuming pkg-config is installed
+# - copy pyprojetc-in.toml to pyproject.toml
+# - set the packages in pyproject.toml
 
 set -e
 
@@ -110,8 +111,8 @@ function detect_gir() {
     fi
 }
 
-
 function auto_detection() {
+    echo "🔍 auto detection"
     detect_platform  # set $PLATFORM: linux, darwin, windows
 
     PYGOBJECT="pygobject"
@@ -140,12 +141,23 @@ function auto_detection() {
 
 
 PKG_EXTRA=""
-auto_detection
 
+# skip auto detection if --no-auto-detect is passed or -n is passed
+for arg in "$@"; do
+    if [[ "$arg" == "--no-auto-detect" || "$arg" == "-n" ]]; then
+        echo "❌ auto detection skipped"
+        no_auto_detection=1
+        break
+    fi
+done
+
+
+if [[ -z "$no_auto_detection" ]]; then
+    auto_detection
+fi
 
 
 sed "s|{{PKG_EXTRA}}|$PKG_EXTRA|g" pyproject-in.toml > pyproject.toml
-
 
 # sed -e "s|{{PYGOBJECT}}|$PYGOBJECT|g" \
 #     -e "s|{{WXPYTHON}}|$WXPYTHON|g" \
