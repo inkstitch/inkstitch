@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-21 01:46+0000\n"
-"PO-Revision-Date: 2025-05-21 01:46\n"
+"POT-Creation-Date: 2025-05-22 01:47+0000\n"
+"PO-Revision-Date: 2025-05-23 01:47\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-21 01:46+0000\n"
+"POT-Creation-Date: 2025-05-22 01:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1195,7 +1195,7 @@ msgstr "Arrêter après"
 msgid "Add a STOP command after stitching this object."
 msgstr "Ajoute une commande STOP après avoir brodé cet objet."
 
-#: lib/elements/element.py:700
+#: lib/elements/element.py:704
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Merci d'exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets. Ceci indiquera la position erronée."
 
@@ -6679,11 +6679,11 @@ msgstr "Limite de l'onglet"
 
 #: inx/inkstitch_knockdown_fill.inx:30
 msgid "Embossing"
-msgstr ""
+msgstr "Assise"
 
 #: inx/inkstitch_knockdown_fill.inx:31
 msgid "Shape"
-msgstr ""
+msgstr "Forme"
 
 #: inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_zigzag_line_to_satin.inx:10
@@ -6692,7 +6692,7 @@ msgstr "Carré"
 
 #: inx/inkstitch_knockdown_fill.inx:34
 msgid "Circle"
-msgstr ""
+msgstr "Cercle"
 
 #: inx/inkstitch_knockdown_fill.inx:44
 msgid "This extension generates a knockdown fill area with a specified offset around selected elements."
@@ -6961,15 +6961,15 @@ msgstr "Largeur du caractère espace (par défaut : 20)"
 
 #: inx/inkstitch_lettering_generate_json.inx:134
 msgid "Overwrite letter spacing information from font file."
-msgstr ""
+msgstr "Écraser l'information sur l'espacement des lettres à partir du fichier de la fonte."
 
 #: inx/inkstitch_lettering_generate_json.inx:136
 msgid "Letter spacing (px)"
-msgstr ""
+msgstr "Espacement des lettres (px)"
 
 #: inx/inkstitch_lettering_generate_json.inx:136
 msgid "Letter spacing (default: 100)"
-msgstr ""
+msgstr "Espacement des lettres (par défaut : 100)"
 
 #: inx/inkstitch_lettering_generate_json.inx:144
 msgid "Generates font.json which can be used by the lettering tool."
