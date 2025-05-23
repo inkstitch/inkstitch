@@ -7,7 +7,7 @@
 ### set python version, create .python-version file
 uv python pin 311
 
-### create virtual environment
+### create virtual environment (delete .venv to recreate everything)
 uv venv
 
 ### create pyproject.toml file
@@ -27,4 +27,4 @@ bin/uv/generate_pyproject.sh
 # uv add mypkg
 
 ### install packages from pyproject.toml
-# uv sync
+uv sync
