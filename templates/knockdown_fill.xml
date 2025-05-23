@@ -30,7 +30,7 @@
       <page name="embossing" gui-text="Embossing">
         <param name="shape" type="optiongroup" appearance="combo" gui-text="Shape">
            <option value="">None</option>
-           <option value="square">Square</option>
+           <option value="rect">Rectangle</option>
            <option value="circle">Circle</option>
         </param>
         <param name="shape-offset" type="float" gui-text="Shape offset" min="0" max="50">1</param>

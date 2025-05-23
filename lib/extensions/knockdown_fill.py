@@ -106,11 +106,11 @@ class KnockdownFill(InkstitchExtension):
                 for interior in polygon.interiors:
                     d += str(Path(interior.coords))
 
-            if self.options.shape == 'square':
-                square = polygon.envelope
-                offset_square = self._apply_offset(square, self.options.shape_offset, self.options.shape_join_style)
-                offset_square = offset_square.reverse()
-                d = str(Path(offset_square.exterior.coords)) + d
+            if self.options.shape == 'rect':
+                rect = polygon.envelope
+                offset_rect = self._apply_offset(rect, self.options.shape_offset, self.options.shape_join_style)
+                offset_rect = offset_rect.reverse()
+                d = str(Path(offset_rect.exterior.coords)) + d
             elif self.options.shape == 'circle':
                 circle = minimum_bounding_circle(polygon)
                 offset_circle = self._apply_offset(circle, self.options.shape_offset, self.options.shape_join_style)
