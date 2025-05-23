@@ -26,4 +26,9 @@ jobs:
           # uv python list
           uv python pin 310  # pin to local python version
           uv venv
+
+          # for PyGObject
+          sudo apt install libgirepository1.0-dev libcairo2-dev
+
           bin/uv/generate_pyproject.sh
+
