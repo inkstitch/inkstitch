@@ -24,7 +24,7 @@ jobs:
       - name: uv
         run: |  # start direcory is the root of the inkstitch repo
           # uv python list
-          uv python pin 310  # pin to local python version
+          uv python pin 311  # pin to local python version
           uv venv
 
           # for PyGObject
@@ -32,3 +32,4 @@ jobs:
 
           bin/uv/generate_pyproject.sh
 
+          uv sync
