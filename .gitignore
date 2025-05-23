@@ -38,3 +38,4 @@ logs/
 # uv & pyproject.toml
 .python-version
 uv.lock
+pyproject.toml
