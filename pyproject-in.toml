@@ -50,8 +50,7 @@ dependencies = [
     "pywinutils ; sys_platform == 'win32'", ### Windows utils
     "pywin32 ; sys_platform == 'win32'", ### Windows utils
     ### Replaced by script: bin/uv/generate_pyproject.sh
-    "pygobject<=3.50",
-    "wxpython @ https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.3-cp311-cp311-linux_x86_64.whl",
+{{PKG_EXTRA}}
 ]
 
 [dependency-groups]
