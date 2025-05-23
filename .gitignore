@@ -35,7 +35,9 @@ logs/
 /PROFILE
 /profile*
 
-# uv & pyproject.toml
+# uv - pyproject.toml
 .python-version
 uv.lock
 pyproject.toml
+
+
