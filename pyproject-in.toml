@@ -58,6 +58,7 @@ dependencies = [
 ### remove by: uv remove xxx --dev
 dev = [
     "pytest",
+    "pyinstaller",
     # Misc dev dependencies
     "types-wxpython",
     "types-appdirs",
