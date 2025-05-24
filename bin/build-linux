@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 set -e
 # creating folder to install geos
 mkdir $HOME/geos-build
