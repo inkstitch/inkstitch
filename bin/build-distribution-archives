@@ -1,5 +1,16 @@
+#!/bin/bash
+
+set -e
+set -x
+
+if [[ -z "$BUILD" ]]; then
+  echo "Error: BUILD variable is not set."
+  exit 1
+fi
+
+
 VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
-OS="${BUILD:-$(uname)}"
+OS="${BUILD:-$(uname)}"  # uname returns the OS name, e.g. Linux, Darwin, etc. !!! Linux !- linux lowercase
 ARCH="$(uname -m)"
 
 if [ "$BUILD" = "osx" ]; then

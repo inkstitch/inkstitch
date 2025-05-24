@@ -1,8 +1,15 @@
 #!/bin/bash
 
 set -e
+
+if [[ -z "$BUILD" ]]; then
+  echo "Error: BUILD variable is not set."
+  exit 1
+fi
+
 info_year=$( date "+%Y" )
 ARCH="$(uname -m)"
+
 # PyInstaller v6.x rearranges folder configuration causing broken builds, This re-enables old onedir layout.
 pyinstaller_args+="--contents-directory . "
 
