@@ -3,9 +3,9 @@ name: UV Build
 
 # when the workflow should run
 on:
-  push:
-    branches:
-      - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
+  # push:
+  #   branches:
+  #     - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
   workflow_dispatch:  # manual trigger of the workflow
     inputs:
       # input variables for manual run
