@@ -1,7 +1,7 @@
 ---
 title: "Tools: Fill"
 permalink: /docs/fill-tools/
-last_modified_at: 2025-03-19
+last_modified_at: 2025-05-24
 toc: true
 ---
 ## Break Apart Fill Objects
@@ -51,8 +51,10 @@ Convert to gradient blocks will split a fill with a linear gradient into multipl
 
 {% include upcoming_release.html %}
 
-Helper method to generate a fill area underneath of all selected elements, optionally with an offset. This can be very useful when working with high pile fabric.
-
+Helper method to generate either
+- a fill area underneath of all selected elements, optionally with a positive or a negative offset. This can be very useful when working with high pile fabric (usually with a positive offset) or to create global underlay (usually with a negative offset)
+- a rectangle or a circle area around all selected elements (but not underneath). This can be useful to create an embossing effect.
+  
 ![A figure with a surrounding knockdown stitch](/assets/images/docs/knockdown.png)
 
 * Select elements
@@ -61,17 +63,24 @@ Helper method to generate a fill area underneath of all selected elements, optio
 * Click apply
 * Adapt fill settings in the params dialog (`Extensions > Ink/Stitch > Params`)
 
-  When you want to keep the same structure, but want to scale the pattern up or down,
-  update the row spacing for both, top layer and underlay and then calculate the maximum stitch length: `spacing / sin(60)`<br><br>
-  **Example**: When the row spacing value is set to 1.8, the maximum stitch length will be `1.8 / sin(60) ≈ 2.08`.
+  When you want to keep the same structure, but want to scale the pattern up or down, update the row spacing for both top layer and underlay and then calculate the maximum stitch length: `spacing / sin(60°)`<br><br>
+  **Example**: When the row spacing value is set to 1.8, the maximum stitch length will be `1.8 / sin(60°) ≈ 2.08`.
   {: .notice--info }
 
 ### Settings
 
-* Keep holes: Whether or not the shape should contain holes
+#### Embossing tab
+* Shape: If None, the extension creates a knockdown fill area underneath the selected elements. If on the other hand, you wish an embossing effect chose between rectangle and circle, to create a knockdown fill around the selected elements, excluding the area underneath the selected elements.
+* Shape offset : Any positive value will extend the embossing area. The excluded area may be modified by using the offset parameter in the options tab.
+* Method (round, mitre, bevel): Influences how edges will look like
+
+#### Options tab
+
+* Keep holes: Whether or not the shape should contain holes (only works for Shape set to None)
 * Offset: The offset (mm) around the selection
 * Method (round, mitre, bevel): Influences how edges will look like
 * Mitre limit:  Influences how edges will look like
+
 
 ## Tartan
 
