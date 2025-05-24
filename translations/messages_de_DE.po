@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-22 01:47+0000\n"
-"PO-Revision-Date: 2025-05-22 01:47\n"
+"POT-Creation-Date: 2025-05-24 01:43+0000\n"
+"PO-Revision-Date: 2025-05-24 01:43\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-22 01:47+0000\n"
+"POT-Creation-Date: 2025-05-24 01:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6660,7 +6660,7 @@ msgstr "Generiert einen Knockdown-Stich mit Versatz um die Auswahl"
 msgid "Keep holes"
 msgstr "Löcher erhalten"
 
-#: inx/inkstitch_knockdown_fill.inx:19 inx/inkstitch_knockdown_fill.inx:36
+#: inx/inkstitch_knockdown_fill.inx:19
 msgid "Offset"
 msgstr "Versatz"
 
@@ -6678,19 +6678,22 @@ msgstr "Gehrungslimit"
 
 #: inx/inkstitch_knockdown_fill.inx:30
 msgid "Embossing"
-msgstr ""
+msgstr "Embossing"
 
 #: inx/inkstitch_knockdown_fill.inx:31
 msgid "Shape"
-msgstr ""
+msgstr "Form"
 
 #: inx/inkstitch_knockdown_fill.inx:33
-#: inx/inkstitch_zigzag_line_to_satin.inx:10
-msgid "Square"
-msgstr "Viereck"
+msgid "Rectangle"
+msgstr ""
 
 #: inx/inkstitch_knockdown_fill.inx:34
 msgid "Circle"
+msgstr "Kreis"
+
+#: inx/inkstitch_knockdown_fill.inx:36
+msgid "Shape offset"
 msgstr ""
 
 #: inx/inkstitch_knockdown_fill.inx:44
@@ -6960,15 +6963,15 @@ msgstr "Breite des Leerzeichens (Standard: 20)"
 
 #: inx/inkstitch_lettering_generate_json.inx:134
 msgid "Overwrite letter spacing information from font file."
-msgstr ""
+msgstr "Information zum Zeichenabstand aus der Schriftdatei überschreiben."
 
 #: inx/inkstitch_lettering_generate_json.inx:136
 msgid "Letter spacing (px)"
-msgstr ""
+msgstr "Zeichenabstand (px)"
 
 #: inx/inkstitch_lettering_generate_json.inx:136
 msgid "Letter spacing (default: 100)"
-msgstr ""
+msgstr "Zeichenabstand (Voreinstellung: 100)"
 
 #: inx/inkstitch_lettering_generate_json.inx:144
 msgid "Generates font.json which can be used by the lettering tool."
@@ -8163,6 +8166,10 @@ msgstr "Konvertiert eine Zickzack-Linie in eine Satinsäule."
 #: inx/inkstitch_zigzag_line_to_satin.inx:21
 msgid "Line Pattern"
 msgstr "Linienmuster"
+
+#: inx/inkstitch_zigzag_line_to_satin.inx:10
+msgid "Square"
+msgstr "Viereck"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:11
 msgid "Sawtooth"

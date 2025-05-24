@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-22 01:47+0000\n"
-"PO-Revision-Date: 2025-05-22 01:47\n"
+"POT-Creation-Date: 2025-05-24 01:43+0000\n"
+"PO-Revision-Date: 2025-05-24 01:43\n"
 "Last-Translator: \n"
 "Language-Team: Norwegian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-22 01:47+0000\n"
+"POT-Creation-Date: 2025-05-24 01:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6637,7 +6637,7 @@ msgstr ""
 msgid "Keep holes"
 msgstr ""
 
-#: inx/inkstitch_knockdown_fill.inx:19 inx/inkstitch_knockdown_fill.inx:36
+#: inx/inkstitch_knockdown_fill.inx:19
 msgid "Offset"
 msgstr ""
 
@@ -6662,12 +6662,15 @@ msgid "Shape"
 msgstr ""
 
 #: inx/inkstitch_knockdown_fill.inx:33
-#: inx/inkstitch_zigzag_line_to_satin.inx:10
-msgid "Square"
+msgid "Rectangle"
 msgstr ""
 
 #: inx/inkstitch_knockdown_fill.inx:34
 msgid "Circle"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:36
+msgid "Shape offset"
 msgstr ""
 
 #: inx/inkstitch_knockdown_fill.inx:44
@@ -8139,6 +8142,10 @@ msgstr ""
 #: inx/inkstitch_zigzag_line_to_satin.inx:9
 #: inx/inkstitch_zigzag_line_to_satin.inx:21
 msgid "Line Pattern"
+msgstr ""
+
+#: inx/inkstitch_zigzag_line_to_satin.inx:10
+msgid "Square"
 msgstr ""
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:11
