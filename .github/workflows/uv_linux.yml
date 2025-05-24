@@ -5,34 +5,36 @@ name: UV Linux
 on:
   push:
     branches:
-      - kgn/*
+      - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
 
 # Jobs are steps that run on the same runner
 jobs:
-  linux64:
+  linux64:  # name of the job
     # define the OS of the runner
     runs-on: ubuntu-22.04
 
     # steps are a sequence of commands that will be executed
     steps:
-      - name: Download Inkstitch # Download the source code no submodules
+      - name: Download Inkstitch # Download the source code, no submodules
         uses: actions/checkout@v4
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
 
-      - name: uv
-        run: |  # start direcory is the root of the inkstitch repo
+      - name: Setup environment
+        # shell: bash
+        run: |  # start directory is the root of the inkstitch repo
           # uv python list
           uv python pin 311  # pin to local python version
-          uv venv
+          uv venv  # create a virtual environment with the pinned python version
 
-          # for PyGObject
+          # for PyGObject 3.50 to compile
           sudo apt install libgirepository1.0-dev libcairo2-dev
 
           bin/uv/generate_pyproject.sh
-
-          # cat /etc/os-release
-          # cat pyproject.toml
-
           uv sync
+
+          # debug
+          cat /etc/os-release
+          cat pyproject.toml
+
