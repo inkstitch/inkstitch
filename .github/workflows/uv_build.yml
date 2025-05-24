@@ -3,9 +3,9 @@ name: UV Build
 
 # when the workflow should run
 on:
-  # push:
-  #   branches:
-  #     - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
+  push:
+    branches: []   # branch pattern **= any number of characters and /, * = any number of characters not including /
+    tags: []
   workflow_dispatch:  # manual trigger of the workflow
     inputs:
       # input variables for manual run
@@ -13,26 +13,27 @@ on:
         description: 'Build type'
         required: true
         default: 'linux64'  # default value
-        type: string  # type of the input, can be string, boolean, or choice
-        # type: choice
-        # options:
-        #   - linux64
-        #   - linux32
-        #   - windows64
-        #   - windows32
-        #   - macos64
-        #   - macos32
-        #   - linux-arm64
-        #   - linux-arm32
-        #   - windows-arm64
-        #   - windows-arm32
-        #   - macos-arm64
-        #   - macos-arm32
+        type: choice  # type of the input, can be number, boolean, string, choice or environment
+        options:
+          - linux64
+          - linux32
+          - linux-arm64
+          - linux-arm32
+
+          - windows64
+          - windows32
+          - windows-arm64
+          - windows-arm32
+
+          - macos64
+          - macos32
+          - macos-arm64
+          - macos-arm32
 
 jobs:
   call_linux_build:
     if: startsWith(github.event.inputs.build_type, 'linux')
-    # if: github.event.inputs.build_type == 'linux64' || github.event.inputs.build_type == 'linux32' || github.event.inputs.build_type == 'linux-arm64' || github.event.inputs.build_type == 'linux-arm32'
+    # if: github.event.inputs.build_type == 'linux64' || github.event.inputs.build_type == 'linux32' || ...
     name: Build Linux (${{ github.event.inputs.build_type }})
     uses: ./.github/workflows/uv_linux.yml # call reusable workflow
     with:
