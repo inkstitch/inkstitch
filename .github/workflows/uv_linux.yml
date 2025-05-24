@@ -22,7 +22,7 @@ jobs:
         uses: astral-sh/setup-uv@v5
 
       - name: Setup environment
-        # shell: bash
+        shell: bash
         run: |  # start directory is the root of the inkstitch repo
           # uv python list
           uv python pin 311  # pin to local python version
