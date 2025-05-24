@@ -21,7 +21,6 @@ on:
           - windows32
           - macos64
           - macos32
-
           - linux-arm64
           - linux-arm32
           - windows-arm64
