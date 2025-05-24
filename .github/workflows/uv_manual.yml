@@ -2,9 +2,9 @@
 name: UV Manual
 
 on:
-  push:
-    branches:
-      - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
+  # push:
+  #   branches:
+  #     - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
 
   workflow_dispatch:
     # You can optionally define inputs here if you need them.
