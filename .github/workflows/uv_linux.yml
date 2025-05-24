@@ -68,16 +68,18 @@ jobs:
           # cat /etc/os-release
           # cat pyproject.toml
 
-      - shell: bash
+      - name: Build dist
+        shell: bash
         run: |
 
-          echo "Building dist"
+          # check if the GPG key is set
+          gpg --list-secret-keys --keyid-format LONG
 
           . .venv/bin/activate  # activate the virtual environment
           type python  # check python version
           # python --version
 
-          make dist
+          # make dist
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
