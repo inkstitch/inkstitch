@@ -52,6 +52,7 @@ jobs:
           uv sync # install dependencies from pyproject.toml
 
           . .venv/bin/activate  # activate the virtual environment
+          type python
 
           echo "pythonLocation: ${{ env.pythonLocation }}"
           echo "GITHUB_PATH: $GITHUB_PATH"
@@ -64,6 +65,7 @@ jobs:
         run: |
           echo "Building dist"
 
+          . .venv/bin/activate  # activate the virtual environment
           type python
           python --version
 
