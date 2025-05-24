@@ -1,0 +1,24 @@
+# .github/workflows/manual-trigger.yml
+name: UV Manual
+
+on:
+  workflow_dispatch:
+    # You can optionally define inputs here if you need them.
+    # For a very simple trigger, you might not need any.
+    # inputs:
+    #   message:
+    #     description: 'A custom message'
+    #     required: false
+    #     default: 'Hello from manual trigger!'
+    #     type: string
+
+jobs:
+  simple_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet the world
+        run: |
+          echo "This workflow was triggered manually!"
+          echo "Current time is $(date)"
+          # If you had inputs, you could access them like this:
+          # echo "Custom message: ${{ github.event.inputs.message }}"
