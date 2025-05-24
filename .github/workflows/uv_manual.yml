@@ -1,4 +1,4 @@
-# .github/workflows/manual-trigger.yml
+# .github/workflows/uv_manual.yml
 name: UV Manual
 
 on:
