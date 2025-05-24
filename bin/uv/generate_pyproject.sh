@@ -71,7 +71,8 @@ function detect_distro() {
 # detect python version from file .python-version
 function detect_python_version() {
     if [[ -f ".python-version" ]]; then
-        PYVER=$(cat .python-version)
+        # get version as 3.10, 3.11, etc.
+        PYVER=$(uv run python -c "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')")
     else
         echo "❌ file .python-version not found"
         exit 1
