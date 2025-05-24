@@ -40,13 +40,13 @@ jobs:
           uv python pin 311  # pin to local python version
           uv venv  # create a virtual environment with the pinned python version
 
-          . .venv/bin/activate  # activate the virtual environment
-
           # for PyGObject 3.50 to compile
           sudo apt install libgirepository1.0-dev libcairo2-dev
 
-          bin/uv/generate_pyproject.sh
-          uv sync
+          bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+          uv sync # install dependencies from pyproject.toml
+
+          . .venv/bin/activate  # activate the virtual environment
 
           echo "pythonLocation: ${{ env.pythonLocation }}"
           echo "GITHUB_PATH: $GITHUB_PATH"
