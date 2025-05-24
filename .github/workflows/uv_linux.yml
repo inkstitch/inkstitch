@@ -2,16 +2,15 @@
 name: UV Linux
 
 # when the workflow should run
-on:
   # push:
   #   branches:
   #     - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
 
-  ### manual run
-  workflow_dispatch:
+on:
+  workflow_dispatch:  # manual trigger of the workflow
     inputs:
       # input variables for manual run
-      BUILD:
+      buildType:
         description: 'Build type'
         required: true
         default: 'linux64'  # default value
