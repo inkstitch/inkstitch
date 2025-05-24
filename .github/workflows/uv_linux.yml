@@ -14,21 +14,7 @@ on:
         description: 'Build type'
         required: true
         default: 'linux64'  # default value
-        type: string  # type of the input, can be string, boolean, or choice
-        # type: choice
-        # options:
-        #   - linux64
-        #   - linux32
-        #   - windows64
-        #   - windows32
-        #   - macos64
-        #   - macos32
-        #   - linux-arm64
-        #   - linux-arm32
-        #   - windows-arm64
-        #   - windows-arm32
-        #   - macos-arm64
-        #   - macos-arm32
+        type: string  # type of the input, can be string, boolean, or number
 
 
 # Jobs are steps that run on the same runner
@@ -60,13 +46,15 @@ jobs:
           bin/uv/generate_pyproject.sh
           uv sync
 
-          . bin/uv/activate.sh  # activate the virtual environment
+          . .venv/bin/activate  # activate the virtual environment
+          python --version
           # debug
           # cat /etc/os-release
           # cat pyproject.toml
 
       - shell: bash
         run: |
+          echo "Building dist"
           python --version
           # make dist
         env:
