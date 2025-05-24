@@ -2,16 +2,19 @@
 name: UV Manual
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
 
+  workflow_dispatch:
     # You can optionally define inputs here if you need them.
     # For a very simple trigger, you might not need any.
-    inputs:
-      message:
-        description: 'A custom message'
-        required: false
-        default: 'Hello from manual trigger!'
-        type: string
+    # inputs:
+    #   message:
+    #     description: 'A custom message'
+    #     required: false
+    #     default: 'Hello from manual trigger!'
+    #     type: string
 
 jobs:
   simple_job:
