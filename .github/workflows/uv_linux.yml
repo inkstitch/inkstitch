@@ -4,13 +4,13 @@ name: UV Linux
 # when the workflow should run
 
 on:
-  push:
-    branches:
-      - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
+  # push:
+  #   branches:
+  #     - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
   workflow_call:  # manual trigger of the workflow
     inputs:
       # input variables for manual run
-      buildType:
+      build_type:
         description: 'Build type'
         required: true
         default: 'linux64'  # default value
@@ -34,7 +34,7 @@ on:
 # Jobs are steps that run on the same runner
 jobs:
   linux64:  # name of the job
-    if: github.event.inputs.buildType == 'linux64'
+    if: github.event.inputs.build_type == 'linux64'
     # define the OS of the runner
     runs-on: ubuntu-22.04
 
