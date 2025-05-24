@@ -2,37 +2,39 @@
 name: UV Linux
 
 # when the workflow should run
+
+on:
   # push:
   #   branches:
   #     - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
-
-on:
-  workflow_dispatch:  # manual trigger of the workflow
+  workflow_call:  # manual trigger of the workflow
     inputs:
       # input variables for manual run
       buildType:
         description: 'Build type'
         required: true
         default: 'linux64'  # default value
-        type: choice
-        options:
-          - linux64
-          - linux32
-          - windows64
-          - windows32
-          - macos64
-          - macos32
-          - linux-arm64
-          - linux-arm32
-          - windows-arm64
-          - windows-arm32
-          - macos-arm64
-          - macos-arm32
+        type: string  # type of the input, can be string, boolean, or choice
+        # type: choice
+        # options:
+        #   - linux64
+        #   - linux32
+        #   - windows64
+        #   - windows32
+        #   - macos64
+        #   - macos32
+        #   - linux-arm64
+        #   - linux-arm32
+        #   - windows-arm64
+        #   - windows-arm32
+        #   - macos-arm64
+        #   - macos-arm32
 
 
 # Jobs are steps that run on the same runner
 jobs:
   linux64:  # name of the job
+    if: github.event.inputs.buildType == 'linux64'
     # define the OS of the runner
     runs-on: ubuntu-22.04
 
@@ -58,13 +60,15 @@ jobs:
           bin/uv/generate_pyproject.sh
           uv sync
 
+          . bin/uv/activate.sh  # activate the virtual environment
           # debug
           # cat /etc/os-release
           # cat pyproject.toml
 
       - shell: bash
         run: |
-          make dist
+          python --version
+          # make dist
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
