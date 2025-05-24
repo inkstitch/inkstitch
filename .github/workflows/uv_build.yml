@@ -1,5 +1,5 @@
 # .github/workflows/uv_build.yml
-name: UV Linux
+name: UV Build
 
 # when the workflow should run
 on:
