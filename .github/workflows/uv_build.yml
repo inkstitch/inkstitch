@@ -13,20 +13,21 @@ on:
         description: 'Build type'
         required: true
         default: 'linux64'  # default value
-        type: choice
-        options:
-          - linux64
-          - linux32
-          - windows64
-          - windows32
-          - macos64
-          - macos32
-          - linux-arm64
-          - linux-arm32
-          - windows-arm64
-          - windows-arm32
-          - macos-arm64
-          - macos-arm32
+        type: string  # type of the input, can be string, boolean, or choice
+        # type: choice
+        # options:
+        #   - linux64
+        #   - linux32
+        #   - windows64
+        #   - windows32
+        #   - macos64
+        #   - macos32
+        #   - linux-arm64
+        #   - linux-arm32
+        #   - windows-arm64
+        #   - windows-arm32
+        #   - macos-arm64
+        #   - macos-arm32
 
 jobs:
   call_linux_build:
