@@ -5,17 +5,44 @@
 # Windows:
 #   https://github.com/git-for-windows/git - with basic unix commands
 
-# Why we use make & makefile?
-#   - to avoid long command lines?
-# Why not to use python script instead of makefile?
-#   - maybe should be used instead of makefile?
-#   - see module rich
+# BUILD variable:
+#   - osx common for MacOS and variants
+#   - linux common for Linux and variants
+#   - windows common for Windows and variants
 
-# used for distlocal
-OS=$(shell uname)
+# usage: eg BUILD=xxx make
+# := immediate assignment; = lazy assignment
 
-dist: version locales inx
+OS := $(shell uname)
+OS_LOWER := $(shell echo $(OS) | tr '[:upper:]' '[:lower:]')
+
+# if BUILD variable is not set, then set it based on OS_LOWER
+ifndef BUILD
+	ifeq ($(OS_LOWER),darwin)
+		BUILD := osx
+	else ifeq ($(OS_LOWER),linux)
+		BUILD := linux
+	else
+		BUILD := windows
+	endif
+endif
+# export BUILD variable to sub-processes
+export BUILD
+
+# default target - debugging info
+.PHONY: default
+default:
+	@echo ${SHELL}
+	@echo "Operating System: OS: ${OS} -> lc: ${OS_LOWER}"
+	@echo "BUILD: ${BUILD}"
+
+
+# Build Pythonu - requires BUILD variable
+build-python: version locales inx
 	bash bin/build-python
+
+# Build archives  - requires BUILD variable
+dist: build-python
 	bash bin/build-distribution-archives
 
 distclean:
@@ -23,9 +50,16 @@ distclean:
 	find . -type d -name "__pycache__" -exec rm -r {} +
 
 distlocal:
-	@case ${OS} in "Darwin") export BUILD=osx ;; "Linux")export BUILD=linux ;; *) export BUILD=windows ;; esac; export VERSION=local-build; make distclean && make dist;
+    # make use separate shell for each line, here we need all in one line
+	@case ${OS} in \
+		"Darwin")  export BUILD=osx ;; \
+		"Linux")   export BUILD=linux ;; \
+		*)         export BUILD=windows ;; \
+	esac; \
+	export VERSION=local-build; \
+	make distclean && make dist;
 
-manual:                  # now this is only alias for make inx
+manual:                  # now this is alias for make inx
 	@echo "This target is deprecated. Use 'make inx' instead."
 	make inx
 

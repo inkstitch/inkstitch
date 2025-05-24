@@ -3,9 +3,33 @@ name: UV Linux
 
 # when the workflow should run
 on:
-  push:
-    branches:
-      - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
+  # push:
+  #   branches:
+  #     - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
+
+  ### manual run
+  workflow_dispatch:
+    inputs:
+      # input variables for manual run
+      BUILD:
+        description: 'Build type'
+        required: true
+        default: 'linux64'  # default value
+        type: choice
+        options:
+          - linux64
+          - linux32
+          - windows64
+          - windows32
+          - macos64
+          - macos32
+          - linux-arm64
+          - linux-arm32
+          - windows-arm64
+          - windows-arm32
+          - macos-arm64
+          - macos-arm32
+
 
 # Jobs are steps that run on the same runner
 jobs:
@@ -18,12 +42,12 @@ jobs:
       - name: Download Inkstitch # Download the source code, no submodules
         uses: actions/checkout@v4
 
-      - name: Install uv
+      - name: Install uv  # https://docs.astral.sh/uv/guides/integration/github/
         uses: astral-sh/setup-uv@v5
 
       - name: Setup environment
         shell: bash
-        run: |  # start directory is the root of the inkstitch repo
+        run: |  # working directory is the root of the inkstitch repo
 
           # uv python list
           uv python pin 311  # pin to local python version
@@ -35,9 +59,13 @@ jobs:
           bin/uv/generate_pyproject.sh
           uv sync
 
-          uv add pyinstaller
-
           # debug
           # cat /etc/os-release
           # cat pyproject.toml
 
+      - shell: bash
+        run: |
+          make dist
+        env:
+          BUILD: linux
+          INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
