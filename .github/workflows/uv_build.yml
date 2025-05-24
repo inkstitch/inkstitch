@@ -35,6 +35,6 @@ jobs:
     # if: github.event.inputs.build_type == 'linux64' || github.event.inputs.build_type == 'linux32' || github.event.inputs.build_type == 'linux-arm64' || github.event.inputs.build_type == 'linux-arm32'
     name: Build Linux (${{ github.event.inputs.build_type }})
     uses: ./.github/workflows/uv_linux.yml # call reusable workflow
-    # with:
-    #   os_version: ${{ github.event.inputs.build_type || 'linux64' }}
+    with:
+      build_type: ${{ github.event.inputs.build_type }}
       # custom_message: ${{ github.event.inputs.custom_pipeline_message }}
