@@ -35,10 +35,12 @@ logs/
 /PROFILE
 /profile*
 
-# uv - pyproject.toml
+# uv & pyproject.toml
 uv_pkg_update.sh
 .python-version
 uv.lock
 pyproject.toml
 
+# github client gh shell files
+/gh*.sh
 
