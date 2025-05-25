@@ -81,7 +81,30 @@ jobs:
           # secrets are available only in main branch
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
 
+      # save the build artifacts for later use by other jobs
       - uses: actions/upload-artifact@v4
         with:
           name: inkstitch-linux64
           path: artifacts
+
+###############################################################################
+
+  linuxarm64:
+    if: github.event.inputs.build_type == 'linux-arm64'
+
+    runs-on: ubuntu-22.04-arm
+
+    # steps are a sequence of commands that will be executed
+    steps:
+      - name: Download Inkstitch # Download the source code, no submodules
+        uses: actions/checkout@v4
+
+      - name: Install uv  # https://docs.astral.sh/uv/guides/integration/github/
+        uses: astral-sh/setup-uv@v5
+
+      - name: Setup environment
+        shell: bash
+        run: |  # working directory is the root of the inkstitch repo
+
+          uv python list
+
