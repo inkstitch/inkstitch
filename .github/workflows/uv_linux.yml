@@ -55,6 +55,11 @@ jobs:
 
 
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+
+          # debug
+          # cat /etc/os-release
+          # cat pyproject.toml
+
           uv sync # install dependencies from pyproject.toml
 
           # . .venv/bin/activate  # activate the virtual environment
@@ -63,9 +68,6 @@ jobs:
           echo "pythonLocation: ${{ env.pythonLocation }}"  # empty - what is this good for
           echo "GITHUB_PATH: $GITHUB_PATH"
 
-          # debug
-          # cat /etc/os-release
-          # cat pyproject.toml
 
       - name: Build dist
         shell: bash
@@ -125,6 +127,11 @@ jobs:
 
 
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+
+          # debug
+          cat /etc/os-release
+          cat pyproject.toml
+
           uv sync # install dependencies from pyproject.toml
 
           # . .venv/bin/activate  # activate the virtual environment
