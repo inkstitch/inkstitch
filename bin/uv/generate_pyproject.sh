@@ -7,6 +7,7 @@
 set -e
 set -x
 
+# OSTYPE is set by Bash, it contains the type of the operating system
 function detect_platform() {
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         PLATFORM="linux"
@@ -125,16 +126,25 @@ function auto_detection() {
         detect_pkgconf   # set $PKGCONF: pkg-config or pkgconf
         detect_distro    # set $DISTRO_ID, $DISTRO_VER: ubuntu, debian, arch, fedora, etc.
         # echo "Distro: $DISTRO_ID    Version: $DISTRO_VER"
+
         detect_python_version  # set $PYVER, $PYVERNODOT: python version, python version no dot
         # echo "Python version: $PYVER ($PYVERNODOT)"
 
         ### PyGObject
         detect_gir       # set $PYGOBJECT: pygobject<=3.50 or pygobject>3.50
 
-        ### wxPython
-        #      "https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.3-cp39-cp39-linux_x86_64.whl"
-        WXPYTHON="wxpython \@ https://extras.wxpython.org/wxPython4/extras/linux/gtk3/${DISTRO_ID}-${DISTRO_VER}"
-        WXPYTHON="$WXPYTHON/wxpython-4.2.3-cp${PYVERNODOT}-cp${PYVERNODOT}-linux_x86_64.whl"
+        # wheel only for amd64/x86_64
+        case "$HOSTTYPE" in
+            x86_64|amd64)
+                ### wxPython
+                #      "https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.3-cp39-cp39-linux_x86_64.whl"
+                WXPYTHON="wxpython \@ https://extras.wxpython.org/wxPython4/extras/linux/gtk3/${DISTRO_ID}-${DISTRO_VER}"
+                WXPYTHON="$WXPYTHON/wxpython-4.2.3-cp${PYVERNODOT}-cp${PYVERNODOT}-linux_x86_64.whl"
+                ;;
+            *)
+                WXPYTHON="wxpython"
+                ;;
+        esac
 
     fi
 
