@@ -17,6 +17,7 @@ OS := $(shell uname)
 OS_LOWER := $(shell echo $(OS) | tr '[:upper:]' '[:lower:]')
 
 # if BUILD variable is not set, then set it based on OS_LOWER
+# @case ${OS} in "Darwin")  export BUILD=osx ;; "Linux") export BUILD=linux ;; *) export BUILD=windows ;; esac;
 ifndef BUILD
 	ifeq ($(OS_LOWER),darwin)
 		BUILD := osx
@@ -31,11 +32,28 @@ export BUILD
 
 # default target - debugging info
 .PHONY: default
-default:
+default: help
 	@echo ${SHELL}
 	@echo "Operating System: OS: ${OS} -> lc: ${OS_LOWER}"
 	@echo "BUILD: ${BUILD}"
 
+
+.PHONY: help
+help:
+	@echo "Usage: make [target]"
+	@echo "Available targets:"
+	@echo "  default        - show OS and BUILD variables"
+	@echo "  help           - show this help"
+	@echo "  style          - check python code style with flake8"
+	@echo "  ignored        - show all files in the repo that are ignored by git"
+	@echo "  version        - generate ./VERSION file"
+	@echo "  locales        - generate translation files from ./translation/*.po to ./locales/"
+	@echo "  inx            - generate inx files from ./locales/ and templates"
+	@echo "  messages.po    - generate messages.po from inx files and babel"
+	@echo "  build-python   - build Pythonu (requires BUILD variable)"
+	@echo "  dist           - build distribution archives (requires BUILD variable)"
+	@echo "  distclean      - clean up build artifacts"
+	@echo "  distlocal      - build local distribution archives for current OS"
 
 # Build Pythonu - requires BUILD variable
 build-python: version locales inx
@@ -49,15 +67,9 @@ distclean:
 	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip VERSION
 	find . -type d -name "__pycache__" -exec rm -r {} +
 
+# Build local distribution archives for current OS - requires BUILD variable
 distlocal:
-    # make use separate shell for each line, here we need all in one line
-	@case ${OS} in \
-		"Darwin")  export BUILD=osx ;; \
-		"Linux")   export BUILD=linux ;; \
-		*)         export BUILD=windows ;; \
-	esac; \
-	export VERSION=local-build; \
-	make distclean && make dist;
+	export VERSION=local-build; make distclean && make dist;
 
 manual:                  # now this is alias for make inx
 	@echo "This target is deprecated. Use 'make inx' instead."
