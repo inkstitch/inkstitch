@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 set -e
 uname -a
 python3 --version
