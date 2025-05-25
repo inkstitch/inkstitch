@@ -136,7 +136,7 @@ jobs:
           cat /etc/os-release
           cat pyproject.toml
 
-          exit 1  # debug, stop here
+          # exit 1  # debug, stop here
           uv sync # install dependencies from pyproject.toml
 
           # . .venv/bin/activate  # activate the virtual environment
