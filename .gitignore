@@ -7,6 +7,8 @@ __pycache__
 *.tar.gz
 *.po
 *.log
+# not artefacts - british English
+artifacts/
 dist/
 build/
 locales/
@@ -41,6 +43,6 @@ uv_pkg_update.sh
 uv.lock
 pyproject.toml
 
-# github client gh shell files
-/gh*.sh
+# github client gh shell files -
+/gh_*.sh
 
