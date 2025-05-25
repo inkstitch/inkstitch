@@ -106,5 +106,54 @@ jobs:
         shell: bash
         run: |  # working directory is the root of the inkstitch repo
 
-          uv python list
+          # uv python list
+          uv python pin 311  # pin to local python version
+          uv venv  # create a virtual environment with the pinned python version
+
+          # install system dependencies
+          # sudo apt-get update  # update package list
+
+          sudo gem install fpm # install fpm for packaging (Ruby gems)
+          sudo apt-get install gettext # install gettext for translations (.po msgfmt)
+
+          # for PyGObject 3.50 to compile
+          sudo apt install libgirepository1.0-dev libcairo2-dev
+
+          # for wxPython
+          sudo apt install libnotify4
+          sudo apt install glib-networking libsdl2-2.0-0 # libsdl2-dev
+
+
+          bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+          uv sync # install dependencies from pyproject.toml
+
+          # . .venv/bin/activate  # activate the virtual environment
+          # type python
+
+          echo "pythonLocation: ${{ env.pythonLocation }}"  # empty - what is this good for
+          echo "GITHUB_PATH: $GITHUB_PATH"
+
+          # debug
+          # cat /etc/os-release
+          # cat pyproject.toml
+
+      - name: Build dist
+        shell: bash
+        run: |
+
+          . .venv/bin/activate  # activate the virtual environment
+          type python  # check python version
+          # python --version
+
+          make dist
+        env:
+          BUILD: linux
+          # secrets are available only in main branch
+          INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
+
+      # save the build artifacts for later use by other jobs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inkstitch-linuxarm64
+          path: artifacts
 
