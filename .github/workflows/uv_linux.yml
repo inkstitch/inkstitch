@@ -54,7 +54,6 @@ jobs:
           sudo apt install glib-networking libsdl2-2.0-0 # libsdl2-dev
 
 
-
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
           uv sync # install dependencies from pyproject.toml
 
@@ -81,3 +80,8 @@ jobs:
           BUILD: linux
           # secrets are available only in main branch
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inkstitch-linux64
+          path: artifacts
