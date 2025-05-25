@@ -127,7 +127,7 @@ jobs:
 
           # for wxPython
           sudo apt install libnotify4
-          sudo apt install glib-networking libsdl2-2.0-0 # libsdl2-dev
+          sudo apt install glib-networking libsdl2-2.0-0  libsdl2-dev
 
 
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
