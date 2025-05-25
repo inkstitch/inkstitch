@@ -61,7 +61,7 @@ jobs:
           # . .venv/bin/activate  # activate the virtual environment
           # type python
 
-          echo "pythonLocation: ${{ env.pythonLocation }}"  # what is this?
+          echo "pythonLocation: ${{ env.pythonLocation }}"  # empty - what is this good for
           echo "GITHUB_PATH: $GITHUB_PATH"
 
           # debug
@@ -72,14 +72,11 @@ jobs:
         shell: bash
         run: |
 
-          # check if the GPG key is set
-          gpg --list-secret-keys --keyid-format LONG
-
           . .venv/bin/activate  # activate the virtual environment
           type python  # check python version
           # python --version
 
-          # make dist
+          make dist
         env:
           BUILD: linux
           # secrets are available only in main branch
