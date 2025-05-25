@@ -41,7 +41,7 @@ jobs:
           uv venv  # create a virtual environment with the pinned python version
 
           # install system dependencies
-          # sudo apt-get update  # update package list
+          sudo apt-get update  # update package list
 
           sudo gem install fpm # install fpm for packaging (Ruby gems)
           sudo apt-get install gettext # install gettext for translations (.po msgfmt)
@@ -117,7 +117,7 @@ jobs:
           uv venv  # create a virtual environment with the pinned python version
 
           # install system dependencies
-          # sudo apt-get update  # update package list
+          sudo apt-get update  # update package list
 
           sudo gem install fpm # install fpm for packaging (Ruby gems)
           sudo apt-get install gettext # install gettext for translations (.po msgfmt)
