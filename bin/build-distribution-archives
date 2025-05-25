@@ -1,17 +1,111 @@
 #!/bin/bash
 
 set -e
-set -x
+# set -x
 
 if [[ -z "$BUILD" ]]; then
   echo "Error: BUILD variable is not set."
   exit 1
 fi
 
+INITIAL_SET_E_STATUS=0
+case "$-" in *e*) INITIAL_SET_E_STATUS=1 ;; esac  # check if -e is set and save the status
+
 
 VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
 OS="${BUILD:-$(uname)}"  # uname returns the OS name, e.g. Linux, Darwin, etc. !!! Linux !- linux lowercase
 ARCH="$(uname -m)"
+
+### *** GPG KEY SETUP ***
+
+# Listing GPG keys:
+#     gpg --list-keys          or   gpg -k
+#     gpg --list-secret-keys   or   gpg -K
+# Removing keys:
+#   gpg --delete-key           or   gpg --delete-secret-key
+#   just simply delete directory ~/.gnupg - this will remove all keys, make backup first
+
+# Set the GPG key name for RPM packages
+# Guaranteed invalid email address for temporary key @invalid.com
+GPG_KEY_NAME="Temporary Inkstitch Build Key (Automated CI/CD Only) <inkstitch@invalid.com>"
+# Initial GPG Key ID - in main branch secrets.
+# This will be updated if a new key is generated.
+GPG_KEY_ID="EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44"
+
+# Function to generate a new GPG key
+function generate_gpg_key() {
+    echo "INKSTITCH_GPG_KEY variable is not set. Generating a new GPG key..."
+    gpg --batch --full-generate-key <<EOF
+Key-Type: RSA
+Key-Length: 4096
+Subkey-Type: RSA
+Subkey-Length: 4096
+Name-Real: $GPG_KEY_NAME
+Name-Comment: Temporary RPM Signing Key for Ink/Stitch
+Name-Email: inkstitch@invalid.com
+Expire-Date: 0
+%no-protection
+%commit
+EOF
+    echo "New GPG key has been generated."
+}
+
+# This function retrieves the ID of the temporary GPG key. Sear local GPG keyring for the key.
+function get_gpg_key_id() {
+    # Get the ID of the temporary key
+    GENERATED_KEY_ID=$(gpg --list-secret-keys --with-colons "$GPG_KEY_NAME" | awk -F: '/^sec/{print $5; exit}')
+
+    if [ -z "$GENERATED_KEY_ID" ]; then
+        echo "Error: Failed to retrieve the ID of the temporary GPG key."
+        exit 1
+    fi
+
+    # Update GPG_KEY_ID to match the newly generated key
+    GPG_KEY_ID=$GENERATED_KEY_ID
+    echo "Generated key ID: $GPG_KEY_ID"
+}
+
+# Retrieve the GPG key ID in variable GPG_KEY_ID
+# This function checks if the INKSTITCH_GPG_KEY variable is set.
+#   If it is not set, it checks for an existing key and generates a new one if necessary.
+#   If the variable is set, it imports the key from the variable.
+function retrieve_gpg_key_id() {
+    # Check if INKSTITCH_GPG_KEY is set
+    if [ -z "$INKSTITCH_GPG_KEY" ]; then  # If not set, we will generate a new GPG key
+        # try to get the key ID of the existing local temporary key
+
+        if [ $INITIAL_SET_E_STATUS -eq 1 ]; then   # temporary disable -e if it was set
+            set +e
+        fi
+
+        gpg --list-secret-keys --keyid-format LONG "$GPG_KEY_NAME" &>/dev/null
+        GPG_STATUS=$?
+
+        if [ $INITIAL_SET_E_STATUS -eq 1 ]; then   # restore -e if it was set
+            set -e
+        fi
+
+
+        if [[ $GPG_STATUS -eq 0 ]]; then
+            echo "Found existing GPG key for user ID: $GPG_KEY_NAME"
+            get_gpg_key_id  # Update GPG_KEY_ID to the existing key ID
+        else
+            echo "No existing GPG key found. Generating a new GPG key..."
+            generate_gpg_key
+            get_gpg_key_id  # Update GPG_KEY_ID after generating a new key
+        fi
+
+        echo "GPG key ID is set to: $GPG_KEY_ID"
+
+    else  # If INKSTITCH_GPG_KEY is set, import the key from the variable
+        echo "Importing GPG key from INKSTITCH_GPG_KEY variable..."
+        echo "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import  # import to local GPG keyring
+        echo "GPG key has been imported."
+    fi
+}
+
+
+### Start of the script
 
 if [ "$BUILD" = "osx" ]; then
     cp -a addons icons locales print LICENSE VERSION palettes symbols fonts tiles dbus inx dist/inkstitch.app/Contents/Resources
@@ -123,12 +217,24 @@ if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
         VERSION="0.0.1-${VERSION}"
     fi
 
+    ### RPM signing setup
 
-    echo -n "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import
-    cat <<EOF > $HOME/.rpmmacros
-%_gpg_name EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44
+    # Create or update the .rpmmacros file, prefer to use the INKSTITCH_GPG_KEY
+    #    %_gpg_path /etc/rpm/.gpg   # ? not sure if this is needed
+    #    %_gpg_name ID              # required for rpm signing
+    #    %__gpg /usr/bin/gpg        # required for rpm signing
+
+    retrieve_gpg_key_id
+
+    GPG_EXEC=$(command -v gpg || command -v gpg2)  # 'command' bash built-in to find executable path
+
+    echo "Creating/updating $HOME/.rpmmacros file..."
+    cat <<EOF > "$HOME/.rpmmacros"
+%__gpg $GPG_EXEC
+%_gpg_name $GPG_KEY_ID
 %_signature gpg
 EOF
+    echo "$HOME/.rpmmacros has been updated with key ID: $GPG_KEY_ID"
 
     # set the rpm file name for cpu arch
     if [[ "$BUILD" = "linux32" ]]; then
