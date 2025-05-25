@@ -100,35 +100,55 @@ class KnockdownFill(InkstitchExtension):
             index = 0
         transform = get_correction_transform(first)
 
+        if self.options.shape:
+            self._insert_embossed_path(combined_shape, transform, parent, index)
+        else:
+            self._insert_knockdown_path(combined_shape, transform, parent, index)
+
+    def _insert_embossed_path(self, combined_shape, transform, parent, index):
+        if self.options.shape == 'rect':
+            rect = combined_shape.envelope
+            offset_shape = self._apply_offset(rect, self.options.shape_offset, self.options.shape_join_style)
+        else:
+            circle = minimum_bounding_circle(combined_shape)
+            offset_shape = self._apply_offset(circle, self.options.shape_offset, self.options.shape_join_style)
+
+        offset_shape = offset_shape.reverse()
+        d = str(Path(offset_shape.exterior.coords))
+
+        for polygon in combined_shape.geoms:
+            d += str(Path(polygon.exterior.coords))
+            d += self._get_hole_paths(polygon)
+
+        self.insert_path(d, transform, parent, index)
+
+    def _insert_knockdown_path(self, combined_shape, transform, parent, index):
         for polygon in combined_shape.geoms:
             d = str(Path(polygon.exterior.coords))
-            if self.options.keep_holes:
-                for interior in polygon.interiors:
-                    d += str(Path(interior.coords))
+            d += self._get_hole_paths(polygon)
+            self.insert_path(d, transform, parent, index)
 
-            if self.options.shape == 'rect':
-                rect = polygon.envelope
-                offset_rect = self._apply_offset(rect, self.options.shape_offset, self.options.shape_join_style)
-                offset_rect = offset_rect.reverse()
-                d = str(Path(offset_rect.exterior.coords)) + d
-            elif self.options.shape == 'circle':
-                circle = minimum_bounding_circle(polygon)
-                offset_circle = self._apply_offset(circle, self.options.shape_offset, self.options.shape_join_style)
-                offset_circle = offset_circle.reverse()
-                d = str(Path(offset_circle.exterior.coords)) + d
+    def _get_hole_paths(self, polygon):
+        d = ''
+        if not self.options.keep_holes:
+            return d
+        for interior in polygon.interiors:
+            d += str(Path(interior.coords))
+        return d
 
-            path = PathElement()
-            path.set('d', d)
-            path.label = self.svg.get_unique_id('Knockdown ')
-            path.set('transform', transform)
+    def insert_path(self, d, transform, parent, index):
+        path = PathElement()
+        path.set('d', d)
+        path.label = self.svg.get_unique_id('Knockdown ')
+        path.set('transform', transform)
 
-            path.set('inkstitch:row_spacing_mm', '2.6')
-            path.set('inkstitch:fill_underlay_angle', '60 -60')
-            path.set('inkstitch:fill_underlay_max_stitch_length_mm', '3')
-            path.set('inkstitch:fill_underlay_row_spacing_mm', '2.6')
-            path.set('inkstitch:underlay_underpath', 'False')
-            path.set('inkstitch:underpath', 'False')
-            path.set('inkstitch:staggers', '2')
-            path.set('style', 'fill:black;')
+        path.set('inkstitch:row_spacing_mm', '2.6')
+        path.set('inkstitch:fill_underlay_angle', '60 -60')
+        path.set('inkstitch:fill_underlay_max_stitch_length_mm', '3')
+        path.set('inkstitch:fill_underlay_row_spacing_mm', '2.6')
+        path.set('inkstitch:underlay_underpath', 'False')
+        path.set('inkstitch:underpath', 'False')
+        path.set('inkstitch:staggers', '2')
+        path.set('style', 'fill:black;')
 
-            parent.insert(index, path)
+        parent.insert(index, path)
