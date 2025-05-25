@@ -5,6 +5,7 @@
 # - set the packages in pyproject.toml
 
 set -e
+set -x
 
 function detect_platform() {
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
