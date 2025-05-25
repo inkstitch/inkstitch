@@ -64,7 +64,7 @@ dist: build-python
 	bash bin/build-distribution-archives
 
 distclean:
-	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip VERSION
+	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip *.deb *.rpm VERSION
 	find . -type d -name "__pycache__" -exec rm -r {} +
 
 # Build local distribution archives for current OS - requires BUILD variable
