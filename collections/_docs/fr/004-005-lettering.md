@@ -100,7 +100,7 @@ Le lettrage par lot permet de créer facilement des fichiers de texte multiples
 
 * Préparez un fichier de broderie.
    Si le fichier contient un chemin  avec le label  `batch lettering` , il sera utilisé pour la position du texte de manière similaire à celle 
-   de [Lettrage le long d'un chemin](/docs/lettering/#lettering-along-path).
+   de [Lettrage le long d'un chemin](/docs/lettering/#lettering-along-path). Si vous souhaitez positionner un lettrage standard uttilisez  un chemin horizontal.
 * Allez dans « Fichier > Enregistrer une copie... » et cliquez sur la petite flèche dans le champ de sélection du format de fichier pour ouvrir la liste des formats de fichier disponibles.
 * Choisissez « Ink/Stitch : Lettrage par lots (.zip) »
 * Accédez au dossier de sortie souhaité et cliquez sur « Enregistrer ».
@@ -110,7 +110,7 @@ Le lettrage par lot permet de créer facilement des fichiers de texte multiples
 * **Texte** : Saisissez le texte. Par défaut, chaque nouvelle ligne sera placée dans son propre fichier.
 * **Séparateur personnalisé** :  Spécifiez un autre séparateur que fin de ligne si vous souhaitez que votre fichier texte contienne du texte sur plusieurs lignes.
 Le texte sera divisé et placé dans un nouveau fichier à chaque occurrence du séparateur personnalisé.
-* **Nom de la police** : Nom de la police que vous souhaitez utiliser. Consultez la [bibliothèque de polices](/fr/fonts/font-library/) pour trouver la liste des polices disponibles.
+* **Nom de la police** : Nom de la police que vous souhaitez utiliser. Consultez la [bibliothèque de polices](/fr/fonts/font-library/) pour trouver la liste des polices disponibles. La police peut être une police d'ink/stitch ou une police de votre répertoire de police personnalisé.
 * **Échelle (%) :** Valeur d'échelle pour redimensionner une police. La valeur sera limitée à la plage d'échelle disponible pour la police concernée.
 * **Tri par couleur :** Indique si les polices multicolores doivent être triées par couleur ou non.
 * **Ajouter des coupes :** Indique si des coupes doivent être ajoutés ou non (jamais, après chaque ligne, mot ou lettre).
@@ -118,6 +118,8 @@ Le texte sera divisé et placé dans un nouveau fichier à chaque occurrence du 
 * **Aligner le texte multi-ligne :** Définit l'alignement du texte multi-ligne.
 * **Lettrage le long du chemin : position du texte :** Position du texte sur le chemin `batch lettering`.
 * **Formats de fichier :** Saisissez une liste de [formats de fichier] (/fr/docs/file-formats/#writing) séparés par des virgules.
+
+Par exemple, si vous souhaitez créer les 4 patchs illutrés plus haut,utilisez le fichier d'exemple et paramétrez la fenêtre qui s'ouvre à l'enregistrement ainsi:
 
 [Télécharger le fichier d'exemple](/assets/images/docs/batch_lettering_template_example.svg){: title="Download SVG File" download="batch_lettering_template_example.svg" }
 
