@@ -129,6 +129,8 @@ jobs:
           sudo apt install libnotify4
           sudo apt install glib-networking libsdl2-2.0-0  libsdl2-dev
 
+          # for shapely & wxPython
+          sudo apt install build-essential libgtk-3-dev cmake
 
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
 
