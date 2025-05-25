@@ -101,6 +101,10 @@ jobs:
       - name: Download Inkstitch # Download the source code, no submodules
         uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.x'
+
       - name: Install uv  # https://docs.astral.sh/uv/guides/integration/github/
         uses: astral-sh/setup-uv@v5
 
