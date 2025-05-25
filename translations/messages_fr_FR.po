@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-05-24 01:43+0000\n"
-"PO-Revision-Date: 2025-05-24 01:43\n"
+"PO-Revision-Date: 2025-05-25 01:54\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -6679,7 +6679,7 @@ msgstr "Limite de l'onglet"
 
 #: inx/inkstitch_knockdown_fill.inx:30
 msgid "Embossing"
-msgstr "Assise"
+msgstr "Embossage"
 
 #: inx/inkstitch_knockdown_fill.inx:31
 msgid "Shape"
@@ -6687,7 +6687,7 @@ msgstr "Forme"
 
 #: inx/inkstitch_knockdown_fill.inx:33
 msgid "Rectangle"
-msgstr ""
+msgstr "Rectangle"
 
 #: inx/inkstitch_knockdown_fill.inx:34
 msgid "Circle"
@@ -6695,7 +6695,7 @@ msgstr "Cercle"
 
 #: inx/inkstitch_knockdown_fill.inx:36
 msgid "Shape offset"
-msgstr ""
+msgstr "Décalage de la forme"
 
 #: inx/inkstitch_knockdown_fill.inx:44
 msgid "This extension generates a knockdown fill area with a specified offset around selected elements."
