@@ -3,10 +3,10 @@ name: UV Build
 
 # when the workflow should run
 on:
-  push: # actually we don't use this, but otherwise this is not listed in actions menu
+  # actually we don't use this, but otherwise this is not listed in actions menu
+  push:
     branches:
       - missing/*  # branch pattern **= any number of characters and /, * = any number of characters not including /
-    # tags: []
   workflow_dispatch:  # manual trigger of the workflow
     inputs:
       # input variables for manual run
