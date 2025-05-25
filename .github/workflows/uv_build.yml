@@ -3,7 +3,7 @@ name: UV Build
 
 # when the workflow should run
 on:
-  push:
+  push: # actually we don't use this, but otherwise this is not listed in actions menu
     branches:
       - missing/*  # branch pattern **= any number of characters and /, * = any number of characters not including /
     # tags: []
