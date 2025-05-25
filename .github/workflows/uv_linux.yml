@@ -43,7 +43,7 @@ jobs:
           # install system dependencies
           # sudo apt-get update  # update package list
 
-          sudo gem install fpm # install fpm for packaging
+          sudo gem install fpm # install fpm for packaging (Ruby gems)
           sudo apt-get install gettext # install gettext for translations (.po msgfmt)
 
           # for PyGObject 3.50 to compile
@@ -82,4 +82,5 @@ jobs:
           # make dist
         env:
           BUILD: linux
+          # secrets are available only in main branch
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
