@@ -3,7 +3,7 @@ name: UV On Test
 
 on:
   push:
-    tags:
+    tags: # valid only for the HEAD of the repository
       - 'build*' # run workflow on tags that start with "build like "build-1.0", "build_featureX", "build/v2.0"
 
 
