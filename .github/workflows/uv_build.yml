@@ -7,8 +7,11 @@ name: UV Build
 # when the workflow should run
 on:
   push: # at least ones must be triggered by a push to be available for manual trigger
-    branches:
-      - missing/*  # branch pattern **= any number of characters and /, * = any number of characters not including /
+    tags:
+      - 'build*'
+
+    # branches:
+    #   - missing/*  # branch pattern **= any number of characters and /, * = any number of characters not including /
   workflow_dispatch:  # manual trigger of the workflow
     inputs:
       # input variables for manual run
@@ -38,20 +41,35 @@ on:
       build_data:
         description: 'Debug mode'
         required: false
-        default: 'exit_on_uv'  # default value
+        default: 'debug-venv-stop'  # default value
         type: choice  # type of the input, can be number, boolean, string, choice or environment
         options:
           - none
-          - exit_on_uv
+          - debug-venv-stop
 
 
 # working example: ----------------------------------------------------------
 jobs:
+  prepare_build:
+    runs-on: ubuntu-latest
+    outputs:
+      # Define outputs that will be available for other jobs
+      final_build_type: ${{ steps.set_vars.outputs.calculated_build_type }}
+      final_build_data: ${{ steps.set_vars.outputs.calculated_build_data }}
+    steps:
+      - name: Set default build variables for Push event
+        id: set_vars # Important for referencing the outputs of this step
+        run: |
+          echo "calculated_build_type=linux64" >> $GITHUB_ENV
+          echo "calculated_build_data=debug-venv-stop" >> $GITHUB_ENV
+
+
   call_linux64_build:
+    needs: prepare_build # this job depends on the prepare_build job
     if: >
       github.event.inputs.build_type == 'linux64' ||
       github.event.inputs.build_type == 'all'
-    name: Build (${{ github.event.inputs.build_type }})
+    name: Build (${{ github.event.inputs.build_type }}) (${{ github.event.inputs.build_data }})
     # - uses with reusable must be on job level, not on step level
     # - .yml must be on top level of .github/workflows/
     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
@@ -59,9 +77,12 @@ jobs:
       build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
 
   call_linux_arm64_build:
-    if: ( github.event.inputs.build_type == 'linux-arm64' || github.event.inputs.build_type == 'all' )
-    name: Build (${{ github.event.inputs.build_type }})
-    uses: ./.github/workflows/uv_build_linux_arm64.yml # call reusable workflow
+    needs: prepare_build # this job depends on the prepare_build job
+    if: >
+      github.event.inputs.build_type == 'linux-arm64' ||
+      github.event.inputs.build_type == 'all'
+    name: Build (${{ github.event.inputs.build_type }}) (${{ github.event.inputs.build_data }})
+    uses: ./.github/workflows/uv_build_linux-arm64.yml # call reusable workflow
     with:
       build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
 #----------------------------------------------------
