@@ -42,8 +42,13 @@ Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrer
 
 {% include upcoming_release.html %}
 
-Hilfsmethode zum Erzeugen eines Füllbereichs unterhalb aller ausgewählten Elemente, optional mit einem Versatz. Dies kann bei der Arbeit mit hochflorigen Stoffen sehr nützlich sein.
+Helper method to generate either
+- a fill area underneath all selected elements, optionally with a positive or a negative offset. This can be very useful when working with high pile fabric (usually with a positive offset) or to create global underlay (usually with a negative offset)
+- a rectangle or a circle area around all selected elements (but not underneath). This can be useful to create an embossing effect.
 
+<!--
+Hilfsmethode zum Erzeugen eines Füllbereichs unterhalb aller ausgewählten Elemente, optional mit einem Versatz. Dies kann bei der Arbeit mit hochflorigen Stoffen sehr nützlich sein.
+-->
 ![Eine Figure mit einem sie umgebenden Knockdown-Stich](/assets/images/docs/knockdown.png)
 
 * Elemente auswählen
@@ -59,10 +64,23 @@ Hilfsmethode zum Erzeugen eines Füllbereichs unterhalb aller ausgewählten Elem
 
 ### Einstellungen
 
-* Löcher erhalten: bestimmt ob die neue Füllfläche Löcher enthält
-* Versatz: der Versatz (mm) um die Auswahl
+#### Options tab
+
+* Löcher erhalten: bestimmt ob die neue Füllfläche Löcher enthält (only works for Shape (from embossing tab) set to None)
+* Versatz: der Versatz (mm) um die Auswahl. Offset can be positive or negative
 * Methode (rund, Gehrung, Abschrägung): Beeinflusst das Ergebnis um die Ecken herum
 * Gehrungslimit: Beeinflusst das Ergebnis um die Ecken herum
+
+#### Embossing tab
+* Shape: If None, the extension creates a knockdown fill area underneath the selected elements, taking into account the offset (from options tab) value. If on the other hand, you wish an embossing effect, chose between rectangle and circle to create a knockdown fill around the selected elements, excluding the area underneath the selected elements (still taking the offset into account).
+* Shape offset : Any positive value will extend the embossing area. The excluded area may be modified by using the offset parameter in the options tab.
+* Methode (rund, Gehrung, Abschrägung): Beeinflusst das Ergebnis um die Ecken herum
+
+Note : if the shape parameter is set to circle or rectangle, the excluded area is exactly what the knockdown fill with Shape set to None would be. If the shape offset is 0, the embossing shape is the smallest circle/rectangle that contains the excluded area.  If shape offset is positive, the outside border of the circle/rectangle is extended in every direction according to this value. The excluded area is unchanged.
+
+
+
+
 
 ## Tartan
 
