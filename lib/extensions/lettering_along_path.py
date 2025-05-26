@@ -120,9 +120,9 @@ class TextAlongPath:
             path = path.offset_curve(self.font.leading)
 
     def transform_glyphs(self, path, line):
-        line_bbox = line.bounding_box()
-        text_baseline = line_bbox.bottom
-        text_width = line_bbox.width
+        text_scale = Transform(f'scale({self.font_scale})')
+        text_width = line.bounding_box().width
+        text_baseline = line.bounding_box(text_scale).bottom
 
         if self.text_position == 'stretch':
             num_spaces = len(line) - 1
@@ -135,7 +135,6 @@ class TextAlongPath:
             stretch_space = 0
 
         start_position = self.get_start_position(text_width, path.length)
-        text_scale = Transform(f'scale({self.font_scale})')
         distance = start_position
         old_bbox = None
 
