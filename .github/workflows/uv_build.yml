@@ -1,5 +1,3 @@
-# .github/workflows/uv_build.yml
-
 
 # Action description:
 #   https://docs.github.com/en/actions
@@ -51,7 +49,8 @@ jobs:
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
-      - id: set-matrix
+      - name: inputs type:${{ github.event.inputs.build_type }} data:${{ github.event.inputs.build_data }}
+        id: set-matrix
         run: |
           BUILD_TYPE="${{ github.event.inputs.build_type }}"
           if [ "$BUILD_TYPE" == "all" ]; then
@@ -72,13 +71,13 @@ jobs:
     steps:
       - name: Call Linux64 Build Workflow
         if: matrix.build_type == 'linux64'
-        uses: ./.github/workflows/uv_build/uv_linux64.yml # call reusable workflow
+        uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
         with:
           build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
 
       - name: Call Linux-arm64 Build Workflow
         if: matrix.build_type == 'linux-arm64'
-        uses: ./.github/workflows/uv_build/uv_linux-arm64.yml # call reusable workflow
+        uses: ./.github/workflows/uv_build/uv_build_linux_arm64.yml # call reusable workflow
         with:
           build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
 
