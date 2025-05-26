@@ -43,47 +43,78 @@ on:
         options:
           - exit_on_uv
 
+
+
 jobs:
-  prepare_builds:
-    runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
-    steps:
-      - name: inputs type:${{ github.event.inputs.build_type }}   data:${{ github.event.inputs.build_data }}
-        id: set-matrix
-        run: |
-          BUILD_TYPE="${{ github.event.inputs.build_type }}"
-          if [ "$BUILD_TYPE" == "all" ]; then
-            echo "matrix={\"build_type\":[\"linux64\",\"linux-arm64\"]}" >> "$GITHUB_OUTPUT"
-          else
-            echo "matrix={\"build_type\":[\"$BUILD_TYPE\"]}" >> "$GITHUB_OUTPUT"
-          fi
+  call_linux_build:
+    if: startsWith(github.event.inputs.build_type, 'linux')
+    # if: github.event.inputs.build_type == 'linux64' || github.event.inputs.build_type == 'linux32' || ...
 
-  run_specific_build:
-    needs: prepare_builds # depend on the prepare_builds job to set the matrix
-    runs-on: ubuntu-latest # just to dispatch the job to a runner
-    strategy:
-      matrix:
-        build_type: ${{ fromJson(needs.prepare_builds.outputs.matrix).build_type }}
-    name: Build ${{ matrix.build_type }}
+    name: Build Linux (${{ github.event.inputs.build_type }})
+    uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
+    with:
+      # build_type: ${{ github.event.inputs.build_type }}
+      build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
 
 
-    steps:
-      # - name: Checkout repository
-      #   uses: actions/checkout@v4
 
-      - name: Call Linux64 Build Workflow
-        if: matrix.build_type == 'linux64'
-        uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
-        with:
-          build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
 
-      # - name: Call Linux-arm64 Build Workflow
-      #   if: matrix.build_type == 'linux-arm64'
-      #   uses: ./.github/workflows/uv_build/uv_build_linux_arm64.yml # call reusable workflow
-      #   with:
-      #     build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
+# jobs:
+#   prepare_builds:
+#     runs-on: ubuntu-latest
+#     outputs:
+#       matrix: ${{ steps.set-matrix.outputs.matrix }}
+#     steps:
+#       - name: inputs type:${{ github.event.inputs.build_type }}   data:${{ github.event.inputs.build_data }}
+#         id: set-matrix
+#         run: |
+#           BUILD_TYPE="${{ github.event.inputs.build_type }}"
+#           if [ "$BUILD_TYPE" == "all" ]; then
+#             echo "matrix={\"build_type\":[\"linux64\",\"linux-arm64\"]}" >> "$GITHUB_OUTPUT"
+#           else
+#             echo "matrix={\"build_type\":[\"$BUILD_TYPE\"]}" >> "$GITHUB_OUTPUT"
+#           fi
 
+#   run_specific_build:
+#     needs: prepare_builds # depend on the prepare_builds job to set the matrix
+#     runs-on: ubuntu-latest # just to dispatch the job to a runner
+#     strategy:
+#       matrix:
+#         build_type: ${{ fromJson(needs.prepare_builds.outputs.matrix).build_type }}
+#     name: Build ${{ matrix.build_type }}
+
+
+#     steps:
+#       # - name: Checkout repository
+#       #   uses: actions/checkout@v4
+
+#       - name: Call Linux64 Build Workflow
+#         if: matrix.build_type == 'linux64'
+#         uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
+#         with:
+#           build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
+
+#       # - name: Call Linux-arm64 Build Workflow
+#       #   if: matrix.build_type == 'linux-arm64'
+#       #   uses: ./.github/workflows/uv_build/uv_build_linux_arm64.yml # call reusable workflow
+#       #   with:
+#       #     build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
+
+#----------------------------------------------------
+
+# jobs:
+#   steps: prepare_builds
+#       # needs:
+#     if: startsWith(github.event.inputs.build_type, 'linux')
+#     # if: github.event.inputs.build_type == 'linux64' || github.event.inputs.build_type == 'linux32' || ...
+
+#     name: Build Linux (${{ github.event.inputs.build_type }})
+#     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
+#     with:
+#       build_type: ${{ github.event.inputs.build_type }} # set input variable for the reusable workflow
+#       # custom_message: ${{ github.event.inputs.custom_pipeline_message }}
+
+#----------------------------------------------------
 
     # steps: prepare_builds
     #   # needs:
