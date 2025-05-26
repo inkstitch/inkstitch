@@ -9,7 +9,7 @@ on:
       build_data:
         description: 'Build data'
         required: false
-        default: 'exit_on_uv'  # default value
+        default: 'debug-venv-stop'  # default value
         type: string  # type of the input, can be string, boolean, or number
 
 
@@ -41,9 +41,9 @@ jobs:
           uv python pin 311  # pin to local python version
           uv venv  # create a virtual environment with the pinned python version
 
-          # stop here if build_data is set to exit_on_uv
-          if [ "${{ github.event.inputs.build_data }}" == "exit_on_uv" ]; then
-            echo "Stopping uv for debugging purposes"
+          # stop here if build_data is set to debug-venv-stop
+          if [ "${{ github.event.inputs.build_data }}" == "debug-venv-stop" ]; then
+            echo "Stopping on request"
             exit 1
           fi
 
