@@ -1,0 +1,100 @@
+# .github/workflows/uv_linux.yml
+name: UV Linux-arm64 build
+
+# when the workflow should run
+on:
+  workflow_call:  # manual trigger of the workflow
+    inputs:
+      # input variables for manual run
+      build_data:
+        description: 'Build data'
+        required: false
+        default: 'exit_on_uv'  # default value
+        type: string  # type of the input, can be string, boolean, or number
+
+
+
+# Jobs are steps that run on the same runner
+jobs:
+  linux-arm64:
+
+    runs-on: ubuntu-22.04-arm
+
+    # steps are a sequence of commands that will be executed
+    steps:
+      - name: Download Inkstitch # Download the source code, no submodules
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.x'
+
+      - name: Install uv  # https://docs.astral.sh/uv/guides/integration/github/
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Setup environment
+        shell: bash
+        run: |  # working directory is the root of the inkstitch repo
+
+          uv python list
+          uv python pin 311  # pin to local python version
+          uv venv  # create a virtual environment with the pinned python version
+
+          # stop here if build_data is set to exit_on_uv
+          if [ "${{ github.event.inputs.build_data }}" == "exit_on_uv" ]; then
+            echo "Stopping uv for debugging purposes"
+            exit 0
+          fi
+
+          # install system dependencies
+          sudo apt-get update  # update package list
+
+          sudo gem install fpm # install fpm for packaging (Ruby gems)
+          sudo apt-get install gettext # install gettext for translations (.po msgfmt)
+
+          # for PyGObject 3.50 to compile
+          sudo apt install libgirepository1.0-dev libcairo2-dev
+
+          # for wxPython run & compile (around 25 minutes first run)
+          sudo apt install libnotify4
+          sudo apt install glib-networking libsdl2-2.0-0  libsdl2-dev
+
+          # for shapely & wxPython compile
+          sudo apt install build-essential libgtk-3-dev # cmake - use uv to install cmake
+
+          bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+
+          # debug
+          cat /etc/os-release
+          cat pyproject.toml
+
+          uv sync # install dependencies from pyproject.toml
+
+          # . .venv/bin/activate  # activate the virtual environment
+          # type python
+
+          echo "pythonLocation: ${{ env.pythonLocation }}"  # empty - what is this good for
+          echo "GITHUB_PATH: $GITHUB_PATH"
+
+      - name: Build dist
+        shell: bash
+        run: |
+
+          . .venv/bin/activate  # activate the virtual environment
+          type python  # check python version
+          # python --version
+
+          make dist
+        env:
+          BUILD: linux
+          # secrets are available only in main branch
+          INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
+
+      # save the build artifacts for later use by other jobs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inkstitch-linuxarm64
+          path: artifacts
+
