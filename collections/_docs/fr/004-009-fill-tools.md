@@ -1,7 +1,7 @@
 ---
 title: "Outils Remplissage"
 permalink: /fr/docs/fill-tools/
-last_modified_at: 2025-04-19
+last_modified_at: 2025-05-26
 toc: true
 ---
 ## Briser les objets de remplissage {#break-apart-fill-objects}
