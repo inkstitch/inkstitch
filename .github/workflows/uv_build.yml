@@ -49,7 +49,7 @@ jobs:
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
-      - name: inputs type:${{ github.event.inputs.build_type }} data:${{ github.event.inputs.build_data }}
+      - name: inputs type:${{ github.event.inputs.build_type }}   data:${{ github.event.inputs.build_data }}
         id: set-matrix
         run: |
           BUILD_TYPE="${{ github.event.inputs.build_type }}"
@@ -69,8 +69,8 @@ jobs:
 
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # - name: Checkout repository
+      #   uses: actions/checkout@v4
 
       - name: Call Linux64 Build Workflow
         if: matrix.build_type == 'linux64'
