@@ -19,19 +19,19 @@ on:
         type: choice  # type of the input, can be number, boolean, string, choice or environment
         options:
           - linux64
-          - linux32
+          # - linux32
           - linux-arm64
-          - linux-arm32
+          # - linux-arm32
 
-          - windows64
-          - windows32
-          - windows-arm64
-          - windows-arm32
+          # - windows64
+          # - windows32
+          # - windows-arm64
+          # - windows-arm32
 
-          - macos64
-          - macos32
-          - macos-arm64
-          - macos-arm32
+          # - macos64
+          # - macos32
+          # - macos-arm64
+          # - macos-arm32
 
           - all
 
@@ -47,10 +47,12 @@ on:
 # working example: ----------------------------------------------------------
 jobs:
   call_linux64_build:
-    if: ( github.event.inputs.build_type == 'linux64' || github.event.inputs.build_type == 'all' )
+    if: >
+      github.event.inputs.build_type == 'linux64' ||
+      github.event.inputs.build_type == 'all'
     name: Build Linux (${{ github.event.inputs.build_type }})
-    # - uses must be on job level, not on step level
-    # - .yml must be on top level .github/workflows/
+    # - uses with reusable must be on job level, not on step level
+    # - .yml must be on top level of .github/workflows/
     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
     with:
       build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
