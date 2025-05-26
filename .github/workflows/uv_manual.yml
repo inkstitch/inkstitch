@@ -1,4 +1,4 @@
-# .github/workflows/uv_manual.yml
+
 name: UV Manual
 
 on:
