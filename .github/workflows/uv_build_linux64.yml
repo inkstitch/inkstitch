@@ -40,7 +40,7 @@ jobs:
           # stop here if build_data is set to exit_on_uv
           if [ "${{ github.event.inputs.build_data }}" == "exit_on_uv" ]; then
             echo "Stopping uv for debugging purposes"
-            exit 1
+            exit 1  # exit 0 to continue next step, exit 1 to stop the workflow
           fi
 
           # install system dependencies
