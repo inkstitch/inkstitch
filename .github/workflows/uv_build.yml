@@ -44,20 +44,27 @@ on:
           - exit_on_uv
 
 
+# working example: ----------------------------------------------------------
+# jobs:
+#   call_linux_build:
+#     if: github.event.inputs.build_type == 'linux64'
+#     name: Build Linux (${{ github.event.inputs.build_type }})
+#     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
+#     with:
+#       build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
+
+#---------------------------------------------------------------------------
+
 
 jobs:
   call_linux_build:
-    if: github.event.inputs.build_type == 'linux64'
-    # if: startsWith(github.event.inputs.build_type, 'linux')
-    # if: github.event.inputs.build_type == 'linux64' || github.event.inputs.build_type == 'linux32' || ...
-
-    name: Build Linux (${{ github.event.inputs.build_type }})
-    uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
-    with:
-      # build_type: ${{ github.event.inputs.build_type }}
-      build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
-
-
+    runs-on: ubuntu-latest
+    steps:
+      - if: github.event.inputs.build_type == 'linux64'
+        name: Build Linux (${{ github.event.inputs.build_type }})
+        uses: ./.github/workflows/uv_build_linux64.yml
+        with:
+          build_data: ${{ github.event.inputs.build_data }}
 
 
 # jobs:
