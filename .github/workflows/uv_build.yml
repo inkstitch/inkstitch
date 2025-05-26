@@ -50,7 +50,7 @@ jobs:
     if: >
       github.event.inputs.build_type == 'linux64' ||
       github.event.inputs.build_type == 'all'
-    name: Build Linux (${{ github.event.inputs.build_type }})
+    name: Build (${{ github.event.inputs.build_type }})
     # - uses with reusable must be on job level, not on step level
     # - .yml must be on top level of .github/workflows/
     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
@@ -59,7 +59,7 @@ jobs:
 
   call_linux_arm64_build:
     if: ( github.event.inputs.build_type == 'linux-arm64' || github.event.inputs.build_type == 'all' )
-    name: Build Linux-arm64 (${{ github.event.inputs.build_type }})
+    name: Build (${{ github.event.inputs.build_type }})
     uses: ./.github/workflows/uv_build_linux_arm64.yml # call reusable workflow
     with:
       build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
