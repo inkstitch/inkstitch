@@ -41,6 +41,7 @@ on:
         default: 'exit_on_uv'  # default value
         type: choice  # type of the input, can be number, boolean, string, choice or environment
         options:
+          - none
           - exit_on_uv
 
 
