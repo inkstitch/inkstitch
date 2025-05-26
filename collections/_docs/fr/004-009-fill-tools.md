@@ -55,12 +55,16 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 
  Choisir l'espacement final des rangées
 
-## Remplissage en points couchants {#knockdown-fill}
+## Assise de points couchants à partir de la sélection {#knockdown-fill}
 
 {% include upcoming_release.html %}
 
-Permet de générer un remplissage sous tous les éléments sélectionnés, optionnellement avec un décalage. Cela peut s'avérer très utile lorsque vous travaillez avec des tissus à poils longs comme de l'éponge.
+Cette extension permet de générer:
 
+* soit une zone de remplissage sous tous les éléments sélectionnés, avec un décalage positif ou négatif. Cette méthode peut s'avérer très utile pour travailler avec des tissus à poils longs (généralement avec un décalage positif) ou pour créer une sous-couche globale (généralement avec un décalage négatif).
+* soit une zone de remplissage en forme de cercle ou de rectangle autour  des éléments sélectionnés (mais pas sous eux). Ceci peut être utile pour créer un effet d'embossage avec des tissus à poils longs.
+
+ 
 ![A figure with a surrounding knockdown stitch](/assets/images/docs/knockdown.png)
 
 * Sélectionner des éléments
@@ -75,10 +79,20 @@ Permet de générer un remplissage sous tous les éléments sélectionnés, opti
  {: .notice--info }
 ### Paramètres
 
-* Conserver les trous : Indique si la forme doit contenir des trous ou non.
-* Décalage : Le décalage (mm) autour de la sélection.
-* Méthode (arrondi, onglet, biseau) : Influence l'aspect des bords.
-* Limite d'onglet : Influence l'aspect des bords.
+#### Onglet Options
+
+* Conserver les trous : Choisissez si la forme doit contenir des trous (fonctionne uniquement si l'option Forme (de l'onglet Embossage) est Aucune).
+* Décalage : Décalage (mm) autour de la sélection. Ce décalage peut être positif ou négatif.
+* Méthode (arrondi, onglet, biseau) : Modifie l'aspect des bords.
+* Limite d'onglet : Modifie l'aspect des bords.
+
+#### Onglet Embossage
+* Forme : Si la  valeur choisie est "Aucune", l'extension crée une zone de remplissage sous les éléments sélectionnés, en tenant compte de la valeur de décalage (de l'onglet Options). Si vous souhaitez un effet d'embossage, choisissez entre rectangle et cercle pour créer un remplissage autour des éléments sélectionnés, en excluant la zone située sous les éléments sélectionnés (en tenant toujours compte du décalage).
+* Décalage de la forme : Toute valeur positive étend la zone d'embossage. La zone exclue peut être modifiée à l'aide du paramètre de décalage dans l'onglet Options.
+* Méthode (arrondi, biseau, onglet) : influence l'aspect des bords.
+
+Remarque : si l'on choisit une forme d'embossage  (cercle ou rectangle), la zone exclue correspond exactement à la forme du remplissage avec la forme définie sur Aucune. Si le décalage de forme est nul, le bord extérieur de l'embossage correspond au plus petit cercle/rectangle contenant la zone exclue. Si le décalage de forme est positif, le bord extérieur du cercle/rectangle est étendu dans toutes les directions selon cette valeur. La zone exclue reste inchangée.
+
 
 ## Tartan
 
