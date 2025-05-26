@@ -76,8 +76,8 @@ jobs:
           echo "Calculated Build Data: $CALCULATED_BUILD_DATA"
 
           # Set the outputs for this step
-          echo "calculated_build_type=${CALCULATED_BUILD_TYPE}" >> $GITHUB_ENV
-          echo "calculated_build_data=${CALCULATED_BUILD_DATA}" >> $GITHUB_ENV
+          echo "calculated_build_type=${CALCULATED_BUILD_TYPE}" >> "$GITHUB_OUTPUT"
+          echo "calculated_build_data=${CALCULATED_BUILD_DATA}" >> "$GITHUB_OUTPUT"
 
 
   call_linux64_build:
