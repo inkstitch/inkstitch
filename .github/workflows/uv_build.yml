@@ -45,26 +45,17 @@ on:
 
 
 # working example: ----------------------------------------------------------
-# jobs:
-#   call_linux_build:
-#     if: github.event.inputs.build_type == 'linux64'
-#     name: Build Linux (${{ github.event.inputs.build_type }})
-#     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
-#     with:
-#       build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
+jobs:
+  call_linux64_build:
+    if: ( github.event.inputs.build_type == 'linux64' || github.event.inputs.build_type == 'all' )
+    name: Build Linux (${{ github.event.inputs.build_type }})
+    uses: ./.github/workflows/uv_build/uv_build_linux64.yml # call reusable workflow - !!! only on job level, not on step level !!!
+    with:
+      build_data: ${{ github.event.inputs.build_data }} # set input variable for the reusable workflow
 
 #---------------------------------------------------------------------------
 
 
-jobs:
-  call_linux_build:
-    runs-on: ubuntu-latest
-    steps:
-      - if: github.event.inputs.build_type == 'linux64'
-        name: Build Linux (${{ github.event.inputs.build_type }})
-        uses: ./.github/workflows/uv_build_linux64.yml
-        with:
-          build_data: ${{ github.event.inputs.build_data }}
 
 
 # jobs:
