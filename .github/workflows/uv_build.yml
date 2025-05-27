@@ -85,7 +85,7 @@ jobs:
     if: >
       needs.prepare_build.outputs.final_build_type == 'linux64' ||
       needs.prepare_build.outputs.final_build_type == 'all'
-    name: Build (${{ needs.prepare_build.outputs.final_build_type }}) (${{ needs.prepare_build.outputs.final_build_data }})
+    name: Build Linux64
     # - uses with reusable must be on job level, not on step level
     # - .yml must be on top level of .github/workflows/
     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
@@ -98,7 +98,7 @@ jobs:
     if: >
       needs.prepare_build.outputs.final_build_type == 'linux-arm64' ||
       needs.prepare_build.outputs.final_build_type == 'all'
-    name: Build (${{ needs.prepare_build.outputs.final_build_type }}) (${{ needs.prepare_build.outputs.final_build_data }})
+    name: Build Linux-arm64
     uses: ./.github/workflows/uv_build_linux-arm64.yml # call reusable workflow
     with:
       build_data: ${{ needs.prepare_build.outputs.final_build_data }} # set input variable for the reusable workflow
