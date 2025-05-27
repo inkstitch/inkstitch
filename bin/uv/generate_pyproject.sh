@@ -146,9 +146,11 @@ function auto_detection() {
                 ;;
         esac
 
+        PKG_EXTRA="    \"$PYGOBJECT\",\n    \"$WXPYTHON\","
+    else
+        PKG_EXTRA="    \"$WXPYTHON\","
     fi
 
-    PKG_EXTRA="    \"$PYGOBJECT\",\n    \"$WXPYTHON\","
 }
 
 
