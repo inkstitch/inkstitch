@@ -33,7 +33,8 @@ jobs:
         run: |  # working directory is the root of the inkstitch repo
 
           # input data
-          echo "Build data: ${{ github.event.inputs.build_data }}"
+          echo "Build data 1: ${{ github.event.inputs.build_data }}"
+          echo "Build data 2: ${{ inputs.build_data }}"
 
           uv python list
           uv python pin 311  # pin to local python version
