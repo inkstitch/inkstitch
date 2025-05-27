@@ -39,11 +39,14 @@ on:
 
           - all
 
-      stop_value:                  # access: github.event.inputs.stop_value
-        description: 'Stop value for the build, 0 to continue, !=0 to stop'
+      break_on:                  # access: github.event.inputs.break_on
+        description: 'Stop the build immediately at a predefined location.'
         required: true
-        default: 1  # default value
-        type: number  # type of the input, can be number, boolean, string, choice or environment
+        default: no  # default value
+        type: choice  # type of the input, can be number, boolean, string, choice or environment
+        options:
+          - no    # normal build
+          - uv    # stop the build at the uv venv creation step
 
 
 # working example: ----------------------------------------------------------
@@ -53,29 +56,34 @@ jobs:
     outputs:
       # Define outputs that will be available for other jobs
       final_build_type: ${{ steps.set_vars.outputs.calculated_build_type }}
-      final_stop_value: ${{ steps.set_vars.outputs.calculated_stop_value }}
+      final_break_on: ${{ steps.set_vars.outputs.calculated_break_on }}
     steps:
       - name: Set default build variables for Push event
         id: set_vars # Important for referencing the outputs of this step
         run: |
 
+          echo "input variables:"
+          echo "Build Type: ${{ github.event.inputs.build_type }}"
+          echo "Break On: ${{ github.event.inputs.break_on }}"
+          echo "Event Name: ${{ github.event_name }}"
+
           # Check if the event is a workflow_dispatch (manual trigger) or push
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
               # If so, use the values from the inputs
             CALCULATED_BUILD_TYPE="${{ github.event.inputs.build_type }}"
-            CALCULATED_STOP_VALUE=${{ github.event.inputs.stop_value }}
+            CALCULATED_BREAK_ON="${{ github.event.inputs.break_on }}"
           else
             # If not (i.e. it's a push or other event), use the defaults
             CALCULATED_BUILD_TYPE="linux64"
-            CALCULATED_STOP_VALUE=0
+            CALCULATED_BREAK_ON="uv"
           fi
 
           echo "Calculated Build Type: $CALCULATED_BUILD_TYPE"
-          echo "Calculated Stop Value: $CALCULATED_STOP_VALUE"
+          echo "Calculated Stop Value: $CALCULATED_BREAK_ON"
 
           # Set the outputs for this step
           echo "calculated_build_type=${CALCULATED_BUILD_TYPE}" >> "$GITHUB_OUTPUT"
-          echo "calculated_stop_value=${CALCULATED_STOP_VALUE}" >> "$GITHUB_OUTPUT"
+          echo "calculated_break_on=${CALCULATED_BREAK_ON}" >> "$GITHUB_OUTPUT"
 
 
   call_linux64_build:
@@ -88,7 +96,7 @@ jobs:
     # - .yml must be on top level of .github/workflows/
     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
     with:
-      stop_value: ${{ needs.prepare_build.outputs.final_stop_value }} # set input variable for the reusable workflow
+      break_on: ${{ needs.prepare_build.outputs.final_break_on }} # set input variable for the reusable workflow
 
 
   call_linux_arm64_build:
@@ -99,5 +107,5 @@ jobs:
     name: Build Linux-arm64
     uses: ./.github/workflows/uv_build_linux-arm64.yml # call reusable workflow
     with:
-      stop_value: ${{ needs.prepare_build.outputs.final_stop_value }} # set input variable for the reusable workflow
+      break_on: ${{ needs.prepare_build.outputs.final_break_on }} # set input variable for the reusable workflow
 #----------------------------------------------------
