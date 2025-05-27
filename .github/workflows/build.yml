@@ -5,8 +5,8 @@ on:
       - master
       - main
       - kgn/*
-    tags:
-      - "v*.*.*"
+    # tags:
+    #   - "v*.*.*"
 jobs:
   linux64:
     runs-on: ubuntu-22.04

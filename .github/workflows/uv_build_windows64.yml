@@ -47,6 +47,7 @@ jobs:
           # input data
           echo "github.event.inputs.break_on: ${{ github.event.inputs.break_on }}"
           echo "inputs.break_on: ${{ inputs.break_on }}"
+          echo "secrets.SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN }}"
 
           uv python list
           uv python pin 311  # pin to local python version
@@ -83,4 +84,74 @@ jobs:
           BUILD: windows
 
 
+      - name: Set signing policy to release - tag v*
+        if: startsWith(github.event.ref, 'refs/tags/v')
+        shell: bash
+        run: |
+          echo release_policy="release-signing" >> $GITHUB_ENV
+
+
+      - name: upload-unsigned-exe - tag v*
+        if: startsWith(github.event.ref, 'refs/tags/v')
+        id: upload-unsigned-exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: inkstitch-windows64-exe
+          path: |
+            dist/inkstitch/bin/inkstitch.exe
+
+
+      - name: Sign-exe - tag v* # https://github.com/SignPath/github-action-submit-signing-request
+        if: startsWith(github.event.ref, 'refs/tags/v')
+        id: Sign-exe
+        uses: signpath/github-action-submit-signing-request@v1.1
+        with:
+          api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
+          organization-id: '6b880880-2af8-4cf3-a8e7-1b4977c593df'
+          project-slug: 'inkstitch'
+          signing-policy-slug: '${{ env.release_policy }}'
+          github-artifact-id: '${{ steps.upload-unsigned-exe.outputs.artifact-id }}'
+          wait-for-completion: true
+          output-artifact-directory: 'signed-artifacts'
+
+
+      - name: Copy signed exe to dist - tag v*
+        if: startsWith(github.event.ref, 'refs/tags/v')
+        shell: bash
+        run: |
+            mv  -f signed-artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
+
+      - name: Build windows installer
+        shell: bash
+        run: |
+          bash bin/build-windows-installer
+        env:
+          BUILD: windows
+
+      - name: upload-unsigned-installer - tag v*
+        if: startsWith(github.event.ref, 'refs/tags/v')
+        id: upload-unsigned-installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: inkstitch-windows64-installer
+          path: artifacts
+
+
+      - name: Sign-installer  - tag v* # https://github.com/SignPath/github-action-submit-signing-request
+        if: startsWith(github.event.ref, 'refs/tags/v')
+        id: Sign-installer
+        uses: signpath/github-action-submit-signing-request@v1.1
+        with:
+          api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
+          organization-id: '6b880880-2af8-4cf3-a8e7-1b4977c593df'
+          project-slug: 'inkstitch'
+          signing-policy-slug: '${{ env.release_policy }}'
+          artifact-configuration-slug: 'windows-installer-config'
+          github-artifact-id: '${{ steps.upload-unsigned-installer.outputs.artifact-id }}'
+          wait-for-completion: true
+          output-artifact-directory: 'signed-artifacts'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inkstitch-windows64
+          path: signed-artifacts
 
