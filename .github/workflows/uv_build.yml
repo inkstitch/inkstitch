@@ -62,6 +62,7 @@ jobs:
         id: set_vars # Important for referencing the outputs of this step
         run: |
 
+          # Info
           echo "Input Variables (github.event.inputs):"
           echo "  Build Type: ${{ github.event.inputs.build_type }}"
           echo "  Break On: ${{ github.event.inputs.break_on }}"
