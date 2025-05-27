@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# get version from:
+#  - VERSION if set
+#  - GITHUB_REF (/refs/heads/v* or /refs/tags/v*)
 VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
 OS="${BUILD:-$(uname)}"
 ARCH=$(python -c "import platform; n = platform.architecture()[0]; print(n)")
+
 # Check for signed directory
 if [[ -d "signed-artifacts" ]]; then
 	DIRECTORY="signed-artifacts"
