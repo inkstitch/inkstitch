@@ -5,10 +5,9 @@ name: UV Linux64 build
 on:
   workflow_call:  # manual trigger of the workflow
     inputs:
-      # input variables for manual run
       build_data:
         description: 'Build data'
-        required: false
+        required: true
         default: 'debug-venv-stop'  # default value
         type: string  # type of the input, can be string, boolean, or number
 
