@@ -148,6 +148,7 @@ function auto_detection() {
 
         PKG_EXTRA="    \"$PYGOBJECT\",\n    \"$WXPYTHON\","
     else
+        # windows has no pygobject
         PKG_EXTRA="    \"$WXPYTHON\","
     fi
 

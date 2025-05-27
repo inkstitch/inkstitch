@@ -58,11 +58,11 @@ jobs:
 
           uv sync # install dependencies from pyproject.toml
 
-          . .venv/bin/activate  # activate the virtual environment
+          . .venv/Scripts/activate  # activate the virtual environment
           type python
 
-          echo "Setting up Python location: ${{ env.pythonLocation }}"
-          echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+          # echo "Setting up Python location: ${{ env.pythonLocation }}"
+          # echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
 
           exit 1
 
