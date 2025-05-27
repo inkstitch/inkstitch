@@ -8,15 +8,15 @@ name: UV Build
 on:
   push: # at least ones must be triggered by a push to be available for manual trigger
     tags:
-      - 'build*'
-
+      - 'build*'  # test build (linux on the fly sign)
+      - 'v*.*.*'  # signed build
     # branches:
     #   - missing/*  # branch pattern **= any number of characters and /, * = any number of characters not including /
 
   workflow_dispatch:  # manual trigger of the workflow
     inputs:
       # input variables for manual run
-      build_type:                   # access: github.event.inputs.build_type
+      build_type:                   # ref: github.event.inputs.build_type
         description: 'Build type'
         required: true
         default: 'linux64'  # default value
@@ -39,7 +39,17 @@ on:
 
           - all
 
-      break_on:                  # access: github.event.inputs.break_on
+      sign_artifacts: # ref: github.event.inputs.sign_artifacts
+        description: 'Digitally sign the generated build artifacts (requires signing credentials).'
+        required: true
+        default: 'yes'  # default value
+        type: choice
+        options:
+          - 'yes' # Sign all generated artifacts
+          - 'no'  # Skip digital signing
+
+
+      break_on:     # ref: github.event.inputs.break_on
         description: 'Stop the build immediately at a predefined location.'
         required: true
         default: 'no'  # default value
@@ -51,7 +61,40 @@ on:
 
 # working example: ----------------------------------------------------------
 jobs:
+  dump_contexts_to_log:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Dump GitHub context
+          env:
+            GITHUB_CONTEXT: ${{ toJson(github) }}
+          run: echo "$GITHUB_CONTEXT"
+        - name: Dump job context
+          env:
+            JOB_CONTEXT: ${{ toJson(job) }}
+          run: echo "$JOB_CONTEXT"
+        - name: Dump steps context
+          env:
+            STEPS_CONTEXT: ${{ toJson(steps) }}
+          run: echo "$STEPS_CONTEXT"
+        - name: Dump runner context
+          env:
+            RUNNER_CONTEXT: ${{ toJson(runner) }}
+          run: echo "$RUNNER_CONTEXT"
+        - name: Dump strategy context
+          env:
+            STRATEGY_CONTEXT: ${{ toJson(strategy) }}
+          run: echo "$STRATEGY_CONTEXT"
+        - name: Dump matrix context
+          env:
+            MATRIX_CONTEXT: ${{ toJson(matrix) }}
+          run: echo "$MATRIX_CONTEXT"
+
+        - name: Exit
+          run: exit 1
+
+# ---------------------------------------------------------------------------
   prepare_build:
+    needs: dump_contexts_to_log # this job depends on the dump_contexts_to_log job
     runs-on: ubuntu-latest
     outputs:
       # Define outputs that will be available for other jobs
@@ -65,8 +108,17 @@ jobs:
           # Info
           echo "Input Variables (github.event.inputs):"
           echo "  Build Type: ${{ github.event.inputs.build_type }}"
+          echo "  Sign Artifacts: ${{ github.event.inputs.sign_artifacts }}"
           echo "  Break On: ${{ github.event.inputs.break_on }}"
+
           echo "  Event Name: ${{ github.event_name }}"
+          echo "  Tag Name: ${{ github.ref_name }}"
+          echo "  Branch Name: ${{ github.ref }}"
+          echo "  Commit SHA: ${{ github.sha }}"
+          echo "  Repository: ${{ github.repository }}"
+          echo "  Event Ref: ${{ github.event.ref }}"
+          echo "  Event Path: ${{ github.event_path }}"
+
 
           # Check if the event is a workflow_dispatch (manual trigger) or push
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
