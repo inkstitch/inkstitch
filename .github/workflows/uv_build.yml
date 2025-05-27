@@ -42,11 +42,11 @@ on:
       break_on:                  # access: github.event.inputs.break_on
         description: 'Stop the build immediately at a predefined location.'
         required: true
-        default: no  # default value
+        default: 'no'  # default value
         type: choice  # type of the input, can be number, boolean, string, choice or environment
         options:
-          - no    # normal build
-          - uv    # stop the build at the uv venv creation step
+          - 'no'    # normal build
+          - 'uv'    # stop the build at the uv venv creation step
 
 
 # working example: ----------------------------------------------------------

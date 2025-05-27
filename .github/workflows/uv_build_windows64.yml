@@ -57,7 +57,6 @@ jobs:
             exit 1
           fi
 
-
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
 
           cat pyproject.toml
