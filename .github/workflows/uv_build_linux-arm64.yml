@@ -5,7 +5,7 @@ name: UV Linux-arm64 build
 on:
   workflow_call:  # manual trigger of the workflow
     inputs:
-      break_on: # access: inputs.break_on
+      break_on: # ref: inputs.break_on
         description:  'Stop the build immediately at a predefined location.'
         required: true
         default: 'no'    # default value
