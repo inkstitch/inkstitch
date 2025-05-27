@@ -27,7 +27,7 @@ on:
           - linux-arm64
           # - linux-arm32
 
-          # - windows64
+          - windows64
           # - windows32
           # - windows-arm64
           # - windows-arm32
@@ -109,4 +109,17 @@ jobs:
     uses: ./.github/workflows/uv_build_linux-arm64.yml # call reusable workflow
     with:
       break_on: ${{ needs.prepare_build.outputs.final_break_on }} # set input variable for the reusable workflow
+
+
+  call_windows64_build:
+    needs: prepare_build # this job depends on the prepare_build job
+    if: >
+      needs.prepare_build.outputs.final_build_type == 'windows64' ||
+      needs.prepare_build.outputs.final_build_type == 'all'
+    name: Build Windows64
+    uses: ./.github/workflows/uv_build_windows64.yml # call reusable workflow
+    with:
+      break_on: ${{ needs.prepare_build.outputs.final_break_on }} # set input variable for the reusable workflow
+
+
 #----------------------------------------------------
