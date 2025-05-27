@@ -4,7 +4,7 @@ name: UV Windows64 build
 on:
   workflow_call:  # manual trigger of the workflow
     inputs:
-      break_on: # access: inputs.break_on
+      break_on: # ref: inputs.break_on
         description:  'Stop the build immediately at a predefined location.'
         required: true
         default: 'no'    # default value
@@ -83,27 +83,31 @@ jobs:
         env:
           BUILD: windows
 
+      # TODO: Enhance condition to check for 'secrets.SIGNPATH_API_TOKEN' availability,
+      #       not just the 'v*' tag, for more robust signing logic.
 
       - name: Set signing policy to release - tag v*
         if: startsWith(github.event.ref, 'refs/tags/v')
         shell: bash
         run: |
+
+          # set var release_policy to ENV for next steps
           echo release_policy="release-signing" >> $GITHUB_ENV
 
 
       - name: upload-unsigned-exe - tag v*
         if: startsWith(github.event.ref, 'refs/tags/v')
-        id: upload-unsigned-exe
+        id: upload-unsigned-exe  # ref steps.upload-unsigned-exe.outputs...
         uses: actions/upload-artifact@v4
         with:
-          name: inkstitch-windows64-exe
-          path: |
+          name: inkstitch-windows64-exe         # output name
+          path: |                               # input file
             dist/inkstitch/bin/inkstitch.exe
 
 
       - name: Sign-exe - tag v* # https://github.com/SignPath/github-action-submit-signing-request
         if: startsWith(github.event.ref, 'refs/tags/v')
-        id: Sign-exe
+        id: Sign-exe            # ref steps.Sign-exe.outputs...
         uses: signpath/github-action-submit-signing-request@v1.1
         with:
           api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
@@ -121,6 +125,7 @@ jobs:
         run: |
             mv  -f signed-artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
 
+      # common for signed and unsigned
       - name: Build windows installer
         shell: bash
         run: |
@@ -128,13 +133,15 @@ jobs:
         env:
           BUILD: windows
 
+
+      # This installer will be signed in a subsequent step.
       - name: upload-unsigned-installer - tag v*
         if: startsWith(github.event.ref, 'refs/tags/v')
         id: upload-unsigned-installer
         uses: actions/upload-artifact@v4
         with:
-          name: inkstitch-windows64-installer
-          path: artifacts
+          name: inkstitch-windows64-installer  # output name
+          path: artifacts                      # whole directory
 
 
       - name: Sign-installer  - tag v* # https://github.com/SignPath/github-action-submit-signing-request
