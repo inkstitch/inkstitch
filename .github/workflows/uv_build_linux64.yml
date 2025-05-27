@@ -5,11 +5,11 @@ name: UV Linux64 build
 on:
   workflow_call:  # manual trigger of the workflow
     inputs:
-      break_on:  # access: inputs.break_on
-        description: 'Stop value for the build, 0 to continue, !=0 to stop'
+      break_on: # access: inputs.break_on
+        description:  'Stop the build immediately at a predefined location.'
         required: true
-        default: 1    # default value
-        type: number  # type of the input, can be string, boolean, or number
+        default: 'no'    # default value
+        type: string  # type of the input, can be string, boolean, or number
 
 
 # Jobs are steps that run on the same runner
