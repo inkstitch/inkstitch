@@ -54,7 +54,12 @@ jobs:
 
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
 
+          cat pyproject.toml
 
+          uv sync # install dependencies from pyproject.toml
+
+          . .venv/bin/activate  # activate the virtual environment
+          type python
 
           echo "Setting up Python location: ${{ env.pythonLocation }}"
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
