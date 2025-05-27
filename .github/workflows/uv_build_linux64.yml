@@ -46,8 +46,6 @@ jobs:
             exit 1
           fi
 
-          exit 1
-
           # install system dependencies
           sudo apt-get update  # update package list
 
