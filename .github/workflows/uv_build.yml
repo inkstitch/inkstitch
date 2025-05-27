@@ -61,40 +61,49 @@ on:
 
 # working example: ----------------------------------------------------------
 jobs:
+  # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#context-availability
   dump_contexts_to_log:
       runs-on: ubuntu-latest
       steps:
-        - name: Dump GitHub context
+        - name: All env variables
+          run: |
+            echo "All environment variables:"
+            printenv    # or just `env` to print all environment variables
+            echo "---------------------"
+
+        - name: Dump GitHub context (github...)
           env:
-            GITHUB_CONTEXT: ${{ toJson(github) }}
+            GITHUB_CONTEXT: ${{ toJson(github) }}   # set the environment variable GITHUB_CONTEXT to the JSON representation of the github context
           run: echo "$GITHUB_CONTEXT"
-        - name: Dump job context
+
+        - name: Dump job context (job...)
           env:
             JOB_CONTEXT: ${{ toJson(job) }}
           run: echo "$JOB_CONTEXT"
-        - name: Dump steps context
+
+        - name: Dump steps context (steps...)
           env:
             STEPS_CONTEXT: ${{ toJson(steps) }}
           run: echo "$STEPS_CONTEXT"
-        - name: Dump runner context
+
+        - name: Dump runner context (runner...)
           env:
             RUNNER_CONTEXT: ${{ toJson(runner) }}
           run: echo "$RUNNER_CONTEXT"
-        - name: Dump strategy context
+
+        - name: Dump strategy context (strategy...)
           env:
             STRATEGY_CONTEXT: ${{ toJson(strategy) }}
           run: echo "$STRATEGY_CONTEXT"
+
         - name: Dump matrix context
           env:
             MATRIX_CONTEXT: ${{ toJson(matrix) }}
           run: echo "$MATRIX_CONTEXT"
 
-        - name: Exit
-          run: exit 1
 
 # ---------------------------------------------------------------------------
   prepare_build:
-    needs: dump_contexts_to_log # this job depends on the dump_contexts_to_log job
     runs-on: ubuntu-latest
     outputs:
       # Define outputs that will be available for other jobs
