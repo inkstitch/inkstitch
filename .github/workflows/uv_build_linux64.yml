@@ -5,11 +5,11 @@ name: UV Linux64 build
 on:
   workflow_call:  # manual trigger of the workflow
     inputs:
-      build_data:
-        description: 'Build data'
+      stop_value:  # access: inputs.stop_value
+        description: 'Stop value for the build, 0 to continue, !=0 to stop'
         required: true
-        default: 'debug-venv-stop'  # default value
-        type: string  # type of the input, can be string, boolean, or number
+        default: 1    # default value
+        type: number  # type of the input, can be string, boolean, or number
 
 
 # Jobs are steps that run on the same runner
@@ -33,17 +33,16 @@ jobs:
         run: |  # working directory is the root of the inkstitch repo
 
           # input data
-          echo "Build data 1: ${{ github.event.inputs.build_data }}"
-          echo "Build data 2: ${{ inputs.build_data }}"
+          echo "Build data 1: ${{ github.event.inputs.stop_value }}"
+          echo "Build data 2: ${{ inputs.stop_value }}"
 
           uv python list
           uv python pin 311  # pin to local python version
           uv venv  # create a virtual environment with the pinned python version
 
-          # stop here if build_data is set to debug-venv-stop
-          if [ "${{ github.event.inputs.build_data }}" == "debug-venv-stop" ]; then
+          if (( ${{ inputs.stop_value }} > 0 )); then
             echo "Stopping on request"
-            exit 1  # exit 0 to continue next step, exit 1 to stop the workflow
+            exit 1
           fi
 
           exit 1
@@ -57,7 +56,7 @@ jobs:
           # for PyGObject 3.50 to compile
           sudo apt install libgirepository1.0-dev libcairo2-dev
 
-          # for wxPython ro run
+          # for wxPython run
           sudo apt install libnotify4
           sudo apt install glib-networking libsdl2-2.0-0 # libsdl2-dev
 

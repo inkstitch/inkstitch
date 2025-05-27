@@ -5,17 +5,17 @@ name: UV Linux-arm64 build
 on:
   workflow_call:  # manual trigger of the workflow
     inputs:
-      # input variables for manual run
-      build_data:
-        description: 'Build data'
-        required: false
-        default: 'debug-venv-stop'  # default value
-        type: string  # type of the input, can be string, boolean, or number
+      stop_value: # access: inputs.stop_value
+        description: 'Stop value for the build, 0 to continue, !=0 to stop'
+        required: true
+        default: 1    # default value
+        type: number  # type of the input, can be string, boolean, or number
 
 
 # Jobs are steps that run on the same runner
 jobs:
-  linux-arm64:
+  linux-arm64: # name of the job
+    # define the OS of the runner
 
     runs-on: ubuntu-22.04-arm
 
@@ -37,12 +37,15 @@ jobs:
         shell: bash
         run: |  # working directory is the root of the inkstitch repo
 
+          # input data
+          echo "Build data 1: ${{ github.event.inputs.stop_value }}"
+          echo "Build data 2: ${{ inputs.stop_value }}"
+
           uv python list
           uv python pin 311  # pin to local python version
           uv venv  # create a virtual environment with the pinned python version
 
-          # stop here if build_data is set to debug-venv-stop
-          if [ "${{ github.event.inputs.build_data }}" == "debug-venv-stop" ]; then
+          if (( ${{ inputs.stop_value }} > 0 )); then
             echo "Stopping on request"
             exit 1
           fi
