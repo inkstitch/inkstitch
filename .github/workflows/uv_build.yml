@@ -90,7 +90,8 @@ jobs:
     # - .yml must be on top level of .github/workflows/
     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
     with:
-      build_data: ${{ needs.prepare_build.outputs.final_build_data }} # set input variable for the reusable workflow
+      # build_data: ${{ needs.prepare_build.outputs.final_build_data }} # set input variable for the reusable workflow
+      build_data: "hello world"
 
 
   call_linux_arm64_build:
