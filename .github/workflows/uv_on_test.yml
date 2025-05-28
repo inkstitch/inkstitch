@@ -27,6 +27,9 @@ jobs:
       MY_JOB1: "value of MY_JOB1"  # job-level environment variable, accessible in all steps of this job
       MY_GLOBAL_VAR: "overridden value of MY_GLOBAL_VAR"  # override global variable in this job
 
+    outputs:
+      MY_JOB1_OUT: ""
+
     steps:
       - name: Step1 name
         id: step1
@@ -36,15 +39,20 @@ jobs:
           echo "${{ toJSON(github.event.inputs) }}"
           echo "MY_GLOBAL_VAR: $MY_GLOBAL_VAR"  # access global variable in env
 
-          echo "MY_MSG=${{ github.event.inputs.message }}" >> $GITHUB_ENV # set env var accessible in subsequent steps
-          echo "MY_JOB1=\"overridden MY_JOB1\"" >> $GITHUB_ENV
+          echo "MY_MSG=${{ github.event.inputs.message }}" >> $GITHUB_ENV # set env var accessible in subsequent steps, not in actual
+          echo "MY_JOB1=\"overridden MY_JOB1\"" >> $GITHUB_ENV # set env var accessible in subsequent steps, not in actual
 
           MY_MSG2="message 2"  # only accessible in this step
 
+          echo "---------------------------------"
           echo "MY_MSG=$MY_MSG"   # access env variable set in this step
           echo "MY_MSG2=$MY_MSG2" # access step variable
           echo "MY_JOB1=$MY_JOB1"  # access job-level variable
 
+          # set output
+          echo "MY_JOB1_OUT: Job1 output" >> $GITHUB_OUTPUT
+
+          echo "---------------------------------"
           printenv | sort
 
 
@@ -52,6 +60,10 @@ jobs:
         id: step2
         run: |
 
+          echo "${{ toJSON(github.event.inputs) }}"
+          echo "---------------------------------"
+          echo "${{ toJSON(inputs) }}"
+          echo "---------------------------------"
           env | sort
 
   job2:
@@ -65,4 +77,7 @@ jobs:
         run: |
 
           echo "${{ toJSON(github.event.inputs) }}"
+          echo "---------------------------------"
+          echo "${{ toJSON(needs) }}"
+          echo "---------------------------------"
           printenv | sort
