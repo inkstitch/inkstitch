@@ -6,13 +6,23 @@ on:
     tags: # valid only for the HEAD of the repository
       - 'on-test*' # run workflow on tags that start with 'on-test'"
 
+# inputs...: new, keeps var types, common interface for workflow_dispatch & workflow_call
+#   vs
+# github.event.inputs...: old, only string, only for workflow_dispatch
+
   workflow_dispatch:  # manual trigger of the workflow
     inputs:
-      message: # ref: inputs.message
+      message: # ref: inputs.message | github.event.inputs.message
         description: 'A custom message to display'
         required: false
         default: 'Hello from manual trigger!'
         type: string
+
+      number:
+        description: "test number"
+        required: false
+        default: 0
+        type: number
 
 
 # global variables:
@@ -77,6 +87,8 @@ jobs:
         run: |
 
           echo "${{ toJSON(github.event.inputs) }}"
+          echo "---------------------------------"
+          echo "${{ toJSON(inputs) }}"
           echo "---------------------------------"
           echo "${{ toJSON(needs) }}"
           echo "---------------------------------"
