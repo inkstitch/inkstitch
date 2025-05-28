@@ -60,7 +60,7 @@ jobs:
           echo "MY_JOB1=$MY_JOB1"  # access job-level variable
 
           # set output
-          echo MY_JOB1_OUT="Job1 output" >> $GITHUB_OUTPUT
+          echo "MY_JOB1_OUT=\"Job1 output\"" >> $GITHUB_OUTPUT
 
           echo "---------------------------------"
           printenv | sort
