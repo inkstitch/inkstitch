@@ -1,12 +1,14 @@
 name: Build
 on:
   push:
-    branches-ignore:
-      - master
-      - main
-      - kgn/*
-    # tags:
+  #   branches-ignore:
+  #     - master
+  #     - main
+  #     - kgn/*
+    tags:
     #   - "v*.*.*"
+       - "old-build*"   # run on tags starting with "old-build"
+
 jobs:
   linux64:
     runs-on: ubuntu-22.04

@@ -8,7 +8,7 @@ name: UV Build
 on:
   push: # at least ones must be triggered by a push to be available for manual trigger
     tags:
-      - 'build*'  # test build (linux on the fly sign)
+      - 'build*'  # unsigned build
       - 'v*.*.*'  # signed build
     # branches:
     #   - missing/*  # branch pattern **= any number of characters and /, * = any number of characters not including /
@@ -42,7 +42,7 @@ on:
       sign_artifacts: # ref: github.event.inputs.sign_artifacts
         description: 'Digitally sign the generated build artifacts (requires signing credentials).'
         required: true
-        default: 'yes'  # default value
+        default: 'no'  # default value
         type: choice
         options:
           - 'yes' # Sign all generated artifacts
@@ -65,11 +65,8 @@ jobs:
   dump_contexts_to_log:
       runs-on: ubuntu-latest
       steps:
-        - name: All env variables
-          run: |
-            echo "All environment variables:"
-            printenv    # or just `env` to print all environment variables
-            echo "---------------------"
+        - name: Dump environment variables
+          run: printenv    # or just `env` to print all environment variables
 
         - name: Dump GitHub context (github...)
           env:
@@ -107,8 +104,11 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       # Define outputs that will be available for other jobs
-      final_build_type: ${{ steps.set_vars.outputs.calculated_build_type }}
-      final_break_on: ${{ steps.set_vars.outputs.calculated_break_on }}
+      #  - we cannot globbaly overwrite environment variables, so we use outputs
+      #    ref: needs.prepare_build.outputs.build_type
+      build_type: ${{ steps.set_vars.outputs.build_type }}
+      sign_artifacts: ${{ steps.set_vars.outputs.sign_artifacts }}
+      break_on: ${{ steps.set_vars.outputs.break_on }}
     steps:
       - name: Set default build variables for Push event
         id: set_vars # Important for referencing the outputs of this step
@@ -120,67 +120,78 @@ jobs:
           echo "  Sign Artifacts: ${{ github.event.inputs.sign_artifacts }}"
           echo "  Break On: ${{ github.event.inputs.break_on }}"
 
-          echo "  Event Name: ${{ github.event_name }}"
-          echo "  Tag Name: ${{ github.ref_name }}"
-          echo "  Branch Name: ${{ github.ref }}"
-          echo "  Commit SHA: ${{ github.sha }}"
-          echo "  Repository: ${{ github.repository }}"
-          echo "  Event Ref: ${{ github.event.ref }}"
-          echo "  Event Path: ${{ github.event_path }}"
-
 
           # Check if the event is a workflow_dispatch (manual trigger) or push
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
               # If so, use the values from the inputs
-            CALCULATED_BUILD_TYPE="${{ github.event.inputs.build_type }}"
-            CALCULATED_BREAK_ON="${{ github.event.inputs.break_on }}"
+            MY_BUILD_TYPE="${{ github.event.inputs.build_type }}"
+            MY_BREAK_ON="${{ github.event.inputs.break_on }}"
+            MY_SIGN_ARTIFACTS="${{ github.event.inputs.sign_artifacts }}"
+
           else
+
             # If not (i.e. it's a push or other event), use the defaults
-            CALCULATED_BUILD_TYPE="linux64"
-            CALCULATED_BREAK_ON="uv"
+            MY_BUILD_TYPE="linux64"   # all
+            MY_BREAK_ON="uv"          # no
+
+            # only set if tag is v*.*.*
+            if [[ "${{ github.event_name }}" == "push" &&
+                  startsWith(github.ref, 'refs/tags/v') ]]; then
+              # If the event is a push to a tag starting with 'v', set sign_artifacts to 'yes'
+              MY_SIGN_ARTIFACTS="yes"   # yes
+            else
+              # Otherwise, set sign_artifacts to 'no'
+              MY_SIGN_ARTIFACTS="no"    # no
+            fi
+
           fi
 
-          echo "Calculated Build Type: $CALCULATED_BUILD_TYPE"
-          echo "Calculated Stop Value: $CALCULATED_BREAK_ON"
+          echo "My Build Type: $MY_BUILD_TYPE"
+          echo "My Stop Value: $MY_BREAK_ON"
+          echo "My Sign Artifacts: $MY_SIGN_ARTIFACTS"
 
           # Set the outputs for this step
-          echo "calculated_build_type=${CALCULATED_BUILD_TYPE}" >> "$GITHUB_OUTPUT"
-          echo "calculated_break_on=${CALCULATED_BREAK_ON}" >> "$GITHUB_OUTPUT"
+          echo "build_type=${MY_BUILD_TYPE}" >> "$GITHUB_OUTPUT"
+          echo "break_on=${MY_BREAK_ON}" >> "$GITHUB_OUTPUT"
+          echo "sign_artifacts=${MY_SIGN_ARTIFACTS}" >> "$GITHUB_OUTPUT"
 
 
   call_linux64_build:
     needs: prepare_build # this job depends on the prepare_build job
     if: >
-      needs.prepare_build.outputs.final_build_type == 'linux64' ||
-      needs.prepare_build.outputs.final_build_type == 'all'
+      needs.prepare_build.outputs.build_type == 'linux64' ||
+      needs.prepare_build.outputs.build_type == 'all'
     name: Build Linux64
     # - uses with reusable must be on job level, not on step level
     # - .yml must be on top level of .github/workflows/
     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
     with:
-      break_on: ${{ needs.prepare_build.outputs.final_break_on }} # set input variable for the reusable workflow
+      build_type: ${{ needs.prepare_build.outputs.build_type }} # set input variable for the reusable workflow
+      sign_artifacts: ${{ needs.prepare_build.outputs.sign_artifacts }}
 
 
   call_linux_arm64_build:
     needs: prepare_build # this job depends on the prepare_build job
     if: >
-      needs.prepare_build.outputs.final_build_type == 'linux-arm64' ||
-      needs.prepare_build.outputs.final_build_type == 'all'
+      needs.prepare_build.outputs.build_type == 'linux-arm64' ||
+      needs.prepare_build.outputs.build_type == 'all'
     name: Build Linux-arm64
     uses: ./.github/workflows/uv_build_linux-arm64.yml # call reusable workflow
     with:
-      break_on: ${{ needs.prepare_build.outputs.final_break_on }} # set input variable for the reusable workflow
+      break_on: ${{ needs.prepare_build.outputs.break_on }} # set input variable for the reusable workflow
+      sign_artifacts: ${{ needs.prepare_build.outputs.sign_artifacts }}
 
 
   call_windows64_build:
     needs: prepare_build # this job depends on the prepare_build job
     if: >
-      needs.prepare_build.outputs.final_build_type == 'windows64' ||
-      needs.prepare_build.outputs.final_build_type == 'all'
+      needs.prepare_build.outputs.build_type == 'windows64' ||
+      needs.prepare_build.outputs.build_type == 'all'
     name: Build Windows64
     uses: ./.github/workflows/uv_build_windows64.yml # call reusable workflow
     with:
-      break_on: ${{ needs.prepare_build.outputs.final_break_on }} # set input variable for the reusable workflow
+      break_on: ${{ needs.prepare_build.outputs.break_on }} # set input variable for the reusable workflow
+      sign_artifacts: ${{ needs.prepare_build.outputs.sign_artifacts }}
 
 
 #----------------------------------------------------
