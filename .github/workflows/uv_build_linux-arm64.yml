@@ -5,11 +5,18 @@ name: UV Linux-arm64 build
 on:
   workflow_call:  # manual trigger of the workflow
     inputs:
+
       break_on: # ref: inputs.break_on
         description:  'Stop the build immediately at a predefined location.'
         required: true
         default: 'no'    # default value
         type: string  # type of the input, can be string, boolean, or number
+
+      sign_artifacts: # ref: inputs.sign_artifacts
+        description: 'Digitally sign the generated build artifacts (requires signing credentials).'
+        required: true
+        default: 'no'  # default value
+        type: string
 
 
 # Jobs are steps that run on the same runner
