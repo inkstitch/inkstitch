@@ -39,8 +39,11 @@ jobs:
           echo "MY_MSG=${{ github.event.inputs.message }}" >> $GITHUB_ENV # set env var accessible in subsequent steps
           echo "MY_JOB1=\"overridden MY_JOB1\"" >> $GITHUB_ENV
 
-          MY_MSG2="message 2"
-          echo "MY_MSG2=$MY_MSG2"
+          MY_MSG2="message 2"  # only accessible in this step
+
+          echo "MY_MSG=$MY_MSG"   # access env variable set in this step
+          echo "MY_MSG2=$MY_MSG2" # access step variable
+          echo "MY_JOB1=$MY_JOB1"  # access job-level variable
 
           printenv | sort
 
