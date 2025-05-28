@@ -1,7 +1,7 @@
 ---
 title: "gingo200"
 permalink: /fr/fonts/gingo200/
-last_modified_at: 2022-05-27
+last_modified_at: 2025-05-28
 toc: false
 preview_image:
   - url: /assets/images/fonts/gingo200.jpg
@@ -10,7 +10,7 @@ data_title:
   - gingo200
 ---
 {%- assign font = site.data.fonts.gingo200.font -%}
-![FoldInkstitch](/assets/images/fonts/gingo200.jpg)
+![gingo200](/assets/images/fonts/gingo200.png)
 
 ## Glyphes
 
