@@ -46,6 +46,9 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Decadent Flower Monogram](/fonts/decadent_flowers_monogram/)
 
   ![Decadent flower monogram](/assets/images/fonts/decadent_flowers_monogram.png)
+* [gingo200](/assets/images/fonts/gingo200.png)
+
+  ![gingo200](/fonts/gingo200/)
 * [גופן בינוני](/fonts/hebrew_font/)
 
   ![גופן בינוני](/assets/images/fonts/hebrew_font_medium.png)
@@ -453,6 +456,29 @@ Ink/Stitch can now export multiple files with different texts at once. A path wi
 
 ## Bug Fixes
 
+### Fixes since beta1
+
+* fonts: add & when missing… (#3744)
+* gradient color: prevent erroring out on color parsing issues (#3743)
+* ripple: ensure start and end point of the lines (#3741)
+* builds: add linux arm build (#3740)
+* ripple: fix anchor cache (#3737)
+* manual stitch: apply clipping (#3734)
+* ripple: return empty when there are no helper lines (#3733)
+* add force horiz_adv_x_default to generate json and fix edit-json (#3735)
+* lettering along path: fix scaled text (#3736)
+* knockdown: add embossing options (#3738)
+* knockdown: allow negative offset values (#3732)
+* letters to font: fix svg import (for simple files) (#3729)
+* general: import exit method (#3730, #3727)
+* zip export: add quilting formats to zip export arguments (#3718)
+* params: wrap descriptions to make it fit better on small screens (#3719)
+* lettering along path: fix multipart glyphs and rtl (#3709)
+* handle GeometryCollections in ensure_polygon (#3708)
+* lettering: options to scolled panel (#3714)
+* builds: macos notary fix to allow beta releases (#3710)
+
+### Fixes since 3.1.0
 * Fix zerodivision error in zigzag to satin [#3696](https://github.com/inkstitch/inkstitch/pull/3696)
 * Circular fill: use first boundary linestring if outline is multilinestring [#3694](https://github.com/inkstitch/inkstitch/pull/3694)
 * Auto route satin: do not try to add a trim to a deleted element [#3683](https://github.com/inkstitch/inkstitch/pull/3683)

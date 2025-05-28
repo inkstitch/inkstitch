@@ -81,7 +81,7 @@ Cette extension permet de générer:
 
 #### Onglet Options
 
-* Conserver les trous : Choisissez si la forme doit contenir des trous (fonctionne uniquement si l'option Forme (de l'onglet Embossage) est Aucune).
+* Conserver les trous : Choisissez si la forme doit contenir des trous.
 * Décalage : Décalage (mm) autour de la sélection. Ce décalage peut être positif ou négatif.
 * Méthode (arrondi, onglet, biseau) : Modifie l'aspect des bords.
 * Limite d'onglet : Modifie l'aspect des bords.

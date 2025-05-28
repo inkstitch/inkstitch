@@ -71,7 +71,7 @@ Helper method to generate either
 
 #### Options tab
 
-* Keep holes: Chose whether the shape should contain holes (only works for Shape (from embossing tab) set to None)
+* Keep holes: Chose whether the shape should contain holes
 * Offset: The offset (mm) around the selection. Offset can be positive or negative
 * Method (round, miter, bevel): Influences how edges will look like
 * Miter limit:  Influences how edges will look like
