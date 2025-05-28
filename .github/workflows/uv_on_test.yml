@@ -42,14 +42,14 @@ jobs:
           MY_MSG2="message 2"
           echo "MY_MSG2=$MY_MSG2"
 
-          printenv
+          printenv | sort
 
 
       - name: Step2 name
         id: step2
         run: |
 
-          env
+          env | sort
 
   job2:
     needs: job1
@@ -62,4 +62,4 @@ jobs:
         run: |
 
           echo "${{ toJSON(github.event.inputs) }}"
-          printenv
+          printenv | sort
