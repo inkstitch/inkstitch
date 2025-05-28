@@ -334,7 +334,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: inkstitch-windows64-installer
-          path: artifacts
+          path: signed-artifacts
       - name: Sign-installer
         if: startsWith(github.event.ref, 'refs/tags/v')
         id: Sign-installer
