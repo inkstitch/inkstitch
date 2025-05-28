@@ -4,30 +4,35 @@ name: UV On Test
 on:
   push:
     tags: # valid only for the HEAD of the repository
-      - '---build-not-allowed*' # run workflow on tags that start with "build like "build-1.0", "build_featureX", "build/v2.0"
+      - 'on-test*' # run workflow on tags that start with 'on-test'"
+
+  workflow_dispatch:  # manual trigger of the workflow
+    inputs:
+      message: # ref: inputs.message
+        description: 'A custom message to display'
+        required: false
+        default: 'Hello from manual trigger!'
+        type: string
 
 
-  # push:
-  #   branches:
-  #     - kgn/*   # branch pattern **= any number of characters and /, * = any number of characters not including /
-
-  # workflow_dispatch:
-    # You can optionally define inputs here if you need them.
-    # For a very simple trigger, you might not need any.
-    # inputs:
-    #   message:
-    #     description: 'A custom message'
-    #     required: false
-    #     default: 'Hello from manual trigger!'
-    #     type: string
+# global variables:
+env:
+  MY_GLOBAL_VAR: 'some_value'
 
 jobs:
-  simple_job:
+  job1:
+    name: Job1 name
     runs-on: ubuntu-latest
     steps:
-      - name: Greet the world
+      - name: Step1 name
+        id: step1
         run: |
-          echo "This workflow was triggered !"
-          echo "Current time is $(date)"
-          # If you had inputs, you could access them like this:
-          # echo "Custom message: ${{ github.event.inputs.message }}"
+          echo "Step1 ..."
+          echo "MY_GLOBAL_VAR=${MY_GLOBAL_VAR}" >> $GITHUB_ENV
+          echo "Custom message: ${{ github.event.inputs.message }}" >> $GITHUB_ENV
+          env
+      - name: Step2 name
+        id: step2
+        run: |
+          echo "Global variable value: $MY_GLOBAL_VAR"
+          env
