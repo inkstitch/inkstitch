@@ -10,7 +10,7 @@ data_title:
   - gingo200
 ---
 {%- assign font = site.data.fonts.gingo200.font -%}
-![FoldInkstitch](/assets/images/fonts/gigo200.png)
+![gino200](/assets/images/fonts/gigo200.jpg)
 
 ## Schriftzeichen
 
