@@ -33,7 +33,7 @@ jobs:
           echo "Step1 ..."
           echo "MY_GLOBAL_VAR: $MY_GLOBAL_VAR"
           # echo "MY_GLOBAL_VAR=${MY_GLOBAL_VAR}" >> $GITHUB_ENV
-          echo "Custom message: ${{ github.event.inputs.message }}" >> $GITHUB_ENV
+          echo "MY_MSG=${{ github.event.inputs.message }}" >> $GITHUB_ENV
           printenv
 
       - name: Step2 name
