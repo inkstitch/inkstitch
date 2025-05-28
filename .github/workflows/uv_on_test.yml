@@ -32,8 +32,10 @@ jobs:
           echo "Step1 ..."
           # data from inputs
           echo "MY_GLOBAL_VAR: $MY_GLOBAL_VAR"  # access global variable in env
+
           echo "MY_MSG=${{ github.event.inputs.message }}" >> $GITHUB_ENV # set env var accessible in subsequent steps
           printenv
+
 
       - name: Step2 name
         id: step2
@@ -41,3 +43,15 @@ jobs:
 
           echo "MY_GLOBAL_VAR: $MY_GLOBAL_VAR"
           env
+
+  job2:
+    needs: job1
+    name: job2 name
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step1 name
+        id: step1
+        shell: bash
+        run: |
+
+          printenv
