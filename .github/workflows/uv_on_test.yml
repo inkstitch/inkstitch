@@ -17,7 +17,7 @@ on:
 
 # global variables:
 env:
-  MY_GLOBAL_VAR: 'some_value'
+  MY_GLOBAL_VAR: 'value of MY_GLOBAL_VAR'
 
 jobs:
   job1:
@@ -26,13 +26,19 @@ jobs:
     steps:
       - name: Step1 name
         id: step1
-        run: |
+        shell: bash
+        run: |  # run
+
+          # data from inputs
           echo "Step1 ..."
-          echo "MY_GLOBAL_VAR=${MY_GLOBAL_VAR}" >> $GITHUB_ENV
+          echo "MY_GLOBAL_VAR: $MY_GLOBAL_VAR"
+          # echo "MY_GLOBAL_VAR=${MY_GLOBAL_VAR}" >> $GITHUB_ENV
           echo "Custom message: ${{ github.event.inputs.message }}" >> $GITHUB_ENV
-          env
+          printenv
+
       - name: Step2 name
         id: step2
         run: |
+
           echo "Global variable value: $MY_GLOBAL_VAR"
-          env
+          # env
