@@ -38,6 +38,9 @@ jobs:
 
           echo "MY_MSG=${{ github.event.inputs.message }}" >> $GITHUB_ENV # set env var accessible in subsequent steps
           echo "MY_JOB1=\"overridden MY_JOB1\"" >> $GITHUB_ENV
+
+          MY_MSG2="message 2"
+
           printenv
 
 
@@ -45,7 +48,6 @@ jobs:
         id: step2
         run: |
 
-          echo "MY_GLOBAL_VAR: $MY_GLOBAL_VAR"
           env
 
   job2:
