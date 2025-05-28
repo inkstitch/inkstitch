@@ -16,7 +16,7 @@ on:
   workflow_dispatch:  # manual trigger of the workflow
     inputs:
       # input variables for manual run
-      build_type:                   # ref: github.event.inputs.build_type
+      build_type:                   # ref: github.event.inputs.build_type | inputs.build_type
         description: 'Build type'
         required: true
         default: 'linux64'  # default value
@@ -39,7 +39,7 @@ on:
 
           - all
 
-      sign_artifacts: # ref: github.event.inputs.sign_artifacts
+      sign_artifacts: # ref: github.event.inputs.sign_artifacts | inputs.sign_artifacts
         description: 'Digitally sign the generated build artifacts (requires signing credentials).'
         required: true
         default: 'no'  # default value
@@ -49,7 +49,7 @@ on:
           - 'no'  # Skip digital signing
 
 
-      break_on:     # ref: github.event.inputs.break_on
+      break_on:     # ref: github.event.inputs.break_on | inputs.break_on
         description: 'Stop the build immediately at a predefined location.'
         required: true
         default: 'no'  # default value
