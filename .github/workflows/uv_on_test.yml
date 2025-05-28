@@ -40,6 +40,7 @@ jobs:
           echo "MY_JOB1=\"overridden MY_JOB1\"" >> $GITHUB_ENV
 
           MY_MSG2="message 2"
+          echo "MY_MSG2=$MY_MSG2"
 
           printenv
 
