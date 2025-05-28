@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MY_JOB1: "value of MY_JOB1"  # job-level environment variable, accessible in all steps of this job
-      MY_GLOBAL_VAR: "overridden value of MY_GLOBAL_VAR"  # override global variable in this job
+      # MY_GLOBAL_VAR: "overridden value of MY_GLOBAL_VAR"  # override global variable in this job
 
     steps:
       - name: Step1 name
