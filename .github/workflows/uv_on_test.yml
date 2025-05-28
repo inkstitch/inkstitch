@@ -23,17 +23,21 @@ jobs:
   job1:
     name: Job1 name
     runs-on: ubuntu-latest
+    env:
+      MY_JOB1: "value of MY_JOB1"  # job-level environment variable, accessible in all steps of this job
+      MY_GLOBAL_VAR: "overridden value of MY_GLOBAL_VAR"  # override global variable in this job
+
     steps:
       - name: Step1 name
         id: step1
         shell: bash
         run: |  # run
 
-          echo "Step1 ..."
-          # data from inputs
+          echo "${{ toJSON(github.event.inputs) }}"
           echo "MY_GLOBAL_VAR: $MY_GLOBAL_VAR"  # access global variable in env
 
           echo "MY_MSG=${{ github.event.inputs.message }}" >> $GITHUB_ENV # set env var accessible in subsequent steps
+          echo "MY_JOB1="overridden MY_JOB1" >> $GITHUB_ENV
           printenv
 
 
@@ -54,4 +58,5 @@ jobs:
         shell: bash
         run: |
 
+          echo "${{ toJSON(github.event.inputs) }}"
           printenv
