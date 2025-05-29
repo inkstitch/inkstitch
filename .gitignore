@@ -43,6 +43,6 @@ uv_pkg_update.sh
 uv.lock
 pyproject.toml
 
-# github client gh shell files -
-/gh_*.sh
+# github client gh shell files, test actions
+uv_test_actions/
 
