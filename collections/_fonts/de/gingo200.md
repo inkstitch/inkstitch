@@ -10,7 +10,7 @@ data_title:
   - gingo200
 ---
 {%- assign font = site.data.fonts.gingo200.font -%}
-![gino200](/assets/images/fonts/gigo200.png)
+![gingo200](/assets/images/fonts/gingo200.png)
 
 ## Schriftzeichen
 
