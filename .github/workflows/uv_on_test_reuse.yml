@@ -1,0 +1,25 @@
+name: UV On Test Reusable
+
+# when the workflow should run
+on:
+  workflow_call:  # manual trigger of the workflow
+    inputs:
+
+      msg: # ref: inputs.break_on
+        description:  'msg'
+        required: true
+        default: 'msg not set'    # default value
+        type: string  # type of the input, can be string, boolean, or number
+
+jobs:
+  jobr1:  # name of the job
+    runs-on: ubuntu-22.04
+    steps:
+
+      - name: Jobr1
+        shell: bash
+        run: |
+
+          echo "msg: ${{ inputs.msg }}"
+          echo "msg: ${{ github.event.inputs.msg }}"
+

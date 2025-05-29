@@ -32,6 +32,11 @@ on:
           # - windows-arm64
           # - windows-arm32
 
+          # - darwin64
+          # - darwin32
+          # - darwin-arm64
+          # - darwin-arm32
+
           # - macos64
           # - macos32
           # - macos-arm64
