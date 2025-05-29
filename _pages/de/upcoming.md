@@ -46,9 +46,9 @@ Ink/Stitch befindet sich in ständiger Entwicklung. Hier kannst du alle Änderun
 * [Decadent Flower Monogram](/de/fonts/decadent_flowers_monogram/)
 
   ![Decadent flower monogram](/assets/images/fonts/decadent_flowers_monogram.png)
-* [gingo200](/assets/images/fonts/gingo200.png)
+* [gingo200](/fonts/gingo2000)
 
-  ![gingo200](/fonts/gingo200/)
+  ![gingo200](/assets/images/fonts/gingo200.png)
 * [גופן בינוני](/de/fonts/hebrew_font/)
 
   ![גופן בינוני](/assets/images/fonts/hebrew_font_medium.png)
