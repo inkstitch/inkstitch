@@ -27,54 +27,67 @@ on:
 
 # global variables:
 env:
-  MY_GLOBAL_VAR: 'value of MY_GLOBAL_VAR'
+  MY_GLOBAL_VAR: 'initial MY_GLOBAL_VAR'
 
 jobs:
   job1:
     name: Job1 name
     runs-on: ubuntu-latest
     env:
-      MY_JOB1: "value of MY_JOB1"  # job-level environment variable, accessible in all steps of this job
-      MY_GLOBAL_VAR: "overridden value of MY_GLOBAL_VAR"  # override global variable in this job
+      MY_JOB1: "job1 initial MY_JOB1"  # job-level environment variable, accessible in all steps of this job
+      MY_GLOBAL_VAR: "job1 overridden MY_GLOBAL_VAR in env: job1"  # override global variable in this job
 
-    outputs:
-      MY_JOB1_OUT: ""
+    outputs: ### !!! important !!! must be done else values not visible in needs...
+      MY_JOB1_OUT: ${{ steps.step1.outputs.MY_JOB1_OUT }}  # output --> needs...
 
     steps:
-      - name: Step1 name
+      - name: Step1
         id: step1
         shell: bash
         run: |  # run
 
-          echo "${{ toJSON(github.event.inputs) }}"
+          echo "--------------------------------- job1 step1 1"
+          echo "github.event.inputs: ${{ toJSON(github.event.inputs) }}"
+          echo "--------------------------------- job1 step1 2"
+          echo "inputs: ${{ toJSON(inputs) }}"
+          echo "--------------------------------- job1 step1 3"
           echo "MY_GLOBAL_VAR: $MY_GLOBAL_VAR"  # access global variable in env
 
-          echo "MY_MSG=${{ github.event.inputs.message }}" >> $GITHUB_ENV # set env var accessible in subsequent steps, not in actual
-          echo "MY_JOB1=\"overridden MY_JOB1\"" >> $GITHUB_ENV # set env var accessible in subsequent steps, not in actual
+          # set MY_STEP1 for next steps in this job
+          echo MY_STEP1=\"job1 step1 initial MY_STEP1\" >> $GITHUB_ENV
+          # set MY_STEP1_LOCAL for this step only
+          MY_STEP1_LOCAL="job1 step1 initial MY_STEP1_LOCAL"
+          # change MY_JOB1 for next steps in this job
+          echo MY_JOB1=\"job1 step1 overridden MY_JOB1\" >> $GITHUB_ENV #
 
-          MY_MSG2="message 2"  # only accessible in this step
 
-          echo "---------------------------------"
-          echo "MY_MSG=$MY_MSG"   # access env variable set in this step
-          echo "MY_MSG2=$MY_MSG2" # access step variable
-          echo "MY_JOB1=$MY_JOB1"  # access job-level variable
+          echo "--------------------------------- job1 step1 4"
+          echo "MY_STEP1: $MY_STEP1"   # access env variable set in this step
+          echo "MY_STEP1_LOCAL: $MY_STEP1_LOCAL" # access step variable
+          echo "MY_JOB1: $MY_JOB1"  # access job-level variable
 
           # set output
-          echo "MY_JOB1_OUT=\"Job1 output\"" >> $GITHUB_OUTPUT
+          echo "MY_JOB1_OUT=\"job1 step1 MY_JOB1_OUT\"" >> $GITHUB_OUTPUT
 
-          echo "---------------------------------"
-          printenv | sort
+          echo "--------------------------------- job1 step1 end"
+          # printenv | sort
 
 
-      - name: Step2 name
+      - name: Step2
         id: step2
         run: |
 
-          echo "${{ toJSON(github.event.inputs) }}"
-          echo "---------------------------------"
-          echo "${{ toJSON(inputs) }}"
-          echo "---------------------------------"
-          env | sort
+          echo "--------------------------------- job1 step2 1"
+          echo "MY_STEP1: $MY_STEP1"   # visible due to >> $GITHUB_ENV in step1
+          echo "MY_STEP1_LOCAL: $MY_STEP1_LOCAL" # not visible, only in step1
+          echo "MY_JOB1: $MY_JOB1"  # visible due to >> $GITHUB_ENV in step1
+          echo "MY_GLOBAL_VAR: $MY_GLOBAL_VAR"  # visible due to job-level env override
+
+          echo "--------------------------------- job1 step2 2"
+          # visible due to >> $GITHUB_OUTPUT in step1
+          echo "steps.step1.outputs.MY_JOB1_OUT: ${{ steps.step1.outputs.MY_JOB1_OUT }}"
+
+          # env | sort
 
   job2:
     needs: job1
@@ -86,10 +99,28 @@ jobs:
         shell: bash
         run: |
 
-          echo "${{ toJSON(github.event.inputs) }}"
+          echo "--------------------------------- job2 step1 1"
+          echo "MY_STEP1: $MY_STEP1"   # not visible
+          echo "MY_STEP1_LOCAL: $MY_STEP1_LOCAL" # not visible
+          echo "MY_JOB1: $MY_JOB1"  # not visible
+          echo "MY_GLOBAL_VAR: $MY_GLOBAL_VAR"  # changes in job1 not visible here
+          echo "MY_JOB1: ${{ needs.job1.outputs.MY_JOB1 }}"  # not visible
+          echo "MY_JOB1_OUT: ${{ needs.job1.outputs.MY_JOB1_OUT }}"  # visible due to needs.job1.outputs
+
+
           echo "---------------------------------"
-          echo "${{ toJSON(inputs) }}"
+          echo "github.event.inputs: ${{ toJSON(github.event.inputs) }}"
           echo "---------------------------------"
-          echo "${{ toJSON(needs) }}"
+          echo "inputs: ${{ toJSON(inputs) }}"  # newer but not working in act
           echo "---------------------------------"
-          printenv | sort
+          echo "needs: ${{ toJSON(needs) }}"
+          echo "---------------------------------"
+          # printenv | sort
+
+  # job3:
+  #   needs: job1
+  #   name: job3 name
+  #   uses: ./.github/workflows/uv_on_test_reuse.yml # call reusable workflow
+  #   with:
+  #     msg: ${{ inputs.message }}  # pass input variable to reusable workflow
+  #   secrets: inherit  # inherit secrets from the parent workflow
