@@ -79,20 +79,22 @@ class Font(object):
       variants -- A dict of FontVariants, with keys in FontVariant.VARIANT_TYPES.
     """
 
-    def __init__(self, font_path):
+    def __init__(self, font_path, show_font_path_warning=True):
         self.path = font_path
         self.metadata = {}
         self.license = None
         self.variants = {}
 
-        self._load_metadata()
+        self._load_metadata(show_font_path_warning)
         self._load_license()
 
-    def _load_metadata(self):
+    def _load_metadata(self, show_font_path_warning=True):
         try:
             with open(os.path.join(self.path, "font.json"), encoding="utf-8-sig") as metadata_file:
                 self.metadata = json.load(metadata_file)
         except IOError:
+            if not show_font_path_warning:
+                return
             path = os.path.join(self.path, "font.json")
             msg = _("JSON file missing. Expected a JSON file at the following location:")
             msg += f"\n{path}\n\n"
@@ -100,6 +102,8 @@ class Font(object):
             msg += '\n\n'
             inkex.errormsg(msg)
         except json.decoder.JSONDecodeError as exception:
+            if not show_font_path_warning:
+                return
             path = os.path.join(self.path, "font.json")
             msg = _("Corrupt JSON file")
             msg += f" ({exception}):\n{path}\n\n"
