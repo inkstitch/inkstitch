@@ -79,7 +79,7 @@ class Font(object):
       variants -- A dict of FontVariants, with keys in FontVariant.VARIANT_TYPES.
     """
 
-    def __init__(self, font_path, show_font_path_warning):
+    def __init__(self, font_path, show_font_path_warning=True):
         self.path = font_path
         self.metadata = {}
         self.license = None
