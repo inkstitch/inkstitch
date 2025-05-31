@@ -4,22 +4,57 @@ name: UV On Test Reusable
 on:
   workflow_call:  # manual trigger of the workflow
     inputs:
-
       msg: # ref: inputs.break_on
         description:  'msg'
         required: true
         default: 'msg not set'    # default value
         type: string  # type of the input, can be string, boolean, or number
 
+    outputs:
+      MY_JOBR1_OUT:  # output variable, must be defined in the job
+        description: 'Output from jobr1'
+        value: ${{ jobs.jobr1.outputs.MY_JOBR1_OUT }}  # value of the output, must be defined in the job
+        # value: "hello"  # ok working
+
+
 jobs:
   jobr1:  # name of the job
     runs-on: ubuntu-22.04
+    outputs:
+      MY_JOBR1_OUT: ${{ steps.step1.outputs.MY_JOBR1_OUT }}  # output --> needs...
+
     steps:
 
-      - name: Jobr1
+      - name: step1
+        id: step1   # required id for outputs !!!
         shell: bash
         run: |
 
           echo "msg: ${{ inputs.msg }}"
-          echo "msg: ${{ github.event.inputs.msg }}"
+          echo "msg: ${{ github.event.inputs.message }}"
 
+          echo "--------------------------------- jobr1 step1 1"
+          echo "github.event.inputs: ${{ toJSON(github.event.inputs) }}"
+          echo "--------------------------------- jobr1 step1 2"
+          echo "inputs: ${{ toJSON(inputs) }}"
+          echo "--------------------------------- jobr1 step1 3"
+          echo "MY_GLOBAL_VAR: $MY_GLOBAL_VAR"  # not available
+          echo "--------------------------------- jobr1 step1 4"
+
+          # write output variable
+          echo MY_JOBR1_OUT=\"jobr1 step1 initial MY_JOBR1_OUT\" >> $GITHUB_OUTPUT
+          echo "--------------------------------- jobr1 step1 end"
+
+  jobr2:
+    needs: jobr1
+    runs-on: ubuntu-22.04
+    steps:
+      - name: step1
+        shell: bash
+        run: |
+
+          echo "--------------------------------- jobr2 step1 1"
+          echo "needs.jobr1.outputs.MY_JOBR1_OUT: ${{ needs.jobr1.outputs.MY_JOBR1_OUT}}"
+          echo "--------------------------------- jobr2 step1 2"
+          echo "needs: ${{ toJSON(needs) }}"
+          echo "--------------------------------- jobr2 step1 end"

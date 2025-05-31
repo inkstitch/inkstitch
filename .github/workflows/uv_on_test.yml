@@ -58,7 +58,9 @@ jobs:
           # set MY_STEP1_LOCAL for this step only
           MY_STEP1_LOCAL="job1 step1 initial MY_STEP1_LOCAL"
           # change MY_JOB1 for next steps in this job
-          echo MY_JOB1=\"job1 step1 overridden MY_JOB1\" >> $GITHUB_ENV #
+          echo MY_JOB1=\"job1 step1 overridden MY_JOB1\" >> $GITHUB_ENV
+          # change global variable for next steps in this job
+          echo MY_GLOBAL_VAR=\" *** job1 step1 overridden MY_GLOBAL_VAR ***\" >> $GITHUB_ENV
 
 
           echo "--------------------------------- job1 step1 4"
@@ -117,10 +119,34 @@ jobs:
           echo "---------------------------------"
           # printenv | sort
 
-  # job3:
-  #   needs: job1
-  #   name: job3 name
-  #   uses: ./.github/workflows/uv_on_test_reuse.yml # call reusable workflow
-  #   with:
-  #     msg: ${{ inputs.message }}  # pass input variable to reusable workflow
+  job3:
+    needs: [job1, job2] # not needed, just to be in sequence
+    name: job3 name
+    uses: ./.github/workflows/uv_on_test_reuse.yml # call reusable workflow
+    with:
+      msg: ${{ github.event.inputs.message }}  # pass input variable to reusable workflow
   #   secrets: inherit  # inherit secrets from the parent workflow
+
+  job4:
+    needs: job3
+    name: job4 name
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step1
+        id: step1
+        shell: bash
+        run: |
+
+          echo "--------------------------------- job4 step1 1"
+          echo "MY_STEP1: $MY_STEP1"   # not visible
+          echo "MY_STEP1_LOCAL: $MY_STEP1_LOCAL" # not visible
+          echo "MY_JOB1: $MY_JOB1"  # not visible
+          echo "MY_GLOBAL_VAR: $MY_GLOBAL_VAR"  # changes in job1 not visible here
+          echo "MY_JOB3_OUT: ${{ needs.job3.outputs.MY_JOBR1_OUT }}"  # visible due to needs.job3.outputs
+
+          echo "---------------------------------"
+          echo "github.event.inputs: ${{ toJSON(github.event.inputs) }}"
+          echo "---------------------------------"
+          echo "inputs: ${{ toJSON(inputs) }}"  # newer but not working in act
+          echo "---------------------------------"
+          echo "needs: ${{ toJSON(needs) }}"
