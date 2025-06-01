@@ -115,7 +115,7 @@ class LetteringPanel(wx.Panel):
     @property
     @cache
     def font_list(self):
-        return get_font_list()
+        return get_font_list(False)
 
     def update_font_list(self):
         self.fonts = {}
