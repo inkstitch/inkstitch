@@ -96,6 +96,7 @@ class SatinSegment(object):
 
         stroke_width = convert_stroke_width(self.original_satin)
         satin.node.style['stroke-width'] = stroke_width
+        satin.node.style['fill'] = 'none'
 
         satin = satin.apply_transform()
 
