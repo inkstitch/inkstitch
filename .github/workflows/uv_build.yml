@@ -77,6 +77,34 @@ on:
 # working example: ----------------------------------------------------------
 jobs:
 
+  # just info print
+  # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#context-availability
+  dump_contexts_to_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump environment variables
+        run: printenv | sort    # or just `env` to print all environment variables
+
+      - name: Dump GitHub context (github...)
+        run: echo "${{ toJson(github) }}"
+
+      - name: Dump job context (job...)
+        run: echo "${{ toJson(job) }}"
+
+      - name: Dump steps context (steps...)
+        run: echo "${{ toJson(steps) }}"
+
+      - name: Dump runner context (runner...)
+        run: echo "${{ toJson(runner) }}"
+
+      - name: Dump strategy context (strategy...)
+        run: echo "${{ toJson(strategy) }}"
+
+      - name: Dump matrix context
+        run: echo "${{ toJson(matrix) }}"
+
+
+
   # Prepare data
   # - MY_BUILD_TYPE: type of build
   # - MY_BREAK_ON: define break stop
@@ -112,9 +140,9 @@ jobs:
 
           echo "-------------------------------------------------"
 
-          # this is just for testing, not needed in real workflow
+          # this is just for testing, not needed in real workflow on github (with enough rights)
           echo "Testing secrets:"
-          echo secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
+          echo secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }} # print *** if available
 
           echo "-------------------------------------------------"
           # inputs
@@ -162,7 +190,6 @@ jobs:
           fi
 
 
-
           echo "------------------------------------------------- echoing variables"
           echo "MY_BUILD_TYPE=${MY_BUILD_TYPE}"
           echo "MY_BREAK_ON=${MY_BREAK_ON}"
@@ -182,94 +209,7 @@ jobs:
           echo "MY_NAME=${MY_NAME}" >> $GITHUB_OUTPUT
 
           echo "------------------------------------------------- dump GITHUB_* part of env"
-          env | sort | grep GITHUB_
-
-
-  # just info print
-  # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#context-availability
-  dump_contexts_to_log:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Dump environment variables
-        run: printenv | sort    # or just `env` to print all environment variables
-
-      - name: Dump GitHub context (github...)
-        run: echo "${{ toJson(github) }}"
-
-      - name: Dump job context (job...)
-        run: echo "${{ toJson(job) }}"
-
-
-      - name: Dump steps context (steps...)
-        run: echo "${{ toJson(steps) }}"
-
-      - name: Dump runner context (runner...)
-        run: echo "${{ toJson(runner) }}"
-
-      - name: Dump strategy context (strategy...)
-        run: echo "${{ toJson(strategy) }}"
-
-      - name: Dump matrix context
-        run: echo "${{ toJson(matrix) }}"
-
-
-
-  # ---------------------------------------------------------------------------
-  # prepare_build:
-  #   needs: sign_policy
-  #   runs-on: ubuntu-latest
-  #   outputs:
-  #     # Define outputs that will be available for other jobs
-  #     #  - we cannot globbaly overwrite environment variables, so we use outputs
-  #     #    ref: needs.prepare_build.outputs.MY_BUILD_TYPE
-  #     build_type: ${{ steps.set_vars.outputs.MY_BUILD_TYPE }}
-  #     sign_artifacts: ${{ steps.set_vars.outputs.sign_artifacts }}
-  #     break_on: ${{ steps.set_vars.outputs.break_on }}
-  #   steps:
-  #     - name: Set default build variables for Push event
-  #       id: set_vars # Important for referencing the outputs of this step
-  #       run: |
-
-  #         # Info
-  #         echo "Input Variables (github.event.inputs):"
-  #         echo "  Build Type: ${{ github.event.inputs.build_type }}"
-  #         echo "  Sign Artifacts: ${{ github.event.inputs.sign_artifacts }}"
-  #         echo "  Break On: ${{ github.event.inputs.break_on }}"
-
-
-  #         # Check if the event is a workflow_dispatch (manual trigger) or push
-  #         if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-  #             # If so, use the values from the inputs
-  #           MY_BUILD_TYPE="${{ github.event.inputs.build_type }}"
-  #           MY_BREAK_ON="${{ github.event.inputs.break_on }}"
-  #           MY_SIGN_ARTIFACTS="${{ github.event.inputs.sign_artifacts }}"
-
-  #         else
-
-  #           # If not (i.e. it's a push or other event), use the defaults
-  #           MY_BUILD_TYPE="linux64"   # all
-  #           MY_BREAK_ON="uv"          # no
-
-  #           # only set if tag is v*.*.*
-  #           if [[ "${{ github.event_name }}" == "push" &&
-  #                 startsWith(github.ref, 'refs/tags/v') ]]; then
-  #             # If the event is a push to a tag starting with 'v', set sign_artifacts to 'yes'
-  #             MY_SIGN_ARTIFACTS="yes"   # yes
-  #           else
-  #             # Otherwise, set sign_artifacts to 'no'
-  #             MY_SIGN_ARTIFACTS="no"    # no
-  #           fi
-
-  #         fi
-
-  #         echo "My Build Type: $MY_BUILD_TYPE"
-  #         echo "My Stop Value: $MY_BREAK_ON"
-  #         echo "My Sign Artifacts: $MY_SIGN_ARTIFACTS"
-
-  #         # Set the outputs for this step
-  #         echo "build_type=${MY_BUILD_TYPE}" >> "$GITHUB_OUTPUT"
-  #         echo "break_on=${MY_BREAK_ON}" >> "$GITHUB_OUTPUT"
-  #         echo "sign_artifacts=${MY_SIGN_ARTIFACTS}" >> "$GITHUB_OUTPUT"
+          env | grep GITHUB_ | sort
 
 
   # !!! reusable must be on job level & .yml must be on top level of .github/workflows/
