@@ -12,18 +12,21 @@ on:
         default: 'no'    # default value
         type: string  # type of the input, can be string, boolean, or number
 
-      sign_artifacts: # ref: inputs.sign_artifacts
-        description: 'Digitally sign the generated build artifacts (requires signing credentials).'
+      self_signed:
+        description: 'Sign on the fly for true'
         required: true
-        default: 'no'  # default value
+        default: true
         type: string
 
 
 # Jobs are steps that run on the same runner
 jobs:
   linux-arm64: # name of the job
-    # define the OS of the runner
+    env:
+      MY_BREAK_ON: ${{ github.event.inputs.break_on }}
+      MY_SELF_SIGNED: ${{ github.event.inputs.self_signed }}
 
+    # define the OS of the runner
     runs-on: ubuntu-22.04-arm
 
     # steps are a sequence of commands that will be executed
