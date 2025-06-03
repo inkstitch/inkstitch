@@ -248,7 +248,7 @@ jobs:
           name: inkstitch-linux32
           path: artifacts
   windows64:
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
         with:
