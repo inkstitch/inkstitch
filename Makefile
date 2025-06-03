@@ -55,12 +55,17 @@ help:
 	@echo "  distclean      - clean up build artifacts"
 	@echo "  distlocal      - build local distribution archives for current OS"
 
-# Build Pythonu - requires BUILD variable
+# Build Python - requires BUILD variable, calls PyInstaller, put all stuff into dist/inkstitch/bin
 build-python: version locales inx
 	bash bin/build-python
 
+
 # Build archives  - requires BUILD variable
 dist: build-python
+	bash bin/build-distribution-archives
+
+# just for testing, build archives for current OS, without build-python
+dist-debug:
 	bash bin/build-distribution-archives
 
 distclean:
