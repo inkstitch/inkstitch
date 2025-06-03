@@ -94,10 +94,12 @@ jobs:
           type python  # check python version
           # python --version
 
-          make dist
+          echo "secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}"
 
-          # see artifacts contents
-          echo "artifacts directory:"
+          # make dist
+
+          # see artifacts directory contents
+          echo "-------------------------------------- artifacts directory:"
           ls -lR artifacts
 
         env:
