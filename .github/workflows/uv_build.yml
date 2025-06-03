@@ -4,13 +4,32 @@
 
 name: UV Build
 
-# when the workflow should run
+# Inputs (some selected):
+#   GITHUB_EVENT_NAME - the name of the event that triggered the workflow (e.g., push, pull_request, workflow_dispatch, etc.)
+#   GITHUB_REF_TYPE - the type of ref that triggered the workflow (e.g., branch, tag)
+#   GITHUB_REF - what triggered the workflow (e.g., refs/heads/branch_name, refs/tags/v1.0.0, refs/)
+#   GITHUB_REF_NAME - the name of the branch or tag that triggered the workflow (e.g., branch_name, v1.0.0)
+#   GITHUB_SHA - the commit SHA that triggered the workflow
+#   GITHUB_WORKSPACE - the path to the repository on the runner . top level directory of the repository
+
+# on:
+#   GITHUB_EVENT_NAME
+#     GITHUB_REF_TYPE
+
+# !!! important:
+#   - A single tag can point to multiple branches, so there isn't a single matching branch for a tag.
+#   - deafult branch for workflow_dispatch is the default branch of the repository, which is usually 'main' or 'master'.
+#     - may be set gh workflow run -r <branch> <workflow_file>
+#   - variables ${{ xxx }} are parsed by YAML parser, before shell can see it ( eg ${{ $xxx }} is not what you expect).
+
 on:
   push: # at least ones must be triggered by a push to be available for manual trigger
-    tags:
-      - 'build*'  # unsigned build
-      - 'v*.*.*'  # signed build
-    # branches:
+
+    tags:         # EVENT_NAME=push              REF_TYPE=tag      REF=refs/tags/build*        REF_NAME=tag_name
+      - build*    # build[optional characters]
+      - v[0-9]+.[0-9]+.[0-9]+*  # v[digits].[digits].[digits][optional characters]
+
+    # branches:   # EVENT_NAME=push              REF_TYPE=branch   REF=refs/heads/branch_name  REF_NAME=branch_name
     #   - missing/*  # branch pattern **= any number of characters and /, * = any number of characters not including /
 
   workflow_dispatch:  # manual trigger of the workflow
@@ -44,15 +63,6 @@ on:
 
           - all
 
-      sign_artifacts: # ref: github.event.inputs.sign_artifacts | inputs.sign_artifacts
-        description: 'Digitally sign the generated build artifacts (requires signing credentials).'
-        required: true
-        default: 'no'  # default value
-        type: choice
-        options:
-          - 'yes' # Sign all generated artifacts
-          - 'no'  # Skip digital signing
-
 
       break_on:     # ref: github.event.inputs.break_on | inputs.break_on
         description: 'Stop the build immediately at a predefined location.'
@@ -66,137 +76,237 @@ on:
 
 # working example: ----------------------------------------------------------
 jobs:
-  # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#context-availability
-  dump_contexts_to_log:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Dump environment variables
-          run: printenv    # or just `env` to print all environment variables
 
-        - name: Dump GitHub context (github...)
-          env:
-            GITHUB_CONTEXT: ${{ toJson(github) }}   # set the environment variable GITHUB_CONTEXT to the JSON representation of the github context
-          run: echo "$GITHUB_CONTEXT"
+  # Prepare data
+  # - MY_BUILD_TYPE: type of build
+  # - MY_BREAK_ON: define break stop
 
-        - name: Dump job context (job...)
-          env:
-            JOB_CONTEXT: ${{ toJson(job) }}
-          run: echo "$JOB_CONTEXT"
+  # - MY_SELF_SIGNED: false/true - if we have access to secrets, or we use on the fly signed keys
+  # - MY_TAG_NAME: tag name for the release, or dev-build-branch_name for pre-release
+  # - MY_PRERELEASE: false/true - if this is a release or pre-release
+  # - MY_NAME: name of the release
 
-        - name: Dump steps context (steps...)
-          env:
-            STEPS_CONTEXT: ${{ toJson(steps) }}
-          run: echo "$STEPS_CONTEXT"
-
-        - name: Dump runner context (runner...)
-          env:
-            RUNNER_CONTEXT: ${{ toJson(runner) }}
-          run: echo "$RUNNER_CONTEXT"
-
-        - name: Dump strategy context (strategy...)
-          env:
-            STRATEGY_CONTEXT: ${{ toJson(strategy) }}
-          run: echo "$STRATEGY_CONTEXT"
-
-        - name: Dump matrix context
-          env:
-            MATRIX_CONTEXT: ${{ toJson(matrix) }}
-          run: echo "$MATRIX_CONTEXT"
-
-
-# ---------------------------------------------------------------------------
-  prepare_build:
+  sign_policy:
     runs-on: ubuntu-latest
     outputs:
-      # Define outputs that will be available for other jobs
-      #  - we cannot globbaly overwrite environment variables, so we use outputs
-      #    ref: needs.prepare_build.outputs.build_type
-      build_type: ${{ steps.set_vars.outputs.build_type }}
-      sign_artifacts: ${{ steps.set_vars.outputs.sign_artifacts }}
-      break_on: ${{ steps.set_vars.outputs.break_on }}
+      MY_BUILD_TYPE: ${{ steps.set_vars.outputs.MY_BUILD_TYPE }}
+      MY_BREAK_ON: ${{ steps.set_vars.outputs.MY_BREAK_ON }}
+
+      MY_SELF_SIGNED: ${{ steps.set_vars.outputs.MY_SELF_SIGNED }}
+      MY_TAG_NAME: ${{ steps.set_vars.outputs.MY_TAG_NAME }}
+      MY_PRERELEASE: ${{ steps.set_vars.outputs.MY_PRERELEASE }}
+      MY_NAME: ${{ steps.set_vars.outputs.MY_NAME }}
+    # if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
     steps:
-      - name: Set default build variables for Push event
-        id: set_vars # Important for referencing the outputs of this step
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set sign policy variables
+        id: set_vars
+        shell: bash
         run: |
 
-          # Info
-          echo "Input Variables (github.event.inputs):"
-          echo "  Build Type: ${{ github.event.inputs.build_type }}"
-          echo "  Sign Artifacts: ${{ github.event.inputs.sign_artifacts }}"
-          echo "  Break On: ${{ github.event.inputs.break_on }}"
+          echo "-------------------------------------------------"
+          echo "Set signing policy variables ..."
+          echo secrets.GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # print ***, always set
 
+          echo "-------------------------------------------------"
 
-          # Check if the event is a workflow_dispatch (manual trigger) or push
+          # this is just for testing, not needed in real workflow
+          echo "Testing secrets:"
+          echo secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
+
+          echo "-------------------------------------------------"
+          # inputs
+          echo "Inputs:"
+          echo "${{ toJSON(github.event.inputs) }}"
+
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
               # If so, use the values from the inputs
             MY_BUILD_TYPE="${{ github.event.inputs.build_type }}"
             MY_BREAK_ON="${{ github.event.inputs.break_on }}"
-            MY_SIGN_ARTIFACTS="${{ github.event.inputs.sign_artifacts }}"
-
           else
-
             # If not (i.e. it's a push or other event), use the defaults
             MY_BUILD_TYPE="linux64"   # all
             MY_BREAK_ON="uv"          # no
-
-            # only set if tag is v*.*.*
-            if [[ "${{ github.event_name }}" == "push" &&
-                  startsWith(github.ref, 'refs/tags/v') ]]; then
-              # If the event is a push to a tag starting with 'v', set sign_artifacts to 'yes'
-              MY_SIGN_ARTIFACTS="yes"   # yes
-            else
-              # Otherwise, set sign_artifacts to 'no'
-              MY_SIGN_ARTIFACTS="no"    # no
-            fi
-
           fi
 
-          echo "My Build Type: $MY_BUILD_TYPE"
-          echo "My Stop Value: $MY_BREAK_ON"
-          echo "My Sign Artifacts: $MY_SIGN_ARTIFACTS"
+          echo "-------------------------------------------------"
+          # Check if secrets are available
+          if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" ]]; then
+            MY_SELF_SIGNED=false      # we have access to secrets, assume all signing keys are available
+          else
+            MY_SELF_SIGNED=true       # we use on the fly signed keys
+          fi
 
-          # Set the outputs for this step
-          echo "build_type=${MY_BUILD_TYPE}" >> "$GITHUB_OUTPUT"
-          echo "break_on=${MY_BREAK_ON}" >> "$GITHUB_OUTPUT"
-          echo "sign_artifacts=${MY_SIGN_ARTIFACTS}" >> "$GITHUB_OUTPUT"
+          echo "-------------------------------------------------"
+
+          # *** release requires tag name
+          # if push tag vX.X.X - release sign-policy,
+          if [[ "${GITHUB_EVENT_NAME}" == "push" && \
+                "${GITHUB_REF_TYPE}" == "tag" && \
+                "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
+            MY_TAG_NAME="${GITHUB_REF_NAME}"
+            MY_PRERELEASE=false  # we are creating a release
+            MY_NAME="${MY_TAG_NAME}"
+          else
+            MY_TAG_NAME="dev-build-$(echo $GITHUB_REF_NAME | tr / -)"  # use branch/tag name as tag, replace / with -
+            MY_PRERELEASE=true   # we are creating a pre-release
+            MY_NAME="${MY_TAG_NAME}"
+          fi
+
+          # For Release (MY_PRERELEASE==false) we need access to secrets, if not (MY_SELF_SIGNED==true) exit with error
+          if [[ "${MY_PRERELEASE}" == "false" && "${MY_SELF_SIGNED}" == "true" ]]; then
+            echo "Error: Cannot create a release without access to secrets."
+            exit 1
+          fi
 
 
+
+          echo "------------------------------------------------- echoing variables"
+          echo "MY_BUILD_TYPE=${MY_BUILD_TYPE}"
+          echo "MY_BREAK_ON=${MY_BREAK_ON}"
+
+          echo "MY_SELF_SIGNED=${MY_SELF_SIGNED}"
+          echo "MY_TAG_NAME=${MY_TAG_NAME}"
+          echo "MY_PRERELEASE=${MY_PRERELEASE}"
+          echo "MY_NAME=${MY_NAME}"
+
+          echo "------------------------------------------------- Exporting variables to GITHUB_OUTPUT"
+          echo "MY_BUILD_TYPE=${MY_BUILD_TYPE}" >> $GITHUB_OUTPUT
+          echo "MY_BREAK_ON=${MY_BREAK_ON}" >> $GITHUB_OUTPUT
+
+          echo "MY_SELF_SIGNED=${MY_SELF_SIGNED}" >> $GITHUB_OUTPUT
+          echo "MY_TAG_NAME=${MY_TAG_NAME}" >> $GITHUB_OUTPUT
+          echo "MY_PRERELEASE=${MY_PRERELEASE}" >> $GITHUB_OUTPUT
+          echo "MY_NAME=${MY_NAME}" >> $GITHUB_OUTPUT
+
+          echo "------------------------------------------------- dump GITHUB_* part of env"
+          env | sort | grep GITHUB_
+
+
+  # just info print
+  # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#context-availability
+  dump_contexts_to_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump environment variables
+        run: printenv | sort    # or just `env` to print all environment variables
+
+      - name: Dump GitHub context (github...)
+        run: echo "${{ toJson(github) }}"
+
+      - name: Dump job context (job...)
+        run: echo "${{ toJson(job) }}"
+
+
+      - name: Dump steps context (steps...)
+        run: echo "${{ toJson(steps) }}"
+
+      - name: Dump runner context (runner...)
+        run: echo "${{ toJson(runner) }}"
+
+      - name: Dump strategy context (strategy...)
+        run: echo "${{ toJson(strategy) }}"
+
+      - name: Dump matrix context
+        run: echo "${{ toJson(matrix) }}"
+
+
+
+  # ---------------------------------------------------------------------------
+  # prepare_build:
+  #   needs: sign_policy
+  #   runs-on: ubuntu-latest
+  #   outputs:
+  #     # Define outputs that will be available for other jobs
+  #     #  - we cannot globbaly overwrite environment variables, so we use outputs
+  #     #    ref: needs.prepare_build.outputs.MY_BUILD_TYPE
+  #     build_type: ${{ steps.set_vars.outputs.MY_BUILD_TYPE }}
+  #     sign_artifacts: ${{ steps.set_vars.outputs.sign_artifacts }}
+  #     break_on: ${{ steps.set_vars.outputs.break_on }}
+  #   steps:
+  #     - name: Set default build variables for Push event
+  #       id: set_vars # Important for referencing the outputs of this step
+  #       run: |
+
+  #         # Info
+  #         echo "Input Variables (github.event.inputs):"
+  #         echo "  Build Type: ${{ github.event.inputs.build_type }}"
+  #         echo "  Sign Artifacts: ${{ github.event.inputs.sign_artifacts }}"
+  #         echo "  Break On: ${{ github.event.inputs.break_on }}"
+
+
+  #         # Check if the event is a workflow_dispatch (manual trigger) or push
+  #         if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+  #             # If so, use the values from the inputs
+  #           MY_BUILD_TYPE="${{ github.event.inputs.build_type }}"
+  #           MY_BREAK_ON="${{ github.event.inputs.break_on }}"
+  #           MY_SIGN_ARTIFACTS="${{ github.event.inputs.sign_artifacts }}"
+
+  #         else
+
+  #           # If not (i.e. it's a push or other event), use the defaults
+  #           MY_BUILD_TYPE="linux64"   # all
+  #           MY_BREAK_ON="uv"          # no
+
+  #           # only set if tag is v*.*.*
+  #           if [[ "${{ github.event_name }}" == "push" &&
+  #                 startsWith(github.ref, 'refs/tags/v') ]]; then
+  #             # If the event is a push to a tag starting with 'v', set sign_artifacts to 'yes'
+  #             MY_SIGN_ARTIFACTS="yes"   # yes
+  #           else
+  #             # Otherwise, set sign_artifacts to 'no'
+  #             MY_SIGN_ARTIFACTS="no"    # no
+  #           fi
+
+  #         fi
+
+  #         echo "My Build Type: $MY_BUILD_TYPE"
+  #         echo "My Stop Value: $MY_BREAK_ON"
+  #         echo "My Sign Artifacts: $MY_SIGN_ARTIFACTS"
+
+  #         # Set the outputs for this step
+  #         echo "build_type=${MY_BUILD_TYPE}" >> "$GITHUB_OUTPUT"
+  #         echo "break_on=${MY_BREAK_ON}" >> "$GITHUB_OUTPUT"
+  #         echo "sign_artifacts=${MY_SIGN_ARTIFACTS}" >> "$GITHUB_OUTPUT"
+
+
+  # !!! reusable must be on job level & .yml must be on top level of .github/workflows/
   call_linux64_build:
-    needs: prepare_build # this job depends on the prepare_build job
+    needs: sign_policy # this job depends on the sign_policy job
     if: >
-      needs.prepare_build.outputs.build_type == 'linux64' ||
-      needs.prepare_build.outputs.build_type == 'all'
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'linux64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
     name: Build Linux64
-    # - uses with reusable must be on job level, not on step level
-    # - .yml must be on top level of .github/workflows/
     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
     with:
-      build_type: ${{ needs.prepare_build.outputs.build_type }} # set input variable for the reusable workflow
-      sign_artifacts: ${{ needs.prepare_build.outputs.sign_artifacts }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
 
 
   call_linux_arm64_build:
-    needs: prepare_build # this job depends on the prepare_build job
+    needs: sign_policy # this job depends on the sign_policy job
     if: >
-      needs.prepare_build.outputs.build_type == 'linux-arm64' ||
-      needs.prepare_build.outputs.build_type == 'all'
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'linux-arm64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
     name: Build Linux-arm64
     uses: ./.github/workflows/uv_build_linux-arm64.yml # call reusable workflow
     with:
-      break_on: ${{ needs.prepare_build.outputs.break_on }} # set input variable for the reusable workflow
-      sign_artifacts: ${{ needs.prepare_build.outputs.sign_artifacts }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
 
 
   call_windows64_build:
-    needs: prepare_build # this job depends on the prepare_build job
+    needs: sign_policy # this job depends on the sign_policy job
     if: >
-      needs.prepare_build.outputs.build_type == 'windows64' ||
-      needs.prepare_build.outputs.build_type == 'all'
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'windows64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
     name: Build Windows64
     uses: ./.github/workflows/uv_build_windows64.yml # call reusable workflow
     with:
-      break_on: ${{ needs.prepare_build.outputs.break_on }} # set input variable for the reusable workflow
-      sign_artifacts: ${{ needs.prepare_build.outputs.sign_artifacts }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
 
 
 #----------------------------------------------------
