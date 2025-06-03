@@ -1,7 +1,18 @@
 #!/bin/bash
 
+# - assumes that the script is run from the root of the repository
+# - assumes that the script is run with the:
+#   - BUILD variable set to the target OS (osx, linux, linux32, windows)
+#   - GITHUB_REF variable set to the current branch or tag
+#   - VERSION variable set to the current version (optional, defaults to branch name)
+#   - INKSTITCH_GPG_KEY variable set to the GPG key (optional, defaults to generating a new key)
+#   - NOTARY_ACCOUNT and NOTARY_PASSWORD variables set for macOS notarization (optional, defaults to not notarizing)
+#   - fpm and rpmsign tools installed for Linux builds
+#   - pyinstaller tool installed for building Python applications
+#   - jq tool installed for parsing JSON
+
 set -e
-# set -x
+set -x
 
 if [[ -z "$BUILD" ]]; then
   echo "Error: BUILD variable is not set."
@@ -11,19 +22,34 @@ fi
 INITIAL_SET_E_STATUS=0
 case "$-" in *e*) INITIAL_SET_E_STATUS=1 ;; esac  # check if -e is set and save the status
 
+# check output directory
+if [[ ! -d "artifacts" ]]; then
+    mkdir -p artifacts
+fi
 
+# TODO: use REF_NAME instead of GITHUB_REF
 VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
-OS="${BUILD:-$(uname)}"  # uname returns the OS name, e.g. Linux, Darwin, etc. !!! Linux !- linux lowercase
+# if VERSION is not set, use the current branch name (what if detached HEAD?)
+if [[ -z "$VERSION" ]]; then
+    echo "Error: VERSION variable is not set."
+    VERSION="$(git rev-parse --abbrev-ref HEAD | tr / - | tr '[:upper:]' '[:lower:]')"
+fi
+# uname returns the OS name, e.g. Linux, Darwin, etc. - that require lowercase
+OS=$(echo ${BUILDX:-$(uname)} | tr '[:upper:]' '[:lower:]')
 ARCH="$(uname -m)"
 
+echo "Building for OS: $OS, Architecture: $ARCH, Version: $VERSION"
+
+# ----------------------------------------------------------------
 ### *** GPG KEY SETUP ***
 
-# Listing GPG keys:
+# Usage of GPG keys, simple  examples:
+#   Listing GPG keys:
 #     gpg --list-keys          or   gpg -k
 #     gpg --list-secret-keys   or   gpg -K
-# Removing keys:
-#   gpg --delete-key           or   gpg --delete-secret-key
-#   just simply delete directory ~/.gnupg - this will remove all keys, make backup first
+#   Removing keys:
+#     gpg --delete-key           or   gpg --delete-secret-key
+#     just simply delete directory ~/.gnupg - this will remove all keys, make backup first
 
 # Set the GPG key name for RPM packages
 # Guaranteed invalid email address for temporary key @invalid.com
@@ -104,7 +130,9 @@ function retrieve_gpg_key_id() {
     fi
 }
 
+### *** END GPG KEY SETUP ***
 
+### --------------------------------------------------------------
 ### Start of the script
 
 if [ "$BUILD" = "osx" ]; then
@@ -245,6 +273,24 @@ EOF
 
     echo "Creating deb"
     deb_version="$(sed -E 's/[^a-zA-Z0-9.+]/./g' <<< "$VERSION")"
+
+    # TODO: fpm is slow, consider using cmake to create deb and rpm packages
+
+    # create deb package in ROOT of the repository
+    # -s dir - source type is directory
+    # -t deb - target type is debian package
+    # -n inkstitch - package name
+    # -v "$deb_version" - package version
+    # -d "inkscape >= 1.0.0" - package dependency
+    # --deb-compression xz - use xz compression for deb package
+    # --license "GPL-3.0" - license for the package
+    # --description "An open-source machine embroidery design platform based on Inkscape" - package description
+    # --url "https://inkstitch.org" - package URL
+    # --maintainer "maintainer@inkstitch.org" - package maintainer
+    # --after-install bin/after-install - script to run after installation
+    # --before-remove bin/before-remove - script to run before removal
+    # --verbose - verbose output
+    # dist/inkstitch=/opt - copy dist/inkstitch directory to /opt in the package
     fpm -s dir \
         -t deb \
         -n inkstitch \
@@ -261,6 +307,8 @@ EOF
         dist/inkstitch=/opt
 
     echo "Creating rpm"
+    # create rpm package in ROOT of the repository
+    # -t rpm - target type is rpm package
     fpm -s dir \
         -t rpm \
         -n inkstitch \
@@ -277,10 +325,19 @@ EOF
         --verbose \
         dist/inkstitch=/opt
 
+    # Sign the rpm packages (in place?)
     rpmsign --addsign inkstitch*.rpm
+
+    # Move the deb and rpm packages from ROOT to artifacts directory
     mv inkstitch*.deb inkstitch*.rpm artifacts/
 
-    # set file name for each cpu arch
+    # Create the tar.xz archive for Linux and Linux32 builds from
+    # tar - create an archive from dist/inkstitch directory and save it to artifacts
+    #   -C dist  - change to dist directory, output is relative to this dir
+    # cat - create self-extracting script for Linux
+    #   - $(dirname "$0") - search for the linux-sh-installer script in the same directory as this script
+
+    # TODO: use linux_arch instead of hardcoding i386 for linux32 builds
     if [[ "$BUILD" = "linux32" ]]; then
         tar -C dist -Jcf artifacts/inkstitch-${VERSION}-${OS}-i386.tar.xz inkstitch
         cat "$(dirname "$0")/linux-sh-installer" artifacts/inkstitch-${VERSION}-${OS}-i386.tar.xz > artifacts/inkstitch-${VERSION}-${OS}-i386.sh
