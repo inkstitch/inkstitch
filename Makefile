@@ -14,14 +14,14 @@
 # := immediate assignment; = lazy assignment
 
 OS := $(shell uname)
-OS_LOWER := $(shell echo $(OS) | tr '[:upper:]' '[:lower:]')
+# lowercase the OS name, required for comparison
+OS := $(shell echo $(OS) | tr '[:upper:]' '[:lower:]')
 
-# if BUILD variable is not set, then set it based on OS_LOWER
-# @case ${OS} in "Darwin")  export BUILD=osx ;; "Linux") export BUILD=linux ;; *) export BUILD=windows ;; esac;
+# if BUILD variable is not set, then set it based on OS
 ifndef BUILD
-	ifeq ($(OS_LOWER),darwin)
+	ifeq ($(OS),darwin)
 		BUILD := osx
-	else ifeq ($(OS_LOWER),linux)
+	else ifeq ($(OS),linux)
 		BUILD := linux
 	else
 		BUILD := windows
@@ -34,7 +34,7 @@ export BUILD
 .PHONY: default
 default: help
 	@echo ${SHELL}
-	@echo "Operating System: OS: ${OS} -> lc: ${OS_LOWER}"
+	@echo "Operating System: OS: ${OS}"
 	@echo "BUILD: ${BUILD}"
 
 
@@ -52,6 +52,7 @@ help:
 	@echo "  messages.po    - generate messages.po from inx files and babel"
 	@echo "  build-python   - build Pythonu (requires BUILD variable)"
 	@echo "  dist           - build distribution archives (requires BUILD variable)"
+	@echo "  dist-debug     - build distribution archives for current OS without build-python"
 	@echo "  distclean      - clean up build artifacts"
 	@echo "  distlocal      - build local distribution archives for current OS"
 
