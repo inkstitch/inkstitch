@@ -211,9 +211,10 @@ jobs:
           echo "------------------------------------------------- dump GITHUB_* part of env"
           env | grep GITHUB_ | sort
 
+  # -----------------------------------------------------
 
   # !!! reusable must be on job level & .yml must be on top level of .github/workflows/
-  call_linux64_build:
+  linux64_build:
     needs: sign_policy # this job depends on the sign_policy job
     if: >
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'linux64' ||
@@ -227,7 +228,7 @@ jobs:
       INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
 
 
-  call_linux_arm64_build:
+  linux_arm64_build:
     needs: sign_policy # this job depends on the sign_policy job
     if: >
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'linux-arm64' ||
@@ -239,7 +240,7 @@ jobs:
       self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
 
 
-  call_windows64_build:
+  windows64_build:
     needs: sign_policy # this job depends on the sign_policy job
     if: >
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'windows64' ||
@@ -251,4 +252,29 @@ jobs:
       self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
 
 
-#----------------------------------------------------
+  #----------------------------------------------------
+
+
+  release:
+    runs-on: ubuntu-latest
+    needs:  # wait for all builds to finish
+      - linux64_build
+      - linux_arm64_build
+      - windows64_build
+    if: always() # run this job always, even if previous jobs failed on exit 1
+
+    steps:
+      # get files from artifacts
+      # - name: Download artifacts from build job
+      #   uses: actions/download-artifact@v4    # https://github.com/actions/download-artifact
+      #   with:
+      #   #   name: .. # default is all artifacts
+      #     path: artifacts  # download to artifacts directory
+
+
+      - name: List files in artifacts directory
+        shell: bash
+        run: |
+
+          echo "Listing files in artifacts directory:"
+          ls -lR artifacts
