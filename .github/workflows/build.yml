@@ -7,7 +7,7 @@ on:
   #     - kgn/*
     tags:
     #   - "v*.*.*"
-       - "old-build*"   # run on tags starting with "old-build"
+       - "old-build*"   # run on tags starting with "old-build", v* is ignored
 
 jobs:
   linux64:
