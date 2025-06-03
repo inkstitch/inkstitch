@@ -261,20 +261,53 @@ jobs:
       - linux64_build
       - linux_arm64_build
       - windows64_build
-    if: always() # run this job always, even if previous jobs failed on exit 1
 
+    env:
+      MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}
+      MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}
+      MY_PRERELEASE: ${{ needs.sign_policy.outputs.MY_PRERELEASE }}
+      MY_SELF_SIGNED: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+
+    if: always() # run this job always, even if previous jobs failed on exit 1
     steps:
-      # get files from artifacts
-      # - name: Download artifacts from build job
-      #   uses: actions/download-artifact@v4    # https://github.com/actions/download-artifact
-      #   with:
-      #   #   name: .. # default is all artifacts
-      #     path: artifacts  # download to artifacts directory
+      # we start with empty directory,
+      - name: Download artifacts from build job
+        uses: actions/download-artifact@v4    # https://github.com/actions/download-artifact
+        with:
+        #   name: .. # default is all artifacts
+          path: artifacts  # download to artifacts directory
 
 
       - name: List files in artifacts directory
         shell: bash
         run: |
 
+          echo "-------------------------------------------------"
           echo "Listing files in artifacts directory:"
           ls -lR artifacts
+
+      - name: List wholle git root
+        shell: bash
+        run: |
+          echo "-------------------------------------------------"
+          echo "Listing whole git root:"
+          ls -lR .
+          echo "Current directory: $(pwd)"
+
+
+      - name: Create release
+        id: create_release
+        uses: softprops/action-gh-release@v1  # https://github.com/softprops/action-gh-release
+        with:
+          # token: ${{ secrets.GITHUB_TOKEN }}  # always set, used to create release
+          tag_name: ${{ env.MY_TAG_NAME }}
+          name: ${{ env.MY_NAME }}
+          prerelease: ${{ env.MY_PRERELEASE }}
+          draft: false
+          body: |
+            This is a release for ${{ env.MY_NAME }}.
+            - Self-signed: ${{ env.MY_SELF_SIGNED }}
+            - Tag name: ${{ env.MY_TAG_NAME }}
+            - Pre-release: ${{ env.MY_PRERELEASE }}
+          files: |
+            artifacts/**/*
