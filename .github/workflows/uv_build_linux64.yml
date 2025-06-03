@@ -99,9 +99,8 @@ jobs:
           type python  # check python version
           # python --version
 
-          echo "secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}"
-
-          # make dist
+          echo "secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}" # *** if available
+          make dist
 
           # see artifacts directory contents
           echo "-------------------------------------- artifacts directory:"
@@ -109,7 +108,7 @@ jobs:
 
         env:
           BUILD: linux
-          # secrets are available only in github
+          # load secrets for bash script
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
 
       # save the build artifacts for later use by other jobs
