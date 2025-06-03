@@ -63,12 +63,14 @@ else
     python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
 fi
 
-# pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
-# to put some more user-accessible stuff like examples and palettes in
-# folders under inkstitch/ (see ../Makefile) so let's move the pyinstaller
-# stuff into its own dir.
-shopt -s dotglob
+
+# Move dist/inkstitch/*  to  dist/inkstitch/bin
+#   pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
+#   to put some more user-accessible stuff like examples and palettes in
+#   folders under inkstitch/ (see ../Makefile) so let's move the pyinstaller
+#   stuff into its own dir.
+shopt -s dotglob     # * - to include hidden files
 mkdir dist/bin
 mv dist/inkstitch/* dist/bin
-mv dist/bin dist/inkstitch
+mv dist/bin dist/inkstitch   # now all the pyinstaller stuff is in dist/inkstitch/bin
 mkdir artifacts
