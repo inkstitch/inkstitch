@@ -114,5 +114,5 @@ jobs:
       - uses: actions/upload-artifact@v4   # https://github.com/actions/upload-artifact
         with:
           name: inkstitch-linux64   # to path
-          path: artifacts           # from path
+          path: artifacts           # from path relative to the root of the repository
 
