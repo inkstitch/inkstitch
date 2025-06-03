@@ -95,14 +95,19 @@ jobs:
           # python --version
 
           make dist
+
+          # see artifacts contents
+          echo "artifacts directory:"
+          ls -lR artifacts
+
         env:
           BUILD: linux
-          # secrets are available only in main branch
+          # secrets are available only in github
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
 
       # save the build artifacts for later use by other jobs
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4   # https://github.com/actions/upload-artifact
         with:
-          name: inkstitch-linux64
-          path: artifacts
+          name: inkstitch-linux64   # to path
+          path: artifacts           # from path
 
