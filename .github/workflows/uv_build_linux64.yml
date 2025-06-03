@@ -18,6 +18,11 @@ on:
         default: true
         type: string
 
+    secrets:
+      INKSTITCH_GPG_KEY:
+        required: true
+
+
 
 # Jobs are steps that run on the same runner
 jobs:
