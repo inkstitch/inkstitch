@@ -59,9 +59,12 @@ class JumpToTrim(InkstitchExtension):
                 self._add_trim(last)
 
     def _add_trim(self, element):
+        # skip if the element already has a trim command in one way or the other
+        if element.has_command("trim") or element.trim_after:
+            return
+
         if self.options.use_command_symbols:
-            if not element.has_command('trim'):
-                add_commands(element, ["trim"])
+            add_commands(element, ["trim"])
         else:
             element.node.set('inkstitch:trim_after', True)
 
