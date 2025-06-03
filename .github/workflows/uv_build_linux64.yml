@@ -13,12 +13,12 @@ on:
         type: string  # type of the input, can be string, boolean, or number
 
       self_signed:
-        description: 'Sign on the fly for true'
+        description: 'Sign on the fly'
         required: true
         default: true
         type: string
 
-    secrets:
+    secrets:  # secrets that are required for the workflow, otherwise are not available
       INKSTITCH_GPG_KEY:
         required: true
 
@@ -97,7 +97,6 @@ jobs:
 
           . .venv/bin/activate  # activate the virtual environment
           type python  # check python version
-          # python --version
 
           echo "secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}" # *** if available
           make dist
