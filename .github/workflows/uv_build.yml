@@ -259,7 +259,7 @@ jobs:
   linuxarm64_build:
     needs: sign_policy # this job depends on the sign_policy job
     if: >
-      needs.sign_policy.outputs.MY_BUILD_TYPE == 'linux-arm64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'linuxarm64' ||
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
     name: Build Linux-arm64
     uses: ./.github/workflows/uv_build_linuxarm64.yml # call reusable workflow
@@ -287,7 +287,7 @@ jobs:
   macx86_build:
     needs: sign_policy # this job depends on the sign_policy job
     if: >
-      needs.sign_policy.outputs.MY_BUILD_TYPE == 'mac-x86' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'macx86' ||
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
     name: Build Mac OS Intel x86-64
     uses: ./.github/workflows/uv_build_macx86.yml # call reusable workflow
