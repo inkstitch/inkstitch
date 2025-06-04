@@ -45,14 +45,14 @@ on:
 
           - linux64
           # - linux32
-          - linux-arm64
-          # - linux-arm32
+          - linuxarm64
+          # - linuxarm32
 
           - windows64
           # - windows-arm64
 
-          - mac-x86   # Mac OS x86 - Intel x86_64
-          - mac-arm64 # Mac OS arm64 - Apple Silicon ARM64
+          - macx86   # Mac OS x86 - Intel x86_64
+          - macarm64 # Mac OS arm64 - Apple Silicon ARM64
 
 
           - all
@@ -256,13 +256,13 @@ jobs:
       INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
 
 
-  linux_arm64_build:
+  linuxarm64_build:
     needs: sign_policy # this job depends on the sign_policy job
     if: >
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'linux-arm64' ||
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
     name: Build Linux-arm64
-    uses: ./.github/workflows/uv_build_linux-arm64.yml # call reusable workflow
+    uses: ./.github/workflows/uv_build_linuxarm64.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
       self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
@@ -287,7 +287,7 @@ jobs:
   macx86_build:
     needs: sign_policy # this job depends on the sign_policy job
     if: >
-      needs.sign_policy.outputs.MY_BUILD_TYPE == 'macx86' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'mac-x86' ||
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
     name: Build Mac OS Intel x86-64
     uses: ./.github/workflows/uv_build_macx86.yml # call reusable workflow
@@ -307,8 +307,11 @@ jobs:
       - sign_policy
       - dummy_build
       - linux64_build
-      - linux_arm64_build
+      - linuxarm64_build
       - windows64_build
+      - macx86_build
+
+    name: Create Release
 
     env:
       MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}
