@@ -12,10 +12,14 @@ on:
         type: string  # type of the input, can be string, boolean, or number
 
       self_signed:
-        description: 'Sign on the fly for true'
+        description: 'Sign on the fly'
         required: true
         default: true
         type: string
+
+    secrets:  # secrets that are required for the workflow, otherwise are not available
+      SIGNPATH_API_TOKEN:
+        required: true
 
 
 # Jobs are steps that run on the same runner
@@ -26,25 +30,25 @@ jobs:
       MY_SELF_SIGNED: ${{ github.event.inputs.self_signed }}
 
     # define the OS of the runner
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
-      - name: Download Inkstitch # Download the source code, no submodules
+      - name: Download Inkstitch         # Download the source code, no submodules
         uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5 # https://github.com/actions/setup-python
+      - uses: actions/setup-python@v5    # https://github.com/actions/setup-python
         with:
           python-version: '3.11.x'
           architecture: 'x64'
 
-      - name: Install uv  # https://docs.astral.sh/uv/guides/integration/github/
+      - name: Install uv                 # https://docs.astral.sh/uv/guides/integration/github/
         uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
 
-      - name: Install msbuild # https://github.com/microsoft/setup-msbuild
+      - name: Install msbuild             # https://github.com/microsoft/setup-msbuild
         uses: microsoft/setup-msbuild@v2
 
-      - name: Setup Git for Windows SDK # https://github.com/git-for-windows/setup-git-for-windows-sdk
+      - name: Setup Git for Windows SDK   # https://github.com/git-for-windows/setup-git-for-windows-sdk
         uses: git-for-windows/setup-git-for-windows-sdk@v1
         with:
           flavor: build-installers
@@ -149,16 +153,16 @@ jobs:
       - name: upload-unsigned-installer - tag v*
         if: startsWith(github.event.ref, 'refs/tags/v')
         id: upload-unsigned-installer
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4       # https://github.com/actions/upload-artifact
         with:
           name: inkstitch-windows64-installer  # output name
           path: artifacts                      # whole directory
 
 
-      - name: Sign-installer  - tag v* # https://github.com/SignPath/github-action-submit-signing-request
+      - name: Sign-installer  - tag v*
         if: startsWith(github.event.ref, 'refs/tags/v')
         id: Sign-installer
-        uses: signpath/github-action-submit-signing-request@v1.1
+        uses: signpath/github-action-submit-signing-request@v1.1  # https://github.com/SignPath/github-action-submit-signing-request
         with:
           api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
           organization-id: '6b880880-2af8-4cf3-a8e7-1b4977c593df'
@@ -168,7 +172,9 @@ jobs:
           github-artifact-id: '${{ steps.upload-unsigned-installer.outputs.artifact-id }}'
           wait-for-completion: true
           output-artifact-directory: 'signed-artifacts'
-      - uses: actions/upload-artifact@v4
+
+
+      - uses: actions/upload-artifact@v4        # https://github.com/actions/upload-artifact
         with:
           name: inkstitch-windows64
           path: signed-artifacts
