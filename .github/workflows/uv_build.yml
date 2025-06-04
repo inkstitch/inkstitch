@@ -49,19 +49,11 @@ on:
           # - linux-arm32
 
           - windows64
-          # - windows32
           # - windows-arm64
-          # - windows-arm32
 
-          # - darwin64
-          # - darwin32
-          # - darwin-arm64
-          # - darwin-arm32
+          - mac-x86   # Mac OS x86 - Intel x86_64
+          - mac-arm64 # Mac OS arm64 - Apple Silicon ARM64
 
-          # - macos64
-          # - macos32
-          # - macos-arm64
-          # - macos-arm32
 
           - all
 
@@ -290,6 +282,20 @@ jobs:
       self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
     secrets:
       SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN}}
+
+
+  macx64_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'macx64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Macx64
+    uses: ./.github/workflows/uv_build_macx64.yml # call reusable workflow
+    with:
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+    # secrets:
+    #   INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
 
 
   #----------------------------------------------------
