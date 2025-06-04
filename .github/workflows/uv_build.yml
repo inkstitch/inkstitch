@@ -284,13 +284,13 @@ jobs:
       SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN}}
 
 
-  macx64_build:
+  macx86_build:
     needs: sign_policy # this job depends on the sign_policy job
     if: >
-      needs.sign_policy.outputs.MY_BUILD_TYPE == 'macx64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'macx86' ||
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
-    name: Build Macx64
-    uses: ./.github/workflows/uv_build_macx64.yml # call reusable workflow
+    name: Build Mac OS Intel x86-64
+    uses: ./.github/workflows/uv_build_macx86.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
       self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
