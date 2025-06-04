@@ -228,6 +228,8 @@ jobs:
           # Create a directory to store artifacts
           mkdir -p artifacts
           echo "This is a dummy file for OS: ${{ runner.os }} and commit: ${{ github.sha }}" > artifacts/dummy.txt
+          echo "Timestamp: $(date)" >> artifacts/dummy.txt
+          # List artifacts directory
           ls -lR .
 
       - name: Upload artifacts
