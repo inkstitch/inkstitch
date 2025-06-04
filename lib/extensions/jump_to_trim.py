@@ -31,29 +31,38 @@ class JumpToTrim(InkstitchExtension):
         last_element = None
         last_stitch_group = None
         for element, next_element in zip(self.elements, next_elements):
-            stitch_groups = element.to_stitch_groups(last_stitch_group)
-
-            for stitch_group in stitch_groups:
-                if last_stitch_group is None or stitch_group.color != last_stitch_group.color:
-                    last_stitch_group = stitch_group
-                    continue
-                start = last_stitch_group.stitches[-1]
-                end = stitch_group.stitches[0]
-
-                last_stitch_group = stitch_group
-
-                line = DirectedLineSegment((start.x, start.y), (end.x, end.y))
-                # do not add a running stitch if the distance is smaller than min_jump setting
-                if line.length < self.options.min_jump * PIXELS_PER_MM:
-                    continue
-                # do not add a running stitch if the distance is longer than max_jump setting
-                if self.options.max_jump > 0 and line.length > self.options.max_jump * PIXELS_PER_MM:
-                    continue
-                if last_element is not None:
-                    self._add_trim(last_element)
+            last = last_element
             last_element = element
+            stitch_groups = element.embroider(last_stitch_group, next_element)
+            if not stitch_groups:
+                continue
+
+            stitch_group = stitch_groups[0]
+            if last_stitch_group is None or stitch_group.color != last_stitch_group.color:
+                last_stitch_group = stitch_groups[-1]
+                continue
+
+            start = last_stitch_group.stitches[-1]
+            end = stitch_group.stitches[0]
+
+            last_stitch_group = stitch_groups[-1]
+
+            distance = DirectedLineSegment((start.x, start.y), (end.x, end.y)).length
+
+            # do not add a trim command if the distance is smaller than min_jump setting
+            if distance < self.options.min_jump * PIXELS_PER_MM:
+                continue
+            # do not add a trim command if the distance is longer than max_jump setting
+            if self.options.max_jump > 0 and distance > self.options.max_jump * PIXELS_PER_MM:
+                continue
+            if last is not None:
+                self._add_trim(last)
 
     def _add_trim(self, element):
+        # skip if the element already has a trim command in one way or the other
+        if element.has_command("trim") or element.trim_after:
+            return
+
         if self.options.use_command_symbols:
             add_commands(element, ["trim"])
         else:
