@@ -18,9 +18,23 @@ on:
         default: true
         type: string
 
-    # secrets:  # secrets that are required for the workflow, otherwise are not available
-    #   INKSTITCH_GPG_KEY:
-    #     required: true
+    secrets:  # secrets that are required for the workflow, otherwise are not available
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE:
+        required: true
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD:
+        required: true
+      KEYCHAIN_PASSWORD:
+        required: true
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE:
+        required: true
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD:
+        required: true
+      INKSTITCH_NOTARIZE_AC:
+        required: true
+      INKSTITCH_NOTARIZE_PASS:
+        required: true
+
+
 
 jobs:
   macx64:  # name of the job
@@ -44,10 +58,15 @@ jobs:
         shell: bash
         run: |  # working directory is the root of the inkstitch repo
 
+          echo "------------------------------------- system information: sw_vers"
+          sw_vers
+
+          echo "------------------------------------- input data"
           # input data
           echo "github.event.inputs.break_on: ${{ github.event.inputs.break_on }}"
           echo "inputs.break_on: ${{ inputs.break_on }}"
 
+          echo "------------------------------ uv python list"
           uv python list
           uv python pin 311  # pin to local python version
           uv venv  # create a virtual environment with the pinned python version
@@ -57,6 +76,7 @@ jobs:
             exit 1
           fi
 
+          echo "-------------------------------------- update homebrew"
           brew update
 
           # brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt || true
@@ -69,16 +89,54 @@ jobs:
 
           # debug
 
-          echo "------------------------------------- system information: sw_vers"
-          sw_vers
           echo "-------------------------------------- pyproject.toml"
           cat pyproject.toml
 
           echo "-------------------------------------- uv sync"
           uv sync # install dependencies from pyproject.toml
 
-          . .venv/bin/activate  # activate the virtual environment
-          type python
+          # . .venv/bin/activate  # activate the virtual environment
+          # type python
 
           # echo "pythonLocation: ${{ env.pythonLocation }}"  # empty - what is this good for
           # echo "GITHUB_PATH: $GITHUB_PATH"
+
+
+      - name: Build dist
+        shell: bash
+        run: |
+
+          . .venv/bin/activate  # activate the virtual environment
+          type python  # check python version
+
+          echo "secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}" # *** if available
+          echo "secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}" # *** if available
+          echo "secrets.KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}" # *** if available
+          echo "secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}" # *** if available
+          echo "secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}" # *** if available
+          echo "secrets.INKSTITCH_NOTARIZE_AC: ${{ secrets.INKSTITCH_NOTARIZE_AC }}" # *** if available
+          echo "secrets.INKSTITCH_NOTARIZE_PASS: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}" # *** if available
+          echo "secrets.KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}" # *** if available
+
+          make dist
+
+          # see artifacts directory contents
+          echo "-------------------------------------- artifacts directory:"
+          ls -lR artifacts
+
+        env:
+          BUILD: osx
+          # load secrets for bash script
+          MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+          MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+          KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
+          INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+          INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+          NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+          NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
+      # save the build artifacts for later use by other jobs
+      # - uses: actions/upload-artifact@v4   # # https://github.com/actions/upload-artifact
+      #   with:
+      #     name: inkstitch-mac-x86
+      #     path: artifacts
