@@ -136,7 +136,7 @@ jobs:
           NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
 
       # save the build artifacts for later use by other jobs
-      # - uses: actions/upload-artifact@v4   # https://github.com/actions/upload-artifact
-      #   with:
-      #     name: inkstitch-mac-arm64          # to path
-      #     path: artifacts                  # from path relative to the root of the repository
+      - uses: actions/upload-artifact@v4   # https://github.com/actions/upload-artifact
+        with:
+          name: inkstitch-mac-arm64          # to path
+          path: artifacts                  # from path relative to the root of the repository
