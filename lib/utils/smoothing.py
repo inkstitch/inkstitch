@@ -57,4 +57,8 @@ def smooth_path(path, smoothness=1.0, iterations=5):
         r[-1] = ll[-1]
         points = ll * 0.75 + r * 0.25
 
-    return [Point(*coord) for coord in points]
+    # we want to keep the old start and end points
+    start = [Point(* path[0])]
+    end = [Point(* path[-1])]
+
+    return start + [Point(*coord) for coord in points] + end

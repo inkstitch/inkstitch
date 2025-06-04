@@ -106,16 +106,16 @@ def clamp_path_to_polygon(path, polygon):
     except FloatingPointError:
         return path
 
-    if len(split_path.geoms) == 1:
+    # contains() checks can fail without the buffer.
+    buffered_polygon = prep(polygon.buffer(1e-9))
+
+    if len(split_path.geoms) == 1 and buffered_polygon.contains(split_path.geoms[0]):
         # The path never intersects with the polygon, so it's entirely inside.
         return path
 
     # Add the start and end points to avoid losing part of the path if the
     # start or end coincides with the polygon boundary
     split_path = [ShapelyPoint(start), *split_path.geoms, ShapelyPoint(end)]
-
-    # contains() checks can fail without the buffer.
-    buffered_polygon = prep(polygon.buffer(1e-9))
 
     last_point_inside = None
     was_inside = False
