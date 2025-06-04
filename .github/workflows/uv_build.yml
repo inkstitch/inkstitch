@@ -233,11 +233,20 @@ jobs:
           ls -lR .
 
       - name: Upload artifacts
+        id: upload_artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: my-dummy-artifacts # Název artefaktu, pod kterým se objeví v GitHub Actions
-          path: artifacts/ # Cesta k adresáři, který se má nahrát
-          retention-days: 1 # Jak dlouho se má artefakt uchovávat (volitelné)
+          name: my-dummy-artifacts  # name of artifact in repository
+          path: artifacts           # path of local dir
+          retention-days: 1         # how long must be kept (default 90 days)
+
+      - name: Artifacts output
+        run: |
+
+          echo "Artifacts output."
+          echo "Artifact id: ${{ steps.upload_artifacts.outputs.artifact-id}}"
+          echo "Artifact URL: ${{ steps.upload_artifacts.outputs.artifact-url }}"
+          echo "Artifact digest: ${{ steps.upload_artifacts.outputs.artifact-digest }}"
 
 
   # !!! reusable must be on job level & .yml must be on top level of .github/workflows/
