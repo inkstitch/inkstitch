@@ -1,5 +1,5 @@
 
-name: UV Mac x86 build
+name: UV Mac arm64 build
 
 # when the workflow should run
 on:
@@ -37,13 +37,13 @@ on:
 
 
 jobs:
-  macx86:  # name of the job
+  macarm64:  # name of the job
     env:
       MY_BREAK_ON: ${{ github.event.inputs.break_on }}
       MY_SELF_SIGNED: ${{ github.event.inputs.self_signed }}
 
     # define the OS of the runner
-    runs-on: macos-13
+    runs-on: macos-latest
 
     steps:
       - name: Download Inkstitch # Download the source code, no submodules
@@ -136,7 +136,7 @@ jobs:
           NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
 
       # save the build artifacts for later use by other jobs
-      - uses: actions/upload-artifact@v4   # https://github.com/actions/upload-artifact
-        with:
-          name: inkstitch-mac-x86          # to path
-          path: artifacts                  # from path relative to the root of the repository
+      # - uses: actions/upload-artifact@v4   # https://github.com/actions/upload-artifact
+      #   with:
+      #     name: inkstitch-mac-arm64          # to path
+      #     path: artifacts                  # from path relative to the root of the repository
