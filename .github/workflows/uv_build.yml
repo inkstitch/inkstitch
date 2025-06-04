@@ -41,6 +41,8 @@ on:
         default: 'linux64'  # default value
         type: choice  # type of the input, can be number, boolean, string, choice or environment
         options:
+          - dummy  # just for testing, not used in the workflow
+
           - linux64
           # - linux32
           - linux-arm64
@@ -212,6 +214,29 @@ jobs:
           env | grep GITHUB_ | sort
 
   # -----------------------------------------------------
+  dummy_build:
+    # this job is just for testing, it creates a dummy file and uploads it as an artifact
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'dummy'
+    runs-on: ubuntu-latest
+    name: Dummy Build
+    steps:
+      - name: Create artifacts directory
+        run: |
+
+          # Create a directory to store artifacts
+          mkdir -p artifacts
+          echo "This is a dummy file for OS: ${{ runner.os }} and commit: ${{ github.sha }}" > artifacts/dummy.txt
+          ls -lR .
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-dummy-artifacts # Název artefaktu, pod kterým se objeví v GitHub Actions
+          path: artifacts/ # Cesta k adresáři, který se má nahrát
+          retention-days: 1 # Jak dlouho se má artefakt uchovávat (volitelné)
+
 
   # !!! reusable must be on job level & .yml must be on top level of .github/workflows/
   linux64_build:
@@ -258,6 +283,8 @@ jobs:
   release:
     runs-on: ubuntu-latest
     needs:  # wait for all builds to finish
+      - sign_policy
+      - dummy_build
       - linux64_build
       - linux_arm64_build
       - windows64_build
