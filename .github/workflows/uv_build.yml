@@ -288,6 +288,8 @@ jobs:
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
       self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+    secrets:
+      SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN}}
 
 
   #----------------------------------------------------
