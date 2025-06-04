@@ -326,11 +326,13 @@ jobs:
           echo "MY_SELF_SIGNED=${MY_SELF_SIGNED}"
 
 
+      # !!! - release is given by tag name, so it must be set before this step
+      # !!! - old files in the release repository are not removed between runs, so you need to delete them manually if needed
       - name: Create release
         id: create_release
         uses: softprops/action-gh-release@v1  # https://github.com/softprops/action-gh-release
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # always set, used to create release
+          # token: ${{ secrets.GITHUB_TOKEN }}  # always set, used to create release
           tag_name: ${{ env.MY_TAG_NAME }}
           name: ${{ env.MY_NAME }}
           prerelease: ${{ env.MY_PRERELEASE }}
