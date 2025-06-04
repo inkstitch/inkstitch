@@ -56,3 +56,29 @@ jobs:
             echo "Stopping on request"
             exit 1
           fi
+
+          brew update
+
+          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt || true
+
+          export LDFLAGS="-L/usr/local/opt/libffi/lib"
+          export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+
+          echo "-------------------------------------- bin/uv/generate pyproject.toml"
+          bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+
+          # debug
+
+          echo "-------------------------------------- system information: /etc/os-release"
+          cat /etc/os-release
+          echo "-------------------------------------- pyproject.toml"
+          cat pyproject.toml
+
+          echo "-------------------------------------- uv sync"
+          uv sync # install dependencies from pyproject.toml
+
+          . .venv/bin/activate  # activate the virtual environment
+          type python
+
+          # echo "pythonLocation: ${{ env.pythonLocation }}"  # empty - what is this good for
+          # echo "GITHUB_PATH: $GITHUB_PATH"
