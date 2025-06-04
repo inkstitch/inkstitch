@@ -13,10 +13,15 @@ on:
         type: string  # type of the input, can be string, boolean, or number
 
       self_signed:
-        description: 'Sign on the fly for true'
+        description: 'Sign on the fly'
         required: true
         default: true
         type: string
+
+    secrets:  # secrets that are required for the workflow, otherwise are not available
+      INKSTITCH_GPG_KEY:
+        required: true
+
 
 
 # Jobs are steps that run on the same runner
@@ -26,7 +31,7 @@ jobs:
       MY_BREAK_ON: ${{ github.event.inputs.break_on }}
       MY_SELF_SIGNED: ${{ github.event.inputs.self_signed }}
 
-    # define the OS of the runner
+    # define the OS of the runner - PyGObject is OS dependent
     runs-on: ubuntu-22.04-arm
 
     # steps are a sequence of commands that will be executed
@@ -96,17 +101,22 @@ jobs:
 
           . .venv/bin/activate  # activate the virtual environment
           type python  # check python version
-          # python --version
 
+          echo "secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}" # *** if available
           make dist
+
+          # see artifacts directory contents
+          echo "-------------------------------------- artifacts directory:"
+          ls -lR artifacts
+
         env:
           BUILD: linux
-          # secrets are available only in main branch
+          # load secrets for bash script
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
 
       # save the build artifacts for later use by other jobs
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4   # https://github.com/actions/upload-artifact
         with:
-          name: inkstitch-linuxarm64
-          path: artifacts
+          name: inkstitch-linuxarm64   # to path
+          path: artifacts              # from path relative to the root of the repository
 

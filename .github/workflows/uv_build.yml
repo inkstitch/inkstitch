@@ -274,6 +274,8 @@ jobs:
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
       self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+    secrets:
+      INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
 
 
   windows64_build:
