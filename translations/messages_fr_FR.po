@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-06-02 01:51+0000\n"
-"PO-Revision-Date: 2025-06-02 01:52\n"
+"PO-Revision-Date: 2025-06-04 01:50\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -301,7 +301,7 @@ msgstr "Geneva Simple Sans est une police en colonne satin."
 #. description of font in fonts/gingo200
 #: inkstitch-fonts-metadata.py:110
 msgid "Gingo 200 is playful satin font with 158 glyphs."
-msgstr ""
+msgstr "Gingo 200 est une fonte ludique en colonnes satin qui contient 158 glyphes."
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:112
