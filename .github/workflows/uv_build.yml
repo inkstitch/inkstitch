@@ -289,7 +289,7 @@ jobs:
     if: >
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'macx86' ||
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
-    name: Build Mac OS Intel x86-64
+    name: Build Mac x86-64
     uses: ./.github/workflows/uv_build_macx86.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
@@ -309,7 +309,7 @@ jobs:
     if: >
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'macarm64' ||
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
-    name: Build Mac OS Apple Silicon ARM64
+    name: Build Mac ARM64
     uses: ./.github/workflows/uv_build_macarm64.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
