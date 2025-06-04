@@ -96,6 +96,7 @@ class SatinSegment(object):
 
         stroke_width = convert_stroke_width(self.original_satin)
         satin.node.style['stroke-width'] = stroke_width
+        satin.node.style['fill'] = 'none'
 
         satin = satin.apply_transform()
 
@@ -262,7 +263,7 @@ class RunningStitch(object):
         node.set("d", d)
 
         stroke_width = convert_stroke_width(self.original_element)
-        dasharray = inkex.Style(f"stroke-width:{stroke_width};stroke-dasharray:1,0.2;")
+        dasharray = inkex.Style(f"fill:none;stroke-width:{stroke_width};stroke-dasharray:1,0.2;")
         style = inkex.Style(self.original_element.node.get('style', '')) + dasharray
         node.set("style", str(style))
         if self.running_stitch_length != '':
