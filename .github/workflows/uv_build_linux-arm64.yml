@@ -81,12 +81,17 @@ jobs:
           # for shapely & wxPython compile
           sudo apt install build-essential libgtk-3-dev # cmake - use uv to install cmake
 
+          echo "-------------------------------------- bin/uv/generate pyproject.toml"
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
 
           # debug
+
+          echo "-------------------------------------- system information: /etc/os-release"
           cat /etc/os-release
+          echo "-------------------------------------- pyproject.toml"
           cat pyproject.toml
 
+          echo "-------------------------------------- uv sync"
           uv sync # install dependencies from pyproject.toml
 
           # . .venv/bin/activate  # activate the virtual environment
@@ -94,6 +99,8 @@ jobs:
 
           # echo "pythonLocation: ${{ env.pythonLocation }}"  # empty - what is this good for
           # echo "GITHUB_PATH: $GITHUB_PATH"
+
+          echo "--------------------------------------"
 
       - name: Build dist
         shell: bash
