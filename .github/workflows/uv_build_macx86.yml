@@ -1,0 +1,58 @@
+
+name: UV Mac x86 build
+
+# when the workflow should run
+on:
+  workflow_call:  # manual trigger of the workflow
+    inputs:
+
+      break_on: # ref: inputs.break_on
+        description:  'Stop the build immediately at a predefined location.'
+        required: true
+        default: 'no'    # default value
+        type: string  # type of the input, can be string, boolean, or number
+
+      self_signed:
+        description: 'Sign on the fly'
+        required: true
+        default: true
+        type: string
+
+    # secrets:  # secrets that are required for the workflow, otherwise are not available
+    #   INKSTITCH_GPG_KEY:
+    #     required: true
+
+jobs:
+  macx64:  # name of the job
+    env:
+      MY_BREAK_ON: ${{ github.event.inputs.break_on }}
+      MY_SELF_SIGNED: ${{ github.event.inputs.self_signed }}
+
+    # define the OS of the runner
+    runs-on: macos-13
+
+    steps:
+      - name: Download Inkstitch # Download the source code, no submodules
+        uses: actions/checkout@v4
+
+      - name: Install uv  # https://docs.astral.sh/uv/guides/integration/github/
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Setup environment
+        shell: bash
+        run: |  # working directory is the root of the inkstitch repo
+
+          # input data
+          echo "github.event.inputs.break_on: ${{ github.event.inputs.break_on }}"
+          echo "inputs.break_on: ${{ inputs.break_on }}"
+
+          uv python list
+          uv python pin 311  # pin to local python version
+          uv venv  # create a virtual environment with the pinned python version
+
+          if [[ ${{ inputs.break_on }} == "uv" ]]; then
+            echo "Stopping on request"
+            exit 1
+          fi
