@@ -294,9 +294,14 @@ jobs:
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
       self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
-    # secrets:
-    #   INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
-
+    secrets:
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+      KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+      INKSTITCH_NOTARIZE_AC: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+      INKSTITCH_NOTARIZE_PASS: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
 
   #----------------------------------------------------
 
