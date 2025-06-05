@@ -47,7 +47,7 @@ jobs:
           ls -lar /tmp
 
           echo "-------------------------------------- ls /__e/node20"
-          ls -lar /__e/node20      # check if the directory is empty
+          ls -lar /__e/node20  && echo "Directory is empty" || echo "Directory is not empty"
 
 
           if [[ -z "$(ls -A /__e/node20)" ]]; then     # if the directory is empty
