@@ -121,7 +121,7 @@ jobs:
 
           # for shapely & wxPython compile
           sudo apt install -y build-essential libgtk-3-dev # cmake - use uv to install cmake
-          sudo apt install -y geos # install geos for shapely
+          sudo apt install -y libgeos-dev
 
           echo "-------------------------------------- bin/uv/generate pyproject.toml"
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
