@@ -43,7 +43,8 @@ jobs:
       MY_SELF_SIGNED: ${{ github.event.inputs.self_signed }}
 
     # define the OS of the runner
-    runs-on: macos-13
+    runs-on: macos-13   # uses intel x86_64 architecture
+                        # macos-14, macos-15 uses apple silicon arm64 architecture
 
     steps:
       - name: Download Inkstitch # Download the source code, no submodules
