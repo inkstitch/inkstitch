@@ -35,7 +35,7 @@ jobs:
     container:
       image: linuxmintd/lmde6-i386  # Linux Mint Debian Edition 6 (LMDE6) i386 - docker image
       volumes:
-        # mount the workspace to the container, for node.js installation, requires checkout@v4
+        # mount the workspace to the container, for node.js i386 installation (replacing x64), requires checkout@v4
         - ${{ github.workspace }}:/__e/node20
 
 
@@ -80,8 +80,8 @@ jobs:
 
       # Permissions problem that prevents caching
       # https://github.com/actions/setup-python/issues/816
-      # - name: Change ownership of /github/home
-      #   run: sudo chown -R $(whoami) /github/home
+      - name: Change ownership of /github/home
+        run: sudo chown -R $(whoami) /github/home
 
 
       - name: Replace `node` with an i386 version # same as node.js installation in the previous step
@@ -95,7 +95,8 @@ jobs:
           echo "-------------------------------------- ls /__e/node20"
           ls -lar /__e/node20
 
-          curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz
+          ### node20 is empty, but tmp chould contain downloaded node tar.gz
+          # curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz
           cd /__e/node20
           tar -x --strip-components=1 -f /tmp/node.tar.gz
 
@@ -108,13 +109,14 @@ jobs:
         shell: bash
         run: |
 
-          type uv
+          echo "-------------------------------------- uv architecture"
+          UV_PATH=$(type uv)
+          file $UV_PATH
 
           echo $PATH
 
           python3 --version  # check python version
           python3 -c "import platform; print(platform.architecture())"
-          exit 1
 
       - name: Setup environment
         shell: bash
@@ -133,12 +135,17 @@ jobs:
           echo "inputs.break_on: ${{ inputs.break_on }}"
 
           echo "------------------------------ uv python list"
-          uv python list
-          uv python install 311
+          # uv python list
+          # uv python install 311
 
           uv python list
           uv python pin --managed-python 311  # pin to local python version
           uv venv  # create a virtual environment with the pinned python version
+
+          echo "-------------------------------------- activate virtual environment"
+          . .venv/bin/activate
+          echo "-------------------------------------- python architecture"
+          file .venv/bin/python  # check python version in the virtual environment
 
           if [[ ${{ inputs.break_on }} == "uv" ]]; then
             echo "Stopping on request"
