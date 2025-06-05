@@ -90,12 +90,15 @@
             <spacer />
             <label appearance="header">Troubleshoot</label>
             <spacer />
-            <label>If this isn't working for you, you may need to insert your path to a python executable manualy.</label>
+            <label>If it isn't working:</label>
             <spacer />
-            <label>* Windows: Open the "Command Prompt" and type "where python". Copy the path and paste it here.</label>
-            <label>* Linux: Open the command line and type "which python3". Copy the path and paste it here.</label>
-            <label>* macOS: doesn't work, sorry</label>
-            <param name="python-path" type="string" gui-text="Python Path"></param>
+            <label>1. Hit the apply button multiple times. </label>
+            <label>2. If it still isn't working, you may need to insert your path to a python executable manualy.</label>
+            <label indent="1">* Windows: Open the "Command Prompt" and type "where python". Copy the path and paste it here.</label>
+            <label indent="1">* Linux: Open the command line and type "which python3". Copy the path and paste it here.</label>
+            <label indent="1">* macOS: doesn't work, sorry</label>
+            <spacer />
+            <param indent="1" name="python-path" type="string" gui-text="Python Path"></param>
         </page>
     </param>
 
