@@ -99,7 +99,7 @@
         </page>
     </param>
 
-    <effect>
+    <effect needs-live-preview="false">
         <object-type>all</object-type>
         <icon>{{ icon_path }}inx/select_elements.svg</icon>
         <effects-menu>
