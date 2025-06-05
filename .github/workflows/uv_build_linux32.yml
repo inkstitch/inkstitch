@@ -91,7 +91,7 @@ jobs:
 
           echo "------------------------------ uv python list"
           uv python list
-          uv python pin 311 --uv-managed  # pin to local python version
+          uv python pin --managed-python 311  # pin to local python version
           uv venv  # create a virtual environment with the pinned python version
 
           if [[ ${{ inputs.break_on }} == "uv" ]]; then
