@@ -79,8 +79,9 @@ jobs:
         shell: bash
         run: |  # working directory is the root of the inkstitch repo
 
-          echo "-------------------------------------- system information: /etc/os-release"
-          cat /etc/os-release
+          echo "-------------------------------------- system information: lsb_release"
+          # cat /etc/os-release
+          lsb_release -a
 
           echo "-------------------------------------- input data"
           # input data
