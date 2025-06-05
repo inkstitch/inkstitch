@@ -348,6 +348,7 @@ jobs:
     needs:  # wait for all builds to finish
       - sign_policy
       - dummy_build
+      - linux32_build
       - linux64_build
       - linuxarm64_build
       - windows64_build
