@@ -34,10 +34,22 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: linuxmintd/lmde6-i386  # Linux Mint Debian Edition 6 (LMDE6) i386
-      # volumes:
-      # - ${{ github.workspace }}:/__e/node20  # mount the workspace to the container
+      volumes:
+      - ${{ github.workspace }}:/__e/node20  # mount the workspace to the container
 
     steps:
+      - name: Download & setup Node
+        shell: bash
+        run: |
+
+          ls -lar /__e/node20      # check if the directory is empty
+          apt-get update
+          apt-get install -y curl  # we need curl to download node.js
+          curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz
+          cd /__e/node20           # change to the mounted workspace directory
+          tar -x --strip-components=1 -f /tmp/node.tar.gz # extract the node.js archive
+
+
       - name: Download Inkstitch # Download the source code, no submodules
         uses: actions/checkout@v4
 
@@ -45,3 +57,6 @@ jobs:
         uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
+
+
+
