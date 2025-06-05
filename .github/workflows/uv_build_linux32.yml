@@ -43,13 +43,21 @@ jobs:
       - name: Download & setup Node - needed by Checkout
         shell: bash
         run: |
+          echo "-------------------------------------- ls /tmp"
+          ls -lar /tmp
 
+          echo "-------------------------------------- ls /__e/node20"
           ls -lar /__e/node20      # check if the directory is empty
-          apt-get update
-          apt-get install -y curl  # we need curl to download node.js
-          curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz
-          cd /__e/node20           # change to the mounted workspace directory
-          tar -x --strip-components=1 -f /tmp/node.tar.gz # extract the node.js archive
+
+
+          if [[ -z "$(ls -A /__e/node20)" ]]; then     # if the directory is empty
+            echo "Installing Node.js 20.17.0 i386 to /__e/node20"
+            apt-get update
+            apt-get install -y curl  # we need curl to download node.js
+            curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz
+            cd /__e/node20           # change to the mounted workspace directory
+            tar -x --strip-components=1 -f /tmp/node.tar.gz # extract the node.js archive
+          fi
 
           echo "-------------------------------------- ls /tmp"
           ls -lar /tmp
