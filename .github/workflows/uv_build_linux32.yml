@@ -110,7 +110,7 @@ jobs:
         run: |
 
           echo "-------------------------------------- uv architecture"
-          UV_PATH=$(type uv)
+          UV_PATH=$(type uv | awk '{print $NF}')
           file $UV_PATH
 
           echo $PATH
@@ -122,9 +122,9 @@ jobs:
         shell: bash
         run: |  # working directory is the root of the inkstitch repo
 
-          echo "-------------------------------------- system information: /etc/os-release"
-          # cat /etc/os-release
-          ls -lR /etc
+          # echo "-------------------------------------- system information: /etc/os-release"
+          # # cat /etc/os-release
+          # ls -lR /etc
           echo "-------------------------------------- system information: lsb_release -a"
           lsb_release -a
           uname -a  # print system information
