@@ -75,5 +75,64 @@ jobs:
         with:
           enable-cache: true
 
+      - name: Setup environment
+        shell: bash
+        run: |  # working directory is the root of the inkstitch repo
+
+          echo "-------------------------------------- system information: /etc/os-release"
+          cat /etc/os-release
+
+          echo "-------------------------------------- input data"
+          # input data
+          echo "github.event.inputs.break_on: ${{ github.event.inputs.break_on }}"
+          echo "inputs.break_on: ${{ inputs.break_on }}"
+
+          echo "------------------------------ uv python list"
+          uv python list
+          uv python pin 311  # pin to local python version
+          uv venv  # create a virtual environment with the pinned python version
+
+          if [[ ${{ inputs.break_on }} == "uv" ]]; then
+            echo "Stopping on request"
+            exit 1
+          fi
+
+          echo "-------------------------------------- update apt"
+          # install system dependencies
+          sudo apt-get update  # update package list
+
+          sudo gem install fpm # install fpm for packaging (Ruby gems)
+          sudo apt-get install gettext # install gettext for translations (.po msgfmt)
+
+          # for PyGObject 3.50 to compile
+          sudo apt install libgirepository1.0-dev libcairo2-dev
+
+          # for wxPython run
+          sudo apt install libnotify4
+          sudo apt install glib-networking libsdl2-2.0-0 # libsdl2-dev
+
+          # for shapely & wxPython compile
+          # sudo apt install build-essential libgtk-3-dev # cmake - use uv to install cmake
+
+          echo "-------------------------------------- bin/uv/generate pyproject.toml"
+          bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+
+          # debug
+
+          echo "-------------------------------------- pyproject.toml"
+          cat pyproject.toml
+
+          echo "-------------------------------------- uv sync"
+          uv sync # install dependencies from pyproject.toml
+
+          # . .venv/bin/activate  # activate the virtual environment
+          # type python
+
+          # echo "pythonLocation: ${{ env.pythonLocation }}"  # empty - what is this good for
+          # echo "GITHUB_PATH: $GITHUB_PATH"
+
+          echo "--------------------------------------"
+
+
 
 
