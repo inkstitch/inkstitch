@@ -34,9 +34,9 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: linuxmintd/lmde6-i386  # Linux Mint Debian Edition 6 (LMDE6) i386 - docker image
-      volumes:
-        # mount the workspace to the container, for node.js installation, requires checkout@v4
-        - ${{ github.workspace }}:/__e/node20
+      # volumes:
+      #   # mount the workspace to the container, for node.js installation, requires checkout@v4
+      #   - ${{ github.workspace }}:/__e/node20
 
 
     steps:
@@ -57,6 +57,12 @@ jobs:
             curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz
             cd /__e/node20           # change to the mounted workspace directory
             tar -x --strip-components=1 -f /tmp/node.tar.gz # extract the node.js archive
+          else
+            echo "Node.js 20.17.0 64 is already installed in /__e/node20"
+            echo "Mount workspace directory to /__e/node20"
+            cd /__e/node20/bin
+            file ./node  # check the architecture of the node binary
+            exit 1
           fi
 
           echo "-------------------------------------- ls /tmp"
