@@ -101,6 +101,7 @@ jobs:
           # install system dependencies
           sudo apt-get update  # update package list
 
+          sudo apt-get install ruby-full # install Ruby for fpm packaging
           sudo gem install fpm # install fpm for packaging (Ruby gems)
           sudo apt-get install gettext # install gettext for translations (.po msgfmt)
 
