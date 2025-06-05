@@ -44,8 +44,9 @@ on:
           - dummy  # just for testing, not used in the workflow
 
           - linux64
-          # - linux32
           - linuxarm64
+
+          - linux32
           # - linuxarm32
 
           - windows64
@@ -53,7 +54,6 @@ on:
 
           - macx86   # Mac OS x86 - Intel x86_64
           - macarm64 # Mac OS arm64 - Apple Silicon ARM64
-
 
           - all
 
@@ -270,6 +270,19 @@ jobs:
       INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
 
 
+  linux32_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'linux32' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Linux32
+    uses: ./.github/workflows/uv_build_linux32.yml # call reusable workflow
+    with:
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+    secrets:
+      INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
+
   windows64_build:
     needs: sign_policy # this job depends on the sign_policy job
     if: >
@@ -309,7 +322,7 @@ jobs:
     if: >
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'macarm64' ||
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
-    name: Build Mac ARM64
+    name: Build Mac arm64
     uses: ./.github/workflows/uv_build_macarm64.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
@@ -322,6 +335,10 @@ jobs:
       INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
       INKSTITCH_NOTARIZE_AC: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
       INKSTITCH_NOTARIZE_PASS: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
+
+
+
 
   #----------------------------------------------------
 
