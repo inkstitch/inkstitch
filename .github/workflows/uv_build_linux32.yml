@@ -77,6 +77,14 @@ jobs:
         with:
           enable-cache: true
 
+      - name: test
+        shell: bash
+        run: |
+
+          python --version  # check python version
+          python -c "import platform; print(platform.architecture())"
+          exit 1
+
       - name: Setup environment
         shell: bash
         run: |  # working directory is the root of the inkstitch repo
