@@ -35,7 +35,9 @@ jobs:
     container:
       image: linuxmintd/lmde6-i386  # Linux Mint Debian Edition 6 (LMDE6) i386
       volumes:
-      - ${{ github.workspace }}:/__e/node20  # mount the workspace to the container, for node.js installation
+        # mount the workspace to the container, for node.js installation, requires checkout@v4
+        - ${{ github.workspace }}:/__e/node20
+
 
     steps:
       - name: Download & setup Node - needed by Checkout
@@ -115,7 +117,7 @@ jobs:
 
           # for wxPython run
           sudo apt install -y libnotify4
-          sudo apt install -y glib-networking libsdl2-2.0-0 # libsdl2-dev
+          sudo apt install -y glib-networking libsdl2-2.0-0  libsdl2-dev
 
           # for shapely & wxPython compile
           sudo apt install -y build-essential libgtk-3-dev # cmake - use uv to install cmake
