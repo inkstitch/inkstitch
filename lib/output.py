@@ -8,9 +8,9 @@ import re
 import sys
 
 import inkex
-from pyembroidery.exceptions import TooManyColorChangesError
+from inkstitch_pyembroidery.exceptions import TooManyColorChangesError
 
-import pyembroidery
+import inkstitch_pyembroidery as pyembroidery
 
 from .commands import global_command
 from .i18n import _

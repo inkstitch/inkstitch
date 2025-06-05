@@ -9,7 +9,7 @@ from html import escape
 
 import inkex
 
-import pyembroidery
+import inkstitch_pyembroidery as pyembroidery
 
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, render_stitch_plan

@@ -13,7 +13,7 @@ from inkex import Boolean, errormsg
 from inkex.units import convert_unit
 from lxml import etree
 
-import pyembroidery
+import inkstitch_pyembroidery as pyembroidery
 
 from ..i18n import _
 from ..output import write_embroidery_file

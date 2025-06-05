@@ -10,7 +10,7 @@ from typing import List, Optional
 
 import inkex
 
-import pyembroidery
+import inkstitch_pyembroidery as pyembroidery
 
 from ..i18n import _
 from ..svg.tags import INKSTITCH_ATTRIBS
