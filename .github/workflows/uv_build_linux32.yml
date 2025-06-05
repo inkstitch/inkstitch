@@ -35,10 +35,10 @@ jobs:
     container:
       image: linuxmintd/lmde6-i386  # Linux Mint Debian Edition 6 (LMDE6) i386
       volumes:
-      - ${{ github.workspace }}:/__e/node20  # mount the workspace to the container
+      - ${{ github.workspace }}:/__e/node20  # mount the workspace to the container, for node.js installation
 
     steps:
-      - name: Download & setup Node
+      - name: Download & setup Node - needed by Checkout
         shell: bash
         run: |
 
@@ -50,8 +50,25 @@ jobs:
           tar -x --strip-components=1 -f /tmp/node.tar.gz # extract the node.js archive
 
 
+      # !!! this step effectively rewrites node installation done in the previous step !!!
       - name: Download Inkstitch # Download the source code, no submodules
         uses: actions/checkout@v4
+
+      # Permissions problem that prevents caching
+      # https://github.com/actions/setup-python/issues/816
+      - name: Change ownership of /github/home
+        run: sudo chown -R $(whoami) /github/home
+
+
+      - name: Replace `node` with an i386 version
+        shell: bash
+        run: |
+
+          ls -lar /__e/node20
+          curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz
+          cd /__e/node20
+          tar -x --strip-components=1 -f /tmp/node.tar.gz
+
 
       - name: Install uv  # https://docs.astral.sh/uv/guides/integration/github/
         uses: astral-sh/setup-uv@v5
