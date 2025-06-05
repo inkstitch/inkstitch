@@ -50,6 +50,8 @@ jobs:
 
           echo "-------------------------------------- system information: /etc/os-release"
           cat /etc/os-release
+          echo "-------------------------------------- system information: lsb_release -a"
+          lsb_release -a
 
           echo "-------------------------------------- input data"
           # input data
