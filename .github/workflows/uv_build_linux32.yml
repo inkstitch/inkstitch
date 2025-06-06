@@ -34,12 +34,34 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: linuxmintd/lmde6-i386  # Linux Mint Debian Edition 6 (LMDE6) i386 - docker image
-      volumes:
-        # mount the workspace to the container, for node.js i386 installation (replacing x64), requires checkout@v4
-        - ${{ github.workspace }}:/__e/node20
+      # volumes:
+      #   # mount the workspace to the container, for node.js i386 installation (replacing x64), requires checkout@v4
+      #   - ${{ github.workspace }}:/__e/node20
 
 
     steps:
+      - name: Test /__e/node20
+        shell: bash
+        run: |
+          echo "-------------------------------------- ls /__e/node20"
+          ls -lar /__e/node20
+
+          echo "-------------------------------------- file /__e/node20/bin/node"
+          file /__e/node20/bin/node
+          readelf -h /__e/node20/bin/node
+
+          echo "-------------------------------------- whoami"
+          whoami
+
+          if [[ -z "$(ls -A /__e/node20)" ]]; then     # if the directory is empty
+            echo "Directory /__e/node20 is empty, node.js installation is required"
+            exit 1
+          fi
+
+          exit 1
+
+
+
       - name: Download & setup Node - needed by Checkout
         shell: bash
         run: |
