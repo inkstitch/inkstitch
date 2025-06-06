@@ -43,6 +43,13 @@ jobs:
       - name: Test /__e/node20
         shell: bash
         run: |
+
+          echo "github.workspace: ${{ github.workspace }}"
+          echo "--------------------------------------"
+          # print all environment variables starting with GITHUB_
+          echo "GITHUB_ environment variables:"
+          env | grep '^GITHUB_'
+
           echo "-------------------------------------- ls /__e/node20"
           ls -lar /__e/node20
 
