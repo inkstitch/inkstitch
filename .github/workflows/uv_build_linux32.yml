@@ -36,7 +36,7 @@ jobs:
       image: linuxmintd/lmde6-i386  # Linux Mint Debian Edition 6 (LMDE6) i386 - docker image
       volumes:
         # - ${{ github.workspace }}:/__e/node20 # don't use this, will be overwritten by most actions like checkout@v4 ...
-        - my-node20-linux32:/__e/node20  # use persistent volume for node.js i386 installation
+        - my-node20-linux32:/__e/node20  # use persistent volume for node.js i386 installation, persistent in one workflow run
 
 
     steps:
@@ -92,11 +92,6 @@ jobs:
             curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz
             cd /__e/node20           # change to the mounted workspace directory
             tar -x --strip-components=1 -f /tmp/node.tar.gz # extract the node.js archive
-          else
-            echo "Add volume to runs-on to mount workspace directory to /__e/node20"
-            echo "Default node architecture is 64 and should be i386"
-            file /__e/node20/bin/node
-            exit 1
           fi
 
           echo "-------------------------------------- ls /tmp"
@@ -115,24 +110,21 @@ jobs:
         run: sudo chown -R $(whoami) /github/home
 
 
-      - name: Replace `node` with an i386 version # same as node.js installation in the previous step
-        shell: bash
-        run: |
+      # - name: Replace `node` with an i386 version # same as node.js installation in the previous step
+      #   shell: bash
+      #   run: |
 
-          echo "-------------------------------------- file /__e/node20/bin/node"
-          file /__e/node20/bin/node
-          echo "-------------------------------------- ls /tmp"
-          ls -lar /tmp
-          echo "-------------------------------------- ls /__e/node20"
-          ls -lar /__e/node20
+      #     echo "-------------------------------------- file /__e/node20/bin/node"
+      #     file /__e/node20/bin/node
+      #     echo "-------------------------------------- ls /tmp"
+      #     ls -lar /tmp
+      #     echo "-------------------------------------- ls /__e/node20"
+      #     ls -lar /__e/node20
 
-          exit 1
-
-
-          ### node20 is empty, but tmp chould contain downloaded node tar.gz
-          # curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz
-          cd /__e/node20
-          tar -x --strip-components=1 -f /tmp/node.tar.gz
+      #     ### node20 is empty, but tmp chould contain downloaded node tar.gz
+      #     # curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz
+      #     cd /__e/node20
+      #     tar -x --strip-components=1 -f /tmp/node.tar.gz
 
       - name: Install uv  # https://docs.astral.sh/uv/guides/integration/github/
         uses: astral-sh/setup-uv@v5
@@ -143,14 +135,22 @@ jobs:
         shell: bash
         run: |
 
+          echo "-------------------------------------- PATH"
+          echo "PATH=$PATH"
+
           echo "-------------------------------------- uv architecture"
           UV_PATH=$(type uv | awk '{print $NF}')
           file $UV_PATH
 
-          echo $PATH
 
+          echo "-------------------------------------- python architecture"
           python3 --version  # check python version
           python3 -c "import platform; print(platform.architecture())"
+
+          PYTHON_PATH=$(type python3.11 | awk '{print $NF}')
+          echo "PYTHON_PATH: $PYTHON_PATH"
+          file $PYTHON_PATH  # check python version
+
 
       - name: Setup environment
         shell: bash
@@ -185,6 +185,8 @@ jobs:
             echo "Stopping on request"
             exit 1
           fi
+
+          exit 1
 
           echo "-------------------------------------- update apt"
           # install system dependencies
