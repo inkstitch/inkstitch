@@ -37,7 +37,7 @@ jobs:
       volumes:
         # mount the workspace to the container, for node.js i386 installation (replacing x64), requires checkout@v4
         # - ${{ github.workspace }}:/__e/node20
-        - ${{ github.workspace }}/node:/__e/node20
+        - my-node20-linux32:/__e/node20
 
 
     steps:
