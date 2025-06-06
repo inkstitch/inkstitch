@@ -50,14 +50,9 @@ jobs:
       - name: Download Inkstitch # Download the source code, no submodules
         uses: actions/checkout@v4  # https://github.com/actions/checkout
 
-      - name: Install uv  # https://docs.astral.sh/uv/guides/integration/github/
-        uses: astral-sh/setup-uv@v5
-        with:
-          enable-cache: true
-
-      - name: Setup environment
+      - name: Update OS    # first update OS
         shell: bash
-        run: |  # working directory is the root of the inkstitch repo
+        run: |
 
           echo "------------------------------------- system information: sw_vers"
           sw_vers
@@ -67,16 +62,6 @@ jobs:
           echo "github.event.inputs.break_on: ${{ github.event.inputs.break_on }}"
           echo "inputs.break_on: ${{ inputs.break_on }}"
 
-          echo "------------------------------ uv python list"
-          uv python list
-          uv python pin 311  # pin to local python version
-          uv venv  # create a virtual environment with the pinned python version
-
-          if [[ ${{ inputs.break_on }} == "uv" ]]; then
-            echo "Stopping on request"
-            exit 1
-          fi
-
           echo "-------------------------------------- update homebrew"
           brew update
 
@@ -85,10 +70,31 @@ jobs:
           # export LDFLAGS="-L/usr/local/opt/libffi/lib"
           # export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5  # https://docs.astral.sh/uv/guides/integration/github/
+        with:
+          enable-cache: true    # cache on requirements**, uv.lock is OS dependent, on exit 1 cache save is skipped
+          python-version: 311   # force version, use same in install python
+
+
+      - name: Setup UV Python
+        shell: bash
+        run: |  # working directory is the root of the inkstitch repo
+
+          echo "------------------------------ uv python list"
+          uv python install 311  # install python 3.11 see cache
+          uv python list
+          uv python pin --managed-python 311  # pin to uv managed python
+          uv venv  # create a virtual environment with the pinned python version
+
+          if [[ $MY_BREAK_ON == "uv" ]]; then
+            echo "Stopping on request $MY_BREAK_ON"
+            exit 1
+          fi
+
           echo "-------------------------------------- bin/uv/generate pyproject.toml"
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
-
-          # debug
 
           echo "-------------------------------------- pyproject.toml"
           cat pyproject.toml
@@ -96,11 +102,12 @@ jobs:
           echo "-------------------------------------- uv sync"
           uv sync # install dependencies from pyproject.toml
 
-          # . .venv/bin/activate  # activate the virtual environment
-          # type python
+          if [[ $MY_BREAK_ON == "sync" ]]; then
+            echo "Stopping on request $MY_BREAK_ON"
+            exit 1
+          fi
 
-          # echo "pythonLocation: ${{ env.pythonLocation }}"  # empty - what is this good for
-          # echo "GITHUB_PATH: $GITHUB_PATH"
+          echo "--------------------------------------"
 
 
       - name: Build dist

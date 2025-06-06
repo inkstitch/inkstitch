@@ -96,8 +96,6 @@ jobs:
           echo "-------------------------------------- bin/uv/generate pyproject.toml"
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
 
-          # debug
-
           echo "-------------------------------------- pyproject.toml"
           cat pyproject.toml
 
