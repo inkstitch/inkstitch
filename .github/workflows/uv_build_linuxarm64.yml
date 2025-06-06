@@ -76,7 +76,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v5  # https://docs.astral.sh/uv/guides/integration/github/
         with:
-          enable-cache: true  # cache on requirements**, uv.lock is OS dependent
+          enable-cache: true  # cache on requirements**, uv.lock is OS dependent, on exit 1 cache save is skipped
           python-version: 311
 
       - name: Setup UV Python
@@ -84,7 +84,7 @@ jobs:
         run: |  # working directory is the root of the inkstitch repo
 
           echo "------------------------------ uv python list"
-          uv python install 311  # install python 3.11
+          uv python install 311  # install python 3.11 see cache
           uv python list
           uv python pin 311  # pin to local python version
           uv venv  # create a virtual environment with the pinned python version
