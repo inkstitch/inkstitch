@@ -29,7 +29,7 @@ jobs:
       MY_BREAK_ON: ${{ github.event.inputs.break_on }}
       MY_SELF_SIGNED: ${{ github.event.inputs.self_signed }}
 
-    # Node required for actions, install follows
+    # Node i386 required for actions, install follows
     # https://github.com/actions/upload-artifact/issues/616
     runs-on: ubuntu-latest
     container:
