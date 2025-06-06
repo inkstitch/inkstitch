@@ -131,7 +131,7 @@ jobs:
         with:
           enable-cache: true
 
-      - name: test
+      - name: Check architecture uv & python
         shell: bash
         run: |
 
@@ -180,13 +180,13 @@ jobs:
           . .venv/bin/activate
           echo "-------------------------------------- python architecture"
           file .venv/bin/python  # check python version in the virtual environment
+          python3 -c "import platform; print(platform.architecture())"
+
 
           if [[ ${{ inputs.break_on }} == "uv" ]]; then
             echo "Stopping on request"
             exit 1
           fi
-
-          exit 1
 
           echo "-------------------------------------- update apt"
           # install system dependencies
@@ -241,7 +241,7 @@ jobs:
           ls -lR artifacts
 
         env:
-          BUILD: linux
+          BUILD: linux32
           # load secrets for bash script
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
 
