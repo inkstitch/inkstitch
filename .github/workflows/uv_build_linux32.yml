@@ -57,14 +57,18 @@ jobs:
           echo "-------------------------------------- df -h"
           df -h
 
-          echo "-------------------------------------- ls /__e/node20"
-          ls -lar /__e/node20
           echo "-------------------------------------- ls -l /__e"
           ls -l /__e/*
 
+
+          echo "-------------------------------------- ls /__e/node20"
+          ls -lar /__e/node20
+
           echo "-------------------------------------- file /__e/node20/bin/node"
-          file /__e/node20/bin/node
-          readelf -h /__e/node20/bin/node
+          if [[ -f /__e/node20/bin/node ]]; then
+            file /__e/node20/bin/node
+            readelf -h /__e/node20/bin/node
+          fi
 
           echo "-------------------------------------- whoami"
           whoami
@@ -73,8 +77,6 @@ jobs:
             echo "Directory /__e/node20 is empty, node.js installation is required"
             exit 1
           fi
-
-          exit 1
 
 
 
@@ -132,6 +134,9 @@ jobs:
           ls -lar /tmp
           echo "-------------------------------------- ls /__e/node20"
           ls -lar /__e/node20
+
+          exit 1
+
 
           ### node20 is empty, but tmp chould contain downloaded node tar.gz
           # curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz
