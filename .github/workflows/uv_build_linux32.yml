@@ -81,6 +81,8 @@ jobs:
           whoami
 
 
+      # - Github mount node 64 version to container, we need to replace it with the i386 version
+      # - used volume on runner is: my-node20-linux32 that is mounted to /__e/node20
       - name: Download & setup Node - needed by Checkout
         shell: bash
         run: |
@@ -191,12 +193,10 @@ jobs:
           file .venv/bin/python  # check python version in the virtual environment
           python3 -c "import platform; print(platform.architecture())"
 
-
-          if [[ ${{ inputs.break_on }} == "uv" ]]; then
-            echo "Stopping on request"
+          if [[ $MY_BREAK_ON == "uv" ]]; then
+            echo "Stopping on request $MY_BREAK_ON"
             exit 1
           fi
-
 
           echo "-------------------------------------- bin/uv/generate pyproject.toml"
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
@@ -209,11 +209,12 @@ jobs:
           echo "-------------------------------------- uv sync"
           uv sync # install dependencies from pyproject.toml
 
-          # . .venv/bin/activate  # activate the virtual environment
-          # type python
 
-          # echo "pythonLocation: ${{ env.pythonLocation }}"  # empty - what is this good for
-          # echo "GITHUB_PATH: $GITHUB_PATH"
+          if [[ $MY_BREAK_ON == "sync" ]]; then
+            echo "Stopping on request $MY_BREAK_ON"
+            exit 1
+          fi
+
 
           echo "--------------------------------------"
 
