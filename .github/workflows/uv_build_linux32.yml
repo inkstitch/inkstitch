@@ -40,7 +40,7 @@ jobs:
 
 
     steps:
-      - name: Test /__e/node20
+      - name: Discover docker container environment
         shell: bash
         run: |
 
@@ -66,7 +66,7 @@ jobs:
           ls -lar /__e/node20
 
           echo "-------------------------------------- file /__e/node20/bin/node"
-          if [[ -f /__e/node20/bin/node ]]; then
+          if [[ -f /__e/node20/bin/node ]]; then   # if the file exists
             file /__e/node20/bin/node
             readelf -h /__e/node20/bin/node
           fi
@@ -102,29 +102,8 @@ jobs:
 
       # !!! this step effectively rewrites node installation done in the previous step !!!
       - name: Download Inkstitch # Download the source code, no submodules
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4  # https://github.com/actions/checkout
 
-      # Permissions problem that prevents caching
-      # https://github.com/actions/setup-python/issues/816
-      - name: Change ownership of /github/home
-        run: sudo chown -R $(whoami) /github/home
-
-
-      # - name: Replace `node` with an i386 version # same as node.js installation in the previous step
-      #   shell: bash
-      #   run: |
-
-      #     echo "-------------------------------------- file /__e/node20/bin/node"
-      #     file /__e/node20/bin/node
-      #     echo "-------------------------------------- ls /tmp"
-      #     ls -lar /tmp
-      #     echo "-------------------------------------- ls /__e/node20"
-      #     ls -lar /__e/node20
-
-      #     ### node20 is empty, but tmp chould contain downloaded node tar.gz
-      #     # curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz
-      #     cd /__e/node20
-      #     tar -x --strip-components=1 -f /tmp/node.tar.gz
 
       - name: Install uv  # https://docs.astral.sh/uv/guides/integration/github/
         uses: astral-sh/setup-uv@v5

@@ -66,6 +66,7 @@ on:
         options:
           - 'no'    # normal build
           - 'uv'    # stop the build at the uv venv creation step
+          - 'sync'  # stop after uv sync
 
 
 jobs:
