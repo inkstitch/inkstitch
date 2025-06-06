@@ -50,7 +50,7 @@ on:
           # - linuxarm32
 
           - windows64
-          # - windows-arm64
+          # - windowsarm64
 
           - macx86   # Mac OS x86 - Intel x86_64
           - macarm64 # Mac OS arm64 - Apple Silicon ARM64
@@ -68,7 +68,6 @@ on:
           - 'uv'    # stop the build at the uv venv creation step
 
 
-# working example: ----------------------------------------------------------
 jobs:
 
   # just info print
@@ -99,7 +98,7 @@ jobs:
         run: echo "${{ toJson(matrix) }}"
 
 
-
+  # ---------------------------------------------------------------------------------------------
   # Prepare data
   # - MY_BUILD_TYPE: type of build
   # - MY_BREAK_ON: define break stop
@@ -150,8 +149,8 @@ jobs:
             MY_BREAK_ON="${{ github.event.inputs.break_on }}"
           else
             # If not (i.e. it's a push or other event), use the defaults
-            MY_BUILD_TYPE="linux64"   # all
-            MY_BREAK_ON="uv"          # no
+            MY_BUILD_TYPE="dummy"     # all | dummy
+            MY_BREAK_ON="no"          # no
           fi
 
           echo "-------------------------------------------------"
@@ -242,7 +241,9 @@ jobs:
           echo "Artifact digest: ${{ steps.upload_artifacts.outputs.artifact-digest }}"
 
 
-  # !!! reusable must be on job level & .yml must be on top level of .github/workflows/
+  # --------------------------------------------------------------------------------------------------------
+  # !!! reusable call must be on job level & .yml must be on top level of .github/workflows/
+
   linux64_build:
     needs: sign_policy # this job depends on the sign_policy job
     if: >
@@ -338,10 +339,7 @@ jobs:
       INKSTITCH_NOTARIZE_PASS: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
 
 
-
-
-
-  #----------------------------------------------------
+  #---------------------------------------------------------------------------------------------------------------
 
 
   release:
@@ -399,7 +397,7 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v1  # https://github.com/softprops/action-gh-release
         with:
-          # token: ${{ secrets.GITHUB_TOKEN }}  # always set, used to create release
+          # token: ${{ secrets.GITHUB_TOKEN }}  # always set, used to create release, implicitly passed by the action
           tag_name: ${{ env.MY_TAG_NAME }}
           name: ${{ env.MY_NAME }}
           prerelease: ${{ env.MY_PRERELEASE }}
