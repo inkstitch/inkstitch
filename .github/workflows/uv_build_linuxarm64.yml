@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@v4  # https://github.com/actions/checkout
 
 
-      - name: Update OS    # first update OS this can may change cache keys
+      - name: Update OS    # first update OS
         shell: bash
         run: |
 
@@ -77,7 +77,7 @@ jobs:
         uses: astral-sh/setup-uv@v5  # https://docs.astral.sh/uv/guides/integration/github/
         with:
           enable-cache: true  # cache on requirements**, uv.lock is OS dependent
-          key: uv-311-${{ runner.os }}-${{ hashFiles('uv.lock') }}
+          python-version: 311
 
       - name: Setup UV Python
         shell: bash
