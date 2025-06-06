@@ -35,9 +35,8 @@ jobs:
     container:
       image: linuxmintd/lmde6-i386  # Linux Mint Debian Edition 6 (LMDE6) i386 - docker image
       volumes:
-        # mount the workspace to the container, for node.js i386 installation (replacing x64), requires checkout@v4
-        # - ${{ github.workspace }}:/__e/node20
-        - my-node20-linux32:/__e/node20
+        # - ${{ github.workspace }}:/__e/node20 # don't use this, will be overwritten by most actions like checkout@v4 ...
+        - my-node20-linux32:/__e/node20  # use persistent volume for node.js i386 installation
 
 
     steps:
@@ -51,15 +50,17 @@ jobs:
           echo "GITHUB_ environment variables:"
           env | grep '^GITHUB_'
 
-          echo "-------------------------------------- mount"
+          echo "-------------------------------------- mount (details in Initialize container)"
           mount
 
           echo "-------------------------------------- df -h"
           df -h
 
+          echo "-------------------------------------- ls /tmp"
+          ls -lar /tmp
+
           echo "-------------------------------------- ls -l /__e"
           ls -l /__e/*
-
 
           echo "-------------------------------------- ls /__e/node20"
           ls -lar /__e/node20
@@ -70,19 +71,19 @@ jobs:
             readelf -h /__e/node20/bin/node
           fi
 
+          echo "-------------------------------------- ls /home"
+          ls -l /home
+
+          echo "-------------------------------------- ls /github"
+          ls -l /github
+
           echo "-------------------------------------- whoami"
           whoami
-
 
 
       - name: Download & setup Node - needed by Checkout
         shell: bash
         run: |
-          echo "-------------------------------------- ls /tmp"
-          ls -lar /tmp
-
-          echo "-------------------------------------- ls /__e/node20"
-          ls -lar /__e/node20
 
           if [[ -z "$(ls -A /__e/node20)" ]]; then     # if the directory is empty
             echo "Installing Node.js 20.17.0 i386 to /__e/node20"
@@ -100,12 +101,7 @@ jobs:
 
           echo "-------------------------------------- ls /tmp"
           ls -lar /tmp
-          echo "-------------------------------------- ls /home"
-          ls -l /home
-          echo "-------------------------------------- ls /github"
-          ls -l /github
-          echo "-------------------------------------- whoami"
-          whoami
+
           echo "-------------------------------------- file /__e/node20/bin/node"
           file /__e/node20/bin/node
 
