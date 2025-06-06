@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-02 01:51+0000\n"
-"PO-Revision-Date: 2025-06-03 01:48\n"
+"POT-Creation-Date: 2025-06-06 01:47+0000\n"
+"PO-Revision-Date: 2025-06-06 01:48\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-02 01:51+0000\n"
+"POT-Creation-Date: 2025-06-06 01:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4527,7 +4527,7 @@ msgstr "Dreieck"
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
 msgstr "Es wurde kein stickbares Element ausgewählt. Bitte führe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten aus, um Hinweise zu Fehlern in der Stichplan-Erstellung zu erhalten."
 
-#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:398
+#: lib/stitches/auto_run.py:140 lib/stitches/auto_satin.py:399
 msgid "Auto-Route"
 msgstr "Auto-Führung"
 
@@ -4543,14 +4543,14 @@ msgstr "AutoGeradstich Unterpfad %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:608
+#: lib/stitches/auto_satin.py:609
 #, python-format
 msgid "AutoSatin %d"
 msgstr "AutoSatin %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:611
+#: lib/stitches/auto_satin.py:612
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "AutoSatin Geradstich %d"
@@ -5732,7 +5732,7 @@ msgstr "Wendet Parameter vom ersten ausgewählten Element auf den Rest der Auswa
 
 #: inx/inkstitch_duplicate_params.inx:12
 #: inx/inkstitch_remove_duplicated_points.inx:34 inx/inkstitch_reorder.inx:11
-#: inx/inkstitch_select_elements.inx:107
+#: inx/inkstitch_select_elements.inx:110
 #: inx/inkstitch_selection_to_anchor_line.inx:12
 #: inx/inkstitch_selection_to_guide_line.inx:12
 #: inx/inkstitch_selection_to_pattern.inx:12 inx/inkstitch_test_swatches.inx:11
@@ -7835,22 +7835,30 @@ msgid "https://inkstitch.org/docs/edit/#select-embroidery-elements/"
 msgstr "https://inkstitch.org/de/docs/edit/#stickelemente-auswählen"
 
 #: inx/inkstitch_select_elements.inx:93
-msgid "If this isn't working for you, you may need to insert your path to a python executable manualy."
-msgstr "Funktioniert diese Erweiterung nicht, kann es nötig sein den Pfad zu Python manuell festzulegen."
+msgid "If it isn't working:"
+msgstr ""
 
 #: inx/inkstitch_select_elements.inx:95
+msgid "1. Hit the apply button multiple times."
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:96
+msgid "2. If it still isn't working, you may need to insert your path to a python executable manualy."
+msgstr ""
+
+#: inx/inkstitch_select_elements.inx:97
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
 msgstr "* Windows: Öffne die Eingabeaufforderung und schreibe \"where python\". Kopiere den Pfad und füge ihn hier ein."
 
-#: inx/inkstitch_select_elements.inx:96
+#: inx/inkstitch_select_elements.inx:98
 msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
 msgstr "* Linux: öffne ein Terminal und schreibe \"which python3\". Kopiere den Pfad und füge ihn hier ein."
 
-#: inx/inkstitch_select_elements.inx:97
+#: inx/inkstitch_select_elements.inx:99
 msgid "* macOS: doesn't work, sorry"
 msgstr "* macOS: nicht funktionsfähig, sorry"
 
-#: inx/inkstitch_select_elements.inx:98
+#: inx/inkstitch_select_elements.inx:101
 msgid "Python Path"
 msgstr "Python Pfad"
 
