@@ -73,11 +73,6 @@ jobs:
           echo "-------------------------------------- whoami"
           whoami
 
-          if [[ -z "$(ls -A /__e/node20)" ]]; then     # if the directory is empty
-            echo "Directory /__e/node20 is empty, node.js installation is required"
-            exit 1
-          fi
-
 
 
       - name: Download & setup Node - needed by Checkout
