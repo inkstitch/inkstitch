@@ -152,7 +152,7 @@ jobs:
           uv python install 311
 
           uv python list
-          uv python pin --managed-python 311  # pin to downloaded python, if not use system, else download
+          uv python pin --managed-python 311  # pin to uv managed python
           # uv python pin --un-managed-python 311
           uv venv  # create a virtual environment with the pinned python version
 
