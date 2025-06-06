@@ -26,7 +26,7 @@ function detect_distro() {
     DISTRO_ID=""
     DISTRO_VER=""
 
-    if [[ -f /etc/os-release ]]; then
+    if [[ -f /etc/os-release ]]; then   # linux32 uses linuxmintd/lmde6-i386 without /etc/os-release
         source /etc/os-release
 
         # Ubuntu native (has ID_LIKE='Debian')
