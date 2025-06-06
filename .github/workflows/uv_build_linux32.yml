@@ -34,9 +34,10 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: linuxmintd/lmde6-i386  # Linux Mint Debian Edition 6 (LMDE6) i386 - docker image
-      # volumes:
-      #   # mount the workspace to the container, for node.js i386 installation (replacing x64), requires checkout@v4
-      #   - ${{ github.workspace }}:/__e/node20
+      volumes:
+        # mount the workspace to the container, for node.js i386 installation (replacing x64), requires checkout@v4
+        # - ${{ github.workspace }}:/__e/node20
+        - ${{ github.workspace }}/node:/__e/node20
 
 
     steps:
