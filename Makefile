@@ -13,6 +13,7 @@
 # usage: eg BUILD=xxx make
 # := immediate assignment; = lazy assignment
 
+# OS detection
 OS := $(shell uname)
 # lowercase the OS name, required for comparison
 OS := $(shell echo $(OS) | tr '[:upper:]' '[:lower:]')
