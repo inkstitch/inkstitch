@@ -33,7 +33,7 @@ jobs:
     runs-on: windows-2022
     steps:
       - name: Download Inkstitch         # Download the source code, no submodules
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4        # https://github.com/actions/checkout
 
       - uses: actions/setup-python@v5    # https://github.com/actions/setup-python
         with:
