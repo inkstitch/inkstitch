@@ -100,44 +100,18 @@ jobs:
           echo "-------------------------------------- file /__e/node20/bin/node"
           file /__e/node20/bin/node
 
-      # !!! this step effectively rewrites node installation done in the previous step !!!
       - name: Download Inkstitch # Download the source code, no submodules
         uses: actions/checkout@v4  # https://github.com/actions/checkout
 
 
-      - name: Install uv  # https://docs.astral.sh/uv/guides/integration/github/
-        uses: astral-sh/setup-uv@v5
-        with:
-          enable-cache: true
-
-      - name: Check architecture uv & python
+      - name: Update OS    # first update OS
         shell: bash
         run: |
 
-          echo "-------------------------------------- PATH"
-          echo "PATH=$PATH"
-
-          echo "-------------------------------------- uv architecture"
-          UV_PATH=$(type uv | awk '{print $NF}')
-          file $UV_PATH
-
-
-          echo "-------------------------------------- python architecture"
-          python3 --version  # check python version
-          python3 -c "import platform; print(platform.architecture())"
-
-          PYTHON_PATH=$(type python3.11 | awk '{print $NF}')
-          echo "PYTHON_PATH: $PYTHON_PATH"
-          file $PYTHON_PATH  # check python version
-
-
-      - name: Setup environment
-        shell: bash
-        run: |  # working directory is the root of the inkstitch repo
-
           # echo "-------------------------------------- system information: /etc/os-release"
           # # cat /etc/os-release
-          # ls -lR /etc
+          # ls -l /etc
+
           echo "-------------------------------------- system information: lsb_release -a"
           lsb_release -a
           uname -a  # print system information
@@ -147,26 +121,6 @@ jobs:
           echo "github.event.inputs.break_on: ${{ github.event.inputs.break_on }}"
           echo "inputs.break_on: ${{ inputs.break_on }}"
 
-          echo "------------------------------ uv python list"
-          uv python list
-          uv python install 311
-
-          uv python list
-          uv python pin --managed-python 311  # pin to uv managed python
-          # uv python pin --un-managed-python 311
-          uv venv  # create a virtual environment with the pinned python version
-
-          echo "-------------------------------------- activate virtual environment"
-          . .venv/bin/activate
-          echo "-------------------------------------- python architecture"
-          file .venv/bin/python  # check python version in the virtual environment
-          python3 -c "import platform; print(platform.architecture())"
-
-
-          if [[ ${{ inputs.break_on }} == "uv" ]]; then
-            echo "Stopping on request"
-            exit 1
-          fi
 
           echo "-------------------------------------- update apt"
           # install system dependencies
@@ -189,6 +143,60 @@ jobs:
 
           # for signing rpm
           apt-get install -y rpm
+
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5  # https://docs.astral.sh/uv/guides/integration/github/
+        with:
+          enable-cache: true    # cache on requirements**, uv.lock is OS dependent, on exit 1 cache save is skipped
+          python-version: 311   # force version, use same in install python
+
+
+      - name: Check architecture uv & python
+        shell: bash
+        run: |
+
+          echo "-------------------------------------- PATH"
+          echo "PATH=$PATH"
+
+          echo "-------------------------------------- uv architecture"
+          UV_PATH=$(type uv | awk '{print $NF}')
+          file $UV_PATH
+
+
+          echo "-------------------------------------- python architecture"
+          python3 --version  # check system python version
+          python3 -c "import platform; print(platform.architecture())"
+
+          PYTHON_PATH=$(type python3.11 | awk '{print $NF}')
+          echo "PYTHON_PATH: $PYTHON_PATH"
+          file $PYTHON_PATH  # check python version
+
+
+      - name: Setup UV Python
+        shell: bash
+        run: |  # working directory is the root of the inkstitch repo
+
+
+          echo "------------------------------ uv python list"
+          uv python install 311   # install python 3.11 see cache
+          uv python list
+          uv python pin --managed-python 311  # pin to uv managed python
+          # uv python pin --un-managed-python 311  # use system python
+          uv venv  # create a virtual environment with the pinned python version
+
+          echo "-------------------------------------- activate virtual environment"
+          . .venv/bin/activate
+          echo "-------------------------------------- python architecture"
+          file .venv/bin/python  # check python version in the virtual environment
+          python3 -c "import platform; print(platform.architecture())"
+
+
+          if [[ ${{ inputs.break_on }} == "uv" ]]; then
+            echo "Stopping on request"
+            exit 1
+          fi
+
 
           echo "-------------------------------------- bin/uv/generate pyproject.toml"
           bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
