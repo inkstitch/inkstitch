@@ -5,41 +5,36 @@ pystitch
 # So at least for releases we should use a tagged version here such as EXTENSIONS_AT_INKSCAPE_$version.
 inkex @ git+https://gitlab.com/inkscape/extensions.git@EXTENSIONS_AT_INKSCAPE_1.4.1
 
-# for linux user it may be tricky to install wxPython from sources
-# prebuilt packages: https://wxpython.org/pages/downloads/index.html
-#                    https://extras.wxpython.org/wxPython4/extras/linux/gtk3/
-wxPython>=4.1.1
 
 networkx
 shapely>=2.0.0
 lxml
 platformdirs
-numpy==2.2.6
+numpy<2.3.0
 jinja2>2.9
-requests
+# requests
 
-# toml release 0.10.2 still buggy for heterogenous arrays
-# tomli is built as tomllib in python 3.11 and higher
-tomli
+### tomli is built as tomllib in python 3.11 and higher
+tomli; python_version < '3.11'
 
 colormath2
 flask>=2.2.0
 fonttools
 trimesh>=3.15.2
 diskcache
-flask-cors
+# flask-cors
 pywinutils ; sys_platform == 'win32'
 pywin32 ; sys_platform == 'win32'
-types-pywin32; sys_platform == 'win32'
 
-# Test dependencies.
-# It should be okay to include these here because this list isn't the one used for bundling dependencies.
-# Instead Pyinstaller finds what dependencies the project needs based on what inkstitch.py imports
+### Test dependencies.
+### It should be okay to include these here because this list isn't the one used for bundling dependencies.
+### Instead Pyinstaller finds what dependencies the project needs based on what inkstitch.py imports
 pytest
 
-# Misc dev dependencies
+### Misc dev dependencies
 types-wxpython
 types-appdirs
 types-shapely
 types-networkx
 types-lxml
+types-pywin32; sys_platform == 'win32'
