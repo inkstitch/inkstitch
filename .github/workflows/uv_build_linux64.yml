@@ -76,7 +76,7 @@ jobs:
         uses: astral-sh/setup-uv@v5  # https://docs.astral.sh/uv/guides/integration/github/
         with:
           enable-cache: true    # cache on requirements**, uv.lock is OS dependent, on exit 1 cache save is skipped
-          cache-dependency-globs: pyproject.toml
+          cache-dependency-glob: pyproject.toml
           python-version: 311   # force version, use same in install python
 
       - name: Setup UV Python
