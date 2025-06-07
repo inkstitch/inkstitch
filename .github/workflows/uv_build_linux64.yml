@@ -105,6 +105,7 @@ jobs:
 
           echo "-------------------------------------- uv sync"
           uv sync --inexact # install dependencies from pyproject.toml & keep wxPython
+          uv pip tree  # print installed packages
 
           if [[ $MY_BREAK_ON == "sync" ]]; then
             echo "Stopping on request $MY_BREAK_ON"
