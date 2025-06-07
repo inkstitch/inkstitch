@@ -2,15 +2,16 @@
 
 ### Ink/Stitch requirements file.
 
-### - Hash of this file is used for cache in the CI pipeline (github actions).
-###   - Any change in this file will trigger a rebuild of the cache.
-### - Keep this file up to date with the latest versions of the dependencies with pyproject-in.toml
+### - Hash of this file is used by default for cache in the CI pipeline (github actions).
+###   - Any change in this file would trigger a rebuild of the cache.
+###   - Check logs of the CI pipeline to see if the cache was used.
+### - Keep this file up to date with the latest versions of the dependencies with pyproject.toml
 
 ### use latest
 pyembroidery @ git+https://github.com/inkstitch/pyembroidery
 
 ### install before inkex, required because inkex is without restriction and >3.50 cannot be compiled on some OS
-# pygobject<=3.50   # ubuntu <= 22.04,
+pygobject<=3.50 ; sys_platform == 'linux' or sys_platform == 'darwin'
 
 ### For linux user it may be tricky to install wxPython from sources
 ### prebuilt packages: https://wxpython.org/pages/downloads/index.html
@@ -27,7 +28,7 @@ lxml
 platformdirs
 numpy==2.2.6
 jinja2>2.9
-requests
+# requests
 
 ### tomli is built as tomllib in python 3.11 and higher
 tomli; python_version < '3.11'
@@ -37,10 +38,9 @@ flask>=2.2.0
 fonttools
 trimesh>=3.15.2
 diskcache
-flask-cors
+# flask-cors
 pywinutils ; sys_platform == 'win32'
 pywin32 ; sys_platform == 'win32'
-types-pywin32; sys_platform == 'win32'
 
 ### Test dependencies.
 ### It should be okay to include these here because this list isn't the one used for bundling dependencies.
@@ -53,3 +53,4 @@ types-appdirs
 types-shapely
 types-networkx
 types-lxml
+types-pywin32; sys_platform == 'win32'

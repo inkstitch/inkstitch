@@ -11,7 +11,7 @@ uv python pin 311
 uv venv
 
 ### create pyproject.toml file
-bin/uv/generate_pyproject.sh
+# bin/uv/generate_pyproject.sh
 # bin/uv/generate_pyproject.sh -n   # dont detect packages, will set manually later
 
 ### Manually add packages to pyproject.toml
@@ -27,4 +27,4 @@ bin/uv/generate_pyproject.sh
 # uv add mypkg
 
 ### install packages from pyproject.toml
-uv sync
+uv sync --inexact

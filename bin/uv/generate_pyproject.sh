@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+exit 0
 
 # - assuming pkg-config is installed
 # - copy pyprojetc-in.toml to pyproject.toml
