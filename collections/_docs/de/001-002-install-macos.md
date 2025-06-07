@@ -18,15 +18,18 @@ Lade die aktuelle Version für dein macOS System herunter.
 
 ### Ventura oder höher
 
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-osx-arm64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Apple Silicon</a></p>
+{% assign tag_name = site.github.latest_release.tag_name %}
+{% assign tag_name = tag_name | slice: 1, tag_name.size %}
 
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-osx-x86_64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Intel</a></p>
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-v{{ tag_name }}-osx-arm64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Apple Silicon</a></p>
 
-### [High Sierra (10.13), Mojave (10.14), Catalina (10.15), Big Sur (11), Monterey (12)
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-v{{ tag_name }}-osx-x86_64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Intel</a></p>
+
+### High Sierra (10.13), Mojave (10.14), Catalina (10.15), Big Sur (11), Monterey (12)
 
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-old-osx-x86_64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Intel</a></p>
 
-**Aktuelle Version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
+**Aktuelle Version:** [Ink/Stitch v{{ tag_name }} ({{ site.github.latest_release.published_at | date: "%d.%m.%Y"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
 ## Installation
 
@@ -113,9 +116,9 @@ Diese Meldung wird für ältere macOS Betriebssysteme als auch für Entwicklerve
 
 We also provide a zip download file which can be extraced in the the user extensions folder (see below: confirm installation path).
 
-Für Ventura und höher [dowload ZIP (intel)]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-x86_64.zip), [dowload ZIP (apple silicon)]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-osx-arm64.zip)
+Für Ventura und höher [dowload ZIP (intel)]({{ site.github.releases_url }}/latest/download/inkstitch-v{{ tag_name }}-osx-x86_64.zip), [dowload ZIP (apple silicon)]({{ site.github.releases_url }}/latest/download/inkstitch-v{{ tag_name }}-osx-arm64.zip)
 
-Für ältere macOS Betriebssysteme [download ZIP]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-old-osx-x86_64.zip)
+Für ältere macOS Betriebssysteme [download ZIP]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-old-osx-x86_64.zip)
 
 ### Ink/Stitch startet nicht / Menüpunkte sind grau
 
