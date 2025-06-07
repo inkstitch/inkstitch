@@ -20,7 +20,8 @@ dependencies = [
     "wxpython",
 
     ### Linux or Darwin GObject introspection (pygobject > 3.50 depends on gir2
-    "pygobject<=3.50 ; sys_platform == 'linux' or sys_platform == 'darwin'",
+    # "pygobject<=3.50 ; sys_platform == 'linux' or sys_platform == 'darwin'",
+    "pygobject<=3.50 ; sys_platform == 'linux'",
 
 
     ### *** inkex version (March 1, 2024) ***
