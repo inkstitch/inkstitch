@@ -4,7 +4,6 @@ on:
   #   branches-ignore:
   #     - master
   #     - main
-  #     - kgn/*
     tags:
     #   - "v*.*.*"
        - "old-build*"   # run on tags starting with "old-build", v* is ignored
