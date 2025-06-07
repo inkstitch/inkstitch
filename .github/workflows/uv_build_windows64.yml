@@ -122,7 +122,6 @@ jobs:
       #       not just the 'v*' tag, for more robust signing logic.
 
       - name: Set signing policy to release - tag v*
-        # if: startsWith(github.event.ref, 'refs/tags/v')
         if: env.MY_PRERELEASE == 'false'  # only for release builds
         shell: bash
         run: |
@@ -132,7 +131,7 @@ jobs:
 
 
       - name: upload-unsigned-exe - tag v*
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: env.MY_PRERELEASE == 'false'  # only for release builds
         id: upload-unsigned-exe  # ref steps.upload-unsigned-exe.outputs...
         uses: actions/upload-artifact@v4
         with:
@@ -142,7 +141,7 @@ jobs:
 
 
       - name: Sign-exe - tag v* # https://github.com/SignPath/github-action-submit-signing-request
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: env.MY_PRERELEASE == 'false'  # only for release builds
         id: Sign-exe            # ref steps.Sign-exe.outputs...
         uses: signpath/github-action-submit-signing-request@v1.1
         with:
@@ -156,7 +155,7 @@ jobs:
 
 
       - name: Copy signed exe to dist - tag v*
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: env.MY_PRERELEASE == 'false'  # only for release builds
         shell: bash
         run: |
             mv  -f signed-artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
@@ -172,7 +171,7 @@ jobs:
 
       # This installer will be signed in a subsequent step.
       - name: upload-unsigned-installer - tag v*
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: env.MY_PRERELEASE == 'false'  # only for release builds
         id: upload-unsigned-installer
         uses: actions/upload-artifact@v4       # https://github.com/actions/upload-artifact
         with:
@@ -181,7 +180,7 @@ jobs:
 
 
       - name: Sign-installer  - tag v*
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: env.MY_PRERELEASE == 'false'  # only for release builds
         id: Sign-installer
         uses: signpath/github-action-submit-signing-request@v1.1  # https://github.com/SignPath/github-action-submit-signing-request
         with:
