@@ -27,8 +27,8 @@
 {%- assign osx = osx | plus: asset.download_count %}
 {%- endif -%}
 
-{%- if asset.name contains "catalina" -%}
-{%- assign catalina = catalina | plus: asset.download_count %}
+{%- if asset.name contains "old" -%}
+{%- assign old = old | plus: asset.download_count %}
 {%- endif -%}
 
 {%- if asset.name contains "windows" -%}
@@ -47,8 +47,8 @@
   * SH: {{ linuxsh | delimited }}
   * TAR.XZ: {{ linuxtarxz }}
 * **macOS: {{ osx | delimited }}**
-  * Monterey +: {{ osx | minus: catalina | delimited }}
-  * Catalina +: {{ catalina | delimited }}
+  * Ventura +: {{ osx | minus: old | delimited }}
+  * High Sierra +: {{ old | delimited }}
 * **Windows: {{ windows | delimited }}**
 {: .monospace }
 
@@ -57,7 +57,13 @@
 
 ## Previous Ink/Stitch Versions
 
-{% assign release_ids = "167470890,110551039,104369751,71601622,56965572,56961429,56773344,42376616" | split: "," -%}
+{% comment %}
+{%- for release in site.github.releases %}
+* {{ release.id }} {{release.tag_name}}
+{%- endfor -%}
+{% endcomment %}
+
+{% assign release_ids = "223803551,167470890,110551039,104369751,71601622,56965572,56961429,56773344,42376616" | split: "," -%}
 {%- for release_id in release_ids -%}
 {%- assign release = site.github.releases | where: "id", release_id -%}
 {%- assign downloads = 0 -%}
