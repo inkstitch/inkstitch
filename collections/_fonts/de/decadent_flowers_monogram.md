@@ -11,8 +11,6 @@ data_title:
 ---
 {%- assign font = site.data.fonts.decadent_flowers_monogram.font -%}
 
-{% include upcoming_release.html %}
-
 ![decadent flowers monogram](/assets/images/fonts/decadent_flowers_monogram.png)
 
 ## Schriftzeichen

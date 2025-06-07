@@ -1,5 +1,5 @@
 ---
-title: "Blunesia 72"
+title: "Bluenesia Satin"
 permalink: /fr/fonts/blunesia/
 last_modified_at: 2025-05-05
 toc: false
@@ -10,8 +10,6 @@ data_title:
   - blunesia
 ---
 {%- assign font = site.data.fonts.blunesia.font -%}
-
-{% include upcoming_release.html %}
 
 ![Blunesia](/assets/images/fonts/blunesia_72.png)
 
@@ -24,7 +22,6 @@ Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 ```
 {: .font-glyphs }
 
-
 ## Dimensions
 
 A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
@@ -32,11 +29,10 @@ A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size
 Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
-
-
 ## Dans la vraie vie 
 
 {% include folder-galleries path="fonts/blunesia/" %}
+
 ## License
 
 [Télécharger la license de la police](https://github.com/inkstitch/inkstitch/tree/main/fonts/blunesia/LICENSE)

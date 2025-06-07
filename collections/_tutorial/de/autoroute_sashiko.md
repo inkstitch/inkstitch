@@ -15,8 +15,6 @@ techniken:
 schwierigkeitsgrad: 
   - mittel
 ---
-
-
 ![Sample](/assets/images/tutorials/sashiko/sashiko.jpg)
 
 [Die inkscape  für Ink/stitch-Erweiterung Sashiko](https://gitlab.com/kaalleen/sashiko-inkscape-extension) in Verbindung mit dem Werkzeug  `Automatisch Geführter Geradstich` (oder  mit "Redwork" Erweiterung) ermöglicht es, Sashiko-Stil-Stickdateien mit Mehrfach-Geradstich auf eine so einfache Weise zu produzieren, dass es fast unanständig ist.
@@ -50,8 +48,8 @@ Um von der Zeichnung zu einer Stickerei mit Dreifach-Geradstich zu gelangen:
 
 ** und das ist alles !!!!**.
 
- 
 Du hast nun eine automatisch erstellte Gruppe, die eine Mischung aus folgenden Elementen beinhaltet:
+
 * Pfade mit dreifachem Geradstich, deren Namen mit "Auto-Geradstich" beginnen und die der gewählten Zeichnung entsprechen.
 * Einfache Geradstichpfade, deren Namen mit "Auto-Geradstich-Verbindung" beginnen, die hinzugefügt wurden, um dir zu ermöglichen, ein Ergebnis ohne Fadensprünge zu erhalten.
 
@@ -62,8 +60,6 @@ Die so erstellte Gruppe kannst du nun so skalieren wie du möchtest, die oben ge
 Nutze die `Redwork` Erweiterung:
 
 Passe die Einstellungen an (0.5mm für die ersten zwei Parameter ist in der Regel eine gute Wahl).
-
-{% include upcoming_release.html %}
 
 Mit der aktivierten Option `Kombiniere Elemente des gleichen Typs` ohne Einstellungen für einen Mehrfachgeradstich, entsteht eine einzige durchgehende Linie, die alle Abschnitte genau zwei mal passiert.
 Ist ein Wert für Mehrfachgeradstiche gesetzt, alternieren Unterpfade und Mehrfachgeradstiche.

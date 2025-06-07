@@ -17,8 +17,6 @@ data_title:
 
 {%- assign font2 = site.data.fonts.hebrew_font_medium.font -%}
 
-{% include upcoming_release.html %}
-
 <img 
      src="/assets/images/fonts/hebrew_font_large.png"
      alt="hebrew_font_large" height="35">
@@ -26,8 +24,6 @@ data_title:
 <img 
      src="/assets/images/fonts/hebrew_font_medium.png"
      alt="Emilio20" height="23">
-     
-     
 
 ## Glyphs
 
@@ -48,12 +44,12 @@ It can be scaled from {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size
 up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
 
 ### Medium
+
 It can be scaled from {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
 up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm).
 
-
-
 ## Special features
+
 Each glyph contains the  original letter, in the form of a hidden path with red fill. These fills are not intended to be embroidered as is, but to help anyone who wants to modify this font. They can be ignored safely.
 
 ## In real life

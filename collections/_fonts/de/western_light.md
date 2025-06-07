@@ -11,9 +11,8 @@ data_title:
 ---
 {%- assign font = site.data.fonts.western_light.font -%}
 
-{% include upcoming_release.html %}
-
 ![Western light](/assets/images/fonts/western_light.png)
+
 ## Schriftzeichen
 
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
@@ -31,10 +30,8 @@ Sie kann bis auf {{ font.min_scale | times: 100 | floor }}% ({{ font.size | time
 
 ## Impressionen
 
-
 {% include folder-galleries path="fonts/western_light/" %}
 
 ## Lizenz
-
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/western_light/LICENSE)

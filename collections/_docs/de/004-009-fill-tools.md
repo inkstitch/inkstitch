@@ -40,8 +40,6 @@ Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrer
 
 ## Knockdown Füllung
 
-{% include upcoming_release.html %}
-
 Hilfsmethode zur Erstellung von:
 - einem Füllbereich unter allen gewählten Elementen, optional mit positivem oder negativem Versatz. Dies kann sehr nützlich sein, für das Arbeiten mit hochflorigen Stoffen (bei positivem Versatz) oder um eine globale Unterlage zu erstellen (negativer Versatz)
 - einem rechteckigen oder kreisförmigen Bereich um alle ausgewählten Elemente herum, wobei die Elemente selbst ausgespart werden. Dies kann für einen Embossing-Effekt nützlich sein.

@@ -4,8 +4,6 @@ permalink: /docs/install-addons/
 last_modified_at: 2025-03-29
 toc: true
 ---
-{% include upcoming_release.html %}
-
 Installs color palettes or a symbol library for motif stitches into Inkscape
 
 * `Extensions > Ink/Stitch > Install Addons for Inkscape`

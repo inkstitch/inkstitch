@@ -22,8 +22,6 @@ Additionally it is recommended to save a license file as well.
 
 ## Edit JSON
 
-{% include upcoming_release.html %}
-
 This extension allows you do edit an existing font information file. If the font doesn't have a json file, create one with [generate JSON](#generate-json)
 
 This extension also update the glyph list. 
@@ -154,8 +152,6 @@ Ink/Stitch comes with a tool to clean up your svg font.
 
 ## Set color index
 
-{% include upcoming_release.html %}
-
 Sets an index to inform the lettering tool on where to position the selected elements when color sorting is enabled.
 
 * In a font file select elements of the same color
@@ -165,5 +161,3 @@ Sets an index to inform the lettering tool on where to position the selected ele
 
 The JSON-file must specify if a font is color sortable. Use [Edit JSON](#edit-json) and enable the option `Sortable` in the `Font Settings` tab.
 {: .notice--warning }
-
-

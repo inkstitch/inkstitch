@@ -49,7 +49,6 @@ Diese Methode zur Erstellung von Satinsäulen ist besonders für Grafik-Tablets 
 Mehr Informationen über [Zickzack-Linie zu Satin](/de/docs/satin-tools/#zickzack-line-zu-satin)
 
 ### 4. Füllung zu Satin
-{% include upcoming_release.html %}
 
 Füllung zu Satin hilft bei der Umwandlung von Füllflächen zu Satinsäulen. Es ist eine halbautomatische Funktion und benötigt ein wenig Handarbeit.
 
@@ -97,8 +96,6 @@ Wenn du genau zwei Sprossen (und zwei Holme) nutzt, ist es schwer für Ink/Stitc
 {: .notice--warning }
 
 ## Start- und Endposition
-
-{% include upcoming_release.html %}
 
 Satinsäulen beginnen und enden automatisch an den Positionen, die am nächsten zum vorangegangenen, bzw. folgenden Element liegen.
 

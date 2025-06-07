@@ -15,16 +15,11 @@ techniques:
 field-of-use:
 user-level: 
 ---
-
-
 ![Sample](/assets/images/tutorials/sashiko/sashiko.jpg)
-
 
 [L'extension inkscape Sashiko pour ink/stitch ](https://gitlab.com/kaalleen/sashiko-inkscape-extension) associée à l'agencement automatique de points droits ou à l'extension redwork permet de produire facilement des fichiers de broderie style sashiko .
 
-
 Notez que cette extension est légérement différente de l'extension originale [Sashiko Inkscape extension](https://inkscape.org/~FractalLotus/%E2%98%85sashiko-stitching-patterns), en ce sens que le résultat produit ne contient jamais deux copies superposées du même chemin.
-
 
 Il convient bien sûr d'installer l'extension Sashiko pour ink/stitch. 
 
@@ -64,18 +59,11 @@ Utilisez maintenant `Extensions > Ink/Stitch > Outils:Trait > Redwork`
 
 Choisissez vos paramètres (0.5mm est un bon choix pour les deux premiers  paramètres.
 
-{% include upcoming_release.html %}
-
 Si vous choisissez l'option combiner et 0 répétition de point multiple, vous obtiendrez un unique chemin qui passe partout exactement deux fois.
 
 Si vous choisissez l'option combiner et un point multiple, vous obtiendrez une alternance de chemin de dessous au point droit  et  de chemin en point multiple. Pour un rendu uniforme, chaque chemin sera brodé une fois en point droit simple dessous et une fois en point multiple dessus
 
 Si vous choisissez de ne pas  combiner vous obtiendrez une multitude de chemins. Cette option n'est à utiliser que si vous souhaitez manipuler le résultat.
-
-
-
- 
-
 
 Vous pourriez aussi essayer avec d'autrez extensions comme :
 

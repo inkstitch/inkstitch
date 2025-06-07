@@ -11,8 +11,6 @@ data_title:
 ---
 {%- assign font = site.data.fonts.malika.font -%}
 
-{% include upcoming_release.html %}
-
 ![ambigue](/assets/images/fonts/malika.png)
 
 ## Glyphes
@@ -24,7 +22,6 @@ Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 ```
 {: .font-glyphs }
 
-
 ## Dimensions
 
 A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
@@ -33,8 +30,8 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 ## Particularités
-Chaque glyphe contient la forme de la lettre originelle, sous forme d'un chemin caché avec un remplissage rouge. Ces chemins ne sont pas prévus pour être brodés tels quels, mais pour aider qui voudrait modifier cette fonte, par exemple pour créer un embossage. Ils peuvent être ignorés sans souci.
 
+Chaque glyphe contient la forme de la lettre originelle, sous forme d'un chemin caché avec un remplissage rouge. Ces chemins ne sont pas prévus pour être brodés tels quels, mais pour aider qui voudrait modifier cette fonte, par exemple pour créer un embossage. Ils peuvent être ignorés sans souci.
 
 ## Dans la vraie vie 
 

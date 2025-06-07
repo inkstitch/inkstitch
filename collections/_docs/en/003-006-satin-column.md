@@ -46,8 +46,6 @@ This method is most convenient in case you have a touch screen or graphic tablet
 
 Get more information about [Zigzag Line to Satin](/docs/satin-tools/#zigzag-line-to-satin)
 
-{% include upcoming_release.html %}
-
 ### 4. Fill to Satin
 
 Fill to satin can be used to convert a set of fills into a set of satins. It is a semi-automatic function and requires a little manual work.
@@ -97,8 +95,6 @@ The rung method will give you more control over the way the satin column is rend
 {: .notice--warning }
 
 ## Start and end position
-
-{% include upcoming_release.html %}
 
 Satin columns automatically start at the nearest point to the previous element and end at the nearest point to the next element.
 

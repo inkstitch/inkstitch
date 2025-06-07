@@ -17,8 +17,6 @@ data_title:
 
 {%- assign font2 = site.data.fonts.hebrew_font_medium.font -%}
 
-{% include upcoming_release.html %}
-
 <img 
      src="/assets/images/fonts/hebrew_font_large.png"
      alt="hebrew_font_large" height="35">

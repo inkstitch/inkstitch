@@ -25,8 +25,6 @@ data_title:
 {%- assign font2 = site.data.fonts.barstitch_textured.font -%}
 {%- assign font3 = site.data.fonts.barstitch_mandala.font -%}
 
-{% include upcoming_release.html %}
-
 <img 
      src="/assets/images/fonts/barstitch_bold.png"
      alt="Barstitch Bold" height="23">
@@ -46,7 +44,6 @@ data_title:
 <img 
      src="/assets/images/fonts/barstitch_cloudy.png"
      alt="Barstitch textured" height="90">
-     
 
 ## Schriftzeichen
 
@@ -58,6 +55,7 @@ Diese Schriften enthalten {{ font1.glyphs.size }} Schriftzeichen:
 {: .font-glyphs }
 
 ## Maße
+
 ### Barstitch bold und Barstitch regular
 
 Bei einer Skalierung von 100 % ist diese Schrift {{ font1.size }} mm groß.
@@ -77,11 +75,10 @@ Bei einer Skalierung von 100 % ist diese Schrift {{ font3.size }} mm groß.
 
 Sie kann bis auf {{ font3.min_scale | times: 100 | floor }}% ({{ font3.size | times: font3.min_scale }} mm) herunterskaliert und bis zu {{ font3.max_scale | times: 100 | floor }}% ({{ font3.size | times: font3.max_scale }} mm) hochskaliert  werden.
 
-
 ## Impressionen
+
 {% include folder-galleries path="fonts/barstitch/" %}
 
 ## License
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/barstitch_bold/LICENSE)
-

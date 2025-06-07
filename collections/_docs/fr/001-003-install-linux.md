@@ -19,77 +19,69 @@ Téléchargez la dernière version disponible pour Linux (Ink/Stitch {{ tag_name
 
 {% assign tag_name = tag_name | slice: 1,tag_name.size %}
 
-<div class="instructions">
-  <p class="download-button"><a href="{{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_amd64.deb" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger le paquet DEB </a></p>
-  <input type="checkbox" id="deb-instructions" />
-  <label for="deb-instructions"> Instructions  d'installation<p class="down">▿</p><p class="up">▵</p></label>
-  <section>
-    <p class="headline">Installation du paquet deb </p>
-    <p>Double cliquez sur le fichier deb téléchargé et suivez le processus d'installation.</p>
-  </section>
-</div>
-
-<div class="instructions">
-  <p class="download-button"><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-1.x86_64.rpm" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger le paquet RPM </a></p>
-  <input type="checkbox" id="rpm-instructions" />
-  <label for="rpm-instructions">Instructions d'installation <p class="down">▿</p><p class="up">▵</p></label>
-  <section>
-    <p class="headline">Installer le paquet rpm </p>
-    <p>Double cliquez sur le fichier rpm téléchargé et suivez le processus d'installation.</p>
-    <p><a href="/assets/files/inkstitch.gpg">GPG-Key</a></p>
-  </section>
-</div>
-
-<div class="instructions">
-  <p class="download-button"><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux.sh" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger le script d'installation </a></p>
-  <input type="checkbox" id="installer-instructions" />
-  <label for="installer-instructions">Instructions  d'installation <p class="down">▿</p><p class="up">▵</p></label>
-  <section>
-    <p class="headline"> Installer avec le script d'installation</p>
-    <p>Utilisez cette version si vous utilisez la version AppImage d'Inkscape ou si vous voulez installer  Ink/Stitch uniquement pour votre propre utilisateur. Ce script est aussi utile si votre système ne supporte pas les paquets deb ou rpm.</p>
-    <p>Ouvrez votre terminal et naviguez jusqu'au répertoire qui contient le script que vous avez téléchargé, par exemple</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd Downloads</code></pre></div></div>
-    <p>Exécutez la commande suivante</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh inkstitch-{{ tag_name }}-linux.sh</code></pre></div></div>
-    <p><b>Option pour les experts</b></p>
-    <p> Ce script va tenter de déterminer automatiquement où installer les extensions utilisateurs d'Inkscape. S'il se trompe, vous pouvez modifier une de ces variables d'environnement:</p>
-    <ul>
-      <li>
-        <p><code class="language-plaintext highlighter-rouge">INKSCAPE_PATH (ex: /usr/bin/inkscape)</code></p>
-        <p> Le chemin vers l'exécutable inkscape.  Le script demandera à ce programme où installer les extensions en lui transmettant l'argument --user-data-directory.</p>
-      </li>
-      <li>
-        <p><code class="language-plaintext highlighter-rouge">INKSCAPE_EXTENSIONS_PATH (ex: $HOME/.config/inkscape/extensions)</code></p>
-        <p>Le chemin vers le repertoire d'extensions inkscape.  Utilisez cela pour contourner la methode  --user-data-directory  et spécifier vous même le repertoire.</p>
-      </li>
-    </ul>
-    <p>Si vous preferrez l'installer vous même, exécutez ce script avec  <code class="language-plaintext highlighter-rouge">--extract</code> pour produire le fichier original inkstitch-&lt;version&gt;.tar.xz dans le répertoire courant.</p>
-  </section>
-</div>
-
-<div class="instructions">
-  <p class="download-button"><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux.tar.xz" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Télécharger l'archive tar.xz </a></p>
-  <input type="checkbox" id="archive-instructions" />
-  <label for="archive-instructions">Instructions d'installation <p class="down">▿</p><p class="up">▵</p></label>
-  <section>
-  <p class="headline">Installer avec l'archive  tar.xz </p>
-  <p>Allez à  <code class="language-plaintext highlighter-rouge">Edition > Préférences > Système</code> et vérifiez où se trouve votre dossier <code class="language-plaintext highlighter-rouge"> Extensions utilisateur</code>.</p>
-  <p><img alt="Extensions folder location" src="/assets/images/docs/fr/extensions-folder-location-linux.jpg" /></p>
-  <p>Décompressez l'archive Ink/Stitch dans ce dossier.</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/.config/inkscape/extensions
-$ tar -xvf ~/Downloads/inkstitch-{{ tag_name }}-linux.tar.xz</code></pre></div></div>
-  </section>
-</div>
+* x86_64:
+  [tar.xz]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux-x86_64.tar.xz),
+  [sh]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux-x86_64.sh),
+  [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}.x86_64.rpm),
+  [deb]({{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_amd64.deb)
+* i386:
+  [tar.xz]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux32-i386.tar.xz),
+  [sh]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux32-i386.sh),
+  [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}.i386.rpm),
+  [deb]({{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_i386.deb)
+* arm64:
+  [tar.xz]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux-aarch64.tar.xz),
+  [sh]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux-aarch64.sh),
+  [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}.aarch64.rpm),
+  [deb]({{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_arm64.deb)
+* Arch linux: <https://aur.archlinux.org/packages/inkstitch>
+* NixOS: <https://search.nixos.org/packages?channel=unstable&show=inkscape-extensions.inkstitch>
 
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
-### NixOS
+### Installation avec DEB ou RPM
 
-Les utilisateurs de nixOS peuvent installer Ink/Stitch directement via le shell nix <https://search.nixos.org/packages?channel=unstable&show=inkscape-extensions.inkstitch>
+Double cliquez sur le fichier deb téléchargé et suivez le processus d'installation.
 
-### Arch Linux
+RPM: [GPG-Key](/assets/files/inkstitch.gpg)
 
-Les utilisateurs d'Arch Linux peuvent utiliser un paquet AUR: [https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch](https://aur.archlinux.org/packages/inkstitchhttps://aur.archlinux.org/packages/inkstitch)
+### Installation avec SH
+
+Utilisez cette version si vous utilisez la version AppImage d'Inkscape ou si vous voulez installer  Ink/Stitch uniquement pour votre propre utilisateur. Ce script est aussi utile si votre système ne supporte pas les paquets deb ou rpm.
+
+Ouvrez votre terminal et naviguez jusqu'au répertoire qui contient le script que vous avez téléchargé et exécutez le script, par exemple
+
+```
+cd Downloads
+sh inkstitch-{{ tag_name }}-linux.sh
+```
+
+#### Option pour les experts
+
+Ce script va tenter de déterminer automatiquement où installer les extensions utilisateurs d'Inkscape. S'il se trompe, vous pouvez modifier une de ces variables d'environnement:
+
+* `INKSCAPE_PATH` (ex: /usr/bin/inkscape)
+
+  Le chemin vers l'exécutable inkscape.  Le script demandera à ce programme où installer les extensions en lui transmettant l'argument --user-data-directory.
+
+* `INKSCAPE_EXTENSIONS_PATH` (ex: $HOME/.config/inkscape/extensions)
+
+  Le chemin vers le repertoire d'extensions inkscape.  Utilisez cela pour contourner la methode `--user-data-directory` et spécifier vous même le repertoire.
+
+Si vous preferrez l'installer vous même, exécutez ce script avec `--extract` pour produire le fichier original inkstitch-&lt;version&gt;.tar.xz dans le répertoire courant.
+
+### Installation avex TAR.XZ
+
+Allez à `Edition > Préférences > Système` et vérifiez où se trouve votre dossier `Extensions utilisateur`.
+
+![Extensions folder location](/assets/images/docs/fr/extensions-folder-location-linux.jpg)
+
+Décompressez l'archive Ink/Stitch dans ce dossier.
+
+```
+$ cd ~/.config/inkscape/extensions
+$ tar -xvf ~/Downloads/inkstitch-{{ tag_name }}-linux.tar.xz
+```
 
 ## Exécuter Ink/Stitch
 
@@ -111,8 +103,6 @@ Si vous voulez mettre à jour un paquet `deb` ou `rpm`, vous n'avez qu'à télé
 Le `script d'installation` lui aussi supprime les anciennes versions d'Ink/Stitch avant d'installer la nouvelle.
 
 Attention, ceci n'est vrai que pour les installations précédentes qui ont été faites par la même méthode. Si vous avez installé autrement, suivez d'abord ces instructions de mise à jour pour les anciennes versions:
-
-
 
 ### Versions plus anciennes que  Ink/Stitch v2.1.0 ou  version tar.xz
 

@@ -1,5 +1,5 @@
 ---
-title: "Blunesia 72"
+title: "Bluenesia Satin"
 permalink: /de/fonts/blunesia/
 last_modified_at: 2025-05-05
 toc: false
@@ -11,9 +11,7 @@ data_title:
 ---
 {%- assign font = site.data.fonts.blunesia.font -%}
 
-{% include upcoming_release.html %}
-
-![Blunesia](/assets/images/fonts/blunesia_72.png)
+![Bluenesia](/assets/images/fonts/blunesia_72.png)
 
 ## Schriftzeichen
 
@@ -29,7 +27,6 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 Bei einer Skalierung von 100 % ist diese Schrift {{ font.size }} mm groß.
 
 Sie kann bis auf {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm) herunterskaliert und bis zu {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm) hochskaliert  werden.
-
 
 ## Impressionen
 

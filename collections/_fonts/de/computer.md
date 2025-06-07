@@ -17,12 +17,9 @@ data_title:
 
 {%- assign font2 = site.data.fonts.computer_small.font -%}
 
-{% include upcoming_release.html %}
-
 <img 
      src="/assets/images/fonts/computer.png"
      alt="Emilio20" height="23">
-     
 
 ## Schriftzeichen
 

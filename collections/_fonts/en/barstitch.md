@@ -25,28 +25,26 @@ data_title:
 {%- assign font2 = site.data.fonts.barstitch_textured.font -%}
 {%- assign font3 = site.data.fonts.barstitch_mandala.font -%}
 
-{% include upcoming_release.html %}
-
-<img 
+<img
      src="/assets/images/fonts/barstitch_bold.png"
      alt="Barstitch Bold" height="23">
-     
-<img 
+
+<img
      src="/assets/images/fonts/barstitch_regular.png"
      alt="Barstitch Bold" height="23">
 
-<img 
+<img
      src="/assets/images/fonts/barstitch_textured.png"
      alt="Barstitch textured" height="40">
 
-<img 
+<img
      src="/assets/images/fonts/barstitch_mandala.png"
      alt="Barstitch textured" height="90">
-    
-<img 
+
+<img
      src="/assets/images/fonts/barstitch_cloudy.png"
      alt="Barstitch textured" height="90">
-     
+
 ## Glyphs
 
 These fonts contains  {{ font1.glyphs.size }} glyphs:
@@ -57,6 +55,7 @@ These fonts contains  {{ font1.glyphs.size }} glyphs:
 {: .font-glyphs }
 
 ## Dimensions
+
 ### Barstitch Bold and Barstitch regular
 
 At a scale of 100% these fonts have an approximate height of {{ font1.size }} mm. 

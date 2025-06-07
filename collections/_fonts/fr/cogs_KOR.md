@@ -9,8 +9,6 @@ preview_image:
 data_title:
   - cogs_KOR
 ---
-{% include upcoming_release.html %}
-
 {%- assign font = site.data.fonts.cogs_KOR.font -%}
 ![cogs_KOR](/assets/images/fonts/cogs_KOR.png)
 

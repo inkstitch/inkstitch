@@ -11,8 +11,6 @@ data_title:
 ---
 {%- assign font = site.data.fonts.western_light.font -%}
 
-{% include upcoming_release.html %}
-
 ![Western light](/assets/images/fonts/western_light.png)
 
 ## Glyphes
@@ -23,7 +21,6 @@ Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 {{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
-
 
 ## Dimensions
 

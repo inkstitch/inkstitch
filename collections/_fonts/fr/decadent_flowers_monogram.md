@@ -11,10 +11,7 @@ data_title:
 ---
 {%- assign font = site.data.fonts.decadent_flowers_monogram.font -%}
 
-{% include upcoming_release.html %}
-
 ![decadent flowers monogram](/assets/images/fonts/decadent_flowers_monogram.png)
-
 
 ## Glyphes
 
@@ -25,7 +22,6 @@ Cette fonte comporte  {{ font.glyphs.size }} glyphes:
 ```
 {: .font-glyphs }
 
-
 ## Dimensions
 
 A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
@@ -33,14 +29,12 @@ A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size
 Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
-
 ## Particularités
+
 La première couleur est un remplissage en points couchant, utile pour broder un support "poilu" tel que de l'éponge. 
 Elle peut être sautée si la broderie est exécutée sur un support standard.
 
 ## Dans la vraie vie 
-
-
 
 {% include folder-galleries path="fonts/decadent_flowers_monogram/" %}
 

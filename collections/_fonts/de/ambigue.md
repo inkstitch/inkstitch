@@ -11,8 +11,6 @@ data_title:
 ---
 {%- assign font = site.data.fonts.ambigue.font -%}
 
-{% include upcoming_release.html %}
-
 ![Ambigue](/assets/images/fonts/ambigue.png)
 ## Schriftzeichen
 

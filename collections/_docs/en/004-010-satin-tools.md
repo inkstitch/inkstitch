@@ -17,7 +17,6 @@ toc: true
 **Tip:** For faster access [set shortcuts](/docs/customize/) on specific satin tools.
 {: .notice--info}
 
-
 ## Auto-Route Satin Columns...
 
 This tool will replace your satins with a new set of satin columns in logical stitching order. Under-pathing and jump-stitches will be added as necessary and satins will be broken to facilitate jumps. The resulting satins will retain all of the parameters you had set on the original satins, including underlay, zig-zag spacing, etc.
@@ -37,9 +36,7 @@ This tool will replace your satins with a new set of satin columns in logical st
 
 * If you prefer to keep your previous order (which might be the case if you have overlaying satins), enable the option **Preserve order of Satin Columns**.
 
-* {% include upcoming_release.html %}
-
-  **Keep original paths** will indicate if the original elements will be removed or kept.
+* **Keep original paths** will indicate if the original elements will be removed or kept.
 
 ## Convert Line to Satin
 
@@ -65,8 +62,6 @@ Split a satin column at a specified point. The split happens at a stitch boundar
 6. The split point command and connector line disappear, and nothing else appears to have happened. Select your satin and you'll see that it's been split.
 
 ## Fill to Satin
-
-{% include upcoming_release.html %}
 
 Fill to satin can be used to convert a fill into a satin. It is a semi-automatic function and requires a little manual work.
 

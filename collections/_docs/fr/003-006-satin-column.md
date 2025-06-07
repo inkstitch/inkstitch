@@ -55,7 +55,6 @@ Cette méthode est particulièrement adaptée aux écrans tactiles et aux tablet
 
 Plus d'information  sur [Convertir "ligne en zigzag" en satin](/fr/docs/satin-tools/#zigzag-line-to-satin)
 
-{% include upcoming_release.html %}
 ### 4. "Remplissage" en Satin
 
 Remplissage en satin peut être utilisé pour convertir un remplissage en satin. C'est une fonction semi-automatique qui nécessite un peu de travail manuel.
@@ -114,8 +113,6 @@ Cependant, il existe des situations dans lesquelles vous devez ajouter manuellem
 
 ## Position de début et de fin
 
-{% include upcoming_release.html %}
-
 Les colonnes satin commencent et terminent automatiquement au point le plus proche.
 
 Pour désactiver ce comportement, ouvrez le [dialogue de paramétrage](/fr/docs/params/) et désactivez une ou deux des options commencer/terminer au point le plus proche.
@@ -170,9 +167,6 @@ Certains de ces paramètres ne font pas partie de la version récente.
 |Arrêter après                 |☑ |Fait faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
 |Couper après                  |☑ | Coupe le fil après avoir brodé cet objet|
 {: .params-table }
-
-
-
 
 ### Sous-couche centrale
 

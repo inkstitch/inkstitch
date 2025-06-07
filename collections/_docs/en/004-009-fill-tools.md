@@ -35,7 +35,7 @@ While "simple" splits up loops, it will not respect overlapping subpaths. It wil
 [Download SVG](/assets/images/docs/en/break_apart.svg)
 
 ## Convert to gradient blocks
-upcom
+
 Convert to gradient blocks will split a fill with a linear gradient into multiple blocks of solid color and adapted row spacing.
 
 ### Usage
@@ -48,8 +48,6 @@ Convert to gradient blocks will split a fill with a linear gradient into multipl
    ![color blocks](/assets/images/docs/color_blocks.png)
 
 ## Knockdown Fill
-
-{% include upcoming_release.html %}
 
 Helper method to generate either
 - a fill area underneath all selected elements, optionally with a positive or a negative offset. This can be very useful when working with high pile fabric (usually with a positive offset) or to create global underlay (usually with a negative offset)

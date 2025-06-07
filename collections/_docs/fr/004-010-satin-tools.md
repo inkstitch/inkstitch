@@ -37,9 +37,7 @@ Cet outil remplacera vos colonnes satin par un nouvel ensemble de colonnes satin
 
 * Si vous préférez conserver votre ordre initial (ce qui pourrait être le cas si vous avez superposé des satins), activez l'option ** **Préserver l'ordre des colonnes satin**.
 
-* {% include upcoming_release.html %}
-
- **Garder les chemins originels** indique si les éléments originels doivent être gardés ou pas.
+* **Garder les chemins originels** indique si les éléments originels doivent être gardés ou pas.
 
 ## Trait en Satin
 
@@ -65,11 +63,6 @@ Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'
 6. La commande de point de partage et la ligne de connexion disparaissent et il semble que rien ne s'être passé. Sélectionnez votre satin et vous verrez qu'il a été divisé.
 
 ## Remplissage en Satin {#fill-to-satin}
-
-
-{% include upcoming_release.html %}
-
-
 
 Remplissage en satin peut être utilisé pour convertir un remplissage en satin. C'est une fonction semi-automatique qui nécessite un peu de travail manuel.
 

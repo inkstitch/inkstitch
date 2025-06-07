@@ -11,8 +11,6 @@ data_title:
 ---
 {%- assign font = site.data.fonts.western_light.font -%}
 
-{% include upcoming_release.html %}
-
 ![Western light](/assets/images/fonts/western_light.png)
 
 ## Glyphs

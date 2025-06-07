@@ -11,8 +11,6 @@ data_title:
 ---
 {%- assign font = site.data.fonts.malika.font -%}
 
-{% include upcoming_release.html %}
-
 ![malika](/assets/images/fonts/malika.png)
 
 ## Schriftzeichen
@@ -38,6 +36,7 @@ Jeder Buchstaben enthält das Originalzeichen in einem versteckten Element mit e
 ## Impressionen
 
 {% include folder-galleries path="fonts/malika/" %}
+
 ## Lizenz
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/malika/LICENSE)

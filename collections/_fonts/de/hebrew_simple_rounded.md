@@ -17,12 +17,10 @@ data_title:
 
 {%- assign font2 = site.data.fonts.hebrew_simple_rounded_small.font -%}
 
-{% include upcoming_release.html %}
-
-<img 
+<img
      src="/assets/images/fonts/hebrew_simple_rounded.png"
      alt="Hebrew simple  rounded " height="23">
-<img 
+<img
      src="/assets/images/fonts/hebrew_simple_rounded_small.png"
      alt="Hebrew simple  rounded " height="10">     
 
@@ -38,12 +36,14 @@ Diese Schrift enthält  {{ font1.glyphs.size }} Schriftzeichen:
 ## Maße
 
 ### Hebrew simple rounded font
+
 Bei einer Skalierung von 100 % ist diese Schrift {{ font1.size }} mm groß.
 
 Sie kann bis auf {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm) herunterskaliert und 
 bis zu {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm) hochskaliert  werden.
 
 ### Small simple rounded font
+
 Sie kann bis auf {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm) herunterskaliert und 
 bis zu {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font1.max_scale }} mm) hochskaliert  werden.
 

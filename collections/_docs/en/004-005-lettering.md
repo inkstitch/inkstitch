@@ -44,7 +44,6 @@ The text module creates multi-line text. Choose the right font for your project 
 
 * **Color sort**
 
-  {% include upcoming_release.html %}
   Sort colors of multicolor fonts to avoid a huge amount of color changes.
 
 * **Stitch lines of text back and forth**
@@ -54,7 +53,6 @@ The text module creates multi-line text. Choose the right font for your project 
 
 * **Align Text**
 
-  {% include upcoming_release.html %}
   Align multiline text: left, center, right, block (default), block (letterspacing)
 
 * **Add trims**
@@ -106,8 +104,6 @@ When the colors appear in the same order in every letter and when each color is 
 repeat until all the colors are grouped, always starting with selecting the last path of a letter.
 
 ## Batch Lettering
-
-{% include upcoming_release.html %}
 
 Batch lettering allows to easily create multiple text files.
 

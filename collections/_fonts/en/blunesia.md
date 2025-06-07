@@ -1,5 +1,5 @@
 ---
-title: "Blunesia 72"
+title: "Bluenesia Satin"
 permalink: /fonts/blunesia/
 last_modified_at: 2025-05-05
 toc: false
@@ -11,13 +11,11 @@ data_title:
 ---
 {%- assign font = site.data.fonts.blunesia.font -%}
 
-{% include upcoming_release.html %}
-
 ![Blunesia](/assets/images/fonts/blunesia_72.png)
 
 ## Glyphs
 
-This font contains  {{ font.glyphs.size }} glyphs:
+This font contains {{ font.glyphs.size }} glyphs:
 
 ```
 {{ font.glyphs | sort | join: ' ' }}
@@ -31,10 +29,7 @@ At a scale of 100% this font has an approximate height of {{ font.size }} mm.
 It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
 up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
-
 ## In real life
-
-
 
 {% include folder-galleries path="fonts/blunesia/" %}
 

@@ -23,8 +23,6 @@ Le fichier json doit inclure au minimum le nom des polices.
 
 ## Editer le fichier JSON {#edit-json}
 
-{% include upcoming_release.html %}
-
 Cette extension permet d'éditer les informations existantes sur une police.  Si la police n'a pas encore de fichier json, il faut en créer un avec  [generer le fichier JSON](#generate-json). Elle met à jour la liste des glyphes.
 
 ### Usage
@@ -154,10 +152,7 @@ Ink/Stitch contient un outil de nettoyage de votre fichier de fonte.
 3. Sélectionnez votre fichier de fonte
 4. Cliquez sur `Appliquer`
 
-
 ## Définir l'indice de tri des couleurs {#set-color-index}
-
-{% include upcoming_release.html %}
 
 Défini un indice qui permet à l'outil de lettrage de savoir où positionner les éléments lorsque tri des couleurs est activé.
 

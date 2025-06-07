@@ -11,8 +11,6 @@ data_title:
 ---
 {%- assign font = site.data.fonts.inkstitch_masego.font -%}
 
-{% include upcoming_release.html %}
-
 ![Inkstitch Masego](/assets/images/fonts/inkstitch_masego.png)
 
 ## Glyphs

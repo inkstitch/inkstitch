@@ -11,8 +11,6 @@ data_title:
 ---
 {%- assign font = site.data.fonts.califragilistic.font -%}
 
-{% include upcoming_release.html %}
-
 ![Califragilistic](/assets/images/fonts/califragilistic.png)
 
 ## Glyphs
@@ -32,6 +30,7 @@ It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size |
 up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 ## In real life
+
 {% include folder-galleries path="fonts/califragilistic/" %}
 
 ## License

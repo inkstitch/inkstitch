@@ -11,8 +11,6 @@ data_title:
 ---
 {%- assign font = site.data.fonts.sunset.font -%}
 
-{% include upcoming_release.html %}
-
 ![Sunset](/assets/images/fonts/sunset.png)
 
 ## Glyphs

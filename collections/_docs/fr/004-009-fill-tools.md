@@ -36,7 +36,6 @@ Info: Pour les chemins qui se chevauchent, l'étape 1 n'est effectuée que par c
 ![Break apart fill objects](/assets/images/docs/en/break_apart.jpg)
 [Download SVG](/assets/images/docs/en/break_apart.svg)
 
-
 ## Convertir en blocs de dégradés {#convert-to-gradient-blocks}
 
 Convertir en blocs de dégradé va découper un remplissage dont la couleur de fond est un dégradé linéaire en plusieurs blocs monochromes avec un espacement de ligne adéquat pour rendre l'effet de dégradé.
@@ -57,14 +56,11 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 
 ## Assise de points couchants à partir de la sélection {#knockdown-fill}
 
-{% include upcoming_release.html %}
-
 Cette extension permet de générer:
 
 * soit une zone de remplissage sous tous les éléments sélectionnés, avec un décalage positif ou négatif. Cette méthode peut s'avérer très utile pour travailler avec des tissus à poils longs (généralement avec un décalage positif) ou pour créer une sous-couche globale (généralement avec un décalage négatif).
 * soit une zone de remplissage en forme de cercle ou de rectangle autour  des éléments sélectionnés (mais pas sous eux). Ceci peut être utile pour créer un effet d'embossage avec des tissus à poils longs.
 
- 
 ![A figure with a surrounding knockdown stitch](/assets/images/docs/knockdown.png)
 
 * Sélectionner des éléments
@@ -73,10 +69,10 @@ Cette extension permet de générer:
 * Cliquer sur `Appliquer`
 * Adaptez les paramètres de remplissage dans la boîte de dialogue du paramétrage (`Extensions > Ink/Stitch > Paramètres`)
 
-
  Si vous souhaitez garder le même style de remplissage, mais voulez agrandir ou réduire le motif, modifiez l'`espacement entre les rangées` du remplissage et de sa sous couche et calculez la `longueur maximumm du point` selon la formule `espacement entre les rangées / sinus(60°) `<br><br>
  **Exemple**: Si vous souhaitez un `espacement entre les rangées` de 1,8 mm, la `longueur maximum du point` sera `1,8 / sin(60°) ≈ 1,8/0,866=2,08 mm`
  {: .notice--info }
+
 ### Paramètres
 
 #### Onglet Options
@@ -87,12 +83,12 @@ Cette extension permet de générer:
 * Limite d'onglet : Modifie l'aspect des bords.
 
 #### Onglet Embossage
+
 * Forme : Si la  valeur choisie est "Aucune", l'extension crée une zone de remplissage sous les éléments sélectionnés, en tenant compte de la valeur de décalage (de l'onglet Options). Si vous souhaitez un effet d'embossage, choisissez entre rectangle et cercle pour créer un remplissage autour des éléments sélectionnés, en excluant la zone située sous les éléments sélectionnés (en tenant toujours compte du décalage).
 * Décalage de la forme : Toute valeur positive étend la zone d'embossage. La zone exclue peut être modifiée à l'aide du paramètre de décalage dans l'onglet Options.
 * Méthode (arrondi, biseau, onglet) : influence l'aspect des bords.
 
 Remarque : si l'on choisit une forme d'embossage  (cercle ou rectangle), la zone exclue correspond exactement à la forme du remplissage avec la forme définie sur Aucune. Si le décalage de forme est nul, le bord extérieur de l'embossage correspond au plus petit cercle/rectangle contenant la zone exclue. Si le décalage de forme est positif, le bord extérieur du cercle/rectangle est étendu dans toutes les directions selon cette valeur. La zone exclue reste inchangée.
-
 
 ## Tartan
 
@@ -116,8 +112,7 @@ Le motif dans son ensemble peut être tourné, mis à l'échelle (%) et translat
 * Même nombre de fils pour la chaine et la trame
  * si désactivé, vous pouvez définir deux motifs différents, l'un pour la chaîne, l'autre pour la trame
  * si activé, chaîne et trame suivent le même motif
- 
- 
+
 #### Bandes
 
 * Ajouter des couleurs avec le bouton "Ajouter"
@@ -127,8 +122,9 @@ Le motif dans son ensemble peut être tourné, mis à l'échelle (%) et translat
 * Lorsque "Même nombre de fils pour la chaîne et la trame" est désactivé : la chaîne définit les lignes verticales, la trame définit les lignes horizontales
 * Cliquez sur le champ coloré pour sélectionner une autre couleur
 * Lorsque vous souhaitez modifier une couleur dans plusieurs bandes à la fois, activez « Lier les couleurs » et les couleurs identiques seront mises à jour simultanément.
- 
-### Code de Palette 
+
+### Code de Palette
+
 Ce code de palette est ce que Ink/Stitch sauvegarde dans le svg, mais peut aussi être édité directement.
 
 Un code de palette peut ressembler à ceci : `(#000000)/5.0 (#FFFFFF)/5.0`.
@@ -161,7 +157,6 @@ Le seul paramètre qui n'apparaîtra qu'ici est la « Largeur minimale de bande
 **Info** : Pour Remplissage automatique, le routage final sera meilleur que celui affiché dans le simulateur. Appuyez sur « Appliquer » pour exécuter le plan de points pour voir le résultat final.
 
 {: .notice--info}
-
 
 ## Tutoriels utilisant Outils: Remplissage
 

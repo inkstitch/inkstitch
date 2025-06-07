@@ -15,8 +15,6 @@ data_title:
 {%- assign font1 = site.data.fonts.mimosa_medium.font -%}
 {%- assign font2 = site.data.fonts.mimosa_large.font -%}
 
-{% include upcoming_release.html %}
-
 <img 
      src="/assets/images/fonts/mimosa_medium.png"
      alt="Mimosa Medium" height="32">

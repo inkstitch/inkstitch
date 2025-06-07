@@ -43,7 +43,6 @@ Das Text-Modul erzeugt mehrzeiligen Text. Wähle aus einer großen Vielfalt vord
 
 * **Farbsortierung**
 
-  {% include upcoming_release.html %}
   Sortiert Farben von mehrfarbigen Schriften und vermeidet so eine größere Anzahl an Farbwechseln.
 
 * **Sticke Textzeilen vor und zurück**
@@ -53,7 +52,6 @@ Das Text-Modul erzeugt mehrzeiligen Text. Wähle aus einer großen Vielfalt vord
 
 * **Text ausrichten**
 
-  {% include upcoming_release.html %}
   Ausrichtung von mehrzeiligem Text: Links, Mitte, Rechts, Block (Standard), Block (Buchstabenabstand)
 
 * **Schnittmarker hinzufügen**
@@ -104,8 +102,6 @@ Hier eine kurze Anleitung wie die Farben mehrfarbiger Ink/Stitch-Schriften schne
 Wiederhole diesen Prozess bis alle Farben gruppiert sind, wobei immer der zuerst zu stickende Pfad eines Buchstaben auszuwählen ist.
 
 ## Batch Lettering
-
-{% include upcoming_release.html %}
 
 Mit `Batch Lettering` können mehrere Textdateien gleichzeitig erstellt werden.
 

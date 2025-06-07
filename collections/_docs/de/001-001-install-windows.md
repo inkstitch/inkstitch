@@ -21,8 +21,6 @@ Lade die neueste Ink/Stitch Version herunter.
 
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-64bit.exe" class="btn btn--info btn--large"><i class="fa fa-download"></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} für Windows 64bit</a></p>
 
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-32bit.exe" class="btn btn--info btn--large"><i class="fa fa-download"></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} für Windows 32bit</a></p>
-
 **Aktuelle Version:** {{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
 
 Kostenloses code signing durch [SignPath.io](https://about.signpath.io) Zertifikat von [SignPath Foundation](https://signpath.org).<br>Siehe unsere [Code signing policy](/de/code-signing-policy/)

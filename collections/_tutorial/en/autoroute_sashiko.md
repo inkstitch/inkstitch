@@ -15,20 +15,15 @@ techniques:
 field-of-use:
 user-level: 
 ---
-
-
 ![Sample](/assets/images/tutorials/sashiko/sashiko.jpg)
-
 
 [Sashiko Inkscape extension for ink/stitch ](https://gitlab.com/kaalleen/sashiko-inkscape-extension) combined with "Auto-Route Running Stitch"  or "Tools: Stroke > Redwork" makes it possible to produce sashiko style  embroidery files in a very easy way.
 
 Note that this extension is different for  the  original [Sashiko Inkscape extension](https://inkscape.org/~FractalLotus/%E2%98%85sashiko-stitching-patterns), as it never generates two copies of the same path one on  top of the other.
 
-
 First install the Sashiko for ink/stitch extension.
 
 Once this extension is installed, run it:
-
 
 `Extensions > Render > Sashiko' 
 
@@ -54,8 +49,6 @@ To change from design to triple stitch embroidery
     * Disable "Preserve order of running stitch"
    * Click Apply
 
-
-
 Instead of the paths created by the Sashiko extension you now have a group  "Auto-Route" that contains a mix of:
 * bean stitch paths called  "Auto-Route xyz"
 * simple running stitch path  calles "Auto-Route underpath yzt" 
@@ -68,14 +61,10 @@ Use now the "Redwork"  extension :
 
 Chose your  parameters (0.5mm for the first two parameters is usually a good choice).
 
-{% include upcoming_release.html %}
-
 If you chose  to combine  and no  bean stitches repeat then you will get a single path that travel everything twice.
 If you chose to combine  and have a non null bean stitches repeat value, you will get an alternate sequence of underpath and bean stitch path.
 
 If you do not combine you will get more paths, this should only be done if you want to manipulate the result.
-
-
 
 You may wish to also try with other extensions such as :
 

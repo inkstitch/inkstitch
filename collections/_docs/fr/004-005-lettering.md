@@ -43,8 +43,6 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
   
 * **Tri des couleurs**
 
- {% include upcoming_release.html %}
-
   Option de tri des couleurs pour certaines fontes multicolores afin d'éviter de nombreux changement de couleur de fils. Attention toutefois au risque de décalage si le tri se fait sur un texte trop long. Il est possible de  trier tout le texte ou de trier ligne par ligne ou mot par  mot
 
   
@@ -89,8 +87,6 @@ Le lettrage suivra  la direction du chemin. Inverser le sens du chemin si néces
 Un aperçu de toutes les polices disponibles se trouve dans la [bibliothèque de polices](/fr/fonts/font-library/).
 
 ## Lettrage par lots {#batch-lettering}
-
-{% include upcoming_release.html %}
 
 Le lettrage par lot permet de créer facilement des fichiers de texte multiples
 

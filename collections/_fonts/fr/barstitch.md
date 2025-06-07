@@ -25,30 +25,25 @@ data_title:
 {%- assign font2 = site.data.fonts.barstitch_textured.font -%}
 {%- assign font3 = site.data.fonts.barstitch_mandala.font -%}
 
-{% include upcoming_release.html %}
-
-<img 
+<img
      src="/assets/images/fonts/barstitch_bold.png"
      alt="Barstitch Bold" height="23">
-     
-<img 
+
+<img
      src="/assets/images/fonts/barstitch_regular.png"
      alt="Barstitch Bold" height="23">
 
-<img 
+<img
      src="/assets/images/fonts/barstitch_textured.png"
      alt="Barstitch textured" height="40">
 
-<img 
+<img
      src="/assets/images/fonts/barstitch_mandala.png"
      alt="Barstitch textured" height="90">
-    
-<img 
+
+<img
      src="/assets/images/fonts/barstitch_cloudy.png"
      alt="Barstitch textured" height="90">
-     
-     
-
 
 ## Glyphes
 
@@ -59,8 +54,8 @@ Ces fontes comportent  {{ font1.glyphs.size }} glyphes:
 ```
 {: .font-glyphs }
 
-
 ## Dimensions
+
 ### Barstitch Bold et Barstitch Regular
 
 A une échelle de  100% ces fontes ont une hauteur approximative de  {{ font1.size }} mm. 
@@ -81,8 +76,6 @@ A une échelle de  100% ces fontes ont une hauteur approximative de  {{ font3.si
 
 Elle peuvent être redimensionnées de {{ font3.min_scale | times: 100 | floor }}% ({{ font3.size | times: font3.min_scale }} mm)
 à  {{ font3.max_scale | times: 100 | floor }}% ({{ font3.size | times: font3.max_scale }} mm).
-
-
 
 ## Dans la vraie vie 
 

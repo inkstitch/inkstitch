@@ -17,12 +17,11 @@ data_title:
 
 {%- assign font2 = site.data.fonts.hebrew_simple_rounded_small.font -%}
 
-{% include upcoming_release.html %}
-
-<img 
+<img
      src="/assets/images/fonts/hebrew_simple_rounded.png"
      alt="Hebrew simple  rounded " height="23">
-<img 
+
+<img
      src="/assets/images/fonts/hebrew_simple_rounded_small.png"
      alt="Hebrew simple  rounded " height="10">     
 
@@ -44,17 +43,19 @@ Peut être diminuée jusqu'à  {{ font1.min_scale | times: 100 | floor }}% ({{ f
 et agrandie jusqu'à  {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
 
 ### Hebrew Simple Rounded  Font Small
+
 Peut être utilisée  de  {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
 à {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm). 
 **Cette fonte necessite l'usage de fil fin (60) et d'une aiguille fine (60)**
 
 ## Particularités
+
 Chaque glyphe contient la forme de la lettre originelle, sous forme d'un chemin noir caché. 
 Ces chemins ne sont pas prévus pour être brodés tels quels, mais pour aider qui voudrait modifier cette fonte. 
 
 Ils peuvent être ignorés sans souci.
-## Dans la vraie vie
 
+## Dans la vraie vie
 
 {% include folder-galleries path="fonts/hebrew_simple_rounded/" %}
 

@@ -15,8 +15,6 @@ data_title:
 {%- assign font1 = site.data.fonts.mimosa_medium.font -%}
 {%- assign font2 = site.data.fonts.mimosa_large.font -%}
 
-{% include upcoming_release.html %}
-
 <img 
      src="/assets/images/fonts/mimosa_medium.png"
      alt="Mimosa Medium" height="32">
@@ -26,6 +24,7 @@ data_title:
      alt="Mimosa Large" height="64">
 
 ## Glyphes
+
 Ces fontes comportent  {{ font1.glyphs.size }} glyphes:
 
 ```
@@ -33,8 +32,8 @@ Ces fontes comportent  {{ font1.glyphs.size }} glyphes:
 ```
 {: .font-glyphs }
 
-
 ## Dimensions
+
 ### Mimosa Medium
 A une échelle de  100% cette fonte a une hauteur approximative de  {{ font1.size }} mm. 
 
@@ -47,9 +46,7 @@ A une échelle de  100% cette fonte a une hauteur approximative de  {{ font2.siz
 Elle peut être redimensionnée  de {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
 à {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm).
 
-
 ## Dans la vraie vie
-
 
 {%include folder-galleries path="fonts/mimosa/" %}
 

@@ -32,8 +32,6 @@ data_title:
      src="/assets/images/fonts/magnolia_bicolor.png"
      alt="Magnolia bicolor" height="150">
 
-{% include upcoming_release.html %}
-
 <img 
      src="/assets/images/fonts/magnolia_tamed.png"
      alt="Magnolia tamed" height="150">

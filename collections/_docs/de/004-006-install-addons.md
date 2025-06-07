@@ -4,8 +4,6 @@ permalink: /de/docs/install-addons/
 last_modified_at: 2025-03-29
 toc: true
 ---
-{% include upcoming_release.html %}
-
 Installiert Farbpaletten oder Motiv-Symbol-Bibiotheken für Inscape
 
 * `Erweiterungen > Ink/Stitch > Addons für Inkscape installieren`

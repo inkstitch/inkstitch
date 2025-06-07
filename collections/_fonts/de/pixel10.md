@@ -11,8 +11,6 @@ data_title:
 ---
 {%- assign font = site.data.fonts.pixel10.font -%}
 
-{% include upcoming_release.html %}
-
 ![Pixel 10](/assets/images/fonts/pixel_10.png)
 
 ## Schriftzeichen

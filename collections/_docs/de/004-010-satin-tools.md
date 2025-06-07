@@ -36,9 +36,7 @@ Dieses Werkzeug ersetzt deine Satinsäulen mit einem Set von neuen Satinsäulen 
 
 * Solltest du es bevorzugen die vorher gesetzte Objekt-Reihenfolge beizubehalten (das könnte der Fall sein, wenn sich die Satinsäulen überschneiden), benutze die Option **Behalte Reihenfolge der Satinsäulen bei**.
 
-* {% include upcoming_release.html %}
-
-  **Satinsäulen behalten** definiert, ob die ausgewählten Elemente nach der Umwandlnug gelöscht werden oder für spätere Korrekturen erhalten bleiben.
+* **Satinsäulen behalten** definiert, ob die ausgewählten Elemente nach der Umwandlnug gelöscht werden oder für spätere Korrekturen erhalten bleiben.
 
 ## Linie zu Satin
 
@@ -65,8 +63,6 @@ Diese Option schneidet eine Satinsäule an einem vordefiniertem Punkt. Alle Para
 6. Der Satin-Schnittstelle-Befehl und sein Zeiger sind verschwunden. Wähle die Satinsäule aus: es sind jetzt zwei.
 
 ## Füllung zu Satin
-
-{% include upcoming_release.html %}
 
 Füllung zu Satin hilft bei der Umwandlung von Füllflächen zu Satinsäulen. Es ist eine halbautomatische Funktion und benötigt ein wenig Handarbeit.
 
