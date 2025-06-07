@@ -46,8 +46,9 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Download Inkstitch # Download the source code, no submodules
+      - name: Download Inkstitch   # Download the source code, no submodules
         uses: actions/checkout@v4  # https://github.com/actions/checkout
+
 
       - name: Update OS    # first update OS
         shell: bash
@@ -74,8 +75,8 @@ jobs:
         uses: astral-sh/setup-uv@v5  # https://docs.astral.sh/uv/guides/integration/github/
         with:
           enable-cache: true    # cache on requirements**, uv.lock is OS dependent, on exit 1 cache save is skipped
+          cache-dependency-glob: pyproject.toml
           python-version: 311   # force version, use same in install python
-
 
       - name: Setup UV Python
         shell: bash
@@ -92,14 +93,18 @@ jobs:
             exit 1
           fi
 
-          echo "-------------------------------------- bin/uv/generate pyproject.toml"
-          bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+          # echo "-------------------------------------- bin/uv/generate pyproject.toml"
+          # bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+
+
+
 
           echo "-------------------------------------- pyproject.toml"
           cat pyproject.toml
 
           echo "-------------------------------------- uv sync"
-          uv sync # install dependencies from pyproject.toml
+          uv sync --inexact # install dependencies from pyproject.toml & keep installed packages
+          uv pip tree  # print installed packages
 
           if [[ $MY_BREAK_ON == "sync" ]]; then
             echo "Stopping on request $MY_BREAK_ON"
@@ -107,7 +112,6 @@ jobs:
           fi
 
           echo "--------------------------------------"
-
 
       - name: Build dist
         shell: bash
