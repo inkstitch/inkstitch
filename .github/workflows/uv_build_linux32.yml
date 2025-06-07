@@ -119,38 +119,38 @@ jobs:
           uname -a  # print system information
 
           echo "-------------------------------------- input data"
-          # input data
+          ### input data
           echo "github.event.inputs.break_on: ${{ github.event.inputs.break_on }}"
           echo "inputs.break_on: ${{ inputs.break_on }}"
 
-
           echo "-------------------------------------- update apt"
-          # install system dependencies
+          ### install system dependencies
           sudo apt-get update  # update package list
 
-          sudo apt-get install -y ruby-full # install Ruby for fpm packaging
+          echo "-------------------------------------- install system dependencies"
+          # .po msgfmt: gettext
+          # PyGObject 3.50: libgirepository1.0-dev libcairo2-dev
+          # wxPython: libnotify4 glib-networking libsdl2-2.0-0 libsdl2-dev
+          # shapely & wxPython: build-essential libgtk-3-dev libgeos-dev
+          # Ruby fpm packaging: ruby-full
+          # signing rpm: rpm
+
+
+          # Install in one step
+          sudo apt-get install -y gettext \
+            libgirepository1.0-dev libcairo2-dev \
+            libnotify4 glib-networking libsdl2-2.0-0 libsdl2-dev \
+            build-essential libgtk-3-dev libgeos-dev \
+            ruby-full rpm
+
+
           sudo gem install fpm # install fpm for packaging (Ruby gems)
-          sudo apt-get install -y gettext # install gettext for translations (.po msgfmt)
-
-          # for PyGObject 3.50 to compile
-          sudo apt install -y libgirepository1.0-dev libcairo2-dev
-
-          # for wxPython run
-          sudo apt install -y libnotify4
-          sudo apt install -y glib-networking libsdl2-2.0-0  libsdl2-dev
-
-          # for shapely & wxPython compile
-          sudo apt install -y build-essential libgtk-3-dev # cmake - use uv to install cmake
-          sudo apt install -y libgeos-dev
-
-          # for signing rpm
-          apt-get install -y rpm
-
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5  # https://docs.astral.sh/uv/guides/integration/github/
         with:
           enable-cache: true    # cache on requirements**, uv.lock is OS dependent, on exit 1 cache save is skipped
+          cache-dependency-glob: pyproject.toml
           python-version: 311   # force version, use same in install python
 
 
@@ -181,7 +181,7 @@ jobs:
 
 
           echo "------------------------------ uv python list"
-          uv python install 311   # install python 3.11 see cache
+          uv python install 311  # install python 3.11 see cache
           uv python list
           uv python pin --managed-python 311  # pin to uv managed python
           # uv python pin --un-managed-python 311  # use system python
@@ -198,25 +198,24 @@ jobs:
             exit 1
           fi
 
-          echo "-------------------------------------- bin/uv/generate pyproject.toml"
-          bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+          # echo "-------------------------------------- bin/uv/generate pyproject.toml"
+          # bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
 
-          # debug
 
           echo "-------------------------------------- pyproject.toml"
           cat pyproject.toml
 
           echo "-------------------------------------- uv sync"
-          uv sync # install dependencies from pyproject.toml
-
+          uv sync --inexact # install dependencies from pyproject.toml & keep installed packages
+          uv pip tree  # print installed packages
 
           if [[ $MY_BREAK_ON == "sync" ]]; then
             echo "Stopping on request $MY_BREAK_ON"
             exit 1
           fi
 
-
           echo "--------------------------------------"
+
 
       - name: Build dist
         shell: bash
@@ -226,7 +225,7 @@ jobs:
           type python  # check python version
 
           echo "secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}" # *** if available
-          make dist
+          make dist   # requires correct BUILD !!!
 
           # see artifacts directory contents
           echo "-------------------------------------- artifacts directory:"
@@ -237,11 +236,10 @@ jobs:
           # load secrets for bash script
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
 
+
       # save the build artifacts for later use by other jobs
       - uses: actions/upload-artifact@v4   # https://github.com/actions/upload-artifact
         with:
           name: inkstitch-linux32      # to path
           path: artifacts              # from path relative to the root of the repository
-
-
 
