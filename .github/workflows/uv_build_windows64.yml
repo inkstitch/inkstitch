@@ -35,23 +35,28 @@ jobs:
       - name: Download Inkstitch         # Download the source code, no submodules
         uses: actions/checkout@v4        # https://github.com/actions/checkout
 
-      - uses: actions/setup-python@v5    # https://github.com/actions/setup-python
-        with:
-          python-version: '3.11.x'
-          architecture: 'x64'
+      # - uses: actions/setup-python@v5    # https://github.com/actions/setup-python
+      #   with:
+      #     python-version: '3.11.x'
+      #     architecture: 'x64'
 
       - name: Install uv                 # https://docs.astral.sh/uv/guides/integration/github/
         uses: astral-sh/setup-uv@v5
         with:
-          enable-cache: true
+          enable-cache: true    # cache on requirements**, uv.lock is OS dependent, on exit 1 cache save is skipped
+          cache-dependency-glob: pyproject.toml
+          python-version: 311   # force version, use same in install python
+
 
       - name: Install msbuild             # https://github.com/microsoft/setup-msbuild
         uses: microsoft/setup-msbuild@v2
+
 
       - name: Setup Git for Windows SDK   # https://github.com/git-for-windows/setup-git-for-windows-sdk
         uses: git-for-windows/setup-git-for-windows-sdk@v1
         with:
           flavor: build-installers
+
 
       - name: Setup environment
         shell: bash
@@ -64,6 +69,8 @@ jobs:
           echo "inputs.break_on: ${{ inputs.break_on }}"
           echo "secrets.SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN }}"
 
+          echo "------------------------------ uv python list"
+          uv python install 311  # install python 3.11 see cache
           uv python list
           uv python pin 311  # pin to local python version
           uv venv  # create a virtual environment with the pinned python version
@@ -73,17 +80,24 @@ jobs:
             exit 1
           fi
 
-          bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+          # echo "-------------------------------------- bin/uv/generate pyproject.toml"
+          # bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
 
           cat pyproject.toml
 
-          uv sync # install dependencies from pyproject.toml
+          uv sync --inexact # install dependencies from pyproject.toml & keep installed packages
+          uv pip tree  # print installed packages
 
           . .venv/Scripts/activate  # activate the virtual environment
           type python
 
-          # echo "Setting up Python location: ${{ env.pythonLocation }}"
-          # echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+          if [[ $MY_BREAK_ON == "sync" ]]; then
+            echo "Stopping on request $MY_BREAK_ON"
+            exit 1
+          fi
+
+          echo "--------------------------------------"
+
 
 
       - name: Build dist
@@ -92,7 +106,6 @@ jobs:
 
           . .venv/Scripts/activate  # activate the virtual environment
           type python  # check python version
-          # python --version
 
           make dist
         env:
