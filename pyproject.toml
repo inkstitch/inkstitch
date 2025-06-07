@@ -1,0 +1,70 @@
+###
+### update packages: uv sync -U  # update all packages
+###                  uv sync     # removes all packages not in pyproject.toml
+###                  uv sync --inexact   # do not remove extraneous packages, as installed by uv pip install
+### as requirements.txt: uv pip install -r pyproject.toml | requirements.txt
+
+[project]
+name = "inkstitch"
+version = "0.1.0"
+description = "An open-source machine embroidery design platform based on Inkscape"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    ### *** PyEmbroidery dependency ***
+    ### create package on the fly
+    "pyembroidery @ git+https://github.com/inkstitch/pyembroidery",
+
+
+    ### wxPython dependency: see below
+    ###    - select correct version (distro, python version) on https://extras.wxpython.org/wxPython4/extras/linux/gtk3/
+    ###    - "wxpython @ https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.3-cp311-cp311-linux_x86_64.whl"
+    ###      "wxpython ; sys_platform != 'linux'",
+    ###
+    "wxpython",
+
+    ### Linux or Darwin GObject introspection (pygobject > 3.50 depends on gir2
+    "pygobject<=3.50 ; sys_platform == 'linux' or sys_platform == 'darwin'",
+
+
+    ### *** inkex dependency ***
+    ### get up to date inkex version (March 1, 2024)
+    "inkex @ git+https://gitlab.com/inkscape/extensions.git@1792934a09046fdef8aab20d05aad9c47f825bf5",
+
+
+    "networkx", ### graphs library
+    "shapely~=2.0.0", ### geometry library
+    "lxml", ### XML library
+    "platformdirs", ### cross-platform directories
+    "numpy", ### array library
+    "jinja2>2.9", ### templating engine
+    # "requests", ### HTTP library
+    "tomli; python_version < '3.11'", ### TOML parser
+    "colormath2", ### color math library
+    "flask>=2.2.0", ### web framework
+    "fonttools", ### font library
+    "trimesh>=3.15.2", ### 3D mesh library
+    "diskcache", ### caching library
+    # "flask-cors", ### CORS support for Flask - Cross-Origin Resource Sharing)
+    ###
+
+    "pywinutils ; sys_platform == 'win32'", ### Windows utils
+    "pywin32 ; sys_platform == 'win32'", ### Windows utils
+]
+
+
+[dependency-groups]
+### added by: uv add xxx --dev
+### remove by: uv remove xxx --dev
+dev = [
+    "pytest",
+    "pyinstaller",
+    # Misc dev dependencies
+    "types-wxpython",
+    "types-appdirs",
+    "types-shapely",
+    "types-networkx",
+    "types-lxml",
+    "types-pywin32; sys_platform == 'win32'",
+]
+
