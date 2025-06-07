@@ -24,7 +24,7 @@ Lade die aktuelle Version für dein macOS System herunter.
 
 ### [High Sierra (10.13), Mojave (10.14), Catalina (10.15), Big Sur (11), Monterey (12)
 
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-old-osx-x86_64-intel.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Intel</span></a></p>
+<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-old-osx-x86_64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Intel</a></p>
 
 **Aktuelle Version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
 

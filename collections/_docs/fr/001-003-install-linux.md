@@ -22,17 +22,17 @@ Téléchargez la dernière version disponible pour Linux (Ink/Stitch {{ tag_name
 * x86_64:
   [tar.xz]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux-x86_64.tar.xz),
   [sh]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux-x86_64.sh),
-  [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}.x86_64.rpm),
+  [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-1.x86_64.rpm),
   [deb]({{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_amd64.deb)
 * i386:
   [tar.xz]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux32-i386.tar.xz),
   [sh]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux32-i386.sh),
-  [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}.i386.rpm),
+  [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-1.i386.rpm),
   [deb]({{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_i386.deb)
 * arm64:
   [tar.xz]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux-aarch64.tar.xz),
   [sh]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux-aarch64.sh),
-  [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}.aarch64.rpm),
+  [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-1.aarch64.rpm),
   [deb]({{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_arm64.deb)
 * Arch linux: <https://aur.archlinux.org/packages/inkstitch>
 * NixOS: <https://search.nixos.org/packages?channel=unstable&show=inkscape-extensions.inkstitch>
