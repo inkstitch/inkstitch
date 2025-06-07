@@ -6,7 +6,7 @@
 import colorsys
 
 from inkex import Color, ColorCMS
-from pyembroidery.EmbThread import EmbThread
+from inkstitch_pyembroidery.EmbThread import EmbThread
 
 
 class ThreadColor(object):
