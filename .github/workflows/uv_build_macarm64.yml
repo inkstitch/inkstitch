@@ -78,6 +78,7 @@ jobs:
           cache-dependency-glob: pyproject.toml
           python-version: 311   # force version, use same in install python
 
+
       - name: Setup UV Python
         shell: bash
         run: |  # working directory is the root of the inkstitch repo
@@ -113,6 +114,7 @@ jobs:
 
           echo "--------------------------------------"
 
+
       - name: Build dist
         shell: bash
         run: |
@@ -145,6 +147,7 @@ jobs:
           INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
           NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
           NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
 
       # save the build artifacts for later use by other jobs
       - uses: actions/upload-artifact@v4   # https://github.com/actions/upload-artifact

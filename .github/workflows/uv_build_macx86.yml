@@ -47,8 +47,9 @@ jobs:
                         # macos-14, macos-15 uses apple silicon arm64 architecture
 
     steps:
-      - name: Download Inkstitch # Download the source code, no submodules
+      - name: Download Inkstitch   # Download the source code, no submodules
         uses: actions/checkout@v4  # https://github.com/actions/checkout
+
 
       - name: Update OS    # first update OS
         shell: bash
@@ -75,6 +76,7 @@ jobs:
         uses: astral-sh/setup-uv@v5  # https://docs.astral.sh/uv/guides/integration/github/
         with:
           enable-cache: true    # cache on requirements**, uv.lock is OS dependent, on exit 1 cache save is skipped
+          cache-dependency-glob: pyproject.toml
           python-version: 311   # force version, use same in install python
 
 
@@ -93,14 +95,18 @@ jobs:
             exit 1
           fi
 
-          echo "-------------------------------------- bin/uv/generate pyproject.toml"
-          bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+          # echo "-------------------------------------- bin/uv/generate pyproject.toml"
+          # bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
+
+
+
 
           echo "-------------------------------------- pyproject.toml"
           cat pyproject.toml
 
           echo "-------------------------------------- uv sync"
-          uv sync # install dependencies from pyproject.toml
+          uv sync --inexact # install dependencies from pyproject.toml & keep installed packages
+          uv pip tree  # print installed packages
 
           if [[ $MY_BREAK_ON == "sync" ]]; then
             echo "Stopping on request $MY_BREAK_ON"
@@ -142,6 +148,7 @@ jobs:
           INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
           NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
           NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
 
       # save the build artifacts for later use by other jobs
       - uses: actions/upload-artifact@v4   # https://github.com/actions/upload-artifact
