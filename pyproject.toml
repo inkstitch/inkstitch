@@ -19,9 +19,8 @@ dependencies = [
     ### - "uv pip install wxpython @ https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.3-cp311-cp311-linux_x86_64.whl"
     "wxpython",
 
-    ### Linux or Darwin GObject introspection (pygobject > 3.50 depends on gir2
-    # "pygobject<=3.50 ; sys_platform == 'linux' or sys_platform == 'darwin'",
-    "pygobject<=3.50 ; sys_platform == 'linux'",
+    ### Linux or Darwin GObject introspection (pygobject > 3.50 depends on gir2)
+    "pygobject<=3.50 ; sys_platform == 'linux' or sys_platform == 'darwin'",
 
 
     ### *** inkex version (March 1, 2024) ***
