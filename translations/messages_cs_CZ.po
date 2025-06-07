@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-06-06 01:47+0000\n"
-"PO-Revision-Date: 2025-06-06 01:48\n"
+"PO-Revision-Date: 2025-06-07 08:18\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -30,198 +30,198 @@ msgstr ""
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script is a decorative satin column manuscript font. It contains 118 glyphs, covering most western european languages needs. More decorative options are hidden in the µ glyph."
-msgstr ""
+msgstr "Brock Script je dekorativní saténové sloupcové písmo pro rukopisy. Obsahuje 118 glyfů, které pokrývají potřeby většiny západoevropských jazyků. Další dekorativní možnosti se skrývají v glyfu µ."
 
 #. description of font in fonts/Hebrew_font_large
 #: inkstitch-fonts-metadata.py:4
 msgid "Large size Hebrew satin font"
-msgstr ""
+msgstr "Velké hebrejské saténové písmo"
 
 #. description of font in fonts/Shojumaru
 #: inkstitch-fonts-metadata.py:6
 msgid "Shojumaru is a manga like satin font."
-msgstr ""
+msgstr "Shojumaru je saténové písmo podobné manze."
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
 msgid "Abécédaire AGS is a crossstitch font."
-msgstr ""
+msgstr "Abécédaire AGS je písmo křížkové výšivky."
 
 #. description of font in fonts/abril
 #: inkstitch-fonts-metadata.py:10
 msgid "Abril En Fleur AGS is a monogram font."
-msgstr ""
+msgstr "Abril En Fleur AGS je monogramové písmo."
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:12
 msgid "AGS Γαραμου Garamond contains all the letters of the latin and greek alphabets and cover most european languages."
-msgstr ""
+msgstr "AGS Γαραμου Garamond obsahuje všechna písmena latinské a řecké abecedy a pokrývá většinu evropských jazyků."
 
 #. description of font in fonts/ambigue
 #: inkstitch-fonts-metadata.py:14
 msgid "Ambigüe is a mix of satin and bean stitch font with a subtle harmony of disorder. You may ignore the hidden black running stitches (they are the original letters) or use them to customize this font as you like."
-msgstr ""
+msgstr "Ambigüe je písmo s kombinací saténového stehu a zesíleného konturovacího stehu s jemnou harmonií neuspořádanosti. Skryté černé stehy můžete ignorovat (jsou to původní písmena) nebo si je můžete upravit podle svých představ."
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:16
 msgid "Amitaclo is a script satin font. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Amitaclo je saténové písmo. Každý saténový font má podkladový cikcak steh"
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:18
 msgid "This font is an altered version of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Toto písmo je upravenou verzí písma Amitaclo, která umožňuje větší zmenšení. Použití tenké nitě (60) i tenké jehly (60) je povinné."
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:20
 msgid "Apex Lake is a large ornate capital letters font. It contains only 38 glyphs : A-Z,0-9,! and ?."
-msgstr ""
+msgstr "Apex Lake je velké zdobené písmo s velkými písmeny. Obsahuje pouze 38 znaků: A-Z, 0-9, ! a ?."
 
 #. description of font in fonts/apex_simple_AGS
 #: inkstitch-fonts-metadata.py:22
 msgid "Apex Simple AGS is a satin companion font for Apex Lake AGS."
-msgstr ""
+msgstr "Apex Simple AGS je saténové doplňkové písmo k Apex Lake AGS."
 
 #. description of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:24
 msgid "Auberge Marif is a script satin font. The glyphs cover most Western European languages."
-msgstr ""
+msgstr "Auberge Marif je saténové písmo. Glyfy pokrývají většinu západoevropských jazyků."
 
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:26
 msgid "Auberge Small is an altered version of Auberge Marif to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Toto písmo je upravenou verzí písma Amitaclo, která umožňuje větší zmenšení. Použití tenké nitě (60) i tenké jehly (60) je povinné."
 
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:28
 msgid "Aventurina is a script satin font. The glyphs cover most Western European languages."
-msgstr ""
+msgstr "Auberge Marif je saténové písmo. Glyfy pokrývají většinu západoevropských jazyků."
 
 #. description of font in fonts/barstitch_bold
 #: inkstitch-fonts-metadata.py:30
 msgid "Barstitch  Bold is a satin font."
-msgstr ""
+msgstr "Barstitch Bold je saténové písmo."
 
 #. description of font in fonts/barstitch_cloudy
 #: inkstitch-fonts-metadata.py:32
 msgid "This is a guided fill version of Barstitch fill. Each letter is used to clip a group of guided fills and  then  a bean stitch contour is stitched. "
-msgstr ""
+msgstr "Toto je verze výplně barstitch s přednastavenou výplní. Každé písmeno definuje tvar této výplně a následně je ohraničeno zesíleným obrysovým stehem "
 
 #. description of font in fonts/barstitch_mandala
 #: inkstitch-fonts-metadata.py:34
 msgid "A large Mandala font. Redwork versions of the four mandalas  used to design the font are stored in the $,<,>,^ glyphs"
-msgstr ""
+msgstr "Velké písmo Mandala. Červeně kreslené verze čtyř mandal použitých k návrhu písma jsou uloženy v glyfech $,<,>,^"
 
 #. description of font in fonts/barstitch_regular
 #: inkstitch-fonts-metadata.py:36
 msgid "Barstitch regular is a satin font. "
-msgstr ""
+msgstr "Barstitch Bold je saténové písmo. "
 
 #. description of font in fonts/barstitch_textured
 #: inkstitch-fonts-metadata.py:38
 msgid "Barstitch textured is a highly textured font with the help of meander fills"
-msgstr ""
+msgstr "Barstitch Textured je vysoce texturované písmo, které využívá výplně s vlnitým vzorem"
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:40
 msgid "Baumans FI is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Amitaclo je saténové písmo. Každý saténový font má podkladový cikcak steh."
 
 #. description of font in fonts/baumans_FI_Small
 #: inkstitch-fonts-metadata.py:42
 msgid "Baumans FI Small is an altered version of Baumans FI, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Baumans FI Small je upravená verze Baumans FI, která umožňuje větší zmenšení. Použití tenké nitě (60) i tenké jehly (60) je povinné."
 
 #. description of font in fonts/bluenesia_satin
 #: inkstitch-fonts-metadata.py:44
 msgid "A Syafrizal a.k.a. Khurasan jawn. 3.5mm satin at 100%, splits at higher sizes."
-msgstr ""
+msgstr "Písmo Syafrizal od Khurasanu je saténové písmo navržené pro velikost 3.5 mm s plnou hustotou. U větších velikostí se saténový steh automaticky dělí pro zachování kvality."
 
 #. description of font in fonts/califragilistic
 #: inkstitch-fonts-metadata.py:46
 msgid "Califragilistic is a tricolor running stitch font that was constructed using mandalas"
-msgstr ""
+msgstr "Califragilistic je tříbarevné písmo s rovným stehem, které bylo vytvořeno s využitím motivů mandal"
 
 #. description of font in fonts/cats
 #: inkstitch-fonts-metadata.py:48
 msgid "Cats is a silly font that makes use of satin random parameters."
-msgstr ""
+msgstr "Cats je hravé písmo, které využívá náhodného nastavení saténového stehu."
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:50
 msgid "Cherry for inkstitch is a decorative satin column font. It contains 74 glyphs."
-msgstr ""
+msgstr "Cherry pro inkstitch je dekorativní saténové sloupcové písmo. Obsahuje 74 glyfů."
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:52
 msgid "Cherry for Kaalleen is a large decorative font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Cherry for Kaalleen je velké dekorativní písmo. Obsahuje 36 glyfů včetně číslic a 26 velkých písmen A-Z."
 
 #. description of font in fonts/chicken_little
 #: inkstitch-fonts-metadata.py:54
 #, python-format
 msgid "Chicken Little  is a  playful decorative display font with loads of personality. There is no common baseline, no common character size and no common slope of the letters. Beyond 110% some satin columns will split."
-msgstr ""
+msgstr "Chicken Little je hravé dekorativní písmo s bohatou osobitostí. Neexistuje žádná společná základní linie, žádná společná velikost znaků a žádný společný sklon písmen. Při více než 110 % se některé saténové sloupky rozdělí."
 
 #. description of font in fonts/chicken_little_small
 #: inkstitch-fonts-metadata.py:56
 msgid "This font is an altered version  of Chicken Little KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Toto písmo je upravenou verzí písma Chicken Little KOR, která umožňuje větší zmenšení. Použití tenké nitě (60) a tenké jehly (60) je povinné."
 
 #. description of font in fonts/chicken_scratch
 #: inkstitch-fonts-metadata.py:58
 msgid "A handwritten font."
-msgstr ""
+msgstr "Ručně psané písmo."
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:60
 msgid "Chopin Script is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Chopin Script je saténové písmo. Každý saténový font má podkladový cikcak steh."
 
 #. description of font in fonts/cogs_KOR
 #: inkstitch-fonts-metadata.py:62
 msgid "Cogs KOR is a Steampunk  satin font."
-msgstr ""
+msgstr "Cogs KOR je saténové písmo ve steampunk stylu."
 
 #. description of font in fonts/colorful
 #: inkstitch-fonts-metadata.py:64
 msgid "Colorful is a tartan fill font."
-msgstr ""
+msgstr "Colorful je písmo s tartanovou výplní."
 
 #. description of font in fonts/computer
 #: inkstitch-fonts-metadata.py:66
 msgid "satin font"
-msgstr ""
+msgstr "saténové písmo"
 
 #. description of font in fonts/computer_small
 #: inkstitch-fonts-metadata.py:68
 msgid "Small satin font: the use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Malé saténové písmo: použití tenké nitě (60) i tenké jehly (60) je povinné."
 
 #. description of font in fonts/cooper_marif
 #: inkstitch-fonts-metadata.py:70
 msgid "CooperMarif is a large and airy font."
-msgstr ""
+msgstr "CooperMarif je velké a vzdušné písmo."
 
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:72
 msgid "Coronaviral font is created with manual sitch. Do not change the size or very little."
-msgstr ""
+msgstr "Koronavirové písmo je vytvořeno ručně. Neměňte velikost nebo ji upravujte jen velmi málo."
 
 #. description of font in fonts/decadent_flowers_monogram
 #: inkstitch-fonts-metadata.py:74
 msgid "Each Decadent Flowers Monogram lettter  is composed of an optional knockdown fill (for high pile fabric embroidery)  and redwork flowers  with a negative space letter monogram"
-msgstr ""
+msgstr "Každé písmeno Decadent Flowers Monogram se skládá z volitelného podkladového vzoru (pro zploštění vlasu látky) a květinového motivu, v němž je písmeno vytvořeno negativním prostorem"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:76
 msgid "DejaVu Serif Condensed is a satin font. Every satin has center-walk underlay."
-msgstr ""
+msgstr "DejaVu Serif Condensed je saténové písmo. Každé saténové písmo má podkladový steh vedený středem."
 
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:78
 msgid "All letters of Digory Doodles Bean mix satin and bean stitch."
-msgstr ""
+msgstr "Všechna písmena Digory Doodles Bean jsou mixem saténového a obrysového stehu."
 
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:80
@@ -231,314 +231,314 @@ msgstr "Font Grove jawn. Šířka saténu je 2,5 mm při 18mm velkých písmenec
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:82
 msgid "Emilio 20 contains only capitals and numbers. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Emilio 20 obsahuje pouze velká písmena a číslice. Každý satén má cikcak podklad."
 
 #. description of font in fonts/emilio_20_applique
 #: inkstitch-fonts-metadata.py:84
 msgid "Emilio 20 Applique is an Applique font. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique."
-msgstr ""
+msgstr "Emilio 20 Applique je písmo Applique. Toto písmo je pozměněnou verzí (větší saténový sloupec) Emilio_20, zatímco Emilio_20_Bold je Emilio_20_applique bez nášivky."
 
 #. description of font in fonts/emilio_20_bold
 #: inkstitch-fonts-metadata.py:86
 msgid "Emilio_20_Bold is an altered version of Emilio_20."
-msgstr ""
+msgstr "Emilio_20_Bold je pozměněná verze Emilio_20."
 
 #. description of font in fonts/emilio_20_simple
 #: inkstitch-fonts-metadata.py:88
 msgid "Emilio is a font with capital only and numbers. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Emilio obsahuje pouze velká písmena a číslice. Každý satén má cikcak podklad."
 
 #. description of font in fonts/emilio_20_simple_small
 #: inkstitch-fonts-metadata.py:90
 msgid "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Toto písmo je upravenou verzí písma Emilio 20 simple, která umožňuje větší zmenšení. Použití tenké nitě (60) i tenké jehly (60) je povinné."
 
 #. description of font in fonts/emilio_20_tartan
 #: inkstitch-fonts-metadata.py:92
 msgid "Emilio 20 Tartan uses tartan fill for a colorful font."
-msgstr ""
+msgstr "Emilio 20 Tartan používá tartanovou výplň pro barevné písmo."
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:94
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Emilio 20 tricolore je velké trikolórové písmo s výplňovými stehy a saténovými sloupci. Obsahuje 36 glyfů včetně číslic a 26 velkých písmen A-Z."
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:96
 msgid "Espresso KOR is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Espresso KOR je saténové písmo. Každý saténový font má podkladový cikcak steh."
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:98
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Toto písmo je upravenou verzí písma Espresso KOR, která umožňuje větší zmenšení. Použití tenké nitě (60) i tenké jehly (60) je povinné."
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:100
 msgid "Excalibur KOR is a small satin column manuscript font. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Excalibur KOR je malé saténové písmo ve stylu rukopisu s úzkými sloupci. Obsahuje 144 glyfů, pokrývajících potřeby většiny západoevropských jazyků."
 
 #. description of font in fonts/excalibur_small
 #: inkstitch-fonts-metadata.py:102
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Toto písmo je upravenou verzí písma Espresso KOR, která umožňuje větší zmenšení. Použití tenké nitě (60) i tenké jehly (60) je povinné."
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:104
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font. It contains 40 glyphs including all numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Fold Ink/Stitch je velké písmo s trojitými a pětinásobnými stehy. Obsahuje 40 glyfů včetně všech číslic a 26 velkých písmen A-Z."
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:106
 msgid "Geneva Simple Sans Rounded is a satin font."
-msgstr ""
+msgstr "Geneva Simple Sans Rounded je saténové písmo."
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:108
 msgid "Geneva Simple Sans is a satin font."
-msgstr ""
+msgstr "Geneva Simple Sans je saténové písmo."
 
 #. description of font in fonts/gingo200
 #: inkstitch-fonts-metadata.py:110
 msgid "Gingo 200 is playful satin font with 158 glyphs."
-msgstr ""
+msgstr "Gingo 200 je hravé saténové písmo se 158 glyfy."
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:112
 msgid "Glacial is a very tiny font. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages."
-msgstr ""
+msgstr "Glacial je velmi drobné písmo. Povinná je tenká nit (60 wt) a tenká jehla (8/60). Znaky pokrývají mnoho evropských jazyků."
 
 #. description of font in fonts/hebrew_font_medium
 #: inkstitch-fonts-metadata.py:114
 msgid "Medium size hebrew satin font"
-msgstr ""
+msgstr "Střední hebrejské saténové písmo"
 
 #. description of font in fonts/hebrew_simple_rounded
 #: inkstitch-fonts-metadata.py:116
 msgid "A simple rounded hebrew font"
-msgstr ""
+msgstr "Jednoduché zaoblené hebrejské písmo"
 
 #. description of font in fonts/hebrew_simple_rounded_small
 #: inkstitch-fonts-metadata.py:118
 msgid "A simple rounded hebrew font, small version to be embroidered with 60wt thread and 60 needle"
-msgstr ""
+msgstr "Jednoduché zaoblené hebrejské písmo, malá verze k vyšití nití 60wt a jehlou 60"
 
 #. description of font in fonts/honoka
 #: inkstitch-fonts-metadata.py:120
 msgid "コルの書きこも is a satin column japanese script font. It contains all hiragana, katakana and punctuation glyphs plus 80 kanjis."
-msgstr ""
+msgstr "コルの書きこも je japonské písmo se saténovým sloupcem. Obsahuje všechny znaky hiragany, katakany a interpunkce a navíc 80 kanji."
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:122
 msgid "InfiniPicto is a fun font containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "InfiniPicto je zábavné písmo které obsahuje pouze 26 znaků A-Z. Každé písmeno je piktogramem předmětu, jehož název začíná právě tímto písmenem..... ve francouzštině"
 
 #. description of font in fonts/inkstitch_masego
 #: inkstitch-fonts-metadata.py:124
 msgid "Masego is a display san-serif typeface."
-msgstr ""
+msgstr "Masego je bezpatkové písmo určené pro nadpisy."
 
 #. description of font in fonts/invercelia
 #: inkstitch-fonts-metadata.py:126
 msgid "Invercelia is a modern two letters monogram font. Enter an upper case letter followed by a lower case letter (for example 'Ac') to get a simple monogram.  Add a ')' at the end and the monogram is framed with a circle (for example 'Ac)'), add an '(' to start (for example '(Ac)' and your monogram is ready for applique, or  try something like '!Ac)' to replace the appliqué by knockdown stitches."
-msgstr ""
+msgstr "Invercelia je moderní písmo pro monogramy se dvěma písmeny. Zadejte velké písmeno následované malým písmenem (například „Ac“), abyste získali jednoduchý monogram. Přidejte na konec „)“ a monogram bude orámován kruhem (například „Ac)“), přidejte na začátek „(“ (například „(Ac)“ a váš monogram je připraven k aplikaci), nebo zkuste něco jako „!Ac)“, abyste aplikaci nahradili obšitými stehy."
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:128
 msgid "Kaushan Script MAM is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Kaushan Script MAM je saténové písmo. Každý saténový font má podkladový cikcak steh."
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:130
 msgid "Learning curve is a small running stitch script font."
-msgstr ""
+msgstr "Learning Curve je malé písmo s rovným stehem."
 
 #. description of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:132
 msgid " Lobster AGS is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr " Lobster AGS je saténové písmo. Každý saténový font má podkladový cikcak steh."
 
 #. description of font in fonts/magnolia_KOR
 #: inkstitch-fonts-metadata.py:134
 msgid "Magnolia KOR is a script satin font."
-msgstr ""
+msgstr "Magnolia KOR je saténové písmo."
 
 #. description of font in fonts/magnolia_bicolor
 #: inkstitch-fonts-metadata.py:136
 msgid "Magnolia bicolor is a  larger  bicolor variation of Magnolia font."
-msgstr ""
+msgstr "Magnolia bicolor je větší dvoubarevnou variací písma Magnolia."
 
 #. description of font in fonts/magnolia_small
 #: inkstitch-fonts-metadata.py:138
 msgid "Magnolia Small is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Magnolia Small je upravená verze Magnolia KOR, která umožňuje větší zmenšení. Použití tenké nitě (60) a tenké jehly (60) je povinné."
 
 #. description of font in fonts/magnolia_tamed
 #: inkstitch-fonts-metadata.py:140
 msgid "This is a less wild bicolor variation of Magnolia font"
-msgstr ""
+msgstr "Jedná se o méně divokou dvoubarevnou variantu písma Magnolia"
 
 #. description of font in fonts/malika
 #: inkstitch-fonts-metadata.py:142
 msgid "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch."
-msgstr ""
+msgstr "Malika je arabské saténové písmo. Nepovinné diakritiky by se neměly psát v textu, ale měly by se psát samostatně a poté ručně přesouvat na správnou pozici. Tři sady závorek obsahují ozdoby, pokud chcete textu dodat další ornamentální prvek."
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:144
 msgid "Manuskript Gothisch is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Manuskript Gothisch je saténové písmo. Každý saténový font má podkladový cikcak steh."
 
 #. description of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:146
 msgid "MarcellusSC-FI is a small capital satin font. It contains 107 glyphs covering most Western European languages."
-msgstr ""
+msgstr "MarcellusSC-FI je malé saténové písmo. Obsahuje 107 glyfů pokrývajících většinu západoevropských jazyků."
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:148
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
-msgstr ""
+msgstr "Font Ink/Stitch Medium je základní saténové písmo vhodné pro středně velké znaky. Každý saténový font má obrysový podklad."
 
 #. description of font in fonts/milli_marif_bold
 #: inkstitch-fonts-metadata.py:150
 msgid "Millimarif-bold20 is a  bold satin font."
-msgstr ""
+msgstr "Millimarif-bold20 je tučné saténové písmo."
 
 #. description of font in fonts/mimosa_large
 #: inkstitch-fonts-metadata.py:152
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
-msgstr ""
+msgstr "Mimosa Large je saténové písmo, které vypadá jako tečkované písmo   "
 
 #. description of font in fonts/mimosa_medium
 #: inkstitch-fonts-metadata.py:154
 msgid "Mimosa Medium is a satin font that looks dotty."
-msgstr ""
+msgstr "Mimosa Medium je saténové písmo, které vypadá tečkovaně."
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:156
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
-msgstr ""
+msgstr "Monicha je saténové písmo. Kromě glyfů pokrývajících většinu západoevropských jazyků obsahuje i střídavá ornamentální písmena s ozdobnými čarami. Tato ornamentální písmena by se měla používat s opatrností, aby se zabránilo překrývání. Zejména nepoužívejte dvě ornamentální písmena za sebou. Informace o přístupu k ornamentálním písmenům naleznete v dokumentaci."
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:158
 msgid "Namskout AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Namskout AGS je velké dekorativní písmo. Obsahuje 43 glyfů včetně číslic a 26 velkých písmen A-Z."
 
 #. description of font in fonts/namskout_relief
 #: inkstitch-fonts-metadata.py:160
 msgid "Namskout relief is an altered version of Namskout AGS for embossed letters."
-msgstr ""
+msgstr "Namskout relief je upravená verze Namskout AGS pro reliéfní písmena."
 
 #. description of font in fonts/namskout_tartan
 #: inkstitch-fonts-metadata.py:162
 msgid "Namskout Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals."
-msgstr ""
+msgstr "Namskout Tartan je tartanové písmo. Obsahuje 43 glyfů včetně všech číslic a 26 velkých písmen."
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:164
 msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
-msgstr ""
+msgstr "NickAinley je malé písmo tvořené zesíleným obrysovým stehem, založené na 24bodovém písmu Seniors Studio."
 
 #. description of font in fonts/ondulamarif_Medium
 #: inkstitch-fonts-metadata.py:166
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
-msgstr ""
+msgstr "Ondulamarif M je upravená verze Ondulamarif XL. Upravené parametry vyšívání tohoto fontu umožňují menší velikost písma."
 
 #. description of font in fonts/ondulamarif_S
 #: inkstitch-fonts-metadata.py:168
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
-msgstr ""
+msgstr "Ondulamarif S je upravená verze Ondulamarif XL, která umožňuje větší zmenšení."
 
 #. description of font in fonts/ondulamarif_XL
 #: inkstitch-fonts-metadata.py:170
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
-msgstr ""
+msgstr "Ondulamarif XL je písmo s vlnitým stehem, použijte ho co největší, ale nezmenšujte ho."
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:172
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr ""
+msgstr "Pacificlo je malé saténové písmo ve stylu rukopisu. Obsahuje 120 glyfů, pokrývajících potřeby většiny západoevropských jazyků. "
 
 #. description of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:174
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Pacificlo tiny je upravená verze Pacificla, která umožňuje větší zmenšení. Použití tenké nitě (60) a tenké jehly (60) je povinné."
 
 #. description of font in fonts/perspective_tricolore_KOR
 #: inkstitch-fonts-metadata.py:176
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
-msgstr ""
+msgstr "Perspective tricolore KOR je stínované tříbarevné písmo pouze s velkými písmeny, číslicemi a punkturou."
 
 #. description of font in fonts/pixel10
 #: inkstitch-fonts-metadata.py:178
 msgid "Pixel 10 is a satin pixel font."
-msgstr ""
+msgstr "Pixel 10 je saténové pixelové písmo."
 
 #. description of font in fonts/roaring_twenties_KOR
 #: inkstitch-fonts-metadata.py:180
 msgid "Roaring Twenties KOR is a mix of satin and bean stitches."
-msgstr ""
+msgstr "Roaring Twenties KOR je směsicí saténových a zesílených stehů."
 
 #. description of font in fonts/roaring_twenties_KOR_small
 #: inkstitch-fonts-metadata.py:182
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Roaring Twenties KOR Small je upravená verze Roaring Twenties KOR, která umožňuje větší zmenšení. Použití tenké nitě (60) a tenké jehly (60) je povinné."
 
 #. description of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:184
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Roman AGS je založen na kurzívě Latin Modern Roman 10 Bold. Každý saténový vzor má cikcak podklad."
 
 #. description of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:186
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
-msgstr ""
+msgstr "Roman bicolor AGS je upravená verze Roman AGS. Velká písmena jsou dvoubarevná."
 
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:188
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
-msgstr ""
+msgstr "Sacramarif je velmi malé písmo s rovným stehem, které vychází z písma Sacramento."
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:190
 msgid "Ink/Stitch Small Font is suited for small characters."
-msgstr ""
+msgstr "Ink/Stitch Small Font je vhodný pro malé znaky."
 
 #. description of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:192
 #, python-brace-format
 msgid " Sortefax XL Initials is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
-msgstr ""
+msgstr " Sortefax XL Initials je velmi velké písmo kapitálek se saténovým stehem. Obsahuje 37 symbolů: ampersand, A-Z a 0-9. Kromě toho se deset symbolů (){}[],;.: používá k uložení rámečků. Zadejte libovolné písmeno následované libovolným rámečkem (např. A( nebo B; ), abyste získali zarámované velké písmeno nebo číslo. Varování: pro několik velkých písmen budete muset rámeček zvětšit ručně."
 
 #. description of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:194
 #, python-brace-format
 msgid "Sortefax  Medium Initials is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
-msgstr ""
+msgstr "Sortefax Medium Initials je písmo kapitálek se saténovým stehem. Obsahuje 37 symbolů: ampersand, A-Z a 0-9. Kromě toho se deset symbolů (){}[],;.: používá k uložení rámečků. Zadejte libovolné písmeno následované libovolným rámečkem (např. A( nebo B; nebo 7, ), abyste získali zarámované velké písmeno nebo číslo. Může být nutné ručně uspořádat rámeček kolem písmene."
 
 #. description of font in fonts/sunset
 #: inkstitch-fonts-metadata.py:196
 msgid "3 colors satin column font"
-msgstr ""
+msgstr "Tříbarevné saténové sloupcové písmo"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:198
 msgid "TT  Directors is a satin font suited for directing."
-msgstr ""
+msgstr "TT Directors je saténové písmo vhodné pro nadpisy a nápisy s jasným směrem."
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:200
 msgid "TT Masters is a satin font suited for heavy typing :)"
-msgstr ""
+msgstr "TT Masters je saténové písmo vhodné pro náročné psaní :)"
 
 #. description of font in fonts/violin_serif
 #: inkstitch-fonts-metadata.py:202
 msgid "Violin Serif is a condensed serif satin font."
-msgstr ""
+msgstr "Violin Serif je zhuštěné patkové saténové písmo."
 
 #. description of font in fonts/western_light
 #: inkstitch-fonts-metadata.py:204
 msgid "Western light is a light fill western style font."
-msgstr ""
+msgstr "Western light je písmo westernového stylu se světlou výplní."
 
 #. name of tile in tiles/N3-11a
 #: inkstitch-tiles-metadata.py:2
@@ -2104,12 +2104,12 @@ msgstr "Délka stehů pro spojení počátečního a koncového bodu."
 
 #: lib/elements/satin_column.py:387
 msgid "Running Stitch Position"
-msgstr ""
+msgstr "Pozice rovného stehu"
 
 #: lib/elements/satin_column.py:388
 #, python-format
 msgid "Position of running stitches between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
-msgstr ""
+msgstr "Pozice rovného stehu mezi vodicími linkami. 0 % je podél první vodicí linky, 50 % je uprostřed, 100 % je podél druhé vodicí linky."
 
 #: lib/elements/satin_column.py:396
 msgid "Start at nearest point"
@@ -2121,11 +2121,11 @@ msgstr "Začněte v nejbližším bodě k předchozímu prvku. Příkaz počáte
 
 #: lib/elements/satin_column.py:404
 msgid "End at nearest point"
-msgstr ""
+msgstr "Konec v nejbližším bodě"
 
 #: lib/elements/satin_column.py:405
 msgid "End at nearest point to the next element. An end position command will overwrite this setting."
-msgstr ""
+msgstr "Konec v nejbližším bodě k dalšímu prvku. Příkaz koncové polohy toto nastavení přepíše."
 
 #: lib/elements/satin_column.py:411 inx/inkstitch_fill_to_satin.inx:16
 msgid "Contour underlay"
@@ -2309,7 +2309,7 @@ msgstr "Přepíše nastavení počtu řádků."
 
 #: lib/elements/stroke.py:238
 msgid "Line count / Minimum line distance"
-msgstr ""
+msgstr "Počet řádků / Minimální vzdálenost řádků"
 
 #: lib/elements/stroke.py:239
 msgid "Render at rungs"
@@ -2317,15 +2317,15 @@ msgstr "Render na příčkách"
 
 #: lib/elements/stroke.py:240
 msgid "Adaptive + minimum line distance"
-msgstr ""
+msgstr "Adaptivní + minimální vzdálenost vedení"
 
 #: lib/elements/stroke.py:245
 msgid "Pattern position"
-msgstr ""
+msgstr "Pozice vzoru"
 
 #: lib/elements/stroke.py:246
 msgid "Pattern position for satin guided ripples."
-msgstr ""
+msgstr "Pozice vzoru pro saténové výplně s vlnkovým efektem."
 
 #: lib/elements/stroke.py:257
 msgid "Stagger lines this many times before repeating"
@@ -2397,11 +2397,11 @@ msgstr "Vykreslit jako mřížku. Používejte opatrně a sledujte hustotu stehu
 
 #: lib/elements/stroke.py:376
 msgid "Stitch grid first"
-msgstr ""
+msgstr "Nejprve steh mřížky"
 
 #: lib/elements/stroke.py:377
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
-msgstr ""
+msgstr "Obrátit pořadí stehových cest, aby se nejprve vyšila mřížka"
 
 #: lib/elements/stroke.py:388
 msgid "Scale axis"
@@ -2568,31 +2568,31 @@ msgstr "Tip: Spusťte Rozšíření > Ink/Stitch > Odstraňování problémů > 
 
 #: lib/extensions/batch_lettering.py:56
 msgid "Please specify a text"
-msgstr ""
+msgstr "Prosím, zadejte text"
 
 #: lib/extensions/batch_lettering.py:61
 msgid "Please specify a font"
-msgstr ""
+msgstr "Prosím vyberte font"
 
 #: lib/extensions/batch_lettering.py:65
 msgid "Please specify a valid font name."
-msgstr ""
+msgstr "Zadejte prosím platný název písma."
 
 #: lib/extensions/batch_lettering.py:66
 msgid "You can find a list with all font names on our website: https://inkstitch.org/fonts/font-library/"
-msgstr ""
+msgstr "Seznam všech názvů písem naleznete na našich webových stránkách: https://inkstitch.org/fonts/font-library/"
 
 #: lib/extensions/batch_lettering.py:70
 msgid "Please specify at least one output file format"
-msgstr ""
+msgstr "Prosím, zadejte alespoň jeden formát výstupního souboru"
 
 #: lib/extensions/batch_lettering.py:76
 msgid "Please specify at least one file format supported by Ink/Stitch"
-msgstr ""
+msgstr "Prosím, uveďte alespoň jeden formát souboru podporovaný Ink/Stitch"
 
 #: lib/extensions/batch_lettering.py:77
 msgid "You can find a list with all supported file formats our website: https://inkstitch.org/docs/file-formats/#writing"
-msgstr ""
+msgstr "Seznam všech podporovaných formátů souborů naleznete na našich webových stránkách: https://inkstitch.org/docs/file-formats/#writing"
 
 #: lib/extensions/batch_lettering.py:204 lib/extensions/lettering.py:60
 #: lib/extensions/lettering.py:71
@@ -2601,7 +2601,7 @@ msgstr "Ink/Stitch Písmo"
 
 #: lib/extensions/batch_lettering.py:210 lib/gui/lettering/main_panel.py:307
 msgid "scale"
-msgstr ""
+msgstr "měřítko"
 
 #: lib/extensions/break_apart.py:32
 msgid "Please select one or more fill areas to break apart."
@@ -2753,11 +2753,12 @@ msgstr "Filtrovat stehy menší než (mm)"
 #: lib/extensions/fill_to_satin.py:81
 msgid "The selection contains elements with both, a fill and a stroke.\n\n"
 "Rungs only have a stroke color and fill elements a fill color."
-msgstr ""
+msgstr "Výběr obsahuje prvky s výplní i tahem.\n\n"
+"Příčky mají pouze barvu tahu a prvky výplně barvu výplně."
 
 #: lib/extensions/fill_to_satin.py:108
 msgid "Satin Group"
-msgstr ""
+msgstr "Saténová skupina"
 
 #: lib/extensions/fill_to_satin.py:129 inx/inkstitch_select_elements.inx:30
 msgid "Satin"
@@ -2765,7 +2766,7 @@ msgstr "Satén"
 
 #: lib/extensions/fill_to_satin.py:142
 msgid "Please select a fill object and rungs."
-msgstr ""
+msgstr "Vyberte prosím objekt výplně a příčky."
 
 #: lib/extensions/fill_to_satin.py:146 inx/inkstitch_fill_to_satin.inx:28
 msgid "https://inkstitch.org/docs/satin-tools/#fill-to-satin"
@@ -2777,7 +2778,7 @@ msgstr "Vyberte jeden nebo více objektů výplně pro vykreslení středové li
 
 #: lib/extensions/fill_to_stroke.py:70
 msgid "center line"
-msgstr ""
+msgstr "středová linka"
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
@@ -2811,7 +2812,7 @@ msgstr "Vyberte prosím alespoň jeden objekt s přechodovou výplní."
 
 #: lib/extensions/gradient_blocks.py:64
 msgid "Color Gradient Blocks"
-msgstr ""
+msgstr "Barevné přechodové bloky"
 
 #: lib/extensions/input.py:22
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
@@ -2819,12 +2820,13 @@ msgstr "Ink/Stitch nemůže přímo importovat barevné formáty. Ale můžete o
 
 #: lib/extensions/install.py:44 lib/extensions/install.py:54
 msgid "Could not install color palettes. Please file an issue on"
-msgstr ""
+msgstr "Nepodařilo se nainstalovat barevné palety. Nahlaste prosím problém na"
 
 #: lib/extensions/install.py:58
 msgid "Successfully installed Addons.\n\n"
 "Please restart Inkscape."
-msgstr ""
+msgstr "Doplňky byly úspěšně nainstalovány.\n\n"
+"Restartujte prosím Inkscape."
 
 #: lib/extensions/install_custom_palette.py:25
 #: lib/extensions/palette_to_text.py:27
@@ -2862,7 +2864,7 @@ msgstr "Text neobsahuje žádný znak."
 
 #: lib/extensions/lettering_along_path.py:84
 msgid "Couldn't identify the font specified in the lettering group."
-msgstr ""
+msgstr "Nepodařilo se identifikovat písmo zadané ve skupině písem."
 
 #: lib/extensions/lettering_custom_font_dir.py:28
 msgid "Please specify the directory of your custom fonts."
@@ -2870,7 +2872,7 @@ msgstr "Zadejte prosím adresář vašich vlastních písem."
 
 #: lib/extensions/lettering_edit_json.py:32
 msgid "Ink/Stitch Edit JSON"
-msgstr ""
+msgstr "Úprava Ink/Stitch JSON"
 
 #: lib/extensions/lettering_font_sample.py:21
 msgid "Font Sample"
@@ -3068,7 +3070,7 @@ msgstr "Nelze zjistit cestu k pythonu. Přidejte cestu ručně, jak je popsáno 
 
 #: lib/extensions/selection_to_anchor_line.py:21
 msgid "Please select at least one object to be marked as a anchor line."
-msgstr ""
+msgstr "Vyberte prosím alespoň jeden objekt, který chcete označit jako vodicí čáru."
 
 #: lib/extensions/selection_to_guide_line.py:21
 msgid "Please select at least one object to be marked as a guide line."
@@ -3080,31 +3082,31 @@ msgstr "Vyberte prosím alespoň jeden objekt, který chcete označit jako vzor.
 
 #: lib/extensions/sew_stack_editor.py:93
 msgid "Sew stack only"
-msgstr ""
+msgstr "Vyšít pouze vrstvy"
 
 #: lib/extensions/sew_stack_editor.py:95
 msgid "Only sew the Sew Stack layers, and ignore settings from Params"
-msgstr ""
+msgstr "Vyšít pouze vrstvy z posloupnosti šití a ignorovat nastavení z parametrů"
 
 #: lib/extensions/sew_stack_editor.py:195
 msgid "Preview selected layer"
-msgstr ""
+msgstr "Náhled vybrané vrstvy"
 
 #: lib/extensions/sew_stack_editor.py:201
 msgid "Preview all layers"
-msgstr ""
+msgstr "Náhled všech vrstev"
 
 #: lib/extensions/sew_stack_editor.py:224
 msgid "Layer Name"
-msgstr ""
+msgstr "Název vrstvy"
 
 #: lib/extensions/sew_stack_editor.py:374
 msgid "Are you sure you want to delete this layer?"
-msgstr ""
+msgstr "Jste si jisti, že chcete tuto vrstvu smazat?"
 
 #: lib/extensions/sew_stack_editor.py:514
 msgid "Are you sure you want to quit without saving changes?"
-msgstr ""
+msgstr "Opravdu chcete ukončit bez uložení změn?"
 
 #: lib/extensions/stroke_to_lpe_satin.py:33
 msgid "Please select at least one stroke."
@@ -3218,7 +3220,7 @@ msgstr "Typ Upozornění"
 
 #: lib/extensions/troubleshoot.py:166
 msgid "Problem descriptions"
-msgstr ""
+msgstr "Popisy problému"
 
 #: lib/extensions/troubleshoot.py:184
 msgid "Problems that will prevent the shape from being embroidered."
@@ -3352,60 +3354,60 @@ msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:401 lib/gui/edit_json/main_panel.py:414
 msgid "Could not read json file."
-msgstr ""
+msgstr "Nelze načíst soubor json."
 
 #: lib/gui/edit_json/main_panel.py:405
 msgid "Changes will not be saved: cannot write to json file (permission denied)."
-msgstr ""
+msgstr "Změny nebudou uloženy: nelze zapisovat do souboru json (přístup odepřen)."
 
 #: lib/gui/edit_json/main_panel.py:419
 msgid "Could not write to json file: permission denied."
-msgstr ""
+msgstr "Nelze zapisovat do souboru json: přístup odepřen."
 
 #: lib/gui/edit_json/settings_panel.py:24
 msgid "Text before"
-msgstr ""
+msgstr "Text před"
 
 #: lib/gui/edit_json/settings_panel.py:27
 msgid "Text after"
-msgstr ""
+msgstr "Text za"
 
 #: lib/gui/edit_json/settings_panel.py:45
 msgid "Font Info"
-msgstr ""
+msgstr "Informace o písmu"
 
 #: lib/gui/edit_json/settings_panel.py:48
 msgid "Font Settings"
-msgstr ""
+msgstr "Nastavení písma"
 
 #: lib/gui/edit_json/settings_panel.py:51
 msgid "General Kerning"
-msgstr ""
+msgstr "Obecné vyrovnávání mezer"
 
 #: lib/gui/edit_json/settings_panel.py:54
 msgid "Horizontal advance"
-msgstr ""
+msgstr "Horizontální posun"
 
 #: lib/gui/edit_json/settings_panel.py:58
 msgid "Kerning pairs"
-msgstr ""
+msgstr "Páry pro vyrovnávání mezer"
 
 #: lib/gui/edit_json/settings_panel.py:101
 msgid "Default Variant"
-msgstr ""
+msgstr "Výchozí varianta"
 
 #: lib/gui/edit_json/settings_panel.py:105
 #: inx/inkstitch_lettering_generate_json.inx:28
 msgid "Text direction"
-msgstr ""
+msgstr "Směr textu"
 
 #: lib/gui/edit_json/settings_panel.py:106
 msgid "Left to Right"
-msgstr ""
+msgstr "Z leva do prava"
 
 #: lib/gui/edit_json/settings_panel.py:106
 msgid "Right to Left"
-msgstr ""
+msgstr "Z prava do leva"
 
 #: lib/gui/edit_json/settings_panel.py:109
 #: inx/inkstitch_lettering_generate_json.inx:42
@@ -3414,15 +3416,15 @@ msgstr "Klíčová slova"
 
 #: lib/gui/edit_json/settings_panel.py:144
 msgid "Default glyph"
-msgstr ""
+msgstr "Výchozí glyf"
 
 #: lib/gui/edit_json/settings_panel.py:151
 msgid "AutoSatin"
-msgstr ""
+msgstr "Automaticky vyplnit satén"
 
 #: lib/gui/edit_json/settings_panel.py:158
 msgid "Letter case"
-msgstr ""
+msgstr "Forma / typ písmen"
 
 #: lib/gui/edit_json/settings_panel.py:159
 #: inx/inkstitch_lettering_generate_json.inx:96
@@ -3446,7 +3448,7 @@ msgstr "Tříditelné"
 
 #: lib/gui/edit_json/settings_panel.py:176
 msgid "Combine Indices"
-msgstr ""
+msgstr "Kombinovat indexy"
 
 #: lib/gui/edit_json/settings_panel.py:213
 #: inx/inkstitch_lettering_generate_json.inx:102
@@ -3460,15 +3462,15 @@ msgstr "Maximální měřítko"
 
 #: lib/gui/edit_json/settings_panel.py:227
 msgid "Leading"
-msgstr ""
+msgstr "Vedoucí"
 
 #: lib/gui/edit_json/settings_panel.py:233
 msgid "Horizontal advance x"
-msgstr ""
+msgstr "Horizontální posun x"
 
 #: lib/gui/edit_json/settings_panel.py:239
 msgid "Horizontal advance x space"
-msgstr ""
+msgstr "Horizontální posun x prostor"
 
 #: lib/gui/element_info.py:17 inx/inkstitch_element_info.inx:3
 msgid "Element Info"
@@ -3540,11 +3542,11 @@ msgstr "Filtr písem"
 
 #: lib/gui/lettering/option_panel.py:55
 msgid "Height: "
-msgstr ""
+msgstr "Výška: "
 
 #: lib/gui/lettering/option_panel.py:59
 msgid "Scale:"
-msgstr ""
+msgstr "Měřítko:"
 
 #: lib/gui/lettering/option_panel.py:71
 msgid "Font"
@@ -3556,33 +3558,33 @@ msgstr "Vyšívejte řádky textu tam a zpět"
 
 #: lib/gui/lettering/option_panel.py:87
 msgid "Align Text"
-msgstr ""
+msgstr "Zarovnání textu"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:36
 #: inx/inkstitch_batch_lettering.inx:49
 #: inx/inkstitch_lettering_along_path.inx:19
 msgid "Left"
-msgstr ""
+msgstr "Doleva"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:37
 #: inx/inkstitch_batch_lettering.inx:50
 #: inx/inkstitch_lettering_along_path.inx:20
 msgid "Center"
-msgstr ""
+msgstr "Doprostřed"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:38
 #: inx/inkstitch_batch_lettering.inx:51
 #: inx/inkstitch_lettering_along_path.inx:21
 msgid "Right"
-msgstr ""
+msgstr "Doprava"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:39
 msgid "Block (default)"
-msgstr ""
+msgstr "Do bloku (výchozí)"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:40
 msgid "Block (letterspacing)"
-msgstr ""
+msgstr "Do bloku (mezery mezi písmeny)"
 
 #: lib/gui/lettering/option_panel.py:95 lib/gui/lettering/option_panel.py:97
 msgid "Sort multicolor fonts. Unifies tartan patterns."
@@ -3590,19 +3592,19 @@ msgstr "Řazení vícebarevných písem. Sjednocuje tartanové vzory."
 
 #: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:23
 msgid "Off"
-msgstr ""
+msgstr "Vypnuto"
 
 #: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:24
 msgid "Whole text"
-msgstr ""
+msgstr "Celý text"
 
 #: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:25
 msgid "Line"
-msgstr ""
+msgstr "Čára"
 
 #: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:26
 msgid "Word"
-msgstr ""
+msgstr "Slovo"
 
 #: lib/gui/lettering/option_panel.py:100 inx/inkstitch_batch_lettering.inx:28
 msgid "Add trims"
@@ -3685,7 +3687,9 @@ msgid "The glyphlist for this font seems to be outdated.\n\n"
 "Please update the glyph list for {font_name}:\n"
 "* Open Extensions > Ink/Stitch > Font Management > Edit JSON\n"
 "* Select this font and apply."
-msgstr ""
+msgstr "Seznam znaků pro toto písmo se zdá být zastaralý.\n\n"
+"Aktualizujte prosím seznam znaků pro {font_name}:\n"
+"Rozšíření > Ink/Stitch > Správa písem > Aktualizovat seznam znaků."
 
 #: lib/gui/lettering_font_sample.py:238
 #, python-brace-format
@@ -3978,11 +3982,11 @@ msgstr "Příkaz: %s"
 
 #: lib/gui/simulator/simulator_preferences.py:30
 msgid "Adapt speed to stitch count"
-msgstr ""
+msgstr "Přizpůsobit rychlost počtu stehů"
 
 #: lib/gui/simulator/simulator_preferences.py:32
 msgid "When enabled simulation speed adapts itself to the stitch count."
-msgstr ""
+msgstr "Je-li tato funkce povolena, rychlost simulace se přizpůsobí počtu stehů."
 
 #: lib/gui/simulator/simulator_preferences.py:35
 #: inx/inkstitch_fill_to_stroke.inx:21 inx/inkstitch_png_simple.inx:15
@@ -4028,7 +4032,7 @@ msgstr "Změna barvy pozadí"
 
 #: lib/gui/simulator/view_panel.py:82
 msgid "Show crosshair"
-msgstr ""
+msgstr "Zobrazit zaměřovací kříž"
 
 #: lib/gui/simulator/view_panel.py:92
 msgid "Show page"
@@ -4331,27 +4335,27 @@ msgstr "Malé velikosti písma"
 
 #: lib/lettering/categories.py:32 inx/inkstitch_lettering_generate_json.inx:65
 msgid "Script: arabic"
-msgstr ""
+msgstr "Písmo: arabské"
 
 #: lib/lettering/categories.py:33 inx/inkstitch_lettering_generate_json.inx:66
 msgid "Script: cyrillic"
-msgstr ""
+msgstr "Písmo: cyrilice"
 
 #: lib/lettering/categories.py:34 inx/inkstitch_lettering_generate_json.inx:69
 msgid "Script: greek"
-msgstr ""
+msgstr "Písmo: řecké"
 
 #: lib/lettering/categories.py:35 inx/inkstitch_lettering_generate_json.inx:70
 msgid "Script: hebrew"
-msgstr ""
+msgstr "Písmo: hebrejské"
 
 #: lib/lettering/categories.py:36 inx/inkstitch_lettering_generate_json.inx:71
 msgid "Script: japanese"
-msgstr ""
+msgstr "Písmo: japonské"
 
 #: lib/lettering/categories.py:37 inx/inkstitch_lettering_generate_json.inx:72
 msgid "Script: latin"
-msgstr ""
+msgstr "Písmo: latinka"
 
 #: lib/lettering/font.py:99
 msgid "JSON file missing. Expected a JSON file at the following location:"
@@ -4408,76 +4412,77 @@ msgstr ""
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:9
 msgid "Path"
-msgstr ""
+msgstr "Cesta"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:10
 msgid "Reverse path"
-msgstr ""
+msgstr "Obrátit cestu"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:11
 msgid "Reverse the path when stitching this layer."
-msgstr ""
+msgstr "Obrácená cesta při vyšívání této vrstvy."
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:58
 msgid "Randomization"
-msgstr ""
+msgstr "Náhodnost"
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:61
 msgid "The random seed is used when handling randomization settings.  Click the button to choose a new random seed, which will generate random features differently. Alternatively, you can enter your own random seed.  If you reuse a random seed, random features will look the same."
-msgstr ""
+msgstr "Náhodnost se řídí počáteční hodnotou (tzv. semenem). Kliknutím na tlačítko zvolíte novou počáteční hodnotu, která bude generovat náhodné prvky odlišně. Případně můžete zadat vlastní počáteční hodnotu. Pokud znovu použijete stejnou počáteční hodnotu, náhodné prvky budou vypadat pokaždé stejně."
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:65
 msgid "Offset stitches"
-msgstr ""
+msgstr "Odsazení stehů"
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:66
 msgid "Move stitches randomly by up to this many millimeters in any direction."
-msgstr ""
+msgstr "Stehy můžete náhodně posouvat až o tolik milimetrů v libovolném směru."
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:67
 msgid "Offset stitch path"
-msgstr ""
+msgstr "Odsazení cesty stehu"
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:68
 msgid "Move stitches randomly by up to this many millimeters perpendicular to the stitch path.\n\n"
 "If <b>Offset stitches</b> is also specified, then this one is processed first."
-msgstr ""
+msgstr "Stehy se náhodně posouvají až o tento počet milimetrů kolmo k dráze stehu.\n\n"
+"Pokud je také zadáno <b>Odsazené stehy</b>, pak se tento zpracuje jako první."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
 msgid "Stitch along a path using evenly-spaced stitches."
-msgstr ""
+msgstr "Vyšívá podél cesty rovnoměrně rozmístěnými stehy."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:25
 msgid "Tolerance"
-msgstr ""
+msgstr "Tolerance"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:26
 msgid "Determines how closely the stitch path matches the SVG path.  A lower tolerance means stitches will be closer together and fit the SVG path more precisely.  A higher tolerance means some corners may be rounded and fewer stitches are needed."
-msgstr ""
+msgstr "Určuje, jak přesně se trasa stehu shoduje s trasou SVG. Nižší tolerance znamená, že stehy budou blíže k sobě a přesněji se budou přizpůsobovat trase SVG. Vyšší tolerance znamená, že některé rohy mohou být zaoblené a bude potřeba méně stehů."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:41
 msgid "Repeat exact stitches"
-msgstr ""
+msgstr "Opakujte přesné stehy"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:43
 msgid "Should the exact same stitches be repeated in each pass?  If not, different randomization settings are applied on each pass."
-msgstr ""
+msgstr "Měly by se v každém průchodu opakovat přesně stejné stehy? Pokud ne, použijí se v každém průchodu jiná nastavení náhodnosti."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:51
 msgid "Stitch length variance"
-msgstr ""
+msgstr "Rozdíl délky stehu"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:52
 msgid "Enter a percentage.  Stitch length will vary randomly by up to this percentage."
-msgstr ""
+msgstr "Zadejte procento. Délka stehu se bude náhodně měnit až o toto procento."
 
 #: lib/sew_stack/stitch_layers/stitch_layer_editor.py:339
 msgid "Undo changes"
-msgstr ""
+msgstr "Vrátit změny"
 
 #: lib/sew_stack/stitch_layers/stitch_layer_editor.py:349
 msgid "Reset to default"
-msgstr ""
+msgstr "Nastavit na výchozí"
 
 #: lib/stitch_plan/generate_stitch_plan.py:76
 #, python-format
@@ -4600,7 +4605,7 @@ msgstr "# ořezů"
 
 #: print/templates/color_swatch.html:24
 msgid "# stops"
-msgstr ""
+msgstr "# zastavení"
 
 #: print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:57
@@ -4763,7 +4768,7 @@ msgstr "ořezy"
 
 #: print/templates/operator_detailedview.html:68
 msgid "stops"
-msgstr ""
+msgstr "zastavení"
 
 #: print/templates/operator_detailedview.html:72
 msgid "Enter operator notes..."
@@ -5156,17 +5161,17 @@ msgstr "Husqvarna Vyšívací Formát"
 #. description for pyembroidery file format: iqp
 #: pyembroidery-format-descriptions.py:94
 msgid "Iqp - Intelliquilter Format"
-msgstr ""
+msgstr "Iqp - formát Intelliquilter"
 
 #. description for pyembroidery file format: plt
 #: pyembroidery-format-descriptions.py:96
 msgid "Plt - HPGL"
-msgstr ""
+msgstr "Plt - HPGL"
 
 #. description for pyembroidery file format: qcc
 #: pyembroidery-format-descriptions.py:98
 msgid "Qcc - QuiltEZ"
-msgstr ""
+msgstr "Qcc - QuiltEZ"
 
 #. description for pyembroidery file format: edr
 #: pyembroidery-format-descriptions.py:100
@@ -5325,7 +5330,7 @@ msgstr "Zachovat pořadí saténových sloupců"
 
 #: inx/inkstitch_auto_satin.inx:14 inx/inkstitch_redwork.inx:26
 msgid "Keep original paths"
-msgstr ""
+msgstr "Zachovej původní cesty"
 
 #: inx/inkstitch_auto_satin.inx:17
 msgid "This extension tries to create a single stitch path through all selected satin columns."
@@ -5371,39 +5376,39 @@ msgstr "Nástroje: Satén"
 
 #: inx/inkstitch_batch_lettering.inx:3
 msgid "Batch Lettering"
-msgstr ""
+msgstr "Hromadné nápisy"
 
 #: inx/inkstitch_batch_lettering.inx:13
 msgid "Enter the text. Each line of text will be exported to a separate file."
-msgstr ""
+msgstr "Zadejte text. Každý řádek textu bude exportován do samostatného souboru."
 
 #: inx/inkstitch_batch_lettering.inx:15
 msgid "Custom separator"
-msgstr ""
+msgstr "Volitelný oddělovač"
 
 #: inx/inkstitch_batch_lettering.inx:15
 msgid "Set a custom separator for multiline text export. Leave empty for line break."
-msgstr ""
+msgstr "Nastavte vlastní oddělovač pro export víceřádkového textu. Pro zalomení řádku ponechte prázdné."
 
 #: inx/inkstitch_batch_lettering.inx:19
 msgid "Font name"
-msgstr ""
+msgstr "Název písma"
 
 #: inx/inkstitch_batch_lettering.inx:21
 msgid "The scale value must be within the scale range of the specified font."
-msgstr ""
+msgstr "Hodnota měřítka musí být v rozsahu měřítka zadaného písma."
 
 #: inx/inkstitch_batch_lettering.inx:35
 msgid "Align Multiline Text"
-msgstr ""
+msgstr "Zarovnání víceřádkového textu"
 
 #: inx/inkstitch_batch_lettering.inx:48
 msgid "Lettering along path: text position"
-msgstr ""
+msgstr "Písmo podél cesty: pozice textu"
 
 #: inx/inkstitch_batch_lettering.inx:48
 msgid "Uses this text position when using lettering along path"
-msgstr ""
+msgstr "Používá tuto pozici textu při použití písma podél cesty"
 
 #: inx/inkstitch_batch_lettering.inx:52
 #: inx/inkstitch_lettering_along_path.inx:22
@@ -5412,19 +5417,19 @@ msgstr "Roztáhnout"
 
 #: inx/inkstitch_batch_lettering.inx:57
 msgid "File formats"
-msgstr ""
+msgstr "Formát souboru"
 
 #: inx/inkstitch_batch_lettering.inx:57
 msgid "Comma separated list of file formats"
-msgstr ""
+msgstr "Seznam formátů souborů oddělených čárkami"
 
 #: inx/inkstitch_batch_lettering.inx:63
 msgid "Use this extension to save multiple files with the given text."
-msgstr ""
+msgstr "Toto rozšíření použijte k uložení více souborů s daným textem."
 
 #: inx/inkstitch_batch_lettering.inx:65
 msgid "When the document contains a path element labeled as \"batch lettering\" it will be used to place the text along this path. The path itself will be removed and won't be rendered."
-msgstr ""
+msgstr "Pokud dokument obsahuje prvek cesty označený jako „batch lettering“, bude použit k umístění textu podél této cesty. Samotná cesta bude odstraněna a nebude vykreslena."
 
 #: inx/inkstitch_batch_lettering.inx:68
 msgid "https://inkstitch.org/docs/lettering/#batch-export"
@@ -5432,11 +5437,11 @@ msgstr ""
 
 #: inx/inkstitch_batch_lettering.inx:75
 msgid "Ink/Stitch: batch lettering (.zip)"
-msgstr ""
+msgstr "Ink/Stitch: hromadné nápisy (.zip)"
 
 #: inx/inkstitch_batch_lettering.inx:76
 msgid "Create a zip with multiple files including embroidered text using Ink/Stitch"
-msgstr ""
+msgstr "Vytvoř zip s více soubory včetně vyšívaného textu pomocí Ink/Stitch"
 
 #: inx/inkstitch_break_apart.inx:3
 msgid "Break Apart Fill Objects"
@@ -5740,31 +5745,31 @@ msgstr "Zobrazuje informace o výšivkách vybraných položek"
 
 #: inx/inkstitch_fill_to_satin.inx:3
 msgid "Fill to satin"
-msgstr ""
+msgstr "Vyplnit saténem"
 
 #: inx/inkstitch_fill_to_satin.inx:10
 msgid "Start / end at rung"
-msgstr ""
+msgstr "Začátek / Konec u příčky"
 
 #: inx/inkstitch_fill_to_satin.inx:10
 msgid "Needs at least 2 rungs"
-msgstr ""
+msgstr "Jsou potřeba alespoň 2 příčky"
 
 #: inx/inkstitch_fill_to_satin.inx:22
 msgid "Keep original fills"
-msgstr ""
+msgstr "Zachovejte původní satén"
 
 #: inx/inkstitch_fill_to_satin.inx:22
 msgid "Deletes the original paths for rungs, but keeps the fill elements"
-msgstr ""
+msgstr "Odstraní původní cesty pro příčky, ale zachová výplňové prvky"
 
 #: inx/inkstitch_fill_to_satin.inx:25
 msgid "This extension takes in a fill and rung elements and converts them into satin(s)."
-msgstr ""
+msgstr "Toto rozšíření převezme výplň a prvky příček a převede je na saténový(é) steh(y)."
 
 #: inx/inkstitch_fill_to_satin.inx:35
 msgid "Convert fill elements to satin"
-msgstr ""
+msgstr "Převést výplňové prvky na saténové"
 
 #: inx/inkstitch_fill_to_stroke.inx:3 inx/inkstitch_fill_to_stroke.inx:25
 msgid "Fill to Stroke"
@@ -6117,15 +6122,15 @@ msgstr "převést INF souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_IQP.inx:3
 msgid "IQP file input"
-msgstr ""
+msgstr "IQP vstupní soubor"
 
 #: inx/inkstitch_input_IQP.inx:8
 msgid "Ink/Stitch: Iqp - Intelliquilter Format (.iqp)"
-msgstr ""
+msgstr "Ink/Stitch: Iqp - Intelliquilter Format (.iqp)"
 
 #: inx/inkstitch_input_IQP.inx:9
 msgid "convert IQP file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést IQP souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_JEF.inx:3
 msgid "JEF file input"
@@ -6309,15 +6314,15 @@ msgstr "převést PHC souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_input_PLT.inx:3
 msgid "PLT file input"
-msgstr ""
+msgstr "vstupní soubor PTL"
 
 #: inx/inkstitch_input_PLT.inx:8
 msgid "Ink/Stitch: Plt - HPGL (.plt)"
-msgstr ""
+msgstr "Ink/Stitch: Plt - HPGL (.plt)"
 
 #: inx/inkstitch_input_PLT.inx:9
 msgid "convert PLT file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převod souboru PLT na cesty ručního stehu Ink/Stitch"
 
 #: inx/inkstitch_input_PMV.inx:3
 msgid "PMV file input"
@@ -6333,15 +6338,15 @@ msgstr "převést PMV souborů do Ink/Stitch s ručním stehem\t"
 
 #: inx/inkstitch_input_QCC.inx:3
 msgid "QCC file input"
-msgstr ""
+msgstr "vstupní soubor QCC"
 
 #: inx/inkstitch_input_QCC.inx:8
 msgid "Ink/Stitch: Qcc - QuiltEZ (.qcc)"
-msgstr ""
+msgstr "Ink/Stitch: Qcc - QuiltEZ (.qcc)"
 
 #: inx/inkstitch_input_QCC.inx:9
 msgid "convert QCC file to Ink/Stitch manual-stitch paths"
-msgstr ""
+msgstr "převést soubor QCC na cesty ručního stehu Ink/Stitch"
 
 #: inx/inkstitch_input_SEW.inx:3
 msgid "SEW file input"
@@ -6489,31 +6494,31 @@ msgstr "převést ZXY souborů do Ink/Stitch s ručním stehem"
 
 #: inx/inkstitch_install.inx:3
 msgid "Install Addons for Inkscape"
-msgstr ""
+msgstr "Instalace doplňků pro Inkscape"
 
 #: inx/inkstitch_install.inx:10
 msgid "Install thread color palettes"
-msgstr ""
+msgstr "Instalace barevných palet nití"
 
 #: inx/inkstitch_install.inx:10
 msgid "Installs some default thread color palettes."
-msgstr ""
+msgstr "Nainstaluje některé výchozí barevné palety nití."
 
 #: inx/inkstitch_install.inx:12
 msgid "Install symbol libraries"
-msgstr ""
+msgstr "Instalace knihoven symbolů"
 
 #: inx/inkstitch_install.inx:12
 msgid "Installs symbol libraries with reusable motifs for embroidery"
-msgstr ""
+msgstr "Instaluje knihovny symbolů s opakovaně použitelnými motivy pro vyšívání"
 
 #: inx/inkstitch_install.inx:15
 msgid "Installs color palettes or a motif stitch symbol library into Inkscape."
-msgstr ""
+msgstr "Nainstaluje barevné palety nebo knihovnu symbolů stehů s motivem do Inkscape."
 
 #: inx/inkstitch_install.inx:16
 msgid "Please restart Inkscape after the installation is complete."
-msgstr ""
+msgstr "Po dokončení instalace restartujte Inkscape."
 
 #: inx/inkstitch_install.inx:19
 msgid "https://inkstitch.org/docs/install-addons"
@@ -6521,7 +6526,7 @@ msgstr ""
 
 #: inx/inkstitch_install.inx:26
 msgid "Installs color palettes or a symbol library for motif stitches into Inkscape"
-msgstr ""
+msgstr "Nainstaluje barevné palety nebo knihovnu symbolů pro stehy s motivy do Inkscape"
 
 #: inx/inkstitch_install_custom_palette.inx:3
 msgid "Install custom palette"
@@ -6649,67 +6654,67 @@ msgstr ""
 
 #: inx/inkstitch_knockdown_fill.inx:3
 msgid "Selection to Knockdown Fill"
-msgstr ""
+msgstr "Výběr pro zplošťující podkladovou výplň"
 
 #: inx/inkstitch_knockdown_fill.inx:9
 msgid "Generates a knockdown stitch with a specified offset around selection"
-msgstr ""
+msgstr "Vygeneruje steh pro zploštění vlasu látky, který se vyšije s nastaveným odstupem okolo vybraného motivu"
 
 #: inx/inkstitch_knockdown_fill.inx:18
 msgid "Keep holes"
-msgstr ""
+msgstr "Udržujte díry"
 
 #: inx/inkstitch_knockdown_fill.inx:19
 msgid "Offset"
-msgstr ""
+msgstr "Offset"
 
 #: inx/inkstitch_knockdown_fill.inx:22 inx/inkstitch_knockdown_fill.inx:39
 msgid "Mitre"
-msgstr ""
+msgstr "Pokos"
 
 #: inx/inkstitch_knockdown_fill.inx:23 inx/inkstitch_knockdown_fill.inx:40
 msgid "Bevel"
-msgstr ""
+msgstr "Úkos"
 
 #: inx/inkstitch_knockdown_fill.inx:25
 msgid "Mitre limit"
-msgstr ""
+msgstr "Omezení pokosu"
 
 #: inx/inkstitch_knockdown_fill.inx:30
 msgid "Embossing"
-msgstr ""
+msgstr "Embossing"
 
 #: inx/inkstitch_knockdown_fill.inx:31
 msgid "Shape"
-msgstr ""
+msgstr "Tvar"
 
 #: inx/inkstitch_knockdown_fill.inx:33
 msgid "Rectangle"
-msgstr ""
+msgstr "Obdélník"
 
 #: inx/inkstitch_knockdown_fill.inx:34
 msgid "Circle"
-msgstr ""
+msgstr "Kruh"
 
 #: inx/inkstitch_knockdown_fill.inx:36
 msgid "Shape offset"
-msgstr ""
+msgstr "Odsazení tvaru"
 
 #: inx/inkstitch_knockdown_fill.inx:44
 msgid "This extension generates a knockdown fill area with a specified offset around selected elements."
-msgstr ""
+msgstr "Toto rozšíření generuje zplošťující podkladovou výplň s určeným odsazením kolem vybraných prvků."
 
 #: inx/inkstitch_knockdown_fill.inx:45
 msgid "* Select elements of any kind"
-msgstr ""
+msgstr "* Vyberte prvky libovolného druhu"
 
 #: inx/inkstitch_knockdown_fill.inx:46
 msgid "* Open this extension and apply with desired settings"
-msgstr ""
+msgstr "* Otevře toto rozšíření a použije ho s požadovaným nastavením"
 
 #: inx/inkstitch_knockdown_fill.inx:47
 msgid "* Adapt fill settings in the params dialog"
-msgstr ""
+msgstr "* Úprava nastavení výplně v dialogovém okně parametrů"
 
 #: inx/inkstitch_knockdown_fill.inx:50
 msgid "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
@@ -6734,7 +6739,7 @@ msgstr "Písmno"
 
 #: inx/inkstitch_lettering.inx:9
 msgid "Insert ready-to-embroider text into the document"
-msgstr ""
+msgstr "Vložení textu připraveného k vyšívání do dokumentu"
 
 #: inx/inkstitch_lettering_along_path.inx:3
 msgid "Lettering along path"
@@ -6746,7 +6751,7 @@ msgstr "Tvaruje řádek textu na cestu"
 
 #: inx/inkstitch_lettering_along_path.inx:18
 msgid "Text position"
-msgstr ""
+msgstr "Umístění textu"
 
 #: inx/inkstitch_lettering_along_path.inx:26
 msgid "This extension bends an Ink/Stitch text to a path."
@@ -6770,7 +6775,7 @@ msgstr "* Text by neměl být pro danou cestu příliš velký"
 
 #: inx/inkstitch_lettering_along_path.inx:33
 msgid "In the text position dropdown menu, you can decide how the text will be placed on the path. When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path."
-msgstr ""
+msgstr "V rozbalovací nabídce umístění textu můžete zvolit, jak bude text umístěn na cestě. Po výběru možnosti roztáhnout se mezery mezi glyfy roztáhnou tak, aby se text roztáhl přes celou cestu."
 
 #: inx/inkstitch_lettering_along_path.inx:38
 msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
@@ -6811,11 +6816,11 @@ msgstr "Správa písem"
 
 #: inx/inkstitch_lettering_edit_json.inx:3
 msgid "Edit JSON"
-msgstr ""
+msgstr "Editace JSON"
 
 #: inx/inkstitch_lettering_edit_json.inx:9
 msgid "Feature to verify or update the font information file for an existing font"
-msgstr ""
+msgstr "Funkce pro ověření nebo aktualizaci souboru s informacemi o písmu pro existující písmo"
 
 #: inx/inkstitch_lettering_font_sample.inx:9
 msgid "Inserts all glyphs of a specified font into the document"
@@ -6827,11 +6832,11 @@ msgstr "Omezit na satén"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:14
 msgid "Add forced lock stitches by distance"
-msgstr ""
+msgstr "Přidat vynucené pojistné stehy podle vzdálenosti"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:14
 msgid "Add lock stitches when the following jump stitch is in the specified size range"
-msgstr ""
+msgstr "Přidat pojistné stehy, pokud je následující přepojovací steh v zadaném rozsahu velikostí"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:15
 msgid "Minimum distance (mm)"
@@ -6843,7 +6848,7 @@ msgstr "Maximální vzdálenost (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:20
 msgid "Add forced lock stitches to the last element of each glyph"
-msgstr ""
+msgstr "Přidejte atribut vynucených vázaných stehů k poslednímu prvku každého znaku"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
@@ -6875,15 +6880,15 @@ msgstr "Informace o písmu"
 
 #: inx/inkstitch_lettering_generate_json.inx:22
 msgid "Default variant"
-msgstr ""
+msgstr "Výchozí varianta"
 
 #: inx/inkstitch_lettering_generate_json.inx:29
 msgid "Left to right"
-msgstr ""
+msgstr "Z leva doprava"
 
 #: inx/inkstitch_lettering_generate_json.inx:30
 msgid "Right to left"
-msgstr ""
+msgstr "Z prava doleva"
 
 #: inx/inkstitch_lettering_generate_json.inx:36
 msgid "SVG Font File"
@@ -6962,15 +6967,15 @@ msgstr "Šířka mezery (výchozí: 20)"
 
 #: inx/inkstitch_lettering_generate_json.inx:134
 msgid "Overwrite letter spacing information from font file."
-msgstr ""
+msgstr "Přepsat informace o rozteči písmen ze souboru písma."
 
 #: inx/inkstitch_lettering_generate_json.inx:136
 msgid "Letter spacing (px)"
-msgstr ""
+msgstr "Rozteč písmen (px)"
 
 #: inx/inkstitch_lettering_generate_json.inx:136
 msgid "Letter spacing (default: 100)"
-msgstr ""
+msgstr "Rozteč písmen (výchozí: 100)"
 
 #: inx/inkstitch_lettering_generate_json.inx:144
 msgid "Generates font.json which can be used by the lettering tool."
@@ -6978,7 +6983,7 @@ msgstr "Vygeneruje soubor font.json, který může použít nástroj pro psaní 
 
 #: inx/inkstitch_lettering_generate_json.inx:145
 msgid "The generated file can be updated with Extensions > Ink/Stitch > Font Management > Edit JSON."
-msgstr ""
+msgstr "Vygenerovaný soubor lze aktualizovat pomocí Rozšíření > Ink/Stitch > Správa písem > Upravit JSON."
 
 #: inx/inkstitch_lettering_generate_json.inx:148
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
@@ -7034,15 +7039,15 @@ msgstr "Nastavuje index třídění barev na vybraných prvcích, který definuj
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:3
 msgid "Convert SVG Font to Glyph Layers"
-msgstr ""
+msgstr "Převod SVG písma na vrstvy glyfů"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:6
 msgid "Stop after"
-msgstr ""
+msgstr "Zastavit po"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:11
 msgid "Converts a svg font to glyph layers"
-msgstr ""
+msgstr "Převod SVG písma na vrstvy glyfů"
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
@@ -7262,11 +7267,11 @@ msgstr "Použijte '%X' pro x-ovou souřadnici. Použijte '%Y' pro y-souřadnici 
 
 #: inx/inkstitch_output_GCODE.inx:31
 msgid "Leave empty to use default value. Use 'none' to remove. Use %R %G %B for thread color values"
-msgstr ""
+msgstr "Pro použití výchozí hodnoty ponechte prázdné. Pro odstranění použijte „none“. Pro hodnoty barev nití použijte %R %G %B"
 
 #: inx/inkstitch_output_GCODE.inx:33
 msgid "Leave empty to ignore jumps. Use '%X' for x-coordinate and '%Y' for y-coordinate."
-msgstr ""
+msgstr "Nechte pole prázdné, chcete-li ignorovat skoky. Pro souřadnici x použijte '%X' a pro souřadnici y '%Y'."
 
 #: inx/inkstitch_output_GCODE.inx:35
 msgid "Leave empty to use default value. Use 'none' to remove."
@@ -7278,7 +7283,7 @@ msgstr "START"
 
 #: inx/inkstitch_output_GCODE.inx:37
 msgid "Use %R %G %B for inital color thread color values"
-msgstr ""
+msgstr "Pro počáteční hodnoty barev nití použijte %R %G %B"
 
 #: inx/inkstitch_output_GCODE.inx:38
 msgid "END"
@@ -7390,15 +7395,15 @@ msgstr "Uložení návrhu ve formátu PES pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_PLT.inx:3
 msgid "PLT file output"
-msgstr ""
+msgstr "výstupní soubor PTL"
 
 #: inx/inkstitch_output_PLT.inx:8
 msgid "Ink/Stitch: Plt - HPGL [QUILTING] (.plt)"
-msgstr ""
+msgstr "Ink/Stitch: Plt - HPGL [QUILTING] (.plt)"
 
 #: inx/inkstitch_output_PLT.inx:9
 msgid "Save design in PLT format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu PLT pomocí Ink/Stitch"
 
 #: inx/inkstitch_output_PMV.inx:3
 msgid "PMV file output"
@@ -7414,15 +7419,15 @@ msgstr "Uložení návrhu ve formátu PMV pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_QCC.inx:3
 msgid "QCC file output"
-msgstr ""
+msgstr "výstupní soubor QCC"
 
 #: inx/inkstitch_output_QCC.inx:8
 msgid "Ink/Stitch: Qcc - QuiltEZ [QUILTING] (.qcc)"
-msgstr ""
+msgstr "Ink/Stitch: Qcc - QuiltEZ [QUILTING] (.qcc)"
 
 #: inx/inkstitch_output_QCC.inx:9
 msgid "Save design in QCC format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu QCC pomocí Ink/Stitch"
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
@@ -7438,11 +7443,11 @@ msgstr "Uložení návrhu ve formátu SVG pomocí funkce Ink/Stitch"
 
 #: inx/inkstitch_output_TBF.inx:3
 msgid "TBF file output"
-msgstr ""
+msgstr "výstupní soubor TBF"
 
 #: inx/inkstitch_output_TBF.inx:9
 msgid "Save design in TBF format using Ink/Stitch"
-msgstr ""
+msgstr "Uložení návrhu ve formátu TBF pomocí aplikace Ink/Stitch"
 
 #: inx/inkstitch_output_TXT.inx:3
 msgid "TXT file output"
@@ -7595,11 +7600,11 @@ msgstr "Redwork bean steh počet opakování"
 
 #: inx/inkstitch_redwork.inx:25
 msgid "Combine elements"
-msgstr ""
+msgstr "Kombinovat prvky"
 
 #: inx/inkstitch_redwork.inx:25
 msgid "Combine consecutive elements of same type"
-msgstr ""
+msgstr "Kombinuj po sobě jdoucí prvky stejného typu"
 
 #: inx/inkstitch_redwork.inx:29
 msgid "Redwork embroidery is a stroke art embroidery which passes every line exactly twice."
@@ -7692,7 +7697,7 @@ msgstr "Vytváří vícebarevný satén"
 
 #: inx/inkstitch_satin_to_stroke.inx:3
 msgid "Satin to Stroke"
-msgstr ""
+msgstr "Satén na tah"
 
 #: inx/inkstitch_satin_to_stroke.inx:10
 msgid "Keep satin column"
@@ -7830,15 +7835,15 @@ msgstr ""
 
 #: inx/inkstitch_select_elements.inx:93
 msgid "If it isn't working:"
-msgstr ""
+msgstr "Pokud to nefunguje:"
 
 #: inx/inkstitch_select_elements.inx:95
 msgid "1. Hit the apply button multiple times."
-msgstr ""
+msgstr "1. Stiskněte tlačítko Použít několikrát."
 
 #: inx/inkstitch_select_elements.inx:96
 msgid "2. If it still isn't working, you may need to insert your path to a python executable manualy."
-msgstr ""
+msgstr "2. Pokud vám to stále nefunguje, možná budete muset vložit cestu ke spustitelnému souboru pythonu ručně."
 
 #: inx/inkstitch_select_elements.inx:97
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
@@ -7858,11 +7863,11 @@ msgstr "Python Cesta"
 
 #: inx/inkstitch_selection_to_anchor_line.inx:3
 msgid "Selection to anchor line"
-msgstr ""
+msgstr "Výběr pro ukotvení linie"
 
 #: inx/inkstitch_selection_to_anchor_line.inx:9
 msgid "Marks selected elements as anchor lines"
-msgstr ""
+msgstr "Označí vybrané prvky jako kotevní čáry"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
@@ -7882,7 +7887,7 @@ msgstr "Označí vybrané prvky jako vzory"
 
 #: inx/inkstitch_sew_stack_editor.inx:3
 msgid "Sew Stack (preview)..."
-msgstr ""
+msgstr "Náhled šicích vrstev"
 
 #: inx/inkstitch_simulator.inx:3
 msgid "Simulator"
@@ -8047,7 +8052,7 @@ msgstr ""
 
 #: inx/inkstitch_stroke_to_satin.inx:3
 msgid "Stroke to Satin"
-msgstr ""
+msgstr "Steh na satén"
 
 #: inx/inkstitch_tartan.inx:9
 msgid "Tartan stripe editor"
@@ -8071,19 +8076,19 @@ msgstr "Seznam barev nití"
 
 #: inx/inkstitch_transform_elements.inx:3
 msgid "Transform"
-msgstr ""
+msgstr "Převeď"
 
 #: inx/inkstitch_transform_elements.inx:11
 msgid "Flip horizontally"
-msgstr ""
+msgstr "Otočit vodorovně"
 
 #: inx/inkstitch_transform_elements.inx:12
 msgid "Flip vertically"
-msgstr ""
+msgstr "Otočit svisle"
 
 #: inx/inkstitch_transform_elements.inx:15
 msgid "This extension applies transformations while also adjusting the fill angles"
-msgstr ""
+msgstr "Toto rozšíření aplikuje transformace a zároveň upravuje úhly výplně"
 
 #: inx/inkstitch_transform_elements.inx:20
 msgid "https://inkstitch.org/docs/edit/#transform"
@@ -8123,7 +8128,7 @@ msgstr "Rekurzivní"
 
 #: inx/inkstitch_unlink_clone.inx:9
 msgid "Group unlinked symbols"
-msgstr ""
+msgstr "Seskupit nepropojené symboly"
 
 #: inx/inkstitch_unlink_clone.inx:12
 msgid "Unlink clones and apply the fill stitch angle."
@@ -8155,11 +8160,11 @@ msgstr "Tip: Vkládání starších návrhů do nových souborů můžete zabrá
 
 #: inx/inkstitch_update_svg.inx:21
 msgid "When there is an active selection, only selected elements will be updated."
-msgstr ""
+msgstr "Pokud je aktivní výběr, aktualizují se pouze vybrané prvky."
 
 #: inx/inkstitch_update_svg.inx:23
 msgid "Update from version"
-msgstr ""
+msgstr "Aktualizace z verze"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:3
 msgid "Zig-Zag Line to Satin"
@@ -8276,7 +8281,7 @@ msgstr ".U01: Barudan Vyšívací Formát"
 
 #: inx/inkstitch_zip.inx:29
 msgid ".TBF: Tajima Embroidery Format"
-msgstr ""
+msgstr ".TBF: vyšívací formát Tajima"
 
 #: inx/inkstitch_zip.inx:30
 msgid ".PMV: Brother Stitch Format [STITCH]"
@@ -8288,11 +8293,11 @@ msgstr ".GCODE: gcode pro stroj, Textový soubor"
 
 #: inx/inkstitch_zip.inx:37
 msgid ".PLT: Plt - HPGL [QUILTING]"
-msgstr ""
+msgstr ".PLT: Plt - HPGL [QUILTING]"
 
 #: inx/inkstitch_zip.inx:38
 msgid ".QCC: Qcc - QuiltEZ [QUILTING]"
-msgstr ""
+msgstr ".QCC: Qcc - QuiltEZ [QUILTING]"
 
 #: inx/inkstitch_zip.inx:39
 msgid ".EDR: Edr Color Format [COLOR]"

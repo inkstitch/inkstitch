@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-06-06 01:47+0000\n"
-"PO-Revision-Date: 2025-06-06 01:48\n"
+"PO-Revision-Date: 2025-06-07 08:18\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -7836,15 +7836,15 @@ msgstr "https://inkstitch.org/de/docs/edit/#stickelemente-auswählen"
 
 #: inx/inkstitch_select_elements.inx:93
 msgid "If it isn't working:"
-msgstr ""
+msgstr "Wenn nichts ausgewählt wird:"
 
 #: inx/inkstitch_select_elements.inx:95
 msgid "1. Hit the apply button multiple times."
-msgstr ""
+msgstr "1. Klicke mehrmals auf Anwenden."
 
 #: inx/inkstitch_select_elements.inx:96
 msgid "2. If it still isn't working, you may need to insert your path to a python executable manualy."
-msgstr ""
+msgstr "2. Funktioniert die Erweiterung immer noch nicht, kann es nötig sein den Pfad zu Python manuell festzulegen."
 
 #: inx/inkstitch_select_elements.inx:97
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
