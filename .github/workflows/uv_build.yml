@@ -57,6 +57,11 @@ on:
 
           - all
 
+      input_tag:  # overwrite tag
+        description: 'Build tag name'
+        required: false
+        default: ''  # default value, empty means use branch/tag name
+        type: string  # type of the input, can be number, boolean, string, choice or environment
 
       break_on:     # ref: github.event.inputs.break_on | inputs.break_on
         description: 'Stop the build immediately at a predefined location.'
@@ -144,14 +149,17 @@ jobs:
           echo "Inputs:"
           echo "${{ toJSON(github.event.inputs) }}"
 
+          # when triggered by extern script
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
               # If so, use the values from the inputs
             MY_BUILD_TYPE="${{ github.event.inputs.build_type }}"
             MY_BREAK_ON="${{ github.event.inputs.break_on }}"
+            MY_INPUT_TAG="${{ github.event.inputs.input_tag }}"
           else
             # If not (i.e. it's a push or other event), use the defaults
             MY_BUILD_TYPE="dummy"     # all | dummy
             MY_BREAK_ON="no"          # no
+            MY_INPUT_TAG=""           # empty means use branch/tag name
           fi
 
           echo "-------------------------------------------------"
@@ -171,12 +179,17 @@ jobs:
                 "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
             MY_TAG_NAME="${GITHUB_REF_NAME}"
             MY_PRERELEASE=false  # we are creating a release
-            MY_NAME="${MY_TAG_NAME}"
-          else
+          else # pre-release dev-build
             MY_TAG_NAME="dev-build-$(echo $GITHUB_REF_NAME | tr / -)"  # use branch/tag name as tag, replace / with -
             MY_PRERELEASE=true   # we are creating a pre-release
-            MY_NAME="${MY_TAG_NAME}"
+            # overwrite tag name if input_tag is set
+            if [[ -n "${MY_INPUT_TAG}" ]]; then
+              MY_TAG_NAME="${MY_INPUT_TAG}"  # use input tag name
+            fi
           fi
+
+          MY_NAME="${MY_TAG_NAME}"
+
 
           # For Release (MY_PRERELEASE==false) we need access to secrets, if not (MY_SELF_SIGNED==true) exit with error
           if [[ "${MY_PRERELEASE}" == "false" && "${MY_SELF_SIGNED}" == "true" ]]; then
