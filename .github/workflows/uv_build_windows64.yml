@@ -17,6 +17,12 @@ on:
         default: true
         type: string
 
+      release_build:
+        description: 'Release build'  # on tag v*
+        required: true
+        default: false
+        type: string
+
     secrets:  # secrets that are required for the workflow, otherwise are not available
       SIGNPATH_API_TOKEN:
         required: true
@@ -28,6 +34,7 @@ jobs:
     env:
       MY_BREAK_ON: ${{ github.event.inputs.break_on }}
       MY_SELF_SIGNED: ${{ github.event.inputs.self_signed }}
+      MY_RELEASE_BUILD: ${{ github.event.inputs.release_build }}
 
     # define the OS of the runner
     runs-on: windows-2022
@@ -63,6 +70,10 @@ jobs:
           # input data
           echo "github.event.inputs.break_on: ${{ github.event.inputs.break_on }}"
           echo "inputs.break_on: ${{ inputs.break_on }}"
+
+          echo "MY_BREAK_ON: $MY_BREAK_ON"
+          echo "MY_SELF_SIGNED: $MY_SELF_SIGNED"
+          echo "MY_RELEASE_BUILD: $MY_RELEASE_BUILD"
           echo "secrets.SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN }}"
 
           echo "------------------------------ uv python list"
@@ -111,7 +122,8 @@ jobs:
       #       not just the 'v*' tag, for more robust signing logic.
 
       - name: Set signing policy to release - tag v*
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        # if: startsWith(github.event.ref, 'refs/tags/v')
+        if: env.RELEASE_BUILD == "true"  # only for release builds
         shell: bash
         run: |
 
