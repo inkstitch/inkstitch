@@ -67,6 +67,7 @@ jobs:
 
           git config --system core.longpaths true
 
+          echo "-------------------------------------- input data"
           # input data
           echo "github.event.inputs.break_on: ${{ github.event.inputs.break_on }}"
           echo "inputs.break_on: ${{ inputs.break_on }}"

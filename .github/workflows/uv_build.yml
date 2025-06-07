@@ -24,6 +24,9 @@ name: UV Build
 
 on:
   push: # at least ones must be triggered by a push to be available for manual trigger
+  #   branches-ignore:
+  #     - master
+  #     - main
 
     tags:         # EVENT_NAME=push              REF_TYPE=tag      REF=refs/tags/build*        REF_NAME=tag_name
       - build*    # build[optional characters]
@@ -57,7 +60,7 @@ on:
 
           - all
 
-      input_tag:  # overwrite tag
+      input_tag:  # overwrite tag   eg. use existing tag to build a release vX.X.X....
         description: 'Build tag name'
         required: false
         default: ''  # default value, empty means use branch/tag name
@@ -177,15 +180,20 @@ jobs:
           if [[ "${GITHUB_EVENT_NAME}" == "push" && \
                 "${GITHUB_REF_TYPE}" == "tag" && \
                 "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
+
             MY_TAG_NAME="${GITHUB_REF_NAME}"
             MY_PRERELEASE=false  # we are creating a release
+
           else # pre-release dev-build
+
             MY_TAG_NAME="dev-build-$(echo $GITHUB_REF_NAME | tr / -)"  # use branch/tag name as tag, replace / with -
             MY_PRERELEASE=true   # we are creating a pre-release
+
             # overwrite tag name if input_tag is set
             if [[ -n "${MY_INPUT_TAG}" ]]; then
               MY_TAG_NAME="${MY_INPUT_TAG}"  # use input tag name
             fi
+
           fi
 
           MY_NAME="${MY_TAG_NAME}"
