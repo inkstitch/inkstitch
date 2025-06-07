@@ -27,7 +27,7 @@ on:
 
     tags:         # EVENT_NAME=push              REF_TYPE=tag      REF=refs/tags/build*        REF_NAME=tag_name
       - build*    # build[optional characters]
-      - v[0-9]+.[0-9]+.[0-9]+*  # v[digits].[digits].[digits][optional characters]
+      - v[0-9]+.[0-9]+.[0-9]+*  # v[digits].[digits].[digits][optional characters] (v0.0.0___)
 
     # branches:   # EVENT_NAME=push              REF_TYPE=branch   REF=refs/heads/branch_name  REF_NAME=branch_name
     #   - missing/*  # branch pattern **= any number of characters and /, * = any number of characters not including /
@@ -182,6 +182,11 @@ jobs:
           if [[ "${MY_PRERELEASE}" == "false" && "${MY_SELF_SIGNED}" == "true" ]]; then
             echo "Error: Cannot create a release without access to secrets."
             exit 1
+          fi
+
+          # if Release (MY_PRERELEASE==false) change MY_BUILD_TYPE to 'all' to build all platforms
+          if [[ "${MY_PRERELEASE}" == "false" ]]; then
+            MY_BUILD_TYPE="all"  # build all platforms
           fi
 
 
