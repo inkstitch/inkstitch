@@ -41,7 +41,7 @@ logs/
 uv_pkg_update.sh
 .python-version
 uv.lock
-pyproject.toml
+# pyproject.toml
 
 # github client gh shell files, test actions
 uv_test_actions/
