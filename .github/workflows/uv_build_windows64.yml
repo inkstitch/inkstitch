@@ -123,7 +123,7 @@ jobs:
 
       - name: Set signing policy to release - tag v*
         # if: startsWith(github.event.ref, 'refs/tags/v')
-        if: env.MY_PRERELEASE == "false"  # only for release builds
+        if: env.MY_PRERELEASE == 'false'  # only for release builds
         shell: bash
         run: |
 
