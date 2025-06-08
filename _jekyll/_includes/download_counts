@@ -73,3 +73,5 @@
 * {{ release[0].tag_name }} ({{ release[0].published_at | date: "%Y-%m-%d" }}): {{ downloads | delimited }}
 {% endfor -%}
 {: .monospace }
+
+**Last updated:** {{ site.time | date: "%Y-%m-%d %H:%M" }}
