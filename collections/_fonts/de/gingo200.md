@@ -4,7 +4,7 @@ permalink: /de/fonts/gingo200/
 last_modified_at: 2025-05-28
 toc: false
 preview_image:
-  - url: /assets/images/fonts/gino200.png
+  - url: /assets/images/fonts/gingo200.png
     height: 36
 data_title:
   - gingo200
