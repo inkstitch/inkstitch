@@ -1,17 +1,17 @@
 ---
 title: "Bluenesia Satin"
-permalink: /fr/fonts/blunesia/
+permalink: /fr/fonts/bluenesia/
 last_modified_at: 2025-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/blunesia_72.png
+  - url: /assets/images/fonts/bluenesia_satin.png
     height: 24
 data_title:
-  - blunesia
+  - bluenesia
 ---
-{%- assign font = site.data.fonts.blunesia.font -%}
+{%- assign font = site.data.fonts.bluenesia.font -%}
 
-![Blunesia](/assets/images/fonts/blunesia_72.png)
+![Bluenesia](/assets/images/fonts/bluenesia_satin.png)
 
 ## Glyphes
 
@@ -31,8 +31,8 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 ## Dans la vraie vie 
 
-{% include folder-galleries path="fonts/blunesia/" %}
+{% include folder-galleries path="fonts/bluenesia/" %}
 
 ## License
 
-[Télécharger la license de la police](https://github.com/inkstitch/inkstitch/tree/main/fonts/blunesia/LICENSE)
+[Télécharger la license de la police](https://github.com/inkstitch/inkstitch/tree/main/fonts/bluenesia/LICENSE)

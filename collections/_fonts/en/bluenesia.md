@@ -1,17 +1,17 @@
 ---
 title: "Bluenesia Satin"
-permalink: /fonts/blunesia/
+permalink: /fonts/bluenesia/
 last_modified_at: 2025-05-05
 toc: false
 preview_image:
-  - url: /assets/images/fonts/blunesia_72.png
+  - url: /assets/images/fonts/bluenesia_satin.png
     height: 24
 data_title:
-  - blunesia
+  - bluenesia
 ---
-{%- assign font = site.data.fonts.blunesia.font -%}
+{%- assign font = site.data.fonts.bluenesia.font -%}
 
-![Blunesia](/assets/images/fonts/blunesia_72.png)
+![Bluenesia](/assets/images/fonts/bluenesia_satin.png)
 
 ## Glyphs
 
@@ -31,8 +31,8 @@ up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max
 
 ## In real life
 
-{% include folder-galleries path="fonts/blunesia/" %}
+{% include folder-galleries path="fonts/bluenesia/" %}
 
 ## License
 
-[Download font license](https://github.com/inkstitch/inkstitch/tree/main/fonts/blunesia/LICENSE)
+[Download font license](https://github.com/inkstitch/inkstitch/tree/main/fonts/bluenesia/LICENSE)
