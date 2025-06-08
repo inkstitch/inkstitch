@@ -54,7 +54,15 @@ Offers blazing-fast dependency resolution and package installation. This speed i
 
 ## How activate UV environment?
 
+Refer to the following scripts for implementation details::
+```Bash
+bin/uv/uv_tools_install.sh
+bin/uv/uv_tools_update.sh
+```
+
 Let's dive into how `uv` can be specifically applied to **InkStitch**, assuming the reader is already familiar with `uv`'s basics.
+
+
 
 * **Instalation uv**: see https://github.com/astral-sh/uv
  and use direct download.
@@ -226,7 +234,7 @@ We've significantly overhauled InkStitch GitHub Actions CI/CD system to streamli
   * **break_on**: Allows for early termination during the build process:
       * `no`: Normal execution.
       * `uv`: Stops after uv installation and cache check.
-      * `sync`: Stops after package installation and Python package translations.
+      * `sync`: Stops after package installation.
   * **input_tag**: The tag under which to store the resulting build artifacts.
 
 Example of `gh` script:
@@ -243,11 +251,11 @@ build_type='dummy'
 # build_type='macarm64'
 # build_type='macx86'
 # build_type='windows64'
-#build_type='all'
+# build_type='all'
 
 break_on="no"
-#break_on="uv"
-#break_on="sync"
+# break_on="uv"
+# break_on="sync"
 
 # tag='v0.0.0test'
 
