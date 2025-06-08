@@ -54,7 +54,7 @@ Offers blazing-fast dependency resolution and package installation. This speed i
 
 ## How activate UV environment?
 
-Refer to the following scripts for implementation details::
+Refer to the following scripts for implementation details:
 ```Bash
 bin/uv/uv_tools_install.sh
 bin/uv/uv_tools_update.sh
@@ -64,7 +64,7 @@ Let's dive into how `uv` can be specifically applied to **InkStitch**, assuming 
 
 
 
-* **Instalation uv**: see https://github.com/astral-sh/uv
+* **Installation uv**: see https://github.com/astral-sh/uv
  and use direct download.
 
    * Linux, MacOS
@@ -144,11 +144,11 @@ Let's dive into how `uv` can be specifically applied to **InkStitch**, assuming 
 Here's an overview of the key changes related to Git and Python dependency management:
 
 
-### Pyemroidery Integration
+### PyEmbroidery Integration
 
-  * **`pyemroidery` Removal**: We're removing pyemroidery as both a relative dependency in requirements.txt and as a **Git** submodule.
-  * **On-the-fly Inclusion**: pyemroidery will now be included directly as a package reference from its **Git** repository in `pyproject.toml`:
-    * `"pyemroidery @ git+https://github.com/inkstitch/pyemroidery"`
+  * **`pyembroidery` Removal**: We're removing pyembroidery as both a relative dependency in requirements.txt and as a **Git** submodule.
+  * **On-the-fly Inclusion**: pyembroidery will now be included directly as a package reference from its **Git** repository in `pyproject.toml`:
+    * `"pyembroidery @ git+https://github.com/inkstitch/pyembroidery"`
     * This eliminates the need for it to be a PyPI package.
 
 ### Dependency File Synchronization
@@ -318,7 +318,7 @@ We've made significant updates to our GitHub Actions workflows, especially in ho
 
 ### Key Improvements
 
-  * **Efficient pyemroidery Handling**: We've removed `submodule: recursive` from all workflows. Instead, `pyemroidery` is now created as a Python package on the fly, streamlining its integration and reducing build overhead.
+  * **Efficient pyembroidery Handling**: We've removed `submodule: recursive` from all workflows. Instead, `pyembroidery` is now created as a Python package on the fly, streamlining its integration and reducing build overhead.
   * **uv-Exclusive Python Management**: All direct Python installations have been removed from workflows. `uv` now exclusively manages all Python installations and environments, simplifying setup and ensuring consistency.
   * **Simplified Release Job**: The release job is now much simpler. Everything found in the workflow artifacts is directly pushed to the release repository, making artifact management more straightforward.
 
@@ -380,10 +380,10 @@ Here's how to quickly get started with uv for your project:
   * `uv init` - Project Setup:
     * This command initializes your project and sets up key files:
         * `main.py` is removed (if created by default).
-        * `.python-version` holds your selected Python version. We recommend ignoring * this file in .gitignore so each user can prefer their own Python version.
+        * `.python-version` holds your selected Python version. We recommend ignoring this file in `.gitignore` so each user can prefer their own Python version.
         * `pyproject.toml` is created, serving as InkStitch's main project configuration.
 
   * `uv venv` - Virtual Environment Creation:
     * This command initializes your .venv (virtual environment) using the Python version specified in `.python-version` (e.g., Python 3.11).
-    * Run uv venv anytime you change your desired Python version in `.python-version` to recreate the environment accordingly.
+    * Run `uv venv` any time you change your desired Python version in `.python-version` to recreate the environment accordingly.
 
