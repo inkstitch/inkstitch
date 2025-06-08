@@ -237,7 +237,7 @@ We've significantly overhauled InkStitch GitHub Actions CI/CD system to streamli
       * `sync`: Stops after package installation.
   * **input_tag**: The tag under which to store the resulting build artifacts.
 
-Example of `gh` script:
+Example of `gh` script (see `bin/uv/gh_action_run.sh`):
 ```Bash
 set -x
 
@@ -257,7 +257,7 @@ break_on="no"
 # break_on="uv"
 # break_on="sync"
 
-# tag='v0.0.0test'
+# tag='dev-build-$BR'
 
 # git commit -a -m "Automated Commit & Build"
 # git push
