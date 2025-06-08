@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-06-06 01:47+0000\n"
-"PO-Revision-Date: 2025-06-06 01:48\n"
+"PO-Revision-Date: 2025-06-08 02:00\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -7837,15 +7837,15 @@ msgstr "https://inkstitch.org/fr/docs/edit/#select-embroidery-elements/"
 
 #: inx/inkstitch_select_elements.inx:93
 msgid "If it isn't working:"
-msgstr ""
+msgstr "Si cela ne fonctionne pas:"
 
 #: inx/inkstitch_select_elements.inx:95
 msgid "1. Hit the apply button multiple times."
-msgstr ""
+msgstr "1. Cliquez plusieurs fois sur le bouton Appliquer."
 
 #: inx/inkstitch_select_elements.inx:96
 msgid "2. If it still isn't working, you may need to insert your path to a python executable manualy."
-msgstr ""
+msgstr "2. Si cela ne fonctionne toujours pas, il se peut que vous deviez insérer manuellement le chemin vers un exécutable python."
 
 #: inx/inkstitch_select_elements.inx:97
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
