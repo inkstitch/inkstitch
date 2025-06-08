@@ -177,7 +177,7 @@ jobs:
         uses: actions/upload-artifact@v4       # https://github.com/actions/upload-artifact
         with:
           name: inkstitch-windows64-installer  # output name
-          path: artifacts                      # whole directory
+          path: signed-artifacts               # whole directory
 
 
       - name: Sign-installer  - tag v*
