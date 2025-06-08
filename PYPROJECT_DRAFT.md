@@ -66,13 +66,14 @@ Let's dive into how `uv` can be specifically applied to **InkStitch**, assuming 
 
 * **Install tools**:
 `uv tool install` command lets you install Python-based command-line utilities into isolated environments. This makes tools like linters (`Ruff`), build systems like `CMake`, or other utilities accessible from anywhere on your system without cluttering your global Python setup.
-```Bash
-uv tool install --from git+https://github.com/karnigen/uvr uvr
-uv tool install ruff
-uv tool install flake8
-uv tool install cmake
+  * Ensure the tools' installation path is in your PATH.
 
-```
+  ```Bash
+  uv tool install --from git+https://github.com/karnigen/uvr uvr
+  uv tool install ruff
+  uv tool install flake8
+  uv tool install cmake
+  ```
 * **Use Worktree**: Worktrees are a neat **Git** feature that let you have multiple working directories, each with a different branch checked out, all sharing the same **Git** repository's history. Think of it as having several separate workspaces for one project *without* creating multiple *full clones*.
 
 * **Creating a Git Worktree**
@@ -83,11 +84,23 @@ uv tool install cmake
     *  *Specific commit*: `git worktree add ../new-dir HEAD~3`
   * **Verify**: `git worktree list`
 
-* Set **Python version** for **InkStitch**:
-  * **Go to** your InkStitch main repo or worktree directory: `cd /path/to/your/worktree`
-  * **List** available pythons: `uv python list`
-  * **Set** python version: `uv python pin 311`
-  * **Create** virtual environment (`.venv` directory): `uv venv`
+* Set **Python version** and install packages:
+  * **Go to** your InkStitch main repo or worktree directory:
+    ```Bash
+    cd /path/to/your/worktree
+    ```
+  * **List** available pythons:
+    ```Bash
+    uv python list
+    ```
+  * **Set** python version:
+    ```Bash
+    uv python pin 311
+    ```
+  * **Create** virtual environment (`.venv` directory):
+    ```Bash
+    uv venv
+    ```
   * **Install** local packages, using `uv pip` subsystem: Using `uv pip` does not modify `pyproject.toml`, avoid using `uv add` that modify `pyproject.toml` for everyone. `pyproject.toml` must be kept unified across all platforms and OS's.
     ```Bash
     uv pip install my_package
@@ -104,11 +117,16 @@ uv tool install cmake
 
     Using `uv sync` without `--inexact` removes all packages installed via `uv pip install` that are not specified in `pyproject.toml`, leaving only those explicitly defined.
 
-  * **Activate** virtual environment: `. .venv/bin.activate`
+  * **Activate** virtual environment:
+    ```Bash
+    . .venv/bin.activate
+    ```
+  * You may need to **update** Inkscape's extension files by running:
+    ```Bash
+    make inx
+    ```
 
-  * You may need to **update** Inkscape's extension files by running: `make inx`
-
-  * Ensure you run Inkscape from within this activated Python virtual environment.
+  * Ensure you run **Inkscape** from within this activated Python virtual environment.
 
     * You might also need to update Inkscape's configuration file, `~/.config/inkscape/preferences.xml`, specifically the key `python-interpreter="/path/to/.venv/bin/python"`
 
@@ -199,16 +217,16 @@ We've significantly overhauled InkStitch GitHub Actions CI/CD system to streamli
 * **Optimized Build Triggers**: A full package build for all operating systems is typically unnecessary after every **push**. Instead, routine pushes will focus on **checks and tests**. Full builds should only be triggered when changes are finalized and ready for installation package creation.
 
 * **Activation Command**: Full builds can now be triggered manually using the **gh CLI**:
-```Bash
-gh workflow run $WF -r $BR -f build_type=$build_type -f break_on=$break_on -f input_tag=$tag
-```
+  ```Bash
+  gh workflow run $WF -r $BR -f build_type=$build_type -f break_on=$break_on -f input_tag=$tag
+  ```
   * **$WF**: The specific .yml workflow file to invoke (e.g., uv_build.yml).
   * **$BR**: The current branch (e.g., `git rev-parse --abbrev-ref HEAD`).
   * **build_type**: Specifies the target build(s): `dummy, linux64, linuxarm64, linux32, windows64, macx86, macarm64`, or `all`.
   * **break_on**: Allows for early termination during the build process:
-      * no: Normal execution.
-      * uv: Stops after uv installation and cache check.
-      * sync: Stops after package installation and Python package translations.
+      * `no`: Normal execution.
+      * `uv`: Stops after uv installation and cache check.
+      * `sync`: Stops after package installation and Python package translations.
   * **input_tag**: The tag under which to store the resulting build artifacts.
 
 Example of `gh` script:
