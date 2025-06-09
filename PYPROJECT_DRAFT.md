@@ -154,7 +154,7 @@ Here's an overview of the key changes related to Git and Python dependency manag
 ### Dependency File Synchronization
 
   * **Maintaining Both Files**: We'll keep `requirements.txt` and `pyproject.toml` synchronized for backward compatibility.
-  * **Format Differences**: The formats vary minimally (e.g., numpy in `requirements.txt` vs. "numpy", in `pyproject.toml`).
+  * **Format Differences**: The formats vary minimally (e.g., `numpy` in `requirements.txt` vs. `"numpy",` in `pyproject.toml`).
   * **uv Support**: `uv` supports installing from both file types:
     * `uv pip install -r requirements.txt` or
     * `uv pip install -r pyproject.toml`.
