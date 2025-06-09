@@ -116,7 +116,7 @@ Let's dive into how `uv` can be specifically applied to **InkStitch**, assuming 
     # prebuild wxpython for linux64 (Ubuntu 22.04 Python 311)
     uv pip install "https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.3-cp311-cp311-linux_x86_64.whl"
 
-    uv pip my_debugger
+    uv pip install my_debugger
     ```
   * **Install** packages from `pyproject.toml`:
     ```Bash
@@ -339,6 +339,46 @@ We've made significant updates to our GitHub Actions workflows, especially in ho
 
 * **A key question arises regarding Windows signing**: Why is there a distinction between release and prerelease signing for Windows? This is a critical point that would benefit from further clarification.
 
+
+## Local GitHub Actions Testing with `act`
+
+Testing GitHub Actions workflows can be slow and frustrating due to the need to push changes to GitHub and wait for runner execution. The `act` (https://github.com/nektos/act) tool, a single-file executable written in `Go`, allows you to run your GitHub Actions workflows locally, significantly speeding up development and debugging.
+
+
+### Limitations of `act`
+
+While act is an invaluable tool for local GitHub Actions development and debugging, it has some limitations:
+
+* **Not a perfect replica**: It doesn't fully mimic the exact GitHub-hosted runner environment, leading to minor behavioral differences.
+* **Partial context support**: Some github context variables (like github.event or github.token behavior) may be incomplete or require explicit mocking.
+* **Limited runner types**: Primarily supports Linux jobs via Docker; native macOS/Windows runner simulation is not comprehensive.
+* **Ignored workflow features**: Directives like concurrency, run-name, job.permissions, and timeout-minutes are often not respected.
+* **No external artifact downloads**: Cannot fetch artifacts from other workflow runs or repositories.
+* **Requires Docker**: Relies on Docker for environment simulation, meaning Docker must be installed and running.
+
+### Usage `act` in Inkstitch
+
+Here's how to use `act` for local testing of InkStitch workflows:
+
+  * **Install act and add to PATH**: Download and install the act executable, then ensure its location is added to your system's `PATH` environment variable.
+
+  * **Create Your Test Workflow**: Develop and refine your testing workflow (e.g., `test.yml`) within the `.github/workflows/` directory.
+
+  * **Run act**: Execute your workflow using act, providing an input data file if your workflow expects inputs (like `uv_build.yml`).
+    ```bash
+    WF=.github/workflows/test.yml
+    DAT=test.json
+    act workflow_dispatch -W $WF  -e $DAT
+    ```
+    Here, `test.json` is the input data file. An example `test.json` matching the `uv_build.yml` inputs would look like this:
+    ```json
+    {
+      "inputs": {
+        "build_type": "linux64",
+        "break_on": "sync"
+      }
+    }
+    ```
 
 ## To-Do & Future Improvements
 
