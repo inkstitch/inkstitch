@@ -53,7 +53,7 @@ if [ "$BUILD" = "osx" -o "$BUILD" = "windows" ]; then
     pyinstaller_args+="--windowed "
     python -m PyInstaller $pyinstaller_args inkstitch.py;
 else
-    python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
+    python -m PyInstaller $pyinstaller_args --clean --strip inkstitch.py;
 fi
 
 # pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
