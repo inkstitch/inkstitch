@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch"
 permalink: /de/docs/install/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2023-09-23
+last_modified_at: 2025-06-09
 toc: false
 classes:
     - wide
