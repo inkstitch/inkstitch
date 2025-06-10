@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import pyembroidery
+import inkstitch_pyembroidery as pyembroidery
 from .stitch_plan import StitchPlan
 
 from ..svg import PIXELS_PER_MM
