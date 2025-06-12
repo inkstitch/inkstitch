@@ -31,7 +31,7 @@ dependencies = [
     "shapely~=2.0.0", ### geometry library
     "lxml", ### XML library
     "platformdirs", ### cross-platform directories
-    "numpy", ### array library
+    "numpy<2.3.0", ### array library
     "jinja2>2.9", ### templating engine
     # "requests", ### HTTP library
     "tomli; python_version < '3.11'", ### TOML parser
