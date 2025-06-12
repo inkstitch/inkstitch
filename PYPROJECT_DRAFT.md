@@ -427,3 +427,9 @@ Here's how to quickly get started with uv for your project:
     * This command initializes your .venv (virtual environment) using the Python version specified in `.python-version` (e.g., Python 3.11).
     * Run `uv venv` any time you change your desired Python version in `.python-version` to recreate the environment accordingly.
 
+
+
+## Testing Installation
+
+* **Windows 10 (64-bit):** Not passed (Further investigation needed)
+
