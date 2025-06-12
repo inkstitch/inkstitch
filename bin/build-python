@@ -48,13 +48,12 @@ elif [ "$BUILD" = "windows" ]; then
 	pyinstaller_args+="--version-file  installer_scripts/file_version_info.txt "
 fi
 
-# Finally we build for each os with the finalized settings
+# Finally we build for windows and macOS with the finalized settings
 if [ "$BUILD" = "osx" -o "$BUILD" = "windows" ]; then
     pyinstaller_args+="--windowed "
-    python -m PyInstaller $pyinstaller_args inkstitch.py;
-else
-    python -m PyInstaller $pyinstaller_args --strip inkstitch.py;
 fi
+# Run command to build the inkstich program
+python -m PyInstaller $pyinstaller_args inkstitch.py
 
 # pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
 # to put some more user-accessible stuff like examples and palettes in
