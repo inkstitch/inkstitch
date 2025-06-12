@@ -431,5 +431,6 @@ Here's how to quickly get started with uv for your project:
 
 ## Testing Installation
 
-* **Windows 10 (64-bit):** Not passed (Further investigation needed)
-
+* **Windows 10 (64-bit):**
+  * **Passed**
+  * **Note:** Sticking to `numpy<2.3` appears to resolve the previous issue.
