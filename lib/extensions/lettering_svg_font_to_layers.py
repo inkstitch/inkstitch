@@ -26,6 +26,8 @@ from inkex import Layer, PathElement, errormsg
 
 from .base import InkstitchExtension
 
+from ..svg import PIXELS_PER_MM
+
 
 class LetteringSvgFontToLayers(InkstitchExtension):
     """Convert an svg font to layers"""
@@ -38,13 +40,19 @@ class LetteringSvgFontToLayers(InkstitchExtension):
             help="Stop making layers after this number of glyphs."
         )
         pars.add_argument(
-            "--scale",
-            type=float,
-            default=1.0,
-            help="Scale the font (1 = no scaling)"
+            "--reference",
+            type=str,
+            default="M",
+            help="Reference character for size"
         )
-    def scale_kerning(self):
-        scale_by = self.options.scale
+        pars.add_argument(
+            "--height",
+            type=float,
+            default=20.0,
+            help="Reference character height in mm"
+        )
+    def scale_kerning(self, scale_by):
+        
         font = self.svg.defs.findone("svg:font")
         for hkern in font.findall("svg:hkern"):
             import sys
@@ -55,23 +63,39 @@ class LetteringSvgFontToLayers(InkstitchExtension):
                 hkern.set(("k"), str(k))
 
 
-    def flip_cordinate_system(self, elem, emsize, baseline):
+    def flip_cordinate_system(self, elem, emsize, baseline,scale_by):
         """Scale and translate the element's path, returns the path object"""
         path = elem.path
-        path.scale(self.options.scale, -self.options.scale, inplace=True)
+        path.scale(scale_by, -scale_by, inplace=True)
         path.translate(0, float(emsize) - float(baseline), inplace=True)
         return path
+    
+    def reference_size(self,font, reference):
+       
+        for glyph in font.findall("svg:glyph"):
+            if glyph.get("glyph-name") == str(reference):
+                path = glyph.path
+                import sys
+               # return errormsg(f" trouve le M et {path = }  {path.bounding_box().height=}")
+                return path.bounding_box().height
+                break
+        return errormsg("reference glyph not found")
+              
+            
 
     def effect(self):
-        scale_by = self.options.scale
+      
         # Current code only reads the first svgfont instance
         font = self.svg.defs.findone("svg:font")
         if font is None:
             return errormsg("There are no svg fonts")
         # setwidth = font.get("horiz-adv-x")
+        size  =self.reference_size(font, self.options.reference)
+        
+        scale_by = self.options.height* PIXELS_PER_MM/ size
         baseline = font.get("horiz-origin-y")
-        import sys
-       # print("baseline: ",baseline, file=sys.stderr  )
+        # import sys
+        # print(f"{Msize =}", file=sys.stderr)
         if baseline is None:
             baseline = 0
         else:
@@ -79,7 +103,6 @@ class LetteringSvgFontToLayers(InkstitchExtension):
 
         
         fontface = font.findone("svg:font-face")
-
         emsize = fontface.get("units-per-em") 
         emsize = float(emsize) * scale_by
         self.svg.set("width", str(emsize))
@@ -117,12 +140,12 @@ class LetteringSvgFontToLayers(InkstitchExtension):
             if hax is not None:
                 hax = float(hax) * scale_by
                 glyph.set(("horiz-adv-x"), str(hax))
-            self.convert_glyph_to_layer(glyph, emsize, baseline, hide_layer=hide_layer)
+            self.convert_glyph_to_layer(glyph, emsize, baseline, scale_by,hide_layer=hide_layer)
             count += 1
             if count >= self.options.count:
                 break
         
-        self.scale_kerning()
+        self.scale_kerning(scale_by)
         
                 
 
@@ -131,7 +154,7 @@ class LetteringSvgFontToLayers(InkstitchExtension):
         
         
 
-    def convert_glyph_to_layer(self, glyph, emsize, baseline, hide_layer):
+    def convert_glyph_to_layer(self, glyph, emsize, baseline, scale_by, hide_layer):
         unicode_char = glyph.get("unicode")
 
         glyph_name = glyph.get("glyph-name").split('.')
@@ -159,7 +182,7 @@ class LetteringSvgFontToLayers(InkstitchExtension):
 
         # Using curve description in d attribute of svg:glyph
         path = layer.add(PathElement())
-        path.path = self.flip_cordinate_system(glyph, emsize, baseline)
+        path.path = self.flip_cordinate_system(glyph, emsize, baseline, scale_by)
 
 
 if __name__ == "__main__":
