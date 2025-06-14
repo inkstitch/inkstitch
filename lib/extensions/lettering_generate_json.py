@@ -42,6 +42,7 @@ class LetteringGenerateJson(InkstitchExtension):
         self.arg_parser.add_argument("-w", "--word-spacing", type=int, default=20, dest="word_spacing")
         self.arg_parser.add_argument("-b", "--letter-spacing", type=int, default=100, dest="letter_spacing")
         self.arg_parser.add_argument("-p", "--font-file", type=str, default="", dest="path")
+        self.arg_parser.add_argument("-e", "--scale", type=float, default="1.0", dest="scale")
 
         for category in FONT_CATEGORIES:
             self.arg_parser.add_argument(f"--{category.id}", type=Boolean, default="false", dest=category.id)
