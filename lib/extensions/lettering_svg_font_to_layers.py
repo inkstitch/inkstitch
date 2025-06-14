@@ -43,26 +43,23 @@ class LetteringSvgFontToLayers(InkstitchExtension):
             default=1.0,
             help="Scale the font (1 = no scaling)"
         )
-    def create_horizontal_guideline(self, name: str, position):
-        """Create a horizontal guideline with name and position
+    def scale_kerning(self):
+        scale_by = self.options.scale
+        font = self.svg.defs.findone("svg:font")
+        for hkern in font.findall("svg:hkern"):
+            import sys
+            k = hkern.get("k", None)
+         #   print(f"hkern=", "k=",file=sys.stderr)
+            if k is not None:
+                k = float(k) * scale_by
+                hkern.set(("k"), str(k))
 
-        Args:
-            name (str): the name of the guideline
-            position (Union[int, float]): the vertical position of the guideline
-
-        Returns:
-            inkex.BaseElement: the created guideline
-        """
-        return self.svg.namedview.add_guide(
-            self.svg.height - position, True, name
-         #    self.svg.viewbox_height - position, True, name
-        )
 
     def flip_cordinate_system(self, elem, emsize, baseline):
         """Scale and translate the element's path, returns the path object"""
         path = elem.path
         path.scale(self.options.scale, -self.options.scale, inplace=True)
-        path.translate(0, int(emsize) - int(baseline), inplace=True)
+        path.translate(0, float(emsize) - float(baseline), inplace=True)
         return path
 
     def effect(self):
@@ -73,13 +70,14 @@ class LetteringSvgFontToLayers(InkstitchExtension):
             return errormsg("There are no svg fonts")
         # setwidth = font.get("horiz-adv-x")
         baseline = font.get("horiz-origin-y")
+        import sys
+       # print("baseline: ",baseline, file=sys.stderr  )
         if baseline is None:
             baseline = 0
         else:
-            baseline = baseline * scale_by
+            baseline = float(baseline) * scale_by
 
-        guidebase = (self.svg.viewbox_height * scale_by) - baseline
-
+        
         fontface = font.findone("svg:font-face")
 
         emsize = fontface.get("units-per-em") 
@@ -87,12 +85,15 @@ class LetteringSvgFontToLayers(InkstitchExtension):
         self.svg.set("width", str(emsize))
         self.svg.set("height", str(emsize))
         self.svg.set("viewBox", "0 0 " + str(emsize) + " " + str(emsize))
+       
+        guidebase = (self.svg.viewbox_height) - float(baseline)
 
-        # TODO: should we guarantee that <svg:font horiz-adv-x> equals <svg:font-face units-per-em> ?
+
         caps = float(fontface.get("cap-height", 0)) * scale_by  
         xheight = float(fontface.get("x-height", 0)) * scale_by
         ascender = float(fontface.get("ascent", 0)) * scale_by
         descender = float(fontface.get("descent", 0)) * scale_by
+
         fontface.set("cap-height",str(caps))
         fontface.set("x-height", str(xheight))
         fontface.set("ascent", str(ascender))
@@ -100,24 +101,15 @@ class LetteringSvgFontToLayers(InkstitchExtension):
 
        
 
-        baseline = descender
-        # Create guidelines
-        self.create_horizontal_guideline(_("baseline"), baseline)
-        self.create_horizontal_guideline(_("ascender"), baseline + ascender)
-        self.create_horizontal_guideline(_("caps"), baseline + caps)
-        self.create_horizontal_guideline(_("xheight"), baseline + xheight)
-        self.create_horizontal_guideline(_("descender"), baseline - descender)
+        
+        self.svg.namedview.add_guide(guidebase, True, "baseline")
+        self.svg.namedview.add_guide(guidebase - ascender, True, "ascender")
+        self.svg.namedview.add_guide(guidebase - caps, True, "caps")
+        self.svg.namedview.add_guide(guidebase - xheight, True, "xheight")
+        self.svg.namedview.add_guide(guidebase - descender, True, "decender")
       
 
-        namedview = self.svg.namedview
-        namedview.set("inkscape:document-units", "px")
-        namedview.set("inkscape:cx", str(emsize / 2.0))
-        namedview.set("inkscape:cy", str(emsize / 2.0))
-       # self.svg.namedview.add_guide(guidebase, True, "baseline")
-        # self.svg.namedview.add_guide(guidebase - ascender, True, "ascender")
-        # self.svg.namedview.add_guide(guidebase - caps, True, "caps")
-        # self.svg.namedview.add_guide(guidebase - xheight, True, "xheight")
-        # self.svg.namedview.add_guide(guidebase + descender, True, "decender")
+        
         count = 0
         for glyph in font.findall("svg:glyph"):
             hide_layer = count != 0
@@ -129,6 +121,10 @@ class LetteringSvgFontToLayers(InkstitchExtension):
             count += 1
             if count >= self.options.count:
                 break
+        
+        self.scale_kerning()
+        
+                
 
 
        
@@ -157,7 +153,7 @@ class LetteringSvgFontToLayers(InkstitchExtension):
 
         layer = self.svg.add(Layer.new(f"GlyphLayer-{unicode_char}{typographic_feature}"))
 
-        # glyph layers (except the first one) are innitially hidden
+        # glyph layers (except the first one) are initially hidden
         if hide_layer:
             layer.style["display"] = "none"
 
