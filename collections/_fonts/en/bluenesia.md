@@ -31,7 +31,7 @@ up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max
 
 ## In real life
 
-{% include folder-galleries path="fonts/bluenesia/" %}
+{% include folder-galleries path="fonts/bluenesia_satin/" %}
 
 ## License
 
