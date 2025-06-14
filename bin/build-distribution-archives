@@ -1,6 +1,139 @@
+#!/bin/bash
+
+# - assumes that the script is run from the root of the repository
+# - assumes that the script is run with the:
+#   - BUILD variable set to the target OS (osx, linux, linux32, windows)
+#   - GITHUB_REF variable set to the current branch or tag
+#   - VERSION variable set to the current version (optional, defaults to branch name)
+#   - INKSTITCH_GPG_KEY variable set to the GPG key (optional, defaults to generating a new key)
+#   - NOTARY_ACCOUNT and NOTARY_PASSWORD variables set for macOS notarization (optional, defaults to not notarizing)
+#   - fpm and rpmsign tools installed for Linux builds
+#   - pyinstaller tool installed for building Python applications
+#   - jq tool installed for parsing JSON
+
+set -e
+set -x
+
+if [[ -z "$BUILD" ]]; then
+  echo "Error: BUILD variable is not set."
+  exit 1
+fi
+
+INITIAL_SET_E_STATUS=0
+case "$-" in *e*) INITIAL_SET_E_STATUS=1 ;; esac  # check if -e is set and save the status
+
+# check output directory
+if [[ ! -d "artifacts" ]]; then
+    mkdir -p artifacts
+fi
+
+# TODO: use REF_NAME instead of GITHUB_REF
 VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
-OS="${BUILD:-$(uname)}"
+# if VERSION is not set, use the current branch name (what if detached HEAD?)
+if [[ -z "$VERSION" ]]; then
+    echo "Error: VERSION variable is not set."
+    VERSION="$(git rev-parse --abbrev-ref HEAD | tr / - | tr '[:upper:]' '[:lower:]')"
+fi
+# uname returns the OS name, e.g. Linux, Darwin, etc. - that require lowercase
+OS=$(echo ${BUILDX:-$(uname)} | tr '[:upper:]' '[:lower:]')
 ARCH="$(uname -m)"
+
+echo "Building for OS: $OS, Architecture: $ARCH, Version: $VERSION"
+
+# ----------------------------------------------------------------
+### *** GPG KEY SETUP ***
+
+# Usage of GPG keys, simple  examples:
+#   Listing GPG keys:
+#     gpg --list-keys          or   gpg -k
+#     gpg --list-secret-keys   or   gpg -K
+#   Removing keys:
+#     gpg --delete-key           or   gpg --delete-secret-key
+#     just simply delete directory ~/.gnupg - this will remove all keys, make backup first
+
+# Set the GPG key name for RPM packages
+# Guaranteed invalid email address for temporary key @invalid.com
+GPG_KEY_NAME="Temporary Inkstitch Build Key (Automated CI/CD Only) <inkstitch@invalid.com>"
+# Initial GPG Key ID - in main branch secrets.
+# This will be updated if a new key is generated.
+GPG_KEY_ID="EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44"
+
+# Function to generate a new GPG key
+function generate_gpg_key() {
+    echo "INKSTITCH_GPG_KEY variable is not set. Generating a new GPG key..."
+    gpg --batch --full-generate-key <<EOF
+Key-Type: RSA
+Key-Length: 4096
+Subkey-Type: RSA
+Subkey-Length: 4096
+Name-Real: $GPG_KEY_NAME
+Name-Comment: Temporary RPM Signing Key for Ink/Stitch
+Name-Email: inkstitch@invalid.com
+Expire-Date: 0
+%no-protection
+%commit
+EOF
+    echo "New GPG key has been generated."
+}
+
+# This function retrieves the ID of the temporary GPG key. Sear local GPG keyring for the key.
+function get_gpg_key_id() {
+    # Get the ID of the temporary key
+    GENERATED_KEY_ID=$(gpg --list-secret-keys --with-colons "$GPG_KEY_NAME" | awk -F: '/^sec/{print $5; exit}')
+
+    if [ -z "$GENERATED_KEY_ID" ]; then
+        echo "Error: Failed to retrieve the ID of the temporary GPG key."
+        exit 1
+    fi
+
+    # Update GPG_KEY_ID to match the newly generated key
+    GPG_KEY_ID=$GENERATED_KEY_ID
+    echo "Generated key ID: $GPG_KEY_ID"
+}
+
+# Retrieve the GPG key ID in variable GPG_KEY_ID
+# This function checks if the INKSTITCH_GPG_KEY variable is set.
+#   If it is not set, it checks for an existing key and generates a new one if necessary.
+#   If the variable is set, it imports the key from the variable.
+function retrieve_gpg_key_id() {
+    # Check if INKSTITCH_GPG_KEY is set
+    if [ -z "$INKSTITCH_GPG_KEY" ]; then  # If not set, we will generate a new GPG key
+        # try to get the key ID of the existing local temporary key
+
+        if [ $INITIAL_SET_E_STATUS -eq 1 ]; then   # temporary disable -e if it was set
+            set +e
+        fi
+
+        gpg --list-secret-keys --keyid-format LONG "$GPG_KEY_NAME" &>/dev/null
+        GPG_STATUS=$?
+
+        if [ $INITIAL_SET_E_STATUS -eq 1 ]; then   # restore -e if it was set
+            set -e
+        fi
+
+
+        if [[ $GPG_STATUS -eq 0 ]]; then
+            echo "Found existing GPG key for user ID: $GPG_KEY_NAME"
+            get_gpg_key_id  # Update GPG_KEY_ID to the existing key ID
+        else
+            echo "No existing GPG key found. Generating a new GPG key..."
+            generate_gpg_key
+            get_gpg_key_id  # Update GPG_KEY_ID after generating a new key
+        fi
+
+        echo "GPG key ID is set to: $GPG_KEY_ID"
+
+    else  # If INKSTITCH_GPG_KEY is set, import the key from the variable
+        echo "Importing GPG key from INKSTITCH_GPG_KEY variable..."
+        echo "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import  # import to local GPG keyring
+        echo "GPG key has been imported."
+    fi
+}
+
+### *** END GPG KEY SETUP ***
+
+### --------------------------------------------------------------
+### Start of the script
 
 if [ "$BUILD" = "osx" ]; then
     cp -a addons icons locales print LICENSE VERSION palettes symbols fonts tiles dbus inx dist/inkstitch.app/Contents/Resources
@@ -112,12 +245,24 @@ if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
         VERSION="0.0.1-${VERSION}"
     fi
 
+    ### RPM signing setup
 
-    echo -n "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import
-    cat <<EOF > $HOME/.rpmmacros
-%_gpg_name EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44
+    # Create or update the .rpmmacros file, prefer to use the INKSTITCH_GPG_KEY
+    #    %_gpg_path /etc/rpm/.gpg   # ? not sure if this is needed
+    #    %_gpg_name ID              # required for rpm signing
+    #    %__gpg /usr/bin/gpg        # required for rpm signing
+
+    retrieve_gpg_key_id
+
+    GPG_EXEC=$(command -v gpg || command -v gpg2)  # 'command' bash built-in to find executable path
+
+    echo "Creating/updating $HOME/.rpmmacros file..."
+    cat <<EOF > "$HOME/.rpmmacros"
+%__gpg $GPG_EXEC
+%_gpg_name $GPG_KEY_ID
 %_signature gpg
 EOF
+    echo "$HOME/.rpmmacros has been updated with key ID: $GPG_KEY_ID"
 
     # set the rpm file name for cpu arch
     if [[ "$BUILD" = "linux32" ]]; then
@@ -128,6 +273,24 @@ EOF
 
     echo "Creating deb"
     deb_version="$(sed -E 's/[^a-zA-Z0-9.+]/./g' <<< "$VERSION")"
+
+    # TODO: fpm is slow, consider using cmake to create deb and rpm packages
+
+    # create deb package in ROOT of the repository
+    # -s dir - source type is directory
+    # -t deb - target type is debian package
+    # -n inkstitch - package name
+    # -v "$deb_version" - package version
+    # -d "inkscape >= 1.0.0" - package dependency
+    # --deb-compression xz - use xz compression for deb package
+    # --license "GPL-3.0" - license for the package
+    # --description "An open-source machine embroidery design platform based on Inkscape" - package description
+    # --url "https://inkstitch.org" - package URL
+    # --maintainer "maintainer@inkstitch.org" - package maintainer
+    # --after-install bin/after-install - script to run after installation
+    # --before-remove bin/before-remove - script to run before removal
+    # --verbose - verbose output
+    # dist/inkstitch=/opt - copy dist/inkstitch directory to /opt in the package
     fpm -s dir \
         -t deb \
         -n inkstitch \
@@ -144,6 +307,8 @@ EOF
         dist/inkstitch=/opt
 
     echo "Creating rpm"
+    # create rpm package in ROOT of the repository
+    # -t rpm - target type is rpm package
     fpm -s dir \
         -t rpm \
         -n inkstitch \
@@ -160,10 +325,19 @@ EOF
         --verbose \
         dist/inkstitch=/opt
 
+    # Sign the rpm packages (in place?)
     rpmsign --addsign inkstitch*.rpm
+
+    # Move the deb and rpm packages from ROOT to artifacts directory
     mv inkstitch*.deb inkstitch*.rpm artifacts/
 
-    # set file name for each cpu arch
+    # Create the tar.xz archive for Linux and Linux32 builds from
+    # tar - create an archive from dist/inkstitch directory and save it to artifacts
+    #   -C dist  - change to dist directory, output is relative to this dir
+    # cat - create self-extracting script for Linux
+    #   - $(dirname "$0") - search for the linux-sh-installer script in the same directory as this script
+
+    # TODO: use linux_arch instead of hardcoding i386 for linux32 builds
     if [[ "$BUILD" = "linux32" ]]; then
         tar -C dist -Jcf artifacts/inkstitch-${VERSION}-${OS}-i386.tar.xz inkstitch
         cat "$(dirname "$0")/linux-sh-installer" artifacts/inkstitch-${VERSION}-${OS}-i386.tar.xz > artifacts/inkstitch-${VERSION}-${OS}-i386.sh

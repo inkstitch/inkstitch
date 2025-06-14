@@ -1,0 +1,439 @@
+
+# Action description:
+#   https://docs.github.com/en/actions
+
+name: UV Build
+
+# Inputs (some selected):
+#   GITHUB_EVENT_NAME - the name of the event that triggered the workflow (e.g., push, pull_request, workflow_dispatch, etc.)
+#   GITHUB_REF_TYPE - the type of ref that triggered the workflow (e.g., branch, tag)
+#   GITHUB_REF - what triggered the workflow (e.g., refs/heads/branch_name, refs/tags/v1.0.0, refs/)
+#   GITHUB_REF_NAME - the name of the branch or tag that triggered the workflow (e.g., branch_name, v1.0.0)
+#   GITHUB_SHA - the commit SHA that triggered the workflow
+#   GITHUB_WORKSPACE - the path to the repository on the runner . top level directory of the repository
+
+# on:
+#   GITHUB_EVENT_NAME
+#     GITHUB_REF_TYPE
+
+# !!! important:
+#   - A single tag can point to multiple branches, so there isn't a single matching branch for a tag.
+#   - deafult branch for workflow_dispatch is the default branch of the repository, which is usually 'main' or 'master'.
+#     - may be set gh workflow run -r <branch> <workflow_file>
+#   - variables ${{ xxx }} are parsed by YAML parser, before shell can see it ( eg ${{ $xxx }} is not what you expect).
+
+on:
+  push: # at least ones must be triggered by a push to be available for manual trigger
+  #   branches-ignore:
+  #     - master
+  #     - main
+
+    tags:         # EVENT_NAME=push              REF_TYPE=tag      REF=refs/tags/build*        REF_NAME=tag_name
+      - build*    # build[optional characters]
+      - v[0-9]+.[0-9]+.[0-9]+*  # v[digits].[digits].[digits][optional characters] (v0.0.0___)
+
+    # branches:   # EVENT_NAME=push              REF_TYPE=branch   REF=refs/heads/branch_name  REF_NAME=branch_name
+    #   - missing/*  # branch pattern **= any number of characters and /, * = any number of characters not including /
+
+  workflow_dispatch:  # manual trigger of the workflow
+    inputs:
+      # input variables for manual run
+      build_type:                   # ref: github.event.inputs.build_type | inputs.build_type
+        description: 'Build type'
+        required: true
+        default: 'linux64'  # default value
+        type: choice  # type of the input, can be number, boolean, string, choice or environment
+        options:
+          - dummy  # just for testing, not used in the workflow
+
+          - linux64
+          - linuxarm64
+
+          - linux32
+          # - linuxarm32
+
+          - windows64
+          # - windowsarm64
+
+          - macx86   # Mac OS x86 - Intel x86_64
+          - macarm64 # Mac OS arm64 - Apple Silicon ARM64
+
+          - all
+
+      input_tag:  # overwrite tag   eg. use existing tag to build a release vX.X.X....
+        description: 'Build tag name'
+        required: false
+        default: ''  # default value, empty means use branch/tag name
+        type: string  # type of the input, can be number, boolean, string, choice or environment
+
+      break_on:     # ref: github.event.inputs.break_on | inputs.break_on
+        description: 'Stop the build immediately at a predefined location.'
+        required: true
+        default: 'no'  # default value
+        type: choice  # type of the input, can be number, boolean, string, choice or environment
+        options:
+          - 'no'    # normal build
+          - 'uv'    # stop the build at the uv venv creation step
+          - 'sync'  # stop after uv sync
+
+
+jobs:
+
+  # just info print
+  # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#context-availability
+  dump_contexts_to_log:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump environment variables
+        run: printenv | sort    # or just `env` to print all environment variables
+
+      - name: Dump GitHub context (github...)
+        run: echo "${{ toJson(github) }}"
+
+      - name: Dump job context (job...)
+        run: echo "${{ toJson(job) }}"
+
+      - name: Dump steps context (steps...)
+        run: echo "${{ toJson(steps) }}"
+
+      - name: Dump runner context (runner...)
+        run: echo "${{ toJson(runner) }}"
+
+      - name: Dump strategy context (strategy...)
+        run: echo "${{ toJson(strategy) }}"
+
+      - name: Dump matrix context
+        run: echo "${{ toJson(matrix) }}"
+
+
+  # ---------------------------------------------------------------------------------------------
+  # Prepare data
+  # - MY_BUILD_TYPE: type of build
+  # - MY_BREAK_ON: define break stop
+
+  # - MY_SELF_SIGNED: false/true - if we have access to secrets, or we use on the fly signed keys
+  # - MY_TAG_NAME: tag name for the release, or dev-build-branch_name for pre-release
+  # - MY_PRERELEASE: false/true - if this is a release or pre-release
+  # - MY_NAME: name of the release
+
+  sign_policy:
+    runs-on: ubuntu-latest
+    outputs:
+      MY_BUILD_TYPE: ${{ steps.set_vars.outputs.MY_BUILD_TYPE }}
+      MY_BREAK_ON: ${{ steps.set_vars.outputs.MY_BREAK_ON }}
+
+      MY_SELF_SIGNED: ${{ steps.set_vars.outputs.MY_SELF_SIGNED }}
+      MY_TAG_NAME: ${{ steps.set_vars.outputs.MY_TAG_NAME }}
+      MY_PRERELEASE: ${{ steps.set_vars.outputs.MY_PRERELEASE }}
+      MY_NAME: ${{ steps.set_vars.outputs.MY_NAME }}
+    # if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set sign policy variables
+        id: set_vars
+        shell: bash
+        run: |
+
+          echo "-------------------------------------------------"
+          echo "Set signing policy variables ..."
+          echo secrets.GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # print ***, always set
+
+          echo "-------------------------------------------------"
+
+          # this is just for testing, not needed in real workflow on github (with enough rights)
+          echo "Testing secrets:"
+          echo secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }} # print *** if available
+
+          echo "-------------------------------------------------"
+          # inputs
+          echo "Inputs:"
+          echo "${{ toJSON(github.event.inputs) }}"
+
+          # when triggered by extern script
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+              # If so, use the values from the inputs
+            MY_BUILD_TYPE="${{ github.event.inputs.build_type }}"
+            MY_BREAK_ON="${{ github.event.inputs.break_on }}"
+            MY_INPUT_TAG="${{ github.event.inputs.input_tag }}"
+          else
+            # If not (i.e. it's a push or other event), use the defaults
+            MY_BUILD_TYPE="dummy"     # all | dummy
+            MY_BREAK_ON="no"          # no
+            MY_INPUT_TAG=""           # empty means use branch/tag name
+          fi
+
+          echo "-------------------------------------------------"
+          # Check if secrets are available
+          if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" ]]; then
+            MY_SELF_SIGNED=false      # we have access to secrets, assume all signing keys are available
+          else
+            MY_SELF_SIGNED=true       # we use on the fly signed keys
+          fi
+
+          echo "-------------------------------------------------"
+
+          # *** release requires tag name
+          # if push tag vX.X.X - release sign-policy,
+          if [[ "${GITHUB_EVENT_NAME}" == "push" && \
+                "${GITHUB_REF_TYPE}" == "tag" && \
+                "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
+
+            MY_TAG_NAME="${GITHUB_REF_NAME}"
+            MY_PRERELEASE=false  # we are creating a release
+
+          else # pre-release dev-build
+
+            MY_TAG_NAME="dev-build-$(echo $GITHUB_REF_NAME | tr / -)"  # use branch/tag name as tag, replace / with -
+            MY_PRERELEASE=true   # we are creating a pre-release
+
+            # overwrite tag name if input_tag is set
+            if [[ -n "${MY_INPUT_TAG}" ]]; then
+              MY_TAG_NAME="${MY_INPUT_TAG}"  # use input tag name
+            fi
+
+          fi
+
+          MY_NAME="${MY_TAG_NAME}"
+
+
+          # For Release (MY_PRERELEASE==false) we need access to secrets, if not (MY_SELF_SIGNED==true) exit with error
+          if [[ "${MY_PRERELEASE}" == "false" && "${MY_SELF_SIGNED}" == "true" ]]; then
+            echo "Error: Cannot create a release without access to secrets."
+            exit 1
+          fi
+
+          # if Release (MY_PRERELEASE==false) change MY_BUILD_TYPE to 'all' to build all platforms
+          if [[ "${MY_PRERELEASE}" == "false" ]]; then
+            MY_BUILD_TYPE="all"  # build all platforms
+          fi
+
+
+          echo "------------------------------------------------- echoing variables"
+          echo "MY_BUILD_TYPE=${MY_BUILD_TYPE}"
+          echo "MY_BREAK_ON=${MY_BREAK_ON}"
+
+          echo "MY_SELF_SIGNED=${MY_SELF_SIGNED}"
+          echo "MY_TAG_NAME=${MY_TAG_NAME}"
+          echo "MY_PRERELEASE=${MY_PRERELEASE}"
+          echo "MY_NAME=${MY_NAME}"
+
+          echo "------------------------------------------------- Exporting variables to GITHUB_OUTPUT"
+          echo "MY_BUILD_TYPE=${MY_BUILD_TYPE}" >> $GITHUB_OUTPUT
+          echo "MY_BREAK_ON=${MY_BREAK_ON}" >> $GITHUB_OUTPUT
+
+          echo "MY_SELF_SIGNED=${MY_SELF_SIGNED}" >> $GITHUB_OUTPUT
+          echo "MY_TAG_NAME=${MY_TAG_NAME}" >> $GITHUB_OUTPUT
+          echo "MY_PRERELEASE=${MY_PRERELEASE}" >> $GITHUB_OUTPUT
+          echo "MY_NAME=${MY_NAME}" >> $GITHUB_OUTPUT
+
+          echo "------------------------------------------------- dump GITHUB_* part of env"
+          env | grep GITHUB_ | sort
+
+  # -----------------------------------------------------
+  dummy_build:
+    # this job is just for testing, it creates a dummy file and uploads it as an artifact
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'dummy'
+    runs-on: ubuntu-latest
+    name: Dummy Build
+    steps:
+      - name: Create artifacts directory
+        run: |
+
+          # Create a directory to store artifacts
+          mkdir -p artifacts
+          echo "This is a dummy file for OS: ${{ runner.os }} and commit: ${{ github.sha }}" > artifacts/dummy.txt
+          echo "Timestamp: $(date)" >> artifacts/dummy.txt
+          # List artifacts directory
+          ls -lR .
+
+      - name: Upload artifacts
+        id: upload_artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-dummy-artifacts  # name of artifact in repository
+          path: artifacts           # path of local dir
+          retention-days: 1         # how long must be kept (default 90 days)
+
+      - name: Artifacts output
+        run: |
+
+          echo "Artifacts output."
+          echo "Artifact id: ${{ steps.upload_artifacts.outputs.artifact-id}}"
+          echo "Artifact URL: ${{ steps.upload_artifacts.outputs.artifact-url }}"
+          echo "Artifact digest: ${{ steps.upload_artifacts.outputs.artifact-digest }}"
+
+
+  # --------------------------------------------------------------------------------------------------------
+  # !!! reusable call must be on job level & .yml must be on top level of .github/workflows/
+
+  linux64_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'linux64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Linux64
+    uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
+    with:
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+    secrets:
+      INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
+
+
+  linuxarm64_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'linuxarm64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Linux-arm64
+    uses: ./.github/workflows/uv_build_linuxarm64.yml # call reusable workflow
+    with:
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+    secrets:
+      INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
+
+
+  linux32_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'linux32' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Linux32
+    uses: ./.github/workflows/uv_build_linux32.yml # call reusable workflow
+    with:
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+    secrets:
+      INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
+
+  windows64_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'windows64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Windows64
+    uses: ./.github/workflows/uv_build_windows64.yml # call reusable workflow
+    with:
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+      prerelease: ${{ needs.sign_policy.outputs.MY_PRERELEASE }}
+    secrets:
+      SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN}}
+
+
+  macx86_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'macx86' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Mac x86-64
+    uses: ./.github/workflows/uv_build_macx86.yml # call reusable workflow
+    with:
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+    secrets:
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+      KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+      INKSTITCH_NOTARIZE_AC: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+      INKSTITCH_NOTARIZE_PASS: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
+
+  macarm64_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'macarm64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Mac arm64
+    uses: ./.github/workflows/uv_build_macarm64.yml # call reusable workflow
+    with:
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+    secrets:
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+      KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+      INKSTITCH_NOTARIZE_AC: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+      INKSTITCH_NOTARIZE_PASS: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
+
+  #---------------------------------------------------------------------------------------------------------------
+
+
+  release:
+    runs-on: ubuntu-latest
+    needs:  # wait for all builds to finish
+      - sign_policy
+      - dummy_build
+      - linux32_build
+      - linux64_build
+      - linuxarm64_build
+      - windows64_build
+      - macx86_build
+      - macarm64_build
+
+    name: Create Release
+
+    env:
+      MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}
+      MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}
+      MY_PRERELEASE: ${{ needs.sign_policy.outputs.MY_PRERELEASE }}
+      MY_SELF_SIGNED: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+
+    if: always() # run this job always, even if previous jobs failed on exit 1
+    steps:
+      # each job starts with empty directory
+      - name: Download artifacts from build job
+        uses: actions/download-artifact@v4    # https://github.com/actions/download-artifact
+        with:
+        #   name: .. # default is all artifacts
+          path: artifacts  # download to artifacts directory
+
+      - name: List whole git root
+        shell: bash
+        run: |
+
+          echo "------------------------------------------------- pwd"
+          echo "pwd: $(pwd)"
+          echo "------------------------------------------------- ls -lR"
+          echo "Listing whole git root:"
+          ls -lR .
+          echo "Current directory: $(pwd)"
+
+          echo "------------------------------------------------- release vars"
+          echo "Release variables:"
+          echo "GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}"  # print ***, always set
+          echo "MY_TAG_NAME=${MY_TAG_NAME}"
+          echo "MY_NAME=${MY_NAME}"
+          echo "MY_PRERELEASE=${MY_PRERELEASE}"
+          echo "MY_SELF_SIGNED=${MY_SELF_SIGNED}"
+
+
+      # !!! - release is given by tag name, so it must be set before this step
+      # !!! - old files in the release repository are not removed between runs, so you need to delete them manually if needed
+      - name: Create release
+        id: create_release
+        uses: softprops/action-gh-release@v1  # https://github.com/softprops/action-gh-release
+        with:
+          # token: ${{ secrets.GITHUB_TOKEN }}  # always set, used to create release, implicitly passed by the action
+          tag_name: ${{ env.MY_TAG_NAME }}
+          name: ${{ env.MY_NAME }}
+          prerelease: ${{ env.MY_PRERELEASE }}
+          draft: false
+          body: |
+            This is a release for ${{ env.MY_NAME }}.
+            - Self-signed: ${{ env.MY_SELF_SIGNED }}
+            - Tag name: ${{ env.MY_TAG_NAME }}
+            - Pre-release: ${{ env.MY_PRERELEASE }}
+          files: |
+            artifacts/**/*
