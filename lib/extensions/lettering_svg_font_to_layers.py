@@ -209,7 +209,7 @@ class LetteringSvgFontToLayers(InkstitchExtension):
             hide_layer = count != 0
             hax = glyph.get("horiz-adv-x", None)
             if hax is not None:
-                hax = float(hax) * scale_by
+                hax = round(float(hax) * scale_by, 2)
                 glyph.set(("horiz-adv-x"), str(hax))
             self.convert_glyph_to_layer(glyph, emsize, baseline, scale_by, hide_layer=hide_layer)
             count += 1
