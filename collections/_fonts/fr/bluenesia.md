@@ -31,7 +31,7 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 ## Dans la vraie vie 
 
-{% include folder-galleries path="fonts/bluenesia/" %}
+{% include folder-galleries path="fonts/bluenesia_satin/" %}
 
 ## License
 
