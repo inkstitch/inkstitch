@@ -30,7 +30,7 @@ Sie kann bis auf {{ font.min_scale | times: 100 | floor }}% ({{ font.size | time
 
 ## Impressionen
 
-{% include folder-galleries path="fonts/bluenesia/" %}
+{% include folder-galleries path="fonts/bluenesia_satin/" %}
 
 ## Lizenz
 
