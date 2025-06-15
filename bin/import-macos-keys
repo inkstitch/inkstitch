@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # first part of codesiging which is importing to build keychain
 echo $MACOS_CERTIFICATE | base64 --decode > certificate.p12
 security create-keychain -p "$KEYCHAIN_PWD" build.keychain
