@@ -63,7 +63,7 @@
 {%- endfor -%}
 {% endcomment %}
 
-{% assign release_ids = "223823050,223803551,167470890,110551039,104369751,71601622,56965572,56961429,56773344,42376616" | split: "," -%}
+{% assign release_ids = "225392832,223823050,223803551,167470890,110551039,104369751,71601622,56965572,56961429,56773344,42376616" | split: "," -%}
 {%- for release_id in release_ids -%}
 {%- assign release = site.github.releases | where: "id", release_id -%}
 {%- assign downloads = 0 -%}
