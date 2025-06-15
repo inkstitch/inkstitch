@@ -6,35 +6,33 @@
 {%- assign linuxtarxz = 0 -%}
 {%- assign windows = 0 -%}
 {%- assign osx = 0 -%}
-{%- assign catalina = 0 -%}
+{%- assign oldosx = 0 -%}
 
 {% for asset in assets %}
+    * {{ asset.download_cont }}: {{ asset.download_cont }}
+    {%- if asset.name contains ".tar.xz" -%}
+        {%- assign linuxtarxz = linuxtarxz | plus: asset.download_count %}
+    {%- endif -%}
+    {%- if asset.name contains ".sh" -%}
+        {%- assign linuxsh = linuxsh | plus: asset.download_count %}
+    {%- endif -%}
+    {%- if asset.name contains ".rpm" -%}
+        {%- assign linuxrpm = linuxrpm | plus: asset.download_count %}
+    {%- endif -%}
+    {%- if asset.name contains ".deb" -%}
+        {%- assign linuxdeb = linuxdeb | plus: asset.download_count %}
+    {%- endif -%}
 
-{%- if asset.name contains ".tar.xz" -%}
-{%- assign linuxtarxz = linuxtarxz | plus: asset.download_count %}
-{%- endif -%}
-{%- if asset.name contains ".sh" -%}
-{%- assign linuxsh = linuxsh | plus: asset.download_count %}
-{%- endif -%}
-{%- if asset.name contains ".rpm" -%}
-{%- assign linuxrpm = linuxrpm | plus: asset.download_count %}
-{%- endif -%}
-{%- if asset.name contains ".deb" -%}
-{%- assign linuxdeb = linuxdeb | plus: asset.download_count %}
-{%- endif -%}
+    {%- if asset.name contains "osx" -%}
+        {%- assign osx = osx | plus: asset.download_count %}
+        {%- if asset.name contains "old" -%}
+            {%- assign oldosx = oldosx | plus: asset.download_count %}
+        {%- endif -%}
+    {%- endif -%}
 
-{%- if asset.name contains "osx" -%}
-{%- assign osx = osx | plus: asset.download_count %}
-{%- endif -%}
-
-{%- if asset.name contains "old" -%}
-{%- assign old = old | plus: asset.download_count %}
-{%- endif -%}
-
-{%- if asset.name contains "windows" -%}
-{%- assign windows = windows | plus: asset.download_count %}
-{%- endif -%}
-
+    {%- if asset.name contains "windows" -%}
+        {%- assign windows = windows | plus: asset.download_count %}
+    {%- endif -%}
 {% endfor %}
 
 {%- assign linux = linuxtarxz | plus: linuxsh | plus: linuxrpm | plus: linuxdeb %}
@@ -47,8 +45,8 @@
   * SH: {{ linuxsh | delimited }}
   * TAR.XZ: {{ linuxtarxz }}
 * **macOS: {{ osx | delimited }}**
-  * Ventura +: {{ osx | minus: old | delimited }}
-  * High Sierra +: {{ old | delimited }}
+  * Ventura +: {{ osx | minus: oldosx | delimited }}
+  * High Sierra +: {{ oldosx | delimited }}
 * **Windows: {{ windows | delimited }}**
 {: .monospace }
 
