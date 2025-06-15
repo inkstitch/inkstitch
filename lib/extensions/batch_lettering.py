@@ -14,7 +14,7 @@ from zipfile import ZipFile
 from inkex import Boolean, Group, errormsg
 from lxml import etree
 
-import pyembroidery
+import inkstitch_pyembroidery as pyembroidery
 
 from ..extensions.lettering_along_path import TextAlongPath
 from ..i18n import _
