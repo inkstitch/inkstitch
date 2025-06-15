@@ -9,7 +9,6 @@
 {%- assign oldosx = 0 -%}
 
 {% for asset in assets %}
-    * {{ asset.download_cont }}: {{ asset.download_cont }}
     {%- if asset.name contains ".tar.xz" -%}
         {%- assign linuxtarxz = linuxtarxz | plus: asset.download_count %}
     {%- endif -%}
