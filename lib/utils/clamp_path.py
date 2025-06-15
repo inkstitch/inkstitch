@@ -78,8 +78,8 @@ def clamp_fully_external_path(path, polygon):
     start = ShapelyPoint(path[0])
     end = ShapelyPoint(path[-1])
 
-    start_on_outline = nearest_points(start, polygon.exterior)[1].buffer(0.01, resolution=1)
-    end_on_outline = nearest_points(end, polygon.exterior)[1].buffer(0.01, resolution=1)
+    start_on_outline = nearest_points(start, polygon.exterior)[1].buffer(0.01, quad_segs=1)
+    end_on_outline = nearest_points(end, polygon.exterior)[1].buffer(0.01, quad_segs=1)
 
     border_pieces = ensure_multi_line_string(polygon.exterior.difference(MultiPolygon((start_on_outline, end_on_outline)))).geoms
     border_pieces = fix_starting_point(border_pieces)
@@ -139,8 +139,8 @@ def clamp_path_to_polygon(path, polygon):
 
                     # First, find the two points.  Buffer them just a bit to
                     # ensure intersection with the border.
-                    exit_point = last_point_inside.buffer(0.01, resolution=1)
-                    entry_point = ShapelyPoint(segment.coords[0]).buffer(0.01, resolution=1)
+                    exit_point = last_point_inside.buffer(0.01, quad_segs=1)
+                    entry_point = ShapelyPoint(segment.coords[0]).buffer(0.01, quad_segs=1)
 
                     if not exit_point.intersects(entry_point):
                         # Now break the border into pieces using those points.
