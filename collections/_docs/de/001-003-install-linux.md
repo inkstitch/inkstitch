@@ -26,7 +26,6 @@ Lade die neueste Version für Linux herunter (Ink/Stitch {{ tag_name }})
 
 * x86_64:
   [tar.xz]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux-x86_64.tar.xz),
-  https://github.com/inkstitch/inkstitch/releases/download/v3.2.0/inkstitch-3.1.0-linux-x86_64.sh
   [sh]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux-x86_64.sh),
   [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-1.x86_64.rpm),
   [deb]({{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_amd64.deb)
