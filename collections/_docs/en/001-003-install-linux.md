@@ -148,7 +148,9 @@ Please try an other installing method. Any described on [https://inkscape.org/](
 
 This issue can be caused by wayland. Start Inkscape with the following command:
 
-```export GDK_BACKEND=x11 && inkscape```
+```
+export GDK_BACKEND=x11 && inkscape
+```
 
 When using the Inkscape flatpak package, the command looks like this:
 
