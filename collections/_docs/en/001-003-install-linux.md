@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch on Linux"
 permalink: /docs/install-linux/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2025-04-13
+last_modified_at: 2025-06-17
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -150,7 +150,11 @@ This issue can be caused by wayland. Start Inkscape with the following command:
 
 ```export GDK_BACKEND=x11 && inkscape```
 
-This workaround has to be used until we moved all Ink/Stitch applications to the electron environment. 
+When using the Inkscape flatpak package, the command looks like this:
+
+```
+flatpak --env=GDK_BACKEND=x11 run org.inkscape.Inkscape
+```
 
 #### Extend timeout for mutter
 

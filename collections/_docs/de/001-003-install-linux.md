@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch für Linux"
 permalink: /de/docs/install-linux/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2025-04-13
+last_modified_at: 2025-06-17
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -144,7 +144,11 @@ Dieser Fehler kann durch wayland verursacht werden. Starte Inkscape mit folgende
 export GDK_BACKEND=x11 && inkscape
 ```
 
-Nutze diesen Workaround bis wir die gesamte Oberfläche auf electron umgestellt haben.
+Bei Nutzung des Inkscape flatpak-Packets, sieht der Befehl folgendermaßen aus:
+
+```
+flatpak --env=GDK_BACKEND=x11 run org.inkscape.Inkscape
+```
 
 #### Verlängere Timeout für mutter
 

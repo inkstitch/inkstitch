@@ -89,12 +89,6 @@ Redémarrez Inkscape.
 
 Vous trouverez alors Ink/Stitch sous `Extensions > Ink/Stitch`.
 
-<div class="notice--warning">If you see issues like the params window not showing up, then this is because you are using <b>wayland</b>. Start Inkscape with the following command
-  <div class="language-plaintext highlighter-rouge" style="margin-top: 1em;">
-    <div class="highlight"><pre class="highlight"><code>export GDK_BACKEND=x11 && inkscape</code></pre></div>
-  </div>
-</div>
-
 ## Mettre à jour Ink/Stitch
 
 ###  Versions Récentes
@@ -155,9 +149,17 @@ Cette erreur a été signalée par des utilisateurs qui ont installé Inkscape v
 
 #### Use X11
 
-Ce problème peut être causé par wayland. Démarrez Inkscape avec la commande suivante: `export GDK_BACKEND=x11 && inkscape`.
+Ce problème peut être causé par wayland. Démarrez Inkscape avec la commande suivante:
 
-Cette solution de contournement doit être utilisé jusqu'à ce que nous ayons déployées toutes les applications Ink/Stitch dans l'environnement electron.
+```
+export GDK_BACKEND=x11 && inkscape
+```
+
+When using the Inkscape flatpak package, the command looks like this:
+
+```
+flatpak --env=GDK_BACKEND=x11 run org.inkscape.Inkscape
+```
 
 #### Extension du délai  d'expiration pour mutter
 
