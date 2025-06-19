@@ -26,18 +26,22 @@ class ElementInfo(InkstitchExtension):
         self.metadata = self.get_inkstitch_metadata()
         self.list_items = []
         self.max_stitch_lengths = []
-        self.min_stitch_lengths = []
-
+        self.min_stitch_lengths = []  
+        self.export_txt =  f"element_id \t type \t method  \t dimensions  \t stitches number \t jumps number \t max_stitch_length \t min_stitch_length \n"
+       
         next_elements = [None]
         if len(self.elements) > 1:
             next_elements = self.elements[1:] + next_elements
         previous_stitch_group = None
         for element, next_element in zip(self.elements, next_elements):
-            previous_stitch_group = self._element_info(element, previous_stitch_group, next_element)
+            text_export, previous_stitch_group = self._element_info(element, previous_stitch_group, next_element)
+            self.export_txt += text_export
         self._general_info()
-
-        app = ElementInfoApp(self.list_items)
+        import sys
+        print(self.export_txt, file= sys.stderr)
+        app = ElementInfoApp(self.list_items, self.export_txt)
         app.MainLoop()
+
 
     def _element_info(self, element, previous_stitch_group, next_element):
         stitch_groups = element.embroider(previous_stitch_group, next_element)
@@ -46,18 +50,22 @@ class ElementInfo(InkstitchExtension):
             collapse_len=self.metadata['collapse_len_mm'],
             min_stitch_len=self.metadata['min_stitch_len_mm']
         )
-
+        label = element.node.label
+        element_id = element.node.get_id()
+        
         self.list_items.append(ListItem(
-            name=f"{element.node.label} ({element.node.get_id()})",
+            name=f"{label} ({element_id})",
             value=stitch_groups[0].color,
             headline=True
         ))
+        element_name = element.element_name
         self.list_items.append(ListItem(
             name=_("Type"),
-            value=element.element_name
+            value=element_name
         ))
         if isinstance(element, FillStitch):
             fill_method = next((method.name for method in element._fill_methods if method.id == element.fill_method), "")
+            method=fill_method
             self.list_items.append(ListItem(
                 name=_("Fill Method"),
                 value=fill_method
@@ -65,6 +73,7 @@ class ElementInfo(InkstitchExtension):
 
         if isinstance(element, SatinColumn):
             satin_method = next((method.name for method in element._satin_methods if method.id == element.satin_method), "")
+            method=satin_method
             self.list_items.append(ListItem(
                 name=_("Satin Method"),
                 value=satin_method
@@ -72,14 +81,15 @@ class ElementInfo(InkstitchExtension):
 
         if isinstance(element, Stroke):
             stroke_method = next((method.name for method in element._stroke_methods if method.id == element.stroke_method), "")
+            method=stroke_method
             self.list_items.append(ListItem(
                 name=_("Stroke Method"),
                 value=stroke_method
             ))
-
+        dimensions="{:.2f} x {:.2f}".format(stitch_plan.dimensions_mm[0], stitch_plan.dimensions_mm[1])
         self.list_items.append(ListItem(
-            name=_("Dimensions (mm)"),
-            value="{:.2f} x {:.2f}".format(stitch_plan.dimensions_mm[0], stitch_plan.dimensions_mm[1])
+            name=_("Dimensions (mm)"),  
+            value=dimensions
         ))
 
         stitch_lengths = []
@@ -118,28 +128,34 @@ class ElementInfo(InkstitchExtension):
         if len(stitch_groups) > 1:
             stitches_per_group = f" ({', '.join([str(len(group.stitches)) for group in stitch_groups])})"
 
+        nb_stitches=str(stitch_plan.num_stitches - stitch_plan.num_jumps) + stitches_per_group
         self.list_items.append(ListItem(
             name=_("Stitches"),
-            value=str(stitch_plan.num_stitches - stitch_plan.num_jumps) + stitches_per_group
+            value=nb_stitches
         ))
         self.list_items.append(ListItem(
             name=_("Small stitches (removed)"),
             value=str(removed_stitches)
         ))
+        nb_jumps=str(stitch_plan.num_jumps - 1)
         self.list_items.append(ListItem(
             name=_("Jumps"),
-            value=str(stitch_plan.num_jumps - 1)
+            value=nb_jumps
         ))
+        max_stitch_length="{:.2f}".format(max(stitch_lengths))
         self.list_items.append(ListItem(
             name=_("Max stitch length"),
-            value="{:.2f}".format(max(stitch_lengths))
+            value=max_stitch_length
         ))
+        min_stitch_length="{:.2f}".format(min(stitch_lengths))
         self.list_items.append(ListItem(
             name=_("Min stitch length"),
-            value="{:.2f}".format(min(stitch_lengths))
+            value=min_stitch_length
         ))
         self.list_items.append(ListItem())
-        return stitch_groups[0]
+
+        text_export = f"{element_id}\t{element_name}\t{method}\t{dimensions}\t{nb_stitches}\t{nb_jumps}\t{max_stitch_length}\t{min_stitch_length}\n"
+        return (text_export, stitch_groups[0])
 
     def _general_info(self):
         general_info_list_items = []
