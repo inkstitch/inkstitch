@@ -2,7 +2,7 @@
 title: "Installer Ink/Stitch pour linux"
 permalink: /fr/docs/install-linux/
 excerpt: "Comment installer rapidement Ink/Stitch."
-last_modified_at: 2025-04-14
+last_modified_at: 2025-06-19
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -155,7 +155,7 @@ Ce problème peut être causé par wayland. Démarrez Inkscape avec la commande 
 export GDK_BACKEND=x11 && inkscape
 ```
 
-When using the Inkscape flatpak package, the command looks like this:
+Lorsque vous utilisez le package flatpak Inkscape, la commande ressemble à ceci :
 
 ```
 flatpak --env=GDK_BACKEND=x11 run org.inkscape.Inkscape
