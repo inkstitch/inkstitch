@@ -13,6 +13,7 @@ class ElementInfoFrame(wx.Frame):
 
     def __init__(self, *args, **kwargs):
         self.list_items = kwargs.pop("list_items")
+        self.export_txt = kwargs.pop("export_txt")
         self.index = 0
         wx.Frame.__init__(self, None, wx.ID_ANY, _("Element Info"), *args, **kwargs)
 
@@ -85,7 +86,7 @@ class ElementInfoFrame(wx.Frame):
 
     def on_copy(self, event):
         if wx.TheClipboard.Open():
-            text =self.export_text
+            text =self.export_txt
             data_object = wx.TextDataObject(text)
             wx.TheClipboard.SetData(data_object)
             
@@ -108,13 +109,13 @@ class ElementInfoFrame(wx.Frame):
 
 
 class ElementInfoApp(wx.App):
-    def __init__(self, list_items, export_text):
+    def __init__(self, list_items, export_txt):
         self.list_items = list_items
-        self.export_text = export_text
+        self.export_txt = export_txt
         super().__init__()
 
     def OnInit(self):
-        self.frame = ElementInfoFrame(list_items=self.list_items)
+        self.frame = ElementInfoFrame(list_items=self.list_items, export_txt=self.export_txt)
         self.SetTopWindow(self.frame)
         self.frame.Show()
         return True
