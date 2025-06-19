@@ -109,6 +109,13 @@ inkstitch_attribs = [
     'enable_random_stitch_length',
     'random_stitch_length_jitter_percent',
     'gap_fill_rows',
+    'checker_grid_angle',
+    'checker_A_angle',
+    'checker_B_angle',
+    'checker_grid_row_spacing_mm',
+    'checker_grid_column_spacing_mm',
+    'checker_A_spacing_mm',
+    'checker_B_spacing_mm',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',

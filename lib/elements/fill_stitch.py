@@ -20,7 +20,7 @@ from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches import (auto_fill, circular_fill, contour_fill, guided_fill,
                         legacy_fill, linear_gradient_fill, meander_fill,
-                        tartan_fill)
+                        tartan_fill, checker_fill)
 from ..stitches.linear_gradient_fill import gradient_angle
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
@@ -157,6 +157,7 @@ class FillStitch(EmbroideryElement):
                      ParamOption('linear_gradient_fill', _("Linear Gradient Fill")),
                      ParamOption('meander_fill', _("Meander Fill")),
                      ParamOption('tartan_fill', _("Tartan Fill")),
+                     ParamOption('checker_fill', _("Checker Fill")),
                      ParamOption('legacy_fill', _("Legacy Fill"))]
 
     @property
@@ -272,6 +273,7 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'circular_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'tartan_fill'),
+                         ('fill_method', 'checker_fill'),
                          ('fill_method', 'linear_gradient_fill')])
     def expand(self):
         return self.get_float_param('expand_mm', 0)
@@ -316,6 +318,19 @@ class FillStitch(EmbroideryElement):
         return self.get_float_param('tartan_angle', -45)
 
     @property
+    @param('checker_grid_angle',
+           _('Angle of the checker grid'),
+           tooltip=_('The angle increases in a counter-clockwise direction. The grid axes remain orthogonal to each other.'),
+           unit='deg',
+           type='float',
+           sort_index=21,
+           select_items=[('fill_method', 'checker_fill')],
+           default=0)
+    @cache
+    def checker_grid_angle(self):
+        return self.get_float_param('checker_grid_angle', 0)
+
+    @property
     @param('max_stitch_length_mm',
            _('Maximum fill stitch length'),
            tooltip=_(
@@ -328,6 +343,7 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'linear_gradient_fill'),
                          ('fill_method', 'tartan_fill'),
+                         ('fill_method', 'checker_fill'),
                          ('fill_method', 'legacy_fill')],
            default=3.0)
     def max_stitch_length(self):
@@ -631,6 +647,78 @@ class FillStitch(EmbroideryElement):
         return np.maximum(self.get_split_float_param("pull_compensation_percent", (0, 0)), 0)
 
     @property
+    @param('checker_grid_row_spacing_mm',
+           _('Spacing between rows of the Checker grid'),
+           tooltip=_('Distance between rows of checkers.'),
+           unit='mm',
+           sort_index=60,
+           type='float',
+           select_items=[('fill_method', 'checker_fill')],
+           default=2)
+    def checker_grid_row_spacing(self):
+        return self.get_float_param("checker_grid_row_spacing_mm", 2)
+
+    @property
+    @param('checker_grid_column_spacing_mm',
+           _('Spacing between columns of the Checker grid'),
+           tooltip=_('Distance between columns of checkers.'),
+           unit='mm',
+           sort_index=61,
+           type='float',
+           select_items=[('fill_method', 'checker_fill')],
+           default=2)
+    def checker_grid_column_spacing(self):
+        return self.get_float_param("checker_grid_column_spacing_mm", 2)
+    
+    @property
+    @param('checker_A_spacing_mm',
+           _('Spacing between rows of A-type checkers'),
+           tooltip=_('Distance between rows of stitches.'),
+           unit='mm',
+           sort_index=62,
+           type='float',
+           select_items=[('fill_method', 'checker_fill')],
+           default=0.25)
+    def checker_A_row_spacing(self):
+        return max(self.get_float_param("checker_A_spacing_mm", 0.25), 0.1 * PIXELS_PER_MM)
+
+    @property
+    @param('checker_A_angle',
+           _('Angle of the A-type checkers'),
+           tooltip=_('The angle increases in a counter-clockwise direction.'),
+           unit='deg',
+           type='float',
+           sort_index=63,
+           select_items=[('fill_method', 'checker_fill')],
+           default=0)
+    def checker_A_angle(self):
+        return self.get_float_param('checker_A_angle', 0)
+    
+    @property
+    @param('checker_B_spacing_mm',
+           _('Spacing between rows of B-type checkers'),
+           tooltip=_('Distance between rows of stitches.'),
+           unit='mm',
+           sort_index=64,
+           type='float',
+           select_items=[('fill_method', 'checker_fill')],
+           default=0.25)
+    def checker_B_row_spacing(self):
+        return max(self.get_float_param("checker_B_spacing_mm", 0.25), 0.1 * PIXELS_PER_MM)
+    
+    @property
+    @param('checker_B_angle',
+           _('Angle of the B-type checkers'),
+           tooltip=_('The angle increases in a counter-clockwise direction.'),
+           unit='deg',
+           type='float',
+           sort_index=65,
+           select_items=[('fill_method', 'checker_fill')],
+           default=90)
+    def checker_B_angle(self):
+        return self.get_float_param('checker_B_angle', 90)
+    
+    @property
     def color(self):
         # SVG spec says the default fill is black
         return self.get_style("fill", "#000000")
@@ -863,6 +951,9 @@ class FillStitch(EmbroideryElement):
             if not self.node.get('inkstitch:tartan', ''):
                 yield DefaultTartanStripeWarning(self.shape.representative_point())
 
+        # TODO: Add warnings for the checker fill
+        #if self.fill_method == 'checker_fill':
+
         for warning in super(FillStitch, self).validation_warnings():
             yield warning
 
@@ -979,6 +1070,8 @@ class FillStitch(EmbroideryElement):
                         stitch_groups.extend(self.do_linear_gradient_fill(fill_shape, start, end))
                     elif self.fill_method == 'tartan_fill':
                         stitch_groups.extend(self.do_tartan_fill(fill_shape, start, end))
+                    elif self.fill_method == 'checker_fill':
+                        stitch_groups.extend(self.do_checker_fill(fill_shape, start, end))
                     else:
                         # auto_fill
                         stitch_groups.extend(self.do_auto_fill(fill_shape, start, end))
@@ -1237,3 +1330,6 @@ class FillStitch(EmbroideryElement):
 
     def do_tartan_fill(self, shape, start, end):
         return tartan_fill(self, shape, start, end)
+
+    def do_checker_fill(self, shape, start, end):
+        return checker_fill(self, shape, start, end)
