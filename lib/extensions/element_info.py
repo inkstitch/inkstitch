@@ -37,8 +37,6 @@ class ElementInfo(InkstitchExtension):
             text_export, previous_stitch_group = self._element_info(element, previous_stitch_group, next_element)
             self.export_txt += text_export
         self._general_info()
-        import sys
-        print(self.export_txt, file= sys.stderr)
         app = ElementInfoApp(self.list_items, self.export_txt)
         app.MainLoop()
 
