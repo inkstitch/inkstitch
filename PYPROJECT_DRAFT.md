@@ -193,7 +193,7 @@ While we'll cover Makefile specifics in more detail later, here are some immedia
   * **Adjusted Rules**: Some `Makefile` rules have been refined, and we've added `make help` for command overview and `make ignored` to list files not tracked by Git (outside of .gitignore).
   * **make manual**: This rule is currently not in use and serves as an alias for `make inx`.
 
-  * **messages.po**:  This target was intended for localization (L10n), used to extract translatable strings into .po files. **However, it appears this target is currently not actively used in the development workflow ?!?**
+  * **messages.po**:  This target was designed for localization (L10n), specifically for extracting translatable strings into `.po` files. Refer to the action at `.github/workflows/translations.yml` and [translate.inkstitch.org](http://translate.inkstitch.org) for details.
 
 
 
