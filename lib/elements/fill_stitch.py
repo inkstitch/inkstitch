@@ -318,19 +318,6 @@ class FillStitch(EmbroideryElement):
         return self.get_float_param('tartan_angle', -45)
 
     @property
-    @param('checker_grid_angle',
-           _('Angle of the checker grid'),
-           tooltip=_('The angle increases in a counter-clockwise direction. The grid axes remain orthogonal to each other.'),
-           unit='deg',
-           type='float',
-           sort_index=21,
-           select_items=[('fill_method', 'checker_fill')],
-           default=0)
-    @cache
-    def checker_grid_angle(self):
-        return self.get_float_param('checker_grid_angle', 0)
-
-    @property
     @param('max_stitch_length_mm',
            _('Maximum fill stitch length'),
            tooltip=_(
@@ -692,7 +679,7 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'checker_fill')],
            default=0)
     def checker_A_angle(self):
-        return self.get_float_param('checker_A_angle', 0)
+        return math.radians(self.get_float_param('checker_A_angle', 0))
     
     @property
     @param('checker_B_spacing_mm',
@@ -716,7 +703,7 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'checker_fill')],
            default=90)
     def checker_B_angle(self):
-        return self.get_float_param('checker_B_angle', 90)
+        return math.radians(self.get_float_param('checker_B_angle', 90))
     
     @property
     def color(self):
