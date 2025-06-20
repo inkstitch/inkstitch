@@ -35,7 +35,7 @@ if [[ -z "$VERSION" ]]; then
     VERSION="$(git rev-parse --abbrev-ref HEAD | tr / - | tr '[:upper:]' '[:lower:]')"
 fi
 # uname returns the OS name, e.g. Linux, Darwin, etc. - that require lowercase
-OS=$(echo ${BUILDX:-$(uname)} | tr '[:upper:]' '[:lower:]')
+OS=$(echo ${BUILD:-$(uname)} | tr '[:upper:]' '[:lower:]')
 ARCH="$(uname -m)"
 
 echo "Building for OS: $OS, Architecture: $ARCH, Version: $VERSION"
@@ -76,7 +76,7 @@ EOF
     echo "New GPG key has been generated."
 }
 
-# This function retrieves the ID of the temporary GPG key. Sear local GPG keyring for the key.
+# This function retrieves the ID of the temporary GPG key. Search local GPG keyring for the key.
 function get_gpg_key_id() {
     # Get the ID of the temporary key
     GENERATED_KEY_ID=$(gpg --list-secret-keys --with-colons "$GPG_KEY_NAME" | awk -F: '/^sec/{print $5; exit}')
