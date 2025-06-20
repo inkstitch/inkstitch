@@ -3,7 +3,7 @@
 # Copyright (c) 2023 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from math import floor
+from math import ceil, floor
 from typing import TYPE_CHECKING, List, Optional, Tuple, Union
 
 from networkx import is_empty
@@ -48,10 +48,10 @@ def checker_fill(fill: 'FillStitch', outline: Polygon,
     :returns: stitch_groups forming the checker pattern
     """
 
-    # Get the shape dimensions in quads
+    # Get the shape dimensions in quads so we know maximum how many checkers we need
     (minx, miny, maxx, maxy) = outline.bounds
-    shape_width_in_quad: int = floor(abs(maxx - minx) / fill.checker_grid_column_spacing)
-    shape_height_in_quad: int = floor(abs(maxy - miny) / fill.checker_grid_row_spacing)
+    shape_width_in_quad: int = ceil(abs(maxx - minx) / fill.checker_grid_column_spacing)
+    shape_height_in_quad: int = ceil(abs(maxy - miny) / fill.checker_grid_row_spacing)
     
     quad_width: float = fill.checker_grid_column_spacing
     quad_height: float = fill.checker_grid_row_spacing
