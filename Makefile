@@ -87,7 +87,7 @@ manual:                  # now this is alias for make inx
 inx: version locales     # before running this target, run version and locales
 	python bin/generate-inx-files;
 
-# - why we need this? see crowdin.yml - any suggestion?
+# see action: .github/workflows/translations.yml and http://translate.inkstitch.org
 .PHONY: messages.po      # .PHONY means always run this target
 messages.po: inx         # run this target after inx
 	rm -f messages.po
