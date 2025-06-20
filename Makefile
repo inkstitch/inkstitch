@@ -1,13 +1,13 @@
 # Installation and build script for Ink/Stitch
-#   make manual - seems not needed anymore, only alias for make inx
 #   make inx    - need to run after each change of templates
 
 # Windows:
 #   https://github.com/git-for-windows/git - with basic unix commands
 
-# BUILD variable:
+# BUILD variable (see build .github/workflows/* ):
 #   - osx common for MacOS and variants
 #   - linux common for Linux and variants
+#   - linux32 common for 32-bit Linux and variants
 #   - windows common for Windows and variants
 
 # usage: eg BUILD=xxx make
@@ -18,7 +18,7 @@ OS := $(shell uname)
 # lowercase the OS name, required for comparison
 OS := $(shell echo $(OS) | tr '[:upper:]' '[:lower:]')
 
-# if BUILD variable is not set, then set it based on OS
+# if BUILD variable is not set, then set it based on current OS
 ifndef BUILD
 	ifeq ($(OS),darwin)
 		BUILD := osx
@@ -34,7 +34,8 @@ export BUILD
 # default target - debugging info
 .PHONY: default
 default: help
-	@echo ${SHELL}
+	@echo "***************************"
+	@echo "SHELL: ${SHELL}"
 	@echo "Operating System: OS: ${OS}"
 	@echo "BUILD: ${BUILD}"
 
@@ -43,19 +44,20 @@ default: help
 help:
 	@echo "Usage: make [target]"
 	@echo "Available targets:"
-	@echo "  default        - show OS and BUILD variables"
-	@echo "  help           - show this help"
+	@echo "  default/help   - show shell, OS and BUILD variables and this help"
 	@echo "  style          - check python code style with flake8"
 	@echo "  ignored        - show all files in the repo that are ignored by git"
-	@echo "  version        - generate ./VERSION file"
-	@echo "  locales        - generate translation files from ./translation/*.po to ./locales/"
-	@echo "  inx            - generate inx files from ./locales/ and templates"
-	@echo "  messages.po    - generate messages.po from inx files and babel"
-	@echo "  build-python   - build Pythonu (requires BUILD variable)"
-	@echo "  dist           - build distribution archives (requires BUILD variable)"
-	@echo "  dist-debug     - build distribution archives for current OS without build-python"
+	@echo ""
+	@echo " *inx            - generate inx files from ./locales/ and templates"
+	@echo " *distlocal      - calls 'make distclean' and 'make dist' for local build"
+	@echo "  dist           - build distribution archives from CI/CD actions (requires BUILD variable)"
 	@echo "  distclean      - clean up build artifacts"
-	@echo "  distlocal      - build local distribution archives for current OS"
+	@echo "  build-python   - build using PyInstaller (requires BUILD variable)"
+	@echo "  dist-debug     - build distribution archives (*.deb, *.rpm ...) without call PyInstaller"
+	@echo "  version        - generate ./VERSION file"
+	@echo ""
+	@echo "  locales        - generate translation files from ./translation/*.po to ./locales/"
+	@echo "  messages.po    - generate messages.po from inx files and babel"
 
 # Build Python - requires BUILD variable, calls PyInstaller, put all stuff into dist/inkstitch/bin
 build-python: version locales inx
@@ -136,7 +138,7 @@ style:
 
 # show all files in the repo that are ignored by git
 # - skip .venv folder
-.PHONY: ignored
+.PHONY: ignored         # .PHONY means always run this target
 ignored:
 	@git ls-files --others --ignored --exclude-standard | grep -v .venv
 
