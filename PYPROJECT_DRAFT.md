@@ -161,7 +161,7 @@ Here's an overview of the key changes related to Git and Python dependency manag
 
 ### PyGObject Introspection (OS-Dependent)
 
-  * **Requirement**: PyGObject is essential for `inkex` and `wxPython`.
+  * **Requirement**: PyGObject is essential for `inkex`.
   * **OS/GTK Dependency**: Versions greater than 3.50 require the latest GTK (e.g., in Ubuntu 24.04), which could necessitate a full OS reinstallation.
   * **No OS Version Targeting**: pyproject.toml lacks a way to identify specific OS versions for conditional dependencies.
   * **Version Pinning**: Therefore, PyGObject is pinned to version <=3.50 to maintain broader compatibility.
@@ -429,7 +429,7 @@ Here's how to quickly get started with uv for your project:
 
 
 
-## Testing Installation
+## Testing Installation on different OS
 
 * **Windows 10 (64-bit):**
   * **Passed**
