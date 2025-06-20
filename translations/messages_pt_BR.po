@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-06-06 01:47+0000\n"
-"PO-Revision-Date: 2025-06-06 01:48\n"
+"PO-Revision-Date: 2025-06-20 01:49\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
@@ -30,22 +30,22 @@ msgstr ""
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script is a decorative satin column manuscript font. It contains 118 glyphs, covering most western european languages needs. More decorative options are hidden in the µ glyph."
-msgstr ""
+msgstr "Escrita de Broca é uma fonte manuscrita decorativa de coluna de cetim com tamanho aproximado de 40 mm. Ela pode ser ampliada em até 250%. Contém 118 glifos, que atendem às necessidades da maioria dos idiomas da Europa Ocidental. Mais opções decorativas estão ocultas no glifo µ."
 
 #. description of font in fonts/Hebrew_font_large
 #: inkstitch-fonts-metadata.py:4
 msgid "Large size Hebrew satin font"
-msgstr ""
+msgstr "Fonte hebraica de cetim de tamanho grande"
 
 #. description of font in fonts/Shojumaru
 #: inkstitch-fonts-metadata.py:6
 msgid "Shojumaru is a manga like satin font."
-msgstr ""
+msgstr "Shojumaru é uma fonte satin estilo mangá."
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
 msgid "Abécédaire AGS is a crossstitch font."
-msgstr ""
+msgstr "AGS Alphabet é uma fonte para ponto cruz."
 
 #. description of font in fonts/abril
 #: inkstitch-fonts-metadata.py:10
@@ -55,62 +55,62 @@ msgstr ""
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:12
 msgid "AGS Γαραμου Garamond contains all the letters of the latin and greek alphabets and cover most european languages."
-msgstr ""
+msgstr "AGS Γαραμου Garamond contém todas as letras dos alfabetos latino e grego e abrange a maioria dos idiomas europeus."
 
 #. description of font in fonts/ambigue
 #: inkstitch-fonts-metadata.py:14
 msgid "Ambigüe is a mix of satin and bean stitch font with a subtle harmony of disorder. You may ignore the hidden black running stitches (they are the original letters) or use them to customize this font as you like."
-msgstr ""
+msgstr "Ambigue é uma mistura de ponto cetim e ponto feijão com uma (sutil) harmonia de desordem. Você pode ignorar os pontos pretos ocultos (são as letras originais) ou usá-los para personalizar esta fonte como preferir."
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:16
 msgid "Amitaclo is a script satin font. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Amitaclo é uma fonte de cetim script. Cada cetim tem um subtexto em zigue-zague"
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:18
 msgid "This font is an altered version of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Esta fonte é uma versão alterada da Amitaclo, para permitir uma escala menor. O uso de linha fina (60) e agulha fina (60) é obrigatório."
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:20
 msgid "Apex Lake is a large ornate capital letters font. It contains only 38 glyphs : A-Z,0-9,! and ?."
-msgstr ""
+msgstr "Apex Lake é uma fonte grande e ornamentada com letras maiúsculas. Ela contém apenas 38 glifos: A-Z, 0–9, ! e ?."
 
 #. description of font in fonts/apex_simple_AGS
 #: inkstitch-fonts-metadata.py:22
 msgid "Apex Simple AGS is a satin companion font for Apex Lake AGS."
-msgstr ""
+msgstr "Apex Simple AGS é uma fonte complementar acetinada para Apex Lake AGS."
 
 #. description of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:24
 msgid "Auberge Marif is a script satin font. The glyphs cover most Western European languages."
-msgstr ""
+msgstr "Auberge Marif é uma fonte satin script. Os glifos abrangem a maioria dos idiomas da Europa Ocidental."
 
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:26
 msgid "Auberge Small is an altered version of Auberge Marif to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Auberge Small é uma versão alterada de Auberge Marif para permitir uma escala menor. O uso de linha fina (60) e agulha fina (60) é obrigatório."
 
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:28
 msgid "Aventurina is a script satin font. The glyphs cover most Western European languages."
-msgstr ""
+msgstr "Aventurina é uma fonte satin script. Os glifos abrangem a maioria dos idiomas da Europa Ocidental."
 
 #. description of font in fonts/barstitch_bold
 #: inkstitch-fonts-metadata.py:30
 msgid "Barstitch  Bold is a satin font."
-msgstr ""
+msgstr "Barstitch Bold é uma fonte acetinada."
 
 #. description of font in fonts/barstitch_cloudy
 #: inkstitch-fonts-metadata.py:32
 msgid "This is a guided fill version of Barstitch fill. Each letter is used to clip a group of guided fills and  then  a bean stitch contour is stitched. "
-msgstr ""
+msgstr "Esta é uma versão de preenchimento guiado do preenchimento em ponto barra. Cada letra é usada para recortar um grupo de preenchimentos guiados e, em seguida, um contorno em ponto feijão é costurado "
 
 #. description of font in fonts/barstitch_mandala
 #: inkstitch-fonts-metadata.py:34
 msgid "A large Mandala font. Redwork versions of the four mandalas  used to design the font are stored in the $,<,>,^ glyphs"
-msgstr ""
+msgstr "Uma fonte grande de Mandala. Versões em Redwork das quatro mandalas usadas para criar a fonte estão armazenadas nos glifos $,&lt;,&gt;,^"
 
 #. description of font in fonts/barstitch_regular
 #: inkstitch-fonts-metadata.py:36
@@ -281,7 +281,7 @@ msgstr ""
 #. description of font in fonts/excalibur_small
 #: inkstitch-fonts-metadata.py:102
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Esta fonte é uma versão alterada da Excalibur KOR, para permitir uma escala menor. O uso de linha fina (60) e agulha fina (60) é obrigatório."
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:104
@@ -538,7 +538,7 @@ msgstr ""
 #. description of font in fonts/western_light
 #: inkstitch-fonts-metadata.py:204
 msgid "Western light is a light fill western style font."
-msgstr ""
+msgstr "Western light é uma fonte de estilo ocidental com preenchimento claro."
 
 #. name of tile in tiles/N3-11a
 #: inkstitch-tiles-metadata.py:2
