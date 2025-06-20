@@ -10,8 +10,6 @@ Ink/Stitch-Sticharten können grob in drei Gruppen eingeteilt werden: Linien, Sa
 
 Linienartige Sticharten können benutzt werden für: Umrandungen, Strichkunst-Stickereien oder um dem Motiv Details hinzuzufügen.
 
-{% include video id="S_NiFiI6cPY" provider="youtube" %}
-
 ### Geradstich
 
 Der Geradstich produziert eine Serie von kleinen Stichen entlang eines Pfades.
@@ -51,10 +49,7 @@ Zick-Zack-Stiche sind eine sehr einfache Version für Zick-Zack-Linien. Wir empf
 
 [Mehr lesen](/de/docs/stitches/zigzag-stitch/){: .btn .btn--primary}
 
-
 ## Satin
-
-{% include video id="U7YtajKlftQ" provider="youtube" %}
 
 ### Satinsäule
 
@@ -90,10 +85,7 @@ S-Stich ist eine Satinsäule die wie eine Füllung aussieht.
 
 [Mehr lesen](/de/docs/stitches/zigzag-satin-stitch/){: .btn .btn--primary}
 
-
 ## Füllstiche
-
-{% include video id="Dn1cVOxlX8c" provider="youtube" %}
 
 ### Füllstich
 

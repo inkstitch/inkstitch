@@ -7,11 +7,11 @@ toc: true
 Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
 
 ## Stroke
+
 Stroke stitches can be used for: outlines, line art embroidery or to add details into your design.
 
-{% include video id="S_NiFiI6cPY" provider="youtube" %}
-
 ### Running Stitch
+
 Running stitch produces a series of small stitches following a line or curve.
 
 ![Running Stitch Detail](/assets/images/docs/running-stitch-detail.jpg)
@@ -19,6 +19,7 @@ Running stitch produces a series of small stitches following a line or curve.
 [Learn more](/docs/stitches/running-stitch/){: .btn .btn--primary}
 
 ### Bean Stitch
+
 Bean stitch describes a repetition of running stitches back and forth. This would result in thicker threading.
 
 ![Bean Stitch Detail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
@@ -26,6 +27,7 @@ Bean stitch describes a repetition of running stitches back and forth. This woul
 [Learn more](/docs/stitches/bean-stitch/){: .btn .btn--primary}
 
 ### Manual Stitch
+
 In manual stitch mode Ink/Stitch will use each node of a path as a needle penetration point, exactly as you placed them.
 
 ![Manual Stitch Detail](/assets/images/docs/manual-stitch-detail.png)
@@ -33,6 +35,7 @@ In manual stitch mode Ink/Stitch will use each node of a path as a needle penetr
 [Learn more](/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
 ### Ripple Stitch
+
 Ripple stitch is a versatile stitch type that stretches over a surface in spirals, rows of lines or even grids.
 
 ![Ripple Stitch](/assets/images/docs/ripplefly.jpg)
@@ -40,16 +43,14 @@ Ripple stitch is a versatile stitch type that stretches over a surface in spiral
 [Learn more](/docs/stitches/ripple-stitch){: .btn .btn--primary}
 
 ### Zig-Zag Stitch
+
 Zig-Zag stitches are a very basic option to create a simple zig-zag line. We recommend to use them only for straight lines, because they will not stitch nicely around edges. In most cases, you would prefer a satin column instead.
 
 ![Zigzag Stitch Detail](/assets/images/docs/zigzag-stitch-detail.png)
 
 [Learn more](/docs/stitches/zigzag-stitch/){: .btn .btn--primary}
 
-
 ## Satin
-
-{% include video id="U7YtajKlftQ" provider="youtube" %}
 
 ### Satin Column
 
@@ -85,10 +86,7 @@ The biggest purpose for E-stitch is a simple but strong cover stitch for appliqu
 
 [Learn more](/docs/stitches/zigzag-satin-stitch/){: .btn .btn--primary}
 
-
 ## Fill
-
-{% include video id="Dn1cVOxlX8c" provider="youtube" %}
 
 ### Fill Stitch
 
