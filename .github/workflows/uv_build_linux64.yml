@@ -54,6 +54,10 @@ jobs:
           ### input data
           echo "github.event.inputs.break_on: ${{ github.event.inputs.break_on }}"
           echo "inputs.break_on: ${{ inputs.break_on }}"
+          echo "github.event.inputs.use_authorized_signing: ${{ github.event.inputs.use_authorized_signing }}"
+          echo "inputs.use_authorized_signing: ${{ inputs.use_authorized_signing }}"
+          echo "MY_BREAK_ON: $MY_BREAK_ON"
+          echo "MY_USE_AUTHORIZED_SIGNING: $MY_USE_AUTHORIZED_SIGNING"
 
           echo "-------------------------------------- update apt"
           ### install system dependencies
