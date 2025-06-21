@@ -74,11 +74,11 @@ class StitchLayer:
 
     @property
     def stroke_color(self):
-        return self.element.get_style("stroke")
+        return self.element.stroke_color
 
     @property
     def fill_color(self):
-        return self.element.get_style("stroke")
+        return self.element.fill_color
 
     def to_stitch_groups(self, *args):
         raise NotImplementedError(f"{self.__class__.__name__} must implement to_stitch_groups()!")

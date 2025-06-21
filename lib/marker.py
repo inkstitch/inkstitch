@@ -72,8 +72,8 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_sati
             continue
 
         element = EmbroideryElement(marker)
-        fill = element.get_style('fill')
-        stroke = element.get_style('stroke')
+        fill = element.fill_color
+        stroke = element.stroke_color
 
         if get_fills and fill is not None:
             fill = FillStitch(marker).shape
