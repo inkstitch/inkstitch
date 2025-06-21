@@ -203,7 +203,7 @@ jobs:
 
           fi
 
-          MY_NAME="${MY_TAG_NAME}_NAME" # name of the release, can be anything, but usually it is the same as tag name
+          MY_NAME="${MY_TAG_NAME}" # name of the release (release name), can be anything, but usually it is the same as tag name
 
 
           echo "------------------------------------------------- echoing variables"
@@ -437,13 +437,14 @@ jobs:
         with:
           # token: ${{ secrets.GITHUB_TOKEN }}  # always set, used to create release, implicitly passed by the action
           tag_name: ${{ env.MY_TAG_NAME }}
-          name: ${{ env.MY_NAME }}
-          prerelease: ${{ env.MY_PRERELEASE }}
+          name: ${{ env.MY_NAME }}  # usually the same as tag name, but can be different
+          prerelease: ${{ env.MY_PRERELEASE }} # pre-release (true) / release (false) - can be manually changed in the UI
           draft: false
           body: |
-            This is a release for NAME: ${{ env.MY_NAME }} TAG_NAME: ${{ env.MY_TAG_NAME }}.
-            - Use authorized signing: ${{ env.MY_USE_AUTHORIZED_SIGNING }}
-            - Tag name: ${{ env.MY_TAG_NAME }}
-            - Pre-release: ${{ env.MY_PRERELEASE }}
+            This is a release for:
+            - name (MY_NAME): ${{ env.MY_NAME }}
+            - Tag name (MY_TAG_NAME): ${{ env.MY_TAG_NAME }}
+            - Use authorized signing (MY_USE_AUTHORIZED_SIGNING): ${{ env.MY_USE_AUTHORIZED_SIGNING }}
+            - Pre-release (MY_PRERELEASE): ${{ env.MY_PRERELEASE }}
           files: |
             artifacts/**/*
