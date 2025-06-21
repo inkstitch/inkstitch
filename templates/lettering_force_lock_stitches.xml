@@ -18,7 +18,7 @@
             <separator />
             <spacer />
             <param name="last_element" type="boolean" gui-text="Add forced lock stitches to the last element of each glyph">false</param>
-            <param name="last_element_group" type="boolean" gui-text="Add forced lock stitches to the last element of each group">false</param>
+            <param name="last_group_element" type="boolean" gui-text="Add forced lock stitches to the last element of each group">false</param>
         </page>
         <page name="info" gui-text="Help">
             <label >

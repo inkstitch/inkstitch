@@ -10,7 +10,7 @@ from ..elements.utils import iterate_nodes, nodes_to_elements
 from ..i18n import _
 from ..marker import has_marker
 from ..svg import PIXELS_PER_MM
-from ..svg.tags import EMBROIDERABLE_TAGS
+from ..svg.tags import EMBROIDERABLE_TAGS, SVG_GROUP_TAG
 from .base import InkstitchExtension
 
 
@@ -45,7 +45,7 @@ class LetteringForceLockStitches(InkstitchExtension):
         for layer in glyph_layers:
             if uses_glyph_layers and self.options.last_group_element:
                 self._set_force_attribute_on_last_group_elements(layer)
-            elif uses_glyph_layers and self.options.last_element:
+            if uses_glyph_layers and self.options.last_element:
                 self._set_force_attribute_on_last_elements(layer)
             if self.options.distance:
                 self._set_force_attribute_by_distance(layer)
@@ -55,7 +55,7 @@ class LetteringForceLockStitches(InkstitchExtension):
             self._update_layer_visibility('none')
 
     def _set_force_attribute_on_last_group_elements(self, layer):
-        group_nodes = list(layer.iterdescendants("g"))
+        group_nodes = list(layer.iterdescendants(SVG_GROUP_TAG))
         for group in group_nodes:
             self._set_force_attribute_on_last_elements(group)
 
