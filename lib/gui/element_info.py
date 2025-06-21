@@ -29,13 +29,6 @@ class ElementInfoFrame(wx.Frame):
         self.notebook.AddPage(self.info, _("Info"))
 
         info_sizer = wx.BoxSizer(wx.VERTICAL)
-        #self.parent = parent
-        #self.txt_input = wx.TextCtrl(self)
-       
-       # cmd_copy.Bind(wx.EVT_BUTTON, parent.on_copy)
-       # sizer = wx.BoxSizer(wx.VERTICAL)
-        #sizer.Add(self.txt_input)
-       # info_sizer.Add(cmd_copy,1,wx.ALL| wx.EXPAND, 10)
         
         self.info_list = wx.ListCtrl(self.info, wx.ID_ANY, style=wx.BORDER_SUNKEN | wx.LC_HRULES | wx.LC_REPORT | wx.LC_VRULES)
         self.info_list.AppendColumn(_("Name"), format=wx.LIST_FORMAT_LEFT)
@@ -72,6 +65,14 @@ class ElementInfoFrame(wx.Frame):
         )
         help_sizer.Add(self.website_link, 0, wx.ALL, 8)
 
+        copyright_text = wx.StaticText(
+            self.help,
+            wx.ID_ANY,
+            _("Clip on Copy to copy the information in the Clipboard"),
+            style=wx.ALIGN_LEFT
+        )
+        help_sizer.Add(copyright_text, 0, wx.ALL, 8)
+        
         cmd_copy = wx.Button(self.help, wx.ID_COPY)
         cmd_copy.Bind(wx.EVT_BUTTON, self.on_copy)
         help_sizer.Add(cmd_copy, 0, wx.ALL, 8)
