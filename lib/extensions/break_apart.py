@@ -39,7 +39,7 @@ class BreakApart(InkstitchExtension):
                 elements.append(EmbroideryElement(node))
 
         for element in elements:
-            if not element.get_style("fill", "black"):
+            if not element.fill_color:
                 continue
 
             # we don't want to touch valid elements

@@ -204,6 +204,26 @@ class EmbroideryElement(object):
 
     @property
     @cache
+    def fill_color(self):
+        color = "#000000"
+        try:
+            color = self.get_style("fill", '#000000')
+        except inkex.ColorError:
+            pass
+        return color
+
+    @property
+    @cache
+    def stroke_color(self):
+        color = None
+        try:
+            color = self.get_style("stroke")
+        except inkex.ColorError:
+            pass
+        return color
+
+    @property
+    @cache
     def stroke_scale(self):
         # How wide is the stroke, after the transforms are applied?
         #

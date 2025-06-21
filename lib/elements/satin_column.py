@@ -243,7 +243,7 @@ class SatinColumn(EmbroideryElement):
 
     @property
     def color(self):
-        return self.get_style("stroke")
+        return self.stroke_color
 
     @property
     @param('zigzag_spacing_mm',
