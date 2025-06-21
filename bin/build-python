@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# if not set
-MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:'1'}
+MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:'1'}  # Default level is 1 (INFO)
 
 # MY_PYINSTALLER_LOG_LEVEL
 case "$MY_VERBOSITY_LOG_LEVEL" in
@@ -26,8 +25,6 @@ if [[ -z "$BUILD" ]]; then
 fi
 
 
-
-
 info_year=$( date "+%Y" )
 ARCH="$(uname -m)"
 
@@ -41,8 +38,7 @@ echo "VERSION=${VERSION}"  # may be set by the Makefile otherwise empty ??? why
 # PyInstaller v6.x rearranges folder configuration causing broken builds, This re-enables old onedir layout.
 pyinstaller_args+="--contents-directory . "
 
-# output useful debugging info that helps us trace library dependency issues
-# pyinstaller_args+="--log-level DEBUG "
+# - DEBUG: output useful debugging info that helps us trace library dependency issues
 pyinstaller_args+="--log-level $MY_PYINSTALLER_LOG_LEVEL "
 
 # Setting up pyinstaller arguments for each OS.
