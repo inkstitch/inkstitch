@@ -1,6 +1,21 @@
 #!/bin/bash
 
-# set -x
+# if not set
+MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:'1'}
+
+# MY_PYINSTALLER_LOG_LEVEL
+case "$MY_VERBOSITY_LOG_LEVEL" in
+    0) MY_PYINSTALLER_LOG_LEVEL="ERROR" ;;
+    1) MY_PYINSTALLER_LOG_LEVEL="INFO"  ;;
+    2) MY_PYINSTALLER_LOG_LEVEL="DEBUG" ;;
+    3) MY_PYINSTALLER_LOG_LEVEL="TRACE" ;;
+    *) MY_PYINSTALLER_LOG_LEVEL="INFO" # Fallback for unknown values
+esac
+
+if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
+    set -x
+fi
+
 set -e
 
 echo "------------------------------------------------- build-python.sh"
@@ -9,6 +24,9 @@ if [[ -z "$BUILD" ]]; then
   echo "Error: BUILD variable is not set."
   exit 1
 fi
+
+
+
 
 info_year=$( date "+%Y" )
 ARCH="$(uname -m)"
@@ -24,7 +42,8 @@ echo "VERSION=${VERSION}"  # may be set by the Makefile otherwise empty ??? why
 pyinstaller_args+="--contents-directory . "
 
 # output useful debugging info that helps us trace library dependency issues
-pyinstaller_args+="--log-level DEBUG "
+# pyinstaller_args+="--log-level DEBUG "
+pyinstaller_args+="--log-level $MY_PYINSTALLER_LOG_LEVEL "
 
 # Setting up pyinstaller arguments for each OS.
 # This adds bundle identifier in reverse DSN format for macos
