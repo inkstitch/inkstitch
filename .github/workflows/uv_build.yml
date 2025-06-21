@@ -12,9 +12,6 @@ name: UV Build
 #   GITHUB_SHA - the commit SHA that triggered the workflow
 #   GITHUB_WORKSPACE - the path to the repository on the runner . top level directory of the repository
 
-# on:
-#   GITHUB_EVENT_NAME
-#     GITHUB_REF_TYPE
 
 # !!! important:
 #   - A single tag can point to multiple branches, so there isn't a single matching branch for a tag.
@@ -22,6 +19,9 @@ name: UV Build
 #     - may be set gh workflow run -r <branch> <workflow_file>
 #   - variables ${{ xxx }} are parsed by YAML parser, before shell can see it ( eg ${{ $xxx }} is not what you expect).
 
+# on:
+#   GITHUB_EVENT_NAME
+#     GITHUB_REF_TYPE
 on:
   push: # at least ones must be triggered by a push to be available for manual trigger
   #   branches-ignore:
@@ -114,7 +114,7 @@ jobs:
 
   # - MY_USE_AUTHORIZED_SIGNING: true/false - if we use authorized signing keys (if secrets.INKSTITCH_GPG_KEY is set)
   # - MY_TAG_NAME: tag name for the release, or dev-build-branch_name for pre-release
-  # - MY_PRERELEASE: false/true - if this is a release or pre-release
+  # - MY_IS_RELEASE_BUILD: true/false - if this is a release build (release on tag vX.X.X) or pre-release build (dev-build-branch_name)
   # - MY_NAME: name of the release
 
   sign_policy:
@@ -123,10 +123,10 @@ jobs:
       MY_BUILD_TYPE: ${{ steps.set_vars.outputs.MY_BUILD_TYPE }}
       MY_BREAK_ON: ${{ steps.set_vars.outputs.MY_BREAK_ON }}
 
-      MY_USE_AUTHORIZED_SIGNING: ${{ steps.set_vars.outputs.MY_USE_AUTHORIZED_SIGNING }}
       MY_TAG_NAME: ${{ steps.set_vars.outputs.MY_TAG_NAME }}
-      MY_PRERELEASE: ${{ steps.set_vars.outputs.MY_PRERELEASE }}
       MY_NAME: ${{ steps.set_vars.outputs.MY_NAME }}
+      MY_USE_AUTHORIZED_SIGNING: ${{ steps.set_vars.outputs.MY_USE_AUTHORIZED_SIGNING }}
+      MY_IS_RELEASE_BUILD: ${{ steps.set_vars.outputs.MY_IS_RELEASE_BUILD }}
     # if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
     steps:
       - name: Checkout repo
@@ -182,19 +182,17 @@ jobs:
                 "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
 
             MY_TAG_NAME="${GITHUB_REF_NAME}"
-            MY_PRERELEASE=false  # we are creating a release
+            MY_IS_RELEASE_BUILD=true  # this is a release build
             MY_BUILD_TYPE="all"  # overwrite build to "all" platforms
             if [[ "${MY_USE_AUTHORIZED_SIGNING}" == "false" ]]; then
               echo "Error: Cannot create a release without access to secrets."
-              exit 1
+              MY_IS_RELEASE_BUILD=false  # this is not a release build, but a pre-release build
             fi
-
-
 
           else # pre-release dev-build
 
             MY_TAG_NAME="dev-build-$(echo $GITHUB_REF_NAME | tr / -)"  # use branch/tag name as tag, replace / with -
-            MY_PRERELEASE=true   # we are creating a pre-release
+            MY_IS_RELEASE_BUILD=false  # this is not a release build, but a pre-release build
 
             # overwrite tag name if input_tag is set
             if [[ -n "${MY_INPUT_TAG}" ]]; then
@@ -212,7 +210,7 @@ jobs:
 
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
           echo "MY_TAG_NAME=${MY_TAG_NAME}"
-          echo "MY_PRERELEASE=${MY_PRERELEASE}"
+          echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}"
           echo "MY_NAME=${MY_NAME}"
 
           echo "------------------------------------------------- Exporting variables to GITHUB_OUTPUT"
@@ -221,7 +219,7 @@ jobs:
 
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}" >> $GITHUB_OUTPUT
           echo "MY_TAG_NAME=${MY_TAG_NAME}" >> $GITHUB_OUTPUT
-          echo "MY_PRERELEASE=${MY_PRERELEASE}" >> $GITHUB_OUTPUT
+          echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}" >> $GITHUB_OUTPUT
           echo "MY_NAME=${MY_NAME}" >> $GITHUB_OUTPUT
 
           echo "------------------------------------------------- dump GITHUB_* part of env"
@@ -245,7 +243,7 @@ jobs:
           echo "MY_BREAK_ON: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}"
           echo "MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}"
           echo "MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}"
-          echo "MY_PRERELEASE: ${{ needs.sign_policy.outputs.MY_PRERELEASE }}"
+          echo "MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}"
           echo "MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}"
           echo "-------------------------------------------------"
 
@@ -331,7 +329,7 @@ jobs:
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
-      prerelease: ${{ needs.sign_policy.outputs.MY_PRERELEASE }}
+      is_release_build: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }} #
     secrets:
       SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN}}
 
@@ -396,7 +394,7 @@ jobs:
     env:
       MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}
       MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}
-      MY_PRERELEASE: ${{ needs.sign_policy.outputs.MY_PRERELEASE }}
+      MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}
       MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
 
     if: always() # run this job always, even if previous jobs failed on exit 1
@@ -424,8 +422,19 @@ jobs:
           echo "GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}"  # print ***, always set
           echo "MY_TAG_NAME=${MY_TAG_NAME}"
           echo "MY_NAME=${MY_NAME}"
-          echo "MY_PRERELEASE=${MY_PRERELEASE}"
+          echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}"
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
+          echo "-------------------------------------------------"
+
+          # invert MY_IS_RELEASE_BUILD to use it as a pre-release flag
+          if [[ "${MY_IS_RELEASE_BUILD}" == "true" ]]; then
+            MY_PRERELEASE_FLAG=false  # release build, not pre-release
+          else
+            MY_PRERELEASE_FLAG=true   # pre-release build
+          fi
+          echo "MY_PRERELEASE_FLAG=${MY_PRERELEASE_FLAG}"
+          # export it to the environment for the next steps
+          echo "MY_PRERELEASE_FLAG=${MY_PRERELEASE_FLAG}" >> $GITHUB_ENV
           echo "-------------------------------------------------"
 
 
@@ -438,13 +447,14 @@ jobs:
           # token: ${{ secrets.GITHUB_TOKEN }}  # always set, used to create release, implicitly passed by the action
           tag_name: ${{ env.MY_TAG_NAME }}
           name: ${{ env.MY_NAME }}  # usually the same as tag name, but can be different
-          prerelease: ${{ env.MY_PRERELEASE }} # pre-release (true) / release (false) - can be manually changed in the UI
+          prerelease: ${{ env.MY_PRERELEASE_FLAG }} # pre-release (true) / release (false) - can be manually changed in the UI
           draft: false
           body: |
             This is a release for:
             - name (MY_NAME): ${{ env.MY_NAME }}
             - Tag name (MY_TAG_NAME): ${{ env.MY_TAG_NAME }}
             - Use authorized signing (MY_USE_AUTHORIZED_SIGNING): ${{ env.MY_USE_AUTHORIZED_SIGNING }}
-            - Pre-release (MY_PRERELEASE): ${{ env.MY_PRERELEASE }}
+            - Release build (MY_IS_RELEASE_BUILD): ${{ env.MY_IS_RELEASE_BUILD }}
+            - Pre-release (MY_PRERELEASE_FLAG): ${{ env.MY_PRERELEASE_FLAG }}
           files: |
             artifacts/**/*
