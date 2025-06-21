@@ -721,9 +721,9 @@ class Params(InkstitchExtension):
             elif node.tag in EMBROIDERABLE_TAGS and not node.get_path():
                 pass
             else:
-                if element.get_style("fill", 'black') and not element.get_style("fill-opacity", 1) == "0":
+                if element.fill_color is not None and not element.get_style("fill-opacity", 1) == "0":
                     classes.append(FillStitch)
-                if element.get_style("stroke") is not None:
+                if element.stroke_color is not None:
                     classes.append(Stroke)
                     if len(element.path) > 1:
                         classes.append(SatinColumn)
