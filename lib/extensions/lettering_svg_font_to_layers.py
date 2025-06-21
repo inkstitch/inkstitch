@@ -109,7 +109,6 @@ class LetteringSvgFontToLayers(InkstitchExtension):
                 path = glyph.path
                 return path.bounding_box().height
                 break
-        return errormsg("reference glyph not found")
 
     def set_view_port(self, font, scale_by) -> float:
         """
@@ -200,7 +199,11 @@ class LetteringSvgFontToLayers(InkstitchExtension):
         if font is None:
             return errormsg("There are no svg fonts")
 
-        scale_by = self.options.height * PIXELS_PER_MM / self.reference_size(font, self.options.reference)
+        reference_size = self.reference_size(font, self.options.reference)
+        if reference_size is None:
+            return errormsg("Reference glyph not found in the font")
+
+        scale_by = self.options.height * PIXELS_PER_MM / reference_size
         emsize = self.set_view_port(font, scale_by)
         baseline = self.set_guide_lines(font, scale_by)
 
