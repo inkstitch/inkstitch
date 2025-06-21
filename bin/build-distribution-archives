@@ -14,6 +14,8 @@
 set -e
 set -x
 
+echo "------------------------------------------------- build-distribution-archives.sh"
+
 if [[ -z "$BUILD" ]]; then
   echo "Error: BUILD variable is not set."
   exit 1
@@ -28,6 +30,12 @@ if [[ ! -d "artifacts" ]]; then
 fi
 
 # TODO: use REF_NAME instead of GITHUB_REF
+echo "GITHUB_REF=${GITHUB_REF}"
+echo "GITHUB_REF_NAME=${GITHUB_REF_NAME}"
+echo "OS=${OS}"
+echo "VERSION=${VERSION}"
+echo "--------------------------------------------------------- evaluating variables"
+
 VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
 # if VERSION is not set, use the current branch name (what if detached HEAD?)
 if [[ -z "$VERSION" ]]; then
@@ -38,7 +46,12 @@ fi
 OS=$(echo ${BUILD:-$(uname)} | tr '[:upper:]' '[:lower:]')
 ARCH="$(uname -m)"
 
-echo "Building for OS: $OS, Architecture: $ARCH, Version: $VERSION"
+echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
+echo "BUILD=${BUILD}"
+echo "ARCH=${ARCH}"
+echo "OS=${OS}"
+echo "VERSION=${VERSION}"  # may be set by the Makefile otherwise empty ??? why
+echo "---------------------------------------------------------------"
 
 # ----------------------------------------------------------------
 ### *** GPG KEY SETUP ***
@@ -92,18 +105,25 @@ function get_gpg_key_id() {
 }
 
 # Retrieve the GPG key ID in variable GPG_KEY_ID
-# This function checks if the INKSTITCH_GPG_KEY variable is set.
-#   If it is not set, it checks for an existing key and generates a new one if necessary.
-#   If the variable is set, it imports the key from the variable.
+# This function checks if the MY_USE_AUTHORIZED_SIGNING variable.
+#   true - it imports the key from the variable INKSTITCH_GPG_KEY.
+#   flase - or not set, it checks for an existing key or generates a new one if necessary.
 function retrieve_gpg_key_id() {
-    # Check if INKSTITCH_GPG_KEY is set
-    if [ -z "$INKSTITCH_GPG_KEY" ]; then  # If not set, we will generate a new GPG key
-        # try to get the key ID of the existing local temporary key
 
+    if [[ "${MY_USE_AUTHORIZED_SIGNING}" == "true" ]]; then
+
+        echo "Importing GPG key from INKSTITCH_GPG_KEY variable..."
+        echo "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import  # import to local GPG keyring
+        echo "GPG key has been imported."
+
+    else    #  Try local GPG key, if not set, try generate a new GPG key
+
+        echo "Checking for existing GPG key..."
         if [ $INITIAL_SET_E_STATUS -eq 1 ]; then   # temporary disable -e if it was set
             set +e
         fi
 
+        # try to get the key ID of the existing local temporary key
         gpg --list-secret-keys --keyid-format LONG "$GPG_KEY_NAME" &>/dev/null
         GPG_STATUS=$?
 
@@ -122,11 +142,6 @@ function retrieve_gpg_key_id() {
         fi
 
         echo "GPG key ID is set to: $GPG_KEY_ID"
-
-    else  # If INKSTITCH_GPG_KEY is set, import the key from the variable
-        echo "Importing GPG key from INKSTITCH_GPG_KEY variable..."
-        echo "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import  # import to local GPG keyring
-        echo "GPG key has been imported."
     fi
 }
 
@@ -153,7 +168,7 @@ if [ "$BUILD" = "osx" ]; then
     # Notarization for development branches can be forced with this variable set to true
     NOTARIZE_DEVELOPMENT_BUILDS=false
 
-    if [[ ! -z "${GITHUB_REF}" ]]; then
+    if [[ "${MY_USE_AUTHORIZED_SIGNING}" == "true" ]]; then
         # This code signs and notarize the inkstitch.app
         DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
         echo "Signing of inkstitch.app"
@@ -183,7 +198,8 @@ if [ "$BUILD" = "osx" ]; then
                         --scripts installer_scripts/scripts \
                         --install-location ${PKG_INSTALL_PATH}inkstitch.app \
                         artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.pkg
-        if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+ || $NOTARIZE_DEVELOPMENT_BUILDS == true ]]; then
+        # if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+ || $NOTARIZE_DEVELOPMENT_BUILDS == true ]]; then
+        if true; then  # always notarize for now
             echo "Notary starting"
             echo "Adding keychain item for notarytool"
             xcrun notarytool store-credentials "inkstitch-profile"  \
@@ -209,7 +225,7 @@ if [ "$BUILD" = "osx" ]; then
                 exit 7;
             fi;
         fi
-    else
+    else # Not using authorized signing keys, likely a Dev or Local Build
         # local builds will not be signed or notarized
         pkgbuild --root dist/inkstitch.app \
                 --ownership recommended \
@@ -346,3 +362,6 @@ EOF
         cat "$(dirname "$0")/linux-sh-installer" artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.tar.xz > artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.sh
     fi
 fi
+
+
+echo "------------------------------------------------- build-distribution-archives.sh done"

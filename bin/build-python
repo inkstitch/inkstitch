@@ -1,7 +1,9 @@
 #!/bin/bash
 
-set -x
+# set -x
 set -e
+
+echo "------------------------------------------------- build-python.sh"
 
 if [[ -z "$BUILD" ]]; then
   echo "Error: BUILD variable is not set."
@@ -44,6 +46,7 @@ elif [ "$BUILD" = "linux32" ]; then
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libcrypt.so.1:. "
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libnsl.so.1:. "
 elif [ "$BUILD" = "windows" ]; then
+    # TODO: why is this here?  It doesn't seem to be used, because VERSION is not set or "local-build" in Makefile
 	if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
 		# setting the file and product version for release
 		# Code to remove the periods in the version number
@@ -83,3 +86,5 @@ mkdir dist/bin
 mv dist/inkstitch/* dist/bin
 mv dist/bin dist/inkstitch   # now all the pyinstaller stuff is in dist/inkstitch/bin
 mkdir artifacts
+
+echo "------------------------------------------------- build-python.sh done"
