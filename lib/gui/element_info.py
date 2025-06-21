@@ -65,13 +65,13 @@ class ElementInfoFrame(wx.Frame):
         )
         help_sizer.Add(self.website_link, 0, wx.ALL, 8)
 
-        copyright_text = wx.StaticText(
+        copy_info_text = wx.StaticText(
             self.help,
             wx.ID_ANY,
-            _("Clip on Copy to copy the information in the Clipboard"),
+            _("Click on Copy to copy the information in the Clipboard"),
             style=wx.ALIGN_LEFT
         )
-        help_sizer.Add(copyright_text, 0, wx.ALL, 8)
+        help_sizer.Add(copy_info_text, 0, wx.ALL, 8)
 
         cmd_copy = wx.Button(self.help, wx.ID_COPY)
         cmd_copy.Bind(wx.EVT_BUTTON, self.on_copy)

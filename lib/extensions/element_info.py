@@ -119,7 +119,7 @@ class ElementInfo(InkstitchExtension):
                 name=_("Small stitches (removed)"),
                 value=str(removed_stitches)
             ))
-            return stitch_groups[0]
+            return ("", stitch_groups[0])
 
         stitches_per_group = ""
         if len(stitch_groups) > 1:
