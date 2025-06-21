@@ -183,6 +183,13 @@ jobs:
 
             MY_TAG_NAME="${GITHUB_REF_NAME}"
             MY_PRERELEASE=false  # we are creating a release
+            MY_BUILD_TYPE="all"  # overwrite build to "all" platforms
+            if [[ "${MY_SELF_SIGNED}" == "true" ]]; then
+              echo "Error: Cannot create a release without access to secrets."
+              exit 1
+            fi
+
+
 
           else # pre-release dev-build
 
@@ -197,18 +204,6 @@ jobs:
           fi
 
           MY_NAME="${MY_TAG_NAME}"
-
-
-          # For Release (MY_PRERELEASE==false) we need access to secrets, if not (MY_SELF_SIGNED==true) exit with error
-          if [[ "${MY_PRERELEASE}" == "false" && "${MY_SELF_SIGNED}" == "true" ]]; then
-            echo "Error: Cannot create a release without access to secrets."
-            exit 1
-          fi
-
-          # if Release (MY_PRERELEASE==false) change MY_BUILD_TYPE to 'all' to build all platforms
-          if [[ "${MY_PRERELEASE}" == "false" ]]; then
-            MY_BUILD_TYPE="all"  # build all platforms
-          fi
 
 
           echo "------------------------------------------------- echoing variables"
