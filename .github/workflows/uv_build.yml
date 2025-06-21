@@ -112,10 +112,10 @@ jobs:
   # - MY_BUILD_TYPE: type of build
   # - MY_BREAK_ON: define break stop
 
-  # - MY_USE_AUTHORIZED_SIGNING: true/false - if we use authorized signing keys (if secrets.INKSTITCH_GPG_KEY is set)
-  # - MY_IS_RELEASE_BUILD: true/false - if this is a release build (release on tag vX.X.X) or pre-release build (dev-build-branch_name)
   # - MY_TAG_NAME: tag name for the release, or dev-build-branch_name for pre-release
   # - MY_NAME: name of the release (usually the same as tag name, but can be different)
+  # - MY_USE_AUTHORIZED_SIGNING: true/false - if we use authorized signing keys (if secrets.INKSTITCH_GPG_KEY is set)
+  # - MY_IS_RELEASE_BUILD: true/false - if this is a release build (release on tag vX.X.X) or pre-release build (dev-build-branch_name)
 
   sign_policy:
     runs-on: ubuntu-latest
@@ -218,8 +218,8 @@ jobs:
           echo "MY_BREAK_ON=${MY_BREAK_ON}" >> $GITHUB_OUTPUT
 
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}" >> $GITHUB_OUTPUT
-          echo "MY_TAG_NAME=${MY_TAG_NAME}" >> $GITHUB_OUTPUT
           echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}" >> $GITHUB_OUTPUT
+          echo "MY_TAG_NAME=${MY_TAG_NAME}" >> $GITHUB_OUTPUT
           echo "MY_NAME=${MY_NAME}" >> $GITHUB_OUTPUT
 
           echo "------------------------------------------------- dump GITHUB_* part of env"

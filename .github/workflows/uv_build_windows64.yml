@@ -12,7 +12,7 @@ on:
         type: string  # type of the input, can be string, boolean, or number
 
       use_authorized_signing:
-        description: 'Sign on the fly'
+        description: 'Use authorized signing for the build.'
         required: true
         default: true
         type: string
