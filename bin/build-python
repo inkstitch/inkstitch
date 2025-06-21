@@ -12,13 +12,11 @@ info_year=$( date "+%Y" )
 ARCH="$(uname -m)"
 
 MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING:-false}
-MY_VERSION="$(git describe --tags --abbrev=0)"
 
 echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
 echo "BUILD=${BUILD}"
 echo "ARCH=${ARCH}"
 echo "VERSION=${VERSION}"
-echo "MY_VERSION=${MY_VERSION}"
 
 # PyInstaller v6.x rearranges folder configuration causing broken builds, This re-enables old onedir layout.
 pyinstaller_args+="--contents-directory . "
