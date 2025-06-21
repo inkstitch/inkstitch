@@ -208,8 +208,9 @@ class EmbroideryElement(object):
         color = "#000000"
         try:
             color = self.get_style("fill", '#000000')
+            inkex.Color(color)
         except inkex.ColorError:
-            pass
+            color = "#000000"
         return color
 
     @property
@@ -218,8 +219,9 @@ class EmbroideryElement(object):
         color = None
         try:
             color = self.get_style("stroke")
+            inkex.Color(color)
         except inkex.ColorError:
-            pass
+            color = None
         return color
 
     @property
