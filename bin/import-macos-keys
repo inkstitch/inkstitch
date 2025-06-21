@@ -4,6 +4,7 @@
 ### It's crucial for distributing software on macOS, as Apple requires signed and notarized
 ### applications to run without security warnings on modern systems.
 
+echo "------------------------------------------------- import-macos-keys.sh"
 ### First part of codesiging which is importing to build keychain
 ### -----------------------------------------------
 ### Decodes Base64 certificate to certificate.p12 file.
@@ -27,3 +28,6 @@ echo $INSTALLER_CERTIFICATE | base64 --decode > installer-certificate.p12
 security import installer-certificate.p12 -k build.keychain -P "$INSTALLER_PWD" -T /usr/bin/pkgbuild
 ### Configures ACL for installer certificate, specifically for pkgbuild.
 security set-key-partition-list -S apple-tool:,apple:,pkgbuild: -s -k "$KEYCHAIN_PWD" build.keychain
+
+echo "------------------------------------------------- import-macos-keys.sh done"
+### Cleanup
