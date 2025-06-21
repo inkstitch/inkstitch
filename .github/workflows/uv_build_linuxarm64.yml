@@ -12,6 +12,12 @@ on:
         default: 'no'    # default value
         type: string  # type of the input, can be string, boolean, or number
 
+      verbosity_log_level: # ref: inputs.verbosity_log_level
+        description: 'Verbosity log level (0: ERROR, 1: INFO, 2: DEBUG, 3: TRACE)'
+        required: false
+        default: '1'  # default value
+        type: string
+
       use_authorized_signing:
         description: 'Use authorized signing'
         required: true
@@ -29,6 +35,7 @@ jobs:
   linux-arm64: # name of the job
     env:
       MY_BREAK_ON: ${{ inputs.break_on }}
+      MY_VERBOSITY_LOG_LEVEL: ${{ inputs.verbosity_log_level }}  # set verbosity log level, default is 1 (INFO)
       MY_USE_AUTHORIZED_SIGNING: ${{ inputs.use_authorized_signing }}
 
     # define the OS of the runner
@@ -53,9 +60,11 @@ jobs:
           echo "-------------------------------------- input data"
           ### input data
           echo "inputs.break_on: ${{ inputs.break_on }}"
+          echo "inputs.verbosity_log_level: ${{ inputs.verbosity_log_level }}"
           echo "inputs.use_authorized_signing: ${{ inputs.use_authorized_signing }}"
 
           echo "MY_BREAK_ON: $MY_BREAK_ON"
+          echo "MY_VERBOSITY_LOG_LEVEL: $MY_VERBOSITY_LOG_LEVEL"
           echo "MY_USE_AUTHORIZED_SIGNING: $MY_USE_AUTHORIZED_SIGNING"
 
           echo "-------------------------------------- update apt"
