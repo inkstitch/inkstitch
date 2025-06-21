@@ -60,13 +60,23 @@ on:
 
           - all
 
-      input_tag:  # overwrite tag   eg. use existing tag to build a release vX.X.X....
+      # overwrite release tag   eg. use existing tag to build a release vX.X.X....
+      input_tag:  # ref: github.event.inputs.input_tag
         description: 'Build tag name'
         required: false
         default: ''  # default value, empty means use branch/tag name
         type: string  # type of the input, can be number, boolean, string, choice or environment
 
-      break_on:     # ref: github.event.inputs.break_on | inputs.break_on
+      sign:  # ref: github.event.inputs.no_sign overwrite enabled signing see MY_USE_AUTHORIZED_SIGNING
+        description: 'Sign the build if secrets are available.'
+        required: false
+        default: 'true'  # default value
+        type: choice  # type of the input, can be number, boolean, string, choice or environment
+        options:
+          - 'false'  # do not sign the build, even if authorized signing keys are available
+          - 'true'   # don't change MY_USE_AUTHORIZED_SIGNING, use authorized signing keys if available
+
+      break_on:     # ref: github.event.inputs.break_on
         description: 'Stop the build immediately at a predefined location.'
         required: true
         default: 'no'  # default value
@@ -147,10 +157,9 @@ jobs:
           echo "Testing secrets:"
           echo secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }} # print *** if available
 
-          echo "-------------------------------------------------"
-          # inputs
-          echo "Inputs:"
+          echo "------------------------------------------------- inputs json"
           echo "${{ toJSON(github.event.inputs) }}"
+
 
           # when triggered by extern script
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
@@ -166,8 +175,9 @@ jobs:
           fi
 
           echo "-------------------------------------------------"
-          # Check if secrets are available
-          if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" ]]; then
+          # Check if secrets are available and input sign is set to true
+          # if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" ]]; then
+          if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" && "${{ github.event.inputs.sign }}" == "true" ]]; then
             MY_USE_AUTHORIZED_SIGNING="true"  # we use authorized signing keys, assume all signing keys are available
           else
             MY_USE_AUTHORIZED_SIGNING="false"  # we do not use authorized signing keys
