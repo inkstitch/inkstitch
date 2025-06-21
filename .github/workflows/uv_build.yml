@@ -168,9 +168,9 @@ jobs:
           echo "-------------------------------------------------"
           # Check if secrets are available
           if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" ]]; then
-            MY_USE_AUTHORIZED_SIGNING=true  # we use authorized signing keys, assume all signing keys are available
+            MY_USE_AUTHORIZED_SIGNING="true"  # we use authorized signing keys, assume all signing keys are available
           else
-            MY_USE_AUTHORIZED_SIGNING=false  # we do not use authorized signing keys
+            MY_USE_AUTHORIZED_SIGNING="false"  # we do not use authorized signing keys
           fi
 
           echo "-------------------------------------------------"
@@ -182,7 +182,7 @@ jobs:
                 "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
 
             MY_TAG_NAME="${GITHUB_REF_NAME}"
-            MY_IS_RELEASE_BUILD=true  # this is a release build
+            MY_IS_RELEASE_BUILD="true"  # this is a release build
             MY_BUILD_TYPE="all"  # overwrite build to "all" platforms
             if [[ "${MY_USE_AUTHORIZED_SIGNING}" == "false" ]]; then
               echo "Error: Cannot create a release without access to secrets."
@@ -427,9 +427,9 @@ jobs:
 
           # invert MY_IS_RELEASE_BUILD to use it as a pre-release flag
           if [[ "${MY_IS_RELEASE_BUILD}" == "true" ]]; then
-            MY_PRERELEASE_FLAG=false  # release build, not pre-release
+            MY_PRERELEASE_FLAG="false"  # release build, not pre-release
           else
-            MY_PRERELEASE_FLAG=true   # pre-release build
+            MY_PRERELEASE_FLAG="true"   # pre-release build
           fi
           echo "MY_PRERELEASE_FLAG=${MY_PRERELEASE_FLAG}"
           # export it to the environment for the next steps
