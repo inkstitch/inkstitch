@@ -227,7 +227,7 @@ jobs:
 
             # overwrite tag name if input_tag is set
             if [[ -n "${MY_INPUT_TAG}" ]]; then
-              MY_TAG_NAME="${MY_INPUT_TAG}"  # use input tag name
+              MY_TAG_NAME="${MY_INPUT_TAG}"  # use input tag name, / should alredy be replaced by -
             fi
 
           fi
@@ -490,8 +490,8 @@ jobs:
           draft: false
           body: |
             This is a release for:
-            - name (MY_NAME): ${{ env.MY_NAME }}
             - Tag name (MY_TAG_NAME): ${{ env.MY_TAG_NAME }}
+            - Name (MY_NAME): ${{ env.MY_NAME }}
             - Use authorized signing (MY_USE_AUTHORIZED_SIGNING): ${{ env.MY_USE_AUTHORIZED_SIGNING }}
             - Release build (MY_IS_RELEASE_BUILD): ${{ env.MY_IS_RELEASE_BUILD }}
             - Pre-release (MY_PRERELEASE_FLAG): ${{ env.MY_PRERELEASE_FLAG }}
