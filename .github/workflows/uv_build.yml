@@ -112,7 +112,7 @@ jobs:
   # - MY_BUILD_TYPE: type of build
   # - MY_BREAK_ON: define break stop
 
-  # - MY_SELF_SIGNED: false/true - if we have access to secrets, or we use on the fly signed keys
+  # - MY_USE_AUTHORIZED_SIGNING: true/false - if we use authorized signing keys (if secrets.INKSTITCH_GPG_KEY is set)
   # - MY_TAG_NAME: tag name for the release, or dev-build-branch_name for pre-release
   # - MY_PRERELEASE: false/true - if this is a release or pre-release
   # - MY_NAME: name of the release
@@ -123,7 +123,7 @@ jobs:
       MY_BUILD_TYPE: ${{ steps.set_vars.outputs.MY_BUILD_TYPE }}
       MY_BREAK_ON: ${{ steps.set_vars.outputs.MY_BREAK_ON }}
 
-      MY_SELF_SIGNED: ${{ steps.set_vars.outputs.MY_SELF_SIGNED }}
+      MY_USE_AUTHORIZED_SIGNING: ${{ steps.set_vars.outputs.MY_USE_AUTHORIZED_SIGNING }}
       MY_TAG_NAME: ${{ steps.set_vars.outputs.MY_TAG_NAME }}
       MY_PRERELEASE: ${{ steps.set_vars.outputs.MY_PRERELEASE }}
       MY_NAME: ${{ steps.set_vars.outputs.MY_NAME }}
@@ -168,9 +168,9 @@ jobs:
           echo "-------------------------------------------------"
           # Check if secrets are available
           if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" ]]; then
-            MY_SELF_SIGNED=false      # we have access to secrets, assume all signing keys are available
+            MY_USE_AUTHORIZED_SIGNING=true  # we use authorized signing keys, assume all signing keys are available
           else
-            MY_SELF_SIGNED=true       # we use on the fly signed keys
+            MY_USE_AUTHORIZED_SIGNING=false  # we do not use authorized signing keys
           fi
 
           echo "-------------------------------------------------"
@@ -184,7 +184,7 @@ jobs:
             MY_TAG_NAME="${GITHUB_REF_NAME}"
             MY_PRERELEASE=false  # we are creating a release
             MY_BUILD_TYPE="all"  # overwrite build to "all" platforms
-            if [[ "${MY_SELF_SIGNED}" == "true" ]]; then
+            if [[ "${MY_USE_AUTHORIZED_SIGNING}" == "false" ]]; then
               echo "Error: Cannot create a release without access to secrets."
               exit 1
             fi
@@ -210,7 +210,7 @@ jobs:
           echo "MY_BUILD_TYPE=${MY_BUILD_TYPE}"
           echo "MY_BREAK_ON=${MY_BREAK_ON}"
 
-          echo "MY_SELF_SIGNED=${MY_SELF_SIGNED}"
+          echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
           echo "MY_TAG_NAME=${MY_TAG_NAME}"
           echo "MY_PRERELEASE=${MY_PRERELEASE}"
           echo "MY_NAME=${MY_NAME}"
@@ -219,7 +219,7 @@ jobs:
           echo "MY_BUILD_TYPE=${MY_BUILD_TYPE}" >> $GITHUB_OUTPUT
           echo "MY_BREAK_ON=${MY_BREAK_ON}" >> $GITHUB_OUTPUT
 
-          echo "MY_SELF_SIGNED=${MY_SELF_SIGNED}" >> $GITHUB_OUTPUT
+          echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}" >> $GITHUB_OUTPUT
           echo "MY_TAG_NAME=${MY_TAG_NAME}" >> $GITHUB_OUTPUT
           echo "MY_PRERELEASE=${MY_PRERELEASE}" >> $GITHUB_OUTPUT
           echo "MY_NAME=${MY_NAME}" >> $GITHUB_OUTPUT
@@ -275,7 +275,7 @@ jobs:
     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
-      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+      use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
 
@@ -289,7 +289,7 @@ jobs:
     uses: ./.github/workflows/uv_build_linuxarm64.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
-      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+      use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
 
@@ -303,7 +303,7 @@ jobs:
     uses: ./.github/workflows/uv_build_linux32.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
-      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+      use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
 
@@ -316,7 +316,7 @@ jobs:
     uses: ./.github/workflows/uv_build_windows64.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
-      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+      use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
       prerelease: ${{ needs.sign_policy.outputs.MY_PRERELEASE }}
     secrets:
       SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN}}
@@ -331,7 +331,7 @@ jobs:
     uses: ./.github/workflows/uv_build_macx86.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
-      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+      use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
       INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
@@ -351,7 +351,7 @@ jobs:
     uses: ./.github/workflows/uv_build_macarm64.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
-      self_signed: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+      use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
       INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
@@ -383,7 +383,7 @@ jobs:
       MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}
       MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}
       MY_PRERELEASE: ${{ needs.sign_policy.outputs.MY_PRERELEASE }}
-      MY_SELF_SIGNED: ${{ needs.sign_policy.outputs.MY_SELF_SIGNED }}
+      MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
 
     if: always() # run this job always, even if previous jobs failed on exit 1
     steps:
@@ -411,7 +411,8 @@ jobs:
           echo "MY_TAG_NAME=${MY_TAG_NAME}"
           echo "MY_NAME=${MY_NAME}"
           echo "MY_PRERELEASE=${MY_PRERELEASE}"
-          echo "MY_SELF_SIGNED=${MY_SELF_SIGNED}"
+          echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
+          echo "-------------------------------------------------"
 
 
       # !!! - release is given by tag name, so it must be set before this step
@@ -427,7 +428,7 @@ jobs:
           draft: false
           body: |
             This is a release for ${{ env.MY_NAME }}.
-            - Self-signed: ${{ env.MY_SELF_SIGNED }}
+            - Self-signed: ${{ env.MY_USE_AUTHORIZED_SIGNING }}
             - Tag name: ${{ env.MY_TAG_NAME }}
             - Pre-release: ${{ env.MY_PRERELEASE }}
           files: |
