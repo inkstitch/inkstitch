@@ -203,7 +203,7 @@ jobs:
 
           fi
 
-          MY_NAME="${MY_TAG_NAME}"
+          MY_NAME="${MY_TAG_NAME}_NAME" # name of the release, can be anything, but usually it is the same as tag name
 
 
           echo "------------------------------------------------- echoing variables"
@@ -236,6 +236,20 @@ jobs:
     runs-on: ubuntu-latest
     name: Dummy Build
     steps:
+      - name: My variables print
+        run: |
+
+          echo "-------------------------------------------------"
+          echo "MY_* variables:"
+          echo "MY_BUILD_TYPE: ${{ needs.sign_policy.outputs.MY_BUILD_TYPE }}"
+          echo "MY_BREAK_ON: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}"
+          echo "MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}"
+          echo "MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}"
+          echo "MY_PRERELEASE: ${{ needs.sign_policy.outputs.MY_PRERELEASE }}"
+          echo "MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}"
+          echo "-------------------------------------------------"
+
+
       - name: Create artifacts directory
         run: |
 
@@ -427,8 +441,8 @@ jobs:
           prerelease: ${{ env.MY_PRERELEASE }}
           draft: false
           body: |
-            This is a release for ${{ env.MY_NAME }}.
-            - Self-signed: ${{ env.MY_USE_AUTHORIZED_SIGNING }}
+            This is a release for NAME: ${{ env.MY_NAME }} TAG_NAME: ${{ env.MY_TAG_NAME }}.
+            - Use authorized signing: ${{ env.MY_USE_AUTHORIZED_SIGNING }}
             - Tag name: ${{ env.MY_TAG_NAME }}
             - Pre-release: ${{ env.MY_PRERELEASE }}
           files: |
