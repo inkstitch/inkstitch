@@ -186,13 +186,13 @@ jobs:
             MY_BUILD_TYPE="all"  # overwrite build to "all" platforms
             if [[ "${MY_USE_AUTHORIZED_SIGNING}" == "false" ]]; then
               echo "Error: Cannot create a release without access to secrets."
-              MY_IS_RELEASE_BUILD=false  # this is not a release build, but a pre-release build
+              MY_IS_RELEASE_BUILD="false"  # this is not a release build, but a pre-release build
             fi
 
           else # pre-release dev-build
 
             MY_TAG_NAME="dev-build-$(echo $GITHUB_REF_NAME | tr / -)"  # use branch/tag name as tag, replace / with -
-            MY_IS_RELEASE_BUILD=false  # this is not a release build, but a pre-release build
+            MY_IS_RELEASE_BUILD="false"  # this is not a release build, but a pre-release build
 
             # overwrite tag name if input_tag is set
             if [[ -n "${MY_INPUT_TAG}" ]]; then

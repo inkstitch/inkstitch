@@ -39,8 +39,8 @@ on:
 jobs:
   macx86:  # name of the job
     env:
-      MY_BREAK_ON: ${{ github.event.inputs.break_on }}
-      MY_USE_AUTHORIZED_SIGNING: ${{ github.event.inputs.use_authorized_signing }}
+      MY_BREAK_ON: ${{ inputs.break_on }}
+      MY_USE_AUTHORIZED_SIGNING: ${{ inputs.use_authorized_signing }}
 
     # define the OS of the runner
     runs-on: macos-13   # uses intel x86_64 architecture
@@ -60,8 +60,11 @@ jobs:
 
           echo "------------------------------------- input data"
           # input data
-          echo "github.event.inputs.break_on: ${{ github.event.inputs.break_on }}"
           echo "inputs.break_on: ${{ inputs.break_on }}"
+          echo "inputs.use_authorized_signing: ${{ inputs.use_authorized_signing }}"
+
+          echo "MY_BREAK_ON: $MY_BREAK_ON"
+          echo "MY_USE_AUTHORIZED_SIGNING: $MY_USE_AUTHORIZED_SIGNING"
 
           echo "-------------------------------------- update homebrew"
           brew update

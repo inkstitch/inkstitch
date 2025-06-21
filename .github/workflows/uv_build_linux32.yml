@@ -26,8 +26,8 @@ on:
 jobs:
   linux32:  # name of the job
     env:
-      MY_BREAK_ON: ${{ github.event.inputs.break_on }}
-      MY_USE_AUTHORIZED_SIGNING: ${{ github.event.inputs.use_authorized_signing }}
+      MY_BREAK_ON: ${{ inputs.break_on }}
+      MY_USE_AUTHORIZED_SIGNING: ${{ inputs.use_authorized_signing }}
 
     # Node i386 required for actions, install follows
     # https://github.com/actions/upload-artifact/issues/616
@@ -120,8 +120,11 @@ jobs:
 
           echo "-------------------------------------- input data"
           ### input data
-          echo "github.event.inputs.break_on: ${{ github.event.inputs.break_on }}"
           echo "inputs.break_on: ${{ inputs.break_on }}"
+          echo "inputs.use_authorized_signing: ${{ inputs.use_authorized_signing }}"
+          echo "MY_BREAK_ON: $MY_BREAK_ON"
+          echo "MY_USE_AUTHORIZED_SIGNING: $MY_USE_AUTHORIZED_SIGNING"
+          echo "secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}" # *** if available
 
           echo "-------------------------------------- update apt"
           ### install system dependencies
