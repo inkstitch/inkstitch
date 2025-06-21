@@ -17,8 +17,8 @@ on:
         default: true
         type: string
 
-      prerelease:
-        description: 'Pre-release build'  # release build on tag v*  prerelease == false
+      is_release_build:
+        description: 'Is release build'  # true - release build on tag v*
         required: true
         default: true
         type: string
@@ -34,7 +34,7 @@ jobs:
     env:
       MY_BREAK_ON: ${{ github.event.inputs.break_on }}
       MY_USE_AUTHORIZED_SIGNING: ${{ github.event.inputs.use_authorized_signing }}
-      MY_PRERELEASE: ${{ github.event.inputs.prerelease }}
+      MY_IS_RELEASE_BUILD: ${{ github.event.inputs.is_release_build }}
 
     # define the OS of the runner
     runs-on: windows-2022
@@ -74,7 +74,7 @@ jobs:
 
           echo "MY_BREAK_ON: $MY_BREAK_ON"
           echo "MY_USE_AUTHORIZED_SIGNING: $MY_USE_AUTHORIZED_SIGNING"
-          echo "MY_PRERELEASE: $MY_PRERELEASE"
+          echo "MY_IS_RELEASE_BUILD: $MY_IS_RELEASE_BUILD"
           echo "secrets.SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN }}"
 
           echo "------------------------------ uv python list"
@@ -123,7 +123,7 @@ jobs:
       #       not just the 'v*' tag, for more robust signing logic.
 
       - name: Set signing policy to release - tag v*
-        if: env.MY_PRERELEASE == 'false'  # only for release builds
+        if: env.MY_IS_RELEASE_BUILD == 'true'  # only for release builds
         shell: bash
         run: |
 
@@ -132,7 +132,7 @@ jobs:
 
 
       - name: upload-unsigned-exe - tag v*
-        if: env.MY_PRERELEASE == 'false'  # only for release builds
+        if: env.MY_IS_RELEASE_BUILD == 'true'  # only for release builds
         id: upload-unsigned-exe  # ref steps.upload-unsigned-exe.outputs...
         uses: actions/upload-artifact@v4
         with:
@@ -142,7 +142,7 @@ jobs:
 
 
       - name: Sign-exe - tag v* # https://github.com/SignPath/github-action-submit-signing-request
-        if: env.MY_PRERELEASE == 'false'  # only for release builds
+        if: env.MY_IS_RELEASE_BUILD == 'true'  # only for release builds
         id: Sign-exe            # ref steps.Sign-exe.outputs...
         uses: signpath/github-action-submit-signing-request@v1.1
         with:
@@ -156,7 +156,7 @@ jobs:
 
 
       - name: Copy signed exe to dist - tag v*
-        if: env.MY_PRERELEASE == 'false'  # only for release builds
+        if: env.MY_IS_RELEASE_BUILD == 'true'  # only for release builds
         shell: bash
         run: |
             mv  -f signed-artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
@@ -172,7 +172,7 @@ jobs:
 
       # This installer will be signed in a subsequent step.
       - name: upload-unsigned-installer - tag v*
-        if: env.MY_PRERELEASE == 'false'  # only for release builds
+        if: env.MY_IS_RELEASE_BUILD == 'true'  # only for release builds
         id: upload-unsigned-installer
         uses: actions/upload-artifact@v4       # https://github.com/actions/upload-artifact
         with:
@@ -181,7 +181,7 @@ jobs:
 
 
       - name: Sign-installer  - tag v*
-        if: env.MY_PRERELEASE == 'false'  # only for release builds
+        if: env.MY_IS_RELEASE_BUILD == 'true'  # only for release builds
         id: Sign-installer
         uses: signpath/github-action-submit-signing-request@v1.1  # https://github.com/SignPath/github-action-submit-signing-request
         with:
