@@ -12,8 +12,8 @@ on:
         default: 'no'    # default value
         type: string  # type of the input, can be string, boolean, or number
 
-      self_signed:
-        description: 'Sign on the fly'
+      use_authorized_signing:
+        description: 'Use authorized signing'
         required: true
         default: true
         type: string
@@ -29,7 +29,7 @@ jobs:
   linux-arm64: # name of the job
     env:
       MY_BREAK_ON: ${{ github.event.inputs.break_on }}
-      MY_SELF_SIGNED: ${{ github.event.inputs.self_signed }}
+      MY_USE_AUTHORIZED_SIGNING: ${{ github.event.inputs.use_authorized_signing }}
 
     # define the OS of the runner
     runs-on: ubuntu-22.04-arm

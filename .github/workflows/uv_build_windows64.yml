@@ -11,7 +11,7 @@ on:
         default: 'no'    # default value
         type: string  # type of the input, can be string, boolean, or number
 
-      self_signed:
+      use_authorized_signing:
         description: 'Sign on the fly'
         required: true
         default: true
@@ -33,7 +33,7 @@ jobs:
   windows64:  # name of the job
     env:
       MY_BREAK_ON: ${{ github.event.inputs.break_on }}
-      MY_SELF_SIGNED: ${{ github.event.inputs.self_signed }}
+      MY_USE_AUTHORIZED_SIGNING: ${{ github.event.inputs.use_authorized_signing }}
       MY_PRERELEASE: ${{ github.event.inputs.prerelease }}
 
     # define the OS of the runner
@@ -73,7 +73,7 @@ jobs:
           echo "inputs.break_on: ${{ inputs.break_on }}"
 
           echo "MY_BREAK_ON: $MY_BREAK_ON"
-          echo "MY_SELF_SIGNED: $MY_SELF_SIGNED"
+          echo "MY_USE_AUTHORIZED_SIGNING: $MY_USE_AUTHORIZED_SIGNING"
           echo "MY_PRERELEASE: $MY_PRERELEASE"
           echo "secrets.SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN }}"
 
