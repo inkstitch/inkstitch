@@ -67,6 +67,17 @@ on:
         default: ''  # default value, empty means use branch/tag name
         type: string  # type of the input, can be number, boolean, string, choice or environment
 
+      verbosity: # ref: github.event.inputs.verbosity
+        description: 'Controls verbosity of the build process (0: ERROR, 1: INFO, 2: DEBUG, 3: TRACE)'
+        required: false # Not mandatory, will have a default value
+        default: '1'    # Default level: 1 (INFO)
+        type: choice # Using string for easier processing of 0/1/2/3
+        options:
+          - '0'  # ERROR
+          - '1'  # INFO
+          - '2'  # DEBUG  & set -x
+          - '3'  # TRACE
+
       sign:  # ref: github.event.inputs.no_sign overwrite enabled signing see MY_USE_AUTHORIZED_SIGNING
         description: 'Sign the build if secrets are available.'
         required: false
@@ -128,12 +139,14 @@ jobs:
   # - MY_NAME: name of the release (usually the same as tag name, but can be different)
   # - MY_USE_AUTHORIZED_SIGNING: true/false - if we use authorized signing keys (if secrets.INKSTITCH_GPG_KEY is set)
   # - MY_IS_RELEASE_BUILD: true/false - if this is a release build (release on tag vX.X.X) or pre-release build (dev-build-branch_name)
+  # - MY_VERBOSITY_LOG_LEVEL: verbosity level for the build process (0: ERROR, 1: INFO, 2: DEBUG, 3: TRACE)
 
   sign_policy:
     runs-on: ubuntu-latest
     outputs:
       MY_BUILD_TYPE: ${{ steps.set_vars.outputs.MY_BUILD_TYPE }}
       MY_BREAK_ON: ${{ steps.set_vars.outputs.MY_BREAK_ON }}
+      MY_VERBOSITY_LOG_LEVEL: ${{ steps.set_vars.outputs.MY_VERBOSITY_LOG_LEVEL }}
 
       MY_TAG_NAME: ${{ steps.set_vars.outputs.MY_TAG_NAME }}
       MY_NAME: ${{ steps.set_vars.outputs.MY_NAME }}
@@ -161,6 +174,12 @@ jobs:
 
           echo "------------------------------------------------- inputs json"
           echo "${{ toJSON(github.event.inputs) }}"
+
+          echo "------------------------------------------------- CI variable"
+          echo "CI: $CI"  # CI is set to true by default in GitHub Actions
+
+          # verbosity level: 0: ERROR, 1: INFO, 2: DEBUG, 3: TRACE
+          MY_VERBOSITY_LOG_LEVEL="${{ github.event.inputs.verbosity }}"
 
 
           # when triggered by extern script
@@ -219,6 +238,7 @@ jobs:
           echo "------------------------------------------------- echoing variables"
           echo "MY_BUILD_TYPE=${MY_BUILD_TYPE}"
           echo "MY_BREAK_ON=${MY_BREAK_ON}"
+          echo "MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL}"
 
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
           echo "MY_TAG_NAME=${MY_TAG_NAME}"
@@ -228,6 +248,7 @@ jobs:
           echo "------------------------------------------------- Exporting variables to GITHUB_OUTPUT"
           echo "MY_BUILD_TYPE=${MY_BUILD_TYPE}" >> $GITHUB_OUTPUT
           echo "MY_BREAK_ON=${MY_BREAK_ON}" >> $GITHUB_OUTPUT
+          echo "MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL}" >> $GITHUB_OUTPUT
 
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}" >> $GITHUB_OUTPUT
           echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}" >> $GITHUB_OUTPUT
@@ -253,6 +274,7 @@ jobs:
           echo "MY_* variables:"
           echo "MY_BUILD_TYPE: ${{ needs.sign_policy.outputs.MY_BUILD_TYPE }}"
           echo "MY_BREAK_ON: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}"
+          echo "MY_VERBOSITY_LOG_LEVEL: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}"
           echo "MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}"
           echo "MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}"
           echo "MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}"
@@ -299,6 +321,7 @@ jobs:
     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }} # set input variable for the reusable workflow
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
@@ -313,6 +336,7 @@ jobs:
     uses: ./.github/workflows/uv_build_linuxarm64.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }} # set input variable for the reusable workflow
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
@@ -327,6 +351,7 @@ jobs:
     uses: ./.github/workflows/uv_build_linux32.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }} # set input variable for the reusable workflow
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
@@ -340,6 +365,7 @@ jobs:
     uses: ./.github/workflows/uv_build_windows64.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }} # set input variable for the reusable workflow
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN}}
@@ -354,6 +380,7 @@ jobs:
     uses: ./.github/workflows/uv_build_macx86.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }} # set input variable for the reusable workflow
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
@@ -374,6 +401,7 @@ jobs:
     uses: ./.github/workflows/uv_build_macarm64.yml # call reusable workflow
     with:
       break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }} # set input variable for the reusable workflow
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
