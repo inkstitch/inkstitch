@@ -14,7 +14,7 @@ on:
       use_authorized_signing:
         description: 'Use authorized signing for the build.'
         required: true
-        default: true
+        default: 'false'  # default value
         type: string
 
     secrets:  # secrets that are required for the workflow, otherwise are not available
