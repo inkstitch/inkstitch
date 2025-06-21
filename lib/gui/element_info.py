@@ -29,7 +29,7 @@ class ElementInfoFrame(wx.Frame):
         self.notebook.AddPage(self.info, _("Info"))
 
         info_sizer = wx.BoxSizer(wx.VERTICAL)
-        
+
         self.info_list = wx.ListCtrl(self.info, wx.ID_ANY, style=wx.BORDER_SUNKEN | wx.LC_HRULES | wx.LC_REPORT | wx.LC_VRULES)
         self.info_list.AppendColumn(_("Name"), format=wx.LIST_FORMAT_LEFT)
         self.info_list.AppendColumn(_("Value"), format=wx.LIST_FORMAT_LEFT)
@@ -72,11 +72,11 @@ class ElementInfoFrame(wx.Frame):
             style=wx.ALIGN_LEFT
         )
         help_sizer.Add(copyright_text, 0, wx.ALL, 8)
-        
+
         cmd_copy = wx.Button(self.help, wx.ID_COPY)
         cmd_copy.Bind(wx.EVT_BUTTON, self.on_copy)
         help_sizer.Add(cmd_copy, 0, wx.ALL, 8)
-    
+
         self.help.SetSizer(help_sizer)
         self.info.SetSizer(info_sizer)
         self.main_panel.SetSizer(notebook_sizer)
@@ -87,10 +87,9 @@ class ElementInfoFrame(wx.Frame):
 
     def on_copy(self, event):
         if wx.TheClipboard.Open():
-            text =self.export_txt
+            text = self.export_txt
             data_object = wx.TextDataObject(text)
             wx.TheClipboard.SetData(data_object)
-            
 
     def _fill_info_list(self):
         for item in self.list_items:
