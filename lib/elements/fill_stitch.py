@@ -633,11 +633,11 @@ class FillStitch(EmbroideryElement):
     @property
     def color(self):
         # SVG spec says the default fill is black
-        return self.get_style("fill", "#000000")
+        return self.fill_color
 
     @property
     def gradient(self):
-        gradient = self.node.get_computed_style("fill")
+        gradient = self.fill_color
         if isinstance(gradient, LinearGradient):
             return gradient
         return None
