@@ -195,7 +195,7 @@ jobs:
             MY_INPUT_TAG=""           # empty means use branch/tag name
           fi
 
-          echo "-------------------------------------------------"
+          # -------------------------------------------------
           # Check if secrets are available and input sign is set to true
           # if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" ]]; then
           if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" && "${{ github.event.inputs.sign }}" == "true" ]]; then
@@ -204,7 +204,7 @@ jobs:
             MY_USE_AUTHORIZED_SIGNING="false"  # we do not use authorized signing keys
           fi
 
-          echo "-------------------------------------------------"
+          # -------------------------------------------------
 
           # *** release requires tag name
           # if push tag vX.X.X - release sign-policy,
