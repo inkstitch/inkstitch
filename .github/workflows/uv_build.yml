@@ -104,7 +104,6 @@ jobs:
   # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#context-availability
   dump_contexts_to_log:
     if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.build_type == 'dummy' }}
-    # if: ${{ github.event.inputs.build_type  == 'dummy' }}
 
     runs-on: ubuntu-latest
     steps:
@@ -474,6 +473,7 @@ jobs:
     env:
       MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}
       MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}
+      MY_VERSION: ${{ needs.sign_policy.outputs.MY_VERSION }}
       MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}
       MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
 
@@ -534,6 +534,7 @@ jobs:
             This is a release for:
             - Tag name (MY_TAG_NAME): ${{ env.MY_TAG_NAME }}
             - Name (MY_NAME): ${{ env.MY_NAME }}
+            - Version (MY_VERSION): ${{ env.MY_VERSION }}
             - Use authorized signing (MY_USE_AUTHORIZED_SIGNING): ${{ env.MY_USE_AUTHORIZED_SIGNING }}
             - Release build (MY_IS_RELEASE_BUILD): ${{ env.MY_IS_RELEASE_BUILD }}
             - Pre-release (MY_PRERELEASE_FLAG): ${{ env.MY_PRERELEASE_FLAG }}
