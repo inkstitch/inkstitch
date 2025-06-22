@@ -232,7 +232,7 @@ jobs:
 
             MY_IS_RELEASE_BUILD="false"  # this is pre-release build (flag only, may be changed in UI later)
 
-            if [[ -n "${MY_INPUT_TAG}" ]]; then  # if input_tag is set
+            if [[ -n "${MY_INPUT_TAG}" ]]; then  # if MY_INPUT_TAG is set
 
               # allow only for v*
               if [[ "${MY_INPUT_TAG}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
@@ -240,7 +240,9 @@ jobs:
                 MY_TAG_NAME="${MY_INPUT_TAG}"  # use input tag name
                 MY_VERSION="${MY_TAG_NAME:1}"  # remove 'v' from the tag name, e.g. v1.2.3 -> 1.2.3
 
+                echo "Listing all tags in the repository:"
                 git tag --list
+                echo "---"
 
 
                 # check if MY_TAG_NAME is a valid tag name and if not exists error (security check)
@@ -252,7 +254,7 @@ jobs:
                   exit 1  # exit with error
                 fi
 
-              else
+              else  # if MY_INPUT_TAG is not a valid v* tag name
 
                 echo "Error: Input tag name '${MY_INPUT_TAG}' is not a valid v* tag name."
                 echo "Please use a tag name like 'v1.2.3' or 'v0.0.1-xxx'."
