@@ -103,7 +103,8 @@ jobs:
   # just info print
   # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#context-availability
   dump_contexts_to_log:
-    if: ${{ github.event.inputs.build_type  == 'dummy' }}
+    if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.build_type == 'dummy' }}
+    # if: ${{ github.event.inputs.build_type  == 'dummy' }}
 
     runs-on: ubuntu-latest
     steps:
