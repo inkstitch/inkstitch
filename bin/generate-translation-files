@@ -1,5 +1,31 @@
 #!/bin/bash
 
+# This script compiles translation files for Ink/Stitch.
+# - compiles .po files (Portable Object) into .mo files (Machine Object format)
+# - requires the `msgfmt` command from the GNU gettext package
+
+# Gettext Localization Workflow (Key Steps)
+# -------------------------------------------
+#   Mark Strings:
+#	  - Developers wrap translatable text in code (e.g., _("Hello")).
+#   Extract Template (xgettext):
+#	  - xgettext scans code, extracts marked strings into a .pot (Portable Object Template) file.
+#   Translate Strings (msginit / Translators):
+#	  - Translators use the .pot to create language-specific .po (Portable Object) files (e.g., en_US.po, fr.po)
+#	    and fill in translations. These are human-readable.
+#   Compile Translations (msgfmt):
+#	  - msgfmt compiles human-readable .po files into machine-readable, binary .mo (Machine Object)
+#	    files (e.g., en_US.mo, fr.mo). This is its core role.
+#   Use Translations (Application):
+#	  - Applications load the appropriate .mo file at runtime to display translated messages quickly and efficiently.
+
+
+set -e
+MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:-1}  # Default level is 1 (INFO)
+if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
+    set -x
+fi
+
 # message files will look like this:
 #   translations/messages_en_US.po
 if ls translations/*.po > /dev/null 2>&1; then
