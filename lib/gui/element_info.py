@@ -13,6 +13,7 @@ class ElementInfoFrame(wx.Frame):
 
     def __init__(self, *args, **kwargs):
         self.list_items = kwargs.pop("list_items")
+        self.export_txt = kwargs.pop("export_txt")
         self.index = 0
         wx.Frame.__init__(self, None, wx.ID_ANY, _("Element Info"), *args, **kwargs)
 
@@ -64,6 +65,18 @@ class ElementInfoFrame(wx.Frame):
         )
         help_sizer.Add(self.website_link, 0, wx.ALL, 8)
 
+        copy_info_text = wx.StaticText(
+            self.help,
+            wx.ID_ANY,
+            _("Click on Copy to copy the information in the Clipboard"),
+            style=wx.ALIGN_LEFT
+        )
+        help_sizer.Add(copy_info_text, 0, wx.ALL, 8)
+
+        cmd_copy = wx.Button(self.help, wx.ID_COPY)
+        cmd_copy.Bind(wx.EVT_BUTTON, self.on_copy)
+        help_sizer.Add(cmd_copy, 0, wx.ALL, 8)
+
         self.help.SetSizer(help_sizer)
         self.info.SetSizer(info_sizer)
         self.main_panel.SetSizer(notebook_sizer)
@@ -71,6 +84,12 @@ class ElementInfoFrame(wx.Frame):
         self.SetSizeHints(notebook_sizer.CalcMin())
 
         self.Layout()
+
+    def on_copy(self, event):
+        if wx.TheClipboard.Open():
+            text = self.export_txt
+            data_object = wx.TextDataObject(text)
+            wx.TheClipboard.SetData(data_object)
 
     def _fill_info_list(self):
         for item in self.list_items:
@@ -90,12 +109,13 @@ class ElementInfoFrame(wx.Frame):
 
 
 class ElementInfoApp(wx.App):
-    def __init__(self, list_items):
+    def __init__(self, list_items, export_txt):
         self.list_items = list_items
+        self.export_txt = export_txt
         super().__init__()
 
     def OnInit(self):
-        self.frame = ElementInfoFrame(list_items=self.list_items)
+        self.frame = ElementInfoFrame(list_items=self.list_items, export_txt=self.export_txt)
         self.SetTopWindow(self.frame)
         self.frame.Show()
         return True
