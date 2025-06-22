@@ -137,6 +137,7 @@ jobs:
 
   # - MY_TAG_NAME: tag name for the release, or dev-build-branch_name for pre-release
   # - MY_NAME: name of the release (usually the same as tag name, but can be different)
+  # - MY_VERSION: version of the release, e.g. 1.2.3 or 0.0.1-branch_name
   # - MY_USE_AUTHORIZED_SIGNING: true/false - if we use authorized signing keys (if secrets.INKSTITCH_GPG_KEY is set)
   # - MY_IS_RELEASE_BUILD: true/false - if this is a release build (release on tag vX.X.X) or pre-release build (dev-build-branch_name)
   # - MY_VERBOSITY_LOG_LEVEL: verbosity level for the build process (0: ERROR, 1: INFO, 2: DEBUG, 3: TRACE)
@@ -150,6 +151,7 @@ jobs:
 
       MY_TAG_NAME: ${{ steps.set_vars.outputs.MY_TAG_NAME }}
       MY_NAME: ${{ steps.set_vars.outputs.MY_NAME }}
+      MY_VERSION: ${{ steps.set_vars.outputs.MY_VERSION }}
       MY_USE_AUTHORIZED_SIGNING: ${{ steps.set_vars.outputs.MY_USE_AUTHORIZED_SIGNING }}
       MY_IS_RELEASE_BUILD: ${{ steps.set_vars.outputs.MY_IS_RELEASE_BUILD }}
     # if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
@@ -206,31 +208,60 @@ jobs:
 
           # -------------------------------------------------
 
-          # *** release requires tag name
-          # if push tag vX.X.X - release sign-policy,
+          # setup for v* tag build
           if [[ "${GITHUB_EVENT_NAME}" == "push" && \
                 "${GITHUB_REF_TYPE}" == "tag" && \
                 "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
 
-            MY_TAG_NAME="${GITHUB_REF_NAME}"
-            MY_IS_RELEASE_BUILD="true"  # this is a release build
+            MY_TAG_NAME="${GITHUB_REF_NAME}"  # v* tag name
+            MY_IS_RELEASE_BUILD="true"  # this is a release build (flag only, may be changed in UI later)
             MY_BUILD_TYPE="all"  # overwrite build to "all" platforms
+            MY_VERSION="${MY_TAG_NAME:1}"  # remove 'v' from the tag name, e.g. v1.2.3 -> 1.2.3
+
+            # without access to secrets, we cannot create a release
             if [[ "${MY_USE_AUTHORIZED_SIGNING}" == "false" ]]; then
               echo "Error: Cannot create a release without access to secrets."
               MY_IS_RELEASE_BUILD="false"  # this is not a release build, but a pre-release build
             fi
 
-          else # pre-release dev-build
+          else # all other cases, including branch builds
 
-            MY_TAG_NAME="dev-build-$(echo $GITHUB_REF_NAME | tr / -)"  # use branch/tag name as tag, replace / with -
-            MY_IS_RELEASE_BUILD="false"  # this is not a release build, but a pre-release build
+            REF_NAME=$(echo $GITHUB_REF_NAME | tr / -)
+            MY_TAG_NAME="dev-build-${REF_NAME}"  # use branch/tag name as tag, replace / with -
+            MY_VERSION="0.0.1-${REF_NAME}" # set version to 0.0.1-branch_name
 
-            # overwrite tag name if input_tag is set
-            if [[ -n "${MY_INPUT_TAG}" ]]; then
-              MY_TAG_NAME="${MY_INPUT_TAG}"  # use input tag name, / should alredy be replaced by -
+            MY_IS_RELEASE_BUILD="false"  # this is pre-release build (flag only, may be changed in UI later)
+
+            if [[ -n "${MY_INPUT_TAG}" ]]; then  # if input_tag is set
+
+              # allow only for v*
+              if [[ "${MY_INPUT_TAG}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
+
+                MY_TAG_NAME="${MY_INPUT_TAG}"  # use input tag name
+                MY_VERSION="${MY_TAG_NAME:1}"  # remove 'v' from the tag name, e.g. v1.2.3 -> 1.2.3
+
+                # check if MY_TAG_NAME is a valid tag name and if not exists error (security check)
+                if git tag --list | grep -q "^${MY_TAG_NAME}$"; then
+                  echo "Input tag name '${MY_INPUT_TAG}' already exists. OK to use it."
+                else
+                  echo "Error: Input tag name '${MY_INPUT_TAG}' does not exist."
+                  echo "Please use existing tag name, or create a new tag with the name '${MY_INPUT_TAG}'."
+                  exit 1  # exit with error
+                fi
+
+              else
+
+                echo "Error: Input tag name '${MY_INPUT_TAG}' is not a valid v* tag name."
+                echo "Please use a tag name like 'v1.2.3' or 'v0.0.1-xxx'."
+                exit 1  # exit with error
+
+              fi
+
             fi
 
           fi
+
+
 
           MY_NAME="${MY_TAG_NAME}" # name of the release (release name), can be anything, but usually it is the same as tag name
 
@@ -242,8 +273,9 @@ jobs:
 
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
           echo "MY_TAG_NAME=${MY_TAG_NAME}"
-          echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}"
           echo "MY_NAME=${MY_NAME}"
+          echo "MY_VERSION=${MY_VERSION}"
+          echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}"
 
           echo "------------------------------------------------- Exporting variables to GITHUB_OUTPUT"
           echo "MY_BUILD_TYPE=${MY_BUILD_TYPE}" >> $GITHUB_OUTPUT
@@ -251,9 +283,10 @@ jobs:
           echo "MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL}" >> $GITHUB_OUTPUT
 
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}" >> $GITHUB_OUTPUT
-          echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}" >> $GITHUB_OUTPUT
           echo "MY_TAG_NAME=${MY_TAG_NAME}" >> $GITHUB_OUTPUT
           echo "MY_NAME=${MY_NAME}" >> $GITHUB_OUTPUT
+          echo "MY_VERSION=${MY_VERSION}" >> $GITHUB_OUTPUT
+          echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}" >> $GITHUB_OUTPUT
 
           echo "------------------------------------------------- dump GITHUB_* part of env"
           env | grep GITHUB_ | sort
@@ -277,8 +310,9 @@ jobs:
           echo "MY_VERBOSITY_LOG_LEVEL: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}"
           echo "MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}"
           echo "MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}"
-          echo "MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}"
           echo "MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}"
+          echo "MY_VERSION: ${{ needs.sign_policy.outputs.MY_VERSION }}"
+          echo "MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}"
           echo "-------------------------------------------------"
 
 
@@ -320,8 +354,9 @@ jobs:
     name: Build Linux64
     uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
     with:
-      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
-      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }} # set input variable for the reusable workflow
+      version: ${{ needs.sign_policy.outputs.MY_VERSION }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
@@ -335,8 +370,9 @@ jobs:
     name: Build Linux-arm64
     uses: ./.github/workflows/uv_build_linuxarm64.yml # call reusable workflow
     with:
-      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
-      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }} # set input variable for the reusable workflow
+      version: ${{ needs.sign_policy.outputs.MY_VERSION }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
@@ -350,8 +386,9 @@ jobs:
     name: Build Linux32
     uses: ./.github/workflows/uv_build_linux32.yml # call reusable workflow
     with:
-      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
-      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }} # set input variable for the reusable workflow
+      version: ${{ needs.sign_policy.outputs.MY_VERSION }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
@@ -364,8 +401,9 @@ jobs:
     name: Build Windows64
     uses: ./.github/workflows/uv_build_windows64.yml # call reusable workflow
     with:
-      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
-      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }} # set input variable for the reusable workflow
+      version: ${{ needs.sign_policy.outputs.MY_VERSION }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN}}
@@ -379,8 +417,9 @@ jobs:
     name: Build Mac x86-64
     uses: ./.github/workflows/uv_build_macx86.yml # call reusable workflow
     with:
-      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
-      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }} # set input variable for the reusable workflow
+      version: ${{ needs.sign_policy.outputs.MY_VERSION }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
@@ -400,8 +439,9 @@ jobs:
     name: Build Mac arm64
     uses: ./.github/workflows/uv_build_macarm64.yml # call reusable workflow
     with:
-      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }} # set input variable for the reusable workflow
-      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }} # set input variable for the reusable workflow
+      version: ${{ needs.sign_policy.outputs.MY_VERSION }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
       use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
     secrets:
       INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}

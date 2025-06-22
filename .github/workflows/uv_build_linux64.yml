@@ -6,6 +6,12 @@ on:
   workflow_call:  # manual trigger of the workflow
     inputs:
 
+      version: # ref: inputs.version
+        description: 'Version of the build, e.g. 1.0.0, 1.0.0-dev'
+        required: true
+        default: '0.0.1-dev'  # default value
+        type: string  # type of the input, can be string, boolean, or number
+
       break_on: # ref: inputs.break_on
         description:  'Stop the build immediately at a predefined location.'
         required: true
@@ -34,6 +40,7 @@ on:
 jobs:
   linux64:  # name of the job
     env:
+      MY_VERSION: ${{ inputs.version }}
       MY_BREAK_ON: ${{ inputs.break_on }}
       MY_VERBOSITY_LOG_LEVEL: ${{ inputs.verbosity_log_level }}  # set verbosity log level, default is 1 (INFO)
       MY_USE_AUTHORIZED_SIGNING: ${{ inputs.use_authorized_signing }}
