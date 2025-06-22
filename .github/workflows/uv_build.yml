@@ -240,16 +240,12 @@ jobs:
                 MY_TAG_NAME="${MY_INPUT_TAG}"  # use input tag name
                 MY_VERSION="${MY_TAG_NAME:1}"  # remove 'v' from the tag name, e.g. v1.2.3 -> 1.2.3
 
-                echo "Listing all tags in the repository:"
-                git tag --list
-                echo "---"
-
-
                 # check if MY_TAG_NAME is a valid tag name and if not exists error (security check)
-                if git tag --list | grep -q "^${MY_TAG_NAME}$"; then
-                  echo "Input tag name '${MY_INPUT_TAG}' already exists. OK to use it."
+                # - we need ask remote, CI makes only shallow clone of the repository
+                if git ls-remote --tags --exit-code origin "refs/tags/${MY_TAG_NAME}"; then
+                  echo "Input tag name '${MY_TAG_NAME}' already exists. OK to use it."
                 else
-                  echo "Error: Input tag name '${MY_INPUT_TAG}' does not exist."
+                  echo "Error: Input tag name '${MY_TAG_NAME}' does not exist."
                   echo "Please use existing tag name, or create a new tag with the name '${MY_INPUT_TAG}'."
                   exit 1  # exit with error
                 fi
