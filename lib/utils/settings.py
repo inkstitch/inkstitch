@@ -45,7 +45,11 @@ DEFAULT_SETTINGS = {
 class GlobalSettings(MutableMapping):
     def __init__(self):
         super().__init__()
-        self.__settings_file = os.path.join(get_user_dir(), "settings.json")
+        # We set create=False here because this code is executed on module load
+        # and via imports also runs on generate-inx-files, which with the Nix
+        # package manager is executed with a non-writable home directory.
+        user_dir = get_user_dir(create=False)
+        self.__settings_file = os.path.join(user_dir, "settings.json")
         self.__settings = {}
 
         for name, value in DEFAULT_METADATA.items():
