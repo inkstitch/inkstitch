@@ -89,7 +89,7 @@ Lorsque, d'une manière ou d'une autre, l'on a effacés tous les glyphes indési
 
 ![UnicodeIntervals](/assets/images/tutorials/font_creation/generer_fonte.png)
 
-#### Transformation du fichier de fonte svg en fichier de calques de glyphes
+##### Transformation du fichier de fonte svg en fichier de calques de glyphes
 Ouvrir le fichier svg ainsi créé dans Inkscape. Il a l'air complètement vide, c'est normal !!
 
 `Extensions > Ink/Stitch > Gestion des polices > Convertir la fonte svg en calques de glyphes`
