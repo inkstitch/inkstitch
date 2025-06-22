@@ -132,13 +132,17 @@ Vous pouvez aussi utiliser
 
 
 ## La suite à écrire : travailler les fichiers de calques de glyphes
-en vrac et dans le desordre ne pas oublier 
+pour l'instant en vrac et dans le desordre ne pas oublier 
 Faut il ajouter des commandes de coupe ? 
 Chasser les sauts de fils inutiles à l'interieur des lettres
 Assurer qu'il y a bien des noeuds là où ils sont necessaires, mais pas là ou il n'en faut pas
 Uniformiser le paramètrage
 Routage
 Tester la fonte
+cas des fontes en couleurs
+on ne peut pas (encore) utiliser toutes les fonctionalités d'ink/stitch dans les fichiers de calques,par exemple  les clones, les effets de chemins  ne sontpas férées correctement par le lettrage
+on ne peut pas (encore) écrire une police  pour toutes les langues du monde
+il est possible d'avoir des calques  multiglyphes, pas seulement  pour les ligatures 
 
 les outils utiles  à citer:
 Troubleshooting , et comment rendre les fontes plus robustes
