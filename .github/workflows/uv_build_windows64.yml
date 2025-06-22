@@ -129,7 +129,7 @@ jobs:
           make dist
         env:
           BUILD: windows
-          VERSION: ${{ env.MY_VERSION }}  # version of the build
+          VERSION: ${{ env.MY_VERSION }}
 
 
       - name: Set signing policy to release - tag v*
@@ -178,6 +178,7 @@ jobs:
           bash bin/build-windows-installer
         env:
           BUILD: windows
+          VERSION: ${{ env.MY_VERSION }}
 
 
       # This installer will be signed in a subsequent step.
