@@ -130,8 +130,6 @@ jobs:
         env:
           BUILD: windows
 
-      # TODO: Enhance condition to check for 'secrets.SIGNPATH_API_TOKEN' availability,
-      #       not just the 'v*' tag, for more robust signing logic.
 
       - name: Set signing policy to release - tag v*
         if: env.MY_USE_AUTHORIZED_SIGNING == 'true'  # only for release builds
