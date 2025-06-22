@@ -476,6 +476,7 @@ jobs:
       MY_VERSION: ${{ needs.sign_policy.outputs.MY_VERSION }}
       MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}
       MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
+      MY_VERBOSITY_LOG_LEVEL: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
 
     if: always() # run this job always, even if previous jobs failed on exit 1
     steps:
@@ -505,6 +506,7 @@ jobs:
           echo "MY_VERSION=${MY_VERSION}"
           echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}"
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
+          echo "MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL}"
           echo "-------------------------------------------------"
 
           # invert MY_IS_RELEASE_BUILD to use it as a pre-release flag
@@ -538,5 +540,6 @@ jobs:
             - Use authorized signing (MY_USE_AUTHORIZED_SIGNING): ${{ env.MY_USE_AUTHORIZED_SIGNING }}
             - Release build (MY_IS_RELEASE_BUILD): ${{ env.MY_IS_RELEASE_BUILD }}
             - Pre-release (MY_PRERELEASE_FLAG): ${{ env.MY_PRERELEASE_FLAG }}
+            - Verbosity log level (MY_VERBOSITY_LOG_LEVEL): ${{ env.MY_VERBOSITY_LOG_LEVEL }}
           files: |
             artifacts/**/*
