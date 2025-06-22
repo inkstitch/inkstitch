@@ -32,18 +32,16 @@ if [[ ! -d "artifacts" ]]; then
     mkdir -p artifacts
 fi
 
-# TODO: use REF_NAME instead of GITHUB_REF
 echo "GITHUB_REF=${GITHUB_REF}"
 echo "GITHUB_REF_NAME=${GITHUB_REF_NAME}"
 echo "OS=${OS}"
 echo "VERSION=${VERSION}"
 echo "--------------------------------------------------------- evaluating variables"
 
-VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
-# if VERSION is not set, use the current branch name (what if detached HEAD?)
+VERSION="${VERSION:-$(echo ${GITHUB_REF_NAME} | tr / -)}"
 if [[ -z "$VERSION" ]]; then
     echo "Error: VERSION variable is not set."
-    VERSION="$(git rev-parse --abbrev-ref HEAD | tr / - | tr '[:upper:]' '[:lower:]')"
+    exit 1     # this could never happen, but just in case
 fi
 # uname returns the OS name, e.g. Linux, Darwin, etc. - that require lowercase
 OS=$(echo ${BUILD:-$(uname)} | tr '[:upper:]' '[:lower:]')
@@ -248,21 +246,24 @@ else
 fi
 
 if [ "$BUILD" = "windows" ]; then
-    # build the installer locally
-    # remotely it will be called through build.yml after signing
-    if [[ -z "${GITHUB_REF}" ]]; then
+    # local building of the Windows installer
+    # - remotely it will be called through .github/workflows/uv_build_windows64.yml after signing
+    # TODO: check this
+    # if [[ -z "${GITHUB_REF}" ]]; then
+    if [[ "${CI}" != "true" ]]; then  # local build not from GitHub Actions (CI is set to true)
         bash bin/build-windows-installer
     fi
 fi
 
 if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
-    if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
-        VERSION=${VERSION#v}
-    else
-        # dpkg requires versions to start with a number, so we have to add
-        # 0.0.1 for development builds
-        VERSION="0.0.1-${VERSION}"
-    fi
+    # TODO: we dont need this
+    # if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
+    #     VERSION=${VERSION#v}
+    # else
+    #     # dpkg requires versions to start with a number, so we have to add
+    #     # 0.0.1 for development builds
+    #     VERSION="0.0.1-${VERSION}"
+    # fi
 
     ### RPM signing setup
 
