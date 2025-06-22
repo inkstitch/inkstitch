@@ -1,19 +1,21 @@
 #!/bin/bash
 
+### used from Makefile (make version) to generate a VERSION file
 set -e
-MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:'1'}  # Default level is 1 (INFO)
+MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:-1}  # Default level is 1 (INFO)
 if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
     set -x
 fi
+# if CI environment, use GITHUB_REF_NAME
+if [[ -n "$GITHUB_REF_NAME" ]]; then
+    VERSION="$GITHUB_REF_NAME"
+else
+    VERSION="Manual Install"
+fi
 
-
-VERSION="${GITHUB_REF##*/}"
 OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
 DATE=$(date +"%Y-%m-%d %H:%M")
-if [[ "$VERSION" == "" ]]; then
-  VERSION="Manual Install"
-fi
 
 if [[ "$BUILD" = "linux32" ]]; then
 	echo "${VERSION} (${OS}-i386) ${DATE}" > VERSION
