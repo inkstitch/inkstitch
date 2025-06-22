@@ -230,6 +230,7 @@ jobs:
             MY_VERSION="0.0.1-${REF_NAME}" # set version to 0.0.1-branch_name
 
             MY_IS_RELEASE_BUILD="false"  # this is pre-release build (flag only, may be changed in UI later)
+            MY_USE_AUTHORIZED_SIGNING="false"  # due to restricted count of signing requests on SignPath.io, we cannot use it for pre-release builds
 
             if [[ -n "${MY_INPUT_TAG}" ]]; then  # if MY_INPUT_TAG is set
 
