@@ -129,6 +129,7 @@ jobs:
           make dist
         env:
           BUILD: windows
+          VERSION: ${{ env.MY_VERSION }}  # version of the build
 
 
       - name: Set signing policy to release - tag v*

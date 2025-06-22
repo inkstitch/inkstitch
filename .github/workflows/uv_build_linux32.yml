@@ -257,6 +257,7 @@ jobs:
 
         env:
           BUILD: linux32
+          VERSION: ${{ env.MY_VERSION }}
           # load secrets for bash script
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
 
