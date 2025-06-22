@@ -19,6 +19,9 @@ toc: true
 ![Sample](/assets/images/tutorials/font_creation_complement/multifont3.jpg)
 -->
 
+
+![warning](/assets/images/tutorials/font_creation/work_in_progress.png)
+
 Attention : fichier en cours de rédaction
 
 L'objet de ce tutoriel est la création d'une fonte utilisable par le module de lettrage d'Ink/Stitch.
@@ -92,10 +95,28 @@ Ouvrir le fichier svg ainsi créé dans Inkscape. Il a l'air complètement vide,
 `Extensions > Ink/Stitch > Gestion des polices > Convertir la fonte svg en calques de glyphes`
 
 ![UnicodeIntervals](/assets/images/tutorials/font_creation/convert_to_glyphs.png)
+Choisissez un nombre de glyphes supérieur au nombre de glyphes de votre police, sauf si  vous  êtes en phase de test et souhaitez limiter le nombre de glyphes.
+C'est surtout  le moment  de décider quelle taille vous souhaitez pour votre police. 
+
+Pour  cela choisissez un caractère de référence dont vous savez qu'il est dans votre police svg  (le M est une référence  courante) et décidez de la hauteur souhaitée pour lui.
+
+Cliquez sur `Appliquer`.
+
+Votre fichier est alors converti en fichier  de calques de glyphes, vous avez maintenant de nombreux calques.
+
+En plus du guide "baseline", d'autres guides ont été posés. Il est judicieux de les vérouiller pour travailler ultérieurement dans ce fichier sans les déplacer.
+
+Les chemins de ce fichier n'ont ni couleur de contour, ni couleur de remplissage.
+Sélectionnez tous les chemins dans tous les calques (si vos préférences inkscape n'autorisent pas la sélection d'objets cachés vous devrez montrer tous les objets pour cela), et donnez leur une couleur de remplissage. Vous pouvez masquez à nouveau les calques.
+
+Si vous souhaitez créer une police qui se brode de gauche à droite, enregistrez ce fichier sous le nom →.svg dans un nouveau dossier situé dans votre dossier personnel de fontes.
 
 
-## Utilisation d'Ink/Stitch pour créer un fichier de calques de glyphes
-## Créer le fichier json, 
+## Création du fichier json
+Une fois que le fichier →.svg  existe,  il est possible de créer le fichier json associé.
+`Extensions > Ink/Stitchh > Gestionn des polices > Génerer JSON....`
+
+
 ## Créer les lettres
 ### Fonte en colonne satin
 ### Fonte en points droits
