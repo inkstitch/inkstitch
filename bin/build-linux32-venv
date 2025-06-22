@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
+### Used by: build.uml linux32 build
+### TODO: check - maybe it will not be used any more in uv build
+
 set -e
+MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:'1'}  # Default level is 1 (INFO)
+if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
+    set -x
+fi
+
+
 uname -a
 python3 --version
 python3 -m pip --version
@@ -8,7 +17,7 @@ python3 -m pip debug
 
 python3 -m venv virtualenv
 source virtualenv/bin/activate
-          
+
 virtualenv/bin/pip debug
 virtualenv/bin/pip install pycairo
 virtualenv/bin/pip install PyGObject==3.50.0

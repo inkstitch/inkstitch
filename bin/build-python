@@ -1,8 +1,14 @@
 #!/bin/bash
 
-MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:'1'}  # Default level is 1 (INFO)
+### This script builds the Ink/Stitch application using PyInstaller.
 
-# MY_PYINSTALLER_LOG_LEVEL
+set -e
+MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:'1'}  # Default level is 1 (INFO)
+if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
+    set -x
+fi
+
+# set PyInstaller logging level based on MY_VERBOSITY_LOG_LEVEL
 case "$MY_VERBOSITY_LOG_LEVEL" in
     0) MY_PYINSTALLER_LOG_LEVEL="ERROR" ;;
     1) MY_PYINSTALLER_LOG_LEVEL="INFO"  ;;
@@ -11,19 +17,12 @@ case "$MY_VERBOSITY_LOG_LEVEL" in
     *) MY_PYINSTALLER_LOG_LEVEL="INFO" # Fallback for unknown values
 esac
 
-if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
-    set -x
-fi
-
-set -e
-
 echo "------------------------------------------------- build-python.sh"
 
 if [[ -z "$BUILD" ]]; then
   echo "Error: BUILD variable is not set."
   exit 1
 fi
-
 
 info_year=$( date "+%Y" )
 ARCH="$(uname -m)"
