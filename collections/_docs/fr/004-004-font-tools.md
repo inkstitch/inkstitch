@@ -1,7 +1,7 @@
 ---
 title: "Gestion des polices"
 permalink: /fr/docs/font-tools/
-last_modified_at: 2025-04-12
+last_modified_at: 2025-06-22
 toc: true
 ---
 Un ensemble d'outils pour les créateurs de polices ou à ceux qui souhaitent ajouter des polices supplémentaires dans [l'outil de lettrage](/docs/lettering) d'Ink/Stitch.
@@ -88,10 +88,12 @@ Si vous avez généré votre fichier svg sans informations de crénage, cette ex
 
 |Options                            |Description        |
 |-----------------------------------|-------------------|
-|Nom (obligatoire)                  |le nom de votre police (obligatoire).
-|Description                        |informations supplémentaires sur votre police (telles que des informations de taille, etc.)
-|Fichier de police (obligatoire)    | Si vous avez utilisé FontForge pour générer votre fichier de police svg, Ink/Stitch lira les informations de crénage de votre police pour les inclure dans le fichier json.<br/>De plus, le fichier de police sera utilisé pour déterminer le chemin de sortie.<br/><br/>Un fichier `font.json` sera enregistré dans le dossier de votre fichier de fonte svg.
-|Mots clés                          |Choisir les catégories applicables à votre police
+|Nom (obligatoire)                  |le nom de votre police (obligatoire).|
+|Description                        |informations supplémentaires sur votre police.|
+|Variante par défaut                |si vous produisez plusieurs fichiers de glyphes pour des directions différentes, quelle est la direction a choisir lorsqu'il n'y a qu'une seule ligne   |
+|Direction du texte                 |le texte saisi par l'utilisateur sera t'il écrit de la gauche vers la droite (comme l'anglais) ou de la droite vers la gauche (comme l'hébreu). Actuellement le module de lettrage ne permet pas de mélanger les deux types de texte. |
+|Fichier svg de la police (obligatoire)    | Si vous avez utilisé FontForge pour générer votre fichier de police svg, Ink/Stitch lira les informations de crénage de votre police pour les inclure dans le fichier json.<br/>De plus, le fichier de police sera utilisé pour déterminer le chemin de sortie.<br/><br/>Un fichier `font.json` sera enregistré dans le dossier de votre fichier de fonte svg.|
+|Mots clés                          |Choisir les catégories applicables à votre police|
 
 ### Paramètres de la police
 
