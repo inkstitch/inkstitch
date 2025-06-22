@@ -104,7 +104,7 @@ jobs:
   # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#context-availability
   dump_contexts_to_log:
     if: >
-      needs.sign_policy.outputs.MY_BUILD_TYPE == 'dummy'
+      ${{ github.event.inputs.build_type }} == 'dummy'
 
     runs-on: ubuntu-latest
     steps:
@@ -239,6 +239,9 @@ jobs:
 
                 MY_TAG_NAME="${MY_INPUT_TAG}"  # use input tag name
                 MY_VERSION="${MY_TAG_NAME:1}"  # remove 'v' from the tag name, e.g. v1.2.3 -> 1.2.3
+
+                git tag --list
+
 
                 # check if MY_TAG_NAME is a valid tag name and if not exists error (security check)
                 if git tag --list | grep -q "^${MY_TAG_NAME}$"; then
