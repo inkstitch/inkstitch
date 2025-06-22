@@ -1,5 +1,9 @@
 name: UV Windows64 build
 
+### !!!  Minimize SignPath.io usage
+###    - it seems that SignPath.io has restrictions on the number of requests to sign per some period
+###    - so we use it only for release builds, not for development builds
+
 # when the workflow should run
 on:
   workflow_call:  # manual trigger of the workflow
