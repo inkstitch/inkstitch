@@ -11,13 +11,11 @@
 #   - pyinstaller tool installed for building Python applications
 #   - jq tool installed for parsing JSON
 
+set -e
 MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:'1'}  # Default level is 1 (INFO)
-
 if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
     set -x
 fi
-
-set -e
 
 echo "------------------------------------------------- build-distribution-archives.sh"
 

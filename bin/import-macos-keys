@@ -1,5 +1,11 @@
 #!/bin/bash
 
+set -e
+MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:'1'}  # Default level is 1 (INFO)
+if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
+    set -x
+fi
+
 ### This script sets up the macOS environment for automated code signing and notarization within a CI/CD pipeline.
 ### It's crucial for distributing software on macOS, as Apple requires signed and notarized
 ### applications to run without security warnings on modern systems.
