@@ -27,7 +27,7 @@ class ElementInfo(InkstitchExtension):
         self.list_items = []
         self.max_stitch_lengths = []
         self.min_stitch_lengths = []
-        self.export_txt = "element_id \t type \t method  \t dimensions  \t stitches \t jumps  \t max_stitch_length \t min_stitch_length \n"
+        self.export_txt = "element_id\ttype\tmethod\tdimensions\tstitches\tjumps\tmax_stitch_length\tmin_stitch_length\n"
 
         next_elements = [None]
         if len(self.elements) > 1:
