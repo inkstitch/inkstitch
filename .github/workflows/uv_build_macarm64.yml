@@ -160,6 +160,7 @@ jobs:
 
         env:
           BUILD: osx
+          VERSION: ${{ env.MY_VERSION }}
           # load secrets for bash script
           MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
           MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
