@@ -4,7 +4,7 @@
 ### TODO: check - maybe it will not be used any more in uv build
 
 set -e
-MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:'1'}  # Default level is 1 (INFO)
+MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:-1}  # Default level is 1 (INFO)
 if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
     set -x
 fi
