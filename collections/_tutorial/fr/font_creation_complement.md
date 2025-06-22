@@ -29,7 +29,7 @@ L'objet de ce tutoriel est la création d'une fonte utilisable par le module de 
 Les fichiers qui composent une fonte du lettrage sont regroupés dans un dossier spécifique à la fonte,  qui réside dans le dossier des fontes d'Ink/Stitch (fontes intégrées à Ink/Stitch) où dans un [dossier personnel de fonte](fr/docs/font-tools/#custom-font-directory) pour les fontes personnelles de l'utilisateur.
 
 Chaque dossier de fonte doit comporter au moins deux fichiers :
-- un fichier json qui contient les caractéristiques de la fonte
+- un fichier font.json qui contient les caractéristiques de la fonte
 - au moins un fichier de calques de glyphes, qui comporte un calque par glyphe. 
 La plupart des fontes du module de lettrage sont définies à l'aide d'un unique fichier de calque de glyphe, nommé →.svg. 
 
@@ -112,12 +112,25 @@ Sélectionnez tous les chemins dans tous les calques (si vos préférences inksc
 Si vous souhaitez créer une police qui se brode de gauche à droite, enregistrez ce fichier sous le nom →.svg dans un nouveau dossier situé dans votre dossier personnel de fontes.
 
 
-## Création du fichier json
-Une fois que le fichier →.svg  existe,  il est possible de créer le fichier json associé.
-`Extensions > Ink/Stitchh > Gestionn des polices > Génerer JSON....`
+## Création du fichier font.json
+Une fois que le fichier →.svg  existe,  il est possible de créer le fichier font.json associé.
+
+`Extensions > Ink/Stitch > Gestion des polices > Génerer JSON....`
+
+Cette extension va extraire des informations du fichier →.svg et les stocker dans un fichier json. Le dialogue de cette extension vous permet aussi d'ajouter des informations. La documentation est [ici](/fr/docs/font-tools/#generate-json)
+
+Vous pourrez modifier ultérieurement ces informations grace à  `Extensions > Ink/Stitchh > Gestionn des polices > Modifier le fichier JSON....`
+La documentation est [là](/fr/docs/font-tools/#edit-json):
+
+## Vérifiez que tout va bien
+Si vous avez créer ces deux fichiers et qu'ils sont dans un dossier de votre dossier de fontes personnelles,votre fonte apparait dès maintenant dans le module le lettrage. La broderie de chaque lettre est paramètrée comme un remplissage basique (si vous avez bien mis un remplissage sur chaque glyphe) ou comme un point droit (si vous avez mis un contour sur chaque glyphe) et il est trop tôt pour une broderie effective, mais tout doit être fonctionnel.
+Vous pouvez aussi utiliser l'extension
+
+`Extensions > Ink/Stitch > Gestion des polices > Test de police` pour voir l'ensemble des glyphes des votre police. [Voir la documentation](/fr/docs/font-tools/#font-sampling)
 
 
-## Créer les lettres
+
+## Travailler les fichiers de glyphes
 ### Fonte en colonne satin
 ### Fonte en points droits
 ### Fonte en appliqué
