@@ -3,7 +3,9 @@
   <name>Convert SVG Font to Glyph Layers</name>
   <id>org.{{ id_inkstitch }}.lettering_svg_font_to_layers</id>
   <param name="extension" type="string" gui-hidden="true">lettering_svg_font_to_layers</param>
-  <param name="count" type="int" min="1" max="65535" gui-text="Stop after">100</param>
+  <param name="count" type="int" min="1" max="65535" gui-text="Stop after">150</param>
+  <param name="reference" type="string"  gui-text="Use this  character to define size">M</param>
+  <param name="height" type="float" min="1" max="1000" gui-text="Height of reference character (mm)">20</param>
 
   <effect needs-live-preview="false">
     <object-type>all</object-type>
