@@ -15,7 +15,7 @@ name: UV Build
 
 # !!! important:
 #   - A single tag can point to multiple branches, so there isn't a single matching branch for a tag.
-#   - deafult branch for workflow_dispatch is the default branch of the repository, which is usually 'main' or 'master'.
+#   - default branch for workflow_dispatch is the default branch of the repository, which is usually 'main' or 'master'.
 #     - may be set gh workflow run -r <branch> <workflow_file>
 #   - variables ${{ xxx }} are parsed by YAML parser, before shell can see it ( eg ${{ $xxx }} is not what you expect).
 

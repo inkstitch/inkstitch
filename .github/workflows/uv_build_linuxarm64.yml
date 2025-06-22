@@ -14,7 +14,7 @@ on:
 
       break_on: # ref: inputs.break_on
         description:  'Stop the build immediately at a predefined location.'
-        required: true
+        required: false
         default: 'no'    # default value
         type: string  # type of the input, can be string, boolean, or number
 
@@ -26,7 +26,7 @@ on:
 
       use_authorized_signing:
         description: 'Use authorized signing'
-        required: true
+        required: false
         default: 'false'  # default value
         type: string
 
@@ -66,10 +66,12 @@ jobs:
 
           echo "-------------------------------------- input data"
           ### input data
+          echo "inputs.version: ${{ inputs.version }}"
           echo "inputs.break_on: ${{ inputs.break_on }}"
           echo "inputs.verbosity_log_level: ${{ inputs.verbosity_log_level }}"
           echo "inputs.use_authorized_signing: ${{ inputs.use_authorized_signing }}"
 
+          echo "MY_VERSION: $MY_VERSION"
           echo "MY_BREAK_ON: $MY_BREAK_ON"
           echo "MY_VERBOSITY_LOG_LEVEL: $MY_VERBOSITY_LOG_LEVEL"
           echo "MY_USE_AUTHORIZED_SIGNING: $MY_USE_AUTHORIZED_SIGNING"
