@@ -549,6 +549,8 @@ jobs:
             - Tag name (MY_TAG_NAME): ${{ env.MY_TAG_NAME }}
             - Name (MY_NAME): ${{ env.MY_NAME }}
             - Version (MY_VERSION): ${{ env.MY_VERSION }}
+
+            - Secrets (MY_SECRETS_AVAILABLE): ${{ env.MY_SECRETS_AVAILABLE}}
             - Use authorized signing (MY_USE_AUTHORIZED_SIGNING): ${{ env.MY_USE_AUTHORIZED_SIGNING }}
             - Release build (MY_IS_RELEASE_BUILD): ${{ env.MY_IS_RELEASE_BUILD }}
             - Pre-release (MY_PRERELEASE_FLAG): ${{ env.MY_PRERELEASE_FLAG }}
