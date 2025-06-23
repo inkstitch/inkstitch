@@ -74,7 +74,7 @@ class FontVariant(object):
             for layer in glyph_layers:
                 self._clean_group(layer)
                 layer.attrib[INKSCAPE_LABEL] = layer.attrib[INKSCAPE_LABEL].replace("GlyphLayer-", "", 1)
-                glyph_name = normalize('NFKC', layer.attrib[INKSCAPE_LABEL])
+                glyph_name = normalize('NFC', layer.attrib[INKSCAPE_LABEL])
                 try:
                     self.glyphs[glyph_name] = Glyph(layer)
                 except (AttributeError, ValueError):
@@ -144,7 +144,7 @@ class FontVariant(object):
         # binding glyph only have  two shapes, isol and fina
 
         non_binding_char = ['ا', 'أ', 'ﺇ', 'آ', 'ٱ', 'د', 'ذ', 'ر', 'ز', 'و', 'ؤ']
-        normalized_non_binding_char = [normalize('NFKC', letter) for letter in non_binding_char]
+        normalized_non_binding_char = [normalize('NFC', letter) for letter in non_binding_char]
         return not (character in normalized_non_binding_char)
 
     def is_mark(self, character):
