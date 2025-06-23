@@ -486,6 +486,7 @@ jobs:
       MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}
       MY_VERSION: ${{ needs.sign_policy.outputs.MY_VERSION }}
       MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}
+      MY_SECRETS_AVAILABLE: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}
       MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
       MY_VERBOSITY_LOG_LEVEL: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
 
