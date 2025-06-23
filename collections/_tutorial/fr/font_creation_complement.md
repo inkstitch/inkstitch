@@ -24,6 +24,8 @@ toc: true
 
 Attention : fichier en cours de rédaction
 
+Le texte  est assez long, mais il est recommandé de le lire entièrement avant de se lancer dans la création d'une fonte.....
+
 L'objet de ce tutoriel est la création d'une fonte utilisable par le module de lettrage d'Ink/Stitch.
 ## Qu'est ce qu'une fonte pour le lettrage d'Ink/Stitch?
 Les fichiers qui composent une fonte du lettrage sont regroupés dans un dossier spécifique à la fonte,  qui réside dans le dossier des fontes d'Ink/Stitch (fontes intégrées à Ink/Stitch) où dans un [dossier personnel de fonte](fr/docs/font-tools/#custom-font-directory) pour les fontes personnelles de l'utilisateur.
@@ -47,6 +49,8 @@ Les dossiers des fontes du module de lettrage comportent aussi:
 
 ## Choix de la fonte
 Le choix de la fonte  et sa taille dépendent essentiellement du type de fonte que l'on souhaite créer: satins, points-droits, remplissage, appliqué. Une colonne satin ne peut être ni trop étroite (on considère qu'il faut au moins 1.5mm) ni trop large (au dessus 7mm il y a des risques de fragilité, au delà de 12mm beaucoup de machines ne savent pas faire), de ce fait, des lettres où l’épaisseur du trait est très variable seront difficiles à traiter en colonne satin. Les polices avec empattement sont plus difficiles à numériser que les polices sans empattement. Pour une police en appliqué au contraire on cherchera une police assez large. Le principal élément de choix reste malgré tout l'intérêt que l'on porte à la fonte. 
+
+Symmétriquement, si l'on est fixé sur une fonte particulière, la forme des lettres doit être prise en compte dans les choix de pramètrage de broderie.
 
 
 ## Création du fichier de glyphes
@@ -129,19 +133,57 @@ Vous pouvez aussi utiliser
 
 `Extensions > Ink/Stitch > Gestion des polices > Test de police` pour voir l'ensemble des glyphes des votre police. [Voir la documentation](/fr/docs/font-tools/#font-sampling)
 
+:thinking: A partir d'ici c'est incomplet et dans le désordre. 
+## Passer à une fonte réellemment brodable
+On en arrive à la phase ou il faut passer d'une numérisation automatique à des choix pertinents pour une belle broderie.
+
+### Cas d'une fonte en point droits
+Selon la fonte de départ, le travail à faire est très différent. 
+[running_stitch_samples](/assets/images/tutorials/font_creation/running_stitch-sample.png)
+Pour la police du bas, utiliser les contours des lettres pour créer les points droits donne un résultat correct, mais pas vraiment pour la police du haut. 
 
 
-## La suite à écrire : travailler les fichiers de calques de glyphes
-pour l'instant en vrac et dans le desordre ne pas oublier 
+S'il n'est pas possible d'utiliser les contours des lettres, soit on redessine manuellement les lettres, ou l'utilise l'extension 
+`Extensions > Ink/Stitch > Outils traits > Remplissage en  trait`, avec probablements des retouches à faire.
+Dans tous les cas, il faudra traiter la questions des sauts de fil, aussi bien à l'intérieur des lettres qu'entre les lettres.
+Il faudra spour cela séparer (Inkscape > Chemin > Séparer) chaque chemin (à faire globalement sur tous les groupes).
+
+Remarque : il existe de très rares polices "singleline" svg qui donnent directement un resultat exploitable en point droit. Plus d'infos [ici](https://cutlings.datafil.no/single-line-fonts-in-inkscape-revisited/)
+
+### Cas d'une fonte en remplissage ou en appliqué
+
+### Cas d'une fonte en colonne  satin
+
+### La question des sauts de fil et des commandes de coupe
 Faut il ajouter des commandes de coupe ? 
 Chasser les sauts de fils inutiles à l'interieur des lettres
 Assurer qu'il y a bien des noeuds là où ils sont necessaires, mais pas là ou il n'en faut pas
-Uniformiser le paramètrage
-Routage
-Tester la fonte
-cas des fontes en couleurs
+
+###  Les tests de broderie 
+
+### Les outils de simulation
+
+### Les retouches sur le crénage
+
+### Ajout ou Suppression de glyphes
+Si l'on ajoute ou supprime des glyphes, il faut impérativement lancer l'extension Modifier le fichier JSON afin que la liste des glyphes soit mise à jour. Il est possible qu'il faille ajouter des informations de crénages, si le glyphe n'etait pas dans le fichier de fonte svg initial. Pour cette raison, en cas de doute, il vaut mieux embarquer plus de glyphes que pas assez !
+
+### Les fontes multicolores
+Si l'on souhaite que le résultat du lettrage puisse être trié selon les couleurs, il  y a deux manipulations à faire
+- le prévoir dans le fichier font.json (soit à la création soit en éditant le  fichier), la fonte doit être dite "triable".
+- attacher à chaque chemin un [index de couleur](https://inkstitch.org/fr/docs/font-tools/#set-color-index). Dans la plupart des cas (toutes les lettres ont les mêmes couleurs dans le même ordre , tous les chemins d'une couleur donné à l'interieur d'un glyphe sont consécutifs) on peut tout afficher dans tous les calques, choisir un des glyphes, selectionner le premier objet  à broder, sélectionner tous les objets de la mêmme couleur(selectionner même couleur de fond ou selectionner même couleur de contour,ou les deux séquentiellement) et leur attribuer l'index un, puis choisir un objet de la prochaine couleur à broder, sélectionner tous les objets de la même couleur, leur attribuer l'index deux, etc.... Dans les cas plus compliqués il faudra réflechir un peu plus pour déterminer les index.
+
+
+
+## Routage
+
+
+
+## limites de l'outil de lettrage
 on ne peut pas (encore) utiliser toutes les fonctionalités d'ink/stitch dans les fichiers de calques,par exemple  les clones, les effets de chemins  ne sontpas férées correctement par le lettrage
 on ne peut pas (encore) écrire une police  pour toutes les langues du monde
+
+## les petits plus 
 il est possible d'avoir des calques  multiglyphes, pas seulement  pour les ligatures 
 
 les outils utiles  à citer:
