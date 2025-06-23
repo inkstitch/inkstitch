@@ -4,7 +4,7 @@
 
 name: UV Build
 
-# Inputs (some selected):
+# GitHub some selected variables:
 #   GITHUB_EVENT_NAME - the name of the event that triggered the workflow (e.g., push, pull_request, workflow_dispatch, etc.)
 #   GITHUB_REF_TYPE - the type of ref that triggered the workflow (e.g., branch, tag)
 #   GITHUB_REF - what triggered the workflow (e.g., refs/heads/branch_name, refs/tags/v1.0.0, refs/)
@@ -81,11 +81,11 @@ on:
       sign:  # ref: github.event.inputs.no_sign overwrite enabled signing see MY_USE_AUTHORIZED_SIGNING
         description: 'Sign the build if secrets are available.'
         required: false
-        default: 'true'  # default value
+        default: 'false'  # default value
         type: choice  # type of the input, can be number, boolean, string, choice or environment
         options:
           - 'false'  # do not sign the build, even if authorized signing keys are available
-          - 'true'   # don't change MY_USE_AUTHORIZED_SIGNING, use authorized signing keys if available
+          - 'true'   # use authorized signing keys if secrets available (macOS notarize, Windows SignPath.io)
 
       break_on:     # ref: github.event.inputs.break_on
         description: 'Stop the build immediately at a predefined location.'
@@ -152,6 +152,7 @@ jobs:
       MY_NAME: ${{ steps.set_vars.outputs.MY_NAME }}
       MY_VERSION: ${{ steps.set_vars.outputs.MY_VERSION }}
       MY_USE_AUTHORIZED_SIGNING: ${{ steps.set_vars.outputs.MY_USE_AUTHORIZED_SIGNING }}
+      MY_SECRETS_AVAILABLE: ${{steps.set_vars.outputs.MY_SECRETS_AVAILABLE}}
       MY_IS_RELEASE_BUILD: ${{ steps.set_vars.outputs.MY_IS_RELEASE_BUILD }}
     # if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
     steps:
@@ -196,13 +197,20 @@ jobs:
             MY_INPUT_TAG=""           # empty means use branch/tag name
           fi
 
+
           # -------------------------------------------------
           # Check if secrets are available and input sign is set to true
-          # if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" ]]; then
-          if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" && "${{ github.event.inputs.sign }}" == "true" ]]; then
-            MY_USE_AUTHORIZED_SIGNING="true"  # we use authorized signing keys, assume all signing keys are available
+          if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" ]]; then
+            MY_SECRETS_AVAILABLE="true"
+
+            if [[ "${{ github.event.inputs.sign }}" == "true" ]]; then
+              MY_USE_AUTHORIZED_SIGNING="true"  # use authorized signing (win SignPath.io, mac notarize)
+            else
+              MY_USE_AUTHORIZED_SIGNING="false"  # do not use authorized signing
+            fi
+
           else
-            MY_USE_AUTHORIZED_SIGNING="false"  # we do not use authorized signing keys
+            MY_SECRETS_AVAILABLE="false"
           fi
 
           # -------------------------------------------------
@@ -212,27 +220,24 @@ jobs:
                 "${GITHUB_REF_TYPE}" == "tag" && \
                 "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
 
+            MY_IS_RELEASE_BUILD="false"  # this is a release build (flag only, may be changed in UI later)
+
             MY_TAG_NAME="${GITHUB_REF_NAME}"  # v* tag name
-            MY_IS_RELEASE_BUILD="true"  # this is a release build (flag only, may be changed in UI later)
             MY_BUILD_TYPE="all"  # overwrite build to "all" platforms
             MY_VERSION="${MY_TAG_NAME:1}"  # remove 'v' from the tag name, e.g. v1.2.3 -> 1.2.3
 
-            # without access to secrets, we cannot create a release
-            if [[ "${MY_USE_AUTHORIZED_SIGNING}" == "false" ]]; then
-              echo "Error: Cannot create a release without access to secrets."
-              MY_IS_RELEASE_BUILD="false"  # this is not a release build, but a pre-release build
-            fi
-
           else # all other cases, including branch builds
+
+            MY_IS_RELEASE_BUILD="false"  # this is pre-release build (flag only, may be changed in UI later)
 
             REF_NAME=$(echo $GITHUB_REF_NAME | tr / -)
             MY_TAG_NAME="dev-build-${REF_NAME}"  # use branch/tag name as tag, replace / with -
             MY_VERSION="0.0.1-${REF_NAME}" # set version to 0.0.1-branch_name
 
-            MY_IS_RELEASE_BUILD="false"  # this is pre-release build (flag only, may be changed in UI later)
-            MY_USE_AUTHORIZED_SIGNING="false"  # due to restricted count of signing requests on SignPath.io, we cannot use it for pre-release builds
+            MY_USE_AUTHORIZED_SIGNING="false"  #  normal build (limited count of SignPath.io and notarize)
 
-            if [[ -n "${MY_INPUT_TAG}" ]]; then  # if MY_INPUT_TAG is set
+            # ----- MY_INPUT_TAG check
+            if [[ -n "${MY_INPUT_TAG}" ]]; then  # if MY_INPUT_TAG is set, may change MY_TAG_NAME
 
               # allow only for v*
               if [[ "${MY_INPUT_TAG}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
@@ -243,7 +248,7 @@ jobs:
                 # check if MY_TAG_NAME is a valid tag name and if not exists error (security check)
                 # - we need ask remote, CI makes only shallow clone of the repository
                 if git ls-remote --tags --exit-code origin "refs/tags/${MY_TAG_NAME}"; then
-                  echo "Input tag name '${MY_TAG_NAME}' already exists. OK to use it."
+                  echo "OK: Input tag name '${MY_TAG_NAME}' exists and will be used."
                 else
                   echo "Error: Input tag name '${MY_TAG_NAME}' does not exist."
                   echo "Please use existing tag name, or create a new tag with the name '${MY_INPUT_TAG}'."
@@ -253,12 +258,14 @@ jobs:
               else  # if MY_INPUT_TAG is not a valid v* tag name
 
                 echo "Error: Input tag name '${MY_INPUT_TAG}' is not a valid v* tag name."
-                echo "Please use a tag name like 'v1.2.3' or 'v0.0.1-xxx'."
+                echo "Please use a tag name like 'v1.2.3*'"
                 exit 1  # exit with error
 
               fi
 
             fi
+            # ----- MY_INPUT_TAG check end
+
 
           fi
 
@@ -272,6 +279,7 @@ jobs:
           echo "MY_BREAK_ON=${MY_BREAK_ON}"
           echo "MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL}"
 
+          echo "MY_SECRETS_AVAILABLE=${MY_SECRETS_AVAILABLE}"
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
           echo "MY_TAG_NAME=${MY_TAG_NAME}"
           echo "MY_NAME=${MY_NAME}"
@@ -283,6 +291,7 @@ jobs:
           echo "MY_BREAK_ON=${MY_BREAK_ON}" >> $GITHUB_OUTPUT
           echo "MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL}" >> $GITHUB_OUTPUT
 
+          echo "MY_SECRETS_AVAILABLE=${MY_SECRETS_AVAILABLE}" >> $GITHUB_OUTPUT
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}" >> $GITHUB_OUTPUT
           echo "MY_TAG_NAME=${MY_TAG_NAME}" >> $GITHUB_OUTPUT
           echo "MY_NAME=${MY_NAME}" >> $GITHUB_OUTPUT
@@ -310,6 +319,7 @@ jobs:
           echo "MY_BREAK_ON: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}"
           echo "MY_VERBOSITY_LOG_LEVEL: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}"
           echo "MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}"
+          echo "MY_SECRETS_AVAILABLE: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}"
           echo "MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}"
           echo "MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}"
           echo "MY_VERSION: ${{ needs.sign_policy.outputs.MY_VERSION }}"
@@ -506,6 +516,7 @@ jobs:
           echo "MY_NAME=${MY_NAME}"
           echo "MY_VERSION=${MY_VERSION}"
           echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}"
+          echo "MY_SECRETS_AVAILABLE=${MY_SECRETS_AVAILABLE}"
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
           echo "MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL}"
           echo "-------------------------------------------------"
