@@ -152,14 +152,18 @@ Remarque : il existe de très rares polices "singleline" svg qui donnent directe
 
 ### Cas d'une fonte en remplissage ou en appliqué
 
-### Cas d'une fonte en colonne  satin
+### Cas d'une fonte en colonne satin
 
 ### La question des sauts de fil et des commandes de coupe
 Faut il ajouter des commandes de coupe ? 
 Chasser les sauts de fils inutiles à l'interieur des lettres
 Assurer qu'il y a bien des noeuds là où ils sont necessaires, mais pas là ou il n'en faut pas
 
-###  Les tests de broderie 
+### Influence des préférences de l'utilisateur
+ou comment faire en sorte qu'il n'y en ait pas en donnant des valeurs locales à la longueur minimum de point (indispensable si on prévoit une petite fonte) et a la longueur minimum de saut.
+
+###  Les tests de broderie
+
 
 ### Les outils de simulation
 
@@ -186,7 +190,7 @@ on ne peut pas (encore) écrire une police  pour toutes les langues du monde
 ## les petits plus 
 il est possible d'avoir des calques  multiglyphes, pas seulement  pour les ligatures 
 
-les outils utiles  à citer:
+les outils utiles  à citer là ou il faut pas
 Troubleshooting , et comment rendre les fontes plus robustes
 information sur l'élément : pourchasser les satins trop larges et etablir une valeur raisonable sur la taille min et max  de broderie de la fonte
 saut en trait
