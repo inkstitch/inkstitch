@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-06 01:47+0000\n"
-"PO-Revision-Date: 2025-06-06 01:48\n"
+"POT-Creation-Date: 2025-06-23 01:56+0000\n"
+"PO-Revision-Date: 2025-06-23 01:57\n"
 "Last-Translator: \n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-06 01:47+0000\n"
+"POT-Creation-Date: 2025-06-23 01:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,486 +57,511 @@ msgstr ""
 msgid "AGS Γαραμου Garamond contains all the letters of the latin and greek alphabets and cover most european languages."
 msgstr ""
 
-#. description of font in fonts/ambigue
+#. description of font in fonts/allegria20
 #: inkstitch-fonts-metadata.py:14
+msgid "Running stitch font"
+msgstr ""
+
+#. description of font in fonts/allegria55
+#: inkstitch-fonts-metadata.py:16
+msgid "Satin font"
+msgstr ""
+
+#. description of font in fonts/ambigue
+#: inkstitch-fonts-metadata.py:18
 msgid "Ambigüe is a mix of satin and bean stitch font with a subtle harmony of disorder. You may ignore the hidden black running stitches (they are the original letters) or use them to customize this font as you like."
 msgstr ""
 
 #. description of font in fonts/amitaclo
-#: inkstitch-fonts-metadata.py:16
+#: inkstitch-fonts-metadata.py:20
 msgid "Amitaclo is a script satin font. Every satin has zigzag underlay"
 msgstr ""
 
 #. description of font in fonts/amitaclo_small
-#: inkstitch-fonts-metadata.py:18
+#: inkstitch-fonts-metadata.py:22
 msgid "This font is an altered version of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/apex_lake
-#: inkstitch-fonts-metadata.py:20
+#: inkstitch-fonts-metadata.py:24
 msgid "Apex Lake is a large ornate capital letters font. It contains only 38 glyphs : A-Z,0-9,! and ?."
 msgstr ""
 
 #. description of font in fonts/apex_simple_AGS
-#: inkstitch-fonts-metadata.py:22
+#: inkstitch-fonts-metadata.py:26
 msgid "Apex Simple AGS is a satin companion font for Apex Lake AGS."
 msgstr ""
 
+#. description of font in fonts/apex_simple_small_AGS
+#: inkstitch-fonts-metadata.py:28
+msgid "Apex Simple Small AGS is an altered version of Apex Simple AGS to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
+msgstr ""
+
 #. description of font in fonts/auberge_marif
-#: inkstitch-fonts-metadata.py:24
+#: inkstitch-fonts-metadata.py:30
 msgid "Auberge Marif is a script satin font. The glyphs cover most Western European languages."
 msgstr ""
 
 #. description of font in fonts/auberge_small
-#: inkstitch-fonts-metadata.py:26
+#: inkstitch-fonts-metadata.py:32
 msgid "Auberge Small is an altered version of Auberge Marif to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
 msgstr ""
 
 #. description of font in fonts/aventurina
-#: inkstitch-fonts-metadata.py:28
+#: inkstitch-fonts-metadata.py:34
 msgid "Aventurina is a script satin font. The glyphs cover most Western European languages."
 msgstr ""
 
 #. description of font in fonts/barstitch_bold
-#: inkstitch-fonts-metadata.py:30
+#: inkstitch-fonts-metadata.py:36
 msgid "Barstitch  Bold is a satin font."
 msgstr ""
 
 #. description of font in fonts/barstitch_cloudy
-#: inkstitch-fonts-metadata.py:32
+#: inkstitch-fonts-metadata.py:38
 msgid "This is a guided fill version of Barstitch fill. Each letter is used to clip a group of guided fills and  then  a bean stitch contour is stitched. "
 msgstr ""
 
 #. description of font in fonts/barstitch_mandala
-#: inkstitch-fonts-metadata.py:34
+#: inkstitch-fonts-metadata.py:40
 msgid "A large Mandala font. Redwork versions of the four mandalas  used to design the font are stored in the $,<,>,^ glyphs"
 msgstr ""
 
 #. description of font in fonts/barstitch_regular
-#: inkstitch-fonts-metadata.py:36
+#: inkstitch-fonts-metadata.py:42
 msgid "Barstitch regular is a satin font. "
 msgstr ""
 
 #. description of font in fonts/barstitch_textured
-#: inkstitch-fonts-metadata.py:38
+#: inkstitch-fonts-metadata.py:44
 msgid "Barstitch textured is a highly textured font with the help of meander fills"
 msgstr ""
 
 #. description of font in fonts/baumans_FI
-#: inkstitch-fonts-metadata.py:40
+#: inkstitch-fonts-metadata.py:46
 msgid "Baumans FI is a satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/baumans_FI_Small
-#: inkstitch-fonts-metadata.py:42
+#: inkstitch-fonts-metadata.py:48
 msgid "Baumans FI Small is an altered version of Baumans FI, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
 msgstr ""
 
 #. description of font in fonts/bluenesia_satin
-#: inkstitch-fonts-metadata.py:44
+#: inkstitch-fonts-metadata.py:50
 msgid "A Syafrizal a.k.a. Khurasan jawn. 3.5mm satin at 100%, splits at higher sizes."
 msgstr ""
 
 #. description of font in fonts/califragilistic
-#: inkstitch-fonts-metadata.py:46
+#: inkstitch-fonts-metadata.py:52
 msgid "Califragilistic is a tricolor running stitch font that was constructed using mandalas"
 msgstr ""
 
 #. description of font in fonts/cats
-#: inkstitch-fonts-metadata.py:48
+#: inkstitch-fonts-metadata.py:54
 msgid "Cats is a silly font that makes use of satin random parameters."
 msgstr ""
 
 #. description of font in fonts/cherryforinkstitch
-#: inkstitch-fonts-metadata.py:50
+#: inkstitch-fonts-metadata.py:56
 msgid "Cherry for inkstitch is a decorative satin column font. It contains 74 glyphs."
 msgstr ""
 
 #. description of font in fonts/cherryforkaalleen
-#: inkstitch-fonts-metadata.py:52
+#: inkstitch-fonts-metadata.py:58
 msgid "Cherry for Kaalleen is a large decorative font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
 msgstr ""
 
 #. description of font in fonts/chicken_little
-#: inkstitch-fonts-metadata.py:54
+#: inkstitch-fonts-metadata.py:60
 #, python-format
 msgid "Chicken Little  is a  playful decorative display font with loads of personality. There is no common baseline, no common character size and no common slope of the letters. Beyond 110% some satin columns will split."
 msgstr ""
 
 #. description of font in fonts/chicken_little_small
-#: inkstitch-fonts-metadata.py:56
+#: inkstitch-fonts-metadata.py:62
 msgid "This font is an altered version  of Chicken Little KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/chicken_scratch
-#: inkstitch-fonts-metadata.py:58
+#: inkstitch-fonts-metadata.py:64
 msgid "A handwritten font."
 msgstr ""
 
 #. description of font in fonts/chopin
-#: inkstitch-fonts-metadata.py:60
+#: inkstitch-fonts-metadata.py:66
 msgid "Chopin Script is a script satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/cogs_KOR
-#: inkstitch-fonts-metadata.py:62
+#: inkstitch-fonts-metadata.py:68
 msgid "Cogs KOR is a Steampunk  satin font."
 msgstr ""
 
 #. description of font in fonts/colorful
-#: inkstitch-fonts-metadata.py:64
+#: inkstitch-fonts-metadata.py:70
 msgid "Colorful is a tartan fill font."
 msgstr ""
 
 #. description of font in fonts/computer
-#: inkstitch-fonts-metadata.py:66
+#: inkstitch-fonts-metadata.py:72
 msgid "satin font"
 msgstr ""
 
 #. description of font in fonts/computer_small
-#: inkstitch-fonts-metadata.py:68
+#: inkstitch-fonts-metadata.py:74
 msgid "Small satin font: the use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/cooper_marif
-#: inkstitch-fonts-metadata.py:70
+#: inkstitch-fonts-metadata.py:76
 msgid "CooperMarif is a large and airy font."
 msgstr ""
 
 #. description of font in fonts/coronaviral
-#: inkstitch-fonts-metadata.py:72
+#: inkstitch-fonts-metadata.py:78
 msgid "Coronaviral font is created with manual sitch. Do not change the size or very little."
 msgstr ""
 
 #. description of font in fonts/decadent_flowers_monogram
-#: inkstitch-fonts-metadata.py:74
+#: inkstitch-fonts-metadata.py:80
 msgid "Each Decadent Flowers Monogram lettter  is composed of an optional knockdown fill (for high pile fabric embroidery)  and redwork flowers  with a negative space letter monogram"
 msgstr ""
 
 #. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:76
+#: inkstitch-fonts-metadata.py:82
 msgid "DejaVu Serif Condensed is a satin font. Every satin has center-walk underlay."
 msgstr ""
 
 #. description of font in fonts/digory_doodles_bean
-#: inkstitch-fonts-metadata.py:78
+#: inkstitch-fonts-metadata.py:84
 msgid "All letters of Digory Doodles Bean mix satin and bean stitch."
 msgstr ""
 
 #. description of font in fonts/dinomouse72
-#: inkstitch-fonts-metadata.py:80
+#: inkstitch-fonts-metadata.py:86
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
 msgstr ""
 
 #. description of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:82
+#: inkstitch-fonts-metadata.py:88
 msgid "Emilio 20 contains only capitals and numbers. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/emilio_20_applique
-#: inkstitch-fonts-metadata.py:84
+#: inkstitch-fonts-metadata.py:90
 msgid "Emilio 20 Applique is an Applique font. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique."
 msgstr ""
 
 #. description of font in fonts/emilio_20_bold
-#: inkstitch-fonts-metadata.py:86
+#: inkstitch-fonts-metadata.py:92
 msgid "Emilio_20_Bold is an altered version of Emilio_20."
 msgstr ""
 
 #. description of font in fonts/emilio_20_simple
-#: inkstitch-fonts-metadata.py:88
+#: inkstitch-fonts-metadata.py:94
 msgid "Emilio is a font with capital only and numbers. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/emilio_20_simple_small
-#: inkstitch-fonts-metadata.py:90
+#: inkstitch-fonts-metadata.py:96
 msgid "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/emilio_20_tartan
-#: inkstitch-fonts-metadata.py:92
+#: inkstitch-fonts-metadata.py:98
 msgid "Emilio 20 Tartan uses tartan fill for a colorful font."
 msgstr ""
 
 #. description of font in fonts/emilio_20_tricolore
-#: inkstitch-fonts-metadata.py:94
+#: inkstitch-fonts-metadata.py:100
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
 msgstr ""
 
 #. description of font in fonts/espresso_KOR
-#: inkstitch-fonts-metadata.py:96
+#: inkstitch-fonts-metadata.py:102
 msgid "Espresso KOR is a satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/espresso_tiny
-#: inkstitch-fonts-metadata.py:98
+#: inkstitch-fonts-metadata.py:104
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/excalibur_KOR
-#: inkstitch-fonts-metadata.py:100
+#: inkstitch-fonts-metadata.py:106
 msgid "Excalibur KOR is a small satin column manuscript font. It contains 144 glyphs, covering most western European languages needs."
 msgstr ""
 
 #. description of font in fonts/excalibur_small
-#: inkstitch-fonts-metadata.py:102
+#: inkstitch-fonts-metadata.py:108
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/fold_inkstitch
-#: inkstitch-fonts-metadata.py:104
+#: inkstitch-fonts-metadata.py:110
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font. It contains 40 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr ""
 
 #. description of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:106
+#: inkstitch-fonts-metadata.py:112
 msgid "Geneva Simple Sans Rounded is a satin font."
 msgstr ""
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:108
+#: inkstitch-fonts-metadata.py:114
 msgid "Geneva Simple Sans is a satin font."
 msgstr ""
 
 #. description of font in fonts/gingo200
-#: inkstitch-fonts-metadata.py:110
+#: inkstitch-fonts-metadata.py:116
 msgid "Gingo 200 is playful satin font with 158 glyphs."
 msgstr ""
 
 #. description of font in fonts/glacial_tiny
-#: inkstitch-fonts-metadata.py:112
+#: inkstitch-fonts-metadata.py:118
 msgid "Glacial is a very tiny font. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages."
 msgstr ""
 
 #. description of font in fonts/hebrew_font_medium
-#: inkstitch-fonts-metadata.py:114
+#: inkstitch-fonts-metadata.py:120
 msgid "Medium size hebrew satin font"
 msgstr ""
 
 #. description of font in fonts/hebrew_simple_rounded
-#: inkstitch-fonts-metadata.py:116
+#: inkstitch-fonts-metadata.py:122
 msgid "A simple rounded hebrew font"
 msgstr ""
 
 #. description of font in fonts/hebrew_simple_rounded_small
-#: inkstitch-fonts-metadata.py:118
+#: inkstitch-fonts-metadata.py:124
 msgid "A simple rounded hebrew font, small version to be embroidered with 60wt thread and 60 needle"
 msgstr ""
 
 #. description of font in fonts/honoka
-#: inkstitch-fonts-metadata.py:120
+#: inkstitch-fonts-metadata.py:126
 msgid "コルの書きこも is a satin column japanese script font. It contains all hiragana, katakana and punctuation glyphs plus 80 kanjis."
 msgstr ""
 
 #. description of font in fonts/infinipicto
-#: inkstitch-fonts-metadata.py:122
+#: inkstitch-fonts-metadata.py:128
 msgid "InfiniPicto is a fun font containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
 msgstr ""
 
 #. description of font in fonts/inkstitch_masego
-#: inkstitch-fonts-metadata.py:124
+#: inkstitch-fonts-metadata.py:130
 msgid "Masego is a display san-serif typeface."
 msgstr ""
 
 #. description of font in fonts/invercelia
-#: inkstitch-fonts-metadata.py:126
+#: inkstitch-fonts-metadata.py:132
 msgid "Invercelia is a modern two letters monogram font. Enter an upper case letter followed by a lower case letter (for example 'Ac') to get a simple monogram.  Add a ')' at the end and the monogram is framed with a circle (for example 'Ac)'), add an '(' to start (for example '(Ac)' and your monogram is ready for applique, or  try something like '!Ac)' to replace the appliqué by knockdown stitches."
 msgstr ""
 
 #. description of font in fonts/kaushan_script_MAM
-#: inkstitch-fonts-metadata.py:128
+#: inkstitch-fonts-metadata.py:134
 msgid "Kaushan Script MAM is a script satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:130
+#: inkstitch-fonts-metadata.py:136
 msgid "Learning curve is a small running stitch script font."
 msgstr ""
 
 #. description of font in fonts/lobster_AGS
-#: inkstitch-fonts-metadata.py:132
+#: inkstitch-fonts-metadata.py:138
 msgid " Lobster AGS is a script satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/magnolia_KOR
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:140
 msgid "Magnolia KOR is a script satin font."
 msgstr ""
 
 #. description of font in fonts/magnolia_bicolor
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:142
 msgid "Magnolia bicolor is a  larger  bicolor variation of Magnolia font."
 msgstr ""
 
 #. description of font in fonts/magnolia_small
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:144
 msgid "Magnolia Small is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/magnolia_tamed
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:146
 msgid "This is a less wild bicolor variation of Magnolia font"
 msgstr ""
 
 #. description of font in fonts/malika
-#: inkstitch-fonts-metadata.py:142
+#: inkstitch-fonts-metadata.py:148
 msgid "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch."
 msgstr ""
 
 #. description of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:144
+#: inkstitch-fonts-metadata.py:150
 msgid "Manuskript Gothisch is a satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:152
 msgid "MarcellusSC-FI is a small capital satin font. It contains 107 glyphs covering most Western European languages."
 msgstr ""
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:148
+#: inkstitch-fonts-metadata.py:154
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
 msgstr ""
 
 #. description of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:150
+#: inkstitch-fonts-metadata.py:156
 msgid "Millimarif-bold20 is a  bold satin font."
 msgstr ""
 
 #. description of font in fonts/mimosa_large
-#: inkstitch-fonts-metadata.py:152
+#: inkstitch-fonts-metadata.py:158
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
 msgstr ""
 
 #. description of font in fonts/mimosa_medium
-#: inkstitch-fonts-metadata.py:154
+#: inkstitch-fonts-metadata.py:160
 msgid "Mimosa Medium is a satin font that looks dotty."
 msgstr ""
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:156
+#: inkstitch-fonts-metadata.py:162
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
 msgstr ""
 
 #. description of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:158
+#: inkstitch-fonts-metadata.py:164
 msgid "Namskout AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr ""
 
 #. description of font in fonts/namskout_relief
-#: inkstitch-fonts-metadata.py:160
+#: inkstitch-fonts-metadata.py:166
 msgid "Namskout relief is an altered version of Namskout AGS for embossed letters."
 msgstr ""
 
 #. description of font in fonts/namskout_tartan
-#: inkstitch-fonts-metadata.py:162
+#: inkstitch-fonts-metadata.py:168
 msgid "Namskout Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals."
 msgstr ""
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:164
+#: inkstitch-fonts-metadata.py:170
 msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
 msgstr ""
 
 #. description of font in fonts/ondulamarif_Medium
-#: inkstitch-fonts-metadata.py:166
+#: inkstitch-fonts-metadata.py:172
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
 msgstr ""
 
 #. description of font in fonts/ondulamarif_S
-#: inkstitch-fonts-metadata.py:168
+#: inkstitch-fonts-metadata.py:174
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
 msgstr ""
 
 #. description of font in fonts/ondulamarif_XL
-#: inkstitch-fonts-metadata.py:170
+#: inkstitch-fonts-metadata.py:176
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
 msgstr ""
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:172
+#: inkstitch-fonts-metadata.py:178
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr ""
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:174
+#: inkstitch-fonts-metadata.py:180
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr ""
 
 #. description of font in fonts/perspective_tricolore_KOR
-#: inkstitch-fonts-metadata.py:176
+#: inkstitch-fonts-metadata.py:182
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
 msgstr ""
 
 #. description of font in fonts/pixel10
-#: inkstitch-fonts-metadata.py:178
+#: inkstitch-fonts-metadata.py:184
 msgid "Pixel 10 is a satin pixel font."
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:180
+#: inkstitch-fonts-metadata.py:186
 msgid "Roaring Twenties KOR is a mix of satin and bean stitches."
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:182
+#: inkstitch-fonts-metadata.py:188
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:184
+#: inkstitch-fonts-metadata.py:190
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:186
+#: inkstitch-fonts-metadata.py:192
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
 msgstr ""
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:188
+#: inkstitch-fonts-metadata.py:194
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
 msgstr ""
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:190
+#: inkstitch-fonts-metadata.py:196
 msgid "Ink/Stitch Small Font is suited for small characters."
 msgstr ""
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:192
+#: inkstitch-fonts-metadata.py:198
 #, python-brace-format
 msgid " Sortefax XL Initials is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
 msgstr ""
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:194
+#: inkstitch-fonts-metadata.py:200
 #, python-brace-format
 msgid "Sortefax  Medium Initials is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
 msgstr ""
 
 #. description of font in fonts/sunset
-#: inkstitch-fonts-metadata.py:196
+#: inkstitch-fonts-metadata.py:202
 msgid "3 colors satin column font"
 msgstr ""
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:198
+#: inkstitch-fonts-metadata.py:204
 msgid "TT  Directors is a satin font suited for directing."
 msgstr ""
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:200
+#: inkstitch-fonts-metadata.py:206
 msgid "TT Masters is a satin font suited for heavy typing :)"
 msgstr ""
 
+#. description of font in fonts/venezia
+#: inkstitch-fonts-metadata.py:208
+msgid "A serif satin font"
+msgstr ""
+
+#. description of font in fonts/venezia_small
+#: inkstitch-fonts-metadata.py:210
+msgid "Venezia small is an altered version of Venezia to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
+msgstr ""
+
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:202
+#: inkstitch-fonts-metadata.py:212
 msgid "Violin Serif is a condensed serif satin font."
 msgstr ""
 
 #. description of font in fonts/western_light
-#: inkstitch-fonts-metadata.py:204
+#: inkstitch-fonts-metadata.py:214
 msgid "Western light is a light fill western style font."
 msgstr ""
 
@@ -1750,7 +1775,7 @@ msgid "default: 3x fill row spacing"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:690 lib/elements/stroke.py:171
-#: lib/extensions/element_info.py:134 lib/extensions/element_info.py:190
+#: lib/extensions/element_info.py:144 lib/extensions/element_info.py:203
 msgid "Max stitch length"
 msgstr ""
 
@@ -2253,7 +2278,7 @@ msgid "Running Stitch / Bean Stitch"
 msgstr ""
 
 #: lib/elements/stroke.py:66 lib/lettering/categories.py:26
-#: inx/inkstitch_lettering_generate_json.inx:57
+#: inx/inkstitch_lettering_generate_json.inx:58
 msgid "Ripple Stitch"
 msgstr ""
 
@@ -2682,66 +2707,66 @@ msgstr ""
 msgid "https://inkstitch.org/docs/troubleshoot/#element-info"
 msgstr ""
 
-#: lib/extensions/element_info.py:56 lib/extensions/sew_stack_editor.py:223
+#: lib/extensions/element_info.py:60 lib/extensions/sew_stack_editor.py:223
 #: inx/inkstitch_select_elements.inx:15
 msgid "Type"
 msgstr "Τύπος"
 
-#: lib/extensions/element_info.py:62
+#: lib/extensions/element_info.py:67
 msgid "Fill Method"
 msgstr "Μέθοδος γεμίσματος"
 
-#: lib/extensions/element_info.py:69
+#: lib/extensions/element_info.py:75
 msgid "Satin Method"
 msgstr ""
 
-#: lib/extensions/element_info.py:76
+#: lib/extensions/element_info.py:83
 msgid "Stroke Method"
 msgstr ""
 
-#: lib/extensions/element_info.py:81 lib/extensions/element_info.py:158
+#: lib/extensions/element_info.py:88 lib/extensions/element_info.py:171
 msgid "Dimensions (mm)"
 msgstr "Διαστάσεις (χλστ.)"
 
-#: lib/extensions/element_info.py:107 lib/extensions/element_info.py:122
-#: lib/extensions/element_info.py:182 lib/extensions/thread_list.py:54
+#: lib/extensions/element_info.py:114 lib/extensions/element_info.py:130
+#: lib/extensions/element_info.py:195 lib/extensions/thread_list.py:54
 msgid "Stitches"
 msgstr ""
 
-#: lib/extensions/element_info.py:112 lib/extensions/element_info.py:126
+#: lib/extensions/element_info.py:119 lib/extensions/element_info.py:134
 msgid "Small stitches (removed)"
 msgstr ""
 
-#: lib/extensions/element_info.py:130 lib/extensions/element_info.py:170
+#: lib/extensions/element_info.py:139 lib/extensions/element_info.py:183
 msgid "Jumps"
 msgstr ""
 
-#: lib/extensions/element_info.py:138 lib/extensions/element_info.py:186
+#: lib/extensions/element_info.py:149 lib/extensions/element_info.py:199
 msgid "Min stitch length"
 msgstr ""
 
-#: lib/extensions/element_info.py:154
+#: lib/extensions/element_info.py:167
 msgid "All Selected Elements"
 msgstr "Όλα τα επιλεγμένα στοιχεία"
 
-#: lib/extensions/element_info.py:162 lib/extensions/thread_list.py:57
+#: lib/extensions/element_info.py:175 lib/extensions/thread_list.py:57
 #: lib/gui/satin_multicolor/colorize_panel.py:77
 msgid "Colors"
 msgstr "Χρώματα"
 
-#: lib/extensions/element_info.py:166
+#: lib/extensions/element_info.py:179
 msgid "Color Changes"
 msgstr ""
 
-#: lib/extensions/element_info.py:174
+#: lib/extensions/element_info.py:187
 msgid "Trims"
 msgstr ""
 
-#: lib/extensions/element_info.py:178
+#: lib/extensions/element_info.py:191
 msgid "Stops"
 msgstr "Διακοπές"
 
-#: lib/extensions/element_info.py:194
+#: lib/extensions/element_info.py:207
 msgid "Filter stitches smaller than (mm)"
 msgstr ""
 
@@ -3158,7 +3183,7 @@ msgstr "Τίτλος"
 
 #: lib/extensions/thread_list.py:51 lib/gui/edit_json/settings_panel.py:207
 #: lib/gui/lettering/option_panel.py:36
-#: inx/inkstitch_lettering_generate_json.inx:101
+#: inx/inkstitch_lettering_generate_json.inx:102
 msgid "Size"
 msgstr "Μέγεθος"
 
@@ -3248,7 +3273,7 @@ msgid "threadlist"
 msgstr ""
 
 #: lib/gui/abort_message.py:38 lib/gui/apply_palette.py:64
-#: lib/gui/edit_json/help_panel.py:27 lib/gui/element_info.py:56
+#: lib/gui/edit_json/help_panel.py:27 lib/gui/element_info.py:57
 #: lib/gui/lettering_font_sample.py:96
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
@@ -3291,7 +3316,7 @@ msgid "Apply"
 msgstr "Εφαρμογή"
 
 #: lib/gui/apply_palette.py:49 lib/gui/edit_json/main_panel.py:75
-#: lib/gui/element_info.py:41 lib/gui/lettering/main_panel.py:47
+#: lib/gui/element_info.py:42 lib/gui/lettering/main_panel.py:47
 #: lib/gui/lettering_font_sample.py:81
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
@@ -3307,7 +3332,7 @@ msgstr "Εφαρμογή"
 #: inx/inkstitch_lettering_along_path.inx:25
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
 #: inx/inkstitch_lettering_force_lock_stitches.inx:22
-#: inx/inkstitch_lettering_generate_json.inx:143
+#: inx/inkstitch_lettering_generate_json.inx:144
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
 #: inx/inkstitch_letters_to_font.inx:60 inx/inkstitch_outline.inx:25
@@ -3337,7 +3362,7 @@ msgid "Feature to verify or update font information for an existing font."
 msgstr ""
 
 #: lib/gui/edit_json/help_panel.py:33 lib/gui/edit_json/help_panel.py:34
-#: inx/inkstitch_lettering_generate_json.inx:149
+#: inx/inkstitch_lettering_generate_json.inx:150
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr ""
 
@@ -3386,7 +3411,7 @@ msgid "Default Variant"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:105
-#: inx/inkstitch_lettering_generate_json.inx:28
+#: inx/inkstitch_lettering_generate_json.inx:29
 msgid "Text direction"
 msgstr ""
 
@@ -3399,7 +3424,7 @@ msgid "Right to Left"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:109
-#: inx/inkstitch_lettering_generate_json.inx:42
+#: inx/inkstitch_lettering_generate_json.inx:43
 msgid "Keywords"
 msgstr "Λέξεις-κλειδιά"
 
@@ -3416,22 +3441,22 @@ msgid "Letter case"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:159
-#: inx/inkstitch_lettering_generate_json.inx:96
+#: inx/inkstitch_lettering_generate_json.inx:97
 msgid "Upper"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:159
-#: inx/inkstitch_lettering_generate_json.inx:97
+#: inx/inkstitch_lettering_generate_json.inx:98
 msgid "Lower"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:162
-#: inx/inkstitch_lettering_generate_json.inx:88
+#: inx/inkstitch_lettering_generate_json.inx:89
 msgid "Reversible"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:169
-#: inx/inkstitch_lettering_generate_json.inx:91
+#: inx/inkstitch_lettering_generate_json.inx:92
 msgid "Sortable"
 msgstr ""
 
@@ -3440,12 +3465,12 @@ msgid "Combine Indices"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:213
-#: inx/inkstitch_lettering_generate_json.inx:102
+#: inx/inkstitch_lettering_generate_json.inx:103
 msgid "Min Scale"
 msgstr "Ελάχ. κλίμακα"
 
 #: lib/gui/edit_json/settings_panel.py:220
-#: inx/inkstitch_lettering_generate_json.inx:103
+#: inx/inkstitch_lettering_generate_json.inx:104
 msgid "Max Scale"
 msgstr "Μέγ. κλίμακα"
 
@@ -3461,30 +3486,34 @@ msgstr ""
 msgid "Horizontal advance x space"
 msgstr ""
 
-#: lib/gui/element_info.py:17 inx/inkstitch_element_info.inx:3
+#: lib/gui/element_info.py:18 inx/inkstitch_element_info.inx:3
 msgid "Element Info"
 msgstr "Πληροφορίες στοιχείου"
 
-#: lib/gui/element_info.py:28 lib/gui/simulator/view_panel.py:120
+#: lib/gui/element_info.py:29 lib/gui/simulator/view_panel.py:120
 msgid "Info"
 msgstr "Πληροφορίες"
 
-#: lib/gui/edit_json/settings_panel.py:87 lib/gui/element_info.py:33
+#: lib/gui/edit_json/settings_panel.py:87 lib/gui/element_info.py:34
 #: inx/inkstitch_lettering_generate_json.inx:20
 msgid "Name"
 msgstr "Όνομα"
 
-#: lib/gui/element_info.py:34
+#: lib/gui/element_info.py:35
 msgid "Value"
 msgstr "Τιμή"
 
-#: lib/gui/element_info.py:48
+#: lib/gui/element_info.py:49
 msgid "This extension informs about various parameters of selected stitch elements."
 msgstr ""
 
-#: lib/gui/element_info.py:62 lib/gui/element_info.py:63
+#: lib/gui/element_info.py:63 lib/gui/element_info.py:64
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
 msgstr "https://inkstitch.org/docs/troubleshoot#element-info"
+
+#: lib/gui/element_info.py:71
+msgid "Click on Copy to copy the information in the Clipboard"
+msgstr ""
 
 #: lib/gui/lettering/help_panel.py:19
 msgid "Add text to your design."
@@ -3638,7 +3667,7 @@ msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:74 lib/gui/lettering_font_sample.py:38
 #: lib/gui/simulator/view_panel.py:129 print/templates/ui.html:5
-#: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:77
+#: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:78
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
 msgstr "Ρυθμίσεις"
@@ -4260,31 +4289,31 @@ msgstr ""
 msgid "An error occurred while rendering the stitch plan:"
 msgstr ""
 
-#: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:46
+#: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:47
 msgid "Applique"
 msgstr ""
 
-#: lib/lettering/categories.py:20 inx/inkstitch_lettering_generate_json.inx:47
+#: lib/lettering/categories.py:20 inx/inkstitch_lettering_generate_json.inx:48
 msgid "Crossstitch"
 msgstr ""
 
-#: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:48
+#: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:49
 msgid "Display"
 msgstr ""
 
-#: lib/lettering/categories.py:22 inx/inkstitch_lettering_generate_json.inx:51
+#: lib/lettering/categories.py:22 inx/inkstitch_lettering_generate_json.inx:52
 msgid "Handwriting"
 msgstr ""
 
-#: lib/lettering/categories.py:23 inx/inkstitch_lettering_generate_json.inx:52
+#: lib/lettering/categories.py:23 inx/inkstitch_lettering_generate_json.inx:53
 msgid "Italic"
 msgstr "Πλάγια"
 
-#: lib/lettering/categories.py:24 inx/inkstitch_lettering_generate_json.inx:53
+#: lib/lettering/categories.py:24 inx/inkstitch_lettering_generate_json.inx:54
 msgid "Monogram"
 msgstr "Μονόγραμμα"
 
-#: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:54
+#: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:55
 msgid "Multicolor"
 msgstr ""
 
@@ -4293,49 +4322,49 @@ msgstr ""
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:67
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:68
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:82
-#: inx/inkstitch_lettering_generate_json.inx:58
+#: inx/inkstitch_lettering_generate_json.inx:59
 #: inx/inkstitch_select_elements.inx:13
 msgid "Running Stitch"
 msgstr ""
 
-#: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:59
+#: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:60
 msgid "Sans Serif"
 msgstr ""
 
-#: lib/lettering/categories.py:29 inx/inkstitch_lettering_generate_json.inx:60
+#: lib/lettering/categories.py:29 inx/inkstitch_lettering_generate_json.inx:61
 msgid "Serif"
 msgstr ""
 
-#: lib/lettering/categories.py:30 inx/inkstitch_lettering_generate_json.inx:63
+#: lib/lettering/categories.py:30 inx/inkstitch_lettering_generate_json.inx:64
 #: inx/inkstitch_tartan.inx:3
 msgid "Tartan"
 msgstr ""
 
-#: lib/lettering/categories.py:31 inx/inkstitch_lettering_generate_json.inx:64
+#: lib/lettering/categories.py:31 inx/inkstitch_lettering_generate_json.inx:65
 msgid "Tiny"
 msgstr ""
 
-#: lib/lettering/categories.py:32 inx/inkstitch_lettering_generate_json.inx:65
+#: lib/lettering/categories.py:32 inx/inkstitch_lettering_generate_json.inx:66
 msgid "Script: arabic"
 msgstr ""
 
-#: lib/lettering/categories.py:33 inx/inkstitch_lettering_generate_json.inx:66
+#: lib/lettering/categories.py:33 inx/inkstitch_lettering_generate_json.inx:67
 msgid "Script: cyrillic"
 msgstr ""
 
-#: lib/lettering/categories.py:34 inx/inkstitch_lettering_generate_json.inx:69
+#: lib/lettering/categories.py:34 inx/inkstitch_lettering_generate_json.inx:70
 msgid "Script: greek"
 msgstr ""
 
-#: lib/lettering/categories.py:35 inx/inkstitch_lettering_generate_json.inx:70
+#: lib/lettering/categories.py:35 inx/inkstitch_lettering_generate_json.inx:71
 msgid "Script: hebrew"
 msgstr ""
 
-#: lib/lettering/categories.py:36 inx/inkstitch_lettering_generate_json.inx:71
+#: lib/lettering/categories.py:36 inx/inkstitch_lettering_generate_json.inx:72
 msgid "Script: japanese"
 msgstr ""
 
-#: lib/lettering/categories.py:37 inx/inkstitch_lettering_generate_json.inx:72
+#: lib/lettering/categories.py:37 inx/inkstitch_lettering_generate_json.inx:73
 msgid "Script: latin"
 msgstr ""
 
@@ -4931,7 +4960,7 @@ msgstr ""
 msgid "Yes"
 msgstr "Ναι"
 
-#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:95
+#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:96
 #: inx/inkstitch_letters_to_font.inx:57
 msgid "No"
 msgstr "Όχι"
@@ -5322,7 +5351,7 @@ msgstr ""
 #: inx/inkstitch_lettering_along_path.inx:37
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:33
-#: inx/inkstitch_lettering_generate_json.inx:147
+#: inx/inkstitch_lettering_generate_json.inx:148
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
 #: inx/inkstitch_letters_to_font.inx:75 inx/inkstitch_outline.inx:28
@@ -6786,7 +6815,7 @@ msgstr ""
 #: inx/inkstitch_lettering_generate_json.inx:12
 #: inx/inkstitch_lettering_remove_kerning.inx:33
 #: inx/inkstitch_lettering_set_color_sort_index.inx:30
-#: inx/inkstitch_lettering_svg_font_to_layers.inx:14
+#: inx/inkstitch_lettering_svg_font_to_layers.inx:16
 #: inx/inkstitch_letters_to_font.inx:86
 msgid "Font Management"
 msgstr "Διαχείριση γραμματοσειρών"
@@ -6855,114 +6884,114 @@ msgstr ""
 msgid "Font info"
 msgstr "Πληροφορίες γραμματοσειράς"
 
-#: inx/inkstitch_lettering_generate_json.inx:22
+#: inx/inkstitch_lettering_generate_json.inx:23
 msgid "Default variant"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:29
+#: inx/inkstitch_lettering_generate_json.inx:30
 msgid "Left to right"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:30
+#: inx/inkstitch_lettering_generate_json.inx:31
 msgid "Right to left"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:36
+#: inx/inkstitch_lettering_generate_json.inx:37
 msgid "SVG Font File"
 msgstr "Αρχείο γραμματοσειράς SVG"
 
-#: inx/inkstitch_lettering_generate_json.inx:80
+#: inx/inkstitch_lettering_generate_json.inx:81
 msgid "Default Glyph"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:86
+#: inx/inkstitch_lettering_generate_json.inx:87
 msgid "Autoroute Satin"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:86
+#: inx/inkstitch_lettering_generate_json.inx:87
 msgid "Disable if you defined manual routing in your font."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:88
+#: inx/inkstitch_lettering_generate_json.inx:89
 msgid "If disabled back and forth stitching will not be possile for this font."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:91
+#: inx/inkstitch_lettering_generate_json.inx:92
 msgid "If disabled color sorting will be disabled for this font. Color sorting needs color_sort_index indicators within the font."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:93
+#: inx/inkstitch_lettering_generate_json.inx:94
 msgid "Combine indices"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:93
+#: inx/inkstitch_lettering_generate_json.inx:94
 msgid "When color sorting, combine elements with this color indices (comma separated)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:94
+#: inx/inkstitch_lettering_generate_json.inx:95
 msgid "Force letter case"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:108
 #: inx/inkstitch_lettering_generate_json.inx:109
+#: inx/inkstitch_lettering_generate_json.inx:110
 msgid "Kerning"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:110
+#: inx/inkstitch_lettering_generate_json.inx:111
 msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them). If the kerning information cannot be found, these values will apply automatically."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:118
-#: inx/inkstitch_lettering_generate_json.inx:126
-#: inx/inkstitch_lettering_generate_json.inx:134
+#: inx/inkstitch_lettering_generate_json.inx:119
+#: inx/inkstitch_lettering_generate_json.inx:127
+#: inx/inkstitch_lettering_generate_json.inx:135
 msgid "Force"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:118
+#: inx/inkstitch_lettering_generate_json.inx:119
 msgid "Overwrite leading information from font file."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:120
+#: inx/inkstitch_lettering_generate_json.inx:121
 msgid "Leading (px)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:120
+#: inx/inkstitch_lettering_generate_json.inx:121
 msgid "Line height (default: 100)"
 msgstr "Ύψος γραμμής (προεπιλογή: 100)"
 
-#: inx/inkstitch_lettering_generate_json.inx:126
+#: inx/inkstitch_lettering_generate_json.inx:127
 msgid "Overwrite word spacing information from font file."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:128
+#: inx/inkstitch_lettering_generate_json.inx:129
 msgid "Word spacing (px)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:128
+#: inx/inkstitch_lettering_generate_json.inx:129
 msgid "Space character width (default: 20)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:134
+#: inx/inkstitch_lettering_generate_json.inx:135
 msgid "Overwrite letter spacing information from font file."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:136
+#: inx/inkstitch_lettering_generate_json.inx:137
 msgid "Letter spacing (px)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:136
+#: inx/inkstitch_lettering_generate_json.inx:137
 msgid "Letter spacing (default: 100)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:144
+#: inx/inkstitch_lettering_generate_json.inx:145
 msgid "Generates font.json which can be used by the lettering tool."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:145
+#: inx/inkstitch_lettering_generate_json.inx:146
 msgid "The generated file can be updated with Extensions > Ink/Stitch > Font Management > Edit JSON."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:148
+#: inx/inkstitch_lettering_generate_json.inx:149
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
 msgstr ""
 
@@ -7022,7 +7051,15 @@ msgstr ""
 msgid "Stop after"
 msgstr ""
 
-#: inx/inkstitch_lettering_svg_font_to_layers.inx:11
+#: inx/inkstitch_lettering_svg_font_to_layers.inx:7
+msgid "Use this character to define size"
+msgstr ""
+
+#: inx/inkstitch_lettering_svg_font_to_layers.inx:8
+msgid "Height of reference character (mm)"
+msgstr ""
+
+#: inx/inkstitch_lettering_svg_font_to_layers.inx:13
 msgid "Converts a svg font to glyph layers"
 msgstr ""
 
