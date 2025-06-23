@@ -28,10 +28,8 @@ info_year=$( date "+%Y" )
 ARCH="$(uname -m)"
 
 
-echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
 echo "MY_SECRETS_AVAILABLE=${MY_SECRETS_AVAILABLE}"
-echo "USE_AUTHORIZED_SIGNING=${USE_AUTHORIZED_SIGNING}"
-echo "SECRETS_AVAILABLE: ${SECRETS_AVAILABLE}"
+echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
 
 echo "BUILD=${BUILD}"
 echo "ARCH=${ARCH}"
@@ -48,7 +46,7 @@ pyinstaller_args+="--log-level $MY_PYINSTALLER_LOG_LEVEL "
 if [ "$BUILD" = "osx" ]; then
     pyinstaller_args+="--osx-bundle-identifier org.inkstitch.app "
     pyinstaller_args+="-i images/inkstitch/mac/inkstitch.icns "
-    if [[ "${SECRETS_AVAILABLE}" == "true" ]]; then
+    if [[ "${MY_SECRETS_AVAILABLE}" == "true" ]]; then
         echo "Using authorized signing keys for (macOS)."
         bash bin/import-macos-keys
     else

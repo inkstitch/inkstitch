@@ -169,10 +169,10 @@ jobs:
           ls -lR artifacts
 
         env:
+          # MY_VERSION, MY_BREAK_ON, MY_VERBOSITY_LOG_LEVEL,
+          # MY_SECRETS_AVAILABLE, MY_USE_AUTHORIZED_SIGNING
           BUILD: osx
           VERSION: ${{ env.MY_VERSION }}
-          SECRETS_AVAILABLE: ${{ env.MY_SECRETS_AVAILABLE }}
-          USE_AUTHORIZED_SIGNING: ${{ env.MY_USE_AUTHORIZED_SIGNING }}
 
           # load secrets for bash script
           MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
