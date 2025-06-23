@@ -27,6 +27,12 @@ on:
         default: '1'  # default value
         type: string
 
+      secrets_available: # ref: inputs.secrets_available
+        description: 'If secrets are available, set to true'
+        required: false
+        default: 'false'  # default value
+        type: string
+
       use_authorized_signing:
         description: 'Use authorized signing for the build.'
         required: false
@@ -45,6 +51,7 @@ jobs:
       MY_VERSION: ${{ inputs.version }}
       MY_BREAK_ON: ${{ inputs.break_on }}
       MY_VERBOSITY_LOG_LEVEL: ${{ inputs.verbosity_log_level }}  # set verbosity log level, default is 1 (INFO)
+      MY_SECRETS_AVAILABLE: ${{ inputs.secrets_available }}
       MY_USE_AUTHORIZED_SIGNING: ${{ inputs.use_authorized_signing }}
 
     # define the OS of the runner
@@ -83,11 +90,13 @@ jobs:
           echo "inputs.version: ${{ inputs.version }}"
           echo "inputs.break_on: ${{ inputs.break_on }}"
           echo "inputs.verbosity_log_level: ${{ inputs.verbosity_log_level }}"
+          echo "inputs.secrets_available: ${{ inputs.secrets_available }}"
           echo "inputs.use_authorized_signing: ${{ inputs.use_authorized_signing }}"
 
           echo "MY_VERSION: $MY_VERSION"
           echo "MY_BREAK_ON: $MY_BREAK_ON"
           echo "MY_VERBOSITY_LOG_LEVEL: $MY_VERBOSITY_LOG_LEVEL"
+          echo "MY_SECRETS_AVAILABLE: $MY_SECRETS_AVAILABLE"
           echo "MY_USE_AUTHORIZED_SIGNING: $MY_USE_AUTHORIZED_SIGNING"
 
           echo "secrets.SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN }}"
