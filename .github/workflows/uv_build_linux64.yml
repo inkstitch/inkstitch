@@ -159,7 +159,7 @@ jobs:
           type python  # check python version
 
           echo "secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}" # *** if available
-          make dist   # requires correct BUILD !!!
+          make dist   # bin/build-python, bin/build-distribution-archives
 
           # see artifacts directory contents
           echo "-------------------------------------- artifacts directory:"
@@ -168,6 +168,9 @@ jobs:
         env:
           BUILD: linux
           VERSION: ${{ env.MY_VERSION }}
+          SECRETS_AVAILABLE: ${{ env.MY_SECRETS_AVAILABLE }}
+          USE_AUTHORIZED_SIGNING: ${{ env.MY_USE_AUTHORIZED_SIGNING }}
+
           # load secrets for bash script
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
 

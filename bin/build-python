@@ -27,9 +27,12 @@ fi
 info_year=$( date "+%Y" )
 ARCH="$(uname -m)"
 
-MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING:-false}
 
 echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
+echo "MY_SECRETS_AVAILABLE=${MY_SECRETS_AVAILABLE}"
+echo "USE_AUTHORIZED_SIGNING=${USE_AUTHORIZED_SIGNING}"
+echo "SECRETS_AVAILABLE: ${SECRETS_AVAILABLE}"
+
 echo "BUILD=${BUILD}"
 echo "ARCH=${ARCH}"
 echo "VERSION=${VERSION}"  # may be set by the Makefile otherwise empty ??? why
@@ -45,8 +48,8 @@ pyinstaller_args+="--log-level $MY_PYINSTALLER_LOG_LEVEL "
 if [ "$BUILD" = "osx" ]; then
     pyinstaller_args+="--osx-bundle-identifier org.inkstitch.app "
     pyinstaller_args+="-i images/inkstitch/mac/inkstitch.icns "
-    if [[ "${MY_USE_AUTHORIZED_SIGNING}" == "true" ]]; then
-        echo "Using authorized signing keys for Release Build (macOS)."
+    if [[ "${SECRETS_AVAILABLE}" == "true" ]]; then
+        echo "Using authorized signing keys for (macOS)."
         bash bin/import-macos-keys
     else
         echo "Not using authorized signing keys. Likely a Dev or Local Build."

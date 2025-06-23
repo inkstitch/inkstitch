@@ -48,6 +48,10 @@ OS=$(echo ${BUILD:-$(uname)} | tr '[:upper:]' '[:lower:]')
 ARCH="$(uname -m)"
 
 echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
+echo "MY_SECRETS_AVAILABLE=${MY_SECRETS_AVAILABLE}"
+echo "USE_AUTHORIZED_SIGNING=${USE_AUTHORIZED_SIGNING}"
+echo "SECRETS_AVAILABLE: ${SECRETS_AVAILABLE}"
+
 echo "BUILD=${BUILD}"
 echo "ARCH=${ARCH}"
 echo "OS=${OS}"
@@ -200,7 +204,8 @@ if [ "$BUILD" = "osx" ]; then
                         --install-location ${PKG_INSTALL_PATH}inkstitch.app \
                         artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.pkg
         # if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+ || $NOTARIZE_DEVELOPMENT_BUILDS == true ]]; then
-        if true; then  # always notarize for now
+        if [[ "${MY_USE_AUTHORIZED_SIGNING}" == "true" ]]; then
+
             echo "Notary starting"
             echo "Adding keychain item for notarytool"
             xcrun notarytool store-credentials "inkstitch-profile"  \

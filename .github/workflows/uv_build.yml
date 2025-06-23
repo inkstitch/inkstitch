@@ -208,6 +208,7 @@ jobs:
           if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" ]]; then
             MY_SECRETS_AVAILABLE="true"
 
+            # we have limited number of SignPath.io and notarize requests, so use it only for release builds
             if [[ "${{ github.event.inputs.sign }}" == "true" ]]; then
               MY_USE_AUTHORIZED_SIGNING="true"  # use authorized signing (win SignPath.io, mac notarize)
             else
@@ -225,7 +226,7 @@ jobs:
                 "${GITHUB_REF_TYPE}" == "tag" && \
                 "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
 
-            MY_IS_RELEASE_BUILD="false"  # this is a release build (flag only, may be changed in UI later)
+            MY_IS_RELEASE_BUILD="false"  # manually turn on (will be changed in UI after tests)
 
             MY_TAG_NAME="${GITHUB_REF_NAME}"  # v* tag name
             MY_BUILD_TYPE="all"  # overwrite build to "all" platforms

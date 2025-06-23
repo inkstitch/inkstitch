@@ -162,7 +162,7 @@ jobs:
           echo "secrets.INKSTITCH_NOTARIZE_PASS: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}" # *** if available
           echo "secrets.KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}" # *** if available
 
-          make dist
+          make dist  # bin/build-python, bin/build-distribution-archives
 
           # see artifacts directory contents
           echo "-------------------------------------- artifacts directory:"
@@ -171,6 +171,9 @@ jobs:
         env:
           BUILD: osx
           VERSION: ${{ env.MY_VERSION }}
+          SECRETS_AVAILABLE: ${{ env.MY_SECRETS_AVAILABLE }}
+          USE_AUTHORIZED_SIGNING: ${{ env.MY_USE_AUTHORIZED_SIGNING }}
+
           # load secrets for bash script
           MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
           MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
