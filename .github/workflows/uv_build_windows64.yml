@@ -2,7 +2,7 @@ name: UV Windows64 build
 
 ### !!!  Minimize SignPath.io usage
 ###    - it seems that SignPath.io has restrictions on the number of requests to sign per some period
-###    - so we use it only for release builds, not for development builds
+###    - so we use it for release builds, not for development builds
 
 # when the workflow should run
 on:
@@ -112,9 +112,6 @@ jobs:
             exit 1
           fi
 
-          # echo "-------------------------------------- bin/uv/generate pyproject.toml"
-          # bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
-
           cat pyproject.toml
 
           uv sync --inexact # install dependencies from pyproject.toml & keep installed packages
@@ -139,10 +136,13 @@ jobs:
           . .venv/Scripts/activate  # activate the virtual environment
           type python  # check python version
 
-          make dist
+          make dist # bin/build-python, bin/build-distribution-archives
+
         env:
           BUILD: windows
           VERSION: ${{ env.MY_VERSION }}
+          SECRETS_AVAILABLE: ${{ env.MY_SECRETS_AVAILABLE }}
+          USE_AUTHORIZED_SIGNING: ${{ env.MY_USE_AUTHORIZED_SIGNING }}
 
 
       - name: Set signing policy to release - tag v*
