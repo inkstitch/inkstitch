@@ -139,10 +139,10 @@ jobs:
           make dist # bin/build-python, bin/build-distribution-archives
 
         env:
+          # MY_VERSION, MY_BREAK_ON, MY_VERBOSITY_LOG_LEVEL,
+          # MY_SECRETS_AVAILABLE, MY_USE_AUTHORIZED_SIGNING
           BUILD: windows
           VERSION: ${{ env.MY_VERSION }}
-          SECRETS_AVAILABLE: ${{ env.MY_SECRETS_AVAILABLE }}
-          USE_AUTHORIZED_SIGNING: ${{ env.MY_USE_AUTHORIZED_SIGNING }}
 
 
       - name: Set signing policy to release - tag v*
