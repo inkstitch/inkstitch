@@ -139,14 +139,14 @@ On en arrive à la phase ou il faut passer d'une numérisation automatique à de
 
 ### Cas d'une fonte en point droits
 Selon la fonte de départ, le travail à faire est très différent. 
-[running_stitch_samples](/assets/images/tutorials/font_creation/running_stitch-sample.png)
+![running_stitch_samples](/assets/images/tutorials/font_creation/running_stitch_sample.png)
 Pour la police du bas, utiliser les contours des lettres pour créer les points droits donne un résultat correct, mais pas vraiment pour la police du haut. 
 
 
 S'il n'est pas possible d'utiliser les contours des lettres, soit on redessine manuellement les lettres, ou l'utilise l'extension 
 `Extensions > Ink/Stitch > Outils traits > Remplissage en  trait`, avec probablements des retouches à faire.
 Dans tous les cas, il faudra traiter la questions des sauts de fil, aussi bien à l'intérieur des lettres qu'entre les lettres.
-Il faudra spour cela séparer (Inkscape > Chemin > Séparer) chaque chemin (à faire globalement sur tous les groupes).
+Il faudra pour cela séparer (Inkscape > Chemin > Séparer) chaque chemin (à faire globalement sur tous les groupes).
 
 Remarque : il existe de très rares polices "singleline" svg qui donnent directement un resultat exploitable en point droit. Plus d'infos [ici](https://cutlings.datafil.no/single-line-fonts-in-inkscape-revisited/)
 
@@ -154,13 +154,16 @@ Remarque : il existe de très rares polices "singleline" svg qui donnent directe
 
 ### Cas d'une fonte en colonne satin
 
+
 ### La question des sauts de fil et des commandes de coupe
 Faut il ajouter des commandes de coupe ? 
 Chasser les sauts de fils inutiles à l'interieur des lettres
 Assurer qu'il y a bien des noeuds là où ils sont necessaires, mais pas là ou il n'en faut pas
 
+### Les lettres accentuées
+
 ### Influence des préférences de l'utilisateur
-ou comment faire en sorte qu'il n'y en ait pas en donnant des valeurs locales à la longueur minimum de point (indispensable si on prévoit une petite fonte) et a la longueur minimum de saut.
+ou comment faire en sorte qu'il n'y en ait pas en donnant des valeurs locales à la longueur minimum de point (indispensable par ailleurs si on prévoit une petite fonte) et à la longueur minimum de saut.
 
 ###  Les tests de broderie
 
@@ -170,11 +173,12 @@ ou comment faire en sorte qu'il n'y en ait pas en donnant des valeurs locales à
 ### Les retouches sur le crénage
 
 ### Ajout ou Suppression de glyphes
-Si l'on ajoute ou supprime des glyphes, il faut impérativement lancer l'extension Modifier le fichier JSON afin que la liste des glyphes soit mise à jour. Il est possible qu'il faille ajouter des informations de crénages, si le glyphe n'etait pas dans le fichier de fonte svg initial. Pour cette raison, en cas de doute, il vaut mieux embarquer plus de glyphes que pas assez !
+Si l'on ajoute ou supprime des glyphes, il faut impérativement lancer l'extension Modifier le fichier JSON afin que la liste des glyphes soit mise à jour. Il est possible qu'il faille ajouter des informations de crénages, si le glyphe n'etait pas dans le fichier de fonte svg initial. Pour cette raison, en cas de doute, il vaut mieux au départ embarquer trop de glyphes que pas assez !
+
 
 ### Les fontes multicolores
 Si l'on souhaite que le résultat du lettrage puisse être trié selon les couleurs, il  y a deux manipulations à faire
-- le prévoir dans le fichier font.json (soit à la création soit en éditant le  fichier), la fonte doit être dite "triable".
+- le prévoir dans le fichier font.json (soit à la création soit en éditant le  fichier), la fonte doit être déclarée comme "triable".
 - attacher à chaque chemin un [index de couleur](https://inkstitch.org/fr/docs/font-tools/#set-color-index). Dans la plupart des cas (toutes les lettres ont les mêmes couleurs dans le même ordre , tous les chemins d'une couleur donné à l'interieur d'un glyphe sont consécutifs) on peut tout afficher dans tous les calques, choisir un des glyphes, selectionner le premier objet  à broder, sélectionner tous les objets de la mêmme couleur(selectionner même couleur de fond ou selectionner même couleur de contour,ou les deux séquentiellement) et leur attribuer l'index un, puis choisir un objet de la prochaine couleur à broder, sélectionner tous les objets de la même couleur, leur attribuer l'index deux, etc.... Dans les cas plus compliqués il faudra réflechir un peu plus pour déterminer les index.
 
 
@@ -185,7 +189,7 @@ Si l'on souhaite que le résultat du lettrage puisse être trié selon les coule
 
 ## limites de l'outil de lettrage
 on ne peut pas (encore) utiliser toutes les fonctionalités d'ink/stitch dans les fichiers de calques,par exemple  les clones, les effets de chemins  ne sontpas férées correctement par le lettrage
-on ne peut pas (encore) écrire une police  pour toutes les langues du monde
+on ne peut pas (encore) écrire une police  pour toutes les langues du monde, en particulier aujourd'hui, seules les variantes contextuelles de l'alphabet arabe sont reconnues
 
 ## les petits plus 
 il est possible d'avoir des calques  multiglyphes, pas seulement  pour les ligatures 
