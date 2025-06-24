@@ -87,6 +87,9 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         # This forces a jump at the start of the design and after each trim,
         # even if we're close enough not to need one.
         "full_jump": True,
+
+        # defaults to False in pyembroidery (see https://github.com/EmbroidePy/pyembroidery/issues/188)
+        "trims": True,
     })
 
     if not file_path.endswith(('.col', '.edr', '.inf')):
