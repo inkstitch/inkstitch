@@ -163,7 +163,17 @@ Vous pouvez aussi utiliser
 :thinking: A partir d'ici c'est incomplet et dans le désordre. 
 ## Passer à une fonte réellemment brodable
 On en arrive à la phase ou il faut passer d'une numérisation automatique à des choix pertinents pour une belle broderie.
+La problèmatique est quasiment la même que pour toute conception de broderie.
 
+Il est **très fortement recommmmandé de traiter entièrement quelques lettres**  par exemple  A, H, M , G, o, a, p pour avoir des lettres aux dessins assez différents, et de vérifier que tout se passe bien  à la broderie. C'est le bon moment de décider par exemple comment [traiter les pointes](/fr/tutorials/satin-edges/) d'une fonte. en colonne satin. Répondre à cette question rapidement vous permettra ensuite d'avoir la même approche sur toutes les pointes de la fonte. Quels paramètres vous semblent bien convenir par exemple quelle densité, quelle compensation. Pas trop d'inquiétude à ce sujet, il sera facile vers la fin du processus d'uniformiser les paramètres et de les modifier globalement pour l'ensemble de la police.
+
+### Les sauts de fils
+Il y aura forcément des sauts de fils, mais à vous de faire en sorte qu'il y en ait le moins possible. Avant et après chaque saut, la machine fait un point d'arrêt, ce qui la ralentit et a de plus tendance à déformer la broderie. Evitez les donc autant que possible. Si la fonte doit être intégrée à Ink/Stitch, prenez en compte le fait que tout le monde n'a pas une machine qui coupe les fils, donc évitez les grands déplacements  entre deux lettres, surtout si la machine vient à broder par dessus. Souvent, l'on commence une lettre en bas à gauche et on la termine en bas à droit justement pour eviter cela. 
+Si vous n'êtes pas très familier avec les notions de points  d'arrêts et de saut de fil, [la documentation est là](/fr/docs/stitches/lock-stitches/).
+
+
+### Les commandes de coupe : 
+Le lettrage d'Ink/Stitch permet  à l'utilisateur d'ajouter s'il le souhaite des commmandes de coupe après chaque lettre, ou chaque mot ou chaque ligne. Donc le seul endroit ou il peut être interessant que vous en mettiez c'est à l'intérieur d'une lettre, quand celle-ci est composée de plusieurs morceaux
 ### Cas d'une fonte en point droits
 Selon la fonte de départ, le travail à faire est très différent. 
 
@@ -174,15 +184,20 @@ Pour la police du bas, utiliser les contours des lettres pour créer les points 
 
 S'il n'est pas possible d'utiliser les contours des lettres, soit on redessine manuellement les lettres, ou l'on utilise l'extension 
 `Extensions > Ink/Stitch > Outils traits > Remplissage en  trait`, avec probablements des retouches à faire.
-Dans tous les cas, il faudra traiter la questions des sauts de fil, aussi bien à l'intérieur des lettres qu'entre les lettres.
-Il faudra pour cela séparer (Inkscape > Chemin > Séparer) chaque chemin (à faire globalement sur tous les groupes).
 
+Dans tous les cas, il faudra traiter la questions des sauts de fil, aussi bien à l'intérieur des lettres qu'entre les lettres.
+Il faudra pour cela séparer (Inkscape > Chemin > Séparer) chaque chemin (à faire globalement sur tous les calques).
+
+Lorsqu'un caractère est composé de plusieurs chemins, il faut prévoir un routage, c'est à dire décider où commence et termine la broderie de chaque lettre, et autant que faire se peut éviter des sauts de fils. Si le dessin de la lettre est connexe, on essayera de n'avoir aucun saut de fil. Vous pouvez faire le outage vous même  ou utiliser l'arrangement automatique de points droits d'inkstitch
 Remarque : il existe de très rares polices "singleline" svg qui donnent directement un resultat exploitable en point droit. Plus d'infos [ici](https://cutlings.datafil.no/single-line-fonts-in-inkscape-revisited/)
 
 ### Cas d'une fonte en remplissage ou en appliqué
 
-### Cas d'une fonte en colonne satin
-
+### Cas d'une fonte en colonnes satins
+Les fontes en colonnes satins  sont en souvent celles qui prennent le plus de temps. Plusieurs outils s'offrent maintenant à nous pour transformer les remplissages en satin. Rien de totalement automatique ici, il faut intervenir sur chaque calque : 
+- l'extension Extensions > Inkstitch > Outils Satin : Remplissage en Satin est probablement le plus rapide. Lorsque la forme de la lettre est très tarabiscotée, ou lorsqu'on maitrise mal l'outil (mais au bout de quelques lettres, vous allez vous améliorer)  on peut commencer par découper la lettres en plusieurs morceaux plus faciles à gerer, à l'aide de l'outil  de construction de forme (tracer quelques chemins là ou vous voulez découper)
+- chacune des méthodes de construction de colonne satin d'Innk/Stitch peut convenir, à vous de choisir.
+- attention à la position des points d'arrêt, sur une pointe de satin ils sont particulièrement visible. A vous de faire en sorte qu'une colonne satin qui est suivie d'un saut ne termine pas sur une de ses extrémité
 
 ### La question des sauts de fil et des commandes de coupe
 Faut il ajouter des commandes de coupe ? 
