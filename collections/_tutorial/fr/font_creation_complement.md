@@ -143,7 +143,7 @@ On suppose un alignement à gauche, et on parle ici de la position sur l'horizon
 - En début de ligne,  le curseur est à 0, le premier caractère "T" est dessiné en démarrant en x =0
 - avant de broder la suite, le curseur est
   * avancé de la valeur horiz_adv_x  associée à T  (la sienne si elle existe, sinon la valeur par défaut)
-  * si le dessin du e, commence un peu avant le bord gauche de la page, on recule le curseur d'autant, si il dessine après cela augmente le curseur
+  * si le dessin du e, commence un peu avant le bord gauche de la page, on recule le curseur d'autant, si il commence après cela augmente le curseur
   * si il y a une valeur hkern pour la paire "Te", on décale d'autant (une valeur positive diminue l’écart, une valeur négative l'augmente)
 
  - et ainsi de suite pour toutes les lettres du mots
@@ -166,7 +166,9 @@ On en arrive à la phase ou il faut passer d'une numérisation automatique à de
 
 ### Cas d'une fonte en point droits
 Selon la fonte de départ, le travail à faire est très différent. 
-![running_stitch_samples](/assets/images/tutorials/font_creation/running_stitch_sample.png)
+
+![running_stitch_samples](/assets/images/tutorials/font_creation/running_stitch-sample.png)
+
 Pour la police du bas, utiliser les contours des lettres pour créer les points droits donne un résultat correct, mais pas vraiment pour la police du haut. 
 
 
@@ -193,6 +195,8 @@ Assurer qu'il y a bien des noeuds là où ils sont necessaires, mais pas là ou 
 ou comment faire en sorte qu'il n'y en ait pas en donnant des valeurs locales à la longueur minimum de point (indispensable par ailleurs si on prévoit une petite fonte) et à la longueur minimum de saut.
 
 ###  Les tests de broderie
+a faire sur quelques lettres au depart avant  de tout digitaliser
+a faire sur toutes les lettres ulterieurement, à taille min et à taille max
 
 
 ### Les outils de simulation
