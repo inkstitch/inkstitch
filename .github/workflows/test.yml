@@ -1,0 +1,47 @@
+name: Test
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11.x"
+          cache: "pip"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          # for wxPython
+          sudo apt install libnotify4 libsdl2-2.0-0
+          # for PyGObject
+          sudo apt install libgirepository1.0-dev
+
+          python -m pip install --upgrade pip
+          python -m pip install wheel
+
+      - name: Install Python dependencies
+        run: |
+          # We're pinning this PyGObject version because newer ones need more system dependencies (girepository-2.0).
+          python -m pip install PyGObject==3.50.0
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
+          python -m pip install -r requirements.txt
+          python -m pip install mypy
+
+      - name: Run tests
+        run: pytest
+
+      - name: Type check with mypy (may fail)
+        run: python -m mypy --output json | python .github/mypy-github-formatter
+        continue-on-error: true
