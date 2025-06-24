@@ -28,7 +28,7 @@ Le texte  est assez long, mais il est recommandé de le lire entièrement avant 
 
 L'objet de ce tutoriel est la création d'une fonte utilisable par le module de lettrage d'Ink/Stitch.
 ## Qu'est ce qu'une fonte pour le lettrage d'Ink/Stitch?`
-<span style="color:blue"> 
+
 Les fichiers qui composent une fonte du lettrage sont regroupés dans un dossier spécifique à la fonte,  qui réside dans le dossier des fontes d'Ink/Stitch (fontes intégrées à Ink/Stitch) où dans un [dossier personnel de fonte](fr/docs/font-tools/#custom-font-directory) pour les fontes personnelles de l'utilisateur.
 
 Chaque dossier de fonte doit comporter au moins deux fichiers :
@@ -47,11 +47,11 @@ Ces noms sont impératifs.... sauf si la fonte comporte beaucoup de glyphes, auq
 Les dossiers des fontes du module de lettrage comportent aussi:
 - un fichier preview.png (généralement 90x1100 px) qui contient l'aperçu brodé du nom de la fonte qui apparait dans le dialogue du lettrage
 - un fichier LICENSE, qui donne des informations sur la LICENSE de la police. Pour qu'une police de broderie créée à partir d'une fonte ttf ou otf ou autre puisse être légalement intégrée au module de lettrage, il faut que la licence de la fonte d'origine le permette. Attention, les licences dites commerciales ne permettent généralement pas l'intégration dans Ink/Stich. C'est en revanche possible pour les fontes sous licence SIL (OFL), Apache et d'autres licences open source. Pour une utilisation uniquement personnelle de la fonte, moins de restrictions s'appliquent. Attention aux restrictions incluses dans la license: par exemple il est impératif de modifier le nom d'une police sous licence OFL sauf à obtenir du créateur le droit de garder le nom initial de la police.
-</span>
+
 ## Choix de la fonte
 Le choix de la fonte  et sa taille dépendent essentiellement du type de fonte que l'on souhaite créer: satins, points-droits, remplissage, appliqué. Une colonne satin ne peut être ni trop étroite (on considère qu'il faut au moins 1.5mm) ni trop large (au dessus 7mm il y a des risques de fragilité, au delà de 12mm beaucoup de machines ne savent pas faire), de ce fait, des lettres où l’épaisseur du trait est très variable seront difficiles à traiter en colonne satin. Les polices avec empattement sont plus difficiles à numériser que les polices sans empattement. Pour une police en appliqué au contraire on cherchera une police assez large. Le principal élément de choix reste malgré tout l'intérêt que l'on porte à la fonte. 
 
-Symmétriquement, si l'on est fixé sur une fonte particulière, la forme des lettres doit être prise en compte dans les choix de pramètrage de broderie.
+Symétriquement, si l'on est fixé sur une fonte particulière, la forme des lettres doit être prise en compte dans les choix de pramètrage de broderie.
 
 
 ## Création du fichier de glyphes
@@ -96,6 +96,7 @@ Lorsque, d'une manière ou d'une autre, l'on a effacés tous les glyphes indési
 
 ##### Transformation du fichier de fonte svg en fichier de calques de glyphes
 Ouvrir le fichier svg ainsi créé dans Inkscape. Il a l'air complètement vide, c'est normal !!
+<span color=blue>
 
 `Extensions > Ink/Stitch > Gestion des polices > Convertir la fonte svg en calques de glyphes`
 
@@ -126,6 +127,31 @@ Cette extension va extraire des informations du fichier →.svg et les stocker d
 
 Vous pourrez modifier ultérieurement ces informations grâce à  `Extensions > Ink/Stitch > Gestion des polices > Modifier le fichier JSON....`
 La documentation est [là](/fr/docs/font-tools/#edit-json).
+### Le crénage, c'est quoi et ça fonctionne comment ?
+Cette section est là pour les curieux, elle peut être passée au moins dans un premier temps.
+#### Où sont les informations
+En particulier, ce fichier font.json contient les informations de crénage,extraites du fichier →.svg lors de la création du fichier font.json.  Elles vont très fortement contribuer au positionnement des glyphes les uns par rapports aux autres. Pour décider de la position d'un glyphe,  ink/stitch utilise trois types  d'information:
+- déplacer horizontalement ou verticalement un glyphe dans son calque influence sur sa position (sauf le tout premier caractère d'une ligne de texte qui lui est systématiquement à gauche toute sur la page (du moins avec un alignement des lignes à gauche. Le déplacement vertical est toujours pris en compte)
+- des informations dites "horiz_adv_x". Il y a une valeur par défaut, et on peut associer une valeur à chaque glyphe. Le fichier de fonte généré par FontForge comporte cette information pour tous les glyphes qui n'ont pas été effacés.  Cette information est intégrée au fichier font.json lors de sa création.
+- des informations dites "hkern". Celles ci ne sont pas associées à des glyphes mais à des couples de glyphes (pas tous). Le fichier de fonte généré par FontForge comporte cette informations pour tous les couples de  glyphes pour lesquels le concepteur de la fonte ttf ou otf a donné cette information, que les glyphes aient été effacés ou non. Cette information est intégrée au fichier font.json lors de sa création.
+#### Schématiquement,  ça fonctionne comment ?
+Ink/stitch décompose un texte en ligne, une ligne en mots et un mot en glyphe.
+
+Supposons que l'on veuille broder le mot Test
+On suppose un alignement à gauche, et on parle ici de la position sur l'horizontale. L'extrémité gauche de la page est en x=0
+
+- En début de ligne,  le curseur est à 0, le premier caractère "T" est dessiné en démarrant en x =0
+- avant de broder la suite, le curseur est
+  * avancé de la valeur horiz_adv_x  associée à T  (la sienne si elle existe, sinon la valeur par défaut)
+  * si le dessin du e, commence un peu avant le bord gauche de la page, on recule le curseur d'autant, si il dessine après cela augmente le curseur
+  * si il y a une valeur hkern pour la paire "Te", on décale d'autant (une valeur positive diminue l’écart, une valeur négative l'augmente)
+
+ - et ainsi de suite pour toutes les lettres du mots
+
+
+
+
+
 
 ## Vérifiez que tout va bien
 Si vous avez créer ces deux fichiers et qu'ils sont dans un dossier de votre dossier de fontes personnelles, votre fonte apparait dès maintenant dans le module de lettrage. La broderie de chaque lettre est paramétrée comme un remplissage automatique (si vous avez bien mis une couleur de remplissage sur chaque glyphe) ou comme un point droit (si vous avez mis une couleur de contour sur chaque glyphe). Il est trop tôt pour une broderie effective de qualité, mais tout doit être fonctionnel.
@@ -174,7 +200,7 @@ ou comment faire en sorte qu'il n'y en ait pas en donnant des valeurs locales à
 ### Les retouches sur le crénage
 
 ### Ajout ou Suppression de glyphes
-Si l'on ajoute ou supprime des glyphes, il faut impérativement lancer l'extension Modifier le fichier JSON afin que la liste des glyphes soit mise à jour. Il est possible qu'il faille ajouter des informations de crénages, si le glyphe n'etait pas dans le fichier de fonte svg initial. Pour cette raison, en cas de doute, il vaut mieux au départ embarquer trop de glyphes que pas assez !
+Si l'on ajoute ou supprime des glyphes, il faut impérativement lancer l'extension Modifier le fichier JSON afin que la liste des glyphes soit mise à jour. Attention si le glyphe n'était pas dans le fichier à partir duquel on a généré le fichier font.json, il faudra aller modifier la valeur horiz_adv_x du glyphe, on ne l'aura pas récupérée lors de la création du son (en revanche les infos de type hkern elles sont bien là). Pour cette raison, en cas de doute, il vaut mieux au départ embarquer trop de glyphes que pas assez !
 
 
 ### Les fontes multicolores
@@ -191,6 +217,7 @@ Si l'on souhaite que le résultat du lettrage puisse être trié selon les coule
 ## limites de l'outil de lettrage
 on ne peut pas (encore) utiliser toutes les fonctionalités d'ink/stitch dans les fichiers de calques,par exemple  les clones, les effets de chemins  ne sontpas férées correctement par le lettrage
 on ne peut pas (encore) écrire une police  pour toutes les langues du monde, en particulier aujourd'hui, seules les variantes contextuelles de l'alphabet arabe sont reconnues
+actuellement lors ce qu'il y a plusieurs fichiers de calqus de glyphes dans  un fichier fleche.svt,  la  gestion de la liste des glyphes se fait mal.
 
 ## les petits plus 
 il est possible d'avoir des calques  multiglyphes, pas seulement  pour les ligatures 
