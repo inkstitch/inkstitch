@@ -27,7 +27,8 @@ Attention : fichier en cours de rédaction
 Le texte  est assez long, mais il est recommandé de le lire entièrement avant de se lancer dans la création d'une fonte.....
 
 L'objet de ce tutoriel est la création d'une fonte utilisable par le module de lettrage d'Ink/Stitch.
-## Qu'est ce qu'une fonte pour le lettrage d'Ink/Stitch?
+## Qu'est ce qu'une fonte pour le lettrage d'Ink/Stitch?`
+<span style="color:blue"> 
 Les fichiers qui composent une fonte du lettrage sont regroupés dans un dossier spécifique à la fonte,  qui réside dans le dossier des fontes d'Ink/Stitch (fontes intégrées à Ink/Stitch) où dans un [dossier personnel de fonte](fr/docs/font-tools/#custom-font-directory) pour les fontes personnelles de l'utilisateur.
 
 Chaque dossier de fonte doit comporter au moins deux fichiers :
@@ -46,7 +47,7 @@ Ces noms sont impératifs.... sauf si la fonte comporte beaucoup de glyphes, auq
 Les dossiers des fontes du module de lettrage comportent aussi:
 - un fichier preview.png (généralement 90x1100 px) qui contient l'aperçu brodé du nom de la fonte qui apparait dans le dialogue du lettrage
 - un fichier LICENSE, qui donne des informations sur la LICENSE de la police. Pour qu'une police de broderie créée à partir d'une fonte ttf ou otf ou autre puisse être légalement intégrée au module de lettrage, il faut que la licence de la fonte d'origine le permette. Attention, les licences dites commerciales ne permettent généralement pas l'intégration dans Ink/Stich. C'est en revanche possible pour les fontes sous licence SIL (OFL), Apache et d'autres licences open source. Pour une utilisation uniquement personnelle de la fonte, moins de restrictions s'appliquent. Attention aux restrictions incluses dans la license: par exemple il est impératif de modifier le nom d'une police sous licence OFL sauf à obtenir du créateur le droit de garder le nom initial de la police.
-
+</span>
 ## Choix de la fonte
 Le choix de la fonte  et sa taille dépendent essentiellement du type de fonte que l'on souhaite créer: satins, points-droits, remplissage, appliqué. Une colonne satin ne peut être ni trop étroite (on considère qu'il faut au moins 1.5mm) ni trop large (au dessus 7mm il y a des risques de fragilité, au delà de 12mm beaucoup de machines ne savent pas faire), de ce fait, des lettres où l’épaisseur du trait est très variable seront difficiles à traiter en colonne satin. Les polices avec empattement sont plus difficiles à numériser que les polices sans empattement. Pour une police en appliqué au contraire on cherchera une police assez large. Le principal élément de choix reste malgré tout l'intérêt que l'on porte à la fonte. 
 
