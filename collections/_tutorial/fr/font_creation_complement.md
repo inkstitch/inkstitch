@@ -172,7 +172,7 @@ Selon la fonte de départ, le travail à faire est très différent.
 Pour la police du bas, utiliser les contours des lettres pour créer les points droits donne un résultat correct, mais pas vraiment pour la police du haut. 
 
 
-S'il n'est pas possible d'utiliser les contours des lettres, soit on redessine manuellement les lettres, ou l'utilise l'extension 
+S'il n'est pas possible d'utiliser les contours des lettres, soit on redessine manuellement les lettres, ou l'on utilise l'extension 
 `Extensions > Ink/Stitch > Outils traits > Remplissage en  trait`, avec probablements des retouches à faire.
 Dans tous les cas, il faudra traiter la questions des sauts de fil, aussi bien à l'intérieur des lettres qu'entre les lettres.
 Il faudra pour cela séparer (Inkscape > Chemin > Séparer) chaque chemin (à faire globalement sur tous les groupes).
