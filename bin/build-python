@@ -61,7 +61,8 @@ elif [ "$BUILD" = "linux32" ]; then
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libcrypt.so.1:. "
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libnsl.so.1:. "
 elif [ "$BUILD" = "windows" ]; then
-    # TODO: why is this here?  It doesn't seem to be used, because VERSION is not set or "local-build" in Makefile
+    # TODO: We've changed the way VERSION is handled (uv_build), if needed, we can revisit this.
+    #       Check MY_TAG_NAME or prepare a new variable for the INFO_VERSION.
 	if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
 		# setting the file and product version for release
 		# Code to remove the periods in the version number
