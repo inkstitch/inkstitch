@@ -112,7 +112,7 @@ Votre fichier est alors converti en fichier  de calques de glyphes, vous avez ma
 
 En plus du guide "baseline", d'autres guides ont été posés. Il est judicieux de les vérouiller pour travailler ultérieurement dans ce fichier sans les déplacer.
 
-Les chemins de ce fichier ont leur couleur de contour et de remplissage indeterminées.
+Les chemins de ce fichier ont leurs couleurs de contour et de remplissage indeterminées.
 Sélectionnez tous les chemins dans tous les calques (si vos préférences inkscape n'autorisent pas la sélection d'objets cachés vous devrez montrer tous les objets pour cela), et donnez leur une couleur de remplissage, dites aussi qu'il n'y a pas de couleur de contour (ou donnez une couleur de contour et dites qu'il n'y a pas de couleur de fond). Vous pouvez masquez à nouveau les calques.
 
 Si vous souhaitez créer une police qui se brode de gauche à droite, enregistrez ce fichier sous le nom →.svg dans un nouveau dossier situé dans votre dossier personnel de fontes.
