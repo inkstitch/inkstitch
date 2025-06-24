@@ -25,16 +25,8 @@ While there are indeed many excellent `Python` package managers out there (`Poet
 
 ## Why UV?
 
-* **Extremely Fast:**
-Offers blazing-fast dependency resolution and package installation. This speed is significantly boosted by its efficient caching system. When the cache resides on the same disk as your project's virtual environment, `uv` uses hard links to avoid copying packages, making installations nearly instantaneous. If on a different disk, packages must be copied, which is still fast, but not quite as immediate.
+UV is the ideal choice for CI integration, offering blazing-fast dependency resolution, self-contained Rust architecture, direct Python version management, and streamlined caching, all of which significantly accelerate and simplify automated build processes across diverse environments.
 
-* **Written in Rust, Self-Contained**: Because `uv` is written in `Rust`, you don't need to install `Python` on your system to run `uv` itself. This makes `uv` incredibly easy to bootstrap and integrate, simplifying initial setup across different environments.
-
-* **Manages Python Itself**: `uv` can directly acquire and manage specific Python versions, eliminating the need for separate tools like `pyenv` or `conda` for basic Python installations. This simplifies setup and ensures consistency.
-
-* **Enhanced Portability**: By managing its own Python installations and robustly resolving dependencies, `uv` significantly simplifies cross-platform deployment and ensures consistency across various operating systems. This makes InkStitch more portable.
-
-* **Simple Cache Setup for GitHub Actions**: Integrating uv's robust caching into GitHub Actions workflow is simple and will significantly accelerate build times.
 
 
 ## Resources
@@ -159,18 +151,10 @@ Here's an overview of the key changes related to Git and Python dependency manag
     * `uv pip install -r requirements.txt` or
     * `uv pip install -r pyproject.toml`.
 
-### PyGObject Introspection (OS-Dependent)
-
-  * **Requirement**: PyGObject is essential for `inkex`.
-  * **OS/GTK Dependency**: Versions greater than 3.50 require the latest GTK (e.g., in Ubuntu 24.04), which could necessitate a full OS reinstallation.
-  * **No OS Version Targeting**: pyproject.toml lacks a way to identify specific OS versions for conditional dependencies.
-  * **Version Pinning**: Therefore, PyGObject is pinned to version <=3.50 to maintain broader compatibility.
 
 
 ## General Rules `pyproject.toml`
 
-
-Understanding these rules for pyproject.toml helps maintain a smooth and efficient development process:
 
 ### Location & Caching
 
@@ -201,6 +185,40 @@ While we'll cover Makefile specifics in more detail later, here are some immedia
 
 We've significantly overhauled InkStitch GitHub Actions CI/CD system to streamline builds, improve maintainability, and reduce strain on GitHub resources.
 
+### Build System Workflow
+
+This document outlines the current workflow for building and signing distribution packages.
+
+  * **Push Builds**:
+
+    * Pushing changes to any branch (excluding release branches or tags) will only trigger tests. There is no reason to create distribution packages at this stage.
+
+  * **On-Demand Package Compilation**:
+
+    * Compilation of packages for a specific branch can be triggered manually via the [gh CLI](https://cli.github.com/).
+
+    * This can be initiated for specific operating systems incrementally, or for all supported operating systems simultaneously.
+    Refer to the script `bin/uv/gh_action_run.sh`.
+
+  * **Release Build Trigger (Initial Stage)**:
+
+    * A release build is triggered automatically by pushing a `v* tag` (e.g., `v1.0.0`).
+
+    * Initially, this build will NOT include automatic signing or notarization. This is due to our current limitations regarding the automated signing process for Windows and notarization for macOS.
+
+    * At this stage, the build will also not be marked as a '_release_' in the GitHub UI. This step is performed manually later.
+
+  * **Authorized Signing and Notarization (Second Stage)**:
+
+    * Once the packages from the initial release build have been verified (i.e., successfully installed and tested for functionality), a separate, subsequent build will be performed.
+
+    * This build will be triggered manually via the `gh CLI`, with a specific `sign` nad `input_tag` parameters.
+
+    * This particular build will include the necessary authorization for Windows signing and macOS notarization.
+
+  * **Final Release Marking**:
+
+    * After the signed/notarized packages are ready, the corresponding build will be manually marked as a formal release in the GitHub UI.
 
 ### New Build System Structure
 
@@ -218,55 +236,9 @@ We've significantly overhauled InkStitch GitHub Actions CI/CD system to streamli
 * This modularity allows for easy `diff` comparisons, for example, to quickly see differences between `linux64` and `linux arm64` builds.
 
 
+### Notes for Tag-Based Workflow Activation**:
 
-### Controlled Build Activation
-* **Reduced GitHub Load**: To minimize strain on GitHub resources, we've designed a system to activate full package builds using an external script leveraging the **gh client** (https://cli.github.com/).
-
-* **Optimized Build Triggers**: A full package build for all operating systems is typically unnecessary after every **push**. Instead, routine pushes will focus on **checks and tests**. Full builds should only be triggered when changes are finalized and ready for installation package creation.
-
-* **Activation Command**: Full builds can now be triggered manually using the **gh CLI**:
-  ```Bash
-  gh workflow run $WF -r $BR -f build_type=$build_type -f break_on=$break_on -f input_tag=$tag
-  ```
-  * **$WF**: The specific .yml workflow file to invoke (e.g., uv_build.yml).
-  * **$BR**: The current branch (e.g., `git rev-parse --abbrev-ref HEAD`).
-  * **build_type**: Specifies the target build(s): `dummy, linux64, linuxarm64, linux32, windows64, macx86, macarm64`, or `all`.
-  * **break_on**: Allows for early termination during the build process:
-      * `no`: Normal execution.
-      * `uv`: Stops after uv installation and cache check.
-      * `sync`: Stops after package installation.
-  * **input_tag**: The tag under which to store the resulting build artifacts.
-
-Example of `gh` script (see `bin/uv/gh_action_run.sh`):
-```Bash
-set -x
-
-WF=uv_build.yml
-BR=`git rev-parse --abbrev-ref HEAD`  # branch
-
-build_type='dummy'
-# build_type='linux32'
-# build_type='linux64'
-# build_type='linuxarm64'
-# build_type='macarm64'
-# build_type='macx86'
-# build_type='windows64'
-# build_type='all'
-
-break_on="no"
-# break_on="uv"
-# break_on="sync"
-
-# tag='dev-build-$BR'
-
-# git commit -a -m "Automated Commit & Build"
-# git push
-
-# gh workflow run $WF -r $BR -f build_type=$build_type -f break_on=$break_on -f input_tag=$tag
-gh workflow run $WF -r $BR -f build_type=$build_type -f break_on=$break_on
-```
-
-* **Tag-Based Activation**: The `uv_build.yml` workflow can also be activated by specific Git tags:
+The `uv_build.yml` workflow can also be activated by specific Git tags:
 
   * **vX.X.X***: Triggers a release build with `build_type=all`.
   * **build***: Initiates a **dummy** build, primarily for verifying the entire process and creating a record in GitHub Actions. This is crucial for using the *gh CLI*, as workflows callable by `gh` must have at least one previous run (unless called on main or master branches).
@@ -330,15 +302,6 @@ We've made significant updates to our GitHub Actions workflows, especially in ho
   * **Node.js Issue on Linux32**: Note that GitHub's runners for **linux32** incorrectly mount the `node.js` version intended for **linux64**, which understandably won't run on a 32-bit processor. This fix addresses that specific problem.
 
 
-### Backward Compatibility & Future Plans
-
-  * For now, we've kept most other aspects of the workflows as unchanged as possible to maintain backward compatibility.
-
-
-### Windows Signing: Release vs. Prerelease
-
-* **A key question arises regarding Windows signing**: Why is there a distinction between release and prerelease signing for Windows? This is a critical point that would benefit from further clarification.
-
 
 ## Local GitHub Actions Testing with `act`
 
@@ -379,54 +342,6 @@ Here's how to use `act` for local testing of InkStitch workflows:
       }
     }
     ```
-
-## To-Do & Future Improvements
-
-Here's a concise overview of immediate action items and potential improvements for our build processes:
-
-### GitHub Workflow & Variable Management
-
-  * **GITHUB_REF Modernization**: The use of `GITHUB_REF` should be updated to `GITHUB_REF_NAME` for cleaner variable handling. Ideally, this should then be replaced by a more flexible input variable (like `input_tag`) to enable truly dynamic builds triggered by external scripts.
-
-  * **Windows uv Signing**: We need to clarify why there's a distinction between release and pre-release signing for Windows builds. A simpler approach would be to sign all builds (releases and pre-releases) consistently, if feasible.
-
-### Build Speed Optimizations
-
-We can significantly accelerate build times, especially for Linux:
-
-  * **Linux wxPython Wheels**: Currently, PyPI generally doesn't provide pre-built `wxPython` wheels for *Linux*, which greatly slows down InkStitch builds due to compilation. We should prepare custom `wxPython` packages for our target *Linux* distributions and store them in a permanent release repository. This would allow us to simply download them during builds instead of compiling.
-  * **Existing Wheel Availability**: Pre-built .whl (wheel) packages for `wxPython` are readily available for *Windows* and *macOS*. While *linux64* also has wheels, their availability can be less standardized than on other platforms.
-
-
-
-## GitHub Actions: Skipping Workflows
-
-Just for your information:
-
-You can easily skip GitHub Actions workflows for a specific commit by including `[no ci]` or `[skip ci]` (case-insensitive) in your commit message. https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/skipping-workflow-runs
-
-For example:
-```Bash
-git commit -m "My commit message [skip ci]"
-```
-This is handy for small changes like typos or documentation updates that don't require a full CI/CD run.
-
-
-
-## Example: uv Initialization & Environment
-
-Here's how to quickly get started with uv for your project:
-
-  * `uv init` - Project Setup:
-    * This command initializes your project and sets up key files:
-        * `main.py` is removed (if created by default).
-        * `.python-version` holds your selected Python version. We recommend ignoring this file in `.gitignore` so each user can prefer their own Python version.
-        * `pyproject.toml` is created, serving as InkStitch's main project configuration.
-
-  * `uv venv` - Virtual Environment Creation:
-    * This command initializes your .venv (virtual environment) using the Python version specified in `.python-version` (e.g., Python 3.11).
-    * Run `uv venv` any time you change your desired Python version in `.python-version` to recreate the environment accordingly.
-
 
 
 ## Testing Installation on different OS

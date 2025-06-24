@@ -259,7 +259,7 @@ if [ "$BUILD" = "windows" ]; then
 fi
 
 if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
-    # TODO: we dont need this
+    # TODO: we dont need this - see how it was created in uv_build
     # if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
     #     VERSION=${VERSION#v}
     # else
