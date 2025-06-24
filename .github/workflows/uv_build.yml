@@ -41,7 +41,7 @@ on:
       build_type:                   # ref: github.event.inputs.build_type | inputs.build_type
         description: 'Build type'
         required: true
-        default: 'linux64'  # default value
+        default: 'dummy'  # default value
         type: choice  # type of the input, can be number, boolean, string, choice or environment
         options:
           - dummy  # just for testing, not used in the workflow
