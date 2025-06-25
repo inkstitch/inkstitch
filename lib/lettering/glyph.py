@@ -39,7 +39,7 @@ class Glyph(object):
 
         self.name = group.label
         if len(self.name) > 11:
-            self.name = normalize('NFKC', self.name[11:])
+            self.name = normalize('NFC', self.name[11:])
         self._process_baseline(group.getroottree().getroot())
         self.clips = self._process_clips(group)
         self.node = self._process_group(group)

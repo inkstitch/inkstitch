@@ -5,6 +5,7 @@
 
 import json
 from base64 import b64decode
+import unicodedata
 
 import inkex
 import wx
@@ -126,11 +127,11 @@ class LetteringPanel(wx.Panel):
         filter_glyph = self.options_panel.font_glyph_filter.GetValue()
         filter_category = self.options_panel.font_category_filter.GetSelection() - 1
 
-        # glyph filter string without spaces
-        glyphs = [*self.options_panel.text_editor.GetValue().replace(" ", "").replace("\n", "")]
+        # Set of all glyphs in input string (except whitespace characters), normalized in the same way that we normalize font glyphs
+        glyphs = set(*unicodedata.normalize("NFC", self.options_panel.text_editor.GetValue().replace(r"\s", "")))
 
         for font in self.font_list:
-            if filter_glyph and glyphs and not set(glyphs).issubset(font.available_glyphs):
+            if filter_glyph and glyphs and not glyphs.issubset(font.available_glyphs):
                 continue
 
             if filter_category != -1:
