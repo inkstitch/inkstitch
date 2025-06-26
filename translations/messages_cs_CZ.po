@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-23 01:56+0000\n"
-"PO-Revision-Date: 2025-06-23 01:57\n"
+"POT-Creation-Date: 2025-06-26 01:49+0000\n"
+"PO-Revision-Date: 2025-06-26 01:50\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-23 01:56+0000\n"
+"POT-Creation-Date: 2025-06-26 01:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,7 +65,7 @@ msgstr ""
 #. description of font in fonts/allegria55
 #: inkstitch-fonts-metadata.py:16
 msgid "Satin font"
-msgstr ""
+msgstr "Saténové písmo"
 
 #. description of font in fonts/ambigue
 #: inkstitch-fonts-metadata.py:18
@@ -95,7 +95,7 @@ msgstr "Apex Simple AGS je saténové doplňkové písmo k Apex Lake AGS."
 #. description of font in fonts/apex_simple_small_AGS
 #: inkstitch-fonts-metadata.py:28
 msgid "Apex Simple Small AGS is an altered version of Apex Simple AGS to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Apex Simple Small AGS je upravená verze Apex Simple AGS, která umožňuje použití u manších nápisů. Povinné je použití tenké nitě (60) i tenké jehly (60)."
 
 #. description of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:30
@@ -421,12 +421,12 @@ msgstr "Millimarif-bold20 je tučné saténové písmo."
 #. description of font in fonts/mimosa_large
 #: inkstitch-fonts-metadata.py:158
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
-msgstr "Mimosa Large je saténové písmo, které vypadá jako tečkované písmo   "
+msgstr "Mimosa Large je saténové písmo, které vypadá jako tečkované písmo.   "
 
 #. description of font in fonts/mimosa_medium
 #: inkstitch-fonts-metadata.py:160
 msgid "Mimosa Medium is a satin font that looks dotty."
-msgstr "Mimosa Medium je saténové písmo, které vypadá tečkovaně."
+msgstr "Mimosa Medium je saténové písmo, které vypadá jako tečkované."
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:162
@@ -548,12 +548,12 @@ msgstr "TT Masters je saténové písmo vhodné pro náročné psaní :)"
 #. description of font in fonts/venezia
 #: inkstitch-fonts-metadata.py:208
 msgid "A serif satin font"
-msgstr ""
+msgstr "Saténové písmo typu serif"
 
 #. description of font in fonts/venezia_small
 #: inkstitch-fonts-metadata.py:210
 msgid "Venezia small is an altered version of Venezia to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Venezia small je upravená verze Venezia, která umožňuje vytvářet menší velikosti nápisů. Tenká nit (60) i tenká jehla (60) jsou povinné."
 
 #. description of font in fonts/violin_serif
 #: inkstitch-fonts-metadata.py:212
@@ -2624,7 +2624,7 @@ msgstr "Seznam všech podporovaných formátů souborů naleznete na našich web
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Písmo"
 
-#: lib/extensions/batch_lettering.py:210 lib/gui/lettering/main_panel.py:307
+#: lib/extensions/batch_lettering.py:210 lib/gui/lettering/main_panel.py:308
 msgid "scale"
 msgstr "měřítko"
 
@@ -3007,7 +3007,7 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Tento parametr se uloží, když kliknete na \"Použít a ukončit\""
 
 #: lib/extensions/params.py:539 lib/extensions/sew_stack_editor.py:118
-#: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:57
+#: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:58
 #: lib/gui/lettering_font_sample.py:68
 #: lib/gui/satin_multicolor/main_panel.py:54
 #: lib/gui/simulator/simulator_preferences.py:53
@@ -3023,7 +3023,7 @@ msgid "Use Last Settings"
 msgstr "Použít poslední nastavení"
 
 #: lib/extensions/params.py:547 lib/extensions/sew_stack_editor.py:122
-#: lib/gui/lettering/main_panel.py:55
+#: lib/gui/lettering/main_panel.py:56
 msgid "Apply and Quit"
 msgstr "Použít a odejít"
 
@@ -3304,7 +3304,7 @@ msgstr "Platforma pro návrh strojového vyšívání s otevřeným zdrojovým k
 
 #: lib/gui/about.py:53 lib/gui/about.py:54
 msgid "https://inkstitch.org"
-msgstr ""
+msgstr "https://inkstitch.org"
 
 #: lib/gui/about.py:66
 msgid "License"
@@ -3327,7 +3327,7 @@ msgid "Apply"
 msgstr "Použít"
 
 #: lib/gui/apply_palette.py:49 lib/gui/edit_json/main_panel.py:75
-#: lib/gui/element_info.py:42 lib/gui/lettering/main_panel.py:47
+#: lib/gui/element_info.py:42 lib/gui/lettering/main_panel.py:48
 #: lib/gui/lettering_font_sample.py:81
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
@@ -3366,16 +3366,16 @@ msgstr "Toto rozšíření aplikuje nejbližší barvy z vybrané palety barev n
 
 #: lib/gui/apply_palette.py:70 lib/gui/apply_palette.py:71
 msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
-msgstr ""
+msgstr "https://inkstitch.org/docs/thread-color/#apply-palette"
 
 #: lib/gui/edit_json/help_panel.py:19
 msgid "Feature to verify or update font information for an existing font."
-msgstr ""
+msgstr "Funkce pro ověření nebo aktualizaci informací o existujícím písmu."
 
 #: lib/gui/edit_json/help_panel.py:33 lib/gui/edit_json/help_panel.py:34
 #: inx/inkstitch_lettering_generate_json.inx:150
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/#edit-json"
 
 #: lib/gui/edit_json/main_panel.py:401 lib/gui/edit_json/main_panel.py:414
 msgid "Could not read json file."
@@ -3520,11 +3520,11 @@ msgstr "Toto rozšíření zobrazuje informace o různých parametrech vybranýc
 
 #: lib/gui/element_info.py:63 lib/gui/element_info.py:64
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
-msgstr ""
+msgstr "https://inkstitch.org/docs/troubleshoot#element-info"
 
 #: lib/gui/element_info.py:71
 msgid "Click on Copy to copy the information in the Clipboard"
-msgstr ""
+msgstr "Kliknutím na Kopírovat zkopírujete informace do schránky"
 
 #: lib/gui/lettering/help_panel.py:19
 msgid "Add text to your design."
@@ -3536,13 +3536,13 @@ msgstr "Knihovnu písem s úplným popisem a vyšívanými příklady naleznete 
 
 #: lib/gui/lettering/help_panel.py:42 lib/gui/lettering/help_panel.py:43
 msgid "https://inkstitch.org/fonts/font-library/"
-msgstr ""
+msgstr "https://inkstitch.org/fonts/font-library/"
 
-#: lib/gui/lettering/main_panel.py:239
+#: lib/gui/lettering/main_panel.py:240
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Tento font nemá k dispozici žádnou variantu písma. Aktualizujte nebo odeberte písmo."
 
-#: lib/gui/lettering/main_panel.py:316
+#: lib/gui/lettering/main_panel.py:317
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
@@ -3708,7 +3708,7 @@ msgstr "    Toto rozšíření pomáhá tvůrcům písem generovat výstup každ
 
 #: lib/gui/lettering_font_sample.py:102 lib/gui/lettering_font_sample.py:103
 msgid "https://inkstitch.org/docs/font-tools/#font-sampling"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/#font-sampling"
 
 #: lib/gui/lettering_font_sample.py:183
 #, python-brace-format
@@ -4198,7 +4198,7 @@ msgstr "Toto rozšíření vyplňuje tvary tartanovým (nebo tartanovým) vzorem
 
 #: lib/gui/tartan/help_panel.py:33 lib/gui/tartan/help_panel.py:34
 msgid "https://inkstitch.org/docs/stitches/tartan-fill"
-msgstr ""
+msgstr "https://inkstitch.org/docs/stitches/tartan-fill"
 
 #: lib/gui/tartan/main_panel.py:54
 msgid "Customize"
@@ -4232,7 +4232,7 @@ msgstr "Odstranit pruh"
 msgid "Generate Swatches"
 msgstr "Generovat vzorníky"
 
-#: lib/gui/lettering/main_panel.py:45 lib/gui/lettering/option_panel.py:138
+#: lib/gui/lettering/main_panel.py:46 lib/gui/lettering/option_panel.py:138
 #: lib/gui/test_swatches.py:33 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_batch_lettering.inx:9
 #: inx/inkstitch_break_apart.inx:8 inx/inkstitch_cleanup.inx:8
@@ -4301,7 +4301,7 @@ msgstr "Více informací na našem webu"
 
 #: lib/gui/test_swatches.py:106 lib/gui/test_swatches.py:107
 msgid "https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection"
-msgstr ""
+msgstr "https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection"
 
 #: lib/gui/warnings.py:21
 msgid "An error occurred while rendering the stitch plan:"
@@ -4386,58 +4386,58 @@ msgstr "Písmo: japonské"
 msgid "Script: latin"
 msgstr "Písmo: latinka"
 
-#: lib/lettering/font.py:99
+#: lib/lettering/font.py:100
 msgid "JSON file missing. Expected a JSON file at the following location:"
 msgstr "Chybí soubor JSON. Očekáván soubor JSON v následujícím umístění:"
 
-#: lib/lettering/font.py:101
+#: lib/lettering/font.py:102
 msgid "Generate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr "Vygenerujte soubor JSON pomocí:\n"
 "Rozšíření > Ink/Stitch > Správa písem > Generovat JSON..."
 
-#: lib/lettering/font.py:108
+#: lib/lettering/font.py:109
 msgid "Corrupt JSON file"
 msgstr "Poškozený soubor JSON"
 
-#: lib/lettering/font.py:110
+#: lib/lettering/font.py:111
 msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr "Znovu vygenerujte soubor JSON pomocí:\n"
 "Rozšíření > Ink/Stitch > Správa písem > Generovat JSON..."
 
-#: lib/lettering/font.py:191
+#: lib/lettering/font.py:192
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Písmo '%s' nemá žádné varianty."
 
-#: lib/lettering/font.py:589
+#: lib/lettering/font.py:593
 msgid "Color Group"
 msgstr "Skupina barev"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:108
+#: lib/output.py:111
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Chyba zápisu do %(path)s: %(error)s"
 
-#: lib/output.py:113
+#: lib/output.py:116
 msgid "Couldn't save embrodiery file."
 msgstr "Soubor výšivky se nepodařilo uložit."
 
-#: lib/output.py:115
+#: lib/output.py:118
 #, python-brace-format
 msgid "There are {num_color_changes} color changes in your design. This is way too many."
 msgstr "Ve vašem návrhu je {num_color_changes} barevných změn. Tohle je příliš mnoho."
 
-#: lib/output.py:117
+#: lib/output.py:120
 msgid "Please reduce color changes. Find more information on our website:"
 msgstr "Prosím, omezte změny barev. Více informací najdete na našem webu:"
 
-#: lib/output.py:119
+#: lib/output.py:122
 msgid "https://inkstitch.org/docs/faq/#too-many-color-changes"
-msgstr ""
+msgstr "https://inkstitch.org/docs/faq/#too-many-color-changes"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:9
 msgid "Path"
@@ -4722,7 +4722,7 @@ msgstr "Zadejte číslo objednávky..."
 #: print/templates/headline.html:15
 #, python-format
 msgid "%m/%d/%Y"
-msgstr ""
+msgstr "%m/%d/%Y"
 
 #: print/templates/operator_detailedview.html:10
 msgid "Thread Consumption"
@@ -5347,7 +5347,7 @@ msgstr "Více informací na našem webu:"
 
 #: inx/inkstitch_auto_run.inx:37
 msgid "https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch"
-msgstr ""
+msgstr "https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch"
 
 #: inx/inkstitch_auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
@@ -5388,7 +5388,7 @@ msgstr "Více informací na našem webu"
 
 #: inx/inkstitch_auto_satin.inx:20
 msgid "https://inkstitch.org/docs/satin-tools/#auto-route-satin-columns"
-msgstr ""
+msgstr "https://inkstitch.org/docs/satin-tools/#auto-route-satin-columns"
 
 #: inx/inkstitch_auto_satin.inx:27
 msgid "Generates a continuous path through selected satin elements"
@@ -5462,7 +5462,7 @@ msgstr "Pokud dokument obsahuje prvek cesty označený jako „batch lettering�
 
 #: inx/inkstitch_batch_lettering.inx:68
 msgid "https://inkstitch.org/docs/lettering/#batch-export"
-msgstr ""
+msgstr "https://inkstitch.org/docs/lettering/#batch-export"
 
 #: inx/inkstitch_batch_lettering.inx:75
 msgid "Ink/Stitch: batch lettering (.zip)"
@@ -5486,7 +5486,7 @@ msgstr "Toto rozšíření se pokusí opravit výplně tvarů a v případě pot
 
 #: inx/inkstitch_break_apart.inx:21
 msgid "https://inkstitch.org/docs/fill-tools/#break-apart-fill-objects"
-msgstr ""
+msgstr "https://inkstitch.org/docs/fill-tools/#break-apart-fill-objects"
 
 #: inx/inkstitch_break_apart.inx:28 inx/inkstitch_transform_elements.inx:27
 msgid "Break apart and repair (broken) fill shapes"
@@ -5543,7 +5543,7 @@ msgstr "Pomocí tohoto rozšíření můžete z dokumentu odstranit malé objekt
 
 #: inx/inkstitch_cleanup.inx:26
 msgid "https://inkstitch.org/docs/troubleshoot/#cleanup-document"
-msgstr ""
+msgstr "https://inkstitch.org/docs/troubleshoot/#cleanup-document"
 
 #: inx/inkstitch_cleanup.inx:33
 msgid "Remove small unstitchable elements"
@@ -5665,7 +5665,7 @@ msgstr "Na našich webových stránkách jsme shromáždili několik běžných 
 
 #: inx/inkstitch_cutwork_segmentation.inx:52
 msgid "https://inkstitch.org/docs/cutwork/"
-msgstr ""
+msgstr "https://inkstitch.org/docs/cutwork/"
 
 #: inx/inkstitch_density_map.inx:3
 msgid "Density Map"
@@ -5717,7 +5717,7 @@ msgstr "Toto rozšíření vám pomůže určit hustotu stehu."
 
 #: inx/inkstitch_density_map.inx:30
 msgid "https://inkstitch.org/docs/visualize/#density-map"
-msgstr ""
+msgstr "https://inkstitch.org/docs/visualize/#density-map"
 
 #: inx/inkstitch_density_map.inx:37
 msgid "Displays a colored dot at each stitch position"
@@ -5744,7 +5744,7 @@ msgstr "Toto rozšíření vkládá do dokumentu očíslované štítky pro vybr
 
 #: inx/inkstitch_display_stacking_order.inx:15
 msgid "https://inkstitch.org/docs/visualize/#display-stacking-order"
-msgstr ""
+msgstr "https://inkstitch.org/docs/visualize/#display-stacking-order"
 
 #: inx/inkstitch_display_stacking_order.inx:22
 msgid "Generates numbered labels to indicate the stitching order"
@@ -5830,7 +5830,7 @@ msgstr "Výsledek můžete zlepšit nastavením řezných čar."
 
 #: inx/inkstitch_fill_to_stroke.inx:34
 msgid "https://inkstitch.org/docs/stroke-tools/#fill-to-stroke"
-msgstr ""
+msgstr "https://inkstitch.org/docs/stroke-tools/#fill-to-stroke"
 
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
@@ -5879,7 +5879,7 @@ msgstr "Na našich webových stránkách popisujeme všechny potřebné kroky k 
 
 #: inx/inkstitch_generate_palette.inx:33
 msgid "https://inkstitch.org/docs/thread-color#generate-color-palette"
-msgstr ""
+msgstr "https://inkstitch.org/docs/thread-color#generate-color-palette"
 
 #: inx/inkstitch_global_commands.inx:3
 msgid "Add Commands"
@@ -5919,7 +5919,7 @@ msgstr "Je-li to nutné, upravte hodnotu mezery mezi řádky po převodu pomocí
 
 #: inx/inkstitch_gradient_blocks.inx:33
 msgid "https://inkstitch.org/docs/fill-tools/#convert-to-gradient-blocks"
-msgstr ""
+msgstr "https://inkstitch.org/docs/fill-tools/#convert-to-gradient-blocks"
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
@@ -6551,7 +6551,7 @@ msgstr "Po dokončení instalace restartujte Inkscape."
 
 #: inx/inkstitch_install.inx:19
 msgid "https://inkstitch.org/docs/install-addons"
-msgstr ""
+msgstr "https://inkstitch.org/docs/install-addons"
 
 #: inx/inkstitch_install.inx:26
 msgid "Installs color palettes or a symbol library for motif stitches into Inkscape"
@@ -6575,7 +6575,7 @@ msgstr "Toto rozšíření nainstaluje do Inkscape vlastní paletu nití."
 
 #: inx/inkstitch_install_custom_palette.inx:18
 msgid "https://inkstitch.org/docs/thread-color/#install-custom-palette"
-msgstr ""
+msgstr "https://inkstitch.org/docs/thread-color/#install-custom-palette"
 
 #: inx/inkstitch_install_custom_palette.inx:25
 msgid "Installs a custom color palette into Inkscape"
@@ -6659,7 +6659,7 @@ msgstr "Toto rozšíření převádí skokové stehy na přední stehy."
 
 #: inx/inkstitch_jump_to_stroke.inx:45
 msgid "https://inkstitch.org/docs/stroke-tools/#jump-to-stroke"
-msgstr ""
+msgstr "https://inkstitch.org/docs/stroke-tools/#jump-to-stroke"
 
 #: inx/inkstitch_jump_to_trim.inx:3
 msgid "Jump Stitch to Trim Command"
@@ -6679,7 +6679,7 @@ msgstr "Toto rozšíření vkládá příkazy oříznutí, aby se zabránilo sko
 
 #: inx/inkstitch_jump_to_trim.inx:30
 msgid "https://inkstitch.org/docs/commands/#jump-to-trim"
-msgstr ""
+msgstr "https://inkstitch.org/docs/commands/#jump-to-trim"
 
 #: inx/inkstitch_knockdown_fill.inx:3
 msgid "Selection to Knockdown Fill"
@@ -6747,7 +6747,7 @@ msgstr "* Úprava nastavení výplně v dialogovém okně parametrů"
 
 #: inx/inkstitch_knockdown_fill.inx:50
 msgid "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
-msgstr ""
+msgstr "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
 
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -6808,7 +6808,7 @@ msgstr "V rozbalovací nabídce umístění textu můžete zvolit, jak bude text
 
 #: inx/inkstitch_lettering_along_path.inx:38
 msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
-msgstr ""
+msgstr "https://inkstitch.org/docs/lettering/#lettering-along-path"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:3
 #: inx/inkstitch_lettering_custom_font_dir.inx:9
@@ -6825,7 +6825,7 @@ msgstr "Adresář vlastních písem musí obsahovat podadresář pro každé pí
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:17
 msgid "https://inkstitch.org/docs/font-tools/#custom-font-directory"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/#custom-font-directory"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:24
 msgid "Define a directory with custom fonts for the lettering tool"
@@ -6889,7 +6889,7 @@ msgstr "Toto rozšíření bylo vytvořeno, aby pomohlo autorům písem definova
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:34
 msgid "https://inkstitch.org/docs/font-tools/#force-lock-stitches"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/#force-lock-stitches"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:41
 msgid "Sets the forces lock stitch attribute on elements when the next element lies within a specified distance"
@@ -7016,7 +7016,7 @@ msgstr "Vygenerovaný soubor lze aktualizovat pomocí Rozšíření > Ink/Stitch
 
 #: inx/inkstitch_lettering_generate_json.inx:149
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/#generate-json"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:3
 msgid "Remove Kerning"
@@ -7036,7 +7036,7 @@ msgstr "⚠ Ujistěte se, že existuje kopie původních souborů. Po provedení
 
 #: inx/inkstitch_lettering_remove_kerning.inx:23
 msgid "https://inkstitch.org/docs/font-tools/#remove-kerning"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/#remove-kerning"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:30
 msgid "Removes Kerning information from specified SVG files"
@@ -7060,7 +7060,7 @@ msgstr "Tím se nastaví pořadí prvků pro vícebarevná písma při tříděn
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:20
 msgid "https://inkstitch.org/docs/font-tools/#set-color-sort-index"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/#set-color-sort-index"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:27
 msgid "Sets a color sort index on selected elements to define the stacking order for multicolor fonts"
@@ -7076,11 +7076,11 @@ msgstr "Zastavit po"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:7
 msgid "Use this character to define size"
-msgstr ""
+msgstr "Tento znak použijte k definování velikosti"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:8
 msgid "Height of reference character (mm)"
-msgstr ""
+msgstr "Výška referenčního znaku (mm)"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:13
 msgid "Converts a svg font to glyph layers"
@@ -7124,7 +7124,7 @@ msgstr "⚠ Po spuštění této funkce přetáhněte základní čáru do poža
 
 #: inx/inkstitch_letters_to_font.inx:76
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/#letters-to-font"
 
 #: inx/inkstitch_letters_to_font.inx:83
 msgid "Inserts all available glyphs of a pre-digitized font into the document to make them available for the lettering tool"
@@ -7188,7 +7188,7 @@ msgstr "Toto rozšíření pomáhá rekonstruovat původní objekt ze souboru vy
 
 #: inx/inkstitch_outline.inx:29
 msgid "https://inkstitch.org/docs/stroke-tools/#outline"
-msgstr ""
+msgstr "https://inkstitch.org/docs/stroke-tools/#outline"
 
 #: inx/inkstitch_outline.inx:36
 msgid "Generates an outline around stitch paths"
@@ -7548,7 +7548,7 @@ msgstr "Přečtěte si více na našem webu:"
 
 #: inx/inkstitch_palette_to_text.inx:26
 msgid "https://inkstitch.org/docs/thread-color#palette-to-text"
-msgstr ""
+msgstr "https://inkstitch.org/docs/thread-color#palette-to-text"
 
 #: inx/inkstitch_params.inx:3
 msgid "Params"
