@@ -4,15 +4,11 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from math import ceil, floor
-from typing import TYPE_CHECKING, List, Optional, Tuple, Union
+from typing import TYPE_CHECKING, Tuple, List, Union
 
-from networkx import is_empty
-from shapely import get_point, line_merge, minimum_bounding_radius, segmentize
-from shapely.affinity import rotate, scale, translate
 from shapely.geometry import Point, Polygon
 from .fill import intersect_region_with_grating, stitch_row
 from ..stitches import auto_fill
-from ..utils.list import is_all_zeroes
 from ..utils.threading import check_stop_flag
 
 from ..stitch_plan import Stitch, StitchGroup
@@ -20,10 +16,10 @@ from ..svg import PIXELS_PER_MM
 if TYPE_CHECKING:
     from ..elements import FillStitch
 
-def make_quadrilateral(quad_coord: tuple[int, int], 
-                       grid_offset: tuple[float, float], 
-                       grid_row_spacing: float, 
+def make_quadrilateral(quad_coord: Tuple[int, int], 
+                       grid_offset: Tuple[float, float], 
                        grid_column_spacing: float,
+                       grid_row_spacing: float, 
                        width: float,
                        height: float) -> Polygon:
     bottom_left = (grid_offset[0] + grid_column_spacing * quad_coord[0], grid_offset[1] + grid_row_spacing * quad_coord[1])
@@ -33,8 +29,37 @@ def make_quadrilateral(quad_coord: tuple[int, int],
     return Polygon((top_left, top_right, bottom_right, bottom_left, top_left))
 
 class Checker:
-    coords: tuple[int, int]
-    areas: list[Polygon]
+    coords: Tuple[int, int]
+    areas: List[Polygon]
+
+def intersect_checker(fill: 'FillStitch', outline: Polygon, checker_coords: Tuple[int, int]) -> Checker:
+        quad: Polygon = make_quadrilateral(checker_coords, 
+                                            (0.,0.), 
+                                            fill.checker_grid_column_spacing,
+                                            fill.checker_grid_row_spacing, 
+                                            fill.checker_grid_column_spacing, 
+                                            fill.checker_grid_row_spacing)
+        
+        res = quad.intersection(outline)
+        if res.is_empty:
+            return None
+
+        checker = Checker()
+        checker.coords = checker_coords
+        # Each polygon is a checker area.
+        if res.geom_type == "GeometryCollection":
+            # We parse geometry collections to extract only the individual polygons.
+            checker.areas = [geo for geo in res.geoms if geo.geom_type == "Polygon"]
+            checker.areas.extend([list(geo) for geo in res.geoms if geo.geom_type == "MultiPolygon"])
+        elif res.geom_type == "MultiPolygon":
+            checker.areas = list(res.geoms)
+        elif res.geom_type == "Polygon":
+            checker.areas = [res]
+        else:
+            # Any other type of geometry (Point, LineString, LinearRing) don't have areas to fill
+            return None
+        
+        return checker
 
 def checker_fill(fill: 'FillStitch', outline: Polygon,
                  starting_point: Union[tuple, Stitch, None], ending_point: Union[tuple, Stitch, None]) -> list[StitchGroup]:
@@ -51,44 +76,25 @@ def checker_fill(fill: 'FillStitch', outline: Polygon,
     # Get the shape dimensions in quads so we know maximum how many checkers we need
     (minx, miny, maxx, maxy) = outline.bounds
     
-    quad_width: float = fill.checker_grid_column_spacing
-    quad_height: float = fill.checker_grid_row_spacing
-    shape_base_coord: tuple[int, int] = (floor(minx / fill.checker_grid_column_spacing), floor(miny / fill.checker_grid_row_spacing))
-    shape_max_coord: tuple[int, int] = (ceil(maxx / fill.checker_grid_column_spacing), ceil(maxy / fill.checker_grid_row_spacing))
+    shape_base_coord: Tuple[int, int] = (floor(minx / fill.checker_grid_column_spacing), floor(miny / fill.checker_grid_row_spacing))
+    shape_max_coord: Tuple[int, int] = (ceil(maxx / fill.checker_grid_column_spacing), ceil(maxy / fill.checker_grid_row_spacing))
 
     shape_width_in_quad: int = shape_max_coord[0] - shape_base_coord[0]
     shape_height_in_quad: int = shape_max_coord[1] - shape_base_coord[1]
 
-    checkers : list[Checker] = []
+    checkers : List[Checker] = []
 
     for quad_x in range(shape_width_in_quad):
         for quad_y in range(shape_height_in_quad):
             check_stop_flag()
-            checker = Checker()
-            checker.coords = (shape_base_coord[0] + quad_x, shape_base_coord[1] + quad_y)
-            quad: Polygon = make_quadrilateral(checker.coords, 
-                                               (0.,0.), 
-                                               fill.checker_grid_row_spacing, 
-                                               fill.checker_grid_column_spacing, 
-                                               quad_width, quad_height)
-            
-            res = quad.intersection(outline)
-
-            # We're gonna ignore any geometry that doesn't have an area to fill
-            if res.geom_type in ["Point", "MultiPoint", "MultiLineString", "LinearRing", "LineString"] or res.is_empty:
+            checker: Checker = intersect_checker(fill, outline,
+                                                (shape_base_coord[0] + quad_x, shape_base_coord[1] + quad_y))
+            if checker is None:
                 continue
-            # We parse geometry collections to extract only the individual polygons
-            elif res.geom_type == "GeometryCollection":
-                checker.areas = [geo for geo in res.geoms if geo.geom_type == "Polygon"]
-                checker.areas.extend([list(geo) for geo in res.geoms if geo.geom_type == "MultiPolygon"])
-            elif res.geom_type == "MultiPolygon":
-                checker.areas = list(res.geoms)
-            elif res.geom_type == "Polygon":
-                checker.areas = [res]
-            
+
             checkers.append(checker)
 
-    stitch_groups : list[StitchGroup] = []
+    stitch_groups : List[StitchGroup] = []
 
     for checker in checkers:
         check_stop_flag()
@@ -97,7 +103,7 @@ def checker_fill(fill: 'FillStitch', outline: Polygon,
         angle: float = fill.checker_A_angle if is_type_a else fill.checker_B_angle
         row_spacing: float = fill.checker_A_row_spacing if is_type_a else fill.checker_B_row_spacing
 
-        stitches : list[Point] = []
+        stitches : List[Point] = []
         for area in checker.areas:
             stitches.extend(auto_fill(area, angle, row_spacing,
                     fill.end_row_spacing, fill.max_stitch_length, fill.running_stitch_length, fill.running_stitch_tolerance,
