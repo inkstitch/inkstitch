@@ -50,12 +50,14 @@ def checker_fill(fill: 'FillStitch', outline: Polygon,
 
     # Get the shape dimensions in quads so we know maximum how many checkers we need
     (minx, miny, maxx, maxy) = outline.bounds
-    shape_width_in_quad: int = ceil(abs(maxx - minx) / fill.checker_grid_column_spacing)
-    shape_height_in_quad: int = ceil(abs(maxy - miny) / fill.checker_grid_row_spacing)
     
     quad_width: float = fill.checker_grid_column_spacing
     quad_height: float = fill.checker_grid_row_spacing
-    shape_base_coord: tuple[int, int] = (floor(minx / fill.checker_grid_column_spacing), floor(miny / fill.checker_grid_column_spacing))
+    shape_base_coord: tuple[int, int] = (floor(minx / fill.checker_grid_column_spacing), floor(miny / fill.checker_grid_row_spacing))
+    shape_max_coord: tuple[int, int] = (ceil(maxx / fill.checker_grid_column_spacing), ceil(maxy / fill.checker_grid_row_spacing))
+
+    shape_width_in_quad: int = shape_max_coord[0] - shape_base_coord[0]
+    shape_height_in_quad: int = shape_max_coord[1] - shape_base_coord[1]
 
     checkers : list[Checker] = []
 
