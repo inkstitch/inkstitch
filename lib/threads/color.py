@@ -5,7 +5,7 @@
 
 import colorsys
 
-from inkex import Color, ColorCMS
+from inkex import Color
 from pyembroidery.EmbThread import EmbThread
 
 
@@ -33,12 +33,7 @@ class ThreadColor(object):
             self.rgb = (color.get_red(), color.get_green(), color.get_blue())
             return
         elif isinstance(color, str):
-            # This will catch icc colors which cannot be parsed as rgb colors directly
-            if isinstance(Color(color), ColorCMS):
-                # The icc color has a hex color prepended.
-                # The easiest way to receive a color value is therefore to just use the hex color from the front.
-                color = color.split()[0]
-            self.rgb = tuple(Color(color).to('rgb').get_values(False))
+            self.rgb = tuple(Color(color).to('rgb'))
         elif isinstance(color, (list, tuple)):
             self.rgb = tuple(color)
         else:
