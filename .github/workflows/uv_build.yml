@@ -221,7 +221,7 @@ jobs:
             echo "Build type: push release tag '${GITHUB_REF_NAME}'"
             MY_TAG_NAME="${GITHUB_REF_NAME}"  # v* tag name
             MY_VERSION="${MY_TAG_NAME:1}"  # remove 'v' from the tag name, e.g. v1.2.3 -> 1.2.3
-            MY_BUILD_TYPE="all"  # overwrite build to "all" platforms
+            MY_BUILD_TYPE="dummy"  # overwrite build, let full build be triggered by gh script
 
           else # all other cases, including branch/tag builds
 
