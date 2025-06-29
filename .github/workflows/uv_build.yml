@@ -273,6 +273,7 @@ jobs:
           env | grep GITHUB_ | sort
 
   # -----------------------------------------------------
+
   dummy_build:
     # this job is just for testing, it creates a dummy file and uploads it as an artifact
     needs: sign_policy # this job depends on the sign_policy job
@@ -280,21 +281,33 @@ jobs:
       needs.sign_policy.outputs.MY_BUILD_TYPE == 'dummy'
     runs-on: ubuntu-latest
     name: Dummy Build
+
+    env:
+      MY_BREAK_ON: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      MY_BUILD_TYPE: ${{ needs.sign_policy.outputs.MY_BUILD_TYPE }}
+      MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}
+      MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}
+      MY_SECRETS_AVAILABLE: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}
+      MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}
+      MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
+      MY_VERBOSITY_LOG_LEVEL: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
+      MY_VERSION: ${{ needs.sign_policy.outputs.MY_VERSION }}
+
     steps:
       - name: My variables print
         run: |
 
           echo "-------------------------------------------------"
           echo "MY_* variables:"
-          echo "MY_BUILD_TYPE: ${{ needs.sign_policy.outputs.MY_BUILD_TYPE }}"
-          echo "MY_BREAK_ON: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}"
-          echo "MY_VERBOSITY_LOG_LEVEL: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}"
-          echo "MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}"
-          echo "MY_SECRETS_AVAILABLE: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}"
-          echo "MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}"
-          echo "MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}"
-          echo "MY_VERSION: ${{ needs.sign_policy.outputs.MY_VERSION }}"
-          echo "MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}"
+          echo "MY_BREAK_ON: $MY_BREAK_ON"
+          echo "MY_BUILD_TYPE: $MY_BUILD_TYPE"
+          echo "MY_IS_RELEASE_BUILD: $MY_IS_RELEASE_BUILD"
+          echo "MY_NAME: $MY_NAME"
+          echo "MY_SECRETS_AVAILABLE: $MY_SECRETS_AVAILABLE"
+          echo "MY_TAG_NAME: $MY_TAG_NAME"
+          echo "MY_USE_AUTHORIZED_SIGNING: $MY_USE_AUTHORIZED_SIGNING"
+          echo "MY_VERBOSITY_LOG_LEVEL: $MY_VERBOSITY_LOG_LEVEL"
+          echo "MY_VERSION: $MY_VERSION"
           echo "-------------------------------------------------"
 
 
@@ -460,13 +473,13 @@ jobs:
     name: Create Release
 
     env:
-      MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}
-      MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}
-      MY_VERSION: ${{ needs.sign_policy.outputs.MY_VERSION }}
       MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}
+      MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}
       MY_SECRETS_AVAILABLE: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}
+      MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}
       MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
       MY_VERBOSITY_LOG_LEVEL: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
+      MY_VERSION: ${{ needs.sign_policy.outputs.MY_VERSION }}
 
     if: always() # run this job always, even if previous jobs failed on exit 1
     steps:
@@ -491,13 +504,13 @@ jobs:
           echo "------------------------------------------------- release vars"
           echo "Release variables:"
           echo "GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}"  # print ***, always set
-          echo "MY_TAG_NAME=${MY_TAG_NAME}"
-          echo "MY_NAME=${MY_NAME}"
-          echo "MY_VERSION=${MY_VERSION}"
           echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}"
+          echo "MY_NAME=${MY_NAME}"
           echo "MY_SECRETS_AVAILABLE=${MY_SECRETS_AVAILABLE}"
+          echo "MY_TAG_NAME=${MY_TAG_NAME}"
           echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
           echo "MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL}"
+          echo "MY_VERSION=${MY_VERSION}"
           echo "-------------------------------------------------"
 
           # invert MY_IS_RELEASE_BUILD to use it as a pre-release flag
