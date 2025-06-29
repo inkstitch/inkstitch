@@ -240,7 +240,7 @@ This document outlines the current workflow for building and signing distributio
 
 The `uv_build.yml` workflow can also be activated by specific Git tags:
 
-  * **vX.X.X***: Triggers a release build with `build_type=all`.
+  * **vX.X.X***: Triggers a release build with `build_type=dummy`.
   * **build***: Initiates a **dummy** build, primarily for verifying the entire process and creating a record in GitHub Actions. This is crucial for using the *gh CLI*, as workflows callable by `gh` must have at least one previous run (unless called on main or master branches).
 
 
