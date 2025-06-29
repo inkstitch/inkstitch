@@ -9,15 +9,11 @@ set -x
 
 # options:
 #   build_type  - OS architecture
-#   input_tag   - v* version tag
 #   verbosity   - log level 0 - error, 1 - info, 2 - debug  3 - trace
 #   sign        - authorized sign fow windows and notarize for mac
 #   break_on    - break on uv, sync or no
 
 WF=uv_build.yml
-
-BR=`git rev-parse --abbrev-ref HEAD`
-
 
 build_type='dummy'
 # build_type='all'
@@ -29,36 +25,43 @@ build_type='dummy'
 # build_type='macarm64'
 # build_type='windows64'
 
+### --------------------------------------------------------- select branch or tag
+### You can select branch or tag to run the workflow on.
+###   If you run the script on a branch, it will use the current branch.
+###   If you run the script on a tag, it will use the tag name.
 
-# sign: true - authorized sign for windows and notarize for mac, false (default) - no windows sign and no mac notarize
+### build type: branch
+REF=`git rev-parse --abbrev-ref HEAD`
+
+### build type: tag
+# REF='v0.0.0test'
+# REF='v0.0.0test2'
+
+### sign: true - authorized sign for windows and notarize for mac, false (default) - no windows sign and no mac notarize
 # sign='true'
 
-# input_tag
-tag='v0.0.0-alpha'
+### --------------------------------------------------------- debug options
 
 break_on="no"
-#break_on="uv"
-#break_on="sync" # on exit cache is not updated !!!
+# break_on="uv"
+# break_on="sync" # on exit cache is not updated !!!
 
 # verbosity: 0 - error, 1 - info (default), 2 - debug, 3 - trace
 log_level=1
 
-
-#git commit -a -m "Automated Commit & Build"
-#git push
+### Automatically commit and push changes to the repository.
+# git commit -a -m "Automated Commit & Build"
+# git push
 
 ### --------------------------------------------------------- run workflow
 
-### common options
-gh workflow run $WF -r $BR -f build_type=$build_type
+### for branch rebuilds
+gh workflow run $WF -r $REF -f build_type=$build_type
 
-### for v* rebuilds
-# gh workflow run $WF -r $BR -f build_type=$build_type -f input_tag=$tag
-
-### for v* rebuilds with authorized sign
-# gh workflow run $WF -r $BR -f build_type='all' -f input_tag=$tag -f sign='true'
+### for v* rebuilds with authorized sign, set correct tag name
+# gh workflow run $WF -r $REF -f build_type='all' -f sign='true'
 
 ### developer options
-# gh workflow run $WF -r $BR -f build_type=$build_type -f break_on=$break_on
-# gh workflow run $WF -r $BR -f build_type=$build_type -f break_on=$break_on -f verbosity=$log_level
+# gh workflow run $WF -r $REF -f build_type=$build_type -f break_on=$break_on
+# gh workflow run $WF -r $REF -f build_type=$build_type -f break_on=$break_on -f verbosity=$log_level
 
