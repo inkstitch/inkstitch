@@ -315,7 +315,7 @@ jobs:
         run: |
 
           # Create a directory to store artifacts
-          FILE_NAME="artifacts/dummy_${MY_VERSION}.txt"
+          FILE_NAME="artifacts/dummy-${MY_VERSION}.txt"
           mkdir -p artifacts
           echo "This is a dummy file for OS: ${{ runner.os }} and commit: ${{ github.sha }}" > $FILE_NAME
           echo "Timestamp: $(date)" >> $FILE_NAME
@@ -538,7 +538,7 @@ jobs:
           draft: false
           body: |
             This is a release for:
-            - GITHUB_REF_TYPE: ${{ github.ref_type }}  # branch or tag
+            - Branch/Tag based build (GITHUB_REF_TYPE): ${{ github.ref_type }}
             - SHA: ${{ github.sha }}
             - Tag name (MY_TAG_NAME): ${{ env.MY_TAG_NAME }}
             - Name (MY_NAME): ${{ env.MY_NAME }}
