@@ -35,7 +35,7 @@ class PreferencesFrame(wx.Frame):
         # add space above and below to center sizer_2 vertically
         this_svg_margin.Add((0, 20), 1, wx.EXPAND, 0)
 
-        this_svg_grid = wx.FlexGridSizer(2, 4, 15, 10)
+        this_svg_grid = wx.FlexGridSizer(3, 4, 15, 10)
         this_svg_margin.Add(this_svg_grid, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 20)
 
         label_1 = wx.StaticText(self.this_svg_page, wx.ID_ANY, _("Minimum jump stitch length"), style=wx.ALIGN_LEFT)
@@ -72,6 +72,29 @@ class PreferencesFrame(wx.Frame):
 
         self.button_2 = wx.Button(self.this_svg_page, wx.ID_ANY, _("Set As Default"))
         this_svg_grid.Add(self.button_2, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+
+        label_rotate = wx.StaticText(self.this_svg_page, label=_("Rotate on export"))
+        label_rotate.SetToolTip(_(
+            "Some embroidery machines don't automatically rotate files to fit into the hoop. "
+            "You could also rotate the design in the SVG but Inkscape does not save view rotation so this setting is more convenient."
+        ))
+        this_svg_grid.Add(label_rotate)
+        self.rotate_on_export = wx.ComboBox(self.this_svg_page)
+        self.rotate_on_export_choices = (
+            (_("Don't rotate"), 0),
+            (_("Rotate left"), -90),
+            (_("Rotate right"), 90),
+        )
+        for idx, (label, degrees) in enumerate(self.rotate_on_export_choices):
+            self.rotate_on_export.Append(label, degrees)
+
+        for idx, (_label, degrees) in enumerate(self.rotate_on_export_choices):
+            if metadata.get('rotate_on_export', 0) == degrees:
+                self.rotate_on_export.SetSelection(idx)
+                break
+        else:
+            self.rotate_on_export.SetSelection(0)
+        this_svg_grid.Add(self.rotate_on_export, flag=wx.ALIGN_CENTER_VERTICAL)
 
         this_svg_margin.Add((0, 20), 1, wx.EXPAND, 0)
 
@@ -183,6 +206,7 @@ class PreferencesFrame(wx.Frame):
         metadata = self.extension.get_inkstitch_metadata()
         metadata['min_stitch_len_mm'] = self.minimum_stitch_length.GetValue()
         metadata['collapse_len_mm'] = self.minimum_jump_stitch_length.GetValue()
+        _, metadata['rotate_on_export'] = self.rotate_on_export_choices[self.rotate_on_export.GetCurrentSelection()]
 
         global_settings['default_min_stitch_len_mm'] = self.default_minimum_stitch_length.GetValue()
         global_settings['default_collapse_len_mm'] = self.default_minimum_jump_stitch_length.GetValue()
