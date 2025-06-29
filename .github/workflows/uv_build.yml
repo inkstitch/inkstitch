@@ -60,13 +60,6 @@ on:
 
           - all
 
-      # overwrite release tag   eg. use existing tag to build a release vX.X.X....
-      input_tag:  # ref: github.event.inputs.input_tag
-        description: 'Build tag name'
-        required: false
-        default: ''  # default value, empty means use branch/tag name
-        type: string  # type of the input, can be number, boolean, string, choice or environment
-
       verbosity: # ref: github.event.inputs.verbosity
         description: 'Controls verbosity of the build process (0: ERROR, 1: INFO, 2: DEBUG, 3: TRACE)'
         required: false # Not mandatory, will have a default value
@@ -135,7 +128,6 @@ jobs:
   # - MY_BREAK_ON: define break stop
 
   # - MY_TAG_NAME: tag name for the release, or dev-build-branch_name for pre-release
-  # - MY_INPUT_TAG: tag name for the release
 
   # - MY_NAME: name of the release (usually the same as tag name, but can be different)
   # - MY_VERSION: version of the release, e.g. 1.2.3 or 0.0.1-branch_name
@@ -194,12 +186,10 @@ jobs:
               # If so, use the values from the inputs
             MY_BUILD_TYPE="${{ github.event.inputs.build_type }}"
             MY_BREAK_ON="${{ github.event.inputs.break_on }}"
-            MY_INPUT_TAG="${{ github.event.inputs.input_tag }}"
           else
             # If not (i.e. it's a push or other event), use the defaults
             MY_BUILD_TYPE="dummy"     # all | dummy
             MY_BREAK_ON="no"          # no
-            MY_INPUT_TAG=""           # empty means use branch/tag name
           fi
 
 
@@ -221,60 +211,35 @@ jobs:
 
           # -------------------------------------------------
 
-          # setup for v* tag build
+          MY_IS_RELEASE_BUILD="false"  # always false (will be changed in UI after tests & signing)
+
+          # setup for push v* tag build
           if [[ "${GITHUB_EVENT_NAME}" == "push" && \
                 "${GITHUB_REF_TYPE}" == "tag" && \
                 "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
 
-            MY_IS_RELEASE_BUILD="false"  # manually turn on (will be changed in UI after tests)
-
+            echo "Build type: push release tag '${GITHUB_REF_NAME}'"
             MY_TAG_NAME="${GITHUB_REF_NAME}"  # v* tag name
-            MY_BUILD_TYPE="all"  # overwrite build to "all" platforms
             MY_VERSION="${MY_TAG_NAME:1}"  # remove 'v' from the tag name, e.g. v1.2.3 -> 1.2.3
+            MY_BUILD_TYPE="all"  # overwrite build to "all" platforms
 
-          else # all other cases, including branch builds
+          else # all other cases, including branch/tag builds
 
-            MY_IS_RELEASE_BUILD="false"  # this is pre-release build (flag only, may be changed in UI later)
-
-            REF_NAME=$(echo $GITHUB_REF_NAME | tr / -)
-            MY_TAG_NAME="dev-build-${REF_NAME}"  # use branch/tag name as tag, replace / with -
-            MY_VERSION="0.0.1-${REF_NAME}" # set version to 0.0.1-branch_name
-
-            MY_USE_AUTHORIZED_SIGNING="false"  #  normal build (limited count of SignPath.io and notarize)
-
-            # ----- MY_INPUT_TAG check
-            if [[ -n "${MY_INPUT_TAG}" ]]; then  # if MY_INPUT_TAG is set, may change MY_TAG_NAME
-
-              # allow only for v*
-              if [[ "${MY_INPUT_TAG}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
-
-                MY_TAG_NAME="${MY_INPUT_TAG}"  # use input tag name
-                MY_VERSION="${MY_TAG_NAME:1}"  # remove 'v' from the tag name, e.g. v1.2.3 -> 1.2.3
-
-                # check if MY_TAG_NAME is a valid tag name and if not exists error (security check)
-                # - we need ask remote, CI makes only shallow clone of the repository
-                if git ls-remote --tags --exit-code origin "refs/tags/${MY_TAG_NAME}"; then
-                  echo "OK: Input tag name '${MY_TAG_NAME}' exists and will be used."
-                else
-                  echo "Error: Input tag name '${MY_TAG_NAME}' does not exist."
-                  echo "Please use existing tag name, or create a new tag with the name '${MY_INPUT_TAG}'."
-                  exit 1  # exit with error
-                fi
-
-              else  # if MY_INPUT_TAG is not a valid v* tag name
-
-                echo "Error: Input tag name '${MY_INPUT_TAG}' is not a valid v* tag name."
-                echo "Please use a tag name like 'v1.2.3*'"
-                exit 1  # exit with error
-
-              fi
-
+            # depend on GITHUB_REF_TYPE=branch or tag
+            if [[ "${GITHUB_REF_TYPE}" == "tag" && \
+                  "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
+              echo "Build type: tag '${GITHUB_REF_NAME}'"
+              MY_TAG_NAME="${GITHUB_REF_NAME}"  # use tag name as tag
+              MY_VERSION="${MY_TAG_NAME:1}"  # remove 'v' from the tag
+            else
+              echo "Build type: branch '${GITHUB_REF_NAME}'"
+              REF_NAME=$(echo $GITHUB_REF_NAME | tr / -)
+              MY_TAG_NAME="dev-build-${REF_NAME}"  # use branch/tag name as tag, replace / with -
+              MY_VERSION="0.0.1-${REF_NAME}" # set version to 0.0.1-branch_name
+              MY_USE_AUTHORIZED_SIGNING="false"  #  overwrite for normal build (limited count of SignPath.io and notarize)
             fi
-            # ----- MY_INPUT_TAG check end
-
 
           fi
-
 
 
           MY_NAME="${MY_TAG_NAME}" # name of the release (release name), can be anything, but usually it is the same as tag name
@@ -559,6 +524,8 @@ jobs:
           draft: false
           body: |
             This is a release for:
+            - GITHUB_REF_TYPE: ${{ github.ref_type }}  # branch or tag
+            - SHA: ${{ github.sha }}
             - Tag name (MY_TAG_NAME): ${{ env.MY_TAG_NAME }}
             - Name (MY_NAME): ${{ env.MY_NAME }}
             - Version (MY_VERSION): ${{ env.MY_VERSION }}
