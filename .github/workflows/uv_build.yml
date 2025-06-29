@@ -302,9 +302,10 @@ jobs:
         run: |
 
           # Create a directory to store artifacts
+          FILE_NAME="artifacts/dummy_${MY_VERSION}.txt"
           mkdir -p artifacts
-          echo "This is a dummy file for OS: ${{ runner.os }} and commit: ${{ github.sha }}" > artifacts/dummy.txt
-          echo "Timestamp: $(date)" >> artifacts/dummy.txt
+          echo "This is a dummy file for OS: ${{ runner.os }} and commit: ${{ github.sha }}" > $FILE_NAME
+          echo "Timestamp: $(date)" >> $FILE_NAME
           # List artifacts directory
           ls -lR .
 
