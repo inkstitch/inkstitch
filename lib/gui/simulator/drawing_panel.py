@@ -66,6 +66,11 @@ class DrawingPanel(wx.Panel):
         self.show_page = global_settings['toggle_page_button_status']
         self.background_color = None
 
+        # Set initial values as they may be accessed before a stitch plan is available
+        # for example through a focus action on the stitch box
+        self.num_stitches = 1
+        self.commands = [None]
+
         # desired simulation speed in stitches per second
         self.speed = global_settings['simulator_speed']
 
@@ -435,7 +440,11 @@ class DrawingPanel(wx.Panel):
     def set_current_stitch(self, stitch):
         self.current_stitch = stitch
         self.clamp_current_stitch()
-        command = self.commands[int(self.current_stitch)]
+        try:
+            command = self.commands[int(self.current_stitch)]
+        except IndexError:
+            # no stitch plan loaded yet, do nothing for now
+            return
         self.control_panel.on_current_stitch(int(self.current_stitch), command)
         statusbar = self.GetTopLevelParent().statusbar
         statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command], 2)

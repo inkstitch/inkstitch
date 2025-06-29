@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-23 01:56+0000\n"
-"PO-Revision-Date: 2025-06-23 01:57\n"
+"POT-Creation-Date: 2025-06-26 01:49+0000\n"
+"PO-Revision-Date: 2025-06-26 01:50\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-23 01:56+0000\n"
+"POT-Creation-Date: 2025-06-26 01:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2624,7 +2624,7 @@ msgstr "Eine Liste mit allen unterstützten Dateiformaten gibt es auf unserer We
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Text"
 
-#: lib/extensions/batch_lettering.py:210 lib/gui/lettering/main_panel.py:307
+#: lib/extensions/batch_lettering.py:210 lib/gui/lettering/main_panel.py:308
 msgid "scale"
 msgstr "Skalierung"
 
@@ -3007,7 +3007,7 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Dieser Parameter wird gespeichert, wenn man auf \"Übernehmen und beenden\" klickt"
 
 #: lib/extensions/params.py:539 lib/extensions/sew_stack_editor.py:118
-#: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:57
+#: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:58
 #: lib/gui/lettering_font_sample.py:68
 #: lib/gui/satin_multicolor/main_panel.py:54
 #: lib/gui/simulator/simulator_preferences.py:53
@@ -3023,7 +3023,7 @@ msgid "Use Last Settings"
 msgstr "Letzte Einstellungen verwenden"
 
 #: lib/extensions/params.py:547 lib/extensions/sew_stack_editor.py:122
-#: lib/gui/lettering/main_panel.py:55
+#: lib/gui/lettering/main_panel.py:56
 msgid "Apply and Quit"
 msgstr "Anwenden und schließen"
 
@@ -3327,7 +3327,7 @@ msgid "Apply"
 msgstr "Anwenden"
 
 #: lib/gui/apply_palette.py:49 lib/gui/edit_json/main_panel.py:75
-#: lib/gui/element_info.py:42 lib/gui/lettering/main_panel.py:47
+#: lib/gui/element_info.py:42 lib/gui/lettering/main_panel.py:48
 #: lib/gui/lettering_font_sample.py:81
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
@@ -3538,11 +3538,11 @@ msgstr "Eine Schriftbibliothek mit detaillierter Beschreibung und gestickten Bei
 msgid "https://inkstitch.org/fonts/font-library/"
 msgstr "https://inkstitch.org/de/fonts/font-library/"
 
-#: lib/gui/lettering/main_panel.py:239
+#: lib/gui/lettering/main_panel.py:240
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Diese Schriftart hat keine verfügbare Schriftvariante. Bitte aktualisieren oder entfernen."
 
-#: lib/gui/lettering/main_panel.py:316
+#: lib/gui/lettering/main_panel.py:317
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
@@ -4234,7 +4234,7 @@ msgstr "Streifen entfernen"
 msgid "Generate Swatches"
 msgstr "Testmuster erstellen"
 
-#: lib/gui/lettering/main_panel.py:45 lib/gui/lettering/option_panel.py:138
+#: lib/gui/lettering/main_panel.py:46 lib/gui/lettering/option_panel.py:138
 #: lib/gui/test_swatches.py:33 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_batch_lettering.inx:9
 #: inx/inkstitch_break_apart.inx:8 inx/inkstitch_cleanup.inx:8
@@ -4388,56 +4388,56 @@ msgstr "Schrift: Japanisch"
 msgid "Script: latin"
 msgstr "Schrift: Latein"
 
-#: lib/lettering/font.py:99
+#: lib/lettering/font.py:100
 msgid "JSON file missing. Expected a JSON file at the following location:"
 msgstr "Die JSON-Datei fehlt. JSON-Datei unter folgendem Pfad erwartet:"
 
-#: lib/lettering/font.py:101
+#: lib/lettering/font.py:102
 msgid "Generate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr "Die JSON-Datei kann über folgende Ink/Stitch Funktion erstellt werden:\n"
 "Erweiterungen > Ink/Stitch > Schriftverwaltung > JSON erstellen..."
 
-#: lib/lettering/font.py:108
+#: lib/lettering/font.py:109
 msgid "Corrupt JSON file"
 msgstr "Die JSON-Datei ist beschädigt"
 
-#: lib/lettering/font.py:110
+#: lib/lettering/font.py:111
 msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr "Die JSON-Datei kann über folgende Ink/Stitch Funktion neu erstellt werden:\n"
 "Erweiterungen > Ink/Stitch > Schriftverwaltung > JSON erstellen..."
 
-#: lib/lettering/font.py:191
+#: lib/lettering/font.py:192
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Die Schrift '%s' hat keine Varianten."
 
-#: lib/lettering/font.py:589
+#: lib/lettering/font.py:593
 msgid "Color Group"
 msgstr "Farbgruppe"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
-#: lib/output.py:108
+#: lib/output.py:111
 #, python-format
 msgid "Error writing to %(path)s: %(error)s"
 msgstr "Fehler beim Schreiben in %(path)s: %(error)s"
 
-#: lib/output.py:113
+#: lib/output.py:116
 msgid "Couldn't save embrodiery file."
 msgstr "Stickdatei konnte nicht gespeichert werden."
 
-#: lib/output.py:115
+#: lib/output.py:118
 #, python-brace-format
 msgid "There are {num_color_changes} color changes in your design. This is way too many."
 msgstr "Es gibt {num_color_changes} Farbwechsel in diesem Design. Das ist zu viel."
 
-#: lib/output.py:117
+#: lib/output.py:120
 msgid "Please reduce color changes. Find more information on our website:"
 msgstr "Bitte die Farbwechsel reduzieren. Mehr Informationen dazu auf unserer Webseite:"
 
-#: lib/output.py:119
+#: lib/output.py:122
 msgid "https://inkstitch.org/docs/faq/#too-many-color-changes"
 msgstr "https://inkstitch.org/de/docs/faq/#zu-viele-farbwechsel"
 

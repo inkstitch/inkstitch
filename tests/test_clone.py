@@ -9,7 +9,6 @@ from inkex.tester.svg import svg
 from lib.commands import add_commands
 from lib.elements import Clone, EmbroideryElement, FillStitch
 from lib.svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_RECT_TAG
-from lib.utils import cache_module
 
 from .utils import element_count
 
@@ -22,16 +21,6 @@ def element_fill_angle(element: EmbroideryElement) -> Optional[float]:
 
 
 class CloneElementTest(TestCase):
-    # Monkey-patch the cahce to forcibly disable it: We may need to refactor this out for tests.
-    def setUp(self) -> None:
-        from pytest import MonkeyPatch
-        self.monkeypatch = MonkeyPatch()
-        self.monkeypatch.setattr(cache_module, "is_cache_disabled", lambda: True)
-
-    def tearDown(self) -> None:
-        self.monkeypatch.undo()
-        return super().tearDown()
-
     def assertAngleAlmostEqual(self, a, b) -> None:
         # Take the mod 180 of the returned angles, because e.g. -130deg and 50deg produce fills along the same angle.
         # We have to use a precision of 4 decimal digits because of the precision of the matrices as they are stored in the svg trees

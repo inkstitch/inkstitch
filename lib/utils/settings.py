@@ -45,40 +45,44 @@ DEFAULT_SETTINGS = {
 class GlobalSettings(MutableMapping):
     def __init__(self):
         super().__init__()
-        self.__settings_file = os.path.join(get_user_dir(), "settings.json")
-        self.__settings = {}
+        # We set create=False here because this code is executed on module load
+        # and via imports also runs on generate-inx-files, which with the Nix
+        # package manager is executed with a non-writable home directory.
+        user_dir = get_user_dir(create=False)
+        self._settings_file = os.path.join(user_dir, "settings.json")
+        self._settings = {}
 
         for name, value in DEFAULT_METADATA.items():
-            self.__settings[f"default_{name}"] = value
+            self._settings[f"default_{name}"] = value
 
-        self.__settings.update(DEFAULT_SETTINGS)
+        self._settings.update(DEFAULT_SETTINGS)
 
         try:
-            with open(self.__settings_file, 'r') as settings_file:
-                self.__settings.update(json.load(settings_file))
+            with open(self._settings_file, 'r') as settings_file:
+                self._settings.update(json.load(settings_file))
         except (OSError, json.JSONDecodeError, ValueError):
             pass
 
     def __setitem__(self, item, value):
-        self.__settings[item] = value
+        self._settings[item] = value
 
-        with open(self.__settings_file, 'w') as settings_file:
-            json.dump(self.__settings, settings_file)
+        with open(self._settings_file, 'w') as settings_file:
+            json.dump(self._settings, settings_file)
 
     def __getitem__(self, item):
-        return self.__settings[item]
+        return self._settings[item]
 
     def __delitem__(self, item):
-        del self.__settings[item]
+        del self._settings[item]
 
     def __iter__(self):
-        return iter(self.__settings)
+        return iter(self._settings)
 
     def __len__(self):
-        return len(self.__settings)
+        return len(self._settings)
 
     def __json__(self):
-        return self.__settings
+        return self._settings
 
 
 global_settings = GlobalSettings()

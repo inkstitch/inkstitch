@@ -8,6 +8,7 @@ import os
 from collections import defaultdict
 from copy import deepcopy
 from random import randint
+import unicodedata
 
 import inkex
 
@@ -216,6 +217,9 @@ class Font(object):
 
         """Render text into an SVG group element."""
         self._load_variants()
+
+        # Normalize the text in the same way that glyph names are normalized (NFC)
+        text = unicodedata.normalize('NFC', text)
 
         if variant is None:
             variant = self.default_variant

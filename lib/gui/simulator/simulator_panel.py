@@ -58,7 +58,6 @@ class SimulatorPanel(wx.Panel):
             (wx.ACCEL_SHIFT, ord('='), self.cp.animation_one_stitch_forward),
             (wx.ACCEL_NORMAL, wx.WXK_ADD, self.cp.animation_one_stitch_forward),
             (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_ADD, self.cp.animation_one_stitch_forward),
-            (wx.ACCEL_NORMAL, wx.WXK_NUMPAD_UP, self.cp.animation_one_stitch_forward),
             (wx.ACCEL_NORMAL, ord('-'), self.cp.animation_one_stitch_backward),
             (wx.ACCEL_NORMAL, ord('_'), self.cp.animation_one_stitch_backward),
             (wx.ACCEL_NORMAL, wx.WXK_SUBTRACT, self.cp.animation_one_stitch_backward),
