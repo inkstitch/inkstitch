@@ -16,7 +16,7 @@ from .base import InkstitchExtension
 
 class LetteringEditJson(InkstitchExtension):
     '''
-    This extension helps font creators to generate an output of every glyph from a selected font
+    This extension helps font creators modify the JSON file of a lettering font.
     '''
     def effect(self):
         layer = Layer()

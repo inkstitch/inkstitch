@@ -5,7 +5,6 @@
 
 import json
 from base64 import b64decode
-import unicodedata
 
 import inkex
 import wx
@@ -123,12 +122,16 @@ class LetteringPanel(wx.Panel):
         self.fonts_by_id = {}
 
         # font size filter value
+
         filter_size = self.options_panel.font_size_filter.GetValue()
         filter_glyph = self.options_panel.font_glyph_filter.GetValue()
         filter_category = self.options_panel.font_category_filter.GetSelection() - 1
 
         # Set of all glyphs in input string (except whitespace characters), normalized in the same way that we normalize font glyphs
-        glyphs = set(*unicodedata.normalize("NFC", self.options_panel.text_editor.GetValue().replace(r"\s", "")))
+        # do not normalize the glyphs yet, available_glyphs are not normalized in the font json file
+        # glyphs = set(l for l  in  unicodedata.normalize("NFC", self.options_panel.text_editor.GetValue().replace(r"\s", "")))
+
+        glyphs = set(letter for letter in self.options_panel.text_editor.GetValue().replace(r"\s", ""))
 
         for font in self.font_list:
             if filter_glyph and glyphs and not glyphs.issubset(font.available_glyphs):
@@ -319,7 +322,7 @@ class LetteringPanel(wx.Panel):
             else:
                 pass
 
-        # the text scaling group label is dependend on the user language, so it would break in international file exchange if we used it
+        # the text scaling group label is dependent on the user language, so it would break in international file exchange if we used it
         # scaling (correction transform) on the parent group is already applied, so let's use that for recognition
         if destination_group.get('transform', None) is None:
             destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
