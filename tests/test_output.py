@@ -1,11 +1,11 @@
+from inkex import Rectangle, SvgDocumentElement
 from inkex.tester import TestCase
-from inkex import SvgDocumentElement, Rectangle
 from inkex.tester.svg import svg
 
-from lib.svg.tags import INKSTITCH_ATTRIBS
 from lib import output
-from lib.stitch_plan.stitch_plan import StitchPlan, stitch_groups_to_stitch_plan
 from lib.elements.utils import node_to_elements
+from lib.stitch_plan.stitch_plan import stitch_groups_to_stitch_plan
+from lib.svg.tags import INKSTITCH_ATTRIBS
 
 
 class OutputTest(TestCase):
@@ -23,7 +23,7 @@ class OutputTest(TestCase):
 
     def test_jef_output_does_not_change(self):
         root: SvgDocumentElement = svg()
-        rect = root.add(
+        root.add(
             Rectangle(
                 attrib={
                     "width": "10",
