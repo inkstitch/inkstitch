@@ -5,7 +5,7 @@
 
 import colorsys
 
-from inkex import Color, Pattern
+from inkex import Color
 
 from pyembroidery.EmbThread import EmbThread
 
