@@ -205,7 +205,7 @@ class FontSampleFrame(wx.Frame):
             text += glyph
             width += width_to_add
 
-        self._warnings(outdated)
+        self.out_dated_warning(outdated)
         self._render_text(text)
         self.GetTopLevelParent().Close()
 
@@ -215,12 +215,9 @@ class FontSampleFrame(wx.Frame):
             color_sort = False
         return color_sort
 
-    def _warnings(self, outdated=False):
-        self.duplicate_warning()
-        if outdated:
-            self.out_dated_warning()
-
     def out_dated_warning(self, outdated=False):
+        # called with outdated == True when some glyphs present in the font.json glyph list are not present in the svg font file
+
         update_glyphlist_warning = _(
             "The glyphlist for this font seems to be outdated.\n\n"
             "Please update the glyph list for {font_name}:\n"
@@ -228,16 +225,16 @@ class FontSampleFrame(wx.Frame):
             "* Select this font and apply."
         ).format(font_name=self.font.marked_custom_font_name)
 
-        if len(set(self.font.available_glyphs)) != len(self.font_variant.glyphs) or outdated:
-            errormsg(update_glyphlist_warning)
-
-    def duplicate_warning(self):
-        # warn about duplicated glyphs
+        # warning in case of plicates in the glyph list of the font.json file
         if len(set(self.font.available_glyphs)) != len(self.font.available_glyphs):
-            duplicated_glyphs = " ".join(
-                [glyph for glyph in set(self.font.available_glyphs) if self.font.available_glyphs.count(glyph) > 1]
-            )
-            errormsg(_("Found duplicated glyphs in font file: {duplicated_glyphs}").format(duplicated_glyphs=duplicated_glyphs))
+            outdated = True
+
+        # this will cause a warning if some glyphs of the svg font are not present in the font.json glyph list
+        if len(set(self.font.available_glyphs)) != len(self.font_variant.glyphs):
+            outdated = True
+
+        if outdated:
+            errormsg(update_glyphlist_warning)
 
     def _render_text(self, text):
         lines = text.splitlines()
