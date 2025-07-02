@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-26 01:49+0000\n"
-"PO-Revision-Date: 2025-06-26 01:50\n"
+"POT-Creation-Date: 2025-06-30 01:55+0000\n"
+"PO-Revision-Date: 2025-06-30 01:55\n"
 "Last-Translator: \n"
 "Language-Team: Afrikaans\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-26 01:49+0000\n"
+"POT-Creation-Date: 2025-06-30 01:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3983,12 +3983,12 @@ msgstr ""
 msgid "COLOR CHANGE"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:299
+#: lib/gui/simulator/drawing_panel.py:304
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:441
+#: lib/gui/simulator/drawing_panel.py:450
 #, python-format
 msgid "Command: %s"
 msgstr ""

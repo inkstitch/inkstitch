@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-26 01:49+0000\n"
-"PO-Revision-Date: 2025-06-26 01:50\n"
+"POT-Creation-Date: 2025-06-30 01:55+0000\n"
+"PO-Revision-Date: 2025-07-02 01:50\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-26 01:49+0000\n"
+"POT-Creation-Date: 2025-06-30 01:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1694,11 +1694,11 @@ msgstr "Lengte van steken in zig-zag modus."
 
 #: lib/elements/fill_stitch.py:566
 msgid "Zig-zag width"
-msgstr ""
+msgstr "Zig-zag breedte"
 
 #: lib/elements/fill_stitch.py:567
 msgid "Width of the zig-zag line."
-msgstr ""
+msgstr "De breedte van de zig-zag lijn."
 
 #: lib/elements/fill_stitch.py:580 lib/gui/tartan/embroidery_panel.py:42
 msgid "Rows per tartan thread"
@@ -1900,7 +1900,7 @@ msgstr "Satijnbaan: een sport doorkruist niet beide rails."
 
 #: lib/elements/satin_column.py:67
 msgid "Satin has no rungs"
-msgstr ""
+msgstr "Satijnbaan heeft geen sporten"
 
 #: lib/elements/satin_column.py:68
 msgid "Rungs control the stitch direction in satin columns. It is best pratice to use them."
@@ -1913,7 +1913,7 @@ msgstr "* Met het geselecteerde object kies \"P\" om het potlood gereedschap te 
 
 #: lib/elements/satin_column.py:71 lib/elements/satin_column.py:85
 msgid "* Hold \"Shift\" while drawing a rung."
-msgstr ""
+msgstr "* Houdt \"Shift\" ingedrukt tijdens het tekenen van een sport."
 
 #: lib/elements/satin_column.py:76
 msgid "Rungs intersects too many times"
@@ -1925,11 +1925,11 @@ msgstr "Satijnbaan: Een sport doorkruist een rail meer dan eens."
 
 #: lib/elements/satin_column.py:81
 msgid "Satin has exactly two rungs"
-msgstr ""
+msgstr "Satijnbaan heeft precies twee sporten"
 
 #: lib/elements/satin_column.py:82
 msgid "There are exactly two rungs. This may lead to false rail/rung detection."
-msgstr ""
+msgstr "Er zijn precies twee sporten. Dit kan tot verkeerde resultaten leiden."
 
 #: lib/elements/satin_column.py:90
 msgid "Unequal number of points"
@@ -1937,7 +1937,7 @@ msgstr "Ongelijk aantal punten"
 
 #: lib/elements/satin_column.py:91
 msgid "Satin column: There are no rungs and rails have an unequal number of points."
-msgstr ""
+msgstr "Satijnbaan: Er zijn geen sporten en rails hebben een ongelijke aantal punten."
 
 #: lib/elements/satin_column.py:93
 msgid "The easiest way to solve this issue is to add one or more rungs. "
@@ -1962,15 +1962,15 @@ msgstr "Aangepaste satijnbaan"
 
 #: lib/elements/satin_column.py:113
 msgid "\"E\" Stitch"
-msgstr ""
+msgstr "\"E\" Steek"
 
 #: lib/elements/satin_column.py:114
 msgid "\"S\" Stitch"
-msgstr ""
+msgstr "\"S\" Steek"
 
 #: lib/elements/satin_column.py:115 lib/stitch_plan/lock_stitch.py:222
 msgid "Zig-zag"
-msgstr ""
+msgstr "Zig-zag"
 
 #: lib/elements/satin_column.py:119 lib/elements/stroke.py:72
 #: inx/inkstitch_break_apart.inx:9
@@ -1995,7 +1995,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:149
 msgid "Random zig-zag spacing percentage"
-msgstr ""
+msgstr "Willekeurige zig-zag afstand in procent"
 
 #: lib/elements/satin_column.py:150
 msgid "Amount of random jitter added to zigzag spacing."
@@ -2003,7 +2003,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:156
 msgid "Default"
-msgstr ""
+msgstr "Standaard"
 
 #: lib/elements/satin_column.py:157 lib/stitch_plan/lock_stitch.py:220
 #: inx/inkstitch_break_apart.inx:10
@@ -2076,7 +2076,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:251
 msgid "Peak-to-peak distance between zig-zags. This is double the mm/stitch measurement used by most mechanical machines."
-msgstr ""
+msgstr "Piek-naar-piek afstand tussen zig-zags. Dit is de dubbele waarde (mm/steek) dan de meeste mechanische machines gebruiken. "
 
 #: lib/elements/satin_column.py:264
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an asymmetric effect."
@@ -2088,7 +2088,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:293 lib/elements/stroke.py:340
 msgid "Automatic"
-msgstr ""
+msgstr "Automatisch"
 
 #: lib/elements/satin_column.py:294 lib/elements/stroke.py:341
 msgid "Don't reverse"
@@ -2116,7 +2116,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:353
 msgid "Swap rails"
-msgstr ""
+msgstr "Rails wisselen"
 
 #: lib/elements/satin_column.py:354
 msgid "Swaps the first and second rails of the satin column, affecting which side the thread finished on as well as any sided properties"
@@ -2782,7 +2782,7 @@ msgstr ""
 
 #: lib/extensions/fill_to_satin.py:129 inx/inkstitch_select_elements.inx:30
 msgid "Satin"
-msgstr ""
+msgstr "Satijn"
 
 #: lib/extensions/fill_to_satin.py:142
 msgid "Please select a fill object and rungs."
@@ -3173,7 +3173,7 @@ msgstr ""
 
 #: lib/extensions/test_swatches.py:22 lib/extensions/transform_elements.py:30
 msgid "Please select one or more elements."
-msgstr ""
+msgstr "Selecteer een of meer elementen."
 
 #: lib/extensions/thread_list.py:45
 msgid "Design Details"
@@ -3236,7 +3236,7 @@ msgstr "Type Waarschuwingen"
 
 #: lib/extensions/troubleshoot.py:166
 msgid "Problem descriptions"
-msgstr ""
+msgstr "Probleembeschrijving"
 
 #: lib/extensions/troubleshoot.py:184
 msgid "Problems that will prevent the shape from being embroidered."
@@ -3283,7 +3283,7 @@ msgstr ""
 
 #: lib/gui/about.py:18
 msgid "About Ink/Stitch"
-msgstr ""
+msgstr "Over Ink/Stitch"
 
 #: lib/gui/about.py:29 inx/inkstitch_about.inx:3
 msgid "About"
@@ -3315,7 +3315,7 @@ msgstr ""
 #: lib/gui/simulator/simulator_preferences.py:55
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
 msgid "Apply"
-msgstr ""
+msgstr "Toepassen"
 
 #: lib/gui/apply_palette.py:49 lib/gui/edit_json/main_panel.py:75
 #: lib/gui/element_info.py:42 lib/gui/lettering/main_panel.py:48
@@ -3419,16 +3419,16 @@ msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:106
 msgid "Left to Right"
-msgstr ""
+msgstr "Links naar rechts"
 
 #: lib/gui/edit_json/settings_panel.py:106
 msgid "Right to Left"
-msgstr ""
+msgstr "Rechts naar links"
 
 #: lib/gui/edit_json/settings_panel.py:109
 #: inx/inkstitch_lettering_generate_json.inx:43
 msgid "Keywords"
-msgstr ""
+msgstr "Trefwoorden"
 
 #: lib/gui/edit_json/settings_panel.py:144
 msgid "Default glyph"
@@ -3436,7 +3436,7 @@ msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:151
 msgid "AutoSatin"
-msgstr ""
+msgstr "AutoSatijn"
 
 #: lib/gui/edit_json/settings_panel.py:158
 msgid "Letter case"
@@ -3494,7 +3494,7 @@ msgstr ""
 
 #: lib/gui/element_info.py:29 lib/gui/simulator/view_panel.py:120
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: lib/gui/edit_json/settings_panel.py:87 lib/gui/element_info.py:34
 #: inx/inkstitch_lettering_generate_json.inx:20
@@ -3503,7 +3503,7 @@ msgstr "Naam"
 
 #: lib/gui/element_info.py:35
 msgid "Value"
-msgstr ""
+msgstr "Waarde"
 
 #: lib/gui/element_info.py:49
 msgid "This extension informs about various parameters of selected stitch elements."
@@ -3519,7 +3519,7 @@ msgstr ""
 
 #: lib/gui/lettering/help_panel.py:19
 msgid "Add text to your design."
-msgstr ""
+msgstr "Voeg text toe aan het design."
 
 #: lib/gui/lettering/help_panel.py:36
 msgid "A font library with full description and embroidered examples can be found on our website:"
@@ -3562,11 +3562,11 @@ msgstr ""
 
 #: lib/gui/lettering/option_panel.py:55
 msgid "Height: "
-msgstr ""
+msgstr "Hoogte:"
 
 #: lib/gui/lettering/option_panel.py:59
 msgid "Scale:"
-msgstr ""
+msgstr "Schaal:"
 
 #: lib/gui/lettering/option_panel.py:71
 msgid "Font"
@@ -3584,19 +3584,19 @@ msgstr ""
 #: inx/inkstitch_batch_lettering.inx:49
 #: inx/inkstitch_lettering_along_path.inx:19
 msgid "Left"
-msgstr ""
+msgstr "Links"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:37
 #: inx/inkstitch_batch_lettering.inx:50
 #: inx/inkstitch_lettering_along_path.inx:20
 msgid "Center"
-msgstr ""
+msgstr "Midden"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:38
 #: inx/inkstitch_batch_lettering.inx:51
 #: inx/inkstitch_lettering_along_path.inx:21
 msgid "Right"
-msgstr ""
+msgstr "Rechts"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:39
 msgid "Block (default)"
@@ -3612,19 +3612,19 @@ msgstr ""
 
 #: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:23
 msgid "Off"
-msgstr ""
+msgstr "Uit"
 
 #: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:24
 msgid "Whole text"
-msgstr ""
+msgstr "Gehele text"
 
 #: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:25
 msgid "Line"
-msgstr ""
+msgstr "Lijn"
 
 #: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:26
 msgid "Word"
-msgstr ""
+msgstr "Woord"
 
 #: lib/gui/lettering/option_panel.py:100 inx/inkstitch_batch_lettering.inx:28
 msgid "Add trims"
@@ -3632,19 +3632,19 @@ msgstr ""
 
 #: lib/gui/lettering/option_panel.py:101 inx/inkstitch_batch_lettering.inx:29
 msgid "Never"
-msgstr ""
+msgstr "Nooit"
 
 #: lib/gui/lettering/option_panel.py:101 inx/inkstitch_batch_lettering.inx:30
 msgid "after each line"
-msgstr ""
+msgstr "na elke lijn"
 
 #: lib/gui/lettering/option_panel.py:101 inx/inkstitch_batch_lettering.inx:31
 msgid "after each word"
-msgstr ""
+msgstr "na elk woord"
 
 #: lib/gui/lettering/option_panel.py:101 inx/inkstitch_batch_lettering.inx:32
 msgid "after each letter"
-msgstr ""
+msgstr "na elke letter"
 
 #: lib/gui/lettering/option_panel.py:102
 msgid "Add trim command"
@@ -3682,7 +3682,7 @@ msgstr ""
 #: lib/gui/lettering_font_sample.py:51 lib/gui/tartan/customize_panel.py:46
 #: inx/inkstitch_batch_lettering.inx:21
 msgid "Scale (%)"
-msgstr ""
+msgstr "Schaal (%)"
 
 #: lib/gui/lettering_font_sample.py:53
 msgid "Max. line width"
@@ -3691,7 +3691,7 @@ msgstr ""
 #: lib/gui/lettering/option_panel.py:94 lib/gui/lettering/option_panel.py:96
 #: lib/gui/lettering_font_sample.py:55 inx/inkstitch_batch_lettering.inx:22
 msgid "Color sort"
-msgstr ""
+msgstr "Kleursortering"
 
 #: lib/gui/lettering_font_sample.py:88
 msgid "    This extension helps font creators to generate an output of every glyph from a selected font."
@@ -3730,7 +3730,7 @@ msgstr "Sprongsteken kleiner dan dit zullen als normale steken worden behandeld.
 #: lib/gui/preferences.py:53 lib/gui/preferences.py:70
 #: lib/gui/preferences.py:101 lib/gui/preferences.py:117
 msgid "mm"
-msgstr ""
+msgstr "mm"
 
 #: lib/gui/preferences.py:56 lib/gui/preferences.py:73
 msgid "Set As Default"
@@ -3738,7 +3738,7 @@ msgstr ""
 
 #: lib/gui/preferences.py:79
 msgid "Global"
-msgstr ""
+msgstr "Globaal"
 
 #: lib/gui/preferences.py:89
 msgid "Default minimum jump stitch length"
@@ -3750,7 +3750,7 @@ msgstr ""
 
 #: lib/gui/preferences.py:133
 msgid "MB"
-msgstr ""
+msgstr "MB"
 
 #: lib/gui/preferences.py:136
 msgid "Clear Stitch Plan Cache"
@@ -3823,7 +3823,7 @@ msgstr ""
 
 #: lib/gui/satin_multicolor/color_panel.py:39
 msgid "Remove color"
-msgstr ""
+msgstr "Kleur verwijderen"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:27
 msgid "General Settings"
@@ -3933,7 +3933,7 @@ msgstr "Bediening"
 
 #: lib/gui/simulator/control_panel.py:115
 msgid "Speed"
-msgstr ""
+msgstr "Snelheid"
 
 #: lib/gui/simulator/control_panel.py:244
 #, python-format
@@ -3986,12 +3986,12 @@ msgstr "STOP"
 msgid "COLOR CHANGE"
 msgstr "KLEUR WISSEL"
 
-#: lib/gui/simulator/drawing_panel.py:299
+#: lib/gui/simulator/drawing_panel.py:304
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr ""
 
-#: lib/gui/simulator/drawing_panel.py:441
+#: lib/gui/simulator/drawing_panel.py:450
 #, python-format
 msgid "Command: %s"
 msgstr ""
@@ -4306,19 +4306,19 @@ msgstr ""
 
 #: lib/lettering/categories.py:22 inx/inkstitch_lettering_generate_json.inx:52
 msgid "Handwriting"
-msgstr ""
+msgstr "Handschrift"
 
 #: lib/lettering/categories.py:23 inx/inkstitch_lettering_generate_json.inx:53
 msgid "Italic"
-msgstr ""
+msgstr "Cursief"
 
 #: lib/lettering/categories.py:24 inx/inkstitch_lettering_generate_json.inx:54
 msgid "Monogram"
-msgstr ""
+msgstr "Monogram"
 
 #: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:55
 msgid "Multicolor"
-msgstr ""
+msgstr "Veelkleurig"
 
 #: lib/lettering/categories.py:27
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
@@ -4332,24 +4332,24 @@ msgstr ""
 
 #: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:60
 msgid "Sans Serif"
-msgstr ""
+msgstr "Sans Serif"
 
 #: lib/lettering/categories.py:29 inx/inkstitch_lettering_generate_json.inx:61
 msgid "Serif"
-msgstr ""
+msgstr "Serif"
 
 #: lib/lettering/categories.py:30 inx/inkstitch_lettering_generate_json.inx:64
 #: inx/inkstitch_tartan.inx:3
 msgid "Tartan"
-msgstr ""
+msgstr "Tartan"
 
 #: lib/lettering/categories.py:31 inx/inkstitch_lettering_generate_json.inx:65
 msgid "Tiny"
-msgstr ""
+msgstr "Klein"
 
 #: lib/lettering/categories.py:32 inx/inkstitch_lettering_generate_json.inx:66
 msgid "Script: arabic"
-msgstr ""
+msgstr "Schrift: Arabisch"
 
 #: lib/lettering/categories.py:33 inx/inkstitch_lettering_generate_json.inx:67
 msgid "Script: cyrillic"
@@ -4357,19 +4357,19 @@ msgstr ""
 
 #: lib/lettering/categories.py:34 inx/inkstitch_lettering_generate_json.inx:70
 msgid "Script: greek"
-msgstr ""
+msgstr "Schrift: Grieks"
 
 #: lib/lettering/categories.py:35 inx/inkstitch_lettering_generate_json.inx:71
 msgid "Script: hebrew"
-msgstr ""
+msgstr "Schrift: Hebreeuws"
 
 #: lib/lettering/categories.py:36 inx/inkstitch_lettering_generate_json.inx:72
 msgid "Script: japanese"
-msgstr ""
+msgstr "Schrift: Japans"
 
 #: lib/lettering/categories.py:37 inx/inkstitch_lettering_generate_json.inx:73
 msgid "Script: latin"
-msgstr ""
+msgstr "Schrift: Latijn"
 
 #: lib/lettering/font.py:100
 msgid "JSON file missing. Expected a JSON file at the following location:"
@@ -4396,7 +4396,7 @@ msgstr "Het lettertype '%s' heeft geen varianten."
 
 #: lib/lettering/font.py:593
 msgid "Color Group"
-msgstr ""
+msgstr "Kleurgroep"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
@@ -4407,7 +4407,7 @@ msgstr "Fout bij schrijven naar %(path)s: %(error)s"
 
 #: lib/output.py:116
 msgid "Couldn't save embrodiery file."
-msgstr ""
+msgstr "Borduurbestand kon niet opgeslagen worden."
 
 #: lib/output.py:118
 #, python-brace-format
@@ -4424,11 +4424,11 @@ msgstr ""
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:9
 msgid "Path"
-msgstr ""
+msgstr "Pad"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:10
 msgid "Reverse path"
-msgstr ""
+msgstr "Pad omdraaien"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:11
 msgid "Reverse the path when stitching this layer."
@@ -4465,7 +4465,7 @@ msgstr ""
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:25
 msgid "Tolerance"
-msgstr ""
+msgstr "Tolerantie"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:26
 msgid "Determines how closely the stitch path matches the SVG path.  A lower tolerance means stitches will be closer together and fit the SVG path more precisely.  A higher tolerance means some corners may be rounded and fewer stitches are needed."
@@ -4473,7 +4473,7 @@ msgstr ""
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:41
 msgid "Repeat exact stitches"
-msgstr ""
+msgstr "Steken exact herhalen"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:43
 msgid "Should the exact same stitches be repeated in each pass?  If not, different randomization settings are applied on each pass."
@@ -4506,31 +4506,31 @@ msgstr ""
 
 #: lib/stitch_plan/lock_stitch.py:214
 msgid "Half Stitch"
-msgstr ""
+msgstr "Halve steek"
 
 #: lib/stitch_plan/lock_stitch.py:215
 msgid "Arrow"
-msgstr ""
+msgstr "Pijl"
 
 #: lib/stitch_plan/lock_stitch.py:216
 msgid "Back and forth"
-msgstr ""
+msgstr "Voor en terug"
 
 #: lib/stitch_plan/lock_stitch.py:217
 msgid "Bowtie"
-msgstr ""
+msgstr "Strikje"
 
 #: lib/stitch_plan/lock_stitch.py:218
 msgid "Cross"
-msgstr ""
+msgstr "Kruis"
 
 #: lib/stitch_plan/lock_stitch.py:219
 msgid "Star"
-msgstr ""
+msgstr "Ster"
 
 #: lib/stitch_plan/lock_stitch.py:221
 msgid "Triangle"
-msgstr ""
+msgstr "Driehoek"
 
 #: lib/stitch_plan/stitch_plan.py:28
 msgid "There is no selected stitchable element. Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."
@@ -5171,17 +5171,17 @@ msgstr "Husqvarna Borduurformaat"
 #. description for pyembroidery file format: iqp
 #: pyembroidery-format-descriptions.py:94
 msgid "Iqp - Intelliquilter Format"
-msgstr ""
+msgstr "Iqp - Intelliquilter Format"
 
 #. description for pyembroidery file format: plt
 #: pyembroidery-format-descriptions.py:96
 msgid "Plt - HPGL"
-msgstr ""
+msgstr "Plt - HPGL"
 
 #. description for pyembroidery file format: qcc
 #: pyembroidery-format-descriptions.py:98
 msgid "Qcc - QuiltEZ"
-msgstr ""
+msgstr "Qcc - QuiltEZ"
 
 #. description for pyembroidery file format: edr
 #: pyembroidery-format-descriptions.py:100
@@ -5365,7 +5365,7 @@ msgstr ""
 #: inx/inkstitch_transform_elements.inx:19 inx/inkstitch_troubleshoot.inx:15
 #: inx/inkstitch_unlink_clone.inx:14
 msgid "More information on our website"
-msgstr ""
+msgstr "Meer informatie op onze website"
 
 #: inx/inkstitch_auto_satin.inx:20
 msgid "https://inkstitch.org/docs/satin-tools/#auto-route-satin-columns"
@@ -5402,7 +5402,7 @@ msgstr ""
 
 #: inx/inkstitch_batch_lettering.inx:19
 msgid "Font name"
-msgstr ""
+msgstr "Naam lettertype"
 
 #: inx/inkstitch_batch_lettering.inx:21
 msgid "The scale value must be within the scale range of the specified font."
@@ -7780,7 +7780,7 @@ msgstr ""
 
 #: inx/inkstitch_select_elements.inx:34
 msgid "Zig-Zag"
-msgstr ""
+msgstr "Zig-Zag"
 
 #: inx/inkstitch_select_elements.inx:36
 msgid "Only select satins with this underlay type"
@@ -8186,7 +8186,7 @@ msgstr ""
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:3
 msgid "Zig-Zag Line to Satin"
-msgstr ""
+msgstr "Zig-Zag lijn naar Satijn"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:8
 msgid "Converts a zigzag line into a satin column."

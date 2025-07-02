@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-26 01:49+0000\n"
-"PO-Revision-Date: 2025-06-26 01:50\n"
+"POT-Creation-Date: 2025-06-30 01:55+0000\n"
+"PO-Revision-Date: 2025-07-02 01:50\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-26 01:49+0000\n"
+"POT-Creation-Date: 2025-06-30 01:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,12 +60,12 @@ msgstr "AGS Γαραμου Garamond enthält alle Zeichen aus dem lateinischen u
 #. description of font in fonts/allegria20
 #: inkstitch-fonts-metadata.py:14
 msgid "Running stitch font"
-msgstr ""
+msgstr "Geradstich-Schrift"
 
 #. description of font in fonts/allegria55
 #: inkstitch-fonts-metadata.py:16
 msgid "Satin font"
-msgstr ""
+msgstr "Satin Schrift"
 
 #. description of font in fonts/ambigue
 #: inkstitch-fonts-metadata.py:18
@@ -95,7 +95,7 @@ msgstr "Apex Simple AGS ist eine Satinschrift die gut mit Apex Lake AGS kombinie
 #. description of font in fonts/apex_simple_small_AGS
 #: inkstitch-fonts-metadata.py:28
 msgid "Apex Simple Small AGS is an altered version of Apex Simple AGS to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Apex Simple Small AGS ist eine abgewandelte, kleinere Form von Apex Simple AGS. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:30
@@ -548,12 +548,12 @@ msgstr "TT Masters ist eine Satin-Schrift."
 #. description of font in fonts/venezia
 #: inkstitch-fonts-metadata.py:208
 msgid "A serif satin font"
-msgstr ""
+msgstr "Eine Serifen-Satin-Schrift"
 
 #. description of font in fonts/venezia_small
 #: inkstitch-fonts-metadata.py:210
 msgid "Venezia small is an altered version of Venezia to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Venezia small ist eine abgewandelte, kleinere Form von Venezia. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/violin_serif
 #: inkstitch-fonts-metadata.py:212
@@ -3524,7 +3524,7 @@ msgstr "https://inkstitch.org/de/docs/troubleshoot#element-info"
 
 #: lib/gui/element_info.py:71
 msgid "Click on Copy to copy the information in the Clipboard"
-msgstr ""
+msgstr "Klicke auf Kopieren, um die Informationen in die Zwischenablage zu kopieren."
 
 #: lib/gui/lettering/help_panel.py:19
 msgid "Add text to your design."
@@ -4001,12 +4001,12 @@ msgstr "STOP"
 msgid "COLOR CHANGE"
 msgstr "FARBWECHSEL"
 
-#: lib/gui/simulator/drawing_panel.py:299
+#: lib/gui/simulator/drawing_panel.py:304
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr "Maße: {:.2f} x {:.2f}"
 
-#: lib/gui/simulator/drawing_panel.py:441
+#: lib/gui/simulator/drawing_panel.py:450
 #, python-format
 msgid "Command: %s"
 msgstr "Befehl: %s"
@@ -7077,11 +7077,11 @@ msgstr "Stopp"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:7
 msgid "Use this character to define size"
-msgstr ""
+msgstr "Nutze dieses Zeichen für die Größendefinition."
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:8
 msgid "Height of reference character (mm)"
-msgstr ""
+msgstr "Höhe des Referenzzeichens (mm)"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:13
 msgid "Converts a svg font to glyph layers"
