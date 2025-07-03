@@ -1,11 +1,13 @@
 name: Build
 on:
   push:
-    branches-ignore:
-      - master
-      - main
+  #   branches-ignore:
+  #     - master
+  #     - main
     tags:
-      - "v*.*.*"
+    #   - "v*.*.*"
+       - "old-build*"   # run on tags starting with "old-build", v* is ignored
+
 jobs:
   linux64:
     runs-on: ubuntu-22.04
@@ -150,7 +152,7 @@ jobs:
           name: inkstitch-linuxarm64
           path: artifacts
   linux32:
-    # Node required for actions, install follows 
+    # Node required for actions, install follows
     # https://github.com/actions/upload-artifact/issues/616
     runs-on: ubuntu-latest
     container:
@@ -173,7 +175,7 @@ jobs:
       # Permissions problem that prevents caching
       # https://github.com/actions/setup-python/issues/816
       - name: Change ownership of /github/home
-        run: sudo chown -R $(whoami) /github/home    
+        run: sudo chown -R $(whoami) /github/home
       - name: Replace `node` with an i386 version
         shell: bash
         run: |
@@ -220,14 +222,14 @@ jobs:
         shell: bash
         run: |
           bash bin/build-linux32-venv
-      - name: test    
+      - name: test
         shell: bash
         run: |
           source virtualenv/bin/activate
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
           pytest
-          deactivate 
-      - name: Package distributable    
+          deactivate
+      - name: Package distributable
         shell: bash
         run: |
           source virtualenv/bin/activate
