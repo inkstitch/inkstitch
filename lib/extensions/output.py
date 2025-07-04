@@ -64,6 +64,7 @@ class Output(InkstitchExtension):
         # in windows, failure to close here will keep the file locked
         temp_file.close()
 
+        self.settings['rotate'] = self.metadata.get("rotate_on_export", 0)
         write_embroidery_file(temp_file.name, stitch_plan, self.document.getroot(), self.settings)
 
         if sys.platform == "win32":
