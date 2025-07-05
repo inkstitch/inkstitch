@@ -17,9 +17,6 @@ techniques:
 field-of-use:
 user-level:
 ---
-**Achtung** Dieses Design wurde mit einer aktuellen Entwicklerversion digitalisiert. **Die Stichführung wird mit Ink/Stitch 3.1.0 nicht korrekt sein**
-{: .notice--warning}
-
 ## Applikationsstoff vorbereiten
 
 **Stoffauswahl** Das Design wurde nicht für gestrickte und dehnbare Stoffe digitalisiert. Es enthält einige recht schmale Satinsäulen.

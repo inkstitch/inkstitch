@@ -17,9 +17,6 @@ techniques:
 field-of-use:
 user-level:
 ---
-**Attention** This design was generated with a current development version and **will not do the correct routing in Ink/Stitch 3.1.0**
-{: .notice--warning}
-
 ## Prepare the applique fabric
 
 **Fabric** The design as it is digitized is not well suited for knit or stretchy fabric as it has some very small satin columns.

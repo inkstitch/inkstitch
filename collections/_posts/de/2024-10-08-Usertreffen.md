@@ -136,5 +136,5 @@ P.S. Für diejenigen die sich einen Eindruck darüber verschaffen wollen, wie si
 * <https://arbores.tech/e/inkstitch/essen-inkstitch-treffen-2025>
 * <https://arbores.tech/e/sock-tool/>
 * <https://edutechwiki.unige.ch/fr/Liste_des_emojis_à_broder>
-* <https://thenounproject.com/browse/collection-icon/singleline-animals-34716>
+* <https://thenounproject.com/browse/collection-icon/singleline-animals-34716/>
 
