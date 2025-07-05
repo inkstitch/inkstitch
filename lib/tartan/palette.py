@@ -8,9 +8,10 @@ import re
 from typing import TYPE_CHECKING, List, cast
 
 import wx
-from inkex import Color
+from inkex import Color, ColorError
 
 from .colors import string_to_color
+
 if TYPE_CHECKING:
     from ..gui.tartan.stripe_panel import StripePanel
 
@@ -175,7 +176,11 @@ class Palette:
                     color = wx.Colour(color).GetAsString(wx.C2S_HTML_SYNTAX)
                 except wx.PyNoAppError:
                     # however when we render an embroidery element we do not want to open wx.App
-                    color = str(Color(color).to_named())
+                    try:
+                        color = str(Color(color).to_named())
+                    except ColorError:
+                        color = None
+
                 if not color:
                     color = '#000000'
                     render = 0

@@ -50,7 +50,7 @@ class Stroke(EmbroideryElement):
 
     @property
     def color(self):
-        color = self.get_style("stroke")
+        color = self.stroke_color
         if self.cutwork_needle is not None:
             color = ThreadColor(color, description=self.cutwork_needle, chart=self.cutwork_needle)
         return color
