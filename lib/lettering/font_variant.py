@@ -198,7 +198,7 @@ class FontVariant(object):
                 shape = 'fina'
             else:
                 shape = 'isol'
-        # in the middle of the actual word, the shape of a glyph is medi if previous glyph is bendinng,  init otherwise
+        # in the middle of the actual word, the shape of a glyph is medi if previous glyph is binding,  init otherwise
         elif previous_is_binding:
             shape = 'medi'
         else:
@@ -207,9 +207,10 @@ class FontVariant(object):
         return shape
 
     def get_next_glyph(self, word, i, previous_is_binding):
-        # search for the glyph of word that starts at i,taking  into acount the previous glyph binding status
+        # word[:i] has been processed, this function returns the glyph starting at word[i]
+        # taking into acount the previous glyph binding status
 
-        # find  all the glyphs in tthe font that start with first letter of the glyph
+        # find  all the glyphs in the font that start with first letter of the glyph
         glyph_selection = self.glyphs_start_with(word[i])
 
         # find the longest glyph that match

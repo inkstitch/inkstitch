@@ -452,7 +452,10 @@ class Font(object):
         # because this is not unique it will be overwritten by inkscape when inserted into the document
         node.set("id", "glyph")
         node.set("inkstitch:letter-group", "glyph")
-
+        # force inkscape to show a label when the glyph is only a non-spacing mark
+        if len(node.label) == 1 and unicodedata.category(node.label) == 'Mn':
+            # force inkscape to show a label when the glyph is only a non-spacing mark
+            node.label = ' ' + node.label
         return node
 
     def _update_commands(self, node, glyph, id_extension=""):
