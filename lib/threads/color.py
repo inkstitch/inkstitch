@@ -5,13 +5,15 @@
 
 import colorsys
 
-from inkex import Color
+from inkex import Color, ColorError
 
 from pyembroidery.EmbThread import EmbThread
 
 
 class ThreadColor(object):
     def __init__(self, color, name=None, number=None, manufacturer=None, description=None, chart=None):
+        self.rgb = None
+
         if isinstance(color, str) and color.lower().startswith(('url', 'currentcolor', 'context')):
             '''
             Avoid error messages for currentcolor, context-fill, context-stroke and every string starting with an url.
@@ -32,10 +34,14 @@ class ThreadColor(object):
             self.rgb = (color.get_red(), color.get_green(), color.get_blue())
             return
         elif isinstance(color, str):
-            self.rgb = tuple(Color(color).to('rgb'))
+            try:
+                self.rgb = tuple(Color(color).to('rgb'))
+            except ColorError:
+                self.rgb = None
         elif isinstance(color, (list, tuple)):
             self.rgb = tuple(color)
-        else:
+
+        if self.rgb is None:
             '''
             Instead of erroring out, we want to set everything to black at this point.
             This includes for example patterns and gradients

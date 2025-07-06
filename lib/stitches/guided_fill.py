@@ -180,7 +180,7 @@ def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, 
     # corners.
     if not threshold:
         threshold = row_spacing / 2.0
-    simplified_line = line.simplify(threshold, False)
+    simplified_line = line.simplify(threshold, preserve_topology=False)
     simplified_points = [shgeo.Point(x, y) for x, y in simplified_line.coords]
 
     extra_points = []
