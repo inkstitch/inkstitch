@@ -225,7 +225,7 @@ class FontSampleFrame(wx.Frame):
             "* Select this font and apply."
         ).format(font_name=self.font.marked_custom_font_name)
 
-        # warning in case of plicates in the glyph list of the font.json file
+        # warning in case of duplicates in the glyph list of the font.json file
         if len(set(self.font.available_glyphs)) != len(self.font.available_glyphs):
             outdated = True
 
