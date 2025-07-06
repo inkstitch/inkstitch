@@ -5,8 +5,8 @@
 
 from math import degrees, pi
 
-from inkex import (DirectedLineSegment, Group, LinearGradient, Path,
-                   PathElement, Transform, errormsg)
+from inkex import (Color, ColorError, DirectedLineSegment, Group,
+                   LinearGradient, Path, PathElement, Transform, errormsg)
 from shapely import geometry as shgeo
 from shapely.affinity import rotate
 from shapely.ops import split
@@ -67,7 +67,7 @@ class GradientBlocks(InkstitchExtension):
             for i, shape in enumerate(fill_shapes):
                 if shape.area < 15:
                     continue
-                color = attributes[i]['color']
+                color = verify_color(attributes[i]['color'])
                 style['fill'] = color
                 is_gradient = attributes[i]['is_gradient']
                 angle = degrees(attributes[i]['angle'])
@@ -146,7 +146,7 @@ def gradient_shapes_and_attributes(element, shape, unit_multiplier):
         split_line = rotate(split_line, angle, origin=split_point, use_radians=True)
         offset_line = split_line.parallel_offset(1, 'right')
         polygon = split(shape, split_line)
-        color = stop_styles[i]['stop-color']
+        color = verify_color(stop_styles[i]['stop-color'])
         # does this gradient line split the shape
         offset_outside_shape = len(polygon.geoms) == 1
         for poly in polygon.geoms:
@@ -176,6 +176,14 @@ def gradient_shapes_and_attributes(element, shape, unit_multiplier):
             polygons.append(s)
             attributes.append({'color': stop_styles[-1]['stop-color'], 'angle': stitch_angle, 'is_gradient': is_gradient})
     return polygons, attributes
+
+
+def verify_color(color):
+    try:
+        Color(color)
+    except ColorError:
+        return "black"
+    return color
 
 
 if __name__ == '__main__':
