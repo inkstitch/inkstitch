@@ -8,6 +8,7 @@ from copy import deepcopy
 import wx
 import wx.adv
 from inkex import Group, errormsg
+import unicodedata
 
 from ..commands import ensure_command_symbols
 from ..i18n import _
@@ -178,29 +179,14 @@ class FontSampleFrame(wx.Frame):
         text = ''
         width = 0
         last_glyph = None
-        printed_warning = False
-        update_glyphlist_warning = _(
-            "The glyphlist for this font seems to be outdated.\n\n"
-            "Please update the glyph list for {font_name}:\n"
-            "* Open Extensions > Ink/Stitch > Font Management > Edit JSON\n"
-            "* Select this font and apply."
-        ).format(font_name=self.font.marked_custom_font_name)
-
-        self.duplicate_warning()
-
-        # font variant glyph list length falls short if a single quote sign is available
-        # let's add it in the length comparison
-        if len(set(self.font.available_glyphs)) != len(self.font_variant.glyphs):
-            errormsg(update_glyphlist_warning)
-            printed_warning = True
+        outdated = False
 
         for glyph in self.font.available_glyphs:
             glyph_obj = self.font_variant[glyph]
             if glyph_obj is None:
-                if not printed_warning:
-                    errormsg(update_glyphlist_warning)
-                printed_warning = True
+                outdated = True
                 continue
+
             if last_glyph is not None:
                 width_to_add = (glyph_obj.min_x - self.font.kerning_pairs.get(f'{last_glyph} {glyph}', 0)) * scale
                 width += width_to_add
@@ -219,8 +205,8 @@ class FontSampleFrame(wx.Frame):
             text += glyph
             width += width_to_add
 
+        self.out_dated_warning(outdated)
         self._render_text(text)
-
         self.GetTopLevelParent().Close()
 
     def sortable(self):
@@ -229,20 +215,40 @@ class FontSampleFrame(wx.Frame):
             color_sort = False
         return color_sort
 
-    def duplicate_warning(self):
-        # warn about duplicated glyphs
+    def out_dated_warning(self, outdated=False):
+        # called with outdated == True when some glyphs present in the font.json glyph list are not present in the svg font file
+
+        update_glyphlist_warning = _(
+            "The glyphlist for this font seems to be outdated.\n\n"
+            "Please update the glyph list for {font_name}:\n"
+            "* Open Extensions > Ink/Stitch > Font Management > Edit JSON\n"
+            "* Select this font and apply."
+        ).format(font_name=self.font.marked_custom_font_name)
+
+        # warning in case of duplicates in the glyph list of the font.json file
         if len(set(self.font.available_glyphs)) != len(self.font.available_glyphs):
-            duplicated_glyphs = " ".join(
-                [glyph for glyph in set(self.font.available_glyphs) if self.font.available_glyphs.count(glyph) > 1]
-            )
-            errormsg(_("Found duplicated glyphs in font file: {duplicated_glyphs}").format(duplicated_glyphs=duplicated_glyphs))
+            outdated = True
+
+        # this will cause a warning if some glyphs of the svg font are not present in the font.json glyph list
+        if len(set(self.font.available_glyphs)) != len(self.font_variant.glyphs):
+            outdated = True
+
+        if outdated:
+            errormsg(update_glyphlist_warning)
 
     def _render_text(self, text):
         lines = text.splitlines()
         position = {'x': 0, 'y': 0}
         for line in lines:
             group = Group()
-            group.label = line
+            label = ""
+            # make the label of the group line clearly show the non spacing marks
+            for character in line:
+                if unicodedata.category(character) != 'Mn':
+                    label += character
+                else:
+                    label += ' ' + character
+            group.label = label
             group.set("inkstitch:letter-group", "line")
             glyphs = []
             skip = []
@@ -297,7 +303,12 @@ class FontSampleFrame(wx.Frame):
         # because this is not unique it will be overwritten by inkscape when inserted into the document
         node.set("id", "glyph")
         node.set("inkstitch:letter-group", "glyph")
+        # force inkscape to show a label when the glyph is only a non spacing mark
+        if len(node.label) == 1 and unicodedata.category(node.label) == 'Mn':
+            node.label = ' ' + node.label
+
         group.add(node)
+
         return position
 
     def cancel(self, event):
