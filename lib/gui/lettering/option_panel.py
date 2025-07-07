@@ -41,7 +41,7 @@ class LetteringOptionsPanel(ScrolledPanel):
         filter_sizer.Add(self.font_glyph_filter, 1, wx.RIGHT | wx.TOP | wx.BOTTOM, 10)
         filter_sizer.Add(self.font_category_filter, 1, wx.RIGHT | wx.TOP | wx.BOTTOM, 10)
         outer_sizer.Add(filter_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
-        filter_sizer.AddSpacer(5)
+
         # font selection
         self.font_chooser = wx.adv.BitmapComboBox(self, wx.ID_ANY, style=wx.CB_READONLY | wx.CB_SORT)
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.panel.on_font_changed)
