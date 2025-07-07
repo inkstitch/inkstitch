@@ -38,7 +38,8 @@ DEFAULT_SETTINGS = {
     "lettering_trim_option": 0,
     "lettering_use_command_symbols": False,
     # font sampling
-    "font_sampling_max_line_width": 180
+    "font_sampling_max_line_width": 180,
+    "font_sampling_scale_spinner":100
 }
 
 

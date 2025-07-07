@@ -17,6 +17,7 @@
                 <option value="create_guessing"> Create missing combining glyphs, guessing content</option>
                 <option value="lock_combined_glyphs"> Lock combined glyphs layers </option>
                 <option value="fill"> Fill unlocked composed glyphs </option>
+                <option value="clean"> Clean document attributes </option>
 
             </param>
         

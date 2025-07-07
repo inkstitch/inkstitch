@@ -44,7 +44,8 @@ class FontSampleFrame(wx.Frame):
         self.font_chooser = wx.adv.BitmapComboBox(self.settings, wx.ID_ANY, style=wx.CB_READONLY | wx.CB_SORT, size=((800, 20)))
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
 
-        grid_settings_sizer = wx.FlexGridSizer(7, 2, 5, 5)
+        grid_settings_sizer = wx.FlexGridSizer(8, 2, 5, 5)
+     #    grid_settings_sizer = wx.FlexGridSizer(7, 2, 5, 5)
         grid_settings_sizer.AddGrowableCol(1)
 
         direction_label = wx.StaticText(self.settings, label=_("Stitch direction"))
@@ -53,6 +54,10 @@ class FontSampleFrame(wx.Frame):
         self.scale_spinner = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=1000, initial=100)
         max_line_width_label = wx.StaticText(self.settings, label=_("Max. line width"))
         self.max_line_width = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=5000, initial=180)
+        #
+        set_of_glyphs_label = wx.StaticText(self.settings, label=_("Glyphs"))
+        self.set_of_glyphs =  wx.ComboBox(self.settings, choices=["all","simple only"],style =wx.CB_DROPDOWN)
+        # 
         self.color_sort_label = wx.StaticText(self.settings, label=_("Color sort"))
         self.color_sort_checkbox = wx.CheckBox(self.settings)
 
@@ -62,6 +67,12 @@ class FontSampleFrame(wx.Frame):
         grid_settings_sizer.Add(self.scale_spinner, 0, wx.EXPAND, 0)
         grid_settings_sizer.Add(max_line_width_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.max_line_width, 0, wx.EXPAND, 0)
+
+        #
+        grid_settings_sizer.Add(set_of_glyphs_label, 0, wx.ALIGN_LEFT, 0)
+        grid_settings_sizer.Add(self.set_of_glyphs, 0, wx.EXPAND, 0)
+        #
+
         grid_settings_sizer.Add(self.color_sort_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.color_sort_checkbox, 0, wx.EXPAND, 0)
 
@@ -112,13 +123,16 @@ class FontSampleFrame(wx.Frame):
         max_line_width = global_settings['font_sampling_max_line_width']
         self.max_line_width.SetValue(max_line_width)
 
+        scale_spinner = global_settings['font_sampling_scale_spinner']
+        self.scale_spinner.SetValue(scale_spinner)
+
         self.set_font_list()
         select_font = global_settings['last_font']
         self.font_chooser.SetValue(select_font)
         self.on_font_changed()
 
         self.SetSizeHints(notebook_sizer.CalcMin())
-
+        
         self.Layout()
 
     def set_font_list(self):
@@ -169,9 +183,11 @@ class FontSampleFrame(wx.Frame):
         # parameters
         line_width = self.max_line_width.GetValue()
         direction = self.direction.GetValue()
+        set_of_glyphs = self.set_of_glyphs.GetValue()
+        scale_spinner= self.scale_spinner.GetValue()
 
         global_settings['font_sampling_max_line_width'] = line_width
-
+        global_settings['font_sampling_scale_spinner'] = scale_spinner
         self.font._load_variants()
         self.font_variant = self.font.variants[direction]
 
@@ -181,7 +197,14 @@ class FontSampleFrame(wx.Frame):
         last_glyph = None
         outdated = False
 
-        for glyph in self.font.available_glyphs:
+        if set_of_glyphs == "all":
+            glyphs_to_show =self.font.available_glyphs
+        if set_of_glyphs == "simple only":
+            glyphs_to_show = [g for g in  self.font.available_glyphs if len(g) == 1 and unicodedata.decomposition(g) == ""]
+
+
+        for glyph in glyphs_to_show:
+            
             glyph_obj = self.font_variant[glyph]
             if glyph_obj is None:
                 outdated = True

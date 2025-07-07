@@ -47,6 +47,7 @@ SODIPODI_NODETYPES = inkex.addNS('nodetypes', 'sodipodi')
 
 INKSTITCH_LETTERING = inkex.addNS('lettering', 'inkstitch')
 INKSTITCH_TARTAN = inkex.addNS('tartan', 'inkstitch')
+INKSTITCH_LETTER = inkex.addNS('letter', 'inkstitch')
 
 EMBROIDERABLE_TAGS = (SVG_PATH_TAG, SVG_LINE_TAG, SVG_POLYLINE_TAG, SVG_POLYGON_TAG,
                       SVG_RECT_TAG, SVG_ELLIPSE_TAG, SVG_CIRCLE_TAG)
