@@ -1,8 +1,24 @@
-# Installation and build script for Ink/Stitch
-#   make inx    - need to run after each change of templates
 
-# Windows:
+# Usage:
+#   make <target>            # Run the specified target (e.g., make inx)
+#   BUILD=linux make ...     # Override the detected build type (osx, linux, windows, linux32)
+#   make help                # Show available targets and usage
+
+# Makefile notes:
+#   .PHONY means always run this target even if the files are up to date
+#
+# Variable assignment:
+#   :=  immediate assignment (evaluated when read)
+#    =  lazy assignment (evaluated when used)
+
+# Windows requirements:
 #   https://github.com/git-for-windows/git - with basic unix commands
+
+# Important targets:
+#   make inx    - developers need to run after each change of templates in source tree
+
+# BUILD_DIST - only set here when creating distribution packages (see lib/inx/utils.py)
+#            - targets: dist, distlocal, build-python, dist-debug
 
 # BUILD variable (see build .github/workflows/* ):
 #   - osx common for MacOS and variants
@@ -10,8 +26,6 @@
 #   - linux32 common for 32-bit Linux and variants
 #   - windows common for Windows and variants
 
-# usage: eg BUILD=xxx make
-# := immediate assignment; = lazy assignment
 
 # OS detection
 OS := $(shell uname)
@@ -61,16 +75,16 @@ help:
 
 # Build Python - requires BUILD variable, calls PyInstaller, put all stuff into dist/inkstitch/bin
 build-python: version locales inx
-	bash bin/build-python
+	export BUILD_DIST=true; bash bin/build-python
 
 
 # Build archives  - requires BUILD variable
 dist: build-python
-	bash bin/build-distribution-archives
+	export BUILD_DIST=true; bash bin/build-distribution-archives
 
 # just for testing, build archives for current OS, without build-python
 dist-debug:
-	bash bin/build-distribution-archives
+	export BUILD_DIST=true; bash bin/build-distribution-archives
 
 distclean:
 	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip *.deb *.rpm VERSION
@@ -78,19 +92,19 @@ distclean:
 
 # Build local distribution archives for current OS - requires BUILD variable
 distlocal:
-	export VERSION=local-build; make distclean && make dist;
+	export BUILD_DIST=true; export VERSION=local-build; make distclean && make dist;
 
 manual:                  # now this is alias for make inx
 	@echo "This target is deprecated. Use 'make inx' instead."
 	make inx
 
-#
-.PHONY: inx              # .PHONY means always run this target even if the files are up to date
+# Ensure BUILD_DIST is NOT set when calling from source tree, to prevent generation of distribution INX files (see lib/inx/utils.py).
+.PHONY: inx
 inx: version locales     # before running this target, run version and locales
 	python bin/generate-inx-files;
 
 # see action: .github/workflows/translations.yml and https://translate.inkstitch.org
-.PHONY: messages.po      # .PHONY means always run this target
+.PHONY: messages.po
 messages.po: inx         # run this target after inx
 	rm -f messages.po
 	xgettext inx/*.inx --its=its/inx.its -o messages-inx.po
@@ -111,7 +125,7 @@ messages.po: inx         # run this target after inx
 %.po: %.mo
 	msgunfmt -o $@ $<
 
-.PHONY: clean           # .PHONY means always run this target
+.PHONY: clean
 clean:
 	rm -f messages.po pystitch-format-descriptions.py
 
@@ -119,12 +133,12 @@ clean:
 # generate locales (used by make inx):
 #   ./locales/* from ./translation/*.po
 # copy ./locales/* to ./inx/locale/ and shorten locale code (en_US to en, ...) but some langs has conflict
-.PHONY: locales         # .PHONY means always run this target
+.PHONY: locales
 locales:
 	bash bin/generate-translation-files
 
 # generate ./VERSION file
-.PHONY: version         # .PHONY means always run this target
+.PHONY: version
 version:
 	bash bin/generate-version-file
 
@@ -132,13 +146,13 @@ version:
 # commands
 
 # flake8 - check python code style
-.PHONY: style           # .PHONY means always run this target
+.PHONY: style
 style:
 	bash -x bin/style-check
 
 # show all files in the repo that are ignored by git
 # - skip .venv folder
-.PHONY: ignored         # .PHONY means always run this target
+.PHONY: ignored
 ignored:
 	@git ls-files --others --ignored --exclude-standard | grep -v .venv
 

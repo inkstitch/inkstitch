@@ -14,6 +14,15 @@ inx_path = os.path.join(_top_path, "inx")
 template_path = os.path.join(_top_path, "templates")
 
 
+
+# Used by these modules:
+# - lib/inx/inputs.py
+# - lib/inx/outputs.py
+# - lib/inx/extensions.py
+
+
+# Setup the Jinja2 environment for building INX files.
+# BUILD_DIST - only set when creating distribution packages
 def build_environment():
     env = Environment(
         loader=FileSystemLoader(template_path),
@@ -21,7 +30,7 @@ def build_environment():
         extensions=['jinja2.ext.i18n']
     )
 
-    if "BUILD" in os.environ:
+    if "BUILD_DIST" in os.environ:
         # building a ZIP release, with inkstitch packaged as a binary
         # Command tag and icons path
         if sys.platform == "win32":
@@ -34,12 +43,17 @@ def build_environment():
             env.globals["command_tag"] = '<command location="inx">../bin/inkstitch</command>'
             env.globals["icon_path"] = '../bin/icons/'
     else:
-        # user is running inkstitch.py directly as a developer
+        # user is running inkstitch.py directly as a developer from the source tree
         env.globals["command_tag"] = '<command location="inx" interpreter="python">../inkstitch.py</command>'
         env.globals["icon_path"] = '../icons/'
     return env
 
 
+# Write the given contents to an INX file for Ink/Stitch.
+# Args:
+#     name (str): The name to use in the INX filename (will be prefixed with 'inkstitch_').
+#     contents (str): The contents to write to the INX file.
+# The file will be created in the 'inx' directory, with UTF-8 encoding.
 def write_inx_file(name, contents):
     inx_file_name = "inkstitch_%s.inx" % name
     with open(os.path.join(inx_path, inx_file_name), 'w', encoding="utf-8") as inx_file:
