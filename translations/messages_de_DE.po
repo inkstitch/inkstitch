@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-30 01:55+0000\n"
-"PO-Revision-Date: 2025-07-02 01:50\n"
+"POT-Creation-Date: 2025-07-07 01:55+0000\n"
+"PO-Revision-Date: 2025-07-07 01:56\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-30 01:55+0000\n"
+"POT-Creation-Date: 2025-07-07 01:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -152,416 +152,421 @@ msgstr "Baumans FI Small ist eine abgewandelte, kleinere Form von Baumans FI. Di
 msgid "A Syafrizal a.k.a. Khurasan jawn. 3.5mm satin at 100%, splits at higher sizes."
 msgstr "Eine abgewandelte Schriftart von Khurasan Studio. Bei 100% ist die Satinschrift 3,5 mm groß. Hochskaliert werden Zwischenstiche eingefügt."
 
-#. description of font in fonts/califragilistic
+#. description of font in fonts/braille
 #: inkstitch-fonts-metadata.py:52
+msgid "Font for the visually impaired with Braille key combinations according to DT 2024 INSEI specifications for French 6 dots Braille. It is also possible to use Unicode Braille. In this case, it is convenient to use one of the web's Braille translators to create a text in Braille unicode.\n"
+msgstr ""
+
+#. description of font in fonts/califragilistic
+#: inkstitch-fonts-metadata.py:54
 msgid "Califragilistic is a tricolor running stitch font that was constructed using mandalas"
 msgstr "Califragilistic ist eine dreifarbige Schrift aus Geradestichen, die unter Verwendung von Mandalas konstruiert wurde."
 
 #. description of font in fonts/cats
-#: inkstitch-fonts-metadata.py:54
+#: inkstitch-fonts-metadata.py:56
 msgid "Cats is a silly font that makes use of satin random parameters."
 msgstr "Cats ist eine lustige Schrift mit randomisierten Satinparametern."
 
 #. description of font in fonts/cherryforinkstitch
-#: inkstitch-fonts-metadata.py:56
+#: inkstitch-fonts-metadata.py:58
 msgid "Cherry for inkstitch is a decorative satin column font. It contains 74 glyphs."
 msgstr "Cherry for Ink/Stitch ist eine dekorative Satin-Schrift. Sie enthält 74 Zeichen."
 
 #. description of font in fonts/cherryforkaalleen
-#: inkstitch-fonts-metadata.py:58
+#: inkstitch-fonts-metadata.py:60
 msgid "Cherry for Kaalleen is a large decorative font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
 msgstr "Cherry for Kaalleen ist eine große, dekorative Schrift. Sie enthält 36 Zeichen: Zahlen und 26 Großbuchstaben A-Z."
 
 #. description of font in fonts/chicken_little
-#: inkstitch-fonts-metadata.py:60
+#: inkstitch-fonts-metadata.py:62
 #, python-format
 msgid "Chicken Little  is a  playful decorative display font with loads of personality. There is no common baseline, no common character size and no common slope of the letters. Beyond 110% some satin columns will split."
 msgstr "Chicken Little ist eine verspielte, dekorative Displayschrift mit viel Persönlichkeit. Es gibt keine gemeinsame Grundlinie, keine gemeinsame Zeichengröße und keine gemeinsame Neigung der Buchstaben. Bei einer Skalierung von über 110% werden die Stiche geteilt."
 
 #. description of font in fonts/chicken_little_small
-#: inkstitch-fonts-metadata.py:62
+#: inkstitch-fonts-metadata.py:64
 msgid "This font is an altered version  of Chicken Little KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Chicken Little Small ist eine abgewandelte, kleinere Form von Chicken Little KOR. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/chicken_scratch
-#: inkstitch-fonts-metadata.py:64
+#: inkstitch-fonts-metadata.py:66
 msgid "A handwritten font."
 msgstr "Eine Schrift in Handschrift-Optik."
 
 #. description of font in fonts/chopin
-#: inkstitch-fonts-metadata.py:66
+#: inkstitch-fonts-metadata.py:68
 msgid "Chopin Script is a script satin font. Every satin has zigzag underlay."
 msgstr "Chopin Script ist eine Satin-Schrift in Handschrift-Optik. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. description of font in fonts/cogs_KOR
-#: inkstitch-fonts-metadata.py:68
+#: inkstitch-fonts-metadata.py:70
 msgid "Cogs KOR is a Steampunk  satin font."
 msgstr "Cogs KOR ist eine Steampunk-Satin-Schrift."
 
 #. description of font in fonts/colorful
-#: inkstitch-fonts-metadata.py:70
+#: inkstitch-fonts-metadata.py:72
 msgid "Colorful is a tartan fill font."
 msgstr "Colorful ist eine Schriftart mit Tartan-Füllungen."
 
 #. description of font in fonts/computer
-#: inkstitch-fonts-metadata.py:72
+#: inkstitch-fonts-metadata.py:74
 msgid "satin font"
 msgstr "Satin Schrift"
 
 #. description of font in fonts/computer_small
-#: inkstitch-fonts-metadata.py:74
+#: inkstitch-fonts-metadata.py:76
 msgid "Small satin font: the use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr "Kleine Satinschrift: für diese Schrift bitte dünnen Faden (60) und Nadel (60) nutzen."
 
 #. description of font in fonts/cooper_marif
-#: inkstitch-fonts-metadata.py:76
+#: inkstitch-fonts-metadata.py:78
 msgid "CooperMarif is a large and airy font."
 msgstr "CooperMarif ist eine große, luftige Schrift."
 
 #. description of font in fonts/coronaviral
-#: inkstitch-fonts-metadata.py:78
+#: inkstitch-fonts-metadata.py:80
 msgid "Coronaviral font is created with manual sitch. Do not change the size or very little."
 msgstr "Coronaviral besteht aus manuellen Stichen. Eine Größenänderung ist nicht möglich."
 
 #. description of font in fonts/decadent_flowers_monogram
-#: inkstitch-fonts-metadata.py:80
+#: inkstitch-fonts-metadata.py:82
 msgid "Each Decadent Flowers Monogram lettter  is composed of an optional knockdown fill (for high pile fabric embroidery)  and redwork flowers  with a negative space letter monogram"
 msgstr "Jedes Zeichen der  Decadent Flowers Monogram Schrift besteht aus einer optionalen  Kockdown-Füllung (zum Sticken auf hochflorigen Stoffen) und Redwork-Blumen mit ausgesparten Buchstaben"
 
 #. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:82
+#: inkstitch-fonts-metadata.py:84
 msgid "DejaVu Serif Condensed is a satin font. Every satin has center-walk underlay."
 msgstr "DejaVu Serif Condensed ist eine Satin-schrift. Jede Satinsäule hat eine Mittellinien-Unterlage."
 
 #. description of font in fonts/digory_doodles_bean
-#: inkstitch-fonts-metadata.py:84
+#: inkstitch-fonts-metadata.py:86
 msgid "All letters of Digory Doodles Bean mix satin and bean stitch."
 msgstr "Alle Zeichen von Digory Doodles Bean bestehen aus einer Kombination aus Satinsäulen und Mehrfach-Geradstichen."
 
 #. description of font in fonts/dinomouse72
-#: inkstitch-fonts-metadata.py:86
+#: inkstitch-fonts-metadata.py:88
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
 msgstr "Eine Satin-Schrift."
 
 #. description of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:88
+#: inkstitch-fonts-metadata.py:90
 msgid "Emilio 20 contains only capitals and numbers. Every satin has zigzag underlay."
 msgstr "Emilio 20 enthält nur Großbuchstaben und Zahlen. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. description of font in fonts/emilio_20_applique
-#: inkstitch-fonts-metadata.py:90
+#: inkstitch-fonts-metadata.py:92
 msgid "Emilio 20 Applique is an Applique font. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique."
 msgstr "Emilio 20 Applique ist eine Applikationsschrift. Diese Version ist eine Variante (breitere Satinsäulen) von Emilio_20. Emilio_20_Bold entspricht dieser Schrift, enthält jedoch nicht die Applikationsmethodik."
 
 #. description of font in fonts/emilio_20_bold
-#: inkstitch-fonts-metadata.py:92
+#: inkstitch-fonts-metadata.py:94
 msgid "Emilio_20_Bold is an altered version of Emilio_20."
 msgstr "Emilio_20_Bold ist eine abgewandelte Form von Emilio_20."
 
 #. description of font in fonts/emilio_20_simple
-#: inkstitch-fonts-metadata.py:94
+#: inkstitch-fonts-metadata.py:96
 msgid "Emilio is a font with capital only and numbers. Every satin has zigzag underlay."
 msgstr "Emilio enthält nur Großbuchstaben und Zahlen. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. description of font in fonts/emilio_20_simple_small
-#: inkstitch-fonts-metadata.py:96
+#: inkstitch-fonts-metadata.py:98
 msgid "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Emilio 20 Simple Small ist eine abgewandelte, kleinere Form von Emilio 20 simple. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/emilio_20_tartan
-#: inkstitch-fonts-metadata.py:98
+#: inkstitch-fonts-metadata.py:100
 msgid "Emilio 20 Tartan uses tartan fill for a colorful font."
 msgstr "Emilio 20 Tartan nutzt eine farbenfrohe Tartanfüllung."
 
 #. description of font in fonts/emilio_20_tricolore
-#: inkstitch-fonts-metadata.py:100
+#: inkstitch-fonts-metadata.py:102
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
 msgstr "Emilio 20 tricolore ist eine große Schrift aus Füllungen und Satinsäulen. Sie enthält 36 Zeichen: Zahlen und 26 Großbuchstaben A-Z."
 
 #. description of font in fonts/espresso_KOR
-#: inkstitch-fonts-metadata.py:102
+#: inkstitch-fonts-metadata.py:104
 msgid "Espresso KOR is a satin font. Every satin has zigzag underlay."
 msgstr "Espresso KOR ist eine Satin-Schrift. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. description of font in fonts/espresso_tiny
-#: inkstitch-fonts-metadata.py:104
+#: inkstitch-fonts-metadata.py:106
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Espresso tiny ist eine abgewandelte, kleinere Form von Espresso KOR. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/excalibur_KOR
-#: inkstitch-fonts-metadata.py:106
+#: inkstitch-fonts-metadata.py:108
 msgid "Excalibur KOR is a small satin column manuscript font. It contains 144 glyphs, covering most western European languages needs."
 msgstr "Excalibur KOR ist eine kleine Manuskript-Schrift aus Satinsäulen. Sie enthält 144 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab."
 
 #. description of font in fonts/excalibur_small
-#: inkstitch-fonts-metadata.py:108
+#: inkstitch-fonts-metadata.py:110
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Excalibur small ist eine abgewandelte, kleinere Form von Excalibur KOR. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/fold_inkstitch
-#: inkstitch-fonts-metadata.py:110
+#: inkstitch-fonts-metadata.py:112
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font. It contains 40 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr "Fold Ink/Stitch ist eine große Großbuchstabenschrift mit drei- und fünffachen Geradstichen. Sie enthält 40 Zeichen, darunter alle Zahlen und die 26 Großbuchstaben A-Z."
 
 #. description of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:112
+#: inkstitch-fonts-metadata.py:114
 msgid "Geneva Simple Sans Rounded is a satin font."
 msgstr "Geneva Simple Sans Rounded ist eine Satin-Schrift."
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:114
+#: inkstitch-fonts-metadata.py:116
 msgid "Geneva Simple Sans is a satin font."
 msgstr "Geneva Simple Sans ist eine Satin-Schrift."
 
 #. description of font in fonts/gingo200
-#: inkstitch-fonts-metadata.py:116
+#: inkstitch-fonts-metadata.py:118
 msgid "Gingo 200 is playful satin font with 158 glyphs."
 msgstr "Gingo 200 ist eine verspielte Satinschrift mit 158 Zeichen."
 
 #. description of font in fonts/glacial_tiny
-#: inkstitch-fonts-metadata.py:118
+#: inkstitch-fonts-metadata.py:120
 msgid "Glacial is a very tiny font. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages."
 msgstr "Glacial ist eine sehr kleine Schrift und erfordert die Verwendung eines dünnen Fadens (60 wt) und einer dünnen Nadel (8/60). Die Zeichen decken die viele europäischen Sprachen ab."
 
 #. description of font in fonts/hebrew_font_medium
-#: inkstitch-fonts-metadata.py:120
+#: inkstitch-fonts-metadata.py:122
 msgid "Medium size hebrew satin font"
 msgstr "Hebräische Satinschrift in mittlerer Größe"
 
 #. description of font in fonts/hebrew_simple_rounded
-#: inkstitch-fonts-metadata.py:122
+#: inkstitch-fonts-metadata.py:124
 msgid "A simple rounded hebrew font"
 msgstr "Eine einfache runde hebräische Schrift."
 
 #. description of font in fonts/hebrew_simple_rounded_small
-#: inkstitch-fonts-metadata.py:124
+#: inkstitch-fonts-metadata.py:126
 msgid "A simple rounded hebrew font, small version to be embroidered with 60wt thread and 60 needle"
 msgstr "Kleine Version einer einfachen runden hebräischen Schrift. Für diese Schrift bitte einen dünnen Faden (60) und Nadel (60) benutzen."
 
 #. description of font in fonts/honoka
-#: inkstitch-fonts-metadata.py:126
+#: inkstitch-fonts-metadata.py:128
 msgid "コルの書きこも is a satin column japanese script font. It contains all hiragana, katakana and punctuation glyphs plus 80 kanjis."
 msgstr "コルの書きこも ist eine japanische Satin-Skript-Schrift. Sie enthält alle Hiragana-, Katakana- und Satzzeichen sowie 80 Kanjis."
 
 #. description of font in fonts/infinipicto
-#: inkstitch-fonts-metadata.py:128
+#: inkstitch-fonts-metadata.py:130
 msgid "InfiniPicto is a fun font containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
 msgstr "InfiniPicto ist eine lustige Schriftart. Sie enthält nur die 26 A-Z Großbuchstaben. Jeder Buchstabe ist ein Piktogramm von einem Objekt, das mit diesem Buchstaben beginnt ... auf Französisch"
 
 #. description of font in fonts/inkstitch_masego
-#: inkstitch-fonts-metadata.py:130
+#: inkstitch-fonts-metadata.py:132
 msgid "Masego is a display san-serif typeface."
 msgstr "Masego ist eine Sans-Serif Display-Schrift."
 
 #. description of font in fonts/invercelia
-#: inkstitch-fonts-metadata.py:132
+#: inkstitch-fonts-metadata.py:134
 msgid "Invercelia is a modern two letters monogram font. Enter an upper case letter followed by a lower case letter (for example 'Ac') to get a simple monogram.  Add a ')' at the end and the monogram is framed with a circle (for example 'Ac)'), add an '(' to start (for example '(Ac)' and your monogram is ready for applique, or  try something like '!Ac)' to replace the appliqué by knockdown stitches."
 msgstr "Invercelia ist eine moderne Zwei-Zeichen-Monogramm-Schriftart. Für ein einfaches Monogramm folgt auf einen Großbuchstaben ein Kleinbuchstabe (z.B. 'Ac'). Eine runde Klammer ')' hinter den Buchstaben fügt einen Kreis um das Monogramm hinzu (z.B. 'Ac)'). Füge eine runde Klammer vor dem Monogramm (z.B. '(Ac')) bereitet es für eine Applikation vor. Die Eingabe von '!Ac)' erzeugt Knockdown-Stiche."
 
 #. description of font in fonts/kaushan_script_MAM
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:136
 msgid "Kaushan Script MAM is a script satin font. Every satin has zigzag underlay."
 msgstr "Kaushan Script MAM ist eine Satin-Schrift in Handschrift-Optik. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. description of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:138
 msgid "Learning curve is a small running stitch script font."
 msgstr "Learning curve ist eine kleine Schrift aus Geradstichen."
 
 #. description of font in fonts/lobster_AGS
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:140
 msgid " Lobster AGS is a script satin font. Every satin has zigzag underlay."
 msgstr "  Lobster AGS ist eine Satin-Schrift in Handschrift-Optik. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. description of font in fonts/magnolia_KOR
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:142
 msgid "Magnolia KOR is a script satin font."
 msgstr "Magnolia KOR ist eine Satin-Schrift in Handschrift-Optik."
 
 #. description of font in fonts/magnolia_bicolor
-#: inkstitch-fonts-metadata.py:142
+#: inkstitch-fonts-metadata.py:144
 msgid "Magnolia bicolor is a  larger  bicolor variation of Magnolia font."
 msgstr "Magnolia bicolor ist eine größere, zweifarbige Version von Magnolia."
 
 #. description of font in fonts/magnolia_small
-#: inkstitch-fonts-metadata.py:144
+#: inkstitch-fonts-metadata.py:146
 msgid "Magnolia Small is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Magnolia Small ist eine abgewandelte, kleinere Form von Magnolia KOR. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/magnolia_tamed
-#: inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:148
 msgid "This is a less wild bicolor variation of Magnolia font"
 msgstr "Dies ist eine etwas weniger wilde, zweifarbige Variante der Magnolia Schrift"
 
 #. description of font in fonts/malika
-#: inkstitch-fonts-metadata.py:148
+#: inkstitch-fonts-metadata.py:150
 msgid "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch."
 msgstr "Malika ist eine arabische Satinschrift. Nicht obligatorische diakritische Zeichen sollten nicht im Text eingegeben werden, sondern separat und dann manuell an die richtige Position verschoben werden. Hinter den drei Klammern sind, für eine zusätzliche dekorative Note, Verzierungen hinterlegt."
 
 #. description of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:150
+#: inkstitch-fonts-metadata.py:152
 msgid "Manuskript Gothisch is a satin font. Every satin has zigzag underlay."
 msgstr "Manuskript Gothisch ist eine Satin-Schrift. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. description of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:152
+#: inkstitch-fonts-metadata.py:154
 msgid "MarcellusSC-FI is a small capital satin font. It contains 107 glyphs covering most Western European languages."
 msgstr "MarcellusSC-FI ist eine kleine Schrift aus Satinsäulen. Sie enthält 107 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab."
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:154
+#: inkstitch-fonts-metadata.py:156
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
 msgstr "Ink/Stitch Medium Font ist eine einfache Satin-Schrift, die für mittelgroße Buchstaben geeignet ist. Jede Satinsäule hat eine Konturunterlage."
 
 #. description of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:156
+#: inkstitch-fonts-metadata.py:158
 msgid "Millimarif-bold20 is a  bold satin font."
 msgstr "Millimarif-bold20 ist eine breite Satin-Schrift."
 
 #. description of font in fonts/mimosa_large
-#: inkstitch-fonts-metadata.py:158
+#: inkstitch-fonts-metadata.py:160
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
 msgstr "Mimosa Large ist eine gepunktete Satin-Schrift."
 
 #. description of font in fonts/mimosa_medium
-#: inkstitch-fonts-metadata.py:160
+#: inkstitch-fonts-metadata.py:162
 msgid "Mimosa Medium is a satin font that looks dotty."
 msgstr "Mimosa Medium ist eine gepunktete Satin-Schrift."
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:162
+#: inkstitch-fonts-metadata.py:164
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
 msgstr "Monicha ist eine Schreibschrift-Satin-Schrift. Zusätzlich zu den Buchstaben, die die meisten westeuropäischen Sprachen abdecken, enthält sie zusätzliche Zierbuchstaben. Diese Zierbchstaben sollten sparsam eingesetzt werden um Überlagerungen zu vermeiden. Nutze am Besten nicht mehr als einen Zierbuchstaben pro Reihe. Auf unserer Webseite gibt es genaue Informationen, wie auf die Zierbuchstaben zugegriffen werden kann."
 
 #. description of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:164
+#: inkstitch-fonts-metadata.py:166
 msgid "Namskout AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr "Namskout AGS ist eine große Schrift für Applikationen. Sie enthält 43 Zeichen: Zahlen und 26 Großbuchstaben A-Z."
 
 #. description of font in fonts/namskout_relief
-#: inkstitch-fonts-metadata.py:166
+#: inkstitch-fonts-metadata.py:168
 msgid "Namskout relief is an altered version of Namskout AGS for embossed letters."
 msgstr "Namskout relief ist eine abgewandelte Version von Namskout AGS für die Trapunto-Technik."
 
 #. description of font in fonts/namskout_tartan
-#: inkstitch-fonts-metadata.py:168
+#: inkstitch-fonts-metadata.py:170
 msgid "Namskout Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals."
 msgstr "Namskout Tartan ist eine große Schrift mit Tartanmustern. Sie enthält 43 Zeichen: Zahlen und 26 Großbuchstaben A-Z."
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:170
+#: inkstitch-fonts-metadata.py:172
 msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
 msgstr "NickAinley ist ein Mehrfachgeradstich-Alphabet auf der Grundlage einer 24pt Schrift von Seniors Studio."
 
 #. description of font in fonts/ondulamarif_Medium
-#: inkstitch-fonts-metadata.py:172
+#: inkstitch-fonts-metadata.py:174
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
 msgstr "Ondulamarif M ist eine abgewandelte, kleinere Version von Ondulamarif XL."
 
 #. description of font in fonts/ondulamarif_S
-#: inkstitch-fonts-metadata.py:174
+#: inkstitch-fonts-metadata.py:176
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
 msgstr "Ondularmarif S ist die kleinste, abgewandelte Version von Ondulamarif XL."
 
 #. description of font in fonts/ondulamarif_XL
-#: inkstitch-fonts-metadata.py:176
+#: inkstitch-fonts-metadata.py:178
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
 msgstr "Ondulamarif XL ist eine Schriftart aus Ripple-Stichen. Sie kann sehr viel größer skaliert, aber nicht verkleinert werden."
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:178
+#: inkstitch-fonts-metadata.py:180
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr "Pacificlo ist eine kleine Manuskript-Schrift aus Satinsäulen. Sie enthält 120 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab. "
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:180
+#: inkstitch-fonts-metadata.py:182
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr "Pacificlo tiny ist eine abgewandelte, kleinere Form von Pacificlo. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/perspective_tricolore_KOR
-#: inkstitch-fonts-metadata.py:182
+#: inkstitch-fonts-metadata.py:184
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
 msgstr "Perspective tricolore KOR ist eine schattierte, dreifarbige Schrift. Sie enthält lediglich Großbuchstaben, Zahlen und Satzzeichen."
 
 #. description of font in fonts/pixel10
-#: inkstitch-fonts-metadata.py:184
+#: inkstitch-fonts-metadata.py:186
 msgid "Pixel 10 is a satin pixel font."
 msgstr "Pixel 10 ist eine Satin-Pixel-Schrift."
 
 #. description of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:186
+#: inkstitch-fonts-metadata.py:188
 msgid "Roaring Twenties KOR is a mix of satin and bean stitches."
 msgstr "Roaring Twenties KOR kombiniert Satinsäulen mit Mehrfachgeradstichen."
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:188
+#: inkstitch-fonts-metadata.py:190
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr "Roaring Twenties KOR Small ist eine abgewandelte, kleinere Form von Roaring Twenties KOR. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:190
+#: inkstitch-fonts-metadata.py:192
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
 msgstr "Roman AGS basiert auf Latin Modern Roman 10 Bold Italic. Jeder Satin hat eine Zickzack-Unterlage."
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:192
+#: inkstitch-fonts-metadata.py:194
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
 msgstr "Roman bicolor AGS ist eine abgewandelte Version von Roman AGS. Die Großbuchstaben sind zweifarbig."
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:194
+#: inkstitch-fonts-metadata.py:196
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
 msgstr "Sacramarif ist eine sehr kleine Schrift aus Geradstichen. Sie basiert auf Sacramento."
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:196
+#: inkstitch-fonts-metadata.py:198
 msgid "Ink/Stitch Small Font is suited for small characters."
 msgstr "Ink/Stitch Small eignet sich für kleine Schriftzeichen."
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:198
+#: inkstitch-fonts-metadata.py:200
 #, python-brace-format
 msgid " Sortefax XL Initials is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
 msgstr "Sortefax ist eine sehr große Satin-Schrift mit Großbuchstaben. Sie umfasst 37 Zeichen: &, A-Z und 0-9. Zusätzlich werden die Zeichen (){}[],;.: genutzt um Rahmen zu erstellen. Z.B. ergibt A( ein umrahmtes A. Warnung: für einige Buchstaben muss der Rahmen manuell vergrößert werden."
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:200
+#: inkstitch-fonts-metadata.py:202
 #, python-brace-format
 msgid "Sortefax  Medium Initials is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
 msgstr "Sortefax Medium Initials ist eine sehr große Satin-Schrift mit Großbuchstaben. Sie umfasst 37 Zeichen: &, A-Z und 0-9. Zusätzlich werden die Zeichen (){}[],;.: genutzt um Rahmen zu erstellen. Z.B. ergibt A) ein umrahmtes A. Für einige Zeichen muss der Rahmen manuell vergrößert werden."
 
 #. description of font in fonts/sunset
-#: inkstitch-fonts-metadata.py:202
+#: inkstitch-fonts-metadata.py:204
 msgid "3 colors satin column font"
 msgstr "Eine dreifarbige Satin-Schrift."
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:204
+#: inkstitch-fonts-metadata.py:206
 msgid "TT  Directors is a satin font suited for directing."
 msgstr "TT Directors ist eine Satin-Schrift."
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:206
+#: inkstitch-fonts-metadata.py:208
 msgid "TT Masters is a satin font suited for heavy typing :)"
 msgstr "TT Masters ist eine Satin-Schrift."
 
 #. description of font in fonts/venezia
-#: inkstitch-fonts-metadata.py:208
+#: inkstitch-fonts-metadata.py:210
 msgid "A serif satin font"
 msgstr "Eine Serifen-Satin-Schrift"
 
 #. description of font in fonts/venezia_small
-#: inkstitch-fonts-metadata.py:210
+#: inkstitch-fonts-metadata.py:212
 msgid "Venezia small is an altered version of Venezia to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr "Venezia small ist eine abgewandelte, kleinere Form von Venezia. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:212
+#: inkstitch-fonts-metadata.py:214
 msgid "Violin Serif is a condensed serif satin font."
 msgstr "Violin Serif ist eine Satinschriftart mit schmalen Serifen."
 
 #. description of font in fonts/western_light
-#: inkstitch-fonts-metadata.py:214
+#: inkstitch-fonts-metadata.py:216
 msgid "Western light is a light fill western style font."
 msgstr "Western Light ist eine Schriftart im Westernstil mit leichten Füllung."
 
@@ -1107,7 +1112,7 @@ msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr "In manchen Fällen, schlägt die automatische Winkelberechnung fehl. Der Fehler kann durch diese Option in der Regel behoben werden."
 
 #: lib/elements/element.py:251 lib/gui/preferences.py:59
-#: lib/gui/preferences.py:106
+#: lib/gui/preferences.py:129
 msgid "Minimum stitch length"
 msgstr "Minimale Stichlänge"
 
@@ -2624,7 +2629,7 @@ msgstr "Eine Liste mit allen unterstützten Dateiformaten gibt es auf unserer We
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Text"
 
-#: lib/extensions/batch_lettering.py:210 lib/gui/lettering/main_panel.py:308
+#: lib/extensions/batch_lettering.py:210 lib/gui/lettering/main_panel.py:311
 msgid "scale"
 msgstr "Skalierung"
 
@@ -3007,8 +3012,8 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Dieser Parameter wird gespeichert, wenn man auf \"Übernehmen und beenden\" klickt"
 
 #: lib/extensions/params.py:539 lib/extensions/sew_stack_editor.py:118
-#: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:58
-#: lib/gui/lettering_font_sample.py:68
+#: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:57
+#: lib/gui/lettering_font_sample.py:69
 #: lib/gui/satin_multicolor/main_panel.py:54
 #: lib/gui/simulator/simulator_preferences.py:53
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
@@ -3023,7 +3028,7 @@ msgid "Use Last Settings"
 msgstr "Letzte Einstellungen verwenden"
 
 #: lib/extensions/params.py:547 lib/extensions/sew_stack_editor.py:122
-#: lib/gui/lettering/main_panel.py:56
+#: lib/gui/lettering/main_panel.py:55
 msgid "Apply and Quit"
 msgstr "Anwenden und schließen"
 
@@ -3285,7 +3290,7 @@ msgstr "Garnliste"
 
 #: lib/gui/abort_message.py:38 lib/gui/apply_palette.py:64
 #: lib/gui/edit_json/help_panel.py:27 lib/gui/element_info.py:57
-#: lib/gui/lettering_font_sample.py:96
+#: lib/gui/lettering_font_sample.py:97
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr "Mehr Informationen auf unserer Webseite:"
@@ -3319,7 +3324,7 @@ msgid "Select color palette"
 msgstr "Farbpalette auswählen"
 
 #: lib/gui/apply_palette.py:44 lib/gui/edit_json/settings_panel.py:65
-#: lib/gui/lettering_font_sample.py:70
+#: lib/gui/lettering_font_sample.py:71
 #: lib/gui/satin_multicolor/main_panel.py:56
 #: lib/gui/simulator/simulator_preferences.py:55
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
@@ -3327,8 +3332,8 @@ msgid "Apply"
 msgstr "Anwenden"
 
 #: lib/gui/apply_palette.py:49 lib/gui/edit_json/main_panel.py:75
-#: lib/gui/element_info.py:42 lib/gui/lettering/main_panel.py:48
-#: lib/gui/lettering_font_sample.py:81
+#: lib/gui/element_info.py:42 lib/gui/lettering/main_panel.py:47
+#: lib/gui/lettering_font_sample.py:82
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
 #: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:16
@@ -3538,11 +3543,11 @@ msgstr "Eine Schriftbibliothek mit detaillierter Beschreibung und gestickten Bei
 msgid "https://inkstitch.org/fonts/font-library/"
 msgstr "https://inkstitch.org/de/fonts/font-library/"
 
-#: lib/gui/lettering/main_panel.py:240
+#: lib/gui/lettering/main_panel.py:243
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Diese Schriftart hat keine verfügbare Schriftvariante. Bitte aktualisieren oder entfernen."
 
-#: lib/gui/lettering/main_panel.py:317
+#: lib/gui/lettering/main_panel.py:320
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
@@ -3672,45 +3677,45 @@ msgstr "Wenn aktiviert, werden visuelle Befehle (Symbole) eingefügt. Wenn deakt
 msgid "Scale"
 msgstr "Maßstab"
 
-#: lib/gui/lettering_font_sample.py:23
+#: lib/gui/lettering_font_sample.py:24
 #: inx/inkstitch_lettering_font_sample.inx:3
 msgid "Font Sampling"
 msgstr "Zeichentabelle"
 
-#: lib/gui/edit_json/main_panel.py:74 lib/gui/lettering_font_sample.py:38
+#: lib/gui/edit_json/main_panel.py:74 lib/gui/lettering_font_sample.py:39
 #: lib/gui/simulator/view_panel.py:129 print/templates/ui.html:5
 #: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:78
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: lib/gui/lettering_font_sample.py:49
+#: lib/gui/lettering_font_sample.py:50
 msgid "Stitch direction"
 msgstr "Stickrichtung"
 
-#: lib/gui/lettering_font_sample.py:51 lib/gui/tartan/customize_panel.py:46
+#: lib/gui/lettering_font_sample.py:52 lib/gui/tartan/customize_panel.py:46
 #: inx/inkstitch_batch_lettering.inx:21
 msgid "Scale (%)"
 msgstr "Maßstab (%)"
 
-#: lib/gui/lettering_font_sample.py:53
+#: lib/gui/lettering_font_sample.py:54
 msgid "Max. line width"
 msgstr "Maximale Zeilenlänge"
 
 #: lib/gui/lettering/option_panel.py:94 lib/gui/lettering/option_panel.py:96
-#: lib/gui/lettering_font_sample.py:55 inx/inkstitch_batch_lettering.inx:22
+#: lib/gui/lettering_font_sample.py:56 inx/inkstitch_batch_lettering.inx:22
 msgid "Color sort"
 msgstr "Farbsortierung"
 
-#: lib/gui/lettering_font_sample.py:88
+#: lib/gui/lettering_font_sample.py:89
 msgid "    This extension helps font creators to generate an output of every glyph from a selected font."
 msgstr "Diese Erweiterung hilft Schriftart-Entwicklern eine Zeichentabelle für die ausgewählte Schriftart zu erstellen."
 
-#: lib/gui/lettering_font_sample.py:102 lib/gui/lettering_font_sample.py:103
+#: lib/gui/lettering_font_sample.py:103 lib/gui/lettering_font_sample.py:104
 msgid "https://inkstitch.org/docs/font-tools/#font-sampling"
 msgstr "https://inkstitch.org/docs/font-tools/#zeichentabelle"
 
-#: lib/gui/lettering_font_sample.py:183
+#: lib/gui/lettering_font_sample.py:222
 #, python-brace-format
 msgid "The glyphlist for this font seems to be outdated.\n\n"
 "Please update the glyph list for {font_name}:\n"
@@ -3721,11 +3726,6 @@ msgstr "Die Zeichentabelle für diese Schriftart scheint veraltet zu sein.\n\n"
 "* Öffne Erweiterungen > Ink/Stitch > Schriftartenverwaltung > JSON bearbeiten\n"
 "* Wähle diese Schriftart aus und klicke auf Anwenden."
 
-#: lib/gui/lettering_font_sample.py:238
-#, python-brace-format
-msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
-msgstr "Doppelte Schriftzeichen in Schriftdatei gefunden: {duplicated_glyphs}"
-
 #: lib/gui/preferences.py:16 lib/gui/preferences.py:17
 #: inx/inkstitch_preferences.inx:3
 msgid "Preferences"
@@ -3735,13 +3735,13 @@ msgstr "Einstellungen"
 msgid "This SVG"
 msgstr "Dokument"
 
-#: lib/gui/preferences.py:42 lib/gui/preferences.py:90
+#: lib/gui/preferences.py:42 lib/gui/preferences.py:113
 msgid "Jump stitches smaller than this will be treated as normal stitches."
 msgstr "Sprungstiche die kleiner sind, werden als normale Stiche behandelt.\n"
 "Dies beeinflusst auch die Verwendung von Vernähstichen. Vor und nach Sprungstichen werden in der Regel Vernähstiche eingefügt. Diese entfallen, wenn der Sprungstich kleiner als dieser Wert ist. Eine individuelle Steuerung für Vernähstiche ist in den Parametereinstellungen für einzelne Objekte möglich."
 
 #: lib/gui/preferences.py:53 lib/gui/preferences.py:70
-#: lib/gui/preferences.py:101 lib/gui/preferences.py:117
+#: lib/gui/preferences.py:124 lib/gui/preferences.py:140
 msgid "mm"
 msgstr "mm"
 
@@ -3749,23 +3749,43 @@ msgstr "mm"
 msgid "Set As Default"
 msgstr "Als Standard definieren"
 
-#: lib/gui/preferences.py:79
+#: lib/gui/preferences.py:76
+msgid "Rotate on export"
+msgstr ""
+
+#: lib/gui/preferences.py:78
+msgid "Some embroidery machines don't automatically rotate files to fit into the hoop. You could also rotate the design in the SVG but Inkscape does not save view rotation so this setting is more convenient."
+msgstr ""
+
+#: lib/gui/preferences.py:84
+msgid "Don't rotate"
+msgstr ""
+
+#: lib/gui/preferences.py:85
+msgid "Rotate left"
+msgstr ""
+
+#: lib/gui/preferences.py:86
+msgid "Rotate right"
+msgstr ""
+
+#: lib/gui/preferences.py:102
 msgid "Global"
 msgstr "Global"
 
-#: lib/gui/preferences.py:89
+#: lib/gui/preferences.py:112
 msgid "Default minimum jump stitch length"
 msgstr "Minimale Länge für Sprungstiche"
 
-#: lib/gui/preferences.py:122
+#: lib/gui/preferences.py:145
 msgid "Stitch plan cache size (0 to disable cache)"
 msgstr "Cache Größe (0 deaktiviert den Cache)"
 
-#: lib/gui/preferences.py:133
+#: lib/gui/preferences.py:156
 msgid "MB"
 msgstr "MB"
 
-#: lib/gui/preferences.py:136
+#: lib/gui/preferences.py:159
 msgid "Clear Stitch Plan Cache"
 msgstr "Stichplan-Cache leeren"
 
@@ -4234,7 +4254,7 @@ msgstr "Streifen entfernen"
 msgid "Generate Swatches"
 msgstr "Testmuster erstellen"
 
-#: lib/gui/lettering/main_panel.py:46 lib/gui/lettering/option_panel.py:138
+#: lib/gui/lettering/main_panel.py:45 lib/gui/lettering/option_panel.py:138
 #: lib/gui/test_swatches.py:33 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_batch_lettering.inx:9
 #: inx/inkstitch_break_apart.inx:8 inx/inkstitch_cleanup.inx:8
@@ -4413,7 +4433,7 @@ msgstr "Die JSON-Datei kann über folgende Ink/Stitch Funktion neu erstellt werd
 msgid "The font '%s' has no variants."
 msgstr "Die Schrift '%s' hat keine Varianten."
 
-#: lib/lettering/font.py:593
+#: lib/lettering/font.py:596
 msgid "Color Group"
 msgstr "Farbgruppe"
 
