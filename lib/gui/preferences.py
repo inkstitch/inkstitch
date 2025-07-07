@@ -75,8 +75,7 @@ class PreferencesFrame(wx.Frame):
 
         label_rotate = wx.StaticText(self.this_svg_page, label=_("Rotate on export"))
         label_rotate.SetToolTip(_(
-            "Some embroidery machines don't automatically rotate files to fit into the hoop. "
-            "You could also rotate the design in the SVG but Inkscape does not save view rotation so this setting is more convenient."
+            "Some embroidery machines don't automatically rotate files to fit into the hoop."
         ))
         this_svg_grid.Add(label_rotate)
         self.rotate_on_export = wx.ComboBox(self.this_svg_page)
