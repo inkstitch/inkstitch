@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-07 01:55+0000\n"
-"PO-Revision-Date: 2025-07-07 01:55\n"
+"POT-Creation-Date: 2025-07-08 01:52+0000\n"
+"PO-Revision-Date: 2025-07-08 01:52\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-07 01:55+0000\n"
+"POT-Creation-Date: 2025-07-08 01:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1112,7 +1112,7 @@ msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr ""
 
 #: lib/elements/element.py:251 lib/gui/preferences.py:59
-#: lib/gui/preferences.py:129
+#: lib/gui/preferences.py:128
 msgid "Minimum stitch length"
 msgstr ""
 
@@ -3720,12 +3720,12 @@ msgstr ""
 msgid "This SVG"
 msgstr ""
 
-#: lib/gui/preferences.py:42 lib/gui/preferences.py:113
+#: lib/gui/preferences.py:42 lib/gui/preferences.py:112
 msgid "Jump stitches smaller than this will be treated as normal stitches."
 msgstr ""
 
 #: lib/gui/preferences.py:53 lib/gui/preferences.py:70
-#: lib/gui/preferences.py:124 lib/gui/preferences.py:140
+#: lib/gui/preferences.py:123 lib/gui/preferences.py:139
 msgid "mm"
 msgstr ""
 
@@ -3738,38 +3738,38 @@ msgid "Rotate on export"
 msgstr ""
 
 #: lib/gui/preferences.py:78
-msgid "Some embroidery machines don't automatically rotate files to fit into the hoop. You could also rotate the design in the SVG but Inkscape does not save view rotation so this setting is more convenient."
+msgid "Some embroidery machines don't automatically rotate files to fit into the hoop."
 msgstr ""
 
-#: lib/gui/preferences.py:84
+#: lib/gui/preferences.py:83
 msgid "Don't rotate"
 msgstr ""
 
-#: lib/gui/preferences.py:85
+#: lib/gui/preferences.py:84
 msgid "Rotate left"
 msgstr ""
 
-#: lib/gui/preferences.py:86
+#: lib/gui/preferences.py:85
 msgid "Rotate right"
 msgstr ""
 
-#: lib/gui/preferences.py:102
+#: lib/gui/preferences.py:101
 msgid "Global"
 msgstr ""
 
-#: lib/gui/preferences.py:112
+#: lib/gui/preferences.py:111
 msgid "Default minimum jump stitch length"
 msgstr ""
 
-#: lib/gui/preferences.py:145
+#: lib/gui/preferences.py:144
 msgid "Stitch plan cache size (0 to disable cache)"
 msgstr ""
 
-#: lib/gui/preferences.py:156
+#: lib/gui/preferences.py:155
 msgid "MB"
 msgstr ""
 
-#: lib/gui/preferences.py:159
+#: lib/gui/preferences.py:158
 msgid "Clear Stitch Plan Cache"
 msgstr ""
 
