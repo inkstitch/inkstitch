@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-07-08 01:52+0000\n"
-"PO-Revision-Date: 2025-07-08 01:52\n"
+"PO-Revision-Date: 2025-07-09 01:52\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -3755,7 +3755,7 @@ msgstr "Tourner à l'export"
 
 #: lib/gui/preferences.py:78
 msgid "Some embroidery machines don't automatically rotate files to fit into the hoop."
-msgstr ""
+msgstr "Certaines brodeuses ne tournent pas automatiquement le motif pour qu'il rentre dans le cadre."
 
 #: lib/gui/preferences.py:83
 msgid "Don't rotate"
