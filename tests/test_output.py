@@ -17,7 +17,9 @@ class OutputTest(TestCase):
         stitch_groups = element.embroider(None)
         stitch_plan = stitch_groups_to_stitch_plan(stitch_groups)
         path = self.temp_file(suffix=f".{format}")
-        output.write_embroidery_file(path, stitch_plan, svg)
+        output.write_embroidery_file(path, stitch_plan, svg, settings={
+            "date": "",  # we need the output to be deterministic for the tests
+        })
         with open(path, "rb") as f:
             return f.read()
 
