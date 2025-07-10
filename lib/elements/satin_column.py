@@ -643,6 +643,10 @@ class SatinColumn(EmbroideryElement):
                 if reverse:
                     paths[i] = shgeo.LineString(paths[i].coords[::-1])
 
+        # if one of the rails has no nodes, return an empty tuple
+        if any([path.is_empty for path in paths]):
+            return tuple()
+
         return tuple(paths)
 
     @property
@@ -723,7 +727,7 @@ class SatinColumn(EmbroideryElement):
         # This takes advantage of the fact that sum() counts True as 1
         intersection_counts = [sum(paths[i].intersects(paths[j]) for j in range(num_paths) if i != j)
                                for i in range(num_paths)]
-        paths_not_intersecting_two = [i for i in range(num_paths) if intersection_counts[i] != 2]
+        paths_not_intersecting_two = [i for i in range(num_paths) if intersection_counts[i] != 2 and paths[i].length > 0.001]
         num_not_intersecting_two = len(paths_not_intersecting_two)
 
         if num_not_intersecting_two == 2:
