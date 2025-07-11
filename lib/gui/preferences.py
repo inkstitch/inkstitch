@@ -205,7 +205,7 @@ class PreferencesFrame(wx.Frame):
         metadata = self.extension.get_inkstitch_metadata()
         metadata['min_stitch_len_mm'] = self.minimum_stitch_length.GetValue()
         metadata['collapse_len_mm'] = self.minimum_jump_stitch_length.GetValue()
-        _, metadata['rotate_on_export'] = self.rotate_on_export_choices[self.rotate_on_export.GetCurrentSelection()]
+        metadata['rotate_on_export'] = self.rotate_on_export_choices[self.rotate_on_export.GetCurrentSelection()][1]
 
         global_settings['default_min_stitch_len_mm'] = self.default_minimum_stitch_length.GetValue()
         global_settings['default_collapse_len_mm'] = self.default_minimum_jump_stitch_length.GetValue()
