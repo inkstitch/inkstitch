@@ -5,19 +5,20 @@
 
 import colorsys
 
-from inkex import Color
+from inkex import Color, ColorError
+
 from pyembroidery.EmbThread import EmbThread
 
 
 class ThreadColor(object):
     def __init__(self, color, name=None, number=None, manufacturer=None, description=None, chart=None):
-        '''
-        avoid error messages:
-          * set colors with a gradient to black
-          * currentColor/context-fill/context-stroke: should not just be black, but we want to avoid
-            error messages until inkex will be able to handle these css properties
-        '''
-        if isinstance(color, str) and color.startswith(('url', 'currentColor', 'context')):
+        self.rgb = None
+
+        if isinstance(color, str) and color.lower().startswith(('url', 'currentcolor', 'context')):
+            '''
+            Avoid error messages for currentcolor, context-fill, context-stroke and every string starting with an url.
+            they should not just be black, but we want to avoid error messages
+            '''
             color = None
         elif isinstance(color, str) and color.startswith('rgb'):
             color = tuple(int(value) for value in color[4:-1].split(','))
@@ -33,11 +34,19 @@ class ThreadColor(object):
             self.rgb = (color.get_red(), color.get_green(), color.get_blue())
             return
         elif isinstance(color, str):
-            self.rgb = tuple(Color(color).to('rgb'))
+            try:
+                self.rgb = tuple(Color(color).to('rgb'))
+            except ColorError:
+                self.rgb = None
         elif isinstance(color, (list, tuple)):
             self.rgb = tuple(color)
-        else:
-            raise ValueError("Invalid color: " + repr(color))
+
+        if self.rgb is None:
+            '''
+            Instead of erroring out, we want to set everything to black at this point.
+            This includes for example patterns and gradients
+            '''
+            self.rgb = (0, 0, 0)
 
         self.name = name
         self.number = number

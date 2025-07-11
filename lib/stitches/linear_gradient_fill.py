@@ -6,7 +6,7 @@
 from math import ceil, floor, sqrt
 
 import numpy as np
-from inkex import DirectedLineSegment, Transform
+from inkex import Color, ColorError, DirectedLineSegment, Transform
 from networkx import is_empty
 from shapely import segmentize
 from shapely.affinity import rotate
@@ -75,7 +75,10 @@ def _get_gradient_info(fill, bbox):
         # but inkex/tinycss fails on stop color styles when it is not in the style attribute, but in it's own stop-color attribute
         colors = []
         for i, stop in enumerate(fill.gradient.stops):
-            color = stop.get_computed_style('stop-color')
+            try:
+                color = stop.get_computed_style('stop-color')
+            except ColorError:
+                color = Color('black')
             opacity = stop.get_computed_style('stop-opacity')
             if float(opacity) == 0:
                 color = 'none'

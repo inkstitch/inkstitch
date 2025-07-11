@@ -170,7 +170,7 @@ def _update_to_one(element):  # noqa: C901
         element.set_param('running_stitch_length_mm', 1.5)
 
     # convert legacy stroke_method
-    if element.get_style("stroke") and not element.node.get('inkscape:connection-start', None):
+    if element.stroke_color and not element.node.get('inkscape:connection-start', None):
         # manual stitch
         legacy_manual_stitch = element.get_boolean_param('manual_stitch', False)
         if legacy_manual_stitch is True:

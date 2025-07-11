@@ -198,9 +198,32 @@ class EmbroideryElement(object):
         style = element_style.get(style_name, default)
         if style in ['none', 'None']:
             style = None
-        elif style == 'currentColor':
-            style = element_style(style_name)
         return style
+
+    @property
+    @cache
+    def fill_color(self):
+        try:
+            color = self.node.get_computed_style("fill")
+        except (inkex.ColorError, ValueError):
+            # SVG spec says the default fill is black
+            # A color error could show up, when an element has an unrecognized color name
+            # A value error could show up, when for example when an element links to a non-existent gradient
+            # TODO: This will also apply to currentcolor and alike which will render in black
+            return "black"
+        return color
+
+    @property
+    @cache
+    def stroke_color(self):
+        try:
+            color = self.node.get_computed_style("stroke")
+        except (inkex.ColorError, ValueError):
+            # A color error could show up, when an element has an unrecognized color name
+            # A value error could show up, when for example when an element links to a non-existent gradient
+            # TODO: This will also apply to currentcolor and alike which will not render
+            return None
+        return color
 
     @property
     @cache

@@ -7,7 +7,7 @@ import math
 import re
 
 import numpy as np
-from inkex import LinearGradient
+from inkex import Color, ColorError, LinearGradient
 from shapely import geometry as shgeo
 from shapely import set_precision
 from shapely.errors import GEOSException
@@ -632,14 +632,12 @@ class FillStitch(EmbroideryElement):
 
     @property
     def color(self):
-        # SVG spec says the default fill is black
-        return self.get_style("fill", "#000000")
+        return self.fill_color
 
     @property
     def gradient(self):
-        gradient = self.node.get_computed_style("fill")
-        if isinstance(gradient, LinearGradient):
-            return gradient
+        if isinstance(self.fill_color, LinearGradient):
+            return self.fill_color
         return None
 
     @property
@@ -1032,7 +1030,10 @@ class FillStitch(EmbroideryElement):
     def do_underlay(self, shape, starting_point):
         color = self.color
         if self.gradient is not None and self.fill_method == 'linear_gradient_fill':
-            color = self.gradient.stops[0].get_computed_style('stop-color')
+            try:
+                color = self.gradient.stops[0].get_computed_style('stop-color')
+            except ColorError:
+                color = Color('black')
 
         stitch_groups = []
         for i in range(len(self.fill_underlay_angle)):
