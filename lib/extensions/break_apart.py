@@ -55,9 +55,9 @@ class BreakApart(InkstitchExtension):
             polygons = self.break_apart_paths(paths)
             if self.options.method == 1:
                 polygons = self.combine_overlapping_polygons(polygons)
-            polygons = self.recombine_polygons(polygons)
-            if polygons:
-                self.polygons_to_nodes(polygons, element)
+            recombined_polygons = self.recombine_polygons(polygons)
+            if recombined_polygons:
+                self.polygons_to_nodes(recombined_polygons, element)
 
     def break_apart_paths(self, paths: List[List[Union[List[float], Tuple[float, float]]]]) -> List[Polygon]:
         polygons = []
