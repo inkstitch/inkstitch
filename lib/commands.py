@@ -146,8 +146,8 @@ class Command(BaseCommand):
 
         pos = (float(self.use.get("x", 0)), float(self.use.get("y", 0)))
         transform = get_node_transform(self.use)
-        pos = inkex.Transform(transform).apply_to_point(pos)
-        self.target_point = pos
+        target = inkex.Transform(transform).apply_to_point(pos)
+        self.target_point = target
 
     def __repr__(self):
         return "Command('%s', %s)" % (self.command, self.target_point)

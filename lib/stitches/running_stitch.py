@@ -216,8 +216,8 @@ def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: float, to
     if len(points) < 2:
         return []
     distLeft = [0] * len(points)
-    for i in reversed(range(0, len(points) - 1)):
-        distLeft[i] = distLeft[i + 1] + points[i].distance(points[i+1])
+    for j in reversed(range(0, len(points) - 1)):
+        distLeft[j] = distLeft[j + 1] + points[j].distance(points[j+1])
 
     i: typing.Optional[int] = 1
     last = points[0]
