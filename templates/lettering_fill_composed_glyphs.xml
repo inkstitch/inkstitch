@@ -10,7 +10,16 @@
             <param name="action" type= "optiongroup" gui-text="Choose action"
                 gui-dscription ="choose action"
                 appearance ="combo">
-                <option value="none">  None</option>
+                <option value="step1"> Step 1 : Comma and period and hyphen</option>
+                <option value="step2"> Step 2 : Undecomposable Letters </option>
+                <option value="step3"> Step 3 : Digits, Symbols  and Opening Punctuation</option>
+                <option value="step4"> Step 4 : Closing Punctuation </option>
+                <option value="step5"> Step 5 : First diacritics </option>
+                <option value="step6"> Step 6 : All diacritics </option>
+                <option value="step7"> Step 7 : Two pieces Letters </option>
+                <option value="step8"> Step 8 : Other Composed Letters </option>
+
+
                 <option value="duplicate"> Check duplicate GlyphLayers </option>
                 <option value="check_missing"> Check for missing combining glyphs</option>
                 <option value="create_empty"> Create missing combining glyphs, empty content</option>

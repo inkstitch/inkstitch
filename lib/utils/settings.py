@@ -39,7 +39,7 @@ DEFAULT_SETTINGS = {
     "lettering_use_command_symbols": False,
     # font sampling
     "font_sampling_max_line_width": 180,
-    "font_sampling_scale_spinner":100
+    "font_sampling_scale_spinner": 100
 }
 
 

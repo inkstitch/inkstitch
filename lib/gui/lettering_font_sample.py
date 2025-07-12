@@ -15,6 +15,8 @@ from ..i18n import _
 from ..lettering import get_font_list
 from ..marker import ensure_marker_symbols
 from ..utils.settings import global_settings
+from ..svg.tags import (SODIPODI_INSENSITIVE)
+
 
 
 class FontSampleFrame(wx.Frame):
@@ -45,7 +47,6 @@ class FontSampleFrame(wx.Frame):
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
 
         grid_settings_sizer = wx.FlexGridSizer(8, 2, 5, 5)
-     #    grid_settings_sizer = wx.FlexGridSizer(7, 2, 5, 5)
         grid_settings_sizer.AddGrowableCol(1)
 
         direction_label = wx.StaticText(self.settings, label=_("Stitch direction"))
@@ -54,13 +55,13 @@ class FontSampleFrame(wx.Frame):
         self.scale_spinner = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=1000, initial=100)
         max_line_width_label = wx.StaticText(self.settings, label=_("Max. line width"))
         self.max_line_width = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=5000, initial=180)
-        #
-        set_of_glyphs_label = wx.StaticText(self.settings, label=_("Glyphs"))
-        self.set_of_glyphs =  wx.ComboBox(self.settings, choices=["all","simple only"],style =wx.CB_DROPDOWN)
-        # 
+      
         self.color_sort_label = wx.StaticText(self.settings, label=_("Color sort"))
         self.color_sort_checkbox = wx.CheckBox(self.settings)
-
+        ##
+        # self.unlocked_only_label = wx.StaticText(self.settings, label=_("Unlocked Glyphs Only"))
+        # self.unlocked_only_checkbox = wx.CheckBox(self.settings)
+        # ##
         grid_settings_sizer.Add(direction_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.direction, 0, wx.EXPAND, 0)
         grid_settings_sizer.Add(scale_spinner_label, 0, wx.ALIGN_LEFT, 0)
@@ -68,13 +69,11 @@ class FontSampleFrame(wx.Frame):
         grid_settings_sizer.Add(max_line_width_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.max_line_width, 0, wx.EXPAND, 0)
 
-        #
-        grid_settings_sizer.Add(set_of_glyphs_label, 0, wx.ALIGN_LEFT, 0)
-        grid_settings_sizer.Add(self.set_of_glyphs, 0, wx.EXPAND, 0)
-        #
-
         grid_settings_sizer.Add(self.color_sort_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.color_sort_checkbox, 0, wx.EXPAND, 0)
+
+        # grid_settings_sizer.Add(self.unlocked_only_label, 0, wx.ALIGN_LEFT, 0)
+        # grid_settings_sizer.Add(self.unlocked_only_checkbox, 0, wx.EXPAND, 0)
 
         apply_sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.cancel_button = wx.Button(self.settings, label=_("Cancel"))
@@ -183,7 +182,6 @@ class FontSampleFrame(wx.Frame):
         # parameters
         line_width = self.max_line_width.GetValue()
         direction = self.direction.GetValue()
-        set_of_glyphs = self.set_of_glyphs.GetValue()
         scale_spinner= self.scale_spinner.GetValue()
 
         global_settings['font_sampling_max_line_width'] = line_width
@@ -197,18 +195,20 @@ class FontSampleFrame(wx.Frame):
         last_glyph = None
         outdated = False
 
-        if set_of_glyphs == "all":
-            glyphs_to_show =self.font.available_glyphs
-        if set_of_glyphs == "simple only":
-            glyphs_to_show = [g for g in  self.font.available_glyphs if len(g) == 1 and unicodedata.decomposition(g) == ""]
-
-
-        for glyph in glyphs_to_show:
+#XXXXXXXXXX
+        unlocked_only = self.unlocked_only_checkbox.GetValue()
+      
+#XXXXXXXXXX
+        for glyph in self.font.available_glyphs:
             
             glyph_obj = self.font_variant[glyph]
             if glyph_obj is None:
                 outdated = True
                 continue
+
+            # if SODIPODI_INSENSITIVE in glyph_obj:
+            #     continue
+                
 
             if last_glyph is not None:
                 width_to_add = (glyph_obj.min_x - self.font.kerning_pairs.get(f'{last_glyph} {glyph}', 0)) * scale
