@@ -35,6 +35,12 @@ pywinutils ; sys_platform == 'win32'
 pywin32 ; sys_platform == 'win32'
 types-pywin32; sys_platform == 'win32'
 
+# Experimental UI dependencies
+PyGObject==3.52.3
+PyGObject-stubs==2.13.0
+PyOpenGL==3.1.9
+skia-python==138.0
+
 # Test dependencies.
 # It should be okay to include these here because this list isn't the one used for bundling dependencies.
 # Instead Pyinstaller finds what dependencies the project needs based on what inkstitch.py imports

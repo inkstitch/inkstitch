@@ -53,6 +53,9 @@ from .png_realistic import PngRealistic
 from .png_simple import PngSimple
 from .preferences import Preferences
 from .print_pdf import Print
+from .rendergtk import RenderGtk
+from .renderwx import RenderWx
+from .renderwxogl import RenderWxOgl
 from .redwork import Redwork
 from .remove_duplicated_points import RemoveDuplicatedPoints
 from .remove_embroidery_settings import RemoveEmbroiderySettings
@@ -130,6 +133,9 @@ extensions = [
     PngSimple,
     Preferences,
     Print,
+    RenderGtk,
+    RenderWx,
+    RenderWxOgl,
     Redwork,
     RemoveDuplicatedPoints,
     RemoveEmbroiderySettings,
