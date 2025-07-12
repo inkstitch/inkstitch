@@ -166,6 +166,9 @@ class ZigzagLineToSatin(InkstitchExtension):
                         # so we need to find a spot on the smoothed rail to ensure the correct length
                         rung = r[i-1]
                         line = inkex.DirectedLineSegment(rung[0], rung[1])
+                        if line.length == 0:
+                            continue
+
                         point0 = line.point_at_length(-50)
                         point1 = line.point_at_length(line.length + 50)
                         new_point = inkex.bezier.linebezierintersect((point0, point1), [prev, handle_position_start, handle_position_end, point])
