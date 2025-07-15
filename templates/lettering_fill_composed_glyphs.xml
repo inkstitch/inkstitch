@@ -18,17 +18,8 @@
                 <option value="step6"> Step 6 : All diacritics </option>
                 <option value="step7"> Step 7 : Two pieces Letters </option>
                 <option value="step8"> Step 8 : Other Composed Letters </option>
-
-
                 <option value="duplicate"> Check duplicate GlyphLayers </option>
-                <option value="check_missing"> Check for missing combining glyphs</option>
-                <option value="create_empty"> Create missing combining glyphs, empty content</option>
-                <option value="create_guessing"> Create missing combining glyphs, guessing content</option>
-                <option value="lock_combined_glyphs"> Lock combined glyphs layers </option>
-                <option value="fill"> Fill unlocked composed glyphs </option>
-                <option value="clean"> Clean document attributes </option>
-
-            </param>
+                   </param>
         
         </page>
 

@@ -18,7 +18,6 @@ from ..utils.settings import global_settings
 from ..svg.tags import (SODIPODI_INSENSITIVE)
 
 
-
 class FontSampleFrame(wx.Frame):
 
     def __init__(self, *args, **kwargs):
@@ -46,7 +45,7 @@ class FontSampleFrame(wx.Frame):
         self.font_chooser = wx.adv.BitmapComboBox(self.settings, wx.ID_ANY, style=wx.CB_READONLY | wx.CB_SORT, size=((800, 20)))
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
 
-        grid_settings_sizer = wx.FlexGridSizer(8, 2, 5, 5)
+        grid_settings_sizer = wx.FlexGridSizer(7, 2, 5, 5)
         grid_settings_sizer.AddGrowableCol(1)
 
         direction_label = wx.StaticText(self.settings, label=_("Stitch direction"))
@@ -55,25 +54,17 @@ class FontSampleFrame(wx.Frame):
         self.scale_spinner = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=1000, initial=100)
         max_line_width_label = wx.StaticText(self.settings, label=_("Max. line width"))
         self.max_line_width = wx.SpinCtrl(self.settings, wx.ID_ANY, min=0, max=5000, initial=180)
-      
         self.color_sort_label = wx.StaticText(self.settings, label=_("Color sort"))
         self.color_sort_checkbox = wx.CheckBox(self.settings)
-        ##
-        # self.unlocked_only_label = wx.StaticText(self.settings, label=_("Unlocked Glyphs Only"))
-        # self.unlocked_only_checkbox = wx.CheckBox(self.settings)
-        # ##
+
         grid_settings_sizer.Add(direction_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.direction, 0, wx.EXPAND, 0)
         grid_settings_sizer.Add(scale_spinner_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.scale_spinner, 0, wx.EXPAND, 0)
         grid_settings_sizer.Add(max_line_width_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.max_line_width, 0, wx.EXPAND, 0)
-
         grid_settings_sizer.Add(self.color_sort_label, 0, wx.ALIGN_LEFT, 0)
         grid_settings_sizer.Add(self.color_sort_checkbox, 0, wx.EXPAND, 0)
-
-        # grid_settings_sizer.Add(self.unlocked_only_label, 0, wx.ALIGN_LEFT, 0)
-        # grid_settings_sizer.Add(self.unlocked_only_checkbox, 0, wx.EXPAND, 0)
 
         apply_sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.cancel_button = wx.Button(self.settings, label=_("Cancel"))
@@ -121,7 +112,6 @@ class FontSampleFrame(wx.Frame):
 
         max_line_width = global_settings['font_sampling_max_line_width']
         self.max_line_width.SetValue(max_line_width)
-
         scale_spinner = global_settings['font_sampling_scale_spinner']
         self.scale_spinner.SetValue(scale_spinner)
 
@@ -131,7 +121,7 @@ class FontSampleFrame(wx.Frame):
         self.on_font_changed()
 
         self.SetSizeHints(notebook_sizer.CalcMin())
-        
+
         self.Layout()
 
     def set_font_list(self):
@@ -182,10 +172,11 @@ class FontSampleFrame(wx.Frame):
         # parameters
         line_width = self.max_line_width.GetValue()
         direction = self.direction.GetValue()
-        scale_spinner= self.scale_spinner.GetValue()
+        scale_spinner = self.scale_spinner.GetValue()
 
         global_settings['font_sampling_max_line_width'] = line_width
         global_settings['font_sampling_scale_spinner'] = scale_spinner
+
         self.font._load_variants()
         self.font_variant = self.font.variants[direction]
 
@@ -195,38 +186,28 @@ class FontSampleFrame(wx.Frame):
         last_glyph = None
         outdated = False
 
-#XXXXXXXXXX
-        unlocked_only = self.unlocked_only_checkbox.GetValue()
-      
-#XXXXXXXXXX
         for glyph in self.font.available_glyphs:
-            
             glyph_obj = self.font_variant[glyph]
             if glyph_obj is None:
                 outdated = True
                 continue
+            if SODIPODI_INSENSITIVE not in glyph_obj.node.attrib:
+                if last_glyph is not None:
+                    width_to_add = (glyph_obj.min_x - self.font.kerning_pairs.get(f'{last_glyph} {glyph}', 0)) * scale
+                    width += width_to_add
+                try:
+                    width_to_add = (self.font.horiz_adv_x.get(glyph, self.font.horiz_adv_x_default) - glyph_obj.min_x) * scale
+                except TypeError:
+                    width_to_add = glyph_obj.width
 
-            # if SODIPODI_INSENSITIVE in glyph_obj:
-            #     continue
-                
-
-            if last_glyph is not None:
-                width_to_add = (glyph_obj.min_x - self.font.kerning_pairs.get(f'{last_glyph} {glyph}', 0)) * scale
+                if width + width_to_add > line_width:
+                    text += '\n'
+                    width = 0
+                    last_glyph = None
+                else:
+                    last_glyph = glyph
+                text += glyph
                 width += width_to_add
-
-            try:
-                width_to_add = (self.font.horiz_adv_x.get(glyph, self.font.horiz_adv_x_default) - glyph_obj.min_x) * scale
-            except TypeError:
-                width_to_add = glyph_obj.width
-
-            if width + width_to_add > line_width:
-                text += '\n'
-                width = 0
-                last_glyph = None
-            else:
-                last_glyph = glyph
-            text += glyph
-            width += width_to_add
 
         self.out_dated_warning(outdated)
         self._render_text(text)

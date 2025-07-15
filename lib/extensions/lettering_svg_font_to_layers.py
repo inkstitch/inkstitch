@@ -28,7 +28,7 @@ from .base import InkstitchExtension
 
 from ..svg import PIXELS_PER_MM
 
-import  unicodedata
+import unicodedata
 
 
 class LetteringSvgFontToLayers(InkstitchExtension):
@@ -167,9 +167,8 @@ class LetteringSvgFontToLayers(InkstitchExtension):
         Converts a single glyph into a new SVG layer, applying scaling and coordinate transformation.
         """
         unicode_char = glyph.get("unicode")
-
-        if unicode_char is None or unicodedata.category(unicode_char)[0] != "Z":
-        # all unicode with category starting with 'Z' is not rendered, no need to create layers with path.d =""
+        if unicode_char is None or unicodedata.category(unicode_char[0])[0] != "Z":
+            # all unicode with category starting with 'Z' is not rendered, no need to create layers with path.d =""
 
             glyph_name = glyph.get("glyph-name").split('.')
             if unicode_char is None:
@@ -197,8 +196,6 @@ class LetteringSvgFontToLayers(InkstitchExtension):
             # Using curve description in d attribute of svg:glyph
             path = layer.add(PathElement())
             path.path = self.flip_cordinate_system(glyph, emsize, baseline, scale_by)
-    
-    
 
     def effect(self) -> None:
         # Current code only reads the first svgfont instance
