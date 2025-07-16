@@ -22,15 +22,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="7.5411729"
-     inkscape:cx="25.128717"
-     inkscape:cy="34.34479"
-     inkscape:current-layer="g626"
+     inkscape:cx="23.007031"
+     inkscape:cy="21.084253"
+     inkscape:current-layer="g647"
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:window-width="1560"
      inkscape:window-height="971"
-     inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-x="200"
+     inkscape:window-y="187"
      inkscape:window-maximized="0"
      inkscape:lockguides="true">
     <sodipodi:guide
@@ -3394,13 +3394,13 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
      id="g671"
      transform="translate(0,-74.4095)">
     <path
-       style="display:inline;fill:none;fill-opacity:0.3;fill-rule:evenodd;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.02362, 0.377953;stroke-dashoffset:0"
+       style="display:inline;fill:none;fill-opacity:0.3;fill-rule:evenodd;stroke:black;stroke-width:0.377953;stroke-dasharray:3.02362, 0.377953;stroke-dashoffset:0"
        d="M 4.5221942,79.547473 14.131857,77.474801 26.567891,67.865138 29.582687,53.544856 24.495219,47.892114 13.001308,43.558344 4.5221942,39.413 11.87076,45.819441 2.8263714,40.166699 8.6675389,46.94999 2.4495219,43.181495 4.1453447,47.515264 1.6958228,45.065742 3.7684952,23.58532 l 0.753699,8.479114 1.3189733,-8.855964 0.5652743,7.725415 2.0726724,-8.667539 -0.7536991,8.29069 3.3916459,-8.479114"
        id="path282"
        transform="translate(0,74.4095)" />
     <path
-       d="m 33.1816,100.217 c -5.34563,0.50104 -10.681173,1.15958 -16.033355,1.56 -2.166615,0 -4.33323,0 -6.499845,0 -0.7547883,0.74905 -2.5017621,0.0855 -3.6386638,0.29426 -1.5110582,-0.0128 -3.0221168,-0.0256 -4.5331762,-0.0382 M 32.6621,91.2911 c -7.490765,0.273317 -14.977816,0.68918 -22.471148,0.8671 -1.8409941,0 -3.6819881,0 -5.522982,0 -0.54883,0.519533 -1.09766,1.039067 -1.64649,1.5586 M 29.5827,87.6315 c 0.376833,5.338833 0.753667,10.677667 1.1305,16.0165 M 6.78329,88.9505 C 6.40644,93.975 6.02959,98.9995 5.65274,104.024 M 17.9004,88.762 c -0.06283,4.773333 -0.125667,9.546667 -0.1885,14.32"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       d="M 32.6621,91.2911 C 25.1713,91.5644 17.6843,91.9803 10.191,92.1582 H 4.66797 c -0.54883,0.5195 -1.09766,1.0391 -1.64649,1.5586 m 30.16012,6.5002 c -5.3456,0.501 -10.6812,1.16 -16.0334,1.56 h -6.4998 c -0.75479,0.749 -2.50176,0.085 -3.63866,0.294 -1.51106,-0.013 -3.02212,-0.025 -4.53318,-0.038 M 29.5827,87.6315 c 0.3768,5.3388 0.7537,10.6777 1.1305,16.0165 M 6.78329,88.9505 5.65274,104.024 M 17.9004,88.762 c -0.0628,4.7733 -0.1257,9.5467 -0.1885,14.32"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
@@ -3409,7 +3409,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        inkstitch:reverse_rails="none" />
     <path
        d="m 2.47656,102.033 c -0.4049135,6.17 -0.8099032,12.34 -1.21484,18.51 m 9.36718,-18.441 c -0.279231,4.83334 -0.558671,9.66666 -0.83788,14.5 m 3.39868,-2.591 c -4.5221832,0.12567 -9.0443668,0.25133 -13.56655,0.377 M 13.755,106.097 C 9.3584245,105.84567 4.9618495,105.59433 0.565274,105.343 M 12.8129,109.866 C 8.4791251,109.67733 4.1453499,109.48867 -0.188425,109.3"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
@@ -3419,7 +3419,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        inkstitch:reverse_rails="none" />
     <path
        d="m 1.2617186,120.54304 -0.043986,0.65961 c 0.8282545,1.42616 2.5499083,2.50444 3.7099964,3.80139 l 5.311232,-0.84357 c 1.816269,-0.41187 3.699788,-0.435 5.531356,-0.1128 2.66867,0.38083 5.263502,1.76624 6.694913,4.10551 1.707584,3.00037 1.855786,6.71252 1.022532,10.0081 -1.256704,4.70605 -5.348081,8.01902 -9.639406,9.92108 -4.1189875,1.93795 -8.5596937,3.01911 -12.992887,3.96264 m 8.9355496,-35.44296 c 3.2491594,-0.0564 6.4983194,-0.1127 9.7474784,-0.1691 4.205972,0.31314 8.479644,1.8509 11.519757,4.8583 3.905189,3.85599 4.84111,9.77659 3.988289,15.00991 -0.827698,5.52409 -4.350799,10.34918 -8.895369,13.47118 -6.926536,4.80329 -15.339875,6.79565 -23.5632854,7.99171 m 3.06485,2.599 c -1.2561643,-3.76833 -2.5123257,-7.53667 -3.76849,-11.305 m 37.3081504,-12.248 c -7.097333,-0.12567 -14.194667,-0.25133 -21.292,-0.377 M 22.2341,114.199 c -4.019735,3.89433 -8.039465,7.78867 -12.0592,11.683"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
@@ -3964,7 +3964,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-h"
-     style="display:inline"
+     style="display:none"
      id="g626"
      transform="translate(0,-74.4095)">
     <path
@@ -5013,7 +5013,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-t"
-     style="display:none"
+     style="display:inline"
      id="g651"
      transform="translate(0,-74.4095)">
     <path
@@ -6478,13 +6478,13 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
      id="g563"
      transform="translate(0,-74.4095)">
     <path
-       style="display:inline;fill:none;fill-opacity:0.3;fill-rule:evenodd;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.02362, 0.377953;stroke-dashoffset:0"
+       style="display:inline;fill:none;fill-opacity:0.3;fill-rule:evenodd;stroke:black;stroke-width:0.377953;stroke-dasharray:3.02362, 0.377953;stroke-dashoffset:0"
        d="m 0.32033408,71.853322 11.95913892,-1.60167 0.213556,-27.228396 5.659235,-2.349117 -4.057565,2.776229 h 5.018568 l -5.338902,1.388114 6.620238,-0.427112 7.901574,-0.213556 4.698233,2.349116 -6.086348,-1.815226 6.620238,-0.320334 -7.367684,-1.494893 6.833794,-0.747446 -6.620238,-0.854224 6.299904,-0.53389 -5.338901,-0.106778 -5.97957,0.961002 -3.096563,-0.320334 -5.125345,-1.174558 6.299904,2.455894 -6.299904,-0.640668 6.299904,1.494893 -6.193126,0.53389 -7.0473495,-23.491166 -0.8542242,-4.271121 2.0287825,6.193126 0.4271121,-7.154128 0.7474461,8.969354 0.6406682,-8.008352 0.4271121,6.299904 1.7084487,-8.221908 0.106778,8.435464 1.388114,-6.51346 v 6.086348 l 1.60167,-7.58124 0.106778,7.901574 1.922005,-7.474462 -0.961002,6.620237 3.20334,-5.872791 10.571025,0.747446 9.289688,2.455895 -6.513459,-2.562673 5.872791,1.06778 -6.193125,-2.13556 6.406681,0.106778 -6.299903,-0.854224 6.299903,-0.53389 -6.299903,-0.320334 6.833793,1.06778"
        id="path550"
        transform="translate(0,74.4095)" />
     <path
        d="m 36.7347,101.258 -0.2581,-1.4628 -0.5219,-2.9575 -0.4225,-1.2241 -0.394,-0.8123 -0.135378,-8.12416 M 42.2813,100.824 42.1907,99.0125 42.063978,89.002699 39.648018,87.13183 M 33.6351,94.262 h 9.5032"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
@@ -6494,7 +6494,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        inkstitch:reverse_rails="none" />
     <path
        d="m 34.821426,93.222088 c -2.573196,-0.0081 -5.464313,0.172898 -8.036744,0.147525 -4.289558,0.0041 -8.579534,0.02465 -12.868087,-0.08868 C 9.8894628,93.200789 5.8596228,93.151714 1.8343481,93.043208 L -0.878549,92.5911 M 34.71358,87.4673 C 31.233513,87.568559 27.752214,87.578737 24.270991,87.56351 19.28683,87.55551 14.301907,87.58718 9.3182253,87.54476 6.0637442,87.406879 2.8092642,87.268975 -0.445217,87.1311 M 18.7929,85.5062 v 10.0371"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
@@ -6504,14 +6504,14 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        inkstitch:reverse_rails="none" />
     <path
        d="M 11.213433,93.953822 11.034943,118.97932 32.36137,117.2419 32.8596,108.411"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:black;stroke-width:0.377953;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
        inkstitch:running_stitch_length_mm="2.0"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path551"
        sodipodi:nodetypes="cccc" />
     <path
        d="m 30.5813,126.304 -0.1249,-0.916 -0.3424,-2.511 0.1423,-12.454 0.325,-2.492 m 4.8534,17.853 -0.0236,-0.918 -0.0646,-2.519 -0.1718,-6.703 v -4.682 -2.598 m -6.2379,2.769 h 7.7948"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
@@ -6520,24 +6520,24 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        sodipodi:nodetypes="ccccccccccccc"
        inkstitch:reverse_rails="none" />
     <path
-       d="m 16.8061,114.344 h 8.4886 l 2.1883,-0.119 3.375861,-0.38156 M 17.0323,120.151 h 6.5291 l 2.86,0.152 3.90357,0.40456 m -8.008363,-9.68149 v 11.31847"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       d="M 30.858861,113.84344 27.483,114.225 l -2.1883,0.119 h -8.4886 m 13.51887,6.36356 -3.90357,-0.40456 -2.86,-0.152 h -6.5291 m 5.284307,2.19354 v -11.31847"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
        inkscape:label="Colonne satin 6"
        id="path541"
-       sodipodi:nodetypes="cccccccc"
+       sodipodi:nodetypes="cccccccccc"
        inkstitch:reverse_rails="none" />
     <path
        d="M 16.806,113.589 H 11.2981"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:black;stroke-width:0.377953;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
        inkstitch:running_stitch_length_mm="2.0"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path552" />
     <path
        d="M 4.3247797,92.895398 5.91393,97.6286 l 0.2275,2.7624 v 11.996 11.266 12.098 l -0.26,3.12 -0.8432221,4.93623 M 17.222956,92.855142 16.6281,98.8636 16.4547,102.991 v 9.237 2.116 5.807 3.671 9.329 l 0.2059,4.55 0.784612,5.99944 M 18.259,112.414 H 4.3779"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
@@ -6547,13 +6547,13 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        inkstitch:reverse_rails="none" />
     <path
        d="m 18.1892,143.603 21.0329,0.405 -1.102345,-5.21964 -1.815226,6.2999 3.844009,-6.72701 -3.203341,7.36768 4.271121,-7.36768 -1.06778,6.2999 1.174558,-5.44568 -0.213556,5.97957 1.06778,-5.55246 -0.640668,5.55246 -1.60167,-5.23212"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:black;stroke-width:0.377953;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
        inkstitch:running_stitch_length_mm="2.0"
        inkstitch:running_stitch_tolerance_mm="0.2"
        id="path553" />
     <path
        d="M 35.573076,143.47567 37.038,139.857 l 0.5633,-1.419 0.9989,-4.495 0.2144,-0.965 m 4.056488,11.56189 1.121012,-9.94989 0.1092,-1.179 m -6.9425,0.359 8.0083,0.961"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
@@ -6563,7 +6563,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        inkstitch:reverse_rails="none" />
     <path
        d="m -0.965216,143.984 1.624002,-0.311 3.544674,-0.68 14.97964,-0.482 h 9.4916 l 3.9975,-0.26 1.39,-0.22 9.192236,0.79478 m -43.78632,6.27222 1.256921,-0.059 3.275183,-0.152 2.22787,-0.104 5.46001,-0.119 h 7.098 12.4886 l 2.7875,0.098 7.0924,0.249 1.626668,-1.46789 m -42.1406,-5.33811 0.106778,8.649"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
@@ -14758,11 +14758,11 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-¡"
-     style="display:none"
+     style="display:inline"
      id="g683"
      transform="translate(0,-74.4095)">
     <path
-       style="display:inline;fill:none;fill-opacity:0.3;fill-rule:evenodd;stroke:#000000;stroke-width:0.377953;stroke-dasharray:2, 1"
+       style="display:inline;fill:none;fill-opacity:0.3;fill-rule:evenodd;stroke:black;stroke-width:0.377953;stroke-dasharray:2, 1"
        d="M 6.0002006,147.31911 9.5747882,134.2974 9.0641328,127.27589"
        id="path214"
        inkstitch:satin_column="True"
@@ -14773,13 +14773,13 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        style="display:inline"
        transform="translate(-0.923053,-31.4761)">
       <path
-         style="display:inline;fill:none;fill-opacity:0.3;fill-rule:evenodd;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.02362, 0.377953;stroke-dashoffset:0"
+         style="display:inline;fill:none;fill-opacity:0.3;fill-rule:evenodd;stroke:black;stroke-width:0.377953;stroke-dasharray:3.02362, 0.377953;stroke-dashoffset:0"
          d="M 7.3928024,73.255984 7.5225007,63.463763"
          id="path162"
          transform="translate(0,74.4095)" />
       <path
          d="M 7.8989848,136.31372 C 0.38733685,136.24376 0.14380358,149.506 8.17112,149.499 m 1.8282115,-13.23107 c 7.9406745,0.14269 8.1972265,13.24746 -0.2845707,13.134 M 18.1578,144.812 H 1.03759"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+         style="display:inline;fill:none;stroke:black;stroke-width:1"
          inkstitch:satin_column="True"
          inkstitch:contour_underlay="True"
          inkstitch:pull_compensation_mm="0.2"
@@ -14792,8 +14792,16 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
          inkstitch:reverse_rails="none" />
     </g>
     <path
+       style="display:inline;fill:none;fill-opacity:0.3;fill-rule:evenodd;stroke:black;stroke-width:0.377953;stroke-dasharray:2, 1"
+       d="M 8.5534775,141.06358 9.0641328,127.27589"
+       id="path215"
+       inkstitch:satin_column="True"
+       inkstitch:min_jump_stitch_length_mm="8"
+       sodipodi:nodetypes="cc"
+       inkstitch:force_lock_stitches="True" />
+    <path
        d="m 5.01476,172.757 -0.69519,-0.667 -1.47147,-1.412 1.23651,-19.683 0.08515,-1.356 0.53083,-10.088 0.14084,-6.4 -0.26,-6.933 0.85589,-0.79 m 8.07078,46.636 -0.0404,-1.268 -0.623,-19.562 -0.6366,-19.99 0.0695,-4.587 0.0171,-1.133 M 0.382992,150.894 14.426,151.277"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="True"
        inkstitch:pull_compensation_mm="0.2"
@@ -14801,14 +14809,6 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        id="path213"
        sodipodi:nodetypes="ccccccccccccccccc"
        inkstitch:reverse_rails="none" />
-    <path
-       style="display:inline;fill:none;fill-opacity:0.3;fill-rule:evenodd;stroke:#000000;stroke-width:0.377953;stroke-dasharray:2, 1"
-       d="M 8.5534775,141.06358 9.0641328,127.27589"
-       id="path215"
-       inkstitch:satin_column="True"
-       inkstitch:min_jump_stitch_length_mm="8"
-       sodipodi:nodetypes="cc"
-       inkstitch:force_lock_stitches="True" />
   </g>
   <g
      inkscape:groupmode="layer"
