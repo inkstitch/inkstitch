@@ -25,7 +25,7 @@
         </page>
 
         <page name="info" gui-text="Help">
-          <label>Use this extension after all simple glyphs have been created to pre fill the composed glyphs with their components.</label>
+          <label>This extension helps the font digitizer to organize its work in steps to maximize reuse of already digitized letters.</label>
         <spacer />
         <label>Get more information on our website</label>
         <label appearance="url">https://inkstitch.org/docs/troubleshoot/#remove-embroidery-settings</label>

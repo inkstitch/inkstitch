@@ -13,13 +13,12 @@ from ..i18n import _
 class LetteringFillComposedGlyphs(InkstitchExtension):
     """_summary_
     The goal of this extension is to help the font digitizer with steps to organize its work.
-    At each step a group of glyphs are brought to the top of the font file, and the font
-    digitizer should digitize these glyphs before going to next step.
-    Steps are organized so has to break the work into smaller chunks and
-    maximize reuse of already digitized letters.
+    At each step a group of glyphs is brought to the top of the object stack, and the font
+    digitizer should digitize these glyphs before going to the next step.
+    Steps are organized in such a way as to break the work into smaller chunks and maximize reuse of already digitized letters.
 
-    unicodedata is used to decomposed letters into pieces
-    furthermore the extension use some  additional information , such as "i" and "j" usually reuse
+    unicodedata is used to decomposed letters into pieces.
+    Furthermore the extension use some additional information, such as "i" and "j" usually reuse
     the digitalization of "."
     """
 
@@ -62,7 +61,7 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
         return category_name
 
     def _update_all_glyphs(self):
-        # only consider GlyphLayer we  know the unicode they represent, that means there name is a single letter
+        # only consider GlyphLayer we know the unicode they represent, that means their name is a single letter
         self._update_glyphs_layers()
         for layer in self._glyphs_layers:
             name = layer.attrib[INKSCAPE_LABEL]
@@ -72,20 +71,23 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
 
     def _fill_decompose_lists(self):
         # NFD normalization decomposes 'Ṓ' into three characters, letter O,  macron  accent and acute accent,
-        # unicodedata.decomposition(Ṓ) splits into two entry points, one for 'Ō' and one for the acute accent
+        # unicodedata.decomposition(Ṓ) splits it into two entry points, one for 'Ō' and one for the acute accent
         # NFD normalization of 'a' is simply 'a', while unicodedata.decomposition('a') is an empty string.
+        # unicodedata.decomposition also splits a subscript letter into a keyword for subscript and the entry point
+        # of the corresponding letter, this is just an example, the normalization of the subscript letter being
+        # the subscript letter itself. We do need both!
 
         for glyph in self._all_glyphs:
             normalization = [char for char in unicodedata.normalize('NFD', glyph)]
             decomposition = []
             for code in unicodedata.decomposition(glyph).split(' '):
                 try:
-                    piece = chr(int(code, 16))
-                    # we don't need the space separator nor the other separators as pieces, as they
+                    piece = chr(int(code, 16))   # convert entry point into unicode character
+                    # we don't need the space separator nor the other separators as pieces, as there
                     # is nothing to render for them
                     if unicodedata.category(piece)[0] != 'Z':
                         decomposition.append(piece)
-                except ValueError:  # this will eliminate code like <super> but keep codes like 03bc
+                except ValueError:  # this will eliminate keywords as they do not convert to int
                     pass
             if decomposition != []:
                 self._decomposition[glyph] = decomposition
@@ -153,9 +155,9 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
             if name == "" or name == ".null" or (len(name) == 1 and not self._is_valid(name)):
                 layer.delete()
 
-    # Step1 time to digitize comma, hyphen and period:
-    # move comma , hyphen and period on top
-    # Lock all other glyhs
+    # Step1 time to digitize comma, hyphen, and period:
+    # move comma, hyphen and period on top
+    # Lock all other glyphs
 
     def _lock_and_hide_all_layers(self):
         self._update_glyphs_layers()
@@ -194,8 +196,8 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
             errormsg(added_char__warning)
 
     # Step 2
-    # Find all non composed letters
-    # Group them by category, all upper cases, lower cases, with group on top of the file
+    # Find all non-composed letters (no use of diacritic allowed)
+    # Group them by category, all upper cases, lower cases and other
 
     def _create_empty_group(self, group_name):
         new_group = Group()
@@ -203,12 +205,11 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
         return new_group
 
     def _do_in_first_steps(self, glyph):
-        # no decomposition for this glyph
+        # check if a glyph can be digitalize without waiting for some of its piece to be digitalized first
         if unicodedata.decomposition(glyph) == "":
             return True
         # There is a decomposition,  but the decomposition is in only one piece, and this piece
-        # is not used for anything else (this occurs for in the symbol for MICRO µ  is in the font, and the letter )
-        # not sure here
+        # is not used for anything else.
         if len(self._decomposition[glyph]) == 1:
             piece = self._decomposition[glyph][0]
             if len(self._used_in_decompositions[piece]) == 1:
@@ -216,10 +217,7 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
         return False
 
     def _create_and_fill_group(self, unicode_categories, excepting=[], adding=[], also_composed=False):
-        # we want only the glyphs that can not be decomposed, it is not exactly the same thing
-        # as having only one element in the NFD normalization
-        # (for instance a subscript is normalized to itself) but its decomposition is not "", but the
-        # non subscripted character
+
         group_name = self._category_name[unicode_categories[0]]
         new_group = self._create_empty_group(group_name)
         glyphs = self._all_glyphs
@@ -254,8 +252,7 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
         self._create_and_fill_group(['Lu'])
 
     # Step 3
-    # Find all non composed digits and symbols
-    # Group them as digits and symbols
+    # Find all non-composed digits and symbols, also find some punctuation signs
 
     def _add_usually_used(self, usually_use):
         for B in usually_use:
@@ -308,8 +305,8 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
         self._add_usually_used(usually_use)
         self._create_and_fill_group(['Pe', 'Pf'], excepting=[], adding=["¿", "¡", ">", "/"])
     # Step 5
-    # There are several sorts of apostrophes and quotes depending of the used language.
-    # If there is at least one, now that it is supposedly digitalized, let us make sure that we have all those in ["'","’", "ʼ"]
+    # There are several sorts of apostrophes and quotes depending on the used language.
+    # If there is at least one, let us make sure that we have all those in ["'","’", "ʼ"]
     # Same for quotes
 
     def _find_representative(self, equivalence):
@@ -348,19 +345,19 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
                     self._add_first_in_second(use_to_represent, char)
 
     # To fill the composed glyphs we need diacritics (COMBINING ACCENT mostly)
-    # We may already have some of them already digitized , as a COMBINING ACCENT (Mark category) somemtime
-    # has ann homoglyph MODIFIER LETTER ACCENT in the letter category and or an homoglyph ACCENT in the
+    # We may already have some of them already digitized, as a COMBINING ACCENT (Mark category)
+    # has sometimes an homoglyph MODIFIER LETTER ACCENT in the letter category and or an homoglyph ACCENT in the
     # symmbol category.
     # At this step we want only diacritics without positioning  or doubling info. For instance, we  want the font digitizer
     # to create COMBINING ACUTE ACCENT, but to wait till next step for COMBININIG ACUTE ACCENT BELOW
     # COMBINIG ACCENT ABOVE and COMBINING DOUBLE ACUTE ACCENT, not to do the same work several times.
     # create the missing diacritics. If the same drawing letter is here, we will fill the diacritic
-    # with it. Many diacritics are the samme, except for the positioning. For instance, for COMBINING ACUTE ACCENT
+    # with it. Many diacritics are the same, except for the positioning. For instance, for COMBINING ACUTE ACCENT
     # has a corresponding letter MODIFIER LETTER ACUTE ACCENT
-    # If(for instance) COMBINING ACUTE ACCENT is in the glyphs,we simply brinng it to the new group
+    # If (for instance) COMBINING ACUTE ACCENT is in the glyphs,we simply brinng it to the new group
     # of letters to be digitized.
-    # If it is not here but we have the  corresponding MODIFIER LETTER, we create an empty glyph that
-    # contains the already digitized letter. If there is no such corresponding LETTER or SYMBol, we fill
+    # If it is not here but we have the corresponding MODIFIER LETTER, we create an empty glyph that
+    # contains the already digitized letter. If there is no such corresponding LETTER or SYMBOL, we fill
     # the empty glyph with a letter that uses the accent, so that the font digitizer knows what this
     # diacritics is supposed to look like
     def _simplyfy_name(self, glyph):
@@ -427,8 +424,8 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
     # Step 6
     # at this step we deal with other diacritics.
     # if the diacritic is not present, we prefill the created layer with  one copy or two of the
-    # corresponding simple diacritic, and additonaly one letter that does use the diacritics so that the font
-    # digitizer can move the simple diacritics t its rght position (and then delete the additional letter)
+    # corresponding simple diacritic, and additionally one letter that does use the diacritics so that the font
+    # digitizer can move the simple diacritics to its right position (and then delete the additional letter)
 
     def _find_substitute(self, glyph):
         simplified_name = self._simplyfy_name(glyph)
@@ -523,6 +520,16 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
         self._create_and_fill_group(['Ll'], [], [], also_composed=True)
         self._create_and_fill_group(['Lu'], [], [], also_composed=True)
 
+    def _additional_actions(self):
+        # These last actions may be used any time on any font file
+
+        if self.options.action == 'duplicate':
+            self._look_for_duplicate(verbose=True)
+
+        if self.options.action == 'sort':
+            self._sort_by_category()
+            self._remove_empty_groups()
+
     def effect(self):
         self.svg = self.document.getroot()
         self._update_glyphs_layers()
@@ -563,8 +570,4 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
             self._fill_other_letters()
             self._remove_empty_groups()
 
-        if self.options.action == 'duplicate':
-            self._look_for_duplicate(verbose=True)
-
-        if self.options.action == 'sort':
-            self._sort_by_category()
+        self._additional_actions()
