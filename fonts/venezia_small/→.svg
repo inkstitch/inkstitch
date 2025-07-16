@@ -22,15 +22,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="7.5411729"
-     inkscape:cx="18.166935"
+     inkscape:cx="18.100633"
      inkscape:cy="25.592836"
-     inkscape:current-layer="g714"
+     inkscape:current-layer="g651"
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:window-width="1560"
      inkscape:window-height="971"
      inkscape:window-x="71"
-     inkscape:window-y="51"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:lockguides="true">
     <sodipodi:guide
@@ -3208,7 +3208,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector57603"
          d="M 5.3661104,74.703 3.2562924,74.213831"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use49214"
          inkscape:connection-end="#path197"
          inkscape:label="connecteur"
@@ -3469,7 +3469,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector7945"
          d="M 16.812765,74.741169 9.8269,72.360377"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use73954"
          inkscape:connection-end="#path259"
          inkscape:label="connecteur"
@@ -3784,7 +3784,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector48685"
          d="m 37.596413,74.183217 -2.68702,-2.908224"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use72705"
          inkscape:connection-end="#path263"
          inkscape:label="connecteur"
@@ -4007,7 +4007,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector87686"
          d="m 36.633711,74.316533 -0.07054,-0.153144"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use1441"
          inkscape:connection-end="#path315"
          inkscape:label="connecteur"
@@ -4193,7 +4193,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector96309"
          d="M 14.904375,74.167823 9.9948736,71.433236"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use49291"
          inkscape:connection-end="#path343"
          inkscape:label="connecteur"
@@ -4389,7 +4389,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector35366"
          d="M 27.17214,74.70583 22.117779,72.5751"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use48841"
          inkscape:connection-end="#path362"
          inkscape:label="connecteur"
@@ -4517,7 +4517,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector37047"
          d="M 18.194236,73.980265 9.673939,71.7675"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use97051"
          inkscape:connection-end="#path130"
          inkscape:label="connecteur"
@@ -4771,7 +4771,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector84556"
          d="M 33.678238,74.205792 28.37341,71.517315"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use18261"
          inkscape:connection-end="#path270"
          inkscape:label="connecteur"
@@ -4864,7 +4864,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector34726"
          d="m -1.0200429,74.719166 -0.093507,-0.03126"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use57843"
          inkscape:connection-end="#path309"
          inkscape:label="connecteur"
@@ -5050,7 +5050,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector17675"
          d="M 53.141998,74.710812 46.265502,72.1909"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use51786"
          inkscape:connection-end="#path339"
          inkscape:label="connecteur"
@@ -5190,7 +5190,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector77907"
          d="M 28.009127,74.746327 23.127859,72.1909"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use61541"
          inkscape:connection-end="#path389"
          inkscape:label="connecteur"
@@ -5501,7 +5501,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector4296"
          d="M 18.810892,74.178418 10.491845,71.1835"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use64825"
          inkscape:connection-end="#path455"
          inkscape:label="connecteur"
@@ -5696,11 +5696,11 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
   <g
      inkscape:groupmode="layer"
      inkscape:label="GlyphLayer-t"
-     style="display:none"
+     style="display:inline"
      id="g651"
      transform="translate(0,-74.4095)">
     <path
-       style="display:inline;fill:none;fill-opacity:0.3;fill-rule:evenodd;stroke:#000000;stroke-width:0.377953;stroke-dasharray:3.02362, 0.377953;stroke-dashoffset:0"
+       style="display:inline;fill:none;fill-opacity:0.3;fill-rule:evenodd;stroke:black;stroke-width:0.377953;stroke-dasharray:3.02362, 0.377953;stroke-dashoffset:0"
        d="m 7.8470375,146.86124 -1.2001351,-19.3868 3.3234512,-14.67858 0.2769544,-2.30795 5.723721,0.36927 -5.631403,-1.75404 5.354449,-0.64623 -5.9083576,-0.83086 5.7237216,-0.55391 -4.800541,-1.38477 5.077495,2.40027 -8.7702183,-3.6004 -5.0774948,1.20013 4.0619959,0.18464 -5.44676727,1.0155 6.64690237,0.36927 -6.64690237,0.73854 6.09299387,0.92318 -6.00067578,0.0923 6.09299388,1.47709 -5.7237215,-0.46159 5.7237215,1.38477 -7.01617477,-2.95418"
        id="path502"
        inkstitch:satin_column="True"
@@ -5708,8 +5708,8 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        inkstitch:running_stitch_tolerance_mm="0.1"
        inkstitch:min_stitch_length_mm="0.3" />
     <path
-       d="m -3.65187,111.658 h 8.2744503 m 0.959471,-8.06532 c -2.5190479,1.0535 -6.43205188,2.17605 -8.9977713,3.11132 m -0.09237,-1.571 0.46159,7.847"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       d="M -3.65187,111.658 H 4.6225803 M -3.41572,106.704 c 2.56571942,-0.93527 6.4787234,-2.05782 8.9977713,-3.11132 M -3.50809,105.133 -3.0465,112.98"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
@@ -5724,7 +5724,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        inkstitch:min_stitch_length_mm=".3" />
     <path
        d="m 5.3499,102.956 7.2223,5.662"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.377953;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:black;stroke-width:0.377953;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
        inkstitch:running_stitch_length_mm="1.5"
        inkstitch:running_stitch_tolerance_mm="0.1"
        id="path503"
@@ -5732,7 +5732,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        inkstitch:min_stitch_length_mm="0.3" />
     <path
        d="M 24.6014,105.851 12.462983,105.66636 M 23.908,111.658 12.278347,111.56568 m 10.431953,0.95332 1.2001,-8.124"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
@@ -5747,7 +5747,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
        inkstitch:min_stitch_length_mm=".3" />
     <path
        d="M 12.9881,96.4044 V 132.37 c 0.0395,2.047 -0.1147,4.104 0.1636,6.138 0.0896,1.822 1.3093,3.651 3.17,4.014 2.7323,0.552 5.4482,-0.694 7.673,-2.178 M 8.65475,96.0577 c -1.26023,2.5212 -2.75898,4.9093 -4.1623,7.3493 -0.53644,3.602 -1.16899,7.195 -1.64416,10.803 0.02001,7.705 -0.04161,15.411 0.03188,23.114 0.04367,2.322 0.3225,4.67 1.19999,6.835 0.41658,0.959 0.95457,1.892 1.6474,2.677 0.67509,0.653 1.33001,1.351 2.21544,1.719 1.07479,0.704 2.3651,0.928 3.5956,1.21 2.0464,0.219 4.1516,0.311 6.1437,-0.312 1.607,-0.498 3.2173,-1.008 4.6847,-1.849 1.5734,-0.709 2.9454,-1.755 4.401,-2.666 m -4.427,-5.739 c 1.5079,2.708 3.0157,5.416 4.5236,8.124 m -11.7244,-7.847 c -3.6927,3.17 -7.38547,6.339 -11.0782,9.509 0.01454,0.038 0.41635,0.516 0.18463,0.277 M 1.56941,113.904 c 4.64666,0.246 9.29329,0.492 13.93999,0.738 M 5.53909,98.9482 15.6941,99.5944"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:1"
+       style="display:inline;fill:none;stroke:black;stroke-width:1"
        inkstitch:satin_column="True"
        inkstitch:contour_underlay="False"
        inkstitch:pull_compensation_mm="0.2"
@@ -5770,7 +5770,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector17515"
          d="M 21.083448,73.204775 19.66364,67.986664"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use46530"
          inkscape:connection-end="#path501"
          inkscape:label="connecteur"
@@ -5911,7 +5911,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector87265"
          d="M 40.071152,73.90784 37.970582,71.2975"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use40453"
          inkscape:connection-end="#path532"
          inkscape:label="connecteur"
@@ -6364,7 +6364,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector9526"
          d="M 26.918516,74.568554 20.310641,72.108685"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use33262"
          inkscape:connection-end="#path766"
          inkscape:label="connecteur"
@@ -6778,7 +6778,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector69560"
          d="m 26.174891,73.987641 -0.02475,-0.04497"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use21849"
          inkscape:connection-end="#path192"
          inkscape:label="connecteur"
@@ -7149,7 +7149,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector32722"
          d="M 45.635925,74.084579 41.229159,71.31298"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use89652"
          inkscape:connection-end="#path412"
          inkscape:label="connecteur"
@@ -7529,7 +7529,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector40246"
          d="M 50.920836,74.950848 50.201377,74.754692"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use17382"
          inkscape:connection-end="#path304"
          inkscape:label="connecteur"
@@ -7887,7 +7887,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector31026"
          d="M 1.3074053,74.731015 0.37502392,74.577432"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use95408"
          inkscape:connection-end="#path549"
          inkscape:label="connecteur"
@@ -8026,7 +8026,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector49823"
          d="M 20.788594,74.441531 20.2461,74.2545"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use14113"
          inkscape:connection-end="#path722"
          inkscape:label="connecteur"
@@ -8303,7 +8303,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector31941"
          d="M 56.401878,73.56007 48.453,71.48"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use4001"
          inkscape:connection-end="#path807"
          inkscape:label="connecteur"
@@ -8398,7 +8398,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector50965"
          d="M 19.571678,73.921633 11.489777,71.90703"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use3017"
          inkscape:connection-end="#path810-6"
          inkscape:label="connecteur"
@@ -8611,7 +8611,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector12924"
          d="m 44.604218,74.257489 0.442104,-3.29823"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use87451"
          inkscape:connection-end="#path270-4"
          inkscape:label="connecteur"
@@ -9115,7 +9115,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector37380"
          d="M 20.936024,74.273463 20.876439,74.2545"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use2971"
          inkscape:connection-end="#path934"
          inkscape:label="connecteur"
@@ -9286,7 +9286,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector39145"
          d="m 47.571835,74.49828 -0.20316,-0.12871"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use50012"
          inkscape:connection-end="#path960"
          inkscape:label="connecteur"
@@ -9487,7 +9487,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector42079"
          d="m 12.628313,74.778668 -0.199048,-0.07091"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use52630"
          inkscape:connection-end="#path980"
          inkscape:label="connecteur"
@@ -9848,7 +9848,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector32543"
          d="M 55.697723,74.36504 48.445918,72.231994"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use79851"
          inkscape:connection-end="#path1088"
          inkscape:label="connecteur"
@@ -10179,7 +10179,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector23501"
          d="M 38.006611,74.492215 28.682581,71.49497"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use35980"
          inkscape:connection-end="#path1074"
          inkscape:label="connecteur"
@@ -10813,7 +10813,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector83873"
          d="M 19.09813,74.197845 12.664686,71.453709"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use35213"
          inkscape:connection-end="#path1172"
          inkscape:label="connecteur"
@@ -11152,7 +11152,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector82340"
          d="m 43.605282,74.954945 -0.69785,-0.198718"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use62621"
          inkscape:connection-end="#path253"
          inkscape:label="connecteur"
@@ -11355,7 +11355,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector3498"
          d="m 45.235855,74.942906 -0.23731,-0.06193"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use54780"
          inkscape:connection-end="#path383"
          inkscape:label="connecteur"
@@ -11601,7 +11601,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector20411"
          d="M 45.336647,74.942174 45.083809,74.87939"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use38897"
          inkscape:connection-end="#path476"
          inkscape:label="connecteur"
@@ -11807,7 +11807,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector71020"
          d="M 44.321037,74.949727 43.338998,74.633071"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use44334"
          inkscape:connection-end="#path562"
          inkscape:label="connecteur"
@@ -12011,7 +12011,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector11405"
          d="m 44.561234,74.947979 -0.246533,-0.06604"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use14558"
          inkscape:connection-end="#path835"
          inkscape:label="connecteur"
@@ -12215,7 +12215,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector68190"
          d="M 43.751255,74.953976 43.009481,74.754383"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use54879"
          inkscape:connection-end="#path893"
          inkscape:label="connecteur"
@@ -12422,7 +12422,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector12075"
          d="M 1.1053211,74.740429 -15.648076,72.678014"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use32422"
          inkscape:connection-end="#path915"
          inkscape:label="connecteur"
@@ -12622,7 +12622,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector78121"
          d="M 2.4311162,74.678898 -13.477776,72.295114"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use61457"
          inkscape:connection-end="#path929"
          inkscape:label="connecteur"
@@ -12873,7 +12873,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector33005"
          d="M 4.6029917,74.577939 -11.307476,72.550414"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use8291"
          inkscape:connection-end="#path951"
          inkscape:label="connecteur"
@@ -13084,7 +13084,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector40339"
          d="M 3.4194401,74.63303 -12.711776,72.295114"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use70691"
          inkscape:connection-end="#path979"
          inkscape:label="connecteur"
@@ -13217,7 +13217,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector50082"
          d="M 3.3465577,74.636426 -5.6172228,72.29006"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use86649"
          inkscape:connection-end="#path992"
          inkscape:label="connecteur"
@@ -13339,7 +13339,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector74796"
          d="m 1.7548277,74.710286 -0.267449,-0.0727"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use7543"
          inkscape:connection-end="#path1006"
          inkscape:label="connecteur"
@@ -13513,7 +13513,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector79244"
          d="M 3.3590117,74.635884 -5.6172228,72.41779"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use71641"
          inkscape:connection-end="#path8"
          inkscape:label="connecteur"
@@ -13637,7 +13637,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector28192"
          d="M 2.755874,74.663853 -6.1278228,72.41769"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use24762"
          inkscape:connection-end="#path19"
          inkscape:label="connecteur"
@@ -15125,7 +15125,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector85748"
          d="M 37.707905,74.183247 36.276513,71.123123"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use37378"
          inkscape:connection-end="#path1092"
          inkscape:label="connecteur"
@@ -15259,7 +15259,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector65356"
          d="m 37.396423,74.183247 -1.11991,-3.060124"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use89381"
          inkscape:connection-end="#path1109"
          inkscape:label="connecteur"
@@ -15443,7 +15443,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector62851"
          d="M 38.124676,74.18327 37.339823,71.275053"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use68792"
          inkscape:connection-end="#path1117"
          inkscape:label="connecteur"
@@ -15581,7 +15581,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector31897"
          d="M 38.443199,74.18327 36.428413,70.971253"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use32248"
          inkscape:connection-end="#path1131"
          inkscape:label="connecteur"
@@ -15725,7 +15725,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector38112"
          d="M 37.7155,74.18327 36.428413,71.275053"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use97916"
          inkscape:connection-end="#path1144"
          inkscape:label="connecteur"
@@ -15860,7 +15860,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector89014"
          d="M 37.969307,74.18327 35.972713,70.971253"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use15291"
          inkscape:connection-end="#path1185"
          inkscape:label="connecteur"
@@ -16469,7 +16469,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector18354"
          d="M 1.0474509,74.696461 0.6621123,74.55833"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use34749"
          inkscape:connection-end="#path1255"
          inkscape:label="connecteur"
@@ -16600,7 +16600,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector91936"
          d="M 0.81705406,74.706357 -6.275761,72.2232"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use75464"
          inkscape:connection-end="#path1279"
          inkscape:label="connecteur"
@@ -16773,7 +16773,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector31843"
          d="M 0.5628598,74.717259 0.15209483,74.55833"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use44097"
          inkscape:connection-end="#path1292"
          inkscape:label="connecteur"
@@ -16909,7 +16909,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector60482"
          d="M 0.56415411,74.717206 -6.579561,72.37513"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use12936"
          inkscape:connection-end="#path1307"
          inkscape:label="connecteur"
@@ -17086,7 +17086,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector15525"
          d="M 29.282703,74.689969 28.699618,74.35643"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use14845"
          inkscape:connection-end="#path1316"
          inkscape:label="connecteur"
@@ -17619,7 +17619,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector97888"
          d="M 44.499115,74.183247 41.616232,71.44943"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use11691"
          inkscape:connection-end="#path1382"
          inkscape:label="connecteur"
@@ -17798,7 +17798,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector17654"
          d="M 44.477898,74.18327 43.875931,73.916324"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use53753"
          inkscape:connection-end="#path1395"
          inkscape:label="connecteur"
@@ -18014,7 +18014,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector9562"
          d="M 45.061535,74.293278 42.375732,71.75326"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use77307"
          inkscape:connection-end="#path1407"
          inkscape:label="connecteur"
@@ -18196,7 +18196,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector79372"
          d="M 44.088959,74.18327 41.008622,71.44946"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use10701"
          inkscape:connection-end="#path1419"
          inkscape:label="connecteur"
@@ -18263,7 +18263,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
         <path
            id="command_connector419"
            d="m 13.905869,23.313059 -0.0078,-0.07518"
-           style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
            inkscape:connection-start="#command_use15736"
            inkscape:connection-end="#path440"
            inkscape:label="connecteur"
@@ -18460,7 +18460,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
             <path
                id="command_connector65444"
                d="m 22.689182,21.832865 0.449513,-0.134027"
-               style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+               style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
                inkscape:connection-start="#command_use73098"
                inkscape:connection-end="#path790"
                inkscape:label="connecteur"
@@ -19254,7 +19254,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector49699"
          d="m 16.7405,30.448411 0.193458,-0.26032"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use81656"
          inkscape:connection-end="#path42"
          inkscape:label="connecteur"
@@ -19483,7 +19483,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
         <path
            id="command_connector11940"
            d="M 13.878093,73.277228 11.316256,70.4025"
-           style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
            inkscape:connection-start="#command_use7150"
            inkscape:connection-end="#path154"
            inkscape:label="connecteur"
@@ -19541,7 +19541,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector36641"
          d="M -2.5870444,71.493809 -2.3938022,70.68319"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use94462"
          inkscape:connection-end="#path153"
          inkscape:label="connecteur"
@@ -19597,7 +19597,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector33851"
          d="M 27.474871,72.400236 27.037458,71.569762"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use89696"
          inkscape:connection-end="#path150"
          inkscape:label="connecteur"
@@ -20010,7 +20010,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector29513"
          d="M 19.964901,83.506607 19.659527,83.274374"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use79607"
          inkscape:connection-end="#path30"
          inkscape:label="connecteur"
@@ -20106,7 +20106,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector12325"
          d="M 16.323267,84.356535 15.663211,83.78745"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use31254"
          inkscape:connection-end="#path22"
          inkscape:label="connecteur"
@@ -20163,7 +20163,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector37119"
          d="M 18.054262,55.723214 11.53,52.701934"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use23932"
          inkscape:connection-end="#path1359"
          inkscape:label="connecteur"
@@ -20219,7 +20219,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector6972"
          d="M 38.780916,86.936086 22.608039,90.1025"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use7734"
          inkscape:connection-end="#path1357"
          inkscape:label="connecteur"
@@ -20276,7 +20276,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector43561"
          d="M 4.5040646,64.027962 -1.213275,66.279179"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use76957"
          inkscape:connection-end="#path1356"
          inkscape:label="connecteur"
@@ -20365,7 +20365,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
         <path
            id="command_connector63429"
            d="m 32.418409,73.547105 -5.601898,2.075321"
-           style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
            inkscape:connection-start="#command_use82637"
            inkscape:connection-end="#path1353"
            inkscape:label="connecteur"
@@ -20457,7 +20457,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
         <path
            id="command_connector844"
            d="M 32.155124,25.783916 30.431813,23.295909"
-           style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
            inkscape:connection-start="#command_use72807"
            inkscape:connection-end="#path1346"
            inkscape:label="connecteur"
@@ -20550,7 +20550,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
         <path
            id="command_connector64415"
            d="m 27.198622,31.396731 -0.01256,-0.225669"
-           style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
            inkscape:connection-start="#command_use99097"
            inkscape:connection-end="#path1344"
            inkscape:label="connecteur"
@@ -20608,7 +20608,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector3518"
          d="m 12.917778,6.060854 -0.03038,-0.047486"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use77369"
          inkscape:connection-end="#path1340"
          inkscape:label="connecteur"
@@ -20663,7 +20663,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector21336"
          d="m 4.5107332,11.426702 0.00805,-0.07589"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use88918"
          inkscape:connection-end="#path1338"
          inkscape:label="connecteur"
@@ -20748,7 +20748,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector38245"
          d="M 24.767028,29.272765 24.474993,28.868962"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use2706"
          inkscape:connection-end="#path1334"
          inkscape:label="connecteur"
@@ -20804,7 +20804,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector68467"
          d="M 4.0041176,13.534368 3.933001,13.41033"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use54035"
          inkscape:connection-end="#path1331"
          inkscape:label="connecteur"
@@ -21015,7 +21015,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector26673"
          d="M 20.248745,30.331828 19.942994,28.940107"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use54977"
          inkscape:connection-end="#path1298"
          inkscape:label="connecteur"
@@ -21108,7 +21108,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector53817"
          d="M 36.9162,63.467236 36.26757,63.050124"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use44624"
          inkscape:connection-end="#path1285"
          inkscape:label="connecteur"
@@ -21270,7 +21270,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector20348"
          d="M 38.708388,64.719808 27.8324,61.678739"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use10064"
          inkscape:connection-end="#path1267"
          inkscape:label="connecteur"
@@ -21326,7 +21326,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector11419"
          d="m 11.419985,71.219942 0.01569,-0.03768"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use54892"
          inkscape:connection-end="#path1266"
          inkscape:label="connecteur"
@@ -21383,7 +21383,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector33534"
          d="M 28.767901,66.800455 24.892339,63.025653"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use50837"
          inkscape:connection-end="#path1263"
          inkscape:label="connecteur"
@@ -21685,7 +21685,7 @@ Copyright 2011 The Andada Pro Project Authors https:github.comhuertatipograficaA
       <path
          id="command_connector80152"
          d="M 55.865274,74.242646 54.7632,73.58173"
-         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+         style="display:inline;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
          inkscape:connection-start="#command_use59043"
          inkscape:connection-end="#path1240-1"
          inkscape:label="connecteur"
