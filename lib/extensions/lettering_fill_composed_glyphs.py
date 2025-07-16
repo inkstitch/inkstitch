@@ -56,6 +56,8 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
         category_name["Sc"] = _('Symbols')
         category_name["Pc"] = _('Punctuation')
         category_name["Pe"] = _('Closing Punctuation')
+        category_name["Mn"] = _('Diacritics')
+        category_name["Co"] = _('Special')
 
         return category_name
 
@@ -213,7 +215,7 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
                 return True
         return False
 
-    def _create_and_fill_group(self, unicode_categories, excepting=[], adding=[]):
+    def _create_and_fill_group(self, unicode_categories, excepting=[], adding=[], also_composed=False):
         # we want only the glyphs that can not be decomposed, it is not exactly the same thing
         # as having only one element in the NFD normalization
         # (for instance a subscript is normalized to itself) but its decomposition is not "", but the
@@ -224,12 +226,12 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
         for glyph in glyphs:
             if glyph not in excepting:
                 if unicodedata.category(glyph) in unicode_categories:
-                    if self._do_in_first_steps(glyph):
+                    if self._do_in_first_steps(glyph) or also_composed:
                         glyph_layer = self._find_layer(glyph)
                         if glyph_layer is not None:
                             new_group.add(glyph_layer)
         for glyph in adding:
-            if self._do_in_first_steps(glyph):
+            if self._do_in_first_steps(glyph) or also_composed:
                 glyph_layer = self._find_layer(glyph)
                 if glyph_layer is not None:
                     new_group.add(glyph_layer)
@@ -248,8 +250,6 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
 
     def _all_non_composed_letters_by_category(self):
         self._create_and_fill_group(['Lo', 'Lt', 'Lm'])
-        self._add_first_in_second('.', 'i')
-        self._add_first_in_second('.', 'j')
         self._create_and_fill_group(['Ll'])
         self._create_and_fill_group(['Lu'])
 
@@ -513,6 +513,16 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
                     self._add_first_in_second(piece, glyph)
             self.svg.append(new_group)
 
+    def _sort_by_category(self):
+        self._create_and_fill_group(['Co', 'Cf', 'Cc', 'Cs'], [], [], also_composed=True)
+        self._create_and_fill_group(['Mn', 'Mc', 'Me'], [], [], also_composed=True)
+        self._create_and_fill_group(['Nd', 'Nl', 'No'], [], [], also_composed=True)
+        self._create_and_fill_group(['Sc', 'Sm', 'Sk', 'So'], [], [], also_composed=True)
+        self._create_and_fill_group(['Pc', 'Pd', 'Ps', 'Pi', 'Po', 'Pe', 'Pf'], [], [], also_composed=True)
+        self._create_and_fill_group(['Lo', 'Lt', 'Lm'], [], [], also_composed=True)
+        self._create_and_fill_group(['Ll'], [], [], also_composed=True)
+        self._create_and_fill_group(['Lu'], [], [], also_composed=True)
+
     def effect(self):
         self.svg = self.document.getroot()
         self._update_glyphs_layers()
@@ -555,3 +565,6 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
 
         if self.options.action == 'duplicate':
             self._look_for_duplicate(verbose=True)
+
+        if self.options.action == 'sort':
+            self._sort_by_category()
