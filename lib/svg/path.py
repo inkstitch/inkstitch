@@ -85,6 +85,19 @@ def get_correction_transform(node: inkex.BaseElement, child=False) -> str:
     return str(transform)
 
 
+def line_strings_to_coordinate_lists(line_strings):
+    try:
+        # This lets us accept a MultiLineString or a list.
+        line_strings = line_strings.geoms
+    except AttributeError:
+        pass
+
+    if line_strings is None:
+        return None
+
+    return [list(ls.coords) for ls in line_strings]
+
+
 def line_strings_to_csp(line_strings):
     try:
         # This lets us accept a MultiLineString or a list.

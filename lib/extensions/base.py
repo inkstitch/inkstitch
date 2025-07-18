@@ -7,7 +7,7 @@ import os
 
 import inkex
 
-from ..elements.utils import iterate_nodes, nodes_to_elements
+from ..elements import iterate_nodes, nodes_to_elements
 from ..i18n import _
 from ..metadata import InkStitchMetadata
 from ..svg import generate_unique_id

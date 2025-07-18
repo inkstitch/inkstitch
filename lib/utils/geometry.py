@@ -5,6 +5,7 @@
 
 import math
 import typing
+from itertools import groupby
 
 import numpy
 from shapely.geometry import (GeometryCollection, LinearRing, LineString,
@@ -240,6 +241,11 @@ def offset_points(pos1, pos2, offset_px, offset_proportional):
     out2 = pos2 + (pos2 - pos1).unit() * float(offset_b)
 
     return out1, out2
+
+
+def remove_duplicate_points(path):
+    path = [[round(coord, 4) for coord in point] for point in path]
+    return [point for point, repeats in groupby(path)]
 
 
 class Point:

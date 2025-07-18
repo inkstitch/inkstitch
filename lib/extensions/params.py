@@ -24,6 +24,7 @@ from ..gui import PresetsPanel, PreviewRenderer, WarningPanel
 from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
 from ..stitch_plan import stitch_groups_to_stitch_plan
+from ..svg import PIXELS_PER_MM
 from ..svg.tags import EMBROIDERABLE_TAGS
 from ..utils import get_resource_dir
 from ..utils.param import ParamOption
@@ -724,9 +725,9 @@ class Params(InkstitchExtension):
                 if element.fill_color is not None and not element.get_style("fill-opacity", 1) == "0":
                     classes.append(FillStitch)
                 if element.stroke_color is not None:
-                    classes.append(Stroke)
-                    if len(element.path) > 1:
+                    if len(element.path) > 1 or element.stroke_width >= 0.3 * PIXELS_PER_MM:
                         classes.append(SatinColumn)
+                    classes.append(Stroke)
         return classes
 
     def get_nodes_by_class(self):

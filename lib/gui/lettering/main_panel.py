@@ -10,7 +10,7 @@ import inkex
 import wx
 import wx.adv
 
-from ...elements.utils import iterate_nodes, nodes_to_elements
+from ...elements import iterate_nodes, nodes_to_elements
 from ...i18n import _
 from ...lettering import FontError, get_font_list
 from ...lettering.categories import FONT_CATEGORIES

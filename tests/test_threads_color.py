@@ -2,7 +2,7 @@ from inkex import LinearGradient, Rectangle, Stop, SvgDocumentElement
 from inkex.tester.svg import svg
 
 from lib.elements import EmbroideryElement
-from lib.elements.utils import node_to_elements
+from lib.elements import node_to_elements
 from lib.threads.color import ThreadColor
 
 
