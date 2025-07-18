@@ -14693,8 +14693,11 @@
            d="m 232.76821,36.535493 7.78293,9.195153 m -13.8159,-5.891387 c 1.2449,3.782576 2.48979,7.565152 3.73469,11.347728 m -4.02197,-7.038464 c 3.68681,-1.484302 7.37363,-2.968604 11.06044,-4.452906"
            inkstitch:satin_column="True"
            sodipodi:nodetypes="cccccc"
-           inkstitch:max_stitch_length_mm="6"
-           inkstitch:random_split_jitter_percent="20" />
+           inkstitch:max_stitch_length_mm="5"
+           inkstitch:random_split_jitter_percent="20"
+           inkstitch:reverse_rails="none"
+           inkstitch:split_method="staggered"
+           inkstitch:split_staggers="7" />
         <path
            d="m 227.398,41.8534 -2.34,0.9306"
            style="fill:none;stroke:#b27624;stroke-width:1;stroke-dasharray:3, 1"
@@ -14720,8 +14723,11 @@
            d="m 224.04759,34.509178 c -2.2871,-3.068224 -4.57421,-6.136449 -6.86131,-9.204673 m 12.58337,5.387676 -4.00854,-11.179306 m 3.91915,6.861408 c -3.54341,1.799978 -7.08683,3.599956 -10.63024,5.399934"
            inkstitch:satin_column="True"
            sodipodi:nodetypes="cccccc"
-           inkstitch:max_stitch_length_mm="6"
-           inkstitch:random_split_jitter_percent="20" />
+           inkstitch:max_stitch_length_mm="5"
+           inkstitch:random_split_jitter_percent="20"
+           inkstitch:reverse_rails="none"
+           inkstitch:split_method="staggered"
+           inkstitch:split_staggers="7" />
       </g>
     </g>
   </g>
