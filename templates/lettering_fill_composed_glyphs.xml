@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Fill Composed Glyphs</name>
+    <id>org.{{ id_inkstitch }}.lettering_fill_composed_glyphs</id>
+    <param name="extension" type="string" gui-hidden="true">lettering_fill_composed_glyphs</param>
+
+    <param name="tabs" type="notebook">
+        <page name="options" gui-text="Options">
+            
+            <param name="action" type= "optiongroup" gui-text="Choose action"
+                gui-dscription ="choose action"
+                appearance ="combo">
+                <option value="step1"> Step 1 : Comma and period and hyphen</option>
+                <option value="step2"> Step 2 : Undecomposable Letters </option>
+                <option value="step3"> Step 3 : Digits, Symbols  and Opening Punctuation</option>
+                <option value="step4"> Step 4 : Closing Punctuation </option>
+                <option value="step5"> Step 5 : First diacritics </option>
+                <option value="step6"> Step 6 : All diacritics </option>
+                <option value="step7"> Step 7 : Two pieces Letters </option>
+                <option value="step8"> Step 8 : Other Composed Letters </option>
+                <option value="duplicate"> Check duplicate GlyphLayers </option>
+                <option value="sort"> Sort by Category </option>
+                   </param>
+        
+        </page>
+
+        <page name="info" gui-text="Help">
+          <label>This extension helps the font digitizer to organize its work in steps to maximize reuse of already digitized letters.</label>
+        <spacer />
+        <label>Get more information on our website</label>
+        <label appearance="url">https://inkstitch.org/docs/font-tools/#fill_composed_glyphs</label>
+        </page>
+
+    </param>
+
+    <effect>
+        <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/font_management.svg</icon>
+        <menu-tip>Help with composed glyphs like é,ç or ï</menu-tip>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                  <submenu name="Font Management" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

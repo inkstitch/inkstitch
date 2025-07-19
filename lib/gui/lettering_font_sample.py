@@ -15,6 +15,7 @@ from ..i18n import _
 from ..lettering import get_font_list
 from ..marker import ensure_marker_symbols
 from ..utils.settings import global_settings
+from ..svg.tags import (SODIPODI_INSENSITIVE)
 
 
 class FontSampleFrame(wx.Frame):
@@ -111,6 +112,8 @@ class FontSampleFrame(wx.Frame):
 
         max_line_width = global_settings['font_sampling_max_line_width']
         self.max_line_width.SetValue(max_line_width)
+        scale_spinner = global_settings['font_sampling_scale_spinner']
+        self.scale_spinner.SetValue(scale_spinner)
 
         self.set_font_list()
         select_font = global_settings['last_font']
@@ -169,8 +172,10 @@ class FontSampleFrame(wx.Frame):
         # parameters
         line_width = self.max_line_width.GetValue()
         direction = self.direction.GetValue()
+        scale_spinner = self.scale_spinner.GetValue()
 
         global_settings['font_sampling_max_line_width'] = line_width
+        global_settings['font_sampling_scale_spinner'] = scale_spinner
 
         self.font._load_variants()
         self.font_variant = self.font.variants[direction]
@@ -186,24 +191,23 @@ class FontSampleFrame(wx.Frame):
             if glyph_obj is None:
                 outdated = True
                 continue
+            if SODIPODI_INSENSITIVE not in glyph_obj.node.attrib:
+                if last_glyph is not None:
+                    width_to_add = (glyph_obj.min_x - self.font.kerning_pairs.get(f'{last_glyph} {glyph}', 0)) * scale
+                    width += width_to_add
+                try:
+                    width_to_add = (self.font.horiz_adv_x.get(glyph, self.font.horiz_adv_x_default) - glyph_obj.min_x) * scale
+                except TypeError:
+                    width_to_add = glyph_obj.width
 
-            if last_glyph is not None:
-                width_to_add = (glyph_obj.min_x - self.font.kerning_pairs.get(f'{last_glyph} {glyph}', 0)) * scale
+                if width + width_to_add > line_width:
+                    text += '\n'
+                    width = 0
+                    last_glyph = None
+                else:
+                    last_glyph = glyph
+                text += glyph
                 width += width_to_add
-
-            try:
-                width_to_add = (self.font.horiz_adv_x.get(glyph, self.font.horiz_adv_x_default) - glyph_obj.min_x) * scale
-            except TypeError:
-                width_to_add = glyph_obj.width
-
-            if width + width_to_add > line_width:
-                text += '\n'
-                width = 0
-                last_glyph = None
-            else:
-                last_glyph = glyph
-            text += glyph
-            width += width_to_add
 
         self.out_dated_warning(outdated)
         self._render_text(text)
