@@ -1,6 +1,6 @@
 {
     "name": "Invercelia",
-    "description": "Invercelia is a modern two letters monogram font. Enter two letters to get a simple monogram.  Add an ')' at the end and the monogram is framed with a circle (for instance 'AC)'), add an '(' to start (for instance '(AC)' and your monogram is ready for applique, or  try something like '!AC)' to replace the appliqué by knockdown stitches.",
+    "description": "Invercelia is a modern two letters monogram font. Enter two letters to get a simple monogram.  Add an ')' at the end and the monogram is framed with a circle (for instance 'AC)'), add an '(' to start (for instance '(AC)' and your monogram is ready for applique, or  try something like '!AC)' to replace the appliqué by knockdown stitches.\n\nPlease use exactly two letters,  if you use more, only the first and the last letters will be rendered.",
     "keywords": [
         "applique",
         "display",
@@ -16,7 +16,7 @@
     "min_scale": 0.8,
     "max_scale": 3.0,
     "horiz_adv_x_default": 0,
-    "horiz_adv_x_space": 32,
+    "horiz_adv_x_space": 0.0,
     "units_per_em": 320,
     "horiz_adv_x": {},
     "kerning_pairs": {},
@@ -76,7 +76,8 @@
         "Y.fina",
         "Y.init",
         "Z.fina",
-        "Z.init"
+        "Z.init",
+        "�"
     ],
     "default_variant": "→",
     "text_direction": "ltr",
