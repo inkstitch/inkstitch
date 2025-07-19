@@ -29,6 +29,7 @@ class LetteringForceLockStitches(InkstitchExtension):
         self.arg_parser.add_argument("-i", "--min_distance", type=float, default=1, dest="min_distance")
         self.arg_parser.add_argument("-l", "--last_element", type=inkex.Boolean, dest="last_element")
         self.arg_parser.add_argument("-g", "--last_group_element", type=inkex.Boolean, dest="last_group_element")
+
     def effect(self):
         if self.options.max_distance < self.options.min_distance:
             inkex.errormssg(_("The maximum value is smaller than the minimum value."))
