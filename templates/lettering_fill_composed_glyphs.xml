@@ -28,7 +28,7 @@
           <label>This extension helps the font digitizer to organize its work in steps to maximize reuse of already digitized letters.</label>
         <spacer />
         <label>Get more information on our website</label>
-        <label appearance="url">https://inkstitch.org/docs/troubleshoot/#remove-embroidery-settings</label>
+        <label appearance="url">https://inkstitch.org/docs/font-tools/#fill_composed_glyphs</label>
         </page>
 
     </param>

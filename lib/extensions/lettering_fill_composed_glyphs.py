@@ -1,6 +1,6 @@
 # Authors: see git history
 #
-# Copyright (c) 2010 Authors
+# Copyright (c) 2025 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import unicodedata
 from inkex import NSS, Group, Layer, errormsg
@@ -360,7 +360,7 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
     # contains the already digitized letter. If there is no such corresponding LETTER or SYMBOL, we fill
     # the empty glyph with a letter that uses the accent, so that the font digitizer knows what this
     # diacritics is supposed to look like
-    def _simplyfy_name(self, glyph):
+    def _simplify_name(self, glyph):
         name = unicodedata.name(glyph)
         words = ["DOUBLE", "BELOW", "ABOVE", "INVERTED", "TURNED", "REVERSED"]
         simplified_name = name
@@ -428,7 +428,7 @@ class LetteringFillComposedGlyphs(InkstitchExtension):
     # digitizer can move the simple diacritics to its right position (and then delete the additional letter)
 
     def _find_substitute(self, glyph):
-        simplified_name = self._simplyfy_name(glyph)
+        simplified_name = self._simplify_name(glyph)
         substitute = None
         for candidate in self._all_glyphs:
             if simplified_name.replace(" ", "") == unicodedata.name(candidate).replace(" ", ""):
