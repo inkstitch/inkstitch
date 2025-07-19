@@ -6,7 +6,7 @@
 import inkex
 from shapely.geometry import Point
 
-from ..elements.utils import iterate_nodes, nodes_to_elements
+from ..elements import iterate_nodes, nodes_to_elements
 from ..i18n import _
 from ..marker import has_marker
 from ..svg import PIXELS_PER_MM

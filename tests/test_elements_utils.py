@@ -2,7 +2,7 @@ from inkex import Group, Rectangle, Style
 from inkex.tester import TestCase
 from inkex.tester.svg import svg
 
-from lib.elements import FillStitch, utils
+from lib.elements import FillStitch, nodes_to_elements, iterate_nodes
 
 from .utils import element_count
 
@@ -30,7 +30,7 @@ class ElementsUtilsTest(TestCase):
             "height": "10",
         }))
 
-        elements = utils.nodes_to_elements(utils.iterate_nodes(g))
+        elements = nodes_to_elements(iterate_nodes(g))
         self.assertEqual(len(elements), element_count())
         self.assertEqual(type(elements[0]), FillStitch)
         self.assertEqual(elements[0].node, rect)
@@ -43,7 +43,7 @@ class ElementsUtilsTest(TestCase):
             "height": "10"
         }))
 
-        elements = utils.nodes_to_elements(utils.iterate_nodes(rect))
+        elements = nodes_to_elements(iterate_nodes(rect))
         self.assertEqual(len(elements), element_count())
         self.assertEqual(type(elements[0]), FillStitch)
         self.assertEqual(elements[0].node, rect)
@@ -51,5 +51,5 @@ class ElementsUtilsTest(TestCase):
         # Now make the element hidden: It shouldn't return an element
         rect.style = rect.style + Style({"display": "none"})
 
-        elements = utils.nodes_to_elements(utils.iterate_nodes(rect))
+        elements = nodes_to_elements(iterate_nodes(rect))
         self.assertEqual(len(elements), 0)

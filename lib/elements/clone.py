@@ -76,7 +76,7 @@ class Clone(EmbroideryElement):
 
     def clone_to_elements(self, node: BaseElement) -> List[EmbroideryElement]:
         # Only used in get_cache_key_data, actual embroidery uses nodes_to_elements+iterate_nodes
-        from .utils import node_to_elements
+        from .utils.nodes import node_to_elements
         elements = []
         if node.tag in EMBROIDERABLE_TAGS:
             elements = node_to_elements(node, True)
@@ -141,7 +141,7 @@ class Clone(EmbroideryElement):
         Could possibly be refactored into just a generator - being a context manager is mainly to control the lifecycle of the elements
         that are cloned (again, for testing convenience primarily)
         """
-        from .utils import iterate_nodes, nodes_to_elements
+        from .utils.nodes import iterate_nodes, nodes_to_elements
 
         cloned_nodes = self.resolve_clone()
         try:

@@ -3,27 +3,28 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from typing import List, Optional, Iterable
+from typing import Iterable, List, Optional
 
 from inkex import BaseElement
 from lxml.etree import Comment
 
-from ..commands import is_command, layer_commands
-from ..debug.debug import sew_stack_enabled
-from ..marker import has_marker
-from ..svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS, INKSCAPE_GROUPMODE,
-                        NOT_EMBROIDERABLE_TAGS, SVG_CLIPPATH_TAG, SVG_DEFS_TAG,
-                        SVG_GROUP_TAG, SVG_IMAGE_TAG, SVG_MASK_TAG,
-                        SVG_TEXT_TAG)
-from .clone import Clone, is_clone
-from .element import EmbroideryElement
-from .empty_d_object import EmptyDObject
-from .fill_stitch import FillStitch
-from .image import ImageObject
-from .marker import MarkerObject
-from .satin_column import SatinColumn
-from .stroke import Stroke
-from .text import TextObject
+from ...commands import is_command, layer_commands
+from ...debug.debug import sew_stack_enabled
+from ...marker import has_marker
+from ...svg import PIXELS_PER_MM
+from ...svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS,
+                         INKSCAPE_GROUPMODE, NOT_EMBROIDERABLE_TAGS,
+                         SVG_CLIPPATH_TAG, SVG_DEFS_TAG, SVG_GROUP_TAG,
+                         SVG_IMAGE_TAG, SVG_MASK_TAG, SVG_TEXT_TAG)
+from ..clone import Clone, is_clone
+from ..element import EmbroideryElement
+from ..empty_d_object import EmptyDObject
+from ..fill_stitch import FillStitch
+from ..image import ImageObject
+from ..marker import MarkerObject
+from ..satin_column import SatinColumn
+from ..stroke import Stroke
+from ..text import TextObject
 
 
 def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  # noqa: C901
@@ -42,7 +43,7 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
     elif node.tag in EMBROIDERABLE_TAGS or is_clone(node):
         elements: List[EmbroideryElement] = []
 
-        from ..sew_stack import SewStack
+        from ...sew_stack import SewStack
         sew_stack = SewStack(node)
 
         if not sew_stack.sew_stack_only:
@@ -50,7 +51,7 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
             if element.fill_color is not None and not element.get_style('fill-opacity', 1) == "0":
                 elements.append(FillStitch(node))
             if element.stroke_color is not None:
-                if element.get_boolean_param("satin_column") and len(element.path) > 1:
+                if element.get_boolean_param("satin_column") and (len(element.path) > 1 or element.stroke_width >= 0.3 / PIXELS_PER_MM):
                     elements.append(SatinColumn(node))
                 elif not is_command(element.node):
                     elements.append(Stroke(node))

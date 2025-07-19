@@ -9,7 +9,7 @@ import inkex
 import wx
 import wx.adv
 
-from ...elements.utils import nodes_to_elements
+from ...elements import nodes_to_elements
 from ...exceptions import InkstitchException, format_uncaught_exception
 from ...i18n import _
 from ...stitch_plan import stitch_groups_to_stitch_plan

@@ -11,4 +11,4 @@ from .image import ImageObject
 from .satin_column import SatinColumn
 from .stroke import Stroke
 from .text import TextObject
-from .utils import node_to_elements, nodes_to_elements
+from .utils.nodes import iterate_nodes, node_to_elements, nodes_to_elements

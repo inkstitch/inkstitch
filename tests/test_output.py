@@ -3,7 +3,7 @@ from inkex.tester import TestCase
 from inkex.tester.svg import svg
 
 from lib import output
-from lib.elements.utils import node_to_elements
+from lib.elements import node_to_elements
 from lib.stitch_plan.stitch_plan import stitch_groups_to_stitch_plan
 from lib.svg.tags import INKSTITCH_ATTRIBS
 

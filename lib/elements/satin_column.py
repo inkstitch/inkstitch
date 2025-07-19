@@ -9,7 +9,7 @@ from copy import deepcopy
 from itertools import chain
 
 import numpy as np
-from inkex import paths
+from inkex import Path
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely import set_precision
@@ -20,21 +20,14 @@ from ..i18n import _
 from ..metadata import InkStitchMetadata
 from ..stitch_plan import Stitch, StitchGroup
 from ..stitches import running_stitch
-from ..svg import line_strings_to_csp, point_lists_to_csp
+from ..svg import line_strings_to_coordinate_lists
+from ..svg.styles import get_join_style_args
 from ..utils import Point, cache, cut, cut_multiple, offset_points, prng
 from ..utils.param import ParamOption
 from ..utils.threading import check_stop_flag
 from .element import PIXELS_PER_MM, EmbroideryElement, param
+from .utils.stroke_to_satin import convert_path_to_satin
 from .validation import ValidationError, ValidationWarning
-
-
-class TooFewPathsError(ValidationError):
-    name = _("Too few subpaths")
-    description = _("Satin column: Object has too few subpaths.  A satin column should have at least two subpaths (the rails).")
-    steps_to_solve = [
-        _("* Add another subpath (select two rails and do Path > Combine)"),
-        _("* Convert to running stitch or simple satin (Params extension)")
-    ]
 
 
 class NotStitchableError(ValidationError):
@@ -75,6 +68,15 @@ class NoRungWarning(ValidationWarning):
 class TooManyIntersectionsWarning(ValidationWarning):
     name = _("Rungs intersects too many times")
     description = _("Satin column: A rung intersects a rail more than once.") + " " + rung_message
+
+
+class StrokeSatinWarning(ValidationWarning):
+    name = _("Simple Satin")
+    description = ("If you need more control over the stitch directions within this satin column, convert it to a real satin path")
+    steps_to_solve = [
+        _('* Select the satin path'),
+        _('* Run Extensions > Ink/Stitch > Tools: Satin > Stroke to Satin')
+    ]
 
 
 class TwoRungsWarning(ValidationWarning):
@@ -320,7 +322,7 @@ class SatinColumn(EmbroideryElement):
         elif choice == 'both':
             return True, True
         elif choice == 'automatic':
-            rails = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
+            rails = [shgeo.LineString(rail) for rail in self.rails]
             if len(rails) == 2:
                 # Sample ten points along the rails.  Compare the distance
                 # between corresponding points on both rails with and without
@@ -598,7 +600,7 @@ class SatinColumn(EmbroideryElement):
         # This isn't used for satins at all, but other parts of the code
         # may need to know the general shape of a satin column.
 
-        return shgeo.MultiLineString(self.flattened_rails)
+        return shgeo.MultiLineString(self.line_string_rails)
 
     @property
     @cache
@@ -615,17 +617,21 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @cache
-    def csp(self):
-        paths = self.parse_path()
-        # exclude subpaths which are just a point
-        paths = [path for path in paths if len(self.flatten_subpath(path)) > 1]
+    def filtered_subpaths(self):
+        paths = [path for path in self.paths if len(path) > 1]
+        if len(paths) == 1:
+            style_args = get_join_style_args(self)
+            new_satin = convert_path_to_satin(paths[0], self.stroke_width, style_args)
+            if new_satin:
+                rails, rungs = new_satin
+                paths = list(rails) + list(rungs)
         return paths
 
     @property
     @cache
     def rails(self):
         """The rails in order, as point lists"""
-        rails = [subpath for i, subpath in enumerate(self.csp) if i in self.rail_indices]
+        rails = [subpath for i, subpath in enumerate(self.filtered_subpaths) if i in self.rail_indices]
         if len(rails) == 2 and self.swap_rails:
             return [rails[1], rails[0]]
         else:
@@ -633,9 +639,9 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @cache
-    def flattened_rails(self):
+    def line_string_rails(self):
         """The rails, as LineStrings."""
-        paths = [set_precision(shgeo.LineString(self.flatten_subpath(rail)), 0.00001) for rail in self.rails]
+        paths = [set_precision(shgeo.LineString(rail), 0.00001) for rail in self.rails]
 
         rails_to_reverse = self._get_rails_to_reverse()
         if paths and rails_to_reverse is not None:
@@ -651,8 +657,9 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @cache
-    def flattened_rungs(self):
-        return tuple(shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs)
+    def line_string_rungs(self):
+        """The rungs as LineStrings"""
+        return tuple(shgeo.LineString(rung) for rung in self.rungs)
 
     @property
     @cache
@@ -663,12 +670,12 @@ class SatinColumn(EmbroideryElement):
         rails are expected to have the same number of path nodes.  The path
         nodes, taken in sequential pairs, act in the same way as rungs would.
         """
-        if len(self.csp) == 2:
+        if len(self.filtered_subpaths) == 2:
             # It's an old-style satin column.  To make things easier we'll
             # actually create the implied rungs.
             return self._synthesize_rungs()
         else:
-            return [subpath for i, subpath in enumerate(self.csp) if i not in self.rail_indices]
+            return [subpath for i, subpath in enumerate(self.filtered_subpaths) if i not in self.rail_indices]
 
     @cache
     def _synthesize_rungs(self):
@@ -677,8 +684,7 @@ class SatinColumn(EmbroideryElement):
         equal_length = len(self.rails[0]) == len(self.rails[1])
 
         rails_to_reverse = self._get_rails_to_reverse()
-        for i, rail in enumerate(self.rails):
-            points = self.strip_control_points(rail)
+        for i, points in enumerate(self.rails):
 
             if rails_to_reverse[i]:
                 points = points[::-1]
@@ -699,15 +705,14 @@ class SatinColumn(EmbroideryElement):
             rung = shgeo.LineString((start, end))
             # make it a bit bigger so that it definitely intersects
             rung = shaffinity.scale(rung, 1.1, 1.1).coords
-            rungs.append([[rung[0]] * 3, [rung[1]] * 3])
+            rungs.append(rung)
 
         return rungs
 
     @property
     @cache
     def rail_indices(self):
-        paths = [self.flatten_subpath(subpath) for subpath in self.csp]
-        paths = [shgeo.LineString(path) for path in paths if len(path) > 1]
+        paths = [shgeo.LineString(path) for path in self.filtered_subpaths if len(path) > 1]
         num_paths = len(paths)
 
         # Imagine a satin column as a curvy ladder.
@@ -762,8 +767,8 @@ class SatinColumn(EmbroideryElement):
     def flattened_sections(self):
         """Flatten the rails, cut with the rungs, and return the sections in pairs."""
 
-        rails = list(self.flattened_rails)
-        rungs = self.flattened_rungs
+        rails = list(self.line_string_rails)
+        rungs = list(self.line_string_rungs)
         cut_points = [[], []]
         for rung in rungs:
             intersections = rung.intersection(shgeo.MultiLineString(rails))
@@ -798,27 +803,30 @@ class SatinColumn(EmbroideryElement):
 
         return sections
 
-    def validation_warnings(self):
-        if len(self.csp) == 4:
-            yield TwoRungsWarning(self.flattened_rails[0].interpolate(0.5, normalized=True))
-        elif len(self.csp) == 2:
-            yield NoRungWarning(self.flattened_rails[1].representative_point())
+    def validation_warnings(self):  # noqa: C901
+        paths = self.node.get_path()
+        if any([path.letter == 'Z' for path in paths]):
+            yield ClosedPathWarning(self.line_string_rails[0].coords[0])
+
+        if len(self.paths) == 1:
+            yield StrokeSatinWarning(self.center_line.interpolate(0.5, normalized=True))
+        elif len(self.filtered_subpaths) == 4:
+            yield TwoRungsWarning(self.line_string_rails[0].interpolate(0.5, normalized=True))
+        elif len(self.filtered_subpaths) == 2:
+            yield NoRungWarning(self.line_string_rails[1].representative_point())
             if len(self.rails[0]) != len(self.rails[1]):
-                yield UnequalPointsWarning(self.flattened_rails[0].interpolate(0.5, normalized=True))
-        elif len(self.csp) > 2:
-            for rung in self.flattened_rungs:
-                for rail in self.flattened_rails:
+                yield UnequalPointsWarning(self.line_string_rails[0].interpolate(0.5, normalized=True))
+        elif len(self.filtered_subpaths) > 2:
+            for rung in self.line_string_rungs:
+                for rail in self.line_string_rails:
                     intersection = rung.intersection(rail)
                     if intersection.is_empty:
                         yield DanglingRungWarning(rung.interpolate(0.5, normalized=True))
                     elif not isinstance(intersection, shgeo.Point):
                         yield TooManyIntersectionsWarning(rung.interpolate(0.5, normalized=True))
-        paths = self.node.get_path()
-        if any([path.letter == 'Z' for path in paths]):
-            yield ClosedPathWarning(self.flattened_rails[0].coords[0])
 
     def validation_errors(self):
-        if len(self.flattened_rails) == 0:
+        if len(self.line_string_rails) == 0:
             # Non existing rails can happen due to insane transforms which reduce the size of the
             # satin to zero. The path should still be pointable.
             try:
@@ -826,16 +834,9 @@ class SatinColumn(EmbroideryElement):
             except IndexError:
                 point = (0, 0)
             yield NotStitchableError(point)
-        else:
-            # The node should have exactly two paths with the same number of points - or it should
-            # have two rails and at least one rung
-            if len(self.csp) < 2:
-                yield TooFewPathsError((0, 0))
-            elif len(self.rails) < 2:
-                yield TooFewPathsError(self.flattened_rails[0].representative_point())
 
             if not self.to_stitch_groups():
-                yield NotStitchableError(self.flattened_rails[0].representative_point())
+                yield NotStitchableError(self.line_string_rails[0].representative_point())
 
     def _center_walk_is_odd(self):
         return self.center_walk_underlay and self.center_walk_underlay_repeats % 2 == 1
@@ -843,23 +844,21 @@ class SatinColumn(EmbroideryElement):
     def reverse(self):
         """Return a new SatinColumn like this one but in the opposite direction.
 
-        The path will be flattened and the new satin will contain a new XML
-        node that is not yet in the SVG.
+        The new satin will contain a new XML node that is not yet in the SVG.
         """
-        # flatten the path because you can't just reverse a CSP subpath's elements (I think)
         point_lists = []
 
         for rail in self.rails:
-            point_lists.append(list(reversed(self.flatten_subpath(rail))))
+            point_lists.append(list(reversed(rail)))
 
         for rung in self.rungs:
-            point_lists.append(self.flatten_subpath(rung))
+            point_lists.append(rung)
 
         # If originally there were only two subpaths (no rungs) with same number of points, the rails may now
         # have two rails with different number of points, and still no rungs, let's add one.
 
         if not self.rungs:
-            rails = [shgeo.LineString(reversed(self.flatten_subpath(rail))) for rail in self.rails]
+            rails = [shgeo.LineString(reversed(rail)) for rail in self.rails]
             rails.reverse()
             path_list = rails
 
@@ -871,21 +870,21 @@ class SatinColumn(EmbroideryElement):
             path_list.append(rung)
             return (self._path_list_to_satins(path_list))
 
-        return self._csp_to_satin(point_lists_to_csp(point_lists))
+        return self._coordinates_to_satin(point_lists)
 
     def flip(self):
         """Return a new SatinColumn like this one but with flipped rails.
 
-        The path will be flattened and the new satin will contain a new XML
+        The new satin will contain a new XML
         node that is not yet in the SVG.
         """
-        csp = self.path
+        path = self.filtered_subpaths
 
-        if len(csp) > 1:
+        if len(path) > 1:
             first, second = self.rail_indices
-            csp[first], csp[second] = csp[second], csp[first]
+            path[first], path[second] = path[second], path[first]
 
-        return self._csp_to_satin(csp)
+        return self._coordinates_to_satin(path)
 
     def apply_transform(self):
         """Return a new SatinColumn like this one but with transforms applied.
@@ -894,7 +893,7 @@ class SatinColumn(EmbroideryElement):
         new SatinColumn's node will not be in the SVG document.
         """
 
-        return self._csp_to_satin(self.csp)
+        return self._coordinates_to_satin(self.filtered_subpaths)
 
     def split(self, split_point, cut_points=None):
         """Split a satin into two satins at the specified point
@@ -976,7 +975,7 @@ class SatinColumn(EmbroideryElement):
           rails.  Each element is a list of two rails of type LineString.
         """
 
-        rails = [shgeo.LineString(self.flatten_subpath(rail)) for rail in self.rails]
+        rails = [shgeo.LineString(rail) for rail in self.rails]
 
         path_lists = [[], []]
 
@@ -1009,7 +1008,7 @@ class SatinColumn(EmbroideryElement):
         Each rung is appended to the correct one of the two new satin columns.
         """
 
-        rungs = [shgeo.LineString(self.flatten_subpath(rung)) for rung in self.rungs]
+        rungs = [shgeo.LineString(rung) for rung in self.rungs]
         for path_list in split_rails:
             if path_list is not None:
                 path_list.extend(rung for rung in rungs if path_list[0].intersects(rung) and path_list[1].intersects(rung))
@@ -1059,14 +1058,16 @@ class SatinColumn(EmbroideryElement):
         path_list.append(rung)
 
     def _path_list_to_satins(self, path_list):
-        linestrings = line_strings_to_csp(path_list)
-        if not linestrings:
+        coordinates = line_strings_to_coordinate_lists(path_list)
+        if not coordinates:
             return None
-        return self._csp_to_satin(linestrings)
+        return self._coordinates_to_satin(coordinates)
 
-    def _csp_to_satin(self, csp):
+    def _coordinates_to_satin(self, paths):
         node = deepcopy(self.node)
-        d = paths.CubicSuperPath(csp).to_path()
+        d = ""
+        for path in paths:
+            d += str(Path(path))
         node.set("d", d)
 
         # we've already applied the transform, so get rid of it
@@ -1089,8 +1090,8 @@ class SatinColumn(EmbroideryElement):
         The returned SatinColumn will not be in the SVG document and will have
         its transforms applied.
         """
-        rails = [self.flatten_subpath(rail) for rail in self.rails]
-        other_rails = [satin.flatten_subpath(rail) for rail in satin.rails]
+        rails = self.rails
+        other_rails = satin.rails
 
         if len(rails) != 2 or len(other_rails) != 2:
             # weird non-satin things, give up and don't merge
@@ -1100,8 +1101,8 @@ class SatinColumn(EmbroideryElement):
         rails[0].extend(other_rails[0][1:])
         rails[1].extend(other_rails[1][1:])
 
-        rungs = [self.flatten_subpath(rung) for rung in self.rungs]
-        other_rungs = [satin.flatten_subpath(rung) for rung in satin.rungs]
+        rungs = self.rungs
+        other_rungs = satin.rungs
 
         # add a rung in between the two satins and extend it just a litte to ensure it is crossing the rails
         new_rung = shgeo.LineString([other_rails[0][0], other_rails[1][0]])
@@ -1112,7 +1113,7 @@ class SatinColumn(EmbroideryElement):
 
         rungs = self._get_filtered_rungs(rails, rungs)
 
-        return self._csp_to_satin(point_lists_to_csp(rails + rungs))
+        return self._coordinates_to_satin(line_strings_to_coordinate_lists(rails + rungs))
 
     def _get_filtered_rungs(self, rails, rungs):
         # returns a filtered list of rungs which do intersect the rails exactly twice
@@ -1832,7 +1833,7 @@ class SatinColumn(EmbroideryElement):
     def first_stitch(self):
         if self.start_at_nearest_point:
             return None
-        return shgeo.Point(self.flattened_rails[0].coords[0])
+        return shgeo.Point(self.line_string_rails[0].coords[0])
 
     def start_point(self, last_stitch_group):
         start_point = self._get_command_point('starting_point')
