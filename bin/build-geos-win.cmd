@@ -1,4 +1,10 @@
 @echo off
+
+REM This script builds GEOS for Windows using CMake and Visual Studio.
+REM It assumes that you have CMake, Visual Studio, and 7-Zip installed.
+
+REM TODO: maybe it not used anymore, check if it is used in the project
+
 mkdir %CD%\geos-build
 SET GEOS_INSTALL=%CD%\geos-build
 

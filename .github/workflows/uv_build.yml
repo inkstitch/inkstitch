@@ -1,0 +1,553 @@
+
+# Action description:
+#   https://docs.github.com/en/actions
+
+name: UV Build
+
+# GitHub some selected variables:
+#   GITHUB_EVENT_NAME - the name of the event that triggered the workflow (e.g., push, pull_request, workflow_dispatch, etc.)
+#   GITHUB_REF_TYPE - the type of ref that triggered the workflow (e.g., branch, tag)
+#   GITHUB_REF - what triggered the workflow (e.g., refs/heads/branch_name, refs/tags/v1.0.0, refs/)
+#   GITHUB_REF_NAME - the name of the branch or tag that triggered the workflow (e.g., branch_name, v1.0.0)
+#   GITHUB_SHA - the commit SHA that triggered the workflow
+#   GITHUB_WORKSPACE - the path to the repository on the runner . top level directory of the repository
+
+
+# !!! important:
+#   - A single tag can point to multiple branches, so there isn't a single matching branch for a tag.
+#   - default branch for workflow_dispatch is the default branch of the repository, which is usually 'main' or 'master'.
+#     - may be set gh workflow run -r <branch> <workflow_file>
+#   - variables ${{ xxx }} are parsed by YAML parser, before shell can see it ( eg ${{ $xxx }} is not what you expect).
+
+# on:
+#   GITHUB_EVENT_NAME
+#     GITHUB_REF_TYPE
+on:
+  push: # at least ones must be triggered by a push to be available for manual trigger
+  #   branches-ignore:
+  #     - master
+  #     - main
+
+    tags:         # EVENT_NAME=push              REF_TYPE=tag      REF=refs/tags/build*        REF_NAME=tag_name
+      - build*    # build[optional characters]
+      - v[0-9]+.[0-9]+.[0-9]+*  # v[digits].[digits].[digits][optional characters] (v0.0.0___)
+
+    # branches:   # EVENT_NAME=push              REF_TYPE=branch   REF=refs/heads/branch_name  REF_NAME=branch_name
+    #   - missing/*  # branch pattern **= any number of characters and /, * = any number of characters not including /
+
+  workflow_dispatch:  # manual trigger of the workflow
+    inputs:
+      # input variables for manual run
+      build_type:                   # ref: github.event.inputs.build_type | inputs.build_type
+        description: 'Build type'
+        required: true
+        default: 'dummy'  # default value
+        type: choice  # type of the input, can be number, boolean, string, choice or environment
+        options:
+          - dummy  # just for testing, not used in the workflow
+
+          - linux64
+          - linuxarm64
+
+          - linux32
+          # - linuxarm32
+
+          - windows64
+          # - windowsarm64
+
+          - macx86   # Mac OS x86 - Intel x86_64
+          - macarm64 # Mac OS arm64 - Apple Silicon ARM64
+
+          - all
+
+      verbosity: # ref: github.event.inputs.verbosity
+        description: 'Controls verbosity of the build process (0: ERROR, 1: INFO, 2: DEBUG, 3: TRACE)'
+        required: false # Not mandatory, will have a default value
+        default: '1'    # Default level: 1 (INFO)
+        type: choice # Using string for easier processing of 0/1/2/3
+        options:
+          - '0'  # ERROR
+          - '1'  # INFO
+          - '2'  # DEBUG  & set -x
+          - '3'  # TRACE
+
+      sign:  # ref: github.event.inputs.no_sign overwrite enabled signing see MY_USE_AUTHORIZED_SIGNING
+        description: 'Sign the build if secrets are available.'
+        required: false
+        default: 'false'  # default value
+        type: choice  # type of the input, can be number, boolean, string, choice or environment
+        options:
+          - 'false'  # do not sign the build, even if authorized signing keys are available
+          - 'true'   # use authorized signing keys if secrets available (macOS notarize, Windows SignPath.io)
+
+      break_on:     # ref: github.event.inputs.break_on
+        description: 'Stop the build immediately at a predefined location.'
+        required: true
+        default: 'no'  # default value
+        type: choice  # type of the input, can be number, boolean, string, choice or environment
+        options:
+          - 'no'    # normal build
+          - 'uv'    # stop the build at the uv venv creation step
+          - 'sync'  # stop after uv sync
+
+
+jobs:
+
+  # just info print
+  # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#context-availability
+  dump_contexts_to_log:
+    if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.build_type == 'dummy' }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump environment variables
+        run: printenv | sort    # or just `env` to print all environment variables
+
+      - name: Dump GitHub context (github...)
+        run: echo "${{ toJson(github) }}"
+
+      - name: Dump job context (job...)
+        run: echo "${{ toJson(job) }}"
+
+      - name: Dump steps context (steps...)
+        run: echo "${{ toJson(steps) }}"
+
+      - name: Dump runner context (runner...)
+        run: echo "${{ toJson(runner) }}"
+
+      - name: Dump strategy context (strategy...)
+        run: echo "${{ toJson(strategy) }}"
+
+      - name: Dump matrix context
+        run: echo "${{ toJson(matrix) }}"
+
+
+  # ---------------------------------------------------------------------------------------------
+  # Prepare data
+  # - MY_BUILD_TYPE: type of build
+  # - MY_BREAK_ON: define break stop
+
+  # - MY_TAG_NAME: tag name for the release, or dev-build-branch_name for pre-release
+
+  # - MY_NAME: name of the release (usually the same as tag name, but can be different)
+  # - MY_VERSION: version of the release, e.g. 1.2.3 or 0.0.1-branch_name
+
+  # - MY_USE_AUTHORIZED_SIGNING: true/false - if we use authorized signing keys (Windows SignPath.io, macOS notarize)
+  # - MY_SECRETS_AVAILABLE: true/false - if secrets.INKSTITCH_GPG_KEY is available (if set)
+
+  # - MY_IS_RELEASE_BUILD: true/false - if this is a release build (release on tag vX.X.X) or pre-release build (dev-build-branch_name)
+  # - MY_VERBOSITY_LOG_LEVEL: verbosity level for the build process (0: ERROR, 1: INFO, 2: DEBUG, 3: TRACE)
+
+  sign_policy:
+    runs-on: ubuntu-latest
+    outputs:
+      MY_BUILD_TYPE: ${{ steps.set_vars.outputs.MY_BUILD_TYPE }}
+      MY_BREAK_ON: ${{ steps.set_vars.outputs.MY_BREAK_ON }}
+      MY_VERBOSITY_LOG_LEVEL: ${{ steps.set_vars.outputs.MY_VERBOSITY_LOG_LEVEL }}
+
+      MY_TAG_NAME: ${{ steps.set_vars.outputs.MY_TAG_NAME }}
+      MY_NAME: ${{ steps.set_vars.outputs.MY_NAME }}
+      MY_VERSION: ${{ steps.set_vars.outputs.MY_VERSION }}
+
+      MY_USE_AUTHORIZED_SIGNING: ${{ steps.set_vars.outputs.MY_USE_AUTHORIZED_SIGNING }}
+      MY_SECRETS_AVAILABLE: ${{steps.set_vars.outputs.MY_SECRETS_AVAILABLE}}
+      MY_IS_RELEASE_BUILD: ${{ steps.set_vars.outputs.MY_IS_RELEASE_BUILD }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set sign policy variables
+        id: set_vars
+        shell: bash
+        run: |
+
+          echo "-------------------------------------------------"
+          echo "Set signing policy variables ..."
+          echo secrets.GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # print ***, always set
+
+          echo "-------------------------------------------------"
+
+          # this is just for testing, not needed in real workflow on github (with enough rights)
+          echo "Testing secrets:"
+          echo secrets.INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }} # print *** if available
+
+          echo "------------------------------------------------- inputs json"
+          echo "${{ toJSON(github.event.inputs) }}"
+
+          echo "------------------------------------------------- CI variable"
+          echo "CI: $CI"  # CI is set to true by default in GitHub Actions
+
+          # verbosity level: 0: ERROR, 1: INFO, 2: DEBUG, 3: TRACE
+          MY_VERBOSITY_LOG_LEVEL="${{ github.event.inputs.verbosity }}"
+
+
+          # when triggered by extern script
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+              # If so, use the values from the inputs
+            MY_BUILD_TYPE="${{ github.event.inputs.build_type }}"
+            MY_BREAK_ON="${{ github.event.inputs.break_on }}"
+          else
+            # If not (i.e. it's a push or other event), use the defaults
+            MY_BUILD_TYPE="dummy"     # all | dummy
+            MY_BREAK_ON="no"          # no
+          fi
+
+
+          # -------------------------------------------------
+          # Check if secrets are available and input sign is set to true
+          if [[ -n "${{ secrets.INKSTITCH_GPG_KEY }}" ]]; then
+            MY_SECRETS_AVAILABLE="true"
+
+            # we have limited number of SignPath.io and notarize requests, so use it only for release builds
+            if [[ "${{ github.event.inputs.sign }}" == "true" ]]; then
+              MY_USE_AUTHORIZED_SIGNING="true"  # use authorized signing (win SignPath.io, mac notarize)
+            else
+              MY_USE_AUTHORIZED_SIGNING="false"  # do not use authorized signing
+            fi
+
+          else
+            MY_SECRETS_AVAILABLE="false"
+          fi
+
+          # -------------------------------------------------
+
+          MY_IS_RELEASE_BUILD="false"  # always false (will be changed in UI after tests & signing)
+
+          # setup for push v* tag build
+          if [[ "${GITHUB_EVENT_NAME}" == "push" && \
+                "${GITHUB_REF_TYPE}" == "tag" && \
+                "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
+
+            echo "Build type: push release tag '${GITHUB_REF_NAME}'"
+            MY_TAG_NAME="${GITHUB_REF_NAME}"  # v* tag name
+            MY_VERSION="${MY_TAG_NAME:1}"  # remove 'v' from the tag name, e.g. v1.2.3 -> 1.2.3
+            MY_BUILD_TYPE="dummy"  # overwrite build, let full build be triggered by gh script
+
+          else # all other cases, including branch/tag builds
+
+            # depend on GITHUB_REF_TYPE=branch or tag
+            if [[ "${GITHUB_REF_TYPE}" == "tag" && \
+                  "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+.* ]]; then
+              echo "Build type: tag '${GITHUB_REF_NAME}'"
+              MY_TAG_NAME="${GITHUB_REF_NAME}"  # use tag name as tag
+              MY_VERSION="${MY_TAG_NAME:1}"  # remove 'v' from the tag
+            else
+              echo "Build type: branch '${GITHUB_REF_NAME}'"
+              REF_NAME=$(echo $GITHUB_REF_NAME | tr / -)
+              MY_TAG_NAME="dev-build-${REF_NAME}"  # use branch/tag name as tag, replace / with -
+              MY_VERSION="0.0.1-${REF_NAME}" # set version to 0.0.1-branch_name
+              MY_USE_AUTHORIZED_SIGNING="false"  #  overwrite for normal build (limited count of SignPath.io and notarize)
+            fi
+
+          fi
+
+
+          MY_NAME="${MY_TAG_NAME}" # name of the release (release name), can be anything, but usually it is the same as tag name
+
+
+          echo "------------------------------------------------- echoing variables"
+          echo "MY_BUILD_TYPE=${MY_BUILD_TYPE}"
+          echo "MY_BREAK_ON=${MY_BREAK_ON}"
+          echo "MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL}"
+
+          echo "MY_SECRETS_AVAILABLE=${MY_SECRETS_AVAILABLE}"
+          echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
+          echo "MY_TAG_NAME=${MY_TAG_NAME}"
+          echo "MY_NAME=${MY_NAME}"
+          echo "MY_VERSION=${MY_VERSION}"
+          echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}"
+
+          echo "------------------------------------------------- Exporting variables to GITHUB_OUTPUT"
+          echo "MY_BUILD_TYPE=${MY_BUILD_TYPE}" >> $GITHUB_OUTPUT
+          echo "MY_BREAK_ON=${MY_BREAK_ON}" >> $GITHUB_OUTPUT
+          echo "MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL}" >> $GITHUB_OUTPUT
+
+          echo "MY_SECRETS_AVAILABLE=${MY_SECRETS_AVAILABLE}" >> $GITHUB_OUTPUT
+          echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}" >> $GITHUB_OUTPUT
+          echo "MY_TAG_NAME=${MY_TAG_NAME}" >> $GITHUB_OUTPUT
+          echo "MY_NAME=${MY_NAME}" >> $GITHUB_OUTPUT
+          echo "MY_VERSION=${MY_VERSION}" >> $GITHUB_OUTPUT
+          echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}" >> $GITHUB_OUTPUT
+
+          echo "------------------------------------------------- dump GITHUB_* part of env"
+          env | grep GITHUB_ | sort
+
+  # -----------------------------------------------------
+
+  dummy_build:
+    # this job is just for testing, it creates a dummy file and uploads it as an artifact
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'dummy'
+    runs-on: ubuntu-latest
+    name: Dummy Build
+
+    env:
+      MY_BREAK_ON: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      MY_BUILD_TYPE: ${{ needs.sign_policy.outputs.MY_BUILD_TYPE }}
+      MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}
+      MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}
+      MY_SECRETS_AVAILABLE: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}
+      MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}
+      MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
+      MY_VERBOSITY_LOG_LEVEL: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
+      MY_VERSION: ${{ needs.sign_policy.outputs.MY_VERSION }}
+
+    steps:
+      - name: My variables print
+        run: |
+
+          echo "-------------------------------------------------"
+          echo "MY_* variables:"
+          echo "MY_BREAK_ON: $MY_BREAK_ON"
+          echo "MY_BUILD_TYPE: $MY_BUILD_TYPE"
+          echo "MY_IS_RELEASE_BUILD: $MY_IS_RELEASE_BUILD"
+          echo "MY_NAME: $MY_NAME"
+          echo "MY_SECRETS_AVAILABLE: $MY_SECRETS_AVAILABLE"
+          echo "MY_TAG_NAME: $MY_TAG_NAME"
+          echo "MY_USE_AUTHORIZED_SIGNING: $MY_USE_AUTHORIZED_SIGNING"
+          echo "MY_VERBOSITY_LOG_LEVEL: $MY_VERBOSITY_LOG_LEVEL"
+          echo "MY_VERSION: $MY_VERSION"
+          echo "-------------------------------------------------"
+
+
+      - name: Create artifacts directory
+        run: |
+
+          # Create a directory to store artifacts
+          FILE_NAME="artifacts/dummy-${MY_VERSION}.txt"
+          mkdir -p artifacts
+          echo "This is a dummy file for OS: ${{ runner.os }} and commit: ${{ github.sha }}" > $FILE_NAME
+          echo "Timestamp: $(date)" >> $FILE_NAME
+          # List artifacts directory
+          ls -lR .
+
+      - name: Upload artifacts
+        id: upload_artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-dummy-artifacts  # name of artifact in repository
+          path: artifacts           # path of local dir
+          retention-days: 1         # how long must be kept (default 90 days)
+
+      - name: Artifacts output
+        run: |
+
+          echo "Artifacts output."
+          echo "Artifact id: ${{ steps.upload_artifacts.outputs.artifact-id}}"
+          echo "Artifact URL: ${{ steps.upload_artifacts.outputs.artifact-url }}"
+          echo "Artifact digest: ${{ steps.upload_artifacts.outputs.artifact-digest }}"
+
+
+  # --------------------------------------------------------------------------------------------------------
+  # !!! reusable call must be on job level & .yml must be on top level of .github/workflows/
+
+  linux64_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'linux64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Linux64
+    uses: ./.github/workflows/uv_build_linux64.yml # call reusable workflow
+    with:
+      version: ${{ needs.sign_policy.outputs.MY_VERSION }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
+      secrets_available: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}
+      use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
+    secrets:
+      INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
+
+
+  linuxarm64_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'linuxarm64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Linux-arm64
+    uses: ./.github/workflows/uv_build_linuxarm64.yml # call reusable workflow
+    with:
+      version: ${{ needs.sign_policy.outputs.MY_VERSION }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
+      secrets_available: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}
+      use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
+    secrets:
+      INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
+
+
+  linux32_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'linux32' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Linux32
+    uses: ./.github/workflows/uv_build_linux32.yml # call reusable workflow
+    with:
+      version: ${{ needs.sign_policy.outputs.MY_VERSION }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
+      secrets_available: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}
+      use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
+    secrets:
+      INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY}}
+
+  windows64_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'windows64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Windows64
+    uses: ./.github/workflows/uv_build_windows64.yml # call reusable workflow
+    with:
+      version: ${{ needs.sign_policy.outputs.MY_VERSION }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
+      secrets_available: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}
+      use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
+    secrets:
+      SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN}}
+
+
+  macx86_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'macx86' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Mac x86-64
+    uses: ./.github/workflows/uv_build_macx86.yml # call reusable workflow
+    with:
+      version: ${{ needs.sign_policy.outputs.MY_VERSION }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
+      secrets_available: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}
+      use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
+    secrets:
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+      KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+      INKSTITCH_NOTARIZE_AC: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+      INKSTITCH_NOTARIZE_PASS: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
+
+  macarm64_build:
+    needs: sign_policy # this job depends on the sign_policy job
+    if: >
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'macarm64' ||
+      needs.sign_policy.outputs.MY_BUILD_TYPE == 'all'
+    name: Build Mac arm64
+    uses: ./.github/workflows/uv_build_macarm64.yml # call reusable workflow
+    with:
+      version: ${{ needs.sign_policy.outputs.MY_VERSION }}
+      break_on: ${{ needs.sign_policy.outputs.MY_BREAK_ON }}
+      verbosity_log_level: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
+      secrets_available: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}
+      use_authorized_signing: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
+    secrets:
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+      KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+      INKSTITCH_NOTARIZE_AC: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+      INKSTITCH_NOTARIZE_PASS: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
+
+  #---------------------------------------------------------------------------------------------------------------
+
+
+  release:
+    runs-on: ubuntu-latest
+    needs:  # wait for all builds to finish
+      - sign_policy
+      - dummy_build
+      - linux32_build
+      - linux64_build
+      - linuxarm64_build
+      - windows64_build
+      - macx86_build
+      - macarm64_build
+
+    name: Create Release
+
+    env:
+      MY_IS_RELEASE_BUILD: ${{ needs.sign_policy.outputs.MY_IS_RELEASE_BUILD }}
+      MY_NAME: ${{ needs.sign_policy.outputs.MY_NAME }}
+      MY_SECRETS_AVAILABLE: ${{ needs.sign_policy.outputs.MY_SECRETS_AVAILABLE }}
+      MY_TAG_NAME: ${{ needs.sign_policy.outputs.MY_TAG_NAME }}
+      MY_USE_AUTHORIZED_SIGNING: ${{ needs.sign_policy.outputs.MY_USE_AUTHORIZED_SIGNING }}
+      MY_VERBOSITY_LOG_LEVEL: ${{ needs.sign_policy.outputs.MY_VERBOSITY_LOG_LEVEL }}
+      MY_VERSION: ${{ needs.sign_policy.outputs.MY_VERSION }}
+
+    if: always() # run this job always, even if previous jobs failed on exit 1
+    steps:
+      # each job starts with empty directory
+      - name: Download artifacts from build job
+        uses: actions/download-artifact@v4    # https://github.com/actions/download-artifact
+        with:
+        #   name: .. # default is all artifacts
+          path: artifacts  # download to artifacts directory
+
+      - name: List whole git root
+        shell: bash
+        run: |
+
+          echo "------------------------------------------------- pwd"
+          echo "pwd: $(pwd)"
+          echo "------------------------------------------------- ls -lR"
+          echo "Listing whole git root:"
+          ls -lR .
+          echo "Current directory: $(pwd)"
+
+          echo "------------------------------------------------- release vars"
+          echo "Release variables:"
+          echo "GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}"  # print ***, always set
+          echo "MY_IS_RELEASE_BUILD=${MY_IS_RELEASE_BUILD}"
+          echo "MY_NAME=${MY_NAME}"
+          echo "MY_SECRETS_AVAILABLE=${MY_SECRETS_AVAILABLE}"
+          echo "MY_TAG_NAME=${MY_TAG_NAME}"
+          echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
+          echo "MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL}"
+          echo "MY_VERSION=${MY_VERSION}"
+          echo "-------------------------------------------------"
+
+          # invert MY_IS_RELEASE_BUILD to use it as a pre-release flag
+          if [[ "${MY_IS_RELEASE_BUILD}" == "true" ]]; then
+            MY_PRERELEASE_FLAG="false"  # release build, not pre-release
+          else
+            MY_PRERELEASE_FLAG="true"   # pre-release build
+          fi
+          echo "MY_PRERELEASE_FLAG=${MY_PRERELEASE_FLAG}"
+          # export it to the environment for the next steps
+          echo "MY_PRERELEASE_FLAG=${MY_PRERELEASE_FLAG}" >> $GITHUB_ENV
+          echo "-------------------------------------------------"
+
+
+      # !!! - release is given by tag name, so it must be set before this step
+      # !!! - old files in the release repository are not removed between runs, so you need to delete them manually if needed
+      - name: Create release
+        id: create_release
+        uses: softprops/action-gh-release@v1  # https://github.com/softprops/action-gh-release
+        with:
+          # token: ${{ secrets.GITHUB_TOKEN }}  # always set, used to create release, implicitly passed by the action
+          tag_name: ${{ env.MY_TAG_NAME }}
+          name: ${{ env.MY_NAME }}  # usually the same as tag name, but can be different
+          prerelease: ${{ env.MY_PRERELEASE_FLAG }} # pre-release (true) / release (false) - can be manually changed in the UI
+          draft: false
+          body: |
+            This is a release for:
+            - Branch/Tag based build (GITHUB_REF_TYPE): ${{ github.ref_type }}
+            - SHA: ${{ github.sha }}
+            - Tag name (MY_TAG_NAME): ${{ env.MY_TAG_NAME }}
+            - Name (MY_NAME): ${{ env.MY_NAME }}
+            - Version (MY_VERSION): ${{ env.MY_VERSION }}
+
+            - Secrets (MY_SECRETS_AVAILABLE): ${{ env.MY_SECRETS_AVAILABLE}}
+            - Use authorized signing (MY_USE_AUTHORIZED_SIGNING): ${{ env.MY_USE_AUTHORIZED_SIGNING }}
+            - Release build (MY_IS_RELEASE_BUILD): ${{ env.MY_IS_RELEASE_BUILD }}
+            - Pre-release (MY_PRERELEASE_FLAG): ${{ env.MY_PRERELEASE_FLAG }}
+            - Verbosity log level (MY_VERBOSITY_LOG_LEVEL): ${{ env.MY_VERBOSITY_LOG_LEVEL }}
+          files: |
+            artifacts/**/*
