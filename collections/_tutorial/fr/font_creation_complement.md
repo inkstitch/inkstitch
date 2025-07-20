@@ -70,14 +70,14 @@ Si vous disposez déjà d'un ensemble de fichiers de broderie (un fichier par le
 
 ### A partir d'une fonte ttf ou otf
 
-Dans ce cas vous pouvez utilisez [FontForge](https://fontforge.org/en-US/) pour créer un fichier de fonte svg, puis utiliser Ink/Stitch pour transformer ce fichier en fichiers de calques de glyphe.
+Dans ce cas vous pouvez utilisez [FontForge](https://fontforge.org/en-US/) pour créer un fichier de fonte svg, puis utiliser Ink/Stitch pour transformer ce fichier en fichier de calques de glyphe.
 #### Création du fichier de fonte svg avec FontForge
 Les fontes ttf ou otf comportent généralement un très grand nombre de glyphes et vous ne souhaitez probablement pas tous les convertir en broderie. 
 
 Une première étape va donc être la
 ##### Sélection des glyphes 
 On va effacer de la fonte tous les glyphes que l'on ne souhaite pas convertir en broderie
-Ouvrez le fichier de fonte dans à l'aide de fontforge pour obtenir :
+Ouvrez le fichier de fonte à l'aide de fontforge pour obtenir :
 
 ![FontForge](/assets/images/tutorials/font_creation/open_fontforge.png)
 
@@ -95,7 +95,7 @@ Lorsque, d'une manière ou d'une autre, l'on a effacés tous les glyphes indési
 ![UnicodeIntervals](/assets/images/tutorials/font_creation/generer_fonte.png)
 
 ##### Transformation du fichier de fonte svg en fichier de calques de glyphes
-Ouvrir le fichier svg ainsi créé dans Inkscape. Il a l'air complètement vide, c'est normal !!
+Ouvrir le fichier svg ainsi créé dans Inkscape. Il a l'air complètement vide, c'est normal !! 
 <span color=blue>
 
 `Extensions > Ink/Stitch > Gestion des polices > Convertir la fonte svg en calques de glyphes`
@@ -108,18 +108,18 @@ Pour  cela choisissez un caractère de référence dont vous savez qu'il est dan
 
 Cliquez sur `Appliquer`.
 
-Votre fichier est alors converti en fichier  de calques de glyphes, vous avez maintenant de nombreux calques.
+Votre fichier est alors converti en fichier de calques de glyphes, vous avez maintenant de nombreux calques.
 
 En plus du guide "baseline", d'autres guides ont été posés. Il est judicieux de les vérouiller pour travailler ultérieurement dans ce fichier sans les déplacer.
 
-Les chemins de ce fichier ont leurs couleurs de contour et de remplissage indeterminées.
+Les chemins de ce fichier ont leurs couleurs de contour et de remplissage indéterminées.
 Sélectionnez tous les chemins dans tous les calques (si vos préférences inkscape n'autorisent pas la sélection d'objets cachés vous devrez montrer tous les objets pour cela), et donnez leur une couleur de remplissage, dites aussi qu'il n'y a pas de couleur de contour (ou donnez une couleur de contour et dites qu'il n'y a pas de couleur de fond). Vous pouvez masquez à nouveau les calques.
 
 Si vous souhaitez créer une police qui se brode de gauche à droite, enregistrez ce fichier sous le nom →.svg dans un nouveau dossier situé dans votre dossier personnel de fontes.
 
 
 ## Création du fichier font.json
-Une fois que le fichier →.svg  existe,  il est possible de créer le fichier font.json associé.
+Une fois que le fichier →.svg  existe,  il est possible de créer le fichier font.json associé. Il est recommandé de faire cette opération dès maintenant.
 
 `Extensions > Ink/Stitch > Gestion des polices > Génerer JSON....`
 
@@ -131,11 +131,11 @@ La documentation est [là](/fr/docs/font-tools/#edit-json).
 Cette section est là pour les curieux, elle peut être passée au moins dans un premier temps.
 #### Où sont les informations
 En particulier, ce fichier font.json contient les informations de crénage,extraites du fichier →.svg lors de la création du fichier font.json.  Elles vont très fortement contribuer au positionnement des glyphes les uns par rapports aux autres. Pour décider de la position d'un glyphe,  ink/stitch utilise trois types  d'information:
-- déplacer horizontalement ou verticalement un glyphe dans son calque influence sur sa position (sauf le tout premier caractère d'une ligne de texte qui lui est systématiquement à gauche toute sur la page (du moins avec un alignement des lignes à gauche. Le déplacement vertical est toujours pris en compte)
+- déplacer horizontalement ou verticalement un glyphe dans son calque influence sur sa position (sauf le tout premier caractère d'une ligne de texte qui lui est systématiquement à gauche toute sur la page (du moins avec un alignement des lignes à gauche). Le déplacement vertical est toujours pris en compte.
 - des informations dites "horiz_adv_x". Il y a une valeur par défaut, et on peut associer une valeur à chaque glyphe. Le fichier de fonte généré par FontForge comporte cette information pour tous les glyphes qui n'ont pas été effacés.  Cette information est intégrée au fichier font.json lors de sa création.
 - des informations dites "hkern". Celles ci ne sont pas associées à des glyphes mais à des couples de glyphes (pas tous). Le fichier de fonte généré par FontForge comporte cette informations pour tous les couples de  glyphes pour lesquels le concepteur de la fonte ttf ou otf a donné cette information, que les glyphes aient été effacés ou non. Cette information est intégrée au fichier font.json lors de sa création.
 #### Schématiquement,  ça fonctionne comment ?
-Ink/stitch décompose un texte en ligne, une ligne en mots et un mot en glyphe.
+Ink/stitch décompose un texte en ligne, une ligne en mots et un mot en glyphes.
 
 Supposons que l'on veuille broder le mot Test
 On suppose un alignement à gauche, et on parle ici de la position sur l'horizontale. L'extrémité gauche de la page est en x=0
@@ -143,10 +143,10 @@ On suppose un alignement à gauche, et on parle ici de la position sur l'horizon
 - En début de ligne,  le curseur est à 0, le premier caractère "T" est dessiné en démarrant en x =0
 - avant de broder la suite, le curseur est
   * avancé de la valeur horiz_adv_x  associée à T  (la sienne si elle existe, sinon la valeur par défaut)
-  * si le dessin du e, commence un peu avant le bord gauche de la page, on recule le curseur d'autant, si il commence après cela augmente le curseur
+  * si le dessin du e, commence un peu avant le bord gauche de la page, on recule le curseur d'autant, si il commence après cela avance le curseur
   * si il y a une valeur hkern pour la paire "Te", on décale d'autant (une valeur positive diminue l’écart, une valeur négative l'augmente)
 
- - et ainsi de suite pour toutes les lettres du mots
+   ....et ainsi de suite pour toutes les lettres du mots
 
 
 
@@ -158,7 +158,7 @@ Si vous avez créer ces deux fichiers et qu'ils sont dans un dossier de votre do
 
 Vous pouvez aussi utiliser 
 
-`Extensions > Ink/Stitch > Gestion des polices > Test de police` pour voir l'ensemble des glyphes des votre police. [Voir la documentation](/fr/docs/font-tools/#font-sampling)
+`Extensions > Ink/Stitch > Gestion des polices > Test de police` pour voir l'ensemble des glyphes des votre police. [Voir la documentation](/fr/docs/font-tools/#font-sampling). A tout instant, Test de police vous permettra de voir tous les glyphes non vérouillés de votre fichier de calques de glyphes
 
 :thinking: A partir d'ici c'est incomplet et dans le désordre. 
 ## Passer à une fonte réellemment brodable
@@ -197,7 +197,7 @@ Remarque : il existe de très rares polices "singleline" svg qui donnent directe
 Les fontes en colonnes satins  sont en souvent celles qui prennent le plus de temps. Plusieurs outils s'offrent maintenant à nous pour transformer les remplissages en satin. Rien de totalement automatique ici, il faut intervenir sur chaque calque : 
 - l'extension Extensions > Inkstitch > Outils Satin : Remplissage en Satin est probablement le plus rapide. Lorsque la forme de la lettre est très tarabiscotée, ou lorsqu'on maitrise mal l'outil (mais au bout de quelques lettres, vous allez vous améliorer)  on peut commencer par découper la lettres en plusieurs morceaux plus faciles à gerer, à l'aide de l'outil  de construction de forme (tracer quelques chemins là ou vous voulez découper)
 - chacune des méthodes de construction de colonne satin d'Innk/Stitch peut convenir, à vous de choisir.
-- attention à la position des points d'arrêt, sur une pointe de satin ils sont particulièrement visible. A vous de faire en sorte qu'une colonne satin qui est suivie d'un saut ne termine pas sur une de ses extrémité
+- attention à la position des points d'arrêt, sur une pointe de satin ils sont particulièrement visibles. A vous de faire en sorte qu'une colonne satin qui est suivie d'un saut ne termine pas sur une de ses extrémités. 
 
 ### La question des sauts de fil et des commandes de coupe
 Faut il ajouter des commandes de coupe ? 
@@ -236,7 +236,7 @@ Si l'on souhaite que le résultat du lettrage puisse être trié selon les coule
 ## limites de l'outil de lettrage
 on ne peut pas (encore) utiliser toutes les fonctionalités d'ink/stitch dans les fichiers de calques,par exemple  les clones, les effets de chemins  ne sontpas férées correctement par le lettrage
 on ne peut pas (encore) écrire une police  pour toutes les langues du monde, en particulier aujourd'hui, seules les variantes contextuelles de l'alphabet arabe sont reconnues
-actuellement lors ce qu'il y a plusieurs fichiers de calqus de glyphes dans  un fichier fleche.svt,  la  gestion de la liste des glyphes se fait mal.
+actuellement lors ce qu'il y a plusieurs fichiers de calques de glyphes dans  un fichier fleche.svg,  la  gestion de la liste des glyphes se fait mal.
 
 ## les petits plus 
 il est possible d'avoir des calques  multiglyphes, pas seulement  pour les ligatures 
