@@ -10,7 +10,7 @@ from ..elements import iterate_nodes, nodes_to_elements
 from ..i18n import _
 from ..marker import has_marker
 from ..svg import PIXELS_PER_MM
-from ..svg.tags import EMBROIDERABLE_TAGS
+from ..svg.tags import EMBROIDERABLE_TAGS, SVG_GROUP_TAG
 from .base import InkstitchExtension
 
 
@@ -28,6 +28,7 @@ class LetteringForceLockStitches(InkstitchExtension):
         self.arg_parser.add_argument("-a", "--max_distance", type=float, default=3, dest="max_distance")
         self.arg_parser.add_argument("-i", "--min_distance", type=float, default=1, dest="min_distance")
         self.arg_parser.add_argument("-l", "--last_element", type=inkex.Boolean, dest="last_element")
+        self.arg_parser.add_argument("-g", "--last_group_element", type=inkex.Boolean, dest="last_group_element")
 
     def effect(self):
         if self.options.max_distance < self.options.min_distance:
@@ -43,6 +44,8 @@ class LetteringForceLockStitches(InkstitchExtension):
             # Set glyph layers to be visible. We don't want them to be ignored by self.elements
             self._update_layer_visibility('inline')
         for layer in glyph_layers:
+            if uses_glyph_layers and self.options.last_group_element:
+                self._set_force_attribute_on_last_group_elements(layer)
             if uses_glyph_layers and self.options.last_element:
                 self._set_force_attribute_on_last_elements(layer)
             if self.options.distance:
@@ -51,6 +54,11 @@ class LetteringForceLockStitches(InkstitchExtension):
         if uses_glyph_layers:
             # unhide glyph layers
             self._update_layer_visibility('none')
+
+    def _set_force_attribute_on_last_group_elements(self, layer):
+        group_nodes = list(layer.iterdescendants(SVG_GROUP_TAG))
+        for group in group_nodes:
+            self._set_force_attribute_on_last_elements(group)
 
     def _set_force_attribute_on_last_elements(self, layer):
         # find the last path that does not carry a marker or belongs to a visual command and add a trim there
