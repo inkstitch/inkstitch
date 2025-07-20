@@ -1831,7 +1831,7 @@ class SatinColumn(EmbroideryElement):
 
     @property
     def first_stitch(self):
-        if self.start_at_nearest_point:
+        if not self.rails or self.start_at_nearest_point:
             return None
         return shgeo.Point(self.line_string_rails[0].coords[0])
 
