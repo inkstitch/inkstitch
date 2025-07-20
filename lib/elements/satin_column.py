@@ -835,8 +835,8 @@ class SatinColumn(EmbroideryElement):
                 point = (0, 0)
             yield NotStitchableError(point)
 
-            if not self.to_stitch_groups():
-                yield NotStitchableError(self.line_string_rails[0].representative_point())
+        elif not self.to_stitch_groups() and self.line_string_rails:
+            yield NotStitchableError(self.line_string_rails[0].representative_point())
 
     def _center_walk_is_odd(self):
         return self.center_walk_underlay and self.center_walk_underlay_repeats % 2 == 1
@@ -1831,7 +1831,7 @@ class SatinColumn(EmbroideryElement):
 
     @property
     def first_stitch(self):
-        if self.start_at_nearest_point:
+        if not self.rails or self.start_at_nearest_point:
             return None
         return shgeo.Point(self.line_string_rails[0].coords[0])
 
