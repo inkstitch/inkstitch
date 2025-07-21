@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-### Used by: build.uml linux32 build
+### Used by: build.yml linux32 build
 ### TODO: check - maybe it will not be used any more in uv build
 
 set -e
