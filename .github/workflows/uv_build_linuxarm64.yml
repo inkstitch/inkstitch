@@ -128,11 +128,6 @@ jobs:
             exit 1
           fi
 
-          # echo "-------------------------------------- bin/uv/generate pyproject.toml"
-          # bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
-
-
-
 
           echo "-------------------------------------- pyproject.toml"
           cat pyproject.toml
