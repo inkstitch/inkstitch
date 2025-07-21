@@ -24,27 +24,32 @@ template_path = os.path.join(_top_path, "templates")
 # Setup the Jinja2 environment for building INX files.
 # BUILD_DIST - only set when creating distribution packages
 def build_environment():
-    env = Environment(
-        loader=FileSystemLoader(template_path),
-        autoescape=True,
-        extensions=['jinja2.ext.i18n']
-    )
+    env = Environment(loader=FileSystemLoader(template_path),
+                      autoescape=True,
+                      extensions=['jinja2.ext.i18n'])
 
     if "BUILD_DIST" in os.environ:
         # building a ZIP release, with inkstitch packaged as a binary
         # Command tag and icons path
         if sys.platform == "win32":
-            env.globals["command_tag"] = '<command location="inx">../bin/inkstitch.exe</command>'
+            env.globals[
+                "command_tag"] = '<command location="inx">../bin/inkstitch.exe</command>'
             env.globals["icon_path"] = '../bin/icons/'
         elif sys.platform == "darwin":
-            env.globals["command_tag"] = '<command location="inx">../../MacOS/inkstitch</command>'
+            env.globals[
+                "command_tag"] = '<command location="inx">../../MacOS/inkstitch</command>'
             env.globals["icon_path"] = '../icons/'
         else:
-            env.globals["command_tag"] = '<command location="inx">../bin/inkstitch</command>'
+            env.globals[
+                "command_tag"] = '<command location="inx">../bin/inkstitch</command>'
             env.globals["icon_path"] = '../bin/icons/'
     else:
         # user is running inkstitch.py directly as a developer from the source tree
-        env.globals["command_tag"] = '<command location="inx" interpreter="python">../inkstitch.py</command>'
+        # env.globals["command_tag"] = '<command location="inx" interpreter="python">../inkstitch.py</command>'
+        # use wrappers
+        env.globals[
+            "command_tag"] = '<command location="inx">../inkstitch.sh</command>'
+
         env.globals["icon_path"] = '../icons/'
     return env
 
