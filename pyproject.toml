@@ -12,8 +12,10 @@ readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
     ### *** PyEmbroidery dependency (create package on the fly) ***
-    "pyembroidery @ git+https://github.com/inkstitch/pyembroidery",
+    #  "pyembroidery @ git+https://github.com/inkstitch/pyembroidery",
 
+    # TODO: last commit with pyembroidery name, change after pystitch will be included in inkstitch code
+    "pyembroidery @ git+https://github.com/inkstitch/pystitch@13e94dbfc4a3b7de93ce2e771bf8ccf22e3551cb",
 
     ### wxPython:
     ### - "uv pip install wxpython @ https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.3-cp311-cp311-linux_x86_64.whl"
