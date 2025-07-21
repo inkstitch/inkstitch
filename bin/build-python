@@ -89,7 +89,7 @@ if [ "$BUILD" = "osx" -o "$BUILD" = "windows" ]; then
 fi
 
 # Build the application with PyInstaller
-python -m PyInstaller $pyinstaller_args inkstitch.py;
+python -m PyInstaller $pyinstaller_args inkstitch.py
 
 
 # Move dist/inkstitch/*  to  dist/inkstitch/bin
