@@ -96,12 +96,12 @@ distlocal:
 
 manual:                  # now this is alias for make inx
 	@echo "This target is deprecated. Use 'make inx' instead."
-	make inx
+	$(MAKE) inx
 
 # Ensure BUILD_DIST is NOT set when calling from source tree, to prevent generation of distribution INX files (see lib/inx/utils.py).
 .PHONY: inx
 inx: version locales     # before running this target, run version and locales
-	python bin/generate-inx-files;
+	uvr bin/generate-inx-files;
 
 # see action: .github/workflows/translations.yml and https://translate.inkstitch.org
 .PHONY: messages.po
