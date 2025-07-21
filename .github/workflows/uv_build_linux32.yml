@@ -217,7 +217,6 @@ jobs:
           uv python install 311  # install python 3.11 see cache
           uv python list
           uv python pin --managed-python 311  # pin to uv managed python
-          # uv python pin --un-managed-python 311  # use system python
           uv venv  # create a virtual environment with the pinned python version
 
           echo "-------------------------------------- activate virtual environment"
@@ -230,9 +229,6 @@ jobs:
             echo "Stopping on request $MY_BREAK_ON"
             exit 1
           fi
-
-          # echo "-------------------------------------- bin/uv/generate pyproject.toml"
-          # bin/uv/generate_pyproject.sh # generate pyproject.toml from uv config
 
 
           echo "-------------------------------------- pyproject.toml"
