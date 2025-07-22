@@ -8,10 +8,11 @@ set -e
 set -x
 
 # options:
-#   build_type  - OS architecture
-#   verbosity   - log level 0 - error, 1 - info, 2 - debug  3 - trace
-#   sign        - authorized sign fow windows and notarize for mac
-#   break_on    - break on uv, sync or no
+#   build_type  - [branch_name|v*]OS architecture
+#   verbosity   - [0-3] log level 0 - error, 1 - info, 2 - debug  3 - trace
+#   sign        - [true|false] authorized sign fow windows and notarize for mac
+#   break_on    - [no|uv|sync] break on uv, sync or no
+
 
 WF=uv_build.yml
 
