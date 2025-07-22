@@ -113,7 +113,7 @@ jobs:
         shell: bash
         run: |  # working directory is the root of the inkstitch repo
 
-          echo "-------------------------------------- uvr tool venv"
+          echo "-------------------------------------- install uvr"
           uv tool install --from git+https://github.com/karnigen/uvr uvr
 
           echo "------------------------------ uv python list"

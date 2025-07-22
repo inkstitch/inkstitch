@@ -101,7 +101,10 @@ jobs:
 
           echo "secrets.SIGNPATH_API_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN }}"
 
-          echo "------------------------------ uv python list"
+          echo "-------------------------------------- install uvr"
+          uv tool install --from git+https://github.com/karnigen/uvr uvr
+
+          echo "-------------------------------------- uv python list"
           uv python install 311  # install python 3.11 see cache
           uv python list
           uv python pin 311  # pin to local python version
