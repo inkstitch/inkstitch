@@ -47,8 +47,13 @@ def build_environment():
         # user is running inkstitch.py directly as a developer from the source tree
         # env.globals["command_tag"] = '<command location="inx" interpreter="python">../inkstitch.py</command>'
         # use wrappers
-        env.globals[
-            "command_tag"] = '<command location="inx">../inkstitch.sh</command>'
+        if sys.platform == "win32":
+            # assuming user run inkscape.com (not inkscape.exe) from the command line
+            env.globals[
+                "command_tag"] = '<command location="inx">../inkstitch.bat</command>'
+        else:
+            env.globals[
+                "command_tag"] = '<command location="inx">../inkstitch.sh</command>'
 
         env.globals["icon_path"] = '../icons/'
     return env
