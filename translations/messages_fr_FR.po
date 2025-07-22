@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-07-21 02:03+0000\n"
-"PO-Revision-Date: 2025-07-21 02:03\n"
+"PO-Revision-Date: 2025-07-22 01:57\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -203,7 +203,9 @@ msgstr "Chopin Script est une police manuscrite en colonne satin. Chaque satin a
 msgid "Enter 3 letters to get a circular three letters monogram. You can add a frame, by adding one of the following :(){,[];.<>\n"
 "For instance enter {ABC.\n"
 "Please use exactly 3 letters, no less, no more, or you could get some unexpected result."
-msgstr ""
+msgstr "Entrez trois lettres pour obtenir un monogramme circulaire. Vous pouvez ajouter un cadre en ajoutant un de ces caractères :(){,[];.<>\n"
+"Par exemple, entrez {ABC.\n"
+"Merci d'utiliser exactement trois lettres, ni plus, ni moins, vous pourriez obtenir un résultat inattendu."
 
 #. description of font in fonts/cogs_KOR
 #: inkstitch-fonts-metadata.py:72
@@ -369,7 +371,7 @@ msgstr "Masego est une police sans empattement."
 #: inkstitch-fonts-metadata.py:136
 msgid "Invercelia is a modern two letters monogram font. Enter two letters to get a simple monogram.  Add an ')' at the end and the monogram is framed with a circle (for instance 'AC)'), add an '(' to start (for instance '(AC)' and your monogram is ready for applique, or  try something like '!AC)' to replace the appliqué by knockdown stitches.\n\n"
 "Please use exactly two letters,  if you use more, only the first and the last letters will be rendered."
-msgstr ""
+msgstr "Invercelia est une fonte moderne de monogrammes à deux lettres. Entrez deux lettres pour obtenir juste un monogramme. Ajoutez une \")\" à la fin et le monogramme sera encadré par un cercle (par exemple, entrez \"AC)\"). Ajoutez une \"(\" au début et votre monogramme est prêt pour un appliqué, ou essayez \"!AC)\" pour remplacer l'appliqué par des points couchants."
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:138
@@ -464,12 +466,12 @@ msgstr "Namskout tartan est une police en remplissage tartan. Elle contient 43 g
 #. description of font in fonts/neon
 #: inkstitch-fonts-metadata.py:174
 msgid "Satin font. Each letter or accent is a single satin."
-msgstr ""
+msgstr "Fonte en colonne satin, chaque lettre ou accent est constitué d'un unique satin."
 
 #. description of font in fonts/neon_blinking
 #: inkstitch-fonts-metadata.py:176
 msgid "Bean stitch font."
-msgstr ""
+msgstr "Fonte en points droits avec répétition alternée 1, 3."
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:178
@@ -7065,7 +7067,7 @@ msgstr "Ajouter un point d'arrêt forcé au dernier élément de chaque glyphe"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:21
 msgid "Add forced lock stitches to the last element of each group"
-msgstr ""
+msgstr "Ajouter l'attribut \"force lock stitches\" (forcer des points d'arrêt) au dernier élément de chaque groupe"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:24
 msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
