@@ -12,6 +12,26 @@ Ink/Stitch supports displaying text in the user's preferred language in the foll
 
 Future work will add translations for project documentation (such as this file) and the <a href="https://inkstitch.org/">Ink/Stitch website</a>.
 
+
+Gettext Localization Workflow
+-----------------------------
+
+Key Steps:
+
+* **Mark Strings**:
+  - Developers wrap translatable text in code (e.g., _("Hello")).
+* **Extract Template** (xgettext):
+  - xgettext scans code, extracts marked strings into a .pot (Portable Object Template) file.
+* **Translate Strings** (msginit / Translators):
+  - Translators use the .pot to create language-specific .po (Portable Object) files (e.g., en_US.po, fr.po)
+    and fill in translations. These are human-readable.
+* **Compile Translations** (msgfmt):
+  - msgfmt compiles human-readable .po files into machine-readable, binary .mo (Machine Object)
+    files. The .mo files are placed in the appropriate locale directory (e.g., locales/en_US/LC_MESSAGES/)
+* **Use Translations** (Application):
+  - The application automatically selects the correct .mo file based on the user's language settings.
+
+
 Help wanted!
 -----------
 
