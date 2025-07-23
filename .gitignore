@@ -38,7 +38,7 @@ logs/
 /profile*
 
 # uv & pyproject.toml
-uv_pkg_update.sh
+uv_setup.sh
 .python-version
 uv.lock
 # pyproject.toml
