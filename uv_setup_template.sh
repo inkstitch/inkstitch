@@ -2,8 +2,8 @@
 
 ### !!! - before running this script, install uv and the tools: see bin/uv/tools_install.sh
 ### !!! - copy this to your local 
-###       > `cp uv_pkg_update_template.sh copy uv_pkg_update.sh`
-### !!! - run `./uv_pkg_update.sh` in the root of your project
+###       > `cp uv_setup_template.sh copy uv_setup.sh`
+### !!! - run `./uv_setup.sh` in the root of your project
 
 ### set python version, create .python-version file
 uv python pin 311

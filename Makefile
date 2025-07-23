@@ -26,6 +26,7 @@
 #   - linux32 common for 32-bit Linux and variants
 #   - windows common for Windows and variants
 
+VENV_DIR := .venv
 
 # OS detection
 OS := $(shell uname)
@@ -69,6 +70,8 @@ help:
 	@echo "  build-python   - build using PyInstaller (requires BUILD variable)"
 	@echo "  dist-debug     - build distribution archives (*.deb, *.rpm ...) without call PyInstaller"
 	@echo "  version        - generate ./VERSION file"
+	@echo "  venv           - ensure that the virtual environment is set up"
+	@echo "  manual         - deprecated, use 'make inx' instead"
 	@echo ""
 	@echo "  locales        - generate translation files from ./translation/*.po to ./locales/"
 	@echo "  messages.po    - generate messages.po from inx files and babel"
@@ -100,7 +103,7 @@ manual:                  # now this is alias for make inx
 
 # Ensure BUILD_DIST is NOT set when calling from source tree, to prevent generation of distribution INX files (see lib/inx/utils.py).
 .PHONY: inx
-inx: version locales     # before running this target, run version and locales
+inx: venv version locales     # before running this target, run version and locales
 	uvr bin/generate-inx-files;
 
 # see action: .github/workflows/translations.yml and https://translate.inkstitch.org
@@ -141,6 +144,15 @@ locales:
 .PHONY: version
 version:
 	bash bin/generate-version-file
+
+# ensure that the virtual environment is set up
+# but only if the uv_setup.sh script exists - to allow other python setups
+.PHONY: venv
+venv:
+	@if [ ! -d "$(VENV_DIR)" ] && [ -f "./uv_setup.sh" ] ; then \
+			echo "Setting up virtual environment..." ; \
+			./uv_setup.sh ; \
+	fi
 
 ### --------------------------------------------------------------
 # commands
