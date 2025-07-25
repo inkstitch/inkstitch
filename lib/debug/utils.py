@@ -64,10 +64,14 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict):
         # cmd line arguments for debugging and profiling
         f.write(bash_parser())  # parse cmd line arguments: -d -p
 
-        f.write(f'# python version: {sys.version}\n')   # python version
+        f.write('# PYTHON\n')
+        f.write(f'#   VERSION: {sys.version}\n')   # python version
+        f.write(f'#   EXECUTABLE: {sys.executable}\n')  # python executable
 
         myargs = " ".join(sys.argv[1:])
-        f.write(f'# script: {sys.argv[0]}  arguments: {myargs}\n')  # script name and arguments
+        f.write('# SCRIPT\n')
+        f.write(f'#   PATH: {sys.argv[0]}\n')
+        f.write(f'#   ARGS:  {myargs}\n')  # script name and arguments
 
         # environment PATH
         f.write('# PATH:\n')
@@ -76,7 +80,7 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict):
         #     f.write(f'#   {p}\n')
 
         # python module path
-        f.write('# python sys.path:\n')
+        f.write('# PYTHON sys.path:\n')
         for p in sys.path:
             f.write(f'#   {p}\n')
 
@@ -85,14 +89,16 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict):
         for p in os.environ.get('PYTHONPATH', '').split(os.pathsep):  # PYTHONPATH to list
             f.write(f'#   {p}\n')
 
-        f.write(f'# copy {svg_file} to {bash_svg}\n#\n')
+        f.write('# COPY input svg file:\n')
+        f.write(f'#   copy {svg_file} to {bash_svg}\n#\n')
         shutil.copy(svg_file, debug_script_dir / bash_svg)  # copy file to bash_svg
         myargs = myargs.replace(str(svg_file), str(bash_svg))  # replace file name with bash_svg
 
         # see void Extension::set_environment() in inkscape/src/extension/extension.cpp
         f.write('# Export inkscape environment variables:\n')
         notexported = ['SELF_CALL']  # if an extension calls inkscape itself
-        exported = ['INKEX_GETTEXT_DOMAIN', 'INKEX_GETTEXT_DIRECTORY',
+        exported = ['INKSCAPE_COMMAND',
+                    'INKEX_GETTEXT_DOMAIN', 'INKEX_GETTEXT_DIRECTORY',
                     'INKSCAPE_PROFILE_DIR', 'DOCUMENT_PATH', 'PYTHONPATH']
         for k in notexported:
             if k in os.environ:
@@ -100,12 +106,14 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict):
         for k in exported:
             if k in os.environ:
                 f.write(f'export {k}="{os.environ[k]}"\n')
+            else:
+                f.write(f'#   export {k} - not set\n')
 
         f.write('# signal inkstitch.py that we are running from offline script\n')
         f.write('export INKSTITCH_OFFLINE_SCRIPT="True"\n')
 
-        f.write('# call inkstitch\n')
-        f.write(f'python3 inkstitch.py {myargs}\n')
+        f.write('# uvr (activate virtual python) and call inkstitch\n')
+        f.write(f'uvr inkstitch.py {myargs}\n')  # uvr activate python virtual environment, if available
     bash_file.chmod(0o0755)  # make file executable, hopefully ignored on Windows
 
 
