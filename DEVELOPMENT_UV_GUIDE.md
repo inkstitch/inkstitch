@@ -55,6 +55,8 @@
     ln -s ~/inkstitch_git/my_dir
     ```
 
+    **Note:** Currently there is no need to use `python-interpreter="/path/to/python"` in `preferences.xml`, because we are using virtual Python environment.
+
 -----
 
 ## Windows
@@ -92,6 +94,7 @@ These instructions assume you're using **Chocolatey** as your package manager, *
       * Homepage: [https://gitforwindows.org](https://gitforwindows.org)
       * Install: `choco install git`
       * Uninstall: `choco uninstall git`
+      * **Note:** It's best to avoid the Git client provided by MSYS2 due to its ongoing integration challenges with Windows.
 
   * **MSYS2**
 
@@ -107,7 +110,7 @@ These instructions assume you're using **Chocolatey** as your package manager, *
 
   * **Ink/Stitch**
 
-      * Select your Ink/Stitch working directory (e.g., `C:\Users\$USER\Documents\inkstitch_git`).
+      * Select your Ink/Stitch working directory (e.g., `C:\Users\%USERNAME%\Documents\inkstitch_git`).
       * Run `cmd.exe`:
         ```bash
         git clone https://github.com/inkstitch/inkstitch.git
@@ -125,13 +128,14 @@ These instructions assume you're using **Chocolatey** as your package manager, *
       * From an **Admin CMD** prompt: `mklink "C:\MyScripts\ucrt.bat" "C:\Users\%USERNAME%\Documents\inkstitch_git\my_dir\bin\msys2\ucrt.bat"`
       * Alternatively, use **Multi Commander**: `Tools` -\> `File Links` -\> `Create Links` -\> `Symlink`.
   * Update your registry using the file `bin/msys2/ucrt.reg` from your Ink/Stitch directory.
+  * Optionally you can also symlink `pw.bat` as alias for **Powershell**.
 
 ### Set Up PATHs
 
   * **Windows PATH** (for `cmd.exe` and `PowerShell`):
 
       * Edit your system's `PATH` environment variable to include these directories:
-          * `C:\MyScripts` (for `ucrt.bat`)
+          * `C:\MyScripts` (for `ucrt.bat`, `pw.bat`)
           * `C:\ProgramData\chocolatey\bin` (for `choco`, `uv`)
           * `C:\Program Files\Git\cmd` (for `git`)
           * `C:\Users\$USER\.local\bin` (for `uv`, `uvr`)
@@ -146,13 +150,15 @@ These instructions assume you're using **Chocolatey** as your package manager, *
         export PATH="/c/ProgramData/chocolatey/bin:$PATH"
         export PATH="/c/Users/$USER/.local/bin:$PATH"
         ```
+        **Note:** Be aware that uninstalling MSYS2 will remove any custom configurations in bashrc.
 
 ### Install `make` within MSYS2
 
   * Activate the **UCRT64** environment by running `ucrt`.
   * Check if `UCRT64` is active: `echo $MSYSTEM` should output `UCRT64`.
   * Install **`make`** within `msys2` using Pacman:
-      * `pacman -S make`
+    * `pacman -S make`
+  * **Note:** For better compatibility and security, it's recommended to avoid old or unmaintained Windows versions of make.
 
 ### Activate Ink/Stitch in Inkscape
 
@@ -170,13 +176,15 @@ These instructions assume you're using **Chocolatey** as your package manager, *
 
   * From `C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions`:
 
-      * As administrator, run `cmd.exe` and create a symbolic link:
+      * As **administrator**, run `cmd.exe` and create a symbolic link:
           * `mklink /D C:\Users\%USERNAME%\AppData\Roaming\inkscape\extensions\my_dir C:\Users\%USERNAME%\Documents\inkstitch_git\my_dir`
       * Alternatively, use **Multi Commander**: `Tools` -\> `File Links` -\> `Create Links` -\> `Symlink`.
 
-  * Run `Inkscape`.
+    **Note:** Currently there is no need to use `python-interpreter="/path/to/python"` in `preferences.xml`, because we are using virtual Python environment.
 
-### Periodically Update System
+  * For developer-level execution of **Inkscape**, open PowerShell (see `pw.bat` for setup). Use `inkscape.com your.svg` specifically to capture and view **Inkscape's** console output, as `inkscape.exe` may not display it.
+
+### Periodically Update Subsystems
 
   * **Chocolatey packages:**
 
@@ -192,4 +200,50 @@ These instructions assume you're using **Chocolatey** as your package manager, *
 
       * Run `cmd.exe`.
       * `uv tool upgrade --all`
+
+
+
+You've got a great base here! It's clear what you're trying to convey. I'll refine the language to make it sound more natural and professional for English documentation, while maintaining your technical points.
+
+---
+
+
+---
+Okay, that's a perfect clarification of the `PATH` behavior, which is a common point of confusion. It concisely explains why a direct call achieves the same isolation as activation.
+
+Here's the updated "Offline Debugging" section with that refined note:
+
+---
+
+# Offline Debugging
+
+You can activate offline debugging across all systems (Linux, macOS, and Windows).
+
+**Steps:**
+
+* Copy `DEBUG_template.toml` to `DEBUG.toml`, if you haven't already.
+* Enable `create_bash_script = true` in `DEBUG.toml`.
+    * Once you finish any InkStitch extension command in Inkscape, it will create a `debug_inkstitch.sh` script in the InkStitch working directory.
+    * When you execute `debug_inkstitch.sh`:
+        * First, the entire environment will be restored to match how Inkscape runs the command.
+        * Next, the Python virtual environment will be activated.
+        * Finally, `inkstitch.py` will execute with all its original arguments.
+        * **Note:** On Windows, run `debug_inkstitch.sh` from the UCRT64 environment (use `ucrt`).
+
+* **Debugger Preparation:**
+    * Select your debugger's `debug_type` in `DEBUG.toml`.
+    * Enable debugging by setting `debug_enable` to `true` or by using the `-d` argument for `debug_inkstitch.sh` (otherwise, `debug_type` will be `None`).
+
+* **For Interactive Debugging (e.g., PyCharm, PyDev):**
+    * Activate the **Python virtual environment**.
+        * If your debugger doesn't support direct virtual environment activation, set the path to the Python interpreter directly.
+        * **Important Note:** Activating a virtual environment simply prepends the path to your Python interpreter (within the virtual environment) to your system's `PATH` variable (e.g., `activate` == `/your/python_path:$PATH`). A direct call to `/your/python_path/python` achieves the same effect as running Python with a modified `PATH`, ensuring your desired Python is found first.
+    * Set up all environment variables (copy them from `debug_inkstitch.sh` to your debugger's configuration).
+    * Run your interactive debugger.
+
+* **For Attached Debugging (e.g., VS Code):** This method is much simpler.
+    * Just run `debug_inkstitch.sh`.
+    * Attach to the script using your debugger (see `lib/debug/debugger.py` for how to set up remote debugging in VS Code).
+
+---
 
