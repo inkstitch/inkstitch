@@ -68,41 +68,50 @@ These instructions assume you're using **Chocolatey** as your package manager, *
   * **Chocolatey (choco)** - Package manager
 
       * Homepage: [https://chocolatey.org/](https://chocolatey.org/)
-      * Install: `Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))`
+      * To install: `Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))`
       * **Note:** Always use **Admin PowerShell** to install packages with `choco`.
+
 
   * **Multi Commander**
 
       * Homepage: [https://multicommander.com/](https://multicommander.com/)
       * This is optional but greatly simplifies creating symlinks.
-      * Install: `choco install multicommander`
+      * To install: `choco install multicommander`
+
+  *  **VS Code**
+
+      * Homepage: [https://code.visualstudio.com](https://code.visualstudio.com)
+      * **VS Code** is an optional but highly versatile and widely used editor.
+      * To install: `choco install vscode`
+
+
 
   * **`uv`** - Python package and project manager
 
       * Homepage: [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv)
-      * Install: `choco install uv`
+      * To install: `choco install uv`
 
   * **`uvr`** - Run scripts in a virtual environment
 
       * Homepage: [https://github.com/karnigen/uvr](https://github.com/karnigen/uvr)
-      * Install: `uv tool install --from git+https://github.com/karnigen/uvr uvr`
+      * To install: `uv tool install --from git+https://github.com/karnigen/uvr uvr`
 
   * **Git**
 
       * Homepage: [https://gitforwindows.org](https://gitforwindows.org)
-      * Install: `choco install git`
+      * To install: `choco install git`
       * **Note:** It's best to avoid the Git client provided by MSYS2 due to its ongoing integration challenges with Windows.
 
   * **MSYS2**
 
       * Homepage: [https://www.msys2.org/](https://www.msys2.org/)
-      * Install: `choco install msys2` (This will install it to `C:\tools\msys64` by default.)
-      * Uninstall: `choco uninstall msys2`
+      * To install: `choco install msys2` (This will install it to `C:\tools\msys64` by default.)
+      * To uninstall: `choco uninstall msys2`
           * **Be careful when linking or creating a junction to your directories within the MSYS2 subsystem**, as uninstalling MSYS2 may recursively delete them.
 
   * **Inkscape**
 
-      * Install: `choco install inkscape`
+      * To install: `choco install inkscape`
 
   * **Ink/Stitch**
 
