@@ -40,11 +40,11 @@
     ```
 
   * **Set up Ink/Stitch (from `my_dir`):**
-
     ```bash
+    # Edit uv_setup.sh
     cp uv_setup_template.sh uv_setup.sh
     ./uv_setup.sh
-    # Create .inx files
+    # Create .inx files (automatically calls uv_setup.sh if needed)
     make inx
     ```
 
@@ -76,13 +76,11 @@ These instructions assume you're using **Chocolatey** as your package manager, *
       * Homepage: [https://multicommander.com/](https://multicommander.com/)
       * This is optional but greatly simplifies creating symlinks.
       * Install: `choco install multicommander`
-      * Uninstall: `choco uninstall multicommander`
 
   * **`uv`** - Python package and project manager
 
       * Homepage: [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv)
       * Install: `choco install uv`
-      * Uninstall: `choco uninstall uv`
 
   * **`uvr`** - Run scripts in a virtual environment
 
@@ -93,7 +91,6 @@ These instructions assume you're using **Chocolatey** as your package manager, *
 
       * Homepage: [https://gitforwindows.org](https://gitforwindows.org)
       * Install: `choco install git`
-      * Uninstall: `choco uninstall git`
       * **Note:** It's best to avoid the Git client provided by MSYS2 due to its ongoing integration challenges with Windows.
 
   * **MSYS2**
@@ -106,7 +103,6 @@ These instructions assume you're using **Chocolatey** as your package manager, *
   * **Inkscape**
 
       * Install: `choco install inkscape`
-      * Uninstall: `choco uninstall inkscape`
 
   * **Ink/Stitch**
 
@@ -139,7 +135,7 @@ These instructions assume you're using **Chocolatey** as your package manager, *
           * `C:\MyScripts` (for `ucrt.bat`, `pw.bat`)
           * `C:\ProgramData\chocolatey\bin` (for `choco`, `uv`)
           * `C:\Program Files\Git\cmd` (for `git`)
-          * `C:\Users\%USERNAME%\.local\bin` (for `uv`, `uvr`)
+          * `C:\Users\%USERNAME%\.local\bin` (for `uvr`)
           * `C:\tools\msys64\usr\bin` (for `bash`, `make`, etc.)
           * `C:\Program Files\Inkscape\bin` (for `inkscape.com`)
 
@@ -203,16 +199,6 @@ These instructions assume you're using **Chocolatey** as your package manager, *
       * `uv tool upgrade --all`
 
 
-
-You've got a great base here! It's clear what you're trying to convey. I'll refine the language to make it sound more natural and professional for English documentation, while maintaining your technical points.
-
----
-
-
----
-Okay, that's a perfect clarification of the `PATH` behavior, which is a common point of confusion. It concisely explains why a direct call achieves the same isolation as activation.
-
-Here's the updated "Offline Debugging" section with that refined note:
 
 ---
 
