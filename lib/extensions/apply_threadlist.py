@@ -10,7 +10,7 @@ from typing import List, Optional
 
 import inkex
 
-import pyembroidery
+import pystitch
 
 from ..i18n import _
 from ..svg.tags import INKSTITCH_ATTRIBS
@@ -105,7 +105,7 @@ class ApplyThreadlist(InkstitchExtension):
 
     def parse_color_format(self, path: str) -> List[List[Optional[str]]]:
         colors = []
-        threads = pyembroidery.read(path).threadlist
+        threads = pystitch.read(path).threadlist
         for color in threads:
             if color.description is not None and color.description.startswith("Cut"):
                 # there is a maximum of 4 needles, we can simply take the last element from the description string

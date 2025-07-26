@@ -9,7 +9,7 @@ from html import escape
 
 import inkex
 
-import pyembroidery
+import pystitch
 
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, render_stitch_plan
@@ -20,23 +20,23 @@ from .stitch_plan import StitchPlan
 
 def generate_stitch_plan(embroidery_file, import_commands="symbols"):  # noqa: C901
     validate_file_path(embroidery_file)
-    pattern = pyembroidery.read(embroidery_file)
+    pattern = pystitch.read(embroidery_file)
     stitch_plan = StitchPlan()
     color_block = None
 
     for raw_stitches, thread in pattern.get_as_colorblocks():
         color_block = stitch_plan.new_color_block(thread)
         for x, y, command in raw_stitches:
-            if command == pyembroidery.STITCH:
+            if command == pystitch.STITCH:
                 color_block.add_stitch(Stitch(x * PIXELS_PER_MM / 10.0, y * PIXELS_PER_MM / 10.0))
             if len(color_block) > 0:
-                if import_commands == "none" and command in [pyembroidery.TRIM, pyembroidery.STOP]:
+                if import_commands == "none" and command in [pystitch.TRIM, pystitch.STOP]:
                     # Importing commands is not wanted:
                     # start a new color block without inserting the command
                     color_block = stitch_plan.new_color_block(thread)
-                elif command == pyembroidery.TRIM:
+                elif command == pystitch.TRIM:
                     color_block.add_stitch(trim=True)
-                elif command == pyembroidery.STOP:
+                elif command == pystitch.STOP:
                     color_block.add_stitch(stop=True)
                     color_block = stitch_plan.new_color_block(thread)
 
