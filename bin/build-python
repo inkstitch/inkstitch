@@ -1,23 +1,56 @@
 #!/bin/bash
 
+### This script builds the Ink/Stitch application using PyInstaller.
+
 set -e
+MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:-1}  # Default level is 1 (INFO)
+if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
+    set -x
+fi
+
+# set PyInstaller logging level based on MY_VERBOSITY_LOG_LEVEL
+case "$MY_VERBOSITY_LOG_LEVEL" in
+    0) MY_PYINSTALLER_LOG_LEVEL="ERROR" ;;
+    1) MY_PYINSTALLER_LOG_LEVEL="INFO"  ;;
+    2) MY_PYINSTALLER_LOG_LEVEL="DEBUG" ;;
+    3) MY_PYINSTALLER_LOG_LEVEL="TRACE" ;;
+    *) MY_PYINSTALLER_LOG_LEVEL="INFO" # Fallback for unknown values
+esac
+
+echo "------------------------------------------------- build-python.sh"
+
+if [[ -z "$BUILD" ]]; then
+  echo "Error: BUILD variable is not set."
+  exit 1
+fi
+
 info_year=$( date "+%Y" )
 ARCH="$(uname -m)"
+
+
+echo "MY_SECRETS_AVAILABLE=${MY_SECRETS_AVAILABLE}"
+echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
+
+echo "BUILD=${BUILD}"
+echo "ARCH=${ARCH}"
+echo "VERSION=${VERSION}"  # may be set by the Makefile otherwise empty ??? why
+
 # PyInstaller v6.x rearranges folder configuration causing broken builds, This re-enables old onedir layout.
 pyinstaller_args+="--contents-directory . "
 
-# output useful debugging info that helps us trace library dependency issues
-pyinstaller_args+="--log-level DEBUG "
+# - DEBUG: output useful debugging info that helps us trace library dependency issues
+pyinstaller_args+="--log-level $MY_PYINSTALLER_LOG_LEVEL "
 
 # Setting up pyinstaller arguments for each OS.
 # This adds bundle identifier in reverse DSN format for macos
 if [ "$BUILD" = "osx" ]; then
     pyinstaller_args+="--osx-bundle-identifier org.inkstitch.app "
     pyinstaller_args+="-i images/inkstitch/mac/inkstitch.icns "
-    if [[ -z ${GITHUB_REF} ]]; then
-        echo "Dev or Local Build"
-    else
+    if [[ "${MY_SECRETS_AVAILABLE}" == "true" ]]; then
+        echo "Using authorized signing keys for (macOS)."
         bash bin/import-macos-keys
+    else
+        echo "Not using authorized signing keys. Likely a Dev or Local Build."
     fi
 elif [ "$BUILD" = "linux" ]; then
     pyinstaller_args+="--hidden-import gi.repository.Gtk "
@@ -28,6 +61,8 @@ elif [ "$BUILD" = "linux32" ]; then
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libcrypt.so.1:. "
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libnsl.so.1:. "
 elif [ "$BUILD" = "windows" ]; then
+    # TODO: We've changed the way VERSION is handled (uv_build), if needed, we can revisit this.
+    #       Check MY_TAG_NAME or prepare a new variable for the INFO_VERSION.
 	if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
 		# setting the file and product version for release
 		# Code to remove the periods in the version number
@@ -50,17 +85,22 @@ fi
 
 # Finally we build for windows and macOS with the finalized settings
 if [ "$BUILD" = "osx" -o "$BUILD" = "windows" ]; then
-    pyinstaller_args+="--windowed "
+    pyinstaller_args+="--windowed "  # no console window on macOS/Windows
 fi
-# Run command to build the inkstich program
+
+# Build the application with PyInstaller
 python -m PyInstaller $pyinstaller_args inkstitch.py
 
-# pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
-# to put some more user-accessible stuff like examples and palettes in
-# folders under inkstitch/ (see ../Makefile) so let's move the pyinstaller
-# stuff into its own dir.
-shopt -s dotglob
+
+# Move dist/inkstitch/*  to  dist/inkstitch/bin
+#   pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
+#   to put some more user-accessible stuff like examples and palettes in
+#   folders under inkstitch/ (see ../Makefile) so let's move the pyinstaller
+#   stuff into its own dir.
+shopt -s dotglob     # * - to include hidden files
 mkdir dist/bin
 mv dist/inkstitch/* dist/bin
-mv dist/bin dist/inkstitch
+mv dist/bin dist/inkstitch   # now all the pyinstaller stuff is in dist/inkstitch/bin
 mkdir artifacts
+
+echo "------------------------------------------------- build-python.sh done"
