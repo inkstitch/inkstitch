@@ -1,7 +1,4 @@
-# Assuming pyembroidery is installed in parent directory of inkstitch.
-# Maybe it would be better to install PyEmbroidery as a submodule and automatically update it,
-# but the .gitignore file should be updated to ignore the build directory.
-./pyembroidery
+pystitch
 
 # For macOS and Windows our installer bundles the version specified here
 # but some Linux distros package Ink/Stitch as depending on the inkex that's bundled with Inkscape.

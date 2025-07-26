@@ -7,7 +7,7 @@ import colorsys
 
 from inkex import Color, ColorError
 
-from pyembroidery.EmbThread import EmbThread
+from pystitch.EmbThread import EmbThread
 
 
 class ThreadColor(object):
@@ -89,7 +89,7 @@ class ThreadColor(object):
         return "#%s" % self.hex_digits
 
     @property
-    def pyembroidery_thread(self):
+    def pystitch_thread(self):
         return {
             "name": self.name,
             "id": self.number,
