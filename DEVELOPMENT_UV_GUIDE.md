@@ -129,6 +129,7 @@ These instructions assume you're using **Chocolatey** as your package manager, *
       * Alternatively, use **Multi Commander**: `Tools` -\> `File Links` -\> `Create Links` -\> `Symlink`.
   * Update your registry using the file `bin/msys2/ucrt.reg` from your Ink/Stitch directory.
   * Optionally you can also symlink `pw.bat` as alias for **Powershell**.
+  * Optionally enable UCRT64 bash in VS Code editor ( see `bin/msys2/vscode_setting.md`)
 
 ### Set Up PATHs
 
@@ -138,7 +139,7 @@ These instructions assume you're using **Chocolatey** as your package manager, *
           * `C:\MyScripts` (for `ucrt.bat`, `pw.bat`)
           * `C:\ProgramData\chocolatey\bin` (for `choco`, `uv`)
           * `C:\Program Files\Git\cmd` (for `git`)
-          * `C:\Users\$USER\.local\bin` (for `uv`, `uvr`)
+          * `C:\Users\%USERNAME%\.local\bin` (for `uv`, `uvr`)
           * `C:\tools\msys64\usr\bin` (for `bash`, `make`, etc.)
           * `C:\Program Files\Inkscape\bin` (for `inkscape.com`)
 
