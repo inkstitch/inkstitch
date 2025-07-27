@@ -22,15 +22,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="3.8689677"
-     inkscape:cx="47.299439"
-     inkscape:cy="36.702297"
+     inkscape:zoom="4.73329"
+     inkscape:cx="61.585071"
+     inkscape:cy="43.944064"
      inkscape:window-width="1264"
      inkscape:window-height="787"
-     inkscape:window-x="346"
-     inkscape:window-y="92"
+     inkscape:window-x="775"
+     inkscape:window-y="134"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g9"
+     inkscape:current-layer="g88"
      inkscape:lockguides="true"
      showgrid="false"
      showguides="true">
@@ -15445,7 +15445,7 @@ Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto
     <g
        inkscape:groupmode="layer"
        inkscape:label="GlyphLayer-“"
-       style="display:inline"
+       style="display:none"
        id="g9">
       <g
          inkscape:label=" &quot;"
@@ -15518,7 +15518,7 @@ Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto
     <g
        inkscape:groupmode="layer"
        inkscape:label="GlyphLayer-”"
-       style="display:inline"
+       style="display:none"
        id="g10">
       <g
          inkscape:label=" &quot;"
@@ -15586,6 +15586,88 @@ Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto
                inkscape:label="marqueur de commande" />
           </g>
         </g>
+      </g>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       inkscape:label="GlyphLayer-("
+       style="display:inline"
+       id="g662">
+      <path
+         style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#913697;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:black;stop-opacity:1"
+         d="M 32.066402,125.09303 21.714195,114.31828 16.854995,99.951955 12.418335,80.303888"
+         id="path119" />
+      <path
+         d="m 35.060221,29.33763 c -1.868993,1.453667 -3.7726,3.487067 -5.71082,6.1002 -1.93822,2.613133 -3.72069,5.814657 -5.34741,9.60457 -1.62672,3.789913 -2.933287,8.21148 -3.9197,13.2647 -0.986413,5.05322 -1.47962,10.781353 -1.47962,17.1844 l -10e-6,1.19414 c 7e-6,6.40308 0.47591,12.131213 1.42771,17.1844 0.9518,5.053187 2.23241,9.48339 3.84183,13.2906 1.60942,3.80721 3.383237,7.00874 5.32145,9.60457 1.938213,2.59583 3.893737,4.63789 5.86657,6.12616 M 32.360561,22.01739 c -2.94194,1.31522 -5.94445,3.50437 -9.00753,6.56745 -3.06308,3.06308 -5.901187,6.887613 -8.51432,11.4736 -2.613133,4.585987 -4.724407,9.864187 -6.3338197,15.8346 -1.609413,5.970413 -2.41412,12.537847 -2.41412,19.7023 v 6e-5 0.9864 c 0,7.199133 0.804707,13.792533 2.41412,19.7802 1.6094127,5.98767 3.7206867,11.26587 6.3338197,15.8346 2.613133,4.56873 5.45124,8.37593 8.51432,11.4216 3.06308,3.04567 6.06559,5.24347 9.00753,6.59341 M 35.024176,33.824589 24.883238,21.148417"
+         id="path175"
+         style="display:inline;fill:none;stroke:#913697"
+         sodipodi:nodetypes="cssssssssccsssscssssccc"
+         inkstitch:satin_column="True"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.30"
+         inkstitch:force_lock_stitches="True" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       inkscape:label="GlyphLayer-)"
+       style="display:none"
+       id="g663">
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#913697;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:black;stop-opacity:1"
+         d="m 5.070469,125.09303 10.352207,-10.77475 4.8592,-14.366325 4.43666,-19.648067"
+         id="path88" />
+      <path
+         d="m 2.07665,29.33763 c 1.8689933,1.453667 3.7726,3.487067 5.71082,6.1002 1.93822,2.613133 3.72069,5.814657 5.34741,9.60457 1.62672,3.789913 2.933287,8.21148 3.9197,13.2647 0.986413,5.05322 1.47962,10.781353 1.47962,17.1844 l 1e-5,1.19414 c -7e-6,6.40308 -0.47591,12.131213 -1.42771,17.1844 -0.9518,5.053187 -2.23241,9.48339 -3.84183,13.2906 -1.60942,3.80721 -3.3832367,7.00874 -5.32145,9.60457 -1.9382133,2.59583 -3.8937367,4.63789 -5.86657,6.12616 M 4.77631,22.01739 c 2.94194,1.31522 5.94445,3.50437 9.00753,6.56745 3.06308,3.06308 5.901187,6.887613 8.51432,11.4736 2.613133,4.585987 4.724407,9.864187 6.33382,15.8346 1.609413,5.970413 2.41412,12.537847 2.41412,19.7023 v 6e-5 0.9864 c 0,7.199133 -0.804707,13.792533 -2.41412,19.7802 -1.609413,5.98767 -3.720687,11.26587 -6.33382,15.8346 -2.613133,4.56873 -5.45124,8.37593 -8.51432,11.4216 -3.06308,3.04567 -6.06559,5.24347 -9.00753,6.59341 M 2.1126954,33.824589 12.253633,21.148417"
+         id="path663-4"
+         style="fill:none;stroke:#913697"
+         sodipodi:nodetypes="cssssssssccsssscssssccc"
+         inkstitch:satin_column="True"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkstitch:contour_underlay_inset_mm="0.30"
+         inkstitch:force_lock_stitches="True" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       inkscape:label="GlyphLayer-–"
+       style="display:inline"
+       id="g88">
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#913697;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:black;stop-opacity:1"
+         d="M 15.743233,93.126427 7.2333775,92.062695"
+         id="path77" />
+      <path
+         d="m 6.35978,85.6659 h 3.21381 l 58.512676,0 h 3.1379 M 6.35978,99.2291 h 3.21381 l 58.512676,0 h 3.1379 M 9.57359,82.2764 v 20.6366"
+         style="fill:none;stroke:#913697;stroke-width:1"
+         inkstitch:satin_column="True"
+         inkstitch:contour_underlay="True"
+         inkstitch:pull_compensation_mm="0.2"
+         inkscape:label="Colonne satin 0"
+         id="path86"
+         sodipodi:nodetypes="cccccccccc"
+         inkstitch:contour_underlay_inset_mm="0.30"
+         inkstitch:force_lock_stitches="True" />
+      <g
+         id="g87"
+         inkscape:label="Commande Ink/Stitch: Position de fin">
+        <path
+           id="path87"
+           d="M 38.586075,99.157811 24.10874,92.5947"
+           style="display:none;vector-effect:non-scaling-stroke;fill:none;stroke:black;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use7736"
+           inkscape:connection-end="#path788"
+           inkscape:label="connecteur"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0" />
+        <use
+           id="use87"
+           xlink:href="#inkstitch_ending_point"
+           height="100%"
+           width="100%"
+           x="38.59203"
+           y="99.129097"
+           inkscape:label="marqueur de commande" />
       </g>
     </g>
   </g>
