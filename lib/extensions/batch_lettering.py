@@ -14,7 +14,7 @@ from zipfile import ZipFile
 from inkex import Boolean, Group, errormsg
 from lxml import etree
 
-import pyembroidery
+import pystitch
 
 from ..extensions.lettering_along_path import TextAlongPath
 from ..i18n import _
@@ -69,7 +69,7 @@ class BatchLettering(InkstitchExtension):
         if not self.options.formats:
             errormsg(_("Please specify at least one output file format"))
             return
-        available_formats = [file_format['extension'] for file_format in pyembroidery.supported_formats()] + ['svg']
+        available_formats = [file_format['extension'] for file_format in pystitch.supported_formats()] + ['svg']
         file_formats = self.options.formats.split(',')
         file_formats = [file_format.strip().lower() for file_format in file_formats if file_format.strip().lower() in available_formats]
         if not file_formats:

@@ -8,9 +8,9 @@ import re
 import sys
 
 import inkex
-from pyembroidery.exceptions import TooManyColorChangesError
+from pystitch.exceptions import TooManyColorChangesError
 
-import pyembroidery
+import pystitch
 
 from .commands import global_command
 from .i18n import _
@@ -21,15 +21,15 @@ from .utils import Point
 
 def get_command(stitch):
     if stitch.jump:
-        return pyembroidery.JUMP
+        return pystitch.JUMP
     elif stitch.trim:
-        return pyembroidery.TRIM
+        return pystitch.TRIM
     elif stitch.color_change:
-        return pyembroidery.COLOR_CHANGE
+        return pystitch.COLOR_CHANGE
     elif stitch.stop:
-        return pyembroidery.STOP
+        return pystitch.STOP
     else:
-        return pyembroidery.NEEDLE_AT
+        return pystitch.NEEDLE_AT
 
 
 def get_origin(svg, bounding_box):
@@ -47,18 +47,18 @@ def get_origin(svg, bounding_box):
 def jump_to_stop_point(pattern, svg):
     stop_position = global_command(svg, "stop_position")
     if stop_position:
-        pattern.add_stitch_absolute(pyembroidery.JUMP, stop_position.point.x, stop_position.point.y)
+        pattern.add_stitch_absolute(pystitch.JUMP, stop_position.point.x, stop_position.point.y)
 
 
 def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
     # convert from pixels to millimeters
-    # also multiply by 10 to get tenths of a millimeter as required by pyembroidery
+    # also multiply by 10 to get tenths of a millimeter as required by pystitch
     scale = 10 / PIXELS_PER_MM
 
     origin = get_origin(svg, stitch_plan.bounding_box)
     # origin = origin * scale
 
-    pattern = pyembroidery.EmbPattern()
+    pattern = pystitch.EmbPattern()
 
     # For later use when writing .dst header title field.
     pattern.extras['name'] = os.path.splitext(svg.name)[0]
@@ -66,7 +66,7 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
     stitch = Stitch(0, 0)
 
     for color_block in stitch_plan:
-        pattern.add_thread(color_block.color.pyembroidery_thread)
+        pattern.add_thread(color_block.color.pystitch_thread)
 
         for stitch in color_block:
             if stitch.stop:
@@ -74,21 +74,21 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
             command = get_command(stitch)
             pattern.add_stitch_absolute(command, stitch.x, stitch.y)
 
-    pattern.add_stitch_absolute(pyembroidery.END, stitch.x, stitch.y)
+    pattern.add_stitch_absolute(pystitch.END, stitch.x, stitch.y)
 
     settings.update({
         # correct for the origin
         "translate": -origin,
 
         # convert from pixels to millimeters
-        # also multiply by 10 to get tenths of a millimeter as required by pyembroidery
+        # also multiply by 10 to get tenths of a millimeter as required by pystitch
         "scale": (scale, scale),
 
         # This forces a jump at the start of the design and after each trim,
         # even if we're close enough not to need one.
         "full_jump": True,
 
-        # defaults to False in pyembroidery (see https://github.com/EmbroidePy/pyembroidery/issues/188)
+        # defaults to False in pystitch (see https://github.com/EmbroidePy/pyembroidery/issues/188)
         "trims": True,
     })
 
@@ -96,7 +96,7 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         settings['encode'] = True
 
     if file_path.endswith('.csv'):
-        # Special treatment for CSV: instruct pyembroidery not to do any post-
+        # Special treatment for CSV: instruct pystitch not to do any post-
         # processing.  This will allow the user to match up stitch numbers seen
         # in the simulator with commands in the CSV.
         settings['max_stitch'] = float('inf')
@@ -104,7 +104,7 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         settings['explicit_trim'] = False
 
     try:
-        pyembroidery.write(pattern, file_path, settings)
+        pystitch.write(pattern, file_path, settings)
     except IOError as e:
         # L10N low-level file error.  %(error)s is (hopefully?) translated by
         # the user's system automatically.
