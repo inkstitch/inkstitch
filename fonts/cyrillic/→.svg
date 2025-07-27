@@ -22,15 +22,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="4.73329"
-     inkscape:cx="61.585071"
-     inkscape:cy="43.944064"
+     inkscape:zoom="2.1115785"
+     inkscape:cx="32.440187"
+     inkscape:cy="82.876389"
      inkscape:window-width="1264"
      inkscape:window-height="787"
-     inkscape:window-x="775"
-     inkscape:window-y="134"
+     inkscape:window-x="330"
+     inkscape:window-y="109"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g88"
+     inkscape:current-layer="g663"
      inkscape:lockguides="true"
      showgrid="false"
      showguides="true">
@@ -15591,14 +15591,14 @@ Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto
     <g
        inkscape:groupmode="layer"
        inkscape:label="GlyphLayer-("
-       style="display:inline"
+       style="display:none"
        id="g662">
       <path
          style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#913697;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:black;stop-opacity:1"
-         d="M 32.066402,125.09303 21.714195,114.31828 16.854995,99.951955 12.418335,80.303888"
+         d="M 32.066402,138.09305 21.714195,127.3183 16.854995,112.95198 12.418335,93.303914"
          id="path119" />
       <path
-         d="m 35.060221,29.33763 c -1.868993,1.453667 -3.7726,3.487067 -5.71082,6.1002 -1.93822,2.613133 -3.72069,5.814657 -5.34741,9.60457 -1.62672,3.789913 -2.933287,8.21148 -3.9197,13.2647 -0.986413,5.05322 -1.47962,10.781353 -1.47962,17.1844 l -10e-6,1.19414 c 7e-6,6.40308 0.47591,12.131213 1.42771,17.1844 0.9518,5.053187 2.23241,9.48339 3.84183,13.2906 1.60942,3.80721 3.383237,7.00874 5.32145,9.60457 1.938213,2.59583 3.893737,4.63789 5.86657,6.12616 M 32.360561,22.01739 c -2.94194,1.31522 -5.94445,3.50437 -9.00753,6.56745 -3.06308,3.06308 -5.901187,6.887613 -8.51432,11.4736 -2.613133,4.585987 -4.724407,9.864187 -6.3338197,15.8346 -1.609413,5.970413 -2.41412,12.537847 -2.41412,19.7023 v 6e-5 0.9864 c 0,7.199133 0.804707,13.792533 2.41412,19.7802 1.6094127,5.98767 3.7206867,11.26587 6.3338197,15.8346 2.613133,4.56873 5.45124,8.37593 8.51432,11.4216 3.06308,3.04567 6.06559,5.24347 9.00753,6.59341 M 35.024176,33.824589 24.883238,21.148417"
+         d="m 35.060221,47.547031 c -1.868993,1.453667 -3.7726,3.487067 -5.71082,6.1002 -1.93822,2.613133 -3.72069,5.814657 -5.34741,9.60457 -1.62672,3.789913 -2.933287,8.21148 -3.9197,13.2647 -0.986413,5.05322 -1.47962,10.781353 -1.47962,17.184403 l -10e-6,1.19414 c 7e-6,6.403076 0.47591,12.131206 1.42771,17.184396 0.9518,5.05318 2.23241,9.48338 3.84183,13.29059 1.60942,3.80721 3.383237,7.00874 5.32145,9.60457 1.938213,2.59583 3.893737,4.63789 5.86657,6.12616 M 32.360561,40.226791 c -2.94194,1.31522 -5.94445,3.50437 -9.00753,6.56745 -3.06308,3.06308 -5.901187,6.887613 -8.51432,11.4736 -2.613133,4.585987 -4.724407,9.864187 -6.3338197,15.8346 -1.609413,5.970413 -2.41412,12.537847 -2.41412,19.702303 v 6e-5 0.9864 c 0,7.199126 0.804707,13.792526 2.41412,19.780186 1.6094127,5.98767 3.7206867,11.26587 6.3338197,15.8346 2.613133,4.56873 5.45124,8.37593 8.51432,11.4216 3.06308,3.04567 6.06559,5.24347 9.00753,6.59341 M 35.024176,52.03399 24.883238,39.357818"
          id="path175"
          style="display:inline;fill:none;stroke:#913697"
          sodipodi:nodetypes="cssssssssccsssscssssccc"
@@ -15611,8 +15611,9 @@ Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto
     <g
        inkscape:groupmode="layer"
        inkscape:label="GlyphLayer-)"
-       style="display:none"
-       id="g663">
+       style="display:inline"
+       id="g663"
+       transform="translate(0,17.698394)">
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#913697;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:black;stop-opacity:1"
          d="m 5.070469,125.09303 10.352207,-10.77475 4.8592,-14.366325 4.43666,-19.648067"
@@ -15631,14 +15632,14 @@ Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto
     <g
        inkscape:groupmode="layer"
        inkscape:label="GlyphLayer-–"
-       style="display:inline"
+       style="display:none"
        id="g88">
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#913697;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:black;stop-opacity:1"
          d="M 15.743233,93.126427 7.2333775,92.062695"
          id="path77" />
       <path
-         d="m 6.35978,85.6659 h 3.21381 l 58.512676,0 h 3.1379 M 6.35978,99.2291 h 3.21381 l 58.512676,0 h 3.1379 M 9.57359,82.2764 v 20.6366"
+         d="m 6.35978,85.6659 h 3.21381 58.512676 3.1379 M 6.35978,99.2291 h 3.21381 58.512676 3.1379 M 9.57359,82.2764 v 20.6366"
          style="fill:none;stroke:#913697;stroke-width:1"
          inkstitch:satin_column="True"
          inkstitch:contour_underlay="True"
