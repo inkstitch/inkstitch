@@ -5,4 +5,10 @@
 # Instead of files, "--diff" may be passed to check only the lines changed
 # by a diff piped to standard input.
 
-flake8 --count --max-complexity=10 --max-line-length=150 --statistics --exclude=__init__.py,build,src,dist,./*-metadata.py,./pystitch-format-descriptions.py "${@:-.}"
+flake8 \
+    --count \
+    --max-complexity=10 \
+    --max-line-length=150 \
+    --statistics \
+    --exclude=.venv,__init__.py,build,src,dist,./*-metadata.py,./pystitch-format-descriptions.py \
+    "${@:-.}"
