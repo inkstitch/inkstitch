@@ -1,4 +1,21 @@
+
+
+### Ink/Stitch requirements file.
+
+### - Hash of this file is used by default for cache in the CI pipeline (github actions).
+###   - Any change in this file would trigger a rebuild of the cache.
+###   - Check logs of the CI pipeline to see if the cache was used.
+### - Keep this file up to date with the latest versions of the dependencies with pyproject.toml
+
 pystitch
+
+### install before inkex, required because inkex is without restriction and >3.50 cannot be compiled on some OS
+pygobject<=3.50 ; sys_platform == 'linux' or sys_platform == 'darwin'
+
+### For linux user it may be tricky to install wxPython from sources
+### prebuilt packages: https://wxpython.org/pages/downloads/index.html
+# wxpython @ https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.3-cp311-cp311-linux_x86_64.whl
+wxPython>=4.1.1
 
 # For macOS and Windows our installer bundles the version specified here
 # but some Linux distros package Ink/Stitch as depending on the inkex that's bundled with Inkscape.
