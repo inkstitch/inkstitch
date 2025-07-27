@@ -196,36 +196,35 @@ class LetteringSvgFontToLayers(InkstitchExtension):
         path = layer.add(PathElement())
         path.path = self.flip_cordinate_system(glyph, emsize, baseline, scale_by)
 
-        # unicode_char = glyph.get("unicode")
-        # if unicode_char is None or unicodedata.category(unicode_char[0])[0] != "Z":
-        #     # all unicode with category starting with 'Z' is not rendered, no need to create layers with path.d =""
+        unicode_char = glyph.get("unicode")
+        if unicode_char is None:
+           
+            glyph_name = glyph.get("glyph-name").split('.')
+            if unicode_char is None:
+                if len(glyph_name) == 2:
+                    unicode_char = glyph_name[0]
+                else:
+                    return
 
-        #     glyph_name = glyph.get("glyph-name").split('.')
-        #     if unicode_char is None:
-        #         if len(glyph_name) == 2:
-        #             unicode_char = glyph_name[0]
-        #         else:
-        #             return
+            typographic_feature = ''
+            if len(glyph_name) == 2:
+                typographic_feature = glyph_name[1]
+            else:
+                arabic_form = glyph.get('arabic-form', None)
+                if arabic_form is not None and len(arabic_form) > 4:
+                    typographic_feature = arabic_form[:4]
+            if typographic_feature:
+                typographic_feature = f".{typographic_feature}"
 
-        #     typographic_feature = ''
-        #     if len(glyph_name) == 2:
-        #         typographic_feature = glyph_name[1]
-        #     else:
-        #         arabic_form = glyph.get('arabic-form', None)
-        #         if arabic_form is not None and len(arabic_form) > 4:
-        #             typographic_feature = arabic_form[:4]
-        #     if typographic_feature:
-        #         typographic_feature = f".{typographic_feature}"
+            layer = self.svg.add(Layer.new(f"GlyphLayer-{unicode_char}{typographic_feature}"))
 
-        #     layer = self.svg.add(Layer.new(f"GlyphLayer-{unicode_char}{typographic_feature}"))
+            # glyph layers (except the first one) are initially hidden
+            if hide_layer:
+                layer.style["display"] = "none"
 
-        #     # glyph layers (except the first one) are initially hidden
-        #     if hide_layer:
-        #         layer.style["display"] = "none"
-
-        #     # Using curve description in d attribute of svg:glyph
-        #     path = layer.add(PathElement())
-        #     path.path = self.flip_cordinate_system(glyph, emsize, baseline, scale_by)
+            # Using curve description in d attribute of svg:glyph
+            path = layer.add(PathElement())
+            path.path = self.flip_cordinate_system(glyph, emsize, baseline, scale_by)
 
     def effect(self) -> None:
         # Current code only reads the first svgfont instance
