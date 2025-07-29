@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-21 02:03+0000\n"
-"PO-Revision-Date: 2025-07-21 02:03\n"
+"POT-Creation-Date: 2025-07-28 02:03+0000\n"
+"PO-Revision-Date: 2025-07-28 02:04\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-21 02:02+0000\n"
+"POT-Creation-Date: 2025-07-28 02:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -235,356 +235,361 @@ msgstr ""
 msgid "Coronaviral font is created with manual sitch. Do not change the size or very little."
 msgstr ""
 
-#. description of font in fonts/decadent_flowers_monogram
+#. description of font in fonts/cyrillic
 #: inkstitch-fonts-metadata.py:84
+msgid "Cyrillic satin font."
+msgstr ""
+
+#. description of font in fonts/decadent_flowers_monogram
+#: inkstitch-fonts-metadata.py:86
 msgid "Each Decadent Flowers Monogram lettter  is composed of an optional knockdown fill (for high pile fabric embroidery)  and redwork flowers  with a negative space letter monogram"
 msgstr ""
 
 #. description of font in fonts/dejavufont
-#: inkstitch-fonts-metadata.py:86
+#: inkstitch-fonts-metadata.py:88
 msgid "DejaVu Serif Condensed is a satin font. Every satin has center-walk underlay."
 msgstr ""
 
 #. description of font in fonts/digory_doodles_bean
-#: inkstitch-fonts-metadata.py:88
+#: inkstitch-fonts-metadata.py:90
 msgid "All letters of Digory Doodles Bean mix satin and bean stitch."
 msgstr ""
 
 #. description of font in fonts/dinomouse72
-#: inkstitch-fonts-metadata.py:90
+#: inkstitch-fonts-metadata.py:92
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
 msgstr ""
 
 #. description of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:92
+#: inkstitch-fonts-metadata.py:94
 msgid "Emilio 20 contains only capitals and numbers. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/emilio_20_applique
-#: inkstitch-fonts-metadata.py:94
+#: inkstitch-fonts-metadata.py:96
 msgid "Emilio 20 Applique is an Applique font. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique."
 msgstr ""
 
 #. description of font in fonts/emilio_20_bold
-#: inkstitch-fonts-metadata.py:96
+#: inkstitch-fonts-metadata.py:98
 msgid "Emilio_20_Bold is an altered version of Emilio_20."
 msgstr ""
 
 #. description of font in fonts/emilio_20_simple
-#: inkstitch-fonts-metadata.py:98
+#: inkstitch-fonts-metadata.py:100
 msgid "Emilio is a font with capital only and numbers. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/emilio_20_simple_small
-#: inkstitch-fonts-metadata.py:100
+#: inkstitch-fonts-metadata.py:102
 msgid "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/emilio_20_tartan
-#: inkstitch-fonts-metadata.py:102
+#: inkstitch-fonts-metadata.py:104
 msgid "Emilio 20 Tartan uses tartan fill for a colorful font."
 msgstr ""
 
 #. description of font in fonts/emilio_20_tricolore
-#: inkstitch-fonts-metadata.py:104
+#: inkstitch-fonts-metadata.py:106
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
 msgstr ""
 
 #. description of font in fonts/espresso_KOR
-#: inkstitch-fonts-metadata.py:106
+#: inkstitch-fonts-metadata.py:108
 msgid "Espresso KOR is a satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/espresso_tiny
-#: inkstitch-fonts-metadata.py:108
+#: inkstitch-fonts-metadata.py:110
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/excalibur_KOR
-#: inkstitch-fonts-metadata.py:110
+#: inkstitch-fonts-metadata.py:112
 msgid "Excalibur KOR is a small satin column manuscript font. It contains 144 glyphs, covering most western European languages needs."
 msgstr ""
 
 #. description of font in fonts/excalibur_small
-#: inkstitch-fonts-metadata.py:112
+#: inkstitch-fonts-metadata.py:114
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/fold_inkstitch
-#: inkstitch-fonts-metadata.py:114
+#: inkstitch-fonts-metadata.py:116
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font. It contains 40 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr ""
 
 #. description of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:116
+#: inkstitch-fonts-metadata.py:118
 msgid "Geneva Simple Sans Rounded is a satin font."
 msgstr ""
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:118
+#: inkstitch-fonts-metadata.py:120
 msgid "Geneva Simple Sans is a satin font."
 msgstr ""
 
 #. description of font in fonts/gingo200
-#: inkstitch-fonts-metadata.py:120
+#: inkstitch-fonts-metadata.py:122
 msgid "Gingo 200 is playful satin font with 158 glyphs."
 msgstr ""
 
 #. description of font in fonts/glacial_tiny
-#: inkstitch-fonts-metadata.py:122
+#: inkstitch-fonts-metadata.py:124
 msgid "Glacial is a very tiny font. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages."
 msgstr ""
 
 #. description of font in fonts/hebrew_font_medium
-#: inkstitch-fonts-metadata.py:124
+#: inkstitch-fonts-metadata.py:126
 msgid "Medium size hebrew satin font"
 msgstr ""
 
 #. description of font in fonts/hebrew_simple_rounded
-#: inkstitch-fonts-metadata.py:126
+#: inkstitch-fonts-metadata.py:128
 msgid "A simple rounded hebrew font"
 msgstr ""
 
 #. description of font in fonts/hebrew_simple_rounded_small
-#: inkstitch-fonts-metadata.py:128
+#: inkstitch-fonts-metadata.py:130
 msgid "A simple rounded hebrew font, small version to be embroidered with 60wt thread and 60 needle"
 msgstr ""
 
 #. description of font in fonts/honoka
-#: inkstitch-fonts-metadata.py:130
+#: inkstitch-fonts-metadata.py:132
 msgid "コルの書きこも is a satin column japanese script font. It contains all hiragana, katakana and punctuation glyphs plus 80 kanjis."
 msgstr ""
 
 #. description of font in fonts/infinipicto
-#: inkstitch-fonts-metadata.py:132
+#: inkstitch-fonts-metadata.py:134
 msgid "InfiniPicto is a fun font containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
 msgstr ""
 
 #. description of font in fonts/inkstitch_masego
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:136
 msgid "Masego is a display san-serif typeface."
 msgstr ""
 
 #. description of font in fonts/invercelia
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:138
 msgid "Invercelia is a modern two letters monogram font. Enter two letters to get a simple monogram.  Add an ')' at the end and the monogram is framed with a circle (for instance 'AC)'), add an '(' to start (for instance '(AC)' and your monogram is ready for applique, or  try something like '!AC)' to replace the appliqué by knockdown stitches.\n\n"
 "Please use exactly two letters,  if you use more, only the first and the last letters will be rendered."
 msgstr ""
 
 #. description of font in fonts/kaushan_script_MAM
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:140
 msgid "Kaushan Script MAM is a script satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:142
 msgid "Learning curve is a small running stitch script font."
 msgstr ""
 
 #. description of font in fonts/lobster_AGS
-#: inkstitch-fonts-metadata.py:142
+#: inkstitch-fonts-metadata.py:144
 msgid " Lobster AGS is a script satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/magnolia_KOR
-#: inkstitch-fonts-metadata.py:144
+#: inkstitch-fonts-metadata.py:146
 msgid "Magnolia KOR is a script satin font."
 msgstr ""
 
 #. description of font in fonts/magnolia_bicolor
-#: inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:148
 msgid "Magnolia bicolor is a  larger  bicolor variation of Magnolia font."
 msgstr ""
 
 #. description of font in fonts/magnolia_small
-#: inkstitch-fonts-metadata.py:148
+#: inkstitch-fonts-metadata.py:150
 msgid "Magnolia Small is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/magnolia_tamed
-#: inkstitch-fonts-metadata.py:150
+#: inkstitch-fonts-metadata.py:152
 msgid "This is a less wild bicolor variation of Magnolia font"
 msgstr ""
 
 #. description of font in fonts/malika
-#: inkstitch-fonts-metadata.py:152
+#: inkstitch-fonts-metadata.py:154
 msgid "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch."
 msgstr ""
 
 #. description of font in fonts/manuskript_gotisch
-#: inkstitch-fonts-metadata.py:154
+#: inkstitch-fonts-metadata.py:156
 msgid "Manuskript Gothisch is a satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/marcelusSC_FI
-#: inkstitch-fonts-metadata.py:156
+#: inkstitch-fonts-metadata.py:158
 msgid "MarcellusSC-FI is a small capital satin font. It contains 107 glyphs covering most Western European languages."
 msgstr ""
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:158
+#: inkstitch-fonts-metadata.py:160
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
 msgstr ""
 
 #. description of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:160
+#: inkstitch-fonts-metadata.py:162
 msgid "Millimarif-bold20 is a  bold satin font."
 msgstr ""
 
 #. description of font in fonts/mimosa_large
-#: inkstitch-fonts-metadata.py:162
+#: inkstitch-fonts-metadata.py:164
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
 msgstr ""
 
 #. description of font in fonts/mimosa_medium
-#: inkstitch-fonts-metadata.py:164
+#: inkstitch-fonts-metadata.py:166
 msgid "Mimosa Medium is a satin font that looks dotty."
 msgstr ""
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:166
+#: inkstitch-fonts-metadata.py:168
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
 msgstr ""
 
 #. description of font in fonts/namskout_AGS
-#: inkstitch-fonts-metadata.py:168
+#: inkstitch-fonts-metadata.py:170
 msgid "Namskout AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr ""
 
 #. description of font in fonts/namskout_relief
-#: inkstitch-fonts-metadata.py:170
+#: inkstitch-fonts-metadata.py:172
 msgid "Namskout relief is an altered version of Namskout AGS for embossed letters."
 msgstr ""
 
 #. description of font in fonts/namskout_tartan
-#: inkstitch-fonts-metadata.py:172
+#: inkstitch-fonts-metadata.py:174
 msgid "Namskout Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals."
 msgstr ""
 
 #. description of font in fonts/neon
-#: inkstitch-fonts-metadata.py:174
+#: inkstitch-fonts-metadata.py:176
 msgid "Satin font. Each letter or accent is a single satin."
 msgstr ""
 
 #. description of font in fonts/neon_blinking
-#: inkstitch-fonts-metadata.py:176
+#: inkstitch-fonts-metadata.py:178
 msgid "Bean stitch font."
 msgstr ""
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:178
+#: inkstitch-fonts-metadata.py:180
 msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
 msgstr ""
 
 #. description of font in fonts/ondulamarif_Medium
-#: inkstitch-fonts-metadata.py:180
+#: inkstitch-fonts-metadata.py:182
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
 msgstr ""
 
 #. description of font in fonts/ondulamarif_S
-#: inkstitch-fonts-metadata.py:182
+#: inkstitch-fonts-metadata.py:184
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
 msgstr ""
 
 #. description of font in fonts/ondulamarif_XL
-#: inkstitch-fonts-metadata.py:184
+#: inkstitch-fonts-metadata.py:186
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
 msgstr ""
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:186
+#: inkstitch-fonts-metadata.py:188
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr ""
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:188
+#: inkstitch-fonts-metadata.py:190
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr ""
 
 #. description of font in fonts/perspective_tricolore_KOR
-#: inkstitch-fonts-metadata.py:190
+#: inkstitch-fonts-metadata.py:192
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
 msgstr ""
 
 #. description of font in fonts/pixel10
-#: inkstitch-fonts-metadata.py:192
+#: inkstitch-fonts-metadata.py:194
 msgid "Pixel 10 is a satin pixel font."
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:194
+#: inkstitch-fonts-metadata.py:196
 msgid "Roaring Twenties KOR is a mix of satin and bean stitches."
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:196
+#: inkstitch-fonts-metadata.py:198
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:198
+#: inkstitch-fonts-metadata.py:200
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:200
+#: inkstitch-fonts-metadata.py:202
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
 msgstr ""
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:202
+#: inkstitch-fonts-metadata.py:204
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
 msgstr ""
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:204
+#: inkstitch-fonts-metadata.py:206
 msgid "Ink/Stitch Small Font is suited for small characters."
 msgstr ""
 
 #. description of font in fonts/sortefaxXL
-#: inkstitch-fonts-metadata.py:206
+#: inkstitch-fonts-metadata.py:208
 #, python-brace-format
 msgid " Sortefax XL Initials is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
 msgstr ""
 
 #. description of font in fonts/sortefax_medium
-#: inkstitch-fonts-metadata.py:208
+#: inkstitch-fonts-metadata.py:210
 #, python-brace-format
 msgid "Sortefax  Medium Initials is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
 msgstr ""
 
 #. description of font in fonts/sunset
-#: inkstitch-fonts-metadata.py:210
+#: inkstitch-fonts-metadata.py:212
 msgid "3 colors satin column font"
 msgstr ""
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:212
+#: inkstitch-fonts-metadata.py:214
 msgid "TT  Directors is a satin font suited for directing."
 msgstr ""
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:214
+#: inkstitch-fonts-metadata.py:216
 msgid "TT Masters is a satin font suited for heavy typing :)"
 msgstr ""
 
 #. description of font in fonts/venezia
-#: inkstitch-fonts-metadata.py:216
+#: inkstitch-fonts-metadata.py:218
 msgid "A serif satin font"
 msgstr ""
 
 #. description of font in fonts/venezia_small
-#: inkstitch-fonts-metadata.py:218
+#: inkstitch-fonts-metadata.py:220
 msgid "Venezia small is an altered version of Venezia to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr ""
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:220
+#: inkstitch-fonts-metadata.py:222
 msgid "Violin Serif is a condensed serif satin font."
 msgstr ""
 
 #. description of font in fonts/western_light
-#: inkstitch-fonts-metadata.py:222
+#: inkstitch-fonts-metadata.py:224
 msgid "Western light is a light fill western style font."
 msgstr ""
 
@@ -5101,224 +5106,217 @@ msgstr "Aplicar a todo"
 msgid "Realistic"
 msgstr "Realista"
 
-#. description for pyembroidery file format: pec
-#. description for pyembroidery file format: pes
-#. description for pyembroidery file format: phb
-#. description for pyembroidery file format: phc
-#: pyembroidery-format-descriptions.py:2 pyembroidery-format-descriptions.py:4
-#: pyembroidery-format-descriptions.py:58
-#: pyembroidery-format-descriptions.py:60
+#. description for pystitch file format: pec
+#. description for pystitch file format: pes
+#. description for pystitch file format: phb
+#. description for pystitch file format: phc
+#: pystitch-format-descriptions.py:2 pystitch-format-descriptions.py:4
+#: pystitch-format-descriptions.py:58 pystitch-format-descriptions.py:60
 msgid "Brother Embroidery Format"
 msgstr "Brother Embroidery Format"
 
-#. description for pyembroidery file format: exp
-#: pyembroidery-format-descriptions.py:6
+#. description for pystitch file format: exp
+#: pystitch-format-descriptions.py:6
 msgid "Melco Expanded Embroidery Format"
 msgstr ""
 
-#. description for pyembroidery file format: dst
-#. description for pyembroidery file format: tbf
-#: pyembroidery-format-descriptions.py:8 pyembroidery-format-descriptions.py:48
+#. description for pystitch file format: dst
+#. description for pystitch file format: tbf
+#: pystitch-format-descriptions.py:8 pystitch-format-descriptions.py:48
 msgid "Tajima Embroidery Format"
 msgstr "Tajima Embroidery Format"
 
-#. description for pyembroidery file format: jef
-#. description for pyembroidery file format: sew
-#. description for pyembroidery file format: jpx
-#: pyembroidery-format-descriptions.py:10
-#: pyembroidery-format-descriptions.py:20
-#: pyembroidery-format-descriptions.py:76
+#. description for pystitch file format: jef
+#. description for pystitch file format: sew
+#. description for pystitch file format: jpx
+#: pystitch-format-descriptions.py:10 pystitch-format-descriptions.py:20
+#: pystitch-format-descriptions.py:76
 msgid "Janome Embroidery Format"
 msgstr "Janome Embroidery Format"
 
-#. description for pyembroidery file format: vp3
-#. description for pyembroidery file format: ksm
-#. description for pyembroidery file format: spx
-#. description for pyembroidery file format: max
-#. description for pyembroidery file format: pcd
-#. description for pyembroidery file format: pcq
-#. description for pyembroidery file format: pcm
-#. description for pyembroidery file format: pcs
-#: pyembroidery-format-descriptions.py:12
-#: pyembroidery-format-descriptions.py:50
-#: pyembroidery-format-descriptions.py:54
-#: pyembroidery-format-descriptions.py:64
-#: pyembroidery-format-descriptions.py:68
-#: pyembroidery-format-descriptions.py:70
-#: pyembroidery-format-descriptions.py:72
-#: pyembroidery-format-descriptions.py:74
+#. description for pystitch file format: vp3
+#. description for pystitch file format: ksm
+#. description for pystitch file format: spx
+#. description for pystitch file format: max
+#. description for pystitch file format: pcd
+#. description for pystitch file format: pcq
+#. description for pystitch file format: pcm
+#. description for pystitch file format: pcs
+#: pystitch-format-descriptions.py:12 pystitch-format-descriptions.py:50
+#: pystitch-format-descriptions.py:54 pystitch-format-descriptions.py:64
+#: pystitch-format-descriptions.py:68 pystitch-format-descriptions.py:70
+#: pystitch-format-descriptions.py:72 pystitch-format-descriptions.py:74
 msgid "Pfaff Embroidery Format"
 msgstr "Pfaff Embroidery Format"
 
-#. description for pyembroidery file format: svg
-#: pyembroidery-format-descriptions.py:14
+#. description for pystitch file format: svg
+#: pystitch-format-descriptions.py:14
 msgid "Scalable Vector Graphics"
 msgstr "Scalable Vector Graphics"
 
-#. description for pyembroidery file format: csv
-#: pyembroidery-format-descriptions.py:16
+#. description for pystitch file format: csv
+#: pystitch-format-descriptions.py:16
 msgid "Comma-separated values"
 msgstr "CSV Valores Separados por Comas"
 
-#. description for pyembroidery file format: xxx
-#: pyembroidery-format-descriptions.py:18
+#. description for pystitch file format: xxx
+#: pystitch-format-descriptions.py:18
 msgid "Singer Embroidery Format"
 msgstr "Singer Embroidery Format"
 
-#. description for pyembroidery file format: u01
-#: pyembroidery-format-descriptions.py:22
+#. description for pystitch file format: u01
+#: pystitch-format-descriptions.py:22
 msgid "Barudan Embroidery Format"
 msgstr "Barudan Embroidery Format"
 
-#. description for pyembroidery file format: shv
-#: pyembroidery-format-descriptions.py:24
+#. description for pystitch file format: shv
+#: pystitch-format-descriptions.py:24
 msgid "Husqvarna Viking Embroidery Format"
 msgstr "Husqvarna Viking Embroidery Format"
 
-#. description for pyembroidery file format: 10o
-#. description for pyembroidery file format: 100
-#: pyembroidery-format-descriptions.py:26
-#: pyembroidery-format-descriptions.py:28
+#. description for pystitch file format: 10o
+#. description for pystitch file format: 100
+#: pystitch-format-descriptions.py:26 pystitch-format-descriptions.py:28
 msgid "Toyota Embroidery Format"
 msgstr "Toyota Embroidery Format"
 
-#. description for pyembroidery file format: bro
-#: pyembroidery-format-descriptions.py:30
+#. description for pystitch file format: bro
+#: pystitch-format-descriptions.py:30
 msgid "Bits & Volts Embroidery Format"
 msgstr "Bits & Volts Embroidery Format"
 
-#. description for pyembroidery file format: dat
-#: pyembroidery-format-descriptions.py:32
+#. description for pystitch file format: dat
+#: pystitch-format-descriptions.py:32
 msgid "Sunstar or Barudan Embroidery Format"
 msgstr "Formato de bordado Sunstar o Barudan"
 
-#. description for pyembroidery file format: dsb
-#: pyembroidery-format-descriptions.py:34
+#. description for pystitch file format: dsb
+#: pystitch-format-descriptions.py:34
 msgid "Tajima(Barudan) Embroidery Format"
 msgstr "Formato de bordado Tajima (Barudan)"
 
-#. description for pyembroidery file format: dsz
-#: pyembroidery-format-descriptions.py:36
+#. description for pystitch file format: dsz
+#: pystitch-format-descriptions.py:36
 msgid "ZSK USA Embroidery Format"
 msgstr "Formato de bordado ZSK USA"
 
-#. description for pyembroidery file format: emd
-#: pyembroidery-format-descriptions.py:38
+#. description for pystitch file format: emd
+#: pystitch-format-descriptions.py:38
 msgid "Elna Embroidery Format"
 msgstr "Formato de bordado Elna"
 
-#. description for pyembroidery file format: exy
-#: pyembroidery-format-descriptions.py:40
+#. description for pystitch file format: exy
+#: pystitch-format-descriptions.py:40
 msgid "Eltac Embroidery Format"
 msgstr "Formato de bordado Eltac"
 
-#. description for pyembroidery file format: fxy
-#: pyembroidery-format-descriptions.py:42
+#. description for pystitch file format: fxy
+#: pystitch-format-descriptions.py:42
 msgid "Fortron Embroidery Format"
 msgstr "Formato de bordado Fortron"
 
-#. description for pyembroidery file format: gt
-#: pyembroidery-format-descriptions.py:44
+#. description for pystitch file format: gt
+#: pystitch-format-descriptions.py:44
 msgid "Gold Thread Embroidery Format"
 msgstr "Formato de bordado Gold Thread"
 
-#. description for pyembroidery file format: inb
-#: pyembroidery-format-descriptions.py:46
+#. description for pystitch file format: inb
+#: pystitch-format-descriptions.py:46
 msgid "Inbro Embroidery Format"
 msgstr "Formato de bordado Inbro"
 
-#. description for pyembroidery file format: tap
-#: pyembroidery-format-descriptions.py:52
+#. description for pystitch file format: tap
+#: pystitch-format-descriptions.py:52
 msgid "Happy Embroidery Format"
 msgstr "Formato de bordado Happy"
 
-#. description for pyembroidery file format: stx
-#: pyembroidery-format-descriptions.py:56
+#. description for pystitch file format: stx
+#: pystitch-format-descriptions.py:56
 msgid "Data Stitch Embroidery Format"
 msgstr "Formato de bordado Data Stitch"
 
-#. description for pyembroidery file format: new
-#: pyembroidery-format-descriptions.py:62
+#. description for pystitch file format: new
+#: pystitch-format-descriptions.py:62
 msgid "Ameco Embroidery Format"
 msgstr "Formato de bordado Ameco"
 
-#. description for pyembroidery file format: mit
-#: pyembroidery-format-descriptions.py:66
+#. description for pystitch file format: mit
+#: pystitch-format-descriptions.py:66
 msgid "Mitsubishi Embroidery Format"
 msgstr "Formato de bordado Mitsubishi"
 
-#. description for pyembroidery file format: stc
-#: pyembroidery-format-descriptions.py:78
+#. description for pystitch file format: stc
+#: pystitch-format-descriptions.py:78
 msgid "Gunold Embroidery Format"
 msgstr "Formato de bordado Gunold"
 
-#. description for pyembroidery file format: zhs
-#: pyembroidery-format-descriptions.py:80
+#. description for pystitch file format: zhs
+#: pystitch-format-descriptions.py:80
 msgid "Zeng Hsing Embroidery Format"
 msgstr ""
 
-#. description for pyembroidery file format: zxy
-#: pyembroidery-format-descriptions.py:82
+#. description for pystitch file format: zxy
+#: pystitch-format-descriptions.py:82
 msgid "ZSK TC Embroidery Format"
 msgstr "Formato de bordado ZSK TC"
 
-#. description for pyembroidery file format: pmv
-#: pyembroidery-format-descriptions.py:84
+#. description for pystitch file format: pmv
+#: pystitch-format-descriptions.py:84
 msgid "Brother Stitch Format"
 msgstr "Formato de puntada Brother"
 
-#. description for pyembroidery file format: png
-#: pyembroidery-format-descriptions.py:86
+#. description for pystitch file format: png
+#: pystitch-format-descriptions.py:86
 msgid "PNG Format, Portable Network Graphics"
 msgstr ""
 
-#. description for pyembroidery file format: txt
-#: pyembroidery-format-descriptions.py:88
+#. description for pystitch file format: txt
+#: pystitch-format-descriptions.py:88
 msgid "txt Format, Text File"
 msgstr ""
 
-#. description for pyembroidery file format: gcode
-#: pyembroidery-format-descriptions.py:90
+#. description for pystitch file format: gcode
+#: pystitch-format-descriptions.py:90
 msgid "gcode Format, Text File"
 msgstr ""
 
-#. description for pyembroidery file format: hus
-#: pyembroidery-format-descriptions.py:92
+#. description for pystitch file format: hus
+#: pystitch-format-descriptions.py:92
 msgid "Husqvarna Embroidery Format"
 msgstr ""
 
-#. description for pyembroidery file format: iqp
-#: pyembroidery-format-descriptions.py:94
+#. description for pystitch file format: iqp
+#: pystitch-format-descriptions.py:94
 msgid "Iqp - Intelliquilter Format"
 msgstr ""
 
-#. description for pyembroidery file format: plt
-#: pyembroidery-format-descriptions.py:96
+#. description for pystitch file format: plt
+#: pystitch-format-descriptions.py:96
 msgid "Plt - HPGL"
 msgstr ""
 
-#. description for pyembroidery file format: qcc
-#: pyembroidery-format-descriptions.py:98
+#. description for pystitch file format: qcc
+#: pystitch-format-descriptions.py:98
 msgid "Qcc - QuiltEZ"
 msgstr ""
 
-#. description for pyembroidery file format: edr
-#: pyembroidery-format-descriptions.py:100
+#. description for pystitch file format: edr
+#: pystitch-format-descriptions.py:100
 msgid "Edr Color Format"
 msgstr ""
 
-#. description for pyembroidery file format: col
-#: pyembroidery-format-descriptions.py:102
+#. description for pystitch file format: col
+#: pystitch-format-descriptions.py:102
 msgid "Col Color Format"
 msgstr ""
 
-#. description for pyembroidery file format: inf
-#: pyembroidery-format-descriptions.py:104
+#. description for pystitch file format: inf
+#: pystitch-format-descriptions.py:104
 msgid "Inf Color Format"
 msgstr ""
 
-#. description for pyembroidery file format: json
-#: pyembroidery-format-descriptions.py:106
+#. description for pystitch file format: json
+#: pystitch-format-descriptions.py:106
 msgid "Json Export"
 msgstr ""
 
