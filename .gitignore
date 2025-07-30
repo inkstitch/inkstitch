@@ -7,6 +7,8 @@ __pycache__
 *.tar.gz
 *.po
 *.log
+# not artefacts - british English
+artifacts/
 dist/
 build/
 locales/
@@ -34,3 +36,13 @@ logs/
 /DEBUG
 /PROFILE
 /profile*
+
+# uv & pyproject.toml
+uv_setup.sh
+.python-version
+uv.lock
+# pyproject.toml
+
+# github client gh shell files, test actions
+uv_test_actions/
+

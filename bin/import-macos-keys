@@ -1,12 +1,39 @@
 #!/bin/bash
-# first part of codesiging which is importing to build keychain
+
+set -e
+MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:-1}  # Default level is 1 (INFO)
+if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
+    set -x
+fi
+
+### This script sets up the macOS environment for automated code signing and notarization within a CI/CD pipeline.
+### It's crucial for distributing software on macOS, as Apple requires signed and notarized
+### applications to run without security warnings on modern systems.
+
+echo "------------------------------------------------- import-macos-keys.sh"
+### First part of codesiging which is importing to build keychain
+### -----------------------------------------------
+### Decodes Base64 certificate to certificate.p12 file.
 echo $MACOS_CERTIFICATE | base64 --decode > certificate.p12
+### Creates temporary keychain named build.keychain.
 security create-keychain -p "$KEYCHAIN_PWD" build.keychain
+### Sets build.keychain as default.
 security default-keychain -s build.keychain
+### Unlocks build.keychain.
 security unlock-keychain -p "$KEYCHAIN_PWD" build.keychain
+### Imports signing certificate into keychain, allowing codesign tool access.
 security import certificate.p12 -k build.keychain -P "$MACOS_CERTIFICATE_PWD" -T /usr/bin/codesign
+### Configures access control list (ACL) for keys, specifically for codesign.
 security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PWD" build.keychain
-# importing notary certificate
+
+### Notarization Certificate Import
+### -----------------------------------------------
+### Decodes Base64 installer certificate to installer-certificate.p12.
 echo $INSTALLER_CERTIFICATE | base64 --decode > installer-certificate.p12
+### Imports installer certificate, allowing pkgbuild tool access.
 security import installer-certificate.p12 -k build.keychain -P "$INSTALLER_PWD" -T /usr/bin/pkgbuild
+### Configures ACL for installer certificate, specifically for pkgbuild.
 security set-key-partition-list -S apple-tool:,apple:,pkgbuild: -s -k "$KEYCHAIN_PWD" build.keychain
+
+echo "------------------------------------------------- import-macos-keys.sh done"
+### Cleanup

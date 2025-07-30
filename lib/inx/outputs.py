@@ -3,6 +3,10 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+# This code is used to generate INX files for Ink/Stitch output formats.
+# Used by:
+# - lib/inx/generate.py
+
 import pystitch
 
 from .utils import build_environment, write_inx_file
