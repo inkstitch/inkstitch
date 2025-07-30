@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.96.1 -->
+<interface>
+  <!-- interface-name test.ui -->
+  <requires lib="gtk" version="4.14"/>
+  <template class="RenderWindow" parent="GtkApplicationWindow">
+    <property name="title">OpenGL Rendering Test</property>
+    <child>
+      <object class="GtkPaned">
+        <property name="shrink-start-child">False</property>
+        <property name="wide-handle">True</property>
+        <property name="start-child">
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="hexpand">True</property>
+                <property name="justify">center</property>
+                <property name="label">&lt;b&gt;RENDER CONTROL&lt;/b&gt;</property>
+                <property name="margin-bottom">10</property>
+                <property name="margin-end">10</property>
+                <property name="margin-start">10</property>
+                <property name="margin-top">10</property>
+                <property name="use-markup">True</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Zoom</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScale" id="zoom">
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="step-increment">1.0</property>
+                    <property name="lower">0.1</property>
+                    <property name="upper">20</property>
+                    <property name="value">1</property>
+                  </object>
+                </property>
+                <property name="digits">1</property>
+                <property name="draw-value">True</property>
+                <property name="fill-level">360.0</property>
+                <property name="has-origin">False</property>
+                <property name="restrict-to-fill-level">False</property>
+                <property name="value-pos">right</property>
+                <signal name="change-value" handler="change_zoom"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Light Azimuth</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScale" id="lightangle">
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="step-increment">10.0</property>
+                    <property name="upper">360.0</property>
+                    <property name="value">135.0</property>
+                  </object>
+                </property>
+                <property name="digits">0</property>
+                <property name="draw-value">True</property>
+                <property name="fill-level">360.0</property>
+                <property name="has-origin">False</property>
+                <property name="restrict-to-fill-level">False</property>
+                <property name="value-pos">right</property>
+                <signal name="change-value" handler="change_light_angle"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Light Elevation</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScale" id="lightelevation">
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="step-increment">10.0</property>
+                    <property name="upper">90.0</property>
+                    <property name="value">45.0</property>
+                  </object>
+                </property>
+                <property name="digits">0</property>
+                <property name="draw-value">True</property>
+                <property name="fill-level">90.0</property>
+                <property name="has-origin">False</property>
+                <property name="restrict-to-fill-level">False</property>
+                <property name="value-pos">right</property>
+                <signal name="change-value" handler="change_light_elevation"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Ambient</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScale" id="ambient">
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="step-increment">0.1</property>
+                    <property name="upper">1.0</property>
+                    <property name="value">0.0</property>
+                  </object>
+                </property>
+                <property name="digits">2</property>
+                <property name="draw-value">True</property>
+                <property name="fill-level">90.0</property>
+                <property name="has-origin">False</property>
+                <property name="restrict-to-fill-level">False</property>
+                <property name="value-pos">right</property>
+                <signal name="change-value" handler="change_ambient"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Diffuse</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScale" id="diffuse">
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="step-increment">0.1</property>
+                    <property name="upper">1.0</property>
+                    <property name="value">1.0</property>
+                  </object>
+                </property>
+                <property name="digits">2</property>
+                <property name="draw-value">True</property>
+                <property name="fill-level">90.0</property>
+                <property name="has-origin">False</property>
+                <property name="restrict-to-fill-level">False</property>
+                <property name="value-pos">right</property>
+                <signal name="change-value" handler="change_diffuse"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Specular</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScale" id="specular">
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="step-increment">0.1</property>
+                    <property name="upper">1.0</property>
+                    <property name="value">1.0</property>
+                  </object>
+                </property>
+                <property name="digits">2</property>
+                <property name="draw-value">True</property>
+                <property name="fill-level">90.0</property>
+                <property name="has-origin">False</property>
+                <property name="restrict-to-fill-level">False</property>
+                <property name="value-pos">right</property>
+                <signal name="change-value" handler="change_specular"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Specular Exponent</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScale" id="specularexponent">
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="step-increment">0.1</property>
+                    <property name="upper">20.0</property>
+                    <property name="value">20.0</property>
+                  </object>
+                </property>
+                <property name="digits">1</property>
+                <property name="draw-value">True</property>
+                <property name="fill-level">90.0</property>
+                <property name="has-origin">False</property>
+                <property name="restrict-to-fill-level">False</property>
+                <property name="value-pos">right</property>
+                <signal name="change-value" handler="change_specular_exponent"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkDropDown" id="mode">
+                <property name="model">
+                  <object class="GtkStringList">
+                    <property name="strings">lit
+normals</property>
+                  </object>
+                </property>
+                <property name="selected">0</property>
+              </object>
+            </child>
+          </object>
+        </property>
+        <property name="end-child">
+          <object class="GtkBox">
+            <property name="height-request">600</property>
+            <property name="orientation">vertical</property>
+            <property name="width-request">800</property>
+            <child>
+              <object class="GLPreview" id="area">
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScale" id="progress">
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="upper">1.0</property>
+                  </object>
+                </property>
+                <property name="digits">0</property>
+                <property name="draw-value">True</property>
+                <property name="value-pos">right</property>
+                <signal name="change-value" handler="change_progress"/>
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </child>
+  </template>
+</interface>

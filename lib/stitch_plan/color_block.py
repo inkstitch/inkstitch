@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from typing import List
+from typing import List, Optional, Iterator
 
 from ..svg import PIXELS_PER_MM
 from ..threads import ThreadColor
@@ -16,9 +16,9 @@ class ColorBlock(object):
 
     def __init__(self, color=None, stitches=None):
         self.color = color
-        self.stitches = stitches or []
+        self.stitches: Optional[Stitch] = stitches or []
 
-    def __iter__(self):
+    def __iter__(self) -> Iterator[Stitch]:
         return iter(self.stitches)
 
     def __len__(self):
@@ -27,7 +27,7 @@ class ColorBlock(object):
     def __repr__(self):
         return "ColorBlock(%s, %s)" % (self.color, self.stitches)
 
-    def __getitem__(self, item):
+    def __getitem__(self, item) -> Stitch:
         return self.stitches[item]
 
     def __delitem__(self, item):
@@ -53,19 +53,19 @@ class ColorBlock(object):
             self._color = ThreadColor(value)
 
     @property
-    def last_stitch(self):
+    def last_stitch(self) -> Stitch:
         if self.stitches:
             return self.stitches[-1]
         else:
             return None
 
     @property
-    def num_stitches(self):
+    def num_stitches(self) -> int:
         """Number of stitches in this color block."""
         return len(self.stitches)
 
     @property
-    def estimated_thread(self):
+    def estimated_thread(self) -> float:
         previous_stitch = self.stitches[0]
         length = 0
         for stitch in self.stitches[1:]:
@@ -74,13 +74,13 @@ class ColorBlock(object):
         return length
 
     @property
-    def num_stops(self):
+    def num_stops(self) -> int:
         """Number of stops in this color block."""
 
         return sum(1 for stitch in self if stitch.stop)
 
     @property
-    def num_trims(self):
+    def num_trims(self) -> int:
         """Number of trims in this color block."""
 
         return sum(1 for stitch in self if stitch.trim)
@@ -92,7 +92,7 @@ class ColorBlock(object):
         return sum(1 for stitch in self if stitch.jump)
 
     @property
-    def stop_after(self):
+    def stop_after(self) -> bool:
         # TODO: we do not add the stop command necessarily as the last stitch
         # also we do not necessarily start a new color block when a stop command appears
         if self.last_stitch is not None:
@@ -101,7 +101,7 @@ class ColorBlock(object):
             return False
 
     @property
-    def trim_after(self):
+    def trim_after(self) -> bool:
         # If there's a STOP, it will be at the end.  We still want to return
         # True.
         for stitch in reversed(self.stitches):

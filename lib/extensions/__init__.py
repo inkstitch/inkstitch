@@ -24,6 +24,7 @@ from .fill_to_satin import FillToSatin
 from .fill_to_stroke import FillToStroke
 from .flip import Flip
 from .generate_palette import GeneratePalette
+from .gl_test import GlTest
 from .global_commands import GlobalCommands
 from .gradient_blocks import GradientBlocks
 from .input import Input
@@ -104,6 +105,7 @@ extensions = [
     FillToStroke,
     Flip,
     GeneratePalette,
+    GlTest,
     GlobalCommands,
     GradientBlocks,
     Input,

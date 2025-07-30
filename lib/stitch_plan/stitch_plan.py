@@ -121,7 +121,7 @@ class StitchPlan(object):
     """Holds a set of color blocks, each containing stitches."""
 
     def __init__(self):
-        self.color_blocks = []
+        self.color_blocks: List[ColorBlock] = []
 
     def new_color_block(self, *args, **kwargs):
         color_block = ColorBlock(*args, **kwargs)
