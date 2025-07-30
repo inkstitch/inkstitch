@@ -18,13 +18,16 @@
 #   make inx    - developers need to run after each change of templates in source tree
 
 # BUILD_DIST - only set here when creating distribution packages (see lib/inx/utils.py)
-#            - targets: dist, distlocal, build-python, dist-debug
+#            - required only for inx target (control calling of inkstitch - exe or wrapper)
+#            - targets: build-python
 
 # BUILD variable (see build .github/workflows/* ):
 #   - osx common for MacOS and variants
 #   - linux common for Linux and variants
 #   - linux32 common for 32-bit Linux and variants
 #   - windows common for Windows and variants
+
+SHELL := bash
 
 VENV_DIR := .venv
 
@@ -63,12 +66,13 @@ help:
 	@echo "  style          - check python code style with flake8"
 	@echo "  ignored        - show all files in the repo that are ignored by git"
 	@echo ""
-	@echo " *inx            - generate inx files from ./locales/ and templates"
+	@echo " *inx            - generate inx files from ./locales/ and templates, call inkstitch wrapper"
 	@echo " *distlocal      - calls 'make distclean' and 'make dist' for local build"
 	@echo "  dist           - build distribution archives from CI/CD actions (requires BUILD variable)"
 	@echo "  distclean      - clean up build artifacts"
 	@echo "  build-python   - build using PyInstaller (requires BUILD variable)"
 	@echo "  dist-debug     - build distribution archives (*.deb, *.rpm ...) without call PyInstaller"
+	@echo "  dist-inx       - generate INX files for distribution, call inkstitch exeutable"
 	@echo "  version        - generate ./VERSION file"
 	@echo "  venv           - ensure that the virtual environment is set up"
 	@echo "  manual         - deprecated, use 'make inx' instead"
@@ -76,18 +80,22 @@ help:
 	@echo "  locales        - generate translation files from ./translation/*.po to ./locales/"
 	@echo "  messages.po    - generate messages.po from inx files and babel"
 
+# Generate INX files for distribution
+dist-inx:
+	$(MAKE) inx BUILD_DIST=true
+
 # Build Python - requires BUILD variable, calls PyInstaller, put all stuff into dist/inkstitch/bin
-build-python: version locales inx
-	export BUILD_DIST=true; bash bin/build-python
+build-python: version locales dist-inx
+	bash bin/build-python
 
 
 # Build archives  - requires BUILD variable
 dist: build-python
-	export BUILD_DIST=true; bash bin/build-distribution-archives
+	bash bin/build-distribution-archives
 
 # just for testing, build archives for current OS, without build-python
 dist-debug:
-	export BUILD_DIST=true; bash bin/build-distribution-archives
+	bash bin/build-distribution-archives
 
 distclean:
 	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip *.deb *.rpm VERSION
@@ -95,7 +103,8 @@ distclean:
 
 # Build local distribution archives for current OS - requires BUILD variable
 distlocal:
-	export BUILD_DIST=true; export VERSION=local-build; make distclean && make dist;
+	$(MAKE) distclean
+	$(MAKE) dist VERSION=local-build
 
 manual:                  # now this is alias for make inx
 	@echo "This target is deprecated. Use 'make inx' instead."
