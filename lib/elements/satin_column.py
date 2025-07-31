@@ -621,7 +621,7 @@ class SatinColumn(EmbroideryElement):
         paths = [path for path in self.paths if len(path) > 1]
         if len(paths) == 1:
             style_args = get_join_style_args(self)
-            new_satin = convert_path_to_satin(paths[0], self.stroke_width, style_args)
+            new_satin = convert_path_to_satin(paths[0], self.stroke_width, style_args, rungs_at_nodes=True)
             if new_satin:
                 rails, rungs = new_satin
                 paths = list(rails) + list(rungs)
