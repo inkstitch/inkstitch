@@ -28,8 +28,6 @@ from .base import InkstitchExtension
 
 from ..svg import PIXELS_PER_MM
 
-import unicodedata
-
 
 class LetteringSvgFontToLayers(InkstitchExtension):
     """
@@ -162,7 +160,7 @@ class LetteringSvgFontToLayers(InkstitchExtension):
 
         return baseline
 
-    def convert_glyph_to_layer(self, glyph, emsize, baseline, scale_by, hide_layer):
+    def convert_glyph_to_layer(self, glyph, emsize, baseline, scale_by, hide_layer):  # noqa C901
         """
         Converts a single glyph into a new SVG layer, applying scaling and coordinate transformation.
         """
@@ -198,7 +196,7 @@ class LetteringSvgFontToLayers(InkstitchExtension):
 
         unicode_char = glyph.get("unicode")
         if unicode_char is None:
-           
+
             glyph_name = glyph.get("glyph-name").split('.')
             if unicode_char is None:
                 if len(glyph_name) == 2:

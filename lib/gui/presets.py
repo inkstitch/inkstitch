@@ -137,6 +137,7 @@ class PresetsPanel(wx.Panel):
 
         if not overwrite and preset_name in self._load_presets():
             info_dialog(self, _('Preset "%s" already exists.  Please use another name or press "Overwrite"') % preset_name, caption=_('Preset'))
+            return
 
         self.store_preset(preset_name, self.parent.get_preset_data())
 
