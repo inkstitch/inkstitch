@@ -1,7 +1,7 @@
 ---
 title: "Caractéristiques notables d'Ink/Stitch."
 permalink: /fr/features/
-last_modified_at: 2025-01-05
+last_modified_at: 2025-08-01
 toc: false
 layout: splash
 accessibility:
@@ -138,13 +138,12 @@ import_export:
   - image_path: /assets/images/galleries/augusa/01-butterfly.jpg
     alt: "Papillon brodé sur un support"
     title: "Import et Export"
-    excerpt: "Ink/Stitch supports many popular [machine embroidery file formats](/fr/docs/file-formats)
+    excerpt: "Ink/Stitch utilise de nombreux [formats de broderie machine](/fr/docs/file-formats)
 
-              * [Import](/fr/docs/import-export) embroidery files back into Ink/Stitch and edit on stitch level.
+              * [Import](/fr/docs/import-export) de fichiers de broderie dans Ink/Stitch et édition des points.
 
-              * [Export](/fr/docs/import-export/) designs into single files or multipe file formats at the same time (batch export).
-
-              * [Batch lettering](/fr/docs/lettering/#batch-lettering) is a great export method if the same design is to be embroidered with different texts.
+              * [Export](/fr/docs/import-export/) de broderie dans un unique fichier, ou dans plusieurs formats de fichiers en même temps (export par lot).
+              * [Lettrage par lot](/fr/docs/lettering/#batch-lettering) est une excellente mméthode d'export, si l'onn souhaite broder le même dessin mais avec des textes différents.
              "
 
 resources:
