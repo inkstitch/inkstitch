@@ -135,11 +135,13 @@ import_export:
   - image_path: /assets/images/galleries/augusa/01-butterfly.jpg
     alt: "Embroidered butterfly on a shirt"
     title: "Import and Export"
-    excerpt: "[Import and Export](/docs/import-export/) many popular machine embroidery formats (including batch export)
+    excerpt: "Ink/Stitch supports many popular [machine embroidery file formats](/docs/file-formats)
 
-              * ***Writing***: CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
+              * [Import](/docs/import-export) embroidery files back into Ink/Stitch and edit on stitch level.
 
-              * ***Reading***: 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
+              * [Export](/docs/import-export/) designs into single files or multipe file formats at the same time (batch export).
+
+              * [Batch lettering](/docs/lettering/#batch-lettering) is a great export method if the same design is to be embroidered with different texts.
              "
 
 resources:

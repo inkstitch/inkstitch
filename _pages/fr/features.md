@@ -138,11 +138,13 @@ import_export:
   - image_path: /assets/images/galleries/augusa/01-butterfly.jpg
     alt: "Papillon brodé sur un support"
     title: "Import et Export"
-    excerpt: "[Import et Export](/docs/import-export/) beaucoup de formats populaires  de broderie machine (incluant des exports en masse)
+    excerpt: "Ink/Stitch supports many popular [machine embroidery file formats](/fr/docs/file-formats)
 
-              * ***Ecriture***: CSV, **DST**, **EXP** (et INF), **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
+              * [Import](/fr/docs/import-export) embroidery files back into Ink/Stitch and edit on stitch level.
 
-              * ***Lecture***: 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP** (et INF), EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
+              * [Export](/fr/docs/import-export/) designs into single files or multipe file formats at the same time (batch export).
+
+              * [Batch lettering](/fr/docs/lettering/#batch-lettering) is a great export method if the same design is to be embroidered with different texts.
              "
 
 resources:

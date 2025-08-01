@@ -125,11 +125,13 @@ import_export:
   - image_path: /assets/images/galleries/augusa/01-butterfly.jpg
     alt: "Embroidered butterfly on a shirt"
     title: "Importieren und Exportieren"
-    excerpt: "[Importieren und Speichern](/de/docs/import-export/) vieler beliebter Dateiformate für Stickmaschinen (einschließlich Batch-Export)
+    excerpt: "Ink/Stitch unterstützt viele beliebte [Dateiformate für das Maschinensticken](/de/docs/file-formats)
 
-              * ***Schreiben***: CSV, **DST**, **EXP**, **JEF**, PEC, **PES**, SVG, TXT (G-CODE), U01, **VP3**
+              * [Importiere](/de/docs/import-export) Stickdateien in Ink/Stitch um sie auf Stickebene zu bearbeiten.
 
-              * ***Lesen***: 100, 10o, BRO, DAT, DSB, **DST**, DSZ, EMD, **EXP**, EXY, FXY, GT, INB, **JEF**, JPX, KSM, MAX, MIT, NEW, PCD, PCM, PCQ, PCS, PEC, **PES**, PHB, PHC, SEW, SHV, STC, STX, TAP, TBF, TXT (G-CODE), U01, **VP3**, XXX, ZXY
+              * [Exportiere](/de/docs/import-export/) Designs in einzelne Dateien oder in mehrere Dateiformate gleichzeitig (Batch-Export).
+
+              * [Batch Lettering](/de/docs/lettering/#batch-lettering) ist eine gute Exportmethode, wenn dasselbe Motiv mit verschiedenen Texten gestickt werden soll.
              "
 
 resources:
