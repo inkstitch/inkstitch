@@ -40,11 +40,11 @@ class FontFileInfo(object):
                 hax = float(hax)
 
             glyph_name = glyph.get('glyph-name', None)
-            
+
             if glyph_name is not None:
                 glyph_name = glyph_name.split('.')
                 if len(glyph_name) == 2:
-                    if ord(unicode_char[0]) >= 57344 :
+                    if ord(unicode_char[0]) >= 57344:
                         unicode_char = glyph_name[0]
                     typographic_feature = glyph_name[1]
                     unicode_char += f'.{typographic_feature}'
