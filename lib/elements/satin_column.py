@@ -1353,6 +1353,9 @@ class SatinColumn(EmbroideryElement):
             self.contour_underlay_stitch_tolerance,
             -self.contour_underlay_inset_px, -self.contour_underlay_inset_percent/100)
 
+        if not pairs:
+            return []
+
         first_side = running_stitch.even_running_stitch(
             [points[0] for points in pairs],
             self.contour_underlay_stitch_length,
