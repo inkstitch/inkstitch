@@ -10,7 +10,7 @@ Lisez le [Tutoriel de création de police pour Ink/Stitch](/fr/tutorials/font-cr
 {: .notice--info }
 
 ## Convertir une fonte svg en calques de glyphes
-Cette extension permet de convertir une fonte svg en fichier de calques de glyphes
+Cette extension permet de convertir une fonte svg en fichier de calques de glyphes en vue d'une inclusion dans le module de lettrage.
 
 ## Répertoire personnalisé de polices {#custom-font-directory}
 
