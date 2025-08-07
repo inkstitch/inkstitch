@@ -9,6 +9,10 @@ Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem
 Ein Blick in das [Schriften für Ink/Stitch erstellen Tutorial](/de/tutorials/font-creation) lohnt sich auf jeden Fall, wenn du neue Schriften erstellen willst.
 {: .notice--info }
 
+## Convert SVG Font to Glyph Layers
+This extension allows you to convert an svg font into glyph layers.
+
+
 ## Benutzerdefinierter Ordner für Schriften
 
 Diese Erweiterung erlaubt dir, einen Ordner zu definieren, in dem du zusätzliche Schriften für das Text-Werkzeug speichern willst.
