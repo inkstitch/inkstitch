@@ -1,13 +1,17 @@
 ---
 title: "Font Tools"
 permalink: /docs/font-tools/
-last_modified_at: 2025-04-12
+last_modified_at: 2025-08-08
 toc: true
 ---
 A collection of tools suitable for font creators or those who want to add additional fonts to the Ink/Stitch [lettering tool](/docs/lettering).
 
 Read the [Ink/Stitch font creation tutorial](/tutorials/font-creation) for in-depth instrustions.
 {: .notice--info }
+
+
+## Convert SVG Font to Glyph Layers
+This extension allows you to convert an svg font into glyph layers.
 
 ## Custom Font Directory
 
