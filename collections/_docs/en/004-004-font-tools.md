@@ -11,7 +11,7 @@ Read the [Ink/Stitch font creation tutorial](/tutorials/font-creation) for in-de
 
 
 ## Convert SVG Font to Glyph Layers
-This extension allows you to convert an svg font into glyph layers.
+This extension allows you to convert an svg font into glyph layers, as needed by the lettering tool.
 
 ## Custom Font Directory
 
