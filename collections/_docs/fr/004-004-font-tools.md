@@ -9,6 +9,9 @@ Un ensemble d'outils pour les créateurs de polices ou à ceux qui souhaitent aj
 Lisez le [Tutoriel de création de police pour Ink/Stitch](/fr/tutorials/font-creation) pour des instructions approfondies.
 {: .notice--info }
 
+## Convertir une fonte svg en calques de glyphes
+Cette extension permet de convertir une fonte svg en fichier de calques de glyphes
+
 ## Répertoire personnalisé de polices {#custom-font-directory}
 
 Cette extension vous permet de définir un répertoire dans votre système de fichiers dans lequel vous souhaitez stocker les polices supplémentaires pour l'outil de lettrage.
