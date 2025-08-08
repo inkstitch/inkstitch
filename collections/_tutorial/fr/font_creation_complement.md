@@ -21,9 +21,11 @@ toc: true
 
 
 ![warning](/assets/images/tutorials/font_creation/work_in_progress.png)
-Attention : fichier en cours de rédaction. 
+
+**Attention** :
 Une partie des outils présentés ici ne font pas partie d'Ink/Stitch 3.2.2. 
-Le texte est assez long, mais il est recommandé de le lire entièrement avant de se lancer dans la création d'une fonte. {: .notice--info}
+Le texte est assez long, mais il est recommandé de le lire entièrement avant de se lancer dans la création d'une fonte. 
+{: .notice--warning }
 
 L'objet de ce tutoriel est la création d'une fonte utilisable par le module de lettrage d'Ink/Stitch à partir d'un fichier de fonte ttf ou otf.
 ## Qu'est ce qu'une fonte pour le lettrage d'Ink/Stitch?
