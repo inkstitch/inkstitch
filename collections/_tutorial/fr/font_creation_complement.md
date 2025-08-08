@@ -23,7 +23,7 @@ toc: true
 ![warning](/assets/images/tutorials/font_creation/work_in_progress.png)
 
 **Attention** :
-Une partie des outils présentés ici ne font pas partie d'Ink/Stitch 3.2.2. 
+Une partie des outils Ink/Stitch présentés ici ne font pas partie d'Ink/Stitch 3.2.2. 
 Le texte est assez long, mais il est recommandé de le lire entièrement avant de se lancer dans la création d'une fonte. 
 {: .notice--warning }
 
@@ -129,6 +129,9 @@ Vous pourrez modifier ultérieurement ces informations grâce à `Extensions > I
 La documentation est [là](/fr/docs/font-tools/#edit-json).
 ### Le crénage, c'est quoi et ça fonctionne comment ?
 Cette section est là pour les curieux, elle peut être passée au moins dans un premier temps.
+
+Le crénage est l'espacement entre les lettres ou les caractères . Le crénage se concentre sur l'aspect du texte, créant ainsi un texte lisible et agréable à l'œil.
+
 #### Où sont les informations
 En particulier, ce fichier font.json contient les informations de crénage,extraites du fichier →.svg lors de la création du fichier font.json. Elles vont très fortement contribuer au positionnement des glyphes les uns par rapports aux autres. Pour décider de la position d'un glyphe, ink/stitch utilise trois types d'information:
 - déplacer horizontalement ou verticalement un glyphe dans son calque influence sur sa position (sauf le tout premier caractère d'une ligne de texte qui lui est systématiquement à gauche toute sur la page (du moins avec un alignement des lignes à gauche). Le déplacement vertical est toujours pris en compte.
@@ -158,7 +161,7 @@ Ces deux dernières opérations se font en utilisant l'extension :
 `Extensions > Ink/Stitch > Gestion des polices > Éditer le fichier json`
 
 ## Vérifiez que tout va bien
-Si vous avez créer ces deux fichiers et qu'ils sont dans un dossier de votre dossier de fontes personnelles, votre fonte apparait dès maintenant dans le module de lettrage. La broderie de chaque lettre est paramétrée comme un remplissage automatique (si vous avez bien mis une couleur de remplissage sur chaque glyphe) ou comme un point droit (si vous avez mis une couleur de contour sur chaque glyphe). Il est trop tôt pour une broderie effective de qualité, mais tout doit être fonctionnel.
+Si vous avez créés ces deux fichiers et qu'ils sont dans un dossier de votre dossier de fontes personnelles, votre fonte apparait dès maintenant dans le module de lettrage. La broderie de chaque lettre est paramétrée comme un remplissage automatique (si vous avez bien mis une couleur de remplissage sur chaque glyphe) ou comme un point droit (si vous avez mis une couleur de contour sur chaque glyphe). Il est trop tôt pour une broderie effective de qualité, mais tout doit être fonctionnel.
 
 Vous pouvez aussi utiliser 
 
@@ -190,7 +193,8 @@ Alternativement, on peut utiliser le paramètre longueur minimum de saut pour s'
 Le lettrage d'Ink/Stitch permet à l'utilisateur d'ajouter s'il le souhaite des commandes de coupe après chaque lettre, ou chaque mot ou chaque ligne. Donc le seul endroit ou il peut être intéressant que vous en mettiez c'est à l'intérieur d'une lettre, quand celle-ci est composée de plusieurs morceaux
 
 ### Lettres avec diacritiques
-Les utilisateurs d'Ink/Stitch ont de nombreuses nationalités et pratiquent de nombreux langages, c'est pourquoi il est souhaitable que les fontes d'Ink/Stitch comportent de quoi satisfaire le plus de monde possible. Sans chercher à atteindre l'universalité, ajouter des lettres avec diacritiques permet de satisfaire un plus grand nombre d'utilisateurs
+Les utilisateurs d'Ink/Stitch ont de nombreuses nationalités et pratiquent de nombreux langages, c'est pourquoi il est souhaitable que les fontes d'Ink/Stitch comportent de quoi satisfaire le plus de monde possible. Sans chercher à atteindre l'universalité, ajouter des lettres avec diacritiques permet de satisfaire un plus grand nombre d'utilisateurs.
+Les diacritiques sont ces petits signes placés a coté d'une lettre. Ils sont souvent utilisés pour modifier la prononciation de la lettre. Les diacritiques comprennent tous les accents, mais aussi la cédille, le ogonek et autres apendices.
 
 `Extensions > Ink/Stitch > Gestion des polices> Remplir les glyphes composites` vous aide à organiser votre travail pour éviter de faire plusieurs fois le même travail de digitalisation. Cette extension permet aussi quelques autres optimisation du travail à faire.
 
@@ -269,7 +273,7 @@ Dans le cas d'une fonte en satin, ce qui est primordial est la largeur des colon
 
 
 ### Ajout ou Suppression de glyphes
-Si l'on ajoute ou supprime des glyphes après avoir créé les fichiers de la fonte , il faut impérativement lancer l'extension Modifier le fichier JSON afin que la liste des glyphes soit mise à jour. Attention si le glyphe n'était pas dans le fichier à partir duquel on a généré le fichier font.json, il faudra aller modifier la valeur horiz_adv_x du glyphe, on ne l'aura pas récupérée lors de la création du son (en revanche les infos de type hkern elles sont bien là). Pour cette raison, en cas de doute, il vaut mieux au départ embarquer trop de glyphes que pas assez !
+Si l'on ajoute ou supprime des glyphes après avoir créé les fichiers de la fonte , il faut impérativement lancer l'extension Modifier le fichier JSON afin que la liste des glyphes soit mise à jour. Attention si le glyphe n'était pas dans le fichier à partir duquel on a généré le fichier font.json, il faudra aller modifier la valeur horiz_adv_x du glyphe, on ne l'aura pas récupérée lors de la création du fichier json (en revanche les infos de type hkern elles sont bien là). Pour cette raison, en cas de doute, il vaut mieux au départ embarquer trop de glyphes que pas assez !
 
 
 ### Les fontes multicolores
