@@ -257,8 +257,7 @@ While not aiming for universality, adding letters with diacritics allows for a g
 `Extensions > Ink/Stitch > Font Management > Fill Composite Glyphs` helps you organize your work to avoid repeating the same digitizing task. 
 This extension also allows for some other optimizations.
 
-<details>
-<summary>Open for more details on using Fill composite glyphs </summary>
+#### The fill composite glyphs extension
 The goal of this extension is to help font digitizers organize their work step by step.
 
 At each step, a group of glyphs is placed at the top of the object stack, and the font creator must digitize these glyphs before moving on to the next step.
@@ -282,7 +281,7 @@ At this step, you only need to digitize comma, hyphen, and period.
 At this step, you need to digitize all the letters that have been grouped into the three groups: Uppercase, Lowercase, and Other.
 For innstannce, you'll find a copy of the period in the i and j glyphs; it's up to you to decide if this is useful to you.
 Only sinple letters need to be digitized (no accented letters in these groups).
-</details>
+
 ***Step 3***
 At this step, you need to digitize numbers, symbols, and some punctuation.
 You'll find pieces of some glyphs already included, for example, in the ";" you'll find the "." and the "," as digitized in step 1. 
