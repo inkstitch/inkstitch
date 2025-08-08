@@ -23,12 +23,12 @@ toc: true
 ![warning](/assets/images/tutorials/font_creation/work_in_progress.png)
 Attention : fichier en cours de rédaction. 
 Une partie des outils présentés ici ne font pas partie d'Ink/Stitch 3.2.2. 
-Le texte  est assez long, mais il est recommandé de le lire entièrement avant de se lancer dans la création d'une fonte. {: .notice--info}
+Le texte est assez long, mais il est recommandé de le lire entièrement avant de se lancer dans la création d'une fonte. {: .notice--info}
 
 L'objet de ce tutoriel est la création d'une fonte utilisable par le module de lettrage d'Ink/Stitch à partir d'un fichier de fonte ttf ou otf.
 ## Qu'est ce qu'une fonte pour le lettrage d'Ink/Stitch?
 
-Les fichiers qui composent une fonte du lettrage sont regroupés dans un dossier spécifique à la fonte,  qui réside dans le dossier des fontes d'Ink/Stitch (fontes intégrées à Ink/Stitch) ou dans le [dossier personnel de fonte](fr/docs/font-tools/#custom-font-directory) pour les fontes personnelles de l'utilisateur.
+Les fichiers qui composent une fonte du lettrage sont regroupés dans un dossier spécifique à la fonte, qui réside dans le dossier des fontes d'Ink/Stitch (fontes intégrées à Ink/Stitch) ou dans le [dossier personnel de fonte](fr/docs/font-tools/#custom-font-directory) pour les fontes personnelles de l'utilisateur.
 
 Chaque dossier de fonte doit comporter au moins deux fichiers :
 - un fichier font.json qui contient les caractéristiques de la fonte
@@ -39,18 +39,18 @@ Ce fichier est prévu pour une broderie qui s'effectue de gauche à droite (le s
 
 Une fonte arabe ou hébreu du lettrage voit ses glyphes définis dans un fichier ←.svg. 
 
-Certaines polices, comme par exemple  déjà vu, comportent les deux fichiers →.svg et ←.svg. Dans ce cas,  un texte multi ligne pourra être brodé en aller retour: dans le fichier →.svg, la broderie d'une lettre s'effectue de la gauche vers la droite tandis que dans le fichier ←.svg, elle s'effectue de la droite vers la gauche. Le module de lettrage  utilisera alternativement les deux fichiers sur les différentes lignes qui composent le texte.
+Certaines polices, comme par exemple déjà vu, comportent les deux fichiers →.svg et ←.svg. Dans ce cas, un texte multi ligne pourra être brodé en aller retour: dans le fichier →.svg, la broderie d'une lettre s'effectue de la gauche vers la droite tandis que dans le fichier ←.svg, elle s'effectue de la droite vers la gauche. Le module de lettrage utilisera alternativement les deux fichiers sur les différentes lignes qui composent le texte.
 
 Ces noms sont impératifs.... sauf si la fonte comporte beaucoup de glyphes, auquel cas, vous pouvez pour une fonte qui s'écrit de gauche à droite répartir vos glyphes dans plusieurs fichiers svg (pas de contrainte de nommage sur ces fichiers) que vous regroupez dans un dossier qui lui doit impérativement être nommé →.
 
 Les dossiers des fontes du module de lettrage comportent aussi:
 - un fichier preview.png (généralement 90x1100 px) qui contient l'aperçu brodé du nom de la fonte qui apparait dans le dialogue du lettrage.
-- un fichier LICENSE, qui donne des informations sur la LICENSE de la police. Pour qu'une police de broderie créée à partir d'une fonte ttf ou otf ou autre puisse être légalement intégrée au module de lettrage, il faut que la licence de la fonte d'origine le permette. Attention, les licences dites commerciales ne permettent généralement pas l'intégration dans Ink/Stich. C'est en revanche possible pour les fontes sous licence SIL (OFL), Apache et d'autres licences open source. Pour une utilisation uniquement personnelle de la fonte, moins de restrictions s'appliquent. Attention aux restrictions incluses dans la license: par exemple il est impératif de modifier le nom d'une police sous licence OFL sauf à obtenir du créateur le droit de garder le nom initial de la police.
+- un fichier LICENSE, qui donne des informations sur la LICENCE de la police. Pour qu'une police de broderie créée à partir d'une fonte ttf ou otf ou autre puisse être légalement intégrée au module de lettrage, il faut que la licence de la fonte d'origine le permette. Attention, les licences dites commerciales ne permettent généralement pas l'intégration dans Ink/Stitch. C'est en revanche possible pour les fontes sous licence SIL (OFL), Apache et d'autres licences open source. Pour une utilisation uniquement personnelle de la fonte, moins de restrictions s'appliquent. Attention aux restrictions incluses dans la licence: par exemple il est impératif de modifier le nom d'une police sous licence OFL sauf à obtenir du créateur le droit de garder le nom initial de la police.
 
 ## Choix de la fonte
-Le choix de la fonte  et sa taille dépendent essentiellement du type de fonte que l'on souhaite créer: satins, points-droits, remplissage, appliqué. Une colonne satin ne peut être ni trop étroite (on considère qu'il faut au moins 1.5mm) ni trop large (au dessus 7mm il y a des risques de fragilité, au delà de 12mm beaucoup de machines ne savent pas faire), de ce fait, des lettres où l’épaisseur du trait est très variable seront difficiles à traiter en colonne satin. Les polices avec empattement sont plus difficiles à numériser que les polices sans empattement. Pour une police en appliqué au contraire on cherchera une police assez large. Le principal élément de choix reste malgré tout l'intérêt que l'on porte à la fonte. 
+Le choix de la fonte et sa taille dépendent essentiellement du type de fonte que l'on souhaite créer: satins, points-droits, remplissage, appliqué. Une colonne satin ne peut être ni trop étroite (on considère qu'il faut au moins 1.5mm) ni trop large (au dessus 7mm il y a des risques de fragilité, au delà de 12mm beaucoup de machines ne savent pas faire), de ce fait, des lettres où l’épaisseur du trait est très variable seront difficiles à traiter en colonne satin. Les polices avec empattement sont plus difficiles à numériser que les polices sans empattement. Pour une police en appliqué au contraire on cherchera une police assez large. Le principal élément de choix reste malgré tout l'intérêt que l'on porte à la fonte. 
 
-Symétriquement, si l'on est fixé sur une fonte particulière, la forme des lettres doit être prise en compte dans les choix de pramètrage de broderie.
+Symétriquement, si l'on est fixé sur une fonte particulière, la forme des lettres doit être prise en compte dans les choix de paramètrage de broderie.
 
 
 ## Création du fichier de glyphes
@@ -96,15 +96,14 @@ Lorsque, d'une manière ou d'une autre, l'on a effacés tous les glyphes indési
 
 ##### Transformation du fichier de fonte svg en fichier de calques de glyphes
 Ouvrir le fichier svg ainsi créé dans Inkscape. Il a l'air complètement vide, c'est normal !! 
-<span color=blue>
 
 `Extensions > Ink/Stitch > Gestion des polices > Convertir la fonte svg en calques de glyphes`
 
 ![UnicodeIntervals](/assets/images/tutorials/font_creation/convert_to_glyphs.png)
-Choisissez un nombre de glyphes supérieur au nombre de glyphes de votre police, sauf si  vous  êtes en phase de test et souhaitez limiter le nombre de glyphes.
-C'est surtout  le moment  de décider quelle taille vous souhaitez pour votre police. 
+Choisissez un nombre de glyphes supérieur au nombre de glyphes de votre police, sauf si vous êtes en phase de test et souhaitez limiter le nombre de glyphes.
+C'est surtout le moment de décider quelle taille vous souhaitez pour votre police. 
 
-Pour  cela choisissez un caractère de référence dont vous savez qu'il est dans votre police svg  (le M est une référence  courante) et décidez de la hauteur souhaitée pour lui.
+Pour cela choisissez un caractère de référence dont vous savez qu'il est dans votre police svg (le M est une référence courante) et décidez de la hauteur souhaitée pour lui.
 
 Cliquez sur `Appliquer`.
 
@@ -118,85 +117,80 @@ Sélectionnez tous les chemins dans tous les calques (si vos préférences inksc
 Si vous souhaitez créer une police qui se brode de gauche à droite, enregistrez ce fichier sous le nom →.svg dans un nouveau dossier situé dans votre dossier personnel de fontes.
 
 ## Création du fichier font.json
-Une fois que le fichier →.svg  existe,  il est possible de créer le fichier font.json associé. Il est recommandé de faire cette opération dès maintenant.
+Une fois que le fichier →.svg existe, il est possible de créer le fichier font.json associé. Il est recommandé de faire cette opération dès maintenant.
 
 `Extensions > Ink/Stitch > Gestion des polices > Génerer JSON....`
 
 Cette extension va extraire des informations du fichier →.svg et les stocker dans un fichier font.json. Le dialogue de cette extension vous permet aussi d'ajouter des informations. La documentation est [ici](/fr/docs/font-tools/#generate-json).
 
-Vous pourrez modifier ultérieurement ces informations grâce à  `Extensions > Ink/Stitch > Gestion des polices > Modifier le fichier JSON....`
+Vous pourrez modifier ultérieurement ces informations grâce à `Extensions > Ink/Stitch > Gestion des polices > Modifier le fichier JSON....`
 La documentation est [là](/fr/docs/font-tools/#edit-json).
 ### Le crénage, c'est quoi et ça fonctionne comment ?
 Cette section est là pour les curieux, elle peut être passée au moins dans un premier temps.
 #### Où sont les informations
-En particulier, ce fichier font.json contient les informations de crénage,extraites du fichier →.svg lors de la création du fichier font.json.  Elles vont très fortement contribuer au positionnement des glyphes les uns par rapports aux autres. Pour décider de la position d'un glyphe,  ink/stitch utilise trois types  d'information:
+En particulier, ce fichier font.json contient les informations de crénage,extraites du fichier →.svg lors de la création du fichier font.json. Elles vont très fortement contribuer au positionnement des glyphes les uns par rapports aux autres. Pour décider de la position d'un glyphe, ink/stitch utilise trois types d'information:
 - déplacer horizontalement ou verticalement un glyphe dans son calque influence sur sa position (sauf le tout premier caractère d'une ligne de texte qui lui est systématiquement à gauche toute sur la page (du moins avec un alignement des lignes à gauche). Le déplacement vertical est toujours pris en compte.
-- des informations dites "horiz_adv_x". Il y a une valeur par défaut, et on peut associer une valeur à chaque glyphe. Le fichier de fonte généré par FontForge comporte cette information pour tous les glyphes qui n'ont pas été effacés.  Cette information est intégrée au fichier font.json lors de sa création.
-- des informations dites "hkern". Celles ci ne sont pas associées à des glyphes mais à des couples de glyphes (pas tous). Le fichier de fonte généré par FontForge comporte cette informations pour tous les couples de  glyphes pour lesquels le concepteur de la fonte ttf ou otf a donné cette information, que les glyphes aient été effacés ou non. Cette information est intégrée au fichier font.json lors de sa création.
+- des informations dites "horiz_adv_x". Il y a une valeur par défaut, et on peut associer une valeur à chaque glyphe. Le fichier de fonte généré par FontForge comporte cette information pour tous les glyphes qui n'ont pas été effacés. Cette information est intégrée au fichier font.json lors de sa création.
+- des informations dites "hkern". Celles ci ne sont pas associées à des glyphes mais à des couples de glyphes (pas tous). Le fichier de fonte généré par FontForge comporte cette informations pour tous les couples de glyphes pour lesquels le concepteur de la fonte ttf ou otf a donné cette information, que les glyphes aient été effacés ou non. Cette information est intégrée au fichier font.json lors de sa création.
 #### Schématiquement, ça fonctionne comment ?
-Ink/stitch décompose un texte en ligne, une ligne en mots et un mot en glyphes.
+Ink/Stitch décompose un texte en ligne, une ligne en mots et un mot en glyphes.
 
 Supposons que l'on veuille broder le mot Test
 On suppose un alignement à gauche, et on parle ici de la position sur l'horizontale. L'extrémité gauche de la page est en x=0
 
-- En début de ligne,  le curseur est à 0, le premier caractère "T" est dessiné en démarrant en x =0
+- En début de ligne, le curseur est à 0, le premier caractère "T" est dessiné en démarrant en x =0
 - avant de broder la suite, le curseur est
-  * avancé de la valeur horiz_adv_x  associée à T  (la sienne si elle existe, sinon la valeur par défaut)
-  * si le dessin du e, commence un peu avant le bord gauche de la page, on recule le curseur d'autant, si il commence après cela avance le curseur
-  * si il y a une valeur hkern pour la paire "Te", on décale d'autant (une valeur positive diminue l’écart, une valeur négative l'augmente)
+ * avancé de la valeur horiz_adv_x associée à T (la sienne si elle existe, sinon la valeur par défaut)
+ * si le dessin du e, commence un peu avant le bord gauche de la page, on recule le curseur d'autant, si il commence après cela avance le curseur
+ * si il y a une valeur hkern pour la paire "Te", on décale d'autant (une valeur positive diminue l’écart, une valeur négative l'augmente)
 
-   ....et ainsi de suite pour toutes les lettres du mots
+ ....et ainsi de suite pour toutes les lettres du mots
 
-#### Comment rectifier un eventuel problème de crénage
+#### Comment rectifier un éventuel problème de crénage
 Si vous constatez à l'usage un problème de crénage avec un certain glyphe :
 - vérifiez que le glyphe est placé correctement dans son calque, il peut avoir été déplacé malencontreusement.
 - si le problème se produit avec la plupart des autres glyphes, il faut modifier la valeur de horiz_adv_x pour ce glyphe
 - si le problème ne se produit qu'avec quelques autres glyphes, il faut modifier (ou ajouter) les valeurs de hkern pour les couples de glyphes concernés
 
 Ces deux dernières opérations se font en utilisant l'extension :
-`Extensions > Ink/Stitch > Gestion des polices > Editer le fichier json`
-
-
-
-
-
+`Extensions > Ink/Stitch > Gestion des polices >  Éditer le fichier json`
 
 ## Vérifiez que tout va bien
 Si vous avez créer ces deux fichiers et qu'ils sont dans un dossier de votre dossier de fontes personnelles, votre fonte apparait dès maintenant dans le module de lettrage. La broderie de chaque lettre est paramétrée comme un remplissage automatique (si vous avez bien mis une couleur de remplissage sur chaque glyphe) ou comme un point droit (si vous avez mis une couleur de contour sur chaque glyphe). Il est trop tôt pour une broderie effective de qualité, mais tout doit être fonctionnel.
 
 Vous pouvez aussi utiliser 
 
-`Extensions > Ink/Stitch > Gestion des polices > Test de police` pour voir l'ensemble des glyphes des votre police. [Voir la documentation](/fr/docs/font-tools/#font-sampling). A tout instant, Test de police vous permettra de voir tous les glyphes non vérouillés de votre fichier de calques de glyphes.
+`Extensions > Ink/Stitch > Gestion des polices > Test de police` pour voir l'ensemble des glyphes des votre police. [Voir la documentation](/fr/docs/font-tools/#font-sampling). A tout instant, Test de police vous permettra de voir tous les glyphes non verrouillés de votre fichier de calques de glyphes.
 
 
-## Passer à une fonte réellemment brodable
-Il faut maintenant passer de lettres qui ont été concues pour être imprimées à des lettres prêtes à être brodées.
+## Passer à une fonte réellement brodable
+Il faut maintenant passer de lettres qui ont été conçues pour être imprimées à des lettres prêtes à être brodées.
 Chaque lettre est en soi une petite broderie, et toute la problématique usuelle des broderies s'applique.
 
-Il est **très fortement recommmmandé de traiter entièrement quelques lettres**  par exemple  A, H, M , G, o, a, p pour avoir des lettres aux dessins assez différents, et de vérifier que tout se passe bien  à la broderie. C'est le bon moment de décider par exemple comment [traiter les pointes](/fr/tutorials/satin-edges/) d'une fonte en colonne satin. Répondre à cette question rapidement vous permettra ensuite d'avoir la même approche sur toutes les pointes de la fonte. Quels paramètres vous semblent bien convenir par exemple quelle densité, quelle compensation. Pas trop d'inquiétude à ce sujet, il sera facile vers la fin du processus d'uniformiser les paramètres et de les modifier globalement pour l'ensemble de la police.
+Il est **très fortement recommandé de traiter entièrement quelques lettres** par exemple A, H, M , G, o, a, p pour avoir des lettres aux dessins assez différents, et de vérifier que tout se passe bien à la broderie. C'est le bon moment de décider par exemple comment [traiter les pointes](/fr/tutorials/satin-edges/) d'une fonte en colonne satin. Répondre à cette question rapidement vous permettra ensuite d'avoir la même approche sur toutes les pointes de la fonte. Quels paramètres vous semblent bien convenir par exemple quelle densité, quelle compensation. Pas trop d'inquiétude à ce sujet, il sera facile vers la fin du processus d'uniformiser les paramètres et de les modifier globalement pour l'ensemble de la police.
 
 
 Le fait de travailler sur une fonte implique quelques problèmes particuliers.
 
 ### Les sauts de fil et les points d'arrêts.
 #### Point trop n'en faut
-En général plusieurs lettres seront brodées et vous voudrez avoir aussi peu de sauts et de point d'arrêt que possible.  Un bon routage doit permettre la broderie d'une lettre connectée sans saut de fil, bien sur si la lettre est disconnectée (par exemple à cause d'accent) ou entre deux lettres, il est possible qu'il faille avoir des sauts de fil, mais à vous de faire en sorte qu'il y en ait le moins possible. Avant et après chaque saut, la machine fait un point d'arrêt, ce qui la ralentit et a de plus tendance à déformer la broderie. Evitez les donc autant que possible. Si la fonte doit être intégrée à Ink/Stitch, prenez en compte le fait que tout le monde n'a pas une machine qui coupe les fils, donc évitez les grands déplacements  entre deux lettres, surtout si la machine vient à broder par dessus. Souvent, l'on commence une lettre en bas à gauche et on la termine en bas à droit justement pour eviter cela. 
-Si vous n'êtes pas très familier avec les notions de points  d'arrêts et de saut de fil, [la documentation est là](/fr/docs/stitches/lock-stitches/).
+En général plusieurs lettres seront brodées et vous voudrez avoir aussi peu de sauts et de point d'arrêt que possible. Un bon routage doit permettre la broderie d'une lettre connectée sans saut de fil, bien sur si la lettre est disconnectée (par exemple à cause d'accent) ou entre deux lettres, il est possible qu'il faille avoir des sauts de fil, mais à vous de faire en sorte qu'il y en ait le moins possible. Avant et après chaque saut, la machine fait un point d'arrêt, ce qui la ralentit et a de plus tendance à déformer la broderie. Evitez les donc autant que possible. Si la fonte doit être intégrée à Ink/Stitch, prenez en compte le fait que tout le monde n'a pas une machine qui coupe les fils, donc évitez les grands déplacements entre deux lettres, surtout si la machine vient à broder par dessus. Souvent, l'on commence une lettre en bas à gauche et on la termine en bas à droit justement pour éviter cela. 
+Si vous n'êtes pas très familier avec les notions de points d'arrêts et de saut de fil, [la documentation est là](/fr/docs/stitches/lock-stitches/).
 
 Si votre fonte est en colonne satin, essayez de faire en sorte que les points d'arrêts ne soient pas localisés sur les pointes des colonnes satins, c'est là qu'ils sont le plus visibles. Vous pouvez utiliser une commande position de fin sur une colonne satin qui est suivie d'un saut pour forcer la position du point d'arrêt.
-#### Mais il en faut suffisement.
-Il faut aussi prendre un compte que de nombreux utilisateurs aiment a couper les sauts de fils entre les lettres ou entre le corps d'une lettre et son accent. Pour que la coupe puisse se faire sans que la broderie en souffre, il faut que le saut de fil soit réellemment un saut de fil au sens d'Ink/Stitch, c'est à dire suivi et précédé d'un point d'arrêt, en particulier lorsque le saut suit une partie constitutive de la lettre (par exemple un colonne satin), il n'est pas forcement necessaire entre deux sous-chemins (par exemple un sous chemin dans le corps de la lettre suivi d'un sous-chemin dans un accent)
+#### Mais il en faut suffisamment.
+Il faut aussi prendre un compte que de nombreux utilisateurs aiment a couper les sauts de fils entre les lettres ou entre le corps d'une lettre et son accent. Pour que la coupe puisse se faire sans que la broderie en souffre, il faut que le saut de fil soit réellement un saut de fil au sens d'Ink/Stitch, c'est à dire suivi et précédé d'un point d'arrêt, en particulier lorsque le saut suit une partie constitutive de la lettre (par exemple un colonne satin), il n'est pas forcement nécessaire entre deux sous-chemins (par exemple un sous chemin dans le corps de la lettre suivi d'un sous-chemin dans un accent)
 
-`Extensions > Ink/Stitch > Gestion des polices > Forcer des points d'arrêt` permet de simplifier le processus. En particulier pour les fontes en colonnes satin constituées de lettres détachées, il est possible de forcer les points d'arrêts sur la derniere colonne satin de chaque glyphe.  Pour gérer les points d'arrêt à la fin des accents, il est possible de grouper les élémemnts constitutifs des accents dans un groupe puis de forcer les points d'arrêt sur le dernier élément de chaque groupe. La docummention se trouve [là](/fr/docs/font-tools/#force-lock-stitches).
+`Extensions > Ink/Stitch > Gestion des polices > Forcer des points d'arrêt` permet de simplifier le processus. En particulier pour les fontes en colonnes satin constituées de lettres détachées, il est possible de forcer les points d'arrêts sur la dernière colonne satin de chaque glyphe. Pour gérer les points d'arrêt à la fin des accents, il est possible de grouper les éléments constitutifs des accents dans un groupe puis de forcer les points d'arrêt sur le dernier élément de chaque groupe. La documentation se trouve [là](/fr/docs/font-tools/#force-lock-stitches).
 Alternativement, on peut utiliser le paramètre longueur minimum de saut pour s'assurer de la présence de points d'arrêts
 
 ### Coupes
-Le lettrage d'Ink/Stitch permet  à l'utilisateur d'ajouter s'il le souhaite des commmandes de coupe après chaque lettre, ou chaque mot ou chaque ligne. Donc le seul endroit ou il peut être interessant que vous en mettiez c'est à l'intérieur d'une lettre, quand celle-ci est composée de plusieurs morceaux
+Le lettrage d'Ink/Stitch permet à l'utilisateur d'ajouter s'il le souhaite des commandes de coupe après chaque lettre, ou chaque mot ou chaque ligne. Donc le seul endroit ou il peut être intéressant que vous en mettiez c'est à l'intérieur d'une lettre, quand celle-ci est composée de plusieurs morceaux
 
 ### Lettres avec diacritiques
-Les utilisateurs d'Ink/Stitch ont de nombreuses nationalités et pratiquent de nombreux langages, c'est pourquoi il est souhaitable que les fontes d'Ink/Stich comportent de quoi satisfaire le plus de monde possible. Sans chercher à atteindre l'universalité, ajouter des lettres avec diacritiques permet de satisfaire un plus grand nombre d'utilisateurs
+Les utilisateurs d'Ink/Stitch ont de nombreuses nationalités et pratiquent de nombreux langages, c'est pourquoi il est souhaitable que les fontes d'Ink/Stitch comportent de quoi satisfaire le plus de monde possible. Sans chercher à atteindre l'universalité, ajouter des lettres avec diacritiques permet de satisfaire un plus grand nombre d'utilisateurs
 
-`Extensions > Ink/Stitch > Gestion des polices> Remplir les glyphs composite` vous aide à  organiser votre travail pour éviter de faire plusieurs fois le même travail de digitalisation. Cette extension permet aussi quelques autres optimisation du travail à faire.
+`Extensions > Ink/Stitch > Gestion des polices> Remplir les glyphes composites` vous aide à organiser votre travail pour éviter de faire plusieurs fois le même travail de digitalisation. Cette extension permet aussi quelques autres optimisation du travail à faire.
 
 <details>
 <summary>Ouvrir pour plus de détails sur l'utilisation de remplir les glyphes composites</summary>
@@ -206,50 +200,50 @@ L'objectif de cette extension est d'aider le numériseur de polices à organiser
 
 Les étapes sont organisées de manière à diviser le travail en plus petits morceaux et à maximiser la réutilisation des lettres déjà numérisées.
 
-Il faut vraiment tester ce qu'on fait à une étape car ce sera recopier pour d'autres lettres et on veut eviter de devoir corriger plusieurs fois la  même bêtise.
-Mes tests :
-- utiliser test de polices pour generer toutes les lettres
-	- detection de problème
-	- simulation pour chasser les sauts malvenus
-	- aperçu realiste
+Il faut vraiment tester ce qu'on fait à une étape car ce sera recopier pour d'autres lettres et on veut éviter de devoir corriger plusieurs fois la même bêtise:
+
+- utiliser test de polices pour générer toutes les lettres non vérouillées
+	- détection de problème 
+	- simulation pour chasser les sauts malvenus. A faire de préférence avec les lettres augmentées au maximum permis
+	- aperçu réaliste
 	- broderie en vraie
 
-***Etape 1***
+***Étape 1***
 
 Le code prévient s'il y a des glyphes en double et supprime les calques indésirables (par exemple chemin vide, ou pas de chemin du tout)
 A cette étape, il faut juste numériser la virgule, le trait d'union et le point. 
 
-***Etape 2***
+***Étape 2***
 A cette étape, on doit digitaliser toutes les lettres qui ont été regroupées dans les trois groupes Majuscule, Minuscule et Autres.
 Vous trouverez le point dans les glyphes du i et du j, a vous de voir si ça vous est utile....
 Seules les lettres simples sont à faire (aucune lettre à accent dans ces groupes.
 
-***Etape 3***
-A cette étape il faut, digitaliser des chiffres, des symboles  et une  partie de la ponctuation.
+***Étape 3***
+A cette étape il faut, digitaliser des chiffres, des symboles et une partie de la ponctuation.
 Vous trouverez dans certains glyphes des morceaux déjà inclus, par exemple dans le ";" vous retrouverez le "." et la ",", digitalisés à l'étape 1. A vous de positionner correctement ou de supprimer . Par exemple, le "1" contient le "l" et le "I", si ils sont trop différents du "1" pour être utiles, il faut les supprimer.
 
-***Etape 4***
-Fin de la ponctuation. Vous trouverez le "(" dans le ")", a vous de retourner,  positionner  et modifier ce qui doit l'être. Normalement, à cette étape tout est prérempli avec votre travail déjà fait
+***Étape 4***
+Fin de la ponctuation. Vous trouverez le "(" dans le ")", a vous de retourner, positionner et modifier ce qui doit l'être. Normalement, à cette étape tout est prérempli avec votre travail déjà fait
 
-***Etape 5***
+***Étape 5***
 Apostrophes, Guillemets, et simple Accents
 Il existe plusieurs types d'apostrophes et de guillemets selon la langue utilisée.
 Si vous en avez numérisé au moins une, l'extension ajoute ici les autres
 Idem pour les guillemets. En principe rien à faire pour eux.
-En revanche il faut digitaliser les accents simples, lorsque cela a été possible ils sont préremplis avec un symbole equivalent déjà traité. Dans le pire des cas, l'accent est utiliser par des lettres de la fonte, mais est absent de la fonte, dans ce cas, une lettre qui l'utilise a été inserrée dans son calque afin que vous sachiez quoi digitaliser
+En revanche il faut digitaliser les accents simples, lorsque cela a été possible ils sont préremplis avec un symbole équivalent déjà traité. Dans le pire des cas, l'accent est utilisé par des lettres de la fonte, mais est absent de la fonte, dans ce cas, une lettre qui l'utilise a été inserrée dans son calque afin que vous sachiez quoi digitaliser
 
-***Etape 6***
+***Étape 6***
 Accents complexes:
 Étape 6
-À cette étape, nous traitons les autres signes diacritiques. uis supprimer la lettre supplémentaire).
-Ceux là réutilisent ceux de l'étape précédente. Ca concerne des accents doublés ou dont la position est différente. Les calques sont préremplis, mais il y a du travail de positionnement à faire, c'est pourquoi une lettre utilisant l'accent a parfois ete ajoutée pour savoir ou positionner le nouvel accent. Si toutefois vous êtes concerné, ce sont des accents pas vraiment  utilisés en Français....
+À cette étape, nous traitons les autres signes diacritiques.
+Ceux là réutilisent ceux de l'étape précédente. Cela concerne des accents doublés ou dont la position est différente. Les calques sont préremplis, mais il y a du travail de positionnement à faire, c'est pourquoi une lettre utilisant l'accent a parfois été ajoutée pour savoir où positionner le nouvel accent. Si toutefois vous êtes concerné, ce sont des accent utilisées seulement dans certains langues....
 
-***Etape 7***
+***Étape 7***
 Lettres ayant un seul accent:
-Vous trouverez leur calque prérempli avec la lettre et l'accent, a vous de les composer pour faire la lettre accentuée
+Vous trouverez leur calque prérempli avec la lettre et l'accent, à vous de les composer pour faire la lettre accentuée.
 
-***Etape 8***
-Lettres avec deux accents ou plus..... pas  sur que vous soyez concerné.
+***Étape 8***
+Lettres avec deux accents ou plus..... pas sur que vous soyez concerné.
 
 
 Vous pouvez aussi utilisez cette extension sur n'importe quel fichier de fonte pour
@@ -259,18 +253,18 @@ Remarque : oui on peut laisser les lettres groupées, ça ne gène pas le lettra
 </details>
 
 ### Les utilisateurs d'Ink/Stitch
-Il  leur arrive de faire des choses étranges. Parmi les précautions à prendre:
-#### Eviter les soucis dus à des choix inhabituels de préférences
+Il leur arrive de faire des choses étranges. Parmi les précautions à prendre:
+#### Éviter les soucis dus à des choix inhabituels de préférences
 Donner une valeur locale aux paramètres "longueur minimum de saut" et "longueur minimum de point" vous permet de vous assurer que l'utilisateur ne brodera pas votre fonte avec des valeurs étranges. 
 #### Redimensionnements intempestifs
-Les utilisateurs sont supposés redimensioner les fontes dans l'outil de lettrage. La réalité est parfois autre. Une précaution utile pour les lettrages en colonne satin est d'ajouter une longueur maximum de point.
+Les utilisateurs sont supposés redimensionner les fontes dans l'outil de lettrage. La réalité est parfois autre. Une précaution utile pour les lettrages en colonne satin est d'ajouter une longueur maximum de point.
 
 ### Réglage du redimensionement
 Le créateur de fonte doit indiquer dans le json les valeurs de redimensionnement possible pour la fonte. Cela necessite d'essayer et de determiner ce qui convient. 
 
 Dans le cas d'une fonte en satin, ce qui est primordial est la largeur des colonnes. 
 
-`Extensions > Ink/Stitch > Résolution de problèmes> Information sur l'élément` vous permet de connaitre la longueur maximum et la longueur minimum des points de tous les élements de broderie. Vous pouvez  depuis l'onglet  Aide, copier les résultats dans le presse papier puis dans un tableur pour trier et trouver quelles sont vos colonnes les plus larges et les plus étroites. Ces valeurs vous aideront a décider des redimensionements possibles pour votre fonte.
+`Extensions > Ink/Stitch > Résolution de problèmes> Information sur l'élément` vous permet de connaitre la longueur maximum et la longueur minimum des points de tous les éléments de broderie. Vous pouvez depuis l'onglet Aide, copier les résultats dans le presse papier puis dans un tableur pour trier et trouver quelles sont vos colonnes les plus larges et les plus étroites. Ces valeurs vous aideront a décider des redimensionnements possibles pour votre fonte.
 
 
 ### Ajout ou Suppression de glyphes
@@ -278,18 +272,18 @@ Si l'on ajoute ou supprime des glyphes après avoir créé les fichiers de la fo
 
 
 ### Les fontes multicolores
-Si l'on souhaite que le résultat du lettrage puisse être trié selon les couleurs, il  y a deux manipulations à faire
-- le prévoir dans le fichier font.json (soit à la création soit en éditant le  fichier), la fonte doit être déclarée comme "triable".
-- attacher à chaque chemin un [index de couleur](https://inkstitch.org/fr/docs/font-tools/#set-color-index). Dans la plupart des cas (toutes les lettres ont les mêmes couleurs dans le même ordre , tous les chemins d'une couleur donné à l'interieur d'un glyphe sont consécutifs) on peut tout afficher dans tous les calques, choisir un des glyphes, selectionner le premier objet  à broder, sélectionner tous les objets de la mêmme couleur(selectionner même couleur de fond ou selectionner même couleur de contour,ou les deux séquentiellement) et leur attribuer l'index un, puis choisir un objet de la prochaine couleur à broder, sélectionner tous les objets de la même couleur, leur attribuer l'index deux, etc.... Dans les cas plus compliqués il faudra réflechir un peu plus pour déterminer les index.
+Si l'on souhaite que le résultat du lettrage puisse être trié selon les couleurs, il y a deux manipulations à faire
+- le prévoir dans le fichier font.json (soit à la création soit en éditant le fichier), la fonte doit être déclarée comme "triable".
+- attacher à chaque chemin un [index de couleur](https://inkstitch.org/fr/docs/font-tools/#set-color-index). Dans la plupart des cas (toutes les lettres ont les mêmes couleurs dans le même ordre , tous les chemins d'une couleur donné à l'intérieur d'un glyphe sont consécutifs) on peut tout afficher dans tous les calques, choisir un des glyphes, sélectionner le premier objet à broder, sélectionner tous les objets de la même couleur (sélectionner même couleur de fond ou sélectionner même couleur de contour,ou les deux séquentiellement) et leur attribuer l'index un, puis choisir un objet de la prochaine couleur à broder, sélectionner tous les objets de la même couleur, leur attribuer l'index deux, etc.... Dans les cas plus compliqués il faudra réfléchir un peu plus pour déterminer les index.
 
 
 
-### limites de l'outil de lettrage
-On ne peut pas (encore) utiliser toutes les fonctionalités d'ink/stitch dans les fichiers de calques,par exemple  les clones, les effets de chemins, les dégradés   ne sont pas gérés correctement par le lettrage.
-On ne peut pas (encore) écrire une police  pour toutes les langues du monde, mais depuis inkstitch 3.2.0, les variantes contextuelles de l'alphabet arabe sont reconnues.
+### Limites de l'outil de lettrage
+On ne peut pas (encore) utiliser toutes les fonctionalités d'ink/stitch dans les fichiers de calques, par exemple les clones, les effets de chemins, les dégradés ne sont pas gérés par le lettrage.
+On ne peut pas (encore) écrire une police pour toutes les langues du monde, mais depuis inkstitch 3.2.0, les variantes contextuelles de l'alphabet arabe sont reconnues.
 
 ## Un petit plus bien sympathique
-il est possible d'avoir des calques  multiglyphes, pas seulement  pour les ligatures. Par exemple dans la fonte allegria55, il existe un GlyphLayer-Inkscape_logo qui contient le logo d'inkscape. 
+il est possible d'avoir des calques multiglyphes, pas seulement pour les ligatures. Par exemple dans la fonte allegria55, il existe un GlyphLayer-Inkscape_logo qui contient le logo d'inkscape. 
 
 
 
