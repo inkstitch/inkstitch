@@ -2,7 +2,7 @@
 permalink: /fr/tutorials/font_creation_complement/
 title: "Création de fonte pour Ink/Stitch compléments "
 language: fr
-last_modified_at: 2025-06-22
+last_modified_at: 2025-08-08
 excerpt: "Création de fonte pour Ink/Stitch "
 image: "/assets/images/tutorials/font_creation_complement/multifont3.jpg"
 tutorial-type: 
@@ -21,12 +21,12 @@ toc: true
 
 
 ![warning](/assets/images/tutorials/font_creation/work_in_progress.png)
+[!IMPORTANT] Attention : fichier en cours de rédaction. 
+[!NOTE] Une partie des outils présentés ici ne font pas partie d'Ink/Stitch 3.2.2. 
 
-Attention : fichier en cours de rédaction
+[!TIP] Le texte  est assez long, mais il est recommandé de le lire entièrement avant de se lancer dans la création d'une fonte. 
 
-Le texte  est assez long, mais il est recommandé de le lire entièrement avant de se lancer dans la création d'une fonte.....
-
-L'objet de ce tutoriel est la création d'une fonte utilisable par le module de lettrage d'Ink/Stitch.
+L'objet de ce tutoriel est la création d'une fonte utilisable par le module de lettrage d'Ink/Stitch à partir d'un fichier de fonte ttf ou otf.
 ## Qu'est ce qu'une fonte pour le lettrage d'Ink/Stitch?
 
 Les fichiers qui composent une fonte du lettrage sont regroupés dans un dossier spécifique à la fonte,  qui réside dans le dossier des fontes d'Ink/Stitch (fontes intégrées à Ink/Stitch) ou dans le [dossier personnel de fonte](fr/docs/font-tools/#custom-font-directory) pour les fontes personnelles de l'utilisateur.
