@@ -295,9 +295,10 @@ You'll find pieces of some glyphs already included, for example, in the ";" you'
 It's up to you to position them correctly or delete them. Also, the "1" contains the "l" and the "I." If they're too different from the "1" to be useful, delete them.
 
 ***Step 4***
-Last part of punctuation. 
 
-You'll find the "(" in the ")." It's up to you to return, position, and modify what needs to be modified. 
+Last part of punctuation : creating the closing punctuation using the opening punctuation.
+
+For instance, You'll find the "(" in the ")." It's up to you to return, position, and modify what needs to be modified. 
 
 Normally, at this stage, everything is pre-filled with your already done work.
 
