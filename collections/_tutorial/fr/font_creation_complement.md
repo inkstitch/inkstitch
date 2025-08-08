@@ -55,20 +55,29 @@ Symétriquement, si l'on est fixé sur une fonte particulière, la forme des let
 
 
 ## Création du fichier de glyphes
+
 En plus de respecter les conventions de nommage, tout fichier de glyphes doit:
 - comporter un calque par glyphe et le calque qui contient le glyphe A doit impérativement s'appeler GlyphLayer-A.
 - un guide nommé "baseline" qui correspond a la ligne sur laquelle on écrit. Ink/Stitch a besoin de ce guide pour que le lettrage le long d'un chemin fonctionne correctement.
 - il peut comporter d'autres éléments
 
-### A la main
-Il est tout a fait possible de créer manuellement un fichier de glyphe, mais c'est rarement la meilleure option.
+<details>
+	<summary> Ouvrez pour voir les différentes méthodes de création d'un fichier de glyphes</summary>
 
-### A partir de fichiers de broderie
+<details>
+<summary>
+**A la main**
+</summary>
+Il est tout a fait possible de créer manuellement un fichier de glyphe, mais c'est rarement la meilleure option.
+</details>
+<details>
+<summary>A partir de fichiers de broderie</summary>
 
 Si vous disposez déjà d'un ensemble de fichiers de broderie (un fichier par lettre , dans un format machine ou en format svg), vous pouvez utiliser l'extension
 [lettres vers police](/fr/docs/font-tools/#letters-to-font) pour regrouper tous ces glyphes dans un unique fichier de glyphes. 
-
-### A partir d'une fonte ttf ou otf
+</details>
+<details>
+<summary>A partir d'une fonte ttf ou otf </summary>
 
 Dans ce cas vous pouvez utilisez [FontForge](https://fontforge.org/en-US/) pour créer un fichier de fonte svg, puis utiliser Ink/Stitch pour transformer ce fichier en fichier de calques de glyphe.
 #### Création du fichier de fonte svg avec FontForge
@@ -116,7 +125,8 @@ Les chemins de ce fichier ont leurs couleurs de contour et de remplissage indét
 Sélectionnez tous les chemins dans tous les calques (si vos préférences inkscape n'autorisent pas la sélection d'objets cachés vous devrez montrer tous les objets pour cela), et donnez leur une couleur de remplissage, dites aussi qu'il n'y a pas de couleur de contour (ou donnez une couleur de contour et dites qu'il n'y a pas de couleur de fond). Vous pouvez masquez à nouveau les calques.
 
 Si vous souhaitez créer une police qui se brode de gauche à droite, enregistrez ce fichier sous le nom →.svg dans un nouveau dossier situé dans votre dossier personnel de fontes.
-
+</details>
+</details>
 
 ## Création du fichier font.json
 Une fois que le fichier →.svg  existe,  il est possible de créer le fichier font.json associé. Il est recommandé de faire cette opération dès maintenant.
@@ -147,6 +157,16 @@ On suppose un alignement à gauche, et on parle ici de la position sur l'horizon
   * si il y a une valeur hkern pour la paire "Te", on décale d'autant (une valeur positive diminue l’écart, une valeur négative l'augmente)
 
    ....et ainsi de suite pour toutes les lettres du mots
+
+#### Comment rectifier un eventuel problème de crénage
+Si vous constatez à l'usage un problème de crénage avec un certain glyphe :
+- vérifiez que le glyphe est placé correctement dans son calque, il peut avoir été déplacé malencontreusement.
+- si le problème se produit avec la plupart des autres glyphes, il faut modifier la valeur de horiz_adv_x pour ce glyphe
+- si le problème ne se produit qu'avec quelques autres glyphes, il faut modifier (ou ajouter) les valeurs de hkern pour les couples de glyphes concernés
+
+Ces deux dernières opérations se font en utilisant l'extension :
+`Extensions > Ink/Stitch > Gestion des polices > Editer le fichier json`
+
 
 
 
