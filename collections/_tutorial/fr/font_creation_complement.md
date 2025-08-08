@@ -153,7 +153,7 @@ Si vous constatez à l'usage un problème de crénage avec un certain glyphe :
 - si le problème ne se produit qu'avec quelques autres glyphes, il faut modifier (ou ajouter) les valeurs de hkern pour les couples de glyphes concernés
 
 Ces deux dernières opérations se font en utilisant l'extension :
-`Extensions > Ink/Stitch > Gestion des polices >  Éditer le fichier json`
+`Extensions > Ink/Stitch > Gestion des polices > Éditer le fichier json`
 
 ## Vérifiez que tout va bien
 Si vous avez créer ces deux fichiers et qu'ils sont dans un dossier de votre dossier de fontes personnelles, votre fonte apparait dès maintenant dans le module de lettrage. La broderie de chaque lettre est paramétrée comme un remplissage automatique (si vous avez bien mis une couleur de remplissage sur chaque glyphe) ou comme un point droit (si vous avez mis une couleur de contour sur chaque glyphe). Il est trop tôt pour une broderie effective de qualité, mais tout doit être fonctionnel.
@@ -279,16 +279,11 @@ Si l'on souhaite que le résultat du lettrage puisse être trié selon les coule
 
 
 ### Limites de l'outil de lettrage
-On ne peut pas (encore) utiliser toutes les fonctionalités d'ink/stitch dans les fichiers de calques, par exemple les clones, les effets de chemins, les dégradés ne sont pas gérés par le lettrage.
-On ne peut pas (encore) écrire une police pour toutes les langues du monde, mais depuis inkstitch 3.2.0, les variantes contextuelles de l'alphabet arabe sont reconnues.
+On ne peut pas (encore) utiliser toutes les fonctionalités d'ink/Stitch dans les fichiers de calques, par exemple les clones, les effets de chemins, les dégradés ne sont pas gérés par le lettrage.
+On ne peut pas (encore) écrire une police pour toutes les langues du monde, mais depuis Ink/Stitch 3.2.0, les variantes contextuelles de l'alphabet arabe sont reconnues.
 
 ## Un petit plus bien sympathique
 il est possible d'avoir des calques multiglyphes, pas seulement pour les ligatures. Par exemple dans la fonte allegria55, il existe un GlyphLayer-Inkscape_logo qui contient le logo d'inkscape. 
-
-
-
-
-
 
 
 
