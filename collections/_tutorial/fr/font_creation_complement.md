@@ -129,9 +129,7 @@ Vous pourrez modifier ultérieurement ces informations grâce à `Extensions > I
 La documentation est [là](/fr/docs/font-tools/#edit-json).
 ### Le crénage, c'est quoi et ça fonctionne comment ?
 Cette section est là pour les curieux, elle peut être passée au moins dans un premier temps.
-
-Le crénage est l'espacement entre les lettres ou les caractères . Le crénage se concentre sur l'aspect du texte, créant ainsi un texte lisible et agréable à l'œil.
-
+Le crénage, c’est l’art d’ajuster l’espacement entre les lettres afin d’optimiser la lisibilité et l’esthétique d’un texte. Pour que cet espacement soit harmonieux et semble uniforme, il ne doit pas être identique entre toutes les paires de lettres. 
 #### Où sont les informations
 En particulier, ce fichier font.json contient les informations de crénage,extraites du fichier →.svg lors de la création du fichier font.json. Elles vont très fortement contribuer au positionnement des glyphes les uns par rapports aux autres. Pour décider de la position d'un glyphe, ink/stitch utilise trois types d'information:
 - déplacer horizontalement ou verticalement un glyphe dans son calque influence sur sa position (sauf le tout premier caractère d'une ligne de texte qui lui est systématiquement à gauche toute sur la page (du moins avec un alignement des lignes à gauche). Le déplacement vertical est toujours pris en compte.
