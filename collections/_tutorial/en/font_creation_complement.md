@@ -275,44 +275,70 @@ Use font sampling to generate a file with all unlocked letters
 ***Step 1***
 
 The code silently removes unwanted layers (e.g., empty paths, or no paths at all).
+
 At this step, you only need to digitize comma, hyphen, and period.
 
 ***Step 2***
+
 At this step, you need to digitize all the letters that have been grouped into the three groups: Uppercase, Lowercase, and Other.
+
 For innstannce, you'll find a copy of the period in the i and j glyphs; it's up to you to decide if this is useful to you.
+
 Only sinple letters need to be digitized (no accented letters in these groups).
 
 ***Step 3***
+
 At this step, you need to digitize numbers, symbols, and some punctuation.
+
 You'll find pieces of some glyphs already included, for example, in the ";" you'll find the "." and the "," as digitized in step 1. 
+
 It's up to you to position them correctly or delete them. Also, the "1" contains the "l" and the "I." If they're too different from the "1" to be useful, delete them.
 
 ***Step 4***
-End of the punctuation. You'll find the "(" in the ")." It's up to you to return, position, and modify what needs to be modified. 
-Normally, at this stage, everything is pre-filled with your work already done.
+Last part of punctuation. 
+
+You'll find the "(" in the ")." It's up to you to return, position, and modify what needs to be modified. 
+
+Normally, at this stage, everything is pre-filled with your already done work.
 
 ***Step 5***
+
 Apostrophes, Quotation Marks, and Single Accents
+
 There are several types of apostrophes and quotation marks depending on the language used.
+
 If you have created at least one, the extension adds the others here.
+
 The same goes for quotation marks. Normally, there's nothing to do for them.
+
 At this step, you must digitize single accents; when possible, they are pre-filled with an equivalent symbol that has already been processed. 
+
 In the worst case, the accent is used by letters in the font, but is absent from the font. In this case, a letter that uses it has been inserted into its layer so that you know what to digitize.
-don't forget to remove the unnecessary parts !
+
+Don't forget to remove the unnecessary parts !
 
 **Step 6***
+
 Complex Accents:
+
 In this step, you deal with the other diacritical marks.
-These reuse those from the previous step. 
-This complex accents are either doubled or have same shape as a simple one but a different position . 
+
+These reuse work done at the previous step. 
+
+This complex accents are either double accennts  or have same shape as a simple one but a different position . 
+
 The layers are pre-filled, but there is some positioning work to be done, which is why a letter using the accent has sometimes been added to indicate where to position the new accent. 
 
 ***Step 7***
+
 Letters with a single diacritic:
+
 You will find their layer pre-filled with the letter and the diaccritic; it's up to you to compose them to create the composite letter.
 
 ***Step 8***
-Letters with two or more diacritics..... only if you chosed to include them
+
+Letters with two or more diacritics..... only if you chosed to include some of them.
+
 
 You can also use this extension with any font file to
 - check for duplicates
@@ -336,27 +362,33 @@ The font creator must specify the possible resizing values for the font in the J
 In the case of a satin font, the most important thing is the column width.
 
 `Extensions > Ink/Stitch > Troubleshooting > Element Information` allows you to find out the maximum and minimum stitch lengths for all embroidery elements. 
+
 From the Help tab, you can copy the results to the clipboard and then to a spreadsheet to sort and find your widest and narrowest columns. 
-These values will help you decide on possible resizing options for your font. Sometimes there are just a few very wide satin columns in the whole font. 
+T
+hese values will help you decide on possible resizing options for your font. Sometimes there are just a few very wide satin columns in the whole font. 
 In that case adding or moving rungs might help shrinking them.
 
 ### Adding or Removing Glyphs
 If you add or remove glyphs after creating the font files, you must run the Edit JSON File extension so that the glyph list is updated. 
+
 If the glyph was not in the file from which you generated the font.json file, you will have to modify the horiz_adv_x value of the glyph if it is not to be the default value. 
- or this reason, in case of doubt, it is better to initially include too many glyphs than not enough.
+
+For this reason, in case of doubt, it is better to initially include too many glyphs than not enough.
 
 
 ### Multicolor Fonts
 If you want the lettering result to be sortable by color, there are two things you need to do:
 - specify this in the font.json file (either when creating it or by editing the file); the font must be declared as "sortable."
 - attach a color index to each path. In most cases (all letters have the same colors in the same order, all paths of a given color within a glyph are consecutive) you can display everything in all layers, choose one of the glyphs, select the first object to be stitched, select all objects of the same color (select same fill color or select same stroke color, or both sequentially) and assign them index one, then choose an object of the next color to stitch, select all objects of the same color, assign them index two, etc. In more complicated cases you will have to think a little more to determine the indexes.
+- If you have commands in your file, or guide or texture, donn't forget to give them the same color index as thar of the elements they are relevant to.
 
 
 ### Limitations of the Lettering Tool
 You can't (yet) use all of Ink/Stitch's features in the svg file; for example, clones, path effects, and gradients aren't supported by Lettering.
+
 You can't (yet) write a font for every language in the world, but since Ink/Stitch 3.2.0, contextual variants of the Arabic alphabet are recognized.
 
-## A nice little extra:
+## A nice little extra
 It's possible to have multiglyph layers, not just for ligatures. 
 For example, in the allegria55 font, there's a GlyphLayer-Inkscape_logo that contains the Inkscape logo.
 
