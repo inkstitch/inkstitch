@@ -133,7 +133,7 @@ Cette section est là pour les curieux, elle peut être passée au moins dans un
 En particulier, ce fichier font.json contient les informations de crénage,extraites du fichier →.svg lors de la création du fichier font.json. Elles vont très fortement contribuer au positionnement des glyphes les uns par rapports aux autres. Pour décider de la position d'un glyphe, ink/stitch utilise trois types d'information:
 - déplacer horizontalement ou verticalement un glyphe dans son calque influence sur sa position (sauf le tout premier caractère d'une ligne de texte qui lui est systématiquement à gauche toute sur la page (du moins avec un alignement des lignes à gauche). Le déplacement vertical est toujours pris en compte.
 - des informations dites "horiz_adv_x". Il y a une valeur par défaut, et on peut associer une valeur à chaque glyphe. Le fichier de fonte généré par FontForge comporte cette information pour tous les glyphes qui n'ont pas été effacés. Cette information est intégrée au fichier font.json lors de sa création.
-- des informations dites "hkern". Celles ci ne sont pas associées à des glyphes mais à des couples de glyphes (pas tous). Le fichier de fonte généré par FontForge comporte cette informations pour tous les couples de glyphes pour lesquels le concepteur de la fonte ttf ou otf a donné cette information, que les glyphes aient été effacés ou non. Cette information est intégrée au fichier font.json lors de sa création.
+- des informations dites "hkern". Celles ci ne sont pas associées à des glyphes mais à des couples de glyphes (pas tous). Le fichier de fonte généré par FontForge comporte cette information pour tous les couples de glyphes pour lesquels le concepteur de la fonte ttf ou otf a donné cette information, que les glyphes aient été effacés ou non. Cette information est intégrée au fichier font.json lors de sa création.
 #### Schématiquement, ça fonctionne comment ?
 Ink/Stitch décompose un texte en ligne, une ligne en mots et un mot en glyphes.
 
@@ -181,7 +181,7 @@ Si vous n'êtes pas très familier avec les notions de points d'arrêts et de sa
 
 Si votre fonte est en colonne satin, essayez de faire en sorte que les points d'arrêts ne soient pas localisés sur les pointes des colonnes satins, c'est là qu'ils sont le plus visibles. Vous pouvez utiliser une commande position de fin sur une colonne satin qui est suivie d'un saut pour forcer la position du point d'arrêt.
 #### Mais il en faut suffisamment.
-Il faut aussi prendre un compte que de nombreux utilisateurs aiment a couper les sauts de fils entre les lettres ou entre le corps d'une lettre et son accent. Pour que la coupe puisse se faire sans que la broderie en souffre, il faut que le saut de fil soit réellement un saut de fil au sens d'Ink/Stitch, c'est à dire suivi et précédé d'un point d'arrêt, en particulier lorsque le saut suit une partie constitutive de la lettre (par exemple un colonne satin), il n'est pas forcement nécessaire entre deux sous-chemins (par exemple un sous chemin dans le corps de la lettre suivi d'un sous-chemin dans un accent)
+Il faut aussi prendre un compte que de nombreux utilisateurs aiment a couper les sauts de fils entre les lettres ou entre le corps d'une lettre et son accent. Pour que la coupe puisse se faire sans que la broderie en souffre, il faut que le saut de fil soit réellement un saut de fil au sens d'Ink/Stitch, c'est à dire suivi et précédé d'un point d'arrêt, en particulier lorsque le saut suit une partie constitutive de la lettre (par exemple un colonne satin), il n'est pas forcement nécessaire entre deux chemins de dessous (par exemple un chemin de dessous dans le corps de la lettre suivi après un saut d'un chemin de dessous dans un accent)
 
 `Extensions > Ink/Stitch > Gestion des polices > Forcer des points d'arrêt` permet de simplifier le processus. En particulier pour les fontes en colonnes satin constituées de lettres détachées, il est possible de forcer les points d'arrêts sur la dernière colonne satin de chaque glyphe. Pour gérer les points d'arrêt à la fin des accents, il est possible de grouper les éléments constitutifs des accents dans un groupe puis de forcer les points d'arrêt sur le dernier élément de chaque groupe. La documentation se trouve [là](/fr/docs/font-tools/#force-lock-stitches).
 Alternativement, on peut utiliser le paramètre longueur minimum de saut pour s'assurer de la présence de points d'arrêts
@@ -236,7 +236,6 @@ En revanche il faut digitaliser les accents simples, lorsque cela a été possib
 
 ***Étape 6***
 Accents complexes:
-Étape 6
 À cette étape, nous traitons les autres signes diacritiques.
 Ceux là réutilisent ceux de l'étape précédente. Cela concerne des accents doublés ou dont la position est différente. Les calques sont préremplis, mais il y a du travail de positionnement à faire, c'est pourquoi une lettre utilisant l'accent a parfois été ajoutée pour savoir où positionner le nouvel accent. Si toutefois vous êtes concerné, ce sont des accent utilisées seulement dans certains langues....
 
@@ -277,6 +276,7 @@ Si l'on ajoute ou supprime des glyphes après avoir créé les fichiers de la fo
 Si l'on souhaite que le résultat du lettrage puisse être trié selon les couleurs, il y a deux manipulations à faire
 - le prévoir dans le fichier font.json (soit à la création soit en éditant le fichier), la fonte doit être déclarée comme "triable".
 - attacher à chaque chemin un [index de couleur](https://inkstitch.org/fr/docs/font-tools/#set-color-index). Dans la plupart des cas (toutes les lettres ont les mêmes couleurs dans le même ordre , tous les chemins d'une couleur donné à l'intérieur d'un glyphe sont consécutifs) on peut tout afficher dans tous les calques, choisir un des glyphes, sélectionner le premier objet à broder, sélectionner tous les objets de la même couleur (sélectionner même couleur de fond ou sélectionner même couleur de contour,ou les deux séquentiellement) et leur attribuer l'index un, puis choisir un objet de la prochaine couleur à broder, sélectionner tous les objets de la même couleur, leur attribuer l'index deux, etc.... Dans les cas plus compliqués il faudra réfléchir un peu plus pour déterminer les index.
+- attention si votre fichier contient des groupes de commandes ,des lignes guide ou des textures il faut leur donner le même indice de couleur que les éléments auwxquels ils sont attachés.
 
 
 
