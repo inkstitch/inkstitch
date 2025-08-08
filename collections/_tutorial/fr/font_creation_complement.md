@@ -21,10 +21,9 @@ toc: true
 
 
 ![warning](/assets/images/tutorials/font_creation/work_in_progress.png)
-[!IMPORTANT] Attention : fichier en cours de rédaction. 
-[!NOTE] Une partie des outils présentés ici ne font pas partie d'Ink/Stitch 3.2.2. 
-
-[!TIP] Le texte  est assez long, mais il est recommandé de le lire entièrement avant de se lancer dans la création d'une fonte. 
+Attention : fichier en cours de rédaction. 
+Une partie des outils présentés ici ne font pas partie d'Ink/Stitch 3.2.2. 
+Le texte  est assez long, mais il est recommandé de le lire entièrement avant de se lancer dans la création d'une fonte. {: .notice--info}
 
 L'objet de ce tutoriel est la création d'une fonte utilisable par le module de lettrage d'Ink/Stitch à partir d'un fichier de fonte ttf ou otf.
 ## Qu'est ce qu'une fonte pour le lettrage d'Ink/Stitch?
@@ -61,23 +60,15 @@ En plus de respecter les conventions de nommage, tout fichier de glyphes doit:
 - un guide nommé "baseline" qui correspond a la ligne sur laquelle on écrit. Ink/Stitch a besoin de ce guide pour que le lettrage le long d'un chemin fonctionne correctement.
 - il peut comporter d'autres éléments
 
-<details>
-	<summary> Ouvrez pour voir les différentes méthodes de création d'un fichier de glyphes</summary>
-
-<details>
-<summary>
-**A la main**
-</summary>
+### A la main
 Il est tout a fait possible de créer manuellement un fichier de glyphe, mais c'est rarement la meilleure option.
-</details>
-<details>
-<summary>A partir de fichiers de broderie</summary>
+
+### A partir de fichiers de broderie
 
 Si vous disposez déjà d'un ensemble de fichiers de broderie (un fichier par lettre , dans un format machine ou en format svg), vous pouvez utiliser l'extension
 [lettres vers police](/fr/docs/font-tools/#letters-to-font) pour regrouper tous ces glyphes dans un unique fichier de glyphes. 
-</details>
-<details>
-<summary>A partir d'une fonte ttf ou otf </summary>
+
+### A partir d'une fonte ttf ou otf 
 
 Dans ce cas vous pouvez utilisez [FontForge](https://fontforge.org/en-US/) pour créer un fichier de fonte svg, puis utiliser Ink/Stitch pour transformer ce fichier en fichier de calques de glyphe.
 #### Création du fichier de fonte svg avec FontForge
@@ -125,8 +116,6 @@ Les chemins de ce fichier ont leurs couleurs de contour et de remplissage indét
 Sélectionnez tous les chemins dans tous les calques (si vos préférences inkscape n'autorisent pas la sélection d'objets cachés vous devrez montrer tous les objets pour cela), et donnez leur une couleur de remplissage, dites aussi qu'il n'y a pas de couleur de contour (ou donnez une couleur de contour et dites qu'il n'y a pas de couleur de fond). Vous pouvez masquez à nouveau les calques.
 
 Si vous souhaitez créer une police qui se brode de gauche à droite, enregistrez ce fichier sous le nom →.svg dans un nouveau dossier situé dans votre dossier personnel de fontes.
-</details>
-</details>
 
 ## Création du fichier font.json
 Une fois que le fichier →.svg  existe,  il est possible de créer le fichier font.json associé. Il est recommandé de faire cette opération dès maintenant.
@@ -210,7 +199,6 @@ Les utilisateurs d'Ink/Stitch ont de nombreuses nationalités et pratiquent de n
 `Extensions > Ink/Stitch > Gestion des polices> Remplir les glyphs composite` vous aide à  organiser votre travail pour éviter de faire plusieurs fois le même travail de digitalisation. Cette extension permet aussi quelques autres optimisation du travail à faire.
 
 <details>
-
 <summary>Ouvrir pour plus de détails sur l'utilisation de remplir les glyphes composites</summary>
 L'objectif de cette extension est d'aider le numériseur de polices à organiser son travail étape par étape.
 
@@ -272,16 +260,21 @@ Remarque : oui on peut laisser les lettres groupées, ça ne gène pas le lettra
 
 ### Les utilisateurs d'Ink/Stitch
 Il  leur arrive de faire des choses étranges. Parmi les précautions à prendre:
-#### Eviter les soucis dus à des choix inhabituel de préférences
-Donner une valeur locale aux objets aux paramètres "longueur minimum de saut" et "longueur minimum de point" vous permet de vous assurer que l'utilisateur ne brodera pas votre fonte avec des paramètres différents des valeurs étranges. 
+#### Eviter les soucis dus à des choix inhabituels de préférences
+Donner une valeur locale aux paramètres "longueur minimum de saut" et "longueur minimum de point" vous permet de vous assurer que l'utilisateur ne brodera pas votre fonte avec des valeurs étranges. 
 #### Redimensionnements intempestifs
 Les utilisateurs sont supposés redimensioner les fontes dans l'outil de lettrage. La réalité est parfois autre. Une précaution utile pour les lettrages en colonne satin est d'ajouter une longueur maximum de point.
-#### Réglage du redimensionement
-`Extensions > Ink/Stitch > Résolution de problèmes> Information sur l'élément` vous permet de connaitre la longueur maximum et la longueur minimum des points de tous les élements de broderie. Vous pouvez  depuis l'onglet  Aide, copier les résultats dans le presse papier puis dans un tableur pour trier et trouver quelles sont vos colonnes les plus larges et les plus étroites. Ces valeurs vous aideront a décider des redimensionements possibles pour vogre fonte.
+
+### Réglage du redimensionement
+Le créateur de fonte doit indiquer dans le json les valeurs de redimensionnement possible pour la fonte. Cela necessite d'essayer et de determiner ce qui convient. 
+
+Dans le cas d'une fonte en satin, ce qui est primordial est la largeur des colonnes. 
+
+`Extensions > Ink/Stitch > Résolution de problèmes> Information sur l'élément` vous permet de connaitre la longueur maximum et la longueur minimum des points de tous les élements de broderie. Vous pouvez  depuis l'onglet  Aide, copier les résultats dans le presse papier puis dans un tableur pour trier et trouver quelles sont vos colonnes les plus larges et les plus étroites. Ces valeurs vous aideront a décider des redimensionements possibles pour votre fonte.
 
 
 ### Ajout ou Suppression de glyphes
-Si l'on ajoute ou supprime des glyphes, il faut impérativement lancer l'extension Modifier le fichier JSON afin que la liste des glyphes soit mise à jour. Attention si le glyphe n'était pas dans le fichier à partir duquel on a généré le fichier font.json, il faudra aller modifier la valeur horiz_adv_x du glyphe, on ne l'aura pas récupérée lors de la création du son (en revanche les infos de type hkern elles sont bien là). Pour cette raison, en cas de doute, il vaut mieux au départ embarquer trop de glyphes que pas assez !
+Si l'on ajoute ou supprime des glyphes après avoir créé les fichiers de la fonte , il faut impérativement lancer l'extension Modifier le fichier JSON afin que la liste des glyphes soit mise à jour. Attention si le glyphe n'était pas dans le fichier à partir duquel on a généré le fichier font.json, il faudra aller modifier la valeur horiz_adv_x du glyphe, on ne l'aura pas récupérée lors de la création du son (en revanche les infos de type hkern elles sont bien là). Pour cette raison, en cas de doute, il vaut mieux au départ embarquer trop de glyphes que pas assez !
 
 
 ### Les fontes multicolores
@@ -294,10 +287,9 @@ Si l'on souhaite que le résultat du lettrage puisse être trié selon les coule
 ### limites de l'outil de lettrage
 On ne peut pas (encore) utiliser toutes les fonctionalités d'ink/stitch dans les fichiers de calques,par exemple  les clones, les effets de chemins, les dégradés   ne sont pas gérés correctement par le lettrage.
 On ne peut pas (encore) écrire une police  pour toutes les langues du monde, mais depuis inkstitch 3.2.0, les variantes contextuelles de l'alphabet arabe sont reconnues.
-actuellement lors ce qu'il y a plusieurs fichiers de calques de glyphes dans  un fichier fleche.svg,  la  gestion de la liste des glyphes se fait mal.
 
-## Un petit plus 
-il est possible d'avoir des calques  multiglyphes, pas seulement  pour les ligatures.
+## Un petit plus bien sympathique
+il est possible d'avoir des calques  multiglyphes, pas seulement  pour les ligatures. Par exemple dans la fonte allegria55, il existe un GlyphLayer-Inkscape_logo qui contient le logo d'inkscape. 
 
 
 
