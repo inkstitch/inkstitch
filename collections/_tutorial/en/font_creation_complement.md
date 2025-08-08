@@ -23,20 +23,20 @@ toc: true
 ![warning](/assets/images/tutorials/font_creation/work_in_progress.png)
 
 **Warning** :
-Some of the tools used here are not part of 'Ink/Stitch 3.2.2. 
-This text is rather long, but it is bed to read it entirely before diving into font creation.
+Some of the tools used here are not part of Ink/Stitch 3.2.2. 
+This text is rather long, but it is best to read it entirely before diving into font creation.
 {: .notice--warning }
 
-The goal of this tutorial is to help you create a font usable by the Ink/Stitch lettering module startinng from a ttf or otf font file. More than a step by step tutorial, 
+The goal of this tutorial is to help you create a font usable by the Ink/Stitch lettering module starting from a ttf or otf font file. More than a step by step tutorial, 
 this is meant for you to understand what is to be done and why.
 
 ## What is a font for Ink/Stitch lettering?
 
-The files that make up a lettering font are grouped in a font-specific folder, which resides in the Ink/Stitch fonts folder (for Ink/Stitch fonts) or in the [personal font directory](fr/docs/font-tools/#custom-font-directory) for the user's personal fonts.
+The files that make up a lettering font are grouped in a font-specific folder, which resides in the Ink/Stitch fonts folder (for Ink/Stitch fonts) or in your [personal font directory](fr/docs/font-tools/#custom-font-directory) for your personal fonts.
 
 Each font folder must contain at least two files:
-- a font.json file that contains the font's characteristics
-- at least one glyph layer svg file, which contains one layer per glyph.
+- a font.json file that contains the font's characteristics.
+- at least one glyph layer svg file,that contains one layer per glyph.
 Most fonts in the lettering module are defined using a single glyph layer file, named →.svg.
 
 This →.svg file is intended for left to right embroidery (the direction of the arrow).
@@ -45,19 +45,19 @@ The glyphs of an Arabic or Hebrew lettering font are defined in a ←.svg file.
 
 Some fonts, such as Déja vu, contain both →.svg and ←.svg files. In this case, a multi-line text can be stitched back and forth: 
 in the →.svg file, a letter is stitched from left to right, while in the ←.svg file, it is stitched from right to left. 
-The lettering module will alternately use the two files on the different lines that make up the text.
+The lettering module will alternately use the two files on the different lines that make up a text.
 
-These names are mandatory... unless the font contains a large number of glyphs, in which case, for a font written from left to right, 
-you can distribute your glyphs across several svg files (there are no naming restrictions for these files) and group them together in a folder that must be named →.
+These names are mandatory... unless the font contains a large number of glyphs, in which case, for a left to right font, 
+you can distribute your glyphs across several svg files (there are no naming restrictions for these files) and regroup them together in a folder that must be named →.
 
 The font folders in the lettering module also include:
 - a preview.png file (usually 90x1100 px) containing the embroidered preview of the font name that appears in the lettering dialog.
 - a LICENSE file, which provides information about the font's LICENSE. For an embroidery font created from a TTF, OTF, or other font format to be legally integrated into the lettering module, the original font's license must allow it. Please note that so-called commercial licenses generally do not allow integration into Ink/Stitch.
 
 ## Font Choice
-The choice of font and its size depend primarily on the type of font you wish to create: satin, straight stitch, fill, or appliqué. 
+The choice of font and its size depend primarily on the type of font you wish to create: satin, running stitch, fill, or appliqué... 
 A satin column can be neither too narrow (at least 1.5 mm wide is nice) nor too wide (more than 7 mm wide and there is a risk of brittleness, 
-and beyond 12 mm many machines are unable to handle it). Therefore, letters with highly variable line thickness will be difficult to process in a satin column. 
+and beyond 12 mm many machines are unable to handle it). Therefore, letters with highly variable line thickness will be difficult to process as satin columns only. 
 Serif fonts are more difficult to digitize than sans-serif fonts. For an appliqué font, on the other hand, you should look for a fairly wide font. The main factor in your choice, however, remains your interest in the font.
 
 Symmetrically, if you are set on a particular font, the shape of the letters must be taken into account when choosing embroidery settings.
@@ -120,7 +120,7 @@ Choose a number of glyphs greater than the number of glyphs in your font, unless
 
 This is the time to decide what size you want your font to be.
 
-To do this, choose a reference character that you know is in your SVG font (M is a common reference) and decide on its desired height.
+To do this, choose a reference letter that you know is in your SVG font (M is a common reference) and decide on its desired height.
 
 Click 'Apply'.
 
@@ -135,15 +135,15 @@ Select all paths in all layers (if your Inkscape preferences don't allow the sel
 give them a fill color, and specify that there's no stroke color (or specify a stroke color and specify that there's no background color). 
 You can hide the layers again.
 
-If you want to create a font that flows from left to right, save this file as →.svg in a new folder located in your personal fonts folder.
+If you want to create a left to right font, save this file as →.svg in a new folder located in your personal fonts folder.
 
 ## Creating the font.json file
-Once the →.svg file exists, you can create the associated font.json file. It is recommended that you do as early as just now.
+Once the →.svg file exists, you can create the associated font.json file. It is recommended that you do so as early as just now.
 
 `Extensions > Ink/Stitch > Font Management > Generate JSON....`
 
 This extension will extract information from the →.svg file and store it in a font.json file. 
-Theextension's dialog also allows you to add information. 
+The extension's dialog also allows you to add information. 
 The documentation is [here](/docs/font-tools/#generate-json).
 
 You will be able to modify this information later using `Extensions > Ink/Stitch > Font Management > Edit JSON File....`
@@ -155,7 +155,7 @@ This section is for the curious; it can be skipped at least initially.
 The font.json file contains the kerning information. It was extracted from the →.svg file when the font.json file was created. 
 This information will greatly contribute to the positioning of the glyphs relative to each other. 
 
-To determine a glyph's position, ink/stitch uses three types of information:
+To determine a glyph's position, Ink/Stitch uses three types of information:
 - Moving a glyph horizontally or vertically within its layer affects its position (except for the very first character of a line of text, which is systematically on the left side of the page (at least with left-aligned lines). Vertical movement is always taken into account.
 - "horiz_adv_x" information. There is a default value, and a value can be assigned to each glyph. The font file generated by FontForge includes this information for all glyphs that have not been deleted. This information is integrated into the font.json file when it is created.
 - "hkern" information. This information is not associated with glyphs but with pairs of glyphs (not all of them). The font file generated by FontForge includes this information for all glyph pairs for which the TTF or OTF font designer provided this information, whether the glyphs were deleted or not. This information is integrated into the font.json file when it is created.
@@ -214,12 +214,17 @@ In addition to the usual concerns, working with a font involves a few unique one
 
 ### Jump stitches and lock stitches.
 #### Use them sparingly
-Generally, several letters will be embroidered, and you'll want as few jumps and lock stitches as possible. 
+Generally, several letters will be embroidered at a time, and you'll want as few jumps and lock stitches as possible. 
 Often, a good routing allows for the embroidery of a connected letter without any jump. Of course, if the letter is disconnected (for example, due to an accent) or 
 between two letters, jumps may be necessary, 
 but it's up to you to ensure there are as few as possible. 
+
 Before and after each jump, the machine makes lock stiches, which slows it down and also tends to distort the embroidery. Therefore, avoid them as much as possible. 
-If the font is to be integrated with Ink/Stitch, keep in mind that not everyone has a machine that trims the threads, so avoid large movements between two letters, especially if the machine is going to embroider over them. Often, we start a letter at the bottom left and end it at the bottom right precisely to avoid this.
+
+If the font is to be integrated with Ink/Stitch, keep in mind that not everyone has a machine that trims the threads, so avoid large movements between two letters, especially if the machine is going to embroider over them. 
+
+Often, we start a letter at the bottom left and end it at the bottom right precisely to avoid this.
+
 If you're not familiar with the concepts of lock stitches and jump stitches, [the documentation is here](/docs/stitches/lock-stitches/).
 
 If your font uses satin columns, try to ensure that the ties are not located at the tips of the satin columns, as that's where they are most visible. 
@@ -227,16 +232,18 @@ You can use an end position command on a satin column to force the lock stitches
 
 #### But use enough of them.
 It's also important to keep in mind that many users like to cut the jump threads between letters or between the body of a letter and its accent. 
-For the cutting to be safe, the jump must be a true jump in the Ink/Stitch sense, i.e., long enough to befollowed and preceded by lock stitches. 
-This is particularly true when the jump follows a real part of the letter (for example, a satin column), and maybe not necessary for a jump between two underpaths 
-(for example, an underpath in the body of the letter followed by a underpath in an accent).
+For safe trimming, the jump must be a true jump in the Ink/Stitch sense, i.e., long enough to befollowed and preceded by lock stitches. 
+This is particularly true when the jump follows an actual part of the letter (for example, a satin column), and maybe not so necessary for a jump between two underpaths (for example, an underpath in the body of the letter followed after the jump by an underpath in an accent).
 
 `Extensions > Ink/Stitch > Font Management > Force Breakpoints` simplifies the process. 
 
 In particular,for satin column fonts made up of detached letters, it is possible to force 
 lockstitches on the last satin column of each glyph. 
-To manage lockstitch for accents, it is possible to group the constituent elements of the accents in a group and then force lockstitches on the last element of each group. 
+
+To manage lockstitch for accents, it is possible to group all the the  elements of accents in a group and then force lockstitches on the last element of each group. 
+
 The documentation can be found [here](/docs/font-tools/#force-lock-stitches).
+
 Alternatively, you can use the minimum jump stitch length parameter locally to ensure the presence of lockstitches.
 
 ### Trims
@@ -275,7 +282,7 @@ At this step, you only need to digitize comma, hyphen, and period.
 At this step, you need to digitize all the letters that have been grouped into the three groups: Uppercase, Lowercase, and Other.
 For innstannce, you'll find a copy of the period in the i and j glyphs; it's up to you to decide if this is useful to you.
 Only sinple letters need to be digitized (no accented letters in these groups).
-
+</details>
 ***Step 3***
 At this step, you need to digitize numbers, symbols, and some punctuation.
 You'll find pieces of some glyphs already included, for example, in the ";" you'll find the "." and the "," as digitized in step 1. 
@@ -313,7 +320,7 @@ You can also use this extension with any font file to
 - organize the letters by category.
 
 Note: yes, you can leave the letters grouped; it doesn't affect the lettering tool
-</details>
+
 
 ### Ink/Stitch users
 They do strange things sometimes. Some precautions to take include:
