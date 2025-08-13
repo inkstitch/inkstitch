@@ -1,7 +1,7 @@
 ---
 title: "Schriftverwaltung"
 permalink: /de/docs/font-tools/
-last_modified_at: 2025-04-12
+last_modified_at: 2025-08-13
 toc: true
 ---
 Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem [Text-Werkzeug](/de/docs/lettering/) von Ink/Stitch zusätzliche Schriften hinzufügen wollen.
@@ -9,9 +9,9 @@ Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem
 Ein Blick in das [Schriften für Ink/Stitch erstellen Tutorial](/de/tutorials/font-creation) lohnt sich auf jeden Fall, wenn du neue Schriften erstellen willst.
 {: .notice--info }
 
-## Convert SVG Font to Glyph Layers
-This extension allows you to convert an svg font into glyph layers, as needed by the lettering tool.
+## SVG-Schriftart zu Glyphenebenen konvertieren ...
 
+Diese Erweiterung erlaubt das Konvertieren einer SVG-Schriftart-Datei in Glyphen-Ebenen, so wie vom Textwerkzeug benötigt.
 
 ## Benutzerdefinierter Ordner für Schriften
 

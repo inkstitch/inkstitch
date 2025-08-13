@@ -99,7 +99,7 @@ Wenn du genau zwei Sprossen (und zwei Holme) nutzt, ist es schwer für Ink/Stitc
 
 Satinsäulen beginnen und enden automatisch an den Positionen, die am nächsten zum vorangegangenen, bzw. folgenden Element liegen.
 
-Dieses Verhalten kann im [Parameterdialog](/docs/params/) deaktiviert durch eine oder beide der Optionen `Automatischer Startpunkt` oder `Automatischer Endpunkt` unterbunden werden. 
+Dieses Verhalten kann im [Parameterdialog](/docs/params/) durch eine oder beide der Optionen `Automatischer Startpunkt` oder `Automatischer Endpunkt` unterbunden werden. 
 
 Alternativ kann auch ein manueller Start- und/oder Enpunkt durch [Objektbefehle](/docs/commands/#attach-commands-to-selected-objects-) festgelegt werden.
 
