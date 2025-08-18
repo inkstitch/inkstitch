@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-07-28 02:03+0000\n"
-"PO-Revision-Date: 2025-07-28 02:04\n"
+"PO-Revision-Date: 2025-08-18 01:57\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -155,7 +155,7 @@ msgstr "Eine abgewandelte Schriftart von Khurasan Studio. Bei 100% ist die Satin
 #. description of font in fonts/braille
 #: inkstitch-fonts-metadata.py:52
 msgid "Font for the visually impaired with Braille key combinations according to DT 2024 INSEI specifications for French 6 dots Braille. It is also possible to use Unicode Braille. In this case, it is convenient to use one of the web's Braille translators to create a text in Braille unicode.\n"
-msgstr ""
+msgstr "Schriftart für Menschen mit Sehbeeinträchtigung mit Braille-Tastenkombinationen gemäß den DT 2024 INSEI-Spezifikationen für französisches 6-Punkt-Braille. Es ist auch möglich, Unicode-Braille zu verwenden. In diesem Fall ist es praktisch, einen der Braille-Übersetzer im Internet zu verwenden, um einen Text in Braille-Unicode zu erstellen.\n"
 
 #. description of font in fonts/califragilistic
 #: inkstitch-fonts-metadata.py:54
@@ -203,7 +203,9 @@ msgstr "Chopin Script ist eine Satin-Schrift in Handschrift-Optik. Jede Satinsä
 msgid "Enter 3 letters to get a circular three letters monogram. You can add a frame, by adding one of the following :(){,[];.<>\n"
 "For instance enter {ABC.\n"
 "Please use exactly 3 letters, no less, no more, or you could get some unexpected result."
-msgstr ""
+msgstr "Ein abgerundetes Drei-Buchstaben-Monogramm. Es ist möglich einen oder mehrere Rahmen mit den folgenden Zeichen hinzuzufügen: (){,[];.<>\n"
+"Für ein gutes Ergebnis, nutze bitte genau drei Buchstaben, nicht weniger, nicht mehr.\n"
+"Beispiel: {ABC."
 
 #. description of font in fonts/cogs_KOR
 #: inkstitch-fonts-metadata.py:72
@@ -238,7 +240,7 @@ msgstr "Coronaviral besteht aus manuellen Stichen. Eine Größenänderung ist ni
 #. description of font in fonts/cyrillic
 #: inkstitch-fonts-metadata.py:84
 msgid "Cyrillic satin font."
-msgstr ""
+msgstr "Kyrillische Satinschrift."
 
 #. description of font in fonts/decadent_flowers_monogram
 #: inkstitch-fonts-metadata.py:86
@@ -374,7 +376,10 @@ msgstr "Masego ist eine Sans-Serif Display-Schrift."
 #: inkstitch-fonts-metadata.py:138
 msgid "Invercelia is a modern two letters monogram font. Enter two letters to get a simple monogram.  Add an ')' at the end and the monogram is framed with a circle (for instance 'AC)'), add an '(' to start (for instance '(AC)' and your monogram is ready for applique, or  try something like '!AC)' to replace the appliqué by knockdown stitches.\n\n"
 "Please use exactly two letters,  if you use more, only the first and the last letters will be rendered."
-msgstr ""
+msgstr "Invercelia ist eine moderne Zwei-Buchstaben-Monogramm-Schrift.\n"
+"Füge eine schließende Klammer am Ende hinzu für einen runden Rahmen. Beispiel: AC)\n"
+"Durch eine zusätzliche öffnende Klammer am Anfang wird das Monogramm eine Applikation. Beispiel: (AC)\n"
+"Oder nutze beispielsweise die Kombination !AC) um die Applikation mit einem Knockdown-Stich zu ersetzen."
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:140
@@ -469,12 +474,12 @@ msgstr "Namskout Tartan ist eine große Schrift mit Tartanmustern. Sie enthält 
 #. description of font in fonts/neon
 #: inkstitch-fonts-metadata.py:176
 msgid "Satin font. Each letter or accent is a single satin."
-msgstr ""
+msgstr "Satinschrift. Jedes Zeichen besteht aus einer einzigen Satinsäule."
 
 #. description of font in fonts/neon_blinking
 #: inkstitch-fonts-metadata.py:178
 msgid "Bean stitch font."
-msgstr ""
+msgstr "Mehrfachgeradstich-Schrift."
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:180
@@ -1938,15 +1943,15 @@ msgstr "Satinsäule: Eine Stichlage überschneidet eine Außenlinie mehrmals."
 
 #: lib/elements/satin_column.py:74
 msgid "Simple Satin"
-msgstr ""
+msgstr "Einfache Satinsäule"
 
 #: lib/elements/satin_column.py:77
 msgid "* Select the satin path"
-msgstr ""
+msgstr "* Wähle den Pfad der Satinsäule aus"
 
 #: lib/elements/satin_column.py:78
 msgid "* Run Extensions > Ink/Stitch > Tools: Satin > Stroke to Satin"
-msgstr ""
+msgstr "* Öffne Erweiterungen > Ink/Stitch > Werkzeuge: Satin > Linie zu Satin"
 
 #: lib/elements/satin_column.py:83
 msgid "Satin has exactly two rungs"
@@ -2932,81 +2937,83 @@ msgstr "Ink/Stitch JSON bearbeiten"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:51
 msgid "Upper Case Letters"
-msgstr ""
+msgstr "Großbuchstaben"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:52
 msgid "Lower Case Letters"
-msgstr ""
+msgstr "Kleinbuchstaben"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:53
 msgid "Other Letters"
-msgstr ""
+msgstr "Andere Buchstaben"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:54
 msgid "Digits"
-msgstr ""
+msgstr "Zahlen"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:55
 msgid "Symbols"
-msgstr ""
+msgstr "Symbole"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:56
 msgid "Punctuation"
-msgstr ""
+msgstr "Satzzeichen"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:57
 msgid "Closing Punctuation"
-msgstr ""
+msgstr "Schließende Satzzeichen"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:58
 msgid "Diacritics"
-msgstr ""
+msgstr "Diakritika"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:59
 msgid "Special"
-msgstr ""
+msgstr "Spezial"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:133
 #, python-brace-format
 msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
-msgstr ""
+msgstr "Doppelte Schriftzeichen in Schriftdatei gefunden: {duplicated_glyphs}"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:139
 msgid "No duplicated glyph found"
-msgstr ""
+msgstr "Keine doppelten Zeichen gefunden"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:193
 #, python-brace-format
 msgid "This or these glyphs have been added:\n"
 "{added_char}\n"
 "Either  fill them or delete them"
-msgstr ""
+msgstr "Diese Zeichen wurde hinzugefügt:\n"
+"{added_char}\n"
+"Fülle oder lösche sie"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:326
 msgid "Additional Punctuation"
-msgstr ""
+msgstr "Zusätzliche Satzzeichen"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:401
 msgid "Simple Diacritics"
-msgstr ""
+msgstr "Einfache Diakritika"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:446
 #: lib/extensions/lettering_fill_composed_glyphs.py:472
 #: lib/extensions/lettering_fill_composed_glyphs.py:497
 msgid "nothing to do, you are ready for next step"
-msgstr ""
+msgstr "Es gibt nichts zu tun, der nächste Schritt kann durchgeführt werden"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:448
 msgid "Other Diacritics"
-msgstr ""
+msgstr "Andere Diakritika"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:474
 msgid "Two pieces letters"
-msgstr ""
+msgstr "Zweiteilige Buchstaben"
 
 #: lib/extensions/lettering_fill_composed_glyphs.py:499
 msgid "Other composed letters"
-msgstr ""
+msgstr "Andere zusammengesetzte Buchstaben"
 
 #: lib/extensions/lettering_font_sample.py:21
 msgid "Font Sample"
@@ -3853,23 +3860,23 @@ msgstr "Als Standard definieren"
 
 #: lib/gui/preferences.py:76
 msgid "Rotate on export"
-msgstr ""
+msgstr "Rotieren und exportieren"
 
 #: lib/gui/preferences.py:78
 msgid "Some embroidery machines don't automatically rotate files to fit into the hoop."
-msgstr ""
+msgstr "Einige Stickmaschinen drehen das Design nicht automatisch, um es in den Rahmen einzupassen."
 
 #: lib/gui/preferences.py:83
 msgid "Don't rotate"
-msgstr ""
+msgstr "Nicht drehen"
 
 #: lib/gui/preferences.py:84
 msgid "Rotate left"
-msgstr ""
+msgstr "Links drehen"
 
 #: lib/gui/preferences.py:85
 msgid "Rotate right"
-msgstr ""
+msgstr "Rechts drehen"
 
 #: lib/gui/preferences.py:101
 msgid "Global"
@@ -6976,51 +6983,51 @@ msgstr ""
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:12
 msgid "Choose action"
-msgstr ""
+msgstr "Aktion wählen"
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:13
 msgid "Step 1 : Comma and period and hyphen"
-msgstr ""
+msgstr "Schritt 1: Komma, Punkt und Bindestrich"
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:14
 msgid "Step 2 : Undecomposable Letters"
-msgstr ""
+msgstr "Schritt 2: Nicht zerlegbare Buchstaben"
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:15
 msgid "Step 3 : Digits, Symbols and Opening Punctuation"
-msgstr ""
+msgstr "Schritt 3: Zahlen, Symbole und öffnende Satzzeichen"
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:16
 msgid "Step 4 : Closing Punctuation"
-msgstr ""
+msgstr "Schritt 4: Schließende Satzzeichen"
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:17
 msgid "Step 5 : First diacritics"
-msgstr ""
+msgstr "Schritt 5: erste Diakritika"
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:18
 msgid "Step 6 : All diacritics"
-msgstr ""
+msgstr "Schritt 6: Alle Diakritika"
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:19
 msgid "Step 7 : Two pieces Letters"
-msgstr ""
+msgstr "Schritt 7: Zweiteilige Buchstaben"
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:20
 msgid "Step 8 : Other Composed Letters"
-msgstr ""
+msgstr "Schritt 8: Andere zusammengesetzte Buchstaben"
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:21
 msgid "Check duplicate GlyphLayers"
-msgstr ""
+msgstr "Prüfe auf doppelte GlyphLayer"
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:22
 msgid "Sort by Category"
-msgstr ""
+msgstr "Nach Kategorie ordnen"
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:28
 msgid "This extension helps the font digitizer to organize its work in steps to maximize reuse of already digitized letters."
-msgstr ""
+msgstr "Diese Erweiterung hilft Schriftentwicklern die Arbeit in einzelne Schritte zu zerlegen, um das Wiederverwenden von Elementen aus bereits digitalisierten Zeichen zu maximieren."
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:31
 msgid "https://inkstitch.org/docs/font-tools/#fill_composed_glyphs"
@@ -7028,7 +7035,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_fill_composed_glyphs.inx:39
 msgid "Help with composed glyphs like é,ç or ï"
-msgstr ""
+msgstr "Hilfe bei zusammengesetzten Glyphen wie é, ç oder ï"
 
 #: inx/inkstitch_lettering_font_sample.inx:9
 msgid "Inserts all glyphs of a specified font into the document"
@@ -7060,7 +7067,7 @@ msgstr "Füge das Attribut \"vernähen erzwingen\" dem jeweils letzten Element e
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:21
 msgid "Add forced lock stitches to the last element of each group"
-msgstr ""
+msgstr "Füge das Attribut \"vernähen erzwingen\" dem jeweils letzten Element eines Schriftzeichens hinzu"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:24
 msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
