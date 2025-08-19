@@ -285,6 +285,11 @@ def merge(section, other_section):
     rails, rungs = section
     other_rails, other_rungs = other_section
 
+    if len(other_rails[0]) < 2 or len(other_rails[1]) < 2:
+        # Somehow we got a degenerate rail with only one (or no?) point.
+        # Ignore this one since it has zero length anyway.
+        return section
+
     # remove first node of each other rail before merging (avoid duplicated nodes)
     rails[0].extend(other_rails[0][1:])
     rails[1].extend(other_rails[1][1:])
