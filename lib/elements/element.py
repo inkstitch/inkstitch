@@ -520,12 +520,6 @@ class EmbroideryElement(object):
 
         return [self.strip_control_points(subpath) for subpath in path]
 
-    def flatten_subpath(self, subpath):
-        path = [deepcopy(subpath)]
-        bezier.cspsubdiv(path, 0.1)
-
-        return self.strip_control_points(path[0])
-
     @property
     @cache
     def lock_stitches(self):
