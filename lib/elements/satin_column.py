@@ -1076,45 +1076,6 @@ class SatinColumn(EmbroideryElement):
 
         return SatinColumn(node)
 
-    def merge(self, satin):
-        """Merge this satin with another satin
-
-        This method expects that the provided satin continues on directly after
-        this one, as would be the case, for example, if the two satins were the
-        result of the split() method.
-
-        Returns a new SatinColumn instance that combines the rails and rungs of
-        this satin and the provided satin.  A rung is added at the end of this
-        satin.
-
-        The returned SatinColumn will not be in the SVG document and will have
-        its transforms applied.
-        """
-        rails = self.rails
-        other_rails = satin.rails
-
-        if len(rails) != 2 or len(other_rails) != 2:
-            # weird non-satin things, give up and don't merge
-            return self
-
-        # remove first node of each other rail before merging (avoid duplicated nodes)
-        rails[0].extend(other_rails[0][1:])
-        rails[1].extend(other_rails[1][1:])
-
-        rungs = self.rungs
-        other_rungs = satin.rungs
-
-        # add a rung in between the two satins and extend it just a litte to ensure it is crossing the rails
-        new_rung = shgeo.LineString([other_rails[0][0], other_rails[1][0]])
-        rungs.append(list(shaffinity.scale(new_rung, 1.2, 1.2).coords))
-
-        # add on the other satin's rungs
-        rungs.extend(other_rungs)
-
-        rungs = self._get_filtered_rungs(rails, rungs)
-
-        return self._coordinates_to_satin(line_strings_to_coordinate_lists(rails + rungs))
-
     def _get_filtered_rungs(self, rails, rungs):
         # returns a filtered list of rungs which do intersect the rails exactly twice
         rails = shgeo.MultiLineString(rails)
