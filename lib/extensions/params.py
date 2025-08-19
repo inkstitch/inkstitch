@@ -247,6 +247,10 @@ class ParamsTab(ScrolledPanel):
     def apply(self):
         values = self.get_values()
         for node in self.nodes:
+            if "satin_column" in values.keys() and values["satin_column"] is True and node.stroke_width < 0.3 * PIXELS_PER_MM:
+                # when we apply satin columns, strokes (running stitches) are not rendered in the simulator
+                # and we also don't want to set any of the chosen values to these elements as this may lead to unexpected rendering results
+                continue
             for name, value in values.items():
                 node.set_param(name, value)
 
