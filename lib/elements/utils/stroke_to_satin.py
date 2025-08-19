@@ -21,14 +21,14 @@ class SelfIntersectionError(Exception):
     pass
 
 
-def convert_path_to_satin(path, stroke_width, style_args):
+def convert_path_to_satin(path, stroke_width, style_args, rungs_at_nodes=False):
     path = remove_duplicate_points(fix_loop(path))
 
     if len(path) < 2:
         # ignore paths with just one point -- they're not visible to the user anyway
         return None
 
-    sections = list(convert_path_to_satins(path, stroke_width, style_args))
+    sections = list(convert_path_to_satins(path, stroke_width, style_args, rungs_at_nodes=rungs_at_nodes))
 
     if sections:
         joined_satin = list(sections)[0]
@@ -38,9 +38,9 @@ def convert_path_to_satin(path, stroke_width, style_args):
     return None
 
 
-def convert_path_to_satins(path, stroke_width, style_args, depth=0):
+def convert_path_to_satins(path, stroke_width, style_args, rungs_at_nodes=False, depth=0):
     try:
-        rails, rungs = path_to_satin(path, stroke_width, style_args)
+        rails, rungs = path_to_satin(path, stroke_width, style_args, rungs_at_nodes)
         yield (rails, rungs)
     except SelfIntersectionError:
         # The path intersects itself.  Split it in two and try doing the halves
@@ -54,7 +54,7 @@ def convert_path_to_satins(path, stroke_width, style_args, depth=0):
         halves = split_path(path)
 
         for path in halves:
-            for section in convert_path_to_satins(path, stroke_width, style_args, depth=depth + 1):
+            for section in convert_path_to_satins(path, stroke_width, style_args, rungs_at_nodes=rungs_at_nodes, depth=depth + 1):
                 yield section
 
 
@@ -80,7 +80,7 @@ def fix_loop(path):
         return path
 
 
-def path_to_satin(path, stroke_width, style_args):
+def path_to_satin(path, stroke_width, style_args, rungs_at_nodes):
     if Point(*path[0]).distance(Point(*path[-1])) < 1:
         raise SelfIntersectionError()
 
@@ -102,7 +102,7 @@ def path_to_satin(path, stroke_width, style_args):
         # path intersects itself, when taking its stroke width into consideration.
         raise SelfIntersectionError()
 
-    rungs = generate_rungs(path, stroke_width, left_rail, right_rail)
+    rungs = generate_rungs(path, stroke_width, left_rail, right_rail, rungs_at_nodes)
 
     left_rail = list(left_rail.coords)
     right_rail = list(right_rail.coords)
@@ -176,7 +176,7 @@ def local_minima(array):
     return (diff(sign(diff(array))) > 0).nonzero()[0] + 1
 
 
-def generate_rungs(path, stroke_width, left_rail, right_rail):
+def generate_rungs(path, stroke_width, left_rail, right_rail, rungs_at_nodes):
     """Create rungs for a satin column.
 
     Where should we put the rungs along a path?  We want to ensure that the
@@ -215,7 +215,12 @@ def generate_rungs(path, stroke_width, left_rail, right_rail):
 
     # Now we'll find the spots that aren't near corners, whose scores are
     # low -- the local minima.
-    rung_locations = local_minima(scores)
+    rung_locations = list(local_minima(scores))
+
+    # We add additional rungs on every node of the path for on the fly converted satins.
+    # This enables users to have a little bit more influence on the satin angles.
+    if rungs_at_nodes:
+        rung_locations.extend([path.project(shgeo.Point(point), normalized=True) * 100 for point in path.coords])
 
     # Remove the start and end, because we can't stick a rung there.
     rung_locations = setdiff1d(rung_locations, [0, 100])
@@ -238,8 +243,14 @@ def generate_rungs(path, stroke_width, left_rail, right_rail):
         # Avoid placing rungs too close together.  This somewhat
         # arbitrarily rejects the rung if there was one less than 2
         # millimeters before this one.
-        if last_rung_center is not None and \
-                (rung_center - last_rung_center).length() < 2 * PIXELS_PER_MM:
+        # When they convert the satin on the fly, we do care a little bit less
+        # about the amount of rungs and only remove them if the distance is less
+        # than 1mm
+        if (last_rung_center is not None and not rungs_at_nodes and
+           (rung_center - last_rung_center).length() < 2 * PIXELS_PER_MM):
+            continue
+        elif (last_rung_center is not None and rungs_at_nodes and
+              (rung_center - last_rung_center).length() < 1 * PIXELS_PER_MM):
             continue
         else:
             last_rung_center = rung_center
