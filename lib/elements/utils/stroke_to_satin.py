@@ -33,7 +33,7 @@ def convert_path_to_satin(path, stroke_width, style_args):
     if sections:
         joined_satin = list(sections)[0]
         for satin in sections[1:]:
-            joined_satin = merge(joined_satin, satin)
+            joined_satin = _merge(joined_satin, satin)
         return joined_satin
     return None
 
@@ -268,19 +268,11 @@ def generate_rungs(path, stroke_width, left_rail, right_rail):
     return rungs
 
 
-def merge(section, other_section):
-    """Merge this satin with another satin
+def _merge(section, other_section):
+    """Merge two satin sections
 
-    This method expects that the provided satin continues on directly after
-    this one, as would be the case, for example, if the two satins were the
-    result of the split() method.
-
-    Returns a new SatinColumn instance that combines the rails and rungs of
-    this satin and the provided satin.  A rung is added at the end of this
-    satin.
-
-    The returned SatinColumn will not be in the SVG document and will have
-    its transforms applied.
+    The two sections are expected to be contiguous; that is, the second one
+    starts where the first one ends.
     """
     rails, rungs = section
     other_rails, other_rungs = other_section
