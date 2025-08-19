@@ -285,10 +285,6 @@ def merge(section, other_section):
     rails, rungs = section
     other_rails, other_rungs = other_section
 
-    if len(rails) != 2 or len(other_rails) != 2:
-        # weird non-satin things, give up and don't merge
-        return section
-
     # remove first node of each other rail before merging (avoid duplicated nodes)
     rails[0].extend(other_rails[0][1:])
     rails[1].extend(other_rails[1][1:])
