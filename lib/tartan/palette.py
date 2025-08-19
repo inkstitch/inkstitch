@@ -64,7 +64,7 @@ class Palette:
                 stripe = {'render': 1, 'color': '#000000', 'width': '5'}
                 stripe_panel = cast('StripePanel', stripe_sizer.GetWindow())
                 stripe['render'] = stripe_panel.visibility.Get3StateValue()
-                stripe['color'] = stripe_panel.colorpicker.GetColour().GetAsString(wx.C2S_HTML_SYNTAX)
+                stripe['color'] = stripe_panel.colorpicker.GetColour().GetAsString(wx.C2S_HTML_SYNTAX)  # type: ignore[attr-defined]
                 stripe['width'] = stripe_panel.stripe_width.GetValue()
                 stripes.append(stripe)
             self.palette_stripes[i] = stripes
@@ -173,8 +173,8 @@ class Palette:
                 try:
                     # on macOS we need to run wxpython color method inside the app otherwise
                     # the color picker has issues in some cases to accept our input
-                    color = wx.Colour(color).GetAsString(wx.C2S_HTML_SYNTAX)
-                except wx.PyNoAppError:
+                    color = wx.Colour(color).GetAsString(wx.C2S_HTML_SYNTAX)  # type: ignore[attr-defined]
+                except wx.PyNoAppError:  # type: ignore[attr-defined]
                     # however when we render an embroidery element we do not want to open wx.App
                     try:
                         color = str(Color(color).to_named())
