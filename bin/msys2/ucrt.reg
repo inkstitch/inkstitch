@@ -1,0 +1,51 @@
+Windows Registry Editor Version 5.00
+
+; This ucrt.reg file adds "Open MSYS2 UCRT64 Bash here" to the right-click context menu
+; in Windows File Explorer for folders, background, and drives.
+; It allows you to quickly launch the MSYS2 UCRT64 Bash terminal in the
+; directory you are currently Browse.
+
+; --- MSYS2 Installation Path ---
+; Please ensure "C:\\tools\\msys64\\" matches your actual MSYS2 installation path.
+; If your MSYS2 is installed elsewhere, update all occurrences of this path.
+; --- End of Configuration ---
+
+; Section for Folder Right-Click
+[HKEY_CLASSES_ROOT\Directory\shell\MSYS2 UCRT64 Bash]
+@="Open MSYS2 UCRT64 Bash here" ; Text displayed in the context menu
+"Icon"="C:\\tools\\msys64\\ucrt64.ico" ; Path to the icon for the menu entry
+
+; Command to launch MSYS2 UCRT64 Bash and change to the selected directory
+; -defterm: Use the default MSYS2 terminal (MinTTY)
+; -no-start: Prevent showing the initial MSYS2 startup window
+; -ucrt64: Launch the UCRT64 environment
+; -c "cd ... && exec bash": Execute 'cd' command within Bash to change directory,
+;                          then replace current shell with a new interactive bash session.
+[HKEY_CLASSES_ROOT\Directory\shell\MSYS2 UCRT64 Bash\command]
+@="C:\\tools\\msys64\\msys2_shell.cmd -defterm -no-start -ucrt64 -c \"cd \\\"%V\\\" && exec bash\""
+
+; Section for Background Right-Click (when clicking in an empty area of a directory)
+[HKEY_CLASSES_ROOT\Directory\Background\shell\MSYS2 UCRT64 Bash]
+@="Open MSYS2 UCRT64 Bash here"
+"Icon"="C:\\tools\\msys64\\ucrt64.ico"
+
+; Command for background click
+[HKEY_CLASSES_ROOT\Directory\Background\shell\MSYS2 UCRT64 Bash\command]
+@="C:\\tools\\msys64\\msys2_shell.cmd -defterm -no-start -ucrt64 -c \"cd \\\"%V\\\" && exec bash\""
+
+; Section for Drive Right-Click (e.g., C: D:)
+[HKEY_CLASSES_ROOT\Drive\shell\MSYS2 UCRT64 Bash]
+@="Open MSYS2 UCRT64 Bash here"
+"Icon"="C:\\tools\\msys64\\ucrt64.ico"
+
+; Command for drive click
+[HKEY_CLASSES_ROOT\Drive\shell\MSYS2 UCRT64 Bash\command]
+@="C:\\tools\\msys64\\msys2_shell.cmd -defterm -no-start -ucrt64 -c \"cd \\\"%V\\\" && exec bash\""
+
+; --- How to Remove This Entry ---
+; To remove this context menu entry, open Regedit (type 'regedit' in Windows search).
+; Navigate to and delete the "MSYS2 UCRT64 Bash" key under each of these paths:
+; HKEY_CLASSES_ROOT\Directory\shell\
+; HKEY_CLASSES_ROOT\Directory\Background\shell\
+; HKEY_CLASSES_ROOT\Drive\shell\
+; After deleting, restart File Explorer (or your computer).

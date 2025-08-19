@@ -1,16 +1,39 @@
 #!/bin/bash
-VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
+
+
+set -e
+MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:-1}  # Default level is 1 (INFO)
+if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
+    set -x
+fi
+
+
+echo "GITHUB_REF=${GITHUB_REF}"
+echo "GITHUB_REF_NAME=${GITHUB_REF_NAME}"
+echo "OS=${OS}"
+echo "VERSION=${VERSION}"
+echo "--------------------------------------------------------- evaluating variables"
+
+
+VERSION="${VERSION:-$(echo ${GITHUB_REF_NAME} | tr / -)}"
 OS="${BUILD:-$(uname)}"
 ARCH=$(python -c "import platform; n = platform.architecture()[0]; print(n)")
+
+echo "BUILD=${BUILD}"
+echo "ARCH=${ARCH}"
+echo "OS=${OS}"
+echo "VERSION=${VERSION}"  # may be set by the Makefile otherwise empty ??? why
+
+
 # Check for signed directory
 if [[ -d "signed-artifacts" ]]; then
 	DIRECTORY="signed-artifacts"
 	echo "Found signed artifacts"
 else
-	if [[ ! -d "signed-artifacts" ]] && [[ ! -z "${GITHUB_REF}" ]]; then
+	if [[ "${CI}" == "true" ]]; then  # GitHub Actions
 		mkdir signed-artifacts
 		DIRECTORY="signed-artifacts"
-		echo "Created signed artifacts"
+		echo "Created signed artifacts directory"
 	else
 		DIRECTORY="artifacts"
 		echo "No signed artifacts found, local build"

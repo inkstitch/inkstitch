@@ -1,6 +1,157 @@
-VERSION="${VERSION:-$(echo ${GITHUB_REF} | sed -e 's|refs/heads/||' -e 's|refs/tags/||' -e 's|/|-|g')}"
-OS="${BUILD:-$(uname)}"
+#!/bin/bash
+
+# - assumes that the script is run from the root of the repository
+# - assumes that the script is run with the:
+#   - BUILD variable set to the target OS (osx, linux, linux32, windows)
+#   - GITHUB_REF variable set to the current branch or tag
+#   - VERSION variable set to the current version (optional, defaults to branch name)
+#   - INKSTITCH_GPG_KEY variable set to the GPG key (optional, defaults to generating a new key)
+#   - NOTARY_ACCOUNT and NOTARY_PASSWORD variables set for macOS notarization (optional, defaults to not notarizing)
+#   - fpm and rpmsign tools installed for Linux builds
+#   - pyinstaller tool installed for building Python applications
+#   - jq tool installed for parsing JSON
+
+set -e
+MY_VERBOSITY_LOG_LEVEL=${MY_VERBOSITY_LOG_LEVEL:-1}  # Default level is 1 (INFO)
+if [[ "$MY_VERBOSITY_LOG_LEVEL" -ge 2 ]]; then
+    set -x
+fi
+
+echo "------------------------------------------------- build-distribution-archives.sh"
+
+if [[ -z "$BUILD" ]]; then
+  echo "Error: BUILD variable is not set."
+  exit 1
+fi
+
+INITIAL_SET_E_STATUS=0
+case "$-" in *e*) INITIAL_SET_E_STATUS=1 ;; esac  # check if -e is set and save the status
+
+# check output directory
+if [[ ! -d "artifacts" ]]; then
+    mkdir -p artifacts
+fi
+
+echo "GITHUB_REF=${GITHUB_REF}"
+echo "GITHUB_REF_NAME=${GITHUB_REF_NAME}"
+echo "OS=${OS}"
+echo "VERSION=${VERSION}"
+echo "--------------------------------------------------------- evaluating variables"
+
+VERSION="${VERSION:-$(echo ${GITHUB_REF_NAME} | tr / -)}"
+if [[ -z "$VERSION" ]]; then
+    echo "Error: VERSION variable is not set."
+    exit 1     # this could never happen, but just in case
+fi
+# uname returns the OS name, e.g. Linux, Darwin, etc. - that require lowercase
+OS=$(echo ${BUILD:-$(uname)} | tr '[:upper:]' '[:lower:]')
 ARCH="$(uname -m)"
+
+echo "MY_USE_AUTHORIZED_SIGNING=${MY_USE_AUTHORIZED_SIGNING}"
+echo "MY_SECRETS_AVAILABLE=${MY_SECRETS_AVAILABLE}"
+
+echo "BUILD=${BUILD}"
+echo "ARCH=${ARCH}"
+echo "OS=${OS}"
+echo "VERSION=${VERSION}"  # may be set by the Makefile otherwise empty ??? why
+echo "---------------------------------------------------------------"
+
+# ----------------------------------------------------------------
+### *** GPG KEY SETUP ***
+
+# Usage of GPG keys, simple  examples:
+#   Listing GPG keys:
+#     gpg --list-keys          or   gpg -k
+#     gpg --list-secret-keys   or   gpg -K
+#   Removing keys:
+#     gpg --delete-key           or   gpg --delete-secret-key
+#     just simply delete directory ~/.gnupg - this will remove all keys, make backup first
+
+# Set the GPG key name for RPM packages
+# Guaranteed invalid email address for temporary key @invalid.com
+GPG_KEY_NAME="Temporary Inkstitch Build Key (Automated CI/CD Only) <inkstitch@invalid.com>"
+# Initial GPG Key ID - in main branch secrets.
+# This will be updated if a new key is generated.
+GPG_KEY_ID="EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44"
+
+# Function to generate a new GPG key
+function generate_gpg_key() {
+    echo "INKSTITCH_GPG_KEY variable is not set. Generating a new GPG key..."
+    gpg --batch --full-generate-key <<EOF
+Key-Type: RSA
+Key-Length: 4096
+Subkey-Type: RSA
+Subkey-Length: 4096
+Name-Real: $GPG_KEY_NAME
+Name-Comment: Temporary RPM Signing Key for Ink/Stitch
+Name-Email: inkstitch@invalid.com
+Expire-Date: 0
+%no-protection
+%commit
+EOF
+    echo "New GPG key has been generated."
+}
+
+# This function retrieves the ID of the temporary GPG key. Search local GPG keyring for the key.
+function get_gpg_key_id() {
+    # Get the ID of the temporary key
+    GENERATED_KEY_ID=$(gpg --list-secret-keys --with-colons "$GPG_KEY_NAME" | awk -F: '/^sec/{print $5; exit}')
+
+    if [ -z "$GENERATED_KEY_ID" ]; then
+        echo "Error: Failed to retrieve the ID of the temporary GPG key."
+        exit 1
+    fi
+
+    # Update GPG_KEY_ID to match the newly generated key
+    GPG_KEY_ID=$GENERATED_KEY_ID
+    echo "Generated key ID: $GPG_KEY_ID"
+}
+
+# Retrieve the GPG key ID in variable GPG_KEY_ID
+# This function checks if the MY_USE_AUTHORIZED_SIGNING variable.
+#   true - it imports the key from the variable INKSTITCH_GPG_KEY.
+#   flase - or not set, it checks for an existing key or generates a new one if necessary.
+function retrieve_gpg_key_id() {
+
+    if [[ "${MY_SECRETS_AVAILABLE}" == "true" ]]; then
+
+        echo "Importing GPG key from INKSTITCH_GPG_KEY variable..."
+        echo "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import  # import to local GPG keyring
+        echo "GPG key has been imported."
+
+    else    #  Try local GPG key, if not set, try generate a new GPG key
+
+        echo "Checking for existing GPG key..."
+        if [ $INITIAL_SET_E_STATUS -eq 1 ]; then   # temporary disable -e if it was set
+            set +e
+        fi
+
+        # try to get the key ID of the existing local temporary key
+        gpg --list-secret-keys --keyid-format LONG "$GPG_KEY_NAME" &>/dev/null
+        GPG_STATUS=$?
+
+        if [ $INITIAL_SET_E_STATUS -eq 1 ]; then   # restore -e if it was set
+            set -e
+        fi
+
+
+        if [[ $GPG_STATUS -eq 0 ]]; then
+            echo "Found existing GPG key for user ID: $GPG_KEY_NAME"
+            get_gpg_key_id  # Update GPG_KEY_ID to the existing key ID
+        else
+            echo "No existing GPG key found. Generating a new GPG key..."
+            generate_gpg_key
+            get_gpg_key_id  # Update GPG_KEY_ID after generating a new key
+        fi
+
+        echo "GPG key ID is set to: $GPG_KEY_ID"
+    fi
+}
+
+### *** END GPG KEY SETUP ***
+
+### --------------------------------------------------------------
+### Start of the script
 
 if [ "$BUILD" = "osx" ]; then
     cp -a addons icons locales print LICENSE VERSION palettes symbols fonts tiles dbus inx dist/inkstitch.app/Contents/Resources
@@ -20,7 +171,7 @@ if [ "$BUILD" = "osx" ]; then
     # Notarization for development branches can be forced with this variable set to true
     NOTARIZE_DEVELOPMENT_BUILDS=false
 
-    if [[ ! -z "${GITHUB_REF}" ]]; then
+    if [[ "${MY_SECRETS_AVAILABLE}" == "true" ]]; then
         # This code signs and notarize the inkstitch.app
         DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
         echo "Signing of inkstitch.app"
@@ -50,7 +201,9 @@ if [ "$BUILD" = "osx" ]; then
                         --scripts installer_scripts/scripts \
                         --install-location ${PKG_INSTALL_PATH}inkstitch.app \
                         artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.pkg
-        if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+ || $NOTARIZE_DEVELOPMENT_BUILDS == true ]]; then
+        # if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+ || $NOTARIZE_DEVELOPMENT_BUILDS == true ]]; then
+        if [[ "${MY_USE_AUTHORIZED_SIGNING}" == "true" ]]; then  # notarize - scan and staple the pkg by apple
+
             echo "Notary starting"
             echo "Adding keychain item for notarytool"
             xcrun notarytool store-credentials "inkstitch-profile"  \
@@ -76,7 +229,7 @@ if [ "$BUILD" = "osx" ]; then
                 exit 7;
             fi;
         fi
-    else
+    else # Not using authorized signing keys, likely a Dev or Local Build
         # local builds will not be signed or notarized
         pkgbuild --root dist/inkstitch.app \
                 --ownership recommended \
@@ -96,28 +249,43 @@ else
 fi
 
 if [ "$BUILD" = "windows" ]; then
-    # build the installer locally
-    # remotely it will be called through build.yml after signing
-    if [[ -z "${GITHUB_REF}" ]]; then
+    # local building of the Windows installer
+    # - remotely it will be called through .github/workflows/uv_build_windows64.yml after signing
+    # TODO: check this
+    # if [[ -z "${GITHUB_REF}" ]]; then
+    if [[ "${CI}" != "true" ]]; then  # local build not from GitHub Actions (CI is not true)
         bash bin/build-windows-installer
     fi
 fi
 
 if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
-    if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
-        VERSION=${VERSION#v}
-    else
-        # dpkg requires versions to start with a number, so we have to add
-        # 0.0.1 for development builds
-        VERSION="0.0.1-${VERSION}"
-    fi
+    # TODO: we dont need this - see how it was created in uv_build
+    # if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
+    #     VERSION=${VERSION#v}
+    # else
+    #     # dpkg requires versions to start with a number, so we have to add
+    #     # 0.0.1 for development builds
+    #     VERSION="0.0.1-${VERSION}"
+    # fi
 
+    ### RPM signing setup
 
-    echo -n "$INKSTITCH_GPG_KEY" | base64 -d | gpg --import
-    cat <<EOF > $HOME/.rpmmacros
-%_gpg_name EA93BCE2CCD0FB2E77B2CC29E8120E50709E5C44
+    # Create or update the .rpmmacros file, prefer to use the INKSTITCH_GPG_KEY
+    #    %_gpg_path /etc/rpm/.gpg   # ? not sure if this is needed
+    #    %_gpg_name ID              # required for rpm signing
+    #    %__gpg /usr/bin/gpg        # required for rpm signing
+
+    retrieve_gpg_key_id
+
+    GPG_EXEC=$(command -v gpg || command -v gpg2)  # 'command' bash built-in to find executable path
+
+    echo "Creating/updating $HOME/.rpmmacros file..."
+    cat <<EOF > "$HOME/.rpmmacros"
+%__gpg $GPG_EXEC
+%_gpg_name $GPG_KEY_ID
 %_signature gpg
 EOF
+    echo "$HOME/.rpmmacros has been updated with key ID: $GPG_KEY_ID"
 
     # set the rpm file name for cpu arch
     if [[ "$BUILD" = "linux32" ]]; then
@@ -128,6 +296,24 @@ EOF
 
     echo "Creating deb"
     deb_version="$(sed -E 's/[^a-zA-Z0-9.+]/./g' <<< "$VERSION")"
+
+    # TODO: fpm is slow, consider using cmake to create deb and rpm packages
+
+    # create deb package in ROOT of the repository
+    # -s dir - source type is directory
+    # -t deb - target type is debian package
+    # -n inkstitch - package name
+    # -v "$deb_version" - package version
+    # -d "inkscape >= 1.0.0" - package dependency
+    # --deb-compression xz - use xz compression for deb package
+    # --license "GPL-3.0" - license for the package
+    # --description "An open-source machine embroidery design platform based on Inkscape" - package description
+    # --url "https://inkstitch.org" - package URL
+    # --maintainer "maintainer@inkstitch.org" - package maintainer
+    # --after-install bin/after-install - script to run after installation
+    # --before-remove bin/before-remove - script to run before removal
+    # --verbose - verbose output
+    # dist/inkstitch=/opt - copy dist/inkstitch directory to /opt in the package
     fpm -s dir \
         -t deb \
         -n inkstitch \
@@ -144,6 +330,8 @@ EOF
         dist/inkstitch=/opt
 
     echo "Creating rpm"
+    # create rpm package in ROOT of the repository
+    # -t rpm - target type is rpm package
     fpm -s dir \
         -t rpm \
         -n inkstitch \
@@ -160,10 +348,19 @@ EOF
         --verbose \
         dist/inkstitch=/opt
 
+    # Sign the rpm packages (in place?)
     rpmsign --addsign inkstitch*.rpm
+
+    # Move the deb and rpm packages from ROOT to artifacts directory
     mv inkstitch*.deb inkstitch*.rpm artifacts/
 
-    # set file name for each cpu arch
+    # Create the tar.xz archive for Linux and Linux32 builds from
+    # tar - create an archive from dist/inkstitch directory and save it to artifacts
+    #   -C dist  - change to dist directory, output is relative to this dir
+    # cat - create self-extracting script for Linux
+    #   - $(dirname "$0") - search for the linux-sh-installer script in the same directory as this script
+
+    # TODO: use linux_arch instead of hardcoding i386 for linux32 builds
     if [[ "$BUILD" = "linux32" ]]; then
         tar -C dist -Jcf artifacts/inkstitch-${VERSION}-${OS}-i386.tar.xz inkstitch
         cat "$(dirname "$0")/linux-sh-installer" artifacts/inkstitch-${VERSION}-${OS}-i386.tar.xz > artifacts/inkstitch-${VERSION}-${OS}-i386.sh
@@ -172,3 +369,6 @@ EOF
         cat "$(dirname "$0")/linux-sh-installer" artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.tar.xz > artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.sh
     fi
 fi
+
+
+echo "------------------------------------------------- build-distribution-archives.sh done"

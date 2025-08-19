@@ -1,0 +1,188 @@
+
+name: UV Mac arm64 build
+
+# when the workflow should run
+on:
+  workflow_call:  # manual trigger of the workflow
+    inputs:
+
+      version: # ref: inputs.version
+        description: 'Version of the build, e.g. 1.0.0, 1.0.0-dev'
+        required: true
+        default: '0.0.1-dev'  # default value
+        type: string  # type of the input, can be string, boolean, or number
+
+      break_on: # ref: inputs.break_on
+        description:  'Stop the build immediately at a predefined location.'
+        required: false
+        default: 'no'    # default value
+        type: string  # type of the input, can be string, boolean, or number
+
+      verbosity_log_level: # ref: inputs.verbosity_log_level
+        description: 'Verbosity log level (0: ERROR, 1: INFO, 2: DEBUG, 3: TRACE)'
+        required: false
+        default: '1'  # default value
+        type: string
+
+      secrets_available: # ref: inputs.secrets_available
+        description: 'If secrets are available, set to true'
+        required: false
+        default: 'false'  # default value
+        type: string
+
+      use_authorized_signing:
+        description: 'Use authorized signing'
+        required: false
+        default: 'false'  # default value
+        type: string
+
+    secrets:  # secrets that are required for the workflow, otherwise are not available
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE:
+        required: true
+      INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD:
+        required: true
+      KEYCHAIN_PASSWORD:
+        required: true
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE:
+        required: true
+      INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD:
+        required: true
+      INKSTITCH_NOTARIZE_AC:
+        required: true
+      INKSTITCH_NOTARIZE_PASS:
+        required: true
+
+
+
+jobs:
+  macarm64:  # name of the job
+    env:
+      MY_VERSION: ${{ inputs.version }}
+      MY_BREAK_ON: ${{ inputs.break_on }}
+      MY_VERBOSITY_LOG_LEVEL: ${{ inputs.verbosity_log_level }}  # set verbosity log level, default is 1 (INFO)
+      MY_SECRETS_AVAILABLE: ${{ inputs.secrets_available }}
+      MY_USE_AUTHORIZED_SIGNING: ${{ inputs.use_authorized_signing }}
+
+    # define the OS of the runner
+    runs-on: macos-latest
+
+    steps:
+      - name: Download Inkstitch   # Download the source code, no submodules
+        uses: actions/checkout@v4  # https://github.com/actions/checkout
+
+
+      - name: Update OS    # first update OS
+        shell: bash
+        run: |
+
+          echo "------------------------------------- system information: sw_vers"
+          sw_vers
+
+          echo "------------------------------------- input data"
+          # input data
+          echo "inputs.version: ${{ inputs.version }}"
+          echo "inputs.break_on: ${{ inputs.break_on }}"
+          echo "inputs.verbosity_log_level: ${{ inputs.verbosity_log_level }}"
+          echo "inputs.secrets_available: ${{ inputs.secrets_available }}"
+          echo "inputs.use_authorized_signing: ${{ inputs.use_authorized_signing }}"
+
+          echo "MY_VERSION: $MY_VERSION"
+          echo "MY_BREAK_ON: $MY_BREAK_ON"
+          echo "MY_VERBOSITY_LOG_LEVEL: $MY_VERBOSITY_LOG_LEVEL"
+          echo "MY_SECRETS_AVAILABLE: $MY_SECRETS_AVAILABLE"
+          echo "MY_USE_AUTHORIZED_SIGNING: $MY_USE_AUTHORIZED_SIGNING"
+
+          echo "-------------------------------------- update homebrew"
+          brew update
+
+          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt || true
+
+          # export LDFLAGS="-L/usr/local/opt/libffi/lib"
+          # export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5  # https://docs.astral.sh/uv/guides/integration/github/
+        with:
+          enable-cache: true    # cache on requirements**, uv.lock is OS dependent, on exit 1 cache save is skipped
+          cache-dependency-glob: pyproject.toml
+          python-version: 311   # force version, use same in install python
+
+
+      - name: Setup UV Python
+        shell: bash
+        run: |  # working directory is the root of the inkstitch repo
+
+          echo "-------------------------------------- install uvr"
+          uv tool install --from git+https://github.com/karnigen/uvr uvr
+
+          echo "------------------------------ uv python list"
+          uv python install 311  # install python 3.11 see cache
+          uv python list
+          uv python pin --managed-python 311  # pin to uv managed python
+          uv venv  # create a virtual environment with the pinned python version
+
+          if [[ $MY_BREAK_ON == "uv" ]]; then
+            echo "Stopping on request $MY_BREAK_ON"
+            exit 1
+          fi
+
+          echo "-------------------------------------- pyproject.toml"
+          cat pyproject.toml
+
+          echo "-------------------------------------- uv sync"
+          uv sync --inexact # install dependencies from pyproject.toml & keep installed packages
+          uv pip tree  # print installed packages
+
+          if [[ $MY_BREAK_ON == "sync" ]]; then
+            echo "Stopping on request $MY_BREAK_ON"
+            exit 1
+          fi
+
+          echo "--------------------------------------"
+
+
+      - name: Build dist
+        shell: bash
+        run: |
+
+          . .venv/bin/activate  # activate the virtual environment
+          type python  # check python version
+
+          echo "secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}" # *** if available
+          echo "secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}" # *** if available
+          echo "secrets.KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}" # *** if available
+          echo "secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}" # *** if available
+          echo "secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}" # *** if available
+          echo "secrets.INKSTITCH_NOTARIZE_AC: ${{ secrets.INKSTITCH_NOTARIZE_AC }}" # *** if available
+          echo "secrets.INKSTITCH_NOTARIZE_PASS: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}" # *** if available
+          echo "secrets.KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}" # *** if available
+
+          make dist   # bin/build-python, bin/build-distribution-archives
+
+          # see artifacts directory contents
+          echo "-------------------------------------- artifacts directory:"
+          ls -lR artifacts
+
+        env:
+          # MY_VERSION, MY_BREAK_ON, MY_VERBOSITY_LOG_LEVEL,
+          # MY_SECRETS_AVAILABLE, MY_USE_AUTHORIZED_SIGNING
+
+          BUILD: osx
+          VERSION: ${{ env.MY_VERSION }}
+
+          # load secrets for bash script
+          MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+          MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+          KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
+          INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+          INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+          NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+          NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+
+
+      # save the build artifacts for later use by other jobs
+      - uses: actions/upload-artifact@v4   # https://github.com/actions/upload-artifact
+        with:
+          name: inkstitch-mac-arm64          # to path
+          path: artifacts                  # from path relative to the root of the repository
