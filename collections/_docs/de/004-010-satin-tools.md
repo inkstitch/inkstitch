@@ -12,7 +12,7 @@ Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anza
 * Aktiviere im [Parameter Dialogfenster](/de/docs/params/#satinsäule) eine oder mehrere Unterlagen
 * Führe "[Automatische Satinsäulenführung](/docs/satin-tools/#automatische-satinsäulenführung)" aus, um optimal geführte Satinsäulen zu erhalten
 
-[![Convert Line to Satin](/assets/images/docs/en/satin-tools.svg)](/assets/images/docs/en/satin-tools.svg){: title="Download SVG File" download="satin-tools.svg" }
+[![Stroke to Satin](/assets/images/docs/en/satin-tools.svg)](/assets/images/docs/en/satin-tools.svg){: title="Download SVG File" download="satin-tools.svg" }
 
 **Tip:** Setze [Tastenkürzel](/docs/customize/) um die einzelnen Satin-Werkzeuge schneller ausführen zu können.
 {: .notice--info}

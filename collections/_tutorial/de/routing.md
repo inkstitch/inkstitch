@@ -1,5 +1,5 @@
 ---
-title: Stichpad-Optimisierung
+title: Stichpfad-Optimisierung
 permalink: /de/tutorials/routing/
 last_modified_at: 2024-09-09
 language: de

@@ -38,7 +38,7 @@ This tool will replace your satins with a new set of satin columns in logical st
 
 * **Keep original paths** will indicate if the original elements will be removed or kept.
 
-## Convert Line to Satin
+## Stroke to Satin
 
 This extension will convert a stroke into a satin column with a specified width. After the conversion you will see the two rails and (possibly) lots of rungs, depending on the shape of your line.
 
@@ -46,7 +46,7 @@ This extension will convert a stroke into a satin column with a specified width.
 
 1. Draw a bezier curve (`B`)
 2. Set the stroke width in the "Fill and Stroke" panel ("Stroke style" tab), which you can access with `Shift+Ctrl+F`
-2. Run `Extensions > Ink/Stitch  >  Tools: Satin > Convert Line to Satin`
+2. Run `Extensions > Ink/Stitch  >  Tools: Satin > Stroke to Satin`
 
 ## Cut Satin Column
 

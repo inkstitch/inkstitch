@@ -143,6 +143,12 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+    - label: "Forum"
+      icon: fa fa-commenting
+      url: "https://inkscape.org/forums/embroidery/"
+    - label: "Chat"
+      icon: fa fa-comment
+      url: "https://chat.inkscape.org/channel/inkstitch"
     - label: "PeerTube"
       icon: "fab fa-fw fa-youtube-square"
       url: "https://diode.zone/a/inkstitch"
