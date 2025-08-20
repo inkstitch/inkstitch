@@ -1,7 +1,7 @@
 ---
 title: "Font Tools"
 permalink: /docs/font-tools/
-last_modified_at: 2025-08-08
+last_modified_at: 2025-08-20
 toc: true
 ---
 A collection of tools suitable for font creators or those who want to add additional fonts to the Ink/Stitch [lettering tool](/docs/lettering).
@@ -140,6 +140,8 @@ Very often, bought fonts are organized in subfolders, because each letter comes 
 * After the import, move the baseline to the correct place and position the letters accordingly. The left border of the canvas will also influence the positioning of the letters through the lettering tool.
 * Save your font as `→.svg` in a new folder within your [custom font directory](#custom-font-directory)
 * Run [`Generate JSON`](#generate-json) to make the font available for the lettering tool and save the json file into the same folder as your font. Do not check "AutoRoute Satin" for predigitized fonts and leave scaling to 1.
+* If necessary, you can adjust the kerning information using the [`Font Management > Edit JSON File`](#edit-json) extension.
+* If your font is colored, you can make it sortable using [color sort indices](#set-color-index).
 
 ## Remove Kerning
 
