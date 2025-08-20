@@ -2,7 +2,7 @@
 permalink: /tutorials/font_creation_complement/
 title: "Ink/Stitch font creation"
 language: en
-last_modified_at: 2025-08-08
+last_modified_at: 2025-08-20
 excerpt: "Ink/Stitch font creation"
 image: "/assets/images/tutorials/font_creation_complement/multifont3.jpg"
 tutorial-type: 
@@ -27,12 +27,12 @@ Some of the tools used here are not part of Ink/Stitch 3.2.2.
 This text is rather long, but it is best to read it entirely before diving into font creation.
 {: .notice--warning }
 
-The goal of this tutorial is to help you create a font usable by the Ink/Stitch lettering module starting from a ttf or otf font file. More than a step by step tutorial, 
-this is meant for you to understand what is to be done and why.
+The goal of this tutorial is to help you create a font usable with the Ink/Stitch lettering module starting from a ttf or otf font file. 
+In addition to the list of all steps, additional information are given to help you understand what is to be done and why.
 
 ## What is a font for Ink/Stitch lettering?
 
-The files that make up a lettering font are grouped in a font-specific folder, which resides in the Ink/Stitch fonts folder (for Ink/Stitch fonts) or in your [personal font directory](fr/docs/font-tools/#custom-font-directory) for your personal fonts.
+The files that make up a lettering font are grouped in a font-specific folder, which resides in the Ink/Stitch fonts folder (for official Ink/Stitch fonts) or in your [personal font directory](fr/docs/font-tools/#custom-font-directory) for your personal fonts.
 
 Each font folder must contain at least two files:
 - a font.json file that contains the font's characteristics.
@@ -51,7 +51,7 @@ These names are mandatory... unless the font contains a large number of glyphs, 
 you can distribute your glyphs across several svg files (there are no naming restrictions for these files) and regroup them together in a folder that must be named →.
 
 The font folders in the lettering module also include:
-- a preview.png file (usually 90x1100 px) containing the embroidered preview of the font name that appears in the lettering dialog.
+- a preview.png file ( 15:1 format, usually 300x20 px) containing the embroidered preview of the font name that appears in the lettering dialog.
 - a LICENSE file, which provides information about the font's LICENSE. For an embroidery font created from a TTF, OTF, or other font format to be legally integrated into the lettering module, the original font's license must allow it. Please note that so-called commercial licenses generally do not allow integration into Ink/Stitch.
 
 ## Font Choice
@@ -71,7 +71,9 @@ In addition to respecting naming conventions, any glyph file must:
 
 
 ### Manually
-It's entirely possible to manually create a glyph file, but it's rarely the best option.
+It's entirely possible to manually create a glyph file, but it's rarely the best option:
+- starting from a .ttf or .otf font file you benefit from all the kerning work done by the original creator of the font
+- starting from embroidery files you will have almost nothing left to do
 
 ### From Embroidery Files
 
@@ -128,7 +130,8 @@ This will be the value for the "size" info in the json file
 
 Your file is then converted into a glyph layer file; you now have many layers.
 
-In addition to the "baseline" guide, other guides have been added. It's a good idea to lock them so you can work on this file later without moving them.
+In addition to the "baseline" guide, other guides have been added. It's a good idea to lock them so you can work on this file later without moving them. 
+This can be done either in the document properties or by clicking on the lock in the top-left corner of the canvas.
 
 The paths in this file have undefine stroke and fill colors. 
 Select all paths in all layers (if your Inkscape preferences don't allow the selection of hidden objects, you'll need to show all objects to do this), 
@@ -168,10 +171,10 @@ We assume left alignment, and here we're talking about the horizontal position. 
 
 - At the beginning of the line, the cursor is at 0, the first character "T" is drawn starting at x=0
 - Before drawing the next glyph the cursor is
-* advanced by the horiz_adv_x value associated with T (its own value if it exists, otherwise the default value)
-* if the drawing of the e begins slightly before the left edge of the page, the cursor is moved back by that amount; if it begins after that, the cursor is moved forward
-* if there is an hkern value for the "Te" pair, the cursor is shifted by that amount (a positive value decreases the distance a negative value increases it)
-
+     * advanced by the horiz_adv_x value associated with T (its own value if it exists, otherwise the default value)
+     * if the drawing of the e begins slightly before the left edge of the page, the cursor is moved back by that amount; if it begins after that, the cursor is moved forward
+     * if there is an hkern value for the "Te" pair, the cursor is shifted by that amount (a positive value decreases the distance a negative value increases it)
+ 
 ....and so on for all the letters in the word
 
 #### How to fix a possible kerning problem
@@ -184,7 +187,7 @@ These last two operations are performed using the extension:
 `Extensions > Ink/Stitch > Font Management > Edit JSON File`
 
 ## Check that everything is working correctly
-If you've created these two files and they're in a folder in your personal fonts folder, your font will now appear in the lettering module. 
+If you've created these two files and they are in their own folder in your personal fonts folder, your font will now appear in the lettering module. 
 The stitching for each letter is configured as an automatic fill (if you've set a fill color for each glyph) or as a straight stitch (if you've set an outline color for each glyph). 
 It's still too early for actual, high-quality stitching, but everything should be working.
 
@@ -235,12 +238,12 @@ It's also important to keep in mind that many users like to cut the jump threads
 For safe trimming, the jump must be a true jump in the Ink/Stitch sense, i.e., long enough to befollowed and preceded by lock stitches. 
 This is particularly true when the jump follows an actual part of the letter (for example, a satin column), and maybe not so necessary for a jump between two underpaths (for example, an underpath in the body of the letter followed after the jump by an underpath in an accent).
 
-`Extensions > Ink/Stitch > Font Management > Force Breakpoints` simplifies the process. 
+`Extensions > Ink/Stitch > Font Management > Force lockstitches` simplifies the process. 
 
 In particular,for satin column fonts made up of detached letters, it is possible to force 
 lockstitches on the last satin column of each glyph. 
 
-To manage lockstitch for accents, it is possible to group all the the  elements of accents in a group and then force lockstitches on the last element of each group. 
+To manage lockstitch for accents, it is possible to group all the the elements of accents in a group and then force lockstitches on the last element of each group. 
 
 The documentation can be found [here](/docs/font-tools/#force-lock-stitches).
 
@@ -318,7 +321,7 @@ In the worst case, the accent is used by letters in the font, but is absent from
 
 Don't forget to remove the unnecessary parts !
 
-**Step 6***
+***Step 6***
 
 Complex Accents:
 
@@ -326,7 +329,7 @@ In this step, you deal with the other diacritical marks.
 
 These reuse work done at the previous step. 
 
-This complex accents are either double accennts  or have same shape as a simple one but a different position . 
+This complex accents are either double accennts or have same shape as a simple one but a different position . 
 
 The layers are pre-filled, but there is some positioning work to be done, which is why a letter using the accent has sometimes been added to indicate where to position the new accent. 
 
@@ -351,7 +354,8 @@ Note: yes, you can leave the letters grouped; it doesn't affect the lettering to
 ### Ink/Stitch users
 They do strange things sometimes. Some precautions to take include:
 #### Avoiding problems due to unusual preference choices
-Giving local values to the "minimum jump stitch length" and "minimum stitch length" parameters ensures that users won't stitch your font with strange values.
+Giving object based values to the "minimum jump stitch length" and "minimum stitch length" in the params dialog ensures that users won't stitch your font with strange values.
+
 #### Unwanted resizing
 Users are expected to resize fonts within the lettering tool. 
 The reality is sometimes different. 
@@ -380,8 +384,8 @@ For this reason, in case of doubt, it is better to initially include too many gl
 ### Multicolor Fonts
 If you want the lettering result to be sortable by color, there are two things you need to do:
 - specify this in the font.json file (either when creating it or by editing the file); the font must be declared as "sortable."
-- attach a color index to each path. In most cases (all letters have the same colors in the same order, all paths of a given color within a glyph are consecutive) you can display everything in all layers, choose one of the glyphs, select the first object to be stitched, select all objects of the same color (select same fill color or select same stroke color, or both sequentially) and assign them index one, then choose an object of the next color to stitch, select all objects of the same color, assign them index two, etc. In more complicated cases you will have to think a little more to determine the indexes.
-- If you have commands in your file, or guide or texture, donn't forget to give them the same color index as thar of the elements they are relevant to.
+- attach a [color index](docs/font-tools/#set-color-index) to each path. In most cases (all letters have the same colors in the same order, all paths of a given color within a glyph are consecutive) you can display everything in all layers, choose one of the glyphs, select the first object to be stitched, select all objects of the same color (select same fill color or select same stroke color, or both sequentially) and assign them index one, then choose an object of the next color to stitch, select all objects of the same color, assign them index two, etc. In more complicated cases you will have to think a little more to determine the indexes.
+- If you have commands in your file, or guide or texture, don't forget to give them the same color index as that of the elements they are associated with.
 
 
 ### Limitations of the Lettering Tool
