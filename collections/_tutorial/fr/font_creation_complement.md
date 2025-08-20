@@ -63,7 +63,10 @@ En plus de respecter les conventions de nommage, tout fichier de glyphes doit:
 - il peut comporter d'autres éléments
 
 ### A la main
-Il est tout a fait possible de créer manuellement un fichier de glyphe, mais c'est rarement la meilleure option.
+Il est tout a fait possible de créer manuellement un fichier de glyphes, mais c'est rarement la meilleure option:
+- en partant d'un fichier de fonte .ttf ou .otf, vous bénéficiez de tout le travail de crénage fait par le créateur originel de la fonte
+- en partant de fichiers de broderie il ne vous reste presque rien à faire.
+
 
 ### A partir de fichiers de broderie
 
@@ -111,7 +114,7 @@ Cliquez sur `Appliquer`.
 
 Votre fichier est alors converti en fichier de calques de glyphes, vous avez maintenant de nombreux calques.
 
-En plus du guide "baseline", d'autres guides ont été posés. Il est judicieux de les vérouiller pour travailler ultérieurement dans ce fichier sans les déplacer.
+En plus du guide "baseline", d'autres guides ont été posés. Il est judicieux de les vérouiller pour travailler ultérieurement dans ce fichier sans les déplacer. Cela peut être fait soit dans les propriétés du document, soit en cliquant sur le cadenas dans le coin supérieur gauche du canevas.
 
 Les chemins de ce fichier ont leurs couleurs de contour et de remplissage indéterminées.
 Sélectionnez tous les chemins dans tous les calques (si vos préférences inkscape n'autorisent pas la sélection d'objets cachés vous devrez montrer tous les objets pour cela), et donnez leur une couleur de remplissage, dites aussi qu'il n'y a pas de couleur de contour (ou donnez une couleur de contour et dites qu'il n'y a pas de couleur de fond). Vous pouvez masquez à nouveau les calques.
@@ -143,9 +146,9 @@ On suppose un alignement à gauche, et on parle ici de la position sur l'horizon
 
 - En début de ligne, le curseur est à 0, le premier caractère "T" est dessiné en démarrant en x =0
 - avant de broder la suite, le curseur est
- * avancé de la valeur horiz_adv_x associée à T (la sienne si elle existe, sinon la valeur par défaut)
- * si le dessin du e, commence un peu avant le bord gauche de la page, on recule le curseur d'autant, si il commence après cela avance le curseur
- * si il y a une valeur hkern pour la paire "Te", on décale d'autant (une valeur positive diminue l’écart, une valeur négative l'augmente)
+     * avancé de la valeur horiz_adv_x associée à T (la sienne si elle existe, sinon la valeur par défaut)
+     * si le dessin du e, commence un peu avant le bord gauche de la page, on recule le curseur d'autant, si il commence après cela avance le curseur
+     * si il y a une valeur hkern pour la paire "Te", on décale d'autant (une valeur positive diminue l’écart, une valeur négative l'augmente)
 
  ....et ainsi de suite pour toutes les lettres du mots
 
