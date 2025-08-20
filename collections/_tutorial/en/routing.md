@@ -1,7 +1,7 @@
 ---
 title: Stitch Path Optimization
 permalink: /tutorials/routing/
-last_modified_at: 2024-09-08
+last_modified_at: 2025-08-20
 language: en
 excerpt: "Optimising the stitch path is one of the most important subjects in embroidery. Learn how Ink/Stitch can assist you with the task."
 image: /assets/images/tutorials/routing/routing.png
@@ -76,7 +76,9 @@ Ink/Stitch now has two tools for it. [Redwork](/docs/stroke-tools/#redwork) is d
 
 ## Satin Routing Options
 
-Satin columns also run from the beginning of the rails to the end, just like a stroke path. Make sure they are no closed paths. Ink/Stitch can handle loops (closed paths), but it may end up in funny results and you cannot control the starting and enting point if there isn't a definite start and end position.
+By default, the Start/End at nearest point setting is enabled, and satin column stitching begins as close as possible to the previous stitching element and ends as close as possible to the next stitching element. If this setting is disabled, stitching begins at the beginning of one rail and ends at the end of the other rail. The start and end points of satin column stitching can also be specified using [visual commands](/en/docs/commands/) (start position and end position).
+
+Make sure the rails are no closed paths. Ink/Stitch can handle loops (closed paths), but it may end up in funny results.
 
 ### Auto-route satin
 
@@ -102,8 +104,9 @@ When you adapt the repeat value for the centerline underlay in the [params dialo
 
 ## Fill Routing Options
 
-Ink/Stitch  is quite tolerant with open path fills. Still you may avoid problems by  closing paths with a fill color.
+Ink/Stitch is quite tolerant with open path fills. Still you may avoid problems by  closing paths with a fill color.
 
 ### Start- and Stop commands
+By default, a fill stitch starts as close as possible to the previous stitching element and ends as close as possible to the next stitching element. These fill start and end positions can be modified using  [visual commands](/docs/commands/) (starting / ending position). 
 
-The start and end position of fill elements can be defined with [visual commands](/docs/commands/) (Fill stitch starting / ending position). If you set a lot of these commands the canvas can become a bit crowded. So it might be good to know, that commands will still work, even when invisible.
+If you set a lot of these commands the canvas can become a bit crowded. So it might be good to know, that commands will still work, even when invisible.
