@@ -141,7 +141,11 @@ Souvent les fontes de broderie achetées sont organisées en sous dossiers car c
 * Cliquez sur "appliquer" et..... attendre.....
 * Après l'importation déplacez la ligne de base à un endroit correct et positionnez les lettres en fonction. La position des lettres par rapport au  bord gauche de la page influence aussi le positionnement des lettres par l'outil de lettrage.
 * Sauvegardez votre fonte dans un fichier  `→.svg` dans un nouveau répertoire de votre  [répertoire personnalisé de polices](#custom-font-directory)
-* Exécutez  [`Générer JSON`](#generate-json) pour rendre la police disponible dans l'outil de Lettrage et sauvegarder le fichier json dans le même dossier que votre fonte.  Ne pas cocher  "Agencement automatique de colonnes satin" pour les fontes pré-digitalisées et laisser l'échelle à 1.
+* Exécutez  [`Gestion des polices > Générer JSON`](#generate-json) pour rendre la police disponible dans l'outil de Lettrage et sauvegarder le fichier json dans le même dossier que votre fonte.  Ne pas cocher  "Agencement automatique de colonnes satin" pour les fontes pré-digitalisées et laisser l'échelle à 1.
+* Si nécessaire vous pouvez ajuster les informations  de crénage grace à l'extension [`Gestion des polices > Editer le fichier JSON`](#edit-json)
+* Si votre fonte est en couleur vous pouvez la rendre triable à l'aide d'[indices de tri des couleurs](#set-color-index)
+
+
 
 ## Supprimer les informations de crénage {#remove-kerning}
 
