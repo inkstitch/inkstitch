@@ -1,13 +1,16 @@
 from typing import Protocol, TYPE_CHECKING
 
-from lib.sew_stack import SewStack
 from lib.utils import DotDict, Point
+
+
+if TYPE_CHECKING:
+    from lib.sew_stack import SewStack
 
 
 class LayerProtocol(Protocol):
     paths: 'list[list[Point]]'
     config: DotDict
-    element: SewStack
+    element: 'SewStack'
 
 
 def with_protocol(protocol):
