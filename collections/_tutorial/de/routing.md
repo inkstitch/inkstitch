@@ -79,7 +79,9 @@ Ink/Stith stellt für diesen Zweck zwei Werkzeuge zur Verfügung. [Redwork](/de/
 
 ## Optionen für Satin Routing
 
-Auch Satinsäulen verlaufen vom Anfang des Pfades der Konturlinien Richtung Ende des Pfades. Am Besten sind sie keine durchgehenden Pfade, sondern an einer Stelle geöffnet. Andernfalls kann das Ergebnis anders als erwartet ausfallen oder zumindest an einer unerwünschten Stelle beginnen.
+By default, the Start/End at nearest point setting is enabled, and satin column stitching begins as close as possible to the previous stitching element and ends as close as possible to the next stitching element. If this setting is disabled, stitching begins at the beginning of one rail and ends at the end of the other rail. The start and end points of satin column stitching can also be specified using [visual commands](/de/docs/commands/) (start position and end position).
+
+Make sure the rails are no closed paths. Ink/Stitch can handle loops (closed paths), but it may end up in funny results.
 
 ### Automatisch geführte Satinsäulen
 
@@ -109,6 +111,14 @@ Wird im [Parameterdialog](/de/docs/params/) die Anzahl der Wiederholungen der Mi
 
 Ink/Stitch erlaubt offene Pfade für Füllungen. Um Probleme zu vermeiden, empfiehlt es sich aber, die Pfade als geschlossene Pfade anzulegen.
 
+
 ### Start- und Endbefehle
 
-Start- und Endpositionen für Füllstiche werden über [visuelle Befehle](/de/docs/commands/) gesteuert (Füllstich Anfangs- und Endposition). Werden viele dieser Befehle eingesetzt, kann es auf der Arbeitsfläche etwas unübersichtlich werden. So kann es hilfreich sein zu wissen, dass die Befehle auch dann weiterhin funktionieren, wenn sie unsichtbar sind.
+By default, a fill stitch starts as close as possible to the previous stitching element and ends as close as possible to the next stitching element. These starting and ending positions can be modified using [visual commands](/de/docs/commands/) (starting / ending position). 
+
+<!--
+Start- und Endpositionen für Füllstiche werden über [visuelle Befehle](/de/docs/commands/) gesteuert (Füllstich Anfangs- und Endposition). 
+-->
+Werden viele dieser Befehle eingesetzt, kann es auf der Arbeitsfläche etwas unübersichtlich werden. 
+So kann es hilfreich sein zu wissen, dass die Befehle auch dann weiterhin funktionieren, wenn sie unsichtbar sind.
+
