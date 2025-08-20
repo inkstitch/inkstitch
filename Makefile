@@ -51,3 +51,11 @@ version:
 .PHONY: style
 style:
 	bash -x bin/style-check
+
+.PHONY: type-check mypy
+type-check mypy:
+	python -m mypy
+
+.PHONY: test
+test:
+	pytest
