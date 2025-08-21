@@ -216,15 +216,16 @@ class ParamsTab(ScrolledPanel):
 
         for name, input in self.param_inputs.items():
             if input in self.changed_inputs and input != self.toggle_checkbox:
-                # there are two types of combo boxes:
-                # 1. multiple values for the same param on selected elements - 2. param type
-                # multiple values will be handled with the GetValue() method
-                if name in self.dict_of_choices and self.dict_of_choices[name]['param'].type == 'combo':
-                    values[name] = input.GetClientData(input.GetSelection()).id
-                elif isinstance(input, wx.Choice):
-                    values[name] = input.GetSelection()
-                else:
-                    values[name] = input.GetValue()
+                if input.IsEnabled() and input.IsShown():
+                    # there are two types of combo boxes:
+                    # 1. multiple values for the same param on selected elements - 2. param type
+                    # multiple values will be handled with the GetValue() method
+                    if name in self.dict_of_choices and self.dict_of_choices[name]['param'].type == 'combo':
+                        values[name] = input.GetClientData(input.GetSelection()).id
+                    elif isinstance(input, wx.Choice):
+                        values[name] = input.GetSelection()
+                    else:
+                        values[name] = input.GetValue()
 
         return values
 
