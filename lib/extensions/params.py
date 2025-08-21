@@ -506,10 +506,14 @@ class ParamsTab(ScrolledPanel):
         indicator.SetToolTip(
             _('Click to force this parameter to be saved when you click "Apply and Quit"'))
         indicator.Bind(
-            wx.EVT_BUTTON, lambda event: self.enable_change_indicator(param))
+            wx.EVT_BUTTON, lambda event: self.on_change_indicator_clicked(param))
 
         self.param_change_indicators[param] = indicator
         return indicator
+
+    def on_change_indicator_clicked(self, param):
+        self.changed_inputs.add(self.param_inputs[param])
+        self.enable_change_indicator(param)
 
     def enable_change_indicator(self, param):
         self.param_change_indicators[param].SetBitmapLabel(self.pencil_icon)
