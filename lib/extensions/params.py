@@ -271,8 +271,6 @@ class ParamsTab(ScrolledPanel):
     def load_preset(self, preset):
         preset_data = preset.get(self.name, {})
 
-        # print(self.param_inputs, '\n\n', preset_data.items(), file=sys.stderr)
-
         for name, value in preset_data.items():
             if name in self.param_inputs:
                 if name in self.dict_of_choices and self.dict_of_choices[name]['param'].type == 'combo':
@@ -286,8 +284,14 @@ class ParamsTab(ScrolledPanel):
                         value = not value
                     input.SetValue(value)
                 self.changed_inputs.add(self.param_inputs[name])
+                self.enable_change_indicator(name)
 
         self.update_toggle_state()
+        self.update_enable_widgets()
+        self.update_choice_widgets()
+        self.settings_grid.Layout()
+        self.Fit()
+        self.Layout()
 
     def save_preset(self, storage):
         storage[self.name] = self.get_values()
