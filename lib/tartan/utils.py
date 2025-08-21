@@ -6,7 +6,7 @@
 import json
 from collections import defaultdict
 from copy import copy
-from typing import List, Tuple, Union
+from typing import List, Optional, Tuple, Union
 
 from inkex import BaseElement
 from shapely import LineString, MultiPolygon, Point, Polygon, unary_union
@@ -81,7 +81,6 @@ def stripes_to_shapes(
                 shapes[stripe['color']].append(polygon)
                 left = right
                 top = bottom
-    return shapes
 
 
 def _stripes_to_sett(
@@ -100,7 +99,7 @@ def _stripes_to_sett(
     :returns: a list of dictionaries with stripe information (color, width, is_stroke, render)
     """
 
-    last_fill_color = _get_last_fill_color(stripes, scale, min_stripe_width, symmetry)
+    last_fill_color: Optional[str] = _get_last_fill_color(stripes, scale, min_stripe_width, symmetry)
     first_was_stroke = False
     last_was_stroke = False
     add_width = 0
@@ -152,7 +151,7 @@ def _stripes_to_sett(
     return sett
 
 
-def _get_last_fill_color(stripes: List[dict], scale: int, min_stripe_width: float, symmetry: bool,) -> List[dict]:
+def _get_last_fill_color(stripes: List[dict], scale: int, min_stripe_width: float, symmetry: bool,) -> Optional[str]:
     '''
     Returns the first fill color of a pattern to substitute spaces if the pattern starts with strokes or
     stripes with render mode 2
@@ -163,7 +162,7 @@ def _get_last_fill_color(stripes: List[dict], scale: int, min_stripe_width: floa
     :param symmetry: reflective sett (True) / repeating sett (False)
     :returns: a list with fill colors or a list with one None item if there are no fills
     '''
-    fill_colors = []
+    fill_colors: list[Optional[str]] = []
     for stripe in stripes:
         if stripe['render'] == 0:
             fill_colors.append(None)
@@ -238,7 +237,7 @@ def _get_linestrings(
     dimensions: List[float],
     rotation: float,
     rotation_center: Point, weft: bool
-) -> list:
+) -> List[LineString]:
     """
     Generates a rotated linestrings with the given dimension (outline intersection)
 

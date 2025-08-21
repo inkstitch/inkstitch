@@ -1,17 +1,13 @@
 import os
 from secrets import randbelow
-from typing import TYPE_CHECKING
 
 import wx.propgrid
 
+from .protocol import LayerProtocol, with_protocol
 from ..stitch_layer_editor import Category, Property
 from ....i18n import _
 from ....svg import PIXELS_PER_MM
-from ....utils import DotDict, get_resource_dir, prng
-
-if TYPE_CHECKING:
-    from ... import SewStack
-
+from ....utils import get_resource_dir, prng
 
 editor_instance = None
 
@@ -70,10 +66,7 @@ class RandomizationPropertiesMixin:
         )
 
 
-class RandomizationMixin:
-    config: DotDict
-    element: "SewStack"
-
+class RandomizationMixin(with_protocol(LayerProtocol)):
     @classmethod
     def randomization_defaults(cls):
         return dict(

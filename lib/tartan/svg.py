@@ -66,6 +66,10 @@ class TartanSvgGroup:
         :param outline: the outline to be filled with the tartan pattern
         """
         parent_group = outline.getparent()
+
+        if parent_group is None:
+            raise ValueError("outline must have a parent")
+
         if parent_group is not None and parent_group.get_id().startswith('inkstitch-tartan'):
             # remove everything but the tartan outline
             for child in parent_group.iterchildren():
@@ -202,10 +206,10 @@ class TartanSvgGroup:
         :param fill_stitch_graph: the stitch graph
         :param polygons: the polygon shapes (if not LineStrings)
         :param geometry_type: wether to render 'polygon' or 'linestring' segments
-        :param outline_shape: the shape to be filkled with the tartan pattern
+        :param outline_shape: the shape to be filled with the tartan pattern
         :returns: a list of routed shape elements
         """
-        outline = MultiLineString()
+        outline = LineString()
         travel_linestring = LineString()
         routed_shapes = []
         start_distance = 0
@@ -232,7 +236,11 @@ class TartanSvgGroup:
                     travel_linestring = self._get_travel(start, end, outline)
                 else:
                     end_distance = outline.project(Point(end))
-                    travel_linestring = substring(outline, start_distance, end_distance)
+                    result = substring(outline, start_distance, end_distance)
+                    if isinstance(result, Point):
+                        travel_linestring = LineString()
+                    else:
+                        travel_linestring = result
         return routed_shapes
 
     def _edge_segment_to_element(
@@ -281,16 +289,16 @@ class TartanSvgGroup:
         """
         if outline.length / 2 < travel_linestring.length:
             short_travel = outline.difference(travel_linestring)
-            if short_travel.geom_type == "MultiLineString":
+            if isinstance(short_travel, MultiLineString):
                 short_travel = linemerge(short_travel)
-            if short_travel.geom_type == "LineString":
+            if isinstance(short_travel, LineString):
                 if Point(short_travel.coords[-1]).distance(Point(start)) > Point(short_travel.coords[0]).distance(Point(start)):
                     short_travel = reverse(short_travel)
                 return short_travel
         return travel_linestring
 
     @staticmethod
-    def _find_polygon(polygons: List[Polygon], point: Tuple[float, float]) -> Optional[Polygon]:
+    def _find_polygon(polygons: List[Polygon], point: Point) -> Optional[Polygon]:
         """
         Find the polygon for a given point
 
@@ -449,7 +457,12 @@ class TartanSvgGroup:
         """
         start_distance = outline.project(Point(start))
         end_distance = outline.project(Point(end))
-        return substring(outline, start_distance, end_distance)
+
+        result = substring(outline, start_distance, end_distance)
+        if isinstance(result, Point):
+            return LineString((result, result))
+        else:
+            return result
 
     def _get_dimensions(self, outline: MultiPolygon) -> Tuple[Tuple[float, float, float, float], Point]:
         """
@@ -485,7 +498,7 @@ class TartanSvgGroup:
         transform: str,
         start: Optional[Tuple[float, float]] = None,
         end: Optional[Tuple[float, float]] = None
-    ) -> Optional[PathElement]:
+    ) -> PathElement:
         """
         Convert a polygon to an svg path element
 
@@ -499,8 +512,6 @@ class TartanSvgGroup:
         """
         path = Path(list(polygon.exterior.coords))
         path.close()
-        if path is None:
-            return None
 
         for interior in polygon.interiors:
             interior_path = Path(list(interior.coords))
