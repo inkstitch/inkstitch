@@ -701,7 +701,6 @@ class SettingsPanel(wx.Panel):
 
     def use_last(self, event):
         self.presets_panel.load_preset("__LAST__")
-        self.apply(event)
 
     def close(self):
         self.simulator.stop()
