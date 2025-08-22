@@ -1,7 +1,7 @@
 ---
 title: "Schriftverwaltung"
 permalink: /de/docs/font-tools/
-last_modified_at: 2025-08-13
+last_modified_at: 2025-08-22
 toc: true
 ---
 Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem [Text-Werkzeug](/de/docs/lettering/) von Ink/Stitch zusätzliche Schriften hinzufügen wollen.
@@ -135,9 +135,8 @@ Bei gekauften Schriften kommt es häufig vor, dass die Buchstaben in Unterordner
 * Nach dem Import muss die Grundlinie (`baseline`) an die richtige Stelle gerückt werden und die Buchstaben entsprechend positioniert. Der linke Dokumentenrand wirkt sich ebenfalls auf die Positionierung der Buchstaben durch das Textwerkzeug aus
 * Speichere die Datei als `→.svg` in einem neuen Ordner in dem [Benutzerdefinierten Ordner für Schriften](#benutzerdefinierter-ordner-für-schriften)
 * Erstelle mit [JSON-Datei erstellen](#json-datei-erstellen) eine JSON-Datei, die die Schrift für das Textwerkzeug von Ink/Stitch nutzbar macht. "Automatisch geführte Satinsäulen" sollte für digitalisierte Schriften nicht ausgewählt sein. Die Skalierung bleibt bei 1.
-* If necessary, you can adjust the kerning information using the [`Font Management > Edit JSON File`](#edit-json) extension.
-* If your font is colored, you can make it sortable using [color sort indices](#set-color-index).
-
+* Kerning-Informationen für die Buchstabenabstände können, wenn nötig, mit der Erweiterung [`Schriftverwaltung > JSON bearbeiten`](#json-bearbeiten) angepasst werden.
+* Wenn deine Schrift mehrfarbig ist, können Farbabschnitte mit einem [Farbsortierindex](#farbsortierindex-festlegen) belegt werden.
 
 ## Kerning entfernen
 

@@ -79,9 +79,11 @@ Ink/Stith stellt für diesen Zweck zwei Werkzeuge zur Verfügung. [Redwork](/de/
 
 ## Optionen für Satin Routing
 
-By default, the Start/End at nearest point setting is enabled, and satin column stitching begins as close as possible to the previous stitching element and ends as close as possible to the next stitching element. If this setting is disabled, stitching begins at the beginning of one rail and ends at the end of the other rail. The start and end points of satin column stitching can also be specified using [visual commands](/de/docs/commands/) (start position and end position).
+Ink/Stitch erlaubt geschlossene Pfade für Satinsäulen. Um Probleme zu vermeiden, empfiehlt es sich aber, die Pfade als offene Pfade anzulegen.
 
-Make sure the rails are no closed paths. Ink/Stitch can handle loops (closed paths), but it may end up in funny results.
+### Start- und Endpunkt
+
+Standardmäßig startet eine Satinsäule am nächstgelegenen Punkt zum vorherigen Element und endet zum nächstgelegenen Punkt des folgenden Elements. Werden die Optionen `Automatischer Startpunkt` und `Automatischer Endpunkt` deaktiviert, verläuft die Stickrichtung in der Richtung der Konturpfade. Manuelles Setzen von [Anfangs- und Endpunkten](/de/docs/commands) ist ebenfalls möglich.
 
 ### Automatisch geführte Satinsäulen
 
@@ -111,14 +113,10 @@ Wird im [Parameterdialog](/de/docs/params/) die Anzahl der Wiederholungen der Mi
 
 Ink/Stitch erlaubt offene Pfade für Füllungen. Um Probleme zu vermeiden, empfiehlt es sich aber, die Pfade als geschlossene Pfade anzulegen.
 
-
 ### Start- und Endbefehle
 
-By default, a fill stitch starts as close as possible to the previous stitching element and ends as close as possible to the next stitching element. These starting and ending positions can be modified using [visual commands](/de/docs/commands/) (starting / ending position). 
+Standardmäßig starten Füllstiche am nächstgelegenen Punkt zum vorangegangen Element und endet am nächsten Punkt zum folgenden Element. Dieses Verhalten kann durch manuelles Setzen von [Anfangs- und Endpunkten](/de/docs/commands/) überschrieben werden.
 
-<!--
-Start- und Endpositionen für Füllstiche werden über [visuelle Befehle](/de/docs/commands/) gesteuert (Füllstich Anfangs- und Endposition). 
--->
 Werden viele dieser Befehle eingesetzt, kann es auf der Arbeitsfläche etwas unübersichtlich werden. 
 So kann es hilfreich sein zu wissen, dass die Befehle auch dann weiterhin funktionieren, wenn sie unsichtbar sind.
 
