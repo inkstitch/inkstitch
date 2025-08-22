@@ -60,6 +60,7 @@ class ParamsTab(ScrolledPanel):
         self.dict_of_choices = {}
         self.paired_tab = None
         self.disable_notify_pair = False
+        self.on_change_hook = None
 
         toggles = [param for param in self.params if param.type == 'toggle']
 
