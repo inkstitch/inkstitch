@@ -16,6 +16,7 @@ import wx
 from wx.lib.scrolledpanel import ScrolledPanel
 
 from ..commands import is_command, is_command_symbol
+from ..debug.debug import debug
 from ..elements import (Clone, EmbroideryElement, FillStitch, SatinColumn,
                         Stroke)
 from ..elements.clone import is_clone
@@ -52,7 +53,9 @@ class ParamsTab(ScrolledPanel):
         self.changed_inputs = set()
         self.dependent_tabs = []
         self.parent_tab = None
-        self.param_inputs = {}
+        self.param_name_to_input = {}
+        self.input_to_param_name = {}
+        self.param_name_to_param = {param.name: param for param in self.params}
         self.choice_widgets = defaultdict(list)
         self.dict_of_choices = {}
         self.paired_tab = None
@@ -75,7 +78,7 @@ class ParamsTab(ScrolledPanel):
                 wx.EVT_CHECKBOX, self.update_toggle_state)
             self.toggle_checkbox.Bind(wx.EVT_CHECKBOX, self.changed)
 
-            self.param_inputs[self.toggle.name] = self.toggle_checkbox
+            self.param_name_to_input[self.toggle.name] = self.toggle_checkbox
         else:
             self.toggle = None
 
@@ -105,8 +108,7 @@ class ParamsTab(ScrolledPanel):
             # So let's add the satin column param to the list of changed_inputs right away - even when they didn't actively
             # change it
             if self.toggle and self.toggle.name == 'satin_column':
-                self.enable_change_indicator(self.toggle.name)
-                self.changed_inputs.add(self.toggle_checkbox)
+                self.param_changed(self.toggle.name)
 
         self.update_enable_widgets()
 
@@ -153,9 +155,9 @@ class ParamsTab(ScrolledPanel):
         else:
             selection = input.GetSelection()
 
-        param = self.inputs_to_params[input]
+        param_name = self.input_to_param_name[input]
 
-        self.update_choice_widgets((param, selection))
+        self.update_choice_widgets((param_name, selection))
         self.settings_grid.Layout()
         self.Fit()
         self.Layout()
@@ -196,7 +198,7 @@ class ParamsTab(ScrolledPanel):
     def set_toggle_state(self, value):
         if self.toggle_checkbox:
             self.toggle_checkbox.SetValue(value)
-            self.changed_inputs.add(self.toggle_checkbox)
+            self.param_changed(self.toggle.name)
 
     def get_values(self):
         values = {}
@@ -214,7 +216,7 @@ class ParamsTab(ScrolledPanel):
                 # because they're grayed out anyway.
                 return values
 
-        for name, input in self.param_inputs.items():
+        for name, input in self.param_name_to_input.items():
             if input in self.changed_inputs and input != self.toggle_checkbox:
                 if input.IsEnabled() and input.IsShown():
                     # there are two types of combo boxes:
@@ -232,7 +234,7 @@ class ParamsTab(ScrolledPanel):
     def on_reroll(self, event):
         if len(self.nodes) == 1:
             new_seed = str(randbelow(int(1e8)))
-            input = self.param_inputs['random_seed']
+            input = self.param_name_to_input['random_seed']
             input.SetValue(new_seed)
             self.changed_inputs.add(input)
         else:
@@ -260,11 +262,33 @@ class ParamsTab(ScrolledPanel):
 
     def changed(self, event):
         input = event.GetEventObject()
-        self.changed_inputs.add(input)
-
-        param = self.inputs_to_params[input]
-        self.enable_change_indicator(param)
+        param_name = self.input_to_param_name[input]
+        self.param_changed(param_name)
         event.Skip()
+
+    def param_changed(self, param_name):
+        param = self.param_name_to_param[param_name]
+        input = self.param_name_to_input[param_name]
+        self.changed_inputs.add(input)
+        self.enable_change_indicator(param_name)
+
+        # If they change a param enabled by a parent param, then we should
+        # consider the parent param changed too.  This ensures that all
+        # selected embroidery elements get the effect of this param applied.
+        # For example, if they change the meander pattern, we should ensure
+        # that we're setting the fill type to meander on all selected elements.
+
+        debug.log(f"param_changed(): checking for parent params of {param.name} with selecT_items {param.select_items}")
+
+        for p in self.params:
+            if p.enables is not None:
+                if param.name in p.enables:
+                    self.param_changed(p.name)
+
+        if param.select_items:
+            for choice_name, choice_value in param.select_items:
+                debug.log(f"forcing changed on parent select item: {choice_name}")
+                self.param_changed(choice_name)
 
         if self.on_change_hook:
             self.on_change_hook(self)
@@ -273,18 +297,18 @@ class ParamsTab(ScrolledPanel):
         preset_data = preset.get(self.name, {})
 
         for name, value in preset_data.items():
-            if name in self.param_inputs:
+            if name in self.param_name_to_input:
                 if name in self.dict_of_choices and self.dict_of_choices[name]['param'].type == 'combo':
                     param = self.dict_of_choices[name]["param"]
-                    self.param_inputs[name].SetSelection(self.get_combo_value_index(value, param.options, param.default))
-                elif isinstance(self.param_inputs[name], wx.Choice):
-                    self.param_inputs[name].SetSelection(int(value))
+                    self.param_name_to_input[name].SetSelection(self.get_combo_value_index(value, param.options, param.default))
+                elif isinstance(self.param_name_to_input[name], wx.Choice):
+                    self.param_name_to_input[name].SetSelection(int(value))
                 else:
-                    input = self.param_inputs[name]
+                    input = self.param_name_to_input[name]
                     if name == "satin_column" and input.Label == _('Running stitch along paths'):
                         value = not value
                     input.SetValue(value)
-                self.changed_inputs.add(self.param_inputs[name])
+                self.changed_inputs.add(self.param_name_to_input[name])
                 self.enable_change_indicator(name)
 
         self.update_toggle_state()
@@ -376,9 +400,9 @@ class ParamsTab(ScrolledPanel):
         if event is None:
             for param in self.params:
                 if param.enables is not None:
-                    value = self.param_inputs[param.name].GetValue()
+                    value = self.param_name_to_input[param.name].GetValue()
                     for item in param.enables:
-                        enable_input = self.param_inputs[item]
+                        enable_input = self.param_name_to_input[item]
                         enable_input.Enable(value)
                         enable_input.GetPrevSibling().Enable(value)
         else:
@@ -390,7 +414,7 @@ class ParamsTab(ScrolledPanel):
             if param.enables is not None:
                 value = input.GetValue()
                 for item in param.enables:
-                    enable_input = self.param_inputs[item]
+                    enable_input = self.param_name_to_input[item]
                     enable_input.Enable(value)
                     enable_input.GetPrevSibling().Enable(value)
 
@@ -477,7 +501,7 @@ class ParamsTab(ScrolledPanel):
                 input = wx.TextCtrl(self, wx.ID_ANY, value=str(value))
                 input.Bind(wx.EVT_TEXT, self.changed)
 
-            self.param_inputs[param.name] = input
+            self.param_name_to_input[param.name] = input
 
             if param.type == 'random_seed':
                 col4 = wx.Button(self, wx.ID_ANY, _("Re-roll"))
@@ -495,7 +519,7 @@ class ParamsTab(ScrolledPanel):
             self.settings_grid.Add(input, flag=wx.ALIGN_CENTER_VERTICAL | wx.LEFT | wx.EXPAND, border=10)
             self.settings_grid.Add(col4, flag=wx.ALIGN_CENTER_VERTICAL)
 
-        self.inputs_to_params = {v: k for k, v in self.param_inputs.items()}
+        self.input_to_param_name.update({v: k for k, v in self.param_name_to_input.items()})
 
         box.Add(self.settings_grid, proportion=1, flag=wx.ALL | wx.EXPAND, border=10)
 
@@ -505,24 +529,20 @@ class ParamsTab(ScrolledPanel):
 
         self.Layout()
 
-    def create_change_indicator(self, param):
+    def create_change_indicator(self, param_name):
         indicator = wx.Button(self, style=wx.BORDER_NONE |
                               wx.BU_NOTEXT, size=(28, 28))
         indicator.SetToolTip(
             _('Click to force this parameter to be saved when you click "Apply and Quit"'))
         indicator.Bind(
-            wx.EVT_BUTTON, lambda event: self.on_change_indicator_clicked(param))
+            wx.EVT_BUTTON, lambda event: self.param_changed(param_name))
 
-        self.param_change_indicators[param] = indicator
+        self.param_change_indicators[param_name] = indicator
         return indicator
 
-    def on_change_indicator_clicked(self, param):
-        self.changed_inputs.add(self.param_inputs[param])
-        self.enable_change_indicator(param)
-
-    def enable_change_indicator(self, param):
-        self.param_change_indicators[param].SetBitmapLabel(self.pencil_icon)
-        self.param_change_indicators[param].SetToolTip(
+    def enable_change_indicator(self, param_name):
+        self.param_change_indicators[param_name].SetBitmapLabel(self.pencil_icon)
+        self.param_change_indicators[param_name].SetToolTip(
             _('This parameter will be saved when you click "Apply and Quit"'))
 
 # end of class SatinPane
