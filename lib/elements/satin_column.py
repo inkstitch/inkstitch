@@ -611,6 +611,10 @@ class SatinColumn(EmbroideryElement):
             self.pull_compensation_percent/100,
             True,
         )
+        if len(pairs) == 1:
+            # we need at least two points for line string creation
+            # if there is only one, we simply duplicate it to prevent an error
+            pairs.append(pairs[0])
         rail1 = [point[0] for point in pairs]
         rail2 = [point[1] for point in pairs]
         return shgeo.MultiLineString((rail1, rail2))
