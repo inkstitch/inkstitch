@@ -1149,6 +1149,10 @@ class SatinColumn(EmbroideryElement):
 
         points = [points[0] for points in pairs]
         stitches = running_stitch.even_running_stitch(points, self.running_stitch_length, self.running_stitch_tolerance)
+
+        if len(stitches) == 1:
+            stitches.append(stitches[0])
+
         return stitches
 
     def _stitch_distance(self, pos0, pos1, previous_pos0, previous_pos1):
