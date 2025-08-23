@@ -12,6 +12,9 @@
             <param name="rm_stroke" type="boolean" gui-text="Remove Small strokes"
                    gui-description="Removes small strokes shorter than defined by threshold.">true</param>
             <param name="stroke_threshold" type="int" gui-text="Stroke threshold (px)" min="2" max="800">5</param>
+            <param name="rm_satin" type="boolean" gui-text="Remove Small satins"
+                   gui-description="Removes small satin columns shorter than defined by threshold.">true</param>
+            <param name="satin_threshold" type="int" gui-text="Satin threshold (px)" min="2" max="800">5</param>
             <param name="rm_groups" type="boolean" gui-text="Remove empty layers and groups">true</param>
             <spacer />
             <separator />
