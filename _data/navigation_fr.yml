@@ -166,7 +166,9 @@ docs:
         url: /fr/docs/error-messages/
       - title: "Traduction manquante"
         url: /fr/docs/localization/
-
+  - title: "News"
+    url: /fr/news/
+  
 # fonts
 fonts:
   - title: Tutoriaux sur les polices
