@@ -168,6 +168,8 @@ docs:
         url: /docs/error-messages/
       - title: "Missing Translation"
         url: /docs/localization/
+ - title: "News"
+    url: /news/
 
 # fonts
 fonts:
