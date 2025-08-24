@@ -1,7 +1,7 @@
 ---
 title: "Gestion des polices"
 permalink: /fr/docs/font-tools/
-last_modified_at: 2025-08-08
+last_modified_at: 2025-08-24
 toc: true
 ---
 Un ensemble d'outils pour les créateurs de polices ou à ceux qui souhaitent ajouter des polices supplémentaires dans [l'outil de lettrage](/docs/lettering) d'Ink/Stitch.
@@ -146,6 +146,63 @@ Souvent les fontes de broderie achetées sont organisées en sous dossiers car c
 * Si votre fonte est en couleur vous pouvez la rendre triable à l'aide d'[indices de tri des couleurs](#set-color-index)
 
 
+{{upcoming_release}} 
+## Organiser les glyphes {#organize-glyphs}
+
+L'objectif de cette extension est d'aider le numériseur de polices à organiser son travail étape par étape.
+
+À chaque étape, un groupe de glyphes est placé en haut de la pile d'objets, et le créateur de polices doit numériser ces glyphes avant de passer à l'étape suivante.
+
+Les étapes sont organisées de manière à diviser le travail en plus petits morceaux et à maximiser la réutilisation des lettres déjà numérisées.
+
+Il faut vraiment tester ce qu'on fait à une étape car ce sera recopier pour d'autres lettres et on veut éviter de devoir corriger plusieurs fois la même bêtise:
+
+- utiliser test de polices pour générer toutes les lettres non vérouillées
+	- détection de problème 
+	- simulation pour chasser les sauts malvenus. A faire de préférence avec les lettres augmentées au maximum permis
+	- aperçu réaliste
+	- broderie en vraie
+
+### Étape 1
+
+Le code prévient s'il y a des glyphes en double et supprime les calques indésirables (par exemple chemin vide, ou pas de chemin du tout)
+A cette étape, il faut juste numériser la virgule, le trait d'union et le point. 
+
+### Étape 2
+A cette étape, on doit digitaliser toutes les lettres qui ont été regroupées dans les trois groupes Majuscule, Minuscule et Autres.
+Vous trouverez le point dans les glyphes du i et du j, a vous de voir si ça vous est utile....
+Seules les lettres simples sont à faire (aucune lettre à accent dans ces groupes.
+
+### Étape 3
+A cette étape il faut, digitaliser des chiffres, des symboles et une partie de la ponctuation.
+Vous trouverez dans certains glyphes des morceaux déjà inclus, par exemple dans le ";" vous retrouverez le "." et la ",", digitalisés à l'étape 1. A vous de positionner correctement ou de supprimer . Par exemple, le "1" contient le "l" et le "I", si ils sont trop différents du "1" pour être utiles, il faut les supprimer.
+
+### Étape 4
+Fin de la ponctuation. Vous trouverez le "(" dans le ")", a vous de retourner, positionner et modifier ce qui doit l'être. Normalement, à cette étape tout est prérempli avec votre travail déjà fait
+
+### Étape 5
+Apostrophes, Guillemets, et simple Accents
+Il existe plusieurs types d'apostrophes et de guillemets selon la langue utilisée.
+Si vous en avez numérisé au moins une, l'extension ajoute ici les autres
+Idem pour les guillemets. En principe rien à faire pour eux.
+En revanche il faut digitaliser les accents simples, lorsque cela a été possible ils sont préremplis avec un symbole équivalent déjà traité. Dans le pire des cas, l'accent est utilisé par des lettres de la fonte, mais est absent de la fonte, dans ce cas, une lettre qui l'utilise a été inserrée dans son calque afin que vous sachiez quoi digitaliser
+
+### Étape 6
+Accents complexes:
+À cette étape, nous traitons les autres signes diacritiques.
+Ceux là réutilisent ceux de l'étape précédente. Cela concerne des accents doublés ou dont la position est différente. Les calques sont préremplis, mais il y a du travail de positionnement à faire, c'est pourquoi une lettre utilisant l'accent a parfois été ajoutée pour savoir où positionner le nouvel accent. Si toutefois vous êtes concerné, ce sont des accent utilisées seulement dans certains langues....
+
+### Étape 7
+Lettres ayant un seul accent:
+Vous trouverez leur calque prérempli avec la lettre et l'accent, à vous de les composer pour faire la lettre accentuée.
+
+### Étape 8
+Lettres avec deux accents ou plus..... pas sur que vous soyez concerné.
+
+
+Vous pouvez aussi utilisez cette extension sur n'importe quel fichier de fonte pour
+- verifier s'il y a des doublons
+- organiser les lettres par catégories. 
 
 ## Supprimer les informations de crénage {#remove-kerning}
 
