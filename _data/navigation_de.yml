@@ -164,8 +164,6 @@ docs:
         url: /de/docs/error-messages/
       - title: "Übersetzungen"
         url: /de/docs/localization/
-- title: "Neuigkeiten"
-    url: /de/news/
 
 # fonts
 fonts:
