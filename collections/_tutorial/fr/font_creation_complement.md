@@ -2,7 +2,7 @@
 permalink: /fr/tutorials/font_creation_complement/
 title: "Création de fonte pour Ink/Stitch compléments "
 language: fr
-last_modified_at: 2025-08-08
+last_modified_at: 2025-08-28
 excerpt: "Création de fonte pour Ink/Stitch "
 image: "/assets/images/tutorials/font_creation_complement/multifont3.jpg"
 tutorial-type: 
