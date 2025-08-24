@@ -145,7 +145,7 @@ Souvent les fontes de broderie achetées sont organisées en sous dossiers car c
 * Si nécessaire vous pouvez ajuster les informations  de crénage grace à l'extension [`Gestion des polices > Editer le fichier JSON`](#edit-json)
 * Si votre fonte est en couleur vous pouvez la rendre triable à l'aide d'[indices de tri des couleurs](#set-color-index)
 
-{{upcoming_release}}
+{% upcoming_release}
 ## Organiser les glyphes {#organize-glyphs}
 
 L'objectif de cette extension est d'aider le numériseur de polices à organiser son travail étape par étape.
