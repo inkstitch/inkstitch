@@ -143,7 +143,6 @@ Very often, bought fonts are organized in subfolders, because each letter comes 
 * If necessary, you can adjust the kerning information using the [`Font Management > Edit JSON File`](#edit-json) extension.
 * If your font is colored, you can make it sortable using [color sort indices](#set-color-index).
 
- {{upcoming_release}} 
 ## Organize Glyphs
 The goal of this extension is to help font digitizers organize their work step by step.
 
