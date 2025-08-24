@@ -49,7 +49,7 @@ pages:
 # documentation links
 docs:
  - title: Installation
-    url: /docs/install/
+   url: /docs/install/
     children:
       - title: "Windows"
         url: /docs/install-windows/
