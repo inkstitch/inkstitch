@@ -10,7 +10,7 @@ from .base import InkstitchExtension
 from ..i18n import _
 
 
-class LetteringFillComposedGlyphs(InkstitchExtension):
+class LetteringOrganizeGlyphs(InkstitchExtension):
     """_summary_
     The goal of this extension is to help the font digitizer with steps to organize its work.
     At each step a group of glyphs is brought to the top of the object stack, and the font

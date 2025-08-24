@@ -35,7 +35,7 @@ from .lettering import Lettering
 from .lettering_along_path import LetteringAlongPath
 from .lettering_custom_font_dir import LetteringCustomFontDir
 from .lettering_edit_json import LetteringEditJson
-from .lettering_fill_composed_glyphs import LetteringFillComposedGlyphs
+from .lettering_organize_glyphs import LetteringOrganizeGlyphs
 from .lettering_font_sample import LetteringFontSample
 from .lettering_force_lock_stitches import LetteringForceLockStitches
 from .lettering_generate_json import LetteringGenerateJson
@@ -113,7 +113,7 @@ extensions = [
     LetteringAlongPath,
     LetteringCustomFontDir,
     LetteringEditJson,
-    LetteringFillComposedGlyphs,
+    LetteringOrganizeGlyphs,
     LetteringFontSample,
     LetteringForceLockStitches,
     LetteringGenerateJson,
