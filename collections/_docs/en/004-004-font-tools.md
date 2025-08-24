@@ -144,6 +144,8 @@ Very often, bought fonts are organized in subfolders, because each letter comes 
 * If your font is colored, you can make it sortable using [color sort indices](#set-color-index).
 
 ## Organize Glyphs
+{{ site.data.ui-text[page.lang].upcoming_release }}
+
 The goal of this extension is to help font digitizers organize their work step by step.
 
 At each step, a group of glyphs is placed at the top of the object stack, and the font creator must digitize these glyphs before moving on to the next step.
