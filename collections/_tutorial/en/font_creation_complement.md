@@ -2,7 +2,7 @@
 permalink: /tutorials/font_creation_complement/
 title: "Ink/Stitch font creation"
 language: en
-last_modified_at: 2025-08-20
+last_modified_at: 2025-08-28
 excerpt: "Ink/Stitch font creation"
 image: "/assets/images/tutorials/font_creation_complement/multifont3.jpg"
 tutorial-type: 
