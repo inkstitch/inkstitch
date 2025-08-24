@@ -105,8 +105,7 @@ Ouvrir le fichier svg ainsi créé dans Inkscape. Il a l'air complètement vide,
 `Extensions > Ink/Stitch > Gestion des polices > Convertir la fonte svg en calques de glyphes`
 
 ![UnicodeIntervals](/assets/images/tutorials/font_creation/convert_to_glyphs.png)
-Choisissez un nombre de glyphes supérieur au nombre de glyphes de votre police, sauf si vous êtes en phase de test et souhaitez limiter le nombre de glyphes.
-C'est surtout le moment de décider quelle taille vous souhaitez pour votre police. 
+C'est le moment de décider quelle taille vous souhaitez pour votre police. 
 
 Pour cela choisissez un caractère de référence dont vous savez qu'il est dans votre police svg (le M est une référence courante) et décidez de la hauteur souhaitée pour lui.
 
