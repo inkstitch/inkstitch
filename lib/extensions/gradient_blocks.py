@@ -113,8 +113,11 @@ def gradient_shapes_and_attributes(element, shape, unit_multiplier):
     # e.g. url(#linearGradient872) -> linearGradient872
     gradient = element.gradient
     gradient.apply_transform()
-    point1 = (float(gradient.get('x1')), float(gradient.get('y1')))
-    point2 = (float(gradient.get('x2')), float(gradient.get('y2')))
+    # Note: when x and y are given in percentage within the svg file (which can happen in inkscape-non-native-files),
+    # gradient returns (0, 0) for both positions and will not render correctly.
+    # When the object is moved just once in inkscape, values are updated and this will work again.
+    point1 = (gradient.x1(), gradient.y1())
+    point2 = (gradient.x2(), gradient.y2())
     # get 90° angle to calculate the splitting angle
     transform = -Transform(get_correction_transform(element.node, child=True))
     line = DirectedLineSegment(transform.apply_to_point(point1), transform.apply_to_point(point2))
@@ -146,7 +149,7 @@ def gradient_shapes_and_attributes(element, shape, unit_multiplier):
         split_line = rotate(split_line, angle, origin=split_point, use_radians=True)
         offset_line = split_line.parallel_offset(1, 'right')
         polygon = split(shape, split_line)
-        color = verify_color(stop_styles[i]['stop-color'])
+        color = _get_and_verify_color(stop_styles, gradient, i)
         # does this gradient line split the shape
         offset_outside_shape = len(polygon.geoms) == 1
         for poly in polygon.geoms:
@@ -176,6 +179,15 @@ def gradient_shapes_and_attributes(element, shape, unit_multiplier):
             polygons.append(s)
             attributes.append({'color': stop_styles[-1]['stop-color'], 'angle': stitch_angle, 'is_gradient': is_gradient})
     return polygons, attributes
+
+
+def _get_and_verify_color(stop_styles, gradient, iterator):
+    try:
+        color = verify_color(stop_styles[iterator]['stop-color'])
+    except KeyError:
+        color = gradient.stops[iterator].get_computed_style('stop-color')
+        stop_styles[iterator]['stop-color'] = color
+    return color
 
 
 def verify_color(color):
