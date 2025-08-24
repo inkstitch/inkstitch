@@ -1,8 +1,8 @@
 ---
-permalink: /tutorials/font_creation_complement/
-title: "Ink/Stitch font creation"
+permalink: /tutorials/font-creation/
+title: "Fonts for Ink/Stitch"
 language: en
-last_modified_at: 2025-08-28
+last_modified_at: 2025-08-24
 excerpt: "Ink/Stitch font creation"
 image: "/assets/images/tutorials/font_creation_complement/multifont3.jpg"
 tutorial-type: 
@@ -19,8 +19,6 @@ toc: true
 ![Sample](/assets/images/tutorials/font_creation_complement/multifont3.jpg)
 -->
 
-
-![warning](/assets/images/tutorials/font_creation/work_in_progress.png)
 
 **Warning** :
 Some of the tools used here are not part of Ink/Stitch 3.2.2. 
