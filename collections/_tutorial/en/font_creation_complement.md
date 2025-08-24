@@ -118,9 +118,7 @@ Open the resulting SVG file in Inkscape. It looks completely empty, which is nor
 
 ![UnicodeIntervals](/assets/images/tutorials/font_creation/convert_to_glyph_layers_en.jpg)
 
-Choose a number of glyphs greater than the number of glyphs in your font, unless you're in the testing phase and want to limit the number of glyphs.
-
-This is the time to decide what size you want your font to be.
+Now is the time to decide what size you want your font to be.
 
 To do this, choose a reference letter that you know is in your SVG font (M is a common reference) and decide on its desired height.
 
