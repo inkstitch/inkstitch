@@ -148,7 +148,7 @@ Souvent les fontes de broderie achetées sont organisées en sous dossiers car c
 
 ## Organiser les glyphes {#organize-glyphs}
 
-{{ site.data.ui-text[page.lang].upcoming_release }}
+{% include upcoming_release.html %}
 
 L'objectif de cette extension est d'aider le numériseur de polices à organiser son travail étape par étape.
 
