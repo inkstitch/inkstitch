@@ -251,14 +251,13 @@ Alternatively, you can use the minimum jump stitch length parameter locally to e
 Ink/Stitch lettering allows users to add trims after each letter, word, or line if they wish. 
 Therefore, the only place where it might be useful to add them is within a letter, when it is composed of several pieces.
 
-### Letters with Diacritics
+### Letters with Diacritics and Work Organization
 Ink/Stitch users come from many countries and speak many languages, which is why it's desirable for Ink/Stitch fonts to include something to satisfy as many people as possible. 
 While not aiming for universality, adding letters with diacritics allows for a greater number of users.
 
-`Extensions > Ink/Stitch > Font Management > Fill Composite Glyphs` helps you organize your work to avoid repeating the same digitizing task. 
-This extension also allows for some other optimizations.
+`Extensions > Ink/Stitch > Font Management > Organize Glyphs` helps you organize your work to avoid repeating the same digitizing task. 
+This extension also allows for some other optimizations:
 
-#### The fill composite glyphs extension
 The goal of this extension is to help font digitizers organize their work step by step.
 
 At each step, a group of glyphs is placed at the top of the object stack, and the font creator must digitize these glyphs before moving on to the next step.
@@ -272,81 +271,8 @@ Use font sampling to generate a file with all unlocked letters
 - Use simulation to detect unwanted jumps. Best done with the letters enlarged as much as allowed
 - Realistic preview can help you find mistakes
 - But real stitchouts are the ultimate test
- 
-***Step 1***
 
-The code silently removes unwanted layers (e.g., empty paths, or no paths at all).
-
-At this step, you only need to digitize comma, hyphen, and period.
-
-***Step 2***
-
-At this step, you need to digitize all the letters that have been grouped into the three groups: Uppercase, Lowercase, and Other.
-
-For innstannce, you'll find a copy of the period in the i and j glyphs; it's up to you to decide if this is useful to you.
-
-Only sinple letters need to be digitized (no accented letters in these groups).
-
-***Step 3***
-
-At this step, you need to digitize numbers, symbols, and some punctuation.
-
-You'll find pieces of some glyphs already included, for example, in the ";" you'll find the "." and the "," as digitized in step 1. 
-
-It's up to you to position them correctly or delete them. Also, the "1" contains the "l" and the "I." If they're too different from the "1" to be useful, delete them.
-
-***Step 4***
-
-Last part of punctuation : creating the closing punctuation using the opening punctuation.
-
-For instance, You'll find the "(" in the ")." It's up to you to return, position, and modify what needs to be modified. 
-
-Normally, at this stage, everything is pre-filled with your already done work.
-
-***Step 5***
-
-Apostrophes, Quotation Marks, and Single Accents
-
-There are several types of apostrophes and quotation marks depending on the language used.
-
-If you have created at least one, the extension adds the others here.
-
-The same goes for quotation marks. Normally, there's nothing to do for them.
-
-At this step, you must digitize single accents; when possible, they are pre-filled with an equivalent symbol that has already been processed. 
-
-In the worst case, the accent is used by letters in the font, but is absent from the font. In this case, a letter that uses it has been inserted into its layer so that you know what to digitize.
-
-Don't forget to remove the unnecessary parts !
-
-***Step 6***
-
-Complex Accents:
-
-In this step, you deal with the other diacritical marks.
-
-These reuse work done at the previous step. 
-
-This complex accents are either double accennts or have same shape as a simple one but a different position . 
-
-The layers are pre-filled, but there is some positioning work to be done, which is why a letter using the accent has sometimes been added to indicate where to position the new accent. 
-
-***Step 7***
-
-Letters with a single diacritic:
-
-You will find their layer pre-filled with the letter and the diaccritic; it's up to you to compose them to create the composite letter.
-
-***Step 8***
-
-Letters with two or more diacritics..... only if you chosed to include some of them.
-
-
-You can also use this extension with any font file to
-- check for duplicates
-- organize the letters by category.
-
-Note: yes, you can leave the letters grouped; it doesn't affect the lettering tool
+[See all the steps of the Organize Glyphs extension](/docs/font-tools/#organize-glyphs)
 
 
 ### Ink/Stitch users
