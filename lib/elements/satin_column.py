@@ -611,6 +611,10 @@ class SatinColumn(EmbroideryElement):
             self.pull_compensation_percent/100,
             True,
         )
+        if len(pairs) == 1:
+            # we need at least two points for line string creation
+            # if there is only one, we simply duplicate it to prevent an error
+            pairs.append(pairs[0])
         rail1 = [point[0] for point in pairs]
         rail2 = [point[1] for point in pairs]
         return shgeo.MultiLineString((rail1, rail2))
@@ -1110,6 +1114,10 @@ class SatinColumn(EmbroideryElement):
 
         points = [points[0] for points in pairs]
         stitches = running_stitch.even_running_stitch(points, self.running_stitch_length, self.running_stitch_tolerance)
+
+        if len(stitches) == 1:
+            stitches.append(stitches[0])
+
         return stitches
 
     def _stitch_distance(self, pos0, pos1, previous_pos0, previous_pos1):

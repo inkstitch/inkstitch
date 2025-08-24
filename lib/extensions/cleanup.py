@@ -5,7 +5,7 @@
 
 from inkex import NSS, Boolean, errormsg
 
-from ..elements import FillStitch, Stroke
+from ..elements import FillStitch, SatinColumn, Stroke
 from ..i18n import _
 from ..svg.tags import SVG_GROUP_TAG
 from .base import InkstitchExtension
@@ -17,16 +17,20 @@ class Cleanup(InkstitchExtension):
         self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-f", "--rm_fill", dest="rm_fill", type=Boolean, default=True)
         self.arg_parser.add_argument("-s", "--rm_stroke", dest="rm_stroke", type=Boolean, default=True)
+        self.arg_parser.add_argument("-n", "--rm_satin", dest="rm_satin", type=Boolean, default=True)
         self.arg_parser.add_argument("-a", "--fill_threshold", dest="fill_threshold", type=int, default=20)
         self.arg_parser.add_argument("-l", "--stroke_threshold", dest="stroke_threshold", type=int, default=5)
+        self.arg_parser.add_argument("-t", "--satin_threshold", dest="satin_threshold", type=int, default=5)
         self.arg_parser.add_argument("-g", "--rm_groups", dest="rm_groups", type=Boolean, default=True)
         self.arg_parser.add_argument("-d", "--dry_run", dest="dry_run", type=Boolean, default=False)
 
     def effect(self):
         self.rm_fill = self.options.rm_fill
         self.rm_stroke = self.options.rm_stroke
+        self.rm_satin = self.options.rm_satin
         self.fill_threshold = self.options.fill_threshold
         self.stroke_threshold = self.options.stroke_threshold
+        self.satin_threshold = self.options.satin_threshold
         self.rm_groups = self.options.rm_groups
         self.dry_run = self.options.dry_run
 
@@ -45,6 +49,9 @@ class Cleanup(InkstitchExtension):
             if self.rm_stroke and (isinstance(element, Stroke) and
                element.shape.length < self.stroke_threshold and element.node.getparent() is not None):
                 self.elements_to_remove.add(element.node)
+            if self.rm_satin and (isinstance(element, SatinColumn) and
+               element.shape.length < self.satin_threshold and element.node.getparent() is not None):
+                self.elements_to_remove.add(element.node)
 
         self.groups_to_remove = set()
         if self.rm_groups:
@@ -60,7 +67,10 @@ class Cleanup(InkstitchExtension):
     def _dry_run(self):
         errormsg(_("%s elements to remove:" % len(self.elements_to_remove)))
         for element in self.elements_to_remove:
-            errormsg(f" - {element.label}: {element.get_id()}")
+            if element.label:
+                errormsg(f" - {element.label} (id: {element.get_id()})")
+            else:
+                errormsg(f" - {element.get_id()}")
 
         errormsg("\n")
         errormsg(_("%s groups/layers to remove:" % len(self.groups_to_remove)))
