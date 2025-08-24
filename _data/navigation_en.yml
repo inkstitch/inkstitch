@@ -169,7 +169,6 @@ docs:
       - title: "Missing Translation"
         url: /docs/localization/
 
-
 # fonts
 fonts:
   - title: Font Tutorials
