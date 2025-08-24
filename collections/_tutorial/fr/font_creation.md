@@ -20,8 +20,6 @@ toc: true
 -->
 
 
-![warning](/assets/images/tutorials/font_creation/work_in_progress.png)
-
 **Attention** :
 Une partie des outils Ink/Stitch présentés ici ne font pas partie d'Ink/Stitch 3.2.2. 
 Le texte est assez long, mais il est recommandé de le lire entièrement avant de se lancer dans la création d'une fonte. 
