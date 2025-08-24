@@ -62,12 +62,6 @@ class LetteringSvgFontToLayers(InkstitchExtension):
         """ Adds command-line arguments for glyph count, reference character, and reference height.
         """
         pars.add_argument(
-            "--count",
-            type=int,
-            default=150,
-            help="Stop making layers after this number of glyphs."
-        )
-        pars.add_argument(
             "--reference",
             type=str,
             default="M",
@@ -247,9 +241,6 @@ class LetteringSvgFontToLayers(InkstitchExtension):
                 glyph.set(("horiz-adv-x"), str(hax))
             self.convert_glyph_to_layer(glyph, emsize, baseline, scale_by, hide_layer=hide_layer)
             count += 1
-            if count >= self.options.count:
-                break
-
         self.scale_hkerning(scale_by)
 
 
