@@ -192,14 +192,13 @@ Alternativement, on peut utiliser le paramètre longueur minimum de saut pour s'
 ### Coupes
 Le lettrage d'Ink/Stitch permet à l'utilisateur d'ajouter s'il le souhaite des commandes de coupe après chaque lettre, ou chaque mot ou chaque ligne. Donc le seul endroit ou il peut être intéressant que vous en mettiez c'est à l'intérieur d'une lettre, quand celle-ci est composée de plusieurs morceaux
 
-### Lettres avec diacritiques
+### Lettres avec diacritiques et organisation du travail
 Les utilisateurs d'Ink/Stitch ont de nombreuses nationalités et pratiquent de nombreux langages, c'est pourquoi il est souhaitable que les fontes d'Ink/Stitch comportent de quoi satisfaire le plus de monde possible. Sans chercher à atteindre l'universalité, ajouter des lettres avec diacritiques permet de satisfaire un plus grand nombre d'utilisateurs.
 Les diacritiques sont ces petits signes placés a coté d'une lettre. Ils sont souvent utilisés pour modifier la prononciation de la lettre. Les diacritiques comprennent tous les accents, mais aussi la cédille, le ogonek et autres apendices.
 
-`Extensions > Ink/Stitch > Gestion des polices> Remplir les glyphes composites` vous aide à organiser votre travail pour éviter de faire plusieurs fois le même travail de digitalisation. Cette extension permet aussi quelques autres optimisation du travail à faire.
+`Extensions > Ink/Stitch > Gestion des polices> Organiser les glyphes  vous aide à organiser votre travail pour éviter de faire plusieurs fois le même travail de digitalisation. Cette extension permet aussi quelques autres optimisation du travail à faire. 
 
-<details>
-<summary>Ouvrir pour plus de détails sur l'utilisation de remplir les glyphes composites</summary>
+
 L'objectif de cette extension est d'aider le numériseur de polices à organiser son travail étape par étape.
 
 À chaque étape, un groupe de glyphes est placé en haut de la pile d'objets, et le créateur de polices doit numériser ces glyphes avant de passer à l'étape suivante.
@@ -214,48 +213,9 @@ Il faut vraiment tester ce qu'on fait à une étape car ce sera recopier pour d'
 	- aperçu réaliste
 	- broderie en vraie
 
-***Étape 1***
-
-Le code prévient s'il y a des glyphes en double et supprime les calques indésirables (par exemple chemin vide, ou pas de chemin du tout)
-A cette étape, il faut juste numériser la virgule, le trait d'union et le point. 
-
-***Étape 2***
-A cette étape, on doit digitaliser toutes les lettres qui ont été regroupées dans les trois groupes Majuscule, Minuscule et Autres.
-Vous trouverez le point dans les glyphes du i et du j, a vous de voir si ça vous est utile....
-Seules les lettres simples sont à faire (aucune lettre à accent dans ces groupes.
-
-***Étape 3***
-A cette étape il faut, digitaliser des chiffres, des symboles et une partie de la ponctuation.
-Vous trouverez dans certains glyphes des morceaux déjà inclus, par exemple dans le ";" vous retrouverez le "." et la ",", digitalisés à l'étape 1. A vous de positionner correctement ou de supprimer . Par exemple, le "1" contient le "l" et le "I", si ils sont trop différents du "1" pour être utiles, il faut les supprimer.
-
-***Étape 4***
-Fin de la ponctuation. Vous trouverez le "(" dans le ")", a vous de retourner, positionner et modifier ce qui doit l'être. Normalement, à cette étape tout est prérempli avec votre travail déjà fait
-
-***Étape 5***
-Apostrophes, Guillemets, et simple Accents
-Il existe plusieurs types d'apostrophes et de guillemets selon la langue utilisée.
-Si vous en avez numérisé au moins une, l'extension ajoute ici les autres
-Idem pour les guillemets. En principe rien à faire pour eux.
-En revanche il faut digitaliser les accents simples, lorsque cela a été possible ils sont préremplis avec un symbole équivalent déjà traité. Dans le pire des cas, l'accent est utilisé par des lettres de la fonte, mais est absent de la fonte, dans ce cas, une lettre qui l'utilise a été inserrée dans son calque afin que vous sachiez quoi digitaliser
-
-***Étape 6***
-Accents complexes:
-À cette étape, nous traitons les autres signes diacritiques.
-Ceux là réutilisent ceux de l'étape précédente. Cela concerne des accents doublés ou dont la position est différente. Les calques sont préremplis, mais il y a du travail de positionnement à faire, c'est pourquoi une lettre utilisant l'accent a parfois été ajoutée pour savoir où positionner le nouvel accent. Si toutefois vous êtes concerné, ce sont des accent utilisées seulement dans certains langues....
-
-***Étape 7***
-Lettres ayant un seul accent:
-Vous trouverez leur calque prérempli avec la lettre et l'accent, à vous de les composer pour faire la lettre accentuée.
-
-***Étape 8***
-Lettres avec deux accents ou plus..... pas sur que vous soyez concerné.
+ [Voir les différentes étapes](/fr/docs/font-tools/#organize-glyphs).
 
 
-Vous pouvez aussi utilisez cette extension sur n'importe quel fichier de fonte pour
-- verifier s'il y a des doublons
-- organiser les lettres par catégories. 
-Remarque : oui on peut laisser les lettres groupées, ça ne gène pas le lettrage.
-</details>
 
 ### Les utilisateurs d'Ink/Stitch
 Il leur arrive de faire des choses étranges. Parmi les précautions à prendre:
