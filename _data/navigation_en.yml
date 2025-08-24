@@ -50,7 +50,7 @@ pages:
 docs:
  - title: Installation
    url: /docs/install/
-    children:
+   children:
       - title: "Windows"
         url: /docs/install-windows/
       - title: "macOS"
