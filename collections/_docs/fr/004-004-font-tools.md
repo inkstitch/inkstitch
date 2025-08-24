@@ -146,7 +146,6 @@ Souvent les fontes de broderie achetées sont organisées en sous dossiers car c
 * Si votre fonte est en couleur vous pouvez la rendre triable à l'aide d'[indices de tri des couleurs](#set-color-index)
 
 
-{{upcoming_release}} 
 ## Organiser les glyphes {#organize-glyphs}
 
 L'objectif de cette extension est d'aider le numériseur de polices à organiser son travail étape par étape.
@@ -164,7 +163,6 @@ Il faut vraiment tester ce qu'on fait à une étape car ce sera recopier pour d'
 	- broderie en vraie
 
 ### Étape 1
-
 Le code prévient s'il y a des glyphes en double et supprime les calques indésirables (par exemple chemin vide, ou pas de chemin du tout)
 A cette étape, il faut juste numériser la virgule, le trait d'union et le point. 
 
