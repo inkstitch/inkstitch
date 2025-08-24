@@ -1,5 +1,5 @@
 ---
-permalink: /fr/tutorials/font_creation_complement/
+permalink: /fr/tutorials/font_creation/
 title: "Création de fonte pour Ink/Stitch compléments "
 language: fr
 last_modified_at: 2025-08-28
