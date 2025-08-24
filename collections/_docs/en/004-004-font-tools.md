@@ -144,7 +144,7 @@ Very often, bought fonts are organized in subfolders, because each letter comes 
 * If your font is colored, you can make it sortable using [color sort indices](#set-color-index).
 
 ## Organize Glyphs
-{{ site.data.ui-text[page.lang].upcoming_release }}
+{% include upcoming_release.html %}
 
 The goal of this extension is to help font digitizers organize their work step by step.
 
