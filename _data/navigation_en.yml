@@ -48,7 +48,7 @@ pages:
 
 # documentation links
 docs:
-  - title: Installation
+ - title: Installation
     url: /docs/install/
     children:
       - title: "Windows"
@@ -168,6 +168,8 @@ docs:
         url: /docs/error-messages/
       - title: "Missing Translation"
         url: /docs/localization/
+  - title: "News"
+    url: /news/
  
 
 # fonts
