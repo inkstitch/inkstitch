@@ -48,9 +48,9 @@ pages:
 
 # documentation links
 docs:
- - title: Installation
-   url: /docs/install/
-   children:
+  - title: Installation
+    url: /docs/install/
+    children:
       - title: "Windows"
         url: /docs/install-windows/
       - title: "macOS"
