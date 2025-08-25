@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-28 02:03+0000\n"
-"PO-Revision-Date: 2025-07-28 02:04\n"
+"POT-Creation-Date: 2025-08-25 01:49+0000\n"
+"PO-Revision-Date: 2025-08-25 01:49\n"
 "Last-Translator: \n"
 "Language-Team: Norwegian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-28 02:03+0000\n"
+"POT-Creation-Date: 2025-08-25 01:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1253,7 +1253,7 @@ msgstr ""
 msgid "Add a STOP command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:727
+#: lib/elements/element.py:721
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr ""
 
@@ -1817,7 +1817,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:734 lib/elements/satin_column.py:583
 #: lib/elements/stroke.py:450 lib/gui/satin_multicolor/colorize_panel.py:61
-#: lib/sew_stack/stitch_layers/mixins/randomization.py:59
+#: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr ""
 
@@ -2292,12 +2292,12 @@ msgstr ""
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr ""
 
-#: lib/elements/stroke.py:44 lib/extensions/params.py:608
+#: lib/elements/stroke.py:44 lib/extensions/params.py:612
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "Linje"
 
-#: lib/elements/stroke.py:47 lib/extensions/params.py:281
+#: lib/elements/stroke.py:47 lib/extensions/params.py:285
 msgid "Running stitch along paths"
 msgstr ""
 
@@ -2659,22 +2659,22 @@ msgstr ""
 msgid "Please select one or more fill areas to break apart."
 msgstr "Vennligst velg en eller flere områder med fyll for å bryte opp."
 
-#: lib/extensions/cleanup.py:61
+#: lib/extensions/cleanup.py:68
 #, python-format
 msgid "%s elements to remove:"
 msgstr ""
 
-#: lib/extensions/cleanup.py:66
+#: lib/extensions/cleanup.py:76
 #, python-format
 msgid "%s groups/layers to remove:"
 msgstr ""
 
-#: lib/extensions/cleanup.py:74
+#: lib/extensions/cleanup.py:84
 #, python-brace-format
 msgid "{num_elements_removed} elements removed"
 msgstr ""
 
-#: lib/extensions/cleanup.py:78
+#: lib/extensions/cleanup.py:88
 #, python-brace-format
 msgid "{num_groups_removed} groups/layers removed"
 msgstr ""
@@ -2924,84 +2924,6 @@ msgstr ""
 msgid "Ink/Stitch Edit JSON"
 msgstr ""
 
-#: lib/extensions/lettering_fill_composed_glyphs.py:51
-msgid "Upper Case Letters"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:52
-msgid "Lower Case Letters"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:53
-msgid "Other Letters"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:54
-msgid "Digits"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:55
-msgid "Symbols"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:56
-msgid "Punctuation"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:57
-msgid "Closing Punctuation"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:58
-msgid "Diacritics"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:59
-msgid "Special"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:133
-#, python-brace-format
-msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:139
-msgid "No duplicated glyph found"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:193
-#, python-brace-format
-msgid "This or these glyphs have been added:\n"
-"{added_char}\n"
-"Either  fill them or delete them"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:326
-msgid "Additional Punctuation"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:401
-msgid "Simple Diacritics"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:446
-#: lib/extensions/lettering_fill_composed_glyphs.py:472
-#: lib/extensions/lettering_fill_composed_glyphs.py:497
-msgid "nothing to do, you are ready for next step"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:448
-msgid "Other Diacritics"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:474
-msgid "Two pieces letters"
-msgstr ""
-
-#: lib/extensions/lettering_fill_composed_glyphs.py:499
-msgid "Other composed letters"
-msgstr ""
-
 #: lib/extensions/lettering_font_sample.py:21
 msgid "Font Sample"
 msgstr ""
@@ -3013,6 +2935,84 @@ msgstr ""
 #: lib/extensions/lettering_generate_json.py:53
 msgid "Please specify a font file."
 msgstr "Vennligst presiser hvilken skrifttype."
+
+#: lib/extensions/lettering_organize_glyphs.py:51
+msgid "Upper Case Letters"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:52
+msgid "Lower Case Letters"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:53
+msgid "Other Letters"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:54
+msgid "Digits"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:55
+msgid "Symbols"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:56
+msgid "Punctuation"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:57
+msgid "Closing Punctuation"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:58
+msgid "Diacritics"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:59
+msgid "Special"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:133
+#, python-brace-format
+msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:139
+msgid "No duplicated glyph found"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:193
+#, python-brace-format
+msgid "This or these glyphs have been added:\n"
+"{added_char}\n"
+"Either  fill them or delete them"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:326
+msgid "Additional Punctuation"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:401
+msgid "Simple Diacritics"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:446
+#: lib/extensions/lettering_organize_glyphs.py:472
+#: lib/extensions/lettering_organize_glyphs.py:497
+msgid "nothing to do, you are ready for next step"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:448
+msgid "Other Diacritics"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:474
+msgid "Two pieces letters"
+msgstr ""
+
+#: lib/extensions/lettering_organize_glyphs.py:499
+msgid "Other composed letters"
+msgstr ""
 
 #: lib/extensions/letters_to_font.py:38
 msgid "Font directory not found. Please specify an existing directory."
@@ -3059,55 +3059,55 @@ msgstr ""
 msgid "Thread Palette"
 msgstr "Sytråds-palette"
 
-#: lib/extensions/params.py:293
+#: lib/extensions/params.py:297
 msgid "These settings will be applied to 1 object."
 msgstr ""
 
-#: lib/extensions/params.py:296
+#: lib/extensions/params.py:300
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr ""
 
-#: lib/extensions/params.py:300
+#: lib/extensions/params.py:304
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr "Noen innstillinger har forskjellige verdier på tvers av objekter. Velg en verdi fra rullemenyen eller skriv inn en ny."
 
-#: lib/extensions/params.py:305
+#: lib/extensions/params.py:309
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr ""
 
-#: lib/extensions/params.py:309
+#: lib/extensions/params.py:313
 msgid "Disabling this tab will disable the following tab."
 msgstr ""
 
-#: lib/extensions/params.py:313
+#: lib/extensions/params.py:317
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr ""
 
-#: lib/extensions/params.py:393
+#: lib/extensions/params.py:397
 msgid "Inkscape objects"
 msgstr "Inkscape objekter"
 
-#: lib/extensions/params.py:454
+#: lib/extensions/params.py:458
 msgid "No options available"
 msgstr ""
 
-#: lib/extensions/params.py:474
-#: lib/sew_stack/stitch_layers/mixins/randomization.py:33
+#: lib/extensions/params.py:478
+#: lib/sew_stack/stitch_layers/mixins/randomization.py:29
 msgid "Re-roll"
 msgstr ""
 
-#: lib/extensions/params.py:503
+#: lib/extensions/params.py:507
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:513
+#: lib/extensions/params.py:517
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:540 lib/extensions/sew_stack_editor.py:118
+#: lib/extensions/params.py:544 lib/extensions/sew_stack_editor.py:118
 #: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:57
 #: lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:54
@@ -3119,16 +3119,16 @@ msgstr ""
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: lib/extensions/params.py:545
+#: lib/extensions/params.py:549
 msgid "Use Last Settings"
 msgstr ""
 
-#: lib/extensions/params.py:548 lib/extensions/sew_stack_editor.py:122
+#: lib/extensions/params.py:552 lib/extensions/sew_stack_editor.py:122
 #: lib/gui/lettering/main_panel.py:55
 msgid "Apply and Quit"
 msgstr "Fullfør og Avslutt"
 
-#: lib/extensions/params.py:845 lib/extensions/sew_stack_editor.py:552
+#: lib/extensions/params.py:849 lib/extensions/sew_stack_editor.py:552
 msgid "Embroidery Params"
 msgstr ""
 
@@ -3320,7 +3320,7 @@ msgid "Description"
 msgstr "Beskrivelse"
 
 #: lib/extensions/troubleshoot.py:127 lib/extensions/troubleshoot.py:176
-#: inx/inkstitch_cleanup.inx:36 inx/inkstitch_element_info.inx:12
+#: inx/inkstitch_cleanup.inx:39 inx/inkstitch_element_info.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:155
 #: inx/inkstitch_select_elements.inx:91 inx/inkstitch_troubleshoot.inx:26
 #: inx/inkstitch_update_svg.inx:11
@@ -3429,7 +3429,7 @@ msgstr ""
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
 #: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:16
 #: inx/inkstitch_batch_lettering.inx:62 inx/inkstitch_break_apart.inx:14
-#: inx/inkstitch_cleanup.inx:22 inx/inkstitch_cutwork_segmentation.inx:44
+#: inx/inkstitch_cleanup.inx:25 inx/inkstitch_cutwork_segmentation.inx:44
 #: inx/inkstitch_density_map.inx:26 inx/inkstitch_display_stacking_order.inx:11
 #: inx/inkstitch_fill_to_satin.inx:24 inx/inkstitch_fill_to_stroke.inx:24
 #: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
@@ -3438,9 +3438,9 @@ msgstr ""
 #: inx/inkstitch_knockdown_fill.inx:43
 #: inx/inkstitch_lettering_along_path.inx:25
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:27
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 #: inx/inkstitch_lettering_generate_json.inx:144
+#: inx/inkstitch_lettering_organize_glyphs.inx:27
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
 #: inx/inkstitch_letters_to_font.inx:60 inx/inkstitch_outline.inx:25
@@ -4351,8 +4351,8 @@ msgstr ""
 #: inx/inkstitch_knockdown_fill.inx:17
 #: inx/inkstitch_lettering_along_path.inx:17
 #: inx/inkstitch_lettering_custom_font_dir.inx:8
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:8
 #: inx/inkstitch_lettering_force_lock_stitches.inx:8
+#: inx/inkstitch_lettering_organize_glyphs.inx:8
 #: inx/inkstitch_lettering_remove_kerning.inx:9
 #: inx/inkstitch_lettering_set_color_sort_index.inx:8
 #: inx/inkstitch_letters_to_font.inx:8 inx/inkstitch_outline.inx:8
@@ -4399,7 +4399,7 @@ msgstr ""
 #: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:100
 #: inx/inkstitch_fill_to_stroke.inx:33 inx/inkstitch_jump_to_stroke.inx:44
 #: inx/inkstitch_jump_to_trim.inx:29
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:30
+#: inx/inkstitch_lettering_organize_glyphs.inx:30
 #: inx/inkstitch_remove_embroidery_settings.inx:143
 #: inx/inkstitch_stroke_to_lpe_satin.inx:32
 #: inx/inkstitch_zigzag_line_to_satin.inx:28
@@ -4556,27 +4556,27 @@ msgstr ""
 msgid "Reverse the path when stitching this layer."
 msgstr ""
 
-#: lib/sew_stack/stitch_layers/mixins/randomization.py:58
+#: lib/sew_stack/stitch_layers/mixins/randomization.py:54
 msgid "Randomization"
 msgstr ""
 
-#: lib/sew_stack/stitch_layers/mixins/randomization.py:61
+#: lib/sew_stack/stitch_layers/mixins/randomization.py:57
 msgid "The random seed is used when handling randomization settings.  Click the button to choose a new random seed, which will generate random features differently. Alternatively, you can enter your own random seed.  If you reuse a random seed, random features will look the same."
 msgstr ""
 
-#: lib/sew_stack/stitch_layers/mixins/randomization.py:65
+#: lib/sew_stack/stitch_layers/mixins/randomization.py:61
 msgid "Offset stitches"
 msgstr ""
 
-#: lib/sew_stack/stitch_layers/mixins/randomization.py:66
+#: lib/sew_stack/stitch_layers/mixins/randomization.py:62
 msgid "Move stitches randomly by up to this many millimeters in any direction."
 msgstr ""
 
-#: lib/sew_stack/stitch_layers/mixins/randomization.py:67
+#: lib/sew_stack/stitch_layers/mixins/randomization.py:63
 msgid "Offset stitch path"
 msgstr ""
 
-#: lib/sew_stack/stitch_layers/mixins/randomization.py:68
+#: lib/sew_stack/stitch_layers/mixins/randomization.py:64
 msgid "Move stitches randomly by up to this many millimeters perpendicular to the stitch path.\n\n"
 "If <b>Offset stitches</b> is also specified, then this one is processed first."
 msgstr ""
@@ -5461,7 +5461,7 @@ msgid "This extension tries to create a single stitch path through all selected 
 msgstr ""
 
 #: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_batch_lettering.inx:67
-#: inx/inkstitch_break_apart.inx:20 inx/inkstitch_cleanup.inx:25
+#: inx/inkstitch_break_apart.inx:20 inx/inkstitch_cleanup.inx:28
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
 #: inx/inkstitch_install_custom_palette.inx:17
@@ -5620,27 +5620,39 @@ msgstr ""
 msgid "Stroke threshold (px)"
 msgstr ""
 
-#: inx/inkstitch_cleanup.inx:15
+#: inx/inkstitch_cleanup.inx:16
+msgid "Remove Small satins"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:16
+msgid "Removes small satin columns shorter than defined by threshold."
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:17
+msgid "Satin threshold (px)"
+msgstr ""
+
+#: inx/inkstitch_cleanup.inx:18
 msgid "Remove empty layers and groups"
 msgstr ""
 
-#: inx/inkstitch_cleanup.inx:20
+#: inx/inkstitch_cleanup.inx:23
 msgid "Test run"
 msgstr ""
 
-#: inx/inkstitch_cleanup.inx:20
+#: inx/inkstitch_cleanup.inx:23
 msgid "Only display labels and ids of affected elements and groups without removing them."
 msgstr ""
 
-#: inx/inkstitch_cleanup.inx:23
+#: inx/inkstitch_cleanup.inx:26
 msgid "Use this extension to remove small objects from the document."
 msgstr ""
 
-#: inx/inkstitch_cleanup.inx:26
+#: inx/inkstitch_cleanup.inx:29
 msgid "https://inkstitch.org/docs/troubleshoot/#cleanup-document"
 msgstr ""
 
-#: inx/inkstitch_cleanup.inx:33
+#: inx/inkstitch_cleanup.inx:36
 msgid "Remove small unstitchable elements"
 msgstr ""
 
@@ -6928,13 +6940,13 @@ msgstr ""
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:27
 #: inx/inkstitch_lettering_edit_json.inx:12
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:42
 #: inx/inkstitch_lettering_font_sample.inx:12
 #: inx/inkstitch_lettering_force_lock_stitches.inx:45
 #: inx/inkstitch_lettering_generate_json.inx:12
+#: inx/inkstitch_lettering_organize_glyphs.inx:42
 #: inx/inkstitch_lettering_remove_kerning.inx:33
 #: inx/inkstitch_lettering_set_color_sort_index.inx:30
-#: inx/inkstitch_lettering_svg_font_to_layers.inx:16
+#: inx/inkstitch_lettering_svg_font_to_layers.inx:14
 #: inx/inkstitch_letters_to_font.inx:86
 msgid "Font Management"
 msgstr ""
@@ -6945,66 +6957,6 @@ msgstr ""
 
 #: inx/inkstitch_lettering_edit_json.inx:9
 msgid "Feature to verify or update the font information file for an existing font"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:3
-msgid "Fill Composed Glyphs"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:12
-msgid "Choose action"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:13
-msgid "Step 1 : Comma and period and hyphen"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:14
-msgid "Step 2 : Undecomposable Letters"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:15
-msgid "Step 3 : Digits, Symbols and Opening Punctuation"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:16
-msgid "Step 4 : Closing Punctuation"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:17
-msgid "Step 5 : First diacritics"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:18
-msgid "Step 6 : All diacritics"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:19
-msgid "Step 7 : Two pieces Letters"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:20
-msgid "Step 8 : Other Composed Letters"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:21
-msgid "Check duplicate GlyphLayers"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:22
-msgid "Sort by Category"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:28
-msgid "This extension helps the font digitizer to organize its work in steps to maximize reuse of already digitized letters."
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:31
-msgid "https://inkstitch.org/docs/font-tools/#fill_composed_glyphs"
-msgstr ""
-
-#: inx/inkstitch_lettering_fill_composed_glyphs.inx:39
-msgid "Help with composed glyphs like é,ç or ï"
 msgstr ""
 
 #: inx/inkstitch_lettering_font_sample.inx:9
@@ -7178,6 +7130,66 @@ msgstr ""
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
 msgstr ""
 
+#: inx/inkstitch_lettering_organize_glyphs.inx:3
+msgid "Organize Glyphs"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:12
+msgid "Choose action"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:13
+msgid "Step 1 : Comma and period and hyphen"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:14
+msgid "Step 2 : Undecomposable Letters"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:15
+msgid "Step 3 : Digits, Symbols and Opening Punctuation"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:16
+msgid "Step 4 : Closing Punctuation"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:17
+msgid "Step 5 : First diacritics"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:18
+msgid "Step 6 : All diacritics"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:19
+msgid "Step 7 : Two pieces Letters"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:20
+msgid "Step 8 : Other Composed Letters"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:21
+msgid "Check duplicate GlyphLayers"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:22
+msgid "Sort by Category"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:28
+msgid "This extension helps the font digitizer to organize its work in steps to maximize reuse of already digitized letters."
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:31
+msgid "https://inkstitch.org/docs/font-tools/#organize_glyphs"
+msgstr ""
+
+#: inx/inkstitch_lettering_organize_glyphs.inx:39
+msgid "Help with composed glyphs like é,ç or ï"
+msgstr ""
+
 #: inx/inkstitch_lettering_remove_kerning.inx:3
 msgid "Remove Kerning"
 msgstr ""
@@ -7231,18 +7243,14 @@ msgid "Convert SVG Font to Glyph Layers"
 msgstr ""
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:6
-msgid "Stop after"
-msgstr ""
-
-#: inx/inkstitch_lettering_svg_font_to_layers.inx:7
 msgid "Use this character to define size"
 msgstr ""
 
-#: inx/inkstitch_lettering_svg_font_to_layers.inx:8
+#: inx/inkstitch_lettering_svg_font_to_layers.inx:7
 msgid "Height of reference character (mm)"
 msgstr ""
 
-#: inx/inkstitch_lettering_svg_font_to_layers.inx:13
+#: inx/inkstitch_lettering_svg_font_to_layers.inx:11
 msgid "Converts a svg font to glyph layers"
 msgstr ""
 
