@@ -102,9 +102,12 @@ class PresetsPanel(wx.Panel):
             json.dump(presets, presets_file)
 
     def update_preset_list(self):
+        current_preset = self.preset_chooser.GetValue().strip()
         preset_names = list(self._load_presets().keys())
         preset_names = [preset for preset in preset_names if not self.is_hidden(preset)]
         self.preset_chooser.SetItems(sorted(preset_names))
+        if current_preset in preset_names:
+            self.preset_chooser.SetValue(current_preset)
 
     def is_hidden(self, preset_name):
         return self.HIDDEN_PRESET_RE.match(preset_name)
@@ -140,6 +143,11 @@ class PresetsPanel(wx.Panel):
             return
 
         self.store_preset(preset_name, self.parent.get_preset_data())
+
+        if overwrite:
+            info_dialog(self, _('Preset "%s" updated.') % preset_name)
+        else:
+            info_dialog(self, _('Preset "%s" added.') % preset_name)
 
         event.Skip()
 
@@ -177,5 +185,7 @@ class PresetsPanel(wx.Panel):
 
         self.update_preset_list()
         self.preset_chooser.SetValue("")
+
+        info_dialog(self, _('Preset "%s" deleted.') % preset_name)
 
         event.Skip()
