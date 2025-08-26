@@ -59,7 +59,7 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
         return
 
     beg = Stitch(*beg, tags=('fill_row_start',))
-    end = Stitch(*end, tags=('fill_row_start',))
+    end = Stitch(*end, tags=('fill_row_end',))
     stitches.append(beg)
 
     if enable_random_stitch_length:
@@ -104,6 +104,8 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
 
     if (end - stitches[-1]).length() > 0.1 * PIXELS_PER_MM and not skip_last:
         stitches.append(end)
+    else:
+        stitches[-1].add_tag('fill_row_end')
 
 
 def intersect_region_with_grating(shape, angle, row_spacing, end_row_spacing=None, flip=False):
