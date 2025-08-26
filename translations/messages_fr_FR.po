@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-08-25 01:49+0000\n"
-"PO-Revision-Date: 2025-08-25 01:49\n"
+"PO-Revision-Date: 2025-08-26 01:45\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -5650,15 +5650,15 @@ msgstr "Seuil de suppression de petits traits (px)"
 
 #: inx/inkstitch_cleanup.inx:16
 msgid "Remove Small satins"
-msgstr ""
+msgstr "Supprimer les petits satins"
 
 #: inx/inkstitch_cleanup.inx:16
 msgid "Removes small satin columns shorter than defined by threshold."
-msgstr ""
+msgstr "Supprimer les colonnes satin plus courtes que la valeur définie par le seuil."
 
 #: inx/inkstitch_cleanup.inx:17
 msgid "Satin threshold (px)"
-msgstr ""
+msgstr "Seuil de satin (px)"
 
 #: inx/inkstitch_cleanup.inx:18
 msgid "Remove empty layers and groups"
@@ -7160,7 +7160,7 @@ msgstr "https://inkstitch.org/fr/docs/font-tools/#generate-json"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:3
 msgid "Organize Glyphs"
-msgstr ""
+msgstr "Organiser les ghyphes"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:12
 msgid "Choose action"
@@ -7212,7 +7212,7 @@ msgstr "Cette extension aide le digitaliseur de fonte à organiser son travail p
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:31
 msgid "https://inkstitch.org/docs/font-tools/#organize_glyphs"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/font-tools/#organize_glyphs"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:39
 msgid "Help with composed glyphs like é,ç or ï"
