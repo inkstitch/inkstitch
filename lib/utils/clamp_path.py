@@ -131,31 +131,30 @@ def clamp_path_to_polygon(path, polygon):
             # The second part of this or condition checks whether part of the
             # path was removed by difference() above, because it coincided
             # with part of the shape border.
-            if not was_inside or last_point_inside.distance(start) > 0.01:
-                if last_point_inside is not None:
-                    # We traveled outside or on the border of the shape for
-                    # a while.  In either case, we need to add a path along the
-                    # border between the exiting and entering points.
+            if not was_inside and last_point_inside is not None:
+                # We traveled outside or on the border of the shape for
+                # a while.  In either case, we need to add a path along the
+                # border between the exiting and entering points.
 
-                    # First, find the two points.  Buffer them just a bit to
-                    # ensure intersection with the border.
-                    exit_point = last_point_inside.buffer(0.01, quad_segs=1)
-                    entry_point = ShapelyPoint(segment.coords[0]).buffer(0.01, quad_segs=1)
+                # First, find the two points.  Buffer them just a bit to
+                # ensure intersection with the border.
+                exit_point = last_point_inside.buffer(0.01, quad_segs=1)
+                entry_point = ShapelyPoint(segment.coords[0]).buffer(0.01, quad_segs=1)
 
-                    if not exit_point.intersects(entry_point):
-                        # Now break the border into pieces using those points.
-                        border = find_border(polygon, exit_point)
-                        border_pieces = ensure_multi_line_string(border.difference(MultiPolygon((entry_point, exit_point)))).geoms
-                        border_pieces = fix_starting_point(border_pieces)
+                if not exit_point.intersects(entry_point):
+                    # Now break the border into pieces using those points.
+                    border = find_border(polygon, exit_point)
+                    border_pieces = ensure_multi_line_string(border.difference(MultiPolygon((entry_point, exit_point)))).geoms
+                    border_pieces = fix_starting_point(border_pieces)
 
-                        # Pick the shortest way to get from the exiting to the
-                        # entering point along the border.
-                        shorter = min(border_pieces, key=lambda piece: piece.length)
+                    # Pick the shortest way to get from the exiting to the
+                    # entering point along the border.
+                    shorter = min(border_pieces, key=lambda piece: piece.length)
 
-                        # We don't know which direction the polygon border
-                        # piece should be.  adjust_line_end() will figure
-                        # that out.
-                        result.append(adjust_line_end(shorter, entry_point))
+                    # We don't know which direction the polygon border
+                    # piece should be.  adjust_line_end() will figure
+                    # that out.
+                    result.append(adjust_line_end(shorter, entry_point))
 
             result.append(segment)
             was_inside = True
