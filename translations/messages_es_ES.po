@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-08-25 01:49+0000\n"
-"PO-Revision-Date: 2025-08-26 01:45\n"
+"PO-Revision-Date: 2025-08-27 01:42\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -30,255 +30,257 @@ msgstr ""
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script is a decorative satin column manuscript font. It contains 118 glyphs, covering most western european languages needs. More decorative options are hidden in the µ glyph."
-msgstr ""
+msgstr "Brock Script es una fuente manuscrita decorativa basada en columnas de satín. Incluye 118 glifos, cubriendo la mayoría de las necesidades de los idiomas de Europa occidental. Opciones decorativas adicionales se encuentran ocultas en el glifo µ."
 
 #. description of font in fonts/Hebrew_font_large
 #: inkstitch-fonts-metadata.py:4
 msgid "Large size Hebrew satin font"
-msgstr ""
+msgstr "Fuente Hebrew en tamaño grande en satín"
 
 #. description of font in fonts/Shojumaru
 #: inkstitch-fonts-metadata.py:6
 msgid "Shojumaru is a manga like satin font."
-msgstr ""
+msgstr "Shojumaru es una fuente estilo manga en satín."
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
 msgid "Abécédaire AGS is a crossstitch font."
-msgstr ""
+msgstr "Abécédaire AGS es una fuente en punto en cruz."
 
 #. description of font in fonts/abril
 #: inkstitch-fonts-metadata.py:10
 msgid "Abril En Fleur AGS is a monogram font."
-msgstr ""
+msgstr "Abril En Fleur AGS es una fuente de monograma."
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:12
 msgid "AGS Γαραμου Garamond contains all the letters of the latin and greek alphabets and cover most european languages."
-msgstr ""
+msgstr "AGS Γαραμου Garamond contiene todas las letras de los alfabetos latin y griego, y cubre la mayoría de los idiomas europeos."
 
 #. description of font in fonts/allegria20
 #: inkstitch-fonts-metadata.py:14
 msgid "Running stitch font"
-msgstr ""
+msgstr "Fuente en puntada de corrido"
 
 #. description of font in fonts/allegria55
 #: inkstitch-fonts-metadata.py:16
 msgid "Satin font"
-msgstr ""
+msgstr "Fuente en satín"
 
 #. description of font in fonts/ambigue
 #: inkstitch-fonts-metadata.py:18
 msgid "Ambigüe is a mix of satin and bean stitch font with a subtle harmony of disorder. You may ignore the hidden black running stitches (they are the original letters) or use them to customize this font as you like."
-msgstr ""
+msgstr "Ambigüe es una fuente que combina puntada de satín y puntada de frijol, con una sutil armonía del desorden. Puedes ignorar las puntadas de corrido negras ocultas (que corresponden a las letras originales) o usarlas para personalizar esta fuente como prefieras."
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:20
 msgid "Amitaclo is a script satin font. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Amitaclo es una fuente manuscrita en satín. Cada satín tiene un refuerzo en zigzag"
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:22
 msgid "This font is an altered version of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Esta fuente es una versión modificada de Amitaclo, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo fino (60) como de aguja fina (60)."
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:24
 msgid "Apex Lake is a large ornate capital letters font. It contains only 38 glyphs : A-Z,0-9,! and ?."
-msgstr ""
+msgstr "Apex Lake es una fuente de letras mayúsculas ornamentadas en tamaño grande. Contiene solo 38 glifos: A-Z, 0-9, ! y ?."
 
 #. description of font in fonts/apex_simple_AGS
 #: inkstitch-fonts-metadata.py:26
 msgid "Apex Simple AGS is a satin companion font for Apex Lake AGS."
-msgstr ""
+msgstr "Apex Simple AGS es una fuente en satín complementaria de Apex Lake AGS."
 
 #. description of font in fonts/apex_simple_small_AGS
 #: inkstitch-fonts-metadata.py:28
 msgid "Apex Simple Small AGS is an altered version of Apex Simple AGS to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Apex Simple Small AGS es una versión modificada de Apex Simple AGS, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo fino (60) como de aguja fina (60)."
 
 #. description of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:30
 msgid "Auberge Marif is a script satin font. The glyphs cover most Western European languages."
-msgstr ""
+msgstr "Auberge Marif es una fuente manuscrita en satín. Los glifos cubren la mayoría de los idiomas de Europa occidental."
 
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:32
 msgid "Auberge Small is an altered version of Auberge Marif to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Auberge Small es una versión modificada de Auberge Marif, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo fino (60) como de aguja fina (60)."
 
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:34
 msgid "Aventurina is a script satin font. The glyphs cover most Western European languages."
-msgstr ""
+msgstr "Aventurina es una fuente manuscrita en satín. Los glifos cubren la mayoría de los idiomas de Europa occidental."
 
 #. description of font in fonts/barstitch_bold
 #: inkstitch-fonts-metadata.py:36
 msgid "Barstitch  Bold is a satin font."
-msgstr ""
+msgstr "Barstitch Bold es una fuente en satín negrita."
 
 #. description of font in fonts/barstitch_cloudy
 #: inkstitch-fonts-metadata.py:38
 msgid "This is a guided fill version of Barstitch fill. Each letter is used to clip a group of guided fills and  then  a bean stitch contour is stitched. "
-msgstr ""
+msgstr "Esta es una versión de relleno guiado de Barstitch Fill. Cada letra se utiliza para recortar un grupo de rellenos guiados y luego se borda un contorno en puntada de frijol. "
 
 #. description of font in fonts/barstitch_mandala
 #: inkstitch-fonts-metadata.py:40
 msgid "A large Mandala font. Redwork versions of the four mandalas  used to design the font are stored in the $,<,>,^ glyphs"
-msgstr ""
+msgstr "Una fuente Mandala en tamaño grande. Las versiones Redwork de los cuatro mandalas usados para diseñar la fuente están almacenadas en los glifos $, <, >, ^"
 
 #. description of font in fonts/barstitch_regular
 #: inkstitch-fonts-metadata.py:42
 msgid "Barstitch regular is a satin font. "
-msgstr ""
+msgstr "Barstitch regular es una fuente en satín. "
 
 #. description of font in fonts/barstitch_textured
 #: inkstitch-fonts-metadata.py:44
 msgid "Barstitch textured is a highly textured font with the help of meander fills"
-msgstr ""
+msgstr "Barstitch Textured es una fuente con mucha textura gracias a los rellenos en meandro"
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:46
 msgid "Baumans FI is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Baumans FI es una fuente en satín. Cada satín tiene un refuerzo en zigzag."
 
 #. description of font in fonts/baumans_FI_Small
 #: inkstitch-fonts-metadata.py:48
 msgid "Baumans FI Small is an altered version of Baumans FI, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Baumans FI Small es una versión modificada de Baumans FI, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo fino (60) como de aguja fina (60)."
 
 #. description of font in fonts/bluenesia_satin
 #: inkstitch-fonts-metadata.py:50
 msgid "A Syafrizal a.k.a. Khurasan jawn. 3.5mm satin at 100%, splits at higher sizes."
-msgstr ""
+msgstr "Syafrizal, también conocida como Khurasan Jawn. Satín de 3.5 mm al 100%, se divide en medidas mayores."
 
 #. description of font in fonts/braille
 #: inkstitch-fonts-metadata.py:52
 msgid "Font for the visually impaired with Braille key combinations according to DT 2024 INSEI specifications for French 6 dots Braille. It is also possible to use Unicode Braille. In this case, it is convenient to use one of the web's Braille translators to create a text in Braille unicode.\n"
-msgstr ""
+msgstr "Fuente para personas con discapacidad visual con combinaciones de teclas Braille según las especificaciones DT 2024 INSEI para Braille francés de 6 puntos. También es posible usar Braille Unicode. En este caso, es conveniente usar uno de los traductores de Braille en línea para crear un texto en Braille Unicode.\n"
 
 #. description of font in fonts/califragilistic
 #: inkstitch-fonts-metadata.py:54
 msgid "Califragilistic is a tricolor running stitch font that was constructed using mandalas"
-msgstr ""
+msgstr "Califragilistic es una fuente en puntada de corrido tricolor que se construyó utilizando mandalas"
 
 #. description of font in fonts/cats
 #: inkstitch-fonts-metadata.py:56
 msgid "Cats is a silly font that makes use of satin random parameters."
-msgstr ""
+msgstr "Cats es una fuente divertida que utiliza parámetros aleatorios de satín."
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:58
 msgid "Cherry for inkstitch is a decorative satin column font. It contains 74 glyphs."
-msgstr ""
+msgstr "Cherry para inkstitch es una fuente decorativa en columnas de satín. Contiene 74 glifos."
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:60
 msgid "Cherry for Kaalleen is a large decorative font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Cherry para Kaalleen es una fuente decorativa en tamaño grande. Contiene 36 glifos, incluidos los números y las 26 letras mayúsculas A-Z."
 
 #. description of font in fonts/chicken_little
 #: inkstitch-fonts-metadata.py:62
 #, python-format
 msgid "Chicken Little  is a  playful decorative display font with loads of personality. There is no common baseline, no common character size and no common slope of the letters. Beyond 110% some satin columns will split."
-msgstr ""
+msgstr "Chicken Little es una fuente decorativa de exhibición divertida con mucha personalidad. No hay línea base común, ni tamaño común de los caracteres ni inclinación común de las letras. Más allá del 110%, algunas columnas de satín se dividirán."
 
 #. description of font in fonts/chicken_little_small
 #: inkstitch-fonts-metadata.py:64
 msgid "This font is an altered version  of Chicken Little KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Esta fuente es una versión modificada de Chicken Little KOR, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo fino (60) como de aguja fina (60)."
 
 #. description of font in fonts/chicken_scratch
 #: inkstitch-fonts-metadata.py:66
 msgid "A handwritten font."
-msgstr ""
+msgstr "Una fuente escrita a mano."
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:68
 msgid "Chopin Script is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Chopin Script es una fuente manuscrita en satín. Cada satín tiene un refuerzo en zigzag."
 
 #. description of font in fonts/circular_3letters_monogram
 #: inkstitch-fonts-metadata.py:70
 msgid "Enter 3 letters to get a circular three letters monogram. You can add a frame, by adding one of the following :(){,[];.<>\n"
 "For instance enter {ABC.\n"
 "Please use exactly 3 letters, no less, no more, or you could get some unexpected result."
-msgstr ""
+msgstr "Ingresa 3 letras para obtener un monograma circular de tres letras. Puedes agregar un marco usando uno de los siguientes símbolos: () {, [] ; . < >.\n"
+"Por ejemplo, ingresa {ABC.\n"
+"Por favor, usa exactamente 3 letras, ni más ni menos, o podrías obtener un resultado inesperado."
 
 #. description of font in fonts/cogs_KOR
 #: inkstitch-fonts-metadata.py:72
 msgid "Cogs KOR is a Steampunk  satin font."
-msgstr ""
+msgstr "Cogs KOR es una fuente en satín estilo Steampunk."
 
 #. description of font in fonts/colorful
 #: inkstitch-fonts-metadata.py:74
 msgid "Colorful is a tartan fill font."
-msgstr ""
+msgstr "Colorful es una fuente con relleno tipo tartán."
 
 #. description of font in fonts/computer
 #: inkstitch-fonts-metadata.py:76
 msgid "satin font"
-msgstr ""
+msgstr "fuente en satín"
 
 #. description of font in fonts/computer_small
 #: inkstitch-fonts-metadata.py:78
 msgid "Small satin font: the use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Fuente en satín pequeña: es obligatorio el uso tanto de hilo fino (60) como de aguja fina (60)."
 
 #. description of font in fonts/cooper_marif
 #: inkstitch-fonts-metadata.py:80
 msgid "CooperMarif is a large and airy font."
-msgstr ""
+msgstr "CooperMarif es una fuente en tamaño grande y espaciosa."
 
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:82
 msgid "Coronaviral font is created with manual sitch. Do not change the size or very little."
-msgstr ""
+msgstr "Coronaviral es una fuente creada con puntada manual. No cambies el tamaño o solo muy poco."
 
 #. description of font in fonts/cyrillic
 #: inkstitch-fonts-metadata.py:84
 msgid "Cyrillic satin font."
-msgstr ""
+msgstr "Fuente en satín Cirílica."
 
 #. description of font in fonts/decadent_flowers_monogram
 #: inkstitch-fonts-metadata.py:86
 msgid "Each Decadent Flowers Monogram lettter  is composed of an optional knockdown fill (for high pile fabric embroidery)  and redwork flowers  with a negative space letter monogram"
-msgstr ""
+msgstr "Cada letra del monograma Decadent Flowers está compuesta por un relleno opcional tipo knockdown (para bordado en telas de pelo alto) y flores Redwork con un monograma de letra en espacio negativo"
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:88
 msgid "DejaVu Serif Condensed is a satin font. Every satin has center-walk underlay."
-msgstr ""
+msgstr "DejaVu Serif Condensed es una fuente en satín. Cada satín tiene un refuerzo de corrido central."
 
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:90
 msgid "All letters of Digory Doodles Bean mix satin and bean stitch."
-msgstr ""
+msgstr "Todas las letras de Digory Doodles Bean combinan satín y puntada de frijol."
 
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:92
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
-msgstr ""
+msgstr "Una fuente Grove Jawn. El ancho de satín es de 2.5 mm en las letras mayúsculas de 18mm"
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:94
 msgid "Emilio 20 contains only capitals and numbers. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Emilio 20 contiene solo letras mayúsculas y números. Cada satín tiene un refuerzo en zigzag."
 
 #. description of font in fonts/emilio_20_applique
 #: inkstitch-fonts-metadata.py:96
 msgid "Emilio 20 Applique is an Applique font. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique."
-msgstr ""
+msgstr "Emilio 20 Applique es una fuente de aplique. Esta fuente es una versión modificada (columnas de satín más grandes) de Emilio_20, mientras que Emilio_20_Bold es Emilio_20_Applique sin el aplique."
 
 #. description of font in fonts/emilio_20_bold
 #: inkstitch-fonts-metadata.py:98
 msgid "Emilio_20_Bold is an altered version of Emilio_20."
-msgstr ""
+msgstr "Emilio_20_Bold es una versión modificada de Emilio_20."
 
 #. description of font in fonts/emilio_20_simple
 #: inkstitch-fonts-metadata.py:100
 msgid "Emilio is a font with capital only and numbers. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Emilio es una fuente que contiene solo letras mayúsculas y números. Cada satín tiene un refuerzo en zigzag."
 
 #. description of font in fonts/emilio_20_simple_small
 #: inkstitch-fonts-metadata.py:102
@@ -534,64 +536,64 @@ msgstr ""
 #. description of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:202
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
-msgstr ""
+msgstr "Roman Bicolor AGS es una versión modificada de Roman AGS. Las letras mayúsculas son bicolor."
 
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:204
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
-msgstr ""
+msgstr "Sacramarif es una fuente muy pequeña en puntada de corrido, basada en la fuente Sacramento."
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:206
 msgid "Ink/Stitch Small Font is suited for small characters."
-msgstr ""
+msgstr "Ink/Stitch Small Font es adecuada para caracteres pequeños."
 
 #. description of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:208
 #, python-brace-format
 msgid " Sortefax XL Initials is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
-msgstr ""
+msgstr " Sortefax XL Initials es una fuente de letras mayúsculas en satín muy grande. Contiene 37 glifos: ampersand, A-Z y 0-9. Además, los diez glifos (){}[],;.: se utilizan para almacenar marcos. Escribe cualquier letra seguida de cualquier marco (por ejemplo, A( o B;) para obtener una letra mayúscula o número enmarcado. Advertencia: para algunas letras muy grandes será necesario agrandar el marco manualmente."
 
 #. description of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:210
 #, python-brace-format
 msgid "Sortefax  Medium Initials is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
-msgstr ""
+msgstr "Sortefax Medium Initials es una fuente de letras mayúsculas en satín. Contiene 37 glifos: ampersand, A-Z y 0-9. Además, los diez glifos (){}[],;.: se utilizan para almacenar marcos. Escribe cualquier letra seguida de cualquier marco (por ejemplo, A(, B; o 7,) para obtener una letra mayúscula o número enmarcado. Puede ser necesario ajustar manualmente el marco alrededor de la letra."
 
 #. description of font in fonts/sunset
 #: inkstitch-fonts-metadata.py:212
 msgid "3 colors satin column font"
-msgstr ""
+msgstr "Fuente en columnas de satín a 3 colores"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:214
 msgid "TT  Directors is a satin font suited for directing."
-msgstr ""
+msgstr "TT Directors es una fuente en satín adecuada para señalización o dirección."
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:216
 msgid "TT Masters is a satin font suited for heavy typing :)"
-msgstr ""
+msgstr "TT Masters es una fuente en satín adecuada para escribir mucho :)"
 
 #. description of font in fonts/venezia
 #: inkstitch-fonts-metadata.py:218
 msgid "A serif satin font"
-msgstr ""
+msgstr "Fuente con serifas en satín"
 
 #. description of font in fonts/venezia_small
 #: inkstitch-fonts-metadata.py:220
 msgid "Venezia small is an altered version of Venezia to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Venezia Small es una versión modificada de Venezia, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo fino (60) como de aguja fina (60)."
 
 #. description of font in fonts/violin_serif
 #: inkstitch-fonts-metadata.py:222
 msgid "Violin Serif is a condensed serif satin font."
-msgstr ""
+msgstr "Violin Serif es una fuente con serifas condensada en satín."
 
 #. description of font in fonts/western_light
 #: inkstitch-fonts-metadata.py:224
 msgid "Western light is a light fill western style font."
-msgstr ""
+msgstr "Western Light es una fuente de estilo western con relleno ligero."
 
 #. name of tile in tiles/N3-11a
 #: inkstitch-tiles-metadata.py:2
@@ -661,192 +663,192 @@ msgstr "N3-51b"
 #. name of tile in tiles/N3-57f-modified
 #: inkstitch-tiles-metadata.py:28
 msgid "N3-57f-modified"
-msgstr ""
+msgstr "N3-57f-modificado"
 
 #. name of tile in tiles/N3-58b
 #: inkstitch-tiles-metadata.py:30
 msgid "N3-58b"
-msgstr ""
+msgstr "N3-58b"
 
 #. name of tile in tiles/N3-6
 #: inkstitch-tiles-metadata.py:32
 msgid "N3-6"
-msgstr ""
+msgstr "N3-6"
 
 #. name of tile in tiles/N3-7
 #: inkstitch-tiles-metadata.py:34
 msgid "N3-7"
-msgstr ""
+msgstr "N3-7"
 
 #. name of tile in tiles/N3-8a
 #: inkstitch-tiles-metadata.py:36
 msgid "N3-8a"
-msgstr ""
+msgstr "N3-8a"
 
 #. name of tile in tiles/N3-8a-modified
 #: inkstitch-tiles-metadata.py:38
 msgid "N3-8a-modified"
-msgstr ""
+msgstr "N3-8a-modificado"
 
 #. name of tile in tiles/N3-8b
 #: inkstitch-tiles-metadata.py:40
 msgid "N3-8b"
-msgstr ""
+msgstr "N3-8b"
 
 #. name of tile in tiles/N4-13b
 #: inkstitch-tiles-metadata.py:42
 msgid "N4-13b"
-msgstr ""
+msgstr "N4-13b"
 
 #. name of tile in tiles/N4-13c
 #: inkstitch-tiles-metadata.py:44
 msgid "N4-13c"
-msgstr ""
+msgstr "N4-13c"
 
 #. name of tile in tiles/N4-13d
 #: inkstitch-tiles-metadata.py:46
 msgid "N4-13d"
-msgstr ""
+msgstr "N4-13d"
 
 #. name of tile in tiles/N4-13e
 #: inkstitch-tiles-metadata.py:48
 msgid "N4-13e"
-msgstr ""
+msgstr "N4-13e"
 
 #. name of tile in tiles/N4-13f
 #: inkstitch-tiles-metadata.py:50
 msgid "N4-13f"
-msgstr ""
+msgstr "N4-13f"
 
 #. name of tile in tiles/N4-16a
 #: inkstitch-tiles-metadata.py:52
 msgid "N4-16a"
-msgstr ""
+msgstr "N4-16a"
 
 #. name of tile in tiles/N4-19
 #: inkstitch-tiles-metadata.py:54
 msgid "N4-19"
-msgstr ""
+msgstr "N4-19"
 
 #. name of tile in tiles/N4-20
 #: inkstitch-tiles-metadata.py:56
 msgid "N4-20"
-msgstr ""
+msgstr "N4-20"
 
 #. name of tile in tiles/N4-21c
 #: inkstitch-tiles-metadata.py:58
 msgid "N4-21c"
-msgstr ""
+msgstr "N4-21c"
 
 #. name of tile in tiles/N4-22
 #: inkstitch-tiles-metadata.py:60
 msgid "N4-22"
-msgstr ""
+msgstr "N4-22"
 
 #. name of tile in tiles/N4-23a
 #: inkstitch-tiles-metadata.py:62
 msgid "N4-23a"
-msgstr ""
+msgstr "N4-23a"
 
 #. name of tile in tiles/N4-23c
 #: inkstitch-tiles-metadata.py:64
 msgid "N4-23c"
-msgstr ""
+msgstr "N4-23c"
 
 #. name of tile in tiles/N4-27
 #: inkstitch-tiles-metadata.py:66
 msgid "N4-27"
-msgstr ""
+msgstr "N4-27"
 
 #. name of tile in tiles/N4-29e
 #: inkstitch-tiles-metadata.py:68
 msgid "N4-29e"
-msgstr ""
+msgstr "N4-29e"
 
 #. name of tile in tiles/N4-29f
 #: inkstitch-tiles-metadata.py:70
 msgid "N4-29f"
-msgstr ""
+msgstr "N4-29f"
 
 #. name of tile in tiles/N4-31
 #: inkstitch-tiles-metadata.py:72
 msgid "N4-31"
-msgstr ""
+msgstr "N4-31"
 
 #. name of tile in tiles/N4-38
 #: inkstitch-tiles-metadata.py:74
 msgid "N4-38"
-msgstr ""
+msgstr "N4-38"
 
 #. name of tile in tiles/N4-42e
 #: inkstitch-tiles-metadata.py:76
 msgid "N4-42e"
-msgstr ""
+msgstr "N4-42e"
 
 #. name of tile in tiles/N4-44
 #: inkstitch-tiles-metadata.py:78
 msgid "N4-44"
-msgstr ""
+msgstr "N4-44"
 
 #. name of tile in tiles/N4-52
 #: inkstitch-tiles-metadata.py:80
 msgid "N4-52"
-msgstr ""
+msgstr "N4-52"
 
 #. name of tile in tiles/N4-54d
 #: inkstitch-tiles-metadata.py:82
 msgid "N4-54d"
-msgstr ""
+msgstr "N4-54d"
 
 #. name of tile in tiles/N4-5a
 #: inkstitch-tiles-metadata.py:84
 msgid "N4-5a"
-msgstr ""
+msgstr "N4-5a"
 
 #. name of tile in tiles/N4-5a-2
 #: inkstitch-tiles-metadata.py:86
 msgid "N4-5a-2"
-msgstr ""
+msgstr "N4-5a-2"
 
 #. name of tile in tiles/N4-82
 #: inkstitch-tiles-metadata.py:88
 msgid "N4-82"
-msgstr ""
+msgstr "N4-82"
 
 #. name of tile in tiles/N4-85d
 #: inkstitch-tiles-metadata.py:90
 msgid "N4-85d"
-msgstr ""
+msgstr "N4-85d"
 
 #. name of tile in tiles/N5-1e1
 #: inkstitch-tiles-metadata.py:92
 msgid "N5-1e1"
-msgstr ""
+msgstr "N5-1e1"
 
 #. name of tile in tiles/N5-1q2
 #: inkstitch-tiles-metadata.py:94
 msgid "N5-1q2"
-msgstr ""
+msgstr "N5-1q2"
 
 #. name of tile in tiles/N5-1t
 #: inkstitch-tiles-metadata.py:96
 msgid "N5-1t"
-msgstr ""
+msgstr "N5-1t"
 
 #. name of tile in tiles/N6-1
 #: inkstitch-tiles-metadata.py:98
 msgid "N6-1"
-msgstr ""
+msgstr "N6-1"
 
 #. name of tile in tiles/N6-2
 #: inkstitch-tiles-metadata.py:100
 msgid "N6-2"
-msgstr ""
+msgstr "N6-2"
 
 #. name of tile in tiles/N6-5b
 #: inkstitch-tiles-metadata.py:102
 msgid "N6-5b"
-msgstr ""
+msgstr "N6-5b"
 
 #. name of tile in tiles/N6-6a
 #: inkstitch-tiles-metadata.py:104
@@ -1077,7 +1079,7 @@ msgstr "%(command)s: %(description)s"
 
 #: lib/commands.py:365 lib/commands.py:489
 msgid "Ink/Stitch Command"
-msgstr "Ink/Stich Instrucción"
+msgstr "Instrucción de Ink/Stitch"
 
 #. : the name of the line that connects a command to the object it applies to
 #: lib/commands.py:405
@@ -1099,7 +1101,7 @@ msgstr "Objeto Duplicado"
 
 #: lib/elements/clone.py:30
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with clones, but you are limited to set a very few parameters. "
-msgstr "Hay uno o más objetos clon en este documento.  Ink/Stitch Puede trabajar con clones, pero está limitado a unos pocos parámetros. "
+msgstr "Hay uno o más objetos duplicados en este documento.  Ink/Stitch Puede trabajar con duplicados, pero está limitado a unos pocos parámetros. "
 
 #: lib/elements/clone.py:33
 msgid "If you want to convert the clone into a real element, follow these steps:"
@@ -1111,12 +1113,12 @@ msgstr "Seleccione el duplicado"
 
 #: lib/elements/clone.py:35
 msgid "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
-msgstr "* Ejecutar: Extensiones > Ink/Stitch > Editar > Desenlazar Clon"
+msgstr "* Ejecutar: Extensiones > Ink/Stitch > Editar > Desenlazar duplicado"
 
 #: lib/elements/clone.py:41 lib/elements/clone.py:47
 #: inx/inkstitch_select_elements.inx:74 inx/inkstitch_select_elements.inx:75
 msgid "Clone"
-msgstr "Clon"
+msgstr "Duplicado"
 
 #: lib/elements/clone.py:53
 msgid "Custom fill angle"
@@ -1203,7 +1205,7 @@ msgstr "Introduzca una trayectoria personalizada. Para rutas svg el último nodo
 
 #: lib/elements/element.py:346 lib/elements/element.py:358
 msgid "Scale tack stitch"
-msgstr "Puntada de remate en escama"
+msgstr "Escalar puntada de remate"
 
 #: lib/elements/element.py:347
 msgid "Set stitch length. A 1 in a custom path equals this values."
@@ -1219,7 +1221,7 @@ msgstr "Puntada de bloqueo"
 
 #: lib/elements/element.py:371
 msgid "Lock stitch type"
-msgstr "Tipo de puntada de remate"
+msgstr "Tipo de puntada de bloqueo"
 
 #: lib/elements/element.py:382
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
@@ -1227,7 +1229,7 @@ msgstr "Introduzca una trayectoria personalizada. Para las rutas svg, el primer 
 
 #: lib/elements/element.py:392 lib/elements/element.py:404
 msgid "Scale lock stitch"
-msgstr "Puntada de pespunte a escala"
+msgstr "Escalar puntada de bloqueo"
 
 #: lib/elements/element.py:393
 msgid "Set length of lock stitches (mm)."
@@ -1235,7 +1237,7 @@ msgstr "Ajuste la longitud de los pespuntes (mm)."
 
 #: lib/elements/element.py:405
 msgid "Scale lock stitch by this percentage."
-msgstr "Escale la puntada de pespunte en este porcentaje."
+msgstr "Escale la puntada de bloqueo en este porcentaje."
 
 #: lib/elements/element.py:417
 msgid "Trim After"
@@ -1243,7 +1245,7 @@ msgstr "Recorte Después"
 
 #: lib/elements/element.py:418
 msgid "Add a TRIM command after stitching this object."
-msgstr "Añada un comando TRIM después de coser este objeto."
+msgstr "Añada un comando RECORTE después de coser este objeto."
 
 #: lib/elements/element.py:427
 msgid "Stop After"
@@ -1307,7 +1309,7 @@ msgstr "* Crear un objeto de trazo"
 
 #: lib/elements/fill_stitch.py:59
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
-msgstr ""
+msgstr "Selecciona este objeto y ve a Extensiones > Ink/Stitch > Editar > Selección de patrón"
 
 #: lib/elements/fill_stitch.py:64
 msgid "Disjointed Guide Line"
@@ -1501,28 +1503,28 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:183
 msgid "Double spiral"
-msgstr ""
+msgstr "Espiral doble"
 
 #: lib/elements/fill_stitch.py:188
 msgid "Join Style"
-msgstr ""
+msgstr "Estilo de unión"
 
 #: lib/elements/fill_stitch.py:189 inx/inkstitch_knockdown_fill.inx:21
 #: inx/inkstitch_knockdown_fill.inx:38
 msgid "Round"
-msgstr ""
+msgstr "Redondo"
 
 #: lib/elements/fill_stitch.py:189
 msgid "Mitered"
-msgstr ""
+msgstr "Ingletado"
 
 #: lib/elements/fill_stitch.py:189
 msgid "Beveled"
-msgstr ""
+msgstr "Biselado"
 
 #: lib/elements/fill_stitch.py:195
 msgid "Avoid self-crossing"
-msgstr ""
+msgstr "Evitar cruce automático"
 
 #: lib/elements/fill_stitch.py:204
 msgid "Clockwise"
@@ -1603,11 +1605,11 @@ msgstr "Distancia entre filas de puntadas."
 
 #: lib/elements/fill_stitch.py:356 inx/inkstitch_gradient_blocks.inx:24
 msgid "End row spacing"
-msgstr ""
+msgstr "Espaciado al final de la fila"
 
 #: lib/elements/fill_stitch.py:357
 msgid "Increases or decreases the row spacing towards the end."
-msgstr ""
+msgstr "Aumenta o disminuye el espaciado de la fila hacia el final."
 
 #: lib/elements/fill_stitch.py:371
 msgid "Stagger rows this many times before repeating"
@@ -1615,7 +1617,7 @@ msgstr "Alterne las filas esto muchas veces antes de repetir"
 
 #: lib/elements/fill_stitch.py:372 lib/elements/satin_column.py:217
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
-msgstr ""
+msgstr "Longitud del ciclo por el cual las filas de puntadas sucesivas se desfasan. Se permiten valores fraccionarios y pueden generar diagonales menos visibles con respecto a los valores enteros."
 
 #: lib/elements/fill_stitch.py:388 lib/elements/fill_stitch.py:710
 msgid "Skip last stitch in each row"
@@ -1635,19 +1637,19 @@ msgstr "La opción de voltear puede ayudarlo a enrutar su ruta de puntada. Cuand
 
 #: lib/elements/fill_stitch.py:417
 msgid "Reverse fill"
-msgstr ""
+msgstr "Relleno invertido"
 
 #: lib/elements/fill_stitch.py:418
 msgid "Reverses fill path."
-msgstr ""
+msgstr "Invierte la trayectoria del relleno."
 
 #: lib/elements/fill_stitch.py:429
 msgid "Stop at ending point"
-msgstr ""
+msgstr "Detenerse en el punto final"
 
 #: lib/elements/fill_stitch.py:430
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
-msgstr ""
+msgstr "Si esta opción está desactivada, el punto final solo se utilizará para definir una dirección general del recorrido de la puntada. Cuando está activada, la última sección terminará en el punto definido."
 
 #: lib/elements/fill_stitch.py:442 lib/elements/fill_stitch.py:722
 msgid "Underpath"
@@ -1664,31 +1666,31 @@ msgstr "Corriendo longitud de puntada"
 
 #: lib/elements/fill_stitch.py:456
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
-msgstr ""
+msgstr "Longitud de las puntadas alrededor del contorno de la región de relleno, utilizada al pasar de una sección a otra. También se utiliza para relleno en meandro y relleno circular."
 
 #: lib/elements/fill_stitch.py:473 lib/elements/satin_column.py:377
 msgid "Running stitch tolerance"
-msgstr ""
+msgstr "Tolerancia de puntada de corrido"
 
 #: lib/elements/fill_stitch.py:474 lib/elements/satin_column.py:378
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
-msgstr ""
+msgstr "Determina cuán estrictamente Ink/Stitch intenta evitar bordar fuera de la forma. Números más bajos disminuyen la probabilidad de bordar fuera de la forma, pero requieren más puntadas."
 
 #: lib/elements/fill_stitch.py:492 lib/elements/stroke.py:146
 msgid "Randomize stitch length"
-msgstr ""
+msgstr "Variar la longitud de las puntadas"
 
 #: lib/elements/fill_stitch.py:493 lib/elements/stroke.py:147
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
-msgstr ""
+msgstr "Variar la longitud y la fase de las puntadas en lugar de dividirlas de manera uniforme o escalonada. Esto se recomienda para rellenos curvos muy juntos, para evitar artefactos tipo Moiré."
 
 #: lib/elements/fill_stitch.py:509 lib/elements/stroke.py:159
 msgid "Random stitch length jitter"
-msgstr ""
+msgstr "Variación aleatoria de la longitud de las puntadas"
 
 #: lib/elements/fill_stitch.py:510 lib/elements/stroke.py:160
 msgid "Amount to vary the length of each stitch by when randomizing."
-msgstr ""
+msgstr "Cantidad para variar la longitud de cada puntada al usar la variación aleatoria."
 
 #: lib/elements/fill_stitch.py:525 lib/elements/satin_column.py:502
 #: lib/elements/stroke.py:82
@@ -2177,13 +2179,13 @@ msgstr ""
 
 #: lib/elements/satin_column.py:413 inx/inkstitch_fill_to_satin.inx:16
 msgid "Contour underlay"
-msgstr "Contorno de base"
+msgstr "Refuerzo de contorno"
 
 #: lib/elements/satin_column.py:413 lib/elements/satin_column.py:420
 #: lib/elements/satin_column.py:434 lib/elements/satin_column.py:446
 #: lib/elements/satin_column.py:461
 msgid "Contour Underlay"
-msgstr "Contorno de Base"
+msgstr "Refuerzo de Contorno"
 
 #: lib/elements/satin_column.py:420 lib/elements/satin_column.py:477
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:20
@@ -2217,13 +2219,13 @@ msgstr ""
 
 #: lib/elements/satin_column.py:470 inx/inkstitch_fill_to_satin.inx:15
 msgid "Center-walk underlay"
-msgstr "Capa base para caminar en el centro"
+msgstr "Refuerzo de corrido central"
 
 #: lib/elements/satin_column.py:470 lib/elements/satin_column.py:477
 #: lib/elements/satin_column.py:492 lib/elements/satin_column.py:505
 #: lib/elements/satin_column.py:515
 msgid "Center-Walk Underlay"
-msgstr "Capa base para caminar en el centro"
+msgstr "Refuerzo de Corrido central"
 
 #: lib/elements/satin_column.py:486
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
@@ -2244,13 +2246,13 @@ msgstr ""
 
 #: lib/elements/satin_column.py:522 inx/inkstitch_fill_to_satin.inx:17
 msgid "Zig-zag underlay"
-msgstr "Capa base en zig-zag"
+msgstr "Refuerzo en zig-zag"
 
 #: lib/elements/satin_column.py:522 lib/elements/satin_column.py:531
 #: lib/elements/satin_column.py:542 lib/elements/satin_column.py:562
 #: lib/elements/satin_column.py:575
 msgid "Zig-zag Underlay"
-msgstr "Capa base en zig-zag"
+msgstr "Refuerzo en zig-zag"
 
 #: lib/elements/satin_column.py:528
 msgid "Zig-Zag spacing (peak-to-peak)"
@@ -2266,7 +2268,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:540 lib/elements/satin_column.py:560
 msgid "default: half of contour underlay inset"
-msgstr "por defecto: la mitad de la inserción del calco subyacente del contorno"
+msgstr "predeterminado: la mitad del margen interno del refuerzo de contorno"
 
 #: lib/elements/satin_column.py:559
 msgid "Inset amount (proportional)"
@@ -2278,7 +2280,7 @@ msgstr "Dividir si se excede el máximo de longitud de puntada"
 
 #: lib/elements/stroke.py:34
 msgid "Too few subpaths"
-msgstr "Muy pocas Subrutas"
+msgstr "Muy pocas Subtrayectorias"
 
 #: lib/elements/stroke.py:35
 msgid "This element renders as running stitch while it has a satin column parameter."
@@ -2299,7 +2301,7 @@ msgstr "Trazo"
 
 #: lib/elements/stroke.py:47 lib/extensions/params.py:285
 msgid "Running stitch along paths"
-msgstr "Ejecutando puntadas a lo largo del patrón"
+msgstr "Puntada de corrido a lo largo de las trayectorias"
 
 #: lib/elements/stroke.py:65
 msgid "Running Stitch / Bean Stitch"
@@ -2590,7 +2592,7 @@ msgstr "Elija otra paleta de colores para su diseño."
 #. auto-route running stitch columns extension
 #: lib/extensions/auto_run.py:57 lib/extensions/cutwork_segmentation.py:45
 msgid "Please select one or more stroke elements."
-msgstr "Porfavor selecione uno o mas trazados."
+msgstr "Por favor selecciona uno o más elementos de trazo."
 
 #: lib/extensions/auto_run.py:62
 msgid "Please select at least one stroke element."
@@ -2598,16 +2600,16 @@ msgstr ""
 
 #: lib/extensions/auto_satin.py:36
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
-msgstr "Asegúrese de que se adjunta como máximo un comando de inicio y fin a las columnas satinadas seleccionadas."
+msgstr "Asegúrese de que se adjunta como máximo un comando de inicio y fin a las columnas de satín seleccionadas."
 
 #. auto-route satin columns extension
 #: lib/extensions/auto_satin.py:50
 msgid "Please select one or more satin columns."
-msgstr "Seleccione una o más columnas satinadas."
+msgstr "Seleccione una o más columnas de satín."
 
 #: lib/extensions/auto_satin.py:55 lib/extensions/satin_multicolor.py:34
 msgid "Please select at least one satin column."
-msgstr "Seleccione al menos una columna satinada."
+msgstr "Seleccione al menos una columna de satín."
 
 #. This was previously: "No embroiderable paths selected."
 #: lib/extensions/base.py:56
@@ -2691,7 +2693,7 @@ msgstr "Seleccione una o más columnas satinadas para cortar."
 #. path12345: error: this satin column does not ...
 #: lib/extensions/cut_satin.py:30
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
-msgstr "esta columna satinada no tiene un comando de \"punto de corte de columna satinada\" adjunto. Utilice la extensión \"Adjuntar comandos\" y adjunte primero el comando \"Punto de corte de columna satinada\"."
+msgstr "esta columna de satín no tiene un comando de \"punto de corte de columna de satín\" adjunto. Utilice la extensión \"Adjuntar comandos\" y adjunte primero el comando \"Punto de corte de columna de satín\"."
 
 #: lib/extensions/cutwork_segmentation.py:83
 msgid "Please select at least one element with a stroke color."
@@ -2741,7 +2743,7 @@ msgstr "Por favor, seleccione al menos un elemento."
 
 #: lib/extensions/element_info.py:21
 msgid "https://inkstitch.org/docs/troubleshoot/#element-info"
-msgstr ""
+msgstr "https://inkstitch.org/docs/troubleshoot/#element-info"
 
 #: lib/extensions/element_info.py:60 lib/extensions/sew_stack_editor.py:223
 #: inx/inkstitch_select_elements.inx:15
@@ -3190,7 +3192,7 @@ msgstr ""
 #. not lines.
 #: lib/extensions/satin_to_stroke.py:24 lib/extensions/satin_to_stroke.py:29
 msgid "Please select at least one satin column to convert to a running stitch."
-msgstr "Seleccione al menos una columna satinada para convertir en una puntada corriente."
+msgstr "Seleccione al menos una columna de satín para convertir en una puntada corriente."
 
 #: lib/extensions/select_elements.py:102
 msgid "Could not detect python path. Please insert python path manually as described in the help tab of the select elements dialog."
@@ -3202,7 +3204,7 @@ msgstr ""
 
 #: lib/extensions/selection_to_guide_line.py:21
 msgid "Please select at least one object to be marked as a guide line."
-msgstr ""
+msgstr "Por favor selecciona al menos un objeto para ser marcado como patrón."
 
 #: lib/extensions/selection_to_pattern.py:21
 msgid "Please select at least one object to be marked as a pattern."
@@ -3259,13 +3261,13 @@ msgstr ""
 
 #: lib/extensions/stroke_to_satin.py:27
 msgid "Please select at least one line to convert to a satin column."
-msgstr "Seleccione al menos una línea para convertirla en una columna satinada."
+msgstr "Seleccione al menos una línea para convertirla en una columna de satín."
 
 #. : Convert To Satin extension, user selected only objects that were not
 #. lines.
 #: lib/extensions/stroke_to_satin.py:59
 msgid "Only simple lines may be converted to satin columns."
-msgstr "Sólo las líneas simples se pueden convertir en columnas satinadas."
+msgstr "Sólo las líneas simples se pueden convertir en columnas de satín."
 
 #: lib/extensions/tartan.py:66
 msgid "To create a tartan pattern please select at least one element with a fill color."
@@ -3299,7 +3301,7 @@ msgstr "Tamaño"
 
 #: lib/extensions/thread_list.py:60
 msgid "Thread Order"
-msgstr "Orden de subprocesos"
+msgstr "Orden de Hilo"
 
 #: lib/extensions/thread_list.py:72
 msgid "Thread Used"
@@ -3360,7 +3362,7 @@ msgstr "Advertencias de tipo de objeto"
 
 #: lib/extensions/troubleshoot.py:194
 msgid "These objects may not work properly with Ink/Stitch. Follow the instructions to correct unwanted behaviour."
-msgstr "Es posible que estos objetos no funcionen correctamente con Ink / Stitch. Siga las instrucciones para corregir el comportamiento no deseado."
+msgstr "Es posible que estos objetos no funcionen correctamente con Ink/Stitch. Siga las instrucciones para corregir el comportamiento no deseado."
 
 #: lib/extensions/troubleshoot.py:207
 msgid "Possible solutions"
@@ -3380,7 +3382,7 @@ msgstr "No se seleccionaron formatos de archivo de bordado."
 
 #: lib/extensions/zip.py:130
 msgid "threadlist"
-msgstr "lista de subprocesos"
+msgstr "lista de hilos"
 
 #: lib/gui/abort_message.py:38 lib/gui/apply_palette.py:64
 #: lib/gui/edit_json/help_panel.py:27 lib/gui/element_info.py:57
@@ -4680,14 +4682,14 @@ msgstr ""
 #: lib/stitches/auto_satin.py:609
 #, python-format
 msgid "AutoSatin %d"
-msgstr "AutoSatinado %d"
+msgstr "AutoSatín %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
 #: lib/stitches/auto_satin.py:612
 #, python-format
 msgid "AutoSatin Running Stitch %d"
-msgstr "AutoSatinar Puntada corriente %d"
+msgstr "AutoSatinar Puntada de corrido %d"
 
 #: lib/stitches/meander_fill.py:32
 msgid "Could not build graph for meander stitching. Try to enlarge your shape or scale your meander pattern down."
@@ -4710,11 +4712,11 @@ msgstr ""
 #: lib/utils/version.py:16
 #, python-format
 msgid "Ink/Stitch Version: %s"
-msgstr "Ink/Stitch Versión: %s"
+msgstr "Versión de Ink/Stitch: %s"
 
 #: lib/utils/version.py:18
 msgid "Ink/Stitch Version: unknown"
-msgstr "Ink/Stitch Versión: desconocida"
+msgstr "Versión de Ink/Stitch: desconocida"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
@@ -4907,7 +4909,7 @@ msgstr ""
 
 #: print/templates/operator_detailedview.html:72
 msgid "Enter operator notes..."
-msgstr "Intorduzca notas del operador..."
+msgstr "Introduzca notas del operador..."
 
 #: print/templates/operator_overview.html:22
 #: print/templates/print_overview.html:21
@@ -5070,7 +5072,7 @@ msgstr "Calcular la cantidad de hilo varía según el diseño del bordado. Es po
 
 #: print/templates/ui.html:160
 msgid "Set a factor to multiply the path length with, depending on your standard setup or adapt it to your current design (tension, thread, fabric, stitch count, etc.)."
-msgstr "Establezca un factor con el que multiplicar la longitud del trayecto, despendiendo de su configuración estándar o adáptelo a su actual diseño (tensión, hilo, tejido, número de puntadas, etc.)."
+msgstr "Establezca un factor con el que multiplicar la longitud del trayecto, dependiendo de su configuración estándar o adáptelo a su actual diseño (tensión, hilo, tejido, número de puntadas, etc.)."
 
 #: print/templates/ui.html:164 print/templates/ui.html:169
 msgid "Factor to multiply with thread length"
@@ -5113,7 +5115,7 @@ msgstr "Realista"
 #: pystitch-format-descriptions.py:2 pystitch-format-descriptions.py:4
 #: pystitch-format-descriptions.py:58 pystitch-format-descriptions.py:60
 msgid "Brother Embroidery Format"
-msgstr "Brother Embroidery Format"
+msgstr "Formato de bordado Brother"
 
 #. description for pystitch file format: exp
 #: pystitch-format-descriptions.py:6
@@ -5124,7 +5126,7 @@ msgstr ""
 #. description for pystitch file format: tbf
 #: pystitch-format-descriptions.py:8 pystitch-format-descriptions.py:48
 msgid "Tajima Embroidery Format"
-msgstr "Tajima Embroidery Format"
+msgstr "Formato de bordado Tajima"
 
 #. description for pystitch file format: jef
 #. description for pystitch file format: sew
@@ -5132,7 +5134,7 @@ msgstr "Tajima Embroidery Format"
 #: pystitch-format-descriptions.py:10 pystitch-format-descriptions.py:20
 #: pystitch-format-descriptions.py:76
 msgid "Janome Embroidery Format"
-msgstr "Janome Embroidery Format"
+msgstr "Formato de bordado Janome"
 
 #. description for pystitch file format: vp3
 #. description for pystitch file format: ksm
@@ -5147,12 +5149,12 @@ msgstr "Janome Embroidery Format"
 #: pystitch-format-descriptions.py:68 pystitch-format-descriptions.py:70
 #: pystitch-format-descriptions.py:72 pystitch-format-descriptions.py:74
 msgid "Pfaff Embroidery Format"
-msgstr "Pfaff Embroidery Format"
+msgstr "Formato de bordado Pfaff"
 
 #. description for pystitch file format: svg
 #: pystitch-format-descriptions.py:14
 msgid "Scalable Vector Graphics"
-msgstr "Scalable Vector Graphics"
+msgstr "Gráficos Vectoriales Escalables (Svg)"
 
 #. description for pystitch file format: csv
 #: pystitch-format-descriptions.py:16
@@ -5162,28 +5164,28 @@ msgstr "CSV Valores Separados por Comas"
 #. description for pystitch file format: xxx
 #: pystitch-format-descriptions.py:18
 msgid "Singer Embroidery Format"
-msgstr "Singer Embroidery Format"
+msgstr "Formato de bordado Singer"
 
 #. description for pystitch file format: u01
 #: pystitch-format-descriptions.py:22
 msgid "Barudan Embroidery Format"
-msgstr "Barudan Embroidery Format"
+msgstr "Formato de bordado Barudan"
 
 #. description for pystitch file format: shv
 #: pystitch-format-descriptions.py:24
 msgid "Husqvarna Viking Embroidery Format"
-msgstr "Husqvarna Viking Embroidery Format"
+msgstr "Formato de bordado Husqvarna Viking"
 
 #. description for pystitch file format: 10o
 #. description for pystitch file format: 100
 #: pystitch-format-descriptions.py:26 pystitch-format-descriptions.py:28
 msgid "Toyota Embroidery Format"
-msgstr "Toyota Embroidery Format"
+msgstr "Formato de bordado Toyota"
 
 #. description for pystitch file format: bro
 #: pystitch-format-descriptions.py:30
 msgid "Bits & Volts Embroidery Format"
-msgstr "Bits & Volts Embroidery Format"
+msgstr "Formato de bordado Bits & Volts"
 
 #. description for pystitch file format: dat
 #: pystitch-format-descriptions.py:32
@@ -5449,11 +5451,11 @@ msgstr ""
 
 #: inx/inkstitch_auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
-msgstr "Columnas de satén de enrutamiento automático"
+msgstr "Columnas de satín de enrutamiento automático"
 
 #: inx/inkstitch_auto_satin.inx:9
 msgid "Preserve order of satin columns"
-msgstr "Conservar el orden de las columnas de raso"
+msgstr "Conservar el orden de las columnas de satín"
 
 #: inx/inkstitch_auto_satin.inx:14 inx/inkstitch_redwork.inx:26
 msgid "Keep original paths"
@@ -5617,7 +5619,7 @@ msgstr "Eliminar Trazos pequeños"
 
 #: inx/inkstitch_cleanup.inx:13
 msgid "Removes small strokes shorter than defined by threshold."
-msgstr "Elimina pequeños trazos más cortos que los definidos por el umbral."
+msgstr "Elimina trazos pequeños más cortos que los definidos por el umbral."
 
 #: inx/inkstitch_cleanup.inx:14
 msgid "Stroke threshold (px)"
@@ -5685,7 +5687,7 @@ msgstr ""
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
-msgstr "Cortar columnas de raso"
+msgstr "Cortar columnas de satín"
 
 #: inx/inkstitch_cut_satin.inx:9
 msgid "Split a satin column and keep Ink/Stitch settings"
@@ -5763,7 +5765,7 @@ msgstr "*Una linea horizontal tiene un angulo de 0 grados."
 
 #: inx/inkstitch_cutwork_segmentation.inx:48
 msgid "* After the conversion through this extension, don't rotate your design again."
-msgstr "*Despues de convertirlo con la extension, asegurate de no volver a rotar tu diseño."
+msgstr "*Despues de convertirlo con la extensión, asegúrate de no volver a rotar tu diseño."
 
 #: inx/inkstitch_cutwork_segmentation.inx:50
 msgid "Please adjust angle and color options to your specific needle kit."
@@ -5944,7 +5946,7 @@ msgstr ""
 
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
-msgstr "Rieles de columna de raso abatibles"
+msgstr "Voltear rieles de columna de satín"
 
 #: inx/inkstitch_generate_palette.inx:3
 msgid "Generate Color Palette"
@@ -7044,7 +7046,7 @@ msgstr "Glifo predeterminado"
 
 #: inx/inkstitch_lettering_generate_json.inx:87
 msgid "Autoroute Satin"
-msgstr "Autoruta Satinado"
+msgstr "Autoruta Satín"
 
 #: inx/inkstitch_lettering_generate_json.inx:87
 msgid "Disable if you defined manual routing in your font."
@@ -7259,7 +7261,7 @@ msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
-msgstr "Letras fuente"
+msgstr "Letras a fuente"
 
 #: inx/inkstitch_letters_to_font.inx:9
 msgid "File format"
@@ -7487,7 +7489,7 @@ msgstr "Dejar en blanco para usar los valores por defecto. Usar 'none' para elim
 
 #: inx/inkstitch_output_GCODE.inx:37
 msgid "START"
-msgstr "START"
+msgstr "INICIO"
 
 #: inx/inkstitch_output_GCODE.inx:37
 msgid "Use %R %G %B for inital color thread color values"
@@ -7909,11 +7911,11 @@ msgstr ""
 
 #: inx/inkstitch_satin_to_stroke.inx:10
 msgid "Keep satin column"
-msgstr "Mantener la columna de raso"
+msgstr "Mantener la columna de satín"
 
 #: inx/inkstitch_satin_to_stroke.inx:10
 msgid "Do not delete original satin column."
-msgstr "No elimine la columna de raso original."
+msgstr "No elimine la columna de satín original."
 
 #: inx/inkstitch_satin_to_stroke.inx:13
 msgid "Converts a satin column into a running stitch."
@@ -7950,92 +7952,92 @@ msgstr ""
 
 #: inx/inkstitch_select_elements.inx:18
 msgid "Underpath (Redwork/Auto-Run)"
-msgstr ""
+msgstr "Refuerzo (Redwork/Auto-Corrido)"
 
 #: inx/inkstitch_select_elements.inx:19
 msgid "Underpath (Auto-Satin)"
-msgstr ""
+msgstr "Refuerzo (Auto-Satín)"
 
 #: inx/inkstitch_select_elements.inx:22
 msgid "Ripples"
-msgstr ""
+msgstr "Ondulaciones"
 
 #: inx/inkstitch_select_elements.inx:32
 msgid "E-Stitch"
-msgstr ""
+msgstr "Puntada E"
 
 #: inx/inkstitch_select_elements.inx:33
 msgid "S-Stitch"
-msgstr ""
+msgstr "Puntada S"
 
 #: inx/inkstitch_select_elements.inx:34
 msgid "Zig-Zag"
-msgstr ""
+msgstr "Zig-Zag"
 
 #: inx/inkstitch_select_elements.inx:36
 msgid "Only select satins with this underlay type"
-msgstr ""
+msgstr "Seleccionar solo columnas de satín con este tipo de refuerzo"
 
 #: inx/inkstitch_select_elements.inx:38
 msgid "No underlay"
-msgstr ""
+msgstr "Sin refuerzo"
 
 #: inx/inkstitch_select_elements.inx:39
 msgid "Centerwalk"
-msgstr ""
+msgstr "Corrido central"
 
 #: inx/inkstitch_select_elements.inx:40
 msgid "Contour"
-msgstr ""
+msgstr "Contorno"
 
 #: inx/inkstitch_select_elements.inx:41
 #: inx/inkstitch_zigzag_line_to_satin.inx:12
 msgid "Zigzag"
-msgstr ""
+msgstr "Zigzag"
 
 #: inx/inkstitch_select_elements.inx:44
 msgid "Rung count"
-msgstr ""
+msgstr "Cantidad de travesaños"
 
 #: inx/inkstitch_select_elements.inx:44
 msgid "Only select satins with this rung count"
-msgstr ""
+msgstr "Seleccionar solo columnas de satín con esta cantidad de travesaños"
 
 #: inx/inkstitch_select_elements.inx:46
 msgid "No Rungs"
-msgstr ""
+msgstr "Sin travesaños"
 
 #: inx/inkstitch_select_elements.inx:47
 msgid "Two Rungs"
-msgstr ""
+msgstr "Dos travesaños"
 
 #: inx/inkstitch_select_elements.inx:54 inx/inkstitch_select_elements.inx:55
 msgid "Fill"
-msgstr ""
+msgstr "Relleno"
 
 #: inx/inkstitch_select_elements.inx:64
 msgid "Only select fills with this underlay"
-msgstr ""
+msgstr "Seleccionar solo rellenos con este refuerzo"
 
 #: inx/inkstitch_select_elements.inx:67
 msgid "No Underlay"
-msgstr ""
+msgstr "Sin Relleno"
 
 #: inx/inkstitch_select_elements.inx:81
 msgid "Select embroidery objects"
-msgstr ""
+msgstr "Seleccionar objetos de bordado"
 
 #: inx/inkstitch_select_elements.inx:83
 msgid "Selects specific embroidery elements by stitch type."
-msgstr ""
+msgstr "Selecciona elementos de bordado específicos según el tipo de puntada."
 
 #: inx/inkstitch_select_elements.inx:84
 msgid "If there is already an active selection, non matching elements will be deselected."
-msgstr ""
+msgstr "Si ya hay una selección activa, los elementos que no coincidan se de-seleccionarán"
 
 #: inx/inkstitch_select_elements.inx:86
 msgid "More info on our website"
-msgstr ""
+msgstr "Más información en nuestro sitio web"
 
 #: inx/inkstitch_select_elements.inx:87
 msgid "https://inkstitch.org/docs/edit/#select-embroidery-elements/"
@@ -8043,23 +8045,23 @@ msgstr ""
 
 #: inx/inkstitch_select_elements.inx:93
 msgid "If it isn't working:"
-msgstr ""
+msgstr "Si no está funcionando:"
 
 #: inx/inkstitch_select_elements.inx:95
 msgid "1. Hit the apply button multiple times."
-msgstr ""
+msgstr "1. Presiona el botón de aplicar varias veces."
 
 #: inx/inkstitch_select_elements.inx:96
 msgid "2. If it still isn't working, you may need to insert your path to a python executable manualy."
-msgstr ""
+msgstr "2. Si todavía no funciona, es posible que necesites ingresar manualmente la ruta a un ejecutable de Python."
 
 #: inx/inkstitch_select_elements.inx:97
 msgid "* Windows: Open the \"Command Prompt\" and type \"where python\". Copy the path and paste it here."
-msgstr ""
+msgstr "*Windows: Abre el ‘Símbolo del sistema’ y escribe ‘where python’. Copia la ruta y pégala aquí."
 
 #: inx/inkstitch_select_elements.inx:98
 msgid "* Linux: Open the command line and type \"which python3\". Copy the path and paste it here."
-msgstr ""
+msgstr "*Linux: Abre la línea de comandos y escribe ‘which python3’. Copia la ruta y pégala aquí."
 
 #: inx/inkstitch_select_elements.inx:99
 msgid "* macOS: doesn't work, sorry"
@@ -8079,7 +8081,7 @@ msgstr ""
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
-msgstr ""
+msgstr "Selección de patrón"
 
 #: inx/inkstitch_selection_to_guide_line.inx:9
 msgid "Marks selected elements as guide lines"
@@ -8171,88 +8173,88 @@ msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
-msgstr ""
+msgstr "Deshacer vista previa del plan de puntadas"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:3
 msgid "Stroke to Live Path Effect Satin"
-msgstr ""
+msgstr "Convertir trazo a efecto Live Path Satin"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:8
 msgid "Converts a stroke into a satin stitch with a changeable life path effect."
-msgstr ""
+msgstr "Convierte un trazo en puntada de satín con efecto Live Path modificable."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:9
 msgid "Pattern"
-msgstr ""
+msgstr "Patrón"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:10
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:11
 msgid "Pearls"
-msgstr ""
+msgstr "Perlas"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:12
 msgid "Diamonds"
-msgstr ""
+msgstr "Diamantes"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:13
 msgid "Squares"
-msgstr ""
+msgstr "Cuadrados"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:14
 msgid "Triangles"
-msgstr ""
+msgstr "Triángulos"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:15
 msgid "Wave"
-msgstr ""
+msgstr "Onda"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:16
 msgid "Arch"
-msgstr ""
+msgstr "Arco"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:18
 msgid "Min Width (mm)"
-msgstr ""
+msgstr "Ancho mínimo (mm)"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:19
 msgid "Max Width (mm)"
-msgstr ""
+msgstr "Ancho máximo (mm)"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:20
 msgid "Pattern Length (mm)"
-msgstr ""
+msgstr "Longitud del patrón (mm)"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:21
 msgid "Stretched"
-msgstr ""
+msgstr "Estirado"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:22
 #: inx/inkstitch_zigzag_line_to_satin.inx:15
 msgid "Add rungs"
-msgstr ""
+msgstr "Agregar travesaños"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:24
 msgid "Path specific"
-msgstr ""
+msgstr "Especificación de la trayectoria"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:27
 msgid "This extension converts a stroke into a satin column using the path effect \"pattern along path\"."
-msgstr ""
+msgstr "Esta extensión convierte un trazo en una columna de satín usando el efecto de trayectoria ‘Patrón a lo largo de la trayectoria."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:28
 msgid "* Please note, that the size values can only be an approximation and will be distorted if the original path is not completely straight."
-msgstr ""
+msgstr "*Ten en cuenta que los valores de tamaño solo pueden ser aproximados y se distorsionarán si la trayectoria original no es completamente recta."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:29
 msgid "* You can edit the satin path through the live path effect settings through Path > Path Effects ..."
-msgstr ""
+msgstr "*Puedes editar la trayectoria de satín a través de los ajustes del efecto de trayectoria en Trayecto > Efectos de trayectoria ..."
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:30
 msgid "* If you want to add rungs or change specific parts of the satin, convert it to a normal path with Ctrl + Shift + C"
-msgstr ""
+msgstr "*Si quieres agregar travesaños o modificar partes específicas del satín, conviértelo a una trayectoria normal con Ctrl + Shift + C"
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:33
 msgid "https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin"
@@ -8260,43 +8262,43 @@ msgstr ""
 
 #: inx/inkstitch_stroke_to_satin.inx:3
 msgid "Stroke to Satin"
-msgstr ""
+msgstr "Trazo a satín"
 
 #: inx/inkstitch_tartan.inx:9
 msgid "Tartan stripe editor"
-msgstr ""
+msgstr "Editor de franjas tartán"
 
 #: inx/inkstitch_test_swatches.inx:3
 msgid "Generate Test Swatches from Selection"
-msgstr ""
+msgstr "Generar muestras de prueba a partir de la selección"
 
 #: inx/inkstitch_thread_list.inx:3
 msgid "embroidery TXT file output"
-msgstr ""
+msgstr "salida de archivo TXT de bordado"
 
 #: inx/inkstitch_thread_list.inx:8
 msgid "Ink/Stitch: Threadlist [COLOR] (.txt)"
-msgstr ""
+msgstr "Ink/Stitch: Lista de hilos [COLOR] (.txt)"
 
 #: inx/inkstitch_thread_list.inx:9
 msgid "A list of thread colors"
-msgstr ""
+msgstr "Una lista de colores de hilo"
 
 #: inx/inkstitch_transform_elements.inx:3
 msgid "Transform"
-msgstr ""
+msgstr "Transformar"
 
 #: inx/inkstitch_transform_elements.inx:11
 msgid "Flip horizontally"
-msgstr ""
+msgstr "Voltear horizontalmente"
 
 #: inx/inkstitch_transform_elements.inx:12
 msgid "Flip vertically"
-msgstr ""
+msgstr "Voltear verticalmente"
 
 #: inx/inkstitch_transform_elements.inx:15
 msgid "This extension applies transformations while also adjusting the fill angles"
-msgstr ""
+msgstr "Esta extensión aplica transformaciones mientras ajusta también los ángulos de relleno"
 
 #: inx/inkstitch_transform_elements.inx:20
 msgid "https://inkstitch.org/docs/edit/#transform"
@@ -8308,15 +8310,15 @@ msgstr "Solucionar problemas de Objetos"
 
 #: inx/inkstitch_troubleshoot.inx:9
 msgid "Pointer size (mm)"
-msgstr ""
+msgstr "Tamaño del puntero (mm)"
 
 #: inx/inkstitch_troubleshoot.inx:10
 msgid "Font size (mm)"
-msgstr ""
+msgstr "Tamaño de fuente (mm)"
 
 #: inx/inkstitch_troubleshoot.inx:13
 msgid "This extension points on problematic or possibly problematic spots in the document or selection."
-msgstr ""
+msgstr "Esta extensión señala los puntos problemáticos o potencialmente problemáticos en el documento o selección."
 
 #: inx/inkstitch_troubleshoot.inx:16
 msgid "https://inkstitch.org/docs/troubleshoot/#troubleshoot-objects"
@@ -8324,23 +8326,23 @@ msgstr ""
 
 #: inx/inkstitch_troubleshoot.inx:23
 msgid "Marks problematic or possibly problematic spots in the document or selection"
-msgstr ""
+msgstr "Marca los puntos problemáticos o potencialmente problemáticos en el documento o selección"
 
 #: inx/inkstitch_unlink_clone.inx:3
 msgid "Unlink Clone"
-msgstr ""
+msgstr "Desvincular duplicado"
 
 #: inx/inkstitch_unlink_clone.inx:8
 msgid "Recursive"
-msgstr ""
+msgstr "Recursivo"
 
 #: inx/inkstitch_unlink_clone.inx:9
 msgid "Group unlinked symbols"
-msgstr ""
+msgstr "Agrupar símbolos desvinculados"
 
 #: inx/inkstitch_unlink_clone.inx:12
 msgid "Unlink clones and apply the fill stitch angle."
-msgstr ""
+msgstr "Desvincular duplicados y aplicar el ángulo de puntada de relleno."
 
 #: inx/inkstitch_unlink_clone.inx:15
 msgid "https://inkstitch.org/docs/edit/#unlink-clone/"
@@ -8348,80 +8350,80 @@ msgstr ""
 
 #: inx/inkstitch_unlink_clone.inx:21
 msgid "Unlink clones and apply the fill stitch angle"
-msgstr ""
+msgstr "Desvincular duplicados y aplicar el ángulo de puntada de relleno"
 
 #: inx/inkstitch_update_svg.inx:3
 msgid "Update inkstitch svg"
-msgstr ""
+msgstr "Actualizar SVG de Ink/Stitch"
 
 #: inx/inkstitch_update_svg.inx:15
 msgid "Usually there is no need to run this extension: Ink/Stitch automatically updates old designs once."
-msgstr ""
+msgstr "Normalmente no es necesario ejecutar esta extensión: Ink/Stitch actualiza automáticamente los diseños antiguos una vez."
 
 #: inx/inkstitch_update_svg.inx:17
 msgid "However, when you copy and paste parts from old files into a new design, you may see for example, that a former contour fill renders as a standard fill, etc."
-msgstr ""
+msgstr "Sin embargo, cuando copias y pegas partes de archivos antiguos en un diseño nuevo, puedes notar, por ejemplo, que un relleno de contorno anterior se muestra como un relleno estándar, etc."
 
 #: inx/inkstitch_update_svg.inx:19
 msgid "Tip: You can prevent inserting legacy designs into new files by running any Ink/Stitch extension before you copy the design parts (for example open and re-apply parameters on a single element in the document)."
-msgstr ""
+msgstr "Consejo: Puedes evitar insertar diseños antiguos en archivos nuevos ejecutando cualquier extensión de Ink/Stitch antes de copiar las partes del diseño (por ejemplo, abriendo y volviendo a aplicar los parámetros en un solo elemento del documento)."
 
 #: inx/inkstitch_update_svg.inx:21
 msgid "When there is an active selection, only selected elements will be updated."
-msgstr ""
+msgstr "Cuando hay una selección activa, solo se actualizarán los elementos seleccionados."
 
 #: inx/inkstitch_update_svg.inx:23
 msgid "Update from version"
-msgstr ""
+msgstr "Actualizar desde la versión"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:3
 msgid "Zig-Zag Line to Satin"
-msgstr ""
+msgstr "Convertir línea en zig-zag a satín"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:8
 msgid "Converts a zigzag line into a satin column."
-msgstr ""
+msgstr "Convierte una línea en zig-zag en una columna de satín."
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:9
 #: inx/inkstitch_zigzag_line_to_satin.inx:21
 msgid "Line Pattern"
-msgstr ""
+msgstr "Patrón de línea"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:10
 msgid "Square"
-msgstr ""
+msgstr "Cuadrado"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:11
 msgid "Sawtooth"
-msgstr ""
+msgstr "Diente de sierra"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:14
 msgid "Smoothing"
-msgstr ""
+msgstr "Suavizado"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:16
 msgid "Reduce number of rungs"
-msgstr ""
+msgstr "Reducir número de travesaños"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:19
 msgid "This extension converts a zigzag line into a satin column."
-msgstr ""
+msgstr "Esta extensión convierte una línea en zig-zag en una columna de satín."
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:22
 msgid "▻ Always start and end with a rung."
-msgstr ""
+msgstr "▻ Siempre empezar y terminar con un travesaño."
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:24
 msgid "Square: |_|▔|_|▔|"
-msgstr ""
+msgstr "Cuadrado: |_|▔|_|▔|"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:25
 msgid "Sawtooth: |\\|\\|\\|"
-msgstr ""
+msgstr "Dientes de sierra: |\\|\\|\\|"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:26
 msgid "Zigzag: |\\/\\/\\/|"
-msgstr ""
+msgstr "Zigzag: |\\/\\/\\/|"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:29
 msgid "https://inkstitch.org/docs/satin-tools/#zigzag-line-to-satin"
@@ -8433,7 +8435,7 @@ msgstr "exportar archivo de bordado ZIP"
 
 #: inx/inkstitch_zip.inx:8
 msgid "Ink/Stitch: ZIP export multiple formats and extra options (.zip)"
-msgstr ""
+msgstr "Ink/Stitch: exportar varios formatos y opciones adicionales en ZIP (.zip)"
 
 #: inx/inkstitch_zip.inx:9
 msgid "Create a ZIP with multiple embroidery file formats using Ink/Stitch"
@@ -8441,87 +8443,87 @@ msgstr "Crear un archivo ZIP con múltiples formatos de archivos de bordado usan
 
 #: inx/inkstitch_zip.inx:14
 msgid "Custom file name"
-msgstr ""
+msgstr "Nombre de archivo personalizado"
 
 #: inx/inkstitch_zip.inx:14
 msgid "Defines the file names inside the zip archive. Leave empty for default file name."
-msgstr ""
+msgstr "Define los nombres de archivo dentro del archivo Zip. Déjalo vacío para usar el nombre de archivo predeterminado."
 
 #: inx/inkstitch_zip.inx:17
 msgid "File Formats"
-msgstr ""
+msgstr "Formatos de archivo"
 
 #: inx/inkstitch_zip.inx:18
 msgid "Output formats:"
-msgstr ""
+msgstr "Formatos de salida:"
 
 #: inx/inkstitch_zip.inx:21
 msgid ".PEC: Brother Embroidery Format"
-msgstr ""
+msgstr ".PEC: Formato de bordado Brother"
 
 #: inx/inkstitch_zip.inx:22
 msgid ".PES: Brother Embroidery Format"
-msgstr ""
+msgstr ".PES: Formato de bordado Brother"
 
 #: inx/inkstitch_zip.inx:23
 msgid ".EXP: Melco Expanded Embroidery Format"
-msgstr ""
+msgstr ".EXP: Formato de bordado Melco Expanded"
 
 #: inx/inkstitch_zip.inx:24
 msgid ".DST: Tajima Embroidery Format"
-msgstr ""
+msgstr ".DST: Formato de bordado Tajima"
 
 #: inx/inkstitch_zip.inx:25
 msgid ".JEF: Janome Embroidery Format"
-msgstr ""
+msgstr ".JEF: Formato de bordado Janome"
 
 #: inx/inkstitch_zip.inx:26
 msgid ".VP3: Pfaff Embroidery Format"
-msgstr ""
+msgstr ".VP3: Formato de bordado Pfaff"
 
 #: inx/inkstitch_zip.inx:27
 msgid ".XXX: Singer Embroidery Format"
-msgstr ""
+msgstr ".XXX: Formato de bordado Singer"
 
 #: inx/inkstitch_zip.inx:28
 msgid ".U01: Barudan Embroidery Format"
-msgstr ""
+msgstr ".U01: Formato de bordado Barudan"
 
 #: inx/inkstitch_zip.inx:29
 msgid ".TBF: Tajima Embroidery Format"
-msgstr ""
+msgstr ".TBF: Formato de bordado Tajima"
 
 #: inx/inkstitch_zip.inx:30
 msgid ".PMV: Brother Stitch Format [STITCH]"
-msgstr ""
+msgstr ".PMV: Formato de puntadas Brother [STITCH]"
 
 #: inx/inkstitch_zip.inx:36
 msgid ".GCODE: gcode Format, Text File"
-msgstr ""
+msgstr ".GCODE: Formato GCODE, archivo de texto"
 
 #: inx/inkstitch_zip.inx:37
 msgid ".PLT: Plt - HPGL [QUILTING]"
-msgstr ""
+msgstr ".PLT: PLT - HPGL [COLCHADO]"
 
 #: inx/inkstitch_zip.inx:38
 msgid ".QCC: Qcc - QuiltEZ [QUILTING]"
-msgstr ""
+msgstr ".QCC: Qcc - QuiltEZ [COLCHADO]"
 
 #: inx/inkstitch_zip.inx:39
 msgid ".EDR: Edr Color Format [COLOR]"
-msgstr ""
+msgstr ".EDR: Formato EDR de color [COLOR]"
 
 #: inx/inkstitch_zip.inx:40
 msgid ".COL: Col Color Format [COLOR]"
-msgstr ""
+msgstr ".COL: Formato COL de color [COLOR]"
 
 #: inx/inkstitch_zip.inx:41
 msgid ".INF: Inf Color Format [COLOR]"
-msgstr ""
+msgstr ".INF: Formato INF de color [COLOR]"
 
 #: inx/inkstitch_zip.inx:42
 msgid ".TXT: Threadlist [COLOR]"
-msgstr ""
+msgstr ".TXT: Lista de hilos [COLOR]"
 
 #: inx/inkstitch_zip.inx:48
 msgid ".SVG: Scalable Vector Graphic"
@@ -8529,47 +8531,47 @@ msgstr ".SVG: Scalable Vector Graphic"
 
 #: inx/inkstitch_zip.inx:49
 msgid ".PNG: Portable Network Graphics (Realistic) [IMAGE]"
-msgstr ""
+msgstr ".PNG: Gráficos de red portables (realista) [IMAGEN]"
 
 #: inx/inkstitch_zip.inx:51
 msgid ".PNG: Portable Network Graphics (Simple) [IMAGE]"
-msgstr ""
+msgstr ".PNG: Gráficos de red portables (simple) [IMAGEN]"
 
 #: inx/inkstitch_zip.inx:57
 msgid "Panelization Options"
-msgstr ""
+msgstr "Opciones de panelización"
 
 #: inx/inkstitch_zip.inx:58
 msgid "For single design set horizontal and vertical repeats to 1"
-msgstr ""
+msgstr "Para un solo diseño, establece repeticiones horizontales y verticales en 1"
 
 #: inx/inkstitch_zip.inx:60
 msgid "Horizontal repeats"
-msgstr ""
+msgstr "Repeticiones horizontales"
 
 #: inx/inkstitch_zip.inx:61
 msgid "Horizontal spacing (mm)"
-msgstr ""
+msgstr "Espaciado horizontal (mm)"
 
 #: inx/inkstitch_zip.inx:62
 msgid "Vertical repeats"
-msgstr ""
+msgstr "Repeticiones verticales"
 
 #: inx/inkstitch_zip.inx:63
 msgid "Vertical spacing (mm)"
-msgstr ""
+msgstr "Espaciado vertical (mm)"
 
 #: inx/inkstitch_zip.inx:66
 msgid "Zip File Export"
-msgstr ""
+msgstr "Exportar a Archivo Zip"
 
 #: inx/inkstitch_zip.inx:67
 msgid "Export multiple embroidery file formats at once."
-msgstr ""
+msgstr "Exportar varios formatos de archivo de bordado a la vez."
 
 #: inx/inkstitch_zip.inx:69
 msgid "Read more on our website:"
-msgstr ""
+msgstr "Más información en nuestro sitio web:"
 
 #: inx/inkstitch_zip.inx:70
 msgid "https://inkstitch.org/docs/import-export/#batch-export"

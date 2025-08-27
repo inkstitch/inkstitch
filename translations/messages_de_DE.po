@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-08-25 01:49+0000\n"
-"PO-Revision-Date: 2025-08-25 01:49\n"
+"PO-Revision-Date: 2025-08-27 01:42\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -5652,15 +5652,15 @@ msgstr "Minimale Länge für Linien (px)"
 
 #: inx/inkstitch_cleanup.inx:16
 msgid "Remove Small satins"
-msgstr ""
+msgstr "Kurze Satinsäulen entfernen"
 
 #: inx/inkstitch_cleanup.inx:16
 msgid "Removes small satin columns shorter than defined by threshold."
-msgstr ""
+msgstr "Entfernt Satinsäulen, die kürzer sind als der Schwellwert."
 
 #: inx/inkstitch_cleanup.inx:17
 msgid "Satin threshold (px)"
-msgstr ""
+msgstr "Minimale Länge für Satinsäulen (px)"
 
 #: inx/inkstitch_cleanup.inx:18
 msgid "Remove empty layers and groups"
@@ -7162,7 +7162,7 @@ msgstr "https://inkstitch.org/de/docs/font-tools/#json-datei-erstellen"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:3
 msgid "Organize Glyphs"
-msgstr ""
+msgstr "Glyphen sortieren"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:12
 msgid "Choose action"
