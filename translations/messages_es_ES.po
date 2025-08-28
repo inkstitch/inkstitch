@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-25 01:49+0000\n"
-"PO-Revision-Date: 2025-08-27 01:42\n"
+"POT-Creation-Date: 2025-08-28 01:40+0000\n"
+"PO-Revision-Date: 2025-08-28 01:41\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-25 01:49+0000\n"
+"POT-Creation-Date: 2025-08-28 01:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -983,14 +983,14 @@ msgstr "Intente importar el archivo a Inkscape a través de 'Archivo> Importar..
 #: lib/commands.py:27 inx/inkstitch_object_commands.inx:4
 #: inx/inkstitch_remove_embroidery_settings.inx:118
 msgid "Starting position"
-msgstr ""
+msgstr "Posición de inicio"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:30 inx/inkstitch_object_commands.inx:5
 #: inx/inkstitch_remove_embroidery_settings.inx:119
 msgid "Ending position"
-msgstr ""
+msgstr "Posición de fin"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -1004,14 +1004,14 @@ msgstr "Posición del objetivo"
 #: lib/commands.py:36 inx/inkstitch_object_commands.inx:7
 #: inx/inkstitch_remove_embroidery_settings.inx:121
 msgid "Auto-route starting position"
-msgstr ""
+msgstr "Posición de inicio de ruta automática"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
 #: lib/commands.py:39 inx/inkstitch_object_commands.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:122
 msgid "Auto-route ending position"
-msgstr ""
+msgstr "Posición de fin de ruta automática"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command attached to an object
@@ -1136,126 +1136,126 @@ msgstr "Ángulo de inversión"
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr "Invertir el ángulo calculado automáticamente si parece incorrecto."
 
-#: lib/elements/element.py:274 lib/gui/preferences.py:59
+#: lib/elements/element.py:273 lib/gui/preferences.py:59
 #: lib/gui/preferences.py:128
 msgid "Minimum stitch length"
 msgstr "Largo mínimo de puntada"
 
-#: lib/elements/element.py:275
+#: lib/elements/element.py:274
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
 msgstr "Sustituye el ajuste global de longitud mínima de puntada. Se eliminarán las puntadas más cortas."
 
-#: lib/elements/element.py:285 lib/gui/preferences.py:41
+#: lib/elements/element.py:284 lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
 msgstr "Longitud mínima de puntada de salto"
 
-#: lib/elements/element.py:286
+#: lib/elements/element.py:285
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
 msgstr "Sustituye el ajuste global de longitud mínima de puntada de salto. Las distancias más cortas al siguiente objeto no tendrán puntadas de bloqueo."
 
-#: lib/elements/element.py:296
+#: lib/elements/element.py:295
 msgid "Allow lock stitches"
 msgstr "Permitir puntadas de remate"
 
-#: lib/elements/element.py:297
+#: lib/elements/element.py:296
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr "Anude el hilo al principio y/o al final de este objeto. La puntada manual solo añadirá puntadas de bloqueo si está marcada la opción forzar puntada de bloqueo."
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:302
+#: lib/elements/element.py:301
 msgid "Both"
 msgstr "Ambos"
 
-#: lib/elements/element.py:302
+#: lib/elements/element.py:301
 msgid "Before"
 msgstr "Antes"
 
-#: lib/elements/element.py:302
+#: lib/elements/element.py:301
 msgid "After"
 msgstr "Después"
 
-#: lib/elements/element.py:302
+#: lib/elements/element.py:301
 msgid "Neither"
 msgstr "Ninguno"
 
-#: lib/elements/element.py:311
+#: lib/elements/element.py:310
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr "Forzar las puntadas de refuerzo"
 
-#: lib/elements/element.py:312
+#: lib/elements/element.py:311
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr "Realice puntadas de bloqueo después de coser este elemento, incluso si la distancia hasta el siguiente objeto es inferior a la definida por el valor mínimo de longitud de puntada de salto en las preferencias de Ink/Stitch."
 
-#: lib/elements/element.py:324
+#: lib/elements/element.py:323
 msgid "Tack stitch"
 msgstr "Puntada de remate"
 
-#: lib/elements/element.py:325
+#: lib/elements/element.py:324
 msgid "Tack down stitch type"
 msgstr "Tipo de puntada de remate"
 
-#: lib/elements/element.py:335 lib/elements/element.py:381
+#: lib/elements/element.py:334 lib/elements/element.py:380
 msgid "Custom path"
 msgstr "Trayectoria personalizada"
 
-#: lib/elements/element.py:336
+#: lib/elements/element.py:335
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr "Introduzca una trayectoria personalizada. Para rutas svg el último nodo no será bordado, pero representa la primera puntada del elemento."
 
-#: lib/elements/element.py:346 lib/elements/element.py:358
+#: lib/elements/element.py:345 lib/elements/element.py:357
 msgid "Scale tack stitch"
 msgstr "Escalar puntada de remate"
 
-#: lib/elements/element.py:347
+#: lib/elements/element.py:346
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr "Establece la longitud de la puntada. Un 1 en una trayectoria personalizada equivale a estos valores."
 
-#: lib/elements/element.py:359
+#: lib/elements/element.py:358
 msgid "Scale tack stitch by this percentage."
 msgstr "Escale la puntada de remate en este porcentaje."
 
-#: lib/elements/element.py:370
+#: lib/elements/element.py:369
 msgid "Lock stitch"
 msgstr "Puntada de bloqueo"
 
-#: lib/elements/element.py:371
+#: lib/elements/element.py:370
 msgid "Lock stitch type"
 msgstr "Tipo de puntada de bloqueo"
 
-#: lib/elements/element.py:382
+#: lib/elements/element.py:381
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr "Introduzca una trayectoria personalizada. Para las rutas svg, el primer nodo no se bordará, sino que representa la última puntada del elemento."
 
-#: lib/elements/element.py:392 lib/elements/element.py:404
+#: lib/elements/element.py:391 lib/elements/element.py:403
 msgid "Scale lock stitch"
 msgstr "Escalar puntada de bloqueo"
 
-#: lib/elements/element.py:393
+#: lib/elements/element.py:392
 msgid "Set length of lock stitches (mm)."
 msgstr "Ajuste la longitud de los pespuntes (mm)."
 
-#: lib/elements/element.py:405
+#: lib/elements/element.py:404
 msgid "Scale lock stitch by this percentage."
 msgstr "Escale la puntada de bloqueo en este porcentaje."
 
-#: lib/elements/element.py:417
+#: lib/elements/element.py:416
 msgid "Trim After"
 msgstr "Recorte Después"
 
-#: lib/elements/element.py:418
+#: lib/elements/element.py:417
 msgid "Add a TRIM command after stitching this object."
 msgstr "Añada un comando RECORTE después de coser este objeto."
 
-#: lib/elements/element.py:427
+#: lib/elements/element.py:426
 msgid "Stop After"
 msgstr "Deténgase después"
 
-#: lib/elements/element.py:428
+#: lib/elements/element.py:427
 msgid "Add a STOP command after stitching this object."
 msgstr "Añade un comando PARAR después de coser este objeto."
 
-#: lib/elements/element.py:721
+#: lib/elements/element.py:720
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Por favor, ejecute Extensiones > Ink/Stitch > Solucionar problemas > Solucionar problemas de objetos. Esto le mostrará la ubicación exacta del problema."
 
@@ -1313,27 +1313,27 @@ msgstr "Selecciona este objeto y ve a Extensiones > Ink/Stitch > Editar > Selecc
 
 #: lib/elements/fill_stitch.py:64
 msgid "Disjointed Guide Line"
-msgstr ""
+msgstr "Línea guía discontinua"
 
 #: lib/elements/fill_stitch.py:65
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
-msgstr ""
+msgstr "La línea guía de este objeto no está dentro de los bordes del objeto. La línea guía funciona mejor si está dentro del elemento de destino."
 
 #: lib/elements/fill_stitch.py:68
 msgid "* Move the guide line into the element"
-msgstr ""
+msgstr "Mover la línea guía dentro del elemento"
 
 #: lib/elements/fill_stitch.py:73 lib/elements/stroke.py:26
 msgid "Multiple Guide Lines"
-msgstr ""
+msgstr "Líneas guía múltiples"
 
 #: lib/elements/fill_stitch.py:74 lib/elements/stroke.py:27
 msgid "This object has multiple guide lines, but only the first one will be used."
-msgstr ""
+msgstr "Este objeto tiene múltiples líneas guía, pero solo se utilizará la primera."
 
 #: lib/elements/fill_stitch.py:76 lib/elements/stroke.py:29
 msgid "* Remove all guide lines, except for one."
-msgstr ""
+msgstr "Eliminar todas las líneas guía, excepto una."
 
 #: lib/elements/fill_stitch.py:81
 msgid "Unconnected"
@@ -1341,7 +1341,7 @@ msgstr "Desconectado"
 
 #: lib/elements/fill_stitch.py:82
 msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
-msgstr ""
+msgstr "Relleno: Este objeto está compuesto por formas inconexas. inkstitch no sabe en qué orden bordarlas. Por favor, divide este objeto en formas separadas."
 
 #: lib/elements/fill_stitch.py:86 lib/elements/fill_stitch.py:95
 #: lib/elements/fill_stitch.py:140
@@ -1354,67 +1354,67 @@ msgstr "El borde se cruza a sí mismo"
 
 #: lib/elements/fill_stitch.py:92
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
-msgstr ""
+msgstr "Relleno: El borde se cruza sobre sí mismo. Esto puede dar lugar a formas inconexas. Por favor, divide este objeto en formas separadas para indicar en qué orden se deben bordar."
 
 #: lib/elements/fill_stitch.py:100
 msgid "Fill and Stroke color"
-msgstr ""
+msgstr "Color de relleno y de trazo"
 
 #: lib/elements/fill_stitch.py:101
 msgid "Element has both a fill and a stroke color. It is recommended to use two separate elements instead."
-msgstr ""
+msgstr "El elemento tiene tanto un color de relleno como de trazo. Se recomienda usar dos elementos separados en su lugar."
 
 #: lib/elements/fill_stitch.py:103
 msgid "* Duplicate the element. Remove stroke color from the first and fill color from the second."
-msgstr ""
+msgstr "* Duplica el elemento. Elimina el color de trazo del primero y el color de relleno del segundo."
 
 #: lib/elements/fill_stitch.py:104
 msgid "* Adapt the shape of the second element to compensate for push and pull fabric distortion."
-msgstr ""
+msgstr "* Adapta la forma del segundo elemento para compensar la distorsión de la tela por el efecto de empuje y tirón."
 
 #: lib/elements/fill_stitch.py:109
 msgid "No linear gradient color"
-msgstr ""
+msgstr "Color sin degradado lineal"
 
 #: lib/elements/fill_stitch.py:110
 msgid "Linear Gradient has no linear gradient color."
-msgstr ""
+msgstr "El degradado lineal no tiene un color de degradado lineal."
 
 #: lib/elements/fill_stitch.py:112
 msgid "* Open the Fill and Stroke dialog."
-msgstr ""
+msgstr "* Abre el diálogo de Relleno y Trazo."
 
 #: lib/elements/fill_stitch.py:113
 msgid "* Set a linear gradient as a fill and adapt colors to your liking."
-msgstr ""
+msgstr "* Establece un degradado lineal como relleno y adapta los colores a tu gusto."
 
 #: lib/elements/fill_stitch.py:118
 msgid "No stripes to render"
-msgstr ""
+msgstr "No hay franjas para renderizar"
 
 #: lib/elements/fill_stitch.py:119
 msgid "Tartan fill: There is no active fill stripe to render"
-msgstr ""
+msgstr "Relleno tipo tartán: No hay una franja de relleno activa para renderizar"
 
 #: lib/elements/fill_stitch.py:121 lib/elements/fill_stitch.py:131
 msgid "Go to Extensions > Ink/Stitch > Fill Tools > Tartan and adjust stripe settings:"
-msgstr ""
+msgstr "Ve a Extensiones > inkstitch > Herramientas de relleno > Tartán y ajusta la configuración de las franjas:"
 
 #: lib/elements/fill_stitch.py:122
 msgid "* Check if stripes are active"
-msgstr ""
+msgstr "* Verifica si las franjas están activas"
 
 #: lib/elements/fill_stitch.py:123
 msgid "* Check the minimum stripe width setting and the scale factor"
-msgstr ""
+msgstr "*Verifica la configuración del ancho mínimo de la franja y el factor de escala"
 
 #: lib/elements/fill_stitch.py:128
 msgid "No customized pattern"
-msgstr ""
+msgstr "No hay patrón personalizado"
 
 #: lib/elements/fill_stitch.py:129
 msgid "Tartan fill: Using default pattern"
-msgstr ""
+msgstr "Relleno tipo tartán: Usando el patrón predeterminado"
 
 #: lib/elements/fill_stitch.py:132
 msgid "* Customize your pattern"
@@ -1426,11 +1426,11 @@ msgstr "Esta forma es inválida"
 
 #: lib/elements/fill_stitch.py:138
 msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
-msgstr ""
+msgstr "Relleno: Esta forma no se puede bordar. Por favor, intenta repararla con la extensión \"Dividir objetos de relleno\"."
 
 #: lib/elements/fill_stitch.py:146
 msgid "FillStitch"
-msgstr ""
+msgstr "Puntada de relleno"
 
 #: lib/elements/fill_stitch.py:149
 msgid "Automatically routed fill stitching"
@@ -1454,20 +1454,20 @@ msgstr "Relleno guiado"
 
 #: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:59
 msgid "Linear Gradient Fill"
-msgstr ""
+msgstr "Relleno con degradado lineal"
 
 #: lib/elements/fill_stitch.py:158 inx/inkstitch_select_elements.inx:60
 msgid "Meander Fill"
-msgstr ""
+msgstr "Relleno en meandro"
 
 #: lib/elements/fill_stitch.py:159 inx/inkstitch_select_elements.inx:61
 msgid "Tartan Fill"
-msgstr ""
+msgstr "Relleno tipo tartán"
 
 #: lib/elements/fill_stitch.py:160 lib/gui/tartan/embroidery_panel.py:203
 #: inx/inkstitch_select_elements.inx:62
 msgid "Legacy Fill"
-msgstr ""
+msgstr "Relleno heredado"
 
 #: lib/elements/fill_stitch.py:164
 msgid "Fill method"
@@ -1475,7 +1475,7 @@ msgstr "Método de rellenado"
 
 #: lib/elements/fill_stitch.py:173
 msgid "Guided Fill Strategy"
-msgstr ""
+msgstr "Relleno con Estrategia Guiada"
 
 #: lib/elements/fill_stitch.py:174
 msgid "Copy"
@@ -1483,23 +1483,23 @@ msgstr "Copiar"
 
 #: lib/elements/fill_stitch.py:174
 msgid "Parallel Offset"
-msgstr ""
+msgstr "Desplazamiento paralelo"
 
 #: lib/elements/fill_stitch.py:175
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
-msgstr ""
+msgstr "Copia (la predeterminada): llenará la forma con copias desplazadas de la línea. Desplazamiento paralelo garantizará que cada línea mantenga siempre una distancia consistente de su vecina. Se pueden introducir esquinas afiladas."
 
 #: lib/elements/fill_stitch.py:182
 msgid "Contour Fill Strategy"
-msgstr ""
+msgstr "Relleno con Estrategia de Contorno"
 
 #: lib/elements/fill_stitch.py:183
 msgid "Inner to Outer"
-msgstr ""
+msgstr "De adentro hacia afuera"
 
 #: lib/elements/fill_stitch.py:183
 msgid "Single spiral"
-msgstr ""
+msgstr "Espiral simple"
 
 #: lib/elements/fill_stitch.py:183
 msgid "Double spiral"
@@ -7301,7 +7301,7 @@ msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:83
 msgid "Inserts all available glyphs of a pre-digitized font into the document to make them available for the lettering tool"
-msgstr ""
+msgstr "Inserta todos los glifos disponibles de una fuente pre-digitalizada en el documento para que estén disponibles en la herramienta de letras"
 
 #: inx/inkstitch_object_commands.inx:3
 msgid "Attach Commands to Selected Objects"
@@ -7309,55 +7309,55 @@ msgstr "Adjuntar comandos a los objetos seleccionados"
 
 #: inx/inkstitch_object_commands.inx:18
 msgid "Add commands which affect selected elememts"
-msgstr ""
+msgstr "Agregar comandos que afecten a los elementos seleccionados"
 
 #: inx/inkstitch_object_commands_toggle_visibility.inx:3
 msgid "Show|Hide Object Commands"
-msgstr ""
+msgstr "Mostrar | Ocultar comandos de objeto"
 
 #: inx/inkstitch_outline.inx:3
 msgid "Outline"
-msgstr ""
+msgstr "Contorno"
 
 #: inx/inkstitch_outline.inx:9
 msgid "Keep original element(s)"
-msgstr ""
+msgstr "Conservar elemento(s) original(es)"
 
 #: inx/inkstitch_outline.inx:14
 msgid "Threshold (mm²)"
-msgstr ""
+msgstr "Umbral (mm²)"
 
 #: inx/inkstitch_outline.inx:14
 msgid "Removes smaller shape areas than that"
-msgstr ""
+msgstr "Elimina las áreas de forma más pequeñas que esa"
 
 #: inx/inkstitch_outline.inx:16
 msgid "Buffer (mm)"
-msgstr ""
+msgstr "Contorno adicional (mm)"
 
 #: inx/inkstitch_outline.inx:16
 msgid "Enlarge strokes by this amount"
-msgstr ""
+msgstr "Aumentar los trazos en esta cantidad"
 
 #: inx/inkstitch_outline.inx:18
 msgid "Smoothness (mm)"
-msgstr ""
+msgstr "Suavizado (mm)"
 
 #: inx/inkstitch_outline.inx:18
 msgid "Smooth path by this amount"
-msgstr ""
+msgstr "Suavizar el trazado en esta cantidad"
 
 #: inx/inkstitch_outline.inx:23
 msgid "Inset (mm)"
-msgstr ""
+msgstr "Desplazamiento interno (mm)"
 
 #: inx/inkstitch_outline.inx:23
 msgid "Counteract the buffer effect"
-msgstr ""
+msgstr "Contrarrestar el efecto de margen"
 
 #: inx/inkstitch_outline.inx:26
 msgid "This extension helps reconstruct an original object from a stitch file."
-msgstr ""
+msgstr "Esta extensión ayuda a reconstruir un objeto original a partir de un archivo de puntadas."
 
 #: inx/inkstitch_outline.inx:29
 msgid "https://inkstitch.org/docs/stroke-tools/#outline"
@@ -7365,19 +7365,19 @@ msgstr ""
 
 #: inx/inkstitch_outline.inx:36
 msgid "Generates an outline around stitch paths"
-msgstr ""
+msgstr "Genera un contorno alrededor de los trazados de puntadas"
 
 #: inx/inkstitch_output_COL.inx:3
 msgid "COL file output"
-msgstr ""
+msgstr "Salida de archivo COL"
 
 #: inx/inkstitch_output_COL.inx:8
 msgid "Ink/Stitch: Col Color Format [COLOR] (.col)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de color COL [COLOR] (.col)"
 
 #: inx/inkstitch_output_COL.inx:9
 msgid "Save design in COL format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato COL usando Ink/Stitch"
 
 #: inx/inkstitch_output_CSV.inx:3
 msgid "CSV file output"
@@ -7401,15 +7401,15 @@ msgstr "Guardar el diseño en formato DST usando Ink/Stitch"
 
 #: inx/inkstitch_output_EDR.inx:3
 msgid "EDR file output"
-msgstr ""
+msgstr "Salida de archivo EDR"
 
 #: inx/inkstitch_output_EDR.inx:8
 msgid "Ink/Stitch: Edr Color Format [COLOR] (.edr)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de color EDR [COLOR] (.edr)"
 
 #: inx/inkstitch_output_EDR.inx:9
 msgid "Save design in EDR format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato EDR usando Ink/Stitch"
 
 #: inx/inkstitch_output_EXP.inx:3
 msgid "EXP file output"
@@ -7421,11 +7421,11 @@ msgstr "Guardar el diseño en formato EXP usando Ink/Stitch"
 
 #: inx/inkstitch_output_GCODE.inx:3
 msgid "GCODE file output"
-msgstr ""
+msgstr "Salida de archivo GCODE"
 
 #: inx/inkstitch_output_GCODE.inx:9
 msgid "Save design in GCODE format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato GCODE usando Ink/Stitch"
 
 #: inx/inkstitch_output_GCODE.inx:17
 msgid "Coordinate Settings"
@@ -7477,11 +7477,11 @@ msgstr "Usar '%X' para la coordenada X. Usar '%Y' par la coordenada Y, y '%Z' pa
 
 #: inx/inkstitch_output_GCODE.inx:31
 msgid "Leave empty to use default value. Use 'none' to remove. Use %R %G %B for thread color values"
-msgstr ""
+msgstr "Dejar vacío para usar el valor predeterminado. Usar ‘none’ para eliminar. Usar %R %G %B para los valores de color del hilo"
 
 #: inx/inkstitch_output_GCODE.inx:33
 msgid "Leave empty to ignore jumps. Use '%X' for x-coordinate and '%Y' for y-coordinate."
-msgstr ""
+msgstr "Dejar vacío para ignorar saltos. Usar '%X' para la coordenada X y '%Y' para la coordenada Y."
 
 #: inx/inkstitch_output_GCODE.inx:35
 msgid "Leave empty to use default value. Use 'none' to remove."
@@ -7493,7 +7493,7 @@ msgstr "INICIO"
 
 #: inx/inkstitch_output_GCODE.inx:37
 msgid "Use %R %G %B for inital color thread color values"
-msgstr ""
+msgstr "Usar %R %G %B para los valores de color inicial del hilo"
 
 #: inx/inkstitch_output_GCODE.inx:38
 msgid "END"
@@ -7557,15 +7557,15 @@ msgstr "velocidad de alimentación (en mm/min, ajustar en -1 para omitirlo)"
 
 #: inx/inkstitch_output_INF.inx:3
 msgid "INF file output"
-msgstr ""
+msgstr "Salida de archivo INF"
 
 #: inx/inkstitch_output_INF.inx:8
 msgid "Ink/Stitch: Inf Color Format [COLOR] (.inf)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de color INF [COLOR] (.inf)"
 
 #: inx/inkstitch_output_INF.inx:9
 msgid "Save design in INF format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato INF usando Ink/Stitch"
 
 #: inx/inkstitch_output_JEF.inx:3
 msgid "JEF file output"
@@ -7577,15 +7577,15 @@ msgstr "Guardar el diseño en formato JEF usando Ink/Stitch"
 
 #: inx/inkstitch_output_JSON.inx:3
 msgid "JSON file output"
-msgstr ""
+msgstr "Salida de archivo JSON"
 
 #: inx/inkstitch_output_JSON.inx:8
 msgid "Ink/Stitch: Json Export [DEBUG] (.json)"
-msgstr ""
+msgstr "Ink/Stitch: Exportación JSON [DEBUG] (.json)"
 
 #: inx/inkstitch_output_JSON.inx:9
 msgid "Save design in JSON format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato JSON usando Ink/Stitch"
 
 #: inx/inkstitch_output_PEC.inx:3
 msgid "PEC file output"
@@ -7605,15 +7605,15 @@ msgstr "Guardar el diseño en formato PES usando Ink/Stitch"
 
 #: inx/inkstitch_output_PLT.inx:3
 msgid "PLT file output"
-msgstr ""
+msgstr "Salida de archivo PLT"
 
 #: inx/inkstitch_output_PLT.inx:8
 msgid "Ink/Stitch: Plt - HPGL [QUILTING] (.plt)"
-msgstr ""
+msgstr "Ink/Stitch: PLT - HPGL [COLCHADO] (.plt)"
 
 #: inx/inkstitch_output_PLT.inx:9
 msgid "Save design in PLT format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato PLT usando Ink/Stitch"
 
 #: inx/inkstitch_output_PMV.inx:3
 msgid "PMV file output"
@@ -7621,7 +7621,7 @@ msgstr "Archivo de salida PMW"
 
 #: inx/inkstitch_output_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format [STITCH] (.pmv)"
-msgstr ""
+msgstr "Ink/Stitch: Formato de puntada Brother [STITCH] (.pmv)"
 
 #: inx/inkstitch_output_PMV.inx:9
 msgid "Save design in PMV format using Ink/Stitch"
@@ -7629,15 +7629,15 @@ msgstr "Guardar el diseño en formato PMV usando Ink/Stitch"
 
 #: inx/inkstitch_output_QCC.inx:3
 msgid "QCC file output"
-msgstr ""
+msgstr "Salida de archivo QCC"
 
 #: inx/inkstitch_output_QCC.inx:8
 msgid "Ink/Stitch: Qcc - QuiltEZ [QUILTING] (.qcc)"
-msgstr ""
+msgstr "Ink/Stitch: QCC - QuiltEZ [COLCHADO] (.qcc)"
 
 #: inx/inkstitch_output_QCC.inx:9
 msgid "Save design in QCC format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato QCC usando Ink/Stitch"
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
@@ -7653,23 +7653,23 @@ msgstr "Guardar el diseño en formato SVG usando Ink/Stitch"
 
 #: inx/inkstitch_output_TBF.inx:3
 msgid "TBF file output"
-msgstr ""
+msgstr "Salida de archivo TBF"
 
 #: inx/inkstitch_output_TBF.inx:9
 msgid "Save design in TBF format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato TBF usando Ink/Stitch"
 
 #: inx/inkstitch_output_TXT.inx:3
 msgid "TXT file output"
-msgstr ""
+msgstr "Salida de archivo TXT"
 
 #: inx/inkstitch_output_TXT.inx:8
 msgid "Ink/Stitch: txt Format, Text File [DEBUG] (.txt)"
-msgstr ""
+msgstr "Ink/Stitch: Formato TXT, archivo de texto [DEBUG] (.txt)"
 
 #: inx/inkstitch_output_TXT.inx:9
 msgid "Save design in TXT format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato TXT usando Ink/Stitch"
 
 #: inx/inkstitch_output_U01.inx:3
 msgid "U01 file output"
@@ -7689,35 +7689,35 @@ msgstr "Guardar el diseño en formato VP3 usando Ink/Stitch"
 
 #: inx/inkstitch_output_XXX.inx:3
 msgid "XXX file output"
-msgstr ""
+msgstr "Salida de archivo XXX"
 
 #: inx/inkstitch_output_XXX.inx:9
 msgid "Save design in XXX format using Ink/Stitch"
-msgstr ""
+msgstr "Guardar el diseño en formato XXX usando Ink/Stitch"
 
 #: inx/inkstitch_palette_split_text.inx:3
 msgid "Split text"
-msgstr ""
+msgstr "Dividir texto"
 
 #: inx/inkstitch_palette_to_text.inx:3 inx/inkstitch_palette_to_text.inx:22
 msgid "Palette to text"
-msgstr ""
+msgstr "Paleta a texto"
 
 #: inx/inkstitch_palette_to_text.inx:8
 msgid "Imports a thread color palette as colored text"
-msgstr ""
+msgstr "Importa una paleta de hilos como texto coloreado"
 
 #: inx/inkstitch_palette_to_text.inx:18
 msgid "Choose a .gpl color palette file to import colors as text elements."
-msgstr ""
+msgstr "Elige un archivo de paleta de colores .gpl para importar los colores como elementos de texto."
 
 #: inx/inkstitch_palette_to_text.inx:23
 msgid "Import a .gpl palette into Inkscape as text elements to edit color entries."
-msgstr ""
+msgstr "Importa una paleta .gpl en Inkscape como elementos de texto para editar los colores."
 
 #: inx/inkstitch_palette_to_text.inx:25
 msgid "Read more on our webiste:"
-msgstr ""
+msgstr "Más información en nuestro sitio web:"
 
 #: inx/inkstitch_palette_to_text.inx:26
 msgid "https://inkstitch.org/docs/thread-color#palette-to-text"
@@ -7729,36 +7729,36 @@ msgstr "Parametros"
 
 #: inx/inkstitch_params.inx:9
 msgid "Adapt embroidery settings"
-msgstr ""
+msgstr "Adaptar configuraciones de bordado"
 
 #: inx/inkstitch_png_realistic.inx:3
 msgid "PNG file output (realistic)"
-msgstr ""
+msgstr "Salida de archivo PNG (realista)"
 
 #: inx/inkstitch_png_realistic.inx:8
 msgid "Ink/Stitch: Portable Network Graphics (Realistic) [IMAGE] (.png)"
-msgstr ""
+msgstr "Ink/Stitch: Portable Network Graphics (Realista) [IMAGEN] (.png)"
 
 #: inx/inkstitch_png_realistic.inx:9
 msgid "Create a PNG file with a realistic embroidery representation using Ink/Stitch"
-msgstr ""
+msgstr "Crear un archivo PNG con una representación realista del bordado usando Ink/Stitch"
 
 #: inx/inkstitch_png_realistic.inx:15 inx/inkstitch_png_simple.inx:16
 #: inx/inkstitch_zip.inx:50 inx/inkstitch_zip.inx:53
 msgid "DPI"
-msgstr ""
+msgstr "ppp"
 
 #: inx/inkstitch_png_realistic.inx:18 inx/inkstitch_png_simple.inx:19
 msgid "PNG file export"
-msgstr ""
+msgstr "Exportar a archivo PNG"
 
 #: inx/inkstitch_png_realistic.inx:19 inx/inkstitch_png_simple.inx:20
 msgid "Export embroidery design to PNG"
-msgstr ""
+msgstr "Exportar diseño de bordado a PNG"
 
 #: inx/inkstitch_png_realistic.inx:23 inx/inkstitch_png_simple.inx:24
 msgid "Read more on our website"
-msgstr ""
+msgstr "Más información en nuestro sitio web"
 
 #: inx/inkstitch_png_realistic.inx:24 inx/inkstitch_png_simple.inx:25
 msgid "https://inkstitch.org/docs/import-export/"
@@ -7766,15 +7766,15 @@ msgstr ""
 
 #: inx/inkstitch_png_simple.inx:3
 msgid "embroidery PNG file output"
-msgstr ""
+msgstr "salida de archivo PNG de bordado"
 
 #: inx/inkstitch_png_simple.inx:8
 msgid "Ink/Stitch: Portable Network Graphics (Simple) [IMAGE] (.png)"
-msgstr ""
+msgstr "Ink/Stitch: Portable Network Graphics (Simple) [IMAGEN] (.png)"
 
 #: inx/inkstitch_png_simple.inx:9
 msgid "Create a PNG file with a simple line embroidery representation using Ink/Stitch"
-msgstr ""
+msgstr "Crear un archivo PNG con una representación de bordado en línea simple usando Ink/Stitch"
 
 #: inx/inkstitch_print.inx:3
 msgid "PDF Export"
@@ -7782,43 +7782,43 @@ msgstr "Exportar PDF"
 
 #: inx/inkstitch_redwork.inx:11
 msgid "Connect lines below this distance (mm)"
-msgstr ""
+msgstr "Conectar líneas por debajo de esta distancia (mm)"
 
 #: inx/inkstitch_redwork.inx:11
 msgid "Unconnected lines may result in jump stitches"
-msgstr ""
+msgstr "Las líneas no conectadas pueden generar puntadas de salto"
 
 #: inx/inkstitch_redwork.inx:14
 msgid "Minimum path length (mm)"
-msgstr ""
+msgstr "Longitud mínima del recorrido (mm)"
 
 #: inx/inkstitch_redwork.inx:14
 msgid "Shorter paths will be removed from redwork result"
-msgstr ""
+msgstr "Los recorridos más cortos se eliminarán del resultado Redwork"
 
 #: inx/inkstitch_redwork.inx:17
 msgid "Redwork stitch length (mm)"
-msgstr ""
+msgstr "Longitud de puntada Redwork (mm)"
 
 #: inx/inkstitch_redwork.inx:17
 msgid "set redwork stitch length"
-msgstr ""
+msgstr "establecer longitud de puntada Redwork"
 
 #: inx/inkstitch_redwork.inx:20
 msgid "Redwork bean stitch number of repeats"
-msgstr ""
+msgstr "Número de repeticiones de puntada Redwork tipo frijol"
 
 #: inx/inkstitch_redwork.inx:25
 msgid "Combine elements"
-msgstr ""
+msgstr "Combinar elementos"
 
 #: inx/inkstitch_redwork.inx:25
 msgid "Combine consecutive elements of same type"
-msgstr ""
+msgstr "Combinar elementos consecutivos del mismo tipo"
 
 #: inx/inkstitch_redwork.inx:29
 msgid "Redwork embroidery is a stroke art embroidery which passes every line exactly twice."
-msgstr ""
+msgstr "El bordado Redwork es un bordado tipo línea en el que cada trazo se repite exactamente dos veces."
 
 #: inx/inkstitch_redwork.inx:32
 msgid "https://inkstitch.org/docs/stroke-tools/#redwork"
@@ -7826,27 +7826,27 @@ msgstr ""
 
 #: inx/inkstitch_redwork.inx:39
 msgid "Generates a path through all selected elements, passing each element exactly twice"
-msgstr ""
+msgstr "Genera un trazado a través de todos los elementos seleccionados, pasando por cada elemento exactamente dos veces"
 
 #: inx/inkstitch_remove_duplicated_points.inx:3
 msgid "Remove duplicated points"
-msgstr ""
+msgstr "Eliminar puntos duplicados"
 
 #: inx/inkstitch_remove_duplicated_points.inx:10
 msgid "Remove point if repeated within this number of consecutive points"
-msgstr ""
+msgstr "Eliminar punto si se repite dentro de este número de puntos consecutivos"
 
 #: inx/inkstitch_remove_duplicated_points.inx:12
 msgid "Distance tolerance"
-msgstr ""
+msgstr "Tolerancia de distancia"
 
 #: inx/inkstitch_remove_duplicated_points.inx:15
 msgid "This extension removes duplicated points from selected elements."
-msgstr ""
+msgstr "Esta extensión elimina puntos duplicados de los elementos seleccionados."
 
 #: inx/inkstitch_remove_duplicated_points.inx:19
 msgid "It is most useful for manual paths (straight lines), since it will increase node count on Bézier curves. One possible usecase is to convert a bean stitch path from an embroidery file back into a simple line."
-msgstr ""
+msgstr "Es más útil para trazados manuales (líneas rectas), ya que aumentará la cantidad de nodos en curvas Bézier. Un posible caso de uso es convertir un trazado de puntada tipo frijol de un archivo de bordado nuevamente en una línea simple."
 
 #: inx/inkstitch_remove_duplicated_points.inx:25
 msgid "https://inkstitch.org/docs/edit/#remove-duplicated-points"
@@ -7867,7 +7867,7 @@ msgstr "Elimina los parámetros de los objetos seleccionados o de todos los obje
 #: inx/inkstitch_remove_embroidery_settings.inx:13
 #: inx/inkstitch_remove_embroidery_settings.inx:118
 msgid "All"
-msgstr ""
+msgstr "Todo"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:116
 msgid "Remove Commands"
@@ -7883,7 +7883,7 @@ msgstr "Eliminar la configuración de impresión de los metadatos del SVG"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:141
 msgid "Use this extension to remove the information Ink/Stitch has stored in your document. This can be especially useful if you copy and paste objects from an embroidery design into another document."
-msgstr ""
+msgstr "Usa esta extensión para eliminar la información que Ink/Stitch ha almacenado en tu documento. Esto puede ser especialmente útil si copias y pegas objetos de un diseño de bordado en otro documento."
 
 #: inx/inkstitch_remove_embroidery_settings.inx:144
 msgid "https://inkstitch.org/docs/troubleshoot/#remove-embroidery-settings"
@@ -7891,7 +7891,7 @@ msgstr ""
 
 #: inx/inkstitch_remove_embroidery_settings.inx:152
 msgid "Remove specific or all embroidery settings from the document"
-msgstr ""
+msgstr "Eliminar configuraciones de bordado específicas o todas del documento"
 
 #: inx/inkstitch_reorder.inx:3
 msgid "Re-stack objects in order of selection"
@@ -7899,15 +7899,15 @@ msgstr "Re-apilar objetos en orden de selección"
 
 #: inx/inkstitch_satin_multicolor.inx:3
 msgid "Multicolor Satin"
-msgstr ""
+msgstr "Satín Multicolor"
 
 #: inx/inkstitch_satin_multicolor.inx:9
 msgid "Generates a multicolor satin"
-msgstr ""
+msgstr "Genera un satín multicolor"
 
 #: inx/inkstitch_satin_to_stroke.inx:3
 msgid "Satin to Stroke"
-msgstr ""
+msgstr "Satín a trazo"
 
 #: inx/inkstitch_satin_to_stroke.inx:10
 msgid "Keep satin column"
@@ -7919,7 +7919,7 @@ msgstr "No elimine la columna de satín original."
 
 #: inx/inkstitch_satin_to_stroke.inx:13
 msgid "Converts a satin column into a running stitch."
-msgstr ""
+msgstr "Seleccionar opciones."
 
 #: inx/inkstitch_satin_to_stroke.inx:16
 msgid "https://inkstitch.org/docs/stroke-tools/#convert-satin-to-stroke"
@@ -7927,28 +7927,28 @@ msgstr ""
 
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
-msgstr ""
+msgstr "Seleccionar elementos de bordado"
 
 #: inx/inkstitch_select_elements.inx:8
 msgid "Select options"
-msgstr ""
+msgstr "Seleccionar opciones"
 
 #: inx/inkstitch_select_elements.inx:9
 msgid "Select Stitch Type"
-msgstr ""
+msgstr "Seleccionar tipo de puntada"
 
 #: inx/inkstitch_select_elements.inx:15
 msgid "Select only specific running stitches"
-msgstr ""
+msgstr "Seleccionar solo puntadas de corrido específicas"
 
 #: inx/inkstitch_select_elements.inx:16 inx/inkstitch_select_elements.inx:37
 #: inx/inkstitch_select_elements.inx:45 inx/inkstitch_select_elements.inx:65
 msgid "No restriction"
-msgstr ""
+msgstr "Sin restricción"
 
 #: inx/inkstitch_select_elements.inx:17
 msgid "Top Stitching (Redwork/Auto-Run)"
-msgstr ""
+msgstr "Costura superior (Redwork/Puntada corrida automática)"
 
 #: inx/inkstitch_select_elements.inx:18
 msgid "Underpath (Redwork/Auto-Run)"
@@ -8065,19 +8065,19 @@ msgstr "*Linux: Abre la línea de comandos y escribe ‘which python3’. Copia 
 
 #: inx/inkstitch_select_elements.inx:99
 msgid "* macOS: doesn't work, sorry"
-msgstr ""
+msgstr "*macOS: no funciona, lo siento"
 
 #: inx/inkstitch_select_elements.inx:101
 msgid "Python Path"
-msgstr ""
+msgstr "Ruta de Python"
 
 #: inx/inkstitch_selection_to_anchor_line.inx:3
 msgid "Selection to anchor line"
-msgstr ""
+msgstr "Seleccionar hacia línea de anclaje"
 
 #: inx/inkstitch_selection_to_anchor_line.inx:9
 msgid "Marks selected elements as anchor lines"
-msgstr ""
+msgstr "Marca los elementos seleccionados como líneas de anclaje"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
@@ -8085,7 +8085,7 @@ msgstr "Selección de patrón"
 
 #: inx/inkstitch_selection_to_guide_line.inx:9
 msgid "Marks selected elements as guide lines"
-msgstr ""
+msgstr "Marca los elementos seleccionados como líneas guía"
 
 #: inx/inkstitch_selection_to_pattern.inx:3
 msgid "Selection to pattern"
@@ -8093,15 +8093,15 @@ msgstr "Selección del patrón"
 
 #: inx/inkstitch_selection_to_pattern.inx:9
 msgid "Marks selected elements as patterns"
-msgstr ""
+msgstr "Marca los elementos seleccionados como patrones"
 
 #: inx/inkstitch_sew_stack_editor.inx:3
 msgid "Sew Stack (preview)..."
-msgstr ""
+msgstr "Apilar puntadas (vista previa)..."
 
 #: inx/inkstitch_simulator.inx:3
 msgid "Simulator"
-msgstr ""
+msgstr "Simulador"
 
 #: inx/inkstitch_stitch_plan_preview.inx:3
 msgid "Stitch Plan Preview"
@@ -8109,23 +8109,23 @@ msgstr "Vista previa del plan de Bordado"
 
 #: inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Render Mode"
-msgstr ""
+msgstr "Modo de renderizado"
 
 #: inx/inkstitch_stitch_plan_preview.inx:15
 msgid "Realistic modes will render to a raster image for performance reasons. Realistic Vector may cause Inkscape to slow down for complex designs."
-msgstr ""
+msgstr "Los modos realistas se renderizarán como una imagen rasterizada por motivos de rendimiento. El modo Realistic Vector puede hacer que Inkscape se vuelva más lento en diseños complejos."
 
 #: inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Realistic View"
-msgstr ""
+msgstr "Vista realista"
 
 #: inx/inkstitch_stitch_plan_preview.inx:18
 msgid "Realistic View (High Quality)"
-msgstr ""
+msgstr "Vista realista (alta calidad)"
 
 #: inx/inkstitch_stitch_plan_preview.inx:19
 msgid "Realistic Vector (slow)"
-msgstr ""
+msgstr "Vector realista (lento)"
 
 #: inx/inkstitch_stitch_plan_preview.inx:24
 msgid "Move stitch plan beside the canvas"
@@ -8137,35 +8137,35 @@ msgstr "Puntos de aguja"
 
 #: inx/inkstitch_stitch_plan_preview.inx:27
 msgid "Lock"
-msgstr ""
+msgstr "Bloquear"
 
 #: inx/inkstitch_stitch_plan_preview.inx:27
 msgid "Make stitch plan insensitive to mouse interactions"
-msgstr ""
+msgstr "Hacer que el plan de puntadas sea insensible a las interacciones del ratón"
 
 #: inx/inkstitch_stitch_plan_preview.inx:28
 msgid "Display command symbols"
-msgstr ""
+msgstr "Mostrar símbolos de comando"
 
 #: inx/inkstitch_stitch_plan_preview.inx:29
 msgid "Render jump stitches"
-msgstr ""
+msgstr "Renderizar puntadas de salto"
 
 #: inx/inkstitch_stitch_plan_preview.inx:33
 msgid "Add ignore layer command"
-msgstr ""
+msgstr "Agregar comando de ignorar capa"
 
 #: inx/inkstitch_stitch_plan_preview.inx:34
 msgid "Override last stitch plan"
-msgstr ""
+msgstr "Sobrescribir el último plan de puntadas"
 
 #: inx/inkstitch_stitch_plan_preview.inx:38
 msgid "Use this extension to render the stitch plan into the canvas."
-msgstr ""
+msgstr "Usa esta extensión para renderizar el plan de puntadas en el lienzo."
 
 #: inx/inkstitch_stitch_plan_preview.inx:40
 msgid "Please use the realistic vector output option with care. Designs with many stitches can slow down Inkscape significantly. Make sure that you save your design before using it."
-msgstr ""
+msgstr "Por favor, usa la opción de salida Vector realista con precaución. Los diseños con muchas puntadas pueden hacer que Inkscape se vuelva significativamente más lento. Asegúrate de guardar tu diseño antes de usarla."
 
 #: inx/inkstitch_stitch_plan_preview.inx:46
 msgid "https://inkstitch.org/docs/visualize/#stitch-plan-preview"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-25 01:49+0000\n"
-"PO-Revision-Date: 2025-08-25 01:49\n"
+"POT-Creation-Date: 2025-08-28 01:40+0000\n"
+"PO-Revision-Date: 2025-08-28 01:41\n"
 "Last-Translator: \n"
 "Language-Team: Serbian (Cyrillic)\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-25 01:49+0000\n"
+"POT-Creation-Date: 2025-08-28 01:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1134,126 +1134,126 @@ msgstr ""
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr ""
 
-#: lib/elements/element.py:274 lib/gui/preferences.py:59
+#: lib/elements/element.py:273 lib/gui/preferences.py:59
 #: lib/gui/preferences.py:128
 msgid "Minimum stitch length"
 msgstr ""
 
-#: lib/elements/element.py:275
+#: lib/elements/element.py:274
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
 msgstr ""
 
-#: lib/elements/element.py:285 lib/gui/preferences.py:41
+#: lib/elements/element.py:284 lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
 msgstr ""
 
-#: lib/elements/element.py:286
+#: lib/elements/element.py:285
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
 msgstr ""
 
-#: lib/elements/element.py:296
+#: lib/elements/element.py:295
 msgid "Allow lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:297
+#: lib/elements/element.py:296
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr ""
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:302
+#: lib/elements/element.py:301
 msgid "Both"
 msgstr ""
 
-#: lib/elements/element.py:302
+#: lib/elements/element.py:301
 msgid "Before"
 msgstr ""
 
-#: lib/elements/element.py:302
+#: lib/elements/element.py:301
 msgid "After"
 msgstr ""
 
-#: lib/elements/element.py:302
+#: lib/elements/element.py:301
 msgid "Neither"
 msgstr ""
 
-#: lib/elements/element.py:311
+#: lib/elements/element.py:310
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:312
+#: lib/elements/element.py:311
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr ""
 
-#: lib/elements/element.py:324
+#: lib/elements/element.py:323
 msgid "Tack stitch"
 msgstr ""
 
-#: lib/elements/element.py:325
+#: lib/elements/element.py:324
 msgid "Tack down stitch type"
 msgstr ""
 
-#: lib/elements/element.py:335 lib/elements/element.py:381
+#: lib/elements/element.py:334 lib/elements/element.py:380
 msgid "Custom path"
 msgstr ""
 
-#: lib/elements/element.py:336
+#: lib/elements/element.py:335
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr ""
 
-#: lib/elements/element.py:346 lib/elements/element.py:358
+#: lib/elements/element.py:345 lib/elements/element.py:357
 msgid "Scale tack stitch"
 msgstr ""
 
-#: lib/elements/element.py:347
+#: lib/elements/element.py:346
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr ""
 
-#: lib/elements/element.py:359
+#: lib/elements/element.py:358
 msgid "Scale tack stitch by this percentage."
 msgstr ""
 
-#: lib/elements/element.py:370
+#: lib/elements/element.py:369
 msgid "Lock stitch"
 msgstr ""
 
-#: lib/elements/element.py:371
+#: lib/elements/element.py:370
 msgid "Lock stitch type"
 msgstr ""
 
-#: lib/elements/element.py:382
+#: lib/elements/element.py:381
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr ""
 
-#: lib/elements/element.py:392 lib/elements/element.py:404
+#: lib/elements/element.py:391 lib/elements/element.py:403
 msgid "Scale lock stitch"
 msgstr ""
 
-#: lib/elements/element.py:393
+#: lib/elements/element.py:392
 msgid "Set length of lock stitches (mm)."
 msgstr ""
 
-#: lib/elements/element.py:405
+#: lib/elements/element.py:404
 msgid "Scale lock stitch by this percentage."
 msgstr ""
 
-#: lib/elements/element.py:417
+#: lib/elements/element.py:416
 msgid "Trim After"
 msgstr ""
 
-#: lib/elements/element.py:418
+#: lib/elements/element.py:417
 msgid "Add a TRIM command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:427
+#: lib/elements/element.py:426
 msgid "Stop After"
 msgstr ""
 
-#: lib/elements/element.py:428
+#: lib/elements/element.py:427
 msgid "Add a STOP command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:721
+#: lib/elements/element.py:720
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr ""
 

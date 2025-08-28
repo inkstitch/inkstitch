@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-25 01:49+0000\n"
-"PO-Revision-Date: 2025-08-27 01:42\n"
+"POT-Creation-Date: 2025-08-28 01:40+0000\n"
+"PO-Revision-Date: 2025-08-28 01:41\n"
 "Last-Translator: \n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-25 01:49+0000\n"
+"POT-Creation-Date: 2025-08-28 01:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,335 +30,337 @@ msgstr ""
 #. description of font in fonts/Brockscript
 #: inkstitch-fonts-metadata.py:2
 msgid "Brock Script is a decorative satin column manuscript font. It contains 118 glyphs, covering most western european languages needs. More decorative options are hidden in the µ glyph."
-msgstr ""
+msgstr "A Brock Script egy dekoratív szatén hasábos kézirat betűtípus. 118 karakterjelet tartalmaz, amely a legtöbb nyugat-európai nyelvi igényt lefedi. További díszítő lehetőségek találhatók a µ karakterjelben."
 
 #. description of font in fonts/Hebrew_font_large
 #: inkstitch-fonts-metadata.py:4
 msgid "Large size Hebrew satin font"
-msgstr ""
+msgstr "Nagyméretű Héber szaténöltéses font"
 
 #. description of font in fonts/Shojumaru
 #: inkstitch-fonts-metadata.py:6
 msgid "Shojumaru is a manga like satin font."
-msgstr ""
+msgstr "A Shojumaru egy mangához hasonló szatén betűtípus."
 
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:8
 msgid "Abécédaire AGS is a crossstitch font."
-msgstr ""
+msgstr "Az Abécédaire AGS egy keresztszemes betűtípus."
 
 #. description of font in fonts/abril
 #: inkstitch-fonts-metadata.py:10
 msgid "Abril En Fleur AGS is a monogram font."
-msgstr ""
+msgstr "Az \"Abril En Fleur\" AGS egy monogramos betűtípus."
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:12
 msgid "AGS Γαραμου Garamond contains all the letters of the latin and greek alphabets and cover most european languages."
-msgstr ""
+msgstr "Az AGS Garamond tartalmazza a latin és görög ábécé összes betűjét, és a legtöbb európai nyelvet lefedi."
 
 #. description of font in fonts/allegria20
 #: inkstitch-fonts-metadata.py:14
 msgid "Running stitch font"
-msgstr ""
+msgstr "Futó öltés betűtípus"
 
 #. description of font in fonts/allegria55
 #: inkstitch-fonts-metadata.py:16
 msgid "Satin font"
-msgstr ""
+msgstr "Szatén betűtípus"
 
 #. description of font in fonts/ambigue
 #: inkstitch-fonts-metadata.py:18
 msgid "Ambigüe is a mix of satin and bean stitch font with a subtle harmony of disorder. You may ignore the hidden black running stitches (they are the original letters) or use them to customize this font as you like."
-msgstr ""
+msgstr "Az Ambigüe a szatén és a babmintás betűtípusok keveréke, a rendezetlenség finom harmóniájával. Eltekinthetsz a rejtett fekete futóöltésektől (ezek az eredeti betűk), vagy felhasználhatod őket a betűtípus testreszabásához."
 
 #. description of font in fonts/amitaclo
 #: inkstitch-fonts-metadata.py:20
 msgid "Amitaclo is a script satin font. Every satin has zigzag underlay"
-msgstr ""
+msgstr "Az Amitaclo egy szatén betűtípus. Minden szaténnak cikkcakk alapja van"
 
 #. description of font in fonts/amitaclo_small
 #: inkstitch-fonts-metadata.py:22
 msgid "This font is an altered version of Amitaclo, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Ez a betűtípus az Amitaclo módosított változata, hogy nagyobb kicsinyítést tegyen lehetővé. Kötelező mind a vékony (60-as cérna), és vékony (60-as tű) használata."
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:24
 msgid "Apex Lake is a large ornate capital letters font. It contains only 38 glyphs : A-Z,0-9,! and ?."
-msgstr ""
+msgstr "Az Apex Lake egy nagy, díszes, nagybetűs betűtípus. Mindössze 38 karakterjelet tartalmaz: A-tól Z-ig, 0-tól 9-ig, ! és ?."
 
 #. description of font in fonts/apex_simple_AGS
 #: inkstitch-fonts-metadata.py:26
 msgid "Apex Simple AGS is a satin companion font for Apex Lake AGS."
-msgstr ""
+msgstr "Az Apex Simple AGS egy szatén színű kiegészítő betűtípus az Apex Lake AGS-hez."
 
 #. description of font in fonts/apex_simple_small_AGS
 #: inkstitch-fonts-metadata.py:28
 msgid "Apex Simple Small AGS is an altered version of Apex Simple AGS to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Az Apex Simple Small AGS az Apex Simple AGS módosított változata, amely nagyobb méretarányt tesz lehetővé. Kötelező mind a vékony (60-as cérna), mind a vékony (60-as tű) használata."
 
 #. description of font in fonts/auberge_marif
 #: inkstitch-fonts-metadata.py:30
 msgid "Auberge Marif is a script satin font. The glyphs cover most Western European languages."
-msgstr ""
+msgstr "Az Auberge Marif egy szatén kézírásos betűtípus. A karakterjelek a legtöbb nyugat-európai nyelvet lefedik."
 
 #. description of font in fonts/auberge_small
 #: inkstitch-fonts-metadata.py:32
 msgid "Auberge Small is an altered version of Auberge Marif to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Az Auberge Small az Auberge Marif módosított változata, amely nagyobb méretarányt tesz lehetővé. Kötelező mind a vékony 60-as mérertű cérna, mind a vékony 60-as méretű tű használata."
 
 #. description of font in fonts/aventurina
 #: inkstitch-fonts-metadata.py:34
 msgid "Aventurina is a script satin font. The glyphs cover most Western European languages."
-msgstr ""
+msgstr "Az Aventurina egy szatén betűtípus. A karakterjelek a legtöbb nyugat-európai nyelvet lefedik."
 
 #. description of font in fonts/barstitch_bold
 #: inkstitch-fonts-metadata.py:36
 msgid "Barstitch  Bold is a satin font."
-msgstr ""
+msgstr "A Barstitch Bold egy szatén betűtípus."
 
 #. description of font in fonts/barstitch_cloudy
 #: inkstitch-fonts-metadata.py:38
 msgid "This is a guided fill version of Barstitch fill. Each letter is used to clip a group of guided fills and  then  a bean stitch contour is stitched. "
-msgstr ""
+msgstr "Ez a Barstitch kitöltés irányított kitöltéses változata. Minden betű egy irányított kitöltéscsoport kivágására szolgál, majd egy baböltés kontúr kerül rávarrásra. "
 
 #. description of font in fonts/barstitch_mandala
 #: inkstitch-fonts-metadata.py:40
 msgid "A large Mandala font. Redwork versions of the four mandalas  used to design the font are stored in the $,<,>,^ glyphs"
-msgstr ""
+msgstr "Egy nagy mandala betűtípus. A betűtípus tervezéséhez használt négy mandala redwork változatai a $, <, >, ^ karakterekhez vannak rendelve."
 
 #. description of font in fonts/barstitch_regular
 #: inkstitch-fonts-metadata.py:42
 msgid "Barstitch regular is a satin font. "
-msgstr ""
+msgstr "A Barstitch Regular egy szatén betűtípus. "
 
 #. description of font in fonts/barstitch_textured
 #: inkstitch-fonts-metadata.py:44
 msgid "Barstitch textured is a highly textured font with the help of meander fills"
-msgstr ""
+msgstr "A Barstitch Textured egy erősen texturált betűtípus, amely meander kitöltésekkel ér el gazdag felületet."
 
 #. description of font in fonts/baumans_FI
 #: inkstitch-fonts-metadata.py:46
 msgid "Baumans FI is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "A Baumans FI egy szatén betűtípus. Minden szaténöltés cikcakkos alátöltéssel rendelkezik."
 
 #. description of font in fonts/baumans_FI_Small
 #: inkstitch-fonts-metadata.py:48
 msgid "Baumans FI Small is an altered version of Baumans FI, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "A Baumans FI Small a Baumans FI módosított változata, amely lehetővé teszi a betűtípus kisebb méretre történő nagyobb arányú lekicsinyítését. Használata esetén vékony cérna (60-as) és vékony tű (60-as) alkalmazása kötelező."
 
 #. description of font in fonts/bluenesia_satin
 #: inkstitch-fonts-metadata.py:50
 msgid "A Syafrizal a.k.a. Khurasan jawn. 3.5mm satin at 100%, splits at higher sizes."
-msgstr ""
+msgstr "A Syafrizal, más néven Khurasan jawn. 3.5 mm-es szaténöltés 100%-os méreten, nagyobb méreteknél szétválik."
 
 #. description of font in fonts/braille
 #: inkstitch-fonts-metadata.py:52
 msgid "Font for the visually impaired with Braille key combinations according to DT 2024 INSEI specifications for French 6 dots Braille. It is also possible to use Unicode Braille. In this case, it is convenient to use one of the web's Braille translators to create a text in Braille unicode.\n"
-msgstr ""
+msgstr "Betűtípus látássérültek számára, a DT 2024 INSEI előírásai szerinti francia 6 pontos Braille billentyűkombinációkkal. Unicode Braille használata is lehetséges. Ebben az esetben célszerű a weben elérhető egyik Braille-fordítóval elkészíteni a Braille Unicode szöveget."
 
 #. description of font in fonts/califragilistic
 #: inkstitch-fonts-metadata.py:54
 msgid "Califragilistic is a tricolor running stitch font that was constructed using mandalas"
-msgstr ""
+msgstr "A Califragilistic egy háromszínű futóöltéses betűtípus, amely mandalák felhasználásával készült"
 
 #. description of font in fonts/cats
 #: inkstitch-fonts-metadata.py:56
 msgid "Cats is a silly font that makes use of satin random parameters."
-msgstr ""
+msgstr "A Cats egy mókás betűtípus, amely véletlenszerű szatén paramétereket használ."
 
 #. description of font in fonts/cherryforinkstitch
 #: inkstitch-fonts-metadata.py:58
 msgid "Cherry for inkstitch is a decorative satin column font. It contains 74 glyphs."
-msgstr ""
+msgstr "A Cherry for Inkstitch egy dekoratív szaténoszlopos betűtípus. Összesen 74 karaktert tartalmaz."
 
 #. description of font in fonts/cherryforkaalleen
 #: inkstitch-fonts-metadata.py:60
 msgid "Cherry for Kaalleen is a large decorative font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "A Cherry for Kaalleen egy nagy, dekoratív betűtípus. Összesen 36 karaktert tartalmaz, beleértve a számokat és a 26 nagybetűt (A–Z)."
 
 #. description of font in fonts/chicken_little
 #: inkstitch-fonts-metadata.py:62
 #, python-format
 msgid "Chicken Little  is a  playful decorative display font with loads of personality. There is no common baseline, no common character size and no common slope of the letters. Beyond 110% some satin columns will split."
-msgstr ""
+msgstr "A Chicken Little egy játékos, dekoratív megjelenésű betűtípus, amely tele van egyéniséggel. Nincs közös alapvonal, nincs egységes karakterméret és nincs egységes dőlésszög a betűk között. 110% fölötti méretnél néhány szaténoszlop szétválhat."
 
 #. description of font in fonts/chicken_little_small
 #: inkstitch-fonts-metadata.py:64
 msgid "This font is an altered version  of Chicken Little KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Ez a betűtípus a Chicken Little KOR módosított változata, amely lehetővé teszi a kisebb méretre történő nagyobb arányú lekicsinyítést. Használata esetén vékony cérna (60-as) és vékony tű (60-as) alkalmazása kötelező."
 
 #. description of font in fonts/chicken_scratch
 #: inkstitch-fonts-metadata.py:66
 msgid "A handwritten font."
-msgstr ""
+msgstr "Kézzel írott betűtípus."
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:68
 msgid "Chopin Script is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "A Chopin Script egy szkriptes szatén betűtípus. Minden szaténöltés cikcakkos alátöltéssel rendelkezik."
 
 #. description of font in fonts/circular_3letters_monogram
 #: inkstitch-fonts-metadata.py:70
 msgid "Enter 3 letters to get a circular three letters monogram. You can add a frame, by adding one of the following :(){,[];.<>\n"
 "For instance enter {ABC.\n"
 "Please use exactly 3 letters, no less, no more, or you could get some unexpected result."
-msgstr ""
+msgstr "Írj be 3 betűt, hogy egy kör alakú, hárombetűs monogramot kapj. Keretet is hozzáadhatsz az alábbi karakterek egyikének használatával: (){,[];.<>\n\n"
+"Például: {ABC\n\n"
+"Kérjük, pontosan 3 betűt használj – se kevesebbet, se többet –, különben váratlan eredményeket kaphatsz."
 
 #. description of font in fonts/cogs_KOR
 #: inkstitch-fonts-metadata.py:72
 msgid "Cogs KOR is a Steampunk  satin font."
-msgstr ""
+msgstr "A Cogs KOR egy steampunk stílusú szatén betűtípus."
 
 #. description of font in fonts/colorful
 #: inkstitch-fonts-metadata.py:74
 msgid "Colorful is a tartan fill font."
-msgstr ""
+msgstr "A Colorful egy skót kockás (tartan kitöltésű) betűtípus."
 
 #. description of font in fonts/computer
 #: inkstitch-fonts-metadata.py:76
 msgid "satin font"
-msgstr ""
+msgstr "szatén betűtípus"
 
 #. description of font in fonts/computer_small
 #: inkstitch-fonts-metadata.py:78
 msgid "Small satin font: the use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Kis méretű szatén betűtípus: használata esetén 60-as vékony cérna és 60-as vékony tű alkalmazása kötelező."
 
 #. description of font in fonts/cooper_marif
 #: inkstitch-fonts-metadata.py:80
 msgid "CooperMarif is a large and airy font."
-msgstr ""
+msgstr "A CooperMarif egy nagy méretű és szellős betűtípus."
 
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:82
 msgid "Coronaviral font is created with manual sitch. Do not change the size or very little."
-msgstr ""
+msgstr "A Coronaviral betűtípus kézi öltéssel készült. A méretét ne változtasd meg, vagy csak minimálisan."
 
 #. description of font in fonts/cyrillic
 #: inkstitch-fonts-metadata.py:84
 msgid "Cyrillic satin font."
-msgstr ""
+msgstr "Cirill szatén betűtípus."
 
 #. description of font in fonts/decadent_flowers_monogram
 #: inkstitch-fonts-metadata.py:86
 msgid "Each Decadent Flowers Monogram lettter  is composed of an optional knockdown fill (for high pile fabric embroidery)  and redwork flowers  with a negative space letter monogram"
-msgstr ""
+msgstr "Minden Decadent Flowers Monogram betű opcionális alapkitöltésből áll (magas szálú anyagokra való hímzéshez), valamint redwork virágokból, amelyek negatív térként jelenítik meg a monogram betűjét."
 
 #. description of font in fonts/dejavufont
 #: inkstitch-fonts-metadata.py:88
 msgid "DejaVu Serif Condensed is a satin font. Every satin has center-walk underlay."
-msgstr ""
+msgstr "A DejaVu Serif Condensed egy szatén betűtípus. Minden szaténöltés középvonalas alátöltéssel rendelkezik."
 
 #. description of font in fonts/digory_doodles_bean
 #: inkstitch-fonts-metadata.py:90
 msgid "All letters of Digory Doodles Bean mix satin and bean stitch."
-msgstr ""
+msgstr "A Digory Doodles Bean betűtípus minden betűje szatén- és baböltés kombinációjából áll."
 
 #. description of font in fonts/dinomouse72
 #: inkstitch-fonts-metadata.py:92
 msgid "A Font Grove jawn. Satin width is 2.5mm at 18mm capitals"
-msgstr ""
+msgstr "A Font Grove jawn. A szaténöltés szélessége 2.5 mm a 18 mm magas nagybetűknél"
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:94
 msgid "Emilio 20 contains only capitals and numbers. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Az Emilio 20 csak nagybetűket és számokat tartalmaz. Minden szaténöltés cikcakkos alátöltéssel rendelkezik."
 
 #. description of font in fonts/emilio_20_applique
 #: inkstitch-fonts-metadata.py:96
 msgid "Emilio 20 Applique is an Applique font. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique."
-msgstr ""
+msgstr "Az Emilio 20 Applique egy applikációs betűtípus. Ez a betűtípus az Emilio_20 módosított változata (szélesebb szaténoszlopokkal), míg az Emilio_20_Bold az Emilio_20_applique változata applikáció nélkül."
 
 #. description of font in fonts/emilio_20_bold
 #: inkstitch-fonts-metadata.py:98
 msgid "Emilio_20_Bold is an altered version of Emilio_20."
-msgstr ""
+msgstr "Az Emilio_20_Bold az Emilio_20 módosított változata."
 
 #. description of font in fonts/emilio_20_simple
 #: inkstitch-fonts-metadata.py:100
 msgid "Emilio is a font with capital only and numbers. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Az Emilio egy betűtípus, amely csak nagybetűket és számokat tartalmaz. Minden szaténöltés cikcakkos alátöltéssel rendelkezik."
 
 #. description of font in fonts/emilio_20_simple_small
 #: inkstitch-fonts-metadata.py:102
 msgid "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Ez a betűtípus az Emilio 20 Simple módosított változata, amely lehetővé teszi a kisebb méretre történő nagyobb arányú lekicsinyítést. Használata esetén vékony cérna (60-as) és vékony tű (60-as) alkalmazása kötelező."
 
 #. description of font in fonts/emilio_20_tartan
 #: inkstitch-fonts-metadata.py:104
 msgid "Emilio 20 Tartan uses tartan fill for a colorful font."
-msgstr ""
+msgstr "Az Emilio 20 Tartan skót kockás kitöltést használ, így egy színes megjelenésű betűtípus."
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:106
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Az Emilio 20 Tricolore egy nagy méretű, háromszínű kitöltőöltéseket és szaténoszlopokat tartalmazó betűtípus. Összesen 36 karaktert tartalmaz, beleértve a számokat és a 26 nagybetűt A–tól Z-ig."
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:108
 msgid "Espresso KOR is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Az Espresso KOR egy szatén betűtípus. Minden szaténöltés cikcakkos alátöltéssel rendelkezik."
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:110
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Ez a betűtípus az Espresso KOR módosított változata, amely lehetővé teszi a kisebb méretre történő nagyobb arányú lekicsinyítést. Használata esetén vékony 60-as cérna és vékony 60-as tű alkalmazása kötelező."
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:112
 msgid "Excalibur KOR is a small satin column manuscript font. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Az Excalibur KOR egy kis méretű szaténoszlopos kézírásos betűtípus. Összesen 144 karaktert tartalmaz, lefedve a legtöbb nyugat-európai nyelv igényeit."
 
 #. description of font in fonts/excalibur_small
 #: inkstitch-fonts-metadata.py:114
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Ez a betűtípus az Excalibur KOR módosított változata, amely lehetővé teszi a kisebb méretre történő nagyobb arányú lekicsinyítést. Használata esetén vékony cérna (60-as) és vékony tű (60-as) alkalmazása kötelező."
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:116
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font. It contains 40 glyphs including all numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "A Fold Ink/Stitch egy nagy méretű, hármas és ötös futóöltéseket használó nagybetűs betűtípus. Összesen 40 karaktert tartalmaz, beleértve az összes számjegyet és a 26 nagybetűt A–tól Z-ig."
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:118
 msgid "Geneva Simple Sans Rounded is a satin font."
-msgstr ""
+msgstr "A Geneva Simple Sans egy lekerekített szatén betűtípus."
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:120
 msgid "Geneva Simple Sans is a satin font."
-msgstr ""
+msgstr "A Geneva Simple Sans egy szatén betűtípus."
 
 #. description of font in fonts/gingo200
 #: inkstitch-fonts-metadata.py:122
 msgid "Gingo 200 is playful satin font with 158 glyphs."
-msgstr ""
+msgstr "A Gingo 200 egy játékos szatén betűtípus 158 karakterrel."
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:124
 msgid "Glacial is a very tiny font. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages."
-msgstr ""
+msgstr "A Glacial egy nagyon apró betűtípus. Használatához vékony cérna (60-as vastagság) és vékony tű (60) alkalmazása kötelező. A karakterkészlet számos európai nyelvet lefed."
 
 #. description of font in fonts/hebrew_font_medium
 #: inkstitch-fonts-metadata.py:126
 msgid "Medium size hebrew satin font"
-msgstr ""
+msgstr "Közepes méretű Héber szaténöltéses font"
 
 #. description of font in fonts/hebrew_simple_rounded
 #: inkstitch-fonts-metadata.py:128
 msgid "A simple rounded hebrew font"
-msgstr ""
+msgstr "Egy egyszerű, lekerekített héber betűtípus."
 
 #. description of font in fonts/hebrew_simple_rounded_small
 #: inkstitch-fonts-metadata.py:130
 msgid "A simple rounded hebrew font, small version to be embroidered with 60wt thread and 60 needle"
-msgstr ""
+msgstr "Egy egyszerű, lekerekített héber betűtípus kis méretű változata, amely 60-as vastagságú cérnával és 60-as tűvel hímezhető"
 
 #. description of font in fonts/honoka
 #: inkstitch-fonts-metadata.py:132
 msgid "コルの書きこも is a satin column japanese script font. It contains all hiragana, katakana and punctuation glyphs plus 80 kanjis."
-msgstr ""
+msgstr "A コルの書きこも egy szaténoszlopos japán írásstílusú betűtípus. Tartalmazza az összes hiragana, katakana és írásjel karaktert, valamint 80 kandzsit."
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:134
@@ -539,7 +541,7 @@ msgstr ""
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:204
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
-msgstr ""
+msgstr "A Sacramarif egy nagyon kisméretű futóöltéses betűtípus, amely a Sacramento betűtípuson alapul."
 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:206
@@ -1134,126 +1136,126 @@ msgstr ""
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr ""
 
-#: lib/elements/element.py:274 lib/gui/preferences.py:59
+#: lib/elements/element.py:273 lib/gui/preferences.py:59
 #: lib/gui/preferences.py:128
 msgid "Minimum stitch length"
 msgstr ""
 
-#: lib/elements/element.py:275
+#: lib/elements/element.py:274
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
 msgstr ""
 
-#: lib/elements/element.py:285 lib/gui/preferences.py:41
+#: lib/elements/element.py:284 lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
 msgstr ""
 
-#: lib/elements/element.py:286
+#: lib/elements/element.py:285
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
 msgstr ""
 
-#: lib/elements/element.py:296
+#: lib/elements/element.py:295
 msgid "Allow lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:297
+#: lib/elements/element.py:296
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr ""
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:302
+#: lib/elements/element.py:301
 msgid "Both"
 msgstr ""
 
-#: lib/elements/element.py:302
+#: lib/elements/element.py:301
 msgid "Before"
 msgstr ""
 
-#: lib/elements/element.py:302
+#: lib/elements/element.py:301
 msgid "After"
 msgstr ""
 
-#: lib/elements/element.py:302
+#: lib/elements/element.py:301
 msgid "Neither"
 msgstr ""
 
-#: lib/elements/element.py:311
+#: lib/elements/element.py:310
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:312
+#: lib/elements/element.py:311
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr ""
 
-#: lib/elements/element.py:324
+#: lib/elements/element.py:323
 msgid "Tack stitch"
 msgstr ""
 
-#: lib/elements/element.py:325
+#: lib/elements/element.py:324
 msgid "Tack down stitch type"
 msgstr ""
 
-#: lib/elements/element.py:335 lib/elements/element.py:381
+#: lib/elements/element.py:334 lib/elements/element.py:380
 msgid "Custom path"
 msgstr ""
 
-#: lib/elements/element.py:336
+#: lib/elements/element.py:335
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr ""
 
-#: lib/elements/element.py:346 lib/elements/element.py:358
+#: lib/elements/element.py:345 lib/elements/element.py:357
 msgid "Scale tack stitch"
 msgstr ""
 
-#: lib/elements/element.py:347
+#: lib/elements/element.py:346
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr ""
 
-#: lib/elements/element.py:359
+#: lib/elements/element.py:358
 msgid "Scale tack stitch by this percentage."
 msgstr ""
 
-#: lib/elements/element.py:370
+#: lib/elements/element.py:369
 msgid "Lock stitch"
 msgstr ""
 
-#: lib/elements/element.py:371
+#: lib/elements/element.py:370
 msgid "Lock stitch type"
 msgstr ""
 
-#: lib/elements/element.py:382
+#: lib/elements/element.py:381
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr ""
 
-#: lib/elements/element.py:392 lib/elements/element.py:404
+#: lib/elements/element.py:391 lib/elements/element.py:403
 msgid "Scale lock stitch"
 msgstr ""
 
-#: lib/elements/element.py:393
+#: lib/elements/element.py:392
 msgid "Set length of lock stitches (mm)."
 msgstr ""
 
-#: lib/elements/element.py:405
+#: lib/elements/element.py:404
 msgid "Scale lock stitch by this percentage."
 msgstr ""
 
-#: lib/elements/element.py:417
+#: lib/elements/element.py:416
 msgid "Trim After"
 msgstr ""
 
-#: lib/elements/element.py:418
+#: lib/elements/element.py:417
 msgid "Add a TRIM command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:427
+#: lib/elements/element.py:426
 msgid "Stop After"
 msgstr ""
 
-#: lib/elements/element.py:428
+#: lib/elements/element.py:427
 msgid "Add a STOP command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:721
+#: lib/elements/element.py:720
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr ""
 
