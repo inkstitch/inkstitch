@@ -467,6 +467,10 @@ class EmbroideryElement(object):
 
         return inkex.Path(d).to_superpath()
 
+    @property
+    def is_closed_path(self):
+        return isinstance(self.node.get_path()[-1], inkex.paths.ZoneClose)
+
     @cache
     def parse_path(self):
         return apply_transforms(self.path, self.node)
