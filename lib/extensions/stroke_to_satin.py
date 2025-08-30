@@ -9,7 +9,8 @@ import inkex
 from shapely import geometry as shgeo
 
 from ..elements import SatinColumn, Stroke
-from ..elements.utils.stroke_to_satin import convert_path_to_satin
+from ..elements.utils.stroke_to_satin import (convert_path_to_satin,
+                                              set_first_node)
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.styles import get_join_style_args
@@ -38,7 +39,11 @@ class StrokeToSatin(InkstitchExtension):
             style_args = get_join_style_args(element)
             path_style = self.path_style(element)
 
-            for path in element.paths:
+            paths = element.paths
+            if element.is_closed_path:
+                set_first_node(paths, element.stroke_width)
+
+            for path in paths:
                 satin_paths = convert_path_to_satin(path, element.stroke_width, style_args)
 
                 if satin_paths is not None:
