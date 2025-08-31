@@ -26,7 +26,7 @@ from ..utils import Point, cache, cut, cut_multiple, offset_points, prng
 from ..utils.param import ParamOption
 from ..utils.threading import check_stop_flag
 from .element import PIXELS_PER_MM, EmbroideryElement, param
-from .utils.stroke_to_satin import convert_path_to_satin
+from .utils.stroke_to_satin import convert_path_to_satin, set_first_node
 from .validation import ValidationError, ValidationWarning
 
 
@@ -625,6 +625,8 @@ class SatinColumn(EmbroideryElement):
         paths = [path for path in self.paths if len(path) > 1]
         if len(paths) == 1:
             style_args = get_join_style_args(self)
+            if self.is_closed_path:
+                set_first_node(paths, self.stroke_width)
             new_satin = convert_path_to_satin(paths[0], self.stroke_width, style_args, rungs_at_nodes=True)
             if new_satin:
                 rails, rungs = new_satin

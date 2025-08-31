@@ -3,18 +3,19 @@
 # Copyright (c) 2025 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from numpy import zeros, convolve, int32, diff, setdiff1d, sign
-from math import degrees, acos
-from ...svg import PIXELS_PER_MM
-
-from ...utils import Point
-from shapely import geometry as shgeo
-from inkex import errormsg
-from ...utils.geometry import remove_duplicate_points
-from shapely.ops import substring
-from shapely.affinity import scale
-from ...i18n import _
 import sys
+from math import acos, degrees
+
+from inkex import errormsg
+from numpy import convolve, diff, int32, setdiff1d, sign, zeros
+from shapely import geometry as shgeo
+from shapely.affinity import rotate, scale
+from shapely.ops import substring
+
+from ...i18n import _
+from ...svg import PIXELS_PER_MM
+from ...utils import Point, roll_linear_ring
+from ...utils.geometry import remove_duplicate_points
 
 
 class SelfIntersectionError(Exception):
@@ -305,3 +306,33 @@ def _merge(section, other_section):
     rungs.extend(other_rungs)
 
     return (rails, rungs)
+
+
+def set_first_node(paths, stroke_width):
+    """
+    Rolls the first path in paths to a starting node which has no intersections and is not within a sharp corner
+
+    paths is expected to be a list with only one closed path.
+    """
+    path = paths[0]
+
+    ring = shgeo.LinearRing(path)
+    buffered_ring = ring.buffer(stroke_width / 2).boundary
+
+    for point1, point2 in zip(path[:-1], path[1:]):
+        line = shgeo.LineString([point1, point2])
+        if line.length == 0:
+            continue
+
+        # create a rung at the center of the line
+        # we know that the line (and therefore it's center) is always straight
+        scale_factor = (stroke_width + 0.001) / line.length
+        rung = rotate(line, 90)
+        rung = scale(rung, xfact=scale_factor, yfact=scale_factor)
+
+        # when the rung intersects twice with the buffered ring, we assume a good starting point
+        intersection = rung.intersection(buffered_ring)
+        if isinstance(intersection, shgeo.MultiPoint) and len(intersection.geoms) == 2:
+            distance = ring.project(line.centroid)
+            paths[0] = list(roll_linear_ring(ring, distance).coords)
+            break
