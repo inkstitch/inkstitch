@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-28 01:40+0000\n"
-"PO-Revision-Date: 2025-08-28 01:41\n"
+"POT-Creation-Date: 2025-08-31 01:45+0000\n"
+"PO-Revision-Date: 2025-08-31 01:45\n"
 "Last-Translator: \n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-28 01:40+0000\n"
+"POT-Creation-Date: 2025-08-31 01:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -365,178 +365,179 @@ msgstr "A コルの書きこも egy szaténoszlopos japán írásstílusú betű
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:134
 msgid "InfiniPicto is a fun font containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "Az InfiniPicto egy vidám betűtípus, amely csak a 26 karaktert tartalmaz A–tól Z-ig. Minden betű egy olyan tárgy piktogramja, amelynek neve az adott betűvel kezdődik… franciául."
 
 #. description of font in fonts/inkstitch_masego
 #: inkstitch-fonts-metadata.py:136
 msgid "Masego is a display san-serif typeface."
-msgstr ""
+msgstr "A Masego egy kijelző stílusú talpatlan (sans-serif) betűtípus."
 
 #. description of font in fonts/invercelia
 #: inkstitch-fonts-metadata.py:138
 msgid "Invercelia is a modern two letters monogram font. Enter two letters to get a simple monogram.  Add an ')' at the end and the monogram is framed with a circle (for instance 'AC)'), add an '(' to start (for instance '(AC)' and your monogram is ready for applique, or  try something like '!AC)' to replace the appliqué by knockdown stitches.\n\n"
 "Please use exactly two letters,  if you use more, only the first and the last letters will be rendered."
-msgstr ""
+msgstr "Az Invercelia egy modern, kétbetűs monogramos betűtípus. Írj be két betűt egy egyszerű monogram létrehozásához. Adj hozzá egy zárójelet ) a végére – például „AC)” –, és a monogram kör alakú keretbe kerül. Ha nyitójelet adsz az elejére – például „(AC)” –, a monogram applikációhoz lesz előkészítve. Próbáld ki például „!AC)” formában is, hogy az applikáció helyett alapkitöltést (knockdown stitches) kapj.\n\n"
+"Kérjük, pontosan két betűt használj – ha többet adsz meg, csak az első és az utolsó betű kerül megjelenítésre."
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:140
 msgid "Kaushan Script MAM is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "A Kaushan Script MAM egy szkriptes szatén betűtípus. Minden szaténöltés cikcakkos alátöltéssel rendelkezik."
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:142
 msgid "Learning curve is a small running stitch script font."
-msgstr ""
+msgstr "A Learning Curve egy kisméretű, futóöltéses, szkriptes betűtípus."
 
 #. description of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:144
 msgid " Lobster AGS is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "A Lobster AGS egy szkriptes szatén betűtípus. Minden szaténöltés cikcakkos alátöltéssel rendelkezik."
 
 #. description of font in fonts/magnolia_KOR
 #: inkstitch-fonts-metadata.py:146
 msgid "Magnolia KOR is a script satin font."
-msgstr ""
+msgstr "A Magnolia KOR egy folyóírásos szatén betűtípus."
 
 #. description of font in fonts/magnolia_bicolor
 #: inkstitch-fonts-metadata.py:148
 msgid "Magnolia bicolor is a  larger  bicolor variation of Magnolia font."
-msgstr ""
+msgstr "A Magnolia Bicolor a Magnolia betűtípus nagyobb, kétszínű változata."
 
 #. description of font in fonts/magnolia_small
 #: inkstitch-fonts-metadata.py:150
 msgid "Magnolia Small is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "A Magnolia Small a Magnolia KOR módosított változata, amely lehetővé teszi a kisebb méretre történő nagyobb arányú lekicsinyítést. Használata esetén vékony cérna (60-as) és vékony tű (60-as) alkalmazása kötelező."
 
 #. description of font in fonts/magnolia_tamed
 #: inkstitch-fonts-metadata.py:152
 msgid "This is a less wild bicolor variation of Magnolia font"
-msgstr ""
+msgstr "Ez a Magnolia betűtípus kevésbé játékos, kétszínű változata."
 
 #. description of font in fonts/malika
 #: inkstitch-fonts-metadata.py:154
 msgid "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch."
-msgstr ""
+msgstr "A Malika egy arab szatén betűtípus. A nem kötelező ékezetes jeleket nem szabad közvetlenül a szövegbe írni, hanem külön kell begépelni őket, majd kézzel a megfelelő helyre igazítani. A háromféle zárójelpár díszítőelemeket tartalmaz, ha extra díszítéssel szeretnéd ellátni a szöveget."
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:156
 msgid "Manuskript Gothisch is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "A Manuskript Gothisch egy szatén betűtípus. Minden szaténöltés cikcakkos alátöltéssel rendelkezik."
 
 #. description of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:158
 msgid "MarcellusSC-FI is a small capital satin font. It contains 107 glyphs covering most Western European languages."
-msgstr ""
+msgstr "A MarcellusSC-FI egy kiskapitális szatén betűtípus. Összesen 107 karaktert tartalmaz, lefedve a legtöbb nyugat-európai nyelvet."
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:160
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
-msgstr ""
+msgstr "Az Ink/Stitch Medium Font egy alap szatén betűtípus, amely közepes méretű karakterekhez készült. Minden szaténöltés kontúros alátöltéssel rendelkezik."
 
 #. description of font in fonts/milli_marif_bold
 #: inkstitch-fonts-metadata.py:162
 msgid "Millimarif-bold20 is a  bold satin font."
-msgstr ""
+msgstr "A Millimarif-bold20 egy kövérített szatén betűtípus."
 
 #. description of font in fonts/mimosa_large
 #: inkstitch-fonts-metadata.py:164
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
-msgstr ""
+msgstr "A Mimosa Large egy pöttyös hatású szatén betűtípus."
 
 #. description of font in fonts/mimosa_medium
 #: inkstitch-fonts-metadata.py:166
 msgid "Mimosa Medium is a satin font that looks dotty."
-msgstr ""
+msgstr "A Mimosa Medium egy pöttyös hatású szatén betűtípus."
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:168
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
-msgstr ""
+msgstr "A Monicha egy folyóírás stílusú szatén betűtípus. A legtöbb nyugat-európai nyelvet lefedő karaktereken felül tartalmaz díszes ornamentikus változatokat is. Ezeket a díszített betűket óvatosan kell használni, hogy elkerüld az átfedéseket – különösen kerüld két díszes betű egymás utáni használatát. A díszes betűk eléréséről a dokumentáció nyújt bővebb tájékoztatást."
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:170
 msgid "Namskout AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "A Namskout AGS egy nagy méretű applikációs betűtípus. Összesen 43 karaktert tartalmaz, beleértve az összes számjegyet és a 26 nagybetűt A–tól Z-ig."
 
 #. description of font in fonts/namskout_relief
 #: inkstitch-fonts-metadata.py:172
 msgid "Namskout relief is an altered version of Namskout AGS for embossed letters."
-msgstr ""
+msgstr "A Namskout Relief a Namskout AGS módosított változata, dombornyomott betűk kialakításához."
 
 #. description of font in fonts/namskout_tartan
 #: inkstitch-fonts-metadata.py:174
 msgid "Namskout Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals."
-msgstr ""
+msgstr "A Namskout Tartan egy skót kockás tartan kitöltésű betűtípus. Összesen 43 karaktert tartalmaz, beleértve az összes számot és a 26 nagybetűt."
 
 #. description of font in fonts/neon
 #: inkstitch-fonts-metadata.py:176
 msgid "Satin font. Each letter or accent is a single satin."
-msgstr ""
+msgstr "Szatén betűtípus. Minden betű vagy ékezet egyetlen szaténöltésből áll."
 
 #. description of font in fonts/neon_blinking
 #: inkstitch-fonts-metadata.py:178
 msgid "Bean stitch font."
-msgstr ""
+msgstr "Baböltéses betűtípus."
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:180
 msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
-msgstr ""
+msgstr "A NickAinley egy apró baböltéses abc, amely a 24 pontos Seniors Studio jawn alapján készült."
 
 #. description of font in fonts/ondulamarif_Medium
 #: inkstitch-fonts-metadata.py:182
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
-msgstr ""
+msgstr "Az Ondulamarif M az Ondulamarif XL módosított változata. A betűtípus hímzési paramétereinek módosítása lehetővé teszi kisebb méretű betűk használatát."
 
 #. description of font in fonts/ondulamarif_S
 #: inkstitch-fonts-metadata.py:184
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
-msgstr ""
+msgstr "Az Ondulamarif S az Ondulamarif XL módosított változata, amely lehetővé teszi a kisebb méretre történő nagyobb arányú lekicsinyítést."
 
 #. description of font in fonts/ondulamarif_XL
 #: inkstitch-fonts-metadata.py:186
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
-msgstr ""
+msgstr "Az Ondulamarif XL egy hullámöltéses betűtípus. Használd minél nagyobb méretben, de ne csökkentsd a méretét."
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:188
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr ""
+msgstr "A Pacificlo egy kis méretű, szaténoszlopos kézírásos betűtípus. Összesen 120 karaktert tartalmaz, lefedve a legtöbb nyugat-európai nyelv igényeit."
 
 #. description of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:190
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "A Pacificlo Tiny a Pacificlo módosított változata, amely lehetővé teszi a kisebb méretre történő nagyobb arányú lekicsinyítést. Használata esetén vékony cérna (60-as) és vékony tű (60-as) alkalmazása kötelező."
 
 #. description of font in fonts/perspective_tricolore_KOR
 #: inkstitch-fonts-metadata.py:192
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
-msgstr ""
+msgstr "A Perspective Tricolore KOR egy árnyékolt, háromszínű betűtípus, amely csak nagybetűket, számokat és írásjeleket tartalmaz."
 
 #. description of font in fonts/pixel10
 #: inkstitch-fonts-metadata.py:194
 msgid "Pixel 10 is a satin pixel font."
-msgstr ""
+msgstr "A Pixel 10 egy szatén pixeles betűtípus."
 
 #. description of font in fonts/roaring_twenties_KOR
 #: inkstitch-fonts-metadata.py:196
 msgid "Roaring Twenties KOR is a mix of satin and bean stitches."
-msgstr ""
+msgstr "A Roaring Twenties KOR szatén- és baböltések kombinációjából álló betűtípus."
 
 #. description of font in fonts/roaring_twenties_KOR_small
 #: inkstitch-fonts-metadata.py:198
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "A Roaring Twenties KOR Small a Roaring Twenties KOR módosított változata, amely lehetővé teszi a kisebb méretre történő nagyobb arányú lekicsinyítést. Használata esetén vékony cérna (60-as) és vékony tű (60-as) alkalmazása kötelező."
 
 #. description of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:200
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
-msgstr ""
+msgstr "A Roman AGS a Latin Modern Roman 10 Bold Italic betűtípuson alapul. Minden szaténöltés cikcakkos alátöltéssel rendelkezik."
 
 #. description of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:202
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
-msgstr ""
+msgstr "A Roman Bicolor AGS a Roman AGS módosított változata. A nagybetűk kétszínűek."
 
 #. description of font in fonts/sacramarif
 #: inkstitch-fonts-metadata.py:204
@@ -546,54 +547,56 @@ msgstr "A Sacramarif egy nagyon kisméretű futóöltéses betűtípus, amely a 
 #. description of font in fonts/small_font
 #: inkstitch-fonts-metadata.py:206
 msgid "Ink/Stitch Small Font is suited for small characters."
-msgstr ""
+msgstr "Az Ink/Stitch Small Font kis méretű karakterekhez készült betűtípus."
 
 #. description of font in fonts/sortefaxXL
 #: inkstitch-fonts-metadata.py:208
 #, python-brace-format
 msgid " Sortefax XL Initials is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
-msgstr ""
+msgstr "A Sortefax XL Initials egy nagyon nagy méretű, szaténöltéses nagybetűs betűtípus. Összesen 37 karaktert tartalmaz: az & jelet, az A–Z nagybetűket és a 0–9 számjegyeket. Emellett tíz karakter — (){}[],;.: — keretként szolgál. Írj be egy betűt vagy számot, majd egy keretjelet (például: A( vagy B;), hogy egy bekeretezett nagybetűt vagy számot kapj.\n\n"
+"Figyelem: néhány nagyobb betű esetén a keretet kézzel kell nagyobbra állítani."
 
 #. description of font in fonts/sortefax_medium
 #: inkstitch-fonts-metadata.py:210
 #, python-brace-format
 msgid "Sortefax  Medium Initials is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
-msgstr ""
+msgstr "A Sortefax Medium Initials egy szaténöltéses nagybetűs betűtípus. Összesen 37 karaktert tartalmaz: az & jelet, az A–Z nagybetűket és a 0–9 számjegyeket. Emellett tíz karakter — (){}[],;.: — keretként szolgál. Írj be egy betűt vagy számot, majd egy keretjelet (például: A(, B; vagy 7,), hogy egy bekeretezett nagybetűt vagy számot kapj.\n\n"
+"Előfordulhat, hogy a keretet kézzel kell a betű köré igazítani."
 
 #. description of font in fonts/sunset
 #: inkstitch-fonts-metadata.py:212
 msgid "3 colors satin column font"
-msgstr ""
+msgstr "Háromszínű szaténoszlopos betűtípus."
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:214
 msgid "TT  Directors is a satin font suited for directing."
-msgstr ""
+msgstr "A TT Directors egy szatén betűtípus, amely rendezési (irányító) célokra készült."
 
 #. description of font in fonts/tt_masters
 #: inkstitch-fonts-metadata.py:216
 msgid "TT Masters is a satin font suited for heavy typing :)"
-msgstr ""
+msgstr "A TT Masters egy szatén betűtípus, amely intenzív gépeléshez készült :)"
 
 #. description of font in fonts/venezia
 #: inkstitch-fonts-metadata.py:218
 msgid "A serif satin font"
-msgstr ""
+msgstr "Talpas szatén betűtípus."
 
 #. description of font in fonts/venezia_small
 #: inkstitch-fonts-metadata.py:220
 msgid "Venezia small is an altered version of Venezia to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "A Venezia Small a Venezia módosított változata, amely lehetővé teszi a kisebb méretre történő nagyobb arányú lekicsinyítést. Használata esetén vékony cérna (60-as) és vékony tű (60-as) alkalmazása kötelező."
 
 #. description of font in fonts/violin_serif
 #: inkstitch-fonts-metadata.py:222
 msgid "Violin Serif is a condensed serif satin font."
-msgstr ""
+msgstr "A Violin Serif egy keskeny talpas szatén betűtípus."
 
 #. description of font in fonts/western_light
 #: inkstitch-fonts-metadata.py:224
 msgid "Western light is a light fill western style font."
-msgstr ""
+msgstr "A Western Light egy vékony kitöltésű, western stílusú betűtípus."
 
 #. name of tile in tiles/N3-11a
 #: inkstitch-tiles-metadata.py:2
@@ -873,32 +876,32 @@ msgstr ""
 #. name of tile in tiles/P3-1
 #: inkstitch-tiles-metadata.py:112
 msgid "P3-1"
-msgstr ""
+msgstr "P3-1"
 
 #. name of tile in tiles/P3-12
 #: inkstitch-tiles-metadata.py:114
 msgid "P3-12"
-msgstr ""
+msgstr "P3-12"
 
 #. name of tile in tiles/P4-1
 #: inkstitch-tiles-metadata.py:116
 msgid "P4-1"
-msgstr ""
+msgstr "P4-1"
 
 #. name of tile in tiles/P4-10
 #: inkstitch-tiles-metadata.py:118
 msgid "P4-10"
-msgstr ""
+msgstr "P4-10"
 
 #. name of tile in tiles/P4-15
 #: inkstitch-tiles-metadata.py:120
 msgid "P4-15"
-msgstr ""
+msgstr "P4-15"
 
 #. name of tile in tiles/P4-19
 #: inkstitch-tiles-metadata.py:122
 msgid "P4-19"
-msgstr ""
+msgstr "P4-19"
 
 #. name of tile in tiles/P4-23
 #: inkstitch-tiles-metadata.py:124
@@ -2294,12 +2297,12 @@ msgstr ""
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr ""
 
-#: lib/elements/stroke.py:44 lib/extensions/params.py:612
+#: lib/elements/stroke.py:44 lib/extensions/params.py:643
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr ""
 
-#: lib/elements/stroke.py:47 lib/extensions/params.py:285
+#: lib/elements/stroke.py:47 lib/extensions/params.py:310
 msgid "Running stitch along paths"
 msgstr ""
 
@@ -3060,55 +3063,55 @@ msgstr ""
 msgid "Thread Palette"
 msgstr ""
 
-#: lib/extensions/params.py:297
+#: lib/extensions/params.py:328
 msgid "These settings will be applied to 1 object."
 msgstr ""
 
-#: lib/extensions/params.py:300
+#: lib/extensions/params.py:331
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr ""
 
-#: lib/extensions/params.py:304
+#: lib/extensions/params.py:335
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr ""
 
-#: lib/extensions/params.py:309
+#: lib/extensions/params.py:340
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr ""
 
-#: lib/extensions/params.py:313
+#: lib/extensions/params.py:344
 msgid "Disabling this tab will disable the following tab."
 msgstr ""
 
-#: lib/extensions/params.py:317
+#: lib/extensions/params.py:348
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr ""
 
-#: lib/extensions/params.py:397
+#: lib/extensions/params.py:428
 msgid "Inkscape objects"
 msgstr ""
 
-#: lib/extensions/params.py:458
+#: lib/extensions/params.py:489
 msgid "No options available"
 msgstr ""
 
-#: lib/extensions/params.py:478
+#: lib/extensions/params.py:509
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:29
 msgid "Re-roll"
 msgstr ""
 
-#: lib/extensions/params.py:507
+#: lib/extensions/params.py:538
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:517
+#: lib/extensions/params.py:548
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:544 lib/extensions/sew_stack_editor.py:118
+#: lib/extensions/params.py:575 lib/extensions/sew_stack_editor.py:118
 #: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:57
 #: lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:54
@@ -3120,16 +3123,16 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: lib/extensions/params.py:549
+#: lib/extensions/params.py:580
 msgid "Use Last Settings"
 msgstr ""
 
-#: lib/extensions/params.py:552 lib/extensions/sew_stack_editor.py:122
+#: lib/extensions/params.py:583 lib/extensions/sew_stack_editor.py:122
 #: lib/gui/lettering/main_panel.py:55
 msgid "Apply and Quit"
 msgstr ""
 
-#: lib/extensions/params.py:849 lib/extensions/sew_stack_editor.py:552
+#: lib/extensions/params.py:879 lib/extensions/sew_stack_editor.py:552
 msgid "Embroidery Params"
 msgstr ""
 
@@ -3898,22 +3901,37 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: lib/gui/presets.py:117
+#: lib/gui/presets.py:120
 msgid "Please enter or select a preset name first."
 msgstr ""
 
-#: lib/gui/presets.py:117 lib/gui/presets.py:123 lib/gui/presets.py:139
+#: lib/gui/presets.py:120 lib/gui/presets.py:126 lib/gui/presets.py:142
 msgid "Preset"
 msgstr ""
 
-#: lib/gui/presets.py:123
+#: lib/gui/presets.py:126
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr ""
 
-#: lib/gui/presets.py:139
+#: lib/gui/presets.py:142
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
+msgstr ""
+
+#: lib/gui/presets.py:148
+#, python-format
+msgid "Preset \"%s\" updated."
+msgstr ""
+
+#: lib/gui/presets.py:150
+#, python-format
+msgid "Preset \"%s\" added."
+msgstr ""
+
+#: lib/gui/presets.py:189
+#, python-format
+msgid "Preset \"%s\" deleted."
 msgstr ""
 
 #: lib/gui/request_update_svg_version.py:29

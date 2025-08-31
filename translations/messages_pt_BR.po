@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-28 01:40+0000\n"
-"PO-Revision-Date: 2025-08-28 01:41\n"
+"POT-Creation-Date: 2025-08-31 01:45+0000\n"
+"PO-Revision-Date: 2025-08-31 01:46\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-28 01:40+0000\n"
+"POT-Creation-Date: 2025-08-31 01:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2292,12 +2292,12 @@ msgstr ""
 msgid "* Use as satin column: add an other rail and optionally rungs."
 msgstr ""
 
-#: lib/elements/stroke.py:44 lib/extensions/params.py:612
+#: lib/elements/stroke.py:44 lib/extensions/params.py:643
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr ""
 
-#: lib/elements/stroke.py:47 lib/extensions/params.py:285
+#: lib/elements/stroke.py:47 lib/extensions/params.py:310
 msgid "Running stitch along paths"
 msgstr ""
 
@@ -3061,55 +3061,55 @@ msgstr ""
 msgid "Thread Palette"
 msgstr ""
 
-#: lib/extensions/params.py:297
+#: lib/extensions/params.py:328
 msgid "These settings will be applied to 1 object."
 msgstr ""
 
-#: lib/extensions/params.py:300
+#: lib/extensions/params.py:331
 #, python-format
 msgid "These settings will be applied to %d objects."
 msgstr ""
 
-#: lib/extensions/params.py:304
+#: lib/extensions/params.py:335
 msgid "Some settings had different values across objects.  Select a value from the dropdown or enter a new one."
 msgstr ""
 
-#: lib/extensions/params.py:309
+#: lib/extensions/params.py:340
 #, python-format
 msgid "Disabling this tab will disable the following %d tabs."
 msgstr "Desabilitar esta aba vai desabilitar as seguintes abas: %d."
 
-#: lib/extensions/params.py:313
+#: lib/extensions/params.py:344
 msgid "Disabling this tab will disable the following tab."
 msgstr "Desabilitar esta aba vai desabilitar a aba seguinte."
 
-#: lib/extensions/params.py:317
+#: lib/extensions/params.py:348
 #, python-format
 msgid "Enabling this tab will disable %s and vice-versa."
 msgstr "Habilitar esta aba vai desabilitar %s e vice-versa."
 
-#: lib/extensions/params.py:397
+#: lib/extensions/params.py:428
 msgid "Inkscape objects"
 msgstr "Objetos Inkscape"
 
-#: lib/extensions/params.py:458
+#: lib/extensions/params.py:489
 msgid "No options available"
 msgstr "Nenhuma opção disponível"
 
-#: lib/extensions/params.py:478
+#: lib/extensions/params.py:509
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:29
 msgid "Re-roll"
 msgstr ""
 
-#: lib/extensions/params.py:507
+#: lib/extensions/params.py:538
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:517
+#: lib/extensions/params.py:548
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
-#: lib/extensions/params.py:544 lib/extensions/sew_stack_editor.py:118
+#: lib/extensions/params.py:575 lib/extensions/sew_stack_editor.py:118
 #: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:57
 #: lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:54
@@ -3121,16 +3121,16 @@ msgstr ""
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: lib/extensions/params.py:549
+#: lib/extensions/params.py:580
 msgid "Use Last Settings"
 msgstr "Usar últimos parâmetros"
 
-#: lib/extensions/params.py:552 lib/extensions/sew_stack_editor.py:122
+#: lib/extensions/params.py:583 lib/extensions/sew_stack_editor.py:122
 #: lib/gui/lettering/main_panel.py:55
 msgid "Apply and Quit"
 msgstr "Aplicar e Sair"
 
-#: lib/extensions/params.py:849 lib/extensions/sew_stack_editor.py:552
+#: lib/extensions/params.py:879 lib/extensions/sew_stack_editor.py:552
 msgid "Embroidery Params"
 msgstr "Parâmetros de Bordado"
 
@@ -3899,22 +3899,37 @@ msgstr "Sobrescrever"
 msgid "Delete"
 msgstr "Deletar"
 
-#: lib/gui/presets.py:117
+#: lib/gui/presets.py:120
 msgid "Please enter or select a preset name first."
 msgstr ""
 
-#: lib/gui/presets.py:117 lib/gui/presets.py:123 lib/gui/presets.py:139
+#: lib/gui/presets.py:120 lib/gui/presets.py:126 lib/gui/presets.py:142
 msgid "Preset"
 msgstr ""
 
-#: lib/gui/presets.py:123
+#: lib/gui/presets.py:126
 #, python-format
 msgid "Preset \"%s\" not found."
 msgstr ""
 
-#: lib/gui/presets.py:139
+#: lib/gui/presets.py:142
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
+msgstr ""
+
+#: lib/gui/presets.py:148
+#, python-format
+msgid "Preset \"%s\" updated."
+msgstr ""
+
+#: lib/gui/presets.py:150
+#, python-format
+msgid "Preset \"%s\" added."
+msgstr ""
+
+#: lib/gui/presets.py:189
+#, python-format
+msgid "Preset \"%s\" deleted."
 msgstr ""
 
 #: lib/gui/request_update_svg_version.py:29
