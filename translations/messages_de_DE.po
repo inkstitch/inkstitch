@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-31 01:45+0000\n"
-"PO-Revision-Date: 2025-08-31 01:45\n"
+"POT-Creation-Date: 2025-09-01 01:55+0000\n"
+"PO-Revision-Date: 2025-09-01 01:55\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-31 01:45+0000\n"
+"POT-Creation-Date: 2025-09-01 01:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1258,7 +1258,7 @@ msgstr "Stopp"
 msgid "Add a STOP command after stitching this object."
 msgstr "Füge einen Stopp-Befehl nach diesem Objekt hinzu."
 
-#: lib/elements/element.py:720
+#: lib/elements/element.py:724
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Bitte rufe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten auf. Diese Erweiterung zeigt fehlerhafte Stellen an und gibt am rechten Seitenrand Vorschläge zum Lösen des Problems."
 
@@ -2539,7 +2539,7 @@ msgstr "* Text: Erstelle eigene Buchstaben oder probiere das Textwerkzeug aus:"
 msgid "- Extensions > Ink/Stitch > Lettering"
 msgstr "- Erweiterungen> Ink/Stitch > Text"
 
-#: lib/elements/utils/stroke_to_satin.py:96
+#: lib/elements/utils/stroke_to_satin.py:97
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr "Ink/Stitch kann die Linie nicht in eine Satinsäule umwandeln. Bitte diesen Pfad in Abschnitte zerlegen und erneut versuchen."
 
@@ -3271,13 +3271,13 @@ msgstr "Konnte das gewählte Muster nicht finden."
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr "Eine Satinsäule kann nicht in einen Pfadeffekt-Satinstich umgewandelt werden. Bitte eine Linie auswählen."
 
-#: lib/extensions/stroke_to_satin.py:27
+#: lib/extensions/stroke_to_satin.py:28
 msgid "Please select at least one line to convert to a satin column."
 msgstr "Bitte wähle mindestens eine Zeile aus, die in eine Satinsäule konvertiert werden soll."
 
 #. : Convert To Satin extension, user selected only objects that were not
 #. lines.
-#: lib/extensions/stroke_to_satin.py:59
+#: lib/extensions/stroke_to_satin.py:64
 msgid "Only simple lines may be converted to satin columns."
 msgstr "Nur einfache Linien können in Satinsäulen konvertiert werden."
 
@@ -3940,17 +3940,17 @@ msgstr "Einstellung \"%s\" bereits vorhanden. Bitte verwenden Sie einen anderen 
 #: lib/gui/presets.py:148
 #, python-format
 msgid "Preset \"%s\" updated."
-msgstr ""
+msgstr "Voreinstellung \"%s\" aktualisiert."
 
 #: lib/gui/presets.py:150
 #, python-format
 msgid "Preset \"%s\" added."
-msgstr ""
+msgstr "Voreinstellung \"%s\" hinzugefügt."
 
 #: lib/gui/presets.py:189
 #, python-format
 msgid "Preset \"%s\" deleted."
-msgstr ""
+msgstr "Voreinstellung \"%s\" gelöscht."
 
 #: lib/gui/request_update_svg_version.py:29
 msgid "Unversioned Ink/Stitch SVG file detected.\n\n"

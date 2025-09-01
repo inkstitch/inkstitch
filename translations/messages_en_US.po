@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-31 01:45+0000\n"
-"PO-Revision-Date: 2025-08-31 01:45\n"
+"POT-Creation-Date: 2025-09-01 01:55+0000\n"
+"PO-Revision-Date: 2025-09-01 01:55\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-31 01:45+0000\n"
+"POT-Creation-Date: 2025-09-01 01:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1253,7 +1253,7 @@ msgstr ""
 msgid "Add a STOP command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:720
+#: lib/elements/element.py:724
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr ""
 
@@ -2533,7 +2533,7 @@ msgstr ""
 msgid "- Extensions > Ink/Stitch > Lettering"
 msgstr ""
 
-#: lib/elements/utils/stroke_to_satin.py:96
+#: lib/elements/utils/stroke_to_satin.py:97
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr ""
 
@@ -3253,13 +3253,13 @@ msgstr ""
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr ""
 
-#: lib/extensions/stroke_to_satin.py:27
+#: lib/extensions/stroke_to_satin.py:28
 msgid "Please select at least one line to convert to a satin column."
 msgstr ""
 
 #. : Convert To Satin extension, user selected only objects that were not
 #. lines.
-#: lib/extensions/stroke_to_satin.py:59
+#: lib/extensions/stroke_to_satin.py:64
 msgid "Only simple lines may be converted to satin columns."
 msgstr ""
 
