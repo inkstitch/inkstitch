@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-01 01:55+0000\n"
-"PO-Revision-Date: 2025-09-01 01:55\n"
+"PO-Revision-Date: 2025-09-02 01:43\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -3937,17 +3937,17 @@ msgstr "Le préréglage \"%s\" existe déjà. Veuillez utiliser un autre nom ou 
 #: lib/gui/presets.py:148
 #, python-format
 msgid "Preset \"%s\" updated."
-msgstr ""
+msgstr "Préréglage \"%s\" mis à jour."
 
 #: lib/gui/presets.py:150
 #, python-format
 msgid "Preset \"%s\" added."
-msgstr ""
+msgstr "Préréglage \"%s\" ajouté."
 
 #: lib/gui/presets.py:189
 #, python-format
 msgid "Preset \"%s\" deleted."
-msgstr ""
+msgstr "Préréglage \"%s\" supprimé."
 
 #: lib/gui/request_update_svg_version.py:29
 msgid "Unversioned Ink/Stitch SVG file detected.\n\n"
