@@ -4,16 +4,7 @@ import math
 import numpy as np
 from ...stitch_plan import StitchPlan, Stitch
 from typing import Tuple
-
-# Todo: Replace with methods from wxwidgets libraries to remove this dependency
-# Will be mildly annoying because wxwidgets separates the rgb from the alpoha, so we'll have
-# to merge it in ourselves
-import PIL.Image
-
-# Only used to get the texture path here.
-import pathlib
-basedir = pathlib.Path(__file__).parent
-
+from .texture import load_texture
 
 class GLStitchPlanRenderer:
     def __init__(self, ctx: moderngl.Context, stitch_plan: StitchPlan):
@@ -27,7 +18,7 @@ class GLStitchPlanRenderer:
         self.mode = 0
 
         self.light_azimuth = 135
-        self.light_elevation = 45
+        self.light_elevation = 75
         self._update_light_vector()
 
         self.vbo = None
@@ -35,7 +26,7 @@ class GLStitchPlanRenderer:
         self.k_a = 0
         self.k_d = 1.0
         self.k_s = 1.0
-        self.specular_exponent = 20.0
+        self.specular_exponent = 10.0
         self.zoom = 1.0
         self.pan = glm.vec3()
 
@@ -134,10 +125,9 @@ class GLStitchPlanRenderer:
             """,
         )
 
-        with PIL.Image.open(basedir / "texture/normals-fixed.png") as i:
-          self.tex = ctx.texture((i.width, i.height), 4, i.tobytes())
-          self.tex.build_mipmaps()
-          self.tex.repeat_y = False
+        self.tex = load_texture(ctx)
+        self.tex.build_mipmaps()
+        self.tex.repeat_y = False
 
 
     def _generate_stitches(self):
@@ -235,19 +225,13 @@ class GLStitchPlanRenderer:
             index_buffer = self.ibo, index_element_size=2, mode=moderngl.TRIANGLES
         )
 
-        # Todo: Put this somewhere else
-        minx, miny, maxx, maxy = self.stitch_plan.bounding_box
-        self.base_pan = glm.vec3(-(minx+maxx)/2, -(miny+maxy)/2, 0)
-        self.base_scale = 1.9/(maxy-miny)
-
     def resize(self, width, height):
-        self.prog["projection"].write(glm.scale(glm.vec3(height/width, 1, 1)))
+        self.prog["projection"].write(glm.ortho(0, width, height, 0))
         
     def render(self, progress: int):
         ctx = self.ctx
 
-        scale = self.base_scale*self.zoom
-        xform = glm.scale(glm.vec3(scale, -scale, 1)) @ glm.translate(self.base_pan + self.pan)
+        xform = glm.translate(self.pan) @ glm.scale(glm.vec3(self.zoom, self.zoom, 1))
 
         self.prog["k_a"] = self.k_a
         self.prog["k_d"] = self.k_d

@@ -75,7 +75,6 @@ class DrawingPanel(glcanvas.GLCanvas):
         self.page_specs = {}
         self.show_page = global_settings['toggle_page_button_status']
         self.background_color = None
-        self.SetTransparent(255)
 
         # Set initial values as they may be accessed before a stitch plan is available
         # for example through a focus action on the stitch box
@@ -176,7 +175,7 @@ class DrawingPanel(glcanvas.GLCanvas):
         # glClear(GL_COLOR_BUFFER_BIT)
 
         if self.renderer:
-            self.renderer.set_pan(self.pan)
+            self.renderer.set_pan((self.pan[0]-self.minx*self.zoom, self.pan[1]-self.miny*self.zoom))
             self.renderer.set_zoom(self.zoom)
             self.renderer.render(int(self.current_stitch))
 
@@ -396,8 +395,6 @@ class DrawingPanel(glcanvas.GLCanvas):
         # center the design
         self.pan = ((panel_width - self.zoom * self.width) / 2.0,
                     (panel_height - self.zoom * self.height) / 2.0)
-        # self.zoom = 1
-        # self.pan = (0, 0)
 
     def stop(self):
         self.animating = False
