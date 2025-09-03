@@ -13,6 +13,13 @@ from ...i18n import _
 from ...svg import PIXELS_PER_MM
 from ...utils.settings import global_settings
 
+from ..experimental.gl_renderer import GLStitchPlanRenderer
+import wx.glcanvas as glcanvas
+from OpenGL.GL import *
+from OpenGL.GLUT import *
+import moderngl
+from typing import Optional
+
 # L10N command label at bottom of simulator window
 COMMAND_NAMES = [_("STITCH"), _("JUMP"), _("TRIM"), _("STOP"), _("COLOR CHANGE")]
 
@@ -23,7 +30,7 @@ STOP = 3
 COLOR_CHANGE = 4
 
 
-class DrawingPanel(wx.Panel):
+class DrawingPanel(glcanvas.GLCanvas):
     """"""
 
     # render no faster than this many frames per second
@@ -41,7 +48,10 @@ class DrawingPanel(wx.Panel):
         self.stitch_plan = kwargs.pop('stitch_plan', None)
         kwargs['style'] = wx.BORDER_SUNKEN
 
-        wx.Panel.__init__(self, parent, *args, **kwargs)
+        glcanvas.GLCanvas.__init__(self, parent, *args, **kwargs)
+        self.context = glcanvas.GLContext(self)
+        self.init = False # Copying this pattern from the other wxwidgets OpenGL Demo, is it needed, or can I do init now?
+        self.renderer: Optional[GLStitchPlanRenderer] = None
 
         self.control_panel = parent.cp
         self.view_panel = parent.vp
@@ -65,6 +75,7 @@ class DrawingPanel(wx.Panel):
         self.page_specs = {}
         self.show_page = global_settings['toggle_page_button_status']
         self.background_color = None
+        self.SetTransparent(255)
 
         # Set initial values as they may be accessed before a stitch plan is available
         # for example through a focus action on the stitch box
@@ -86,6 +97,7 @@ class DrawingPanel(wx.Panel):
             wx.CallLater(50, self.load, self.stitch_plan)
 
     def on_resize(self, event):
+        
         self.choose_zoom_and_pan()
         self.Refresh()
 
@@ -134,15 +146,47 @@ class DrawingPanel(wx.Panel):
 
     def OnPaint(self, e):
         dc = wx.PaintDC(self)
+        
+        # if not self.loaded:
+        #     dc.Clear()
+        #     return
 
-        if not self.loaded:
-            dc.Clear()
-            return
+        # canvas = wx.GraphicsContext.Create(dc)
 
+        # self.draw_stitches(canvas)
+        # self.draw_scale(canvas)
+
+        self.SetCurrent(self.context)
+        if not self.init:
+            self.ctx = moderngl.get_context()
+            if self.stitch_plan:
+                self.renderer = GLStitchPlanRenderer(self.ctx, self.stitch_plan)
+                size =  self.GetClientSize()
+                self.renderer.resize(size.width, size.height)
+            self.init = True
+
+        ctx = self.ctx
+
+        fb = ctx.detect_framebuffer()
+
+        fb.use()
+        desk_color = wx.Colour(self.page_specs['desk_color'])
+        fb.clear(desk_color.Red()/255, desk_color.Green()/255, desk_color.Blue()/255, 1)
+        # glClearColor(0.6, 0.7, 1.0, 1.0)
+        # glClear(GL_COLOR_BUFFER_BIT)
+
+        if self.renderer:
+            self.renderer.set_pan(self.pan)
+            self.renderer.set_zoom(self.zoom)
+            self.renderer.render(int(self.current_stitch))
+
+        self.SwapBuffers()
+
+        # Interestingly, these graphics can be "stacked", but it seems like it's a little glitchy.
         canvas = wx.GraphicsContext.Create(dc)
 
-        self.draw_stitches(canvas)
         self.draw_scale(canvas)
+
 
     def draw_page(self, canvas):
         self._update_background_color()
@@ -285,6 +329,10 @@ class DrawingPanel(wx.Panel):
         self.Refresh()
 
     def load(self, stitch_plan):
+        self.stitch_plan = stitch_plan
+        if self.renderer:
+            self.renderer.set_stitch_plan(stitch_plan)
+
         self.current_stitch = 1
         self.direction = 1
         self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
@@ -348,6 +396,8 @@ class DrawingPanel(wx.Panel):
         # center the design
         self.pan = ((panel_width - self.zoom * self.width) / 2.0,
                     (panel_height - self.zoom * self.height) / 2.0)
+        # self.zoom = 1
+        # self.pan = (0, 0)
 
     def stop(self):
         self.animating = False
