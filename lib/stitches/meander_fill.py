@@ -185,7 +185,9 @@ def post_process(points, shape, original_shape, fill):
         stitches = even_running_stitch(smoothed_points, fill.running_stitch_length, fill.running_stitch_tolerance)
 
     if fill.clip:
-        stitches = clamp_path_to_polygon(stitches, original_shape)
+        # the stitch path may have self intersections
+        # therefore we don't want clamp polygon to check for the distance to the start point of a segment
+        stitches = clamp_path_to_polygon(stitches, original_shape, False)
 
     if fill.bean_stitch_repeats:
         stitches = bean_stitch(stitches, fill.bean_stitch_repeats)

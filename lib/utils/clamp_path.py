@@ -88,7 +88,7 @@ def clamp_fully_external_path(path, polygon):
     return adjust_line_end(shorter, start)
 
 
-def clamp_path_to_polygon(path, polygon):
+def clamp_path_to_polygon(path, polygon, check_distance=True):
     """Constrain a path to a Polygon.
 
     The path is expected to have at least some part inside the Polygon.
@@ -131,7 +131,10 @@ def clamp_path_to_polygon(path, polygon):
             # The second part of this or condition checks whether part of the
             # path was removed by difference() above, because it coincided
             # with part of the shape border.
-            if not was_inside and last_point_inside is not None:
+            if last_point_inside is not None and (
+                not was_inside or
+                (check_distance and last_point_inside.distance(start) > 0.01)
+            ):
                 # We traveled outside or on the border of the shape for
                 # a while.  In either case, we need to add a path along the
                 # border between the exiting and entering points.
