@@ -26,11 +26,18 @@ class MarkerObject(EmbroideryElement):
     name = "Marker"
 
     def validation_warnings(self):
-        repr_point = next(inkex.Path(self.parse_path()).end_points)
-        yield MarkerWarning(repr_point)
+        # Get the first point from the parsed path instead of using inkex.Path
+        path = self.parse_path()
+        if path and path[0]:
+            repr_point = path[0][0][1]  # First point from first subpath
+        else:
+            # Fallback to a default point if no path available
+            repr_point = (0, 0)
+        return [MarkerWarning(repr_point)]
 
     def to_stitch_groups(self, last_stitch_group, next_element=None):
         return []
 
+    @property
     def first_stitch(self):
         return None

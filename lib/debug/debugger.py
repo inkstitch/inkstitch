@@ -149,6 +149,11 @@ def init_debugger(debug_type:str,  ini: dict):
 
     wait_attach = safe_get(ini, "DEBUG", "wait_attach", default=True)  # currently only for vscode
     debugger = debug_type
+    
+    # Initialize debugger modules as None
+    debugpy = None
+    pydevd_pycharm = None
+    pydevd = None
 
     try:
         if debugger == 'vscode':
@@ -164,6 +169,7 @@ def init_debugger(debug_type:str,  ini: dict):
 
     except ImportError:
         logger.info(f"importing debugger failed (debugger disabled) for {debugger}")
+        return  # Exit early if import fails
 
     # pydevd likes to shout about errors to stderr whether I want it to or not
     with open(os.devnull, 'w') as devnull:
@@ -171,16 +177,16 @@ def init_debugger(debug_type:str,  ini: dict):
         sys.stderr = devnull
 
         try:
-            if debugger == 'vscode':
+            if debugger == 'vscode' and debugpy:
                 debugpy.listen(('localhost', 5678))
                 if wait_attach:
                     print("Waiting for debugger attach", file=sys.stderr)
                     debugpy.wait_for_client()        # wait for debugger to attach
                     debugpy.breakpoint()             # stop here to start normal debugging
-            elif debugger == 'pycharm':
+            elif debugger == 'pycharm' and pydevd_pycharm:
                 pydevd_pycharm.settrace('localhost', port=5678, stdoutToServer=True,
                                         stderrToServer=True)
-            elif debugger == 'pydev':
+            elif debugger == 'pydev' and pydevd:
                 pydevd.settrace()
             elif debugger == 'file':
                 pass

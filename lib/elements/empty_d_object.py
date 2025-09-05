@@ -20,8 +20,8 @@ class EmptyD(ObjectTypeWarning):
 class EmptyDObject(EmbroideryElement):
 
     def validation_warnings(self):
-        label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
-        yield EmptyD((0, 0), label)
+        label = self.node.get(INKSCAPE_LABEL) or self.node.get("id") or ""
+        return [EmptyD((0, 0), label)]
 
     @property
     def shape(self):

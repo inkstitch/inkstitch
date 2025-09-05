@@ -140,11 +140,27 @@ def adjust_shape_for_pull_compensation(shape, angle, row_spacing, pull_compensat
     buffered_lines = [line.buffer(buffer_amount) for line in lines]
 
     polygon = ensure_polygon(unary_union(buffered_lines))
-    exterior = smooth_path(polygon.exterior.coords, 0.2)
-    min_hole_area = row_spacing ** 2
-    interiors = [smooth_path(interior.coords) for interior in polygon.interiors if shgeo.Polygon(interior).area > min_hole_area]
-
-    shape = make_valid(shgeo.Polygon(exterior, interiors))
+    
+    # Handle case where we might get MultiPolygon or other geometry types
+    if isinstance(polygon, shgeo.Polygon):
+        # Single polygon case
+        exterior_coords = list(polygon.exterior.coords)
+        exterior = smooth_path(exterior_coords, 0.2)
+        min_hole_area = row_spacing ** 2
+        interior_coords_list = [list(interior.coords) for interior in polygon.interiors 
+                               if shgeo.Polygon(interior).area > min_hole_area]
+        interiors = [smooth_path(coords) for coords in interior_coords_list]
+        
+        # Convert Point lists to coordinate tuples for Shapely
+        exterior_tuples = [(p.x, p.y) if hasattr(p, 'x') else (p[0], p[1]) for p in exterior]
+        interior_tuples = [[(p.x, p.y) if hasattr(p, 'x') else (p[0], p[1]) for p in interior] 
+                          for interior in interiors]
+        
+        shape = make_valid(shgeo.Polygon(exterior_tuples, interior_tuples))
+    else:
+        # MultiPolygon or other case - use the original polygon
+        shape = polygon
+        
     shape = ensure_polygon(shape)
 
     return shape
@@ -424,6 +440,9 @@ def build_travel_graph(fill_stitch_graph, shape, fill_stitch_angle, underpath):
     graph.add_nodes_from(fill_stitch_graph.nodes(data=True))
 
     grating = True
+    boundary_points = []
+    travel_edges = []
+    
     if underpath:
         try:
             boundary_points, travel_edges = build_travel_edges(shape, fill_stitch_angle)
@@ -806,9 +825,12 @@ def fill_gap(path, num_rows):
     last_row_direction = (last_row[1] - last_row[0]).unit()
 
     offset_direction = last_row_direction.rotate_left()
-    if (last_row[1] - penultimate_row[0]) * offset_direction < 0:
+    spacing_vector = last_row[1] - penultimate_row[0]
+    # Calculate dot product manually since Point doesn't have dot method
+    dot_product = spacing_vector.x * offset_direction.x + spacing_vector.y * offset_direction.y
+    if dot_product < 0:
         offset_direction *= -1
-    spacing = (last_row[1] - penultimate_row[0]) * offset_direction
+    spacing = abs(dot_product)
     offset = offset_direction * spacing
 
     for i in range(num_rows):
@@ -842,6 +864,7 @@ def collapse_sequential_outline_edges(path, graph):
 
     start_of_run = None
     new_path = []
+    edge = None
 
     for edge in path:
         if edge.is_segment():
@@ -871,7 +894,7 @@ def collapse_sequential_outline_edges(path, graph):
             if not start_of_run:
                 start_of_run = edge[0]
 
-    if start_of_run and start_of_run != edge[1]:
+    if start_of_run and edge is not None and start_of_run != edge[1]:
         # if we were still in a run, close it off
         new_path.append(PathEdge((start_of_run, edge[1]), "collapsed"))
 
@@ -900,6 +923,8 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
         return []
 
     points = even_running_stitch(path, running_stitch_length, running_stitch_tolerance)
+    if points is None:
+        points = []
     stitches = [Stitch(point) for point in points]
 
     for stitch in stitches:

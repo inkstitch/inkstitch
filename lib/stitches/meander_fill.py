@@ -62,7 +62,9 @@ def ensure_connected(graph):
         possible_connections.append(((start_point.x, start_point.y), (end_point.x, end_point.y), start_point.distance(end_point)))
 
     if possible_connections:
-        for start, end in nx.k_edge_augmentation(graph, 1, avail=possible_connections):
+        # Convert list to set of tuples as expected by networkx
+        avail_connections = set(possible_connections)
+        for start, end in nx.k_edge_augmentation(graph, 1, avail=avail_connections):
             check_stop_flag()
             graph.add_edge(start, end)
 
@@ -193,6 +195,10 @@ def post_process(points, shape, original_shape, fill):
         stitches = bean_stitch(stitches, fill.bean_stitch_repeats)
 
     if fill.repeats:
+        # Ensure stitches is a list before extending
+        if not isinstance(stitches, list):
+            return stitches  # Return as-is if not a list
+            
         for i in range(1, fill.repeats):
             if i % 2 == 1:
                 # reverse every other pass

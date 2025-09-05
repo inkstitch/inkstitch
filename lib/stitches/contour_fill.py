@@ -127,7 +127,7 @@ def offset_polygon(polygon, offset, join_style, clockwise):
     ordered_polygon = orient(polygon, -1)
     tree = Tree()
     tree.add_node('root', type='node', parent=None, val=ordered_polygon.exterior)
-    active_polygons = ['root']
+    active_polygons = ['root']  # Mixed str/int node names
     active_holes = [[]]
 
     for hole in ordered_polygon.interiors:
@@ -145,20 +145,29 @@ def offset_polygon(polygon, offset, join_style, clockwise):
 
         polygons = _match_polygons_and_holes(outer, inners)
 
-        for polygon in polygons.geoms:
+        # Handle both MultiPolygon and single Polygon cases
+        if isinstance(polygons, MultiPolygon):
+            polygon_list = polygons.geoms
+        elif isinstance(polygons, Polygon):
+            polygon_list = [polygons]
+        else:
+            polygon_list = []
+
+        for polygon in polygon_list:
             new_polygon, new_holes = _convert_polygon_to_nodes(tree, polygon, parent_polygon=current_poly, child_holes=current_holes)
 
             if new_polygon is not None:
-                active_polygons.append(new_polygon)
-                active_holes.append(new_holes)
+                active_polygons.append(new_polygon)  # type: ignore
+                if new_holes is not None:
+                    active_holes.append(new_holes)
 
         for previous_hole in current_holes:
             # If the previous holes are not
             # contained in the new holes they
             # have been merged with the
             # outer polygon
-            if not tree.nodes[previous_hole].parent:
-                tree.nodes[previous_hole].parent = current_poly
+            if not tree.nodes[previous_hole].get('parent'):
+                tree.nodes[previous_hole]['parent'] = current_poly
                 tree.add_edge(current_poly, previous_hole)
 
     _orient_tree(tree, clockwise)
@@ -190,7 +199,8 @@ def _offset_polygon_and_holes(tree, poly, holes, offset, join_style):
 
 
 def _match_polygons_and_holes(outer, inners):
-    result = MultiPolygon(polygonize(outer.geoms))
+    polygons = list(polygonize(outer.geoms))
+    result = MultiPolygon(polygons)
     if len(inners) > 0:
         inners = MultiPolygon(inners)
         if not inners.is_valid:
@@ -223,7 +233,7 @@ def _convert_polygon_to_nodes(tree, polygon, parent_polygon, child_holes):
         tree.add_node(hole_node, type="hole", val=hole)
         for previous_hole in child_holes:
             if Polygon(hole).contains(Polygon(tree.nodes[previous_hole].val)):
-                tree.nodes[previous_hole].parent = hole_node
+                tree.nodes[previous_hole]['parent'] = hole_node
                 tree.add_edge(hole_node, previous_hole)
         hole_nodes.append(hole_node)
 
@@ -370,7 +380,11 @@ def _find_path_inner_to_outer(tree, node, offset, starting_point, avoid_self_cro
         distance_so_far = 0
         for child_connection in nearest_points_list:
             # Cut this ring into pieces before and after where this child will connect.
-            before, after = cut(current_ring, child_connection.proj_distance_parent - distance_so_far)
+            cut_result = cut(current_ring, child_connection.proj_distance_parent - distance_so_far)
+            if cut_result is not None:
+                before, after = cut_result
+            else:
+                before, after = None, current_ring
             distance_so_far = child_connection.proj_distance_parent
 
             # Stitch the part leading up to this child.
@@ -393,7 +407,9 @@ def _find_path_inner_to_outer(tree, node, offset, starting_point, avoid_self_cro
             # gives a nice spiral pattern, where we spiral out from the
             # innermost child.
             if after is not None:
-                skip, after = cut(after, offset)
+                cut_result = cut(after, offset)
+                if cut_result is not None:
+                    skip, after = cut_result
                 distance_so_far += offset
 
             current_ring = after
@@ -402,7 +418,9 @@ def _find_path_inner_to_outer(tree, node, offset, starting_point, avoid_self_cro
         # skip a little at the end so we don't end exactly where we started.
         remaining_length = current_ring.length
         if remaining_length > offset:
-            current_ring, skip = cut(current_ring, current_ring.length - offset)
+            cut_result = cut(current_ring, current_ring.length - offset)
+            if cut_result is not None:
+                current_ring, skip = cut_result
 
         result_coords.extend(current_ring.coords)
 
@@ -416,7 +434,7 @@ def inner_to_outer(tree, polygon, offset,
     """Fill a shape with spirals, from innermost to outermost."""
 
     stitch_path = _find_path_inner_to_outer(tree, 'root', offset, starting_point, avoid_self_crossing)
-    points = [Stitch(*point) for point in stitch_path.coords]
+    points = [Stitch(point[0], point[1]) for point in stitch_path.coords]
 
     if smoothness > 0:
         smoothed = smooth_path(points, smoothness)
@@ -460,8 +478,15 @@ def _interpolate_linear_rings(ring1, ring2, max_stitch_length, start=None):
     # orders of magnitude faster because we're not building and querying a KDTree.
 
     num_points = int(20 * ring1.length / max_stitch_length)
-    ring1_resampled = trimesh.path.traversal.resample_path(np.array(ring1.coords), count=num_points)
-    ring2_resampled = trimesh.path.traversal.resample_path(np.array(ring2.coords), count=num_points)
+    # Use shapely's interpolation instead of trimesh
+    ring1_coords = np.array(ring1.coords)
+    ring2_coords = np.array(ring2.coords)
+    
+    # Simple resampling by interpolating along the ring
+    ring1_resampled = np.array([ring1.interpolate(i * ring1.length / num_points).coords[0] 
+                               for i in range(num_points)])
+    ring2_resampled = np.array([ring2.interpolate(i * ring2.length / num_points).coords[0] 
+                               for i in range(num_points)])
 
     if start is not None:
         ring1_resampled = _reorder_linear_ring(ring1_resampled, start)

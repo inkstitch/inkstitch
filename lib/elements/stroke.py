@@ -15,7 +15,7 @@ from ..stitches.ripple_stitch import ripple_stitch
 from ..stitches.running_stitch import (bean_stitch, running_stitch,
                                        zigzag_stitch)
 from ..svg import parse_length_with_units
-from ..threads import ThreadColor
+from ..threads import ThreadCatalog, ThreadColor
 from ..utils import Point, cache
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
@@ -86,7 +86,7 @@ class Stroke(EmbroideryElement):
            default="1",
            sort_index=2)
     def repeats(self):
-        return max(1, self.get_int_param("repeats", 1))
+        return max(1, self.get_int_param("repeats", 1) or 1)
 
     @property
     @param(
@@ -125,7 +125,7 @@ class Stroke(EmbroideryElement):
            default=2.5,
            sort_index=4)
     def running_stitch_length(self):
-        return max(self.get_float_param("running_stitch_length_mm", 2.5), 0.01)
+        return max(self.get_float_param("running_stitch_length_mm", 2.5) or 2.5, 0.01)
 
     @property
     @param('running_stitch_tolerance_mm',
@@ -139,7 +139,7 @@ class Stroke(EmbroideryElement):
            default=0.2,
            sort_index=4)
     def running_stitch_tolerance(self):
-        return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
+        return max(self.get_float_param("running_stitch_tolerance_mm", 0.2) or 0.2, 0.01)
 
     @property
     @param('enable_random_stitch_length',
@@ -164,7 +164,7 @@ class Stroke(EmbroideryElement):
            default=10,
            sort_index=6)
     def random_stitch_length_jitter(self):
-        return max(self.get_float_param("random_stitch_length_jitter_percent", 10), 0.0) / 100
+        return max(self.get_float_param("random_stitch_length_jitter_percent", 10) or 10, 0.0) / 100
 
     @property
     @param('max_stitch_length_mm',
@@ -191,7 +191,7 @@ class Stroke(EmbroideryElement):
            sort_index=6)
     @cache
     def zigzag_spacing(self):
-        return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
+        return max(self.get_float_param("zigzag_spacing_mm", 0.4) or 0.4, 0.01)
 
     @property
     @param('stroke_pull_compensation_mm',
@@ -217,7 +217,7 @@ class Stroke(EmbroideryElement):
            sort_index=7)
     @cache
     def line_count(self):
-        return max(self.get_int_param("line_count", 10), 1)
+        return max(self.get_int_param("line_count", 10) or 10, 1)
 
     @property
     @param('min_line_dist_mm',
@@ -276,7 +276,7 @@ class Stroke(EmbroideryElement):
            sort_index=16)
     @cache
     def skip_start(self):
-        return abs(self.get_int_param("skip_start", 0))
+        return abs(self.get_int_param("skip_start", 0) or 0)
 
     @property
     @param('skip_end',
@@ -288,7 +288,7 @@ class Stroke(EmbroideryElement):
            sort_index=17)
     @cache
     def skip_end(self):
-        return abs(self.get_int_param("skip_end", 0))
+        return abs(self.get_int_param("skip_end", 0) or 0)
 
     @property
     @param('flip_copies',
@@ -311,7 +311,7 @@ class Stroke(EmbroideryElement):
            sort_index=19)
     @cache
     def exponent(self):
-        return max(self.get_float_param("exponent", 1), 0.1)
+        return max(self.get_float_param("exponent", 1) or 1, 0.1)
 
     @property
     @param('flip_exponent',
@@ -369,7 +369,7 @@ class Stroke(EmbroideryElement):
            sort_index=23)
     @cache
     def grid_size(self):
-        return abs(self.get_float_param("grid_size_mm", 0))
+        return abs(self.get_float_param("grid_size_mm", 0) or 0)
 
     @property
     @param('grid_first',
@@ -476,7 +476,10 @@ class Stroke(EmbroideryElement):
 
     @property
     def paths(self):
-        return self._get_paths()
+        result = self._get_paths()
+        if result is None:
+            return []
+        return result
 
     @property
     def unclipped_paths(self):
@@ -508,7 +511,10 @@ class Stroke(EmbroideryElement):
 
     @cache
     def as_multi_line_string(self):
-        line_strings = [shgeo.LineString(path) for path in self.paths if len(path) > 1]
+        paths = self.paths
+        if paths is None:
+            return shgeo.MultiLineString([])
+        line_strings = [shgeo.LineString(path) for path in paths if len(path) > 1]
         return shgeo.MultiLineString(line_strings)
 
     @property
@@ -562,6 +568,8 @@ class Stroke(EmbroideryElement):
 
         repeated_stitches = []
         # go back and forth along the path as specified by self.repeats
+        if stitches is None:
+            stitches = []
         for i in range(self.repeats):
             if i % 2 == 1:
                 # reverse every other pass
@@ -575,7 +583,7 @@ class Stroke(EmbroideryElement):
             self.color,
             stitches=repeated_stitches,
             lock_stitches=self.lock_stitches,
-            force_lock_stitches=self.force_lock_stitches
+            force_lock_stitches=bool(self.force_lock_stitches) if self.force_lock_stitches != '' else False
         )
 
     def apply_max_stitch_length(self, path):
@@ -584,8 +592,9 @@ class Stroke(EmbroideryElement):
         for points in zip(path[:-1], path[1:]):
             line = shgeo.LineString(points)
             dist = line.length
-            if dist > self.max_stitch_length:
-                num_subsections = ceil(dist / self.max_stitch_length)
+            max_stitch_len = self.max_stitch_length or float('inf')
+            if dist > max_stitch_len:
+                num_subsections = ceil(dist / max_stitch_len)
                 additional_points = [Point(coord.x, coord.y)
                                      for coord in [line.interpolate((i/num_subsections), normalized=True)
                                      for i in range(1, num_subsections + 1)]]
@@ -599,7 +608,7 @@ class Stroke(EmbroideryElement):
             tags=["ripple_stitch"],
             stitches=ripple_stitch(self),
             lock_stitches=self.lock_stitches,
-            force_lock_stitches=self.force_lock_stitches)
+            force_lock_stitches=bool(self.force_lock_stitches) if self.force_lock_stitches != '' else False)
 
     def do_bean_repeats(self, stitches):
         return bean_stitch(stitches, self.bean_stitch_repeats)
@@ -615,7 +624,10 @@ class Stroke(EmbroideryElement):
                     stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
                 stitch_groups.append(stitch_group)
         else:
-            for path in self.paths:
+            paths = self.paths
+            if paths is None:
+                paths = []
+            for path in paths:
                 path = [Point(x, y) for x, y in path]
                 # manual stitch
                 if self.stroke_method == 'manual_stitch':
@@ -631,7 +643,7 @@ class Stroke(EmbroideryElement):
                         color=self.color,
                         stitches=path,
                         lock_stitches=lock_stitches,
-                        force_lock_stitches=self.force_lock_stitches
+                        force_lock_stitches=bool(self.force_lock_stitches) if self.force_lock_stitches != '' else False
                     )
                     # apply bean stitch settings
                     if any(self.bean_stitch_repeats):
@@ -680,19 +692,25 @@ class Stroke(EmbroideryElement):
         # if we just take the center of a line string we could end up on some point far away from the actual line
         try:
             coords = list(self.shape.coords)
-        except NotImplementedError:
+        except (NotImplementedError, AttributeError):
             # linear rings to not have a coordinate sequence
-            coords = list(self.shape.exterior.coords)
+            # BaseGeometry might not have exterior attribute
+            try:
+                coords = list(self.shape.exterior.coords)  # type: ignore
+            except (AttributeError, NotImplementedError):
+                coords = [(0, 0)]  # fallback
         return coords[int(len(coords)/2)]
 
     def validation_warnings(self):
+        warnings = []
         # satin column warning
         if self.get_boolean_param("satin_column", False):
-            yield TooFewSubpathsWarning(self._representative_point())
+            warnings.append(TooFewSubpathsWarning(self._representative_point()))
         # guided fill warnings
         if self.stroke_method == 1:
             guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)
             if sum(len(x) for x in guide_lines.values()) > 1:
-                yield MultipleGuideLineWarning(self._representative_point())
+                warnings.append(MultipleGuideLineWarning(self._representative_point()))
+        return warnings
 
         stroke_width, units = parse_length_with_units(self.get_style("stroke-width", "1"))

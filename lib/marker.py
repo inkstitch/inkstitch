@@ -21,9 +21,13 @@ def ensure_marker(svg, marker):
 
     marker_path = ".//*[@id='inkstitch-%s-marker']" % marker
     if svg.defs.find(marker_path) is None:
-        marker = deepcopy(_marker_svg().defs.find(marker_path))
-        marker.set('markerWidth', str(0.1))
-        svg.defs.append(marker)
+        marker_svg_root = _marker_svg()
+        marker_defs = marker_svg_root.find(".//{http://www.w3.org/2000/svg}defs")
+        if marker_defs is not None:
+            marker = deepcopy(marker_defs.find(marker_path))
+            if marker is not None:
+                marker.set('markerWidth', str(0.1))
+                svg.defs.append(marker)
 
 
 def ensure_marker_symbols(group):
@@ -81,8 +85,9 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_sati
 
         if get_strokes and stroke is not None:
             stroke = Stroke(marker).unclipped_paths
-            line_strings = [shgeo.LineString(path) for path in stroke]
-            strokes.append(shgeo.MultiLineString(line_strings))
+            if stroke is not None:
+                line_strings = [shgeo.LineString(path) for path in stroke]
+                strokes.append(shgeo.MultiLineString(line_strings))
 
         if get_satins and stroke is not None:
             satin = SatinColumn(marker)

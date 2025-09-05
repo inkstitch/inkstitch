@@ -6,7 +6,7 @@
 import sys
 from math import acos, degrees
 
-from inkex import errormsg
+from inkex.utils import errormsg
 from numpy import convolve, diff, int32, setdiff1d, sign, zeros
 from shapely import geometry as shgeo
 from shapely.affinity import rotate, scale
@@ -73,8 +73,8 @@ def fix_loop(path):
     if path[0] == path[-1] and len(path) > 1:
         first = Point.from_tuple(path[0])
         second = Point.from_tuple(path[1])
-        midpoint = (first + second) / 2
-        midpoint = midpoint.as_tuple()
+        # Calculate midpoint manually to avoid type issues
+        midpoint = ((first.x + second.x) / 2, (first.y + second.y) / 2)
 
         return [midpoint] + path[1:] + [path[0], midpoint]
     else:
@@ -142,6 +142,12 @@ def get_scores(path):
             # The dot product of two vectors is |v1| * |v2| * cos(angle).
             # These are unit vectors, so their magnitudes are 1.
             cos_angle_between = prev_direction * direction
+            
+            # Ensure we have a float for min/max operations
+            if isinstance(cos_angle_between, Point):
+                cos_angle_between = float(cos_angle_between.x)  # Use x component or convert properly
+            else:
+                cos_angle_between = float(cos_angle_between)
 
             # Clamp to the valid range for a cosine.  The above _should_
             # already be in this range, but floating point inaccuracy can

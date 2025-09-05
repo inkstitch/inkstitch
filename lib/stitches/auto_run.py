@@ -258,7 +258,10 @@ def path_to_elements(graph, path, trim):  # noqa: C901
 
     if d:
         element_list.append(create_element(d, position, path_direction, el))
-    original_parents.append(el.node.getparent())
+    if el is not None and hasattr(el, 'node') and el.node is not None:
+        original_parents.append(el.node.getparent())
+    else:
+        original_parents.append(None)
 
     return element_list, trims, original_parents
 

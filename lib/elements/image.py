@@ -30,10 +30,11 @@ class ImageObject(EmbroideryElement):
         return center
 
     def validation_warnings(self):
-        yield ImageTypeWarning(self.center())
+        return [ImageTypeWarning(self.center())]
 
-    def to_stitch_groups(self, last_stitch_group, next_element):
+    def to_stitch_groups(self, last_stitch_group, next_element=None):
         return []
 
+    @property
     def first_stitch(self):
         return None

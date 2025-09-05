@@ -81,7 +81,8 @@ def tartan_fill(fill: 'FillStitch', outline: Polygon, starting_point: Union[tupl
         False  # do not cut polygons just yet
     )
 
-    if fill.herringbone_width > 0:
+    herringbone_width = getattr(fill, 'herringbone_width', 0) or 0
+    if herringbone_width > 0:
         lines = _generate_herringbone_lines(outline, fill, dimensions, rotation)
         warp_lines, weft_lines = _split_herringbone_warp_weft(lines, fill.rows_per_thread, fill.running_stitch_length)
         warp_color_lines = _get_herringbone_color_segments(warp_lines, warp_shapes, outline, rotation, fill.running_stitch_length)
@@ -134,18 +135,19 @@ def _generate_herringbone_lines(
 
     herringbone_lines: list = [[], []]
     odd = True
+    herringbone_width = fill.herringbone_width or 0
     while minx < maxx:
         odd = not odd
-        right = minx + fill.herringbone_width
+        right = minx + herringbone_width
         if odd:
-            left_line = LineString([(minx, miny), (minx, maxy + fill.herringbone_width)])
+            left_line = LineString([(minx, miny), (minx, maxy + herringbone_width)])
         else:
-            left_line = LineString([(minx, miny - fill.herringbone_width), (minx, maxy)])
+            left_line = LineString([(minx, miny - herringbone_width), (minx, maxy)])
 
         if odd:
-            right_line = LineString([(right, miny - fill.herringbone_width), (right, maxy)])
+            right_line = LineString([(right, miny - herringbone_width), (right, maxy)])
         else:
-            right_line = LineString([(right, miny), (right, maxy + fill.herringbone_width)])
+            right_line = LineString([(right, miny), (right, maxy + herringbone_width)])
 
         left_line = segmentize(left_line, max_segment_length=fill.row_spacing)
         right_line = segmentize(right_line, max_segment_length=fill.row_spacing)
@@ -167,7 +169,7 @@ def _generate_herringbone_lines(
 
         # add some little space extra to make things easier with line_merge later on
         # (avoid spots with 4 line points)
-        minx += fill.herringbone_width + 0.005
+        minx += herringbone_width + 0.005
 
     return herringbone_lines
 
@@ -189,7 +191,7 @@ def _generate_tartan_lines(
     """
     rotation_center = _get_rotation_center(outline)
     # default angle is 45°
-    rotation += fill.tartan_angle
+    rotation += (fill.tartan_angle or 0)
     minx, miny, maxx, maxy = dimensions
 
     left_line = LineString([(minx, miny), (minx, maxy)])
@@ -234,14 +236,29 @@ def _split_herringbone_warp_weft(
                 warp, weft = _split_warp_weft(line_block, rows_per_thread)
             else:
                 weft, warp = _split_warp_weft(line_block, rows_per_thread)
-            warp_lines.append(warp)
-            weft_lines.append(weft)
+            
+            # Handle warp lines
+            if isinstance(warp, MultiLineString):
+                warp_lines.extend(warp.geoms)
+            else:
+                warp_lines.append(warp)
+                
+            # Handle weft lines
+            if isinstance(weft, MultiLineString):
+                weft_lines.extend(weft.geoms)
+            else:
+                weft_lines.append(weft)
 
     connected_weft = []
     line2 = None
     for multilinestring in weft_lines:
         connected_line_block = []
-        geoms = list(multilinestring.geoms)
+        if isinstance(multilinestring, MultiLineString):
+            geoms = list(multilinestring.geoms)
+        elif isinstance(multilinestring, LineString):
+            geoms = [multilinestring]
+        else:
+            continue
         for line1, line2 in zip(geoms[:-1], geoms[1:]):
             connected_line_block.append(line1)
             connector_line = LineString([get_point(line1, -1), get_point(line2, 0)])
@@ -253,7 +270,7 @@ def _split_herringbone_warp_weft(
     return warp_lines, connected_weft
 
 
-def _split_warp_weft(lines: List[LineString], rows_per_thread: int) -> Tuple[List[LineString], List[LineString]]:
+def _split_warp_weft(lines: List[LineString], rows_per_thread: int) -> Tuple[MultiLineString, MultiLineString]:
     """
     Divide given lines in warp and weft, sort afterwards
 
@@ -365,8 +382,22 @@ def _get_herringbone_color_segments(
     if not polygons:
         return line_segments
 
-    lines = line_merge(lines)
-    for line_blocks in lines:
+    merged_result = line_merge(lines)
+    if isinstance(merged_result, MultiLineString):
+        lines_list = list(merged_result.geoms)
+    elif hasattr(merged_result, '__iter__'):
+        lines_list = list(merged_result)
+    else:
+        lines_list = [merged_result]
+    
+    for line_blocks in lines_list:
+        if isinstance(line_blocks, LineString):
+            line_blocks = MultiLineString([line_blocks])
+        elif hasattr(line_blocks, 'dtype'):  # numpy array
+            continue
+        elif not isinstance(line_blocks, MultiLineString):
+            continue
+        
         segments = _get_tartan_color_segments(line_blocks, polygons, outline, rotation, stitch_length, weft, True)
         for color, segment in segments.items():
             if weft:
@@ -457,6 +488,11 @@ def _get_weft_herringbone_connectors(
     for line in reversed(polygon_lines):
         start = get_point(line, 0)
         end = get_point(line, -1)
+        
+        # Skip lines where we can't get valid points
+        if start is None or end is None:
+            continue
+            
         if previous_end is None:
             # adjust direction of polygon lines if necessary
             if polygon_top.project(start, True) > 0.5:
@@ -470,25 +506,46 @@ def _get_weft_herringbone_connectors(
             continue
 
         # adjust line direction and add connectors
-        prev_polygon_line = min([polygon_top, polygon_bottom], key=lambda polygon_line: previous_end.distance(polygon_line))
-        current_polygon_line = min([polygon_top, polygon_bottom], key=lambda polygon_line: start.distance(polygon_line))
-        if prev_polygon_line != current_polygon_line:
-            start, end = end, start
-        if not previous_end == start:
-            connector = LineString([previous_end, start])
-            if prev_polygon_line == polygon_top:
-                connector = connector.offset_curve(-0.0001)
-            else:
-                connector = connector.offset_curve(0.0001)
-            connectors.append(LineString([previous_end, get_point(connector, 0)]))
-            connectors.append(segmentize(connector, max_segment_length=stitch_length))
-            connectors.append(LineString([get_point(connector, -1), start]))
+        if previous_end is not None:
+            def safe_distance(polygon_line):
+                if polygon_line is None or previous_end is None:
+                    return float('inf')
+                return previous_end.distance(polygon_line)
+            
+            def safe_current_distance(polygon_line):
+                if polygon_line is None:
+                    return float('inf')
+                return start.distance(polygon_line)
+            
+            prev_polygon_line = min([polygon_top, polygon_bottom], key=safe_distance)
+            current_polygon_line = min([polygon_top, polygon_bottom], key=safe_current_distance)
+            if prev_polygon_line != current_polygon_line:
+                start, end = end, start
+            if not previous_end == start:
+                connector = LineString([previous_end, start])
+                if prev_polygon_line == polygon_top:
+                    connector = connector.offset_curve(-0.0001)
+                else:
+                    connector = connector.offset_curve(0.0001)
+                connector_start = get_point(connector, 0)
+                connector_end = get_point(connector, -1)
+                if connector_start is not None:
+                    connectors.append(LineString([previous_end, connector_start]))
+                
+                segmentized = segmentize(connector, max_segment_length=stitch_length)
+                if isinstance(segmentized, MultiLineString):
+                    connectors.extend(segmentized.geoms)
+                else:
+                    connectors.append(segmentized)
+                    
+                if connector_end is not None:
+                    connectors.append(LineString([connector_end, start]))
         previous_end = end
     return connectors
 
 
 def _get_tartan_color_segments(
-    lines: List[LineString],
+    lines: Union[List[LineString], MultiLineString],
     polygons: defaultdict,
     outline: Polygon,
     rotation: float,
@@ -514,7 +571,12 @@ def _get_tartan_color_segments(
     for color, shapes in polygons.items():
         polygons = shapes[0]
         for polygon in polygons:
-            segments = _get_segment_lines(polygon, lines, outline, stitch_length, rotation, weft, herringbone)
+            # Convert lines to MultiLineString if it's a List[LineString]
+            if isinstance(lines, list):
+                multilines = MultiLineString(lines)
+            else:
+                multilines = lines
+            segments = _get_segment_lines(polygon, multilines, outline, stitch_length, rotation, weft, herringbone)
             if segments:
                 line_segments[color].extend(segments)
         check_stop_flag()
@@ -564,7 +626,7 @@ def _get_segment_lines(
     segments = []
     if not lines.intersects(polygon):
         return []
-    segment_lines = list(ensure_multi_line_string(lines.intersection(polygon), 0.5).geoms)
+    segment_lines = list(ensure_multi_line_string(lines.intersection(polygon), 1).geoms)
     if not segment_lines:
         return []
     previous_line = None
@@ -586,15 +648,19 @@ def _get_segment_lines(
 
     if not segments:
         return []
-    lines = line_merge(MultiLineString(segments))
+    merged_lines = line_merge(MultiLineString(segments))
+    # Ensure we have a proper geometry type
+    lines = ensure_multi_line_string(merged_lines)
 
     if not (herringbone and weft):
-        lines = lines.intersection(outline)
+        intersection = lines.intersection(outline)
+        lines = ensure_multi_line_string(intersection)
 
     if not herringbone:
-        lines = _connect_lines_to_outline(lines, outline, rotation, stitch_length, weft)
+        connected = _connect_lines_to_outline(lines, outline, rotation, stitch_length, weft)
+        lines = ensure_multi_line_string(connected)
 
-    return list(ensure_multi_line_string(lines).geoms)
+    return list(lines.geoms)
 
 
 def _get_connector(
@@ -637,18 +703,18 @@ def _connect_lines_to_outline(
     :returns: merged line(s) connected to the outline
     """
     boundary = outline.boundary
-    lines = list(ensure_multi_line_string(lines).geoms)
+    lines_list = list(ensure_multi_line_string(lines).geoms)
     outline_connectors = []
-    for line in lines:
+    for line in lines_list:
         start = get_point(line, 0)
         end = get_point(line, -1)
         if start.intersects(outline) and start.distance(boundary) > 0.05:
             outline_connectors.append(_connect_point_to_outline(start, outline, rotation, stitch_length, weft))
         if end.intersects(outline) and end.distance(boundary) > 0.05:
             outline_connectors.append(_connect_point_to_outline(end, outline, rotation, stitch_length, weft))
-    lines.extend(outline_connectors)
-    lines = line_merge(MultiLineString(lines))
-    return lines
+    all_lines = lines_list + outline_connectors
+    merged_lines = line_merge(MultiLineString(all_lines))
+    return ensure_multi_line_string(merged_lines)
 
 
 def _connect_point_to_outline(
@@ -814,9 +880,9 @@ def _segments_to_stitch_group(
         color=color,
         tags=("tartan_fill", "auto_fill_top"),
         stitches=stitches,
-        force_lock_stitches=fill.force_lock_stitches,
+        force_lock_stitches=bool(fill.force_lock_stitches),
         lock_stitches=fill.lock_stitches,
-        trim_after=fill.has_command("trim") or fill.trim_after
+        trim_after=bool(fill.has_command("trim") or fill.trim_after)
     )
 
     if runs:

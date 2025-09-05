@@ -18,10 +18,13 @@ else:
 
 def get_bundled_dir(name=None):
     if getattr(sys, 'frozen', None) is not None:
-        if sys.platform == "darwin":
-            path = os.path.join(sys._MEIPASS, "..", 'Resources')
+        meipass = getattr(sys, '_MEIPASS', None)
+        if sys.platform == "darwin" and meipass:
+            path = os.path.join(meipass, "..", 'Resources')
+        elif meipass:
+            path = os.path.join(meipass, "..")
         else:
-            path = os.path.join(sys._MEIPASS, "..")
+            path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..')
     else:
         path = os.path.join(dirname(realpath(__file__)), '..', '..')
 
@@ -33,10 +36,13 @@ def get_bundled_dir(name=None):
 
 def get_resource_dir(name):
     if getattr(sys, 'frozen', None) is not None:
-        if sys.platform == "darwin":
-            return realpath(os.path.join(sys._MEIPASS, "..", 'Resources', name))
+        meipass = getattr(sys, '_MEIPASS', None)
+        if sys.platform == "darwin" and meipass:
+            return realpath(os.path.join(meipass, "..", 'Resources', name))
+        elif meipass:
+            return realpath(os.path.join(meipass, name))
         else:
-            return realpath(os.path.join(sys._MEIPASS, name))
+            return realpath(os.path.join(dirname(realpath(__file__)), '..', '..', name))
     else:
         return realpath(os.path.join(dirname(realpath(__file__)), '..', '..', name))
 

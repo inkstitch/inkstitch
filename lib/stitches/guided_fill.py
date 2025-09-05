@@ -91,7 +91,7 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph,
             if edge[0] != path_geometry.coords[0]:
                 path_geometry = reverse_line_string(path_geometry)
 
-            new_stitches = [Stitch(*point) for point in path_geometry.coords]
+            new_stitches = [Stitch(point[0], point[1]) for point in path_geometry.coords]
 
             # need to tag stitches
 
@@ -143,9 +143,14 @@ def repair_non_simple_line(line):
     # Do several iterations since we might have several concatenated selfcrossings
     while repaired.geom_type != 'LineString' and counter < 4:
         line_segments = []
-        for line_seg in repaired.geoms:
-            if not line_seg.is_ring:
-                line_segments.append(line_seg)
+        if isinstance(repaired, (shgeo.MultiLineString, shgeo.GeometryCollection)):
+            for line_seg in repaired.geoms:
+                if not line_seg.is_ring:
+                    line_segments.append(line_seg)
+        else:
+            # Single geometry, handle directly
+            if hasattr(repaired, 'is_ring') and not repaired.is_ring:
+                line_segments.append(repaired)
 
         repaired = unary_union(linemerge(line_segments))
         counter += 1
@@ -274,8 +279,12 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
 
         if enable_random_stitch_length:
             points = [InkstitchPoint(*x) for x in offset_line.coords]
-            stitched_line = shgeo.LineString(random_running_stitch(
-                points, max_stitch_length, tolerance, random_sigma, prng.join_args(random_seed, row)))
+            random_points = random_running_stitch(
+                points, max_stitch_length, tolerance, random_sigma, prng.join_args(random_seed, row))
+            if random_points:
+                stitched_line = shgeo.LineString([(p.x, p.y) for p in random_points])
+            else:
+                stitched_line = offset_line
         else:
             stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row)
         intersection = shape.intersection(stitched_line)

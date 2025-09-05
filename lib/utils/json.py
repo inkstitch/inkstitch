@@ -5,6 +5,8 @@
 
 from flask.json.provider import DefaultJSONProvider
 from ..exceptions import InkstitchException
+from typing import Any
+import json
 
 
 class InkstitchJSONException(InkstitchException):
@@ -18,9 +20,13 @@ class InkStitchJSONProvider(DefaultJSONProvider):
     object.
     """
 
-    def default(self, obj):
+    def dumps(self, obj: Any, **kwargs: Any) -> str:
+        """Override dumps to handle __json__ method."""
         try:
-            return obj.__json__()
-        except AttributeError:
+            # Try to use the object's __json__ method if available
+            if hasattr(obj, '__json__'):
+                obj = obj.__json__()
+            return super().dumps(obj, **kwargs)
+        except Exception:
             raise InkstitchJSONException(
-                f"Object of type {obj.__class__.__name__} cannot be serialized to JSON because it does not implement __json__()")
+                f"Object of type {type(obj).__name__} cannot be serialized to JSON")

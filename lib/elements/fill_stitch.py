@@ -219,7 +219,8 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'meander_fill')],
            sort_index=11)
     def meander_angle(self):
-        return math.radians(self.get_float_param('meander_angle', 0))
+        angle = self.get_float_param('meander_angle', 0)
+        return math.radians(angle or 0)
 
     @property
     @param('meander_scale_percent',
@@ -300,7 +301,8 @@ class FillStitch(EmbroideryElement):
            default=0)
     @cache
     def angle(self):
-        return math.radians(self.get_float_param('angle', 0))
+        angle = self.get_float_param('angle', 0)
+        return math.radians(angle or 0)
 
     @property
     @param('tartan_angle',
@@ -331,7 +333,8 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'legacy_fill')],
            default=3.0)
     def max_stitch_length(self):
-        return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.1 * PIXELS_PER_MM)
+        value = self.get_float_param("max_stitch_length_mm", 3.0)
+        return max(value or 3.0, 0.1 * PIXELS_PER_MM)
 
     @property
     @param('row_spacing_mm',
@@ -349,7 +352,8 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'legacy_fill')],
            default=0.25)
     def row_spacing(self):
-        return max(self.get_float_param("row_spacing_mm", 0.25), 0.1 * PIXELS_PER_MM)
+        value = self.get_float_param("row_spacing_mm", 0.25)
+        return max(value or 0.25, 0.1 * PIXELS_PER_MM)
 
     @property
     @param('end_row_spacing_mm',
@@ -466,7 +470,8 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'tartan_fill')],
            sort_index=41)
     def running_stitch_length(self):
-        return max(self.get_float_param("running_stitch_length_mm", 2.5), 0.01)
+        value = self.get_float_param("running_stitch_length_mm", 2.5)
+        return max(value or 2.5, 0.01)
 
     @property
     @param('running_stitch_tolerance_mm',
@@ -485,7 +490,8 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'tartan_fill')],
            sort_index=43)
     def running_stitch_tolerance(self):
-        return max(self.get_float_param("running_stitch_tolerance_mm", 0.2), 0.01)
+        value = self.get_float_param("running_stitch_tolerance_mm", 0.2)
+        return max(value or 0.2, 0.01)
 
     @property
     @param('enable_random_stitch_length',
@@ -518,7 +524,8 @@ class FillStitch(EmbroideryElement):
            default=10,
            sort_index=46)
     def random_stitch_length_jitter(self):
-        return max(self.get_float_param("random_stitch_length_jitter_percent", 10), 0.0) / 100.0
+        value = self.get_float_param("random_stitch_length_jitter_percent", 10)
+        return max(value or 10, 0.0) / 100.0
 
     @property
     @param('repeats',
@@ -530,7 +537,8 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'circular_fill')],
            sort_index=50)
     def repeats(self):
-        return max(1, self.get_int_param("repeats", 1))
+        value = self.get_int_param("repeats", 1)
+        return max(1, value or 1)
 
     @property
     @param('bean_stitch_repeats',
@@ -585,7 +593,8 @@ class FillStitch(EmbroideryElement):
         sort_index=62
     )
     def rows_per_thread(self):
-        return max(1, self.get_int_param("rows_per_thread", 2))
+        value = self.get_int_param("rows_per_thread", 2)
+        return max(1, value or 2)
 
     @property
     @param('herringbone_width_mm',
@@ -666,7 +675,8 @@ class FillStitch(EmbroideryElement):
             except (TypeError, ValueError):
                 return default_value
         elif self.fill_method == 'linear_gradient_fill' and self.gradient is not None:
-            return [-gradient_angle(self.node, self.gradient)]
+            angle = gradient_angle(self.node, self.gradient)
+            return [-angle] if angle is not None else default_value
         else:
             underlay_angles = default_value
 
@@ -801,73 +811,87 @@ class FillStitch(EmbroideryElement):
         return intersection
 
     def validation_errors(self):
+        errors = []
         if not self.shape.is_valid:
             why = explain_validity(self.shape)
             match = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why)
             assert match is not None, f"Could not parse validity message '{why}'"
             message, x, y = match.groups()
-            yield InvalidShapeError((x, y))
+            errors.append(InvalidShapeError((x, y)))
+        return errors
 
     def validation_warnings(self):  # noqa: C901
+        warnings = []
         if not self.original_shape.is_valid:
             why = explain_validity(self.original_shape)
             match = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why)
             assert match is not None, f"Could not parse validity message '{why}'"
             message, x, y = match.groups()
             if "Hole lies outside shell" in message:
-                yield UnconnectedWarning((x, y))
+                warnings.append(UnconnectedWarning((x, y)))
             else:
-                yield BorderCrossWarning((x, y))
+                warnings.append(BorderCrossWarning((x, y)))
 
         for shape in self.shape.geoms:
             if self.shape.area < 20:
-                label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
-                yield SmallShapeWarning(shape.centroid, label)
+                label = self.node.get(INKSCAPE_LABEL) or self.node.get("id") or ""
+                warnings.append(SmallShapeWarning(shape.centroid, label))
 
             if self.shrink_or_grow_shape(shape, self.expand, True).is_empty:
-                yield ExpandWarning(shape.centroid)
+                warnings.append(ExpandWarning(shape.centroid))
 
-            if self.shrink_or_grow_shape(shape, -self.fill_underlay_inset, True).is_empty:
-                yield UnderlayInsetWarning(shape.centroid)
+            if self.shrink_or_grow_shape(shape, -(self.fill_underlay_inset or 0), True).is_empty:
+                warnings.append(UnderlayInsetWarning(shape.centroid))
 
         # guided fill warnings
         if self.fill_method == 'guided_fill':
             guide_lines = self._get_guide_lines(True)
             if not guide_lines or guide_lines[0].is_empty:
-                yield MissingGuideLineWarning(self.shape.centroid)
+                warnings.append(MissingGuideLineWarning(self.shape.centroid))
             elif len(guide_lines) > 1:
-                yield MultipleGuideLineWarning(self.shape.centroid)
+                warnings.append(MultipleGuideLineWarning(self.shape.centroid))
             elif guide_lines[0].disjoint(self.shape):
-                yield DisjointGuideLineWarning(self.shape.centroid)
-            return None
+                warnings.append(DisjointGuideLineWarning(self.shape.centroid))
+            return warnings
 
         # linear gradient fill
         if self.fill_method == 'linear_gradient_fill' and self.gradient is None:
-            yield NoGradientWarning(self.shape.representative_point())
+            warnings.append(NoGradientWarning(self.shape.representative_point()))
 
         if self.node.style('stroke', None) is not None:
             if not self.shape.is_empty:
-                yield StrokeAndFillWarning(self.shape.representative_point())
+                warnings.append(StrokeAndFillWarning(self.shape.representative_point()))
             else:
                 # they may used a fill on a straight line
-                yield StrokeAndFillWarning(self.paths[0][0])
+                warnings.append(StrokeAndFillWarning(self.paths[0][0]))
 
         # tartan fill
         if self.fill_method == 'tartan_fill':
             settings = get_tartan_settings(self.node)
             warp, weft = get_tartan_stripes(settings)
             if not (warp or weft):
-                yield NoTartanStripeWarning(self.shape.representative_point())
+                warnings.append(NoTartanStripeWarning(self.shape.representative_point()))
             if not self.node.get('inkstitch:tartan', ''):
-                yield DefaultTartanStripeWarning(self.shape.representative_point())
+                warnings.append(DefaultTartanStripeWarning(self.shape.representative_point()))
 
         for warning in super(FillStitch, self).validation_warnings():
-            yield warning
+            warnings.append(warning)
+        
+        return warnings
 
     @property
     @cache
     def outline(self):
-        return self.shape.boundary[0]
+        boundary = self.shape.boundary
+        # For MultiPolygon, boundary is a MultiLineString
+        # For Polygon, boundary is a LinearRing
+        try:
+            # Try to access first geometry if it's a collection
+            if hasattr(boundary, 'geoms') and len(boundary.geoms) > 0:
+                return boundary.geoms[0]
+            return boundary
+        except (AttributeError, IndexError):
+            return boundary
 
     @property
     @cache
@@ -889,7 +913,8 @@ class FillStitch(EmbroideryElement):
         return new_shape
 
     def underlay_shape(self, shape):
-        return self.shrink_or_grow_shape(shape, -self.fill_underlay_inset)
+        inset = self.fill_underlay_inset or 0
+        return self.shrink_or_grow_shape(shape, -inset)
 
     def fill_shape(self, shape):
         return self.shrink_or_grow_shape(shape, self.expand)
@@ -897,24 +922,27 @@ class FillStitch(EmbroideryElement):
     @property
     def first_stitch(self):
         # Serves as a reverence point for the end point of the previous element
-        if self.get_command('starting_point'):
-            return shgeo.Point(*self.get_command('starting_point').target_point)
+        command = self.get_command('starting_point')
+        if command:
+            return shgeo.Point(*command.target_point)
         return None
 
     def get_starting_point(self, previous_stitch_group):
         # If there is a "starting_point" Command, then use that; otherwise pick
         # the point closest to the end of the last stitch_group.
 
-        if self.get_command('starting_point'):
-            return self.get_command('starting_point').target_point
+        command = self.get_command('starting_point')
+        if command:
+            return command.target_point
         elif previous_stitch_group:
             return previous_stitch_group.stitches[-1]
         else:
             return None
 
     def get_ending_point(self, next_stitch):
-        if self.get_command('ending_point'):
-            return self.get_command('ending_point').target_point
+        command = self.get_command('ending_point')
+        if command:
+            return command.target_point
         elif next_stitch:
             return next_stitch.coords
         else:
@@ -932,7 +960,7 @@ class FillStitch(EmbroideryElement):
         else:
             return True
 
-    def to_stitch_groups(self, previous_stitch_group, next_element=None):  # noqa: C901
+    def to_stitch_groups(self, last_stitch_group, next_element=None):  # noqa: C901
         # backwards compatibility: legacy_fill used to be inkstitch:auto_fill == False
         if not self.auto_fill or self.fill_method == 'legacy_fill':
             return self.do_legacy_fill()
@@ -940,18 +968,29 @@ class FillStitch(EmbroideryElement):
             stitch_groups = []
 
             # start and end points
-            start = self.get_starting_point(previous_stitch_group)
+            start = self.get_starting_point(last_stitch_group)
             final_end = self.get_ending_point(self.next_stitch(next_element))
 
             # sort shapes to get a nicer routing
             shapes = list(self.shape.geoms)
             if start:
-                shapes.sort(key=lambda shape: shape.distance(shgeo.Point(start)))
+                try:
+                    # Try to extract coordinates from start point
+                    x, y = 0, 0
+                    if hasattr(start, 'x') and hasattr(start, 'y'):
+                        x, y = start.x, start.y
+                    elif hasattr(start, '__iter__') and not isinstance(start, str):
+                        coords = list(start)
+                        if len(coords) >= 2:
+                            x, y = coords[0], coords[1]
+                    shapes.sort(key=lambda shape: shape.distance(shgeo.Point(x, y)))
+                except Exception:
+                    shapes.sort(key=lambda shape: shape.bounds[0])
             else:
                 shapes.sort(key=lambda shape: shape.bounds[0])
 
             for i, shape in enumerate(shapes):
-                start = self.get_starting_point(previous_stitch_group)
+                start = self.get_starting_point(last_stitch_group)
                 if i < len(shapes) - 1:
                     end = nearest_points(shape, shapes[i+1])[0].coords
                 else:
@@ -981,7 +1020,7 @@ class FillStitch(EmbroideryElement):
                         # auto_fill
                         stitch_groups.extend(self.do_auto_fill(fill_shape, start, end))
                     if stitch_groups:
-                        previous_stitch_group = stitch_groups[-1]
+                        last_stitch_group = stitch_groups[-1]
 
             # sort colors of linear gradient
             if len(shapes) > 1 and self.fill_method == 'linear_gradient_fill':
@@ -1023,7 +1062,7 @@ class FillStitch(EmbroideryElement):
         return [StitchGroup(
             stitches=stitch_list,
             color=self.color,
-            force_lock_stitches=self.force_lock_stitches,
+            force_lock_stitches=bool(self.force_lock_stitches),
             lock_stitches=self.lock_stitches
         ) for stitch_list in stitch_lists]
 
@@ -1052,7 +1091,7 @@ class FillStitch(EmbroideryElement):
                     self.staggers,
                     self.fill_underlay_skip_last,
                     starting_point,
-                    underpath=self.underlay_underpath
+                    underpath=bool(self.underlay_underpath)
                 )
             )
             stitch_groups.append(underlay)
@@ -1063,7 +1102,7 @@ class FillStitch(EmbroideryElement):
         stitch_group = StitchGroup(
             color=self.color,
             tags=("auto_fill", "auto_fill_top"),
-            force_lock_stitches=self.force_lock_stitches,
+            force_lock_stitches=bool(self.force_lock_stitches),
             lock_stitches=self.lock_stitches,
             stitches=auto_fill(
                 shape,
@@ -1077,9 +1116,9 @@ class FillStitch(EmbroideryElement):
                 self.skip_last,
                 starting_point,
                 ending_point,
-                self.underpath,
-                self.gap_fill_rows,
-                self.enable_random_stitch_length,
+                bool(self.underpath),
+                int(self.gap_fill_rows or 0),
+                bool(self.enable_random_stitch_length),
                 self.random_stitch_length_jitter,
                 self.random_seed,
                 self.pull_compensation_px,
@@ -1094,7 +1133,7 @@ class FillStitch(EmbroideryElement):
         starting_point = shgeo.Point(starting_point)
 
         stitch_groups = []
-        tree = contour_fill.offset_polygon(polygon, self.row_spacing, self.join_style + 1, self.clockwise)
+        tree = contour_fill.offset_polygon(polygon, self.row_spacing, (self.join_style or 0) + 1, self.clockwise)
 
         stitches = []
         if self.contour_strategy == 0:
@@ -1136,7 +1175,7 @@ class FillStitch(EmbroideryElement):
             color=self.color,
             tags=("auto_fill", "auto_fill_top"),
             stitches=stitches,
-            force_lock_stitches=self.force_lock_stitches,
+            force_lock_stitches=bool(self.force_lock_stitches),
             lock_stitches=self.lock_stitches)
         stitch_groups.append(stitch_group)
 
@@ -1152,11 +1191,11 @@ class FillStitch(EmbroideryElement):
         stitch_group = StitchGroup(
             color=self.color,
             tags=("guided_fill", "auto_fill_top"),
-            force_lock_stitches=self.force_lock_stitches,
+            force_lock_stitches=bool(self.force_lock_stitches),
             lock_stitches=self.lock_stitches,
             stitches=guided_fill(
                 shape,
-                guide_line.geoms[0],
+                guide_line[0] if isinstance(guide_line, list) else guide_line.geoms[0],
                 self.angle,
                 self.row_spacing,
                 self.staggers,
@@ -1192,7 +1231,7 @@ class FillStitch(EmbroideryElement):
             color=self.color,
             tags=("meander_fill", "meander_fill_top"),
             stitches=meander_fill(self, shape, original_shape, i, starting_point, ending_point),
-            force_lock_stitches=self.force_lock_stitches,
+            force_lock_stitches=bool(self.force_lock_stitches),
             lock_stitches=self.lock_stitches
         )
         return [stitch_group]
@@ -1228,7 +1267,7 @@ class FillStitch(EmbroideryElement):
             color=self.color,
             tags=("circular_fill", "auto_fill_top"),
             stitches=stitches,
-            force_lock_stitches=self.force_lock_stitches,
+            force_lock_stitches=bool(self.force_lock_stitches),
             lock_stitches=self.lock_stitches
         )
         return [stitch_group]

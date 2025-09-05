@@ -9,7 +9,8 @@ from copy import copy
 from itertools import chain
 from typing import List, Optional, Tuple, cast
 
-from inkex import BaseElement, Group, Path, PathElement
+from inkex import BaseElement, Group, PathElement
+import inkex
 from networkx import MultiGraph, is_empty
 from shapely import (LineString, MultiLineString, MultiPolygon, Point, Polygon,
                      dwithin, minimum_bounding_radius, reverse)
@@ -510,16 +511,29 @@ class TartanSvgGroup:
         :param end: end position for routing
         :returns: an svg path element or None if the polygon is empty
         """
-        path = Path(list(polygon.exterior.coords))
-        path.close()
+        # Create path string manually since inkex.Path is not available  
+        coords = list(polygon.exterior.coords)
+        if coords:
+            path_data = f"M {coords[0][0]},{coords[0][1]}"
+            for x, y in coords[1:]:
+                path_data += f" L {x},{y}"
+            path_data += " Z"
+            path = path_data
+        else:
+            path = ""
 
         for interior in polygon.interiors:
-            interior_path = Path(list(interior.coords))
-            interior_path.close()
-            path += interior_path
+            # Create interior path string manually
+            interior_coords = list(interior.coords)
+            if interior_coords:
+                interior_path_data = f" M {interior_coords[0][0]},{interior_coords[0][1]}"
+                for x, y in interior_coords[1:]:
+                    interior_path_data += f" L {x},{y}"
+                interior_path_data += " Z"
+                path += interior_path_data
 
         path_element = PathElement(
-            attrib={'d': str(path)},
+            attrib={'d': path},
             style=f'fill:{color};fill-opacity:0.6;',
             transform=transform
         )
@@ -556,7 +570,15 @@ class TartanSvgGroup:
         :param travel: wether to render as travel line or running stitch/bean stitch
         :returns: an svg path element or None if the linestring path is empty
         """
-        path = str(Path(list(line.coords)))
+        # Create path string manually since inkex.Path is not available
+        coords = list(line.coords)
+        if coords:
+            path_data = f"M {coords[0][0]},{coords[0][1]}"
+            for x, y in coords[1:]:
+                path_data += f" L {x},{y}"
+            path = path_data
+        else:
+            path = ""
         if not path:
             return
 

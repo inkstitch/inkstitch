@@ -130,7 +130,8 @@ def realistic_stitch(start, end):
     )
 
     # create the path by filling in the length in the template, and transforming it as above
-    path = inkex.Path(stitch_path % stitch_length).transform(transform, True)
+    path_data = stitch_path % stitch_length
+    path = inkex.paths.Path(path_data).transform(transform)
 
     return str(path)
 
@@ -194,7 +195,7 @@ def color_block_to_paths(color_block, svg, destination, visual_commands, line_wi
             first = False
         elif visual_commands:
             add_commands(Stroke(destination[-1]), ["trim"])
-        else:
+        elif path is not None:
             path.set(INKSTITCH_ATTRIBS['trim_after'], 'true')
 
         color = color_block.color.visible_on_white.to_hex_str()

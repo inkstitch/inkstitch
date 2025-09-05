@@ -11,7 +11,8 @@ def get_join_style_args(element):
 
     args = {
         # mitre is the default per SVG spec
-        'join_style': JOIN_STYLE.mitre
+        'join_style': JOIN_STYLE.mitre,
+        'mitre_limit': 4.0  # Default SVG miter limit
     }
 
     element_join_style = element.get_style('stroke-linejoin')
