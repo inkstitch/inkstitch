@@ -14,9 +14,9 @@ Want to learn more?
 * Watch some [videos](https://inkstitch.org/tutorials/video/) of Ink/Stitch in action
 * ...and lots more on our [website](https://inkstitch.org)
 
-# Background and Philosophy
+## Background and Philosophy
 
-_by @lexelby, an Ink/Stitch programmer_
+* by @lexelby, an Ink/Stitch programmer
 
 I received a really wonderful christmas gift for a geeky programmer hacker: an embroidery machine.  It's pretty much a CNC thread-bot... I just had to figure out how to design programs for it.  The problem is, **all free embroidery design software seemed to be terrible**, especially when you add in the requirement of being able to run in Linux, my OS of choice.
 

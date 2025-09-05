@@ -17,7 +17,10 @@ def load_icon(icon_name, window=None, width=None, height=None):
 
     if not (width and height):
         render = wx.RendererNative.Get()
-        width = height = render.GetHeaderButtonHeight(window)
+        if window is not None:
+            width = height = render.GetHeaderButtonHeight(window)
+        else:
+            width = height = 16  # Default icon size
     icon.Rescale(width, height, wx.IMAGE_QUALITY_HIGH)
 
     if is_dark_theme():

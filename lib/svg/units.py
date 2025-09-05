@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import inkex
+from inkex.units import convert_unit
 
 from ..i18n import _
 from ..utils import cache
@@ -13,10 +14,23 @@ PIXELS_PER_MM = 96 / 25.4
 
 
 def parse_length_with_units(str):
-    value, unit = inkex.units.parse_unit(str)
-    if not unit:
+    # Use a simple approach to parse units - look for common unit suffixes
+    units = ['px', 'pt', 'pc', 'mm', 'cm', 'in', 'em', 'ex']
+    for unit in units:
+        if str.endswith(unit):
+            value_str = str[:-len(unit)]
+            try:
+                value = float(value_str)
+                return value, unit
+            except ValueError:
+                continue
+    
+    # If no unit found, assume pixels
+    try:
+        value = float(str)
+        return value, 'px'
+    except ValueError:
         raise ValueError(_("parseLengthWithUnits: unknown unit %s") % str)
-    return value, unit
 
     """
     '''
@@ -63,7 +77,7 @@ def parse_length_with_units(str):
 def convert_length(length):
     value, units = parse_length_with_units(length)
 
-    return inkex.units.convert_unit(str(value) + units, 'px')
+    return convert_unit(str(value) + units, 'px')
 
     """
     if not units or units == "px":

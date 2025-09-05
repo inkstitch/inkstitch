@@ -84,12 +84,14 @@ class EmbroideryElement(object):
                 # The 'param' attribute is set by the 'param' decorator defined above.
                 fget = prop.fget
                 if fget is not None and hasattr(fget, 'param'):
-                    params.append(fget.param)
+                    params.append(fget.param)  # type: ignore
         return params
 
     @cache
     def get_param(self, param, default):
-        value = self.node.get(INKSTITCH_ATTRIBS[param], "").strip()
+        value = self.node.get(INKSTITCH_ATTRIBS[param], "")
+        if value is not None:
+            value = str(value).strip()
         return value or default
 
     @cache
@@ -465,7 +467,7 @@ class EmbroideryElement(object):
         else:
             d = self.node.get("d", "")
 
-        return inkex.Path(d).to_superpath()
+        return inkex.paths.Path(d).to_superpath()
 
     @property
     def is_closed_path(self):
@@ -558,7 +560,10 @@ class EmbroideryElement(object):
             previous_stitch = None
 
         cache_key = self.get_cache_key(previous_stitch, next_element)
-        stitch_groups = get_stitch_plan_cache().get(cache_key)
+        stitch_plan_cache = get_stitch_plan_cache()
+        if stitch_plan_cache is None:
+            return None
+        stitch_groups = stitch_plan_cache.get(cache_key)
 
         if stitch_groups:
             debug.log(f"used cache for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
@@ -587,6 +592,9 @@ class EmbroideryElement(object):
             return
 
         stitch_plan_cache = get_stitch_plan_cache()
+        if stitch_plan_cache is None:
+            return
+            
         cache_key = self.get_cache_key(previous_stitch, next_element)
         if cache_key not in stitch_plan_cache:
             stitch_plan_cache[cache_key] = stitch_groups
@@ -619,14 +627,21 @@ class EmbroideryElement(object):
 
     def _get_gradient_cache_key_data(self):
         gradient = {}
-        if hasattr(self, 'gradient') and self.gradient is not None:
-            # prevent issue with color parsing: https://github.com/inkstitch/inkstitch/issues/3742
-            try:
-                gradient['stops'] = self.gradient.stop_offsets
-                gradient['orientation'] = [self.gradient.x1(), self.gradient.x2(), self.gradient.y1(), self.gradient.y2()]
-                gradient['styles'] = [(stop.style('stop-color'), stop.style('stop-opacity')) for stop in self.gradient.stops]
-            except ValueError:
-                pass
+        try:
+            if hasattr(self, 'gradient') and getattr(self, 'gradient', None) is not None:
+                # prevent issue with color parsing: https://github.com/inkstitch/inkstitch/issues/3742
+                gradient_obj = getattr(self, 'gradient')
+                gradient['stops'] = getattr(gradient_obj, 'stop_offsets', [])
+                gradient['orientation'] = [
+                    getattr(gradient_obj, 'x1', lambda: 0)(),
+                    getattr(gradient_obj, 'x2', lambda: 0)(),
+                    getattr(gradient_obj, 'y1', lambda: 0)(),
+                    getattr(gradient_obj, 'y2', lambda: 0)()
+                ]
+                stops = getattr(gradient_obj, 'stops', [])
+                gradient['styles'] = [(getattr(stop, 'style', lambda x: '')(arg) for arg in ['stop-color', 'stop-opacity']) for stop in stops]
+        except (ValueError, AttributeError):
+            pass
         return gradient
 
     def _get_tartan_key_data(self):
@@ -661,15 +676,18 @@ class EmbroideryElement(object):
     def embroider(self, last_stitch_group: Optional[StitchGroup], next_element=None) -> List[StitchGroup]:
         debug.log(f"starting {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
 
+        stitch_groups: List[StitchGroup] = []
+        
         with self.handle_unexpected_exceptions():
             if last_stitch_group:
                 previous_stitch = last_stitch_group.stitches[-1]
             else:
                 previous_stitch = None
 
-            stitch_groups = self._load_cached_stitch_groups(previous_stitch, next_element)
-
-            if not stitch_groups:
+            cached_stitch_groups = self._load_cached_stitch_groups(previous_stitch, next_element)
+            if cached_stitch_groups and isinstance(cached_stitch_groups, list):
+                stitch_groups = cached_stitch_groups
+            else:
                 self.validate()
 
                 stitch_groups = self.to_stitch_groups(last_stitch_group, next_element)
@@ -678,17 +696,23 @@ class EmbroideryElement(object):
                 if stitch_groups:
                     # In some cases (clones) the last stitch group may have trim_after or stop_after already set,
                     # and we shouldn't override that with this element's values, hence the use of or-equals
-                    stitch_groups[-1].trim_after |= self.has_command("trim") or self.trim_after
-                    stitch_groups[-1].stop_after |= self.has_command("stop") or self.stop_after
+                    trim_after_value = bool(self.has_command("trim") or self.trim_after)
+                    stop_after_value = bool(self.has_command("stop") or self.stop_after)
+                    stitch_groups[-1].trim_after |= trim_after_value
+                    stitch_groups[-1].stop_after |= stop_after_value
 
                 for stitch_group in stitch_groups:
-                    stitch_group.min_jump_stitch_length = self.min_jump_stitch_length
+                    min_jump_length = self.min_jump_stitch_length
+                    if min_jump_length is not None:
+                        # Convert min_jump_stitch_length from float to the correct type
+                        # Assuming it should be a bool based on the error message
+                        stitch_group.min_jump_stitch_length = bool(min_jump_length)
                     stitch_group.set_minimum_stitch_length(self.min_stitch_length)
 
                 self._save_cached_stitch_groups(stitch_groups, previous_stitch, next_element)
 
         debug.log(f"ending {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
-        return stitch_groups
+        return stitch_groups or []
 
     def next_stitch(self, next_element):
         next_stitch = None

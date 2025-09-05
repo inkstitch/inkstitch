@@ -48,7 +48,10 @@ def point_upwards(node: BaseElement) -> None:
     scale_factor = math.sqrt(2)/math.sqrt(scale_vector.real*scale_vector.real + scale_vector.imag*scale_vector.imag)
     compensation.add_scale(scale_factor, scale_factor)
 
-    node_correction = Transform().add_translate(float(node.get('x', 0)), float(node.get('y', 0)))
+    node_correction = Transform().add_translate(
+        float(node.get('x') or 0), 
+        float(node.get('y') or 0)
+    )
     node_correction @= compensation
     # Quick hack to compute the rotational angle - node_transform @ (1,0) = (a, b)
 

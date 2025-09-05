@@ -73,12 +73,21 @@ class CommandParseError(Exception):
 
 
 class BaseCommand(object):
+    def __init__(self):
+        self.symbol = None
+        self.command = None
+        
     @property
     @cache
     def description(self):
+        if self.command is None:
+            return ""
         return get_command_description(self.command)
 
     def parse_symbol(self):
+        if self.symbol is None:
+            raise CommandParseError("symbol not initialized")
+            
         if self.symbol.tag != SVG_SYMBOL_TAG:
             raise CommandParseError("use points to non-symbol")
 
@@ -104,21 +113,26 @@ class BaseCommand(object):
         id = url[1:]
 
         try:
-            return self.svg.xpath(".//*[@id='%s']" % id)[0]
+            svg = getattr(self, 'svg', None)
+            if svg is None:
+                raise CommandParseError("svg not initialized")
+            return svg.xpath(".//*[@id='%s']" % id)[0]
         except (IndexError, AttributeError):
             raise CommandParseError("could not find node by url %s" % id)
 
 
 class Command(BaseCommand):
     def __init__(self, connector: inkex.PathElement) -> None:
+        super().__init__()
         self.connector = connector
         self.svg = self.connector.getroottree().getroot()
 
         self.parse_command()
 
-    def parse_connector_path(self) -> inkex.Path:
-        path = inkex.paths.Path(self.connector.get('d')).to_superpath()
-        return apply_transforms(path, self.connector)
+    def parse_connector_path(self) -> inkex.paths.CubicSuperPath:
+        path = inkex.paths.Path(self.connector.get('d'))
+        transformed_path = apply_transforms(path, self.connector)
+        return transformed_path.to_superpath()
 
     def parse_command(self) -> None:
         path = self.parse_connector_path()
@@ -188,6 +202,7 @@ class Command(BaseCommand):
 
 class StandaloneCommand(BaseCommand):
     def __init__(self, use):
+        super().__init__()
         self.node = use
         self.svg = self.node.getroottree().getroot()
 
@@ -307,8 +322,10 @@ def is_command(node: inkex.BaseElement) -> bool:
 def is_command_symbol(node: inkex.BaseElement) -> bool:
     symbol = None
     xlink = node.get(XLINK_HREF, "")
-    if xlink.startswith("#inkstitch_"):
-        symbol = node.get(XLINK_HREF)[11:]
+    if xlink and xlink.startswith("#inkstitch_"):
+        symbol_href = node.get(XLINK_HREF)
+        if symbol_href:
+            symbol = symbol_href[11:]
     return symbol in COMMANDS
 
 
@@ -320,7 +337,7 @@ def symbols_path() -> str:
 @cache
 def symbols_svg() -> inkex.BaseElement:
     with open(symbols_path()) as symbols_file:
-        return inkex.load_svg(symbols_file).getroot()
+        return cast(inkex.BaseElement, inkex.load_svg(symbols_file).getroot())
 
 
 @cache
@@ -338,10 +355,12 @@ def ensure_symbol(svg, command) -> None:
     path = "./*[@id='inkstitch_%s']" % command
     defs = svg.defs
     if defs.find(path) is None:
-        symbol = deepcopy(symbol_defs().find(path))
-        symbol.transform = 'scale(0.25)'
-        symbol.style['opacity'] = 0.7
-        defs.append(symbol)
+        symbol_source = symbol_defs().find(path)
+        if symbol_source is not None:
+            symbol = deepcopy(symbol_source)
+            symbol.transform = 'scale(0.25)'
+            symbol.style['opacity'] = 0.7
+            defs.append(symbol)
 
 
 def ensure_command_symbols(group):
@@ -458,7 +477,7 @@ def add_commands(element, commands, pos=None):
         position = pos
         if position is None:
             if command in HIDDEN_CONNECTOR_COMMANDS:
-                position = get_command_pos(element, i, len(commands), 0.1)
+                position = get_command_pos(element, i, len(commands), int(0.1 * 10))  # Convert 0.1 to appropriate integer
             else:
                 position = get_command_pos(element, i, len(commands))
 
@@ -475,7 +494,7 @@ def add_layer_commands(layer, commands):
         # No layer selected while trying to include only layer commands: return a error message and exit
         # Since global and layer commands will not be inserted at the same time, we can check the first command only
         if commands[0] in LAYER_COMMANDS:
-            inkex.errormsg(_('Please select a layer to include layer commands.'))
+            inkex.utils.errormsg(_('Please select a layer to include layer commands.'))
             sys.exit(1)
 
         # global commands do not necesarrily need a layer

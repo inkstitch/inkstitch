@@ -46,7 +46,7 @@ class Clone(EmbroideryElement):
     @property
     @param('clone', _("Clone"), type='toggle', inverse=False, default=True)
     def clone(self) -> bool:
-        return self.get_boolean_param("clone", True)
+        return bool(self.get_boolean_param("clone", True))
 
     @property
     @param('angle',
@@ -56,7 +56,8 @@ class Clone(EmbroideryElement):
            type='float')
     @cache
     def clone_fill_angle(self) -> float:
-        return self.get_float_param('angle')
+        angle = self.get_float_param('angle')
+        return angle or 0.0
 
     @property
     @param('flip_angle',
@@ -67,10 +68,12 @@ class Clone(EmbroideryElement):
            default=False)
     @cache
     def flip_angle(self) -> bool:
-        return self.get_boolean_param('flip_angle', False)
+        return bool(self.get_boolean_param('flip_angle', False))
 
     def get_cache_key_data(self, previous_stitch: Any, next_element: EmbroideryElement) -> List[str]:
         source_node = self.node.href
+        if source_node is None:
+            return []
         source_elements = self.clone_to_elements(source_node)
         return [element.get_cache_key(previous_stitch, next_element) for element in source_elements]
 
@@ -187,7 +190,9 @@ class Clone(EmbroideryElement):
         parent.add(cloned_node)
         # The transform of a resolved clone is based on the clone's transform as well as the source element's transform.
         # This makes intuitive sense: The clone of a scaled item is also scaled, the clone of a rotated item is also rotated, etc.
-        clone_translate = Transform(f"translate({float(self.node.get('x', '0'))}, {float(self.node.get('y', '0'))})")
+        x = self.node.get('x', '0') or '0'
+        y = self.node.get('y', '0') or '0'
+        clone_translate = Transform(f"translate({float(x)}, {float(y)})")
 
         if cloned_node.tag == SVG_SYMBOL_TAG:
             for child in cloned_node:
@@ -224,6 +229,7 @@ class Clone(EmbroideryElement):
         """
         Adjust angles on a cloned tree based on their transform.
         """
+        angle_transform = transform
         if self.clone_fill_angle is None:
             # Strip out the translation component to simplify the fill vector rotation angle calculation:
             # Otherwise we'd have to calculate the transform of (0,0) and subtract it from the transform of (1,0)
@@ -241,9 +247,10 @@ class Clone(EmbroideryElement):
 
             # Normally, rotate the cloned element's angle by the clone's rotation.
             if self.clone_fill_angle is None:
-                element_angle = float(node.get(INKSTITCH_ATTRIBS['angle'], 0))
+                angle_value = node.get(INKSTITCH_ATTRIBS['angle'], 0) or 0
+                element_angle = float(angle_value)
                 # We have to negate the angle because SVG/Inkscape's definition of rotation is clockwise, while Inkstitch uses counter-clockwise
-                fill_vector = (angle_transform @ Transform(f"rotate(${-element_angle})")).apply_to_point((1, 0))
+                fill_vector = (angle_transform @ Transform(f"rotate({-element_angle})")).apply_to_point((1, 0))
                 # Same reason for negation here.
                 element_angle = -degrees(fill_vector.angle or 0)  # Fallback to 0 if an insane transform is used.
             else:  # If clone_fill_angle is specified, override the angle instead.
@@ -263,17 +270,24 @@ class Clone(EmbroideryElement):
         return MultiLineString(path[0])
 
     def center(self, source_node: BaseElement) -> Vector2d:
-        translate = Transform(f"translate({float(self.node.get('x', '0'))}, {float(self.node.get('y', '0'))})")
+        x = self.node.get('x', '0') or '0'
+        y = self.node.get('y', '0') or '0'
+        translate = Transform(f"translate({float(x)}, {float(y)})")
         parent = self.node.getparent()
         assert parent is not None, "This should be part of a tree and therefore have a parent"
         transform = get_node_transform(parent) @ translate
         center = self.node.bounding_box(transform).center
         return center
 
-    def validation_warnings(self) -> Generator[CloneWarning, Any, None]:
+    def validation_warnings(self):
+        warnings = []
         source_node = self.node.href
-        point = self.center(source_node)
-        yield CloneWarning(point)
+        if source_node is not None:
+            point = self.center(source_node)
+        else:
+            point = (0, 0)
+        warnings.append(CloneWarning(point))
+        return warnings
 
 
 def is_clone(node: BaseElement) -> bool:

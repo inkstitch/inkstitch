@@ -62,7 +62,12 @@ def cut_multiple(line, distances, normalized=False):
 
     for distance in distances:
         segment = segments.pop()
-        before, after = cut(segment, distance - distance_so_far, normalized)
+        cut_result = cut(segment, distance - distance_so_far, normalized)
+        
+        if cut_result is not None and len(cut_result) == 2:
+            before, after = cut_result
+        else:
+            before, after = None, segment
 
         segments.append(before)
 
@@ -91,13 +96,16 @@ def roll_linear_ring(ring, distance, normalized=False):
 
     pieces = cut(LinearRing(ring), distance, normalized=False)
 
-    if None in pieces:
+    if pieces is None or None in pieces:
         # We cut exactly at the start or end.
         return ring
 
     # The first and last point in a linear ring are duplicated, so we omit one
     # copy
-    return LinearRing(pieces[1].coords[:] + pieces[0].coords[1:])
+    if pieces[0] is not None and pieces[1] is not None:
+        return LinearRing(pieces[1].coords[:] + pieces[0].coords[1:])
+    else:
+        return ring
 
 
 def reverse_line_string(line_string):
@@ -207,9 +215,17 @@ def cut_path(points, length):
         return points
 
     path = LineString(points)
-    subpath, rest = cut(path, length)
-
-    return [Point(*point) for point in subpath.coords]
+    cut_result = cut(path, length)
+    
+    if cut_result is not None and len(cut_result) == 2:
+        subpath, rest = cut_result
+    else:
+        subpath = path
+    
+    if subpath is not None:
+        return [Point(*point) for point in subpath.coords]
+    else:
+        return points
 
 
 def offset_points(pos1, pos2, offset_px, offset_proportional):

@@ -30,7 +30,7 @@ class ValidationMessage(object):
         if isinstance(position, ShapelyPoint):
             position = (position.x, position.y)
 
-        self.position = InkstitchPoint(*position)
+        self.position = InkstitchPoint(*position) if position is not None else None
         self.label = label
 
 

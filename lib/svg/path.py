@@ -9,7 +9,7 @@ from .tags import SVG_GROUP_TAG, SVG_LINK_TAG
 from .units import get_viewbox_transform
 
 
-def apply_transforms(path: inkex.Path, node: inkex.BaseElement) -> inkex.Path:
+def apply_transforms(path, node: inkex.BaseElement):
     transform = get_node_transform(node)
 
     # apply the combined transform to this node's path

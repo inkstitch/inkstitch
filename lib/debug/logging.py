@@ -108,8 +108,8 @@ def activate_for_frozen():
         # The end user enabled logging and warnings are redirected to the input_svg.inkstitch.log file.
 
         vars = {
-            'loglevel': loglevel.upper(),
-            'logfilename': Path(docpath).with_suffix('.inkstitch.log')  # log file is created in document path
+            'loglevel': loglevel.upper() if loglevel else 'INFO',
+            'logfilename': Path(docpath).with_suffix('.inkstitch.log') if docpath else Path('inkstitch.log')  # log file is created in document path
         }
         config = expand_variables(frozen_config, vars)
 
@@ -142,7 +142,7 @@ def activate_for_development(ini: dict, SCRIPTDIR: Path):
     logging_config_file = safe_get(ini, "LOGGING", "log_config_file", default=None)
     vars: Dict[str, Any] = {'SCRIPTDIR': SCRIPTDIR}        # dynamic data for logging configuration
 
-    if logging_config_file is not None:
+    if logging_config_file is not None and isinstance(logging_config_file, (str, Path)):
         logging_config_file = Path(logging_config_file)
         if logging_config_file.exists():
             with open(logging_config_file, "rb") as f:

@@ -41,8 +41,12 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict):
 
     # define names of files used by offline Bash script
     bash_file_base = safe_get(ini, "DEBUG", "bash_file_base", default="debug_inkstitch")
-    bash_name = Path(bash_file_base).with_suffix(".sh")  # Path object
-    bash_svg = Path(bash_file_base).with_suffix(".svg")  # Path object
+    if bash_file_base and isinstance(bash_file_base, str):
+        bash_name = Path(bash_file_base).with_suffix(".sh")  # Path object
+        bash_svg = Path(bash_file_base).with_suffix(".svg")  # Path object
+    else:
+        bash_name = Path("debug_inkstitch.sh")
+        bash_svg = Path("debug_inkstitch.svg")
 
     # check if input svg file exists in arguments, take argument that not start with '-' as file name
     svgs = [arg for arg in sys.argv[1:] if not arg.startswith('-')]
@@ -207,7 +211,10 @@ def profile(profiler_type, profile_dir: Path, ini: dict, extension, remaining_ar
     profile with cProfile, profile or pyinstrument
     '''
     profile_file_base = safe_get(ini, "PROFILE", "profile_file_base", default="debug_profile")
-    profile_file_path = profile_dir / profile_file_base  # Path object
+    if profile_file_base and isinstance(profile_file_base, str):
+        profile_file_path = profile_dir / profile_file_base  # Path object
+    else:
+        profile_file_path = profile_dir / "debug_profile"  # Path object
 
     # create directory if not exists
     dirname = profile_file_path.parent

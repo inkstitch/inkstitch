@@ -88,6 +88,9 @@ class ThreadPalette(Set):
         if isinstance(color, ThreadColor):
             color = color.rgb
 
+        if color is None:
+            color = (0, 0, 0)  # Default to black if color is None
+            
         color = convert_color(sRGBColor(*color, is_upscaled=True), LabColor)
 
         return min(self, key=lambda thread: compare_thread_colors(self.threads[thread], color))

@@ -101,11 +101,19 @@ class ThreadColor(object):
 
     @property
     def hex_digits(self):
-        return "%02X%02X%02X" % tuple([int(x) for x in self.rgb])
+        if self.rgb is None:
+            rgb = (0, 0, 0)
+        else:
+            rgb = self.rgb
+        return "%02X%02X%02X" % tuple([int(x) for x in rgb])
 
     @property
     def rgb_normalized(self):
-        return tuple(channel / 255.0 for channel in self.rgb)
+        if self.rgb is None:
+            rgb = (0, 0, 0)
+        else:
+            rgb = self.rgb
+        return tuple(channel / 255.0 for channel in rgb)
 
     @property
     def font_color(self):

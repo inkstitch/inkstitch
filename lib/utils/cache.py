@@ -39,14 +39,14 @@ def get_stitch_plan_cache():
             if os.path.exists(cache_file):
                 os.remove(cache_file)
                 __stitch_plan_cache = diskcache.Cache(stitch_plan_dir, size=size_limit)
-        __stitch_plan_cache.size_limit = size_limit
 
         # reset cache if warnings appear within the files
-        warnings = __stitch_plan_cache.check()
-        if warnings:
-            __stitch_plan_cache.clear()
+        if __stitch_plan_cache is not None:
+            warnings = __stitch_plan_cache.check()
+            if warnings:
+                __stitch_plan_cache.clear()
 
-        atexit.register(__stitch_plan_cache.close)
+            atexit.register(__stitch_plan_cache.close)
     return __stitch_plan_cache
 
 

@@ -3,7 +3,7 @@ from math import ceil
 
 import inkex
 import json
-import lxml
+from lxml import etree
 import networkx as nx
 from shapely.geometry import LineString, MultiLineString
 from shapely.prepared import prep
@@ -79,8 +79,10 @@ class Tile:
             self.shift0 = points[1] - points[0]
             self.shift1 = points[2] - points[1]
         else:
-            self.shift0 = Point(self.width, 0)
-            self.shift1 = Point(0, self.height)
+            width = self.width if self.width is not None else 0
+            height = self.height if self.height is not None else 0
+            self.shift0 = Point(width, 0)
+            self.shift1 = Point(0, height)
 
     def _path_elements_to_line_strings(self, path_elements):
         lines = []
@@ -112,14 +114,18 @@ class Tile:
         return translated_tile
 
     def _scale_and_rotate(self, x_scale, y_scale, angle):
+        if self.shift0 is None or self.shift1 is None:
+            return Point(0, 0), Point(0, 0), []
+            
         transformed_shift0 = self.shift0.scale(x_scale, y_scale).rotate(angle)
         transformed_shift1 = self.shift1.scale(x_scale, y_scale).rotate(angle)
 
         transformed_tile = []
-        for start, end in self.tile:
-            start = start.scale(x_scale, y_scale).rotate(angle)
-            end = end.scale(x_scale, y_scale).rotate(angle)
-            transformed_tile.append((start, end))
+        if self.tile is not None:
+            for start, end in self.tile:
+                start = start.scale(x_scale, y_scale).rotate(angle)
+                end = end.scale(x_scale, y_scale).rotate(angle)
+                transformed_tile.append((start, end))
 
         return transformed_shift0, transformed_shift1, transformed_tile
 
@@ -199,7 +205,7 @@ def all_tiles():
             for tile_dir in sorted(os.listdir(tiles_path)):
                 try:
                     tiles.append(Tile(os.path.join(tiles_path, tile_dir)))
-                except (OSError, lxml.etree.XMLSyntaxError, json.JSONDecodeError, KeyError) as exc:
+                except (OSError, etree.XMLSyntaxError, json.JSONDecodeError, KeyError) as exc:
                     debug.log(f"error loading tile {tiles_path}/{tile_dir}: {exc}")
                 except Exception as exc:
                     debug.log(f"unexpected error loading tile {tiles_path}/{tile_dir}: {exc}")

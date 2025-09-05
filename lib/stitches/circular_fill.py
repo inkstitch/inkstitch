@@ -40,8 +40,8 @@ def circular_fill(shape,
 
     if radius > distance:
         # if the shape is smaller than row_spacing, return a simple circle in the size of row_spacing
-        stitches = even_running_stitch([Stitch(*point) for point in center.buffer(radius).exterior.coords],
-                                       running_stitch_length, running_stitch_tolerance)
+        points = [Stitch(point[0], point[1]) for point in center.buffer(radius).exterior.coords]
+        stitches = even_running_stitch(points, running_stitch_length, running_stitch_tolerance)
         return _apply_bean_stitch_and_repeats(stitches, repeats, bean_stitch_repeats)
 
     circles = []
@@ -66,7 +66,7 @@ def circular_fill(shape,
         # if we get a single linestrig (original shape is a circle), apply start and end commands and return path
         path = list(intersection.coords)
         path = _apply_start_end_commands(shape, path, starting_point, ending_point)
-        stitches = running_stitch([Stitch(*point) for point in path],
+        stitches = running_stitch([Stitch(point[0], point[1]) for point in path],
                                   running_stitch_length,
                                   running_stitch_tolerance,
                                   enable_random_stitch_length,
@@ -84,7 +84,8 @@ def circular_fill(shape,
                                     enable_random_stitch_length,
                                     running_stitch_length_jitter,
                                     prng.join_args(random_seed, n))
-            segments.append([(point.x, point.y) for point in coords])
+            if coords:
+                segments.append([(point.x, point.y) for point in coords])
 
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
@@ -152,7 +153,7 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, running_stitc
             if edge[0] != path_geometry.coords[0]:
                 path_geometry = reverse_line_string(path_geometry)
 
-            new_stitches = [Stitch(*point) for point in path_geometry.coords]
+            new_stitches = [Stitch(point[0], point[1]) for point in path_geometry.coords]
 
             # need to tag stitches
             if skip_last:

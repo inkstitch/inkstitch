@@ -78,16 +78,16 @@ else:
 
 # initialize debug and profiler type
 debug_active = bool((gettrace := getattr(sys, 'gettrace')) and gettrace())  # check if debugger is active on startup
-debug_type = 'none'
-profiler_type = 'none'
+debug_type: str = 'none'
+profiler_type: str = 'none'
 
 if not running_as_frozen:  # debugging/profiling only in development mode
     # specify debugger type
     #   but if script was already started from debugger then don't read debug type from ini file or cmd line
     if not debug_active:
-        debug_type = debug_utils.resolve_debug_type(ini)  # read debug type from ini file or cmd line
+        debug_type = str(debug_utils.resolve_debug_type(ini))  # read debug type from ini file or cmd line
 
-    profiler_type = debug_utils.resolve_profiler_type(ini)  # read profile type from ini file or cmd line
+    profiler_type = str(debug_utils.resolve_profiler_type(ini))  # read profile type from ini file or cmd line
 
     if running_from_inkscape:
         # process creation of the Bash script - should be done before sys.path is modified, see below in prefer_pip_inkex
@@ -155,7 +155,7 @@ if debug_active or profiler_type != "none":  # if debug or profile mode
 
 else:   # if not debug nor profile mode
     from lib.exceptions import InkstitchException, format_uncaught_exception
-    from inkex import errormsg  # to show error message in inkscape
+    from inkex.utils import errormsg  # to show error message in inkscape
     from lxml.etree import XMLSyntaxError  # to catch XMLSyntaxError from inkex
     from lib.i18n import _      # see gettext translation function _()
     from lib.utils import restore_stderr, save_stderr  # to hide GTK spam

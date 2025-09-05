@@ -165,13 +165,14 @@ class Debug(object):
     # decorator to measure time of function
     def time(self, func):
         def decorated(*args, **kwargs):
+            start = None
             if self.enabled:
                 self.raw_log("entering %s()", func.__name__)
                 start = time.monotonic()
 
             result = func(*args, **kwargs)
 
-            if self.enabled:
+            if self.enabled and start is not None:
                 end = time.monotonic()
                 self.raw_log("leaving %s(), duration = %s", func.__name__, round(end - start, 6))
 
@@ -187,7 +188,7 @@ class Debug(object):
 
         if self.group_stack:
             self.group_stack[-1].append(element)
-        else:
+        elif self.current_layer is not None:
             self.current_layer.append(element)
 
     @check_enabled
@@ -243,13 +244,14 @@ class Debug(object):
     # decorator to measure time of with block
     @contextmanager
     def time_this(self, label="code block"):
+        start = None
         if self.enabled:
             start = time.monotonic()
             self.raw_log("begin %s", label)
 
         yield
 
-        if self.enabled:
+        if self.enabled and start is not None:
             self.raw_log("completed %s, duration = %s", label, time.monotonic() - start)
 
     def log_exception(self):

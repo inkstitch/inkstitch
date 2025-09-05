@@ -170,13 +170,13 @@ def cut_segment_with_circle(origin: Point, r: float, a: Point, b: Point) -> Poin
     # assumes that a is inside the circle and b is outside
     p = a - origin
     d = b - a
-    # inner products
-    p2 = p * p
-    d2 = d * d
+    # inner products - Point * Point should return float (dot product)
+    p2 = p * p  # type: ignore
+    d2 = d * d  # type: ignore
     r2 = r * r
-    pd = p * d
+    pd = p * d  # type: ignore
     # r2 = p2 + 2*pd*t + d2*t*t, quadratic formula
-    t = (math.sqrt(pd*pd + r2*d2 - p2*d2) - pd) / d2
+    t = (math.sqrt(pd*pd + r2*d2 - p2*d2) - pd) / d2  # type: ignore
     if t < -0.000001 or t > 1.000001:
         raise Exception("cut_segment_with_circle returned a parameter of {0}".format(t))
     return a + d*t
@@ -194,19 +194,23 @@ def take_stitch(start: Point, points: typing.Sequence[Point], idx: int, stitch_l
     last = start
     for i in range(idx, len(points)):
         p = points[i]
-        if sleeve.containsPoint(p - start):
+        if sleeve and sleeve.containsPoint(p - start):
             if start.distance(p) < stitch_length:
-                sleeve = sleeve.intersect(AngleInterval.fromBall(p - start, tolerance))
+                new_sleeve = sleeve.intersect(AngleInterval.fromBall(p - start, tolerance))
+                if new_sleeve is not None:
+                    sleeve = new_sleeve
                 last = p
                 continue
             else:
                 cut = cut_segment_with_circle(start, stitch_length, last, p)
                 return cut, i
         else:
-            cut = sleeve.cutSegment(start, last, p)
-            if start.distance(cut) > stitch_length:
-                cut = cut_segment_with_circle(start, stitch_length, last, p)
-            return cut, i
+            if sleeve:
+                cut = sleeve.cutSegment(start, last, p)
+                if cut is not None:
+                    if start.distance(cut) > stitch_length:
+                        cut = cut_segment_with_circle(start, stitch_length, last, p)
+                    return cut, i
     return points[-1], None
 
 
@@ -281,18 +285,23 @@ def path_to_curves(points: typing.List[Point], min_len: float):
         # vectors of the last and next segments
         a = last_seg
         b = points[i + 1] - points[i]
-        aabb = (a * a) * (b * b)
-        abab = (a * b) * abs(a * b)
+        
+        # Point * Point returns a float (dot product according to Point.__mul__)
+        # But type checker doesn't know this, so we handle it with type: ignore
+        aabb = (a * a) * (b * b)  # type: ignore
+        ab_dot = a * b  # type: ignore
+        abab = ab_dot * abs(ab_dot)  # type: ignore
 
         # Test if the turn angle from vectors a to b is more than 45 degrees.
         # Optimized version of checking if cos(angle(a,b)) <= sqrt(0.5) and is defined
-        if aabb > 0 and abab <= 0.5 * aabb:
+        if aabb > 0 and abab <= 0.5 * aabb:  # type: ignore
             if seg_len >= min_len:
                 curves.append(points[last: i + 1])
                 last = i
             seg_len = 0
 
-        if b * b > 0:
+        b_dot = b * b  # type: ignore
+        if b_dot > 0:  # type: ignore
             last_seg = b
         seg_len += b.length()
 

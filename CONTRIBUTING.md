@@ -1,3 +1,5 @@
+# Contributing
+
 We're so happy you're interested in contributing to Ink/Stitch!  There's a lot that we need help with for people with all skill levels and backgrounds.
 
 Before you contribute, **please have a look at our [code of conduct](CODE_OF_CONDUCT.md)**.  Thanks!

@@ -126,8 +126,12 @@ def _get_lines(fill, shape, bounding_box, angle):
     for i, line in enumerate(lines):
         if fill.enable_random_stitch_length:
             points = [InkstitchPoint(*x) for x in line]
-            staggered_line = LineString(random_running_stitch(
-                points, fill.max_stitch_length, fill.running_stitch_tolerance, fill.random_stitch_length_jitter, prng.join_args(fill.random_seed, i)))
+            random_points = random_running_stitch(
+                points, fill.max_stitch_length, fill.running_stitch_tolerance, fill.random_stitch_length_jitter, prng.join_args(fill.random_seed, i))
+            if random_points:
+                staggered_line = LineString([(p.x, p.y) for p in random_points])
+            else:
+                staggered_line = LineString(line)
         else:
             staggered_line = apply_stitches(LineString(line), fill.max_stitch_length, fill.staggers, fill.row_spacing, i)
         staggered_lines.append(staggered_line)
@@ -246,7 +250,10 @@ def _get_color_lines(lines, colors, stop_color_line_indices):
         check_stop_flag()
 
     # add left over lines to last color
-    color_lines[color].extend(lines[prev+1:])
+    if prev is not None and len(colors) > 0:
+        last_color = colors[-1]  # Get the last color from the colors list
+        if last_color in color_lines and prev + 1 < len(lines):
+            color_lines[last_color].extend(lines[prev+1:])
 
     # remove transparent colors (we just want a gap)
     color_lines.pop('none', None)
@@ -259,6 +266,7 @@ def _get_color_lines(lines, colors, stop_color_line_indices):
 
 
 def _add_lines(current_line, total_lines, line_count_diff, color1, color2, stop, rest, c1_count, c2_count, max_count):
+    count = 0  # Initialize count
     for j in range(c2_count):
         if stop:
             break
@@ -280,8 +288,7 @@ def _add_lines(current_line, total_lines, line_count_diff, color1, color2, stop,
                 break
         color2.append(current_line)
         current_line += 1
-    max_count = count
-    return current_line, line_count_diff, color1, color2, max_count, stop
+    return current_line, line_count_diff, color1, color2, count, stop
 
 
 def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_point):

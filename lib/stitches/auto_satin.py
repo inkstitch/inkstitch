@@ -61,7 +61,7 @@ class SatinSegment(object):
         self.start = self._parse_init_param(start)
         self.end = self._parse_init_param(end)
 
-        if self.start > self.end:
+        if self.start is not None and self.end is not None and self.start > self.end:
             self.end, self.start = self.start, self.end
             self.reverse = True
 
@@ -69,22 +69,31 @@ class SatinSegment(object):
         if isinstance(param, (float, int)):
             return param
         elif isinstance(param, (tuple, InkstitchPoint, ShapelyPoint)):
-            return self.satin.center.project(ShapelyPoint(param), normalized=True)
+            if isinstance(param, InkstitchPoint):
+                point_coords = (param.x, param.y)
+            elif isinstance(param, tuple):
+                point_coords = param
+            else:  # ShapelyPoint
+                point_coords = (param.x, param.y)
+            return self.satin.center.project(ShapelyPoint(point_coords), normalized=True)
+        return None
 
     def to_satin(self):
         satin = self.satin
+        start = None
+        end = None
 
         # get cut points before actually cutting the satin to avoid
         # rounding errors which may produce gaps in between the satins
-        if self.start > 0.0:
+        if self.start is not None and self.start > 0.0:
             start = satin.find_cut_points(self.start)
-        if self.end < 1.0:
+        if self.end is not None and self.end < 1.0:
             end = satin.find_cut_points(self.end)
 
         # cut satin
-        if self.start > 0.0:
+        if self.start is not None and self.start > 0.0 and start is not None:
             before, satin = satin.split(None, cut_points=start)
-        if self.end < 1.0:
+        if self.end is not None and self.end < 1.0 and end is not None:
             satin, after = satin.split(None, cut_points=end)
 
         # the cut operation can lead to a NoneType element
@@ -128,18 +137,23 @@ class SatinSegment(object):
 
     def reversed(self):
         """Return a copy of this SatinSegment in the opposite direction."""
-        return SatinSegment(self.satin, self.start, self.end, not self.reverse)
+        start = self.start if self.start is not None else 0.0
+        end = self.end if self.end is not None else 1.0
+        return SatinSegment(self.satin, start, end, not self.reverse)
 
     @property
     def center_line(self):
         center_line = self.satin.center_line
 
-        if self.start < 1.0:
-            before, center_line = cut(center_line, self.start, normalized=True)
+        if self.start is not None and self.start < 1.0:
+            cut_result = cut(center_line, self.start, normalized=True)
+            if cut_result is not None:
+                before, center_line = cut_result
 
-        if self.end > 0.0:
-            center_line, after = cut(
-                center_line, (self.end - self.start) / (1.0 - self.start), normalized=True)
+        if self.end is not None and self.end > 0.0 and self.start is not None:
+            cut_result = cut(center_line, (self.end - self.start) / (1.0 - self.start), normalized=True)
+            if cut_result is not None:
+                center_line, after = cut_result
 
         if self.reverse:
             center_line = shgeo.LineString(reversed(center_line.coords))
@@ -184,9 +198,13 @@ class SatinSegment(object):
         undefined behavior.
         """
         if self.reverse:
-            return SatinSegment(self.satin, other.start, self.end, reverse=True)
+            start = other.start if other.start is not None else 0.0
+            end = self.end if self.end is not None else 1.0
+            return SatinSegment(self.satin, start, end, reverse=True)
         else:
-            return SatinSegment(self.satin, self.start, other.end)
+            start = self.start if self.start is not None else 0.0
+            end = other.end if other.end is not None else 1.0
+            return SatinSegment(self.satin, start, end)
 
     def __eq__(self, other):
         # Two SatinSegments are equal if they refer to the same section of the same
@@ -249,13 +267,18 @@ class RunningStitch(object):
             self.path = set_precision(path_or_stroke, 0.00001)
 
         self.original_element = original_element
-        self.running_stitch_length = \
-            original_element.node.get(INKSTITCH_ATTRIBS['running_stitch_length_mm'], '') or \
-            original_element.node.get(INKSTITCH_ATTRIBS['center_walk_underlay_stitch_length_mm'], '') or \
-            original_element.node.get(INKSTITCH_ATTRIBS['contour_underlay_stitch_length_mm'], '')
+        if original_element and hasattr(original_element, 'node') and original_element.node:
+            self.running_stitch_length = \
+                original_element.node.get(INKSTITCH_ATTRIBS['running_stitch_length_mm'], '') or \
+                original_element.node.get(INKSTITCH_ATTRIBS['center_walk_underlay_stitch_length_mm'], '') or \
+                original_element.node.get(INKSTITCH_ATTRIBS['contour_underlay_stitch_length_mm'], '')
 
-        self.min_jump_stitch_length = original_element.node.get('inkstitch:min_jump_stitch_length_mm', None)
-        self.bean_stitch_repeats = original_element.node.get('inkstitch:bean_stitch_repeats', None)
+            self.min_jump_stitch_length = original_element.node.get('inkstitch:min_jump_stitch_length_mm', None)
+            self.bean_stitch_repeats = original_element.node.get('inkstitch:bean_stitch_repeats', None)
+        else:
+            self.running_stitch_length = ''
+            self.min_jump_stitch_length = None
+            self.bean_stitch_repeats = None
 
     def to_element(self):
         node = inkex.PathElement()
@@ -264,7 +287,10 @@ class RunningStitch(object):
 
         stroke_width = convert_stroke_width(self.original_element)
         dasharray = inkex.Style(f"fill:none;stroke-width:{stroke_width};stroke-dasharray:1,0.2;")
-        style = inkex.Style(self.original_element.node.get('style', '')) + dasharray
+        if self.original_element and hasattr(self.original_element, 'node') and self.original_element.node:
+            style = inkex.Style(self.original_element.node.get('style', '')) + dasharray
+        else:
+            style = dasharray
         node.set("style", str(style))
         if self.running_stitch_length != '':
             node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.running_stitch_length)
@@ -289,7 +315,9 @@ class RunningStitch(object):
 
     @property
     def original_node(self):
-        return self.original_element.node
+        if self.original_element and hasattr(self.original_element, 'node'):
+            return self.original_element.node
+        return None
 
     @cache
     def reversed(self):
@@ -563,7 +591,11 @@ def operations_to_elements_and_trims(operations, preserve_order):
             if not element:
                 continue
             elements.append(element)
-            original_parent_nodes.append(operation.original_node.getparent())
+            original_node = operation.original_node
+            if original_node and hasattr(original_node, 'getparent'):
+                original_parent_nodes.append(original_node.getparent())
+            else:
+                original_parent_nodes.append(None)
         elif isinstance(operation, (JumpStitch)):
             if elements and operation.should_trim():
                 trims.append(len(elements) - 1)
@@ -635,6 +667,8 @@ def add_trims(elements, trim_indices):
     new_elements = []
     just_trimmed = False
     just_removed = False
+    i = -1
+    element = None
 
     for i, element in enumerate(elements):
         if just_trimmed and isinstance(element, Stroke):
@@ -652,7 +686,7 @@ def add_trims(elements, trim_indices):
         just_removed = False
 
     # trim at the end, too
-    if i not in trim_indices and not just_removed:
+    if element is not None and i not in trim_indices and not just_removed:
         add_commands(element, ["trim"])
 
     return new_elements
