@@ -2,7 +2,7 @@
 permalink: /de/tutorials/font-creation/
 title: "Schriftarten für Ink/Stitch erstellen"
 language: de
-last_modified_at: 2025-08-20
+last_modified_at: 2025-09-06
 excerpt: "Erstelle neue Schriftarten für Ink/Stitch"
 image: "/assets/images/tutorials/font_creation_complement/multifont3.jpg"
 tutorial-type: 
@@ -20,317 +20,326 @@ toc: true
 -->
 
 
-**Warning** :
-Some of the tools used here are not part of Ink/Stitch 3.2.2. 
-This text is rather long, but it is best to read it entirely before diving into font creation.
+**Warnung** :
+Manche dieser Werkzeuge die hier genutzt werden, sind noch nicht in Ink/Stitch 3.2.2.
+Dieser Text ist sehr lang, aber wir empfehlen ihn einmal komplett zu lesen, bevor mit der Schrifterstellung begonnen wird.
 {: .notice--warning }
 
-The goal of this tutorial is to help you create a font usable with the Ink/Stitch lettering module starting from a ttf or otf font file. 
-In addition to the list of all steps, additional information are given to help you understand what is to be done and why.
+Das Ziel dieses Tutorials ist es, aus einer ttf oder otf Schriftdatei eine Schrift zu erstellen, die mit dem Ink/Stitch Textwerkzeug genutzt werden kann.
 
-## What is a font for Ink/Stitch lettering?
+Der Text enthält nicht nur eine Liste aller benötigten Schritte, sondern versucht auch ein tieferes Verständnis über das Warum zu vermitteln.
 
-The files that make up a lettering font are grouped in a font-specific folder, which resides in the Ink/Stitch fonts folder (for official Ink/Stitch fonts) or in your [personal font directory](fr/docs/font-tools/#custom-font-directory) for your personal fonts.
+## Ink/Stitch Schriften - Grundlagen
 
-Each font folder must contain at least two files:
-- a font.json file that contains the font's characteristics.
-- at least one glyph layer svg file,that contains one layer per glyph.
-Most fonts in the lettering module are defined using a single glyph layer file, named →.svg.
+Die Dateien die eine Schriftart ausmachen sind in einem speziellen Ordner gespeichert. Der Ordner befindet sich entweder im offiziellen Ordner für Ink/Stitch Schriften (Achtung bei Updates!) oder in einem [benutzerdefinierten Schriftenorder](/de/docs/font-tools/#benutzerdefinierter-ordner-für-schriften) für persönliche Schriftarten.
 
-This →.svg file is intended for left to right embroidery (the direction of the arrow).
+Jeder Schriftartenordner muss mindestens zwei Dateien enthalten:
+* `font.json`: die Datei enthält Schriftinformationen
+* mindestens eine SVG-Datei, die für jedes digitalisirte Zeichen eine Glyphen-Ebene enthält
 
-The glyphs of an Arabic or Hebrew lettering font are defined in a ←.svg file.
+Die meisten Schriften im Schriftmodul nutzen eine einzige SVG-Datei mit dem Namen `→.svg`
 
-Some fonts, such as Déja vu, contain both →.svg and ←.svg files. In this case, a multi-line text can be stitched back and forth: 
-in the →.svg file, a letter is stitched from left to right, while in the ←.svg file, it is stitched from right to left. 
-The lettering module will alternately use the two files on the different lines that make up a text.
+Diese `→.svg`-Datei ist für die Stickrichtung von links nach rechts digitalisiert (die Richtung des Pfeils).
 
-These names are mandatory... unless the font contains a large number of glyphs, in which case, for a left to right font, 
-you can distribute your glyphs across several svg files (there are no naming restrictions for these files) and regroup them together in a folder that must be named →.
+Die Zeichen für arabische oder hebräische Schriften befinden sich in einer Datei mit dem Namen `←.svg`.
 
-The font folders in the lettering module also include:
-- a preview.png file ( 15:1 format, usually 300x20 px) containing the embroidered preview of the font name that appears in the lettering dialog.
-- a LICENSE file, which provides information about the font's LICENSE. For an embroidery font created from a TTF, OTF, or other font format to be legally integrated into the lettering module, the original font's license must allow it. Please note that so-called commercial licenses generally do not allow integration into Ink/Stitch.
+Manche Schriften, so wie beispielsweise Déja vu, enthalten beide Dateien `→.svg` und `←.svg`. Dies ist praktisch für mehrzeiligen Text, so kann dieser vor und zurück gestickt werden:
+in der Datei `→.svg` sind die Buchstaben von lins nach rechts digitalisiert, in der Datei `←.svg` von rechts nach links.
+Das Textwerkzeug wird beide Dateien für jede Textzeile abwechselnd nutzen und so die Sprungstiche zwischen den Zeilen minimieren.
 
-## Font Choice
-The choice of font and its size depend primarily on the type of font you wish to create: satin, running stitch, fill, or appliqué... 
-A satin column can be neither too narrow (at least 1.5 mm wide is nice) nor too wide (more than 7 mm wide and there is a risk of brittleness, 
-and beyond 12 mm many machines are unable to handle it). Therefore, letters with highly variable line thickness will be difficult to process as satin columns only. 
-Serif fonts are more difficult to digitize than sans-serif fonts. For an appliqué font, on the other hand, you should look for a fairly wide font. The main factor in your choice, however, remains your interest in the font.
+Diese Namen sind obligatorisch... es sei denn, es handelt sich um eine sehr große Anzahl an Schriftzeichen. In diesem Fall kann die Schrift in mehrere Dateien aufgespalten werden. Diese Dateien haben keine Bestimmung dafür, wie sie genannt werden müssen, aber sie müssen zusammen in einem Unterordner platziert werden, der nach der Stickrichtung benannt ist. Für Schriftzeichen, die von links nach rechts digitalisiert wurden, trägt der Ordner den Namen `→`.
 
-Symmetrically, if you are set on a particular font, the shape of the letters must be taken into account when choosing embroidery settings.
+Außerdem enthalten die Schriftarten-Ordner:
+* `preview.png`: ein Vorschaubild mit dem Schriftnamen das im Textwerkzeug angezeigt wird (das Format ist 15:1, normalerweise 300x20px)
+* `LICENSE` mit Informationen über die Schriftarten-Lizenz. Damit eine Schrift auch offiziell in das Ink/Stitch Schriftmodul aufgenommen werden kann, muss bei der Erstellung einer Schriftart aus einer anderen Datei (z.B. TTF, OTF) die Originallizent die Weiterverarbeitung und Nuzung auch erlauben. Nutze bitte keine sogenannten kommerziellen Lizenzen, da sie in der Regel die integration in Ink/Stitch untersagen.
 
-## Creating the Glyph File
+## Eine Schriftart auswählen
 
-In addition to respecting naming conventions, any glyph file must:
-- Contain one layer per glyph, and the layer containing glyph A must be named GlyphLayer-A.
-- A guide named "baseline," which corresponds to the line being written on. Ink/Stitch needs this guide for lettering along a path to work correctly.
-- It may contain other elements.
+Die Wahl der Schrift und der Schriftgröße hängt maßgeblich von dem Stickstil ab, der angewendet werden soll: Satin, Geradstich, Füllung, Applikation...
 
+Eine Satinsäule darf nicht zu schmal (mindestens 1,5mm wären gut), aber auch nicht zu breit sein (bei mehr als 7mm wird das Gestickte zu locker und mehr als 12mm können viele Maschinen nicht sticken).
+Daher können Schriftarten mit einer sehr variablen Linienbreite nur schwer als reine Satinsäulen verarbeitet werden.
+Serifen-Schriften sind generell schwieriger zu digitalisieren als serifenlose Schriten. Für eine Applikations-Schrift sollte eine sehr breite Schriftart gewählt werden. Der Hauptfaktor für die Wahl der Schriftart, liegt aber natürlich in der persönlichen Vorliebe.
 
-### Manually
-It's entirely possible to manually create a glyph file, but it's rarely the best option:
-- starting from a .ttf or .otf font file you benefit from all the kerning work done by the original creator of the font
-- starting from embroidery files you will have almost nothing left to do
+Egal wie die Wahl ausfällt, die Ausgestaltung der Buchstaben muss beim Festlegen der Stickparameter unbedingt beachtet werden.
 
-### From Embroidery Files
+## Die Schriftdatei erstellen
 
-If you already have a set of embroidery files (one file per letter, in machine-readable or SVG format), 
-you can use the [letters-to-font](/docs/font-tools/#letters-to-font) extension to group all these glyphs into a single glyph file.
+Zusätzlich zur Einhaltung der Namenskonventionen muss jede Glyphendatei:
+* eine Ebene pro Schriftzeichen enthalten und die Ebene mit dem Zeichen `A` muss `GlyphLayer-A` genannt werden.
+* Eine Hilfslinie mit dem Namen `baseline` ist die Grundlinie auf der die Buchstaben stehen. Ink/Stitch braucht diese Hilfslinie um die Buchtaben horizontal auszurichten.
+* Die Datei kann andere Elemente enthalten.
 
-### From a TTF or OTF font
+### Manuell
 
-In this case, you can use [FontForge](https://fontforge.org/en-US/) to create an SVG font file, then use Ink/Stitch to transform this file into a glyph layer file. 
+Es is vollkommen möglich eine Schriftdatei manuell zu erstellen. Das ist aber selten die beste Option:
+* beginnt man mit einer .ttf oder .otf Datei profitiert man vom Kerning (den definierten Schriftabständen) der Originalschrift
+* beginnt man mit Stickdateien fällt die Digitalisierungsarbeit weg und die Zeichen müssen nur noch positioniert werden
 
-#### Creating the SVG font file with FontForge
-TTF or OTF fonts generally contain a very large number of glyphs, and you probably don't want to convert all of them to embroidery.
+### Aus Stickdateien
 
-The first step will therefore be
-##### Selecting the glyphs
-You need to delete from the font all the glyphs that you don't want to convert into embroidery.
+Wenn du bereits fertige Buchstaben-Stickdateien hast (eine Datei pro Schriftzeichen, als Stickdatei oder im SVG-Format), kannst du die Erweiterung [Buchstaben zu Schrift](/de/docs/font-tools/#buchstaben-zu-schrift) verwandeln um eine eizige Schriftdatei zu erstellen.
 
-Open the font file using FontForge to obtain:
+Die einzelnen Buchstaben müssen nun nur noch zum linken Arbeitsflächenrand und zur Grundlinie positioniert werden.
 
+### Aus einer TTF oder OTF Datei
 
+In diesem Fall empfehlen wir die Verwendung von [FontForge](https://fontforge.org/) zur Erstellung der grundlegenden SVG-Schriftdatei. Im Anschluss kann Ink/Stitch verwendet werden um die Glyphen-Ebenen zu erstellen.
 
-![FontForge](/assets/images/tutorials/font_creation/open_fontforge.png)
+#### Eine SVG-Schrift mit FontForge erstellen
 
-First solution: Select all the glyphs you want to keep, then `Edit > Select > Invert the selection` followed by `Edit > Clear`.
+TTF oder OTF Schriften enthalten in de Regel eine sehr große Anzahl an Zeichen. Wahrscheinlich wills du nicht alle Zeichen in die Stickdatei integrieren.
 
-If yo don't know where the glyphs you want to keep are, it may be useful to proceed as follows:
+Daher müssen bestimmte Glyphen ausgewählt werden.
 
-Choose `Elements > Font Info > Unicode Range` from the menus to obtain this type of information:
+##### Glyphen auswählen
 
-![UnicodeIntervals](/assets/images/tutorials/font_creation/unicode_intervals.png)
-Clicking on a Unicode range in the list, selects all the glyphs in the range. 
-It's not uncommon to be able to delete or keep all the glyphs in the range.
+Zunächst müssen alle Zeichen die nicht in eine Stickerei umgewandelt werden sollen, gelöscht werden.
 
-Once you've deleted all the unwanted glyphs, all that's left for you to do is to go to 'File > Generate Font', select the "svg font" type, and click 'Generate'.
+Öffne die Schriftdatei in FontForge:
 
-![UnicodeIntervals](/assets/images/tutorials/font_creation/generer_fonte.png)
+![FontForge](/assets/images/tutorials/font_creation/open_fontforge_de.png)
 
-##### Converting the SVG font file into a glyph layers file
-Open the resulting SVG file in Inkscape. It looks completely empty, which is normal.
+Erste Option: Wähle alle Glyphen aus, die behalten werden sollen, dann `Bearbeiten > Auswählen > Auswahl invertieren`, gefolgt von `Bearbeiten > Löschen`.
 
-`Extensions > Ink/Stitch > Font Management > Convert SVG font to glyph layers`
+Wenn du nicht sicher bist, welche Glyphen du behalten solltest, kann folgender Prozess sinnvoll sein:
 
-![UnicodeIntervals](/assets/images/tutorials/font_creation/convert_to_glyph_layers_en.jpg)
+Wähle `Element > Schriftinformationen... > Unicode-Bereiche` um diese Informationen zu erhalten:
 
-Now is the time to decide what size you want your font to be.
+![UnicodeIntervals](/assets/images/tutorials/font_creation/unicode_intervals_de.png)
 
-To do this, choose a reference letter that you know is in your SVG font (M is a common reference) and decide on its desired height.
+Klickt man auf einen Unicode-Bereich in der Liste, werden alle zugehörigen Zeichen ausgewählt.
+Es ist nicht unüblich alle Zeichen eines Bereiches zu löschen oder zu behalten.
 
-Click 'Apply'.
+Sind alle unerwünschten Glyphen gelöscht, muss die Schrift nun nur noch als SVG-Schrift abgespeichert werden: `Datei > Schriften erstellen...`. Wähle `SVG Schrift` als Schrifttyp aus und klicke auf `Erstellen`.
 
-This will be the value for the "size" info in the json file
+![Generate Fonts](/assets/images/tutorials/font_creation/generate_font_de.png)
 
-Your file is then converted into a glyph layer file; you now have many layers.
+##### Ein SVG-Schrift in eine Glyphen-Ebenen-Datei umwandeln
 
-In addition to the "baseline" guide, other guides have been added. It's a good idea to lock them so you can work on this file later without moving them. 
-This can be done either in the document properties or by clicking on the lock in the top-left corner of the canvas.
+Öffne die SVG-Schriftdatei in Inkscape. Sie sieht komplett leer aus, das ist normal.
 
-The paths in this file have undefine stroke and fill colors. 
-Select all paths in all layers (if your Inkscape preferences don't allow the selection of hidden objects, you'll need to show all objects to do this), 
-give them a fill color, and specify that there's no stroke color (or specify a stroke color and specify that there's no background color). 
-You can hide the layers again.
+`Erweiterungen > Ink/Stitch > Schriftverwaltung > SVG-Schriftart in Glyphenebenen konvertieren`
 
-If you want to create a left to right font, save this file as →.svg in a new folder located in your personal fonts folder.
+![Convert to glyph layers](/assets/images/tutorials/font_creation/convert_to_glyph_layers_de.png)
 
-## Creating the font.json file
-Once the →.svg file exists, you can create the associated font.json file. It is recommended that you do so as early as just now.
+Nun ist es Zeit zu entscheiden, wie groß die Schrift sein soll.
 
-`Extensions > Ink/Stitch > Font Management > Generate JSON....`
+Um dies zu tun, setze einen Referenzbuchstaben von dem du weißt, dass er sich in der SVG-Datei befindet (üblich ist das M) und lege die Höhe dieses Buchstabens fest.
+Dann klicke auf `Anwenden`.
 
-This extension will extract information from the →.svg file and store it in a font.json file. 
-The extension's dialog also allows you to add information. 
-The documentation is [here](/docs/font-tools/#generate-json).
+Dieser Wert wird später auch in der JSON-Datei als Höhe gespeichert.
 
-You will be able to modify this information later using `Extensions > Ink/Stitch > Font Management > Edit JSON File....`
-The documentation is [there](/docs/font-tools/#edit-json).
+Die Datei ist nun in Glyphen-Ebenen konvertiert und enthält viele dieser Ebenen.
 
-### What is kerning and how does it work?
-This section is for the curious; it can be skipped at least initially.
-#### Where is the information?
-The font.json file contains the kerning information. It was extracted from the →.svg file when the font.json file was created. 
-This information will greatly contribute to the positioning of the glyphs relative to each other. 
+Zusätzlich zur `baseline` (Grundlinie), wurden weitere Hilfslinien hinzugefügt. Es ist immer eine gute Idee diese zu blockieren, so werden sie später nicht ausversehen bewegt.
+Dies kann über die Dokumenteinstellungen geschehen oder mit einem Klick auf das kleine Schloss-Symbol in der oberen, linken Ecke der Arbeitsfläche.
 
-To determine a glyph's position, Ink/Stitch uses three types of information:
-- Moving a glyph horizontally or vertically within its layer affects its position (except for the very first character of a line of text, which is systematically on the left side of the page (at least with left-aligned lines). Vertical movement is always taken into account.
-- "horiz_adv_x" information. There is a default value, and a value can be assigned to each glyph. The font file generated by FontForge includes this information for all glyphs that have not been deleted. This information is integrated into the font.json file when it is created.
-- "hkern" information. This information is not associated with glyphs but with pairs of glyphs (not all of them). The font file generated by FontForge includes this information for all glyph pairs for which the TTF or OTF font designer provided this information, whether the glyphs were deleted or not. This information is integrated into the font.json file when it is created.
+Die Pfade in der Datei haben undefinierte Kontur- und Füllfarben.
+Wähle alle Pfade in allen Ebenen aus. Wenn deine Inkscape Einstellungen nicht die Auswahl von versteckten Elementen erlaubt, müssen zunächst alle Objekte eingeblendet werden.
+Gibt allen Pfaden eine Füllfarbe und keine Konturfarbe (oder andersherum) und blende die Ebenen erneut aus.
 
-#### How does it work, schematically?
-Ink/Stitch breaks down a text into lines, a line into words, and a word into glyphs.
+Wenn du eine Schrift von links nach rechts digitalisieren willst, speichere die Datei als `→.svg` in einem neu angelegten Ordner innerhalb des Ordners für benutzerdefinierte Schriften.
 
-Let's say we want to embroider the word Test.
-We assume left alignment, and here we're talking about the horizontal position. The left side of the page is at x=0
+## Die Datei font.json erstellen
 
-- At the beginning of the line, the cursor is at 0, the first character "T" is drawn starting at x=0
-- Before drawing the next glyph the cursor is
-     * advanced by the horiz_adv_x value associated with T (its own value if it exists, otherwise the default value)
-     * if the drawing of the e begins slightly before the left edge of the page, the cursor is moved back by that amount; if it begins after that, the cursor is moved forward
-     * if there is an hkern value for the "Te" pair, the cursor is shifted by that amount (a positive value decreases the distance a negative value increases it)
- 
-....and so on for all the letters in the word
+Haben wir einmal die `→.svg` Datei erstellt, können wir nun die font.json Schriftinformationsdatei generieren. Wir empfehlen dies bereits jetzt zu tun.
 
-#### How to fix a possible kerning problem
-If you notice a kerning problem with a particular glyph while using the font:
-- Check that the glyph is correctly placed in its layer; it may have been accidentally moved.
-- If the problem occurs with most other glyphs, you need to modify the horiz_adv_x value for that glyph.
-- If the problem only occurs with a few other glyphs, you need to modify (or add) the hkern values for the affected glyph pairs.
+`Erweiterungen > Ink/Stitch > Schriftverwaltung > JSON erstellen ...`
 
-These last two operations are performed using the extension:
-`Extensions > Ink/Stitch > Font Management > Edit JSON File`
+Der Erweiterungsdialog erlaubt es uns Informationen zur Schrift festzulegen. Die Dokumentation dazu befindet sich [hier](/de/docs/font-tools/#json-datei-erstellen).
 
-## Check that everything is working correctly
-If you've created these two files and they are in their own folder in your personal fonts folder, your font will now appear in the lettering module. 
-The stitching for each letter is configured as an automatic fill (if you've set a fill color for each glyph) or as a straight stitch (if you've set an outline color for each glyph). 
-It's still too early for actual, high-quality stitching, but everything should be working.
+Diese Informationen können aber auch zu einem späteren Zeitpunkt über `Erweiterungen > Ink/Stitch > Schriftverwaltung > JSON bearbeiten ...` bearbeitet werden.
 
-You can also use
+You will be able to modify this information later using `Extensions > Ink/Stitch > Font Management > Edit JSON File....`. Die Dokumentation dazu befindet sich [hier](/de/docs/font-tools/#json-bearbeiten).
 
-`Extensions > Ink/Stitch > Font Management > Font Sampling` to view all the glyphs of your font. [See documentation](/docs/font-tools/#font-sampling). 
+### Was ist Kerning und wie funktioniert es
 
-At any time, Font Sampling will allow you to view all the unlocked glyphs in your glyph layer file.
+Dieser Abschnitt ist für die Neugierigen unter euch und kann vorerst auch übersprungen werden.
 
-## Creating a truly embroiderable font
-Now you need to transform letters designed to be printed to letters ready for embroidery.
+#### Wo liegt diese Information
 
-Each letter is a small embroidery in itself, and all the usual embroidery issues apply.
+Die `font.json`-Datei enthält die Kerning-Information. Sie wird bei der Erstellung der json-Datei aus der `→.svg`-Schriftdatei extrahiert.
 
-It is highly recommended to fully process a few letters, for example, A, H, M, G, o, a, p, to have letters with quite different designs,
-and to check that everything goes well during embroidery.
+Hierdurch wird die relative Positionierung der einzelnen Zeichen zueinander festgelegt.
 
-This is a good time to decide, for example, how to [process the edges](/tutorials/satin-edges/) of a satin column font.
+Um die Zeichenpositionierung in einem Text festzulegen, nutzt Ink/Stitch drei Arten von Informationen:
 
-Answering this question early will allow you to apply the same approach to all the edges of the font.
+* Wird ein Zeichen auf der Arbeitsfläche horizontal oder vertikal bewegt, hat dies Einfluss auf die Positionierung in der Textausgabe. Nur der erste Charakter in einer Zeile ist für links ausgerichteten Text immer an der oberen, linken Seite der Arbeitsfläche ausgerichtet.
+* `horiz_adv_x` ist die Information über den Vorschub. Es gibt einen Standardwert und jeder Buchstabe kann diesen Wert durch einen eigenen Wert überschreiben. Eine durch fontforge erstellte Schriftdatei enthält diesen Wert für jedes Zeichen, das vor dem Export nicht gelöscht worden ist.
+* `hkern` ist die Information über den Abstand von zwei Glyphen zueinander. Auch diese Information wird durch fontforge in die SVG-Datei übertragen. Bei diesem Attribut geht die Information auch für gelöschte Buchstaben nicht verloren. Die Abstandswerte für die Glyphenpaare werden ebenfalls bei der Erstellung der `font.json`-Datei abgespeichert.
 
-What parameters seem most suitable to you, for example, what density, what compensation?
+#### Wie funktioniert das?
 
-Don't worry too much about the parameters, it is easy at any time s to standardize the settings and change them globally for the entire font.
+Ink/Stitch zerlegt einen Text in Zeilen, eine Zeile in Wörter und Wörter in Glyphen.
 
-In addition to the usual concerns, working with a font involves a few unique ones.
+Lass uns einmal annehmen, wir wollen das Wort `Test` sticken.
 
-### Jump stitches and lock stitches.
-#### Use them sparingly
-Generally, several letters will be embroidered at a time, and you'll want as few jumps and lock stitches as possible. 
-Often, a good routing allows for the embroidery of a connected letter without any jump. Of course, if the letter is disconnected (for example, due to an accent) or 
-between two letters, jumps may be necessary, 
-but it's up to you to ensure there are as few as possible. 
+Lass uns ebenfalls annehmen, dass wir den Text links ausrichten wollen. Dabei sprechen wir über die horizontale Position. Die linke Seite der Arbeitsfläche ist bei `x=0`.
 
-Before and after each jump, the machine makes lock stiches, which slows it down and also tends to distort the embroidery. Therefore, avoid them as much as possible. 
+* Am Anfang der Zeile ist der Cursor bei 0. Das erste Zeichen `T` beginnt demnach bei `x=0`.
+* Bevor das nächste Zeichen positioniert wird, muss die Position des Cursors neu festgelegt werden. Sie definiert sich aus der Summe folgender Werte:
+  * der Vorschub `horiz_adv_x` des Buchstabens T (der Wert der dem Zeichen T zugeordnet ist, ansonsten der Standardwert für den Vorschub)
+  * die Differenz des linken Randes des Zeichens `e` zum linken Rand der Arbeitsfläche
+  * wenn es einen `hkern`-Wert für das Buchstabenpaar `Te` gibt, so wird der Cursor entsprechend verschoben (ein positiver Wert verringert den Abstand, ein negativer Wert erhöht ihn)
 
-If the font is to be integrated with Ink/Stitch, keep in mind that not everyone has a machine that trims the threads, so avoid large movements between two letters, especially if the machine is going to embroider over them. 
+... und so weiter und so fort ... bis alle Buchstaben eines Wortes ausgegeben sind.
 
-Often, we start a letter at the bottom left and end it at the bottom right precisely to avoid this.
+#### Kerning-Probleme beheben
 
-If you're not familiar with the concepts of lock stitches and jump stitches, [the documentation is here](/docs/stitches/lock-stitches/).
+Bemerkst du ein Kerning-Problem während du eine bestimmte Schrift benutzt:
+* Überprüfe ob dieser bestimmte Buchstabe richtig in seiner Ebene positioniert ist oder versehentlich verschoben wurde.
+* Wenn das Problem in Kobination mit den meisten anderen Schriftzeichen ebenfalls auftaucht, passe den Wert für `horiz_adv_x` für diesen Buchstaben an.
+* Wenn das Problem nur in Kombination mit ein paar anderen Schriftzeichen auftritt, passe den `hkern`-Wert für die betroffenen Buchstabenpaar an (oder füge ihn hinzu).
 
-If your font uses satin columns, try to ensure that the ties are not located at the tips of the satin columns, as that's where they are most visible. 
-You can use an end position command on a satin column to force the lock stitches position.
+Die beiden letzten Operationen können mit der Erweiterung `Extensions > Ink/Stitch > Schriftverwaltung > JSON bearbeiten...` durchgeführt werden.
 
-#### But use enough of them.
-It's also important to keep in mind that many users like to cut the jump threads between letters or between the body of a letter and its accent. 
-For safe trimming, the jump must be a true jump in the Ink/Stitch sense, i.e., long enough to befollowed and preceded by lock stitches. 
-This is particularly true when the jump follows an actual part of the letter (for example, a satin column), and maybe not so necessary for a jump between two underpaths (for example, an underpath in the body of the letter followed after the jump by an underpath in an accent).
+## Schriftdatei testen
 
-`Extensions > Ink/Stitch > Font Management > Force lockstitches` simplifies the process. 
+Wenn du diese beiden Dateien erstellt hast und sie sich in ihrem eigenen Ordner in dem Ordner für benutzerdefinierte Schriften befinden, taucht deine Schrift nun im Schriftmodul auf.
 
-In particular,for satin column fonts made up of detached letters, it is possible to force 
-lockstitches on the last satin column of each glyph. 
+Der Stickpfad für jeden Buchstaben ist zunächst als automatische Füllung konfiguriert (wenn du eine Füllfarbe für alle Schriftzeichen gesetzt hast) oder als Geradstich (wenn du eine Konturfarbe für die Schriftzeichen verwendet hast). Es ist noch viel zu früh, für eine qualitativ gute Stickschrift, aber die Schrift sollte nun funktionsfähig sein.
 
-To manage lockstitch for accents, it is possible to group all the the elements of accents in a group and then force lockstitches on the last element of each group. 
+Um alle Schriftzeichen der Schrift auszugeben kann die Erweiterung [Zeichentabelle](/de/docs/font-tools/#zeichentabelle) unter `Erweiterungen > Ink/Stitch > Schriftverwaltung > Zeichentabelle` genutzt werden.
 
-The documentation can be found [here](/docs/font-tools/#force-lock-stitches).
+Zu jeder Zeit können so alle freigeschalteten Glyphen aus der Glyphen-Ebenen-Datei angezeigt werden.
 
-Alternatively, you can use the minimum jump stitch length parameter locally to ensure the presence of lockstitches.
+## Eine stickbare Schrift erstellen
 
-### Trims
-Ink/Stitch lettering allows users to add trims after each letter, word, or line if they wish. 
-Therefore, the only place where it might be useful to add them is within a letter, when it is composed of several pieces.
+Nun müssen die Buchstaben, die ursprünglich für den Druck erstellt wurden, in stickbare Pfade umgewandelt werden.
 
-### Letters with Diacritics and Work Organization
+Jeder Buchstabe ist selbst eine kleine Stickerei und alle Regeln für das digitalisieren von Stickdateien müssen hier angewandt werden.
+
+Wir empfehlen, zunächst ein paar Buchstaben, z.B. A, H, M, G, o, a und p zu digitalisieren. So hat man bereits recht verschiedene Designs und kann austesten, ob alles vernünftig gestickt wird.
+
+Dies ist ein guter Zeitpunkt für die Entscheidung, wie bei Satinschriften die [Ecken ausgestaltet](/de/tutorials/satin-edges/) werden sollen.
+Durch die frühe Klärung dieser Frage, wird ein einheitliches Aussehen der Schrift gefördert.
+
+Außerdem macht es Sinn grundsätzliche Fragen der Stickparameter zu klären. Beispielsweise welche Stickdichte, welche Zugkompensation, etc.
+
+Aber mache dir über die Stickparameter nicht allzu große Sorgen. Sie können auch später noch für die gesamte Schrift angepasst werden.
+
+Neben den üblichen Aspekten gibt es bei der Arbeit mit einer Schriftart noch weitere Besonderheiten zu beachten.
+
+### Sprung- und Vernähstiche
+
+#### Nutze sie spärlich
+
+Normalerweise werden mehrere Buchstaben hintereinander gestickt und wir wollen so wenig Sprungstiche dabei produzieren wie möglich.
+
+Eine gute Stickpfadführung erlaubt es den Buchstaben ohne einen Sprungstich zu sticken. Natürlich geht dies nicht bei unverbundenen Buchstaben, wie z.B. einem Akzent. Manchmal ist auch ein Sprungstich zwischen zwei Buchstaben nötig. Aber es lohnt sich, Sprungstiche so gut wie möglich zu vermeiden.
+
+Vor und nach jedem Sprungstich, wird der Faden vernäht. Auch dies verlangsamt die Maschine und verursacht einen Verzug des Stickbildes. Deshalb sollten auch diese so gut wie möglich vermieden werden.
+
+Ist die Schrift dazu gedacht, mit Ink/Stitch veröffentlicht zu werden, beachte, dass nicht jede Maschine den Faden schneiden kann. Es sollten also auch große Sprünge zwischen den Buchstaben vermieden werden. Besonders dann, wenn über diese Stellen noch weiter gestickt wird.
+
+Um dies zu vermeiden, macht es Sinn einen Buchstaben unten links zu beginnen und unten rechts zu beenden.
+
+Wenn dir das Konzept der Vernäh- und Sprungstiche noch nicht bekannt ist, kann es in der [Dokumentation](/de/docs/stitches/lock-stitches/) nachgelesen werden.
+
+Benutzt deine Schrift Satinsäulen, versuche Vernähstiche an den Enden der Säule zu vermeiden. Dort sind sie am besten sichtbar. Hierfür kann ein Endpositionsbefehl festgelegt werden, die dann auch die Position der Vernähstiche bestimmt.
+
+#### Nutze genug
+
+Es sollte aber auch beachtet werden, dass viele Nutzer die Sprungstiche zwischen den Buchstaben oder zwischen den Akzenten und i-Punkten gerne Schneiden.
+Damit die Fäden auch sicher geschnitten werden können, sollte der Sprungstich auch ein wirklicher Sprungstich sein, d.h. er muss entweder lang genug oder direkt nach Vernähstichen erfolgen.
+Dies gilt besonders dann, wenn der Sprungstich Teil eines Buchstabends ist.
+
+`Erweiterungen > Ink/Stitch > Schriftverwaltung > Sprungstiche erzwingen ...` erleichtert diesen Prozess.
+Zum Beispiel ist es hiermit möglich, für eine Satinsäulenschrift die aus alleinstehenden Buchstaben besteht, Vernähstiche für das jeweils letzte Element eines jeden Buchstabens zu erzwingen.
+
+Vernähstiche für Akzente können darüber erzielt werden, dass alle Pfade für Akzente in ihrer eigenen Gruppe angeordnet werden. Nun kann über die Sprungstiche erzwingen Erweiterung jedem letzten Element in einer Gruppe das Attribut für erzwungene Vernähstiche gesetzt werden.
+
+Die Dokumentation für die Erweiterung findest du [hier](/de/docs/font-tools/#vernähstiche-erzwingen)
+
+Alternativ kann auch der Parameter für die minimale Sprungstichlänge für einzelne Elemente gesetzt werden. Auch dies beeinflusst das Setzen der Vernähstiche.
+
+### Fadenschnittbefehle
+
+Das Ink/Stitch Textmodul erlaubt es Benutzern Fadenschnittbefehle nach jedem Buchstaben, Wort oder Zeile zu setzen.
+Daher ist die einzige Anwendung im Buchstaben selbst nur dann sinnvoll, wenn es sich um unverbundene, aus mehreren Teilenen bestehende Buchstaben handelt.
+
+### Buchstaben mit diakritischen Zeichen und Arbeitsorganisation
+
+Ink/Stitch Nutzer kommen aus vielen verschiedenen Ländern und sprechen verschiedene Sprachen. Daher versuchen wir mit den Ink/Stitch Schriften so viele Personen wie möglich zu bedienen.
+
+
 Ink/Stitch users come from many countries and speak many languages, which is why it's desirable for Ink/Stitch fonts to include something to satisfy as many people as possible. 
-While not aiming for universality, adding letters with diacritics allows for a greater number of users.
+Obwohl keine Universalität angestrebt wird, ermöglicht das Hinzufügen von Buchstaben mit diakritischen Zeichen eine größere Anzahl von Benutzern.
 
-`Extensions > Ink/Stitch > Font Management > Organize Glyphs` helps you organize your work to avoid repeating the same digitizing task. 
-This extension also allows for some other optimizations:
+`Erweiterungen > Ink/Stitch > Schriftverwaltung > Glyphen organisieren` hilft dir deine Arbeit zu strukturieren und reduziert das Ausführen von den immer wieder gleichen Arbeitsschritten.
 
-The goal of this extension is to help font digitizers organize their work step by step.
+Diese Erweiterung erlaubt auch ein paar weitere Optimisierungen:
 
-At each step, a group of glyphs is placed at the top of the object stack, and the font creator must digitize these glyphs before moving on to the next step.
+Das Ziel der Erweiterung ist es, die Arbeitsschritte Schritt für Schritt zu strukturieren.
 
-The steps are organized to divide the work into smaller chunks and maximize the reuse of already digitized letters.
+Bei jedem Schritt wird eine Gruppen von Zeichen in der Objektreihenfolge nach oben geschoben und der Schriftautor muss zunächst diese Glyphen digitalisieren, bevor der nächste Schritt ausgeführt werden kann.
 
-You really need to test what you do at a step because it will be copied for other letters, and you want to avoid having to correct the same mistake multiple times:
+So wird der Digitalisierungsprozess in kleinere Teilbereiche aufgeteilt und die Wiederverwendung einzelner Buchstaben ermöglicht.
 
-Use font sampling to generate a file with all unlocked letters
-- run trouble shooting and correct all detected errors
-- Use simulation to detect unwanted jumps. Best done with the letters enlarged as much as allowed
-- Realistic preview can help you find mistakes
-- But real stitchouts are the ultimate test
+Zwischen den Schritten sollten ausführliche Tests der digitalisierten Buchstaben erfolgen, da Fehler sonst weiter kopiert werden und später an vielen Stellen korrigiert werden müssen:
 
-[See all the steps of the Organize Glyphs extension](/docs/font-tools/#organize-glyphs)
+* Nutze die [Zeichentabelle](#zeichentabelle) um alle freigeschalteten Buchstaben zu generieren
+* Nutze die Erweiterung [Fehlerbehebung an Objekten](/de/docs/troubleshoot/) und korrigiere alle gefundenen Fehler
+* Nutze die [Simulation](/de/docs/visualize/#simulator) um ungewünschte Sprungstiche ausfindig zu machen. Am Besten zoomt man hierfür weit in die Buchstaben rein.
+* Nutze die [realistische Vorschau](/de/docs/visualize/#stich-plan-vorschau) um weitere Fehler zu entdecken
+* Sticke die Buchstaben, das ist der beste Test überhaupt
 
+[Lies die Beschreibung für alle einzelnen Schritte der Glyphen organisieren-Erweiterung](/de/docs/font-tools/#glyphen-organisieren)
 
-### Ink/Stitch users
-They do strange things sometimes. Some precautions to take include:
-#### Avoiding problems due to unusual preference choices
-Giving object based values to the "minimum jump stitch length" and "minimum stitch length" in the params dialog ensures that users won't stitch your font with strange values.
+### Ink/Stitch Nutzer
 
-#### Unwanted resizing
-Users are expected to resize fonts within the lettering tool. 
-The reality is sometimes different. 
-A useful precaution for satin column lettering is to add a maximum stitch length.
+Ink/Stitch-Nutzer machen manchmal komische Dinge. Daher sollten einige Dinge beachtet werden:
 
-### Resizing Settings
-The font creator must specify the possible resizing values for the font in the JSON file. This requires trial and error to determine what works.
+#### Probleme durch ungewöhnliche Einstellungen verhindern
 
-In the case of a satin font, the most important thing is the column width.
+Um sicher zu gehen, dass die Sprungstiche und Stichlängen den getesten Ergebnissen entsprechen, setze die Werte für die minimale Sprungstichlänge und die minimale Stichlänge für jeden Pfad. 
 
-`Extensions > Ink/Stitch > Troubleshooting > Element Information` allows you to find out the maximum and minimum stitch lengths for all embroidery elements. 
+#### Ungewollte Skalierung
 
-From the Help tab, you can copy the results to the clipboard and then to a spreadsheet to sort and find your widest and narrowest columns. 
-T
-hese values will help you decide on possible resizing options for your font. Sometimes there are just a few very wide satin columns in the whole font. 
-In that case adding or moving rungs might help shrinking them.
+Nutzer sollen die Schriften über das Textmodul skalieren.
+Aber die Realität sieht anders aus.
+Eine sinnvolle Vorsichtsmaßnahme für Satinsäulen ist es, den Wert für die maximale Stichlänge bei der Digitalisierung festzulegen.
 
-### Adding or Removing Glyphs
-If you add or remove glyphs after creating the font files, you must run the Edit JSON File extension so that the glyph list is updated. 
+### Skalierungseinstellungen
 
-If the glyph was not in the file from which you generated the font.json file, you will have to modify the horiz_adv_x value of the glyph if it is not to be the default value. 
+Der Schriftautor muss mögliche Werte für eine Skalierung in der JSON-Datei festlegen. Daher muss die Schrift in verschiedenen Größen getestet werden um zu sehen, welche Größen funktionieren.
 
-For this reason, in case of doubt, it is better to initially include too many glyphs than not enough.
+Für eine Satinschrift ist der wichtigste Wert die Breite der Säule.
 
+`Erweiterungen > Ink/Stitch > Fehlerbehebung > Element Info` erlaubt es, die maximalen und minimalen Stichlängen für alle ausgewählten Elemente einzusehen.
 
-### Multicolor Fonts
-If you want the lettering result to be sortable by color, there are two things you need to do:
-- specify this in the font.json file (either when creating it or by editing the file); the font must be declared as "sortable."
-- attach a [color index](docs/font-tools/#set-color-index) to each path. In most cases (all letters have the same colors in the same order, all paths of a given color within a glyph are consecutive) you can display everything in all layers, choose one of the glyphs, select the first object to be stitched, select all objects of the same color (select same fill color or select same stroke color, or both sequentially) and assign them index one, then choose an object of the next color to stitch, select all objects of the same color, assign them index two, etc. In more complicated cases you will have to think a little more to determine the indexes.
-- If you have commands in your file, or guide or texture, don't forget to give them the same color index as that of the elements they are associated with.
+Über den Hilfereiter können die Ergebnisse auch in den Zwischenspeicher kopiert und von dort aus in eine Tabelle kopiert werden.
+So kann man schnell die schmalsten und breitesten Säulen ausmachen.
+Diese Werte können dir bei der Entscheidung helfen, wie weit eine Schrift skaliert werden darf.
+Manchmal gibt es nur ein paar sehr breite Satinsäulen in einer Schrift. In manchen dieser Fälle, kann das Hinzufügen oder Anpassen von Richtungsvektoren zu einem besseren Ergebnis führen und die Stichlängen verkleinern.
 
+### Glyphen hinzufügen oder entfernen
 
-### Limitations of the Lettering Tool
-You can't (yet) use all of Ink/Stitch's features in the svg file; for example, clones, path effects, and gradients aren't supported by Lettering.
+Werden Glyphen zum Dokument hinzugefügt oder gelöscht, muss die JSON-Datei ebenfalls angepasst werden. Dies geschieht automatisch über die Erweiterung `JSON bearbeiten`.
 
-You can't (yet) write a font for every language in the world, but since Ink/Stitch 3.2.0, contextual variants of the Arabic alphabet are recognized.
+War das Zeichen zuvor nicht in der Datei als die font-json-Datei generiert wurde, muss evtl. der Wert für `horiz_adv_x` angepasst werden, falls er nicht dem Standardwert entspricht.
 
-## A nice little extra
-It's possible to have multiglyph layers, not just for ligatures. 
-For example, in the allegria55 font, there's a GlyphLayer-Inkscape_logo that contains the Inkscape logo.
+Daher macht es Sinn, lieber einen Buchstaben zu viel als einen zu wenig aufzunehmen.
 
+### Mehrfarbige Schriften
 
+Soll die Schriftausgabe mehrfarbig sein, gibt es zwei Dinge, die hierfür getan werden müssen:
+* in der font.json-Datei muss die Schrift als `sortable` (sortierbar) definiert werden
+* lege einen [Farbindex](/de/docs/font-tools/#farbsortierindex-festlegen) für jeden Pfad fest. In den meisten Fällen (alle Buchstaben haben die gleichen Farben in der gleichen Reihenfolge und alle Pfade mit der gleichen Farbe sind aufeinanderfolgend) kannst du einfach alle Ebenen anzeigen, einen Buchstaben auswählen, das zuerst gestickte Element anwählen und über das Rechtsklick-Menü alle Elemente mit der gleichen Farbe auswählen. Den ausgewählten Elementen kann nun ein Farbsortierindex zugewisen werden. Dann wähle das Element mit der nächsten Farbe und führe den Prozess fort.
 
+  In komplizierteren Fällen kann es ein bisschen schwieriger sein, die richtigen Elemente auszuwählen.
 
- 
+  Wenn sich Befehle oder Führungslinien oder Texturen in der Datei befinden, müssen auch sie den gleichen Farbsortindex erhalten wie das Element auf das sie angewendet werden.
 
+### Limitierungen des Textmoduls
 
- 
+Es können (noch) nicht alle Ink/Stitch Features in der SVG-Datei angewendet werden. Beispielsweise sind Klone, Pfadeffekte, Farbverläufe nicht durch das Textmodul unterstützt.
 
+Es kann (noch) nicht für jede Sprache der Welt eine Schrift erstellt werden, aber seit Ink/Stitch 3.2.0 werden kontextbezogene Varianten des arabischen Alphabets erkannt.
 
+## Ein nettes, kleines Extra
 
+Es ist möglich Layer für mehrere Buchstaben zu erstellen, nicht nur Ligaturen.
 
-
-
-
-
+Zumm Beispiel gibt es in der Schrift `Allegria 55` eine Ebene mit dem Namen `GlyphLayer-Inkscape_logo`. Hierüber kann das Inkscape Logo über die Eingabe von `Inkscape_logo` in das Textmodul schnell in das Dokument eingefügt werden.

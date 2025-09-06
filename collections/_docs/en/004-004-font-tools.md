@@ -148,11 +148,11 @@ Very often, bought fonts are organized in subfolders, because each letter comes 
 
 The goal of this extension is to help font digitizers organize their work step by step.
 
-At each step, a group of glyphs is placed at the top of the object stack, and the font creator must digitize these glyphs before moving on to the next step.
+At each step, a group of glyphs is placed at the top of the object stack and the font creator must digitize these glyphs before moving on to the next step.
 
 The steps are organized to divide the work into smaller chunks and maximize the reuse of already digitized letters.
 
-You really need to test what you do at a step because it will be copied for other letters, and you want to avoid having to correct the same mistake multiple times:
+You really need to test what you do at a step because it will be copied for other letters and you want to avoid having to correct the same mistake multiple times:
 
 Use font sampling to generate a file with all unlocked letters
 - run trouble shooting and correct all detected errors
@@ -164,19 +164,19 @@ Use font sampling to generate a file with all unlocked letters
 
 The code silently removes unwanted layers (e.g., empty paths, or no paths at all).
 
-At this step, you only need to digitize comma, hyphen, and period.
+At this step, you only need to digitize comma, hyphen and period.
 
 ### Step 2
 
-At this step, you need to digitize all the letters that have been grouped into the three groups: Uppercase, Lowercase, and Other.
+At this step, you need to digitize all the letters that have been grouped into the three groups: Uppercase, Lowercase and Other.
 
-For innstannce, you'll find a copy of the period in the i and j glyphs; it's up to you to decide if this is useful to you.
+For instannce, you'll find a copy of the period in the i and j glyphs; it's up to you to decide if this is useful to you.
 
 Only sinple letters need to be digitized (no accented letters in these groups).
 
 ### Step 3
 
-At this step, you need to digitize numbers, symbols, and some punctuation.
+At this step, you need to digitize numbers, symbols and some punctuation.
 
 You'll find pieces of some glyphs already included, for example, in the ";" you'll find the "." and the "," as digitized in step 1. 
 
@@ -186,13 +186,13 @@ It's up to you to position them correctly or delete them. Also, the "1" contains
 
 Last part of punctuation : creating the closing punctuation using the opening punctuation.
 
-For instance, You'll find the "(" in the ")." It's up to you to return, position, and modify what needs to be modified. 
+For instance, You'll find the "(" in the ")." It's up to you to return, position and modify what needs to be modified. 
 
 Normally, at this stage, everything is pre-filled with your already done work.
 
 ### Step 5
 
-Apostrophes, Quotation Marks, and Single Accents
+Apostrophes, Quotation Marks and Single Accents
 
 There are several types of apostrophes and quotation marks depending on the language used.
 

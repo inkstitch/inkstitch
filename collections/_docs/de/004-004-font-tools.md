@@ -1,7 +1,7 @@
 ---
 title: "Schriftverwaltung"
 permalink: /de/docs/font-tools/
-last_modified_at: 2025-08-22
+last_modified_at: 2025-09-06
 toc: true
 ---
 Eine Sammlung von Werkzeugen für Schriftarten Entwickler oder Personen, die dem [Text-Werkzeug](/de/docs/lettering/) von Ink/Stitch zusätzliche Schriften hinzufügen wollen.
@@ -138,97 +138,96 @@ Bei gekauften Schriften kommt es häufig vor, dass die Buchstaben in Unterordner
 * Kerning-Informationen für die Buchstabenabstände können, wenn nötig, mit der Erweiterung [`Schriftverwaltung > JSON bearbeiten`](#json-bearbeiten) angepasst werden.
 * Wenn deine Schrift mehrfarbig ist, können Farbabschnitte mit einem [Farbsortierindex](#farbsortierindex-festlegen) belegt werden.
 
-## Organize Glyphs
+## Glyphen organisieren
+
 {% include upcoming_release.html %}
 
-The goal of this extension is to help font digitizers organize their work step by step.
+Das Ziel dieser Erweiterung ist es, die Arbeitsschritte für das Digitalisieren einer gesamten Schriftart zu ordnen.
 
-At each step, a group of glyphs is placed at the top of the object stack, and the font creator must digitize these glyphs before moving on to the next step.
+Bei jedem Arbeitsschritt wird eine spezielle Glyphengruppe im Dokument nach oben geschoben und der Schriftenersteller muss zunächst diese Glyphen digitalisieren, bevor der nächste Schritt vollzogen werden kann.
 
-The steps are organized to divide the work into smaller chunks and maximize the reuse of already digitized letters.
+Dieser Prozess unterteilt die Arbeit in kleinere Teilschritte und erhöht so die Möglichkeit bereits digitalisierte Buchstaben(teile) wieder zu verwenden.
 
-You really need to test what you do at a step because it will be copied for other letters, and you want to avoid having to correct the same mistake multiple times:
+Bei jedem Schritt sollten die bereits digitalisierten Glyphen ausführlich gestestet werden, da sie für andere Zeichen kopiert werden und es ist ärgerlich, wenn dies im Nachhinein wieder korrigiert werden muss:
 
-Use font sampling to generate a file with all unlocked letters
-- run trouble shooting and correct all detected errors
-- Use simulation to detect unwanted jumps. Best done with the letters enlarged as much as allowed
-- Realistic preview can help you find mistakes
-- But real stitchouts are the ultimate test
- 
-### Step 1
+* Nutze die [Zeichentabelle](#zeichentabelle) um alle freigeschalteten Buchstaben zu generieren
+* Nutze die Erweiterung [Fehlerbehebung an Objekten](/de/docs/troubleshoot/) und korrigiere alle gefundenen Fehler
+* Nutze die [Simulation](/de/docs/visualize/#simulator) um ungewünschte Sprungstiche ausfindig zu machen. Am Besten zoomt man hierfür weit in die Buchstaben rein.
+* Nutze die [realistische Vorschau](/de/docs/visualize/#stich-plan-vorschau) um weitere Fehler zu entdecken
+* Sticke die Buchstaben, das ist der beste Test überhaupt
 
-The code silently removes unwanted layers (e.g., empty paths, or no paths at all).
+### Schritt 1: Komma, Punkt und Bindestrich
 
-At this step, you only need to digitize comma, hyphen, and period.
+Der Code entfernt stillweigend alls unerwünschten Ebenen (z.B. leere Pfade oder gar keine Pfade).
 
-### Step 2
+Bei diesem Schritt müssen nur Kommata, Bindestriche und Punkte digitalisiert werden.
 
-At this step, you need to digitize all the letters that have been grouped into the three groups: Uppercase, Lowercase, and Other.
+### Schritt 2: Nicht zerlegbare Buchstaben
 
-For innstannce, you'll find a copy of the period in the i and j glyphs; it's up to you to decide if this is useful to you.
+Bei diesem Schritt müssen alle Buchstaben digitalisiert werden, die in eine dieser drei Gruppen Fallen: Großbuchstaben, Kleinbuchstaben und Andere.
 
-Only sinple letters need to be digitized (no accented letters in these groups).
+Es befinden sich kopierte Punkte in den Buchtaben wie i und j. Es liegt am Schriftautor zu entscheiden, ob dies hilfreich ist oder nicht.
 
-### Step 3
+Es müssen nur einfache Buchstaben digitalisiert werden (es gibt in diesen Gruppen keine Buchstaben mit diakritischen Zeichen).
 
-At this step, you need to digitize numbers, symbols, and some punctuation.
+### Schritt 3: Zahlen, Symbole und öffnende Satzzeichen
 
-You'll find pieces of some glyphs already included, for example, in the ";" you'll find the "." and the "," as digitized in step 1. 
+Bei diesem Schritt werden Zahlen, Symbole und ein paar Interpunktionen digitalisiert.
 
-It's up to you to position them correctly or delete them. Also, the "1" contains the "l" and the "I." If they're too different from the "1" to be useful, delete them.
+Manche Zeichen enthalten bereits kopierte Pfade.
 
-### Step 4
+Beispielsweise wurde für das Semikolon `;` bereits das Komma `,` und der Punkt `.` aus Schritt 1 kopiert. Diese Teilpfade können nun richtig positioniert oder aber auch gelöscht und neu erstellt werden.
 
-Last part of punctuation : creating the closing punctuation using the opening punctuation.
+Außerdem enthält die `1` die bereits digitalisierten Buchstaben `l` und `I`. Sind sie zu verschieden von der `1` um nützlich zu sein, können sie einfach gelöscht werden.
 
-For instance, You'll find the "(" in the ")." It's up to you to return, position, and modify what needs to be modified. 
+### Schritt 4: Schließende Satzzeichen
 
-Normally, at this stage, everything is pre-filled with your already done work.
+Der letzte Teil der Interpunktionen: schließende Zeichen können mit den öffnenden Zeichen erstellt werden.
 
-### Step 5
+Beispielsweise wird hier die sich öffnende Klammer `(` in die schließende Klammer `)` kopiert, kann positioniert und angepasst werden.
 
-Apostrophes, Quotation Marks, and Single Accents
+Normalerweise ist bei diesem Schritt bereits alles mit bereits digitalisierten Glyphen vorausgefüllt.
 
-There are several types of apostrophes and quotation marks depending on the language used.
+### Schritt 5: erste Diakritika (Apostrophe, Anführungszeichen und einfache Akzente)
 
-If you have created at least one, the extension adds the others here.
+Es gibt verschiedene Arten von Apostrophen und Anführungszeichen. Dies ist zumeist abhängig von der genutzten Sprache.
 
-The same goes for quotation marks. Normally, there's nothing to do for them.
+Hast du mindestens eine bereits digitalisiert, werden die anderen hier hinzugefügt.
 
-At this step, you must digitize single accents; when possible, they are pre-filled with an equivalent symbol that has already been processed. 
+Dasselbe gilt für die Anführungszeichen. Normalerweise gibt es hier nichts weiter zu tun.
 
-In the worst case, the accent is used by letters in the font, but is absent from the font. In this case, a letter that uses it has been inserted into its layer so that you know what to digitize.
+Bei diesem Schritt werden einfache Akzente digitalisieren. Wenn möglich, sind sie mit ähnlichen Symbolen bereits vorausgefüllt.
 
-Don't forget to remove the unnecessary parts !
+Im schlimmsten Fall, 
 
-### Step 6
+Im schlimmsten Fall wird der Akzent von Buchstaben in der Schriftart verwendet, ist aber in der Schriftart nicht vorhanden. In diesem Fall wird der Buchstabe in eine Ebene eingefügt und muss nun noch digitalisiert werden.
 
-Complex Accents:
+Vergiss ncht, nicht benötigte Teile zu entfernen!
 
-In this step, you deal with the other diacritical marks.
+### Schritt 6: weitere Diakritika
 
-These reuse work done at the previous step. 
+In diesem Schritt werden die anderen diakritischen Zeichen behandelt.
 
-This complex accents are either double accennts or have same shape as a simple one but a different position . 
+Hier werden Zeichen des vorangegangenen Schrittes wiederverwendet.
 
-The layers are pre-filled, but there is some positioning work to be done, which is why a letter using the accent has sometimes been added to indicate where to position the new accent. 
+Diese komplexen Akzente sind entweder doppelte Akzente oder haben die gleiche Form, aber an anderen Positionen.
 
-### Step 7
+Die Ebenen sind vorausgefüll, aber die Positionierung muss vorgenommen werden, darum wurden in manchen Fällen die Buchstaben zu denen dieser Akzent gehört in die Ebene hinzugefügt.
 
-Letters with a single diacritic:
+### Schritt 7: zweiteilige Buchstaben
 
-You will find their layer pre-filled with the letter and the diaccritic; it's up to you to compose them to create the composite letter.
+Buchstaben mit einfachen diakritischen Zeichen:
 
-### Step 8
+Die Buchstaben sind mit den diakritischen Zeichen vorausgefüllt und müssen noch positioniert werden.
 
-Letters with two or more diacritics..... only if you chosed to include some of them.
+### Schritt 8: andere zusammengesetzte Buchstaben
 
-
-You can also use this extension with any font file to
-- check for duplicates
-- organize the letters by category.
+Buchstaben mit zwei oder mehreren diakritischen Zeichen ... für den Fall, das es überhaupt welche in der Schriftdatei gibt.
 
 
+Diese Erweiterung kann mit jeder Schriftdatei genutzt werden um sie auf
+* Zeichendopplungen zu überprüfen
+* die Zeichen nach Kategorien zu ordnen
 
 ## Kerning entfernen
 

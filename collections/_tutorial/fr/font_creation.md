@@ -82,7 +82,7 @@ Une première étape va donc être la
 On va effacer de la fonte tous les glyphes que l'on ne souhaite pas convertir en broderie
 Ouvrez le fichier de fonte à l'aide de fontforge pour obtenir :
 
-![FontForge](/assets/images/tutorials/font_creation/open_fontforge.png)
+![FontForge](/assets/images/tutorials/font_creation/open_fontforge_fr.png)
 
 Première solution : sélectionnez tous les glyphes que vous voulez conserver, puis `Édition > Sélectionner> Inverser` la sélection suivie de `Édition > Effacer`.
 
@@ -90,19 +90,21 @@ Si l'on ne sait pas vraiment où sont les glyphes que l'on veut conserver, il pe
 
 Choisissez dans les menus `Éléments> Info Fonte > Intervalle unicode`, pour obtenir ce type d'information:
 
-![UnicodeIntervals](/assets/images/tutorials/font_creation/unicode_intervals.png)
+![UnicodeIntervals](/assets/images/tutorials/font_creation/unicode_intervals_fr.png)
+
 En cliquant sur un intervalle unicode de la liste, on sélectionne tous les glyphes de l'intervalle, il n'est pas rare de pouvoir effacer ou conserver tous les glyphes de l'intervalle. 
 
 Lorsque, d'une manière ou d'une autre, l'on a effacés tous les glyphes indésirables, il ne reste plus qu'à faire `Fichier > Génerer Fonte`, choisir le type "police svg" et cliquer sur `Générer`.
 
-![UnicodeIntervals](/assets/images/tutorials/font_creation/generer_fonte.png)
+![Generate fonts](/assets/images/tutorials/font_creation/generate_font_fr.png)
 
 ##### Transformation du fichier de fonte svg en fichier de calques de glyphes
 Ouvrir le fichier svg ainsi créé dans Inkscape. Il a l'air complètement vide, c'est normal !! 
 
 `Extensions > Ink/Stitch > Gestion des polices > Convertir la fonte svg en calques de glyphes`
 
-![UnicodeIntervals](/assets/images/tutorials/font_creation/convert_to_glyphs.png)
+![Convert to glyph layers](/assets/images/tutorials/font_creation/convert_to_glyph_layers_fr.png)
+
 C'est le moment de décider quelle taille vous souhaitez pour votre police. 
 
 Pour cela choisissez un caractère de référence dont vous savez qu'il est dans votre police svg (le M est une référence courante) et décidez de la hauteur souhaitée pour lui.
@@ -247,20 +249,4 @@ On ne peut pas (encore) utiliser toutes les fonctionalités d'ink/Stitch dans le
 On ne peut pas (encore) écrire une police pour toutes les langues du monde, mais depuis Ink/Stitch 3.2.0, les variantes contextuelles de l'alphabet arabe sont reconnues.
 
 ## Un petit plus bien sympathique
-il est possible d'avoir des calques multiglyphes, pas seulement pour les ligatures. Par exemple dans la fonte allegria55, il existe un GlyphLayer-Inkscape_logo qui contient le logo d'inkscape. 
-
-
-
-
- 
-
-
- 
-
-
-
-
-
-
-
-
+il est possible d'avoir des calques multiglyphes, pas seulement pour les ligatures. Par exemple dans la fonte allegria55, il existe un GlyphLayer-Inkscape_logo qui contient le logo d'inkscape.
