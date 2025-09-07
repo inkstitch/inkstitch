@@ -64,7 +64,7 @@ Symmetrically, if you are set on a particular font, the shape of the letters mus
 
 In addition to respecting naming conventions, any glyph file must:
 - Contain one layer per glyph, and the layer containing glyph A must be named GlyphLayer-A.
-- A guide named "baseline," which corresponds to the line being written on. Ink/Stitch needs this guide for lettering along a path to work correctly.
+- A guide named "baseline," which corresponds to the line being written on for vertical adjustment.
 - It may contain other elements.
 
 ### Manually

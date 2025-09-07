@@ -6,7 +6,7 @@ sidebar:
   nav: pages
 toc: true
 ---
-nk/Stitch is in constant development. Here you can see all the changes made after the last official release.
+Ink/Stitch is in constant development. Here you can see all the changes made after the last official release.
 
 ## [Fonts](/fonts/font-library)
 
