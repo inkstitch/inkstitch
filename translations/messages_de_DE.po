@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-01 01:55+0000\n"
-"PO-Revision-Date: 2025-09-01 01:55\n"
+"PO-Revision-Date: 2025-09-07 01:45\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -7177,7 +7177,7 @@ msgstr "https://inkstitch.org/de/docs/font-tools/#json-datei-erstellen"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:3
 msgid "Organize Glyphs"
-msgstr "Glyphen sortieren"
+msgstr "Glyphen organisieren"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:12
 msgid "Choose action"
