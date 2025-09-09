@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-01 01:55+0000\n"
-"PO-Revision-Date: 2025-09-01 01:55\n"
+"PO-Revision-Date: 2025-09-09 01:48\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -285,253 +285,254 @@ msgstr "Emilio es una fuente que contiene solo letras mayúsculas y números. Ca
 #. description of font in fonts/emilio_20_simple_small
 #: inkstitch-fonts-metadata.py:102
 msgid "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Esta fuente es una versión modificada de Emilio 20 simple, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo delgado (60) como de aguja delgada (60)."
 
 #. description of font in fonts/emilio_20_tartan
 #: inkstitch-fonts-metadata.py:104
 msgid "Emilio 20 Tartan uses tartan fill for a colorful font."
-msgstr ""
+msgstr "Emilio 20 Tartan utiliza un relleno tartán para crear una fuente colorida."
 
 #. description of font in fonts/emilio_20_tricolore
 #: inkstitch-fonts-metadata.py:106
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Emilio 20 Tricolore es una fuente con puntadas de relleno tricolor y columnas de satín de gran tamaño. Contiene 36 glifos, incluyendo los números y las 26 letras mayúsculas A-Z."
 
 #. description of font in fonts/espresso_KOR
 #: inkstitch-fonts-metadata.py:108
 msgid "Espresso KOR is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Espresso KOR es una fuente de satín. Cada satín tiene una base en zigzag."
 
 #. description of font in fonts/espresso_tiny
 #: inkstitch-fonts-metadata.py:110
 msgid "This font is an altered version  of Espresso KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Esta fuente es una versión modificada de Espresso KOR, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo delgado (60) como de aguja delgada (60)."
 
 #. description of font in fonts/excalibur_KOR
 #: inkstitch-fonts-metadata.py:112
 msgid "Excalibur KOR is a small satin column manuscript font. It contains 144 glyphs, covering most western European languages needs."
-msgstr ""
+msgstr "Excalibur KOR es una fuente manuscrita de columnas de satín pequeñas. Contiene 144 glifos, cubriendo la mayoría de las necesidades de los idiomas de Europa occidental."
 
 #. description of font in fonts/excalibur_small
 #: inkstitch-fonts-metadata.py:114
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Esta fuente es una versión modificada de Excalibur KOR, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo delgado (60) como de aguja delgada (60)."
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:116
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font. It contains 40 glyphs including all numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Fold Ink/Stitch es una fuente de mayúsculas con puntadas de corrido triples y quíntuples de gran tamaño. Contiene 40 glifos, incluyendo todos los números y las 26 letras mayúsculas de la A a la Z."
 
 #. description of font in fonts/geneva_rounded
 #: inkstitch-fonts-metadata.py:118
 msgid "Geneva Simple Sans Rounded is a satin font."
-msgstr ""
+msgstr "Geneva Simple Sans Rounded es una fuente de satín."
 
 #. description of font in fonts/geneva_simple
 #: inkstitch-fonts-metadata.py:120
 msgid "Geneva Simple Sans is a satin font."
-msgstr ""
+msgstr "Geneva Simple Sans es una fuente de satín."
 
 #. description of font in fonts/gingo200
 #: inkstitch-fonts-metadata.py:122
 msgid "Gingo 200 is playful satin font with 158 glyphs."
-msgstr ""
+msgstr "Gingo 200 es una fuente de satín divertida con 158 glifos."
 
 #. description of font in fonts/glacial_tiny
 #: inkstitch-fonts-metadata.py:124
 msgid "Glacial is a very tiny font. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages."
-msgstr ""
+msgstr "Glacial es una fuente muy pequeña. El uso de hilo delgado (60 wt) y aguja delgada (8/60) es obligatorio. Los glifos cubren muchos idiomas europeos."
 
 #. description of font in fonts/hebrew_font_medium
 #: inkstitch-fonts-metadata.py:126
 msgid "Medium size hebrew satin font"
-msgstr ""
+msgstr "Fuente de satín hebrea de tamaño mediano"
 
 #. description of font in fonts/hebrew_simple_rounded
 #: inkstitch-fonts-metadata.py:128
 msgid "A simple rounded hebrew font"
-msgstr ""
+msgstr "Una fuente hebrea simple y redondeada"
 
 #. description of font in fonts/hebrew_simple_rounded_small
 #: inkstitch-fonts-metadata.py:130
 msgid "A simple rounded hebrew font, small version to be embroidered with 60wt thread and 60 needle"
-msgstr ""
+msgstr "Fuente hebrea simple y redondeada, versión pequeña para ser bordada con hilo 60wt y aguja 60"
 
 #. description of font in fonts/honoka
 #: inkstitch-fonts-metadata.py:132
 msgid "コルの書きこも is a satin column japanese script font. It contains all hiragana, katakana and punctuation glyphs plus 80 kanjis."
-msgstr ""
+msgstr "コルの書きこも es una fuente de escritura japonesa de columnas de satín. Contiene todos los glifos de hiragana, katakana y puntuación, además de 80 kanjis."
 
 #. description of font in fonts/infinipicto
 #: inkstitch-fonts-metadata.py:134
 msgid "InfiniPicto is a fun font containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
-msgstr ""
+msgstr "InfiniPicto es una fuente divertida que contiene solo los 26 glifos de la A a la Z. Cada letra es un pictograma de un objeto cuyo nombre comienza con esa misma letra..... en francés"
 
 #. description of font in fonts/inkstitch_masego
 #: inkstitch-fonts-metadata.py:136
 msgid "Masego is a display san-serif typeface."
-msgstr ""
+msgstr "Masego es una tipografía sans-serif de exhibición."
 
 #. description of font in fonts/invercelia
 #: inkstitch-fonts-metadata.py:138
 msgid "Invercelia is a modern two letters monogram font. Enter two letters to get a simple monogram.  Add an ')' at the end and the monogram is framed with a circle (for instance 'AC)'), add an '(' to start (for instance '(AC)' and your monogram is ready for applique, or  try something like '!AC)' to replace the appliqué by knockdown stitches.\n\n"
 "Please use exactly two letters,  if you use more, only the first and the last letters will be rendered."
-msgstr ""
+msgstr "Invercelia es una moderna fuente de monogramas de dos letras. Ingresa dos letras para obtener un monograma simple. Agrega un ')' al final y el monograma se enmarcará con un círculo (por ejemplo, 'AC)'), agrega un '(' al principio (por ejemplo, '(AC)') y tu monograma estará listo para aplique, o prueba algo como '!AC)' para reemplazar el aplique por puntadas de relleno base.\n\n"
+"Por favor, usa exactamente dos letras, si usas más, solo se renderizarán la primera y la última letra."
 
 #. description of font in fonts/kaushan_script_MAM
 #: inkstitch-fonts-metadata.py:140
 msgid "Kaushan Script MAM is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Kaushan Script MAM es una fuente manuscrita de satín. Cada satín tiene una base en zigzag."
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:142
 msgid "Learning curve is a small running stitch script font."
-msgstr ""
+msgstr "Learning curve es una fuente manuscrita pequeña de puntada de corrido."
 
 #. description of font in fonts/lobster_AGS
 #: inkstitch-fonts-metadata.py:144
 msgid " Lobster AGS is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Lobster AGS es una fuente manuscrita de satín. Cada satín tiene una base en zigzag."
 
 #. description of font in fonts/magnolia_KOR
 #: inkstitch-fonts-metadata.py:146
 msgid "Magnolia KOR is a script satin font."
-msgstr ""
+msgstr "Magnolia KOR es una fuente manuscrita de satín."
 
 #. description of font in fonts/magnolia_bicolor
 #: inkstitch-fonts-metadata.py:148
 msgid "Magnolia bicolor is a  larger  bicolor variation of Magnolia font."
-msgstr ""
+msgstr "Magnolia bicolor es una variación bicolor y de mayor tamaño de la fuente Magnolia."
 
 #. description of font in fonts/magnolia_small
 #: inkstitch-fonts-metadata.py:150
 msgid "Magnolia Small is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Magnolia Small es una versión modificada de Magnolia KOR, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo delgado (60) como de aguja delgada (60)."
 
 #. description of font in fonts/magnolia_tamed
 #: inkstitch-fonts-metadata.py:152
 msgid "This is a less wild bicolor variation of Magnolia font"
-msgstr ""
+msgstr "Esta es una variación bicolor menos extravagante de la fuente Magnolia"
 
 #. description of font in fonts/malika
 #: inkstitch-fonts-metadata.py:154
 msgid "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch."
-msgstr ""
+msgstr "Malika es una fuente de satín árabe. Los diacríticos no obligatorios no deben teclearse dentro del texto, sino por separado y luego ser movidos manualmente a la posición correcta. Los tres juegos de paréntesis contienen adornos si deseas añadir un toque ornamental extra."
 
 #. description of font in fonts/manuskript_gotisch
 #: inkstitch-fonts-metadata.py:156
 msgid "Manuskript Gothisch is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Manuskript Gothisch es una fuente de satín. Cada satín tiene una base en zigzag."
 
 #. description of font in fonts/marcelusSC_FI
 #: inkstitch-fonts-metadata.py:158
 msgid "MarcellusSC-FI is a small capital satin font. It contains 107 glyphs covering most Western European languages."
-msgstr ""
+msgstr "MarcellusSC-FI es una fuente de mayúsculas de satín de tamaño pequeño. Contiene 107 glifos que cubren la mayoría de los idiomas de Europa Occidental."
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:160
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
-msgstr ""
+msgstr "Ink/Stitch Medium Font es una fuente de satín básica adecuada para caracteres de tamaño mediano. Cada satín tiene una base de contorno."
 
 #. description of font in fonts/milli_marif_bold
 #: inkstitch-fonts-metadata.py:162
 msgid "Millimarif-bold20 is a  bold satin font."
-msgstr ""
+msgstr "Millimarif-bold20 es una fuente de satín en negrita."
 
 #. description of font in fonts/mimosa_large
 #: inkstitch-fonts-metadata.py:164
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
-msgstr ""
+msgstr "Mimosa Large es una fuente de satín que parece una fuente de puntos   "
 
 #. description of font in fonts/mimosa_medium
 #: inkstitch-fonts-metadata.py:166
 msgid "Mimosa Medium is a satin font that looks dotty."
-msgstr ""
+msgstr "Mimosa Medium es una fuente de satín que parece de puntos."
 
 #. description of font in fonts/monicha
 #: inkstitch-fonts-metadata.py:168
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
-msgstr ""
+msgstr "Monicha es una fuente manuscrita de satín. Además de los glifos que cubren la mayoría de los idiomas de Europa Occidental, contiene letras ornamentales alternativas con florituras. Estas letras ornamentales deben usarse con precaución para evitar superposiciones. En particular, no uses dos letras ornamentales seguidas. Por favor, consulta la documentación para obtener información sobre cómo acceder a las letras ornamentales."
 
 #. description of font in fonts/namskout_AGS
 #: inkstitch-fonts-metadata.py:170
 msgid "Namskout AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Namskout AGS es una fuente de aplique de gran tamaño. Contiene 43 glifos, incluyendo todos los números y las 26 letras mayúsculas de la A a la Z."
 
 #. description of font in fonts/namskout_relief
 #: inkstitch-fonts-metadata.py:172
 msgid "Namskout relief is an altered version of Namskout AGS for embossed letters."
-msgstr ""
+msgstr "Namskout relief es una versión modificada de Namskout AGS para letras en relieve."
 
 #. description of font in fonts/namskout_tartan
 #: inkstitch-fonts-metadata.py:174
 msgid "Namskout Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals."
-msgstr ""
+msgstr "Namskout Tartan es una fuente de relleno tartán. Contiene 43 glifos, incluyendo todos los números y las 26 mayúsculas."
 
 #. description of font in fonts/neon
 #: inkstitch-fonts-metadata.py:176
 msgid "Satin font. Each letter or accent is a single satin."
-msgstr ""
+msgstr "Fuente de satín. Cada letra o acento es un solo satín."
 
 #. description of font in fonts/neon_blinking
 #: inkstitch-fonts-metadata.py:178
 msgid "Bean stitch font."
-msgstr ""
+msgstr "Fuente de puntada tipo Frijol."
 
 #. description of font in fonts/nick_ainley
 #: inkstitch-fonts-metadata.py:180
 msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
-msgstr ""
+msgstr "NickAinley es un alfabeto diminuto de puntada tipo Frijol, basado en jawn de 24pt de Seniors Studio."
 
 #. description of font in fonts/ondulamarif_Medium
 #: inkstitch-fonts-metadata.py:182
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
-msgstr ""
+msgstr "Ondulamarif M es una versión modificada de Ondulamarif XL.  Los parámetros de bordado modificados de esta fuente permiten reducir su tamaño."
 
 #. description of font in fonts/ondulamarif_S
 #: inkstitch-fonts-metadata.py:184
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
-msgstr ""
+msgstr "Ondulamarif S es una versión modificada de Ondulamarif XL, para permitir una mayor reducción de escala."
 
 #. description of font in fonts/ondulamarif_XL
 #: inkstitch-fonts-metadata.py:186
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
-msgstr ""
+msgstr "Ondulamarif XL es una fuente de puntada ondulada, úsala tan grande como puedas, pero no la reduzcas."
 
 #. description of font in fonts/pacificlo
 #: inkstitch-fonts-metadata.py:188
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
-msgstr ""
+msgstr "Pacificlo es una fuente manuscrita de columnas de satín pequeñas. Contiene 120 glifos, cubriendo la mayoría de las necesidades de los idiomas de Europa occidental. "
 
 #. description of font in fonts/pacificlo_tiny
 #: inkstitch-fonts-metadata.py:190
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Pacificlo tiny es una versión modificada de Pacificlo, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo delgado (60) como de aguja delgada (60)."
 
 #. description of font in fonts/perspective_tricolore_KOR
 #: inkstitch-fonts-metadata.py:192
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
-msgstr ""
+msgstr "Perspective tricolore KOR es una fuente tricolor sombreada, solo con letras mayúsculas, números y puntuación."
 
 #. description of font in fonts/pixel10
 #: inkstitch-fonts-metadata.py:194
 msgid "Pixel 10 is a satin pixel font."
-msgstr ""
+msgstr "Pixel 10 es una fuente pixel de satín."
 
 #. description of font in fonts/roaring_twenties_KOR
 #: inkstitch-fonts-metadata.py:196
 msgid "Roaring Twenties KOR is a mix of satin and bean stitches."
-msgstr ""
+msgstr "Roaring Twenties KOR es una mezcla de puntadas de satín y de tipo Frijol."
 
 #. description of font in fonts/roaring_twenties_KOR_small
 #: inkstitch-fonts-metadata.py:198
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Roaring Twenties KOR Small es una versión modificada de Roaring Twenties KOR, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo delgado (60) como de aguja delgada (60)."
 
 #. description of font in fonts/roman_ags
 #: inkstitch-fonts-metadata.py:200
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Roman AGS está basado en Latin Modern Roman 10 Bold italic. Cada satín tiene una base en zigzag."
 
 #. description of font in fonts/roman_ags_bicolor
 #: inkstitch-fonts-metadata.py:202
@@ -1711,7 +1712,8 @@ msgstr "Número de repeticiones por puntada triple"
 #: lib/elements/fill_stitch.py:538 lib/elements/stroke.py:95
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
-msgstr ""
+msgstr "Retroceder sobre cada puntada este número de veces. Un valor de 1 triplicaría cada puntada (adelante, atrás, adelante). Un valor de 2 quintuplicaría cada puntada, etc. \n\n"
+"Se puede crear un patrón con varias repeticiones con una lista de valores separados por un espacio."
 
 #: lib/elements/fill_stitch.py:553 lib/elements/satin_column.py:252
 #: lib/elements/stroke.py:185
@@ -1724,27 +1726,27 @@ msgstr "Longitud de las puntadas en modo Zig-Zag."
 
 #: lib/elements/fill_stitch.py:566
 msgid "Zig-zag width"
-msgstr ""
+msgstr "Ancho de zigzag"
 
 #: lib/elements/fill_stitch.py:567
 msgid "Width of the zig-zag line."
-msgstr ""
+msgstr "Ancho de la línea de zigzag."
 
 #: lib/elements/fill_stitch.py:580 lib/gui/tartan/embroidery_panel.py:42
 msgid "Rows per tartan thread"
-msgstr ""
+msgstr "Filas por hilo tartán"
 
 #: lib/elements/fill_stitch.py:581 lib/gui/tartan/embroidery_panel.py:44
 msgid "Consecutive rows of the same color"
-msgstr ""
+msgstr "Filas consecutivas del mismo color"
 
 #: lib/elements/fill_stitch.py:592
 msgid "Herringbone width"
-msgstr ""
+msgstr "Ancho de espiga"
 
 #: lib/elements/fill_stitch.py:593
 msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
-msgstr ""
+msgstr "Define el ancho de un patrón de espiga. Usa 0 para filas regulares."
 
 #: lib/elements/fill_stitch.py:605 lib/elements/satin_column.py:280
 #: lib/elements/stroke.py:198
@@ -1753,21 +1755,21 @@ msgstr "Compensación de tracción"
 
 #: lib/elements/fill_stitch.py:606
 msgid "Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. This setting expands each row of stitches outward from the center of the row by a fixed length. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "La puntada de relleno puede fruncir la tela, resultando en una forma más estrecha de la que dibujas en Inkscape. Esta configuración expande cada fila de puntadas hacia afuera desde el centro de la fila en una longitud fija.  Se pueden usar dos valores separados por un espacio para un efecto asimétrico."
 
 #: lib/elements/fill_stitch.py:610 lib/elements/satin_column.py:284
 #: lib/elements/satin_column.py:447 lib/elements/satin_column.py:541
 #: lib/elements/stroke.py:201
 msgid "mm (each side)"
-msgstr ""
+msgstr "mm (cada lado)"
 
 #: lib/elements/fill_stitch.py:621 lib/elements/satin_column.py:265
 msgid "Pull compensation percentage"
-msgstr ""
+msgstr "Porcentaje de compensación de tire"
 
 #: lib/elements/fill_stitch.py:622
 msgid "Additional pull compensation which varies as a percentage of row width. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "Compensación de tire adicional que varía como un porcentaje del ancho de la fila. Se pueden usar dos valores separados por un espacio para un efecto asimétrico."
 
 #: lib/elements/fill_stitch.py:625 lib/elements/satin_column.py:134
 #: lib/elements/satin_column.py:144 lib/elements/satin_column.py:268
@@ -1780,7 +1782,7 @@ msgstr "% (cada lado)"
 #: lib/elements/fill_stitch.py:701 lib/elements/fill_stitch.py:713
 #: lib/elements/fill_stitch.py:726
 msgid "Fill Underlay"
-msgstr ""
+msgstr "Base de Relleno"
 
 #: lib/elements/fill_stitch.py:644 lib/gui/tartan/embroidery_panel.py:55
 #: inx/inkstitch_select_elements.inx:36 inx/inkstitch_select_elements.inx:64
@@ -1794,7 +1796,7 @@ msgstr "Ángulo de relleno"
 
 #: lib/elements/fill_stitch.py:651
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
-msgstr ""
+msgstr "Por defecto: ángulo de relleno + 90 grados. Inserta una lista para múltiples capas separada por un espacio."
 
 #: lib/elements/fill_stitch.py:677 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
@@ -1821,12 +1823,12 @@ msgstr "Reduzca la forma antes de aplicar la capa base, para evitar que la capa 
 #: lib/elements/stroke.py:450 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
-msgstr ""
+msgstr "Semilla aleatoria"
 
 #: lib/elements/fill_stitch.py:735 lib/elements/satin_column.py:584
 #: lib/elements/stroke.py:451
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
-msgstr ""
+msgstr "Utiliza una semilla específica para atributos aleatorios. Utiliza el ID del elemento si está vacío."
 
 #: lib/elements/image.py:13
 msgid "Image"
@@ -1846,15 +1848,15 @@ msgstr "* Alternativamente, vuelva a dibujar la imagen con la herramienta lápiz
 
 #: lib/elements/marker.py:14
 msgid "Marker Element"
-msgstr ""
+msgstr "Elemento marcador"
 
 #: lib/elements/marker.py:15
 msgid "This element will not be embroidered. It will be applied to objects in the same group. Objects in sub-groups will be ignored."
-msgstr ""
+msgstr "Este elemento no se bordará. Se aplicará a los objetos en el mismo grupo. Los objetos en subgrupos se ignorarán."
 
 #: lib/elements/marker.py:18
 msgid "Turn back to normal embroidery element mode, remove the marker:"
-msgstr ""
+msgstr "Volver al modo normal de elemento de bordado, eliminar el marcador:"
 
 #: lib/elements/marker.py:19
 msgid "* Open the Fill and Stroke panel (Objects > Fill and Stroke)"
@@ -1870,15 +1872,15 @@ msgstr "* En \"Marcadores\", elija la primera opción (vacía) en la primera lis
 
 #: lib/elements/satin_column.py:34
 msgid "Not stitchable satin column"
-msgstr ""
+msgstr "Columna de satín no bordable"
 
 #: lib/elements/satin_column.py:35
 msgid "A satin column consists out of two rails and one or more rungs. This satin column may have a different setup."
-msgstr ""
+msgstr "Una columna de satín se compone de dos rieles y uno o más travesaños. Esta columna de satín puede tener una configuración diferente."
 
 #: lib/elements/satin_column.py:37
 msgid "Make sure your satin column is not a combination of multiple satin columns."
-msgstr ""
+msgstr "Asegúrate de que tu columna de satín no sea una combinación de múltiples columnas de satín."
 
 #: lib/elements/satin_column.py:38
 msgid "Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/"
@@ -1890,19 +1892,19 @@ msgstr "Cada peldaño debe cruzar ambos rieles una vez."
 
 #: lib/elements/satin_column.py:46
 msgid "Rail is a closed path"
-msgstr ""
+msgstr "El riel es un trazado cerrado"
 
 #: lib/elements/satin_column.py:47
 msgid "Rail is a closed path without a definite starting and ending point."
-msgstr ""
+msgstr "El riel es un trazado cerrado sin un punto de inicio y fin definido."
 
 #: lib/elements/satin_column.py:49
 msgid "* Select the node where you want the satin to start."
-msgstr ""
+msgstr "* Selecciona el nodo donde quieras que inicie el satín."
 
 #: lib/elements/satin_column.py:50
 msgid "* Click on: Break path at selected nodes."
-msgstr ""
+msgstr "* Haz clic en: Dividir trazado en los nodos seleccionados."
 
 #: lib/elements/satin_column.py:55
 msgid "Rung doesn't intersect rails"
@@ -1914,11 +1916,11 @@ msgstr "Columna satén: un peldaño no se cruza con ambos rieles."
 
 #: lib/elements/satin_column.py:60
 msgid "Satin has no rungs"
-msgstr ""
+msgstr "El satín no tiene travesaños"
 
 #: lib/elements/satin_column.py:61
 msgid "Rungs control the stitch direction in satin columns. It is best pratice to use them."
-msgstr ""
+msgstr "Los travesaños controlan la dirección de la puntada en las columnas de satín. Es una buena práctica usarlos."
 
 #: lib/elements/satin_column.py:63 lib/elements/satin_column.py:86
 #: lib/elements/satin_column.py:97
@@ -1927,7 +1929,7 @@ msgstr "* Con el objeto seleccionado presione \"P\" para activar la herramienta 
 
 #: lib/elements/satin_column.py:64 lib/elements/satin_column.py:87
 msgid "* Hold \"Shift\" while drawing a rung."
-msgstr ""
+msgstr "* Mantén presionado \"Shift\" mientras dibujas un travesaño."
 
 #: lib/elements/satin_column.py:69
 msgid "Rungs intersects too many times"
@@ -1939,23 +1941,23 @@ msgstr "Columna de satén: un peldaño se cruza con un riel más de una vez."
 
 #: lib/elements/satin_column.py:74
 msgid "Simple Satin"
-msgstr ""
+msgstr "Satín simple"
 
 #: lib/elements/satin_column.py:77
 msgid "* Select the satin path"
-msgstr ""
+msgstr "* Selecciona el trazado de satín"
 
 #: lib/elements/satin_column.py:78
 msgid "* Run Extensions > Ink/Stitch > Tools: Satin > Stroke to Satin"
-msgstr ""
+msgstr "* Extensiones > Ink/Stitch > Herramientas: Satín > Trazo a Satín"
 
 #: lib/elements/satin_column.py:83
 msgid "Satin has exactly two rungs"
-msgstr ""
+msgstr "El satín tiene exactamente dos travesaños"
 
 #: lib/elements/satin_column.py:84
 msgid "There are exactly two rungs. This may lead to false rail/rung detection."
-msgstr ""
+msgstr "Hay exactamente dos travesaños. Esto puede llevar a una detección falsa de rieles/travesaños."
 
 #: lib/elements/satin_column.py:92
 msgid "Unequal number of points"
@@ -1963,7 +1965,7 @@ msgstr "Desigual numero de puntos"
 
 #: lib/elements/satin_column.py:93
 msgid "Satin column: There are no rungs and rails have an unequal number of points."
-msgstr ""
+msgstr "Columna de satín: No hay travesaños y los rieles tienen un número desigual de puntos."
 
 #: lib/elements/satin_column.py:95
 msgid "The easiest way to solve this issue is to add one or more rungs. "
@@ -1988,11 +1990,11 @@ msgstr "Columna de raso personalizada"
 
 #: lib/elements/satin_column.py:115
 msgid "\"E\" Stitch"
-msgstr ""
+msgstr "Puntada tipo \"E\""
 
 #: lib/elements/satin_column.py:116
 msgid "\"S\" Stitch"
-msgstr ""
+msgstr "Puntada tipo \"S\""
 
 #: lib/elements/satin_column.py:117 lib/stitch_plan/lock_stitch.py:222
 msgid "Zig-zag"
@@ -2005,31 +2007,31 @@ msgstr "Método"
 
 #: lib/elements/satin_column.py:131
 msgid "Random percentage of satin width decrease"
-msgstr ""
+msgstr "Disminución porcentual aleatoria del ancho del satín"
 
 #: lib/elements/satin_column.py:132
 msgid "shorten stitch across rails at most this percent. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "Acorta la puntada entre los rieles en este porcentaje como máximo. Se pueden usar dos valores separados por un espacio para un efecto asimétrico."
 
 #: lib/elements/satin_column.py:141
 msgid "Random percentage of satin width increase"
-msgstr ""
+msgstr "Aumento porcentual aleatorio del ancho del satín"
 
 #: lib/elements/satin_column.py:142
 msgid "lengthen stitch across rails at most this percent. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "Alarga la puntada entre los rieles en este porcentaje como máximo. Se pueden usar dos valores separados por un espacio para un efecto asimétrico."
 
 #: lib/elements/satin_column.py:151
 msgid "Random zig-zag spacing percentage"
-msgstr ""
+msgstr "Porcentaje aleatorio de espaciado de zigzag"
 
 #: lib/elements/satin_column.py:152
 msgid "Amount of random jitter added to zigzag spacing."
-msgstr ""
+msgstr "Cantidad de fluctuación aleatoria añadida al espaciado de zigzag."
 
 #: lib/elements/satin_column.py:158
 msgid "Default"
-msgstr ""
+msgstr "Por defecto"
 
 #: lib/elements/satin_column.py:159 lib/stitch_plan/lock_stitch.py:220
 #: inx/inkstitch_break_apart.inx:10
@@ -2038,15 +2040,15 @@ msgstr "Simple"
 
 #: lib/elements/satin_column.py:160
 msgid "Staggered"
-msgstr ""
+msgstr "Escalonado"
 
 #: lib/elements/satin_column.py:164
 msgid "Split Method"
-msgstr ""
+msgstr "Método de división"
 
 #: lib/elements/satin_column.py:166
 msgid "Display needle penetration points in simulator to see the effect of each split method."
-msgstr ""
+msgstr "Mostrar los puntos de penetración de la aguja en el simulador para ver el efecto de cada método de división."
 
 #: lib/elements/satin_column.py:175 lib/elements/satin_column.py:572
 msgid "Maximum stitch length"
@@ -2058,31 +2060,31 @@ msgstr "Longitud máxima de puntada para puntadas divididas."
 
 #: lib/elements/satin_column.py:185
 msgid "Random jitter for split stitches"
-msgstr ""
+msgstr "Fluctuación aleatoria para puntadas divididas"
 
 #: lib/elements/satin_column.py:186
 msgid "Randomizes split stitch length if random phase is enabled, stitch position if disabled."
-msgstr ""
+msgstr "Aleatoriza la longitud de la puntada dividida si la fase aleatoria está activada, y la posición de la puntada si está desactivada."
 
 #: lib/elements/satin_column.py:194
 msgid "Random phase for split stitches"
-msgstr ""
+msgstr "Fase aleatoria para puntadas divididas"
 
 #: lib/elements/satin_column.py:195
 msgid "Controls whether split stitches are centered or with a random phase (which may increase stitch count)."
-msgstr ""
+msgstr "Controla si las puntadas divididas están centradas o con una fase aleatoria (lo que puede aumentar el número de puntadas)."
 
 #: lib/elements/satin_column.py:203
 msgid "Minimum length for random-phase split"
-msgstr ""
+msgstr "Longitud mínima para división de fase aleatoria"
 
 #: lib/elements/satin_column.py:204
 msgid "Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch."
-msgstr ""
+msgstr "El valor por defecto es la longitud de puntada máxima. Los valores más pequeños permiten una transición entre la puntada simple y la puntada dividida."
 
 #: lib/elements/satin_column.py:214
 msgid "Stagger split stitches this many times before repeating"
-msgstr ""
+msgstr "Escalonar puntadas divididas este número de veces antes de repetir"
 
 #: lib/elements/satin_column.py:226
 msgid "Short stitch inset"
