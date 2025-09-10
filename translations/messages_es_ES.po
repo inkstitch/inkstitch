@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-01 01:55+0000\n"
-"PO-Revision-Date: 2025-09-09 01:48\n"
+"PO-Revision-Date: 2025-09-10 01:31\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -854,57 +854,57 @@ msgstr "N6-5b"
 #. name of tile in tiles/N6-6a
 #: inkstitch-tiles-metadata.py:104
 msgid "N6-6a"
-msgstr ""
+msgstr "N6-6a"
 
 #. name of tile in tiles/N6-6c
 #: inkstitch-tiles-metadata.py:106
 msgid "N6-6c"
-msgstr ""
+msgstr "N6-6c"
 
 #. name of tile in tiles/NC5-11a
 #: inkstitch-tiles-metadata.py:108
 msgid "NC5-11a"
-msgstr ""
+msgstr "NC5-11a"
 
 #. name of tile in tiles/NC5-20a
 #: inkstitch-tiles-metadata.py:110
 msgid "NC5-20a"
-msgstr ""
+msgstr "NC5-20a"
 
 #. name of tile in tiles/P3-1
 #: inkstitch-tiles-metadata.py:112
 msgid "P3-1"
-msgstr ""
+msgstr "P3-1"
 
 #. name of tile in tiles/P3-12
 #: inkstitch-tiles-metadata.py:114
 msgid "P3-12"
-msgstr ""
+msgstr "P3-12"
 
 #. name of tile in tiles/P4-1
 #: inkstitch-tiles-metadata.py:116
 msgid "P4-1"
-msgstr ""
+msgstr "P4-1"
 
 #. name of tile in tiles/P4-10
 #: inkstitch-tiles-metadata.py:118
 msgid "P4-10"
-msgstr ""
+msgstr "P4-10"
 
 #. name of tile in tiles/P4-15
 #: inkstitch-tiles-metadata.py:120
 msgid "P4-15"
-msgstr ""
+msgstr "P4-15"
 
 #. name of tile in tiles/P4-19
 #: inkstitch-tiles-metadata.py:122
 msgid "P4-19"
-msgstr ""
+msgstr "P4-19"
 
 #. name of tile in tiles/P4-23
 #: inkstitch-tiles-metadata.py:124
 msgid "P4-23"
-msgstr ""
+msgstr "P4-23"
 
 #. name of tile in tiles/P4-24
 #: inkstitch-tiles-metadata.py:126
@@ -2088,31 +2088,31 @@ msgstr "Escalonar puntadas divididas este número de veces antes de repetir"
 
 #: lib/elements/satin_column.py:226
 msgid "Short stitch inset"
-msgstr ""
+msgstr "Contracción de puntada corta"
 
 #: lib/elements/satin_column.py:227
 msgid "Stitches in areas with high density will be inset by this amount."
-msgstr ""
+msgstr "Las puntadas en áreas de alta densidad se contraerán en esta cantidad."
 
 #: lib/elements/satin_column.py:237
 msgid "Short stitch distance"
-msgstr ""
+msgstr "Distancia de puntada corta"
 
 #: lib/elements/satin_column.py:238
 msgid "Inset stitches if the distance between stitches is smaller than this."
-msgstr ""
+msgstr "Contrae las puntadas si la distancia entre ellas es más pequeña que este valor."
 
 #: lib/elements/satin_column.py:253
 msgid "Peak-to-peak distance between zig-zags. This is double the mm/stitch measurement used by most mechanical machines."
-msgstr ""
+msgstr "Ancho del zigzag de pico a pico. Es el doble de la medida en mm/puntada que se usa en la mayoría de las máquinas mecánicas."
 
 #: lib/elements/satin_column.py:266
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "Compensación de tire adicional que varía como porcentaje del ancho de la puntada. Se pueden usar dos valores separados por un espacio para un efecto asimétrico."
 
 #: lib/elements/satin_column.py:281
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
-msgstr ""
+msgstr "Las puntadas de satín tiran de la tela, lo que resulta en una columna más estrecha de lo que se dibuja en Inkscape. Esta configuración expande cada par de perforaciones de aguja hacia afuera desde el centro de la columna de satín por una longitud fija. Se pueden usar dos valores separados por un espacio para un efecto asimétrico."
 
 #: lib/elements/satin_column.py:295 lib/elements/stroke.py:340
 msgid "Automatic"
@@ -2120,27 +2120,27 @@ msgstr "Automático"
 
 #: lib/elements/satin_column.py:296 lib/elements/stroke.py:341
 msgid "Don't reverse"
-msgstr ""
+msgstr "No Invertir"
 
 #: lib/elements/satin_column.py:297 lib/elements/stroke.py:342
 msgid "Reverse first rail"
-msgstr ""
+msgstr "Invertir primer riel"
 
 #: lib/elements/satin_column.py:298 lib/elements/stroke.py:343
 msgid "Reverse second rail"
-msgstr ""
+msgstr "Invertir segundo riel"
 
 #: lib/elements/satin_column.py:299 lib/elements/stroke.py:344
 msgid "Reverse both rails"
-msgstr ""
+msgstr "Invertir ambos rieles"
 
 #: lib/elements/satin_column.py:305 lib/elements/stroke.py:350
 msgid "Reverse rails"
-msgstr ""
+msgstr "Invertir rieles"
 
 #: lib/elements/satin_column.py:306
 msgid "This may help if your satin renders very strangely.  Default: automatically detect and fix a reversed rail."
-msgstr ""
+msgstr "Esto puede ser útil si tu satín se renderiza de forma muy extraña. Por defecto: detecta y corrige automáticamente un riel invertido."
 
 #: lib/elements/satin_column.py:355
 msgid "Swap rails"
@@ -2148,36 +2148,36 @@ msgstr "Invertir raíles"
 
 #: lib/elements/satin_column.py:356
 msgid "Swaps the first and second rails of the satin column, affecting which side the thread finished on as well as any sided properties"
-msgstr ""
+msgstr "Invierte el primer y segundo riel de la columna de satín, afectando en qué lado termina el hilo, así como cualquier propiedad lateral"
 
 #: lib/elements/satin_column.py:367
 msgid "Length of stitches for start and end point connections."
-msgstr ""
+msgstr "Longitud de puntadas para las conexiones de punto inicial y final."
 
 #: lib/elements/satin_column.py:389
 msgid "Running Stitch Position"
-msgstr ""
+msgstr "Posición de la puntada de corrido"
 
 #: lib/elements/satin_column.py:390
 #, python-format
 msgid "Position of running stitches between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
-msgstr ""
+msgstr "Posición de las puntadas de corrido entre los rieles. 0% es a lo largo del primer riel, 50% está centrado, 100% es a lo largo del segundo riel."
 
 #: lib/elements/satin_column.py:398
 msgid "Start at nearest point"
-msgstr ""
+msgstr "Empezar en el punto más cercano"
 
 #: lib/elements/satin_column.py:399
 msgid "Start at nearest point to previous element. A start position command will overwrite this setting."
-msgstr ""
+msgstr "Empezar en el punto más cercano al elemento anterior. Un comando de posición de inicio sobrescribirá esta configuración."
 
 #: lib/elements/satin_column.py:406
 msgid "End at nearest point"
-msgstr ""
+msgstr "Terminar en el punto más cercano"
 
 #: lib/elements/satin_column.py:407
 msgid "End at nearest point to the next element. An end position command will overwrite this setting."
-msgstr ""
+msgstr "Terminar en el punto más cercano al siguiente elemento. Un comando de posición de fin sobrescribirá esta configuración."
 
 #: lib/elements/satin_column.py:413 inx/inkstitch_fill_to_satin.inx:16
 msgid "Contour underlay"
@@ -2197,27 +2197,27 @@ msgstr "Longitud de la Puntada"
 #: lib/elements/satin_column.py:427 lib/elements/satin_column.py:484
 #: lib/elements/stroke.py:132
 msgid "Stitch tolerance"
-msgstr ""
+msgstr "Tolerancia de puntada"
 
 #: lib/elements/satin_column.py:429
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. "
-msgstr ""
+msgstr "Todas las puntadas deben estar dentro de esta distancia del trazado. Una tolerancia menor significa que las puntadas estarán más juntas. Una tolerancia mayor significa que las esquinas afiladas pueden redondearse."
 
 #: lib/elements/satin_column.py:444
 msgid "Inset distance (fixed)"
-msgstr ""
+msgstr "Distancia de contracción (fija)"
 
 #: lib/elements/satin_column.py:445
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
-msgstr ""
+msgstr "Contrae el contorno por una longitud fija para evitar que el refuerzo se vea alrededor del exterior de la columna de satín."
 
 #: lib/elements/satin_column.py:458
 msgid "Inset distance (proportional)"
-msgstr ""
+msgstr "Distancia de contracción (proporcional)"
 
 #: lib/elements/satin_column.py:459
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
-msgstr ""
+msgstr "Contrae el contorno por una proporción del ancho de la columna, para evitar que el refuerzo se vea alrededor del exterior de la columna de satín."
 
 #: lib/elements/satin_column.py:470 inx/inkstitch_fill_to_satin.inx:15
 msgid "Center-walk underlay"
@@ -2231,11 +2231,11 @@ msgstr "Refuerzo de Corrido central"
 
 #: lib/elements/satin_column.py:486
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
-msgstr ""
+msgstr "Todas las puntadas deben estar dentro de esta distancia del trazado. Una tolerancia menor significa que las puntadas estarán más juntas. Una tolerancia mayor significa que las esquinas afiladas pueden redondearse. Por defecto se usa la longitud de puntada."
 
 #: lib/elements/satin_column.py:503
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
-msgstr ""
+msgstr "Para un número impar de repeticiones, esto invertirá la dirección en que se cose la columna de satín, haciendo que la costura comience y termine en el punto de inicio."
 
 #: lib/elements/satin_column.py:513 lib/gui/tartan/customize_panel.py:38
 msgid "Position"
@@ -2244,7 +2244,7 @@ msgstr "Posición"
 #: lib/elements/satin_column.py:514
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
-msgstr ""
+msgstr "Posición de el refuerzo entre los rieles. 0% es a lo largo del primer riel, 50% está centrado, 100% es a lo largo del segundo riel."
 
 #: lib/elements/satin_column.py:522 inx/inkstitch_fill_to_satin.inx:17
 msgid "Zig-zag underlay"
@@ -2266,7 +2266,7 @@ msgstr "Distancia entre picos de los Zig-Zags."
 
 #: lib/elements/satin_column.py:539
 msgid "Inset amount (fixed)"
-msgstr ""
+msgstr "Cantidad de contracción (fija)"
 
 #: lib/elements/satin_column.py:540 lib/elements/satin_column.py:560
 msgid "default: half of contour underlay inset"
@@ -2274,7 +2274,7 @@ msgstr "predeterminado: la mitad del margen interno del refuerzo de contorno"
 
 #: lib/elements/satin_column.py:559
 msgid "Inset amount (proportional)"
-msgstr ""
+msgstr "Cantidad de contracción (proporcional)"
 
 #: lib/elements/satin_column.py:573
 msgid "Split stitch if distance of maximum stitch length is exceeded"
@@ -2286,15 +2286,15 @@ msgstr "Muy pocas Subtrayectorias"
 
 #: lib/elements/stroke.py:35
 msgid "This element renders as running stitch while it has a satin column parameter."
-msgstr ""
+msgstr "Este elemento se renderiza como puntada de corrido mientras tiene un parámetro de columna de satín."
 
 #: lib/elements/stroke.py:37
 msgid "* Convert to stroke: select the element and open the parameter dialog. Enable running stitch along path."
-msgstr ""
+msgstr "* Convertir a trazo: selecciona el elemento y abre el diálogo de parámetros. Habilita la puntada de corrido a lo largo del trazado."
 
 #: lib/elements/stroke.py:38
 msgid "* Use as satin column: add an other rail and optionally rungs."
-msgstr ""
+msgstr "* Usar como columna de satín: añade otro riel y, opcionalmente, peldaños."
 
 #: lib/elements/stroke.py:44 lib/extensions/params.py:643
 #: inx/inkstitch_select_elements.inx:12
@@ -2307,141 +2307,141 @@ msgstr "Puntada de corrido a lo largo de las trayectorias"
 
 #: lib/elements/stroke.py:65
 msgid "Running Stitch / Bean Stitch"
-msgstr ""
+msgstr "Puntada de corrido / Puntada tipo Frijol"
 
 #: lib/elements/stroke.py:66 lib/lettering/categories.py:26
 #: inx/inkstitch_lettering_generate_json.inx:58
 msgid "Ripple Stitch"
-msgstr ""
+msgstr "Puntada ondulada"
 
 #: lib/elements/stroke.py:67 inx/inkstitch_select_elements.inx:23
 msgid "ZigZag Stitch"
-msgstr ""
+msgstr "Puntada en zigzag"
 
 #: lib/elements/stroke.py:68 inx/inkstitch_select_elements.inx:24
 msgid "Manual Stitch"
-msgstr ""
+msgstr "Puntada manual"
 
 #: lib/elements/stroke.py:108
 msgid "Manual stitch placement"
-msgstr ""
+msgstr "Colocación manual de puntada"
 
 #: lib/elements/stroke.py:109
 msgid "No extra stitches will be added to the original ripple pattern and the running stitch length value will be ignored."
-msgstr ""
+msgstr "No se añadirán puntadas extra al patrón de puntada ondulada original y el valor de longitud de la puntada de corrido será ignorado."
 
 #: lib/elements/stroke.py:121
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:21
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
-msgstr ""
+msgstr "Longitud de las puntadas. Las puntadas pueden ser más cortas de acuerdo con la configuración de tolerancia de puntada."
 
 #: lib/elements/stroke.py:133
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
-msgstr ""
+msgstr "Todas las puntadas deben estar dentro de esta distancia del trazado. Una tolerancia menor significa que las puntadas estarán más juntas. Una tolerancia mayor significa que las esquinas afiladas pueden redondearse."
 
 #: lib/elements/stroke.py:172
 msgid "Split stitches longer than this."
-msgstr ""
+msgstr "Dividir puntadas más largas que esto."
 
 #: lib/elements/stroke.py:199
 msgid "Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This widens the zigzag line width."
-msgstr ""
+msgstr "Las puntadas en zigzag tiran de la tela, lo que resulta en una columna más estrecha de lo que se dibuja en Inkscape. Esto amplía el ancho de la línea de zigzag."
 
 #: lib/elements/stroke.py:212
 msgid "Number of lines"
-msgstr ""
+msgstr "Número de líneas"
 
 #: lib/elements/stroke.py:213
 msgid "Number of lines from start to finish"
-msgstr ""
+msgstr "Número de líneas de principio a fin"
 
 #: lib/elements/stroke.py:224
 msgid "Minimum line distance"
-msgstr ""
+msgstr "Distancia mínima entre líneas"
 
 #: lib/elements/stroke.py:225
 msgid "Overrides the number of lines setting."
-msgstr ""
+msgstr "Anula la configuración del número de líneas."
 
 #: lib/elements/stroke.py:238
 msgid "Line count / Minimum line distance"
-msgstr ""
+msgstr "Conteo de líneas / Distancia mínima entre líneas"
 
 #: lib/elements/stroke.py:239
 msgid "Render at rungs"
-msgstr ""
+msgstr "Renderizar en los peldaños"
 
 #: lib/elements/stroke.py:240
 msgid "Adaptive + minimum line distance"
-msgstr ""
+msgstr "Adaptativo + distancia mínima entre líneas"
 
 #: lib/elements/stroke.py:245
 msgid "Pattern position"
-msgstr ""
+msgstr "Posición del patrón"
 
 #: lib/elements/stroke.py:246
 msgid "Pattern position for satin guided ripples."
-msgstr ""
+msgstr "Posición del patrón para las ondas guiadas por satín."
 
 #: lib/elements/stroke.py:257
 msgid "Stagger lines this many times before repeating"
-msgstr ""
+msgstr "Escalonar las líneas esta cantidad de veces antes de repetir"
 
 #: lib/elements/stroke.py:258
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. A value of 0 (default) disables staggering and instead stitches evenly.For linear ripples only."
-msgstr ""
+msgstr "Longitud del ciclo por el cual las sucesivas líneas de puntadas se escalonan. Se permiten valores fraccionarios y pueden tener diagonales menos visibles que los valores enteros. Un valor de 0 (por defecto) desactiva el escalonamiento y, en su lugar, cose de manera uniforme. Solo para ondas lineales."
 
 #: lib/elements/stroke.py:271
 msgid "Skip first lines"
-msgstr ""
+msgstr "Omitir las primeras líneas"
 
 #: lib/elements/stroke.py:272
 msgid "Skip this number of lines at the beginning."
-msgstr ""
+msgstr "Omitir este número de líneas al principio."
 
 #: lib/elements/stroke.py:283
 msgid "Skip last lines"
-msgstr ""
+msgstr "Omitir las últimas líneas"
 
 #: lib/elements/stroke.py:284
 msgid "Skip this number of lines at the end"
-msgstr ""
+msgstr "Omitir este número de líneas al final"
 
 #: lib/elements/stroke.py:295
 msgid "Flip every second line"
-msgstr ""
+msgstr "Voltear cada segunda línea"
 
 #: lib/elements/stroke.py:296
 msgid "Linear ripple: wether to flip the pattern every second line or not."
-msgstr ""
+msgstr "Onda lineal: si se debe voltear o no el patrón en cada segunda línea."
 
 #: lib/elements/stroke.py:306
 msgid "Line distance exponent"
-msgstr ""
+msgstr "Exponente de distancia de línea"
 
 #: lib/elements/stroke.py:307
 msgid "Increase density towards one side."
-msgstr ""
+msgstr "Aumentar la densidad hacia un lado."
 
 #: lib/elements/stroke.py:318
 msgid "Flip exponent"
-msgstr ""
+msgstr "Invertir exponente"
 
 #: lib/elements/stroke.py:319
 msgid "Reverse exponent effect."
-msgstr ""
+msgstr "Invertir efecto de exponente."
 
 #: lib/elements/stroke.py:330
 msgid "Reverse"
-msgstr ""
+msgstr "Invertir"
 
 #: lib/elements/stroke.py:331
 msgid "Flip start and end point"
-msgstr ""
+msgstr "Invertir punto inicial y final"
 
 #: lib/elements/stroke.py:351
 msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
-msgstr ""
+msgstr "Invertir rieles de onda de satín. Por defecto: detecta y corrige automáticamente un riel invertido."
 
 #: lib/elements/stroke.py:363
 msgid "Grid size"
@@ -2449,23 +2449,23 @@ msgstr "Tamaño de la cuadrícula"
 
 #: lib/elements/stroke.py:364
 msgid "Render as grid. Use with care and watch your stitch density."
-msgstr ""
+msgstr "Renderizar como cuadrícula. Úsalo con cuidado y vigila la densidad de la puntada."
 
 #: lib/elements/stroke.py:376
 msgid "Stitch grid first"
-msgstr ""
+msgstr "Coser cuadrícula primero"
 
 #: lib/elements/stroke.py:377
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
-msgstr ""
+msgstr "Invierte los trazados de puntada para que la cuadrícula se cosa primero"
 
 #: lib/elements/stroke.py:388
 msgid "Scale axis"
-msgstr ""
+msgstr "Escala de eje"
 
 #: lib/elements/stroke.py:389
 msgid "Scale axis for satin guided ripple stitches."
-msgstr ""
+msgstr "Eje de escala para las puntadas de onda guiadas por satín."
 
 #: lib/elements/stroke.py:393 lib/gui/edit_json/settings_panel.py:159
 #: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:32
@@ -2480,11 +2480,11 @@ msgstr "Escala inicial"
 
 #: lib/elements/stroke.py:402
 msgid "How big the first copy of the line should be, in percent."
-msgstr ""
+msgstr "Qué tan grande debe ser la primera copia de la línea, en porcentaje."
 
 #: lib/elements/stroke.py:402 lib/elements/stroke.py:414
 msgid "Used only for ripple stitch with a guide line."
-msgstr ""
+msgstr "Usado solo para la puntada ondulada con una línea guía."
 
 #: lib/elements/stroke.py:413
 msgid "Ending scale"
@@ -2492,7 +2492,7 @@ msgstr "Escala final"
 
 #: lib/elements/stroke.py:414
 msgid "How big the last copy of the line should be, in percent."
-msgstr ""
+msgstr "Qué tan grande debe ser la última copia de la línea, en porcentaje."
 
 #: lib/elements/stroke.py:425 lib/gui/tartan/customize_panel.py:43
 #: inx/inkstitch_transform_elements.inx:10
@@ -2501,16 +2501,16 @@ msgstr "Rotar"
 
 #: lib/elements/stroke.py:426
 msgid "Rotate satin guided ripple stitches"
-msgstr ""
+msgstr "Girar puntadas de onda guiadas por satín"
 
 #: lib/elements/stroke.py:437 inx/inkstitch_knockdown_fill.inx:20
 #: inx/inkstitch_knockdown_fill.inx:37
 msgid "Join style"
-msgstr ""
+msgstr "Estilo de unión"
 
 #: lib/elements/stroke.py:438
 msgid "Join style for non circular ripples."
-msgstr ""
+msgstr "Estilo de unión para ondas no circulares."
 
 #: lib/elements/stroke.py:441
 msgid "flat"
@@ -2563,7 +2563,7 @@ msgstr "Incluye una descripción del error y (si es posible) el archivo SVG."
 
 #: lib/extensions/apply_palette.py:25
 msgid "There is no stitchable element in the document."
-msgstr ""
+msgstr "No se ha encontrado un elemento que se pueda coser en el documento."
 
 #: lib/extensions/apply_palette.py:26
 msgid "https://inkstitch.org/"
@@ -2598,7 +2598,7 @@ msgstr "Por favor selecciona uno o más elementos de trazo."
 
 #: lib/extensions/auto_run.py:62
 msgid "Please select at least one stroke element."
-msgstr ""
+msgstr "Por favor, selecciona al menos un elemento de trazo."
 
 #: lib/extensions/auto_satin.py:36
 msgid "Please ensure that at most one start and end command is attached to the selected satin columns."
@@ -2628,15 +2628,15 @@ msgstr "Consejo: Ejecute Extensiones > Ink/Stitch > Solucionar problemas > Soluc
 
 #: lib/extensions/batch_lettering.py:56
 msgid "Please specify a text"
-msgstr ""
+msgstr "Por favor, especifica un texto"
 
 #: lib/extensions/batch_lettering.py:61
 msgid "Please specify a font"
-msgstr ""
+msgstr "Por favor, especifica una fuente"
 
 #: lib/extensions/batch_lettering.py:65
 msgid "Please specify a valid font name."
-msgstr ""
+msgstr "Por favor, especifica un nombre de fuente válido."
 
 #: lib/extensions/batch_lettering.py:66
 msgid "You can find a list with all font names on our website: https://inkstitch.org/fonts/font-library/"
@@ -2644,11 +2644,11 @@ msgstr ""
 
 #: lib/extensions/batch_lettering.py:70
 msgid "Please specify at least one output file format"
-msgstr ""
+msgstr "Por favor, especifica al menos un formato de archivo de salida"
 
 #: lib/extensions/batch_lettering.py:76
 msgid "Please specify at least one file format supported by Ink/Stitch"
-msgstr ""
+msgstr "Por favor, especifica al menos un formato de archivo compatible con Ink/Stitch"
 
 #: lib/extensions/batch_lettering.py:77
 msgid "You can find a list with all supported file formats our website: https://inkstitch.org/docs/file-formats/#writing"
@@ -2661,7 +2661,7 @@ msgstr "Letras de Ink/Stitch"
 
 #: lib/extensions/batch_lettering.py:210 lib/gui/lettering/main_panel.py:311
 msgid "scale"
-msgstr ""
+msgstr "Escala"
 
 #: lib/extensions/break_apart.py:32
 msgid "Please select one or more fill areas to break apart."
@@ -2699,7 +2699,7 @@ msgstr "esta columna de satín no tiene un comando de \"punto de corte de column
 
 #: lib/extensions/cutwork_segmentation.py:83
 msgid "Please select at least one element with a stroke color."
-msgstr ""
+msgstr "Por favor, selecciona al menos un elemento con color de trazo."
 
 #: lib/extensions/cutwork_segmentation.py:167
 msgid "Cutwork Group"
@@ -2712,7 +2712,7 @@ msgstr "Aguja #%s"
 
 #: lib/extensions/density_map.py:72
 msgid "Density Plan"
-msgstr ""
+msgstr "Plan de densidad"
 
 #: lib/extensions/density_map.py:87
 msgid "Red"
@@ -2733,7 +2733,7 @@ msgstr "%s densidad"
 
 #: lib/extensions/display_stacking_order.py:56
 msgid "Stacking Order"
-msgstr ""
+msgstr "Orden de apilamiento"
 
 #: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
@@ -2758,11 +2758,11 @@ msgstr "Método de rellenado"
 
 #: lib/extensions/element_info.py:75
 msgid "Satin Method"
-msgstr ""
+msgstr "Método de Satín"
 
 #: lib/extensions/element_info.py:83
 msgid "Stroke Method"
-msgstr ""
+msgstr "Método de trazo"
 
 #: lib/extensions/element_info.py:88 lib/extensions/element_info.py:171
 msgid "Dimensions (mm)"
@@ -2775,19 +2775,19 @@ msgstr "Puntadas"
 
 #: lib/extensions/element_info.py:119 lib/extensions/element_info.py:134
 msgid "Small stitches (removed)"
-msgstr ""
+msgstr "Puntadas pequeñas (eliminadas)"
 
 #: lib/extensions/element_info.py:139 lib/extensions/element_info.py:183
 msgid "Jumps"
-msgstr ""
+msgstr "Saltos"
 
 #: lib/extensions/element_info.py:149 lib/extensions/element_info.py:199
 msgid "Min stitch length"
-msgstr ""
+msgstr "Longitud mínima de puntada"
 
 #: lib/extensions/element_info.py:167
 msgid "All Selected Elements"
-msgstr ""
+msgstr "Todos los elementos seleccionados"
 
 #: lib/extensions/element_info.py:175 lib/extensions/thread_list.py:57
 #: lib/gui/satin_multicolor/colorize_panel.py:77
@@ -2796,36 +2796,37 @@ msgstr "Colores"
 
 #: lib/extensions/element_info.py:179
 msgid "Color Changes"
-msgstr ""
+msgstr "Cambios de color"
 
 #: lib/extensions/element_info.py:187
 msgid "Trims"
-msgstr ""
+msgstr "Cortes"
 
 #: lib/extensions/element_info.py:191
 msgid "Stops"
-msgstr ""
+msgstr "Detenciones"
 
 #: lib/extensions/element_info.py:207
 msgid "Filter stitches smaller than (mm)"
-msgstr ""
+msgstr "Filtrar puntadas más pequeñas que (mm)"
 
 #: lib/extensions/fill_to_satin.py:81
 msgid "The selection contains elements with both, a fill and a stroke.\n\n"
 "Rungs only have a stroke color and fill elements a fill color."
-msgstr ""
+msgstr "La selección contiene elementos con relleno y trazo.\n\n"
+"Los peldaños solo tienen un color de trazo y los elementos de relleno, un color de relleno."
 
 #: lib/extensions/fill_to_satin.py:108
 msgid "Satin Group"
-msgstr ""
+msgstr "Grupo de satín"
 
 #: lib/extensions/fill_to_satin.py:129 inx/inkstitch_select_elements.inx:30
 msgid "Satin"
-msgstr ""
+msgstr "Satín"
 
 #: lib/extensions/fill_to_satin.py:142
 msgid "Please select a fill object and rungs."
-msgstr ""
+msgstr "Por favor, selecciona un objeto de relleno y peldaños."
 
 #: lib/extensions/fill_to_satin.py:146 inx/inkstitch_fill_to_satin.inx:28
 msgid "https://inkstitch.org/docs/satin-tools/#fill-to-satin"
@@ -2833,11 +2834,11 @@ msgstr ""
 
 #: lib/extensions/fill_to_stroke.py:33 lib/extensions/fill_to_stroke.py:39
 msgid "Please select one or more fill objects to render the centerline."
-msgstr ""
+msgstr "Por favor, selecciona uno o más objetos de relleno para renderizar la línea central."
 
 #: lib/extensions/fill_to_stroke.py:70
 msgid "center line"
-msgstr ""
+msgstr "Línea central"
 
 #: lib/extensions/flip.py:28
 msgid "Please select one or more satin columns to flip."
@@ -2845,45 +2846,47 @@ msgstr "Seleccione una o más columnas satinadas para voltear."
 
 #: lib/extensions/generate_palette.py:31
 msgid "Please specify a name for your color palette."
-msgstr ""
+msgstr "Por favor, especifica un nombre para tu paleta de colores."
 
 #: lib/extensions/generate_palette.py:36
 msgid "Unkown directory path."
-msgstr ""
+msgstr "Ruta de directorio desconocida."
 
 #: lib/extensions/generate_palette.py:41
 msgid "Ink/Stitch cannot find your palette folder automatically. Please enter the path manually."
-msgstr ""
+msgstr "Ink/Stitch no puede encontrar tu carpeta de paleta de forma automática. Por favor, ingresa la ruta manualmente."
 
 #: lib/extensions/generate_palette.py:47
 msgid "No element selected.\n\n"
 "Please select at least one text element with a fill color."
-msgstr ""
+msgstr "No hay ningún elemento seleccionado.\n\n"
+"Por favor, selecciona al menos un elemento de texto con un color de relleno."
 
 #: lib/extensions/generate_palette.py:53
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
-msgstr ""
+msgstr "No pudimos encontrar ningún color de relleno en tus elementos de texto. Por favor, lee las instrucciones en nuestro sitio web."
 
 #: lib/extensions/gradient_blocks.py:36 lib/extensions/gradient_blocks.py:44
 msgid "Please select at least one object with a gradient fill."
-msgstr ""
+msgstr "Por favor, selecciona al menos un objeto con un relleno de degradado."
 
 #: lib/extensions/gradient_blocks.py:64
 msgid "Color Gradient Blocks"
-msgstr ""
+msgstr "Bloques de degradado de color"
 
 #: lib/extensions/input.py:22
 msgid "Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with Extensions > Ink/Stitch > Thread Color Management > Apply Threadlist"
-msgstr ""
+msgstr "Ink/Stitch no puede importar formatos de color directamente. Pero puedes abrir el archivo de bordado y aplicar el color con Extensiones > Ink/Stitch > Gestión de color de hilo > Aplicar lista de hilos"
 
 #: lib/extensions/install.py:44 lib/extensions/install.py:54
 msgid "Could not install color palettes. Please file an issue on"
-msgstr ""
+msgstr "No se pudieron instalar las paletas de colores. Por favor, presenta un informe de error"
 
 #: lib/extensions/install.py:58
 msgid "Successfully installed Addons.\n\n"
 "Please restart Inkscape."
-msgstr ""
+msgstr "Addons instalados con éxito.\n\n"
+"Por favor, reinicia Inkscape."
 
 #: lib/extensions/install_custom_palette.py:25
 #: lib/extensions/palette_to_text.py:27
@@ -7238,19 +7241,19 @@ msgstr ""
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:3
 msgid "Set color sort index"
-msgstr ""
+msgstr "Configurar índice de ordenamiento de color"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:9
 msgid "Color sort index"
-msgstr ""
+msgstr "Índice de ordenamiento de color"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:12
 msgid "Sets given color sort index on selected elements"
-msgstr ""
+msgstr "Configura el índice de ordenación de color dado en los elementos seleccionados"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:14
 msgid "This sets the order of elements for multicolor fonts when color sorted."
-msgstr ""
+msgstr "Esto configura el orden de los elementos para las fuentes multicolores cuando se ordenan por color."
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:20
 msgid "https://inkstitch.org/docs/font-tools/#set-color-sort-index"
@@ -7258,23 +7261,23 @@ msgstr ""
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:27
 msgid "Sets a color sort index on selected elements to define the stacking order for multicolor fonts"
-msgstr ""
+msgstr "Establece un índice de ordenamiento de color en los elementos seleccionados para definir el orden de apilamiento de las fuentes multicolores"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:3
 msgid "Convert SVG Font to Glyph Layers"
-msgstr ""
+msgstr "Convertir Fuente SVG a Capas de Glifos"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:6
 msgid "Use this character to define size"
-msgstr ""
+msgstr "Usar este carácter para definir el tamaño"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:7
 msgid "Height of reference character (mm)"
-msgstr ""
+msgstr "Altura del carácter de referencia (mm)"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:11
 msgid "Converts a svg font to glyph layers"
-msgstr ""
+msgstr "Convierte una fuente Svg a capas de glifos"
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
@@ -7294,23 +7297,23 @@ msgstr "Importar comandos"
 
 #: inx/inkstitch_letters_to_font.inx:55
 msgid "As param"
-msgstr ""
+msgstr "Como parámetro"
 
 #: inx/inkstitch_letters_to_font.inx:56
 msgid "As symbol"
-msgstr ""
+msgstr "Como símbolo"
 
 #: inx/inkstitch_letters_to_font.inx:61
 msgid "Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system."
-msgstr ""
+msgstr "Incluye todas las letras de una fuente de bordado predigitalizada (un archivo para cada letra) en el documento para que esté disponible para el sistema de letras de Ink/Stitch."
 
 #: inx/inkstitch_letters_to_font.inx:64
 msgid "Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A."
-msgstr ""
+msgstr "Los archivos de bordado necesitan tener el nombre de la letra justo antes de la extensión del archivo. Por ejemplo, A.dst o Example_Font_A.dst se reconocerán como la letra A."
 
 #: inx/inkstitch_letters_to_font.inx:69
 msgid "⚠ After running this function, drag the baseline into the desired position and place the letters accordingly. Save your font in a separate folder. Then generate the json file (with \"Autoroute Satin\" unchecked)."
-msgstr ""
+msgstr "⚠ Después de ejecutar esta función, arrastra la línea base a la posición deseada y coloca las letras en consecuencia. Guarda la fuente en una carpeta separada. Luego genera el archivo json (con \"Autoruta de Satín\" desmarcado)."
 
 #: inx/inkstitch_letters_to_font.inx:76
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
