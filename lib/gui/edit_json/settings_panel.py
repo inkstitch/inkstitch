@@ -201,7 +201,7 @@ class GeneralKerning(wx.Panel):
         wx.Panel.__init__(self, parent)
 
         sizer = wx.BoxSizer(wx.VERTICAL)
-        grid_sizer = wx.FlexGridSizer(20, 2, 10, 10)
+        grid_sizer = wx.FlexGridSizer(20, 3, 10, 10)
         grid_sizer.AddGrowableCol(1)
 
         size_label = wx.StaticText(self, label=_("Size"))
@@ -236,6 +236,12 @@ class GeneralKerning(wx.Panel):
             wx.EVT_SPINCTRLDOUBLE,
             self.parent.on_horiz_adv_x_default_changed
         )
+        self.horiz_adv_x_default_null_checkbox = wx.CheckBox(self, label=_("Glyph width"))
+        self.horiz_adv_x_default_null_checkbox.SetToolTip(_("Use the width of the individual glyphs."))
+        self.horiz_adv_x_default_null_checkbox.Bind(
+            wx.EVT_CHECKBOX,
+            self.parent.on_horiz_adv_x_default_checkbox_changed
+        )
         horiz_adv_x_space_label = wx.StaticText(self, label=_("Horizontal advance x space"))
         self.horiz_adv_x_space = wx.SpinCtrlDouble(self, min=0, max=10000, inc=0.1, initial=50, style=wx.SP_WRAP)
         self.horiz_adv_x_space.Bind(
@@ -246,16 +252,27 @@ class GeneralKerning(wx.Panel):
         grid_sizer.AddMany([
             (size_label, 0, wx.ALL, 0),
             (self.size, 1, wx.ALL | wx.EXPAND, 0),
+            (wx.StaticText(self), 1, wx.ALL | wx.EXPAND, 0),
+
             (min_scale_label, 0, wx.ALL, 0),
             (self.min_scale, 1, wx.ALL | wx.EXPAND, 0),
+            (wx.StaticText(self), 1, wx.ALL | wx.EXPAND, 0),
+
             (max_scale_label, 0, wx.ALL, 0),
             (self.max_scale, 1, wx.ALL | wx.EXPAND, 0),
+            (wx.StaticText(self), 1, wx.ALL | wx.EXPAND, 0),
+
             (leading_label, 0, wx.ALL, 0),
             (self.leading, 1, wx.ALL | wx.EXPAND, 0),
+            (wx.StaticText(self), 1, wx.ALL | wx.EXPAND, 0),
+
             (horiz_adv_x_default_label, 0, wx.ALL, 0),
             (self.horiz_adv_x_default, 1, wx.ALL | wx.EXPAND, 0),
+            (self.horiz_adv_x_default_null_checkbox, 1, wx.ALL | wx.EXPAND, 0),
+
             (horiz_adv_x_space_label, 0, wx.ALL, 0),
-            (self.horiz_adv_x_space, 1, wx.ALL | wx.EXPAND, 0)
+            (self.horiz_adv_x_space, 1, wx.ALL | wx.EXPAND, 0),
+            (wx.StaticText(self), 1, wx.ALL | wx.EXPAND, 0)
         ])
 
         sizer.Add(grid_sizer, 1, wx.EXPAND | wx.ALL, 10)
