@@ -1,5 +1,5 @@
 ---
-title: "Computer"
+title: "حاسوب"
 permalink: /fonts/computer/
 last_modified_at: 2025-02-17
 toc: false

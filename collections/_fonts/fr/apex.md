@@ -36,7 +36,7 @@ Les glypes communs sont identiques, à la décoration près bien sûr.
 
 ### Apex Lake
 
-Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
+Cette fonte comporte {{ font1.glyphs.size }} glyphes:
 
 ```
 {{ font1.glyphs | sort | join: ' ' }}
@@ -79,9 +79,10 @@ Vous pouvez aussi utiliser les deux fontes conjointement, généralement en util
 ### Apex Lake
 
 Apex Lake est une grande fonte, elle est faite pour être utilisée une lettre ou quelques lettres à la fois.
+
 A une échelle de 100% cette fonte a une hauteur approximative de {{ font1.size }} mm. 
 
-Elle peut être redimensionnée  de {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
+Elle peut être redimensionnée de {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
 à {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
 
 ### Apex Simple AGS

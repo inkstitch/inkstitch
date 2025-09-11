@@ -11,6 +11,8 @@ data_title:
 ---
 {%- assign font1 = site.data.fonts.circular_3letters_monogram.font -%}
 
+{% include upcoming_release.html %}
+
 ![Circular 3 Letters Monogram](/assets/images/fonts/circular_3letters_monogram.png)
 
 ## Schriftzeichen

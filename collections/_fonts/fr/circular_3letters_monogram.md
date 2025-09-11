@@ -1,6 +1,6 @@
 ---
 title: "Circular 3 Letters Monogram"
-permalink: /fonts/circular-3letters-monogram/
+permalink: /fr/fonts/circular-3letters-monogram/
 last_modified_at: 2025-09-07
 toc: false
 preview_image:
@@ -15,16 +15,16 @@ data_title:
 
 ![Circular 3 Letters Monogram](/assets/images/fonts/circular_3letters_monogram.png)
 
-## Glyphs
+## Glyphes
 
-This font contains  {{ font1.glyphs.size }} glyphs:
+Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
 
 ```
 {{ font1.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
-## Remark
+## Particularités
 
 Enter 3 letters to get a circular three letters monogram. You can add a frame, by adding one of the following :(){,[];.<>
 
@@ -34,12 +34,12 @@ Please use exactly 3 letters, no less, no more, or you could get some unexpected
 
 ## Dimensions
 
-At a scale of 100% this font has an approximate height of {{ font1.size }} mm. 
+A une échelle de 100% cette fonte a une hauteur approximative de {{ font1.size }} mm. 
 
-It can be scaled from {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
-up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
+Elle peut être redimensionnée de {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
+à {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
 
-## In real life 
+## Dans la vraie vie
 
 {%include folder-galleries path="fonts/allegria/" %}
 

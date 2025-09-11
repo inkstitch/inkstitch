@@ -1,5 +1,5 @@
 ---
-title: "Computer"
+title: "حاسوب"
 permalink: /fr/fonts/computer/
 last_modified_at: 2025-02-17
 toc: false
@@ -32,13 +32,13 @@ Ces fontes contiennent  {{ font1.glyphs.size }} glyphes:
 
 ## Dimensions
 
-### Computer
+### حاسوب
 
 A une échelle de 100% cette fonte mesure environ {{ font1.size }} mm de haut.
 Peut être diminuée jusqu'à  {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
 et agrandie jusqu'à  {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
 
-### Computer Small
+### حاسوب Small
 
 Peut être utilisée de {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
 à {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm). 

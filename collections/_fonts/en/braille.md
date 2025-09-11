@@ -1,5 +1,5 @@
 ---
-title: "Braille"
+title: "BrailleCC"
 permalink: /fonts/braille/
 last_modified_at: 2025-09-07
 toc: false
