@@ -20,7 +20,7 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
   ![Allegria 55](/assets/images/fonts/allegria55.png)
 * [Apex simple small AGS](/fonts/apex/)
 
-  ![Apex simple small](/assets/images/fonts/apex_simple_small_ags.png)
+  ![Apex simple small](/assets/images/fonts/apex_simple_small_AGS.png)
 * [Braille](/fonts/braille/)
 
   ![Braille](/assets/images/fonts/braille.png)

@@ -1,6 +1,6 @@
 ---
 title: "Apex Lake"
-permalink: /de/fonts/apex-lake/
+permalink: /de/fonts/apex/
 last_modified_at: 2023-04-24
 toc: false
 preview_image:
@@ -14,15 +14,21 @@ data_title:
 ---
 {%- assign font1 = site.data.fonts.apex_lake.font -%}
 {%- assign font2 = site.data.fonts.apex_simple_AGS.font -%}
+{%- assign font3 = site.data.fonts.apex_simple_small_AGS.font -%}
 
 ![Apex Lake](/assets/images/fonts/apex_lake.jpg)
 
 ![Apex Simple](/assets/images/fonts/apex_simple_AGS.jpg)
 
+<hr>
+
+{% include upcoming_release.html %}
+
+![Apex Simple AGS](/assets/images/fonts/apex_simple_small_AGS.jpg)
+
 ## Schriftzeichen
 
 Glyphen sind identisch (bis auf die Dekoration)
-
 
 ### Apex Lake
 
@@ -39,6 +45,15 @@ Diese Schrift enthält  {{ font2.glyphs.size }} Schriftzeichen:
 
 ```
 {{ font2.glyphs | sort | join: ' ' }}
+```
+{: .font-glyphs }
+
+### Apex Simple small AGS
+
+Diese Schrift enthält  {{ font3.glyphs.size }} Schriftzeichen:
+
+```
+{{ font3.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
@@ -61,11 +76,19 @@ Die beiden Versionen passen gut zusammen. Es bietet sich an für den ersten Buch
 ### Apex Lake
 
 Apex Lake ist eine große Schrift, sie ist dafür gedacht, einen Buchstaben oder sehr wenige Buchstaben gleichzeitig zu verwenden. 
+
 Mit einer Skalierung von 100% ist sie ca. 60 mm hoch. Sie kann bis zu 80% verkleinert (50mm) und bis zu 130% vergrößert (110mm) werden.
 
 ### Apex Simple AGS
 
 Mit einer Skalierung von 100% ist sie ca. 35 mm hoch. Sie kann bis zu 75% verkleinert (25mm) und bis zu 300% vergrößert (100mm) werden.
+
+### Apex Simple Small AGS
+
+Bei einer Skalierung von 100% hat die Schrift eine ungefähre Höhe von {{ font3.size }} mm. 
+
+Sie kann von {{ font3.min_scale | times: 100 | floor }}% ({{ font3.size | times: font3.min_scale }} mm)
+bis zu {{ font3.max_scale | times: 100 | floor }}% ({{ font1.size | times: font3.max_scale }} mm) skaliert werdens.
 
 ## Farben sortieren
 

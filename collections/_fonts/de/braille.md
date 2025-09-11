@@ -1,6 +1,6 @@
 ---
 title: "Braille"
-permalink: /fonts/braille/
+permalink: /de/fonts/braille/
 last_modified_at: 2025-09-07
 toc: false
 preview_image:
@@ -15,30 +15,30 @@ data_title:
 
 ![Braille](/assets/images/fonts/braille.png)
 
-## Glyphs
+## Schriftzeichen
 
-This font contains  {{ font1.glyphs.size }} glyphs:
+Diese Schrift enthält {{ font1.glyphs.size }} Schriftzeichen:
 
 ```
 {{ font1.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
-## Remarks
+## Anmerkungen
 
 Font for the visually impaired with Braille key combinations according to DT 2024 INSEI specifications for French 6 dots Braille. It is also possible to use Unicode Braille. In this case, it is convenient to use one of the web's Braille translators to create a text in Braille unicode.
 
-## Dimensions
+## Maße
 
-At a scale of 100% this font has an approximate height of {{ font1.size }} mm. 
+Bei einer Skalierung von 100% hat die Schrift eine ungefähre Höhe von {{ font1.size }} mm. 
 
-It can be scaled from {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
-up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
+Sie kann von {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
+bis zu {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm) skaliert werdens.
 
-## In real life 
+## Impressionen
 
 {%include folder-galleries path="fonts/braille/" %}
 
-## License
+## Lizenz
 
-[Download Braille Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/braille/LICENSE)
+[Lizenz herunterladen (Braille Font)](https://github.com/inkstitch/inkstitch/tree/main/fonts/braille/LICENSE)
