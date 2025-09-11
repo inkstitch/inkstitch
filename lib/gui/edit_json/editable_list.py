@@ -24,12 +24,12 @@ class EditableListCtrl(wx.ListCtrl, TextEditMixin):
         event.Skip()
 
     def CloseEditor(self, event=None, swap=False):
-        text = self.editor.GetValue()
         if swap:
             self.editor.Hide()
             TextEditMixin.CloseEditor(self, event)
             return
 
+        text = self.editor.GetValue()
         if text:
             try:
                 float(text)
