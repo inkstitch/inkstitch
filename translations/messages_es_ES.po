@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-01 01:55+0000\n"
-"PO-Revision-Date: 2025-09-10 01:31\n"
+"PO-Revision-Date: 2025-09-11 01:40\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -2916,15 +2916,15 @@ msgstr ""
 
 #: lib/extensions/lettering_along_path.py:35
 msgid "Please select one path and one Ink/Stitch lettering group."
-msgstr ""
+msgstr "Por favor, selecciona un trazado y un grupo de texto de Ink/Stitch."
 
 #: lib/extensions/lettering_along_path.py:78
 msgid "The text doesn't contain any glyphs."
-msgstr ""
+msgstr "El texto no contiene ningún glifo."
 
 #: lib/extensions/lettering_along_path.py:84
 msgid "Couldn't identify the font specified in the lettering group."
-msgstr ""
+msgstr "No se pudo identificar la fuente especificada en el grupo de texto."
 
 #: lib/extensions/lettering_custom_font_dir.py:28
 msgid "Please specify the directory of your custom fonts."
@@ -2932,11 +2932,11 @@ msgstr "Especifique el directorio de sus fuentes personalizadas."
 
 #: lib/extensions/lettering_edit_json.py:32
 msgid "Ink/Stitch Edit JSON"
-msgstr ""
+msgstr "Editar JSON de Ink/Stitch"
 
 #: lib/extensions/lettering_font_sample.py:21
 msgid "Font Sample"
-msgstr ""
+msgstr "Muestra de fuente"
 
 #: lib/extensions/lettering_force_lock_stitches.py:35
 msgid "The maximum value is smaller than the minimum value."
@@ -2948,81 +2948,84 @@ msgstr "Especifique un archivo de fuente."
 
 #: lib/extensions/lettering_organize_glyphs.py:51
 msgid "Upper Case Letters"
-msgstr ""
+msgstr "Letras mayúsculas"
 
 #: lib/extensions/lettering_organize_glyphs.py:52
 msgid "Lower Case Letters"
-msgstr ""
+msgstr "Letras minúsculas"
 
 #: lib/extensions/lettering_organize_glyphs.py:53
 msgid "Other Letters"
-msgstr ""
+msgstr "Otras letras"
 
 #: lib/extensions/lettering_organize_glyphs.py:54
 msgid "Digits"
-msgstr ""
+msgstr "Dígitos"
 
 #: lib/extensions/lettering_organize_glyphs.py:55
 msgid "Symbols"
-msgstr ""
+msgstr "Símbolos"
 
 #: lib/extensions/lettering_organize_glyphs.py:56
 msgid "Punctuation"
-msgstr ""
+msgstr "Puntuación"
 
 #: lib/extensions/lettering_organize_glyphs.py:57
 msgid "Closing Punctuation"
-msgstr ""
+msgstr "Signos de puntuación de cierre"
 
 #: lib/extensions/lettering_organize_glyphs.py:58
 msgid "Diacritics"
-msgstr ""
+msgstr "Diacríticos"
 
 #: lib/extensions/lettering_organize_glyphs.py:59
 msgid "Special"
-msgstr ""
+msgstr "Especiales"
 
 #: lib/extensions/lettering_organize_glyphs.py:133
 #, python-brace-format
 msgid "Found duplicated glyphs in font file: {duplicated_glyphs}"
-msgstr ""
+msgstr "Se encontraron glifos duplicados en el archivo de fuente:\n"
+"{duplicated_glyphs}"
 
 #: lib/extensions/lettering_organize_glyphs.py:139
 msgid "No duplicated glyph found"
-msgstr ""
+msgstr "No se encontraron glifos duplicados"
 
 #: lib/extensions/lettering_organize_glyphs.py:193
 #, python-brace-format
 msgid "This or these glyphs have been added:\n"
 "{added_char}\n"
 "Either  fill them or delete them"
-msgstr ""
+msgstr "Este o estos glifos han sido añadidos:\n"
+"{added_char}\n"
+"Rellénalos o elimínalos"
 
 #: lib/extensions/lettering_organize_glyphs.py:326
 msgid "Additional Punctuation"
-msgstr ""
+msgstr "Puntuación adicional"
 
 #: lib/extensions/lettering_organize_glyphs.py:401
 msgid "Simple Diacritics"
-msgstr ""
+msgstr "Diacríticos simples"
 
 #: lib/extensions/lettering_organize_glyphs.py:446
 #: lib/extensions/lettering_organize_glyphs.py:472
 #: lib/extensions/lettering_organize_glyphs.py:497
 msgid "nothing to do, you are ready for next step"
-msgstr ""
+msgstr "nada que hacer, estás listo para el siguiente paso"
 
 #: lib/extensions/lettering_organize_glyphs.py:448
 msgid "Other Diacritics"
-msgstr ""
+msgstr "Otros diacríticos"
 
 #: lib/extensions/lettering_organize_glyphs.py:474
 msgid "Two pieces letters"
-msgstr ""
+msgstr "Letras de dos piezas"
 
 #: lib/extensions/lettering_organize_glyphs.py:499
 msgid "Other composed letters"
-msgstr ""
+msgstr "Otras letras compuestas"
 
 #: lib/extensions/letters_to_font.py:38
 msgid "Font directory not found. Please specify an existing directory."
@@ -3041,25 +3044,27 @@ msgstr "Elija uno o más comandos para adjuntar."
 msgid "Cannot attach commands to Clone element(s) {clones}. They must be unlinked to add commands.\n"
 "* Select the clone(s)\n"
 "* Run: Extensions > Ink/Stitch > Edit > Unlink Clone"
-msgstr ""
+msgstr "No se pueden adjuntar comandos a elemento(s) clonados {clones}. Deben desvincularse para añadir comandos.\n"
+"*Selecciona el/los clon(es)\n"
+"*Ejecuta: Extensiones > Ink/Stitch > Editar > Desvincular clon"
 
 #: lib/extensions/outline.py:30
 msgid "Please select one or more shapes to convert to their outline."
-msgstr ""
+msgstr "Por favor, selecciona una o más formas para convertir en su contorno."
 
 #: lib/extensions/outline.py:70
 #, python-brace-format
 msgid "{element_id} is not a path element. This extension is designed to generate an outline of an embroidery pattern."
-msgstr ""
+msgstr "{element_id} no es un elemento de trazado. Esta extensión está diseñada para generar un contorno de un patrón de bordado."
 
 #: lib/extensions/outline.py:76
 #, python-brace-format
 msgid "Could not generate path from element {element_id} with the given settings."
-msgstr ""
+msgstr "No se pudo generar un trazado a partir del elemento {element_id} con la configuración dada."
 
 #: lib/extensions/palette_split_text.py:20
 msgid "Please select one or more text elements to split lines."
-msgstr ""
+msgstr "Por favor, selecciona uno o más elementos de texto para dividir líneas."
 
 #: lib/extensions/palette_to_text.py:32
 msgid "Cannot read palette: invalid GIMP palette header"
@@ -3102,12 +3107,12 @@ msgstr "Objetos de Inkscape"
 
 #: lib/extensions/params.py:489
 msgid "No options available"
-msgstr ""
+msgstr "No hay opciones disponibles"
 
 #: lib/extensions/params.py:509
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:29
 msgid "Re-roll"
-msgstr ""
+msgstr "Volver a generar"
 
 #: lib/extensions/params.py:538
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
@@ -3144,44 +3149,45 @@ msgstr "Parámetros de Bordado"
 
 #: lib/extensions/print_pdf.py:135
 msgid "Closing..."
-msgstr ""
+msgstr "Cerrando..."
 
 #: lib/extensions/print_pdf.py:135
 msgid "It is safe to close this window now."
-msgstr ""
+msgstr "Ahora es seguro cerrar esta ventana."
 
 #: lib/extensions/print_pdf.py:268
 msgid "A print preview has been opened in your web browser.  This window will stay open in order to communicate with the JavaScript code running in your browser.\n\n"
 "This window will close after you close the print preview in your browser, or you can close it manually if necessary."
-msgstr ""
+msgstr "Se ha abierto una vista previa de impresión en tu navegador web. Esta ventana permanecerá abierta para comunicarse con el código JavaScript que se ejecuta en tu navegador.\n\n"
+"Esta ventana se cerrará después de que cierres la vista previa de impresión en tu navegador, o puedes cerrarla manualmente si es necesario."
 
 #: lib/extensions/print_pdf.py:449
 msgid "Ink/Stitch Print"
-msgstr ""
+msgstr "Impresión de Ink/Stitch"
 
 #: lib/extensions/redwork.py:47 lib/extensions/remove_duplicated_points.py:32
 msgid "Please select one or more strokes."
-msgstr ""
+msgstr "Por favor, selecciona uno o más trazos."
 
 #: lib/extensions/redwork.py:112
 msgid "Redwork Group"
-msgstr ""
+msgstr "Grupo Redwork"
 
 #: lib/extensions/redwork.py:129
 msgid "Connected Group"
-msgstr ""
+msgstr "Grupo conectado"
 
 #: lib/extensions/redwork.py:166 inx/inkstitch_redwork.inx:3
 msgid "Redwork"
-msgstr ""
+msgstr "Redwork"
 
 #: lib/extensions/redwork.py:170
 msgid "Redwork Underpath"
-msgstr ""
+msgstr "Trazado base Redwork"
 
 #: lib/extensions/reorder.py:18
 msgid "Please select at least two elements to reorder."
-msgstr ""
+msgstr "Por favor, selecciona al menos dos elementos para reordenar."
 
 #: lib/extensions/satin_multicolor.py:35
 #: lib/gui/satin_multicolor/help_panel.py:33
@@ -3191,7 +3197,7 @@ msgstr ""
 
 #: lib/extensions/satin_multicolor.py:45
 msgid "Ink/Stitch Multicolor Satin"
-msgstr ""
+msgstr "Ink/Stitch: Satín Multicolor"
 
 #. : Convert To Satin extension, user selected one or more objects that were
 #. not lines.
@@ -3201,11 +3207,11 @@ msgstr "Seleccione al menos una columna de satín para convertir en una puntada 
 
 #: lib/extensions/select_elements.py:102
 msgid "Could not detect python path. Please insert python path manually as described in the help tab of the select elements dialog."
-msgstr ""
+msgstr "No se pudo detectar la ruta de Python. Por favor, inserta la ruta de Python manualmente como se describe en la pestaña de ayuda del diálogo de selección de elementos."
 
 #: lib/extensions/selection_to_anchor_line.py:21
 msgid "Please select at least one object to be marked as a anchor line."
-msgstr ""
+msgstr "Por favor, selecciona al menos un objeto para marcarlo como una línea de anclaje."
 
 #: lib/extensions/selection_to_guide_line.py:21
 msgid "Please select at least one object to be marked as a guide line."
@@ -3217,52 +3223,52 @@ msgstr "Seleccione al menos un objeto para marcarlo como patrón."
 
 #: lib/extensions/sew_stack_editor.py:93
 msgid "Sew stack only"
-msgstr ""
+msgstr "Solo Pila de costura"
 
 #: lib/extensions/sew_stack_editor.py:95
 msgid "Only sew the Sew Stack layers, and ignore settings from Params"
-msgstr ""
+msgstr "Coser solo las capas de la Pila de costura e ignorar las configuraciones de Parámetros"
 
 #: lib/extensions/sew_stack_editor.py:195
 msgid "Preview selected layer"
-msgstr ""
+msgstr "Previsualizar capa seleccionada"
 
 #: lib/extensions/sew_stack_editor.py:201
 msgid "Preview all layers"
-msgstr ""
+msgstr "Previsualizar todas las capas"
 
 #: lib/extensions/sew_stack_editor.py:224
 msgid "Layer Name"
-msgstr ""
+msgstr "Nombre de la capa"
 
 #: lib/extensions/sew_stack_editor.py:374
 msgid "Are you sure you want to delete this layer?"
-msgstr ""
+msgstr "¿Estás seguro de que quieres eliminar esta capa?"
 
 #: lib/extensions/sew_stack_editor.py:514
 msgid "Are you sure you want to quit without saving changes?"
-msgstr ""
+msgstr "¿Estás seguro de que quieres salir sin guardar los cambios?"
 
 #: lib/extensions/stroke_to_lpe_satin.py:33
 msgid "Please select at least one stroke."
-msgstr ""
+msgstr "Por favor, selecciona al menos un trazo."
 
 #: lib/extensions/stroke_to_lpe_satin.py:39
 msgid "This element has lost its path information. Please move the element slightly back and forth before you try again."
-msgstr ""
+msgstr "Este elemento ha perdido su información de trazado. Por favor, mueve el elemento ligeramente hacia atrás y hacia adelante antes de volver a intentarlo."
 
 #: lib/extensions/stroke_to_lpe_satin.py:41
 #: lib/extensions/zigzag_line_to_satin.py:28
 msgid "Please select at least one stroke to convert to a satin column."
-msgstr ""
+msgstr "Por favor, selecciona al menos un trazo para convertirlo en una columna de satín."
 
 #: lib/extensions/stroke_to_lpe_satin.py:46
 msgid "Could not find the specified pattern."
-msgstr ""
+msgstr "No se pudo encontrar el patrón especificado."
 
 #: lib/extensions/stroke_to_lpe_satin.py:136
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
-msgstr ""
+msgstr "No se puede convertir una columna de satín en un satín de efecto de trazado en vivo. Por favor, selecciona un trazo."
 
 #: lib/extensions/stroke_to_satin.py:28
 msgid "Please select at least one line to convert to a satin column."
@@ -3288,7 +3294,7 @@ msgstr ""
 
 #: lib/extensions/test_swatches.py:22 lib/extensions/transform_elements.py:30
 msgid "Please select one or more elements."
-msgstr ""
+msgstr "Por favor selecciona uno o más elementos."
 
 #: lib/extensions/thread_list.py:45
 msgid "Design Details"
@@ -3394,7 +3400,7 @@ msgstr "lista de hilos"
 #: lib/gui/lettering_font_sample.py:98
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
-msgstr ""
+msgstr "Más información en nuestro sitio web:"
 
 #: lib/gui/about.py:18
 msgid "About Ink/Stitch"
@@ -3477,7 +3483,7 @@ msgstr ""
 
 #: lib/gui/edit_json/help_panel.py:19
 msgid "Feature to verify or update font information for an existing font."
-msgstr ""
+msgstr "Función para verificar o actualizar la información de una fuente existente."
 
 #: lib/gui/edit_json/help_panel.py:33 lib/gui/edit_json/help_panel.py:34
 #: inx/inkstitch_lettering_generate_json.inx:150
@@ -3506,7 +3512,7 @@ msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:45
 msgid "Font Info"
-msgstr ""
+msgstr "Información de la fuente"
 
 #: lib/gui/edit_json/settings_panel.py:48
 msgid "Font Settings"
@@ -3518,7 +3524,7 @@ msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:54
 msgid "Horizontal advance"
-msgstr ""
+msgstr "Avance horizontal"
 
 #: lib/gui/edit_json/settings_panel.py:58
 msgid "Kerning pairs"
@@ -3526,7 +3532,7 @@ msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:101
 msgid "Default Variant"
-msgstr ""
+msgstr "Variante predeterminada"
 
 #: lib/gui/edit_json/settings_panel.py:105
 #: inx/inkstitch_lettering_generate_json.inx:29
@@ -3535,11 +3541,11 @@ msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:106
 msgid "Left to Right"
-msgstr ""
+msgstr "De izquierda a derecha"
 
 #: lib/gui/edit_json/settings_panel.py:106
 msgid "Right to Left"
-msgstr ""
+msgstr "De derecha a izquierda"
 
 #: lib/gui/edit_json/settings_panel.py:109
 #: inx/inkstitch_lettering_generate_json.inx:43
@@ -3548,15 +3554,15 @@ msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:144
 msgid "Default glyph"
-msgstr ""
+msgstr "Glifo predeterminado"
 
 #: lib/gui/edit_json/settings_panel.py:151
 msgid "AutoSatin"
-msgstr ""
+msgstr "AutoSatín"
 
 #: lib/gui/edit_json/settings_panel.py:158
 msgid "Letter case"
-msgstr ""
+msgstr "Mayúsculas y minúsculas"
 
 #: lib/gui/edit_json/settings_panel.py:159
 #: inx/inkstitch_lettering_generate_json.inx:97
@@ -3576,11 +3582,11 @@ msgstr "Reversible"
 #: lib/gui/edit_json/settings_panel.py:169
 #: inx/inkstitch_lettering_generate_json.inx:92
 msgid "Sortable"
-msgstr ""
+msgstr "Clasificable"
 
 #: lib/gui/edit_json/settings_panel.py:176
 msgid "Combine Indices"
-msgstr ""
+msgstr "Combinar índices"
 
 #: lib/gui/edit_json/settings_panel.py:213
 #: inx/inkstitch_lettering_generate_json.inx:103
@@ -3594,23 +3600,23 @@ msgstr "Escala Máxima"
 
 #: lib/gui/edit_json/settings_panel.py:227
 msgid "Leading"
-msgstr ""
+msgstr "Interlineado"
 
 #: lib/gui/edit_json/settings_panel.py:233
 msgid "Horizontal advance x"
-msgstr ""
+msgstr "Avance horizontal x"
 
 #: lib/gui/edit_json/settings_panel.py:239
 msgid "Horizontal advance x space"
-msgstr ""
+msgstr "Avance horizontal x del espacio"
 
 #: lib/gui/element_info.py:18 inx/inkstitch_element_info.inx:3
 msgid "Element Info"
-msgstr ""
+msgstr "Información del elemento"
 
 #: lib/gui/element_info.py:29 lib/gui/simulator/view_panel.py:120
 msgid "Info"
-msgstr ""
+msgstr "Información"
 
 #: lib/gui/edit_json/settings_panel.py:87 lib/gui/element_info.py:34
 #: inx/inkstitch_lettering_generate_json.inx:20
@@ -3619,11 +3625,11 @@ msgstr "Nombre"
 
 #: lib/gui/element_info.py:35
 msgid "Value"
-msgstr ""
+msgstr "Valor"
 
 #: lib/gui/element_info.py:49
 msgid "This extension informs about various parameters of selected stitch elements."
-msgstr ""
+msgstr "Esta extensión informa sobre varios parámetros de los elementos de puntada seleccionados."
 
 #: lib/gui/element_info.py:63 lib/gui/element_info.py:64
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
@@ -3631,15 +3637,15 @@ msgstr ""
 
 #: lib/gui/element_info.py:71
 msgid "Click on Copy to copy the information in the Clipboard"
-msgstr ""
+msgstr "Haz clic en Copiar para copiar la información en el Portapapeles"
 
 #: lib/gui/lettering/help_panel.py:19
 msgid "Add text to your design."
-msgstr ""
+msgstr "Añade texto a tu diseño."
 
 #: lib/gui/lettering/help_panel.py:36
 msgid "A font library with full description and embroidered examples can be found on our website:"
-msgstr ""
+msgstr "En nuestro sitio web puedes encontrar una biblioteca de fuentes con descripciones completas y ejemplos bordados:"
 
 #: lib/gui/lettering/help_panel.py:42 lib/gui/lettering/help_panel.py:43
 msgid "https://inkstitch.org/fonts/font-library/"
@@ -3653,35 +3659,35 @@ msgstr "Esta fuente no tiene ninguna variante de fuente disponible. Actualice o 
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
-msgstr ""
+msgstr "Error: El texto no se puede aplicar al documento.%s "
 
 #: lib/gui/lettering/option_panel.py:19
 msgid "Font size filter (mm). 0 for all sizes."
-msgstr ""
+msgstr "Filtro de tamaño de fuente (mm). 0 para todos los tamaños."
 
 #: lib/gui/lettering/option_panel.py:21
 msgid "Glyphs"
-msgstr ""
+msgstr "Glifos"
 
 #: lib/gui/lettering/option_panel.py:23
 msgid "Filter fonts by available glyphs."
-msgstr ""
+msgstr "Filtrar fuentes por glifos disponibles."
 
 #: lib/gui/lettering/option_panel.py:30
 msgid "Filter fonts by category."
-msgstr ""
+msgstr "Filtrar fuentes por categoría."
 
 #: lib/gui/lettering/option_panel.py:34
 msgid "Font Filter"
-msgstr ""
+msgstr "Filtro de fuente"
 
 #: lib/gui/lettering/option_panel.py:55
 msgid "Height: "
-msgstr ""
+msgstr "Altura:"
 
 #: lib/gui/lettering/option_panel.py:59
 msgid "Scale:"
-msgstr ""
+msgstr "Escala:"
 
 #: lib/gui/lettering/option_panel.py:71
 msgid "Font"
@@ -3693,85 +3699,85 @@ msgstr "Unir líneas de texto de un lado a otro"
 
 #: lib/gui/lettering/option_panel.py:87
 msgid "Align Text"
-msgstr ""
+msgstr "Alinear texto"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:36
 #: inx/inkstitch_batch_lettering.inx:49
 #: inx/inkstitch_lettering_along_path.inx:19
 msgid "Left"
-msgstr ""
+msgstr "Izquierda"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:37
 #: inx/inkstitch_batch_lettering.inx:50
 #: inx/inkstitch_lettering_along_path.inx:20
 msgid "Center"
-msgstr ""
+msgstr "Centro"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:38
 #: inx/inkstitch_batch_lettering.inx:51
 #: inx/inkstitch_lettering_along_path.inx:21
 msgid "Right"
-msgstr ""
+msgstr "Derecha"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:39
 msgid "Block (default)"
-msgstr ""
+msgstr "Bloque (por defecto)"
 
 #: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:40
 msgid "Block (letterspacing)"
-msgstr ""
+msgstr "Bloque (espaciado entre letras)"
 
 #: lib/gui/lettering/option_panel.py:95 lib/gui/lettering/option_panel.py:97
 msgid "Sort multicolor fonts. Unifies tartan patterns."
-msgstr ""
+msgstr "Clasifica las fuentes multicolor. Unifica los patrones tartán."
 
 #: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:23
 msgid "Off"
-msgstr ""
+msgstr "Desactivado"
 
 #: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:24
 msgid "Whole text"
-msgstr ""
+msgstr "Texto completo"
 
 #: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:25
 msgid "Line"
-msgstr ""
+msgstr "Línea"
 
 #: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:26
 msgid "Word"
-msgstr ""
+msgstr "Palabra"
 
 #: lib/gui/lettering/option_panel.py:100 inx/inkstitch_batch_lettering.inx:28
 msgid "Add trims"
-msgstr ""
+msgstr "Agregar cortes"
 
 #: lib/gui/lettering/option_panel.py:101 inx/inkstitch_batch_lettering.inx:29
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #: lib/gui/lettering/option_panel.py:101 inx/inkstitch_batch_lettering.inx:30
 msgid "after each line"
-msgstr ""
+msgstr "después de cada línea"
 
 #: lib/gui/lettering/option_panel.py:101 inx/inkstitch_batch_lettering.inx:31
 msgid "after each word"
-msgstr ""
+msgstr "después de cada palabra"
 
 #: lib/gui/lettering/option_panel.py:101 inx/inkstitch_batch_lettering.inx:32
 msgid "after each letter"
-msgstr ""
+msgstr "después de cada letra"
 
 #: lib/gui/lettering/option_panel.py:102
 msgid "Add trim command"
-msgstr ""
+msgstr "Añadir comando de corte"
 
 #: lib/gui/lettering/option_panel.py:105 inx/inkstitch_batch_lettering.inx:34
 msgid "Use command symbols"
-msgstr ""
+msgstr "Usar símbolos de comando "
 
 #: lib/gui/lettering/option_panel.py:107
 msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
-msgstr ""
+msgstr "Usa símbolos de comando  si está activado. Cuando está desactivado, inserta comandos  de corte como parámetros."
 
 #: lib/gui/lettering/option_panel.py:112
 #: print/templates/ui_svg_action_buttons.html:1
@@ -3781,7 +3787,7 @@ msgstr "Escala"
 #: lib/gui/lettering_font_sample.py:25
 #: inx/inkstitch_lettering_font_sample.inx:3
 msgid "Font Sampling"
-msgstr ""
+msgstr "Muestreo de fuentes"
 
 #: lib/gui/edit_json/main_panel.py:74 lib/gui/lettering_font_sample.py:40
 #: lib/gui/simulator/view_panel.py:129 print/templates/ui.html:5
@@ -3792,25 +3798,25 @@ msgstr "Ajustes"
 
 #: lib/gui/lettering_font_sample.py:51
 msgid "Stitch direction"
-msgstr ""
+msgstr "Dirección de la puntada"
 
 #: lib/gui/lettering_font_sample.py:53 lib/gui/tartan/customize_panel.py:46
 #: inx/inkstitch_batch_lettering.inx:21
 msgid "Scale (%)"
-msgstr ""
+msgstr "Escala (%)"
 
 #: lib/gui/lettering_font_sample.py:55
 msgid "Max. line width"
-msgstr ""
+msgstr "Ancho máximo de línea"
 
 #: lib/gui/lettering/option_panel.py:94 lib/gui/lettering/option_panel.py:96
 #: lib/gui/lettering_font_sample.py:57 inx/inkstitch_batch_lettering.inx:22
 msgid "Color sort"
-msgstr ""
+msgstr "Clasificar por color"
 
 #: lib/gui/lettering_font_sample.py:90
 msgid "    This extension helps font creators to generate an output of every glyph from a selected font."
-msgstr ""
+msgstr "Esta extensión ayuda a los creadores de fuentes a generar una salida de cada glifo de una fuente seleccionada."
 
 #: lib/gui/lettering_font_sample.py:104 lib/gui/lettering_font_sample.py:105
 msgid "https://inkstitch.org/docs/font-tools/#font-sampling"
@@ -4091,23 +4097,23 @@ msgstr ""
 
 #: lib/gui/simulator/design_info.py:28
 msgid "# Stitches"
-msgstr ""
+msgstr "# Puntadas"
 
 #: lib/gui/simulator/design_info.py:31
 msgid "# Color Changes"
-msgstr ""
+msgstr "# Cambios de color"
 
 #: lib/gui/simulator/design_info.py:34
 msgid "# Jumps"
-msgstr ""
+msgstr "# Saltos"
 
 #: lib/gui/simulator/design_info.py:37
 msgid "# Trims"
-msgstr ""
+msgstr "# Cortes"
 
 #: lib/gui/simulator/design_info.py:40
 msgid "# Stops"
-msgstr ""
+msgstr "# Detenciones"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
@@ -6871,11 +6877,11 @@ msgstr ""
 
 #: inx/inkstitch_knockdown_fill.inx:46
 msgid "* Open this extension and apply with desired settings"
-msgstr ""
+msgstr "* Abre esta extensión y aplícala con la configuración deseada"
 
 #: inx/inkstitch_knockdown_fill.inx:47
 msgid "* Adapt fill settings in the params dialog"
-msgstr ""
+msgstr "* Adapta la configuración de relleno en el cuadro de diálogo de parámetros"
 
 #: inx/inkstitch_knockdown_fill.inx:50
 msgid "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
@@ -6887,11 +6893,11 @@ msgstr "Añadir capa de comandos"
 
 #: inx/inkstitch_layer_commands.inx:5
 msgid "Commands will be added to the currently-selected layer."
-msgstr ""
+msgstr "Los comandos se añadirán a la capa actualmente seleccionada."
 
 #: inx/inkstitch_layer_commands.inx:13
 msgid "Add commands which affect the containing layer"
-msgstr ""
+msgstr "Añadir comandos que afecten a la capa contenedora"
 
 #: inx/inkstitch_lettering.inx:3 inx/inkstitch_lettering.inx:12
 #: inx/inkstitch_lettering_along_path.inx:12
@@ -6900,43 +6906,43 @@ msgstr "Letras"
 
 #: inx/inkstitch_lettering.inx:9
 msgid "Insert ready-to-embroider text into the document"
-msgstr ""
+msgstr "Insertar texto listo para bordar en el documento"
 
 #: inx/inkstitch_lettering_along_path.inx:3
 msgid "Lettering along path"
-msgstr ""
+msgstr "Texto a lo largo de un trazado"
 
 #: inx/inkstitch_lettering_along_path.inx:9
 msgid "Shapes a line of text onto a path"
-msgstr ""
+msgstr "Da forma a una línea de texto sobre un trazado"
 
 #: inx/inkstitch_lettering_along_path.inx:18
 msgid "Text position"
-msgstr ""
+msgstr "Posición del texto"
 
 #: inx/inkstitch_lettering_along_path.inx:26
 msgid "This extension bends an Ink/Stitch text to a path."
-msgstr ""
+msgstr "Esta extensión ajusta un texto de Ink/Stitch a un trazado."
 
 #: inx/inkstitch_lettering_along_path.inx:27
 msgid "Select Ink/Stitch text and a path before running this extension."
-msgstr ""
+msgstr "Selecciona un texto de Ink/Stitch y un trazado antes de ejecutar esta extensión."
 
 #: inx/inkstitch_lettering_along_path.inx:29
 msgid "The text needs to meet these conditions:"
-msgstr ""
+msgstr "El texto debe cumplir con estas condiciones:"
 
 #: inx/inkstitch_lettering_along_path.inx:30
 msgid "* The text consists of only one line of text"
-msgstr ""
+msgstr "* El texto consiste en una sola línea de texto"
 
 #: inx/inkstitch_lettering_along_path.inx:31
 msgid "* The text should not be too large for the given path"
-msgstr ""
+msgstr "* El texto no debe ser demasiado grande para el trazado dado"
 
 #: inx/inkstitch_lettering_along_path.inx:33
 msgid "In the text position dropdown menu, you can decide how the text will be placed on the path. When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path."
-msgstr ""
+msgstr "En el menú desplegable de posición del texto, puedes decidir cómo se colocará el texto en el trazado. Cuando se selecciona estirar, los espacios entre los glifos se ampliarán para que el texto se extienda a lo largo de todo el trazado."
 
 #: inx/inkstitch_lettering_along_path.inx:38
 msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
@@ -6949,11 +6955,11 @@ msgstr "Directorio de fuentes personalizadas"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:12
 msgid "Set a custom directory for additional fonts to be used with the lettering tool."
-msgstr ""
+msgstr "Establecer un directorio personalizado para fuentes adicionales que se usarán con la herramienta de texto."
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:14
 msgid "The custom font directory must contain a subdirectory for each font."
-msgstr ""
+msgstr "El directorio de fuentes personalizadas debe contener un subdirectorio para cada fuente."
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:17
 msgid "https://inkstitch.org/docs/font-tools/#custom-font-directory"
@@ -6961,7 +6967,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:24
 msgid "Define a directory with custom fonts for the lettering tool"
-msgstr ""
+msgstr "Definir un directorio con fuentes personalizadas para la herramienta de texto"
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:27
 #: inx/inkstitch_lettering_edit_json.inx:12
@@ -6978,27 +6984,27 @@ msgstr "Gestión de fuentes"
 
 #: inx/inkstitch_lettering_edit_json.inx:3
 msgid "Edit JSON"
-msgstr ""
+msgstr "Editar JSON"
 
 #: inx/inkstitch_lettering_edit_json.inx:9
 msgid "Feature to verify or update the font information file for an existing font"
-msgstr ""
+msgstr "Función para verificar o actualizar el archivo de información de una fuente existente"
 
 #: inx/inkstitch_lettering_font_sample.inx:9
 msgid "Inserts all glyphs of a specified font into the document"
-msgstr ""
+msgstr "Inserta todos los glifos de una fuente especificada en el documento"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:9
 msgid "Restrict to Satin"
-msgstr ""
+msgstr "Restringir a satín"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:14
 msgid "Add forced lock stitches by distance"
-msgstr ""
+msgstr "Añadir puntadas de bloqueo forzadas por distancia"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:14
 msgid "Add lock stitches when the following jump stitch is in the specified size range"
-msgstr ""
+msgstr "Añadir puntadas de bloqueo cuando la siguiente puntada de salto esté dentro del rango de tamaño especificado"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:15
 msgid "Minimum distance (mm)"
@@ -7006,23 +7012,23 @@ msgstr "Distancia mínima (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:16
 msgid "Maximum distance (mm)"
-msgstr ""
+msgstr "Distancia máxima (mm)"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:20
 msgid "Add forced lock stitches to the last element of each glyph"
-msgstr ""
+msgstr "Añadir puntadas de atraque forzadas al último elemento de cada glifo"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:21
 msgid "Add forced lock stitches to the last element of each group"
-msgstr ""
+msgstr "Añadir puntadas de atraque forzadas al último elemento de cada grupo"
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:24
 msgid "Small fonts will sometimes unravel if threads are cut after the embroidery machine has finished the work. Therefore it is important that also diacritics with a smaller distance to the font body than defined by the collapse length value (default: 3mm) have lock stitches. This can be achieved by adding a forced lock stitch attribute to them."
-msgstr ""
+msgstr "Las fuentes pequeñas a veces pueden deshacerse si los hilos se cortan después de que la máquina de bordar haya terminado el trabajo. Por lo tanto, es importante que también los diacríticos con una distancia al cuerpo de la fuente más pequeña que la definida por el valor de la longitud de colapso (por defecto: 3 mm) tengan puntadas de atraque. Esto se puede lograr añadiéndoles un atributo de puntada de atraque forzada."
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:30
 msgid "This extension has been build to help font authors to define \"force lock stitches\"-attributes automatically if they are placed in a predefined distance to the next object."
-msgstr ""
+msgstr "Esta extensión se ha creado para ayudar a los autores de fuentes a definir automáticamente los atributos de \"puntadas de atraque forzadas\", si se colocan a una distancia predefinida del siguiente objeto."
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:35
 msgid "https://inkstitch.org/docs/font-tools/#force-lock-stitches"
@@ -7030,7 +7036,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:42
 msgid "Sets the forces lock stitch attribute on elements when the next element lies within a specified distance"
-msgstr ""
+msgstr "Establece el atributo de puntadas de atraque forzadas en los elementos cuando el siguiente elemento se encuentra dentro de una distancia especificada"
 
 #: inx/inkstitch_lettering_generate_json.inx:3
 msgid "Generate JSON"
@@ -7038,23 +7044,23 @@ msgstr "Generar JSON"
 
 #: inx/inkstitch_lettering_generate_json.inx:9
 msgid "Generates the json file for a font so it can be used with the lettering tool"
-msgstr ""
+msgstr "Genera el archivo JSON de una fuente para que se pueda usar con la herramienta de texto"
 
 #: inx/inkstitch_lettering_generate_json.inx:18
 msgid "Font info"
-msgstr ""
+msgstr "Información de la fuente"
 
 #: inx/inkstitch_lettering_generate_json.inx:23
 msgid "Default variant"
-msgstr ""
+msgstr "Variante predeterminada"
 
 #: inx/inkstitch_lettering_generate_json.inx:30
 msgid "Left to right"
-msgstr ""
+msgstr "De izquierda a derecha"
 
 #: inx/inkstitch_lettering_generate_json.inx:31
 msgid "Right to left"
-msgstr ""
+msgstr "De derecha a izquierda"
 
 #: inx/inkstitch_lettering_generate_json.inx:37
 msgid "SVG Font File"
@@ -7078,15 +7084,15 @@ msgstr "Si está desactivado, la costura de ida y vuelta no será posible para e
 
 #: inx/inkstitch_lettering_generate_json.inx:92
 msgid "If disabled color sorting will be disabled for this font. Color sorting needs color_sort_index indicators within the font."
-msgstr ""
+msgstr "Si se desactiva, la clasificación de colores se desactivará para esta fuente. La clasificación de colores necesita indicadores color_sort_index dentro de la fuente."
 
 #: inx/inkstitch_lettering_generate_json.inx:94
 msgid "Combine indices"
-msgstr ""
+msgstr "Combinar índices"
 
 #: inx/inkstitch_lettering_generate_json.inx:94
 msgid "When color sorting, combine elements with this color indices (comma separated)"
-msgstr ""
+msgstr "Al clasificar por color, combina los elementos con estos índices de color (separados por coma)"
 
 #: inx/inkstitch_lettering_generate_json.inx:95
 msgid "Force letter case"
@@ -7095,11 +7101,11 @@ msgstr "Forzar mayúsculas y minúsculas"
 #: inx/inkstitch_lettering_generate_json.inx:109
 #: inx/inkstitch_lettering_generate_json.inx:110
 msgid "Kerning"
-msgstr ""
+msgstr "Interletrado"
 
 #: inx/inkstitch_lettering_generate_json.inx:111
 msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them). If the kerning information cannot be found, these values will apply automatically."
-msgstr ""
+msgstr "Si tu archivo de fuente contiene información de Interletrado, puedes ignorar por completo las siguientes configuraciones (a menos que quieras sobrescribirlas). Si no se encuentra la información de Interletrado, estos valores se aplicarán automáticamente."
 
 #: inx/inkstitch_lettering_generate_json.inx:119
 #: inx/inkstitch_lettering_generate_json.inx:127
@@ -7133,23 +7139,23 @@ msgstr "Ancho del espacio (predeterminado: 20)"
 
 #: inx/inkstitch_lettering_generate_json.inx:135
 msgid "Overwrite letter spacing information from font file."
-msgstr ""
+msgstr "Sobrescribir la información de espaciado entre letras del archivo de fuente."
 
 #: inx/inkstitch_lettering_generate_json.inx:137
 msgid "Letter spacing (px)"
-msgstr ""
+msgstr "Espaciado entre letras (px)"
 
 #: inx/inkstitch_lettering_generate_json.inx:137
 msgid "Letter spacing (default: 100)"
-msgstr ""
+msgstr "Espaciado entre letras (por defecto: 100)"
 
 #: inx/inkstitch_lettering_generate_json.inx:145
 msgid "Generates font.json which can be used by the lettering tool."
-msgstr ""
+msgstr "Genera el archivo font.json que se puede usar con la herramienta de texto."
 
 #: inx/inkstitch_lettering_generate_json.inx:146
 msgid "The generated file can be updated with Extensions > Ink/Stitch > Font Management > Edit JSON."
-msgstr ""
+msgstr "El archivo generado se puede actualizar con Extensiones > Ink/Stitch > Gestión de Fuentes > Editar JSON."
 
 #: inx/inkstitch_lettering_generate_json.inx:149
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
@@ -7157,55 +7163,55 @@ msgstr ""
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:3
 msgid "Organize Glyphs"
-msgstr ""
+msgstr "Organizar glifos"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:12
 msgid "Choose action"
-msgstr ""
+msgstr "Elegir acción"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:13
 msgid "Step 1 : Comma and period and hyphen"
-msgstr ""
+msgstr "Paso 1 : Coma, punto y guion"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:14
 msgid "Step 2 : Undecomposable Letters"
-msgstr ""
+msgstr "Paso 2 : Letras no descomponibles"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:15
 msgid "Step 3 : Digits, Symbols and Opening Punctuation"
-msgstr ""
+msgstr "Paso 3 : Dígitos, símbolos y signos de puntuación de apertura"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:16
 msgid "Step 4 : Closing Punctuation"
-msgstr ""
+msgstr "Paso 4 : Signos de puntuación de cierre"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:17
 msgid "Step 5 : First diacritics"
-msgstr ""
+msgstr "Paso 5 : Primeros diacríticos"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:18
 msgid "Step 6 : All diacritics"
-msgstr ""
+msgstr "Paso 6 : Todos los diacríticos"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:19
 msgid "Step 7 : Two pieces Letters"
-msgstr ""
+msgstr "Paso 7 : Letras de dos piezas"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:20
 msgid "Step 8 : Other Composed Letters"
-msgstr ""
+msgstr "Paso 8 : Otras letras compuestas"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:21
 msgid "Check duplicate GlyphLayers"
-msgstr ""
+msgstr "Verificar capas de glifos duplicadas"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:22
 msgid "Sort by Category"
-msgstr ""
+msgstr "Ordenar por categoría"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:28
 msgid "This extension helps the font digitizer to organize its work in steps to maximize reuse of already digitized letters."
-msgstr ""
+msgstr "Esta extensión ayuda al digitalizador de fuentes a organizar su trabajo en pasos para maximizar la reutilización de letras ya digitalizadas."
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:31
 msgid "https://inkstitch.org/docs/font-tools/#organize_glyphs"
@@ -7213,7 +7219,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:39
 msgid "Help with composed glyphs like é,ç or ï"
-msgstr ""
+msgstr "Ayuda con glifos compuestos como é, ç o ï"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:3
 msgid "Remove Kerning"
@@ -7225,11 +7231,11 @@ msgstr "Seleccionar archivos de fuentes"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:14
 msgid "Removes Kerning information from given SVG files"
-msgstr ""
+msgstr "Elimina la información de interletraje de los archivos SVG dados"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:16
 msgid "⚠ Make sure you keep a copy of the original file. After running this extension kerning information will be lost unrevertably from these files."
-msgstr ""
+msgstr "⚠ Asegúrate de conservar una copia del archivo original. Después de ejecutar esta extensión, la información de interletraje se perderá de forma irreversible en estos archivos."
 
 #: inx/inkstitch_lettering_remove_kerning.inx:23
 msgid "https://inkstitch.org/docs/font-tools/#remove-kerning"
@@ -7237,7 +7243,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_remove_kerning.inx:30
 msgid "Removes Kerning information from specified SVG files"
-msgstr ""
+msgstr "Elimina la información de interletraje de los archivos SVG especificados"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:3
 msgid "Set color sort index"
