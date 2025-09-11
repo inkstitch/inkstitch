@@ -1,6 +1,6 @@
 ---
 title: "Apex Lake"
-permalink: /fr/fonts/apex-lake/
+permalink: /fr/fonts/apex/
 last_modified_at: 2023-04-24
 toc: false
 preview_image:
@@ -8,22 +8,32 @@ preview_image:
    height: 60
  - url: /assets/images/fonts/apex_simple_AGS.jpg
    height: 35
+ - url: /assets/images/fonts/apex_simple_AGS.jpg
+   height: 12
 data_title:
   - apex_lake
   - apex_simple_AGS
+  - apex_simple_small_AGS
 ---
 {%- assign font1 = site.data.fonts.apex_lake.font -%}
 {%- assign font2 = site.data.fonts.apex_simple_AGS.font -%}
+{%- assign font3 = site.data.fonts.apex_simple_small_AGS.font -%}
 
 
 ![Apex Lake](/assets/images/fonts/apex_lake.jpg)
 
 ![Apex Simple](/assets/images/fonts/apex_simple_AGS.jpg)
 
+<hr>
+
+{% include upcoming_release.html %}
+
+![Apex Simple small](/assets/images/fonts/apex_simple_small_AGS.png)
 
 ## Glyphes
 
 Les glypes communs sont identiques, à la décoration près bien sûr.
+
 ### Apex Lake
 
 Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
@@ -41,7 +51,18 @@ Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
 {{ font2.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
+
+### Apex Simple Small AGS
+
+Cette fonte comporte  {{ font3.glyphs.size }} glyphes:
+
+```
+{{ font3.glyphs | sort | join: ' ' }}
+```
+{: .font-glyphs }
+
 ## Particularités
+
 Apex Lake est une police de lettrines. 
 
 Si vous ne souhaitez pas broder le cadre, ignorez les deux dernières étapes.  
@@ -54,20 +75,32 @@ Vous pouvez aussi utiliser les deux fontes conjointement, généralement en util
 ![Both_Apex](/assets/images/fonts/both_apex.png)
 
 ## Dimensions
-### Apex Lake
-Apex Lake est une grande fonte, elle est faite pour être utilisée une lettre ou quelques lettres à la fois.
-A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
 
-Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
-à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
+### Apex Lake
+
+Apex Lake est une grande fonte, elle est faite pour être utilisée une lettre ou quelques lettres à la fois.
+A une échelle de 100% cette fonte a une hauteur approximative de {{ font1.size }} mm. 
+
+Elle peut être redimensionnée  de {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
+à {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
 
 ### Apex Simple AGS
+
 Utilisée à 100%, elle mesure environ 35 mm de haut. Elle peut être réduite jusqu'à 75% (25mm) et agrandie jusqu'à 300% (100mm).
 
+### Apex Simple Small AGS
+
+A une échelle de 100% cette fonte a une hauteur approximative de {{ font3.size }} mm. 
+
+Elle peut être redimensionnée  de {{ font3.min_scale | times: 100 | floor }}% ({{ font3.size | times: font3.min_scale }} mm)
+à {{ font3.max_scale | times: 100 | floor }}% ({{ font3.size | times: font3.max_scale }} mm).
+
 ## Tri des couleurs 
+
 Si vous brodez plusieurs lettrines, vous pouvez souhaiter trier les couleurs. C'est possible à condition de respecter leur ordre relatif à l'intérieur de chaque lettre. [Voici comment faire](https://inkstitch.org/fr/docs/lettering/#tri-des-couleurs)
 
 ## Dans la vraie vie
+
 Et pourquoi pas sur un T shirt ? ou sur un panier en tissu ?
 
 {%include folder-galleries path="fonts/apex-lake/" %}
@@ -75,3 +108,5 @@ Et pourquoi pas sur un T shirt ? ou sur un panier en tissu ?
 [Télécharger la license d'Apex Lake](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_lake/LICENSE)
 
 [Télécharger la license d'Apex Simple AGS](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_simple_AGS/LICENSE)
+
+[Télécharger la license d'Apex Simple Small AGS](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_simple_small_AGS/LICENSE)

@@ -113,3 +113,5 @@ Why not use Apex Lake on a T shirt ? or on a fabric basket ?
 [Download Apex Lake Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_lake/LICENSE)
 
 [Download Apex Simple AGS Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_simple_AGS/LICENSE)
+
+[Download Apex Simple Small AGS Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_simple_small_AGS/LICENSE)
