@@ -1,4 +1,4 @@
-{% assign fonts = site.fonts | where: "lang", page.lang %}
+{% assign fonts = site.fonts | where: "lang", page.lang | sort: "title" %}
 
 <button id="toggle-font-filter" style="clear:all;">🔧 {{ site.data.ui-text[page.lang].font_filter_label | default: "Font Filter" }}</button>
 <form id="font-filter" style="display:none;">

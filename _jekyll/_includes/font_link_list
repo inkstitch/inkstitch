@@ -1,4 +1,4 @@
-{% assign fonts = site.fonts | where: "lang", page.lang %}
+{% assign fonts = site.fonts | where: "lang", page.lang | sort: "title" %}
 {%- assign first = "A" -%}
 
 <li>
