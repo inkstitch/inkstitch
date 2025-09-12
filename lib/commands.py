@@ -265,26 +265,14 @@ def global_commands(svg, command):
 def global_command(svg, command):
     """Find a single command of the specified type.
 
-    If more than one is found, print an error and exit.
+    If more than one is found, use only the first occurence of the command.
     """
 
     commands = list(global_commands(svg, command))
 
-    if len(commands) == 1:
+    if len(commands) >= 1:
         return commands[0]
-    elif len(commands) > 1:
-        print(_("Error: there is more than one %(command)s command in the document, but there can only be one.  "
-                "Please remove all but one.") % dict(command=command), file=sys.stderr)
-
-        # L10N This is a continuation of the previous error message, letting the user know
-        # what command we're talking about since we don't normally expose the actual
-        # command name to them.  Contents of %(description)s are in a separate translation
-        # string.
-        print(_("%(command)s: %(description)s") % dict(command=command, description=_(get_command_description(command))), file=sys.stderr)
-
-        sys.exit(1)
-    else:
-        return None
+    return None
 
 
 def _standalone_commands(svg):
