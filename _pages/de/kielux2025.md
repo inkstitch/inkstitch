@@ -2,12 +2,11 @@
 title: "Kielux 2025: Patches mit Ink/Stitch erstellen"
 permalink: /de/kielux2025/
 last_modified_at: 2025-09-13
-toc: false
-layout: posts
+outdated: dismiss
 ---
-Auf `arbores.tech` gibt es einen längeren Text zur Patch-Erstellung mit Ink/Stitch: [https://w.arbores.tech/wiki/InkStitch_-_Patches_und_Appliques](https://w.arbores.tech/wiki/InkStitch_-_Patches_und_Appliques).
+Auf `arbores.tech` gibt es einen längeren Text zur Patch-Erstellung mit Ink/Stitch: <a href="https://w.arbores.tech/wiki/InkStitch_-_Patches_und_Appliques">https://w.arbores.tech/wiki/InkStitch_-_Patches_und_Appliques</a>.<br/>
 Ebenfalls von dieser Seite stammt das Patch-Template, dass es hier auf dieser Seite in leicht abgewandelter Form zum Herunterladen gibt.
-{: notice--info }
+{: .notice--info }
 
 Wir erstellen hier aus zeitgründen relativ kleine Patches mit einem Durchmesser von 62mm.
 
@@ -15,7 +14,7 @@ Die Idee ist, dass ihr euch selbst ausprobieren könnt. Entweder personalisiert 
 
 ## Patch-Template herunterladen
 
-[Patch Template herunterlade](/assets/files/patch_template_62mm.svg){: download="patch_template_62mm.svg" }
+[Patch Template herunterladen](/assets/files/patch_template_62mm.svg){: download="patch_template_62mm.svg" }
 
 Für Neugierige wird hier noch kurz der Inhalt der Template-Datei erklärt.
 
@@ -28,6 +27,8 @@ Das Patch-Template enthält mehrere kreisförmige Linien. Da sie auf den ersten 
 5. Zwei Linien (grün) zur Textpositionierung (Führungslinien). Diese Linien werden nicht gestickt
 
 ## Mitte kreativ füllen
+
+### Selber zeichnen
 
 Nutzt hierfür das bereit gestellte Grafiktablett oder euren eigenen Laptop.
 
@@ -42,6 +43,18 @@ Und dann? Einfach mal drauf loslegen ... Dabei gilt es aber folgendes zu beachte
 * Ein paar Fadenschnitte sind aber schon auch ok :)
 
 Wer mag, kann sich auch ein Bild als Vorlage in den Hintergrund legen.
+
+### Mandalas erstellen
+
+Siehe [Mandala-Tutorial](/tutorials/mandala/)
+
+Auch hier bitte nicht zu klein werden.
+
+### Motive wiederverwenden
+
+* Motiv 1
+* Motiv 2
+* Motiv 3
 
 ## Text hinzufügen
 

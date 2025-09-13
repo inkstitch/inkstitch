@@ -1,4 +1,4 @@
-{%- if page.lang != 'en' -%}
+{%- if page.lang != 'en' and page.outdated != 'dismiss' -%}
     {%- assign en_page_exists = false -%}
     {%- assign page_lang = page.lang | prepend: '/' | append: '/' -%}
     {%- unless page.is_post == true -%}
