@@ -5,7 +5,7 @@ last_modified_at: 2025-09-13
 toc: false
 layout: posts
 ---
-Auf <arbores.tech> gibt es einen längeren Text zur Patch-Erstellung mit Ink/Stitch: <https://w.arbores.tech/wiki/InkStitch_-_Patches_und_Appliques>.
+Auf `arbores.tech` gibt es einen längeren Text zur Patch-Erstellung mit Ink/Stitch: [https://w.arbores.tech/wiki/InkStitch_-_Patches_und_Appliques](https://w.arbores.tech/wiki/InkStitch_-_Patches_und_Appliques).
 Ebenfalls von dieser Seite stammt das Patch-Template, dass es hier auf dieser Seite in leicht abgewandelter Form zum Herunterladen gibt.
 {: notice--info }
 
