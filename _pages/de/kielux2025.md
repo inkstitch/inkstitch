@@ -15,7 +15,7 @@ Die Idee ist, dass ihr euch selbst ausprobieren könnt. Entweder personalisiert 
 
 ## Patch-Template herunterladen
 
-[Patch Template herunterlade](/assets/files/patch_template_62mm.svg): download="patch_template_62mm.svg" }
+[Patch Template herunterlade](/assets/files/patch_template_62mm.svg){: download="patch_template_62mm.svg" }
 
 Für Neugierige wird hier noch kurz der Inhalt der Template-Datei erklärt.
 
