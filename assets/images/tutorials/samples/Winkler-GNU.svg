@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.0"
+   width="272.67291pt"
+   height="134.64568pt"
+   id="svg1384"
+   sodipodi:version="0.32"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="Winkler-GNU.svg"
+   inkscape:export-filename="/home/winkler/Desktop/gnu logo temp/kylenewgnu2.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:inkstitch="http://inkstitch.org/namespace">
+  <sodipodi:namedview
+     inkscape:window-height="841"
+     inkscape:window-width="1596"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="1.8841255"
+     inkscape:cx="182.04732"
+     inkscape:cy="122.07254"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:current-layer="svg1384"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     inkscape:window-maximized="0"
+     showgrid="false" />
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+    <inkstitch:min_stitch_len_mm>0.1</inkstitch:min_stitch_len_mm>
+    <inkstitch:collapse_len_mm>3</inkstitch:collapse_len_mm>
+    <inkstitch:inkstitch_svg_version>3</inkstitch:inkstitch_svg_version>
+  </metadata>
+  <defs
+     id="defs1386">
+    <rect
+       x="9.0227533"
+       y="192.13157"
+       width="360.91013"
+       height="118.88805"
+       id="rect22" />
+    <symbol
+       id="inkstitch_ignore_layer"
+       transform="scale(0.25, 0.25)"
+       style="opacity:0.7">
+      <title
+         id="title9694">Ignore entire layer when generating stitch plan</title>
+      <path
+         inkscape:connector-curvature="0"
+         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.06501234;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19503705, 3.19503705;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 9.2465269,-4.9265995e-6 C 9.246525,5.1067241 5.1067028,9.2465451 -2.615882e-5,9.2465451 -5.1067554,9.2465451 -9.2465782,5.1067241 -9.2465801,-4.9265995e-6 -9.24658,-2.4523429 -8.2723922,-4.8042399 -6.538327,-6.5383059 c 1.7340653,-1.734065 4.0859624,-2.708252 6.53830084118,-2.708252 5.10673015882,0 9.24655285882,4.139823 9.24655305882,9.2465529734005 0,0 0,0 0,0"
+         id="inkstitch_path25368-7" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         style="color:#000000;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#5a5a5a;stroke-width:0.63330007;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
+         d="M 4,4.452769 1.46667,1.286102 H -5.5 l 2.53333,3.166667 z"
+         id="use5800" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         style="color:#000000;opacity:0.5;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#858585;stroke-width:0.63339424;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
+         d="M 4,2.552769 1.46667,-0.613898 H -5.5 l 2.53333,3.166667 z"
+         id="use5864" />
+      <g
+         id="g5771">
+        <path
+           sodipodi:nodetypes="ccccccccc"
+           inkscape:connector-curvature="0"
+           style="fill:#aa0000;fill-rule:evenodd;stroke:#aa0000;stroke-width:1px"
+           d="m -1.0666699,-5.0472339 h 4.4333333 l 0.6333333,0.6333333 V 0.01943274 L 3.3666634,0.65276607 H -1.0666699 L -1.7000032,0.01943274 V -4.4139006 Z"
+           id="path8011" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path8023"
+           d="m -0.43333658,-3.8755672 c 0,0 3.16666668,3.16666661 3.16666668,3.16666661"
+           style="fill:none;stroke:#ffffff;stroke-width:1.70000005" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path8025"
+           d="m 2.7333301,-3.8755672 c 0,0 -3.16666668,3.16666661 -3.16666668,3.16666661"
+           style="fill:none;stroke:#ffffff;stroke-width:1.79999995;stroke-linejoin:round" />
+      </g>
+    </symbol>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="License">
+    <text
+       xml:space="preserve"
+       id="text21"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif Bold';text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect22);display:inline;fill:#803300;stroke:#803300;stroke-width:0.377953"><tspan
+         x="9.0234375"
+         y="206.26427"
+         id="tspan1">    LAL 1.3
+</tspan><tspan
+         x="9.0234375"
+         y="226.26427"
+         id="tspan2">    https://artlibre.org/
+</tspan><tspan
+         x="9.0234375"
+         y="246.26427"
+         id="tspan3">    Modified for embroidery from the original
+</tspan><tspan
+         x="9.0234375"
+         y="266.26427"
+         id="tspan4">    https://www.gnu.org/graphics/winkler-gnu.html</tspan></text>
+    <use
+       id="use101"
+       inkscape:label="Ink/Stitch Command: Ignore layer (do not stitch any objects in this layer)"
+       xlink:href="#inkstitch_ignore_layer"
+       height="100%"
+       width="100%"
+       x="0"
+       y="-10"
+       transform="" />
+  </g>
+  <g
+     id="g2316"
+     transform="matrix(0.25164 0 0 0.25164 -1.28833 -0.537433)">
+    <g
+       inkscape:label="Ink/Stitch Lettering"
+       transform="matrix(3.97393 0 0 3.97393 1335.6 690.823)"
+       inkstitch:lettering="{&quot;text&quot;: &quot;LAL 1.3&quot;, &quot;text_align&quot;: 1, &quot;back_and_forth&quot;: false, &quot;font&quot;: &quot;glacial_tiny&quot;, &quot;scale&quot;: 50, &quot;trim_option&quot;: 0, &quot;use_trim_symbols&quot;: false, &quot;color_sort&quot;: 0}"
+       id="g5"
+       style="stroke:#ff6600">
+      <g
+         inkscape:label="Glacial Tiny 60 AGS scale 50%"
+         transform="scale(0.5, 0.5)"
+         id="g20"
+         style="stroke:#ff6600">
+        <g
+           inkscape:label="LAL 1.3"
+           inkstitch:letter-group="line"
+           transform="translate(-46.9721, 0)"
+           id="g19"
+           style="stroke:#ff6600">
+          <g
+             inkscape:label="LAL"
+             inkstitch:letter-group="word"
+             id="g17"
+             style="stroke:#ff6600">
+            <g
+               inkscape:label="L"
+               id="glyph-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1"
+               inkstitch:letter-group="glyph"
+               style="stroke:#ff6600">
+              <path
+                 d="m 2.98023,-3.1882 v -0.6119 -0.8452 -0.8452 -0.8707 -5e-4 0 -0.8457 -0.8463 -0.8463 -0.6351 0 -0.2112 -0.8463 -0.8463 -0.8463 -0.4234 0 -0.4228 -0.8463 -0.8463 -0.8463 -0.2117 0 -0.6346 -0.8463 -0.8463 -0.8463"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;fill:none;stroke:#ff6600;stroke-width:0.5px;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-opacity:1"
+                 inkstitch:running_stitch_length_mm="1.2"
+                 id="autosatinrun26-1-1-1-1-1-1"
+                 inkscape:label="Points droits pour auto-remplissage satin 1"
+                 inkstitch:min_stitch_length_mm=".3"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:running_stitch_tolerance_mm="0.2" />
+              <path
+                 d="M 0.6875,-21 V 0 h 10.125 M 5.27296,-21 V -4.1575 H 10.8125 M 0,-6.6875 H 5.75 M 7.5625,-4.75 V 0.6875 M 0.45823,-20.9 h 5.044"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 id="autosatin45-1-1-1-1-1-1"
+                 sodipodi:nodetypes="cccccccccc"
+                 inkstitch:satin_column="True"
+                 inkstitch:pull_compensation_mm="0.02"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="3"
+                 inkstitch:force_lock_stitches="False"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 2"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+              <path
+                 d="M 12.732,-4.1575 H 10.8125 M 12.732,0 h -1.9195 m 0.1,0.2079 v -4.5733"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 id="autosatin46-1-1-1-1-1-1"
+                 sodipodi:nodetypes="cccccccccc"
+                 inkstitch:satin_column="True"
+                 inkstitch:pull_compensation_mm="0.02"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="2"
+                 inkstitch:force_lock_stitches="True"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 4"
+                 center_walk_underlay_stitch_length_m="1.2"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+            </g>
+            <g
+               inkscape:label="A"
+               id="glyph-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1"
+               transform="translate(14.5256, 0)"
+               inkstitch:letter-group="glyph"
+               style="stroke:#ff6600">
+              <path
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;fill-opacity:0.283401;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 d="M 0.117952,0.06 3.14543,-7.3991 M 5.10815,0.06 6.62691,-4.1864 7.7501,-7.3992 M 0,-0.3139 5.48489,-0.3156"
+                 id="autosatin1-1-1-1"
+                 sodipodi:nodetypes="ccccccc"
+                 inkstitch:satin_column="True"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="3"
+                 inkstitch:force_lock_stitches="False"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:contour_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 1"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+              <path
+                 d="m 5.28463,-6.9672 0.16314,-0.4319 0.40398,-1.066 0.40552,-1.0654 0.36192,-0.9508 v 0 l 0.0436,-0.1145 0.41497,-1.0903 0.40572,-1.0659 0.40573,-1.066 0.06713,-0.1764 v 0 l 0.33859,-0.8896 0.40656,-1.0656 0.4077,-1.0653 0.18798,-0.4912 v 0 l 0.21972,-0.574 0.4077,-1.0653 0.40771,-1.0653 0.3085,-0.806"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;fill:none;fill-opacity:0.283401;stroke:#ff6600;stroke-width:0.5px;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-opacity:1"
+                 inkstitch:running_stitch_length_mm="1.2"
+                 id="autosatinrun1-1-1-1"
+                 inkscape:label="Points droits pour auto-remplissage satin 2"
+                 inkstitch:min_stitch_length_mm=".3"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:running_stitch_tolerance_mm="0.2" />
+              <path
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;fill-opacity:0.283401;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 d="m 12.6089,-21.0167 -1.9836,5.5171 -2.6656,7.5008 -0.2096,0.5996 M 8.67258,-21.0167 3.14543,-7.3991 m 0.83197,-3.5918 h 5.58087"
+                 id="autosatin2-1-1-1"
+                 sodipodi:nodetypes="ccccccccc"
+                 inkstitch:satin_column="True"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="3"
+                 inkstitch:force_lock_stitches="False"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:contour_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 3"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+              <path
+                 id="autosatin3-1-1-1"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;fill-opacity:0.283401;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 d="m 7.9597,-7.9988 h 5.3311 m -6.66389,3.8124 h 8.02769 m -4.2394,-5.1182 v 5.9907 h -0.2304"
+                 inkstitch:satin_column="True"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="3"
+                 inkstitch:force_lock_stitches="False"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:contour_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 4"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+              <path
+                 d="M 16.318,-6.0461 16.3126,-6.0602 15.8857,-7.1691 15.4589,-8.278 15.1428,-9.0991 v 0 l -0.1108,-0.2878 -0.4269,-1.1089 -0.4268,-1.1089 -0.2107,-0.5474 v 0 l -0.2162,-0.5615 -0.4268,-1.1089 -0.4269,-1.1089 -0.1054,-0.2737 v 0 l -0.3215,-0.8352 -0.4268,-1.1089 -0.4269,-1.1089"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;fill:none;fill-opacity:0.283401;stroke:#ff6600;stroke-width:0.5px;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-opacity:1"
+                 inkstitch:running_stitch_length_mm="1.2"
+                 id="autosatinrun2-1-1-1"
+                 inkscape:label="Points droits pour auto-remplissage satin 5"
+                 inkstitch:min_stitch_length_mm=".3"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:running_stitch_tolerance_mm="0.2" />
+              <path
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;fill-opacity:0.283401;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 d="M 10.6253,-15.4996 16.1734,0.06 M 12.6089,-21.0167 21.1636,0.06 m 0.5417,-0.397 h -7.0275"
+                 id="autosatin4-1-1-1"
+                 sodipodi:nodetypes="cccccc"
+                 inkstitch:satin_column="True"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="2"
+                 inkstitch:force_lock_stitches="True"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:contour_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 6"
+                 inkstitch:pull_compensation_mm="0.02"
+                 center_walk_underlay_stitch_length_m="1.2"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+            </g>
+            <g
+               inkscape:label="L"
+               id="glyph-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1"
+               transform="translate(38, 0)"
+               inkstitch:letter-group="glyph"
+               style="stroke:#ff6600">
+              <path
+                 d="m 2.98023,-3.1882 v -0.6119 -0.8452 -0.8452 -0.8707 -5e-4 0 -0.8457 -0.8463 -0.8463 -0.6351 0 -0.2112 -0.8463 -0.8463 -0.8463 -0.4234 0 -0.4228 -0.8463 -0.8463 -0.8463 -0.2117 0 -0.6346 -0.8463 -0.8463 -0.8463"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;fill:none;stroke:#ff6600;stroke-width:0.5px;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-opacity:1"
+                 inkstitch:running_stitch_length_mm="1.2"
+                 id="autosatinrun26-1-1-1-1-1-1-1"
+                 inkscape:label="Points droits pour auto-remplissage satin 1"
+                 inkstitch:min_stitch_length_mm=".3"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:running_stitch_tolerance_mm="0.2" />
+              <path
+                 d="M 0.6875,-21 V 0 h 10.125 M 5.27296,-21 V -4.1575 H 10.8125 M 0,-6.6875 H 5.75 M 7.5625,-4.75 V 0.6875 M 0.45823,-20.9 h 5.044"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 id="autosatin45-1-1-1-1-1-1-1"
+                 sodipodi:nodetypes="cccccccccc"
+                 inkstitch:satin_column="True"
+                 inkstitch:pull_compensation_mm="0.02"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="3"
+                 inkstitch:force_lock_stitches="False"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 2"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+              <path
+                 d="M 12.732,-4.1575 H 10.8125 M 12.732,0 h -1.9195 m 0.1,0.2079 v -4.5733"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 id="autosatin46-1-1-1-1-1-1-1"
+                 sodipodi:nodetypes="cccccccccc"
+                 inkstitch:satin_column="True"
+                 inkstitch:pull_compensation_mm="0.02"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="2"
+                 inkstitch:force_lock_stitches="True"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 4"
+                 center_walk_underlay_stitch_length_m="1.2"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+            </g>
+          </g>
+          <g
+             inkscape:label="1.3"
+             inkstitch:letter-group="word"
+             id="g18"
+             style="stroke:#ff6600">
+            <g
+               inkscape:label="1"
+               id="glyph-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1"
+               transform="translate(62.6875, 0)"
+               inkstitch:letter-group="glyph"
+               style="stroke:#ff6600">
+              <path
+                 d="m 7.32801,-0.1881 v -5.8158 m -4.8,5.8158 v -5.7664 m -0.24,0.1024 5.28,-0.0543"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 id="autosatin228-1-1-1"
+                 sodipodi:nodetypes="cccccc"
+                 inkstitch:satin_column="True"
+                 inkstitch:pull_compensation_mm="0.02"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="3"
+                 inkstitch:force_lock_stitches="False"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 1"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+              <path
+                 d="m 4.92801,-6.9552 v -0.9322 -0.954 -0.9541 -0.5432 0 -0.4109 -0.954 -0.9541 -0.9541 -0.1105 0 -0.8437 -1.0676 -1.0677 -0.4045 0 -0.6632 -1.0677 l -0.89406,0.0105 -0.73344,0.1933 v 0 l -0.29116,0.0768 -1.0246,0.27 -1.0475,0.2346 L 0,-17.9001"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;fill:none;stroke:#ff6600;stroke-width:0.5px;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-opacity:1"
+                 inkstitch:running_stitch_length_mm="1.2"
+                 id="autosatinrun136-1-1-1"
+                 inkscape:label="Points droits pour auto-remplissage satin 2"
+                 inkstitch:min_stitch_length_mm=".3"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:running_stitch_tolerance_mm="0.2" />
+              <path
+                 d="M 0,-16.2521 H 2.52801 V -5.9545 M 0,-19.5481 l 7.32801,-2.4 v 15.9442 m -6.00629,-14.4251 0.04419,4.5078 m 0.88388,1.7236 5.3033,-0.1326 m -7.45284,-1.7556 -0.00547,-3.6598"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 id="autosatin229-1-1-1"
+                 sodipodi:nodetypes="cccccc"
+                 inkstitch:satin_column="True"
+                 inkstitch:pull_compensation_mm="0.02"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="2"
+                 inkstitch:force_lock_stitches="True"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 3"
+                 center_walk_underlay_stitch_length_m="1.2"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+            </g>
+            <g
+               inkscape:label="."
+               id="glyph-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1"
+               transform="translate(72.9202, 0)"
+               inkstitch:letter-group="glyph"
+               style="stroke:#ff6600">
+              <path
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 d="m 4.28733,-5.659 c -1.6766,0 -2.91598,1.2959 -2.91598,2.924 0,1.5949 1.39249,2.8927 3.11599,2.924 m 0.19994,-5.848 c 1.81799,0 3.13066,1.2959 3.11599,2.924 C 7.78815,-0.9995 6.5869,0.1265 4.68728,0.189 M 0,-2.8531 h 9.21642"
+                 id="path145530-7-6-1-1-1"
+                 sodipodi:nodetypes="csccsc"
+                 inkstitch:satin_column="True"
+                 inkstitch:pull_compensation_mm="0.02"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="2"
+                 inkstitch:force_lock_stitches="True"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 center_walk_underlay_stitch_length_m="1.2"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+            </g>
+            <g
+               inkscape:label="3"
+               id="glyph-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1"
+               transform="translate(77.4487, 0)"
+               inkstitch:letter-group="glyph"
+               style="stroke:#ff6600">
+              <path
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 d="m 0,-5.9454 0.241531,1.7322 0.531608,1.4425 0.785851,1.1709 1.00426,0.9174 1.18683,0.682 1.33358,0.4647 1.44449,0.2656 1.51956,0.0845 1.55057,-0.1224 1.44422,-0.3615 1.3069,-0.5923 1.1386,-0.8149 0.9394,-1.0292 0.7094,-1.2352 0.1329,-0.4248 m -10.40883,-2.1795 0.41294,1.1377 0.69361,0.7454 0.95315,0.4074 1.19156,0.1237 1.12166,-0.2258 0.89831,-0.6151 0.534,-0.8155 m -2.98492,0.8417 0.05495,5.8808"
+                 id="autosatin232-1-1-1"
+                 sodipodi:nodetypes="csssccccsscccccccccccccccc"
+                 inkstitch:satin_column="True"
+                 inkstitch:pull_compensation_mm="0.02"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="3"
+                 inkstitch:force_lock_stitches="False"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 2"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+              <path
+                 d="m 13.3214,-6.3803 -0.1057,-1.0128 -0.3022,-0.9736 -0.2529,-0.3792 v 0 l -0.3081,-0.4622 -0.7612,-0.661 -0.8721,-0.522 -0.94975,-0.3658 -0.13669,-0.0254"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;fill:none;stroke:#ff6600;stroke-width:0.5px;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-opacity:1"
+                 inkstitch:running_stitch_length_mm="1.2"
+                 id="autosatinrun139-1-1-1"
+                 inkscape:label="Points droits pour auto-remplissage satin 3"
+                 sodipodi:nodetypes="cccccccccc"
+                 inkstitch:min_stitch_length_mm=".3"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:running_stitch_tolerance_mm="0.2" />
+              <path
+                 d="m 10.3494,-12.2062 0.053,-0.03 0.8222,-0.4671 0.6375,-0.7282 0.3812,-0.9073 0.1022,-0.7188 v 0 l 0.0338,-0.2383 -0.0843,-0.959 -0.2526,-0.9304 -0.5064,-0.8168 -0.4005,-0.3857 v 0 l -0.2904,-0.2797 -0.84573,-0.4616 -0.91476,-0.2914 -0.95525,-0.1343 -0.39317,0.0032 v 0 l -0.55585,0.0046 -0.96228,0.1534 -0.91288,0.3261 -0.83221,0.5063 -0.14686,0.1511 v 0 l -0.52831,0.5437 -0.52344,0.8227"
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;fill:none;stroke:#ff6600;stroke-width:0.5px;stroke-miterlimit:4;stroke-dasharray:3, 1;stroke-opacity:1"
+                 inkstitch:running_stitch_length_mm="1.2"
+                 id="autosatinrun140-1-1-1"
+                 inkscape:label="Points droits pour auto-remplissage satin 4"
+                 sodipodi:nodetypes="ccccccccccccccccccccccccccc"
+                 inkstitch:min_stitch_length_mm=".3"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:running_stitch_tolerance_mm="0.2" />
+              <path
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 d="m 0.386289,-15.1516 c 0.257552,-4.249 3.444441,-6.5666 7.210761,-6.5666 3.92725,0 7.17855,1.8991 7.17855,6.3091 0,1.352 -0.7725,3.0902 -1.9958,3.9593 m -7.53269,-3.7018 c 0.12889,-1.5129 0.90136,-2.3176 2.47868,-2.3176 1.28765,0 2.28561,0.7725 2.28561,2.0601 0,1.3842 -0.61167,2.4464 -2.09246,2.4464 m -0.1877,-9.7198 v 5.9786 m 2.03294,1.5011 6.29192,0.0547 m -7.16283,-1.3415 4.95013,-3.6001"
+                 id="autosatin233-1-1-1"
+                 sodipodi:nodetypes="cssccssccccccc"
+                 inkstitch:satin_column="True"
+                 inkstitch:pull_compensation_mm="0.02"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="3"
+                 inkstitch:force_lock_stitches="False"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 5"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+              <path
+                 style="font-size:8.46667px;line-height:1.25;font-family:&quot;Glacial Indifference&quot;;-inkscape-font-specification:&quot;Glacial Indifference&quot;;display:inline;fill:none;stroke:#ff6600;stroke-width:1px;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 d="m 5.92312,-9.2287 h 1.99582 l 1.23332,0.171 0.95574,0.5211 0.6176,0.8832 0.2193,1.2574 -0.2163,1.113 -0.0625,0.0954 m -4.74298,-7.7751 h 1.99582 l 2.82706,0.5802 1.1333,0.4146 0.9005,0.5181 1.3591,0.9209 0.9184,1.2076 0.5201,1.4068 0.164,1.5185 -0.1563,1.6221 -0.3154,1.008 m -7.00813,-9.5365 v 4.4194 m 2.34233,2.7842 5.8916,-0.099 M 6.02312,-9.042 v -4.1074"
+                 id="autosatin234-1-1-1"
+                 sodipodi:nodetypes="csssccccssccccccccccccccc"
+                 inkstitch:satin_column="True"
+                 inkstitch:pull_compensation_mm="0.02"
+                 inkstitch:zigzag_spacing_mm="0.25"
+                 inkstitch:ties="2"
+                 inkstitch:force_lock_stitches="True"
+                 inkstitch:zigzag_underlay="False"
+                 inkstitch:center_walk_underlay="True"
+                 inkstitch:center_walk_underlay_stitch_length_mm="1.2"
+                 inkscape:label="Auto-remplissage satin 7"
+                 center_walk_underlay_stitch_length_m="1.2"
+                 inkstitch:reverse_rails="none"
+                 inkstitch:short_stitch_distance_mm="0.17"
+                 inkstitch:min_stitch_length_mm=".2"
+                 inkstitch:min_jump_stitch_length_mm="3"
+                 inkstitch:center_walk_underlay_stitch_tolerance_mm="0.2"
+                 inkstitch:start_at_nearest_point="False"
+                 inkstitch:end_at_nearest_point="False" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g6"
+       inkscape:label="GNU"
+       style="stroke:#803300">
+      <g
+         id="g12"
+         inkscape:label="G"
+         style="stroke:#803300">
+        <path
+           style="fill:none;fill-opacity:1;stroke:#803300;stroke-width:1.50196;stroke-opacity:1"
+           d="m 382.26369,588.8041 -35.4024,-88.86724 38.29239,-84.53228 114.15469,-65.74732 70.8048,14.44996"
+           id="path14"
+           inkscape:label="start"
+           inkstitch:satin_column="False" />
+        <path
+           style="display:inline;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#803300;stroke-width:1.13778px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 575.96027,370.14721 c -4.30195,8.93969 -9.19767,11.71138 -11.40066,19.17308 -56.47314,-24.27651 -127.92027,-3.68786 -162.44381,44.57438 -28.47337,36.41027 -39.61006,89.80115 -13.06629,129.78549 25.27191,31.23511 72.31172,30.87131 109.29157,23.30245 23.32035,-1.85602 51.45944,-21.01714 39.34447,-45.58095 m 41.34875,-19.35359 c 13.84055,30.03675 6.45452,70.64976 -25.44203,87.68148 -38.24554,23.17656 -86.63853,25.15061 -130.36447,18.90996 -43.85674,-8.28408 -82.1209,-41.87542 -88.37351,-84.59435 -20.93251,-94.1471 57.03254,-195.16651 158.12581,-205.6797 25.62917,-3.70174 51.12707,1.9236 76.36813,4.50062 14.62213,3.23376 14.52647,11.11646 10.22453,20.05615 m -34.02452,35.1424 21.67494,-69.35981 m -109.0972,88.14476 -41.90488,-67.91482 m -26.73243,161.11706 -75.13979,1.44499 m 143.7771,67.19232 v 68.63731 m 62.85733,-78.02979 43.34988,46.23988 m -28.17742,-62.85733 54.18735,-26.00993"
+           id="path2415"
+           sodipodi:nodetypes="ccccccccccccc"
+           inkstitch:satin_column="True"
+           inkstitch:zigzag_spacing_mm="0.3" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#803300;stroke-width:1.50196;stroke-opacity:1"
+           d="m 560.72071,523.7793 -65.02484,-54.90987 -25.28742,1.445"
+           id="path15"
+           inkscape:label="jump"
+           inkstitch:satin_column="False" />
+        <path
+           style="display:inline;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#803300;stroke-width:1.13778px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 465.95917,476.50223 c 0.85319,8.42371 0.4562,9.41873 4.56301,14.54643 28.58104,6.06002 57.5077,22.76059 67.16337,50.353 m 41.34875,-19.35359 c -20.43431,-40.22459 -64.1365,-75.408 -113.5792,-72.87443 -2.45246,3.05251 -4.68409,6.62242 -3.83091,15.04613 m 62.24911,77.62196 61.41233,-33.23491 m -81.64227,11.55997 55.63234,-64.30232 m -95.36973,-26.73243 5.77998,78.75228"
+           id="path13"
+           sodipodi:nodetypes="cccccccccccc"
+           inkstitch:satin_column="True"
+           inkstitch:zigzag_spacing_mm="0.3" />
+      </g>
+      <g
+         id="g11"
+         inkscape:label="N"
+         style="stroke:#803300">
+        <path
+           style="fill:none;fill-opacity:1;stroke:#803300;stroke-width:1.50196;stroke-opacity:1"
+           d="m 648.83262,572.2814 5.10884,35.25096"
+           id="path20"
+           inkscape:label="start" />
+        <path
+           d="m 648.3443,613.54588 c -7.996,-0.84634 -16.2529,-2.2396 -23.55522,-1.53593 l -2.80193,-0.13971 -2.8097,-0.13195 c 2.90369,-28.08503 -0.60766,-56.37993 2.15772,-84.4926 0.69395,-26.18022 1.48396,-52.54323 7.66069,-78.12035 3.72488,-25.00935 3.69053,-50.41771 4.68799,-75.61335 -3.13919,-12.15688 -1.98778,-31.3444 11.14564,-34.69428 2.78571,-2.79913 6.50035,-4.56352 10.85845,-4.54052 1.4527,0.008 2.97893,0.21167 4.56382,0.64421 10.12152,1.38389 20.23294,9.17838 22.59397,19.16335 6.23331,6.1924 11.17809,13.7588 14.38997,21.91095 27.48239,57.68603 62.52549,111.34258 92.16105,167.89859 0.34632,-9.33747 0.60838,-18.6774 0.94692,-28.0038 m 49.70518,-1.87054 c -0.72978,29.85623 -2.53516,59.72973 -5.07608,89.46002 -6.35088,22.84002 -39.90391,27.6214 -54.84335,10.51694 -9.93467,-11.87858 -12.7001,-27.95842 -22.57845,-39.97216 -27.80865,-43.33245 -49.26918,-90.27966 -74.4724,-135.10589 -0.67627,-1.28012 -1.35928,-2.56465 -2.04129,-3.84198 -0.19647,2.76703 -0.3826,5.53353 -0.55107,8.29713 -3.75777,22.74716 -9.32517,45.3478 -9.08882,68.55031 -2.52811,33.23953 -1.14714,66.68314 -1.06334,99.87606 m -60.48349,-15.7713 69.35981,1.445 m -69.35981,-122.82466 76.58479,1.44499 m -44.07238,-153.16957 43.34988,130.04964 m 11.55997,22.39743 49.85236,-44.79487 m 30.34492,65.02482 -54.90985,41.18238 M 814.3175,641.54646 783.25008,525.22428 m 67.19232,-4.89723 -68.462,0.27801"
+           style="fill:none;stroke:#803300;stroke-width:1.13778px;stroke-opacity:1"
+           id="path10"
+           sodipodi:nodetypes="ccccccccscccccccccccccccccccccccccccc"
+           inkstitch:satin_column="True"
+           inkstitch:zigzag_spacing_mm="0.3"
+           inkstitch:end_at_nearest_point="False"
+           inkstitch:start_at_nearest_point="False"
+           inkstitch:ties="3" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#803300;stroke-width:1.50196;stroke-opacity:1"
+           d="m 818.95672,505.35572 3.06529,-156.33028"
+           id="path21"
+           inkscape:label="jump" />
+        <path
+           d="m 812.10715,343.24958 c -12.22089,-4.18019 -21.10004,3.67664 -17.2152,16.65636 -0.83113,26.57819 -2.62778,53.27839 -3.96617,79.91327 -1.89939,25.34382 -0.54861,50.70681 -0.58211,76.07128 m 49.70518,-1.87054 c -1.02697,-56.44316 3.68732,-112.75484 6.05404,-169.10939 m -60.86445,3.604 68.96924,2.04353 m -72.54542,153.77585 70.50188,-1.02176 m -69.48012,-92.98075 71.01277,0.51088"
+           style="fill:none;stroke:#803300;stroke-width:1.13778px;stroke-opacity:1"
+           id="path19"
+           sodipodi:nodetypes="cccccc"
+           inkstitch:satin_column="True"
+           inkstitch:zigzag_spacing_mm="0.3"
+           inkstitch:end_at_nearest_point="False"
+           inkstitch:start_at_nearest_point="False"
+           inkstitch:ties="2" />
+      </g>
+      <g
+         id="g10"
+         inkscape:label="U"
+         style="stroke:#803300">
+        <path
+           style="fill:none;stroke:#803300;stroke-width:1.50196"
+           d="m 912.95926,567.68345 5.6197,-227.34302"
+           id="path1"
+           inkscape:label="start"
+           inkstitch:satin_column="False" />
+        <path
+           style="display:inline;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#803300;stroke-width:1.13778px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 923.20319,337.68198 c 5.38487,0.34031 5.80285,1.15336 10.87464,2.4627 5.07179,1.30935 9.68856,3.11499 13.25335,5.44049 -4.93456,25.84063 -6.25008,52.09677 -7.57194,78.25537 -0.42725,33.8776 -5.02852,67.52343 -6.4128,101.3457 -1.19907,21.11594 5.01877,55.16178 34.5187,54.36522 30.09995,-5.85567 45.66836,-33.30828 52.07986,-58.5099 3.8367,-14.19807 6.8268,-28.53641 9.1684,-42.96761 m 53.8021,5.345 c -6.9766,39.2332 -13.9941,83.3434 -47.685,111.63527 -26.513,26.16317 -70.67065,34.59629 -106.65473,21.44247 -38.46599,-16.85691 -51.28985,-59.98642 -48.37658,-96.21511 6.83341,-59.55045 4.62689,-119.63136 12.06485,-179.15705 2.42929,-1.45641 6.19444,-2.48721 10.69848,-3.06882 4.50404,-0.58161 6.17079,-1.7358 11.55566,-1.3955 m -34.25546,14.91965 74.07807,2.04353 m -10.21766,150.19967 -66.92571,-2.55441 m 92.46987,62.83863 1.53265,68.96924 m 43.93596,-149.68879 80.2087,6.1306"
+           id="path2419"
+           sodipodi:nodetypes="cscccccccccccsccccccccc"
+           inkstitch:satin_column="True"
+           inkstitch:zigzag_spacing_mm="0.3"
+           inkstitch:start_at_nearest_point="False"
+           inkstitch:end_at_nearest_point="False"
+           inkstitch:ties="3" />
+        <path
+           style="fill:none;stroke:#803300;stroke-width:1.50196"
+           d="m 1054.9848,475.21361 1.0218,-121.59022"
+           id="path4"
+           inkscape:label="jump"
+           inkstitch:satin_column="False" />
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#803300;stroke-width:1.13778px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 1041.6049,346.96503 c 8.2522,2.94014 16.5762,1.45379 27.294,1.65697 10.7178,0.20318 20.2531,2.0959 23.7753,11.79418 -2.7196,40.96684 -4.6049,82.16261 -9.7587,123.00277 m -53.8021,-5.345 c 2.3416,-14.43121 4.0347,-28.95529 5.2775,-43.52485 2.4857,-29.13913 3.1699,-58.46019 3.6378,-87.58407 m -18.2949,121.60709 74.0781,7.15236 m 10.7286,-116.48138 -74.0781,9.1959 m -9.1959,38.31625 83.7848,3.57618"
+           id="path22"
+           sodipodi:nodetypes="cscccsccccccc"
+           inkstitch:satin_column="True"
+           inkstitch:zigzag_spacing_mm="0.3"
+           inkstitch:start_at_nearest_point="False"
+           inkstitch:end_at_nearest_point="False"
+           inkstitch:ties="2" />
+      </g>
+      <g
+         id="g13"
+         inkscape:label="Underline"
+         style="stroke:#803300">
+        <path
+           style="fill:none;stroke:#803300;stroke-width:1.50196"
+           d="m 1020.7556,661.1751 74.589,-3.06529"
+           id="path7"
+           inkscape:label="start"
+           inkstitch:satin_column="False" />
+        <path
+           style="display:inline;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#803300;stroke-width:1.13778px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 1099.9331,645.9905 c -88.5159,-0.0871 -177.03879,0.17523 -265.53848,1.85441 -38.40856,0.36281 -76.79146,1.33942 -115.1499,2.80516 -38.35845,1.46574 -76.69245,3.42061 -115.00321,5.73996 -38.31076,2.31935 -76.59828,5.00317 -114.86377,7.92681 -4.78319,0.36546 -9.56603,0.73466 -14.34853,1.10736 m -2.35671,36.84332 c 28.46718,-3.89254 57.00435,-7.26322 85.59695,-10.16778 57.1852,-5.80913 114.59214,-9.7538 172.10443,-12.28001 57.51228,-2.52621 115.12991,-3.63396 172.7365,-3.76924 57.60658,-0.13529 115.20212,0.70189 172.67022,2.06553 13.0728,5.40862 19.6236,1.31706 22.6498,-6.09657 m -595.71039,-24.12732 0,68.45836 m 260.55045,-83.78485 -3.0653,72.54542 m 323.89994,-72.54542 -1.0218,76.63248"
+           id="path1307"
+           sodipodi:nodetypes="ccsssccssscccccccc"
+           inkstitch:satin_column="True"
+           inkstitch:zigzag_spacing_mm="0.3"
+           inkstitch:ties="3" />
+        <path
+           style="fill:none;stroke:#803300;stroke-width:1.50196"
+           d="m 467.97993,680.58867 -82.76307,12.2612"
+           id="path9"
+           inkscape:label="jump" />
+        <path
+           style="display:inline;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#803300;stroke-width:1.13778px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 374.64614,673.68253 c 19.11132,-1.6393 38.22785,-3.24981 57.34973,-4.81596 9.56094,-0.78307 19.12322,-1.55505 28.68686,-2.31398 4.78182,-0.37947 9.56398,-0.75568 14.34648,-1.12839 m -2.35671,36.84332 c -28.46718,3.89254 -56.86438,8.30695 -85.17705,13.29897 m -2.27859,-55.41316 16.34827,67.43659 m 30.65299,-73.56719 3.0653,72.54542 m 30.65299,-70.50188 -2.04353,58.24068"
+           id="path6"
+           sodipodi:nodetypes="cssccc"
+           inkstitch:satin_column="True"
+           inkstitch:zigzag_spacing_mm="0.3"
+           inkstitch:end_at_nearest_point="False"
+           inkstitch:start_at_nearest_point="False"
+           inkstitch:ties="2" />
+      </g>
+    </g>
+    <g
+       id="g21"
+       inkscape:label="Horns">
+      <g
+         id="g7"
+         inkscape:label="HornsBottom">
+        <g
+           id="g8"
+           inkscape:label="Right">
+          <path
+             d="m 855.91664,160.348 c 29.89478,-6.54853 59.52185,-12.04019 88.7305,-10.15216 30.68328,1.98336 60.93826,11.93879 91.15996,37.43415 29.5551,25.368 72.7441,81.14083 118.9153,114.41361 23.086,16.63675 47.1196,27.81194 70.9797,26.26522 23.86,-1.54671 46.9631,-16.08526 67.4715,-49.09206 l 0.2018,-0.31822 0.1087,-0.3648 c 10.9129,-34.72861 6.3914,-66.68115 -8.9336,-93.90748 -15.325,-27.22633 -41.3024,-49.76218 -73.1918,-66.48579 -63.5075,-33.303619 -150.6219,-43.694013 -225.79245,-20.832116 -17.2414,-5.469386 -28.41559,-11.086418 -34.29071,-16.229487 -2.98699,-2.614804 -3.86497,-1.069924 -4.51657,-3.221252 m -0.7225,-3.973742 c -0.6516,-2.151328 -0.48174,-4.11148 0.53555,-6.356743 2.03458,-4.490526 8.01264,-9.77852 17.05998,-14.785831 9.04734,-5.00731 21.02967,-9.831045 34.70207,-14.242519 47.85343,-15.440159 116.74833,-25.757122 155.67423,-25.22517 l -10e-5,-5e-6 h 0.01 c 5.5609,0.07599 10.5119,0.372758 14.7004,0.908106 l 0.1009,0.01552 0.1087,0.0078 c 80.0538,4.607005 151.7568,35.638172 202.1351,80.868015 50.3783,45.229834 79.3691,104.509964 74.5656,165.865194 l -0.01,0.15523 v 0.15524 c 2.4139,98.23336 -73.3574,208.2321 -204.6033,230.32521 h -37.5429 c -44.8332,-65.621 -75.7339,-149.42001 -159.3144,-180.66655 l 0.2174,-0.44241 -3.9274,-1.04006 0.039,0.0155 c -8.369,-2.91406 -17.2592,-5.29564 -26.7076,-7.0941 l -24.14638,-6.40331 v -0.84601 h -45.49844 c -5.35537,-7.57107 -9.96052,-14.67527 -12.93857,-20.78554 -3.1485,-6.46 -4.40061,-11.80395 -3.68676,-15.27481 l 0.27166,-1.31172 -69.31015,-91.24631 m -11.41502,58.40241 27.58772,-101.15497 m 63.34958,191.0705 c 0,-1.70295 0,-3.40589 0,0 z M 1087.1714,185.03208 942.08041,317.86184 M 974.77696,129.85664 939.0151,21.549302 m 207.4188,116.481478 -4.0871,-156.330405 m 57.219,317.769655 12.2612,224.78882 m 33.7183,-233.98473 148.1563,154.28687 m -127.7209,-189.02696 214.5711,-6.13061 M 1235.3276,197.29329 1376.3315,48.115254"
+             style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.50196;stroke-dasharray:none;stroke-opacity:1;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+             id="path2"
+             sodipodi:nodetypes="cscsscccsccsccsssscscccscccccccccccccsccccccccccccccccccccc"
+             inkscape:label="RightHornBottom"
+             inkstitch:satin_column="True"
+             inkstitch:short_stitch_inset="0"
+             inkstitch:short_stitch_distance_mm="0.0"
+             inkstitch:zigzag_spacing_mm="0.6"
+             inkstitch:start_at_nearest_point="False"
+             inkstitch:end_at_nearest_point="False" />
+        </g>
+        <g
+           id="g9"
+           inkscape:label="Left">
+          <path
+             d="m 767.35919,297.37887 c -15.92252,-9.30376 -28.33287,-16.86433 -46.57422,-19.04694 -20.04886,-2.39888 -41.46182,1.76334 -63.63728,16.52443 -79.65481,-8.17283 -165.94536,4.01042 -235.26934,35.2609 -69.62368,31.3856 -122.33691,82.23423 -132.85515,151.07161 -1.24362,7.68342 -3.88229,16.54047 -7.34246,25.947 H 228.06367 C 201.76737,491.0844 161.48558,479.5327 125.82799,463.82619 89.826997,447.96841 59.168206,428.15621 51.929886,396.71171 l -0.131947,-0.58212 -0.349272,-0.48898 C -37.318916,271.30681 12.737618,80.130845 198.50753,28.804548 l 0.24837,-0.06985 0.22509,-0.108662 c 28.24589,-13.25326 62.74297,-20.0309427 99.61225,-22.0584413 6.91299,-0.380156 13.90889,-0.5879093 20.96406,-0.644212 l -3e-5,-4e-6 C 422.62567,5.1008573 537.89076,37.452126 585.47716,63.374674 m 0,3.251244 c -22.07267,18.200949 -49.69466,22.748705 -80.47993,25.443357 -32.35766,2.832285 -67.99291,0.114511 -103.40768,-1.466941 -35.41477,-1.581451 -70.62901,-2.037582 -102.29777,5.619392 -31.50046,7.616284 -59.52477,23.461094 -80.02976,53.981864 -27.01119,18.61288 -40.29733,44.68007 -42.84398,71.23588 -2.5622,26.71795 5.56137,53.9159 20.93301,75.07787 15.37165,21.16197 38.12016,36.34721 64.76271,38.55182 26.59681,2.20082 56.78636,-8.64639 86.82116,-38.41987 40.32851,-34.83379 83.18945,-82.24366 133.56145,-115.08111 50.3119,-32.79828 107.73248,-51.15065 178.28374,-28.50832 30.7947,19.18339 61.91769,24.96376 92.82087,24.23168 l 18.35616,120.08733 M 575.26593,34.832278 570.15708,105.33422 m -91.95906,9.19591 9.19591,-131.807988 M 341.2812,134.96548 323.91115,-30.560833 M 747.94461,309.6877 784.72823,256.5558 m -71.52371,51.08836 63.34957,-130.78622 M 655.98554,322.97068 688.6821,125.76957 M 525.19932,322.97068 460.82798,156.42259 M 346.39005,440.47387 287.12754,279.03464 m -42.91429,257.4854 -1.02173,-232.96295 m -264.63774,-9.1959 241.1371,-33.71832 M 227.86502,171.74911 52.121031,59.354695"
+             style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.50196;stroke-dasharray:none;stroke-opacity:1;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+             id="path8"
+             sodipodi:nodetypes="cscscccsccccccsssccssscssscsccccccccccccccccccccccccc"
+             inkscape:label="LeftHornBottom"
+             inkstitch:satin_column="True"
+             inkstitch:short_stitch_inset="0"
+             inkstitch:short_stitch_distance_mm="0.0"
+             inkstitch:zigzag_spacing_mm="0.6"
+             inkstitch:start_at_nearest_point="False"
+             inkstitch:end_at_nearest_point="False"
+             inkstitch:satin_method="satin_column" />
+        </g>
+      </g>
+      <g
+         id="g16"
+         inkscape:label="HornsTop">
+        <g
+           id="g14"
+           inkscape:label="Right">
+          <path
+             d="m 845.55858,156.44344 4.50948,-1.00125 c 31.53068,-7.00103 63.21602,-13.29815 94.9553,-11.24654 31.73929,2.05162 63.51244,12.57281 94.66814,38.86228 l 0.01,0.008 0.015,0.008 c 30.6387,26.29717 73.4914,81.65193 118.5117,114.09538 22.5101,16.22172 45.3669,26.54756 67.0835,25.13979 21.6374,-1.40264 42.7289,-14.218 62.5351,-45.94085 10.3124,-33.13625 6.0036,-62.9585 -8.5378,-88.7926 -14.5948,-25.92918 -39.6295,-47.80386 -70.7391,-64.1185 -62.2191,-32.629279 -148.5643,-42.845885 -222.21437,-20.13357 l -0.89258,0.27166 -0.89258,-0.27942 C 966.42276,97.632386 954.4525,91.85226 947.31473,85.60387 c -3.56889,-3.124194 -5.59724,-3.539311 -6.67075,-7.083649 m -1.445,-3.612494 c -1.07351,-3.544337 0.38612,-6.518071 1.89872,-9.85655 3.02522,-6.676956 10.04343,-12.263548 19.6213,-17.56448 9.57786,-5.300932 21.85334,-10.219409 35.76541,-14.708214 C 1045.1767,17.067667 1113.5841,6.5384544 1153.9982,7.2273259 l -4e-4,3.2e-6 c 5.6903,0.096994 10.8122,0.4191436 15.2593,0.9779605 0.043,0.00249 0.089,0.00525 0.1319,0.00776 l 0.078,0.00776 c 81.3081,4.7258114 154.1793,36.2117414 205.6031,82.3810544 51.4396,46.182696 81.4755,107.201406 76.5448,170.692906 2.3873,101.42919 -75.6875,213.77745 -209.8269,236.2473 l -0.2484,0.0388 h -41.2839 l -0.9003,-1.30395 c -46.5227,-67.56941 -76.686,-151.53405 -160.3079,-180.96925 l -0.4191,-0.14747 -0.078,-0.0233 -0.093,-0.0388 c -8.1351,-2.83024 -16.7855,-5.15336 -26.0168,-6.90006 l -0.1087,-0.0155 -26.66109,-7.07857 h -44.68347 l -0.89259,-1.25738 c -5.84666,-8.18897 -10.89859,-15.89241 -14.31237,-22.89669 -3.11989,-6.40129 -4.87816,-12.24143 -4.27664,-17.59553 l -76.66966,-99.29844 m 4.16206,66.05437 24.56495,-106.9298 m 225.51481,57.9627 -166.62053,152.01519 m 267.67513,-29.35323 10.115,221.08458 m 53.4649,-264.4345 222.5295,-5.77999 m -339.5743,-114.15478 -2.89,-151.724715 M 941.47796,23.810681 973.2679,129.29548 m 261.5445,67.91487 141.6097,-150.279712 m -131.4947,242.759542 150.2797,154.61471"
+             style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.50196;stroke-dasharray:none;stroke-opacity:1;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+             id="path3"
+             inkscape:label="RightHornTop"
+             sodipodi:nodetypes="ccccsccccccccscccssscccccccccccsccccccccscccccccccccccccccc"
+             inkstitch:satin_column="True"
+             inkstitch:short_stitch_inset="0"
+             inkstitch:short_stitch_distance_mm="0.0"
+             inkstitch:zigzag_spacing_mm="0.17"
+             inkstitch:end_at_nearest_point="False"
+             inkstitch:start_at_nearest_point="False" />
+        </g>
+        <g
+           id="g15"
+           inkscape:label="Left">
+          <path
+             d="m 779.81987,309.06788 -21.08048,-137.89242 -2.66999,0.0931 c -31.08238,1.11278 -61.80748,-4.28082 -92.52592,-23.54091 l -0.31822,-0.2018 -0.35704,-0.11642 c -72.48216,-23.35231 -132.37689,-4.3065 -183.65476,29.12149 -51.27788,33.428 -94.32966,81.13489 -134.20567,115.57784 l -0.0776,0.0621 -0.0776,0.0776 c -29.18102,28.99094 -57.57864,38.87733 -82.24181,36.83651 -24.66316,-2.04081 -45.87947,-16.10795 -60.4007,-36.09916 -14.52124,-19.99122 -22.21696,-45.84753 -19.80758,-70.97198 2.40938,-25.12444 14.76712,-49.52131 40.70954,-67.19986 l 0.48898,-0.32598 0.31823,-0.48898 c 19.66588,-29.53875 46.16343,-44.53669 76.78541,-51.94057 30.62198,-7.403882 65.32856,-7.03205 100.61351,-5.456396 35.28495,1.575655 71.13071,4.345936 104.19935,1.451417 33.06864,-2.894516 63.49923,-11.51224 87.37999,-32.947953 m -0.49674,-4.835471 C 545.36025,32.889887 426.60225,-1.0475484 319.50297,-0.09961577 312.36301,-0.03642026 305.27887,0.18230138 298.26725,0.56788104 260.97431,2.6186773 225.8681,9.4433227 196.68355,23.084256 7.8958833,75.3939 -44.354949,271.12769 46.24064,398.66763 c 8.188428,34.11985 40.846637,54.65929 77.15797,70.65377 36.53049,16.091 77.32583,27.88533 102.29777,43.37176 l 0.72183,0.45018 h 59.49259 l 0.73735,-1.9404 c 3.93501,-10.4085 6.87666,-20.22745 8.30491,-29.05163 v -0.0155 l 0.008,-0.0155 c 10.12452,-66.32327 60.93092,-115.6724 129.38572,-146.53107 68.4548,-30.85867 154.33923,-42.95908 233.2358,-34.67879 l 1.09438,0.11642 0.90811,-0.62092 c 21.46583,-14.56576 41.4577,-18.38208 60.48608,-16.10531 19.02837,2.27678 37.14443,10.79003 54.21471,21.34438 m -26.43753,5.72012 46.23991,-46.23992 m -80.91985,43.34992 65.02488,-128.60475 m -98.25981,130.04975 c 0,-1.92666 0,-3.85333 0,0 z m 8.66998,-182.06966 -31.78994,195.07464 m -130.04976,-1.445 -63.57987,-164.72969 M 351.71371,461.51718 288.13383,268.81912 m -43.8282,279.58569 -3.65134,-248.59965 M -20.890219,295.47017 218.97933,260.79023 M 54.249639,59.935613 227.64931,174.0904 M 323.01913,-26.764223 341.80409,135.07547 M 489.19382,-18.094239 477.63384,114.84551 m 105.4848,-89.589831 -2.89,89.589831"
+             style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.50196;stroke-dasharray:none;stroke-opacity:1;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+             id="path5"
+             inkscape:label="LeftHornTop"
+             sodipodi:nodetypes="ccccccscccssscccsssccssccscccccccscccsccccccccsssccssccsscssccc"
+             inkstitch:satin_column="True"
+             inkstitch:short_stitch_inset="0"
+             inkstitch:short_stitch_distance_mm="0.0"
+             inkstitch:zigzag_spacing_mm="0.18"
+             inkstitch:end_at_nearest_point="False"
+             inkstitch:start_at_nearest_point="False" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
