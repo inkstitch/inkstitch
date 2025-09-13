@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-01 01:55+0000\n"
-"PO-Revision-Date: 2025-09-10 01:31\n"
+"PO-Revision-Date: 2025-09-13 01:25\n"
 "Last-Translator: \n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -601,27 +601,27 @@ msgstr "A Western Light egy vékony kitöltésű, western stílusú betűtípus.
 #. name of tile in tiles/N3-11a
 #: inkstitch-tiles-metadata.py:2
 msgid "N3-11a"
-msgstr ""
+msgstr "N3-11a"
 
 #. name of tile in tiles/N3-12
 #: inkstitch-tiles-metadata.py:4
 msgid "N3-12"
-msgstr ""
+msgstr "N3-12"
 
 #. name of tile in tiles/N3-16a
 #: inkstitch-tiles-metadata.py:6
 msgid "N3-16a"
-msgstr ""
+msgstr "N3-16a"
 
 #. name of tile in tiles/N3-17
 #: inkstitch-tiles-metadata.py:8
 msgid "N3-17"
-msgstr ""
+msgstr "N3-17"
 
 #. name of tile in tiles/N3-18
 #: inkstitch-tiles-metadata.py:10
 msgid "N3-18"
-msgstr ""
+msgstr "N3-18"
 
 #. name of tile in tiles/N3-18-modified
 #: inkstitch-tiles-metadata.py:12
@@ -971,7 +971,7 @@ msgstr "hatszögletű rács"
 #. name of tile in tiles/weird-one
 #: inkstitch-tiles-metadata.py:150
 msgid "weird one"
-msgstr ""
+msgstr "furcsa (vagy: szokatlan) forma"
 
 #: inkstitch.py:170
 msgid "Ink/Stitch cannot read your SVG file. This is often the case when you use a file which has been created with Adobe Illustrator."
@@ -1158,11 +1158,11 @@ msgstr "Felülírja a globális minimális ugróöltés-hossz beállítást. A k
 
 #: lib/elements/element.py:295
 msgid "Allow lock stitches"
-msgstr ""
+msgstr "Engedélyezze a rögzítő öltéseket"
 
 #: lib/elements/element.py:296
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
-msgstr ""
+msgstr "Kösse el a cérnát az objektum elején és/vagy végén. A kézi öltés csak akkor ad hozzá láncolt öltéseket, ha a „láncolt öltés kényszerítése” be van jelölve."
 
 #. options to allow lock stitch before and after objects
 #: lib/elements/element.py:301
@@ -1369,59 +1369,59 @@ msgstr "Az elemnek van kitöltési és vonalszíne is. Javasolt inkább két kü
 
 #: lib/elements/fill_stitch.py:103
 msgid "* Duplicate the element. Remove stroke color from the first and fill color from the second."
-msgstr ""
+msgstr "* Duplikáld az elemet. Távolítsd el az elsőről a körvonalszínt, a másodikról pedig a kitöltőszínt."
 
 #: lib/elements/fill_stitch.py:104
 msgid "* Adapt the shape of the second element to compensate for push and pull fabric distortion."
-msgstr ""
+msgstr "* A második elem alakját úgy kell igazítani, hogy kompenzálja a szövet húzó- és tolóerejéből adódó torzulást."
 
 #: lib/elements/fill_stitch.py:109
 msgid "No linear gradient color"
-msgstr ""
+msgstr "Nincs lineáris gradiens szín"
 
 #: lib/elements/fill_stitch.py:110
 msgid "Linear Gradient has no linear gradient color."
-msgstr ""
+msgstr "A lineáris színátmenetnek nincs lineáris színátmenet-színe."
 
 #: lib/elements/fill_stitch.py:112
 msgid "* Open the Fill and Stroke dialog."
-msgstr ""
+msgstr "* Nyissa meg a Kitöltés és körvonal párbeszédablakot."
 
 #: lib/elements/fill_stitch.py:113
 msgid "* Set a linear gradient as a fill and adapt colors to your liking."
-msgstr ""
+msgstr "* Állítson be egy lineáris színátmenetet kitöltésként, és igazítsa a színeket ízlése szerint."
 
 #: lib/elements/fill_stitch.py:118
 msgid "No stripes to render"
-msgstr ""
+msgstr "Nincsenek megjeleníthető csíkok."
 
 #: lib/elements/fill_stitch.py:119
 msgid "Tartan fill: There is no active fill stripe to render"
-msgstr ""
+msgstr "Tartan kitöltés: Nincs aktív kitöltéssáv a rendereléshez"
 
 #: lib/elements/fill_stitch.py:121 lib/elements/fill_stitch.py:131
 msgid "Go to Extensions > Ink/Stitch > Fill Tools > Tartan and adjust stripe settings:"
-msgstr ""
+msgstr "Lépjen a Bővítmények > Ink/Stitch > Kitöltési eszközök > Tartan menüpontra, és módítsa a sáv beállításokat:"
 
 #: lib/elements/fill_stitch.py:122
 msgid "* Check if stripes are active"
-msgstr ""
+msgstr "* Ellenőrizze, hogy a sávok aktívak-e"
 
 #: lib/elements/fill_stitch.py:123
 msgid "* Check the minimum stripe width setting and the scale factor"
-msgstr ""
+msgstr "* Ellenőrizze a minimális sávszélesség beállítását és a méretezési tényezőt"
 
 #: lib/elements/fill_stitch.py:128
 msgid "No customized pattern"
-msgstr ""
+msgstr "Nincs testreszabott minta"
 
 #: lib/elements/fill_stitch.py:129
 msgid "Tartan fill: Using default pattern"
-msgstr ""
+msgstr "Tartan kitöltés: Az alapértelmezett minta használata"
 
 #: lib/elements/fill_stitch.py:132
 msgid "* Customize your pattern"
-msgstr ""
+msgstr "* Szabja testre a mintát"
 
 #: lib/elements/fill_stitch.py:137
 msgid "This shape is invalid"
