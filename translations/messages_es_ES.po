@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-01 01:55+0000\n"
-"PO-Revision-Date: 2025-09-11 01:40\n"
+"PO-Revision-Date: 2025-09-15 01:45\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -3950,97 +3950,99 @@ msgstr ""
 msgid "Unversioned Ink/Stitch SVG file detected.\n\n"
 "* If you opened an old design file, please update.\n"
 "* If you copy pasted objects into an empty file, please cancel."
-msgstr ""
+msgstr "Se detectó un archivo SVG de Ink/Stitch sin versión.\n\n"
+"*Si abriste un archivo de diseño antiguo, por favor actualízalo.\n\n"
+"*Si copiaste y pegaste objetos en un archivo vacío, por favor cancela."
 
 #: lib/gui/request_update_svg_version.py:37
 msgid "Update"
-msgstr ""
+msgstr "Actualizar"
 
 #: lib/gui/satin_multicolor/color_panel.py:19 lib/gui/tartan/stripe_panel.py:19
 msgid "Click to move color up."
-msgstr ""
+msgstr "Haz clic para subir el color."
 
 #: lib/gui/satin_multicolor/color_panel.py:23
 msgid "Select color"
-msgstr ""
+msgstr "Seleccionar color"
 
 #: lib/gui/satin_multicolor/color_panel.py:28
 msgid "Monochrome width. Can be changed individually when equidistance is disabled."
-msgstr ""
+msgstr "Ancho monocromático. Puede cambiarse individualmente cuando la equidistancia está desactivada."
 
 #: lib/gui/satin_multicolor/color_panel.py:34
 msgid "Margin right (bicolor section). Can be changed individually when equidistance is disabled."
-msgstr ""
+msgstr "Margen derecho (sección bicolor). Puede cambiarse individualmente cuando la equidistancia está desactivada."
 
 #: lib/gui/satin_multicolor/color_panel.py:39
 msgid "Remove color"
-msgstr ""
+msgstr "Eliminar color"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:27
 msgid "General Settings"
-msgstr ""
+msgstr "Configuración general"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:30
 msgid "Equidistant colors"
-msgstr ""
+msgstr "Colores equidistantes"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:31
 msgid "Whether colors should be equidistant or have varying widths."
-msgstr ""
+msgstr "Si los colores deben ser equidistantes o tener anchos variables."
 
 #: lib/gui/satin_multicolor/colorize_panel.py:36
 msgid "Monochrome color width"
-msgstr ""
+msgstr "Ancho de color monocromático"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:37
 msgid "Adapt color width here when equidistance is enabled."
-msgstr ""
+msgstr "Adapta aquí el ancho del color cuando la equidistancia esté activada."
 
 #: lib/gui/satin_multicolor/colorize_panel.py:43
 msgid "Overflow left"
-msgstr ""
+msgstr "Desbordamiento a la izquierda"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:49
 msgid "Overflow right"
-msgstr ""
+msgstr "Desbordamiento a la derecha"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:55
 #: inx/inkstitch_fill_to_satin.inx:14
 msgid "Pull compensation (mm)"
-msgstr ""
+msgstr "Compensación de tire (mm)"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:67
 msgid "Keep original satin"
-msgstr ""
+msgstr "Mantener satín original"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:71
 msgid "Adjust underlay per color"
-msgstr ""
+msgstr "Ajustar refuerzo por color"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:74
 msgid "When disabled existing underlay is applied only to the first color."
-msgstr ""
+msgstr "Cuando está desactivado, el refuerzo existente se aplica solo al primer color."
 
 #: lib/gui/satin_multicolor/colorize_panel.py:81
 msgid "Overflow excluded"
-msgstr ""
+msgstr "Desbordamiento excluido"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:235
 #, python-brace-format
 msgid "Total width: {width}%"
-msgstr ""
+msgstr "Ancho total: {width}%"
 
 #: lib/gui/satin_multicolor/help_panel.py:19
 msgid "This extension simulates a multicolor satin by creating colored copies of the selected satin(s)."
-msgstr ""
+msgstr "Esta extensión simula un satín multicolor creando copias coloreadas de los satines seleccionados."
 
 #: lib/gui/satin_multicolor/main_panel.py:47
 msgid "Colorize"
-msgstr ""
+msgstr "Colorear"
 
 #: lib/gui/satin_multicolor/main_panel.py:151
 msgid "Multicolor Satin Group"
-msgstr ""
+msgstr "Grupo de satín multicolor"
 
 #: lib/gui/simulator/control_panel.py:47
 msgid "Slow down (arrow down)"
@@ -4052,27 +4054,27 @@ msgstr "Aumentar la velocidad (Flecha hacia arriba)"
 
 #: lib/gui/simulator/control_panel.py:55
 msgid "Go backward one stitch (-)"
-msgstr ""
+msgstr "Retroceder una puntada (-)"
 
 #: lib/gui/simulator/control_panel.py:59
 msgid "Go forward one stitch (+)"
-msgstr ""
+msgstr "Avanzar una puntada (+)"
 
 #: lib/gui/simulator/control_panel.py:63
 msgid "Go backward one command (page-down)"
-msgstr ""
+msgstr "Retroceder un comando (av pág)"
 
 #: lib/gui/simulator/control_panel.py:67
 msgid "Go forward one command (page-up)"
-msgstr ""
+msgstr "Avanzar un comando (page-up)"
 
 #: lib/gui/simulator/control_panel.py:71
 msgid "Switch animation direction (arrow left, arrow right)"
-msgstr ""
+msgstr "Cambiar dirección de la animación (flecha izquierda, flecha derecha)"
 
 #: lib/gui/simulator/control_panel.py:75
 msgid "Play (P)"
-msgstr ""
+msgstr "Reproducir (P)"
 
 #: lib/gui/simulator/control_panel.py:79
 msgid "Restart (R)"
@@ -4084,16 +4086,16 @@ msgstr "Controles"
 
 #: lib/gui/simulator/control_panel.py:115
 msgid "Speed"
-msgstr ""
+msgstr "Velocidad"
 
 #: lib/gui/simulator/control_panel.py:244
 #, python-format
 msgid "%d stitches/sec"
-msgstr ""
+msgstr "%d puntadas/seg"
 
 #: lib/gui/simulator/design_info.py:25
 msgid "Design dimensions (mm)"
-msgstr ""
+msgstr "Dimensiones del diseño (mm)"
 
 #: lib/gui/simulator/design_info.py:28
 msgid "# Stitches"
@@ -4140,30 +4142,30 @@ msgstr "Cambio de Color"
 #: lib/gui/simulator/drawing_panel.py:304
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
-msgstr ""
+msgstr "Dimensiones: {:.2f} x {:.2f}"
 
 #: lib/gui/simulator/drawing_panel.py:450
 #, python-format
 msgid "Command: %s"
-msgstr ""
+msgstr "Comando: %s"
 
 #: lib/gui/simulator/simulator_preferences.py:30
 msgid "Adapt speed to stitch count"
-msgstr ""
+msgstr "Adaptar velocidad al número de puntadas"
 
 #: lib/gui/simulator/simulator_preferences.py:32
 msgid "When enabled simulation speed adapts itself to the stitch count."
-msgstr ""
+msgstr "Cuando está activado, la velocidad de simulación se adapta al número de puntadas."
 
 #: lib/gui/simulator/simulator_preferences.py:35
 #: inx/inkstitch_fill_to_stroke.inx:21 inx/inkstitch_png_simple.inx:15
 #: inx/inkstitch_zip.inx:52
 msgid "Line width (mm)"
-msgstr ""
+msgstr "Ancho de línea (mm)"
 
 #: lib/gui/simulator/simulator_preferences.py:40
 msgid "Needle penetration point size (mm)"
-msgstr ""
+msgstr "Tamaño del punto de penetración de la aguja (mm)"
 
 #: lib/gui/simulator/simulator_window.py:14
 msgid "Embroidery Simulation"
@@ -4175,43 +4177,43 @@ msgstr "Muestra el punto de penetración de la aguja (O)"
 
 #: lib/gui/simulator/view_panel.py:44
 msgid "Show jump stitches"
-msgstr ""
+msgstr "Mostrar puntadas de salto"
 
 #: lib/gui/simulator/view_panel.py:51
 msgid "Show trims"
-msgstr ""
+msgstr "Mostrar cortes"
 
 #: lib/gui/simulator/view_panel.py:58
 msgid "Show stops"
-msgstr ""
+msgstr "Mostrar paradas"
 
 #: lib/gui/simulator/view_panel.py:65
 msgid "Show color changes"
-msgstr ""
+msgstr "Mostrar cambios de color"
 
 #: lib/gui/simulator/view_panel.py:73
 msgid "Open info dialog"
-msgstr ""
+msgstr "Abrir cuadro de diálogo de información"
 
 #: lib/gui/simulator/view_panel.py:78
 msgid "Change background color"
-msgstr ""
+msgstr "Cambiar color de fondo"
 
 #: lib/gui/simulator/view_panel.py:82
 msgid "Show crosshair"
-msgstr ""
+msgstr "Mostrar retícula"
 
 #: lib/gui/simulator/view_panel.py:92
 msgid "Show page"
-msgstr ""
+msgstr "Mostrar página"
 
 #: lib/gui/simulator/view_panel.py:95
 msgid "Open settings dialog"
-msgstr ""
+msgstr "Abrir cuadro de diálogo de configuración"
 
 #: lib/gui/simulator/view_panel.py:101
 msgid "Detach/attach simulator window"
-msgstr ""
+msgstr "Desacoplar/acoplar ventana del simulador"
 
 #: lib/gui/simulator/view_panel.py:107
 msgid "Show"
@@ -4219,11 +4221,11 @@ msgstr "Mostrar"
 
 #: lib/gui/simulator/view_panel.py:185
 msgid "Simulator Preferences"
-msgstr ""
+msgstr "Preferencias del simulador"
 
 #: lib/gui/simulator/view_panel.py:193
 msgid "Design Info"
-msgstr ""
+msgstr "Información del diseño"
 
 #: lib/gui/tartan/code_panel.py:24
 msgid "1 Tartan thread equals (mm)"
@@ -4463,15 +4465,15 @@ msgstr ""
 
 #: lib/lettering/categories.py:23 inx/inkstitch_lettering_generate_json.inx:53
 msgid "Italic"
-msgstr ""
+msgstr "Cursiva"
 
 #: lib/lettering/categories.py:24 inx/inkstitch_lettering_generate_json.inx:54
 msgid "Monogram"
-msgstr ""
+msgstr "Monograma"
 
 #: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:55
 msgid "Multicolor"
-msgstr ""
+msgstr "Multicolor"
 
 #: lib/lettering/categories.py:27
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
@@ -4481,66 +4483,68 @@ msgstr ""
 #: inx/inkstitch_lettering_generate_json.inx:59
 #: inx/inkstitch_select_elements.inx:13
 msgid "Running Stitch"
-msgstr ""
+msgstr "Puntada de corrido"
 
 #: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:60
 msgid "Sans Serif"
-msgstr ""
+msgstr "Sans Serif"
 
 #: lib/lettering/categories.py:29 inx/inkstitch_lettering_generate_json.inx:61
 msgid "Serif"
-msgstr ""
+msgstr "Serif"
 
 #: lib/lettering/categories.py:30 inx/inkstitch_lettering_generate_json.inx:64
 #: inx/inkstitch_tartan.inx:3
 msgid "Tartan"
-msgstr ""
+msgstr "Tartan"
 
 #: lib/lettering/categories.py:31 inx/inkstitch_lettering_generate_json.inx:65
 msgid "Tiny"
-msgstr ""
+msgstr "Muy pequeño"
 
 #: lib/lettering/categories.py:32 inx/inkstitch_lettering_generate_json.inx:66
 msgid "Script: arabic"
-msgstr ""
+msgstr "Escritura: árabe"
 
 #: lib/lettering/categories.py:33 inx/inkstitch_lettering_generate_json.inx:67
 msgid "Script: cyrillic"
-msgstr ""
+msgstr "Escritura: cirílico"
 
 #: lib/lettering/categories.py:34 inx/inkstitch_lettering_generate_json.inx:70
 msgid "Script: greek"
-msgstr ""
+msgstr "Escritura: griego"
 
 #: lib/lettering/categories.py:35 inx/inkstitch_lettering_generate_json.inx:71
 msgid "Script: hebrew"
-msgstr ""
+msgstr "Escritura: hebreo"
 
 #: lib/lettering/categories.py:36 inx/inkstitch_lettering_generate_json.inx:72
 msgid "Script: japanese"
-msgstr ""
+msgstr "Escritura: japonés"
 
 #: lib/lettering/categories.py:37 inx/inkstitch_lettering_generate_json.inx:73
 msgid "Script: latin"
-msgstr ""
+msgstr "Escritura: latin"
 
 #: lib/lettering/font.py:100
 msgid "JSON file missing. Expected a JSON file at the following location:"
-msgstr ""
+msgstr "Falta el archivo JSON. Se esperaba un archivo JSON en la siguiente ubicación: "
 
 #: lib/lettering/font.py:102
 msgid "Generate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
-msgstr ""
+msgstr "Genera el archivo JSON a través de:\n"
+"Extensiones > Ink/Stitch > Gestión de Fuentes > Generar JSON..."
 
 #: lib/lettering/font.py:109
 msgid "Corrupt JSON file"
-msgstr ""
+msgstr "Archivo JSON corrupto"
 
 #: lib/lettering/font.py:111
 msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
-msgstr ""
+msgstr "Regenera el archivo JSON a través de:\n"
+"Extensiones > Ink/Stitch > Gestión de Fuentes > Generar JSON... "
 
 #: lib/lettering/font.py:192
 #, python-format
@@ -4549,7 +4553,7 @@ msgstr "La fuente '%s' no tiene variantes."
 
 #: lib/lettering/font.py:596
 msgid "Color Group"
-msgstr ""
+msgstr "Grupo de color"
 
 #. low-level file error.  %(error)s is (hopefully?) translated by
 #. the user's system automatically.
@@ -4560,16 +4564,16 @@ msgstr "Error escribiendo a %(path)s: %(error)s"
 
 #: lib/output.py:116
 msgid "Couldn't save embrodiery file."
-msgstr ""
+msgstr "No se pudo guardar el archivo de bordado."
 
 #: lib/output.py:118
 #, python-brace-format
 msgid "There are {num_color_changes} color changes in your design. This is way too many."
-msgstr ""
+msgstr "Hay {num_color_changes} cambios de color en tu diseño.  Son demasiados."
 
 #: lib/output.py:120
 msgid "Please reduce color changes. Find more information on our website:"
-msgstr ""
+msgstr "Por favor, reduce los cambios de color.  Encuentra más información en nuestro sitio web:"
 
 #: lib/output.py:122
 msgid "https://inkstitch.org/docs/faq/#too-many-color-changes"
@@ -4577,76 +4581,77 @@ msgstr ""
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:9
 msgid "Path"
-msgstr ""
+msgstr "Trazado"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:10
 msgid "Reverse path"
-msgstr ""
+msgstr "Invertir trazado"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:11
 msgid "Reverse the path when stitching this layer."
-msgstr ""
+msgstr "Invertir el trazado al coser esta capa."
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:54
 msgid "Randomization"
-msgstr ""
+msgstr "Aleatorización"
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:57
 msgid "The random seed is used when handling randomization settings.  Click the button to choose a new random seed, which will generate random features differently. Alternatively, you can enter your own random seed.  If you reuse a random seed, random features will look the same."
-msgstr ""
+msgstr "La semilla aleatoria se utiliza al manejar las configuraciones de aleatorización. Haz clic en el botón para elegir una nueva semilla aleatoria, lo que generará características aleatorias de forma diferente. Alternativamente, puedes ingresar tu propia semilla aleatoria. Si reutilizas una semilla aleatoria, las características aleatorias se verán igual."
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:61
 msgid "Offset stitches"
-msgstr ""
+msgstr "Puntadas desfasadas"
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:62
 msgid "Move stitches randomly by up to this many millimeters in any direction."
-msgstr ""
+msgstr "Mueve las puntadas aleatoriamente hasta este número de milímetros en cualquier dirección."
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:63
 msgid "Offset stitch path"
-msgstr ""
+msgstr "Desfasar trazado de puntada"
 
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:64
 msgid "Move stitches randomly by up to this many millimeters perpendicular to the stitch path.\n\n"
 "If <b>Offset stitches</b> is also specified, then this one is processed first."
-msgstr ""
+msgstr "Mueve las puntadas aleatoriamente hasta este número de milímetros perpendicularmente al trazado de puntada.\n\n"
+"Si también se especifica <b>Puntadas desfasadas</b>, entonces este se procesará primero."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
 msgid "Stitch along a path using evenly-spaced stitches."
-msgstr ""
+msgstr "Cose a lo largo de un trazado usando puntadas espaciadas uniformemente."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:25
 msgid "Tolerance"
-msgstr ""
+msgstr "Tolerancia"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:26
 msgid "Determines how closely the stitch path matches the SVG path.  A lower tolerance means stitches will be closer together and fit the SVG path more precisely.  A higher tolerance means some corners may be rounded and fewer stitches are needed."
-msgstr ""
+msgstr "Determina cómo de cerca el trazado de puntada coincide con el trazado SVG. Una tolerancia menor significa que las puntadas estarán más juntas y se ajustarán al trazado SVG con mayor precisión. Una tolerancia mayor significa que algunas esquinas pueden redondearse y se necesitarán menos puntadas."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:41
 msgid "Repeat exact stitches"
-msgstr ""
+msgstr "Repetir puntadas exactas"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:43
 msgid "Should the exact same stitches be repeated in each pass?  If not, different randomization settings are applied on each pass."
-msgstr ""
+msgstr "¿Deberían repetirse exactamente las mismas puntadas en cada pasada? Si no es así, se aplican configuraciones de aleatorización diferentes en cada pasada."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:51
 msgid "Stitch length variance"
-msgstr ""
+msgstr "Varianza de la longitud de puntada"
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:52
 msgid "Enter a percentage.  Stitch length will vary randomly by up to this percentage."
-msgstr ""
+msgstr "Ingresa un porcentaje. La longitud de puntada variará aleatoriamente hasta este porcentaje."
 
 #: lib/sew_stack/stitch_layers/stitch_layer_editor.py:339
 msgid "Undo changes"
-msgstr ""
+msgstr "Deshacer cambios"
 
 #: lib/sew_stack/stitch_layers/stitch_layer_editor.py:349
 msgid "Reset to default"
-msgstr ""
+msgstr "Restablecer valores por defecto"
 
 #: lib/stitch_plan/generate_stitch_plan.py:76
 #, python-format
@@ -4655,27 +4660,27 @@ msgstr "El archivo no existe y no se puede abrir. Corrija la ruta del archivo y 
 
 #: lib/stitch_plan/lock_stitch.py:35 lib/stitch_plan/lock_stitch.py:223
 msgid "Custom"
-msgstr ""
+msgstr "Personalizado"
 
 #: lib/stitch_plan/lock_stitch.py:214
 msgid "Half Stitch"
-msgstr ""
+msgstr "Media puntada"
 
 #: lib/stitch_plan/lock_stitch.py:215
 msgid "Arrow"
-msgstr ""
+msgstr "Flecha"
 
 #: lib/stitch_plan/lock_stitch.py:216
 msgid "Back and forth"
-msgstr ""
+msgstr "Hacia atrás y hacia adelante"
 
 #: lib/stitch_plan/lock_stitch.py:217
 msgid "Bowtie"
-msgstr ""
+msgstr "Moño"
 
 #: lib/stitch_plan/lock_stitch.py:218
 msgid "Cross"
-msgstr ""
+msgstr "Cruz"
 
 #: lib/stitch_plan/lock_stitch.py:219
 msgid "Star"
