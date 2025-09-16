@@ -28,6 +28,8 @@ Das Patch-Template enthält mehrere kreisförmige Linien. Da sie auf den ersten 
 
 ## Mitte kreativ füllen
 
+Es gibt mehrere Möglichkeiten die Mitte zu füllen. Hier ein paar Vorschläge.
+
 ### Selber zeichnen
 
 Nutzt hierfür das bereit gestellte Grafiktablett oder euren eigenen Laptop.
@@ -38,7 +40,7 @@ Und dann? Einfach mal drauf loslegen ... Dabei gilt es aber folgendes zu beachte
 
 * Da wir möglichst auf Fadenschnitte verzichten wollen, ist die ideale Zeichenweise eine durchgehende Linie zu erzeugen (ohne den Stift abzusetzen). Das ist aber gar nicht so einfach.
 * Alternativ kann mit Linienüberschneidungen gearbeitet werden.
-  Im Nachhinein kann dann noch ein geeigneter Stickpfad erzeugt werden (Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Redwork...`).
+  Im Nachhinein kann dann noch ein geeigneter Stickpfad erzeugt werden (`Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Redwork...`).
   Dabei sollten die Linien nicht zu eng angelegt werden, da bei dieser Methode alle Pfade 2x gestickt werden.
 * Keine Sorge, ein paar Fadenschnitte sind aber schon auch ok.
 
@@ -46,11 +48,11 @@ Wer mag, kann sich auch ein Bild als Vorlage in den Hintergrund legen.
 
 ### Mandalas erstellen
 
-Wer Lust hat, sich richtig auszutoben, kann mit Inkscape Mandalas erstellen. Mit der Redwork-Funktion (Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Redwork...`) kann hieraus ein zusammenhängender Stickpfad sichergestellt werden. Auch hier bitte nicht zu klein werden (alle Pfade werden 2x gestickt).
+Wer Lust hat, sich richtig auszutoben, kann mit Inkscape Mandalas erstellen. Mit der Redwork-Funktion (`Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Redwork...`) kann hieraus ein zusammenhängender Stickpfad sichergestellt werden. Auch hier bitte nicht zu klein werden (alle Pfade werden 2x gestickt).
 
 Eine [Mandala Anleitung](/tutorials/mandala/) findet hier auf der Webseite.
 
-### Bestehendes Motiv nutzen
+### Motiv-Vorlage nutzen
 
 Alle Motive sind im Template ohne Text. Text muss selbst hinzugefügt werden, siehe unten.
 {: .notice--info }
