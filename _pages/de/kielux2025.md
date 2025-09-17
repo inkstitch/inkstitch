@@ -69,6 +69,8 @@ Alle Motive sind im Template ohne Text. Text muss selbst hinzugefügt werden, si
   [Florales Mandala](/assets/files/kielux2025/patch-blank/patch_mandala_floral.svg)
 * ![Seahorse Patch](/assets/files/kielux2025/real_patch/seahorse_mandala.jpg){: width="150px"}
   [Seepferdchen Mandala](/assets/files/kielux2025/patch-blank/patch_mandala_seahorse.svg)
+* ![Open Source School](/assets/files/kielux2025/real_patch/open_source_school.jpg){: width="150px"}
+  [Open Source Schule](/assets/files/kielux2025/patch-blank/patch_open_source_school.svg)
 * ![OSM Patch](/assets/files/kielux2025/real_patch/osm.jpg){: width="150px"}
   [Open Street Map](/assets/files/kielux2025/patch-blank/patch_openstreetmap.svg)
 
