@@ -11,7 +11,7 @@
      gaction="app.org.inkstitch.commands"
      keys="&lt;Primary&gt;exclam" />
   <bind
-     gaction="app.org.inkstitch.convert-to-satin.noprefs"
+     gaction="app.org.inkstitch.stroke-to-satin.noprefs"
      keys="&lt;Primary&gt;&lt;Shift&gt;u" />
   <bind
      gaction="app.org.inkstitch.cut-satin.noprefs"

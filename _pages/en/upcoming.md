@@ -51,7 +51,11 @@ Numerous updates to existing fonts were made. Thanks to everyone involved!
 
 ### Satin columns
 
-Simple strokes an be used as satin columns directly (when the stroke with is greater than 0.3mm) [#3874](https://github.com/inkstitch/inkstitch/pull/3874)
+Simple strokes can be used as satin columns directly [#3874](https://github.com/inkstitch/inkstitch/pull/3874).
+* the width of the stroke must be greater than 0.3mm
+* the position of the nodes can influence how the satin will be rendered:
+
+  ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png)
 
 ## New extensions
 

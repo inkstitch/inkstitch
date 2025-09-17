@@ -8,11 +8,11 @@ toc: true
 
 **Example:**
 * Create a path with the help of the bezier curves tool (`B`)
-* Run [Convert Line to Satin](#convert-line-to-satin)
+* Run [Stroke to Satin](#convert-line-to-satin)
 * Use the [Params dialog](/docs/params/#satin-params) to set an underlay
 * Run [Auto-Route Satin](#auto-route-satin-columns) to recieve nicely routed satin columns
 
-[![Convert Line to Satin](/assets/images/docs/en/satin-tools.svg)](/assets/images/docs/en/satin-tools.svg){: title="Download SVG File" download="satin-tools.svg" }
+[![Stroke to Satin](/assets/images/docs/en/satin-tools.svg)](/assets/images/docs/en/satin-tools.svg){: title="Download SVG File" download="satin-tools.svg" }
 
 **Tip:** For faster access [set shortcuts](/docs/customize/) on specific satin tools.
 {: .notice--info}

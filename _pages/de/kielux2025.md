@@ -50,7 +50,7 @@ Wer mag, kann sich auch ein Bild als Vorlage in den Hintergrund legen.
 
 Wer Lust hat, sich richtig auszutoben, kann mit Inkscape Mandalas erstellen. Mit der Redwork-Funktion (`Erweiterungen > Ink/Stitch > Werkzeuge: Linie > Redwork...`) kann hieraus ein zusammenhängender Stickpfad sichergestellt werden. Auch hier bitte nicht zu klein werden (alle Pfade werden 2x gestickt).
 
-Eine [Mandala Anleitung](/tutorials/mandala/) findet hier auf der Webseite.
+Eine [Mandala Anleitung](/tutorials/mandala/) findet ihr auf der Webseite.
 
 ### Motiv-Vorlage nutzen
 
@@ -74,9 +74,12 @@ Alle Motive sind im Template ohne Text. Text muss selbst hinzugefügt werden, si
 
 ## Text hinzufügen
 
-Text kann mit dem Textwerkzeug von Ink/Stitch erstellt werden: `Erweiterungen > Ink/Stitch > Text > Text`
+Text kann mit dem Textwerkzeug von Ink/Stitch erstellt werden: `Erweiterungen > Ink/Stitch > Text > Text`.
 
-Nun muss der Text noch an den Führungslinien der Template-Datei ausgerichtet werden.
+Unter Schriftfilter muss nun die Größe auf 7.0 oder maximal 8.0 gestellt werden. Jetzt werden nur noch Schriften angezeigt, die für diese Größe optimiert sind.
+Die Skalierung wird nun außerdem bei der Schriftauswahl direkt für den eingegebenen Wert automatisch angepasst.
+
+Jetzt muss der Text noch an den Führungslinien der Template-Datei ausgerichtet werden.
 
 * Text an der oberen Seite des Patches nutzt den kleineren Kreis. Unten kommt der große Kreis zur Anwendung.
 * Mit dem ausgewählten Text und einer Führungslinie wird nun die Erweiterung `Erweiterungen > Ink/Stitch > Text > Text entlang Pfad` aufgerufen

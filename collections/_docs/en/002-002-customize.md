@@ -28,7 +28,7 @@ Shortcut&nbsp;Keys | Effect | Replaces
 <key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettering (Q for QWERTY) | Object > Selectors and CSS
 <span style="white-space: nowrap;"><key>ctrl</key>+<key>shift</key>+<key>Del</key></span> | Troubleshoot objects (remove errors)
 <key>ctrl</key>+<key>shift</key>+<key>!</key> | Attach commands to selected objects
-<key>ctrl</key>+<key>shift</key>+<key>U</key> | Convert line to satin column (U looks like two rails) | Object > Group (use Ctrl+G instead)
+<key>ctrl</key>+<key>shift</key>+<key>U</key> | Stroke to satin (U looks like two rails) | Object > Group (use Ctrl+G instead)
 <key>ctrl</key>+<key>shift</key>+<key>J</key> | Flip satin column rails (J looks like an arrow)
 <key>ctrl</key>+<key>shift</key>+<key>B</key> | Cut satin column (B is cut in half) | Path > Union (use Ctrl++ instead)
 <key>ctrl</key>+<key>shift</key>+<key>=</key> | Auto-route satin (puts everything in order)
