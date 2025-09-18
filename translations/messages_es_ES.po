@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-01 01:55+0000\n"
-"PO-Revision-Date: 2025-09-16 01:29\n"
+"PO-Revision-Date: 2025-09-18 19:32\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -8116,7 +8116,7 @@ msgstr "Marca los elementos seleccionados como líneas de anclaje"
 
 #: inx/inkstitch_selection_to_guide_line.inx:3
 msgid "Selection to guide line"
-msgstr "Selección de patrón"
+msgstr "Selección a línea guía"
 
 #: inx/inkstitch_selection_to_guide_line.inx:9
 msgid "Marks selected elements as guide lines"
@@ -8124,7 +8124,7 @@ msgstr "Marca los elementos seleccionados como líneas guía"
 
 #: inx/inkstitch_selection_to_pattern.inx:3
 msgid "Selection to pattern"
-msgstr "Selección del patrón"
+msgstr "Selección a patrón"
 
 #: inx/inkstitch_selection_to_pattern.inx:9
 msgid "Marks selected elements as patterns"
