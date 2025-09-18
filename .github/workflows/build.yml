@@ -386,10 +386,6 @@ jobs:
           # for networkx
           pip install pandas
           pip install pyarrow
-          # remove and build shapely with brew geos version
-          pip uninstall -y shapely
-          pip cache remove shapely
-          pip install -v shapely --no-binary shapely
 
           pip install pyinstaller
 
@@ -455,10 +451,6 @@ jobs:
           # for networkx
           pip install pandas
           pip install pyarrow
-          # remove and build shapely with brew geos version
-          pip uninstall -y shapely
-          pip cache remove shapely
-          pip install -v shapely --no-binary shapely
 
           pip install pyinstaller
 
