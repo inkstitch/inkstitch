@@ -9,7 +9,7 @@ Auf `arbores.tech` gibt es einen längeren Text zur Patch-Erstellung mit Ink/Sti
 Ebenfalls von dieser Seite stammt das Patch-Template, dass es hier auf dieser Seite in leicht abgewandelter Form zum Herunterladen gibt.
 {: .notice--info }
 
-Wir erstellen hier aus zeitgründen relativ kleine Patches mit einem Durchmesser von 62mm.
+Wir erstellen hier aus Zeitgründen relativ kleine Patches mit einem Durchmesser von 62mm.
 
 Die Idee ist, dass ihr euch selbst ausprobieren könnt. Entweder personalisiert ihr vorhandene Patches oder traut euch am Grafiktablett selbst ein bisschen was zu zeichnen.
 
@@ -73,6 +73,11 @@ Alle Motive sind im Template ohne Text. Text muss selbst hinzugefügt werden, si
   [Open Source Schule](/assets/files/kielux2025/patch-blank/patch_open_source_school.svg)
 * ![OSM Patch](/assets/files/kielux2025/real_patch/osm.jpg){: width="150px"}
   [Open Street Map](/assets/files/kielux2025/patch-blank/patch_openstreetmap.svg)
+
+**Achtung:** Für alle, die die Patches selber sticken wollen...<br/>
+Die Patches sind für 60wt Stickgarn ausgelegt.
+Das normale Stickgarn (40wt) ist nicht für diese Vorlagen geeignet.
+{: .notice--warning }
 
 ## Text hinzufügen
 

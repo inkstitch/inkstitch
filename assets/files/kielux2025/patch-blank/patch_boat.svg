@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.6318101"
-     inkscape:cx="122.86969"
-     inkscape:cy="193.64998"
+     inkscape:zoom="3.2636202"
+     inkscape:cx="125.93377"
+     inkscape:cy="127.46581"
      inkscape:document-units="mm"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -45,7 +45,22 @@
      showguides="true"
      inkscape:showpageshadow="2"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1" />
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="false" />
+  </sodipodi:namedview>
   <defs
      id="defs2">
     <symbol
@@ -193,7 +208,8 @@
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Patch"
-     transform="translate(-114.128, -58.0503)">
+     transform="translate(-114.128,-58.0503)"
+     sodipodi:insensitive="true">
     <path
        embroider_running_stitch_length_mm="2.3"
        embroider_trim_after="True"
@@ -204,20 +220,18 @@
        d="M 176.44825,89.550298 A 30.820268,30.820601 0 0 1 145.62804,120.3709 30.820268,30.820601 0 0 1 114.80775,89.550298 30.820268,30.820601 0 0 1 145.62804,58.729697 30.820268,30.820601 0 0 1 176.44825,89.550298 Z"
        style="display:inline;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.359487;stroke-miterlimit:4;stroke-dasharray:0.359487, 0.359487;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       embroider_trim_after="True"
-       embroider_stop_after="True"
        inkscape:label="fixing line"
        inkscape:connector-curvature="0"
        id="path3362-3"
        d="M 175.528,89.550295 A 29.900004,29.900332 0 0 1 145.62801,119.45063 29.900004,29.900332 0 0 1 115.728,89.550295 29.900004,29.900332 0 0 1 145.62801,59.649968 29.900004,29.900332 0 0 1 175.528,89.550295 Z"
-       style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:0.2, 0.2;stroke-dashoffset:0;stroke-opacity:1"
+       style="display:inline;fill:none;fill-opacity:1;stroke:#0200ff;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:0.2, 0.2;stroke-dashoffset:0;stroke-opacity:1"
        embroider_running_stitch_length_mm="2" />
     <path
        id="path3224-1"
        style="display:inline;fill:none;fill-opacity:1;stroke:#0200ff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="M 145.628,61.050297 C 161.36812,61.050297 174.128,73.810182 174.128,89.550298 174.128,105.29041 161.36812,118.0503 145.628,118.0503 129.88788,118.0503 117.128,105.29041 117.128,89.550298 117.128,73.810182 129.88788,61.050297 145.628,61.050297 M 145.628,58.550297 C 162.74883,58.550297 176.628,72.429471 176.628,89.550298 176.628,106.67112 162.74883,120.5503 145.628,120.5503 128.50717,120.5503 114.628,106.67112 114.628,89.550298 114.628,72.42947 128.50717,58.550297 145.628,58.550297"
        inkscape:connector-curvature="0"
-       inkscape:label="zig-zag"
+       inkscape:label="satin"
        sodipodi:nodetypes="csssccsssc"
        embroider_satin_column="True"
        embroider_zigzag_underlay="True"
@@ -230,28 +244,20 @@
        inkscape:label="fixing_line"
        inkscape:connector-curvature="0"
        id="path816"
-       d="M 174.7126,89.226017 A 29.118499,29.118499 0 0 1 145.59409,118.34452 29.118499,29.118499 0 0 1 116.4756,89.226017 29.118499,29.118499 0 0 1 145.59409,60.107515 29.118499,29.118499 0 0 1 174.7126,89.226017 Z"
-       style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.263;stroke-miterlimit:4;stroke-dasharray:0.263, 0.263;stroke-dashoffset:0;stroke-opacity:1" />
-    <path
-       embroider_running_stitch_length_mm="2.3"
-       embroider_trim_after="True"
-       embroider_stop_after="True"
-       inkscape:label="positioning/cutting line"
-       inkscape:connector-curvature="0"
-       id="path1"
-       d="M 145.62763,63.756115 C 134.54579,63.756111 125.09618,70.744648 121.4455,80.555007 120.40327,83.355778 119.83367,86.386542 119.83367,89.550344 119.83367,103.79611 131.38201,115.34458 145.62763,115.34458 159.87321,115.34456 171.42153,103.79609 171.42153,89.550344 171.42153,86.297503 170.81942,83.185293 169.72058,80.319088 166.00707,70.632816 156.6204,63.756135 145.62763,63.756115"
-       style="display:none;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.359487;stroke-miterlimit:4;stroke-dasharray:0.359487, 0.359487;stroke-dashoffset:0;stroke-opacity:1"
-       sodipodi:nodetypes="csscssc" />
+       d="M 174.7126,89.226017 C 174.7126,105.30773 161.6758,118.34453 145.59409,118.34452 129.51239,118.34452 116.4756,105.30772 116.4756,89.226017 116.4756,73.144316 129.51239,60.10752 145.59409,60.107515 161.6758,60.107509 174.7126,73.144309 174.7126,89.226017 Z"
+       style="display:inline;fill:none;fill-opacity:1;stroke:#0200ff;stroke-width:0.263;stroke-miterlimit:4;stroke-dasharray:0.263, 0.263;stroke-dashoffset:0;stroke-opacity:1"
+       sodipodi:nodetypes="sssss" />
   </g>
   <g
-     transform="translate(0, -21)"
+     transform="translate(0,-21)"
      inkscape:label="Embroidery"
      id="layer2"
-     inkscape:groupmode="layer">
+     inkscape:groupmode="layer"
+     sodipodi:insensitive="true">
     <g
        id="g17"
        inkscape:label="Boot"
-       transform="matrix(0.24226388,-0.0037922,0.0037922,0.24226388,-70.534421,122.9806)"
+       transform="matrix(0.242264,-0.0037922,0.0037922,0.242264,-70.5344,122.981)"
        style="fill:#000000;stroke-width:4.12722"
        inkscape:transform-center-x="-7.2152748"
        inkscape:transform-center-y="-11.836294">
@@ -272,7 +278,7 @@
          sodipodi:nodetypes="cccc"
          inkstitch:fill_method="auto_fill"
          inkstitch:row_spacing_mm="0.8"
-         inkstitch:angle="-58.0"
+         inkstitch:angle="-59.0"
          inkstitch:fill_underlay="False"
          inkstitch:underpath="False"
          inkstitch:max_stitch_length_mm="4" />
@@ -294,7 +300,7 @@
          sodipodi:nodetypes="cccc"
          inkstitch:fill_method="auto_fill"
          inkstitch:row_spacing_mm="0.8"
-         inkstitch:angle="-58.0"
+         inkstitch:angle="59.0"
          inkstitch:fill_underlay="False"
          inkstitch:underpath="False"
          inkstitch:max_stitch_length_mm="4" />

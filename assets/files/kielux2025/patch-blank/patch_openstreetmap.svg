@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.953"
-     inkscape:cx="110.90417"
+     inkscape:cx="111.07348"
      inkscape:cy="140.53505"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -51,6 +51,20 @@
        orientation="0,-1"
        id="guide5"
        inkscape:locked="false" />
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="false" />
   </sodipodi:namedview>
   <defs
      id="defs2">

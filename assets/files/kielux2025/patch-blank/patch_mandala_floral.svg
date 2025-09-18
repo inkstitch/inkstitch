@@ -7,7 +7,7 @@
    viewBox="0 0 63 63"
    version="1.1"
    id="svg8"
-   sodipodi:docname="patch_mandala_flower.svg"
+   sodipodi:docname="patch_mandala_floral.svg"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.9634"
-     inkscape:cx="142.68053"
-     inkscape:cy="143.3113"
+     inkscape:cx="124.89277"
+     inkscape:cy="119.8466"
      inkscape:document-units="mm"
      inkscape:current-layer="g90"
      showgrid="false"
@@ -56,6 +56,20 @@
        orientation="0,-1"
        id="guide5"
        inkscape:locked="false" />
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="false" />
   </sodipodi:namedview>
   <defs
      id="defs2">

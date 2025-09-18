@@ -7,7 +7,7 @@
    viewBox="0 0 63 63"
    version="1.1"
    id="svg8"
-   sodipodi:docname="patch_curious_penguin.svg"
+   sodipodi:docname="patch_penguin.svg"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.6318101"
-     inkscape:cx="119.80561"
+     inkscape:zoom="3.2636202"
+     inkscape:cx="120.11202"
      inkscape:cy="106.63005"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer1"
      showgrid="false"
      fit-margin-top="2"
      fit-margin-left="2"
@@ -56,6 +56,20 @@
        orientation="1,0"
        id="guide2"
        inkscape:locked="false" />
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="false" />
   </sodipodi:namedview>
   <defs
      id="defs2">
@@ -222,10 +236,10 @@
        id="path3362-3"
        d="M 175.5276,89.550342 A 29.900004,29.900332 0 0 1 145.62761,119.45068 29.900004,29.900332 0 0 1 115.7276,89.550342 29.900004,29.900332 0 0 1 145.62761,59.650015 29.900004,29.900332 0 0 1 175.5276,89.550342 Z"
        style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.20000002;stroke-miterlimit:4;stroke-dasharray:0.2, 0.2;stroke-dashoffset:0;stroke-opacity:1"
-       inkstitch:trim_after="True"
-       inkstitch:stop_after="True"
        inkstitch:running_stitch_length_mm="2"
-       inkstitch:fill_underlay="False" />
+       inkstitch:fill_underlay="False"
+       inkstitch:trim_after="True"
+       inkstitch:stop_after="True" />
   </g>
   <g
      transform="translate(0, -21)"
