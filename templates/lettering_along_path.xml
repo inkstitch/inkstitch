@@ -26,13 +26,11 @@
         <label appearance="header">This extension bends an Ink/Stitch text to a path.</label>
         <label>Select Ink/Stitch text and a path before running this extension.</label>
         <spacer />
-        <label>The text needs to meet these conditions:</label>
-        <label indent="1">* The text consists of only one line of text</label>
-        <label indent="1">* The text should not be too large for the given path</label>
+        <label>⚠ The text width should not be longer than the path ⚠</label>
         <spacer />
-        <label>In the text position dropdown menu, you can decide how the text will be placed on the path.
-               When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path.
-        </label>
+        <label>Text position:</label>
+        <label indent="1">Text can be positioned at the start, end or center of the path.</label>
+        <label indent="1">When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path.</label>
         <spacer />
         <label>More information on our website</label>
         <label appearance="url">https://inkstitch.org/docs/lettering/#lettering-along-path</label>
