@@ -6,6 +6,17 @@
 
     <param name="notebook" type="notebook">
         <page name="options" gui-text="Options">
+            <label>Display</label>
+            <param name="show-errors" type="boolean" gui-text="Errors" indent="1"
+                   gui-description="Problems that will prevent the shape from being embroidered.">true</param>
+            <param name="show-warnings" type="boolean" gui-text="Warnings" indent="1"
+                   gui-description="Problems that may lead to incorrect stitch paths.">true</param>
+            <param name="show-type-warning" type="boolean" gui-text="Object type warning" indent="1"
+                   gui-description="Warns about unemboiderable object types.">true</param>
+            <spacer />
+            <separator />
+            <spacer />
+            <label>Size settings</label>
             <param name="pointer-size" type="float" gui-text="Pointer size (mm)" min="1" max="800" precision="2">5</param>
             <param name="font-size" type="float" gui-text="Font size (mm)" min="1" max="800" precision="2">2</param>
         </page>
