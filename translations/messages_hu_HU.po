@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-01 01:55+0000\n"
-"PO-Revision-Date: 2025-09-13 01:25\n"
+"PO-Revision-Date: 2025-09-23 01:31\n"
 "Last-Translator: \n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -155,7 +155,7 @@ msgstr "A Syafrizal, más néven Khurasan jawn. 3.5 mm-es szaténöltés 100%-os
 #. description of font in fonts/braille
 #: inkstitch-fonts-metadata.py:52
 msgid "Font for the visually impaired with Braille key combinations according to DT 2024 INSEI specifications for French 6 dots Braille. It is also possible to use Unicode Braille. In this case, it is convenient to use one of the web's Braille translators to create a text in Braille unicode.\n"
-msgstr "Betűtípus látássérültek számára, a DT 2024 INSEI előírásai szerinti francia 6 pontos Braille billentyűkombinációkkal. Unicode Braille használata is lehetséges. Ebben az esetben célszerű a weben elérhető egyik Braille-fordítóval elkészíteni a Braille Unicode szöveget."
+msgstr "Betűtípus látássérültek számára, a DT 2024 INSEI előírásai szerinti francia 6 pontos Braille billentyűkombinációkkal. Unicode Braille használata is lehetséges. Ebben az esetben célszerű a weben elérhető egyik Braille-fordítóval elkészíteni a Braille Unicode szöveget.\n"
 
 #. description of font in fonts/califragilistic
 #: inkstitch-fonts-metadata.py:54
