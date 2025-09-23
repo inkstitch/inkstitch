@@ -112,7 +112,15 @@ class TextAlongPath:
                 self.settings.use_trim_symbols
             )
             self.glyphs = [glyph for glyph in rendered_text.iterdescendants(SVG_GROUP_TAG) if glyph.get('inkstitch:letter-group', '') == 'glyph']
-            text_group.bake_transforms_recursively()
+            self.bake_transforms_recursively(text_group)
+
+    def bake_transforms_recursively(self, element):
+        '''applies transforms of the text group to the glyph group'''
+        for child in element:
+            child.transform = element.transform @ child.transform
+            if child.tag == SVG_GROUP_TAG and not child.get('inkstitch:letter-group', '') == 'glyph':
+                self.bake_transforms_recursively(child)
+        element.transform = None
 
     def glyphs_along_path(self):
         path = self.path
