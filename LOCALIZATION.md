@@ -7,7 +7,7 @@ Ink/Stitch supports displaying text in the user's preferred language in the foll
 - dialogs (such as Params and Install Add-Ons for Inkscape)
 - print PDF
 - error messages
-- extension settings dialogs and menu items
+- extension settings dialogs and menu items (these are managed by Inkscape)
 
 Future work will add translations for project documentation (such as this file) and the [Ink/Stitch website](https://inkstitch.org/).
 
