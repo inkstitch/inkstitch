@@ -13,7 +13,7 @@ Future work will add translations for project documentation (such as this file) 
 
 ## Help Needed
 
-Want to help translate? We'd really appreciate your contributions! Ink/Stitch uses a the collaborative translation platform [Crowdin](http://crowdin.com) to facilitate community translations. Through their generous open source program, we're able to use their platform free of charge, and we greatly appreciate their support.
+Want to help translate? We'd really appreciate your contributions! Ink/Stitch uses the collaborative translation platform [Crowdin](http://crowdin.com) to facilitate community translations. Through their generous open source program, we're able to use their platform free of charge, and we greatly appreciate their support.
 
 To start translating, visit our [project page on Crowdin](https://crowdin.com/project/inkstitch). It's easy to sign in using your GitHub account. Pick a language and start suggesting translations!
 
