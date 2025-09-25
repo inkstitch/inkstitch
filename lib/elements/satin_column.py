@@ -738,12 +738,19 @@ class SatinColumn(EmbroideryElement):
         # This takes advantage of the fact that sum() counts True as 1
         intersection_counts = [sum(paths[i].intersects(paths[j]) for j in range(num_paths) if i != j)
                                for i in range(num_paths)]
-        paths_not_intersecting_two = [i for i in range(num_paths) if intersection_counts[i] != 2 and paths[i].length > 0.001]
-        num_not_intersecting_two = len(paths_not_intersecting_two)
 
-        if num_not_intersecting_two == 2:
+        # We need to distinguish between two cases. Three subpath are satins with exactly one rung and
+        # rails have exactly one intersection. This case has to be distinguished from the case of short
+        # coming rungs with only one intersection.
+        if len(paths) == 3:
+            possible_rails = [i for i in range(num_paths) if intersection_counts[i] == 1 and paths[i].length > 0.001]
+        else:
+            possible_rails = [i for i in range(num_paths) if intersection_counts[i] > 2 and paths[i].length > 0.001]
+        num_possible_rails = len(possible_rails)
+
+        if num_possible_rails == 2:
             # Great, we have two unambiguous rails.
-            return paths_not_intersecting_two
+            return possible_rails
         else:
             # This is one of two situations:
             #
