@@ -14,6 +14,11 @@ Want to learn more?
 * Watch some [videos](https://inkstitch.org/tutorials/video/) of Ink/Stitch in action
 * ...and lots more on our [website](https://inkstitch.org)
 
+Need help?
+
+* Contact us via the [Inkscape Forum](https://inkscape.org/forums/embroidery/)
+* Join our [chat channel](https://chat.inkscape.org/channel/inkstitch)
+
 # Background and Philosophy
 
 _by @lexelby, an Ink/Stitch programmer_
