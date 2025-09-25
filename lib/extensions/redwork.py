@@ -116,8 +116,12 @@ class Redwork(InkstitchExtension):
     def _eulerian_circuits_to_elements(self, redwork_group, elements):
         combine_all = self.options.combine and self.options.redwork_bean_stitch_repeats == '0'
         node = elements[0].node
-        style = node.style
+
         transform = get_correction_transform(self.svg.selection.rendering_order()[-1], False)
+        style = node.style
+        # Fix up the stroke width
+        stroke_width = elements[0].stroke_width
+        style["stroke-width"] = self.svg.viewport_to_unit(stroke_width)
 
         # insert lines grouped by underpath and top layer
         visited_lines = []
