@@ -171,7 +171,7 @@ class FillElementToSatin:
         self._generate_line_sections()
         self._define_relations(bridges)
 
-        if len(self.line_sections) == 2 and self.line_sections[0].distance(self.line_sections[1]) > 0:
+        if len(self.line_sections) == 2 and self.line_sections[0].distance(self.line_sections[1]) > 0 and len(self.rungs):
             # there is only one segment, add it directly
             rails = [MultiLineString([self.line_sections[0], self.line_sections[1]])]
             rungs = [ensure_multi_line_string(self.rungs[0])]
