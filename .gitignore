@@ -14,7 +14,6 @@ locales/
 .pydevproject
 .project
 /.idea
-/.vscode
 /VERSION
 /src/
 .DS_STORE
