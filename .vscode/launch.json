@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "Python: Ink/Stitch",
+      "type": "python",
+      "request": "attach",
+      "listen": {
+        "port": 5678
+      }
+    }
+  ]
+}
