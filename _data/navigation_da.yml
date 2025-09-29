@@ -146,8 +146,6 @@ docs:
     children:
       - title: "F.A.Q."
         url: /docs/faq/
-      - title: Fejlmeldinger
-        url: /docs/error-messages/
       - title: "Manglende oversættelse"
         url: /docs/localization/
 

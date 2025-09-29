@@ -164,8 +164,6 @@ docs:
     children:
       - title: "F.A.Q."
         url: /docs/faq/
-      - title: Error Messages
-        url: /docs/error-messages/
       - title: "Missing Translation"
         url: /docs/localization/
   - title: "News"

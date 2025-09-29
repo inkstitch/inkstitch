@@ -144,8 +144,6 @@ docs:
     children:
       - title: "F.A.Q."
         url: /docs/faq/
-      - title: Сообщения об ошибках
-        url: /docs/error-messages/
       - title: "Отсутствие перевода"
         url: /ru/docs/localization/
 

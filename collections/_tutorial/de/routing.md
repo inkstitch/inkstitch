@@ -1,9 +1,9 @@
 ---
-title: Stichpfad-Optimisierung
+title: Stichpfad-Optimierung
 permalink: /de/tutorials/routing/
 last_modified_at: 2024-09-09
 language: de
-excerpt: "Optimising the stitch path is one of the most important subjects in embroidery. Learn how Ink/Stitch can assist you with the task."
+excerpt: "Die Optimierung des Stickpfades ist eines der wichtigesten Themen in der Stickerei. Lerne, wie Ink/Stitch dich bei dieser Aufgabe unterstützen kann."
 image: /assets/images/tutorials/routing/routing.png
 
 tutorial-typ:
@@ -15,7 +15,7 @@ user-level:
 
 toc: true
 ---
-Den Stickpfad zu optimisieren ist eine der wichtigsten Aufgaben beim Erstellen einer Stickdatei. Lerne hier, wie Ink/Stitch dir bei dieser Aufgabe helfen kann.
+Den Stickpfad zu optimieren ist eine der wichtigsten Aufgaben beim Erstellen einer Stickdatei. Lerne hier, wie Ink/Stitch dir bei dieser Aufgabe helfen kann.
 
 Beim Drucken spielt die Reihenfolge und die Verbindung der Elemente untereinander keine Rolle. Beim Sticken aber sollte man unbedingt darauf achten dass:
 
@@ -36,7 +36,7 @@ Beim Drucken spielt die Reihenfolge und die Verbindung der Elemente untereinande
 
 Jede Datei ist individuell und du bist der Designer der entscheiden kann wie die Stickpfade aufgebaut sind. Aber Ink/Stitch hält ein paar Werkzeuge bereit, die dich unterstützen können.
 
-## Generelle Pfadoptimisierung
+## Generelle Pfadoptimierung
 
 ### Objekte in Auswahlreihenfolge sortieren
 
@@ -52,7 +52,7 @@ Gibt es einen kurzen Abstand ohne die Möglichkeit den Geradstich zu verdecken, 
 
 *1: Original 2: Sprungstich zu Geradstich 3: Der manuell angepasste Geradstich-Pfad verläuft unter der nachfolgenden Füllung*
 
-## Pfadoptimisierung für linienartige Sticharten
+## Pfadoptimierung für linienartige Sticharten
 
 Linienartige Sticharten starten am Anfang des Pfades und laufen am Pfad entlang. 
 Geschlossene Pfade sollten geöffnet werden um Anfang und Ende klar zu definieren.
@@ -87,7 +87,7 @@ Standardmäßig startet eine Satinsäule am nächstgelegenen Punkt zum vorherige
 
 ### Automatisch geführte Satinsäulen
 
-Genauso wie für die einfachen Linien, gibt es auch für Satinsäulen ein Werkzeug zur automatischen Pfadoptimisierung: [Automatisch geführte Satinsäulen](/de/docs/satin-tools/#automatisch-geführte-satinsäulen).
+Genauso wie für die einfachen Linien, gibt es auch für Satinsäulen ein Werkzeug zur automatischen Pfadoptimierung: [Automatisch geführte Satinsäulen](/de/docs/satin-tools/#automatisch-geführte-satinsäulen).
 
 Ist die Option `Behalte Reihenfolge der Satinsäulen bei` aktiviert, wird Ink/Stitch versuchen die Satinsäulen so gut es geht zu optimieren, allerdings werden hier keine Geradstiche erzeugt, die die Säulen verdeckt verbinden. Ist die Option deaktiviert, kann die Reihenfolge nicht kontrolliert werden.
 

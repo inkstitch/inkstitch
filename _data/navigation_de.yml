@@ -160,8 +160,6 @@ docs:
     children:
       - title: "F.A.Q."
         url: /de/docs/faq/
-      - title: Fehlermeldungen
-        url: /de/docs/error-messages/
       - title: "Übersetzungen"
         url: /de/docs/localization/
   - title: "Neuigkeiten"
