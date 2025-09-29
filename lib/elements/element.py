@@ -164,6 +164,16 @@ class EmbroideryElement(object):
             return [int(default)]
         return params
 
+    # returns an array of multiple space separated float values
+    @cache
+    def get_multiple_float_param(self, param, default="0"):
+        params = self.get_param(param, default).split(" ")
+        try:
+            params = [float(param) for param in params if param]
+        except (TypeError, ValueError):
+            return [float(default)]
+        return params
+
     def get_json_param(self, param, default=None):
         json_value = self.get_param(param, None)
         try:
