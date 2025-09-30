@@ -520,7 +520,7 @@ class Stroke(EmbroideryElement):
             return paths
 
         # path to linestrings
-        line_strings = [shgeo.LineString(path) for path in paths]
+        line_strings = [shgeo.LineString(path) for path in paths if len(path) > 1]
         try:
             intersection = self.clip_shape.intersection(shgeo.MultiLineString(line_strings))
         except GEOSException:
