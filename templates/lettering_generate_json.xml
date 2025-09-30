@@ -116,6 +116,8 @@
           <param name="letter-spacing" type="int" precision="1" min="-100" max="500" gui-text="Letter spacing (px)"
                  gui-description="Letter spacing (default: 100)" indent="1">100</param>
         </hbox>
+        <param name="use-glyph-width" type="bool" gui-text="Use glyph width" indent="4"
+               gui-description="Use glyph width to define letter spacing.">false</param>
         <spacer />
 
          <separator indent="1"/>
