@@ -125,12 +125,25 @@ class LetteringEditJsonPanel(wx.Panel):
         event.Skip()
 
     def on_horiz_adv_x_default_changed(self, event=None):
-        self.font_meta['horiz_adv_x_default'] = event.GetValue()
+        value = event.GetValue()
+        if not self.settings_panel.font_kerning.horiz_adv_x_default_null_checkbox.IsChecked():
+            self.update_horiz_adv_x_default(value)
+
+    def on_horiz_adv_x_default_checkbox_changed(self, event=None):
+        value = event.IsChecked()
+        if value is False:
+            value = self.settings_panel.font_kerning.horiz_adv_x_default.GetValue()
+        else:
+            value = None
+        self.update_horiz_adv_x_default(value)
+
+    def update_horiz_adv_x_default(self, value):
+        self.font_meta['horiz_adv_x_default'] = value
         glyph_list = self.settings_panel.glyph_list
         for i in range(glyph_list.ItemCount):
-            selected = glyph_list.IsItemChecked(i)
+            checked = glyph_list.IsItemChecked(i)
             glyph = glyph_list.GetItem(i, 1).Text
-            if selected:
+            if checked:
                 self.horiz_adv_x[glyph] = self.font_meta['horiz_adv_x_default']
             self.update_preview()
 
@@ -341,8 +354,10 @@ class LetteringEditJsonPanel(wx.Panel):
         self.settings_panel.font_kerning.min_scale.SetValue(self.font.min_scale)
         if self.font.horiz_adv_x_default is None:
             self.settings_panel.font_kerning.horiz_adv_x_default.SetValue(0.0)
+            self.settings_panel.font_kerning.horiz_adv_x_default_null_checkbox.SetValue(True)
         else:
             self.settings_panel.font_kerning.horiz_adv_x_default.SetValue(self.font.horiz_adv_x_default)
+            self.settings_panel.font_kerning.horiz_adv_x_default_null_checkbox.SetValue(False)
         self.settings_panel.font_kerning.horiz_adv_x_space.SetValue(self.font.word_spacing)
 
     def update_filter_list(self):
@@ -423,13 +438,9 @@ class LetteringEditJsonPanel(wx.Panel):
         with open(json_file, 'r') as font_data:
             data = json.load(font_data)
 
-        horiz_adv_x_default = self.font_meta['horiz_adv_x_default']
-        if horiz_adv_x_default == 0:
-            horiz_adv_x_default = None
-
         for key, val in self.font_meta.items():
             data[key] = val
-        horiz_adv_x = {key: val for key, val in self.horiz_adv_x.items() if val != self.font_meta['horiz_adv_x_default']}
+        horiz_adv_x = {key: val for key, val in self.horiz_adv_x.items() if key and val != self.font_meta['horiz_adv_x_default']}
         kerning_pairs = {key: val for key, val in self.kerning_pairs.items() if val != 0}
         data['horiz_adv_x'] = horiz_adv_x
         data['kerning_pairs'] = kerning_pairs
@@ -514,12 +525,14 @@ class LetteringEditJsonPanel(wx.Panel):
         node.set('transform', transform)
 
         horiz_adv_x_default = self.font_meta['horiz_adv_x_default']
-        if horiz_adv_x_default in [0, None]:
+        if horiz_adv_x_default is None:
             horiz_adv_x_default = glyph.width + glyph.min_x
 
+        horiz_adv_x = self.font.horiz_adv_x.get(character, horiz_adv_x_default)
         # in some rare cases, horiz_adv_x for a character returns None
         # so we need to really ensure that the default is used in this case
-        horiz_adv_x = self.font.horiz_adv_x.get(character, horiz_adv_x_default) or horiz_adv_x_default
+        if horiz_adv_x is None:
+            horiz_adv_x = horiz_adv_x_default
         position_x += horiz_adv_x - glyph.min_x
 
         self.font._update_commands(node, glyph)
