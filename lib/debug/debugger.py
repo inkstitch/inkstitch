@@ -33,7 +33,6 @@
 # ### Miscelaneous notes:
 # - to disable debugger when running from inkscape set disable_from_inkscape = true in DEBUG.toml
 # - to change various output file names see DEBUG.toml
-# - to disable waiting for debugger to attach (vscode editor) set wait_attach = false in DEBUG.toml
 # - to prefer inkscape version of inkex module over pip version set prefer_pip_inkex = false in DEBUG.toml
 
 # ###
@@ -100,26 +99,14 @@
 # see: https://code.visualstudio.com/docs/python/debugging#_command-line-debugging
 #      https://code.visualstudio.com/docs/python/debugging#_debugging-by-attaching-over-a-network-connection
 #
-# 1. Install the Python extension for VS Code
+# 1. Install the Python module to debug in VS Code
 #      pip install debugpy
-# 2. create .vscode/launch.json containing:
-#       "configurations": [ ...
-#           {
-#               "name": "Python: Attach",
-#               "type": "python",
-#               "request": "attach",
-#               "connect": {
-#                 "host": "localhost",
-#                 "port": 5678
-#               }
-#           }
-#       ]
-# 3. Touch a file named "DEBUG.toml" at the top of your git repo, as above
-#    set debug_type = vscode
+# 2. Install the Python and Python Debugger extensions in VS Code
+# 3. Copy and edit a file named "DEBUG.toml" from "DEBUG_template.toml" next to inkstitch.py in your git clone:
+#    debug_type = vscode
 # 4. Start the debug server in VS Code by clicking on the debug icon in the left pane
 #    select "Python: Attach" from the dropdown menu and click on the green arrow.
-#    The debug server will start and connect to already running python processes,
-#    but immediately exit if no python processes are running.
+# 5. Run Ink/Stitch and it should connect to VS Code's debugger automatically.
 #
 # Notes:
 #   to see flask server url routes:
@@ -147,7 +134,6 @@ def init_debugger(debug_type:str,  ini: dict):
     if debug_type == 'none':
         return
 
-    wait_attach = safe_get(ini, "DEBUG", "wait_attach", default=True)  # currently only for vscode
     debugger = debug_type
 
     try:
@@ -172,11 +158,8 @@ def init_debugger(debug_type:str,  ini: dict):
 
         try:
             if debugger == 'vscode':
-                debugpy.listen(('localhost', 5678))
-                if wait_attach:
-                    print("Waiting for debugger attach", file=sys.stderr)
-                    debugpy.wait_for_client()        # wait for debugger to attach
-                    debugpy.breakpoint()             # stop here to start normal debugging
+                debugpy.connect(("localhost", 5678))
+                debugpy.breakpoint()
             elif debugger == 'pycharm':
                 pydevd_pycharm.settrace('localhost', port=5678, stdoutToServer=True,
                                         stderrToServer=True)
@@ -188,7 +171,7 @@ def init_debugger(debug_type:str,  ini: dict):
                 raise ValueError(f"unknown debugger: '{debugger}'")
 
         except socket.error as error:
-            logger.info("Debugging: connection to pydevd failed: %s", error)
+            logger.info(f"Debugging: connection to {debugger} failed: %s", error)
             logger.info(f"Be sure to run 'Start debugging server' in {debugger} to enable debugging.")
         else:
             logger.info(f"Enabled '{debugger}' debugger.")
