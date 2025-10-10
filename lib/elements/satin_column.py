@@ -1437,6 +1437,8 @@ class SatinColumn(EmbroideryElement):
             if not end_point:
                 stitch_groups.append(self._generate_zigzag_stitch_group(points))
                 continue
+            if len(points) == 1:
+                points.append(points[0])
             zigzag_line = shgeo.LineString(points)
             start, end = self._split_linestring_at_end_point(zigzag_line, end_point)
             start_groups.append(self._generate_zigzag_stitch_group([Stitch(*point) for point in start.coords]))
