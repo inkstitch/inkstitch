@@ -79,24 +79,26 @@ class TextAlongPath:
             return
 
         self.load_settings()
-        self.font = get_font_by_id(self.settings.font)
+        self.font = get_font_by_id(self.settings.font, False)
         if self.font is None:
             errormsg(_("Couldn't identify the font specified in the lettering group."))
             return
 
         self.font_scale = self.settings.scale / 100
-
-        if self.glyphs[0].get('transform', None) is not None:
-            self._reset_glyph_transforms()
+        self._reset_glyph_transforms()
 
         hidden_commands = self.hide_commands()
         self.glyphs_along_path()
         self.restore_commands(hidden_commands)
 
     def _reset_glyph_transforms(self):
+        # reset text transforms
+        self.text.set('transform', get_correction_transform(self.text))
+
         if self.font is not None:
             try:
                 text_group = list(self.text.iterchildren(SVG_GROUP_TAG))[0]
+                text_group.set('transform', f'scale({self.font_scale})')
             except IndexError:
                 pass
             for glyph in text_group.iterchildren():
@@ -110,19 +112,29 @@ class TextAlongPath:
                 self.settings.use_trim_symbols
             )
             self.glyphs = [glyph for glyph in rendered_text.iterdescendants(SVG_GROUP_TAG) if glyph.get('inkstitch:letter-group', '') == 'glyph']
+            self.bake_transforms_recursively(text_group)
+
+    def bake_transforms_recursively(self, element):
+        '''applies transforms of the text group to the glyph group'''
+        for child in element:
+            child.transform = element.transform @ child.transform
+            if child.tag == SVG_GROUP_TAG and not child.get('inkstitch:letter-group', '') == 'glyph':
+                self.bake_transforms_recursively(child)
+        element.transform = None
 
     def glyphs_along_path(self):
         path = self.path
-        for text_line in self.text.getchildren()[0].iterchildren():
-            self.transform_glyphs(path, text_line)
+        for i, text_line in enumerate(self.text.getchildren()[0].iterchildren()):
+            self.transform_glyphs(path, text_line, i)
 
             # offset path for the next line
-            path = path.offset_curve(self.font.leading)
+            line_offset = self.font.leading * self.font_scale
+            path = path.offset_curve(line_offset)
 
-    def transform_glyphs(self, path, line):
-        text_scale = Transform(f'scale({self.font_scale})')
+    def transform_glyphs(self, path, line, iterator):
         text_width = line.bounding_box().width
-        text_baseline = line.bounding_box(text_scale).bottom
+        text_baseline = line.bounding_box().bottom
+        backwards = self.settings.back_and_forth and iterator % 1 == 1
 
         if self.text_position == 'stretch':
             num_spaces = len(line) - 1
@@ -130,7 +142,7 @@ class TextAlongPath:
             line_glyphs = [glyph for glyph in line.iterdescendants(SVG_GROUP_TAG) if glyph.get('inkstitch:letter-group', '') == 'glyph']
             total_stretch_spaces = len(line_glyphs) - 1 + num_spaces
 
-            stretch_space = (path.length - text_width * self.font_scale) / total_stretch_spaces
+            stretch_space = (path.length - text_width) / total_stretch_spaces
         else:
             stretch_space = 0
 
@@ -139,10 +151,14 @@ class TextAlongPath:
         old_bbox = None
 
         words = line.getchildren()
+        if backwards:
+            words.reverse()
         if self.font.text_direction == "rtl":
             words.reverse()
         for word in words:
             glyphs = word.getchildren()
+            if backwards:
+                glyphs.reverse()
             if self.font.text_direction == "rtl":
                 glyphs.reverse()
             for glyph in glyphs:
@@ -163,12 +179,16 @@ class TextAlongPath:
                 first = path.interpolate(distance)
                 last = path.interpolate(new_distance)
 
+                if not first or not last:
+                    # unusable path, nothing we can do
+                    continue
+
                 angle = degrees(atan2(last.y - first.y, last.x - first.x)) % 360
                 translate = InkstitchPoint(first.x, first.y) - InkstitchPoint(left, text_baseline)
 
                 transform = Transform(f"rotate({angle}, {first.x}, {first.y}) translate({translate.x} {translate.y})")
                 correction_transform = Transform(get_correction_transform(glyph))
-                glyph.transform = correction_transform @ transform @ glyph.transform @ text_scale
+                glyph.transform = correction_transform @ transform @ glyph.transform
 
                 # set values for next iteration
                 distance = new_distance
@@ -177,7 +197,6 @@ class TextAlongPath:
             distance += stretch_space
 
     def get_start_position(self, text_length, path_length):
-        text_length = text_length * self.font_scale
         start_position = 0
         if self.text_position == 'center':
             start_position = (path_length - text_length) / 2
