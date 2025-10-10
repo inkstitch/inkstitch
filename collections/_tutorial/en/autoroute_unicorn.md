@@ -1,6 +1,6 @@
 ---
-permalink: /en/tutorials/autoroute_unicorn/
-title: "Licorne obtenue en arrangement automatique de points droits"
+permalink: /tutorials/autoroute_unicorn/
+title: "Unicorn with auto-route running stitch"
 language: en
 last_modified_at: 2022-06-04
 excerpt: "Auto-route running stitch Unicorn"
