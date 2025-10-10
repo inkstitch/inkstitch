@@ -224,13 +224,15 @@ class SatinColumn(EmbroideryElement):
     @property
     @param('short_stitch_inset',
            _('Short stitch inset'),
-           tooltip=_('Stitches in areas with high density will be inset by this amount.'),
+           tooltip=_('Stitches in areas with high density will be inset by this amount.'
+                     'Two values separated by a space define inset levels if there are multiple consecutive short stitches.'),
            type='float',
            unit="%",
            default=15,
            sort_index=3)
     def short_stitch_inset(self):
-        return self.get_float_param("short_stitch_inset", 15) / 100
+        short_stitch_sequence = self.get_multiple_float_param("short_stitch_inset", "15")
+        return [min(short_stitch / 100, 0.5) for short_stitch in short_stitch_sequence]
 
     @property
     @param('short_stitch_distance_mm',
@@ -1762,30 +1764,41 @@ class SatinColumn(EmbroideryElement):
         return split_points
 
     def inset_short_stitches_sawtooth(self, pairs):
-        min_dist = self.short_stitch_distance
-        inset = min(self.short_stitch_inset, 0.5)
         max_stitch_length = None if self.random_split_phase else self.max_stitch_length_px
-        if not min_dist or not inset:
+        if not self.short_stitch_distance or not len(self.short_stitch_inset):
             return pairs
 
         shortened = []
-        for i, (a, b) in enumerate(pairs):
-            if i % 2 == 0:
-                shortened.append((a, b))
-                continue
-            dist = a.distance(b)
-            inset_px = inset * dist
-            if self.split_method == "default" and max_stitch_length and not self.random_split_phase:
-                # make sure inset is less than split etitch length
-                inset_px = min(inset_px, max_stitch_length / 3)
+        last_a = None
+        last_b = None
+        inset_a_index = 0
+        inset_b_index = 0
+        for a, b in pairs:
+            a_offset_px, last_a, inset_a_index = self._get_offset_px(a, b, last_a, inset_a_index, max_stitch_length)
+            b_offset_px, last_b, inset_b_index = self._get_offset_px(b, a, last_b, inset_b_index, max_stitch_length)
+            shortened.append(offset_points(a, b, [a_offset_px, b_offset_px], (0, 0)))
 
-            offset_px = [0, 0]
-            if a.distance(pairs[i-1][0]) < min_dist:
-                offset_px[0] = -inset_px
-            if b.distance(pairs[i-1][1]) < min_dist:
-                offset_px[1] = -inset_px
-            shortened.append(offset_points(a, b, offset_px, (0, 0)))
         return shortened
+
+    def _get_offset_px(self, point, other_point, last_point, inset_index, max_stitch_length):
+        if inset_index >= len(self.short_stitch_inset):
+            inset_index = 0
+
+        dist = point.distance(other_point)
+        inset_px = self.short_stitch_inset[inset_index] * dist
+        if self.split_method == "default" and max_stitch_length and not self.random_split_phase:
+            # make sure inset is less than split stitch length
+            inset_px = min(inset_px, max_stitch_length / 3)
+
+        offset_px = 0
+        if last_point is None or point.distance(last_point) >= self.short_stitch_distance:
+            last_point = point
+            inset_index = 0
+        else:
+            offset_px = -inset_px
+            inset_index += 1
+
+        return offset_px, last_point, inset_index
 
     def _get_inset_point(self, point1, point2, distance_fraction):
         return point1 * (1 - distance_fraction) + point2 * distance_fraction
