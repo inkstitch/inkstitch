@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-10-11 01:29+0000\n"
-"PO-Revision-Date: 2025-10-11 01:29\n"
+"PO-Revision-Date: 2025-10-12 01:42\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -1409,7 +1409,7 @@ msgstr "* Prüfe ob mindestens ein Streifen sichtbar ist"
 
 #: lib/elements/fill_stitch.py:123
 msgid "* Check the minimum stripe width setting and the scale factor"
-msgstr "* Prüfe ob der sichtbare Streifen grau unterlegt ist. Wenn ja, Streifenbreite, Maßstab oder die minimale Streifenbreite vergrößern"
+msgstr "* Prüfe ob der sichtbare Streifen grau unterlegt ist. Wenn ja, Streifenbreite, Skalierung oder die minimale Streifenbreite vergrößern"
 
 #: lib/elements/fill_stitch.py:128
 msgid "No customized pattern"
@@ -2094,7 +2094,7 @@ msgstr "Kurzstich-Einzug"
 
 #: lib/elements/satin_column.py:227
 msgid "Stitches in areas with high density will be inset by this amount.Two values separated by a space define inset levels if there are multiple consecutive short stitches."
-msgstr ""
+msgstr "Stiche in Bereichen mit hoher Dichte werden um diesen Wert verschoben. Zwei Werte, die durch ein Leerzeichen getrennt sind, definieren Stufen des Versatzes, wenn es mehrere aufeinanderfolgende kurze Stiche gibt."
 
 #: lib/elements/satin_column.py:239
 msgid "Short stitch distance"
@@ -3609,11 +3609,11 @@ msgstr "Horizontaler Vorschub x"
 
 #: lib/gui/edit_json/settings_panel.py:239
 msgid "Glyph width"
-msgstr ""
+msgstr "Breite der Glyphen"
 
 #: lib/gui/edit_json/settings_panel.py:240
 msgid "Use the width of the individual glyphs."
-msgstr ""
+msgstr "Die Breite der einzelnen Glyphen verwenden."
 
 #: lib/gui/edit_json/settings_panel.py:245
 msgid "Horizontal advance x space"
@@ -3792,7 +3792,7 @@ msgstr "Wenn aktiviert, werden visuelle Befehle (Symbole) eingefügt. Wenn deakt
 #: lib/gui/lettering/option_panel.py:112
 #: print/templates/ui_svg_action_buttons.html:1
 msgid "Scale"
-msgstr "Maßstab"
+msgstr "Skalierung"
 
 #: lib/gui/lettering_font_sample.py:25
 #: inx/inkstitch_lettering_font_sample.inx:3
@@ -3813,7 +3813,7 @@ msgstr "Stickrichtung"
 #: lib/gui/lettering_font_sample.py:53 lib/gui/tartan/customize_panel.py:46
 #: inx/inkstitch_batch_lettering.inx:21
 msgid "Scale (%)"
-msgstr "Maßstab (%)"
+msgstr "Skalierung (%)"
 
 #: lib/gui/lettering_font_sample.py:55
 msgid "Max. line width"
@@ -7173,11 +7173,11 @@ msgstr "Zeichenabstand (Voreinstellung: 100)"
 
 #: inx/inkstitch_lettering_generate_json.inx:140
 msgid "Use glyph width"
-msgstr ""
+msgstr "Breite der Glyphen verwenden"
 
 #: inx/inkstitch_lettering_generate_json.inx:140
 msgid "Use glyph width to define letter spacing."
-msgstr ""
+msgstr "Definiere die Buchstabenabstände anhand der Glyphenbreite."
 
 #: inx/inkstitch_lettering_generate_json.inx:147
 msgid "Generates font.json which can be used by the lettering tool."
@@ -8362,7 +8362,7 @@ msgstr "https://inkstitch.org/de/docs/edit/#transformation"
 
 #: inx/inkstitch_transform_elements.inx:27
 msgid "Rotate or flip embroidery elements while also transforming stitch angles."
-msgstr ""
+msgstr "Drehung oder Spiegelung von Stickelementen bei gleichzeitiger Anpassung des Stichwinkels."
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"

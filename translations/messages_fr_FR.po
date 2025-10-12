@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-10-11 01:29+0000\n"
-"PO-Revision-Date: 2025-10-11 01:29\n"
+"PO-Revision-Date: 2025-10-12 01:42\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2092,7 +2092,7 @@ msgstr "Décalage des points courts"
 
 #: lib/elements/satin_column.py:227
 msgid "Stitches in areas with high density will be inset by this amount.Two values separated by a space define inset levels if there are multiple consecutive short stitches."
-msgstr ""
+msgstr "Dans les zones de forte densité, les points seront décalés de cette valeur vers l'intérieur. Deux valeurs séparées par un espace, définissent des niveaux de décalage en cas de point courts consécutifs."
 
 #: lib/elements/satin_column.py:239
 msgid "Short stitch distance"
@@ -3607,11 +3607,11 @@ msgstr "Avancée horizontale x"
 
 #: lib/gui/edit_json/settings_panel.py:239
 msgid "Glyph width"
-msgstr ""
+msgstr "Largeur de glyphe"
 
 #: lib/gui/edit_json/settings_panel.py:240
 msgid "Use the width of the individual glyphs."
-msgstr ""
+msgstr "Utiliser la largeur de chaque glyphe."
 
 #: lib/gui/edit_json/settings_panel.py:245
 msgid "Horizontal advance x space"
@@ -7171,11 +7171,11 @@ msgstr "Espacement des lettres (par défaut : 100)"
 
 #: inx/inkstitch_lettering_generate_json.inx:140
 msgid "Use glyph width"
-msgstr ""
+msgstr "Utiliser la largeur de glyphe"
 
 #: inx/inkstitch_lettering_generate_json.inx:140
 msgid "Use glyph width to define letter spacing."
-msgstr ""
+msgstr "Utiliser la largeur des glyphes pour définir l'espacement des lettres."
 
 #: inx/inkstitch_lettering_generate_json.inx:147
 msgid "Generates font.json which can be used by the lettering tool."
@@ -8360,7 +8360,7 @@ msgstr "https://inkstitch.org/fr/docs/edit/#transform"
 
 #: inx/inkstitch_transform_elements.inx:27
 msgid "Rotate or flip embroidery elements while also transforming stitch angles."
-msgstr ""
+msgstr "Tourner ou inverser les éléments de broderie en transformant les angles de broderie."
 
 #: inx/inkstitch_troubleshoot.inx:3
 msgid "Troubleshoot Objects"
