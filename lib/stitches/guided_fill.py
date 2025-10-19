@@ -102,7 +102,7 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph,
 
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath))
+            stitches.extend(travel(shape, travel_graph, edge, [running_stitch_length], running_stitch_tolerance, skip_last, underpath))
 
     return stitches
 
@@ -166,6 +166,7 @@ def take_only_line_strings(thing):
 def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, threshold=None) -> shgeo.LineString:
     if num_staggers == 0:
         num_staggers = 1  # sanity check to avoid division by zero.
+    max_stitch_length = max_stitch_length[0]
     start = ((row_num / num_staggers) % 1) * max_stitch_length
     projections = np.arange(start, line.length, max_stitch_length)
     points = np.array([line.interpolate(projection).coords[0] for projection in projections])
@@ -275,9 +276,9 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
         if enable_random_stitch_length:
             points = [InkstitchPoint(*x) for x in offset_line.coords]
             stitched_line = shgeo.LineString(random_running_stitch(
-                points, max_stitch_length, tolerance, random_sigma, prng.join_args(random_seed, row)))
+                points, [max_stitch_length], tolerance, random_sigma, prng.join_args(random_seed, row)))
         else:
-            stitched_line = apply_stitches(offset_line, max_stitch_length, num_staggers, row_spacing, row)
+            stitched_line = apply_stitches(offset_line, [max_stitch_length], num_staggers, row_spacing, row)
         intersection = shape.intersection(stitched_line)
 
         if not intersection.is_empty and shape_envelope.intersects(stitched_line):

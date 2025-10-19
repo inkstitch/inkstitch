@@ -79,7 +79,7 @@ def circular_fill(shape,
         if isinstance(line, shgeo.LineString):
             # use running stitch here to adjust the stitch length
             coords = running_stitch([Point(*point) for point in line.coords],
-                                    running_stitch_length,
+                                    [running_stitch_length],
                                     running_stitch_tolerance,
                                     enable_random_stitch_length,
                                     running_stitch_length_jitter,
@@ -162,6 +162,6 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, running_stitc
 
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath))
+            stitches.extend(travel(shape, travel_graph, edge, [running_stitch_length], running_stitch_tolerance, skip_last, underpath))
 
     return stitches

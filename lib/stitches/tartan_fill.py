@@ -155,7 +155,7 @@ def _generate_herringbone_lines(
         staggered_lines = []
         for i, line in enumerate(lines):
             linestring = LineString(line)
-            staggered_line = apply_stitches(linestring, fill.max_stitch_length, fill.staggers, fill.row_spacing, i)
+            staggered_line = apply_stitches(linestring, [fill.max_stitch_length], fill.staggers, fill.row_spacing, i)
             # make sure we do not ommit the very first or very last point (it would confuse our sorting algorithm)
             staggered_line = LineString([linestring.coords[0]] + list(staggered_line.coords) + [linestring.coords[-1]])
             staggered_lines.append(staggered_line)
@@ -205,7 +205,7 @@ def _generate_tartan_lines(
     staggered_lines = []
     for i, line in enumerate(lines):
         linestring = LineString(line)
-        staggered_line = apply_stitches(linestring, fill.max_stitch_length, fill.staggers, fill.row_spacing, i)
+        staggered_line = apply_stitches(linestring, [fill.max_stitch_length], fill.staggers, fill.row_spacing, i)
         # make sure we do not ommit the very first or very last point (it would confuse our sorting algorithm)
         staggered_line = LineString([linestring.coords[0]] + list(staggered_line.coords) + [linestring.coords[-1]])
         staggered_lines.append(staggered_line)

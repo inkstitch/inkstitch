@@ -422,7 +422,7 @@ def inner_to_outer(tree, polygon, offset,
         smoothed = smooth_path(points, smoothness)
         points = clamp_path_to_polygon(smoothed, polygon)
 
-    stitches = running_stitch(points, stitch_length, tolerance, enable_random_stitch_length, random_sigma, random_seed)
+    stitches = running_stitch(points, [stitch_length], tolerance, enable_random_stitch_length, random_sigma, random_seed)
 
     return stitches
 
@@ -535,7 +535,7 @@ def _spiral_fill(tree, stitch_length, tolerance, close_point, enable_random_stit
     path = spiral_maker(rings, stitch_length, starting_point)
     path = [Stitch(*stitch) for stitch in path]
 
-    return running_stitch(path, stitch_length, tolerance, enable_random_stitch_length, random_sigma, random_seed)
+    return running_stitch(path, [stitch_length], tolerance, enable_random_stitch_length, random_sigma, random_seed)
 
 
 def _get_spiral_rings(tree):

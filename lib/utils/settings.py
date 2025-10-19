@@ -49,7 +49,7 @@ class GlobalSettings(MutableMapping):
         # We set create=False here because this code is executed on module load
         # and via imports also runs on generate-inx-files, which with the Nix
         # package manager is executed with a non-writable home directory.
-        user_dir = get_user_dir(create=False)
+        user_dir = get_user_dir(create=True)
         self._settings_file = os.path.join(user_dir, "settings.json")
         self._settings = {}
 

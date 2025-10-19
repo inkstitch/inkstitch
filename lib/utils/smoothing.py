@@ -44,7 +44,7 @@ def smooth_path(path, smoothness=1.0, iterations=5):
     #
     # Fortunately, we can convert the path to segments that are mostly the same
     # length by using the running stitch algorithm.
-    points = stitch_curve_evenly(points, smoothness * 5, smoothness * 2)
+    points, _ = stitch_curve_evenly(points, [smoothness * 5], smoothness * 2)
     points = np.array(points)
     for _ in range(iterations):
         ll = points.repeat(2, axis=0)
