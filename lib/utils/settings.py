@@ -67,8 +67,11 @@ class GlobalSettings(MutableMapping):
     def __setitem__(self, item, value):
         self._settings[item] = value
 
-        with open(self._settings_file, 'w') as settings_file:
-            json.dump(self._settings, settings_file)
+        try:
+            with open(self._settings_file, 'w') as settings_file:
+                json.dump(self._settings, settings_file)
+        except FileNotFoundError:
+            pass
 
     def __getitem__(self, item):
         return self._settings[item]
