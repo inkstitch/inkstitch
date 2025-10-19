@@ -243,9 +243,8 @@ def stitch_curve_evenly(
 def stitch_curve_randomly(
       points: typing.Sequence[Point],
       stitch_length: typing.List[float], tolerance: float, stitch_length_sigma: float,
-      random_seed: str) -> typing.List[Point]:
+      random_seed: str, stitch_length_pos: int = 0) -> typing.List[Point]:
 
-    stitch_length_pos = -1
     min_stitch_length = max(0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma))
     max_stitch_length = stitch_length[stitch_length_pos] * (1 + stitch_length_sigma)
 
@@ -262,11 +261,11 @@ def stitch_curve_randomly(
     rand_iter = iter(prng.iter_uniform_floats(random_seed))
     while i is not None and i < len(points):
         if len(stitch_length) > 1:
+            min_stitch_length = max(0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma))
+            max_stitch_length = stitch_length[stitch_length_pos] * (1 + stitch_length_sigma)
             stitch_length_pos += 1
             if stitch_length_pos > len(stitch_length) - 1:
                 stitch_length_pos = 0
-            min_stitch_length = max(0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma))
-            max_stitch_length = stitch_length[stitch_length_pos] * (1 + stitch_length_sigma)
 
         r = next(rand_iter)
         # If the last stitch was shortened due to tolerance (or this is the first stitch),
@@ -279,7 +278,7 @@ def stitch_curve_randomly(
             stitches.append(stitch)
             last_shortened = min(last.distance(stitch) / stitch_len, 1.0)
             last = stitch
-    return stitches
+    return stitches, stitch_length_pos
 
 
 def path_to_curves(points: typing.List[Point], min_len: float):
@@ -341,10 +340,14 @@ def random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma,
     if not points:
         return
     stitches = [points[0]]
+    last_stitch_length_pos = 0
     for i, curve in enumerate(path_to_curves(points, 2 * tolerance)):
         # segments longer than twice the tolerance will usually be forced by it, so set that as the minimum for corner detection
         check_stop_flag()
-        stitches.extend(stitch_curve_randomly(curve, stitch_length, tolerance, stitch_length_sigma, prng.join_args(random_seed, i)))
+        stitched_curve, last_stitch_length_pos = stitch_curve_randomly(
+            curve, stitch_length, tolerance, stitch_length_sigma, prng.join_args(random_seed, i), last_stitch_length_pos
+        )
+        stitches.extend(stitched_curve)
     return stitches
 
 

@@ -99,7 +99,7 @@ def _get_staggered_stitches(stroke, lines, skip_start):
         elif stroke.join_style == 1:
             should_reverse = (i + skip_start) % 2 == 1
 
-        if is_random or stroke.staggers == 0:
+        if stroke.staggers == 0:
             if should_reverse and stroke.flip_copies:
                 line.reverse()
             stitched_line = running_stitch(line, stitch_length, tolerance, is_random, length_sigma, prng.join_args(random_seed, i))
@@ -110,7 +110,7 @@ def _get_staggered_stitches(stroke, lines, skip_start):
                 )
             else:
                 # uses the guided fill alforithm to stagger rows of stitches
-                points = list(apply_stitches(LineString(line), stitch_length[0], stroke.staggers, 0.5, i, tolerance).coords)
+                points = list(apply_stitches(LineString(line), stitch_length, stroke.staggers, 0.5, i, tolerance).coords)
 
             # simplifying the path in apply_stitches could have removed the start or end point
             # we can simply add it again, the minimum stitch length value will take care to remove possible duplicates
@@ -136,25 +136,13 @@ def apply_stagger(line, stitch_length, num_staggers, row_num, tolerance, is_rand
     target_length = segment_length + 2 * start
     scale_factor = target_length / segment_length
     extended_line = scale(first_segment, scale_factor, scale_factor)
+
     line = [InkstitchPoint(*extended_line.coords[0])] + line
     stitched_line = LineString(running_stitch(line, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed))
-    '''
-    # This results in a sligthly more regular result. Not sure though if worth the hassle
-    line = LineString([InkstitchPoint(*extended_line.coords[0])] + line)
-    points = [Point(line.coords[0])]
-    stitch_length_pos = 0
-    pos = 0
-    while pos < line.length:
-        pos += stitch_length[stitch_length_pos]
-
-        stitch_length_pos += 1
-        if stitch_length_pos > len(stitch_length) - 1:
-                stitch_length_pos = 0
-        points.append(line.interpolate(pos))
 
     points.append(line.coords[-1])
     stitched_line = LineString(points)
-    '''
+
     return substring(stitched_line, start, stitched_line.length)
 
 
