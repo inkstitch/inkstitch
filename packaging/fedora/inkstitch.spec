@@ -8,8 +8,6 @@ URL:            https://inkstitch.org
 Source:         https://github.com/inkstitch/inkstitch/archive/%{version}/inkstitch-%{version}.tar.gz
 
 
-BuildRequires:  geos-devel
-BuildRequires:  gettext
 BuildRequires:  inkscape
 BuildRequires:  make
 BuildRequires:  python3-devel
@@ -60,38 +58,56 @@ is fun and easy.
 %prep
 %autosetup -n inkstitch-%{version}
 sed -i 's/python bin/python3 bin/g' Makefile
-# remove GitHub specific build files
-rm -r .github
 
 %build
-make manual
-cp LOGGING_template.toml LOGGING.toml
-# Disable logging
-sed -i 's/warnings_capture = true/warnings_capture = false/g' LOGGING.toml
-sed -i 's/level = "DEBUG"/level = "CRITICAL"/g' LOGGING.toml
 cp DEBUG_template.toml DEBUG.toml
 sed -i 's/# disable_logging = true/disable_logging = true/g' DEBUG.toml
-sed -i 's/# log_config_file = "LOGGING.toml"/log_config_file = "LOGGING.toml"/g' DEBUG.toml
+sed -i 's/# disable_from_inkscape = true/disable_from_inkscape = true/g' DEBUG.toml
+sed -i 's/# force_frozen = true/force_frozen = true/g' DEBUG.toml
+make manual
 
 %install
-
-mkdir -p %{buildroot}%{_datadir}/inkscape/extensions/inkstitch
-cp -a -p -r . \
-   %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
-%py3_shebang_fix \
-   %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/bin/generate-inx-files
-%py3_shebang_fix \
-   %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/bin/generate-version-file
-%py3_shebang_fix \
-   %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/bin/git-pre-commit-hook
-%py3_shebang_fix \
-   %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/bin/inkstitch-fonts-gettext
-%py3_shebang_fix \
-   %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/bin/inkstitch-tiles-gettext
+mkdir -p %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/bin
+cp -a -p bin/pystitch-convert \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/bin/
 %py3_shebang_fix \
    %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/bin/pystitch-convert
-%py3_shebang_fix \
-   %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/bin/pystitch-gettext
+cp -a -p -r addons \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r dbus \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r fonts \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r icons \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r images \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r inx \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r its \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r lib \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r locales \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r palettes \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r print \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r symbols \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r templates \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p -r tiles \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p DEBUG.toml \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p inkstitch.py \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p LICENSE \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
+cp -a -p VERSION \
+  %{buildroot}%{_datadir}/inkscape/extensions/inkstitch/
 
 %check
 %pytest
