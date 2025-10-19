@@ -210,7 +210,8 @@ def take_stitch(start: Point, points: typing.Sequence[Point], idx: int, stitch_l
     return points[-1], None
 
 
-def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: float, tolerance: float) -> typing.List[Point]:
+def stitch_curve_evenly(
+      points: typing.Sequence[Point], stitch_length: typing.List[float], tolerance: float, stitch_length_pos: int = 0) -> typing.List[Point]:
     # Will split a straight line into even-length stitches while still handling curves correctly.
     # Includes end point but not start point.
     if len(points) < 2:
@@ -226,20 +227,28 @@ def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: float, to
         d = last.distance(points[i]) + distLeft[i]
         if d == 0:
             return stitches
-        stitch_len = d / math.ceil(d / stitch_length) + 0.000001  # correction for rounding error
+        stitch_len = d / math.ceil(d / stitch_length[stitch_length_pos]) + 0.000001  # correction for rounding error
 
         stitch, newidx = take_stitch(last, points, i, stitch_len, tolerance)
         i = newidx
         if stitch is not None:
             stitches.append(stitch)
             last = stitch
-    return stitches
+            stitch_length_pos += 1
+            if stitch_length_pos > len(stitch_length) - 1:
+                stitch_length_pos = 0
+    return stitches, stitch_length_pos
 
 
-def stitch_curve_randomly(points: typing.Sequence[Point], stitch_length: float, tolerance: float, stitch_length_sigma: float, random_seed: str) ->\
-      typing.List[Point]:
-    min_stitch_length = max(0, stitch_length * (1 - stitch_length_sigma))
-    max_stitch_length = stitch_length * (1 + stitch_length_sigma)
+def stitch_curve_randomly(
+      points: typing.Sequence[Point],
+      stitch_length: typing.List[float], tolerance: float, stitch_length_sigma: float,
+      random_seed: str) -> typing.List[Point]:
+
+    stitch_length_pos = -1
+    min_stitch_length = max(0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma))
+    max_stitch_length = stitch_length[stitch_length_pos] * (1 + stitch_length_sigma)
+
     # Will split a straight line into stitches of random length within the range.
     # Attempts to randomize phase so that the distribution of outputs does not depend on direction.
     # Includes end point but not start point.
@@ -252,6 +261,13 @@ def stitch_curve_randomly(points: typing.Sequence[Point], stitch_length: float, 
     stitches = []
     rand_iter = iter(prng.iter_uniform_floats(random_seed))
     while i is not None and i < len(points):
+        if len(stitch_length) > 1:
+            stitch_length_pos += 1
+            if stitch_length_pos > len(stitch_length) - 1:
+                stitch_length_pos = 0
+            min_stitch_length = max(0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma))
+            max_stitch_length = stitch_length[stitch_length_pos] * (1 + stitch_length_sigma)
+
         r = next(rand_iter)
         # If the last stitch was shortened due to tolerance (or this is the first stitch),
         # reduce the lower length limit to randomize the phase. This prevents moiré and asymmetry.
@@ -309,10 +325,12 @@ def even_running_stitch(points, stitch_length, tolerance):
     if not points:
         return
     stitches = [points[0]]
+    last_stitch_length_pos = 0
     for curve in path_to_curves(points, 2 * tolerance):
         # segments longer than twice the tolerance will usually be forced by it, so set that as the minimum for corner detection
         check_stop_flag()
-        stitches.extend(stitch_curve_evenly(curve, stitch_length, tolerance))
+        stitched_curve, last_stitch_length_pos = stitch_curve_evenly(curve, stitch_length, tolerance, last_stitch_length_pos)
+        stitches.extend(stitched_curve)
     return stitches
 
 

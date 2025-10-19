@@ -127,9 +127,11 @@ def _get_lines(fill, shape, bounding_box, angle):
         if fill.enable_random_stitch_length:
             points = [InkstitchPoint(*x) for x in line]
             staggered_line = LineString(random_running_stitch(
-                points, fill.max_stitch_length, fill.running_stitch_tolerance, fill.random_stitch_length_jitter, prng.join_args(fill.random_seed, i)))
+                points,
+                [fill.max_stitch_length], fill.running_stitch_tolerance, fill.random_stitch_length_jitter, prng.join_args(fill.random_seed, i))
+            )
         else:
-            staggered_line = apply_stitches(LineString(line), fill.max_stitch_length, fill.staggers, fill.row_spacing, i)
+            staggered_line = apply_stitches(LineString(line), [fill.max_stitch_length], fill.staggers, fill.row_spacing, i)
         staggered_lines.append(staggered_line)
     return staggered_lines, bottom_line
 
