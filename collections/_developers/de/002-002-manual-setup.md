@@ -1,7 +1,7 @@
 ---
 title: "Manuelle Installation"
 permalink: /de/developers/inkstitch/manual-setup/
-last_modified_at: 2025-03-20
+last_modified_at: 2025-10-19
 toc: false
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -16,7 +16,6 @@ Wir empfehlen die Nutung von `pyenv` mit python 3.8.
 
 ```
 git clone https://github.com/inkstitch/inkstitch
-git clone https://github.com/inkstitch/pyembroidery
 ```
 
 ### 2. Installiere Python Abhängigkeiten

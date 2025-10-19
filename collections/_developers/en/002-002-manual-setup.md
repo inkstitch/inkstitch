@@ -1,7 +1,7 @@
 ---
 title: "Manual Setup for Linux and macOS"
 permalink: /developers/inkstitch/manual-setup/
-last_modified_at: 2025-03-20
+last_modified_at: 2025-10-19
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -16,7 +16,6 @@ We recommend to use `pyenv` with python 3.8.
 
 ```
 git clone https://github.com/inkstitch/inkstitch
-git clone https://github.com/inkstitch/pyembroidery
 ```
 
 ### 2. Python Dependencies
