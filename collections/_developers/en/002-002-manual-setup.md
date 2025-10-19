@@ -16,7 +16,6 @@ We recommend to use `pyenv` with python 3.8.
 
 ```
 git clone https://github.com/inkstitch/inkstitch
-git clone https://github.com/inkstitch/pyembroidery
 ```
 
 ### 2. Python Dependencies
