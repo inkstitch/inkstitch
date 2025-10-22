@@ -632,7 +632,11 @@ class FillStitch(EmbroideryElement):
 
     @property
     def color(self):
-        return self.fill_color
+        color = self.fill_color
+        # if color is a gradient, pick the first color
+        if isinstance(color, LinearGradient):
+            color = self._get_color(color.stops[0], "stop-color", "black")
+        return color
 
     @property
     def gradient(self):

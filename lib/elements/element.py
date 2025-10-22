@@ -12,7 +12,7 @@ from typing import List, Optional
 
 import inkex
 import numpy as np
-from inkex import BaseElement, bezier
+from inkex import BaseElement, Color, bezier
 from shapely import Point as ShapelyPoint
 from shapely.ops import nearest_points
 
@@ -599,6 +599,10 @@ class EmbroideryElement(object):
         stitch_plan_cache = get_stitch_plan_cache()
         cache_key = self.get_cache_key(previous_stitch, next_element)
         if cache_key not in stitch_plan_cache:
+            # fix up colors for cache
+            for stitch_group in stitch_groups:
+                if not isinstance(stitch_group.color, Color):
+                    stitch_group.color = "black"
             stitch_plan_cache[cache_key] = stitch_groups
 
         if previous_stitch is not None:
