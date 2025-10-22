@@ -6,6 +6,7 @@
 from inkex import Boolean, DirectedLineSegment, Path, PathElement, Transform
 
 from ..elements import Stroke
+from ..i18n import _
 from ..svg import PIXELS_PER_MM, generate_unique_id, get_correction_transform
 from ..svg.tags import INKSTITCH_ATTRIBS, SVG_GROUP_TAG
 from .base import InkstitchExtension
@@ -187,6 +188,7 @@ class JumpToStroke(InkstitchExtension):
         style = f'stroke:{color};stroke-width:{self.svg.viewport_to_unit("1px")};stroke-dasharray:3, 1;fill:none;'
 
         line = PathElement(d=str(path), style=style)
+        line.label = _('Running Stitch')
         line.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], self.options.running_stitch_length_mm)
         line.set(INKSTITCH_ATTRIBS['running_stitch_tolerance_mm'], self.options.running_stitch_tolerance_mm)
         parent.insert(index, line)
