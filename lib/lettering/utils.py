@@ -38,7 +38,7 @@ def get_font_paths():
     return font_paths
 
 
-def get_font_by_id(font_id):
+def get_font_by_id(font_id, show_font_path_warning=True):
     font_paths = get_font_paths()
     for font_path in font_paths:
         try:
@@ -46,7 +46,7 @@ def get_font_by_id(font_id):
         except OSError:
             continue
         for font_dir in font_dirs:
-            font = _get_font_from_path(font_path, font_dir)
+            font = _get_font_from_path(font_path, font_dir, show_font_path_warning)
             if font and font_id in [font.id, font.marked_custom_font_id]:
                 return font
     return None
