@@ -28,9 +28,6 @@
 ### disable debugger when calling from inkscape, default: false
 # disable_from_inkscape = true
 
-### wait for debugger to attach (vscode), default: true
-# wait_attach = false
-
 ### creation of bash script, default: false
 # create_bash_script = true
 
