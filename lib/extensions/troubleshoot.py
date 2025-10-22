@@ -49,6 +49,14 @@ class Troubleshoot(InkstitchExtension):
             if self.options.show_errors:
                 message = _("All selected shapes are valid!")
                 message += "\n\n"
+                message += _("Checked for:\n")
+                if self.options.show_errors:
+                    message += _("* errors\n")
+                if self.options.show_warnings:
+                    message += _("* warnings\n")
+                if self.options.show_type_warning:
+                    message += _("* type_warnings")
+                message += "\n\n"
                 message += _("If you are still having trouble with a shape not being embroidered, "
                              "check if it is in a layer with an ignore command.")
             else:
