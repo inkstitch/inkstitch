@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-11 01:29+0000\n"
-"PO-Revision-Date: 2025-10-12 01:42\n"
+"POT-Creation-Date: 2025-10-23 01:41+0000\n"
+"PO-Revision-Date: 2025-10-23 01:41\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 01:29+0000\n"
+"POT-Creation-Date: 2025-10-23 01:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1258,7 +1258,7 @@ msgstr "Stopp"
 msgid "Add a STOP command after stitching this object."
 msgstr "Füge einen Stopp-Befehl nach diesem Objekt hinzu."
 
-#: lib/elements/element.py:734
+#: lib/elements/element.py:738
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Bitte rufe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten auf. Diese Erweiterung zeigt fehlerhafte Stellen an und gibt am rechten Seitenrand Vorschläge zum Lösen des Problems."
 
@@ -1290,7 +1290,7 @@ msgstr "Erweitern"
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr "Die \"Erweitern\"-Einstellung für dieses Füll-Objekt kann nicht angewendet werden. Ink/Stitch wird diese Einstellung ignorieren und stattdessen die Originalgröße nutzen."
 
-#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:698
+#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:702
 msgid "Inset"
 msgstr "Einzug"
 
@@ -1353,7 +1353,7 @@ msgstr "* Erweiterung > Ink/Stitch > Füllstich-Werkzeuge > Zerlegen und Löcher
 
 #: lib/elements/fill_stitch.py:91
 msgid "Border crosses itself"
-msgstr "Außenlinien überkreuzen sich selbst"
+msgstr "Pfadüberschneidung"
 
 #: lib/elements/fill_stitch.py:92
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
@@ -1622,11 +1622,11 @@ msgstr "Stichversatz"
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr "Dieser Wert beschreibt, nach wie vielen Reihen die Einstichstellen übereinander liegen. Dezimalwerte sind zulässig und zeigen weniger deutliche Diagonalen im Stickbild."
 
-#: lib/elements/fill_stitch.py:388 lib/elements/fill_stitch.py:710
+#: lib/elements/fill_stitch.py:388 lib/elements/fill_stitch.py:714
 msgid "Skip last stitch in each row"
 msgstr "Letzten Stich in jeder Reihe überspringen"
 
-#: lib/elements/fill_stitch.py:389 lib/elements/fill_stitch.py:711
+#: lib/elements/fill_stitch.py:389 lib/elements/fill_stitch.py:715
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "Der letzte Stich einer Reihe ist sehr nah an dem ersten Stich der nächsten Reihe. Ihn zu überspringen verringert Stichanzahl und Dichte."
 
@@ -1654,11 +1654,11 @@ msgstr "Endposition erzwingen"
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
 msgstr "Ist diese Option deaktiviert, legt die Endposition lediglich die generelle Stickrichtung fest. In aktiviertem Zustand endet der letzte Farbabschnitt an diesem Punkt."
 
-#: lib/elements/fill_stitch.py:442 lib/elements/fill_stitch.py:722
+#: lib/elements/fill_stitch.py:442 lib/elements/fill_stitch.py:726
 msgid "Underpath"
 msgstr "Unterpfad"
 
-#: lib/elements/fill_stitch.py:443 lib/elements/fill_stitch.py:723
+#: lib/elements/fill_stitch.py:443 lib/elements/fill_stitch.py:727
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Stiche zum Verbinden der Teilbereiche verlaufen innerhalb des Objektes. Unterpfade vermeiden im Winkel des Füllmusters zu verlaufen."
 
@@ -1779,55 +1779,55 @@ msgstr "Zusätzliche Zugkompensation, die als Prozentwert der ursprünglichen L�
 msgid "% (each side)"
 msgstr "% (pro Seite)"
 
-#: lib/elements/fill_stitch.py:644 lib/elements/fill_stitch.py:653
-#: lib/elements/fill_stitch.py:680 lib/elements/fill_stitch.py:691
-#: lib/elements/fill_stitch.py:701 lib/elements/fill_stitch.py:713
-#: lib/elements/fill_stitch.py:726
+#: lib/elements/fill_stitch.py:648 lib/elements/fill_stitch.py:657
+#: lib/elements/fill_stitch.py:684 lib/elements/fill_stitch.py:695
+#: lib/elements/fill_stitch.py:705 lib/elements/fill_stitch.py:717
+#: lib/elements/fill_stitch.py:730
 msgid "Fill Underlay"
 msgstr "Füllung Unterlage"
 
-#: lib/elements/fill_stitch.py:644 lib/gui/tartan/embroidery_panel.py:55
+#: lib/elements/fill_stitch.py:648 lib/gui/tartan/embroidery_panel.py:55
 #: inx/inkstitch_select_elements.inx:36 inx/inkstitch_select_elements.inx:64
 #: inx/inkstitch_select_elements.inx:66
 msgid "Underlay"
 msgstr "Unterlage"
 
-#: lib/elements/fill_stitch.py:650
+#: lib/elements/fill_stitch.py:654
 msgid "Fill angle"
 msgstr "Füllwinkel"
 
-#: lib/elements/fill_stitch.py:651
+#: lib/elements/fill_stitch.py:655
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr "Standard: Füllwinkel + 90 Grad. Füge eine Liste von mit Leerzeichen getrennten Werten ein, um mehrere Lagen zu erzeugen."
 
-#: lib/elements/fill_stitch.py:677 lib/gui/tartan/embroidery_panel.py:77
+#: lib/elements/fill_stitch.py:681 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
 msgstr "Reihenabstand"
 
-#: lib/elements/fill_stitch.py:678
+#: lib/elements/fill_stitch.py:682
 msgid "default: 3x fill row spacing"
 msgstr "Standard: 3x Füllreihenabstand"
 
-#: lib/elements/fill_stitch.py:688 lib/elements/stroke.py:171
+#: lib/elements/fill_stitch.py:692 lib/elements/stroke.py:171
 #: lib/extensions/element_info.py:144 lib/extensions/element_info.py:203
 msgid "Max stitch length"
 msgstr "Maximale Stichlänge"
 
-#: lib/elements/fill_stitch.py:689
+#: lib/elements/fill_stitch.py:693
 msgid "default: equal to fill max stitch length"
 msgstr "Standard: entspricht der maximalen Stichlänge"
 
-#: lib/elements/fill_stitch.py:699
+#: lib/elements/fill_stitch.py:703
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Verkleinern Sie die Unterlage, um zu verhindern, dass die Unterlage an der Außenseite der Füllstiche sichtbar wird."
 
-#: lib/elements/fill_stitch.py:734 lib/elements/satin_column.py:585
+#: lib/elements/fill_stitch.py:738 lib/elements/satin_column.py:585
 #: lib/elements/stroke.py:450 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr "Zufallswert"
 
-#: lib/elements/fill_stitch.py:735 lib/elements/satin_column.py:586
+#: lib/elements/fill_stitch.py:739 lib/elements/satin_column.py:586
 #: lib/elements/stroke.py:451
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer."
@@ -1890,7 +1890,7 @@ msgstr "Gehe auf unsere Webseite und informiere dich, wie Satinsäulen aufgebaut
 
 #: lib/elements/satin_column.py:42
 msgid "Each rung should intersect both rails once."
-msgstr "Jede Stichlage sollte beide Außenlinien einmal kreuzen."
+msgstr "Jeder Richtungsvektor sollte beide Außenlinien einmal kreuzen."
 
 #: lib/elements/satin_column.py:46
 msgid "Rail is a closed path"
@@ -1914,7 +1914,7 @@ msgstr "Stichlage kreuzt Außenlinie nicht"
 
 #: lib/elements/satin_column.py:56
 msgid "Satin column: A rung doesn't intersect both rails."
-msgstr "Satinsäule: Eine Stichlage kreuzt nicht beide Außenlinien."
+msgstr "Satinsäule: Ein Richtungsvektor kreuzt nicht beide Außenlinien."
 
 #: lib/elements/satin_column.py:60
 msgid "Satin has no rungs"
@@ -1967,7 +1967,7 @@ msgstr "Ungerade Anzahl von Punkten"
 
 #: lib/elements/satin_column.py:93
 msgid "Satin column: There are no rungs and rails have an unequal number of points."
-msgstr "Satinsäule: Es gibt keine Stichlagen und die Außenlinien haben eine ungleiche Anzahl an Knotenpunkten."
+msgstr "Satinsäule: Es gibt kein Richtungsvektoren und die Außenlinien haben eine ungleiche Anzahl an Knotenpunkten."
 
 #: lib/elements/satin_column.py:95
 msgid "The easiest way to solve this issue is to add one or more rungs. "
@@ -2902,6 +2902,16 @@ msgstr "Falscher Dateityp. Ink/Stitch akzeptiert nur Farbpaletten im GPL-Format.
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
 msgstr "Ink/Stitch kann den Ordner für Farbpaletten nicht automatisch erkennen. Bitte den Pfad manuell angeben."
 
+#: lib/extensions/jump_to_stroke.py:191 lib/lettering/categories.py:27
+#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
+#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:67
+#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:68
+#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:82
+#: inx/inkstitch_lettering_generate_json.inx:59
+#: inx/inkstitch_select_elements.inx:13
+msgid "Running Stitch"
+msgstr "Geradstich"
+
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
 msgstr "Bitte hinzuzufügende Befehle auswählen."
@@ -3174,15 +3184,15 @@ msgstr "Bitte mindestens ein Element mit einer Konturfarbe auswählen."
 msgid "Redwork Group"
 msgstr "Redwork Gruppe"
 
-#: lib/extensions/redwork.py:129
+#: lib/extensions/redwork.py:133
 msgid "Connected Group"
 msgstr "Verbundene Gruppe"
 
-#: lib/extensions/redwork.py:166 inx/inkstitch_redwork.inx:3
+#: lib/extensions/redwork.py:170 inx/inkstitch_redwork.inx:3
 msgid "Redwork"
 msgstr "Redwork"
 
-#: lib/extensions/redwork.py:170
+#: lib/extensions/redwork.py:174
 msgid "Redwork Underpath"
 msgstr "Redwork Unterpfad"
 
@@ -3325,7 +3335,7 @@ msgstr "Alle ausgewählten Formen sind gültig! "
 
 #: lib/extensions/troubleshoot.py:53
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
-msgstr "Wenn eine Form noch immer nicht nicht gestickt wird, bitte überprüfen, ob sie sich in einer Ebene mit einem Ignorierbefehl befindet."
+msgstr "Wenn ein Objekt nicht gestickt wird, überprüfe ob es sich in einer Ebene mit einem Ignorierbefehl befindet."
 
 #: lib/extensions/troubleshoot.py:83
 msgid "Invalid Pointer"
@@ -4473,7 +4483,7 @@ msgstr "Kreuzstich"
 
 #: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:49
 msgid "Display"
-msgstr "Display (Große Schriftgrößen)"
+msgstr "Display"
 
 #: lib/lettering/categories.py:22 inx/inkstitch_lettering_generate_json.inx:52
 msgid "Handwriting"
@@ -4490,16 +4500,6 @@ msgstr "Monogramm"
 #: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:55
 msgid "Multicolor"
 msgstr "Mehrfarbig"
-
-#: lib/lettering/categories.py:27
-#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
-#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:67
-#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:68
-#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:82
-#: inx/inkstitch_lettering_generate_json.inx:59
-#: inx/inkstitch_select_elements.inx:13
-msgid "Running Stitch"
-msgstr "Geradstich"
 
 #: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:60
 msgid "Sans Serif"
@@ -5519,7 +5519,7 @@ msgstr "Diese Erweiterung versucht, alle gewählten Satinsäulen ohne dazwischen
 #: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
 #: inx/inkstitch_install_custom_palette.inx:17
 #: inx/inkstitch_knockdown_fill.inx:49
-#: inx/inkstitch_lettering_along_path.inx:37
+#: inx/inkstitch_lettering_along_path.inx:35
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:34
 #: inx/inkstitch_lettering_generate_json.inx:150
@@ -6951,22 +6951,22 @@ msgid "Select Ink/Stitch text and a path before running this extension."
 msgstr "Vor dem Ausführen dieser Funktion bitte eine Ink/Stitch-Textgruppe und einen Pfad auswählen."
 
 #: inx/inkstitch_lettering_along_path.inx:29
-msgid "The text needs to meet these conditions:"
-msgstr "Der Text sollte folgende Bedingungen erfüllen:"
-
-#: inx/inkstitch_lettering_along_path.inx:30
-msgid "* The text consists of only one line of text"
-msgstr "* Der Text sollte keine Zeilenumbrüche enthalten"
+msgid "⚠ The text width should not be longer than the path ⚠"
+msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:31
-msgid "* The text should not be too large for the given path"
-msgstr "* Der Text sollte nicht zu lang für den gegebenen Pfad sein"
+msgid "Text position:"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:32
+msgid "Text can be positioned at the start, end or center of the path."
+msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:33
-msgid "In the text position dropdown menu, you can decide how the text will be placed on the path. When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path."
-msgstr "Im Dropdown-Menü Textposition kann festgelegt werden, wie der Text auf dem Pfad platziert werden soll. Wenn die Option Ausdehnen ausgewählt ist, werden die Abstände zwischen den Glyphen erweitert, sodass sich der Text über den gesamten Pfad erstreckt."
+msgid "When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path."
+msgstr ""
 
-#: inx/inkstitch_lettering_along_path.inx:38
+#: inx/inkstitch_lettering_along_path.inx:36
 msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
 msgstr "https://inkstitch.org/de/docs/lettering/#schrift-entlang-pfad"
 

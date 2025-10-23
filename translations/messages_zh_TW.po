@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-11 01:29+0000\n"
-"PO-Revision-Date: 2025-10-11 01:29\n"
+"POT-Creation-Date: 2025-10-23 01:41+0000\n"
+"PO-Revision-Date: 2025-10-23 01:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 01:29+0000\n"
+"POT-Creation-Date: 2025-10-23 01:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1253,7 +1253,7 @@ msgstr ""
 msgid "Add a STOP command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:734
+#: lib/elements/element.py:738
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr ""
 
@@ -1285,7 +1285,7 @@ msgstr ""
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:698
+#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:702
 msgid "Inset"
 msgstr ""
 
@@ -1617,11 +1617,11 @@ msgstr ""
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:388 lib/elements/fill_stitch.py:710
+#: lib/elements/fill_stitch.py:388 lib/elements/fill_stitch.py:714
 msgid "Skip last stitch in each row"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:389 lib/elements/fill_stitch.py:711
+#: lib/elements/fill_stitch.py:389 lib/elements/fill_stitch.py:715
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr ""
 
@@ -1649,11 +1649,11 @@ msgstr ""
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:442 lib/elements/fill_stitch.py:722
+#: lib/elements/fill_stitch.py:442 lib/elements/fill_stitch.py:726
 msgid "Underpath"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:443 lib/elements/fill_stitch.py:723
+#: lib/elements/fill_stitch.py:443 lib/elements/fill_stitch.py:727
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr ""
 
@@ -1773,55 +1773,55 @@ msgstr ""
 msgid "% (each side)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:644 lib/elements/fill_stitch.py:653
-#: lib/elements/fill_stitch.py:680 lib/elements/fill_stitch.py:691
-#: lib/elements/fill_stitch.py:701 lib/elements/fill_stitch.py:713
-#: lib/elements/fill_stitch.py:726
+#: lib/elements/fill_stitch.py:648 lib/elements/fill_stitch.py:657
+#: lib/elements/fill_stitch.py:684 lib/elements/fill_stitch.py:695
+#: lib/elements/fill_stitch.py:705 lib/elements/fill_stitch.py:717
+#: lib/elements/fill_stitch.py:730
 msgid "Fill Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:644 lib/gui/tartan/embroidery_panel.py:55
+#: lib/elements/fill_stitch.py:648 lib/gui/tartan/embroidery_panel.py:55
 #: inx/inkstitch_select_elements.inx:36 inx/inkstitch_select_elements.inx:64
 #: inx/inkstitch_select_elements.inx:66
 msgid "Underlay"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:650
+#: lib/elements/fill_stitch.py:654
 msgid "Fill angle"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:651
+#: lib/elements/fill_stitch.py:655
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:677 lib/gui/tartan/embroidery_panel.py:77
+#: lib/elements/fill_stitch.py:681 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:678
+#: lib/elements/fill_stitch.py:682
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:688 lib/elements/stroke.py:171
+#: lib/elements/fill_stitch.py:692 lib/elements/stroke.py:171
 #: lib/extensions/element_info.py:144 lib/extensions/element_info.py:203
 msgid "Max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:689
+#: lib/elements/fill_stitch.py:693
 msgid "default: equal to fill max stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:699
+#: lib/elements/fill_stitch.py:703
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:734 lib/elements/satin_column.py:585
+#: lib/elements/fill_stitch.py:738 lib/elements/satin_column.py:585
 #: lib/elements/stroke.py:450 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:735 lib/elements/satin_column.py:586
+#: lib/elements/fill_stitch.py:739 lib/elements/satin_column.py:586
 #: lib/elements/stroke.py:451
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr ""
@@ -2890,6 +2890,16 @@ msgstr ""
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
 msgstr ""
 
+#: lib/extensions/jump_to_stroke.py:191 lib/lettering/categories.py:27
+#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
+#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:67
+#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:68
+#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:82
+#: inx/inkstitch_lettering_generate_json.inx:59
+#: inx/inkstitch_select_elements.inx:13
+msgid "Running Stitch"
+msgstr ""
+
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
 msgstr ""
@@ -3156,15 +3166,15 @@ msgstr ""
 msgid "Redwork Group"
 msgstr ""
 
-#: lib/extensions/redwork.py:129
+#: lib/extensions/redwork.py:133
 msgid "Connected Group"
 msgstr ""
 
-#: lib/extensions/redwork.py:166 inx/inkstitch_redwork.inx:3
+#: lib/extensions/redwork.py:170 inx/inkstitch_redwork.inx:3
 msgid "Redwork"
 msgstr ""
 
-#: lib/extensions/redwork.py:170
+#: lib/extensions/redwork.py:174
 msgid "Redwork Underpath"
 msgstr ""
 
@@ -4464,16 +4474,6 @@ msgstr ""
 msgid "Multicolor"
 msgstr ""
 
-#: lib/lettering/categories.py:27
-#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
-#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:67
-#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:68
-#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:82
-#: inx/inkstitch_lettering_generate_json.inx:59
-#: inx/inkstitch_select_elements.inx:13
-msgid "Running Stitch"
-msgstr ""
-
 #: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:60
 msgid "Sans Serif"
 msgstr ""
@@ -5488,7 +5488,7 @@ msgstr ""
 #: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
 #: inx/inkstitch_install_custom_palette.inx:17
 #: inx/inkstitch_knockdown_fill.inx:49
-#: inx/inkstitch_lettering_along_path.inx:37
+#: inx/inkstitch_lettering_along_path.inx:35
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:34
 #: inx/inkstitch_lettering_generate_json.inx:150
@@ -6920,22 +6920,22 @@ msgid "Select Ink/Stitch text and a path before running this extension."
 msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:29
-msgid "The text needs to meet these conditions:"
-msgstr ""
-
-#: inx/inkstitch_lettering_along_path.inx:30
-msgid "* The text consists of only one line of text"
+msgid "⚠ The text width should not be longer than the path ⚠"
 msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:31
-msgid "* The text should not be too large for the given path"
+msgid "Text position:"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:32
+msgid "Text can be positioned at the start, end or center of the path."
 msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:33
-msgid "In the text position dropdown menu, you can decide how the text will be placed on the path. When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path."
+msgid "When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path."
 msgstr ""
 
-#: inx/inkstitch_lettering_along_path.inx:38
+#: inx/inkstitch_lettering_along_path.inx:36
 msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
 msgstr ""
 
