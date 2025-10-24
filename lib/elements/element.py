@@ -514,11 +514,14 @@ class EmbroideryElement(object):
         return len(self.get_commands(command)) > 0
 
     @cache
-    def get_command(self, command: str) -> Optional[Command]:
+    def get_command(self, command: str, multiple: bool = False) -> Optional[Command]:
         commands = self.get_commands(command)
 
         if commands:
-            return commands[0]
+            if multiple:
+                return commands
+            else:
+                return commands[0]
         else:
             return None
 
