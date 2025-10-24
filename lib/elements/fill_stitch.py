@@ -250,7 +250,7 @@ class FillStitch(EmbroideryElement):
                'is allowed to deviate from the original path.  Try low numbers like 0.2.  ' +
                'Hint: a lower running stitch tolerance may be needed too.'
            ),
-           type='integer',
+           type='float',
            unit='mm',
            default=0,
            select_items=[('fill_method', 'contour_fill'), ('fill_method', 'meander_fill')],
@@ -265,14 +265,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            type='float',
            default=0,
-           sort_index=20,
-           select_items=[('fill_method', 'auto_fill'),
-                         ('fill_method', 'guided_fill'),
-                         ('fill_method', 'meander_fill'),
-                         ('fill_method', 'circular_fill'),
-                         ('fill_method', 'contour_fill'),
-                         ('fill_method', 'tartan_fill'),
-                         ('fill_method', 'linear_gradient_fill')])
+           sort_index=20)
     def expand(self):
         return self.get_float_param('expand_mm', 0)
 
@@ -631,20 +624,6 @@ class FillStitch(EmbroideryElement):
         return np.maximum(self.get_split_float_param("pull_compensation_percent", (0, 0)), 0)
 
     @property
-    def color(self):
-        color = self.fill_color
-        # if color is a gradient, pick the first color
-        if isinstance(color, LinearGradient):
-            color = self._get_color(color.stops[0], "stop-color", "black")
-        return color
-
-    @property
-    def gradient(self):
-        if isinstance(self.fill_color, LinearGradient):
-            return self.fill_color
-        return None
-
-    @property
     @param('fill_underlay', _('Underlay'), type='toggle', group=_('Fill Underlay'), default=True)
     def fill_underlay(self):
         return self.get_boolean_param("fill_underlay", default=True)
@@ -804,69 +783,19 @@ class FillStitch(EmbroideryElement):
 
         return intersection
 
-    def validation_errors(self):
-        if not self.shape.is_valid:
-            why = explain_validity(self.shape)
-            match = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why)
-            assert match is not None, f"Could not parse validity message '{why}'"
-            message, x, y = match.groups()
-            yield InvalidShapeError((x, y))
+    @property
+    def color(self):
+        color = self.fill_color
+        # if color is a gradient, pick the first color
+        if isinstance(color, LinearGradient):
+            color = self._get_color(color.stops[0], "stop-color", "black")
+        return color
 
-    def validation_warnings(self):  # noqa: C901
-        if not self.original_shape.is_valid:
-            why = explain_validity(self.original_shape)
-            match = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why)
-            assert match is not None, f"Could not parse validity message '{why}'"
-            message, x, y = match.groups()
-            if "Hole lies outside shell" in message:
-                yield UnconnectedWarning((x, y))
-            else:
-                yield BorderCrossWarning((x, y))
-
-        for shape in self.shape.geoms:
-            if self.shape.area < 20:
-                label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
-                yield SmallShapeWarning(shape.centroid, label)
-
-            if self.shrink_or_grow_shape(shape, self.expand, True).is_empty:
-                yield ExpandWarning(shape.centroid)
-
-            if self.shrink_or_grow_shape(shape, -self.fill_underlay_inset, True).is_empty:
-                yield UnderlayInsetWarning(shape.centroid)
-
-        # guided fill warnings
-        if self.fill_method == 'guided_fill':
-            guide_lines = self._get_guide_lines(True)
-            if not guide_lines or guide_lines[0].is_empty:
-                yield MissingGuideLineWarning(self.shape.centroid)
-            elif len(guide_lines) > 1:
-                yield MultipleGuideLineWarning(self.shape.centroid)
-            elif guide_lines[0].disjoint(self.shape):
-                yield DisjointGuideLineWarning(self.shape.centroid)
-            return None
-
-        # linear gradient fill
-        if self.fill_method == 'linear_gradient_fill' and self.gradient is None:
-            yield NoGradientWarning(self.shape.representative_point())
-
-        if self.node.style('stroke', None) is not None:
-            if not self.shape.is_empty:
-                yield StrokeAndFillWarning(self.shape.representative_point())
-            else:
-                # they may used a fill on a straight line
-                yield StrokeAndFillWarning(self.paths[0][0])
-
-        # tartan fill
-        if self.fill_method == 'tartan_fill':
-            settings = get_tartan_settings(self.node)
-            warp, weft = get_tartan_stripes(settings)
-            if not (warp or weft):
-                yield NoTartanStripeWarning(self.shape.representative_point())
-            if not self.node.get('inkstitch:tartan', ''):
-                yield DefaultTartanStripeWarning(self.shape.representative_point())
-
-        for warning in super(FillStitch, self).validation_warnings():
-            yield warning
+    @property
+    def gradient(self):
+        if isinstance(self.fill_color, LinearGradient):
+            return self.fill_color
+        return None
 
     @property
     @cache
@@ -938,82 +867,81 @@ class FillStitch(EmbroideryElement):
 
     def to_stitch_groups(self, previous_stitch_group, next_element=None):  # noqa: C901
         # backwards compatibility: legacy_fill used to be inkstitch:auto_fill == False
-        if not self.auto_fill or self.fill_method == 'legacy_fill':
-            return self.do_legacy_fill()
+        stitch_groups = []
+
+        # start and end points
+        start = self.get_starting_point(previous_stitch_group)
+        final_end = self.get_ending_point(self.next_stitch(next_element))
+
+        # sort shapes to get a nicer routing
+        shapes = list(self.shape.geoms)
+        if start:
+            shapes.sort(key=lambda shape: shape.distance(shgeo.Point(start)))
         else:
-            stitch_groups = []
+            shapes.sort(key=lambda shape: shape.bounds[0])
 
-            # start and end points
+        for i, shape in enumerate(shapes):
             start = self.get_starting_point(previous_stitch_group)
-            final_end = self.get_ending_point(self.next_stitch(next_element))
-
-            # sort shapes to get a nicer routing
-            shapes = list(self.shape.geoms)
-            if start:
-                shapes.sort(key=lambda shape: shape.distance(shgeo.Point(start)))
+            if i < len(shapes) - 1:
+                end = nearest_points(shape, shapes[i+1])[0].coords
             else:
-                shapes.sort(key=lambda shape: shape.bounds[0])
+                end = final_end
 
-            for i, shape in enumerate(shapes):
-                start = self.get_starting_point(previous_stitch_group)
-                if i < len(shapes) - 1:
-                    end = nearest_points(shape, shapes[i+1])[0].coords
+            if self.fill_underlay and not self.fill_method == 'legacy_fill':
+                underlay_shapes = self.underlay_shape(shape)
+                for underlay_shape in underlay_shapes.geoms:
+                    underlay_stitch_groups, start = self.do_underlay(underlay_shape, start)
+                    stitch_groups.extend(underlay_stitch_groups)
+
+            fill_shapes = self.fill_shape(shape)
+            for i, fill_shape in enumerate(fill_shapes.geoms):
+                if not self.auto_fill or self.fill_method == 'legacy_fill':
+                    stitch_groups.extend(self.do_legacy_fill(fill_shape))
+                elif self.fill_method == 'contour_fill':
+                    stitch_groups.extend(self.do_contour_fill(fill_shape, start))
+                elif self.fill_method == 'guided_fill':
+                    stitch_groups.extend(self.do_guided_fill(fill_shape, start, end))
+                elif self.fill_method == 'meander_fill':
+                    stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
+                elif self.fill_method == 'circular_fill':
+                    stitch_groups.extend(self.do_circular_fill(fill_shape, start, end))
+                elif self.fill_method == 'linear_gradient_fill':
+                    stitch_groups.extend(self.do_linear_gradient_fill(fill_shape, start, end))
+                elif self.fill_method == 'tartan_fill':
+                    stitch_groups.extend(self.do_tartan_fill(fill_shape, start, end))
                 else:
-                    end = final_end
+                    # auto_fill
+                    stitch_groups.extend(self.do_auto_fill(fill_shape, start, end))
+                if stitch_groups:
+                    previous_stitch_group = stitch_groups[-1]
 
-                if self.fill_underlay:
-                    underlay_shapes = self.underlay_shape(shape)
-                    for underlay_shape in underlay_shapes.geoms:
-                        underlay_stitch_groups, start = self.do_underlay(underlay_shape, start)
-                        stitch_groups.extend(underlay_stitch_groups)
+        # sort colors of linear gradient
+        if len(shapes) > 1 and self.fill_method == 'linear_gradient_fill':
+            self.color_sort(stitch_groups)
 
-                fill_shapes = self.fill_shape(shape)
-                for i, fill_shape in enumerate(fill_shapes.geoms):
-                    if self.fill_method == 'contour_fill':
-                        stitch_groups.extend(self.do_contour_fill(fill_shape, start))
-                    elif self.fill_method == 'guided_fill':
-                        stitch_groups.extend(self.do_guided_fill(fill_shape, start, end))
-                    elif self.fill_method == 'meander_fill':
-                        stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
-                    elif self.fill_method == 'circular_fill':
-                        stitch_groups.extend(self.do_circular_fill(fill_shape, start, end))
-                    elif self.fill_method == 'linear_gradient_fill':
-                        stitch_groups.extend(self.do_linear_gradient_fill(fill_shape, start, end))
-                    elif self.fill_method == 'tartan_fill':
-                        stitch_groups.extend(self.do_tartan_fill(fill_shape, start, end))
-                    else:
-                        # auto_fill
-                        stitch_groups.extend(self.do_auto_fill(fill_shape, start, end))
-                    if stitch_groups:
-                        previous_stitch_group = stitch_groups[-1]
+        # sort colors of tartan fill
+        if len(shapes) > 1 and self.fill_method == 'tartan_fill':
+            # while color sorting make sure stroke lines go still on top of the fills
+            fill_groups = []
+            stroke_groups = []
+            for stitch_group in stitch_groups:
+                if "tartan_run" in stitch_group.stitches[0].tags:
+                    stroke_groups.append(stitch_group)
+                else:
+                    fill_groups.append(stitch_group)
+            self.color_sort(fill_groups)
+            self.color_sort(stroke_groups)
+            stitch_groups = fill_groups + stroke_groups
 
-            # sort colors of linear gradient
-            if len(shapes) > 1 and self.fill_method == 'linear_gradient_fill':
-                self.color_sort(stitch_groups)
-
-            # sort colors of tartan fill
-            if len(shapes) > 1 and self.fill_method == 'tartan_fill':
-                # while color sorting make sure stroke lines go still on top of the fills
-                fill_groups = []
-                stroke_groups = []
-                for stitch_group in stitch_groups:
-                    if "tartan_run" in stitch_group.stitches[0].tags:
-                        stroke_groups.append(stitch_group)
-                    else:
-                        fill_groups.append(stitch_group)
-                self.color_sort(fill_groups)
-                self.color_sort(stroke_groups)
-                stitch_groups = fill_groups + stroke_groups
-
-            return stitch_groups
+        return stitch_groups
 
     def color_sort(self, stitch_groups):
         colors = [stitch_group.color for stitch_group in stitch_groups]
         stitch_groups.sort(key=lambda group: colors.index(group.color))
 
-    def do_legacy_fill(self):
+    def do_legacy_fill(self, fill_shape):
         stitch_lists = legacy_fill(
-            self.shape,
+            fill_shape,
             self.angle,
             self.row_spacing,
             self.end_row_spacing,
@@ -1242,3 +1170,67 @@ class FillStitch(EmbroideryElement):
 
     def do_tartan_fill(self, shape, start, end):
         return tartan_fill(self, shape, start, end)
+
+    def validation_errors(self):
+        if not self.shape.is_valid:
+            why = explain_validity(self.shape)
+            match = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why)
+            assert match is not None, f"Could not parse validity message '{why}'"
+            message, x, y = match.groups()
+            yield InvalidShapeError((x, y))
+
+    def validation_warnings(self):  # noqa: C901
+        if not self.original_shape.is_valid:
+            why = explain_validity(self.original_shape)
+            match = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why)
+            assert match is not None, f"Could not parse validity message '{why}'"
+            message, x, y = match.groups()
+            if "Hole lies outside shell" in message:
+                yield UnconnectedWarning((x, y))
+            else:
+                yield BorderCrossWarning((x, y))
+
+        for shape in self.shape.geoms:
+            if self.shape.area < 20:
+                label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
+                yield SmallShapeWarning(shape.centroid, label)
+
+            if self.shrink_or_grow_shape(shape, self.expand, True).is_empty:
+                yield ExpandWarning(shape.centroid)
+
+            if self.shrink_or_grow_shape(shape, -self.fill_underlay_inset, True).is_empty:
+                yield UnderlayInsetWarning(shape.centroid)
+
+        # guided fill warnings
+        if self.fill_method == 'guided_fill':
+            guide_lines = self._get_guide_lines(True)
+            if not guide_lines or guide_lines[0].is_empty:
+                yield MissingGuideLineWarning(self.shape.centroid)
+            elif len(guide_lines) > 1:
+                yield MultipleGuideLineWarning(self.shape.centroid)
+            elif guide_lines[0].disjoint(self.shape):
+                yield DisjointGuideLineWarning(self.shape.centroid)
+            return None
+
+        # linear gradient fill
+        if self.fill_method == 'linear_gradient_fill' and self.gradient is None:
+            yield NoGradientWarning(self.shape.representative_point())
+
+        if self.node.style('stroke', None) is not None:
+            if not self.shape.is_empty:
+                yield StrokeAndFillWarning(self.shape.representative_point())
+            else:
+                # they may used a fill on a straight line
+                yield StrokeAndFillWarning(self.paths[0][0])
+
+        # tartan fill
+        if self.fill_method == 'tartan_fill':
+            settings = get_tartan_settings(self.node)
+            warp, weft = get_tartan_stripes(settings)
+            if not (warp or weft):
+                yield NoTartanStripeWarning(self.shape.representative_point())
+            if not self.node.get('inkstitch:tartan', ''):
+                yield DefaultTartanStripeWarning(self.shape.representative_point())
+
+        for warning in super(FillStitch, self).validation_warnings():
+            yield warning
