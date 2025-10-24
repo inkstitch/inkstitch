@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from .about import About
+from .apply_attribute import ApplyAttribute
 from .apply_palette import ApplyPalette
 from .apply_threadlist import ApplyThreadlist
 from .auto_run import AutoRun
@@ -82,6 +83,7 @@ from .zip import Zip
 
 extensions = [
     About,
+    ApplyAttribute,
     ApplyPalette,
     ApplyThreadlist,
     AutoRun,
