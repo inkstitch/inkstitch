@@ -13,6 +13,7 @@ from shapely.ops import linemerge, nearest_points, substring
 from ..elements import Stroke
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
+from ..svg.tags import SVG_GROUP_TAG
 from ..utils.geometry import ensure_multi_line_string
 from .base import InkstitchExtension
 
@@ -39,12 +40,16 @@ class Redwork(InkstitchExtension):
         self.minimum_path_length = None
 
     def effect(self):
-        if not self.get_elements():
+        no_selection_message = _("Please select one or more strokes.")
+        if not self.svg.selection:
+            errormsg(no_selection_message)
             return
-
+        if not self.get_elements():
+            errormsg(no_selection_message)
+            return
         elements = [element for element in self.elements if isinstance(element, Stroke)]
         if not elements:
-            errormsg(_("Please select one or more strokes."))
+            errormsg(no_selection_message)
             return
 
         self.merge_distance = self.options.merge_distance * PIXELS_PER_MM
@@ -65,10 +70,23 @@ class Redwork(InkstitchExtension):
         self._generate_eulerian_circuits()
         self._eulerian_circuits_to_elements(redwork_group, elements)
 
-        # remove input elements
         if not self.options.keep_originals:
-            for element in elements:
-                element.node.delete()
+            self._delete_original_elements(elements)
+
+    def _delete_original_elements(self, elements):
+        # remove input elements
+        for element in elements:
+            element.node.delete()
+        # remove empty groups
+        for element in self.svg.selection:
+            selected_groups = self.svg.selection.filter(Group)
+            for group in selected_groups:
+                groups_within_group = reversed(list(group.iterdescendants(SVG_GROUP_TAG)))
+                for g in groups_within_group:
+                    if len(g) == 0:
+                        g.delete()
+                if len(group) == 0:
+                    group.delete()
 
     def _ensure_starting_point(self, multi_line_string, starting_point):
         # returns a MultiLineString whose first  LineString starts close to  starting_point
