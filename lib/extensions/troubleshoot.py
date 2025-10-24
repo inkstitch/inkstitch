@@ -26,21 +26,19 @@ class Troubleshoot(InkstitchExtension):
         self.arg_parser.add_argument("-p", "--pointer-size", type=float, default=5, dest="pointer_size_mm")
         self.arg_parser.add_argument("-f", "--font-size", type=float, default=2, dest="font_size_mm")
 
+        self.arg_parser.add_argument("-e", "--show-errors", type=inkex.Boolean, default=True, dest="show_errors")
+        self.arg_parser.add_argument("-w", "--show-warnings", type=inkex.Boolean, default=True, dest="show_warnings")
+        self.arg_parser.add_argument("-o", "--show-type-warning", type=inkex.Boolean, default=True, dest="show_type_warning")
+
     def effect(self):
         self.create_troubleshoot_layer()
-        problem_types = {'error': set(), 'warning': set(), 'type_warning': set()}
 
-        if self.get_elements(True):
-            for element in self.elements:
-                for problem in element.validation_errors():
-                    problem_types['error'].add(type(problem))
-                    self.insert_pointer(problem)
-                for problem in element.validation_warnings():
-                    if isinstance(problem, ObjectTypeWarning):
-                        problem_types['type_warning'].add(type(problem))
-                    else:
-                        problem_types['warning'].add(type(problem))
-                    self.insert_pointer(problem)
+        if not any([self.options.show_errors, self.options.show_warnings, self.options.show_type_warning]):
+            # There is nothing left to show
+            self.troubleshoot_layer.delete()
+            return
+
+        problem_types = self._get_and_insert_problems()
 
         if any(problem_types.values()):
             self.add_descriptions(problem_types)
@@ -48,11 +46,39 @@ class Troubleshoot(InkstitchExtension):
         else:
             self.troubleshoot_layer.delete()
 
-            message = _("All selected shapes are valid! ")
-            message += "\n\n"
-            message += _("If you are still having trouble with a shape not being embroidered, "
-                         "check if it is in a layer with an ignore command.")
+            if self.options.show_errors:
+                message = _("All selected shapes are valid!")
+                message += "\n\n"
+                message += _("Checked for:\n")
+                if self.options.show_errors:
+                    message += _("* errors\n")
+                if self.options.show_warnings:
+                    message += _("* warnings\n")
+                if self.options.show_type_warning:
+                    message += _("* type_warnings")
+                message += "\n\n"
+                message += _("If you are still having trouble with a shape not being embroidered, "
+                             "check if it is in a layer with an ignore command.")
+            else:
+                message = _("No warnings found for selected shapes!")
             inkex.errormsg(message)
+
+    def _get_and_insert_problems(self):
+        problem_types = {'error': set(), 'warning': set(), 'type_warning': set()}
+        if self.get_elements(True):
+            for element in self.elements:
+                if self.options.show_errors:
+                    for problem in element.validation_errors():
+                        problem_types['error'].add(type(problem))
+                        self.insert_pointer(problem)
+                for problem in element.validation_warnings():
+                    if isinstance(problem, ObjectTypeWarning) and self.options.show_type_warning:
+                        problem_types['type_warning'].add(type(problem))
+                        self.insert_pointer(problem)
+                    if isinstance(problem, ValidationWarning) and self.options.show_warnings:
+                        problem_types['warning'].add(type(problem))
+                        self.insert_pointer(problem)
+        return problem_types
 
     def insert_pointer(self, problem):
         correction_transform = get_correction_transform(self.troubleshoot_layer)
