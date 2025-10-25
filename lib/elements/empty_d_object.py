@@ -31,5 +31,11 @@ class EmptyDObject(EmbroideryElement):
     def first_stitch(self):
         return None
 
+    @property
+    def color(self):
+        # We are not able to sitch this element, but some method calling the element may require a color definition.
+        # So let's simply define a black color
+        return 'black'
+
     def to_stitch_groups(self, last_stitch_group, next_element=None):
         return []
