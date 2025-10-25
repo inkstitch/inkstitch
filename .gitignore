@@ -3,6 +3,7 @@ __pycache__
 *.kate-swp
 *.pyc
 *.spec
+!/packaging/fedora/*.spec
 *.zip
 *.tar.gz
 *.po
