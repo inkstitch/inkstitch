@@ -5,10 +5,10 @@
 
 import json
 import os
+import unicodedata
 from collections import defaultdict
 from copy import deepcopy
 from random import randint
-import unicodedata
 
 import inkex
 
@@ -19,6 +19,7 @@ from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
 from ..marker import ensure_marker_symbols, has_marker, is_grouped_with_marker
 from ..stitches.auto_satin import auto_satin
+from ..svg import PIXELS_PER_MM
 from ..svg.clip import get_clips
 from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
                         INKSCAPE_LABEL, INKSTITCH_ATTRIBS, SVG_GROUP_TAG,
@@ -213,7 +214,8 @@ class Font(object):
         return custom_dir in self.path
 
     def render_text(self, text, destination_group, variant=None, back_and_forth=True,  # noqa: C901
-                    trim_option=0, use_trim_symbols=False, color_sort=0, text_align=0):
+                    trim_option=0, use_trim_symbols=False, color_sort=0, text_align=0,
+                    letter_spacing=0, word_spacing=0, line_height=0):
 
         """Render text into an SVG group element."""
         self._load_variants()
@@ -238,7 +240,7 @@ class Font(object):
             if self.text_direction == "rtl":
                 line = line[::-1]
 
-            letter_group = self._render_line(destination_group, line, position, glyph_set, i)
+            letter_group = self._render_line(destination_group, line, position, glyph_set, i, letter_spacing, word_spacing)
             if ((variant == '→' and back_and_forth and self.reversible and i % 2 == 1) or
                     (variant == '←' and not (back_and_forth and self.reversible and i % 2 == 1))):
                 letter_group[:] = reversed(letter_group)
@@ -246,7 +248,7 @@ class Font(object):
                     group[:] = reversed(group)
 
             position.x = 0
-            position.y += self.leading
+            position.y += self.leading + line_height * PIXELS_PER_MM
 
             # We need to insert the destination_group now, even though it is possibly empty
             # otherwise we could run into a FragmentError in case a glyph contains commands
@@ -264,13 +266,16 @@ class Font(object):
 
             line_width = bounding_box.width
             max_line_width = max(max_line_width, line_width)
+            # text_align 0: left (default)
             if text_align == 1:
-                # align center
+                # 1: align center
                 letter_group.transform = f'translate({-line_width/2}, 0)'
             if text_align == 2:
+                # 2: align right
                 letter_group.transform = f'translate({-line_width}, 0)'
 
         if text_align in [3, 4]:
+            # 3: Block (default) 4: Block (letterspacing)
             for line_group in destination_group.iterchildren():
                 if text_align == 4 and len(line_group) == 1:
                     line_group = line_group[0]
@@ -318,7 +323,7 @@ class Font(object):
     def get_variant(self, variant):
         return self.variants.get(variant, self.variants[self.default_variant])
 
-    def _render_line(self, destination_group, line, position, glyph_set, line_number):
+    def _render_line(self, destination_group, line, position, glyph_set, line_number, letter_spacing=0, word_spacing=0):
         """Render a line of text.
 
         An SVG XML node tree will be returned, with an svg:g at its root.  If
@@ -363,11 +368,11 @@ class Font(object):
                     position.x += self.word_spacing
                     last_character = None
                     continue
-                node = self._render_glyph(destination_group, glyph, position, glyph.name, last_character, f'{line_number}-{i}-{j}')
+                node = self._render_glyph(destination_group, glyph, position, glyph.name, last_character, f'{line_number}-{i}-{j}', letter_spacing)
                 word_group.append(node)
                 last_character = glyph.name
             group.append(word_group)
-            position.x += self.word_spacing
+            position.x += self.word_spacing + word_spacing * PIXELS_PER_MM
         return group
 
     def _get_word_glyphs(self, glyph_set, word):
@@ -400,7 +405,7 @@ class Font(object):
 
         return glyphs
 
-    def _render_glyph(self, destination_group, glyph, position, character, last_character, id_extension):
+    def _render_glyph(self, destination_group, glyph, position, character, last_character, id_extension, letter_spacing=0):
         """Render a single glyph.
 
         An SVG XML node tree will be returned, with an svg:g at its root.
@@ -428,13 +433,13 @@ class Font(object):
                 if kerning is None:
                     # legacy kerning without space
                     kerning = self.kerning_pairs.get(last_character + character, 0)
-                position.x += glyph.min_x - kerning
+                position.x += glyph.min_x - kerning + letter_spacing * PIXELS_PER_MM
             else:
                 kerning = self.kerning_pairs.get(f'{character} {last_character}', None)
                 if kerning is None:
                     # legacy kerning without space
                     kerning = self.kerning_pairs.get(character + last_character, 0)
-                position.x += glyph.min_x - kerning
+                position.x += glyph.min_x - kerning + letter_spacing * PIXELS_PER_MM
 
         transform = "translate(%s, %s)" % position.as_tuple()
         node.set('transform', transform)
