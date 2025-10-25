@@ -141,6 +141,31 @@ class LetteringOptionsPanel(ScrolledPanel):
         options_sizer.Add(right_option_sizer, 0, wx.ALL, 10)
         outer_sizer.Add(options_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
+        # spacing
+        self.spacing_box = wx.StaticBox(self, wx.ID_ANY, label=_("Spacing"))
+        letter_spacing_label = wx.StaticText(self, wx.ID_ANY, _("Letter spacing"))
+        letter_spacing_label.SetToolTip(_("Additional letter spacing in mm."))
+        self.letter_spacing = wx.SpinCtrlDouble(self, min=-500, max=500, inc=0.01, initial=0, style=wx.SP_WRAP)
+        word_spacing_label = wx.StaticText(self, wx.ID_ANY, _("Word spacing"))
+        word_spacing_label.SetToolTip(_("Additional word spacing in mm."))
+        self.word_spacing = wx.SpinCtrlDouble(self, min=-500, max=500, inc=0.01, initial=0, style=wx.SP_WRAP)
+        line_height_label = wx.StaticText(self, wx.ID_ANY, _("Line height"))
+        line_height_label.SetToolTip(_("Additional line height in mm."))
+        self.line_height = wx.SpinCtrlDouble(self, min=-500, max=500, inc=0.01, initial=0, style=wx.SP_WRAP)
+
+        self.letter_spacing.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.panel.on_change("letter_spacing", event))
+        self.word_spacing.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.panel.on_change("word_spacing", event))
+        self.line_height.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.panel.on_change("line_height", event))
+
+        spacing_sizer = wx.StaticBoxSizer(self.spacing_box, wx.HORIZONTAL)
+        spacing_sizer.Add(letter_spacing_label, 0, wx.LEFT | wx.BOTTOM | wx.ALIGN_CENTRE_VERTICAL, 5)
+        spacing_sizer.Add(self.letter_spacing, 0, wx.LEFT | wx.BOTTOM, 5)
+        spacing_sizer.Add(word_spacing_label, 0, wx.LEFT | wx.BOTTOM | wx.ALIGN_CENTRE_VERTICAL, 5)
+        spacing_sizer.Add(self.word_spacing, 0, wx.LEFT | wx.BOTTOM, 5)
+        spacing_sizer.Add(line_height_label, 0, wx.LEFT | wx.BOTTOM | wx.ALIGN_CENTRE_VERTICAL, 5)
+        spacing_sizer.Add(self.line_height, 0, wx.LEFT | wx.BOTTOM | wx.RIGHT, 5)
+        outer_sizer.Add(spacing_sizer, 0, wx.ALL | wx.EXPAND, 10)
+
         # text input
         self.text_input_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
         self.text_editor = wx.TextCtrl(self, style=wx.TE_MULTILINE | wx.TE_DONTWRAP, size=(50, 100))

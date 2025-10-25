@@ -82,7 +82,10 @@ class LetteringPanel(wx.Panel):
             "scale": 100,
             "trim_option": global_settings['lettering_trim_option'],
             "use_trim_symbols": global_settings['lettering_use_command_symbols'],
-            "color_sort": 0
+            "color_sort": 0,
+            "letter_spacing": 0,
+            "word_spacing": 0,
+            "line_height": 0
         })
 
         if INKSTITCH_LETTERING in self.group.attrib:
@@ -106,6 +109,9 @@ class LetteringPanel(wx.Panel):
         self.options_panel.use_trim_symbols.SetValue(bool(self.settings.use_trim_symbols))
         self.options_panel.text_editor.SetValue(self.settings.text)
         self.options_panel.scale_spinner.SetValue(self.settings.scale)
+        self.options_panel.letter_spacing.SetValue(self.settings.letter_spacing)
+        self.options_panel.word_spacing.SetValue(self.settings.word_spacing)
+        self.options_panel.line_height.SetValue(self.settings.line_height)
         self.set_initial_font(self.settings.font)
 
     def save_settings(self):
@@ -313,7 +319,8 @@ class LetteringPanel(wx.Panel):
             font.render_text(
                 self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth,
                 trim_option=self.settings.trim_option, use_trim_symbols=self.settings.use_trim_symbols,
-                color_sort=self.settings.color_sort, text_align=self.settings.text_align
+                color_sort=self.settings.color_sort, text_align=self.settings.text_align,
+                letter_spacing=self.settings.letter_spacing, word_spacing=self.settings.word_spacing, line_height=self.settings.line_height
             )
         except FontError as e:
             if raise_error:

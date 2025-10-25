@@ -39,6 +39,16 @@
                    <option value="block">Block (default)</option>
                    <option value="letterspacing">Block (letterspacing)</option>
                 </param>
+
+                <hbox>
+                    <param name="letter_spacing" type="float" precision="2" min="-500" max="500"
+                           gui-text="Letter spacing">0</param>
+                    <param name="word_spacing" type="float" precision="2" min="-500" max="500"
+                           gui-text="Word spacing">0</param>
+                    <param name="line_height" type="float" precision="2" min="-500" max="500"
+                           gui-text="Line height">0</param>
+                </hbox>
+
               </vbox>
               <spacer />
               <separator />
