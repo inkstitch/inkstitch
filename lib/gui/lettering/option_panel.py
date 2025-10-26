@@ -158,12 +158,21 @@ class LetteringOptionsPanel(ScrolledPanel):
         self.line_height.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.panel.on_change("line_height", event))
 
         spacing_sizer = wx.StaticBoxSizer(self.spacing_box, wx.HORIZONTAL)
-        spacing_sizer.Add(letter_spacing_label, 0, wx.LEFT | wx.BOTTOM | wx.ALIGN_CENTRE_VERTICAL, 5)
-        spacing_sizer.Add(self.letter_spacing, 0, wx.LEFT | wx.BOTTOM, 5)
-        spacing_sizer.Add(word_spacing_label, 0, wx.LEFT | wx.BOTTOM | wx.ALIGN_CENTRE_VERTICAL, 5)
-        spacing_sizer.Add(self.word_spacing, 0, wx.LEFT | wx.BOTTOM, 5)
-        spacing_sizer.Add(line_height_label, 0, wx.LEFT | wx.BOTTOM | wx.ALIGN_CENTRE_VERTICAL, 5)
-        spacing_sizer.Add(self.line_height, 0, wx.LEFT | wx.BOTTOM | wx.RIGHT, 5)
+        letter_spacing_sizer = wx.BoxSizer(wx.VERTICAL)
+        letter_spacing_sizer.Add(letter_spacing_label, 0, wx.LEFT | wx.BOTTOM, 5)
+        letter_spacing_sizer.Add(self.letter_spacing, 0, wx.LEFT | wx.BOTTOM, 5)
+        spacing_sizer.Add(letter_spacing_sizer, 0, wx.ALL, 5)
+
+        word_spacing_sizer = wx.BoxSizer(wx.VERTICAL)
+        word_spacing_sizer.Add(word_spacing_label, 0, wx.LEFT | wx.BOTTOM, 5)
+        word_spacing_sizer.Add(self.word_spacing, 0, wx.LEFT | wx.BOTTOM, 5)
+        spacing_sizer.Add(word_spacing_sizer, 0, wx.ALL, 5)
+
+        line_height_sizer = wx.BoxSizer(wx.VERTICAL)
+        line_height_sizer.Add(line_height_label, 0, wx.LEFT | wx.BOTTOM, 5)
+        line_height_sizer.Add(self.line_height, 0, wx.LEFT | wx.BOTTOM | wx.RIGHT, 5)
+        spacing_sizer.Add(line_height_sizer, 0, wx.ALL, 5)
+
         outer_sizer.Add(spacing_sizer, 0, wx.ALL | wx.EXPAND, 10)
 
         # text input
