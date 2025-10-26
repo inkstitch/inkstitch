@@ -34,11 +34,11 @@ class LetteringOptionsPanel(ScrolledPanel):
         self.filter_box = wx.StaticBox(self, wx.ID_ANY, label=_("Font Filter"))
         filter_sizer = wx.StaticBoxSizer(self.filter_box, wx.HORIZONTAL)
         filter_size_label = wx.StaticText(self, wx.ID_ANY, _("Size"))
-        filter_sizer.Add(filter_size_label, 0, wx.LEFT | wx.TOP | wx.BOTTOM, 10)
+        filter_sizer.Add(filter_size_label, 0, wx.LEFT | wx.TOP | wx.BOTTOM | wx.ALIGN_CENTER_VERTICAL, 10)
         filter_sizer.AddSpacer(5)
         filter_sizer.Add(self.font_size_filter, 1, wx.RIGHT | wx.TOP | wx.BOTTOM, 10)
         filter_sizer.AddSpacer(5)
-        filter_sizer.Add(self.font_glyph_filter, 1, wx.RIGHT | wx.TOP | wx.BOTTOM, 10)
+        filter_sizer.Add(self.font_glyph_filter, 1, wx.RIGHT | wx.TOP | wx.BOTTOM | wx.ALIGN_CENTER_VERTICAL, 10)
         filter_sizer.Add(self.font_category_filter, 1, wx.RIGHT | wx.TOP | wx.BOTTOM, 10)
         outer_sizer.Add(filter_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
@@ -77,19 +77,73 @@ class LetteringOptionsPanel(ScrolledPanel):
         font_selector_sizer.Add(font_description_sizer, 0, wx.EXPAND | wx.ALL, 10)
         outer_sizer.Add(font_selector_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
-        # options
+        # sizing and alignment
         self.scale_spinner = wx.SpinCtrl(self, wx.ID_ANY, min=0, max=1000, initial=100)
-        self.scale_spinner.Bind(wx.EVT_SPINCTRL, lambda event: self.panel.on_change("scale", event))
-
-        self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
-        self.back_and_forth_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.panel.on_change("back_and_forth", event))
-
         align_text_label = wx.StaticText(self, wx.ID_ANY, _("Align Text"))
         self.align_text_choice = wx.Choice(
             self,
             choices=[_("Left"), _("Center"), _("Right"), _("Block (default)"), _("Block (letterspacing)")]
         )
+
+        self.spacing_box = wx.StaticBox(self, wx.ID_ANY, label=_("Sizing and alignment"))
+        letter_spacing_label = wx.StaticText(self, wx.ID_ANY, _("Letter spacing"))
+        letter_spacing_label.SetToolTip(_("Additional letter spacing in mm."))
+        self.letter_spacing = wx.SpinCtrlDouble(self, min=-500, max=500, inc=0.01, initial=0, style=wx.SP_WRAP)
+        word_spacing_label = wx.StaticText(self, wx.ID_ANY, _("Word spacing"))
+        word_spacing_label.SetToolTip(_("Additional word spacing in mm."))
+        self.word_spacing = wx.SpinCtrlDouble(self, min=-500, max=500, inc=0.01, initial=0, style=wx.SP_WRAP)
+        line_height_label = wx.StaticText(self, wx.ID_ANY, _("Line height"))
+        line_height_label.SetToolTip(_("Additional line height in mm."))
+        self.line_height = wx.SpinCtrlDouble(self, min=-500, max=500, inc=0.01, initial=0, style=wx.SP_WRAP)
+
+        # alignment events
+        self.scale_spinner.Bind(wx.EVT_SPINCTRL, lambda event: self.panel.on_change("scale", event))
         self.align_text_choice.Bind(wx.EVT_CHOICE, lambda event: self.panel.on_choice_change("text_align", event))
+        self.letter_spacing.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.panel.on_change("letter_spacing", event))
+        self.word_spacing.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.panel.on_change("word_spacing", event))
+        self.line_height.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.panel.on_change("line_height", event))
+
+        # alignment sizers
+        alignment_sizer = wx.StaticBoxSizer(self.spacing_box, wx.VERTICAL)
+        top_align_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        alignment_sizer.Add(top_align_sizer, 0, wx.TOP | wx.LEFT | wx.RIGHT, 5)
+        spacing_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        alignment_sizer.Add(spacing_sizer, 0, wx.ALL, 5)
+        outer_sizer.Add(alignment_sizer, 0, wx.ALL | wx.EXPAND, 10)
+
+        font_scale_sizer = wx.BoxSizer(wx.VERTICAL)
+        font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, _("Scale")), 0, wx.LEFT, 5)
+        font_scale_spinner_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        font_scale_spinner_sizer.Add(self.scale_spinner, 0, wx.LEFT, 5)
+        font_scale_spinner_sizer.Add(wx.StaticText(self, wx.ID_ANY, "%"), 0, wx.LEFT | wx.ALIGN_CENTER_VERTICAL, 3)
+        font_scale_sizer.Add(font_scale_spinner_sizer, 0, wx.TOP, 5)
+        top_align_sizer.Add(font_scale_sizer, 1, wx.ALL, 5)
+
+        text_align_sizer = wx.BoxSizer(wx.VERTICAL)
+        text_align_sizer.Add(align_text_label, 0, wx.ALL, 0)
+        text_align_spinner_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        text_align_spinner_sizer.Add(self.align_text_choice, 0, wx.ALL, 0)
+        text_align_sizer.Add(text_align_spinner_sizer, 0, wx.TOP, 5)
+        top_align_sizer.Add(text_align_sizer, 0, wx.ALL, 5)
+
+        letter_spacing_sizer = wx.BoxSizer(wx.VERTICAL)
+        letter_spacing_sizer.Add(letter_spacing_label, 0, wx.BOTTOM, 5)
+        letter_spacing_sizer.Add(self.letter_spacing, 0, wx.ALL, 0)
+        spacing_sizer.Add(letter_spacing_sizer, 0, wx.ALL, 5)
+
+        word_spacing_sizer = wx.BoxSizer(wx.VERTICAL)
+        word_spacing_sizer.Add(word_spacing_label, 0, wx.BOTTOM, 5)
+        word_spacing_sizer.Add(self.word_spacing, 0, wx.ALL, 0)
+        spacing_sizer.Add(word_spacing_sizer, 0, wx.ALL, 5)
+
+        line_height_sizer = wx.BoxSizer(wx.VERTICAL)
+        line_height_sizer.Add(line_height_label, 0, wx.BOTTOM, 5)
+        line_height_sizer.Add(self.line_height, 0, wx.ALL, 0)
+        spacing_sizer.Add(line_height_sizer, 0, wx.ALL, 5)
+
+        # options
+        self.back_and_forth_checkbox = wx.CheckBox(self, label=_("Stitch lines of text back and forth"))
+        self.back_and_forth_checkbox.Bind(wx.EVT_CHECKBOX, lambda event: self.panel.on_change("back_and_forth", event))
 
         color_sort_label = wx.StaticText(self, wx.ID_ANY, _("Color sort"))
         color_sort_label.SetToolTip(_("Sort multicolor fonts. Unifies tartan patterns."))
@@ -107,26 +161,14 @@ class LetteringOptionsPanel(ScrolledPanel):
         self.use_trim_symbols.SetToolTip(_('Uses command symbols if enabled. When disabled inserts trim commands as params.'))
 
         left_option_sizer = wx.BoxSizer(wx.VERTICAL)
-
-        font_scale_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, _("Scale")), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 0)
-        font_scale_sizer.Add(self.scale_spinner, 0, wx.LEFT, 10)
-        font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, "%"), 0, wx.LEFT | wx.ALIGN_CENTRE_VERTICAL, 3)
-        left_option_sizer.Add(font_scale_sizer, 0, wx.ALL, 5)
-
-        left_option_sizer.Add(self.back_and_forth_checkbox, 1, wx.LEFT | wx.TOP | wx.RIGHT, 5)
-
-        align_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        align_sizer.Add(align_text_label, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 5)
-        align_sizer.Add(self.align_text_choice, 0, wx.ALL, 5)
-        left_option_sizer.Add(align_sizer, 0, wx.ALL, 5)
-
-        right_option_sizer = wx.BoxSizer(wx.VERTICAL)
+        left_option_sizer.Add(self.back_and_forth_checkbox, 1, wx.TOP | wx.RIGHT, 5)
 
         color_sort_sizer = wx.BoxSizer(wx.HORIZONTAL)
         color_sort_sizer.Add(color_sort_label, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 5)
         color_sort_sizer.Add(self.color_sort_choice, 1, wx.ALL, 5)
-        right_option_sizer.Add(color_sort_sizer, 0, wx.ALIGN_LEFT, 5)
+        left_option_sizer.Add(color_sort_sizer, 0, wx.ALIGN_LEFT, 0)
+
+        right_option_sizer = wx.BoxSizer(wx.VERTICAL)
 
         trim_sizer = wx.BoxSizer(wx.HORIZONTAL)
         trim_sizer.Add(trim_label, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 5)
@@ -135,45 +177,11 @@ class LetteringOptionsPanel(ScrolledPanel):
 
         right_option_sizer.Add(self.use_trim_symbols, 0, wx.LEFT | wx.BOTTOM | wx.RIGHT, 5)
 
-        self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Options"))
+        self.options_box = wx.StaticBox(self, wx.ID_ANY, label=_("Embroidery settings"))
         options_sizer = wx.StaticBoxSizer(self.options_box, wx.HORIZONTAL)
         options_sizer.Add(left_option_sizer, 1, wx.ALL, 10)
         options_sizer.Add(right_option_sizer, 0, wx.ALL, 10)
         outer_sizer.Add(options_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
-
-        # spacing
-        self.spacing_box = wx.StaticBox(self, wx.ID_ANY, label=_("Spacing"))
-        letter_spacing_label = wx.StaticText(self, wx.ID_ANY, _("Letter spacing"))
-        letter_spacing_label.SetToolTip(_("Additional letter spacing in mm."))
-        self.letter_spacing = wx.SpinCtrlDouble(self, min=-500, max=500, inc=0.01, initial=0, style=wx.SP_WRAP)
-        word_spacing_label = wx.StaticText(self, wx.ID_ANY, _("Word spacing"))
-        word_spacing_label.SetToolTip(_("Additional word spacing in mm."))
-        self.word_spacing = wx.SpinCtrlDouble(self, min=-500, max=500, inc=0.01, initial=0, style=wx.SP_WRAP)
-        line_height_label = wx.StaticText(self, wx.ID_ANY, _("Line height"))
-        line_height_label.SetToolTip(_("Additional line height in mm."))
-        self.line_height = wx.SpinCtrlDouble(self, min=-500, max=500, inc=0.01, initial=0, style=wx.SP_WRAP)
-
-        self.letter_spacing.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.panel.on_change("letter_spacing", event))
-        self.word_spacing.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.panel.on_change("word_spacing", event))
-        self.line_height.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.panel.on_change("line_height", event))
-
-        spacing_sizer = wx.StaticBoxSizer(self.spacing_box, wx.HORIZONTAL)
-        letter_spacing_sizer = wx.BoxSizer(wx.VERTICAL)
-        letter_spacing_sizer.Add(letter_spacing_label, 0, wx.LEFT | wx.BOTTOM, 5)
-        letter_spacing_sizer.Add(self.letter_spacing, 0, wx.LEFT | wx.BOTTOM, 5)
-        spacing_sizer.Add(letter_spacing_sizer, 0, wx.ALL, 5)
-
-        word_spacing_sizer = wx.BoxSizer(wx.VERTICAL)
-        word_spacing_sizer.Add(word_spacing_label, 0, wx.LEFT | wx.BOTTOM, 5)
-        word_spacing_sizer.Add(self.word_spacing, 0, wx.LEFT | wx.BOTTOM, 5)
-        spacing_sizer.Add(word_spacing_sizer, 0, wx.ALL, 5)
-
-        line_height_sizer = wx.BoxSizer(wx.VERTICAL)
-        line_height_sizer.Add(line_height_label, 0, wx.LEFT | wx.BOTTOM, 5)
-        line_height_sizer.Add(self.line_height, 0, wx.LEFT | wx.BOTTOM | wx.RIGHT, 5)
-        spacing_sizer.Add(line_height_sizer, 0, wx.ALL, 5)
-
-        outer_sizer.Add(spacing_sizer, 0, wx.ALL | wx.EXPAND, 10)
 
         # text input
         self.text_input_box = wx.StaticBox(self, wx.ID_ANY, label=_("Text"))
