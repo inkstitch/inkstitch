@@ -42,6 +42,9 @@ class BatchLettering(InkstitchExtension):
         self.arg_parser.add_argument('--trim', type=str, default='off', dest='trim')
         self.arg_parser.add_argument('--use-command-symbols', type=Boolean, default=False, dest='command_symbols')
         self.arg_parser.add_argument('--text-align', type=str, default='left', dest='text_align')
+        self.arg_parser.add_argument('--letter_spacing', type=float, default=0, dest='letter_spacing')
+        self.arg_parser.add_argument('--word_spacing', type=float, default=0, dest='word_spacing')
+        self.arg_parser.add_argument('--line_height', type=float, default=0, dest='line_height')
 
         self.arg_parser.add_argument('--text-position', type=str, default='left', dest='text_position')
 
@@ -60,7 +63,7 @@ class BatchLettering(InkstitchExtension):
         if not self.options.font:
             errormsg(_("Please specify a font"))
             return
-        self.font = get_font_by_name(self.options.font)
+        self.font = get_font_by_name(self.options.font, False)
         if self.font is None:
             errormsg(_("Please specify a valid font name."))
             errormsg(_("You can find a list with all font names on our website: https://inkstitch.org/fonts/font-library/"))
@@ -194,10 +197,13 @@ class BatchLettering(InkstitchExtension):
             "text_align": self.text_align,
             "back_and_forth": True,
             "font": self.font.marked_custom_font_id,
-            "scale": self.scale * 100,
+            "scale": int(self.scale * 100),
             "trim_option": self.trim,
             "use_trim_symbols": self.options.command_symbols,
-            "color_sort": self.color_sort
+            "color_sort": self.color_sort,
+            "letter_spacing": self.options.letter_spacing,
+            "word_spacing": self.options.word_spacing,
+            "line_height": self.options.line_height
         })
 
         lettering_group = Group()
@@ -216,7 +222,10 @@ class BatchLettering(InkstitchExtension):
             trim_option=self.trim,
             use_trim_symbols=self.options.command_symbols,
             color_sort=self.color_sort,
-            text_align=self.text_align
+            text_align=self.text_align,
+            letter_spacing=self.options.letter_spacing,
+            word_spacing=self.options.word_spacing,
+            line_height=self.options.line_height
         )
 
         destination_group.attrib['transform'] = f'scale({self.scale})'

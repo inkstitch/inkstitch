@@ -72,11 +72,7 @@ class TextAlongPath:
         self.text = text
         self.path = Stroke(path).as_multi_line_string().geoms[0]
         self.text_position = text_position
-
-        self.glyphs = [glyph for glyph in self.text.iterdescendants(SVG_GROUP_TAG) if glyph.get('inkstitch:letter-group', '') == 'glyph']
-        if not self.glyphs:
-            errormsg(_("The text doesn't contain any glyphs."))
-            return
+        self.glyphs = []
 
         self.load_settings()
         self.font = get_font_by_id(self.settings.font, False)
@@ -86,6 +82,10 @@ class TextAlongPath:
 
         self.font_scale = self.settings.scale / 100
         self._reset_glyph_transforms()
+
+        if not self.glyphs:
+            errormsg(_("The text doesn't contain any glyphs."))
+            return
 
         hidden_commands = self.hide_commands()
         self.glyphs_along_path()
@@ -109,8 +109,14 @@ class TextAlongPath:
                 None,  # we don't know the font variant (?)
                 self.settings.back_and_forth,
                 self.settings.trim_option,
-                self.settings.use_trim_symbols
+                self.settings.use_trim_symbols,
+                0,  # color sort breaks the glyph structure needed for this method
+                self.settings.text_align,
+                self.settings.letter_spacing,
+                self.settings.word_spacing,
+                self.settings.line_height
             )
+
             self.glyphs = [glyph for glyph in rendered_text.iterdescendants(SVG_GROUP_TAG) if glyph.get('inkstitch:letter-group', '') == 'glyph']
             self.bake_transforms_recursively(text_group)
 
@@ -230,7 +236,12 @@ class TextAlongPath:
             "font": None,
             "scale": 100,
             "trim_option": 0,
-            "use_trim_symbols": False
+            "use_trim_symbols": False,
+            "color_sort": 0,
+            "text_align": 0,
+            "letter_spacing": 0,
+            "word_spacing": 0,
+            "line_height": 0
         })
 
         if INKSTITCH_LETTERING in self.text.attrib:
