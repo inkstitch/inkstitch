@@ -275,9 +275,9 @@ class FillElementToSatin:
                         if len(rung_list) != 2:
                             continue
                         for rung in s_rungs:
+                            if bridge in used_bridges:
+                                continue
                             if rung in rung_list:
-                                if bridge in used_bridges:
-                                    continue
                                 rung1 = rung_list[0]
                                 rung2 = rung_list[1]
                                 segment = self._get_bridged_segment(rung1, rung2, intersection_points, line_section_multi)
@@ -294,6 +294,21 @@ class FillElementToSatin:
                 # IF users define their rungs well, they won't have a problem if we just ignore these sections
                 # otherwise they will see some sort of gap, they can close it manually if they want
                 pass
+
+        # create segments for unused bridge segments
+        unused_bridges = set(self.bridged_rungs.keys()) - set(used_bridges)
+        if unused_bridges:
+            for bridge in unused_bridges:
+                rungs = self.bridged_rungs[bridge]
+                if len(rungs) != 2:
+                    continue
+                segment = self._get_bridged_segment(rungs[0], rungs[1], intersection_points, line_section_multi)
+                if not segment:
+                    continue
+                satin_segments.append(segment)
+                rung_segments[rungs[0]].append(segment_index)
+                rung_segments[rungs[1]].append(segment_index)
+                segment_index += 1
         return rung_segments, satin_segments
 
     def _get_bridged_segment(self, rung1, rung2, intersection_points, line_section_multi):
@@ -485,8 +500,7 @@ class FillElementToSatin:
                 # these rungs (possibly) connect two rungs
                 bridges.append(rung)
             elif intersection.geom_type == 'Point':
-                # half rungs will can mark a bridge endpoint at an open end within the shape
-                # intersection_points.append(intersection)
+                # half rungs can mark a bridge endpoint at an open end within the shape
                 half_rungs.append(rung)
         # filter rungs when they are crossing other rungs. They could possibly produce bad line sections
         for i, rung in enumerate(rungs):
@@ -511,9 +525,10 @@ class FillElementToSatin:
         multi_rung = MultiLineString(self.rungs)
         # find elements marked as bridges, but don't intersect with any other rung.
         # they may be rungs drawn inside of a shape, so let's add them to the rungs and see if they are helpful
-        for bridge in bridges:
+        for i, bridge in enumerate(bridges):
             rung_intersections = bridge.intersection(multi_rung)
-            if rung_intersections.is_empty:
+            bridge_intersections = bridge.intersection(MultiLineString([b for j, b in enumerate(bridges) if j != i]))
+            if rung_intersections.is_empty and not bridge_intersections.geom_type == "MultiPoint":
                 # doesn't intersect with any rungs, so it is a rung itself (when bridged)
                 self.half_rungs.append(len(self.rungs))
                 self.rungs.append(bridge)
@@ -534,7 +549,6 @@ class FillElementToSatin:
                         distance1 = bridge.project(point1) - 0.1
                         distance2 = bridge.project(point2) + 0.1
                         validated_bridges.append(substring(bridge, distance1, distance2))
-                    validated_bridges.append(bridge)
             elif rung_intersections.geom_type == "Point":
                 # bridges a rung within the shape
                 validated_bridges.append(bridge)
