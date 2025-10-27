@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-10-25 01:41+0000\n"
-"PO-Revision-Date: 2025-10-25 01:42\n"
+"PO-Revision-Date: 2025-10-27 01:55\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -3331,23 +3331,23 @@ msgstr "Verwendetes Garn"
 
 #: lib/extensions/troubleshoot.py:50
 msgid "All selected shapes are valid!"
-msgstr ""
+msgstr "Es wurden keine Fehler für ausgewählte Elemente gefunden!"
 
 #: lib/extensions/troubleshoot.py:52
 msgid "Checked for:\n"
-msgstr ""
+msgstr "Überprüft wurden folgende Warnstufen:\n"
 
 #: lib/extensions/troubleshoot.py:54
 msgid "* errors\n"
-msgstr ""
+msgstr "* Fehler\n"
 
 #: lib/extensions/troubleshoot.py:56
 msgid "* warnings\n"
-msgstr ""
+msgstr "* Warnungen\n"
 
 #: lib/extensions/troubleshoot.py:58
 msgid "* type_warnings"
-msgstr ""
+msgstr "* Objekttyp-Warnungen"
 
 #: lib/extensions/troubleshoot.py:60
 msgid "If you are still having trouble with a shape not being embroidered, check if it is in a layer with an ignore command."
@@ -3355,7 +3355,7 @@ msgstr "Wenn ein Objekt nicht gestickt wird, überprüfe ob es sich in einer Ebe
 
 #: lib/extensions/troubleshoot.py:63
 msgid "No warnings found for selected shapes!"
-msgstr ""
+msgstr "Es wurden keine Warnungen für die ausgewählten Objekte gefunden!"
 
 #: lib/extensions/troubleshoot.py:109
 msgid "Invalid Pointer"
@@ -6975,19 +6975,19 @@ msgstr "Vor dem Ausführen dieser Funktion bitte eine Ink/Stitch-Textgruppe und 
 
 #: inx/inkstitch_lettering_along_path.inx:29
 msgid "⚠ The text width should not be longer than the path ⚠"
-msgstr ""
+msgstr "⚠ Der Text sollte nicht länger sein als der Pfad ⚠"
 
 #: inx/inkstitch_lettering_along_path.inx:31
 msgid "Text position:"
-msgstr ""
+msgstr "Textposition:"
 
 #: inx/inkstitch_lettering_along_path.inx:32
 msgid "Text can be positioned at the start, end or center of the path."
-msgstr ""
+msgstr "Text kann entweder am Anfang, am Ende oder in der Mitte des Pfades positioniert werden."
 
 #: inx/inkstitch_lettering_along_path.inx:33
 msgid "When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path."
-msgstr ""
+msgstr "Ist die Funktion \"Ausdehnen\" aktiviert, werden Zeichen- und Wortabstände so angepasst, dass sich der Text über den gesamten Pfad hin erstreckt."
 
 #: inx/inkstitch_lettering_along_path.inx:36
 msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
@@ -8393,19 +8393,19 @@ msgstr "Fehlerbehebung an Objekten"
 
 #: inx/inkstitch_troubleshoot.inx:13
 msgid "Problems that may lead to incorrect stitch paths."
-msgstr ""
+msgstr "Probleme, die zu einem fehlerhaften Stickpfad führen können."
 
 #: inx/inkstitch_troubleshoot.inx:15
 msgid "Object type warning"
-msgstr ""
+msgstr "Objekttypwarnungen"
 
 #: inx/inkstitch_troubleshoot.inx:15
 msgid "Warns about unemboiderable object types."
-msgstr ""
+msgstr "Warnt über nicht stickbare Objekttypen."
 
 #: inx/inkstitch_troubleshoot.inx:19
 msgid "Size settings"
-msgstr ""
+msgstr "Größeneinstellungen"
 
 #: inx/inkstitch_troubleshoot.inx:20
 msgid "Pointer size (mm)"
