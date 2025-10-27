@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Apply attribute</name>
+    <id>org.{{ id_inkstitch }}.apply_attribute</id>
+    <param name="extension" type="string" gui-hidden="true">apply_attribute</param>
+    <effect>
+        <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/apply_attribute.svg</icon>
+        <menu-tip>Applies a custom attribute to multiple elements</menu-tip>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Edit" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <param name="notebook" type="notebook">
+      <page name="options" gui-text="Options">
+        <param name="namespace" type="string" gui-text="Namespace">inkstitch</param>
+        <param name="key" type="string" gui-text="Attribute"></param>
+        <param name="value" type="string" gui-text="Value"></param>
+        <spacer />
+        <param name="remove" type="boolean" gui-text="Remove attribute">false</param>
+      </page>
+      <page name="info" gui-text="Help">
+        <label appearance="header">This extension sets a custom attribute to all selected elements.</label>
+        <spacer/>
+        <label>It is an extension for experienced users.</label>
+        <spacer/>
+        <label appearance="url">https://inkstitch.org/docs/edit/#apply-attribute</label>
+      </page>
+    </param>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
