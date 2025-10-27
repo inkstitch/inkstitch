@@ -78,6 +78,7 @@ class LetteringOptionsPanel(ScrolledPanel):
         outer_sizer.Add(font_selector_sizer, 0, wx.EXPAND | wx.LEFT | wx.TOP | wx.RIGHT, 10)
 
         # sizing and alignment
+        scale_spinner_label = wx.StaticText(self, wx.ID_ANY, _("Scale (%)"))
         self.scale_spinner = wx.SpinCtrl(self, wx.ID_ANY, min=0, max=1000, initial=100)
         align_text_label = wx.StaticText(self, wx.ID_ANY, _("Align Text"))
         self.align_text_choice = wx.Choice(
@@ -86,13 +87,13 @@ class LetteringOptionsPanel(ScrolledPanel):
         )
 
         self.spacing_box = wx.StaticBox(self, wx.ID_ANY, label=_("Sizing and alignment"))
-        letter_spacing_label = wx.StaticText(self, wx.ID_ANY, _("Letter spacing"))
+        letter_spacing_label = wx.StaticText(self, wx.ID_ANY, _("Letter spacing (mm)"))
         letter_spacing_label.SetToolTip(_("Additional letter spacing in mm."))
         self.letter_spacing = wx.SpinCtrlDouble(self, min=-500, max=500, inc=0.01, initial=0, style=wx.SP_WRAP)
-        word_spacing_label = wx.StaticText(self, wx.ID_ANY, _("Word spacing"))
+        word_spacing_label = wx.StaticText(self, wx.ID_ANY, _("Word spacing (mm)"))
         word_spacing_label.SetToolTip(_("Additional word spacing in mm."))
         self.word_spacing = wx.SpinCtrlDouble(self, min=-500, max=500, inc=0.01, initial=0, style=wx.SP_WRAP)
-        line_height_label = wx.StaticText(self, wx.ID_ANY, _("Line height"))
+        line_height_label = wx.StaticText(self, wx.ID_ANY, _("Line height (mm)"))
         line_height_label.SetToolTip(_("Additional line height in mm."))
         self.line_height = wx.SpinCtrlDouble(self, min=-500, max=500, inc=0.01, initial=0, style=wx.SP_WRAP)
 
@@ -112,11 +113,8 @@ class LetteringOptionsPanel(ScrolledPanel):
         outer_sizer.Add(alignment_sizer, 0, wx.ALL | wx.EXPAND, 10)
 
         font_scale_sizer = wx.BoxSizer(wx.VERTICAL)
-        font_scale_sizer.Add(wx.StaticText(self, wx.ID_ANY, _("Scale")), 0, wx.LEFT, 5)
-        font_scale_spinner_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        font_scale_spinner_sizer.Add(self.scale_spinner, 0, wx.LEFT, 5)
-        font_scale_spinner_sizer.Add(wx.StaticText(self, wx.ID_ANY, "%"), 0, wx.LEFT | wx.ALIGN_CENTER_VERTICAL, 3)
-        font_scale_sizer.Add(font_scale_spinner_sizer, 0, wx.TOP, 5)
+        font_scale_sizer.Add(scale_spinner_label, 0, wx.LEFT, 0)
+        font_scale_sizer.Add(self.scale_spinner, 0, wx.TOP, 6)
         top_align_sizer.Add(font_scale_sizer, 1, wx.ALL, 5)
 
         text_align_sizer = wx.BoxSizer(wx.VERTICAL)
