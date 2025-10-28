@@ -6,14 +6,14 @@
 from collections import defaultdict
 
 from inkex import Boolean, Group, Path, PathElement
-from shapely.geometry import LineString, MultiLineString, Point
+from shapely.geometry import LineString, MultiLineString, MultiPoint, Point
 from shapely.ops import linemerge, snap, split, substring
 
 from ..elements import FillStitch, Stroke
 from ..gui.abort_message import AbortMessageApp
 from ..i18n import _
 from ..svg import get_correction_transform
-from ..utils import ensure_multi_line_string
+from ..utils import ensure_multi_line_string, roll_linear_ring
 from .base import InkstitchExtension
 
 
@@ -222,7 +222,11 @@ class FillElementToSatin:
             for segment_index in set(segments):
                 segment_geoms.extend(list(satin_segments[segment_index].geoms))
             satin_rails = ensure_multi_line_string(linemerge(segment_geoms))
-            if len(satin_rails.geoms) != 2:
+            if len(satin_rails.geoms) == 1:
+                satin_rails = self._fix_single_rail_issue(satin_rails, segments, satin_segments, set(combined_rungs[i]))
+                if satin_rails is None:
+                    continue
+            elif len(satin_rails.geoms) != 2:
                 continue
             satin_rails = [self._adjust_rail_direction(satin_rails)]
             segment_geoms = []
@@ -233,6 +237,63 @@ class FillElementToSatin:
                     segment_geoms.append(ensure_multi_line_string(rung))
             combined_satins.append(satin_rails + segment_geoms)
         return combined_satins
+
+    def _fix_single_rail_issue(self, satin_rails, segments, satin_segments, combined_rungs):
+        # This is a special case where the two satin rails have been combined into one.
+        # It can happen if we try to convert for example a B with a single satin column
+        # (it starts and ends at the center).
+        #      ---
+        #     |   \
+        #     |   /
+        #     |==x
+        #     |   \
+        #     |   /
+        #     ---
+        # We can face two situations:
+        # 1. the rung at the intersection is within the combined_rungs, in this case we need to watch out for a rung which is bridged twice
+        # 2. the rung isn't within the selection, adjacing bridged segments have only one connecting rung
+
+        # Case 1: the rung is within the selection and is bridged twice
+        intersection = self._fix_single_rail_issue_rung_included(satin_rails, combined_rungs)
+        if intersection.is_empty:
+            # Case 2: check for segments with only one adjacent rung
+            intersection = self._fix_single_rail_issue_rung_excluded(satin_segments, segments, combined_rungs)
+        if intersection.geom_type == 'MultiPoint':
+            position = satin_rails.project(intersection.geoms[0])
+            satin_rails = LineString(roll_linear_ring(satin_rails.geoms[0], position))
+            return ensure_multi_line_string(split(satin_rails, intersection))
+        return None
+
+    def _fix_single_rail_issue_rung_included(self, satin_rails, combined_rungs):
+        for rung in combined_rungs:
+            rung_bridges = []
+            for bridge, rungs in self.bridged_rungs.items():
+                if rung in rungs:
+                    rung_bridges.append(1)
+            if len(rung_bridges) > 1:
+                rung_geom = snap(self.rungs[rung], satin_rails, 0.001)
+                return satin_rails.intersection(rung_geom)
+        return Point()
+
+    def _fix_single_rail_issue_rung_excluded(self, satin_segments, segments, combined_rungs):
+        single_rung_segments = []
+        for segment_index in set(segments):
+            geom = satin_segments[segment_index]
+            segment_rungs = []
+            for rung_index in combined_rungs:
+                if geom.distance(self.rungs[rung_index]) < 0.001:
+                    segment_rungs.append(rung_index)
+            if len(segment_rungs) == 1:
+                single_rung_segments.append(geom)
+        if len(single_rung_segments) == 2:
+            points = []
+            for seg in single_rung_segments:
+                segment_end_points = []
+                for g in seg.geoms:
+                    segment_end_points.extend([g.coords[0], g.coords[-1]])
+                points.append(segment_end_points)
+            return MultiPoint(points[0]).intersection(MultiPoint(points[1]))
+        return Point()
 
     def _get_segments(self, intersection_points):  # noqa: C901
         '''Combine line sections to satin segments (find the rails that belong together)'''
