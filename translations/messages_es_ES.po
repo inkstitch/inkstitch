@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-25 01:41+0000\n"
-"PO-Revision-Date: 2025-10-25 01:42\n"
+"POT-Creation-Date: 2025-10-28 01:43+0000\n"
+"PO-Revision-Date: 2025-10-28 01:43\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-25 01:41+0000\n"
+"POT-Creation-Date: 2025-10-28 01:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1256,7 +1256,7 @@ msgstr "Deténgase después"
 msgid "Add a STOP command after stitching this object."
 msgstr "Añade un comando PARAR después de coser este objeto."
 
-#: lib/elements/element.py:738
+#: lib/elements/element.py:741
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Por favor, ejecute Extensiones > Ink/Stitch > Solucionar problemas > Solucionar problemas de objetos. Esto le mostrará la ubicación exacta del problema."
 
@@ -2520,7 +2520,7 @@ msgstr "plano"
 msgid "point"
 msgstr "punto"
 
-#: lib/elements/text.py:13 lib/gui/lettering/option_panel.py:145
+#: lib/elements/text.py:13 lib/gui/lettering/option_panel.py:185
 #: inx/inkstitch_batch_lettering.inx:13
 msgid "Text"
 msgstr "Texto"
@@ -2560,6 +2560,18 @@ msgstr "Si quieres ayudar, por favor:\n"
 #: lib/exceptions.py:61
 msgid "Include the error description and also (if possible) the svg file."
 msgstr "Incluye una descripción del error y (si es posible) el archivo SVG."
+
+#: lib/extensions/apply_attribute.py:27 lib/extensions/element_info.py:20
+msgid "Please select at least one element."
+msgstr "Por favor, seleccione al menos un elemento."
+
+#: lib/extensions/apply_attribute.py:31
+msgid "Please enter the attribute name."
+msgstr ""
+
+#: lib/extensions/apply_attribute.py:44
+msgid "Please enter a value."
+msgstr ""
 
 #: lib/extensions/apply_palette.py:25
 msgid "There is no stitchable element in the document."
@@ -2626,40 +2638,40 @@ msgstr "No hay objetos en todo el documento con los que Ink/Stitch sepa cómo tr
 msgid "Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects"
 msgstr "Consejo: Ejecute Extensiones > Ink/Stitch > Solucionar problemas > Solucionar problemas de Objetos"
 
-#: lib/extensions/batch_lettering.py:56
+#: lib/extensions/batch_lettering.py:59
 msgid "Please specify a text"
 msgstr "Por favor, especifica un texto"
 
-#: lib/extensions/batch_lettering.py:61
+#: lib/extensions/batch_lettering.py:64
 msgid "Please specify a font"
 msgstr "Por favor, especifica una fuente"
 
-#: lib/extensions/batch_lettering.py:65
+#: lib/extensions/batch_lettering.py:68
 msgid "Please specify a valid font name."
 msgstr "Por favor, especifica un nombre de fuente válido."
 
-#: lib/extensions/batch_lettering.py:66
+#: lib/extensions/batch_lettering.py:69
 msgid "You can find a list with all font names on our website: https://inkstitch.org/fonts/font-library/"
 msgstr ""
 
-#: lib/extensions/batch_lettering.py:70
+#: lib/extensions/batch_lettering.py:73
 msgid "Please specify at least one output file format"
 msgstr "Por favor, especifica al menos un formato de archivo de salida"
 
-#: lib/extensions/batch_lettering.py:76
+#: lib/extensions/batch_lettering.py:79
 msgid "Please specify at least one file format supported by Ink/Stitch"
 msgstr "Por favor, especifica al menos un formato de archivo compatible con Ink/Stitch"
 
-#: lib/extensions/batch_lettering.py:77
+#: lib/extensions/batch_lettering.py:80
 msgid "You can find a list with all supported file formats our website: https://inkstitch.org/docs/file-formats/#writing"
 msgstr ""
 
-#: lib/extensions/batch_lettering.py:204 lib/extensions/lettering.py:60
+#: lib/extensions/batch_lettering.py:210 lib/extensions/lettering.py:60
 #: lib/extensions/lettering.py:71
 msgid "Ink/Stitch Lettering"
 msgstr "Letras de Ink/Stitch"
 
-#: lib/extensions/batch_lettering.py:210 lib/gui/lettering/main_panel.py:311
+#: lib/extensions/batch_lettering.py:216 lib/gui/lettering/main_panel.py:317
 msgid "scale"
 msgstr "Escala"
 
@@ -2687,13 +2699,13 @@ msgstr "{num_elements_removed} elementos removidos"
 msgid "{num_groups_removed} groups/layers removed"
 msgstr "{num_groups_removed} grupos/capas removidos"
 
-#: lib/extensions/cut_satin.py:20
+#: lib/extensions/cut_satin.py:21
 msgid "Please select one or more satin columns to cut."
 msgstr "Seleccione una o más columnas satinadas para cortar."
 
 #. will have the satin's id prepended, like this:
 #. path12345: error: this satin column does not ...
-#: lib/extensions/cut_satin.py:30
+#: lib/extensions/cut_satin.py:38
 msgid "this satin column does not have a \"satin column cut point\" command attached to it. Please use the \"Attach commands\" extension and attach the \"Satin Column cut point\" command first."
 msgstr "esta columna de satín no tiene un comando de \"punto de corte de columna de satín\" adjunto. Utilice la extensión \"Adjuntar comandos\" y adjunte primero el comando \"Punto de corte de columna de satín\"."
 
@@ -2738,10 +2750,6 @@ msgstr "Orden de apilamiento"
 #: lib/extensions/duplicate_params.py:18
 msgid "This function copies Ink/Stitch parameters from the first selected element to the rest of the selection. Please select at least two elements."
 msgstr "Esta función copia los parámetros de Ink/Stitch del primer elemento seleccionado al resto de la selección. Seleccione al menos dos elementos."
-
-#: lib/extensions/element_info.py:20
-msgid "Please select at least one element."
-msgstr "Por favor, seleccione al menos un elemento."
 
 #: lib/extensions/element_info.py:21
 msgid "https://inkstitch.org/docs/troubleshoot/#element-info"
@@ -2928,13 +2936,13 @@ msgstr ""
 msgid "Please select one path and one Ink/Stitch lettering group."
 msgstr "Por favor, selecciona un trazado y un grupo de texto de Ink/Stitch."
 
-#: lib/extensions/lettering_along_path.py:78
-msgid "The text doesn't contain any glyphs."
-msgstr "El texto no contiene ningún glifo."
-
-#: lib/extensions/lettering_along_path.py:84
+#: lib/extensions/lettering_along_path.py:80
 msgid "Couldn't identify the font specified in the lettering group."
 msgstr "No se pudo identificar la fuente especificada en el grupo de texto."
+
+#: lib/extensions/lettering_along_path.py:87
+msgid "The text doesn't contain any glyphs."
+msgstr "El texto no contiene ningún glifo."
 
 #: lib/extensions/lettering_custom_font_dir.py:28
 msgid "Please specify the directory of your custom fonts."
@@ -3474,11 +3482,12 @@ msgstr "Aplicar"
 #: lib/gui/element_info.py:42 lib/gui/lettering/main_panel.py:47
 #: lib/gui/lettering_font_sample.py:83
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
-#: lib/gui/test_swatches.py:83 inx/inkstitch_apply_threadlist.inx:89
-#: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:16
-#: inx/inkstitch_batch_lettering.inx:62 inx/inkstitch_break_apart.inx:14
-#: inx/inkstitch_cleanup.inx:25 inx/inkstitch_cutwork_segmentation.inx:44
-#: inx/inkstitch_density_map.inx:26 inx/inkstitch_display_stacking_order.inx:11
+#: lib/gui/test_swatches.py:83 inx/inkstitch_apply_attribute.inx:24
+#: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:25
+#: inx/inkstitch_auto_satin.inx:16 inx/inkstitch_batch_lettering.inx:72
+#: inx/inkstitch_break_apart.inx:14 inx/inkstitch_cleanup.inx:25
+#: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
+#: inx/inkstitch_display_stacking_order.inx:11
 #: inx/inkstitch_fill_to_satin.inx:24 inx/inkstitch_fill_to_stroke.inx:24
 #: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
 #: inx/inkstitch_install.inx:14 inx/inkstitch_install_custom_palette.inx:14
@@ -3663,7 +3672,7 @@ msgstr "Información"
 msgid "Name"
 msgstr "Nombre"
 
-#: lib/gui/element_info.py:35
+#: lib/gui/element_info.py:35 inx/inkstitch_apply_attribute.inx:20
 msgid "Value"
 msgstr "Valor"
 
@@ -3691,11 +3700,11 @@ msgstr "En nuestro sitio web puedes encontrar una biblioteca de fuentes con desc
 msgid "https://inkstitch.org/fonts/font-library/"
 msgstr ""
 
-#: lib/gui/lettering/main_panel.py:243
+#: lib/gui/lettering/main_panel.py:249
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Esta fuente no tiene ninguna variante de fuente disponible. Actualice o elimine la fuente."
 
-#: lib/gui/lettering/main_panel.py:320
+#: lib/gui/lettering/main_panel.py:327
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
@@ -3733,96 +3742,123 @@ msgstr "Escala:"
 msgid "Font"
 msgstr "Fuente"
 
-#: lib/gui/lettering/option_panel.py:84
-msgid "Stitch lines of text back and forth"
-msgstr "Unir líneas de texto de un lado a otro"
-
-#: lib/gui/lettering/option_panel.py:87
+#: lib/gui/lettering/option_panel.py:83
 msgid "Align Text"
 msgstr "Alinear texto"
 
-#: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:36
-#: inx/inkstitch_batch_lettering.inx:49
+#: lib/gui/lettering/option_panel.py:86 inx/inkstitch_batch_lettering.inx:36
+#: inx/inkstitch_batch_lettering.inx:59
 #: inx/inkstitch_lettering_along_path.inx:19
 msgid "Left"
 msgstr "Izquierda"
 
-#: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:37
-#: inx/inkstitch_batch_lettering.inx:50
+#: lib/gui/lettering/option_panel.py:86 inx/inkstitch_batch_lettering.inx:37
+#: inx/inkstitch_batch_lettering.inx:60
 #: inx/inkstitch_lettering_along_path.inx:20
 msgid "Center"
 msgstr "Centro"
 
-#: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:38
-#: inx/inkstitch_batch_lettering.inx:51
+#: lib/gui/lettering/option_panel.py:86 inx/inkstitch_batch_lettering.inx:38
+#: inx/inkstitch_batch_lettering.inx:61
 #: inx/inkstitch_lettering_along_path.inx:21
 msgid "Right"
 msgstr "Derecha"
 
-#: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:39
+#: lib/gui/lettering/option_panel.py:86 inx/inkstitch_batch_lettering.inx:39
 msgid "Block (default)"
 msgstr "Bloque (por defecto)"
 
-#: lib/gui/lettering/option_panel.py:90 inx/inkstitch_batch_lettering.inx:40
+#: lib/gui/lettering/option_panel.py:86 inx/inkstitch_batch_lettering.inx:40
 msgid "Block (letterspacing)"
 msgstr "Bloque (espaciado entre letras)"
 
-#: lib/gui/lettering/option_panel.py:95 lib/gui/lettering/option_panel.py:97
+#: lib/gui/lettering/option_panel.py:89
+msgid "Sizing and alignment"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:90
+msgid "Letter spacing (mm)"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:91
+msgid "Additional letter spacing in mm."
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:93
+msgid "Word spacing (mm)"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:94
+msgid "Additional word spacing in mm."
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:96
+msgid "Line height (mm)"
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:97
+msgid "Additional line height in mm."
+msgstr ""
+
+#: lib/gui/lettering/option_panel.py:143
+msgid "Stitch lines of text back and forth"
+msgstr "Unir líneas de texto de un lado a otro"
+
+#: lib/gui/lettering/option_panel.py:147 lib/gui/lettering/option_panel.py:149
 msgid "Sort multicolor fonts. Unifies tartan patterns."
 msgstr "Clasifica las fuentes multicolor. Unifica los patrones tartán."
 
-#: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:23
+#: lib/gui/lettering/option_panel.py:148 inx/inkstitch_batch_lettering.inx:23
 msgid "Off"
 msgstr "Desactivado"
 
-#: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:24
+#: lib/gui/lettering/option_panel.py:148 inx/inkstitch_batch_lettering.inx:24
 msgid "Whole text"
 msgstr "Texto completo"
 
-#: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:25
+#: lib/gui/lettering/option_panel.py:148 inx/inkstitch_batch_lettering.inx:25
 msgid "Line"
 msgstr "Línea"
 
-#: lib/gui/lettering/option_panel.py:96 inx/inkstitch_batch_lettering.inx:26
+#: lib/gui/lettering/option_panel.py:148 inx/inkstitch_batch_lettering.inx:26
 msgid "Word"
 msgstr "Palabra"
 
-#: lib/gui/lettering/option_panel.py:100 inx/inkstitch_batch_lettering.inx:28
+#: lib/gui/lettering/option_panel.py:152 inx/inkstitch_batch_lettering.inx:28
 msgid "Add trims"
 msgstr "Agregar cortes"
 
-#: lib/gui/lettering/option_panel.py:101 inx/inkstitch_batch_lettering.inx:29
+#: lib/gui/lettering/option_panel.py:153 inx/inkstitch_batch_lettering.inx:29
 msgid "Never"
 msgstr "Nunca"
 
-#: lib/gui/lettering/option_panel.py:101 inx/inkstitch_batch_lettering.inx:30
+#: lib/gui/lettering/option_panel.py:153 inx/inkstitch_batch_lettering.inx:30
 msgid "after each line"
 msgstr "después de cada línea"
 
-#: lib/gui/lettering/option_panel.py:101 inx/inkstitch_batch_lettering.inx:31
+#: lib/gui/lettering/option_panel.py:153 inx/inkstitch_batch_lettering.inx:31
 msgid "after each word"
 msgstr "después de cada palabra"
 
-#: lib/gui/lettering/option_panel.py:101 inx/inkstitch_batch_lettering.inx:32
+#: lib/gui/lettering/option_panel.py:153 inx/inkstitch_batch_lettering.inx:32
 msgid "after each letter"
 msgstr "después de cada letra"
 
-#: lib/gui/lettering/option_panel.py:102
+#: lib/gui/lettering/option_panel.py:154
 msgid "Add trim command"
 msgstr "Añadir comando de corte"
 
-#: lib/gui/lettering/option_panel.py:105 inx/inkstitch_batch_lettering.inx:34
+#: lib/gui/lettering/option_panel.py:157 inx/inkstitch_batch_lettering.inx:34
 msgid "Use command symbols"
 msgstr "Usar símbolos de comando "
 
-#: lib/gui/lettering/option_panel.py:107
+#: lib/gui/lettering/option_panel.py:159
 msgid "Uses command symbols if enabled. When disabled inserts trim commands as params."
 msgstr "Usa símbolos de comando  si está activado. Cuando está desactivado, inserta comandos  de corte como parámetros."
 
-#: lib/gui/lettering/option_panel.py:112
-#: print/templates/ui_svg_action_buttons.html:1
-msgid "Scale"
-msgstr "Escala"
+#: lib/gui/lettering/option_panel.py:178
+msgid "Embroidery settings"
+msgstr ""
 
 #: lib/gui/lettering_font_sample.py:25
 #: inx/inkstitch_lettering_font_sample.inx:3
@@ -3840,8 +3876,8 @@ msgstr "Ajustes"
 msgid "Stitch direction"
 msgstr "Dirección de la puntada"
 
-#: lib/gui/lettering_font_sample.py:53 lib/gui/tartan/customize_panel.py:46
-#: inx/inkstitch_batch_lettering.inx:21
+#: lib/gui/lettering/option_panel.py:81 lib/gui/lettering_font_sample.py:53
+#: lib/gui/tartan/customize_panel.py:46 inx/inkstitch_batch_lettering.inx:21
 msgid "Scale (%)"
 msgstr "Escala (%)"
 
@@ -3849,7 +3885,7 @@ msgstr "Escala (%)"
 msgid "Max. line width"
 msgstr "Ancho máximo de línea"
 
-#: lib/gui/lettering/option_panel.py:94 lib/gui/lettering/option_panel.py:96
+#: lib/gui/lettering/option_panel.py:146 lib/gui/lettering/option_panel.py:148
 #: lib/gui/lettering_font_sample.py:57 inx/inkstitch_batch_lettering.inx:22
 msgid "Color sort"
 msgstr "Clasificar por color"
@@ -4415,8 +4451,8 @@ msgstr "Eliminar raya"
 msgid "Generate Swatches"
 msgstr "Generar muestras"
 
-#: lib/gui/lettering/main_panel.py:45 lib/gui/lettering/option_panel.py:138
-#: lib/gui/test_swatches.py:33 inx/inkstitch_apply_threadlist.inx:7
+#: lib/gui/lettering/main_panel.py:45 lib/gui/test_swatches.py:33
+#: inx/inkstitch_apply_attribute.inx:17 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_batch_lettering.inx:9
 #: inx/inkstitch_break_apart.inx:8 inx/inkstitch_cleanup.inx:8
 #: inx/inkstitch_density_map.inx:8 inx/inkstitch_display_stacking_order.inx:8
@@ -4560,32 +4596,32 @@ msgstr "Escritura: japonés"
 msgid "Script: latin"
 msgstr "Escritura: latin"
 
-#: lib/lettering/font.py:100
+#: lib/lettering/font.py:101
 msgid "JSON file missing. Expected a JSON file at the following location:"
 msgstr "Falta el archivo JSON. Se esperaba un archivo JSON en la siguiente ubicación: "
 
-#: lib/lettering/font.py:102
+#: lib/lettering/font.py:103
 msgid "Generate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr "Genera el archivo JSON a través de:\n"
 "Extensiones > Ink/Stitch > Gestión de Fuentes > Generar JSON..."
 
-#: lib/lettering/font.py:109
+#: lib/lettering/font.py:110
 msgid "Corrupt JSON file"
 msgstr "Archivo JSON corrupto"
 
-#: lib/lettering/font.py:111
+#: lib/lettering/font.py:112
 msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr "Regenera el archivo JSON a través de:\n"
 "Extensiones > Ink/Stitch > Gestión de Fuentes > Generar JSON... "
 
-#: lib/lettering/font.py:192
+#: lib/lettering/font.py:193
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "La fuente '%s' no tiene variantes."
 
-#: lib/lettering/font.py:596
+#: lib/lettering/font.py:601
 msgid "Color Group"
 msgstr "Grupo de color"
 
@@ -5161,6 +5197,10 @@ msgstr "Si"
 msgid "No"
 msgstr "No"
 
+#: print/templates/ui_svg_action_buttons.html:1
+msgid "Scale"
+msgstr "Escala"
+
 #: print/templates/ui_svg_action_buttons.html:3
 msgid "Fit"
 msgstr "Ajustar"
@@ -5388,6 +5428,48 @@ msgstr "Formato de color Inf"
 msgid "Json Export"
 msgstr "Exportación Json"
 
+#: inx/inkstitch_apply_attribute.inx:3
+msgid "Apply attribute"
+msgstr ""
+
+#: inx/inkstitch_apply_attribute.inx:9
+msgid "Applies a custom attribute to multiple elements"
+msgstr ""
+
+#: inx/inkstitch_apply_attribute.inx:12 inx/inkstitch_duplicate_params.inx:12
+#: inx/inkstitch_remove_duplicated_points.inx:34 inx/inkstitch_reorder.inx:11
+#: inx/inkstitch_select_elements.inx:110
+#: inx/inkstitch_selection_to_anchor_line.inx:12
+#: inx/inkstitch_selection_to_guide_line.inx:12
+#: inx/inkstitch_selection_to_pattern.inx:12 inx/inkstitch_test_swatches.inx:11
+#: inx/inkstitch_transform_elements.inx:30 inx/inkstitch_unlink_clone.inx:24
+msgid "Edit"
+msgstr "Editar"
+
+#: inx/inkstitch_apply_attribute.inx:18
+msgid "Namespace"
+msgstr ""
+
+#: inx/inkstitch_apply_attribute.inx:19
+msgid "Attribute"
+msgstr ""
+
+#: inx/inkstitch_apply_attribute.inx:22
+msgid "Remove attribute"
+msgstr ""
+
+#: inx/inkstitch_apply_attribute.inx:25
+msgid "This extension sets a custom attribute to all selected elements."
+msgstr ""
+
+#: inx/inkstitch_apply_attribute.inx:27
+msgid "It is an extension for experienced users."
+msgstr ""
+
+#: inx/inkstitch_apply_attribute.inx:29
+msgid "https://inkstitch.org/docs/edit/#apply-attribute"
+msgstr ""
+
 #: inx/inkstitch_apply_palette.inx:3
 msgid "Apply Palette"
 msgstr "Aplicar paleta"
@@ -5531,7 +5613,7 @@ msgstr "Mantener los trazados originales"
 msgid "This extension tries to create a single stitch path through all selected satin columns."
 msgstr "Esta extensión intenta crear un único trazado de puntada a través de todas las columnas de satín seleccionadas."
 
-#: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_batch_lettering.inx:67
+#: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_batch_lettering.inx:77
 #: inx/inkstitch_break_apart.inx:20 inx/inkstitch_cleanup.inx:28
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
@@ -5597,44 +5679,56 @@ msgstr "El valor de escala debe estar dentro del rango de escala de la fuente es
 msgid "Align Multiline Text"
 msgstr "Alinear texto multilínea"
 
-#: inx/inkstitch_batch_lettering.inx:48
+#: inx/inkstitch_batch_lettering.inx:45
+msgid "Letter spacing"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:47
+msgid "Word spacing"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:49
+msgid "Line height"
+msgstr ""
+
+#: inx/inkstitch_batch_lettering.inx:58
 msgid "Lettering along path: text position"
 msgstr "Letras a lo largo del Trazado: Posición de texto"
 
-#: inx/inkstitch_batch_lettering.inx:48
+#: inx/inkstitch_batch_lettering.inx:58
 msgid "Uses this text position when using lettering along path"
 msgstr "Usar esta posición de texto al usar letras a lo largo de un trazado"
 
-#: inx/inkstitch_batch_lettering.inx:52
+#: inx/inkstitch_batch_lettering.inx:62
 #: inx/inkstitch_lettering_along_path.inx:22
 msgid "Stretch"
 msgstr "Estirar"
 
-#: inx/inkstitch_batch_lettering.inx:57
+#: inx/inkstitch_batch_lettering.inx:67
 msgid "File formats"
 msgstr "Formatos de archivo"
 
-#: inx/inkstitch_batch_lettering.inx:57
+#: inx/inkstitch_batch_lettering.inx:67
 msgid "Comma separated list of file formats"
 msgstr "Lista de formatos de archivo separados por comas"
 
-#: inx/inkstitch_batch_lettering.inx:63
+#: inx/inkstitch_batch_lettering.inx:73
 msgid "Use this extension to save multiple files with the given text."
 msgstr "Usa esta extensión para guardar múltiples archivos con el texto dado."
 
-#: inx/inkstitch_batch_lettering.inx:65
+#: inx/inkstitch_batch_lettering.inx:75
 msgid "When the document contains a path element labeled as \"batch lettering\" it will be used to place the text along this path. The path itself will be removed and won't be rendered."
 msgstr "Cuando el documento contiene un elemento de trazado etiquetado como \"batch lettering\", se usará para colocar el texto a lo largo de este trazado. El trazado en sí será eliminado y no se renderizará."
 
-#: inx/inkstitch_batch_lettering.inx:68
+#: inx/inkstitch_batch_lettering.inx:78
 msgid "https://inkstitch.org/docs/lettering/#batch-export"
 msgstr ""
 
-#: inx/inkstitch_batch_lettering.inx:75
+#: inx/inkstitch_batch_lettering.inx:85
 msgid "Ink/Stitch: batch lettering (.zip)"
 msgstr "Ink/Stitch: Lote de letras (.zip)"
 
-#: inx/inkstitch_batch_lettering.inx:76
+#: inx/inkstitch_batch_lettering.inx:86
 msgid "Create a zip with multiple files including embroidered text using Ink/Stitch"
 msgstr "Crear un archivo zip con varios archivos que incluyan texto bordado usando Ink/Stitch"
 
@@ -5935,16 +6029,6 @@ msgstr "Duplicar parametros"
 #: inx/inkstitch_duplicate_params.inx:9
 msgid "Applies params from first selected element to the rest of the selection"
 msgstr "Aplica los parámetros del primer elemento seleccionado al resto de la selección"
-
-#: inx/inkstitch_duplicate_params.inx:12
-#: inx/inkstitch_remove_duplicated_points.inx:34 inx/inkstitch_reorder.inx:11
-#: inx/inkstitch_select_elements.inx:110
-#: inx/inkstitch_selection_to_anchor_line.inx:12
-#: inx/inkstitch_selection_to_guide_line.inx:12
-#: inx/inkstitch_selection_to_pattern.inx:12 inx/inkstitch_test_swatches.inx:11
-#: inx/inkstitch_transform_elements.inx:30 inx/inkstitch_unlink_clone.inx:24
-msgid "Edit"
-msgstr "Editar"
 
 #: inx/inkstitch_element_info.inx:9
 msgid "Display embroidery info for selected elements"
