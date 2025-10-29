@@ -1,0 +1,204 @@
+GIMP Palette
+Name: Ink/Stitch: Magnifico
+Columns: 4
+# RGB Value		                    Color Name Number
+241	242	241	                   Ghost White   2001
+  5	  4	  6	                      Blackout   2002
+244	243	249	                    Snow Flake   2003
+252	191	201	                 Delicate Pink   2004
+226	138	158	                     Pink Posy   2005
+252	112	186	                 Flamingo Pink   2006
+237	 40	147	                Dreamland Pink   2007
+226	 40	130	                Pink Pink Pink   2008
+244	204	216	                     Elizabeth   2009
+218	 61	126	               Sweetheart Pink   2010
+188	 56	119	                      Lilyanna   2011
+160	  0	 84	                     Rose Pink   2012
+198	141	153	                     Berry Ice   2013
+178	111	126	                     Mauvelous   2014
+106	 26	 65	                     Anastasia   2015
+ 60	 38	 57	                     Potpourri   2016
+109	 33	 63	                  Berri Pretti   2017
+ 79	 33	 58	                   Cherry Wine   2018
+242	173	178	               Lite Dusty Pink   2019
+168	 71	 90	                        Vision   2020
+216	137	155	               Dark Dusty Pink   2021
+142	 35	 68	                       Rosebud   2022
+254	138	158	                   Coral Blush   2023
+236	 67	113	                   Canyon Rose   2024
+242	104	119	                      Primrose   2025
+224	 66	 81	                     Valentino   2026
+224	  7	 71	                Impatiens Pink   2027
+249	186	170	                Almost Apricot   2028
+194	 77	 82	                   Canyon Sand   2029
+138	 52	 61	                 Canyon Copper   2030
+124	 45	 35	                         Hazel   2031
+252	173	 86	                     Cantelope   2032
+188	 79	  7	                  Bombay Curry   2033
+120	 48	 55	                  Orange Spice   2034
+132	 53	 17	                    Rust Brown   2035
+255	109	 66	                  Summer Peach   2036
+249	155	 12	                  Orange Juice   2037
+249	 86	  2	               Orange Popsicle   2038
+221	 79	  5	               Little Sweeties   2039
+193	 56	 40	                  Padre Canyon   2040
+206	 17	 38	                     Happy Red   2041
+193	  5	 56	                      Flamenco   2042
+196	  0	 67	                       Maricel   2043
+168	 12	 53	                   Candy Apple   2044
+142	 35	 68	                     Brick Red   2045
+165	  5	 68	                   Rancher Red   2046
+183	 41	 90	                    Red Ribbon   2047
+140	  0	 76	               Red Riding Hood   2048
+ 94	 23	 45	                Flowering Plum   2049
+249	224	140	                   Beach Party   2050
+253	200	 47	                Buzzing Around   2051
+255	198	 30	                      Cornmeal   2052
+252	209	 22	                   Papaya Whip   2053
+252	181	 20	                          Yolk   2054
+242	237	158	                       Sunbeam   2055
+244	237	 71	        Freshly Squeezed Lemon   2056
+249	221	 22	                 Lemon Squares   2057
+242	237	109	                   Sundrenched   2058
+249	232	 20	               Electric Yellow   2059
+215	169	  0	                    Flashlight   2060
+249	232	 20	                           Sun   2061
+226	214	124	                  Honey Butter   2062
+163	127	 20	                  Clover Honey   2063
+130	124	 52	                  Grecian Gold   2064
+198	160	 12	                    Amberlight   2065
+184	139	  0	                 Artisan's Gold  2066
+163	130	  5	                      Songbird   2067
+187	101	 14	                         Ingot   2068
+224	170	 15	                Million Dollar   2069
+158	124	 10	                  Old Dominion   2070
+163	168	107	                      Beechnut   2071
+137	143	 75	                     Pistachio   2072
+112	114	 65	                  Laurel Green   2073
+ 86	 99	 20	                          Aloe   2074
+ 76	 71	 38	                    Greenfield   2075
+ 75	 69	 44	                    Shade Tree   2076
+ 73	 89	 40	               Northwest Trail   2077
+102	 85	 70	                      Bay Leaf   2078
+ 99	 82	 69	                    Camo Green   2079
+ 74	 60	 49	                  Cactus Green   2080
+ 94	102	 58	                      Fig Tree   2081
+110	118	 69	                      Sycamore   2082
+132	130	  5	                 Prairie Grass   2083
+165	216	103	                     Dew Drops   2084
+  3	 56	 42	                    Pear Green   2085
+ 33	 91	 51	                       Orchard   2086
+ 13	 64	  0	                 Austrian Alps   2087
+ 52	178	 51	               Courtyard Green   2088
+ 63	156	 53	                    Grassroots   2089
+  0	135	 81	                  Bottle Green   2090
+  0	107	 63	                      Hillside   2091
+122	168	145	                  Ming Dynasty   2092
+114	132	112	                      Sorrento   2093
+ 32	108	 73	                   Grasshopper   2094
+  0	 68	 56	                    Deep Woods   2095
+186	216	 10	                    Zesty Lime   2096
+182	191	  0	                   Bright Moss   2097
+146	212	  0	                      Honeydew   2098
+ 86	142	 20	                       Romaine   2099
+ 83	104	 43	                       Spinach   2100
+122	184	  0	                Electric Green   2101
+ 91	191	 33	                Lime Popscicle   2102
+ 86	170	 28	                      Seedling   2103
+ 61	142	 51	                  Irish Meadow   2104
+ 58	119	 40	                        Chives   2105
+ 58	119	 40	                    Lawn Green   2106
+ 28	  4	 36	                      Monstera   2107
+ 37	 44	 38	                      Hedgerow   2108
+  0	186	 76	                     Go Ahead!   2109
+  0	 85	 42	                    Greenhouse   2110
+  0	122	 61	                       Thicket   2111
+211	165	201	                     Arabesque   2112
+224	140	178	                    Pink Satin   2113
+155	 79	150	               Hawaiian Orchid   2114
+127	 40	 96	                  Regal Orchid   2115
+132	 33	107	                 Desert Flower   2116
+ 99	 48	 94	                 Midnight Iris   2117
+125	  0	 99	                  Cactus Bloom   2118
+ 75	 41	 66	                Wingate Purple   2119
+172	152	219	                   Lilac Frost   2120
+137	119	186	                Gossamer Lilac   2121
+191	147	204	                Gossamer Wings   2122
+105	 58	119	                      February   2123
+130	 12	142	             Passionate Purple   2124
+ 68	 35	 94	                Vintage Violet   2125
+173	158	211	              Scottish Thistle   2126
+125	 92	198	                Velvet Morning   2127
+114	 81	188	                        Crocus   2128
+ 73	 14	111	                Persian Violet   2129
+127	102	137	                   Purple Dusk   2130
+102	 73	117	                Paisley Purple   2131
+ 74	 54	 81	                        Cavern   2132
+ 75	 48	106	                       Concord   2133
+135	175	191	                  Iceburg Blue   2134
+  0	116	122	                       Neptune   2135
+  0	 61	 76	                    Lilly Pond   2136
+  0	 84	107	                    Bayou Blue   2137
+  0	178	169	                   Lakota Blue   2138
+  0	 87	 70	                          Taos   2139
+  0	102	 99	                      Comanche   2140
+112	206	226	                    Sea Breeze   2141
+  0	124	146	                         Aruba   2142
+170	202	230	                    Early Bird   2143
+114	199	231	                      Sky Blue   2144
+ 96	175	221	                     Baja Blue   2145
+  0	163	221	                       Horizon   2146
+  0	 60	105	                         Vista   2147
+  0	 91	153	                     Blue Surf   2148
+155	196	226	                    Angel Blue   2149
+117	170	219	                   Powder Blue   2150
+ 33	 49	 77	                      Chambray   2151
+ 55	 66	 74	               Stonewash Denim   2152
+127	140	191	                  Arctic Chill   2153
+100	 89	196	                    Out-to-Sea   2154
+ 33	 87	138	                     Cove Blue   2155
+ 39	 36	 69	                    Cadet Blue   2156
+ 64	 96	175	                     Cool Pool   2157
+ 38	 63	106	                 Venetian Blue   2158
+ 22	 87	136	                    Blue Jeans   2159
+ 94	104	196	                  Windsor Blue   2160
+  0	 63	135	                   Blue Ribbon   2161
+  0	 42	 66	                    North Pole   2162
+  0	 38	 84	                   Stormy Seas   2163
+224	230	230	                        Shiver   2164
+165	163	158	               Stainless Steel   2165
+155	153	147	                     Silverado   2166
+104	102	 99	                   Cloud Cover   2167
+ 55	 66	 74	                       Jupiter   2168
+226	216	191	                      Elegante   2169
+221	204	165	                      Old Lace   2170
+226	214	181	               Blanched Almond   2171
+211	191	150	                    Cream Puff   2172
+211	169	133	                   Sandy Brown   2173
+117	 59	 55	               Toasted Almonds   2174
+ 95	 51	 22	                    Camel Hair   2175
+149	 82	 20	                Cinnamon Toast   2176
+112	 61	 41	                  Saddle Brown   2177
+120	 35	 39	                        Auburn   2178
+174	170	108	                 Stone's Throw   2179
+154	153	110	               Smoky Mountains   2180
+ 79	 76	 37	                     Burlywood   2181
+167	158	112	                  Fossil Stone   2182
+142	110	 77	                         Adobe   2183
+178	130	 96	                        Suntan   2184
+ 88	 69	 40	                     Maplewood   2185
+145	120	 91	                    Stonehenge   2186
+111	 94	 85	            Chocolate Frosting   2187
+ 76	 51	 39	                           Koa   2188
+ 71	 35	 17	                Chocolate Rain   2189
+ 27	 18	 18	                    Cocoa Bean   2190
+203	  0	 68	                    Pink Flash   2191
+214	  0	158	                Hot Pink Flash   2192
+234	 40	 57	               Tangerine Flash   2193
+196	 38	 46	                     Red Flash   2194
+221	224	 15	                         Lemon   2195
+255	204	 30	                        Yellow   2196
+255	 99	 25	                        Orange   2197
+228	215	  0	                        Citrus   2198
+105	190	 40	                          Lime   2199
+ 88	166	 24	                        Coreen   2200
