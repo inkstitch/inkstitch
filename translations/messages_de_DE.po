@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-10-28 01:43+0000\n"
-"PO-Revision-Date: 2025-10-28 01:43\n"
+"PO-Revision-Date: 2025-10-29 01:47\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2569,11 +2569,11 @@ msgstr "Bitte mindestens ein Element auswählen."
 
 #: lib/extensions/apply_attribute.py:31
 msgid "Please enter the attribute name."
-msgstr ""
+msgstr "Bitte Attribut-Namen eingeben."
 
 #: lib/extensions/apply_attribute.py:44
 msgid "Please enter a value."
-msgstr ""
+msgstr "Bitte einen Wert eingeben."
 
 #: lib/extensions/apply_palette.py:25
 msgid "There is no stitchable element in the document."
@@ -3776,31 +3776,31 @@ msgstr "Block (Buchstabenabstand)"
 
 #: lib/gui/lettering/option_panel.py:89
 msgid "Sizing and alignment"
-msgstr ""
+msgstr "Größe und Ausrichtung"
 
 #: lib/gui/lettering/option_panel.py:90
 msgid "Letter spacing (mm)"
-msgstr ""
+msgstr "Zeichenabstand (mm)"
 
 #: lib/gui/lettering/option_panel.py:91
 msgid "Additional letter spacing in mm."
-msgstr ""
+msgstr "Zusätzlicher Zeichenabstand in mm."
 
 #: lib/gui/lettering/option_panel.py:93
 msgid "Word spacing (mm)"
-msgstr ""
+msgstr "Wortabstand (mm)"
 
 #: lib/gui/lettering/option_panel.py:94
 msgid "Additional word spacing in mm."
-msgstr ""
+msgstr "Zusätzlicher Wortabstand in mm."
 
 #: lib/gui/lettering/option_panel.py:96
 msgid "Line height (mm)"
-msgstr ""
+msgstr "Zeilenhöhe (mm)"
 
 #: lib/gui/lettering/option_panel.py:97
 msgid "Additional line height in mm."
-msgstr ""
+msgstr "Zusätzliche Zeilenhöhe in mm."
 
 #: lib/gui/lettering/option_panel.py:143
 msgid "Stitch lines of text back and forth"
@@ -3860,7 +3860,7 @@ msgstr "Wenn aktiviert, werden visuelle Befehle (Symbole) eingefügt. Wenn deakt
 
 #: lib/gui/lettering/option_panel.py:178
 msgid "Embroidery settings"
-msgstr ""
+msgstr "Stickeinstellungen"
 
 #: lib/gui/lettering_font_sample.py:25
 #: inx/inkstitch_lettering_font_sample.inx:3
@@ -5435,11 +5435,11 @@ msgstr "Json-Export"
 
 #: inx/inkstitch_apply_attribute.inx:3
 msgid "Apply attribute"
-msgstr ""
+msgstr "Attribut zuweisen"
 
 #: inx/inkstitch_apply_attribute.inx:9
 msgid "Applies a custom attribute to multiple elements"
-msgstr ""
+msgstr "Wendet ein benutzerdefiniertes Attribut auf mehrere Elemente an"
 
 #: inx/inkstitch_apply_attribute.inx:12 inx/inkstitch_duplicate_params.inx:12
 #: inx/inkstitch_remove_duplicated_points.inx:34 inx/inkstitch_reorder.inx:11
@@ -5453,27 +5453,27 @@ msgstr "Bearbeiten"
 
 #: inx/inkstitch_apply_attribute.inx:18
 msgid "Namespace"
-msgstr ""
+msgstr "Namespace"
 
 #: inx/inkstitch_apply_attribute.inx:19
 msgid "Attribute"
-msgstr ""
+msgstr "Attribut"
 
 #: inx/inkstitch_apply_attribute.inx:22
 msgid "Remove attribute"
-msgstr ""
+msgstr "Attribut entfernen"
 
 #: inx/inkstitch_apply_attribute.inx:25
 msgid "This extension sets a custom attribute to all selected elements."
-msgstr ""
+msgstr "Diese Erweiterung wendet ein benutzerdefiniertes Attribut auf alle ausgewählten Elemente an."
 
 #: inx/inkstitch_apply_attribute.inx:27
 msgid "It is an extension for experienced users."
-msgstr ""
+msgstr "Es ist eine Erweiterung für erfahrene Nutzer."
 
 #: inx/inkstitch_apply_attribute.inx:29
 msgid "https://inkstitch.org/docs/edit/#apply-attribute"
-msgstr ""
+msgstr "https://inkstitch.org/de/docs/edit/#attribut-zuweisen"
 
 #: inx/inkstitch_apply_palette.inx:3
 msgid "Apply Palette"
@@ -5686,15 +5686,15 @@ msgstr "Mehrzeiligen Text ausrichten"
 
 #: inx/inkstitch_batch_lettering.inx:45
 msgid "Letter spacing"
-msgstr ""
+msgstr "Zeichenabstand"
 
 #: inx/inkstitch_batch_lettering.inx:47
 msgid "Word spacing"
-msgstr ""
+msgstr "Wortabstand"
 
 #: inx/inkstitch_batch_lettering.inx:49
 msgid "Line height"
-msgstr ""
+msgstr "Zeilenhöhe"
 
 #: inx/inkstitch_batch_lettering.inx:58
 msgid "Lettering along path: text position"
