@@ -228,15 +228,37 @@ class FillElementToSatin:
                     continue
             elif len(satin_rails.geoms) != 2:
                 continue
+
+            # adjust rail direction and starting points
             satin_rails = [self._adjust_rail_direction(satin_rails)]
+            satin_rails = [self._adjust_closed_path_starting_point(satin_rails, self.rungs[combined_rungs[i][0]])]
+
             segment_geoms = []
             for rung_index in set(combined_rungs[i]):
                 rung = self.rungs[rung_index]
                 # satin behaves bad if a rung is positioned directly at the beginning/end section
-                if rung.distance(Point(satin_rails[0].geoms[0].coords[0])) > 1:
+                start = Point(satin_rails[0].geoms[0].coords[0])
+                end = Point(satin_rails[0].geoms[1].coords[-1])
+                if rung.distance(start) > 1 and rung.distance(end) > 1:
                     segment_geoms.append(ensure_multi_line_string(rung))
+
             combined_satins.append(satin_rails + segment_geoms)
         return combined_satins
+
+    def _adjust_closed_path_starting_point(self, rails, rung):
+        # closed paths may need adjustments of the starting point
+        rail1 = rails[0].geoms[0]
+        rail2 = rails[0].geoms[1]
+        if rail1.coords[0] == rail1.coords[-1]:
+            rail1 = self._adjust_rail_starting_point(rail1, rail1.intersection(rung))
+            rail2 = self._adjust_rail_starting_point(rail2, rail2.intersection(rung))
+        return MultiLineString([rail1, rail2])
+
+    def _adjust_rail_starting_point(self, rail, point):
+        if point.geom_type == "Point":
+            position = rail.project(point)
+            return LineString(roll_linear_ring(rail, position))
+        return rail
 
     def _fix_single_rail_issue(self, satin_rails, segments, satin_segments, combined_rungs):
         # This is a special case where the two satin rails have been combined into one.
