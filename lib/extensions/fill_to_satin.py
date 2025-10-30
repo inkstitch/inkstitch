@@ -100,7 +100,7 @@ class FillToSatin(InkstitchExtension):
         group = fill_element.node.getparent()
         index = group.index(fill_element.node) + 1
         transform = get_correction_transform(fill_element.node)
-        style = f'stroke: {fill_element.color}; fill: none; stroke-width: {self.svg.viewport_to_unit("1px")};'
+        style = f'stroke: {fill_element.color}; fill: none; stroke-width: {1 / fill_element.stroke_scale};'
         if len(satins) > 1:
             new_group = Group()
             group.insert(index, new_group)
