@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-28 01:43+0000\n"
-"PO-Revision-Date: 2025-10-29 01:47\n"
+"POT-Creation-Date: 2025-10-30 01:48+0000\n"
+"PO-Revision-Date: 2025-10-30 01:48\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-28 01:43+0000\n"
+"POT-Creation-Date: 2025-10-30 01:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3184,23 +3184,23 @@ msgstr "Eine Druckvorschau wurde im Webbrowser geöffnet. Dieses Fenster dient z
 msgid "Ink/Stitch Print"
 msgstr "Ink/Stitch Drucken"
 
-#: lib/extensions/redwork.py:47 lib/extensions/remove_duplicated_points.py:32
+#: lib/extensions/redwork.py:43 lib/extensions/remove_duplicated_points.py:32
 msgid "Please select one or more strokes."
 msgstr "Bitte mindestens ein Element mit einer Konturfarbe auswählen."
 
-#: lib/extensions/redwork.py:112
+#: lib/extensions/redwork.py:130
 msgid "Redwork Group"
 msgstr "Redwork Gruppe"
 
-#: lib/extensions/redwork.py:133
+#: lib/extensions/redwork.py:151
 msgid "Connected Group"
 msgstr "Verbundene Gruppe"
 
-#: lib/extensions/redwork.py:170 inx/inkstitch_redwork.inx:3
+#: lib/extensions/redwork.py:188 inx/inkstitch_redwork.inx:3
 msgid "Redwork"
 msgstr "Redwork"
 
-#: lib/extensions/redwork.py:174
+#: lib/extensions/redwork.py:192
 msgid "Redwork Underpath"
 msgstr "Redwork Unterpfad"
 
@@ -3484,7 +3484,7 @@ msgstr "Anwenden"
 #: lib/gui/lettering_font_sample.py:83
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_attribute.inx:24
-#: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:25
+#: inx/inkstitch_apply_threadlist.inx:91 inx/inkstitch_auto_run.inx:25
 #: inx/inkstitch_auto_satin.inx:16 inx/inkstitch_batch_lettering.inx:72
 #: inx/inkstitch_break_apart.inx:14 inx/inkstitch_cleanup.inx:25
 #: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
@@ -4513,7 +4513,7 @@ msgstr "Diese Erweiterung generiert Testmuster von einer Auswahl.\n"
 "Testmuster helfen die besten Stickeinstellungen zu identifizieren.\n"
 "Sticke die Muster auf dem gleichen Stoff mit dem gleichen Garn wie es für das fertige Design vorgesehen ist."
 
-#: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:100
+#: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:102
 #: inx/inkstitch_fill_to_stroke.inx:33 inx/inkstitch_jump_to_stroke.inx:44
 #: inx/inkstitch_jump_to_trim.inx:29
 #: inx/inkstitch_lettering_organize_glyphs.inx:30
@@ -5483,7 +5483,7 @@ msgstr "Farbpalette anwenden"
 msgid "Matches colors of all elements in the document to a specified palette"
 msgstr "Passt die Farben aller Elemente im Dokument an die ausgewählte Garnpalette an"
 
-#: inx/inkstitch_apply_palette.inx:12 inx/inkstitch_apply_threadlist.inx:110
+#: inx/inkstitch_apply_palette.inx:12 inx/inkstitch_apply_threadlist.inx:112
 #: inx/inkstitch_generate_palette.inx:12
 #: inx/inkstitch_install_custom_palette.inx:28
 #: inx/inkstitch_palette_split_text.inx:11 inx/inkstitch_palette_to_text.inx:11
@@ -5516,35 +5516,35 @@ msgstr "Andere Garnfarben-Liste andwenden*"
 msgid "*Choose color palette"
 msgstr "* Farbpalette auswählen"
 
-#: inx/inkstitch_apply_threadlist.inx:90
+#: inx/inkstitch_apply_threadlist.inx:92
 msgid "This extension applies colors from a color file to the objects in this document."
 msgstr "Diese Erweiterung wendet die Farben aus einer Garnfarben-Datei auf die Objekte in diesem Dokument an."
 
-#: inx/inkstitch_apply_threadlist.inx:91
+#: inx/inkstitch_apply_threadlist.inx:93
 msgid "COL, INF, EDR"
 msgstr "COL, INF, EDR"
 
-#: inx/inkstitch_apply_threadlist.inx:92
+#: inx/inkstitch_apply_threadlist.inx:94
 msgid "Select the file and apply. The chosen method is not important for these file types."
 msgstr "Farbdatei auswählen und auf \"Anwenden\" klicken. Die gewählte Methode ist für diese Dateitypen nicht relevant."
 
-#: inx/inkstitch_apply_threadlist.inx:94
+#: inx/inkstitch_apply_threadlist.inx:96
 msgid "TXT"
 msgstr "TXT"
 
-#: inx/inkstitch_apply_threadlist.inx:95
+#: inx/inkstitch_apply_threadlist.inx:97
 msgid "Import an Ink/Stitch threadlist file (created through the zip export option)."
 msgstr "Eine Ink/Stitch Garnfarben-Liste importieren (kann über den Zip-Export erstellt werden)."
 
-#: inx/inkstitch_apply_threadlist.inx:97
+#: inx/inkstitch_apply_threadlist.inx:99
 msgid "Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette. The objects in this document will be colored accordingly if color matching has been successful."
 msgstr "Eine andere Garnfarben-Liste im txt-Dateiformat importieren. Ink/Stitch wird versuchen die Farben aus der ausgewählten Farbpalette zu erkennen. Bei erfolgreicher Farberkennung werden die Farben auf die Objekte in diesem Dokument angewendet."
 
-#: inx/inkstitch_apply_threadlist.inx:101
+#: inx/inkstitch_apply_threadlist.inx:103
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
 msgstr "https://inkstitch.org/de/docs/thread-color/#garnfarben-liste-anwenden"
 
-#: inx/inkstitch_apply_threadlist.inx:107
+#: inx/inkstitch_apply_threadlist.inx:109
 msgid "Applies colors from a specified color file onto the objects in this document."
 msgstr "Wendet Farben aus der ausgewählten Garnfarbendatei auf die Objekte in diesem Dokument an."
 

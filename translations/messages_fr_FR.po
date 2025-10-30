@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-28 01:43+0000\n"
-"PO-Revision-Date: 2025-10-28 01:43\n"
+"POT-Creation-Date: 2025-10-30 01:48+0000\n"
+"PO-Revision-Date: 2025-10-30 01:48\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-28 01:43+0000\n"
+"POT-Creation-Date: 2025-10-30 01:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2567,11 +2567,11 @@ msgstr "Merci de sélectionner au moins un élément."
 
 #: lib/extensions/apply_attribute.py:31
 msgid "Please enter the attribute name."
-msgstr ""
+msgstr "Merci d'entrer le nom de l'attribut."
 
 #: lib/extensions/apply_attribute.py:44
 msgid "Please enter a value."
-msgstr ""
+msgstr "Merci d'entrer une valeur."
 
 #: lib/extensions/apply_palette.py:25
 msgid "There is no stitchable element in the document."
@@ -3182,23 +3182,23 @@ msgstr "Un  aperçu de l'impression a été ouvert dans votre navigateur. Cette 
 msgid "Ink/Stitch Print"
 msgstr "Impression Ink/Stitch"
 
-#: lib/extensions/redwork.py:47 lib/extensions/remove_duplicated_points.py:32
+#: lib/extensions/redwork.py:43 lib/extensions/remove_duplicated_points.py:32
 msgid "Please select one or more strokes."
 msgstr "Merci de sélectionner un ou plusieurs traits."
 
-#: lib/extensions/redwork.py:112
+#: lib/extensions/redwork.py:130
 msgid "Redwork Group"
 msgstr "Groupe de redwork"
 
-#: lib/extensions/redwork.py:133
+#: lib/extensions/redwork.py:151
 msgid "Connected Group"
 msgstr "Groupe connecté"
 
-#: lib/extensions/redwork.py:170 inx/inkstitch_redwork.inx:3
+#: lib/extensions/redwork.py:188 inx/inkstitch_redwork.inx:3
 msgid "Redwork"
 msgstr "Redwork"
 
-#: lib/extensions/redwork.py:174
+#: lib/extensions/redwork.py:192
 msgid "Redwork Underpath"
 msgstr "Chemin de dessous redwork"
 
@@ -3482,7 +3482,7 @@ msgstr "Appliquer"
 #: lib/gui/lettering_font_sample.py:83
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_attribute.inx:24
-#: inx/inkstitch_apply_threadlist.inx:89 inx/inkstitch_auto_run.inx:25
+#: inx/inkstitch_apply_threadlist.inx:91 inx/inkstitch_auto_run.inx:25
 #: inx/inkstitch_auto_satin.inx:16 inx/inkstitch_batch_lettering.inx:72
 #: inx/inkstitch_break_apart.inx:14 inx/inkstitch_cleanup.inx:25
 #: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
@@ -3774,31 +3774,31 @@ msgstr "Justifié (lettres)"
 
 #: lib/gui/lettering/option_panel.py:89
 msgid "Sizing and alignment"
-msgstr ""
+msgstr "Taille et alignement"
 
 #: lib/gui/lettering/option_panel.py:90
 msgid "Letter spacing (mm)"
-msgstr ""
+msgstr "Espacement des lettres (mm)"
 
 #: lib/gui/lettering/option_panel.py:91
 msgid "Additional letter spacing in mm."
-msgstr ""
+msgstr "Espace additionnel entre les lettres (en mm)."
 
 #: lib/gui/lettering/option_panel.py:93
 msgid "Word spacing (mm)"
-msgstr ""
+msgstr "Espacement des mots (mm)"
 
 #: lib/gui/lettering/option_panel.py:94
 msgid "Additional word spacing in mm."
-msgstr ""
+msgstr "Espace additionnel entre les mots (en mm)."
 
 #: lib/gui/lettering/option_panel.py:96
 msgid "Line height (mm)"
-msgstr ""
+msgstr "Hauteur de ligne (mm)"
 
 #: lib/gui/lettering/option_panel.py:97
 msgid "Additional line height in mm."
-msgstr ""
+msgstr "Hauteur de ligne additionnelle (en mm)."
 
 #: lib/gui/lettering/option_panel.py:143
 msgid "Stitch lines of text back and forth"
@@ -3858,7 +3858,7 @@ msgstr "Utilises les symboles de commande si coché. Sinon insère les commandes
 
 #: lib/gui/lettering/option_panel.py:178
 msgid "Embroidery settings"
-msgstr ""
+msgstr "Réglages de la broderie"
 
 #: lib/gui/lettering_font_sample.py:25
 #: inx/inkstitch_lettering_font_sample.inx:3
@@ -4510,7 +4510,7 @@ msgstr "Cette extension génère des échantillons à partir d'une sélection.\n
 "Ces échantillons aident à trouver les meilleurs paramètres pour votre dessin.\n"
 "Brodez les avec le même fil et le même tissu que pour votre projet."
 
-#: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:100
+#: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:102
 #: inx/inkstitch_fill_to_stroke.inx:33 inx/inkstitch_jump_to_stroke.inx:44
 #: inx/inkstitch_jump_to_trim.inx:29
 #: inx/inkstitch_lettering_organize_glyphs.inx:30
@@ -5433,11 +5433,11 @@ msgstr "Export Json"
 
 #: inx/inkstitch_apply_attribute.inx:3
 msgid "Apply attribute"
-msgstr ""
+msgstr "Appliquer un attribut"
 
 #: inx/inkstitch_apply_attribute.inx:9
 msgid "Applies a custom attribute to multiple elements"
-msgstr ""
+msgstr "Applique un attribut personnalisé à un ou plusieurs éléments"
 
 #: inx/inkstitch_apply_attribute.inx:12 inx/inkstitch_duplicate_params.inx:12
 #: inx/inkstitch_remove_duplicated_points.inx:34 inx/inkstitch_reorder.inx:11
@@ -5451,27 +5451,27 @@ msgstr "Édition"
 
 #: inx/inkstitch_apply_attribute.inx:18
 msgid "Namespace"
-msgstr ""
+msgstr "Espace de noms"
 
 #: inx/inkstitch_apply_attribute.inx:19
 msgid "Attribute"
-msgstr ""
+msgstr "Attribut"
 
 #: inx/inkstitch_apply_attribute.inx:22
 msgid "Remove attribute"
-msgstr ""
+msgstr "Supprimer l'attribut"
 
 #: inx/inkstitch_apply_attribute.inx:25
 msgid "This extension sets a custom attribute to all selected elements."
-msgstr ""
+msgstr "Cette extension ajoute un attribut personnalisé à tous les éléments sélectionnés."
 
 #: inx/inkstitch_apply_attribute.inx:27
 msgid "It is an extension for experienced users."
-msgstr ""
+msgstr "Cette extension est réservée aux utilisateurs expérimentés."
 
 #: inx/inkstitch_apply_attribute.inx:29
 msgid "https://inkstitch.org/docs/edit/#apply-attribute"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/edit/#apply-attribute"
 
 #: inx/inkstitch_apply_palette.inx:3
 msgid "Apply Palette"
@@ -5481,7 +5481,7 @@ msgstr "Appliquer une palette"
 msgid "Matches colors of all elements in the document to a specified palette"
 msgstr "Fait correspondre les couleurs des éléments du document à une palette spécifique"
 
-#: inx/inkstitch_apply_palette.inx:12 inx/inkstitch_apply_threadlist.inx:110
+#: inx/inkstitch_apply_palette.inx:12 inx/inkstitch_apply_threadlist.inx:112
 #: inx/inkstitch_generate_palette.inx:12
 #: inx/inkstitch_install_custom_palette.inx:28
 #: inx/inkstitch_palette_split_text.inx:11 inx/inkstitch_palette_to_text.inx:11
@@ -5514,35 +5514,35 @@ msgstr "Appliquer une autre liste de fils*"
 msgid "*Choose color palette"
 msgstr "*Choisir une palette de couleurs"
 
-#: inx/inkstitch_apply_threadlist.inx:90
+#: inx/inkstitch_apply_threadlist.inx:92
 msgid "This extension applies colors from a color file to the objects in this document."
 msgstr "Cette extension applique les couleurs d'un fichier de couleurs aux objets de ce document."
 
-#: inx/inkstitch_apply_threadlist.inx:91
+#: inx/inkstitch_apply_threadlist.inx:93
 msgid "COL, INF, EDR"
 msgstr "COL, INF, EDR"
 
-#: inx/inkstitch_apply_threadlist.inx:92
+#: inx/inkstitch_apply_threadlist.inx:94
 msgid "Select the file and apply. The chosen method is not important for these file types."
 msgstr "Sélectionnez le fichier et appliquez. La méthode choisie n'est pas importante pour ces types de fichiers."
 
-#: inx/inkstitch_apply_threadlist.inx:94
+#: inx/inkstitch_apply_threadlist.inx:96
 msgid "TXT"
 msgstr "TXT"
 
-#: inx/inkstitch_apply_threadlist.inx:95
+#: inx/inkstitch_apply_threadlist.inx:97
 msgid "Import an Ink/Stitch threadlist file (created through the zip export option)."
 msgstr "Importez une palette de fils Ink/Stitch (créé par l'option d'exportation zip)."
 
-#: inx/inkstitch_apply_threadlist.inx:97
+#: inx/inkstitch_apply_threadlist.inx:99
 msgid "Import any other Threadlist file in txt format. Ink/Stitch will try to match the colors to the selected thread palette. The objects in this document will be colored accordingly if color matching has been successful."
 msgstr "Importez tout autre fichier de liste de fils au format txt. Ink/Stitch va essayer de faire correspondre les couleurs à la palette de fils sélectionnée. Les objets de ce document seront colorés en conséquence si la correspondance des couleurs a réussi."
 
-#: inx/inkstitch_apply_threadlist.inx:101
+#: inx/inkstitch_apply_threadlist.inx:103
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
 msgstr "https://inkstitch.org/fr/docs/thread-color/#apply-threadlist"
 
-#: inx/inkstitch_apply_threadlist.inx:107
+#: inx/inkstitch_apply_threadlist.inx:109
 msgid "Applies colors from a specified color file onto the objects in this document."
 msgstr "Applique les couleurs d'un fichier de couleur spécifique aux objets de ce document."
 
@@ -5684,15 +5684,15 @@ msgstr "Alignement des lignes de texte"
 
 #: inx/inkstitch_batch_lettering.inx:45
 msgid "Letter spacing"
-msgstr ""
+msgstr "Espacement des lettres"
 
 #: inx/inkstitch_batch_lettering.inx:47
 msgid "Word spacing"
-msgstr ""
+msgstr "Espacement des mots"
 
 #: inx/inkstitch_batch_lettering.inx:49
 msgid "Line height"
-msgstr ""
+msgstr "Hauteur de ligne"
 
 #: inx/inkstitch_batch_lettering.inx:58
 msgid "Lettering along path: text position"
