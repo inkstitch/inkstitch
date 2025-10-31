@@ -32,4 +32,4 @@ up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max
 
 {% include folder-galleries path="fonts/gingo200/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/gingo200/license)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/gingo200/LICENSE)
