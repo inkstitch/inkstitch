@@ -33,4 +33,4 @@ It can be scaled up to 150%  (30mm, 1.25 inches) and scalled down to 80% (16mm  
 
 ## Lizenz
 
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/ags_greek_garamond/LICENSE)
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/ags_garamond_latin_grec/LICENSE)
