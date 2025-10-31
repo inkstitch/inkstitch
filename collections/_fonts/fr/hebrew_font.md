@@ -60,4 +60,4 @@ Ils peuvent être ignorés sans souci.
 
 ## License
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/hebrew_font_large/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/hebrew_font_medium/LICENSE)
