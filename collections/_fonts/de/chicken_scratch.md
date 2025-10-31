@@ -34,4 +34,4 @@ Sie kann bis auf 120% (~ 33mm, 1.3 Zoll) hochskaliert und bis zu 80% (~ 22 mm, 0
 
 ## Lizenz
 
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/violin_serif/LICENSE)
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/chicken_scratch/LICENSE.txt)
