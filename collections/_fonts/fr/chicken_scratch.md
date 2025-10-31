@@ -35,4 +35,4 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 {% include folder-galleries path="fonts/chicken_scratch/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/violin_serif/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/chicken_scratch/LICENSE.txt)
