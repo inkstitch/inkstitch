@@ -35,4 +35,4 @@ up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max
 
 ## License
 
-[Download font license](https://github.com/inkstitch/inkstitch/tree/main/fonts/bluenesia/LICENSE)
+[Download font license](https://github.com/inkstitch/inkstitch/tree/main/fonts/bluenesia_satin/LICENSE)
