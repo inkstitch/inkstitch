@@ -1,5 +1,5 @@
 ---
-title: Gingo200"
+title: Gingo200
 permalink: /de/fonts/gingo200/
 last_modified_at: 2025-05-28
 toc: false
