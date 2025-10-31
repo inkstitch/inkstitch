@@ -33,4 +33,5 @@ Sie kann bis auf {{ font.min_scale | times: 100 | floor }}% ({{ font.size | time
 
 ## Lizenz
 
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/gingo200/license)
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/gingo200/LICENSE)
+
