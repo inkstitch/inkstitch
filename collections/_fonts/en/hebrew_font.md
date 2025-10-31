@@ -58,4 +58,4 @@ Each glyph contains the  original letter, in the form of a hidden path with red 
 
 ## License
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/hebrew_font/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/hebrew_font_medium/LICENSE)
