@@ -35,4 +35,4 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 ## License
 
-[Télécharger la license de la police](https://github.com/inkstitch/inkstitch/tree/main/fonts/bluenesia/LICENSE)
+[Télécharger la license de la police](https://github.com/inkstitch/inkstitch/tree/main/fonts/bluenesia_satin/LICENSE)
