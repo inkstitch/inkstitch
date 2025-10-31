@@ -63,6 +63,5 @@ Elle peut être redimensionnée de {{ font2.min_scale | times: 100 | floor }}% (
 
 ## License
 
-[Télécharger la license d'Venezia](https://github.com/inkstitch/inkstitch/tree/main/fonts/neon/LICENSE)
+[Télécharger la license de Venezia](https://github.com/inkstitch/inkstitch/tree/main/fonts/venezia/LICENSE)
 
-[Télécharger la license d'Venezia Small](https://github.com/inkstitch/inkstitch/tree/main/fonts/neon_blinking/LICENSE)
