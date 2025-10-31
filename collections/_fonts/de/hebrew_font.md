@@ -58,4 +58,4 @@ Jeder Buchstaben enthält das Originalzeichen in einem versteckten Element mit e
 
 ## Lizenz
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/hebrew_font/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/hebrew_font_medium/LICENSE)
