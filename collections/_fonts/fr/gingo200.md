@@ -33,4 +33,4 @@ Elle peuvent être redimensionnées de {{ font.min_scale | times: 100 | floor }}
 
 {% include folder-galleries path="fonts/gingo200/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/gingo200/license)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/gingo200/LICENSE)
