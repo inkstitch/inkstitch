@@ -36,4 +36,4 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/ags_greek_garamond/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/ags_garamond_latin_grec/LICENSE)
