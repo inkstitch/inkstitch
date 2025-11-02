@@ -23,8 +23,18 @@ Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
 ## Maße
 
-Bei einer Skalierung von 100% ist die Schrift ungefährt 100 mm (4 inch) hoch.
-Sie kann bis zu 150% vergrößert (150 mm, 6 inch), bzw. auf 80% verkleinert werden (80 mm, 3.25 inch).
+Bei einer Skalierung von 100% hat die Schrift eine ungefähre Höhe von {{ font.size }} mm.
+
+Sie kann von {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm) bis zu {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm) skaliert werdens.
+
+Bei einer Skalierung von 100% hat die Schrift eine ungefähre Höhe von {{ font1.size }} mm.
+
+Sie kann von {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm) bis zu {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm) skaliert werdens.
+
+
+## Origin of the font
+
+This font is a derivative of Abril FatFace regular 400pt (141mm) (https://fonts.google.com/specimen/Abril+Fatface?family=Abril+Fatface)
 
 
 ## Impressionen
