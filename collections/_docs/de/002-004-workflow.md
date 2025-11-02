@@ -124,7 +124,7 @@ Die Stickreihenfolge wirkt sich außerdem auf Stoffverzerrungen aus. Jeder Stich
 [Befehle](/de/docs/commands/) können zur Pfadoptimierung beitragen. Du kannst Start- und Endpunkte festlegen, den Rahmen in eine bestimmte Position rücken oder Faden trennen, etc. 
 
 
-## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png) Schritt 4: Visualiierung
+## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png) Schritt 4: Visualisierung
 
 Ink/Stitch unterstützt drei Wege um sich ein Bild des entstehenden Designs zu machen:
 
