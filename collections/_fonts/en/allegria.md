@@ -1,11 +1,11 @@
 ---
 title: "Allegria"
 permalink: /fonts/allegria/
-last_modified_at: 2025-09-07
+last_modified_at: 2025-10-02
 toc: false
 preview_image:
  - url: /assets/images/fonts/allegria20.png
-   height: 55
+   height: 20
  - url: /assets/images/fonts/allegria55.png
    height: 55
 data_title:
@@ -57,9 +57,16 @@ At a scale of 100% this font has an approximate height of {{ font2.size }} mm.
 It can be scaled from {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
 up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm).
 
+## Origin of the font
+
+This font is a derivative of Euphoria Script Regular  85pt (30mm) and  210pt  (74mm) (https://inkscape.org/cs/~bryce/%E2%98%85euphoria-script-regular-extended)
+
+
+
 ## In real life 
 
 {%include folder-galleries path="fonts/allegria/" %}
+
 
 ## License
 
