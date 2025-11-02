@@ -1,13 +1,21 @@
 This font has been adapted for Ink/Stitch by @Marie-Françoise BRIS with the 
 kind permission of the original font author:
 
-Bonjour Marie-Françoise,
+"Bonjour Marie-Françoise,
 merci beaucoup pour votre email!
 
 Votre projet me plait beaucoup et je suis tout à fait pour. Si jamais vous en veniez à broder réellement je serais très curieux d'en voir les résultats. Vous avez ma bénédiction.
 
 Merci encore,
-Jérémy
+Jérémy"
+
+Second email, after integration in ink/stitch.
+
+« Bonjour Marie-Françoise
+et merci encore pour votre précédent email, je suis vraiment ravi de voir que Millimetre a pu être intégré par vos soins dans inkstitch.
+
+En vous souhaitant une bonne continuation,
+Jérémy Landes »
 
 
 Copyright (c) 2024, @Marie-Françoise BRIS (mfbris@gmail.com),

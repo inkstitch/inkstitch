@@ -1,6 +1,6 @@
 {
-    "name": "Abril En Fleur AGS",
-    "description": "Abril En Fleur AGS is a monogram font.",
+    "name": "Mai En Fleur AGS",
+    "description": "Mai en Fleur AGS is a monogram font.",
     "keywords": [
         "display",
         "monogram",
@@ -15,7 +15,7 @@
     "default_glyph": " ",
     "min_scale": 0.8,
     "max_scale": 1.5,
-    "size": 112,
+    "size": 141,
     "horiz_adv_x_default": 396,
     "horiz_adv_x_space": 100,
     "units_per_em": 530,
