@@ -1,7 +1,7 @@
 ---
 title: "Abécédaire"
 permalink: /fr/fonts/abecedaire/
-last_modified_at: 2023-04-13
+last_modified_at: 2025-11-02
 toc: false
 preview_image:
   - url: /assets/images/fonts/abecedaire.jpg
@@ -29,6 +29,9 @@ A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size
 
 Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
+
+### Origine de la fonte
+The letters are inspired by a page from the book (late 19th century) Dessins de broderie - Stickmuster buch Heft 185
 
 
 ## Dans la vraie vie 
