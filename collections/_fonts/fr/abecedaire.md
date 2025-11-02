@@ -31,7 +31,8 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 ### Origine de la fonte
-The letters are inspired by a page from the book (late 19th century) Dessins de broderie - Stickmuster buch Heft 185
+
+Ce lettrage a été inspiré par une page du livre Dessins de broderie - Stickmuster buch Heft 185 (fin 19ème siècle)
 
 
 ## Dans la vraie vie 
