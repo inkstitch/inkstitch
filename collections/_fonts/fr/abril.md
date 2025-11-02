@@ -29,7 +29,7 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 
-## Origine de la font
+## Origine de la fonte
 
 Cette police est dérivée de:  Abril FatFace regular 400pt (141mm) (https://fonts.google.com/specimen/Abril+Fatface?family=Abril+Fatface)
 
