@@ -30,7 +30,7 @@ It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size |
 
 ## Origin of the font
 
-This font derivates from Abril FatFace regular 400pt (141mm) (https://fonts.google.com/specimen/Abril+Fatface?family=Abril+Fatface)
+This font is a derivative of Abril FatFace regular 400pt (141mm) (https://fonts.google.com/specimen/Abril+Fatface?family=Abril+Fatface)
 
 
 ## In real life
