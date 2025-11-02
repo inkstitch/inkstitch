@@ -29,6 +29,14 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 
+## Origine de la font
+
+Cette police est dérivée de:  Abril FatFace regular 400pt (141mm) (https://fonts.google.com/specimen/Abril+Fatface?family=Abril+Fatface)
+
+
+
+
+
 
 ## En savoir plus:
 Vous trouverez de nombreux conseils pour utiliser cette fonte en suivant ce [lien](https://lyogau.over-blog.com/2022/08/abril-en-fleur-nouvelle-police-pour-inkstitch.html)
