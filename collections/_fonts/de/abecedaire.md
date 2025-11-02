@@ -27,6 +27,11 @@ Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 14 mm hoch (1/2 Zoll)
 
 Sie kann bis zu 200% (28mm, 1 Zoll) und bis zu 75% (9mm, 1/3 Zoll) skaliert werden.
 
+## Origin of the font
+
+The letters are inspired by a page from the book (late 19th century) Dessins de broderie - Stickmuster buch Heft 185
+
+
 ## Impressionen
 
 {%include folder-galleries path="fonts/abecedaire/" %}
