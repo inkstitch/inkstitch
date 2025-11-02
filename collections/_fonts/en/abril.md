@@ -1,7 +1,7 @@
 ---
 title: "Abril En Fleur AGS"
 permalink: /fonts/abril/
-last_modified_at: 2023-04-14
+last_modified_at: 2025-11-02
 toc: false
 preview_image:
   - url: /assets/images/fonts/abril_en_fleur.jpg
@@ -23,9 +23,14 @@ This font contains {{ font.glyphs.size }} glyphs:
 
 ## Dimensions
 
-Used at 100%, this font is approximatively 100mm high (4 inches). 
+At a scale of 100% this font has an approximate height of {{ font.size }} mm.
 
-It can be scaled up to 150%  (150mm, 6 inches) and scaled down to 80% (80mm  3.25inches)
+It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm) up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
+
+
+## Origin of the font
+
+This font derivates from Abril FatFace regular 400pt (141mm) (https://fonts.google.com/specimen/Abril+Fatface?family=Abril+Fatface)
 
 
 ## In real life
