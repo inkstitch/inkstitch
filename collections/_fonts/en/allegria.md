@@ -61,8 +61,6 @@ up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.
 
 This font is a derivative of Euphoria Script Regular  85pt (30mm) and  210pt  (74mm) (https://inkscape.org/cs/~bryce/%E2%98%85euphoria-script-regular-extended)
 
-
-
 ## In real life 
 
 {%include folder-galleries path="fonts/allegria/" %}
