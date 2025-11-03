@@ -1124,7 +1124,7 @@ class SatinColumn(EmbroideryElement):
         pairs = self.plot_points_on_rails(self.running_stitch_tolerance, (0, 0), inset_prop)
 
         points = [points[0] for points in pairs]
-        stitches = running_stitch.even_running_stitch(points, self.running_stitch_length, self.running_stitch_tolerance)
+        stitches = running_stitch.even_running_stitch(points, [self.running_stitch_length], self.running_stitch_tolerance)
 
         if len(stitches) == 1:
             stitches.append(stitches[0])
@@ -1338,12 +1338,12 @@ class SatinColumn(EmbroideryElement):
 
         first_side = running_stitch.even_running_stitch(
             [points[0] for points in pairs],
-            self.contour_underlay_stitch_length,
+            [self.contour_underlay_stitch_length],
             self.contour_underlay_stitch_tolerance
         )
         second_side = running_stitch.even_running_stitch(
             [points[1] for points in pairs],
-            self.contour_underlay_stitch_length,
+            [self.contour_underlay_stitch_length],
             self.contour_underlay_stitch_tolerance
         )
 
