@@ -1,16 +1,16 @@
 {
-    "name": "Baumans FI",
-    "description": "Baumans FI is a satin font. Every satin has zigzag underlay.",
+    "name": "Bathaus FI Small",
+    "description": "Bathaus FI Small is an altered version of Bathaus FI, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory.",
     "keywords": [
-        "display",
+        "tiny",
         "latin"
     ],
     "leading": 162,
     "auto_satin": false,
     "reversible": true,
     "default_glyph": " ",
-    "min_scale": 0.8,
-    "max_scale": 1.5,
+    "min_scale": 0.15,
+    "max_scale": 0.3,
     "size": 22.3,
     "horiz_adv_x_default": 93,
     "horiz_adv_x_space": 37,
