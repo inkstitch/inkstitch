@@ -118,7 +118,8 @@ class Stroke(EmbroideryElement):
     @property
     @param('running_stitch_length_mm',
            _('Running stitch length'),
-           tooltip=_('Length of stitches. Stitches can be shorter according to the stitch tolerance setting.'),
+           tooltip=_('Length of stitches. Stitches can be shorter according to the stitch tolerance setting.\n'
+                     'It is possible to create stitch length patterns by adding multiple values separated by a space.'),
            unit='mm',
            type='string',
            select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch')],

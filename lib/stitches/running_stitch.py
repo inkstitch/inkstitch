@@ -210,12 +210,12 @@ def take_stitch(start: Point, points: typing.Sequence[Point], idx: int, stitch_l
     return points[-1], None
 
 
-def stitch_curve_evenly(
-      points: typing.Sequence[Point], stitch_length: typing.List[float], tolerance: float, stitch_length_pos: int = 0) -> typing.List[Point]:
+def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: typing.List[float], tolerance: float, stitch_length_pos: int = 0) -> \
+        typing.Tuple[typing.List[Point], int]:
     # Will split a straight line into even-length stitches while still handling curves correctly.
     # Includes end point but not start point.
     if len(points) < 2:
-        return []
+        return [], stitch_length_pos
     distLeft = [0] * len(points)
     for j in reversed(range(0, len(points) - 1)):
         distLeft[j] = distLeft[j + 1] + points[j].distance(points[j+1])
@@ -226,7 +226,7 @@ def stitch_curve_evenly(
     while i is not None and i < len(points):
         d = last.distance(points[i]) + distLeft[i]
         if d == 0:
-            return stitches
+            return stitches, stitch_length_pos
         stitch_len = d / math.ceil(d / stitch_length[stitch_length_pos]) + 0.000001  # correction for rounding error
 
         stitch, newidx = take_stitch(last, points, i, stitch_len, tolerance)
@@ -243,7 +243,7 @@ def stitch_curve_evenly(
 def stitch_curve_randomly(
       points: typing.Sequence[Point],
       stitch_length: typing.List[float], tolerance: float, stitch_length_sigma: float,
-      random_seed: str, stitch_length_pos: int = 0) -> typing.List[Point]:
+      random_seed: str, stitch_length_pos: int = 0) -> typing.Tuple[typing.List[Point], int]:
 
     min_stitch_length = max(0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma))
     max_stitch_length = stitch_length[stitch_length_pos] * (1 + stitch_length_sigma)
@@ -252,7 +252,7 @@ def stitch_curve_randomly(
     # Attempts to randomize phase so that the distribution of outputs does not depend on direction.
     # Includes end point but not start point.
     if len(points) < 2:
-        return []
+        return [], stitch_length_pos
 
     i: typing.Optional[int] = 1
     last = points[0]

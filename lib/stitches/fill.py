@@ -63,7 +63,8 @@ def stitch_row(stitches, beg, end, angle, row_spacing, max_stitch_length, stagge
     stitches.append(beg)
 
     if enable_random_stitch_length:
-        stitches += split_segment_random_phase(beg, end, max_stitch_length, random_sigma, random_seed)
+        stitched_line = split_segment_random_phase(beg, end, max_stitch_length, random_sigma, random_seed)
+        stitches.extend([Stitch(stitch, tags=('fill_row',)) for stitch in stitched_line])
     else:
         # We want our stitches to look like this:
         #

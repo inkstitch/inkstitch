@@ -132,17 +132,17 @@ def apply_stagger(line, stitch_length, num_staggers, row_num, tolerance, is_rand
         num_staggers = 1  # sanity check to avoid division by zero.
     start = ((row_num / num_staggers) % 1) * sum(stitch_length)
     first_segment = LineString(line[:2])
-    segment_length = first_segment.length
+    segment_length = max(first_segment.length, 0.1)
     target_length = segment_length + 2 * start
     scale_factor = target_length / segment_length
     extended_line = scale(first_segment, scale_factor, scale_factor)
 
     line = [InkstitchPoint(*extended_line.coords[0])] + line
-    stitched_line = LineString(running_stitch(line, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed))
+    stitched_row = running_stitch(line, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed)
+    if len(stitched_row) <= 1:
+        return LineString()
 
-    points.append(line.coords[-1])
-    stitched_line = LineString(points)
-
+    stitched_line = LineString(stitched_row)
     return substring(stitched_line, start, stitched_line.length)
 
 
