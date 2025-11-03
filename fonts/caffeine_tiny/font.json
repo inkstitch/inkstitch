@@ -1,16 +1,17 @@
 {
-    "name": "Espresso KOR",
-    "description": "Espresso KOR is a satin font. Every satin has zigzag underlay.",
+    "name": "Caffeine tiny",
+    "description": "This font is an altered version  of Caffeine KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory.",
     "keywords": [
         "sans_serif",
+        "tiny",
         "latin"
     ],
     "leading": 100,
     "auto_satin": false,
     "reversible": true,
     "default_glyph": " ",
-    "min_scale": 0.8,
-    "max_scale": 2.0,
+    "min_scale": 0.25,
+    "max_scale": 0.55,
     "size": 16.2,
     "horiz_adv_x_default": 45,
     "horiz_adv_x_space": 22,
