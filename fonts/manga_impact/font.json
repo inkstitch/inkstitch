@@ -15,7 +15,7 @@
     "min_scale": 0.4,
     "max_scale": 2.0,
     "horiz_adv_x_default": 82,
-    "horiz_adv_x_space": 20,
+    "horiz_adv_x_space": 60,
     "units_per_em": 100,
     "horiz_adv_x": {
         "fi": 113.0,
