@@ -8,7 +8,6 @@ from ...debug.debug import debug
 from ...gui.windows import SimpleBox
 from ...i18n import _
 from ...utils.classproperty import classproperty
-from ...utils.list import ensure_list
 from ...utils.settings import global_settings
 
 
@@ -37,12 +36,6 @@ class InkStitchNumericProperty:
 
         self.prefix = prefix
         self.unit = unit
-
-    def set_unit(self, unit):
-        self.unit = unit
-
-    def set_prefix(self, prefix):
-        self.prefix = prefix
 
     def DoGetEditorClass(self):
         return wx.propgrid.PGEditor_SpinCtrl
@@ -87,20 +80,30 @@ class InkStitchFloatProperty(InkStitchNumericProperty, wx.propgrid.FloatProperty
         # attributes={wx.propgrid.PG_ATTR_SPINCTRL_STEP, ___} to Property()
         self.SetAttribute(wx.propgrid.PG_ATTR_SPINCTRL_STEP, 0.1)
 
-    def value_to_string(self, value):
+    @classmethod
+    def value_to_string(cls, value):
         return f"{value:0.2f}"
+
+    @classmethod
+    def string_to_value(cls, string):
+        return float(string)
 
 
 class InkStitchIntProperty(InkStitchNumericProperty, wx.propgrid.IntProperty):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-    def value_to_string(self, value):
+    @classmethod
+    def value_to_string(cls, value):
         return str(value)
+
+    @classmethod
+    def string_to_value(cls, string):
+        return int(string)
 
 
 class InkstitchMultiProperty(wx.propgrid.PGProperty):
-    def __init__(self, *args, prefix="", unit="", **kwargs):
+    def __init__(self, *args, type=None, prefix="", unit="", **kwargs):
         super().__init__(*args, **kwargs)
 
         debug.log(f"InkstitchMultiProperty({prefix=}, {unit=}, {kwargs})")
@@ -108,9 +111,9 @@ class InkstitchMultiProperty(wx.propgrid.PGProperty):
         self.prefix = prefix
         self.unit = unit
         self.name = kwargs.get('name')
+        self.type = type
 
-        values = ensure_list(kwargs.pop('value', []))
-        self.m_value = values
+        self.m_value = []
 
         wx.CallAfter(self.watch_for_child_changes)
         wx.CallAfter(self.update_children)
@@ -129,7 +132,7 @@ class InkstitchMultiProperty(wx.propgrid.PGProperty):
             else:
                 self.DeleteChildren()
                 for i, value in enumerate(values):
-                    child = InkStitchIntProperty(name=f"sub{i}", label=f"[{i}]", prefix=self.prefix, unit=self.unit, value=value)
+                    child = self.type(name=f"sub{i}", label=f"[{i}]", prefix=self.prefix, unit=self.unit, value=value)
                     child.SetAttribute("Ignore", True)
                     pg.AppendIn(self, child)
 
@@ -157,17 +160,13 @@ class InkstitchMultiProperty(wx.propgrid.PGProperty):
 
     def ValueToString(self, value, flags=None):
         # debug.log(f"InkstitchMultiProperty.ValueToString({value=}, {flags=})")
-        if flags == wx.propgrid.PG_VALUE_IS_CURRENT:
-            return " ".join(str(item) for item in value)
-        else:
-            return " ".join(str(item) for item in value)
+        return " ".join(self.type.value_to_string(item) for item in value)
 
     def StringToValue(self, text, flags):
         debug.log(f"InkStitchMultiProperty.StringToValue({text=}, {flags=})")
 
-        # The built-in version uses a semicolon as a delimiter but we want to
-        # use a space because that's what our users are used to from Params
-        values = [int(value) for value in text.split()]
+        # TODO: doesn't work with types we haven't wrapped
+        values = [self.type.string_to_value(value) for value in text.split()]
         return values != self.m_value, values
 
 
@@ -254,7 +253,7 @@ class Property:
         wx.Colour: wx.propgrid.ColourProperty
     }
 
-    def __init__(self, name, label, help="", min=None, max=None, prefix=None, unit=None, type=None, multi=False, attributes=None):
+    def __init__(self, name, label, help="", min=None, max=None, prefix="", unit="", type=None, multi=False, attributes=None):
         self.name = name
         self.label = label
         self.help = help
@@ -271,18 +270,23 @@ class Property:
     def generate(self, pg, parent, config):
         self.pg = pg
 
+        kwargs = {}
+        if self.prefix:
+            kwargs['prefix'] = self.prefix
+        if self.unit:
+            kwargs['unit'] = self.unit
+
         property_class = self.get_property_class()
-        self.property = property_class(name=self.name, label=self.label)
+        if self.multi:
+            self.property = InkstitchMultiProperty(name=self.name, label=self.label, type=property_class, **kwargs)
+        else:
+            self.property = property_class(name=self.name, label=self.label, **kwargs)
         self.property.SetValue(config.get(self.name))
 
         pg.AppendIn(parent, self.property)
+
         if self.help:
             pg.SetPropertyHelpString(self.property, self.help)
-
-        if self.prefix:
-            self.property.set_prefix(self.prefix)
-        if self.unit:
-            self.property.set_unit(self.unit)
 
         if self.attributes:
             for name, value in self.attributes.items():
@@ -295,9 +299,7 @@ class Property:
             self.property.SetAttribute(wx.propgrid.PG_ATTR_MIN, self.min)
 
     def get_property_class(self):
-        if self.multi:
-            return InkstitchMultiProperty
-        elif self.type is not None:
+        if self.type is not None:
             if issubclass(self.type, wx.propgrid.PGProperty):
                 return self.type
             elif self.type in self._type_to_property:
