@@ -130,6 +130,13 @@ Lisez aussi [cet excellent article](https://www.mrxstitch.com/underlay/) sur les
 Certains de ces paramètres ne font pas partie de la version récente.
 {: .notice--info}
 
+### Paramètre asymétrique
+
+Certains paramètres des colonnes satin sont asymétriques, c'est à dire qu'il est possible d'appliquer des valeurs différentes sur les deux rails. 
+Par exemple l'augmentation aléatoire de la largeur du satin est un paramètre asymétrique. Si l'on saisit une valeur unique elle s'applique aux deux rails, si l'on saisit deux valeurs séparées par un espace, la première s'applique au premier rail, la seconde s'applique au second rail.
+
+![Parametre_asymetrique](/assets/images/docs/asymetric_parameter.png)
+
 ### Couche supérieure du satin
 
 |Paramètres||Description|
