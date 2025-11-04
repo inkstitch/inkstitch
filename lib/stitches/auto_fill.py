@@ -391,7 +391,7 @@ def fallback(shape, running_stitch_length, running_stitch_tolerance):
     boundary = ensure_multi_line_string(shape.boundary)
     outline = boundary.geoms[0]
 
-    return even_running_stitch(line_string_to_point_list(outline), running_stitch_length, running_stitch_tolerance)
+    return even_running_stitch(line_string_to_point_list(outline), [running_stitch_length], running_stitch_tolerance)
 
 
 @debug.time

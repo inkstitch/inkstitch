@@ -110,11 +110,11 @@ class FillToStroke(InkstitchExtension):
 
     def _get_high_res_polygon(self, polygon):
         # use running stitch method
-        runs = [even_running_stitch(line_string_to_point_list(polygon.exterior), 1, 0.1)]
+        runs = [even_running_stitch(line_string_to_point_list(polygon.exterior), [1], 0.1)]
         if len(runs[0]) < 3:
             return
         for interior in polygon.interiors:
-            shape = even_running_stitch(line_string_to_point_list(interior), 1, 0.1)
+            shape = even_running_stitch(line_string_to_point_list(interior), [1], 0.1)
             if len(shape) >= 3:
                 runs.append(shape)
         return MultiPolygon([(runs[0], runs[1:])])
