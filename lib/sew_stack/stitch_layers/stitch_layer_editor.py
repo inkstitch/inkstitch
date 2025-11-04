@@ -7,6 +7,7 @@ import wx.propgrid
 from ...debug.debug import debug
 from ...gui.windows import SimpleBox
 from ...i18n import _
+from ...utils.classproperty import classproperty
 from ...utils.settings import global_settings
 
 
@@ -248,8 +249,7 @@ class StitchLayerEditor:
         self.property_grid_panel = None
         self.change_callback = change_callback
 
-    @classmethod
-    @property
+    @classproperty
     def properties(cls):
         """Define PropertyGrid properties and attributes concisely.
 
