@@ -1,19 +1,20 @@
 from copy import copy
 
-from ..mixins.path import PathMixin, PathPropertiesMixin
-from ..mixins.randomization import RandomizationPropertiesMixin, RandomizationMixin
-from ..stitch_layer import StitchLayer
-from ..stitch_layer_editor import Category, Properties, Property
-from ..stitch_layer_editor import StitchLayerEditor
 from ....i18n import _
 from ....stitch_plan import StitchGroup
 from ....stitches.running_stitch import running_stitch
 from ....svg import PIXELS_PER_MM
+from ....utils.classproperty import classproperty
+from ..mixins.path import PathMixin, PathPropertiesMixin
+from ..mixins.randomization import (RandomizationMixin,
+                                    RandomizationPropertiesMixin)
+from ..stitch_layer import StitchLayer
+from ..stitch_layer_editor import (Category, Properties, Property,
+                                   StitchLayerEditor)
 
 
 class RunningStitchLayerEditor(StitchLayerEditor, RandomizationPropertiesMixin, PathPropertiesMixin):
-    @classmethod
-    @property
+    @classproperty
     def properties(cls):
         return Properties(
             Category(_("Running Stitch"), help=_("Stitch along a path using evenly-spaced stitches.")).children(
@@ -41,7 +42,7 @@ class RunningStitchLayerEditor(StitchLayerEditor, RandomizationPropertiesMixin, 
                         "repeat_stitches", _("Repeat exact stitches"),
                         type=bool,
                         help=_('Should the exact same stitches be repeated in each pass?  ' +
-                               'If not, different randomization settings are applied on each pass.'),
+                               'If unchecked, different randomization settings are applied on each pass.'),
                     ),
                 ),
                 cls.path_properties(),
@@ -60,8 +61,7 @@ class RunningStitchLayerEditor(StitchLayerEditor, RandomizationPropertiesMixin, 
 class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
     editor_class = RunningStitchLayerEditor
 
-    @classmethod
-    @property
+    @classproperty
     def defaults(cls):
         defaults = dict(
             name=_("Running Stitch"),
@@ -71,9 +71,9 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
             stitch_length_jitter_percent=0,
             repeats=1,
             repeat_stitches=True,
-            reverse_path=False,
         )
         defaults.update(cls.randomization_defaults())
+        defaults.update(cls.path_defaults())
 
         return defaults
 

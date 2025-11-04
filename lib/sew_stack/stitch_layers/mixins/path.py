@@ -13,6 +13,12 @@ class PathPropertiesMixin:
 
 
 class PathMixin:
+    @classmethod
+    def path_defaults(cls):
+        return dict(
+            reverse_path=False,
+        )
+
     def get_paths(self: LayerProtocol):
         paths = self.paths
 
