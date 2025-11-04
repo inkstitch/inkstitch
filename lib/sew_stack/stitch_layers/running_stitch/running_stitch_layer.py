@@ -28,6 +28,17 @@ class RunningStitchLayerEditor(StitchLayerEditor, RandomizationPropertiesMixin, 
                          min=0.01,
                          unit="mm",
                          ),
+                Property("bean_stitch_repeats", _("Bean Stitch Repeats"),
+                         help=_('Backtrack each stitch this many times.  '
+                                'A value of 1 would triple each stitch (forward, back, forward).  '
+                                'A value of 2 would quintuple each stitch, etc.\n\n'
+                                'A pattern with various repeats can be created with a list of values separated by a space.  '
+                                'For example, a pattern of 1 2 would triple the first stitch, quintuple the second stitch, '
+                                'triple the third, etc.'),
+                         min=0,
+                         type=str,
+                         multi=True,
+                         ),
                 cls.path_properties(),
             ),
             cls.randomization_properties().children(
@@ -50,6 +61,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
             name=_("Running Stitch"),
             type_name=_("Running Stitch"),
             stitch_length=2,
+            bean_stitch_repeats=[0],
             tolerance=0.2,
             stitch_length_jitter_percent=0,
         )
