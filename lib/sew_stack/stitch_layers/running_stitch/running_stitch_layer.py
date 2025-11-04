@@ -36,7 +36,7 @@ class RunningStitchLayerEditor(StitchLayerEditor, RandomizationPropertiesMixin, 
                                 'For example, a pattern of 1 2 would triple the first stitch, quintuple the second stitch, '
                                 'triple the third, etc.'),
                          min=0,
-                         type=str,
+                         type=int,
                          multi=True,
                          ),
                 cls.path_properties(),
