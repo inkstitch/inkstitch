@@ -460,6 +460,9 @@ def _interpolate_linear_rings(ring1, ring2, max_stitch_length, start=None):
     # orders of magnitude faster because we're not building and querying a KDTree.
 
     num_points = int(20 * ring1.length / max_stitch_length)
+    if num_points <= 1:
+        return LineString()
+
     ring1_resampled = trimesh.path.traversal.resample_path(np.array(ring1.coords), count=num_points)
     ring2_resampled = trimesh.path.traversal.resample_path(np.array(ring2.coords), count=num_points)
 
