@@ -1,7 +1,7 @@
 ---
 title: "Satin Column"
 permalink: /docs/stitches/satin-column/
-last_modified_at: 2025-04-12
+last_modified_at: 2025-11-06
 toc: true
 ---
 ## What it is
@@ -110,6 +110,14 @@ Satin Column supports three kinds of underlay, of which you can use any or all s
 
 Read also [this excellent article](https://www.mrxstitch.com/underlay/) on satin column design.
 
+### Asymmetrical parameter
+
+Some satin column parameters are asymmetrical, meaning that different values ​​can be applied to the two rails.
+
+For example, the "Random percentage of satin width increase" is an asymmetrical parameter. If a single value is entered, it applies to both rails; if two values ​​are entered separated by a space, the first applies to the first rail, and the second applies to the second rail.
+![asymmetrical parameter](/assets/images/docs/asymetric_parameter.png)
+
+
 Some of these params are not part of the recent release.
 {: .notice--info}
 
@@ -122,8 +130,8 @@ Method                | |Chose `Satin Column`
 Short stitch inset    | ![Short Stitch example](/assets/images/docs/params-satin-short_stitch_inset.png) | Stitches in areas with high density will be inset by this amount (%)
 Short stitch distance | ![Short Stitch example](/assets/images/docs/params-satin-short_stitch_distance.png) | Inset stitches if the distance between stitches is smaller than this (mm).
 Zig-Zag spacing       |![Zig-zag spacing example](/assets/images/docs/params-satin-zig-zag-spacing.png)|the peak-to-peak distance between zig-zags
-Pull compensation percentage |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an aysmmetric effect.
-Pull compensation     |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Satin stitches [pull the fabric together](/tutorials/push-pull-compensation/), resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an aysmmetric effect.
+Pull compensation percentage |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an asymetric effect.
+Pull compensation     |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Satin stitches [pull the fabric together](/tutorials/push-pull-compensation/), resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymetric effect.
 Reverse rails         |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) | Enabling this may help if your satin renders very strangely. <br />Options are :<br /> ◦ Automatic, the default value aims to detect and fix the problem <br />◦ Don't reverse , disable automatic detection <br />◦ Reverse first rail <br />◦ Reverse second rail <br />◦ Reverse both rails
 Swap rails            |☑ | Swaps the first and the second rails of a satin column. Affecting which side the thread finishes on as well as any other sided property.
 Stitch length         | |Stitch length (in mm) of the underpaths (connecting lines to the start or end point)
