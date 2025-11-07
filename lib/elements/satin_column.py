@@ -1117,14 +1117,16 @@ class SatinColumn(EmbroideryElement):
         linestring = shgeo.LineString(stitches)
         return linestring
 
-    def _get_center_line_stitches(self, position):
+    def _get_center_line_stitches(self, position, stitch_length=None):
         inset_prop = -np.array([position, 100-position]) / 100
+        if stitch_length is None:
+            stitch_length = self.running_stitch_length
 
         # Do it like contour underlay, but inset all the way to the center.
         pairs = self.plot_points_on_rails(self.running_stitch_tolerance, (0, 0), inset_prop)
 
         points = [points[0] for points in pairs]
-        stitches = running_stitch.even_running_stitch(points, self.running_stitch_length, self.running_stitch_tolerance)
+        stitches = running_stitch.even_running_stitch(points, [stitch_length], self.running_stitch_tolerance)
 
         if len(stitches) == 1:
             stitches.append(stitches[0])
@@ -1338,12 +1340,12 @@ class SatinColumn(EmbroideryElement):
 
         first_side = running_stitch.even_running_stitch(
             [points[0] for points in pairs],
-            self.contour_underlay_stitch_length,
+            [self.contour_underlay_stitch_length],
             self.contour_underlay_stitch_tolerance
         )
         second_side = running_stitch.even_running_stitch(
             [points[1] for points in pairs],
-            self.contour_underlay_stitch_length,
+            [self.contour_underlay_stitch_length],
             self.contour_underlay_stitch_tolerance
         )
 
@@ -1381,7 +1383,7 @@ class SatinColumn(EmbroideryElement):
         repeats = self.center_walk_underlay_repeats
 
         stitch_groups = []
-        stitches = self._get_center_line_stitches(self.center_walk_underlay_position)
+        stitches = self._get_center_line_stitches(self.center_walk_underlay_position, self.center_walk_underlay_stitch_length)
         if end_point:
             tags = ("satin_column", "satin_column_underlay", "satin_center_walk")
             stitches = shgeo.LineString(stitches)

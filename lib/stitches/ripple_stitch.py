@@ -4,6 +4,7 @@ from math import atan2, ceil
 import numpy as np
 from shapely.affinity import rotate, scale, translate
 from shapely.geometry import LineString, Point
+from shapely.ops import substring
 
 from ..elements import SatinColumn
 from ..utils import Point as InkstitchPoint
@@ -80,7 +81,7 @@ def _get_staggered_stitches(stroke, lines, skip_start):
     stitches = []
     stitch_length = stroke.running_stitch_length
     tolerance = stroke.running_stitch_tolerance
-    enable_random_stitch_length = stroke.enable_random_stitch_length
+    is_random = stroke.enable_random_stitch_length
     length_sigma = stroke.random_stitch_length_jitter
     random_seed = stroke.random_seed
     last_point = None
@@ -98,14 +99,18 @@ def _get_staggered_stitches(stroke, lines, skip_start):
         elif stroke.join_style == 1:
             should_reverse = (i + skip_start) % 2 == 1
 
-        if enable_random_stitch_length or stroke.staggers == 0:
+        if stroke.staggers == 0:
             if should_reverse and stroke.flip_copies:
                 line.reverse()
-            points = running_stitch(line, stitch_length, tolerance, enable_random_stitch_length, length_sigma, prng.join_args(random_seed, i))
-            stitched_line = connector + points
+            stitched_line = running_stitch(line, stitch_length, tolerance, is_random, length_sigma, prng.join_args(random_seed, i))
         else:
-            # uses the guided fill alforithm to stagger rows of stitches
-            points = list(apply_stitches(LineString(line), stitch_length, stroke.staggers, 0.5, i, tolerance).coords)
+            if len(stitch_length) > 1:
+                points = list(
+                    apply_stagger(line, stitch_length, stroke.staggers, i, tolerance, is_random, length_sigma, prng.join_args(random_seed, i)).coords
+                )
+            else:
+                # uses the guided fill alforithm to stagger rows of stitches
+                points = list(apply_stitches(LineString(line), stitch_length, stroke.staggers, 0.5, i, tolerance).coords)
 
             # simplifying the path in apply_stitches could have removed the start or end point
             # we can simply add it again, the minimum stitch length value will take care to remove possible duplicates
@@ -114,11 +119,31 @@ def _get_staggered_stitches(stroke, lines, skip_start):
             stitched_line = [InkstitchPoint(*point) for point in points]
             if should_reverse and stroke.flip_copies:
                 stitched_line.reverse()
-            stitched_line = connector + stitched_line
+
+        stitched_line = connector + stitched_line
 
         last_point = stitched_line[-1]
         stitches.extend(stitched_line)
     return stitches
+
+
+def apply_stagger(line, stitch_length, num_staggers, row_num, tolerance, is_random, stitch_length_sigma, random_seed):
+    if num_staggers == 0:
+        num_staggers = 1  # sanity check to avoid division by zero.
+    start = ((row_num / num_staggers) % 1) * sum(stitch_length)
+    first_segment = LineString(line[:2])
+    segment_length = max(first_segment.length, 0.1)
+    target_length = segment_length + 2 * start
+    scale_factor = target_length / segment_length
+    extended_line = scale(first_segment, scale_factor, scale_factor)
+
+    line = [InkstitchPoint(*extended_line.coords[0])] + line
+    stitched_row = running_stitch(line, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed)
+    if len(stitched_row) <= 1:
+        return LineString()
+
+    stitched_line = LineString(stitched_row)
+    return substring(stitched_line, start, stitched_line.length)
 
 
 def _adjust_skip(stroke, num_lines, skip):
@@ -202,7 +227,7 @@ def _get_helper_lines(stroke):
 
 def _get_satin_ripple_helper_lines(stroke):
     # if grid_size has a number use this, otherwise use running_stitch_length
-    length = stroke.grid_size or stroke.running_stitch_length
+    length = stroke.grid_size or min(stroke.running_stitch_length)
 
     # use satin column points for satin like build ripple stitches
     rail_pairs = SatinColumn(stroke.node).plot_points_on_rails(length)

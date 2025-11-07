@@ -422,7 +422,7 @@ def inner_to_outer(tree, polygon, offset,
         smoothed = smooth_path(points, smoothness)
         points = clamp_path_to_polygon(smoothed, polygon)
 
-    stitches = running_stitch(points, stitch_length, tolerance, enable_random_stitch_length, random_sigma, random_seed)
+    stitches = running_stitch(points, [stitch_length], tolerance, enable_random_stitch_length, random_sigma, random_seed)
 
     return stitches
 
@@ -460,6 +460,9 @@ def _interpolate_linear_rings(ring1, ring2, max_stitch_length, start=None):
     # orders of magnitude faster because we're not building and querying a KDTree.
 
     num_points = int(20 * ring1.length / max_stitch_length)
+    if num_points <= 1:
+        return LineString()
+
     ring1_resampled = trimesh.path.traversal.resample_path(np.array(ring1.coords), count=num_points)
     ring2_resampled = trimesh.path.traversal.resample_path(np.array(ring2.coords), count=num_points)
 
@@ -535,7 +538,7 @@ def _spiral_fill(tree, stitch_length, tolerance, close_point, enable_random_stit
     path = spiral_maker(rings, stitch_length, starting_point)
     path = [Stitch(*stitch) for stitch in path]
 
-    return running_stitch(path, stitch_length, tolerance, enable_random_stitch_length, random_sigma, random_seed)
+    return running_stitch(path, [stitch_length], tolerance, enable_random_stitch_length, random_sigma, random_seed)
 
 
 def _get_spiral_rings(tree):

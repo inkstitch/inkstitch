@@ -118,14 +118,15 @@ class Stroke(EmbroideryElement):
     @property
     @param('running_stitch_length_mm',
            _('Running stitch length'),
-           tooltip=_('Length of stitches. Stitches can be shorter according to the stitch tolerance setting.'),
+           tooltip=_('Length of stitches. Stitches can be shorter according to the stitch tolerance setting.\n'
+                     'It is possible to create stitch length patterns by adding multiple values separated by a space.'),
            unit='mm',
-           type='float',
+           type='string',
            select_items=[('stroke_method', 'running_stitch'), ('stroke_method', 'ripple_stitch')],
-           default=2.5,
+           default="2.5",
            sort_index=4)
     def running_stitch_length(self):
-        return max(self.get_float_param("running_stitch_length_mm", 2.5), 0.01)
+        return [max(value, 0.01) for value in self.get_multiple_float_param("running_stitch_length_mm", "2.5")]
 
     @property
     @param('running_stitch_tolerance_mm',
@@ -185,13 +186,13 @@ class Stroke(EmbroideryElement):
            _('Zig-zag spacing (peak-to-peak)'),
            tooltip=_('Length of stitches in zig-zag mode.'),
            unit='mm',
-           type='float',
-           default=0.4,
+           type='string',
+           default="0.4",
            select_items=[('stroke_method', 'zigzag_stitch')],
            sort_index=6)
     @cache
     def zigzag_spacing(self):
-        return max(self.get_float_param("zigzag_spacing_mm", 0.4), 0.01)
+        return [max(value, 0.01) for value in self.get_multiple_float_param("zigzag_spacing_mm", "0.4")]
 
     @property
     @param('stroke_pull_compensation_mm',
@@ -551,7 +552,8 @@ class Stroke(EmbroideryElement):
         # `self.zigzag_spacing` is the length for a zig and a zag
         # together (a V shape).  Start with running stitch at half
         # that length:
-        stitch_group = self.running_stitch(path, zigzag_spacing / 2.0, self.running_stitch_tolerance, False, 0, "")
+        spacing = [value / 2 for value in zigzag_spacing]
+        stitch_group = self.running_stitch(path, spacing, self.running_stitch_tolerance, False, 0, "")
         stitch_group.stitches = zigzag_stitch(stitch_group.stitches, zigzag_spacing, stroke_width, pull_compensation)
 
         return stitch_group

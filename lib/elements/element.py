@@ -161,7 +161,11 @@ class EmbroideryElement(object):
         try:
             params = [int(param) for param in params if param]
         except (TypeError, ValueError):
-            return [int(default)]
+            params = [int(default)]
+
+        if param.endswith('_mm'):
+            params = [value * PIXELS_PER_MM for value in params]
+
         return params
 
     # returns an array of multiple space separated float values
@@ -171,7 +175,11 @@ class EmbroideryElement(object):
         try:
             params = [float(param) for param in params if param]
         except (TypeError, ValueError):
-            return [float(default)]
+            params = [float(default)]
+
+        if param.endswith('_mm'):
+            params = [value * PIXELS_PER_MM for value in params]
+
         return params
 
     def get_json_param(self, param, default=None):

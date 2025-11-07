@@ -391,7 +391,7 @@ def fallback(shape, running_stitch_length, running_stitch_tolerance):
     boundary = ensure_multi_line_string(shape.boundary)
     outline = boundary.geoms[0]
 
-    return even_running_stitch(line_string_to_point_list(outline), running_stitch_length, running_stitch_tolerance)
+    return even_running_stitch(line_string_to_point_list(outline), [running_stitch_length], running_stitch_tolerance)
 
 
 @debug.time
@@ -941,7 +941,7 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, angle, row_sp
             if fill_stitch_graph.has_edge(edge[0], edge[1], key='segment'):
                 travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath))
+            stitches.extend(travel(shape, travel_graph, edge, [running_stitch_length], running_stitch_tolerance, skip_last, underpath))
 
         check_stop_flag()
 
