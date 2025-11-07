@@ -12,6 +12,10 @@ data_title:
 {%- assign font = site.data.fonts.abril.font -%}
 ![April En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)
 
+## Ursprung der Schriftart
+
+Diese Schriftart wurde auf Grundlage der Schriftart Abril FatFace regular 400pt (141 mm) für Ink/Stitch entwickelt (https://fonts.google.com/specimen/Abril+Fatface?family=Abril+Fatface).
+
 ## Schriftzeichen
 
 Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
@@ -30,12 +34,6 @@ Sie kann von {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: f
 Bei einer Skalierung von 100% hat die Schrift eine ungefähre Höhe von {{ font1.size }} mm.
 
 Sie kann von {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm) bis zu {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm) skaliert werdens.
-
-
-## Origin of the font
-
-This font is a derivative of Abril FatFace regular 400pt (141mm) (https://fonts.google.com/specimen/Abril+Fatface?family=Abril+Fatface)
-
 
 ## Impressionen
 

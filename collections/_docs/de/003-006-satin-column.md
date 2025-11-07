@@ -111,19 +111,18 @@ Satinsäule unterstützt auch drei Arten von Unterlagen, die einzeln oder aber a
 
 Empfehlenswert ist auch [dieser Artikel (englisch)](https://www.mrxstitch.com/underlay/) der sich ausführlich mit dem Thema Satinsäule und Unterlagen befasst.
 
-### Asymmetrical parameter
+### Asymmetrische Parameter
 
-Some satin column parameters are asymmetrical, meaning that different values ​​can be applied to the two rails.
+Manche Parameter sind asymmetrisch, d.h. es kann für jede Seite ein eigener Wert angegeben werden.
 
-For example, the "Random percentage of satin width increase" is an asymmetrical parameter. If a single value is entered, it applies to both rails; if two values ​​are entered separated by a space, the first applies to the first rail, and the second applies to the second rail.
+Z.B. `Zufälliger Prozentwert (Erweitern)` ist ein solcher Parameter. Wird ein einzelner Wert angegeben, wird dieser auf beide Seiten der Satinsäule angewendet; sind zwei durch ein Leerzeichen getrennte Werte angegeben, so wird der erste Wert auf die erste Seite und der zweite Wert auf die zweite Seite angewendet.
+
 ![asymmetrical parameter](/assets/images/docs/asymetric_parameter.png)
 
-
+### Satinsäule
 
 Einige dieser Einstellungen sind Teil einer zukünftigen Version von Ink/Stitch und noch nicht in der derzeitigen Version enthalten.
 {: .notive--info }
-
-### Satinsäule
 
 Einstellung||Beschreibung
 ---|---|---
