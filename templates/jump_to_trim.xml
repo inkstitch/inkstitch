@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>Jump Stitch to Trim Command</name>
+    <name>Jump Stitch to Trim/Stop Command</name>
     <id>org.{{ id_inkstitch }}.jump_to_trim</id>
     <param name="extension" type="string" gui-hidden="true">jump_to_trim</param>
     <effect>
@@ -15,6 +15,10 @@
     </effect>
     <param name="tab" type="notebook">
       <page name="options" gui-text="Options">
+        <param name="command" type="optiongroup" appearance="combo" gui-text="Command">
+           <option value="trim">Trim</option>
+           <option value="stop">Stop</option>
+        </param>
         <param name="minimum-jump-length" type="float" precision="2" min="0" max="100"
                gui-text="Convert jumps not shorter than (mm)">3.0</param>
         <param name="maximum-jump-length" type="float" precision="2" min="0" max="10000"
@@ -25,7 +29,7 @@
         <param name="use-command-symbol" type="boolean" indent="1" gui-text="Use command symbol">false</param>
       </page>
       <page name="info" gui-text="Help">
-        <label appearance="header">This extension inserts trim commands to avoid jump stitches.</label>
+        <label appearance="header">This extension inserts trim or stop commands to avoid jump stitches.</label>
         <label>Get more information on our website</label>
         <label appearance="url">https://inkstitch.org/docs/commands/#jump-to-trim</label>
       </page>
