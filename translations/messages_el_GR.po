@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-01 01:47+0000\n"
-"PO-Revision-Date: 2025-11-01 01:48\n"
+"POT-Creation-Date: 2025-11-08 01:39+0000\n"
+"PO-Revision-Date: 2025-11-08 01:39\n"
 "Last-Translator: \n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 01:47+0000\n"
+"POT-Creation-Date: 2025-11-08 01:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1129,126 +1129,126 @@ msgstr ""
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr ""
 
-#: lib/elements/element.py:283 lib/gui/preferences.py:59
+#: lib/elements/element.py:291 lib/gui/preferences.py:59
 #: lib/gui/preferences.py:128
 msgid "Minimum stitch length"
 msgstr ""
 
-#: lib/elements/element.py:284
+#: lib/elements/element.py:292
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
 msgstr ""
 
-#: lib/elements/element.py:294 lib/gui/preferences.py:41
+#: lib/elements/element.py:302 lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
 msgstr ""
 
-#: lib/elements/element.py:295
+#: lib/elements/element.py:303
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
 msgstr ""
 
-#: lib/elements/element.py:305
+#: lib/elements/element.py:313
 msgid "Allow lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:306
+#: lib/elements/element.py:314
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr ""
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:311
+#: lib/elements/element.py:319
 msgid "Both"
 msgstr ""
 
-#: lib/elements/element.py:311
+#: lib/elements/element.py:319
 msgid "Before"
 msgstr "Πριν"
 
-#: lib/elements/element.py:311
+#: lib/elements/element.py:319
 msgid "After"
 msgstr "Μετά"
 
-#: lib/elements/element.py:311
+#: lib/elements/element.py:319
 msgid "Neither"
 msgstr ""
 
-#: lib/elements/element.py:320
+#: lib/elements/element.py:328
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:321
+#: lib/elements/element.py:329
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr ""
 
-#: lib/elements/element.py:333
+#: lib/elements/element.py:341
 msgid "Tack stitch"
 msgstr ""
 
-#: lib/elements/element.py:334
+#: lib/elements/element.py:342
 msgid "Tack down stitch type"
 msgstr ""
 
-#: lib/elements/element.py:344 lib/elements/element.py:390
+#: lib/elements/element.py:352 lib/elements/element.py:398
 msgid "Custom path"
 msgstr "Προσαρμοσμένη διαδρομή"
 
-#: lib/elements/element.py:345
+#: lib/elements/element.py:353
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr ""
 
-#: lib/elements/element.py:355 lib/elements/element.py:367
+#: lib/elements/element.py:363 lib/elements/element.py:375
 msgid "Scale tack stitch"
 msgstr ""
 
-#: lib/elements/element.py:356
+#: lib/elements/element.py:364
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr ""
 
-#: lib/elements/element.py:368
+#: lib/elements/element.py:376
 msgid "Scale tack stitch by this percentage."
 msgstr ""
 
-#: lib/elements/element.py:379
+#: lib/elements/element.py:387
 msgid "Lock stitch"
 msgstr ""
 
-#: lib/elements/element.py:380
+#: lib/elements/element.py:388
 msgid "Lock stitch type"
 msgstr ""
 
-#: lib/elements/element.py:391
+#: lib/elements/element.py:399
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr ""
 
-#: lib/elements/element.py:401 lib/elements/element.py:413
+#: lib/elements/element.py:409 lib/elements/element.py:421
 msgid "Scale lock stitch"
 msgstr ""
 
-#: lib/elements/element.py:402
+#: lib/elements/element.py:410
 msgid "Set length of lock stitches (mm)."
 msgstr ""
 
-#: lib/elements/element.py:414
+#: lib/elements/element.py:422
 msgid "Scale lock stitch by this percentage."
 msgstr ""
 
-#: lib/elements/element.py:426
+#: lib/elements/element.py:434
 msgid "Trim After"
 msgstr ""
 
-#: lib/elements/element.py:427
+#: lib/elements/element.py:435
 msgid "Add a TRIM command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:436
+#: lib/elements/element.py:444
 msgid "Stop After"
 msgstr ""
 
-#: lib/elements/element.py:437
+#: lib/elements/element.py:445
 msgid "Add a STOP command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:741
+#: lib/elements/element.py:749
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr ""
 
@@ -1669,19 +1669,19 @@ msgstr ""
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:485 lib/elements/stroke.py:146
+#: lib/elements/fill_stitch.py:485 lib/elements/stroke.py:147
 msgid "Randomize stitch length"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:486 lib/elements/stroke.py:147
+#: lib/elements/fill_stitch.py:486 lib/elements/stroke.py:148
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:502 lib/elements/stroke.py:159
+#: lib/elements/fill_stitch.py:502 lib/elements/stroke.py:160
 msgid "Random stitch length jitter"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:503 lib/elements/stroke.py:160
+#: lib/elements/fill_stitch.py:503 lib/elements/stroke.py:161
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr ""
 
@@ -1707,11 +1707,11 @@ msgid "Backtrack each stitch this many times.  A value of 1 would triple each st
 msgstr ""
 
 #: lib/elements/fill_stitch.py:546 lib/elements/satin_column.py:254
-#: lib/elements/stroke.py:185
+#: lib/elements/stroke.py:186
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:547 lib/elements/stroke.py:186
+#: lib/elements/fill_stitch.py:547 lib/elements/stroke.py:187
 msgid "Length of stitches in zig-zag mode."
 msgstr ""
 
@@ -1740,7 +1740,7 @@ msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr ""
 
 #: lib/elements/fill_stitch.py:598 lib/elements/satin_column.py:282
-#: lib/elements/stroke.py:198
+#: lib/elements/stroke.py:199
 msgid "Pull compensation"
 msgstr ""
 
@@ -1750,7 +1750,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:603 lib/elements/satin_column.py:286
 #: lib/elements/satin_column.py:449 lib/elements/satin_column.py:543
-#: lib/elements/stroke.py:201
+#: lib/elements/stroke.py:202
 msgid "mm (each side)"
 msgstr "χλστ. (κάθε πλευρά)"
 
@@ -1797,7 +1797,7 @@ msgstr ""
 msgid "default: 3x fill row spacing"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:671 lib/elements/stroke.py:171
+#: lib/elements/fill_stitch.py:671 lib/elements/stroke.py:172
 #: lib/extensions/element_info.py:144 lib/extensions/element_info.py:203
 msgid "Max stitch length"
 msgstr ""
@@ -1811,13 +1811,13 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr ""
 
 #: lib/elements/fill_stitch.py:717 lib/elements/satin_column.py:585
-#: lib/elements/stroke.py:450 lib/gui/satin_multicolor/colorize_panel.py:61
+#: lib/elements/stroke.py:451 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:718 lib/elements/satin_column.py:586
-#: lib/elements/stroke.py:451
+#: lib/elements/stroke.py:452
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr ""
 
@@ -2105,27 +2105,27 @@ msgstr ""
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr ""
 
-#: lib/elements/satin_column.py:297 lib/elements/stroke.py:340
+#: lib/elements/satin_column.py:297 lib/elements/stroke.py:341
 msgid "Automatic"
 msgstr "Αυτόματα"
 
-#: lib/elements/satin_column.py:298 lib/elements/stroke.py:341
+#: lib/elements/satin_column.py:298 lib/elements/stroke.py:342
 msgid "Don't reverse"
 msgstr ""
 
-#: lib/elements/satin_column.py:299 lib/elements/stroke.py:342
+#: lib/elements/satin_column.py:299 lib/elements/stroke.py:343
 msgid "Reverse first rail"
 msgstr ""
 
-#: lib/elements/satin_column.py:300 lib/elements/stroke.py:343
+#: lib/elements/satin_column.py:300 lib/elements/stroke.py:344
 msgid "Reverse second rail"
 msgstr ""
 
-#: lib/elements/satin_column.py:301 lib/elements/stroke.py:344
+#: lib/elements/satin_column.py:301 lib/elements/stroke.py:345
 msgid "Reverse both rails"
 msgstr ""
 
-#: lib/elements/satin_column.py:307 lib/elements/stroke.py:350
+#: lib/elements/satin_column.py:307 lib/elements/stroke.py:351
 msgid "Reverse rails"
 msgstr ""
 
@@ -2186,7 +2186,7 @@ msgid "Stitch length"
 msgstr ""
 
 #: lib/elements/satin_column.py:429 lib/elements/satin_column.py:486
-#: lib/elements/stroke.py:132
+#: lib/elements/stroke.py:133
 msgid "Stitch tolerance"
 msgstr ""
 
@@ -2322,192 +2322,192 @@ msgid "No extra stitches will be added to the original ripple pattern and the ru
 msgstr ""
 
 #: lib/elements/stroke.py:121
-#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:21
-msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
+msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting.\n"
+"It is possible to create stitch length patterns by adding multiple values separated by a space."
 msgstr ""
 
-#: lib/elements/stroke.py:133
+#: lib/elements/stroke.py:134
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr ""
 
-#: lib/elements/stroke.py:172
+#: lib/elements/stroke.py:173
 msgid "Split stitches longer than this."
 msgstr ""
 
-#: lib/elements/stroke.py:199
+#: lib/elements/stroke.py:200
 msgid "Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This widens the zigzag line width."
 msgstr ""
 
-#: lib/elements/stroke.py:212
+#: lib/elements/stroke.py:213
 msgid "Number of lines"
 msgstr "Αριθμός γραμμών"
 
-#: lib/elements/stroke.py:213
+#: lib/elements/stroke.py:214
 msgid "Number of lines from start to finish"
 msgstr "Αριθμός γραμμών από την αρχή έως το τέλος"
 
-#: lib/elements/stroke.py:224
+#: lib/elements/stroke.py:225
 msgid "Minimum line distance"
 msgstr "Ελάχιστη απόσταση γραμμών"
 
-#: lib/elements/stroke.py:225
+#: lib/elements/stroke.py:226
 msgid "Overrides the number of lines setting."
 msgstr ""
 
-#: lib/elements/stroke.py:238
+#: lib/elements/stroke.py:239
 msgid "Line count / Minimum line distance"
 msgstr ""
 
-#: lib/elements/stroke.py:239
+#: lib/elements/stroke.py:240
 msgid "Render at rungs"
 msgstr ""
 
-#: lib/elements/stroke.py:240
+#: lib/elements/stroke.py:241
 msgid "Adaptive + minimum line distance"
 msgstr ""
 
-#: lib/elements/stroke.py:245
+#: lib/elements/stroke.py:246
 msgid "Pattern position"
 msgstr ""
 
-#: lib/elements/stroke.py:246
+#: lib/elements/stroke.py:247
 msgid "Pattern position for satin guided ripples."
 msgstr ""
 
-#: lib/elements/stroke.py:257
+#: lib/elements/stroke.py:258
 msgid "Stagger lines this many times before repeating"
 msgstr ""
 
-#: lib/elements/stroke.py:258
+#: lib/elements/stroke.py:259
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. A value of 0 (default) disables staggering and instead stitches evenly.For linear ripples only."
 msgstr ""
 
-#: lib/elements/stroke.py:271
+#: lib/elements/stroke.py:272
 msgid "Skip first lines"
 msgstr "Παράλειψη πρώτων γραμμών"
 
-#: lib/elements/stroke.py:272
+#: lib/elements/stroke.py:273
 msgid "Skip this number of lines at the beginning."
 msgstr "Παράλειψη αυτού του αριθμού γραμμών στην αρχή."
 
-#: lib/elements/stroke.py:283
+#: lib/elements/stroke.py:284
 msgid "Skip last lines"
 msgstr "Παράλειψη τελευταίων γραμμών"
 
-#: lib/elements/stroke.py:284
+#: lib/elements/stroke.py:285
 msgid "Skip this number of lines at the end"
 msgstr "Παράλειψη αυτού του αριθμού γραμμών στο τέλος"
 
-#: lib/elements/stroke.py:295
+#: lib/elements/stroke.py:296
 msgid "Flip every second line"
 msgstr ""
 
-#: lib/elements/stroke.py:296
+#: lib/elements/stroke.py:297
 msgid "Linear ripple: wether to flip the pattern every second line or not."
 msgstr ""
 
-#: lib/elements/stroke.py:306
+#: lib/elements/stroke.py:307
 msgid "Line distance exponent"
 msgstr ""
 
-#: lib/elements/stroke.py:307
+#: lib/elements/stroke.py:308
 msgid "Increase density towards one side."
 msgstr ""
 
-#: lib/elements/stroke.py:318
+#: lib/elements/stroke.py:319
 msgid "Flip exponent"
 msgstr ""
 
-#: lib/elements/stroke.py:319
+#: lib/elements/stroke.py:320
 msgid "Reverse exponent effect."
 msgstr ""
 
-#: lib/elements/stroke.py:330
+#: lib/elements/stroke.py:331
 msgid "Reverse"
 msgstr ""
 
-#: lib/elements/stroke.py:331
+#: lib/elements/stroke.py:332
 msgid "Flip start and end point"
 msgstr ""
 
-#: lib/elements/stroke.py:351
+#: lib/elements/stroke.py:352
 msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
 msgstr ""
 
-#: lib/elements/stroke.py:363
+#: lib/elements/stroke.py:364
 msgid "Grid size"
 msgstr "Μέγεθος πλέγματος"
 
-#: lib/elements/stroke.py:364
+#: lib/elements/stroke.py:365
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr ""
 
-#: lib/elements/stroke.py:376
+#: lib/elements/stroke.py:377
 msgid "Stitch grid first"
 msgstr ""
 
-#: lib/elements/stroke.py:377
+#: lib/elements/stroke.py:378
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
 msgstr ""
 
-#: lib/elements/stroke.py:388
+#: lib/elements/stroke.py:389
 msgid "Scale axis"
 msgstr ""
 
-#: lib/elements/stroke.py:389
+#: lib/elements/stroke.py:390
 msgid "Scale axis for satin guided ripple stitches."
 msgstr ""
 
-#: lib/elements/stroke.py:393 lib/gui/edit_json/settings_panel.py:159
+#: lib/elements/stroke.py:394 lib/gui/edit_json/settings_panel.py:159
 #: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:32
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr ""
 
-#: lib/elements/stroke.py:401
+#: lib/elements/stroke.py:402
 msgid "Starting scale"
 msgstr ""
 
-#: lib/elements/stroke.py:402
+#: lib/elements/stroke.py:403
 msgid "How big the first copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:402 lib/elements/stroke.py:414
+#: lib/elements/stroke.py:403 lib/elements/stroke.py:415
 msgid "Used only for ripple stitch with a guide line."
 msgstr ""
 
-#: lib/elements/stroke.py:413
+#: lib/elements/stroke.py:414
 msgid "Ending scale"
 msgstr ""
 
-#: lib/elements/stroke.py:414
+#: lib/elements/stroke.py:415
 msgid "How big the last copy of the line should be, in percent."
 msgstr ""
 
-#: lib/elements/stroke.py:425 lib/gui/tartan/customize_panel.py:43
+#: lib/elements/stroke.py:426 lib/gui/tartan/customize_panel.py:43
 #: inx/inkstitch_transform_elements.inx:10
 msgid "Rotate"
 msgstr "Περιστροφή"
 
-#: lib/elements/stroke.py:426
+#: lib/elements/stroke.py:427
 msgid "Rotate satin guided ripple stitches"
 msgstr ""
 
-#: lib/elements/stroke.py:437 inx/inkstitch_knockdown_fill.inx:20
+#: lib/elements/stroke.py:438 inx/inkstitch_knockdown_fill.inx:20
 #: inx/inkstitch_knockdown_fill.inx:37
 msgid "Join style"
 msgstr ""
 
-#: lib/elements/stroke.py:438
+#: lib/elements/stroke.py:439
 msgid "Join style for non circular ripples."
 msgstr ""
 
-#: lib/elements/stroke.py:441
+#: lib/elements/stroke.py:442
 msgid "flat"
 msgstr ""
 
-#: lib/elements/stroke.py:441
+#: lib/elements/stroke.py:442
 msgid "point"
 msgstr "σημείο"
 
@@ -2571,7 +2571,7 @@ msgstr ""
 
 #: lib/extensions/apply_threadlist.py:78
 msgid "File not found."
-msgstr ""
+msgstr "Το αρχείο δεν βρέθηκε."
 
 #: lib/extensions/apply_threadlist.py:81
 msgid "The filepath specified is not a file but a dictionary.\n"
@@ -2660,7 +2660,7 @@ msgstr ""
 
 #: lib/extensions/batch_lettering.py:216 lib/gui/lettering/main_panel.py:317
 msgid "scale"
-msgstr ""
+msgstr "κλίμακα"
 
 #: lib/extensions/break_apart.py:32
 msgid "Please select one or more fill areas to break apart."
@@ -2958,15 +2958,15 @@ msgstr ""
 
 #: lib/extensions/lettering_organize_glyphs.py:53
 msgid "Other Letters"
-msgstr ""
+msgstr "Άλλα γράμματα"
 
 #: lib/extensions/lettering_organize_glyphs.py:54
 msgid "Digits"
-msgstr ""
+msgstr "Ψηφία"
 
 #: lib/extensions/lettering_organize_glyphs.py:55
 msgid "Symbols"
-msgstr ""
+msgstr "Σύμβολα"
 
 #: lib/extensions/lettering_organize_glyphs.py:56
 msgid "Punctuation"
@@ -3146,7 +3146,7 @@ msgstr ""
 
 #: lib/extensions/print_pdf.py:135
 msgid "Closing..."
-msgstr ""
+msgstr "Κλείσιμο..."
 
 #: lib/extensions/print_pdf.py:135
 msgid "It is safe to close this window now."
@@ -3422,7 +3422,7 @@ msgstr ""
 
 #: lib/gui/about.py:18
 msgid "About Ink/Stitch"
-msgstr ""
+msgstr "Πληροφορίες για το Ink/Stitch"
 
 #: lib/gui/about.py:29 inx/inkstitch_about.inx:3
 msgid "About"
@@ -3710,11 +3710,11 @@ msgstr ""
 
 #: lib/gui/lettering/option_panel.py:55
 msgid "Height: "
-msgstr ""
+msgstr "Ύψος: "
 
 #: lib/gui/lettering/option_panel.py:59
 msgid "Scale:"
-msgstr ""
+msgstr "Κλίμακα:"
 
 #: lib/gui/lettering/option_panel.py:71
 msgid "Font"
@@ -3728,19 +3728,19 @@ msgstr ""
 #: inx/inkstitch_batch_lettering.inx:59
 #: inx/inkstitch_lettering_along_path.inx:19
 msgid "Left"
-msgstr ""
+msgstr "Αριστερά"
 
 #: lib/gui/lettering/option_panel.py:86 inx/inkstitch_batch_lettering.inx:37
 #: inx/inkstitch_batch_lettering.inx:60
 #: inx/inkstitch_lettering_along_path.inx:20
 msgid "Center"
-msgstr ""
+msgstr "Κέντρο"
 
 #: lib/gui/lettering/option_panel.py:86 inx/inkstitch_batch_lettering.inx:38
 #: inx/inkstitch_batch_lettering.inx:61
 #: inx/inkstitch_lettering_along_path.inx:21
 msgid "Right"
-msgstr ""
+msgstr "Δεξιά"
 
 #: lib/gui/lettering/option_panel.py:86 inx/inkstitch_batch_lettering.inx:39
 msgid "Block (default)"
@@ -3796,11 +3796,11 @@ msgstr ""
 
 #: lib/gui/lettering/option_panel.py:148 inx/inkstitch_batch_lettering.inx:25
 msgid "Line"
-msgstr ""
+msgstr "Γραμμή"
 
 #: lib/gui/lettering/option_panel.py:148 inx/inkstitch_batch_lettering.inx:26
 msgid "Word"
-msgstr ""
+msgstr "Λέξη"
 
 #: lib/gui/lettering/option_panel.py:152 inx/inkstitch_batch_lettering.inx:28
 msgid "Add trims"
@@ -3857,7 +3857,7 @@ msgstr ""
 #: lib/gui/lettering/option_panel.py:81 lib/gui/lettering_font_sample.py:53
 #: lib/gui/tartan/customize_panel.py:46 inx/inkstitch_batch_lettering.inx:21
 msgid "Scale (%)"
-msgstr ""
+msgstr "Κλίμακα (%)"
 
 #: lib/gui/lettering_font_sample.py:55
 msgid "Max. line width"
@@ -3916,15 +3916,15 @@ msgstr ""
 
 #: lib/gui/preferences.py:83
 msgid "Don't rotate"
-msgstr ""
+msgstr "Χωρίς περιστροφή"
 
 #: lib/gui/preferences.py:84
 msgid "Rotate left"
-msgstr ""
+msgstr "Περιστροφή αριστερά"
 
 #: lib/gui/preferences.py:85
 msgid "Rotate right"
-msgstr ""
+msgstr "Περιστροφή δεξιά"
 
 #: lib/gui/preferences.py:101
 msgid "Global"
@@ -4008,7 +4008,7 @@ msgstr ""
 
 #: lib/gui/request_update_svg_version.py:37
 msgid "Update"
-msgstr ""
+msgstr "Ενημέρωση"
 
 #: lib/gui/satin_multicolor/color_panel.py:19 lib/gui/tartan/stripe_panel.py:19
 msgid "Click to move color up."
@@ -4028,11 +4028,11 @@ msgstr ""
 
 #: lib/gui/satin_multicolor/color_panel.py:39
 msgid "Remove color"
-msgstr ""
+msgstr "Αφαίρεση χρώματος"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:27
 msgid "General Settings"
-msgstr ""
+msgstr "Γενικές ρυθμίσεις"
 
 #: lib/gui/satin_multicolor/colorize_panel.py:30
 msgid "Equidistant colors"
@@ -4082,7 +4082,7 @@ msgstr ""
 #: lib/gui/satin_multicolor/colorize_panel.py:235
 #, python-brace-format
 msgid "Total width: {width}%"
-msgstr ""
+msgstr "Συνολικό πλάτος: {width}%"
 
 #: lib/gui/satin_multicolor/help_panel.py:19
 msgid "This extension simulates a multicolor satin by creating colored copies of the selected satin(s)."
@@ -4194,7 +4194,7 @@ msgstr ""
 #: lib/gui/simulator/drawing_panel.py:304
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
-msgstr ""
+msgstr "Διαστάσεις: {:.2f} x {:.2f}"
 
 #: lib/gui/simulator/drawing_panel.py:450
 #, python-format
@@ -4394,7 +4394,7 @@ msgstr ""
 
 #: lib/gui/tartan/main_panel.py:54
 msgid "Customize"
-msgstr ""
+msgstr "Προσαρμογή"
 
 #: lib/gui/tartan/main_panel.py:58
 msgid "Palette Code"
@@ -4461,7 +4461,7 @@ msgstr ""
 
 #: lib/gui/test_swatches.py:56
 msgid "Increase by"
-msgstr ""
+msgstr "Αύξηση κατά"
 
 #: lib/gui/test_swatches.py:63
 msgid "Columns"
@@ -4622,7 +4622,7 @@ msgstr ""
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:9
 msgid "Path"
-msgstr ""
+msgstr "Διαδρομή"
 
 #: lib/sew_stack/stitch_layers/mixins/path.py:10
 msgid "Reverse path"
@@ -4659,6 +4659,10 @@ msgstr ""
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
 msgid "Stitch along a path using evenly-spaced stitches."
+msgstr ""
+
+#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:21
+msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
 msgstr ""
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:25
@@ -5395,7 +5399,7 @@ msgstr ""
 #. description for pystitch file format: json
 #: pystitch-format-descriptions.py:106
 msgid "Json Export"
-msgstr ""
+msgstr "Εξαγωγή json"
 
 #: inx/inkstitch_apply_attribute.inx:3
 msgid "Apply attribute"
@@ -5796,7 +5800,7 @@ msgstr ""
 
 #: inx/inkstitch_commands_scale_symbols.inx:6
 msgid "Size (%)"
-msgstr ""
+msgstr "Μέγεθος (%)"
 
 #: inx/inkstitch_commands_scale_symbols.inx:10
 msgid "Adjust all command symbol sizes at once"
@@ -6154,7 +6158,7 @@ msgstr ""
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
-msgstr ""
+msgstr "Είσοδος αρχείου 100"
 
 #: inx/inkstitch_input_100.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.100)"
@@ -6166,7 +6170,7 @@ msgstr ""
 
 #: inx/inkstitch_input_10O.inx:3
 msgid "10O file input"
-msgstr ""
+msgstr "Είσοδος αρχείου 10O"
 
 #: inx/inkstitch_input_10O.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.10o)"
@@ -6178,7 +6182,7 @@ msgstr ""
 
 #: inx/inkstitch_input_BRO.inx:3
 msgid "BRO file input"
-msgstr ""
+msgstr "Είσοδος αρχείου BRO"
 
 #: inx/inkstitch_input_BRO.inx:8
 msgid "Ink/Stitch: Bits & Volts Embroidery Format (.bro)"
@@ -6190,7 +6194,7 @@ msgstr ""
 
 #: inx/inkstitch_input_COL.inx:3
 msgid "COL file input"
-msgstr ""
+msgstr "Είσοδος αρχείου COL"
 
 #: inx/inkstitch_input_COL.inx:8
 msgid "Ink/Stitch: Col Color Format (.col)"
@@ -6202,7 +6206,7 @@ msgstr ""
 
 #: inx/inkstitch_input_CSV.inx:3
 msgid "CSV file input"
-msgstr ""
+msgstr "Είσοδος αρχείου CSV"
 
 #: inx/inkstitch_input_CSV.inx:8
 msgid "Ink/Stitch: Comma-separated values (.csv)"
@@ -6214,7 +6218,7 @@ msgstr ""
 
 #: inx/inkstitch_input_DAT.inx:3
 msgid "DAT file input"
-msgstr ""
+msgstr "Είσοδος αρχείου DAT"
 
 #: inx/inkstitch_input_DAT.inx:8
 msgid "Ink/Stitch: Sunstar or Barudan Embroidery Format (.dat)"
@@ -6226,7 +6230,7 @@ msgstr ""
 
 #: inx/inkstitch_input_DSB.inx:3
 msgid "DSB file input"
-msgstr ""
+msgstr "Είσοδος αρχείου DSB"
 
 #: inx/inkstitch_input_DSB.inx:8
 msgid "Ink/Stitch: Tajima(Barudan) Embroidery Format (.dsb)"
@@ -6238,7 +6242,7 @@ msgstr ""
 
 #: inx/inkstitch_input_DST.inx:3
 msgid "DST file input"
-msgstr ""
+msgstr "Είσοδος αρχείου DST"
 
 #: inx/inkstitch_input_DST.inx:8 inx/inkstitch_output_DST.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.dst)"
@@ -6250,7 +6254,7 @@ msgstr ""
 
 #: inx/inkstitch_input_DSZ.inx:3
 msgid "DSZ file input"
-msgstr ""
+msgstr "Είσοδος αρχείου DSZ"
 
 #: inx/inkstitch_input_DSZ.inx:8
 msgid "Ink/Stitch: ZSK USA Embroidery Format (.dsz)"
@@ -6262,7 +6266,7 @@ msgstr ""
 
 #: inx/inkstitch_input_EDR.inx:3
 msgid "EDR file input"
-msgstr ""
+msgstr "Είσοδος αρχείου EDR"
 
 #: inx/inkstitch_input_EDR.inx:8
 msgid "Ink/Stitch: Edr Color Format (.edr)"
@@ -6274,7 +6278,7 @@ msgstr ""
 
 #: inx/inkstitch_input_EMD.inx:3
 msgid "EMD file input"
-msgstr ""
+msgstr "Είσοδος αρχείου EMD"
 
 #: inx/inkstitch_input_EMD.inx:8
 msgid "Ink/Stitch: Elna Embroidery Format (.emd)"
@@ -6286,7 +6290,7 @@ msgstr ""
 
 #: inx/inkstitch_input_EXP.inx:3
 msgid "EXP file input"
-msgstr ""
+msgstr "Είσοδος αρχείου EXP"
 
 #: inx/inkstitch_input_EXP.inx:8 inx/inkstitch_output_EXP.inx:8
 msgid "Ink/Stitch: Melco Expanded Embroidery Format (.exp)"
@@ -6298,7 +6302,7 @@ msgstr ""
 
 #: inx/inkstitch_input_EXY.inx:3
 msgid "EXY file input"
-msgstr ""
+msgstr "Είσοδος αρχείου EXY"
 
 #: inx/inkstitch_input_EXY.inx:8
 msgid "Ink/Stitch: Eltac Embroidery Format (.exy)"
@@ -6310,7 +6314,7 @@ msgstr ""
 
 #: inx/inkstitch_input_FXY.inx:3
 msgid "FXY file input"
-msgstr ""
+msgstr "Είσοδος αρχείου FXY"
 
 #: inx/inkstitch_input_FXY.inx:8
 msgid "Ink/Stitch: Fortron Embroidery Format (.fxy)"
@@ -6322,7 +6326,7 @@ msgstr ""
 
 #: inx/inkstitch_input_GCODE.inx:3
 msgid "GCODE file input"
-msgstr ""
+msgstr "Είσοδος αρχείου GCODE"
 
 #: inx/inkstitch_input_GCODE.inx:8 inx/inkstitch_output_GCODE.inx:8
 msgid "Ink/Stitch: gcode Format, Text File (.gcode)"
@@ -6334,7 +6338,7 @@ msgstr ""
 
 #: inx/inkstitch_input_GT.inx:3
 msgid "GT file input"
-msgstr ""
+msgstr "Είσοδος αρχείου GT"
 
 #: inx/inkstitch_input_GT.inx:8
 msgid "Ink/Stitch: Gold Thread Embroidery Format (.gt)"
@@ -6346,7 +6350,7 @@ msgstr ""
 
 #: inx/inkstitch_input_HUS.inx:3
 msgid "HUS file input"
-msgstr ""
+msgstr "Είσοδος αρχείου HUS"
 
 #: inx/inkstitch_input_HUS.inx:8
 msgid "Ink/Stitch: Husqvarna Embroidery Format (.hus)"
@@ -6358,7 +6362,7 @@ msgstr ""
 
 #: inx/inkstitch_input_INB.inx:3
 msgid "INB file input"
-msgstr ""
+msgstr "Είσοδος αρχείου INB"
 
 #: inx/inkstitch_input_INB.inx:8
 msgid "Ink/Stitch: Inbro Embroidery Format (.inb)"
@@ -6370,7 +6374,7 @@ msgstr ""
 
 #: inx/inkstitch_input_INF.inx:3
 msgid "INF file input"
-msgstr ""
+msgstr "Είσοδος αρχείου INF"
 
 #: inx/inkstitch_input_INF.inx:8
 msgid "Ink/Stitch: Inf Color Format (.inf)"
@@ -6382,7 +6386,7 @@ msgstr ""
 
 #: inx/inkstitch_input_IQP.inx:3
 msgid "IQP file input"
-msgstr ""
+msgstr "Είσοδος αρχείου IQP"
 
 #: inx/inkstitch_input_IQP.inx:8
 msgid "Ink/Stitch: Iqp - Intelliquilter Format (.iqp)"
@@ -6394,7 +6398,7 @@ msgstr ""
 
 #: inx/inkstitch_input_JEF.inx:3
 msgid "JEF file input"
-msgstr ""
+msgstr "Είσοδος αρχείου JEF"
 
 #: inx/inkstitch_input_JEF.inx:8 inx/inkstitch_output_JEF.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.jef)"
@@ -6406,7 +6410,7 @@ msgstr ""
 
 #: inx/inkstitch_input_JPX.inx:3
 msgid "JPX file input"
-msgstr ""
+msgstr "Είσοδος αρχείου JPX"
 
 #: inx/inkstitch_input_JPX.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.jpx)"
@@ -6418,7 +6422,7 @@ msgstr ""
 
 #: inx/inkstitch_input_JSON.inx:3
 msgid "JSON file input"
-msgstr ""
+msgstr "Είσοδος αρχείου JSON"
 
 #: inx/inkstitch_input_JSON.inx:8
 msgid "Ink/Stitch: Json Export (.json)"
@@ -6430,7 +6434,7 @@ msgstr ""
 
 #: inx/inkstitch_input_KSM.inx:3
 msgid "KSM file input"
-msgstr ""
+msgstr "Είσοδος αρχείου KSM"
 
 #: inx/inkstitch_input_KSM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.ksm)"
@@ -6442,7 +6446,7 @@ msgstr ""
 
 #: inx/inkstitch_input_MAX.inx:3
 msgid "MAX file input"
-msgstr ""
+msgstr "Είσοδος αρχείου MAX"
 
 #: inx/inkstitch_input_MAX.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.max)"
@@ -6454,7 +6458,7 @@ msgstr ""
 
 #: inx/inkstitch_input_MIT.inx:3
 msgid "MIT file input"
-msgstr ""
+msgstr "Είσοδος αρχείου MIT"
 
 #: inx/inkstitch_input_MIT.inx:8
 msgid "Ink/Stitch: Mitsubishi Embroidery Format (.mit)"
@@ -6466,7 +6470,7 @@ msgstr ""
 
 #: inx/inkstitch_input_NEW.inx:3
 msgid "NEW file input"
-msgstr ""
+msgstr "Είσοδος αρχείου NEW"
 
 #: inx/inkstitch_input_NEW.inx:8
 msgid "Ink/Stitch: Ameco Embroidery Format (.new)"
@@ -6478,7 +6482,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PCD.inx:3
 msgid "PCD file input"
-msgstr ""
+msgstr "Είσοδος αρχείου PCD"
 
 #: inx/inkstitch_input_PCD.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcd)"
@@ -6490,7 +6494,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PCM.inx:3
 msgid "PCM file input"
-msgstr ""
+msgstr "Είσοδος αρχείου PCM"
 
 #: inx/inkstitch_input_PCM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcm)"
@@ -6502,7 +6506,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PCQ.inx:3
 msgid "PCQ file input"
-msgstr ""
+msgstr "Είσοδος αρχείου PCQ"
 
 #: inx/inkstitch_input_PCQ.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcq)"
@@ -6514,7 +6518,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PCS.inx:3
 msgid "PCS file input"
-msgstr ""
+msgstr "Είσοδος αρχείου PCS"
 
 #: inx/inkstitch_input_PCS.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcs)"
@@ -6526,7 +6530,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PEC.inx:3
 msgid "PEC file input"
-msgstr ""
+msgstr "Είσοδος αρχείου PEC"
 
 #: inx/inkstitch_input_PEC.inx:8 inx/inkstitch_output_PEC.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.pec)"
@@ -6538,7 +6542,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PES.inx:3
 msgid "PES file input"
-msgstr ""
+msgstr "Είσοδος αρχείου PES"
 
 #: inx/inkstitch_input_PES.inx:8 inx/inkstitch_output_PES.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.pes)"
@@ -6550,7 +6554,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PHB.inx:3
 msgid "PHB file input"
-msgstr ""
+msgstr "Είσοδος αρχείου PHB"
 
 #: inx/inkstitch_input_PHB.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.phb)"
@@ -6562,7 +6566,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PHC.inx:3
 msgid "PHC file input"
-msgstr ""
+msgstr "Είσοδος αρχείου PHC"
 
 #: inx/inkstitch_input_PHC.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.phc)"
@@ -6574,7 +6578,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PLT.inx:3
 msgid "PLT file input"
-msgstr ""
+msgstr "Είσοδος αρχείου PLT"
 
 #: inx/inkstitch_input_PLT.inx:8
 msgid "Ink/Stitch: Plt - HPGL (.plt)"
@@ -6586,7 +6590,7 @@ msgstr ""
 
 #: inx/inkstitch_input_PMV.inx:3
 msgid "PMV file input"
-msgstr ""
+msgstr "Είσοδος αρχείου PMV"
 
 #: inx/inkstitch_input_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format (.pmv)"
@@ -6598,7 +6602,7 @@ msgstr ""
 
 #: inx/inkstitch_input_QCC.inx:3
 msgid "QCC file input"
-msgstr ""
+msgstr "Είσοδος αρχείου QCC"
 
 #: inx/inkstitch_input_QCC.inx:8
 msgid "Ink/Stitch: Qcc - QuiltEZ (.qcc)"
@@ -6610,7 +6614,7 @@ msgstr ""
 
 #: inx/inkstitch_input_SEW.inx:3
 msgid "SEW file input"
-msgstr ""
+msgstr "Είσοδος αρχείου SEW"
 
 #: inx/inkstitch_input_SEW.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.sew)"
@@ -6622,7 +6626,7 @@ msgstr ""
 
 #: inx/inkstitch_input_SHV.inx:3
 msgid "SHV file input"
-msgstr ""
+msgstr "Είσοδος αρχείου SHV"
 
 #: inx/inkstitch_input_SHV.inx:8
 msgid "Ink/Stitch: Husqvarna Viking Embroidery Format (.shv)"
@@ -6634,7 +6638,7 @@ msgstr ""
 
 #: inx/inkstitch_input_SPX.inx:3
 msgid "SPX file input"
-msgstr ""
+msgstr "Είσοδος αρχείου SPX"
 
 #: inx/inkstitch_input_SPX.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.spx)"
@@ -6646,7 +6650,7 @@ msgstr ""
 
 #: inx/inkstitch_input_STC.inx:3
 msgid "STC file input"
-msgstr ""
+msgstr "Είσοδος αρχείου STC"
 
 #: inx/inkstitch_input_STC.inx:8
 msgid "Ink/Stitch: Gunold Embroidery Format (.stc)"
@@ -6658,7 +6662,7 @@ msgstr ""
 
 #: inx/inkstitch_input_STX.inx:3
 msgid "STX file input"
-msgstr ""
+msgstr "Είσοδος αρχείου STX"
 
 #: inx/inkstitch_input_STX.inx:8
 msgid "Ink/Stitch: Data Stitch Embroidery Format (.stx)"
@@ -6670,7 +6674,7 @@ msgstr ""
 
 #: inx/inkstitch_input_TAP.inx:3
 msgid "TAP file input"
-msgstr ""
+msgstr "Είσοδος αρχείου TAP"
 
 #: inx/inkstitch_input_TAP.inx:8
 msgid "Ink/Stitch: Happy Embroidery Format (.tap)"
@@ -6682,7 +6686,7 @@ msgstr ""
 
 #: inx/inkstitch_input_TBF.inx:3
 msgid "TBF file input"
-msgstr ""
+msgstr "Είσοδος αρχείου TBF"
 
 #: inx/inkstitch_input_TBF.inx:8 inx/inkstitch_output_TBF.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.tbf)"
@@ -6694,7 +6698,7 @@ msgstr ""
 
 #: inx/inkstitch_input_U01.inx:3
 msgid "U01 file input"
-msgstr ""
+msgstr "Είσοδος αρχείου U01"
 
 #: inx/inkstitch_input_U01.inx:8 inx/inkstitch_output_U01.inx:8
 msgid "Ink/Stitch: Barudan Embroidery Format (.u01)"
@@ -6706,7 +6710,7 @@ msgstr ""
 
 #: inx/inkstitch_input_VP3.inx:3
 msgid "VP3 file input"
-msgstr ""
+msgstr "Είσοδος αρχείου VP3"
 
 #: inx/inkstitch_input_VP3.inx:8 inx/inkstitch_output_VP3.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.vp3)"
@@ -6718,7 +6722,7 @@ msgstr ""
 
 #: inx/inkstitch_input_XXX.inx:3
 msgid "XXX file input"
-msgstr ""
+msgstr "Είσοδος αρχείου XXX"
 
 #: inx/inkstitch_input_XXX.inx:8 inx/inkstitch_output_XXX.inx:8
 msgid "Ink/Stitch: Singer Embroidery Format (.xxx)"
@@ -6730,7 +6734,7 @@ msgstr ""
 
 #: inx/inkstitch_input_ZHS.inx:3
 msgid "ZHS file input"
-msgstr ""
+msgstr "Είσοδος αρχείου ZHS"
 
 #: inx/inkstitch_input_ZHS.inx:8
 msgid "Ink/Stitch: Zeng Hsing Embroidery Format (.zhs)"
@@ -6742,7 +6746,7 @@ msgstr ""
 
 #: inx/inkstitch_input_ZXY.inx:3
 msgid "ZXY file input"
-msgstr ""
+msgstr "Είσοδος αρχείου ZXY"
 
 #: inx/inkstitch_input_ZXY.inx:8
 msgid "Ink/Stitch: ZSK TC Embroidery Format (.zxy)"
@@ -6862,7 +6866,7 @@ msgstr ""
 
 #: inx/inkstitch_jump_to_stroke.inx:32
 msgid "Output settings"
-msgstr ""
+msgstr "Ρυθμίσεις εξόδου"
 
 #: inx/inkstitch_jump_to_stroke.inx:33
 msgid "Merge consecutive strokes of same type"
@@ -7077,7 +7081,7 @@ msgstr "Διαχείριση γραμματοσειρών"
 
 #: inx/inkstitch_lettering_edit_json.inx:3
 msgid "Edit JSON"
-msgstr ""
+msgstr "Επεξεργασία JSON"
 
 #: inx/inkstitch_lettering_edit_json.inx:9
 msgid "Feature to verify or update the font information file for an existing font"
@@ -7308,7 +7312,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:22
 msgid "Sort by Category"
-msgstr ""
+msgstr "Ταξινόμηση κατά κατηγορία"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:28
 msgid "This extension helps the font digitizer to organize its work in steps to maximize reuse of already digitized letters."
@@ -7496,7 +7500,7 @@ msgstr ""
 
 #: inx/inkstitch_output_COL.inx:3
 msgid "COL file output"
-msgstr ""
+msgstr "Έξοδος αρχείου COL"
 
 #: inx/inkstitch_output_COL.inx:8
 msgid "Ink/Stitch: Col Color Format [COLOR] (.col)"
@@ -7508,7 +7512,7 @@ msgstr ""
 
 #: inx/inkstitch_output_CSV.inx:3
 msgid "CSV file output"
-msgstr ""
+msgstr "Έξοδος αρχείου CSV"
 
 #: inx/inkstitch_output_CSV.inx:8
 msgid "Ink/Stitch: Comma-separated values [DEBUG] (.csv)"
@@ -7520,7 +7524,7 @@ msgstr ""
 
 #: inx/inkstitch_output_DST.inx:3
 msgid "DST file output"
-msgstr ""
+msgstr "Έξοδος αρχείου DST"
 
 #: inx/inkstitch_output_DST.inx:9
 msgid "Save design in DST format using Ink/Stitch"
@@ -7528,7 +7532,7 @@ msgstr ""
 
 #: inx/inkstitch_output_EDR.inx:3
 msgid "EDR file output"
-msgstr ""
+msgstr "Έξοδος αρχείου EDR"
 
 #: inx/inkstitch_output_EDR.inx:8
 msgid "Ink/Stitch: Edr Color Format [COLOR] (.edr)"
@@ -7540,7 +7544,7 @@ msgstr ""
 
 #: inx/inkstitch_output_EXP.inx:3
 msgid "EXP file output"
-msgstr ""
+msgstr "Έξοδος αρχείου EXP"
 
 #: inx/inkstitch_output_EXP.inx:9
 msgid "Save design in EXP format using Ink/Stitch"
@@ -7548,7 +7552,7 @@ msgstr ""
 
 #: inx/inkstitch_output_GCODE.inx:3
 msgid "GCODE file output"
-msgstr ""
+msgstr "Έξοδος αρχείου GCODE"
 
 #: inx/inkstitch_output_GCODE.inx:9
 msgid "Save design in GCODE format using Ink/Stitch"
@@ -7684,7 +7688,7 @@ msgstr ""
 
 #: inx/inkstitch_output_INF.inx:3
 msgid "INF file output"
-msgstr ""
+msgstr "Έξοδος αρχείου INF"
 
 #: inx/inkstitch_output_INF.inx:8
 msgid "Ink/Stitch: Inf Color Format [COLOR] (.inf)"
@@ -7696,7 +7700,7 @@ msgstr ""
 
 #: inx/inkstitch_output_JEF.inx:3
 msgid "JEF file output"
-msgstr ""
+msgstr "Έξοδος αρχείου JEF"
 
 #: inx/inkstitch_output_JEF.inx:9
 msgid "Save design in JEF format using Ink/Stitch"
@@ -7704,7 +7708,7 @@ msgstr ""
 
 #: inx/inkstitch_output_JSON.inx:3
 msgid "JSON file output"
-msgstr ""
+msgstr "Έξοδος αρχείου JSON"
 
 #: inx/inkstitch_output_JSON.inx:8
 msgid "Ink/Stitch: Json Export [DEBUG] (.json)"
@@ -7716,7 +7720,7 @@ msgstr ""
 
 #: inx/inkstitch_output_PEC.inx:3
 msgid "PEC file output"
-msgstr ""
+msgstr "Έξοδος αρχείου PEC"
 
 #: inx/inkstitch_output_PEC.inx:9
 msgid "Save design in PEC format using Ink/Stitch"
@@ -7724,7 +7728,7 @@ msgstr ""
 
 #: inx/inkstitch_output_PES.inx:3
 msgid "PES file output"
-msgstr ""
+msgstr "Έξοδος αρχείου PES"
 
 #: inx/inkstitch_output_PES.inx:9
 msgid "Save design in PES format using Ink/Stitch"
@@ -7732,7 +7736,7 @@ msgstr ""
 
 #: inx/inkstitch_output_PLT.inx:3
 msgid "PLT file output"
-msgstr ""
+msgstr "Έξοδος αρχείου PLT"
 
 #: inx/inkstitch_output_PLT.inx:8
 msgid "Ink/Stitch: Plt - HPGL [QUILTING] (.plt)"
@@ -7744,7 +7748,7 @@ msgstr ""
 
 #: inx/inkstitch_output_PMV.inx:3
 msgid "PMV file output"
-msgstr ""
+msgstr "Έξοδος αρχείου PMV"
 
 #: inx/inkstitch_output_PMV.inx:8
 msgid "Ink/Stitch: Brother Stitch Format [STITCH] (.pmv)"
@@ -7756,7 +7760,7 @@ msgstr ""
 
 #: inx/inkstitch_output_QCC.inx:3
 msgid "QCC file output"
-msgstr ""
+msgstr "Έξοδος αρχείου QCC"
 
 #: inx/inkstitch_output_QCC.inx:8
 msgid "Ink/Stitch: Qcc - QuiltEZ [QUILTING] (.qcc)"
@@ -7768,7 +7772,7 @@ msgstr ""
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
-msgstr ""
+msgstr "Έξοδος αρχείου SVG"
 
 #: inx/inkstitch_output_SVG.inx:8
 msgid "Ink/Stitch: Scalable Vector Graphics [DEBUG] (.svg)"
@@ -7780,7 +7784,7 @@ msgstr ""
 
 #: inx/inkstitch_output_TBF.inx:3
 msgid "TBF file output"
-msgstr ""
+msgstr "Έξοδος αρχείου TBF"
 
 #: inx/inkstitch_output_TBF.inx:9
 msgid "Save design in TBF format using Ink/Stitch"
@@ -7788,7 +7792,7 @@ msgstr ""
 
 #: inx/inkstitch_output_TXT.inx:3
 msgid "TXT file output"
-msgstr ""
+msgstr "Έξοδος αρχείου TXT"
 
 #: inx/inkstitch_output_TXT.inx:8
 msgid "Ink/Stitch: txt Format, Text File [DEBUG] (.txt)"
@@ -7800,7 +7804,7 @@ msgstr ""
 
 #: inx/inkstitch_output_U01.inx:3
 msgid "U01 file output"
-msgstr ""
+msgstr "Έξοδος αρχείου U01"
 
 #: inx/inkstitch_output_U01.inx:9
 msgid "Save design in U01 format using Ink/Stitch"
@@ -7808,7 +7812,7 @@ msgstr ""
 
 #: inx/inkstitch_output_VP3.inx:3
 msgid "VP3 file output"
-msgstr ""
+msgstr "Έξοδος αρχείου VP3"
 
 #: inx/inkstitch_output_VP3.inx:9
 msgid "Save design in VP3 format using Ink/Stitch"
@@ -7816,7 +7820,7 @@ msgstr ""
 
 #: inx/inkstitch_output_XXX.inx:3
 msgid "XXX file output"
-msgstr ""
+msgstr "Έξοδος αρχείου XXX"
 
 #: inx/inkstitch_output_XXX.inx:9
 msgid "Save design in XXX format using Ink/Stitch"
@@ -7860,7 +7864,7 @@ msgstr ""
 
 #: inx/inkstitch_png_realistic.inx:3
 msgid "PNG file output (realistic)"
-msgstr ""
+msgstr "Έξοδος αρχείου PNG (ρεαλιστική)"
 
 #: inx/inkstitch_png_realistic.inx:8
 msgid "Ink/Stitch: Portable Network Graphics (Realistic) [IMAGE] (.png)"
@@ -7877,7 +7881,7 @@ msgstr ""
 
 #: inx/inkstitch_png_realistic.inx:18 inx/inkstitch_png_simple.inx:19
 msgid "PNG file export"
-msgstr ""
+msgstr "Εξαγωγή αρχείου PNG"
 
 #: inx/inkstitch_png_realistic.inx:19 inx/inkstitch_png_simple.inx:20
 msgid "Export embroidery design to PNG"
@@ -7917,7 +7921,7 @@ msgstr ""
 
 #: inx/inkstitch_redwork.inx:14
 msgid "Minimum path length (mm)"
-msgstr ""
+msgstr "Ελάχιστο μήκος διαδρομής (mm)"
 
 #: inx/inkstitch_redwork.inx:14
 msgid "Shorter paths will be removed from redwork result"
@@ -8196,7 +8200,7 @@ msgstr ""
 
 #: inx/inkstitch_select_elements.inx:101
 msgid "Python Path"
-msgstr ""
+msgstr "Διαδρομή Python"
 
 #: inx/inkstitch_selection_to_anchor_line.inx:3
 msgid "Selection to anchor line"
@@ -8264,7 +8268,7 @@ msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview.inx:27
 msgid "Lock"
-msgstr ""
+msgstr "Κλείδωμα"
 
 #: inx/inkstitch_stitch_plan_preview.inx:27
 msgid "Make stitch plan insensitive to mouse interactions"

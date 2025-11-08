@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-01 01:47+0000\n"
-"PO-Revision-Date: 2025-11-01 01:48\n"
+"POT-Creation-Date: 2025-11-08 01:39+0000\n"
+"PO-Revision-Date: 2025-11-08 01:39\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 01:47+0000\n"
+"POT-Creation-Date: 2025-11-08 01:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1131,126 +1131,126 @@ msgstr "Inverser l'angle"
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr "Inverse automatiquement l'angle calculé s'il semble faux."
 
-#: lib/elements/element.py:283 lib/gui/preferences.py:59
+#: lib/elements/element.py:291 lib/gui/preferences.py:59
 #: lib/gui/preferences.py:128
 msgid "Minimum stitch length"
 msgstr "Longueur minimum du point"
 
-#: lib/elements/element.py:284
+#: lib/elements/element.py:292
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
 msgstr "Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés."
 
-#: lib/elements/element.py:294 lib/gui/preferences.py:41
+#: lib/elements/element.py:302 lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
 msgstr "Longueur minimum de saut"
 
-#: lib/elements/element.py:295
+#: lib/elements/element.py:303
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
 msgstr "Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt."
 
-#: lib/elements/element.py:305
+#: lib/elements/element.py:313
 msgid "Allow lock stitches"
 msgstr "Autoriser les points d'arrêt"
 
-#: lib/elements/element.py:306
+#: lib/elements/element.py:314
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr "Faire un nœud au début et/ou à la fin de cet objet. Le point manuel n'ajoutera de point d'arrêt que si \"Forcer les points d'arrêt\" est coché."
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:311
+#: lib/elements/element.py:319
 msgid "Both"
 msgstr "Au début et à la fin"
 
-#: lib/elements/element.py:311
+#: lib/elements/element.py:319
 msgid "Before"
 msgstr "Au début"
 
-#: lib/elements/element.py:311
+#: lib/elements/element.py:319
 msgid "After"
 msgstr "A la fin"
 
-#: lib/elements/element.py:311
+#: lib/elements/element.py:319
 msgid "Neither"
 msgstr "Aucun"
 
-#: lib/elements/element.py:320
+#: lib/elements/element.py:328
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr "Forcer des points d'arrêt"
 
-#: lib/elements/element.py:321
+#: lib/elements/element.py:329
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr "Créer des points d'arrêt après avoir cousu cet élément, même si la distance jusqu'à l'objet suivant est plus courte que la valeur de 'longueur minimum de saut' défini dans les préférences Ink/Stitch."
 
-#: lib/elements/element.py:333
+#: lib/elements/element.py:341
 msgid "Tack stitch"
 msgstr "Point d'arrêt initial"
 
-#: lib/elements/element.py:334
+#: lib/elements/element.py:342
 msgid "Tack down stitch type"
 msgstr "Type de point d'arrêt initial"
 
-#: lib/elements/element.py:344 lib/elements/element.py:390
+#: lib/elements/element.py:352 lib/elements/element.py:398
 msgid "Custom path"
 msgstr "Chemin personnalisé"
 
-#: lib/elements/element.py:345
+#: lib/elements/element.py:353
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr "Entrez un chemin personnalisé. Pour les chemins svg, le dernier nœud ne sera pas brodé, mais représente le premier point de l'élément."
 
-#: lib/elements/element.py:355 lib/elements/element.py:367
+#: lib/elements/element.py:363 lib/elements/element.py:375
 msgid "Scale tack stitch"
 msgstr "Échelle du point d'arrêt initial"
 
-#: lib/elements/element.py:356
+#: lib/elements/element.py:364
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr "Détermine la longueur de point. Un 1 dans un chemin personnalisé représentera cette valeur."
 
-#: lib/elements/element.py:368
+#: lib/elements/element.py:376
 msgid "Scale tack stitch by this percentage."
 msgstr "Mettre le point d'arrêt initial à l'échelle selon ce pourcentage."
 
-#: lib/elements/element.py:379
+#: lib/elements/element.py:387
 msgid "Lock stitch"
 msgstr "Point d'arrêt"
 
-#: lib/elements/element.py:380
+#: lib/elements/element.py:388
 msgid "Lock stitch type"
 msgstr "Type de point d'arrêt final"
 
-#: lib/elements/element.py:391
+#: lib/elements/element.py:399
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr "Entrez un chemin personnalisé. Pour les chemins svg, le premier nœud ne sera pas brodé, mais représente le dernier point de l'élément."
 
-#: lib/elements/element.py:401 lib/elements/element.py:413
+#: lib/elements/element.py:409 lib/elements/element.py:421
 msgid "Scale lock stitch"
 msgstr "Échelle du point d'arrêt final"
 
-#: lib/elements/element.py:402
+#: lib/elements/element.py:410
 msgid "Set length of lock stitches (mm)."
 msgstr "Détermine la longueur des points d'arrêt (mm)."
 
-#: lib/elements/element.py:414
+#: lib/elements/element.py:422
 msgid "Scale lock stitch by this percentage."
 msgstr "Mettre à l'échelle le point d'arrêt selon ce pourcentage."
 
-#: lib/elements/element.py:426
+#: lib/elements/element.py:434
 msgid "Trim After"
 msgstr "Couper après"
 
-#: lib/elements/element.py:427
+#: lib/elements/element.py:435
 msgid "Add a TRIM command after stitching this object."
 msgstr "Ajoute une commande de coupe après avoir brodé cet objet."
 
-#: lib/elements/element.py:436
+#: lib/elements/element.py:444
 msgid "Stop After"
 msgstr "Arrêter après"
 
-#: lib/elements/element.py:437
+#: lib/elements/element.py:445
 msgid "Add a STOP command after stitching this object."
 msgstr "Ajoute une commande STOP après avoir brodé cet objet."
 
-#: lib/elements/element.py:741
+#: lib/elements/element.py:749
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Merci d'exécuter Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets. Ceci indiquera la position erronée."
 
@@ -1671,19 +1671,19 @@ msgstr "Tolérance du point droit"
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Détermine la force avec laquelle Ink/Stitch essaie d'éviter de broder en dehors de la forme. Une valeur basse rend moins susceptible de broder en dehors de la forme, mais nécessite plus de points."
 
-#: lib/elements/fill_stitch.py:485 lib/elements/stroke.py:146
+#: lib/elements/fill_stitch.py:485 lib/elements/stroke.py:147
 msgid "Randomize stitch length"
 msgstr "Rendre aléatoire la longueur du point"
 
-#: lib/elements/fill_stitch.py:486 lib/elements/stroke.py:147
+#: lib/elements/fill_stitch.py:486 lib/elements/stroke.py:148
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
 msgstr "Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré."
 
-#: lib/elements/fill_stitch.py:502 lib/elements/stroke.py:159
+#: lib/elements/fill_stitch.py:502 lib/elements/stroke.py:160
 msgid "Random stitch length jitter"
 msgstr "Mouvement aléatoire de la longueur du point"
 
-#: lib/elements/fill_stitch.py:503 lib/elements/stroke.py:160
+#: lib/elements/fill_stitch.py:503 lib/elements/stroke.py:161
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr "Pourcentage maximum de variation de la longueur du point appliqué si la longueur est rendue aléatoire."
 
@@ -1711,11 +1711,11 @@ msgstr "Repasse sur chaque point le nombre de fois indiqué. Une valeur de 1 tri
 "Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace."
 
 #: lib/elements/fill_stitch.py:546 lib/elements/satin_column.py:254
-#: lib/elements/stroke.py:185
+#: lib/elements/stroke.py:186
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Espacement Zig-Zag (crête à crête)"
 
-#: lib/elements/fill_stitch.py:547 lib/elements/stroke.py:186
+#: lib/elements/fill_stitch.py:547 lib/elements/stroke.py:187
 msgid "Length of stitches in zig-zag mode."
 msgstr "Longueur de points en mode zig-zag."
 
@@ -1744,7 +1744,7 @@ msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr "Défini la largeur d'un motif de chevrons. Utiliser 0 pour des bandes normales."
 
 #: lib/elements/fill_stitch.py:598 lib/elements/satin_column.py:282
-#: lib/elements/stroke.py:198
+#: lib/elements/stroke.py:199
 msgid "Pull compensation"
 msgstr "Compensation d'étirement"
 
@@ -1754,7 +1754,7 @@ msgstr "Les points de remplissage resserrent le tissu, ce qui entraîne une form
 
 #: lib/elements/fill_stitch.py:603 lib/elements/satin_column.py:286
 #: lib/elements/satin_column.py:449 lib/elements/satin_column.py:543
-#: lib/elements/stroke.py:201
+#: lib/elements/stroke.py:202
 msgid "mm (each side)"
 msgstr "mm (de chaque côté)"
 
@@ -1801,7 +1801,7 @@ msgstr "Espacement entre rangées de points"
 msgid "default: 3x fill row spacing"
 msgstr "défaut: 3x espacement entre les rangées"
 
-#: lib/elements/fill_stitch.py:671 lib/elements/stroke.py:171
+#: lib/elements/fill_stitch.py:671 lib/elements/stroke.py:172
 #: lib/extensions/element_info.py:144 lib/extensions/element_info.py:203
 msgid "Max stitch length"
 msgstr "Longueur de point maximale"
@@ -1815,13 +1815,13 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr "Rétrécit la forme avant de faire la sous-couche, pour empêcher que la sous-couche se montre en dehors du remplissage."
 
 #: lib/elements/fill_stitch.py:717 lib/elements/satin_column.py:585
-#: lib/elements/stroke.py:450 lib/gui/satin_multicolor/colorize_panel.py:61
+#: lib/elements/stroke.py:451 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr "Graine aléatoire"
 
 #: lib/elements/fill_stitch.py:718 lib/elements/satin_column.py:586
-#: lib/elements/stroke.py:451
+#: lib/elements/stroke.py:452
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément."
 
@@ -2109,27 +2109,27 @@ msgstr "Compensation d'étirement supplémentaire qui varie comme un pourcentage
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Les points satin resserrent le tissu, ce qui entraîne une colonne plus étroite que celle que vous dessinez dans Inkscape. Ce paramètre étend d'une valeur fixe chaque point depuis le centre vers l’extérieur de la colonne satin. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
-#: lib/elements/satin_column.py:297 lib/elements/stroke.py:340
+#: lib/elements/satin_column.py:297 lib/elements/stroke.py:341
 msgid "Automatic"
 msgstr "Automatique"
 
-#: lib/elements/satin_column.py:298 lib/elements/stroke.py:341
+#: lib/elements/satin_column.py:298 lib/elements/stroke.py:342
 msgid "Don't reverse"
 msgstr "Ne pas inverser"
 
-#: lib/elements/satin_column.py:299 lib/elements/stroke.py:342
+#: lib/elements/satin_column.py:299 lib/elements/stroke.py:343
 msgid "Reverse first rail"
 msgstr "Inverser la direction du premier rail"
 
-#: lib/elements/satin_column.py:300 lib/elements/stroke.py:343
+#: lib/elements/satin_column.py:300 lib/elements/stroke.py:344
 msgid "Reverse second rail"
 msgstr "Inverser la direction du second rail"
 
-#: lib/elements/satin_column.py:301 lib/elements/stroke.py:344
+#: lib/elements/satin_column.py:301 lib/elements/stroke.py:345
 msgid "Reverse both rails"
 msgstr "Inverser la direction des deux rails"
 
-#: lib/elements/satin_column.py:307 lib/elements/stroke.py:350
+#: lib/elements/satin_column.py:307 lib/elements/stroke.py:351
 msgid "Reverse rails"
 msgstr "Inverser la direction des rails"
 
@@ -2190,7 +2190,7 @@ msgid "Stitch length"
 msgstr "Longueur de point"
 
 #: lib/elements/satin_column.py:429 lib/elements/satin_column.py:486
-#: lib/elements/stroke.py:132
+#: lib/elements/stroke.py:133
 msgid "Stitch tolerance"
 msgstr "Tolérance"
 
@@ -2326,192 +2326,192 @@ msgid "No extra stitches will be added to the original ripple pattern and the ru
 msgstr "Aucun point supplémentaire ne sera ajouté à la broderie ondulée originelle et la valeur de la longueur du point droit sera ignoré."
 
 #: lib/elements/stroke.py:121
-#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:21
-msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
-msgstr "Longueur des points. Selon la valeur de la tolérance, il se peut que les points soient plus court."
+msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting.\n"
+"It is possible to create stitch length patterns by adding multiple values separated by a space."
+msgstr ""
 
-#: lib/elements/stroke.py:133
+#: lib/elements/stroke.py:134
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr "Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible signifie que les points seront plus rapprochés. Une tolérance plus élevée signifie que les angles vifs peuvent être arrondis."
 
-#: lib/elements/stroke.py:172
+#: lib/elements/stroke.py:173
 msgid "Split stitches longer than this."
 msgstr "Découper les points plus longs que ceci."
 
-#: lib/elements/stroke.py:199
+#: lib/elements/stroke.py:200
 msgid "Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This widens the zigzag line width."
 msgstr "Le zigzag tire sur le tissu, et le résultat est plus étroit que ce que vous avez dessiné dans Inkscape. Ceci élargit le zigzag."
 
-#: lib/elements/stroke.py:212
+#: lib/elements/stroke.py:213
 msgid "Number of lines"
 msgstr "Nombre de lignes"
 
-#: lib/elements/stroke.py:213
+#: lib/elements/stroke.py:214
 msgid "Number of lines from start to finish"
 msgstr "Nombre de lignes du début jusqu'à la fin"
 
-#: lib/elements/stroke.py:224
+#: lib/elements/stroke.py:225
 msgid "Minimum line distance"
 msgstr "Distance minimum entre les lignes"
 
-#: lib/elements/stroke.py:225
+#: lib/elements/stroke.py:226
 msgid "Overrides the number of lines setting."
 msgstr "Est prioritaire sur le réglage nombre de lignes."
 
-#: lib/elements/stroke.py:238
+#: lib/elements/stroke.py:239
 msgid "Line count / Minimum line distance"
 msgstr "Nombre de lignes/ Distance minimum entre les lignes"
 
-#: lib/elements/stroke.py:239
+#: lib/elements/stroke.py:240
 msgid "Render at rungs"
 msgstr "Rendu aux traverses"
 
-#: lib/elements/stroke.py:240
+#: lib/elements/stroke.py:241
 msgid "Adaptive + minimum line distance"
 msgstr "Adaptatif et distance minimum entre les lignes"
 
-#: lib/elements/stroke.py:245
+#: lib/elements/stroke.py:246
 msgid "Pattern position"
 msgstr "Position du motif"
 
-#: lib/elements/stroke.py:246
+#: lib/elements/stroke.py:247
 msgid "Pattern position for satin guided ripples."
 msgstr "Position du motif pour la broderie ondulée guidée par un satin."
 
-#: lib/elements/stroke.py:257
+#: lib/elements/stroke.py:258
 msgid "Stagger lines this many times before repeating"
 msgstr "Décaler les lignes ce nombre de fois avant de répéter"
 
-#: lib/elements/stroke.py:258
+#: lib/elements/stroke.py:259
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. A value of 0 (default) disables staggering and instead stitches evenly.For linear ripples only."
 msgstr "Longueur du cycle de décalage des lignes successives. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières. La valeur par défaut (0) désactive le décalage. Ne concerne que les ondulations linéaires."
 
-#: lib/elements/stroke.py:271
+#: lib/elements/stroke.py:272
 msgid "Skip first lines"
 msgstr "Sauter les premières lignes"
 
-#: lib/elements/stroke.py:272
+#: lib/elements/stroke.py:273
 msgid "Skip this number of lines at the beginning."
 msgstr "Sauter ce nombre de lignes au début."
 
-#: lib/elements/stroke.py:283
+#: lib/elements/stroke.py:284
 msgid "Skip last lines"
 msgstr "Sauter les dernières lignes"
 
-#: lib/elements/stroke.py:284
+#: lib/elements/stroke.py:285
 msgid "Skip this number of lines at the end"
 msgstr "Sauter ce nombre de lignes à la fin."
 
-#: lib/elements/stroke.py:295
+#: lib/elements/stroke.py:296
 msgid "Flip every second line"
 msgstr "Inverser une ligne sur deux"
 
-#: lib/elements/stroke.py:296
+#: lib/elements/stroke.py:297
 msgid "Linear ripple: wether to flip the pattern every second line or not."
 msgstr "Broderie ondulée linéaire : choisir d'inverser ou pas une ligne sur deux."
 
-#: lib/elements/stroke.py:306
+#: lib/elements/stroke.py:307
 msgid "Line distance exponent"
 msgstr "Exposant de l'espacement entre les lignes"
 
-#: lib/elements/stroke.py:307
+#: lib/elements/stroke.py:308
 msgid "Increase density towards one side."
 msgstr "Accroît la densité d'un côté."
 
-#: lib/elements/stroke.py:318
+#: lib/elements/stroke.py:319
 msgid "Flip exponent"
 msgstr "Inverser effet exposant"
 
-#: lib/elements/stroke.py:319
+#: lib/elements/stroke.py:320
 msgid "Reverse exponent effect."
 msgstr "Intervertit l'effet d'espacement de l'exposant."
 
-#: lib/elements/stroke.py:330
+#: lib/elements/stroke.py:331
 msgid "Reverse"
 msgstr "Changer le sens"
 
-#: lib/elements/stroke.py:331
+#: lib/elements/stroke.py:332
 msgid "Flip start and end point"
 msgstr "Intervertit le début et la fin"
 
-#: lib/elements/stroke.py:351
+#: lib/elements/stroke.py:352
 msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
 msgstr "Inverse les rails d'une ondulation satin. Par défaut détecte automatiquement, et corrige la direction d'un des rails."
 
-#: lib/elements/stroke.py:363
+#: lib/elements/stroke.py:364
 msgid "Grid size"
 msgstr "Taille de la grille"
 
-#: lib/elements/stroke.py:364
+#: lib/elements/stroke.py:365
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr "Rendu en grille. Utilisez avec précaution et surveillez la densité de points."
 
-#: lib/elements/stroke.py:376
+#: lib/elements/stroke.py:377
 msgid "Stitch grid first"
 msgstr "Commencer par la grille"
 
-#: lib/elements/stroke.py:377
+#: lib/elements/stroke.py:378
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
 msgstr "Inverse le chemin de broderie afin que la grille soit brodée en premier"
 
-#: lib/elements/stroke.py:388
+#: lib/elements/stroke.py:389
 msgid "Scale axis"
 msgstr "Mettre à l'échelle sur l'axe"
 
-#: lib/elements/stroke.py:389
+#: lib/elements/stroke.py:390
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Axe de mise à l'échelle pour les ondulations guidées."
 
-#: lib/elements/stroke.py:393 lib/gui/edit_json/settings_panel.py:159
+#: lib/elements/stroke.py:394 lib/gui/edit_json/settings_panel.py:159
 #: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:32
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr "Aucune"
 
-#: lib/elements/stroke.py:401
+#: lib/elements/stroke.py:402
 msgid "Starting scale"
 msgstr "Démarrer à"
 
-#: lib/elements/stroke.py:402
+#: lib/elements/stroke.py:403
 msgid "How big the first copy of the line should be, in percent."
 msgstr "Taille de la première ondulation en pourcentage."
 
-#: lib/elements/stroke.py:402 lib/elements/stroke.py:414
+#: lib/elements/stroke.py:403 lib/elements/stroke.py:415
 msgid "Used only for ripple stitch with a guide line."
 msgstr "Utilisé uniquement pour des ondulations guidées."
 
-#: lib/elements/stroke.py:413
+#: lib/elements/stroke.py:414
 msgid "Ending scale"
 msgstr "Finir à"
 
-#: lib/elements/stroke.py:414
+#: lib/elements/stroke.py:415
 msgid "How big the last copy of the line should be, in percent."
 msgstr "Taille de la dernière ondulation en pourcentage."
 
-#: lib/elements/stroke.py:425 lib/gui/tartan/customize_panel.py:43
+#: lib/elements/stroke.py:426 lib/gui/tartan/customize_panel.py:43
 #: inx/inkstitch_transform_elements.inx:10
 msgid "Rotate"
 msgstr "Tourner"
 
-#: lib/elements/stroke.py:426
+#: lib/elements/stroke.py:427
 msgid "Rotate satin guided ripple stitches"
 msgstr "Tourne les ondulations guidées par un satin"
 
-#: lib/elements/stroke.py:437 inx/inkstitch_knockdown_fill.inx:20
+#: lib/elements/stroke.py:438 inx/inkstitch_knockdown_fill.inx:20
 #: inx/inkstitch_knockdown_fill.inx:37
 msgid "Join style"
 msgstr "Style de jointure"
 
-#: lib/elements/stroke.py:438
+#: lib/elements/stroke.py:439
 msgid "Join style for non circular ripples."
 msgstr "Style de jointure pour les ondulations ouvertes."
 
-#: lib/elements/stroke.py:441
+#: lib/elements/stroke.py:442
 msgid "flat"
 msgstr "segment"
 
-#: lib/elements/stroke.py:441
+#: lib/elements/stroke.py:442
 msgid "point"
 msgstr "point"
 
@@ -4687,6 +4687,10 @@ msgstr "Déplacez les points de manière aléatoire jusqu'à ce nombre de millim
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
 msgid "Stitch along a path using evenly-spaced stitches."
 msgstr "Brode le long d'un chemin en utillisant des points espacés régulièrement."
+
+#: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:21
+msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting."
+msgstr "Longueur des points. Selon la valeur de la tolérance, il se peut que les points soient plus court."
 
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:25
 msgid "Tolerance"
