@@ -130,12 +130,15 @@ def autorun(elements, preserve_order=False, break_up=None, starting_point=None, 
     path = find_path(graph, starting_point, ending_point)
     path = add_path_attribs(path)
 
-    new_elements, trims, original_parents = path_to_elements(graph, path, trim)
+    parent = None
+    if not preserve_order:
+        parent = elements[0].node.getparent()
+
+    new_elements, trims, original_parents = path_to_elements(graph, path, trim, parent)
 
     if preserve_order:
         preserve_original_groups(new_elements, original_parents, transform=False)
     else:
-        parent = elements[0].node.getparent()
         insert_index = parent.index(elements[0].node)
         group = create_new_group(parent, insert_index, _("Auto-Route"), False)
         add_elements_to_group(new_elements, group)
@@ -195,7 +198,7 @@ def add_path_attribs(path):
     return path
 
 
-def path_to_elements(graph, path, trim):  # noqa: C901
+def path_to_elements(graph, path, trim, parent=None):  # noqa: C901
     element_list = []
     original_parents = []
     trims = []
@@ -217,7 +220,7 @@ def path_to_elements(graph, path, trim):  # noqa: C901
         end_coord = graph.nodes[end]['point']
         # create a new element if we hit an other original element to keep it's properties
         if el and element and el != element and d and not direction == 'underpath':
-            element_list.append(create_element(d, position, path_direction, el))
+            element_list.append(create_element(d, position, path_direction, el, parent))
             original_parents.append(el.node.getparent())
             d = ""
             position += 1
@@ -234,7 +237,7 @@ def path_to_elements(graph, path, trim):  # noqa: C901
             # create a new element if direction (purpose) changes
             if direction != path_direction:
                 if d:
-                    element_list.append(create_element(d, position, path_direction, el))
+                    element_list.append(create_element(d, position, path_direction, el, parent))
                     original_parents.append(el.node.getparent())
                     d = ""
                     position += 1
@@ -246,7 +249,7 @@ def path_to_elements(graph, path, trim):  # noqa: C901
                 d += f", {end_coord.x} {end_coord.y}"
         elif el and d:
             # this is a jump, so complete the element whose path we've been building
-            element_list.append(create_element(d, position, path_direction, el))
+            element_list.append(create_element(d, position, path_direction, el, parent))
             original_parents.append(el.node.getparent())
             d = ""
 
@@ -257,17 +260,19 @@ def path_to_elements(graph, path, trim):  # noqa: C901
             position += 1
 
     if d:
-        element_list.append(create_element(d, position, path_direction, el))
+        element_list.append(create_element(d, position, path_direction, el, parent))
     original_parents.append(el.node.getparent())
 
     return element_list, trims, original_parents
 
 
-def create_element(path, position, direction, element):
+def create_element(path, position, direction, element, parent=None):  # noqa: C901
     if not path:
         return
 
     el_id = f"{direction}_{position}_"
+    if parent is None:
+        parent = element.node.getparent()
 
     index = position + 1
     if direction == "autorun":
@@ -287,7 +292,7 @@ def create_element(path, position, direction, element):
     node.set("style", element.node.style)
     node.style["fill"] = 'none'
     node.style["stroke-dasharray"] = dasharray
-    node.transform = get_correction_transform(element.node.getparent(), child=True)
+    node.transform = get_correction_transform(parent, child=True)
     node.apply_transform()
 
     # Set Ink/Stitch attributes
