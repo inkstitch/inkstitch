@@ -5,11 +5,12 @@
 
 from typing import Any, List, Optional, Union
 
-from inkex import Boolean, Vector2d, errormsg
+from inkex import Boolean, Group, Vector2d, errormsg
 
 from ..elements import Stroke
 from ..i18n import _
 from ..stitches.auto_run import autorun
+from ..svg.svg import delete_empty_groups
 from .commands import CommandsExtension
 
 
@@ -34,7 +35,9 @@ class AutoRun(CommandsExtension):
 
         break_up = self.options.break_up
 
-        autorun(elements, self.options.preserve_order, break_up, starting_point, ending_point, self.options.trim)
+        group = self._create_group()
+        autorun(elements, self.options.preserve_order, break_up, starting_point, ending_point, self.options.trim, group)
+        delete_empty_groups(self.svg.selection)
 
     def get_starting_point(self) -> Optional[Vector2d]:
         return self.get_command_point("autoroute_start")
@@ -62,3 +65,14 @@ class AutoRun(CommandsExtension):
             errormsg(_("Please select at least one stroke element."))
 
         return elements
+
+    def _create_group(self):
+        if self.options.preserve_order:
+            return None
+        node = self.svg.selection.rendering_order()[-1]
+        parent = node.getparent()
+        index = parent.index(node) + 1
+        group = Group()
+        group.label = _("Auto-Route")
+        parent.insert(index, group)
+        return group

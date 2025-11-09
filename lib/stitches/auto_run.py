@@ -16,8 +16,7 @@ from ..i18n import _
 from ..svg import PIXELS_PER_MM, generate_unique_id, get_correction_transform
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils.threading import check_stop_flag
-from .utils.autoroute import (add_elements_to_group, add_jumps,
-                              create_new_group, find_path,
+from .utils.autoroute import (add_elements_to_group, add_jumps, find_path,
                               get_starting_and_ending_nodes,
                               preserve_original_groups,
                               remove_original_elements)
@@ -119,7 +118,7 @@ class LineSegments:
                     self.segments.append([seg, self._elements[i]])
 
 
-def autorun(elements, preserve_order=False, break_up=None, starting_point=None, ending_point=None, trim=False):
+def autorun(elements, preserve_order=False, break_up=None, starting_point=None, ending_point=None, trim=False, group=None):
     graph = build_graph(elements, preserve_order, break_up)
 
     graph = add_jumps(graph, elements, preserve_order)
@@ -130,17 +129,11 @@ def autorun(elements, preserve_order=False, break_up=None, starting_point=None, 
     path = find_path(graph, starting_point, ending_point)
     path = add_path_attribs(path)
 
-    parent = None
-    if not preserve_order:
-        parent = elements[0].node.getparent()
-
-    new_elements, trims, original_parents = path_to_elements(graph, path, trim, parent)
+    new_elements, trims, original_parents = path_to_elements(graph, path, trim, group)
 
     if preserve_order:
         preserve_original_groups(new_elements, original_parents, transform=False)
     else:
-        insert_index = parent.index(elements[0].node)
-        group = create_new_group(parent, insert_index, _("Auto-Route"), False)
         add_elements_to_group(new_elements, group)
 
     if trim:

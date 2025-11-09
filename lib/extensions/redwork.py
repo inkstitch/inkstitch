@@ -13,7 +13,7 @@ from shapely.ops import linemerge, nearest_points, substring
 from ..elements import Stroke
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
-from ..svg.tags import SVG_GROUP_TAG
+from ..svg.svg import delete_empty_groups
 from ..utils.geometry import ensure_multi_line_string
 from .base import InkstitchExtension
 
@@ -78,15 +78,7 @@ class Redwork(InkstitchExtension):
         for element in elements:
             element.node.delete()
         # remove empty groups
-        for element in self.svg.selection:
-            selected_groups = self.svg.selection.filter(Group)
-            for group in selected_groups:
-                groups_within_group = reversed(list(group.iterdescendants(SVG_GROUP_TAG)))
-                for g in groups_within_group:
-                    if len(g) == 0:
-                        g.delete()
-                if len(group) == 0:
-                    group.delete()
+        delete_empty_groups(self.svg.selection)
 
     def _ensure_starting_point(self, multi_line_string, starting_point):
         # returns a MultiLineString whose first  LineString starts close to  starting_point

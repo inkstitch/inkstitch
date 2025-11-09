@@ -5,10 +5,11 @@
 
 import math
 
-from inkex import NSS, BaseElement, Transform
+from inkex import NSS, BaseElement, Group, Transform
 from lxml import etree
 
 from ..utils import cache
+from .tags import SVG_GROUP_TAG
 
 
 @cache
@@ -56,3 +57,15 @@ def point_upwards(node: BaseElement) -> None:
     # Clear the x and y coords, they've been incorporated to the transform above
     node.set('x', None)
     node.set('y', None)
+
+
+def delete_empty_groups(selection):
+    for element in selection:
+        selected_groups = selection.filter(Group)
+        for group in selected_groups:
+            groups_within_group = reversed(list(group.iterdescendants(SVG_GROUP_TAG)))
+            for g in groups_within_group:
+                if len(g) == 0:
+                    g.delete()
+            if len(group) == 0:
+                group.delete()
