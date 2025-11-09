@@ -687,12 +687,20 @@ class SatinColumn(EmbroideryElement):
 
     @cache
     def _synthesize_rungs(self):
+        # self.rails may contain additoinal nodes through flattening
+        # at this point we know that we only have two paths, both paths are rails
+        # so we can access the original nodes by parsing and filtering the original path
+        paths = Path(self.parse_path()).break_apart()
+        rails = [list(path.end_points) for path in paths if len(list(path.end_points)) > 1]
+        if len(rails) != 2:
+            return []
+
         rung_endpoints = []
         # check for unequal length of rails
-        equal_length = len(self.rails[0]) == len(self.rails[1])
+        equal_length = len(rails[0]) == len(rails[1])
 
         rails_to_reverse = self._get_rails_to_reverse()
-        for i, points in enumerate(self.rails):
+        for i, points in enumerate(rails):
 
             if rails_to_reverse[i]:
                 points = points[::-1]
