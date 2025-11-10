@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-08 01:39+0000\n"
-"PO-Revision-Date: 2025-11-08 01:39\n"
+"PO-Revision-Date: 2025-11-10 01:50\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2328,7 +2328,8 @@ msgstr "Aucun point supplémentaire ne sera ajouté à la broderie ondulée orig
 #: lib/elements/stroke.py:121
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting.\n"
 "It is possible to create stitch length patterns by adding multiple values separated by a space."
-msgstr ""
+msgstr "Longueur des points. Il est possible que certains points soient plus courts pour respecter la valeur de la tolérance.\n"
+"Il est possible de créer des motifs de longueur de points en entrant plusieurs valeurs séparées par un espace."
 
 #: lib/elements/stroke.py:134
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
