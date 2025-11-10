@@ -1,24 +1,20 @@
 {
-    "name": "Namskout  Tartan",
-    "description": "Namskout Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals.",
+    "name": "Kum Tsoan Relief",
+    "description": "Kum Tsoan Relief is an altered version of Kum Tsoan AGS for embossed letters.",
     "keywords": [
+        "applique",
         "display",
         "monogram",
-        "multicolor",
-        "tartan",
         "latin"
     ],
     "leading": 350,
     "auto_satin": false,
     "reversible": false,
     "sortable": true,
-    "combine_at_sort_indices": [
-        0
-    ],
     "letter_case": "upper",
-    "default_glyph": "�",
-    "min_scale": 0.5,
-    "max_scale": 1.5,
+    "default_glyph": " ",
+    "min_scale": 0.2,
+    "max_scale": 5,
     "size": 90,
     "horiz_adv_x_default": 280,
     "horiz_adv_x_space": 200,
@@ -17630,5 +17626,6 @@
         "Ü"
     ],
     "default_variant": "→",
-    "text_direction": "ltr"
+    "text_direction": "ltr",
+    "combine_at_sort_indices": []
 }

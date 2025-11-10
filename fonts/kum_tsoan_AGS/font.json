@@ -1,6 +1,6 @@
 {
-    "name": "Namskout relief",
-    "description": "Namskout relief is an altered version of Namskout AGS for embossed letters.",
+    "name": "Kum Tsoan AGS",
+    "description": " Kum Tsoan AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.",
     "keywords": [
         "applique",
         "display",
@@ -12,9 +12,9 @@
     "reversible": false,
     "sortable": true,
     "letter_case": "upper",
-    "default_glyph": " ",
-    "min_scale": 0.2,
-    "max_scale": 5,
+    "default_glyph": "�",
+    "min_scale": 0.5,
+    "max_scale": 1.5,
     "size": 90,
     "horiz_adv_x_default": 280,
     "horiz_adv_x_space": 200,

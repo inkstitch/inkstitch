@@ -1,16 +1,20 @@
 {
-    "name": "Namskout AGS",
-    "description": "Namskout AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z.",
+    "name": "Kum Tsoan Tartan",
+    "description": "Kum Tsoan Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals.",
     "keywords": [
-        "applique",
         "display",
         "monogram",
+        "multicolor",
+        "tartan",
         "latin"
     ],
     "leading": 350,
     "auto_satin": false,
     "reversible": false,
     "sortable": true,
+    "combine_at_sort_indices": [
+        0
+    ],
     "letter_case": "upper",
     "default_glyph": "�",
     "min_scale": 0.5,
@@ -17626,6 +17630,5 @@
         "Ü"
     ],
     "default_variant": "→",
-    "text_direction": "ltr",
-    "combine_at_sort_indices": []
+    "text_direction": "ltr"
 }
