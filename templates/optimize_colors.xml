@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Optimize Thread Colors</name>
+    <id>org.{{ id_inkstitch }}.optimize_colors</id>
+    <param name="extension" type="string" gui-hidden="true">optimize_colors</param>
+
+    <param name="strategy" type="optiongroup" appearance="combo" gui-text="Optimization strategy">
+        <option value="greedy">Greedy (group by color)</option>
+        <option value="spatial">Spatial (minimize jumps and colors)</option>
+    </param>
+
+    <param name="max_jump_mm" type="float" gui-text="Max jump stitch (mm)" precision="1" min="10" max="200">50.0</param>
+
+    <spacer />
+    <label>This extension reorders embroidery elements to minimize thread changes.</label>
+    <spacer />
+    <label>Greedy: Groups all same-color stitches together</label>
+    <label>Spatial: Balances color grouping with jump stitch length</label>
+
+    <effect>
+        <object-type>all</object-type>
+        <menu-tip>Optimize thread color changes</menu-tip>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Edit" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

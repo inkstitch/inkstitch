@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Appliqué (Auto)</name>
+    <id>org.{{ id_inkstitch }}.applique_auto</id>
+    <param name="extension" type="string" gui-hidden="true">applique_auto</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <label appearance="header">Placement Line</label>
+            <param name="placement_offset_mm" type="float" gui-text="Offset (mm)" precision="2" min="0" max="5">0.5</param>
+            <spacer />
+            <separator />
+            <spacer />
+
+            <label appearance="header">Tack-down Stitches</label>
+            <param name="tackdown_type" type="optiongroup" appearance="combo" gui-text="Tack-down type">
+                <option value="zigzag">Zigzag</option>
+                <option value="running">Running stitch</option>
+            </param>
+            <param name="tackdown_offset_mm" type="float" gui-text="Offset (mm)" precision="2" min="0" max="10">1.0</param>
+            <spacer />
+            <separator />
+            <spacer />
+
+            <label appearance="header">Cover Stitch</label>
+            <param name="cover_width_mm" type="float" gui-text="Satin width (mm)" precision="2" min="1" max="10">3.0</param>
+            <spacer />
+            <separator />
+            <spacer />
+
+            <param name="keep_original" type="boolean" gui-text="Keep original fill">false</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>This extension automatically converts fill shapes to appliqué designs.</label>
+            <spacer />
+            <label>Appliqué is a technique where fabric pieces are sewn onto a base fabric.</label>
+            <spacer />
+            <label>The extension creates three elements:</label>
+            <label>1. Placement line (where to position the fabric)</label>
+            <label>2. Tack-down stitches (secure fabric to base)</label>
+            <label>3. Cover stitch (satin covering raw edges)</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/</label>
+        </page>
+    </param>
+
+    <effect>
+        <object-type>all</object-type>
+        <menu-tip>Automatically convert fill to appliqué</menu-tip>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Tools: Fill" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

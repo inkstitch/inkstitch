@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Multi-hooping</name>
+    <id>org.{{ id_inkstitch }}.multi_hoop</id>
+    <param name="extension" type="string" gui-hidden="true">multi_hoop</param>
+
+    <param name="notebook" type="notebook">
+        <page name="hoop" gui-text="Hoop Settings">
+            <label appearance="header">Hoop Size</label>
+            <param name="hoop_width_mm" type="float" gui-text="Width (mm)" precision="1" min="50" max="400">100.0</param>
+            <param name="hoop_height_mm" type="float" gui-text="Height (mm)" precision="1" min="50" max="400">100.0</param>
+            <spacer />
+
+            <label appearance="header">Overlap</label>
+            <param name="overlap_mm" type="float" gui-text="Overlap (mm)" precision="1" min="0" max="50">10.0</param>
+        </page>
+
+        <page name="marks" gui-text="Registration">
+            <param name="add_registration" type="boolean" gui-text="Add registration marks">true</param>
+            <param name="mark_size_mm" type="float" gui-text="Mark size (mm)" precision="1" min="2" max="20">5.0</param>
+            <spacer />
+            <label>Registration marks help align hoops accurately.</label>
+            <label>They appear as crosshairs at hoop corners.</label>
+        </page>
+
+        <page name="info" gui-text="Help">
+            <label>This extension splits large designs across multiple hoops.</label>
+            <spacer />
+            <label>How it works:</label>
+            <label>1. Select your entire design</label>
+            <label>2. Enter your hoop dimensions</label>
+            <label>3. The design is split into sections</label>
+            <label>4. Each section gets its own layer</label>
+            <label>5. Registration marks help alignment</label>
+            <spacer />
+            <label>Export each layer separately for stitching.</label>
+        </page>
+    </param>
+
+    <effect>
+        <object-type>all</object-type>
+        <menu-tip>Split design across multiple hoops</menu-tip>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Edit" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

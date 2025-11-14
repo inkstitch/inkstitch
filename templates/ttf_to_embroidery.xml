@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>TrueType to Embroidery</name>
+    <id>org.{{ id_inkstitch }}.ttf_to_embroidery</id>
+    <param name="extension" type="string" gui-hidden="true">ttf_to_embroidery</param>
+
+    <param name="stitch_type" type="optiongroup" appearance="combo" gui-text="Stitch type">
+        <option value="satin">Satin (outline)</option>
+        <option value="fill">Fill</option>
+    </param>
+
+    <param name="satin_width_mm" type="float" gui-text="Satin width (mm)" precision="1" min="1" max="10">2.0</param>
+    <param name="fill_angle" type="float" gui-text="Fill angle (degrees)" precision="0" min="0" max="360">0.0</param>
+
+    <spacer />
+    <param name="keep_original" type="boolean" gui-text="Keep original text">false</param>
+
+    <spacer />
+    <label>Converts text using system fonts to embroidery.</label>
+    <spacer />
+    <label appearance="header">IMPORTANT:</label>
+    <label>For best results, first convert text to path:</label>
+    <label>1. Select text</label>
+    <label>2. Path > Object to Path</label>
+    <label>3. Then run this extension</label>
+
+    <effect>
+        <object-type>all</object-type>
+        <menu-tip>Convert TrueType font text to embroidery</menu-tip>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Lettering" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>

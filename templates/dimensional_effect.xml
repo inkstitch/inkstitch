@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>3D/Dimensional Effect</name>
+    <id>org.{{ id_inkstitch }}.dimensional_effect</id>
+    <param name="extension" type="string" gui-hidden="true">dimensional_effect</param>
+
+    <param name="height_percent" type="float" gui-text="Effect height (%)" precision="0" min="50" max="200">150.0</param>
+    <param name="wave_frequency" type="float" gui-text="Wave frequency" precision="1" min="1" max="10">3.0</param>
+
+    <spacer />
+    <label>Creates raised, dimensional effects on fill stitches.</label>
+    <spacer />
+    <label>Higher height % = more pronounced 3D effect</label>
+    <label>Higher frequency = more texture detail</label>
+
+    <effect>
+        <object-type>all</object-type>
+        <menu-tip>Apply 3D/dimensional effect to fills</menu-tip>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Tools: Fill" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
