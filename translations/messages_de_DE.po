@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-08 01:39+0000\n"
-"PO-Revision-Date: 2025-11-08 01:39\n"
+"PO-Revision-Date: 2025-11-15 01:42\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2330,7 +2330,8 @@ msgstr "Es werden keine zusätzlichen Stiche zum ursprünglichen Muster hinzugef
 #: lib/elements/stroke.py:121
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting.\n"
 "It is possible to create stitch length patterns by adding multiple values separated by a space."
-msgstr ""
+msgstr "Länge der Stiche. Die Stiche können je nach Stichtoleranz-Einstellung kürzer sein.\n"
+"Es ist möglich, durch die Eingabe von mehreren durch ein Leerzeichen getrennte Werte, Sitchlängenmuster zu erzeugen."
 
 #: lib/elements/stroke.py:134
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
