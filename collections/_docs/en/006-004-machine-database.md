@@ -27,7 +27,7 @@ machine-database:
       file-formats: PMV
       features: My Custom Stitch
       inkstitch-version: 3.2.2
-      comments: Minor issues with stitch count, alignment, and scale but can be worked around
+      comments: Minor issues with stitch count, alignment, and scale but can be worked around.<br><a href="https://github.com/inkstitch/inkstitch/pull/3929#issuecomment-3211128167]">More information</a>
     - name: PE-800
       file-formats: PES, PEC, DST
       features:
