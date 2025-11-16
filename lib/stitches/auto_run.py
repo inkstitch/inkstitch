@@ -274,7 +274,7 @@ def create_element(path, position, direction, element, parent=None):  # noqa: C9
         path_type = 'autorun-top'
     else:
         label = _("AutoRun Underpath %d") % index
-        dasharray = '2 1.1'
+        dasharray = '3 0.5'
         path_type = 'autorun-underpath'
 
     node = inkex.PathElement()
@@ -292,6 +292,7 @@ def create_element(path, position, direction, element, parent=None):  # noqa: C9
     stitch_length = element.node.get(INKSTITCH_ATTRIBS['running_stitch_length_mm'], '')
     tolerance = element.node.get(INKSTITCH_ATTRIBS['running_stitch_tolerance_mm'], '')
     repeats = int(element.node.get(INKSTITCH_ATTRIBS['repeats'], 1))
+    stroke_method = element.node.get('inkstitch:stroke_method', '')
     if repeats % 2 == 0:
         repeats -= 1
 
@@ -307,6 +308,8 @@ def create_element(path, position, direction, element, parent=None):  # noqa: C9
             node.set(INKSTITCH_ATTRIBS['running_stitch_length_mm'], stitch_length)
         if tolerance:
             node.set(INKSTITCH_ATTRIBS['running_stitch_tolerance_mm'], tolerance)
+        if stroke_method == 'manual_stitch':
+            node.set('inkstitch:stroke_method', stroke_method)
     return Stroke(node)
 
 
