@@ -17,6 +17,7 @@ class JumpToTrim(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--tab")
 
+        self.arg_parser.add_argument("-c", "--command", type=str, default="trim", dest="command")
         self.arg_parser.add_argument("-i", "--minimum-jump-length", type=float, default=3.0, dest="min_jump")
         self.arg_parser.add_argument("-a", "--maximum-jump-length", type=float, default=0, dest="max_jump")
         self.arg_parser.add_argument("-t", "--use-command-symbols", type=Boolean, default=False, dest="use_command_symbols")
@@ -59,14 +60,20 @@ class JumpToTrim(InkstitchExtension):
                 self._add_trim(last)
 
     def _add_trim(self, element):
+        command = "trim"
+        param = "trim_after"
+        if self.options.command == "stop":
+            command = "stop"
+            param = "stop_after"
+
         # skip if the element already has a trim command in one way or the other
-        if element.has_command("trim") or element.trim_after:
+        if element.has_command(command) or element.trim_after:
             return
 
         if self.options.use_command_symbols:
-            add_commands(element, ["trim"])
+            add_commands(element, [command])
         else:
-            element.node.set('inkstitch:trim_after', True)
+            element.node.set(f'inkstitch:{param}', True)
 
     def _set_selection(self):
         if not self.svg.selection:
