@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-08 01:39+0000\n"
-"PO-Revision-Date: 2025-11-15 01:42\n"
+"PO-Revision-Date: 2025-11-16 01:50\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr ""
 #. description of font in fonts/Hebrew_font_large
 #: inkstitch-fonts-metadata.py:2
 msgid "Large size Hebrew satin font"
-msgstr ""
+msgstr "Hebrajska duża czcionka z satyny"
 
 #. description of font in fonts/Shojumaru
 #: inkstitch-fonts-metadata.py:4
@@ -40,7 +40,7 @@ msgstr ""
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:6
 msgid "Abécédaire AGS is a crossstitch font."
-msgstr ""
+msgstr "Abécédaire AGS jest czcionką haftu krzyżykowego."
 
 #. description of font in fonts/abril
 #: inkstitch-fonts-metadata.py:8
@@ -50,7 +50,7 @@ msgstr ""
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:10
 msgid "AGS Γαραμου Garamond contains all the letters of the latin and greek alphabets and cover most european languages."
-msgstr ""
+msgstr "AGS Γαραμου Garamond zawiera wszystkie litery alfabetu łacińskiego i greckiego oraz obsługuje większość języków europejskich."
 
 #. description of font in fonts/allegria20
 #: inkstitch-fonts-metadata.py:12
@@ -60,7 +60,7 @@ msgstr ""
 #. description of font in fonts/allegria55
 #: inkstitch-fonts-metadata.py:14
 msgid "Satin font"
-msgstr ""
+msgstr "Czcionka z satyny"
 
 #. description of font in fonts/ambigue
 #: inkstitch-fonts-metadata.py:16
@@ -186,7 +186,7 @@ msgstr ""
 #. description of font in fonts/chicken_scratch
 #: inkstitch-fonts-metadata.py:64
 msgid "A handwritten font."
-msgstr ""
+msgstr "Odręczna czcionka."
 
 #. description of font in fonts/chopin
 #: inkstitch-fonts-metadata.py:66
@@ -228,12 +228,12 @@ msgstr ""
 #. description of font in fonts/coronaviral
 #: inkstitch-fonts-metadata.py:80
 msgid "Coronaviral font is created with manual sitch. Do not change the size or very little."
-msgstr ""
+msgstr "Czcionka Coronaviral jest tworzona ręcznie. Nie zmieniaj rozmiaru lub tylko w niewielkim stopniu."
 
 #. description of font in fonts/cyrillic
 #: inkstitch-fonts-metadata.py:82
 msgid "Cyrillic satin font."
-msgstr ""
+msgstr "Cyrylica jest czcionką z satynowym krojem."
 
 #. description of font in fonts/decadent_flowers_monogram
 #: inkstitch-fonts-metadata.py:84
@@ -258,7 +258,7 @@ msgstr ""
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:92
 msgid "Emilio 20 contains only capitals and numbers. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Emilio 20 zawiera tylko duże litery i cyfry. Każdy satynowy ścieg ma podkład ściegiem zygzak."
 
 #. description of font in fonts/emilio_20_applique
 #: inkstitch-fonts-metadata.py:94
@@ -268,12 +268,12 @@ msgstr ""
 #. description of font in fonts/emilio_20_bold
 #: inkstitch-fonts-metadata.py:96
 msgid "Emilio_20_Bold is an altered version of Emilio_20."
-msgstr ""
+msgstr "Emilio_20_Bold to zmodyfikowana wersja Emilio_20."
 
 #. description of font in fonts/emilio_20_simple
 #: inkstitch-fonts-metadata.py:98
 msgid "Emilio is a font with capital only and numbers. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Emilio jest czcionką tylko z dużymi literami i cyframi. Każda satyna ma podkład ściegiem zygzak."
 
 #. description of font in fonts/emilio_20_simple_small
 #: inkstitch-fonts-metadata.py:100
