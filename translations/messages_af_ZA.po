@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-08 01:39+0000\n"
-"PO-Revision-Date: 2025-11-08 01:39\n"
+"POT-Creation-Date: 2025-11-17 01:46+0000\n"
+"PO-Revision-Date: 2025-11-17 01:47\n"
 "Last-Translator: \n"
 "Language-Team: Afrikaans\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-08 01:39+0000\n"
+"POT-Creation-Date: 2025-11-17 01:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3469,7 +3469,7 @@ msgstr ""
 #: inx/inkstitch_fill_to_satin.inx:24 inx/inkstitch_fill_to_stroke.inx:24
 #: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
 #: inx/inkstitch_install.inx:14 inx/inkstitch_install_custom_palette.inx:14
-#: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:27
+#: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:31
 #: inx/inkstitch_knockdown_fill.inx:43
 #: inx/inkstitch_lettering_along_path.inx:25
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
@@ -4483,7 +4483,7 @@ msgstr ""
 
 #: lib/gui/test_swatches.py:100 inx/inkstitch_apply_threadlist.inx:102
 #: inx/inkstitch_fill_to_stroke.inx:33 inx/inkstitch_jump_to_stroke.inx:44
-#: inx/inkstitch_jump_to_trim.inx:29
+#: inx/inkstitch_jump_to_trim.inx:33
 #: inx/inkstitch_lettering_organize_glyphs.inx:30
 #: inx/inkstitch_remove_embroidery_settings.inx:143
 #: inx/inkstitch_stroke_to_lpe_satin.inx:32
@@ -6824,11 +6824,11 @@ msgstr ""
 msgid "Converts a jump stitch between selected elements into a running stitch"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:19 inx/inkstitch_jump_to_trim.inx:19
+#: inx/inkstitch_jump_to_stroke.inx:19 inx/inkstitch_jump_to_trim.inx:23
 msgid "Convert jumps not shorter than (mm)"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:21 inx/inkstitch_jump_to_trim.inx:21
+#: inx/inkstitch_jump_to_stroke.inx:21 inx/inkstitch_jump_to_trim.inx:25
 msgid "Convert jumps not longer than (mm)"
 msgstr ""
 
@@ -6852,11 +6852,11 @@ msgstr ""
 msgid "Do not connect after"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:28
+#: inx/inkstitch_jump_to_stroke.inx:28 inx/inkstitch_jump_to_trim.inx:19
 msgid "Trim"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:29
+#: inx/inkstitch_jump_to_stroke.inx:29 inx/inkstitch_jump_to_trim.inx:20
 msgid "Stop"
 msgstr ""
 
@@ -6897,22 +6897,26 @@ msgid "https://inkstitch.org/docs/stroke-tools/#jump-to-stroke"
 msgstr ""
 
 #: inx/inkstitch_jump_to_trim.inx:3
-msgid "Jump Stitch to Trim Command"
+msgid "Jump Stitch to Trim/Stop Command"
 msgstr ""
 
 #: inx/inkstitch_jump_to_trim.inx:9
 msgid "Sets a trim command on elements which are followed by a jump stitch"
 msgstr ""
 
-#: inx/inkstitch_jump_to_trim.inx:25
+#: inx/inkstitch_jump_to_trim.inx:18
+msgid "Command"
+msgstr ""
+
+#: inx/inkstitch_jump_to_trim.inx:29
 msgid "Use command symbol"
 msgstr ""
 
-#: inx/inkstitch_jump_to_trim.inx:28
-msgid "This extension inserts trim commands to avoid jump stitches."
+#: inx/inkstitch_jump_to_trim.inx:32
+msgid "This extension inserts trim or stop commands to avoid jump stitches."
 msgstr ""
 
-#: inx/inkstitch_jump_to_trim.inx:30
+#: inx/inkstitch_jump_to_trim.inx:34
 msgid "https://inkstitch.org/docs/commands/#jump-to-trim"
 msgstr ""
 
