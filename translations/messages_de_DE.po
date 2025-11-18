@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-17 01:46+0000\n"
-"PO-Revision-Date: 2025-11-17 01:47\n"
+"PO-Revision-Date: 2025-11-18 01:45\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -6930,7 +6930,7 @@ msgstr "https://inkstitch.org/de/docs/stroke-tools/#sprungstich-zu-geradstich"
 
 #: inx/inkstitch_jump_to_trim.inx:3
 msgid "Jump Stitch to Trim/Stop Command"
-msgstr ""
+msgstr "Sprungstich zu Fadenschnitt-/Stoppbefehl"
 
 #: inx/inkstitch_jump_to_trim.inx:9
 msgid "Sets a trim command on elements which are followed by a jump stitch"
@@ -6938,7 +6938,7 @@ msgstr "Setzt einen Fadenschnittbefehl auf Elemente, denen ein Sprungstich folgt
 
 #: inx/inkstitch_jump_to_trim.inx:18
 msgid "Command"
-msgstr ""
+msgstr "Befehl"
 
 #: inx/inkstitch_jump_to_trim.inx:29
 msgid "Use command symbol"
@@ -6946,7 +6946,7 @@ msgstr "Visuelle Befehle verwenden"
 
 #: inx/inkstitch_jump_to_trim.inx:32
 msgid "This extension inserts trim or stop commands to avoid jump stitches."
-msgstr ""
+msgstr "Diese Erweiterung fügt Fadenschnitt- oder Stoppbefehle ein, um Sprungstiche zu vermeiden."
 
 #: inx/inkstitch_jump_to_trim.inx:34
 msgid "https://inkstitch.org/docs/commands/#jump-to-trim"
