@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-17 01:46+0000\n"
-"PO-Revision-Date: 2025-11-18 01:45\n"
+"PO-Revision-Date: 2025-11-19 01:45\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -1174,7 +1174,7 @@ msgstr "Geen"
 #: lib/elements/element.py:328
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
-msgstr "Force locksteken"
+msgstr "Force vergrendel steken"
 
 #: lib/elements/element.py:329
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
@@ -1270,7 +1270,7 @@ msgstr "Kleine Opvulling"
 
 #: lib/elements/fill_stitch.py:37
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
-msgstr "Dit invulobject is zo klein dat het er waarschijnlijk beter uitziet als doorlopende steek of satijnbaan. Voor hele kleine vormen is invulsteek niet mogelijk, Ink/Stitch zal inplaats daarvan een doorlopende steek langs de rand maken."
+msgstr "Dit invul object is zo klein dat het er waarschijnlijk beter uitziet als doorlopende steek of satijn baan. Voor hele kleine vormen is vulsteek niet mogelijk, Ink/Stitch zal inplaats daarvan een doorlopende steek langs de rand maken."
 
 #: lib/elements/fill_stitch.py:43 lib/elements/fill_stitch.py:263
 msgid "Expand"
@@ -1278,7 +1278,7 @@ msgstr "Uitbreiden"
 
 #: lib/elements/fill_stitch.py:44
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
-msgstr "De parameter Uitbreiden voor dit opvulobject kan niet worden toegepast. Ink/Stitch zal deze negeren en in plaats daarvan de oorspronkelijke grootte gebruiken."
+msgstr "De instellingen Uitbreiden voor dit opvul object kan niet worden toegepast. Ink/Stitch zal deze negeren en in plaats daarvan de oorspronkelijke grootte gebruiken."
 
 #: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:681
 msgid "Inset"
@@ -1286,7 +1286,7 @@ msgstr "Inzet"
 
 #: lib/elements/fill_stitch.py:50
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
-msgstr "De parameter voor de onderlaaginzet voor dit opvulobject kan niet worden toegepast. Ink/Stitch zal deze negeren en in plaats daarvan de oorspronkelijke grootte gebruiken."
+msgstr "De instellingen voor de onderlaag inzet voor dit opvul object kan niet worden toegepast. Ink/Stitch zal deze negeren en in plaats daarvan de oorspronkelijke grootte gebruiken."
 
 #: lib/elements/fill_stitch.py:55
 msgid "Missing Guideline"
@@ -1310,7 +1310,7 @@ msgstr "Onsamenhangende hulplijn"
 
 #: lib/elements/fill_stitch.py:65
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
-msgstr "De hulplijn van dit object ligt niet binnen de objectgrenzen. De hulplijn werkt het best, als hij binnen het doelelement ligt."
+msgstr "De hulplijn van dit object ligt niet binnen de object grenzen. De hulplijn werkt het best, als hij binnen het doelelement ligt."
 
 #: lib/elements/fill_stitch.py:68
 msgid "* Move the guide line into the element"
@@ -1334,12 +1334,12 @@ msgstr "Losstaand"
 
 #: lib/elements/fill_stitch.py:82
 msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
-msgstr "Opvulling: Dit object bestaat uit vormen die geen verband met elkaar houden. Ink/Stitch weet niet in welke volgorde ze moeten worden genaaid.  Breek dit object alstublieft op in afzonderlijke vormen."
+msgstr "Opvulling: Dit object bestaat uit vormen die geen verband met elkaar houden. Ink/Stitch weet niet in welke volgorde ze moeten worden geborduurd.  Breek dit object alstublieft op in afzonderlijke vormen."
 
 #: lib/elements/fill_stitch.py:86 lib/elements/fill_stitch.py:95
 #: lib/elements/fill_stitch.py:140
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
-msgstr "* Uitbreidingen > Ink/Stitch > Opvul gereedschap > Opdelen Opvulobjecten"
+msgstr "* Uitbreidingen > Ink/Stitch > Opvul gereedschap > Opdelen Opvul objecten"
 
 #: lib/elements/fill_stitch.py:91
 msgid "Border crosses itself"
@@ -1347,7 +1347,7 @@ msgstr "Rand kruist zichzelf"
 
 #: lib/elements/fill_stitch.py:92
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
-msgstr "Opvulling: De rand kruist zichzelf. Dit kan leiden tot niet aaneengesloten vormen. Breek dit object in aparte vormen om aan te geven in welke volgorde het gestikt moet worden."
+msgstr "Opvulling: De rand kruist zichzelf. Dit kan leiden tot niet aaneengesloten vormen. Breek dit object in aparte vormen om aan te geven in welke volgorde het geborduurd moet worden."
 
 #: lib/elements/fill_stitch.py:100
 msgid "Fill and Stroke color"
@@ -1427,7 +1427,7 @@ msgstr "Vulsteek"
 
 #: lib/elements/fill_stitch.py:149
 msgid "Automatically routed fill stitching"
-msgstr "Automatisch gerouteerde opvulsteken"
+msgstr "Automatisch gerouteerde vulsteek"
 
 #: lib/elements/fill_stitch.py:153
 msgid "Auto Fill"
@@ -1439,7 +1439,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:155 inx/inkstitch_select_elements.inx:57
 msgid "Contour Fill"
-msgstr "Contourvulling"
+msgstr "Contour vulling"
 
 #: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:58
 msgid "Guided Fill"
@@ -1460,11 +1460,11 @@ msgstr ""
 #: lib/elements/fill_stitch.py:160 lib/gui/tartan/embroidery_panel.py:203
 #: inx/inkstitch_select_elements.inx:62
 msgid "Legacy Fill"
-msgstr "Legacy vulling"
+msgstr "Ouderwetse vulling"
 
 #: lib/elements/fill_stitch.py:164
 msgid "Fill method"
-msgstr "Vulmethode"
+msgstr "Vul methode"
 
 #: lib/elements/fill_stitch.py:173
 msgid "Guided Fill Strategy"
