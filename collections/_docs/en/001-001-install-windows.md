@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch on Windows"
 permalink: /docs/install-windows/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2025-04-13
+last_modified_at: 2025-11-19
 toc: true
 ---
 {% comment %}
@@ -13,103 +13,100 @@ We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [
 
 ## Requirements
 
-Ink/Stitch is an Inkscape extension. Download and install [Inkscape](https://inkscape.org/release/) Version 1.0.2 or higher before you install Ink/Stitch.
+Ink/Stitch is an Inkscape extension. You will need to download and install [Inkscape](https://inkscape.org/release/) version 1.0.2 or higher before you install Ink/Stitch.
 
 ## Download
 
-Download the latest release.
+Use the button below to download the latest release.
 
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-64bit.exe" class="btn btn--info btn--large"><i class="fa fa-download"></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for Windows 64bit</a></p>
+
 
 **Latest release:** {{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
 
 Free code signing provided by [SignPath.io](https://about.signpath.io) certificate by [SignPath Foundation](https://signpath.org).<br>See our [code signing policy](/code-signing-policy).
 {: .notice--info }
 
-### Download with Microsoft Edge
+### Tips for downloading using Microsoft Edge
 
-When you are using the Microsoft Edge Browser it may not download the File right away. Here are the steps necessary to convince your browser to download it anyway.
+Microsoft Edge may not download the file immediately or may pause the download. Follow these steps to complete the download.
 
-* Click on the download link (above).
-
-* Your browser will show a warning sign. Click on it.
+* Select the download link (above).
+* Edge shows a warning symbol. Select the symbol, then select the message text.
 
   ![Download warning message](/assets/images/docs/en/windows-download/01-warning-message.png)
 
-  Then click on the message text.
-* The message will show a bin to dismiss the download and a menu button.
+* A bin icon and a menu button (ellipses) appear. Select the menu button.
 
   ![Download warning message with menu button](/assets/images/docs/en/windows-download/02-warning_message02.png)
 
-  Click on the menu button
-* A menu appears.
+* A small menu opens. Select `Keep`.
 
-  ![Download warnig message with menu](/assets/images/docs/en/windows-download/03-keep.png)
+  ![Download warning message with menu](/assets/images/docs/en/windows-download/03-keep.png)
 
-  Click on `Keep`
-* It will give you an other warning.
+* Edge displays another warning. Select `Show more`.
 
-  ![An other warning](/assets/images/docs/en/windows-download/04-show-more.png)
+  ![Another warning message](/assets/images/docs/en/windows-download/04-show-more.png)
 
-  Click on `Show more`
-* Now you have three more options.
 
-  If you want to help us out and make the download procedure easier for the next users, click on `Report this app as safe`.
+* Three new options appear.
 
-  Chose `Keep anyway` to finally download the file.
+   If you want to help improve the download experience for future users, select `Report this app as safe`.
+
+  Select `Keep anyway` to finish the download.
 
   ![Keep anyway option finally shows up](/assets/images/docs/en/windows-download/05-keep_anyway.png)
 
 ## Installation
 
-Double click to execute the downloaded file.
+Run the downloaded installer. 
 
-Until our windows certificate gained enough trust, you will need to allow the installer script to run.
+Windows may block it from automatically running until the Windows certificate has gained enough trust. Until then, you will need to grant permission for the installer to run.
 
-Click on `More info`.
+Select `More info` when this message appears.
 
 ![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer01.png)
 
-Now click on the additional option `Run anyway`.
+Select `Run anyway`.
 
 ![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer02.png)
 
-Ink/Stitch needs to be installed into the Inkscape extensions folder. The path is already set for you. Click on `Next`.
+The installer will point to the Inkscape extensions folder automatically. The path is already set for you. You do not need to change this folder. Select `Next`.
 
 ![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer03.png)
 
-Since you have Inkscape installed, the extensions folder already exists. Confirm that you want to install into this folder and click on `Yes`.
+Since Inkscape is already installed, the extensions folder already exists. Select `Yes` to continue. 
 
 ![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer04.png)
 
-The installer will show you a summary of the installation settings. Click on `Install`.
+The installer shows you a summary of the installation settings. Select `Install`.
 
 ![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer05.png)
 
-Ink/Stitch is now installed on your computer.
+When the process finishes, Ink/Stitch is ready to use.
 
 ![Ink/Stitch installer](/assets/images/docs/en/windows-install/installer06.png)
 
 ## Run Ink/Stitch
 
-Open Inkscape. You will find Ink/Stitch under `Extensions > Ink/Stitch`.
+Open Inkscape to start using Ink/Stitch. You can find Ink/Stitch under `Extensions > Ink/Stitch`.
 
 ![Ink/Stitch menu](/assets/images/docs/en/windows-install/inkstitch-extensions-menu.png)
 
 ## Uninstall Ink/Stitch
 
-### Uninstall Ink/Stitch versions up from v2.1.0
+### Uninstall Ink/Stitch (v2.1.0 and newer)
 
-Open the start menu in Windows. Click on `Settings`.
+Open the start menu in Windows and select `Settings`.
 
 ![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall01.png)
 
-Click on `Apps`.
+Select `Apps`.
 
 ![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall02.png)
 
-In `Apps & features` scroll down until you find Ink/Stitch.
-Click on `Ink/Stitch` and an uninstall button appears. Click on `Uninstall`.
+Scroll to Ink/Stitch.
+Select `Ink/Stitch` and then select `Uninstall`.
 
 ![Uninstall Ink/Stitch](/assets/images/docs/en/windows-install/uninstall03.png)
 
@@ -123,30 +120,33 @@ Ink/Stitch has been removed from your computer. Click `Ok`.
 
 ### Uninstall Ink/Stitch versions older than v2.1.0
 
-Go to `Edit > Preferences > System` and open your extensions folder.
+If you are using an older version of Ink/Stitch, you must manually remove it from the Inkscape extensions folder.
+
+Open Inkscape and go to `Edit` then `Preferences`, then`System`. Select the button to open the extensions folder. Once it opens, find the the Ink/Stitch folder and delete it.  You may need to delete any subfolders and files first. 
 
 ![Inkscape extensions folder](/assets/images/docs/en/extensions-folder-location-win.jpg)
 
-Remove each inkstitch* file and folder.
 
-## Get informed about Ink/Stitch updates
+## Stay informed about Ink/Stitch updates
 
-Subscribe to a news feed channel to keep track on Ink/Stitch Updates.
+You can follow Ink/Stitch updates through our news feed or through the release feed on GitHub.
 
 * <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [Ink/Stitch News (Website)](/feed.xml)<br />
 * <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [New Releases on GitHub](https://github.com/inkstitch/inkstitch/releases.atom)<br>
 
-<p>Alternatively watch all project activity on GitHub: <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
+<p>You can view project activity on GitHub if you want to stay updated on changes and development progress. <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 
 ## Troubleshoot
+This section covers common issues you may see when Ink/Stitch does not appear, when files are blocked by antivirus software, or when Inkscape cannot locate the correct folder. It also describes how to address Python path problems, Windows update issues, Windows 8 DLL messages, and language display problems.
 
-### Ink/Stitch doesn't show up / is greyed out
+
+### Ink/Stitch does not appear in the extension menu or is greyed out
 
 **Antivirus Software**
 
-Since Ink/Stitch is packed into a executable there are reports of anti-virus-software using heuristics that mark the extension as a false positive. The solution in this cases is to add the Ink/Stitch extension folder to the exception list on the av program and reinstall the extension and try again.
+Some antivirus tools may block Ink/Stitch because the installer uses a packed installer file. Add the Ink/Stitch extension folder to the exception list in your antivirus program, reinstall Ink/Stitch, then try again.
 
-If your antivirus software deleted files, you will receive an error message like this:
+If your antivirus software deleted files, you may receive an error message like this:
 
 ```
 Tried to launch: inkstitch\bin\inkstitch
@@ -161,13 +161,13 @@ Traceback (most recent call last):
 WindowsError: [Error 2] The system cannot find the file specified
 ```
 
-**Confirm Ink/Stitch Version**
+**Confirm Ink/Stitch version**
 
-Verify if you have downloaded Ink/Stitch for Windows ([Download](#download))
+Verify that you downloaded Ink/Stitch for Windows ([Download](#download))
 
 **Confirm installation path**
 
-Check if you extracted Ink/Stitch into the correct folder. If the `User extensions folder` doesn't work out correctly, you can also try to install into the `Inkscape extensions folder`.
+Check that you extracted Ink/Stitch into the correct folder. If the `User extensions folder` does not work out correctly, you can also try to install into the `Inkscape extensions folder`.
 You can also look it up under `Edit > Preferences > System`.
 
 ### PYTHONPATH
@@ -180,11 +180,11 @@ PYTHONHOME = 'C:\Users\{username}\AppData\Roaming\inkscape\extensions\inkstitch\
 PYTHONPATH = (not set)
 ```
 
-Reinstall Inkscape. Make sure that "Add to path" is checked, when the PYTHONPATH question pops up during the installation.
+Reinstall Inkscape. Confirm that "Add to path" is checked, when the PYTHONPATH question pops up during the installation.
 
 ### Windows 7: Error message
 
-When you see the following error message please install Microsoft Windows security updates on your computer.
+A missing Windows update may cause a socket related error. Install the current Windows security updates to fix this issue.
 
 ```
 Traceback (most recent call last):
@@ -211,17 +211,17 @@ If you come across these two error messages on Windows 8, download and install [
 
 ### Ink/Stitch is displayed in English
 
-**Incomplete Translation**
+**Incomplete translations**
 
-It is possible, that not all strings have been translated. This is indicated by **some strings of text beeing in English and others in your native language**.
-If you like to complete the translation, have a look at our [description for translators](/developers/localize/).
+If Ink/Stitch is displayed in English, but you were expecting another language, the translations may be incomplete. This is indicated by **some strings of text displaying in English and others in the selected language**.
+If you like to help complete the translation effort, please contribute here [description for translators](/developers/localize/).
 
-**Language Settings**
+**Language settings**
 
-If Ink/Stitch is uncertain, which language to support, it will fallback on English.
-You can tell Inkscape explicitly to use your native language as follows:
+If Ink/Stitch cannot identify the language to display, it will use English.
+You can set it directly in Inkscape. 
   * Go to Edit > Preferences > Interface (Ctrl + Shift + P)
-  * Set your language
+  * Select the language
   * Restart Inkscape
 
 ![Preferences > Interface](/assets/images/docs/en/preferences_language.png)
