@@ -17,5 +17,8 @@ classes:
 
 ## Manual Setup
 
-It is possible to install Ink/Stitch manually. It is not recommended though - unless you want to help developing the extension.
-In this case, please have a look at the [developer documentation](/developers/inkstitch/manual-setup/) section.
+
+It is possible to install Ink/Stitch manually, but this is not recommended for most users. Manual installation is primarily intended for those who want to contribute to the development of the extension.
+
+If you’d like to set up a development environment, please refer to the 
+[developer documentation](/developers/inkstitch/manual-setup/)
