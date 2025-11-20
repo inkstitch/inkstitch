@@ -1,42 +1,46 @@
 ---
 title: "Basic Usage"
 permalink: /docs/basic-usage/
-last_modified_at: 2019-03-30
+last_modified_at: 2025-11-19
 toc: true
 ---
-Try the following steps in order to test the extension and to learn the basic functionality.
+Try the following steps to learn the basic functionality of Ink/Stitch.  
 
-**Tip:** If you are new to Inkscape, have a look at their [Basic Tutorial](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) first.
+**Tip:** If you are new to Inkscape, you may want to review the [Basic Inkscape Tutorial](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) before you begin.
 {: .notice--info }
 
 ## Step 1 - Draw an Object
 
-Create an object, e.g. a circle and make sure it has a fill.
+1. Create an object, for example a circle, and confirm it has a fill color.
+2. If you do not know what fill means, please review the[Basic Inkscape Tutorial](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) 
 
 ![Circle with fill color](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 
 
 ## Step 2 - Parametrize SVG Path for Embroidery
 
-* Select at least one object.
-* Open `Extensions > Ink/Stitch  > Params`.
-* Play with the values. The simulator will update whenever you change the settings.
-* For now, close without saving.
+1. Select the object.
+2. Open `Extensions > Ink/Stitch  > Params`.  This will launch the extension in another window. 
+3. Adjust the values.  The simulator updates when you change the settings.
+4. Close the window without saving for now.
 
-## Step 3 - Create the Embroidery File
+**Note:** If you do not see a tab at the top of the Ink/Stitch window named `FillStitch`, you have either not selected an object that has fill or you have not selected an object that is a path. You will need to convert your object to a path.  {: .notice--info}
 
-* Run `File > Save a copy...`
-* Navigate to the folder where you would like to save the file
-* Choose the correct file format for your machine
-* Click `Save`
-* Copy the file to your embroidery machine
+## Step 3 - Create the embroidery file
 
-**Tip:** Make sure to save the file as an SVG file as well. Then you will always be able to modify it easily.
+1. From the Inkscape menu, select `File > Save a copy...`
+2. Select to the folder where you would like to save the file
+3. Choose the correct file format for your machine
+4. Click `Save`.  You can now copy to the file to your machine for use. 
+
+**Tip:** Save the file as an SVG file as well so that you can modify it later.
 {: .notice--info}
 
 ## Workflow
 
-If this worked well, we recommend to also read through the next page (workflow). Where you can get a deeper insight into Ink/Stitch and you can learn how to perform essential functions for embroidery files, like e.g. ordering objects, etc.
+If the steps above worked well, continue to the next page on Workflow. It foes a deeper look at Ink/Stitch and explains how to perform important tasks for preparingembroidery files, such as ordering objects and managing the sequence of stitches.
 
-If you run into trouble, contact us through [GitHub](https://github.com/inkstitch/inkstitch/issues/). We really like to hear about your problem, this way we can either improve the documentation or the program itself.
+If you run into trouble, you can contact us through [GitHub](https://github.com/inkstitch/inkstitch/issues/). We welcome reports about problems because they help us improve the documentation and Ink/Stitch.
+
+
 
