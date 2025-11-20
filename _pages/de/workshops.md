@@ -6,4 +6,4 @@ toc: False
 outdated: dismiss
 ---
 ![Bäume](/assets/files/workshops/medienzentren/Baeume.png){: width="150px"}
-[Bäume](/assets/files/workshops/medienzentren/Baeume.png)
+[Bäume](/assets/files/workshops/medienzentren/Baeume.png){: download="Baeume.png"}
