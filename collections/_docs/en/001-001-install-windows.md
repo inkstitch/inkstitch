@@ -21,7 +21,6 @@ Use the button below to download the latest release.
 
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-64bit.exe" class="btn btn--info btn--large"><i class="fa fa-download"></i> Download Ink/Stitch {{ site.github.latest_release.tag_name }} for Windows 64bit</a></p>
 
-
 **Latest release:** {{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }} [Ink/Stitch {{ site.github.latest_release.tag_name }}](https://github.com/inkstitch/inkstitch/releases/latest)
 
 Free code signing provided by [SignPath.io](https://about.signpath.io) certificate by [SignPath Foundation](https://signpath.org).<br>See our [code signing policy](/code-signing-policy).
@@ -47,7 +46,6 @@ Microsoft Edge may not download the file immediately or may pause the download. 
 * Edge displays another warning. Select `Show more`.
 
   ![Another warning message](/assets/images/docs/en/windows-download/04-show-more.png)
-
 
 * Three new options appear.
 
@@ -125,7 +123,6 @@ If you are using an older version of Ink/Stitch, you must manually remove it fro
 Open Inkscape and go to `Edit` then `Preferences`, then`System`. Select the button to open the extensions folder. Once it opens, find the the Ink/Stitch folder and delete it.  You may need to delete any subfolders and files first. 
 
 ![Inkscape extensions folder](/assets/images/docs/en/extensions-folder-location-win.jpg)
-
 
 ## Stay informed about Ink/Stitch updates
 

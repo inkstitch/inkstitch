@@ -24,14 +24,15 @@ Try the following steps to learn the basic functionality of Ink/Stitch.
 3. Adjust the values.  The simulator updates the preview when you change the settings.
 4. Close the window without saving.
 
-**Note:** If you do not see a tab at the top of the Ink/Stitch window named `FillStitch`, you have either not selected an object that has fill or you have not selected an object that is a path. You will need to convert your object to a path.  {: .notice--info}
+**Note:** If you do not see a tab at the top of the Ink/Stitch window named `FillStitch`, you have either not selected an object that has fill or you have not selected an object that is a path. You will need to convert your object to a path.
+{: .notice--info}
 
 ## Step 3 - Create the embroidery file
 
 1. From the Inkscape menu, select `File > Save a copy...`
 2. Navigate to the folder where you want to save the file
 3. Choose the correct file format for your machine
-4. Select `Save`.  You can now copy the file to your machine for use. 
+4. Select `Save a copy`.  You can now copy the file to your machine for use. 
 
 **Tip:** Save the file as an SVG so that you can modify it later.
 {: .notice--info}
