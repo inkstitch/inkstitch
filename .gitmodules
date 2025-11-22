@@ -1,0 +1,3 @@
+[submodule "fonts"]
+	path = fonts
+	url = https://github.com/inkstitch/embroidery-fonts

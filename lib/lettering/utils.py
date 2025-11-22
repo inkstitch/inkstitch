@@ -30,8 +30,8 @@ def get_font_list(show_font_path_warning=True):
 
 def get_font_paths():
     font_paths = {
-        get_bundled_dir("fonts"),
-        os.path.expanduser("~/.inkstitch/fonts"),
+        os.path.join(get_bundled_dir("fonts"), "src"),
+        os.path.expanduser("~/.inkstitch/fonts/"),
         get_user_dir('fonts'),
         get_custom_font_dir()
     }
