@@ -65,7 +65,7 @@ Si vous choisissez l'option combiner et un point multiple, vous obtiendrez une a
 
 Si vous choisissez de ne pas  combiner vous obtiendrez une multitude de chemins. Cette option n'est à utiliser que si vous souhaitez manipuler le résultat.
 
-Vous pourriez aussi essayer avec d'autrez extensions comme :
+Vous pourriez aussi essayer avec d'autres extensions comme :
 
 *[Tiling extension](https://inkscape.org/fr/~cwant/%E2%98%85inkscape-tiling-extension+2)
 
