@@ -33,7 +33,7 @@ Elle peut être redimensionnée de {{ font1.min_scale | times: 100 | floor }}% (
 
 ## Dans la vraie vie
 
-{%include folder-galleries path="fonts/allegria/" %}
+{%include folder-galleries path="fonts/cyrillic/" %}
 
 ## License
 
