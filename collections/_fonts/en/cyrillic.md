@@ -33,7 +33,7 @@ up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.
 
 ## In real life 
 
-{%include folder-galleries path="fonts/allegria/" %}
+{%include folder-galleries path="fonts/cyrillic/" %}
 
 ## License
 
