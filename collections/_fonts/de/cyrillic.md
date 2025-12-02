@@ -33,7 +33,7 @@ bis zu {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1
 
 ## Impressionen
 
-{%include folder-galleries path="fonts/allegria/" %}
+{%include folder-galleries path="fonts/cyrillic/" %}
 
 ## Lizenz
 
