@@ -36,13 +36,8 @@ class RemoveEmbroiderySettings(InkstitchExtension):
                 self.remove_element(print_setting)
 
     def remove_params(self):
-        if not self.svg.selection:
-            xpath = ".//svg:path|.//svg:circle|.//svg:rect|.//svg:ellipse"
-            elements = find_elements(self.svg, xpath)
-            self.remove_inkstitch_attributes(elements)
-        else:
-            elements = self.get_selected_elements()
-            self.remove_inkstitch_attributes(elements)
+        elements = self.get_elements()
+        self.remove_inkstitch_attributes(elements, self.options.del_params)
 
     def remove_all_commands(self):
         xpath = ".//svg:g[starts-with(@id,'command_group')]"
@@ -76,9 +71,7 @@ class RemoveEmbroiderySettings(InkstitchExtension):
         symbols = f".//*[starts-with(@id, 'inkstitch_{command}')]"
         self.remove_elements(symbols)
 
-    def remove_selected_commands(self):
-        del_option = self.options.del_commands
-        elements = self.get_selected_elements()
+    def remove_commands_from_selection(self, elements, del_option):
         for element in elements:
             if is_command_symbol(element) and (del_option in element.get('xlink:href') or del_option == 'all'):
                 group = element.getparent()
@@ -94,15 +87,28 @@ class RemoveEmbroiderySettings(InkstitchExtension):
                     group.delete()
 
     def remove_commands(self):
+        elements = self.get_elements()
+        del_option = self.options.del_commands
+
+        # trim and stop params are percepted as commands,
+        # so let's remove them as well
+        if del_option in ['all', 'trim']:
+            self.remove_inkstitch_attributes(elements, 'trim_after')
+        elif del_option in ['all', 'stop']:
+            self.remove_inkstitch_attributes(elements, 'stop_after')
+
         if self.svg.selection:
-            self.remove_selected_commands()
+            self.remove_commands_from_selection(elements, del_option)
         elif self.options.del_commands == "all":
             self.remove_all_commands()
         else:
             self.remove_specific_commands(self.options.del_commands)
 
-    def get_selected_elements(self):
-        return self.svg.selection.get(ShapeElement)
+    def get_elements(self):
+        if self.svg.selection:
+            return self.svg.selection.get(ShapeElement)
+        else:
+            return self.svg.descendants().filter(ShapeElement)
 
     def remove_elements(self, xpath):
         elements = find_elements(self.svg, xpath)
@@ -112,8 +118,7 @@ class RemoveEmbroiderySettings(InkstitchExtension):
     def remove_element(self, element):
         element.delete()
 
-    def remove_inkstitch_attributes(self, elements):
-        param_to_remove = self.options.del_params
+    def remove_inkstitch_attributes(self, elements, param_to_remove):
         for element in elements:
             for attrib in element.attrib:
                 if attrib.startswith(NSS['inkstitch'], 1):
