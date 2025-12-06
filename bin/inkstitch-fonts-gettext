@@ -6,7 +6,7 @@ import json
 # generate fake python code containing the names and descriptions of all built-
 # in fonts as gettext calls so that pybabel will extract them into messages.po
 
-fonts_dir = os.path.join(os.path.dirname(__file__), "..", "fonts")
+fonts_dir = os.path.join(os.path.dirname(__file__), "..", "fonts", "src")
 
 for font in sorted(os.listdir(fonts_dir)):
 	with open(os.path.join(fonts_dir, font, "font.json")) as font_json:
