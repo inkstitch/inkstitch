@@ -6,7 +6,7 @@ jobs:
   crowdin:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: main
@@ -14,7 +14,7 @@ jobs:
       - name: checkout submodules
         run: |
           git submodule update --init --recursive
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12.x'
       - env:
@@ -24,7 +24,7 @@ jobs:
           git config --global user.email "inkstitch-crowdin@lex.gd"
           git config --global user.name "Ink/Stitch Crowdin integration"
 
-          wget --quiet https://github.com/crowdin/crowdin-cli/releases/download/4.6.1/crowdin-cli.zip
+          wget --quiet https://github.com/crowdin/crowdin-cli/releases/download/4.12.0/crowdin-cli.zip
           unzip -j crowdin-cli.zip
 
           sudo apt-get update
