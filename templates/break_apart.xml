@@ -12,10 +12,10 @@
             </param>
         </page>
         <page name="info" gui-text="Help">
-            <label>
-                This extension will try to repair fill shapes and break them apart if necessary.
-                Holes will be retained. Use on simple or overlapping shapes.
-            </label>
+            <label>This extension will try to repair fill shapes and break them apart if necessary.</label>
+            <label>Holes will be retained.</label>
+            <spacer />
+            <label>Use on simple or complex shapes with overlapping subpaths.</label>
             <spacer />
             <label>More information on our website</label>
             <label appearance="url">https://inkstitch.org/docs/fill-tools/#break-apart-fill-objects</label>
