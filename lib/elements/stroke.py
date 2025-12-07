@@ -658,8 +658,7 @@ class Stroke(EmbroideryElement):
     def get_guide_line(self):
         guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)
         # No or empty guide line
-        # if there is a satin guide line, it will also be in stroke, so no need to check for satin here
-        if not guide_lines or not guide_lines['stroke']:
+        if not guide_lines or (not guide_lines['stroke'] and not guide_lines['satin']):
             return None
 
         # use the satin guide line if there is one, else use stroke

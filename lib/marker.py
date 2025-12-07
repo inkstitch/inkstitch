@@ -74,20 +74,20 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_sati
         element = EmbroideryElement(marker)
         fill = element.fill_color
         stroke = element.stroke_color
+        is_satin = element.get_boolean_param('satin_column', False)
 
         if get_fills and fill is not None:
             fill = FillStitch(marker).shape
             fills.append(fill)
 
-        if get_strokes and stroke is not None:
+        if get_strokes and stroke is not None and not is_satin:
             stroke = Stroke(marker).unclipped_paths
             line_strings = [shgeo.LineString(path) for path in stroke]
             strokes.append(shgeo.MultiLineString(line_strings))
 
-        if get_satins and stroke is not None:
+        if get_satins and stroke is not None and is_satin:
             satin = SatinColumn(marker)
-            if len(satin.rails) == 2:
-                satins.append(satin)
+            satins.append(satin)
 
     return {'fill': fills, 'stroke': strokes, 'satin': satins}
 
