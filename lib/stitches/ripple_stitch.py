@@ -2,16 +2,18 @@ from collections import defaultdict
 from math import atan2, ceil
 
 import numpy as np
-from shapely import prepare
+from shapely import prepare, reverse
 from shapely.affinity import rotate, scale, translate
 from shapely.geometry import LineString, Point, Polygon
-from shapely.ops import substring
+from shapely.ops import linemerge, substring
 
 from ..elements import SatinColumn
 from ..utils import Point as InkstitchPoint
-from ..utils import prng
-from ..utils.geometry import line_string_to_point_list
+from ..utils import cache, prng
+from ..utils.geometry import (ensure_multi_line_string,
+                              line_string_to_point_list)
 from ..utils.threading import check_stop_flag
+from .auto_fill import which_outline
 from .guided_fill import apply_stitches
 from .running_stitch import even_running_stitch, running_stitch
 
@@ -48,7 +50,71 @@ def ripple_stitch(stroke):
         if stroke.grid_first:
             stitches = stitches[::-1]
 
+    stitches = apply_clip_to_stitches(stroke, stitches)
+
     return _repeat_coords(stitches, stroke.repeats)
+
+
+def apply_clip_to_stitches(stroke, stitches):
+    if stroke.clip_shape is None:
+        return stitches
+
+    clipped_stitches = []
+    clip = stroke.clip_shape
+    line_strings = LineString(stitches)
+    clipped_strings = line_strings.intersection(clip)
+    clipped_strings = list(ensure_multi_line_string(clipped_strings).geoms)
+    last_point = None
+    for line in clipped_strings:
+        coords = line.coords
+        if last_point is not None:
+            first_point = Point(coords[0])
+            if first_point.distance(clip.boundary) > 0.001:
+                if clipped_stitches:
+                    clipped_stitches = clipped_stitches[:-1]
+                clipped_stitches.extend([InkstitchPoint(*coord) for coord in coords[1:]])
+                last_point = Point(coords[-1])
+                continue
+            outline_index1 = which_outline(clip, last_point.coords)
+            outline_index2 = which_outline(clip, first_point.coords)
+            if outline_index1 == outline_index2:
+                outlines = ensure_multi_line_string(clip.boundary).geoms
+                outline = outlines[outline_index1]
+                dist1 = outline.project(last_point)
+                dist2 = outline.project(first_point)
+                travel = substring(outline, dist1, dist2)
+                travel = _get_shortest_travel(first_point, outline, travel)
+                if travel.geom_type == "LineString":
+                    connector = even_running_stitch(
+                        [InkstitchPoint(*coord) for coord in travel.coords],
+                        stroke.running_stitch_length,
+                        stroke.running_stitch_tolerance
+                    )[1:-1]
+                    clipped_stitches.extend(connector)
+            else:
+                connector = even_running_stitch(
+                    [InkstitchPoint(last_point.x, last_point.y),
+                     InkstitchPoint(first_point.x, first_point.y)],
+                    stroke.running_stitch_length,
+                    stroke.running_stitch_tolerance
+                )[1:-1]
+                clipped_stitches.extend(connector)
+        clipped_stitches.extend([InkstitchPoint(*coord) for coord in coords])
+        last_point = Point(coords[-1])
+    return clipped_stitches
+
+
+def _get_shortest_travel(start, outline, travel_linestring):
+    # Replace travel_linestring with a shorter version if possible
+    if outline.length / 2 < travel_linestring.length:
+        short_travel = outline.difference(travel_linestring)
+        if short_travel.geom_type == 'MultiLineString':
+            short_travel = linemerge(short_travel)
+        if short_travel.geom_type == 'LineString':
+            if Point(short_travel.coords[-1]).distance(start) > Point(short_travel.coords[0]).distance(start):
+                short_travel = reverse(short_travel)
+            return short_travel
+    return travel_linestring
 
 
 def _get_stitches(stroke, is_linear, lines, skip_start):
