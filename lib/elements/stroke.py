@@ -233,7 +233,7 @@ class Stroke(EmbroideryElement):
         min_dist = self.get_float_param("min_line_dist_mm")
         if min_dist is None:
             return
-        return max(min_dist, 0.01)
+        return min_dist
 
     _satin_guided_pattern_options = [
         ParamOption('default', _('Line count / Minimum line distance')),
