@@ -464,16 +464,27 @@ class Stroke(EmbroideryElement):
             # letting each instance without a specified seed get a different default.
         return seed
 
-    @property
-    @cache
-    def is_closed(self):
+    def _is_closed(self, clipped=True):
         # returns true if the outline of a single line stroke is a closed shape
         # (with a small tolerance)
-        lines = self.as_multi_line_string().geoms
+        if clipped:
+            lines = self.as_multi_line_string().geoms
+        else:
+            lines = self.as_multi_line_string(False).geoms
         if len(lines) == 1:
             coords = lines[0].coords
             return Point(*coords[0]).distance(Point(*coords[-1])) < 0.05
         return False
+
+    @property
+    @cache
+    def is_closed_unclipped(self):
+        return self._is_closed(False)
+
+    @property
+    @cache
+    def is_closed_clipped(self):
+        return self._is_closed()
 
     @property
     def paths(self):
@@ -507,9 +518,18 @@ class Stroke(EmbroideryElement):
     def shape(self):
         return self.as_multi_line_string().convex_hull
 
+    @property
     @cache
-    def as_multi_line_string(self):
-        line_strings = [shgeo.LineString(path) for path in self.paths if len(path) > 1]
+    def unclipped_shape(self):
+        return self.as_multi_line_string(False).convex_hull
+
+    @cache
+    def as_multi_line_string(self, clipped=True):
+        if clipped:
+            paths = self.paths
+        else:
+            paths = self.unclipped_paths
+        line_strings = [shgeo.LineString(path) for path in paths if len(path) > 1]
         return shgeo.MultiLineString(line_strings)
 
     @property
@@ -544,7 +564,7 @@ class Stroke(EmbroideryElement):
         if command:
             return shgeo.Point(*command.target_point)
         else:
-            return self.shape.centroid
+            return self.unclipped_shape.centroid
 
     def simple_satin(self, path, zigzag_spacing, stroke_width, pull_compensation):
         "zig-zag along the path at the specified spacing and wdith"
@@ -596,26 +616,31 @@ class Stroke(EmbroideryElement):
         return max_len_path
 
     def ripple_stitch(self):
-        return StitchGroup(
-            color=self.color,
-            tags=["ripple_stitch"],
-            stitches=ripple_stitch(self),
-            lock_stitches=self.lock_stitches,
-            force_lock_stitches=self.force_lock_stitches)
+        ripple_stitches = ripple_stitch(self)
+        stitch_groups = []
+        for stitches in ripple_stitches:
+            stitch_group = StitchGroup(
+                color=self.color,
+                tags=["ripple_stitch"],
+                stitches=stitches,
+                lock_stitches=self.lock_stitches,
+                force_lock_stitches=self.force_lock_stitches
+            )
+            stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
+            stitch_groups.append(stitch_group)
+        return stitch_groups
 
     def do_bean_repeats(self, stitches):
-        return bean_stitch(stitches, self.bean_stitch_repeats)
+        if any(self.bean_stitch_repeats):
+            return bean_stitch(stitches, self.bean_stitch_repeats)
+        return stitches
 
     def to_stitch_groups(self, last_stitch_group, next_element=None):  # noqa: C901
         stitch_groups = []
 
         # ripple stitch
         if self.stroke_method == 'ripple_stitch':
-            stitch_group = self.ripple_stitch()
-            if stitch_group:
-                if any(self.bean_stitch_repeats):
-                    stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
-                stitch_groups.append(stitch_group)
+            stitch_groups.extend(self.ripple_stitch())
         else:
             for path in self.paths:
                 path = [Point(x, y) for x, y in path]
@@ -636,8 +661,7 @@ class Stroke(EmbroideryElement):
                         force_lock_stitches=self.force_lock_stitches
                     )
                     # apply bean stitch settings
-                    if any(self.bean_stitch_repeats):
-                        stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
+                    stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
                 # simple satin
                 elif self.stroke_method == 'zigzag_stitch':
                     stitch_group = self.simple_satin(path, self.zigzag_spacing, self.stroke_width, self.pull_compensation)
