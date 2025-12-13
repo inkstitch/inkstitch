@@ -591,6 +591,8 @@ def _get_start_rotation(line):
 
 def generate_satin_guide_helper_lines(stroke, outline, guide_line):
     anchor_line = stroke.get_anchor_line()
+    guide_line.node.set('inkstitch:reverse_rails', stroke.reverse_rails)
+    guide_line.node.set('inkstitch:swap_satin_rails', stroke.swap_rails)
     if anchor_line:
         # position, rotation and scale defined by anchor line
         outline0 = InkstitchPoint(*anchor_line.coords[0])
