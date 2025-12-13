@@ -252,6 +252,8 @@ def _get_staggered_stitches(stroke, lines, skip_start):
     random_seed = stroke.random_seed
     last_point = None
     for i, line in enumerate(lines):
+        if len(line) == 1:
+            continue
         connector = []
         if i != 0 and stroke.join_style == 0:
             if i % 2 == 0 or not stroke.flip_copies:
@@ -270,27 +272,35 @@ def _get_staggered_stitches(stroke, lines, skip_start):
                 line.reverse()
             stitched_line = running_stitch(line, stitch_length, tolerance, is_random, length_sigma, prng.join_args(random_seed, i))
         else:
-            if len(stitch_length) > 1:
-                points = list(
-                    apply_stagger(line, stitch_length, stroke.staggers, i, tolerance, is_random, length_sigma, prng.join_args(random_seed, i)).coords
-                )
-            else:
-                # uses the guided fill alforithm to stagger rows of stitches
-                points = list(apply_stitches(LineString(line), stitch_length, stroke.staggers, 0.5, i, tolerance).coords)
-
-            # simplifying the path in apply_stitches could have removed the start or end point
-            # we can simply add it again, the minimum stitch length value will take care to remove possible duplicates
-            points = [line[0]] + points + [line[-1]]
-
-            stitched_line = [InkstitchPoint(*point) for point in points]
-            if should_reverse and stroke.flip_copies:
-                stitched_line.reverse()
+            stitched_line = _stagger_line(
+                line, stitch_length, stroke.staggers, i, tolerance, is_random, length_sigma, prng.join_args(random_seed, i),
+                should_reverse, stroke.flip_copies
+            )
 
         stitched_line = connector + stitched_line
 
         last_point = stitched_line[-1]
         stitches.extend(stitched_line)
     return stitches
+
+
+def _stagger_line(line, stitch_length, staggers, i, tolerance, is_random, length_sigma, random, should_reverse, flip_copies):
+    if len(stitch_length) > 1:
+        points = list(
+            apply_stagger(line, stitch_length, staggers, i, tolerance, is_random, length_sigma, random).coords
+        )
+    else:
+        # uses the guided fill alforithm to stagger rows of stitches
+        points = list(apply_stitches(LineString(line), stitch_length, staggers, 0.5, i, tolerance).coords)
+
+    # simplifying the path in apply_stitches could have removed the start or end point
+    # we can simply add it again, the minimum stitch length value will take care to remove possible duplicates
+    points = [line[0]] + points + [line[-1]]
+
+    stitched_line = [InkstitchPoint(*point) for point in points]
+    if should_reverse and flip_copies:
+        stitched_line.reverse()
+    return stitched_line
 
 
 def apply_stagger(line, stitch_length, num_staggers, row_num, tolerance, is_random, stitch_length_sigma, random_seed):
