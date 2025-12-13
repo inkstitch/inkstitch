@@ -367,6 +367,7 @@ class Stroke(EmbroideryElement):
                   'affecting which side the thread finished on as well as any sided properties'),
         type='boolean',
         default='false',
+        select_items=[('stroke_method', 'ripple_stitch')],
         sort_index=23)
     def swap_rails(self):
         return self.get_boolean_param('swap_satin_rails', False)
