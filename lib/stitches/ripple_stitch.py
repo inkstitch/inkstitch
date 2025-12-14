@@ -2,16 +2,22 @@ from collections import defaultdict
 from math import atan2, ceil
 
 import numpy as np
+from networkx import connected_components, is_empty
 from shapely import prepare
 from shapely.affinity import rotate, scale, translate
 from shapely.geometry import LineString, Point, Polygon
 from shapely.ops import substring
 
 from ..elements import SatinColumn
+from ..stitch_plan import Stitch
 from ..utils import Point as InkstitchPoint
 from ..utils import prng
-from ..utils.geometry import line_string_to_point_list
+from ..utils.geometry import (ensure_multi_line_string,
+                              line_string_to_point_list, reverse_line_string)
 from ..utils.threading import check_stop_flag
+from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
+                        collapse_sequential_outline_edges, find_stitch_path,
+                        graph_make_valid, travel)
 from .guided_fill import apply_stitches
 from .running_stitch import even_running_stitch, running_stitch
 
@@ -26,10 +32,11 @@ def ripple_stitch(stroke):
     If more sublines are present interpolation will take place between the first two.
     '''
 
-    if stroke.as_multi_line_string().length < 0.1:
+    if stroke.as_multi_line_string(False).length < 0.1:
         return []
 
     is_linear, helper_lines, grid_lines = _get_helper_lines(stroke)
+
     if not helper_lines:
         return []
 
@@ -43,12 +50,169 @@ def ripple_stitch(stroke):
     if stroke.reverse:
         stitches.reverse()
 
-    if stitches and stroke.grid_size != 0:
-        stitches.extend(_do_grid(stroke, grid_lines, skip_start, skip_end, is_linear, stitches[-1]))
-        if stroke.grid_first:
-            stitches = stitches[::-1]
+    remove_end_travel = True
+    if stroke.grid_size != 0:
+        remove_end_travel = False
+    stitch_groups = _route_clipped_stitches(stroke, stitches, True, remove_end_travel)
 
-    return _repeat_coords(stitches, stroke.repeats)
+    if stroke.repeats > 1:
+        repeated_groups = []
+        for stitch_group in stitch_groups:
+            repeated_groups.append(_repeat_coords(stitch_group, stroke.repeats))
+        stitch_groups = repeated_groups
+
+    if stitch_groups and stroke.grid_size != 0:
+        grid_sitches = _do_grid(stroke, grid_lines, skip_start, skip_end, is_linear, stitches[-1])
+        stitch_groups.extend(_route_clipped_stitches(stroke, grid_sitches, False, True, InkstitchPoint(*stitch_groups[-1][-1])))
+
+    if stroke.grid_size != 0 and stroke.grid_first:
+        reversed_groups = []
+        for stitch_group in stitch_groups:
+            reversed_groups.append(stitch_group[::-1])
+        stitch_groups = reversed_groups[::-1]
+
+    return stitch_groups
+
+
+def _route_clipped_stitches(stroke, stitches, remove_start_travel=True, remove_end_travel=True, starting_point=None):
+    if stroke.clip_shape is None:
+        return [stitches]
+
+    clip = stroke.clip_shape
+    line_strings = LineString(stitches)
+    clipped_strings = line_strings.intersection(clip)
+    clipped_strings = ensure_multi_line_string(clipped_strings)
+    if not clipped_strings:
+        return [stitches]
+
+    segments = _prepare_line_segments(clip, clipped_strings)
+
+    if not starting_point:
+        starting_point = InkstitchPoint(*segments[0][0])
+    ending_point = InkstitchPoint(*segments[-1][-1])
+    routed_segments = _auto_route_segments(clip, stroke, segments, starting_point, ending_point, stitches)
+
+    if not routed_segments:
+        return [stitches]
+
+    # multi-part stitch result (clip cuts off one or more parts of the original path)
+    # TODO: sort multipart ripples with grid
+    _sort_segments(routed_segments, starting_point, ending_point)
+    stitches = _segments_to_stitches(segments, routed_segments, starting_point, ending_point, remove_start_travel, remove_end_travel)
+
+    return stitches
+
+
+def _segments_to_stitches(segments, routed_segments, starting_point, ending_point, remove_start_travel, remove_end_travel):
+    stitches = []
+    for segment in routed_segments:
+        current_segment = segment
+        if remove_start_travel:
+            for i, stitch in enumerate(current_segment):
+                if 'auto_fill_travel' not in stitch.tags:
+                    current_segment = current_segment[i:]
+                    break
+        if remove_end_travel:
+            current_segment.reverse()
+            for i, stitch in enumerate(current_segment):
+                if 'auto_fill_travel' not in stitch.tags:
+                    current_segment = current_segment[i:]
+                    break
+            current_segment.reverse()
+
+        if current_segment:
+            stitches.append(current_segment)
+            current_segment = []
+    return stitches
+
+
+def _sort_segments(routed_segments, starting_point, ending_point):
+    if len(routed_segments) == 1:
+        return
+    start_segment_index = [i for i, segment in enumerate(routed_segments) if segment[0] == starting_point]
+    if start_segment_index:
+        routed_segments.insert(0, routed_segments.pop(start_segment_index[0]))
+    end_segment_index = [(i, segment) for i, segment in enumerate(routed_segments) if segment[-1] == ending_point]
+    if end_segment_index and end_segment_index != 0:
+        routed_segments.pop(end_segment_index[0][0])
+        routed_segments.append(end_segment_index[0][1])
+
+
+def _auto_route_segments(clip, stroke, segments, starting_point, ending_point, stitches):
+
+    fill_stitch_graph = build_fill_stitch_graph(clip, segments, starting_point, ending_point)
+
+    if is_empty(fill_stitch_graph):
+        return [stitches]
+
+    # clipping may split the stitch path into several unconnected sections
+    connected_graphs = [fill_stitch_graph.subgraph(c).copy() for c in connected_components(fill_stitch_graph)]
+    result = []
+    for ripple_graph in connected_graphs:
+        graph_make_valid(ripple_graph)
+
+        travel_graph = build_travel_graph(ripple_graph, clip, 0, False)
+        path = find_stitch_path(ripple_graph, travel_graph, starting_point, ending_point, True)
+        stitches = path_to_stitches(
+            clip, segments, path, travel_graph, ripple_graph,
+            stroke.running_stitch_length, stroke.running_stitch_tolerance, False, False)
+        result.append(stitches)
+    return result
+
+
+def _prepare_line_segments(clip, clipped_strings):
+    # merge continuous lines (they may have been split up at self-intersections).
+    segments = []
+    current_segment = []
+    for line in clipped_strings.geoms:
+        coords = line.coords
+        first_point = Point(coords[0])
+        if first_point.distance(clip.boundary) < 0.0001 and current_segment:
+            segments.append(current_segment)
+            current_segment = []
+
+        # remove additional stitches which were a byproduct of splitting linestrings at intersections
+        if len(current_segment) > 1:
+            current_segment = current_segment[:-1]
+            coords = coords[1:]
+
+        current_segment.extend([(coord[0], coord[1]) for coord in coords])
+    if current_segment:
+        segments.append(current_segment)
+
+    return segments
+
+
+def path_to_stitches(shape, segments, path, travel_graph, fill_stitch_graph, running_stitch_length, running_stitch_tolerance, skip_last, underpath):
+    path = collapse_sequential_outline_edges(path, fill_stitch_graph)
+
+    stitches = []
+
+    # If the very first stitch is travel, we'll omit it in travel(), so add it here.
+    if not path[0].is_segment():
+        stitches.append(Stitch(*path[0].nodes[0], tags={'auto_fill_travel'}))
+
+    for edge in path:
+        if edge.is_segment():
+            current_edge = fill_stitch_graph[edge[0]][edge[-1]]['segment']
+            path_geometry = current_edge['geometry']
+
+            if edge[0] != path_geometry.coords[0]:
+                path_geometry = reverse_line_string(path_geometry)
+
+            new_stitches = [Stitch(*point) for point in path_geometry.coords]
+
+            # need to tag stitches
+            if skip_last:
+                del new_stitches[-1]
+
+            stitches.extend(new_stitches)
+
+            travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
+        else:
+            stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath, False))
+
+    return stitches
 
 
 def _get_stitches(stroke, is_linear, lines, skip_start):
@@ -197,14 +361,14 @@ def _line_count_adjust(stroke, num_lines):
         num_lines -= 1
     # ensure minimum line count
     num_lines = max(1, num_lines)
-    if stroke.is_closed or stroke.join_style == 1:
+    if stroke.is_closed_unclipped or stroke.join_style == 1:
         # for flat join styles we need to add an other line
         num_lines += 1
     return num_lines
 
 
 def _get_helper_lines(stroke):
-    lines = stroke.as_multi_line_string().geoms
+    lines = stroke.as_multi_line_string(False).geoms
     if len(lines) > 1:
         helper_lines = _get_satin_ripple_helper_lines(stroke)
         if stroke.grid_size > 0:
@@ -228,7 +392,7 @@ def _get_helper_lines(stroke):
                 stroke.running_stitch_tolerance)
             )
 
-        if stroke.is_closed:
+        if stroke.is_closed_unclipped:
             helper_lines = _get_circular_ripple_helper_lines(stroke, outline)
             return False, helper_lines, helper_lines
         elif stroke.join_style == 1:
