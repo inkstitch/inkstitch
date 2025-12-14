@@ -15,6 +15,7 @@
     </effect>
     <param name="notebook" type="notebook">
       <page name="options" gui-text="Options">
+        <param name="stitch-length" type="float" gui-text="Stitch length" min="0.1" max="50">3</param>
         <param name="keep-holes" type="bool" gui-text="Keep holes">true</param>
         <param name="offset" type="float" gui-text="Offset" min="-50" max="50">1</param>
         <param name="join-style" type="optiongroup" appearance="combo" gui-text="Join style">
