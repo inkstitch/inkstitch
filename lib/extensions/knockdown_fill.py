@@ -3,6 +3,8 @@
 # Copyright (c) 2025 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from math import sqrt
+
 from inkex import Boolean, Path, PathElement
 from shapely import minimum_bounding_circle, union_all
 from shapely.geometry import LineString, Polygon
@@ -20,6 +22,7 @@ class KnockdownFill(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--notebook")
+        self.arg_parser.add_argument("-l", "--stitch-length", type=float, default=3, dest="stitch_length")
         self.arg_parser.add_argument("-k", "--keep-holes", type=Boolean, default=True, dest="keep_holes")
         self.arg_parser.add_argument("-o", "--offset", type=float, default=0, dest="offset")
         self.arg_parser.add_argument("-j", "--join-style", type=str, default="1", dest="join_style")
@@ -137,15 +140,19 @@ class KnockdownFill(InkstitchExtension):
         return d
 
     def insert_path(self, d, transform, parent, index):
+        stitch_length = self.options.stitch_length
+        row_spacing = (sqrt(3) * stitch_length) / 2
+
         path = PathElement()
         path.set('d', d)
         path.label = self.svg.get_unique_id('Knockdown ')
         path.set('transform', transform)
 
-        path.set('inkstitch:row_spacing_mm', '2.6')
+        path.set('inkstitch:max_stitch_length_mm', stitch_length)
+        path.set('inkstitch:row_spacing_mm', '{0:.4f}'.format(row_spacing))
         path.set('inkstitch:fill_underlay_angle', '60 -60')
-        path.set('inkstitch:fill_underlay_max_stitch_length_mm', '3')
-        path.set('inkstitch:fill_underlay_row_spacing_mm', '2.6')
+        path.set('inkstitch:fill_underlay_max_stitch_length_mm', stitch_length)
+        path.set('inkstitch:fill_underlay_row_spacing_mm', '{0:.4f}'.format(row_spacing))
         path.set('inkstitch:underlay_underpath', 'False')
         path.set('inkstitch:underpath', 'False')
         path.set('inkstitch:staggers', '2')
