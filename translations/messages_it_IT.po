@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-06 17:17+0000\n"
-"PO-Revision-Date: 2025-12-06 17:17\n"
+"POT-Creation-Date: 2025-12-08 01:50+0000\n"
+"PO-Revision-Date: 2025-12-08 01:51\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-06 17:17+0000\n"
+"POT-Creation-Date: 2025-12-08 01:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5720,7 +5720,15 @@ msgid "Complex"
 msgstr "Complesso"
 
 #: inx/inkstitch_break_apart.inx:15
-msgid "This extension will try to repair fill shapes and break them apart if necessary. Holes will be retained. Use on simple or overlapping shapes."
+msgid "This extension will try to repair fill shapes and break them apart if necessary."
+msgstr ""
+
+#: inx/inkstitch_break_apart.inx:16
+msgid "Holes will be retained."
+msgstr ""
+
+#: inx/inkstitch_break_apart.inx:18
+msgid "Use on simple or complex shapes with overlapping subpaths."
 msgstr ""
 
 #: inx/inkstitch_break_apart.inx:21
