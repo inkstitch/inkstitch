@@ -360,6 +360,19 @@ class Stroke(EmbroideryElement):
         return self.get_param('reverse_rails', 'automatic')
 
     @property
+    @param(
+        'swap_satin_rails',
+        _('Swap rails'),
+        tooltip=_('Swaps the first and second rails of a satin ripple, '
+                  'affecting which side the thread finished on as well as any sided properties'),
+        type='boolean',
+        default='false',
+        select_items=[('stroke_method', 'ripple_stitch')],
+        sort_index=23)
+    def swap_rails(self):
+        return self.get_boolean_param('swap_satin_rails', False)
+
+    @property
     @param('grid_size_mm',
            _('Grid size'),
            tooltip=_('Render as grid. Use with care and watch your stitch density.'),
@@ -367,7 +380,7 @@ class Stroke(EmbroideryElement):
            default=0,
            unit='mm',
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=23)
+           sort_index=24)
     @cache
     def grid_size(self):
         return abs(self.get_float_param("grid_size_mm", 0))
@@ -379,7 +392,7 @@ class Stroke(EmbroideryElement):
            type='boolean',
            default=False,
            select_items=[('stroke_method', 'ripple_stitch')],
-           sort_index=24)
+           sort_index=25)
     @cache
     def grid_first(self):
         return self.get_boolean_param("grid_first", False)
