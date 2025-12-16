@@ -132,7 +132,6 @@ class Font(object):
     name = font_metadata('name', '')
     description = localized_font_metadata('description', '')
     keywords = font_metadata('keywords', '')
-    json_default_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT)
     text_direction = font_metadata('text_direction', 'ltr')
     letter_case = font_metadata('letter_case', '')
     default_glyph = font_metadata('default_glyph', "�")
@@ -143,6 +142,15 @@ class Font(object):
     max_scale = font_metadata('max_scale', 1.0)
     size = font_metadata('size', 0)
     available_glyphs = font_metadata('glyphs', [])
+    json_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT[1])
+
+    @property
+    def json_default_variant(self):
+        variant = self.json_variant
+        if variant in FontVariant.LEGACY_VARIANT_TYPES:
+            index = FontVariant.LEGACY_VARIANT_TYPES.index(variant)
+            variant = FontVariant.VARIANT_TYPES[index]
+        return variant
 
     # use values from SVG Font, example:
     # <font horiz-adv-x="45" ...  <glyph .... horiz-adv-x="49" glyph-name="A" /> ... <hkern ... k="3"g1="A" g2="B" /> .... />
@@ -183,15 +191,21 @@ class Font(object):
     def has_variants(self):
         # returns available variants
         font_variants = []
-        for variant in FontVariant.VARIANT_TYPES:
-            if os.path.isfile(os.path.join(self.path, "%s.svg" % variant)):
-                font_variants.append(variant)
-            elif (os.path.isdir(os.path.join(self.path, "%s" % variant)) and
-                    [svg for svg in os.listdir(os.path.join(self.path, "%s" % variant)) if svg.endswith('.svg')]):
+        for variant, legacy_variant in zip(FontVariant.VARIANT_TYPES, FontVariant.LEGACY_VARIANT_TYPES):
+            if self._has_variant(variant) or self._has_variant(legacy_variant):
                 font_variants.append(variant)
         if not font_variants:
+            # still no variants, raise FontError
             raise FontError(_("The font '%s' has no variants.") % self.name)
         return font_variants
+
+    def _has_variant(self, variant):
+        if (os.path.isfile(os.path.join(self.path, "%s.svg" % variant)) or (
+                os.path.isdir(os.path.join(self.path, "%s" % variant)) and
+                [svg for svg in os.listdir(os.path.join(self.path, "%s" % variant)) if svg.endswith('.svg')])):
+            return True
+        else:
+            return False
 
     @property
     def marked_custom_font_id(self):
@@ -241,8 +255,8 @@ class Font(object):
                 line = line[::-1]
 
             letter_group = self._render_line(destination_group, line, position, glyph_set, i, letter_spacing, word_spacing)
-            if ((variant == '→' and back_and_forth and self.reversible and i % 2 == 1) or
-                    (variant == '←' and not (back_and_forth and self.reversible and i % 2 == 1))):
+            if ((variant in FontVariant.LEFT_TO_RIGHT and back_and_forth and self.reversible and i % 2 == 1) or
+                    (variant in FontVariant.RIGHT_TO_LEFT and not (back_and_forth and self.reversible and i % 2 == 1))):
                 letter_group[:] = reversed(letter_group)
                 for group in letter_group:
                     group[:] = reversed(group)

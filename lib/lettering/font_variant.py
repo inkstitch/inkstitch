@@ -32,22 +32,24 @@ class FontVariant(object):
 
     # We use unicode characters rather than English strings for font file names
     # in order to be more approachable for languages other than English.
-    LEFT_TO_RIGHT = "→"
-    RIGHT_TO_LEFT = "←"
-    TOP_TO_BOTTOM = "↓"
-    BOTTOM_TO_TOP = "↑"
-    VARIANT_TYPES = (LEFT_TO_RIGHT, RIGHT_TO_LEFT, TOP_TO_BOTTOM, BOTTOM_TO_TOP)
+    LEFT_TO_RIGHT = ["→", "ltr"]
+    RIGHT_TO_LEFT = ["←", "rtl"]
+    TOP_TO_BOTTOM = ["↓", "ttb"]
+    BOTTOM_TO_TOP = ["↑", "btt"]
+    VARIANT_TYPES = (LEFT_TO_RIGHT[1], RIGHT_TO_LEFT[1], TOP_TO_BOTTOM[1], BOTTOM_TO_TOP[1])
+    LEGACY_VARIANT_TYPES = (LEFT_TO_RIGHT[0], RIGHT_TO_LEFT[0], TOP_TO_BOTTOM[0], BOTTOM_TO_TOP[0])
+    LEGACY_VARIANT_CONVERSION_DICT = {"ltr": "→", "rtl": "←", "ttb": "↓", "btt": "↑"}
 
     @classmethod
     def reversed_variant(cls, variant):
-        if variant == cls.LEFT_TO_RIGHT:
-            return cls.RIGHT_TO_LEFT
-        elif variant == cls.RIGHT_TO_LEFT:
-            return cls.LEFT_TO_RIGHT
-        elif variant == cls.TOP_TO_BOTTOM:
-            return cls.BOTTOM_TO_TOP
-        elif variant == cls.BOTTOM_TO_TOP:
-            return cls.TOP_TO_BOTTOM
+        if variant in cls.LEFT_TO_RIGHT:
+            return cls.RIGHT_TO_LEFT[1]
+        elif variant in cls.RIGHT_TO_LEFT:
+            return cls.LEFT_TO_RIGHT[1]
+        elif variant in cls.TOP_TO_BOTTOM:
+            return cls.BOTTOM_TO_TOP[1]
+        elif variant in cls.BOTTOM_TO_TOP:
+            return cls.TOP_TO_BOTTOM[1]
         else:
             return None
 
@@ -64,6 +66,9 @@ class FontVariant(object):
 
     def _load_glyphs(self):
         variant_file_paths = self._get_variant_file_paths()
+        if not variant_file_paths:
+            # need to check for legacy file names
+            variant_file_paths = self._get_variant_file_paths(True)
         for svg_path in variant_file_paths:
             document = inkex.load_svg(svg_path)
             update_inkstitch_document(document, warn_unversioned=False)
@@ -80,12 +85,16 @@ class FontVariant(object):
                 except (AttributeError, ValueError):
                     pass
 
-    def _get_variant_file_paths(self):
+    def _get_variant_file_paths(self, legacy=False):
+        variant = self.variant
+        if legacy:
+            variant = self.LEGACY_VARIANT_CONVERSION_DICT[variant]
+
         file_paths = []
-        direct_path = os.path.join(self.path, "%s.svg" % self.variant)
+        direct_path = os.path.join(self.path, "%s.svg" % variant)
         if os.path.isfile(direct_path):
             file_paths.append(direct_path)
-        elif os.path.isdir(os.path.join(self.path, "%s" % self.variant)):
+        elif os.path.isdir(os.path.join(self.path, "%s" % variant)):
             path = os.path.join(self.path, "%s" % self.variant)
             file_paths.extend([os.path.join(path, svg) for svg in os.listdir(path) if svg.endswith('.svg')])
         return file_paths

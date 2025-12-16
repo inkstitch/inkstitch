@@ -20,11 +20,12 @@
         <param type="string" name="font-name" gui-text="Name" indent="1" />
         <param type="string" name="font-description" gui-text="Description" indent="1" />
         
-        <param name="default_variant" type="optiongroup" appearance="combo" gui-text="Default variant" indent="1">
-             <option value="0" translatable="no">→</option>
-             <option value="1" translatable="no">←</option>
-             <option value="2" translatable="no">↓</option>
-             <option value="3" translatable="no">↑</option>
+        <param name="default_variant" type="optiongroup" appearance="combo" gui-text="Default variant"
+               gui-description="Default embroidery direction" indent="1">
+             <option value="ltr" translatable="no">Left to right</option>
+             <option value="rtl" translatable="no">Right to left</option>
+             <option value="ttb" translatable="no">Top to bottom</option>
+             <option value="btt" translatable="no">Bottom to top</option>
         </param>
         <param name="text_direction" type="optiongroup" appearance="combo" gui-text="Text direction" indent="1">
              <option value="ltr">Left to right</option>
