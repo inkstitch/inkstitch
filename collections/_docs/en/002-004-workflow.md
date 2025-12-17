@@ -1,25 +1,25 @@
 ---
 title: "Workflow"
 permalink: /docs/workflow/
-last_modified_at: 2023-04-18
+last_modified_at: 2025-12-16
 toc: true
 ---
 ![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)
 
-## ![Create Icon](/assets/images/docs/workflow-icon-create.png) Step 1: Create a Vector Image
+## ![Create Icon](/assets/images/docs/workflow-icon-create.png) Step 1: Prepare a Vector Image
 
-At first you need an idea or an image that you want to transfer into an embroidery file. You can either paint it from scratch or use an existing image.
+Start with a design you want to turn into an embroidery file. This can be a new drawing created from scratch or an existing image. The design needs to be in vector format (SVG) so it can be edited  in Inkscape and prepared for use with Ink StItch.
 
-### Draw in Inkscape
+### Make a New Vector Image in Inkscape
 
 #### Create Paths
 
-Inkscape offers various tools to create vector images. You can use e.g.
+Inkscape provides several tools for creating vector images. You can draw shapes, use the Bezier tool to create custom paths, add text, or import artwork and convert it into editable vector objects. These tools let you build or refine a design before preparing it for embroidery with Ink/Stitch.
 
 * ![freehand lines icon](/assets/images/docs/inkscape-tools-freehand.png) Freehand lines (<key>P</key>)
 * ![freehand lines icon](/assets/images/docs/inkscape-tools-bezier.png) Bezier curves (<key>B</key>)
 
-Try also the other tools in the toolbar. For example specific shapes like
+Explore the other tools in the toolbar as well. For example, you can use predefined shape tools such as rectangles, circles, stars, and polygons to build clean and consistent elements in your design. These shapes can later be adjusted, combined, and converted to paths for embroidery preparation.
 
 * ![square icon](/assets/images/docs/inkscape-tools-square.png) Rectangle
 * ![circle icon](/assets/images/docs/inkscape-tools-circle.png) Circle
@@ -32,66 +32,85 @@ Edit objects and paths with:
 * ![node tool icon](/assets/images/docs/inkscape-tools-select.png) Select tool (<key>S</key>) and
 * ![node tool icon](/assets/images/docs/inkscape-tools-node.png) Node editor tool (<key>N</key>)
 
-Scale, rotate and move the whole object with the select tool. The node editor tool serves to manipulate selected nodes, etc.
+Use the **Select** tool to scale, rotate, and move objects as a whole. Switch to the **Node** tool to edit individual nodes and adjust path shapes with greater precision.
 
-Additionally you could use path effects (`Path > Path Effects...`).
+You can also apply path effects by selecting **Path > Path Effects**. Path effects offer additional ways to modify and refine vector shapes without permanently changing the original path.
 
-### Use Existing Picture/Graphic
 
-When basing a design off an existing picture or graphic, load it into Inkscape in its own layer. Some graphics are amenable to Inkscape's [auto-tracing feature](https://inkscape.org/en/doc/tutorials/tracing/tutorial-tracing.html) (`Path > Trace Bitmap` or `Shift+Alt+B`), especially if you simplify the image in a graphic editor first (e.g. with [GIMP](https://www.gimp.org/)).
+### Use an Existing Picture or Graphic
 
-After tracing, clean up the vector shapes, using `Path > Simplify` (`Ctrl+L`) and deleting nodes by hand when possible. The goal is to use as few Bezier curves as reasonably possible to represent the image.
-Often the tracing function will produce very little objekts which are impossible to embroider. Therefore it is advisable to cleanup your document with `Extensions > Ink/Stitch > Troubleshoot > Cleanup document...`.
+When you base a design on an existing picture or graphic, import it into Inkscape on a separate layer. Working this way keeps the source image available for reference while you build vector shapes on top of it.
 
-When the image is needed to be traced by hand, use the freehand drawing tool. This tool creates paths with a lot of Beziér nodes, so again, simplify the curves as much as possible.
+Some graphics work well with Inkscape [auto-tracing feature](https://inkscape.org/en/doc/tutorials/tracing/tutorial-tracing.html)  You can access this feature from **Path > Trace Bitmap** or by using **Shift+Alt+B**. Results often improve if you simplify the image first in a raster editor such as [GIMP](https://www.gimp.org/) before tracing.
 
-**Tip:** Working with an existing SVG image can save a ton of time, so consider using your search engine with image search filter set to SVG.
+After tracing, refine the vector shapes. Use **Path > Simplify** or **Ctrl+L** to reduce unnecessary complexity and remove extra nodes manually when possible. Aim for a clean design that uses a small number of Bezier curves while still representing the original image accurately.
+
+Auto tracing often creates tiny or fragmented objects that do not work well for embroidery. To address this, clean up the document by selecting **Extensions > Ink/Stitch > Troubleshoot > Cleanup document**. This step helps remove problematic elements before moving on to stitch settings.
+
+When you need to trace an image manually, use the Freehand drawing tool to draw the paths. This tool creates paths with many Bezier nodes, which can make the design harder to manage.
+
+After drawing, simplify the curves to reduce complexity. Fewer nodes lead to cleaner paths and better results when preparing the design for embroidery.
+
+
+**Tip:** Using an existing SVG image can save time. Try searching for images with the file type or filter set to SVG, then adapt the vector artwork for your embroidery design.
+
 {: .notice--info }
 
-### Text
+### A Note About Text
 
-For text, choose a font carefully. It's quite hard to make satin look good when it's 1mm wide or narrower. Sans-serif fonts tend to be the easiest. For text smaller than 4mm tall, you'll have a very difficult time making lowercase letters look good, so consider block-caps. Cursive/script fonts can work well, but it's not going to be as easy as you think.
+When working with text, choose the font with care. Narrow satin stitches (1 mm wide or less) often produce poor results, so font weight plays a large role in readability. Sans serif fonts are usually easier to work with and produce more consistent stitching.
 
-Ink/Stitch offers ready to use fonts which can be inserted into your document through `Extensions > Ink/Stitch > Lettering`
+For text smaller than 4 mm in height, lowercase letters can be difficult to stitch cleanly. In these cases, block capitals tend to work better. Cursive or script fonts can produce attractive results, though they require more adjustment and testing than simpler font styles.
 
-## ![Vectorize](/assets/images/docs/workflow-icon-vectorize.png) Step 2: Convert to Embroidery Vectors & Parametrize
+Ink/Stitch includes ready to use embroidery fonts. You can insert these fonts into your document by selecting **Extensions > Ink/Stitch > Lettering**. This tool creates text objects that are already optimized for embroidery workflows.
 
-At this point, you'll have a vector graphic representation of your image. The next thing to do is to convert your vectors into the kind that Ink/Stitch understands.
 
-### The Object Panel
+## ![Vectorize](/assets/images/docs/workflow-icon-vectorize.png) Step 2: Convert to Embroidery Vectors and Parametrize
 
-We recommend to make heavy use of layers and groups at this point.
+At this stage, you should have a vector graphic version of your design. The next step is to convert those vector objects into formats that Ink/Stitch can interpret and prepare for embroidery.
 
-In the object panel (open with <key>Ctrl</key><key>Shift</key><key>O</key>) you can manage layers, groups and objects.
 
-You can save the original image by duplicating the layer:
+### Use the Object Panel
 
-* Right click on the layer (if you didn't rename the layer it will be called `Layer 1`)
-* Click on `Duplicate`
-* Close the eye by clicking on it.
+At this stage, using layers and groups helps keep the design organized and easier to manage as it becomes more complex.
 
-This will make the first layer invisible. Any layer, group, or vector shape that is set invisible will be ignored by Ink/Stitch. We will now work with the copy.
+You can manage layers, groups, and individual objects in the Objects panel. Open it with **Ctrl+Shift+O**. This panel gives you  visibility into the document structure and lets you control how elements are arranged and edited.
+
+You can preserve the original image by duplicating its layer:
+
+- Right click the layer. If it has not been renamed, it appears as `Layer 1`
+- Select **Duplicate**
+- Click the eye icon to hide the original layer
+
+This hides the source image while keeping it available for reference. Ink Stitch ignores layers, groups, and vector objects that are set to invisible.
 
 ![Objects panel](/assets/images/docs/en/objects-panel.png)
 
-### Groups
+### Use Groups
 
-Use groups to structure your document:
+Use groups to organize related objects in your design:
 
-* Select objects with your mouse
-* Add or remove objects with <key>shift</key><key>click</key>
-* Hit <key>Ctrl</key><key>G</key>
+- Select objects with your mouse
+- Add or remove objects by holding **Shift** while clicking
+- Press **Ctrl+G** to group the selected objects
 
-Ungrouping objects works as follows:
+To ungroup objects:
 
-* Select the group(s)
-* Hit <key>Ctrl</key><key>Shift</key><key>G</key>
+- Select one or more groups
+- Press **Ctrl+Shift+G**
 
-### Stitch Types
 
-Ink/Stitch offers various stitch types. Depending on which stitch type you are willing to use, you have to set the fill color, or stroke parameters with `Object > Fill and Stroke...` (<key>Ctrl</key><key>Shift</key><key>F</key>).
+### A Note about Stitch Types
 
-Have a look at this table and follow the links to understand how to create a specific stitch type:
+Ink/Stitch supports several stitch types. Two primary categories are available:
+
+1. **Fill stitches**  
+   These stitches fill a closed shape.
+
+2. **Stroke stitches**  
+   These stitches follow the direction of a path.
+
+You configure stitch behavior through **Object > Fill and Stroke** or by pressing **Ctrl+Shift+F**. Review the table below and follow the links to learn how to set up each stitch type correctly.
 
 Path Object | Stitch Type
 ---|---
@@ -100,53 +119,82 @@ Two combined strokes (with optional rungs) | [satin column](/docs/stitches/satin
 Closed path with a fill color | [fill stitch](/docs/stitches/fill-stitch/),  [guided fill](/docs/stitches/guided-fill/),  [contour fill](/docs/stitches/contour-fill/), [meander fill](/docs/stitches/meander-fill/), [circular fill](/docs/stitches/circular-fill/)
 {: .equal-tables }
 
-### Parametrize
 
-Set parameters using `Extensions > Ink/Stitch  > Params`. You find a description for each parameter in the [Params](/docs/params/) section of this documentation. Each time you change parameter values, you'll be able to see the simulated result in a preview window. Once you are satisfied with the result, click `Apply and close` to save the values into your SVG-file.
+### Set Stitch Parameters
 
-At this point, save your SVG file. If Inkscape is starting to become sluggish (due to an Inkscape memory leak), restart it before continuing.
+The **Extensions > Ink/Stitch > Params** dialog controls how Ink/Stitch generates stitches for the selected objects. Parameters vary by stitch type and  include values such as stitch length, density, underlay, direction, or pull compensation.
+
+Each parameter includes a short description. A more detailed explanations are available in the [Params](/docs/params/) section of this documentation. Use these references to understand how changes affect stitch quality and appearance.
+
+When you update parameter values, Ink/Stitch shows a simulated preview. This preview helps you evaluate the result before committing changes to the design. Depending on the aize and complexity of the file, the preview may take some time to display. Adjust the values as needed until the preview reflects the outcome you want, then select **Apply and close**. This action stores the parameter values directly in the SVG file.
+
+Once you have updated the parameter values, save your SVG file. If Inkscape starts to feel slow or unresponsive, close and reopen it before continuing. Restarting can improve performance during longer or more complex projects.
 
 
-## ![Create Icon](/assets/images/docs/workflow-icon-order.png) Step 3: Plan Stitch Order & Attach Commands
+## ![Create Icon](/assets/images/docs/workflow-icon-order.png) Step 3: Plan Stitch Order and Attach Commands
 
 ### Stitch Order
 
-When you're designing for embroidery machines that can't cut the thread mid-sew or switch colors automatically, you're going to want to optimize your stitch path to reduce or hide jump stitches and make minimal color changes. Also try to avoid stitching over jump stitches when possible, because it's a total pain to trim them by hand when you do.
+When you design for embroidery machines that do not cut thread during stitching or switch colors automatically, plan the stitch path carefully. A well planned path reduces visible jump stitches and limits color changes. When possible, avoid stitching over jump stitches, since trimming them by hand later can be time consuming and frustrating.
 
-The order of stitching also affects how the fabric pulls and pushes. Each stitch will distort the fabric, and you'll need to take this into account and compensate accordingly. [More Information](/tutorials/push-pull-compensation/)
+Stitch order also affects how fabric behaves. Each stitch pulls and shifts the material slightly, which can lead to distortion as the design builds. This can lead to your fabric bunching or pulling. Adjust stitch direction and sequence to account for this movement and apply compensation where needed. For a deeper explanation, see [Push and pull compensation](/tutorials/push-pull-compensation/).
 
-Once you've created all vectors, it's time to put everything in the right order. This is where the Inkscapes Objects tool (`Objects > Objects ...`) comes in useful. Optimize your order to minimize color changes and reduce or hide jump-stitches. Additionally you can make use of the Ink/Stitch [sorting function](/docs/edit/#re-stack-objects-in-order-of-selection).
+After you finish setting parameters for the design, arrange the objects in the correct stitch order. This step controls how the design stitches out on the machine.
 
-Ink/Stitch will stitch objects in exactly the order they appear in your SVG document, from lowest to highest in stacking order. If the distance between two objects is long, Ink/Stitch will add a jump-stitch between them automatically. It uses the color of the object to determine thread color, so changes in color from one object to the next will result in a thread-change instruction being added to the embroidery output file.
+Use the Inkscape Objects tool by selecting **Objects > Objects**. This panel lets you reorder objects so stitching follows a logical sequence. Adjust the order to limit color changes and reduce or hide jump stitches.
 
-**Tip:** Inkscape gives you the ability to "raise" and "lower" objects in the stacking order using the PageUp and PageDown keys. The new functions "Stack Up" and "Stack Down" will give you much better control over the stacking order. So we recommend to rather bind PageUp and Page Down to them. [More Information](/docs/customize/#shortcut-keys)
+You can also use the Ink Stitch sorting feature to reorder objects based on your selection order. See [Re stack objects in order of selection](/docs/edit/#re-stack-objects-in-order-of-selection) for details.
+
+Ink/Stitch processes objects in the order they appear in the objects pane, starting from the bottom of the stacking order and moving upward. This order directly controls how the design stitches out on the embroidery machine. The last layer in the list will stitch first and the top layer will stitch last. 
+
+When the distance between two objects is large, Ink/Stitch automatically inserts a jump stitch to move the needle between them. Thread color is determined by the object color, so a color change from one object to the next results in a thread change command in the exported embroidery file.
+
+
+**Tip:** Inkscape lets you change stacking order with the **PageUp** and **PageDown** keys. Newer commands, **Stack Up** and **Stack Down**, provide finer control over how objects move within the stack.
+
+For better precision, consider binding **PageUp** and **PageDown** to these commands instead. This setup makes it easier to control stitch order when preparing a design for embroidery. See [Shortcut keys](/docs/customize/#shortcut-keys) for details.
 {: .notice--info }
 
-**Info:** You can also manually manipulate the underlying SVG XML structure by using Inkscape's XML Editor pane (`CTRL-SHIFT-X`). Its "Raise" and "Lower" buttons directly manipulate the order of XML tags in the SVG file and are not subject to the same limitations as the original PageUp and PageDown. Note that the ordering of XML tags in the XML Editor tool is the _reverse_ of the order of objects in the Objects tool.
+**Info:** You can also adjust object order by editing the SVG structure directly through Inkscape XML Editor. Open it with **Ctrl Shift X**. The **Raise** and **Lower** buttons change the order of XML tags in the SVG file, which directly affects stitch order.
+
+Keep in mind that the XML Editor displays objects in the reverse order compared to the Objects panel. Items shown at the top of the XML list appear lower in the stacking order within the document.
 {: .notice--info }
 
 ### Commands
 
-[Commands](/docs/commands/) also help to optimize your stitch path. You can set start and ending points, push the frame into defined positions or set trim and cut commands, etc.
+[Commands](/docs/commands/) can also help optimize the stitch path. These tools let you define start and end points, move the hoop to specific positions, and add trim or cut instructions. Using commands gives you finer control over how the design stitches out on the machine. Commands in Ink/Stitch give you finer control over how a design stitches out. They let you define start and end points, control trims, jumps, stops, and color changes, and move the hoop to specific positions. Using commands helps reduce visible travel stitches, limit manual trimming, and improve overall stitch flow on the embroidery machine.
 
-## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png)  Step 4: Visualize
+## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png)  Step 4: Visualize your design
 
 Ink/Stitch supports three ways to preview your design:
 
-* [Simulator with (optional) realistic preview](/docs/visualize/#simulator--realistic-preview)
-* [Print Preview](/docs/print-pdf/)
-* [Stitch Plan Preview](/docs/visualize/#stitch-plan-preview) (Undo with <key>Ctrl</key><key>Z</key>)
+Ink/Stitch provides three ways to preview your design before exporting:
+
+- [Simulator with optional realistic preview](/docs/visualize/#simulator--realistic-preview)  
+  Shows how the design stitches out step by step, with an optional fabric like appearance.
+
+- [Print Preview](/docs/print-pdf/)  
+  Creates a printable overview of the design, useful for planning colors, size, and placement.
+
+- [Stitch Plan Preview](/docs/visualize/#stitch-plan-preview)  
+  Displays the stitch order and paths directly in the document. You can undo this view with **Ctrl+Z**.
+
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-export.png) Step 5: Save the Embroidery File
 
-Once you've got everything in the right order, run `File > Save a copy...` to [export](/docs/import-export/) to a file format supported by your machine. Most machines can support DST, and some Brother machines prefer PES. Do not forget to also save your file in the SVG-format. Otherwise it's going to be difficult to change details later.
+After you place objects in the correct stitch order, export the design to a machine compatible format. Select **File > Save a copy** and choose a format supported by your embroidery machine. Many machines support DST, while some Brother models work better with PES. See [Import and export](/docs/import-export/) for format details.
 
-## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Step 7: Test-sew
+Also save the design in SVG format. Keeping the SVG file allows you to reopen the project in Inkscape and adjust settings, stitch order, or design details later.
 
-There's always room for improvement! To test out your design, prepare a test piece of fabric that matches your final fabric as closely as possible. Use the same stabilizer and the exact same fabric if possible. For t-shirts, try to find a similar fabric (usually knit). Knits need a lot of stabilization.
 
-Sew out the design, watching the machine to make sure that there aren't any surprises. Watch out for gaps that indicate that the fabric has been distorted. Also search for areas where stitches are piling up too closely and the machine is having trouble sewing, which indicates that the stitch density is too high.
+## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Step 7: Sew a Test Run
+
+Testing helps reveal opportunities for improvement. Prepare a test fabric that closely matches the final material. Use the same stabilizer and the same fabric type. For t-shirts, choose a similar knit fabric, since knits require substantial stabilization.
+
+Stitch the design while observing the machine. Look for gaps that suggest fabric distortion. Also check for areas where stitches are packed too tightly and the machine struggles to sew. These signs usually indicate stitch density set too high and signal that adjustments are needed before final production.
+
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Step 8+: Optimize
 
-Then go back and tweak your design. Hopefully it only takes a few tries to get it how you want it.
+After the test run, return to the design and adjust settings as needed. It often takes several iterations to achieve the desired result, and small refinements can significantly improve stitch quality and appearance.
+
