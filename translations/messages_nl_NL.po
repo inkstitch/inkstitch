@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-08 01:50+0000\n"
-"PO-Revision-Date: 2025-12-08 01:50\n"
+"POT-Creation-Date: 2025-12-15 01:56+0000\n"
+"PO-Revision-Date: 2025-12-15 01:56\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-08 01:50+0000\n"
+"POT-Creation-Date: 2025-12-15 01:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1505,8 +1505,8 @@ msgstr "Dubbele spiraal"
 msgid "Join Style"
 msgstr "Combineer stijl"
 
-#: lib/elements/fill_stitch.py:189 inx/inkstitch_knockdown_fill.inx:21
-#: inx/inkstitch_knockdown_fill.inx:38
+#: lib/elements/fill_stitch.py:189 inx/inkstitch_knockdown_fill.inx:22
+#: inx/inkstitch_knockdown_fill.inx:39
 msgid "Round"
 msgstr "Rond"
 
@@ -1815,13 +1815,13 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr "Verklein de vorm van de versteviging om te voorkomen dat de versteviging zichtbaar is aan de buitenkant van de opvulling."
 
 #: lib/elements/fill_stitch.py:717 lib/elements/satin_column.py:585
-#: lib/elements/stroke.py:451 lib/gui/satin_multicolor/colorize_panel.py:61
+#: lib/elements/stroke.py:464 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr "Willekeurig zaad"
 
 #: lib/elements/fill_stitch.py:718 lib/elements/satin_column.py:586
-#: lib/elements/stroke.py:452
+#: lib/elements/stroke.py:465
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Gebruik een specifieke zaad voor willekeurige kenmerken. Gebruikt de element ID als deze leeg is."
 
@@ -2137,7 +2137,7 @@ msgstr "Rails omkeren"
 msgid "This may help if your satin renders very strangely.  Default: automatically detect and fix a reversed rail."
 msgstr "Dit kan helpen als uw satijn heel vreemd rendert. Standaard: automatisch een omgekeerde rail detecteren en corrigeren."
 
-#: lib/elements/satin_column.py:357
+#: lib/elements/satin_column.py:357 lib/elements/stroke.py:365
 msgid "Swap rails"
 msgstr "Rails wisselen"
 
@@ -2186,6 +2186,7 @@ msgstr "Omtrek Versteviging"
 
 #: lib/elements/satin_column.py:422 lib/elements/satin_column.py:479
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:20
+#: inx/inkstitch_knockdown_fill.inx:18
 msgid "Stitch length"
 msgstr "Steek lengte"
 
@@ -2439,80 +2440,84 @@ msgstr "Begin- en eindpunt spiegelen"
 msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
 msgstr "Omgekeerde satijnen ripple rails. Standaard: automatisch een omgekeerde rail detecteren en corrigeren."
 
-#: lib/elements/stroke.py:364
+#: lib/elements/stroke.py:366
+msgid "Swaps the first and second rails of a satin ripple, affecting which side the thread finished on as well as any sided properties"
+msgstr ""
+
+#: lib/elements/stroke.py:377
 msgid "Grid size"
 msgstr "Rastergrootte"
 
-#: lib/elements/stroke.py:365
+#: lib/elements/stroke.py:378
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr "Weergeven als raster. Wees voorzichtig en let op de steekdichtheid."
 
-#: lib/elements/stroke.py:377
+#: lib/elements/stroke.py:390
 msgid "Stitch grid first"
 msgstr "Borduur eerst het raster"
 
-#: lib/elements/stroke.py:378
+#: lib/elements/stroke.py:391
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
 msgstr "Keer de steek paden om, zodat het raster eerst wordt geborduurd"
 
-#: lib/elements/stroke.py:389
+#: lib/elements/stroke.py:402
 msgid "Scale axis"
 msgstr "Schaal as"
 
-#: lib/elements/stroke.py:390
+#: lib/elements/stroke.py:403
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Schaal as voor satijngeleide ribbelsteken."
 
-#: lib/elements/stroke.py:394 lib/gui/edit_json/settings_panel.py:159
-#: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:32
+#: lib/elements/stroke.py:407 lib/gui/edit_json/settings_panel.py:159
+#: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr "Geen"
 
-#: lib/elements/stroke.py:402
+#: lib/elements/stroke.py:415
 msgid "Starting scale"
 msgstr "Beginschaal"
 
-#: lib/elements/stroke.py:403
+#: lib/elements/stroke.py:416
 msgid "How big the first copy of the line should be, in percent."
 msgstr "Hoe groot het eerste exemplaar van de regel moet zijn, in procenten."
 
-#: lib/elements/stroke.py:403 lib/elements/stroke.py:415
+#: lib/elements/stroke.py:416 lib/elements/stroke.py:428
 msgid "Used only for ripple stitch with a guide line."
 msgstr "Alleen gebruikt voor ribbelsteek met een hulplijn."
 
-#: lib/elements/stroke.py:414
+#: lib/elements/stroke.py:427
 msgid "Ending scale"
 msgstr "Eindschaal"
 
-#: lib/elements/stroke.py:415
+#: lib/elements/stroke.py:428
 msgid "How big the last copy of the line should be, in percent."
 msgstr "Hoe groot het laatste exemplaar van de regel moet zijn, in procenten."
 
-#: lib/elements/stroke.py:426 lib/gui/tartan/customize_panel.py:43
+#: lib/elements/stroke.py:439 lib/gui/tartan/customize_panel.py:43
 #: inx/inkstitch_transform_elements.inx:10
 msgid "Rotate"
 msgstr "Draaien"
 
-#: lib/elements/stroke.py:427
+#: lib/elements/stroke.py:440
 msgid "Rotate satin guided ripple stitches"
 msgstr "Draai satijn geleide rimpel steken"
 
-#: lib/elements/stroke.py:438 inx/inkstitch_knockdown_fill.inx:20
-#: inx/inkstitch_knockdown_fill.inx:37
+#: lib/elements/stroke.py:451 inx/inkstitch_knockdown_fill.inx:21
+#: inx/inkstitch_knockdown_fill.inx:38
 msgid "Join style"
 msgstr "Knooppunt stijl"
 
-#: lib/elements/stroke.py:439
+#: lib/elements/stroke.py:452
 msgid "Join style for non circular ripples."
 msgstr "Knooppunt stijl voor niet circulaire golven."
 
-#: lib/elements/stroke.py:442
+#: lib/elements/stroke.py:455
 msgid "flat"
 msgstr "plat"
 
-#: lib/elements/stroke.py:442
+#: lib/elements/stroke.py:455
 msgid "point"
 msgstr "punt"
 
@@ -3491,7 +3496,7 @@ msgstr "Toepassen"
 #: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
 #: inx/inkstitch_install.inx:14 inx/inkstitch_install_custom_palette.inx:14
 #: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:31
-#: inx/inkstitch_knockdown_fill.inx:43
+#: inx/inkstitch_knockdown_fill.inx:44
 #: inx/inkstitch_lettering_along_path.inx:25
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
@@ -5621,7 +5626,7 @@ msgstr "Deze extensie probeert één enkel steekpad te maken door alle geselecte
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
 #: inx/inkstitch_install_custom_palette.inx:17
-#: inx/inkstitch_knockdown_fill.inx:49
+#: inx/inkstitch_knockdown_fill.inx:50
 #: inx/inkstitch_lettering_along_path.inx:35
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:34
@@ -6966,63 +6971,63 @@ msgstr ""
 msgid "Generates a knockdown stitch with a specified offset around selection"
 msgstr ""
 
-#: inx/inkstitch_knockdown_fill.inx:18
+#: inx/inkstitch_knockdown_fill.inx:19
 msgid "Keep holes"
 msgstr "Gaten bewaren"
 
-#: inx/inkstitch_knockdown_fill.inx:19
+#: inx/inkstitch_knockdown_fill.inx:20
 msgid "Offset"
 msgstr "Offset"
 
-#: inx/inkstitch_knockdown_fill.inx:22 inx/inkstitch_knockdown_fill.inx:39
+#: inx/inkstitch_knockdown_fill.inx:23 inx/inkstitch_knockdown_fill.inx:40
 msgid "Mitre"
 msgstr "Verstek"
 
-#: inx/inkstitch_knockdown_fill.inx:23 inx/inkstitch_knockdown_fill.inx:40
+#: inx/inkstitch_knockdown_fill.inx:24 inx/inkstitch_knockdown_fill.inx:41
 msgid "Bevel"
 msgstr "Schuine kant"
 
-#: inx/inkstitch_knockdown_fill.inx:25
+#: inx/inkstitch_knockdown_fill.inx:26
 msgid "Mitre limit"
 msgstr "Verstek limiet"
 
-#: inx/inkstitch_knockdown_fill.inx:30
+#: inx/inkstitch_knockdown_fill.inx:31
 msgid "Embossing"
 msgstr "Reliëfvormen"
 
-#: inx/inkstitch_knockdown_fill.inx:31
+#: inx/inkstitch_knockdown_fill.inx:32
 msgid "Shape"
 msgstr "Vorm"
 
-#: inx/inkstitch_knockdown_fill.inx:33
+#: inx/inkstitch_knockdown_fill.inx:34
 msgid "Rectangle"
 msgstr "Rechthoek"
 
-#: inx/inkstitch_knockdown_fill.inx:34
+#: inx/inkstitch_knockdown_fill.inx:35
 msgid "Circle"
 msgstr "Cirkel"
 
-#: inx/inkstitch_knockdown_fill.inx:36
+#: inx/inkstitch_knockdown_fill.inx:37
 msgid "Shape offset"
 msgstr "Vorm vergroting"
 
-#: inx/inkstitch_knockdown_fill.inx:44
+#: inx/inkstitch_knockdown_fill.inx:45
 msgid "This extension generates a knockdown fill area with a specified offset around selected elements."
 msgstr "Met deze extensie wordt een knockdown gegenereerd met een opgegeven vergroting rond geselecteerde elementen."
 
-#: inx/inkstitch_knockdown_fill.inx:45
+#: inx/inkstitch_knockdown_fill.inx:46
 msgid "* Select elements of any kind"
 msgstr "* Selecteer elementen van welke aard dan ook"
 
-#: inx/inkstitch_knockdown_fill.inx:46
+#: inx/inkstitch_knockdown_fill.inx:47
 msgid "* Open this extension and apply with desired settings"
 msgstr "* Open deze extensie en pas deze toe met de gewenste instellingen"
 
-#: inx/inkstitch_knockdown_fill.inx:47
+#: inx/inkstitch_knockdown_fill.inx:48
 msgid "* Adapt fill settings in the params dialog"
 msgstr "* Pas de vul instellingen aan in het parameters dialoog venster"
 
-#: inx/inkstitch_knockdown_fill.inx:50
+#: inx/inkstitch_knockdown_fill.inx:51
 msgid "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
 msgstr "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
 

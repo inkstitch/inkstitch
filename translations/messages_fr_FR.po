@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-08 01:50+0000\n"
-"PO-Revision-Date: 2025-12-11 01:52\n"
+"POT-Creation-Date: 2025-12-15 01:56+0000\n"
+"PO-Revision-Date: 2025-12-17 01:48\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-08 01:50+0000\n"
+"POT-Creation-Date: 2025-12-15 01:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr ""
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:2
 msgid "Abécédaire AGS is a crossstitch font."
-msgstr ""
+msgstr "Abécédaire AGS est une police au point de croix."
 
 #. description of font in fonts/abril
 #: inkstitch-fonts-metadata.py:4
@@ -1504,8 +1504,8 @@ msgstr "Double spirale"
 msgid "Join Style"
 msgstr "Style de jointure"
 
-#: lib/elements/fill_stitch.py:189 inx/inkstitch_knockdown_fill.inx:21
-#: inx/inkstitch_knockdown_fill.inx:38
+#: lib/elements/fill_stitch.py:189 inx/inkstitch_knockdown_fill.inx:22
+#: inx/inkstitch_knockdown_fill.inx:39
 msgid "Round"
 msgstr "Ronde"
 
@@ -1815,13 +1815,13 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr "Rétrécit la forme avant de faire la sous-couche, pour empêcher que la sous-couche se montre en dehors du remplissage."
 
 #: lib/elements/fill_stitch.py:717 lib/elements/satin_column.py:585
-#: lib/elements/stroke.py:451 lib/gui/satin_multicolor/colorize_panel.py:61
+#: lib/elements/stroke.py:464 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr "Graine aléatoire"
 
 #: lib/elements/fill_stitch.py:718 lib/elements/satin_column.py:586
-#: lib/elements/stroke.py:452
+#: lib/elements/stroke.py:465
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Utiliser cette graine aléatoire pour le calcul des attributs. Si vide, utilise l'identificateur de l'élément."
 
@@ -2137,7 +2137,7 @@ msgstr "Inverser la direction des rails"
 msgid "This may help if your satin renders very strangely.  Default: automatically detect and fix a reversed rail."
 msgstr "Ceci peut aider si le rendu de votre satin est étrange. La valeur par défaut Automatique détecte et corrige le cas des deux rails ayant une direction opposée."
 
-#: lib/elements/satin_column.py:357
+#: lib/elements/satin_column.py:357 lib/elements/stroke.py:365
 msgid "Swap rails"
 msgstr "Echanger les rails"
 
@@ -2186,6 +2186,7 @@ msgstr "Sous-couche de Contour"
 
 #: lib/elements/satin_column.py:422 lib/elements/satin_column.py:479
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:20
+#: inx/inkstitch_knockdown_fill.inx:18
 msgid "Stitch length"
 msgstr "Longueur de point"
 
@@ -2439,80 +2440,84 @@ msgstr "Intervertit le début et la fin"
 msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
 msgstr "Inverse les rails d'une ondulation satin. Par défaut détecte automatiquement, et corrige la direction d'un des rails."
 
-#: lib/elements/stroke.py:364
+#: lib/elements/stroke.py:366
+msgid "Swaps the first and second rails of a satin ripple, affecting which side the thread finished on as well as any sided properties"
+msgstr "Échange les deux rails d'une broderie ondulée satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques"
+
+#: lib/elements/stroke.py:377
 msgid "Grid size"
 msgstr "Taille de la grille"
 
-#: lib/elements/stroke.py:365
+#: lib/elements/stroke.py:378
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr "Rendu en grille. Utilisez avec précaution et surveillez la densité de points."
 
-#: lib/elements/stroke.py:377
+#: lib/elements/stroke.py:390
 msgid "Stitch grid first"
 msgstr "Commencer par la grille"
 
-#: lib/elements/stroke.py:378
+#: lib/elements/stroke.py:391
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
 msgstr "Inverse le chemin de broderie afin que la grille soit brodée en premier"
 
-#: lib/elements/stroke.py:389
+#: lib/elements/stroke.py:402
 msgid "Scale axis"
 msgstr "Mettre à l'échelle sur l'axe"
 
-#: lib/elements/stroke.py:390
+#: lib/elements/stroke.py:403
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Axe de mise à l'échelle pour les ondulations guidées."
 
-#: lib/elements/stroke.py:394 lib/gui/edit_json/settings_panel.py:159
-#: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:32
+#: lib/elements/stroke.py:407 lib/gui/edit_json/settings_panel.py:159
+#: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr "Aucune"
 
-#: lib/elements/stroke.py:402
+#: lib/elements/stroke.py:415
 msgid "Starting scale"
 msgstr "Démarrer à"
 
-#: lib/elements/stroke.py:403
+#: lib/elements/stroke.py:416
 msgid "How big the first copy of the line should be, in percent."
 msgstr "Taille de la première ondulation en pourcentage."
 
-#: lib/elements/stroke.py:403 lib/elements/stroke.py:415
+#: lib/elements/stroke.py:416 lib/elements/stroke.py:428
 msgid "Used only for ripple stitch with a guide line."
 msgstr "Utilisé uniquement pour des ondulations guidées."
 
-#: lib/elements/stroke.py:414
+#: lib/elements/stroke.py:427
 msgid "Ending scale"
 msgstr "Finir à"
 
-#: lib/elements/stroke.py:415
+#: lib/elements/stroke.py:428
 msgid "How big the last copy of the line should be, in percent."
 msgstr "Taille de la dernière ondulation en pourcentage."
 
-#: lib/elements/stroke.py:426 lib/gui/tartan/customize_panel.py:43
+#: lib/elements/stroke.py:439 lib/gui/tartan/customize_panel.py:43
 #: inx/inkstitch_transform_elements.inx:10
 msgid "Rotate"
 msgstr "Tourner"
 
-#: lib/elements/stroke.py:427
+#: lib/elements/stroke.py:440
 msgid "Rotate satin guided ripple stitches"
 msgstr "Tourne les ondulations guidées par un satin"
 
-#: lib/elements/stroke.py:438 inx/inkstitch_knockdown_fill.inx:20
-#: inx/inkstitch_knockdown_fill.inx:37
+#: lib/elements/stroke.py:451 inx/inkstitch_knockdown_fill.inx:21
+#: inx/inkstitch_knockdown_fill.inx:38
 msgid "Join style"
 msgstr "Style de jointure"
 
-#: lib/elements/stroke.py:439
+#: lib/elements/stroke.py:452
 msgid "Join style for non circular ripples."
 msgstr "Style de jointure pour les ondulations ouvertes."
 
-#: lib/elements/stroke.py:442
+#: lib/elements/stroke.py:455
 msgid "flat"
 msgstr "segment"
 
-#: lib/elements/stroke.py:442
+#: lib/elements/stroke.py:455
 msgid "point"
 msgstr "point"
 
@@ -3491,7 +3496,7 @@ msgstr "Appliquer"
 #: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
 #: inx/inkstitch_install.inx:14 inx/inkstitch_install_custom_palette.inx:14
 #: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:31
-#: inx/inkstitch_knockdown_fill.inx:43
+#: inx/inkstitch_knockdown_fill.inx:44
 #: inx/inkstitch_lettering_along_path.inx:25
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
@@ -5621,7 +5626,7 @@ msgstr "Cette extension tente de créer un chemin de broderie unique qui parcour
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
 #: inx/inkstitch_install_custom_palette.inx:17
-#: inx/inkstitch_knockdown_fill.inx:49
+#: inx/inkstitch_knockdown_fill.inx:50
 #: inx/inkstitch_lettering_along_path.inx:35
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:34
@@ -6966,63 +6971,63 @@ msgstr "Assise de points couchants pour la sélection"
 msgid "Generates a knockdown stitch with a specified offset around selection"
 msgstr "Génère un remplissage en point couchant avec un décalage à spécifier autour de la sélection"
 
-#: inx/inkstitch_knockdown_fill.inx:18
+#: inx/inkstitch_knockdown_fill.inx:19
 msgid "Keep holes"
 msgstr "Conserver les trous"
 
-#: inx/inkstitch_knockdown_fill.inx:19
+#: inx/inkstitch_knockdown_fill.inx:20
 msgid "Offset"
 msgstr "Décalage"
 
-#: inx/inkstitch_knockdown_fill.inx:22 inx/inkstitch_knockdown_fill.inx:39
+#: inx/inkstitch_knockdown_fill.inx:23 inx/inkstitch_knockdown_fill.inx:40
 msgid "Mitre"
 msgstr "Onglet"
 
-#: inx/inkstitch_knockdown_fill.inx:23 inx/inkstitch_knockdown_fill.inx:40
+#: inx/inkstitch_knockdown_fill.inx:24 inx/inkstitch_knockdown_fill.inx:41
 msgid "Bevel"
 msgstr "Biseau"
 
-#: inx/inkstitch_knockdown_fill.inx:25
+#: inx/inkstitch_knockdown_fill.inx:26
 msgid "Mitre limit"
 msgstr "Limite de l'onglet"
 
-#: inx/inkstitch_knockdown_fill.inx:30
+#: inx/inkstitch_knockdown_fill.inx:31
 msgid "Embossing"
 msgstr "Embossage"
 
-#: inx/inkstitch_knockdown_fill.inx:31
+#: inx/inkstitch_knockdown_fill.inx:32
 msgid "Shape"
 msgstr "Forme"
 
-#: inx/inkstitch_knockdown_fill.inx:33
+#: inx/inkstitch_knockdown_fill.inx:34
 msgid "Rectangle"
 msgstr "Rectangle"
 
-#: inx/inkstitch_knockdown_fill.inx:34
+#: inx/inkstitch_knockdown_fill.inx:35
 msgid "Circle"
 msgstr "Cercle"
 
-#: inx/inkstitch_knockdown_fill.inx:36
+#: inx/inkstitch_knockdown_fill.inx:37
 msgid "Shape offset"
 msgstr "Décalage de la forme"
 
-#: inx/inkstitch_knockdown_fill.inx:44
+#: inx/inkstitch_knockdown_fill.inx:45
 msgid "This extension generates a knockdown fill area with a specified offset around selected elements."
 msgstr "Cette extension génère une zone de remplissage en points couchants avec un décalage spécifié (positif ou négatif) autour des éléments sélectionnés."
 
-#: inx/inkstitch_knockdown_fill.inx:45
+#: inx/inkstitch_knockdown_fill.inx:46
 msgid "* Select elements of any kind"
 msgstr "* Sélectionnez des éléments de n'importe quelle nature"
 
-#: inx/inkstitch_knockdown_fill.inx:46
+#: inx/inkstitch_knockdown_fill.inx:47
 msgid "* Open this extension and apply with desired settings"
 msgstr "* Ouvrez cette extension et appliquez-la avec les paramètres souhaités"
 
-#: inx/inkstitch_knockdown_fill.inx:47
+#: inx/inkstitch_knockdown_fill.inx:48
 msgid "* Adapt fill settings in the params dialog"
 msgstr "* Adapter les paramètres de remplissage dans le dialogue de paramétrage"
 
-#: inx/inkstitch_knockdown_fill.inx:50
+#: inx/inkstitch_knockdown_fill.inx:51
 msgid "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
 msgstr "https://inkstitch.org/fr/docs/fill-tools/#knockdown-fill"
 
