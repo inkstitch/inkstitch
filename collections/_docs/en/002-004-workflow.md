@@ -102,13 +102,16 @@ To ungroup objects:
 
 ### A Note about Stitch Types
 
-Ink/Stitch supports several stitch types. Two primary categories are available:
+Ink/Stitch supports several stitch types. The three primary categories are available:
 
 1. **Fill stitches**  
-   These stitches fill a closed shape.
+   These stitches fill a closed shape.  They are used for larger areas and create a textured surface and provide coverage while maintaining flexibility in the fabric.
 
 2. **Stroke stitches**  
-   These stitches follow the direction of a path.
+   These stitches follow the direction of a path.  They are  used for outlines, fine lines, and decorative accents where a narrow stitched line works better than a filled shape. 
+   
+4. **Satin stitches**
+   These stitches cover narrow shapes with smooth, parallel stitches. They run back and forth across a shape, creating a glossy, raised appearance that works well for borders, lettering, and fine details.
 
 You configure stitch behavior through **Object > Fill and Stroke** or by pressing **Ctrl+Shift+F**. Review the table below and follow the links to learn how to set up each stitch type correctly.
 
