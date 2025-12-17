@@ -1,5 +1,5 @@
 ---
-title: "Basic Usage"
+title: "Basic Use"
 permalink: /docs/basic-usage/
 last_modified_at: 2025-11-19
 toc: true
