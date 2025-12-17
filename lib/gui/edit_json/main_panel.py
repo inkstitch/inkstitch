@@ -178,13 +178,13 @@ class LetteringEditJsonPanel(wx.Panel):
 
     def on_default_variant_change(self, event=None):
         selection = self.settings_panel.font_info.default_variant.GetSelection()
-        value = '→'
+        value = 'ltr'
         if selection == 1:
-            value = '←'
+            value = 'rtl'
         elif selection == 2:
-            value = '↓'
+            value = 'ttb'
         elif selection == 3:
-            value = '↑'
+            value = 'btt'
         self.font_meta['default_variant'] = value
         self.update_preview()
 
@@ -331,7 +331,7 @@ class LetteringEditJsonPanel(wx.Panel):
         # update ctrl
         self.settings_panel.font_info.name.ChangeValue(self.font.name)
         self.settings_panel.font_info.description.ChangeValue(self.font.metadata['description'])
-        selection = ['→', '←', '↓', '↑'].index(self.font.json_default_variant)
+        selection = [_('ltr'), _('rtl'), _('ttb'), _('btt')].index(self.font.json_default_variant)
         self.settings_panel.font_info.default_variant.SetSelection(selection)
         selection = ['ltr', 'rtl'].index(self.font.text_direction)
         self.settings_panel.font_info.text_direction.SetSelection(selection)
