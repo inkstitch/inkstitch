@@ -109,6 +109,14 @@ inkstitch_attribs = [
     'enable_random_stitch_length',
     'random_stitch_length_jitter_percent',
     'gap_fill_rows',
+    # cross stitch
+    'pattern_size_mm',
+    'fill_coverage',
+    'cross_stitch_method',
+    'max_cross_stitch_length_mm',
+    'cross_offset_mm',
+    'cross_bean_repeats',
+    'canvas_grid_origin',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',

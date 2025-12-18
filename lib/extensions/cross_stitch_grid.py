@@ -1,9 +1,7 @@
 # Authors: see git history
 #
-# Copyright (c) 2010 Authors
+# Copyright (c) 2025 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-
-from math import sqrt
 
 from inkex import Boolean, Color, Grid
 from inkex.units import convert_unit
@@ -15,7 +13,8 @@ class CrossStitchGrid(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--notebook")
-        self.arg_parser.add_argument("-s", "--stitch_length", dest="stitch_length", type=float, default=3)
+        self.arg_parser.add_argument("-x", "--box_size_x", dest="box_size_x", type=float, default=3)
+        self.arg_parser.add_argument("-y", "--box_size_y", dest="box_size_y", type=float, default=3)
         self.arg_parser.add_argument("-c", "--color", dest="color", type=Color, default=Color(0x00d9e5ff))
         self.arg_parser.add_argument("-d", "--delete", dest="remove_previous", type=Boolean, default=True)
 
@@ -36,15 +35,17 @@ class CrossStitchGrid(InkstitchExtension):
 
         # insert new grid
         scale = self.svg.inkscape_scale
-        grid_spacing = self.options.stitch_length / sqrt(2) / scale
-        grid_spacing = convert_unit(f'{grid_spacing}mm', unit)
+        box_size_x = self.options.box_size_x / scale
+        box_size_x = convert_unit(f'{box_size_x}mm', unit)
+        box_size_y = self.options.box_size_y / scale
+        box_size_y = convert_unit(f'{box_size_y}mm', unit)
         grid = Grid(attrib={
             "id": grid_id,
             "units": unit,
             "originx": "0",
             "originy": "0",
-            "spacingx": str(grid_spacing),
-            "spacingy": str(grid_spacing),
+            "spacingx": str(box_size_x),
+            "spacingy": str(box_size_y),
             "empcolor": str(self.options.color),
             "empopacity": "0.30196078",
             "color": str(self.options.color),
