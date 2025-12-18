@@ -18,7 +18,7 @@ from .. import tiles
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import (auto_fill, circular_fill, contour_fill, guided_fill,
+from ..stitches import (auto_fill, circular_fill, contour_fill, cross_stitch, guided_fill,
                         legacy_fill, linear_gradient_fill, meander_fill,
                         tartan_fill)
 from ..stitches.linear_gradient_fill import gradient_angle
@@ -153,6 +153,7 @@ class FillStitch(EmbroideryElement):
     _fill_methods = [ParamOption('auto_fill', _("Auto Fill")),
                      ParamOption('circular_fill', _("Circular Fill")),
                      ParamOption('contour_fill', _("Contour Fill")),
+                     ParamOption('cross_stitch', _("Cross Stitch")),
                      ParamOption('guided_fill', _("Guided Fill")),
                      ParamOption('linear_gradient_fill', _("Linear Gradient Fill")),
                      ParamOption('meander_fill', _("Meander Fill")),
@@ -318,6 +319,7 @@ class FillStitch(EmbroideryElement):
            type='float',
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'contour_fill'),
+                         ('fill_method', 'cross_stitch'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'linear_gradient_fill'),
                          ('fill_method', 'tartan_fill'),
@@ -535,6 +537,7 @@ class FillStitch(EmbroideryElement):
            type='str',
            select_items=[('fill_method', 'meander_fill'),
                          ('fill_method', 'circular_fill'),
+                         ('fill_method', 'cross_stitch'),
                          ('fill_method', 'tartan_fill')],
            default=0,
            sort_index=51)
@@ -735,6 +738,20 @@ class FillStitch(EmbroideryElement):
         return seed
 
     @property
+    @param(
+        'cross_coverage',
+        _("Cross coverage"),
+        tooltip=_("Percentage of overlap for each cross with the fill area"),
+        type='int',
+        default="50",
+        unit='%',
+        select_items=[('fill_method', 'cross_stitch')],
+        sort_index=62
+    )
+    def cross_coverage(self):
+        return max(1, self.get_int_param("cross_coverage", 50))
+
+    @property
     @cache
     def paths(self):
         paths = self.flatten(self.parse_path())
@@ -897,16 +914,18 @@ class FillStitch(EmbroideryElement):
             for i, fill_shape in enumerate(fill_shapes.geoms):
                 if not self.auto_fill or self.fill_method == 'legacy_fill':
                     stitch_groups.extend(self.do_legacy_fill(fill_shape))
-                elif self.fill_method == 'contour_fill':
-                    stitch_groups.extend(self.do_contour_fill(fill_shape, start))
-                elif self.fill_method == 'guided_fill':
-                    stitch_groups.extend(self.do_guided_fill(fill_shape, start, end))
-                elif self.fill_method == 'meander_fill':
-                    stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
                 elif self.fill_method == 'circular_fill':
                     stitch_groups.extend(self.do_circular_fill(fill_shape, start, end))
+                elif self.fill_method == 'contour_fill':
+                    stitch_groups.extend(self.do_contour_fill(fill_shape, start))
+                elif self.fill_method == 'cross_stitch':
+                    stitch_groups.extend(self.do_cross_stitch(fill_shape, start, end))
+                elif self.fill_method == 'guided_fill':
+                    stitch_groups.extend(self.do_guided_fill(fill_shape, start, end))
                 elif self.fill_method == 'linear_gradient_fill':
                     stitch_groups.extend(self.do_linear_gradient_fill(fill_shape, start, end))
+                elif self.fill_method == 'meander_fill':
+                    stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
                 elif self.fill_method == 'tartan_fill':
                     stitch_groups.extend(self.do_tartan_fill(fill_shape, start, end))
                 else:
@@ -1124,6 +1143,16 @@ class FillStitch(EmbroideryElement):
             color=self.color,
             tags=("meander_fill", "meander_fill_top"),
             stitches=meander_fill(self, shape, original_shape, i, starting_point, ending_point),
+            force_lock_stitches=self.force_lock_stitches,
+            lock_stitches=self.lock_stitches
+        )
+        return [stitch_group]
+
+    def do_cross_stitch(self, shape, starting_point, ending_point):
+        stitch_group = StitchGroup(
+            color=self.color,
+            tags=("cross_stitch"),
+            stitches=cross_stitch(self, shape, starting_point, ending_point),
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches
         )
