@@ -11,7 +11,7 @@ from shapely.affinity import scale, translate
 from shapely.geometry import Polygon
 
 from ..i18n import _
-from ..svg import get_correction_transform
+from ..svg import get_correction_transform, PIXELS_PER_MM
 from ..utils.geometry import ensure_multi_polygon
 from .base import InkstitchExtension
 
@@ -47,11 +47,11 @@ class PixelizeFill(InkstitchExtension):
             element.node.delete()
 
     def pixelize_element(self, element):
+        stitch_length = self.options.stitch_length * PIXELS_PER_MM
         fill_shapes = ensure_multi_polygon(make_valid(element.fill_shape(element.shape)))
         fill_shapes = list(fill_shapes.geoms)
         boxes = []
         for shape in fill_shapes:
-            stitch_length = self.options.stitch_length
             square_size = stitch_length / sqrt(2)  # 45° angle
             square = Polygon([(0, 0), (square_size, 0), (square_size, square_size), (0, square_size)])
             full_square_area = square.area
@@ -81,4 +81,5 @@ class PixelizeFill(InkstitchExtension):
                     x += square_size
                 y += square_size
 
-        return ensure_multi_polygon(make_valid(unary_union(boxes))).simplify(0.1)
+        outline = make_valid(unary_union(boxes)).simplify(0.1)
+        return ensure_multi_polygon(outline)
