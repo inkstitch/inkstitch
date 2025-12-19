@@ -45,6 +45,7 @@ def cross_stitch(fill, shape, starting_point, ending_point):
 
     crosses_lr = []
     crosses_rl = []
+    vertical = []
     boxes = []
     scaled_boxes = []
     center_points = []
@@ -55,15 +56,15 @@ def cross_stitch(fill, shape, starting_point, ending_point):
         while x <= adapted_maxx:
             box = translate(square, x, y)
             if shape.contains(box):
-                travel_edges, boxes, scaled_boxes, center_points, crosses_lr, crosses_rl, = add_cross(
-                    box, scaled_boxes, center_points, crosses_lr, crosses_rl, boxes, travel_edges
+                travel_edges, boxes, scaled_boxes, center_points, crosses_lr, crosses_rl, vertical = add_cross(
+                    box, scaled_boxes, center_points, crosses_lr, crosses_rl, vertical, boxes, travel_edges
                 )
             elif shape.intersects(box):
                 intersection = box.intersection(shape)
                 intersection_area = intersection.area
                 if intersection_area / full_square_area * 100 > fill.cross_coverage:
-                    travel_edges, boxes, scaled_boxes, center_points, crosses_lr, crosses_rl, = add_cross(
-                        box, scaled_boxes, center_points, crosses_lr, crosses_rl, boxes, travel_edges
+                    travel_edges, boxes, scaled_boxes, center_points, crosses_lr, crosses_rl, vertical = add_cross(
+                        box, scaled_boxes, center_points, crosses_lr, crosses_rl, vertical, boxes, travel_edges
                     )
             x += square_size
         y += square_size
@@ -74,6 +75,7 @@ def cross_stitch(fill, shape, starting_point, ending_point):
 
     lr = ensure_multi_line_string(line_merge(MultiLineString(crosses_lr)))
     rl = ensure_multi_line_string(line_merge(MultiLineString(crosses_rl)))
+    v = ensure_multi_line_string(line_merge(MultiLineString(vertical)))
 
     clamp = False
     outline = unary_union(boxes)
@@ -147,12 +149,13 @@ def get_line_endpoints(multilinestring):
     return nodes
 
 
-def add_cross(box, scaled_boxes, center_points, crosses_lr, crosses_rl, boxes, travel_edges):
+def add_cross(box, scaled_boxes, center_points, crosses_lr, crosses_rl, vertical, boxes, travel_edges):
     minx, miny, maxx, maxy = box.bounds
     center = box.centroid
     center_points.append(center)
     crosses_lr.append(LineString([(minx, miny), (maxx, maxy)]))
     crosses_rl.append(LineString([(maxx, miny), (minx, maxy)]))
+    vertical.append(LineString([(maxx, miny), (maxx, maxy)]))
 
     travel_edges.append(LineString([(minx, miny), center]))
     travel_edges.append(LineString([(maxx, miny), center]))
@@ -167,7 +170,7 @@ def add_cross(box, scaled_boxes, center_points, crosses_lr, crosses_rl, boxes, t
     # scaling the outline allows us to connect otherwise unconnected boxes
     box = scale(box, xfact=1.000000000000001, yfact=1.000000000000001)
     scaled_boxes.append(box)
-    return travel_edges, boxes, scaled_boxes, center_points, crosses_lr, crosses_rl
+    return travel_edges, boxes, scaled_boxes, center_points, crosses_lr, crosses_rl, vertical
 
 
 def _lines_to_stitches(
@@ -193,6 +196,7 @@ def _lines_to_stitches(
     result = path_to_stitches(
         shape, path, travel_graph, fill_stitch_graph, stitch_length, center_points, clamp
     )
+    # result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, 45, 3 / sqrt(2), 3, 3, 0.1, 4, False, True, False, False, False)
     result = collapse_travel_edges(result)
     result = _apply_bean_stitch_and_repeats(result, 1, bean_stitch_repeats)
     return result
@@ -238,6 +242,7 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, stitch_length
                 travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
             stitches.extend(travel(shape, travel_graph, edge, center_points, stitch_length, clamp))
+            # stitches.extend(travel(shape, travel_graph, edge, 3, 0.1, False, True, center_points, clamp=True))
 
     return stitches
 
