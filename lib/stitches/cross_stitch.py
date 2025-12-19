@@ -22,7 +22,7 @@ from ..utils.geometry import ensure_multi_line_string, reverse_line_string
 from ..utils.threading import check_stop_flag
 from .auto_fill import (add_edges_between_outline_nodes,
                         build_fill_stitch_graph, fallback, find_stitch_path,
-                        graph_make_valid, process_travel_edges,
+                        graph_make_valid, process_travel_edges, collapse_sequential_outline_edges,
                         tag_nodes_with_outline_and_projection)
 from .circular_fill import _apply_bean_stitch_and_repeats
 
@@ -48,21 +48,22 @@ def cross_stitch(fill, shape, starting_point, ending_point):
     boxes = []
     scaled_boxes = []
     center_points = []
+    travel_edges = []
     y = adapted_miny
     while y <= adapted_maxy:
         x = adapted_minx
         while x <= adapted_maxx:
             box = translate(square, x, y)
             if shape.contains(box):
-                boxes, scaled_boxes, center_points, crosses_lr, crosses_rl = add_cross(
-                    box, scaled_boxes, center_points, crosses_lr, crosses_rl, boxes
+                travel_edges, boxes, scaled_boxes, center_points, crosses_lr, crosses_rl, = add_cross(
+                    box, scaled_boxes, center_points, crosses_lr, crosses_rl, boxes, travel_edges
                 )
             elif shape.intersects(box):
                 intersection = box.intersection(shape)
                 intersection_area = intersection.area
                 if intersection_area / full_square_area * 100 > fill.cross_coverage:
-                    boxes, scaled_boxes, center_points, crosses_lr, crosses_rl = add_cross(
-                        box, scaled_boxes, center_points, crosses_lr, crosses_rl, boxes
+                    travel_edges, boxes, scaled_boxes, center_points, crosses_lr, crosses_rl, = add_cross(
+                        box, scaled_boxes, center_points, crosses_lr, crosses_rl, boxes, travel_edges
                     )
             x += square_size
         y += square_size
@@ -88,24 +89,29 @@ def cross_stitch(fill, shape, starting_point, ending_point):
 
     nodes = get_line_endpoints(rl)
     nodes.extend(get_line_endpoints(lr))
+    nodes.extend(get_line_endpoints(v))
 
     check_stop_flag()
 
-    starting_point, ending_point = get_start_and_end(fill.max_stitch_length, starting_point, ending_point, lr, rl)
+    starting_point, ending_point = get_start_and_end(
+        fill.max_stitch_length, starting_point, ending_point, MultiLineString(crosses_lr), MultiLineString(crosses_rl)
+    )
+
+    travel_edges = list(ensure_multi_line_string(line_merge(MultiLineString(travel_edges))).geoms)
 
     stitches = _lines_to_stitches(
-        lr, crosses_rl, outline, stitch_length, fill.bean_stitch_repeats,
+        lr, travel_edges, outline, stitch_length, fill.bean_stitch_repeats,
         starting_point, ending_point, nodes, center_points, clamp
     )
     starting_point = InkstitchPoint(*stitches[-1])
     stitches.extend(
         _lines_to_stitches(
-            rl, crosses_rl, outline, stitch_length, fill.bean_stitch_repeats,
+            rl, travel_edges, outline, stitch_length, fill.bean_stitch_repeats,
             starting_point, ending_point, nodes, center_points, clamp
         )
     )
 
-    return stitches
+    return [stitches]
 
 
 def cross_stitch_multiple(outline, fill, starting_point, ending_point):
@@ -121,7 +127,7 @@ def cross_stitch_multiple(outline, fill, starting_point, ending_point):
         else:
             end = ending_point
         stitches.extend(cross_stitch(fill, polygon, starting_point, end))
-        starting_point = InkstitchPoint(*stitches[-1])
+        starting_point = InkstitchPoint(*stitches[-1][-1])
     return stitches
 
 
@@ -141,16 +147,27 @@ def get_line_endpoints(multilinestring):
     return nodes
 
 
-def add_cross(box, scaled_boxes, center_points, crosses_lr, crosses_rl, boxes):
+def add_cross(box, scaled_boxes, center_points, crosses_lr, crosses_rl, boxes, travel_edges):
     minx, miny, maxx, maxy = box.bounds
-    center_points.append(box.centroid)
+    center = box.centroid
+    center_points.append(center)
     crosses_lr.append(LineString([(minx, miny), (maxx, maxy)]))
     crosses_rl.append(LineString([(maxx, miny), (minx, maxy)]))
+
+    travel_edges.append(LineString([(minx, miny), center]))
+    travel_edges.append(LineString([(maxx, miny), center]))
+    travel_edges.append(LineString([(maxx, maxy), center]))
+    travel_edges.append(LineString([(minx, maxy), center]))
+    travel_edges.append(LineString([(minx, miny), (maxx, miny)]))
+    travel_edges.append(LineString([(minx, miny), (minx, maxy)]))
+    travel_edges.append(LineString([(maxx, maxy), (maxx, miny)]))
+    travel_edges.append(LineString([(maxx, maxy), (minx, maxy)]))
+
     boxes.append(box)
     # scaling the outline allows us to connect otherwise unconnected boxes
     box = scale(box, xfact=1.000000000000001, yfact=1.000000000000001)
     scaled_boxes.append(box)
-    return boxes, scaled_boxes, center_points, crosses_lr, crosses_rl
+    return travel_edges, boxes, scaled_boxes, center_points, crosses_lr, crosses_rl
 
 
 def _lines_to_stitches(
@@ -199,7 +216,7 @@ def collapse_travel_edges(result):
 
 
 def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, stitch_length, center_points, clamp):
-    # path = collapse_sequential_outline_edges(path, fill_stitch_graph)
+    path = collapse_sequential_outline_edges(path, fill_stitch_graph)
 
     stitches = []
     if not path[0].is_segment():
@@ -255,7 +272,7 @@ def travel(shape, travel_graph, edge, center_points, stitch_length, clamp=True):
             pass
         else:
             line = LineString([last_point, point])
-            if line.length < stitch_length / 2 + 2:
+            if line.length < stitch_length / 2:
                 stitches.append(Stitch(point, tags=["auto_fill_travel"]))
                 last_point = point
                 continue
@@ -268,7 +285,7 @@ def travel(shape, travel_graph, edge, center_points, stitch_length, clamp=True):
                 # snap to avoid problems in edge collapsing later on
             center_point = snap(center_point, center_points, tolerance=0.01)
             stitches.append(Stitch(center_point, tags=["auto_fill_travel"]))
-            stitches.append(Stitch(*point, tags=["auto_fill_travel"]))
+        stitches.append(Stitch(*point, tags=["auto_fill_travel"]))
         last_point = point
 
     return stitches
