@@ -33,7 +33,8 @@ class CrossStitchGrid(InkstitchExtension):
         grid_id = self.svg.get_unique_id("inkstitch_cross_stitch_grid_")
 
         # insert new grid
-        grid_spacing = self.options.stitch_length / sqrt(2)
+        scale = self.svg.inkscape_scale
+        grid_spacing = self.options.stitch_length / sqrt(2) / scale
         grid = Grid(attrib={
             "id": grid_id,
             "units": "mm",
