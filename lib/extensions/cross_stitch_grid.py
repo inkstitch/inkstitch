@@ -6,6 +6,7 @@
 from math import sqrt
 
 from inkex import Boolean, Color, Grid
+from inkex.units import convert_unit
 
 from .base import InkstitchExtension
 
@@ -20,6 +21,7 @@ class CrossStitchGrid(InkstitchExtension):
 
     def effect(self):
         namedview = self.svg.namedview
+        unit = self.svg.document_unit
 
         # hide old grids
         grids = self.svg.findall('.//inkscape:grid')
@@ -35,9 +37,10 @@ class CrossStitchGrid(InkstitchExtension):
         # insert new grid
         scale = self.svg.inkscape_scale
         grid_spacing = self.options.stitch_length / sqrt(2) / scale
+        grid_spacing = convert_unit(f'{grid_spacing}mm', unit)
         grid = Grid(attrib={
             "id": grid_id,
-            "units": "mm",
+            "units": unit,
             "originx": "0",
             "originy": "0",
             "spacingx": str(grid_spacing),
