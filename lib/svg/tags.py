@@ -110,6 +110,7 @@ inkstitch_attribs = [
     'random_stitch_length_jitter_percent',
     'gap_fill_rows',
     'cross_coverage',
+    'flip_layers',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',

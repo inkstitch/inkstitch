@@ -752,6 +752,20 @@ class FillStitch(EmbroideryElement):
         return max(1, self.get_int_param("cross_coverage", 50))
 
     @property
+    @param(
+        'flip_layers',
+        _("Flip direction"),
+        tooltip=_("Top stitches go from bottom left to top right by default. "
+                  "When enabled, top stitching goes from top left to bottom right."),
+        type='boolean',
+        default=False,
+        select_items=[('fill_method', 'cross_stitch')],
+        sort_index=63
+    )
+    def flip_layers(self):
+        return self.get_boolean_param("flip_layers", False)
+
+    @property
     @cache
     def paths(self):
         paths = self.flatten(self.parse_path())

@@ -89,17 +89,20 @@ def cross_stitch(fill, shape, starting_point, ending_point):
     # used for snapping
     center_points = MultiPoint(center_points)
 
+    travel_edges = list(ensure_multi_line_string(line_merge(MultiLineString(travel_edges))).geoms)
+
     nodes = get_line_endpoints(rl)
     nodes.extend(get_line_endpoints(lr))
     nodes.extend(get_line_endpoints(v))
 
     check_stop_flag()
 
+    if fill.flip_layers:
+        rl, lr, crosses_rl, crosses_lr = lr, rl, crosses_lr, crosses_rl
+
     starting_point, ending_point = get_start_and_end(
         fill.max_stitch_length, starting_point, ending_point, MultiLineString(crosses_lr), MultiLineString(crosses_rl)
     )
-
-    travel_edges = list(ensure_multi_line_string(line_merge(MultiLineString(travel_edges))).geoms)
 
     stitches = _lines_to_stitches(
         lr, travel_edges, outline, stitch_length, fill.bean_stitch_repeats,
@@ -277,10 +280,6 @@ def travel(shape, travel_graph, edge, center_points, stitch_length, clamp=True):
             pass
         else:
             line = LineString([last_point, point])
-            if line.length < stitch_length / 2:
-                stitches.append(Stitch(point, tags=["auto_fill_travel"]))
-                last_point = point
-                continue
             center = list(rotate(line, 90).coords)
             point1 = Point(center[0])
             if point1.within(shape):
