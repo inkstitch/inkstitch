@@ -30,6 +30,7 @@ from ..utils.geometry import ensure_multi_polygon
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
 from .validation import ValidationError, ValidationWarning
+import sys
 
 
 class SmallShapeWarning(ValidationWarning):
@@ -1165,7 +1166,9 @@ class FillStitch(EmbroideryElement):
             fill_shapes.sort(key=lambda shape: shape.bounds[0])
         final_end = end
 
+        stitch_groups = []
         for i, shape in enumerate(fill_shapes):
+            print(shape, file=sys.stderr)
             start = self.get_starting_point(previous_stitch_group)
             if i < len(fill_shapes) - 1:
                 end = nearest_points(shape, fill_shapes[i+1])[0].coords
@@ -1179,7 +1182,8 @@ class FillStitch(EmbroideryElement):
                 lock_stitches=self.lock_stitches
             )
             previous_stitch_group = stitch_group
-        return [stitch_group]
+            stitch_groups.append(stitch_group)
+        return stitch_groups
 
     def do_circular_fill(self, shape, starting_point, ending_point):
         # get target position
