@@ -5,7 +5,7 @@
 
 # -*- coding: UTF-8 -*-
 
-from math import sqrt
+from math import isclose, sqrt
 
 import networkx
 from shapely import line_merge, prepare, snap
@@ -22,7 +22,7 @@ from ..utils.geometry import ensure_multi_line_string, reverse_line_string
 from ..utils.threading import check_stop_flag
 from .auto_fill import (add_edges_between_outline_nodes,
                         build_fill_stitch_graph, fallback, find_stitch_path,
-                        graph_make_valid, process_travel_edges, collapse_sequential_outline_edges,
+                        graph_make_valid, process_travel_edges,
                         tag_nodes_with_outline_and_projection)
 from .circular_fill import _apply_bean_stitch_and_repeats
 
@@ -199,7 +199,6 @@ def _lines_to_stitches(
     result = path_to_stitches(
         shape, path, travel_graph, fill_stitch_graph, stitch_length, center_points, clamp
     )
-    # result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, 45, 3 / sqrt(2), 3, 3, 0.1, 4, False, True, False, False, False)
     result = collapse_travel_edges(result)
     result = _apply_bean_stitch_and_repeats(result, 1, bean_stitch_repeats)
     return result
@@ -223,8 +222,6 @@ def collapse_travel_edges(result):
 
 
 def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, stitch_length, center_points, clamp):
-    path = collapse_sequential_outline_edges(path, fill_stitch_graph)
-
     stitches = []
     if not path[0].is_segment():
         stitches.append(Stitch(*path[0].nodes[0]))
@@ -240,12 +237,10 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, stitch_length
 
             stitches.extend([Stitch(*point, tags=["auto_fill", "fill_row"]) for point in path_geometry.coords])
 
-            # note: gap fill segments won't be in the graph
             if fill_stitch_graph.has_edge(edge[0], edge[1], key='segment'):
                 travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
             stitches.extend(travel(shape, travel_graph, edge, center_points, stitch_length, clamp))
-            # stitches.extend(travel(shape, travel_graph, edge, 3, 0.1, False, True, center_points, clamp=True))
 
     return stitches
 
@@ -276,10 +271,12 @@ def travel(shape, travel_graph, edge, center_points, stitch_length, clamp=True):
         if last_point is None:
             last_point = point
             continue
-        if last_point[0] != point[0] and last_point[1] != point[1]:
+        line = LineString([last_point, point])
+        if line.length < stitch_length / 2:
+            pass
+        elif not isclose(last_point[0], point[0], abs_tol=0.011) and not isclose(last_point[1], point[1], abs_tol=0.011):
             pass
         else:
-            line = LineString([last_point, point])
             center = list(rotate(line, 90).coords)
             point1 = Point(center[0])
             if point1.within(shape):
