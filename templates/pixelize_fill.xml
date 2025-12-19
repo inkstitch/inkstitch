@@ -20,7 +20,7 @@
 
     <effect>
         <object-type>all</object-type>
-        <icon>{{ icon_path }}inx/cleanup_document.svg</icon>
+        <icon>{{ icon_path }}inx/cross_stitch.svg</icon>
         <menu-tip>Pixelizes the outline of a fill</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
