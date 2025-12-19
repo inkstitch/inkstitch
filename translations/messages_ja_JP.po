@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-15 01:56+0000\n"
-"PO-Revision-Date: 2025-12-15 01:56\n"
+"POT-Creation-Date: 2025-12-18 01:48+0000\n"
+"PO-Revision-Date: 2025-12-18 01:49\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-15 01:56+0000\n"
+"POT-Creation-Date: 2025-12-18 01:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2304,7 +2304,7 @@ msgid "Running Stitch / Bean Stitch"
 msgstr ""
 
 #: lib/elements/stroke.py:66 lib/lettering/categories.py:26
-#: inx/inkstitch_lettering_generate_json.inx:58
+#: inx/inkstitch_lettering_generate_json.inx:59
 msgid "Ripple Stitch"
 msgstr ""
 
@@ -2910,7 +2910,7 @@ msgstr "インクステッチはパレットフォルダを自動で見つける
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:67
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:68
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:82
-#: inx/inkstitch_lettering_generate_json.inx:59
+#: inx/inkstitch_lettering_generate_json.inx:60
 #: inx/inkstitch_select_elements.inx:13
 msgid "Running Stitch"
 msgstr ""
@@ -3314,7 +3314,7 @@ msgstr "タイトル"
 
 #: lib/extensions/thread_list.py:51 lib/gui/edit_json/settings_panel.py:207
 #: lib/gui/lettering/option_panel.py:36
-#: inx/inkstitch_lettering_generate_json.inx:102
+#: inx/inkstitch_lettering_generate_json.inx:103
 msgid "Size"
 msgstr "サイズ"
 
@@ -3486,7 +3486,7 @@ msgstr ""
 #: inx/inkstitch_lettering_along_path.inx:25
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
-#: inx/inkstitch_lettering_generate_json.inx:146
+#: inx/inkstitch_lettering_generate_json.inx:147
 #: inx/inkstitch_lettering_organize_glyphs.inx:27
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
@@ -3517,8 +3517,24 @@ msgid "Feature to verify or update font information for an existing font."
 msgstr ""
 
 #: lib/gui/edit_json/help_panel.py:33 lib/gui/edit_json/help_panel.py:34
-#: inx/inkstitch_lettering_generate_json.inx:152
+#: inx/inkstitch_lettering_generate_json.inx:153
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
+msgstr ""
+
+#: lib/gui/edit_json/main_panel.py:334
+msgid "ltr"
+msgstr ""
+
+#: lib/gui/edit_json/main_panel.py:334
+msgid "rtl"
+msgstr ""
+
+#: lib/gui/edit_json/main_panel.py:334
+msgid "ttb"
+msgstr ""
+
+#: lib/gui/edit_json/main_panel.py:334
+msgid "btt"
 msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:416 lib/gui/edit_json/main_panel.py:429
@@ -3566,7 +3582,7 @@ msgid "Default Variant"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:105
-#: inx/inkstitch_lettering_generate_json.inx:29
+#: inx/inkstitch_lettering_generate_json.inx:30
 msgid "Text direction"
 msgstr ""
 
@@ -3579,7 +3595,7 @@ msgid "Right to Left"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:109
-#: inx/inkstitch_lettering_generate_json.inx:43
+#: inx/inkstitch_lettering_generate_json.inx:44
 msgid "Keywords"
 msgstr ""
 
@@ -3596,22 +3612,22 @@ msgid "Letter case"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:159
-#: inx/inkstitch_lettering_generate_json.inx:97
+#: inx/inkstitch_lettering_generate_json.inx:98
 msgid "Upper"
 msgstr "アッパー"
 
 #: lib/gui/edit_json/settings_panel.py:159
-#: inx/inkstitch_lettering_generate_json.inx:98
+#: inx/inkstitch_lettering_generate_json.inx:99
 msgid "Lower"
 msgstr "下"
 
 #: lib/gui/edit_json/settings_panel.py:162
-#: inx/inkstitch_lettering_generate_json.inx:89
+#: inx/inkstitch_lettering_generate_json.inx:90
 msgid "Reversible"
 msgstr "可逆"
 
 #: lib/gui/edit_json/settings_panel.py:169
-#: inx/inkstitch_lettering_generate_json.inx:92
+#: inx/inkstitch_lettering_generate_json.inx:93
 msgid "Sortable"
 msgstr ""
 
@@ -3620,12 +3636,12 @@ msgid "Combine Indices"
 msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:213
-#: inx/inkstitch_lettering_generate_json.inx:103
+#: inx/inkstitch_lettering_generate_json.inx:104
 msgid "Min Scale"
 msgstr "最小スケール"
 
 #: lib/gui/edit_json/settings_panel.py:220
-#: inx/inkstitch_lettering_generate_json.inx:104
+#: inx/inkstitch_lettering_generate_json.inx:105
 msgid "Max Scale"
 msgstr "最大スケール"
 
@@ -3857,7 +3873,7 @@ msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:74 lib/gui/lettering_font_sample.py:40
 #: lib/gui/simulator/view_panel.py:129 print/templates/ui.html:5
-#: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:78
+#: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:79
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
 msgstr "設定"
@@ -4511,73 +4527,73 @@ msgstr ""
 msgid "An error occurred while rendering the stitch plan:"
 msgstr ""
 
-#: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:47
+#: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:48
 msgid "Applique"
 msgstr ""
 
-#: lib/lettering/categories.py:20 inx/inkstitch_lettering_generate_json.inx:48
+#: lib/lettering/categories.py:20 inx/inkstitch_lettering_generate_json.inx:49
 msgid "Crossstitch"
 msgstr ""
 
-#: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:49
+#: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:50
 #: inx/inkstitch_troubleshoot.inx:9
 msgid "Display"
 msgstr ""
 
-#: lib/lettering/categories.py:22 inx/inkstitch_lettering_generate_json.inx:52
+#: lib/lettering/categories.py:22 inx/inkstitch_lettering_generate_json.inx:53
 msgid "Handwriting"
 msgstr ""
 
-#: lib/lettering/categories.py:23 inx/inkstitch_lettering_generate_json.inx:53
+#: lib/lettering/categories.py:23 inx/inkstitch_lettering_generate_json.inx:54
 msgid "Italic"
 msgstr ""
 
-#: lib/lettering/categories.py:24 inx/inkstitch_lettering_generate_json.inx:54
+#: lib/lettering/categories.py:24 inx/inkstitch_lettering_generate_json.inx:55
 msgid "Monogram"
 msgstr ""
 
-#: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:55
+#: lib/lettering/categories.py:25 inx/inkstitch_lettering_generate_json.inx:56
 msgid "Multicolor"
 msgstr ""
 
-#: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:60
+#: lib/lettering/categories.py:28 inx/inkstitch_lettering_generate_json.inx:61
 msgid "Sans Serif"
 msgstr ""
 
-#: lib/lettering/categories.py:29 inx/inkstitch_lettering_generate_json.inx:61
+#: lib/lettering/categories.py:29 inx/inkstitch_lettering_generate_json.inx:62
 msgid "Serif"
 msgstr ""
 
-#: lib/lettering/categories.py:30 inx/inkstitch_lettering_generate_json.inx:64
+#: lib/lettering/categories.py:30 inx/inkstitch_lettering_generate_json.inx:65
 #: inx/inkstitch_tartan.inx:3
 msgid "Tartan"
 msgstr ""
 
-#: lib/lettering/categories.py:31 inx/inkstitch_lettering_generate_json.inx:65
+#: lib/lettering/categories.py:31 inx/inkstitch_lettering_generate_json.inx:66
 msgid "Tiny"
 msgstr ""
 
-#: lib/lettering/categories.py:32 inx/inkstitch_lettering_generate_json.inx:66
+#: lib/lettering/categories.py:32 inx/inkstitch_lettering_generate_json.inx:67
 msgid "Script: arabic"
 msgstr ""
 
-#: lib/lettering/categories.py:33 inx/inkstitch_lettering_generate_json.inx:67
+#: lib/lettering/categories.py:33 inx/inkstitch_lettering_generate_json.inx:68
 msgid "Script: cyrillic"
 msgstr ""
 
-#: lib/lettering/categories.py:34 inx/inkstitch_lettering_generate_json.inx:70
+#: lib/lettering/categories.py:34 inx/inkstitch_lettering_generate_json.inx:71
 msgid "Script: greek"
 msgstr ""
 
-#: lib/lettering/categories.py:35 inx/inkstitch_lettering_generate_json.inx:71
+#: lib/lettering/categories.py:35 inx/inkstitch_lettering_generate_json.inx:72
 msgid "Script: hebrew"
 msgstr ""
 
-#: lib/lettering/categories.py:36 inx/inkstitch_lettering_generate_json.inx:72
+#: lib/lettering/categories.py:36 inx/inkstitch_lettering_generate_json.inx:73
 msgid "Script: japanese"
 msgstr ""
 
-#: lib/lettering/categories.py:37 inx/inkstitch_lettering_generate_json.inx:73
+#: lib/lettering/categories.py:37 inx/inkstitch_lettering_generate_json.inx:74
 msgid "Script: latin"
 msgstr ""
 
@@ -4599,12 +4615,12 @@ msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr ""
 
-#: lib/lettering/font.py:193
+#: lib/lettering/font.py:199
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "フォント '％s'にはバリアントがありません。"
 
-#: lib/lettering/font.py:601
+#: lib/lettering/font.py:615
 msgid "Color Group"
 msgstr ""
 
@@ -5173,7 +5189,7 @@ msgstr "糸のパレットを変更すると、糸の名前やカタログ番号
 msgid "Yes"
 msgstr "はい"
 
-#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:96
+#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:97
 #: inx/inkstitch_letters_to_font.inx:57
 msgid "No"
 msgstr "いいえ"
@@ -5603,7 +5619,7 @@ msgstr ""
 #: inx/inkstitch_lettering_along_path.inx:35
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:34
-#: inx/inkstitch_lettering_generate_json.inx:150
+#: inx/inkstitch_lettering_generate_json.inx:151
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
 #: inx/inkstitch_letters_to_font.inx:75 inx/inkstitch_outline.inx:28
@@ -7167,122 +7183,126 @@ msgstr ""
 msgid "Font info"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:23
+#: inx/inkstitch_lettering_generate_json.inx:24
 msgid "Default variant"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:30
-msgid "Left to right"
+#: inx/inkstitch_lettering_generate_json.inx:24
+msgid "Default embroidery direction"
 msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:31
+msgid "Left to right"
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:32
 msgid "Right to left"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:37
+#: inx/inkstitch_lettering_generate_json.inx:38
 msgid "SVG Font File"
 msgstr "SVGフォントファイル"
 
-#: inx/inkstitch_lettering_generate_json.inx:81
+#: inx/inkstitch_lettering_generate_json.inx:82
 msgid "Default Glyph"
 msgstr "デフォルトのグリフ"
 
-#: inx/inkstitch_lettering_generate_json.inx:87
+#: inx/inkstitch_lettering_generate_json.inx:88
 msgid "Autoroute Satin"
 msgstr "サテンの自動ルート"
 
-#: inx/inkstitch_lettering_generate_json.inx:87
+#: inx/inkstitch_lettering_generate_json.inx:88
 msgid "Disable if you defined manual routing in your font."
 msgstr "フォントで手動ルーティングを定義した場合は無効にします。"
 
-#: inx/inkstitch_lettering_generate_json.inx:89
+#: inx/inkstitch_lettering_generate_json.inx:90
 msgid "If disabled back and forth stitching will not be possile for this font."
 msgstr "無効にすると、このフォントの前後のステッチはできなくなります。"
 
-#: inx/inkstitch_lettering_generate_json.inx:92
+#: inx/inkstitch_lettering_generate_json.inx:93
 msgid "If disabled color sorting will be disabled for this font. Color sorting needs color_sort_index indicators within the font."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:94
+#: inx/inkstitch_lettering_generate_json.inx:95
 msgid "Combine indices"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:94
+#: inx/inkstitch_lettering_generate_json.inx:95
 msgid "When color sorting, combine elements with this color indices (comma separated)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:95
+#: inx/inkstitch_lettering_generate_json.inx:96
 msgid "Force letter case"
 msgstr "大文字と小文字を強制する"
 
-#: inx/inkstitch_lettering_generate_json.inx:109
 #: inx/inkstitch_lettering_generate_json.inx:110
+#: inx/inkstitch_lettering_generate_json.inx:111
 msgid "Kerning"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:111
+#: inx/inkstitch_lettering_generate_json.inx:112
 msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them). If the kerning information cannot be found, these values will apply automatically."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:119
-#: inx/inkstitch_lettering_generate_json.inx:127
-#: inx/inkstitch_lettering_generate_json.inx:135
+#: inx/inkstitch_lettering_generate_json.inx:120
+#: inx/inkstitch_lettering_generate_json.inx:128
+#: inx/inkstitch_lettering_generate_json.inx:136
 msgid "Force"
 msgstr "力"
 
-#: inx/inkstitch_lettering_generate_json.inx:119
+#: inx/inkstitch_lettering_generate_json.inx:120
 msgid "Overwrite leading information from font file."
 msgstr "フォントファイルから先頭の情報を上書きします。"
 
-#: inx/inkstitch_lettering_generate_json.inx:121
+#: inx/inkstitch_lettering_generate_json.inx:122
 msgid "Leading (px)"
 msgstr "リーディング（px）"
 
-#: inx/inkstitch_lettering_generate_json.inx:121
+#: inx/inkstitch_lettering_generate_json.inx:122
 msgid "Line height (default: 100)"
 msgstr "行の高さ（デフォルト：100）"
 
-#: inx/inkstitch_lettering_generate_json.inx:127
+#: inx/inkstitch_lettering_generate_json.inx:128
 msgid "Overwrite word spacing information from font file."
 msgstr "フォントファイルから単語間隔情報を上書きします。"
 
-#: inx/inkstitch_lettering_generate_json.inx:129
+#: inx/inkstitch_lettering_generate_json.inx:130
 msgid "Word spacing (px)"
 msgstr "単語間隔（px）"
 
-#: inx/inkstitch_lettering_generate_json.inx:129
+#: inx/inkstitch_lettering_generate_json.inx:130
 msgid "Space character width (default: 20)"
 msgstr "スペース文字の幅（デフォルト：20）"
 
-#: inx/inkstitch_lettering_generate_json.inx:135
+#: inx/inkstitch_lettering_generate_json.inx:136
 msgid "Overwrite letter spacing information from font file."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:137
+#: inx/inkstitch_lettering_generate_json.inx:138
 msgid "Letter spacing (px)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:137
+#: inx/inkstitch_lettering_generate_json.inx:138
 msgid "Letter spacing (default: 100)"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:140
+#: inx/inkstitch_lettering_generate_json.inx:141
 msgid "Use glyph width"
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:140
+#: inx/inkstitch_lettering_generate_json.inx:141
 msgid "Use glyph width to define letter spacing."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:147
+#: inx/inkstitch_lettering_generate_json.inx:148
 msgid "Generates font.json which can be used by the lettering tool."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:148
+#: inx/inkstitch_lettering_generate_json.inx:149
 msgid "The generated file can be updated with Extensions > Ink/Stitch > Font Management > Edit JSON."
 msgstr ""
 
-#: inx/inkstitch_lettering_generate_json.inx:151
+#: inx/inkstitch_lettering_generate_json.inx:152
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
 msgstr ""
 
