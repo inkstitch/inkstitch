@@ -21,7 +21,7 @@ gui-text="Stitch length (mm)">3</param>
 
     <effect>
         <object-type>all</object-type>
-        <icon>{{ icon_path }}inx/cleanup_document.svg</icon>
+        <icon>{{ icon_path }}inx/cross_stitch.svg</icon>
         <menu-tip>Setup a cross stitch grid for a specified stitch length</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
