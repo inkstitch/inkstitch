@@ -890,6 +890,12 @@ class FillStitch(EmbroideryElement):
         start = self.get_starting_point(previous_stitch_group)
         final_end = self.get_ending_point(self.next_stitch(next_element))
 
+        if self.fill_method == 'cross_stitch':
+            # for cross stitch we can expand the shape before the fact,
+            # as we can say for sure that there is not going to a mess up with the underlay shapes
+            # and different expand values
+            stitch_groups.extend(self.do_cross_stitch(previous_stitch_group, start, final_end))
+
         # sort shapes to get a nicer routing
         shapes = list(self.shape.geoms)
         if start:
@@ -898,13 +904,17 @@ class FillStitch(EmbroideryElement):
             shapes.sort(key=lambda shape: shape.bounds[0])
 
         for i, shape in enumerate(shapes):
+            if self.fill_method == 'cross_stitch':
+                # we already created the cross stitch at this point
+                break
+
             start = self.get_starting_point(previous_stitch_group)
             if i < len(shapes) - 1:
                 end = nearest_points(shape, shapes[i+1])[0].coords
             else:
                 end = final_end
 
-            if self.fill_underlay and not self.fill_method == 'legacy_fill':
+            if self.fill_underlay and self.fill_method not in ['legacy_fill', 'cross_stitch']:
                 underlay_shapes = self.underlay_shape(shape)
                 for underlay_shape in underlay_shapes.geoms:
                     underlay_stitch_groups, start = self.do_underlay(underlay_shape, start)
@@ -918,8 +928,6 @@ class FillStitch(EmbroideryElement):
                     stitch_groups.extend(self.do_circular_fill(fill_shape, start, end))
                 elif self.fill_method == 'contour_fill':
                     stitch_groups.extend(self.do_contour_fill(fill_shape, start))
-                elif self.fill_method == 'cross_stitch':
-                    stitch_groups.extend(self.do_cross_stitch(fill_shape, start, end))
                 elif self.fill_method == 'guided_fill':
                     stitch_groups.extend(self.do_guided_fill(fill_shape, start, end))
                 elif self.fill_method == 'linear_gradient_fill':
@@ -1148,14 +1156,29 @@ class FillStitch(EmbroideryElement):
         )
         return [stitch_group]
 
-    def do_cross_stitch(self, shape, starting_point, ending_point):
-        stitch_group = StitchGroup(
-            color=self.color,
-            tags=("cross_stitch"),
-            stitches=cross_stitch(self, shape, starting_point, ending_point),
-            force_lock_stitches=self.force_lock_stitches,
-            lock_stitches=self.lock_stitches
-        )
+    def do_cross_stitch(self, previous_stitch_group, start, end):
+        fill_shapes = ensure_multi_polygon(make_valid(self.fill_shape(self.shape)))
+        fill_shapes = list(fill_shapes.geoms)
+        if start:
+            fill_shapes.sort(key=lambda shape: shape.distance(shgeo.Point(start)))
+        else:
+            fill_shapes.sort(key=lambda shape: shape.bounds[0])
+        final_end = end
+
+        for i, shape in enumerate(fill_shapes):
+            start = self.get_starting_point(previous_stitch_group)
+            if i < len(fill_shapes) - 1:
+                end = nearest_points(shape, fill_shapes[i+1])[0].coords
+            else:
+                end = final_end
+            stitch_group = StitchGroup(
+                color=self.color,
+                tags=("cross_stitch"),
+                stitches=cross_stitch(self, shape, start, end),
+                force_lock_stitches=self.force_lock_stitches,
+                lock_stitches=self.lock_stitches
+            )
+            previous_stitch_group = stitch_group
         return [stitch_group]
 
     def do_circular_fill(self, shape, starting_point, ending_point):
