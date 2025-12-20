@@ -222,6 +222,7 @@ def _lines_to_stitches(
         shape, path, travel_graph, fill_stitch_graph, stitch_length, snap_points, clamp
     )
     result = collapse_travel_edges(result)
+    result = filter_center_points(result, snap_points)
     result = _apply_bean_stitch_and_repeats(result, 1, bean_stitch_repeats)
     return result
 
@@ -323,14 +324,46 @@ def collapse_travel_edges(result):
     new_sitches = []
     last_travel_stitches = []
     for i, stitch in enumerate(result):
-        if 'auto_fill_travel' in stitch.tags:
-            if stitch in last_travel_stitches:
-                last_travel_stitches = last_travel_stitches[0:last_travel_stitches.index(stitch)]
-            last_travel_stitches.append(stitch)
-        else:
+        # cut travel loops off
+        if last_travel_stitches:
+            point = Point(stitch)
+            travel_multi_point = MultiPoint(last_travel_stitches)
+            if point.distance(travel_multi_point) < 0.011:
+                geoms = list(travel_multi_point.geoms)
+                point = snap(point, travel_multi_point, tolerance=0.012)
+                index = geoms.index(point)
+                last_travel_stitches = last_travel_stitches[0:index]
+        last_travel_stitches.append(stitch)
+        # add to stitches
+        if 'auto_fill_travel' not in stitch.tags:
             last_travel_stitches.append(stitch)
             new_sitches.extend(last_travel_stitches)
             last_travel_stitches = []
     if last_travel_stitches:
         new_sitches.extend(last_travel_stitches)
     return new_sitches
+
+
+def filter_center_points(stitches, center_points):
+    filtered_stitches = []
+    last_was_center = False
+    for stitch in stitches:
+        if 'auto_fill_travel' not in stitch.tags:
+            filtered_stitches.append(stitch)
+        else:
+            point = Point(stitch)
+            if point.distance(center_points) == 0:
+                last_was_center = True
+                filtered_stitches.append(stitch)
+            else:
+                if last_was_center and len(filtered_stitches) > 2:
+                    last_stitch = InkstitchPoint(*filtered_stitches[-2])
+                    center = InkstitchPoint(*filtered_stitches[-1])
+                    point = InkstitchPoint(*stitch)
+                    segment1 = (last_stitch-center).unit()
+                    segment2 = (center-point).unit()
+                    if isclose(segment1[0], segment2[0], abs_tol=0.011) and isclose(segment1[1], segment2[1], abs_tol=0.011):
+                        filtered_stitches = filtered_stitches[:-1]
+                filtered_stitches.append(stitch)
+                last_was_center = False
+    return filtered_stitches
