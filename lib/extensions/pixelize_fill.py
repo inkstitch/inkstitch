@@ -30,7 +30,18 @@ class PixelizeFill(InkstitchExtension):
 
         for element in self.elements:
             if element.name == "FillStitch":
-                element_id = element.node.get_id()
+                node = element.node
+                element_id = node.get_id()
+
+                # Covert non-path elemnts to pah elements
+                if node.tag_name != "pah":
+                    new_path = node.to_path_element()
+                    node_parent = node.getparent()
+                    node_index = node_parent.index(node)
+                    node_parent.insert(node_index, new_path)
+                else:
+                    new_path = node.duplicate()
+
                 pixelated_outline = self.pixelize_element(element)
                 for polygon in pixelated_outline.geoms:
                     path = Path(list(polygon.exterior.coords))
@@ -40,11 +51,12 @@ class PixelizeFill(InkstitchExtension):
                         interior_path.close()
                         path += interior_path
 
-                    new_element = element.node.duplicate()
+                    new_element = new_path.duplicate()
                     new_element.set('d', str(path))
                     new_element.set('id', self.svg.get_unique_id(f'{element_id}_'))
-                    new_element.transform @= get_correction_transform(element.node)
-            element.node.delete()
+                    new_element.transform @= get_correction_transform(node)
+                new_path.delete()
+            node.delete()
 
     def pixelize_element(self, element):
         stitch_length = self.options.stitch_length * PIXELS_PER_MM
