@@ -18,7 +18,8 @@ from ..debug.debug import debug
 from ..stitch_plan import Stitch
 from ..utils.clamp_path import clamp_path_to_polygon
 from ..utils.geometry import Point as InkstitchPoint
-from ..utils.geometry import ensure_multi_line_string, reverse_line_string
+from ..utils.geometry import (ensure_multi_line_string, ensure_multi_point,
+                              reverse_line_string)
 from ..utils.threading import check_stop_flag
 from .auto_fill import (add_edges_between_outline_nodes,
                         build_fill_stitch_graph, fallback, find_stitch_path,
@@ -30,7 +31,7 @@ from .circular_fill import _apply_bean_stitch_and_repeats
 @debug.time
 def cross_stitch(fill, shape, starting_point, ending_point):
     stitch_length = fill.max_stitch_length
-    cross_diagonals1, cross_diagonals2, vertical, boxes, scaled_boxes, center_points, travel_edges = get_cross_geomteries(
+    cross_diagonals1, cross_diagonals2, vertical, boxes, scaled_boxes, snap_points, travel_edges = get_cross_geomteries(
         shape, stitch_length, fill.cross_coverage
     )
 
@@ -47,32 +48,42 @@ def cross_stitch(fill, shape, starting_point, ending_point):
             return cross_stitch_multiple(outline, fill, starting_point, ending_point)
         clamp = True
 
-    diagnoals1 = ensure_multi_line_string(line_merge(MultiLineString(cross_diagonals1)))
-    diagnoals2 = ensure_multi_line_string(line_merge(MultiLineString(cross_diagonals2)))
-    verticals = ensure_multi_line_string(line_merge(MultiLineString(vertical)))
-
-    nodes = get_line_endpoints(diagnoals2)
-    nodes.extend(get_line_endpoints(diagnoals1))
-    nodes.extend(get_line_endpoints(verticals))
-
     # used for snapping
-    center_points = MultiPoint(center_points)
+    center_points = MultiPoint(snap_points[0])
+    snap_points = MultiPoint(snap_points[0] + snap_points[1])
 
+    diagonals1 = ensure_multi_line_string(line_merge(MultiLineString(cross_diagonals1)))
+    diagonals2 = ensure_multi_line_string(line_merge(MultiLineString(cross_diagonals2)))
+    verticals = ensure_multi_line_string(line_merge(MultiLineString(vertical)))
     travel_edges = ensure_multi_line_string(line_merge(MultiLineString(travel_edges)))
-    starting_point, ending_point = get_start_and_end(starting_point, ending_point, travel_edges)
+
+    # we might have enlarged our outline to connect even crosses which only touch at one corner
+    # therefore it is necessary to adjust our geometries to the new outline
+    if clamp:
+        diagonals1 = ensure_multi_line_string(snap(diagonals1, outline, tolerance=0.000001))
+        diagonals2 = ensure_multi_line_string(snap(diagonals2, outline, tolerance=0.000001))
+        verticals = ensure_multi_line_string(snap(verticals, outline, tolerance=0.000001))
+        travel_edges = ensure_multi_line_string(snap(travel_edges, outline, tolerance=0.000001))
+        snap_points = ensure_multi_point(snap(snap_points, outline, tolerance=0.000001))
     travel_edges = list(travel_edges.geoms)
 
+    nodes = get_line_endpoints(diagonals2)
+    nodes.extend(get_line_endpoints(diagonals1))
+    nodes.extend(get_line_endpoints(verticals))
+
+    starting_point, ending_point = get_start_and_end(starting_point, ending_point, snap_points)
+
     if fill.flip_layers:
-        diagnoals2, diagnoals1 = diagnoals1, diagnoals2
+        diagonals2, diagonals1 = diagonals1, diagonals2
 
     stitches = _lines_to_stitches(
-        diagnoals1, travel_edges, outline, stitch_length, fill.bean_stitch_repeats,
+        diagonals1, travel_edges, outline, stitch_length, fill.bean_stitch_repeats,
         starting_point, ending_point, nodes, center_points, clamp
     )
     starting_point = InkstitchPoint(*stitches[-1])
     stitches.extend(
         _lines_to_stitches(
-            diagnoals2, travel_edges, outline, stitch_length, fill.bean_stitch_repeats,
+            diagonals2, travel_edges, outline, stitch_length, fill.bean_stitch_repeats,
             starting_point, ending_point, nodes, center_points, clamp
         )
     )
@@ -98,11 +109,11 @@ def cross_stitch_multiple(outline, fill, starting_point, ending_point):
     return stitches
 
 
-def get_start_and_end(starting_point, ending_point, travel_edges):
+def get_start_and_end(starting_point, ending_point, snap_points):
     if starting_point is not None:
-        starting_point = nearest_points(travel_edges, Point(starting_point))[0].coords
+        starting_point = nearest_points(snap_points, Point(starting_point))[0].coords
     if ending_point is not None:
-        ending_point = nearest_points(travel_edges, Point(ending_point))[0].coords
+        ending_point = nearest_points(snap_points, Point(ending_point))[0].coords
     return starting_point, ending_point
 
 
@@ -132,7 +143,7 @@ def get_cross_geomteries(shape, stitch_length, coverage):
     vertical = []
     boxes = []
     scaled_boxes = []
-    center_points = []
+    snap_points = [[], []]
     travel_edges = []
 
     y = adapted_miny
@@ -141,26 +152,31 @@ def get_cross_geomteries(shape, stitch_length, coverage):
         while x <= adapted_maxx:
             box = translate(square, x, y)
             if shape.contains(box):
-                travel_edges, boxes, scaled_boxes, center_points, cross_diagonals1, cross_diagonals2, vertical = add_cross(
-                    box, scaled_boxes, center_points, cross_diagonals1, cross_diagonals2, vertical, boxes, travel_edges
+                travel_edges, boxes, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2, vertical = add_cross(
+                    box, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2, vertical, boxes, travel_edges
                 )
             elif shape.intersects(box):
                 intersection = box.intersection(shape)
                 intersection_area = intersection.area
                 if intersection_area / full_square_area * 100 > coverage:
-                    travel_edges, boxes, scaled_boxes, center_points, cross_diagonals1, cross_diagonals2, vertical = add_cross(
-                        box, scaled_boxes, center_points, cross_diagonals1, cross_diagonals2, vertical, boxes, travel_edges
+                    travel_edges, boxes, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2, vertical = add_cross(
+                        box, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2, vertical, boxes, travel_edges
                     )
             x += square_size
         y += square_size
         check_stop_flag()
-    return cross_diagonals1, cross_diagonals2, vertical, boxes, scaled_boxes, center_points, travel_edges
+    return cross_diagonals1, cross_diagonals2, vertical, boxes, scaled_boxes, snap_points, travel_edges
 
 
-def add_cross(box, scaled_boxes, center_points, cross_diagonals1, cross_diagonals2, vertical, boxes, travel_edges):
+def add_cross(box, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2, vertical, boxes, travel_edges):
     minx, miny, maxx, maxy = box.bounds
     center = box.centroid
-    center_points.append(center)
+    snap_points[0].append(center)
+    snap_points[1].append((minx, miny))
+    snap_points[1].append((minx, maxy))
+    snap_points[1].append((maxx, miny))
+    snap_points[1].append((maxx, maxy))
+
     cross_diagonals1.append(LineString([(minx, miny), (maxx, maxy)]))
     cross_diagonals2.append(LineString([(maxx, miny), (minx, maxy)]))
     vertical.append(LineString([(maxx, miny), (maxx, maxy)]))
@@ -176,15 +192,15 @@ def add_cross(box, scaled_boxes, center_points, cross_diagonals1, cross_diagonal
 
     boxes.append(box)
     # scaling the outline allows us to connect otherwise unconnected boxes
-    box = scale(box, xfact=1.000000000000001, yfact=1.000000000000001)
+    box = scale(box, xfact=1.0000000000001, yfact=1.0000000000001)
     scaled_boxes.append(box)
 
-    return travel_edges, boxes, scaled_boxes, center_points, cross_diagonals1, cross_diagonals2, vertical
+    return travel_edges, boxes, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2, vertical
 
 
 def _lines_to_stitches(
         line_geoms, travel_edges, shape, stitch_length,
-        bean_stitch_repeats, starting_point, ending_point, nodes, center_points, clamp):
+        bean_stitch_repeats, starting_point, ending_point, nodes, snap_points, clamp):
     segments = []
     for line in line_geoms.geoms:
         segments.append(list(line.coords))
@@ -203,31 +219,36 @@ def _lines_to_stitches(
     graph_make_valid(travel_graph)
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point, False)
     result = path_to_stitches(
-        shape, path, travel_graph, fill_stitch_graph, stitch_length, center_points, clamp
+        shape, path, travel_graph, fill_stitch_graph, stitch_length, snap_points, clamp
     )
     result = collapse_travel_edges(result)
     result = _apply_bean_stitch_and_repeats(result, 1, bean_stitch_repeats)
     return result
 
 
-def collapse_travel_edges(result):
-    new_sitches = []
-    last_travel_stitches = []
-    for i, stitch in enumerate(result):
-        if 'auto_fill_travel' in stitch.tags:
-            if stitch in last_travel_stitches:
-                last_travel_stitches = last_travel_stitches[0:last_travel_stitches.index(stitch)]
-            last_travel_stitches.append(stitch)
-        else:
-            last_travel_stitches.append(stitch)
-            new_sitches.extend(last_travel_stitches)
-            last_travel_stitches = []
-    if last_travel_stitches:
-        new_sitches.extend(last_travel_stitches)
-    return new_sitches
+def build_travel_graph(fill_stitch_graph, shape, travel_edges, nodes):
+    """Build a graph for travel stitches.
+    """
+    graph = networkx.MultiGraph()
+
+    # Add all the nodes from the main graph.  This will be all of the endpoints
+    # of the rows of stitches.  Every node will be on the outline of the shape.
+    # They'll all adiagonals1eady have their `outline` and `projection` tags set.
+    graph.add_nodes_from(fill_stitch_graph.nodes(data=True))
+
+    # This will ensure that a path traveling inside the shape can reach its
+    # target on the outline, which will be one of the points added above.
+    tag_nodes_with_outline_and_projection(graph, shape, nodes)
+    add_edges_between_outline_nodes(graph, duplicate_every_other=True)
+
+    process_travel_edges(graph, fill_stitch_graph, shape, travel_edges)
+
+    debug.log_graph(graph, "travel graph")
+
+    return graph
 
 
-def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, stitch_length, center_points, clamp):
+def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, stitch_length, snap_points, clamp):
     stitches = []
     if not path[0].is_segment():
         stitches.append(Stitch(*path[0].nodes[0]))
@@ -246,12 +267,12 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, stitch_length
             if fill_stitch_graph.has_edge(edge[0], edge[1], key='segment'):
                 travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(shape, travel_graph, edge, center_points, stitch_length, clamp))
+            stitches.extend(travel(shape, travel_graph, edge, snap_points, stitch_length, clamp))
 
     return stitches
 
 
-def travel(shape, travel_graph, edge, center_points, stitch_length, clamp=True):
+def travel(shape, travel_graph, edge, snap_points, stitch_length, clamp=True):
     """Create stitches to get from one point on an outline of the shape to another."""
 
     start, end = edge
@@ -267,7 +288,7 @@ def travel(shape, travel_graph, edge, center_points, stitch_length, clamp=True):
         # Simply return nothing as we do not want to error out
         return []
 
-    if len(path) > 1 and clamp:
+    if len(path) > 1:
         path = clamp_path_to_polygon(path, shape)
 
     stitches = []
@@ -289,8 +310,8 @@ def travel(shape, travel_graph, edge, center_points, stitch_length, clamp=True):
                 center_point = point1
             else:
                 center_point = Point(center[1])
-                # snap to avoid issues with collapsing travel paths due to floating point inaccuracies
-            center_point = snap(center_point, center_points, tolerance=0.01)
+            # snap to avoid issues with collapsing travel paths due to floating point inaccuracies
+            center_point = Point(nearest_points(center_point, snap_points)[1].coords)
             stitches.append(Stitch(center_point, tags=["auto_fill_travel"]))
         stitches.append(Stitch(*point, tags=["auto_fill_travel"]))
         last_point = point
@@ -298,23 +319,18 @@ def travel(shape, travel_graph, edge, center_points, stitch_length, clamp=True):
     return stitches
 
 
-def build_travel_graph(fill_stitch_graph, shape, travel_edges, nodes):
-    """Build a graph for travel stitches.
-    """
-    graph = networkx.MultiGraph()
-
-    # Add all the nodes from the main graph.  This will be all of the endpoints
-    # of the rows of stitches.  Every node will be on the outline of the shape.
-    # They'll all adiagnoals1eady have their `outline` and `projection` tags set.
-    graph.add_nodes_from(fill_stitch_graph.nodes(data=True))
-
-    # This will ensure that a path traveling inside the shape can reach its
-    # target on the outline, which will be one of the points added above.
-    tag_nodes_with_outline_and_projection(graph, shape, nodes)
-    add_edges_between_outline_nodes(graph, duplicate_every_other=True)
-
-    process_travel_edges(graph, fill_stitch_graph, shape, travel_edges)
-
-    debug.log_graph(graph, "travel graph")
-
-    return graph
+def collapse_travel_edges(result):
+    new_sitches = []
+    last_travel_stitches = []
+    for i, stitch in enumerate(result):
+        if 'auto_fill_travel' in stitch.tags:
+            if stitch in last_travel_stitches:
+                last_travel_stitches = last_travel_stitches[0:last_travel_stitches.index(stitch)]
+            last_travel_stitches.append(stitch)
+        else:
+            last_travel_stitches.append(stitch)
+            new_sitches.extend(last_travel_stitches)
+            last_travel_stitches = []
+    if last_travel_stitches:
+        new_sitches.extend(last_travel_stitches)
+    return new_sitches
