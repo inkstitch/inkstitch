@@ -10,7 +10,7 @@ It will make it easy to run tests and compase versions
 
 ## Setup Ink/Stitch menu files
 
-To achieve the installation if multiple Ink/Stitch versions the Inkscape menu files need a distinct ID.
+To install multiple Ink/Stitch versions the Inkscape menu files need a distinct ID.
 
 Here's an example of how to use two Ink/Stitch extensions:
 
