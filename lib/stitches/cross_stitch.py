@@ -70,13 +70,10 @@ def cross_stitch(fill, shape, starting_point, ending_point):
         y += square_size
         check_stop_flag()
 
-    if not crosses_lr:
+    if not boxes:
         return []
 
-    lr = ensure_multi_line_string(line_merge(MultiLineString(crosses_lr)))
-    rl = ensure_multi_line_string(line_merge(MultiLineString(crosses_rl)))
-    v = ensure_multi_line_string(line_merge(MultiLineString(vertical)))
-
+    # Fix outline
     clamp = False
     outline = unary_union(boxes)
     if outline.geom_type == 'MultiPolygon':
@@ -86,23 +83,27 @@ def cross_stitch(fill, shape, starting_point, ending_point):
             return cross_stitch_multiple(outline, fill, starting_point, ending_point)
         clamp = True
 
-    # used for snapping
-    center_points = MultiPoint(center_points)
-
-    travel_edges = list(ensure_multi_line_string(line_merge(MultiLineString(travel_edges))).geoms)
+    lr = ensure_multi_line_string(line_merge(MultiLineString(crosses_lr)))
+    rl = ensure_multi_line_string(line_merge(MultiLineString(crosses_rl)))
+    v = ensure_multi_line_string(line_merge(MultiLineString(vertical)))
 
     nodes = get_line_endpoints(rl)
     nodes.extend(get_line_endpoints(lr))
     nodes.extend(get_line_endpoints(v))
 
+    # used for snapping
+    center_points = MultiPoint(center_points)
+
+    travel_edges = ensure_multi_line_string(line_merge(MultiLineString(travel_edges)))
+
     check_stop_flag()
+
+    starting_point, ending_point = get_start_and_end(starting_point, ending_point, travel_edges)
+
+    travel_edges = list(travel_edges.geoms)
 
     if fill.flip_layers:
         rl, lr, crosses_rl, crosses_lr = lr, rl, crosses_lr, crosses_rl
-
-    starting_point, ending_point = get_start_and_end(
-        fill.max_stitch_length, starting_point, ending_point, MultiLineString(crosses_lr), MultiLineString(crosses_rl)
-    )
 
     stitches = _lines_to_stitches(
         lr, travel_edges, outline, stitch_length, fill.bean_stitch_repeats,
@@ -125,6 +126,7 @@ def cross_stitch_multiple(outline, fill, starting_point, ending_point):
         shapes.sort(key=lambda shape: shape.distance(Point(starting_point)))
     else:
         shapes.sort(key=lambda shape: shape.bounds[0])
+
     stitches = []
     for i, polygon in enumerate(shapes):
         if i < len(shapes) - 1:
@@ -136,11 +138,11 @@ def cross_stitch_multiple(outline, fill, starting_point, ending_point):
     return stitches
 
 
-def get_start_and_end(stitch_length, starting_point, ending_point, lr, rl):
+def get_start_and_end(starting_point, ending_point, travel_edges):
     if starting_point is not None:
-        starting_point = snap(Point(starting_point), lr, tolerance=stitch_length).coords
+        starting_point = nearest_points(travel_edges, Point(starting_point))[0].coords
     if ending_point is not None:
-        ending_point = snap(Point(ending_point), rl, tolerance=stitch_length).coords
+        ending_point = nearest_points(travel_edges, Point(ending_point))[0].coords
     return starting_point, ending_point
 
 
