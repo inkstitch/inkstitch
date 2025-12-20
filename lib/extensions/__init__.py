@@ -13,6 +13,7 @@ from .batch_lettering import BatchLettering
 from .break_apart import BreakApart
 from .cleanup import Cleanup
 from .commands_scale_symbols import CommandsScaleSymbols
+from .cross_stitch_grid import CrossStitchGrid
 from .cut_satin import CutSatin
 from .cutwork_segmentation import CutworkSegmentation
 from .density_map import DensityMap
@@ -36,10 +37,10 @@ from .lettering import Lettering
 from .lettering_along_path import LetteringAlongPath
 from .lettering_custom_font_dir import LetteringCustomFontDir
 from .lettering_edit_json import LetteringEditJson
-from .lettering_organize_glyphs import LetteringOrganizeGlyphs
 from .lettering_font_sample import LetteringFontSample
 from .lettering_force_lock_stitches import LetteringForceLockStitches
 from .lettering_generate_json import LetteringGenerateJson
+from .lettering_organize_glyphs import LetteringOrganizeGlyphs
 from .lettering_remove_kerning import LetteringRemoveKerning
 from .lettering_set_color_sort_index import LetteringSetColorSortIndex
 from .lettering_svg_font_to_layers import LetteringSvgFontToLayers
@@ -92,6 +93,7 @@ extensions = [
     BreakApart,
     Cleanup,
     CommandsScaleSymbols,
+    CrossStitchGrid,
     CutSatin,
     CutworkSegmentation,
     DensityMap,

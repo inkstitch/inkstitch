@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Setup Cross Stitch Grid</name>
+    <id>org.{{ id_inkstitch }}.cross_stitch_grid</id>
+    <param name="extension" type="string" gui-hidden="true">cross_stitch_grid</param>
+
+    <param name="notebook" type="notebook">
+        <page name="options" gui-text="Options">
+            <param name="stitch_length" type="float" precision="2" min="0.1" max="100"
+gui-text="Stitch length (mm)">3</param>
+            <param name="color" type="color" gui-text="Color" appearance="colorbutton">0x00d9e5ff</param>
+            <param name="delete" type="bool" gui-text="Remove previous cross stitch grids">true</param>
+        </page>
+        <page name="info" gui-text="Help">
+            <label>Use this extension to create grid lines suited for cross stitching.</label>
+            <spacer />
+            <label>More information on our website</label>
+            <label appearance="url">https://inkstitch.org/docs/fill-tools//#setup-cross-stitch-grid</label>
+        </page>
+    </param>
+
+    <effect>
+        <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/cross_stitch.svg</icon>
+        <menu-tip>Setup a cross stitch grid for a specified stitch length</menu-tip>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Tools: Fill" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
