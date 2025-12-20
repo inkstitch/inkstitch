@@ -52,6 +52,7 @@ from .output import Output
 from .palette_split_text import PaletteSplitText
 from .palette_to_text import PaletteToText
 from .params import Params
+from .pixelize_fill import PixelizeFill
 from .png_realistic import PngRealistic
 from .png_simple import PngSimple
 from .preferences import Preferences
@@ -117,10 +118,10 @@ extensions = [
     LetteringAlongPath,
     LetteringCustomFontDir,
     LetteringEditJson,
-    LetteringOrganizeGlyphs,
     LetteringFontSample,
     LetteringForceLockStitches,
     LetteringGenerateJson,
+    LetteringOrganizeGlyphs,
     LetteringRemoveKerning,
     LetteringSetColorSortIndex,
     LetteringSvgFontToLayers,
@@ -132,6 +133,7 @@ extensions = [
     PaletteSplitText,
     PaletteToText,
     Params,
+    PixelizeFill,
     PngRealistic,
     PngSimple,
     Preferences,
