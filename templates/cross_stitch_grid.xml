@@ -25,7 +25,9 @@ gui-text="Stitch length (mm)">3</param>
         <menu-tip>Setup a cross stitch grid for a specified stitch length</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
-                <submenu name="Tools: Fill" />
+                <submenu name="Tools: Fill">
+                    <submenu name="Cross stitch" />
+                </submenu>
             </submenu>
         </effects-menu>
     </effect>
