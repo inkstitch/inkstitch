@@ -7,9 +7,9 @@
     <param name="notebook" type="notebook">
         <page name="options" gui-text="Options">
             <param name="box_size_x" type="float" precision="2" min="0.1" max="100"
-                   gui-text="Box Size X">3</param>
+                   gui-text="Cross Size X">3</param>
             <param name="box_size_y" type="float" precision="2" min="0.1" max="100"
-                   gui-text="Box Size Y">3</param>
+                   gui-text="Cross Size Y">3</param>
             <param name="color" type="color" gui-text="Color" appearance="colorbutton">0x00d9e5ff</param>
             <param name="delete" type="bool" gui-text="Remove previous cross stitch grids">true</param>
         </page>

@@ -3,8 +3,6 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from math import sqrt
-
 from inkex import Path, errormsg
 from shapely import make_valid, prepare, unary_union
 from shapely.affinity import scale, translate
@@ -20,7 +18,8 @@ class PixelizeFill(InkstitchExtension):
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--notebook")
-        self.arg_parser.add_argument("-s", "--stitch_length", type=float, default=3, dest="stitch_length")
+        self.arg_parser.add_argument("-x", "--box_size_x", dest="box_size_x", type=float, default=3)
+        self.arg_parser.add_argument("-y", "--box_size_y", dest="box_size_y", type=float, default=3)
         self.arg_parser.add_argument("-c", "--coverage", type=int, default=50, dest="coverage")
 
     def effect(self):
@@ -59,21 +58,21 @@ class PixelizeFill(InkstitchExtension):
             node.delete()
 
     def pixelize_element(self, element):
-        stitch_length = self.options.stitch_length * PIXELS_PER_MM
+        box_x = self.options.box_size_x * PIXELS_PER_MM
+        box_y = self.options.box_size_y * PIXELS_PER_MM
         fill_shapes = ensure_multi_polygon(make_valid(element.fill_shape(element.shape)))
         fill_shapes = list(fill_shapes.geoms)
         boxes = []
         for shape in fill_shapes:
-            square_size = stitch_length / sqrt(2)  # 45° angle
-            square = Polygon([(0, 0), (square_size, 0), (square_size, square_size), (0, square_size)])
+            square = Polygon([(0, 0), (box_x, 0), (box_x, box_y), (0, box_y)])
             full_square_area = square.area
 
             # start and end have to be a multiple of the stitch length
             minx, miny, maxx, maxy = shape.bounds
-            adapted_minx = minx - minx % square_size
-            adapted_miny = miny - miny % square_size
-            adapted_maxx = maxx + square_size - maxx % square_size
-            adapted_maxy = maxy + square_size - maxy % square_size
+            adapted_minx = minx - minx % box_x
+            adapted_miny = miny - miny % box_y
+            adapted_maxx = maxx + box_x - maxx % box_x
+            adapted_maxy = maxy + box_y - maxy % box_y
             prepare(shape)
 
             y = adapted_miny
@@ -90,8 +89,8 @@ class PixelizeFill(InkstitchExtension):
                         intersection_area = intersection.area
                         if intersection_area / full_square_area * 100 > self.options.coverage:
                             boxes.append(box)
-                    x += square_size
-                y += square_size
+                    x += box_x
+                y += box_y
 
         outline = make_valid(unary_union(boxes)).simplify(0.1)
         return ensure_multi_polygon(outline)

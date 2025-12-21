@@ -37,9 +37,9 @@ class CrossStitchGrid(InkstitchExtension):
 
         # insert new grid
         scale = self.svg.inkscape_scale
-        box_size_x = self.options.box_size_x / sqrt(2) / scale
+        box_size_x = self.options.box_size_x / scale
         box_size_x = convert_unit(f'{box_size_x}mm', unit)
-        box_size_y = self.options.box_size_y / sqrt(2) / scale
+        box_size_y = self.options.box_size_y / scale
         box_size_y = convert_unit(f'{box_size_y}mm', unit)
         grid = Grid(attrib={
             "id": grid_id,
