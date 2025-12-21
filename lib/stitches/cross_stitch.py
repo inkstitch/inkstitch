@@ -278,14 +278,6 @@ def _lines_to_stitches(
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, travel_edges, nodes, underpath)
 
-    if not networkx.is_connected(travel_graph):
-        # Fixup unconnected graphs.
-        # TODO: This may happen especially with the upright crosses. They may need to be fixed somehow.
-        largest_component = max(networkx.connected_components(travel_graph), key=len)
-        travel_graph = travel_graph.subgraph(largest_component).copy()
-        debug.log_graph(travel_graph, "fixed_travel_graph")
-    graph_make_valid(travel_graph)
-
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point, False)
     result = path_to_stitches(
         shape, path, travel_graph, fill_stitch_graph,
