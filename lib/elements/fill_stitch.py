@@ -739,17 +739,32 @@ class FillStitch(EmbroideryElement):
     @property
     @param(
         'pattern_size_mm',
-        _('Pattern size (X Y)'),
+        _('Pattern size'),
         tooltip=_('Cross stitch pattern size in mm, x and y values are separated by a space. '
                   'Only one input value returns a square pattern.'),
         select_items=[('fill_method', 'cross_stitch')],
-        unit=_('mm'),
+        unit=_('mm (x y)'),
         type='float',
         default=3,
         sort_index=10)
     @cache
     def pattern_size(self):
         return np.maximum(self.get_split_mm_param_as_px("pattern_size_mm", (3, 3)), 0.1 * PIXELS_PER_MM)
+
+    @property
+    @param(
+        'cross_offset_mm',
+        _('Cross Grid Offset'),
+        tooltip=_('Cross stitch pattern offset in mm. X and Y values are separated by a space. '
+                  'Only one input value offsets the pattern evenly for x and y.'),
+        select_items=[('fill_method', 'cross_stitch')],
+        unit=_('mm (x y)'),
+        type='float',
+        default=0,
+        sort_index=11)
+    @cache
+    def cross_offset(self):
+        return np.maximum(self.get_split_mm_param_as_px("cross_offset_mm", (0, 0)), 0)
 
     @property
     @param(
@@ -760,7 +775,7 @@ class FillStitch(EmbroideryElement):
         default="50",
         unit='%',
         select_items=[('fill_method', 'cross_stitch')],
-        sort_index=11
+        sort_index=12
     )
     def fill_coverage(self):
         return max(1, self.get_int_param("fill_coverage", 50))
@@ -781,7 +796,7 @@ class FillStitch(EmbroideryElement):
            default=0,
            options=_cross_stitch_options,
            select_items=[('fill_method', 'cross_stitch')],
-           sort_index=12)
+           sort_index=13)
     def cross_stitch_method(self):
         return self.get_param('cross_stitch_method', 'simple cross')
 

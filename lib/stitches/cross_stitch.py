@@ -1,6 +1,6 @@
 # Authors: see git history
 #
-# Copyright (c) 2010 Authors
+# Copyright (c) 2025 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 # -*- coding: UTF-8 -*-
@@ -39,7 +39,7 @@ def cross_stitch(fill, shape, starting_point, ending_point):
     '''
     max_stitch_length = fill.max_cross_stitch_length
     cross_diagonals1, cross_diagonals2, boxes, scaled_boxes, snap_points, travel_edges, = get_cross_geomteries(
-        shape, fill.pattern_size, fill.fill_coverage
+        shape, fill.pattern_size, fill.fill_coverage, fill.cross_offset
     )
     if not boxes:
         return []
@@ -155,7 +155,7 @@ def get_line_endpoints(multilinestring):
     return nodes
 
 
-def get_cross_geomteries(shape, box_size, coverage):
+def get_cross_geomteries(shape, box_size, coverage, offset):
     '''Generates data for cross stitch geometry, including:
 
        boxes:                   a list of box shaped polygons. The outlines for each cross.
@@ -176,13 +176,15 @@ def get_cross_geomteries(shape, box_size, coverage):
                                 2. the four corners of each box
     '''
     box_x, box_y = box_size
+    offset_x, offset_y = offset
     square = Polygon([(0, 0), (box_x, 0), (box_x, box_y), (0, box_y)])
     full_square_area = square.area
 
     # start and end have to be a multiple of the stitch length
+    # we also add the initial offset
     minx, miny, maxx, maxy = shape.bounds
-    adapted_minx = minx - minx % box_x
-    adapted_miny = miny - miny % box_y
+    adapted_minx = minx - minx % box_x - offset_x
+    adapted_miny = miny - miny % box_y + offset_y
     adapted_maxx = maxx + box_x - maxx % box_x
     adapted_maxy = maxy + box_y - maxy % box_y
     prepare(shape)

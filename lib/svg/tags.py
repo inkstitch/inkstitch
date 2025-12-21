@@ -114,6 +114,7 @@ inkstitch_attribs = [
     'fill_coverage',
     'cross_stitch_method',
     'max_cross_stitch_length_mm',
+    'cross_offset_mm',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',
