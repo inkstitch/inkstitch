@@ -1,18 +1,18 @@
 ---
 title: "Stitch Library"
 permalink: /docs/stitch-library/
-last_modified_at: 2024-12-02
+last_modified_at: 2025-12-20
 toc: true
 ---
-Ink/Stitch stitch types can be roughly divided into three sections: stroke, satin and fill.
+A stitch type describes how Ink/Stitch turns paths and shapes into embroidery. Different stitch types produce different textures, thickness, and coverage, so the stitch type you choose changes how outlines, lettering, and filled areas look on fabric.
 
 ## Stroke
 
-Stroke stitches can be used for: outlines, line art embroidery or to add details into your design.
+Stroke stitches can be used for outlines, line art  or to add small details.
 
 ### Running Stitch
 
-Running stitch produces a series of small stitches following a line or curve.
+Running stitch creates small stitches that follow a line or curve.
 
 ![Running Stitch Detail](/assets/images/docs/running-stitch-detail.jpg)
 
@@ -20,7 +20,7 @@ Running stitch produces a series of small stitches following a line or curve.
 
 ### Bean Stitch
 
-Bean stitch describes a repetition of running stitches back and forth. This would result in thicker threading.
+Bean stitch creates repeating stitches which creates a thicker line.
 
 ![Bean Stitch Detail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
 
@@ -28,7 +28,7 @@ Bean stitch describes a repetition of running stitches back and forth. This woul
 
 ### Manual Stitch
 
-In manual stitch mode Ink/Stitch will use each node of a path as a needle penetration point, exactly as you placed them.
+Manual stitch creates stitches using each node of a path as a needle penetration point.
 
 ![Manual Stitch Detail](/assets/images/docs/manual-stitch-detail.png)
 
@@ -36,7 +36,7 @@ In manual stitch mode Ink/Stitch will use each node of a path as a needle penetr
 
 ### Ripple Stitch
 
-Ripple stitch is a versatile stitch type that stretches over a surface in spirals, rows of lines or even grids.
+Ripple stitch creates a pattern of stitches in sprirals, rows, or grids.
 
 ![Ripple Stitch](/assets/images/docs/ripplefly.jpg)
 
@@ -44,7 +44,7 @@ Ripple stitch is a versatile stitch type that stretches over a surface in spiral
 
 ### Zig-Zag Stitch
 
-Zig-Zag stitches are a very basic option to create a simple zig-zag line. We recommend to use them only for straight lines, because they will not stitch nicely around edges. In most cases, you would prefer a satin column instead.
+Zigzag stitch creates simple zigzag stitches. It works best on straight lines, since corners and tight curves stitch poorly. For most designs, a satin column is a better choice.
 
 ![Zigzag Stitch Detail](/assets/images/docs/zigzag-stitch-detail.png)
 
@@ -64,7 +64,7 @@ Ink/Stitch will draw zig-zags back and forth between two lines, while you can va
 
 ### E-Stitch
 
-The biggest purpose for E-stitch is a simple but strong cover stitch for applique items. Mainly for baby cloths as their skin tends to be more sensitive.
+E-stitch is a simple but strong stitch used to hold appliques. Because this is not as thick of a stitch (unlike satin) it is used for or baby clothes as their skin tends to be more sensitive.
 
 ![E-Stitch Detail](/assets/images/docs/e-stitch-detail.jpg)
 
@@ -72,7 +72,7 @@ The biggest purpose for E-stitch is a simple but strong cover stitch for appliqu
 
 ### S-Stitch
 
-“S-Stitch” is a satin column that looks like a curvy fill.
+S-Stitch is a satin column that looks like a curvy fill stitch.
 
 ![S-Stitch sample](/assets/images/docs/s-stitch-detail.png)
 
@@ -80,17 +80,19 @@ The biggest purpose for E-stitch is a simple but strong cover stitch for appliqu
 
 ### Zigzag Satin
 
-“Zigzag “ is a satin column that looks like a better version of the zigzag stitch (stroke).
+Zigzag is a satin column that looks like a cleaner version of the zigzag stitch.
 
 ![Zizag Sample](/assets/images/docs/en/compare-satin-zigzag.png)
 
 [Learn more](/docs/stitches/zigzag-satin-stitch/){: .btn .btn--primary}
 
 ## Fill
+Fill stitch creates rows of stitches that cover a closed shape for solid color coverage.
+
 
 ### Fill Stitch
 
-Fill stitch is used to fill big areas with a color.
+Fill stitch creates rows of stitches that cover a closed shape for solid color coverage.
 
 ![Fill stitch realistic](/assets/images/docs/fill-stitch-realistic.png)
 
@@ -98,7 +100,7 @@ Fill stitch is used to fill big areas with a color.
 
 ### Circular Fill
 
-Circular fill fills a shape with an embroidered spiral. The center of the spiral is positioned at the center of the shape. A target point can be used to define a custom spiral center.
+Circular fill creates an embroidered spiral that fills a shape, with the spiral center placed at a target point or the center of the shape.
 
 ![Meander stitch detail](/assets/images/docs/circular-fill-detail.png)
 
@@ -106,7 +108,7 @@ Circular fill fills a shape with an embroidered spiral. The center of the spiral
 
 ### Contour Fill
 
-Contour fill covers areas with stitches following the contour of an object.
+Contour fill creates stitches that follow the contour of a shape as the fill progresses through the area.
 
 ![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
 
@@ -114,7 +116,7 @@ Contour fill covers areas with stitches following the contour of an object.
 
 ### Guided Fill
 
-Create guide lines to generate a curved fill.
+Guided fill creates stitches by using guide lines to control stitch direction.
 
 ![Guided fill](/assets/images/docs/guided-fill-complex.svg)
 
@@ -122,7 +124,7 @@ Create guide lines to generate a curved fill.
 
 ### Linear Gradient Fill
 
-Linear gradient fill uses Inkscapes linear gradient color to create seamless gradients with a consistent stitch positioning.
+Linear gradient fill creates a gradient like transition by using an Inkscape linear gradient to vary the fill while keeping stitch placement consistent.
 
 ![Gradient sample](/assets/images/tutorials/make_tartan_font_easier/herbst.jpg)
 
@@ -130,7 +132,8 @@ Linear gradient fill uses Inkscapes linear gradient color to create seamless gra
 
 ### Meander Fill
 
-Meander fill has its origins in quilting techniques. A beautiful patterned effect results for machine embroidery. Large areas can be filled with relatively few stitches.
+Meander fill creates a quilting style meandering pattern that covers large areas with a lighter, decorative texture.
+
 
 ![Meander fill](/assets/images/docs/meander-fill.png)
 
@@ -138,7 +141,7 @@ Meander fill has its origins in quilting techniques. A beautiful patterned effec
 
 ### Tartan Fill
 
-Tartan is a patterned fabric with colored horizontal and vertical stripes. It is typically known from scottish kilts. The embroidery stitch type tries to mimic the typical pattern.
+Tartan fill creates a woven look with horizontal and vertical stripes that mimic tartan fabric patterns.
 
 ![Tartan sample](/assets/images/galleries/fonts/colorful/bev_tartan.jpg)
 
@@ -146,6 +149,6 @@ Tartan is a patterned fabric with colored horizontal and vertical stripes. It is
 
 ### Legacy Fill
 
-In legacy fill, the extension will still break up the shape into sections, each of which can be embroidered in one go. Then these sections will be fill-stitched one at a time, jumping directly between sections.
+Legacy fill creates a fill by splitting a shape into sections and stitching sections one by one, jumping directly between them.
 
 [Learn more](/docs/stitches/fill-stitch/#legacy-fill){: .btn .btn--primary}
