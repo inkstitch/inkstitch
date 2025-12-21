@@ -785,8 +785,9 @@ class FillStitch(EmbroideryElement):
         ParamOption('simple_cross_flipped', _("Cross Flipped")),
         ParamOption('half_cross', _("Half Cross")),
         ParamOption('half_cross_flipped', _("Half Cross Flipped")),
-        # ParamOption('upright_cross', _("Upright Cross")),
-        # ParamOption('double_cross', _("Double Cross"))
+        ParamOption('upright_cross', _("Upright Cross")),
+        ParamOption('upright_cross_flipped', _("Upright Cross Flipped")),
+        ParamOption('double_cross', _("Double Cross"))
     ]
 
     @property
