@@ -113,6 +113,7 @@ inkstitch_attribs = [
     'pattern_size_mm',
     'fill_coverage',
     'cross_stitch_method',
+    'max_cross_stitch_length_mm',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',

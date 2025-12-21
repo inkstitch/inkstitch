@@ -770,8 +770,8 @@ class FillStitch(EmbroideryElement):
         ParamOption('simple_cross_flipped', _("Cross Flipped")),
         ParamOption('half_cross', _("Half Cross")),
         ParamOption('half_cross_flipped', _("Half Cross Flipped")),
-        # ParamOption('upright_cross', _("Upright Cross"))
-        # ParamOption('double_cross', _("Double Cross")),
+        # ParamOption('upright_cross', _("Upright Cross")),
+        # ParamOption('double_cross', _("Double Cross"))
     ]
 
     @property
@@ -780,9 +780,23 @@ class FillStitch(EmbroideryElement):
            type='combo',
            default=0,
            options=_cross_stitch_options,
+           select_items=[('fill_method', 'cross_stitch')],
            sort_index=12)
     def cross_stitch_method(self):
         return self.get_param('cross_stitch_method', 'simple cross')
+
+    @property
+    @param('max_cross_stitch_length_mm',
+           _('Maximum stitch length'),
+           tooltip=_(
+               'The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row.'),
+           unit='mm',
+           sort_index=22,
+           type='float',
+           select_items=[('fill_method', 'cross_stitch')],
+           default=11.0)
+    def max_cross_stitch_length(self):
+        return max(self.get_float_param("max_cross_stitch_length_mm", 11.0), 0.1 * PIXELS_PER_MM)
 
     @property
     @cache
