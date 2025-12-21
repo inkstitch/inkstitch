@@ -111,8 +111,8 @@ inkstitch_attribs = [
     'gap_fill_rows',
     # cross stitch
     'pattern_size_mm',
-    'cross_coverage',
-    'flip_layers',
+    'fill_coverage',
+    'cross_stitch_method',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',

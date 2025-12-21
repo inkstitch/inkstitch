@@ -753,38 +753,36 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param(
-        'cross_coverage',
-        _("Cross coverage"),
+        'fill_coverage',
+        _("Fill coverage"),
         tooltip=_("Percentage of overlap for each cross with the fill area"),
         type='int',
         default="50",
         unit='%',
         select_items=[('fill_method', 'cross_stitch')],
-        sort_index=10
-    )
-    def cross_coverage(self):
-        return max(1, self.get_int_param("cross_coverage", 50))
-
-    # TODO:
-    # Options: 1. Cross: bottom left - top right (\/)
-    #          2. Cross: top left - bottom right (/\)
-    #          3. Half cross: bottom left - top right (/)
-    #          4. Half cross: top left - bottom right (\)
-    #          6: Run: left
-    #          8: Run: bottom
-    @property
-    @param(
-        'flip_layers',
-        _("Flip direction"),
-        tooltip=_("Top stitches go from bottom left to top right by default. "
-                  "When enabled, top stitching goes from top left to bottom right."),
-        type='boolean',
-        default=False,
-        select_items=[('fill_method', 'cross_stitch')],
         sort_index=11
     )
-    def flip_layers(self):
-        return self.get_boolean_param("flip_layers", False)
+    def fill_coverage(self):
+        return max(1, self.get_int_param("fill_coverage", 50))
+
+    _cross_stitch_options = [
+        ParamOption('simple_cross', _("Cross")),
+        ParamOption('simple_cross_flipped', _("Cross Flipped")),
+        ParamOption('half_cross', _("Half Cross")),
+        ParamOption('half_cross_flipped', _("Half Cross Flipped")),
+        # ParamOption('upright_cross', _("Upright Cross"))
+        # ParamOption('double_cross', _("Double Cross")),
+    ]
+
+    @property
+    @param('cross_stitch_method',
+           _('Cross stitch method'),
+           type='combo',
+           default=0,
+           options=_cross_stitch_options,
+           sort_index=12)
+    def cross_stitch_method(self):
+        return self.get_param('cross_stitch_method', 'simple cross')
 
     @property
     @cache
