@@ -319,7 +319,6 @@ class FillStitch(EmbroideryElement):
            type='float',
            select_items=[('fill_method', 'auto_fill'),
                          ('fill_method', 'contour_fill'),
-                         ('fill_method', 'cross_stitch'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'linear_gradient_fill'),
                          ('fill_method', 'tartan_fill'),
@@ -739,6 +738,21 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param(
+        'pattern_size_mm',
+        _('Pattern size (X Y)'),
+        tooltip=_('Cross stitch pattern size in mm, x and y values are separated by a space. '
+                  'Only one input value returns a square pattern.'),
+        select_items=[('fill_method', 'cross_stitch')],
+        unit=_('mm'),
+        type='float',
+        default=3,
+        sort_index=10)
+    @cache
+    def pattern_size(self):
+        return np.maximum(self.get_split_mm_param_as_px("pattern_size_mm", (3, 3)), 0.1 * PIXELS_PER_MM)
+
+    @property
+    @param(
         'cross_coverage',
         _("Cross coverage"),
         tooltip=_("Percentage of overlap for each cross with the fill area"),
@@ -746,11 +760,18 @@ class FillStitch(EmbroideryElement):
         default="50",
         unit='%',
         select_items=[('fill_method', 'cross_stitch')],
-        sort_index=62
+        sort_index=10
     )
     def cross_coverage(self):
         return max(1, self.get_int_param("cross_coverage", 50))
 
+    # TODO:
+    # Options: 1. Cross: bottom left - top right (\/)
+    #          2. Cross: top left - bottom right (/\)
+    #          3. Half cross: bottom left - top right (/)
+    #          4. Half cross: top left - bottom right (\)
+    #          6: Run: left
+    #          8: Run: bottom
     @property
     @param(
         'flip_layers',
@@ -760,7 +781,7 @@ class FillStitch(EmbroideryElement):
         type='boolean',
         default=False,
         select_items=[('fill_method', 'cross_stitch')],
-        sort_index=63
+        sort_index=11
     )
     def flip_layers(self):
         return self.get_boolean_param("flip_layers", False)

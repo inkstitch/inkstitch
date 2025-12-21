@@ -109,6 +109,8 @@ inkstitch_attribs = [
     'enable_random_stitch_length',
     'random_stitch_length_jitter_percent',
     'gap_fill_rows',
+    # cross stitch
+    'pattern_size_mm',
     'cross_coverage',
     'flip_layers',
     # stroke

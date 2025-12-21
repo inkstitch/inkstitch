@@ -24,9 +24,7 @@
         <menu-tip>Pixelizes the outline of a fill</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
-                <submenu name="Tools: Fill">
-                    <submenu name="Cross stitch" />
-                </submenu>
+                <submenu name="Tools: Fill" />
             </submenu>
         </effects-menu>
     </effect>

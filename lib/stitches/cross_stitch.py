@@ -5,13 +5,13 @@
 
 # -*- coding: UTF-8 -*-
 
-from math import isclose, sqrt
+from math import isclose
 
 import networkx
 from shapely import line_merge, prepare, snap
-from shapely.affinity import rotate, scale, translate
-from shapely.geometry import (LineString, MultiLineString, MultiPoint, Point,
-                              Polygon)
+from shapely.affinity import scale, translate
+from shapely.geometry import (LineString, MultiLineString, MultiPoint,
+                              MultiPolygon, Point, Polygon)
 from shapely.ops import nearest_points, unary_union
 
 from ..debug.debug import debug
@@ -21,24 +21,33 @@ from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import (ensure_multi_line_string, ensure_multi_point,
                               reverse_line_string)
 from ..utils.threading import check_stop_flag
-from .auto_fill import (add_edges_between_outline_nodes,
-                        build_fill_stitch_graph, fallback, find_stitch_path,
-                        graph_make_valid, process_travel_edges,
+from .auto_fill import (add_edges_between_outline_nodes, fallback,
+                        find_stitch_path, graph_make_valid,
+                        process_travel_edges,
                         tag_nodes_with_outline_and_projection)
 from .circular_fill import _apply_bean_stitch_and_repeats
 
 
 @debug.time
 def cross_stitch(fill, shape, starting_point, ending_point):
-    stitch_length = fill.max_stitch_length
-    cross_diagonals1, cross_diagonals2, vertical, boxes, scaled_boxes, snap_points, travel_edges = get_cross_geomteries(
-        shape, stitch_length, fill.cross_coverage
+    cross_diagonals1, cross_diagonals2, boxes, scaled_boxes, snap_points, travel_edges, stitch_length = get_cross_geomteries(
+        shape, fill.pattern_size, fill.cross_coverage
     )
+    '''Cross stitch fill type
 
+       Cross stitches are organized in a pixelated pattern. Each "cross pixel" (box) has two diagonals.
+       Traditionally cross stitches are strictly organized and each cross follows the same pattern.
+       Meaning the layering of the diagonals can't be switched during the stitch out.
+       For example all crosses start with '\' as a bottom layer and end with '/' as the top layer.
+    '''
     if not boxes:
         return []
 
-    # Fix outline
+    # Fix outline. The outline for cross stitches is a bit delicate as it tends to be invalid in a shapely sense.
+    # We created scaled boxes to avoid a splitting up of an outline which we would be able to render in one go.
+    # But we only want to use the scaled boxes if it is really necessary.
+    # It is also possible that the cross stitch pattern is fully unconnected. In this case, we will run the stitch
+    # generation on each outline component.
     clamp = False
     outline = unary_union(boxes)
     if outline.geom_type == 'MultiPolygon':
@@ -52,9 +61,10 @@ def cross_stitch(fill, shape, starting_point, ending_point):
     center_points = MultiPoint(snap_points[0])
     snap_points = MultiPoint(snap_points[0] + snap_points[1])
 
+    # The cross stitch diagnonals
     diagonals1 = ensure_multi_line_string(line_merge(MultiLineString(cross_diagonals1)))
     diagonals2 = ensure_multi_line_string(line_merge(MultiLineString(cross_diagonals2)))
-    verticals = ensure_multi_line_string(line_merge(MultiLineString(vertical)))
+    # Travel edges includ all possible edges, the box outlines, as well as edges from the bounding boxes corners to the box center (☒)
     travel_edges = ensure_multi_line_string(line_merge(MultiLineString(travel_edges)))
 
     # we might have enlarged our outline to connect even crosses which only touch at one corner
@@ -62,20 +72,22 @@ def cross_stitch(fill, shape, starting_point, ending_point):
     if clamp:
         diagonals1 = ensure_multi_line_string(snap(diagonals1, outline, tolerance=0.000001))
         diagonals2 = ensure_multi_line_string(snap(diagonals2, outline, tolerance=0.000001))
-        verticals = ensure_multi_line_string(snap(verticals, outline, tolerance=0.000001))
         travel_edges = ensure_multi_line_string(snap(travel_edges, outline, tolerance=0.000001))
         snap_points = ensure_multi_point(snap(snap_points, outline, tolerance=0.000001))
     travel_edges = list(travel_edges.geoms)
 
+    # Nodes include all end points of our grating lines
     nodes = get_line_endpoints(diagonals2)
     nodes.extend(get_line_endpoints(diagonals1))
-    nodes.extend(get_line_endpoints(verticals))
 
+    # Snap start and end points to spots which are actually part of the cross stitch pattern
     starting_point, ending_point = get_start_and_end(starting_point, ending_point, snap_points)
 
     if fill.flip_layers:
         diagonals2, diagonals1 = diagonals1, diagonals2
 
+    # We finally finished with all the preparations. Let's convert our crosses to routed stitches
+    clamp = True
     stitches = _lines_to_stitches(
         diagonals1, travel_edges, outline, stitch_length, fill.bean_stitch_repeats,
         starting_point, ending_point, nodes, center_points, clamp
@@ -84,7 +96,7 @@ def cross_stitch(fill, shape, starting_point, ending_point):
     stitches.extend(
         _lines_to_stitches(
             diagonals2, travel_edges, outline, stitch_length, fill.bean_stitch_repeats,
-            starting_point, ending_point, nodes, center_points, clamp
+            starting_point, ending_point, nodes, center_points, clamp, True
         )
     )
 
@@ -92,6 +104,8 @@ def cross_stitch(fill, shape, starting_point, ending_point):
 
 
 def cross_stitch_multiple(outline, fill, starting_point, ending_point):
+    '''Run the cross stitch generator on separated outline components
+    '''
     shapes = list(outline.geoms)
     if starting_point:
         shapes.sort(key=lambda shape: shape.distance(Point(starting_point)))
@@ -110,6 +124,8 @@ def cross_stitch_multiple(outline, fill, starting_point, ending_point):
 
 
 def get_start_and_end(starting_point, ending_point, snap_points):
+    '''Snap starting and ending point on existng spots on our cross stitch pattern
+    '''
     if starting_point is not None:
         starting_point = nearest_points(snap_points, Point(starting_point))[0].coords
     if ending_point is not None:
@@ -118,6 +134,8 @@ def get_start_and_end(starting_point, ending_point, snap_points):
 
 
 def get_line_endpoints(multilinestring):
+    '''Returns the endpoints of each line from a multilinestring
+    '''
     nodes = []
     for line in multilinestring.geoms:
         coords = list(line.coords)
@@ -125,61 +143,84 @@ def get_line_endpoints(multilinestring):
     return nodes
 
 
-def get_cross_geomteries(shape, stitch_length, coverage):
-    square_size = stitch_length / sqrt(2)  # 45° angle
-    square = Polygon([(0, 0), (square_size, 0), (square_size, square_size), (0, square_size)])
+def get_cross_geomteries(shape, box_size, coverage):
+    '''Generates data for cross stitch geometry, including:
+
+       boxes:                   a list of box shaped polygons. The outlines for each cross.
+                                To get the final outline for our cross stitch pattern,
+                                we will combine all available boxes to a (hopefully) single shape.
+
+       scaled_boxes:            same as boxes, except that the boxes are scaled p slightly.
+                                Used to reconnect shapes which would be disconnected otherwise.
+                                A good example for this are crosses which are touching each other at only one corner.
+
+        diagonals1, diagonals2: A list of Linestrings with the actual cross stitch geometry
+
+        travel_edges:           a list of Linestings with every possible edge in a cross stitch box:
+                                the box outlines as well as lines from the box cornes to the center
+
+        snap_points:            a list containing two lists with points.
+                                1. the center points for each box
+                                2. the four corners of each box
+    '''
+    box_x, box_y = box_size
+    square = Polygon([(0, 0), (box_x, 0), (box_x, box_y), (0, box_y)])
     full_square_area = square.area
 
     # start and end have to be a multiple of the stitch length
     minx, miny, maxx, maxy = shape.bounds
-    adapted_minx = minx - minx % square_size
-    adapted_miny = miny - miny % square_size
-    adapted_maxx = maxx + square_size - maxx % square_size
-    adapted_maxy = maxy + square_size - maxy % square_size
+    adapted_minx = minx - minx % box_x
+    adapted_miny = miny - miny % box_y
+    adapted_maxx = maxx + box_x - maxx % box_x
+    adapted_maxy = maxy + box_y - maxy % box_y
     prepare(shape)
+
+    stitch_length = LineString([(minx, miny), (maxx, maxy)]).length
+
+    boxes = []
+    scaled_boxes = []
 
     cross_diagonals1 = []
     cross_diagonals2 = []
-    vertical = []
-    boxes = []
-    scaled_boxes = []
-    snap_points = [[], []]
+
     travel_edges = []
+    snap_points = [[], []]
 
     y = adapted_miny
     while y <= adapted_maxy:
         x = adapted_minx
         while x <= adapted_maxx:
+            # translate box to cross position
             box = translate(square, x, y)
             if shape.contains(box):
-                travel_edges, boxes, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2, vertical = add_cross(
-                    box, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2, vertical, boxes, travel_edges
+                boxes, scaled_boxes, cross_diagonals1, cross_diagonals2, travel_edges, snap_points = add_cross(
+                    box, boxes, scaled_boxes, cross_diagonals1, cross_diagonals2, travel_edges, snap_points
                 )
             elif shape.intersects(box):
                 intersection = box.intersection(shape)
                 intersection_area = intersection.area
-                if intersection_area / full_square_area * 100 > coverage:
-                    travel_edges, boxes, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2, vertical = add_cross(
-                        box, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2, vertical, boxes, travel_edges
+                if intersection_area / full_square_area * 100 + 0.0001 >= coverage:
+                    boxes, scaled_boxes, cross_diagonals1, cross_diagonals2, travel_edges, snap_points = add_cross(
+                        box, boxes, scaled_boxes, cross_diagonals1, cross_diagonals2, travel_edges, snap_points
                     )
-            x += square_size
-        y += square_size
+            x += box_x
+        y += box_y
         check_stop_flag()
-    return cross_diagonals1, cross_diagonals2, vertical, boxes, scaled_boxes, snap_points, travel_edges
+    return cross_diagonals1, cross_diagonals2, boxes, scaled_boxes, snap_points, travel_edges, stitch_length
 
 
-def add_cross(box, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2, vertical, boxes, travel_edges):
+def add_cross(box, boxes, scaled_boxes, cross_diagonals1, cross_diagonals2, travel_edges, snap_points):
+    # snap onto existing boxes to avoid floating point inacurracies
+    box = snap(box, MultiPolygon(boxes), tolerance=0.0001)
+
     minx, miny, maxx, maxy = box.bounds
     center = box.centroid
-    snap_points[0].append(center)
-    snap_points[1].append((minx, miny))
-    snap_points[1].append((minx, maxy))
-    snap_points[1].append((maxx, miny))
-    snap_points[1].append((maxx, maxy))
+
+    boxes.append(box)
+    scaled_boxes.append(scale(box, xfact=1.0000000000001, yfact=1.0000000000001))
 
     cross_diagonals1.append(LineString([(minx, miny), (maxx, maxy)]))
     cross_diagonals2.append(LineString([(maxx, miny), (minx, maxy)]))
-    vertical.append(LineString([(maxx, miny), (maxx, maxy)]))
 
     travel_edges.append(LineString([(minx, miny), center]))
     travel_edges.append(LineString([(maxx, miny), center]))
@@ -190,17 +231,19 @@ def add_cross(box, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2
     travel_edges.append(LineString([(maxx, maxy), (maxx, miny)]))
     travel_edges.append(LineString([(maxx, maxy), (minx, maxy)]))
 
-    boxes.append(box)
-    # scaling the outline allows us to connect otherwise unconnected boxes
-    box = scale(box, xfact=1.0000000000001, yfact=1.0000000000001)
-    scaled_boxes.append(box)
+    snap_points[0].append(center)
+    snap_points[1].append((minx, miny))
+    snap_points[1].append((minx, maxy))
+    snap_points[1].append((maxx, miny))
+    snap_points[1].append((maxx, maxy))
 
-    return travel_edges, boxes, scaled_boxes, snap_points, cross_diagonals1, cross_diagonals2, vertical
+    return boxes, scaled_boxes, cross_diagonals1, cross_diagonals2, travel_edges, snap_points
 
 
 def _lines_to_stitches(
         line_geoms, travel_edges, shape, stitch_length,
-        bean_stitch_repeats, starting_point, ending_point, nodes, snap_points, clamp):
+        bean_stitch_repeats, starting_point, ending_point,
+        nodes, snap_points, clamp, last_pass=False):
     segments = []
     for line in line_geoms.geoms:
         segments.append(list(line.coords))
@@ -221,14 +264,46 @@ def _lines_to_stitches(
     result = path_to_stitches(
         shape, path, travel_graph, fill_stitch_graph, stitch_length, snap_points, clamp
     )
-    result = collapse_travel_edges(result)
+    result = collapse_travel_edges(result, last_pass)
     result = filter_center_points(result, snap_points)
     result = _apply_bean_stitch_and_repeats(result, 1, bean_stitch_repeats)
     return result
 
 
+@debug.time
+def build_fill_stitch_graph(shape, segments, starting_point=None, ending_point=None):
+    """build a graph representation of the grating segments
+
+       See full explanation of the idea in auto_fill.
+       Changes here is the removal of projections nodes on the outline for start and end points
+    """
+
+    debug.add_layer("auto-fill fill stitch")
+
+    graph = networkx.MultiGraph()
+
+    # First, add the grating segments as edges.  We'll use the coordinates
+    # of the endpoints as nodes, which networkx will add automatically.
+    for segment in segments:
+        # networkx allows us to label nodes with arbitrary data.  We'll
+        # mark this one as a grating segment.
+        graph.add_edge(segment[0], segment[-1], key="segment", underpath_edges=[], geometry=LineString(segment))
+
+        check_stop_flag()
+
+    tag_nodes_with_outline_and_projection(graph, shape, graph.nodes())
+    add_edges_between_outline_nodes(graph, duplicate_every_other=True)
+
+    debug.log_graph(graph, "graph")
+
+    return graph
+
+
 def build_travel_graph(fill_stitch_graph, shape, travel_edges, nodes):
     """Build a graph for travel stitches.
+
+       See full explanatio in the auto_fill file.
+       Here we create different grating lines (using the travel edges)
     """
     graph = networkx.MultiGraph()
 
@@ -250,6 +325,9 @@ def build_travel_graph(fill_stitch_graph, shape, travel_edges, nodes):
 
 
 def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, stitch_length, snap_points, clamp):
+    ''' Convert path to stitch data
+        while shortening travel paths and adapting the travel edges to the crosses
+    '''
     stitches = []
     if not path[0].is_segment():
         stitches.append(Stitch(*path[0].nodes[0]))
@@ -289,9 +367,11 @@ def travel(shape, travel_graph, edge, snap_points, stitch_length, clamp=True):
         # Simply return nothing as we do not want to error out
         return []
 
-    if len(path) > 1:
+    if len(path) > 1 and clamp:
         path = clamp_path_to_polygon(path, shape)
 
+    # At this point we are almost happy with the path. But we have some segments not following the crosses, but their bounding boxes.
+    # This means, we will need to add some extra points.
     stitches = []
     last_point = None
     for point in path:
@@ -300,18 +380,11 @@ def travel(shape, travel_graph, edge, snap_points, stitch_length, clamp=True):
             last_point = point
             continue
         line = LineString([last_point, point])
-        if line.length < stitch_length / 2:
-            pass
-        elif not isclose(last_point[0], point[0], abs_tol=0.011) and not isclose(last_point[1], point[1], abs_tol=0.011):
-            pass
-        else:
-            center = list(rotate(line, 90).coords)
-            point1 = Point(center[0])
-            if point1.within(shape):
-                center_point = point1
-            else:
-                center_point = Point(center[1])
-            # snap to avoid issues with collapsing travel paths due to floating point inaccuracies
+        if last_point[0] == point[0] or last_point[1] == point[1]:
+            # We are traveling along the outside of a cross stitch box (x1 == x2 or y1 == y2)
+            # This means, we will need to add a stitch at the center of the box to we create a V shaped line.
+            # To do this, we grab the center of the path and snap it to the nearest box center point we can find
+            center_point = line.interpolate(0.5, normalized=True)
             center_point = Point(nearest_points(center_point, snap_points)[1].coords)
             stitches.append(Stitch(center_point, tags=["auto_fill_travel"]))
         stitches.append(Stitch(*point, tags=["auto_fill_travel"]))
@@ -320,7 +393,9 @@ def travel(shape, travel_graph, edge, snap_points, stitch_length, clamp=True):
     return stitches
 
 
-def collapse_travel_edges(result):
+def collapse_travel_edges(result, last_pass):
+    '''Removes undwanted loops in travel paths
+    '''
     new_sitches = []
     last_travel_stitches = []
     for i, stitch in enumerate(result):
@@ -339,12 +414,18 @@ def collapse_travel_edges(result):
             last_travel_stitches.append(stitch)
             new_sitches.extend(last_travel_stitches)
             last_travel_stitches = []
-    if last_travel_stitches:
+    if last_travel_stitches and last_pass:
         new_sitches.extend(last_travel_stitches)
     return new_sitches
 
 
 def filter_center_points(stitches, center_points):
+    '''Filter unnecessary stitches at the center of the cross stitch boxes
+
+       For routing we did add nodes to the centers of each cross stitch box.
+       Travel pathes are incorporating these additional nodes.
+       When we travel completely diagnolly through a box, we can ommit these extra stitches.
+    '''
     filtered_stitches = []
     last_was_center = False
     for stitch in stitches:
