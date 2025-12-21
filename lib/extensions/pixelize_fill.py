@@ -53,7 +53,7 @@ class PixelizeFill(InkstitchExtension):
                     new_element = new_path.duplicate()
                     new_element.set('d', str(path))
                     new_element.set('id', self.svg.get_unique_id(f'{element_id}_'))
-                    new_element.transform @= get_correction_transform(node)
+                    new_element.transform = get_correction_transform(node)
                 new_path.delete()
             node.delete()
 
