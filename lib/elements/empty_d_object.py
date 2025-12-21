@@ -10,7 +10,6 @@ from .validation import ObjectTypeWarning
 
 
 class EmptyD(ObjectTypeWarning):
-    name = _("Empty Path")
     description = _("There is an invalid object in the document without geometry information.")
     steps_to_solve = [
         _('* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document...')
@@ -18,6 +17,8 @@ class EmptyD(ObjectTypeWarning):
 
 
 class EmptyDObject(EmbroideryElement):
+    name = "EmtpyD"
+    element_name =  _("Empty Path")
 
     def validation_warnings(self):
         label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
