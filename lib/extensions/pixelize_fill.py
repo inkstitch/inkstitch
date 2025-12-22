@@ -3,13 +3,13 @@
 # Copyright (c) 2025 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import Path, errormsg
+from inkex import Boolean, Path, errormsg
 from shapely import make_valid, prepare, unary_union
 from shapely.affinity import scale, translate
 from shapely.geometry import Polygon
 
 from ..i18n import _
-from ..svg import get_correction_transform, PIXELS_PER_MM
+from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..utils.geometry import ensure_multi_polygon
 from .base import InkstitchExtension
 
@@ -20,6 +20,7 @@ class PixelizeFill(InkstitchExtension):
         self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-x", "--box_size_x", dest="box_size_x", type=float, default=3)
         self.arg_parser.add_argument("-y", "--box_size_y", dest="box_size_y", type=float, default=3)
+        self.arg_parser.add_argument("-n", "--grid_nodes", dest="grid_nodes", type=Boolean, default=True)
         self.arg_parser.add_argument("-c", "--coverage", type=int, default=50, dest="coverage")
 
     def effect(self):
@@ -33,7 +34,7 @@ class PixelizeFill(InkstitchExtension):
                 element_id = node.get_id()
 
                 # Covert non-path elemnts to pah elements
-                if node.tag_name != "pah":
+                if node.tag_name != "path":
                     new_path = node.to_path_element()
                     node_parent = node.getparent()
                     node_index = node_parent.index(node)
@@ -44,11 +45,12 @@ class PixelizeFill(InkstitchExtension):
                 pixelated_outline = self.pixelize_element(element)
                 for polygon in pixelated_outline.geoms:
                     path = Path(list(polygon.exterior.coords))
-                    path.close()
                     for interior in polygon.interiors:
                         interior_path = Path(list(interior.coords))
                         interior_path.close()
                         path += interior_path
+
+                    path.close()
 
                     new_element = new_path.duplicate()
                     new_element.set('d', str(path))
@@ -92,5 +94,7 @@ class PixelizeFill(InkstitchExtension):
                     x += box_x
                 y += box_y
 
-        outline = make_valid(unary_union(boxes)).simplify(0.1)
+        outline = make_valid(unary_union(boxes))
+        if not self.options.grid_nodes:
+            outline = outline.simplify(0.1)
         return ensure_multi_polygon(outline)
