@@ -18,7 +18,7 @@ class EmptyD(ObjectTypeWarning):
 
 class EmptyDObject(EmbroideryElement):
     name = "EmtpyD"
-    element_name =  _("Empty Path")
+    element_name = _("Empty Path")
 
     def validation_warnings(self):
         label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
