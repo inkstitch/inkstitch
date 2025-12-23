@@ -57,6 +57,7 @@ def cross_stitch(fill, shape, starting_point, ending_point, double_pass=False):
             # we will have to run this on multiple outline shapes
             return cross_stitch_multiple(outline, fill, starting_point, ending_point)
 
+
     # used for snapping
     center_points = MultiPoint(snap_points[0])
     snap_points = MultiPoint(snap_points[0] + snap_points[1])
@@ -400,7 +401,7 @@ def travel(shape, travel_graph, edge, snap_points, max_stitch_length, underpath,
         # Simply return nothing as we do not want to error out
         return []
 
-    if len(path) > 1 and is_upright:
+    if len(path) > 1:
         path = clamp_path_to_polygon(path, shape)
 
     # At this point we are almost happy with the path. But we have some segments not following the crosses, but their bounding boxes.
@@ -413,7 +414,7 @@ def travel(shape, travel_graph, edge, snap_points, max_stitch_length, underpath,
             last_point = point
             continue
         line = LineString([last_point, point])
-        if ((not is_upright and underpath and (last_point[0] == point[0] or last_point[1] == point[1])) or
+        if ((not is_upright and underpath and (isclose(last_point[0], point[0], abs_tol=0.011) or isclose(last_point[1], point[1], abs_tol=0.011))) or
                 is_upright and underpath and (last_point[0] != point[0] and last_point[1] != point[1])):
             # We are traveling along the outside of a cross stitch box (x1 == x2 or y1 == y2)
             # This means, we will need to add a stitch at the center of the box to we create a V shaped line.
