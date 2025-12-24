@@ -766,22 +766,41 @@ class FillStitch(EmbroideryElement):
         unit=_('mm (x y)'),
         type='float',
         default=3,
-        sort_index=10)
+        sort_index=10
+    )
     @cache
     def pattern_size(self):
         return np.maximum(self.get_split_mm_param_as_px("pattern_size_mm", (3, 3)), 0.1 * PIXELS_PER_MM)
 
     @property
     @param(
+        'canvas_grid_origin',
+        _('Align grid with canvas'),
+        tooltip=_('This ensures good alignment for adjacent cross stitch areas, but it also means '
+                  'that the outcome may change when the element is moved off the grid.\n\n'
+                  'Disable this option to ensure, that this element stitches the same, '
+                  'independently on its position on the canvas.'
+                  ''),
+        select_items=[('fill_method', 'cross_stitch')],
+        type='boolean',
+        default=True,
+        sort_index=11
+    )
+    def canvas_grid_origin(self):
+        return self.get_boolean_param('canvas_grid_origin', True)
+
+    @property
+    @param(
         'cross_offset_mm',
-        _('Cross Grid Offset'),
-        tooltip=_('Cross stitch pattern offset in mm. X and Y values are separated by a space. '
+        _('Grid Offset'),
+        tooltip=_('Shifts the cross stitch grid by given values. X and Y values are separated by a space. '
                   'Only one input value offsets the pattern evenly for x and y.'),
         select_items=[('fill_method', 'cross_stitch')],
         unit=_('mm (x y)'),
         type='float',
         default=0,
-        sort_index=11)
+        sort_index=12
+    )
     @cache
     def cross_offset(self):
         return np.maximum(self.get_split_mm_param_as_px("cross_offset_mm", (0, 0)), 0)
@@ -795,7 +814,7 @@ class FillStitch(EmbroideryElement):
         default="50",
         unit='%',
         select_items=[('fill_method', 'cross_stitch')],
-        sort_index=12
+        sort_index=13
     )
     def fill_coverage(self):
         return max(1, self.get_int_param("fill_coverage", 50))

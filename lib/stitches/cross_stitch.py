@@ -47,18 +47,21 @@ class CrossGeometry(object):
                                 1. the center points for each box
                                 2. the four corners of each box
     '''
-    def __init__(self, fill, shape, cross_stitch_method):
+    def __init__(self, fill, shape, original_shape, cross_stitch_method):
         """Initialize cross stitch geometry generation for the given shape.
 
         Arguments:
             fill:                   the FillStitch instance
             shape:                  shape as shapely geometry
             cross_stitch_method:    cross stitch method as string
+            original_shape:         we may have broken the shape apart.
+                                    the offset however, should align to the complete shape geometry
         """
         self.cross_stitch_method = cross_stitch_method
+        self.fill = fill
 
-        box_x, box_y = fill.pattern_size
-        offset_x, offset_y = fill.cross_offset
+        box_x, box_y = self.fill.pattern_size
+        offset_x, offset_y = self.get_offset_values(shape, original_shape)
         square = Polygon([(0, 0), (box_x, 0), (box_x, box_y), (0, box_y)])
         self.full_square_area = square.area
 
@@ -96,7 +99,7 @@ class CrossGeometry(object):
                 elif shape.intersects(box):
                     intersection = box.intersection(shape)
                     intersection_area = intersection.area
-                    if intersection_area / self.full_square_area * 100 + 0.0001 >= fill.fill_coverage:
+                    if intersection_area / self.full_square_area * 100 + 0.0001 >= self.fill.fill_coverage:
                         self.add_cross(box, upright_box)
                 x += box_x
             y += box_y
@@ -104,6 +107,18 @@ class CrossGeometry(object):
 
         if cross_stitch_method in ['simple_cross_flipped', 'half_cross_flipped', 'upright_cross_flipped']:
             self.cross_diagonals2, self.cross_diagonals1 = self.cross_diagonals1, self.cross_diagonals2
+
+    def get_offset_values(self, shape, original_shape):
+        offset_x, offset_y = self.fill.cross_offset
+        if not self.fill.canvas_grid_origin:
+            box_x, box_y = self.fill.pattern_size
+            if original_shape:
+                bounds = original_shape.bounds
+            else:
+                bounds = shape.bounds
+            offset_x -= bounds[0] % box_x
+            offset_y -= bounds[1] % box_y
+        return offset_x, offset_y
 
     def add_cross(self, box, upright_box):
         if self.cross_stitch_method in ['upright_cross', 'upright_cross_flipped']:
@@ -135,7 +150,7 @@ class CrossGeometry(object):
 
 
 @debug.time
-def cross_stitch(fill, shape, starting_point, ending_point, double_pass=False):
+def cross_stitch(fill, shape, starting_point, ending_point, double_pass=False, original_shape=None):
     '''Cross stitch fill type
 
        Cross stitches are organized in a pixelated pattern. Each "cross pixel" (box) has two diagonals.
@@ -149,7 +164,7 @@ def cross_stitch(fill, shape, starting_point, ending_point, double_pass=False):
     else:
         cross_stitch_method = fill.cross_stitch_method
 
-    cross_geoms = CrossGeometry(fill, shape, cross_stitch_method)
+    cross_geoms = CrossGeometry(fill, shape, original_shape, cross_stitch_method)
 
     if not cross_geoms.boxes:
         return []
@@ -164,7 +179,7 @@ def cross_stitch(fill, shape, starting_point, ending_point, double_pass=False):
         outline = unary_union(cross_geoms.scaled_boxes)
         if outline.geom_type == 'MultiPolygon':
             # we will have to run this on multiple outline shapes
-            return cross_stitch_multiple(outline, fill, starting_point, ending_point, double_pass)
+            return cross_stitch_multiple(outline, fill, starting_point, ending_point, double_pass, original_shape)
 
     # used for snapping
     center_points = MultiPoint(cross_geoms.snap_points[0])
@@ -218,14 +233,14 @@ def cross_stitch(fill, shape, starting_point, ending_point, double_pass=False):
         # let's make sure that we end on a center point of which we know that it is available
         last_point = Point(*stitches[-1])
         starting_point = InkstitchPoint(*list(nearest_points(last_point, center_points)[1].coords)[0])
-        double_stitches = cross_stitch(fill, shape, starting_point, ending_point, True)
+        double_stitches = cross_stitch(fill, shape, starting_point, ending_point, True, original_shape)
         for crosses in double_stitches:
             stitches.extend(crosses)
 
     return [stitches]
 
 
-def cross_stitch_multiple(outline, fill, starting_point, ending_point, double_pass):
+def cross_stitch_multiple(outline, fill, starting_point, ending_point, double_pass, original_shape):
     '''Run the cross stitch generator on separated outline components
     '''
     shapes = list(outline.geoms)
@@ -240,7 +255,7 @@ def cross_stitch_multiple(outline, fill, starting_point, ending_point, double_pa
             end = nearest_points(polygon, shapes[i+1])[0].coords
         else:
             end = ending_point
-        stitches.extend(cross_stitch(fill, polygon, starting_point, end, double_pass))
+        stitches.extend(cross_stitch(fill, polygon, starting_point, end, double_pass, original_shape))
         starting_point = InkstitchPoint(*stitches[-1][-1])
     return stitches
 

@@ -116,6 +116,7 @@ inkstitch_attribs = [
     'max_cross_stitch_length_mm',
     'cross_offset_mm',
     'cross_bean_repeats',
+    'canvas_grid_origin',
     # stroke
     'stroke_method',
     'bean_stitch_repeats',
