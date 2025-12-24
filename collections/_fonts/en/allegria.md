@@ -57,16 +57,16 @@ At a scale of 100% this font has an approximate height of {{ font2.size }} mm.
 It can be scaled from {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
 up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm).
 
-## Origin of the font
-
-This font is a derivative of Euphoria Script Regular  85pt (30mm) and  210pt  (74mm) (https://inkscape.org/cs/~bryce/%E2%98%85euphoria-script-regular-extended)
 
 ## In real life 
 
 {%include folder-galleries path="fonts/allegria/" %}
 
+## Legal Information
 
-## License
+This font is a derivative of {{font1.original_font}} ({{font1.original_font_url}}) and is licensed under {{font1.font_license}}.
+This font is a derivative of Euphoria Script Regular  85pt (30mm) and  210pt  (74mm) (https://inkscape.org/cs/~bryce/%E2%98%85euphoria-script-regular-extended)
+
 
 [Download Allegria 20 Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/allegria20/LICENSE)
 
