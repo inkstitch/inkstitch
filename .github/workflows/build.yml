@@ -10,10 +10,10 @@ jobs:
   linux64:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: recursive
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11.x'
           cache: 'pip'
@@ -85,7 +85,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11.x'
           cache: 'pip'
@@ -250,17 +250,17 @@ jobs:
   windows64:
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: recursive
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11.x'
           architecture: 'x64'
           cache: 'pip'
       - uses: microsoft/setup-msbuild@v2
       - name: Setup Git for Windows SDK
-        uses: git-for-windows/setup-git-for-windows-sdk@v1.10.0
+        uses: git-for-windows/setup-git-for-windows-sdk@v1.11.0
         with:
           flavor: build-installers
       - name: install dependencies
@@ -355,10 +355,10 @@ jobs:
   macx86:
     runs-on: macos-14
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: recursive
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11.x'
           cache: 'pip'
@@ -420,10 +420,10 @@ jobs:
   macarm64:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: recursive
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11.x'
           cache: 'pip'
@@ -504,34 +504,34 @@ jobs:
             echo "title=development build of $branch" >> $GITHUB_ENV
           fi
       - name: download linux64
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: 'inkstitch-linux64'
           path: 'artifacts/'
       - name: download linuxarm64
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: 'inkstitch-linuxarm64'
           path: 'artifacts/'
       - name: download linux32
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: 'inkstitch-linux32'
           path: 'artifacts/'
       - name: download windows64
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: 'inkstitch-windows64'
           path: 'signed-artifacts/'
         if: always()
       - name: download macx86
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: 'inkstitch-mac-x86'
           path: 'artifacts/'
         if: always()
       - name: download macarm64
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: 'inkstitch-mac-arm64'
           path: 'artifacts/'
