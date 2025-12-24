@@ -1,13 +1,16 @@
 {
     "name": "Allegria 20",
     "description": "Running stitch font",
-    "default_variant": "→",
+    "default_variant": "ltr",
     "text_direction": "ltr",
     "keywords": [
         "handwriting",
         "running_stitch",
         "latin"
     ],
+    "font_licence":"SIL Open Font License v1.1",
+    "original_font": "Euphoria Script Regular Extended",
+    "original_font_url": "https://inkscape.org/cs/~bryce/%E2%98%85euphoria-script-regular-extended",
     "leading": 102.48,
     "auto_satin": false,
     "reversible": false,
@@ -15,7 +18,7 @@
     "combine_at_sort_indices": [],
     "letter_case": "",
     "default_glyph": "?",
-    "size": 55.0,
+    "size": 20.0,
     "min_scale": 0.5,
     "max_scale": 2.0,
     "horiz_adv_x_default": 86.66,
