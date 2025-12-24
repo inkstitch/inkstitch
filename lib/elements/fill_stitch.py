@@ -536,7 +536,6 @@ class FillStitch(EmbroideryElement):
            type='str',
            select_items=[('fill_method', 'meander_fill'),
                          ('fill_method', 'circular_fill'),
-                         ('fill_method', 'cross_stitch'),
                          ('fill_method', 'tartan_fill')],
            default=0,
            sort_index=51)
@@ -736,6 +735,27 @@ class FillStitch(EmbroideryElement):
             # letting each instance without a specified seed get a different default.
         return seed
 
+    _cross_stitch_options = [
+        ParamOption('simple_cross', _("Cross")),
+        ParamOption('simple_cross_flipped', _("Cross Flipped")),
+        ParamOption('half_cross', _("Half Cross")),
+        ParamOption('half_cross_flipped', _("Half Cross Flipped")),
+        ParamOption('upright_cross', _("Upright Cross")),
+        ParamOption('upright_cross_flipped', _("Upright Cross Flipped")),
+        ParamOption('double_cross', _("Double Cross"))
+    ]
+
+    @property
+    @param('cross_stitch_method',
+           _('Cross stitch method'),
+           type='combo',
+           default=0,
+           options=_cross_stitch_options,
+           select_items=[('fill_method', 'cross_stitch')],
+           sort_index=9)
+    def cross_stitch_method(self):
+        return self.get_param('cross_stitch_method', 'simple cross')
+
     @property
     @param(
         'pattern_size_mm',
@@ -780,27 +800,6 @@ class FillStitch(EmbroideryElement):
     def fill_coverage(self):
         return max(1, self.get_int_param("fill_coverage", 50))
 
-    _cross_stitch_options = [
-        ParamOption('simple_cross', _("Cross")),
-        ParamOption('simple_cross_flipped', _("Cross Flipped")),
-        ParamOption('half_cross', _("Half Cross")),
-        ParamOption('half_cross_flipped', _("Half Cross Flipped")),
-        ParamOption('upright_cross', _("Upright Cross")),
-        ParamOption('upright_cross_flipped', _("Upright Cross Flipped")),
-        ParamOption('double_cross', _("Double Cross"))
-    ]
-
-    @property
-    @param('cross_stitch_method',
-           _('Cross stitch method'),
-           type='combo',
-           default=0,
-           options=_cross_stitch_options,
-           select_items=[('fill_method', 'cross_stitch')],
-           sort_index=13)
-    def cross_stitch_method(self):
-        return self.get_param('cross_stitch_method', 'simple cross')
-
     @property
     @param('max_cross_stitch_length_mm',
            _('Maximum stitch length'),
@@ -813,6 +812,20 @@ class FillStitch(EmbroideryElement):
            default=11.0)
     def max_cross_stitch_length(self):
         return max(self.get_float_param("max_cross_stitch_length_mm", 11.0), 0.1 * PIXELS_PER_MM)
+
+    @property
+    @param('cross_bean_repeats',
+           _('Bean stitch number of repeats'),
+           tooltip=_('Backtrack each stitch this many times.  '
+                     'A value of 1 would triple each stitch (forward, back, forward).  '
+                     'A value of 2 would quintuple each stitch, etc.\n\n'
+                     'A pattern with various repeats can be created with a list of values separated by a space.'),
+           type='int',
+           select_items=[('fill_method', 'cross_stitch')],
+           default=1,
+           sort_index=23)
+    def cross_bean_repeats(self):
+        return self.get_int_param("cross_bean_repeats", 1)
 
     @property
     @cache
