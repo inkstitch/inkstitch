@@ -20,6 +20,7 @@
     <option value="serif">{{ site.data.ui-text[page.lang].font_filter_category_serif | default: "Serif" }}</option>
     <option value="tartan">{{ site.data.ui-text[page.lang].font_filter_category_tartan | default: "Tartan" }}</option>
     <option value="tiny">{{ site.data.ui-text[page.lang].font_filter_category_tiny | default: "Tiny" }}</option>
+    <option value="arabic">{{ site.data.ui-text[page.lang].font_filter_category_arabic | default: "Script: arabic" }}</option>
   </select>
   <label for="glyph-filter">{{ site.data.ui-text[page.lang].font_filter_glyph_label | default: "Glyphs" }}</label>
   <input type="text" id="glyph-filter" name="glyph-filter">
