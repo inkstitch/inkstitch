@@ -21,11 +21,15 @@
 <div class="font-separator" data-title="{{ font.title }}" data-max_size="{{ max_size }}" data-min_size="{{ min_size }}" data-keywords="{{ categories | uniq | join: ',' }}" data-glyphs="{{ glyphs | uniq | join: ' ' | escape}}">
   {%- for image in page.preview_image -%}
   {%- assign urlsize = image.url | size -%}
+  <img 
+     src={{ image.url }}
+     alt={{page.title}} 
+     height="{{image.height }}">
   <p class="font-library-preview-image">
   {%- if urlsize < 15 -%}
   <img src="{{ image.url }}" alt="{{font.title}} Preview"></p>
   {%- else -%}
-      <img src="{{ image.url }}" alt="{{font.title}} Preview" style="height:{{ image.height }}mm" data-image_height="{{ image.height }}mm">
+      <img src="{{ image.url }}" alt="{{font.title}} Preview" style="height:{{ image.height }}mm" data-image_height="{{image.height }}mm">
   {%- endif -%}
   </p>
   {% endfor %}
