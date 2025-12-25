@@ -1,16 +1,16 @@
 ---
-title: "Abril En Fleur AGS"
-permalink: /de/fonts/abril/
-last_modified_at: 2023-04-24
+title: "Mai En Fleur AGS"
+permalink: /de/fonts/mai_en_fleur/
+last_modified_at: 2025-12-25
 toc: false
 preview_image:
-  - url: /assets/images/fonts/abril_en_fleur.jpg
+  - url: /assets/images/fonts/mai_en_fleur_AGS.jpg
     height: 100
 data_title:
-  - abril
+  - mai_en_fleur
 ---
-{%- assign font = site.data.fonts.abril.font -%}
-![April En Fleur AGS](/assets/images/fonts/abril_en_fleur.jpg)
+{%- assign font = site.data.fonts.mai_en_fleur.font -%}
+![Mai En Fleur AGS](/assets/images/fonts/mai_en_fleur_AGS.jpg)
 
 ## Ursprung der Schriftart
 
