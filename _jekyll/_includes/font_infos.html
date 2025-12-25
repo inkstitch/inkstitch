@@ -10,13 +10,24 @@
   <img 
      src="{{image.url }}"
      alt="{{page.title}} "
-     height="{{image.height }}mm">
+     height="{{image.height}}mm">
 </p>
 {% endfor %} 
 </div>
   
+
+## Glyphs
 <div>
-  Glyphs
+  {%- for sub_font in page.data_title -%}
+  {%- assign font = site.data.fonts.{{su_font}}.font -%}
+### {{sub_font}}
+ This font contains {{ font.glyphs.size }} glyphs:
+
+{{ font.glyphs | sort | join: ' ' }}
+  
+
+{: .font-glyphs }
+  {% endfor %}
 </div>
 {%- for sub_font in page.data_title -%}
   {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
