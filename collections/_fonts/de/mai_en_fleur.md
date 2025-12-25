@@ -37,7 +37,7 @@ Sie kann von {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times:
 
 ## Impressionen
 
-{% include folder-galleries path="fonts/abril/" %}
+{% include folder-galleries path="fonts/mai_en_fleur/" %}
 
 ## Lizenz
 
