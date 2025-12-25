@@ -5,10 +5,10 @@
 {%- assign max_size = 0 -%}
 {%- assign categories = "" | split: ',' -%}
 {%- assign glyphs = "" | split: ',' -%}
-{%- for sub_font in page.data_title -%}
+{%- for image in page.preview_image -%}
 <p class =font-library-preview-image">
   <img 
-     src="{{ image.url }}"
+     src="{{image.url }}"
      alt="{{page.title}} "
      style="height:{{ image.height }}mm">
 </p>
