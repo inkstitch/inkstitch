@@ -131,7 +131,10 @@ class Font(object):
 
     name = font_metadata('name', '')
     description = localized_font_metadata('description', '')
+    font_license = font_metadata('license', 'SIL Open Font License v1.1')
     keywords = font_metadata('keywords', '')
+    original_font = font_metadata('original_font', '')
+    original_font_url = font_metadata('original_font_url', '')
     text_direction = font_metadata('text_direction', 'ltr')
     letter_case = font_metadata('letter_case', '')
     default_glyph = font_metadata('default_glyph', "�")
