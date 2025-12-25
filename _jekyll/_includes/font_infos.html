@@ -22,9 +22,9 @@
   {%- for image in page.preview_image -%}
   {%- assign urlsize = image.url | size -%}
   <img 
-     src={{ image.url }}
-     alt={{page.title}} 
-     height="{{image.height }}">
+     src="{{ image.url }}"
+     alt="{{page.title}} "
+     style="height:{{ image.height }}mm">
   <p class="font-library-preview-image">
   {%- if urlsize < 15 -%}
   <img src="{{ image.url }}" alt="{{font.title}} Preview"></p>
