@@ -16,6 +16,8 @@ data_title:
 {%- assign font2 = site.data.fonts.allegria55.font -%}
 
 {% include upcoming_release.html %}
+{% include font_images.html %}
+
 
 ![Allegria20](/assets/images/fonts/allegria20.png)
 
