@@ -1,7 +1,7 @@
 ---
 title: "Montecarlo"
 permalink: /fonts/montecarlo/
-last_modified_at: 2025-11-02
+last_modified_at: 2025-12-25
 toc: false
 preview_image:
   - url: /assets/images/fonts/montecarlo.png
