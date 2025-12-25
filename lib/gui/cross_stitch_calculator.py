@@ -23,11 +23,11 @@ class CalcuatorFrame(wx.Frame):
         self.x_only_checkbox.Bind(wx.EVT_CHECKBOX, self.update)
 
         box_x_label = wx.StaticText(self, wx.ID_ANY, _("Grid width (mm)"))
-        self.box_x = wx.SpinCtrlDouble(self, value='3', min=0.5, max=100, initial=3, inc=1)
+        self.box_x = wx.SpinCtrlDouble(self, value='3', min=0.5, max=100, initial=3, inc=0.01)
         self.box_x.Bind(wx.EVT_SPINCTRLDOUBLE, self.update)
 
-        self.box_y_label = wx.StaticText(self, wx.ID_ANY, _("Grid geight (mm)"))
-        self.box_y = wx.SpinCtrlDouble(self, value='3', min=0.5, max=100, initial=3, inc=1)
+        self.box_y_label = wx.StaticText(self, wx.ID_ANY, _("Grid height (mm)"))
+        self.box_y = wx.SpinCtrlDouble(self, value='3', min=0.5, max=100, initial=3, inc=0.01)
         self.box_y.Bind(wx.EVT_SPINCTRLDOUBLE, self.update)
 
         result_label = wx.StaticText(self, wx.ID_ANY, _("Stitch_length:"))
