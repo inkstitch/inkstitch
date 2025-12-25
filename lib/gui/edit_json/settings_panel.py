@@ -98,7 +98,7 @@ class FontInfo(wx.Panel):
             lambda event: self.parent.on_font_meta_value_changed("description", False, event)
         )
 
-        license_label = wx.StaticText(self, label=_("font_license"))
+        license_label = wx.StaticText(self, label=_("Font License"))
         self.font_license = wx.TextCtrl(self)
         self.font_license.Bind(
             wx.EVT_TEXT,
