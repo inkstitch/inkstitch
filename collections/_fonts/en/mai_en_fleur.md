@@ -4,13 +4,13 @@ permalink: /fonts/mai_en_fleur/
 last_modified_at: 2025-12-25
 toc: false
 preview_image:
-  - url: /assets/images/fonts/mai_en_fleur.jpg
+  - url: /assets/images/fonts/mai_en_fleur_AGS.jpg
     height: 100
 data_title:
   - mai_en_fleur
 ---
 {%- assign font = site.data.fonts.mai_en_fleur.font -%}
-![April En Fleur AGS](/assets/images/fonts/mai_en_fleur.jpg)
+![April En Fleur AGS](/assets/images/fonts/mai_en_fleur_AGS.jpg)
 
 ## Glyphs
 
