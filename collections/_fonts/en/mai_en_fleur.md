@@ -35,7 +35,7 @@ This font is a derivative of Abril FatFace regular 400pt (141mm) (https://fonts.
 
 ## In real life
 
-{% include folder-galleries path="fonts/abril/" %}
+{% include folder-galleries path="fonts/mai_en_fleur/" %}
 
 ## License
 
