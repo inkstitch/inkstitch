@@ -10,6 +10,7 @@ data_title:
   - abecedaire
 ---
 {%- assign font = site.data.fonts.abecedaire.font -%}
+
 ![Abecedaire](/assets/images/fonts/abecedaire.jpg)
 
 ## Glyphs
