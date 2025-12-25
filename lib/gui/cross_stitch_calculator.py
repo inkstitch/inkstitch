@@ -31,7 +31,8 @@ class CalcuatorFrame(wx.Frame):
         self.box_y.Bind(wx.EVT_SPINCTRLDOUBLE, self.update)
 
         result_label = wx.StaticText(self, wx.ID_ANY, _("Stitch_length:"))
-        self.result = wx.StaticText(self, wx.ID_ANY, label='')
+        self.result = wx.TextCtrl(self, wx.ID_ANY, style=wx.TE_READONLY)
+        self.result.Enable(False)
 
         grid_sizer.AddMany([
             (x_only_label),
@@ -59,7 +60,7 @@ class CalcuatorFrame(wx.Frame):
         else:
             box_y = box_x
         result = sqrt(pow(box_x, 2) + pow(box_y, 2))
-        self.result.SetLabel("{:.2f}".format(result))
+        self.result.SetValue("{:.2f}".format(result))
 
 
 class CrossStitchCalculatorApp(wx.App):
