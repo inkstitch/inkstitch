@@ -1,19 +1,19 @@
 ---
-title: "Baumans FI"
-permalink: /fonts/baumans/
-last_modified_at: 2024-04-20
+title: "Bathaus FI"
+permalink: /fonts/bathaus_FI/
+last_modified_at: 2025-12-25
 toc: false
 preview_image:
-  - url: /assets/images/fonts/baumans_fi.jpg
+  - url: /assets/images/fonts/bathaus_FI.png
     height: 32
-  - url: /assets/images/fonts/baumans_FI_small.jpg
+  - url: /assets/images/fonts/bathaus_FI_small.png
     height: 10
 data_title:
-  - baumans_FI
+  - bathaus_FI
 ---
-{%- assign font = site.data.fonts.baumans_FI.font -%}
-![Baumans](/assets/images/fonts/baumans_fi.jpg)
-![Baumans](/assets/images/fonts/baumans_FI_small.jpg)
+{%- assign font = site.data.fonts.bathaus_FI.font -%}
+![Bathauss](/assets/images/fonts/bathaus_FI.png)
+![Bathaus](/assets/images/fonts/bathaus_FI_small.png)
 
 ## Glyphs
 
@@ -26,7 +26,7 @@ This font contains  {{ font.glyphs.size }} glyphs:
  
 ## Remark
 
-Baumans FI is reversible : a multi line embroidery  may be  embroidered in alternate directions
+Bathaux FI is reversible : a multi line embroidery  may be  embroidered in alternate directions
 
 ## Dimensions
 
@@ -43,7 +43,7 @@ A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 ## In real life
 
-{% include folder-galleries path="fonts/baumans/" %}
+{% include folder-galleries path="fonts/bathaus_FI/" %}
 
 ## License
 
