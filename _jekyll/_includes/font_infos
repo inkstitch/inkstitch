@@ -20,7 +20,7 @@
   {%- assign glyphs = "" | split: ',' -%}
   {%- for sub_font in font.data_title -%}
     {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
-    {%- assign name = sub_font_data.name -%}
+   
     {%- assign glyphs = glyphs | push: sub_font_data.glyphs -%}
     <p >
        {{name}} contains   glyphs:
