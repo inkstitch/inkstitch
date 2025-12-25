@@ -42,7 +42,7 @@ Im Gegensatz zu Bathaus  FI **MUSS** diese verkleinerte Schrift mit einem dünne
 
 ## Impressionen
 
-{% include folder-galleries path="fonts/Bathaus_FI/" %}
+{% include folder-galleries path="fonts/bathaus_FI/" %}
 
 ## Lizenz
 
