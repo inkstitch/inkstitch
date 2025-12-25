@@ -12,7 +12,7 @@ data_title:
   - allegria20
   - allegria55
 ---
-{%- assign font1 = site.data.fonts.allegria20.font -%}
+{%- assign font = site.data.fonts.allegria20.font -%}
 {%- assign font2 = site.data.fonts.allegria55.font -%}
 
 {% include upcoming_release.html %}
@@ -25,10 +25,10 @@ data_title:
 
 ### Allegria 20
 
-This font contains  {{ font1.glyphs.size }} glyphs:
+This font contains  {{ font.glyphs.size }} glyphs:
 
 ```
-{{ font1.glyphs | sort | join: ' ' }}
+{{ font.glyphs | sort | join: ' ' }}
 ```
 {: .font-glyphs }
 
@@ -45,10 +45,10 @@ This font contains  {{ font2.glyphs.size }} glyphs:
 
 ### Allegria 20
 
-At a scale of 100% this font has an approximate height of {{ font1.size }} mm. 
+At a scale of 100% this font has an approximate height of {{ font.size }} mm. 
 
-It can be scaled from {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
-up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
+It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
+up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 ### Allegria 55
 
@@ -64,7 +64,7 @@ up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.
 
 ## Legal Information
 
-This font is a derivative of [{{font1.original_font}}]({{font1.original_font_url}}) and is licensed under {{font1.font_license}}.
+This font is a derivative of [{{font.original_font}}]({{font.original_font_url}}) and is licensed under {{font.font_license}}.
 
 [Download Allegria 20 Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/allegria20/LICENSE)
 
