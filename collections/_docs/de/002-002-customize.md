@@ -54,7 +54,7 @@ Benutze die Suchfunktion um die Erweiterungen schneller zu finden. [Mehr informa
 
 ## Zoomkorrektur
 
-Beim Sticken ist es wichtig, ein Gefühl für die tatsächliche Größe des Entwurfs zu bekommen. Inkscape verfügt über eine Einstellung, mit der man die Zoomstufen die Bildschirmgröße anpassen kann.
+Beim Sticken ist es wichtig, ein Gefühl für die tatsächliche Größe des Entwurfs zu bekommen. Inkscape verfügt über eine Einstellung, mit der man die Zoomstufen an die Bildschirmgröße anpassen kann.
 
 * Navigiere zu `Bearbeiten > Einstellungen > Benutzeroberfläche`
 * Nun hält man ein Lineal auf das Display und passt den Schieberegler an, bis die Länge übereinstimmt.
@@ -77,7 +77,11 @@ Damit die Pfadrichtungen auch wirklich angezeigt werden, aktiviere außerdem die
 
 ## Vorlagen
 
-Wenn man Ink/Stitch häufiger verwendet, möchte man nicht die gleichen Arbeitsschritte immer und immer wieder wiederholen. In diesem Fall kann eine Vorlage für die grundlegende Stickkonfiguration erstellt werden. Nachdem alles nach Wunsch eingerichtet wurde, speichere die Datei einfach in dem Vorlagenverzeichnis. Das geht über `Datei > Als Vorlage speichern`. Nun kann mit `Datei > Neu aus Vorlage > Benutzerdefiniert` darauf zugegriffen werden. Wer Inkscape hautpsächlich für Ink/Stitch nutzt, kann beim Abspeichern der Vorlage auch die Option `Als Standartvorlage festlegen` anwählen.
+Wenn man Ink/Stitch häufiger verwendet, bietet es sich an eine Vorlage für die grundlegende Stickkonfiguration zu erstellen. So kann man die Dokumenteinstellungen wiederverwenden und muss nicht wiederholt die gleichen Einstellungen vornehmen.
+
+Nach der vollständigen Einrichtung des Dokumentes wird die Datei über `Datei > Als Vorlage speichern` abgspeichert und kann nun über `Datei > Neu aus Vorlage > Benutzerdefiniert` aufgerufen werden.
+
+Wer Inkscape hautpsächlich für Ink/Stitch nutzt, kann beim Abspeichern der Vorlage auch die Option `Als Standartvorlage festlegen` anwählen.
 
 **Tip:** Hier gibt es [Vorlagen](/de/tutorials/resources/templates/) die du nutzen kannst.
 {: .notice--info }

@@ -11,6 +11,7 @@ preview_image:
 data_title:
   - apex_lake
   - apex_simple_AGS
+  - apex_simple_small_AGS
 ---
 {%- assign font1 = site.data.fonts.apex_lake.font -%}
 {%- assign font2 = site.data.fonts.apex_simple_AGS.font -%}

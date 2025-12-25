@@ -116,7 +116,7 @@ Contour fill creates stitches that follow the contour of a shape as the fill pro
 
 ### Guided Fill
 
-Guided fill creates stitches by using guide lines to control stitch direction.
+Guided fill creates stitches by using a guide line to control stitch direction.
 
 ![Guided fill](/assets/images/docs/guided-fill-complex.svg)
 
