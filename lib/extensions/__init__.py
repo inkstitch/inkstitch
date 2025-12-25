@@ -13,6 +13,7 @@ from .batch_lettering import BatchLettering
 from .break_apart import BreakApart
 from .cleanup import Cleanup
 from .commands_scale_symbols import CommandsScaleSymbols
+from .cross_stitch_calculator import CrossStitchCalculator
 from .cross_stitch_grid import CrossStitchGrid
 from .cut_satin import CutSatin
 from .cutwork_segmentation import CutworkSegmentation
@@ -94,6 +95,7 @@ extensions = [
     BreakApart,
     Cleanup,
     CommandsScaleSymbols,
+    CrossStitchCalculator,
     CrossStitchGrid,
     CutSatin,
     CutworkSegmentation,
