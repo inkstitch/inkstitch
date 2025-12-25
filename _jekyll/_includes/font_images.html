@@ -19,13 +19,13 @@
 {% endfor %}
 
 <div class="font-separator" data-title="{{ font.title }}" data-max_size="{{ max_size }}" data-min_size="{{ min_size }}" data-keywords="{{ categories | uniq | join: ',' }}" data-glyphs="{{ glyphs | uniq | join: ' ' | escape}}">
-  {%- for image in font.preview_image -%}
+  {%- for image in page.preview_image -%}
   {%- assign urlsize = image.url | size -%}
   <p class="font-library-preview-image">
   {%- if urlsize < 15 -%}
-  <a href="{{ font.permalink }}"><img src="{{ font.preview_image }}" alt="{{font.title}} Preview"></a></p>
+  <img src="{{ image.url }}" alt="{{font.title}} Preview"></p>
   {%- else -%}
-      <a href="{{ font.permalink }}"><img src="{{ image.url }}" alt="{{font.title}} Preview" style="height:{{ image.height }}mm" data-image_height="{{ image.height }}mm"></a>
+      <img src="{{ image.url }}" alt="{{font.title}} Preview" style="height:{{ image.height }}mm" data-image_height="{{ image.height }}mm">
   {%- endif -%}
   </p>
   {% endfor %}
