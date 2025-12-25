@@ -157,6 +157,13 @@ def cross_stitch(fill, shape, starting_point, ending_point, double_pass=False, o
        Traditionally cross stitches are strictly organized and each cross follows the same pattern.
        Meaning the layering of the diagonals can't be switched during the stitch out.
        For example all crosses start with '\' as a bottom layer and end with '/' as the top layer.
+
+        fill:           the fill element
+        shape:          shape as MultiPolygon
+        starting_point: defines where to start
+        ending_point:   defines where to end
+        double_pass:    wether or not this is the second pass (upright cross) from a double cross method
+        original_shape: helps to define a consistent grid offset when the shape had to be split up into multiple shapes
     '''
     max_stitch_length = fill.max_cross_stitch_length
     if double_pass:
@@ -201,7 +208,7 @@ def cross_stitch(fill, shape, starting_point, ending_point, double_pass=False, o
     nodes.extend(get_line_endpoints(diagonals1))
 
     # Snap start and end points to spots which are actually part of the cross stitch pattern
-    starting_point, ending_point = get_start_and_end(starting_point, ending_point, snap_points)
+    starting_point, ending_point = get_start_and_end(starting_point, ending_point, snap_points, outline)
 
     half_stitch = cross_stitch_method in ['half_cross', 'half_cross_flipped']
     last_pass = cross_stitch_method in ['half_cross', 'half_cross_flipped']
@@ -260,13 +267,13 @@ def cross_stitch_multiple(outline, fill, starting_point, ending_point, double_pa
     return stitches
 
 
-def get_start_and_end(starting_point, ending_point, snap_points):
+def get_start_and_end(starting_point, ending_point, snap_points, outline):
     '''Snap starting and ending point on existng spots on our cross stitch pattern
     '''
     if starting_point is not None:
         starting_point = nearest_points(snap_points, Point(starting_point))[0].coords
     if ending_point is not None:
-        ending_point = nearest_points(snap_points, Point(ending_point))[0].coords
+        ending_point = nearest_points(outline.boundary, Point(ending_point))[0].coords
     return starting_point, ending_point
 
 
@@ -304,7 +311,7 @@ def _lines_to_stitches(
         shape, path, travel_graph, fill_stitch_graph,
         max_stitch_length, snap_points, underpath, is_upright
     )
-    result = collapse_travel_edges(result, last_pass)
+    result = collapse_travel_edges(result, ending_point, last_pass)
     result = filter_center_point_stitches(result, snap_points)
     if bean_stitch_repeats >= 1:
         # add bean stitches, but ignore travel stitches
@@ -453,7 +460,7 @@ def travel(shape, travel_graph, edge, snap_points, max_stitch_length, underpath,
     return stitches
 
 
-def collapse_travel_edges(result, last_pass):
+def collapse_travel_edges(result, ending_point, last_pass):
     '''Removes undwanted loops in travel paths
     '''
     new_sitches = []
@@ -474,7 +481,7 @@ def collapse_travel_edges(result, last_pass):
             last_travel_stitches.append(stitch)
             new_sitches.extend(last_travel_stitches)
             last_travel_stitches = []
-    if last_travel_stitches and last_pass:
+    if last_travel_stitches and ending_point and last_pass:
         new_sitches.extend(last_travel_stitches)
     return new_sitches
 
