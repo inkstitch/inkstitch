@@ -12,6 +12,10 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 
 ### New Fonts
 
+* [Alchemy](/fonts/alchemy/)
+
+  ![Alchemy](/assets/images/fonts/alchemy.jpg)
+
 * [Allegria 20](/fonts/allegria/)
 
   ![Allegria 20](/assets/images/fonts/allegria20.png)
@@ -30,7 +34,10 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Cyrillic](/fonts/cyrillic/)
 
   ![Cyrillic](/assets/images/fonts/cyrillic.png)
-* [Neon](/fonts/neon/)
+* [Montecarlo](/fonts/montecarlo/)
+
+  ![Neon](/assets/images/fonts/montecarlo.png)
+  * [Neon](/fonts/neon/)
 
   ![Neon](/assets/images/fonts/neon.png)
 * [Neon blinking](/fonts/neon/)
