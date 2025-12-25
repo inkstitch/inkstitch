@@ -13,8 +13,18 @@
   <div id=glyphs>
    <h2>Glyphs</h2>
    
-{%- assign font = page.data_title[0] -%}
-    {{font.name}} contains   glyphs:
+  {%- assign min_size = 99999999 -%}
+  {%- assign max_size = 0 -%}
+  {%- assign categories = "" | split: ',' -%}
+  {%- assign glyphs = "" | split: ',' -%}
+  {%- for sub_font in font.data_title -%}
+    {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
+    {%- assign name = sub_font_data.name -%}
+    
+       {{name}} contains   glyphs:
+ 
+{% endfor %}
+   
     
 
 
