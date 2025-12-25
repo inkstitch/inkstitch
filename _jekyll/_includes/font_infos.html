@@ -1,65 +1,17 @@
 
-<div id=infos>
 <div id=images>
 {%- assign min_size = 99999999 -%}
 {%- assign max_size = 0 -%}
 {%- assign categories = "" | split: ',' -%}
 {%- assign glyphs = "" | split: ',' -%}
 {%- for image in page.preview_image -%}
-<p class ="font-library-preview-image">
+<p>
   <img 
      src="{{image.url }}"
      alt="{{page.title}} "
-     height="{{image.height}}mm">
+     height="{{image.height}}mm"/>
 </p>
 {% endfor %} 
 </div>
-</div>
-<!--
-## Glyphs
-<div>
-  {%- for sub_font in page.data_title -%}
-  {%- assign subfont = site.data.fonts.{{sub_font}}.font -%}
-### {{subfont}}
- This font contains {{ subfont.glyphs.size }} glyphs:
 
-{{ subfont.glyphs | sort | join: ' ' }}
-  
 
-{: .font-glyphs }
-  {% endfor %}
-</div>
-{%- for sub_font in page.data_title -%}
-  {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
-  {%- assign categories = categories | push: sub_font_data.keywords -%}
-  {%- assign glyphs = glyphs | push: sub_font_data.glyphs -%}
-  {%- assign min_scale = sub_font_data.min_scale | times: sub_font_data.size -%}
-  {%- assign max_scale = sub_font_data.max_scale | times: sub_font_data.size -%}
-  {%- if min_scale < min_size -%}
-      {%- assign min_size = min_scale | round: 2 -%}
-  {%- endif -%}
-  {%- if max_scale > max_size -%}
-      {%- assign max_size = max_scale | round: 2 -%}
-  {%- endif -%}
-    
-{% endfor %}
-
-<div class="font-separator" data-title="{{ font.title }}" data-max_size="{{ max_size }}" data-min_size="{{ min_size }}" data-keywords="{{ categories | uniq | join: ',' }}" data-glyphs="{{ glyphs | uniq | join: ' ' | escape}}">
-  {%- for image in page.preview_image -%}
-  {%- assign urlsize = image.url | size -%}
-  <img 
-     src="{{ image.url }}"
-     alt="{{page.title}} "
-     style="height:{{ image.height }}mm">
-  <p class="font-library-preview-image">
-  {%- if urlsize < 15 -%}
-  <img src="{{ image.url }}" alt="{{font.title}} Preview"></p>
-  {%- else -%}
-      <img src="{{ image.url }}" alt="{{font.title}} Preview" style="height:{{ image.height }}mm" data-image_height="{{image.height }}mm">
-  {%- endif -%}
-  </p>
-  {% endfor %}
-  <p><a href="{{ font.permalink }}">{{ font.title }}</a> <span style="color:#b9b9b9;"> | {{ min_size }}mm - {{ max_size }}mm</span></p>
-</div>
-</div>
--->
