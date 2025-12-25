@@ -1,5 +1,4 @@
 
-
 <div id=images>
 {%- for image in page.preview_image -%}
 <p>
@@ -11,20 +10,6 @@
  
 {% endfor %} 
 
-  <div id=glyphs>
-   <h2>Glyphs</h2>
-   
- 
-  
-    
-
-
-    
-  </div>
-
-  <div id= dimensions>
-    <h2> Dimensions</h2>
-</div>
 
 
 
