@@ -10,8 +10,20 @@
 {% endfor %} 
 
   <div id=glyphs>
-   <h1>Glyphs</h1>
+   <h2>Glyphs</h2>
+
+    This font contains  {{ font.glyphs.size }} glyphs:
+
+```
+{{ font.glyphs | sort | join: ' ' }}
+```
+{: .font-glyphs }
+    
   </div>
+
+  <div id= dimensions>
+    <h2> Dimensions</h2>
 </div>
+
 
 
