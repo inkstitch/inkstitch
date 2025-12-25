@@ -639,6 +639,7 @@ de: &DEFAULT_DE
   font_filter_category_serif : "Serifen"
   font_filter_category_tartan: "Tartan"
   font_filter_category_tiny  : "Kleine Schriftgrößen"
+  font_filtter_category_arabic : "Schrift: Arabisch"
   font_filter_glyph_label    :   "Zeichen"
   font_filter_counter_label  : "Schriftarten"
   font_list_sortby           : "Sortieren"
