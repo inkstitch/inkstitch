@@ -7,6 +7,7 @@ import wx.propgrid
 from ...debug.debug import debug
 from ...gui.windows import SimpleBox
 from ...i18n import _
+from ...utils.classproperty import classproperty
 from ...utils.settings import global_settings
 
 
@@ -36,12 +37,6 @@ class InkStitchNumericProperty:
         self.prefix = prefix
         self.unit = unit
 
-    def set_unit(self, unit):
-        self.unit = unit
-
-    def set_prefix(self, prefix):
-        self.prefix = prefix
-
     def DoGetEditorClass(self):
         return wx.propgrid.PGEditor_SpinCtrl
 
@@ -65,10 +60,10 @@ class InkStitchNumericProperty:
             return value_str
 
     def OnEvent(self, pg, window, event):
-        # If the user starts editing a property that had multiple values, set
-        # the value quickly before editing starts.  Otherwise, clicking the
-        # spin-buttons causes a low-level C++ exception since the property is
-        # set to None.
+        # If the user starts editing a property that had multiple values set in
+        # different objects, set the value quickly before editing starts.
+        # Otherwise, clicking the spin-buttons causes a low-level C++ exception
+        # since the property is set to None.
         if event.GetEventType() == wx.wxEVT_CHILD_FOCUS:
             if self.IsValueUnspecified():
                 self.SetValueInEvent(self.GetAttribute('InitialValue'))
@@ -81,16 +76,98 @@ class InkStitchFloatProperty(InkStitchNumericProperty, wx.propgrid.FloatProperty
     def __init__(self, *args, prefix="", unit="", **kwargs):
         super().__init__(*args, **kwargs)
 
-        # default to a step of 0.1, but can be changed per-property
+        # default to a step of 0.1, but can be changed per-property by passing
+        # attributes={wx.propgrid.PG_ATTR_SPINCTRL_STEP, ___} to Property()
         self.SetAttribute(wx.propgrid.PG_ATTR_SPINCTRL_STEP, 0.1)
 
-    def value_to_string(self, value):
+    @classmethod
+    def value_to_string(cls, value):
         return f"{value:0.2f}"
+
+    @classmethod
+    def string_to_value(cls, string):
+        return float(string)
 
 
 class InkStitchIntProperty(InkStitchNumericProperty, wx.propgrid.IntProperty):
-    def value_to_string(self, value):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    @classmethod
+    def value_to_string(cls, value):
         return str(value)
+
+    @classmethod
+    def string_to_value(cls, string):
+        return int(string)
+
+
+class InkstitchMultiProperty(wx.propgrid.PGProperty):
+    def __init__(self, *args, type=None, prefix="", unit="", **kwargs):
+        super().__init__(*args, **kwargs)
+
+        debug.log(f"InkstitchMultiProperty({prefix=}, {unit=}, {kwargs})")
+
+        self.prefix = prefix
+        self.unit = unit
+        self.name = kwargs.get('name')
+        self.type = type
+
+        self.m_value = []
+
+        wx.CallAfter(self.watch_for_child_changes)
+        wx.CallAfter(self.update_children)
+
+    def update_children(self):
+        debug.log(f"InkstitchMultiProperty.update_children({self.m_value=})")
+
+        pg = self.GetGrid()
+        if pg:
+            values = self.m_value
+
+            if len(values) == self.GetChildCount():
+                debug.log("only need to update values")
+                for i, value in enumerate(values):
+                    self.Item(i).SetValue(value)
+            else:
+                self.DeleteChildren()
+                for i, value in enumerate(values):
+                    child = self.type(name=f"sub{i}", label=f"[{i}]", prefix=self.prefix, unit=self.unit, value=value)
+                    child.SetAttribute("Ignore", True)
+                    pg.AppendIn(self, child)
+
+    def watch_for_child_changes(self):
+        pg = self.GetGrid()
+        if pg:
+            pg.Bind(wx.propgrid.EVT_PG_CHANGED, self.on_property_changed)
+        else:
+            debug.log("unable to watch for child changed events")
+
+    def on_property_changed(self, event):
+        # ensure that other event handlers are called too
+        event.Skip()
+
+        prop = event.GetProperty()
+        if prop == self:
+            self.update_children()
+        else:
+            parent = prop.GetParent()
+            if parent is self:
+                debug.log(f"child changed: {prop.GetName()} {prop.GetIndexInParent()}")
+                values = list(self.m_value)
+                values[prop.GetIndexInParent()] = prop.GetValue()
+                wx.CallAfter(lambda: self.GetGrid().ChangePropertyValue(self, values))
+
+    def ValueToString(self, value, flags=None):
+        # debug.log(f"InkstitchMultiProperty.ValueToString({value=}, {flags=})")
+        return " ".join(self.type.value_to_string(item) for item in value)
+
+    def StringToValue(self, text, flags):
+        debug.log(f"InkStitchMultiProperty.StringToValue({text=}, {flags=})")
+
+        # TODO: doesn't work with types we haven't wrapped
+        values = [self.type.string_to_value(value) for value in text.split()]
+        return values != self.m_value, values
 
 
 class Properties:
@@ -176,7 +253,7 @@ class Property:
         wx.Colour: wx.propgrid.ColourProperty
     }
 
-    def __init__(self, name, label, help="", min=None, max=None, prefix=None, unit=None, type=None, attributes=None):
+    def __init__(self, name, label, help="", min=None, max=None, prefix="", unit="", type=None, multi=False, attributes=None):
         self.name = name
         self.label = label
         self.help = help
@@ -185,6 +262,7 @@ class Property:
         self.prefix = prefix
         self.unit = unit
         self.type = type
+        self.multi = multi
         self.attributes = attributes
         self.property = None
         self.pg = None
@@ -192,18 +270,23 @@ class Property:
     def generate(self, pg, parent, config):
         self.pg = pg
 
+        kwargs = {}
+        if self.prefix:
+            kwargs['prefix'] = self.prefix
+        if self.unit:
+            kwargs['unit'] = self.unit
+
         property_class = self.get_property_class()
-        self.property = property_class(name=self.name, label=self.label)
+        if self.multi:
+            self.property = InkstitchMultiProperty(name=self.name, label=self.label, type=property_class, **kwargs)
+        else:
+            self.property = property_class(name=self.name, label=self.label, **kwargs)
         self.property.SetValue(config.get(self.name))
 
         pg.AppendIn(parent, self.property)
+
         if self.help:
             pg.SetPropertyHelpString(self.property, self.help)
-
-        if self.prefix:
-            self.property.set_prefix(self.prefix)
-        if self.unit:
-            self.property.set_unit(self.unit)
 
         if self.attributes:
             for name, value in self.attributes.items():
@@ -248,8 +331,7 @@ class StitchLayerEditor:
         self.property_grid_panel = None
         self.change_callback = change_callback
 
-    @classmethod
-    @property
+    @classproperty
     def properties(cls):
         """Define PropertyGrid properties and attributes concisely.
 
@@ -381,10 +463,12 @@ class StitchLayerEditor:
     def on_property_changed(self, event):
         # override in subclass if needed but always call super().on_property_changed(event)!
         changed_property = event.GetProperty()
-        if self.change_callback is not None:
-            self.change_callback(changed_property.GetName(), changed_property.GetValue())
 
-        debug.log(f"Changed property: {changed_property.GetName()} = {changed_property.GetValue()}")
+        if not changed_property.GetAttribute("Ignore"):
+            if self.change_callback is not None:
+                self.change_callback(changed_property.GetName(), changed_property.GetValue())
+
+            debug.log(f"Changed property: {changed_property.GetName()} = {changed_property.GetValue()}")
 
     def on_select(self, event):
         property = event.GetProperty()
