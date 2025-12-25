@@ -312,7 +312,7 @@ class LetteringEditJsonPanel(wx.Panel):
         self.font_meta = defaultdict(list)
         self.font_meta['name'] = self.font.name
         self.font_meta['description'] = self.font.metadata['description']  # untranslated description
-        self.font_meta['font_license'] = self.font.metadata['font_license']
+        self.font_meta['font_license'] = self.font.font_license
         self.font_meta['text_direction'] = self.font.text_direction
         self.font_meta['keywords'] = self.font.keywords
         self.font_meta['original_font'] = self.font.original_font
@@ -334,7 +334,7 @@ class LetteringEditJsonPanel(wx.Panel):
         # update ctrl
         self.settings_panel.font_info.name.ChangeValue(self.font.name)
         self.settings_panel.font_info.description.ChangeValue(self.font.metadata['description'])
-        self.settings_panel.font_info.font_license.ChangeValue(self.font.metadata['font_license'])
+        self.settings_panel.font_info.font_license.ChangeValue(self.font.font_license)
         selection = ['ltr', 'rtl', 'ttb', 'btt'].index(self.font.json_default_variant)
         self.settings_panel.font_settings.default_variant.SetSelection(selection)
         selection = ['ltr', 'rtl'].index(self.font.text_direction)

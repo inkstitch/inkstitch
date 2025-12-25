@@ -131,7 +131,7 @@ class Font(object):
 
     name = font_metadata('name', '')
     description = localized_font_metadata('description', '')
-    font_license = font_metadata('license', 'SIL Open Font License v1.1')
+    font_license = font_metadata('font_license', 'SIL Open Font License v1.1')
     keywords = font_metadata('keywords', '')
     original_font = font_metadata('original_font', '')
     original_font_url = font_metadata('original_font_url', '')
