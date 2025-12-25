@@ -8,7 +8,7 @@
      alt="{{page.title}} "
      height="{{image.height}}"/>
 </p>
-  <p> hello </p>
+ 
 {% endfor %} 
 
   <div id=glyphs>
