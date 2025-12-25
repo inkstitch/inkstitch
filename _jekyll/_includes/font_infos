@@ -8,6 +8,7 @@
      alt="{{page.title}} "
      height="{{image.height}}"/>
 </p>
+  <p> hello </p>
 {% endfor %} 
 
   <div id=glyphs>
@@ -21,10 +22,10 @@
     {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
     {%- assign name = sub_font_data.name -%}
     {%- assign glyphs = glyphs | push: sub_font_data.glyphs -%}
-    <div >
+    <p >
        {{name}} contains   glyphs:
-     </div>
-{% endfor %}
+     </p>
+  {% endfor %}
    
     
 
