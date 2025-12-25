@@ -44,7 +44,7 @@ Vous trouverez de nombreux conseils pour utiliser cette fonte en suivant ce [lie
 
 ## Dans la vraie vie
 
-{% include folder-galleries path="fonts/abril/" %}
+{% include folder-galleries path="fonts/mai_en_fleur/" %}
 
 
 
