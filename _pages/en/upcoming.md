@@ -47,7 +47,26 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 
 Numerous updates to existing fonts were made. Thanks to everyone involved!
 
+## Palette Files
+
+* add magnifico thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
+* add threadart thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
+
 ## Stitch Type Related Updates
+
+### Legacy Fill
+
+* Add expand option [#3988](https://github.com/inkstitch/inkstitch/pull/3988)
+
+### Ripple Stitch
+
+* Improved rendering for the varying width option [#4079](https://github.com/inkstitch/inkstitch/pull/4079)
+* Allow clipping [#4082](https://github.com/inkstitch/inkstitch/pull/4082)
+* Enable swap rail and reverse rail options for satin guides [#4083](https://github.com/inkstitch/inkstitch/pull/4083)
+
+### Running Stitch
+
+* Allow a space separated sequence as intput value for the stitch length [#4034](https://github.com/inkstitch/inkstitch/pull/4034)
 
 ### Satin columns
 
@@ -62,6 +81,12 @@ When multiple values are set, the satin column will use these to level consecuti
 
 ## New extensions
 
+### Apply attribute
+
+`Edit > Apply attribute` [#3983](https://github.com/inkstitch/inkstitch/pull/3983)
+
+An extension for experienced users. Applies a given attribute to all selected elements.
+
 ### Organize Glyphs
 
 `Font Management > Organize Glyphs` [#3870](https://github.com/inkstitch/inkstitch/pull/3870)
@@ -69,6 +94,11 @@ When multiple values are set, the satin column will use these to level consecuti
 Helps font digitizers to organize their work in steps so that they can reuse previously digitized letters
 
 [Read more](/docs/font-tools/#organize-glyphs)
+
+### Cross Stitch
+
+* Add extension to setup a grid for cross stitching [#4095](https://github.com/inkstitch/inkstitch/pull/4095)
+* Add pixelize fill extension [#4096](https://github.com/inkstitch/inkstitch/pull/4096)
 
 ## Updated Extensions
 
@@ -81,9 +111,13 @@ Helps font digitizers to organize their work in steps so that they can reuse pre
 
 [Read more](/docs/font-tools/#convert-svg-font-to-glyph-layers)
 
+### Cut Satin
+
+It is now possible to cut a satin at multiple positions at once. [#4015](https://github.com/inkstitch/inkstitch/pull/4015)
+
 ### Edit JSON
 
-* Allow a value of `0` for `horiz_adv_x_default` (Use the width of the individual glyphs) [#3965](https://github.com/inkstitch/inkstitch/pull/3965)
+* It is now possible to set `0` as a value for `horiz_adv_x_default`. This is make Ink/Stitch use the width of the individual glyphs  [#3965](https://github.com/inkstitch/inkstitch/pull/3965)
 
 ### Element Info
 
@@ -96,14 +130,44 @@ Helps font digitizers to organize their work in steps so that they can reuse pre
 
 ### Force lock stitches
 
-* add option to include forced lock stitches on the last element of each selected group [#3875](https://github.com/inkstitch/inkstitch/pull/3875)
+* add option to apply forced lock stitches on the last element of each selected group [#3875](https://github.com/inkstitch/inkstitch/pull/3875)
+
+### Jump to Trim
+
+* add command option: trim or jump [#4038](https://github.com/inkstitch/inkstitch/pull/4038)
+
+### Knockdown Fill
+
+* add stitch length option [#4084](https://github.com/inkstitch/inkstitch/pull/4084)
+
+### Lettering
+
+* Lettering: add spacing options [#4020](https://github.com/inkstitch/inkstitch/pull/4020)
+
+* Fonts: enable ltr, rtl, ttb, btt file names for font variants (instead of the arrows) [#4087](https://github.com/inkstitch/inkstitch/pull/4087)
 
 ### Preferences
 
 * add "rotate on export" file setting [#3840](https://github.com/inkstitch/inkstitch/pull/3840)
 
+# Troubleshoot
+
+* add display options (errors, warnings, type warnings) [#3969](https://github.com/inkstitch/inkstitch/pull/3969)
+
 ## Bugfixes
 
+* remove embroidery settings: command param along with commands for trim and stop [#4074](https://github.com/inkstitch/inkstitch/pull/4074)
+* Fill to satin: process rungs within the fill shape better [#4025](https://github.com/inkstitch/inkstitch/pull/4025)
+* fill to satin: fix stroke width [#4005](https://github.com/inkstitch/inkstitch/pull/4005)
+* redwork: delete empty groups [#4014](https://github.com/inkstitch/inkstitch/pull/4014)
+* empty-d-object: define a default color (black) [#4018](https://github.com/inkstitch/inkstitch/pull/4018)
+* jump to stroke: add path label [#4011](https://github.com/inkstitch/inkstitch/pull/4011)
+* params: prevent settings error [#4004](https://github.com/inkstitch/inkstitch/pull/4004)
+* satin: do no error on one point zigzag underlay segment [#3996](https://github.com/inkstitch/inkstitch/pull/3996)
+* fix remove kerning [#3995](https://github.com/inkstitch/inkstitch/pull/3995)
+* fix redwork stroke width [#3964](https://github.com/inkstitch/inkstitch/pull/3964)
+* Fix transform issues in lettering along path [#3972](https://github.com/inkstitch/inkstitch/pull/3972)
+* Gradient color: fix cache key error [#3966](https://github.com/inkstitch/inkstitch/pull/4007)
 * Fill to satin: do not error out when one of multiple selected fills has no matching rung [#3966](https://github.com/inkstitch/inkstitch/pull/3966)
 * Satin: rely more on path length for invalid satins [#3963](https://github.com/inkstitch/inkstitch/pull/3963)
 * Stroke: filter invalid paths in clipped path [#3989](https://github.com/inkstitch/inkstitch/pull/3989)
@@ -126,6 +190,8 @@ Helps font digitizers to organize their work in steps so that they can reuse pre
 
 ## Builds, tests, workflows, code quality and house keeping
 
+* Move fonts to submodule [#4061](https://github.com/inkstitch/inkstitch/pull/4061)
+* debugger vscode adaption [#3981](https://github.com/inkstitch/inkstitch/pull/3981)
 * README: add contact information (forum, chat) [#3979](https://github.com/inkstitch/inkstitch/pull/3979)
 * removed shapely rebuild from macos builds [#3960](https://github.com/inkstitch/inkstitch/pull/3960)
 * Rename pyembroidery to pystitch [#3889](https://github.com/inkstitch/inkstitch/pull/3830)
