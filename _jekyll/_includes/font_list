@@ -21,6 +21,11 @@
     <option value="tartan">{{ site.data.ui-text[page.lang].font_filter_category_tartan | default: "Tartan" }}</option>
     <option value="tiny">{{ site.data.ui-text[page.lang].font_filter_category_tiny | default: "Tiny" }}</option>
     <option value="arabic">{{ site.data.ui-text[page.lang].font_filter_category_arabic | default: "Script: arabic" }}</option>
+    <option value="cyrillic">{{ site.data.ui-text[page.lang].font_filter_category_cyrillic | default: "Script: cyrillic" }}</option>
+    <option value="greek">{{ site.data.ui-text[page.lang].font_filter_category_greek | default: "Script: greek" }}</option>
+    <option value="hebrew">{{ site.data.ui-text[page.lang].font_filter_category_hebrew | default: "Script: hebrew" }}</option>
+    <option value="japanese">{{ site.data.ui-text[page.lang].font_filter_category_japanese | default: "Script: japanese" }}</option>
+    <option value="latin">{{ site.data.ui-text[page.lang].font_filter_category_latin | default: "Script: latin" }}</option>
   </select>
   <label for="glyph-filter">{{ site.data.ui-text[page.lang].font_filter_glyph_label | default: "Glyphs" }}</label>
   <input type="text" id="glyph-filter" name="glyph-filter">
