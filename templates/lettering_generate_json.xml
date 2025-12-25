@@ -17,33 +17,44 @@
     <param name="notebook" type="notebook">
       <page name="general" gui-text="Font info">
 
+        <label appearance="header">General Font Info</label>
         <param type="string" name="font-name" gui-text="Name" indent="1" />
         <param type="string" name="font-description" gui-text="Description" indent="1" />
-        
-        <param name="default_variant" type="optiongroup" appearance="combo" gui-text="Default variant"
-               gui-description="Default embroidery direction" indent="1">
-             <option value="ltr" translatable="no">Left to right</option>
-             <option value="rtl" translatable="no">Right to left</option>
-             <option value="ttb" translatable="no">Top to bottom</option>
-             <option value="btt" translatable="no">Bottom to top</option>
-        </param>
+        <param type="string" name="font_license" gui-text="Font license" indent="1">SIL Open Font License v1.1</param>
+
         <param name="text_direction" type="optiongroup" appearance="combo" gui-text="Text direction" indent="1">
              <option value="ltr">Left to right</option>
              <option value="rtl">Right to left</option>
         </param>
+
+        <param name="default_variant" type="optiongroup" appearance="combo" gui-text="Default variant"
+               gui-description="Default embroidery direction" indent="1">
+             <option value="ltr" translatable="no">Left to right</option>
+             <option value="rtl" translatable="no">Right to left</option>s
+             <option value="ttb" translatable="no">Top to bottom</option>
+             <option value="btt" translatable="no">Bottom to top</option>
+        </param>
+
         <spacer />
         <separator indent="1"/>
         <spacer />
 
+        <label appearance="header">Original Font Info</label>
+        <param type="string" name="original_font" gui-text="Original Font Name" indent="1" />
+        <param type="string" name="original_font_url" gui-text="Original Font URL" indent="1" />
+
+        <spacer />
+        <separator indent="1"/>
+        <spacer />
+
+        <label appearance="header">Source File</label>
         <param type="path" name="font-file" gui-text="SVG Font File" indent="1" mode="file" filetypes="svg"/>
 
         <spacer />
         <separator indent="1"/>
         <spacer />
 
-        <label appearance="header" indent="1" >
-            Keywords
-        </label>
+        <label appearance="header">Keywords</label>
         <hbox>
             {%- for category in font_categories %}
             {%- if loop.index is divisibleby 4 %}

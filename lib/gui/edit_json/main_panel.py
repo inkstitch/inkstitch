@@ -177,7 +177,7 @@ class LetteringEditJsonPanel(wx.Panel):
         self.font_meta['combine_at_sort_indices'] = indices
 
     def on_default_variant_change(self, event=None):
-        selection = self.settings_panel.font_info.default_variant.GetSelection()
+        selection = self.settings_panel.font_settings.default_variant.GetSelection()
         value = 'ltr'
         if selection == 1:
             value = 'rtl'
@@ -312,9 +312,12 @@ class LetteringEditJsonPanel(wx.Panel):
         self.font_meta = defaultdict(list)
         self.font_meta['name'] = self.font.name
         self.font_meta['description'] = self.font.metadata['description']  # untranslated description
-        self.font_meta['default_variant'] = self.font.json_default_variant
+        self.font_meta['font_license'] = self.font.font_license
         self.font_meta['text_direction'] = self.font.text_direction
         self.font_meta['keywords'] = self.font.keywords
+        self.font_meta['original_font'] = self.font.original_font
+        self.font_meta['original_font_url'] = self.font.original_font_url
+        self.font_meta['default_variant'] = self.font.json_default_variant
         self.font_meta['default_glyph'] = self.font.default_glyph
         self.font_meta['auto_satin'] = self.font.auto_satin
         self.font_meta['letter_case'] = self.font.letter_case
@@ -331,14 +334,17 @@ class LetteringEditJsonPanel(wx.Panel):
         # update ctrl
         self.settings_panel.font_info.name.ChangeValue(self.font.name)
         self.settings_panel.font_info.description.ChangeValue(self.font.metadata['description'])
+        self.settings_panel.font_info.font_license.ChangeValue(self.font.font_license)
         selection = ['ltr', 'rtl', 'ttb', 'btt'].index(self.font.json_default_variant)
-        self.settings_panel.font_info.default_variant.SetSelection(selection)
+        self.settings_panel.font_settings.default_variant.SetSelection(selection)
         selection = ['ltr', 'rtl'].index(self.font.text_direction)
         self.settings_panel.font_info.text_direction.SetSelection(selection)
         self.settings_panel.font_info.keywords.SetSelection(-1)
         for category in FONT_CATEGORIES:
             if category.id in self.font.keywords:
                 self.settings_panel.font_info.keywords.SetStringSelection(category.name)
+        self.settings_panel.font_info.original_font.ChangeValue(self.font.original_font)
+        self.settings_panel.font_info.original_font_url.ChangeValue(self.font.original_font_url)
         self.settings_panel.font_settings.default_glyph.ChangeValue(self.font.default_glyph)
         self.settings_panel.font_settings.auto_satin.SetValue(self.font.auto_satin)
         selection = list(LETTER_CASE.keys())[list(LETTER_CASE.values()).index(self.font.letter_case)]

@@ -98,9 +98,12 @@ class FontInfo(wx.Panel):
             lambda event: self.parent.on_font_meta_value_changed("description", False, event)
         )
 
-        default_variant_label = wx.StaticText(self, label=_("Default Variant"))
-        self.default_variant = wx.Choice(self, choices=["→", "←", "↓", "↑"])
-        self.default_variant.Bind(wx.EVT_CHOICE, self.parent.on_default_variant_change)
+        license_label = wx.StaticText(self, label=_("Font License"))
+        self.font_license = wx.TextCtrl(self)
+        self.font_license.Bind(
+            wx.EVT_TEXT,
+            lambda event: self.parent.on_font_meta_value_changed("font_license", False, event)
+        )
 
         text_direction_label = wx.StaticText(self, label=_("Text direction"))
         self.text_direction = wx.Choice(self, choices=[_("Left to Right"), _("Right to Left")])
@@ -115,17 +118,35 @@ class FontInfo(wx.Panel):
         )
         self.keywords.Bind(wx.EVT_LISTBOX, self.parent.on_keyword_changed)
 
+        original_font_label = wx.StaticText(self, label=_("Original Font Name"))
+        self.original_font = wx.TextCtrl(self)
+        self.original_font.Bind(
+            wx.EVT_TEXT,
+            lambda event: self.parent.on_font_meta_value_changed("original_font", False, event)
+        )
+
+        original_font_url_label = wx.StaticText(self, label=_("Original Font URL"))
+        self.original_font_url = wx.TextCtrl(self)
+        self.original_font_url.Bind(
+            wx.EVT_TEXT,
+            lambda event: self.parent.on_font_meta_value_changed("original_font_url", False, event)
+        )
+
         grid_sizer.AddMany([
             (name_label, 0, wx.ALL, 0),
             (self.name, 0, wx.ALL | wx.EXPAND, 0),
             (description_label, 0, wx.ALL, 0),
             (self.description, 1, wx.ALL | wx.EXPAND, 0),
-            (default_variant_label, 0, wx.ALL, 0),
-            (self.default_variant, 1, wx.ALL | wx.EXPAND, 0),
+            (license_label, 0, wx.ALL, 0),
+            (self.font_license, 1, wx.ALL | wx.EXPAND, 0),
             (text_direction_label, 0, wx.ALL, 0),
             (self.text_direction, 1, wx.ALL | wx.EXPAND, 0),
             (keywords_label, 0, wx.ALL, 0),
-            (self.keywords, 1, wx.ALL | wx.EXPAND, 0)
+            (self.keywords, 1, wx.ALL | wx.EXPAND, 0),
+            (original_font_label, 0, wx.ALL, 0),
+            (self.original_font, 0, wx.ALL | wx.EXPAND, 0),
+            (original_font_url_label, 0, wx.ALL, 0),
+            (self.original_font_url, 0, wx.ALL | wx.EXPAND, 0)
         ])
 
         sizer.Add(grid_sizer, 1, wx.EXPAND | wx.ALL, 10)
@@ -140,6 +161,10 @@ class FontSettings(wx.Panel):
         sizer = wx.BoxSizer(wx.VERTICAL)
         grid_sizer = wx.FlexGridSizer(20, 2, 10, 10)
         grid_sizer.AddGrowableCol(1)
+
+        default_variant_label = wx.StaticText(self, label=_("Default Variant"))
+        self.default_variant = wx.Choice(self, choices=["→", "←", "↓", "↑"])
+        self.default_variant.Bind(wx.EVT_CHOICE, self.parent.on_default_variant_change)
 
         default_glyph_label = wx.StaticText(self, label=_("Default glyph"))
         self.default_glyph = wx.TextCtrl(self)
@@ -178,6 +203,8 @@ class FontSettings(wx.Panel):
         self.combine_at_sort_indices.Bind(wx.EVT_TEXT, self.parent.on_combine_indices_changed)
 
         grid_sizer.AddMany([
+            (default_variant_label, 0, wx.ALL, 0),
+            (self.default_variant, 1, wx.ALL | wx.EXPAND, 0),
             (default_glyph_label, 0, wx.ALL, 0),
             (self.default_glyph, 1, wx.ALL | wx.EXPAND, 0),
             (auto_satin_label, 0, wx.ALL, 0),
