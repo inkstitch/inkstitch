@@ -20,7 +20,7 @@
         <label appearance="header">General Font Info</label>
         <param type="string" name="font-name" gui-text="Name" indent="1" />
         <param type="string" name="font-description" gui-text="Description" indent="1" />
-        <param type="string" name="font_license" gui-text="Font license" indent="1" />
+        <param type="string" name="font_license" gui-text="Font license" indent="1">SIL Open Font License v1.1</param>
 
         <param name="text_direction" type="optiongroup" appearance="combo" gui-text="Text direction" indent="1">
              <option value="ltr">Left to right</option>
