@@ -17,13 +17,10 @@ data_title:
 
 {% include upcoming_release.html %}
 
-
-{% include font_infos.html %}
-
-
 ![Allegria20](/assets/images/fonts/allegria20.png)
 
 ![Allegria 55](/assets/images/fonts/allegria55.png)
+
 
 ## Glyphs
 
