@@ -19,11 +19,11 @@
 ## Glyphs
 <div>
   {%- for sub_font in page.data_title -%}
-  {%- assign font = site.data.fonts.{{su_font}}.font -%}
-### {{sub_font}}
- This font contains {{ font.glyphs.size }} glyphs:
+  {%- assign subfont = site.data.fonts.{{sub_font}}.font -%}
+### {{subfont}}
+ This font contains {{ subfont.glyphs.size }} glyphs:
 
-{{ font.glyphs | sort | join: ' ' }}
+{{ subfont.glyphs | sort | join: ' ' }}
   
 
 {: .font-glyphs }
