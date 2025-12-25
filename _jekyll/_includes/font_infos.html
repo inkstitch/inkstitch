@@ -1,9 +1,5 @@
-
+{%- assign font = site.data.fonts.{{page.title}}.font -%}
 <div id=images>
-{%- assign min_size = 99999999 -%}
-{%- assign max_size = 0 -%}
-{%- assign categories = "" | split: ',' -%}
-{%- assign glyphs = "" | split: ',' -%}
 {%- for image in page.preview_image -%}
 <p>
   <img 
