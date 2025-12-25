@@ -24,7 +24,8 @@ class LetteringGenerateJson(InkstitchExtension):
 
         self.arg_parser.add_argument("-n", "--font-name", type=str, default="Font", dest="font_name")
         self.arg_parser.add_argument("-d", "--font-description", type=str, default="Description", dest="font_description")
-        self.arg_parser.add_argument("-v", "--default_variant", type=int, default="ltr", dest="default_variant")
+        self.arg_parser.add_argument("--font_license", type=str, default="SIL Open Font License v1.1", dest="font_license")
+        self.arg_parser.add_argument("-v", "--default_variant", type=str, default="ltr", dest="default_variant")
         self.arg_parser.add_argument("-x", "--text_direction", type=str, default="ltr", dest="text_direction")
         self.arg_parser.add_argument("-s", "--auto-satin", type=Boolean, default="true", dest="auto_satin")
         self.arg_parser.add_argument("-r", "--reversible", type=Boolean, default="true", dest="reversible")
@@ -43,6 +44,8 @@ class LetteringGenerateJson(InkstitchExtension):
         self.arg_parser.add_argument("-w", "--word-spacing", type=int, default=20, dest="word_spacing")
         self.arg_parser.add_argument("-b", "--letter-spacing", type=int, default=100, dest="letter_spacing")
         self.arg_parser.add_argument("-p", "--font-file", type=str, default="", dest="path")
+        self.arg_parser.add_argument("--original_font", type=str, default="", dest="original_font")
+        self.arg_parser.add_argument("--original_font_url", type=str, default="", dest="original_font_url")
 
         for category in FONT_CATEGORIES:
             self.arg_parser.add_argument(f"--{category.id}", type=Boolean, default="false", dest=category.id)
@@ -91,9 +94,12 @@ class LetteringGenerateJson(InkstitchExtension):
         # collect data
         data = {'name': self.options.font_name,
                 'description': self.options.font_description,
+                'font_license': self.options.font_license,
                 'default_variant': self.options.default_variant,
                 'text_direction': self.options.text_direction,
                 'keywords': keywords,
+                'original_font': self.options.original_font,
+                'original_font_url': self.options.original_font_url,
                 'leading': leading,
                 'auto_satin': self.options.auto_satin,
                 'reversible': self.options.reversible,
