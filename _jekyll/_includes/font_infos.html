@@ -1,4 +1,7 @@
-{%- assign font = site.data.fonts.{{page.title}}.font -%}
+
+{%- assign font = site.data.fonts[{{page.title}}].font -%}
+
+
 <div id=images>
 {%- for image in page.preview_image -%}
 <p>
