@@ -58,9 +58,6 @@ It can be scaled from {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size
 up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm).
 
 
-## In real life 
-
-{%include folder-galleries path="fonts/allegria/" %}
 
 ## Legal Information
 
@@ -68,8 +65,7 @@ This font is a derivative of [{{font.original_font}}]({{font.original_font_url}}
 
 [Download Allegria 20 Font License](https://github.com/inkstitch/embroidery-fonts/blob/main/src/allegria20/LICENSE)
 
-[Download Allegria 55 Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/allegria55/LICENSE)
-
+[Download Allegria 55 Font License](https://github.com/inkstitch/embroidery-fonts/blob/main/src/allegria55/LICENSE)
 
 ## In real life 
 
