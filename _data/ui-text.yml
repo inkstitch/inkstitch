@@ -221,6 +221,7 @@ fr: &DEFAULT_FR
   font_filter_category_serif: "Serif"
   font_filter_category_tartan: "Tartan"
   font_filter_category_tiny: "Petite"
+  font_filter_category_arabic: "Écriture: arabe"
   font_filter_glyph_label:   "Glyphes"
   font_filter_counter_label: "polices"
   font_list_sortby           : "Trier"
