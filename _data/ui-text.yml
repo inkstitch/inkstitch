@@ -73,6 +73,7 @@ en: &DEFAULT_EN
   font_filter_category_serif : "Serif"
   font_filter_category_tartan: "Tartan"
   font_filter_category_tiny  : "Tiny"
+  font_filter_category_arabic: "Script: arabic"
   font_filter_glyph_label    : "Glyphs"
   font_filter_counter_label  : "fonts"
   font_list_sortby           : "Sort by"
