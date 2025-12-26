@@ -29,7 +29,7 @@ It can be scaled up to 200% (approx. 60 mm, 2.5 inches) or scaled down to  80% (
 
 ## In real life
 
-Here the date is embroidered with Kaushan Script, with  Cherry for Ink/Stitch and Cherry for Kaalleen as merry companions.
+Here the date is embroidered with MAM Script, with  Cherry for Ink/Stitch and Cherry for Kaalleen as merry companions.
 
 {% include folder-galleries path="fonts/kaushan_script/" %}
 
