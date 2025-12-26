@@ -1,20 +1,17 @@
 ---
-title: "Lobster AGS"
-permalink: /fr/fonts/lobster_ags/
-last_modified_at: 2022-05-27
+title: "Stebor AGS"
+permalink: /fr/fonts/stebor_ags/
+last_modified_at: 2022-05-26
 toc: false
-preview_image: /assets/images/fonts/lobster_two_bold_italic.png
 preview_image:
-  - url: /assets/images/fonts/lobster_AGS.jpg
+  - url: /assets/images/fonts/stebor_AGS.png
     height: 27
 data_title:
-  - lobster_AGS
+  - stebor_AGS
 ---
-{%- assign font = site.data.fonts.lobster_AGS.font -%}
-## Bold Italic
+{%- assign font = site.data.fonts.stebor_AGS.font -%}
 
-![Lobster AGS](/assets/images/fonts/lobster_AGS.jpg)
-
+![Stebor AGS](/assets/images/fonts/stebor_AGS.png)
 ## Glyphes
 
 Cette fonte comporte  {{ font.glyphs.size }} glyphes:
@@ -33,6 +30,7 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 
 ## Dans la vraie vie
-{% include folder-galleries path="fonts/lobster_ags/" %}
+{% include folder-galleries path="fonts/stebor_ags/" %}
+
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/lobster_AGS/LICENSE)
