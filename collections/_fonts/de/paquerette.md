@@ -1,16 +1,17 @@
 ---
-title: "Coronaviral"
-permalink: /de/fonts/coronaviral/
-last_modified_at: 2022-05-27
+title: "Paquerette"
+permalink: /de/fonts/paquerette/
+last_modified_at: 2025-12-26
 toc: false
 preview_image:
-  - url: /assets/images/fonts/coronaviral.jpg
+  - url: /assets/images/fonts/paquerette.png
     height: 27
 data_title:
-  - coronaviral
+  - paquerettte
 ---
-{%- assign font = site.data.fonts.coronaviral.font -%}
-![Coronaviral](/assets/images/fonts/coronaviral.jpg)
+{%- assign font = site.data.fonts.paquerette.font -%}
+
+![Paquerette](/assets/images/fonts/paquerette.png)
 
 ## Schriftzeichen
 
@@ -28,6 +29,6 @@ Da diese Schriftart manuelle Stichpositionierung nutzt, sollte sie nicht oder nu
 
 ## Impressionen
 
-{% include folder-galleries path="fonts/coronaviral/" %}
+{% include folder-galleries path="fonts/paquerette/" %}
 
 [Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/coronaviral/LICENSE)
