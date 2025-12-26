@@ -9,7 +9,7 @@ preview_image:
 data_title:
   - mam_script
 ---
-{%- assign font = site.data.fonts.kaushan_script_MAM.font -%}
+{%- assign font = site.data.fonts.mam_script.font -%}
 
 ![MAM Script](/assets/images/fonts/mam_script.png)
 
