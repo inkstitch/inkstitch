@@ -2,6 +2,8 @@
     "name": "Ink/Stitch Masego",
     "description": "Masego is a display san-serif typeface.",
     "leading": 100,
+    "original_font": "Masego",
+    "original_font_url": "https://madebydebo.gumroad.com/l/hUgEvhttps://madebydebo.gumroad.com/l/hUgEv",
     "auto_satin": false,
     "reversible": false,
     "letter_case": "",
