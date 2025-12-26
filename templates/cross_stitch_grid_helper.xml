@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Cross Stitch Grid Helper</name>
+    <id>org.{{ id_inkstitch }}.cross_stitch_grid_helper</id>
+    <param name="extension" type="string" gui-hidden="true">cross_stitch_grid_helper</param>
+    <effect implements-custom-gui="true" show-stderr="true">
+        <object-type>all</object-type>
+        <icon>{{ icon_path }}inx/cross_stitch.svg</icon>
+        <menu-tip>Cross stitch: helper to setup and apply grid size</menu-tip>
+        <effects-menu>
+            <submenu name="{{ menu_inkstitch }}" translatable="no">
+                <submenu name="Tools: Fill" />
+            </submenu>
+        </effects-menu>
+    </effect>
+    <script>
+        {{ command_tag | safe }}
+    </script>
+</inkscape-extension>
