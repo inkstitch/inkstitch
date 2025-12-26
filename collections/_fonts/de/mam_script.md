@@ -1,14 +1,18 @@
 ---
-title: "Kaushan Script MAM"
-permalink: /de/fonts/kaushan_script_mam/
-last_modified_at: 2023-04-24
+title: "MAM Script"
+permalink: /de/fonts/mam_script/
+last_modified_at: 2025-12-26
 toc: false
 preview_image:
-  - url: /assets/images/fonts/kaushan_script_MAM.jpg
+  - url: /assets/images/fonts/mam_script.png
     height: 36
 data_title:
-  - kaushan_script_MAM
+  - mam_script
 ---
+{%- assign font = site.data.fonts.kaushan_script_MAM.font -%}
+
+![MAM Script](/assets/images/fonts/mam_script.png)
+
 {%- assign font = site.data.fonts.kaushan_script_MAM.font -%}
 ![KaushanScript](/assets/images/fonts/kaushan_script_MAM.jpg)
 
@@ -30,10 +34,10 @@ Sie kann bis auf 200% (~60 mm, 2.5 Zoll) hochskaliert und bis zu 80% (~24 mm, 1 
 
 ## Impressionen
 
-Hier sieht man ein mit Kaushan Script gesticktes Datum in Begleitung von Cherry for Ink/Stitch und Cherry for Kaalleen.
+Hier sieht man ein mit MAM Script gesticktes Datum in Begleitung von Cherry for Ink/Stitch und Cherry for Kaalleen.
 
-{% include folder-galleries path="fonts/kaushan_script/" %}
+{% include folder-galleries path="fonts/mam_script/" %}
 
 ## Lizenz
 
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/kaushan_script_MAM/LICENSE)
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/mam_script/LICENSE)
