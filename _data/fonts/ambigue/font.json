@@ -1,14 +1,18 @@
 {
     "name": "Ambigüe",
-    "description": "Ambigüe is a mix of satin and bean stitch font with a subtle harmony of disorder.",
+    "description": "Ambigüe is a mix of satin and bean stitch font with a subtle harmony of disorder. You may ignore the hidden black running stitches (they are the original letters) or use them to customize this font as you like.",
     "keywords": [
         "display",
-        "sans_serif"
+        "sans_serif",
+        "latin"
     ],
+    "font_license":"SIL Open Font License v1.1",
+    "original_font": "Ambidexter",
+    "original_font_url": "https://fontesk.com/ambidexter-font/",
     "leading": 128.0,
     "auto_satin": false,
     "reversible": false,
-    "sortable": false,
+    "sortable": true,
     "combine_at_sort_indices": [],
     "letter_case": "",
     "default_glyph": "?",
@@ -3831,8 +3835,10 @@
         "Œ",
         "œ",
         "Ÿ",
+        "‘",
+        "’",
         "⅋"
     ],
-    "default_variant": "→",
+    "default_variant": "ltr",
     "text_direction": "ltr"
 }
