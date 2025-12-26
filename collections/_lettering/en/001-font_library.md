@@ -9,11 +9,10 @@ toc: false
 after_footer_scripts:
     - /assets/js/font_filter.js
 ---
-This is a list of all fonts available in Ink/Stitch. They can be used with the [Lettering tool](/docs/lettering/).
+This is a list fonts available in Ink/Stitch. Please be aware, it may include fonts which are slated for future releases. Please refer to the specific font page for more information. Examples of use are also includes for reference. 
 
-You can click on each font to gather more information and see lovely examples of real life usage for each particular font.
+These forms can be used with the [Lettering tool](/docs/lettering/).
 
-This library is kept up to date and may also include fonts which are only available in future releases. Please refer to the corresponding font page.
 {: .notice--info}
 
 {% include font_list %}
