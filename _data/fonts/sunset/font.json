@@ -5,8 +5,12 @@
         "display",
         "monogram",
         "multicolor",
-        "sans_serif"
+        "sans_serif",
+        "latin"
     ],
+    "font_license":"SIL Open Font License v1.1",
+    "original_font": "Big Shoulders Inline",
+    "original_font_url": "https://fontesk.com/big-shoulders-inline-font/ ",
     "leading": 276.0,
     "auto_satin": false,
     "reversible": false,
@@ -60554,5 +60558,7 @@
         "Ÿ",
         "‘",
         "’"
-    ]
+    ],
+    "default_variant": "ltr",
+    "text_direction": "ltr"
 }
