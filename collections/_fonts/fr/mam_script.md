@@ -1,16 +1,17 @@
 ---
-title: "Kaushan Script MAM"
-permalink: /fr/fonts/kaushan_script_mam/
-last_modified_at: 2022-05-27
+title: "MAM Script"
+permalink: /fr/fonts/mam_script/
+last_modified_at: 2025-12-26
 toc: false
 preview_image:
-  - url: /assets/images/fonts/kaushan_script_MAM.jpg
+  - url: /assets/images/fonts/mam_script.png
     height: 36
 data_title:
-  - kaushan_script_MAM
+  - mam_script
 ---
 {%- assign font = site.data.fonts.kaushan_script_MAM.font -%}
-![KaushanScript](/assets/images/fonts/kaushan_script_MAM.jpg)
+
+![MAM Script](/assets/images/fonts/mam_script.png)
 
 
 ## Glyphes
@@ -31,8 +32,8 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 ## Dans la vraie vie
 
-Ici, la date est brodée avec Kaushan Script MAM, le reste avec *Cherry for Ink/Stitch* et *Cherry for Kaalleen*.
+Ici, la date est brodée avec MAM Script , le reste avec *Cherry for Ink/Stitch* et *Cherry for Kaalleen*.
 
-{% include folder-galleries path="fonts/kaushan_script/" %}
+{% include folder-galleries path="fonts/mam_script/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/kaushan_script_MAM/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/mam_script_MAM/LICENSE)
