@@ -1,12 +1,15 @@
 {
     "name": "חוכמה Medium ",
     "description": "Medium size hebrew satin font",
-    "default_variant": "←",
+    "default_variant": "rtl",
     "text_direction": "rtl",
     "keywords": [
         "handwriting",
         "hebrew"
     ],
+    "font_license":"SIL Open Font License v1.1",
+    "original_font": "Schlomo",
+    "original_font_url": "https://github.com/aharonium/fonts/tree/master/Fonts/Hebrew%20Letters%20with%20Vowels%20and%20Cantillation/Shlomo%20Orbach%20(OFL)",
     "leading": 128.0,
     "auto_satin": false,
     "reversible": false,
