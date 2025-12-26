@@ -13,8 +13,7 @@ data_title:
 
 ![MAM Script](/assets/images/fonts/mam_script.png)
 
-{%- assign font = site.data.fonts.kaushan_script_MAM.font -%}
-![KaushanScript](/assets/images/fonts/kaushan_script_MAM.jpg)
+
 
 ## Schriftzeichen
 
