@@ -1,16 +1,16 @@
 ---
 title: "Shojumaru"
-permalink: /de/fonts/shojumaru/
-last_modified_at: 2025-04-13
+permalink: /de/fonts/manga_impact/
+last_modified_at: 2025-12-26
 toc: false
 preview_image:
-  - url: /assets/images/fonts/shojumaru.png
+  - url: /assets/images/fonts/manfa_impact.png
     height: 20
 data_title:
-  - shojumaru
+  - manga_impact
 ---
-{%- assign font = site.data.fonts.shojumaru.font -%}
-![Shojumaru](/assets/images/fonts/shojumaru.png)
+{%- assign font = site.data.fonts.manga_impact.font -%}
+![Manga Impact](/assets/images/fonts/manga_impact.png)
 
 ## Schriftzeichen
 
@@ -27,8 +27,8 @@ Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 19mm (0.75 in) hoch
 
 ## Impressionen
 
-{% include folder-galleries path="fonts/shojumaru/" %}
+{% include folder-galleries path="fonts/manga_impact/" %}
 
 ## Lizenz
 
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/Shojumaru/LICENSE))
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/manga_impact/LICENSE))
