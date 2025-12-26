@@ -1,16 +1,16 @@
 ---
 title: "Shojumaru"
-permalink: /fonts/shojumaru/
-last_modified_at: 2024-06-18
+permalink: /fonts/manga_impact/
+last_modified_at: 2025-12-26
 toc: false
 preview_image:
-  - url: /assets/images/fonts/shojumaru.png
+  - url: /assets/images/fonts/manfa_impact.png
     height: 20
 data_title:
-  - shojumaru
+  - manga_impact
 ---
-{%- assign font = site.data.fonts.shojumaru.font -%}
-![Shojumaru](/assets/images/fonts/shojumaru.png)
+{%- assign font = site.data.fonts.manga_impact.font -%}
+![Manga Impact](/assets/images/fonts/manga_impact.png)
 
 ## Glyphs
 
@@ -30,8 +30,8 @@ up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max
 
 ## In real life
 
-{% include folder-galleries path="fonts/shojumaru/" %}
+{% include folder-galleries path="fonts/manga_impact/" %}
 
 ## License
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/Shojumaru/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/manga_impact/LICENSE)
