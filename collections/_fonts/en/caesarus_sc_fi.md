@@ -10,6 +10,7 @@ data_title:
   - marcelus_sc_fi
 ---
 {%- assign font = site.data.fonts.caesarus_sc_fi.font -%}
+
 ![caesarus SC FI](/assets/images/fonts/caesarus_sc_fi.png)
 
 # Glyphes
