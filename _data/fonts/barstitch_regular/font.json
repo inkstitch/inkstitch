@@ -2,8 +2,12 @@
     "name": "Barstitch regular",
     "description": "Barstitch regular is a satin font. ",
     "keywords": [
-        "sans_serif"
+        "sans_serif",
+        "latin"
     ],
+    "font_license":"SIL Open Font License v1.1",
+    "original_font": "Barlow Regular",
+    "original_font_url": "https://github.com/jpt/barlow",
     "leading": 110.0,
     "auto_satin": false,
     "reversible": false,
@@ -33751,6 +33755,6 @@
         "‘",
         "’"
     ],
-    "default_variant": "→",
+    "default_variant": "ltr",
     "text_direction": "ltr"
 }
