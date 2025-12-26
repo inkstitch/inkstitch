@@ -1,16 +1,17 @@
 ---
-title: "Coronaviral"
-permalink: /fr/fonts/coronaviral/
-last_modified_at: 2022-05-27
+title: "Paquerette"
+permalink: /fr/fonts/paquerette/
+last_modified_at: 2025-12-26
 toc: false
 preview_image:
-  - url: /assets/images/fonts/coronaviral.jpg
+  - url: /assets/images/fonts/paquerette.png
     height: 27
 data_title:
-  - coronaviral
+  - paquerettte
 ---
-{%- assign font = site.data.fonts.coronaviral.font -%}
-![Coronaviral](/assets/images/fonts/coronaviral.jpg)
+{%- assign font = site.data.fonts.paquerette.font -%}
+
+![Paquerette](/assets/images/fonts/paquerette.png)
 
 ## Glyphes
 
@@ -30,6 +31,6 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 
 ## Dans la vraie vie
-{% include folder-galleries path="fonts/coronaviral/" %}
+{% include folder-galleries path="fonts/paquerette/" %}
 
 [Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/coronaviral/LICENSE)
