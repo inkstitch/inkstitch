@@ -1,21 +1,26 @@
 {
     "name": "EMILIO_20_Applique",
-    "description": "Emilio 20 Applique is an Applique font approximatively 50mm high. It should not be scaled down but may be scaled up to 150%. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique",
+    "description": "Emilio 20 Applique is an Applique font. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique.",
     "keywords": [
-        "display",
         "applique",
-        "serif"
+        "display",
+        "serif",
+        "latin"
     ],
+    "font_license":"SCC-BY-SA 4.0",
+    "original_font": "Emilio 20",
+    "original_font_url": "https://www.1001fonts.com/emilio-20-font.html",
     "leading": 200,
     "auto_satin": false,
     "reversible": false,
+    "sortable": true,
     "letter_case": "upper",
     "default_glyph": " ",
     "min_scale": 1.0,
     "max_scale": 1.5,
     "size": 42,
     "horiz_adv_x_default": 156,
-    "horiz_adv_x_space": 20,
+    "horiz_adv_x_space": 90,
     "units_per_em": 200,
     "horiz_adv_x": {
         "9": 159,
@@ -90,5 +95,8 @@
         "X",
         "Y",
         "Z"
-    ]
+    ],
+    "default_variant": "ltr",
+    "text_direction": "ltr",
+    "combine_at_sort_indices": []
 }
