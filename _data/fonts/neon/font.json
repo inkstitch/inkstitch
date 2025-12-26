@@ -1,11 +1,14 @@
 {
     "name": "Néon",
     "description": "Satin font. Each letter or accent is a single satin.",
-    "default_variant": "→",
+    "default_variant": "ltr",
     "text_direction": "ltr",
     "keywords": [
         "latin"
     ],
+    "font_license":"SIL Open Font License v1.1",
+    "original_font": "Sportrop",
+    "original_font_url": "https://www.glukfonts.pl/font.php?font=Sportrop",
     "leading": 400.0,
     "auto_satin": false,
     "reversible": false,
