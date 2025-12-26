@@ -1,16 +1,17 @@
 ---
-title: "Manuskript Gothisch"
-permalink: /fr/fonts/manuscript_gothisch/
+title: "Pisankris"
+permalink: /fr/fonts/pisankris/
 last_modified_at: 2022-05-27
 toc: false
 preview_image:
-  - url: /assets/images/fonts/manuscript_gothisch.jpg
+  - url: /assets/images/fonts/pisankris.png
     height: 30
 data_title:
-  - manuskript_gotisch
+  - pisankris
 ---
-{%- assign font = site.data.fonts.manuskript_gotisch.font -%}
-![ManuscriptGothisch](/assets/images/fonts/manuscript_gothisch.jpg)
+{%- assign font = site.data.fonts.pisankris.font -%}
+
+![Pisankris](/assets/images/fonts/pisankris.png)
 
 ## Glyphes
 
@@ -31,7 +32,7 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 ## Dans la vraie vie
 
-{% include folder-galleries path="fonts/manuscript_gothisch/" %}
+{% include folder-galleries path="fonts/pisankris/" %}
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/manuskript_gotisch/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/pisankris/LICENSE)
