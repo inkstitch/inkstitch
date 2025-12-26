@@ -1,7 +1,7 @@
 {
     "name": "Barstitch cloudy",
     "description": "This is a guided fill version of Barstitch fill. Each letter is used to clip a group of guided fills and  then  a bean stitch contour is stitched. ",
-    "default_variant": "→",
+    "default_variant": "ltr",
     "text_direction": "ltr",
     "keywords": [
         "display",
@@ -10,6 +10,9 @@
         "sans_serif",
         "latin"
     ],
+    "font_license":"SIL Open Font License v1.1",
+    "original_font": "Barlow Bold",
+    "original_font_url": "https://github.com/jpt/barlow",
     "leading": 470.0,
     "auto_satin": false,
     "reversible": false,
