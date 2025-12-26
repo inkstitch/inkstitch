@@ -1,12 +1,16 @@
 {
     "name": "حاسوب Small",
     "description": "Small satin font: the use of both thin thread (60) and thin needle (60) is mandatory.",
-    "default_variant": "←",
+    "default_variant": "rtl",
     "text_direction": "rtl",
     "keywords": [
         "handwriting",
+        "tiny",
         "arabic"
     ],
+    "font_license":"SIL Open Font License v1.1",
+    "original_font": "IBM Plex Sans Arabic",
+    "original_font_url": "https://fonts.google.com/specimen/IBM+Plex+Sans+Arabic",
     "leading": 150.0,
     "auto_satin": false,
     "reversible": false,
