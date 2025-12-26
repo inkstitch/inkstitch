@@ -1,14 +1,19 @@
 {
     "name": "Apex Lake",
-    "description": "Apex Lake is a large ornate capital letters font of size approximatively 60mm. It contains 38 glyphs : A-Z,0-9,! and ?. It can be reduced down to 80% and enlarged up to 130%",
+    "description": "Apex Lake is a large ornate capital letters font. It contains only 38 glyphs : A-Z,0-9,! and ?.",
     "keywords": [
-        "monogram",
         "display",
-        "multicolor"
-    ],
+        "monogram",
+        "multicolor",
+        "latin"
+    ], 
+    "font_license":"SCC-BY-SA 4.0",
+    "original_font": "Apex Lake",
+    "original_font_url": "https://www.1001fonts.com/apex-lake-font.html",
     "leading": 232,
     "auto_satin": false,
     "reversible": false,
+    "sortable": true,
     "letter_case": "upper",
     "default_glyph": " ",
     "min_scale": 0.8,
@@ -77,7 +82,6 @@
     },
     "kerning_pairs": {},
     "glyphs": [
-        "?",
         "!",
         "0",
         "1",
@@ -89,6 +93,7 @@
         "7",
         "8",
         "9",
+        "?",
         "A",
         "B",
         "C",
@@ -115,5 +120,8 @@
         "X",
         "Y",
         "Z"
-    ]
+    ],
+    "default_variant": "ltr",
+    "text_direction": "ltr",
+    "combine_at_sort_indices": []
 }
