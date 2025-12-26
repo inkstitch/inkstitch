@@ -1,16 +1,18 @@
 ---
-title: "Marcellus SC FI "
-permalink: /de/fonts/marcellus_sc_fi/
-last_modified_at: 2023-04-24
+title: "Caesarus SC FI "
+permalink: /de/fonts/caesarus_sc_fi/
+last_modified_at: 2022-05-26
 toc: false
 preview_image:
-  - url: /assets/images/fonts/marcellus_sc_fi.jpg
+  - url: /assets/images/fonts/caesarus_sc_fi.png
     height: 29
 data_title:
-  - marcelusSC_FI
+  - marcelus_sc_fi
 ---
-{%- assign font = site.data.fonts.marcelusSC_FI.font -%}
-![MarcellusSCFI](/assets/images/fonts/marcellus_sc_fi.jpg)
+{%- assign font = site.data.fonts.caesarus_sc_fi.font -%}
+
+![caesarus SC FI](/assets/images/fonts/caesarus_sc_fi.png)
+
 
 # Schriftzeichen
 
@@ -33,8 +35,8 @@ Durch die verwendeten Stickparameter kannst du die Schrift auch weiter hochskali
 
 ## Impressionen
 
-{% include folder-galleries path="fonts/marcellus/" %}
+{% include folder-galleries path="fonts/caesarus_sc_fi/" %}
 
 ## Lizenz
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/marcelusSC_FI/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/caesarus_sc_fi/LICENSE)
