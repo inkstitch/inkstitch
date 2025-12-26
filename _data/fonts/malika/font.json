@@ -1,12 +1,15 @@
 {
     "name": "Malika",
-    "description": "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch.\n",
-    "default_variant": "←",
+    "description": "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch.",
+    "default_variant": "rtl",
     "text_direction": "rtl",
     "keywords": [
         "handwriting",
         "arabic"
     ],
+    "font_license":"SIL Open Font License v1.1",
+    "original_font": "Amiri",
+    "original_font_url": "https://github.com/aliftype/amiri)",
     "leading": 160.0,
     "auto_satin": false,
     "reversible": false,
