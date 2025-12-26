@@ -3,8 +3,12 @@
     "description": "A simple rounded hebrew font, small version to be embroidered with 60wt thread and 60 needle",
     "keywords": [
         "sans_serif",
+        "tiny",
         "hebrew"
     ],
+    "font_license":"SIL Open Font License v1.1",
+    "original_font": "Varela Round Hebrew",
+    "original_font_url": "https://github.com/alefalefalef/Varela-Round-Hebrew",
     "leading": 200.0,
     "auto_satin": false,
     "reversible": true,
@@ -86,6 +90,6 @@
         "ש",
         "ת"
     ],
-    "default_variant": "←",
+    "default_variant": "rtl",
     "text_direction": "rtl"
 }
