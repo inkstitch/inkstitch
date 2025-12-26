@@ -1,14 +1,19 @@
 {
     "name": "Cherry for Kaalleen",
-    "description": "Cherry for Kaalleen is a large decorative font of size approximatively 75mm. It contains 36 glyphs including the numbers and the 26 capitals  A-Z. It can be reduced down to 80% and enlarged up to 130%",
+    "description": "Cherry for Kaalleen is a large decorative font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z.",
     "keywords": [
         "display",
         "monogram",
-        "multicolor"
+        "multicolor",
+        "latin"
     ],
+    "font_license":"SCC-BY-SA 4.0",
+    "original_font": "Cherry AI 1",
+    "original_font_url": "https://blogfonts.com/cherry-ai-1.font",
     "leading": 350,
     "auto_satin": false,
     "reversible": false,
+    "sortable": true,
     "letter_case": "upper",
     "default_glyph": " ",
     "min_scale": 0.8,
@@ -77,6 +82,16 @@
     },
     "kerning_pairs": {},
     "glyphs": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
         "A",
         "B",
         "C",
@@ -102,16 +117,9 @@
         "W",
         "X",
         "Y",
-        "Z",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "0"
-    ]
+        "Z"
+    ],
+    "default_variant": "ltr",
+    "text_direction": "ltr",
+    "combine_at_sort_indices": []
 }
