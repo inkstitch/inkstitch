@@ -1,18 +1,17 @@
 ---
-title: "Lobster AGS"
-permalink: /fonts/lobster_ags/
+title: "Stebor AGS"
+permalink: /fonts/stebor_ags/
 last_modified_at: 2022-05-26
 toc: false
 preview_image:
-  - url: /assets/images/fonts/lobster_AGS.jpg
+  - url: /assets/images/fonts/stebor_AGS.png
     height: 27
 data_title:
-  - lobster_AGS
+  - stebor_AGS
 ---
-{%- assign font = site.data.fonts.lobster_AGS.font -%}
-## Bold Italic
+{%- assign font = site.data.fonts.stebor_AGS.font -%}
 
-![Lobster AGS](/assets/images/fonts/lobster_AGS.jpg)
+![Stebor AGS](/assets/images/fonts/stebor_AGS.png)
 
 ## Glyphs
 
@@ -31,8 +30,8 @@ It can be scaled up to 150% (approx. 33 mm, 1 1/4 inches) or scaled down to  80%
 
 ## In real life
 
-{% include folder-galleries path="fonts/lobster_ags/" %}
+{% include folder-galleries path="fonts/stebor_ags/" %}
 
 ## License
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/lobster_AGS/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/stebor_AGS/LICENSE)
