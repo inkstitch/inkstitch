@@ -1,7 +1,7 @@
 ---
 title: "Caffeine KOR"
 permalink: /fonts/caffeine/
-last_modified_at: 2022-05-26
+last_modified_at: 2025-12-26
 toc: false
 preview_image:
   - url: /assets/images/fonts/caffeine_KOR.png
@@ -13,6 +13,7 @@ data_title:
   - caffeine_tiny
 ---
 {%- assign font = site.data.fonts.caffeine_KOR.font -%}
+
 ![Caffeine KOR](/assets/images/fonts/caffeine_KOR.png)
 
 ![Caffeine tiny](/assets/images/fonts/caffeine_tiny.png)
