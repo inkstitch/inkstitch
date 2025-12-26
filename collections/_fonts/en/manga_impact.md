@@ -1,5 +1,5 @@
 ---
-title: "Shojumaru"
+title: "Manga Impact"
 permalink: /fonts/manga_impact/
 last_modified_at: 2025-12-26
 toc: false
