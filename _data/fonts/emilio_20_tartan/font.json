@@ -1,16 +1,24 @@
 {
     "name": "EMILIO_20_Tartan",
-   
- "description": "Emilio 20 Tartan uses tartan fill for a colorful font approximatively 40 mm high. The font can be scaled down to 65% and up to 150%.",
-  "keywords": [
+    "description": "Emilio 20 Tartan uses tartan fill for a colorful font.",
+    "keywords": [
         "display",
-        "serif",
+        "monogram",
         "multicolor",
-        "tartan"
+        "serif",
+        "tartan",
+        "latin"
     ],
+    "font_license":"SCC-BY-SA 4.0",
+    "original_font": "Emilio 20",
+    "original_font_url": "https://www.1001fonts.com/emilio-20-font.html",
     "leading": 200,
     "auto_satin": false,
     "reversible": false,
+    "sortable": true,
+    "combine_at_sort_indices": [
+        0
+    ],
     "letter_case": "upper",
     "default_glyph": " ",
     "min_scale": 0.65,
@@ -92,5 +100,7 @@
         "X",
         "Y",
         "Z"
-    ]
+    ],
+    "default_variant": "ltr",
+    "text_direction": "ltr"
 }
