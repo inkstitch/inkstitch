@@ -1,12 +1,15 @@
 {
     "name": "Venezia",
     "description": "A serif satin font",
-    "default_variant": "→",
+    "default_variant": "ltr",
     "text_direction": "ltr",
     "keywords": [
         "serif",
         "latin"
     ],
+    "font_license":"SIL Open Font License v1.1",
+    "original_font": "Andada Pro",
+    "original_font_url": "https://fonts.google.com/specimen/Andada+Pro",
     "leading": 90.0,
     "auto_satin": false,
     "reversible": false,
