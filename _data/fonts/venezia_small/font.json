@@ -1,13 +1,16 @@
 {
     "name": "Venezia small",
     "description": "Venezia small is an altered version of Venezia to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory.",
-    "default_variant": "→",
+    "default_variant": "ltr",
     "text_direction": "ltr",
     "keywords": [
         "serif",
         "tiny",
         "latin"
     ],
+    "font_license":"SIL Open Font License v1.1",
+    "original_font": "Andada Pro",
+    "original_font_url": "https://fonts.google.com/specimen/Andada+Pro",
     "leading": 90.0,
     "auto_satin": false,
     "reversible": false,
