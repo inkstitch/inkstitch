@@ -1,16 +1,16 @@
 ---
-title: "Kaushan Script MAM"
-permalink: /fonts/kaushan_script_mam/
-last_modified_at: 2022-05-26
+title: "MAM Script"
+permalink: /fonts/mam_script/
+last_modified_at: 2025-12-26
 toc: false
 preview_image:
-  - url: /assets/images/fonts/kaushan_script_MAM.jpg
+  - url: /assets/images/fonts/mam_script.png
     height: 36
 data_title:
-  - kaushan_script_MAM
+  - mam_script
 ---
 {%- assign font = site.data.fonts.kaushan_script_MAM.font -%}
-![KaushanScript](/assets/images/fonts/kaushan_script_MAM.jpg)
+![MAM Script](/assets/images/fonts/mam_script.png)
 
 ## Glyphs
 
