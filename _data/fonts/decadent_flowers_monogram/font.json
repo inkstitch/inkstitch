@@ -1,7 +1,7 @@
 {
     "name": "Decadent Flowers Monogram",
     "description": "Each Decadent Flowers Monogram lettter  is composed of an optional knockdown fill (for high pile fabric embroidery)  and redwork flowers  with a negative space letter monogram",
-    "default_variant": "→",
+    "default_variant": "ltr",
     "text_direction": "ltr",
     "keywords": [
         "display",
@@ -11,6 +11,9 @@
         "serif",
         "latin"
     ],
+    "font_license":"SIL Open Font License v1.1",
+    "original_font": "Linux Libertine Bold",
+    "original_font_url": "https://libertine-fonts.org/",
     "leading": 480.0,
     "auto_satin": false,
     "reversible": false,
