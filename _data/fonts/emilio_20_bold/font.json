@@ -1,11 +1,15 @@
 {
     "name": "EMILIO_20_Bold",
-    "description": "Emilio_20_Bold is an altered version of Emilio_20  and is approximatively 50mm high.",
+    "description": "Emilio_20_Bold is an altered version of Emilio_20.",
     "keywords": [
         "display",
         "monogram",
-        "serif"
+        "serif",
+        "latin"
     ],
+    "font_license":"SCC-BY-SA 4.0",
+    "original_font": "Emilio 20",
+    "original_font_url": "https://www.1001fonts.com/emilio-20-font.html",
     "leading": 200,
     "auto_satin": false,
     "reversible": false,
@@ -15,7 +19,7 @@
     "max_scale": 1.5,
     "size": 50,
     "horiz_adv_x_default": 156,
-    "horiz_adv_x_space": 20,
+    "horiz_adv_x_space": 90,
     "units_per_em": 200,
     "horiz_adv_x": {
         "9": 159,
@@ -90,5 +94,9 @@
         "X",
         "Y",
         "Z"
-    ]
+    ],
+    "default_variant": "ltr",
+    "text_direction": "ltr",
+    "sortable": false,
+    "combine_at_sort_indices": []
 }
