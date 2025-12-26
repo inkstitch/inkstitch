@@ -6,12 +6,13 @@ from ..i18n import _
 from ..utils.settings import global_settings
 
 
-class GridHelperFrame(wx.Frame):
+class CrossStitchHelperFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
         self.settings = kwargs.pop("settings")
         wx.Frame.__init__(self, None, wx.ID_ANY, _("Ink/Stitch - Cross stitch"), *args, **kwargs)
 
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
+
         self.widgets_and_panels()
         self.apply_global_settings()
         self.update()
@@ -162,7 +163,7 @@ class GridHelperFrame(wx.Frame):
             wx.ID_ANY,
             _("This extension calculates the stitch length for a given grid size.\n\n"
               "* It can be applied to selected fill element as as parameter.\n"
-              "* Fill outlines can be pixelized."
+              "* Fill outlines can be pixelized.\n"
               "* The grid can be applied as a page grid."),
             style=wx.ALIGN_LEFT
         )
@@ -182,11 +183,11 @@ class GridHelperFrame(wx.Frame):
         )
         help_sizer.Add(self.website_link, 0, wx.ALL, 8)
 
-        self.help.SetSizer(help_sizer)
         self.settings_panel.SetSizer(settings_main_sizer)
-        self.main_panel.SetSizer(notebook_sizer)
-        self.SetSizeHints(notebook_sizer.CalcMin())
+        self.help.SetSizer(help_sizer)
 
+        self.main_panel.SetSizerAndFit(notebook_sizer)
+        self.Fit()
         self.Layout()
 
     def update(self, event=None):
@@ -241,13 +242,13 @@ class GridHelperFrame(wx.Frame):
         self.Destroy()
 
 
-class CrossStitchGridHelperApp(wx.App):
+class CrossStitchHelperApp(wx.App):
     def __init__(self, settings):
         self.settings = settings
         super().__init__()
 
     def OnInit(self):
-        frame = GridHelperFrame(settings=self.settings)
+        frame = CrossStitchHelperFrame(settings=self.settings)
         self.SetTopWindow(frame)
         frame.Show()
         return True

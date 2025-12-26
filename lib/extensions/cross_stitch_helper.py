@@ -9,13 +9,13 @@ from shapely import make_valid, prepare, unary_union
 from shapely.affinity import scale, translate
 from shapely.geometry import Polygon
 
-from ..gui.cross_stitch_grid_helper import CrossStitchGridHelperApp
+from ..gui.cross_stitch_helper import CrossStitchHelperApp
 from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..utils.geometry import ensure_multi_polygon
 from .base import InkstitchExtension
 
 
-class CrossStitchGridHelper(InkstitchExtension):
+class CrossStitchHelper(InkstitchExtension):
     def effect(self):
         settings = {
             'applied': False,
@@ -29,7 +29,7 @@ class CrossStitchGridHelper(InkstitchExtension):
             'grid_color': '0x00d9e5ff',
             'remove_grids': False
         }
-        app = CrossStitchGridHelperApp(settings=settings)
+        app = CrossStitchHelperApp(settings=settings)
         app.MainLoop()
 
         # True will not show the no elements warning

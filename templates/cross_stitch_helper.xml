@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>Cross Stitch Grid Helper</name>
-    <id>org.{{ id_inkstitch }}.cross_stitch_grid_helper</id>
-    <param name="extension" type="string" gui-hidden="true">cross_stitch_grid_helper</param>
+    <name>Cross Stitch Helper</name>
+    <id>org.{{ id_inkstitch }}.cross_stitch_helper</id>
+    <param name="extension" type="string" gui-hidden="true">cross_stitch_helper</param>
     <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
         <icon>{{ icon_path }}inx/cross_stitch.svg</icon>

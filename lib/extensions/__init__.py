@@ -13,7 +13,7 @@ from .batch_lettering import BatchLettering
 from .break_apart import BreakApart
 from .cleanup import Cleanup
 from .commands_scale_symbols import CommandsScaleSymbols
-from .cross_stitch_grid_helper import CrossStitchGridHelper
+from .cross_stitch_helper import CrossStitchHelper
 from .cut_satin import CutSatin
 from .cutwork_segmentation import CutworkSegmentation
 from .density_map import DensityMap
@@ -93,7 +93,7 @@ extensions = [
     BreakApart,
     Cleanup,
     CommandsScaleSymbols,
-    CrossStitchGridHelper,
+    CrossStitchHelper,
     CutSatin,
     CutworkSegmentation,
     DensityMap,
