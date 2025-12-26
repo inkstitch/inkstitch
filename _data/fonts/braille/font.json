@@ -1,9 +1,12 @@
 {
     "name": "BrailleCC",
     "description": "Font for the visually impaired with Braille key combinations according to DT 2024 INSEI specifications for French 6 dots Braille. It is also possible to use Unicode Braille. In this case, it is convenient to use one of the web's Braille translators to create a text in Braille unicode.\n",
-    "default_variant": "→",
+    "default_variant": "ltr",
     "text_direction": "ltr",
     "keywords": [],
+    "font_license":"SCC-BY-SA 4.0",
+    "original_font": null,
+    "original_font_url": null,
     "leading": 37.06,
     "auto_satin": false,
     "reversible": false,
