@@ -18,7 +18,7 @@ from .. import tiles
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import (auto_fill, circular_fill, contour_fill, guided_fill,
+from ..stitches import (auto_fill, circular_fill, contour_fill, cross_stitch, guided_fill,
                         legacy_fill, linear_gradient_fill, meander_fill,
                         tartan_fill)
 from ..stitches.linear_gradient_fill import gradient_angle
@@ -153,6 +153,7 @@ class FillStitch(EmbroideryElement):
     _fill_methods = [ParamOption('auto_fill', _("Auto Fill")),
                      ParamOption('circular_fill', _("Circular Fill")),
                      ParamOption('contour_fill', _("Contour Fill")),
+                     ParamOption('cross_stitch', _("Cross Stitch")),
                      ParamOption('guided_fill', _("Guided Fill")),
                      ParamOption('linear_gradient_fill', _("Linear Gradient Fill")),
                      ParamOption('meander_fill', _("Meander Fill")),
@@ -734,6 +735,117 @@ class FillStitch(EmbroideryElement):
             # letting each instance without a specified seed get a different default.
         return seed
 
+    _cross_stitch_options = [
+        ParamOption('simple_cross', _("Cross")),
+        ParamOption('simple_cross_flipped', _("Cross Flipped")),
+        ParamOption('half_cross', _("Half Cross")),
+        ParamOption('half_cross_flipped', _("Half Cross Flipped")),
+        ParamOption('upright_cross', _("Upright Cross")),
+        ParamOption('upright_cross_flipped', _("Upright Cross Flipped")),
+        ParamOption('double_cross', _("Double Cross"))
+    ]
+
+    @property
+    @param('cross_stitch_method',
+           _('Cross stitch method'),
+           type='combo',
+           default=0,
+           options=_cross_stitch_options,
+           select_items=[('fill_method', 'cross_stitch')],
+           sort_index=9)
+    def cross_stitch_method(self):
+        return self.get_param('cross_stitch_method', 'simple cross')
+
+    @property
+    @param(
+        'pattern_size_mm',
+        _('Pattern size'),
+        tooltip=_('Cross stitch pattern size in mm, x and y values are separated by a space. '
+                  'Only one input value returns a square pattern.'),
+        select_items=[('fill_method', 'cross_stitch')],
+        unit=_('mm (x y)'),
+        type='float',
+        default=3,
+        sort_index=10
+    )
+    @cache
+    def pattern_size(self):
+        return np.maximum(self.get_split_mm_param_as_px("pattern_size_mm", (3, 3)), 0.1 * PIXELS_PER_MM)
+
+    @property
+    @param(
+        'canvas_grid_origin',
+        _('Align grid with canvas'),
+        tooltip=_('This ensures good alignment for adjacent cross stitch areas, but it also means '
+                  'that the outcome may change when the element is moved off the grid.\n\n'
+                  'Disable this option to ensure, that this element stitches the same, '
+                  'independently on its position on the canvas.'
+                  ''),
+        select_items=[('fill_method', 'cross_stitch')],
+        type='boolean',
+        default=True,
+        sort_index=11
+    )
+    def canvas_grid_origin(self):
+        return self.get_boolean_param('canvas_grid_origin', True)
+
+    @property
+    @param(
+        'cross_offset_mm',
+        _('Grid Offset'),
+        tooltip=_('Shifts the cross stitch grid by given values. X and Y values are separated by a space. '
+                  'Only one input value offsets the pattern evenly for x and y.'),
+        select_items=[('fill_method', 'cross_stitch')],
+        unit=_('mm (x y)'),
+        type='float',
+        default=0,
+        sort_index=12
+    )
+    @cache
+    def cross_offset(self):
+        return np.maximum(self.get_split_mm_param_as_px("cross_offset_mm", (0, 0)), 0)
+
+    @property
+    @param(
+        'fill_coverage',
+        _("Fill coverage"),
+        tooltip=_("Percentage of overlap for each cross with the fill area"),
+        type='int',
+        default="50",
+        unit='%',
+        select_items=[('fill_method', 'cross_stitch')],
+        sort_index=13
+    )
+    def fill_coverage(self):
+        return max(1, self.get_int_param("fill_coverage", 50))
+
+    @property
+    @param('max_cross_stitch_length_mm',
+           _('Maximum stitch length'),
+           tooltip=_(
+               'The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row.'),
+           unit='mm',
+           sort_index=22,
+           type='float',
+           select_items=[('fill_method', 'cross_stitch')],
+           default=11.0)
+    def max_cross_stitch_length(self):
+        return max(self.get_float_param("max_cross_stitch_length_mm", 11.0), 0.1 * PIXELS_PER_MM)
+
+    @property
+    @param('cross_bean_repeats',
+           _('Bean stitch number of repeats'),
+           tooltip=_('Backtrack each stitch this many times.  '
+                     'A value of 1 would triple each stitch (forward, back, forward).  '
+                     'A value of 2 would quintuple each stitch, etc.\n\n'
+                     'A pattern with various repeats can be created with a list of values separated by a space.'),
+           type='int',
+           select_items=[('fill_method', 'cross_stitch')],
+           default=1,
+           sort_index=23)
+    def cross_bean_repeats(self):
+        return self.get_int_param("cross_bean_repeats", 1)
+
     @property
     @cache
     def paths(self):
@@ -873,6 +985,12 @@ class FillStitch(EmbroideryElement):
         start = self.get_starting_point(previous_stitch_group)
         final_end = self.get_ending_point(self.next_stitch(next_element))
 
+        if self.fill_method == 'cross_stitch':
+            # for cross stitch we can expand the shape before the fact,
+            # as we can say for sure that there is not going to a mess up with the underlay shapes
+            # and different expand values
+            stitch_groups.extend(self.do_cross_stitch(previous_stitch_group, start, final_end))
+
         # sort shapes to get a nicer routing
         shapes = list(self.shape.geoms)
         if start:
@@ -881,13 +999,17 @@ class FillStitch(EmbroideryElement):
             shapes.sort(key=lambda shape: shape.bounds[0])
 
         for i, shape in enumerate(shapes):
+            if self.fill_method == 'cross_stitch':
+                # we already created the cross stitch at this point
+                break
+
             start = self.get_starting_point(previous_stitch_group)
             if i < len(shapes) - 1:
                 end = nearest_points(shape, shapes[i+1])[0].coords
             else:
                 end = final_end
 
-            if self.fill_underlay and not self.fill_method == 'legacy_fill':
+            if self.fill_underlay and self.fill_method not in ['legacy_fill', 'cross_stitch']:
                 underlay_shapes = self.underlay_shape(shape)
                 for underlay_shape in underlay_shapes.geoms:
                     underlay_stitch_groups, start = self.do_underlay(underlay_shape, start)
@@ -897,16 +1019,16 @@ class FillStitch(EmbroideryElement):
             for i, fill_shape in enumerate(fill_shapes.geoms):
                 if not self.auto_fill or self.fill_method == 'legacy_fill':
                     stitch_groups.extend(self.do_legacy_fill(fill_shape))
+                elif self.fill_method == 'circular_fill':
+                    stitch_groups.extend(self.do_circular_fill(fill_shape, start, end))
                 elif self.fill_method == 'contour_fill':
                     stitch_groups.extend(self.do_contour_fill(fill_shape, start))
                 elif self.fill_method == 'guided_fill':
                     stitch_groups.extend(self.do_guided_fill(fill_shape, start, end))
-                elif self.fill_method == 'meander_fill':
-                    stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
-                elif self.fill_method == 'circular_fill':
-                    stitch_groups.extend(self.do_circular_fill(fill_shape, start, end))
                 elif self.fill_method == 'linear_gradient_fill':
                     stitch_groups.extend(self.do_linear_gradient_fill(fill_shape, start, end))
+                elif self.fill_method == 'meander_fill':
+                    stitch_groups.extend(self.do_meander_fill(fill_shape, shape, i, start, end))
                 elif self.fill_method == 'tartan_fill':
                     stitch_groups.extend(self.do_tartan_fill(fill_shape, start, end))
                 else:
@@ -1128,6 +1250,36 @@ class FillStitch(EmbroideryElement):
             lock_stitches=self.lock_stitches
         )
         return [stitch_group]
+
+    def do_cross_stitch(self, previous_stitch_group, start, end):
+        fill_shapes = ensure_multi_polygon(make_valid(self.fill_shape(self.shape)))
+        fill_shapes = list(fill_shapes.geoms)
+
+        if start:
+            fill_shapes.sort(key=lambda shape: shape.distance(shgeo.Point(start)))
+        else:
+            fill_shapes.sort(key=lambda shape: shape.bounds[0])
+        final_end = end
+
+        stitch_groups = []
+        for i, shape in enumerate(fill_shapes):
+            start = self.get_starting_point(previous_stitch_group)
+            if i < len(fill_shapes) - 1:
+                end = nearest_points(shape, fill_shapes[i+1])[0].coords
+            else:
+                end = final_end
+            stitch_lists = cross_stitch(self, shape, start, end)
+            for stitch_list in stitch_lists:
+                stitch_group = StitchGroup(
+                    color=self.color,
+                    tags=("cross_stitch"),
+                    stitches=stitch_list,
+                    force_lock_stitches=self.force_lock_stitches,
+                    lock_stitches=self.lock_stitches
+                )
+                previous_stitch_group = stitch_group
+                stitch_groups.append(stitch_group)
+        return stitch_groups
 
     def do_circular_fill(self, shape, starting_point, ending_point):
         # get target position

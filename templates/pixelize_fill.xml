@@ -6,9 +6,12 @@
 
     <param name="notebook" type="notebook">
         <page name="options" gui-text="Options">
-            <param name="stitch_length" type="float" precision="2" min="0.1" max="100" gui-text="Stitch length (mm)"
-                   gui-description="Stitch length of potential cross stitches">3</param>
+            <param name="box_size_x" type="float" precision="2" min="0.1" max="100"
+                   gui-text="Cross Size X">3</param>
+            <param name="box_size_y" type="float" precision="2" min="0.1" max="100"
+                   gui-text="Cross Size Y">3</param>
             <param name="coverage" type="int" min="1" max="100" gui-text="Cross coverage (%)">50</param>
+            <param name="grid_nodes" type="bool" gui-text="Add nodes at grid intersections">true</param>
         </page>
         <page name="info" gui-text="Help">
             <label>Use this extension to pixelize a fill area.</label>
@@ -24,7 +27,9 @@
         <menu-tip>Pixelizes the outline of a fill</menu-tip>
         <effects-menu>
             <submenu name="{{ menu_inkstitch }}" translatable="no">
-                <submenu name="Tools: Fill" />
+                <submenu name="Tools: Fill">
+                    <submenu name="Cross stitch" />
+                </submenu>
             </submenu>
         </effects-menu>
     </effect>
