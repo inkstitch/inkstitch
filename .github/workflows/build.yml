@@ -352,7 +352,7 @@ jobs:
         with:
           name: inkstitch-windows64
           path: signed-artifacts
-    windowsArm64:
+  windowsArm64:
     runs-on: windows-11-arm
     steps:
       - uses: actions/checkout@v6
