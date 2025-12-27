@@ -1,20 +1,21 @@
 ---
-title: "Sortefax"
-permalink: /fonts/sortefax/
-last_modified_at: 2022-05-26
+title: "Initials"
+permalink: /fonts/initials/
+last_modified_at: 2025-12-26
 toc: false
 preview_image: 
-  - url: /assets/images/fonts/sortefaxXL.jpg
+  - url: /assets/images/fonts/initials_xl.jpg
     height: 150
-  - url: /assets/images/fonts/sortefax_medium.jpg
+  - url: /assets/images/fonts/initials_medium.jpg
     height: 90
 data_title:
-  - sortefaxXL
+  - initialsXL
 ---
-{%- assign font = site.data.fonts.sortefaxXL.font -%}
-![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg)
+{%- assign font = site.data.fonts.initials_medium.font -%}
 
-![Sortefax_medium](/assets/images/fonts/sortefax_medium.jpg)
+![Initials XL](/assets/images/fonts/initials_xl.jpg)
+
+![Initials medium](/assets/images/fonts/initials_medium.jpg)
 
 ## Glyphs
 
@@ -30,30 +31,30 @@ Both fonts contain  {{ font.glyphs.size }} glyphs:
 
 ## Dimensions
 
-### Sortefax XL Initials
+### Initials XL 
 
 At 100%, this font is approximatively 150 mm (6 inches) tall.
 It can been scaled up to 200% (approx 300 mm, 12 inches) or down to 70% (approx 100 mm, 4 inches).
 
-### Sortefax Medium Initials
+### Initials Medium 
 
 At 100%, this font is approximatively 90 mm (3.5 inches) tall.
 It can be scaled up to 200% (approx 180 mm, 7 inches) or down to 70% (approx 60 mm, 2.5 inches).
 
 ## Description
 
-### Sortefax XL Initials
+### Initials XL 
 
-Sortefax XL Initials is meant to be used one letter at a time.
+Initials XL is meant to be used one letter at a time.
 To get a framed letter, simply type the letter and any "frame" letter in the lettering dialog window (same line, no space).
 
 Beware, not all frames can directly be used with all letters, in particular large letters such as M or W, or tall letters such as J.
 
 Of course, using Inkscape,  you may easily reposition the frame or resize it or even transform a circle frame  into an ellipse for a tall letter.
 
-### Sortefax Medium Initials
+### Initials Medium 
 
-Sortefax Médium Initials is  smaller but  also simplier.
+Initials Medium is  smaller but  also simplier.
 
 It is still possible to use frames, but the arranging of the frame and the letter is  not as good as for the XL font.
 But this font may be used to write whole words with a correct kerning and not only single letters.
@@ -75,7 +76,7 @@ Frame|Key
 
 ## In real life 
 
-{% include folder-galleries path="fonts/sortefax/" %}
+{% include folder-galleries path="fonts/initials/" %}
 
 ## License
 
