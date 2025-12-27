@@ -712,7 +712,7 @@ def _generate_satin_guide_helper_lines_with_varying_pattern_distance(stroke, gui
 
     min_distance = stroke.min_line_dist or 0.1
     miny -= min_distance
-    maxy - min_distance
+    maxy -= min_distance
     min_dist_bbox = Polygon([(minx, miny), (minx, maxy), (maxx, maxy), (maxx, miny)])
 
     line_point_dict = defaultdict(list)
