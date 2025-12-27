@@ -1,25 +1,25 @@
 ---
-title: "Sortefax"
-permalink: /fr/fonts/sortefax/
-last_modified_at: 2022-06-01
+title: "Initials"
+permalink: /fr/fonts/initials/
+last_modified_at: 2025-12-26
 toc: false
 preview_image: 
-  - url: /assets/images/fonts/sortefaxXL.jpg
+  - url: /assets/images/fonts/initials_xl.jpg
     height: 150
-  - url: /assets/images/fonts/sortefax_medium.jpg
+  - url: /assets/images/fonts/initials_medium.jpg
     height: 90
 data_title:
-  - sortefaxXL
+  - initialsXL
 ---
-{%- assign font = site.data.fonts.sortefax_medium.font -%}
+{%- assign font = site.data.fonts.initials_medium.font -%}
 
-![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg)
+![Initials XL](/assets/images/fonts/initials_xl.jpg)
 
-![Sortefax_medium](/assets/images/fonts/sortefax_medium.jpg)
+![Innitials medium](/assets/images/fonts/initials_medium.jpg)
 
 ## Glyphes
 
-Chacune  de ces deux  fontes comporte  {{ font.glyphs.size }} glyphes:
+Chacune de ces deux fontes comporte {{ font.glyphs.size }} glyphes:
 
 ```
 {{ font.glyphs | sort | join: ' ' }}
@@ -29,23 +29,23 @@ Chacune  de ces deux  fontes comporte  {{ font.glyphs.size }} glyphes:
 Remarque : Les glyphes ;:,.(){}[] sont utilisés pour stocker des cadres.
 
 ## Dimensions
-### Sortefax XL Initials
+### Initials XL 
 Utilisée à 100%, cette fonte fait environ 150 mm.
 Elle peut être agrandie jusqu'à 200% (env 300 mm) ou diminuée jusqu'à 70% (env 100 mm).
-### Sortefax Medium Initials
+### Initials Medium 
 Utilisée à 100%, cette fonte fait environ 90 mm.
 Elle peut être agrandie jusqu'à 200% (env 180 mm) ou diminuée jusqu'à 70% (env 60 mm).
 
 ## Description
 
-### Sortefax XL Initials
+### Initials XL 
 
-La fonte Sortefax XL Initials est prévue pour être utilisée une seule lettre à la fois.
-Pour obtenir une lettre encadrée,  taper cette lettre et une des "lettres cadres" dans la fenêtre de lettrage, sur la même ligne, sans espace entre les deux. 
+La fonte Initials XL est prévue pour être utilisée une seule lettre à la fois.
+Pour obtenir une lettre encadrée, taper cette lettre et une des "lettres cadres" dans la fenêtre de lettrage, sur la même ligne, sans espace entre les deux. 
 
 Attention : tous les cadres ne conviennent pas à toutes les lettres, en particulier aux lettres très larges comme le M ou le W, ou aux lettres très hautes comme le J. Il est bien sûr très facile dans Inkscape de modifier le positionnement de la lettre par rapport au cadre si elle ne convient pas, ou de modifier la forme d'un cadre, par exemple en transformant un cercle en ellipse pour accueillir un J récalcitrant.
 
-### Sortefax Medium Initials
+### Initials Medium 
 
 Cette fonte est réduite et simplifiée. On garde la possibilité d'encadrer une lettre, mais le positionnement de la lettre par rapport au cadre est plus approximatif que dans la fonte XL. En revanche il est tout à fait possible d'écrire des mots avec des lettres correctement positionnées, ce qui n'est pas le cas avec la fonte XL.
 
@@ -67,7 +67,7 @@ Frame|Key
 
 ## Dans la vraie vie
 
-{% include folder-galleries path="fonts/sortefax/" %}
+{% include folder-galleries path="fonts/initials/" %}
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/sortefaxXL/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/initials_xl/LICENSE)
