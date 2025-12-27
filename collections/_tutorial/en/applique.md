@@ -1,7 +1,7 @@
 ---
 title: Applique
 permalink: /tutorials/applique/
-last_modified_at: 2025-26-12
+last_modified_at: 2025-12-26
 language: en
 excerpt: "Applique example file"
 image: "/assets/images/tutorials/samples/Applique Color Change.svg"
