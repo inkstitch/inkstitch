@@ -1,27 +1,29 @@
 ---
-title: "Namskout AGS"
-permalink: /fr/fonts/namskout_ags/
+title: "Kum Tsoan  AGS"
+permalink: /fr/fonts/kum_tsoan_ags/
 last_modified_at: 2024-06-22
 toc: false
 preview_image:
-  - url: /assets/images/fonts/namskout_AGS.jpg
+  - url: /assets/images/fonts/kum_tsoan.jpg
     height: 90
-  - url: /assets/images/fonts/namskout_tartan.png
+  - url: /assets/images/fonts/kum_tsoan_tartan.jpg
     height: 90
-  - url: /assets/images/fonts/namskout_relief.png
+  - url: /assets/images/fonts/kum_tsoan_relief.png
     height: 90
 data_title:
-  - namskout_AGS
-  - namskout_relief
-  - namskout_tartan
+  - kum_tsoan_ags
+  - kum_tsoan_relief
+  - kum_tsoan_tartan
 ---
-{%- assign font = site.data.fonts.namskout_AGS.font -%}
-{%- assign font2 = site.data.fonts.namskout_relief.font -%}
-![NamskoutAGS](/assets/images/fonts/namskout_AGS.jpg)
+{%- assign font = site.data.fonts.kum_tsoan_ags.font -%}
 
-![Namskout_relief](/assets/images/fonts/namskout_relief.png)
+{%- assign font2 = site.data.fonts.kum_tsoan_relief.font -%}
 
-![NamskoutTartan](/assets/images/fonts/namskout_tartan.png)
+![Kum Tsoan AGS](/assets/images/fonts/kum_tsoan.jpg)
+
+![Kum Tsoan _relief](/assets/images/fonts/kum_tsoan_relief.png)
+
+![Kum Tsoan Tartan](/assets/images/fonts/kum_tsoan_tartan.jpg)
 
 
 
@@ -38,17 +40,17 @@ Ces fontes comportent  {{ font.glyphs.size }} glyphes:
 
 A une échelle de  100% ces fontes ont une hauteur approximative de  {{ font.size }} mm. 
 
-Namskout AGS et Namskout Tartan  peuvent être redimensionnées  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
+Kum Tsoan  AGS et Kum Tsoan  Tartan  peuvent être redimensionnées  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
 à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
-Namskout relief est beaucoup plus tolérante et peut être redimensionnée de {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
+Kum Tsoan  relief est beaucoup plus tolérante et peut être redimensionnée de {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
 à {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm). La vraie limite supérieure est celle du cadre de broderie.
 
 
 
 ## Comment les utiliser
-### Namskout  AGS
-Namskout AGS est une fonte d'appliqué
+### Kum Tsoan AGS
+Kum Tsoan  AGS est une fonte d'appliqué
 
 Les trois couleurs de cette version correspondent à trois étapes de broderie :
 * première étape, rouge , indique ou poser le tissu de l'appliqué. Peut aussi être utilisé pour créer un fichier pour les machines de découpe.
@@ -56,8 +58,8 @@ Les trois couleurs de cette version correspondent à trois étapes de broderie :
 * troisième étape, noir, brode le satin autour des lettres. 
 
 
-### Namskout Relief
-Telle quelle Namskout Relief est prévue pour être utilisée ainsi  
+### Kum Tsoan Relief
+Telle quelle Kum Tsoan Relief est prévue pour être utilisée ainsi  
 *  placer une doublure sur le stabilisateur.
 *  broder la première couleur (rouge). C'est un positionnement, en point droit,  qui indique où poser  la mousse pour obtenir un effet relief.
 *  poser la mousse puis broder la seconde couleur (verte) : ce point triple va découper la mousse.
@@ -78,13 +80,13 @@ Si vous supprimez la couleur de contour des chemins verts et la remplacez par un
 
 [Vous trouverez ici  plus de détails pour utiliser cette fonte.](https://lyogau.over-blog.com/2024/06/broderie-en-relief-mousse-puffy-ou-autre.html)
 
-###  Namskout Tartan
+###  Kum Tsoan Tartan
 
 Cette  version tente de ressembler à un appliqué de tissus écossais (tartan). Elle utilise un tartan différent par lettre, ce qui induit un grand nombre de changements de fils.  Il existe [une technique](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) pour utiliser le même tartan pour toutes les lettres et ainsi réduire très fortement le nombre de changements de fils.
 
 
 ## Dans la vraie vie
 
-{% include folder-galleries path="fonts/namskout_ags/" %}
+{% include folder-galleries path="fonts/kum_tsoan_ags/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/namskout_AGS/LICENSE)
+[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/kum_tsoan_AGS/LICENSE)
