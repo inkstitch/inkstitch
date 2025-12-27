@@ -183,7 +183,7 @@ A tool to gather embroidery information.
 
 ### Font Management
 
-#### Fon file naming conventions
+#### Font file naming conventions
 
 Previously font file names declared with arrows the stitch directions. This was troublesome on some operating systems when inkstitch was installed.
 
@@ -243,7 +243,7 @@ Text module to use pre-digitized fonts.
 
   ![Image showing the spacing options: letter spacing, word spacing and line height](/assets/images/upcoming/3.3.0/letter_spacing_gui.jpg)
 
-  ![Draw freely written twice, one is normal, the other with adapted letter and word spacig](/assets/images/upcoming/3.3.0/letter_spacing.jpg){: width="600px" }
+  ![Draw freely written twice, one is normal, the other with adapted letter and word spacing](/assets/images/upcoming/3.3.0/letter_spacing.jpg){: width="600px" }
 
 [Read more](/docs/lettering/)
 
