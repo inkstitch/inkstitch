@@ -65,7 +65,7 @@ class CrossStitchHelperFrame(wx.Frame):
 
         self.box_y_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Grid height (mm)"))
         self.box_y = wx.SpinCtrlDouble(self.settings_panel, value='3', min=0.5, max=100, initial=3, inc=0.1)
-        self.box_x.SetDigits(2)
+        self.box_y.SetDigits(2)
         self.box_y.Bind(wx.EVT_SPINCTRLDOUBLE, self.update)
 
         result_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Stitch_length:"))
