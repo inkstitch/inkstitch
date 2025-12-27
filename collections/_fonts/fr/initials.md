@@ -15,7 +15,7 @@ data_title:
 
 ![Initials XL](/assets/images/fonts/initials_xl.jpg)
 
-![Innitials medium](/assets/images/fonts/initials_medium.jpg)
+![Initials medium](/assets/images/fonts/initials_medium.jpg)
 
 ## Glyphes
 
