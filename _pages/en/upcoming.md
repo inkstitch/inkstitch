@@ -66,7 +66,9 @@ Numerous updates to existing fonts were made. Thanks to everyone involved!
 
 ### Legacy Fill
 
-* Expand option added [#3988](https://github.com/inkstitch/inkstitch/pull/3988)
+#### Expand shape
+
+* Add expand parameter option [#3988](https://github.com/inkstitch/inkstitch/pull/3988)
 
   ![Expand](/assets/images/docs/params-fill-expand.png)
 
@@ -74,21 +76,31 @@ Numerous updates to existing fonts were made. Thanks to everyone involved!
 
 ### Ripple Stitch
 
+#### Adaptive width
+
 * Improved rendering for the adaptive width option [#4079](https://github.com/inkstitch/inkstitch/pull/4079)
 
   ![Varying width](/assets/images/docs/ripple_adaptive_distance.jpg){: width="600px"}
 
-* Allow clipping [#4082](https://github.com/inkstitch/inkstitch/pull/4082)
+#### Clipping
+
+* Ripple stitches render as clipped [#4082](https://github.com/inkstitch/inkstitch/pull/4082)
 
   ![Clipped ripple](/assets/images/docs/ripple_clipped.jpg){: width="600px"}
 
-* Enable swap rail and reverse rail options for satin guides [#4083](https://github.com/inkstitch/inkstitch/pull/4083)
+#### Swap and reverse satin guide rails
+
+* Add swap rail and reverse rail parameter options for satin guides [#4083](https://github.com/inkstitch/inkstitch/pull/4083)
 
   ![Swap and reverse railes](/assets/images/docs/ripple_swap_reverse_rails.jpg){: width="600px"}
+
+  This will have an affect on pattern and/or stitch direction.
 
 [Read more about ripple stitches](/docs/stitches/ripple-stitch/)
 
 ### Running Stitch
+
+#### Stitch length sequence
 
 * Allow a space separated sequence as an intput value for the stitch length [#4034](https://github.com/inkstitch/inkstitch/pull/4034).
   This sequence can also be applied to ripple stitches.
@@ -102,11 +114,15 @@ Numerous updates to existing fonts were made. Thanks to everyone involved!
 
 ### Satin columns
 
+#### Stroke to satin conversion under the hood
+
 Simple strokes can be used as satin columns directly [#3874](https://github.com/inkstitch/inkstitch/pull/3874).
 * the width of the stroke must be greater than 0.3mm
 * the position of the nodes can influence how the satin will be rendered:
 
   ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
+
+#### Short stitch inset levels
 
 Short stitch inset can now take more than one value separated by a space.
 When multiple values are set, the satin column will use these to level consecutive short stitches [#3987](https://github.com/inkstitch/inkstitch/pull/3987).
@@ -167,9 +183,11 @@ A tool to gather embroidery information.
 
 ### Font Management
 
-* Previously font file names declared with arrows the stitch directions. This was troublesome on some operating systems when inkstitch was installed.
+#### Fon file naming conventions
 
-  Now font files can be named ltr.svg, rtl.svg, ttb.svg, btt.svg to define the font variants [#4087](https://github.com/inkstitch/inkstitch/pull/4087)
+Previously font file names declared with arrows the stitch directions. This was troublesome on some operating systems when inkstitch was installed.
+
+Now font files can be named ltr.svg, rtl.svg, ttb.svg, btt.svg to define the font variants [#4087](https://github.com/inkstitch/inkstitch/pull/4087)
 
 #### Convert svg font to glyph layers
 
@@ -219,21 +237,31 @@ Adds a fill underneath selected objects.
 
 ### Lettering
 
-* Lettering: add spacing options [#4020](https://github.com/inkstitch/inkstitch/pull/4020)
+Text module to use pre-digitized fonts.
+
+* Add spacing options [#4020](https://github.com/inkstitch/inkstitch/pull/4020)
 
   ![Image showing the spacing options: letter spacing, word spacing and line height](/assets/images/upcoming/3.3.0/letter_spacing_gui.jpg)
 
   ![Draw freely written twice, one is normal, the other with adapted letter and word spacig](/assets/images/upcoming/3.3.0/letter_spacing.jpg){: width="600px" }
 
-[Read more]()
+[Read more](/docs/lettering/)
 
 ### Preferences
 
-* add "rotate on export" file setting [#3840](https://github.com/inkstitch/inkstitch/pull/3840)
+Defines global settings or settings for the currently open SVG document.
 
-# Troubleshoot
+* Add `rotate on export` setting (affects single svg file only) [#3840](https://github.com/inkstitch/inkstitch/pull/3840)
+
+[Read more](/docs/preferences/)
+
+### Troubleshoot Objects
+
+Points to troublesome (or potentially troublesome) spots in the design.
 
 * add display options (errors, warnings, type warnings) [#3969](https://github.com/inkstitch/inkstitch/pull/3969)
+
+[Read more](/docs/troubleshoot/#troubleshoot-objects)
 
 ## New Color Palettes
 
