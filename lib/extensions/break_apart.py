@@ -25,12 +25,14 @@ class BreakApart(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-m", "--method", type=int, default=1, dest="method")
-        self.minimum_size = 5
+        self.arg_parser.add_argument("-t", "--threshold", type=float, default=1, dest="threshold")
 
     def effect(self) -> None:  # noqa: C901
         if not self.svg.selection:
             errormsg(_("Please select one or more fill areas to break apart."))
             return
+
+        self.minimum_size = self.options.threshold
 
         elements = []
         nodes = self.get_nodes()
@@ -96,17 +98,14 @@ class BreakApart(InkstitchExtension):
         valid = geom.is_valid
         return valid
 
-    def ensure_minimum_size(self, polygons: List[Polygon], size: int) -> List[Polygon]:
-        for polygon in polygons:
-            if polygon.area < size:
-                polygons.remove(polygon)
-        return polygons
+    def ensure_minimum_size(self, polygons: List[Polygon]) -> List[Polygon]:
+        return [polygon for polygon in polygons if polygon.area > self.minimum_size]
 
     def recombine_polygons(self, polygons: List[Polygon]) -> List[List[Polygon]]:
         polygons.sort(key=lambda polygon: polygon.area, reverse=True)
         multipolygons = []
         holes = []
-        self.ensure_minimum_size(polygons, self.minimum_size)
+        polygons = self.ensure_minimum_size(polygons)
         for polygon in polygons:
             if polygon in holes:
                 continue
