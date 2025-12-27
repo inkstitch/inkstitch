@@ -13,7 +13,7 @@
             <spacer />
             <separator />
             <spacer />
-            <param name="threshold" type="float" gui-text="Threshold (px)" min="0.1" max="1000"
+            <param name="threshold" type="float" gui-text="Threshold (px²)" min="0.1" max="1000"
                    gui-description="Removes shapes and holes smaller than this">20</param>
         </page>
         <page name="info" gui-text="Help">
