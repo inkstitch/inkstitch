@@ -1,27 +1,31 @@
 ---
-title: "Namskout AGS"
-permalink: /de/fonts/namskout_ags/
-last_modified_at: 2024-06-22
+title: "Kum Tsoan AGS"
+permalink: /de/fonts/kum_tsoan_ags/
+last_modified_at: 2025-12-27
 toc: false
 preview_image:
-  - url: /assets/images/fonts/namskout_AGS.jpg
+  - url: /assets/images/fonts/kum_tsoan.jpg
     height: 90
-  - url: /assets/images/fonts/namskout_tartan.png
+  - url: /assets/images/fonts/kum_tsoan_tartan.jpg
     height: 90
-  - url: /assets/images/fonts/namskout_relief.png
+  - url: /assets/images/fonts/kum_tsoan_relief.png
     height: 90
 data_title:
-  - namskout_AGS
-  - namskout_relief
-  - namskout_tartan
+  - kum_tsoan_ags
+  - kum_tsoan_relief
+  - kum_tsoan_tartan
 ---
-{%- assign font = site.data.fonts.namskout_AGS.font -%}
-{%- assign font2 = site.data.fonts.namskout_relief.font -%}
-![NamskoutAGS](/assets/images/fonts/namskout_AGS.jpg)
+{%- assign font = site.data.fonts.kum_tsoan_ags.font -%}
 
-![Namskout_relief](/assets/images/fonts/namskout_relief.png)
+{%- assign font2 = site.data.fonts.kum_tsoan_relief.font -%}
 
-![NamskoutTartan](/assets/images/fonts/namskout_tartan.png)
+![Kum Tsoan AGS](/assets/images/fonts/kum_tsoan.jpg)
+
+![Kum Tsoan _relief](/assets/images/fonts/kum_tsoan_relief.png)
+
+![Kum Tsoan Tartan](/assets/images/fonts/kum_tsoan_tartan.jpg)
+
+
 
 ## Schriftzeichen
 
@@ -80,8 +84,8 @@ Namskout Tartan ist eine Tartan-Schrift. Jeder Buchstabe hat ein eigenes Tartan-
 
 ## Impressionen
 
-{% include folder-galleries path="fonts/namskout_ags/" %}
+{% include folder-galleries path="fonts/kum_tsoan_ags/" %}
 
 ## Lizenz
 
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/namskout_AGS/LICENSE)
+[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/kum_tsoan_ags/LICENSE)
