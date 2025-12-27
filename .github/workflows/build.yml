@@ -384,6 +384,10 @@ jobs:
           python -m pip install pyinstaller
 
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+      - name: install geos 64
+        shell: cmd
+        run: |
+          bin\build-geos-win.cmd
       - name: Tests
         shell: bash
         run: |
