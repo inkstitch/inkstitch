@@ -1,5 +1,5 @@
 pystitch
-
+lxml
 # For macOS and Windows our installer bundles the version specified here
 # but some Linux distros package Ink/Stitch as depending on the inkex that's bundled with Inkscape.
 # So at least for releases we should use a tagged version here such as EXTENSIONS_AT_INKSCAPE_$version.
@@ -12,7 +12,6 @@ wxPython>=4.1.1
 
 networkx
 shapely>=2.0.0
-lxml
 platformdirs
 #numpy==2.2.6
 jinja2>2.9
