@@ -41,6 +41,7 @@ DEFAULT_SETTINGS = {
     "font_sampling_max_line_width": 180,
     "font_sampling_scale_spinner": 100,
     # cross stitch grid helper
+    'square': True,
     'cross_helper_box_x': 3,
     'cross_helper_box_y': 3,
     'cross_helper_update_elements': False,

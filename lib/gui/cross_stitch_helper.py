@@ -19,6 +19,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.Show()
 
     def apply_global_settings(self):
+        self.x_only_checkbox.SetValue(global_settings['square'])
         self.box_x.SetValue(global_settings['cross_helper_box_x'])
         self.box_y.SetValue(global_settings['cross_helper_box_y'])
         self.apply_to_element.SetValue(global_settings['cross_helper_update_elements'])
@@ -98,7 +99,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.coverage_label = wx.StaticText(self.settings_panel, label=coverage_label_text)
         self.coverage = wx.SpinCtrl(self.settings_panel, wx.ID_ANY, min=0, max=100, initial=50)
 
-        node_label_text = "     " + _("Add nodes at grid intersections")
+        node_label_text = "     " + _("Add nodes (grid width distance)")
         self.nodes_label = wx.StaticText(self.settings_panel, label=node_label_text)
         self.nodes = wx.CheckBox(self.settings_panel)
 
@@ -194,10 +195,10 @@ class CrossStitchHelperFrame(wx.Frame):
         y_on = not self.x_only_checkbox.GetValue()
         self.box_y.Enable(y_on)
         self.box_y_label.Enable(y_on)
+
         box_x = self.box_x.GetValue()
-        if y_on:
-            box_y = self.box_y.GetValue()
-        else:
+        box_y = self.box_y.GetValue()
+        if not y_on:
             box_y = box_x
             self.box_y.SetValue(box_y)
         result = sqrt(pow(box_x, 2) + pow(box_y, 2))
@@ -225,6 +226,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.settings['grid_color'] = self.grid_color.GetColour().GetAsString(wx.C2S_HTML_SYNTAX)
         self.settings['remove_grids'] = self.remove_grids.GetValue()
 
+        global_settings['square'] = self.x_only_checkbox.GetValue()
         global_settings['cross_helper_box_x'] = self.box_x.GetValue()
         global_settings['cross_helper_box_y'] = self.box_y.GetValue()
         global_settings['cross_helper_update_elements'] = self.apply_to_element.GetValue()

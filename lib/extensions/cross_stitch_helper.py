@@ -19,6 +19,7 @@ class CrossStitchHelper(InkstitchExtension):
     def effect(self):
         settings = {
             'applied': False,
+            'square': True,
             'box_x': 3,
             'box_y': 3,
             'update_elements': False,
@@ -57,6 +58,7 @@ class CrossStitchHelper(InkstitchExtension):
             grid_param += f' {box_y}'
         element.set('inkstitch:fill_method', 'cross_stitch')
         element.set('inkstitch:pattern_size_mm', grid_param)
+        element.set('inkstitch:expand_mm', '0.2')
 
     def pixelize(self, element, settings):
         node = element.node
@@ -125,9 +127,17 @@ class CrossStitchHelper(InkstitchExtension):
                     x += box_x
                 y += box_y
 
-        outline = make_valid(unary_union(boxes))
-        if not settings['nodes']:
-            outline = outline.simplify(0.1)
+        outline = unary_union(boxes)
+        # add a small buffer to connect otherwise unconnected elements
+        outline = outline.buffer(0.001)
+        # the buffer has added some unwanted nodes at corners
+        # remove them with simplify
+        outline = outline.simplify(0.1)
+        outline = make_valid(outline)
+        # simplify has removed nodes at grid intersections.
+        # the user chose to have some additional nodes (to pull the shape out, let's add some nodes back in
+        if settings['nodes']:
+            outline = outline.segmentize(box_x + 0.002)
         return ensure_multi_polygon(outline)
 
     def setup_page_grid(self, settings):
