@@ -54,12 +54,13 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 
 Numerous updates to existing fonts were made. Thanks to everyone involved!
 
-## Palette Files
+## New Stitch Types
 
-* add magnifico thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
-* add threadart thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
+### Cross Stitch
 
-[Read more about color palettes](/docs/thread-color/#install-palettes)
+![Cross stitch frog](/assets/images/upcoming/3.3.0/cross_stitch.jpg){: width="300px" }
+
+[Read more about cross stitch](/docs/stitches/cross-stitch)
 
 ## Stitch Type Related Updates
 
@@ -75,25 +76,29 @@ Numerous updates to existing fonts were made. Thanks to everyone involved!
 
 * Improved rendering for the adaptive width option [#4079](https://github.com/inkstitch/inkstitch/pull/4079)
 
-  ![Varying width](/assets/images/docs/ripple_adaptive_distance.jpg)
+  ![Varying width](/assets/images/docs/ripple_adaptive_distance.jpg){: width="600px"}
 
 * Allow clipping [#4082](https://github.com/inkstitch/inkstitch/pull/4082)
 
-  ![Clipped ripple](/assets/images/docs/ripple_clipped.jpg)
+  ![Clipped ripple](/assets/images/docs/ripple_clipped.jpg){: width="600px"}
 
 * Enable swap rail and reverse rail options for satin guides [#4083](https://github.com/inkstitch/inkstitch/pull/4083)
 
-  ![Swap and reverse railes](/assets/images/docs/ripple_swap_reverse_rails.jpg)
+  ![Swap and reverse railes](/assets/images/docs/ripple_swap_reverse_rails.jpg){: width="600px"}
 
 [Read more about ripple stitches](/docs/stitches/ripple-stitch/)
 
 ### Running Stitch
 
-* Allow a space separated sequence as intput value for the stitch length [#4034](https://github.com/inkstitch/inkstitch/pull/4034)
+* Allow a space separated sequence as an intput value for the stitch length [#4034](https://github.com/inkstitch/inkstitch/pull/4034).
+  This sequence can also be applied to ripple stitches.
 
   ![Running stitch sequence](/assets/images/docs/running_stitch_length_sequence.jpg)
 
-  __Image above: running stitch with a stitch length value of `1 1 5` (applied to a ripple stitch)__
+  _Image above: ripple stitch with a stitch length value of `1 1 5`_
+
+
+[Read more about running stitches](/docs/stitches/running-stitch/)
 
 ### Satin columns
 
@@ -101,12 +106,14 @@ Simple strokes can be used as satin columns directly [#3874](https://github.com/
 * the width of the stroke must be greater than 0.3mm
 * the position of the nodes can influence how the satin will be rendered:
 
-  ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png)
+  ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
 
 Short stitch inset can now take more than one value separated by a space.
 When multiple values are set, the satin column will use these to level consecutive short stitches [#3987](https://github.com/inkstitch/inkstitch/pull/3987).
 
-  ![Satin with two short stitch inset levels](/assets/images/docs/satin_multiple_short_stitch_inset_values.jpg)
+  ![Satin with two short stitch inset levels](/assets/images/docs/satin_multiple_short_stitch_inset_values.jpg){: width="600px"}
+
+[Read more about satin columns](/docs/stitches/satin-column/)
 
 ## New extensions
 
@@ -116,6 +123,10 @@ When multiple values are set, the satin column will use these to level consecuti
 
 An extension for experienced users. Applies a given attribute to all selected elements.
 
+![Apply attribute gui](/assets/images/upcoming/3.3.0/apply_attribute.jpg)
+
+[Read more](/docs/edit/#apply-attributes)
+
 ### Organize Glyphs
 
 `Font Management > Organize Glyphs` [#3870](https://github.com/inkstitch/inkstitch/pull/3870)
@@ -124,10 +135,9 @@ Helps font digitizers to organize their work in steps so that they can reuse pre
 
 [Read more](/docs/font-tools/#organize-glyphs)
 
-### Cross Stitch
+### Cross Stitch Helper
 
-* Add extension to setup a grid for cross stitching [#4095](https://github.com/inkstitch/inkstitch/pull/4095)
-* Add pixelize fill extension [#4096](https://github.com/inkstitch/inkstitch/pull/4096)
+Comin soon
 
 ## Updated Extensions
 
@@ -182,6 +192,13 @@ It is now possible to cut a satin at multiple positions at once. [#4015](https:/
 # Troubleshoot
 
 * add display options (errors, warnings, type warnings) [#3969](https://github.com/inkstitch/inkstitch/pull/3969)
+
+## New Color Palettes
+
+* Magnifico thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
+* Threadart thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
+
+[Read more about color palettes](/docs/thread-color/#install-palettes)
 
 ## Bugfixes
 

@@ -90,16 +90,18 @@ docs:
         class: menu-margin-after
       - title: "Point de remplissage"
         url: /fr/docs/stitches/fill-stitch/
-      - title: "Remplissage selon contour"
-        url: /fr/docs/stitches/contour-fill/
-      - title: "Remplissage guidé"
-        url: /fr/docs/stitches/guided-fill/
-      - title: "Remplissage en méandres"
-        url: /fr/docs/stitches/meander-fill/
       - title: "Remplissage circulaire"
         url: /fr/docs/stitches/circular-fill/
+      - title: "Remplissage selon contour"
+        url: /fr/docs/stitches/contour-fill/
+      - title: "Cross stitch"
+        url: /fr/docs/stitches/cross-stitch/
+      - title: "Remplissage guidé"
+        url: /fr/docs/stitches/guided-fill/
       - title: "Remplissage  en dégradé linéaire"
         url: /fr/docs/stitches/linear-gradient-fill/
+      - title: "Remplissage en méandres"
+        url: /fr/docs/stitches/meander-fill/
       - title: "Remplissage tartan"
         url: /fr/docs/stitches/tartan-fill/
         class: menu-margin-after

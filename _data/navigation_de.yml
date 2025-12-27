@@ -88,16 +88,18 @@ docs:
         class: menu-margin-after
       - title: "Füllstich"
         url: /de/docs/stitches/fill-stitch/
-      - title: "Konturfüllung"
-        url: /de/docs/stitches/contour-fill/
-      - title: "Kurvenfüllung"
-        url: /de/docs/stitches/guided-fill/
-      - title: "Mäanderfüllung"
-        url: /de/docs/stitches/meander-fill/
       - title: "Spiralfüllung"
         url: /de/docs/stitches/circular-fill/
+      - title: "Konturfüllung"
+        url: /de/docs/stitches/contour-fill/
+      - title: "Kreuzstich"
+        url: /de/docs/stitches/cross-stitch/
+      - title: "Kurvenfüllung"
+        url: /de/docs/stitches/guided-fill/
       - title: "Lineare Farbverlaufsfüllung"
         url: /de/docs/stitches/linear-gradient-fill/
+      - title: "Mäanderfüllung"
+        url: /de/docs/stitches/meander-fill/
       - title: "Tartanfüllung"
         url: /de/docs/stitches/tartan-fill/
         class: menu-margin-after

@@ -90,16 +90,18 @@ docs:
         class: menu-margin-after
       - title: "Fill Stitch"
         url: /docs/stitches/fill-stitch/
-      - title: "Contour Fill"
-        url: /docs/stitches/contour-fill/
-      - title: "Guided Fill"
-        url: /docs/stitches/guided-fill/
-      - title: "Meander Fill"
-        url: /docs/stitches/meander-fill/
       - title: "Circular Fill"
         url: /docs/stitches/circular-fill/
+      - title: "Contour Fill"
+        url: /docs/stitches/contour-fill/
+      - title: "Cross stitch"
+        url: /docs/stitches/cross-stitch/
+      - title: "Guided Fill"
+        url: /docs/stitches/guided-fill/
       - title: "Linear Gradient Fill"
         url: /docs/stitches/linear-gradient-fill/
+      - title: "Meander Fill"
+        url: /docs/stitches/meander-fill/
       - title: "Tartan Fill"
         url: /docs/stitches/tartan-fill/
         class: menu-margin-after
