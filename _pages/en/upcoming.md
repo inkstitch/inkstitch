@@ -59,21 +59,41 @@ Numerous updates to existing fonts were made. Thanks to everyone involved!
 * add magnifico thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
 * add threadart thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
 
+[Read more about color palettes](/docs/thread-color/#install-palettes)
+
 ## Stitch Type Related Updates
 
 ### Legacy Fill
 
-* Add expand option [#3988](https://github.com/inkstitch/inkstitch/pull/3988)
+* Expand option added [#3988](https://github.com/inkstitch/inkstitch/pull/3988)
+
+  ![Expand](/assets/images/docs/params-fill-expand.png)
+
+[Read more about legacy fill](/docs/stitches/fill-stitch/#legacy-fill)
 
 ### Ripple Stitch
 
-* Improved rendering for the varying width option [#4079](https://github.com/inkstitch/inkstitch/pull/4079)
+* Improved rendering for the adaptive width option [#4079](https://github.com/inkstitch/inkstitch/pull/4079)
+
+  ![Varying width](/assets/images/docs/ripple_adaptive_distance.jpg)
+
 * Allow clipping [#4082](https://github.com/inkstitch/inkstitch/pull/4082)
+
+  ![Clipped ripple](/assets/images/docs/ripple_clipped.jpg)
+
 * Enable swap rail and reverse rail options for satin guides [#4083](https://github.com/inkstitch/inkstitch/pull/4083)
+
+  ![Swap and reverse railes](/assets/images/docs/ripple_swap_reverse_rails.jpg)
+
+[Read more about ripple stitches](/docs/stitches/ripple-stitch/)
 
 ### Running Stitch
 
 * Allow a space separated sequence as intput value for the stitch length [#4034](https://github.com/inkstitch/inkstitch/pull/4034)
+
+  ![Running stitch sequence](/assets/images/docs/running_stitch_length_sequence.jpg)
+
+  __Image above: running stitch with a stitch length value of `1 1 5` (applied to a ripple stitch)__
 
 ### Satin columns
 
@@ -84,7 +104,9 @@ Simple strokes can be used as satin columns directly [#3874](https://github.com/
   ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png)
 
 Short stitch inset can now take more than one value separated by a space.
-When multiple values are set, the satin column will use these to level consecutive short stitches [#3987](https://github.com/inkstitch/inkstitch/pull/#3987).
+When multiple values are set, the satin column will use these to level consecutive short stitches [#3987](https://github.com/inkstitch/inkstitch/pull/3987).
+
+  ![Satin with two short stitch inset levels](/assets/images/docs/satin_multiple_short_stitch_inset_values.jpg)
 
 ## New extensions
 
