@@ -39,7 +39,18 @@ DEFAULT_SETTINGS = {
     "lettering_use_command_symbols": False,
     # font sampling
     "font_sampling_max_line_width": 180,
-    "font_sampling_scale_spinner": 100
+    "font_sampling_scale_spinner": 100,
+    # cross stitch grid helper
+    'square': True,
+    'cross_helper_box_x': 3,
+    'cross_helper_box_y': 3,
+    'cross_helper_update_elements': False,
+    'cross_helper_pixelize': False,
+    'cross_helper_coverage': 50,
+    'cross_helper_nodes': False,
+    'cross_helper_set_grid': False,
+    'cross_helper_grid_color': '#00d9e5',
+    'cross_helper_remove_grids': True
 }
 
 

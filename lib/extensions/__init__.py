@@ -13,7 +13,7 @@ from .batch_lettering import BatchLettering
 from .break_apart import BreakApart
 from .cleanup import Cleanup
 from .commands_scale_symbols import CommandsScaleSymbols
-from .cross_stitch_grid import CrossStitchGrid
+from .cross_stitch_helper import CrossStitchHelper
 from .cut_satin import CutSatin
 from .cutwork_segmentation import CutworkSegmentation
 from .density_map import DensityMap
@@ -52,7 +52,6 @@ from .output import Output
 from .palette_split_text import PaletteSplitText
 from .palette_to_text import PaletteToText
 from .params import Params
-from .pixelize_fill import PixelizeFill
 from .png_realistic import PngRealistic
 from .png_simple import PngSimple
 from .preferences import Preferences
@@ -94,7 +93,7 @@ extensions = [
     BreakApart,
     Cleanup,
     CommandsScaleSymbols,
-    CrossStitchGrid,
+    CrossStitchHelper,
     CutSatin,
     CutworkSegmentation,
     DensityMap,
@@ -133,7 +132,6 @@ extensions = [
     PaletteSplitText,
     PaletteToText,
     Params,
-    PixelizeFill,
     PngRealistic,
     PngSimple,
     Preferences,
