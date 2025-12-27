@@ -58,7 +58,7 @@ Numerous updates to existing fonts were made. Thanks to everyone involved!
 
 ### Cross Stitch
 
-![Cross stitch frog](/assets/images/upcoming/3.3.0/cross_stitch.jpg){: width="300px" }
+![Cross stitch frog](/assets/images/upcoming/3.3.0/cross_stitch.jpg){: width="600px" }
 
 [Read more about cross stitch](/docs/stitches/cross-stitch)
 
@@ -141,49 +141,91 @@ Comin soon
 
 ## Updated Extensions
 
-### Convert svg font to glyph layers
+### Cut Satin
+
+A tool to cut satins at specified spots.
+
+* It is now possible to cut a satin at multiple positions at once. [#4015](https://github.com/inkstitch/inkstitch/pull/4015)
+
+[Read more](/docs/satin-tools/#cut-satin-column)
+
+### Edit JSON
+
+A tool for font digitizers. It let's font authors edit font and kerning information.
+
+* It is now possible to set `0` as a value for `horiz_adv_x_default`. This is make Ink/Stitch use the width of the individual glyphs  [#3965](https://github.com/inkstitch/inkstitch/pull/3965)
+
+[Read more](/docs/font-tools/#edit-json)
+
+### Element Info
+
+A tool to gather embroidery information.
+
+* Add option to copy the list to the clipboard (accessable from the help tab) [#3817](https://github.com/inkstitch/inkstitch/pull/3817)
+
+[Read more](/docs/troubleshoot/#element-info)
+
+### Font Management
+
+* Previously font file names declared with arrows the stitch directions. This was troublesome on some operating systems when inkstitch was installed.
+
+  Now font files can be named ltr.svg, rtl.svg, ttb.svg, btt.svg to define the font variants [#4087](https://github.com/inkstitch/inkstitch/pull/4087)
+
+#### Convert svg font to glyph layers
+
+This is an extension for embroidery font digitizers.
 
 * Add option for font sizing [#3799](https://github.com/inkstitch/inkstitch/pull/3799)
 * Remove option to stop after a specific amount of imported glyphs [#3937](https://github.com/inkstitch/inkstitch/pull/3937)
-* Do not convert to layer a glyph that does not render (Z category unicode)
+* Ignore glyphs from Z category unicode, as they do not render
 * Try to decypher glyph names from private unicode area [#3883](https://github.com/inkstitch/inkstitch/pull/3883)
 
 [Read more](/docs/font-tools/#convert-svg-font-to-glyph-layers)
 
-### Cut Satin
+#### Font sampling
 
-It is now possible to cut a satin at multiple positions at once. [#4015](https://github.com/inkstitch/inkstitch/pull/4015)
-
-### Edit JSON
-
-* It is now possible to set `0` as a value for `horiz_adv_x_default`. This is make Ink/Stitch use the width of the individual glyphs  [#3965](https://github.com/inkstitch/inkstitch/pull/3965)
-
-### Element Info
-
-* Add option to copy the list to the clipboard (accessable from the help tab) [#3817](https://github.com/inkstitch/inkstitch/pull/3817)
-
-### Font sampling
+A tool for font digitizers to validate the font output.
 
 * only render unlocked (sensitive) glyphs. This allows for partial sampling while creating the font [#3870](https://github.com/inkstitch/inkstitch/pull/3870)
 * Save and reload scale settings [#3870](https://github.com/inkstitch/inkstitch/pull/3870)
 
-### Force lock stitches
+[Read more](/docs/font-tools/#font-sampling)
+
+#### Force lock stitches
+
+A tool for font authors to automatically set the force lock stitch option when an element meets a specified criteria.
 
 * add option to apply forced lock stitches on the last element of each selected group [#3875](https://github.com/inkstitch/inkstitch/pull/3875)
 
-### Jump to Trim
+[Read more](/docs/font-tools/#force-lock-stitches)
 
-* add command option: trim or jump [#4038](https://github.com/inkstitch/inkstitch/pull/4038)
+### Jump Stitch to Trim/Stop command
+
+Converts jumps to trim commands.
+
+* Add option to convert to either a jump or stop command [#4038](https://github.com/inkstitch/inkstitch/pull/4038)
+
+[Read more](/docs/commands/#jump-stitch-to-trim-command)
 
 ### Knockdown Fill
 
-* add stitch length option [#4084](https://github.com/inkstitch/inkstitch/pull/4084)
+Adds a fill underneath selected objects.
+
+* Add stitch length option [#4084](https://github.com/inkstitch/inkstitch/pull/4084)
+
+  Row spacing will adapt accordingly to line up with the stitches.
+
+[Read more](/docs/fill-tools/#knockdown-fill)
 
 ### Lettering
 
 * Lettering: add spacing options [#4020](https://github.com/inkstitch/inkstitch/pull/4020)
 
-* Fonts: enable ltr, rtl, ttb, btt file names for font variants (instead of the arrows) [#4087](https://github.com/inkstitch/inkstitch/pull/4087)
+  ![Image showing the spacing options: letter spacing, word spacing and line height](/assets/images/upcoming/3.3.0/letter_spacing_gui.jpg)
+
+  ![Draw freely written twice, one is normal, the other with adapted letter and word spacig](/assets/images/upcoming/3.3.0/letter_spacing.jpg){: width="600px" }
+
+[Read more]()
 
 ### Preferences
 
