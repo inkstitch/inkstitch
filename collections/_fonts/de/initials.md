@@ -1,20 +1,22 @@
 ---
-title: "Sortefax"
-permalink: /de/fonts/sortefax/
-last_modified_at: 2023-04-24
+title: "Initials"
+permalink: /de/fonts/initials/
+last_modified_at: 2025-12-26
 toc: false
 preview_image: 
-  - url: /assets/images/fonts/sortefaxXL.jpg
+  - url: /assets/images/fonts/initials_xl.jpg
     height: 150
-  - url: /assets/images/fonts/sortefax_medium.jpg
+  - url: /assets/images/fonts/initials_medium.jpg
     height: 90
 data_title:
-  - sortefaxXL
+  - initialsXL
 ---
-{%- assign font = site.data.fonts.sortefaxXL.font -%}
-![SortefaxXL](/assets/images/fonts/sortefaxXL.jpg)
+{%- assign font = site.data.fonts.initials_medium.font -%}
 
-![Sortefax_medium](/assets/images/fonts/sortefax_medium.jpg)
+![Initials XL](/assets/images/fonts/initials_xl.jpg)
+
+![Initials medium](/assets/images/fonts/initials_medium.jpg)
+
 
 ## Schriftzeichen
 
@@ -26,12 +28,12 @@ Anmerkung: Diese Schriftzeichen :;,.(){}[] werden genutzt um die Rahmen zu speic
 
 ## Maße
 
-### Sortefax XL Initials
+### Initials XL 
 
 Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 150 mm (6 Zoll) groá.
 Sie kann bis auf 200% (~ 300 mm, 12 Zoll) hochskaliert und bis zu 70% (~ 100 mm, 4 Zoll) herunterskaliert werden.
 
-### Sortefax Medium Initials
+### Initials Medium 
 
 Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 90 mm (3.5 Zoll) groá.
 Sie kann bis auf 200% (~ 180 mm, 7 Zoll) hochskaliert und bis zu 70% (~ 60 mm, 2.5 Zoll) herunterskaliert werden.
@@ -39,9 +41,9 @@ Sie kann bis auf 200% (~ 180 mm, 7 Zoll) hochskaliert und bis zu 70% (~ 60 mm, 2
 
 ## Beschreibung
 
-### Sortefax XL Initials
+### Initials XL 
 
-Sortefax XL Initials ist dafür gedacht, einen Buchstaben nach dem anderen zu verwenden.
+Initials XL ist dafür gedacht, einen Buchstaben nach dem anderen zu verwenden.
 
 Um einen gerahmten Buchstaben zu erhalten, gibst du einfach den Buchstaben und einen beliebigen "Rahmen"-Buchstaben in das Beschriftungsdialogfenster ein (gleiche Zeile, kein Leerzeichen).
 
@@ -49,9 +51,9 @@ Achtung, nicht alle Rahmen können direkt mit allen Buchstaben verwendet werden,
 
 Natürlich kannst du mit Inkscape den Rahmen ganz einfach neu positionieren oder die Größe ändern oder sogar einen Kreisrahmen in eine Ellipse für einen hohen Buchstaben umwandeln.
 
-### Sortefax Medium Initials
+### Initials Medium 
 
-Sortefax Medium Initials ist kleiner, aber auch einfacher.
+Initials Medium ist kleiner, aber auch einfacher.
 
 Es ist immer noch möglich, Rahmen zu verwenden, aber die automatische Anordnung des Rahmens und des Buchstabens ist nicht so gut wie bei der XL-Schrift.
 
@@ -74,7 +76,7 @@ Rahmen|Zeichen
 
 ## Impressionen
 
-{% include folder-galleries path="fonts/sortefax/" %}
+{% include folder-galleries path="fonts/initials/" %}
 
 ## Lizenz
 
