@@ -1,7 +1,7 @@
 ---
 title: "Kum Tsoan  AGS"
 permalink: /fr/fonts/kum_tsoan_ags/
-last_modified_at: 2024-06-22
+last_modified_at: 2025-12-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/kum_tsoan.jpg
