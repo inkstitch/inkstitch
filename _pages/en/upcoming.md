@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-10-13
+last_modified_at: 2025-12-28
 sidebar:
   nav: pages
 toc: true
@@ -92,9 +92,9 @@ Numerous updates to existing fonts were made. Thanks to everyone involved!
 
 * Add swap rail and reverse rail parameter options for satin guides [#4083](https://github.com/inkstitch/inkstitch/pull/4083)
 
-  ![Swap and reverse railes](/assets/images/docs/ripple_swap_reverse_rails.jpg){: width="600px"}
+  This will effect pattern and/or stitch direction.
 
-  This will have an affect on pattern and/or stitch direction.
+  ![Swap and reverse railes](/assets/images/docs/ripple_swap_reverse_rails.jpg){: width="600px"}
 
 [Read more about ripple stitches](/docs/stitches/ripple-stitch/)
 
@@ -102,7 +102,7 @@ Numerous updates to existing fonts were made. Thanks to everyone involved!
 
 #### Stitch length sequence
 
-* Allow a space separated sequence as an intput value for the stitch length [#4034](https://github.com/inkstitch/inkstitch/pull/4034).
+* Allow a space separated sequence as an input value for the stitch length [#4034](https://github.com/inkstitch/inkstitch/pull/4034).
   This sequence can also be applied to ripple stitches.
 
   ![Running stitch sequence](/assets/images/docs/running_stitch_length_sequence.jpg)
@@ -165,14 +165,6 @@ A tool to cut satins at specified spots.
 
 [Read more](/docs/satin-tools/#cut-satin-column)
 
-### Edit JSON
-
-A tool for font digitizers. It let's font authors edit font and kerning information.
-
-* It is now possible to set `0` as a value for `horiz_adv_x_default`. This is make Ink/Stitch use the width of the individual glyphs  [#3965](https://github.com/inkstitch/inkstitch/pull/3965)
-
-[Read more](/docs/font-tools/#edit-json)
-
 ### Element Info
 
 A tool to gather embroidery information.
@@ -199,6 +191,23 @@ This is an extension for embroidery font digitizers.
 * Try to decypher glyph names from private unicode area [#3883](https://github.com/inkstitch/inkstitch/pull/3883)
 
 [Read more](/docs/font-tools/#convert-svg-font-to-glyph-layers)
+
+#### Edit JSON
+
+A tool for font digitizers. It let's font authors edit font and kerning information.
+
+* It is now possible to set `0` as a value for `horiz_adv_x_default`. This is make Ink/Stitch use the width of the individual glyphs  [#3965](https://github.com/inkstitch/inkstitch/pull/3965)
+* New input fields for: original font, original font url and the font license [#4103](https://github.com/inkstitch/inkstitch/pull/4103)
+
+[Read more](/docs/font-tools/#edit-json)
+
+#### Generate JSON
+
+A tool for font digitizers for the initial creation of the JSON file. The JSON file includes all information about the font.
+
+* New input fields for: original font, original font url and the font license [#4103](https://github.com/inkstitch/inkstitch/pull/4103)
+
+[Read more](/docs/font-tools/#generate-json)
 
 #### Font sampling
 
