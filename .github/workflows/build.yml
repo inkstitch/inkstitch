@@ -369,10 +369,13 @@ jobs:
         with:
           flavor: build-installers
           architecture:  aarch64
+      - uses: msys2/setup-msys2@v2
       - name: install libxml2
-        shell: pwsh
+        with:
+          msystem: CLANGARM64
+      - shell: msys2 {0}
         run: |
-          vcpkg install libxml2-devel
+          pacman -S mingw-w64-clang-aarch64-libxml2
       - name: install geos 64
         shell: cmd
         run: |
