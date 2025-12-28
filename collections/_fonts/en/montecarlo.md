@@ -21,4 +21,4 @@ data_title:
 
 
 
-{%- include end_of_font_page.html font= "{{ page_font_name }}" -%}
+{%- include end_of_font_page.html font = "{{ page_font_name }}" -%}
