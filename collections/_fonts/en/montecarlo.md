@@ -13,12 +13,12 @@ data_title:
 <!--
 
 {%- assign page_font_name = site.data.fonts.montecarlo.font.name -%}
--->
+
 {%- assign page_font_name = Montecarlo -%}
+-->
 
 
 
 
 
-
-{%- include end_of_font_page.html font = "{{ page_font_name }}" -%}
+{%- include end_of_font_page.html font = "Montecarlo" -%}
