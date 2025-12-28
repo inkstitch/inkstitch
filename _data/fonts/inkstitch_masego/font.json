@@ -10,7 +10,7 @@
     "default_glyph": "o",
     "min_scale": 1.0,
     "max_scale": 1.5,
-    "size": 16.7,
+    "size": 14,
     "horiz_adv_x_default": 47,
     "horiz_adv_x_space": 30,
     "units_per_em": 100,
