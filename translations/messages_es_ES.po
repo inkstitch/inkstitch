@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-26 01:52+0000\n"
-"PO-Revision-Date: 2025-12-26 01:52\n"
+"POT-Creation-Date: 2025-12-28 02:03+0000\n"
+"PO-Revision-Date: 2025-12-28 02:04\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-26 01:52+0000\n"
+"POT-Creation-Date: 2025-12-28 02:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1266,16 +1266,16 @@ msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects.
 msgstr "Por favor, ejecute Extensiones > Ink/Stitch > Solucionar problemas > Solucionar problemas de objetos. Esto le mostrará la ubicación exacta del problema."
 
 #: lib/elements/empty_d_object.py:13
-msgid "Empty Path"
-msgstr "Trayectoria vacía"
-
-#: lib/elements/empty_d_object.py:14
 msgid "There is an invalid object in the document without geometry information."
 msgstr "Hay un objeto no válido en el documento sin información de geometría."
 
-#: lib/elements/empty_d_object.py:16
+#: lib/elements/empty_d_object.py:15
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
 msgstr "* Ejecutar Extensiones > Ink/Stitch > Solucionar problemas > Limpiar documento..."
+
+#: lib/elements/empty_d_object.py:21
+msgid "Empty Path"
+msgstr "Trayectoria vacía"
 
 #: lib/elements/fill_stitch.py:36
 msgid "Small Fill"
@@ -1285,7 +1285,7 @@ msgstr "Relleno Pequeño"
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr "Este objeto para relleno es tan pequeño que probablemente sería mejor en puntada recta o columna de satín. Para formas muy pequeñas, no es posible usar la puntada de relleno, e Ink/Stitch usará puntada recta a lo largo de contorno."
 
-#: lib/elements/fill_stitch.py:43 lib/elements/fill_stitch.py:263
+#: lib/elements/fill_stitch.py:43 lib/elements/fill_stitch.py:264
 msgid "Expand"
 msgstr "Expandir"
 
@@ -1293,7 +1293,7 @@ msgstr "Expandir"
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr "No se puede aplicar el parámetro de expansión para este objeto de relleno. Ink/Stitch lo ignorará y utilizará el tamaño original en su lugar."
 
-#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:681
+#: lib/elements/fill_stitch.py:49 lib/elements/fill_stitch.py:682
 msgid "Inset"
 msgstr "Recuadro"
 
@@ -1454,386 +1454,466 @@ msgstr "Relleno circular"
 msgid "Contour Fill"
 msgstr "Relleno de contorno"
 
-#: lib/elements/fill_stitch.py:156 inx/inkstitch_select_elements.inx:58
+#: lib/elements/fill_stitch.py:156
+msgid "Cross Stitch"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:58
 msgid "Guided Fill"
 msgstr "Relleno guiado"
 
-#: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:59
+#: lib/elements/fill_stitch.py:158 inx/inkstitch_select_elements.inx:59
 msgid "Linear Gradient Fill"
 msgstr "Relleno con degradado lineal"
 
-#: lib/elements/fill_stitch.py:158 inx/inkstitch_select_elements.inx:60
+#: lib/elements/fill_stitch.py:159 inx/inkstitch_select_elements.inx:60
 msgid "Meander Fill"
 msgstr "Relleno en meandro"
 
-#: lib/elements/fill_stitch.py:159 inx/inkstitch_select_elements.inx:61
+#: lib/elements/fill_stitch.py:160 inx/inkstitch_select_elements.inx:61
 msgid "Tartan Fill"
 msgstr "Relleno tipo tartán"
 
-#: lib/elements/fill_stitch.py:160 lib/gui/tartan/embroidery_panel.py:203
+#: lib/elements/fill_stitch.py:161 lib/gui/tartan/embroidery_panel.py:203
 #: inx/inkstitch_select_elements.inx:62
 msgid "Legacy Fill"
 msgstr "Relleno heredado"
 
-#: lib/elements/fill_stitch.py:164
+#: lib/elements/fill_stitch.py:165
 msgid "Fill method"
 msgstr "Método de rellenado"
 
-#: lib/elements/fill_stitch.py:173
+#: lib/elements/fill_stitch.py:174
 msgid "Guided Fill Strategy"
 msgstr "Relleno con Estrategia Guiada"
 
-#: lib/elements/fill_stitch.py:174
+#: lib/elements/fill_stitch.py:175
 msgid "Copy"
 msgstr "Copiar"
 
-#: lib/elements/fill_stitch.py:174
+#: lib/elements/fill_stitch.py:175
 msgid "Parallel Offset"
 msgstr "Desplazamiento paralelo"
 
-#: lib/elements/fill_stitch.py:175
+#: lib/elements/fill_stitch.py:176
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
 msgstr "Copia (la predeterminada): llenará la forma con copias desplazadas de la línea. Desplazamiento paralelo garantizará que cada línea mantenga siempre una distancia consistente de su vecina. Se pueden introducir esquinas afiladas."
 
-#: lib/elements/fill_stitch.py:182
+#: lib/elements/fill_stitch.py:183
 msgid "Contour Fill Strategy"
 msgstr "Relleno con Estrategia de Contorno"
 
-#: lib/elements/fill_stitch.py:183
+#: lib/elements/fill_stitch.py:184
 msgid "Inner to Outer"
 msgstr "De adentro hacia afuera"
 
-#: lib/elements/fill_stitch.py:183
+#: lib/elements/fill_stitch.py:184
 msgid "Single spiral"
 msgstr "Espiral simple"
 
-#: lib/elements/fill_stitch.py:183
+#: lib/elements/fill_stitch.py:184
 msgid "Double spiral"
 msgstr "Espiral doble"
 
-#: lib/elements/fill_stitch.py:188
+#: lib/elements/fill_stitch.py:189
 msgid "Join Style"
 msgstr "Estilo de unión"
 
-#: lib/elements/fill_stitch.py:189 inx/inkstitch_knockdown_fill.inx:22
+#: lib/elements/fill_stitch.py:190 inx/inkstitch_knockdown_fill.inx:22
 #: inx/inkstitch_knockdown_fill.inx:39
 msgid "Round"
 msgstr "Redondo"
 
-#: lib/elements/fill_stitch.py:189
+#: lib/elements/fill_stitch.py:190
 msgid "Mitered"
 msgstr "Ingletado"
 
-#: lib/elements/fill_stitch.py:189
+#: lib/elements/fill_stitch.py:190
 msgid "Beveled"
 msgstr "Biselado"
 
-#: lib/elements/fill_stitch.py:195
+#: lib/elements/fill_stitch.py:196
 msgid "Avoid self-crossing"
 msgstr "Evitar cruce automático"
 
-#: lib/elements/fill_stitch.py:204
+#: lib/elements/fill_stitch.py:205
 msgid "Clockwise"
 msgstr "En el sentido de las agujas del reloj"
 
-#: lib/elements/fill_stitch.py:209
+#: lib/elements/fill_stitch.py:210
 msgid "Meander Pattern"
 msgstr "Patrón de meandro"
 
-#: lib/elements/fill_stitch.py:216
+#: lib/elements/fill_stitch.py:217
 msgid "Meander pattern angle"
 msgstr "Ángulo del patrón de meandro"
 
-#: lib/elements/fill_stitch.py:226
+#: lib/elements/fill_stitch.py:227
 msgid "Meander pattern scale"
 msgstr "Escala del patrón de meandro"
 
-#: lib/elements/fill_stitch.py:227
+#: lib/elements/fill_stitch.py:228
 msgid "Percentage to stretch or compress the meander pattern.  You can scale horizontally and vertically individually by giving two percentages separated by a space. "
 msgstr "Porcentaje para estirar o comprimir el patrón del meandro.  Puede escalar horizontal y verticalmente de forma individual dando dos porcentajes separados por un espacio. "
 
-#: lib/elements/fill_stitch.py:237
+#: lib/elements/fill_stitch.py:238
 msgid "Clip path"
 msgstr "Trayectoria del clip"
 
-#: lib/elements/fill_stitch.py:238
+#: lib/elements/fill_stitch.py:239
 msgid "Constrain stitching to the shape.  Useful when smoothing and expand are used."
 msgstr "Limita la costura a la forma.  Útil cuando se utiliza el alisado y la expansión."
 
-#: lib/elements/fill_stitch.py:247
+#: lib/elements/fill_stitch.py:248
 msgid "Smoothness"
 msgstr "Suavidad"
 
-#: lib/elements/fill_stitch.py:249
+#: lib/elements/fill_stitch.py:250
 msgid "Smooth the stitch path.  Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path.  Try low numbers like 0.2.  Hint: a lower running stitch tolerance may be needed too."
 msgstr "Suavice la trayectoria de la puntada.  La suavidad limita la desviación de la trayectoria de puntada suavizada con respecto a la trayectoria original.  Pruebe con números bajos como 0,2.  Sugerencia: también puede ser necesaria una tolerancia de puntada más baja."
 
-#: lib/elements/fill_stitch.py:264
+#: lib/elements/fill_stitch.py:265
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
 msgstr "Expande la forma antes de la costura de relleno, para compensar los vacíos entre las formas.  Los valores negativos se contraen en su lugar."
 
-#: lib/elements/fill_stitch.py:274
+#: lib/elements/fill_stitch.py:275
 msgid "Gap Filling"
 msgstr "Llenado de vacíos"
 
-#: lib/elements/fill_stitch.py:275
+#: lib/elements/fill_stitch.py:276
 msgid "Add extra rows to compensate for gaps between sections caused by distortion.Rows are always added in pairs, so this number will be rounded up to the nearest multiple of 2."
 msgstr "Añada filas adicionales para compensar los huecos entre secciones causados por la distorsión. Las filas siempre se añaden de dos en dos, por lo que este número se redondeará al múltiplo de 2 más cercano."
 
-#: lib/elements/fill_stitch.py:287 lib/elements/fill_stitch.py:300
+#: lib/elements/fill_stitch.py:288 lib/elements/fill_stitch.py:301
 #: lib/gui/tartan/embroidery_panel.py:35
 msgid "Angle of lines of stitches"
 msgstr "Ángulo de líneas de puntadas"
 
-#: lib/elements/fill_stitch.py:288
+#: lib/elements/fill_stitch.py:289
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr "El ángulo aumenta en sentido antihorario. 0 es horizontal. Se permiten ángulos negativos."
 
-#: lib/elements/fill_stitch.py:301 lib/gui/tartan/embroidery_panel.py:36
+#: lib/elements/fill_stitch.py:302 lib/gui/tartan/embroidery_panel.py:36
 msgid "Relative to the tartan stripe direction."
 msgstr "En relación con la dirección de la raya de tartán."
 
-#: lib/elements/fill_stitch.py:313
+#: lib/elements/fill_stitch.py:314
 msgid "Maximum fill stitch length"
 msgstr "Longitud máxima de puntada de relleno"
 
-#: lib/elements/fill_stitch.py:315
+#: lib/elements/fill_stitch.py:316 lib/elements/fill_stitch.py:826
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "La longitud de cada puntada en una fila. Se puede usar una puntada más corta al principio o al final de una fila."
 
-#: lib/elements/fill_stitch.py:331
+#: lib/elements/fill_stitch.py:332
 msgid "Spacing between rows"
 msgstr "Espaciamiento entre filas"
 
-#: lib/elements/fill_stitch.py:332
+#: lib/elements/fill_stitch.py:333
 msgid "Distance between rows of stitches."
 msgstr "Distancia entre filas de puntadas."
 
-#: lib/elements/fill_stitch.py:349 inx/inkstitch_gradient_blocks.inx:24
+#: lib/elements/fill_stitch.py:350 inx/inkstitch_gradient_blocks.inx:24
 msgid "End row spacing"
 msgstr "Espaciado al final de la fila"
 
-#: lib/elements/fill_stitch.py:350
+#: lib/elements/fill_stitch.py:351
 msgid "Increases or decreases the row spacing towards the end."
 msgstr "Aumenta o disminuye el espaciado de la fila hacia el final."
 
-#: lib/elements/fill_stitch.py:364
+#: lib/elements/fill_stitch.py:365
 msgid "Stagger rows this many times before repeating"
 msgstr "Alterne las filas esto muchas veces antes de repetir"
 
-#: lib/elements/fill_stitch.py:365 lib/elements/satin_column.py:217
+#: lib/elements/fill_stitch.py:366 lib/elements/satin_column.py:217
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr "Longitud del ciclo por el cual las filas de puntadas sucesivas se desfasan. Se permiten valores fraccionarios y pueden generar diagonales menos visibles con respecto a los valores enteros."
 
-#: lib/elements/fill_stitch.py:381 lib/elements/fill_stitch.py:693
+#: lib/elements/fill_stitch.py:382 lib/elements/fill_stitch.py:694
 msgid "Skip last stitch in each row"
 msgstr "Saltar última puntada de cada fila"
 
-#: lib/elements/fill_stitch.py:382 lib/elements/fill_stitch.py:694
+#: lib/elements/fill_stitch.py:383 lib/elements/fill_stitch.py:695
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "La última puntada de cada fila está bastante cerca de la primera puntada de la siguiente fila. Omitirlo reduce el número de puntadas y la densidad."
 
-#: lib/elements/fill_stitch.py:397
+#: lib/elements/fill_stitch.py:398
 msgid "Flip fill (start right-to-left)"
 msgstr "Voltear relleno (comenzar de derecha a izquierda)"
 
-#: lib/elements/fill_stitch.py:398
+#: lib/elements/fill_stitch.py:399
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr "La opción de voltear puede ayudarlo a enrutar su ruta de puntada. Cuando habilita el giro, la costura va de derecha a izquierda en lugar de izquierda a derecha."
 
-#: lib/elements/fill_stitch.py:410
+#: lib/elements/fill_stitch.py:411
 msgid "Reverse fill"
 msgstr "Relleno invertido"
 
-#: lib/elements/fill_stitch.py:411
+#: lib/elements/fill_stitch.py:412
 msgid "Reverses fill path."
 msgstr "Invierte la trayectoria del relleno."
 
-#: lib/elements/fill_stitch.py:422
+#: lib/elements/fill_stitch.py:423
 msgid "Stop at ending point"
 msgstr "Detenerse en el punto final"
 
-#: lib/elements/fill_stitch.py:423
+#: lib/elements/fill_stitch.py:424
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
 msgstr "Si esta opción está desactivada, el punto final solo se utilizará para definir una dirección general del recorrido de la puntada. Cuando está activada, la última sección terminará en el punto definido."
 
-#: lib/elements/fill_stitch.py:435 lib/elements/fill_stitch.py:705
+#: lib/elements/fill_stitch.py:436 lib/elements/fill_stitch.py:706
 msgid "Underpath"
 msgstr "Capa base"
 
-#: lib/elements/fill_stitch.py:436 lib/elements/fill_stitch.py:706
+#: lib/elements/fill_stitch.py:437 lib/elements/fill_stitch.py:707
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Viaja dentro de la forma al pasar de una sección a otra. Las puntadas subterráneas evitan viajar en la dirección del ángulo de la fila para que no sean visibles. Esto les da una apariencia irregular."
 
-#: lib/elements/fill_stitch.py:448 lib/elements/satin_column.py:368
+#: lib/elements/fill_stitch.py:449 lib/elements/satin_column.py:368
 #: lib/elements/stroke.py:120
 msgid "Running stitch length"
 msgstr "Corriendo longitud de puntada"
 
-#: lib/elements/fill_stitch.py:449
+#: lib/elements/fill_stitch.py:450
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
 msgstr "Longitud de las puntadas alrededor del contorno de la región de relleno, utilizada al pasar de una sección a otra. También se utiliza para relleno en meandro y relleno circular."
 
-#: lib/elements/fill_stitch.py:466 lib/elements/satin_column.py:379
+#: lib/elements/fill_stitch.py:467 lib/elements/satin_column.py:379
 msgid "Running stitch tolerance"
 msgstr "Tolerancia de puntada de corrido"
 
-#: lib/elements/fill_stitch.py:467 lib/elements/satin_column.py:380
+#: lib/elements/fill_stitch.py:468 lib/elements/satin_column.py:380
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Determina cuán estrictamente Ink/Stitch intenta evitar bordar fuera de la forma. Números más bajos disminuyen la probabilidad de bordar fuera de la forma, pero requieren más puntadas."
 
-#: lib/elements/fill_stitch.py:485 lib/elements/stroke.py:147
+#: lib/elements/fill_stitch.py:486 lib/elements/stroke.py:147
 msgid "Randomize stitch length"
 msgstr "Variar la longitud de las puntadas"
 
-#: lib/elements/fill_stitch.py:486 lib/elements/stroke.py:148
+#: lib/elements/fill_stitch.py:487 lib/elements/stroke.py:148
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
 msgstr "Variar la longitud y la fase de las puntadas en lugar de dividirlas de manera uniforme o escalonada. Esto se recomienda para rellenos curvos muy juntos, para evitar artefactos tipo Moiré."
 
-#: lib/elements/fill_stitch.py:502 lib/elements/stroke.py:160
+#: lib/elements/fill_stitch.py:503 lib/elements/stroke.py:160
 msgid "Random stitch length jitter"
 msgstr "Variación aleatoria de la longitud de las puntadas"
 
-#: lib/elements/fill_stitch.py:503 lib/elements/stroke.py:161
+#: lib/elements/fill_stitch.py:504 lib/elements/stroke.py:161
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr "Cantidad para variar la longitud de cada puntada al usar la variación aleatoria."
 
-#: lib/elements/fill_stitch.py:518 lib/elements/satin_column.py:504
+#: lib/elements/fill_stitch.py:519 lib/elements/satin_column.py:504
 #: lib/elements/stroke.py:82
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:33
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:35
 msgid "Repeats"
 msgstr "Repetir"
 
-#: lib/elements/fill_stitch.py:519 lib/elements/stroke.py:83
+#: lib/elements/fill_stitch.py:520 lib/elements/stroke.py:83
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:36
 msgid "Defines how many times to run down and back along the path."
 msgstr "Define cuántas veces baja y sube a lo largo del patrón."
 
-#: lib/elements/fill_stitch.py:530 lib/elements/stroke.py:94
+#: lib/elements/fill_stitch.py:531 lib/elements/fill_stitch.py:837
+#: lib/elements/stroke.py:94
 msgid "Bean stitch number of repeats"
 msgstr "Número de repeticiones por puntada triple"
 
-#: lib/elements/fill_stitch.py:531 lib/elements/stroke.py:95
+#: lib/elements/fill_stitch.py:532 lib/elements/fill_stitch.py:838
+#: lib/elements/stroke.py:95
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr "Retroceder sobre cada puntada este número de veces. Un valor de 1 triplicaría cada puntada (adelante, atrás, adelante). Un valor de 2 quintuplicaría cada puntada, etc. \n\n"
 "Se puede crear un patrón con varias repeticiones con una lista de valores separados por un espacio."
 
-#: lib/elements/fill_stitch.py:546 lib/elements/satin_column.py:254
+#: lib/elements/fill_stitch.py:547 lib/elements/satin_column.py:254
 #: lib/elements/stroke.py:186
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Espaciado en zig-zag (pico a pico)"
 
-#: lib/elements/fill_stitch.py:547 lib/elements/stroke.py:187
+#: lib/elements/fill_stitch.py:548 lib/elements/stroke.py:187
 msgid "Length of stitches in zig-zag mode."
 msgstr "Longitud de las puntadas en modo Zig-Zag."
 
-#: lib/elements/fill_stitch.py:559
+#: lib/elements/fill_stitch.py:560
 msgid "Zig-zag width"
 msgstr "Ancho de zigzag"
 
-#: lib/elements/fill_stitch.py:560
+#: lib/elements/fill_stitch.py:561
 msgid "Width of the zig-zag line."
 msgstr "Ancho de la línea de zigzag."
 
-#: lib/elements/fill_stitch.py:573 lib/gui/tartan/embroidery_panel.py:42
+#: lib/elements/fill_stitch.py:574 lib/gui/tartan/embroidery_panel.py:42
 msgid "Rows per tartan thread"
 msgstr "Filas por hilo tartán"
 
-#: lib/elements/fill_stitch.py:574 lib/gui/tartan/embroidery_panel.py:44
+#: lib/elements/fill_stitch.py:575 lib/gui/tartan/embroidery_panel.py:44
 msgid "Consecutive rows of the same color"
 msgstr "Filas consecutivas del mismo color"
 
-#: lib/elements/fill_stitch.py:585
+#: lib/elements/fill_stitch.py:586
 msgid "Herringbone width"
 msgstr "Ancho de espiga"
 
-#: lib/elements/fill_stitch.py:586
+#: lib/elements/fill_stitch.py:587
 msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr "Define el ancho de un patrón de espiga. Usa 0 para filas regulares."
 
-#: lib/elements/fill_stitch.py:598 lib/elements/satin_column.py:282
+#: lib/elements/fill_stitch.py:599 lib/elements/satin_column.py:282
 #: lib/elements/stroke.py:199
 msgid "Pull compensation"
 msgstr "Compensación de tracción"
 
-#: lib/elements/fill_stitch.py:599
+#: lib/elements/fill_stitch.py:600
 msgid "Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. This setting expands each row of stitches outward from the center of the row by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "La puntada de relleno puede fruncir la tela, resultando en una forma más estrecha de la que dibujas en Inkscape. Esta configuración expande cada fila de puntadas hacia afuera desde el centro de la fila en una longitud fija.  Se pueden usar dos valores separados por un espacio para un efecto asimétrico."
 
-#: lib/elements/fill_stitch.py:603 lib/elements/satin_column.py:286
+#: lib/elements/fill_stitch.py:604 lib/elements/satin_column.py:286
 #: lib/elements/satin_column.py:449 lib/elements/satin_column.py:543
 #: lib/elements/stroke.py:202
 msgid "mm (each side)"
 msgstr "mm (cada lado)"
 
-#: lib/elements/fill_stitch.py:614 lib/elements/satin_column.py:267
+#: lib/elements/fill_stitch.py:615 lib/elements/satin_column.py:267
 msgid "Pull compensation percentage"
 msgstr "Porcentaje de compensación de tire"
 
-#: lib/elements/fill_stitch.py:615
+#: lib/elements/fill_stitch.py:616
 msgid "Additional pull compensation which varies as a percentage of row width. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Compensación de tire adicional que varía como un porcentaje del ancho de la fila. Se pueden usar dos valores separados por un espacio para un efecto asimétrico."
 
-#: lib/elements/fill_stitch.py:618 lib/elements/satin_column.py:134
+#: lib/elements/fill_stitch.py:619 lib/elements/satin_column.py:134
 #: lib/elements/satin_column.py:144 lib/elements/satin_column.py:270
 #: lib/elements/satin_column.py:464 lib/elements/satin_column.py:563
 msgid "% (each side)"
 msgstr "% (cada lado)"
 
-#: lib/elements/fill_stitch.py:627 lib/elements/fill_stitch.py:636
-#: lib/elements/fill_stitch.py:663 lib/elements/fill_stitch.py:674
-#: lib/elements/fill_stitch.py:684 lib/elements/fill_stitch.py:696
-#: lib/elements/fill_stitch.py:709
+#: lib/elements/fill_stitch.py:628 lib/elements/fill_stitch.py:637
+#: lib/elements/fill_stitch.py:664 lib/elements/fill_stitch.py:675
+#: lib/elements/fill_stitch.py:685 lib/elements/fill_stitch.py:697
+#: lib/elements/fill_stitch.py:710
 msgid "Fill Underlay"
 msgstr "Base de Relleno"
 
-#: lib/elements/fill_stitch.py:627 lib/gui/tartan/embroidery_panel.py:55
+#: lib/elements/fill_stitch.py:628 lib/gui/tartan/embroidery_panel.py:55
 #: inx/inkstitch_select_elements.inx:36 inx/inkstitch_select_elements.inx:64
 #: inx/inkstitch_select_elements.inx:66
 msgid "Underlay"
 msgstr "Capa base"
 
-#: lib/elements/fill_stitch.py:633
+#: lib/elements/fill_stitch.py:634
 msgid "Fill angle"
 msgstr "Ángulo de relleno"
 
-#: lib/elements/fill_stitch.py:634
+#: lib/elements/fill_stitch.py:635
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr "Por defecto: ángulo de relleno + 90 grados. Inserta una lista para múltiples capas separada por un espacio."
 
-#: lib/elements/fill_stitch.py:660 lib/gui/tartan/embroidery_panel.py:77
+#: lib/elements/fill_stitch.py:661 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
 msgstr "Espaciado de la fila"
 
-#: lib/elements/fill_stitch.py:661
+#: lib/elements/fill_stitch.py:662
 msgid "default: 3x fill row spacing"
 msgstr "por defecto: rellenar el espaciado de línea x3"
 
-#: lib/elements/fill_stitch.py:671 lib/elements/stroke.py:172
+#: lib/elements/fill_stitch.py:672 lib/elements/stroke.py:172
 #: lib/extensions/element_info.py:144 lib/extensions/element_info.py:203
 msgid "Max stitch length"
 msgstr "Longitud de puntada máxima"
 
-#: lib/elements/fill_stitch.py:672
+#: lib/elements/fill_stitch.py:673
 msgid "default: equal to fill max stitch length"
 msgstr "por defecto: igual a rellenar la longitud máxima de puntada"
 
-#: lib/elements/fill_stitch.py:682
+#: lib/elements/fill_stitch.py:683
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Reduzca la forma antes de aplicar la capa base, para evitar que la capa base se vea alrededor del exterior del relleno."
 
-#: lib/elements/fill_stitch.py:717 lib/elements/satin_column.py:585
+#: lib/elements/fill_stitch.py:718 lib/elements/satin_column.py:585
 #: lib/elements/stroke.py:464 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr "Semilla aleatoria"
 
-#: lib/elements/fill_stitch.py:718 lib/elements/satin_column.py:586
+#: lib/elements/fill_stitch.py:719 lib/elements/satin_column.py:586
 #: lib/elements/stroke.py:465
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Utiliza una semilla específica para atributos aleatorios. Utiliza el ID del elemento si está vacío."
+
+#: lib/elements/fill_stitch.py:739 lib/stitch_plan/lock_stitch.py:218
+msgid "Cross"
+msgstr "Cruz"
+
+#: lib/elements/fill_stitch.py:740
+msgid "Cross Flipped"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:741
+msgid "Half Cross"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:742
+msgid "Half Cross Flipped"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:743
+msgid "Upright Cross"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:744
+msgid "Upright Cross Flipped"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:745
+msgid "Double Cross"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:750
+msgid "Cross stitch method"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:762
+msgid "Pattern size"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:763
+msgid "Cross stitch pattern size in mm, x and y values are separated by a space. Only one input value returns a square pattern."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:766 lib/elements/fill_stitch.py:799
+msgid "mm (x y)"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:778
+msgid "Align grid with canvas"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:779
+msgid "This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.\n\n"
+"Disable this option to ensure, that this element stitches the same, independently on its position on the canvas."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:795
+msgid "Grid Offset"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:796
+msgid "Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:811
+msgid "Fill coverage"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:812
+msgid "Percentage of overlap for each cross with the fill area"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:824 lib/elements/satin_column.py:175
+#: lib/elements/satin_column.py:574
+msgid "Maximum stitch length"
+msgstr "Longitud de puntada máxima"
 
 #: lib/elements/image.py:13
 msgid "Image"
@@ -2054,10 +2134,6 @@ msgstr "Método de división"
 #: lib/elements/satin_column.py:166
 msgid "Display needle penetration points in simulator to see the effect of each split method."
 msgstr "Mostrar los puntos de penetración de la aguja en el simulador para ver el efecto de cada método de división."
-
-#: lib/elements/satin_column.py:175 lib/elements/satin_column.py:574
-msgid "Maximum stitch length"
-msgstr "Longitud de puntada máxima"
 
 #: lib/elements/satin_column.py:176
 msgid "Maximum stitch length for split stitches."
@@ -3504,7 +3580,7 @@ msgstr "Aplicar"
 #: inx/inkstitch_apply_threadlist.inx:91 inx/inkstitch_auto_run.inx:25
 #: inx/inkstitch_auto_satin.inx:16 inx/inkstitch_batch_lettering.inx:72
 #: inx/inkstitch_break_apart.inx:14 inx/inkstitch_cleanup.inx:25
-#: inx/inkstitch_cross_stitch_grid.inx:14
+#: inx/inkstitch_cross_stitch_grid.inx:16
 #: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
 #: inx/inkstitch_display_stacking_order.inx:11
 #: inx/inkstitch_fill_to_satin.inx:24 inx/inkstitch_fill_to_stroke.inx:24
@@ -3520,7 +3596,7 @@ msgstr "Aplicar"
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
 #: inx/inkstitch_letters_to_font.inx:60 inx/inkstitch_outline.inx:25
-#: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_pixelize_fill.inx:13
+#: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_pixelize_fill.inx:16
 #: inx/inkstitch_png_realistic.inx:17 inx/inkstitch_png_simple.inx:18
 #: inx/inkstitch_redwork.inx:28 inx/inkstitch_remove_duplicated_points.inx:14
 #: inx/inkstitch_remove_embroidery_settings.inx:140
@@ -4785,10 +4861,6 @@ msgstr "Hacia atrás y hacia adelante"
 msgid "Bowtie"
 msgstr "Moño"
 
-#: lib/stitch_plan/lock_stitch.py:218
-msgid "Cross"
-msgstr "Cruz"
-
 #: lib/stitch_plan/lock_stitch.py:219
 msgid "Star"
 msgstr "Estrella"
@@ -4855,7 +4927,7 @@ msgstr "Versión de Ink/Stitch: desconocida"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
-#: inx/inkstitch_cross_stitch_grid.inx:11
+#: inx/inkstitch_cross_stitch_grid.inx:13
 msgid "Color"
 msgstr "Color"
 
@@ -5649,7 +5721,7 @@ msgstr "Esta extensión intenta crear un único trazado de puntada a través de 
 
 #: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_batch_lettering.inx:77
 #: inx/inkstitch_break_apart.inx:20 inx/inkstitch_cleanup.inx:28
-#: inx/inkstitch_cross_stitch_grid.inx:17 inx/inkstitch_density_map.inx:29
+#: inx/inkstitch_cross_stitch_grid.inx:19 inx/inkstitch_density_map.inx:29
 #: inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
 #: inx/inkstitch_install_custom_palette.inx:17
@@ -5661,7 +5733,7 @@ msgstr "Esta extensión intenta crear un único trazado de puntada a través de 
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
 #: inx/inkstitch_letters_to_font.inx:75 inx/inkstitch_outline.inx:28
-#: inx/inkstitch_pixelize_fill.inx:16 inx/inkstitch_redwork.inx:31
+#: inx/inkstitch_pixelize_fill.inx:19 inx/inkstitch_redwork.inx:31
 #: inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_satin_to_stroke.inx:15
 #: inx/inkstitch_stitch_plan_preview.inx:45
@@ -5796,9 +5868,9 @@ msgstr ""
 msgid "Break apart and repair (broken) fill shapes"
 msgstr "Separar y reparar formas de relleno (rotas)"
 
-#: inx/inkstitch_break_apart.inx:31 inx/inkstitch_cross_stitch_grid.inx:28
+#: inx/inkstitch_break_apart.inx:31 inx/inkstitch_cross_stitch_grid.inx:30
 #: inx/inkstitch_gradient_blocks.inx:12 inx/inkstitch_knockdown_fill.inx:12
-#: inx/inkstitch_pixelize_fill.inx:27 inx/inkstitch_tartan.inx:12
+#: inx/inkstitch_pixelize_fill.inx:30 inx/inkstitch_tartan.inx:12
 msgid "Tools: Fill"
 msgstr "Herramientas: Rellenar"
 
@@ -5895,23 +5967,31 @@ msgid "Setup Cross Stitch Grid"
 msgstr ""
 
 #: inx/inkstitch_cross_stitch_grid.inx:10 inx/inkstitch_pixelize_fill.inx:10
-msgid "Stitch length (mm)"
+msgid "Cross Size X"
 msgstr ""
 
-#: inx/inkstitch_cross_stitch_grid.inx:12
+#: inx/inkstitch_cross_stitch_grid.inx:12 inx/inkstitch_pixelize_fill.inx:12
+msgid "Cross Size Y"
+msgstr ""
+
+#: inx/inkstitch_cross_stitch_grid.inx:14
 msgid "Remove previous cross stitch grids"
 msgstr ""
 
-#: inx/inkstitch_cross_stitch_grid.inx:15
+#: inx/inkstitch_cross_stitch_grid.inx:17
 msgid "Use this extension to create grid lines suited for cross stitching."
 msgstr ""
 
-#: inx/inkstitch_cross_stitch_grid.inx:18
+#: inx/inkstitch_cross_stitch_grid.inx:20
 msgid "https://inkstitch.org/docs/fill-tools//#setup-cross-stitch-grid"
 msgstr ""
 
-#: inx/inkstitch_cross_stitch_grid.inx:25
+#: inx/inkstitch_cross_stitch_grid.inx:27
 msgid "Setup a cross stitch grid for a specified stitch length"
+msgstr ""
+
+#: inx/inkstitch_cross_stitch_grid.inx:31 inx/inkstitch_pixelize_fill.inx:31
+msgid "Cross stitch"
 msgstr ""
 
 #: inx/inkstitch_cut_satin.inx:3
@@ -7986,23 +8066,23 @@ msgstr "Adaptar configuraciones de bordado"
 msgid "Pixelize Fill"
 msgstr ""
 
-#: inx/inkstitch_pixelize_fill.inx:10
-msgid "Stitch length of potential cross stitches"
-msgstr ""
-
-#: inx/inkstitch_pixelize_fill.inx:11
+#: inx/inkstitch_pixelize_fill.inx:13
 msgid "Cross coverage (%)"
 msgstr ""
 
 #: inx/inkstitch_pixelize_fill.inx:14
-msgid "Use this extension to pixelize a fill area."
+msgid "Add nodes at grid intersections"
 msgstr ""
 
 #: inx/inkstitch_pixelize_fill.inx:17
+msgid "Use this extension to pixelize a fill area."
+msgstr ""
+
+#: inx/inkstitch_pixelize_fill.inx:20
 msgid "https://inkstitch.org/docs/fill-tools//#pixelize-fill"
 msgstr ""
 
-#: inx/inkstitch_pixelize_fill.inx:24
+#: inx/inkstitch_pixelize_fill.inx:27
 msgid "Pixelizes the outline of a fill"
 msgstr ""
 
