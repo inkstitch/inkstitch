@@ -10,6 +10,7 @@ preview_image:
     height: 10
 data_title:
   - bathaus_FI
+  - bathaus_small
 ---
 {%- assign font = site.data.fonts.bathaus_FI.font -%}
 ![Bathauss](/assets/images/fonts/bathaus_FI.png)
