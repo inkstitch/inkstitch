@@ -4,7 +4,7 @@ permalink: /fr/fonts/manga_impact/
 last_modified_at: 2025-12-26
 toc: false
 preview_image:
-  - url: /assets/images/fonts/manfa_impact.png
+  - url: /assets/images/fonts/manga_impact.png
     height: 20
 data_title:
   - manga_impact
