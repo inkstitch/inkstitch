@@ -10,6 +10,11 @@
                <option value="0">Simple</option>
                <option value="1">Complex</option>
             </param>
+            <spacer />
+            <separator />
+            <spacer />
+            <param name="threshold" type="float" gui-text="Threshold (px²)" min="0.1" max="1000"
+                   gui-description="Removes shapes and holes smaller than this">20</param>
         </page>
         <page name="info" gui-text="Help">
             <label>This extension will try to repair fill shapes and break them apart if necessary.</label>
