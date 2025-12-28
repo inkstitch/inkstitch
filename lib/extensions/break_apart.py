@@ -49,6 +49,9 @@ class BreakApart(InkstitchExtension):
             try:
                 paths.sort(key=lambda point_list: Polygon(point_list).area, reverse=True)
                 polygon = MultiPolygon([(paths[0], paths[1:])])
+                if polygon.area <= self.minimum_size:
+                    element.node.delete()
+                    continue
                 if self.geom_is_valid(polygon) and Polygon(paths[-1]).area > self.minimum_size:
                     continue
             except ValueError:
