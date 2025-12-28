@@ -37,7 +37,7 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Montecarlo](/fonts/montecarlo/)
 
   ![Neon](/assets/images/fonts/montecarlo.png)
-  * [Neon](/fonts/neon/)
+* [Neon](/fonts/neon/)
 
   ![Neon](/assets/images/fonts/neon.png)
 * [Neon blinking](/fonts/neon/)
@@ -53,6 +53,21 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 ### Font updates
 
 Numerous updates to existing fonts were made. Thanks to everyone involved!
+
+## Translations
+
+A big thank you to all translators. We've received new translations into:
+
+* Czech
+* Dutch
+* French
+* German
+* Greek
+* Hungarian
+* Portuguese, Brazilian
+* Spanish
+
+[How to translate Ink/Stitch](/developers/localize/)
 
 ## New Stitch Types
 
