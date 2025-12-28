@@ -19,6 +19,8 @@ class TextTypeWarning(ObjectTypeWarning):
 
 
 class TextObject(EmbroideryElement):
+    name = "Text"
+    element_name = _("Text")
 
     def pointer(self):
         parent = self.node.getparent()

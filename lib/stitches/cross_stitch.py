@@ -300,9 +300,10 @@ def _lines_to_stitches(
     if networkx.is_empty(fill_stitch_graph):
         return fallback(shape, max_stitch_length, 0.2)
     if not networkx.is_connected(fill_stitch_graph):
-        return fallback(shape, max_stitch_length, 0.2)
-    else:
-        graph_make_valid(fill_stitch_graph)
+        # try to rescue the operation in selecting only the largest connected component
+        largest_cc = max(networkx.connected_components(fill_stitch_graph), key=len)
+        fill_stitch_graph = fill_stitch_graph.subgraph(largest_cc).copy()
+    graph_make_valid(fill_stitch_graph)
 
     travel_graph = build_travel_graph(fill_stitch_graph, shape, travel_edges, nodes, underpath)
 
