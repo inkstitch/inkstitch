@@ -10,8 +10,12 @@ data_title:
   - montecarlo
 ---
 {% include upcoming_release.html %}
+<!--
 
 {%- assign page_font_name = site.data.fonts.montecarlo.font.name -%}
+-->
+{%- assign page_font_name = Montecarlo -%}
+
 
 
 
