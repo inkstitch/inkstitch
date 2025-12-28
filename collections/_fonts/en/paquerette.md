@@ -7,7 +7,7 @@ preview_image:
   - url: /assets/images/fonts/paquerette.png
     height: 27
 data_title:
-  - paquerettte
+  - paquerette
 ---
 {%- assign font = site.data.fonts.paquerette.font -%}
 

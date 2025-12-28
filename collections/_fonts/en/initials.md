@@ -9,8 +9,8 @@ preview_image:
   - url: /assets/images/fonts/initials_medium.jpg
     height: 90
 data_title:
-  - initials_xl
   - initials_medium
+  - initials_xl
 ---
 {%- assign font = site.data.fonts.initials_medium.font -%}
 
