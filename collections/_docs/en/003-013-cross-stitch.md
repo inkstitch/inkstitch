@@ -46,6 +46,33 @@ When the option `Align grid with canvas` is disabled, the element can be moved o
 But adjacent cross stitch areas may be misaligned.
 {: .notice--info }
 
+### Cross Stitch Method
+
+In Ink/Stitch you can choose from various cross stitch methods.
+
+* **Cross stitch and cross stitch flipped**
+
+  This is the most common method. Two diagonals are building a cross.
+  When two crosses are only diagonally conntected, add a small expand value to ensure combined stitching.
+
+  ![Cross stitch method: cross stitch](/assets/images/docs/cross_stitch_method_cross_stitch.jpg)
+* **Half stitch and half stitch flipped**
+
+  Half stitches build only a half cross stitch (one diagonal), traveling along the outline of the shape.
+
+  ![Cross stitch method: half cross](/assets/images/docs/cross_stitch_method_half_cross.jpg)
+* **Upright cross and upright cross flipped**
+
+  A cross stitch turned, building an uprigt cross.
+  Please note, that this cross stitch method may produce jumps, when areas are connected only diagonally.
+
+  ![Cross stitch method: upright cross](/assets/images/docs/cross_stitch_method_upright.jpg)
+* **Double cross**
+
+  A combination of cross stitch and upright stitch. As they include upright stitches, note possible jump stitches when areas touch diagonally only.
+
+  ![Cross stitch method: double cross](/assets/images/docs/cross_stitch_method_double_cross.jpg)
+
 ### Cross Stitch Helper
 
 Ink/Stitch comes with an extension which helps you to perform cross stitch specific tasks all at once.
@@ -68,11 +95,12 @@ Settings||Description
 ---|---|---
 Automatically routed fill stitching| ☑      |Must be enabled for these settings to take effect.
 Fill method                        |Cross Stitch|Must be set to cross stitch.
+Cross stitch method                ||Choose method (for detailed information see above)
 Pattern size                       ||Defines the size of the cross stitch (grid)
 Align grid with canvas             ||This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.<br>Disable this option to ensure, that this element stitches the same, independently on its position on the canvas.
 Grid Offset                        ||Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y.
 Fill coverage                      ||Percentage of overlap for each cross with the fill area.
-Expand                             |![Expand example](/assets/images/docs/params-fill-expand.png) |Expand the shape before fill stitching, to compensate for gaps between shapes.
+Expand                             |![Expand example](/assets/images/docs/params-fill-expand.png) |Expand the shape before fill stitching, to compensate for gaps between shapes.<br>It is recommended to use at least a small expand value (e.g. 0.2) on cross stitch elements.
 Maximum fill stitch length         |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) |The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
 Bean stitch number of repeats      ||Determines the number of times to repeat each stitch.<br />◦ A value of `0` does not repeat the stitch (normal stitch)<br/>◦ A value of `1` repeats each stitch three times (forward, back, forward).<br />◦ A value of `2` repeats the stitch five times.
 Minimum stitch length              ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
