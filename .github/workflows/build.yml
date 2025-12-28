@@ -371,9 +371,9 @@ jobs:
           architecture:  aarch64
       - uses: msys2/setup-msys2@v2
         with:
-          msystem: CLANGARM64
+          msystem: UCRT64
           update: true
-          install: mingw-w64-clang-aarch64-libxml2
+          install: libxml2-devel
       - name: install geos 64
         shell: cmd
         run: |
