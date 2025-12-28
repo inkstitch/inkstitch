@@ -15,7 +15,7 @@
     "reversible": false,
     "letter_case": "upper",
     "default_glyph": "�",
-    "size": 80
+    "size": 80,
     "min_scale": 0.8,
     "max_scale": 3.0,
     "horiz_adv_x_default": 0,
