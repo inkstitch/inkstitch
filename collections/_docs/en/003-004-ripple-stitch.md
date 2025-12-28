@@ -3,7 +3,7 @@ title: "Ripple Stitch"
 permalink: /docs/stitches/ripple-stitch/
 last_modified_at: 2025-04-11
 toc: true
---
+---
 ## What is it?
 
 [![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="100px"}](/assets/images/docs/ripplefly.svg){: title="Download SVG File" .align-left download="ripplefly.svg" }
