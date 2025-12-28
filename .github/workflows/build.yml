@@ -369,6 +369,10 @@ jobs:
         with:
           flavor: build-installers
           architecture:  aarch64
+      - name: install libxml2
+        shell: pwsh
+        run: |
+          vcpkg install libxml2
       - name: install geos 64
         shell: cmd
         run: |
