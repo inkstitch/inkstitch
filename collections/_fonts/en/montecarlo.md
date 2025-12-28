@@ -17,4 +17,4 @@ data_title:
 
 
 
-{%- include end_of_font_page.html font= montecarlo -%}
+{%- include end_of_font_page.html font= "{{ page_font_name }}" -%}
