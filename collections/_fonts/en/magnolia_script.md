@@ -19,6 +19,9 @@ data_title:
   - magnolia_tamed
 ---
 {%- assign font = site.data.fonts.magnolia_KOR.font -%}
+{%- assign font2 = site.data.fonts.magnolia_small.font -%}
+{%- assign font3 = site.data.fonts.magnolia_bicolor.font -%}
+{%- assign font3 = site.data.fonts.magnolia_tamed.font -%}
 
 <img 
      src="/assets/images/fonts/magnolia_small.jpg"
@@ -49,20 +52,36 @@ This font contains  {{ font.glyphs.size }} glyphs:
 
 ### Magnolia KOR
 
-At 100%, this font is approximativel 30 mm (1.25 inch) tall.
+At a scale of 100% this font has an approximate height of {{ font.size }} mm. 
 
-It can be scaled up to 120% (approx. 36 mm, 1.5  inches) or scaled down to  80% (approx.  24 mm, 1 inch).
+It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
+up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
+
 
 ### Magnolia Small
 
-Magnolia Small is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between 50% (11mm, 0.45 inch) and 25% (5mm ,1/6 inch). That's why in the lettering dialog window, if using Magnolia Small, you will have to pick up a scale between 25 and 50%. 
+Magnolia Small is a variation of this font with different embroidery settings. Pull compensation, density and underlays are different to allow to scale down between {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)  and {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm).
+
+That's why in the lettering dialog window, if using Magnolia Small, you will have to pick up a scale between 25 and 50%. 
 
 Contrarly to Magnolia KOR, Magnolia  Small  **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
-### Magnolia Bicolor and Magnolia tamed
 
-Magnolia Bicolor/Mangnolia tamed are approximatively 45 mm (2 inches) tall. They can be scaled up to 150% (approx. 67 mm, 3 inches) or scaled down to 70% (approx. 31 mm, 1.25 inch).
+### Magnolia Bicolor 
+
+Magnolia Bicolor has an approximate height of {{ font3.size }} mm. 
+
+It can be scaled from {{ font3.min_scale | times: 100 | floor }}% ({{ font3.size | times: font3.min_scale }} mm)
+up to {{ font3.max_scale | times: 100 | floor }}% ({{ font3.size | times: font3.max_scale }} mm).
+
+### Magnolia tamed
+
+Mangnolia tamed has an approximate height of {{ font4.size }} mm. 
+
+It can be scaled from {{ font4.min_scale | times: 100 | floor }}% ({{ font4.size | times: font4.min_scale }} mm)
+up to {{ font4.max_scale | times: 100 | floor }}% ({{ font4.size | times: font4.max_scale }} mm).
+
 
 ## Color sorting
 
