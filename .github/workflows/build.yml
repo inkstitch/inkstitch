@@ -372,7 +372,7 @@ jobs:
       - name: install libxml2
         shell: pwsh
         run: |
-          vcpkg install libxml2
+          vcpkg install libxml2-devel
       - name: install geos 64
         shell: cmd
         run: |
