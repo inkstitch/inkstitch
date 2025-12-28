@@ -11,10 +11,10 @@ data_title:
 ---
 {% include upcoming_release.html %}
 
-{%- assign page_font = site.data.fonts.montecarlo.font -%}
+{%- assign page_font_name = site.data.fonts.montecarlo.font.name -%}
 
 
 
 
 
-{% include end_of_font_page.html font="montecarlo" %}
+{%- include end_of_font_page.html font={{ page_font_name }} -%}
