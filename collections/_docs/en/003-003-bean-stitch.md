@@ -21,8 +21,8 @@ Bean stitch describes a repetition of running stitches back and forth. This woul
 
   * A value of '0' does not repeat the stitch (normal stitch)
   * A value of '1' repeats each stitch three times (forward, back, forward).
-  * A value of '2' repeats the stitch six times.   * A value of 1 repe triple each stitch (forward, back, forward).
-   * Entering integers in Bean stitch number of repeats, it is possible to define a custom stitch. For instance '0 1' will create alternating single and triple stitches (`≡-≡-≡`).
+  * A value of '2' repeats the stitch five times.
+  * By entering multiple numbers, it is possible to define a custom repeat pattern. For instance `0 1` will create alternating single and triple stitches (`≡-≡-≡`).
 
 ## Parameters
 
@@ -33,7 +33,7 @@ Settings|Description
 Running stitch along paths    |Must be selected to use these settings.
 Method                        |Determines which stitch to use. Select `Running stitch / Bean stitch` 
 Repeats                       |Defines how many times to stitch  along the path<br />◦ Default: 1 (traveling once from the start to the end of the path)<br />◦ Odd number: stitches will end at the end of the path<br />◦ Even number: stitching will return to the start of the path
-Bean stitch number of repeats |Determines the number of times to repeat each stitch.<br />◦ A value of '0' does not repeat the stitch (normal stitch)<br/>◦ A value of '1' repeats each stitch three times (forward, back, forward).<br />◦ A value of '2' repeats the stitch six times. <br />◦ See [Bean Stitch Mode](/docs/stitches/bean-stitch/) for more information<br />
+Bean stitch number of repeats |Determines the number of times to repeat each stitch.<br />◦ A value of `0` does not repeat the stitch (normal stitch)<br/>◦ A value of `1` repeats each stitch three times (forward, back, forward).<br />◦ A value of `2` repeats the stitch five times. <br />◦ See [Bean Stitch Mode](/docs/stitches/bean-stitch/) for more information<br />
 Running stitch length         |Determines the length of stitches
 Running stitch tolerance      |Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
 Randomize stitch length       |Allows for randomize stitch length. This is recommended for closely-spaced curved fills to avoid Moiré artefacts. 
