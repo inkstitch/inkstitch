@@ -14,6 +14,7 @@ Ink/Stitch hat ein Hilfsmittel diese Fehler verständlicher zu machen. Es zeigt 
 
 * (Optional) Wähle die Objekte aus, die du testen möchtest. Ist kein Objekt ausgewählt, läuft der Test für das gesamte Dokument.
 * Öffne `Erweiterungen > Ink/Stitch > Troubleshoot Objects`
+* Chose what you want to detect among errors, warnings and object type warning.
 
 Entweder erhälst du eine nun Nachricht, dass kein Fehler gefunden wurde oder es wird eine neue Ebene mit den Fehlerinformationen in das Dokument eingefügt. Nutze das Objekt-Panel (Strg + Shift + O) um diese Ebene nach der Fehlerbehebung wieder zu löschen.
 
@@ -27,6 +28,8 @@ Entweder erhälst du eine nun Nachricht, dass kein Fehler gefunden wurde oder es
 Diese Erweiterung sammelt Informationen über verschiedene Parameter für eine Auswahl von Stickobjekten.
 
 ![Element info](/assets/images/docs/en/element_info.png)
+
+The 'Copy' button on the help tab allows you to copy all the information to the clipboard.
 
 ## Stickeinstellungen entfernen
 
