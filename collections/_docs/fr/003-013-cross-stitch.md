@@ -92,7 +92,7 @@ Ink/Stitch inclut une extension qui vous permet d'effectuer toutes les tâches s
 
 * Pixellisation du contour des éléments sélectionnés pour visualiser et ajuster facilement la position des points
 
-L'extension calcule et affiche également la longueur des points en fonction des dimensions de la grille.
+L'extension calcule et affiche également la longueur des points en fonction des dimensions de la grille;  dans le paramétrage, la longueur maximale du point devrait être supérieure à cette valeur.
 
 
 ## Définir les points de départ et de fin
@@ -103,7 +103,7 @@ Pour modifier ce comportement, définissez les points de départ et de fin des o
 
 ## Paramètres
 
-Exécutez **Extensions > Ink/Stitch > Params** pour ajuster les paramètres selon vos besoins.
+Exécutez **Extensions > Ink/Stitch > Paramétres** pour ajuster les paramètres selon vos besoins.
 
 |Paramètres||Description|
 |---|---|---|
@@ -116,7 +116,7 @@ Exécutez **Extensions > Ink/Stitch > Params** pour ajuster les paramètres selo
 |Couverture du remplissage                    ||Pourcentage de superposition avec le remplissage nécessaire à la création d'une croix|
 |Élargir|![Expand example](/assets/images/docs/params-fill-expand.png) |dilate la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu.|
 |Longueur  maximum du point droit||Pour un aspect de point de croix, indiquez ici une valeur plus grande que la longueur des diagonales des cellules de la grille |
-|Nombre de répétitions du point triple ||Détermine combien de fois chaque point doit être répété.<br />◦ Une valeur de `0` ne produit aucune répétition<br/>◦ Une valeur de `1` répète chaque point trois fois  (avant, arriere, avant).<br />◦ Une valeur de `2` répète le point 5 fois.|
+|Nombre de répétitions du point triple ||Détermine combien de fois chaque point doit être répété.<br />◦ Une valeur de `0` ne produit aucune répétition<br/>◦ Une valeur de `1` répète chaque point trois fois  (avant, arrière, avant).<br />◦ Une valeur de `2` répète le point 5 fois.|
 |Longueur minimum du point||Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les [préférences](/fr/docs/preferences/#longueur-minimum-de-points-mm). Les points plus courts seront supprimés.|
 |Longueur minimum de saut||Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les [préférences](/fr/docs/preferences/#sauts-de-fil-mm). Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.|
 |Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
@@ -129,6 +129,6 @@ Exécutez **Extensions > Ink/Stitch > Params** pour ajuster les paramètres selo
 
 
 
-### Fichiers d'exemple incluant les points de croix
+### Fichiers d'exemple incluant des points de croix
 
 {% include tutorials/tutorial_list key="stitch-type" value="Cross Stitch" %}
