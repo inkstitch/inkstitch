@@ -1,7 +1,7 @@
 ---
 title: "Ripple Stitch"
 permalink: /docs/stitches/ripple-stitch/
-last_modified_at: 2025-04-11
+last_modified_at: 2025-12-29
 toc: true
 ---
 ## What is it?
@@ -111,6 +111,7 @@ Line distance exponent        |<img src="/assets/images/docs/ripple_only_exponen
 Flip exponent                 | exchange role of first and last line in the computation of  line distance
 Reverse                       |  Reverse the final embroidery path.  Has no effect on the other  parameters.
 Reverse rails| Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail.
+Swap rails        | ☑ | Swaps the first and the second rails of a satin column. Affecting which side the thread finishes on as well as any other sided property.
 Grid  size                    |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| If the size is strictly positive a grid effect is added. The grid size controls how far apart the new  lines are.
 Stitch grid first             | Reverse the stitch path, so that the grid is stitched first.
 Scale axes                    |  guided ripple only
