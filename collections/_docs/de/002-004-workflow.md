@@ -90,11 +90,12 @@ Ink/Stitch bietet verschiedene Sticharten an. Davon abhängend, welchen Stichtyp
 Schau die in der untenstehenden Tabelle die einzelnen Sticharten an. Klicke auf die Links, um sie dir genauer anzuschauen und zu lernen, wie sie funktionieren.
 
 Pfad Objekt | Stichart
----|---|---
+---|---
 (Gestrichelte) Linie |[Geradstich](/de/docs/stitches/running-stitch/), [Manueller Stich](/de/docs/stitches/manual-stitch/), [Zick-Zack-Stich](/de/docs/stitches/zigzag-stitch/), [Bohnen-Stich](/de/docs/stitches/bean-stitch/)
-Zwei kombinierte Linien (mit optionalen Querstreben) | [Satinsäule](/de/docs/stitches/satin-column), [E-Stitch](/de/docs/stitches/e-stitch)
-Pfad mit Füllung | [Automatische Füllung](/de/docs/stitches/fill-stitch/), [Kurvenfüllung](/docs/stitches/guided-fill/),  [Konturfüllung](/docs/stitches/contour-fill/), [Mäanderfüllung](/docs/stitches/meander-fill/), [Spiralfüllung](/docs/stitches/circular-fill/)
+Zwei kombinierte Linien (mit optionalen Querstreben)  or single line with width  larger  than 0.3 mm| [Satinsäule](/de/docs/stitches/satin-column), [E-Stitch](/de/docs/stitches/e-stitch)
+Pfad mit Füllung | [Automatische Füllung](/de/docs/stitches/fill-stitch/), [Kurvenfüllung](/docs/stitches/guided-fill/),  [Konturfüllung](/docs/stitches/contour-fill/), [Mäanderfüllung](/docs/stitches/meander-fill/), [Spiralfüllung](/docs/stitches/circular-fill/), [cross stitch fill](/docs/stitches/cross-stitch/)
 {: .equal-tables }
+
 
 ### Parametrisieren
 
@@ -128,7 +129,7 @@ Die Stickreihenfolge wirkt sich außerdem auf Stoffverzerrungen aus. Jeder Stich
 
 Ink/Stitch unterstützt drei Wege um sich ein Bild des entstehenden Designs zu machen:
 
-* [Simulator mit (optionaler) realistischen Vorschau](/de/docs/visualize/)
+* [Simulator](/de/docs/visualize/)
 * [PDF Vorschau](/de/docs/print-pdf/)
 * [Stichplan Vorschau](/de/docs/visualize/#stich-plan-vorschau) (Undo with <key>Ctrl</key><key>Z</key>)
 
