@@ -43,20 +43,19 @@ Außerdem enthalten die Schriftarten-Ordner:
 
 ### Namenskonventionen für die SVG-Datei
 
-Die meisten Ink/Stitch-Schriften nutzen eine einzige SVG-Datei mit dem Namen `→.svg`
+Die meisten Ink/Stitch-Schriften nutzen eine einzige SVG-Datei mit dem Namen `ltr.svg`.
+In diesem Fall wurden die Buchstaben von links nach rechts digitalisiert.
 
-Der Pfeil im Namen der Datei (`→`) symbolisiert die Stickrichtung. In diesem Fall wurden die Buchstaben von links nach rechts digitalisiert.
+Die Zeichen für arabische oder hebräische Schriften befinden sich in einer Datei mit dem Namen `rtl.svg`.
 
-Die Zeichen für arabische oder hebräische Schriften befinden sich in einer Datei mit dem Namen `←.svg`.
-
-Manche Schriften, so wie beispielsweise Déja vu, enthalten beide Dateien `→.svg` und `←.svg`.
+Manche Schriften, so wie beispielsweise Déja vu, enthalten beide Dateien `ltr.svg` und `rtl.svg`.
 Dies ist praktisch für mehrzeiligen Text, so kann dieser vor und zurück gestickt werden:
-in der Datei `→.svg` sind die Buchstaben von lins nach rechts digitalisiert, in der Datei `←.svg` von rechts nach links.
+in der Datei `ltr.svg` sind die Buchstaben von lins nach rechts digitalisiert, in der Datei `rtl.svg` von rechts nach links.
 Das Textwerkzeug wird beide Dateien abwechselnd für jede Textzeile nutzen und so die Sprungstiche zwischen den Zeilen minimieren.
 
 Schriften mit einer sehr großen Anzahl an Schriftzeichen können aus Performanzgründen in mehrere Dateien aufgespalten werden.
 Die einzelnen Dateien müssen in diesem Fall nicht nach einem bestimmten Muster benannt werden. Stattdessen werden sie in einem Unterordner abgespeichert, der nach der Stickrichtung benannt ist.
-Für Schriftzeichen, die von links nach rechts digitalisiert wurden, trägt der Ordner den Namen `→`.
+Für Schriftzeichen, die von links nach rechts digitalisiert wurden, trägt der Ordner den Namen `ltr`.
 
 ## Eine Schriftart auswählen
 
@@ -148,11 +147,11 @@ Die Pfade in der Datei haben undefinierte Kontur- und Füllfarben.
 Wähle alle Pfade in allen Ebenen aus. Wenn deine Inkscape Einstellungen nicht die Auswahl von versteckten Elementen erlaubt, müssen zunächst alle Objekte eingeblendet werden.
 Gib allen Pfaden eine Füllfarbe und keine Konturfarbe (oder andersherum) und blende die Ebenen erneut aus.
 
-Wenn du eine Schrift von links nach rechts digitalisieren willst, speichere die Datei nun als `→.svg` in einem neuen Unterordner innerhalb des Ordners für benutzerdefinierte Schriften ab.
+Wenn du eine Schrift von links nach rechts digitalisieren willst, speichere die Datei nun als `ltr.svg` in einem neuen Unterordner innerhalb des Ordners für benutzerdefinierte Schriften ab.
 
 ## Die Datei font.json erstellen
 
-Haben wir einmal die `→.svg` Datei erstellt, können wir nun die `font.json`-Schriftinformationsdatei generieren. Wir empfehlen dies bereits jetzt zu tun.
+Haben wir einmal die `ltr.svg` Datei erstellt, können wir nun die `font.json`-Schriftinformationsdatei generieren. Wir empfehlen dies bereits jetzt zu tun.
 
 Öffne `Erweiterungen > Ink/Stitch > Schriftverwaltung > JSON erstellen ...`.
 
@@ -169,7 +168,7 @@ Kerning beschreibt die horizontalen Abstände innerhalb der Schrift. Der im deut
 
 #### Wo ist diese Information gespeichert
 
-Die `font.json`-Datei enthält die Kerning-Information. Sie wird bei der Erstellung der json-Datei aus der `→.svg`-Schriftdatei extrahiert.
+Die `font.json`-Datei enthält die Kerning-Information. Sie wird bei der Erstellung der json-Datei aus der `ltr.svg`-Schriftdatei extrahiert.
 
 Hierdurch wird die relative Positionierung der einzelnen Zeichen zueinander festgelegt.
 
@@ -195,6 +194,9 @@ Lasst uns ebenfalls annehmen, dass wir den Text links ausrichten wollen. Dabei s
 * Der Cursor ist in unserem Beispiel nun bei `x=10` und das `e` kann an dieser Position eingefgt werden
 
 Nun fängt die Berechnung für die Position des nächsten Buchstabens an ... und so weiter und so fort ... bis alle Buchstaben ausgegeben sind.
+
+If you did not start from an ttf file and want some basic kerning, set the value for horiz_adv_x_default to 0 in the json file. This will make Ink/Stitch use the width of the individual glyphs.
+
 
 #### Kerning-Probleme beheben
 
