@@ -114,6 +114,12 @@ Contour fill creates stitches that follow the contour of a shape as the fill pro
 
 [Learn more](/docs/stitches/contour-fill){: .btn .btn--primary}
 
+### Cross Stitch
+Cross stitch mimics traditional hand embroidery techniques. Cross-stitch is characterized by small, even crosses, which give the embroidered image a flat, blockish look.
+
+![Cross Stitch](/assets/images/docs/cross_stitches.jpg)
+
+[Learn more](/docs/stitches/cross-stitch){: .btn .btn--primary}
 ### Guided Fill
 
 Guided fill creates stitches by using a guide line to control stitch direction.
