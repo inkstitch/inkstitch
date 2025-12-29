@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /fr/docs/install-windows/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2025-04-14
+last_modified_at: 2025-12-29
 toc: true
 ---
 {% comment %}
@@ -26,7 +26,7 @@ Téléchargez la dernière version disponible pour windows.
 
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
-Free code signing provided by [SignPath.io](https://about.signpath.io) certificate by [SignPath Foundation](https://signpath.org).<br>See our [code signing policy](/fr/code-signing-policy).
+Signature du code fournie gratuitement par [SignPath.io](https://about.signpath.io),certificat par [SignPath Foundation](https://signpath.org).<br>Voir [notre politique de signature du code](/fr/code-signing-policy).
 {: .notice--info }
 
 ### Téléchargement avec  Microsoft Edge
