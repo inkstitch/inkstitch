@@ -1,7 +1,7 @@
 ---
 title: "Point droit"
 permalink: /fr/docs/stitches/running-stitch/
-last_modified_at: 2024-05-07
+last_modified_at: 2025-12-29
 toc: true
 ---
 ## De quoi s'agit-il
@@ -31,7 +31,7 @@ Points droits le long des chemins |Doit être activé pour que ces paramètres p
 Méthode                           |Choisir `Point droit / Point multiple`
 Répétitions                         |Définir combien de fois aller et revenir le long du chemin<br />◦ par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la broderie va revenir au début du chemin
 Nombre de répétitions du point triple |Active le [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />
-Longueur du point droit           |Longueur des points 
+Longueur du point droit           |Détermine la longueur des points. En saisissant plusieurs valeurs, il est possible de définir un motif répétitif personnalisé. Par exemple, `2 4` créera des points de longueur 2 et 4 mm en alternance.
 Tolerance du point droit          |Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts. Une tolerance haute entraine un arrondissement des angles aigus.
 Rendre aléatoire                    |Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré.
 Mouvement aléatoire de la longueur du point                    |Pourcentage maximum de variation de la longueur du point appliqué si la longueur est rendue aléatoire.
@@ -48,7 +48,7 @@ Arrêter après                     |Arrêter (pause machine) après avoir brod�
 
 ## Routage (agencement automatique)
 
-Pour un meilleur ordonnancement des points, essayez l'extension `Agencement automatique de points droits ` dans  [Outils: Traits](/fr/docs/stroke-tools/).
+Pour un meilleur ordonnancement des points, essayez les extensions `Agencement automatique de points droits ` et `Redwork` dans  [Outils: Traits](/fr/docs/stroke-tools/).
 
 ## Motif sur point droit
 
