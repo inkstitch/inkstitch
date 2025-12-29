@@ -61,13 +61,24 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 La fonte Magnolia Small est une déclinaison de  Magnolia KOR avec des paramètres de broderie différents. La densité, la compensation et les sous-couches ont été modifiées pour permettre de broder cette fonte en plus petite taille.
 
-Dans la fenêtre de dialogue du lettrage, il vous sera demandé si vous choisissez  Magnolia Small d'indiquer un redimensionnement entre 25 et 50% de la taille de la fonte  Magnolia KOR initiale, passant ainsi de lettres d'environ 22 mm de haut à des lettres mesurant entre 8 et 15 mm.
+Dans la fenêtre de dialogue du lettrage, il vous sera demandé si vous choisissez  Magnolia Small d'indiquer un redimensionnement entre {{ font2.min_scale | times: 100 | floor }} et {{ font2.max_scale | times: 100 | floor }}% de la taille de la fonte  Magnolia KOR initiale, passant ainsi de lettres d'environ {{ font2.size }} mm de haut à des lettres mesurant entre  ({{ font2.size | times: font2.min_scale }} et  ({{ font2.size | times: font2.max_scale }} mmm.
 
 Contrairement à  Magnolia KOR, cette fonte diminuée DOIT être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT DOIVENT être utilisés.
 
-### Magnolia Bicolor / Magnolia tamed
+### Magnolia Bicolor 
 
-Magnolia bicolor / Mangnolia tamed a une hauteur d'environ 45mm. Elle peut être agrandie jusqu'à 150% (approximativement 67mm) et réduite jusqu'à 70% (approximativement 31mm)
+A une échelle de  100% cette fonte a une hauteur approximative de  {{ font3.size }} mm. 
+
+Elle peut être redimensionnée  de {{ font3.min_scale | times: 100 | floor }}% ({{ font3.size | times: font3.min_scale }} mm)
+à {{ font3.max_scale | times: 100 | floor }}% ({{ font3.size | times: font3.max_scale }} mm).
+
+
+### Magnolia tamed
+
+A une échelle de  100% cette fonte a une hauteur approximative de  {{ font4.size }} mm. 
+
+Elle peut être redimensionnée  de {{ font4.min_scale | times: 100 | floor }}% ({{ font4.size | times: font4.min_scale }} mm)
+à {{ font4.max_scale | times: 100 | floor }}% ({{ font4.size | times: font4.max_scale }} mm).
 
 ## Tri des couleurs
 
