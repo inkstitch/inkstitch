@@ -58,6 +58,7 @@ It also affects **Satin stiches** and threfore lettering fonts. You do not want 
 {: .notice--warning }
 
 ### For this document only : Rotate on export
+{% include upcoming_release.html %}
 This option rotates the embroidery 90°. Is useful when the embroidery  machine does not automatically rotate to fit the hoop.
 
 ### Global only: Cache size (mb)
