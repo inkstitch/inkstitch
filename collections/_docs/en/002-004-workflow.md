@@ -1,7 +1,7 @@
 ---
 title: "Workflow"
 permalink: /docs/workflow/
-last_modified_at: 2025-12-16
+last_modified_at: 2025-12-29
 toc: true
 ---
 ![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)
@@ -70,7 +70,7 @@ Ink/Stitch includes ready to use embroidery fonts. You can insert these fonts in
 At this stage, you should have a vector graphic version of your design. The next step is to convert those vector objects into formats that Ink/Stitch can interpret and prepare for embroidery.
 
 
-### Use the Object Panel
+### Use the Layers and Object Panel
 
 At this stage, using layers and groups helps keep the design organized and easier to manage as it becomes more complex.
 
@@ -118,8 +118,8 @@ You configure stitch behavior through **Object > Fill and Stroke** or by pressin
 Path Object | Stitch Type
 ---|---
 (Dashed) stroke |[running stitch](/docs/stitches/running-stitch/), [manual stitch](/docs/stitches/manual-stitch/), [zig-zag stitch](/docs/stitches/zigzag-stitch/), [bean stitch](/docs/stitches/bean-stitch/)
-Two combined strokes (with optional rungs) | [satin column](/docs/stitches/satin-column), [e-stitch](/docs/stitches/e-stitch)
-Closed path with a fill color | [fill stitch](/docs/stitches/fill-stitch/),  [guided fill](/docs/stitches/guided-fill/),  [contour fill](/docs/stitches/contour-fill/), [meander fill](/docs/stitches/meander-fill/), [circular fill](/docs/stitches/circular-fill/)
+Two combined strokes (with optional rungs)  or a single stroke with width larger than 0.3mm| [satin column](/docs/stitches/satin-column), [e-stitch](/docs/stitches/e-stitch)
+Closed path with a fill color | [fill stitch](/docs/stitches/fill-stitch/),  [guided fill](/docs/stitches/guided-fill/),  [contour fill](/docs/stitches/contour-fill/), [meander fill](/docs/stitches/meander-fill/), [circular fill](/docs/stitches/circular-fill/), [cross stitch fill](/docs/stitches/cross-stitch/)
 {: .equal-tables }
 
 
@@ -165,16 +165,14 @@ Keep in mind that the XML Editor displays objects in the reverse order compared 
 
 ### Commands
 
-[Commands](/docs/commands/) can also help optimize the stitch path. These tools let you define start and end points, move the hoop to specific positions, and add trim or cut instructions. Using commands gives you finer control over how the design stitches out on the machine. Commands in Ink/Stitch give you finer control over how a design stitches out. They let you define start and end points, control trims, jumps, stops, and color changes, and move the hoop to specific positions. Using commands helps reduce visible travel stitches, limit manual trimming, and improve overall stitch flow on the embroidery machine.
+[Commands](/docs/commands/) can also help optimize the stitch path. These tools let you define start and end points, move the hoop to specific positions, and add trim or cut instructions. Using commands gives you finer control over how the design stitches out on the machine.  They let you define start and end points, control trims, jumps, stops, and color changes, and move the hoop to specific positions. Using commands helps reduce visible travel stitches, limit manual trimming, and improve overall stitch flow on the embroidery machine.
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png)  Step 4: Visualize your design
 
-Ink/Stitch supports three ways to preview your design:
-
 Ink/Stitch provides three ways to preview your design before exporting:
 
-- [Simulator with optional realistic preview](/docs/visualize/#simulator--realistic-preview)  
-  Shows how the design stitches out step by step, with an optional fabric like appearance.
+- [Simulator](/docs/visualize/#simulator)  
+  Shows how the design stitches out step by stepe.
 
 - [Print Preview](/docs/print-pdf/)  
   Creates a printable overview of the design, useful for planning colors, size, and placement.
