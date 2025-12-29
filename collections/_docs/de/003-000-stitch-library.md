@@ -112,6 +112,7 @@ Konturfüllung füllt eine Fläche mit kleiner werdenden Kopien ihrer Kontur.
 [Mehr lesen](/de/docs/stitches/contour-fill){: .btn .btn--primary}
 
 ### Cross Stitch
+{% include upcoming_release.html %}
 Cross stitch mimics traditional hand embroidery techniques. Cross-stitch is characterized by small, even crosses, which give the embroidered image a flat, blockish look.
 
 ![Cross Stitch](/assets/images/docs/cross_stitches.jpg){: width="350x" }
