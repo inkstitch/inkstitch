@@ -20,7 +20,11 @@ Diese Erweiterung erlaubt dir, einen Ordner zu definieren, in dem du zusätzlich
 Jede Schriftart sollte in einem eigenen Unterordner gespeichert werden und sollte mindestens folgende Dateien enthalten: eine Schriftdatei (svg) und eine json-Datei.
 Zusätzlich empfehlen wir eine Lizenz-Datei.
 
-Die Schriftdatei muss nach der Stichrichtung für die sie erstellt wurde benannt werden (`→.svg`, `←.svg`, etc.). Es gibt auch die Möglichkeit Ordner mit den Pfeilnamen (`→`, `←`, etc.) anzulegen und darin mehrere Dateien für die Stickrichtung abzuspeichern.
+
+The font variant files used to have to be named  with an arrow, indicating the stitch direction it has been created for (`→.svg`, `←.svg`, etc.).
+Now, names should be ltr.svg for left to right direction and rtl.svg for right to left direction.
+
+It is also possible to create a folder named ltr (or rtl) instead and insert multiple font files for this specific direction.
 
 Die JSON-Datei muss als minimale Bedingung den Namen der Schrift enthalten.
 
@@ -49,7 +53,27 @@ So können Schriftautoren schnell und einfach das Stickergebnis einer neuen Schr
 * Maximale Zeilenlänge: fügt Zeilenumbrüche entsprechend des gewählten Wertes ein
 * Farbsortierung: legt fest, ob mehrfarbige Schriften sortiert werden sollen (damit das funktioniert, muss die Schrift die entsprechenden [Farbsortierindices](#farbsortierindex-festlegen) festgelegt haben)
 
+## Font Sampling
+
+This extension creates a list of all letters in a font. It helps font creators to test the outcome of a new font.
+
+It only render unlocked (sensitive) glyphs. This allows for partial sampling while creating the font.
+
+### Usage
+
+* Run `Extensions > Ink/Stitch > Font Management > Font Sampling`
+* Pick a font, adjust settings
+* Click on apply
+
+### Options
+
+* Font: the one you want to use
+* Stitch direction:  default is left to right
+* Scale: in percent
+* Max line width: line breaks will  be chosen accordingly
+* Color sort: whether a multicolor font should be color sorted or not (font needs to set the [color sort index](#set-color-index) values)
 ## Vernähstiche erzwingen
+
 
 Bei kleinen Schriften kann es schnell passieren, dass sich der Faden löst, wenn Sprungstiche nach der Fertigstellung geschnitten werden.
 
@@ -72,6 +96,7 @@ Diese Erweiterung soll dabei helfen, die Stickobjekte entsprechend zu bearbeiten
   * Maximaler Abstand (mm): füge keinen Vernähstiche erzwingen Befehl ein, wenn der Abstand zum nächsten Element größer ist als dieser Wert
 
 * Füge das Attribut "Vernähen erzwingen" dem jeweils letzten Element eines Schriftzeichens hinzu
+*  Add force lock stitches attribute to the last element of each group
 
 ## JSON-Datei erstellen
 
@@ -88,6 +113,9 @@ Wenn du deine Schrift ohne Kerning erstellt hast, kannst du mit diesem Werkzeug 
 |--------------------------------|---------------------------------
 |Name                            |Pflichfeld. Der Name der Schrift.
 |Beschreibung                    |Eine kurze Beschreibung deiner Schrift
+|Font license          | Type of license  for this ink/stitch font
+|Original Font name              |name of the underlying ttf font if any|
+|Original Font URL                |url of the underlying font|
 |Schriftdatei                    |Pflichtfeld. Wenn du deine Schrift mit Hilfe von FontForge erstellt hast, wird Ink/Stitch die Kerning informationen aus dieser Datei lesen und in die JSON-Datei einfügen.<br>Außerdem legt der Dateipfad den Speicherort für die neue JSON-Datei fest.<br/><br/>Die Datei `font.json` wird in demselben Ordner erstellt, in dem deine SVG-Schriftdatei liegt.
 |Stichwörter                     |Aktiviere die Kategorien, die für die Schrift zutreffend sind
 
