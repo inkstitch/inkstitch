@@ -1,7 +1,7 @@
 ---
 title: "Font Tools"
 permalink: /docs/font-tools/
-last_modified_at: 2025-08-20
+last_modified_at: 2025-12-29
 toc: true
 ---
 A collection of tools suitable for font creators or those who want to add additional fonts to the Ink/Stitch [lettering tool](/docs/lettering).
@@ -20,25 +20,30 @@ This extension allows you to define a directory in your file system where you wa
 Place each font in a subdirectory of your custom font directory. Each font folder should contain at least one font variant and one json file.
 Additionally it is recommended to save a license file as well.
 
-**Font variants** have to be named with an arrow, indicating the stitch direction it has been created for (`→.svg`, `←.svg`, etc.). It is also possible to create a folder named with an arrow name instead and insert multiple font files for a specific direction.
+**Font variants** used to have to be named  with an arrow, indicating the stitch direction it has been created for (`→.svg`, `←.svg`, etc.).
+Now, names should be ltr.svg for left to right direction and rtl.svg for right to left direction.
 
- As a minimum requirement, the json file must include the font's name.
+It is also possible to create a folder named ltr (or rtl) instead and insert multiple font files for this specific direction.
+
+As a minimum requirement, the json file must include the font's name.
 
 ## Edit JSON
 
-This extension allows you do edit an existing font information file. If the font doesn't have a json file, create one with [generate JSON](#generate-json)
+This extension allows you to edit an existing font information file. If the font doesn't have a json file, create one with [generate JSON](#generate-json)
 
 This extension also update the glyph list. 
 
 ### Usage
 
 * Run `Extensions > Ink/Stitch > Font Management > Edit JSON`
-* Finetune your font details such as name, description, keywords and kerning information
+* Fine tune your font details such as name, description, license information, keywords and kerning information
 * Click on apply
 
 ## Font Sampling
 
 This extension creates a list of all letters in a font. It helps font creators to test the outcome of a new font.
+
+It only render unlocked (sensitive) glyphs. This allows for partial sampling while creating the font.
 
 ### Usage
 
@@ -78,6 +83,8 @@ This extension helps adding forced lock stitches. One may chose to restrict the 
 
 * Add force lock stitches attribute to the last element of each glyph
 
+* Add force lock stitches attribute to the last element of each group
+
 ## Generate JSON
 
 This extension was created to help you to create the json file.
@@ -87,10 +94,13 @@ If you generated your svg file without kerning information this extension can st
 
 ### Font Info
 
-|Option                 |Description|
-|-----------------------|-------------------------------------|
+|Option                 |Description
+|-----------------------|-------------------------------------
 |Name (mandatory)       |The name of your font 
 |Description            |Additional information about your font
+|Font license          | Type of license  for this ink/stitch font
+|Original Font name              |name of the underlying ttf font if any|
+|Original Font URL                |url of the underlying font.|
 |Font File (mandatory)  |When you have been using FontForge to generate your svg font file, Ink/Stitch will read the kerning information from your font to include it into the json file.<br />Additionally the font file will be used to determine the output path.<br/><br/>A file `font.json` will be saved into the folder of your svg font file.
 |Keywords               |Enable the categories that apply to your font
 
@@ -138,7 +148,7 @@ Very often, bought fonts are organized in subfolders, because each letter comes 
 * Choose whether you want to import commands or not (warning: imported commands on a large scale will cause a slow down)
 * Click on apply - and wait ...
 * After the import, move the baseline to the correct place and position the letters accordingly. The left border of the canvas will also influence the positioning of the letters through the lettering tool.
-* Save your font as `→.svg` in a new folder within your [custom font directory](#custom-font-directory)
+* Save your font as `.svg` in a new folder within your [custom font directory](#custom-font-directory)
 * Run [`Generate JSON`](#generate-json) to make the font available for the lettering tool and save the json file into the same folder as your font. Do not check "AutoRoute Satin" for predigitized fonts and leave scaling to 1.
 * If necessary, you can adjust the kerning information using the [`Font Management > Edit JSON File`](#edit-json) extension.
 * If your font is colored, you can make it sortable using [color sort indices](#set-color-index).
