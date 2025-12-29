@@ -2,7 +2,7 @@
 permalink: /fr/tutorials/font-creation/
 title: "Création de fonte pour Ink/Stitch"
 language: fr
-last_modified_at: 2025-08-28
+last_modified_at: 2025-12-29
 excerpt: "Création de fonte pour Ink/Stitch "
 image: "/assets/images/tutorials/font_creation_complement/multifont3.jpg"
 tutorial-type: 
@@ -33,15 +33,15 @@ Les fichiers qui composent une fonte du lettrage sont regroupés dans un dossier
 Chaque dossier de fonte doit comporter au moins deux fichiers :
 - un fichier font.json qui contient les caractéristiques de la fonte
 - au moins un fichier de calques de glyphes, qui comporte un calque par glyphe. 
-La plupart des fontes du module de lettrage sont définies à l'aide d'un unique fichier de calque de glyphe, nommé →.svg. 
+La plupart des fontes du module de lettrage sont définies à l'aide d'un unique fichier de calque de glyphe, nommé ltr.svg. 
 
-Ce fichier est prévu pour une broderie qui s'effectue de gauche à droite (le sens de la flèche). 
+Ce fichier est prévu pour une broderie qui s'effectue de gauche à droite. 
 
-Une fonte arabe ou hébreu du lettrage voit ses glyphes définis dans un fichier ←.svg. 
+Une fonte arabe ou hébreu du lettrage voit ses glyphes définis dans un fichier rtl.svg. 
 
-Certaines polices, comme par exemple déjà vu, comportent les deux fichiers →.svg et ←.svg. Dans ce cas, un texte multi ligne pourra être brodé en aller retour: dans le fichier →.svg, la broderie d'une lettre s'effectue de la gauche vers la droite tandis que dans le fichier ←.svg, elle s'effectue de la droite vers la gauche. Le module de lettrage utilisera alternativement les deux fichiers sur les différentes lignes qui composent le texte.
+Certaines polices, comme par exemple déjà vu, comportent les deux fichiers ltr.svg et rtl.svg. Dans ce cas, un texte multi ligne pourra être brodé en aller retour: dans le fichier ltr.svg, la broderie d'une lettre s'effectue de la gauche vers la droite tandis que dans le fichier rtl.svg, elle s'effectue de la droite vers la gauche. Le module de lettrage utilisera alternativement les deux fichiers sur les différentes lignes qui composent le texte.
 
-Ces noms sont impératifs.... sauf si la fonte comporte beaucoup de glyphes, auquel cas, vous pouvez pour une fonte qui s'écrit de gauche à droite répartir vos glyphes dans plusieurs fichiers svg (pas de contrainte de nommage sur ces fichiers) que vous regroupez dans un dossier qui lui doit impérativement être nommé →.
+Ces noms sont impératifs.... sauf si la fonte comporte beaucoup de glyphes, auquel cas, vous pouvez pour une fonte qui s'écrit de gauche à droite répartir vos glyphes dans plusieurs fichiers svg (pas de contrainte de nommage sur ces fichiers) que vous regroupez dans un dossier qui lui doit impérativement être nommé ltr.
 
 Les dossiers des fontes du module de lettrage comportent aussi:
 - un fichier preview.png (généralement 90x1100 px) qui contient l'aperçu brodé du nom de la fonte qui apparait dans le dialogue du lettrage.
@@ -118,14 +118,14 @@ En plus du guide "baseline", d'autres guides ont été posés. Il est judicieux 
 Les chemins de ce fichier ont leurs couleurs de contour et de remplissage indéterminées.
 Sélectionnez tous les chemins dans tous les calques (si vos préférences inkscape n'autorisent pas la sélection d'objets cachés vous devrez montrer tous les objets pour cela), et donnez leur une couleur de remplissage, dites aussi qu'il n'y a pas de couleur de contour (ou donnez une couleur de contour et dites qu'il n'y a pas de couleur de fond). Vous pouvez masquez à nouveau les calques.
 
-Si vous souhaitez créer une police qui se brode de gauche à droite, enregistrez ce fichier sous le nom →.svg dans un nouveau dossier situé dans votre dossier personnel de fontes.
+Si vous souhaitez créer une police qui se brode de gauche à droite, enregistrez ce fichier sous le nom ltr.svg dans un nouveau dossier situé dans votre dossier personnel de fontes.
 
 ## Création du fichier font.json
-Une fois que le fichier →.svg existe, il est possible de créer le fichier font.json associé. Il est recommandé de faire cette opération dès maintenant.
+Une fois que le fichier ltr.svg existe, il est possible de créer le fichier font.json associé. Il est recommandé de faire cette opération dès maintenant.
 
 `Extensions > Ink/Stitch > Gestion des polices > Génerer JSON....`
 
-Cette extension va extraire des informations du fichier →.svg et les stocker dans un fichier font.json. Le dialogue de cette extension vous permet aussi d'ajouter des informations. La documentation est [ici](/fr/docs/font-tools/#generate-json).
+Cette extension va extraire des informations du fichier ltr.svg et les stocker dans un fichier font.json. Le dialogue de cette extension vous permet aussi d'ajouter des informations. La documentation est [ici](/fr/docs/font-tools/#generate-json).
 
 Vous pourrez modifier ultérieurement ces informations grâce à `Extensions > Ink/Stitch > Gestion des polices > Modifier le fichier JSON....`
 La documentation est [là](/fr/docs/font-tools/#edit-json).
@@ -133,10 +133,13 @@ La documentation est [là](/fr/docs/font-tools/#edit-json).
 Cette section est là pour les curieux, elle peut être passée au moins dans un premier temps.
 Le crénage, c’est l’art d’ajuster l’espacement entre les lettres afin d’optimiser la lisibilité et l’esthétique d’un texte. Pour que cet espacement soit harmonieux et semble uniforme, il ne doit pas être identique entre toutes les paires de lettres. 
 #### Où sont les informations
-En particulier, ce fichier font.json contient les informations de crénage,extraites du fichier →.svg lors de la création du fichier font.json. Elles vont très fortement contribuer au positionnement des glyphes les uns par rapports aux autres. Pour décider de la position d'un glyphe, ink/stitch utilise trois types d'information:
+En particulier, ce fichier font.json contient les informations de crénage,extraites du fichier ltr.svg lors de la création du fichier font.json. Elles vont très fortement contribuer au positionnement des glyphes les uns par rapports aux autres. Pour décider de la position d'un glyphe, ink/stitch utilise trois types d'information:
 - déplacer horizontalement ou verticalement un glyphe dans son calque influence sur sa position (sauf le tout premier caractère d'une ligne de texte qui lui est systématiquement à gauche toute sur la page (du moins avec un alignement des lignes à gauche). Le déplacement vertical est toujours pris en compte.
 - des informations dites "horiz_adv_x". Il y a une valeur par défaut, et on peut associer une valeur à chaque glyphe. Le fichier de fonte généré par FontForge comporte cette information pour tous les glyphes qui n'ont pas été effacés. Cette information est intégrée au fichier font.json lors de sa création.
 - des informations dites "hkern". Celles ci ne sont pas associées à des glyphes mais à des couples de glyphes (pas tous). Le fichier de fonte généré par FontForge comporte cette information pour tous les couples de glyphes pour lesquels le concepteur de la fonte ttf ou otf a donné cette information, que les glyphes aient été effacés ou non. Cette information est intégrée au fichier font.json lors de sa création.
+
+Si vous n'êtes pas parti d'un fichier ttf, vous pouvez obtenir un crénage basique en donnant à horiz_adv_x_default la valeur 0 dans le fichcier json. Dans ce cas, Ink/Stitch utilise la largeur de chaque glyphe pour calculer le crénage.
+
 #### Schématiquement, ça fonctionne comment ?
 Ink/Stitch décompose un texte en ligne, une ligne en mots et un mot en glyphes.
 
