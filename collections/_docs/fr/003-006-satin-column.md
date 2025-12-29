@@ -1,7 +1,7 @@
 ---
 title: "Colonne Satin"
 permalink: /fr/docs/stitches/satin-column/
-last_modified_at: 2025-11-06
+last_modified_at: 2025-12-29
 toc: true
 ---
 ## Qu’est-ce que c’est
@@ -23,7 +23,7 @@ Ink/Stitch offre plusieurs options pour créer des colonnes satin. Les quatre pr
 5. [Création manuelle de Colonne Satin ](#5-création-manuelle-de-colonne-satin): prendre tout le contrôle sur la colonne satin
 
 ### 1. Trait en Satin
-
+####  Méthode 1
 * Choisir un trait (un objet avec une couleur de contour, mais pas de couleur de remplissage)
 * Définissez l'épaisseur du contour à  la largeur souhaitée pour votre colonne satin.
 * Lancer `Extensions > Ink/Stitch > Outils : Satin > Convertir Ligne en Satin`
@@ -36,6 +36,22 @@ Vous obtenez un chemin composite composé de
 
 * En option lancer `Extensions > Ink/Stitch > Outils : Satin > Agencement automatique de colonnes satin...` après avoir sélectionné une ou plusieurs colonnes satins
 Plus d'informations sur [Convertir ligne en satin](/fr/docs/satin-tools/#convertir-ligne-en-satin)
+
+#### Méthode 2
+* Choisir un trait (un objet avec une couleur de contour, mais pas de couleur de remplissage)
+
+* Définissez la largeur du contour à la taille souhaitée pour votre point satin (ou à une largeur supérieure à 0,3, mais vous devrez également ajouter une compensation d'étirement importante pour obtenir une largeur correcte).
+
+* Exécutez `Extensions > Ink/Stitch > Paramétres`.
+
+* Ouvrez l'onglet « Colonne  satin » et activez l'option « Colonnes de satin personnalisée ».
+
+Avec cette seconnde méthode, la position des nœuds peut influencer le rendu du point satin.
+
+![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
+
+
+
 
 ### 2. Trait en Effet de Chemin Satin
 
@@ -143,7 +159,7 @@ Par exemple l'augmentation aléatoire de la largeur du satin est un paramètre a
 |---|---|--|
 |Colonne  de satin personnalisée   | ☑ |Doit être activé pour que ces paramètres prennent effet|
 |Méthode                       | | Choisir `Colonne Satin`|
-|Décalage des points courts    | ![Short Stitch example](/assets/images/docs/params-satin-short_stitch_inset.png) |Les points dans les zones à forte densité seront raccourcis de ce pourcentage.|
+|Décalage des points courts    | ![Short Stitch example](/assets/images/docs/satin_multiple_short_stitch_inset_values.jpg)|Les points dans les zones à forte densité seront raccourcis de ce pourcentage. Il est possible d'entrer plusieurs valeurs séparées par un espace, la colonne satin les utilisera alternativement pour décaler les points courts consécutifs.|
 |Distance des points courts    | ![Short Stitch example](/assets/images/docs/params-satin-short_stitch_distance.png) |Faire des points courts si la distance entre les crêtes est inférieure à cette valeur.|
 |Espacement de Zig-zag         |![exemple d'espacement de zig-zag](/assets/images/docs/params-satin-zig-zag-spacing.png)|la distance de crête à crête entre les zig-zag|
 |Pourcentage de compensation d'étirement |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Compensation d'étirement proportionelle à la largeur du point satin. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.|
