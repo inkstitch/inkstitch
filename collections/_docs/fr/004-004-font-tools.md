@@ -32,12 +32,13 @@ Cette extension permet d'éditer les informations existantes sur une police.  Si
 
 * Lancez `Extensions > Ink/Stitch > Gestion des polices > Éditer le fichierJSON`
 * Choisir une police dans la liste des polices
-* Mettre à jour les information tels que le nom, la description, les mots clés ou les information de crénage.
+* Mettre à jour les information tels que le nom, la description, les informations de licence, les mots clés ou les information de crénage.
 * Cliquez sur `Appliquer`
 
 ## Test de police {#font-sampling}
 
 Cette extension crée un calque qui contient toutes les lettres d'une fonte. Elle aide les créateurs de fontes à tester leurs nouvelles fontes.
+Seuls les glyphes non vérouillés sont traités. Ceci permet de tester partiellement une fonte lors de sa création.
 
 ### Usage
 
@@ -79,6 +80,8 @@ Pour la même raison, lorsque les lettres sont détachées, il peut être utile 
 
 * Ajouter l'attribut "forcer les points d'arrêts" au dernier élément de chaque glyphe
 
+* Ajouter l'attribut "forcer les points d'arrêts" au dernier élément de chaque groupe
+
 ## Générer le fichier JSON {#generate-json}
 
 Cette extension est destinée à vous aider à créer le fichier json.
@@ -93,8 +96,11 @@ Si vous avez généré votre fichier svg sans informations de crénage, cette ex
 |-----------------------------------|-------------------|
 |Nom (obligatoire)                  |le nom de votre police (obligatoire).|
 |Description                        |informations supplémentaires sur votre police.|
-|Variante par défaut                |si vous produisez plusieurs fichiers de glyphes pour des directions différentes, quelle est la direction a choisir lorsqu'il n'y a qu'une seule ligne   |
+|Licence de la fonte          | Type de licence choisi pour cette fonte.|
 |Direction du texte                 |le texte saisi par l'utilisateur sera t'il écrit de la gauche vers la droite (comme l'anglais) ou de la droite vers la gauche (comme l'hébreu). Actuellement le module de lettrage ne permet pas de mélanger les deux types de texte. |
+|Variante par défaut                |si vous produisez plusieurs fichiers de glyphes pour des directions différentes, quelle est la direction a choisir lorsqu'il n'y a qu'une seule ligne   |
+|Nom de la fonte de départ               |le nom de la police ttf dont vous êtes partis, laissez vide si vous avez n'en avez pas utilisé|
+|URL de la fonte de départ           |lien vers  la fonte de départ|
 |Fichier svg de la police (obligatoire)    | Si vous avez utilisé FontForge pour générer votre fichier de police svg, Ink/Stitch lira les informations de crénage de votre police pour les inclure dans le fichier json.<br/>De plus, le fichier de police sera utilisé pour déterminer le chemin de sortie.<br/><br/>Un fichier `font.json` sera enregistré dans le dossier de votre fichier de fonte svg.|
 |Mots clés                          |Choisir les catégories applicables à votre police|
 
