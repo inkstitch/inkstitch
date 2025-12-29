@@ -1,7 +1,7 @@
 ---
 title: "Bean Stitch"
 permalink: /docs/stitches/bean-stitch/
-last_modified_at: 2025-12-27
+last_modified_at: 2025-12-29
 toc: true
 ---
 ## What is it
@@ -13,7 +13,7 @@ Bean stitch describes a repetition of running stitches back and forth. This woul
 
 ## How to create it
 
-1. Select a **dashed stroke** and open `Extensions > Ink/Stitch  > Params`.
+1. Select a stroke and open `Extensions > Ink/Stitch  > Params`.
 
 2. Set the number of repeats when in [running stitch mode](/docs/stitches/running-stitch).
 
@@ -33,8 +33,8 @@ Settings|Description
 Running stitch along paths    |Must be selected to use these settings.
 Method                        |Determines which stitch to use. Select `Running stitch / Bean stitch` 
 Repeats                       |Defines how many times to stitch  along the path<br />◦ Default: 1 (traveling once from the start to the end of the path)<br />◦ Odd number: stitches will end at the end of the path<br />◦ Even number: stitching will return to the start of the path
-Bean stitch number of repeats |Determines the number of times to repeat each stitch.<br />◦ A value of `0` does not repeat the stitch (normal stitch)<br/>◦ A value of `1` repeats each stitch three times (forward, back, forward).<br />◦ A value of `2` repeats the stitch five times. <br />◦ See [Bean Stitch Mode](/docs/stitches/bean-stitch/) for more information<br />
-Running stitch length         |Determines the length of stitches
+Bean stitch number of repeats |Determines the number of times to repeat each stitch.<br />◦ A value of `0` does not repeat the stitch (normal stitch)<br/>◦ A value of `1` repeats each stitch three times (forward, back, forward).<br />◦ A value of `2` repeats the stitch five times. <br />◦ See above for more information<br />
+Running stitch length         |Determines the length of stitches. By entering multiple values, it is possible to define a custom repeat pattern. For instance  `2 4`  will create stitches of length alternatively 2 and 4 mm.
 Running stitch tolerance      |Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
 Randomize stitch length       |Allows for randomize stitch length. This is recommended for closely-spaced curved fills to avoid Moiré artefacts. 
 Random stitch length jitter   |Only available if `Randomize stitch length` is selected. Determines the variation in the length of each stitch.
