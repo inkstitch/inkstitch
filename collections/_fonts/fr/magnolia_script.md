@@ -22,6 +22,7 @@ data_title:
 {%- assign font2 = site.data.fonts.magnolia_small.font -%}
 {%- assign font3 = site.data.fonts.magnolia_bicolor.font -%}
 {%- assign font4 = site.data.fonts.magnolia_tamed.font -%}
+
 <img 
      src="/assets/images/fonts/magnolia_small.jpg"
      alt="Magnolia small" height="50">
