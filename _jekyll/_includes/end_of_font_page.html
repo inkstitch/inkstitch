@@ -12,8 +12,8 @@
 <p>
 {%- for sub_font in page.data_title -%}
   {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
-  The name is {{ sub_font_data.name }}
-   [{{ sub_font_data.original_font }}]({{sub_font_data.original_font_url}}
+   {{ sub_font_data.name }} is licensed under  {{ sub_font_data.font_license }}. 
+   It is a derivative work from [{{ sub_font_data.original_font }}]({{sub_font_data.original_font_url}})
 </p>
  
 {% endfor %}
@@ -21,7 +21,7 @@
 <p>
 {%- assign font_data = site.data.fonts[page.data_title[0]].font -%}
   This font  is licensed under the {{ font_data.font_license }}. 
-  It is a derivative from  [{{ font_data.original_font }}]({{font_data.original_font_url}}
+  It is a derivative from  [{{ font_data.original_font }}]({{font_data.original_font_url}})
 </p>
 <p>
   [Downlown font licence ](https://https://github.com/inkstitch/embroidery-fonts/blob/main/src/montecarlo/LICENSE)
