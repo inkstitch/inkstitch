@@ -1,7 +1,7 @@
 ---
 title: "Point triple"
 permalink: /fr/docs/stitches/bean-stitch/
-last_modified_at: 2024-05-07
+last_modified_at: 2025-12-29
 toc: true
 ---
 ## Qu’est-ce que c’est
@@ -11,7 +11,7 @@ Le point triple décrit une répétition de points droits avant arrière. Il en 
 ![Bean Stitch Detail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
 
 ## Comment le créer
-1. Sélectionner un trait pointillé et ouvrir  `Extensions > Ink/Stitch  > Paramètres`.
+1. Sélectionner un trait et ouvrir  `Extensions > Ink/Stitch  > Paramètres`.
 
 2. Définissez le nombre de répétitions dans `Nombre de répétitions de points triples` dans [paramètres de point droit](/fr/docs/stitches/running-stitch).
 
@@ -19,19 +19,19 @@ Le point triple décrit une répétition de points droits avant arrière. Il en 
 
    * Une valeur de 1 triplera chaque point (avant, arrière, avant).
    * Une valeur de 2 permettra de quintupler chaque point, etc.
-   * Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace
+   * Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace (ces valeurs seront utilisées alternativement par les points)
   
 ## Paramètres
 
 Ouvrir `Extensions > Ink/Stitch  > Paramètres` pour paramétrer selon vos besoins.
 
 Paramètres||Description
----|--|---
+---|---
 Points droits le long des chemins |Doit être activé pour que ces paramètres prennent effet
 Méthode                           |Choisir Point Droit
 Répétitions                       |Définir combien de fois aller et revenir le long du chemin<br />◦ par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la broderie va revenir au début du chemin
 Nombre de répétitions du point triple |Active le [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />◦ Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace
-Longueur du point droit           |Longueur des points 
+Longueur du point droit           |Détermine la longueur des points. En saisissant plusieurs valeurs, il est possible de définir un motif répétitif personnalisé. Par exemple, `2 4` créera des points de longueur 2 et 4 mm en alternance.
 Tolerance du point droit          |Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts. Une tolerance haute entraine un arrondissement des angles aigus.
 Rendre aléatoire                     |Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré.
 Mouvement aléatoire de la longueur du point                   |Pourcentage maximum de variation de la longueur du point appliqué si la longueur est rendue aléatoire.
