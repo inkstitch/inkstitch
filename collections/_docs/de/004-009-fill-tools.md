@@ -48,14 +48,16 @@ Hilfsmethode zur Erstellung von:
 
 * Elemente auswählen
 * `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Auswahl zu Knockdown-Stich`
-* Einstellungen anpassen
+* Einstellungen anpassen (row spacing will be computed according to stitch length)
 * Auf `Anwenden` klicken
 * Füllparameter im Parameterdialog anpassen (`Erweiterungen > Ink/Stitch > Parameter`)
 
+<!--
   Wenn du die gleiche Struktur behalten willst, das Muster aber skalieren möchtest,
   aktualisiere den Reihenabstand für die Deckschicht, als auch für die Unterlage und berechne die maximale Stichlänge: `spacing / sin(60)`<br><br>
   **Beispiel**: Wenn der Reihenabstand 1.8 mm beträgt, ist die maximale Stichlänge `1.8 / sin(60) ≈ 2.08`
   {: .notice--info }
+  -->
 
 ### Einstellungen
 
