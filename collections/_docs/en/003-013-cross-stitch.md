@@ -13,16 +13,16 @@ feature_row:
 
 {% include upcoming_release.html %}
 
-## What it is
+## What is it? 
 
 Cross stitch mimics traditional hand embroidery techniques.
 Cross-stitch is characterized by small, even crosses, which give the embroidered image a flat, blockish look.
 
 ![Cross stitched froq in double cross style](/assets/images/upcoming/3.3.0/cross_stitch.jpg)
 
-# How to Create
+# How to Create it
 
-* Draw a shape with a fill color
+* Draw a closed shape with a fill color
 * Open the params dialog
 * Select `Cross stitch` as the fill method
 
@@ -37,8 +37,8 @@ Cross stitches are alignde to a grid in pattern size. The grid itself is (by def
 Ink/Stitch will check how much percent of each grid field is covered by the fill element.
 If coverage exceeds the value given by the coverage option (by default 50%), a cross stitch is build.
 
-In the following example only the green fields are covered more than 50% by the fill and receive a cross.
-When the fill element is moved on canvas, we receive more stitches.
+In the following example only the green fields are covered more than 50% by the black fill and receive a cross.
+When the black fill element is moved on canvas, more crosses are created.
 
 {% include feature_row %}
 
@@ -53,7 +53,7 @@ In Ink/Stitch you can choose from various cross stitch methods.
 * **Cross stitch and cross stitch flipped**
 
   This is the most common method. Two diagonals are building a cross.
-  When two crosses are only diagonally conntected, add a small expand value to ensure combined stitching.
+  When two crosses are only diagonally connected, add a small expand value to the underlying fill to ensure combined stitching.
 
   ![Cross stitch method: cross stitch](/assets/images/docs/cross_stitch_method_cross_stitch.jpg)
 * **Half stitch and half stitch flipped**
@@ -81,13 +81,15 @@ Ink/Stitch comes with an extension which helps you to perform cross stitch speci
 * Apply cross stitch params to selected elements
 * Pixelize the outline of selected elements, to easily see and adapt cross stitch positions
 
+It also computes and displays the stitch length given the grid dimensions. Maximum stitch length in the cross stitches parameters should be larger than this value.
+  
 ## Set Start and End Point
 
 By default, an automatic fill starts as close as possible to the previous embroidery element and ends as close as possible to the next embroidery element.
 
 To change this behavior, set start and end points for autofill objects with [Visual commands](/docs/commands/).
 
-## Paramameters
+## Parameters
 
 Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
@@ -101,7 +103,7 @@ Align grid with canvas             ||This ensures good alignment for adjacent cr
 Grid Offset                        ||Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y.
 Fill coverage                      ||Percentage of overlap for each cross with the fill area.
 Expand                             |![Expand example](/assets/images/docs/params-fill-expand.png) |Expand the shape before fill stitching, to compensate for gaps between shapes.<br>It is recommended to use at least a small expand value (e.g. 0.2) on cross stitch elements.
-Maximum fill stitch length         |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) |The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
+Maximum fill stitch length         |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) |Usually set to at least the length of a cross diagonal
 Bean stitch number of repeats      ||Determines the number of times to repeat each stitch.<br />◦ A value of `0` does not repeat the stitch (normal stitch)<br/>◦ A value of `1` repeats each stitch three times (forward, back, forward).<br />◦ A value of `2` repeats the stitch five times.
 Minimum stitch length              ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
 Minimum  jump stitch  length       ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches
@@ -115,6 +117,6 @@ Trim After                         |☑ |Trim the thread after sewing this objec
 Stop After                         |☑ |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 {: .params-table }
 
-### Sample Files Including Fill Stitches
+### Sample Files Including Cross Stitches
 
 {% include tutorials/tutorial_list key="stitch-type" value="Cross Stitch" %}
