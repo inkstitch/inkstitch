@@ -42,18 +42,26 @@ The text module creates multi-line text. Choose the right font for your project 
   It is recommended to use the scale option, rather than resizing the font on canvas.
   This way you can make sure, that you stay within the parameters the font has been designed for.
 
-* **Color sort**
+* **Align Text**
 
+  Align multiline text: left, center, right, block (default), block (letterspacing)
+
+* **Letter spacing**
+  Add that width (mm) between letters
+
+* **Word spacing**
+  Add that width (mm) between words
+
+* **Line height**
+  Add that height (mm) between lines
+
+* **Color sort**
   Sort colors of multicolor fonts to avoid a huge amount of color changes.
 
 * **Stitch lines of text back and forth**
 
   With this option enabled the first line will be stitched from left to right and the second from right to left, etc.
   This will give your machine shorter ways to travel.
-
-* **Align Text**
-
-  Align multiline text: left, center, right, block (default), block (letterspacing)
 
 * **Add trims**
 
