@@ -2,7 +2,7 @@
 permalink: /tutorials/font-creation/
 title: "Fonts for Ink/Stitch"
 language: en
-last_modified_at: 2025-08-24
+last_modified_at: 2025-12-29
 excerpt: "Ink/Stitch font creation"
 image: "/assets/images/tutorials/font_creation_complement/multifont3.jpg"
 tutorial-type: 
@@ -34,18 +34,18 @@ The files that make up a lettering font are grouped in a font-specific folder, w
 Each font folder must contain at least two files:
 - a font.json file that contains the font's characteristics.
 - at least one glyph layer svg file,that contains one layer per glyph.
-Most fonts in the lettering module are defined using a single glyph layer file, named →.svg.
+Most fonts in the lettering module are defined using a single glyph layer file, named ltr.svg.
 
-This →.svg file is intended for left to right embroidery (the direction of the arrow).
+This ltr.svg file is intended for left to right embroidery.
 
-The glyphs of an Arabic or Hebrew lettering font are defined in a ←.svg file.
+The glyphs of an Arabic or Hebrew lettering font are defined in a rtl.svg file.
 
-Some fonts, such as Déja vu, contain both →.svg and ←.svg files. In this case, a multi-line text can be stitched back and forth: 
-in the →.svg file, a letter is stitched from left to right, while in the ←.svg file, it is stitched from right to left. 
+Some fonts, such as Déja vu, contain both ltr.svg and rtl.svg files. In this case, a multi-line text can be stitched back and forth: 
+in the ltr.svg file, a letter is stitched from left to right, while in the rtl.svg file, it is stitched from right to left. 
 The lettering module will alternately use the two files on the different lines that make up a text.
 
 These names are mandatory... unless the font contains a large number of glyphs, in which case, for a left to right font, 
-you can distribute your glyphs across several svg files (there are no naming restrictions for these files) and regroup them together in a folder that must be named →.
+you can distribute your glyphs across several svg files (there are no naming restrictions for these files) and regroup them together in a folder that must be named ltr.
 
 The font folders in the lettering module also include:
 - a preview.png file ( 15:1 format, usually 300x20 px) containing the embroidered preview of the font name that appears in the lettering dialog.
@@ -72,6 +72,7 @@ In addition to respecting naming conventions, any glyph file must:
 It's entirely possible to manually create a glyph file, but it's rarely the best option:
 - starting from a .ttf or .otf font file you benefit from all the kerning work done by the original creator of the font
 - starting from embroidery files you will have almost nothing left to do
+
 
 ### From Embroidery Files
 
@@ -137,15 +138,15 @@ Select all paths in all layers (if your Inkscape preferences don't allow the sel
 give them a fill color, and specify that there's no stroke color (or specify a stroke color and specify that there's no background color). 
 You can hide the layers again.
 
-If you want to create a left to right font, save this file as →.svg in a new folder located in your personal fonts folder.
+If you want to create a left to right font, save this file as ltr.svg in a new folder located in your personal fonts folder.
 
 ## Creating the font.json file
 
-Once the →.svg file exists, you can create the associated font.json file. It is recommended that you do so as early as just now.
+Once the ltr.svg file exists, you can create the associated font.json file. It is recommended that you do so as early as just now.
 
 `Extensions > Ink/Stitch > Font Management > Generate JSON....`
 
-This extension will extract information from the →.svg file and store it in a font.json file. 
+This extension will extract information from the ltr.svg file and store it in a font.json file. 
 The extension's dialog also allows you to add information. 
 The documentation is [here](/docs/font-tools/#generate-json).
 
@@ -158,7 +159,7 @@ This section is for the curious; it can be skipped at least initially.
 
 #### Where is the information?
 
-The font.json file contains the kerning information. It was extracted from the →.svg file when the font.json file was created. 
+The font.json file contains the kerning information. It was extracted from the ltr.svg file when the font.json file was created. 
 This information will greatly contribute to the positioning of the glyphs relative to each other. 
 
 To determine a glyph's position, Ink/Stitch uses three types of information:
@@ -180,6 +181,9 @@ We assume left alignment, and here we're talking about the horizontal position. 
      * if there is an hkern value for the "Te" pair, the cursor is shifted by that amount (a positive value decreases the distance a negative value increases it)
  
 ....and so on for all the letters in the word
+
+If you did not start from an ttf file and want some basic kerning, set the value for horiz_adv_x_default to 0 in the json file. This will make Ink/Stitch use the width of the individual glyphs.
+
 
 #### How to fix a possible kerning problem
 
