@@ -1,7 +1,7 @@
 ---
 title: "Stitch Library"
 permalink: /docs/stitch-library/
-last_modified_at: 2025-12-20
+last_modified_at: 2025-12-29
 toc: true
 ---
 A stitch type describes how Ink/Stitch turns paths and shapes into embroidery. Different stitch types produce different textures, thickness, and coverage, so the stitch type you choose changes how outlines, lettering, and filled areas look on fabric.
@@ -120,6 +120,7 @@ Cross stitch mimics traditional hand embroidery techniques. Cross-stitch is char
 ![Cross Stitch](/assets/images/docs/cross_stitches.jpg){: width="350x" }
 
 [Learn more](/docs/stitches/cross-stitch){: .btn .btn--primary}
+
 ### Guided Fill
 
 Guided fill creates stitches by using a guide line to control stitch direction.
