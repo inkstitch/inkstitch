@@ -65,14 +65,11 @@ Cette extension permet de générer:
 
 * Sélectionner des éléments
 * Ouvrir `Extensions > Ink/Stitch > Outils : Remplissage > Sélection vers remplissage en points couchants` 
-* Adapter les paramètres
+* Adapter les paramètres (la longueur maxiumum du point détermine aussi l'espacement entre les rangées)
 * Cliquer sur `Appliquer`
 * Adaptez les paramètres de remplissage dans la boîte de dialogue du paramétrage (`Extensions > Ink/Stitch > Paramètres`)
 
- Si vous souhaitez garder le même style de remplissage, mais voulez agrandir ou réduire le motif, modifiez l'`espacement entre les rangées` du remplissage et de sa sous couche et calculez la `longueur maximumm du point` selon la formule `espacement entre les rangées / sinus(60°) `<br><br>
- **Exemple**: Si vous souhaitez un `espacement entre les rangées` de 1,8 mm, la `longueur maximum du point` sera `1,8 / sin(60°) ≈ 1,8/0,866=2,08 mm`
- {: .notice--info }
-
+ 
 ### Paramètres
 
 #### Onglet Options
