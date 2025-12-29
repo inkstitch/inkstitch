@@ -8,8 +8,7 @@ preview_image:
     height: 35
 data_title:
   - montecarlo
-font_directories:
-  - site.data.fonts.montecarlo.font
+font_directories: site.data.fonts.montecarlo.font
 ---
 {% include upcoming_release.html %}
 
