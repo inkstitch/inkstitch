@@ -1,7 +1,7 @@
 ---
 title: "Broderie Ondulée"
 permalink: /fr/docs/stitches/ripple-stitch/
-last_modified_at: 2025-04-12
+last_modified_at: 2025-12-29
 toc: true
 ---
 ## De quoi s'agit-il ?
@@ -116,6 +116,7 @@ Exposant de la distance entre les lignes |<img src="/assets/images/docs/ripple_o
 Inverser effet exposant       |☑  ou ▢| Échange le rôle de la  première et de la dernière réplication pour le calcul de la distance entre les réplications
 Changer le sens               |☑  ou ▢|  Change le sens du  chemin final de broderie . N'a pas d'effet sur les autres paramètres.
 Inverser la  direction des rails||Inverse les rails d'une ondulation satin. Par défaut détecte automatiquement, et corrige la direction d'un des rails.
+Échanger les rails            |☑ |Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques
 Taille de la  grille          |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Si une distance positive est spécifiée, les ondulations de la broderie sont complétées  en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir  n'a pas  d'influence sur ce paramètre.
 Broder d'abord  la grille           |Brode en sens inverse de telle sorte que  la grille est brodée en premier.
 Mettre à l'echelle sur l'axe  |XY ou X ou Y ou rien|seulement pour des ondulations guidées.
