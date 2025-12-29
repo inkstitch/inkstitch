@@ -1,11 +1,11 @@
 ---
 title: "Magnolia KOR"
 permalink: /fr/fonts/magnolia-script/
-last_modified_at: 2024-05-30
+last_modified_at: 2024-05-29
 toc: false
 preview_image:
   - url: /assets/images/fonts/magnolia_small.jpg
-    height: 11
+    height: 15
   - url: /assets/images/fonts/magnolia_KOR.jpg
     height: 31
   - url: /assets/images/fonts/magnolia_bicolor.png
@@ -16,13 +16,12 @@ data_title:
   - magnolia_KOR
   - magnolia_small
   - magnolia_bicolor
-  - mangolia_tamed
+  - magnolia_tamed
 ---
 {%- assign font = site.data.fonts.magnolia_KOR.font -%}
 {%- assign font2 = site.data.fonts.magnolia_small.font -%}
 {%- assign font3 = site.data.fonts.magnolia_bicolor.font -%}
 {%- assign font4 = site.data.fonts.magnolia_tamed.font -%}
-
 <img 
      src="/assets/images/fonts/magnolia_small.jpg"
      alt="Magnolia small" height="50">
