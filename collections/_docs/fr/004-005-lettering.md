@@ -40,6 +40,20 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
   Définit la taille de sortie de la police par rapport à la taille de police d'origine (%).
   Il est recommandé d'utiliser l'option d'échelle plutôt que de redimensionner la police sur le canevas.
   De cette façon, vous pouvez vous assurer que vous respectez les paramètres pour lesquels la police a été conçue.
+
+  * **Alignement du Texte**
+
+  Alignement du texte sur plusieurs lignes: gauche, centre, droit, justifié (mots)- modifie uniquement les espaces entre les mots, justifié (lettres) - modifie aussi l'espacement inter lettres.
+
+* **Espacememnt des lettres**
+  Ajoute cette largeur (en mm) entre les lettres
+
+* **Espacememnt des mots**
+  Ajoute cette largeur (en mm) entre les mots
+
+* **Hauteur de ligne**
+
+  Augmente d'autant l'espace entre les lignes
   
 * **Tri des couleurs**
 
