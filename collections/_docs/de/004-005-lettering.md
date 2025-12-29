@@ -41,6 +41,16 @@ Das Text-Modul erzeugt mehrzeiligen Text. Wähle aus einer großen Vielfalt vord
   Es wird empfohlen Text mit dieser Option zu skalieren und nicht auf der Leinwandfläche in Inkscape.
   Auf diese Weise kannst du sicher stellen, dass die Textgröße auf die Parameter abgestimmt ist, mit denen die Schrift digitalisiert wurde.
 
+* **Letter spacing**
+  Add that width (mm) between letters
+
+* **Word spacing**
+  Add that width (mm) between words
+
+* **Line height**
+
+  Add that height (mm) between lines
+
 * **Farbsortierung**
 
   Sortiert Farben von mehrfarbigen Schriften und vermeidet so eine größere Anzahl an Farbwechseln.
