@@ -1,17 +1,18 @@
 ---
 title: "Premiers pas"
 permalink: /fr/docs/basic-usage/
-last_modified_at: 2022-06-14
+last_modified_at: 2025-12-29
 toc: true
 ---
 Essayez les étapes suivantes pour tester l'extension et apprendre les fonctionnalités de base.
 
-**Astuces:** Si vous êtes débutant avec Inkscape, jetez d'abord un coup d'oeil sur leur [Tutoriel de base](https://inkscape.org/fr/doc/tutorials/basic/tutorial-basic.html).
+**Astuces:** Si vous êtes débutant avec Inkscape, jetez d'abord un coup d'oeil sur leur [Tutoriel basique](https://inkscape.org/fr/doc/tutorials/basic/tutorial-basic.html).
 {: .notice--info }
 
 ## Etape 1 - Dessiner un objet
 
-Créez un objet, par exemple un cercle et assurez-vous qu'il a un remplissage en ouvrant `Objet > Fond et Contour`
+1. Créez un objet, par exemple un cercle et assurez-vous qu'il a une couleur de fond ou une couleur de contour (mais pas les deux) en ouvrant `Objet > Fond et Contour`
+2. Si vous ne savez pas ce que couleur de fond et de contour veulent dire, consultez le [Tutoriel basique](https://inkscape.org/fr/doc/tutorials/basic/tutorial-basic.html) d'inkscape
 
 
 ![Cercle avec couleur de remplissage](/assets/images/docs/en/basic-usage-circle-fill-color.png)
@@ -29,7 +30,7 @@ Créez un objet, par exemple un cercle et assurez-vous qu'il a un remplissage en
 
 * Faire `Fichier > Enregistrer sous...`
 * Ouvrez le dossier où vous souhaitez enregistrer le fichier
-*  Choisissez le format de fichier adapté à votre machine
+* Choisissez le format de fichier adapté à votre machine
 * Cliquer `Enregistrer`
 * Copier le fichier dans votre machine
 
