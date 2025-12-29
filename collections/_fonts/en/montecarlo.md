@@ -9,7 +9,7 @@ preview_image:
 data_title:
   - montecarlo
 font_directories:
-  -site.data.fonts.montecarlo.font
+  - site.data.fonts.montecarlo.font
 ---
 {% include upcoming_release.html %}
 
