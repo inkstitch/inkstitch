@@ -1,7 +1,7 @@
 ---
 title: "Préférences"
 permalink: /fr/docs/preferences/
-last_modified_at: 2025-04-17
+last_modified_at: 2025-12-29
 toc: true
 ---
 On accède aux préférences via `Extensions > Ink/Stitch > Préférences`.
@@ -65,6 +65,9 @@ Les  **points manuels** sont eux aussi affectés  par *Longueur minimum de point
 
  **Si vous utilisez une W6 machine:** Réglez votre longueur minimum de point global à au moins 0.3mm, sinon vous risquez des points manquants à des endroits inattendus.
 {: .notice--warning }
+
+### Seulement pour le document courant : Tourner à l'export
+Cette option permet de tourner le motif de 90°. Utile pour les brodeuses qui ne tournent pas automatiquement un motif qui nécessite une rotation pour tenir dans le cadre
 
 ### Seulement en global: Taille du cache (mb)
 Elle définit la taille maximum occupée sur votre disque dur par les plans de broderie mis en cache. 
