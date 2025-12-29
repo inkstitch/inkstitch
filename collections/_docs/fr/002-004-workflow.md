@@ -72,10 +72,10 @@ Les polices Cursive / Script peuvent bien fonctionner, mais ce ne sera pas aussi
 
 Nous vous recommandons de faire un usage intensif des calques et des groupes à ce stade.
 
-Dans le panneau **Calques et objets**(ouvert avec <key>Cmd</key> <key>Shift</key> <key>L</key>), vous pouvez gérer des calques, des groupes et des objets.
+Dans le panneau **Calques et Objets** (ouvert avec <key>Cmd</key> <key>Shift</key> <key>L</key>), vous pouvez gérer des calques, des groupes et des objets.
 Vous pouvez enregistrer l'image d'origine en dupliquant le calque:
 
-* Faites un clic droit sur le calque (si vous n'avez pas renommé le calque, il s'appellera **Calque 1**)
+* Faites un clic droit sur le calque (si vous n'avez pas renommé le calque, il s'appelle **Calque 1**)
 * Cliquez sur **Dupliquer le calque actif**
 * Fermez l'œil en cliquant dessus.
 
