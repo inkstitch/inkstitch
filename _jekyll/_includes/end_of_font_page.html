@@ -5,9 +5,10 @@
   </p>
 <p>
    The directory of the font is {{ page.font_directories }}
- the name is {{ page.font_directories | name"}}
+ the name is {{ page.font_directories | append: ".name"}}
   it contains {{ font.glyphs.size }} glyphs:
 </p>
+
 
 
 
