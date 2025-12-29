@@ -1,7 +1,7 @@
 ---
 title: "Bibliothèque de points"
 permalink: /fr/docs/stitch-library/
-last_modified_at: 2024-12-02
+last_modified_at: 2025-12-29
 toc: true
 ---
 Les types de points Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
@@ -110,6 +110,14 @@ Le remplissage selon contour recouvre des zones en suivant leur contours.
 ![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
 
 [En savoir plus](/fr/docs/stitches/contour-fill){: .btn .btn--primary}
+
+### Poinnnt de croix
+Le point de croix imite les techniques traditionnelles de broderie à la main.
+
+Il se caractérise par de petites croix régulières, ce qui donne à l'image brodée un aspect plat et géométrique.![Cross Stitch](/assets/images/docs/cross_stitches.jpg){: width="350x" }
+
+[En savoir plus](/docs/stitches/cross-stitch){: .btn .btn--primary}
+
 
 ### Remplissage guidé
 
