@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot"
 permalink: /docs/troubleshoot/
-last_modified_at: 2024-03-13
+last_modified_at: 2025-12-29
 toc: true
 ---
 
@@ -15,6 +15,8 @@ Ink/Stitch comes with an troubleshoot extension, which is designed to help you t
 
 * (Optional) Select objects that you want to test. If you select none, the whole document will be tested.
 * Run `Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects`
+* Chose what you want to detect among errors, warnings and object type warning.
+
 
 You will either get a message, that no error could be found or a new layer with the troubleshoot information will be added to your SVG document. Use the objects panel (Ctrl + Shift + O) to delete the layer once you are finished.
 
@@ -28,6 +30,10 @@ You will either get a message, that no error could be found or a new layer with 
 This extension informs about various parameters of selected stitch elements.
 
 ![Element info](/assets/images/docs/en/element_info.png)
+
+The 'Copy' button on the help tab allows you to copy all the information to the clipboard.
+
+
 
 ## Remove embroidery settings
 
