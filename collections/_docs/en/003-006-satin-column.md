@@ -1,7 +1,7 @@
 ---
 title: "Satin Column"
 permalink: /docs/stitches/satin-column/
-last_modified_at: 2025-11-06
+last_modified_at: 2025-12-29
 toc: true
 ---
 ## What it is
@@ -23,7 +23,7 @@ Ink/Stitch offers several option to create satin columns. Methods 1-4 will conve
 5. [Manual Satin Column](#5-manual-satin-column): take full control over every part of the satin column
 
 ### 1. Line to Satin
-
+#### Method 1
 * Add a contour to a path object (with no filling).
 * Set contour width to the size you want your satin stitch to be.
 * Run `Extensions > Ink/Stitch > Satin Tools > Convert Line to Satin`
@@ -31,6 +31,17 @@ Ink/Stitch offers several option to create satin columns. Methods 1-4 will conve
 * Use as-is or customize rungs and/or rails
 
 Get more information about [Stroke to Satin](/docs/satin-tools/#convert-line-to-satin)
+#### Method 2
+* Add a contour to a path object (with no filling).
+* Set contour width to the size you want your satin stitch to be (or to any width larger than 0.3, but you will need too add a lot off pull compensation to reach a correct width)
+* Run `Extensions > Ink/Stitch > Params
+* Open the Satin Column Tab and activate Custom Satin Columns
+  
+With this second method, the position of the nodes can influence how the satin will be rendered:
+
+![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
+
+
 
 ### 2. Line to Live Path Effect Satin
 
@@ -127,7 +138,7 @@ Settings||Description
 ---|---|--
 Custom satin column   | ☑ |Must be enabled for these settings to take effect.
 Method                | |Chose `Satin Column`
-Short stitch inset    | ![Short Stitch example](/assets/images/docs/params-satin-short_stitch_inset.png) | Stitches in areas with high density will be inset by this amount (%)
+Short stitch inset    | ![Short Stitch example](/assets/images/docs/satin_multiple_short_stitch_inset_values.jpg)| Stitches in areas with high density will be inset by this amount (%) Short stitch inset can take multiple values separated by a space. When multiple values are set, the satin column will use these to level consecutive short stitches 
 Short stitch distance | ![Short Stitch example](/assets/images/docs/params-satin-short_stitch_distance.png) | Inset stitches if the distance between stitches is smaller than this (mm).
 Zig-Zag spacing       |![Zig-zag spacing example](/assets/images/docs/params-satin-zig-zag-spacing.png)|the peak-to-peak distance between zig-zags
 Pull compensation percentage |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an asymetric effect.
