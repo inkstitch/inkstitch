@@ -1,7 +1,7 @@
 ---
 title: "Outils Satin"
 permalink: /fr/docs/satin-tools/
-last_modified_at: 2025-04-16
+last_modified_at: 2025-12-29
 toc: true
 ---
 `Extensions > Ink/Stitch > Outils : Satin` inclut un certain nombre d’aides utiles, facilitant le travail avec [les colonnes satin](/fr/docs/stitches/satin-column/).
@@ -61,6 +61,8 @@ Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'
 4. Sélectionnez à nouveau la colonne satin.
 5. Faire `Extensions > Ink/Stitch > Outils de Satin > Scinder colonne Satin`.
 6. La commande de point de partage et la ligne de connexion disparaissent et il semble que rien ne s'être passé. Sélectionnez votre satin et vous verrez qu'il a été divisé.
+
+Vous pouvez utiliser plusieurs commandes sur la même colonne de satin pour la diviser en plusieurs morceaux en une seule action.
 
 ## Remplissage en Satin {#fill-to-satin}
 
