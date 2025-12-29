@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-28 02:03+0000\n"
-"PO-Revision-Date: 2025-12-28 02:04\n"
+"POT-Creation-Date: 2025-12-29 02:02+0000\n"
+"PO-Revision-Date: 2025-12-29 02:02\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-28 02:03+0000\n"
+"POT-Creation-Date: 2025-12-29 02:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,7 +40,7 @@ msgstr "AGS Γαραμου Garamond enthält alle Zeichen aus dem lateinischen u
 #. description of font in fonts/alchemy
 #: inkstitch-fonts-metadata.py:6
 msgid "M50"
-msgstr ""
+msgstr "M50"
 
 #. description of font in fonts/allegria20
 #: inkstitch-fonts-metadata.py:8
@@ -125,12 +125,12 @@ msgstr "Barstitch textured ist eine stark texturierte Schriftart aus Mäanderfü
 #. description of font in fonts/bathaus_FI
 #: inkstitch-fonts-metadata.py:40
 msgid "Bathaus FI is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Bathaus FI ist eine Satin-Schrift. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. description of font in fonts/bathaus_FI_Small
 #: inkstitch-fonts-metadata.py:42
 msgid "Bathaus FI Small is an altered version of Bathaus FI, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) are mandatory."
-msgstr ""
+msgstr "Bathaus FI Small ist eine abgewandelte, kleinere Form von Bathaus FI. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/bluenesia_satin
 #: inkstitch-fonts-metadata.py:44
@@ -145,17 +145,17 @@ msgstr "Schriftart für Menschen mit Sehbeeinträchtigung mit Braille-Tastenkomb
 #. description of font in fonts/caesarus_SC_FI
 #: inkstitch-fonts-metadata.py:48
 msgid "Caesarus SC FI is a small capital satin font. It contains 107 glyphs covering most Western European languages."
-msgstr ""
+msgstr "Caesarus SC FI ist eine kleine Schrift aus Satinsäulen. Sie enthält 107 Zeichen und deckt damit die Bedürfnisse der meisten westeuropäischen Sprachen ab."
 
 #. description of font in fonts/caffeine_KOR
 #: inkstitch-fonts-metadata.py:50
 msgid "Caffeine KOR is a satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "Caffeine KOR ist eine Satin-Schrift. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. description of font in fonts/caffeine_tiny
 #: inkstitch-fonts-metadata.py:52
 msgid "This font is an altered version  of Caffeine KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Diese Schrift ist eine abgewandelte, kleinere Form von Caffeine KOR. Beim Sticken dieser Schrift sollte ein dünner Faden (60) und eine dünne Nadel (60) verwendet werden."
 
 #. description of font in fonts/califragilistic
 #: inkstitch-fonts-metadata.py:54
@@ -235,7 +235,7 @@ msgstr "CooperMarif ist eine große, luftige Schrift."
 #. description of font in fonts/cyrillic
 #: inkstitch-fonts-metadata.py:82
 msgid "Cyrillic and latin satin font."
-msgstr ""
+msgstr "Kyrillische und lateinische Satin-Schrift."
 
 #. description of font in fonts/decadent_flowers_monogram
 #: inkstitch-fonts-metadata.py:84
@@ -361,13 +361,13 @@ msgstr "InfiniPicto ist eine lustige Schriftart. Sie enthält nur die 26 A-Z Gro
 #: inkstitch-fonts-metadata.py:132
 #, python-brace-format
 msgid "Initials XL is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
-msgstr ""
+msgstr "Initials XL ist eine sehr große Satin-Schrift mit Großbuchstaben. Sie umfasst 37 Zeichen: &, A-Z und 0-9. Zusätzlich werden die Zeichen (){}[],;.: genutzt um Rahmen zu erstellen. Z.B. ergibt A( ein umrahmtes A. Warnung: für einige Buchstaben muss der Rahmen manuell vergrößert werden."
 
 #. description of font in fonts/initials_medium
 #: inkstitch-fonts-metadata.py:134
 #, python-brace-format
 msgid "Initials Medium is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
-msgstr ""
+msgstr "Initials Medium ist eine Satin-Schrift mit Großbuchstaben. Sie umfasst 37 Zeichen: &, A-Z und 0-9. Zusätzlich werden die Zeichen (){}[],;.: genutzt um Rahmen zu erstellen. Z.B. ergibt A) ein umrahmtes A. Für einige Zeichen muss der Rahmen manuell vergrößert werden."
 
 #. description of font in fonts/inkstitch_masego
 #: inkstitch-fonts-metadata.py:136
@@ -386,17 +386,17 @@ msgstr "Invercelia ist eine moderne Zwei-Buchstaben-Monogramm-Schrift.\n"
 #. description of font in fonts/kum_tsoan_AGS
 #: inkstitch-fonts-metadata.py:140
 msgid " Kum Tsoan AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z."
-msgstr ""
+msgstr "Kum Tsoan AGS ist eine große Schrift für Applikationen. Sie enthält 43 Zeichen: Zahlen und 26 Großbuchstaben A-Z."
 
 #. description of font in fonts/kum_tsoan_relief
 #: inkstitch-fonts-metadata.py:142
 msgid "Kum Tsoan Relief is an altered version of Kum Tsoan AGS for embossed letters."
-msgstr ""
+msgstr "Kum Tsoan relief ist eine abgewandelte Version von Kum Tsoan AGS für die Trapunto-Technik."
 
 #. description of font in fonts/kum_tsoan_tartan
 #: inkstitch-fonts-metadata.py:144
 msgid "Kum Tsoan Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals."
-msgstr ""
+msgstr "Kum Tsoan Tartan ist eine große Schrift mit Tartanmustern. Sie enthält 43 Zeichen: Zahlen und 26 Großbuchstaben A-Z."
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:146
@@ -426,7 +426,7 @@ msgstr "Dies ist eine etwas weniger wilde, zweifarbige Variante der Magnolia Sch
 #. description of font in fonts/mai_en_fleur
 #: inkstitch-fonts-metadata.py:156
 msgid "Mai en Fleur AGS is a monogram font."
-msgstr ""
+msgstr "Mai En Fleur AGS ist eine Monogramm-Schriftart."
 
 #. description of font in fonts/malika
 #: inkstitch-fonts-metadata.py:158
@@ -436,12 +436,12 @@ msgstr "Malika ist eine arabische Satinschrift. Nicht obligatorische diakritisch
 #. description of font in fonts/mam_script
 #: inkstitch-fonts-metadata.py:160
 msgid "MAM Script is a script satin font. Every satin has zigzag underlay."
-msgstr ""
+msgstr "MAM Script ist eine Satin-Schrift in Handschrift-Optik. Jede Satinsäule hat eine Zick-Zack-Unterlage."
 
 #. description of font in fonts/manga_impact
 #: inkstitch-fonts-metadata.py:162
 msgid "Manga Impact is a manga like satin font."
-msgstr ""
+msgstr "Manga Impact ist eine Satin-Schrift die an Mangas angelehnt ist."
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:164
@@ -1268,14 +1268,18 @@ msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects.
 msgstr "Bitte rufe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten auf. Diese Erweiterung zeigt fehlerhafte Stellen an und gibt am rechten Seitenrand Vorschläge zum Lösen des Problems."
 
 #: lib/elements/empty_d_object.py:13
+msgid "EmptyD"
+msgstr ""
+
+#: lib/elements/empty_d_object.py:14
 msgid "There is an invalid object in the document without geometry information."
 msgstr "Es gibt ein ungültiges Objekt in diesem Dokument. Es enthält keine geometrischen Informationen."
 
-#: lib/elements/empty_d_object.py:15
+#: lib/elements/empty_d_object.py:16
 msgid "* Run Extensions > Ink/Stitch > Troubleshoot > Cleanup Document..."
 msgstr "* Führe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Dokument bereinigen... aus"
 
-#: lib/elements/empty_d_object.py:21
+#: lib/elements/empty_d_object.py:22
 msgid "Empty Path"
 msgstr "Pfad ohne Koordinaten"
 
@@ -1458,7 +1462,7 @@ msgstr "Konturfüllung"
 
 #: lib/elements/fill_stitch.py:156
 msgid "Cross Stitch"
-msgstr ""
+msgstr "Kreuzstich"
 
 #: lib/elements/fill_stitch.py:157 inx/inkstitch_select_elements.inx:58
 msgid "Guided Fill"
@@ -1849,68 +1853,69 @@ msgstr "Kreuz"
 
 #: lib/elements/fill_stitch.py:740
 msgid "Cross Flipped"
-msgstr ""
+msgstr "Kreuzstich (gedreht)"
 
 #: lib/elements/fill_stitch.py:741
 msgid "Half Cross"
-msgstr ""
+msgstr "Halber Kreuzstich"
 
 #: lib/elements/fill_stitch.py:742
 msgid "Half Cross Flipped"
-msgstr ""
+msgstr "Halber Kreuzstich (gedreht)"
 
 #: lib/elements/fill_stitch.py:743
 msgid "Upright Cross"
-msgstr ""
+msgstr "Aufrechter Kreuzstich"
 
 #: lib/elements/fill_stitch.py:744
 msgid "Upright Cross Flipped"
-msgstr ""
+msgstr "Aufrechter Kreuzstich (gedreht)"
 
 #: lib/elements/fill_stitch.py:745
 msgid "Double Cross"
-msgstr ""
+msgstr "Doppelter Kreuzstich"
 
 #: lib/elements/fill_stitch.py:750
 msgid "Cross stitch method"
-msgstr ""
+msgstr "Kreuzstich-Methode"
 
 #: lib/elements/fill_stitch.py:762
 msgid "Pattern size"
-msgstr ""
+msgstr "Mustergröße"
 
 #: lib/elements/fill_stitch.py:763
 msgid "Cross stitch pattern size in mm, x and y values are separated by a space. Only one input value returns a square pattern."
-msgstr ""
+msgstr "Kreuzstichmustergröße in mm. x- und y-Werte werden durch ein Leerzeichen getrennt. Ist nur ein Wert angegeben, ist das Muster quadratisch."
 
 #: lib/elements/fill_stitch.py:766 lib/elements/fill_stitch.py:799
 msgid "mm (x y)"
-msgstr ""
+msgstr "mm (x y)"
 
 #: lib/elements/fill_stitch.py:778
 msgid "Align grid with canvas"
-msgstr ""
+msgstr "Gitter an Arbeitsfläche ausrichten"
 
 #: lib/elements/fill_stitch.py:779
 msgid "This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.\n\n"
 "Disable this option to ensure, that this element stitches the same, independently on its position on the canvas."
-msgstr ""
+msgstr "Dies gewährleistet eine gute Ausrichtung benachbarter Kreuzstichbereiche zueinander. Es bedeutet aber auch, dass sich das Ergebnis ändern kann, wenn das Element verschoben wird und aus dem Raster fällt.\n\n"
+"Ist diese Option deaktiviert, wird das Element unabhängig von seiner Position auf der Arbeitsfläche immer gleich gestickt."
 
 #: lib/elements/fill_stitch.py:795
 msgid "Grid Offset"
-msgstr ""
+msgstr "Gitter-Versatz"
 
 #: lib/elements/fill_stitch.py:796
 msgid "Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y."
-msgstr ""
+msgstr "Verschiebt das Kreuzstichgitter um die angegebenen Werte. Die x- und y-Werte werden durch ein Leerzeichen getrennt. Nur ein Eingabewert verschiebt das Muster gleichmäßig in x- und y-Richtung."
 
 #: lib/elements/fill_stitch.py:811
 msgid "Fill coverage"
-msgstr ""
+msgstr "Füllabdeckung"
 
 #: lib/elements/fill_stitch.py:812
 msgid "Percentage of overlap for each cross with the fill area"
-msgstr ""
+msgstr "Prozentuale Überlappung für jeden Kreuzstich mit der Füllfläche"
 
 #: lib/elements/fill_stitch.py:824 lib/elements/satin_column.py:175
 #: lib/elements/satin_column.py:574
@@ -2609,8 +2614,8 @@ msgstr "flach"
 msgid "point"
 msgstr "spitz"
 
-#: lib/elements/text.py:13 lib/gui/lettering/option_panel.py:185
-#: inx/inkstitch_batch_lettering.inx:13
+#: lib/elements/text.py:13 lib/elements/text.py:23
+#: lib/gui/lettering/option_panel.py:185 inx/inkstitch_batch_lettering.inx:13
 msgid "Text"
 msgstr "Text"
 
@@ -3233,8 +3238,8 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Dieser Parameter wird gespeichert, wenn man auf \"Übernehmen und beenden\" klickt"
 
 #: lib/extensions/params.py:575 lib/extensions/sew_stack_editor.py:118
-#: lib/gui/edit_json/settings_panel.py:63 lib/gui/lettering/main_panel.py:57
-#: lib/gui/lettering_font_sample.py:70
+#: lib/gui/cross_stitch_helper.py:138 lib/gui/edit_json/settings_panel.py:63
+#: lib/gui/lettering/main_panel.py:57 lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:54
 #: lib/gui/simulator/simulator_preferences.py:53
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
@@ -3256,10 +3261,6 @@ msgstr "Anwenden und schließen"
 #: lib/extensions/params.py:879 lib/extensions/sew_stack_editor.py:552
 msgid "Embroidery Params"
 msgstr "Stickparameter"
-
-#: lib/extensions/pixelize_fill.py:28
-msgid "Please select one or more fill shapes to pixelize their outline."
-msgstr "Bitte mindestens ein Füllelement auswählen, um deren Außenkontur zu verpixeln."
 
 #: lib/extensions/print_pdf.py:135
 msgid "Closing..."
@@ -3532,8 +3533,8 @@ msgid "threadlist"
 msgstr "Garnliste"
 
 #: lib/gui/abort_message.py:38 lib/gui/apply_palette.py:64
-#: lib/gui/edit_json/help_panel.py:27 lib/gui/element_info.py:57
-#: lib/gui/lettering_font_sample.py:98
+#: lib/gui/cross_stitch_helper.py:178 lib/gui/edit_json/help_panel.py:27
+#: lib/gui/element_info.py:57 lib/gui/lettering_font_sample.py:98
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr "Mehr Informationen auf unserer Webseite:"
@@ -3566,23 +3567,22 @@ msgstr "Garnpaletten"
 msgid "Select color palette"
 msgstr "Farbpalette auswählen"
 
-#: lib/gui/apply_palette.py:44 lib/gui/edit_json/settings_panel.py:65
-#: lib/gui/lettering_font_sample.py:72
+#: lib/gui/apply_palette.py:44 lib/gui/cross_stitch_helper.py:140
+#: lib/gui/edit_json/settings_panel.py:65 lib/gui/lettering_font_sample.py:72
 #: lib/gui/satin_multicolor/main_panel.py:56
 #: lib/gui/simulator/simulator_preferences.py:55
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr "Anwenden"
 
-#: lib/gui/apply_palette.py:49 lib/gui/edit_json/main_panel.py:75
-#: lib/gui/element_info.py:42 lib/gui/lettering/main_panel.py:47
-#: lib/gui/lettering_font_sample.py:83
+#: lib/gui/apply_palette.py:49 lib/gui/cross_stitch_helper.py:160
+#: lib/gui/edit_json/main_panel.py:75 lib/gui/element_info.py:42
+#: lib/gui/lettering/main_panel.py:47 lib/gui/lettering_font_sample.py:83
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
 #: lib/gui/test_swatches.py:83 inx/inkstitch_apply_attribute.inx:24
 #: inx/inkstitch_apply_threadlist.inx:91 inx/inkstitch_auto_run.inx:25
 #: inx/inkstitch_auto_satin.inx:16 inx/inkstitch_batch_lettering.inx:72
-#: inx/inkstitch_break_apart.inx:14 inx/inkstitch_cleanup.inx:25
-#: inx/inkstitch_cross_stitch_grid.inx:16
+#: inx/inkstitch_break_apart.inx:19 inx/inkstitch_cleanup.inx:25
 #: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
 #: inx/inkstitch_display_stacking_order.inx:11
 #: inx/inkstitch_fill_to_satin.inx:24 inx/inkstitch_fill_to_stroke.inx:24
@@ -3598,9 +3598,9 @@ msgstr "Anwenden"
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
 #: inx/inkstitch_letters_to_font.inx:60 inx/inkstitch_outline.inx:25
-#: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_pixelize_fill.inx:16
-#: inx/inkstitch_png_realistic.inx:17 inx/inkstitch_png_simple.inx:18
-#: inx/inkstitch_redwork.inx:28 inx/inkstitch_remove_duplicated_points.inx:14
+#: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_png_realistic.inx:17
+#: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:28
+#: inx/inkstitch_remove_duplicated_points.inx:14
 #: inx/inkstitch_remove_embroidery_settings.inx:140
 #: inx/inkstitch_satin_to_stroke.inx:12 inx/inkstitch_select_elements.inx:80
 #: inx/inkstitch_stitch_plan_preview.inx:37
@@ -3618,6 +3618,81 @@ msgstr "Diese Erweiterung wendet die ähnlichsten Farben aus der ausgewählten F
 #: lib/gui/apply_palette.py:70 lib/gui/apply_palette.py:71
 msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
 msgstr "https://inkstitch.org/de/docs/thread-color/#farbpalette-anwenden"
+
+#: lib/gui/cross_stitch_helper.py:12
+msgid "Ink/Stitch - Cross stitch"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:41 lib/gui/edit_json/main_panel.py:74
+#: lib/gui/lettering_font_sample.py:40 lib/gui/simulator/view_panel.py:129
+#: print/templates/ui.html:5 print/templates/ui.html:15
+#: inx/inkstitch_lettering_generate_json.inx:90
+#: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: lib/gui/cross_stitch_helper.py:52
+msgid "Grid Settings"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:56
+msgid "Square grid"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:61
+msgid "Grid width (mm)"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:66
+msgid "Grid height (mm)"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:71
+msgid "Stitch_length:"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:87
+msgid "Apply grid settings"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:93
+msgid "Selected fill elements (params)"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:96
+msgid "Fill element outline (pixelize)"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:100
+msgid "Cross coverage (%)"
+msgstr "Abdeckung (%)"
+
+#: lib/gui/cross_stitch_helper.py:104
+msgid "Add nodes (grid width distance)"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:108
+msgid "Page grid"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:112
+msgid "Grid color"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:116
+msgid "Remove previous page grids"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:167
+msgid "This extension calculates the stitch length for a given grid size.\n\n"
+"* It can be applied to selected fill element as as parameter.\n"
+"* Fill outlines can be pixelized.\n"
+"* The grid can be applied as a page grid."
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:184 lib/gui/cross_stitch_helper.py:185
+msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch"
+msgstr ""
 
 #: lib/gui/edit_json/help_panel.py:19
 msgid "Feature to verify or update font information for an existing font."
@@ -3976,13 +4051,6 @@ msgstr "Stickeinstellungen"
 #: inx/inkstitch_lettering_font_sample.inx:3
 msgid "Font Sampling"
 msgstr "Zeichentabelle"
-
-#: lib/gui/edit_json/main_panel.py:74 lib/gui/lettering_font_sample.py:40
-#: lib/gui/simulator/view_panel.py:129 print/templates/ui.html:5
-#: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:90
-#: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
-msgid "Settings"
-msgstr "Einstellungen"
 
 #: lib/gui/lettering_font_sample.py:51
 msgid "Stitch direction"
@@ -4568,10 +4636,10 @@ msgstr "Testmuster erstellen"
 #: inx/inkstitch_apply_attribute.inx:17 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_batch_lettering.inx:9
 #: inx/inkstitch_break_apart.inx:8 inx/inkstitch_cleanup.inx:8
-#: inx/inkstitch_cross_stitch_grid.inx:8 inx/inkstitch_density_map.inx:8
-#: inx/inkstitch_display_stacking_order.inx:8 inx/inkstitch_fill_to_satin.inx:8
-#: inx/inkstitch_fill_to_stroke.inx:16 inx/inkstitch_gradient_blocks.inx:17
-#: inx/inkstitch_install.inx:8 inx/inkstitch_install_custom_palette.inx:8
+#: inx/inkstitch_density_map.inx:8 inx/inkstitch_display_stacking_order.inx:8
+#: inx/inkstitch_fill_to_satin.inx:8 inx/inkstitch_fill_to_stroke.inx:16
+#: inx/inkstitch_gradient_blocks.inx:17 inx/inkstitch_install.inx:8
+#: inx/inkstitch_install_custom_palette.inx:8
 #: inx/inkstitch_jump_to_stroke.inx:17 inx/inkstitch_jump_to_trim.inx:17
 #: inx/inkstitch_knockdown_fill.inx:17
 #: inx/inkstitch_lettering_along_path.inx:17
@@ -4581,8 +4649,8 @@ msgstr "Testmuster erstellen"
 #: inx/inkstitch_lettering_remove_kerning.inx:9
 #: inx/inkstitch_lettering_set_color_sort_index.inx:8
 #: inx/inkstitch_letters_to_font.inx:8 inx/inkstitch_outline.inx:8
-#: inx/inkstitch_palette_to_text.inx:17 inx/inkstitch_pixelize_fill.inx:8
-#: inx/inkstitch_redwork.inx:8 inx/inkstitch_remove_duplicated_points.inx:8
+#: inx/inkstitch_palette_to_text.inx:17 inx/inkstitch_redwork.inx:8
+#: inx/inkstitch_remove_duplicated_points.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:8
 #: inx/inkstitch_satin_to_stroke.inx:8 inx/inkstitch_stitch_plan_preview.inx:8
 #: inx/inkstitch_stroke_to_lpe_satin.inx:7
@@ -4933,7 +5001,6 @@ msgstr "Ink/Stitch Version: unbekannt"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
-#: inx/inkstitch_cross_stitch_grid.inx:13
 msgid "Color"
 msgstr "Farbe"
 
@@ -5726,9 +5793,8 @@ msgid "This extension tries to create a single stitch path through all selected 
 msgstr "Diese Erweiterung versucht, alle gewählten Satinsäulen ohne dazwischen liegende Sprungsstiche zu verbinden."
 
 #: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_batch_lettering.inx:77
-#: inx/inkstitch_break_apart.inx:20 inx/inkstitch_cleanup.inx:28
-#: inx/inkstitch_cross_stitch_grid.inx:19 inx/inkstitch_density_map.inx:29
-#: inx/inkstitch_display_stacking_order.inx:14
+#: inx/inkstitch_break_apart.inx:25 inx/inkstitch_cleanup.inx:28
+#: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
 #: inx/inkstitch_install_custom_palette.inx:17
 #: inx/inkstitch_knockdown_fill.inx:50
@@ -5739,8 +5805,7 @@ msgstr "Diese Erweiterung versucht, alle gewählten Satinsäulen ohne dazwischen
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
 #: inx/inkstitch_letters_to_font.inx:75 inx/inkstitch_outline.inx:28
-#: inx/inkstitch_pixelize_fill.inx:19 inx/inkstitch_redwork.inx:31
-#: inx/inkstitch_remove_duplicated_points.inx:24
+#: inx/inkstitch_redwork.inx:31 inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_satin_to_stroke.inx:15
 #: inx/inkstitch_stitch_plan_preview.inx:45
 #: inx/inkstitch_transform_elements.inx:19 inx/inkstitch_troubleshoot.inx:26
@@ -5854,29 +5919,37 @@ msgstr "Füllobjekte aufspalten"
 msgid "Complex"
 msgstr "Komplex"
 
-#: inx/inkstitch_break_apart.inx:15
+#: inx/inkstitch_break_apart.inx:17
+msgid "Threshold (px²)"
+msgstr ""
+
+#: inx/inkstitch_break_apart.inx:17
+msgid "Removes shapes and holes smaller than this"
+msgstr ""
+
+#: inx/inkstitch_break_apart.inx:20
 msgid "This extension will try to repair fill shapes and break them apart if necessary."
 msgstr "Diese Erweiterung versucht Füllstich-Elemente zu reparieren und wenn nötig, auseinander zu brechen."
 
-#: inx/inkstitch_break_apart.inx:16
+#: inx/inkstitch_break_apart.inx:21
 msgid "Holes will be retained."
 msgstr "Löcher bleiben erhalten."
 
-#: inx/inkstitch_break_apart.inx:18
+#: inx/inkstitch_break_apart.inx:23
 msgid "Use on simple or complex shapes with overlapping subpaths."
 msgstr "Kann auf einfache oder komplexe Formen mit sich gegenseitig überschneidenden Unterpfaden angewandt werden."
 
-#: inx/inkstitch_break_apart.inx:21
+#: inx/inkstitch_break_apart.inx:26
 msgid "https://inkstitch.org/docs/fill-tools/#break-apart-fill-objects"
 msgstr "https://inkstitch.org/de/docs/fill-tools/#farbverlauf-in-blöcke-aufteilen"
 
-#: inx/inkstitch_break_apart.inx:28
+#: inx/inkstitch_break_apart.inx:33
 msgid "Break apart and repair (broken) fill shapes"
 msgstr "Repariert Füllelemente und teilt sie in einzelne stickbare Bereiche auf"
 
-#: inx/inkstitch_break_apart.inx:31 inx/inkstitch_cross_stitch_grid.inx:30
+#: inx/inkstitch_break_apart.inx:36 inx/inkstitch_cross_stitch_helper.inx:12
 #: inx/inkstitch_gradient_blocks.inx:12 inx/inkstitch_knockdown_fill.inx:12
-#: inx/inkstitch_pixelize_fill.inx:30 inx/inkstitch_tartan.inx:12
+#: inx/inkstitch_tartan.inx:12
 msgid "Tools: Fill"
 msgstr "Werkzeuge: Füllung"
 
@@ -5968,36 +6041,12 @@ msgstr "Befehle"
 msgid "View"
 msgstr "Ansicht"
 
-#: inx/inkstitch_cross_stitch_grid.inx:3
-msgid "Setup Cross Stitch Grid"
-msgstr "Kreuzstich-Gitter anlegen"
-
-#: inx/inkstitch_cross_stitch_grid.inx:10 inx/inkstitch_pixelize_fill.inx:10
-msgid "Cross Size X"
+#: inx/inkstitch_cross_stitch_helper.inx:3
+msgid "Cross Stitch Helper"
 msgstr ""
 
-#: inx/inkstitch_cross_stitch_grid.inx:12 inx/inkstitch_pixelize_fill.inx:12
-msgid "Cross Size Y"
-msgstr ""
-
-#: inx/inkstitch_cross_stitch_grid.inx:14
-msgid "Remove previous cross stitch grids"
-msgstr "Vorhandene Kreuzstich-Gitter entfernen"
-
-#: inx/inkstitch_cross_stitch_grid.inx:17
-msgid "Use this extension to create grid lines suited for cross stitching."
-msgstr "Nutze diese Erweiterung, um ein Gitter für Kreuzstichmuster anzulegen."
-
-#: inx/inkstitch_cross_stitch_grid.inx:20
-msgid "https://inkstitch.org/docs/fill-tools//#setup-cross-stitch-grid"
-msgstr "https://inkstitch.org/de/docs/fill-tools/#kreuzstich-gitter-anlegen"
-
-#: inx/inkstitch_cross_stitch_grid.inx:27
-msgid "Setup a cross stitch grid for a specified stitch length"
-msgstr ""
-
-#: inx/inkstitch_cross_stitch_grid.inx:31 inx/inkstitch_pixelize_fill.inx:31
-msgid "Cross stitch"
+#: inx/inkstitch_cross_stitch_helper.inx:9
+msgid "Cross stitch: helper to setup and apply grid size"
 msgstr ""
 
 #: inx/inkstitch_cut_satin.inx:3
@@ -8067,30 +8116,6 @@ msgstr "Parameter"
 #: inx/inkstitch_params.inx:9
 msgid "Adapt embroidery settings"
 msgstr "Stickeinstellungen anpassen"
-
-#: inx/inkstitch_pixelize_fill.inx:3
-msgid "Pixelize Fill"
-msgstr "Verpixeln"
-
-#: inx/inkstitch_pixelize_fill.inx:13
-msgid "Cross coverage (%)"
-msgstr "Abdeckung (%)"
-
-#: inx/inkstitch_pixelize_fill.inx:14
-msgid "Add nodes at grid intersections"
-msgstr ""
-
-#: inx/inkstitch_pixelize_fill.inx:17
-msgid "Use this extension to pixelize a fill area."
-msgstr "Nutze diese Erweiterung, um eine Füllfläche zu verpixeln."
-
-#: inx/inkstitch_pixelize_fill.inx:20
-msgid "https://inkstitch.org/docs/fill-tools//#pixelize-fill"
-msgstr "https://inkstitch.org/de/docs/fill-tools/#verpixeln"
-
-#: inx/inkstitch_pixelize_fill.inx:27
-msgid "Pixelizes the outline of a fill"
-msgstr "Verpixelt die Außenkontur eines Füllelements"
 
 #: inx/inkstitch_png_realistic.inx:3
 msgid "PNG file output (realistic)"
