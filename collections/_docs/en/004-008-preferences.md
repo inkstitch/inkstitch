@@ -1,7 +1,7 @@
 ---
 title: "Preferences"
 permalink: /docs/preferences/
-last_modified_at: 2024-05-22
+last_modified_at: 2025-12-29
 toc: true
 ---
 The preferences are found in `Extensions > Ink/Stitch > Preferences`.
@@ -56,6 +56,9 @@ It also affects **Satin stiches** and threfore lettering fonts. You do not want 
 
 **W6 machine owners:** Set your global minimum stitch length value at least to 0.3 mm, otherwise your stitch out may have missing stitches where you wouldn't expect them.
 {: .notice--warning }
+
+### For this document only : Rotate on export
+This option rotates the embroidery 90°. Is useful when the embroidery  machine does not automatically rotate to fit the hoop.
 
 ### Global only: Cache size (mb)
 
