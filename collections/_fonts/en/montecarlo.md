@@ -25,4 +25,4 @@ font_directories:
 
 
 
-{%- include end_of_font_page.html font = "Montecarlo" -%}
+{%- include end_of_font_page.html -%}
