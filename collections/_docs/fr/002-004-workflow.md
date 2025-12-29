@@ -1,7 +1,7 @@
 ---
 title: "Organisation du travail"
 permalink: /fr/docs/workflow/
-last_modified_at: 2023-04-19
+last_modified_at: 2025-12-29
 toc: true
 ---
 ![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)
@@ -50,11 +50,23 @@ Lorsque l’image doit être tracée à la main, utilisez l’outil de dessin à
 ### Texte
 Ink/Stitch vous offre la possibilité d'utiliser des polices prêtes à broder qui peuvent être inserrées dans votre document via `Extensions > Ink/Stitch > Lettrage`
 
-Si vous souhaitez utiliser une  police non présente dans le lettrage, choisissez la avec soin. 
-Il est assez difficile de faire en sorte que le satin soit beau quand il fait 1 mm de large ou moins. Les polices sans empattement (sans serif) ont tendance à être les plus faciles à numériser. Pour un texte de moins de 4 mm de hauteur, il vous sera très difficile de donner une belle apparence aux lettres minuscules. Par conséquent, envisagez des majuscules. Les polices Cursive / Script peuvent bien fonctionner, mais ce ne sera pas aussi facile que vous le pensez.
+Si vous souhaitez utiliser une  police non présente dans le lettrage, choisissez la avec soin : il est assez difficile de faire en sorte que le satin soit beau quand il fait 1 mm de large ou moins. 
+
+Les polices sans empattement (sans serif) ont tendance à être les plus faciles à numériser. 
+
+Pour un texte de moins de 4 mm de hauteur, il vous sera très difficile de donner une belle apparence aux lettres minuscules. Par conséquent, envisagez des majuscules. 
+
+Les polices Cursive / Script peuvent bien fonctionner, mais ce ne sera pas aussi facile que vous le pensez.
+
+Ink/Stitch contient des fontes  prêtes à être brodées.
+
+Vous pouvez inserrer ces fontes dans votre document en selectionant **Extensions > Ink/Stitch > Lettrage**. 
+
+Cet outil crée des objects textuels déjà optimisés pour la broderie.
 
 
-## ![Vectorize](/assets/images/docs/workflow-icon-vectorize.png) Etape 2: Convertir en vecteur de broderie et paramétrer
+
+## ![Vectorize](/assets/images/docs/workflow-icon-vectorize.png) Etape 2: Convertir en vecteurs pour la broderie et paramétrer
 
 À ce stade, vous aurez une représentation graphique vectorielle de votre image. La prochaine chose à faire est de convertir vos vecteurs en un type compris par Ink/Stitch.
 
@@ -89,41 +101,59 @@ Dégrouper des objets fonctionne comme suit:
 * Sélectionnez le(s) groupe(s)
 * Appuyez sur <key>Ctrl</key><key>Shift</key><key>G</key> pour les dégrouper
 
+### Remarque concernant les types de points
 
+Ink/Stitch prend en charge plusieurs types de points. Les trois principales catégories sont disponibles :
 
-### Types de point
+1. **Points de remplissage**
 
-Ink/Stitch propose différents types de points. Selon le type de point que vous souhaitez utiliser, vous devez définir la couleur de remplissage ou les paramètres de trait avec`Objet > Fond et contour` (<key>Ctrl</key><key>Shift</key><key>F</key>).
+Ces points remplissent une forme fermée. Ils sont utilisés pour les grandes surfaces et créent un effet texturé, tout en assurant une bonne couverture et en préservant la souplesse du tissu.
+
+2. **Traits : points de contour**
+
+Ces points suivent la direction d'un tracé. Ils sont utilisés pour les contours, les lignes fines et les accents décoratifs, lorsqu'une ligne de point étroite est plus appropriée qu'une forme pleine.
+
+3. **Points satin**
+
+Ces points recouvrent les formes étroites avec des points lisses et parallèles. Ils parcourent la forme en va-et-vient, créant un aspect brillant et en relief, idéal pour les bordures, les lettres et les détails fins.
+
+Vous pouvez configurer le comportement des points via **Objet > Fond et contour** ou en appuyant sur <key>Ctrl</key><key>Shift</key><key>F</key>. Consultez le tableau ci-dessous et suivez les liens pour apprendre à configurer correctement chaque type de point.
+
 Regardez ce tableau et suivez les liens pour comprendre comment créer un type de point spécifique:
 
 Objet chemin | Type de point
 ---|---
-Trait en pointillé|[point droit](/fr/docs/stitches/running-stitch/), [point manuel](/fr/docs/stitches/manual-stitch/) , [point triple](/fr/docs/stitches/bean-stitch/), [broderie ondulée](/fr/docs/stitches/ripple/)
-Trait en continu |[point zig-zag](/fr/docs/stitches/zigzag-stitch/), [broderie ondulée](/fr/docs/stitches/ripple/)
-Deux traits combinés (avec traverses optionnelles) | [colonne satin](/fr/docs/stitches/satin-column), [point en E](/fr/docs/stitches/e-stitch), [broderie ondulée](/fr/docs/stitches/ripple/)
-Chemin fermé avec une couleur de remplissage | [point de remplissage](/fr/docs/stitches/fill-stitch/), [remplissage selon contour](/fr/docs/stitches/contour-fill/), [remplissage guidé](/fr/docs/stitches/guided-fill/),  [remplissage en méandres](/fr/docs/stitches/meander-fill/), [remplissage guidé](/fr/docs/stitches/circular-fill/) 
-{: .equal-tables }
+Trait en pointillé ou continu|[point droit](/fr/docs/stitches/running-stitch/), [point manuel](/fr/docs/stitches/manual-stitch/) , [point triple](/fr/docs/stitches/bean-stitch/), [point zig-zag](/fr/docs/stitches/zigzag-stitch/), [broderie ondulée](/fr/docs/stitches/ripple/)
+Deux traits combinés (avec traverses optionnelles) ou trait simple d'épaisseur supérieure à 0.3mm| [colonne satin](/fr/docs/stitches/satin-column), [point en E](/fr/docs/stitches/e-stitch), [broderie ondulée](/fr/docs/stitches/ripple/)
+Chemin fermé avec une couleur de remplissage | [point de remplissage](/fr/docs/stitches/fill-stitch/), [remplissage selon contour](/fr/docs/stitches/contour-fill/), [remplissage guidé](/fr/docs/stitches/guided-fill/),  [remplissage en méandres](/fr/docs/stitches/meander-fill/), [remplissage guidé](/fr/docs/stitches/circular-fill/), [point de croix](/docs/stitches/cross-stitch/)
 {: .equal-tables }
 
 ### Paramétrer
 
-Définir les paramètres en utilisant `Extensions > Ink/Stitch  > Paramètres`. Vous trouvez une description pour chaque paramètre dans la section [Paramètres](/fr/docs/params/) de cette documentation. Chaque fois que vous modifiez les valeurs des paramètres, vous pourrez voir le résultat simulé dans une fenêtre d'aperçu. Une fois que vous êtes satisfait du résultat, cliquez sur `Appliquer et fermer` pour enregistrer les valeurs dans votre fichier SVG.
+La boîte de dialogue **Extensions > Ink/Stitch > Params** permet de contrôler la génération des points de broderie par Ink/Stitch pour les objets sélectionnés. Les paramètres varient selon le type de point et incluent des valeurs telles que la longueur, la densité, la sous-couche, la direction et la compensation d'étirement.
 
+Chaque paramètre est accompagné d'une brève description. Des explications plus détaillées sont disponibles dans la section [Paramètres](/fr/docs/params/) de cette documentation. Consultez ces références pour comprendre l'impact des modifications sur la qualité et l'apparence des points.
 
-A ce stade, enregistrez votre fichier SVG. Si Inkscape commence à ralentir (en raison d'une fuite de mémoire Inkscape), redémarrez-le avant de continuer.
+Lorsque vous modifiez les valeurs des paramètres, Ink/Stitch affiche un aperçu. Cet aperçu vous permet d'évaluer le résultat avant d'appliquer les modifications au motif. Selon la taille et la complexité du fichier, l'affichage de l'aperçu peut prendre un certain temps. Ajustez les valeurs jusqu'à ce que l'aperçu corresponde au résultat souhaité, puis sélectionnez **Appliquer et fermer**. Cette action enregistre les valeurs des paramètres directement dans le fichier SVG.
+
+Une fois les paramètres mis à jour, enregistrez votre fichier SVG. Si Inkscape devient lent ou ne répond plus, fermez-le et rouvrez-le avant de continuer. Le redémarrage peut améliorer les performances lors de projets plus longs ou plus complexes.
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-order.png) Etape 3: Ordonner le plan de broderie  & Mettre des commandes
 
 ### Ordre de broderie
 
-Lorsque vous concevez des motifs pour des machines à broder qui ne peuvent pas couper le fil au milieu de la broderie ou changer de couleur automatiquement, vous souhaiterez optimiser les chemin de points pour réduire ou masquer les sauts de points et effectuer le minimum de changement de fil. Essayez également d'éviter autant que possible de broder sur les sauts de points, car il est très pénible de les couper à la main quand vous le faites.
+Lorsque vous concevez des motifs pour des machines à broder qui ne peuvent pas couper le fil au milieu de la broderie ou changer de couleur automatiquement, vous souhaiterez optimiser les chemin de points pour réduire ou masquer les sauts de points et effectuer le minimum de changements de fil. Essayez également d'éviter autant que possible de broder sur les sauts de points, car il est très pénible de les couper à la main quand vous le faites.
 
-L'ordre des points affecte également la façon dont le tissu est étiré et rétréci. Chaque point déformera le tissu et vous devrez en tenir compte et compenser en conséquence. [Voir plus](/tutorials/push-pull-compensation/)
+L'ordre des points affecte également la façon dont le tissu est étiré et rétréci. Chaque point déformera le tissu et vous devrez en tenir compte et compenser en conséquence. [Pour en savoir plus](/tutorials/push-pull-compensation/)
 
 Une fois que vous avez créé tous les vecteurs, il est temps de tout mettre dans le bon ordre. Optimisez votre ordre pour minimiser les changements de couleur et réduire ou masquer les sauts de points.
 
-Ink/Stitch brodera les objets dans l'ordre exact dans lequel ils apparaissent dans votre document SVG, du plus bas au plus élevé dans l'ordre d'empilement.
-Si la distance entre deux objets est longue, Ink/Stitch ajoutera automatiquement un point de saut entre eux. Il utilise la couleur de l'objet pour déterminer la couleur du fil. Par conséquent, si vous changez de couleur d'un objet à l'autre, une instruction de changement de fil sera ajoutée au fichier de sortie de la broderie.
+Vous pouvez également utiliser la fonction de tri d'Ink/Stitch pour réorganiser les objets selon votre ordre de sélection. Consultez [Réempiler les objets selon l'ordre de sélection](/fr/docs/edit/#re-stack-objects-in-order-of-selection) pour plus de détails.
+
+
+Ink/Stitch traite les objets dans l'ordre d'apparition dans le panneau des objets, en commençant par le bas de la pile et en remontant. Cet ordre détermine directement la façon dont le motif est brodé sur la machine à broder. Le dernier objet de la liste sera brodé en premier et le premier en dernier.
+
+Lorsque la distance entre deux objets est importante, Ink/Stitch insère automatiquement un point de liaison pour déplacer l'aiguille entre eux. La couleur du fil est déterminée par la couleur de l'objet ; ainsi, un changement de couleur d'un objet à l'autre entraîne un changement de fil dans le fichier de broderie exporté.
 
 
 Ink/Stitch vous offre plusieurs outils pour vous aider à optimiser l'ordre de broderie :
@@ -141,25 +171,48 @@ Ink/Stitch vous offre plusieurs outils pour vous aider à optimiser l'ordre de b
 {: .notice--info }
 
 ### Commandes
-[Commandes](/fr/docs/commands/) aide également à optimiser votre chemin de points. Vous pouvez définir les points de début et de fin d'un remplissage ou d'un arrangement automatique, déplacer le cadre dans des positions définies , ajouter des commandes de coupe, etc.
+[Commandes](/fr/docs/commands/) aide également à optimiser votre chemin de points. 
+
+Ces outils permettent de définir les points de départ et d'arrivée, de déplacer le cadre à broder et d'ajouter des instructions de coupe. L'utilisation des commandes offre un contrôle plus précis sur la broderie. Elles permettent de définir les points de départ et d'arrivée, de contrôler les coupes, les sauts, les arrêts et les changements de couleur, et de déplacer le cadre à broder. L'utilisation des commandes contribue à réduire sauts de fil visibles, à limiter les coupes manuelles et à améliorer la fluidité générale de la broderie.
+
+
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-visualize.png)  Etape 4: Visualiser
 
-Ink/Stitch prend en charge trois façons de prévisualiser votre conception:
+Ink/Stitch propose trois modes de prévisualisation de votre motif avant exportation :
 
-* [Simulateur](/fr/docs/simulate/)
-* [Aperçu d'impression](/fr/docs/print/)
-* [Affichage du plan de broderie](/fr/docs/import-export/#method-2-display-stitch-plan) 
+- [Simulateur ](/fr/docs/visualize/#simulator)
+
+Affiche la broderie étape par étape, avec un effet tissu optionnel.
+
+- [Aperçu avant impression](/fr/docs/print-pdf/)
+
+Crée un aperçu imprimable du motif, utile pour choisir les couleurs, la taille et l’emplacement.
+
+- [Affichage du plan de broderie](/fr/docs/visualize/#stitch-plan-preview)
+
+Affiche l’ordre et les tracés des points directement dans le document. Vous pouvez annuler cet affichage avec **Ctrl+Z**.
+
+
+
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-export.png) Etape 5: Enregistrer le fichier broderie
 
-Une fois que tout est dans le bon ordre, lancez  `Fichier > Enregistrer sous...` pour  [exporter](/fr/docs/import-export/) dans un format de fichier supporté par votre machine. La plupart des machines peuvent prendre en charge le format DST et certaines machines Brother préfèrent le PES. **N'oubliez pas de sauvegarder également votre fichier au format SVG. Sinon, il sera difficile de changer les détails plus tard.**
+Une fois que tout est dans le bon ordre, lancez  `Fichier > Enregistrer sous...` pour  [exporter](/fr/docs/import-export/) dans un format de fichier supporté par votre machine. La plupart des machines peuvent prendre en charge le format DST et certaines machines Brother préfèrent le PES. 
+
+**N'oubliez pas de sauvegarder également votre fichier au format SVG. Sinon, il sera difficile de changer les détails plus tard.**
 
 ## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Etape 6: Test de broderie
 
-Il y a toujours place à l'amélioration! Pour tester votre conception, préparez un morceau de tissu le plus proche possible de votre tissu final. Utilisez le même stabilisateur et le même tissu, si possible. Pour les t-shirts, essayez de trouver un tissu similaire (généralement tricoté). Ces tissus ont besoin de beaucoup de stabilisation.
-Brodez le motif en regardant la machine pour vous assurer qu'il n'y a pas de surprises. Faites attention aux espaces entre des zones qui indiquent que le tissu a été déformé. Recherchez également les zones où les points se superposent trop et où la machine a du mal à coudre, ce qui indique que la densité de points est trop élevée.
-## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Etape 7+: Optimisation
-Ajustez votre motif pour tenir compte des problèmes décelés. Faites un nouvel essai.
+Il y a toujours place à l'amélioration!
 
-Espérons que cela ne prendra que quelques essais pour obtenir ce que vous souhaitez. 
+Les tests permettent d'identifier les axes d'amélioration. Préparez un tissu similaire au tissu final. Utilisez le même stabilisateur et le même type de tissu. Pour les t-shirts, choisissez un jersey similaire, car ce type de tissu nécessite une stabilisation importante.
+
+Brodez le motif en observant la machine. Repérez les espaces vides qui pourraient indiquer une déformation du tissu. Vérifiez également les zones où les points sont trop serrés et où la machine peine à coudre. Ces signes indiquent généralement une densité de points trop élevée et signalent la nécessité d'ajustements avant la production finale.
+
+
+## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Etape 7+: Optimisation
+
+Après l'essai, revenez au motif et ajustez les paramètres si nécessaire. Plusieurs itérations sont souvent nécessaires pour obtenir le résultat souhaité, et de petites améliorations peuvent considérablement optimiser la qualité et l'aspect des points.
+
+
