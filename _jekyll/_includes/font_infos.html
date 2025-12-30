@@ -9,12 +9,12 @@
 </p>
 </div>
 {% endfor %} 
-<h2><Glyphs</h2>
+<h2>Glyphs</h2>
 
 {%- for sub_font in page.data_title -%}
   {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
   <h3>  {{ sub_font_data.name }} </h3>
- This font contains {{ sub_font_data.glyphs.size }} glyphs:
+ {{ sub_font_data.name }} contains {{ sub_font_data.glyphs.size }} glyphs:
 
 {{ sub_font_data.glyphs | sort | join: ' ' }}
 
