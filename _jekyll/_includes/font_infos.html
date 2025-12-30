@@ -33,8 +33,8 @@
 <p>If you try to further decrease or increase the font size outside the tool, the result might not embroider correctly.</p>
 
 The tool will allow you to scale {{ sub_font_data.name }} down to {{ sub_font_data.min_scale | times: 100 | floor }}%  for a size of approximatively 
-{{ sub_font_data.size | times: sub_font_data.min_scale }} mm ({{ sub_font_data.size | times: sub_font_data.min_scale | times:0.039 }} in),
+{{ sub_font_data.size | times: sub_font_data.min_scale }} mm ({{ sub_font_data.size | times: sub_font_data.min_scale | times:0.039 |round:2}} in),
 and up to {{ sub_font_data.max_scale | times: 100 | floor }}%  for a size of approximatively 
-{{ sub_font_data.size | times: sub_font_data.max_scale }} mm ({{ sub_font_data.size | times: sub_font_data.max_scale | times:0.039  }} in).
+{{ sub_font_data.size | times: sub_font_data.max_scale }} mm ({{ sub_font_data.size | times: sub_font_data.max_scale | times:0.039 |round:2}} in).
 
 {% endfor %}
