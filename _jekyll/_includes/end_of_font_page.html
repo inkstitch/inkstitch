@@ -3,9 +3,6 @@
 {%- for sub_font in page.data_title -%}
   {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
   {% assign base_url = "https://github.com/inkstitch/embroidery-fonts/blob/main/src/" %}
-  {% capture licence_url %}
-{{ base_url }}{{sub_font}}/LICENSE
-  {% endcapture %}
   {% assign original_font = site.data.fonts[sub_font].font.original_font}
 
 <p>
@@ -14,7 +11,7 @@
 </p>
 
 <p>
-    <a href="{{ licence_url }}"> Download {{ sub_font_data.name }} licence </a>
+    <a href="{{ base_url }}"> Download {{ sub_font_data.name }} licence </a>
 </p>
 
 {% endfor %}
