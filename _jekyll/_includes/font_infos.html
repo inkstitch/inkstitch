@@ -20,6 +20,20 @@
 
 {: .font-glyphs }
 
+<h2>Dimensions</h2>
+{%- for sub_font in page.data_title -%}
+  {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
+  <h3>  {{ sub_font_data.name }} </h3>
+<p>
+When using the lettering tool, some scaling of the font is allowed. If you try to further decrease or increase the font size outside of the tool,
+the result might not embroider correctly. 
+</p>
+<p>
+The tool will allow you to scale down to {{ sub_font_data.min_scale | times: 100 | floor }}%  for a size of approximatively {{ sub_font_data.size | times: sub_font_data.min_scale }} mm tall;
+and up to {{ sub_font_data.max_scale | times: 100 | floor }}%  for a size of approximatively {{ sub_font_data.size | times: sub_font_data.max_scale }} mm).
+
+</p>
+
 {% endfor %}
 
 
