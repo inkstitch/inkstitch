@@ -12,7 +12,7 @@
 
 <div id="glyphs">
 <h2>Glyphs</h2>
-<p>Il y a {{ page.data_title.size }} fontes ici</p>
+<p></p>
 {%- assign nb_fonts =page.data_title.size -%}
 {%- for sub_font in page.data_title -%}
   {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
@@ -32,12 +32,15 @@
 <h2>Scaling</h2>
 {%- for sub_font in page.data_title -%}
   {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
-  <h3>  {{ sub_font_data.name }} </h3>
+  {%- if nb_fonts > 1 -%}
+      <h3>  {{ sub_font_data.name }} </h3>
+  {%- endif -%}
 <p>
-When using the lettering tool, scaling of the font is controled allowing a scaling percentage range. 
-<br/>
-If you try to further decrease or increase the font size outside of the tool, the result might not embroider correctly. 
-<br/>
+When using the lettering tool, scaling of the font is controlled by allowing a scaling percentage range. 
+<p/>
+<p>
+If you try to further decrease or increase the font size outside the tool, the result might not embroider correctly. 
+<p/>
 The tool will allow you to scale {{ sub_font_data.name }} down to {{ sub_font_data.min_scale | times: 100 | floor }}%  for a size of approximatively 
 {{ sub_font_data.size | times: sub_font_data.min_scale }} mm ({{ sub_font_data.size | times: sub_font_data.min_scale | times:0.039 }} in),
 and up to {{ sub_font_data.max_scale | times: 100 | floor }}%  for a size of approximatively 
