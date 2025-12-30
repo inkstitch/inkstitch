@@ -7,7 +7,16 @@
      alt="{{ page.title }} "
      style="height:{{ image.height }}" >
 </p>
+
+ <p class="font-library-preview-image">
+  {%- if {{ immage.height }} < 15 -%}
+  <img src="{{ image.url }}" alt="{{page.title}} Preview">/p>
+  {%- else -%}
+      <img src="{{ image.url }}" alt="{{page.title}} Preview" style="height:{{ image.height }}mm" data-image_height="{{ image.height }}mm">
+  {%- endif -%}
+  </p>
 {% endfor %} 
+
 
 <h2>Glyphs</h2>
 
