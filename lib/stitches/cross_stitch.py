@@ -400,12 +400,12 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, max_stitch_le
         while shortening travel paths and adapting the travel edges to the crosses
     '''
     stitches = []
-    if not path[0].is_segment():
+    if not path[0].is_original_segment():
         stitches.append(Stitch(*path[0].nodes[0]))
 
     for i, edge in enumerate(path):
         check_stop_flag()
-        if edge.is_segment():
+        if edge.is_original_segment():
             current_edge = fill_stitch_graph[edge[0]][edge[-1]]['segment']
             path_geometry = current_edge['geometry']
 
@@ -497,9 +497,14 @@ def collapse_travel_edges(result, ending_point, last_pass):
         last_travel_stitches.append(stitch)
         # add to stitches
         if 'auto_fill_travel' not in stitch.tags:
-            last_travel_stitches.append(stitch)
-            new_sitches.extend(last_travel_stitches)
-            last_travel_stitches = []
+            if 'fill_row_end' in stitch.tags:
+                new_sitches.extend(last_travel_stitches)
+                last_travel_stitches = [stitch]
+            else:
+                last_travel_stitches.append(stitch)
+                new_sitches.extend(last_travel_stitches)
+                last_travel_stitches = []
+
     if last_travel_stitches and ending_point and last_pass:
         new_sitches.extend(last_travel_stitches)
     return new_sitches

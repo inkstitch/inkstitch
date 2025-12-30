@@ -66,6 +66,8 @@ class PathEdge(object):
     def is_segment(self):
         return self.key.startswith(self.SEGMENT_KEY)
 
+    def is_original_segment(self):
+        return self.key == self.SEGMENT_KEY
 
 @debug.time
 def auto_fill(shape,
