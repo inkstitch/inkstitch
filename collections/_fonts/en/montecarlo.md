@@ -14,7 +14,7 @@ data_title:
 {% include font_infos.html %}
 
 
-## How to use the alternate glyphs
+<h2>How to use the alternate glyphs</h2>
 As you can see in the Glyph list above, {{ page.title }} contains a lot of alternate glyphs. 
 To use them, simply type their full name (as it appears in the glyph list, don't use the <key>Alt</key> key) in the lettering tool.
 
