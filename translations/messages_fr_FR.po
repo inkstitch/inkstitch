@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-29 02:02+0000\n"
-"PO-Revision-Date: 2025-12-29 02:02\n"
+"POT-Creation-Date: 2025-12-30 01:53+0000\n"
+"PO-Revision-Date: 2025-12-30 01:53\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 02:02+0000\n"
+"POT-Creation-Date: 2025-12-30 01:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr "AGS Γαραμου Garamond est une police en colonne satin qui contient
 
 #. description of font in fonts/alchemy
 #: inkstitch-fonts-metadata.py:6
-msgid "M50"
+msgid "Alchemy is a satin font with a twist !"
 msgstr ""
 
 #. description of font in fonts/allegria20
@@ -1267,7 +1267,7 @@ msgstr "Merci d'exécuter Extensions > Ink/Stitch > Résolution de problèmes > 
 
 #: lib/elements/empty_d_object.py:13
 msgid "EmptyD"
-msgstr ""
+msgstr "EmptyD"
 
 #: lib/elements/empty_d_object.py:14
 msgid "There is an invalid object in the document without geometry information."
@@ -1852,68 +1852,69 @@ msgstr "Croix"
 
 #: lib/elements/fill_stitch.py:740
 msgid "Cross Flipped"
-msgstr ""
+msgstr "Croix Retournée"
 
 #: lib/elements/fill_stitch.py:741
 msgid "Half Cross"
-msgstr ""
+msgstr "Demi-croix"
 
 #: lib/elements/fill_stitch.py:742
 msgid "Half Cross Flipped"
-msgstr ""
+msgstr "Demi-croix Retournée"
 
 #: lib/elements/fill_stitch.py:743
 msgid "Upright Cross"
-msgstr ""
+msgstr "Croix Horizontale"
 
 #: lib/elements/fill_stitch.py:744
 msgid "Upright Cross Flipped"
-msgstr ""
+msgstr "Croix Horizontale Retournée"
 
 #: lib/elements/fill_stitch.py:745
 msgid "Double Cross"
-msgstr ""
+msgstr "Croix Double"
 
 #: lib/elements/fill_stitch.py:750
 msgid "Cross stitch method"
-msgstr ""
+msgstr "Méthode de point de croix"
 
 #: lib/elements/fill_stitch.py:762
 msgid "Pattern size"
-msgstr ""
+msgstr "Dimension des cellules"
 
 #: lib/elements/fill_stitch.py:763
 msgid "Cross stitch pattern size in mm, x and y values are separated by a space. Only one input value returns a square pattern."
-msgstr ""
+msgstr "Taille des cellules de point de croix en mm, deux valeurs x, y séparées par espace définissent la largeur et la hauteur de la cellule ; une seule valeur définit une cellule carrée."
 
 #: lib/elements/fill_stitch.py:766 lib/elements/fill_stitch.py:799
 msgid "mm (x y)"
-msgstr ""
+msgstr "mm (x y)"
 
 #: lib/elements/fill_stitch.py:778
 msgid "Align grid with canvas"
-msgstr ""
+msgstr "Aligner la grille avec le canevas"
 
 #: lib/elements/fill_stitch.py:779
 msgid "This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.\n\n"
 "Disable this option to ensure, that this element stitches the same, independently on its position on the canvas."
-msgstr ""
+msgstr "Cela garantit un bon alignement des zones de point de croix adjacentes, mais cela signifie également que le résultat peut varier si l'élément est déplacé hors de la grille.\n\n"
+"Désactivez cette option pour que cet élément soit brodé de la même manière, quelle que soit sa position sur le canevas."
 
 #: lib/elements/fill_stitch.py:795
 msgid "Grid Offset"
-msgstr ""
+msgstr "Décalage de la grille"
 
 #: lib/elements/fill_stitch.py:796
 msgid "Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y."
-msgstr ""
+msgstr "Décale la grille de point de croix selon les valeurs indiquées. Les valeurs X et Y sont séparées par un espace. Une seule valeur saisie décale le motif uniformément selon les axes x et y."
 
 #: lib/elements/fill_stitch.py:811
 msgid "Fill coverage"
-msgstr ""
+msgstr "Couverture du remplissage"
 
 #: lib/elements/fill_stitch.py:812
 msgid "Percentage of overlap for each cross with the fill area"
-msgstr ""
+msgstr "Pourcentage de chevauchement de chaque croix avec la zone de remplissage"
 
 #: lib/elements/fill_stitch.py:824 lib/elements/satin_column.py:175
 #: lib/elements/satin_column.py:574
@@ -3619,7 +3620,7 @@ msgstr "https://inkstitch.org/docs/fr/thread-color/#apply-palette"
 
 #: lib/gui/cross_stitch_helper.py:12
 msgid "Ink/Stitch - Cross stitch"
-msgstr ""
+msgstr "Ink/Stitch - Point de croix"
 
 #: lib/gui/cross_stitch_helper.py:41 lib/gui/edit_json/main_panel.py:74
 #: lib/gui/lettering_font_sample.py:40 lib/gui/simulator/view_panel.py:129
@@ -3631,35 +3632,35 @@ msgstr "Paramètres"
 
 #: lib/gui/cross_stitch_helper.py:52
 msgid "Grid Settings"
-msgstr ""
+msgstr "Réglages de la grille"
 
 #: lib/gui/cross_stitch_helper.py:56
 msgid "Square grid"
-msgstr ""
+msgstr "Grille carrée"
 
 #: lib/gui/cross_stitch_helper.py:61
 msgid "Grid width (mm)"
-msgstr ""
+msgstr "Espacement horizontal (mm)"
 
 #: lib/gui/cross_stitch_helper.py:66
 msgid "Grid height (mm)"
-msgstr ""
+msgstr "Espacement vertical (mm)"
 
 #: lib/gui/cross_stitch_helper.py:71
 msgid "Stitch_length:"
-msgstr ""
+msgstr "Longueur du point :"
 
 #: lib/gui/cross_stitch_helper.py:87
 msgid "Apply grid settings"
-msgstr ""
+msgstr "Appliquer les réglages de la grille"
 
 #: lib/gui/cross_stitch_helper.py:93
 msgid "Selected fill elements (params)"
-msgstr ""
+msgstr "Remplissages sélectionnés (paramètres)"
 
 #: lib/gui/cross_stitch_helper.py:96
 msgid "Fill element outline (pixelize)"
-msgstr ""
+msgstr "Contour des remplissages (pixellisation)"
 
 #: lib/gui/cross_stitch_helper.py:100
 msgid "Cross coverage (%)"
@@ -3667,30 +3668,34 @@ msgstr "Couverture des croix (%)"
 
 #: lib/gui/cross_stitch_helper.py:104
 msgid "Add nodes (grid width distance)"
-msgstr ""
+msgstr "Ajouter des nœuds sur les contours (selon les points de la grille)"
 
 #: lib/gui/cross_stitch_helper.py:108
 msgid "Page grid"
-msgstr ""
+msgstr "Grille de la page"
 
 #: lib/gui/cross_stitch_helper.py:112
 msgid "Grid color"
-msgstr ""
+msgstr "Couleur de la grille"
 
 #: lib/gui/cross_stitch_helper.py:116
 msgid "Remove previous page grids"
-msgstr ""
+msgstr "Supprimer les grilles existantes"
 
 #: lib/gui/cross_stitch_helper.py:167
 msgid "This extension calculates the stitch length for a given grid size.\n\n"
 "* It can be applied to selected fill element as as parameter.\n"
 "* Fill outlines can be pixelized.\n"
 "* The grid can be applied as a page grid."
-msgstr ""
+msgstr "Cette extension calcule la longueur du point pour une grille de dimensions données.\n"
+"Elle peut aussi : \n\n"
+"* appliquer un paramétrage en point de croix aux remplissages sélectionnés.\n"
+"* pixeliser les contours des remplissages.\n"
+"* montrer la grille du point de croix en tant que grille du document."
 
 #: lib/gui/cross_stitch_helper.py:184 lib/gui/cross_stitch_helper.py:185
 msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/tools-fill/#cross-stitch"
 
 #: lib/gui/edit_json/help_panel.py:19
 msgid "Feature to verify or update font information for an existing font."
@@ -5919,11 +5924,11 @@ msgstr "Complexe"
 
 #: inx/inkstitch_break_apart.inx:17
 msgid "Threshold (px²)"
-msgstr ""
+msgstr "Seuil (px²)"
 
 #: inx/inkstitch_break_apart.inx:17
 msgid "Removes shapes and holes smaller than this"
-msgstr ""
+msgstr "Supprimer les formes et les trous de surface inférieure à"
 
 #: inx/inkstitch_break_apart.inx:20
 msgid "This extension will try to repair fill shapes and break them apart if necessary."
@@ -6041,11 +6046,11 @@ msgstr "Affichage"
 
 #: inx/inkstitch_cross_stitch_helper.inx:3
 msgid "Cross Stitch Helper"
-msgstr ""
+msgstr "Assistant Point de Croix"
 
 #: inx/inkstitch_cross_stitch_helper.inx:9
 msgid "Cross stitch: helper to setup and apply grid size"
-msgstr ""
+msgstr "Assistant de mise en place d'une grille de point de croix"
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
