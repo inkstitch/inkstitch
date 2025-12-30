@@ -1,5 +1,5 @@
 
-<div id="images">
+
 {%- for image in page.preview_image -%}
 <p>
   <img 
@@ -7,10 +7,10 @@
      alt="{{ page.title }} "
      style="width:auto;height:{{ image.height }}mm"/>
 </p>
-</div>
+
 {% endfor %} 
 
-<div id="glyphs">
+
 <h2>Glyphs</h2>
 <p></p>
 {%- assign nb_fonts =page.data_title.size -%}
@@ -27,8 +27,7 @@
 
 {: .font-glyphs }
 {% endfor %}
-</div>
-<div id="scaling">
+
 <h2>Scaling</h2>
 {%- for sub_font in page.data_title -%}
   {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
@@ -47,7 +46,7 @@ and up to {{ sub_font_data.max_scale | times: 100 | floor }}%  for a size of app
 {{ sub_font_data.size | times: sub_font_data.max_scale }} mm ({{ sub_font_data.size | times: sub_font_data.max_scale | times:0.039  }}).
 
 </p>
-</div>
+
 {% endfor %}
 
 
