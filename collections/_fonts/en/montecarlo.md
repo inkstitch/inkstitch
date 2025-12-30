@@ -14,6 +14,7 @@ data_title:
 {% include font_infos.html %}
 
 ## How to use the alternate glyphs
+
 As you can see in the Glyph list above, {{ page.title }} contains a lot of alternate glyphs. 
 To use them, simply type their full name (as it appears in the glyph list, don't use the <key>Alt</key> key) in the lettering tool.
 
@@ -25,8 +26,6 @@ Not every alternate can be used everywhere. Best is to use the lettering tool si
 
 You can also use the 'begin', 'end', 'swash' and 'swoop' glyphs (and their alternates) to add some flourishes around your text.
 
-
-
-{%- include end_of_font_page.html -%}
+{% include end_of_font_page.html %}
 
 {% include folder-galleries path="fonts/montecarlo/" %}
