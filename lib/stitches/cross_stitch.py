@@ -318,8 +318,8 @@ def _lines_to_stitches(
         shape, path, travel_graph, fill_stitch_graph,
         max_stitch_length, snap_points, underpath, is_upright
     )
-    result = collapse_travel_edges(result, ending_point, last_pass)
     result = clamp_travel_stitches(result, snap_points, underpath, is_upright)
+    result = collapse_travel_edges(result, ending_point, last_pass)
     result = filter_center_point_stitches(result, snap_points)
     if bean_stitch_repeats >= 1:
         # add bean stitches, but ignore travel stitches
