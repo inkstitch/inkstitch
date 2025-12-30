@@ -5,15 +5,7 @@
   <img 
      src="{{ image.url }}"
      alt="{{ page.title }} "
-     style="height:{{ image.height }}" >
-</p>
-
- <p class="font-library-preview-image">
-  {%- if {{ image.height }} < 15 -%}
-  <img src="{{ image.url }}" alt="{{page.title}} Preview">/p>
-  {%- else -%}
-      <img src="{{ image.url }}" alt="{{page.title}} Preview" style="height:{{ image.height }}mm" data-image_height="{{ image.height }}mm">
-  {%- endif -%}
+     style="height:{{ image.height }}mm" data-image_height="{{ image.height }}mm">
   </p>
 {% endfor %} 
 
