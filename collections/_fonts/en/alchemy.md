@@ -13,8 +13,6 @@ data_title:
 
 {% include font_infos.html %}
 
-{%- include end_of_font_page.html -%}
+{% include end_of_font_page.html %}
 
 {% include folder-galleries path="fonts/alchemy/" %}
-
-
