@@ -9,6 +9,8 @@
 </p>
 </div>
 {% endfor %} 
+
+<div id=glyphs>
 <h2>Glyphs</h2>
 
 {%- for sub_font in page.data_title -%}
@@ -20,8 +22,9 @@
 
 {: .font-glyphs }
 {% endfor %}
-
-<h2>Dimensions</h2>
+</div>
+<div id = scaling>
+<h2>Scaling</h2>
 {%- for sub_font in page.data_title -%}
   {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
   <h3>  {{ sub_font_data.name }} </h3>
@@ -34,7 +37,7 @@ The tool will allow you to scale down to {{ sub_font_data.min_scale | times: 100
 and up to {{ sub_font_data.max_scale | times: 100 | floor }}%  for a size of approximatively {{ sub_font_data.size | times: sub_font_data.max_scale }} mm).
 
 </p>
-
+</div>div>
 {% endfor %}
 
 
