@@ -9,7 +9,6 @@ preview_image:
 data_title:
   - ambigue
 ---
-{% include upcoming_release.html %}
 
 {% include font_infos.html %}
 
