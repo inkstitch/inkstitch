@@ -245,7 +245,7 @@ A tool for font authors to automatically set the force lock stitch option when a
 
 Converts jumps to trim commands.
 
-* Add option to convert to either a jump or stop command [#4038](https://github.com/inkstitch/inkstitch/pull/4038)
+* Add option to convert to either a trim or stop command [#4038](https://github.com/inkstitch/inkstitch/pull/4038)
 
 [Read more](/docs/commands/#jump-stitch-to-trim-command)
 
