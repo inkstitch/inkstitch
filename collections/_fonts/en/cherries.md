@@ -5,9 +5,9 @@ last_modified_at: 2024-04-29
 toc: false
 preview_image:
   - url: /assets/images/fonts/cherry_for_inkstitch.jpg
-    height: 65
+    height: 40
   - url: /assets/images/fonts/cherry_for_kaalleen.png
-    height: 75
+    height: 50
 data_title:
   - cherryforinkstitch
   - cherryforkaalleen
