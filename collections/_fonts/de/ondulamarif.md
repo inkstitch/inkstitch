@@ -4,11 +4,11 @@ permalink: /de/fonts/ondulamarif/
 last_modified_at: 2024-05-25
 preview_image:
   - url: /assets/images/fonts/ondulamarif_xl.png
-    height: 110
+    height: 55
   - url: /assets/images/fonts/ondulamarif_medium.png
-    height: 82
+    height: 41
   - url: /assets/images/fonts/ondulamarif_small.png
-    height: 44
+    height: 22
 data_title:
   - ondulamarif_S
   - ondulamarif_Medium
