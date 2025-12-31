@@ -58,7 +58,7 @@ class CrossStitchHelper(InkstitchExtension):
             grid_param += f' {box_y}'
         element.set('inkstitch:fill_method', 'cross_stitch')
         element.set('inkstitch:pattern_size_mm', grid_param)
-        element.set('inkstitch:expand_mm', '0.2')
+        element.set('inkstitch:expand_mm', '0.1')
 
     def pixelize(self, element, settings):
         node = element.node

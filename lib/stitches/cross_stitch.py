@@ -76,6 +76,7 @@ class CrossGeometry(object):
         adapted_miny = miny - miny % box_y + offset_y
         adapted_maxx = maxx + box_x - maxx % box_x
         adapted_maxy = maxy + box_y - maxy % box_y
+
         prepare(shape)
 
         self.boxes = []
@@ -98,14 +99,13 @@ class CrossGeometry(object):
                     self.add_cross(box, upright_box)
                 elif shape.intersects(box):
                     intersection = box.intersection(shape)
-                    intersection_area = intersection.area
-                    if intersection_area / self.full_square_area * 100 + 0.0001 >= self.fill.fill_coverage:
+                    if intersection.area / self.full_square_area * 100 + 0.0001 >= self.fill.fill_coverage:
                         self.add_cross(box, upright_box)
                 x += box_x
             y += box_y
             check_stop_flag()
 
-        if cross_stitch_method in ['simple_cross_flipped', 'half_cross_flipped', 'upright_cross_flipped']:
+        if "flipped" in cross_stitch_method:
             self.cross_diagonals2, self.cross_diagonals1 = self.cross_diagonals1, self.cross_diagonals2
 
     def get_offset_values(self, shape, original_shape):
@@ -195,15 +195,7 @@ def cross_stitch(fill, shape, starting_point, ending_point, double_pass=False, o
     outline = snap(outline, snap_points, tolerance=0.02)
 
     # The cross stitch diagonals
-    diagonals1 = ensure_multi_line_string(
-        line_merge(MultiLineString(cross_geoms.cross_diagonals1)).segmentize(max_stitch_length)
-    )
-    diagonals1 = ensure_multi_line_string(split(diagonals1, outline))
-
-    diagonals2 = ensure_multi_line_string(
-        line_merge(MultiLineString(cross_geoms.cross_diagonals2)).segmentize(max_stitch_length)
-    )
-    diagonals2 = ensure_multi_line_string(split(diagonals2, outline))
+    diagonals1, diagonals2 = prepare_diagonals(outline, cross_geoms, cross_stitch_method, max_stitch_length)
 
     # Travel edges includ all possible edges, the box outlines, as well as edges from the bounding boxes corners to the box center (☒)
     travel_edges = ensure_multi_line_string(line_merge(MultiLineString(cross_geoms.travel_edges)))
@@ -251,6 +243,19 @@ def cross_stitch(fill, shape, starting_point, ending_point, double_pass=False, o
             stitches.extend(crosses)
 
     return [stitches]
+
+
+def prepare_diagonals(outline, cross_geoms, cross_stitch_method, max_stitch_length):
+    diagonals1 = ensure_multi_line_string(
+        line_merge(MultiLineString(cross_geoms.cross_diagonals1)).segmentize(max_stitch_length)
+    )
+    diagonals2 = ensure_multi_line_string(
+        line_merge(MultiLineString(cross_geoms.cross_diagonals2)).segmentize(max_stitch_length)
+    )
+    if "upright" not in cross_stitch_method:
+        diagonals1 = ensure_multi_line_string(split(diagonals1, outline))
+        diagonals2 = ensure_multi_line_string(split(diagonals2, outline))
+    return diagonals1, diagonals2
 
 
 def cross_stitch_multiple(outline, fill, starting_point, ending_point, double_pass, original_shape):
@@ -464,9 +469,8 @@ def clamp_travel_stitches(result, snap_points, underpath, is_upright):
         last_point = Point(last_stitch)
         point = Point(stitch)
         line = LineString([last_point, point])
-        if ((not is_upright and underpath and
-                (isclose(last_stitch[0], stitch[0], abs_tol=0.011) or isclose(last_stitch[1], stitch[1], abs_tol=0.011))) or
-                is_upright and underpath and (last_point[0] != point[0] and last_point[1] != point[1])):
+        is_diagonal = not (isclose(last_stitch[0], stitch[0], abs_tol=0.011) or isclose(last_stitch[1], stitch[1], abs_tol=0.011))
+        if (not is_upright and underpath and not is_diagonal) or (is_upright and underpath and is_diagonal):
             # We are traveling along the outside of a cross stitch box (x1 == x2 or y1 == y2)
             # This means, we will need to add a stitch at the center of the box to we create a V shaped line.
             # To do this, we grab the center of the path and snap it to the nearest box center point we can find

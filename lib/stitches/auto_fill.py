@@ -69,6 +69,7 @@ class PathEdge(object):
     def is_original_segment(self):
         return self.key == self.SEGMENT_KEY
 
+
 @debug.time
 def auto_fill(shape,
               angle,
@@ -708,7 +709,7 @@ def pick_edge(edges):
     # Prefer a segment if one is available.  This has the effect of
     # creating long sections of back-and-forth row traversal.
     for source, node, key in edges:
-        if key.startswith('segment'):
+        if key == "segment":
             return source, node, key
 
     return list(edges)[0]
