@@ -9,30 +9,11 @@ preview_image:
 data_title:
   - inkstitch_masego
 ---
-{%- assign font = site.data.fonts.inkstitch_masego.font -%}
 
-![Inkstitch Masego](/assets/images/fonts/inkstitch_masego.png)
+{% include font_infos.html %}
 
-## Glyphs
+{%- include end_of_font_page.html -%}
 
-This font contains  {{ font.glyphs.size }} glyphs:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-At a scale of 100% this font has an approximate height of {{ font.size }} mm. 
-
-It can be scaled from {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
-up to {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
-
-## In real life
 
 {% include folder-galleries path="fonts/inkstitch_masego/" %}
 
-## License
-
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/inkstitch_masego/LICENSE)
