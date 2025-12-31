@@ -9,30 +9,11 @@ preview_image:
 data_title:
   - aventurina
 ---
-{%- assign font = site.data.fonts.aventurina.font -%}
-![Aventurina](/assets/images/fonts/aventurina.jpg)
 
-## Glyphs
+{% include font_infos.html %}
 
-This font contains  {{ font.glyphs.size }} glyphs:
+{% include end_of_font_page.html %}
 
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions:
-
-At 100%, Aventurina is approximatively  20 mm tall (3/4 inches)
-
-It may be scaled up to 150% (aprox. 30mm , 1.25 in) or scaled down to 60% (approx 12mm, 0.5 in)
-
-## In real life:
-
-Bookmark, Hand towel.....
 
 {% include folder-galleries path="fonts/aventurina/" %}
 
-## License
-
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/aventurina/LICENSE)
