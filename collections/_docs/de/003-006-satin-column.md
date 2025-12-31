@@ -32,6 +32,7 @@ Ink/Stitch bietet verschiedene Möglichkeiten Satinsäulen zu erstellen. Die Met
 
 Mehr Informationen über [Linie zu Satin](/de/docs/satin-tools/#linie-zu-satin)
 
+{% include upcoming_release.html %}
 #### Method 2
 * Add a contour to a path object (with no filling).
 * Set contour width to the size you want your satin stitch to be (or to any width larger than 0.3, but you will need too add a lot off pull compensation to reach a correct width)
@@ -136,7 +137,7 @@ Z.B. `Zufälliger Prozentwert (Erweitern)` ist ein solcher Parameter. Wird ein e
 
 Einige dieser Einstellungen sind Teil einer zukünftigen Version von Ink/Stitch und noch nicht in der derzeitigen Version enthalten.
 {: .notive--info }
-
+{% include upcoming_release_params.html %}
 Einstellung||Beschreibung
 ---|---|---
 Benutzerdefinierte Satinsäule       | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
