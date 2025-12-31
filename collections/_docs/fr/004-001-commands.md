@@ -1,7 +1,7 @@
 ---
 title: "Commandes visuelles"
 permalink: /fr/docs/commands/
-last_modified_at: 2025-01-04
+last_modified_at: 2025-12-31
 toc: true
 ---
 Les commandes visuelles peuvent être utilisées pour spécifier des informations complémentaires sur la manière de broder. Elles peuvent par exemple être utilisées pour dire à la machine de couper le fil après avoir brodé un élément ou pour spécifier un arrêt par exemple pour ajouter le tissu d'un appliqué plus facilement.
@@ -110,6 +110,8 @@ Sélectionnez  le groupe de commande et supprimez le.
 ## Saut en Coupe {#jump-to-trim-commannd}
 
 Cette extension insère des commandes de coupe à la place des sauts.
+{% include upcoming_release.html %}
+Vous pouvez chosir entre une commande de coupe et une commande de stop.
 
 **Info**:Ne pas utiliser cette extension avant d'avoir optimisé le chemin de broderie: il faut éviter au maximum les coupes de fil. Vous trouverez dans 
 [optimisation du chemin de broderie](/tutorials/routing/) l'ensemble des outils qu'Ink/Stitch mets à votre disposition pour vous aider dans votre tâche d'optimisation.
