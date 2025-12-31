@@ -25,6 +25,8 @@ Si un objet est constitué de plusieurs chemins, ils seront brodés l'un après 
 
 Ouvrir `Extensions > Ink/Stitch  > Paramètres` pour paramétrer selon vos besoins.
 
+{% include upcoming_release_params.html %}
+
 Paramètres|Description
 ---|---
 Points droits le long des chemins |Doit être activé pour que ces paramètres prennent effet
