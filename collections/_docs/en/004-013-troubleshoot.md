@@ -31,6 +31,7 @@ This extension informs about various parameters of selected stitch elements.
 
 ![Element info](/assets/images/docs/en/element_info.png)
 
+{% include upcoming_release.html %}
 The 'Copy' button on the help tab allows you to copy all the information to the clipboard.
 
 
