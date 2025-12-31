@@ -85,7 +85,7 @@ Das Muster für Satinsäulen-geführte Ripples können mit Hilfe einer sogenannt
 [Download](/assets/images/docs/ripple_satin_guide.svg){: download="satin_guided_ripples.svg" }
 
 ## Parameter
-
+{% include upcoming_release_params.html %}
 Parameter||Beschreibung
 ---|---|---
 Geradstich                     | ☑ | Muss aktiviert sein, damit diese Einstellungen wirksam werden.
