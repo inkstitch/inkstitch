@@ -8,110 +8,32 @@ preview_image:
    height: 60
  - url: /assets/images/fonts/apex_simple_AGS.jpg
    height: 35
- - url: /assets/images/fonts/apex_simple_AGS.jpg
+ - url: /assets/images/fonts/apex_simple_small_AGS.png
    height: 12
 data_title:
   - apex_lake
   - apex_simple_AGS
   - apex_simple_small_AGS
 ---
-{%- assign font1 = site.data.fonts.apex_lake.font -%}
-{%- assign font2 = site.data.fonts.apex_simple_AGS.font -%}
-{%- assign font3 = site.data.fonts.apex_simple_small_AGS.font -%}
 
-![Apex Lake](/assets/images/fonts/apex_lake.jpg)
+{% include font_infos.html %}
 
-![Apex Simple](/assets/images/fonts/apex_simple_AGS.jpg)
+## Special features
 
-<hr>
+Apex Lake est quite a large ornemental font. Each letter comes with a square frame.
 
-{% include upcoming_release.html %}
+If you do not wish to embroider the frame, skip the last two colors.
 
-![Apex Simple small](/assets/images/fonts/apex_simple_small_AGS.png)
-
-## Glyphs
-
-Commun glyphs are identical (up to decoration)
-
-### Apex Lake
-
-This font contains  {{ font1.glyphs.size }} glyphs:
-
-```
-{{ font1.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-### Apex Simple AGS
-
-This font contains  {{ font2.glyphs.size }} glyphs:
-
-```
-{{ font2.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-### Apex Simple AGS
-
-{% include upcoming_release.html %}
-
-This font contains  {{ font3.glyphs.size }} glyphs:
-
-```
-{{ font3.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Remark
-
-Apex Lake est a quite large ornemental font. Each letter comes with a square frame.
-
-If you don not wish to embroider the frame, skip the last two colors.
-
-If you wish to use the  frame for an appliqué, use a copy of the penultimate path to stitch your fabric.
+If you wish to use the frame for an appliqué, use a copy of the penultimate path to stitch your fabric.
 
 In order to avoid messy overlays, the background pattern is incomplete in most of the letters. However would you wish to use it as a decoration, you can find it complete in the J cap.
 
-The two versions work well together, usually using  Apex Lake pour the first letter and Apex Simple AGS for the leftover:
+Apex Lake and Apex Simple work well together, usually using  Apex Lake pour the first letter and Apex Simple AGS for the leftover:
 ![Both_Apex](/assets/images/fonts/both_apex.png)
 
-## Dimensions
+Contrarily to Apex Simple, Apex Simple Small font MUST be embroidered with thread and needle smaller than usual. A USA 8 (EUR 60) size needle, and 60WT thread MUST be used.
 
-### Apex Lake
-
-Apex Lake  is a large font, meant to be used one letter or a few letters at a time.
-
-Used at 100% it is approximatively 60mm  high (2.2 inches) . 
-
-It can be scaled down to 80% (approx. 50mm,  2 inches) and scaled up to 130% (approx 110mm, 4.5 inches).
-
-### Apex Simple AGS
-
-Used at 100% it is approximatively 35mm  high (1.5 inches) . 
-
-It can be scaled down to 75% (approx. 25mm,  1 inch) and scaled up to 300% (approx 100mm, 4 inches).
-
-### Apex Simple Small AGS
-
-At a scale of 100% this font has an approximate height of {{ font3.size }} mm. 
-
-It can be scaled from {{ font3.min_scale | times: 100 | floor }}% ({{ font2.size | times: font3.min_scale }} mm)
-up to {{ font3.max_scale | times: 100 | floor }}% ({{ font3.size | times: font3.max_scale }} mm).
-
-## Color sorting
-
-If you embroider several letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/docs/lettering/#color-sorting)
-
-## In real life 
-
-Why not use Apex Lake on a T shirt ? or on a fabric basket ?
+{% include end_of_font_page.html %}
 
 {%include folder-galleries path="fonts/apex-lake/" %}
 
-## License
-
-[Download Apex Lake Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_lake/LICENSE)
-
-[Download Apex Simple AGS Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_simple_AGS/LICENSE)
-
-[Download Apex Simple Small AGS Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/apex_simple_small_AGS/LICENSE)
