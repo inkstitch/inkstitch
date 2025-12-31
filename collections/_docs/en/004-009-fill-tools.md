@@ -61,7 +61,7 @@ Helper method to generate either
 * Click apply
 * Adapt fill settings in the params dialog (`Extensions > Ink/Stitch > Params`)
 
-{% include upcoming_release.html %}{% include upcoming_release.html %}
+{% include upcoming_release.html %}
 The row spacing parameter has been computed acccording to the stitch length setting in the Selection to Knockdownn fill extension
  
 ### Settings
