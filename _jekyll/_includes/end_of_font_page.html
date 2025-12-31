@@ -2,6 +2,10 @@
 
 {% for sub_font in page.data_title %}
   {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
+  {% assign base_url = "https://github.com/inkstitch/embroidery-fonts/blob/main/src/" %}
+  {% capture licence_url %}
+{{ base_url }}{{sub_font}}/LICENSE
+  {% endcapture %}
 <p>
     {{ sub_font_data.name }} is licensed under  {{ sub_font_data.font_license }}.<br/>
     It is a derivative work from  <a href = "{{ sub_font_data.original_font_url }}" > {{ sub_font_data.original_font }} </a>
