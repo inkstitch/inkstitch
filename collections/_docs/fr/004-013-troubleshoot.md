@@ -35,6 +35,7 @@ Cette extension affiche des informations sur divers paramètres des éléments d
 
 ![Element info](/assets/images/docs/en/element_info.png)
 
+{% include upcoming_release.html %}
 Le bouton 'Copier' de l'onglet d'aide permet de copier toutes les informations dans le presse papier.
 
 
