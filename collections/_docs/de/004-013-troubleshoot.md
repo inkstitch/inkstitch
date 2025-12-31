@@ -29,6 +29,7 @@ Diese Erweiterung sammelt Informationen über verschiedene Parameter für eine A
 
 ![Element info](/assets/images/docs/en/element_info.png)
 
+{% include upcoming_release.html %}
 The 'Copy' button on the help tab allows you to copy all the information to the clipboard.
 
 ## Stickeinstellungen entfernen
