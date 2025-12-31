@@ -74,7 +74,7 @@ These alternative upper case letters should only be used at the beginning of a w
 
 
 
-{%- include end_of_font_page.html -%}
+{% include end_of_font_page.html %}
 
 {% include folder-galleries path="fonts/monicha/" %}
 
