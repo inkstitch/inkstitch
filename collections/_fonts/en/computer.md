@@ -13,47 +13,19 @@ data_title:
   - computer
   - computer_small
 ---
-{%- assign font1 = site.data.fonts.computer.font -%}
 
-{%- assign font2 = site.data.fonts.computer_small.font -%}
 
-<img
-     src="/assets/images/fonts/computer.png"
-     alt="Emilio20" height="23">
+{% include font_infos.html %}
 
-## Glyphs
-
-These fonts contain  {{ font1.glyphs.size }} glyphs:
-
-```
-{{ font1.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-### Computer
-
-At a scale of 100% this font has an approximate height of {{ font1.size }} mm.
-
-It can be scaled from {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
-up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
-
-### Computer Small
-
-It can be scaled from {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
-up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm).
-
-This font **requires thin thread (60) and thin needle (60)**
 
 ## Special features
 
 Each glyph contains the  original letter, in the form of a hidden black fill. These fills are not intended to be embroidered as is, but to help anyone who wants to modify this font. They can be ignored safely.
 
-## In real life
+Computer small **requires thin thread (60) and thin needle (60)**
+
+{%- include end_of_font_page.html -%}
 
 {% include folder-galleries path="fonts/computer/" %}
 
-## License
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/computer/LICENSE)
