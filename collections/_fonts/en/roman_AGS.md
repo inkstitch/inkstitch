@@ -25,7 +25,7 @@ Whenever a glyph is present in both fonts, the design shape and size of the glyp
 - Hide those monocolor letters
 
 
-{%- include end_of_font_page.html -%}
+{% include end_of_font_page.html %}
 
 {% include folder-galleries path="fonts/roman_AGS/" %}
 
