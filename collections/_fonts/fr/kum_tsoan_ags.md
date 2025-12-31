@@ -11,7 +11,7 @@ preview_image:
   - url: /assets/images/fonts/kum_tsoan_relief.png
     height: 90
 data_title:
-  - kum_tsoan_ags
+  - kum_tsoan_AGS
   - kum_tsoan_relief
   - kum_tsoan_tartan
 ---
