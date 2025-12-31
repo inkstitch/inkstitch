@@ -35,6 +35,6 @@ Frame|Key
 
 
 
-{%- include end_of_font_page.html -%}
+{% include end_of_font_page.html %}
 
 {% include folder-galleries path="fonts/initials/" %}
