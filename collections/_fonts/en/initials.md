@@ -10,7 +10,7 @@ preview_image:
     height: 45
 data_title:
   - initials_medium
-  - initials_xl
+  - initials_XL
 ---
 {% include font_infos.html %}
 
