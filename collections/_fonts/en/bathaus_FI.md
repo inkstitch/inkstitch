@@ -10,7 +10,7 @@ preview_image:
     height: 10
 data_title:
   - bathaus_FI
-  - bathaus_small
+  - bathaus_FI_Small
 ---
 {% include font_infos.html %}
  
