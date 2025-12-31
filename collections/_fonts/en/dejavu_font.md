@@ -9,36 +9,17 @@ preview_image:
 data_title:
   - dejavufont
 ---
-{%- assign font = site.data.fonts.dejavufont.font -%}
-## Serif Semi-condensed
 
-![Deja Vue Serif Semi-condensed](/assets/images/fonts/dejavu_serif.jpg)
+{% include font_infos.html %}
 
-## Glyphs
 
-This font contains  {{ font.glyphs.size }} glyphs:
+## Special Feature
 
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
+Déja Vu may be embroidered left to right and   right to left.
 
-## Dimensions
 
-Used at  100%, this font is approximatively 18 mm  (2/3 inch) high.
 
-It can be scaled up to  150% (env 27 mm, 1 inch)  or scaled down to 80% (env 14 mm, 1/2 inch).
-
-## Remark
-
-Déja Vu may be embroidered left to right, right to left,  top to bottom orbottom to top.
-
-## In real life
-
-Used by itself or with Amitaclo  and Magnolia KOR on conserve jars
+{%- include end_of_font_page.html -%}
 
 {% include folder-galleries path="fonts/dejavu/" %}
 
-## License
-
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/dejavufont/LICENSE)
