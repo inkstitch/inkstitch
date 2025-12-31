@@ -9,7 +9,7 @@ from math import isclose
 
 import networkx
 from shapely import line_merge, prepare, snap
-from shapely.affinity import rotate, scale, translate
+from shapely.affinity import scale, translate
 from shapely.geometry import (LineString, MultiLineString, MultiPoint, Point,
                               Polygon)
 from shapely.ops import nearest_points, split, unary_union
@@ -323,7 +323,7 @@ def _lines_to_stitches(
         shape, path, travel_graph, fill_stitch_graph,
         max_stitch_length, snap_points, underpath, is_upright
     )
-    result = clamp_travel_stitches(shape, result, snap_points, underpath, is_upright)
+    result = clamp_travel_stitches(result, snap_points, underpath, is_upright)
     result = collapse_travel_edges(result, ending_point, last_pass)
     result = filter_center_point_stitches(result, snap_points)
     if bean_stitch_repeats >= 1:
@@ -410,16 +410,19 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, max_stitch_le
 
     for i, edge in enumerate(path):
         check_stop_flag()
-        if edge.is_original_segment():
+        if edge.is_segment():
             current_edge = fill_stitch_graph[edge[0]][edge[-1]]['segment']
             path_geometry = current_edge['geometry']
 
             if edge[0] != path_geometry.coords[0]:
                 path_geometry = reverse_line_string(path_geometry)
 
-            row_stitches = [Stitch(*point, tags=['auto_fill', 'fill_row']) for point in path_geometry.coords]
-            row_stitches[0].add_tag('fill_row_start')
-            row_stitches[-1].add_tag('fill_row_end')
+            if edge.is_original_segment():
+                row_stitches = [Stitch(*point, tags=['auto_fill', 'fill_row']) for point in path_geometry.coords]
+                row_stitches[0].add_tag('fill_row_start')
+                row_stitches[-1].add_tag('fill_row_end')
+            else:
+                row_stitches = [Stitch(*point, tags=['auto_fill_travel']) for point in path_geometry.coords]
             stitches.extend(row_stitches)
 
             if fill_stitch_graph.has_edge(edge[0], edge[1], key='segment'):
@@ -459,7 +462,7 @@ def travel(shape, travel_graph, edge, max_stitch_length):
     return stitches
 
 
-def clamp_travel_stitches(shape, result, snap_points, underpath, is_upright):
+def clamp_travel_stitches(result, snap_points, underpath, is_upright):
     stitches = []
     last_stitch = None
     for stitch in result:
@@ -471,15 +474,12 @@ def clamp_travel_stitches(shape, result, snap_points, underpath, is_upright):
         line = LineString([last_point, point])
         is_diagonal = not (isclose(last_stitch[0], stitch[0], abs_tol=0.011) or isclose(last_stitch[1], stitch[1], abs_tol=0.011))
         if (not is_upright and underpath and not is_diagonal) or (is_upright and underpath and is_diagonal):
-            # We are traveling along the outside of a cross stitch box
-            # This means, we will need to add a stitch at the center of the box to create a V shaped line.
-            # To do this, we rotate the path and check which end lies within the original shape
-            snap_coords = rotate(line, 90).coords
-            if Point(snap_coords[0]).within(shape):
-                center_point = snap_coords[0]
-            else:
-                center_point = snap_coords[1]
-            stitches.append(Stitch(*center_point, tags=["auto_fill_travel"]))
+            # We are traveling along the outside of a cross stitch box (x1 == x2 or y1 == y2)
+            # This means, we will need to add a stitch at the center of the box to we create a V shaped line.
+            # To do this, we grab the center of the path and snap it to the nearest box center point we can find
+            center_point = line.interpolate(0.5, normalized=True)
+            center_point = Point(nearest_points(center_point, snap_points)[1].coords)
+            stitches.append(Stitch(*center_point.coords[0], tags=["auto_fill_travel"]))
         stitches.append(stitch)
         last_stitch = stitch
 
