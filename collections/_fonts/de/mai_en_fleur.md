@@ -5,7 +5,7 @@ last_modified_at: 2025-12-25
 toc: false
 preview_image:
   - url: /assets/images/fonts/mai_en_fleur_AGS.jpg
-    height: 100
+    height: 50
 data_title:
   - mai_en_fleur
 ---
