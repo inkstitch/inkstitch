@@ -15,36 +15,10 @@ data_title:
   - kum_tsoan_relief
   - kum_tsoan_tartan
 ---
-{%- assign font = site.data.fonts.kum_tsoan_ags.font -%}
-
-{%- assign font2 = site.data.fonts.kum_tsoan_relief.font -%}
-
-![Kum Tsoan AGS](/assets/images/fonts/kum_tsoan.jpg)
-
-![Kum Tsoan _relief](/assets/images/fonts/kum_tsoan_relief.png)
-
-![Kum Tsoan Tartan](/assets/images/fonts/kum_tsoan_tartan.jpg)
+{% include font_infos.html %}
 
 
-
-
-## Glyphs
-
-These fonts contain  {{ font.glyphs.size }} glyphs:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-At 100%, they are approximatively  90 mm tall (4 inches)
- 
-Kum Tsoan AGS and Kum Tsoan Tartan may be scaled up to 150% (approx. 150mm , 6 inches) or scaled down to 50% (approx 50mm, 2 inches).
-Kum Tsoan Relief  is more tolerant and  may  be scaled from 20% (approx 18mm 3/4 inch) to as big as your hoop can contain.
-
-## How to use them
+## Special Features
 
 ### Kum Tsoan  AGS
 
@@ -82,10 +56,11 @@ If you remove the stroke color from the green paths and replace it with a fill c
 
 Kum Tsoan Tartan is a  tartan font. Each letter has its own tartan, therefore embroidering it as is is not for the faint of heart ! Quite a few threads changes are required. However for a less work intense (but also less colorful) variation with only one tartan shared by all leters, see  [this](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) 
 
-## In real life:
+
+
+{%- include end_of_font_page.html -%}
+
 
 {% include folder-galleries path="fonts/kum_tsoan_ags/" %}
 
-## License
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/kum_tsoan_ags/LICENSE)
