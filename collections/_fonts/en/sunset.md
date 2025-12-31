@@ -10,6 +10,7 @@ data_title:
   - sunset
 ---
 {% include font_infos.html %}
+
 {% include end_of_font_page.html %}
 
 {% include folder-galleries path="fonts/sunset/" %}
