@@ -11,8 +11,6 @@ data_title:
 ---
 {% include font_infos.html %}
 
-{%- include end_of_font_page.html -%}
-
 ## Special Feature
 
 ![Dimensions Glacialtiny](/assets/images/fonts/Sizing/glacialsizing.jpg)
