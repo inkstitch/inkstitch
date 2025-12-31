@@ -5,9 +5,9 @@ last_modified_at: 2025-12-26
 toc: false
 preview_image: 
   - url: /assets/images/fonts/initials_xl.jpg
-    height: 150
+    height: 75
   - url: /assets/images/fonts/initials_medium.jpg
-    height: 90
+    height: 45
 data_title:
   - initials_medium
   - initials_xl
