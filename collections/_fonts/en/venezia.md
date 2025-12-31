@@ -12,57 +12,12 @@ data_title:
   - venezia
   - venezia_small
 ---
-{%- assign font1 = site.data.fonts.venezia.font -%}
-{%- assign font2 = site.data.fonts.venezia_small.font -%}
+{% include font_infos.html %}
 
-{% include upcoming_release.html %}
+## Special Feature
+Venezia Small should be stitched with thin (60) thread and thin (60) needle.
 
-![Venezia](/assets/images/fonts/venezia.png)
-
-![Venezia Small](/assets/images/fonts/venezia_small.png)
-
-## Glyphs
-
-### Venezia
-
-This font contains  {{ font1.glyphs.size }} glyphs:
-
-```
-{{ font1.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-### Venezia Small
-
-This font contains  {{ font2.glyphs.size }} glyphs:
-
-```
-{{ font2.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-### Venezia
-
-At a scale of 100% this font has an approximate height of {{ font1.size }} mm. 
-
-It can be scaled from {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
-up to {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
-
-### Venezia Small
-
-At a scale of 100% this font has an approximate height of {{ font2.size }} mm. 
-
-It can be scaled from {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
-up to {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm).
-
-## In real life 
+{% include end_of_font_page.html %}
 
 {%include folder-galleries path="fonts/neon/" %}
 
-## License
-
-[Download Venezia License](https://github.com/inkstitch/inkstitch/tree/main/fonts/neon/LICENSE)
-
-[Download Venezia Small Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/neon_blinking/LICENSE)
