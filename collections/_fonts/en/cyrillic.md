@@ -1,6 +1,6 @@
 ---
 title: "Кирилиця"
-permalink: /en/fonts/cyrillic/
+permalink: /fonts/cyrillic/
 last_modified_at: 2025-09-07
 toc: false
 preview_image:
