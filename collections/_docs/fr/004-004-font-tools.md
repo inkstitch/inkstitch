@@ -11,6 +11,9 @@ Lisez le [Tutoriel de création de police pour Ink/Stitch](/fr/tutorials/font-cr
 
 ## Convertir une fonte svg en calques de glyphes
 Cette extension permet de convertir une fonte svg en fichier de calques de glyphes en vue d'une inclusion dans le module de lettrage.
+{% include upcoming_release.html %}
+Elle permet de redimensionner la fonte en précisant la hauteur souhaitée pour un glyph  à  specifier.
+
 
 ## Répertoire personnalisé de polices {#custom-font-directory}
 
@@ -19,6 +22,8 @@ Cette extension vous permet de définir un répertoire dans votre système de fi
 Placez chaque police dans un sous-répertoire de votre répertoire personnalisé de polices. Chaque dossier de polices doit contenir au moins une variante de police et un fichier json.
 De plus, il est recommandé d'enregistrer également un fichier de licence. 
 
+{% include upcoming_release.html %}
+It allows font spacing by specifying the target height of specified glyph.
 Les variantes de police doivent être nommées avec une flèche, indiquant la direction de broderie pour laquelle elles ont été créées (`→.svg`, `←.svg`, etc.). 
 Il est aussi possible pour une direction donnée de créer un répertoire dont le nom est la flèche de direction et de répartir les glyphes de cette direction dans plusieurs fichiers dont le nom est alors quelconque.
 
@@ -38,6 +43,7 @@ Cette extension permet d'éditer les informations existantes sur une police.  Si
 ## Test de police {#font-sampling}
 
 Cette extension crée un calque qui contient toutes les lettres d'une fonte. Elle aide les créateurs de fontes à tester leurs nouvelles fontes.
+{% include upcoming_release.html %}
 Seuls les glyphes non vérouillés sont traités. Ceci permet de tester partiellement une fonte lors de sa création.
 
 ### Usage
@@ -79,7 +85,7 @@ Pour la même raison, lorsque les lettres sont détachées, il peut être utile 
   * Maximum distance (mm)
 
 * Ajouter l'attribut "forcer les points d'arrêts" au dernier élément de chaque glyphe
-
+{% include upcoming_release.html %}
 * Ajouter l'attribut "forcer les points d'arrêts" au dernier élément de chaque groupe
 
 ## Générer le fichier JSON {#generate-json}
@@ -91,6 +97,7 @@ Lire [**comment générer une police svg avec des informations de crénage**](/f
 Si vous avez généré votre fichier svg sans informations de crénage, cette extension peut quand même vous aider à configurer votre fichier json avec des informations de base.
 
 ### Information sur la police
+{% include upcoming_release_params.html %}
 
 |Options                            |Description        |
 |-----------------------------------|-------------------|
