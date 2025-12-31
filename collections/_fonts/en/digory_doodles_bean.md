@@ -9,27 +9,9 @@ preview_image:
 data_title:
   - digory_doodles_bean
 ---
-{%- assign font = site.data.fonts.digory_doodles_bean.font -%}
-![Digory Doodles Bean](/assets/images/fonts/digory_doodles_bean.jpg)
+{% include font_infos.html %}
 
-## Glyphs
-
-This font contains  {{ font.glyphs.size }} glyphs:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-At 100%, this font is approximatively 22 mm (1 inch).
-It may be scaled up to 200% (approx 44 mm, 2 inches) but may not be reduced.
-
-## In real life
+{%- include end_of_font_page.html -%}
 
 {% include folder-galleries path="fonts/digory-doodles-bean/" %}
 
-## License
-
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/digory_doodles_bean/LICENSE)
