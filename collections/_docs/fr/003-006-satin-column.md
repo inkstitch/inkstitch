@@ -37,6 +37,7 @@ Vous obtenez un chemin composite composé de
 * En option lancer `Extensions > Ink/Stitch > Outils : Satin > Agencement automatique de colonnes satin...` après avoir sélectionné une ou plusieurs colonnes satins
 Plus d'informations sur [Convertir ligne en satin](/fr/docs/satin-tools/#convertir-ligne-en-satin)
 
+{% include upcoming_release.html %}
 #### Méthode 2
 * Choisir un trait (un objet avec une couleur de contour, mais pas de couleur de remplissage)
 
@@ -154,7 +155,7 @@ Par exemple l'augmentation aléatoire de la largeur du satin est un paramètre a
 ![Parametre_asymetrique](/assets/images/docs/asymetric_parameter.png)
 
 ### Couche supérieure du satin
-
+{% include upcoming_release_params.html %}
 |Paramètres||Description|
 |---|---|--|
 |Colonne  de satin personnalisée   | ☑ |Doit être activé pour que ces paramètres prennent effet|
