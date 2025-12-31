@@ -11,61 +11,21 @@ preview_image:
 data_title:
   - roman_ags
 ---
-{%- assign font1 = site.data.fonts.roman_ags.font -%}
-{%- assign font2 = site.data.fonts.roman_ags_bicolor.font -%}
+{% include font_infos.html %}
 
-<img 
-     src="/assets/images/fonts/roman_AGS.jpg"
-     alt="Roman AGS" height="60">
-     
-<img 
-     src="/assets/images/fonts/roman_AGS_bicolor.jpg"
-     alt="Roman AGS_bicolor" height="60">
 
-## Glyphs
-
-### Roman AGS 
-
-This font contains  {{ font1.glyphs.size }} glyphs:
-
-```
-{{ font1.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-### Roman AGS Bicolor
-
-This font contains  {{ font2.glyphs.size }} glyphs:
-
-```
-{{ font2.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-At 100%, these fonts are approximatively  28 mm (1 inch) tall .
-They may be scaled up to 130% (approx. 37 mm, 1.5 inches) or down to 80% (approx.  22 mm, 0.8 inch).
 
 ## Using the two fonts together
 
 Whenever a glyph is present in both fonts, the design shape and size of the glyphs are exactly the same. It is therefore very easy to use them together:
 
 - Do a lettering of the whole text unsing Roman AGS only
-- Do a letterng using  Roman AGS bicolore with the only the letters you wish to be bicolors.
+- Do a letterng using  Roman AGS bicolore with only the letters you wish to be bicolors.
 - Put each bicolor letter exactly on top of the corresponding monocolor letter  
 - Hide those monocolor letters
 
-## Color sorting
 
-If you use bicolor  letters, you may wish to color sort. It is possible, providing the sorting respects the relative order inside each letter. [This is a way to do it](https://inkstitch.org/en/docs/lettering/#color-sorting)
-
-## In real life
+{%- include end_of_font_page.html -%}
 
 {% include folder-galleries path="fonts/roman_AGS/" %}
 
-## License
-
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roman_ags_bicolor/LICENSE)
-
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/roman_ags/LICENSE)
