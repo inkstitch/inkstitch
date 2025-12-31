@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-12-30 01:53+0000\n"
-"PO-Revision-Date: 2025-12-30 01:53\n"
+"PO-Revision-Date: 2025-12-31 01:54\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +40,7 @@ msgstr "AGS Γαραμου Garamond est une police en colonne satin qui contient
 #. description of font in fonts/alchemy
 #: inkstitch-fonts-metadata.py:6
 msgid "Alchemy is a satin font with a twist !"
-msgstr ""
+msgstr "Alchemy est une fonte en satin avec un effet de torsades."
 
 #. description of font in fonts/allegria20
 #: inkstitch-fonts-metadata.py:8
