@@ -69,7 +69,7 @@ Cette extension permet de générer:
 * Cliquer sur `Appliquer`
 * Adaptez les paramètres de remplissage dans la boîte de dialogue du paramétrage (`Extensions > Ink/Stitch > Paramètres`)
 
-  {% include upcoming_release.html %}{% include upcoming_release.html %}
+  {% include upcoming_release.html %}
 Le paramètre espacement entre les rangées a été calculé en fonction de la longueur maxiumum du point par l'extension Sélection vers remplissage en points couchants
  
 ### Paramètres
