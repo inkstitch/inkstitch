@@ -35,7 +35,7 @@ The text module creates multi-line text. Choose the right font for your project 
   Filter the fonts by categories, for example get only the applique fonts or only the script fonts
 
 ### Options
-
+{% include upcoming_release_params.html %}
 * **Scale**
 
   Defines the output size of the font compared to the original font size (%).
@@ -47,15 +47,19 @@ The text module creates multi-line text. Choose the right font for your project 
   Align multiline text: left, center, right, block (default), block (letterspacing)
 
 * **Letter spacing**
+
   Add that width (mm) between letters
 
 * **Word spacing**
+
   Add that width (mm) between words
 
 * **Line height**
+
   Add that height (mm) between lines
 
 * **Color sort**
+
   Sort colors of multicolor fonts to avoid a huge amount of color changes.
 
 * **Stitch lines of text back and forth**
