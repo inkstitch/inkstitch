@@ -1,8 +1,7 @@
 <h2>Legal Information</h2>
-
+{% assign base_url = "https://github.com/inkstitch/embroidery-fonts/blob/main/src/" %}
 {% for sub_font in page.data_title %}
   {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
-  {% assign base_url = "https://github.com/inkstitch/embroidery-fonts/blob/main/src/" %}
   {% capture licence_url %}
 {{ base_url }}{{sub_font}}/LICENSE
   {% endcapture %}
