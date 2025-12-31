@@ -31,6 +31,7 @@ Ink/Stitch offers several option to create satin columns. Methods 1-4 will conve
 * Use as-is or customize rungs and/or rails
 
 Get more information about [Stroke to Satin](/docs/satin-tools/#convert-line-to-satin)
+{% include upcoming_release.html %}
 #### Method 2
 * Add a contour to a path object (with no filling).
 * Set contour width to the size you want your satin stitch to be (or to any width larger than 0.3, but you will need too add a lot off pull compensation to reach a correct width)
@@ -133,7 +134,7 @@ Some of these params are not part of the recent release.
 {: .notice--info}
 
 ### Satin Top Layer
-
+{% include upcoming_release_params.html %}
 Settings||Description
 ---|---|--
 Custom satin column   | ☑ |Must be enabled for these settings to take effect.
