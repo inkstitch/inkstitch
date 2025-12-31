@@ -13,12 +13,16 @@ Read the [Ink/Stitch font creation tutorial](/tutorials/font-creation) for in-de
 ## Convert SVG Font to Glyph Layers
 This extension allows you to convert an svg font into glyph layers, as needed by the lettering tool.
 
+{% include upcoming_release.html %}
+It allows font spszingby specifying the target height of specified glyph.
 ## Custom Font Directory
 
 This extension allows you to define a directory in your file system where you want to store additional fonts to be used with the lettering tool.
 
 Place each font in a subdirectory of your custom font directory. Each font folder should contain at least one font variant and one json file.
 Additionally it is recommended to save a license file as well.
+
+{% include upcoming_release.html %}
 
 **Font variants** used to have to be named  with an arrow, indicating the stitch direction it has been created for (`→.svg`, `←.svg`, etc.).
 Now, names should be ltr.svg for left to right direction and rtl.svg for right to left direction.
@@ -42,7 +46,7 @@ This extension also update the glyph list.
 ## Font Sampling
 
 This extension creates a list of all letters in a font. It helps font creators to test the outcome of a new font.
-
+{% include upcoming_release.html %}
 It only render unlocked (sensitive) glyphs. This allows for partial sampling while creating the font.
 
 ### Usage
@@ -82,7 +86,7 @@ This extension helps adding forced lock stitches. One may chose to restrict the 
   * Maximum distance (mm): do not add lock stitches if the distance to the next element is larger than this
 
 * Add force lock stitches attribute to the last element of each glyph
-
+{% include upcoming_release.html %}
 * Add force lock stitches attribute to the last element of each group
 
 ## Generate JSON
@@ -93,6 +97,8 @@ Read [**how to generate a svg font with kerning information**](/tutorials/font-c
 If you generated your svg file without kerning information this extension can still help you to set up your json file with basic information.
 
 ### Font Info
+{% include upcoming_release_params.html %}
+It allows font spacing by specifying the target height of specified glyph.
 
 |Option                 |Description
 |-----------------------|-------------------------------------
