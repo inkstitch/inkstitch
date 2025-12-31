@@ -24,6 +24,8 @@ Wenn ein Objekt aus mehreren Pfaden besteht, werden diese der Reihe nach mit ein
 
 Über [`Erweiterungen > Ink/Stitch  > Parameter`](/de/docs/params/#linie) können folgende Einstellungen vorgenommen werden.
 
+{% include upcoming_release_params.html %}
+
 Einstellung|Beschreibung
 ---|---
 Geradstich                            | Muss aktiviert sein, damit diese Einstellungen wirksam werden.
