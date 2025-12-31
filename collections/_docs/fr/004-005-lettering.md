@@ -34,6 +34,7 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
   Filtre les fontes par famille, par exemple les fontes d'appliqué ou les fontes d'écriture manuelle.
 
 ### Options
+{% include upcoming_release_params.html %}
 
 * **Échelle**
 
@@ -46,9 +47,11 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
   Alignement du texte sur plusieurs lignes: gauche, centre, droit, justifié (mots)- modifie uniquement les espaces entre les mots, justifié (lettres) - modifie aussi l'espacement inter lettres.
 
 * **Espacememnt des lettres**
+
   Ajoute cette largeur (en mm) entre les lettres
 
 * **Espacememnt des mots**
+
   Ajoute cette largeur (en mm) entre les mots
 
 * **Hauteur de ligne**
