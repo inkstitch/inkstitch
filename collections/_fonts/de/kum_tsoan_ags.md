@@ -5,11 +5,11 @@ last_modified_at: 2025-12-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/kum_tsoan.jpg
-    height: 90
+    height: 50
   - url: /assets/images/fonts/kum_tsoan_tartan.jpg
-    height: 90
+    height: 50
   - url: /assets/images/fonts/kum_tsoan_relief.png
-    height: 90
+    height: 50
 data_title:
   - kum_tsoan_ags
   - kum_tsoan_relief
