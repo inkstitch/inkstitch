@@ -9,7 +9,7 @@ preview_image:
 data_title:
   - bluenesia
 ---
-{%- assign font = site.data.fonts.bluenesia.font -%}
+{%- assign font = site.data.fonts.bluenesia_satin.font -%}
 
 ![Bluenesia](/assets/images/fonts/bluenesia_satin.png)
 
