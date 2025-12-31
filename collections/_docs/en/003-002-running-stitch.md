@@ -21,6 +21,7 @@ The stitch direction is impacted by the [path direction](/docs/customize/#enabli
 If an object consists of multiple paths, they will be stitched in order with a jump between each.
 
 ## Parameters
+{% include upcoming_release_params.html %}
 
 Open `Extensions > Ink/Stitch  > Params` to update the parameters.
 
