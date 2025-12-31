@@ -9,30 +9,9 @@ preview_image:
 data_title:
   - mam_script
 ---
-{%- assign font = site.data.fonts.mam_script.font -%}
-![MAM Script](/assets/images/fonts/mam_script.png)
+{% include font_infos.html %}
 
-## Glyphs
-
-This font contains  {{ font.glyphs.size }} glyphs:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-At 100%, this font is approximatively 30 mm (1.25 inch) high.
-
-It can be scaled up to 200% (approx. 60 mm, 2.5 inches) or scaled down to  80% (approx.  24 mm, 1 inch).
-
-## In real life
-
-Here the date is embroidered with MAM Script, with  Cherry for Ink/Stitch and Cherry for Kaalleen as merry companions.
+{%- include end_of_font_page.html -%}
 
 {% include folder-galleries path="fonts/kaushan_script/" %}
 
-## Licenses
-
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/kaushan_script_MAM/LICENSE)
