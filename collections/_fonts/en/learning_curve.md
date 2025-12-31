@@ -9,27 +9,9 @@ preview_image:
 data_title:
   - learning_curve
 ---
-{%- assign font = site.data.fonts.learning_curve.font -%}
-![LearningCurve](/assets/images/fonts/learning_curve.jpg)
+{% include font_infos.html %}
 
-## Glyphs
-
-This font contains  {{ font.glyphs.size }} glyphs:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-Used at 100%, this font is approximatively  18mm  (0.7 in).
-It can be scaled up to 200% (approx 36 mm, 1.5 inches) or scaled down to  90% (approx 16 mm, 2/3 inch).
-
-## In real life 
+{%- include end_of_font_page.html -%}
 
 {% include folder-galleries path="fonts/learning_curve/" %}
 
-## License
-
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/learning_curve/LICENSE)
