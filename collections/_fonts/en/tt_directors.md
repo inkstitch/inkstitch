@@ -15,6 +15,5 @@ data_title:
 
 It is possible to stitch lines of text back and forth.
 
-## License
+{% include end_of_font_page.html %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/tt_directors/LICENSE)
