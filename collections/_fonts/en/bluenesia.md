@@ -9,9 +9,3 @@ preview_image:
 data_title:
   - bluenesia_satin
 ---
-{% include font_infos.html %}
-
-{% include end_of_font_page.html %}
-
-{% include folder-galleries path="fonts/bluenesia_satin/" %}
-
