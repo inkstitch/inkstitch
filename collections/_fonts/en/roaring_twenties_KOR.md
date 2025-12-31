@@ -21,7 +21,7 @@ A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
 
 
-{%- include end_of_font_page.html -%}
+{% include end_of_font_page.html %}
 
 {% include folder-galleries path="fonts/roaring_twenties_KOR/" %}
 
