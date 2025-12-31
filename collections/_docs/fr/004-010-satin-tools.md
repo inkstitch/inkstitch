@@ -61,7 +61,7 @@ Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'
 4. Sélectionnez à nouveau la colonne satin.
 5. Faire `Extensions > Ink/Stitch > Outils de Satin > Scinder colonne Satin`.
 6. La commande de point de partage et la ligne de connexion disparaissent et il semble que rien ne s'être passé. Sélectionnez votre satin et vous verrez qu'il a été divisé.
-
+{% include upcoming_release.html %}
 Vous pouvez utiliser plusieurs commandes sur la même colonne de satin pour la diviser en plusieurs morceaux en une seule action.
 
 ## Remplissage en Satin {#fill-to-satin}
