@@ -9,28 +9,9 @@ preview_image:
 data_title:
   - paquerette
 ---
-{%- assign font = site.data.fonts.paquerette.font -%}
+{% include font_infos.html %}
 
-![Paquerette](/assets/images/fonts/paquerette.png)
-
-## Glyphs
-
-This font contains  {{ font.glyphs.size }} glyphs:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-At 100%, Paquerette  is about  27 mm or 1 inch high.
-Because this font uses manual stitches, it should not be rescaled, or only a tiny amount.
-
-## In real life
+{%- include end_of_font_page.html -%}
 
 {% include folder-galleries path="fonts/paquerette/" %}
 
-## License
-
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/paquerette/LICENSE)
