@@ -34,7 +34,7 @@ Das Text-Modul erzeugt mehrzeiligen Text. Wähle aus einer großen Vielfalt vord
   Schriften können nach Art der Schrift oder Anwendung gefiltert werden, z.B. Applikationsschriften oder serifenlose Schriften
 
 ### Optionen
-
+{% include upcoming_release_params.html %}
 * **Maßstab**
 
   Definiert die Größe des Textes im Vergleich zur Originalschrift (%).
@@ -42,9 +42,11 @@ Das Text-Modul erzeugt mehrzeiligen Text. Wähle aus einer großen Vielfalt vord
   Auf diese Weise kannst du sicher stellen, dass die Textgröße auf die Parameter abgestimmt ist, mit denen die Schrift digitalisiert wurde.
 
 * **Letter spacing**
+  
   Add that width (mm) between letters
 
 * **Word spacing**
+
   Add that width (mm) between words
 
 * **Line height**
