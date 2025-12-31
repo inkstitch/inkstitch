@@ -7,7 +7,7 @@ preview_image:
   - url: /assets/images/fonts/bluenesia_satin.png
     height: 24
 data_title:
-  - bluenesia
+  - bluenesia_satin
 ---
 {%- assign font = site.data.fonts.bluenesia_satin.font -%}
 
