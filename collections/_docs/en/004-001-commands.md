@@ -1,7 +1,7 @@
 ---
 title: "Visual Commands"
 permalink: /docs/commands/
-last_modified_at: 2024-10-20
+last_modified_at: 2025-12-31
 toc: true
 ---
 Visual commands can be used to specify additional information on how to embroider your design. They can be used e.g. to tell the machine to trim the thread after finishing a specific embroidery element or when to pause and where to stop, so you can add a fabric layer to your appliqué design more conventiently.
@@ -109,6 +109,8 @@ Select the command-group and delete.
 `Commands > Jump Stitch to Trim Command` 
 
 Inserts trim commands to avoid jump stitches
+{% include upcoming_release.html %}
+You can chose between trim or stop command.
 
 **Info**: Do not to use this option when you can optimize routing instead. Cutting threads should be avoided as much as possible. Learn about the options Ink/Stitch has to offer for a [better routing](/tutorials/routing/).
 {: .notice--info }
