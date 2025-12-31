@@ -5,9 +5,9 @@ last_modified_at: 2025-09-07
 toc: false
 preview_image:
  - url: /assets/images/fonts/neon.png
-   height: 70
+   height: 50
  - url: /assets/images/fonts/neon_blinking.png
-   height: 40
+   height: 30
 data_title:
   - neon
   - neon_blinking
