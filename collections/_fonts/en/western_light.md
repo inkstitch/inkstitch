@@ -9,7 +9,7 @@ preview_image:
 data_title:
   - western_light
 ---
-{{% include font_infos.html %}
+{% include font_infos.html %}
 
 {% include end_of_font_page.html %}
 
