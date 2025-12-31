@@ -89,6 +89,7 @@ The pattern for satin guided ripples can be adjusted in its direction with the h
 [Download](/assets/images/docs/ripple_satin_guide.svg){: download="satin_guided_ripples.svg" }
 
 ## Params
+{% include upcoming_release_params.html %}
 
 Params|Description
 ---|---
