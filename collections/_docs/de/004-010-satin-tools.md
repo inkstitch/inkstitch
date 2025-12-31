@@ -62,6 +62,7 @@ Diese Option schneidet eine Satinsäule an einem vordefiniertem Punkt. Alle Para
 5. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Satinsäule schneiden` aus
 6. Der Satin-Schnittstelle-Befehl und sein Zeiger sind verschwunden. Wähle die Satinsäule aus: es sind jetzt zwei.
 
+{% include upcoming_release.html %}
 You can use multiple commands on the same satin column to split it into multiple pieces in a single action.
 ## Füllung zu Satin
 
