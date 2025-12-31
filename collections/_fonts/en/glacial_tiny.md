@@ -21,6 +21,8 @@ Such a tinyness is only possible because it is meant to be used with both very t
 Do not use the regular 40wt embroidery thread.
 
 If you do not follow these recommendations, you will probably have lots of embroidering problems.
+
+
 {%- include end_of_font_page.html -%}
 
 {% include folder-galleries path="fonts/glacial_tiny/" %}
