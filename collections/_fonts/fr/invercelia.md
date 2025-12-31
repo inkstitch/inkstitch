@@ -5,7 +5,7 @@ last_modified_at: 2024-05-13
 toc: false
 preview_image:
   - url: /assets/images/fonts/invercelia.png
-    height: 90
+    height: 60
 data_title:
   - invercelia
 ---
