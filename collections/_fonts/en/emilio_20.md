@@ -47,7 +47,7 @@ However for a less work intense (but also less colorful) variation with only one
 
 <br/>
 
-{%- include end_of_font_page.html -%}
+{% include end_of_font_page.html %}
 
 
 {% include folder-galleries path="fonts/emilio-20/" %}
