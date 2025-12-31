@@ -10,7 +10,7 @@ preview_image:
     height: 30
 data_title:
   - initials_medium
-  - initials_xl
+  - initials_XL
 ---
 {%- assign font = site.data.fonts.initials_medium.font -%}
 
