@@ -55,6 +55,7 @@ en: &DEFAULT_EN
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params     : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
   font_filter_display_size_label: "Preview images in size comparison"
   font_filter_display_icon_label : "Show preview images"
   font_filter_label          : "Font Filter"
@@ -148,6 +149,7 @@ es: &DEFAULT_ES
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
@@ -208,6 +210,7 @@ fr: &DEFAULT_FR
   operating_system           : "Système d'exploitation"
   total_downloads            : "Total des téléchargements"
   upcoming_release           : "Ceci fera  partie d'une prochaine version d'Ink/Stitch. Ce n'est pas encore intégré dans la version courante."
+  upcoming_release_params    : "Certains paramètres feront  partie d'une prochaine version d'Ink/Stitch. Ce n'est pas encore intégré dans la version courante."
   font_filter_display_size_label: "Afficher les polices en comparaison de taille"
   font_filter_display_icon_label : "Afficher les images d'aperçu"
   font_filter_label          : "Filtre de police"
@@ -296,6 +299,7 @@ tr: &DEFAULT_TR
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 tr-TR:
   <<: *DEFAULT_TR
 
@@ -351,6 +355,7 @@ pt: &DEFAULT_PT
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 pt-PT:
   <<: *DEFAULT_PT
 # Brazilian Portuguese
@@ -407,6 +412,8 @@ pt-BR:
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+
 
 # Italian
 # -------
@@ -463,6 +470,7 @@ it: &DEFAULT_IT
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 it-IT:
   <<: *DEFAULT_IT
 
@@ -521,6 +529,7 @@ zh: &DEFAULT_ZH_HANS
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 zh-CN:
   <<: *DEFAULT_ZH_HANS
 zh-SG:
@@ -631,6 +640,7 @@ de: &DEFAULT_DE
   operating_system           : "Betriebssystem"
   total_downloads            : "Gesamt"
   upcoming_release           : "Diese Funktion ist Teil einer zukünftigen Ink/Stitch Version und ist in der aktuellen Version noch nicht verfügbar."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
   font_filter_display_size_label: "Vorschaubilder im Größenvergleich anzeigen"
   font_filter_display_icon_label : "Vorschaubilder anzeigen"
   font_filter_label          : "Schriftarten-Filter"
@@ -725,6 +735,7 @@ ne: &DEFAULT_NE
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 ne-NP:
   <<: *DEFAULT_NE
 
@@ -783,6 +794,7 @@ ko: &DEFAULT_KO
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 ko-KR:
   <<: *DEFAULT_KO
 
@@ -840,6 +852,7 @@ ru: &DEFAULT_RU
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 ru-RU:
   <<: *DEFAULT_RU
 
@@ -895,6 +908,7 @@ lt: &DEFAULT_LT
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 lt-LT:
   <<: *DEFAULT_LT
 
@@ -952,6 +966,7 @@ gr: &DEFAULT_GR
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 gr-GR:
   <<: *DEFAULT_GR
 
@@ -1010,6 +1025,7 @@ sv: &DEFAULT_SV
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 sv-SE:
   <<: *DEFAULT_SV
 sv-FI:
@@ -1071,6 +1087,7 @@ nl: &DEFAULT_NL
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 nl-BE:
   <<: *DEFAULT_NL
 nl-NL:
@@ -1131,6 +1148,7 @@ id: &DEFAULT_ID
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 id-ID:
   <<: *DEFAULT_ID
 
@@ -1189,6 +1207,7 @@ vi: &DEFAULT_VI
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 vi-VN:
   <<: *DEFAULT_VI
 
@@ -1247,6 +1266,7 @@ da: &DEFAULT_DA
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 da-DK:
   <<: *DEFAULT_DA
 
@@ -1305,6 +1325,7 @@ pl: &DEFAULT_PL
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 pl-PL:
   <<: *DEFAULT_PL
 
@@ -1362,6 +1383,7 @@ ja: &DEFAULT_JA
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 ja-JP:
   <<: *DEFAULT_JA
 
@@ -1420,6 +1442,7 @@ sk: &DEFAULT_SK
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 sk-SK:
   <<: *DEFAULT_SK
 
@@ -1478,6 +1501,7 @@ hu: &DEFAULT_HU
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 hu-HU:
   <<: *DEFAULT_HU
 
@@ -1536,6 +1560,7 @@ ro: &DEFAULT_RO
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 ro-RO:
   <<: *DEFAULT_RO
 
@@ -1594,6 +1619,7 @@ pa: &DEFAULT_PA
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 pa-IN:
   <<: *DEFAULT_PA
 
@@ -1651,6 +1677,7 @@ fa: &DEFAULT_FA
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 fa-IR:
   <<: *DEFAULT_FA
 
@@ -1710,6 +1737,7 @@ ml: &DEFAULT_ML
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 ml-IN:
   <<: *DEFAULT_ML
 
@@ -1768,6 +1796,7 @@ th: &DEFAULT_TH
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 th-TH:
   <<: *DEFAULT_TH
 
@@ -1825,6 +1854,7 @@ hi: &DEFAULT_HI
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 hi-IN:
   <<: *DEFAULT_HI
 
@@ -1883,6 +1913,7 @@ ca: &DEFAULT_CA
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 ca-ES:
   <<: *DEFAULT_CA
 
@@ -1935,6 +1966,7 @@ ga: &DEFAULT_GA
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 ga-IE:
   <<: *DEFAULT_GA
 
@@ -1994,6 +2026,7 @@ fi: &DEFAULT_FI
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 
 # Myanmar (Burmese)
 # -----------------
@@ -2050,6 +2083,7 @@ my: &DEFAULT_MY
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 my-MM:
   <<: *DEFAULT_MY
 
@@ -2108,6 +2142,7 @@ no: &DEFAULT_NO
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 no-NB:
   <<: *DEFAULT_NO
 no-NN:
@@ -2168,6 +2203,7 @@ he: &DEFAULT_HE
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 he-IL:
   <<: *DEFAULT_HE
 
@@ -2226,6 +2262,7 @@ ar: &DEFAULT_AR
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 ar-SD:
   <<: *DEFAULT_AR
 ar-SA:
@@ -2290,6 +2327,7 @@ sw: &DEFAULT_SW
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 sw-KE:
   <<: *DEFAULT_SW
 sw-TZ:
@@ -2349,6 +2387,7 @@ uk: &DEFAULT_UK
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 uk-UA:
   <<: *DEFAULT_UK
 
@@ -2407,6 +2446,7 @@ cs: &DEFAULT_CS
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 cs-CZ:
   <<: *DEFAULT_CS
 
@@ -2465,6 +2505,7 @@ bg: &DEFAULT_BG
   operating_system           : "Operating System"
   total_downloads            : "Total Downloads"
   upcoming_release           : "This feature will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
+  upcoming_release_params    : "Some parameters will be part of an upcoming Ink/Stitch release. It is not yet integrated in Ink/Stitch."
 bg-BG:
   <<: *DEFAULT_BG
 
