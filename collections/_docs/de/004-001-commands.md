@@ -111,6 +111,9 @@ Wähle die Gruppe mit dem Befehl und entferne sie.
 
 Fügt Fadenschnitt-Befehle ein um Sprungstiche zu vermeiden
 
+{% include upcoming_release.html %}
+You can chose between trim or stop command.
+
 **Info**: Nutze diese Option nicht, wenn es die Möglichkeit gibt den Stickpfad weiter zu optimisieren. Das Fadenschneiden sollte so gut wie möglich vermieden werden. Lerne über Funktionen die Ink/Stitch für eine bessere [Pfadoptimisierung](/de/tutorials/routing/) bereithält.
 {: .notice--info }
 
