@@ -5,7 +5,7 @@ last_modified_at: 2025-01-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/califragilistic.png
-    height: 75
+    height: 50
 data_title:
   - califragilistic
 ---
