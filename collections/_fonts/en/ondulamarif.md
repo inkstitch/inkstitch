@@ -25,7 +25,7 @@ And it you use a varigated thread, then your font willl  have plenty of colors.
 
 
 
-{%- include end_of_font_page.html -%}
+{% include end_of_font_page.html %}
 
 {% include folder-galleries path="fonts/ondulamarif/" %}
 
