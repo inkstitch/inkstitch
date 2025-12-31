@@ -9,7 +9,7 @@ preview_image:
 data_title:
   - violin_serif
 ---
-{{% include font_infos.html %}
+{% include font_infos.html %}
 
 {% include end_of_font_page.html %}
 
