@@ -5,19 +5,19 @@ last_modified_at: 2024-04-28
 toc: false
 preview_image:
  - url: /assets/images/fonts/emilio_simple.png
-   height: 42
+   height: 21
  - url: /assets/images/fonts/emilio_20_bold.png
-   height: 50
+   height: 25
  - url: /assets/images/fonts/emilio_20_applique.png
-   height: 50
+   height: 25
  - url: /assets/images/fonts/emilio_20.jpg
-   height: 48
+   height: 24
  - url: /assets/images/fonts/emilio_tricolore.jpg
-   height: 100
+   height: 50
  - url: /assets/images/fonts/emilio_20_simple_small.jpg
-   height: 17
+   height: 9
  - url: /assets/images/fonts/emilio_tartan.png
-   height: 45
+   height: 23
 data_title:
   - emilio_20
   - emilio_20_bold
