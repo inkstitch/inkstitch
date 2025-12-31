@@ -9,7 +9,6 @@ preview_image:
 data_title:
   - ags_garamond_latin_grec
 ---
-{% include upcoming_release.html %}
 
 {% include font_infos.html %}
 
