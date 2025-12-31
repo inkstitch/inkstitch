@@ -13,6 +13,9 @@ Ein Blick in das [Schriften für Ink/Stitch erstellen Tutorial](/de/tutorials/fo
 
 Diese Erweiterung erlaubt das Konvertieren einer SVG-Schriftart-Datei in Glyphen-Ebenen, so wie vom Textwerkzeug benötigt.
 
+{% include upcoming_release.html %}
+It allows font sizing by specifying the target height of specified glyph.
+
 ## Benutzerdefinierter Ordner für Schriften
 
 Diese Erweiterung erlaubt dir, einen Ordner zu definieren, in dem du zusätzliche Schriften für das Text-Werkzeug speichern willst.
@@ -20,6 +23,7 @@ Diese Erweiterung erlaubt dir, einen Ordner zu definieren, in dem du zusätzlich
 Jede Schriftart sollte in einem eigenen Unterordner gespeichert werden und sollte mindestens folgende Dateien enthalten: eine Schriftdatei (svg) und eine json-Datei.
 Zusätzlich empfehlen wir eine Lizenz-Datei.
 
+{% include upcoming_release.html %}
 
 The font variant files used to have to be named  with an arrow, indicating the stitch direction it has been created for (`→.svg`, `←.svg`, etc.).
 Now, names should be ltr.svg for left to right direction and rtl.svg for right to left direction.
@@ -38,6 +42,9 @@ Außerdem wird bei Ausführung der Erweiterung die Liste der verfügbaren Zeiche
 
 Diese Erweiterung generiert eine Liste aller Zeichen einer Schrift.
 So können Schriftautoren schnell und einfach das Stickergebnis einer neuen Schrift prüfen.
+{% include upcoming_release.html %}
+It only render unlocked (sensitive) glyphs. This allows for partial sampling while creating the font.
+
 
 ### Funktionsweise
 
@@ -53,25 +60,7 @@ So können Schriftautoren schnell und einfach das Stickergebnis einer neuen Schr
 * Maximale Zeilenlänge: fügt Zeilenumbrüche entsprechend des gewählten Wertes ein
 * Farbsortierung: legt fest, ob mehrfarbige Schriften sortiert werden sollen (damit das funktioniert, muss die Schrift die entsprechenden [Farbsortierindices](#farbsortierindex-festlegen) festgelegt haben)
 
-## Font Sampling
 
-This extension creates a list of all letters in a font. It helps font creators to test the outcome of a new font.
-
-It only render unlocked (sensitive) glyphs. This allows for partial sampling while creating the font.
-
-### Usage
-
-* Run `Extensions > Ink/Stitch > Font Management > Font Sampling`
-* Pick a font, adjust settings
-* Click on apply
-
-### Options
-
-* Font: the one you want to use
-* Stitch direction:  default is left to right
-* Scale: in percent
-* Max line width: line breaks will  be chosen accordingly
-* Color sort: whether a multicolor font should be color sorted or not (font needs to set the [color sort index](#set-color-index) values)
 ## Vernähstiche erzwingen
 
 
@@ -96,6 +85,7 @@ Diese Erweiterung soll dabei helfen, die Stickobjekte entsprechend zu bearbeiten
   * Maximaler Abstand (mm): füge keinen Vernähstiche erzwingen Befehl ein, wenn der Abstand zum nächsten Element größer ist als dieser Wert
 
 * Füge das Attribut "Vernähen erzwingen" dem jeweils letzten Element eines Schriftzeichens hinzu
+ {% include upcoming_release.html %}
 *  Add force lock stitches attribute to the last element of each group
 
 ## JSON-Datei erstellen
@@ -108,7 +98,7 @@ Lese nach [**wie man eine SVG-Schrift mit Kerning Information erstellt**](/de/tu
 Wenn du deine Schrift ohne Kerning erstellt hast, kannst du mit diesem Werkzeug immer noch eine JSON-Datei mit den Grundinformationen erstellen.
 
 ### Schriftinformationen
-
+{% include upcoming_release_params.html %}
 |Option                          |Beschreibung
 |--------------------------------|---------------------------------
 |Name                            |Pflichfeld. Der Name der Schrift.
