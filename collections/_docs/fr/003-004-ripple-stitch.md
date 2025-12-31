@@ -94,7 +94,7 @@ Avec un guidage satin, il est aussi possible d'ajuster  la direction des réplic
 [Télécharger](/assets/images/docs/ripple_satin_guide.svg){: download="satin_guided_ripples.svg" }
 
 ## Paramétrage
-
+{% include upcoming_release_params.html %}
 Paramètres||Description
 ---|---|---
 Points droits le long des chemins     | ☑ |Doit être activé pour que ces paramètres prennent effet.
