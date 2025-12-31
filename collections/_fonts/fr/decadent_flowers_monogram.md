@@ -5,7 +5,7 @@ last_modified_at: 2025-03-19
 toc: false
 preview_image:
   - url: /assets/images/fonts/decadent_flowers_monogram.png
-    height: 120
+    height: 50
 data_title:
   - decadent_flowers_monogram
 ---
