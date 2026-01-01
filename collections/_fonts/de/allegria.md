@@ -14,7 +14,7 @@ data_title:
 ---
 {% include upcoming_release.html %}
 
-{{% include font_infos_de.html %}
+{% include font_infos_de.html %}
 
 {% include end_of_font_page_de.html %}
 
