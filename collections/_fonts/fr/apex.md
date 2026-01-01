@@ -21,7 +21,7 @@ data_title:
 
 ## Particularités
 
-Apex Lake est une police de lettrines. 
+**Apex Lake** est une police de lettrines. 
 
 Si vous ne souhaitez pas broder le cadre, ignorez les deux dernières étapes.  
 
@@ -31,6 +31,8 @@ Pour éviter les surépaisseurs de broderie, le motif de fond est incomplet dans
 
 Vous pouvez aussi utiliser les deux fontes conjointement, généralement en utilisant Apex Lake pour la premiere lettre et Apex Simple AGS pour la suite:
 ![Both_Apex](/assets/images/fonts/both_apex.png)
+
+**Apex simple small** nécessite l'usage d'un fil plus fin (60) qu'habituellement, associé à une aiguille fine (60).
 
 
 
