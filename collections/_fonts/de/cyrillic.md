@@ -9,32 +9,10 @@ preview_image:
 data_title:
   - cyrillic
 ---
-{%- assign font1 = site.data.fonts.cyrillic.font -%}
+{% include font_infos_de.html %}
 
-{% include upcoming_release.html %}
+{% include end_of_font_page_de.html %}
 
-![Cyrillic](/assets/images/fonts/cyrillic.png)
-
-## Schriftzeichen
-
-Diese Schrift enthält {{ font1.glyphs.size }} Schriftzeichen:
-
-```
-{{ font1.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-Bei einer Skalierung von 100% hat die Schrift eine ungefähre Höhe von {{ font1.size }} mm. 
-
-Sie kann von {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
-bis zu {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm) skaliert werdens.
-
-## Impressionen
 
 {%include folder-galleries path="fonts/cyrillic/" %}
 
-## Lizenz
-
-[Lizenz herunterladen (Cyrillic)](https://github.com/inkstitch/inkstitch/tree/main/fonts/cyrillic/LICENSE)
