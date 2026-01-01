@@ -20,6 +20,7 @@ data_title:
 
 Jedes Zeichen enthält die ursprünglichen Pfadinformationen in einem versteckten Pfad. Diese Pfade sind nicht zum Sticken vorgesehen, aber sie können bei einer späteren Schrift-Modifikation behilflich sein. Sie können ohne Weiteres ignoriert werden.
 
+**Hebrew simple rounded Small** MUSS  mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es MUSS eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
 
 {% include end_of_font_page_de.html %}
