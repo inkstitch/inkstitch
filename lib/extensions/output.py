@@ -49,7 +49,7 @@ class Output(InkstitchExtension):
 
     def effect(self):
         if not self.get_elements():
-            return
+            sys.exit(0)
 
         self.metadata = self.get_inkstitch_metadata()
         collapse_len = self.metadata['collapse_len_mm']
