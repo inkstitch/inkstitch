@@ -9,29 +9,11 @@ preview_image:
 data_title:
   - chopin
 ---
-{%- assign font = site.data.fonts.chopin.font -%} 
-![Chopin Script](/assets/images/fonts/chopin_script.jpg)
+{% include font_infos_de.html %}
 
-## Schriftzeichen
+{% include end_of_font_page_de.html %}
 
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
- ## Maße
-
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 50 mm hoch (2 Zoll).
-Sie kann bis auf 120% (~60mm, 2.4 Zoll) hochskaliert werden, und bis zu 80% (~40mm, 1.5 Zoll) herunterskaliert werden.
-
-## Impressionen
-
-Kissen, Handtücher, T-shirt, Fleece
 
 {% include folder-galleries path="fonts/chopin/" %}
 
-## Lizenz
-
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/chopin/LICENSE)
