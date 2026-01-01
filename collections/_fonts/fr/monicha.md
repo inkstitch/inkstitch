@@ -9,27 +9,12 @@ preview_image:
 data_title:
   - monicha
 ---
-{%- assign font = site.data.fonts.monicha.font -%}
-![monicha](/assets/images/fonts/monicha.jpg)
-
-## Glyphes 
-Cette fonte comporte  {{ font.glyphs.size }} glyphes:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
+{{% include font_infos_fr.html %}
 
 
-## Dimensions
-
-A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
-
-Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
-à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
 
 
-## Description
+## Particularités
 
 Monicha est notre première police à lettres multiformes.
 
@@ -97,8 +82,9 @@ Ces majuscules alternatives ne doivent être utilisées qu'en début de mot, les
 
 
 
-##  Dans la vraie vie
+
+
+{% include end_of_font_page_fr.html %}
 
 {% include folder-galleries path="fonts/monicha/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/monicha/LICENSE)
