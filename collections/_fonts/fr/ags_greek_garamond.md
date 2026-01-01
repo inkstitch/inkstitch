@@ -9,31 +9,11 @@ preview_image:
 data_title:
   - ags_garamond_latin_grec
 ---
-{%- assign font = site.data.fonts.ags_garamond_latin_grec.font -%}
-![AGS garamond](/assets/images/fonts/garamond.png)
+{% include font_infos_fr.html %}
 
-
-## Glyphes
-
-Cette fonte comporte  {{ font.glyphs.size }} glyphes:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
-
-Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
-à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
-
-
-## Dans la vraie vie
+{% include end_of_font_page_fr.html %}
 
 {% include folder-galleries path="fonts/ags_greek_garamond/" %}
 
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/ags_garamond_latin_grec/LICENSE)
