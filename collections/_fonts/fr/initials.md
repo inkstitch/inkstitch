@@ -29,7 +29,11 @@ Attention : tous les cadres ne conviennent pas à toutes les lettres, en particu
 
 ### Initials Medium 
 
-Cette fonte est réduite et simplifiée. On garde la possibilité d'encadrer une lettre, mais le positionnement de la lettre par rapport au cadre est plus approximatif que dans la fonte XL. En revanche il est tout à fait possible d'écrire des mots avec des lettres correctement positionnées, ce qui n'est pas le cas avec la fonte XL.
+Cette fonte est réduite et simplifiée. 
+
+On garde la possibilité d'encadrer une lettre, mais le positionnement de la lettre par rapport au cadre est plus approximatif que dans la fonte XL. 
+
+En revanche il est tout à fait possible d'écrire des mots avec des lettres correctement positionnées, ce qui n'est pas le cas avec la fonte XL.
 
 ## Tableau de correspondance des cadres
 
