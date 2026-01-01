@@ -12,32 +12,13 @@ data_title:
   - initials_medium
   - initials_XL
 ---
-{%- assign font = site.data.fonts.initials_medium.font -%}
+{% include font_infos_fr.html %}
 
-![Initials XL](/assets/images/fonts/initials_xl.jpg)
 
-![Initials medium](/assets/images/fonts/initials_medium.jpg)
 
-## Glyphes
 
-Chacune de ces deux fontes comporte {{ font.glyphs.size }} glyphes:
 
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-Remarque : Les glyphes ;:,.(){}[] sont utilisés pour stocker des cadres.
-
-## Dimensions
-### Initials XL 
-Utilisée à 100%, cette fonte fait environ 150 mm.
-Elle peut être agrandie jusqu'à 200% (env 300 mm) ou diminuée jusqu'à 70% (env 100 mm).
-### Initials Medium 
-Utilisée à 100%, cette fonte fait environ 90 mm.
-Elle peut être agrandie jusqu'à 200% (env 180 mm) ou diminuée jusqu'à 70% (env 60 mm).
-
-## Description
+## Particularités
 
 ### Initials XL 
 
@@ -66,9 +47,13 @@ Frame|Key
 ![PointVirgule](/assets/images/fonts/sortefax/pointvirgule.png)|<key>;</key>
 
 
-## Dans la vraie vie
+
+
+{% include end_of_font_page_fr.html %}
+
+
 
 {% include folder-galleries path="fonts/initials/" %}
 
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/initials_xl/LICENSE)
+
