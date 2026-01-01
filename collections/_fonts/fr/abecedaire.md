@@ -11,7 +11,7 @@ data_title:
 ---
 {% include font_infos_fr.html %}
 
-### Spécificités de la fonte
+## Particularités
 
 Ce lettrage a été inspiré par une page du livre Dessins de broderie - Stickmuster buch Heft 185 (fin 19ème siècle)
 
