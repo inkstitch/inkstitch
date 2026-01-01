@@ -11,6 +11,9 @@ data_title:
 ---
 {% include upcoming_release.html %}
 
+## Particularités
+Si vous ne disposez pas d'un clavier cyrillique  réel ou virtuel, vous pouvez utilisez le copier coller  pour entrer les caractères dans l'outil de lettrage.
+
 {% include font_infos_fr.html %}
 
 {% include end_of_font_page_fr.html %}
