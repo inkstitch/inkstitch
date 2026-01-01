@@ -13,7 +13,6 @@ data_title:
   - chicken_little_small
 ---
 {% include font_infos_fr.html %}
-{% include end_of_font_page_fr.html %}
 
 ## Particularités
 
