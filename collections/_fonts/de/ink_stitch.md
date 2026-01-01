@@ -1,7 +1,7 @@
 ---
 title: "Ink/Stitch"
 permalink: /de/fonts/ink_stitch/
-last_modified_at: 2023-04-24
+last_modified_at: 2026-01-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/inkstitch_small.jpg
@@ -14,46 +14,14 @@ data_title:
   - small_font
   - medium_font
 ---
-{%- assign font1 = site.data.fonts.small_font.font -%}
-{%- assign font2 = site.data.fonts.medium_font.font -%}
+{% include font_infos_de.html %}
 
-![Ink/Stitch Small](/assets/images/fonts/inkstitch_small.jpg)
-![Ink/Stitch Medium](/assets/images/fonts/inkstitch_medium.jpg)
-
-## Schriftzeichen
-
-Beide Schriften umfassen {{ font.glyphs.size }} Schriftzeichen:
-
-```
-{{ font1.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-### Ink/Stitch Small Font
-
-Bei einer Skalierung von 100% ist die Schrift ungefähr 6 mm hoch (1/4 Zoll).
-
-Sie kann bis auf 300% (~ 18 mm, 3/4 Zoll) hochskaliert werden. Von einer Verkleinerung wird abgeraten.
-
-### Ink/Stitch Medium Font
-
-Bei einer Skalierung von 100% ist die Schrift ca. 19 mm (3/4 Zoll) hoch.
-
-Sie kann bis auf 150% (~ 29 mm, 1 1/8 Zoll) hochskaliert und bis zu 75% (~14 mm, 1/2 Zoll) verkleinert werden.
 
 ## Besonderheiten
 
 Beide Schriften sind in beide Richtungen stickbar. Bei mehrzeiligen Texten kann die Richtung variieren.
 
-
-## Impressionen
+{% include end_of_font_page_de.html %}
 
 {% include folder-galleries path="fonts/inkstitch/" %}
 
-## Lizenz
-
-[Lizenz herunterladen (Ink/Stitch Small)](https://github.com/inkstitch/inkstitch/tree/main/fonts/small_font/LICENSE)
-
-[Lizenz herunterladen (Ink/Stitch Medium)](https://github.com/inkstitch/inkstitch/tree/main/fonts/medium_font/LICENSE)
