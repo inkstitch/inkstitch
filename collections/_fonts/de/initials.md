@@ -1,7 +1,7 @@
 ---
 title: "Initials"
 permalink: /de/fonts/initials/
-last_modified_at: 2025-12-26
+last_modified_at: 2026-01-01
 toc: false
 preview_image: 
   - url: /assets/images/fonts/initials_xl.jpg
@@ -12,35 +12,13 @@ data_title:
   - initials_medium
   - initials_XL
 ---
-{%- assign font = site.data.fonts.initials_medium.font -%}
-
-![Initials XL](/assets/images/fonts/initials_xl.jpg)
-
-![Initials medium](/assets/images/fonts/initials_medium.jpg)
+{% include font_infos_de.html %}
 
 
-## Schriftzeichen
 
-Diese Schrift enthält folgende 47 Schriftzeichen:
-	
-?.:;,([{)]}&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+## Besonderheiten
 
 Anmerkung: Diese Schriftzeichen :;,.(){}[] werden genutzt um die Rahmen zu speichern.
-
-## Maße
-
-### Initials XL 
-
-Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 150 mm (6 Zoll) groá.
-Sie kann bis auf 200% (~ 300 mm, 12 Zoll) hochskaliert und bis zu 70% (~ 100 mm, 4 Zoll) herunterskaliert werden.
-
-### Initials Medium 
-
-Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 90 mm (3.5 Zoll) groá.
-Sie kann bis auf 200% (~ 180 mm, 7 Zoll) hochskaliert und bis zu 70% (~ 60 mm, 2.5 Zoll) herunterskaliert werden.
-
-
-## Beschreibung
 
 ### Initials XL 
 
@@ -75,10 +53,11 @@ Rahmen|Zeichen
 ![DeuxPoints](/assets/images/fonts/sortefax/deuxpoints.png)|<key>:</key>
 ![PointVirgule](/assets/images/fonts/sortefax/pointvirgule.png)|<key>;</key>
 
-## Impressionen
+
+
+{% include end_of_font_page_de.html %}
+
+
 
 {% include folder-galleries path="fonts/initials/" %}
 
-## Lizenz
-
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/sortefaxXL/LICENSE)
