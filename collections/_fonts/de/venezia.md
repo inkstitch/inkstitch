@@ -1,7 +1,7 @@
 ---
 title: "Venezia"
 permalink: /de/fonts/venezia/
-last_modified_at: 2025-09-07
+last_modified_at: 2026-01-01
 toc: false
 preview_image:
  - url: /assets/images/fonts/venezia.png
@@ -12,57 +12,17 @@ data_title:
   - venezia
   - venezia_small
 ---
-{%- assign font1 = site.data.fonts.venezia.font -%}
-{%- assign font2 = site.data.fonts.venezia_small.font -%}
+
 
 {% include upcoming_release.html %}
 
-![Venezia](/assets/images/fonts/venezia.png)
+{% include font_infos_de.html %}
 
-![Venezia Small](/assets/images/fonts/venezia_small.png)
-
-## Schriftzeichen
-
-### Venezia
-
-Diese Schrift enthält {{ font1.glyphs.size }} Schriftzeichen:
-
-```
-{{ font1.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-### Venezia Small
-
-Diese Schrift enthält {{ font2.glyphs.size }} Schriftzeichen:
-
-```
-{{ font2.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-### Venezia
-
-Bei einer Skalierung von 100% hat die Schrift eine ungefähre Höhe von {{ font1.size }} mm. 
-
-Sie kann von {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
-bis zu {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm) skaliert werdens.
-
-### Venezia Small
-
-Bei einer Skalierung von 100% hat die Schrift eine ungefähre Höhe von {{ font2.size }} mm. 
-
-Sie kann von {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
-bis zu {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm) skaliert werdens.
-
-## Impressionen
+## Besonderheiten
+**Venezia Small** MUSS  mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es MUSS eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
+{% include end_of_font_page_de.html %}
 
 {%include folder-galleries path="fonts/neon/" %}
 
-## Lizenz
 
-[Lizenz herunterladen (Venezia)](https://github.com/inkstitch/inkstitch/tree/main/fonts/neon/LICENSE)
 
-[Lizenz herunterladen (Venezia Small Font)](https://github.com/inkstitch/inkstitch/tree/main/fonts/neon_blinking/LICENSE)
