@@ -30,7 +30,7 @@ Sie kann bis auf 150% (~33 mm, 1 1/4 Zoll) hochskaliert und bis zu 80% (~20 mm, 
 
 ## Impressionen
 
-{% include folder-galleries path="fonts/stebor_ags/" %}
+{% include folder-galleries path="fonts/stebor/" %}
 
 ## Lizenz
 
