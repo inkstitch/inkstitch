@@ -10,6 +10,7 @@ preview_image:
     height: 28
 data_title:
   - roman_ags
+  - roman_ags_bicolor
 ---
 {% include font_infos.html %}
 
