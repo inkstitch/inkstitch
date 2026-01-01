@@ -12,6 +12,8 @@ data_title:
   - neon
   - neon_blinking
 ---
+{% include upcoming_release.html %}
+
 {% include font_infos_fr.html %}
 
 {% include end_of_font_page_fr.html %}
