@@ -9,40 +9,23 @@ preview_image:
 data_title:
   - circular_3letters_monogram
 ---
-{%- assign font1 = site.data.fonts.circular_3letters_monogram.font -%}
+{% include font_infos_fr.html %}
 
-{% include upcoming_release.html %}
 
-![Circular 3 Letters Monogram](/assets/images/fonts/circular_3letters_monogram.png)
-
-## Glyphes
-
-Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
-
-```
-{{ font1.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
 
 ## Particularités
 
-Enter 3 letters to get a circular three letters monogram. You can add a frame, by adding one of the following :(){,[];.<>
+Entrez 3 lettres pour obtenir un monogramme circulaire à trois lettres.
 
-For instance enter {ABC.
+Vous pouvez ajouter un cadre en insérant l'un des caractères suivants : () {, [];. <>
 
-Please use exactly 3 letters, no less, no more, or you could get some unexpected result.
+Par exemple, saisissez {ABC 
 
-## Dimensions
+Veuillez utiliser exactement 3 lettres, ni plus ni moins, sous peine d'obtenir un résultat inattendu.
 
-A une échelle de 100% cette fonte a une hauteur approximative de {{ font1.size }} mm. 
 
-Elle peut être redimensionnée de {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
-à {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
 
-## Dans la vraie vie
+{% include end_of_font_page_fr.html %}
 
 {%include folder-galleries path="fonts/allegria/" %}
 
-## License
-
-[Download Circular 3 Letters Monogram Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/circular_3letters_monogram/LICENSE)
