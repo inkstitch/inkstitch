@@ -67,7 +67,7 @@ class CrossGeometry(object):
 
         # upright polygon
         center = list(square.centroid.coords)[0]
-        upright_square = Polygon([(0, center[1]), (center[0], 0), (box_x, center[0]), (center[0], box_y)])
+        upright_square = Polygon([(0, center[1]), (center[0], 0), (box_x, center[1]), (center[0], box_y)])
 
         # start and end have to be a multiple of the stitch length
         # we also add the initial offset
@@ -121,7 +121,7 @@ class CrossGeometry(object):
         return offset_x, offset_y
 
     def add_cross(self, box, upright_box):
-        if self.cross_stitch_method in ['upright_cross', 'upright_cross_flipped']:
+        if "upright" in self.cross_stitch_method:
             box = upright_box
 
         coords = list(box.exterior.coords)
