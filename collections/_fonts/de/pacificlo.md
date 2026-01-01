@@ -14,8 +14,6 @@ data_title:
 ---
 {% include font_infos_de.html %}
 
-{% include end_of_font_page_de.html %}
-
 ## Besonderheiten
 
 ![Dimensions Pacificlo](/assets/images/fonts/Sizing/pacificlosizing.jpg)
