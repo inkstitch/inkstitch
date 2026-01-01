@@ -15,7 +15,7 @@ data_title:
 
 ## Particularité
 
-Déja Vu peut être brodée de gauche à droite, de droite à gauche, de haut en bas, de bas en haut.
+Déja Vu peut être brodée de gauche à droite et de droite à gauche, permettant des aller et retour sur les broderies multilignes.
 
 
 
