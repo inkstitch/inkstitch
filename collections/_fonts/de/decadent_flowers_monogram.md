@@ -1,11 +1,11 @@
 ---
 title: "Decadent Flowers Monogram"
 permalink: /de/fonts/decadent_flowers_monogram/
-last_modified_at: 2025-04-13
+last_modified_at: 2026-01-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/decadent_flowers_monogram.png
-    height: 50
+    height: 35
 data_title:
   - decadent_flowers_monogram
 ---
