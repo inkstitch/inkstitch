@@ -35,11 +35,23 @@ data_title:
  <img 
      src="/assets/images/fonts/emilio_20_all_versions_english.png"
      alt="Comparison Emilio 20 fonts" >
-     
+### Emilio 20 Applique
 
+
+    
+    
+    Satin or zig-zag stitches. This is to finish the edge of the fabric.
+
+
+* first step, red : Placement stitches. This is to mark where you will need to place the fabric. May also be used for cut machine.
+* second step, green: Tackdown stitches. This is to hold the fabric in place prior to finishing the edges. 
+* third step ,black : Satin stitches. This is to finish the edge of the fabric. Make sure you have cut the fabric before embroidering this step.
+     
+### Emilio Simple Small
 Emilio 20 Simple  Small  **MUST** be embroidered with thread and needle smaller than usual.
 A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
 
+### Emilio Tartan
 Each letter of Emilio 20 Tartan has its own tartan, therefore embroidering it as is is not for the faint of heart ! 
 Quite a few threads changes are required. 
 
