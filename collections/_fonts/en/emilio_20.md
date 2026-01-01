@@ -37,12 +37,6 @@ data_title:
      alt="Comparison Emilio 20 fonts" >
 ### Emilio 20 Applique
 
-
-    
-    
-    Satin or zig-zag stitches. This is to finish the edge of the fabric.
-
-
 * first step, red : Placement stitches. This is to mark where you will need to place the fabric. May also be used for cut machine.
 * second step, green: Tackdown stitches. This is to hold the fabric in place prior to finishing the edges. 
 * third step ,black : Satin stitches. This is to finish the edge of the fabric. Make sure you have cut the fabric before embroidering this step.
