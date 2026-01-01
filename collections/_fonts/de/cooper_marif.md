@@ -5,7 +5,7 @@ last_modified_at: 2026-01-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/cooper_marif.png
-    height: 50
+    height: 35
 data_title:
   - cooper_marif
 ---
