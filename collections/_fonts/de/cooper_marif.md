@@ -1,11 +1,11 @@
 ---
 title: "CooperMarif"
 permalink: /de/fonts/cooper_marif/
-last_modified_at: 2024-06-23
+last_modified_at: 2026-01-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/cooper_marif.png
-    height: 90
+    height: 50
 data_title:
   - cooper_marif
 ---
