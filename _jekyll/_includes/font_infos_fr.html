@@ -1,0 +1,41 @@
+
+{% for image in page.preview_image -%}
+<p class="font-library-preview-image">
+  <img 
+     src="{{ image.url }}"
+     alt="{{ page.title }} "
+     style="height:{{ image.height }}mm;max-width:none;" data-image_height="{{ image.height }}mm">
+  </p>
+{% endfor %} 
+
+
+<h2>Glyphes</h2>
+
+{%- assign nb_fonts =page.data_title.size -%}
+{%- for sub_font in page.data_title -%}
+  {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
+ 
+<p>{{ sub_font_data.name }} contient {{ sub_font_data.glyphs.size }} glyphs:</p> 
+
+<code class="font-glyphs">{{ sub_font_data.glyphs | sort | join: ' ' }}</code>
+
+{% endfor %}
+
+<h2>Dimensions</h2>
+<p> Lors de l'utilisation de l'outil de lettrage, la mise à l'échelle de la police est contrôlée par une plage de pourcentages.
+</p>
+
+<p>Si vous essayez de diminuer ou d'augmenter davantage la taille de la police en dehors de l'outil de lettrage, la broderie risque de ne pas être correcte.</p>
+{% for sub_font in page.data_title -%}
+  {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
+
+L'outil de lettrage vous permettra de réduire la taille de <b>{{ sub_font_data.name }}</b> jusqu'à {{ sub_font_data.min_scale | times: 100 | floor }}% pour obtenir une taille d'environ
+{{ sub_font_data.size | times: sub_font_data.min_scale }} mm,
+
+et de l'augmenter jusqu'à {{ sub_font_data.max_scale | times: 100 | floor }}% pour obtenir une taille d'environ
+{{ sub_font_data.size | times: sub_font_data.max_scale }} mm.
+
+
+
+
+{% endfor %}
