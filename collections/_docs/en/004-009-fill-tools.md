@@ -49,7 +49,7 @@ Convert to gradient blocks will split a fill with a linear gradient into multipl
 
 ## Cross Stitch Helper
 
-The cross-stitch helper can assist in various ways when creating cross-stitch patterns.
+The cross-stitch helper can assist in various ways when creating [cross stitch patterns](/docs/stitches/cross-stitch).
 
 * Checking the diagonal stitch length
 * Creating the page grid

@@ -40,7 +40,7 @@ Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrer
 
 ## Kreuzstich-Helfer
 
-Der Kreuzstich-Helfer kann bei der Erstellung von Kreuzstichmustern auf verschiedene Weise unterstützen.
+Der Kreuzstich-Helfer kann bei der Erstellung von [Kreuzstichmustern](/de/docs/stitches/cross-stitch) auf verschiedene Weise unterstützen.
 
 * Überprüfung der diagonalen Stichlänge
 * Anlegen des Seitengitters
@@ -61,7 +61,7 @@ Um beieinanderliegende Flächen gut aufeinander abzustimmen, richten sich Kreuzs
 Das heißt, je nachdem an welcher Stelle auf der Arbeitsfläche sich ein Element befindet, kann sich das Stickbild ändern.
 Um dies besser planen zu können, ist es hilfreich, das Seitengitter an die Kreuzstichmustergröße anzupassen. So kann man schon visuell die Stichpositionen besser abschätzen.
 
-Unter `File > Document Properties... > Grids` kann das Gitter auch manuell eingestellt werden. Dort gibt es auch eine Funktion (`Align to page`), die nicht über Ink/Stitch-Einstellungen erreicht werden kann. Daher ist es wichtig zu überprüfen, ob sich das erstellte Gitter an der oberen linken Seitenecke ausrichtet. Ansonsten muss diese Einstellung noch manuell angepasst werden.
+Unter `Datei > Dokumenteinstellungen... > Gitter` kann das Gitter auch manuell eingestellt werden. Dort gibt es auch eine Funktion (`An der Seite ausrichten`), die nicht über Ink/Stitch-Einstellungen erreicht werden kann. Daher ist es wichtig zu überprüfen, ob sich das erstellte Gitter an der oberen linken Seitenecke ausrichtet. Ansonsten muss diese Einstellung noch manuell angepasst werden.
 {: .notice--warning }
 
 #### Außenkontur verpixeln

@@ -82,7 +82,9 @@ Ink/Stitch comes with an extension which helps you to perform cross stitch speci
 * Pixelize the outline of selected elements, to easily see and adapt cross stitch positions
 
 It also computes and displays the stitch length given the grid dimensions. Maximum stitch length in the cross stitches parameters should be larger than this value.
-  
+
+[Read more](/docs/tools-fill/#cross-stitch-helper)
+
 ## Set Start and End Point
 
 By default, an automatic fill starts as close as possible to the previous embroidery element and ends as close as possible to the next embroidery element.
