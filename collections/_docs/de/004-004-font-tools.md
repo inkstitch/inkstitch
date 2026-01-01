@@ -14,7 +14,8 @@ Ein Blick in das [Schriften für Ink/Stitch erstellen Tutorial](/de/tutorials/fo
 Diese Erweiterung erlaubt das Konvertieren einer SVG-Schriftart-Datei in Glyphen-Ebenen, so wie vom Textwerkzeug benötigt.
 
 {% include upcoming_release.html %}
-It allows font sizing by specifying the target height of specified glyph.
+
+Die Schriftgröße kann über die Zielgröße eines bestimmten Zeichens definiert und angepasst werden.
 
 ## Benutzerdefinierter Ordner für Schriften
 
@@ -25,10 +26,11 @@ Zusätzlich empfehlen wir eine Lizenz-Datei.
 
 {% include upcoming_release.html %}
 
-The font variant files used to have to be named  with an arrow, indicating the stitch direction it has been created for (`→.svg`, `←.svg`, etc.).
-Now, names should be ltr.svg for left to right direction and rtl.svg for right to left direction.
+Die Schriftvarianten wurden in älteren Ink/Stitch-Versionen über Pfeile in den Dateinamen definiert (`→.svg`, `←.svg`, etc.).
+Jetzt geschieht dies über geänderte Dateinamen: `ltr.svg` steht beispielsweise für die Stickrichtung von links nach rechts (left-to-right, ltr). Die Dateinamen für die Schriftvarianten lauten demnach:
+'ltr.svg' (links nach rechts), `rtl.svg` (rechts nach links), `ttb.svg` (oben nach unten) und `btt.svg` (unten nach oben)
 
-It is also possible to create a folder named ltr (or rtl) instead and insert multiple font files for this specific direction.
+Es ist auch möglich, Dateiordner mit dieser Namensstruktur anzulegen (ltr, rtl, etc.) und die Schriftdatei in mehrere Dateien aufzusplitten.
 
 Die JSON-Datei muss als minimale Bedingung den Namen der Schrift enthalten.
 
@@ -42,9 +44,10 @@ Außerdem wird bei Ausführung der Erweiterung die Liste der verfügbaren Zeiche
 
 Diese Erweiterung generiert eine Liste aller Zeichen einer Schrift.
 So können Schriftautoren schnell und einfach das Stickergebnis einer neuen Schrift prüfen.
-{% include upcoming_release.html %}
-It only render unlocked (sensitive) glyphs. This allows for partial sampling while creating the font.
 
+{% include upcoming_release.html %}
+
+Es werden nur entsperrte Glyphen gerendert (Schloß-Symbol). Dies ermöglicht eine Stichprobentestung während der Erstellung der Schriftart.
 
 ### Funktionsweise
 
@@ -60,9 +63,7 @@ It only render unlocked (sensitive) glyphs. This allows for partial sampling whi
 * Maximale Zeilenlänge: fügt Zeilenumbrüche entsprechend des gewählten Wertes ein
 * Farbsortierung: legt fest, ob mehrfarbige Schriften sortiert werden sollen (damit das funktioniert, muss die Schrift die entsprechenden [Farbsortierindices](#farbsortierindex-festlegen) festgelegt haben)
 
-
 ## Vernähstiche erzwingen
-
 
 Bei kleinen Schriften kann es schnell passieren, dass sich der Faden löst, wenn Sprungstiche nach der Fertigstellung geschnitten werden.
 
@@ -85,8 +86,9 @@ Diese Erweiterung soll dabei helfen, die Stickobjekte entsprechend zu bearbeiten
   * Maximaler Abstand (mm): füge keinen Vernähstiche erzwingen Befehl ein, wenn der Abstand zum nächsten Element größer ist als dieser Wert
 
 * Füge das Attribut "Vernähen erzwingen" dem jeweils letzten Element eines Schriftzeichens hinzu
- {% include upcoming_release.html %}
-*  Add force lock stitches attribute to the last element of each group
+* {% include upcoming_release.html %}
+
+  Füge das Attribut "Vernähen erzwingen" zu dem jeweils letzten Element einer Gruppe hinzu
 
 ## JSON-Datei erstellen
 
@@ -98,14 +100,16 @@ Lese nach [**wie man eine SVG-Schrift mit Kerning Information erstellt**](/de/tu
 Wenn du deine Schrift ohne Kerning erstellt hast, kannst du mit diesem Werkzeug immer noch eine JSON-Datei mit den Grundinformationen erstellen.
 
 ### Schriftinformationen
+
 {% include upcoming_release_params.html %}
+
 |Option                          |Beschreibung
 |--------------------------------|---------------------------------
 |Name                            |Pflichfeld. Der Name der Schrift.
 |Beschreibung                    |Eine kurze Beschreibung deiner Schrift
-|Font license          | Type of license  for this ink/stitch font
-|Original Font name              |name of the underlying ttf font if any|
-|Original Font URL                |url of the underlying font|
+|Schriftlizent                   |Lizenttyp der Ink/Stitch-Schrift
+|Name der Originalschrift        |Nme der ursprünglichen Schriftart (ttf-Schrift o.ä.)
+|URL der Originalschrift         |URL der ursprünglichen Schriftart
 |Schriftdatei                    |Pflichtfeld. Wenn du deine Schrift mit Hilfe von FontForge erstellt hast, wird Ink/Stitch die Kerning informationen aus dieser Datei lesen und in die JSON-Datei einfügen.<br>Außerdem legt der Dateipfad den Speicherort für die neue JSON-Datei fest.<br/><br/>Die Datei `font.json` wird in demselben Ordner erstellt, in dem deine SVG-Schriftdatei liegt.
 |Stichwörter                     |Aktiviere die Kategorien, die für die Schrift zutreffend sind
 

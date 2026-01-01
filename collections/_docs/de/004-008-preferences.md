@@ -54,9 +54,11 @@ Die minimale Stichlänge kann sich dementsprechend auch auf **Satinsäulen** aus
 
 Stiche mit **manueller Stichpositionierung** werden ebenfalls entsprechend dieser Einstellung angepasst. Dies kann von Nutzen sein, wenn die Stiche versehentlich zu eng gesetzt wurden.
 
-### For this document only : Rotate on export
+### Rotiere bei Export (nur dokumentbezogen)
+
 {% include upcoming_release.html %}
-This option rotates the embroidery 90°. Is useful when the embroidery  machine does not automatically rotate to fit the hoop.
+
+Diese Option rotiert das Stickbild beim Export um 90°. Dies ist nützlich, wenn eine Stickmaschine ein Design nicht automatisch dreht um es in den Stickrahmen einzupassen.
 
 ## Cache Größe (MB)
 

@@ -48,12 +48,13 @@ Hilfsmethode zur Erstellung von:
 
 * Elemente auswählen
 * `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Auswahl zu Knockdown-Stich`
-* Einstellungen anpassen 
+* Einstellungen anpassen
 * Auf `Anwenden` klicken
 * Füllparameter im Parameterdialog anpassen (`Erweiterungen > Ink/Stitch > Parameter`)
 
-{% include upcoming_release.html %} 
-Row spacing  has been computed according to stitch length by the Auswahl zu Knockdown-Stich extension
+{% include upcoming_release.html %}
+
+Der Reihenabstand wird automatisch an die gewählte Stichlänge angepasst.
 
 <!--
   Wenn du die gleiche Struktur behalten willst, das Muster aber skalieren möchtest,

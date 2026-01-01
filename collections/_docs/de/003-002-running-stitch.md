@@ -32,7 +32,7 @@ Geradstich                            | Muss aktiviert sein, damit diese Einstel
 Methode                               | `Geradstich / Mehrfachgeradstich` auswählen
 Wiederholungen                        | ◦ Legt fest, wie oft der Pfad durchlaufen werden soll<br/>◦ Standard: 1 (einmal vom Anfang bis zum Ende des Pfades)<br/>◦ Ungerade Zahl: Stiche enden am Ende des Pfades<br/>◦ Gerade Zahl: Die Naht kehrt zum Anfang des Pfades zurück
 Mehrfachgeradstich Anzahl der Wiederholungen | ◦ Jeden Stich vervielfachen.<br/>◦ Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 würde jeden Stich fünffach ausführen, usw.<br/>◦ Gilt nur für den Geradstich.
-Stichlänge                            | Länge der Stiche  By entering multiple values, it is possible to define a custom repeat pattern. For instance  `2 4`  will create stitches of length alternatively 2 and 4 mm.
+Stichlänge                            | Länge der Stiche. Durch Eingabe mehrerer Werte kann ein Stichlängenmuster erstellt werden. Beispielsweise werden bei einem Wert von `2 4` eine Abfolge von Stichen erstellt, die abwechselnd eine Länge von 2mm und 4mm haben.
 Geradstich Toleranz                   | Alle Stiche müssen innerhalb dieser Distanz zum Pfad liegen. Eine niedrigere Toleranz verkürzt die Stiche. Eine höhere Toleranz kann scharfe Ecken abrunden.
 Zufällige Stichlänge                  | Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
 Zufallsabweichung von der Stichlänge  | Maximale randomisierte Abweichung der Stichabstände in Prozent. Zufällige Stichlänge randomisieren muss aktiviert sein.
@@ -48,7 +48,7 @@ Stopp                                 | Stoppt die Maschine nachdem dieses Objek
 
 ## Anordnen
 
-Für eine bessere Stickreihenfolge lohnt es sich das [Linien-Werkzeug](/de/docs/stroke-tools/) `Automatisch geführter Geradstich`  oder `Redwork` auszuprobieren.
+Für eine bessere Stickreihenfolge lohnt es sich das [Linien-Werkzeug](/de/docs/stroke-tools/) `Automatisch geführter Geradstich` oder `Redwork` auszuprobieren.
 
 ## Gemusterter Geradstich
 

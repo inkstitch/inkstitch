@@ -63,7 +63,9 @@ Diese Option schneidet eine Satinsäule an einem vordefiniertem Punkt. Alle Para
 6. Der Satin-Schnittstelle-Befehl und sein Zeiger sind verschwunden. Wähle die Satinsäule aus: es sind jetzt zwei.
 
 {% include upcoming_release.html %}
-You can use multiple commands on the same satin column to split it into multiple pieces in a single action.
+
+Es ist auch möglich mehrere Schnittstellen aufeinmal festzulegen und so die Satinsäule in einem Schritt gleich mehrfach aufzuteilen.
+
 ## Füllung zu Satin
 
 Füllung zu Satin hilft bei der Umwandlung von Füllflächen zu Satinsäulen. Es ist eine halbautomatische Funktion und benötigt ein wenig Handarbeit.

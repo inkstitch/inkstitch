@@ -92,10 +92,9 @@ Schau die in der untenstehenden Tabelle die einzelnen Sticharten an. Klicke auf 
 Pfad Objekt | Stichart
 ---|---
 (Gestrichelte) Linie |[Geradstich](/de/docs/stitches/running-stitch/), [Manueller Stich](/de/docs/stitches/manual-stitch/), [Zick-Zack-Stich](/de/docs/stitches/zigzag-stitch/), [Bohnen-Stich](/de/docs/stitches/bean-stitch/)
-Zwei kombinierte Linien (mit optionalen Querstreben)  or single line with width  larger  than 0.3 mm| [Satinsäule](/de/docs/stitches/satin-column), [E-Stitch](/de/docs/stitches/e-stitch)
+Zwei kombinierte Linien (mit optionalen Querstreben) oder eine einfache Linie mit einer Breite über 0.3 mm| [Satinsäule](/de/docs/stitches/satin-column), [E-Stitch](/de/docs/stitches/e-stitch)
 Pfad mit Füllung | [Automatische Füllung](/de/docs/stitches/fill-stitch/), [Kurvenfüllung](/docs/stitches/guided-fill/),  [Konturfüllung](/docs/stitches/contour-fill/), [Mäanderfüllung](/docs/stitches/meander-fill/), [Spiralfüllung](/docs/stitches/circular-fill/), [cross stitch fill](/docs/stitches/cross-stitch/)
 {: .equal-tables }
-
 
 ### Parametrisieren
 

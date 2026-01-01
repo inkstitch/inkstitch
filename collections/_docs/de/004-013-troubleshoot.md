@@ -14,8 +14,9 @@ Ink/Stitch hat ein Hilfsmittel diese Fehler verständlicher zu machen. Es zeigt 
 
 * (Optional) Wähle die Objekte aus, die du testen möchtest. Ist kein Objekt ausgewählt, läuft der Test für das gesamte Dokument.
 * Öffne `Erweiterungen > Ink/Stitch > Troubleshoot Objects`
-   {% include upcoming_release.html %}
-* Chose what you want to detect among errors, warnings and object type warning.
+* {% include upcoming_release.html %}
+
+  Definiere das anzuzeigende Fehlerlevel: Fehler, Warnungen, Objekttyp-Warnungen.
 
 Entweder erhälst du eine nun Nachricht, dass kein Fehler gefunden wurde oder es wird eine neue Ebene mit den Fehlerinformationen in das Dokument eingefügt. Nutze das Objekt-Panel (Strg + Shift + O) um diese Ebene nach der Fehlerbehebung wieder zu löschen.
 
@@ -31,7 +32,8 @@ Diese Erweiterung sammelt Informationen über verschiedene Parameter für eine A
 ![Element info](/assets/images/docs/en/element_info.png)
 
 {% include upcoming_release.html %}
-The 'Copy' button on the help tab allows you to copy all the information to the clipboard.
+
+Mit der Kopierfunktion im Hilfe-Tab, kann die Liste in den Zwischenspeicher gelegt werden.
 
 ## Stickeinstellungen entfernen
 

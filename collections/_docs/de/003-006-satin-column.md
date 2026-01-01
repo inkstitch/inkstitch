@@ -23,8 +23,10 @@ Ink/Stitch bietet verschiedene Möglichkeiten Satinsäulen zu erstellen. Die Met
 5. [Manuelle Satinsäule](#5-manuelle-satinsäule): volle Kontrolle über jeden Teil der Satinsäule
 
 ### 1. Linie zu Satin
-#### Method 1
-* Erstelle einen Pfad mit einer Kontur (keine Füllung)
+
+#### Methode 1
+
+* Erstelle einen Pfad mit einer Konturfarbe (keine Füllung)
 * Lege die Breite der Kontur so fest, dass sie der Breite der zukünftigen Satinsäule entspricht
 * Führe die Funktion unter `Erweiterungen > Ink/Stitch Werkzeuge: Satin > Linie zu Satinsäule` aus
 * Optional kann anschließend die Funktion `Erweiterungen > Ink/Stitch > Werkzeuge: Satin > Automatisch geführter Satinstich...` auf mehrere Satinsäulen angewendet werden, um die Stickreihenfolge zu optimieren
@@ -32,19 +34,18 @@ Ink/Stitch bietet verschiedene Möglichkeiten Satinsäulen zu erstellen. Die Met
 
 Mehr Informationen über [Linie zu Satin](/de/docs/satin-tools/#linie-zu-satin)
 
+#### Methode 2
+
 {% include upcoming_release.html %}
-#### Method 2
-* Add a contour to a path object (with no filling).
-* Set contour width to the size you want your satin stitch to be (or to any width larger than 0.3, but you will need too add a lot off pull compensation to reach a correct width)
-* Run `Extensions > Ink/Stitch > Params
-* Open the Satin Column Tab and activate Custom Satin Columns
-  
-With this method, the position of the nodes can influence how the satin will be rendered:
+
+* Erstelle einen Pfad mit einer Konturfarbe (keine Füllung)
+* Lege die Breite der Kontur so fest, dass sie der Breite der zukünftigen Satinsäule entspricht. Sie muss unbedgint breiter als 0.3 mm sein (Satinsäulen sollten im Regelfall eine Breite von 1mm nocht unterschreiten).
+* Öffne den Parameterdialog: `Erweiterungen > Ink/Stitch > Parameter
+* Öffne den Tab `Satinsäule` und aktiviere `Benutzerdefinierte Satinsäule`
+
+Bei dieser Methode hat die Positionierung der Pfad-Knoten einen Einfluss auf das Ergebnis:
 
 ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
-
-
-
 
 ### 2. Linie zu Pfadeffekt-Satin
 
@@ -137,12 +138,14 @@ Z.B. `Zufälliger Prozentwert (Erweitern)` ist ein solcher Parameter. Wird ein e
 
 Einige dieser Einstellungen sind Teil einer zukünftigen Version von Ink/Stitch und noch nicht in der derzeitigen Version enthalten.
 {: .notive--info }
+
 {% include upcoming_release_params.html %}
+
 Einstellung||Beschreibung
 ---|---|---
 Benutzerdefinierte Satinsäule       | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
 Methode                             | |`Satinsäule` auswählen
-Kurzstich-Einzug                    | ![Short Stitch example](/assets/images/docs/satin_multiple_short_stitch_inset_values.jpg)| Stiche in Bereichen mit hoher Dichte werden um diesen Wert verkürzt (%) Short stitch inset can take multiple values separated by a space. When multiple values are set, the satin column will use these to level consecutive short stitches 
+Kurzstich-Einzug                    | ![Short Stitch example](/assets/images/docs/satin_multiple_short_stitch_inset_values.jpg)| Stiche in Bereichen mit hoher Dichte werden um diesen Wert verkürzt (%). Mehrere, durch ein Komma getrennte Eingabewerte ergeben verschiedene Einrückstufen von aufeinanderfolgenden Einzügen.
 Kurzstich-Dichte                    |![Short Stitch example](/assets/images/docs/params-satin-short_stitch_distance.png)  | Verkürzt Stiche falls der Abstand zwischen den Stichen schmaler als dieser Wert ist (mm).
 Zick-Zack Abstand (Spitze zu Spitze)|![Zig-zag spacing example](/assets/images/docs/params-satin-zig-zag-spacing.png)|Spitze-zu-Spitze Abstand zwischen Zick-Zacks
 Zugausgleich (%)                    |![Pull compensation example](/assets/images/docs/params-satin-pull_compensation.png)|Zusätzliche Zugkompensation, die als Prozentwert der ursprünglichen Breite variiert. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt verwendet werden.

@@ -107,7 +107,7 @@ Linienabstand Exponent|<img src="/assets/images/docs/ripple_only_exponent.svg" a
 Exponent umkehren              |☑  oder ▢| Kehrt den Effekt des Exponent-Wertes um.
 Umkehren                       |☑  oder ▢| Kehrt den gesamten Pfad um (Start = Ende). Andere Parameter bleiben von dieser Einstellung unberührt.
 Konturlinien umkehren|| Außenkonturen der Satin-Führungslinie umkehren. In der Standardeinstellung werden gegenläufig verlaufende Linien automatisch korrigiert.
-Seiten umkehren                     | | Kehrt die Seiten der Satinsäule um (links und rechts). Dies beeinflusst z.B. an welcher Seite der Faden startet und endet. Aber auch jede andere seitenbezogene Einstellung ist hiervon betroffen.
+Seiten umkehren                | | Kehrt die Seiten der Satinsäule um (links und rechts). Dies beeinflusst z.B. an welcher Seite der Faden startet und endet. Aber auch jede andere seitenbezogene Einstellung ist hiervon betroffen.
 Größe des Gitters              |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Fügt quer verlaufende Linien hinzu, die zu einem Gittereffekt führen. Die Größe des Gitters kann auch Auswirkungen auf die Genauigkeit des Linienverlaufs haben.
 Gitter zuerst sticken          |☑  oder ▢| Dreht den Stickpfad um, so dass da Gitter zuerst gestickt wird
 Skalieren                      | XY, X, Y oder Keine | Nur für geführte Ripples
