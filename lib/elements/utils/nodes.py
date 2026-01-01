@@ -51,7 +51,7 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
             if element.fill_color is not None and not element.get_style('fill-opacity', 1) == "0":
                 elements.append(FillStitch(node))
             if element.stroke_color is not None:
-                if element.get_boolean_param("satin_column") and (len(element.path) > 1 or element.stroke_width >= 0.3 / PIXELS_PER_MM):
+                if element.get_boolean_param("satin_column", False) and (len(element.path) > 1 or element.stroke_width > 0.3 * PIXELS_PER_MM):
                     elements.append(SatinColumn(node))
                 elif not is_command(element.node):
                     elements.append(Stroke(node))

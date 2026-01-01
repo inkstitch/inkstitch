@@ -15,6 +15,7 @@ from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches.ripple_stitch import ripple_stitch
 from ..stitches.running_stitch import bean_stitch, running_stitch, zigzag_stitch
+from ..svg import PIXELS_PER_MM
 from ..threads import ThreadColor
 from ..utils import Point, cache
 from ..utils.param import ParamOption
@@ -26,25 +27,18 @@ class MultipleGuideLineWarning(ValidationWarning):
     """Warning for multiple guide lines."""
 
     name = _("Multiple Guide Lines")
-    description = _(
-        "This object has multiple guide lines, but only the first one will be used."
-    )
+    description = _("This object has multiple guide lines, but only the first one will be used.")
     steps_to_solve = [_("* Remove all guide lines, except for one.")]
 
 
-class TooFewSubpathsWarning(ValidationWarning):
-    """Warning for too few subpaths."""
+class TooNarrowSatinWarning(ValidationWarning):
+    """Stroke is too narrow to render as satin."""
 
-    name = _("Too few subpaths")
-    description = _(
-        "This element renders as running stitch while it has a satin column parameter."
-    )
+    name = _("Too narrow satin")
+    description = _("This element renders as running stitch while it has a satin column parameter.")
     steps_to_solve = [
-        _(
-            "* Convert to stroke: select the element and open the parameter dialog. "
-            "Enable running stitch along path."
-        ),
-        _("* Use as satin column: add an other rail and optionally rungs."),
+        _("* Increase stroke width."),
+        _("Ink/Stitch will not register elements with a stroke width underneath 0.3 mm as satin, but it is recommended to stay above 1mm."),
     ]
 
 
@@ -65,9 +59,7 @@ class Stroke(EmbroideryElement):
         """Return the color of the stroke."""
         color = self.stroke_color
         if self.cutwork_needle is not None:
-            color = ThreadColor(
-                color, description=self.cutwork_needle, chart=self.cutwork_needle
-            )
+            color = ThreadColor(color, description=self.cutwork_needle, chart=self.cutwork_needle)
         return color
 
     @property
@@ -145,10 +137,7 @@ class Stroke(EmbroideryElement):
     @param(
         "manual_pattern_placement",
         _("Manual stitch placement"),
-        tooltip=_(
-            "No extra stitches will be added to the original ripple pattern "
-            "and the running stitch length value will be ignored."
-        ),
+        tooltip=_("No extra stitches will be added to the original ripple pattern " "and the running stitch length value will be ignored."),
         type="boolean",
         select_items=[("stroke_method", "ripple_stitch")],
         default=False,
@@ -178,12 +167,7 @@ class Stroke(EmbroideryElement):
     )
     def running_stitch_length(self):
         """Return the running stitch length."""
-        return [
-            max(value, 0.01)
-            for value in self.get_multiple_float_param(
-                "running_stitch_length_mm", "2.5"
-            )
-        ]
+        return [max(value, 0.01) for value in self.get_multiple_float_param("running_stitch_length_mm", "2.5")]
 
     @property
     @param(
@@ -244,10 +228,7 @@ class Stroke(EmbroideryElement):
     )
     def random_stitch_length_jitter(self):
         """Return the random stitch length jitter."""
-        return (
-            max(self.get_float_param("random_stitch_length_jitter_percent", 10), 0.0)
-            / 100
-        )
+        return max(self.get_float_param("random_stitch_length_jitter_percent", 10), 0.0) / 100
 
     @property
     @param(
@@ -280,10 +261,7 @@ class Stroke(EmbroideryElement):
     @cache
     def zigzag_spacing(self):
         """Return the zig-zag spacing."""
-        return [
-            max(value, 0.01)
-            for value in self.get_multiple_float_param("zigzag_spacing_mm", "0.4")
-        ]
+        return [max(value, 0.01) for value in self.get_multiple_float_param("zigzag_spacing_mm", "0.4")]
 
     @property
     @param(
@@ -413,9 +391,7 @@ class Stroke(EmbroideryElement):
     @param(
         "flip_copies",
         _("Flip every second line"),
-        tooltip=_(
-            "Linear ripple: wether to flip the pattern every second line or not."
-        ),
+        tooltip=_("Linear ripple: wether to flip the pattern every second line or not."),
         type="boolean",
         select_items=[("stroke_method", "ripple_stitch")],
         default=True,
@@ -482,10 +458,7 @@ class Stroke(EmbroideryElement):
     @param(
         "reverse_rails",
         _("Reverse rails"),
-        tooltip=_(
-            "Reverse satin ripple rails.  "
-            + "Default: automatically detect and fix a reversed rail."
-        ),
+        tooltip=_("Reverse satin ripple rails.  " + "Default: automatically detect and fix a reversed rail."),
         type="combo",
         options=_reverse_rails_options,
         default="automatic",
@@ -501,8 +474,7 @@ class Stroke(EmbroideryElement):
         "swap_satin_rails",
         _("Swap rails"),
         tooltip=_(
-            "Swaps the first and second rails of a satin ripple, "
-            "affecting which side the thread finished on as well as any sided properties"
+            "Swaps the first and second rails of a satin ripple, " "affecting which side the thread finished on as well as any sided properties"
         ),
         type="boolean",
         default="false",
@@ -564,9 +536,7 @@ class Stroke(EmbroideryElement):
     @param(
         "scale_start",
         _("Starting scale"),
-        tooltip=_("How big the first copy of the line should be, in percent.")
-        + " "
-        + _("Used only for ripple stitch with a guide line."),
+        tooltip=_("How big the first copy of the line should be, in percent.") + " " + _("Used only for ripple stitch with a guide line."),
         type="float",
         unit="%",
         default=100,
@@ -581,9 +551,7 @@ class Stroke(EmbroideryElement):
     @param(
         "scale_end",
         _("Ending scale"),
-        tooltip=_("How big the last copy of the line should be, in percent.")
-        + " "
-        + _("Used only for ripple stitch with a guide line."),
+        tooltip=_("How big the last copy of the line should be, in percent.") + " " + _("Used only for ripple stitch with a guide line."),
         type="float",
         unit="%",
         default=0.0,
@@ -629,9 +597,7 @@ class Stroke(EmbroideryElement):
     @param(
         "random_seed",
         _("Random seed"),
-        tooltip=_(
-            "Use a specific seed for randomized attributes. Uses the element ID if empty."
-        ),
+        tooltip=_("Use a specific seed for randomized attributes. Uses the element ID if empty."),
         select_items=[
             ("stroke_method", "running_stitch"),
             ("stroke_method", "ripple_stitch"),
@@ -701,10 +667,7 @@ class Stroke(EmbroideryElement):
             ]
 
         if self.stroke_method == "manual_stitch":
-            coords = [
-                shgeo.LineString(self.strip_control_points(subpath)).coords
-                for subpath in path
-            ]
+            coords = [shgeo.LineString(self.strip_control_points(subpath)).coords for subpath in path]
             coords = self._get_clipped_path(coords)
             return coords
         else:
@@ -742,9 +705,7 @@ class Stroke(EmbroideryElement):
         # path to linestrings
         line_strings = [shgeo.LineString(path) for path in paths if len(path) > 1]
         try:
-            intersection = self.clip_shape.intersection(
-                shgeo.MultiLineString(line_strings)
-            )
+            intersection = self.clip_shape.intersection(shgeo.MultiLineString(line_strings))
         except GEOSException:
             return paths
 
@@ -752,11 +713,7 @@ class Stroke(EmbroideryElement):
         if intersection.is_empty:
             return None
         elif isinstance(intersection, shgeo.MultiLineString):
-            for c in [
-                intersection
-                for intersection in intersection.geoms
-                if isinstance(intersection, shgeo.LineString)
-            ]:
+            for c in [intersection for intersection in intersection.geoms if isinstance(intersection, shgeo.LineString)]:
                 coords.append(c.coords)
         elif isinstance(intersection, shgeo.LineString):
             coords.append(intersection.coords)
@@ -779,12 +736,8 @@ class Stroke(EmbroideryElement):
         # together (a V shape).  Start with running stitch at half
         # that length:
         spacing = [value / 2 for value in zigzag_spacing]
-        stitch_group = self.running_stitch(
-            path, spacing, self.running_stitch_tolerance, False, 0, ""
-        )
-        stitch_group.stitches = zigzag_stitch(
-            stitch_group.stitches, zigzag_spacing, stroke_width, pull_compensation
-        )
+        stitch_group = self.running_stitch(path, spacing, self.running_stitch_tolerance, False, 0, "")
+        stitch_group.stitches = zigzag_stitch(stitch_group.stitches, zigzag_spacing, stroke_width, pull_compensation)
 
         return stitch_group
 
@@ -837,10 +790,7 @@ class Stroke(EmbroideryElement):
                 num_subsections = ceil(dist / self.max_stitch_length)
                 additional_points = [
                     Point(coord.x, coord.y)
-                    for coord in [
-                        line.interpolate((i / num_subsections), normalized=True)
-                        for i in range(1, num_subsections + 1)
-                    ]
+                    for coord in [line.interpolate((i / num_subsections), normalized=True) for i in range(1, num_subsections + 1)]
                 ]
                 max_len_path.extend(additional_points)
             max_len_path.append(points[1])
@@ -906,9 +856,7 @@ class Stroke(EmbroideryElement):
                     )
                     # bean stitch
                     if any(self.bean_stitch_repeats):
-                        stitch_group.stitches = self.do_bean_repeats(
-                            stitch_group.stitches
-                        )
+                        stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
                 # running stitch
                 else:
                     stitch_group = self.running_stitch(
@@ -921,9 +869,7 @@ class Stroke(EmbroideryElement):
                     )
                     # bean stitch
                     if any(self.bean_stitch_repeats):
-                        stitch_group.stitches = self.do_bean_repeats(
-                            stitch_group.stitches
-                        )
+                        stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
 
                 if stitch_group:
                     stitch_groups.append(stitch_group)
@@ -968,12 +914,10 @@ class Stroke(EmbroideryElement):
 
     def validation_warnings(self):
         # satin column warning
-        if self.get_boolean_param("satin_column", False):
-            yield TooFewSubpathsWarning(self._representative_point())
-        # guided fill warnings
+        if self.get_boolean_param("satin_column", False) and self.stroke_width <= 0.3 * PIXELS_PER_MM:
+            yield TooNarrowSatinWarning(self._representative_point())
+        # ripple stitch warnings
         if self.stroke_method == 1:
-            guide_lines = get_marker_elements(
-                self.node, "guide-line", False, True, True
-            )
+            guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)
             if sum(len(x) for x in guide_lines.values()) > 1:
                 yield MultipleGuideLineWarning(self._representative_point())
