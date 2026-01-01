@@ -16,7 +16,7 @@ data_title:
 
 Enter 3 letters to get a circular three letters monogram. You can add a frame, by adding one of the following :(){,[];.<>
 
-For instance enter {ABC.
+For instance enter {ABC
 
 Please use exactly 3 letters, no less, no more, or you could get some unexpected result.
 
