@@ -1,7 +1,7 @@
 ---
 title: "Auberge Marif"
 permalink: /de/fonts/auberge_marif/
-last_modified_at: 2023-04-25
+last_modified_at: 2026-01-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/auberge_small.jpg
@@ -12,44 +12,24 @@ data_title:
   - auberge_marif
   - auberge_small
 ---
-{%- assign font = site.data.fonts.auberge_marif.font -%}
-![grand_hotel_marif](/assets/images/fonts/auberge_marif.jpg)
+{% include font_infos_de.html %}
 
-![grand_hotel_marif](/assets/images/fonts/auberge_small.jpg)
 
-![auberge_small](/assets/images/fonts/auberge_small.jpg)
 
-## Schriftzeichen
-
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr roughtly 35 mm high.
-
-It may be scaled up to 140% (48 mm)  hochskaliert und bis zu  60%  herunterskaliert werden.
+## Besonderheiten
 
 ![Dimensions Auberge](/assets/images/fonts/Sizing/aubergesizing.jpg)
 
 Bitte nicht versuchen die Schrift kleiner zu Sticken, dass kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
 
-Auberge Small  ist eine Variante dieser Schriftart mit unterschiedlichen Stickeinstellungen. Zugausgleich, Dichte und Unterlage sind unterschiedlich, um eine Skalierung zwischen 55% (28 mm, 1 Zoll) und 25% (12 mm, 1/2 Zoll) zu ermöglichen.
-
 Deshalb muss man im Dialogfenster des Text-Moduls für die Nutzung von Grand Hotel small eine Skalierung zwischen 25 und 55% wählen.
 
-Im Gegensatz zu Auberge Marif, **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
+Auberge Small, **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-## Impressionen
 
-Von 25% auf dem T-Shirt zu voller Größe auf der Schürze und dem Label
+{% include end_of_font_page_de.html %}
+
 
 {% include folder-galleries path="fonts/grand_hotel_marif/" %}
 
-## Lizenz
 
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/auberge_marif/LICENSE)
