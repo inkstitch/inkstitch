@@ -9,27 +9,9 @@ preview_image:
 data_title:
   - perspective_tricolore_KOR
 ---
-{%- assign font = site.data.fonts.perspective_tricolore_KOR.font -%}
-![Perspective_Tricolore_KOR](/assets/images/fonts/perspective_tricolore_KOR.png)
+{% include font_infos_fr.html %}
 
-## Glyphes
-
-Cette fonte comporte  {{ font.glyphs.size }} glyphes:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
-
-Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
-à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
-
-## Dans la vraie vie 
+{% include end_of_font_page_fr.html %}
 
 {% include folder-galleries path="fonts/perspective_tricolore_KOR/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/perspective_tricolore_KOR/LICENSE)
