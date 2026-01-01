@@ -5,7 +5,7 @@ last_modified_at: 2025-09-07
 toc: false
 preview_image:
  - url: /assets/images/fonts/allegria20.png
-   height: 55
+   height: 20
  - url: /assets/images/fonts/allegria55.png
    height: 55
 data_title:
