@@ -11,6 +11,6 @@ data_title:
 ---
 {% include font_infos_de.html %}
 
-{% include fend_of_font_page_de.html %}
+{% include end_of_font_page_de.html %}
 
 {% include folder-galleries path="fonts/abecedaire/" %}
