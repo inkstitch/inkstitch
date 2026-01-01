@@ -18,6 +18,7 @@ data_title:
 {% include font_infos_fr.html %}
 ## Particularités
 Venezia small **DOIT** être brodé avec un fil fin (60) et une aiguille fine (60).
+
 {% include end_of_font_page_fr.html %}
 
 
