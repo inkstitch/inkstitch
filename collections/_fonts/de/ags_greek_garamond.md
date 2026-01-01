@@ -1,7 +1,7 @@
 ---
 title: "AGS Γαραμου GARAMOND"
 permalink: /de/fonts/AGS_greek_garamond/
-last_modified_at: 2023-05-03
+last_modified_at: 2026-01-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/garamond.png
