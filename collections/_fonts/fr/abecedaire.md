@@ -19,7 +19,3 @@ Ce lettrage a été inspiré par une page du livre Dessins de broderie - Stickmu
 {% include end_of_font_page_fr.html %}
 
 {% include folder-galleries path="fonts/abecedaire/" %}
-
-
-
-[Télécharger la license de la police](https://github.com/inkstitch/inkstitch/tree/main/fonts/abecedaire/LICENSE)
