@@ -1,7 +1,7 @@
 ---
 title: Füllstich Werkzeuge
 permalink: /de/docs/fill-tools/
-last_modified_at: 2025-03-19
+last_modified_at: 2026-01-01
 toc: true
 ---
 ## Füllstich-Objekte zerlegen
@@ -28,7 +28,7 @@ Diese Erweiterung soll dir helfen, kaputte Objekte zu repaireren. Nutze diese Fu
 
 Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrere einfarbige Blöcke auf und setzt den zuvor bestimmten Wert für `Reihenabstand Ende`.
 
-### Anwendung
+### Funktionsweise
 
 1. Setze einen linearen Farbverlauf
 
@@ -37,6 +37,46 @@ Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrer
 
    ![color blocks](/assets/images/docs/color_blocks.png)
 3. Setze einen Wert für den Reihenabstand am Ende der Füllung. Bei einem Wert von 0.00 wird der doppelte Wert des ursprünglichen Reihenabstandes angenommen.
+
+## Kreuzstich-Helfer
+
+Der Kreuzstich-Helfer kann bei der Erstellung von Kreuzstichmustern auf verschiedene Weise unterstützen.
+
+* Überprüfung der diagonalen Stichlänge
+* Anlegen des Seitengitters
+* Verpixeln von Füllflächen
+* Gittergröße als Parameter auf die Füllflächen übertragen
+
+### Funktionsweise
+
+* Optional: Wähle ein oder mehrere Füllflächen aus
+* Öffne die Erweiterung unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Helfer`
+* Stelle die gewünschte Gittergröße ein
+* Lege die gewünschten Optionen fest, wie die Gittergröße angewendet werden soll (siehe unten)
+* Klicke auf `Anwenden`
+
+#### Das Kreuzstich-Gitter
+
+Um beieinanderliegende Flächen gut aufeinander abzustimmen, richten sich Kreuzstche nach einem Gitter.
+Das heißt, je nachdem an welcher Stelle auf der Arbeitsfläche sich ein Element befindet, kann sich das Stickbild ändern.
+Um dies besser planen zu können, ist es hilfreich, das Seitengitter an die Kreuzstichmustergröße anzupassen. So kann man schon visuell die Stichpositionen besser abschätzen.
+
+Unter `File > Document Properties... > Grids` kann das Gitter auch manuell eingestellt werden. Dort gibt es auch eine Funktion (`Align to page`), die nicht über Ink/Stitch-Einstellungen erreicht werden kann. Daher ist es wichtig zu überprüfen, ob sich das erstellte Gitter an der oberen linken Seitenecke ausrichtet. Ansonsten muss diese Einstellung noch manuell angepasst werden.
+{: .notice--warning }
+
+#### Außenkontur verpixeln
+
+Der Kreuzstich-Helfer hat außerdem eine Funktion die Außenkontur ausgewählter Füllflächen automatisch anhand der gesetzen Gittereinstellungen zu verpixeln.
+So ist es möglich, die Formen direkt an das Gitter anzupassen und visuell die Stichpositionen genau erkennen zu können.
+
+#### Stickparameter setzen
+
+Nachdem das Gitter auf die gewünschte Größe eingestellt ist, muss die Gittergröße natürlich auch in den Stickparametern eines Elements gleichgesetzt werden. Wenn die Option aktiviert ist, kann der Kreuzstich-Helfer diese Einstellungen auch direkt selbst vornehmen.
+
+#### Stichlängenberechnung
+
+Durch die Angabe der Gittergröße sind die Stichlängen der diagonalen Kreuze nicht direkt ersichtlich.
+Die Stichlängen spielen in der Maschinenstickerei aber immer eine wichtige Rolle. Der Kreuzstich-Helfer hat daher ein Feld für die Anzeige der diagonalen Stichlängen.
 
 ## Knockdown Füllung
 
@@ -125,7 +165,7 @@ Ein Palettencode sieht beispielsweise so aus: `(#000000)/5.0 (#FFFFFF)/?5.0`.
 
 **Hinweis**: Das [Scottish Register of Tartans](https://www.tartanregister.gov.uk/) hatte eine große Sammlung and registrierten Tartan-Mustern. Ink/Stitch ist fähig den Code den man sich per Mail zuschicken lassen kann in Ink/Stitch Palettencode umzusetzen. Bitte beachtet dabei die entsprechenden Lizenz-Regulierungen. 
 
-The [Scottish Register of Tartans](https://www.tartanregister.gov.uk/) has a huge collection of registered tartan patterns. Ink/Stitch is capable to use their code which they send out per mail and convert it into the Ink/Stitch color code. Please respect their particular license regulations. Definiere die Breite eines Tartanfadens, bevor du auf „Code anwenden“ klickst.<br><br>Hier ist ein Beispiel zum Ausprobieren: `...B24 W4 B24 R2 K24 G24 W2...` ([Quelle](https://www.tartanregister.gov.uk/threadcount))
+Das [Scottish Register of Tartans](https://www.tartanregister.gov.uk/) hat eine große Sammlung mit registrierten Tartanmustern. Ink/Stitch kann den dort ausgegebenen Code interpretieren und in den Ink/Stitch spezifischen Farbcode umwandeln. Wir bitten darum, die Lizenzbestimmungen zu beachten. Definiere die Breite eines Tartanfadens, bevor du auf „Code anwenden“ klickst.<br><br>Hier ist ein Beispiel zum Ausprobieren: `...B24 W4 B24 R2 K24 G24 W2...` ([Quelle](https://www.tartanregister.gov.uk/threadcount))
 {: .notice--info}
 
 ### Stickeinstellungen
