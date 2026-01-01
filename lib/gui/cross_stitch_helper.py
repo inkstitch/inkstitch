@@ -68,7 +68,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.box_y.SetDigits(2)
         self.box_y.Bind(wx.EVT_SPINCTRLDOUBLE, self.update)
 
-        result_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Stitch_length:"))
+        result_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Stitch length:"))
         self.result = wx.TextCtrl(self.settings_panel, wx.ID_ANY, style=wx.TE_READONLY)
         self.result.Enable(False)
 
