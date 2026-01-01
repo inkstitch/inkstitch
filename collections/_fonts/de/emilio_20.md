@@ -45,13 +45,11 @@ data_title:
 * die zweite Farbe befestigt den Stoff. Nach diesem Schritt kann der Applikationsstoff geschnitten werden.
 * die dritte Farbe ist die Satinsäule für einen sauberen Rand
 
-
-### Emilio 20 Simple Small
-
+**Emilio 20 Simple Small**
 
 Emilio 20 Simple Small **MUSS**  mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-### Emilio 20 Tartan
+**Emilio 20 Tartan**
 
 Emilio 20 Tartan ist eine weitere Emilio Varante, die aussieht wie eine Applikation aber voll gestickt wird. Die Satinsäule ist deutlich leichter als die der anderen Emilio Variationen. Jeder Buchstabe hat ein eigenes Tartan-Muster - das ist, aufgrund der vielen Farbwechsel, nichts für Svhwache Nerven! Durch eine Variation mit nur einem Tartan-Muster, kann dieser Prozess kann erheblich vereinfacht werden - allerdings wird das Stockergebnis dadurch auch weniger farbenfroh. Mehr Informationen wie das geht gibt es im Tutorial [Farbwechsel bei Tartan-Schriften reduzieren](https://inkstitch.org/de/tutorials/make_tartan_font_easier/)
 
