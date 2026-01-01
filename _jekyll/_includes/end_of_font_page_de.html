@@ -1,0 +1,24 @@
+<h2>Legal Information</h2>
+
+{% for sub_font in page.data_title %}
+  {% assign base_url = "https://github.com/inkstitch/embroidery-fonts/blob/main/src/" %}
+  {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
+  {% capture license_url %}
+{{ base_url }}{{sub_font}}/LICENSE
+  {% endcapture %}
+<p>
+    {{ sub_font_data.name }} ist  unter {{ sub_font_data.font_license }} lizenziert.<br/>
+  {% if  sub_font_data.original_font  == "" %}
+	{{ sub_font_data.name }} wurde  für vor Ink/Stitch erstellt.
+  {% else %}
+  It is a derivative work from  <a href = "{{ sub_font_data.original_font_url }}" > {{ sub_font_data.original_font }} </a>.
+  {% endif %}
+</p>
+
+<p>
+   <a href="{{license_url}}"> {{ sub_font_data.name }} Lizenz herunterladen </a>
+</p>
+
+{% endfor %} 
+
+<h2> Impressionen </h2>
