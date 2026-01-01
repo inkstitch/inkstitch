@@ -17,6 +17,8 @@ data_title:
 
 Chaque glyphe contient la forme de la lettre originelle, sous forme d'un chemin caché avec un remplissage rouge. Ces chemins ne sont pas prévus pour être brodés tels quels, mais pour aider qui voudrait modifier cette fonte, par exemple pour créer un embossage. Ils peuvent être ignorés sans souci.
 
+Si vous ne disposez pas d'un clavier arabe réel ou virtuel, vous pouvez utilisez le copier coller  pour entrer les caractères dans l'outil de lettrage.
+
 
 
 {% include end_of_font_page_fr.html %}
