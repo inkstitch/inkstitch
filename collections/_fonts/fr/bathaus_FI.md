@@ -16,7 +16,7 @@ data_title:
 
 ## Particularités
 
-Contrairement à Bathaus FI, cette fonte diminuée **DOIT** être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT **DOIVENT** être utilisés.
+Contrairement à Bathaus FI, Bathaus FI Small doit **DOIT** être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT **DOIVENT** être utilisés.
 
 
 
