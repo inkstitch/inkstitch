@@ -1,7 +1,7 @@
 ---
 title: "Gestion des polices"
 permalink: /fr/docs/font-tools/
-last_modified_at: 2025-08-24
+last_modified_at: 2026-01-01
 toc: true
 ---
 Un ensemble d'outils pour les créateurs de polices ou à ceux qui souhaitent ajouter des polices supplémentaires dans [l'outil de lettrage](/docs/lettering) d'Ink/Stitch.
