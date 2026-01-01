@@ -1,13 +1,13 @@
 ---
 title: "Roman AGS"
 permalink: /fr/fonts/roman_ags/
-last_modified_at: 2022-05-27
+last_modified_at: 2026-01-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/roman_AGS.jpg
-    height: 28
+    height: 15
   - url: /assets/images/fonts/roman_AGS_bicolor.jpg
-    height: 28
+    height: 15
 data_title:
   - roman_ags
 ---
