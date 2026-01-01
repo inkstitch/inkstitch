@@ -9,32 +9,8 @@ preview_image:
 data_title:
   - abecedaire
 ---
-{%- assign font = site.data.fonts.abecedaire.font -%}
-![Abecedaire](/assets/images/fonts/abecedaire.jpg)
+{% include font_infos_de.html %}
 
-## Ursprung der Schriftart
+{% include fend_of_font_page_de.html %}
 
-Die Buchstaben fanden ihre Inspiration auf einer Seite aus einem Stickmustebuhc aus dem späten 19. Jahrundert: Dessins de broderie - Stickmuster-Buch No 185.
-
-## Schriftzeichen
-
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 14 mm hoch (1/2 Zoll). 
-
-Sie kann bis zu 200% (28mm, 1 Zoll) und bis zu 75% (9mm, 1/3 Zoll) skaliert werden.
-
-## Impressionen
-
-{%include folder-galleries path="fonts/abecedaire/" %}
-
-## Lizenz
-
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/abecedaire/LICENSE)
+{% include folder-galleries path="fonts/abecedaire/" %}
