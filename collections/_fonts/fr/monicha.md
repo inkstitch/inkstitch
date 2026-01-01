@@ -9,7 +9,7 @@ preview_image:
 data_title:
   - monicha
 ---
-{{% include font_infos_fr.html %}
+{% include font_infos_fr.html %}
 
 
 
