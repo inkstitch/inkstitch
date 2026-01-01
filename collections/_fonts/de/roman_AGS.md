@@ -1,7 +1,7 @@
 ---
 title: "Roman AGS"
 permalink: /de/fonts/roman_ags/
-last_modified_at: 2025-12-01
+last_modified_at: 2021-12-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/roman_AGS.jpg
