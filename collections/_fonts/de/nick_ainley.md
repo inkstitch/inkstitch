@@ -1,35 +1,18 @@
 ---
 title: "Nick Ainley"
 permalink: /de/fonts/nick_ainley/
-last_modified_at: 2023-04-24
+last_modified_at: 2026-01-01
 preview_image:
   - url: /assets/images/fonts/nick_ainley.png
     height: 7
 data_title:
   - nick_ainley
 ---
-{%- assign font = site.data.fonts.nick_ainley.font -%}
-![Nick Ainley](/assets/images/fonts/nick_ainley.png)
+{% include font_infos_de.html %}
 
-## Schriftzeichen
+{% include end_of_font_page_de.html %}
 
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-Bei einer Größe von 100% ist die Schrift ungefähr 7 mm hoch (~ 1/4 Zoll).
-
-Sie kann bis auf 300% vergrößert (~21 mm, 3/4 Zoll) werden. Die Schrift sollte aber nicht verkleinert werden.
-
-## Impressionen
 
 {% include folder-galleries path="fonts/nick_ainley/" %}
 
-## Lizenz
-
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/nick_ainley/LICENSE)
