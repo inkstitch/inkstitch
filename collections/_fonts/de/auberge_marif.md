@@ -24,7 +24,7 @@ Bitte nicht versuchen die Schrift kleiner zu Sticken, dass kann zu Nadelbrüchen
 
 Deshalb muss man im Dialogfenster des Text-Moduls für die Nutzung von Grand Hotel small eine Skalierung zwischen 25 und 55% wählen.
 
-Auberge Small, **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
+Auberge Small, **MUSS**  mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
 
 {% include end_of_font_page_de.html %}
