@@ -9,30 +9,12 @@ preview_image:
 data_title:
   - cooper_marif
 ---
-{%- assign font = site.data.fonts.cooper_marif.font -%}
-![Cooper Marif](/assets/images/fonts/cooper_marif.png)
+{% include font_infos_de.html %}
 
-## Schriftzeichen
+{% include end_of_font_page_de.html %}
 
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
 
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr {{ font.size }} mm groß.
-
-Sie kann bis auf {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm) hochskaliert 
-und bis zu {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm) herunterskaliert werden.
-
-## Impressionen
 
 {% include folder-galleries path="fonts/colorful/" %}
 
 
-## Lizenz
-
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/cooper_marif/LICENSE)
