@@ -1,7 +1,7 @@
 ---
 title: "Amitaclo"
 permalink: /de/fonts/amita/
-last_modified_at: 2022-05-27
+last_modified_at: 2026-01-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/amitaclo-small.jpg
@@ -20,7 +20,7 @@ data_title:
 
 Bitte nicht versuchen die Schrift kleiner zu Sticken, dass kann zu Nadelbrüchen, Fadennestern, hässlichem Stickbild und anderen Unannehmlichkeiten führen. 
 
-Die Schrift Amitaclo small (Diese Schrift wird in einer zukünftigen Version von Ink/Stitch erscheinen und ist in Ink/Stitch v2.1.2 nicht verfügbar.) ist eine Abwandlung dieser Schrift mit anderen Stickparametern. Die Dichte, die Kompensation und die Unterlage wurden geändert, damit diese Schrift in kleineren Größen gestickt werden kann.
+Die Schrift Amitaclo small ist eine Abwandlung dieser Schrift mit anderen Stickparametern. Die Dichte, die Kompensation und die Unterlage wurden geändert, damit diese Schrift in kleineren Größen gestickt werden kann.
 
 Im Gegensatz zu Amitaclo **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
