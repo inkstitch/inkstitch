@@ -15,7 +15,7 @@ data_title:
 {% include font_infos_fr.html %}
 
 
-
+## Particularités
 
 ![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
 
