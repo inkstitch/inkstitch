@@ -9,25 +9,9 @@ preview_image:
 data_title:
   - paquerette
 ---
-{%- assign font = site.data.fonts.paquerette.font -%}
+{% include font_infos_de.html %}
 
-![Paquerette](/assets/images/fonts/paquerette.png)
-
-## Schriftzeichen
-
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr 27 mm hoch (1 Zoll).
-Da diese Schriftart manuelle Stichpositionierung nutzt, sollte sie nicht oder nur geringfügig skaliert werden.
-
-## Impressionen
+{% include end_of_font_page_de.html %}
 
 {% include folder-galleries path="fonts/paquerette/" %}
 
