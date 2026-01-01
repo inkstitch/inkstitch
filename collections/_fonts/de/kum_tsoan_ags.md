@@ -1,7 +1,7 @@
 ---
 title: "Kum Tsoan AGS"
 permalink: /de/fonts/kum_tsoan_ags/
-last_modified_at: 2025-12-27
+last_modified_at: 2026-01-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/kum_tsoan.jpg
@@ -15,37 +15,11 @@ data_title:
   - kum_tsoan_relief
   - kum_tsoan_tartan
 ---
-{%- assign font = site.data.fonts.kum_tsoan_ags.font -%}
-
-{%- assign font2 = site.data.fonts.kum_tsoan_relief.font -%}
-
-![Kum Tsoan AGS](/assets/images/fonts/kum_tsoan.jpg)
-
-![Kum Tsoan _relief](/assets/images/fonts/kum_tsoan_relief.png)
-
-![Kum Tsoan Tartan](/assets/images/fonts/kum_tsoan_tartan.jpg)
+{% include font_infos_de.html %}
 
 
 
-## Schriftzeichen
-
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-### Namskout AGS und Namskout Tartan
-Bei einer Größe ist die Schrift ~ 100 mm groß (4 Zoll)
-
-Sie kann auf 150 % vergrößert (~150 mm, 6 Zoll) und bis zu 50% (~50 mm, 2 Zoll) herunterskaliert werden.
-
-### Namskout relief
-Namskout Relief  is more tolerant and  may  be scaled from 20% (approx 18mm 3/4 inch) to as big as your hoop can contain.
-
-## Anwendung
+## Besonderheiten
 
 ### Namskout  AGS
 
@@ -82,10 +56,6 @@ Ersetzt man die Konturfarbe aus den grünen Pfaden durch eine Füllfarbe, kann d
 
 Namskout Tartan ist eine Tartan-Schrift. Jeder Buchstabe hat ein eigenes Tartan-Muster. Daher ist das Sticken dieser Schrift nichts für schwache Nerven, denn es gibt sehr viele Farbwechsel. Durch eine Variation mit nur einem Tartan-Muster, kann dieser Prozess kann erheblich vereinfacht werden - allerdings wird das Stockergebnis dadurch auch weniger farbenfroh. Mehr Informationen wie das geht gibt es im Tutorial [Farbwechsel bei Tartan-Schriften reduzieren](https://inkstitch.org/de/tutorials/make_tartan_font_easier/)
 
-## Impressionen
+{% include end_of_font_page_de.html %}
 
 {% include folder-galleries path="fonts/kum_tsoan_ags/" %}
-
-## Lizenz
-
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/kum_tsoan_ags/LICENSE)
