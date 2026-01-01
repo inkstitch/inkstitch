@@ -1,7 +1,7 @@
 ---
 title: "Allegria"
 permalink: /fr/fonts/allegria/
-last_modified_at: 2025-09-07
+last_modified_at: 2026-01-01
 toc: false
 preview_image:
  - url: /assets/images/fonts/allegria20.png
