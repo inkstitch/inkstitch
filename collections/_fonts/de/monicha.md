@@ -9,23 +9,9 @@ preview_image:
 data_title:
   - monicha
 ---
-{%- assign font = site.data.fonts.monicha.font -%}
-![monicha](/assets/images/fonts/monicha.jpg)
+{% include font_infos_de.html %}
 
-## Schriftzeichen 
 
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-Bei einer Skalierung von 100 % ist diese Schrift ungefähr {{ font.size }} groß. 
-
-Sie kann bis auf  ({{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm))  hochskaliert werden, aber nicht herunterskaliert.
 
 ## Beschreibung
 
@@ -85,10 +71,11 @@ Diese alternativen Großbuchstaben sollten nur am Wortanfang genutzt werden, die
 
 ![Hearts](/assets/images/fonts/monicha/alt4.png)
 
-## Impressionen
+
+
+{% include end_of_font_page_de.html %}
+
+
 
 {% include folder-galleries path="fonts/monicha/" %}
 
-## Lizenz
-
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/monicha/LICENSE)
