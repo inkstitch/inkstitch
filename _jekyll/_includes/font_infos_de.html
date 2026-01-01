@@ -1,0 +1,37 @@
+
+
+{% for image in page.preview_image -%}
+<p class="font-library-preview-image">
+  <img 
+     src="{{ image.url }}"
+     alt="{{ page.title }} "
+     style="height:{{ image.height }}mm;max-width:none;" data-image_height="{{ image.height }}mm">
+  </p>
+{% endfor %} 
+
+
+<h2>Schriftzeichen</h2>
+
+{%- assign nb_fonts =page.data_title.size -%}
+{%- for sub_font in page.data_title -%}
+  {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
+ 
+<p>{{ sub_font_data.name }} enthält {{ sub_font_data.glyphs.size }} Schriftzeichen:</p> 
+
+<code class="font-glyphs">{{ sub_font_data.glyphs | sort | join: ' ' }}</code>
+
+{% endfor %}
+
+<h2>Maße</h2>
+<p>When using the lettering tool, scaling of the font is controlled by allowing a scaling percentage range.</p>
+
+<p>If you try to further decrease or increase the font size outside the lettering tool, the result might not embroider correctly.</p>
+{% for sub_font in page.data_title -%}
+  {%- assign sub_font_data = site.data.fonts[sub_font].font -%}
+
+Mit das Text Modul  können Sie <b>{{ sub_font_data.name }}</b> bis auf {{ sub_font_data.min_scale | times: 100 | floor }}% für eine Größe von ca.
+{{ sub_font_data.size | times: sub_font_data.min_scale }} mm  skalieren,
+und bis auf {{ sub_font_data.max_scale | times: 100 | floor }}% für eine Größe von ca.
+{{ sub_font_data.size | times: sub_font_data.max_scale }} mm .
+
+{% endfor %}
