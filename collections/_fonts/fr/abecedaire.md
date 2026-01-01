@@ -11,12 +11,12 @@ data_title:
 ---
 {% include font_infos_fr.html %}
 
-### Origine de la fonte
+### Spécificités de la fonte
 
 Ce lettrage a été inspiré par une page du livre Dessins de broderie - Stickmuster buch Heft 185 (fin 19ème siècle)
 
 
-## Dans la vraie vie 
+{% include end_of_font_page_fr.html %}
 
 {% include folder-galleries path="fonts/abecedaire/" %}
 
