@@ -9,26 +9,7 @@ preview_image:
 data_title:
   - dejavufont
 ---
-{%- assign font = site.data.fonts.dejavufont.font -%}
-## Serif Semi-condensed
-
-![Deja Vue Serif Semi-condensed](/assets/images/fonts/dejavu_serif.jpg)
-
-## Glyphes 
-Cette fonte comporte  {{ font.glyphs.size }} glyphes:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-
-## Dimensions
-
-A une échelle de  100% cette fonte a une hauteur approximative de  {{ font.size }} mm. 
-
-Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
-à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
+{% include font_infos_fr.html %}
 
 
 
@@ -36,11 +17,9 @@ Elle peut être redimensionnée  de {{ font.min_scale | times: 100 | floor }}% (
 
 Déja Vu peut être brodée de gauche à droite, de droite à gauche, de haut en bas, de bas en haut.
 
-## Dans la vraie vie
 
-Utilisée seule ou en compagnie d'*Amitaclo* et de *Magnolia KOR* sur les pots de conserves.
+
+{% include end_of_font_page_fr.html %}
 
 {% include folder-galleries path="fonts/dejavu/" %}
 
-
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/dejavufont/LICENSE)
