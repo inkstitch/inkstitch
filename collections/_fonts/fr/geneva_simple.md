@@ -12,53 +12,10 @@ data_title:
   - geneva_rounded
   - geneva_simple
 ---
-{%- assign font2 = site.data.fonts.geneva_rounded.font -%}
-{%- assign font1 = site.data.fonts.geneva_simple.font -%}
+{% include font_infos_fr.html %}
 
-
-## Sans
-
-![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans.jpg)
-
-
-
-### Glyphes
-
-Cette fonte comporte  {{ font1.glyphs.size }} glyphes:
-
-```
-{{ font1.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Sans Rounded
-
-![Geneva Simple Sans](/assets/images/fonts/geneva_simple_sans_rounded.jpg)
-
-
-
-### Glyphes
-
-Cette fonte comporte  {{ font2.glyphs.size }} glyphes:
-
-```
-{{ font2.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-A une échelle de  100% ces fontes ont une hauteur approximative de  {{ font1.size }} mm. 
-
-Elles peuvent être redimensionnées de {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm) à {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
-
-
-## Dans la vraie vie
+{% include end_of_font_page_fr.html %}
 
 {% include folder-galleries path="fonts/geneva/" %}
-
-[Download Font License Geneva Simple](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_simple/LICENSE)
-
-[Download Font License Geneva Rounded](https://github.com/inkstitch/inkstitch/tree/main/fonts/geneva_rounded/LICENSE)
 
 
