@@ -18,12 +18,7 @@ data_title:
 
 
 ## Particularités
-Les contours des glyphes des deux fontes étant exactement identiques pour les glyphes communs, il est très facile  d'utiliser les deux fontes conjointement :
-- Faire un lettrage en Roman AGS avec l'ensemble du texte
-- Faire un lettrage en Roman AGS bicolore avec  uniquement les glyphes que l'on souhaite bicolores
-- Superposer exactement  chaque lettre colorée sur la lettre monochrome correspondante 
-- Supprimer les lettres monochromes cachées par les bicolores
-
+Seules les majuscules de Roman AGS bicolore sont bicolores.
 
 {% include end_of_font_page_fr.html %}
 {% include folder-galleries path="fonts/roman_AGS/" %}
