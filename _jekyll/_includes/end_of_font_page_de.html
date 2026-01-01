@@ -9,9 +9,10 @@
 <p>
     {{ sub_font_data.name }} ist  unter {{ sub_font_data.font_license }} lizenziert.<br/>
   {% if  sub_font_data.original_font  == "" %}
-	{{ sub_font_data.name }} wurde  für vor Ink/Stitch erstellt.
+	{{ sub_font_data.name }} wurde  für  Ink/Stitch erstellt.
   {% else %}
-  It is a derivative work from  <a href = "{{ sub_font_data.original_font_url }}" > {{ sub_font_data.original_font }} </a>.
+  Die Vorlage für diese Schrift ist die Schriftart
+ <a href = "{{ sub_font_data.original_font_url }}" > {{ sub_font_data.original_font }} </a>.
   {% endif %}
 </p>
 
