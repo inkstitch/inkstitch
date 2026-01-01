@@ -29,5 +29,5 @@ Veuillez utiliser exactement 3 lettres, ni plus ni moins, sous peine d'obtenir u
 
 {% include end_of_font_page_fr.html %}
 
-{%include folder-galleries path="fonts/allegria/" %}
+
 
