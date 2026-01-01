@@ -5,7 +5,7 @@ last_modified_at: 2022-05-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/fold_inkstitch.jpg
-    height: 63
+    height: 40
 data_title:
   - fold_inkstitch
 ---
