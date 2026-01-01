@@ -11,7 +11,7 @@ from pystitch.EmbThread import EmbThread
 
 
 class ThreadColor(object):
-    def __init__(self, color, name=None, number=None, manufacturer=None, description=None, chart=None):
+    def __init__(self, color, name=None, number=None, manufacturer=None, description=None, chart=None):  # noqa: C901
         self.rgb = None
 
         if isinstance(color, str) and color.lower().startswith(('url', 'currentcolor', 'context')):
@@ -22,9 +22,14 @@ class ThreadColor(object):
             color = None
         elif isinstance(color, str) and color.startswith('rgb'):
             color = tuple(int(value) for value in color[4:-1].split(','))
+            # remove alpha channel
+            if len(color) == 4:
+                color = color[:3]
 
         if color is None:
             self.rgb = (0, 0, 0)
+        elif isinstance(color, Color):
+            self.rgb = color.to('rgb')
         elif isinstance(color, EmbThread):
             self.name = color.description
             self.number = color.catalog_number
