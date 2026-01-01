@@ -13,6 +13,6 @@ data_title:
 
 {% include end_of_font_page_fr.html %}
 
-{% include folder-galleries path="fonts/stebor_ags/" %}
+{% include folder-galleries path="fonts/stebor/" %}
 
 
