@@ -79,6 +79,15 @@ class StrokeSatinWarning(ValidationWarning):
     ]
 
 
+class NarrowSatinWarning(ValidationWarning):
+    name = _("Narrow Satin")
+    description = _("This element renders as a satin, but it is too narrow.")
+    steps_to_solve = [
+        _("* Increase stroke width."),
+        _("Ink/Stitch will not register elements with a stroke width underneath 0.3 mm as satin, but it is recommended to stay above 1mm."),
+    ]
+
+
 class TwoRungsWarning(ValidationWarning):
     name = _("Satin has exactly two rungs")
     description = _("There are exactly two rungs. This may lead to false rail/rung detection.")
@@ -833,6 +842,8 @@ class SatinColumn(EmbroideryElement):
 
         if len(self.paths) == 1:
             yield StrokeSatinWarning(self.center_line.interpolate(0.5, normalized=True))
+            if self.stroke_width < PIXELS_PER_MM:
+                yield NarrowSatinWarning(self.center_line.interpolate(0.8, normalized=True))
         elif len(self.filtered_subpaths) == 4:
             yield TwoRungsWarning(self.line_string_rails[0].interpolate(0.5, normalized=True))
         elif len(self.filtered_subpaths) == 2:
