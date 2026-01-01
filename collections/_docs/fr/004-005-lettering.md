@@ -50,7 +50,7 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
 
   Ajoute cette largeur (en mm) entre les lettres
 
-* **Espacememnt des mots**
+* **Espacement des mots**
 
   Ajoute cette largeur (en mm) entre les mots
 
