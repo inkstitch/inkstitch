@@ -12,24 +12,9 @@ data_title:
   - amitaclo
   - amitaclo_small
 ---
-{%- assign font = site.data.fonts.amitaclo.font -%}
-![Amitaclo](/assets/images/fonts/amitaclo.jpg)
+{% include font_infos_de.html %}
 
-![Amitaclo small](/assets/images/fonts/amitaclo-small.jpg)
-
-## Schriftzeichen
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-Wenn man die Schrift auf 100% nutzt, ist sie ca. 30 mm groß.
-
-Man kann sie bis zu 200% (ca. 60 mm) vergrößern oder auf 80% (ca. 24  mm) verkleinern.
+## Besonderheiten
 
 ![Dimensions Amitaclo](/assets/images/fonts/Sizing/amitaclosizing.jpg)
 
@@ -37,16 +22,12 @@ Bitte nicht versuchen die Schrift kleiner zu Sticken, dass kann zu Nadelbrüchen
 
 Die Schrift Amitaclo small (Diese Schrift wird in einer zukünftigen Version von Ink/Stitch erscheinen und ist in Ink/Stitch v2.1.2 nicht verfügbar.) ist eine Abwandlung dieser Schrift mit anderen Stickparametern. Die Dichte, die Kompensation und die Unterlage wurden geändert, damit diese Schrift in kleineren Größen gestickt werden kann.
 
-Wenn Sie Amitaclo small wählen, werden Sie im Dialogfenster für die Beschriftung aufgefordert, eine Größenänderung zwischen 25 und 55 % der ursprünglichen Amitaclo-Größe anzugeben, also von Buchstaben mit einer Höhe von etwa 30 mm auf Buchstaben mit einer Höhe zwischen 7 und 16 mm.
-
 Im Gegensatz zu Amitaclo **MUSS** diese verkleinerte Schrift mit einem dünneren Faden und einer dünneren Nadel als üblich gestickt werden. Es **MUSS** eine Nadel der Größe 8 (USA), 60(EUR) und ein Garn 60WT verwendet werden.
 
-## Impressionen
 
-Gemeinsam mit Déjà Vu und Magnolia KOR auf Einmachgläsern verwendet
+
+{% include end_of_font_page_de.html %}
 
 {%include folder-galleries path="fonts/amitaclo/" %}
 
-## Lizenz
 
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/amitaclo/LICENSE)
