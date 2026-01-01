@@ -13,39 +13,8 @@ data_title:
   - hebrew_font_large
   - hebrew_font_medium
 ---
-{%- assign font1 = site.data.fonts.hebrew_font_large.font -%}
+{% include font_infos_fr.html %}
 
-{%- assign font2 = site.data.fonts.hebrew_font_medium.font -%}
-
-<img 
-     src="/assets/images/fonts/hebrew_font_large.png"
-     alt="hebrew_font_large" height="35">
-
-<img 
-     src="/assets/images/fonts/hebrew_font_medium.png"
-     alt="Emilio20" height="23">
-
-## Glyphes
-
-Ces fontes contiennent  {{ font1.glyphs.size }} glyphes:
-
-```
-{{ font1.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-### Large
-
-A une échelle de 100% cette fonte mesure environ {{ font1.size }} mm de haut.
-Peut être diminuée jusqu'à  {{ font1.min_scale | times: 100 | floor }}% ({{ font1.size | times: font1.min_scale }} mm)
-et agrandie jusqu'à  {{ font1.max_scale | times: 100 | floor }}% ({{ font1.size | times: font1.max_scale }} mm).
-
-### Medium
-
-Peut être utilisée  de  {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
-à {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm). 
 
 ## Particularités
 
@@ -54,10 +23,8 @@ Ces chemins ne sont pas prévus pour être brodés tels quels, mais pour aider q
 
 Ils peuvent être ignorés sans souci.
 
-## Dans la vraie vie
+{% include end_of_font_page_fr.html %}
 
 {% include folder-galleries path="fonts/hebrew_font/" %}
 
-## License
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/hebrew_font_medium/LICENSE)
