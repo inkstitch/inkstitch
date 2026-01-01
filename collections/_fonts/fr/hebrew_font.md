@@ -23,6 +23,8 @@ Ces chemins ne sont pas prévus pour être brodés tels quels, mais pour aider q
 
 Ils peuvent être ignorés sans souci.
 
+Si vous ne disposez pas d'un clavier hébreu réel ou virtuel, vous pouvez utilisez le copier coller  pour entrer les caractères dans l'outil de lettrage.
+
 {% include end_of_font_page_fr.html %}
 
 {% include folder-galleries path="fonts/hebrew_font/" %}
