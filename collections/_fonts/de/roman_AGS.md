@@ -10,6 +10,7 @@ preview_image:
     height: 28
 data_title:
   - roman_ags
+  - roman_ags_bicolor
 ---
 {%- assign font1 = site.data.fonts.roman_ags.font -%}
 {%- assign font2 = site.data.fonts.roman_ags_bicolor.font -%}
