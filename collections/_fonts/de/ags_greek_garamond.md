@@ -9,28 +9,9 @@ preview_image:
 data_title:
   - ags_garamond_latin_grec
 ---
-{%- assign font = site.data.fonts.ags_garamond_latin_grec.font -%}
-![AGS garamond](/assets/images/fonts/garamond.png)
+{% include font_infos_de.html %}
 
-## Schriftzeichen
-
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-Used at 100%, this font is approximatively 20mm high (3/4 inches). 
-
-It can be scaled up to 150%  (30mm, 1.25 inches) and scalled down to 80% (16mm  5/8 inch)
-
-## Impressionen
+{% include end_of_font_page_de.html %}
 
 {% include folder-galleries path="fonts/ags_greek_garamond/" %}
 
-## Lizenz
-
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/ags_garamond_latin_grec/LICENSE)
