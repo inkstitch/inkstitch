@@ -105,7 +105,7 @@ Align grid with canvas             ||This ensures good alignment for adjacent cr
 Grid Offset                        ||Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y.
 Fill coverage                      ||Percentage of overlap for each cross with the fill area.
 Expand                             |![Expand example](/assets/images/docs/params-fill-expand.png) |Expand the shape before fill stitching, to compensate for gaps between shapes.<br>It is recommended to use at least a small expand value (e.g. 0.2) on cross stitch elements.
-Maximum fill stitch length         |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) |Usually set to at least the length of a cross diagonal
+Maximum fill stitch length         |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) |Usually set to at least the length of a cross diagonal. For huge crosses chose a smaller value.
 Bean stitch number of repeats      ||Determines the number of times to repeat each stitch.<br />◦ A value of `0` does not repeat the stitch (normal stitch)<br/>◦ A value of `1` repeats each stitch three times (forward, back, forward).<br />◦ A value of `2` repeats the stitch five times.
 Minimum stitch length              ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
 Minimum  jump stitch  length       ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches

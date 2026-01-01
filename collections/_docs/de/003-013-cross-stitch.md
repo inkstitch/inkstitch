@@ -1,7 +1,7 @@
 ---
 title: "Kreuzstich"
 permalink: /de/docs/stitches/cross-stitch/
-last_modified_at: 2026-01-01
+last_modified_at: 2025-12-2
 toc: true
 
 feature_row:
@@ -13,112 +13,108 @@ feature_row:
 
 {% include upcoming_release.html %}
 
-## What it is
+## Beschreibung
 
-Cross stitch mimics traditional hand embroidery techniques.
-Cross-stitch is characterized by small, even crosses, which give the embroidered image a flat, blockish look.
+Kreuzstich ahmt traditionelle Handsticktechniken nach.
+Kreuzstich zeichnet sich durch kleine, gleichmäßige Kreuze aus, die dem gestickten Bild ein flaches, blockartiges Aussehen verleihen.
 
 ![Cross stitched froq in double cross style](/assets/images/upcoming/3.3.0/cross_stitch.jpg)
 
-# How to Create
+# Funktionsweise
 
-* Draw a shape with a fill color
-* Open the params dialog
-* Select `Cross stitch` as the fill method
+* Zeichne eine geschlossene Form mit einer Füllfarbe
+* Öffne den Parameter-Dialog
+* Wähle `Kreuzstich` als Füllmethode
 
-### Grids And The Coverage Parameter
+### Gitter und der Füllabdeckung-Parameter
 
-It is important to understand the cross stitch `coverage` parameter.
+Es ist wichtig den Parameter `Füllabdeckung` zu verstehen.
 
-The coverage parameter defines the percentage of overlap for each cross with the fill area. This means, it influences wether a cross is build at a specific spot or not.
+Er bestimmt wieviel Prozent jedes Kreuz die Füllfläche überdecken muss. Das bedeutet, er hat einen Einfluss darauf, ob ein Kreuz an einer bestimmten Stelle gebildet wird oder nicht.
 
-Cross stitches are alignde to a grid in pattern size. The grid itself is (by default) aligned to the top left corner of the page canvas.
+Kreuzstiche richten sich nach einem Gitter aus. Das Gitter selbst (in der Standarddefinition) richtet sich an der oberen, linken Ecke der Arbeitsfläche aus.
 
-Ink/Stitch will check how much percent of each grid field is covered by the fill element.
-If coverage exceeds the value given by the coverage option (by default 50%), a cross stitch is build.
+Ink/Stitch prüft nun für jedes Gitterfeld die prozentuale Abdeckung des Füllelements. Ist die Abdeckung höher als die im Parameter definierte Prozentzahl, wird ein Kreuz gebildet.
 
-In the following example only the green fields are covered more than 50% by the fill and receive a cross.
-When the fill element is moved on canvas, we receive more stitches.
+Im folgenden Beispiel sind nur die grünen Felder mit mehr als 50% von der schwarzen Füllung überdeckt und werden gestickt.
+Wird das Element auf der Arbeitsfläche verschoben, werden mehr Kreuze gestickt.
 
 {% include feature_row %}
 
-When the option `Align grid with canvas` is disabled, the element can be moved on canvas without changing the cross stitch result.
-But adjacent cross stitch areas may be misaligned.
+Wird die Option `Gitter an Arbeitsfläche ausrichten` deaktiviert, kann das Element frei auf der Arbeitsfläche bewegt werden, ohne dass sich das Stickergebnis ändert.
+Aber angrenzende Kreuzstichflächen können falsch ausgerichtet sein.
 {: .notice--info }
 
-### Cross Stitch Method
+### Kreuzstich-Methoden
 
-In Ink/Stitch you can choose from various cross stitch methods.
+Ink/Stitch kennt verschiedene Kreuzstich-Methoden.
 
-* **Cross stitch and cross stitch flipped**
+* **Kreuzstich und Kreuzstich (gedreht)**
 
-  This is the most common method. Two diagonals are building a cross.
-  When two crosses are only diagonally conntected, add a small expand value to ensure combined stitching.
+  Dies ist die gewöhnliche Kreuzstich-Methode. Zwei diagonale Stiche bilden ein Kreuz.
+  Sind zwei Kreuze nur über die Diagonale verbunden, ist es sinnvoll einen kleinen Wert für die Option `Erweitern` festzulegen, um einen zusammenhängenden Stichablauf zu gewährleisten.
 
   ![Cross stitch method: cross stitch](/assets/images/docs/cross_stitch_method_cross_stitch.jpg)
-* **Half stitch and half stitch flipped**
+* **Halbstich und Halbstich (gedreht)**
 
-  Half stitches build only a half cross stitch (one diagonal), traveling along the outline of the shape.
+  Halbstich bildet ein halbes Kreuz (nur eine Diagonale). Verbundungsstiche verlaufen entlang der Außenlinie.
 
   ![Cross stitch method: half cross](/assets/images/docs/cross_stitch_method_half_cross.jpg)
-* **Upright cross and upright cross flipped**
+* **Aufrechter Kreuzstich und aufrechter Kreuzstich (gedreht)**
 
-  A cross stitch turned, building an uprigt cross.
-  Please note, that this cross stitch method may produce jumps, when areas are connected only diagonally.
+  Ein gedrehter Kreuzstich, bildet ein aufrechtes Kreuz.
+  Diese Stichart kann Sprungstiche beinhalten, wenn Flächen nur diagonal verbunden sind.
 
   ![Cross stitch method: upright cross](/assets/images/docs/cross_stitch_method_upright.jpg)
-* **Double cross**
+* **Doppeltes Kreuz**
 
-  A combination of cross stitch and upright stitch. As they include upright stitches, note possible jump stitches when areas touch diagonally only.
+  Eine Kombination von Kreuzstichen und aufrechten Kreuzstichen. Da auch hier aufrechte Kreuzstiche enthalten sind, sind auch hier Sprungstiche bei nur diagonal verbundenen Flächen möglich.
 
   ![Cross stitch method: double cross](/assets/images/docs/cross_stitch_method_double_cross.jpg)
 
-### Cross Stitch Helper
+### Kreuzstich-Helfer
 
-Ink/Stitch comes with an extension which helps you to perform cross stitch specific tasks all at once.
+Ink/Stitch kommt mit einer Erweiterung, die Kreuzstich-spezifische Aufgaben in einem arbeitsablauf erledigen kann.
 
-* Setup a grid for cross stitch alignment (and visual support while working on cross stitches)
-* Apply cross stitch params to selected elements
-* Pixelize the outline of selected elements, to easily see and adapt cross stitch positions
+* Erstellen eines Seitengitter für die Stichpositionierung (als visuelle Unterstützung bei der Erstellung des Kreuzstichmusters)
+* Kreuzstichparameter auf gewählte Füllstich-Elemente anwenden
+* Füllstichelemente verpixeln, so dass sie die Stichpositionen besser abbilden
 
-It also computes and displays the stitch length given the grid dimensions. Maximum stitch length in the cross stitches parameters should be larger than this value.
+Außerdem wird die aus den Gitter-Dimensionen erechnete Stichlänge der diagonalen Stiche angezeigt. Große Kreuze können durch die Eingabe eines Wertes für die maximale Stichlänge unterteilt werden.
 
-[Read more](/docs/tools-fill/#cross-stitch-helper)
-  
-## Set Start and End Point
+[Mehr lesen](/de/docs/fill-tools/#kreuzstich-helfer)
 
-By default, an automatic fill starts as close as possible to the previous embroidery element and ends as close as possible to the next embroidery element.
+### Anfangs- und Endpunkt festlegen
 
-To change this behavior, set start and end points for autofill objects with [Visual commands](/docs/commands/).
+In der Standardeinstellung starten Füllelemente so nah wie möglich am zuvor gestickten Element und enden so nah wie möglich am nächsten Element.
 
-## Paramameters
+Dieses Verhalten kann durch das Setzen von manuellen [Anfangs- bzw. Endpunken](/de/docs/commands/) überschrieben werden.
 
-Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
+## Parameter
 
-Settings||Description
+Öffne das Parameter-Dialogfenster (`Erweiterungen > Ink/Stitch  > Parameter`, um die Einstellungen zu verfeinern.
+
+Einstellung                        ||Beschreibung
 ---|---|---
-Automatically routed fill stitching| ☑      |Must be enabled for these settings to take effect.
-Fill method                        |Cross Stitch|Must be set to cross stitch.
-Cross stitch method                ||Choose method (for detailed information see above)
-Pattern size                       ||Defines the size of the cross stitch (grid)
-Align grid with canvas             ||This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.<br>Disable this option to ensure, that this element stitches the same, independently on its position on the canvas.
-Grid Offset                        ||Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y.
-Fill coverage                      ||Percentage of overlap for each cross with the fill area.
-Expand                             |![Expand example](/assets/images/docs/params-fill-expand.png) |Expand the shape before fill stitching, to compensate for gaps between shapes.
-Maximum fill stitch length         |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) |The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
-Bean stitch number of repeats      ||Determines the number of times to repeat each stitch.<br />◦ A value of `0` does not repeat the stitch (normal stitch)<br/>◦ A value of `1` repeats each stitch three times (forward, back, forward).<br />◦ A value of `2` repeats the stitch five times.
-Minimum stitch length              ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
-Minimum  jump stitch  length       ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches
-Allow lock stitches                ||Enables lock stitches in only desired positions
-Force lock stitches                |☑ |Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
-Tack stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
-Scale Tack stitch                  ||
-Lock stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
-Scale Lock stitch                  ||
-Trim After                         |☑ |Trim the thread after sewing this object.
-Stop After                         |☑ |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+Automatisch geführte Füllstiche    | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
+Füllmethode                        |Kreuzstich| `Kreuzstich` auswählen
+Kreuzstich-Methode                 ||Wähle eine Methode. Für detailierte Informationen siehe oben.
+Mustergröße                        ||Definiert die Größe des Kreuzstichgitters
+Gitter an Arbeitsfläche ausrichten ||Dies gewährleistet eine gute Ausrichtung benachbarter Kreuzstichbereiche, bedeutet jedoch auch, dass sich das Ergebnis ändern kann, wenn das Element verschoben wird.<br>Ist die Option deaktiviert, wird das Element unabhängig von seiner Position auf der Leinwand immer gleich gestickt wird.
+Gitter-Versatz                     ||Verschiebt das Gitter um die angebenen Werte. X und Y Werte werden durch ein Leerzeichen getrennt angegeben. Ist nur ein Wert definiert, wird er für beide Richtungen verwendet.
+Erweitern                          |![Expand example](/assets/images/docs/params-fill-expand.png) |Erweitern der Form vor dem Füllstich, um Lücken zwischen den Formen auszugleichen.<br>Für den Kreuzstich wird ein kleiner Wert (z.B. 0.1) empfohlen.
+Maximale Füllstichlänge            |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png)|Normalerweise mindestens die Länge der Kreuzstichdiagonalen. Große Kreuze können mit einem kleineren Wert unterteilt werden.
+Mehrfachgeradstich Anzahl der Wiederholungen || ◦ Jeden Stich vervielfachen.<br/>◦ Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 würde jeden Stich fünffach ausführen, usw.<br/>◦ Gilt nur für den Geradstich.
+Minimale Stichlänge             || Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
+Minimale Länge für Sprungstiche || Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
+Vernähen erlauben               || Vernäht bei Bedarf an den ausgewählten Positionen
+Vernähen erzwingen              || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Anstecher                       || Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
+Verstecher                      || Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
+Stopp                           || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
+Fadenschnitt                    || Schneidet den Faden nachdem dieses Objekt genäht wurde
 {: .params-table }
 
-### Sample Files Including Fill Stitches
+### Beispieldateien mit Kreuzstichen
 
-{% include tutorials/tutorial_list key="stitch-type" value="Cross Stitch" %}
+{% include tutorials/tutorial_list key="stichart" value="Kreuzstich" %}
