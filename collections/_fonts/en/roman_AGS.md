@@ -16,15 +16,9 @@ data_title:
 
 
 
-## Using the two fonts together
+## Special Feature
 
-Whenever a glyph is present in both fonts, the design shape and size of the glyphs are exactly the same. It is therefore very easy to use them together:
-
-- Do a lettering of the whole text unsing Roman AGS only
-- Do a letterng using  Roman AGS bicolore with only the letters you wish to be bicolors.
-- Put each bicolor letter exactly on top of the corresponding monocolor letter  
-- Hide those monocolor letters
-
+In  Roman AGS Bicolor, only the Capital letters are bicolor.
 
 {% include end_of_font_page.html %}
 
