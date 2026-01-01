@@ -1,6 +1,6 @@
 ---
 title: "Montecarlo"
-permalink: /fonts/montecarlo/
+permalink: /de/fonts/montecarlo/
 last_modified_at: 2025-12-24
 toc: false
 preview_image:
