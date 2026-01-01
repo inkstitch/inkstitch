@@ -30,7 +30,10 @@ data_title:
 {% include font_infos_fr.html %}
 
 ## Particularités
-
+<img 
+     src="/assets/images/fonts/emilio_20_all_versions_french.png"
+     alt="Comparison Emilio 20 fonts" >
+     
 ### Emilio 20 Applique
 Les trois couleurs de cette version correspondent à trois étapes de broderie :
 * première étape, rouge , indique ou poser le tissu de l'appliqué. Peut aussi être utilisé pour créer un fichier pour les machines de découpe.
@@ -39,7 +42,7 @@ Les trois couleurs de cette version correspondent à trois étapes de broderie :
 
 ### Emilio 20 Simple Small
 
-Emilio 20 Simple Small  DOIT être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT DOIVENT être utilisés.
+Emilio 20 Simple Small  **DOIT** être brodée avec un fil et une aiguille plus fins que d'ordinaire. Une aiguille de taille 8 (USA), 60 (EUR) et un fil 60 WT DOIVENT être utilisés.
 
 ### Emilio 20 Tartan
 
