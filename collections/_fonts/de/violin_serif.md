@@ -9,26 +9,9 @@ preview_image:
 data_title:
   - violin_serif
 ---
-{%- assign font = site.data.fonts.violin_serif.font -%}
-![violin serif](/assets/images/fonts/violin_serif.jpg)
+{% include font_infos_de.html %}
 
-## Schriftzeichen
-
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-Bei einer Skalierung von 100 % ist diese Schrift ungefähr ~ 19mm (0.75 in) hoch. Sie kann bis auf 120% (~ 23mm, 1 Zoll) hochskaliert und bis zu 80% (~ 15 mm, 2/3 Zoll) herunterskaliert werden.
-
-## Impressionen
+{% include end_of_font_page_de.html %}
 
 {%include folder-galleries path="fonts/violin_serif/" %}
 
-## Lizenz
-
-[Lizenz herunterladen](https://github.com/inkstitch/inkstitch/tree/main/fonts/violin_serif/LICENSE.txt)
