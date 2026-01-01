@@ -42,7 +42,7 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
   Il est recommandé d'utiliser l'option d'échelle plutôt que de redimensionner la police sur le canevas.
   De cette façon, vous pouvez vous assurer que vous respectez les paramètres pour lesquels la police a été conçue.
 
-  * **Alignement du Texte**
+* **Alignement du Texte**
 
   Alignement du texte sur plusieurs lignes: gauche, centre, droit, justifié (mots)- modifie uniquement les espaces entre les mots, justifié (lettres) - modifie aussi l'espacement inter lettres.
 
