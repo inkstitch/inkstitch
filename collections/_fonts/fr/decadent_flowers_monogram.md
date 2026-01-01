@@ -14,7 +14,7 @@ data_title:
 
 ## Particularités
 
-La première couleur est un remplissage en points couchant, utile pour broder un support "poilu" tel que de l'éponge. 
+La première couleur est un remplissage en points couchants, utile pour broder un support "poilu" tel que de l'éponge. 
 Elle peut être sautée si la broderie est exécutée sur un support standard.
 
 {% include end_of_font_page_fr.html %}
