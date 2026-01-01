@@ -24,8 +24,7 @@ Ils peuvent être ignorés sans souci.
 
 **Hebrew simple rounded small necessite l'usage de fil fin (60) et d'une aiguille fine (60)**
 
-{% include font_infos_fr.html %}
-
+Si vous ne disposez pas d'un clavier arabe réel ou virtuel, vous pouvez utilisez le copier coller  pour entrer les caractères dans l'outil de lettrage.
 {% include end_of_font_page_fr.html %}
 
 
