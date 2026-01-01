@@ -8,7 +8,7 @@
         "running_stitch",
         "latin"
     ],
-    "font_license":"SIL Open Font License v1.1",
+    "font_license": "SIL Open Font License v1.1",
     "original_font": "Euphoria Script Regular Extended",
     "original_font_url": "https://inkscape.org/cs/~bryce/%E2%98%85euphoria-script-regular-extended",
     "leading": 102.48,
@@ -460,6 +460,7 @@
         "þ",
         "ÿ",
         "Œ",
+        "œ",
         "–",
         "—",
         "‘",
