@@ -21,18 +21,18 @@ data_title:
 
 ## Besonderheiten
 
-### Namskout  AGS
+### Kum Tsoan  AGS
 
-Namskout AGS ist eine Applikationsschrift:
+Kum Tsoan AGS ist eine Applikationsschrift:
 
 * erste Farbe (rot) ist für die Platzierung
 * zweite Farbe (grün) für die Befestigung des Applikationsstoffes
 * Überstehenden Stoff nach dem Sticken der zweiten Farbe wegschneiden
 * dritte Farbe (schwarz) ist die Satinsäule für einen schönen Randabschluss
 
-### Namskout Relief
+### Kum Tsoan Relief
 
-Namskout Relief kann folgendermaßen verwendet werden:
+Kum Tsoan Relief kann folgendermaßen verwendet werden:
 
 * Spanne den Stoff ein
 * Die erste Farbe (rot) sticken. Dieser Stich gibt die Position vor, an welche das 3D Vlies platziert werden soll.
@@ -52,9 +52,9 @@ Ersetzt man die Konturfarbe aus den grünen Pfaden durch eine Füllfarbe, kann d
 
 [Weitere Details (auf Französisch) zur Verwendung dieser Schriftart gibt es hier.](https://lyogau.over-blog.com/2024/06/broderie-en-relief-mousse-puffy-ou-autre.html)
 
-###  Namskout Tartan
+###  Kum Tsoan Tartan
 
-Namskout Tartan ist eine Tartan-Schrift. Jeder Buchstabe hat ein eigenes Tartan-Muster. Daher ist das Sticken dieser Schrift nichts für schwache Nerven, denn es gibt sehr viele Farbwechsel. Durch eine Variation mit nur einem Tartan-Muster, kann dieser Prozess kann erheblich vereinfacht werden - allerdings wird das Stockergebnis dadurch auch weniger farbenfroh. Mehr Informationen wie das geht gibt es im Tutorial [Farbwechsel bei Tartan-Schriften reduzieren](https://inkstitch.org/de/tutorials/make_tartan_font_easier/)
+Kum Tsoan Tartan ist eine Tartan-Schrift. Jeder Buchstabe hat ein eigenes Tartan-Muster. Daher ist das Sticken dieser Schrift nichts für schwache Nerven, denn es gibt sehr viele Farbwechsel. Durch eine Variation mit nur einem Tartan-Muster, kann dieser Prozess kann erheblich vereinfacht werden - allerdings wird das Stockergebnis dadurch auch weniger farbenfroh. Mehr Informationen wie das geht gibt es im Tutorial [Farbwechsel bei Tartan-Schriften reduzieren](https://inkstitch.org/de/tutorials/make_tartan_font_easier/)
 
 {% include end_of_font_page_de.html %}
 
