@@ -9,7 +9,7 @@ preview_image:
 data_title:
   - invercelia
 ---
-{{% include font_infos_de.html %}
+{% include font_infos_de.html %}
 
 {% include end_of_font_page_de.html %}
 
