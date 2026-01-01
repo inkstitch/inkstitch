@@ -5,50 +5,23 @@ last_modified_at: 2025-12-27
 toc: false
 preview_image:
   - url: /assets/images/fonts/kum_tsoan.jpg
-    height: 90
+    height: 50
   - url: /assets/images/fonts/kum_tsoan_tartan.jpg
-    height: 90
+    height: 50
   - url: /assets/images/fonts/kum_tsoan_relief.png
-    height: 90
+    height: 50
 data_title:
   - kum_tsoan_AGS
   - kum_tsoan_relief
   - kum_tsoan_tartan
 ---
-{%- assign font = site.data.fonts.kum_tsoan_ags.font -%}
-
-{%- assign font2 = site.data.fonts.kum_tsoan_relief.font -%}
-
-![Kum Tsoan AGS](/assets/images/fonts/kum_tsoan.jpg)
-
-![Kum Tsoan _relief](/assets/images/fonts/kum_tsoan_relief.png)
-
-![Kum Tsoan Tartan](/assets/images/fonts/kum_tsoan_tartan.jpg)
+{% include font_infos_fr.html %}
 
 
 
-## Glyphes
-
-Ces fontes comportent  {{ font.glyphs.size }} glyphes:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Dimensions
-
-A une échelle de  100% ces fontes ont une hauteur approximative de  {{ font.size }} mm. 
-
-Kum Tsoan  AGS et Kum Tsoan  Tartan  peuvent être redimensionnées  de {{ font.min_scale | times: 100 | floor }}% ({{ font.size | times: font.min_scale }} mm)
-à {{ font.max_scale | times: 100 | floor }}% ({{ font.size | times: font.max_scale }} mm).
-
-Kum Tsoan  relief est beaucoup plus tolérante et peut être redimensionnée de {{ font2.min_scale | times: 100 | floor }}% ({{ font2.size | times: font2.min_scale }} mm)
-à {{ font2.max_scale | times: 100 | floor }}% ({{ font2.size | times: font2.max_scale }} mm). La vraie limite supérieure est celle du cadre de broderie.
 
 
-
-## Comment les utiliser
+## Particularités
 ### Kum Tsoan AGS
 Kum Tsoan  AGS est une fonte d'appliqué
 
@@ -85,8 +58,12 @@ Si vous supprimez la couleur de contour des chemins verts et la remplacez par un
 Cette  version tente de ressembler à un appliqué de tissus écossais (tartan). Elle utilise un tartan différent par lettre, ce qui induit un grand nombre de changements de fils.  Il existe [une technique](https://inkstitch.org//fr/tutorials/make_tartan_font_easier/) pour utiliser le même tartan pour toutes les lettres et ainsi réduire très fortement le nombre de changements de fils.
 
 
-## Dans la vraie vie
+
+
+{% include end_of_font_page_fr.html %}
+
+
 
 {% include folder-galleries path="fonts/kum_tsoan_ags/" %}
 
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/kum_tsoan_AGS/LICENSE)
+
