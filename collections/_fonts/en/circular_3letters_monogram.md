@@ -21,5 +21,5 @@ For instance enter {ABC
 Please use exactly 3 letters, no less, no more, or you could get some unexpected result.
 
 {% include end_of_font_page.html %}
-{%include folder-galleries path="fonts/allegria/" %}
+
 
