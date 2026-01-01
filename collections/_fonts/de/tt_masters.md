@@ -9,32 +9,13 @@ preview_image:
 data_title:
   - tt_masters
 ---
-{%- assign font = site.data.fonts.tt_masters.font -%}
-![TT Masters](/assets/images/fonts/tt_masters.jpg)
+{% include font_infos_de.html %}
 
-## Schriftzeichen
-
-Diese Schrift enthält  {{ font.glyphs.size }} Schriftzeichen:
-
-```
-{{ font.glyphs | sort | join: ' ' }}
-```
-{: .font-glyphs }
-
-## Maße
-
-Bei einer Skalierung auf 100 % ist diese Schrift ungefähr ~ 20 mm (~ 0.8 Zoll) groß.
-
-Sie kann bis auf 300% (~ 60 mm 2.5 Zoll ) hochskaliert  werden, aber nicht herunterskaliert.
-
-## Anmerkung
+## Besonderheiten
 
 Diese Schrift kann mit der [Option](https://inkstitch.org/de/docs/lettering/#optionen) 'Sticke Textzeilen vor und zurück" verwendet werden: eine mehrzeilige Stickerei kann von links nach rechts, rechts nach links usw. gestickt werden. 
 
-## Impressionen
+{% include end_of_font_page_de.html %}
 
 {% include folder-galleries path="fonts/TT_masters/" %}
 
-## Lizenz
-
-[Download Font License](https://github.com/inkstitch/inkstitch/tree/main/fonts/tt_masters/LICENSE)
