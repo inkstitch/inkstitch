@@ -58,7 +58,7 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 
 L'assistant de point de croix peut vous aider de différentes manières lors de la création de [grilles de point de croix](/docs/stitches/cross-stitch).
 
-* Vérification de la longueur des points en diagonale
+* Affichage de la longueur de la diagonale des croix, et donc de la longueur des points
 * Création de la grille de la page
 * Pixellisation des éléments de remplissage
 * Transmission de la taille de la grille comme paramètre aux éléments de remplissage
