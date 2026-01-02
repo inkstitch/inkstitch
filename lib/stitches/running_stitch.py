@@ -23,9 +23,7 @@ def lerp(a, b, t: float) -> float:
     return (1 - t) * a + t * b
 
 
-def split_segment_even_n(
-    a, b, segments: int, jitter_sigma: float = 0.0, random_seed=None
-) -> typing.List[shgeo.Point]:
+def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
     """Split a segment into n even parts, optionally with jitter."""
     if segments <= 1:
         return []
@@ -42,18 +40,14 @@ def split_segment_even_n(
     return [line.interpolate(x, normalized=True) for x in splits]
 
 
-def split_segment_even_dist(
-    a, b, max_length: float, jitter_sigma: float = 0.0, random_seed=None
-) -> typing.List[shgeo.Point]:
+def split_segment_even_dist(a, b, max_length: float, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
     """Split a segment into even parts with maximum length."""
     distance = shgeo.Point(a).distance(shgeo.Point(b))
     segments = math.ceil(distance / max_length)
     return split_segment_even_n(a, b, segments, jitter_sigma, random_seed)
 
 
-def split_segment_random_phase(
-    a, b, length: float, length_sigma: float, random_seed: str
-) -> typing.List[shgeo.Point]:
+def split_segment_random_phase(a, b, length: float, length_sigma: float, random_seed: str) -> typing.List[shgeo.Point]:
     """Split a segment with randomized phase and length variation."""
     line = shgeo.LineString([a, b])
     progress = length * prng.uniform_floats(random_seed, "phase")[0]
@@ -192,10 +186,7 @@ def cut_segment_with_angle(origin: Point, angle: float, a: Point, b: Point) -> P
     c = Point(math.cos(angle), math.sin(angle))
     t = (p.y * c.x - p.x * c.y) / (d.x * c.y - d.y * c.x)
     if t < -0.000001 or t > 1.000001:
-        raise ValueError(
-            f"cut_segment_with_angle returned a parameter of {t} "
-            f"with points {p} {b - origin} and cut line {c}"
-        )
+        raise ValueError(f"cut_segment_with_angle returned a parameter of {t} " f"with points {p} {b - origin} and cut line {c}")
     return a + d * t
 
 
@@ -308,9 +299,7 @@ def stitch_curve_randomly(
         return [], stitch_length_pos
 
     # Initialize stitch length bounds
-    min_stitch_length = max(
-        0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma)
-    )
+    min_stitch_length = max(0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma))
     max_stitch_length = stitch_length[stitch_length_pos] * (1 + stitch_length_sigma)
 
     i: typing.Optional[int] = 1
@@ -320,12 +309,8 @@ def stitch_curve_randomly(
     rand_iter = iter(prng.iter_uniform_floats(random_seed))
     while i is not None and i < len(points):
         if len(stitch_length) > 1:
-            min_stitch_length = max(
-                0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma)
-            )
-            max_stitch_length = stitch_length[stitch_length_pos] * (
-                1 + stitch_length_sigma
-            )
+            min_stitch_length = max(0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma))
+            max_stitch_length = stitch_length[stitch_length_pos] * (1 + stitch_length_sigma)
             stitch_length_pos += 1
             if stitch_length_pos > len(stitch_length) - 1:
                 stitch_length_pos = 0
@@ -333,9 +318,7 @@ def stitch_curve_randomly(
         r = next(rand_iter)
         # If the last stitch was shortened due to tolerance (or this is the first stitch),
         # reduce the lower length limit to randomize the phase. This prevents moiré and asymmetry.
-        stitch_len = lerp(last_shortened, 1.0, r) * lerp(
-            min_stitch_length, max_stitch_length, r
-        )
+        stitch_len = lerp(last_shortened, 1.0, r) * lerp(min_stitch_length, max_stitch_length, r)
 
         stitch, newidx = take_stitch(last, points, i, stitch_len, tolerance)
         i = newidx
@@ -399,16 +382,12 @@ def even_running_stitch(points, stitch_length, tolerance):
     for curve in path_to_curves(points, 2 * tolerance):
         # Segments longer than twice tolerance are usually forced
         check_stop_flag()
-        stitched_curve, last_stitch_length_pos = stitch_curve_evenly(
-            curve, stitch_length, tolerance, last_stitch_length_pos
-        )
+        stitched_curve, last_stitch_length_pos = stitch_curve_evenly(curve, stitch_length, tolerance, last_stitch_length_pos)
         stitches.extend(stitched_curve)
     return stitches
 
 
-def random_running_stitch(
-    points, stitch_length, tolerance, stitch_length_sigma, random_seed
-):
+def random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma, random_seed):
     """Turn a continuous path into a running stitch with randomized length.
 
     Uses randomized phase and stitch length, keeping within the tolerance of
@@ -433,14 +412,10 @@ def random_running_stitch(
     return stitches
 
 
-def running_stitch(
-    points, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed
-):
+def running_stitch(points, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed):
     """Create a running stitch with a choice of algorithm."""
     if is_random:
-        return random_running_stitch(
-            points, stitch_length, tolerance, stitch_length_sigma, random_seed
-        )
+        return random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma, random_seed)
     else:
         return even_running_stitch(points, stitch_length, tolerance)
 
@@ -500,11 +475,7 @@ def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation):
         return stitches
 
     # Get the half-spacing (distance between consecutive zigzag points)
-    half_spacing = (
-        zigzag_spacing[0] / 2
-        if isinstance(zigzag_spacing, list)
-        else zigzag_spacing / 2
-    )
+    half_spacing = zigzag_spacing[0] / 2 if isinstance(zigzag_spacing, list) else zigzag_spacing / 2
 
     # Calculate how many segments fit in the path
     num_segments = max(2, round(total_length / half_spacing))
