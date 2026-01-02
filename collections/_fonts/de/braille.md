@@ -9,7 +9,6 @@ preview_image:
 data_title:
 - braille
 ---
-
 {% include upcoming_release.html %}
 
 {% include font_infos_de.html %}
