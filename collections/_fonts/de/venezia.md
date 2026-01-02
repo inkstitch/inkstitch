@@ -12,8 +12,6 @@ data_title:
   - venezia
   - venezia_small
 ---
-
-
 {% include upcoming_release.html %}
 
 {% include font_infos_de.html %}
