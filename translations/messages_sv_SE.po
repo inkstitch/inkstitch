@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-02 01:55+0000\n"
-"PO-Revision-Date: 2026-01-02 01:55\n"
+"POT-Creation-Date: 2026-01-02 06:19+0000\n"
+"PO-Revision-Date: 2026-01-02 06:19\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-02 01:55+0000\n"
+"POT-Creation-Date: 2026-01-02 06:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3521,7 +3521,7 @@ msgid "threadlist"
 msgstr ""
 
 #: lib/gui/abort_message.py:38 lib/gui/apply_palette.py:64
-#: lib/gui/cross_stitch_helper.py:178 lib/gui/edit_json/help_panel.py:27
+#: lib/gui/cross_stitch_helper.py:179 lib/gui/edit_json/help_panel.py:27
 #: lib/gui/element_info.py:57 lib/gui/lettering_font_sample.py:98
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
@@ -3628,15 +3628,15 @@ msgid "Square grid"
 msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:61
-msgid "Grid width (mm)"
+msgid "Grid horizontal spacing (mm)"
 msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:66
-msgid "Grid height (mm)"
+msgid "Grid vertical spacing (mm)"
 msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:71
-msgid "Stitch_length:"
+msgid "Stitch length:"
 msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:87
@@ -3652,7 +3652,7 @@ msgid "Fill element outline (pixelize)"
 msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:100
-msgid "Cross coverage (%)"
+msgid "Fill coverage (%)"
 msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:104
@@ -3672,13 +3672,14 @@ msgid "Remove previous page grids"
 msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:167
-msgid "This extension calculates the stitch length for a given grid size.\n\n"
-"* It can be applied to selected fill element as as parameter.\n"
-"* Fill outlines can be pixelized.\n"
-"* The grid can be applied as a page grid."
+msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\n"
+"* Calculate stitch length for given grid spacing values\n"
+"* Apply cross stitch parameters to selected fill elements.\n"
+"* Pixelize outlines of selected fill elements.\n"
+"* Apply spacing values to page grid."
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:184 lib/gui/cross_stitch_helper.py:185
+#: lib/gui/cross_stitch_helper.py:185 lib/gui/cross_stitch_helper.py:186
 msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch"
 msgstr ""
 
