@@ -22,7 +22,9 @@ def lerp(a, b, t: float) -> float:
     return (1 - t) * a + t * b
 
 
-def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
+def split_segment_even_n(
+    a, b, segments: int, jitter_sigma: float = 0.0, random_seed=None
+) -> typing.List[shgeo.Point]:
     if segments <= 1:
         return []
     line = shgeo.LineString((a, b))
@@ -38,13 +40,17 @@ def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_
     return [line.interpolate(x, normalized=True) for x in splits]
 
 
-def split_segment_even_dist(a, b, max_length: float, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
+def split_segment_even_dist(
+    a, b, max_length: float, jitter_sigma: float = 0.0, random_seed=None
+) -> typing.List[shgeo.Point]:
     distance = shgeo.Point(a).distance(shgeo.Point(b))
     segments = math.ceil(distance / max_length)
     return split_segment_even_n(a, b, segments, jitter_sigma, random_seed)
 
 
-def split_segment_random_phase(a, b, length: float, length_sigma: float, random_seed: str) -> typing.List[shgeo.Point]:
+def split_segment_random_phase(
+    a, b, length: float, length_sigma: float, random_seed: str
+) -> typing.List[shgeo.Point]:
     line = shgeo.LineString([a, b])
     progress = length * prng.uniform_floats(random_seed, "phase")[0]
     splits = [progress]
@@ -59,8 +65,15 @@ def split_segment_random_phase(a, b, length: float, length_sigma: float, random_
     return [line.interpolate(x, normalized=False) for x in splits]
 
 
-def split_segment_stagger_phase(a, b, segment_length: float, num_staggers: int, this_segment_num: int, min=0, max=None) \
-        -> typing.List[shgeo.Point]:
+def split_segment_stagger_phase(
+    a,
+    b,
+    segment_length: float,
+    num_staggers: int,
+    this_segment_num: int,
+    min=0,
+    max=None,
+) -> typing.List[shgeo.Point]:
     line = shgeo.LineString([a, b])
     distance = line.length
     stagger_phase = (this_segment_num / num_staggers) % 1
@@ -77,7 +90,7 @@ def split_segment_stagger_phase(a, b, segment_length: float, num_staggers: int, 
     return [line.interpolate(x, normalized=False) for x in splits]
 
 
-class AngleInterval():
+class AngleInterval:
     # Modular interval containing either the entire circle or less than half of it
     # partially based on https://fgiesen.wordpress.com/2015/09/24/intervals-in-modular-arithmetic/
 
@@ -160,10 +173,14 @@ def cut_segment_with_angle(origin: Point, angle: float, a: Point, b: Point) -> P
     p = a - origin
     d = b - a
     c = Point(math.cos(angle), math.sin(angle))
-    t = (p.y*c.x - p.x*c.y) / (d.x*c.y - d.y*c.x)
+    t = (p.y * c.x - p.x * c.y) / (d.x * c.y - d.y * c.x)
     if t < -0.000001 or t > 1.000001:
-        raise Exception("cut_segment_with_angle returned a parameter of {0} with points {1} {2} and cut line {3} ".format(t, p, b-origin, c))
-    return a + d*t
+        raise Exception(
+            "cut_segment_with_angle returned a parameter of {0} with points {1} {2} and cut line {3} ".format(
+                t, p, b - origin, c
+            )
+        )
+    return a + d * t
 
 
 def cut_segment_with_circle(origin: Point, r: float, a: Point, b: Point) -> Point:
@@ -176,14 +193,19 @@ def cut_segment_with_circle(origin: Point, r: float, a: Point, b: Point) -> Poin
     r2 = r * r
     pd = p * d
     # r2 = p2 + 2*pd*t + d2*t*t, quadratic formula
-    t = (math.sqrt(pd*pd + r2*d2 - p2*d2) - pd) / d2
+    t = (math.sqrt(pd * pd + r2 * d2 - p2 * d2) - pd) / d2
     if t < -0.000001 or t > 1.000001:
         raise Exception("cut_segment_with_circle returned a parameter of {0}".format(t))
-    return a + d*t
+    return a + d * t
 
 
-def take_stitch(start: Point, points: typing.Sequence[Point], idx: int, stitch_length: float, tolerance: float) -> \
-        typing.Tuple[typing.Optional[Point], typing.Optional[int]]:
+def take_stitch(
+    start: Point,
+    points: typing.Sequence[Point],
+    idx: int,
+    stitch_length: float,
+    tolerance: float,
+) -> typing.Tuple[typing.Optional[Point], typing.Optional[int]]:
     # Based on a single step of the Zhao-Saalfeld curve simplification algorithm.
     # https://cartogis.org/docs/proceedings/archive/auto-carto-13/pdf/linear-time-sleeve-fitting-polyline-simplification-algorithms.pdf
     # Adds early termination condition based on stitch length.
@@ -210,15 +232,19 @@ def take_stitch(start: Point, points: typing.Sequence[Point], idx: int, stitch_l
     return points[-1], None
 
 
-def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: typing.List[float], tolerance: float, stitch_length_pos: int = 0) -> \
-        typing.Tuple[typing.List[Point], int]:
+def stitch_curve_evenly(
+    points: typing.Sequence[Point],
+    stitch_length: typing.List[float],
+    tolerance: float,
+    stitch_length_pos: int = 0,
+) -> typing.Tuple[typing.List[Point], int]:
     # Will split a straight line into even-length stitches while still handling curves correctly.
     # Includes end point but not start point.
     if len(points) < 2:
         return [], stitch_length_pos
     distLeft = [0] * len(points)
     for j in reversed(range(0, len(points) - 1)):
-        distLeft[j] = distLeft[j + 1] + points[j].distance(points[j+1])
+        distLeft[j] = distLeft[j + 1] + points[j].distance(points[j + 1])
 
     i: typing.Optional[int] = 1
     last = points[0]
@@ -227,7 +253,9 @@ def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: typing.Li
         d = last.distance(points[i]) + distLeft[i]
         if d == 0:
             return stitches, stitch_length_pos
-        stitch_len = d / math.ceil(d / stitch_length[stitch_length_pos]) + 0.000001  # correction for rounding error
+        stitch_len = (
+            d / math.ceil(d / stitch_length[stitch_length_pos]) + 0.000001
+        )  # correction for rounding error
 
         stitch, newidx = take_stitch(last, points, i, stitch_len, tolerance)
         i = newidx
@@ -241,11 +269,17 @@ def stitch_curve_evenly(points: typing.Sequence[Point], stitch_length: typing.Li
 
 
 def stitch_curve_randomly(
-      points: typing.Sequence[Point],
-      stitch_length: typing.List[float], tolerance: float, stitch_length_sigma: float,
-      random_seed: str, stitch_length_pos: int = 0) -> typing.Tuple[typing.List[Point], int]:
+    points: typing.Sequence[Point],
+    stitch_length: typing.List[float],
+    tolerance: float,
+    stitch_length_sigma: float,
+    random_seed: str,
+    stitch_length_pos: int = 0,
+) -> typing.Tuple[typing.List[Point], int]:
 
-    min_stitch_length = max(0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma))
+    min_stitch_length = max(
+        0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma)
+    )
     max_stitch_length = stitch_length[stitch_length_pos] * (1 + stitch_length_sigma)
 
     # Will split a straight line into stitches of random length within the range.
@@ -261,8 +295,12 @@ def stitch_curve_randomly(
     rand_iter = iter(prng.iter_uniform_floats(random_seed))
     while i is not None and i < len(points):
         if len(stitch_length) > 1:
-            min_stitch_length = max(0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma))
-            max_stitch_length = stitch_length[stitch_length_pos] * (1 + stitch_length_sigma)
+            min_stitch_length = max(
+                0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma)
+            )
+            max_stitch_length = stitch_length[stitch_length_pos] * (
+                1 + stitch_length_sigma
+            )
             stitch_length_pos += 1
             if stitch_length_pos > len(stitch_length) - 1:
                 stitch_length_pos = 0
@@ -270,7 +308,9 @@ def stitch_curve_randomly(
         r = next(rand_iter)
         # If the last stitch was shortened due to tolerance (or this is the first stitch),
         # reduce the lower length limit to randomize the phase. This prevents moiré and asymmetry.
-        stitch_len = lerp(last_shortened, 1.0, r) * lerp(min_stitch_length, max_stitch_length, r)
+        stitch_len = lerp(last_shortened, 1.0, r) * lerp(
+            min_stitch_length, max_stitch_length, r
+        )
 
         stitch, newidx = take_stitch(last, points, i, stitch_len, tolerance)
         i = newidx
@@ -303,7 +343,7 @@ def path_to_curves(points: typing.List[Point], min_len: float):
         # Optimized version of checking if cos(angle(a,b)) <= sqrt(0.5) and is defined
         if aabb > 0 and abab <= 0.5 * aabb:
             if seg_len >= min_len:
-                curves.append(points[last: i + 1])
+                curves.append(points[last : i + 1])
                 last = i
             seg_len = 0
 
@@ -328,12 +368,16 @@ def even_running_stitch(points, stitch_length, tolerance):
     for curve in path_to_curves(points, 2 * tolerance):
         # segments longer than twice the tolerance will usually be forced by it, so set that as the minimum for corner detection
         check_stop_flag()
-        stitched_curve, last_stitch_length_pos = stitch_curve_evenly(curve, stitch_length, tolerance, last_stitch_length_pos)
+        stitched_curve, last_stitch_length_pos = stitch_curve_evenly(
+            curve, stitch_length, tolerance, last_stitch_length_pos
+        )
         stitches.extend(stitched_curve)
     return stitches
 
 
-def random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma, random_seed):
+def random_running_stitch(
+    points, stitch_length, tolerance, stitch_length_sigma, random_seed
+):
     # Turn a continuous path into a running stitch with randomized phase and stitch length,
     # keeping it within the tolerance of the path.
     # This is suitable for tightly-spaced parallel curves.
@@ -345,16 +389,25 @@ def random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma,
         # segments longer than twice the tolerance will usually be forced by it, so set that as the minimum for corner detection
         check_stop_flag()
         stitched_curve, last_stitch_length_pos = stitch_curve_randomly(
-            curve, stitch_length, tolerance, stitch_length_sigma, prng.join_args(random_seed, i), last_stitch_length_pos
+            curve,
+            stitch_length,
+            tolerance,
+            stitch_length_sigma,
+            prng.join_args(random_seed, i),
+            last_stitch_length_pos,
         )
         stitches.extend(stitched_curve)
     return stitches
 
 
-def running_stitch(points, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed):
+def running_stitch(
+    points, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed
+):
     # running stitch with a choice of algorithm
     if is_random:
-        return random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma, random_seed)
+        return random_running_stitch(
+            points, stitch_length, tolerance, stitch_length_sigma, random_seed
+        )
     else:
         return even_running_stitch(points, stitch_length, tolerance)
 
@@ -399,23 +452,89 @@ def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation):
     # Move the points left and right.  Consider each pair
     # of points in turn, and move perpendicular to them,
     # alternating left and right.
+    #
+    # This function also redistributes stitches to ensure complete zigzag
+    # cycles (starting and ending at the same peak/valley position).
 
+    if len(stitches) < 2:
+        return stitches
+
+    from shapely.geometry import LineString
+    from ..utils.geometry import Point
+
+    # Build a line from the original stitches
+    coords = [(s.x, s.y) for s in stitches]
+    line = LineString(coords)
+    total_length = line.length
+
+    if total_length == 0:
+        return stitches
+
+    # Get the half-spacing (distance between consecutive zigzag points)
+    half_spacing = (
+        zigzag_spacing[0] / 2
+        if isinstance(zigzag_spacing, list)
+        else zigzag_spacing / 2
+    )
+
+    # Calculate how many segments fit in the path
+    num_segments = max(2, round(total_length / half_spacing))
+
+    # For symmetric zigzag (start and end at same position - both peaks):
+    # We need an ODD number of points = EVEN number of segments
+    # Pattern: peak(0) -> valley(1) -> peak(2) -> valley(3) -> peak(4) = 5 points, 4 segments
+    if num_segments % 2 == 1:
+        num_segments += 1
+
+    num_points = num_segments + 1
+
+    # First, interpolate all positions along the path and store them
+    # We need these ORIGINAL positions to calculate directions correctly
+    original_positions = []
+    for i in range(num_points):
+        distance = (i / num_segments) * total_length
+        point = line.interpolate(distance)
+        original_positions.append(Point(point.x, point.y))
+
+    # Create the new stitches list
+    stitch_class = type(stitches[0])
+    new_stitches = []
+    for i in range(num_points):
+        pos = original_positions[i]
+        if i < len(stitches):
+            # Reuse existing stitch object, just update position
+            stitches[i].x = pos.x
+            stitches[i].y = pos.y
+            new_stitches.append(stitches[i])
+        else:
+            # Need to create a new stitch
+            new_stitches.append(stitch_class(pos.x, pos.y))
+
+    # Now apply the zigzag offsets using the ORIGINAL positions for direction calculation
     offset1 = stroke_width / 2 + pull_compensation[0]
     offset2 = stroke_width / 2 + pull_compensation[1]
 
-    for i in range(len(stitches) - 1):
-        start = stitches[i]
-        end = stitches[i + 1]
-        # sometimes the stitch results into zero length which cause a division by zero error
-        # ignoring this leads to a slightly bad result, but that is better than no output
-        if (end - start).length() == 0:
+    for i in range(len(new_stitches)):
+        # Calculate direction using ORIGINAL positions (not the offset ones)
+        if i < len(original_positions) - 1:
+            start = original_positions[i]
+            end = original_positions[i + 1]
+        else:
+            # Last stitch: use previous segment's direction from original positions
+            start = original_positions[i - 1]
+            end = original_positions[i]
+
+        seg_length = (end - start).length()
+        if seg_length == 0:
             continue
+
         segment_direction = (end - start).unit()
         zigzag_direction = segment_direction.rotate_left()
 
+        # Alternate: even indices go one way (offset2), odd indices go the other (-offset1)
         if i % 2 == 1:
-            stitches[i] += zigzag_direction * -offset1
+            new_stitches[i] += zigzag_direction * -offset1
         else:
-            stitches[i] += zigzag_direction * offset2
+            new_stitches[i] += zigzag_direction * offset2
 
-    return stitches
+    return new_stitches
