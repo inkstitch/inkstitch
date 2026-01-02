@@ -31,25 +31,14 @@ class MultipleGuideLineWarning(ValidationWarning):
     steps_to_solve = [_("* Remove all guide lines, except for one.")]
 
 
-class TooFewSubpathsWarning(ValidationWarning):
-    """Warning for too few subpaths."""
-
-    name = _("Too few subpaths")
-    description = _("This element renders as running stitch while it has a satin column parameter.")
-    steps_to_solve = [
-        _("* Convert to stroke: select the element and open the parameter dialog. Enable running stitch along path."),
-        _("* Use as satin column: add an other rail and optionally rungs."),
-    ]
-
-
 class TooNarrowSatinWarning(ValidationWarning):
     """Warning for satin column being too narrow."""
 
     name = _("Satin column too narrow")
     description = _("The satin column is too narrow to be stitched.")
     steps_to_solve = [
-        _("* Increase the stroke width."),
-        _("* Use running stitch instead."),
+        _("* The satin column must be at least 0.3mm wide."),
+        _("* We recommend a width of at least 1mm for best results."),
     ]
 
 
