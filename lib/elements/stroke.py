@@ -32,13 +32,13 @@ class MultipleGuideLineWarning(ValidationWarning):
 
 
 class TooNarrowSatinWarning(ValidationWarning):
-    """Warning for satin column being too narrow."""
+    """Stroke is too narrow to render as satin."""
 
-    name = _("Satin column too narrow")
-    description = _("The satin column is too narrow to be stitched.")
+    name = _("Too narrow satin")
+    description = _("This element renders as running stitch while it has a satin column parameter.")
     steps_to_solve = [
-        _("* The satin column must be at least 0.3mm wide."),
-        _("* We recommend a width of at least 1mm for best results."),
+        _("* Increase stroke width."),
+        _("Ink/Stitch will not register elements with a stroke width underneath 0.3 mm as satin, but it is recommended to stay above 1mm."),
     ]
 
 
