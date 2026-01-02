@@ -107,9 +107,9 @@ A big thank you to all translators. We've received new translations into:
 
 * Add swap rail and reverse rail parameter options for satin guides [#4083](https://github.com/inkstitch/inkstitch/pull/4083)
 
-  This will effect pattern and/or stitch direction.
+  This will affect pattern and/or stitch direction.
 
-  ![Swap and reverse railes](/assets/images/docs/ripple_swap_reverse_rails.jpg){: width="600px"}
+  ![Swap and reverse rails](/assets/images/docs/ripple_swap_reverse_rails.jpg){: width="600px"}
 
 [Read more about ripple stitches](/docs/stitches/ripple-stitch/)
 
@@ -197,13 +197,13 @@ A tool to repair and split up simple or complex (self overlapping) fill shapes.
 
 * Add threshold option [##4110](https://github.com/inkstitch/inkstitch/pull/#4110)
 
-  Break apart fill objets will remove elements and holes which are smaller than this value.
+  Break apart fill objects will remove elements and holes which are smaller than this value.
 
 ### Element Info
 
 A tool to gather embroidery information.
 
-* Add option to copy the list to the clipboard (accessable from the help tab) [#3817](https://github.com/inkstitch/inkstitch/pull/3817)
+* Add option to copy the list to the clipboard (accessible from the help tab) [#3817](https://github.com/inkstitch/inkstitch/pull/3817)
 
 [Read more](/docs/troubleshoot/#element-info)
 
@@ -211,7 +211,7 @@ A tool to gather embroidery information.
 
 #### Font file naming conventions
 
-Previously font file names declared with arrows the stitch directions. This was troublesome on some operating systems when inkstitch was installed.
+Previously, font file names declared with arrows the stitch directions. This was troublesome on some operating systems when inkstitch was installed.
 
 Now font files can be named ltr.svg, rtl.svg, ttb.svg, btt.svg to define the font variants [#4087](https://github.com/inkstitch/inkstitch/pull/4087)
 
@@ -254,7 +254,7 @@ A tool for font digitizers to validate the font output.
 
 #### Force lock stitches
 
-A tool for font authors to automatically set the force lock stitch option when an element meets a specified criteria.
+A tool for font authors to automatically set the force lock stitch option when an element meets a specified criterion.
 
 * add option to apply forced lock stitches on the last element of each selected group [#3875](https://github.com/inkstitch/inkstitch/pull/3875)
 
