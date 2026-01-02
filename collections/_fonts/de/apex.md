@@ -8,6 +8,8 @@ preview_image:
    height: 60
  - url: /assets/images/fonts/apex_simple_AGS.jpg
    height: 35
+ - url: /assets/images/fonts/apex_simple_AGS.jpg
+   height: 12
 data_title:
   - apex_lake
   - apex_simple_AGS
