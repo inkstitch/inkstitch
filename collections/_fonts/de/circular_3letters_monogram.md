@@ -9,6 +9,8 @@ preview_image:
 data_title:
   - circular_3letters_monogram
 ---
+{% include upcoming_release.html %}
+
 {% include font_infos_de.html %}
 
 
