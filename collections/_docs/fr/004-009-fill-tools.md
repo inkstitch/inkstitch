@@ -54,46 +54,54 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 
  Choisir l'espacement final des rangées
 
-## Cross Stitch Helper
+## Assistant Point de Croix
 
-The cross-stitch helper can assist in various ways when creating [cross stitch patterns](/docs/stitches/cross-stitch).
+L'assistant de point de croix peut vous aider de différentes manières lors de la création de [grilles de point de croix](/docs/stitches/cross-stitch).
 
-* Checking the diagonal stitch length
-* Creating the page grid
-* Pixelating fill elements
-* Transferring the grid size as a parameter to the fill elements
+* Vérification de la longueur des points en diagonale
+* Création de la grille de la page
+* Pixellisation des éléments de remplissage
+* Transmission de la taille de la grille comme paramètre aux éléments de remplissage
+
 
 ### Usage
 
-* Optional: Select one or more fill elements
-* Open the helper extension under `Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Helper`
-* Set the desired grid size
-* Specify the desired options for how the grid size should be applied (see below)
-* Click on `Apply`
+* Facultatif : sélectionnez un ou plusieurs éléments de remplissage.
+* Ouvrez l’extension d’assistance sous « Extensions >Ink/Stitch > Outils : Remplissage > Assistant Point de Croix ».
+* Définissez la taille de grille souhaitée.
+* Spécifiez les options d’application de la taille de grille (voir ci-dessous).
+* Cliquez sur « Appliquer ».
 
-#### The cross stitch grid
 
-To ensure that adjacent areas are well coordinated, cross stitches are aligned according to a grid.
-This means that the embroidery pattern may change depending on where an element is located on the canvas.
-To plan this better, it is helpful to adjust the page grid to the size of the cross stitch pattern. This makes it easier to visually estimate the stitch positions.
+#### La grille de point de croix
 
-The grid can also be set manually under `File > Document Properties... > Grids`. You will find an `Align to page` setting, that cannot be accessed via the Ink/Stitch plugin. It is therefore important to check that the newly generated grid is aligned with the top left corner of the page. If not, this setting must be adjusted manually.
+Pour assurer une bonne jonction des zones adjacentes, les points de croix sont alignés selon une grille.
+Cela signifie que le motif de broderie peut varier en fonction de l'emplacement d'un élément sur le canevas.
+
+Pour une meilleure planification, il est utile d'ajuster la grille de la page à la taille du motif de point de croix. Cela facilite l'estimation visuelle de l'emplacement des points.
+
+La grille peut également être définie manuellement dans « Fichier > Propriétés du document… > Grilles ». Vous y trouverez un paramètre « Aligner sur la page », qui n'est pas accessible via l'extension Ink/Stitch. Il est donc important de vérifier que la grille nouvellement générée est alignée avec le coin supérieur gauche de la page. Dans le cas contraire, ce paramètre doit être ajusté manuellement.
+
 {: .notice--warning }
 
-#### Pixelize fill elements
+#### Pixelliser les éléments de remplissage
 
-The Cross Stitch Helper has an option to automatically pixelate selected fill elements based on the grid settings.
-This makes it possible to adjust the shapes directly to the grid and visually identify the stitch positions accurately.
+L'extension Assistant Point de Croix propose une option permettant de pixelliser automatiquement les éléments de remplissage sélectionnés en fonction des paramètres de la grille.
 
-#### Set embroidery parameters
+Cela permet d'ajuster les formes directement sur la grille et d'identifier visuellement et précisément la position des points.
 
-Once the grid size has been adjusted, it must of course also be set in the embroidery parameters of an element.
-The Grid Helper extension has therefore an option to apply the grid size settings on selected elements in one step.
+#### Définir les paramètres de broderie
 
-#### Stitch length calculation
+Une fois la taille de la grille ajustée, il est nécessaire de la définir également dans les paramètres de broderie de l'élément.
 
-When specifying the grid size, the stitch lengths of the diagonal crosses are not immediately apparent.
-However, stitch lengths always play an important role in machine embroidery. The Cross Stitch Helper therefore has a field for displaying the diagonal stitch lengths.
+L'extension Assistant Point de Croix offre donc la possibilité d'appliquer les paramètres de taille de la grille aux éléments sélectionnés en une seule étape.
+
+#### Calcul de la longueur des points
+
+Lors de la définition de la taille de la grille, la longueur des points des croix (diagonales) n'est pas immédiatement visible.
+
+Pourtant, la longueur des points est essentielle en broderie machine. C'est pourquoi l'Assistant Point de Croix propose un champ permettant d'afficher la longueur de la diagonale des croix. 
+
 
 ## Assise de points couchants à partir de la sélection {#knockdown-fill}
 
