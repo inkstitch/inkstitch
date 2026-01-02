@@ -456,12 +456,21 @@ def bean_stitch(stitches, repeats, tags_to_ignore=None):
     return new_stitches
 
 
-def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation):
+def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation, peak_offset=0.0):
     """Create a zigzag stitch pattern from a set of stitches.
 
     Moves points left and right perpendicular to the path, alternating to
     create a zigzag pattern. Also redistributes stitches to ensure complete
     zigzag cycles (starting and ending at the same peak/valley position).
+
+    Args:
+        stitches: List of stitch points along the path.
+        zigzag_spacing: Spacing between zigzag peaks.
+        stroke_width: Width of the stroke for offset calculation.
+        pull_compensation: Tuple of (left, right) pull compensation values.
+        peak_offset: How much to shift peak stitches forward along the path (in pixels).
+                    Positive values shift peaks forward, negative shifts backward.
+                    This creates a slanted/leaning zigzag effect.
     """
     if len(stitches) < 2:
         return stitches
@@ -533,8 +542,13 @@ def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation):
 
         # Alternate: even indices go one way, odd indices go the other
         if i % 2 == 1:
+            # Valley stitch - offset perpendicular only
             new_stitches[i] += zigzag_direction * -offset1
         else:
+            # Peak stitch - offset perpendicular + forward shift along path
             new_stitches[i] += zigzag_direction * offset2
+            # Apply peak offset (shift forward along the path direction)
+            if peak_offset != 0:
+                new_stitches[i] += segment_direction * peak_offset
 
     return new_stitches

@@ -285,6 +285,27 @@ class Stroke(EmbroideryElement):
 
     @property
     @param(
+        "zigzag_peak_offset_mm",
+        _("Peak offset"),
+        tooltip=_(
+            "Shift zigzag peaks forward along the path. "
+            "Positive values create a forward-leaning zigzag, "
+            "negative values create a backward-leaning zigzag. "
+            "Use this for decorative slanted effects."
+        ),
+        unit="mm",
+        type="float",
+        default=0,
+        select_items=[("stroke_method", "zigzag_stitch")],
+        sort_index=7,
+    )
+    @cache
+    def zigzag_peak_offset(self):
+        """Return the zigzag peak offset in pixels."""
+        return self.get_float_param("zigzag_peak_offset_mm", 0) * PIXELS_PER_MM
+
+    @property
+    @param(
         "line_count",
         _("Number of lines"),
         tooltip=_("Number of lines from start to finish"),
@@ -727,7 +748,7 @@ class Stroke(EmbroideryElement):
         else:
             return self.unclipped_shape.centroid
 
-    def simple_satin(self, path, zigzag_spacing, stroke_width, pull_compensation):
+    def simple_satin(self, path, zigzag_spacing, stroke_width, pull_compensation, peak_offset):
         """Generate zig-zag along the path at the specified spacing and width.
 
         Applies zigzag to a single pass first, then handles repeats manually.
@@ -754,6 +775,7 @@ class Stroke(EmbroideryElement):
             zigzag_spacing,
             stroke_width,
             pull_compensation,
+            peak_offset,
         )
 
         # For closed paths (circles), ensure the last stitch connects to the first
@@ -901,6 +923,7 @@ class Stroke(EmbroideryElement):
                         self.zigzag_spacing,
                         self.stroke_width,
                         self.pull_compensation,
+                        self.zigzag_peak_offset,
                     )
                     # bean stitch
                     if any(self.bean_stitch_repeats):
