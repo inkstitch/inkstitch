@@ -72,7 +72,7 @@ Les polices Cursive / Script peuvent bien fonctionner, mais ce ne sera pas aussi
 
 Nous vous recommandons de faire un usage intensif des calques et des groupes à ce stade.
 
-Dans le panneau **Calques et Objets** (ouvert avec <key>Cmd</key> <key>Shift</key> <key>L</key>), vous pouvez gérer des calques, des groupes et des objets.
+Dans le panneau **Calques et Objets** (ouvert avec <key>Ctrl</key> <key>Shift</key> <key>L</key>), vous pouvez gérer des calques, des groupes et des objets.
 Vous pouvez enregistrer l'image d'origine en dupliquant le calque:
 
 * Faites un clic droit sur le calque (si vous n'avez pas renommé le calque, il s'appelle **Calque 1**)
@@ -148,12 +148,12 @@ Lorsque vous concevez des motifs pour des machines à broder qui ne peuvent pas 
 
 L'ordre des points affecte également la façon dont le tissu est étiré et rétréci. Chaque point déforme le tissu et vous devez en tenir compte et compenser en conséquence. [Pour en savoir plus](/tutorials/push-pull-compensation/)
 
-Une fois que vous avez créés tous les objets, il est temps de tout mettre dans le bon ordre. Optimisez votre ordre pour minimiser les changements de couleur et réduire ou masquer les sauts de points.
+Une fois que vous avez créé tous les objets, il est temps de tout mettre dans le bon ordre. Optimisez votre ordre pour minimiser les changements de couleur et réduire ou masquer les sauts de points.
 
 Vous pouvez également utiliser la fonction de tri d'Ink/Stitch pour réorganiser les objets selon votre ordre de sélection. Consultez [Réempiler les objets selon l'ordre de sélection](/fr/docs/edit/#re-stack-objects-in-order-of-selection) pour plus de détails.
 
 
-Ink/Stitch traite les objets dans leur ordre d'apparition dans le panneau des objets, en commençant par le bas de la pile et en remontant. Cet ordre détermine directement la façon dont le motif est brodé sur la machine à broder. Le dernier objet de la liste sera brodé en premier et le premier en dernier.
+Ink/Stitch traite les objets dans leur ordre d'apparition dans le panneau des objets, en commençant par le bas de la pile et en remontant. Cet ordre détermine directement la façon dont le motif est brodé sur la machine à broder. L'objet tout en bas de la liste sera brodé en premier et celui tout en haut en dernier.
 
 Lorsque la distance entre deux objets est importante, Ink/Stitch insère automatiquement un point de liaison (généralement appelé saut de fil) pour déplacer l'aiguille entre eux. 
 
@@ -216,7 +216,7 @@ Une fois que tout est dans le bon ordre, lancez  **Fichier > Enregistrer sous...
 
 Il y a toujours place à l'amélioration!
 
-Les tests permettent d'identifier les axes d'amélioration. Préparez un tissu similaire au tissu final. Utilisez le même stabilisateur et le même type de tissu. Pour les t-shirts, choisissez un jersey similaire, car ce type de tissu nécessite une stabilisation importante.
+Les tests permettent d'identifier les axes d'amélioration. Utilisez un tissu similaire au tissu final. Utilisez le même stabilisateur et le même type de fil. Pour les t-shirts, choisissez un jersey similaire, car ce type de tissu nécessite une stabilisation importante.
 
 Brodez le motif en observant la machine. Repérez les espaces vides qui pourraient indiquer une déformation du tissu. Vérifiez également les zones où les points sont trop serrés et où la machine peine à coudre. Ces signes indiquent généralement une densité de points trop élevée et signalent la nécessité d'ajustements avant la production finale.
 
