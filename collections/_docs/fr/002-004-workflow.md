@@ -125,7 +125,7 @@ Objet chemin | Type de point
 ---|---
 Trait en pointillé ou continu|[point droit](/fr/docs/stitches/running-stitch/), [point manuel](/fr/docs/stitches/manual-stitch/) , [point triple](/fr/docs/stitches/bean-stitch/), [point zig-zag](/fr/docs/stitches/zigzag-stitch/), [broderie ondulée](/fr/docs/stitches/ripple/)
 Deux traits combinés (avec traverses optionnelles) ou trait simple d'épaisseur supérieure à 0.3mm| [colonne satin](/fr/docs/stitches/satin-column), [point en E](/fr/docs/stitches/e-stitch), [broderie ondulée](/fr/docs/stitches/ripple/)
-Chemin fermé avec une couleur de remplissage | [point de remplissage](/fr/docs/stitches/fill-stitch/), [remplissage selon contour](/fr/docs/stitches/contour-fill/), [remplissage guidé](/fr/docs/stitches/guided-fill/),  [remplissage en méandres](/fr/docs/stitches/meander-fill/), [remplissage guidé](/fr/docs/stitches/circular-fill/), [point de croix](/docs/stitches/cross-stitch/)
+Chemin fermé avec une couleur de remplissage | [point de remplissage](/fr/docs/stitches/fill-stitch/), [remplissage selon contour](/fr/docs/stitches/contour-fill/), [remplissage guidé](/fr/docs/stitches/guided-fill/),  [remplissage en méandres](/fr/docs/stitches/meander-fill/), [remplissage circulaire](/fr/docs/stitches/circular-fill/), [point de croix](/docs/stitches/cross-stitch/)
 {: .equal-tables }
 
 ### Paramétrer
