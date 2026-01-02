@@ -58,17 +58,17 @@ class CrossStitchHelperFrame(wx.Frame):
         self.x_only_checkbox.SetValue(True)
         self.x_only_checkbox.Bind(wx.EVT_CHECKBOX, self.update)
 
-        box_x_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Grid width (mm)"))
+        box_x_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Grid horizontal spacing (mm)"))
         self.box_x = wx.SpinCtrlDouble(self.settings_panel, value='3', min=0.5, max=100, initial=3, inc=0.1)
         self.box_x.SetDigits(2)
         self.box_x.Bind(wx.EVT_SPINCTRLDOUBLE, self.update)
 
-        self.box_y_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Grid height (mm)"))
+        self.box_y_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Grid vertical spacing (mm)"))
         self.box_y = wx.SpinCtrlDouble(self.settings_panel, value='3', min=0.5, max=100, initial=3, inc=0.1)
         self.box_y.SetDigits(2)
         self.box_y.Bind(wx.EVT_SPINCTRLDOUBLE, self.update)
 
-        result_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Stitch_length:"))
+        result_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Stitch length:"))
         self.result = wx.TextCtrl(self.settings_panel, wx.ID_ANY, style=wx.TE_READONLY)
         self.result.Enable(False)
 
@@ -97,7 +97,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.pixelize = wx.CheckBox(self.settings_panel)
         self.pixelize.Bind(wx.EVT_CHECKBOX, self.update)
 
-        coverage_label_text = "     " + _("Cross coverage (%)")
+        coverage_label_text = "     " + _("Fill coverage (%)")
         self.coverage_label = wx.StaticText(self.settings_panel, label=coverage_label_text)
         self.coverage = wx.SpinCtrl(self.settings_panel, wx.ID_ANY, min=0, max=100, initial=50)
 
@@ -164,10 +164,11 @@ class CrossStitchHelperFrame(wx.Frame):
         help_text = wx.StaticText(
             self.help,
             wx.ID_ANY,
-            _("This extension calculates the stitch length for a given grid size.\n\n"
-              "* It can be applied to selected fill element as as parameter.\n"
-              "* Fill outlines can be pixelized.\n"
-              "* The grid can be applied as a page grid."),
+            _("This extension helps to generate cross stitches in Ink/Stitch. It can:\n\n"
+              "* Calculate stitch length for given grid spacing values\n"
+              "* Apply cross stitch parameters to selected fill elements.\n"
+              "* Pixelize outlines of selected fill elements.\n"
+              "* Apply spacing values to page grid."),
             style=wx.ALIGN_LEFT
         )
         help_text.Wrap(500)

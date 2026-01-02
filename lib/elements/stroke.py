@@ -1014,9 +1014,9 @@ class Stroke(EmbroideryElement):
 
     def validation_warnings(self):
         # satin column warning
-        if self.get_boolean_param("satin_column", False):
-            yield TooFewSubpathsWarning(self._representative_point())
-        # guided fill warnings
+        if self.get_boolean_param("satin_column", False) and self.stroke_width <= 0.3 * PIXELS_PER_MM:
+            yield TooNarrowSatinWarning(self._representative_point())
+        # ripple stitch warnings
         if self.stroke_method == 1:
             guide_lines = get_marker_elements(
                 self.node, "guide-line", False, True, True
