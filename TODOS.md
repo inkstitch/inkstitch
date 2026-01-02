@@ -67,7 +67,7 @@
 - Feature: Check `self.get_style("stroke-dasharray")`.
 - Logic: If dashes are present, break the single path into multiple sub-paths corresponding to the dash segments. Insert Jump/Trim commands between these segments so the machine stops stitching in the gaps.
 
-## [ ] 7. Circular ZigZag Alignment
+## [x] 7. Circular ZigZag Alignment
 
 **Description**: In circular zigzag stitches with large spacing, the starting and ending points do not match exactly, causing a visible discontinuity.
 
