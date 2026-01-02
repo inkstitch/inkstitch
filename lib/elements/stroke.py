@@ -137,7 +137,7 @@ class Stroke(EmbroideryElement):
     @param(
         "manual_pattern_placement",
         _("Manual stitch placement"),
-        tooltip=_("No extra stitches will be added to the original ripple pattern " "and the running stitch length value will be ignored."),
+        tooltip=_("No extra stitches will be added to the original ripple pattern and the running stitch length value will be ignored."),
         type="boolean",
         select_items=[("stroke_method", "ripple_stitch")],
         default=False,
@@ -458,7 +458,7 @@ class Stroke(EmbroideryElement):
     @param(
         "reverse_rails",
         _("Reverse rails"),
-        tooltip=_("Reverse satin ripple rails.  " + "Default: automatically detect and fix a reversed rail."),
+        tooltip=_("Reverse satin ripple rails. Default: automatically detect and fix a reversed rail."),
         type="combo",
         options=_reverse_rails_options,
         default="automatic",
@@ -473,9 +473,7 @@ class Stroke(EmbroideryElement):
     @param(
         "swap_satin_rails",
         _("Swap rails"),
-        tooltip=_(
-            "Swaps the first and second rails of a satin ripple, " "affecting which side the thread finished on as well as any sided properties"
-        ),
+        tooltip=_("Swaps the first and second rails of a satin ripple, affecting which side the thread finished on as well as any sided properties"),
         type="boolean",
         default="false",
         select_items=[("stroke_method", "ripple_stitch")],
@@ -730,16 +728,66 @@ class Stroke(EmbroideryElement):
             return self.unclipped_shape.centroid
 
     def simple_satin(self, path, zigzag_spacing, stroke_width, pull_compensation):
-        "zig-zag along the path at the specified spacing and wdith"
+        """Generate zig-zag along the path at the specified spacing and width.
 
+        Applies zigzag to a single pass first, then handles repeats manually.
+        This ensures stitch points align perfectly across all passes.
+        """
         # `self.zigzag_spacing` is the length for a zig and a zag
         # together (a V shape).  Start with running stitch at half
         # that length:
         spacing = [value / 2 for value in zigzag_spacing]
-        stitch_group = self.running_stitch(path, spacing, self.running_stitch_tolerance, False, 0, "")
-        stitch_group.stitches = zigzag_stitch(stitch_group.stitches, zigzag_spacing, stroke_width, pull_compensation)
 
-        return stitch_group
+        # Generate running stitches for a SINGLE pass (no repeats)
+        single_pass_stitches = running_stitch(
+            path,
+            spacing,
+            self.running_stitch_tolerance,
+            False,  # enable_random_stitch_length
+            0,  # random_sigma
+            "",  # random_seed
+        )
+
+        # Apply zigzag transformation to the single pass
+        zigzag_stitches = zigzag_stitch(
+            single_pass_stitches,
+            zigzag_spacing,
+            stroke_width,
+            pull_compensation,
+        )
+
+        # For closed paths (circles), ensure the last stitch connects to the first
+        is_closed = self.is_closed_unclipped
+        if is_closed and len(zigzag_stitches) >= 2:
+            # Make the last stitch position exactly match the first
+            first_stitch = zigzag_stitches[0]
+            last_stitch = zigzag_stitches[-1]
+            last_stitch.x = first_stitch.x
+            last_stitch.y = first_stitch.y
+
+        # Now handle repeats by reversing the already-zigzagged stitches
+        # This ensures each physical point keeps its offset across all passes
+        repeated_stitches = []
+        for i in range(self.repeats):
+            if i % 2 == 1:
+                # Reverse every other pass
+                this_pass = zigzag_stitches[::-1]
+            else:
+                this_pass = list(zigzag_stitches)
+
+            if i > 0 and this_pass:
+                # Skip the first stitch of subsequent passes to avoid duplicate
+                # at the junction (prevents thread stacking)
+                repeated_stitches.extend(this_pass[1:])
+            else:
+                repeated_stitches.extend(this_pass)
+
+        return StitchGroup(
+            self.color,
+            stitches=repeated_stitches,
+            lock_stitches=self.lock_stitches,
+            force_lock_stitches=self.force_lock_stitches,
+        )
 
     def running_stitch(
         self,
