@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2025-12-28
+last_modified_at: 2026-01-02
 sidebar:
   nav: pages
 toc: true
@@ -146,6 +146,10 @@ When multiple values are set, the satin column will use these to level consecuti
 
 [Read more about satin columns](/docs/stitches/satin-column/)
 
+### Zigzag Stitch (Stroke)
+
+* Add bean stitch parameter option [#4127](https://github.com/inkstitch/inkstitch/pull/4127)
+
 ## New extensions
 
 ### Apply attribute
@@ -168,7 +172,14 @@ Helps font digitizers to organize their work in steps so that they can reuse pre
 
 ### Cross Stitch Helper
 
-Comin soon
+This extension helps to generate cross stitches in Ink/Stitch. It can:
+
+* Calculate stitch length for given grid spacing values
+* Apply cross stitch parameters to selected fill elements.
+* Pixelize outlines of selected fill elements.
+* Apply spacing values to page grid.
+
+[Read more](/docs/fill-tools/#cross-stitch-helper)
 
 ## Updated Extensions
 
@@ -179,6 +190,14 @@ A tool to cut satins at specified spots.
 * It is now possible to cut a satin at multiple positions at once. [#4015](https://github.com/inkstitch/inkstitch/pull/4015)
 
 [Read more](/docs/satin-tools/#cut-satin-column)
+
+### Break apart fill objects
+
+A tool to repair and split up simple or complex (self overlapping) fill shapes.
+
+* Add threshold option [##4110](https://github.com/inkstitch/inkstitch/pull/#4110)
+
+  Break apart fill objets will remove elements and holes which are smaller than this value.
 
 ### Element Info
 
@@ -296,7 +315,9 @@ Points to troublesome (or potentially troublesome) spots in the design.
 
 ## Bugfixes
 
-* remove embroidery settings: command param along with commands for trim and stop [#4074](https://github.com/inkstitch/inkstitch/pull/4074)
+* Fix issue with rgba thread color definitions [#4126](https://github.com/inkstitch/inkstitch/pull/4126)
+* Do not save empty embroidery files [#4125](https://github.com/inkstitch/inkstitch/pull/4125)
+* Remove embroidery settings: command param along with commands for trim and stop [#4074](https://github.com/inkstitch/inkstitch/pull/4074)
 * Fill to satin: process rungs within the fill shape better [#4025](https://github.com/inkstitch/inkstitch/pull/4025)
 * fill to satin: fix stroke width [#4005](https://github.com/inkstitch/inkstitch/pull/4005)
 * redwork: delete empty groups [#4014](https://github.com/inkstitch/inkstitch/pull/4014)
