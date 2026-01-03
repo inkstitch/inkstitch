@@ -65,6 +65,7 @@ Lorsque deux croix sont reliées uniquement en diagonale, ajoutez une petite val
   ![Méthode de point de croix: Point de Croix](/assets/images/docs/cross_stitch_method_cross_stitch.jpg)
   
 * **Demi-Croix et Demi_Croix Retournée**
+  
 Les demi-croix ne constituent qu'un demi-point de croix (une diagonale). Les chemins de dessous suivent le contour de la forme.
 
 
@@ -77,6 +78,7 @@ Veuillez noter que cette méthode de point de croix peut présenter des sauts lo
 
   ![Méthode de point de croix: Demi-Croix](/assets/images/docs/cross_stitch_method_upright.jpg)
 * **Double Croix**
+  
 Une Combinaison de Point de Croix et de Point de Croix  Horizontal.
 
 Comme ce point inclut des croix horizontales , veuillez noter les risques de saut de fil lorsque les zones de remplissage se touchent uniquement en diagonale.
