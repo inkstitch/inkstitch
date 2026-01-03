@@ -1,6 +1,6 @@
 ---
 permalink: /de/tutorials/ripple-satin-humming-bird/
-title: "Colibri en broderie ondulée satin"
+title: "Satin guided ripple stitch hummingbird"
 language: de
 last_modified_at: 2026-01-02
 excerpt: "humming bird as a sample file for satin guided ripple stitches"
@@ -30,10 +30,10 @@ The order of embroidery is different in the files to ensure correct overlapping 
 
 ![SVG](/assets/images/tutorials/samples/ripple_satin_humming_bird_monochrom.svg)
 
-[Télécharger](/assets/images/tutorials/samples/ripple_satin_humming_bird_monochrom.svg){: download="ripple_satin_humming_bird_monochrom.svg" }
+[Download monochromatic version](/assets/images/tutorials/samples/ripple_satin_humming_bird_monochrom.svg){: download="ripple_satin_humming_bird_monochrom.svg" }
 
 ![SVG](/assets/images/tutorials/samples/ripple_satin_humming_bird.svg)
 
-[Télécharger](/assets/images/tutorials/samples/ripple_satin_humming_bird.svg){: download="ripple_satin_humming_bird.svg" }
+[Download three colors version](/assets/images/tutorials/samples/ripple_satin_humming_bird.svg){: download="ripple_satin_humming_bird.svg" }
 
 
