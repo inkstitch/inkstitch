@@ -30,10 +30,10 @@ The order of embroidery is different in the files to ensure correct overlapping 
 
 ![SVG](/assets/images/tutorials/samples/ripple_satin_humming_bird_monochrom.svg)
 
-[Télécharger](/assets/images/tutorials/samples/ripple_satin_humming_bird_monochrom.svg){: download="ripple_satin_humming_bird_monochrom.svg" }
+[Download monochromatic version ](/assets/images/tutorials/samples/ripple_satin_humming_bird_monochrom.svg){: download="ripple_satin_humming_bird_monochrom.svg" }
 
 ![SVG](/assets/images/tutorials/samples/ripple_satin_humming_bird.svg)
 
-[Télécharger](/assets/images/tutorials/samples/ripple_satin_humming_bird.svg){: download="ripple_satin_humming_bird.svg" }
+[Download multicolor version](/assets/images/tutorials/samples/ripple_satin_humming_bird.svg){: download="ripple_satin_humming_bird.svg" }
 
 
