@@ -4,7 +4,7 @@ title: "Colibri en broderie ondulée satin"
 language: fr
 last_modified_at: 2026-01-03
 excerpt: "fichier exemple de colibri en broderie ondulée"
-image: /assets/images/tutorials/tutorial-preview-images/ripple_satin_humming_bird_monochrom.jpg"/assets/images/tutorials/tutorial-preview-images/ripple_satin_humming_bird.jpg"
+image: "/assets/images/tutorials/tutorial-preview-images/ripple_satin_humming_bird_monochrom.jpg"
 tutorial-type:
   - Sample File
 stitch-type:
