@@ -39,7 +39,7 @@ Ink/Stitch vérifie le pourcentage de chaque case de la grille recouverte par le
 
 Si le recouvrement dépasse la valeur définie par l'option « couverture» (50 % par défaut), un point de croix est réalisé.
 
-Dans l'exemple suivant, seuls les champs verts sont recouverts à plus de 50 % par le remplissage et reçoivent donc un point de croix.
+Dans l'exemple suivant, seuls les parties vertes sont recouvertes à plus de 50 % par le remplissage et reçoivent donc un point de croix.
 
 Lorsque le remplissage est déplacé sur la zone de travail, davantage de points sont ajoutés.
 
