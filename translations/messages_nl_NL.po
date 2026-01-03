@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-02 06:19+0000\n"
-"PO-Revision-Date: 2026-01-02 06:19\n"
+"POT-Creation-Date: 2026-01-03 01:50+0000\n"
+"PO-Revision-Date: 2026-01-03 01:50\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-02 06:19+0000\n"
+"POT-Creation-Date: 2026-01-03 01:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1835,13 +1835,13 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr "Verklein de vorm van de versteviging om te voorkomen dat de versteviging zichtbaar is aan de buitenkant van de opvulling."
 
 #: lib/elements/fill_stitch.py:718 lib/elements/satin_column.py:594
-#: lib/elements/stroke.py:599 lib/gui/satin_multicolor/colorize_panel.py:61
+#: lib/elements/stroke.py:597 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr "Willekeurig zaad"
 
 #: lib/elements/fill_stitch.py:719 lib/elements/satin_column.py:595
-#: lib/elements/stroke.py:600
+#: lib/elements/stroke.py:598
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Gebruik een specifieke zaad voor willekeurige kenmerken. Gebruikt de element ID als deze leeg is."
 
@@ -2535,87 +2535,87 @@ msgid "Flip start and end point"
 msgstr "Begin- en eindpunt spiegelen"
 
 #: lib/elements/stroke.py:461
-msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
-msgstr "Omgekeerde satijnen ripple rails. Standaard: automatisch een omgekeerde rail detecteren en corrigeren."
+msgid "Reverse satin ripple rails. Default: automatically detect and fix a reversed rail."
+msgstr ""
 
-#: lib/elements/stroke.py:477
+#: lib/elements/stroke.py:476
 msgid "Swaps the first and second rails of a satin ripple, affecting which side the thread finished on as well as any sided properties"
 msgstr "Wisselt de eerste en tweede draad van een satijnen ribbel patroon, waardoor de kant waarop de draad eindigt en eventuele eigenschappen van de zijde worden beïnvloed"
 
-#: lib/elements/stroke.py:491
+#: lib/elements/stroke.py:489
 msgid "Grid size"
 msgstr "Rastergrootte"
 
-#: lib/elements/stroke.py:492
+#: lib/elements/stroke.py:490
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr "Weergeven als raster. Wees voorzichtig en let op de steekdichtheid."
 
-#: lib/elements/stroke.py:507
+#: lib/elements/stroke.py:505
 msgid "Stitch grid first"
 msgstr "Borduur eerst het raster"
 
-#: lib/elements/stroke.py:508
+#: lib/elements/stroke.py:506
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
 msgstr "Keer de steek paden om, zodat het raster eerst wordt geborduurd"
 
-#: lib/elements/stroke.py:522
+#: lib/elements/stroke.py:520
 msgid "Scale axis"
 msgstr "Schaal as"
 
-#: lib/elements/stroke.py:523
+#: lib/elements/stroke.py:521
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Schaal as voor satijngeleide ribbelsteken."
 
-#: lib/elements/stroke.py:527 lib/gui/edit_json/settings_panel.py:184
+#: lib/elements/stroke.py:525 lib/gui/edit_json/settings_panel.py:184
 #: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr "Geen"
 
-#: lib/elements/stroke.py:538
+#: lib/elements/stroke.py:536
 msgid "Starting scale"
 msgstr "Beginschaal"
 
-#: lib/elements/stroke.py:539
+#: lib/elements/stroke.py:537
 msgid "How big the first copy of the line should be, in percent."
 msgstr "Hoe groot het eerste exemplaar van de regel moet zijn, in procenten."
 
-#: lib/elements/stroke.py:539 lib/elements/stroke.py:554
+#: lib/elements/stroke.py:537 lib/elements/stroke.py:552
 msgid "Used only for ripple stitch with a guide line."
 msgstr "Alleen gebruikt voor ribbelsteek met een hulplijn."
 
-#: lib/elements/stroke.py:553
+#: lib/elements/stroke.py:551
 msgid "Ending scale"
 msgstr "Eindschaal"
 
-#: lib/elements/stroke.py:554
+#: lib/elements/stroke.py:552
 msgid "How big the last copy of the line should be, in percent."
 msgstr "Hoe groot het laatste exemplaar van de regel moet zijn, in procenten."
 
-#: lib/elements/stroke.py:568 lib/gui/tartan/customize_panel.py:43
+#: lib/elements/stroke.py:566 lib/gui/tartan/customize_panel.py:43
 #: inx/inkstitch_transform_elements.inx:10
 msgid "Rotate"
 msgstr "Draaien"
 
-#: lib/elements/stroke.py:569
+#: lib/elements/stroke.py:567
 msgid "Rotate satin guided ripple stitches"
 msgstr "Draai satijn geleide rimpel steken"
 
-#: lib/elements/stroke.py:583 inx/inkstitch_knockdown_fill.inx:21
+#: lib/elements/stroke.py:581 inx/inkstitch_knockdown_fill.inx:21
 #: inx/inkstitch_knockdown_fill.inx:38
 msgid "Join style"
 msgstr "Knooppunt stijl"
 
-#: lib/elements/stroke.py:584
+#: lib/elements/stroke.py:582
 msgid "Join style for non circular ripples."
 msgstr "Knooppunt stijl voor niet circulaire golven."
 
-#: lib/elements/stroke.py:587
+#: lib/elements/stroke.py:585
 msgid "flat"
 msgstr "plat"
 
-#: lib/elements/stroke.py:587
+#: lib/elements/stroke.py:585
 msgid "point"
 msgstr "punt"
 
