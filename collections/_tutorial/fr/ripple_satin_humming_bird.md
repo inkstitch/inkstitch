@@ -29,10 +29,10 @@ L'organisation de la broderie est différente dans les deux cas, afin d'assurer 
 
 ![SVG](/assets/images/tutorials/samples/ripple_satin_humming_bird_monochrom.svg)
 
-[Télécharger](/assets/images/tutorials/samples/ripple_satin_humming_bird_monochrom.svg){: download="ripple_satin_humming_bird_monochrom.svg" }
+[Télécharger la version monochrome](/assets/images/tutorials/samples/ripple_satin_humming_bird_monochrom.svg){: download="ripple_satin_humming_bird_monochrom.svg" }
 
 ![SVG](/assets/images/tutorials/samples/ripple_satin_humming_bird.svg)
 
-[Télécharger](/assets/images/tutorials/samples/ripple_satin_humming_bird.svg){: download="ripple_satin_humming_bird.svg" }
+[Télécharger la version à trois couleurs](/assets/images/tutorials/samples/ripple_satin_humming_bird.svg){: download="ripple_satin_humming_bird.svg" }
 
 
