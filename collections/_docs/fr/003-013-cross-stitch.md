@@ -1,5 +1,5 @@
 ---
-title: "Cross Stitch"
+title: "Point de Croix"
 permalink: /fr/docs/stitches/cross-stitch/
 last_modified_at: 2025-12-26
 toc: true
