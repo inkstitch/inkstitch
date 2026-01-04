@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-02 06:19+0000\n"
-"PO-Revision-Date: 2026-01-02 06:19\n"
+"POT-Creation-Date: 2026-01-03 01:50+0000\n"
+"PO-Revision-Date: 2026-01-03 01:50\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-02 06:19+0000\n"
+"POT-Creation-Date: 2026-01-03 01:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1837,13 +1837,13 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr "Verkleinern Sie die Unterlage, um zu verhindern, dass die Unterlage an der Außenseite der Füllstiche sichtbar wird."
 
 #: lib/elements/fill_stitch.py:718 lib/elements/satin_column.py:594
-#: lib/elements/stroke.py:599 lib/gui/satin_multicolor/colorize_panel.py:61
+#: lib/elements/stroke.py:597 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr "Zufallswert"
 
 #: lib/elements/fill_stitch.py:719 lib/elements/satin_column.py:595
-#: lib/elements/stroke.py:600
+#: lib/elements/stroke.py:598
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer."
 
@@ -2045,19 +2045,19 @@ msgstr "* Öffne Erweiterungen > Ink/Stitch > Werkzeuge: Satin > Linie zu Satin"
 
 #: lib/elements/satin_column.py:83
 msgid "Narrow Satin"
-msgstr ""
+msgstr "Schmaler Satin"
 
 #: lib/elements/satin_column.py:84
 msgid "This element renders as a satin, but it is too narrow."
-msgstr ""
+msgstr "Dieses Element wird als Satinsäule ausgegeben, ist aber zu schmal."
 
 #: lib/elements/satin_column.py:86 lib/elements/stroke.py:40
 msgid "* Increase stroke width."
-msgstr ""
+msgstr "* Erhöhe die Breite der Kontur."
 
 #: lib/elements/satin_column.py:87 lib/elements/stroke.py:41
 msgid "Ink/Stitch will not register elements with a stroke width underneath 0.3 mm as satin, but it is recommended to stay above 1mm."
-msgstr ""
+msgstr "Ink/Stitch kann Elemente mit einer Konturbreite ab 0,3 mm als Satinsäule ausgeben, für ein gutes Stickbild wird jedoch eine Breite von mindestens 1 mm empfohlen."
 
 #: lib/elements/satin_column.py:92
 msgid "Satin has exactly two rungs"
@@ -2387,7 +2387,7 @@ msgstr "Stich unterteilen, wenn maximale Stichlänge überschritten ist"
 
 #: lib/elements/stroke.py:37
 msgid "Too narrow satin"
-msgstr ""
+msgstr "Zu schmaler Satin"
 
 #: lib/elements/stroke.py:38
 msgid "This element renders as running stitch while it has a satin column parameter."
@@ -2430,7 +2430,8 @@ msgstr "Es werden keine zusätzlichen Stiche zum ursprünglichen Muster hinzugef
 #: lib/elements/stroke.py:155
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting.\n"
 "It is possible to create stitch length patterns by adding multiple values separately."
-msgstr ""
+msgstr "Länge der Stiche. Die Stiche können je nach Stichtoleranz-Einstellung kürzer sein.\n"
+"Es ist möglich, durch die Eingabe von mehreren durch ein Leerzeichen getrennte Werte, Sitchlängenmuster zu erzeugen."
 
 #: lib/elements/stroke.py:177
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
@@ -2537,87 +2538,87 @@ msgid "Flip start and end point"
 msgstr "Start- und Endpunkt vertauschen"
 
 #: lib/elements/stroke.py:461
-msgid "Reverse satin ripple rails.  Default: automatically detect and fix a reversed rail."
-msgstr "Außenkonturen der Satin-Führungslinie umkehren. In der Standardeinstellung werden gegenläufig verlaufende Linien automatisch korrigiert."
+msgid "Reverse satin ripple rails. Default: automatically detect and fix a reversed rail."
+msgstr ""
 
-#: lib/elements/stroke.py:477
+#: lib/elements/stroke.py:476
 msgid "Swaps the first and second rails of a satin ripple, affecting which side the thread finished on as well as any sided properties"
 msgstr "Diese Einstellung beeinflusst, auf jeder Seite der Satinsäule der Start- und Endpunkt des Ripplestiches liegt. Andere seitenabhängige Eigenschaften sind ebenfalls betroffen."
 
-#: lib/elements/stroke.py:491
+#: lib/elements/stroke.py:489
 msgid "Grid size"
 msgstr "Größe des Gitters"
 
-#: lib/elements/stroke.py:492
+#: lib/elements/stroke.py:490
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr "Als Gitter rendern. Dabei bitte unbedingt auf die Stichdichte achten."
 
-#: lib/elements/stroke.py:507
+#: lib/elements/stroke.py:505
 msgid "Stitch grid first"
 msgstr "Gitter zuerst sticken"
 
-#: lib/elements/stroke.py:508
+#: lib/elements/stroke.py:506
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
 msgstr "Dreht den Stichpfad um, sodass das Gitter zuerst gestickt wird."
 
-#: lib/elements/stroke.py:522
+#: lib/elements/stroke.py:520
 msgid "Scale axis"
 msgstr "Skalieren"
 
-#: lib/elements/stroke.py:523
+#: lib/elements/stroke.py:521
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Achse für Satin-geführte Ripplestiche."
 
-#: lib/elements/stroke.py:527 lib/gui/edit_json/settings_panel.py:184
+#: lib/elements/stroke.py:525 lib/gui/edit_json/settings_panel.py:184
 #: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr "Keine"
 
-#: lib/elements/stroke.py:538
+#: lib/elements/stroke.py:536
 msgid "Starting scale"
 msgstr "Start-Skalierung"
 
-#: lib/elements/stroke.py:539
+#: lib/elements/stroke.py:537
 msgid "How big the first copy of the line should be, in percent."
 msgstr "Größe der ersten Kopie der Ursprungsform in Prozent."
 
-#: lib/elements/stroke.py:539 lib/elements/stroke.py:554
+#: lib/elements/stroke.py:537 lib/elements/stroke.py:552
 msgid "Used only for ripple stitch with a guide line."
 msgstr "Kann nur auf Ripplestiche mit einer Führungslinie angewandt werden."
 
-#: lib/elements/stroke.py:553
+#: lib/elements/stroke.py:551
 msgid "Ending scale"
 msgstr "End-Skalierung"
 
-#: lib/elements/stroke.py:554
+#: lib/elements/stroke.py:552
 msgid "How big the last copy of the line should be, in percent."
 msgstr "Größe der letzten Kopie der Ursprungsform in Prozent."
 
-#: lib/elements/stroke.py:568 lib/gui/tartan/customize_panel.py:43
+#: lib/elements/stroke.py:566 lib/gui/tartan/customize_panel.py:43
 #: inx/inkstitch_transform_elements.inx:10
 msgid "Rotate"
 msgstr "Rotieren"
 
-#: lib/elements/stroke.py:569
+#: lib/elements/stroke.py:567
 msgid "Rotate satin guided ripple stitches"
 msgstr "Satin-geführte Ripplestiche rotieren"
 
-#: lib/elements/stroke.py:583 inx/inkstitch_knockdown_fill.inx:21
+#: lib/elements/stroke.py:581 inx/inkstitch_knockdown_fill.inx:21
 #: inx/inkstitch_knockdown_fill.inx:38
 msgid "Join style"
 msgstr "Kantenstil"
 
-#: lib/elements/stroke.py:584
+#: lib/elements/stroke.py:582
 msgid "Join style for non circular ripples."
 msgstr "Kantenstil für nicht kreisförmigen Ripplestich."
 
-#: lib/elements/stroke.py:587
+#: lib/elements/stroke.py:585
 msgid "flat"
 msgstr "flach"
 
-#: lib/elements/stroke.py:587
+#: lib/elements/stroke.py:585
 msgid "point"
 msgstr "spitz"
 
@@ -3648,15 +3649,15 @@ msgstr "Quadratisches Gitter"
 
 #: lib/gui/cross_stitch_helper.py:61
 msgid "Grid horizontal spacing (mm)"
-msgstr ""
+msgstr "Horizontaler Gitterabstand (mm)"
 
 #: lib/gui/cross_stitch_helper.py:66
 msgid "Grid vertical spacing (mm)"
-msgstr ""
+msgstr "Vertikaler Gitterabstand (mm)"
 
 #: lib/gui/cross_stitch_helper.py:71
 msgid "Stitch length:"
-msgstr ""
+msgstr "Stichlänge:"
 
 #: lib/gui/cross_stitch_helper.py:87
 msgid "Apply grid settings"
@@ -3672,7 +3673,7 @@ msgstr "Außenkontur der Füllelemente verpixeln"
 
 #: lib/gui/cross_stitch_helper.py:100
 msgid "Fill coverage (%)"
-msgstr ""
+msgstr "Füllabdeckung (%)"
 
 #: lib/gui/cross_stitch_helper.py:104
 msgid "Add nodes (grid width distance)"
@@ -3696,7 +3697,11 @@ msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\
 "* Apply cross stitch parameters to selected fill elements.\n"
 "* Pixelize outlines of selected fill elements.\n"
 "* Apply spacing values to page grid."
-msgstr ""
+msgstr "Diese Erweiterung hilft bei der Erstellung von Kreuzstichen in Ink/Stitch. Sie kann:\n\n"
+"* Die Stichlänge für bestimmte Gitterabstände berechnen\n"
+"* Kreuzstichparameter auf ausgewählte Füllelemente anwenden\n"
+"* Ausgewählte Füllelemente verpixeln\n"
+"* Ein Seitengitter mit den angegebenen Kreuzstichmaßen erstellen"
 
 #: lib/gui/cross_stitch_helper.py:185 lib/gui/cross_stitch_helper.py:186
 msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch"
