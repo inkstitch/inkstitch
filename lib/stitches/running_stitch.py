@@ -354,7 +354,7 @@ def path_to_curves(points: typing.List[Point], min_len: float):
         # Optimized version of checking if cos(angle(a,b)) <= sqrt(0.5) and is defined
         if aabb > 0 and abab <= 0.5 * aabb:
             if seg_len >= min_len:
-                curves.append(points[last : i + 1])
+                curves.append(points[last:i + 1])
                 last = i
             seg_len = 0
 
@@ -456,7 +456,7 @@ def bean_stitch(stitches, repeats, tags_to_ignore=None):
     return new_stitches
 
 
-def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation):
+def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation):  # noqa: C901
     """Create a zigzag stitch pattern from a set of stitches.
 
     Moves points left and right perpendicular to the path, alternating to
