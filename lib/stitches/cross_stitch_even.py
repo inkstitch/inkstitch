@@ -15,7 +15,6 @@ def even_cross_stitch(fill, shape, starting_point):
         return []
     
     subgraphs = _build_connect_subgraph(cross_geoms)
-    print(len(subgraphs),  file=sys.stderr)
     eulerian_cycles = _build_eulerian_cycles(subgraphs)
     sys.stderr.write(f"Built {len(eulerian_cycles)} eulerian cycles for cross stitch pattern.\n")
     for cycle in eulerian_cycles:
@@ -53,6 +52,7 @@ def _build_eulerian_cycles(subgraphs):
     return eulerian_cycles
 
 def _cycles_to_stitches(eulerian_cycles):
+    ## what is the easiest way to convert cycles to stitches?
     stitches = []
     
     return stitches
