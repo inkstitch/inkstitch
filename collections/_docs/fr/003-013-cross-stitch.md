@@ -72,7 +72,7 @@ Les demi-croix ne constituent qu'un demi-point de croix (une diagonale). Les che
   ![[Méthode de point de croix: Demi-Croix](/assets/images/docs/cross_stitch_method_half_cross.jpg)
 * **Point de Croix Horizontal et Point de Croix Horizontal Retourné**
 
-  Un Point de Croix ayant subi une rotation qui la rend horizontale.
+  Un Point de Croix ayant subi une rotation qui le rend horizontal.
 
 Veuillez noter que cette méthode de point de croix peut présenter des sauts lorsque les zones sont reliées uniquement en diagonale.
 
@@ -118,7 +118,7 @@ Exécutez **Extensions > Ink/Stitch > Paramétres** pour ajuster les paramètres
 |Décalage de la grille                       || Translate la grille de point de croix selon des valeurs données X et Y séparées par un espace. Une valeur unique induit une translation identique sur les axes horizontaux et verticaux|
 |Couverture du remplissage                    ||Pourcentage de superposition avec le remplissage nécessaire à la création d'une croix|
 |Élargir|![Expand example](/assets/images/docs/params-fill-expand.png) |dilate la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu.|
-|Longueur  maximum du point droit||Pour un aspect de point de croix, indiquez ici une valeur plus grande que la longueur des diagonales des cellules de la grille. For huge crosses chose a smaller value. |
+|Longueur  maximum du point droit||Pour un aspect de point de croix, indiquez ici une valeur plus grande que la longueur des diagonales des cellules de la grille. Pour de très grandes croix, choisir une valeur plus petite  pour  eviter de  trop longs points|
 |Nombre de répétitions du point triple ||Détermine combien de fois chaque point doit être répété.<br />◦ Une valeur de `0` ne produit aucune répétition<br/>◦ Une valeur de `1` répète chaque point trois fois  (avant, arrière, avant).<br />◦ Une valeur de `2` répète le point 5 fois.|
 |Longueur minimum du point||Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les [préférences](/fr/docs/preferences/#longueur-minimum-de-points-mm). Les points plus courts seront supprimés.|
 |Longueur minimum de saut||Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les [préférences](/fr/docs/preferences/#sauts-de-fil-mm). Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.|
