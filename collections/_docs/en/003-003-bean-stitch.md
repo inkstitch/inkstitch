@@ -7,7 +7,7 @@ toc: true
 ## What is it
 
 [![Bean Stitch Dog](/assets/images/docs/bean-stitch-example.jpg){: width="200x"}](/assets/images/docs/bean-stitch.svg){: title="Download SVG File" .align-left download="bean-stitch.svg" }
-Bean stitch describes a repetition of running stitches back and forth. This would result in thicker threading.
+Bean stitch creates a thicker line by stitching forward and backward over the same path. This repeats each stitch multiple times, which increases coverage and makes the line stand out more than a running stitch.  
 
 ![Bean Stitch Detail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
 
@@ -20,8 +20,8 @@ Bean stitch describes a repetition of running stitches back and forth. This woul
    ![Bean Stitch Params](/assets/images/docs/en/params-bean-stitch.jpg)
 
   * A value of '0' does not repeat the stitch (normal stitch)
-  * A value of '1' repeats each stitch three times (forward, back, forward).
-  * A value of '2' repeats the stitch six times.
+  * A value of '1' repeats each stitch once (forward, back, forward).
+  * A value of '2' repeats the stitch twice.
   * By entering multiple numbers, it is possible to define a custom repeat pattern. For instance `0 1` will create alternating single and triple stitches (`≡-≡-≡`).
 
 ## Parameters
