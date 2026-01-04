@@ -16,9 +16,6 @@ Bean stitch creates a thicker line by stitching forward and backward over the sa
 1. Select a stroke and open `Extensions > Ink/Stitch  > Params`.
 
 2. Set the number of repeats when in [running stitch mode](/docs/stitches/running-stitch).
-
-   ![Bean Stitch Params](/assets/images/docs/en/params-bean-stitch.jpg)
-
   * A value of '0' does not repeat the stitch (normal stitch)
   * A value of '1' repeats each stitch once (forward, back, forward).
   * A value of '2' repeats the stitch twice.
