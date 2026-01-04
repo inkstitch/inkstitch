@@ -4,15 +4,15 @@ permalink: /docs/stitch-library/
 last_modified_at: 2025-12-29
 toc: true
 ---
-A stitch type describes how Ink/Stitch turns paths and shapes into embroidery. Different stitch types produce different textures, thickness, and coverage, so the stitch type you choose changes how outlines, lettering, and filled areas look on fabric.
+A stitch type explains how Ink Slash Stitch converts paths and shapes into embroidery. Each stitch type creates a distinct texture, thickness, and level of coverage. The selection influences the appearance of outlines, lettering, and filled areas on fabric, shaping both the visual style and the overall feel of the finished embroidery.
 
-## Stroke
+## Stroke Stitches
 
-Stroke stitches can be used for outlines, line art  or to add small details.
+Stroke stitches can be used for outlines, line art or to add small details.
 
 ### Running Stitch
 
-Running stitch creates small stitches that follow a line or curve.
+Running stitch creates small stitches that follow a line (path).
 
 ![Running Stitch Detail](/assets/images/docs/running-stitch-detail.jpg)
 
@@ -20,7 +20,7 @@ Running stitch creates small stitches that follow a line or curve.
 
 ### Bean Stitch
 
-Bean stitch creates repeating stitches which creates a thicker line.
+Bean stitch is a repeated running stitch which creates a thicker line.
 
 ![Bean Stitch Detail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
 
@@ -44,7 +44,7 @@ Ripple stitch creates a pattern of stitches in sprirals, rows, or grids.
 
 ### Zig-Zag Stitch
 
-Zigzag stitch creates simple zigzag stitches. It works best on straight lines, since corners and tight curves stitch poorly. For most designs, a satin column is a better choice.
+Zigzag stitch creates running stitches that stitch back and forth. It works best on straight lines, since corners and tight curves stitch poorly. For most designs, a satin column is a better choice.
 
 ![Zigzag Stitch Detail](/assets/images/docs/zigzag-stitch-detail.png)
 
@@ -54,9 +54,9 @@ Zigzag stitch creates simple zigzag stitches. It works best on straight lines, s
 
 ### Satin Column
 
-Satin stitch is mostly used for borders, letters or small fill areas.
+Satin stitch is used for borders, letters or small fill areas.
 
-Ink/Stitch will draw zig-zags back and forth between two lines, while you can vary the thickness of the column as you like.
+A satin column is created using a zigzag stitch between two boundary lines. The distance between those lines controls the column width, which gives you flexibility to adjust how thin or bold the stitch appears on the fabric.
 
 ![Satin Column Detail](/assets/images/docs/satin-column-detail.png)
 
@@ -64,7 +64,7 @@ Ink/Stitch will draw zig-zags back and forth between two lines, while you can va
 
 ### E-Stitch
 
-E-stitch is a simple but strong stitch used to hold appliques. Because this is not as thick of a stitch (unlike satin) it is used for or baby clothes as their skin tends to be more sensitive.
+E-stitch is a simple but strong stitch used to hold appliques. Because this is not as thick of a stitch (unlike satin) it is often used for baby clothes as their skin tends to be more sensitive.
 
 ![E-Stitch Detail](/assets/images/docs/e-stitch-detail.jpg)
 
