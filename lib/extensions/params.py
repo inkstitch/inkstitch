@@ -18,7 +18,7 @@ from wx.lib.scrolledpanel import ScrolledPanel
 from ..commands import is_command, is_command_symbol
 from ..debug.debug import debug
 from ..elements import (Clone, EmbroideryElement, FillStitch, SatinColumn,
-                        Stroke)
+                        Stroke, nodes_to_elements)
 from ..elements.clone import is_clone
 from ..exceptions import InkstitchException, format_uncaught_exception
 from ..gui import PresetsPanel, PreviewRenderer, WarningPanel
@@ -295,6 +295,8 @@ class ParamsTab(ScrolledPanel):
         if self.on_change_hook:
             self.on_change_hook(self)
 
+        self.apply()
+
     def load_preset(self, preset):
         preset_data = preset.get(self.name, {})
 
@@ -551,7 +553,8 @@ class ParamsTab(ScrolledPanel):
 
 
 class SettingsPanel(wx.Panel):
-    def __init__(self, parent, tabs_factory=None, metadata=None, background_color='white', simulator=None):
+    def __init__(self, parent, nodes, tabs_factory=None, metadata=None, background_color='white', simulator=None):
+        self.nodes = nodes
         self.tabs_factory = tabs_factory
         self.metadata = metadata
         self.background_color = background_color
@@ -592,29 +595,19 @@ class SettingsPanel(wx.Panel):
         self.preview_renderer.update()
 
     def render_stitch_plan(self):
+
         stitch_groups = []
-        nodes = []
-        # move the stroke tab to the end of the list
-        tabs = self.get_stroke_last_tabs()
-        for tab in tabs:
-            tab.apply()
-            if tab.enabled() and not tab.is_dependent_tab():
-                nodes.extend(tab.nodes)
-
-            check_stop_flag()
-
-        # sort nodes into the proper stacking order
-        nodes.sort(key=lambda node: node.order)
-
+        elements = nodes_to_elements(self.nodes)
+        elements.append(None)
         try:
             wx.CallAfter(self._hide_warning)
             last_stitch_group = None
-            for node, next_node in zip_longest(nodes, self._get_next_nodes(nodes)):
+            for element, next_element in zip(elements[:-1], elements[1:]):
                 # Making a copy of the embroidery element is an easy
                 # way to drop the cache in the @cache decorators used
                 # for many params in embroider.py.
 
-                stitch_groups.extend(copy(node).embroider(last_stitch_group, next_node))
+                stitch_groups.extend(copy(element).embroider(last_stitch_group, next_element))
                 if stitch_groups:
                     last_stitch_group = stitch_groups[-1]
 
@@ -632,11 +625,6 @@ class SettingsPanel(wx.Panel):
             wx.CallAfter(self._show_warning, str(exc))
         except Exception:
             wx.CallAfter(self._show_warning, format_uncaught_exception())
-
-    def _get_next_nodes(self, nodes):
-        if len(nodes) > 1:
-            return nodes[1:]
-        return []
 
     def get_stroke_last_tabs(self):
         tabs = self.tabs
@@ -711,6 +699,8 @@ class SettingsPanel(wx.Panel):
     def cancel(self, event):
         self.simulator.stop()
         wx.CallAfter(self.GetTopLevelParent().cancel)
+        # Do not apply changes
+        sys.exit(0)
 
     def __do_layout(self):
         # begin wxGlade: MyFrame.__do_layout
@@ -871,6 +861,7 @@ class Params(InkstitchExtension):
         self.cancelled = True
 
     def effect(self):
+        nodes = self.get_nodes()
         try:
             app = wx.App()
             metadata = self.get_inkstitch_metadata()
@@ -878,11 +869,12 @@ class Params(InkstitchExtension):
             frame = SplitSimulatorWindow(
                 title=_("Embroidery Params"),
                 panel_class=SettingsPanel,
+                nodes=nodes,
                 tabs_factory=self.create_tabs,
                 on_cancel=self.cancel,
                 metadata=metadata,
                 background_color=background_color,
-                target_duration=5
+                target_duration=5,
             )
 
             frame.Show()
