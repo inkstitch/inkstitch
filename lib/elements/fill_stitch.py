@@ -840,10 +840,10 @@ class FillStitch(EmbroideryElement):
                      'Even values result in a consistent thread count, but it will start and end at the same position.'),
            type='int',
            select_items=[('fill_method', 'cross_stitch')],
-           default=1,
+           default=2,
            sort_index=23)
     def cross_thread_count(self):
-        return self.get_int_param("cross_thread_count", 1)
+        return self.get_int_param("cross_thread_count", 2)
 
     @property
     @cache

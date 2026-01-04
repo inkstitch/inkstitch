@@ -29,7 +29,7 @@ class CrossGeometry(object):
                                 1. the center points for each box
                                 2. the four corners of each box
     '''
-    def __init__(self, fill, shape, original_shape, cross_stitch_method):
+    def __init__(self, fill, shape, cross_stitch_method, original_shape=None):
         """Initialize cross stitch geometry generation for the given shape.
 
         Arguments:
@@ -119,10 +119,6 @@ class CrossGeometry(object):
         self.travel_edges.append(LineString([coords[1], center]))
         self.travel_edges.append(LineString([coords[2], center]))
         self.travel_edges.append(LineString([coords[3], center]))
-        self.travel_edges.append(LineString([coords[0], coords[1]]))
-        self.travel_edges.append(LineString([coords[1], coords[2]]))
-        self.travel_edges.append(LineString([coords[2], coords[3]]))
-        self.travel_edges.append(LineString([coords[3], coords[0]]))
 
         self.snap_points[0].append(center)
         self.snap_points[1].append(coords[0])

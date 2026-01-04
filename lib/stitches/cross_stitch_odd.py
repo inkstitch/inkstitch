@@ -24,7 +24,7 @@ from .running_stitch import bean_stitch
 from .utils.cross_stitch import CrossGeometry
 
 
-def odd_cross_stitch(fill, shape, starting_point, ending_point, double_pass, original_shape):
+def odd_cross_stitch(fill, shape, starting_point, ending_point, double_pass=False, original_shape=None):
     '''Cross stitch fill type
 
        Cross stitches are organized in a pixelated pattern. Each "cross pixel" (box) has two diagonals.
@@ -46,7 +46,7 @@ def odd_cross_stitch(fill, shape, starting_point, ending_point, double_pass, ori
     else:
         cross_stitch_method = fill.cross_stitch_method
 
-    cross_geoms = CrossGeometry(fill, shape, original_shape, cross_stitch_method)
+    cross_geoms = CrossGeometry(fill, shape, cross_stitch_method)
 
     if not cross_geoms.boxes:
         return []
@@ -72,9 +72,8 @@ def odd_cross_stitch(fill, shape, starting_point, ending_point, double_pass, ori
     # The cross stitch diagonals
     diagonals1, diagonals2 = prepare_diagonals(outline, cross_geoms, cross_stitch_method, max_stitch_length)
 
-    # Travel edges includ all possible edges, the box outlines, as well as edges from the bounding boxes corners to the box center (☒)
-    travel_edges = ensure_multi_line_string(line_merge(MultiLineString(cross_geoms.travel_edges)))
-    travel_edges = list(travel_edges.geoms)
+    # Travel edges include for each cross four edges from one of the four corners to the center
+    travel_edges = cross_geoms.travel_edges
 
     # Nodes include all end points of our grating lines
     nodes = get_line_endpoints(diagonals2)
@@ -261,7 +260,7 @@ def build_travel_graph(fill_stitch_graph, shape, travel_edges, nodes, underpath)
     add_edges_between_outline_nodes(graph, duplicate_every_other=True)
 
     if underpath:
-        process_travel_edges(graph, fill_stitch_graph, shape, travel_edges)
+        process_travel_edges(graph, fill_stitch_graph, shape, travel_edges, 500)
 
     debug.log_graph(graph, "travel graph")
 

@@ -9,7 +9,7 @@ from .cross_stitch_even import even_cross_stitch
 from .cross_stitch_odd import odd_cross_stitch
 
 
-def cross_stitch(fill, shape, starting_point, ending_point, double_pass=False, original_shape=None):
+def cross_stitch(fill, shape, starting_point, ending_point):
     if fill.cross_thread_count % 2 == 0:
-        return even_cross_stitch(fill, shape, starting_point, original_shape)
-    return odd_cross_stitch(fill, shape, starting_point, ending_point, double_pass, original_shape)
+        return even_cross_stitch(fill, shape, starting_point)
+    return odd_cross_stitch(fill, shape, starting_point, ending_point)

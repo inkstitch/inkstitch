@@ -6,8 +6,8 @@
 from .utils.cross_stitch import CrossGeometry
 
 
-def even_cross_stitch(fill, shape, starting_point, original_shape):
-    cross_geoms = CrossGeometry(fill, shape, original_shape, fill.cross_stitch_method)
+def even_cross_stitch(fill, shape, starting_point):
+    cross_geoms = CrossGeometry(fill, shape, fill.cross_stitch_method)
     if not cross_geoms.cross_diagonals1:
         return []
 
