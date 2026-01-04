@@ -7,6 +7,7 @@ import networkx as nx
 from .utils.cross_stitch import CrossGeometry
 
 import sys
+from ..stitch_plan import Stitch
 
 
 def even_cross_stitch(fill, shape, starting_point):
@@ -24,9 +25,8 @@ def even_cross_stitch(fill, shape, starting_point):
 
     stitches = _cycles_to_stitches(eulerian_cycles)
     
-    return []
+    return [stitches]
 
-    
 
 def _build_connect_subgraph(cross_geoms):
 
@@ -52,7 +52,9 @@ def _build_eulerian_cycles(subgraphs):
     return eulerian_cycles
 
 def _cycles_to_stitches(eulerian_cycles):
-    ## what is the easiest way to convert cycles to stitches?
     stitches = []
-    
+    stitches.append(Stitch(*eulerian_cycles[0][0][0]))
+    for cycle in eulerian_cycles:
+        for edge in cycle:
+            stitches.append(Stitch(*edge[1]))
     return stitches
