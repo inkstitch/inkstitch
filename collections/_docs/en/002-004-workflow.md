@@ -108,7 +108,7 @@ Ink/Stitch supports several stitch types. The three primary categories are avail
    These stitches fill a closed shape.  They are used for larger areas and create a textured surface and provide coverage while maintaining flexibility in the fabric.
 
 2. **Stroke stitches**  
-   These stitches follow the direction of a path.  They are  used for outlines, fine lines, and decorative accents where a narrow stitched line works better than a filled shape. 
+   These stitches follow the direction of a path.  They are used for outlines, fine lines, and decorative accents where a narrow stitched line works better than a filled shape. 
    
 4. **Satin stitches**
    These stitches cover narrow shapes with smooth, parallel stitches. They run back and forth across a shape, creating a glossy, raised appearance that works well for borders, lettering, and fine details.
@@ -188,14 +188,14 @@ After you place objects in the correct stitch order, export the design to a mach
 Also save the design in SVG format. Keeping the SVG file allows you to reopen the project in Inkscape and adjust settings, stitch order, or design details later.
 
 
-## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Step 7: Sew a Test Run
+## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Step 6: Sew a Test Run
 
 Testing helps reveal opportunities for improvement. Prepare a test fabric that closely matches the final material. Use the same stabilizer and the same fabric type. For t-shirts, choose a similar knit fabric, since knits require substantial stabilization.
 
 Stitch the design while observing the machine. Look for gaps that suggest fabric distortion. Also check for areas where stitches are packed too tightly and the machine struggles to sew. These signs usually indicate stitch density set too high and signal that adjustments are needed before final production.
 
 
-## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Step 8+: Optimize
+## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Step 7+: Optimize
 
 After the test run, return to the design and adjust settings as needed. It often takes several iterations to achieve the desired result, and small refinements can significantly improve stitch quality and appearance.
 
