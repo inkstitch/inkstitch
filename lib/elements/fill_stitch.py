@@ -833,18 +833,17 @@ class FillStitch(EmbroideryElement):
         return max(self.get_float_param("max_cross_stitch_length_mm", 11.0), 0.1 * PIXELS_PER_MM)
 
     @property
-    @param('cross_bean_repeats',
-           _('Bean stitch number of repeats'),
-           tooltip=_('Backtrack each stitch this many times.  '
-                     'A value of 1 would triple each stitch (forward, back, forward).  '
-                     'A value of 2 would quintuple each stitch, etc.\n\n'
-                     'A pattern with various repeats can be created with a list of values separated by a space.'),
+    @param('cross_thread_count',
+           _('Thread count'),
+           tooltip=_('Defines the thread count for each stitch.\n'
+                     'For odd values start and end point will be respected, but an inconsistent thread count is possible.\n'
+                     'Even values result in a consistent thread count, but it will start and end at the same position.'),
            type='int',
            select_items=[('fill_method', 'cross_stitch')],
            default=1,
            sort_index=23)
-    def cross_bean_repeats(self):
-        return self.get_int_param("cross_bean_repeats", 1)
+    def cross_thread_count(self):
+        return self.get_int_param("cross_thread_count", 1)
 
     @property
     @cache
