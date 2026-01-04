@@ -1,41 +1,46 @@
 ---
 title: "Customize Ink/Stitch"
 permalink: /docs/customize/
-last_modified_at: 2024-06-09
+last_modified_at: 2026-01-03
 toc: true
 ---
 
-## Shortcut Keys
+## Shortcuts
 
-You can speed up your work with Ink/Stitch, if you assign shortcut keys.
+You can work faster in Ink/Stitch by assigning shortcuts. These shortcuts reduce menu navigation and support a more efficient workflow. These shortcuts focus on embroidery specific actions and common layout adjustments, helping design work in Ink/Stitch feel smoother.
 
-The following list shows shortcut keys provided in the downloadable file below.
+The list below describes the shortcuts included in the downloadable file. 
 
-Some of the defined shortcut keys will replace others which are native to Inkscape. In the table you will see which they are and how you can still access these functions.
-{: .notice--warning }
+> **Note**  
+> Several shortcuts replace Inkscape defaults. Alternative menu paths or toolbar options remain available for those actions.
 
-Shortcut&nbsp;Keys | Effect | Replaces
--------- | --------
-<key>PageUp</key>                             | Stack Up* | Object > Raise (see also toolbar buttons)
-<key>PageDown</key>                           | Stack Down* | Object > Lower (see also toolbar buttons)
-<key>ctrl</key>+<key>R</key>                  | Reverse the direction of a path.**
-<key>ctrl</key>+<key>shift</key>+<key>'</key> | Re-stack objects in order of selection 
-<key>ctrl</key>+<key>shift</key>+<key>P</key> | Params | Edit > Preferences
-<key>ctrl</key>+<key>shift</key>+<key>L</key> | Simulator (Live simulation)
-<key>ctrl</key>+<key>shift</key>+<key>></key> | Stitch plan preview (beside of the canvas) | Path > Division (use Strg+/ instead)
-<key>ctrl</key>+<key>shift</key>+<key>O</key> | Break apart fill objects... (O for Object) | Object > Object properties
-<key>ctrl</key>+<key>shift</key>+<key>I</key> | PDF Export
-<key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettering (Q for QWERTY) | Object > Selectors and CSS
-<span style="white-space: nowrap;"><key>ctrl</key>+<key>shift</key>+<key>Del</key></span> | Troubleshoot objects (remove errors)
-<key>ctrl</key>+<key>shift</key>+<key>!</key> | Attach commands to selected objects
-<key>ctrl</key>+<key>shift</key>+<key>U</key> | Stroke to satin (U looks like two rails) | Object > Group (use Ctrl+G instead)
-<key>ctrl</key>+<key>shift</key>+<key>J</key> | Flip satin column rails (J looks like an arrow)
-<key>ctrl</key>+<key>shift</key>+<key>B</key> | Cut satin column (B is cut in half) | Path > Union (use Ctrl++ instead)
-<key>ctrl</key>+<key>shift</key>+<key>=</key> | Auto-route satin (puts everything in order)
+| Shortcut keys | Effect | Replaces |
+|-------------|--------|----------|
+| PageUp | Stack up| Object > Raise. Toolbar buttons also apply |
+| PageDown | Stack down | Object > Lower. Toolbar buttons also apply |
+| Ctrl + R | Reverse the direction of a path | |
+| Ctrl + Shift + ' | Restack objects based on selection order | |
+| Ctrl + Shift + P | Open Params | Edit > Preferences |
+| Ctrl + Shift + L | Open Simulator live simulation | |
+| Ctrl + Shift + > | Stitch plan preview beside the canvas | Path > Division. Use Ctrl + / instead |
+| Ctrl + Shift + O | Break apart fill objects | Object > Object Properties |
+| Ctrl + Shift + I | PDF export | |
+| Ctrl + Shift + Q | Lettering | Object > Selectors and CSS |
+| Ctrl + Shift + Del | Troubleshoot objects and remove errors | |
+| Ctrl + Shift + ! | Attach commands to selected objects | |
+| Ctrl + Shift + U | Convert stroke to satin | Object > Group. Use Ctrl + G instead |
+| Ctrl + Shift + J | Flip satin column rails | |
+| Ctrl + Shift + B | Cut satin column | Path > Union. Use Ctrl + + instead |
+| Ctrl + Shift + = | Auto route satin objects | |
+
 
 The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provides shortcut keys.
 
-\* Stack Up and Stack Down give precise control over the order that objects are stitched in. Very useful in combination with the Objects panel (`Objects > Objects ...`). The stacking order defines, in which order elements are stitched out (from bottom to top).<br><br>** For satins and running stitch, this changes the direction the stitches go in. Use with `Show path direction on outlines` selected in `Edit > Preferences > Tools > Node`. If you select just one vertex using the node editor and press `Ctrl+R`, Inkscape will reverse just one path in an object. This way you can make sure that both rails in a satin point the same direction.
+\* **Stack Up** and **Stack Down** give precise control over stitch order. This works well with the Objects panel (`Objects > Objects ...`). The stacking order determines the sequence in which items are stitched, starting at the bottom and moving upward.
+
+\*\* For satin and running stitch objects, this changes stitch direction. This works best when **Show path direction on outlines** is selected under `Edit > Preferences > Tools > Node`. When one vertex is selected in the node editor and `Ctrl + R` is pressed, Inkscape reverses a single path within an object. This helps align both rails of a satin so they point in the same direction.
+
+
 {: .notice--info }
 {: style="font-size: 70%" }
 
@@ -44,9 +49,9 @@ The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provi
 * [Download the Ink/Stitch shortcut key file](/assets/files/inkstitch.xml)
 * Go to `Edit > Preferences > Interface > Keyboard`
 * Click on `Import...`
-* Select the downloaded file and open
+* Select and open the downloaded file
 
-You will now be able to use the shortcut keys described above. They are included into the standard default.xml shortcut file.
+You will now be able to use the shortcut keys. They are included into the standard default.xml shortcut file.
 
 If you want to define your own custom shortcut keys simply enter your desired key combinations in the shortcut dialog.
 Use the search function to find the extensions quicker. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
@@ -63,13 +68,13 @@ For embroidery it is essential to get a sense of the actual size of the design. 
 
 ## Grids
 
-To align your vector-shapes properly, you might want to make use of the grid functionality of Inkscape. Go to `View` and enable `Page Grid`. In `Snap Controls Bar` make sure `Snap to grids` is enabled. It is also possible to adjust spacing and origin of your grids in `File >  Document Properties > Grids`.
+To align your vector-shapes properly, you can use the grid functionality of Inkscape. Go to `View` and enable `Page Grid`. In `Snap Controls Bar` make sure `Snap to grids` is enabled. It is also possible to adjust spacing and origin of your grids in `File >  Document Properties > Grids`.
 
 ![Grids](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
 
 ## Enabling Path Outlines & Direction
 
-Knowing path directions is important working with Ink/Stitch. Therefore we recommend to enable the checkboxes **Show path direction on outlines** and **Show temporary outline for selected paths** in `Edit > Preferences > Tools > Node`.
+Knowing path directions is important working with Ink/Stitch. It is recommended to enable the checkboxes **Show path direction on outlines** and **Show temporary outline for selected paths** in `Edit > Preferences > Tools > Node`.
 
 Make sure that also **Show path outline** is enabled in `Tool Controls Bar` as you can see in the image below.
 
@@ -77,16 +82,16 @@ Make sure that also **Show path outline** is enabled in `Tool Controls Bar` as y
 
 ## Working with Templates
 
-If you decided to use Ink/Stitch more frequently for your embroidery work, you might get tired of setting up the whole scene over and over again. In this case you are ready to create a template for your basic embroidery setup. Once you organised everything as desired, simply save your file in your templates folder (`File > Save template...`). You can now access it by `File > New from template > Custom`.
+If you decided to use Ink/Stitch more frequently, you might get tired of creating the same configurations repeatedly. You can create a template for your basic embroidery setup. Once you have organised your settings, save them as a template file in your templates folder (`File > Save template...`). You can now access it by `File > New from template > Custom`.
 
-If you are going to use Inkscape mainly for embroidery, you may wish to check the option `Set as default template` when saving.
+If you use Inkscape primarily for embroidery, you can select the option `Set as default template`.
 
 **Tip:** Get [predefined templates](/tutorials/resources/templates/) from our tutorial section.
 {: .notice--info }
 
 ## Install Thread Color Palettes
 
-Ink/Stitch comes with a lot of thread manufacturer color palettes which can be installed into Inkscape. This allows to build the designs with the correct colors in mind.
-Colors will appear in the PDF-Output and will also be included into your embroidery file, if your file format supports it. 
+Ink/Stitch comes with many thread manufacturer color palettes which can be installed. This allows you to build designs with the correct colors in mind.
+Colors will appear in the PDF file and will also be included into your machine embroidery file, if the file format supports it. 
 
 [Read more](/docs/thread-color/#install-thread-color-palettes-for-inkscape)
