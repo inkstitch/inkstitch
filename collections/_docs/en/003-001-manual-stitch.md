@@ -1,20 +1,20 @@
 ---
 title: "Manual Stitch"
 permalink: /docs/stitches/manual-stitch/
-last_modified_at: 2024-04-27
+last_modified_at: 2026-01-03
 toc: true
 ---
 ## What it is
 [![Manual Stitch Flowers](/assets/images/docs/manual-stitch.jpg){: width="200x"}](/assets/images/docs/manual-stitch.svg){: title="Download SVG File" .align-left download="manual-stitch.svg" }
-In manual stitch mode Ink/Stitch will use each node of a path as a needle penetration point, exactly as you placed them.
+Manual stitches are create by using each node of a path as a needle penetration point.
 
 ![Manual Stitch Detail](/assets/images/docs/manual-stitch-detail.png)
 
 ## How to Create
 
-1. Create a path. Line style or width are irrelevant.
+1. Create a path. The line style or width are not used in the creation of a manual stitch. 
 2. Open `Extensions > Ink/Stitch  > Params`.
-3. Chose `Manual stitch placement` as the method.
+3. Chose `Manual stitch placement` 
 
 Each node of a path represents a needle penetration point. It doesn't care about bezier curves.
 
