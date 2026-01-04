@@ -22,7 +22,7 @@ class CrossGeometry(object):
 
         diagonals1, diagonals2: A list of Linestrings with the actual cross stitch geometry
 
-        travel_edges:           A list of Linestings.
+        travel_edges:           A list of Linestrings.
                                 For every cross we include four LineStrings from each corner to the center.
 
         snap_points:            a list containing two lists with points.
