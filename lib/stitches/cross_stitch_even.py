@@ -16,7 +16,6 @@ def even_cross_stitch(fill, shape, starting_point):
     
     subgraphs = _build_connect_subgraph(cross_geoms)
     print(len(subgraphs),  file=sys.stderr)
-    sys.stderr.write(f"Built {len(subgraphs)} subgraphs for cross stitch pattern.\n")
     eulerian_cycles = _build_eulerian_cycles(subgraphs)
     sys.stderr.write(f"Built {len(eulerian_cycles)} eulerian cycles for cross stitch pattern.\n")
     for cycle in eulerian_cycles:
@@ -31,7 +30,7 @@ def even_cross_stitch(fill, shape, starting_point):
     
 
 def _build_connect_subgraph(cross_geoms):
-# do i really need to convert to strings  here?
+
     G = nx.Graph()
     for line in cross_geoms.travel_edges:
         G.add_edge(line.coords[0], line.coords[-1], path=line)
