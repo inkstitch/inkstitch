@@ -4,7 +4,7 @@ permalink: /docs/stitch-library/
 last_modified_at: 2025-12-29
 toc: true
 ---
-A stitch type explains how Ink Slash Stitch converts paths and shapes into embroidery. Each stitch type creates a distinct texture, thickness, and level of coverage. The selection influences the appearance of outlines, lettering, and filled areas on fabric, shaping both the visual style and the overall feel of the finished embroidery.
+A stitch type explains how Ink/Stitch converts paths and shapes into embroidery. Each stitch type creates a distinct texture, thickness, and level of coverage. The selection influences the appearance of outlines, lettering, and filled areas on fabric, shaping both the visual style and the overall feel of the finished embroidery.
 
 ## Stroke Stitches
 
