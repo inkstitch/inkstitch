@@ -34,13 +34,13 @@ def _build_connect_subgraph(cross_geoms):
 # do i really need to convert to strings  here?
     G = nx.Graph()
     for line in cross_geoms.travel_edges:
-        G.add_edge(str(line.coords[0]), str(line.coords[-1]), path=line)
+        G.add_edge(line.coords[0], line.coords[-1], path=line)
 
     for line in cross_geoms.cross_diagonals1:
-        G.add_edge(str(line.coords[0]), str(line.coords[-1]), path=line)
+        G.add_edge(line.coords[0], line.coords[-1], path=line)
 
     for line in cross_geoms.cross_diagonals2:
-        G.add_edge(str(line.coords[0]), str(line.coords[-1]), path=line)    
+        G.add_edge(line.coords[0], line.coords[-1], path=line)    
     
     return  [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
