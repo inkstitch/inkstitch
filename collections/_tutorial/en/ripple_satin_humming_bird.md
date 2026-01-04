@@ -2,6 +2,7 @@
 permalink: /tutorials/ripple-satin-humming-bird/
 title: "Satin guided ripple stitch hummingbird"
 last_modified_at: 2026-01-03
+language: en
 excerpt: "humming bird as a sample file for satin guided ripple stitches"
 image: "/assets/images/tutorials/tutorial-preview-images/ripple_satin_humming_bird_monochrom.jpg"
 tutorial-type:
