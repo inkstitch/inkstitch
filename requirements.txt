@@ -16,6 +16,7 @@ lxml
 platformdirs
 numpy==2.2.6
 jinja2>2.9
+Pillow>=9.0.0
 requests
 
 # toml release 0.10.2 still buggy for heterogenous arrays

@@ -41,16 +41,16 @@ DEFAULT_SETTINGS = {
     "font_sampling_max_line_width": 180,
     "font_sampling_scale_spinner": 100,
     # cross stitch grid helper
-    'square': True,
-    'cross_helper_box_x': 3,
-    'cross_helper_box_y': 3,
-    'cross_helper_update_elements': False,
-    'cross_helper_pixelize': False,
-    'cross_helper_coverage': 50,
-    'cross_helper_nodes': False,
-    'cross_helper_set_grid': False,
-    'cross_helper_grid_color': '#00d9e5',
-    'cross_helper_remove_grids': True
+    "square": True,
+    "cross_helper_box_x": 3,
+    "cross_helper_box_y": 3,
+    "cross_helper_update_elements": False,
+    "cross_helper_pixelize": False,
+    "cross_helper_coverage": 50,
+    "cross_helper_nodes": False,
+    "cross_helper_set_grid": False,
+    "cross_helper_grid_color": "#00d9e5",
+    "cross_helper_remove_grids": True,
 }
 
 
@@ -70,7 +70,7 @@ class GlobalSettings(MutableMapping):
         self._settings.update(DEFAULT_SETTINGS)
 
         try:
-            with open(self._settings_file, 'r') as settings_file:
+            with open(self._settings_file, "r") as settings_file:
                 self._settings.update(json.load(settings_file))
         except (OSError, json.JSONDecodeError, ValueError):
             pass
@@ -79,7 +79,7 @@ class GlobalSettings(MutableMapping):
         self._settings[item] = value
 
         try:
-            with open(self._settings_file, 'w') as settings_file:
+            with open(self._settings_file, "w") as settings_file:
                 json.dump(self._settings, settings_file)
         except FileNotFoundError:
             pass
