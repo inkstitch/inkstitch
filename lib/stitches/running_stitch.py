@@ -354,7 +354,7 @@ def path_to_curves(points: typing.List[Point], min_len: float):
         # Optimized version of checking if cos(angle(a,b)) <= sqrt(0.5) and is defined
         if aabb > 0 and abab <= 0.5 * aabb:
             if seg_len >= min_len:
-                curves.append(points[last : i + 1])
+                curves.append(points[last:i + 1])
                 last = i
             seg_len = 0
 
