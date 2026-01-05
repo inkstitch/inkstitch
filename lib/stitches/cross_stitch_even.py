@@ -91,18 +91,17 @@ class CrossGeometry(object):
 
 def even_cross_stitch(fill, shape, starting_point):
     cross_geoms = CrossGeometry(fill, shape, fill.cross_stitch_method)
-    print(cross_geoms.crosses, file=sys.stderr)
-    '''
+    #print(cross_geoms.crosses, file=sys.stderr)
+ 
     subgraphs = _build_connect_subgraph(cross_geoms)
     eulerian_cycles = _build_eulerian_cycles(subgraphs)
-    sys.stderr.write(f"Built {len(eulerian_cycles)} eulerian cycles for cross stitch pattern.\n")
-    for cycle in eulerian_cycles:
-        sys.stderr.write(f"Built eulerian cycle with {len(cycle)} edges.\n")
-        sys.stderr.write(str(cycle))
-        sys.stderr.write("\n")
+    # sys.stderr.write(f"Built {len(eulerian_cycles)} eulerian cycles for cross stitch pattern.\n")
+    # for cycle in eulerian_cycles:
+    #     sys.stderr.write(f"Built eulerian cycle with {len(cycle)} edges.\n")
+    #     sys.stderr.write(str(cycle))
+    #     sys.stderr.write("\n")
 
-    stitches = _cycles_to_stitches(eulerian_cycles)
-    '''
+   # stitches = _cycles_to_stitches(eulerian_cycles)
     stitches = []
     return [stitches]
 
@@ -110,14 +109,25 @@ def even_cross_stitch(fill, shape, starting_point):
 def _build_connect_subgraph(cross_geoms):
 
     G = nx.Graph()
-    for line in cross_geoms.travel_edges:
-        G.add_edge(line.coords[0], line.coords[-1], path=line)
 
-    for line in cross_geoms.cross_diagonals1:
-        G.add_edge(line.coords[0], line.coords[-1], path=line)
+    for cross in cross_geoms.crosses:
+        center = cross['center_point']
+        G.add_node(center,crosses = [cross])
+        corners = cross['corners']
+        for corner in corners:
+            if corner in G.nodes:
+                G.nodes[corner]['crosses'].append(cross)
+            else:
+                G.add_node(corner, crosses = [cross])
+            
 
-    for line in cross_geoms.cross_diagonals2:
-        G.add_edge(line.coords[0], line.coords[-1], path=line)
+        for corner in cross['corners']:
+            G.add_edge(center, corner)
+    
+        G.add_edge(corners[0], corners[2])
+        G.add_edge(corners[1], corners[3])
+    sys.stderr.write(f"Built graph with {len(G.nodes(data=True))} nodes and {len(G.edges())} edges for cross stitch pattern.\n")
+    sys.stderr.write(f"Built graph with {G.nodes(data=True)} nodes and {G.edges()} edges for cross stitch pattern.\n")
 
     return [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
