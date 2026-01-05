@@ -292,10 +292,10 @@ class ParamsTab(ScrolledPanel):
                 debug.log(f"forcing changed on parent select item: {choice_name}")
                 self.param_changed(choice_name)
 
+        self.apply()
+
         if self.on_change_hook:
             self.on_change_hook(self)
-
-        self.apply()
 
     def load_preset(self, preset):
         preset_data = preset.get(self.name, {})
