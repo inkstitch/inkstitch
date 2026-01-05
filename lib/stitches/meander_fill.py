@@ -14,7 +14,7 @@ from ..utils.list import poprandom
 from ..utils.prng import iter_uniform_floats
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
-from .running_stitch import bean_stitch, even_running_stitch, zigzag_stitch
+from .running_stitch import bean_stitch, even_running_stitch
 
 
 def meander_fill(fill, shape, original_shape, shape_index, starting_point, ending_point):
@@ -180,7 +180,7 @@ def post_process(points, shape, original_shape, fill):
 
     if fill.zigzag_spacing > 0:
         stitches = even_running_stitch(smoothed_points, [fill.zigzag_spacing / 2], fill.running_stitch_tolerance)
-        stitches = zigzag_stitch(stitches, fill.zigzag_spacing, fill.zigzag_width, (0, 0))
+        stitches = zigzag_stitch(stitches, fill.zigzag_spacing, fill.zigzag_width)
     else:
         stitches = even_running_stitch(smoothed_points, [fill.running_stitch_length], fill.running_stitch_tolerance)
 
@@ -209,3 +209,29 @@ def path_to_points(path):
         points.append(path[-1][1])
 
     return points
+
+
+def zigzag_stitch(stitches, zigzag_spacing, stroke_width):
+    # Move the points left and right.  Consider each pair
+    # of points in turn, and move perpendicular to them,
+    # alternating left and right.
+
+    offset1 = stroke_width / 2
+    offset2 = stroke_width / 2
+
+    for i in range(len(stitches) - 1):
+        start = stitches[i]
+        end = stitches[i + 1]
+        # sometimes the stitch results into zero length which causes a division by zero error
+        # ignoring this leads to a slightly bad result, but that is better than no output
+        if (end - start).length() == 0:
+            continue
+        segment_direction = (end - start).unit()
+        zigzag_direction = segment_direction.rotate_left()
+
+        if i % 2 == 1:
+            stitches[i] += zigzag_direction * -offset1
+        else:
+            stitches[i] += zigzag_direction * offset2
+
+    return stitches
