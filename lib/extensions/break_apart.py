@@ -49,6 +49,7 @@ class BreakApart(InkstitchExtension):
             try:
                 paths.sort(key=lambda point_list: Polygon(point_list).area, reverse=True)
                 polygon = MultiPolygon([(paths[0], paths[1:])])
+                # the polygon area can return a negative value, we need to make sure it is positive
                 if abs(polygon.area) <= self.minimum_size:
                     element.node.delete()
                     continue
