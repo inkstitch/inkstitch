@@ -166,6 +166,7 @@ inkstitch_attribs = [
     'zigzag_underlay_max_stitch_length_mm',
     'e_stitch',
     'stroke_pull_compensation_mm',
+    'zigzag_angle',
     'pull_compensation_mm',
     'pull_compensation_percent',
     'stroke_first',

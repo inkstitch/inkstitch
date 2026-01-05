@@ -285,6 +285,26 @@ class Stroke(EmbroideryElement):
 
     @property
     @param(
+        "zigzag_angle",
+        _("Zig-zag angle"),
+        tooltip=_(
+            "Rotate zig-zag direction by this angle (degrees). "
+            "Creates spoke/radial effects on curves."
+        ),
+        unit="°",
+        type="float",
+        default=0,
+        select_items=[("stroke_method", "zigzag_stitch")],
+        sort_index=7,
+    )
+    @cache
+    def zigzag_angle(self):
+        """Return the zigzag angle in degrees, clamped to -89 to 89."""
+        angle = self.get_float_param("zigzag_angle", 0)
+        return max(-89, min(89, angle))
+
+    @property
+    @param(
         "line_count",
         _("Number of lines"),
         tooltip=_("Number of lines from start to finish"),
@@ -727,7 +747,7 @@ class Stroke(EmbroideryElement):
         else:
             return self.unclipped_shape.centroid
 
-    def simple_satin(self, path, zigzag_spacing, stroke_width, pull_compensation):
+    def simple_satin(self, path, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle=0):
         """Generate zig-zag along the path at the specified spacing and width.
 
         Applies zigzag to a single pass first, then handles repeats manually.
@@ -754,6 +774,7 @@ class Stroke(EmbroideryElement):
             zigzag_spacing,
             stroke_width,
             pull_compensation,
+            zigzag_angle,
         )
 
         # For closed paths (circles), ensure the last stitch connects to the first
@@ -901,6 +922,7 @@ class Stroke(EmbroideryElement):
                         self.zigzag_spacing,
                         self.stroke_width,
                         self.pull_compensation,
+                        self.zigzag_angle,
                     )
                     # bean stitch
                     if any(self.bean_stitch_repeats):

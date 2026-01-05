@@ -456,12 +456,16 @@ def bean_stitch(stitches, repeats, tags_to_ignore=None):
     return new_stitches
 
 
-def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation):  # noqa: C901
+def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle=0):  # noqa: C901
     """Create a zigzag stitch pattern from a set of stitches.
 
     Moves points left and right perpendicular to the path, alternating to
     create a zigzag pattern. Also redistributes stitches to ensure complete
     zigzag cycles (starting and ending at the same peak/valley position).
+
+    Args:
+        zigzag_angle: Angle in degrees to rotate the zigzag direction.
+                      Creates spoke/radial effects on curves.
     """
     if len(stitches) < 2:
         return stitches
@@ -514,22 +518,48 @@ def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation):  #
     offset1 = stroke_width / 2 + pull_compensation[0]
     offset2 = stroke_width / 2 + pull_compensation[1]
 
-    for i, _ in enumerate(new_stitches):
-        # Calculate direction using ORIGINAL positions (not the offset ones)
-        if i < len(original_positions) - 1:
-            start = original_positions[i]
-            end = original_positions[i + 1]
-        else:
-            # Last stitch: use previous segment's direction from original positions
-            start = original_positions[i - 1]
-            end = original_positions[i]
+    # Convert angle to radians for rotation
+    angle_rad = math.radians(zigzag_angle)
+    cos_angle = math.cos(angle_rad)
+    sin_angle = math.sin(angle_rad)
 
-        seg_length = (end - start).length()
-        if seg_length == 0:
+    for i, _ in enumerate(new_stitches):
+        # Use averaged tangent direction at each point for symmetric stitches at corners
+        # This averages the incoming and outgoing segment directions
+        if i == 0:
+            # First point: use outgoing segment direction
+            dir_vec = original_positions[1] - original_positions[0]
+        elif i == len(original_positions) - 1:
+            # Last point: use incoming segment direction
+            dir_vec = original_positions[i] - original_positions[i - 1]
+        else:
+            # Middle points: average incoming and outgoing directions
+            incoming = original_positions[i] - original_positions[i - 1]
+            outgoing = original_positions[i + 1] - original_positions[i]
+            # Normalize before averaging to give equal weight
+            if incoming.length() > 0 and outgoing.length() > 0:
+                incoming_unit = incoming.unit()
+                outgoing_unit = outgoing.unit()
+                dir_vec = Point(
+                    (incoming_unit.x + outgoing_unit.x) / 2,
+                    (incoming_unit.y + outgoing_unit.y) / 2
+                )
+            elif incoming.length() > 0:
+                dir_vec = incoming
+            else:
+                dir_vec = outgoing
+
+        if dir_vec.length() == 0:
             continue
 
-        segment_direction = (end - start).unit()
+        segment_direction = dir_vec.unit()
         zigzag_direction = segment_direction.rotate_left()
+
+        # Rotate zigzag direction by the angle
+        if zigzag_angle != 0:
+            rotated_x = zigzag_direction.x * cos_angle - zigzag_direction.y * sin_angle
+            rotated_y = zigzag_direction.x * sin_angle + zigzag_direction.y * cos_angle
+            zigzag_direction = Point(rotated_x, rotated_y)
 
         # Alternate: even indices go one way, odd indices go the other
         if i % 2 == 1:
