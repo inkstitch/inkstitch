@@ -1,7 +1,7 @@
 ---
 title: "Monicha"
 permalink: /fr/fonts/monicha/
-last_modified_at: 2025-04-28
+last_modified_at: 2026-01-06
 toc: false
 preview_image:
   - url: /assets/images/fonts/monicha.jpg
