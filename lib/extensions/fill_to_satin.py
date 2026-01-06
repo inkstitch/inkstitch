@@ -6,6 +6,7 @@
 from collections import defaultdict
 
 from inkex import Boolean, Group, Path, PathElement
+from shapely.affinity import scale
 from shapely.geometry import LineString, MultiLineString, MultiPoint, Point
 from shapely.ops import linemerge, snap, split, substring
 
@@ -178,6 +179,17 @@ class FillElementToSatin:
             return ([rails + rungs])
         else:
             rung_segments, satin_segments = self._get_segments(intersection_points)
+
+        if len(satin_segments) == 1:
+            # the user chose to remove start and end segments (we can tell, because otherwise we cannot end up with only one satin segment)
+            # this means also means, the user did set exactly two rungs - which both have been removed.
+            # Let's add one rung at the center of the segment and return the segment immediately (no need to combine it with other segments)
+            midpoints = []
+            for rail in satin_segments[0].geoms:
+                midpoints.append(rail.interpolate(0.5, normalized=True))
+            line = scale(LineString(midpoints), xfact=1.1, yfact=1.1)
+            rail = [MultiLineString([line])]
+            return [satin_segments + rail]
 
         if len(self.rung_sections) == 2 and self.rung_sections[0] == self.rung_sections[1]:
             combined_satins = self._get_two_rung_circle_geoms(rung_segments, satin_segments)
