@@ -1,7 +1,7 @@
 ---
 title: "Outils Remplissage"
 permalink: /fr/docs/fill-tools/
-last_modified_at: 2025-05-26
+last_modified_at: 2026-01-06
 toc: true
 ---
 ## Briser les objets de remplissage {#break-apart-fill-objects}
@@ -81,7 +81,6 @@ Cela signifie que le motif de broderie peut varier en fonction de l'emplacement 
 Pour une meilleure planification, il est utile d'ajuster la grille de la page à la taille du motif de point de croix. Cela facilite l'estimation visuelle de l'emplacement des points.
 
 La grille peut également être définie manuellement dans « Fichier > Propriétés du document… > Grilles ». Vous y trouverez un paramètre « Aligner sur la page », qui n'est pas accessible via l'extension Ink/Stitch. Il est donc important de vérifier que la grille nouvellement générée est alignée avec le coin supérieur gauche de la page. Dans le cas contraire, ce paramètre doit être ajusté manuellement.
-
 {: .notice--warning }
 
 #### Pixelliser les éléments de remplissage
