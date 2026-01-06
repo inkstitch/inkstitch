@@ -1,7 +1,7 @@
 ---
 title: "Point manuel"
 permalink: /fr/docs/stitches/manual-stitch/
-last_modified_at: 2024-04-28
+last_modified_at: 2026-01-06
 toc: true
 ---
 ## De quoi s'agit-il
