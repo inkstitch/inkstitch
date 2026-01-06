@@ -88,12 +88,42 @@ class CrossGeometry(object):
         cross['corners'] = [coords[0], coords[1], coords[2], coords[3]]
         self.crosses.append(cross)
 
+def top_left(cross):
+    return cross['corners'][0]
+
+def top_right(cross):
+    return cross['corners'][1]
+
+def bottom_right(cross):
+    return cross['corners'][2]
+
+def bottom_left(cross):
+    return cross['corners'][3]
+
+def center_point(cross):
+    return cross['center_point']
+
+
+
 
 def even_cross_stitch(fill, shape, starting_point):
     cross_geoms = CrossGeometry(fill, shape, fill.cross_stitch_method)
     #print(cross_geoms.crosses, file=sys.stderr)
+    cross = cross_geoms.crosses[0]
+    sys.stderr.write(f"First cross at center {cross['center_point']} with corners {cross['corners']}.\n")
+    sys.stderr.write(f"left top corner: {top_left(cross)}\n")
+    sys.stderr.write(f"right top corner: {top_right(cross)}\n")
+    sys.stderr.write(f"right bottom corner: {bottom_right(cross)}\n")
+    sys.stderr.write(f"left bottom corner: {bottom_left(cross)}\n") 
+
+    
  
     subgraphs = _build_connect_subgraph(cross_geoms)
+    sys.stderr.write(f"Built {len(subgraphs)} connected subgraphs for cross stitch pattern.\n")
+    for node in subgraphs[0].nodes:
+        node_crosses = subgraphs[0].nodes[node]['crosses']
+        sys.stderr.write(f"Node: {node} belongs to  {len(node_crosses)} crosses :{node_crosses}\n")
+
     eulerian_cycles = _build_eulerian_cycles(subgraphs)
     # sys.stderr.write(f"Built {len(eulerian_cycles)} eulerian cycles for cross stitch pattern.\n")
     # for cycle in eulerian_cycles:
