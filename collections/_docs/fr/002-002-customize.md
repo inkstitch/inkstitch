@@ -1,7 +1,7 @@
 ---
 title: "Personnaliser Ink/Stitch"
 permalink: /fr/docs/customize/
-last_modified_at: 2024-09-10
+last_modified_at: 2026-01-06
 toc: true
 ---
 ## Raccourcis Clavier
