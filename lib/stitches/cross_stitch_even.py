@@ -184,7 +184,8 @@ def _build_eulerian_cycles(subgraphs,nb_repeats):
         # if increased_cycle != []:
         #     eulerian_cycles.append(increased_cycle)
         
-        ## we don't want to start from a center
+        # we  should start at a corner point close to the starting point, if no starting point is given any corner poiont will do
+        # we just don't want to start from a center
         
         cycle = _build_row_tour_above(subgraph, list(subgraph.nodes)[1], nb_repeats)
         if cycle == []:
