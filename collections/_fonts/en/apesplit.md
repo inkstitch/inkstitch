@@ -9,6 +9,7 @@ preview_image:
 data_title:
   - apesplit
 ---
+{% include upcoming_release.html %}
 {% include font_infos.html %}
 {% include end_of_font_page.html %}
 {% include folder-galleries path="fonts/apesplit/" %}
