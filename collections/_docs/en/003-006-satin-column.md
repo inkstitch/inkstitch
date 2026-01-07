@@ -6,45 +6,45 @@ toc: true
 ---
 ## What it is
 
-Satin stitch is mostly used for borders, letters or small fill areas.
+Satin stitch is used for borders, letters or small fill areas.
 
 ![Stitch Types - Satin Column](/assets/images/docs/stitch-type-satincolumn.jpg)
 
 ## How to create
 
-Ink/Stitch offers several option to create satin columns. Methods 1-4 will convert to a manual satin column which then can be modified as necessary.
+Ink/Stitch offers several option to create satin columns. Methods 1 to 4 create convert to a manual satin column which then can be modified as necessary. Method 5 allows for more customization. 
 
 ![Methods](/assets/images/docs/satin_methods.svg)
 
 1. [Line to Satin](#1-line-to-satin): for equal width satin columns
-2. [Line to Live Path Effect Satin](#2-line-to-live-path-effect-satin): easily modifiable satin column with optional patterned outline
-3. [Zigzag Line to Satin](#3-zigzag-line-to-satin): simple satin column creation for graphic tablets and touch screens
+2. [Line to Live Path Effect Satin](#2-line-to-live-path-effect-satin): modifiable satin column with optional patterned outline
+3. [Zigzag Line to Satin](#3-zigzag-line-to-satin): satin column creation for graphic tablets and touch screens
 4. [Fill to Satin](#4-fill-to-satin): create satin columns from fills
 5. [Manual Satin Column](#5-manual-satin-column): take full control over every part of the satin column
 
-### 1. Line to Satin
-#### Method 1
-* Add a contour to a path object (with no filling).
-* Set contour width to the size you want your satin stitch to be.
+### Method 1 - Line to Satin
+#### Option 1
+* Add a contour to a path object (with no fill).
+* Set contour width to the size of the desired satin stitch.
 * Run `Extensions > Ink/Stitch > Satin Tools > Convert Line to Satin`
 * Optionally run use autoroute to optimize `Extensions > Ink/stitch > Satin Tools > Auto-route Satin...`
 * Use as-is or customize rungs and/or rails
 
 Get more information about [Stroke to Satin](/docs/satin-tools/#convert-line-to-satin)
 {% include upcoming_release.html %}
-#### Method 2
-* Add a contour to a path object (with no filling).
-* Set contour width to the size you want your satin stitch to be (or to any width larger than 0.3, but you will need too add a lot off pull compensation to reach a correct width)
+#### Option 2
+* Add a contour to a path object (with no fill).
+* Set contour width to the size of the desired satin stitch (or to any width larger than 0.3, you will need pull compensation to reach a correct width)
 * Run `Extensions > Ink/Stitch > Params
 * Open the Satin Column Tab and activate Custom Satin Columns
   
-With this second method, the position of the nodes can influence how the satin will be rendered:
+With Option 2, the position of the nodes can influence how the satin will be rendered:
 
 ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
 
 
 
-### 2. Line to Live Path Effect Satin
+### Method 2 - Line to Live Path Effect Satin
 
 This can be used to create a satin which can either have a patterned outline or to create a satin which is more easily to adapt in width. Please note, that once you use auto-routing on this type of satin, the live path effect will be applied and the path can only be adapted manually afterwards.
 
@@ -52,19 +52,19 @@ Use `Path > Object to path` to convert this to a standard satin column.
 
 Get more information about [Live Path Effect Satins](/docs/satin-tools/#stroke-to-live-path-effect-satin)
 
-### 3. Zigzag Line to Satin
+### Method 3 - Zigzag Line to Satin
 
-This method is most convenient in case you have a touch screen or graphic tablet at hand.
+This method is convenient when you use a a touch screen or graphic tablet.
 
 Get more information about [Zigzag Line to Satin](/docs/satin-tools/#zigzag-line-to-satin)
 
-### 4. Fill to Satin
+### Method 4 - Fill to Satin
 
-Fill to satin can be used to convert a set of fills into a set of satins. It is a semi-automatic function and requires a little manual work.
+Fill to Satin can be used to convert a fill into a satin stitch. It is a semi-automatic function and requires a little manual work.
 
 Get more information about [Fill to Satin](/docs/satin-tools/#fill-to-satin)
 
-### 5. Manual Satin Column
+### Method 5 - Manual Satin Column
 
 A satin column is defined by a shape made of **two mostly-parallel lines**. Ink/Stitch will draw zig-zags back and forth between the two lines. Vary the thickness of the column as you like.
 
