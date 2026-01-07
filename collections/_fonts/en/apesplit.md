@@ -4,7 +4,7 @@ permalink: /fonts/apesplit/
 last_modified_at: 2026-01-07
 toc: false
 preview_image:
-  - url: /assets/images/fonts/apesplip.jpg
+  - url: /assets/images/fonts/apesplit.jpg
     height: 60
 data_title:
   - apesplit
