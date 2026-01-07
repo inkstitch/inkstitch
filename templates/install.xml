@@ -10,6 +10,8 @@
                    gui-description="Installs some default thread color palettes.">true</param>
             <param name="install-symbol-libraries" type="boolean" gui-text="Install symbol libraries"
                    gui-description="Installs symbol libraries with reusable motifs for embroidery">true</param>
+            <param name="install-keyboard-shortcuts" type="boolean" gui-text="Install keyboard shortcuts"
+                   gui-description="Installs keyboard shortcuts for common Ink/Stitch functions: Alt+E (Params), Alt+S (Simulator), Alt+V (Preview), Alt+T (Troubleshoot), Alt+L (Lettering), Alt+R (Reorder)">true</param>
         </page>
         <page name="info" gui-text="Help">
             <label>Installs color palettes or a motif stitch symbol library into Inkscape.</label>

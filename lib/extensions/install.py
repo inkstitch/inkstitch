@@ -11,6 +11,7 @@ from inkex import Boolean, errormsg
 
 from ..i18n import _
 from ..utils import get_bundled_dir, guess_inkscape_config_path
+from ..utils.keyboard_shortcuts import install_keyboard_shortcuts as install_shortcuts
 from .base import InkstitchExtension
 
 
@@ -20,6 +21,7 @@ class Install(InkstitchExtension):
         self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("--install-palettes", type=Boolean, default=False, dest="install_palettes")
         self.arg_parser.add_argument("--install-symbol-libraries", type=Boolean, default=False, dest="install_symbol_libraries")
+        self.arg_parser.add_argument("--install-keyboard-shortcuts", type=Boolean, default=False, dest="install_keyboard_shortcuts")
 
         self.inkscape_config_path = guess_inkscape_config_path()
         self.install_resources = get_bundled_dir('addons')
@@ -30,7 +32,9 @@ class Install(InkstitchExtension):
             installation_success.append(self.install_palettes())
         if self.options.install_symbol_libraries:
             installation_success.append(self.install_symbol_libraries())
-        if all(installation_success):
+        if self.options.install_keyboard_shortcuts:
+            installation_success.append(self.install_keyboard_shortcuts())
+        if installation_success and all(installation_success):
             self.install_success_message()
 
     def install_palettes(self):
@@ -52,6 +56,19 @@ class Install(InkstitchExtension):
             return True
         except IOError as error:
             self.install_error_message(_("Could not install color palettes. Please file an issue on"), error)
+            return False
+
+    def install_keyboard_shortcuts(self):
+        """Install keyboard shortcuts for Ink/Stitch into Inkscape's keymap."""
+        try:
+            added = install_shortcuts()
+            if added:
+                return True
+            else:
+                # No new shortcuts added (they already exist)
+                return True
+        except (IOError, OSError) as error:
+            self.install_error_message(_("Could not install keyboard shortcuts. Please file an issue on"), error)
             return False
 
     def install_success_message(self):
