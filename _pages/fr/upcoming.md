@@ -26,6 +26,9 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Apex simple small AGS](/fr/fonts/apex/)
 
   ![Apex simple small](/assets/images/fonts/apex_simple_small_AGS.png)
+* [Apesplit](/fr/onts/apespit/)
+    
+  ![Apesplit](/assets/images/fonts/apesplit.jpg)
 * [Braille](/fonts/braille/)
 
   ![Braille](/assets/images/fonts/braille.png)
