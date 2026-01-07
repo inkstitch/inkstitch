@@ -1,5 +1,5 @@
 ---
-title: "Satin Column"
+title: "Satin Stitch"
 permalink: /docs/stitches/satin-column/
 last_modified_at: 2025-12-29
 toc: true
@@ -8,7 +8,7 @@ toc: true
 
 Satin stitch is used for borders, letters or small fill areas.
 
-![Stitch Types - Satin Column](/assets/images/docs/stitch-type-satincolumn.jpg)
+![Stitch Types - Satin Stitch](/assets/images/docs/stitch-type-satincolumn.jpg)
 
 ## How to create
 
@@ -16,17 +16,17 @@ Ink/Stitch offers several option to create satin columns. Methods 1 to 4 create 
 
 ![Methods](/assets/images/docs/satin_methods.svg)
 
-1. [Line to Satin](#1-line-to-satin): for equal width satin columns
-2. [Line to Live Path Effect Satin](#2-line-to-live-path-effect-satin): modifiable satin column with optional patterned outline
-3. [Zigzag Line to Satin](#3-zigzag-line-to-satin): satin column creation for graphic tablets and touch screens
+1. [Stroke to Satin](#1-line-to-satin): for equal width satin columns
+2. [Stroke to Live Path Effect Satin](#2-line-to-live-path-effect-satin): modifiable satin column with optional patterned outline
+3. [Zigzag to Satin](#3-zigzag-line-to-satin): satin column creation for graphic tablets and touch screens
 4. [Fill to Satin](#4-fill-to-satin): create satin columns from fills
 5. [Manual Satin Column](#5-manual-satin-column): take full control over every part of the satin column
 
-### Method 1 - Line to Satin
+### Method 1 - Stroke to Satin
 #### Option 1
 * Add a contour to a path object (with no fill).
 * Set contour width to the size of the desired satin stitch.
-* Run `Extensions > Ink/Stitch > Satin Tools > Convert Line to Satin`
+* Run `Extensions > Ink/Stitch > Satin Tools > Convert Stroke to Satin`
 * Optionally run use autoroute to optimize `Extensions > Ink/stitch > Satin Tools > Auto-route Satin...`
 * Use as-is or customize rungs and/or rails
 
@@ -44,7 +44,7 @@ With Option 2, the position of the nodes can influence how the satin will be ren
 
 
 
-### Method 2 - Line to Live Path Effect Satin
+### Method 2 - Stroke to Live Path Effect Satin
 
 This can be used to create a satin which can either have a patterned outline or to create a satin which is more easily to adapt in width. Please note, that once you use auto-routing on this type of satin, the live path effect will be applied and the path can only be adapted manually afterwards.
 
@@ -52,11 +52,11 @@ Use `Path > Object to path` to convert this to a standard satin column.
 
 Get more information about [Live Path Effect Satins](/docs/satin-tools/#stroke-to-live-path-effect-satin)
 
-### Method 3 - Zigzag Line to Satin
+### Method 3 - Zigzag to Satin
 
 This method is convenient when you use a a touch screen or graphic tablet.
 
-Get more information about [Zigzag Line to Satin](/docs/satin-tools/#zigzag-line-to-satin)
+Get more information about [Zigzag to Satin](/docs/satin-tools/#zigzag-line-to-satin)
 
 ### Method 4 - Fill to Satin
 
