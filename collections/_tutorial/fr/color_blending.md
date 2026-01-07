@@ -1,7 +1,7 @@
 ---
 title: Mélange de couleurs
 permalink: /fr/tutorials/color-blending/
-last_modified_at: 2023-05-16
+last_modified_at: 2026-01-07
 language: fr
 excerpt: "Dégradés de couleur"
 image: "/assets/images/tutorials/tutorial-preview-images/blend.png"
@@ -17,16 +17,16 @@ user-level:
 ---
 Les remplissages automatiques ne sont pas forcement des aplats de couleurs, il est possible d'avoir des remplissages en dégradé. 
 
-## Linear Gradient Fill
+## Remplissage en dégradé linéaire
 
-Generating color gradients with Ink/Stitch has become easy. The best quality can be achieved with the [linear gradient fill stitch type](/fr/docs/stitches/linear-gradient-fill/), which aims to produce a flawless fill in terms of row and stitch positions despite the color changes.
+La génération de dégradés de couleurs avec Ink/Stitch est devenue facile. La meilleure qualités sera obtenue en utilisant le
+[remplissage en dégradé linéaire](/fr/docs/stitches/linear-gradient-fill/), qui cherche à produire un remplissage aussi régulier que possible en terme de position des points et des rangées malgré les changements  de couleur.
 
-* Create a shape with an inkscape gradient fill
-* In the params dialog choose "Linear Gradient Fill" as the fill method
+* Créez un remplissage avec un dégradé linéaire dans Inkscape
+* Dans le dialogue de paramétrage, choisir la méthode "remplissage en dégradé linéaire"
 
-## Convert to Gradient Block extension
-
-Ink/Stitch has a tool to split color gradient fills into separate blocks. It doesn't deliver the same quality result as the usage of the linear gradient fill, but can be used for more experimental purposes. The [convert to gradient blocks extension](docs/fill-tools/#convert-to-gradient-blocks)
+## Extension : Convertir en blocs de dégradés
+Ink/Stitch dispose aussi d'un outil qui permet de séparer  des remplissages dégradés en plusieurs blocs monochromes indépendant. La qualité ne sera pas aussi bonne qu'avec un remplissage en dégradé linéaire, mais cela peut parfois être utile.Voir l'extension [Convertir en blocs de dégradés](/fr/docs/fill-tools/#convert-to-gradient-blocks)
 
 * Créer une forme dont la couleur est un dégradé Inkscape, choisissez l'angle du dégradé sur le canevas  en mode édition de noeuds à l'aide des poignées du dégradé, c'est cette direction qui détermine l'*angle* du remplissage.
 * Choisir la méthode de remplissage **automatique** et vos autres paramètres de remplissage (mais l'angle ou l'espacement final entre les rangées seront ignorés, et toute sous-couche sera ignorée)
@@ -51,13 +51,13 @@ Ces 2n blocs de dégradé ont tous un espacement variable. Si l'on regarde deux 
 Donner une valeur au paramètre *Espacement final entre les rangées* déclenche un espacement variable entre les rangées.
 En regardant perpendiculairement à l'*angle* de remplissage, l'espacement entre les rangées varie linéairement depuis la valeur  *espacement entre les rangées* jusqu'à la valeur *espacement final entre les rangées*.
 
-Les deux blocs de dégradés que `Extensions > Ink/Stitch > Outils : Remplissage> Convertir en blocs de dégradés` empile sur chaque partie de la forme ont en fait le mêmes valeurs pour  *espacement entre les rangées* et  *espacement final entre les rangées*, mais leur *angles*  de remplissage sont opposés, remplissant ainsi les conditions d'obtention d'un dégradé. Les valeurs de ces paramètre dépendent du paramètrage initial de la forme, et visent à maintenir la densité de points souhaités. Il n'y a pas de sous-couche, sauf éventuellement sur les parties monochromes du dégradé.
+Les deux blocs de dégradés que `Extensions > Ink/Stitch > Outils : Remplissage> Convertir en blocs de dégradés` empile sur chaque partie de la forme ont en fait le mêmes valeurs pour  *espacement entre les rangées* et  *espacement final entre les rangées*, mais leur *angles*  de remplissage sont opposés, remplissant ainsi les conditions d'obtention d'un dégradé. Les valeurs de ces paramètre dépendent du paramétrage initial de la forme, et visent à maintenir la densité de points souhaités. Il n'y a pas de sous-couche, sauf éventuellement sur les parties monochromes du dégradé.
 
 
 ### Ajuster le résultat
 
 Utiliser l'extension plutôt que créer manuellement le découpage de la forme en  blocs de dégradés  est un énorme gain de temps. 
-Vous pouvez modifier précautioneusement les valeurs des paramètres *espacement entre les rangées* et  *espacement final entre les rangées* pour obtenir un effet de dégradé différent, mais soyez attentif à de possibles problèmes de densité . Souvenez vous que la densité dépend de l'inverse de l'*espacement entre les rangées*. Si les deux couleurs confondues, vous souhaitez un certain *espacement entre les rangées* **e**, la somme des inverses des espacement entre les rangées des deux blocs dégradés doit être égale à **1/e**, de même que la somme des inverses des *espacements finaux entre les rangées*.
+Vous pouvez modifier précautionneusement les valeurs des paramètres *espacement entre les rangées* et  *espacement final entre les rangées* pour obtenir un effet de dégradé différent, mais soyez attentif à de possibles problèmes de densité . Souvenez vous que la densité dépend de l'inverse de l'*espacement entre les rangées*. Si les deux couleurs confondues, vous souhaitez un certain *espacement entre les rangées* **e**, la somme des inverses des espacement entre les rangées des deux blocs dégradés doit être égale à **1/e**, de même que la somme des inverses des *espacements finaux entre les rangées*.
 
 
 
