@@ -1,7 +1,7 @@
 ---
 title: Satin Aléatoire
 permalink: /fr/tutorials/random_satin/
-last_modified_at: 2026-01-O7
+last_modified_at: 2026-01-07
 language: fr
 excerpt: "Satin aléatoire"
 image: "/assets/images/tutorials/randomized_satin/random_satin.jpg"
