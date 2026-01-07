@@ -111,16 +111,36 @@ def center_point(cross):
 
 def even_cross_stitch(fill, shape, starting_point, threads_number):
     nb_repeats = (threads_number // 2) - 1
+    method = fill.cross_stitch_method
+
     cross_geoms = CrossGeometry(fill, shape, fill.cross_stitch_method)
     subgraphs = _build_connect_subgraphs(cross_geoms)
 
     starting_corner = get_starting_corner(starting_point, None, cross_geoms)
 
-    # starting_corner = list(subgraphs[0].nodes)[1]
-
     eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_corner, nb_repeats)
+    if "flipped" in cross_geoms.cross_stitch_method:
+        for i in range(len(eulerian_cycles)):
+            eulerian_cycles[i] = eulerian_cycles[i][::-1]
+
+    if method == "double_cross":
+        method = "upright_cross"
+        last_point = eulerian_cycles[-1][-1]
+        cross_geoms = CrossGeometry(fill, shape, method)
+        subgraphs = _build_connect_subgraphs(cross_geoms)
+        starting_corner = get_starting_corner(starting_point, None, cross_geoms)
+        new_eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_corner, nb_repeats)
+        first_point = new_eulerian_cycles[0][0]
+        eulerian_cycles += travel(last_point, first_point)
+        eulerian_cycles += new_eulerian_cycles
+
     stitches = _cycles_to_stitches(eulerian_cycles)
     return [stitches]
+
+
+def travel(last_point, first_point):
+    path = []
+    return path
 
 
 def get_starting_corner(starting_point, ending_point, cross_geoms):
@@ -190,7 +210,6 @@ def _build_eulerian_cycles(subgraphs, starting_point, nb_repeats):
                     cycle_to_insert = _build_row_tour_above(subgraph, node, nb_repeats)
                     if cycle_to_insert == []:
                         cycle_to_insert = _build_row_tour_below(subgraph, node, nb_repeats)
-
                     cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
         eulerian_cycles.append(cycle)
 

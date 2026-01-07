@@ -11,5 +11,7 @@ from .cross_stitch_odd import odd_cross_stitch
 
 def cross_stitch(fill, shape, starting_point, ending_point):
     if fill.cross_thread_count % 2 == 0:
+        if fill.cross_stitch_method in ['half_cross', 'half_cross_flipped']:
+            return odd_cross_stitch(fill, shape, starting_point, ending_point)
         return even_cross_stitch(fill, shape, starting_point, fill.cross_thread_count)
     return odd_cross_stitch(fill, shape, starting_point, ending_point)
