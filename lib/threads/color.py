@@ -7,7 +7,7 @@ import colorsys
 
 from inkex import Color, ColorError
 
-from pystitch.EmbThread import EmbThread
+from pystitch.core.thread import EmbThread
 
 
 class ThreadColor(object):
