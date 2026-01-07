@@ -1,7 +1,7 @@
 ---
 title: Compensation d'étirement
 permalink: /fr/tutorials/push-pull-compensation/
-last_modified_at: 2019-10-25
+last_modified_at: 2026-01-07
 language: fr
 excerpt: Push/Pull Compensation
 image: /assets/images/tutorials/embroidery/push-pull-effect.svg
