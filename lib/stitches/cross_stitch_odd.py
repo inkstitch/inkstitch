@@ -153,7 +153,7 @@ def cross_stitch_multiple(outline, fill, starting_point, ending_point, double_pa
 
 
 def get_start_and_end(starting_point, ending_point, snap_points, outline):
-    '''Snap starting and ending point on existng spots on our cross stitch pattern
+    '''Snap starting and ending point on existing spots on our cross stitch pattern
     '''
     if starting_point is not None:
         starting_point = nearest_points(snap_points, Point(starting_point))[0].coords
