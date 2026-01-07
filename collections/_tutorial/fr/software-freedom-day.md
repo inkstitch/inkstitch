@@ -1,7 +1,7 @@
 ---
 title: Software Freedom Day
 permalink: /fr/tutorials/software-freedom-day/
-last_modified_at: 2023-10-01
+last_modified_at: 2023-10-10
 language: fr
 excerpt: "Software Freedom Day example file"
 image: "/assets/images/tutorials/software-freedom-day/StitchoutSFD.jpg"
