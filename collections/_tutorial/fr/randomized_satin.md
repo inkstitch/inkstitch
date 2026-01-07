@@ -1,9 +1,9 @@
 ---
-title: Random Satin
+title: Satin Aléatoire
 permalink: /fr/tutorials/random_satin/
-last_modified_at: 2023-05-27
+last_modified_at: 2026-01-O7
 language: fr
-excerpt: "Random Satin"
+excerpt: "Satin aléatoire"
 image: "/assets/images/tutorials/randomized_satin/random_satin.jpg"
 
 tutorial-type:
