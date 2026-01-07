@@ -114,9 +114,18 @@ def even_cross_stitch(fill, shape, starting_point, threads_number):
     method = fill.cross_stitch_method
 
     cross_geoms = CrossGeometry(fill, shape, fill.cross_stitch_method)
+    centers = [cross['center_point']  for cross in cross_geoms.crosses]
+    
     subgraphs = _build_connect_subgraphs(cross_geoms)
 
-    starting_corner = get_starting_corner(starting_point, None, cross_geoms)
+    if starting_point:
+        starting_corner = get_starting_corner(starting_point, None, cross_geoms)
+    else:
+        index = 0
+        while list(subgraphs[0].nodes)[index] in centers:
+            index += 1
+        starting_corner = list(subgraphs[0].nodes)[index]
+
 
     eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_corner, nb_repeats)
     if "flipped" in cross_geoms.cross_stitch_method:
@@ -125,22 +134,38 @@ def even_cross_stitch(fill, shape, starting_point, threads_number):
 
     if method == "double_cross":
         method = "upright_cross"
-        last_point = eulerian_cycles[-1][-1]
+        first_center = find_first_center(eulerian_cycles[-1], cross_geoms)
+        last_center = find_last_center(eulerian_cycles[-1], cross_geoms)
+        connecting_point = nearest_points(MultiPoint([first_center,last_center]), Point(starting_point))[0]
+        connexion = (connecting_point.x, connecting_point.y)
+        eulerian_cycles[-1] += [connexion]
+
         cross_geoms = CrossGeometry(fill, shape, method)
         subgraphs = _build_connect_subgraphs(cross_geoms)
-        starting_corner = get_starting_corner(starting_point, None, cross_geoms)
+        if starting_point:
+            starting_corner = get_starting_corner(starting_point, None, cross_geoms)
+        else:
+            starting_corner = list(subgraphs[0].nodes)[1]
         new_eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_corner, nb_repeats)
-        first_point = new_eulerian_cycles[0][0]
-        eulerian_cycles += travel(last_point, first_point)
+     
         eulerian_cycles += new_eulerian_cycles
 
     stitches = _cycles_to_stitches(eulerian_cycles)
     return [stitches]
 
+def find_first_center(cycle, cross_geoms):
+    centers = [cross['center_point']  for cross in cross_geoms.crosses]
+    index = 0
+    while cycle[index] not in centers:
+        index += 1
+    return cycle[index]
 
-def travel(last_point, first_point):
-    path = []
-    return path
+def find_last_center(cycle, cross_geoms):
+    centers = [cross['center_point']  for cross in cross_geoms.crosses]
+    index = -1
+    while cycle[index] not in centers:
+        index -= 1
+    return cycle[index]
 
 
 def get_starting_corner(starting_point, ending_point, cross_geoms):
@@ -185,7 +210,7 @@ def _build_connect_subgraphs(cross_geoms):
     return [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
 
-def _build_eulerian_cycles(subgraphs, starting_point, nb_repeats):
+def _build_eulerian_cycles(subgraphs, starting_corner, nb_repeats):
     """ We need to construct an eulerian cycle for each subgraph, but we need to make sure
     that no cross is flipped
     So we construct partial cycles (tours) that cover rows of crosses without flipping any cross
@@ -200,9 +225,9 @@ def _build_eulerian_cycles(subgraphs, starting_point, nb_repeats):
     eulerian_cycles = []
     for subgraph in subgraphs:
         # starting point belongs to at least a row of cross either above or belox
-        cycle = _build_row_tour_above(subgraph, starting_point, nb_repeats)
+        cycle = _build_row_tour_above(subgraph, starting_corner, nb_repeats)
         if cycle == []:
-            cycle = _build_row_tour_below(subgraph, starting_point, nb_repeats)
+            cycle = _build_row_tour_below(subgraph, starting_corner, nb_repeats)
 
         while not is_covered(subgraph):
             for node in cycle:
@@ -272,7 +297,7 @@ def _build_row_tour_above(subgraph, node, nb_repeats):
     tour = [node]
     covered_crosses = []
     current_node = node
-    while cross_above_to_the_left(subgraph, current_node):
+    while cross_above_to_the_left(subgraph, current_node) is not None:
         tour.append(center_point(cross_above_to_the_left(subgraph, current_node)))
         tour.append(center_point(cross_above_to_the_left(subgraph, current_node)))
         tour.append(center_point(cross_above_to_the_left(subgraph, current_node)))
