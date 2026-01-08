@@ -115,15 +115,19 @@ def middle_point(cross):
 
 def even_cross_stitch(fill, shape, starting_point, threads_number):
     nb_repeats = (threads_number // 2) - 1
-    #method = fill.cross_stitch_method
-
+    method = fill.cross_stitch_method
     cross_geoms = CrossGeometry(fill, shape, fill.cross_stitch_method)
     subgraphs = _build_connect_subgraphs(cross_geoms)
-    eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats)
-    
-    if "flipped" in cross_geoms.cross_stitch_method:
-        for i in range(len(eulerian_cycles)):
-            eulerian_cycles[i] = eulerian_cycles[i][::-1]
+    if method != "double_cross":
+        
+        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats)
+        
+        if "flipped" in cross_geoms.cross_stitch_method:
+            for i in range(len(eulerian_cycles)):
+                eulerian_cycles[i] = eulerian_cycles[i][::-1]
+    else:
+        # eulerian_cycles = _build_eulerian_double_cycles(subgraphs, starting_point, cross_geoms, nb_repeats)
+        sys.stderr.write("double")
 
     # if method == "double_cross":
     #     method = "upright_cross"
@@ -199,18 +203,18 @@ def _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats):
 
     eulerian_cycles = []
     centers = [cross['center_point']  for cross in cross_geoms.crosses]
-    i=0
+   # i=0
     if cross_geoms.crosses != [] and starting_point:
         first_subgraph = find_index_first_subgraph(subgraphs, cross_geoms.crosses, starting_point)
         subgraphs[0], subgraphs[first_subgraph] = subgraphs[first_subgraph], subgraphs[0]
     for subgraph in subgraphs:
-        i=i+1
+       # i=i+1
         #available crosses for the subgraph
         subcrosses = find_available_crosses(subgraph, cross_geoms.crosses)
         if subcrosses == []:
             continue
         # sys.stderr.write(f" noeuds du graphe  {i} nombre de croix   {len(list(subgraph.nodes))} {len(subcrosses)}.\n")
-        if starting_point and i==1:
+        if starting_point:# and i==1:
             starting_corner = get_starting_corner(starting_point, subcrosses)
         else:
             index = 0
