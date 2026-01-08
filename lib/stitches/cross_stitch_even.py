@@ -235,30 +235,20 @@ def _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats,do
                             cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
         else:
             #constructing  double crosses
+            
             cycle = _build_double_row_tour_above(subcrosses, starting_corner, nb_repeats)
-            if cycle != []:
-                sys.stderr.write("above")
-            #cycle = _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats)
+           
             if cycle == []:
                 cycle = _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats)
-                if cycle != []:
-                    sys.stderr.write("above")
+              
             while subcrosses != []:
-                cycle_to_insert =[]
-                
-                for node in cycle[::-1]:
+                for node in cycle:
                     for cross in subcrosses:
-                        if node in cross['corners'] and cycle_to_insert ==[]:
+                        if node in cross['corners']:# and cycle_to_insert ==[]:
                             cycle_to_insert = _build_double_row_tour_above(subcrosses, node, nb_repeats)
-                            if cycle_to_insert != []:
-                                sys.stderr.write("above")
                             if cycle_to_insert == []:
                                 cycle_to_insert = _build_double_row_tour_below(subcrosses, node, nb_repeats)
-                                if cycle_to_insert != []:
-                                    sys.stderr.write("above")
-                        if cycle_to_insert != []:
-                            break
-                cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
+                            cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
 
         eulerian_cycles.append(cycle)
         # other connected components have no starting_point command
