@@ -5,7 +5,6 @@
 
 import networkx as nx
 
-import sys
 from ..stitch_plan import Stitch
 from shapely.geometry import Polygon, MultiPoint, Point
 from shapely import prepare
@@ -134,13 +133,13 @@ def even_cross_stitch(fill, shape, starting_point, threads_number):
     cross_geoms = CrossGeometry(fill, shape, fill.cross_stitch_method)
     subgraphs = _build_connect_subgraphs(cross_geoms)
     if method != "double_cross":
-        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats)
+        eulerian_cycles = _build_eulerian_simple_cycles(subgraphs, starting_point, cross_geoms, nb_repeats)
 
         if "flipped" in cross_geoms.cross_stitch_method:
             for i in range(len(eulerian_cycles)):
                 eulerian_cycles[i] = eulerian_cycles[i][::-1]
     else:
-        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats, True)
+        eulerian_cycles = _build_eulerian_double_cycles(subgraphs, starting_point, cross_geoms, nb_repeats)
 
     stitches = _cycles_to_stitches(eulerian_cycles)
     return [stitches]
@@ -184,7 +183,14 @@ def _build_connect_subgraphs(cross_geoms):
     return [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
 
-def _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats, double=False):
+def _build_row_tour(subcrosses, starting_corner, nb_repeats):
+    cycle = _build_row_tour_above(subcrosses, starting_corner, nb_repeats)
+    if cycle == []:
+        cycle = _build_row_tour_below(subcrosses, starting_corner, nb_repeats)
+    return cycle
+
+
+def _build_eulerian_simple_cycles(subgraphs, starting_point, cross_geoms, nb_repeats):
     """ We need to construct an eulerian cycle for each subgraph, but we need to make sure
     that no cross is flipped
     So we construct partial cycles (tours) that cover rows of crosses without flipping any cross
@@ -217,34 +223,73 @@ def _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats, d
                 index += 1
             starting_corner = list(subgraph.nodes)[index]
 
-        if not double:
-            cycle = _build_row_tour_above(subcrosses, starting_corner, nb_repeats)
-            if cycle == []:
-                cycle = _build_row_tour_below(subcrosses, starting_corner, nb_repeats)
+        cycle = _build_row_tour(subcrosses, starting_corner, nb_repeats)
 
-            while subcrosses != []:
-                for node in cycle:
-                    for cross in subcrosses:
-                        if node in cross['corners']:
-                            cycle_to_insert = _build_row_tour_above(subcrosses, node, nb_repeats)
-                            if cycle_to_insert == []:
-                                cycle_to_insert = _build_row_tour_below(subcrosses, node, nb_repeats)
-                            cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
+        while subcrosses != []:
+            for node in cycle:
+                for cross in subcrosses:
+                    if node in cross['corners']:
+                        cycle_to_insert = _build_row_tour(subcrosses, node, nb_repeats)
+                        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
+
+        eulerian_cycles.append(cycle)
+        # other connected components have no starting_point command
+        starting_point = None
+
+    return eulerian_cycles
+
+
+def _build_double_row_tour(subcrosses, starting_corner, nb_repeats):
+
+    cycle = _build_double_row_tour_above(subcrosses, starting_corner, nb_repeats)
+    if cycle == []:
+        cycle = _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats)
+    return cycle
+
+
+def _build_eulerian_double_cycles(subgraphs, starting_point, cross_geoms, nb_repeats):
+    """ We need to construct an eulerian cycle for each subgraph, but we need to make sure
+    that no cross is flipped
+    Actually  we allow the first layer of crosses to be flipped, but not the second layer
+    of uprighht crosses.
+    So we construct partial cycles (tours) that cover rows of crosses without flipping any cross
+    and we insert those partial cycles into the eulerian cycle until all crosses are covered
+
+    We use a slightly different row tour, depending whether the starting point is above or below
+    the center of the first cross
+
+    diagonals will be added as many times as needed, depending on the number of threads,
+    in a bean stitch fashion """
+
+    eulerian_cycles = []
+    centers = [cross['center_point'] for cross in cross_geoms.crosses]
+    # if there is a starting point, make sure it is relevant to the  first subgraph
+    if cross_geoms.crosses != [] and starting_point:
+        first_subgraph = find_index_first_subgraph(subgraphs, cross_geoms.crosses, starting_point)
+        subgraphs[0], subgraphs[first_subgraph] = subgraphs[first_subgraph], subgraphs[0]
+
+    for subgraph in subgraphs:
+        subcrosses = find_available_crosses(subgraph, cross_geoms.crosses)
+        if subcrosses == []:
+            continue
+
+        if starting_point:
+            starting_corner = get_starting_corner(starting_point, subcrosses)
         else:
-            # constructing  double crosses
-            cycle = _build_double_row_tour_above(subcrosses, starting_corner, nb_repeats)
+            # any corner will do
+            index = 0
+            while list(subgraph.nodes)[index] in centers:
+                index += 1
+            starting_corner = list(subgraph.nodes)[index]
 
-            if cycle == []:
-                cycle = _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats)
+        cycle = _build_double_row_tour(subcrosses, starting_corner, nb_repeats)
 
-            while subcrosses != []:
-                for node in cycle:
-                    for cross in subcrosses:
-                        if node in cross['corners']:
-                            cycle_to_insert = _build_double_row_tour_above(subcrosses, node, nb_repeats)
-                            if cycle_to_insert == []:
-                                cycle_to_insert = _build_double_row_tour_below(subcrosses, node, nb_repeats)
-                            cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
+        while subcrosses != []:
+            for node in cycle:
+                for cross in subcrosses:
+                    if node in cross['corners']:
+                        cycle_to_insert = _build_double_row_tour(subcrosses, node, nb_repeats)
+                        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
 
         eulerian_cycles.append(cycle)
         # other connected components have no starting_point command
