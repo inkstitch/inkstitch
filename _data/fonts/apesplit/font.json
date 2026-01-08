@@ -17,7 +17,7 @@
     "letter_case": "upper",
     "default_glyph": " ",
     "size": 120.0,
-    "min_scale": 0.66,
+    "min_scale": 0.7,
     "max_scale": 1.1,
     "horiz_adv_x_default": 650.0,
     "horiz_adv_x_space": 100,
