@@ -23,23 +23,18 @@ Ink/Stitch offers several option to create satin columns. Methods 1 to 4 create 
 5. [Manual Satin Column](#5-manual-satin-column): take full control over every part of the satin column
 
 ### Method 1 - Stroke to Satin
+This method takes a stroke or a path and converts it to a satin column.   
+
 #### Option 1
-* Add a contour to a path object (with no fill).
-* Set contour width to the size of the desired satin stitch.
-* Run `Extensions > Ink/Stitch > Satin Tools > Convert Stroke to Satin`
-* Optionally run use autoroute to optimize `Extensions > Ink/stitch > Satin Tools > Auto-route Satin...`
-* Use as-is or customize rungs and/or rails
+Using this option, a contour is added to stroke/path using the offset function.  The countor creates a new path around the outside of the line. The contour can be set to the width of the desired satin column. Using `Extensions > Ink/Stitch > Satin Tools > Convert Stroke to Satin`, the satin columns will be created, including the rungs, which can be adjusted. Optionally, use autoroute to optimize `Extensions > Ink/stitch > Satin Tools > Auto-route Satin...`
+
 
 Get more information about [Stroke to Satin](/docs/satin-tools/#convert-line-to-satin)
 {% include upcoming_release.html %}
 #### Option 2
-* Add a contour to a path object (with no fill).
-* Set contour width to the size of the desired satin stitch (or to any width larger than 0.3, you will need pull compensation to reach a correct width)
-* Run `Extensions > Ink/Stitch > Params
-* Open the Satin Column Tab and activate Custom Satin Columns
+Using this option, a contour is added to stroke/path using the offset function.  The contour creates a new path around the outside of the line. The contour can be set to the width of the desired satin column. Using `Extensions > Ink/Stitch > Params, open the Satin Column Tab and activate Custom Satin Columns.
   
 With Option 2, the position of the nodes can influence how the satin will be rendered:
-
 ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
 
 
@@ -52,7 +47,7 @@ Use `Path > Object to path` to convert this to a standard satin column.
 
 Get more information about [Live Path Effect Satins](/docs/satin-tools/#stroke-to-live-path-effect-satin)
 
-### Method 3 - Zigzag to Satin
+### Method 3 - Zigzag Line to Satin
 
 This method is convenient when you use a a touch screen or graphic tablet.
 
@@ -60,13 +55,13 @@ Get more information about [Zigzag to Satin](/docs/satin-tools/#zigzag-line-to-s
 
 ### Method 4 - Fill to Satin
 
-Fill to Satin can be used to convert a fill into a satin stitch. It is a semi-automatic function and requires a little manual work.
+Fill to Satin can be used to convert a fill into a satin stitch. It is a semi-automatic function and requires additional manual work.
 
 Get more information about [Fill to Satin](/docs/satin-tools/#fill-to-satin)
 
 ### Method 5 - Manual Satin Column
 
-A satin column is defined by a shape made of **two mostly-parallel lines**. Ink/Stitch will draw zig-zags back and forth between the two lines. Vary the thickness of the column as you like.
+A satin column is defined by a shape made of **two mostly-parallel lines**. Ink/Stitch will draw zig-zags back and forth between the two lines. The thickness of the column will be based on the distance between the two lines. 
 
 * Combine two strokes with `Path > Combine` or hit `Ctrl+K`.
 * [Check path directions](/docs/customize/#enabling-path-outlines--direction). For the satin column to work, they have to be equal.
