@@ -325,10 +325,16 @@ def _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats):
         cross =cross_below_to_the_left(subcrosses, current_node)
         # first diagonal
         tour.append(bottom_left(cross))
+        for i in range(nb_repeats):
+            tour.append(current_node)
+            tour.append(bottom_left(cross))
         tour.append(center_point(cross))
         tour.append(bottom_right(cross))
         # second diagonal
         tour.append(top_left(cross))
+        for i in range(nb_repeats):
+            tour.append(bottom_right(cross))
+            tour.append(top_left(cross))
         current_node = top_left(cross)
     while current_node != starting_corner:
         # go back to starting_corner  finishing the double crosses
@@ -337,10 +343,16 @@ def _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats):
         tour.append(middle_left(cross))
         # horizontal
         tour.append(middle_right(cross))
+        for i in range(nb_repeats):
+            tour.append(middle_left(cross))
+            tour.append(middle_right(cross))
         tour.append(center_point(cross))
         tour.append(middle_top(cross))
         # vertical
         tour.append(middle_bottom(cross))
+        for i in range(nb_repeats):
+            tour.append(middle_top(cross))
+            tour.append(middle_bottom(cross))
         tour.append(center_point(cross))
         tour.append(top_right(cross))
         current_node = top_right(cross)
@@ -350,10 +362,16 @@ def _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats):
         cross =cross_below_to_the_right(subcrosses, current_node)
         # first diagonal
         tour.append(bottom_right(cross))
+        for i in range(nb_repeats):
+            tour.append(current_node)
+            tour.append(bottom_right(cross))
         tour.append(center_point(cross))
         tour.append(bottom_left(cross))
         # second diagonal
         tour.append(top_right(cross))
+        for i in range(nb_repeats):
+            tour.append(bottom_left(cross))
+            tour.append(top_right(cross))
         current_node = top_right(cross)
        
         
@@ -363,10 +381,16 @@ def _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats):
         tour.append(middle_left(cross))
         # horizontal
         tour.append(middle_right(cross))
+        for i in range(nb_repeats):
+            tour.append(middle_left(cross))
+            tour.append(middle_right(cross))
         tour.append(center_point(cross))
         tour.append(middle_top(cross))
         # vertical
         tour.append(middle_bottom(cross))
+        for i in range(nb_repeats):
+            tour.append(middle_top(cross))
+            tour.append(middle_bottom(cross))
         tour.append(center_point(cross))
         tour.append(top_left(cross))
         current_node = top_left(cross)
