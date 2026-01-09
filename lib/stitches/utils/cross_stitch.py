@@ -21,13 +21,14 @@ class CrossGeometries(object):
         boxes:          a list of box outlines as Polygons
         diagonals:      a list with cross diagonals as LineStrings
     '''
-    def __init__(self, fill, shape, cross_stitch_method):
+    def __init__(self, fill, shape, cross_stitch_method, original_shape=None):
         """Initialize cross stitch geometry generation for the given shape.
 
         Arguments:
-            fill:                   the FillStitch instance
-            shape:                  shape as shapely geometry
-            cross_stitch_method:    cross stitch method as string
+            fill:                       the FillStitch instance
+            shape:                      shape as shapely geometry
+            cross_stitch_method:        cross stitch method as string
+            original_shape (optional):  used for alignment, when shape had to be split up
         """
         self.fill = fill
         self.cross_stitch_method = cross_stitch_method

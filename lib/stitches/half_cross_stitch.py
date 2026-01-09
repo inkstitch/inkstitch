@@ -39,7 +39,7 @@ def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_rep
     max_stitch_length = fill.max_cross_stitch_length
     cross_stitch_method = fill.cross_stitch_method
 
-    cross_geoms = CrossGeometries(fill, shape, cross_stitch_method)
+    cross_geoms = CrossGeometries(fill, shape, cross_stitch_method, original_shape)
 
     if not cross_geoms.boxes:
         return []
@@ -52,7 +52,7 @@ def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_rep
     outline = unary_union(cross_geoms.boxes)
     if outline.geom_type == 'MultiPolygon':
         # we will have to run this on multiple outline shapes
-        return cross_stitch_multiple(outline, fill, starting_point, ending_point, original_shape)
+        return cross_stitch_multiple(outline, fill, starting_point, ending_point, bean_stitch_repeats, original_shape)
 
     # The cross stitch diagonals
     diagonals = ensure_multi_line_string(line_merge(MultiLineString(cross_geoms.diagonals).segmentize(max_stitch_length)))
@@ -64,7 +64,7 @@ def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_rep
     return [stitches]
 
 
-def cross_stitch_multiple(outline, fill, starting_point, ending_point, original_shape):
+def cross_stitch_multiple(outline, fill, starting_point, ending_point, bean_stitch_repeats, original_shape):
     '''Run the cross stitch generator on separated outline components
     '''
     shapes = list(outline.geoms)
@@ -79,7 +79,7 @@ def cross_stitch_multiple(outline, fill, starting_point, ending_point, original_
             end = nearest_points(polygon, shapes[i+1])[0].coords
         else:
             end = ending_point
-        stitches.extend(half_cross_stitch(fill, polygon, starting_point, end, original_shape))
+        stitches.extend(half_cross_stitch(fill, polygon, starting_point, end, bean_stitch_repeats, original_shape))
         starting_point = InkstitchPoint(*stitches[-1][-1])
     return stitches
 
