@@ -377,14 +377,14 @@ class Stroke(EmbroideryElement):
         _("Column Count"),
         tooltip=_("Number of parallel zigzag columns. 1 = same as basic zigzag."),
         type="int",
-        default=3,
+        default=2,
         select_items=[("zigzag_type", "layered")],
         sort_index=11,
     )
     @cache
     def zigzag_layer_count(self):
         """Return the number of zigzag layers."""
-        return max(1, self.get_int_param("zigzag_layer_count", 3))
+        return max(1, self.get_int_param("zigzag_layer_count", 2))
 
     @property
     @param(
@@ -404,37 +404,18 @@ class Stroke(EmbroideryElement):
 
     @property
     @param(
-        "zigzag_inner_layer_width_mm",
-        _("Inner Column Width"),
-        tooltip=_("Width of each inner column. Leave at 0 to auto-calculate based on total width."),
-        unit="mm",
-        type="float",
-        default=0,
+        "zigzag_column_trim",
+        _("Trim Between Columns"),
+        tooltip=_("Add a trim command between each column. When disabled, uses a jump stitch."),
+        type="boolean",
+        default=False,
         select_items=[("zigzag_type", "layered")],
-        sort_index=13,
+        sort_index=15,
     )
     @cache
-    def zigzag_inner_layer_width(self):
-        """Return the inner layer width in pixels."""
-        return max(0, self.get_float_param("zigzag_inner_layer_width_mm", 0)) * PIXELS_PER_MM
-
-    @property
-    @param(
-        "zigzag_inner_intermediate_stitches",
-        _("Inner Intermediate Stitches"),
-        tooltip=_("Extra stitches between peaks for inner columns. -1 = same as outer."),
-        type="int",
-        default=-1,
-        select_items=[("zigzag_type", "layered")],
-        sort_index=14,
-    )
-    @cache
-    def zigzag_inner_intermediate_stitches(self):
-        """Return the intermediate stitches for inner layers."""
-        value = self.get_int_param("zigzag_inner_intermediate_stitches", -1)
-        if value < 0:
-            return self.zigzag_intermediate_stitches  # Use outer value
-        return value
+    def zigzag_column_trim(self):
+        """Return whether to trim between columns."""
+        return self.get_boolean_param("zigzag_column_trim", False)
 
     @property
     @param(
@@ -954,73 +935,116 @@ class Stroke(EmbroideryElement):
 
         layer_count = self.zigzag_layer_count
         layer_spacing = self.zigzag_layer_spacing
-        inner_layer_width = self.zigzag_inner_layer_width
-        inner_intermediate = self.zigzag_inner_intermediate_stitches
-        outer_intermediate = self.zigzag_intermediate_stitches
+        intermediate_stitches = self.zigzag_intermediate_stitches
         alignment_mode = self.zigzag_column_alignment
         is_closed = self.is_closed_unclipped
 
-        # Calculate width for each layer
-        total_spacing = (layer_count - 1) * layer_spacing
-        available_width = stroke_width - total_spacing
+        # Strictly respect stroke_width bounds
+        total_width = stroke_width
+        half_stroke = total_width / 2
 
-        if inner_layer_width > 0:
-            # Use specified inner width, calculate outer width
-            inner_width = inner_layer_width
-            if layer_count > 1:
-                outer_width = available_width - (layer_count - 1) * inner_width
-                outer_width = max(outer_width, inner_width)  # Ensure outer >= inner
-            else:
-                outer_width = available_width
+        if layer_count == 1:
+            # Single column: uses full stroke width, centered at 0
+            column_width = total_width
+            layer_offsets = [0]
+            layer_widths = [column_width]
         else:
-            # Auto-calculate: equal widths for all layers
-            layer_width = available_width / layer_count
-            inner_width = layer_width
-            outer_width = layer_width
+            # Multiple columns: calculate how much space goes to gaps vs columns
+            # Ensure columns can't go beyond stroke_width boundaries
+            total_gap_space = (layer_count - 1) * layer_spacing
+            
+            # Clamp gap space to maximum 80% of total width
+            max_gap_space = total_width * 0.8
+            if total_gap_space > max_gap_space:
+                total_gap_space = max_gap_space
+                layer_spacing = total_gap_space / (layer_count - 1) if layer_count > 1 else 0
+            
+            total_column_space = total_width - total_gap_space
+            
+            # Equal widths for all columns
+            column_width = total_column_space / layer_count
 
-        # Calculate center offset for each layer
-        half_total = stroke_width / 2
-        layer_offsets = []
-        current_offset = -half_total + outer_width / 2
-        layer_offsets.append(current_offset)
+            # Calculate layer positions using clean formula:
+            # Each column center = -half_stroke + (i + 0.5) * column_width + i * gap_size
+            # This guarantees: first column left edge at -half_stroke, last column right edge at +half_stroke
+            layer_offsets = []
+            layer_widths = []
+            
+            for i in range(layer_count):
+                # Equal widths: simple formula
+                center = -half_stroke + column_width / 2 + i * (column_width + layer_spacing)
+                layer_offsets.append(center)
+                layer_widths.append(column_width)
 
-        for i in range(1, layer_count):
-            if i == layer_count - 1:
-                # Last layer uses outer width
-                current_offset += outer_width / 2 + layer_spacing + outer_width / 2
-            else:
-                current_offset += (outer_width / 2 if i == 1 else inner_width / 2) + layer_spacing + inner_width / 2
-            layer_offsets.append(current_offset)
+        # Generate base zigzag positions using same logic as zigzag_stitch
+        # This ensures even number of segments for proper circle closing
+        from shapely.geometry import LineString
+        from ..utils.geometry import Point
 
-        # Generate base running stitch positions
-        spacing = [value / 2 for value in zigzag_spacing]
-        base_stitches = running_stitch(
-            path,
-            spacing,
-            self.running_stitch_tolerance,
-            False,
-            0,
-            "",
-        )
+        # Build a line from the path
+        coords = [(p[0], p[1]) for p in path]
+        line = LineString(coords)
+        total_length = line.length
 
-        if len(base_stitches) < 2:
+        if total_length == 0:
             return StitchGroup(
                 self.color,
-                stitches=base_stitches,
+                stitches=[],
                 lock_stitches=self.lock_stitches,
                 force_lock_stitches=self.force_lock_stitches,
             )
 
+        # Get half-spacing (distance between consecutive zigzag points)
+        half_spacing = zigzag_spacing[0] / 2 if isinstance(zigzag_spacing, list) else zigzag_spacing / 2
+
+        # Calculate how many segments fit in the path
+        num_segments = max(2, round(total_length / half_spacing))
+
+        # For symmetric zigzag (start and end at same peak position):
+        # We need an EVEN number of segments (ODD number of points)
+        if num_segments % 2 == 1:
+            num_segments += 1
+
+        num_points = num_segments + 1
+
+        # Interpolate positions along the path
+        base_positions = []
+        for i in range(num_points):
+            distance = (i / num_segments) * total_length
+            point = line.interpolate(distance)
+            base_positions.append(Point(point.x, point.y))
+
+        if len(base_positions) < 2:
+            return StitchGroup(
+                self.color,
+                stitches=[],
+                lock_stitches=self.lock_stitches,
+                force_lock_stitches=self.force_lock_stitches,
+            )
+
+        # Get stitch class from a dummy stitch
+        spacing = [value / 2 for value in zigzag_spacing]
+        temp_stitches = running_stitch(path, spacing, self.running_stitch_tolerance, False, 0, "")
+        if not temp_stitches:
+            return StitchGroup(
+                self.color,
+                stitches=[],
+                lock_stitches=self.lock_stitches,
+                force_lock_stitches=self.force_lock_stitches,
+            )
+        stitch_class = type(temp_stitches[0])
+
+        # Convert base_positions to stitch objects
+        base_stitches = [stitch_class(p.x, p.y) for p in base_positions]
+
         # Calculate perpendicular direction at each point
         perpendiculars = self._calculate_perpendiculars(base_stitches, zigzag_angle)
-        stitch_class = type(base_stitches[0])
         all_stitches = []
+        all_layers = []  # For closed paths: store each layer separately
 
         for layer_idx in range(layer_count):
             offset = layer_offsets[layer_idx] if layer_idx < len(layer_offsets) else layer_offsets[-1]
-            is_outer = (layer_idx == 0 or layer_idx == layer_count - 1)
-            current_width = outer_width if is_outer else inner_width
-            current_intermediate = outer_intermediate if is_outer else inner_intermediate
+            current_width = layer_widths[layer_idx] if layer_idx < len(layer_widths) else layer_widths[-1]
 
             # Generate zigzag for this layer by offsetting base stitches
             layer_stitches = []
@@ -1054,47 +1078,64 @@ class Stroke(EmbroideryElement):
                 last.y = first.y
 
             # Add intermediate stitches for this layer
-            if current_intermediate > 0 and len(layer_stitches) >= 2:
+            if intermediate_stitches > 0 and len(layer_stitches) >= 2:
                 subdivided = []
                 for i in range(len(layer_stitches) - 1):
                     p1 = layer_stitches[i]
                     p2 = layer_stitches[i + 1]
                     subdivided.append(p1)
-                    for j in range(1, current_intermediate + 1):
-                        t = j / (current_intermediate + 1)
+                    for j in range(1, intermediate_stitches + 1):
+                        t = j / (intermediate_stitches + 1)
                         inter_x = p1.x + t * (p2.x - p1.x)
                         inter_y = p1.y + t * (p2.y - p1.y)
                         subdivided.append(stitch_class(inter_x, inter_y))
                 subdivided.append(layer_stitches[-1])
                 layer_stitches = subdivided
 
-            # Reverse alternate layers for continuous stitching
-            if layer_idx % 2 == 1:
-                layer_stitches = layer_stitches[::-1]
+            if is_closed:
+                # For closed paths: each layer is a complete closed loop
+                # Reverse alternate layers but keep the loop complete
+                if layer_idx % 2 == 1:
+                    layer_stitches = layer_stitches[::-1]
+                # Store layer stitches separately
+                all_layers.append(layer_stitches)
+            else:
+                # For open paths: also store separately for proper jump handling
+                # Reverse alternate layers for stitching direction
+                if layer_idx % 2 == 1:
+                    layer_stitches = layer_stitches[::-1]
+                # Store layer stitches separately
+                all_layers.append(layer_stitches)
 
-            # Skip first stitch of subsequent layers to avoid duplicate
-            if layer_idx > 0 and layer_stitches:
-                layer_stitches = layer_stitches[1:]
-
-            all_stitches.extend(layer_stitches)
-
-        # Handle repeats
-        if self.repeats > 1:
-            base = list(all_stitches)
-            for rep in range(1, self.repeats):
-                if rep % 2 == 1:
-                    rep_stitches = base[::-1]
-                else:
-                    rep_stitches = list(base)
-                if rep_stitches:
-                    all_stitches.extend(rep_stitches[1:])
-
-        return StitchGroup(
-            self.color,
-            stitches=all_stitches,
-            lock_stitches=self.lock_stitches,
-            force_lock_stitches=self.force_lock_stitches,
-        )
+        # Return list of StitchGroups (one per column) for jump/trim between columns
+        stitch_groups = []
+        trim_enabled = self.zigzag_column_trim
+        
+        for i, layer_stitches in enumerate(all_layers):
+            # Handle repeats per layer
+            if self.repeats > 1:
+                base = list(layer_stitches)
+                repeated = list(base)
+                for rep in range(1, self.repeats):
+                    if rep % 2 == 1:
+                        rep_stitches = base[::-1]
+                    else:
+                        rep_stitches = list(base)
+                    if rep_stitches:
+                        repeated.extend(rep_stitches[1:])
+                layer_stitches = repeated
+            
+            sg = StitchGroup(
+                self.color,
+                stitches=layer_stitches,
+                lock_stitches=self.lock_stitches,
+                force_lock_stitches=self.force_lock_stitches,
+            )
+            if trim_enabled and i < len(all_layers) - 1:
+                sg.trim_after = True
+            stitch_groups.append(sg)
+        
+        return stitch_groups
 
     def _calculate_perpendiculars(self, stitches, zigzag_angle=0):
         """Calculate perpendicular unit vectors at each stitch point.
@@ -1270,16 +1311,26 @@ class Stroke(EmbroideryElement):
                     stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
                 # simple satin
                 elif self.stroke_method == "zigzag_stitch":
-                    stitch_group = self.simple_satin(
+                    result = self.simple_satin(
                         path,
                         self.zigzag_spacing,
                         self.stroke_width,
                         self.pull_compensation,
                         self.zigzag_angle,
                     )
-                    # bean stitch
-                    if any(self.bean_stitch_repeats):
-                        stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
+                    # Handle both single StitchGroup and list returns (Multi-Column)
+                    if isinstance(result, list):
+                        # Multi-Column returns list of StitchGroups
+                        for sg in result:
+                            if any(self.bean_stitch_repeats):
+                                sg.stitches = self.do_bean_repeats(sg.stitches)
+                            stitch_groups.append(sg)
+                        continue  # Skip the append below
+                    else:
+                        stitch_group = result
+                        # bean stitch
+                        if any(self.bean_stitch_repeats):
+                            stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
                 # running stitch
                 else:
                     stitch_group = self.running_stitch(
