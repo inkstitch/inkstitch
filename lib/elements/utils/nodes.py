@@ -13,7 +13,7 @@ from ...debug.debug import sew_stack_enabled
 from ...marker import has_marker
 from ...svg import PIXELS_PER_MM
 from ...svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS,
-                         INKSCAPE_GROUPMODE, NOT_EMBROIDERABLE_TAGS,
+                         INKSCAPE_GROUPMODE, INKSCAPE_LABEL, NOT_EMBROIDERABLE_TAGS,
                          SVG_CLIPPATH_TAG, SVG_DEFS_TAG, SVG_GROUP_TAG,
                          SVG_IMAGE_TAG, SVG_MASK_TAG, SVG_TEXT_TAG)
 from ..clone import Clone, is_clone
@@ -112,6 +112,12 @@ def iterate_nodes(node: BaseElement,  # noqa: C901
 
         # command connectors with a fill color set, will glitch into the elements list
         if is_command(node) or node.get(CONNECTOR_TYPE):
+            return []
+
+        # command groups contain command symbols that should not be embroidered
+        # These are groups with labels like "Ink/Stitch Command: ..."
+        node_label = node.get(INKSCAPE_LABEL, "")
+        if node_label.startswith("Ink/Stitch Command"):
             return []
 
         if not selected:

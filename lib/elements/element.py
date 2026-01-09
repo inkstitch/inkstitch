@@ -727,7 +727,7 @@ class EmbroideryElement(object):
             else:
                 try:
                     next_stitch = nearest_points(next_element.first_stitch, self.shape)[1]
-                except (ValueError, AttributeError):
+                except (ValueError, AttributeError, TypeError):
                     pass
         return next_stitch
 
