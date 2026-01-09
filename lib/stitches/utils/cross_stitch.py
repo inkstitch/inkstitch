@@ -34,7 +34,7 @@ class CrossGeometries(object):
         self.cross_stitch_method = cross_stitch_method
 
         box_x, box_y = self.fill.pattern_size
-        offset_x, offset_y = self.get_offset_values(shape)
+        offset_x, offset_y = self.get_offset_values(shape, original_shape)
         square = Polygon([(0, 0), (box_x, 0), (box_x, box_y), (0, box_y)])
         self.full_square_area = square.area
 
@@ -74,11 +74,13 @@ class CrossGeometries(object):
             y += box_y
             check_stop_flag()
 
-    def get_offset_values(self, shape):
+    def get_offset_values(self, shape, original_shape):
         offset_x, offset_y = self.fill.cross_offset
         if not self.fill.canvas_grid_origin:
             box_x, box_y = self.fill.pattern_size
             bounds = shape.bounds
+            if original_shape:
+                bounds = original_shape.bounds
             offset_x -= bounds[0] % box_x
             offset_y -= bounds[1] % box_y
         return offset_x, offset_y
