@@ -305,6 +305,139 @@ class Stroke(EmbroideryElement):
 
     @property
     @param(
+        "zigzag_intermediate_stitches",
+        _("Intermediate Stitches"),
+        tooltip=_(
+            "Number of extra stitches to add between each zigzag peak/valley. "
+            "0 = normal zigzag, higher values create denser coverage."
+        ),
+        type="int",
+        default=0,
+        select_items=[("stroke_method", "zigzag_stitch")],
+        sort_index=8,
+    )
+    @cache
+    def zigzag_intermediate_stitches(self):
+        """Return the number of intermediate stitches between zigzag points."""
+        return max(0, self.get_int_param("zigzag_intermediate_stitches", 0))
+
+    # Zigzag Type dropdown options
+    _zigzag_type_options = [
+        ParamOption("basic", _("Zigzag")),
+        ParamOption("layered", _("Multi-Column Zigzag")),
+    ]
+
+    @property
+    @param(
+        "zigzag_type",
+        _("Zigzag Type"),
+        tooltip=_(
+            "Zigzag: Standard single zigzag.\n"
+            "Multi-Column Zigzag: Multiple parallel zigzag columns for wider, denser coverage."
+        ),
+        type="combo",
+        default=0,
+        options=_zigzag_type_options,
+        select_items=[("stroke_method", "zigzag_stitch")],
+        sort_index=9,
+    )
+    @cache
+    def zigzag_type(self):
+        """Return the zigzag type."""
+        return self.get_param("zigzag_type", "basic")
+
+    # Alignment mode options for multi-column
+    _zigzag_alignment_options = [
+        ParamOption("aligned", _("Peaks Aligned")),
+        ParamOption("staggered", _("Staggered (Centered)")),
+    ]
+
+    @property
+    @param(
+        "zigzag_column_alignment",
+        _("Column Alignment"),
+        tooltip=_(
+            "Peaks Aligned: All columns have peaks at the same positions.\n"
+            "Staggered: Each column's peaks align with the center of adjacent columns."
+        ),
+        type="combo",
+        default=0,
+        options=_zigzag_alignment_options,
+        select_items=[("zigzag_type", "layered")],
+        sort_index=10,
+    )
+    @cache
+    def zigzag_column_alignment(self):
+        """Return the column alignment mode."""
+        return self.get_param("zigzag_column_alignment", "aligned")
+
+    @property
+    @param(
+        "zigzag_layer_count",
+        _("Column Count"),
+        tooltip=_("Number of parallel zigzag columns. 1 = same as basic zigzag."),
+        type="int",
+        default=3,
+        select_items=[("zigzag_type", "layered")],
+        sort_index=11,
+    )
+    @cache
+    def zigzag_layer_count(self):
+        """Return the number of zigzag layers."""
+        return max(1, self.get_int_param("zigzag_layer_count", 3))
+
+    @property
+    @param(
+        "zigzag_layer_spacing_mm",
+        _("Column Spacing"),
+        tooltip=_("Gap between adjacent zigzag columns. 0 = columns share edges."),
+        unit="mm",
+        type="float",
+        default=0,
+        select_items=[("zigzag_type", "layered")],
+        sort_index=12,
+    )
+    @cache
+    def zigzag_layer_spacing(self):
+        """Return the layer spacing in pixels."""
+        return max(0, self.get_float_param("zigzag_layer_spacing_mm", 0)) * PIXELS_PER_MM
+
+    @property
+    @param(
+        "zigzag_inner_layer_width_mm",
+        _("Inner Column Width"),
+        tooltip=_("Width of each inner column. Leave at 0 to auto-calculate based on total width."),
+        unit="mm",
+        type="float",
+        default=0,
+        select_items=[("zigzag_type", "layered")],
+        sort_index=13,
+    )
+    @cache
+    def zigzag_inner_layer_width(self):
+        """Return the inner layer width in pixels."""
+        return max(0, self.get_float_param("zigzag_inner_layer_width_mm", 0)) * PIXELS_PER_MM
+
+    @property
+    @param(
+        "zigzag_inner_intermediate_stitches",
+        _("Inner Intermediate Stitches"),
+        tooltip=_("Extra stitches between peaks for inner columns. -1 = same as outer."),
+        type="int",
+        default=-1,
+        select_items=[("zigzag_type", "layered")],
+        sort_index=14,
+    )
+    @cache
+    def zigzag_inner_intermediate_stitches(self):
+        """Return the intermediate stitches for inner layers."""
+        value = self.get_int_param("zigzag_inner_intermediate_stitches", -1)
+        if value < 0:
+            return self.zigzag_intermediate_stitches  # Use outer value
+        return value
+
+    @property
+    @param(
         "line_count",
         _("Number of lines"),
         tooltip=_("Number of lines from start to finish"),
@@ -750,12 +883,20 @@ class Stroke(EmbroideryElement):
     def simple_satin(self, path, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle=0):
         """Generate zig-zag along the path at the specified spacing and width.
 
-        Applies zigzag to a single pass first, then handles repeats manually.
-        This ensures stitch points align perfectly across all passes.
+        Supports two modes:
+        - Basic: Standard single zigzag
+        - Layered: Multiple parallel zigzag columns for wider coverage
         """
+        # Check zigzag type
+        if self.zigzag_type == "layered":
+            return self._layered_zigzag(path, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle)
+        else:
+            return self._basic_zigzag(path, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle)
+
+    def _basic_zigzag(self, path, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle):
+        """Generate basic single zigzag pattern."""
         # `self.zigzag_spacing` is the length for a zig and a zag
-        # together (a V shape).  Start with running stitch at half
-        # that length:
+        # together (a V shape).  Start with running stitch at half that length:
         spacing = [value / 2 for value in zigzag_spacing]
 
         # Generate running stitches for a SINGLE pass (no repeats)
@@ -775,30 +916,26 @@ class Stroke(EmbroideryElement):
             stroke_width,
             pull_compensation,
             zigzag_angle,
+            self.zigzag_intermediate_stitches,
         )
 
         # For closed paths (circles), ensure the last stitch connects to the first
         is_closed = self.is_closed_unclipped
         if is_closed and len(zigzag_stitches) >= 2:
-            # Make the last stitch position exactly match the first
             first_stitch = zigzag_stitches[0]
             last_stitch = zigzag_stitches[-1]
             last_stitch.x = first_stitch.x
             last_stitch.y = first_stitch.y
 
-        # Now handle repeats by reversing the already-zigzagged stitches
-        # This ensures each physical point keeps its offset across all passes
+        # Handle repeats by reversing the already-zigzagged stitches
         repeated_stitches = []
         for i in range(self.repeats):
             if i % 2 == 1:
-                # Reverse every other pass
                 this_pass = zigzag_stitches[::-1]
             else:
                 this_pass = list(zigzag_stitches)
 
             if i > 0 and this_pass:
-                # Skip the first stitch of subsequent passes to avoid duplicate
-                # at the junction (prevents thread stacking)
                 repeated_stitches.extend(this_pass[1:])
             else:
                 repeated_stitches.extend(this_pass)
@@ -809,6 +946,222 @@ class Stroke(EmbroideryElement):
             lock_stitches=self.lock_stitches,
             force_lock_stitches=self.force_lock_stitches,
         )
+
+    def _layered_zigzag(self, path, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle):
+        """Generate layered zigzag with multiple parallel columns."""
+        import math
+        from ..utils import Point
+
+        layer_count = self.zigzag_layer_count
+        layer_spacing = self.zigzag_layer_spacing
+        inner_layer_width = self.zigzag_inner_layer_width
+        inner_intermediate = self.zigzag_inner_intermediate_stitches
+        outer_intermediate = self.zigzag_intermediate_stitches
+        alignment_mode = self.zigzag_column_alignment
+        is_closed = self.is_closed_unclipped
+
+        # Calculate width for each layer
+        total_spacing = (layer_count - 1) * layer_spacing
+        available_width = stroke_width - total_spacing
+
+        if inner_layer_width > 0:
+            # Use specified inner width, calculate outer width
+            inner_width = inner_layer_width
+            if layer_count > 1:
+                outer_width = available_width - (layer_count - 1) * inner_width
+                outer_width = max(outer_width, inner_width)  # Ensure outer >= inner
+            else:
+                outer_width = available_width
+        else:
+            # Auto-calculate: equal widths for all layers
+            layer_width = available_width / layer_count
+            inner_width = layer_width
+            outer_width = layer_width
+
+        # Calculate center offset for each layer
+        half_total = stroke_width / 2
+        layer_offsets = []
+        current_offset = -half_total + outer_width / 2
+        layer_offsets.append(current_offset)
+
+        for i in range(1, layer_count):
+            if i == layer_count - 1:
+                # Last layer uses outer width
+                current_offset += outer_width / 2 + layer_spacing + outer_width / 2
+            else:
+                current_offset += (outer_width / 2 if i == 1 else inner_width / 2) + layer_spacing + inner_width / 2
+            layer_offsets.append(current_offset)
+
+        # Generate base running stitch positions
+        spacing = [value / 2 for value in zigzag_spacing]
+        base_stitches = running_stitch(
+            path,
+            spacing,
+            self.running_stitch_tolerance,
+            False,
+            0,
+            "",
+        )
+
+        if len(base_stitches) < 2:
+            return StitchGroup(
+                self.color,
+                stitches=base_stitches,
+                lock_stitches=self.lock_stitches,
+                force_lock_stitches=self.force_lock_stitches,
+            )
+
+        # Calculate perpendicular direction at each point
+        perpendiculars = self._calculate_perpendiculars(base_stitches, zigzag_angle)
+        stitch_class = type(base_stitches[0])
+        all_stitches = []
+
+        for layer_idx in range(layer_count):
+            offset = layer_offsets[layer_idx] if layer_idx < len(layer_offsets) else layer_offsets[-1]
+            is_outer = (layer_idx == 0 or layer_idx == layer_count - 1)
+            current_width = outer_width if is_outer else inner_width
+            current_intermediate = outer_intermediate if is_outer else inner_intermediate
+
+            # Generate zigzag for this layer by offsetting base stitches
+            layer_stitches = []
+            pull_comp = float(pull_compensation[0]) if hasattr(pull_compensation, '__getitem__') else float(pull_compensation)
+            half_width = float(current_width) / 2 + pull_comp
+
+            # For staggered mode, odd columns start with opposite zigzag direction
+            stagger_offset = 1 if (alignment_mode == "staggered" and layer_idx % 2 == 1) else 0
+
+            for i, base_stitch in enumerate(base_stitches):
+                perp = perpendiculars[i] if i < len(perpendiculars) else perpendiculars[-1]
+
+                # Zigzag: alternate between +half_width and -half_width from layer center
+                # Apply stagger offset for alternating columns
+                if (i + stagger_offset) % 2 == 0:
+                    zigzag_offset = half_width
+                else:
+                    zigzag_offset = -half_width
+
+                # Total offset = layer offset + zigzag offset
+                total_offset = float(offset) + zigzag_offset
+                new_x = float(base_stitch.x) + perp[0] * total_offset
+                new_y = float(base_stitch.y) + perp[1] * total_offset
+                layer_stitches.append(stitch_class(new_x, new_y))
+
+            # For closed paths, ensure circle closes properly
+            if is_closed and len(layer_stitches) >= 2:
+                first = layer_stitches[0]
+                last = layer_stitches[-1]
+                last.x = first.x
+                last.y = first.y
+
+            # Add intermediate stitches for this layer
+            if current_intermediate > 0 and len(layer_stitches) >= 2:
+                subdivided = []
+                for i in range(len(layer_stitches) - 1):
+                    p1 = layer_stitches[i]
+                    p2 = layer_stitches[i + 1]
+                    subdivided.append(p1)
+                    for j in range(1, current_intermediate + 1):
+                        t = j / (current_intermediate + 1)
+                        inter_x = p1.x + t * (p2.x - p1.x)
+                        inter_y = p1.y + t * (p2.y - p1.y)
+                        subdivided.append(stitch_class(inter_x, inter_y))
+                subdivided.append(layer_stitches[-1])
+                layer_stitches = subdivided
+
+            # Reverse alternate layers for continuous stitching
+            if layer_idx % 2 == 1:
+                layer_stitches = layer_stitches[::-1]
+
+            # Skip first stitch of subsequent layers to avoid duplicate
+            if layer_idx > 0 and layer_stitches:
+                layer_stitches = layer_stitches[1:]
+
+            all_stitches.extend(layer_stitches)
+
+        # Handle repeats
+        if self.repeats > 1:
+            base = list(all_stitches)
+            for rep in range(1, self.repeats):
+                if rep % 2 == 1:
+                    rep_stitches = base[::-1]
+                else:
+                    rep_stitches = list(base)
+                if rep_stitches:
+                    all_stitches.extend(rep_stitches[1:])
+
+        return StitchGroup(
+            self.color,
+            stitches=all_stitches,
+            lock_stitches=self.lock_stitches,
+            force_lock_stitches=self.force_lock_stitches,
+        )
+
+    def _calculate_perpendiculars(self, stitches, zigzag_angle=0):
+        """Calculate perpendicular unit vectors at each stitch point.
+
+        Args:
+            stitches: List of stitch points
+            zigzag_angle: Angle to rotate perpendicular direction
+
+        Returns:
+            List of (px, py) tuples representing perpendicular unit vectors
+        """
+        import math
+        from ..utils import Point
+
+        perpendiculars = []
+        angle_rad = math.radians(zigzag_angle)
+        cos_angle = math.cos(angle_rad)
+        sin_angle = math.sin(angle_rad)
+
+        for i in range(len(stitches)):
+            if i == 0:
+                # First point: use outgoing direction
+                dx = stitches[1].x - stitches[0].x
+                dy = stitches[1].y - stitches[0].y
+            elif i == len(stitches) - 1:
+                # Last point: use incoming direction
+                dx = stitches[i].x - stitches[i - 1].x
+                dy = stitches[i].y - stitches[i - 1].y
+            else:
+                # Middle points: average incoming and outgoing
+                dx1 = stitches[i].x - stitches[i - 1].x
+                dy1 = stitches[i].y - stitches[i - 1].y
+                dx2 = stitches[i + 1].x - stitches[i].x
+                dy2 = stitches[i + 1].y - stitches[i].y
+
+                len1 = math.sqrt(dx1 * dx1 + dy1 * dy1)
+                len2 = math.sqrt(dx2 * dx2 + dy2 * dy2)
+
+                if len1 > 0 and len2 > 0:
+                    dx = (dx1 / len1 + dx2 / len2) / 2
+                    dy = (dy1 / len1 + dy2 / len2) / 2
+                elif len1 > 0:
+                    dx, dy = dx1, dy1
+                else:
+                    dx, dy = dx2, dy2
+
+            # Normalize to unit vector
+            length = math.sqrt(dx * dx + dy * dy)
+            if length > 0:
+                dx /= length
+                dy /= length
+            else:
+                dx, dy = 0, 1  # Default perpendicular
+
+            # Perpendicular: rotate 90 degrees (left)
+            perp_x = -dy
+            perp_y = dx
+
+            # Apply zigzag angle rotation
+            if zigzag_angle != 0:
+                rotated_x = perp_x * cos_angle - perp_y * sin_angle
+                rotated_y = perp_x * sin_angle + perp_y * cos_angle
+                perp_x, perp_y = rotated_x, rotated_y
+
+            perpendiculars.append((perp_x, perp_y))
+
+        return perpendiculars
 
     def running_stitch(
         self,

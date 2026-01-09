@@ -456,7 +456,7 @@ def bean_stitch(stitches, repeats, tags_to_ignore=None):
     return new_stitches
 
 
-def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle=0):  # noqa: C901
+def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle=0, intermediate_stitches=0):  # noqa: C901
     """Create a zigzag stitch pattern from a set of stitches.
 
     Moves points left and right perpendicular to the path, alternating to
@@ -466,6 +466,8 @@ def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation, zig
     Args:
         zigzag_angle: Angle in degrees to rotate the zigzag direction.
                       Creates spoke/radial effects on curves.
+        intermediate_stitches: Number of extra stitches to add between each
+                               peak/valley point (0 = normal zigzag).
     """
     if len(stitches) < 2:
         return stitches
@@ -566,5 +568,28 @@ def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation, zig
             new_stitches[i] += zigzag_direction * -offset1
         else:
             new_stitches[i] += zigzag_direction * offset2
+
+    # Add intermediate stitches between each pair of zigzag points
+    if intermediate_stitches > 0 and len(new_stitches) >= 2:
+        subdivided_stitches = []
+        stitch_class = type(new_stitches[0])
+
+        for i in range(len(new_stitches) - 1):
+            p1 = new_stitches[i]
+            p2 = new_stitches[i + 1]
+
+            # Add the first point of this segment
+            subdivided_stitches.append(p1)
+
+            # Add N intermediate stitches evenly distributed between p1 and p2
+            for j in range(1, intermediate_stitches + 1):
+                t = j / (intermediate_stitches + 1)
+                inter_x = p1.x + t * (p2.x - p1.x)
+                inter_y = p1.y + t * (p2.y - p1.y)
+                subdivided_stitches.append(stitch_class(inter_x, inter_y))
+
+        # Add the last point
+        subdivided_stitches.append(new_stitches[-1])
+        return subdivided_stitches
 
     return new_stitches
