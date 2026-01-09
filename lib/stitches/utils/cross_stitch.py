@@ -4,46 +4,36 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from shapely.geometry import LineString, Polygon
-from shapely.affinity import translate, scale
+from shapely.affinity import translate
 from shapely import prepare
 from ...utils.threading import check_stop_flag
+from ...utils import DotDict
 
 
-class CrossGeometry(object):
+class CrossGeometries(object):
     '''Holds data for cross stitch geometry:
 
-       boxes:                   a list of box shaped polygons. The outlines for each cross.
-                                To get the final outline for our cross stitch pattern,
-                                we will combine all available boxes to a (hopefully) single shape.
-
-       scaled_boxes:            same as boxes, except that the boxes are scaled p slightly.
-                                Used to reconnect shapes which would be disconnected otherwise.
-                                A good example for this are crosses which are touching each other at only one corner.
-
-        diagonals1, diagonals2: A list of Linestrings with the actual cross stitch geometry
-
-        travel_edges:           A list of Linestrings.
-                                For every cross we include four LineStrings from each corner to the center.
-
-        snap_points:            a list containing two lists with points.
-                                1. the center points for each box
-                                2. the four corners of each box
+        crosses:        a list containing cross data
+                        each cross is defined by five nodes
+                        1. the center point
+                        2. the four corners
+        center_points:  a list with all center points
+        boxes:          a list of box outlines as Polygons
+        diagonals:      a list with cross diagonals as LineStrings
     '''
-    def __init__(self, fill, shape, cross_stitch_method, original_shape=None):
+    def __init__(self, fill, shape, cross_stitch_method):
         """Initialize cross stitch geometry generation for the given shape.
 
         Arguments:
             fill:                   the FillStitch instance
             shape:                  shape as shapely geometry
             cross_stitch_method:    cross stitch method as string
-            original_shape:         we may have broken the shape apart.
-                                    the offset however, should align to the complete shape geometry
         """
-        self.cross_stitch_method = cross_stitch_method
         self.fill = fill
+        self.cross_stitch_method = cross_stitch_method
 
         box_x, box_y = self.fill.pattern_size
-        offset_x, offset_y = self.get_offset_values(shape, original_shape)
+        offset_x, offset_y = self.get_offset_values(shape)
         square = Polygon([(0, 0), (box_x, 0), (box_x, box_y), (0, box_y)])
         self.full_square_area = square.area
 
@@ -62,13 +52,9 @@ class CrossGeometry(object):
         prepare(shape)
 
         self.boxes = []
-        self.scaled_boxes = []
-
-        self.cross_diagonals1 = []
-        self.cross_diagonals2 = []
-
-        self.travel_edges = []
-        self.snap_points = [[], []]
+        self.crosses = []
+        self.center_points = []
+        self.diagonals = []
 
         y = adapted_miny
         while y <= adapted_maxy:
@@ -87,41 +73,47 @@ class CrossGeometry(object):
             y += box_y
             check_stop_flag()
 
-        if "flipped" in cross_stitch_method:
-            self.cross_diagonals2, self.cross_diagonals1 = self.cross_diagonals1, self.cross_diagonals2
-
-    def get_offset_values(self, shape, original_shape):
+    def get_offset_values(self, shape):
         offset_x, offset_y = self.fill.cross_offset
         if not self.fill.canvas_grid_origin:
             box_x, box_y = self.fill.pattern_size
-            if original_shape:
-                bounds = original_shape.bounds
-            else:
-                bounds = shape.bounds
+            bounds = shape.bounds
             offset_x -= bounds[0] % box_x
             offset_y -= bounds[1] % box_y
         return offset_x, offset_y
 
     def add_cross(self, box, upright_box):
+        cross = DotDict()
+
+        # center point
+        cross.center_point = list(box.centroid.coords)[0]
+
         if "upright" in self.cross_stitch_method:
             box = upright_box
 
+        # box corners
         coords = list(box.exterior.coords)
-        center = list(box.centroid.coords)[0]
+        cross.corners = [coords[0], coords[1], coords[2], coords[3]]
+        cross.top_left = coords[3]
+        cross.top_right = coords[2]
+        cross.bottom_right = coords[1]
+        cross.bottom_left = coords[0]
 
+        # middle points for the four sides of the box
+        coords = list(upright_box.exterior.coords)
+        cross.middle_left = [coords[0], coords[1], coords[2], coords[3]]
+        cross.middle_bottom = coords[3]
+        cross.middle_right = coords[2]
+        cross.middle_top = coords[1]
+        cross.middle_left = coords[0]
+
+        # diagnonals for half crosses
+        if "flipped" in self.cross_stitch_method:
+            diagonal = LineString([cross.top_left, cross.bottom_right])
+        else:
+            diagonal = LineString([cross.bottom_left, cross.top_right])
+
+        self.crosses.append(cross)
+        self.center_points.append(cross.center_point)
+        self.diagonals.append(diagonal)
         self.boxes.append(box)
-        self.scaled_boxes.append(scale(box, xfact=1.0000000000001, yfact=1.0000000000001))
-
-        self.cross_diagonals1.append(LineString([coords[0], coords[2]]))
-        self.cross_diagonals2.append(LineString([coords[1], coords[3]]))
-
-        self.travel_edges.append(LineString([coords[0], center]))
-        self.travel_edges.append(LineString([coords[1], center]))
-        self.travel_edges.append(LineString([coords[2], center]))
-        self.travel_edges.append(LineString([coords[3], center]))
-
-        self.snap_points[0].append(center)
-        self.snap_points[1].append(coords[0])
-        self.snap_points[1].append(coords[1])
-        self.snap_points[1].append(coords[2])
-        self.snap_points[1].append(coords[3])

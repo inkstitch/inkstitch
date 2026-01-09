@@ -836,14 +836,14 @@ class FillStitch(EmbroideryElement):
     @param('cross_thread_count',
            _('Thread count'),
            tooltip=_('Defines the thread count for each stitch.\n'
-                     'For odd values start and end point will be respected, but an inconsistent thread count is possible.\n'
-                     'Even values result in a consistent thread count, but it will start and end at the same position.'),
+                     'Thread count must be an even number.\n'
+                     'Half stitches are stitched with an odd thread count.'),
            type='int',
            select_items=[('fill_method', 'cross_stitch')],
-           default=2,
+           default=4,
            sort_index=23)
     def cross_thread_count(self):
-        return self.get_int_param("cross_thread_count", 2)
+        return self.get_int_param("cross_thread_count", 4)
 
     @property
     @cache
