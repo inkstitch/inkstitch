@@ -7,16 +7,16 @@ from copy import copy
 from typing import List, Tuple, Union
 
 from inkex import Path, errormsg
+from shapely import make_valid
 from shapely.geometry import LinearRing, MultiPolygon, Polygon
 from shapely.ops import polygonize, unary_union
-from shapely import make_valid
 
 from ..elements import EmbroideryElement
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import SVG_PATH_TAG
-from .base import InkstitchExtension
 from ..utils.geometry import ensure_multi_polygon
+from .base import InkstitchExtension
 
 
 class BreakApart(InkstitchExtension):
