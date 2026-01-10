@@ -7,26 +7,47 @@
 
 import os
 from typing import Dict, List, Optional, Set
-from xml.etree import ElementTree as ET
+
+from lxml import etree
 
 from .inkscape import guess_inkscape_config_path
 
 
 # Ink/Stitch keyboard shortcuts configuration
 # Format: {shortcut_key: gaction_id}
-# Using Alt+letter combinations that don't conflict with default Inkscape shortcuts
+#
+# These shortcuts match the official Ink/Stitch documentation:
+# https://inkstitch.org/docs/customize/
 #
 # IMPORTANT: Inkscape uses:
 #   - "app." prefix for extension gactions
-#   - Hyphens in extension names (not underscores)
-#   - Capitalized modifier names like <Alt> not <alt>
+#   - Underscores in extension IDs (org.inkstitch.extension_name)
+#   - Capitalized modifier names like <Primary> (Ctrl) and <Shift>
+#
+# Note: Some shortcuts replace Inkscape defaults as documented.
 INKSTITCH_SHORTCUTS: Dict[str, str] = {
-    "<Alt>e": "app.org.inkstitch.params",               # Edit parameters (most used)
-    "<Alt>s": "app.org.inkstitch.simulator",            # Simulator preview
-    "<Alt>v": "app.org.inkstitch.stitch-plan-preview",  # View stitch plan
-    "<Alt>t": "app.org.inkstitch.troubleshoot",         # Troubleshoot issues
-    "<Alt>l": "app.org.inkstitch.lettering",            # Lettering tool
-    "<Alt>r": "app.org.inkstitch.reorder",              # Reorder elements
+    # Core functions
+    "<Primary><Shift>p": "app.org.inkstitch.params",                # Params (replaces Edit > Preferences)
+    "<Primary><Shift>l": "app.org.inkstitch.simulator",             # Simulator live simulation
+    "<Primary><Shift>greater": "app.org.inkstitch.stitch-plan-preview",  # Stitch plan preview (replaces Path > Division)
+    "<Primary><Shift>q": "app.org.inkstitch.lettering",             # Lettering (replaces Object > Selectors and CSS)
+    "<Primary><Shift>Delete": "app.org.inkstitch.troubleshoot",     # Troubleshoot objects
+    "<Primary><Shift>i": "app.org.inkstitch.print",                 # PDF export
+
+    # Fill operations
+    "<Primary><Shift>o": "app.org.inkstitch.break_apart",           # Break apart fill objects (replaces Object Properties)
+
+    # Satin column operations
+    "<Primary><Shift>u": "app.org.inkstitch.stroke_to_satin",       # Convert stroke to satin (replaces Object > Group)
+    "<Primary><Shift>j": "app.org.inkstitch.flip_satins",           # Flip satin column rails
+    "<Primary><Shift>b": "app.org.inkstitch.cut_satin",             # Cut satin column (replaces Path > Union)
+    "<Primary><Shift>equal": "app.org.inkstitch.auto_satin",        # Auto route satin objects
+
+    # Commands
+    "<Primary><Shift>exclam": "app.org.inkstitch.commands",         # Attach commands to objects
+
+    # Restack
+    "<Primary><Shift>apostrophe": "app.org.inkstitch.reorder",      # Restack objects based on selection order
 }
 
 
@@ -48,7 +69,7 @@ def ensure_keys_directory() -> None:
         os.makedirs(keys_path)
 
 
-def parse_keymap(path: str) -> Optional[ET.Element]:
+def parse_keymap(path: str) -> Optional[etree._Element]:
     """Parse an Inkscape keymap XML file.
 
     Args:
@@ -60,49 +81,46 @@ def parse_keymap(path: str) -> Optional[ET.Element]:
     if not os.path.exists(path):
         return None
     try:
-        tree = ET.parse(path)
+        tree = etree.parse(path)
         return tree.getroot()
-    except ET.ParseError:
+    except etree.XMLSyntaxError:
         return None
 
 
-def create_empty_keymap() -> ET.Element:
+def create_empty_keymap() -> etree._Element:
     """Create an empty keymap XML structure compatible with Inkscape.
 
     The 'name' attribute should be "User Shortcuts" to match what Inkscape
     generates when users add shortcuts via the Preferences dialog.
     """
-    root = ET.Element("keys")
+    root = etree.Element("keys")
     root.set("name", "User Shortcuts")
-    root.text = "\n"
-    comment = ET.Comment(" Ink/Stitch keyboard shortcuts ")
-    root.insert(0, comment)
+    root.append(etree.Comment(" Ink/Stitch keyboard shortcuts "))
     return root
 
 
-def get_existing_shortcuts(keymap: ET.Element) -> Dict[str, str]:
-    """Extract existing shortcut bindings from a keymap.
+def get_existing_shortcuts(keymap: etree._Element) -> Set[str]:
+    """Extract existing shortcut key bindings from a keymap.
 
     Args:
         keymap: Root element of the keymap XML
 
     Returns:
-        Dictionary mapping shortcut keys to action/extension IDs
+        Set of shortcut keys (lowercased) that are already bound
     """
-    shortcuts: Dict[str, str] = {}
+    shortcuts: Set[str] = set()
     for bind in keymap.findall(".//bind"):
         keys = bind.get("keys", "")
-        gaction = bind.get("gaction", "")
-        if keys and gaction:
+        if keys:
             # Handle multiple keys separated by comma
             for key in keys.split(","):
                 key = key.strip()
                 if key:
-                    shortcuts[key.lower()] = gaction
+                    shortcuts.add(key.lower())
     return shortcuts
 
 
-def get_existing_inkstitch_actions(keymap: ET.Element) -> Set[str]:
+def get_existing_inkstitch_actions(keymap: etree._Element) -> Set[str]:
     """Get the set of Ink/Stitch actions already in the keymap.
 
     Args:
@@ -119,7 +137,7 @@ def get_existing_inkstitch_actions(keymap: ET.Element) -> Set[str]:
     return actions
 
 
-def add_inkstitch_shortcuts(keymap: ET.Element, shortcuts: Dict[str, str]) -> List[str]:
+def add_inkstitch_shortcuts(keymap: etree._Element, shortcuts: Dict[str, str]) -> tuple[List[str], List[str]]:
     """Add Ink/Stitch shortcuts to a keymap, avoiding conflicts.
 
     Args:
@@ -127,15 +145,17 @@ def add_inkstitch_shortcuts(keymap: ET.Element, shortcuts: Dict[str, str]) -> Li
         shortcuts: Dictionary of shortcuts to add {key: extension_id}
 
     Returns:
-        List of shortcuts that were actually added
+        Tuple of (shortcuts added, shortcuts skipped due to conflicts)
     """
     existing_shortcuts = get_existing_shortcuts(keymap)
     existing_actions = get_existing_inkstitch_actions(keymap)
     added: List[str] = []
+    skipped: List[str] = []
 
     for shortcut_key, extension_id in shortcuts.items():
         # Skip if this key is already bound to something else
-        if shortcut_key.lower() in [k.lower() for k in existing_shortcuts.keys()]:
+        if shortcut_key.lower() in existing_shortcuts:
+            skipped.append(shortcut_key)
             continue
 
         # Skip if this extension already has a shortcut
@@ -143,16 +163,15 @@ def add_inkstitch_shortcuts(keymap: ET.Element, shortcuts: Dict[str, str]) -> Li
             continue
 
         # Add the new shortcut
-        bind = ET.SubElement(keymap, "bind")
+        bind = etree.SubElement(keymap, "bind")
         bind.set("gaction", extension_id)
         bind.set("keys", shortcut_key)
-        bind.tail = "\n"
         added.append(shortcut_key)
 
-    return added
+    return added, skipped
 
 
-def write_keymap(keymap: ET.Element, path: str) -> None:
+def write_keymap(keymap: etree._Element, path: str) -> None:
     """Write a keymap to disk.
 
     Args:
@@ -161,38 +180,20 @@ def write_keymap(keymap: ET.Element, path: str) -> None:
     """
     ensure_keys_directory()
 
-    # Format the XML nicely
-    indent_xml(keymap)
+    # Format the XML nicely using lxml's pretty_print
+    xml_bytes = etree.tostring(keymap, encoding="utf-8", xml_declaration=True, pretty_print=True)
 
-    tree = ET.ElementTree(keymap)
-    tree.write(path, encoding="utf-8", xml_declaration=True)
-
-
-def indent_xml(elem: ET.Element, level: int = 0) -> None:
-    """Add indentation to XML elements for pretty printing."""
-    indent = "  "
-    i = "\n" + level * indent
-    if len(elem):
-        if not elem.text or not elem.text.strip():
-            elem.text = i + indent
-        if not elem.tail or not elem.tail.strip():
-            elem.tail = i
-        for child in elem:
-            indent_xml(child, level + 1)
-        if not child.tail or not child.tail.strip():
-            child.tail = i
-    else:
-        if level and (not elem.tail or not elem.tail.strip()):
-            elem.tail = i
+    with open(path, "wb") as f:
+        f.write(xml_bytes)
 
 
-def install_keyboard_shortcuts() -> List[str]:
+def install_keyboard_shortcuts() -> tuple[List[str], List[str]]:
     """Install Ink/Stitch keyboard shortcuts into Inkscape's keymap.
 
     Preserves existing user shortcuts and only adds non-conflicting bindings.
 
     Returns:
-        List of shortcuts that were added
+        Tuple of (shortcuts added, shortcuts skipped due to conflicts)
     """
     keymap_path = get_default_keymap_path()
 
@@ -203,37 +204,10 @@ def install_keyboard_shortcuts() -> List[str]:
         keymap = create_empty_keymap()
 
     # Add shortcuts
-    added = add_inkstitch_shortcuts(keymap, INKSTITCH_SHORTCUTS)
+    added, skipped = add_inkstitch_shortcuts(keymap, INKSTITCH_SHORTCUTS)
 
     # Only write if we added something
     if added:
         write_keymap(keymap, keymap_path)
 
-    return added
-
-
-def remove_keyboard_shortcuts() -> List[str]:
-    """Remove Ink/Stitch keyboard shortcuts from Inkscape's keymap.
-
-    Returns:
-        List of shortcuts that were removed
-    """
-    keymap_path = get_default_keymap_path()
-    keymap = parse_keymap(keymap_path)
-
-    if keymap is None:
-        return []
-
-    removed: List[str] = []
-    # Find and remove Ink/Stitch bindings
-    for bind in list(keymap.findall(".//bind")):
-        gaction = bind.get("gaction", "")
-        if gaction.startswith("app.org.inkstitch."):
-            keys = bind.get("keys", "")
-            keymap.remove(bind)
-            removed.append(keys)
-
-    if removed:
-        write_keymap(keymap, keymap_path)
-
-    return removed
+    return added, skipped

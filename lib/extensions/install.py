@@ -61,12 +61,11 @@ class Install(InkstitchExtension):
     def install_keyboard_shortcuts(self):
         """Install keyboard shortcuts for Ink/Stitch into Inkscape's keymap."""
         try:
-            added = install_shortcuts()
-            if added:
-                return True
-            else:
-                # No new shortcuts added (they already exist)
-                return True
+            added, skipped = install_shortcuts()
+            if skipped:
+                skipped_keys = ", ".join(skipped)
+                errormsg(_("Some keyboard shortcuts were not installed because they conflict with existing shortcuts: ") + skipped_keys)
+            return True
         except (IOError, OSError) as error:
             self.install_error_message(_("Could not install keyboard shortcuts. Please file an issue on"), error)
             return False
