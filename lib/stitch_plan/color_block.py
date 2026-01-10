@@ -167,6 +167,9 @@ class ColorBlock(object):
 
     @property
     def bounding_box(self):
+        if not self.stitches:
+            # Return zero-size bounding box at origin if no stitches
+            return (0, 0, 0, 0)
         minx = min(stitch.x for stitch in self)
         miny = min(stitch.y for stitch in self)
         maxx = max(stitch.x for stitch in self)

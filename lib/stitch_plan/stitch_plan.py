@@ -188,7 +188,10 @@ class StitchPlan(object):
 
     @property
     def bounding_box(self):
-        color_block_bounding_boxes = [cb.bounding_box for cb in self]
+        color_block_bounding_boxes = [cb.bounding_box for cb in self if len(cb) > 0]
+        if not color_block_bounding_boxes:
+            # Return zero-size bounding box at origin if no stitches
+            return (0, 0, 0, 0)
         minx = min(bb[0] for bb in color_block_bounding_boxes)
         miny = min(bb[1] for bb in color_block_bounding_boxes)
         maxx = max(bb[2] for bb in color_block_bounding_boxes)
