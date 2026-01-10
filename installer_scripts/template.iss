@@ -119,16 +119,63 @@ end;
 
 { ///////////////////////////////////////////////////////////////////// }
 function InitializeSetup(): Boolean;
+var
+  UserExtensionsPath: String;
+  UserInkscapePath: String;
+  ProgramFilesExtPath: String;
 begin
   Result := True;
+  
+  // Standard user extensions path (works for both traditional and MS Store installations)
+  UserExtensionsPath := ExpandConstant('{userappdata}\inkscape\extensions\');
+  UserInkscapePath := ExpandConstant('{userappdata}\inkscape\');
+  
+  // Alternative: Program Files path (traditional .exe installation)
+  ProgramFilesExtPath := ExpandConstant('{commonpf}\Inkscape\share\inkscape\extensions\');
 
-  if DirExists(ExpandConstant('{userappdata}\inkscape\extensions\')) then
-  Log('Found Inks')
+  // Check if user extensions folder exists
+  if DirExists(UserExtensionsPath) then
+  begin
+    Log('Found Inkscape user extensions folder');
+    Exit;
+  end;
+  
+  // Check Program Files path as alternative indicator that Inkscape is installed
+  if DirExists(ProgramFilesExtPath) then
+  begin
+    Log('Found Inkscape in Program Files, creating user extensions folder');
+  end
   else
   begin
-    MsgBox('Error: Inkscape Extensions folder not found! Install and then run Inkscape to create the extension folder.', mbInformation, MB_OK);
-    Result := False;
+    // Neither path exists - Inkscape might not be installed
+    Log('No Inkscape installation detected');
   end;
+  
+  // Try to create the user extensions folder (the standard location for user extensions)
+  // First create inkscape folder if needed
+  if not DirExists(UserInkscapePath) then
+  begin
+    if not ForceDirectories(UserInkscapePath) then
+    begin
+      MsgBox('Error: Could not create Inkscape configuration folder.' + #13#10 + #13#10 +
+             'Please install and run Inkscape at least once, then try again.' + #13#10 + #13#10 +
+             'Path: ' + UserInkscapePath, mbError, MB_OK);
+      Result := False;
+      Exit;
+    end;
+  end;
+  
+  // Now create extensions folder
+  if not ForceDirectories(UserExtensionsPath) then
+  begin
+    MsgBox('Error: Could not create extensions folder.' + #13#10 + #13#10 +
+           'Please create this folder manually and try again:' + #13#10 +
+           UserExtensionsPath, mbError, MB_OK);
+    Result := False;
+    Exit;
+  end;
+  
+  Log('Successfully created Inkscape extensions folder');
 end;
 
 { ///////////////////////////////////////////////////////////////////// }
