@@ -716,6 +716,17 @@ class Stroke(EmbroideryElement):
     def first_stitch(self):
         return shgeo.Point(self.as_multi_line_string().geoms[0].coords[0])
 
+    def uses_previous_stitch(self) -> bool:
+        """Returns True if the previous stitch can affect this stroke's starting point.
+        
+        For closed paths, we can start from any point, so we use the previous stitch
+        to determine the optimal starting point (closest to previous stitch).
+        """
+        if self.get_command('starting_point'):
+            return False
+        return self.is_closed_clipped
+
+
     def _get_clipped_path(self, paths):
         if self.clip_shape is None:
             return paths
@@ -887,6 +898,41 @@ class Stroke(EmbroideryElement):
             return bean_stitch(stitches, self.bean_stitch_repeats)
         return stitches
 
+    def _rotate_path_to_closest_point(self, path, reference_point):
+        """Rotate a closed path to start from the point closest to reference_point.
+        
+        This minimizes jumps when the previous stitch ends far from the path's original start.
+        """
+        if len(path) < 2:
+            return path
+        
+        # Find the index of the closest point to reference_point
+        min_dist = float('inf')
+        closest_idx = 0
+        
+        for i, point in enumerate(path):
+            dist = point.distance(reference_point)
+            if dist < min_dist:
+                min_dist = dist
+                closest_idx = i
+        
+        # Rotate the path to start from closest_idx
+        # For closed paths, the last point equals the first, so we skip it when rotating
+        if closest_idx == 0:
+            return path
+        
+        # Remove the duplicate closing point if present
+        if path[0].distance(path[-1]) < 0.01:
+            path = path[:-1]
+        
+        # Rotate: take from closest_idx to end, then from start to closest_idx
+        rotated = path[closest_idx:] + path[:closest_idx]
+        
+        # Re-close the path
+        rotated.append(rotated[0])
+        
+        return rotated
+
     def to_stitch_groups(self, last_stitch_group, next_element=None):  # noqa: C901
         """Convert stroke to stitch groups."""
         stitch_groups = []
@@ -897,6 +943,12 @@ class Stroke(EmbroideryElement):
         else:
             for path in self.paths:
                 path = [Point(x, y) for x, y in path]
+                
+                # For closed paths, rotate to start from closest point to previous stitch
+                if self.is_closed_clipped and last_stitch_group and last_stitch_group.stitches:
+                    if not self.get_command('starting_point'):
+                        last_stitch = last_stitch_group.stitches[-1]
+                        path = self._rotate_path_to_closest_point(path, last_stitch)
                 # manual stitch
                 if self.stroke_method == "manual_stitch":
                     if self.max_stitch_length:
