@@ -800,6 +800,9 @@ class SatinColumn(EmbroideryElement):
         """Flatten the rails, cut with the rungs, and return the sections in pairs."""
 
         rails = list(self.line_string_rails)
+        # Need at least 2 rails for a valid satin column
+        if len(rails) < 2:
+            return []
         rungs = list(self.line_string_rungs)
         cut_points = [[], []]
         for rung in rungs:
@@ -837,22 +840,28 @@ class SatinColumn(EmbroideryElement):
 
     def validation_warnings(self):  # noqa: C901
         paths = self.node.get_path()
+        rails = self.line_string_rails
+        
         if any([path.letter == 'Z' for path in paths]):
-            yield ClosedPathWarning(self.line_string_rails[0].coords[0])
+            if len(rails) > 0:
+                yield ClosedPathWarning(rails[0].coords[0])
 
         if len(self.paths) == 1:
             yield StrokeSatinWarning(self.center_line.interpolate(0.5, normalized=True))
             if self.stroke_width < PIXELS_PER_MM:
                 yield NarrowSatinWarning(self.center_line.interpolate(0.8, normalized=True))
         elif len(self.filtered_subpaths) == 4:
-            yield TwoRungsWarning(self.line_string_rails[0].interpolate(0.5, normalized=True))
+            if len(rails) > 0:
+                yield TwoRungsWarning(rails[0].interpolate(0.5, normalized=True))
         elif len(self.filtered_subpaths) == 2:
-            yield NoRungWarning(self.line_string_rails[1].representative_point())
-            if len(self.rails[0]) != len(self.rails[1]):
-                yield UnequalPointsWarning(self.line_string_rails[0].interpolate(0.5, normalized=True))
+            if len(rails) > 1:
+                yield NoRungWarning(rails[1].representative_point())
+            if len(self.rails) >= 2 and len(self.rails[0]) != len(self.rails[1]):
+                if len(rails) > 0:
+                    yield UnequalPointsWarning(rails[0].interpolate(0.5, normalized=True))
         elif len(self.filtered_subpaths) > 2:
             for rung in self.line_string_rungs:
-                for rail in self.line_string_rails:
+                for rail in rails:
                     intersection = rung.intersection(rail)
                     if intersection.is_empty:
                         yield DanglingRungWarning(rung.interpolate(0.5, normalized=True))
