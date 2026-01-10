@@ -622,6 +622,10 @@ class SatinColumn(EmbroideryElement):
             self.pull_compensation_percent/100,
             True,
         )
+        # A valid LineString needs 0 or >= 2 points
+        # If we have 0 pairs, return an empty MultiLineString
+        if not pairs:
+            return shgeo.MultiLineString([])
         if len(pairs) == 1:
             # we need at least two points for line string creation
             # if there is only one, we simply duplicate it to prevent an error
@@ -1862,6 +1866,9 @@ class SatinColumn(EmbroideryElement):
     def end_point(self, next_stitch):
         end_point = self._get_command_point('ending_point')
         if end_point is None and self.end_at_nearest_point and next_stitch is not None:
+            # Check if compensated_shape is empty (no valid rails)
+            if self.compensated_shape.is_empty:
+                return None
             end_point = nearest_points(next_stitch, self.compensated_shape)[1]
             end_point = Point(*list(end_point.coords[0]))
         # if we are already near to the end, we won't need to specify an ending point
