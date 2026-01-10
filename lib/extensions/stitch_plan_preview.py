@@ -12,6 +12,7 @@ from typing import Optional, Tuple
 from inkex import BaseElement, Boolean, Image, errormsg
 
 from ..commands import add_layer_commands
+from ..i18n import _
 from ..marker import set_marker
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import render_stitch_plan
@@ -120,20 +121,32 @@ class StitchPlanPreview(InkstitchExtension):
                 # however, layer.bounding_box() is pure python, so it can be very slow for more complex stitch previews.
                 # Instead, especially because we need to invoke Inkscape anyway to perform the rasterization, we get
                 # the bounding box with query commands before we perform the export. This is quite cheap.
-                out = inkscape(temp_svg_path, actions="; ".join([
-                    f"select-by-id: {layer.get_id()}",
-                    "query-x",
-                    "query-y",
-                    "query-width",
-                    "query-height",
-                    f"export-id: {layer.get_id()}",
-                    "export-id-only",
-                    "export-type: png",
-                    f"export-dpi: {dpi}",
-                    "export-png-color-mode: RGBA_16",
-                    f"export-filename: {temp_png_path}",
-                    "export-do"  # Inkscape docs say this should be implicit at the end, but it doesn't seem to be.
-                ]))
+                try:
+                    out = inkscape(temp_svg_path, actions="; ".join([
+                        f"select-by-id: {layer.get_id()}",
+                        "query-x",
+                        "query-y",
+                        "query-width",
+                        "query-height",
+                        f"export-id: {layer.get_id()}",
+                        "export-id-only",
+                        "export-type: png",
+                        f"export-dpi: {dpi}",
+                        "export-png-color-mode: RGBA_16",
+                        f"export-filename: {temp_png_path}",
+                        "export-do"  # Inkscape docs say this should be implicit at the end, but it doesn't seem to be.
+                    ]))
+                except PermissionError:
+                    # Windows-specific issue: antivirus, UAC, or MS Store installation privileges
+                    errormsg(_(
+                        "Permission denied when calling Inkscape.\n\n"
+                        "This can happen due to:\n"
+                        "• Antivirus software blocking the operation\n"
+                        "• Windows security settings\n"
+                        "• Inkscape installed from Microsoft Store (try the standalone installer instead)\n\n"
+                        "Try running Inkscape as Administrator, or use the vector preview mode instead."
+                    ))
+                    return layer  # Return the non-rasterized layer as fallback
 
                 # Extract numbers from returned string. It can include other information such as warnings about the usage of AppImages
                 out = findall(r"(?m)^-?\d+\.?\d*$", out)
