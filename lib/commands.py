@@ -144,10 +144,18 @@ class Command(BaseCommand):
 
         self.target: inkex.BaseElement = neighbors[1]
 
-        pos = (float(self.use.get("x", 0)), float(self.use.get("y", 0)))
-        transform = get_node_transform(self.use)
-        target = inkex.Transform(transform).apply_to_point(pos)
-        self.target_point = target
+        # Use the connector endpoint where the symbol is located.
+        # The connector path is already transformed, so it reflects the scaled position.
+        # This fixes the issue where scaling doesn't update the symbol's x/y attributes.
+        # Superpath format: [subpath][point_index][control_type] where [1] is the actual point
+        if self.symbol_is_end:
+            # Symbol is at the end of connector path
+            endpoint = path[-1][-1][1]  # Last subpath, last point, actual point coords
+            self.target_point = (endpoint[0], endpoint[1])
+        else:
+            # Symbol is at the start of connector path
+            endpoint = path[0][0][1]  # First subpath, first point, actual point coords
+            self.target_point = (endpoint[0], endpoint[1])
 
     def __repr__(self):
         return "Command('%s', %s)" % (self.command, self.target_point)
