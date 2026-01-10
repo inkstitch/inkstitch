@@ -323,8 +323,8 @@ class Stroke(EmbroideryElement):
 
     # Zigzag Type dropdown options
     _zigzag_type_options = [
-        ParamOption("basic", _("Zigzag")),
-        ParamOption("layered", _("Multi-Column Zigzag")),
+        ParamOption("basic", _("Sawtooth")),
+        ParamOption("layered", _("Multi-Column")),
     ]
 
     @property
@@ -332,8 +332,8 @@ class Stroke(EmbroideryElement):
         "zigzag_type",
         _("Zigzag Type"),
         tooltip=_(
-            "Zigzag: Standard single zigzag.\n"
-            "Multi-Column Zigzag: Multiple parallel zigzag columns for wider, denser coverage."
+            "Sawtooth: Standard single zigzag pattern.\n"
+            "Multi-Column: Multiple parallel columns for wider, denser coverage."
         ),
         type="combo",
         default=0,
