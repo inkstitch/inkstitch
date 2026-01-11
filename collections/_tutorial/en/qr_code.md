@@ -1,6 +1,6 @@
 ---
 title: QR code
-permalink: /tutorials/applique/
+permalink: /tutorials/qr-code/
 last_modified_at: 2025-12-26
 language: en
 excerpt: "Applique example file"
