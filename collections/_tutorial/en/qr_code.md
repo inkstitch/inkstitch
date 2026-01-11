@@ -21,9 +21,19 @@ Todo : replace with image of QR code to this page
 ![Cross Stitch QR Code](/assets/images/tutorials/qr-code/qr-code.jpg)
 
 ## Using the QR code extension
+![Extension Menu](/assets/images/tutorials/qr-code/QR_extension.jpg)
 
+### Text Field 
+In the Text field, enter whatever you want to code. In this tutorial, we will use this page url, that is
 
+https://inkstitch.org/tutorials/qr-code/
+
+do not forget  the https://  at start.
+
+If you wish to create a QR code to share your wifi information, the Text field should be filled with something like this
 WIFI:S:<SSID>;T:<WPA|WEP|>;P:<password>;; 
 
+For instance, if your wifi SSID is "My_Wifi" , your password is "Hello" and your security protocol is WAP, enter this in the  Text fiel
 
+WIFI:S:My_Wifi;T:WPA;P:Hello;;
 
