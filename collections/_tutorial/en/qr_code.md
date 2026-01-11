@@ -43,9 +43,9 @@ WIFI:S:My_Wifi;T:WPA;P:Hello;;
 Chose a high level there, it will help us embroider later on.
 
 ### Size
-Here, you chose the size of the squares in pixel. You will need the same size in mm for the cross-stitch extension.
+Here, you chose the squares width in pixel. You will need the same size in mm for the cross-stitch extension.
 
-I chose 8 px width for my squares, that will be 2.12 mm for Ink/Stitch
+I chose 8 px width for my squares, that will be 2.12 mm for Ink/Stitch.
 
 ### Apply 
 After applying, you get two different objects, one is a rectangle, remove it, and then the QR code as a single path, keep it
