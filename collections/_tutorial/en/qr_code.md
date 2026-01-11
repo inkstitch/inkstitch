@@ -57,7 +57,7 @@ After applying, you get two different objects, one is a rectangle, remove it, an
 
 
 -  Select the QR path and move it to the upper left corner of the screen by setting X=0 and Y =0 in Inkscape toolbar. This will align your QR path with the cross-stitch grid
--  **Very important step** : After setting Inkscape **Behavior > Steps > Inset/Outset by:** to 0.5 px, slightly enlarge the QR code path using Path > Outset.  
+-  **Very important step** : After setting Inkscape **Behavior > Steps > Inset/Outset by:** to 0.5 px, slightly outset the QR code path using Path > Outset.  
 
 ## Using Ink/Stitch Cross Stitch
 
