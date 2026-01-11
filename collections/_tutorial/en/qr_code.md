@@ -63,7 +63,7 @@ After applying, you get two different objects, one is a rectangle, remove it, an
 
 ## Using Ink/Stitch Cross Stitch
 
-Select the prepared QR-code Path and apply parameters, chose cross-stich fill **with pattern size 2.12**
+Select the prepared QR-code Path and apply parameters, chose cross-stich fill **with pattern size 2.12**. 
 As you can see in the screenshot below, you have  an embroidable cross stitch QR code.
 
 ![Extension Menu](/assets/images/tutorials/qr-code/First_trial.jpg)
