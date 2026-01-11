@@ -837,7 +837,7 @@ class FillStitch(EmbroideryElement):
            _('Thread count'),
            tooltip=_('Defines the thread count for each stitch.\n'
                      'Thread count must be an even number.\n'
-                     'Half stitches are stitched with an odd thread count.'),
+                     'Half crosses are stitched with an odd thread count.'),
            type='int',
            select_items=[('fill_method', 'cross_stitch')],
            default=4,

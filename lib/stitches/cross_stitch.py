@@ -13,7 +13,7 @@ from ..stitch_plan import Stitch
 from ..utils.threading import check_stop_flag
 from .utils.cross_stitch import CrossGeometries
 from math import floor
-from .half_cross_stitch import half_cross_stitch
+from .cross_stitch_half import half_cross_stitch
 
 
 def cross_stitch(fill, shape, starting_point, ending_point):
