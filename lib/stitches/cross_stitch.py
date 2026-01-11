@@ -139,17 +139,22 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
 
 
 def organize(subgraphs, cross_geoms, starting_point, ending_point):
+    # Make the subgraph containing the starting_point the first one
+    # And make the one containing the ending_point the last one
+    # If both starting  and ending point are both in the now first subgraph
+    # travel will be a shortest path from starting to ending point and
+    # ending  point becomes  the starting point of the eulerian tour
 
     if cross_geoms.crosses != [] and starting_point:
         first_subgraph = find_index_subgraph(subgraphs, cross_geoms.crosses, starting_point)
         subgraphs[0], subgraphs[first_subgraph] = subgraphs[first_subgraph], subgraphs[0]
-        first_subgraph = 0
+
     if cross_geoms.crosses != [] and starting_point and ending_point:
         last_subgraph = find_index_subgraph(subgraphs, cross_geoms.crosses, ending_point)
         subgraphs[-1], subgraphs[last_subgraph] = subgraphs[last_subgraph], subgraphs[-1]
 
     travel = []
-    if first_subgraph == last_subgraph and starting_point and ending_point:
+    if last_subgraph == 0 and starting_point and ending_point:
         travel = find_shortest_path(subgraphs[0], cross_geoms, starting_point, ending_point)
         starting_point = ending_point
 
