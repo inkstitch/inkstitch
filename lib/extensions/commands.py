@@ -15,3 +15,4 @@ class CommandsExtension(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
         for command in self.COMMANDS:
             self.arg_parser.add_argument("--%s" % command, type=Boolean)
+        self.arg_parser.add_argument("--command_position", type=str, dest="command_position", default="random")
