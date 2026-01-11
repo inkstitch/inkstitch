@@ -68,7 +68,7 @@ As you can see in the screenshot below, you have  an embroidable cross stitch QR
 
 We can have a better embroidering experience by lowering the number of jumps.
 
-Because we chose a high error correction level, we can simplify the code by removing isolated squares and still have a working QR code.
+Because we chose a high error correction level, we can simplify the code by removing smmall areas and still have a working QR code.
 
 - First use the cross stitch helper (with grid spacing set to 2.12 mm) to pixelise the QR path: It will break the shape into several connected areas
 - Then use Ink/Stitch > Trouble Shoot >Clean Up Document to remove area of surface smaller than 65 (8x8+1) squared pixel. This will remove all one square shapes
