@@ -18,8 +18,6 @@ user-level: Beginner
 
 Using Inkscape extension **Render > Bar Code  /QR code > QR code** and Ink/Stitch cross-stitch, one can easily embroider a working QR code:
 
-To-do : replace with image of QR code to this page
-
 ![Cross Stitch QR Code](/assets/images/tutorials/qr-code/qr-code.jpg)
 
 ## Using the QR code extension
