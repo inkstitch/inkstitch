@@ -27,37 +27,38 @@ def cross_stitch(fill, shape, starting_point, ending_point):
     # it starts and ends at the same position
     if starting_point is None:
         starting_point = ending_point
+        ending_point = None
     if thread_count % 2 != 0:
         thread_count -= 1
-    return even_cross_stitch(fill, shape, starting_point, thread_count)
+    return even_cross_stitch(fill, shape, starting_point, ending_point, thread_count)
 
 
-def even_cross_stitch(fill, shape, starting_point, threads_number):
+def even_cross_stitch(fill, shape, starting_point, ending_point, threads_number):
     nb_repeats = (threads_number // 2) - 1
     method = fill.cross_stitch_method
     cross_geoms = CrossGeometries(fill, shape, method)
     subgraphs = _build_connect_subgraphs(cross_geoms)
     if method != "double_cross":
-        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats, _build_row_tour)
+        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour)
 
         if "flipped" in method:
             for i in range(len(eulerian_cycles)):
                 eulerian_cycles[i] = eulerian_cycles[i][::-1]
     else:
-        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats, _build_double_row_tour)
+        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_double_row_tour)
 
     stitches = _cycles_to_stitches(eulerian_cycles, fill.max_cross_stitch_length)
     return [stitches]
 
 
-def get_starting_corner(starting_point, subcrosses):
-    '''Snap starting and ending point on existing corners on our cross stitch pattern
+def get_corner(point, subcrosses):
+    '''Snap point on existing corners on our cross stitch pattern
     starting_point is not None when called
     '''
     snap_points = MultiPoint([corner for cross in subcrosses for corner in cross.corners])
-    start_point = nearest_points(snap_points, Point(starting_point))[0]
-    starting_corner = (start_point.x, start_point.y)
-    return starting_corner
+    start_point = nearest_points(snap_points, Point(point))[0]
+    corner = (start_point.x, start_point.y)
+    return corner
 
 
 def _build_connect_subgraphs(cross_geoms):
@@ -88,7 +89,7 @@ def _build_connect_subgraphs(cross_geoms):
     return [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
 
-def _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats, row_tour):
+def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, row_tour):
     """ We need to construct an eulerian cycle for each subgraph, but we need to make sure
     that no cross is flipped
     So we construct partial cycles (tours) that cover rows of crosses without flipping any cross
@@ -102,18 +103,17 @@ def _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats, r
 
     eulerian_cycles = []
     centers = cross_geoms.center_points
-    # if there is a starting point, make sure it is relevant to the  first subgraph
-    if cross_geoms.crosses != [] and starting_point:
-        first_subgraph = find_index_first_subgraph(subgraphs, cross_geoms.crosses, starting_point)
-        subgraphs[0], subgraphs[first_subgraph] = subgraphs[first_subgraph], subgraphs[0]
+    travel, starting_point, ending_point = organize(subgraphs, cross_geoms, starting_point, ending_point)
 
-    for subgraph in subgraphs:
+    for i, subgraph in enumerate(subgraphs):
         subcrosses = find_available_crosses(subgraph, cross_geoms.crosses)
         if subcrosses == []:
             continue
 
-        if starting_point:
-            starting_corner = get_starting_corner(starting_point, subcrosses)
+        if i == 0 and starting_point:
+            starting_corner = get_corner(starting_point, subcrosses)
+        elif i == len(subgraphs) and ending_point:
+            starting_corner = get_corner(ending_point, subcrosses)
         else:
             # any corner will do
             index = 0
@@ -130,11 +130,38 @@ def _build_eulerian_cycles(subgraphs, starting_point, cross_geoms, nb_repeats, r
                         cycle_to_insert = row_tour(subcrosses, node, nb_repeats)
                         cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
 
+        cycle = travel + cycle
+        travel = []
+
         eulerian_cycles.append(cycle)
-        # other connected components have no starting_point command
-        starting_point = None
 
     return eulerian_cycles
+
+
+def organize(subgraphs, cross_geoms, starting_point, ending_point):
+
+    if cross_geoms.crosses != [] and starting_point:
+        first_subgraph = find_index_subgraph(subgraphs, cross_geoms.crosses, starting_point)
+        subgraphs[0], subgraphs[first_subgraph] = subgraphs[first_subgraph], subgraphs[0]
+        first_subgraph = 0
+    if cross_geoms.crosses != [] and starting_point and ending_point:
+        last_subgraph = find_index_subgraph(subgraphs, cross_geoms.crosses, ending_point)
+        subgraphs[-1], subgraphs[last_subgraph] = subgraphs[last_subgraph], subgraphs[-1]
+
+    travel = []
+    if first_subgraph == last_subgraph and starting_point and ending_point:
+        travel = find_shortest_path(subgraphs[0], cross_geoms, starting_point, ending_point)
+        starting_point = ending_point
+
+    return travel, starting_point, ending_point
+
+
+def find_shortest_path(subgraph, cross_geoms, starting_point, ending_point):
+    crosses = cross_geoms.crosses
+    starting_corner = get_corner(starting_point, crosses)
+    ending_corner = get_corner(ending_point, crosses)
+    travel = nx.shortest_path(subgraph, source=starting_corner, target=ending_corner)
+    return travel
 
 
 def _build_row_tour(subcrosses, starting_corner, nb_repeats):
@@ -152,10 +179,10 @@ def _build_double_row_tour(subcrosses, starting_corner, nb_repeats):
     return cycle
 
 
-def find_index_first_subgraph(subgraphs, crosses, starting_point):
-    starting_corner = get_starting_corner(starting_point, crosses)
+def find_index_subgraph(subgraphs, crosses, point):
+    corner = get_corner(point, crosses)
     index = 0
-    while starting_corner not in list(subgraphs[index].nodes):
+    while corner not in list(subgraphs[index].nodes):
         index += 1
     return index
 
