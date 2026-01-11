@@ -154,7 +154,7 @@ def organize(subgraphs, cross_geoms, starting_point, ending_point):
         subgraphs[-1], subgraphs[last_subgraph] = subgraphs[last_subgraph], subgraphs[-1]
 
     travel = []
-    if starting_point and ending_point and last_subgraph == 0:
+    if cross_geoms.crosses != [] and starting_point and ending_point and last_subgraph == 0:
         travel = find_shortest_path(subgraphs[0], cross_geoms, starting_point, ending_point)
         starting_point = ending_point
 
