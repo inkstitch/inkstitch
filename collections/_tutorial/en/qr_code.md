@@ -1,9 +1,9 @@
 ---
 title: QR code
 permalink: /tutorials/qr-code/
-last_modified_at: 2025-12-26
+last_modified_at: 2026-01-11
 language: en
-excerpt: "Applique example file"
+excerpt: "Create a cross Stitch QR Code"
 image: "/assets/images/tutorials/qr-code/qr-code.jpg"
 tutorial-type:
   - Sample File
@@ -19,6 +19,11 @@ Using inkscape  extension **Render > Bar Code  /QR code > QR code**  and ink/sti
 
 Todo : replace with image of QR code to this page
 ![Cross Stitch QR Code](/assets/images/tutorials/qr-code/qr-code.jpg)
+
+## Using the QR code extension
+
+
+WIFI:S:<SSID>;T:<WPA|WEP|>;P:<password>;; 
 
 
 
