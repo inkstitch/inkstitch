@@ -50,7 +50,7 @@ Choisissez un niveau élevé ; cela facilitera la broderie.
 ### Taille
 Ici, vous choisissez la largeur des carrés en pixels. Vous aurez besoin de la même taille en mm pour l'extension de point de croix.
 
-J'ai choisi une largeur de 8 px pour mes carrés, ce qui correspond à 2,12 mm pour Ink/Stitch.
+**J'ai choisi une largeur de 8 px pour mes carrés**, ce qui correspond à 2,12 mm pour Ink/Stitch.
 
 ### Appliquer
 Après application, vous obtenez deux objets : un rectangle (supprimez-le) et le code QR sous forme de tracé unique (conservez-le).
