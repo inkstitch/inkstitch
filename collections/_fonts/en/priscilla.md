@@ -5,7 +5,7 @@ last_modified_at: 2026-01-12
 toc: false
 preview_image:
   - url: /assets/images/fonts/priscilla.png
-    height:35
+    height: 35
 data_title:
   - priscilla
 ---
