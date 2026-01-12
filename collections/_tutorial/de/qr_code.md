@@ -32,12 +32,15 @@ Do not forget the https://  at start.
 
 If you wish to create a QR code to share your Wi-Fi information, the Text field should be filled with something like this
 
-
+```
 WIFI:S:<SSID>;T:<WPA|WEP|>;P:<password>;; 
+```
 
 For instance, if your wifi SSID is "My_Wifi" , your password is "Hello" and your security protocol is WAP, enter this in the  Text field
 
+```
 WIFI:S:My_Wifi;T:WPA;P:Hello;;
+```
 
 ### Error correction level
 Chose a high level there, it will help us embroider later on.
