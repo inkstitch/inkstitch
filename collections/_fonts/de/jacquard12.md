@@ -15,8 +15,7 @@ data_title:
 
 ## Besonderheiten
 
-You can easily turn this font into a double cross font; simply select the lettering group and apply the settings, just by changing the cross stitch method from "Cross" to "Double Cross".You can easily turn this font into a double cross font; 
-simply select the lettering group and apply the settings, just by changing the cross stitch method from "Cross" to "Double Cross".
+You can easily turn this font into a double cross font; simply select the lettering group and apply the settings, just changing the cross stitch method from "Cross" to "Double Cross".
 
 {% include end_of_font_page_de.html %}
 
