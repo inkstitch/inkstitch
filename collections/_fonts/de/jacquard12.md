@@ -1,0 +1,24 @@
+---
+title: "Jacquard 12"
+permalink: /de/fonts/jacquard_12/
+last_modified_at: 2026-01-02
+toc: false
+preview_image:
+  - url: /assets/images/fonts/jacquard12.png
+    height: 40
+data_title:
+  - jacquard_12
+---
+{% include upcoming_release.html %}
+
+{% include font_infos_de.html %}
+
+## Besonderheiten
+
+You can easily turn this font into a double cross font; simply select the lettering group and apply the settings, just by changing the cross stitch method from "Cross" to "Double Cross".You can easily turn this font into a double cross font; 
+simply select the lettering group and apply the settings, just by changing the cross stitch method from "Cross" to "Double Cross".
+
+{% include end_of_font_page_de.html %}
+
+{% include folder-galleries path="fonts/jacquard12/" %}
+
