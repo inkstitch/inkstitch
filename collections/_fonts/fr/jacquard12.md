@@ -7,7 +7,7 @@ preview_image:
   - url: /assets/images/fonts/jacquard12.png
     height: 50
 data_title:
-  - alchemy
+  - jacquard_12
 ---
 {% include upcoming_release.html %}
 
