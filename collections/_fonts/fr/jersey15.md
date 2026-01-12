@@ -18,4 +18,4 @@ Vous pouvez facilement modifier cette police en police de croix simples, il vous
 et d'appliquer le paramétrage, juste en modifiant la méthode du point de croix de "Croix Double" en "Croix".
 {% include end_of_font_page_fr.html %}
 
-{% include folder-galleries path="fonts/jacquard12/" %}
+{% include folder-galleries path="fonts/jersey15/" %}
