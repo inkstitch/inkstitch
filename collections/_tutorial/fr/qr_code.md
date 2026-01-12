@@ -60,7 +60,7 @@ Après application, vous obtenez deux objets : un rectangle (supprimez-le) et l
 ## Préparation du code QR pour le point de croix Ink/Stitch
 - Sélectionnez le tracé du QR code et déplacez-le dans le coin supérieur gauche de l'écran en définissant X=0 et Y=0 dans la barre d'outils d'Inkscape. Cela alignera votre tracé QR code avec la grille de point de croix.
 
-- **Étape très importante** : Après avoir réglé l'option **Comportement > Incréments > Éroder/Dilater de :** d'Inkscape à 0,5 px (**vérifiez votre unité !**)
+- **Étape très importante** : Après avoir réglé l'option **Comportement > Incréments > Éroder/Dilater de :** des préférences d'Inkscape à 0,5 px (**vérifiez votre unité !**)
 dilater légèrement le tracé du QR code à l'aide de  **Inkscape > Chemin > Dilater**
 
 ## Utilisation du point de croix Ink/Stitch
