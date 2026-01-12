@@ -155,7 +155,7 @@ def organize(subgraphs, cross_geoms, starting_point, ending_point):
 
     travel = []
     if cross_geoms.crosses != [] and starting_point and ending_point and last_subgraph == 0:
-        try: 
+        try:
             travel = nx.shortest_path(subgraphs[0], source=starting_corner, target=ending_corner)
         except nx.NodeNotFound:
             pass
