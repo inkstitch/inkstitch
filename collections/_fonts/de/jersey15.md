@@ -1,7 +1,7 @@
 ---
 title: "Jersey 15"
 permalink: /de/fonts/jersey_15/
-last_modified_at: 2026-01-12
+last_modified_at: 2026-01-11
 toc: false
 preview_image:
   - url: /assets/images/fonts/jersey15.png
