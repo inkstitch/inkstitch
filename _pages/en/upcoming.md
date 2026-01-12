@@ -54,6 +54,9 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Neon blinking](/fonts/neon/)
 
   ![Neon blinking](/assets/images/fonts/neon_blinking.png)
+* [Priscilla](/fonts/priscillaa/)
+
+  ![Priscilla](/assets/images/fonts/priscilla.png)
 * [Venezia](/fonts/venezia/)
 
   ![Venezia](/assets/images/fonts/venezia.png)
