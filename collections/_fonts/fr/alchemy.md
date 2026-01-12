@@ -5,7 +5,7 @@ last_modified_at: 2026-01-01
 toc: false
 preview_image:
   - url: /assets/images/fonts/alchemy.jpg
-    height: 45
+    height: 50
 data_title:
   - alchemy
 ---
