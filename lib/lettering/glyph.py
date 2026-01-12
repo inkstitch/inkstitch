@@ -69,7 +69,7 @@ class Glyph(object):
                 transform = -transforms.Transform(get_correction_transform(node, True))
 
                 if "d" in node.attrib:
-                    node_copy.path = node.path.transform(transform).to_absolute()
+                    node_copy.path = node.path.transform(transform)
 
                 if not node.tag == SVG_USE_TAG:
                     # Delete transforms from paths and groups, since we applied
