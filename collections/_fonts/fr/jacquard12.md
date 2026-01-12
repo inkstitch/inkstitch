@@ -1,7 +1,7 @@
 ---
 title: "Jacquard 12"
 permalink: /fr/fonts/jacquard_12/
-last_modified_at: 2026-01-02
+last_modified_at: 2026-01-12
 toc: false
 preview_image:
   - url: /assets/images/fonts/jacquard12.png
