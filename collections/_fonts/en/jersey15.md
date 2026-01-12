@@ -15,7 +15,7 @@ data_title:
 
 ## Special features
 
-You can easily turn this font into a simple cross font; simply select the lettering group and apply the settings, just by changing the cross stitch method from 
+You can easily turn this font into a simple cross font; simply select the lettering group and apply the settings, just changing the cross stitch method from 
 "Double Cross" to "Cross".
 
 {% include end_of_font_page.html %}
