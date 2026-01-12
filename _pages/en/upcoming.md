@@ -36,6 +36,12 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Circular 3 letters monogram](/fonts/circular-3letters-monogram/)
 
   ![Circular 3 letters monogram](/assets/images/fonts/circular_3letters_monogram.png)
+* [Jacquard 12](/fonts/jacquard_12/)
+
+  ![Jacquard 12](/assets/images/fonts/jacquard12.png)
+* [Jersey 15](/fonts/jersey_15/)
+
+  ![Jersey 15](/assets/images/fonts/jersey15.png)
 * [Cyrillic](/fonts/cyrillic/)
 
   ![Cyrillic](/assets/images/fonts/cyrillic.png)
