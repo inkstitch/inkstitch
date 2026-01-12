@@ -5,7 +5,7 @@ last_modified_at: 2026-01-02
 toc: false
 preview_image:
   - url: /assets/images/fonts/jacquard12.png
-    height: 50
+    height: 40
 data_title:
   - jacquard_12
 ---
