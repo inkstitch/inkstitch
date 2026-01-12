@@ -35,6 +35,12 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Circular 3 letters monogram](/fr/fonts/circular-3letters-monogram/)
 
   ![Circular 3 letters monogram](/assets/images/fonts/circular_3letters_monogram.png)
+* [Jacquard 12](/fonts/jacquard_12/)
+
+  ![Jacquard 12](/assets/images/fonts/jacquard12.png)
+* [Jersey 15](/fonts/jersey_15/)
+
+  ![Jersey 15](/assets/images/fonts/jersey15.png)
 * [Cyrillic](/fr/fonts/cyrillic/)
 
   ![Cyrillic](/assets/images/fonts/cyrillic.png)
