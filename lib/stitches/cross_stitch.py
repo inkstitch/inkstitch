@@ -146,27 +146,22 @@ def organize(subgraphs, cross_geoms, starting_point, ending_point):
     # ending  point becomes  the starting point of the eulerian tour
 
     if cross_geoms.crosses != [] and starting_point:
-        first_subgraph = find_index_subgraph(subgraphs, cross_geoms.crosses, starting_point)
+        starting_corner, first_subgraph = find_index_subgraph(subgraphs, cross_geoms.crosses, starting_point)
         subgraphs[0], subgraphs[first_subgraph] = subgraphs[first_subgraph], subgraphs[0]
 
     if cross_geoms.crosses != [] and starting_point and ending_point:
-        last_subgraph = find_index_subgraph(subgraphs, cross_geoms.crosses, ending_point)
+        ending_corner, last_subgraph = find_index_subgraph(subgraphs, cross_geoms.crosses, ending_point)
         subgraphs[-1], subgraphs[last_subgraph] = subgraphs[last_subgraph], subgraphs[-1]
 
     travel = []
     if cross_geoms.crosses != [] and starting_point and ending_point and last_subgraph == 0:
-        travel = find_shortest_path(subgraphs[0], cross_geoms, starting_point, ending_point)
+        try: 
+            travel = nx.shortest_path(subgraphs[0], source=starting_corner, target=ending_corner)
+        except nx.NodeNotFound:
+            pass
         starting_point = ending_point
 
     return travel, starting_point, ending_point
-
-
-def find_shortest_path(subgraph, cross_geoms, starting_point, ending_point):
-    crosses = cross_geoms.crosses
-    starting_corner = get_corner(starting_point, crosses)
-    ending_corner = get_corner(ending_point, crosses)
-    travel = nx.shortest_path(subgraph, source=starting_corner, target=ending_corner)
-    return travel
 
 
 def _build_row_tour(subcrosses, starting_corner, nb_repeats):
@@ -189,7 +184,7 @@ def find_index_subgraph(subgraphs, crosses, point):
     index = 0
     while corner not in list(subgraphs[index].nodes):
         index += 1
-    return index
+    return corner, index
 
 
 def is_cross_in_subgraph(cross, subgraph):
