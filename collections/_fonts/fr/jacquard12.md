@@ -14,7 +14,7 @@ data_title:
 {% include font_infos_fr.html %}
 
 ## Particularités
-Vous pouvez facilement modifier cette police en police de croix doubles, il vous suffit pour cela de selectionner le groupe de lettrage, et d'appliquer à nouveau le paramètrage, juste en modifiant la méthode du point de croix de "Croix" en "Croix Double".
+Vous pouvez facilement modifier cette police en police de croix doubles, il vous suffit pour cela de sélectionner le groupe de lettrage, et d'appliquer à nouveau le paramétrage, juste en modifiant la méthode du point de croix de "Croix" en "Croix Double".
 
 {% include end_of_font_page_fr.html %}
 
