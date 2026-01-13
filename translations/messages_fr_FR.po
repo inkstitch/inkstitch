@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-12 02:01+0000\n"
-"PO-Revision-Date: 2026-01-12 02:01\n"
+"POT-Creation-Date: 2026-01-13 01:52+0000\n"
+"PO-Revision-Date: 2026-01-13 01:53\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-12 02:01+0000\n"
+"POT-Creation-Date: 2026-01-13 01:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,7 +70,7 @@ msgstr "Amitaclo Small est une  version  modifiée d'Amitaclo pour permettre une
 #. description of font in fonts/apesplit
 #: inkstitch-fonts-metadata.py:18
 msgid "120 mm tall monogram font."
-msgstr ""
+msgstr "Fonte de grands monogrammes (120 mm)."
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:20
@@ -3166,15 +3166,15 @@ msgstr "Autres lettres composées"
 msgid "Font directory not found. Please specify an existing directory."
 msgstr "Répertoire de polices non trouvé. Veuillez spécifier un répertoire existant."
 
-#: lib/extensions/object_commands.py:22
+#: lib/extensions/object_commands.py:25
 msgid "Please select one or more objects to which to attach commands."
 msgstr "Veuillez sélectionner un ou plusieurs objets pour y attacher des commandes."
 
-#: lib/extensions/object_commands.py:30
+#: lib/extensions/object_commands.py:33
 msgid "Please choose one or more commands to attach."
 msgstr "Veuillez choisir une ou plusieurs commandes à attacher."
 
-#: lib/extensions/object_commands.py:37
+#: lib/extensions/object_commands.py:40
 #, python-brace-format
 msgid "Cannot attach commands to Clone element(s) {clones}. They must be unlinked to add commands.\n"
 "* Select the clone(s)\n"
@@ -6056,7 +6056,7 @@ msgstr "Ajuste la taille de tous les symboles de commande en une seule opératio
 
 #: inx/inkstitch_commands_scale_symbols.inx:13
 #: inx/inkstitch_global_commands.inx:19 inx/inkstitch_jump_to_trim.inx:12
-#: inx/inkstitch_layer_commands.inx:16 inx/inkstitch_object_commands.inx:21
+#: inx/inkstitch_layer_commands.inx:16 inx/inkstitch_object_commands.inx:28
 #: inx/inkstitch_object_commands_toggle_visibility.inx:11
 msgid "Commands"
 msgstr "Commandes"
@@ -7718,7 +7718,31 @@ msgstr "Insert tous les glyphes d'une fonte pré digitalisée dans le document p
 msgid "Attach Commands to Selected Objects"
 msgstr "Attacher des commandes à des objets sélectionnés"
 
+#: inx/inkstitch_object_commands.inx:14
+msgid "Command position"
+msgstr ""
+
+#: inx/inkstitch_object_commands.inx:15
+msgid "Random"
+msgstr ""
+
+#: inx/inkstitch_object_commands.inx:16
+msgid "Top left"
+msgstr ""
+
+#: inx/inkstitch_object_commands.inx:17
+msgid "Top right"
+msgstr ""
+
 #: inx/inkstitch_object_commands.inx:18
+msgid "Bottom left"
+msgstr ""
+
+#: inx/inkstitch_object_commands.inx:19
+msgid "Bottom right"
+msgstr ""
+
+#: inx/inkstitch_object_commands.inx:25
 msgid "Add commands which affect selected elememts"
 msgstr "Ajoute des commandes qui n'affentent que les éléments sélectionnés"
 
