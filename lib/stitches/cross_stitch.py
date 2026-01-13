@@ -107,7 +107,7 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
 
     for i, subgraph in enumerate(subgraphs):
         subcrosses = find_available_crosses(subgraph, cross_geoms.crosses)
-        if subcrosses == []:
+        if not subcrosses:
             continue
 
         if i == 0 and starting_point:
@@ -123,7 +123,7 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
 
         cycle = row_tour(subcrosses, starting_corner, nb_repeats)
 
-        while subcrosses != []:
+        while subcrosses:
             for node in cycle:
                 for cross in subcrosses:
                     if node in cross.corners:
@@ -145,11 +145,11 @@ def organize(subgraphs, cross_geoms, starting_point, ending_point):
     # travel will be a shortest path from starting to ending point and
     # ending  point becomes  the starting point of the eulerian tour
 
-    if cross_geoms.crosses != [] and starting_point:
+    if cross_geoms.crosses and starting_point:
         starting_corner, first_subgraph = find_index_subgraph(subgraphs, cross_geoms.crosses, starting_point)
         subgraphs[0], subgraphs[first_subgraph] = subgraphs[first_subgraph], subgraphs[0]
 
-    if cross_geoms.crosses != [] and starting_point and ending_point:
+    if cross_geoms.crosses and starting_point and ending_point:
         ending_corner, last_subgraph = find_index_subgraph(subgraphs, cross_geoms.crosses, ending_point)
         subgraphs[-1], subgraphs[last_subgraph] = subgraphs[last_subgraph], subgraphs[-1]
 
@@ -166,7 +166,7 @@ def organize(subgraphs, cross_geoms, starting_point, ending_point):
 
 def _build_row_tour(subcrosses, starting_corner, nb_repeats):
     cycle = _build_row_tour_above(subcrosses, starting_corner, nb_repeats)
-    if cycle == []:
+    if not cycle:
         cycle = _build_row_tour_below(subcrosses, starting_corner, nb_repeats)
     return cycle
 
@@ -174,7 +174,7 @@ def _build_row_tour(subcrosses, starting_corner, nb_repeats):
 def _build_double_row_tour(subcrosses, starting_corner, nb_repeats):
 
     cycle = _build_double_row_tour_above(subcrosses, starting_corner, nb_repeats)
-    if cycle == []:
+    if not cycle:
         cycle = _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats)
     return cycle
 
