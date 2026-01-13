@@ -97,10 +97,10 @@ class CrossGeometries(object):
         # box corners
         coords = list(box.exterior.coords)
         cross.corners = [coords[0], coords[1], coords[2], coords[3]]
-        cross.top_left = coords[3]
-        cross.top_right = coords[2]
-        cross.bottom_right = coords[1]
-        cross.bottom_left = coords[0]
+        cross.bottom_left = coords[3]
+        cross.bottom_right = coords[2]
+        cross.top_right = coords[1]
+        cross.top_left = coords[0]
 
         # middle points for the four sides of the box
         coords = list(upright_box.exterior.coords)
@@ -112,9 +112,9 @@ class CrossGeometries(object):
 
         # diagnonals for half crosses
         if "flipped" in self.cross_stitch_method:
-            diagonal = LineString([cross.top_left, cross.bottom_right])
-        else:
             diagonal = LineString([cross.bottom_left, cross.top_right])
+        else:
+            diagonal = LineString([cross.top_left, cross.bottom_right])
 
         self.crosses.append(cross)
         self.center_points.append(cross.center_point)
