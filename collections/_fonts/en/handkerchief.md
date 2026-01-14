@@ -5,7 +5,7 @@ last_modified_at: 2026-01-13
 toc: false
 preview_image:
   - url: /assets/images/fonts/handkerchief.png
-    height: 35
+    height: 25
 data_title:
   - handkerchief
 ---
