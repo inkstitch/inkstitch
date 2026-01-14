@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-01-13 01:52+0000\n"
-"PO-Revision-Date: 2026-01-13 01:53\n"
+"PO-Revision-Date: 2026-01-14 02:00\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -7720,27 +7720,27 @@ msgstr "Attacher des commandes à des objets sélectionnés"
 
 #: inx/inkstitch_object_commands.inx:14
 msgid "Command position"
-msgstr ""
+msgstr "Position de la commande"
 
 #: inx/inkstitch_object_commands.inx:15
 msgid "Random"
-msgstr ""
+msgstr "Aléatoire"
 
 #: inx/inkstitch_object_commands.inx:16
 msgid "Top left"
-msgstr ""
+msgstr "En haut à gauche"
 
 #: inx/inkstitch_object_commands.inx:17
 msgid "Top right"
-msgstr ""
+msgstr "En haut à droite"
 
 #: inx/inkstitch_object_commands.inx:18
 msgid "Bottom left"
-msgstr ""
+msgstr "En bas à gauche"
 
 #: inx/inkstitch_object_commands.inx:19
 msgid "Bottom right"
-msgstr ""
+msgstr "En bas à droite"
 
 #: inx/inkstitch_object_commands.inx:25
 msgid "Add commands which affect selected elememts"
