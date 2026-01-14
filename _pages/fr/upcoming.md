@@ -34,16 +34,20 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
   ![Braille](/assets/images/fonts/braille.png)
 * [Circular 3 letters monogram](/fr/fonts/circular-3letters-monogram/)
 
-  ![Circular 3 letters monogram](/assets/images/fonts/circular_3letters_monogram.png)
+    ![Circular 3 letters monogram](/assets/images/fonts/circular_3letters_monogram.png)
+* [Cyrillic](/fr/fonts/cyrillic/)
+
+  ![Cyrillic](/assets/images/fonts/cyrillic.png)
+ * [Handkerchief](/fonts/handkerchief/)
+
+  ![Handkerchief](/assets/images/fonts/handkerchief.png)
 * [Jacquard 12](/fonts/jacquard_12/)
 
   ![Jacquard 12](/assets/images/fonts/jacquard12.png)
 * [Jersey 15](/fonts/jersey_15/)
 
   ![Jersey 15](/assets/images/fonts/jersey15.png)
-* [Cyrillic](/fr/fonts/cyrillic/)
 
-  ![Cyrillic](/assets/images/fonts/cyrillic.png)
 * [Montecarlo](/fr/fonts/montecarlo/)
 
   ![Neon](/assets/images/fonts/montecarlo.png)
