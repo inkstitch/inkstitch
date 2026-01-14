@@ -7,6 +7,7 @@ from copy import copy
 from typing import List, Tuple, Union
 
 from inkex import Path, errormsg
+from shapely import make_valid
 from shapely.geometry import LinearRing, MultiPolygon, Polygon
 from shapely.ops import polygonize, unary_union
 
@@ -14,6 +15,7 @@ from ..elements import EmbroideryElement
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import SVG_PATH_TAG
+from ..utils.geometry import ensure_multi_polygon
 from .base import InkstitchExtension
 
 
@@ -49,10 +51,13 @@ class BreakApart(InkstitchExtension):
             try:
                 paths.sort(key=lambda point_list: Polygon(point_list).area, reverse=True)
                 polygon = MultiPolygon([(paths[0], paths[1:])])
-                if polygon.area <= self.minimum_size:
-                    element.node.delete()
+                # Check for area size only after the polygon has been made valid.
+                # Otherwise we could face a problem with negative space, making it difficult to evaluate the actual size
+                valid_polygon = ensure_multi_polygon(make_valid(polygon))
+                if self.geom_is_valid(polygon) and valid_polygon.area > self.minimum_size:
                     continue
-                if self.geom_is_valid(polygon) and Polygon(paths[-1]).area > self.minimum_size:
+                if valid_polygon.area < self.minimum_size:
+                    element.node.delete()
                     continue
             except ValueError:
                 pass
