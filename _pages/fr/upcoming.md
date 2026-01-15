@@ -47,6 +47,9 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Jersey 15](/fonts/jersey_15/)
 
   ![Jersey 15](/assets/images/fonts/jersey15.png)
+* [Ladies's present](/fonts/ladies_present/)
+
+  ![Ladies's present](/assets/images/fonts/ladies_present.png)
 * [Magic Crosses](/fonts/magic_crosses/)
 
   ![Magic Crosses](/assets/images/fonts/magic_crosses.png)
