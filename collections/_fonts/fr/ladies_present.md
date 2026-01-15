@@ -5,7 +5,7 @@ last_modified_at: 2026-01-15
 toc: false
 preview_image:
   - url: /assets/images/fonts/ladies_present.png
-    height: 25
+    height: 15
 data_title:
     ladies_present
 ---
