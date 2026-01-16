@@ -1779,7 +1779,11 @@ class SatinColumn(EmbroideryElement):
         line = shgeo.LineString((a, b))
         a_short_projection = line.project(shgeo.Point(a_short))
         b_short_projection = line.project(shgeo.Point(b_short))
-        split_points = running_stitch.split_segment_stagger_phase(a, b, length, _staggers, row_num, min=a_short_projection, max=b_short_projection)
+        split_points = running_stitch.split_segment_stagger_phase(
+            a, b, length,
+            _staggers, row_num,
+            min_val=a_short_projection,
+            max_val=b_short_projection)
 
         if from_end:
             split_points = list(reversed(split_points))
