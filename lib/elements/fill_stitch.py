@@ -927,8 +927,7 @@ class FillStitch(EmbroideryElement):
             if (new_shape.is_empty and not validate):
                 new_shape = shape
 
-        if not isinstance(new_shape, shgeo.MultiPolygon):
-            new_shape = shgeo.MultiPolygon([new_shape])
+        new_shape = ensure_multi_polygon(new_shape)
 
         return new_shape
 

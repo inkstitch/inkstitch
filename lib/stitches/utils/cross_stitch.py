@@ -3,16 +3,16 @@
 # Copyright (c) 2026 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from shapely.geometry import LineString, Polygon
-from shapely.affinity import translate
 from shapely import prepare
-from ...utils.threading import check_stop_flag
+from shapely.affinity import translate
+from shapely.geometry import LineString, Polygon
+
 from ...utils import DotDict
+from ...utils.threading import check_stop_flag
 
 
 class CrossGeometries(object):
     '''Holds data for cross stitch geometry:
-
         crosses:        a list containing cross data
                         each cross is defined by five nodes
                         1. the center point
@@ -21,19 +21,23 @@ class CrossGeometries(object):
         boxes:          a list of box outlines as Polygons
         diagonals:      a list with cross diagonals as LineStrings
     '''
-    def __init__(self, fill, shape, cross_stitch_method, original_shape=None):
+    def __init__(self, shape, pattern_size, coverage, cross_stitch_method, cross_offset, canvas_grid_origin, original_shape=None):
         """Initialize cross stitch geometry generation for the given shape.
-
         Arguments:
-            fill:                       the FillStitch instance
             shape:                      shape as shapely geometry
+            pattern_size:               grid size in px tuple(x, y)
+            coverate:                   fill coverage in %
             cross_stitch_method:        cross stitch method as string
+            cross_offset:               offset to original alignment in px tuple(x, y)
             original_shape (optional):  used for alignment, when shape had to be split up
         """
-        self.fill = fill
+        self.pattern_size = pattern_size
+        self.coverage = coverage
         self.cross_stitch_method = cross_stitch_method
+        self.cross_offset = cross_offset
+        self.canvas_grid_origin = canvas_grid_origin
 
-        box_x, box_y = self.fill.pattern_size
+        box_x, box_y = self.pattern_size
         offset_x, offset_y = self.get_offset_values(shape, original_shape)
         square = Polygon([(0, 0), (box_x, 0), (box_x, box_y), (0, box_y)])
         self.full_square_area = square.area
@@ -68,16 +72,16 @@ class CrossGeometries(object):
                     self.add_cross(box, upright_box)
                 elif shape.intersects(box):
                     intersection = box.intersection(shape)
-                    if intersection.area / self.full_square_area * 100 + 0.0001 >= self.fill.fill_coverage:
+                    if intersection.area / self.full_square_area * 100 + 0.0001 >= self.coverage:
                         self.add_cross(box, upright_box)
                 x += box_x
             y += box_y
             check_stop_flag()
 
     def get_offset_values(self, shape, original_shape):
-        offset_x, offset_y = self.fill.cross_offset
-        if not self.fill.canvas_grid_origin:
-            box_x, box_y = self.fill.pattern_size
+        offset_x, offset_y = self.cross_offset
+        if not self.canvas_grid_origin:
+            box_x, box_y = self.pattern_size
             bounds = shape.bounds
             if original_shape:
                 bounds = original_shape.bounds
