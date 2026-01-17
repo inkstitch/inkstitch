@@ -15,7 +15,6 @@ from .utils.cross_stitch import CrossGeometries
 from math import floor
 from .cross_stitch_half import half_cross_stitch
 
-import sys
 
 def cross_stitch(fill, shape, starting_point, ending_point):
     # thread count is strictly positive
@@ -40,14 +39,16 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, threads_number)
     cross_geoms = CrossGeometries(fill, shape, method)
     subgraphs = _build_connect_subgraphs(cross_geoms)
     if method != "double_cross":
-        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour,flipped = False)
+        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour, flipped=False)
 
         if "flipped" in method:
-            eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour,flipped = True)
+            eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour, flipped=True)
             for i in range(len(eulerian_cycles)):
                 eulerian_cycles[i] = eulerian_cycles[i][::-1]
     else:
-        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_double_row_tour)
+        # flipped is not useful here but _build_eulerian_cycles requires it
+        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point,
+                                                 cross_geoms, nb_repeats, _build_double_row_tour, flipped=False)
 
     stitches = _cycles_to_stitches(eulerian_cycles, fill.max_cross_stitch_length)
     return [stitches]
@@ -123,58 +124,41 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
                 index += 1
             starting_corner = list(subgraph.nodes)[index]
 
-        position, cycle = row_tour(subcrosses, starting_corner, nb_repeats,True)
+        position, cycle = row_tour(subcrosses, starting_corner, nb_repeats, True)
         crosses = cross_geoms.crosses
-        while subcrosses:
-           
-            for node in cycle:
-                cycle_to_insert=[]
-                # sys.stderr.write(f" tryinng to increase at  {node=}\n")
-                for cross in subcrosses:
-                    
-                    if node in cross.corners:
-                        # sys.stderr.write(f"YES CORNER \n")
-                        # sys.stderr.write(f" node is corner of cross {cross=}\n")
-                        position, cycle_to_insert = row_tour(subcrosses, node, nb_repeats, remove=False)
-                        # sys.stderr.write(f"found inserable cycle at {position=}")
-                        if cycle_to_insert:
-                            # sys.stderr.write(f"{position =}  tentatively{cycle_to_insert =}\n")
-                            if position == "below" and not flipped or position =="above" and flipped:
-                                node = insertion_node(crosses, node, cycle, cycle_to_insert, position, True)
-                            else:
-                                node = insertion_node(crosses, node, cycle, cycle_to_insert, position, False)
-                            # sys.stderr.write(f"but rather {node =} with {subcrosses = }")
-                            position,cycle_to_insert = row_tour(subcrosses,node,nb_repeats, remove=True)
-                            # sys.stderr.write(f"{position= }  meilleur cycle{cycle_to_insert =}\n")
+
+        if row_tour == _build_row_tour:
+            while subcrosses:
+
+                for node in cycle:
+                    cycle_to_insert = []
+                    for cross in subcrosses:
+
+                        if node in cross.corners:
+                            position, cycle_to_insert = row_tour(subcrosses, node, nb_repeats, remove=False)
+                            # here we try to minimize "bad traveling"
+                            if cycle_to_insert:
+                                if position == "below" and not flipped or position == "above" and flipped:
+                                    node = insertion_node(crosses, node, cycle, cycle_to_insert, position, True)
+                                else:
+                                    node = insertion_node(crosses, node, cycle, cycle_to_insert, position, False)
+                                position, cycle_to_insert = row_tour(subcrosses, node, nb_repeats, remove=True)
+                                cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
+                                break
+
+                    if cycle_to_insert:
+                        break
+        else:
+            # for double crosses we can't reduce amount of bad travelinng
+            while subcrosses:
+                for node in cycle:
+                    cycle_to_insert = []
+                    for cross in subcrosses:
+                        if node in cross.corners:
+                            position, cycle_to_insert = row_tour(subcrosses, node, nb_repeats, remove=False)
                             cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
-                            # sys.stderr.write(f"nouveau cycle {cycle= }\n")
-                            break
-                           
-                    # else:
-                    #      sys.stderr.write(f"failed changing cross\n")
-
-                if cycle_to_insert:
-                    # sys.stderr.write(f"succeed, changing node")
-                    break
-            # if not cycle_to_insert:
-            #     break
-                        
-        # while subcrosses:
-        #     for node in cycle:
-        #         for cross in subcrosses:
-        #             if node in cross.corners:
-        #                 sys.stderr.write(f" at initial {node=}\n")
-        #                 position, cycle_to_insert = row_tour(subcrosses, node, nb_repeats,False)
-        #                 if cycle_to_insert:
-        #                     sys.stderr.write(f"{position =}  tentatively{cycle_to_insert =}\n")
-        #                     node = insertion_node(crosses, node, cycle, cycle_to_insert, position)
-        #                     sys.stderr.write(f"but rather {node =} with {subcrosses = }")
-        #                     position,cycle_to_insert = row_tour(subcrosses,node,nb_repeats, True)
-        #                     sys.stderr.write(f"{position= }  meilleur cycle{cycle_to_insert =}\n")
-        #                     cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
-        #                     sys.stderr.write(f"nouveau cycle {cycle= }\n")
-                          
-
+                    if cycle_to_insert:
+                        break
 
         cycle = travel + cycle
         travel = []
@@ -189,7 +173,7 @@ def insertion_node(crosses, node, cycle, cycle_to_insert, position, favor_left):
     current_node = node
     next_node = None
     previous_node = current_node
-    
+
     if position == "below":
         if favor_left:
             cross = cross_below_to_the_left(crosses, current_node)
@@ -210,7 +194,7 @@ def insertion_node(crosses, node, cycle, cycle_to_insert, position, favor_left):
                 cross = cross_below_to_the_right(crosses, current_node)
                 if cross:
                     next_node = cross.bottom_right
-           
+
     elif position == "above":
         if favor_left:
             cross = cross_above_to_the_left(crosses, current_node)
@@ -231,15 +215,8 @@ def insertion_node(crosses, node, cycle, cycle_to_insert, position, favor_left):
                 cross = cross_above_to_the_right(crosses, current_node)
                 if cross:
                     next_node = cross.top_right
-
-        # cross = cross_above_to_the_right(crosses, current_node)
-        # while cross and cross.top_right in cycle and cross.top_left in cycle_to_insert:
-        #     current_node = cross.top_right
-        #     cross = cross_above_to_the_right(crosses, current_node) 
- 
-    # sys.stderr.write(f"position {position} starting {node} in fact {previous_node}\n")      
-   
     return previous_node
+
 
 def organize(subgraphs, cross_geoms, starting_point, ending_point):
     # Make the subgraph containing the starting_point the first one
@@ -279,8 +256,9 @@ def _build_row_tour(subcrosses, starting_corner, nb_repeats, remove):
     return position, cycle
 
 
-def _build_double_row_tour(subcrosses, starting_corner, nb_repeats):
-
+def _build_double_row_tour(subcrosses, starting_corner, nb_repeats, remove=True):
+    # position is not going to used , but we need same signature as for
+    position = "no"
     cycle = _build_double_row_tour_above(subcrosses, starting_corner, nb_repeats)
     if cycle:
         position = "above"
@@ -288,7 +266,7 @@ def _build_double_row_tour(subcrosses, starting_corner, nb_repeats):
         cycle = _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats)
         if cycle:
             position = "below"
-    return position,cycle
+    return position, cycle
 
 
 def find_index_subgraph(subgraphs, crosses, point):
@@ -313,13 +291,21 @@ def find_available_crosses(subgraph, crosses):
     return [cross for cross in crosses if is_cross_in_subgraph(cross, subgraph)]
 
 
+
+def cross_at_position(crosses, node, position):
+    for cross in crosses:
+        if node == cross.get(position):
+            return cross
+    return None
+
 def cross_above_to_the_left(crosses, node):
     # looking for a cross where node is at bottom right
-    left_cross = None
-    for cross in crosses:
-        if node == cross.top_right:
-            return cross
-    return left_cross
+    # left_cross = None
+    # for cross in crosses:
+    #     if node == cross.top_right:
+    #         return cross
+    # return left_cross
+    return cross_at_position(crosses, node, "top_right")
 
 
 def cross_above_to_the_right(crosses, node):
@@ -397,7 +383,7 @@ def construct_left_side_below(subcrosses, starting_corner, nb_repeats):
         tour.append(cross.bottom_right)
         current_node = cross.bottom_right
         covered_crosses.append(cross)
-    if len(tour) > 1 :
+    if len(tour) > 1:
         remove_crosses(subcrosses, covered_crosses)
         return tour
     else:
@@ -587,13 +573,15 @@ def _build_row_tour_above(crosses, node, nb_repeats, remove):
         current_node = cross_above_to_the_right(crosses, current_node).top_right
         check_stop_flag()
     while current_node != node:
+        # This part of the tour is "bad traveling", going through center of crosses
+        # after stitching last diagonal
         tour.append(cross_above_to_the_left(crosses, current_node).center_point)
         tour.append(cross_above_to_the_left(crosses, current_node).top_left)
         current_node = cross_above_to_the_left(crosses, current_node).top_left
         check_stop_flag()
     if len(tour) > 1 and remove:
         remove_crosses(crosses, covered_crosses)
-    if len(tour) >1:
+    if len(tour) > 1:
         return tour
     else:
         return []
@@ -614,7 +602,6 @@ def _build_row_tour_below(crosses, node, nb_repeats, remove):
     tour = [node]
     covered_crosses = []
     current_node = node
-    # sys.stderr.write(f"trying tour beloww {node =}\n ")
 
     while cross_below_to_the_right(crosses, current_node):
         tour.append(cross_below_to_the_right(crosses, current_node).center_point)
@@ -645,13 +632,13 @@ def _build_row_tour_below(crosses, node, nb_repeats, remove):
         current_node = cross_below_to_the_right(crosses, current_node).bottom_right
         check_stop_flag()
 
-
     if len(tour) > 1 and remove:
         remove_crosses(crosses, covered_crosses)
     if len(tour) > 1:
         return tour
     else:
         return []
+
 
 def rindex(lst, value):
     lst.reverse()
@@ -662,7 +649,7 @@ def rindex(lst, value):
 
 def insert_cycle_at_node(cycle_to_increase, cycle_to_insert, node):
     if node in cycle_to_increase:
-        index = rindex(cycle_to_increase,node)
+        index = rindex(cycle_to_increase, node)
         new_cycle = cycle_to_increase[:index] + cycle_to_insert + cycle_to_increase[index+1:]
         return new_cycle
 
